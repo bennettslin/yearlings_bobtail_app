@@ -229,7 +229,7 @@ module.exports = {
                         anchor: `wax prophetic`,
                         annotation: [
                             {
-                                description: `Of course, the common expression is to "wax poetic," meaning to become eloquent in speech. Since it's often used with a degree of pretension, my parents use it here in snide commentary on the artificial persona that I've created.`,
+                                description: `Of course, it's more common to "wax poetic," meaning to become eloquent in speech. Here, my parents use this highbrow expression ironically, as commentary on the artificial persona that I've created.`,
                                 dotKeys: {
                                     [REFERENCE]: true
                                 }
@@ -373,7 +373,7 @@ module.exports = {
                     {
                         anchor: `Upon purchase of a queen's ship,`,
                         annotation: {
-                            description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship was acquired through my efforts. My strategy in life thus became to visualise the reward of corrective justice, then steadily and patiently work towards it. I was like "a pawn" that "perches over queenship" as it steadily clambers towards the other side of the chessboard.`,
+                            description: `Though the bullies ruled over me, the mail-order cult promised that all would be made right once a spaceship could be acquired through my efforts. My strategy in life thus became to visualise the reward of corrective justice, then patiently work towards it. I was like "a pawn" that "perches over queenship" as it steadily clambers towards the other side of the chessboard.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [PUN]: true,
@@ -383,23 +383,13 @@ module.exports = {
                     },
                     {
                         anchor: `earth right now your tourist store…`,
-                        annotation: [
-                            {
-                                description: `The mail-order cult warned me not to grow attached to earthly concerns, for I was just a visitor here.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true
-                                }
-                            },
-                            {
-                                // TODO
-                                description: `Or else, "birthright now you're to restore." Having had my head filled with visions of greatness as a child, I always assumed that my rightful place was to be recognised for my great. My belief in myself as a Beyonder didn't exactly temper this expectation.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [OBSERVATION]: true,
-                                    [PUN]: true
-                                }
+                        annotation: {
+                            description: `While my mother filled my head with visions of being a great artist, the mail-order cult instilled a belief that I was merely a visitor to this planet. And so, unaffected by earthly concerns, I was always going to work tirelessly for my "birthright" of artistic renown, which I felt it my duty "to restore."`,
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [PUN]: true
                             }
-                        ]
+                        }
                     }
                 ]
             },
@@ -447,8 +437,7 @@ module.exports = {
                     {
                         anchor: `stuffing twenties`,
                         annotation: {
-                            // TODO
-                            description: `I had pen pals as a child, so my parents didn't find it odd when I mailed cash to the mail-order cult in colourful stationery. Only after speaking to my principal did they become suspicious and finally open one of them.`,
+                            description: `I had pen pals as a child, so my parents didn't think anything of the random envelopes I was mailing out. But after speaking to my principal, my mother became suspicious and opened one of them, to find a wad of paper money inside.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -469,22 +458,29 @@ module.exports = {
                     `So do you believe`,
                     {
                         anchor: `your hamartia`,
-                        annotation: {
-                            // TODO
-                            description: [
-                                `In Greek tragedy,`,
-                                {
-                                    anchor: `hamartia`,
-                                    wiki: `Hamartia`
-                                },
-                                `is the character flaw that leads to a protagonist's downfall. (I've since learned that the accent is on the third syllable. But my English teacher pronounced it as I have here, so I plead miseducation.) A famous example is Oedipus, whose arrogance leads him to believe that prophecy can be escaped. Here, my parents ask whether I've learned the lesson of Oedipus, while mocking my erstwhile belief of being born from the stars, or in their words, "a Martian."`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [NARRATIVE]: true,
-                                [PUN]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `In Greek tragedy,`,
+                                    {
+                                        anchor: `hamartia`,
+                                        wiki: `Hamartia`
+                                    },
+                                    `is the character flaw that leads to a protagonist's downfall. Here, my parents are asking if I recognise the telltale signs pointing to mine. (I've since learned that the accent is on the third syllable. But my English teacher pronounced it as I have here, so I plead miseducation.)`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `My parents are also snidely alluding to my erstwhile belief that I was born from the stars. Or, in their words, "a Martian."`
+                                ],
+                                dotKeys: {
+                                    [PUN]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `now?`
                 ]
@@ -511,8 +507,7 @@ module.exports = {
                     {
                         anchor: `bunker that shuts airtight`,
                         annotation: {
-                            // TODO
-                            description: `I learned early on to deal with problems by shutting myself away. Then, once safely sheltered, I was at liberty to examine my situation with perfect reason.`,
+                            description: `I learned early on to deal with problems by locking myself away. Then, once safely sheltered, I had all the time in the world to calmly study my situation and plot out the best way forward.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -525,8 +520,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        // TODO
-                        description: `As silly as the original lyrics to the chorus were, I liked them enough to keep them, so I just made the former lead melody the new counter melody, and vice versa. The former counter melody was written for guitar, however, so  and thus provided no pauses for the new lead vocals, I had to overdub the last phrase of each line.`,
+                        description: `As silly as the original lyrics for the chorus were, I liked them enough to keep them, so I just made the former lead melody the new counter melody. The former counter melody, which was written for guitar, then became the new lead melody.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -838,7 +832,7 @@ module.exports = {
                         anchor: `dual match,`,
                         annotation: {
                             // TODO
-                            description: `A dual match implying a harmonious union between Sita and me, which is what everyone saw, as well as a "duel match" implying the opposite, which is what I felt.`,
+                            description: `From the outside, A dual match implying a harmonious union between Sita and me, which is what everyone saw, as well as a "duel match" implying the opposite, which is what I felt.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                                 [PUN]: true
@@ -975,8 +969,7 @@ module.exports = {
                                 }
                             },
                             {
-                                // TODO
-                                description: `Sita's "well-worn sorries" quickly grew tiresome, precisely because only one of us deserved to prostrate themselves for an eternity pleading for forgiveness, and we both knew it wasn't her.`,
+                                description: `Sita's "well-worn sorries" quickly grew tiresome, precisely because only one of us needed to spend an eternity begging for forgiveness, and we both knew it wasn't her.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true
@@ -1078,7 +1071,7 @@ module.exports = {
                                         },
                                         {
                                             // TODO
-                                            description: `My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or as people, and most were arguably worse— the "bronze" trophy to Sita's gold.`,
+                                            description: `My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or as people, and most were arguably worse. Rather than work to regain the lustre of the gold trophy I shared with Sita, I happily exchanged it for the "bronze" trophies offered by other women.`,
                                             dotKeys: {
                                                 [OBSERVATION]: true,
                                                 [PUN]: true
@@ -1207,8 +1200,7 @@ module.exports = {
                             `'s sake,`
                         ],
                         annotation: {
-                            // TODO
-                            description: `My latest five-year plan, like the one before it, was meant to yield dramatic improvements in my life through a major overhaul of the underlying architecture. As such, it made no sense to question it while the work was still in progress.`,
+                            description: `My latest five-year plan, like the one before it, was meant to yield dramatic improvements in my life through a major overhaul of the underlying system. As such, it just wasn't possible to question it while the work remained in progress.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -1348,7 +1340,6 @@ module.exports = {
                                 lyric: {
                                     anchor: `…Maranatha!`,
                                     annotation: {
-                                        // TODO
                                         description: [
                                             `In my case, however, the syllables slowly shifted until I was chanting the holy name of Mara. And unlike Valmiki, who found Eastern spirituality, I embraced instead the promise of acceptance by Western society and its women, as represented by an expression of Western faith. In the New Testament,`,
                                             {
