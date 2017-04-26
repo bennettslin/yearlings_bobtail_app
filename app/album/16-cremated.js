@@ -180,33 +180,40 @@ module.exports = {
                 right: [
                     {
                         anchor: `Atavist`,
-                        annotation: {
-                            // TODO
-                            description: [
-                                {
-                                    anchor: `Atavism`,
-                                    wiki: `Atavism`
-                                },
-                                `occurs when genetic traits reappear after having disappeared generations ago. Given my brother's autism and my father's likely Asperger syndrome, my mother always advised me not to have children, as the genes I carried for autism would pass onto them. As a result, I had to wonder if those I dated ever thought the same, in judging my viability as a partner for the long haul.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Atavism`,
+                                        wiki: `Atavism`
+                                    },
+                                    `occurs when genetic traits in a species reappear after having disappeared generations ago.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
+                            },
+                            {
+                                description: `Given my brother's autism and my father's likely Asperger syndrome, my mother always advised me not to have children, as the genes I carried for autism would pass onto them. As a result, I had to wonder if those I dated ever thought the same when judging my viability as a marriageable partner.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
                             }
-                        }
+                        ]
                     },
                     `stuck`,
                     {
                         anchor: `feet first,`,
                         annotation: {
                             description: [
-                                // TODO
                                 `My brother was a`,
                                 {
                                     anchor: `breech baby,`,
                                     wiki: `Breech_birth`
                                 },
-                                `meaning that he exited the womb bottom first rather than head first, which complicated the delivery. My mother initially hypothesised this to be the cause of his autism.`
+                                `having exited the womb bottom first rather than head first, which complicated the delivery. My mother once hypothesised this to be the cause of his autism.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -443,7 +450,7 @@ module.exports = {
                         // TODO: Portal
                         anchor: `bronzed from a Trojan`,
                         annotation: {
-                            description: `The first time I had sex with a woman other than Sita, I was so amazed that I left the used condom on the nightstand for days, much like proud parents who bronze their baby's outgrown shoes.`,
+                            description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob. As she yanks off the condom, I'm reminded of the first time I had sex with a woman other than Sita. I was so amazed that I left the used condom on the nightstand for days, much like proud parents might bronze their baby's first pair of shoes.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -538,21 +545,12 @@ module.exports = {
             {
                 time: 59,
                 left: [
-                    `This`,
+                    `This swarm pumped and`,
                     {
-                        anchor: `swarm pumped and kissed off,`,
+                        anchor: `kissed off, she purges up.`,
                         annotation: {
-                            description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob and swallowing the ejaculate.`,
-                            dotKeys: {
-                                [NARRATIVE]: true
-                            }
-                        }
-                    },
-                    `she`,
-                    {
-                        anchor: `purges up.`,
-                        annotation: {
-                            description: `Of course, given the expected defectiveness of my progeny, I imagine Miriam symbolically vomiting the sperm that carries my genes, which must never be allowed to mingle with hers.`,
+                            // TODO
+                            description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob and swallowing the ejaculate. Of course, given the expected defectiveness of my progeny, I imagine Miriam symbolically vomiting the sperm that carries my genes, which must never be allowed to mingle with hers.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -566,8 +564,11 @@ module.exports = {
                         anchor: `worn puppet`,
                         annotation: {
                             // TODO
-                            description: `Having a drunken personality was like being a ventriloquist whose specialty is the comedy roast. My dummy could then dish out the insults all day long, while I sat by as a harmless onlooker.`,
+                            description: `Dangling the lifeless condom in front of me,
+
+                            I realise that having a drunken personality is like being a ventriloquist whose specialty is insult comedy. My dummy can then dish it out all day long, while I just sit by as an innocent onlooker.`,
                             dotKeys: {
+                                [NARRATIVE]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -743,7 +744,6 @@ module.exports = {
                     {
                         anchor: `selfish cut-off jeans,`,
                         annotation: {
-                            // TODO
                             description: [
                                 `In`,
                                 {
@@ -752,7 +752,7 @@ module.exports = {
                                         wiki: `The_Selfish_Gene`
                                     }
                                 },
-                                `Richard Dawkins explains natural selection from the vantage point of genes themselves, rather than the individuals who carry them. And so I imagine that Miriam's genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine, by blocking me from ever again getting under her cutoffs.`
+                                `Richard Dawkins explains natural selection from the vantage point of genes themselves, rather than the individuals who carry them. So as Miriam blocks me from getting under her cutoffs ever again, I imagine that it's because her genes, wishing to remain "undiluted," have conspired to "cut off" any chance of mixing with mine.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -779,7 +779,7 @@ module.exports = {
                     {
                         anchor: `worrisome`,
                         annotation: {
-                            description: `I genuinely wished Miriam the best and continued to care about her well-being after our breakup. This surprised me, given the contrast of how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even if just for a little while. As far as I was concerned, then, I got the better end of the deal.`,
+                            description: `I genuinely wished Miriam the best and continued to care about her well-being after our breakup. This surprised me, given the contrast of how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even if just for a little while. As far as I was concerned, then, I got the best end of the deal.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -815,8 +815,7 @@ module.exports = {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
                         // NOTE: Change in recording? Connect to Uncanny Valley?
-                        // TODO
-                        description: `The bouncing ping pong ball evokes a wind-up toy on my nightstand, which prompts me in my infirm state to imagine Miriam in a leisurely tennis match with her new beau.`,
+                        description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -924,8 +923,7 @@ module.exports = {
                     {
                         anchor: `Redressed,`,
                         annotation: {
-                            // TODO
-                            description: `The sex followed by a blowjob, as it turns out, was meant to serve as redress for the bad news that was forthcoming. Of course, having put my clothes back on, I am also literally "redressed."`,
+                            description: `As I get "redressed" by putting my clothes back on, I'm about to learn that the sex followed by a blowjob was meant to serve as redress for the bad news that is forthcoming.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true
@@ -1002,7 +1000,7 @@ module.exports = {
                     {
                         anchor: `second hump.`,
                         annotation: {
-                            description: `A camel stores fat in its hump, allowing it to travel for days without eating. And in trading away Sita's love for the ego boost I gained from "humping" other women, I was like a starving camel who sacrifices his only meal just to wear a flashy new adornment on his back.`,
+                            description: `A camel stores fat in its hump, allowing it to travel for days without eating. And in trading away Sita's love for the ego boost I gained from "humping" other women, I was like a starving camel who sacrificed his only meal just to wear a flashy new adornment on his back.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                                 [PUN]: true,
