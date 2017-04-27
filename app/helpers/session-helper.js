@@ -103,7 +103,7 @@ const _validateValueForKey = (key) => {
 
             // Logues do not have annotations.
             isValid = isNumber && annotations ?
-                parsedValue < annotations.length :
+                parsedValue <= annotations.length :
                 parsedValue === 0
             break
         }

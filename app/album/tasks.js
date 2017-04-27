@@ -1,9 +1,4 @@
 module.exports = [
-    {
-        taskName: `Last selected annotation still doesn't persist`,
-        workedHours: 0,
-        neededHours: 1
-    },
     // Portals.
     {
         taskName: `Finalise portals`,
@@ -1660,6 +1655,11 @@ module.exports = [
     },
     {
         taskName: `Basic portal styling.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Last selected annotation still doesn't persist`,
         workedHours: 1,
         neededHours: 1
     }
