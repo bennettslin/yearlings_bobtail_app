@@ -12,23 +12,6 @@ import { REFRAIN,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: `Vegan Proclamation`,
-        annotation: {
-            description: [
-                `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
-                {
-                    anchor: `vegan.`,
-                    wiki: `Veganism`
-                },
-                `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step towards liking myself again.`
-            ],
-            dotKeys: {
-                [BACKSTORY]: true,
-                [OBSERVATION]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -121,8 +104,25 @@ module.exports = {
         description: 'placeholder tip'
     },
     totalTime: 241,
-    overview: `Having doubled down on writing and recording all the songs myself, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had was myself now, and I hated myself. But slowly, I began the long, arduous process of remaking myself into a good person.`,
+    overview: `Having doubled down on writing and recording all the songs myself, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had now was myself, and I really didn't like myself. And I had no idea how to become a good person again.`,
     forceSingleColumn: true,
+    title: {
+        anchor: `Vegan Proclamation`,
+        annotation: {
+            description: [
+                `While Sita was a lifelong vegetarian due to her Hindu upbringing, she also held strong convictions about animal rights that led her to go`,
+                {
+                    anchor: `vegan.`,
+                    wiki: `Veganism`
+                },
+                `I supported her during this transition by preparing vegan meals and avoiding animal products in her presence. After we stopped speaking to each other, I became vegan as well. This was my first small step towards liking myself again.`
+            ],
+            dotKeys: {
+                [BACKSTORY]: true,
+                [OBSERVATION]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -134,7 +134,7 @@ module.exports = {
                             {
                                 anchor: `can't have both.`,
                                 annotation: {
-                                    description: `A friend offered this advice when he gave me his turntable, and as it turns out, what can be said for vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my most thoughtful deeds would always be tainted by my most hurtful ones. I couldn't keep two separate selves, with one being praised for my kindness, and the other taking the blame for my selfish desires. I couldn't be both kinds of people.`,
+                                    description: `A friend offered this advice when he gave me his turntable, and as it turns out, what can be said for vinyl records holds just as well for life decisions. I learned this the hard way when I saw that my most thoughtful deeds would always be negated by my most hurtful ones. I couldn't keep two separate selves, with one being praised for my kindness, and the other taking the blame for my selfish desires. I couldn't be both kinds of people.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
@@ -169,7 +169,7 @@ module.exports = {
                         anchor: `Odin,`,
                         properNoun: true,
                         annotation: {
-                            description: `As a child, I never gave much thought to our house cat Odin. He just seemed like another household furnishing. So after Sita and I adopted a cat who became our pride and joy, I would marvel at why my nurturing instinct, which came so effortlessly now, was so hard to come by then. Years later, as my failure to nurture my relationship with Sita led to its deterioration, I thought of Odin often.`,
+                            description: `As a child, I never gave much thought to our house cat Odin. He just seemed like part of the scenery. So after Sita and I adopted a cat who became our pride and joy, I would marvel at why my nurturing instinct, which came so effortlessly now, was so hard to come by then. Years later, as my failure to nurture my relationship with Sita led to its deterioration, I thought of Odin often.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -237,7 +237,7 @@ module.exports = {
                                     anchor: `Eve`,
                                     wiki: `Eve`
                                 },
-                                `by taking one of Adam's ribs. By contrast, my own promise to sacrifice a part of myself for Sita proved to be a "false rib," trapping her in a helpless state where she could never feel truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
+                                `by taking one of Adam's ribs. By contrast, my own promise to make sacrifices for Sita proved to be a "false rib," trapping her in a helpless state where she could never feel truly alive with me, even as she felt unworthy to begin life anew with anyone else.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true,
@@ -252,7 +252,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. I thought this ironic contrast would work just as well here.`,
+                        description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast stuck with me, and I thought it would work well here.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [OBSERVATION]: true,
@@ -277,8 +277,7 @@ module.exports = {
                         annotation: {
                             description: `That is to say, from rocking horse to rocking chair.`,
                             dotKeys: {
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                                [OBSERVATION]: true
                             }
                         }
                     }
@@ -302,7 +301,7 @@ module.exports = {
                     {
                         anchor: `first pets`,
                         annotation: {
-                            description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, realised that her kitten thought it was dying. She lived with that guilt ever afterwards.`,
+                            description: `Sita had her own story to tell about mistreating her first pet. Upon receiving a kitten as a child, she hugged it so hard that it began to purr. Taking this as a sign of its contentment, she hugged it even harder. Years later, she learned that cats also purr to cope with distress, and looking back, realised that her kitten believed it was dying. She lived with the guilt ever afterwards.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [REFERENCE]: true
@@ -323,7 +322,7 @@ module.exports = {
                     {
                         anchor: `battered kitten purrs…`,
                         annotation: {
-                            description: `Of course, Sita, in turn, was my first pet. In hindsight, the reason I could live with myself while hurting her for as long as I did, was because I accepted at face value the facade of sanity that she constructed as a coping mechanism. I allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
+                            description: `Of course, Sita, in turn, was my first pet. It blew my mind how I was able to live with myself while hurting her for as long as I did. But in hindsight, it's because I accepted at face value the facade of sanity she had constructed as a way to cope. I had allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -354,6 +353,7 @@ module.exports = {
                                             anchor: `Big Crunch`,
                                             wiki: `Big_Crunch`
                                         },
+                                        // TODO: Mention embracing Sita's Hinduism sooner.
                                         `is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another Big Bang. I found the thought comforting as it jibes with the Hindu belief that the universe is a living force, helplessly bound like us to an eternal cycle of death and rebirth.`
                                     ],
                                     dotKeys: {
@@ -379,6 +379,7 @@ module.exports = {
                             {
                                 anchor: `known to be dead,`,
                                 annotation: {
+                                    // TODO
                                     description: [
                                         {
                                             anchor: `Deism`,
@@ -417,14 +418,18 @@ module.exports = {
                     `Torn straps`,
                     {
                         anchor: `unsalvaged sows have chewed,`,
-                        annotation: {
-                            description: `On factory farms, breeding sows are strapped inside metal cages so small that they cannot move. In response to high stress, they develop repetitive, self-destructive movements such as chewing on cage bars. The sole purpose of their suffering is to produce piglets for slaughter, and once they grow too sickly or weak, they too are slaughtered.`,
-                            dotKeys: {
-                                [OBSERVATION]: true,
-                                [REFERENCE]: true
+                        annotation: [
+                            {
+                                description: `On factory farms, breeding sows are strapped inside metal cages so small that they cannot move. In response to their stressful surroundings, they develop repetitive, self-destructive movements such as chewing on cage bars. The sole purpose of their suffering is to produce piglets for slaughter, and once they grow too sickly or weak, they too are slaughtered.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true,
+                                    [REFERENCE]: true
+                                }
                             },
-                            portal: `unsalvaged_sows`
-                        }
+                            {
+                                portal: `unsalvaged_sows`
+                            }
+                        ]
                     }
                 ]
             },
@@ -461,7 +466,7 @@ module.exports = {
                     {
                         anchor: `burger shrouds,`,
                         annotation: {
-                            description: `As a vegan, I became sensitive to anything even remotely suggestive of meat or animal byproducts, such as a hamburger wrapper, and realised that I too had been inured, living in a society built on the commoditisation of animal suffering.`,
+                            description: `As a vegan, I became sensitive to anything even remotely suggestive of meat or animal byproducts, such as a discarded fast food wrapper. I realised that I too had been inured, living in a society built on the commoditisation of animal suffering.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -478,7 +483,7 @@ module.exports = {
                         anchor: `lone rallied youth`,
                         annotation: {
                             description: [
-                                `Having spent the past several years both playing and attending shows, I saw firsthand how easily an audience can get whipped up while being of one mind. And now, as that world drifted away and I was all alone, I wondered what exactly drew me to those crowds, and why I so longed to be adored by them. I questioned everything I valued up to that day, like a reformed`,
+                                `Having spent the past several years both playing and attending shows, I saw firsthand how easily an audience can get whipped up while being of one mind. And now, as that world drifted away and I was all alone, I wondered what exactly drew me to those crowds, and why I had so longed to be adored by them. I questioned everything I valued up to that day, like a reformed`,
                                 {
                                     anchor: `Hitler Youth`,
                                     wiki: `Hitler_Youth`
@@ -502,7 +507,7 @@ module.exports = {
                                         wiki: `Schutzstaffel`
                                     }
                                 },
-                                `the paramilitary group that carried out the Holocaust, consists of two thunderbolts side by side. Wishing no more to strike down anyone with my thunderbolts, I struck myself down, leaving behind my former convictions in the process.`
+                                `the paramilitary group responsible for carrying out the Holocaust, consists of two thunderbolts side by side. Wishing no more to strike down anyone with my thunderbolts, I struck myself down, leaving behind my former convictions in the process.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -528,17 +533,21 @@ module.exports = {
                     `and his`,
                     {
                         anchor: `swastikas`,
-                        annotation: {
-                            description: [
-                                `The`,
-                                {
-                                    anchor: `swastika`,
-                                    wiki: `Swastika`
-                                },
-                                `is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid association with violence and hatred, today's Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
-                            ],
-                            portal: `swastikas`
-                        }
+                        annotation: [
+                            {
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `swastika`,
+                                        wiki: `Swastika`
+                                    },
+                                    `is an ancient Indian symbol of peace and continuity that was later co-opted by the Nazis. To avoid association with violence and hatred, today's Hindus and Buddhists often present their swastikas facing left, in reverse of the Nazi symbol, which faces right.`
+                                ]
+                            },
+                            {
+                                portal: `swastikas`
+                            }
+                        ]
                     },
                     `inside out…`
                 ]
@@ -582,12 +591,12 @@ module.exports = {
                         anchor: `good again…`,
                         annotation: {
                             description: [
-                                `Upon going vegan, I became a volunteer at`,
+                                `Upon becoming a vegan, I joined`,
                                 {
-                                    anchor: `People for the Ethical Treatment of Animals,`,
+                                    anchor: `People for the Ethical Treatment of Animals.`,
                                     wiki: `People_for_the_Ethical_Treatment_of_Animals`
                                 },
-                                `and for several years, I took part in their demonstrations for animal rights.`
+                                `For several years, I took part as a volunteer in their demonstrations for animal rights.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -613,7 +622,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `When Sita and I first met, she asked to hear some of my songs. I had just bought a new multi-effects processor and played around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
+                        description: `When Sita and I first met, she asked to hear some of my music. I had just bought a new multi-effects processor and played around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -724,6 +733,7 @@ module.exports = {
                     {
                         anchor: `diapered white dwarf,`,
                         annotation: {
+                            // TODO
                             description: [
                                 {
                                     anchor: `Apasmara`,
@@ -750,27 +760,32 @@ module.exports = {
                 lyric: [
                     `Our ashed heads bow from`,
                     {
+                        // TODO
                         anchor: `chivalry to our Siva's feet…`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                {
-                                    anchor: `Nataraja,`,
-                                    wiki: `Nataraja`
-                                },
-                                `or "lord of dance," is a revered depiction of the Hindu god`,
-                                {
-                                    anchor: `Siva`,
-                                    wiki: `Shiva`
-                                },
-                                `as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: [
+                                    {
+                                        anchor: `Nataraja,`,
+                                        wiki: `Nataraja`
+                                    },
+                                    `or "lord of dance," is a revered depiction of the Hindu god`,
+                                    {
+                                        anchor: `Siva`,
+                                        wiki: `Shiva`
+                                    },
+                                    `as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
                             },
-                            portal: `chivalry`
-                        }
+                            {
+                                portal: `chivalry`
+                            }
+                        ]
                     }
                 ]
             },
@@ -789,8 +804,8 @@ module.exports = {
         },
         {
             taskName: `sort out past and present tense`,
-            workedHours: 0,
-            neededHours: 3
+            workedHours: 2,
+            neededHours: 4
         },
         {
             taskName: `annotations`,
