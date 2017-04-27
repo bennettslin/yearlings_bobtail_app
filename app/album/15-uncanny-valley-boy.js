@@ -807,7 +807,7 @@ module.exports = {
                     {
                         anchor: `two were tied?`,
                         annotation: {
-                            description: `While Sita hoped for us to be "tied" in a matrimonial sense, I chafed that we were "tied" in the competitive sense. For me, the relationship was now a zero-sum game that only one of us could win.`,
+                            description: `While Sita hoped for us to be "tied" in a matrimonial sense, I chafed that we were "tied" in the competitive sense.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [PUN]: true
@@ -831,8 +831,7 @@ module.exports = {
                         // NOTE: I changed "duel" to "dual" here.
                         anchor: `dual match,`,
                         annotation: {
-                            // TODO
-                            description: `From the outside, A dual match implying a harmonious union between Sita and me, which is what everyone saw, as well as a "duel match" implying the opposite, which is what I felt.`,
+                            description: `To onlookers, our relationship might have seemed like the ideal union between two people. But for me, it had become a zero-sum "duel match" that only one person could win.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
                                 [PUN]: true
@@ -969,7 +968,7 @@ module.exports = {
                                 }
                             },
                             {
-                                description: `Sita's "well-worn sorries" quickly grew tiresome, precisely because only one of us needed to spend an eternity begging for forgiveness, and we both knew it wasn't her.`,
+                                description: `Sita's "well-worn sorries" quickly grew tiresome, precisely because only one of us needed to spend forever begging for forgiveness, and we both knew it wasn't her.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [PUN]: true
@@ -982,9 +981,8 @@ module.exports = {
                         anchor: `fairer marathon!`,
                         annotation: [
                             {
-                                // TODO
                                 description: [
-                                    `The constant one-upmanship wasn't just petty. It was exhausting to keep an inner tally of every time I felt slighted. I wanted life to be more like a marathon that rewards persistence and resolve. Since I possessed those traits in spades, that seemed most fair to me.`
+                                    `The constant one-upmanship wasn't just petty. It was exhausting to keep an inner tally of every time I felt slighted. I wanted life to be more like a marathon that rewards patience and resolve. Since I possessed those traits in spades, that seemed most fair to me.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -992,7 +990,7 @@ module.exports = {
                             },
                             {
                                 description: [
-                                    `"Marathon" sounds like Mara's full name spoken with a lisp. After all this time, I was still chasing after someone like her.`
+                                    `"Marathon" sounds like Mara's full name spoken with a lisp. After all this time, I was still chasing after someone like Mara.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -1009,7 +1007,21 @@ module.exports = {
                     {
                         time: 150,
                         lyric: {
-                            italic: `Your dulling gold now gone…`
+                            italic: [
+                                `Your`,
+                                {
+                                    anchor: `dulling gold`,
+                                    annotation: {
+                                        description: `My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or as people, and most were arguably worse. But rather than work to recover my once treasured bond with Sita, which had grown dull only by my neglect, I happily exchanged it for the shiny "bronze" trophies offered by other women.`,
+                                        dotKeys: {
+                                            [OBSERVATION]: true,
+                                            [PUN]: true
+                                        }
+                                    },
+                                    todo: true
+                                },
+                                `now gone…`
+                            ]
                         }
                     }
                 ],
@@ -1061,7 +1073,6 @@ module.exports = {
                             italic: [
                                 `…traded in for the`,
                                 {
-                                    // TODO: Portal to Cremated
                                     anchor: `trophy blondes.`,
                                     annotation: [
                                         {
@@ -1071,12 +1082,7 @@ module.exports = {
                                             }
                                         },
                                         {
-                                            // TODO
-                                            description: `My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or as people, and most were arguably worse. Rather than work to regain the lustre of the gold trophy I shared with Sita, I happily exchanged it for the "bronze" trophies offered by other women.`,
-                                            dotKeys: {
-                                                [OBSERVATION]: true,
-                                                [PUN]: true
-                                            }
+                                            portal: `trophy_bronze`
                                         }
                                     ]
                                 }

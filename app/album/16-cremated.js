@@ -445,17 +445,21 @@ module.exports = {
                 time: 46,
                 left: `Though, she ponders the children`,
                 right: [
-                    `Trophy`,
                     {
                         // TODO: Portal
-                        anchor: `bronzed from a Trojan`,
-                        annotation: {
-                            description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob. As she yanks off the condom, I'm reminded of the first time I had sex with a woman other than Sita. I was so amazed that I left the used condom on the nightstand for days, much like proud parents might bronze their baby's first pair of shoes.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                        anchor: `Trophy bronzed from a Trojan`,
+                        annotation: [
+                            {
+                                description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob. As she yanks off the condom, I'm reminded of the first time I had sex with a woman other than Sita. I was so amazed that I left the used condom on the nightstand for days, much like proud parents might bronze their baby's first pair of shoes.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
+                            },
+                            {
+                                portal: `trophy_bronze`
                             }
-                        }
+                        ]
                     }
                 ]
             },
@@ -686,11 +690,11 @@ module.exports = {
                 centre: [
                     `it hums a`,
                     {
-                        anchor: `typo fragile ex`,
+                        anchor: `typo`,
                         annotation: [
                             {
                                 description: [
-                                    `I was a typo in the sense of being an easily corrected mistake, but so fragile as to faint at the news of being made an ex-boyfriend.`
+                                    `Like a typo, Miriam's involvement with me was a simple mistake that she could easily correct.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -717,6 +721,13 @@ module.exports = {
                                 }
                             }
                         ]
+                    },
+                    {
+                        anchor: `fragile ex`,
+                        annotation: {
+                            // TODO
+                            description: `But given how fragile I was going to be as an ex-boyfriend, I was still going to make the breakup as tedious for her as possible.`
+                        }
                     },
                     `passed through ash…`
                 ]
