@@ -657,12 +657,10 @@ module.exports = {
                         anchor: `Needle done`,
                         annotation: [
                             {
-                                // TODO
-                                description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected. Fast-forward in time. Having just been told by Miriam that she's breaking up with me, I remain silent and sedated. I imagine myself as a terminally ill patient being allowed to die, as my favourite records play in the background.`,
+                                // TODO: Mention needle, mention my imagination.
+                                description: `Fast-forward in time. Having just been told by Miriam that she's breaking up with me, I remain silent and sedated. I imagine myself as a terminally ill patient being allowed to die, as my favourite records play in the background.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [NARRATIVE]: true
                                 }
                             },
                             {
@@ -670,7 +668,17 @@ module.exports = {
                             }
                         ]
                     },
-                    `will not retract,`
+                    {
+                        anchor: `will not retract,`,
+                        annotation: {
+                            // TODO: Finality
+                            description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected.`,
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [REFERENCE]: true
+                            }
+                        }
+                    }
                 ]
             },
             {
