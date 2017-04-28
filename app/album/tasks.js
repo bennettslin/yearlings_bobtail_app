@@ -1,4 +1,10 @@
 module.exports = [
+    {
+        taskName: `Instrumental names`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     // Portals.
     {
         taskName: `Finalise portals`,

@@ -8,15 +8,6 @@ import { INSTRUMENTAL,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
-    title: {
-        anchor: `My 100,000th Dream`,
-        annotation: {
-            description: `I once read that we typically dream four times per night. Over a lifetime, that's about 100,000 dreams. This song, then, is about the very last dream I'll ever dream.`,
-            dotKeys: {
-                [OBSERVATION]: true
-            }
-        }
-    },
     scenes: [
         {
             verseIndex: 0,
@@ -108,6 +99,15 @@ module.exports = {
     },
     totalTime: 244,
     overview: `Every night I dreamt of reuniting with Sita, only to wake up in a panicked sweat as the reality came roaring back that I had lost her forever. I would slog through the day under a crushing blanket of despair, then crawl back into bed with dread, awaiting the cruel tricks soon to be played by my subconscious mind. I had no idea when this torment would end. The answer, I feared, was never.`,
+    title: {
+        anchor: `My 100,000th Dream`,
+        annotation: {
+            description: `I once read that we typically dream four times per night. Over a lifetime, that's about 100,000 dreams. This song, then, is about the very last dream I'll ever dream.`,
+            dotKeys: {
+                [OBSERVATION]: true
+            }
+        }
+    },
     lyrics: [
         [
             {
@@ -178,7 +178,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `Next comes the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
+                        description: `Next come the arpeggiated chords from "Cremated," followed by the slide guitar and natural harmonics from "On a Golden Cord."`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -199,7 +199,7 @@ module.exports = {
                     {
                         anchor: `ever live another life?`,
                         annotation: {
-                            description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. As far as I know, Sita and I have always been together. Of course, according to Sita's Hindu faith, I might also have lived another life quite literally, in a past incarnation.`,
+                            description: `As dreams often go, I have no memory or even awareness of having lived any other life in the intervening years. As far as I know, Sita and I have always been together. Of course, according to the Hindu faith, I might also have lived another life quite literally, in a past incarnation.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -246,20 +246,24 @@ module.exports = {
                     {
                         anchor: `Pampas`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the`,
-                                {
-                                    anchor: `Pampas,`,
-                                    wiki: `Pampas`
-                                },
-                                `the grassy lowlands spanning the southeastern end of South America.`
-                            ],
-                            dotKeys: {
-                                [NARRATIVE]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `Still wearing the traditional Mexican dress of her hostess uniform, Sita brings me to the`,
+                                    {
+                                        anchor: `Pampas,`,
+                                        wiki: `Pampas`
+                                    },
+                                    `the grassy lowlands spanning the southeastern end of South America.`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
                             },
-                            portal: `pampas`
-                        }
+                            {
+                                portal: `pampas`
+                            }
+                        ]
                     },
                     `where the`,
                     {
@@ -402,7 +406,7 @@ module.exports = {
                     {
                         anchor: `last thought`,
                         annotation: {
-                            description: `As Sita's ominous tone wrenches me from my bliss, I suddenly realise that I'm in a dream, and moreover, that it may be my last.`,
+                            description: `As Sita's ominous tone suddenly wrenches me from my bliss, I realise that I'm in a dream, and moreover, that it may be my last.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -437,7 +441,7 @@ module.exports = {
                     {
                         anchor: `come to take me,`,
                         annotation: {
-                            description: `I now understand that Sita, being my most cherished memory, was always going to be the one to ease my fears and accompany me as I exited from this world.`,
+                            description: `I now understand that Sita, being my most cherished memory, was always going to be the one chosen by my subconscious to help ease my fears as I exit from this world.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -512,6 +516,7 @@ module.exports = {
     ],
     tasks: [
         {
+            // TODO: Afterword
             taskName: `afterword annotations`,
             workedHours: 0,
             neededHours: 1
