@@ -691,42 +691,36 @@ module.exports = {
                     `it hums a`,
                     {
                         anchor: `typo`,
-                        annotation: [
-                            {
-                                description: [
-                                    `Like a typo, Miriam's involvement with me was a simple mistake that she could easily correct.`
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            },
-                            {
-                                // TODO
-                                description: [
-                                    `I was also a`,
-                                    {
-                                        anchor: `"Type O,"`,
-                                        wiki: `Blood_type`
-                                    },
-                                    `the universal blood donor, who could provide a boost to others yet had little chance of being saved in return. And a`,
-                                    {
-                                        anchor: `"fragile X,"`,
-                                        wiki: `Fragile_X_syndrome`
-                                    },
-                                    `which is a genetic syndrome caused by a mutated X chromosome that results in mental disability.`
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [PUN]: true
-                                }
+                        annotation: {
+                            description: [
+                                `Like a typo, Miriam's involvement with me was a simple mistake that she could easily correct. And like a`,
+                                {
+                                    anchor: `"Type O,"`,
+                                    wiki: `Blood_type`
+                                },
+                                `the universal blood donor, I was ever eager to give more of myself to her, while she could do nothing to save me in return.`
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [PUN]: true
                             }
-                        ]
+                        }
                     },
                     {
                         anchor: `fragile ex`,
                         annotation: {
-                            // TODO
-                            description: `But given how fragile I was going to be as an ex-boyfriend, I was still going to make the breakup as tedious for her as possible.`
+                            description: [
+                                `I imagine Miriam dreading the breakup, knowing the kind of fragile ex-boyfriend I'll surely be. Of course, she has no choice, since who knows what horrors lurk in my genetic makeup? I might very well be a carrier of`,
+                                {
+                                    anchor: `"Fragile X,"`,
+                                    wiki: `Fragile_X_syndrome`
+                                },
+                                `a mutated X chromosome that results in mental disability.`
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [PUN]: true
+                            }
                         }
                     },
                     `passed through ash…`
@@ -745,7 +739,7 @@ module.exports = {
                                     anchor: `assisted suicide.`,
                                     wiki: `Assisted_suicide`
                                 },
-                                `And after Miriam helps me to end myself, I imagine her helping herself to my record collection, which she'll trade for cash at a music store.`
+                                `After Miriam helps me to end myself, I imagine her helping herself to my record collection, which she'll trade for cash at a music store.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
