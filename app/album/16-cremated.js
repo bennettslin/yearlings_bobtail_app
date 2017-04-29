@@ -262,7 +262,18 @@ module.exports = {
             {
                 time: 30,
                 left: `and deaf from blasting frontal speakers,`,
-                right: `an everlasting doublespeaker,`
+                right: [
+                    `an everlasting`,
+                    {
+                        anchor: `doublespeaker,`,
+                        annotation: {
+                            description: `The first month with Miriam was possibly the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did or could do seemed to amaze her, and the icing on top was doublespeaker rhyme, which I had come up with shortly before we met. So Miriam became my sounding board for all the ways I planned to use it, such as for juxtaposing my sober and drunken thoughts.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        }
+                    }
+                ]
             },
             {
                 time: 34,
@@ -277,7 +288,7 @@ module.exports = {
                                     anchor: `phoenix`,
                                     wiki: `Phoenix_(mythology)`
                                 },
-                                `is a bird that is reborn from its own ashes. Having broken up with Sita to date Miriam, I also await my triumphant rebirth. And yet, as Miriam climbs on top of me to make out, I'm overcome with self-doubt, and my "penis" rises limply as I struggle to maintain an erection.`
+                                `is a bird that is reborn from its own ashes. Having broken up with Sita to date Miriam, I also await my triumphant rebirth. But as Miriam climbs on top of me to make out, I am overcome with self-doubt, and my "penis" rises limply, unable to reach a full erection.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -294,12 +305,12 @@ module.exports = {
                         annotation: {
                             description: [
                                 // TODO: true
-                                `In Freudian psychology, the`,
+                                `In Freudian terms, my drunken personality was the`,
                                 {
                                     anchor: `id`,
                                     wiki: `Id,_ego_and_super-ego`
                                 },
-                                `represents the primal impulses of the psyche. I told Miriam about my id, otherwise known as my drunken personality, and explained my belief that allowing it to triumph over my rational thoughts was the key to keeping my creative juices flowing.`
+                                `that represented the primal impulses of my psyche. Wishing to play up both sides of my character, I told Miriam that allowing my drunken xxx to triumph over my cerebral xxx was the key to my creative process.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -330,7 +341,7 @@ module.exports = {
                     {
                         anchor: `good for anecdotes.`,
                         annotation: {
-                            description: `Though Miriam was entertained by my character, it wasn't in the way one should hope, which blew apart my theory that being interesting at all costs is the key to dating. I was to be the oddball ex providing grist for a lifetime of amusing tales, not the life companion to whom she would one day tell them.`,
+                            description: `Though Miriam was entertained by my character, it wasn't in the way one should hope, which blew apart my theory that being interesting at all costs is the key to dating. I was to be the oddball ex-boyfriend providing grist for a lifetime of amusing tales, not the life companion with whom she would one day share them.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -997,8 +1008,7 @@ module.exports = {
                     {
                         anchor: `preparing the scoop,`,
                         annotation: {
-                            // TODO
-                            description: `Miriam braces to deliver the bad news that we're breaking up. Metaphorically, she waits with "scoop" in hand while her pet takes its "dump," eager as she is to keep her house fresh and clean.`,
+                            description: `Miriam searches for a way to deliver the bad news in the least messy way possible, like a homeowner ready to swoop in with "scoop" in hand as her dog takes its "dump" on her freshly manicured lawn.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true,
