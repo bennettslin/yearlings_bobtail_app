@@ -267,7 +267,7 @@ module.exports = {
                     {
                         anchor: `doublespeaker,`,
                         annotation: {
-                            description: `The first month with Miriam was possibly the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did or could do seemed to amaze her, and the icing on top was doublespeaker rhyme, which I had come up with shortly before we met. So Miriam became my sounding board for all the ways I planned to use it, such as for juxtaposing my sober and drunken thoughts.`,
+                            description: `The first month with Miriam was one of the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did or could do seemed to amaze her, and the icing on top was doublespeaker rhyme, which I came up with while we were together. So Miriam became my sounding board for all the ways I planned to use it, such as to juxtapose my sober and drunken thoughts.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -304,13 +304,12 @@ module.exports = {
                         anchor: `beaten wit and id`,
                         annotation: {
                             description: [
-                                // TODO: true
-                                `In Freudian terms, my drunken personality was the`,
+                                `In Freudian psychology, the`,
                                 {
                                     anchor: `id`,
                                     wiki: `Id,_ego_and_super-ego`
                                 },
-                                `that represented the primal impulses of my psyche. Wishing to play up both sides of my character, I told Miriam that allowing my drunken xxx to triumph over my cerebral xxx was the key to my creative process.`
+                                `represents the primal impulses of the psyche. Wishing to play up both sides of my character, I told Miriam that allowing my drunken id to triumph over sober reasoning was the key to both my creative decisions and life choices.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -482,13 +481,12 @@ module.exports = {
                         anchor: `forced conversion`,
                         annotation: {
                             description: [
-                                // TODO
                                 `Historically, conquered peoples were`,
                                 {
-                                    anchor: `forced to assimilate`,
+                                    anchor: `forced to adopt`,
                                     wiki: `Forced_conversion`
                                 },
-                                `by adopting the religious beliefs of their conquerors. Oftentimes, however, they would simply rename old customs and deities and incorporate them into their new faith. Here, I imagine Miriam judging my own attempts at assimilation to be just as inadequate. She thus fears that corrupting traces of my old ways yet remain.`
+                                `the religious beliefs of their conquerors. More often than not, however, they simply repurposed old customs and deities to fit their new faith. Here, Miriam sees through my own attempts at assimilation and recognises them to be no less disingenuous. She thus fears that corrupt traces of my old ways will always remain.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -500,22 +498,10 @@ module.exports = {
                 right: [
                     `for some`,
                     {
-                        anchor: `unforeskinned`,
+                        anchor: `unforeskinned virgin`,
                         annotation: {
-                            // TODO
-                            description: `Miriam wasn't sure that I'd be circumcised, since the other Asian fellow she dated hadn't been.`,
+                            description: `During these years, I avoided having strong personal convictions, as it seemed absurd that something so trivial should limit the size of my dating pool. The ideal was to present myself as the blankest of blank slates for each new woman. So if her faith required me to undergo ritual circumcision, then my foreskin was still intact. And if her moral beliefs required me to be sexually inexperienced, then I was still a virgin.`,
                             dotKeys: {
-                                [BACKSTORY]: true
-                            }
-                        }
-                    },
-                    {
-                        anchor: `virgin,`,
-                        annotation: {
-                            // TODO
-                            description: `I was always trying to recreate the nervous and heady feeling of doing it for the first time. Miriam would oblige, but I think she found it unsettling.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
                                 [OBSERVATION]: true
                             }
                         }
@@ -529,8 +515,7 @@ module.exports = {
                     {
                         anchor: `self-servicing cleric surgeon`,
                         annotation: {
-                            // TODO
-                            description: `Of course, it was my own conflicted mental state that drove me to seek assimilation in the first place. I was like someone who had forcibly converted himself, and then performed his own circumcision.`,
+                            description: `Of course, I was ultimately the one forcing myself. It's as if I had presided over my own conversion ritual, then surgically removed my own foreskin.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -548,7 +533,7 @@ module.exports = {
                     {
                         anchor: `inherently perfect,`,
                         annotation: {
-                            description: `I never told Miriam that my real purpose in having a drunken personality was to blame it for all the selfish things that I desired but was too cowardly to own up to. Which makes sense, since the latest thing that I selfishly desired was her.`,
+                            description: `I never told Miriam that my real purpose in having a drunken personality was to remain above reproach myself, while blaming it for all the selfish things I desired but was too cowardly to own up to. Which makes sense, since the latest thing that I selfishly desired was her.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -564,8 +549,7 @@ module.exports = {
                     {
                         anchor: `kissed off, she purges up.`,
                         annotation: {
-                            // TODO
-                            description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob and swallowing the ejaculate. Of course, given the expected defectiveness of my progeny, I imagine Miriam symbolically vomiting the sperm that carries my genes, which must never be allowed to mingle with hers.`,
+                            description: `Bringing me to orgasm, Miriam sucks up the ejaculate, then leans over the car door to spit it out. I imagine this to be a symbolic rejection of the sperm that carries my defective genes, which must never be allowed to mingle with hers.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -578,10 +562,7 @@ module.exports = {
                     {
                         anchor: `worn puppet`,
                         annotation: {
-                            // TODO
-                            description: `Dangling the lifeless condom in front of me,
-
-                            I realise that having a drunken personality is like being a ventriloquist whose specialty is insult comedy. My dummy can then dish it out all day long, while I just sit by as an innocent onlooker.`,
+                            description: `Imagining the discarded condom to be a lifeless puppet, I realise that having a drunken personality is like being a ventriloquist. My dummy can then be used to say and do all the crude and questionable things needed to get what I want, while I just sit by as an innocent onlooker.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -672,8 +653,7 @@ module.exports = {
                         anchor: `Needle done`,
                         annotation: [
                             {
-                                // TODO: Mention needle, mention my imagination.
-                                description: `Fast-forward in time. Having just been told by Miriam that she's breaking up with me, I remain silent and sedated. I imagine myself as a terminally ill patient being allowed to die, as my favourite records play in the background.`,
+                                description: `Having gone all the way with Miriam, I am now at peace with our inevitable breakup. As I bask in my post-coital glow, then, an exaggerated scenario plays out in my mind of how things will end. I picture myself as a terminally ill patient being put to sleep, as my favourite record finishes playing in the background.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -686,10 +666,8 @@ module.exports = {
                     {
                         anchor: `will not retract,`,
                         annotation: {
-                            // TODO: Finality
                             description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected.`,
                             dotKeys: {
-                                [OBSERVATION]: true,
                                 [REFERENCE]: true
                             }
                         }
@@ -721,7 +699,7 @@ module.exports = {
                         anchor: `fragile ex`,
                         annotation: {
                             description: [
-                                `I imagine Miriam dreading the breakup, knowing the kind of fragile ex-boyfriend I'll surely be. Of course, she has no choice, since who knows what horrors lurk in my genetic makeup? I might very well be a carrier of`,
+                                `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. Of course, she had no choice, since who knows what horrors lurk in my genetic makeup? I might very well be a carrier of`,
                                 {
                                     anchor: `"Fragile X,"`,
                                     wiki: `Fragile_X_syndrome`
@@ -745,12 +723,12 @@ module.exports = {
                         anchor: `vinyl, exit`,
                         annotation: {
                             description: [
-                                `"Final exit" is a euphemism used by proponents of`,
+                                `After Miriam helps me to my "final exit," a euphemism used by proponents of`,
                                 {
-                                    anchor: `assisted suicide.`,
+                                    anchor: `assisted suicide,`,
                                     wiki: `Assisted_suicide`
                                 },
-                                `After Miriam helps me to end myself, I imagine her helping herself to my record collection, which she'll trade for cash at a music store.`
+                                `she helps herself to my record collection, which she'll trade for cash at a music store.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -793,7 +771,7 @@ module.exports = {
                     {
                         anchor: `in her pool,`,
                         annotation: {
-                            description: `Lying on my metaphorical deathbed, I picture Miriam lounging by a pool, eternally radiant in her youth. I exhaust my last breath to wish her well, but she plunges back into the deep end and doesn't hear me. In every which way, she has already moved on.`,
+                            description: `Lying sedated on my deathbed, I see Miriam lounging by a pool, eternally radiant in her youth. I exhaust my last breath to wish her well, but she plunges back into the deep end and doesn't hear me. In every which way, she has already moved on.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }
@@ -803,7 +781,7 @@ module.exports = {
                     {
                         anchor: `worrisome`,
                         annotation: {
-                            description: `I genuinely wished Miriam the best and continued to care about her well-being after our breakup. This surprised me, given the contrast of how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even if just for a little while. As far as I was concerned, then, I got the best end of the deal.`,
+                            description: `I genuinely wished Miriam the best and continued to care about her well-being after our breakup. This surprised me, given the contrast of how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even if just for a while. As far as I was concerned, then, I got the best end of that deal.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
@@ -815,14 +793,14 @@ module.exports = {
                         annotation: {
                             description: [
                                 // TODO
-                                `In her gene pool, "here's not where some lesser god has peed." Mark Medoff's play`,
+                                ` Mark Medoff's play`,
                                 {
                                     italic: {
                                         anchor: `Children of a Lesser God`,
                                         wiki: `Children_of_a_Lesser_God_(play)`
                                     }
                                 },
-                                `centres on a deaf woman, and thus its title seems to suggest that the disabled are divinely ordained to be inferior. Beyond just feeling insecure about the autism running in my family, I was keenly aware as a child that we worshipped gods deemed questionable by society. And since our race correlated with our religion, this suggested to me that some races can also be inferior by divine will.`
+                                `centres on a deaf woman, and thus its title seems to ask whether the disabled are divinely ordained to be inferior. Beyond just feeling insecure about the autism running in my family, I was keenly aware as a child that we worshipped gods deemed questionable by society. And since our race correlated with our religion, this suggested to me that some races can also be inferior by divine will. And so my imagined scenario ends with Miriam relieved that in her gene pool, "here's not where some lesser god has peed."`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -932,7 +910,7 @@ module.exports = {
                         anchor: `vegging with his boner shortened;`,
                         annotation: [
                             {
-                                description: `Flaccid and basking in a post-coital glow, I'm about to be blindsided by Miriam's true intention for today's outing.`,
+                                description: `Zoned out in my flaccid state, I'm about to be blindsided by Miriam's true intention for today's outing.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 },

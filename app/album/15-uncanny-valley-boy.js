@@ -1017,8 +1017,7 @@ module.exports = {
                                             [OBSERVATION]: true,
                                             [PUN]: true
                                         }
-                                    },
-                                    todo: true
+                                    }
                                 },
                                 `now gone…`
                             ]
