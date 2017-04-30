@@ -522,7 +522,7 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `sort out past and present tense`,
+            taskName: `tenses and categorisation`,
             workedHours: 0,
             neededHours: 3
         },
