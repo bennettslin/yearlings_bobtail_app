@@ -1586,7 +1586,7 @@ module.exports = {
                                     anchor: `Nunavut,`,
                                     wiki: `Nunavut`
                                 },
-                                `the northernmost territory of Canada. Yet with the reappearance of the Norse in my thoughts, I realise that our bounds are not limitless, as even our imaginations must repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so, just as "Norse and Nunavutter" collide, we end the night as we had begun it, "no worse and none the better."`
+                                `the northernmost territory of Canada. Yet with the reappearance of the Norse in my thoughts, I realise that our bounds are not limitless, as even our imaginations must repeat themselves. There is no new ground left to uncover, both in our fantasy epics and in our everyday lives. And so, just as the "Norse" encounter the "Nunavutter," we end the night as we had begun it, "no worse and none the better."`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -1905,7 +1905,7 @@ module.exports = {
                         anchor: `"Rejoyce!" bellow the`,
                         annotation: [
                             {
-                                description: `"'Rejoice!' bellow the reverends." Stuck with nothing to watch but early-morning televangelists, I observe that every religion's early spirit eventually degrades into orthodoxy and routine, just like each one of ours does over a lifetime. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
+                                description: `"'Rejoice!' bellow the reverends." Stuck with nothing to watch but early-morning televangelists, I observe that every religion's early spirit eventually degrades into orthodoxy and routine, just like each person's does over a lifetime. But in the meantime, we're just halfway through summer, and more nights of Robitussin await…`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,

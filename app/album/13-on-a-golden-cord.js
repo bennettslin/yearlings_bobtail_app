@@ -119,7 +119,7 @@ module.exports = {
                     anchor: `"Ode on a Grecian Urn."`,
                     wiki: `Ode_on_a_Grecian_Urn`
                 },
-                `I'm pretentious like that.`
+                `I was pretentious like that.`
             ],
             dotKeys: {
                 [OBSERVATION]: true

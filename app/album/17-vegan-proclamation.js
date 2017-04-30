@@ -379,14 +379,7 @@ module.exports = {
                             {
                                 anchor: `known to be dead,`,
                                 annotation: {
-                                    // TODO
-                                    description: [
-                                        {
-                                            anchor: `Deism`,
-                                            wiki: `Deism`
-                                        },
-                                        `is the belief that God, having created the universe, no longer intervenes in its progress. I liked the idea that if something greater than ourselves cannot observe us, then much like Schrödinger's battered cat, some part of us may always live on.`
-                                    ],
+                                    description: `I liked the idea that if something greater than ourselves cannot observe us, then much like Schrödinger's battered cat, some part of us must always live on.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
@@ -724,7 +717,26 @@ module.exports = {
             },
             {
                 time: 194,
-                lyric: `And can we start as children? Would we want to then?`
+                lyric: [
+                    `And can we`,
+                    {
+                        anchor: `start as children?`,
+                        annotation: {
+                            description: [
+                                `Hoagy Carmichael's`,
+                                {
+                                    anchor: `"Stardust"`,
+                                    wiki: `Stardust_(song)`
+                                },
+                                `was my favourite song, so "stardust" became my go-to word for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children?" and really connected with it. He seemed greatly disappointed to find out that the actual words were gibberish.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        }
+                    },
+                    `Would we want to then?`
+                ]
             },
             {
                 time: 201,
