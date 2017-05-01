@@ -163,7 +163,7 @@ module.exports = {
     },
     doubleColumns: true,
     totalTime: 204,
-    overview: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing as well. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I had a master plan to follow, and wasn't about to change my ways.`,
+    overview: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing as I went. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I had a master plan to follow, and wasn't about to change my ways.`,
     title: {
         anchor: `Uncanny Valley Boy`,
         annotation: {
@@ -1143,11 +1143,10 @@ module.exports = {
                             {
                                 anchor: `sun tinkles light`,
                                 annotation: {
-                                    description: `Or else, their "son." In the nightmare, I was now ruler of the neighbourhood, showering my subjects in my urine, their sole means of subsistence. In hindsight, my brain was probably telling me to get up and use the bathroom.`,
+                                    description: `In the nightmare, I was now ruler of the neighbourhood, showering my subjects in my urine, their sole means of subsistence. In hindsight, my brain was probably telling me to get up and use the bathroom.`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
-                                        [OBSERVATION]: true,
-                                        [PUN]: true
+                                        [OBSERVATION]: true
                                     }
                                 }
                             }
@@ -1224,14 +1223,21 @@ module.exports = {
                     {
                         lyric: {
                             anchor: `old and subservient.`,
-                            annotation: {
-                                // TODO: guilt, Asian immigrants
-                                description: `Amongst those I ruled over were my parents, now feeble and senile after a lifetime of following my bidding.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [OBSERVATION]: true
+                            annotation: [
+                                {
+                                    description: `Amongst those I ruled over were my parents, now feeble and senile after a lifetime of following their "son's" bidding.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true,
+                                        [PUN]: true
+                                    }
+                                },
+                                {
+                                    description: `It wasn't until college that I was able to appreciate the enormous sacrifices that my parents made for me and my siblings to have a better life than they did. But that this realisation had to come through assigned coursework on immigrant history, rather than my own lived experiences, only further added to my guilt.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
                                 }
-                            }
+                            ]
                         }
                     }
                 ],
@@ -1392,8 +1398,8 @@ module.exports = {
         },
         {
             taskName: `tenses and categorisation`,
-            workedHours: 6,
-            neededHours: 8
+            workedHours: 7,
+            neededHours: 7
         },
         {
             taskName: `allow sub stanzas`,
