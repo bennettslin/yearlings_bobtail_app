@@ -1012,7 +1012,7 @@ module.exports = {
                                 {
                                     anchor: `dulling gold`,
                                     annotation: {
-                                        description: `My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or as people, and most were arguably worse. But rather than work to recover my once treasured bond with Sita, which had grown dull only by my neglect, I happily exchanged it for the shiny "bronze" trophies offered by other women.`,
+                                        description: `My desire to date other women blinded me to both their flaws and Sita's strengths. In hindsight, they weren't better as partners or as people, and most were arguably worse. But rather than work to recover my once treasured bond with Sita, which had lost its lustre only by my neglect, I happily exchanged it for the shiny "bronze" trophies offered by other women.`,
                                         dotKeys: {
                                             [OBSERVATION]: true,
                                             [PUN]: true

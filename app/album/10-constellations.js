@@ -1568,7 +1568,8 @@ module.exports = {
                     }
                 ],
                 stanzaType: BRIDGE,
-                substanzaType: RESPONSE
+                substanzaType: RESPONSE,
+                subsequent: true
             }
         ],
         [
@@ -1681,7 +1682,8 @@ module.exports = {
             {
                 unitMap: true,
                 unitClassName: OVERLAP,
-                stanzaType: BRIDGE
+                stanzaType: BRIDGE,
+                subsequent: true
             }
         ],
         [

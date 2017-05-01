@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Bug where subsequent stanza is not closer.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Instrumental names`,
         workedHours: 0,
         neededHours: 1
@@ -1671,6 +1666,11 @@ module.exports = [
     },
     {
         taskName: `Last selected annotation still doesn't persist`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Bug where subsequent stanza is not closer.`,
         workedHours: 1,
         neededHours: 1
     }

@@ -23,7 +23,7 @@
      * Apply margin top to stanza block rather than lyrics unit, so that
      * bottom dot stanza can override it when faded out.
      */
-    &:not(:first-child) {
+    &:not(:first-child):not(.subsequent) {
         .stanza-block:not(.dots-stanza-hidden) {
             margin-top: @lyrics-unit-margin;
         }
@@ -97,7 +97,7 @@
         padding-right: @custom-sub-block-side-padding;
     }
     &.overlap {
-        margin-top: -@lyrics-unit-margin - @stanza-overlap-margin;
+        margin-top: -@stanza-overlap-margin;
     }
 }
 

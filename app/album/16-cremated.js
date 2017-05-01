@@ -652,7 +652,7 @@ module.exports = {
                         anchor: `Needle done`,
                         annotation: [
                             {
-                                description: `Having gone all the way with Miriam, I am now at peace with our inevitable breakup. As I bask in my post-coital glow, then, an exaggerated scenario plays out in my mind of how things will end. I picture myself as a terminally ill patient being put to sleep, as my favourite record finishes playing in the background.`,
+                                description: `Having gone all the way with Miriam, I am at peace with our inevitable breakup. As I bask in my post-coital glow, then, an exaggerated scenario plays out in my mind of how things will end. I picture myself as a terminally ill patient being put to sleep, as my favourite record finishes playing in the background.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
