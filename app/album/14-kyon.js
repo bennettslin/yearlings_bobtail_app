@@ -689,27 +689,20 @@ module.exports = {
                             }
                         }
                     },
-                    `your fear of never dying, and`,
-                    /**
-                     * NOTE: Not sure this needs to be said.
-                     */
-                    /**
-                    annotation: {
-                        description: [
-                            `Recognising my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. I felt comforted by Hinduism's notion of`,
-                            {
-                                italic: {
-                                    anchor: `moksha,`,
-                                    wiki: `Moksha`
-                                }
-                            },
-                            `or transcendent release from the cycle of rebirth.`
-                        ],
-                        dotKeys: {
-                            [BACKSTORY]: true
+                    `your`,
+                    {
+                        anchor: `fear of never dying,`,
+                        annotation: {
+                            description: [
+                                `Recognising my spiritual malaise, Sita would invite me to attend Hindu services with her, which I eagerly obliged. While Hinduism is no different from Buddhism in its end goal of transcendent release from the cycle of rebirth, which I found problematic as a child, I was attracted to its sprawling pantheon of deities and avatars. It just seemed like the more details there are, the more room you have to explore the divine. Anyway, I never self-identified as a Hindu during those years, but I definitely felt like one.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
+                            }
                         }
-                    }
-                    **/
+                    },
+                    `and`,
                     {
                         anchor: `sadness for what it was.`,
                         annotation: {
