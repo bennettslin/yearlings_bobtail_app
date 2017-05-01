@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Bug where subsequent stanza is not closer.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Instrumental names`,
         workedHours: 0,
         neededHours: 1
