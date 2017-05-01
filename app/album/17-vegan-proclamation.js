@@ -710,7 +710,7 @@ module.exports = {
                         anchor: `sparks zip through our heads…`,
                         annotation: [
                             {
-                                description: `Travelling with Odin beyond the galaxy, I remark that the universe is almost entirely empty space, just like the distance between subatomic particles that make up our bodies. With this thought wandering through my head, I then wonder if we are nothing more than the wandering thoughts of the universe.`,
+                                description: `Travelling with Odin beyond the galaxy, I observe that the universe is almost entirely empty space, just like the distance between subatomic particles that make up our bodies. With this thought wandering through my head, I then wonder if we ourselves are nothing more than the wandering thoughts of the universe.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true,
