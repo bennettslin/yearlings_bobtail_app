@@ -737,7 +737,7 @@ module.exports = {
                                     anchor: `"Stardust"`,
                                     wiki: `Stardust_(song)`
                                 },
-                                `was my favourite song, so "stardust" became a common word to use for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children?" and deeply connected with it. He seemed greatly disappointed to find out that the actual words were gibberish.`
+                                `was my favourite song, so "stardust" became my go-to word to use for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children?" and deeply connected with it. He seemed greatly disappointed to find out that the actual words were gibberish.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
