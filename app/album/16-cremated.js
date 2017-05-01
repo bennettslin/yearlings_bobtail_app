@@ -456,11 +456,10 @@ module.exports = {
                 left: `Though, she ponders the children`,
                 right: [
                     {
-                        // TODO: Portal
                         anchor: `Trophy bronzed from a Trojan`,
                         annotation: [
                             {
-                                description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob. As she yanks off the condom, I'm reminded of the first time I had sex with a woman other than Sita. I was so amazed that I left the used condom on the nightstand for days, much like proud parents might bronze their baby's first pair of shoes.`,
+                                description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob. As she yanks the condom off, I'm reminded of the first time I had sex with a woman other than Sita. I was so amazed that I left the used condom on the nightstand for days, much like proud parents might bronze their baby's first pair of shoes.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
