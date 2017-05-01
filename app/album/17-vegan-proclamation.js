@@ -353,7 +353,6 @@ module.exports = {
                                             anchor: `Big Crunch`,
                                             wiki: `Big_Crunch`
                                         },
-                                        // TODO: Mention embracing Sita's Hinduism sooner.
                                         `is a theory that the universe will reverse its expansion and eventually collapse upon itself, possibly igniting another Big Bang. I found the thought comforting as it jibes with the Hindu belief that the universe is a living force, helplessly bound like us to an eternal cycle of death and rebirth.`
                                     ],
                                     dotKeys: {
@@ -669,12 +668,12 @@ module.exports = {
                         anchor: `airholes,`,
                         annotation: {
                             description: [
-                                `In Nirvana's "Sappy,"`,
+                                `In Nirvana's`,
                                 {
-                                    anchor: `Kurt Cobain`,
-                                    wiki: `Kurt_Cobain`
+                                    anchor: `"Sappy,"`,
+                                    wiki: `Sappy`
                                 },
-                                `compares the victim of an emotionally abusive relationship to a small creature kept in a jar with breathing holes punched in its lid. I liked the imagery, so I borrowed it shamelessly here.`
+                                `Kurt Cobain compares the victim of an emotionally abusive relationship to a small creature kept in a jar with breathing holes punched in its lid. I liked the imagery, so I borrowed it shamelessly here.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true,
@@ -709,9 +708,19 @@ module.exports = {
                     `The stardust marks us, Odin,`,
                     {
                         anchor: `sparks zip through our heads…`,
-                        annotation: {
-                            portal: `spark_zips`
-                        }
+                        annotation: [
+                            {
+                                description: `Travelling with Odin beyond the galaxy, I remark that the universe is almost entirely empty space, just like the distance between subatomic particles that make up our bodies. With this thought wandering through my head, I then wonder if we are nothing more than the wandering thoughts of the universe.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true,
+                                    [REFERENCE]: true
+                                }
+                            },
+                            {
+                                portal: `spark_zips`
+                            }
+                        ]
                     }
                 ]
             },
@@ -728,7 +737,7 @@ module.exports = {
                                     anchor: `"Stardust"`,
                                     wiki: `Stardust_(song)`
                                 },
-                                `was my favourite song, so "stardust" became my go-to word for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children?" and really connected with it. He seemed greatly disappointed to find out that the actual words were gibberish.`
+                                `was my favourite song, so "stardust" became a common word to use for placeholder lyrics whenever we performed a song live before it was fully written. Owen misheard one of these lines as "Can we start as children?" and deeply connected with it. He seemed greatly disappointed to find out that the actual words were gibberish.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -745,18 +754,18 @@ module.exports = {
                     {
                         anchor: `diapered white dwarf,`,
                         annotation: {
-                            // TODO
                             description: [
+                                `As we come upon a`,
                                 {
-                                    anchor: `Apasmara`,
-                                    wiki: `Apasmara`
-                                },
-                                `is a dwarf demon of ignorance in Hindu mythology. A`,
-                                {
-                                    anchor: `white dwarf`,
+                                    anchor: `white dwarf,`,
                                     wiki: `White_dwarf`
                                 },
-                                `is the dense remnant of an aged star. As I began to take an unflinching look at all the hurt I'd caused, I was comforted to know that those who came before me had learned from their mistakes. And yet, it felt just as dispiriting to know that those coming after had yet to make theirs. The universe never truly learns, and I was part of the reason why. I had this same thought about my brother many years ago, which made me realise that all I could do was love him for who he was.`
+                                `the dense remnant of an aged star, I am reminded of`,
+                                {
+                                    anchor: `Apasmara,`,
+                                    wiki: `Apasmara`
+                                },
+                                `the dwarf demon of ignorance in Hindu mythology. And so I pause for an unflinching look at all the hurt that my own ignorance has caused.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -764,7 +773,20 @@ module.exports = {
                             }
                         }
                     },
-                    `gurgling, curls up for his sleep…`
+                    [
+                        {
+                            anchor: `gurgling, curls up`,
+                            annotation: {
+                                // TODO: Flashback to Willy the Cocoa
+                                description: `With ignorance being as old as time itself, I'm comforted to know that all who came before us have since learned from their mistakes. And yet, it feels just as dispiriting to know that those coming afterwards have yet to make theirs. The universe never truly learns, and I was part of the reason why. I had a similar thought as a child, when I wondered whether I was the reason why my brother will never truly learn. It made me realise that all I could do was love him for who he was.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        },
+                        `for his sleep…`
+                    ]
                 ]
             },
             {
@@ -772,7 +794,6 @@ module.exports = {
                 lyric: [
                     `Our ashed heads bow from`,
                     {
-                        // TODO
                         anchor: `chivalry to our Siva's feet…`,
                         properNoun: true,
                         annotation: [
@@ -787,7 +808,7 @@ module.exports = {
                                         anchor: `Siva`,
                                         wiki: `Shiva`
                                     },
-                                    `as a cosmic dancer, who dances to tear down the universe and then build it up again, in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
+                                    `as a cosmic dancer, who dances to tear down the universe and build it up again in an endless cycle. Beneath his feet lies the dwarf demon Apasmara, thus symbolising Siva's victory over ignorance. And having done my part to help destroy the universe, I now commit to rebuilding it.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -816,8 +837,8 @@ module.exports = {
         },
         {
             taskName: `tenses and categorisation`,
-            workedHours: 2,
-            neededHours: 4
+            workedHours: 6,
+            neededHours: 7
         },
         {
             taskName: `annotations`,

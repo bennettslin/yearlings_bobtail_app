@@ -549,7 +549,7 @@ module.exports = {
                     {
                         anchor: `kissed off, she purges up.`,
                         annotation: {
-                            description: `Bringing me to orgasm, Miriam sucks up the ejaculate, then leans over the car door to spit it out. I imagine this to be a symbolic rejection of the sperm that carries my defective genes, which must never be allowed to mingle with hers.`,
+                            description: `Bringing me to orgasm, Miriam sucks up the ejaculate, then leans over the car door to spit it out. I imagine this to be her symbolic rejection of the sperm that carries my defective genes, which must never be allowed to mingle with hers.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [OBSERVATION]: true
@@ -789,25 +789,45 @@ module.exports = {
                         }
                     },
                     {
-                        anchor: `"Bless her, Godspeed…"`,
+                        anchor: `"Bless her,`,
                         annotation: {
                             description: [
-                                // TODO
                                 ` Mark Medoff's play`,
                                 {
                                     italic: {
-                                        anchor: `Children of a Lesser God`,
+                                        anchor: `Children of a Lesser God,`,
                                         wiki: `Children_of_a_Lesser_God_(play)`
                                     }
                                 },
-                                `centres on a deaf woman, and thus its title seems to ask whether the disabled are divinely ordained to be inferior. Beyond just feeling insecure about the autism running in my family, I was keenly aware as a child that we worshipped gods deemed questionable by society. And since our race correlated with our religion, this suggested to me that some races can also be inferior by divine will. And so my imagined scenario ends with Miriam relieved that in her gene pool, "here's not where some lesser god has peed."`
+                                `which centres on a deaf woman, seems to suggest in its title that being disabled is tantamount to living in a world created by an inferior deity.`
                             ],
                             dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true,
-                                [PUN]: true
+                                [OBSERVATION]: true
                             }
                         }
+                    },
+                    {
+                        anchor: `Godspeed…"`,
+                        properNoun: true,
+                        annotation: [
+                            {
+                                description: [
+                                    `My imagined scenario ends with Miriam feeling relieved to know that in her gene pool, "here's not where some lesser god has peed."`
+                                ],
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
+                                }
+                            },
+                            {
+                                description: [
+                                    `As a child, I was embarrassed to be seen with my autistic brother during his frequent outbursts, a feeling that was compounded by my family's Buddhism and its obvious correlation with looking a shade darker than everyone else in Sasha's world. My inferiority complex thus failed to distinguish between having faulty genes, being of a faulty race, and following a faulty faith. They all seemed to derive from the same indelible essence at the core of my being.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        ]
                     }
                 ]
             },
@@ -966,7 +986,6 @@ module.exports = {
                     {
                         anchor: `ex-dromedary,`,
                         annotation: {
-                            // TODO: Mention dramedy?
                             description: [
                                 `The`,
                                 {
@@ -1038,7 +1057,7 @@ module.exports = {
         },
         {
             taskName: `tenses and categorisation`,
-            workedHours: 11,
+            workedHours: 13,
             neededHours: 14
         },
         {

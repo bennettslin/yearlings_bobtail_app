@@ -1182,9 +1182,17 @@ module.exports = {
                     {
                         anchor: `day to die`,
                         annotation: {
-                            description: `As a child, I experienced night terrors related to my constant fear of death.`,
+                            description: [
+                                `As a child, I experienced night terrors related to my constant fear of death. Whenever I woke up screaming, my mother would console me with the promise of reincarnation. But this only confused me, since the end goal of Buddhism is`,
+                                {
+                                    anchor: `nirvana,`,
+                                    wiki: `Nirvana_(Buddhism)`
+                                },
+                                `a release from the cycle of rebirth through annihilation of the soul. Awaiting my next life, then, knowing that it might be my last, just seemed like getting old and dying on a grander scale.`
+                            ],
                             dotKeys: {
-                                [BACKSTORY]: true
+                                [BACKSTORY]: true,
+                                [OBSERVATION]: true
                             }
                         }
                     },
@@ -1205,14 +1213,7 @@ module.exports = {
                     {
                         anchor: `holed up hostage`,
                         annotation: {
-                            description: [
-                                `Whenever I woke up screaming, my mother would console me with the promise of reincarnation. This confused me since the end goal of Buddhism is`,
-                                {
-                                    anchor: `nirvana,`,
-                                    wiki: `Nirvana_(Buddhism)`
-                                },
-                                `a release from the cycle of rebirth through annihilation of the soul, which just seemed like death on a grander scale. And yet the thought of being stuck with a soul forever, a fate promised by the faiths of my classmates, seemed every bit as dreadful.`
-                            ],
+                            description: `And yet, the thought of being stuck with a soul forever, a fate promised by the faiths of my classmates, seemed every bit as dreadful.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true

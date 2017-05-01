@@ -510,7 +510,7 @@ module.exports = {
                         anchor: `longest cowlick`,
                         annotation: [
                             {
-                                description: `Being acquainted with my family over the years, Willy understands that my brother's outbursts are the reason my mother allows his hair to reach unruly lengths.`,
+                                description: `Being acquainted with my family over the years, Willy understands that my brother's tantrums are the reason my mother allows his hair to reach unruly lengths.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -630,6 +630,7 @@ module.exports = {
                     {
                         anchor: `smarts he could've took`,
                         annotation: {
+                            // TODO: Foreshadow of Vegan
                             description: `I spent a long time wondering why my brother was autistic and I was not, when our circumstances weren't any different. It didn't seem far-fetched to suppose that cognitive skills are a fixed supply in a mother's womb, and that I had selfishly taken my brother's share.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -672,7 +673,7 @@ module.exports = {
                         anchor: `Killcrop`,
                         annotation: {
                             description: [
-                                `In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a primary concern of past times, when children unable to work for their keep could lead to a family's ruin.`
+                                `In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a primary concern of past times, when children unable to work for their keep could lead to a farmer's ruin.`
                             ],
                             dotKeys: {
                                 [REFERENCE]: true
