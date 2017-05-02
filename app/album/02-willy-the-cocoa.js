@@ -13,6 +13,9 @@ import { LEFT,
          PUN,
          REFERENCE,
          OBSERVATION,
+
+         FLASHBACK_TO_PORTAL_PREFIX,
+
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
@@ -629,14 +632,21 @@ module.exports = {
                     `You'd learn him good, when`,
                     {
                         anchor: `smarts he could've took`,
-                        annotation: {
-                            // TODO: Foreshadow of Vegan
-                            description: `I spent a long time wondering why my brother was autistic and I was not, when our circumstances weren't any different. It didn't seem far-fetched to suppose that cognitive skills are a fixed supply in a mother's womb, and that I had selfishly taken my brother's share.`,
-                            dotKeys: {
-                                [BACKSTORY]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: `I spent a long time wondering why my brother was autistic and I was not, when our circumstances weren't any different. It didn't seem far-fetched to suppose that cognitive skills are a fixed supply in a mother's womb, and that I had selfishly taken my brother's share.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true,
+                                    [OBSERVATION]: true
+                                }
+                            },
+                            {
+                                portal: {
+                                    portalKey: `learn_him_good`,
+                                    portalPrefix: FLASHBACK_TO_PORTAL_PREFIX
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },

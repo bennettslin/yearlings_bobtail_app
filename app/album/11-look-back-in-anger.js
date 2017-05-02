@@ -9,6 +9,7 @@ import { INSTRUMENTAL,
          OBSERVATION,
          PUN,
          REFERENCE,
+         FORESHADOW_OF_PORTAL_PREFIX,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
@@ -195,21 +196,28 @@ module.exports = {
                 time: 13,
                 lyric: [
                     {
-                        // TODO: Flashback to Didi?
                         anchor: `dragging aglets held`,
-                        annotation: {
-                            description: [
-                                `An`,
-                                {
-                                    anchor: `aglet`,
-                                    wiki: `Aglet`
-                                },
-                                `is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. Anyone bent on seeing me trip and fall thus readily had the means to make it happen.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `An`,
+                                    {
+                                        anchor: `aglet`,
+                                        wiki: `Aglet`
+                                    },
+                                    `is the plastic tip at the end of a shoelace. Since I never learned to tie my shoelaces properly, they were always coming undone. Anyone bent on seeing me trip and fall thus readily had the means to make it happen.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                portal: {
+                                    portalKey: `shoelaces`,
+                                    portalPrefix: FORESHADOW_OF_PORTAL_PREFIX
+                                }
                             }
-                        }
+                        ]
                     },
                     `by the bastard's boot,`
                 ]

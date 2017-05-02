@@ -9,6 +9,7 @@ import { REFRAIN,
          PUN,
          REFERENCE,
          SONGWRITING,
+         FORESHADOW_OF_PORTAL_PREFIX,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
@@ -765,7 +766,7 @@ module.exports = {
                                     anchor: `Apasmara,`,
                                     wiki: `Apasmara`
                                 },
-                                `the dwarf demon of ignorance in Hindu mythology. And so I pause for an unflinching look at all the hurt that my own ignorance has caused.`
+                                `the dwarf demon of ignorance in Hindu mythology. And so I pause here to mull over the hurt that my own ignorance has caused.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
@@ -776,14 +777,21 @@ module.exports = {
                     [
                         {
                             anchor: `gurgling, curls up`,
-                            annotation: {
-                                // TODO: Flashback to Willy the Cocoa
-                                description: `With ignorance being as old as time itself, I'm comforted to know that all who came before us have since learned from their mistakes. And yet, it feels just as dispiriting to know that those coming afterwards have yet to make theirs. The universe never truly learns, and I was part of the reason why. I had a similar thought as a child, when I wondered whether I was the reason why my brother will never truly learn. It made me realise that all I could do was love him for who he was.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [OBSERVATION]: true
+                            annotation: [
+                                {
+                                    description: `With ignorance being as old as time itself, I'm comforted to know that we'll always correct our past mistakes. And yet, it feels just as dispiriting to know that those coming after us have yet to make theirs. The universe never truly learns, and I was partly to blame. I had this same thought as a child, when I wondered if I was the reason why my brother would never get better. It made me realise that all I could do was love him for who he was, and then do better for him.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [OBSERVATION]: true
+                                    }
+                                },
+                                {
+                                    portal: {
+                                        portalKey: `learn_him_good`,
+                                        portalPrefix: FORESHADOW_OF_PORTAL_PREFIX
+                                    }
                                 }
-                            }
+                            ]
                         },
                         `for his sleep…`
                     ]

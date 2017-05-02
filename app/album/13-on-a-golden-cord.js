@@ -459,10 +459,9 @@ module.exports = {
                 right: [
                     `still hardened against her`,
                     {
-                        // TODO: Portal: Link to streetlamps in left column?
                         anchor: `fawning, misty glance,`,
                         annotation: {
-                            description: `Sensing that Sita gazes downward upon him from the night sky, drunken me realises that remnants of his past bitterness still remain deep within.`,
+                            description: `Sensing that Sita gazes downward upon him from the night sky, drunken me still refuses to flinch, as remnants of his past bitterness rumble deep within.`,
                             dotKeys: {
                                 [NARRATIVE]: true
                             }

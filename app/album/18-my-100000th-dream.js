@@ -5,6 +5,7 @@ import { INSTRUMENTAL,
          NARRATIVE,
          BACKSTORY,
          OBSERVATION,
+         FORESHADOW_OF_PORTAL_PREFIX,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
@@ -440,13 +441,21 @@ module.exports = {
                     `She'll always`,
                     {
                         anchor: `come to take me,`,
-                        annotation: {
-                            description: `I now understand that Sita, being my most cherished memory, was always going to be the one chosen by my subconscious to help ease my fears as I exit from this world.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                        annotation: [
+                            {
+                                description: `I now understand that Sita, being my most cherished memory, was always going to be the one chosen by my subconscious to help ease my fears as I exit from this world.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true,
+                                    [OBSERVATION]: true
+                                }
+                            },
+                            {
+                                portal: {
+                                    portalKey: `dreams_of_whom`,
+                                    portalPrefix: FORESHADOW_OF_PORTAL_PREFIX
+                                }
                             }
-                        }
+                        ]
                     },
                     `Sita! Sita!`
                 ]

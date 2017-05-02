@@ -14,6 +14,7 @@ import { LEFT,
          OBSERVATION,
          PUN,
          REFERENCE,
+         FLASHBACK_TO_PORTAL_PREFIX,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
@@ -261,13 +262,13 @@ module.exports = {
                 left: [
                     `The`,
                     {
-                        // TODO: Pun
                         anchor: `house settled in sheets,`,
                         annotation: {
                             description: `The rest of the house is asleep, snug under their blankets. Of course, sheets are also pulled over the deceased.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                                [OBSERVATION]: true,
+                                [PUN]: true
                             }
                         }
                     }
@@ -602,8 +603,19 @@ module.exports = {
                         },
                     }
                 ],
-                // TODO: portal: Future reference to Sita?
-                right: `To dreams of whom does each one cave in`
+                right: [
+                    `To`,
+                    {
+                        anchor: `dreams of whom`,
+                        annotation: {
+                            portal: {
+                                portalKey: `dreams_of_whom`,
+                                portalPrefix: FLASHBACK_TO_PORTAL_PREFIX
+                            }
+                        }
+                    },
+                    `does each one cave in`
+                ]
             },
             {
                 time: 53,
@@ -1068,9 +1080,9 @@ module.exports = {
                 time: 107,
                 left: {
                     anchor: `shivering for shivs unsheathed.`,
-                    // TODO: Portal Kyon?
                     annotation: [
                         {
+                            // TODO: Portal Kyon for shank?
                             description: [
                                 `A`,
                                 {
@@ -1265,10 +1277,10 @@ module.exports = {
         [
             {
                 time: 147,
-                // TODO: Portal Reference to abortion in Ash Wednesday?
                 left: [
                     `But for a`,
                     {
+                        // TODO: Portal to Ash Wednesday?
                         anchor: `foetus force-fed,`,
                         annotation: {
                             description: `Most maddening of all was that one has no say in being brought into this world, given how distressing the knowledge of one's mortality must always be.`,
@@ -1396,17 +1408,16 @@ module.exports = {
             },
             {
                 time: 177,
-                // TODO: Portal: Grace Darling in Grasshoppers?
                 left: `which hitherto snubbed and spurned a wreck,`,
                 right: [
                     {
                         anchor: `his litter`,
                         annotation: {
-                            // TODO: Pun
                             description: `Referring to the disposal of Odin's cat litter, of course, but also to his lack of progeny. At this time, my own odds of leaving behind a litter don't seem any better.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
-                                [OBSERVATION]: true
+                                [OBSERVATION]: true,
+                                [PUN]: true
                             }
                         }
                     },

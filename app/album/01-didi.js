@@ -11,6 +11,7 @@ import { INSTRUMENTAL,
          SONGWRITING,
          AFTERWORD,
          OBSERVATION,
+         FLASHBACK_TO_PORTAL_PREFIX,
 
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
@@ -154,14 +155,21 @@ module.exports = {
                 lyric: [
                     `wondering to himself, who would`,
                     {
-                        // TODO: Foreshadow of Look Back?
                         anchor: `tie his shoes?`,
-                        annotation: {
-                            description: `Being left-handed as a child, I struggled to learn the manner of tying shoelaces where one bunny goes around the tree. So I came up with my own version that looked like the real thing, but was always coming undone.`,
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: `Being left-handed as a child, I struggled to learn the manner of tying shoelaces where one bunny goes around the tree. So I came up with my own version that looked like the real thing, but was always coming undone.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                portal: {
+                                    portalKey: `shoelaces`,
+                                    portalPrefix: FLASHBACK_TO_PORTAL_PREFIX
+                                }
                             }
-                        }
+                        ]
                     }
                 ]
             },
