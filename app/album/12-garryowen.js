@@ -1,8 +1,12 @@
-import { INSTRUMENTAL,
-         REFRAIN,
+import { REFRAIN,
          VERSES,
          CHORUS,
          BRIDGE,
+
+         INTRO,
+         SOLO,
+         OUTRO,
+
          BACKSTORY,
          OBSERVATION,
          PUN,
@@ -125,7 +129,7 @@ module.exports = {
             {
                 time: 0,
                 centre: {
-                    italic: `(intro)`
+                    italic: `(Garry's theme)`
                 }
             },
             {
@@ -150,7 +154,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: INTRO
             }
         ],
         [
@@ -524,12 +528,12 @@ module.exports = {
             {
                 time: 84,
                 centre: {
-                    italic: `(solo)`
+                    italic: `(bagpipes)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: SOLO
             }
         ],
         [
@@ -792,12 +796,12 @@ module.exports = {
             {
                 time: 162,
                 centre: {
-                    italic: `(outro)`
+                    italic: `(Garry's theme)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: OUTRO
             }
         ]
     ],

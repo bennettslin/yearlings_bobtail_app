@@ -3,7 +3,8 @@ import { VERSES,
          CHORUS,
          AFTERWORD,
          BACKSTORY,
-         INSTRUMENTAL,
+         REFRAIN,
+
          NARRATIVE,
          OBSERVATION,
          PUN,
@@ -97,7 +98,7 @@ module.exports = {
             {
                 time: 0,
                 centre: {
-                    italic: `(refrain)`
+                    italic: `(Sasha's theme)`
                 }
             },
             {
@@ -118,7 +119,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -377,12 +378,12 @@ module.exports = {
             {
                 time: 71,
                 centre: {
-                    italic: `(refrain)`
+                    italic: `(Sasha's theme)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -636,12 +637,12 @@ module.exports = {
             {
                 time: 138,
                 centre: {
-                    italic: `(refrain)`
+                    italic: `(Sasha's theme)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [

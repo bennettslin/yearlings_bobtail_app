@@ -1,11 +1,13 @@
 import { LEFT,
          OVERLAP,
-         INSTRUMENTAL,
          VERSES,
          PRECHORUS,
          CHORUS,
          RHYME,
          POSTCHORUS,
+         INTRO,
+         SOLO,
+
          AFTERWORD,
          SONGWRITING,
          BACKSTORY,
@@ -152,7 +154,7 @@ module.exports = {
             {
                 time: 0,
                 centre: {
-                    italic: `(intro)`
+                    italic: `(Willy's theme)`
                 }
             },
             {
@@ -178,7 +180,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: INTRO
             }
         ],
         [
@@ -667,12 +669,12 @@ module.exports = {
             {
                 time: 96,
                 centre: {
-                    italic: `(solo)`
+                    italic: `(Willy's theme)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: SOLO
             }
         ],
         [

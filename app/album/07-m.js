@@ -1,7 +1,9 @@
-import { INSTRUMENTAL,
-         REFRAIN,
-         VERSES,
+import { VERSES,
          CHORUS,
+         INTRO,
+         REFRAIN,
+         OUTRO,
+
          SONGWRITING,
          BACKSTORY,
          NARRATIVE,
@@ -129,7 +131,7 @@ module.exports = {
             {
                 time: 0,
                 centre: {
-                    italic: `(prelude)`
+                    italic: `(Mara's theme)`
                 }
             },
             {
@@ -144,7 +146,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: INTRO
             }
         ],
         [
@@ -976,12 +978,12 @@ module.exports = {
             {
                 time: 192,
                 centre: {
-                    italic: `(outro)`
+                    italic: `(glockenspiel)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: OUTRO
             }
         ]
     ],

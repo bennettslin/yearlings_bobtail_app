@@ -1,9 +1,12 @@
-import { INSTRUMENTAL,
-         VERSES,
+import { VERSES,
          PRECHORUS,
          CHORUS,
          BRIDGE,
          CODA,
+
+         INTRO,
+         OUTRO,
+
          RHYME,
          RESPONSE,
          BACKING,
@@ -200,7 +203,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: INTRO
             }
         ],
         [
@@ -1381,12 +1384,12 @@ module.exports = {
             {
                 time: 199,
                 centre: {
-                    italic: `(outro)`
+                    italic: `(Mara's theme)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: OUTRO
             }
         ]
     ],

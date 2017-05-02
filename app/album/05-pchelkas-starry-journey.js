@@ -1,11 +1,13 @@
-import { REFRAIN,
-         VERSES,
+import { VERSES,
          PRECHORUS,
          CHORUS,
          POSTCHORUS,
          BRIDGE,
-         INSTRUMENTAL,
          RESPONSE,
+
+         INTRO,
+         REFRAIN,
+
          SONGWRITING,
          OBSERVATION,
          BACKSTORY,
@@ -165,14 +167,14 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: REFRAIN
+                stanzaType: INTRO
             }
         ],
         [
             {
                 time: 5,
                 centre: {
-                    italic: `(refrain)`
+                    italic: `(Christopher's theme)`
                 }
             },
             {
@@ -199,7 +201,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -809,12 +811,12 @@ module.exports = {
             {
                 time: 128,
                 centre: {
-                    italic: `(refrain)`
+                    italic: `(Christopher's theme)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [

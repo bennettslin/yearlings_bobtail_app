@@ -10,7 +10,7 @@
           BRIDGE,
           RESPONSE,
           BACKSTORY,
-          INSTRUMENTAL,
+          REFRAIN,
           NARRATIVE,
           OBSERVATION,
           PUN,
@@ -163,7 +163,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -818,7 +818,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -1390,7 +1390,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -1945,7 +1945,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ]
     ],

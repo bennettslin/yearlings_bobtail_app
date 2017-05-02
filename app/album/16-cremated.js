@@ -1,7 +1,8 @@
-import { INSTRUMENTAL,
-         REFRAIN,
-         VERSES,
+import { VERSES,
          BRIDGE,
+         INTRO,
+         REFRAIN,
+
          SONGWRITING,
          BACKSTORY,
          NARRATIVE,
@@ -124,14 +125,14 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: REFRAIN
+                stanzaType: INTRO
             }
         ],
         [
             {
                 time: 4,
                 centre: {
-                    italic: `(intro)`
+                    italic: `(Miriam's theme)`
                 }
             },
             {
@@ -153,7 +154,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -636,12 +637,12 @@ module.exports = {
             {
                 time: 70,
                 centre: {
-                    italic: `(solo)`
+                    italic: `(Miriam's theme)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -1039,12 +1040,12 @@ module.exports = {
             {
                 time: 135,
                 centre: {
-                    italic: `(outro)`
+                    italic: `(Miriam's theme)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ]
     ],

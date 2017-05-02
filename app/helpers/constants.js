@@ -237,7 +237,9 @@ module.exports = {
 
     CODA: 'coda',
 
-    INSTRUMENTAL: 'instrumental',
+    INTRO: 'intro',
+    OUTRO: 'outro',
+    SOLO: 'solo',
 
     // substanza type only
     RHYME: 'rhyme',

@@ -1,12 +1,14 @@
 import { LEFT,
          RIGHT,
          OVERLAP,
-         REFRAIN,
          VERSES,
          PRECHORUS,
          CHORUS,
          BRIDGE,
-         INSTRUMENTAL,
+         INTRO,
+         SOLO,
+         OUTRO,
+
          AFTERWORD,
          SONGWRITING,
          BACKSTORY,
@@ -90,7 +92,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: REFRAIN
+                stanzaType: INTRO
             }
         ],
         [
@@ -1329,12 +1331,12 @@ module.exports = {
             {
                 time: 153,
                 centre: {
-                    italic: `(solo)`
+                    italic: `(electric mandolin)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: SOLO
             }
         ],
         [
@@ -1511,12 +1513,12 @@ module.exports = {
             {
                 time: 186,
                 centre: {
-                    italic: `(outro)`
+                    italic: `(Odin's theme)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: OUTRO
             }
         ],
         [

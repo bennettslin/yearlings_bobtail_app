@@ -1,6 +1,10 @@
-import { INSTRUMENTAL,
-         VERSES,
+import { VERSES,
          CHORUS,
+
+         INTRO,
+         SOLO,
+         OUTRO,
+
          SONGWRITING,
          NARRATIVE,
          BACKSTORY,
@@ -114,7 +118,7 @@ module.exports = {
             {
                 time: 0,
                 centre: {
-                    italic: `(intro)`
+                    italic: `(recorders)`
                 }
             },
             {
@@ -130,7 +134,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: INTRO
             }
         ],
         [
@@ -352,7 +356,7 @@ module.exports = {
             {
                 time: 135,
                 centre: {
-                    italic: `(solo)`
+                    italic: `(Sita's theme)`
                 }
             },
             {
@@ -366,7 +370,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: SOLO
             }
         ],
         [
@@ -505,7 +509,7 @@ module.exports = {
             {
                 time: 223,
                 centre: {
-                    italic: `(outro)`
+                    italic: `(Bennett's theme)`
                 }
             },
             {
@@ -519,7 +523,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: OUTRO
             }
         ],
     ],

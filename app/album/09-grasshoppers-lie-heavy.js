@@ -4,7 +4,9 @@ import { REFRAIN,
          CHORUS,
          BRIDGE,
          CODA,
-         INSTRUMENTAL,
+
+         OUTRO,
+
          BACKSTORY,
          NARRATIVE,
          PUN,
@@ -1388,7 +1390,7 @@ module.exports = {
             {
                 time: 245,
                 centre: {
-                    italic: `(outro)`
+                    italic: `(Odin's theme)`
                 }
             },
             {
@@ -1411,7 +1413,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: OUTRO
             }
         ]
     ],

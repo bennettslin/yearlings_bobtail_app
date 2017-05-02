@@ -2,7 +2,10 @@ import { VERSES,
          CHORUS,
          BRIDGE,
          BACKING,
-         INSTRUMENTAL,
+
+         INTRO,
+         OUTRO,
+
          BACKSTORY,
          NARRATIVE,
          OBSERVATION,
@@ -131,7 +134,7 @@ module.exports = {
             {
                 time: 0,
                 centre: {
-                    italic: `(intro)`
+                    italic: `(white-throated sparrow)`
                 }
             },
             {
@@ -152,7 +155,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: INTRO
             }
         ],
         [
@@ -1093,12 +1096,12 @@ module.exports = {
             {
                 time: 177,
                 centre: {
-                    italic: `(outro)`
+                    italic: `(chorale)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: OUTRO
             }
         ]
     ],

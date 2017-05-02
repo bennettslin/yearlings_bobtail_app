@@ -1,8 +1,9 @@
-import { REFRAIN,
-         VERSES,
+import { VERSES,
          PRECHORUS,
          CHORUS,
-         INSTRUMENTAL,
+         REFRAIN,
+         SOLO,
+
          BACKSTORY,
          NARRATIVE,
          OBSERVATION,
@@ -621,7 +622,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: SOLO
             }
         ],
         [
@@ -694,12 +695,12 @@ module.exports = {
             {
                 time: 170,
                 centre: {
-                    italic: `(solo)`
+                    italic: `(refrain)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -835,7 +836,20 @@ module.exports = {
                 stanzaType: CHORUS
             }
             // Afterword: These days, I'd say I'm vegan maybe 90% of the time, the naysaying judgment of hardcore vegans notwithstanding.
-        ]
+        ],
+        [
+            {
+                // TODO: Wrong time?
+                time: 215,
+                centre: {
+                    italic: `(refrain)`
+                }
+            },
+            {
+                unitMap: true,
+                stanzaType: REFRAIN
+            }
+        ],
     ],
     tasks: [
         {

@@ -4,7 +4,7 @@ import { VERSES,
          BRIDGE,
          CODA,
          REFRAIN,
-         INSTRUMENTAL,
+         OUTRO,
          SONGWRITING,
          BACKSTORY,
          OBSERVATION,
@@ -112,7 +112,7 @@ module.exports = {
             {
                 time: 0,
                 centre: {
-                    italic: `(refrain)`
+                    italic: `(hums)`
                 }
             },
             {
@@ -663,7 +663,7 @@ module.exports = {
             {
                 time: 150,
                 centre: {
-                    italic: `(refrain)`
+                    italic: `(hums)`
                 }
             },
             {
@@ -779,7 +779,7 @@ module.exports = {
             {
                 time: 197,
                 centre: {
-                    italic: `(outro)`
+                    italic: `(peafowl)`
                 }
             },
             {
@@ -804,7 +804,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: OUTRO
             }
         ],
     ],

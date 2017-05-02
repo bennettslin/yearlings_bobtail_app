@@ -1,8 +1,11 @@
-import { INSTRUMENTAL,
-         VERSES,
+import { VERSES,
          PRECHORUS,
          CHORUS,
          BRIDGE,
+
+         INTRO,
+         OUTRO,
+
          BACKSTORY,
          SONGWRITING,
          NARRATIVE,
@@ -166,7 +169,7 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: INTRO
             }
         ],
         [
@@ -866,7 +869,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: OUTRO
             }
         ]
     ],

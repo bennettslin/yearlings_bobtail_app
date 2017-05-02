@@ -1,9 +1,10 @@
-import { INSTRUMENTAL,
-         VERSES,
+import { VERSES,
          PRECHORUS,
          CHORUS,
          BRIDGE,
          RESPONSE,
+         INTRO,
+         REFRAIN,
 
          NARRATIVE,
          BACKSTORY,
@@ -11,6 +12,7 @@ import { INSTRUMENTAL,
          SONGWRITING,
          AFTERWORD,
          OBSERVATION,
+
          FLASHBACK_TO_PORTAL_PREFIX,
 
          DOT_STANZA_CONSTANT } from '../helpers/constants'
@@ -108,7 +110,7 @@ module.exports = {
             {
                 time: 0,
                 centre: {
-                    italic: `(intro)`
+                    italic: `(Bennett's theme)`
                 }
             },
             {
@@ -130,19 +132,19 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INSTRUMENTAL
+                stanzaType: INTRO
             }
         ],
         [
             {
                 time: 11,
                 centre: {
-                    italic: `(refrain)`
+                    italic: `(whistles)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
@@ -459,12 +461,12 @@ module.exports = {
             {
                 time: 123,
                 centre: {
-                    italic: `(refrain)`
+                    italic: `(whistles)`
                 }
             },
             {
                 unitMap: true,
-                stanzaType: INSTRUMENTAL
+                stanzaType: REFRAIN
             }
         ],
         [
