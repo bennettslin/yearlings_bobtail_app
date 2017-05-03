@@ -79,8 +79,7 @@ module.exports = {
     },
     doubleColumns: true,
     totalTime: 164,
-    // TODO: This isn't consistent with illustration, since I'm saying that Tristan introduced us.
-    overview: `While I can't deny that dating white women helped silence the nagging feeling I had of being genetically inferior, I really didn't seek them out. A case in point is Miriam, who approached me at a party, having seen my band perform a week earlier. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me with no effort on my part. We lasted a few months. In the end, I had to wonder if she was slumming it, and whether I was just one more checkbox to mark off.`,
+    overview: `While I can't deny that dating white women helped silence the nagging feeling I had of being genetically inferior, I really didn't seek them out. A case in point is Miriam, who approached me at a party right after my band performed. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me with no effort on my part. We lasted a few months. In the end, I had to wonder if she was slumming it, and whether I was just one more checkbox to mark off.`,
     title: {
         anchor: `Cremated`,
         annotation: {
@@ -1050,11 +1049,6 @@ module.exports = {
         ]
     ],
     tasks: [
-        {
-            taskName: `afterword annotations`,
-            workedHours: 0,
-            neededHours: 1
-        },
         {
             taskName: `tenses and categorisation`,
             workedHours: 13,

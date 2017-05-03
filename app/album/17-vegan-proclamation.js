@@ -10,6 +10,8 @@ import { VERSES,
          PUN,
          REFERENCE,
          SONGWRITING,
+         AFTERWORD,
+
          FORESHADOW_OF_PORTAL_PREFIX,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
@@ -835,7 +837,6 @@ module.exports = {
                 unitMap: true,
                 stanzaType: CHORUS
             }
-            // Afterword: These days, I'd say I'm vegan maybe 90% of the time, the naysaying judgment of hardcore vegans notwithstanding.
         ],
         [
             {
@@ -850,9 +851,25 @@ module.exports = {
                 stanzaType: REFRAIN
             }
         ],
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    // Afterword: These days, I'd say I'm vegan maybe 90% of the time, the naysaying judgment of hardcore vegans notwithstanding.
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: ``,
+                        dotKeys: {
+                            [AFTERWORD]: true
+                        }
+                    }
+                }
+            }
+        ]
     ],
     tasks: [
         {
+            // TODO: Afterword
             taskName: `afterword annotations`,
             workedHours: 0,
             neededHours: 1

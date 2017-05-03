@@ -13,6 +13,7 @@ import { VERSES,
          BACKSTORY,
          REFERENCE,
          PUN,
+         AFTERWORD,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 /**
@@ -1246,6 +1247,20 @@ module.exports = {
                 stanzaType: POSTCHORUS,
                 subsequent: true
             }
+        ],
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: `We recently asked my brother how old he is. He answered "seventeen," which is only a decade behind. So I guess we're making progress.`,
+                        dotKeys: {
+                            [AFTERWORD]: true
+                        }
+                    }
+                }
+            }
         ]
     ],
     tasks: [
@@ -1255,6 +1270,7 @@ module.exports = {
             neededHours: 1
         },
         {
+            // TODO: Afterword
             taskName: `afterword annotations`,
             workedHours: 0,
             neededHours: 1

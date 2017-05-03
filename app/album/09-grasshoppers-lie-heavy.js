@@ -1424,11 +1424,6 @@ module.exports = {
             neededHours: 1
         },
         {
-            taskName: `afterword annotations`,
-            workedHours: 0,
-            neededHours: 1
-        },
-        {
             taskName: `tenses and categorisation`,
             workedHours: 6,
             neededHours: 6

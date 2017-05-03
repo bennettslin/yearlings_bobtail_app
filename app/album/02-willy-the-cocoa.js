@@ -8,7 +8,6 @@ import { LEFT,
          INTRO,
          SOLO,
 
-         AFTERWORD,
          SONGWRITING,
          BACKSTORY,
          NARRATIVE,
@@ -1154,20 +1153,6 @@ module.exports = {
                 unitMap: true,
                 stanzaType: POSTCHORUS,
                 subsequent: true
-            }
-        ],
-        [
-            {
-                unitMap: true,
-                dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
-                    annotation: {
-                        description: `We recently asked my brother how old he is. He answered "seventeen," which is only a decade behind. So I guess we're making progress.`,
-                        dotKeys: {
-                            [AFTERWORD]: true
-                        }
-                    }
-                }
             }
         ]
     ],

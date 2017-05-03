@@ -9,6 +9,8 @@ import { VERSES,
          NARRATIVE,
          BACKSTORY,
          OBSERVATION,
+         AFTERWORD,
+
          FORESHADOW_OF_PORTAL_PREFIX,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
@@ -526,6 +528,20 @@ module.exports = {
                 stanzaType: OUTRO
             }
         ],
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: ``,
+                        dotKeys: {
+                            [AFTERWORD]: true
+                        }
+                    }
+                }
+            }
+        ]
     ],
     tasks: [
         {
