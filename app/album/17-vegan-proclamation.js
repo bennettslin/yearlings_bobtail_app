@@ -840,8 +840,7 @@ module.exports = {
         ],
         [
             {
-                // TODO: Wrong time?
-                time: 215,
+                time: 218,
                 centre: {
                     italic: `(refrain)`
                 }
