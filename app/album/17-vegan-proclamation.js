@@ -861,12 +861,12 @@ module.exports = {
                             {
                                 italic: `Yearling's Bobtail.`
                             },
-                            `But as it became clear that the album's release would be all but ignored by the indie press, I had to question everything I thought I knew about how the world works. So I jettisoned all my beliefs, including veganism, to try out the conservative values espoused by indie rock. They weren't a good fit, and I've since returned to the left, albeit as a realist. So I'm a`,
+                            `But as it became clear that the album's release would be all but ignored by the indie press, I had to question everything I thought I knew about how the world works. So I jettisoned all my beliefs, including veganism, to try out the conservative values espoused by indie rock. They weren't a good fit for me, and I've since returned to the left, albeit as a realist. So I'm a`,
                             {
                                 anchor: `flexitarian`,
                                 wiki: `Semi-vegetarianism`
                             },
-                            `now, in that I'm always happy to avoid eating meat, but I'm no longer willing to work hard to do so completely.`
+                            `now, in that I'm always happy to avoid eating meat, but I no longer do so completely.`
                         ],
                         dotKeys: {
                             [AFTERWORD]: true
