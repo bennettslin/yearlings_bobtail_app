@@ -854,10 +854,20 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    // Afterword: These days, I'd say I'm vegan maybe 90% of the time, the naysaying judgment of hardcore vegans notwithstanding.
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: ``,
+                        description: [
+                            `I was a vegan for the five years that I spent working on`,
+                            {
+                                italic: `Yearling's Bobtail.`
+                            },
+                            `But as it became clear that the album's release would be all but ignored by the indie press, I had to question everything I thought I knew about how the world works. So I jettisoned all my beliefs, including veganism, to try out the conservative values espoused by indie rock. They weren't a good fit, and I've since returned to the left, albeit as a realist. So I'm a`,
+                            {
+                                anchor: `flexitarian`,
+                                wiki: `Semi-vegetarianism`
+                            },
+                            `now, in that I'm always happy to avoid eating meat, but I'm no longer willing to work hard to do so completely.`
+                        ],
                         dotKeys: {
                             [AFTERWORD]: true
                         }
@@ -868,9 +878,8 @@ module.exports = {
     ],
     tasks: [
         {
-            // TODO: Afterword
             taskName: `afterword annotations`,
-            workedHours: 0,
+            workedHours: 1,
             neededHours: 1
         },
         {

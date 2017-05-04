@@ -1254,7 +1254,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `We recently asked my brother how old he is. He answered "seventeen," which is only a decade behind. So I guess we're making progress.`,
+                        description: `My brother currently lives in his own place and receives round-the-clock care under supported living services. He's doing well.`,
                         dotKeys: {
                             [AFTERWORD]: true
                         }
@@ -1270,9 +1270,8 @@ module.exports = {
             neededHours: 1
         },
         {
-            // TODO: Afterword
             taskName: `afterword annotations`,
-            workedHours: 0,
+            workedHours: 1,
             neededHours: 1
         },
         {
