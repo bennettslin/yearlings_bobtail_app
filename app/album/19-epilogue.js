@@ -120,7 +120,7 @@ module.exports = {
     tip: {
         description: 'epilogue tip'
     },
-    overview: 'epilogue text',
+    overview: 'Hey, thanks for listening! It really means a lot. So wh',
     tasks: [
         {
             taskName: `rough illustration synopsis`,

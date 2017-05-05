@@ -12,6 +12,8 @@ import { REFRAIN,
          PUN,
          REFERENCE,
          SONGWRITING,
+         AFTERWORD,
+
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
@@ -802,6 +804,32 @@ module.exports = {
             {
                 unitMap: true,
                 stanzaType: OUTRO
+            }
+        ],
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: [
+                            `After getting rejected by the last record label that had been vetting us, I was so depressed that I went on the bender to end all benders. I eventually kept a box of wine by my bed to calm my nerves throughout the night. One day, upon skipping my morning beers, I felt like the walls were conspiring to attack me. I soon learned that this was the early stage of`,
+                            {
+                                anchor: `delirium tremens,`,
+                                wiki: `Delirium_tremens`
+                            },
+                            `and began to attend`,
+                            {
+                                anchor: `Alcoholics Anonymous`,
+                                wiki: `Alcoholics_Anonymous`
+                            },
+                            `meetings. I haven't had a drink since.`
+                        ],
+                        dotKeys: {
+                            [AFTERWORD]: true
+                        }
+                    }
+                }
             }
         ]
     ],

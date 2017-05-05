@@ -16,8 +16,8 @@
 * Constellations
 * Look Back
 * Garryowen
-* On a Golden Cord
     * drinking ()
+* On a Golden Cord
 * Kyon
 * Uncanny Valley
 * Cremated
