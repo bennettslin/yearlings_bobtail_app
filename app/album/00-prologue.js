@@ -16,7 +16,7 @@ module.exports = {
     tip: {
         description: 'prologue tip'
     },
-    overview: `Hi, I'm Bennett. In 2001, as I was going through a messy breakup, I decided to create a double album examining all that had led up to my life at that point, from growing up with an autistic brother to joining a mail-order cult in middle school. So I spent the next five years writing all the songs and performing all the parts for what I was sure would be hailed as a literary masterpiece. Instead, upon its release in 2006, the album was treated as a hobby project and thus ignored by the indie labels and press. I spent many years afterwards trying to figure out what would make it easier to approach, and now I've built this website with that purpose in mind.`,
+    overview: `Hi, I'm Bennett. In 2001, I was going through a messy breakup. So I decided to create a double album examining all that had led up to my life at that point, from growing up with an autistic brother to joining a mail-order cult in middle school. I then spent the next five years writing all the songs and performing all the parts for what I was sure would be hailed as a literary masterpiece. Upon its release in 2006, however, the album was treated as a mere hobby project, and thus ignored by the indie labels and press. I've since spent many years trying to figure out what would make it easier to approach, given my continued reality of being a complete unknown. I think I know now, and so I built this website.`,
     tasks: [
         {
             taskName: `overview`,
