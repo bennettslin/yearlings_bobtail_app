@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Vixlet`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Album info in title`,
         workedHours: 0,
         neededHours: 3

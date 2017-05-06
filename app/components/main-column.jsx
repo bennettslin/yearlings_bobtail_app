@@ -31,6 +31,7 @@ const MainColumnView = ({
     scoresTipsOutsideMenu,
 
     songs,
+    annotations,
     title,
     bookStartingIndices,
     showSingleBookColumn,
@@ -40,6 +41,10 @@ const MainColumnView = ({
     selectedNavIndex,
     selectedBookColumnIndex,
     selectedSongIndex,
+
+    selectedAnnotationIndex,
+    accessedPopupAnchorIndex,
+    selectedDotKeys,
 
     accessedOn,
     accessedSongIndex,
@@ -92,6 +97,13 @@ const MainColumnView = ({
             handleNavExpand,
             handleNavSongSelect,
             handleNavBookSelect
+        },
+        carouselProps = {
+            songs,
+            annotations,
+            selectedDotKeys,
+            selectedAnnotationIndex,
+            accessedPopupAnchorIndex
         }
 
     return (
@@ -138,7 +150,7 @@ const MainColumnView = ({
                     </div>
                 }
             </div>
-            <Carousel />
+            <Carousel {...carouselProps} />
         </div>
     )
 }

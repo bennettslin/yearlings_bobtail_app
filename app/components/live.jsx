@@ -38,6 +38,7 @@ const Live = (props) => {
             lyrics={selectedSong.lyrics}
             totalTime={selectedSong.totalTime}
             stanzaTimes={selectedSong.stanzaTimes}
+            annotations={selectedSong.annotations}
             times={selectedSong.times}
             overviewText={selectedSong.overview}
             selectedWikiUrl={selectedWikiUrl}
@@ -70,6 +71,7 @@ const LiveView = ({
     bookStartingIndices,
     scores,
     songs,
+    annotations,
     popupAnnotation,
     title,
     isPlaying,
@@ -243,6 +245,7 @@ const LiveView = ({
 
             scores,
             songs,
+            annotations,
             title,
             overviewText,
             bookStartingIndices,
@@ -255,6 +258,10 @@ const LiveView = ({
             selectedWikiUrl,
             selectedSongIndex,
             selectedTipsIndex,
+
+            selectedAnnotationIndex,
+            accessedPopupAnchorIndex,
+            selectedDotKeys,
 
             accessedOn,
             accessedSongIndex,
