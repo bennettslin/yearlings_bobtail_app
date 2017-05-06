@@ -23,6 +23,7 @@ import { CAPS_LOCK,
          AUDIO_NEXT_SONG_KEY,
          AUDIO_REWIND_KEY,
          AUDIO_FAST_FORWARD_KEY,
+         CAROUSEL_TOGGLE_KEY,
          SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY,
          LYRIC_COLUMN_TOGGLE_KEY,
@@ -417,6 +418,9 @@ class AccessManager extends Component {
                 break
             case OVERVIEW_TOGGLE_KEY:
                 keyWasRegistered = this.props.handleOverviewToggle(e)
+                break
+            case CAROUSEL_TOGGLE_KEY:
+                keyWasRegistered = this.props.handleCarouselToggle(e)
                 break
             case SCORE_TOGGLE_KEY:
                 keyWasRegistered = this.props.handleScoreToggle(e)

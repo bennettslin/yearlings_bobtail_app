@@ -15,6 +15,7 @@ import { selectAdminIndex,
          selectScoreIndex,
          selectNavIndex,
          selectDotsIndex,
+         selectCarouselIndex,
          accessOn } from '../redux/actions'
 import EventManager from './event-manager'
 import { SHOWN,
@@ -50,6 +51,7 @@ const passReduxStateToProps = ({
     selectedScoreIndex,
     selectedNavIndex,
     selectedDotsIndex,
+    selectedCarouselIndex,
     accessedOn
 }) => ({
     // Pass Redux state into component props.
@@ -67,6 +69,7 @@ const passReduxStateToProps = ({
     selectedScoreIndex,
     selectedNavIndex,
     selectedDotsIndex,
+    selectedCarouselIndex,
     accessedOn
 })
 
@@ -87,6 +90,7 @@ const bindDispatchToProps = (dispatch) => (
         selectScoreIndex,
         selectNavIndex,
         selectDotsIndex,
+        selectCarouselIndex,
         accessOn
     }, dispatch)
 )
@@ -312,6 +316,18 @@ class App extends Component {
         }
 
         return selectedAnnotationIndex
+    }
+
+    selectCarousel(selectedCarouselIndex =
+        (this.props.selectedCarouselIndex + 1) % 2) {
+        // If no argument passed, then just toggle between on and off.
+
+        if (typeof selectedCarouselIndex === 'boolean') {
+            selectedCarouselIndex = selectedCarouselIndex ? 1 : 0
+        }
+
+        this.props.selectCarouselIndex(selectedCarouselIndex)
+        return true
     }
 
     /*********
@@ -850,6 +866,7 @@ class App extends Component {
         this.resetUpdatedTimePlayed = this.resetUpdatedTimePlayed.bind(this)
         this.toggleDot = this.toggleDot.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
+        this.selectCarousel = this.selectCarousel.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.interactivateVerse = this.interactivateVerse.bind(this)
         this.interactivateVerseDirection = this.interactivateVerseDirection.bind(this)
@@ -906,6 +923,7 @@ class App extends Component {
                 scrollLyricSection={this.scrollLyricSection}
                 selectNavExpand={this.selectNavExpand}
                 selectOverview={this.selectOverview}
+                selectCarousel={this.selectCarousel}
                 selectScore={this.selectScore}
                 selectSong={this.selectSong}
                 selectTime={this.selectTime}

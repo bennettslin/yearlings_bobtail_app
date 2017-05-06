@@ -51,6 +51,7 @@ class EventManager extends Component {
         this.handleNavBookSelect = this.handleNavBookSelect.bind(this)
         this.handleOverviewToggle = this.handleOverviewToggle.bind(this)
         this.handlePopupFocus = this.handlePopupFocus.bind(this)
+        this.handleCarouselToggle = this.handleCarouselToggle.bind(this)
         this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
         this.handleTitleSelect = this.handleTitleSelect.bind(this)
@@ -217,6 +218,11 @@ class EventManager extends Component {
             direction: 1
         })
         this._scrollElementIntoView('annotation', selectedAnnotationIndex)
+    }
+
+    handleCarouselToggle(e, selectedCarouselIndex) {
+        this._stopPropagation(e)
+        this.props.selectCarousel(selectedCarouselIndex)
     }
 
     /*********
@@ -706,6 +712,7 @@ class EventManager extends Component {
                 handleNavSongSelect={this.handleNavSongSelect}
                 handleNavBookSelect={this.handleNavBookSelect}
                 handleOverviewToggle={this.handleOverviewToggle}
+                handleCarouselToggle={this.handleCarouselToggle}
                 handleScoreToggle={this.handleScoreToggle}
                 handleTipsToggle={this.handleTipsToggle}
                 handleTitleSelect={this.handleTitleSelect}

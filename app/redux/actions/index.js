@@ -12,6 +12,7 @@ import { SELECTED_ADMIN_INDEX,
          SELECTED_SCORE_INDEX,
          SELECTED_NAV_INDEX,
          SELECTED_DOTS_INDEX,
+         SELECTED_CAROUSEL_INDEX,
          ACCESSED_ON } from '../../helpers/constants'
  import SessionHelper from '../../helpers/session-helper'
 
@@ -128,6 +129,14 @@ export const selectDotsIndex = (selectedDotsIndex = 0) => {
     return {
         type: SELECTED_DOTS_INDEX,
         payload: selectedDotsIndex
+    }
+}
+
+export const selectCarouselIndex = (selectedCarouselIndex = 0) => {
+    setInSession(SELECTED_CAROUSEL_INDEX, selectedCarouselIndex)
+    return {
+        type: SELECTED_CAROUSEL_INDEX,
+        payload: selectedCarouselIndex
     }
 }
 

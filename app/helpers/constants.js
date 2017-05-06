@@ -212,6 +212,7 @@ module.exports = {
     SELECTED_NAV_INDEX: 'selectedNavIndex',
     SELECTED_DOTS_INDEX: 'selectedDotsIndex',
     SELECTED_SCORE_INDEX: 'selectedScoreIndex',
+    SELECTED_CAROUSEL_INDEX: 'selectedCarouselIndex',
     ACCESSED_ON: 'accessedOn',
 
     // This is only used by the stats helper.
@@ -356,6 +357,7 @@ module.exports = {
     AUDIO_NEXT_SONG_KEY: 'k',
     AUDIO_REWIND_KEY: 'r',
     AUDIO_FAST_FORWARD_KEY: 'f',
+    CAROUSEL_TOGGLE_KEY: 'c',
     SCORE_TOGGLE_KEY: 's',
     TIPS_TOGGLE_KEY: 't',
     LYRIC_COLUMN_TOGGLE_KEY: 'e',
