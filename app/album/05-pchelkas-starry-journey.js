@@ -1254,7 +1254,7 @@ module.exports = {
                 dotStanza: {
                     anchor: DOT_STANZA_CONSTANT,
                     annotation: {
-                        description: `My brother currently lives in his own place and receives round-the-clock care under supported living services. He's doing well.`,
+                        description: `My brother currently lives in his own place and receives round-the-clock care through supported living services. He's doing well.`,
                         dotKeys: {
                             [AFTERWORD]: true
                         }
