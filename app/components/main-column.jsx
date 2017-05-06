@@ -1,4 +1,5 @@
 import React from 'react'
+import Carousel from './carousel/carousel'
 import MenuField from './menu-field'
 import NavSection from './nav/nav-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
@@ -137,6 +138,7 @@ const MainColumnView = ({
                     </div>
                 }
             </div>
+            <Carousel />
         </div>
     )
 }
