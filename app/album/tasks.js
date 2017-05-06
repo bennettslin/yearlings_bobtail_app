@@ -104,11 +104,6 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `write album overview`,
-        workedHours: 0,
-        neededHours: 6
-    },
-    {
         taskName: `create stage section`,
         workedHours: 0,
         neededHours: 3
