@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Album info in title`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Logue overview in phone`,
         workedHours: 0,
         neededHours: 1
