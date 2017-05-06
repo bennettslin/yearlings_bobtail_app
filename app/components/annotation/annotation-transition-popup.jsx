@@ -9,6 +9,7 @@ import TransitionPopup from '../popup/transition-popup'
 const AnnotationTransitionPopup = ({
 
     selectedAnnotationIndex,
+    selectedCarouselIndex,
     selectedScoreIndex,
     selectedWikiIndex,
     handleAnnotationPrevious,
@@ -18,6 +19,7 @@ const AnnotationTransitionPopup = ({
 ...other }) => {
 
     const isVisible = selectedAnnotationIndex &&
+                      !selectedCarouselIndex &&
                       !selectedScoreIndex &&
                       !selectedWikiIndex,
         myChild = (

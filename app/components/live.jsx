@@ -91,6 +91,7 @@ const LiveView = ({
     selectedDotsIndex,
     selectedNavIndex,
     selectedBookColumnIndex,
+    selectedCarouselIndex,
     accessedOn,
     accessedSongIndex,
     accessedAnnotationIndex,
@@ -330,6 +331,7 @@ const LiveView = ({
             songs,
             popupAnnotation,
             selectedAnnotationIndex,
+            selectedCarouselIndex,
             selectedScoreIndex,
             selectedWikiIndex,
             accessedPopupAnchorIndex,
@@ -398,6 +400,7 @@ const LiveView = ({
               'title-in-audio': titleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,
               'overview-shown': isOverviewShown,
+              'carousel-expanded': !!selectedCarouselIndex,
               'verse-above': isSelectedVerseAbove,
               'verse-below': isSelectedVerseBelow,
               'verse-bar-hidden': verseBarHidden }

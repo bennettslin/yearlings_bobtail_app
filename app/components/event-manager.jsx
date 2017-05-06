@@ -127,6 +127,11 @@ class EventManager extends Component {
         const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
         if (annotationAccessed && doScroll) {
             this._scrollElementIntoView('annotation', accessedAnnotationIndex)
+
+            // if (this.props.domProps.selectedCarouselIndex) {
+            //     console.error('accessedAnnotationIndex', accessedAnnotationIndex);
+            //     this._scrollElementIntoView('carousel-annotation', accessedAnnotationIndex)
+            // }
         }
     }
 

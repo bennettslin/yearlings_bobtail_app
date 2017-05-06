@@ -1,20 +1,28 @@
 .carousel {
     // position: absolute;
     width: 100%;
-    height: 300px;
-    overflow: hidden;
+    height: 0;
+    overflow: scroll;
 
     background-color: #bfb;
+
+    transition: height 0.2s ease;
 }
 
-.carousel-animatable {
+.carousel-expanded {
+    .carousel {
+        height: 300px;
+    }
+}
+
+.carousel-scroll {
     // position: absolute;
     // width: 100%;
     // height: 100%;
     display: flex;
 
-    overflow: scroll;
-    height: 3000px;
+    // overflow: scroll;
+    // height: 3000px;
 
     background-color: #bff;
 }

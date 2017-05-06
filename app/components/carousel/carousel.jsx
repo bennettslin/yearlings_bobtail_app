@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import classnames from 'classnames'
 import AnnotationSection from '../annotation/annotation-section'
 // import {  } from '../../helpers/constants'
 
@@ -14,28 +15,34 @@ const Carousel = (props) => (
  * PRESENTATION *
  ****************/
 
-const CarouselView = ({
+class CarouselView extends Component {
 
-    // From props.
-    annotations = [],
+    render() {
+        const { annotations,
+            ...other } = this.props
 
-...other }) => (
-    <div className="carousel">
-        <div className="carousel-animatable">
-            {annotations.map((annotation, index) => {
-                return (
-                    <div
-                        key={index}
-                        className="carousel-annotation"
-                    >
-                        <AnnotationSection {...other}
-                            popupAnnotation={annotation}
-                        />
-                    </div>
-                )
-            })}
-        </div>
-    </div>
-)
+        return (
+            <div className="carousel">
+                <div className="carousel-scroll">
+                    {annotations.map((annotation, index) => {
+                        return (
+                            <div
+                                key={index}
+                                className={classnames(
+                                    'carousel-annotation',
+                                    `carousel-annotation-${index + 1}`
+                                )}
+                            >
+                                <AnnotationSection {...other}
+                                    popupAnnotation={annotation}
+                                />
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
+        )
+    }
+}
 
 export default Carousel
