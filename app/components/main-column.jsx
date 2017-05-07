@@ -1,8 +1,9 @@
 import React from 'react'
-import Carousel from './carousel/carousel'
+import Button from './button/button'
 import MenuField from './menu-field'
 import NavSection from './nav/nav-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
+import { CAROUSEL_TOGGLE_KEY } from '../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -31,7 +32,6 @@ const MainColumnView = ({
     scoresTipsOutsideMenu,
 
     songs,
-    annotations,
     title,
     bookStartingIndices,
     showSingleBookColumn,
@@ -41,16 +41,12 @@ const MainColumnView = ({
     selectedNavIndex,
     selectedBookColumnIndex,
     selectedSongIndex,
-
-    selectedAnnotationIndex,
-    accessedPopupAnchorIndex,
-    selectedDotKeys,
+    selectedCarouselIndex,
 
     accessedOn,
     accessedSongIndex,
 
-    handleAnnotationPortalSelect,
-    handleAnnotationWikiSelect,
+    handleCarouselToggle,
     handleDotsSectionToggle,
     handleNavExpand,
     handleNavSongSelect,
@@ -99,16 +95,6 @@ const MainColumnView = ({
             handleNavExpand,
             handleNavSongSelect,
             handleNavBookSelect
-        },
-        carouselProps = {
-            songs,
-            annotations,
-            selectedDotKeys,
-            selectedAnnotationIndex,
-            accessedPopupAnchorIndex,
-
-            handleAnnotationWikiSelect,
-            handleAnnotationPortalSelect
         }
 
     return (
@@ -150,12 +136,23 @@ const MainColumnView = ({
                 }
 
                 {!isHiddenNav &&
+                    <div className="carousel-toggle-button-block">
+                        <Button
+                            buttonName="carousel-toggle"
+                            iconText={selectedCarouselIndex}
+                            accessKey={CAROUSEL_TOGGLE_KEY}
+                            isLarge={true}
+                            handleClick={handleCarouselToggle}
+                        />
+                    </div>
+                }
+
+                {!isHiddenNav &&
                     <div className="nav-custom-subfield">
                         <NavSection {...navSectionProps} />
                     </div>
                 }
             </div>
-            <Carousel {...carouselProps} />
         </div>
     )
 }

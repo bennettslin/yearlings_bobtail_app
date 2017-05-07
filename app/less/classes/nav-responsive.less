@@ -230,6 +230,14 @@
     width: @app-large-icon-diameter;
 }
 
+.is-song {
+    &.carousel-expanded {
+        .nav-toggle-book {
+            left: -@app-large-icon-diameter + @app-thin-margin * 2;
+        }
+    }
+}
+
 .monitor-width {
     .double-book-column {
         &.static-icon {
@@ -410,9 +418,11 @@
         min-width: @tablet-nav-toggle-width;
     }
 
-    .lyric-expanded.is-song {
-        .nav-toggle-book {
-            left: @tablet-nav-toggle-width;
+    .is-song {
+        &.lyric-expanded, &.carousel-expanded {
+            .nav-toggle-book {
+                left: @tablet-nav-toggle-width;
+            }
         }
     }
 
@@ -476,9 +486,11 @@
                 }
             }
 
-            .lyric-expanded.is-song {
-                .nav-toggle-book {
-                    left: @tablet-shrink-toggle-width;
+            .is-song {
+                &.lyric-expanded, &.carousel-expanded {
+                    .nav-toggle-book {
+                        left: @tablet-shrink-toggle-width;
+                    }
                 }
             }
 
@@ -538,9 +550,11 @@
         min-width: @mini-nav-toggle-width;
     }
 
-    .lyric-expanded.is-song {
-        .nav-toggle-book {
-            left: @mini-nav-toggle-width;
+    .is-song {
+        &.lyric-expanded, &.carousel-expanded {
+            .nav-toggle-book {
+                left: @mini-nav-toggle-width;
+            }
         }
     }
 
@@ -611,9 +625,11 @@
                 }
             }
 
-            .lyric-expanded.is-song {
-                .nav-toggle-book {
-                    left: @mini-shrink-toggle-width;
+            .is-song {
+                &.lyric-expanded, &.carousel-expanded {
+                    .nav-toggle-book {
+                        left: @mini-shrink-toggle-width;
+                    }
                 }
             }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import Button from './button/button'
+import Carousel from './carousel/carousel'
 import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
@@ -156,6 +157,7 @@ const LiveView = ({
     handleVerseElementSlide,
     handleVerseInteractivate,
     handleWikiToggle,
+    handleCarouselToggle,
 
     // From controller.
     overviewText,
@@ -246,7 +248,6 @@ const LiveView = ({
 
             scores,
             songs,
-            annotations,
             title,
             overviewText,
             bookStartingIndices,
@@ -260,15 +261,12 @@ const LiveView = ({
             selectedSongIndex,
             selectedTipsIndex,
 
-            selectedAnnotationIndex,
-            accessedPopupAnchorIndex,
-            selectedDotKeys,
+            selectedCarouselIndex,
 
             accessedOn,
             accessedSongIndex,
 
-            handleAnnotationWikiSelect,
-            handleAnnotationPortalSelect,
+            handleCarouselToggle,
             handleDotsSectionToggle,
             handleNavExpand,
             handleNavSongSelect,
@@ -383,7 +381,18 @@ const LiveView = ({
             </div>
         ),
 
-        timerInAudio = showOverlay && isPhone
+        timerInAudio = showOverlay && isPhone,
+
+        carouselProps = {
+            songs,
+            annotations,
+            selectedDotKeys,
+            selectedAnnotationIndex,
+            accessedPopupAnchorIndex,
+
+            handleAnnotationWikiSelect,
+            handleAnnotationPortalSelect
+        }
 
     return (
         <div className={classnames(
@@ -404,7 +413,8 @@ const LiveView = ({
               'carousel-expanded': !!selectedCarouselIndex,
               'verse-above': isSelectedVerseAbove,
               'verse-below': isSelectedVerseBelow,
-              'verse-bar-hidden': verseBarHidden }
+              'verse-bar-hidden': verseBarHidden,
+              'scores-tips-outside-menu': scoresTipsOutsideMenu }
         )}>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">
@@ -425,6 +435,11 @@ const LiveView = ({
                 lyricExpandButtonChild={lyricExpandButtonChild}
                 scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
             />
+
+            {!isHiddenNav &&
+                <Carousel {...carouselProps} />
+            }
+
             <LyricColumn {...lyricColumnProps}
                 lyricExpandButtonChild={lyricExpandButtonChild}
             />

@@ -1,24 +1,52 @@
 @carousel-height: 250px;
-// @carousel-height: 150px;
+
+.carousel-toggle-button-block {
+    background-color: #edf;
+    padding: @app-thin-margin 0;
+    margin: @dots-overview-padding 0;
+    border-radius: 0 @nav-border-radius @nav-border-radius 0;
+
+    transition: margin 0.2s, border-radius 0.2s;
+
+    display: flex;
+    justify-content: center;
+    z-index: @carousel-z-index + 1;
+
+    width: @overview-toggle-laptop-width;
+}
+
+.carousel-toggle-button {
+
+    .button-background {
+        background-color: #dfe;
+    }
+}
 
 .carousel {
-    width: 100vw;
-    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: -@carousel-height;
+    width: 100%;
+    height: @carousel-height;
     z-index: @carousel-z-index;
-    transition: height 0.2s;
-    background-color: #bfb;
+    transition: bottom 0.2s;
 }
 
 .carousel-expanded {
+
+    .carousel-toggle-button-block {
+        margin-bottom: -@nav-height;
+        border-radius: 0 @nav-border-radius 0 0;
+    }
+
     .carousel {
-        height: @carousel-height;
+        bottom: 0;
     }
 }
 
 .carousel-scroll {
     display: flex;
     overflow-x: scroll;
-    background-color: #bff;
 }
 
 .carousel-annotation {
@@ -41,6 +69,14 @@
     &:last-child {
         .annotation-section {
             margin-right: @annotation-bookend-margin;
+        }
+    }
+}
+
+.is-desktop {
+    .carousel-annotation {
+        &:first-child {
+            padding-left: @overview-toggle-laptop-width;
         }
     }
 }

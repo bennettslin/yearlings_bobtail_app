@@ -228,6 +228,12 @@ class EventManager extends Component {
     handleCarouselToggle(e, selectedCarouselIndex) {
         this._stopPropagation(e)
         this.props.selectCarousel(selectedCarouselIndex)
+        this._closeSections({
+            exemptAnnotation: true,
+            exemptDots: true,
+            exemptInteractivatedVerse: true,
+            exemptOverview: true
+        })
     }
 
     /*********
