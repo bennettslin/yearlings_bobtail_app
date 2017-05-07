@@ -1688,5 +1688,10 @@ module.exports = [
         taskName: `Instrumental names`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Begin annotation carousel`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]

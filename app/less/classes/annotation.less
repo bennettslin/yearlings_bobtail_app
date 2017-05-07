@@ -46,6 +46,9 @@
         margin: 5px 0;
         padding: 5px;
         box-shadow: 0 1px 1px 1px @box-shadow-colour;
+        overflow: hidden;
+
+        transition: transform 0.2s;
 
         // Select for annotation card dots, not portal dots.
         > .dots-block {
@@ -59,6 +62,10 @@
 
         // TODO: Portals block needs its own text shadow?
         .text-span {
+        }
+
+        &.card-hidden {
+            transform: scale(0);
         }
     }
 }

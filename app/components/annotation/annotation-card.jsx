@@ -1,4 +1,5 @@
 import React from 'react'
+import classnames from 'classnames'
 import DotBlock from '../dot/dots-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
@@ -32,9 +33,10 @@ const AnnotationCard = ({
         showWikis = selectedDotKeys.wiki,
         showPortals = selectedDotKeys.portal
 
-    return (shouldShow &&
+    return (
         <AnnotationCardView {...other}
             text={description}
+            shouldShow={shouldShow}
             shownDotKeys={shownDotKeys}
             annotationDotKeys={dotKeys}
             portalLinks={portalLinks}
@@ -62,13 +64,17 @@ const AnnotationCardView = ({
 
     // From controller.
     text,
+    shouldShow,
     shownDotKeys,
     portalLinks,
     showWikis,
     showPortals
 
 }) => (
-    <div className="annotation-card">
+    <div className={classnames(
+        'annotation-card',
+        { 'card-hidden': !shouldShow }
+    )}>
         <DotBlock
             inAnnotationCard={true}
             shownDotKeys={shownDotKeys}
