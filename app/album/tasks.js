@@ -1,4 +1,22 @@
 module.exports = [
+
+    // Bugs.
+    {
+        taskName: `Overview logue animation is weird`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Nav buttons in Safari are wonky`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Audio banner in phone is broken...`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     {
         taskName: `Vixlet`,
         workedHours: 0,

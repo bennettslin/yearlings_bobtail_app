@@ -230,8 +230,9 @@ class EventManager extends Component {
     handleCarouselToggle(e, selectedCarouselIndex) {
         this._stopPropagation(e)
         this.props.selectCarousel(selectedCarouselIndex)
+
+        // Close popup annotation if expanding carousel.
         this._closeSections({
-            exemptAnnotation: true,
             exemptCarousel: true,
             exemptDots: true,
             exemptInteractivatedVerse: true,

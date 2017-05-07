@@ -29,7 +29,7 @@ import { SHOWN,
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
 import { getSong, getAnnotation, getIsLogue, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
 /*********
@@ -319,8 +319,16 @@ class App extends Component {
     }
 
     selectCarousel(selectedCarouselIndex =
-        (this.props.selectedCarouselIndex + 1) % 2) {
+        (this.props.selectedCarouselIndex + 1) % 2, appWillMount) {
         // If no argument passed, then just toggle between on and off.
+
+        /**
+         * We should ignore this call if carousel is not expandable, or if it's
+         * a logue.
+         */
+        if ((!appWillMount && !getIsCarouselExpandable(this.state)) || getIsLogue(this.props)) {
+            return false
+        }
 
         if (typeof selectedCarouselIndex === 'boolean') {
             selectedCarouselIndex = selectedCarouselIndex ? 1 : 0
@@ -845,7 +853,14 @@ class App extends Component {
     }
 
     _windowResize(e) {
-        const resizedWindowObject = resizeWindow(e ? e.target : undefined)
+        const resizedWindowObject = resizeWindow(e ? e.target : undefined),
+            isCarouselExpandable = getIsCarouselExpandable(resizedWindowObject)
+
+        // Collapse carousel in state if not expandable.
+        if (!isCarouselExpandable) {
+            this.selectCarousel(false, true)
+        }
+
         this.setState(resizedWindowObject)
     }
 

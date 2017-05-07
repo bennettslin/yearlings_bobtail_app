@@ -94,6 +94,10 @@ export const getShrinkNavIcon = (state) => {
     }
 }
 
+export const getIsCarouselExpandable = ({ deviceIndex }) => {
+    return !getIsPhone({ deviceIndex })
+}
+
 export const getIsLyricExpandable = ({ selectedAdminIndex, deviceIndex }) => {
     return !selectedAdminIndex && !getIsDesktop(deviceIndex)
 }
