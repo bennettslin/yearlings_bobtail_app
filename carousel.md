@@ -1,8 +1,5 @@
 # Carousel notes
 
-* Position buttons
-* Carousel in tablet
-
 * Attach event handlers
     * Needs to pass annotation index as well
 
@@ -16,8 +13,6 @@
 * Animate entire annotation fading out
 
 * Annotation without titles?
-
-* Logic in app
 
 * Scrolling to
 

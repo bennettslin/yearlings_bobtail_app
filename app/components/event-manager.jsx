@@ -74,6 +74,7 @@ class EventManager extends Component {
     handleBodyClick(e) {
         this._stopPropagation(e)
         this._closeSections({
+            exemptCarousel: true,
             exemptLyric: true
         })
 
@@ -159,6 +160,7 @@ class EventManager extends Component {
 
         const interactivatedVerseIndex = this.props.interactivateVerseDirection(direction)
         this._closeSections({
+            exemptCarousel: true,
             exemptInteractivatedVerse: true
         })
         this._scrollElementIntoView('verse', interactivatedVerseIndex)
@@ -230,6 +232,7 @@ class EventManager extends Component {
         this.props.selectCarousel(selectedCarouselIndex)
         this._closeSections({
             exemptAnnotation: true,
+            exemptCarousel: true,
             exemptDots: true,
             exemptInteractivatedVerse: true,
             exemptOverview: true
@@ -317,6 +320,7 @@ class EventManager extends Component {
         if (dotsToggled) {
             this._stopPropagation(e)
             this._closeSections({
+                exemptCarousel: true,
                 exemptDots: true
             })
         }
@@ -382,6 +386,7 @@ class EventManager extends Component {
         this._stopPropagation(e)
         this._closeSections({
             exemptAnnotation: true,
+            exemptCarousel: true,
             exemptLyric: true
         })
         this.props.selectAnnotation({
@@ -434,6 +439,7 @@ class EventManager extends Component {
         if (overviewToggled) {
             this._stopPropagation(e)
             this._closeSections({
+                exemptCarousel: true,
                 exemptOverview: true
             })
         }
@@ -531,8 +537,12 @@ class EventManager extends Component {
     handleVerseInteractivate(e, verseIndex) {
         this._stopPropagation(e)
         this._closeSections({
+            exemptDots: true,
+            exemptCarousel: true,
             exemptInteractivatedVerse: true,
-            exemptLyric: true
+            exemptLyric: true,
+            exemptNav: true,
+            exemptOverview: true
         })
         this.props.interactivateVerse(verseIndex)
     }
@@ -560,6 +570,7 @@ class EventManager extends Component {
 
     _closeSections({
         exemptAnnotation,
+        exemptCarousel,
         exemptDots,
         exemptLyric,
         exemptNav,
@@ -581,6 +592,10 @@ class EventManager extends Component {
 
         if (!exemptAnnotation) {
             this.props.selectAnnotation({})
+        }
+
+        if (!exemptCarousel) {
+            this.props.selectCarousel(false)
         }
 
         if (!exemptDots) {
