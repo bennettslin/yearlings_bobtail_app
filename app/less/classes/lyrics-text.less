@@ -10,13 +10,17 @@
 @phone-verse-size: 0.9em;
 @phone-title-size: 1em;
 
+.annotation-title {
+    font-size: @mini-title-size;
+}
+
 // Make font size smaller in mini and phone.
 .mini-width {
     .lyrics-unit, .verse-bar-block, .annotation-card {
         font-size: @mini-verse-size;
     }
 
-    .title-unit, .annotation-title {
+    .title-unit {
         font-size: @mini-title-size;
     }
 }

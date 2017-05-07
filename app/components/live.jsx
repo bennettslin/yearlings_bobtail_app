@@ -267,6 +267,7 @@ const LiveView = ({
             accessedOn,
             accessedSongIndex,
 
+            handleAnnotationWikiSelect,
             handleAnnotationPortalSelect,
             handleDotsSectionToggle,
             handleNavExpand,
@@ -428,22 +429,25 @@ const LiveView = ({
                 lyricExpandButtonChild={lyricExpandButtonChild}
             />
 
-            <div className="overlay-popup-subfield">
-                <div className="overlay-popup-block audio-popup-block">
-                    <AudioTransitionPopup {...audioSectionProps}
-                        timerInAudio={timerInAudio}
-                        titleInAudio={false}
-                        showOverlay={showOverlay}
-                    />
+            {
+                // !audioSectionProps &&
+                <div className="overlay-popup-subfield">
+                    <div className="overlay-popup-block audio-popup-block">
+                        <AudioTransitionPopup {...audioSectionProps}
+                            timerInAudio={timerInAudio}
+                            titleInAudio={false}
+                            showOverlay={showOverlay}
+                        />
+                    </div>
+                    <div className="overlay-popup-block main-popup-block">
+                        <ScoreTransitionPopup {...scorePopupProps} />
+                        <WikiTransitionPopup {...wikiPopupProps} />
+                        {isOverlaidAnnotation &&
+                            <AnnotationTransitionPopup {...annotationPopupProps} />
+                        }
+                    </div>
                 </div>
-                <div className="overlay-popup-block main-popup-block">
-                    <ScoreTransitionPopup {...scorePopupProps} />
-                    <WikiTransitionPopup {...wikiPopupProps} />
-                    {isOverlaidAnnotation &&
-                        <AnnotationTransitionPopup {...annotationPopupProps} />
-                    }
-                </div>
-            </div>
+            }
         </div>
     )
 }

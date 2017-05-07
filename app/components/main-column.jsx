@@ -49,6 +49,8 @@ const MainColumnView = ({
     accessedOn,
     accessedSongIndex,
 
+    handleAnnotationPortalSelect,
+    handleAnnotationWikiSelect,
     handleDotsSectionToggle,
     handleNavExpand,
     handleNavSongSelect,
@@ -103,7 +105,10 @@ const MainColumnView = ({
             annotations,
             selectedDotKeys,
             selectedAnnotationIndex,
-            accessedPopupAnchorIndex
+            accessedPopupAnchorIndex,
+
+            handleAnnotationWikiSelect,
+            handleAnnotationPortalSelect
         }
 
     return (

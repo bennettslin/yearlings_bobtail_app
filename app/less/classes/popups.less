@@ -8,6 +8,9 @@
 
 @popup-button-multiplier: 0.72;
 
+@popup-annotation-width: @popup-content-side-padding * 2 + @annotation-width;
+@mini-popup-annotation-width: @mini-full-subfield * 2 + @annotation-width;
+
 .popup-field, .popup-field .subfield, .popup-transition-group {
     position: absolute;
     width: 100%;
@@ -48,8 +51,8 @@
     }
 
     &.annotation {
-        width: 400px;
-        max-width: 400px;
+        width: @popup-annotation-width;
+        max-width: @popup-annotation-width;
     }
 }
 
@@ -57,8 +60,8 @@
 .mini-width {
     .popup-wrapper {
         &.annotation {
-            width: 380px;
-            max-width: 380px;
+            width: @mini-popup-annotation-width;
+            max-width: @mini-popup-annotation-width;
         }
     }
 }
@@ -67,8 +70,8 @@
 .phone-width {
     .popup-wrapper {
         &.annotation {
-            width: 360px;
-            max-width: 360px;
+            width: @annotation-width;
+            max-width: @annotation-width;
         }
     }
 }
