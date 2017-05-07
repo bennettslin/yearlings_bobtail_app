@@ -18,7 +18,7 @@ const Carousel = (props) => (
 class CarouselView extends Component {
 
     render() {
-        const { annotations,
+        const { annotations = [],
             ...other } = this.props
 
         return (
