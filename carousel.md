@@ -17,8 +17,4 @@
 
 * Scrolling to from scrollIntoView
 
-* Can't click nav or carousel toggle when annotation popup
-
-* Annotation cards should line up, make carousel height taller
-
 * Height too narrow?

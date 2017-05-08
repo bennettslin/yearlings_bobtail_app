@@ -27,8 +27,11 @@
         }
     }
 
+    &.audio, &.score, &.wiki {
+        z-index: @popup-content-z-index;
+    }
+
     transition: opacity @popup-transition-duration-out;
-    z-index: @popup-content-z-index;
     opacity: 0;
 
     &.visible {
