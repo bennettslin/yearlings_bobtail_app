@@ -11,11 +11,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Audio banner in phone is broken...`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     {
         taskName: `Vixlet`,
@@ -1709,6 +1704,11 @@ module.exports = [
     },
     {
         taskName: `Begin annotation carousel`,
+        workedHours: 8,
+        neededHours: 8
+    },
+    {
+        taskName: `Continue annotaiton carousel.`,
         workedHours: 8,
         neededHours: 8
     },

@@ -1,7 +1,7 @@
 # Carousel notes
 
 * Attach event handlers
-    * Needs to pass annotation index as well
+    * Needs to pass annotation index as well (Where does portal get it?)
 
 * Selecting annotation from lyrics should behave differently
 
