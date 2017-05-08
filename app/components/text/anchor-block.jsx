@@ -15,6 +15,7 @@ const AnchorBlock = ({
     selectedAnnotationIndex,
     selectedWikiIndex,
     selectedDotKeys,
+    carouselAnnotationIndex,
     accessedAnnotationIndex,
     accessedPopupAnchorIndex,
     handleAnchorClick,
@@ -40,7 +41,7 @@ const AnchorBlock = ({
          * reference, and the argument is a url string.
          */
         handleClick = showAsAnchor && !isSelected && !other.inPortal &&
-            (e => handleAnchorClick(e, annotationIndex || wikiIndex))
+            (e => handleAnchorClick(e, annotationIndex || wikiIndex, carouselAnnotationIndex))
 
     return (
         <AnchorBlockView {...other}

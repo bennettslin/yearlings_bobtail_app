@@ -55,7 +55,7 @@ const AnnotationCardView = ({
     // From props.
     inPortal,
     inPortalCard,
-    // songs,
+    carouselAnnotationIndex,
     annotationDotKeys,
     handleAnnotationWikiSelect,
     handleAnnotationPortalSelect,
@@ -87,6 +87,7 @@ const AnnotationCardView = ({
             text={text}
             showWikis={showWikis}
             selectedWikiIndex={selectedWikiIndex}
+            carouselAnnotationIndex={carouselAnnotationIndex}
             accessedPopupAnchorIndex={accessedPopupAnchorIndex}
             handleAnchorClick={handleAnnotationWikiSelect}
         />

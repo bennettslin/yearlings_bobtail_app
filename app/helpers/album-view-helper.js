@@ -463,9 +463,10 @@ export const getPortalLinks = (card, songs) => {
 }
 
 export const getWikiUrl = (props) => {
-    const { selectedWikiIndex } = props
+    const { selectedWikiIndex,
+            carouselAnnotationIndex } = props
     if (selectedWikiIndex) {
-        const annotation = getAnnotation(props),
+        const annotation = getAnnotation(props, carouselAnnotationIndex),
             partialPath = annotation.popupAnchors[selectedWikiIndex - 1]
 
         let fullPath

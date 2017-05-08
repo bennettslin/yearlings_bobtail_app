@@ -184,9 +184,9 @@ class EventManager extends Component {
      * ANNOTATION *
      **************/
 
-    handleAnnotationWikiSelect(e, selectedWikiIndex) {
+    handleAnnotationWikiSelect(e, selectedWikiIndex, carouselAnnotationIndex) {
         this._stopPropagation(e)
-        this.props.selectWiki(selectedWikiIndex)
+        this.props.selectWiki(selectedWikiIndex, carouselAnnotationIndex)
     }
 
     handleAnnotationPortalSelect(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, selectedLyricColumnIndex) {
