@@ -1235,7 +1235,7 @@ module.exports = {
                                     }
                                 },
                                 {
-                                    description: `It wasn't until college that I was able to appreciate the enormous sacrifices that my parents made for me and my siblings to have a better life than they did. But that this realisation had to come through assigned coursework on immigrant history, rather than my own lived experiences, only further added to my guilt.`,
+                                    description: `It wasn't until college that I was able to appreciate the enormous sacrifices that my parents made for me and my siblings to have a better life than they did. But that this realisation had to come through assigned reading on immigrant history, rather than my own lived experiences, only further added to my guilt.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }

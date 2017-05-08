@@ -55,20 +55,22 @@ const NavButtonView = ({
             { 'access-highlighted': accessHighlighted }
         )}
     >
-        <Button
-            buttonName="nav"
-            iconText={iconText}
-            isLarge={isNavToggle}
-            isSelected={isSelected}
-            handleClick={handleClick}
-            extraChild={!isNavToggle &&
-                <div className="nav-title-block">
-                    <div className="nav-title">
-                        {songTitle}
+        <div className="nav-button-wrapper">
+            <Button
+                buttonName="nav"
+                iconText={iconText}
+                isLarge={isNavToggle}
+                isSelected={isSelected}
+                handleClick={handleClick}
+                extraChild={!isNavToggle &&
+                    <div className="nav-title-block">
+                        <div className="nav-title">
+                            {songTitle}
+                        </div>
                     </div>
-                </div>
-            }
-        />
+                }
+            />
+        </div>
     </div>
 )
 

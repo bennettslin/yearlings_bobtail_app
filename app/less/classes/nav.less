@@ -70,8 +70,9 @@
 }
 
 .nav-toggle-button-block, .nav-button-block {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
 }
 
 .nav-toggle-block {
@@ -91,13 +92,23 @@
     }
 }
 
+.nav-button-wrapper {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .nav-button {
 
     // Override button styling.
     // TODO: Make sure this doesn't break access key.
-    &.button {
-        position: absolute;
-    }
+    // &.button {
+    //     position: absolute;
+    // }
 
     &.selected {
         .button-background {
@@ -233,7 +244,7 @@
 
     .nav-book {
         &.songs {
-            left: 50px;
+            // left: 50px;
             transition: left 0.2s;
         }
     }
@@ -253,13 +264,13 @@
         }
 
         &.songs {
-            right: 50px;
+            // right: 50px;
             transition: right 0.2s;
             flex-direction: row-reverse;
 
-            .nav-button {
-                right: 0;
-            }
+            // .nav-button {
+            //     right: 50px;
+            // }
         }
 
         &.toggle {
