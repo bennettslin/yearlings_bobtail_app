@@ -24,21 +24,23 @@ class CarouselView extends Component {
         return (
             <div className="carousel">
                 <div className="carousel-scroll">
-                    {annotations.map((annotation, index) => {
-                        return (
-                            <div
-                                key={index}
-                                className={classnames(
-                                    'carousel-annotation',
-                                    `carousel-annotation-${index + 1}`
-                                )}
-                            >
-                                <AnnotationSection {...other}
-                                    popupAnnotation={annotation}
-                                />
-                            </div>
-                        )
-                    })}
+                    <div className="carousel-annotations-block">
+                        {annotations.map((annotation, index) => {
+                            return (
+                                <div
+                                    key={index}
+                                    className={classnames(
+                                        'carousel-annotation',
+                                        `carousel-annotation-${index + 1}`
+                                    )}
+                                >
+                                    <AnnotationSection {...other}
+                                        popupAnnotation={annotation}
+                                    />
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         )

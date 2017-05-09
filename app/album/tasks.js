@@ -8,6 +8,18 @@ module.exports = [
     },
 
     {
+        taskName: `Clicking somewhere in logue loses active element.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Lyric scrolling slowness`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
         taskName: `Vixlet`,
         workedHours: 0,
         neededHours: 2
@@ -18,7 +30,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Logue overview in phone`,
+        taskName: `Logue overview in phone styling`,
         workedHours: 0,
         neededHours: 1
     },

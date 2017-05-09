@@ -445,7 +445,6 @@ const LiveView = ({
             />
 
             {
-                // !audioSectionProps &&
                 <div className="overlay-popup-subfield">
                     <div className="overlay-popup-block audio-popup-block">
                         <AudioTransitionPopup {...audioSectionProps}

@@ -14,7 +14,7 @@
     margin: @dots-overview-padding 0;
     border-radius: 0 @nav-border-radius @nav-border-radius 0;
 
-    transition: margin 0.2s, border-radius 0.2s;
+    transition: margin 0.2s, border-radius 0.2s, box-shadow 0.2s;
 
     display: flex;
     justify-content: center;
@@ -55,6 +55,7 @@
     .carousel-toggle-button-block {
         margin-bottom: -@nav-height;
         border-radius: 0 @nav-border-radius 0 0;
+        box-shadow: @popup-box-shadow;
     }
 
     &.is-song {
@@ -83,6 +84,10 @@
         height: calc(~"100% + @{carousel-toggle-tablet-length}");
 
         transition: top 0.2s;
+    }
+
+    .carousel-scroll {
+        flex-direction: column;
     }
 
     .carousel-expanded {
@@ -122,13 +127,19 @@
 
 .carousel-scroll {
     display: flex;
+    flex-direction: column-reverse;
     overflow-x: scroll;
     height: 100%;
 }
 
+.carousel-annotations-block {
+    display: flex;
+    align-items: center;
+    background-color: #ffe;
+}
+
 .carousel-annotation {
     min-width: @annotation-width;
-    height: 100%;
     overflow-y: scroll;
 
     display: flex;

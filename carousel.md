@@ -9,3 +9,5 @@
 * Animate entire annotation fading out
 
 * Annotation without titles?
+
+* Toggle off when lyric is hidden

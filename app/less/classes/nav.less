@@ -61,23 +61,16 @@
 
     &.nav-toggle-book {
         border-radius: 0 @nav-border-radius 0 0;
-
-        transition: left 0.2s;
+        transition: left 0.2s, box-shadow 0.2s;
         left: 0;
 
         background-color: purple;
     }
 }
 
-.nav-toggle-button-block, .nav-button-block {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-}
-
 .nav-toggle-block {
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
 
     .button-background {
         background-color: #8dd;
@@ -103,13 +96,6 @@
 }
 
 .nav-button {
-
-    // Override button styling.
-    // TODO: Make sure this doesn't break access key.
-    // &.button {
-    //     position: absolute;
-    // }
-
     &.selected {
         .button-background {
             background-color: orange;
@@ -123,7 +109,6 @@
     left: 25%;
     width: 0;
 
-    // FIXME: Make transform vendor friendly.
     transform: rotate(315deg);
     transform-origin: left top;
 }
@@ -192,6 +177,12 @@
     transition: transform 0.2s;
 
     transform: scale(0);
+}
+
+.nav-expanded {
+    .nav-toggle-book {
+        box-shadow: @popup-box-shadow;
+    }
 }
 
 .nav-expanded.overlay-hidden {
