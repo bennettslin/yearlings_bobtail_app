@@ -6,11 +6,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Nav buttons in Safari are wonky`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     {
         taskName: `Vixlet`,
@@ -1722,4 +1717,9 @@ module.exports = [
         workedHours: 4,
         neededHours: 4
     },
+    {
+        taskName: `Nav buttons in Safari are wonky`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
