@@ -1,4 +1,12 @@
-@carousel-height: 100vh;
+/**
+ * I'm not happy with how complicated this styling became, but it was needed
+ * to ensure that the carousel remained under the centre field interactable
+ * elements.
+ */
+
+@carousel-toggle-laptop-length: @overview-toggle-laptop-width;
+@carousel-toggle-tablet-length: @overview-toggle-tablet-width;
+@carousel-toggle-mini-length: @overview-toggle-mini-width;
 
 .carousel-toggle-button-block {
     background-color: #edf;
@@ -12,12 +20,12 @@
     justify-content: center;
     z-index: @carousel-z-index + 1;
 
-    width: @overview-toggle-laptop-width;
+    width: @carousel-toggle-laptop-length;
 }
 
 .is-logue {
     .carousel-toggle-button-block {
-        margin-left: -@overview-toggle-laptop-width;
+        margin-left: -@carousel-toggle-laptop-length;
     }
 }
 
@@ -28,12 +36,15 @@
     }
 }
 
+@carousel-height-variable: @carousel-toggle-laptop-length + @dots-overview-padding;
+@carousel-position-variable: @carousel-height-variable * 2 + @dots-overview-padding * 2 + @nav-height;
+
 .carousel {
     position: absolute;
     left: 0;
-    bottom: -@carousel-height;
-    width: 100%;
-    height: @carousel-height;
+    bottom: calc(~"-100% - @{carousel-position-variable}");
+    width: 100vw;
+    height: calc(~"100% + @{carousel-height-variable}");
     z-index: @carousel-z-index;
     transition: bottom 0.2s;
 
@@ -48,7 +59,7 @@
 
     &.is-song {
         .carousel {
-            bottom: 0;
+            bottom: -@carousel-height-variable;
         }
     }
 }
@@ -64,29 +75,46 @@
         transition: left 0.2s;
     }
 
+    @carousel-tablet-variable: @carousel-toggle-tablet-length * 2;
+
     .carousel {
         bottom: auto;
-        top: -@carousel-height;
+        top: calc(~"-100% - @{carousel-tablet-variable}");
+        height: calc(~"100% + @{carousel-toggle-tablet-length}");
 
         transition: top 0.2s;
     }
 
     .carousel-expanded {
         .carousel {
-            top: @menu-height;
+            top: -@carousel-toggle-tablet-length;
         }
     }
 
     .lyric-expanded, .nav-expanded, .is-logue {
         .carousel-toggle-button-block {
-            left: -@overview-toggle-tablet-width;
+            left: -@carousel-toggle-tablet-length;
         }
     }
 
     &.mini-width {
+
+        @carousel-mini-variable: @carousel-toggle-mini-length * 2;
+
+        .carousel {
+            top: calc(~"-100% - @{carousel-mini-variable}");
+            height: calc(~"100% + @{carousel-toggle-mini-length}");
+        }
+
+        .carousel-expanded {
+            .carousel {
+                top: -@carousel-toggle-mini-length;
+            }
+        }
+
         .lyric-expanded, .nav-expanded, .is-logue {
             .carousel-toggle-button-block {
-                left: -@overview-toggle-mini-width;
+                left: -@carousel-toggle-mini-length;
             }
         }
     }
@@ -95,11 +123,12 @@
 .carousel-scroll {
     display: flex;
     overflow-x: scroll;
+    height: 100%;
 }
 
 .carousel-annotation {
     min-width: @annotation-width;
-    height: @carousel-height;
+    height: 100%;
     overflow-y: scroll;
 
     display: flex;
@@ -120,7 +149,7 @@
 
 .carousel-annotation {
     &:first-child {
-        padding-left: @overview-toggle-laptop-width;
+        padding-left: @carousel-toggle-laptop-length;
     }
 }
 

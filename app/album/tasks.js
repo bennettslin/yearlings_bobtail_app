@@ -1713,8 +1713,13 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Can selection anchor in carousel annotation.`,
+        taskName: `Can select anchor in carousel annotation.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Carousel z-indices.`,
+        workedHours: 4,
+        neededHours: 4
     },
 ]

@@ -60,7 +60,8 @@ const MainColumnView = ({
     lyricExpandButtonChild,
     scoresTipsSectionChild,
     audioBannerChild,
-    audioSectionChild
+    audioSectionChild,
+    carouselChild
 
 }) => {
     const menuFieldProps = {
@@ -111,6 +112,7 @@ const MainColumnView = ({
                 }
 
                 <div className="subfield dots-overview-subfield">
+                    {carouselChild}
                     <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
                         scoresTipsSectionChild={
                             isDesktop && scoresTipsOutsideMenu &&

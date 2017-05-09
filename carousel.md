@@ -8,7 +8,4 @@
 * Animate portal card fade out (content leaves too soon)
 * Animate entire annotation fading out
 
-* Height tall enough so no need to scroll annotation cards.
-    * But if too tall, it covers dots-overview section
-
 * Annotation without titles?

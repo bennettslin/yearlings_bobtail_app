@@ -31,7 +31,7 @@
 
     display: flex;
 
-    // Ensure overview is below lyrics.
+    // Ensure this is below lyrics but above popup wrappers.
     z-index: @dots-overview-subfield-z-index;
 }
 
@@ -42,9 +42,6 @@
 
     transition: margin-left @toggle-animation-duration;
     margin-left: 0;
-
-    // Ensure toggle button is above its popup container.
-    z-index: @overview-toggle-z-index;
 
     background-color: rgba(190, 210, 225, 0.5);
 }
@@ -59,6 +56,9 @@
 
     width: 100%;
     height: @overview-toggle-height;
+
+    // Ensure toggle button is above its popup container and the carousel.
+    z-index: @centre-field-element-z-index;
 
     .button-background {
         background-color: #d84;
@@ -83,6 +83,10 @@
     width: 100%;
     display: flex;
     margin-left: 0;
+    box-sizing: border-box;
+
+    // Ensure toggle button is above its popup container and the carousel.
+    z-index: @centre-field-element-z-index;
 
     padding-left: @app-thin-margin;
     align-items: center;
@@ -105,6 +109,7 @@
     left: 0;
     margin-left: -@dots-subfield-margin;
     margin-top: @dots-subfield-margin / 2;
+    z-index: @dots-overview-section-z-index;
 
     transition: margin-left 0.2s, transform 0.2s;
     transform: translateX(-100%);

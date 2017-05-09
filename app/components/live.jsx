@@ -392,7 +392,10 @@ const LiveView = ({
 
             handleAnnotationWikiSelect,
             handleAnnotationPortalSelect
-        }
+        },
+        carouselChild = !isHiddenNav && (
+            <Carousel {...carouselProps} />
+        )
 
     return (
         <div className={classnames(
@@ -424,6 +427,7 @@ const LiveView = ({
             </div>
             <MainColumn {...mainColumnProps}
                 annotationPopupChild={ <AnnotationTransitionPopup {...annotationPopupProps} /> }
+                carouselChild={carouselChild}
                 dotsSectionChild={ <DotsSection {...dotsSectionProps} /> }
                 overviewPopupChild={
                     <OverviewTransitionPopup {...overviewPopupProps}
@@ -435,10 +439,6 @@ const LiveView = ({
                 lyricExpandButtonChild={lyricExpandButtonChild}
                 scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
             />
-
-            {!isHiddenNav &&
-                <Carousel {...carouselProps} />
-            }
 
             <LyricColumn {...lyricColumnProps}
                 lyricExpandButtonChild={lyricExpandButtonChild}

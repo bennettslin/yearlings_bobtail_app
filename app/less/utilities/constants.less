@@ -100,17 +100,18 @@
 
 @admin-toggle-z-index: @popup-container-z-index + 1;
 
-@dots-overview-subfield-z-index: @admin-toggle-z-index + 1;
-@nav-custom-subfield-z-index: @dots-overview-subfield-z-index + 1;
-@carousel-z-index: @nav-custom-subfield-z-index + 1;
-@overview-toggle-z-index: @carousel-z-index + 1;
+@nav-custom-subfield-z-index: @admin-toggle-z-index + 1;
+@dots-overview-subfield-z-index: @nav-custom-subfield-z-index + 1;
+@carousel-z-index: @dots-overview-subfield-z-index + 1;
+
+@dots-overview-section-z-index: @carousel-z-index + 1;
+@centre-field-element-z-index: @dots-overview-section-z-index + 1;
 
 // This should be over overview toggle button for animation purposes.
-@custom-audio-banner-z-index: @overview-toggle-z-index + 1;
-@scores-tips-z-index: @custom-audio-banner-z-index + 1;
+@custom-audio-banner-z-index: @centre-field-element-z-index + 1;
 
 // Lyrics should be higher than anything in centre field.
-@lyric-column-z-index: @scores-tips-z-index + 1;
+@lyric-column-z-index: @custom-audio-banner-z-index + 1;
 @lyrics-audio-button-z-index: @lyric-column-z-index + 1;
 
 // This is in lyrics and annotation.
