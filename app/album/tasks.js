@@ -1,14 +1,14 @@
 module.exports = [
 
+    {
+        taskName: `Calculate values in live.jsx strategically`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     // Bugs.
     {
         taskName: `Overview logue animation is weird`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Clicking somewhere in logue loses active element.`,
         workedHours: 0,
         neededHours: 1
     },
