@@ -1,9 +1,5 @@
 module.exports = [
-    {
-        taskName: `Annotation popup z-index is wonky.`,
-        workedHours: 0,
-        neededHours: 1
-    },
+
     {
         taskName: `Align carousel annotation cards between edge and centre.`,
         workedHours: 0,
@@ -1747,6 +1743,11 @@ module.exports = [
     },
     {
         taskName: `Nav buttons in Safari are wonky`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Annotation popup z-index is wonky.`,
         workedHours: 1,
         neededHours: 1
     }
