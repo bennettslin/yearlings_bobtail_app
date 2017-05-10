@@ -890,7 +890,7 @@ module.exports = {
                                 {
                                     emphasis: `do`
                                 },
-                                `want to know them. And with that knowledge, I was now free to choose where to go next.`
+                                `want to know them. And with this knowledge, I was now free to choose where to go next.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true
@@ -947,8 +947,7 @@ module.exports = {
                         properNoun: true,
                         annotation: {
                             description: [
-                                // TODO: Mention recording all the parts?
-                                `Recognising that what I wanted was Mara or someone like Mara, and having taken stock of where I needed to be to get what I wanted, I decided to return to what I do best: holing up in emotional seclusion. My next five-year plan would see the completion of`,
+                                `Recognising that what I wanted was Mara or someone like Mara, and having taken stock of where I needed to be to get what I wanted, I decided to return to what I do best: holing up in emotional seclusion and relying solely on my own resourcefulness. My next five-year plan would see me score all the parts and play all the instruments on`,
                                 {
                                     italic: `Bobtail,`
                                 },
