@@ -1,4 +1,14 @@
 module.exports = [
+    {
+        taskName: `Annotation popup z-index is wonky.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Align carousel annotation cards between edge and centre.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     {
         taskName: `Bug where popup annotation isn't reset properly?`,

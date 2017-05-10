@@ -819,8 +819,9 @@ module.exports = {
                                 }
                             },
                             {
+                                // TODO: Split this between this one and previous?
                                 description: [
-                                    `As a child, I was embarrassed to be seen with my autistic brother during his frequent outbursts, a feeling that was compounded by my family's Buddhism and its obvious correlation with looking a shade darker than everyone else in Sasha's world. My inferiority complex thus failed to distinguish between having faulty genes, being of a faulty race, and following a faulty faith. They all seemed to derive from the same indelible essence at the core of my being.`
+                                    `As a child, I was embarrassed to be seen with my autistic brother during his public outbursts, a feeling that was compounded by the strangeness of my family's Buddhism and its obvious correlation with looking a shade darker than everyone else in Sasha's world. My inferiority complex thus failed to distinguish between having faulty genes, being of a faulty race, and following a faulty faith. They all seemed to derive from the same congenital defect at the core of my being.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
