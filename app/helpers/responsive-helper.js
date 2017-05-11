@@ -98,8 +98,8 @@ export const getIsCarouselExpandable = ({ deviceIndex }) => {
     return !getIsPhone({ deviceIndex })
 }
 
-export const getIsLyricExpandable = ({ selectedAdminIndex, deviceIndex }) => {
-    return !selectedAdminIndex && !getIsDesktop(deviceIndex)
+export const getIsLyricExpandable = ({ deviceIndex }) => {
+    return !getIsDesktop(deviceIndex)
 }
 
 export const getShowSingleLyricColumn = (props, state, selectedSongIndex) => {

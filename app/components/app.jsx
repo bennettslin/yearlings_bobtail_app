@@ -29,7 +29,7 @@ import { SHOWN,
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
 import { getSong, getAnnotation, getIsLogue, getOverview, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
 /*********
@@ -124,6 +124,7 @@ class App extends Component {
 
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false,
+            isHeightlessLyricColumn: false,
 
             lyricSectionTop: 0,
 
@@ -330,10 +331,13 @@ class App extends Component {
         // If no argument passed, then just toggle between on and off.
 
         /**
-         * We should ignore this call if carousel is not expandable, or if it's
-         * a logue.
+         * We should ignore this call if carousel is not expandable, or if
+         * it's a heightless lyric, or if it's a logue.
          */
-        if ((!appWillMount && !getIsCarouselExpandable(this.state)) || getIsLogue(this.props)) {
+        if ((!appWillMount && !getIsCarouselExpandable(this.state)) ||
+            this.state.isHeightlessLyricColumn ||
+            getIsLogue(this.props)) {
+
             return false
         }
 
@@ -889,15 +893,18 @@ class App extends Component {
     }
 
     _windowResize(e) {
-        const resizedWindowObject = resizeWindow(e ? e.target : undefined),
-            isCarouselExpandable = getIsCarouselExpandable(resizedWindowObject)
+        const newState = resizeWindow(e ? e.target : undefined),
+            isCarouselExpandable = getIsCarouselExpandable(newState),
+            isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState)
 
-        // Collapse carousel in state if not expandable.
-        if (!isCarouselExpandable) {
+        newState.isHeightlessLyricColumn = isHeightlessLyricColumn
+
+        // Collapse carousel in state if not expandable, or if heightless lyric.
+        if (!isCarouselExpandable || isHeightlessLyricColumn) {
             this.selectCarousel(false, true)
         }
 
-        this.setState(resizedWindowObject)
+        this.setState(newState)
     }
 
     _bindEventHandlers() {
