@@ -7,23 +7,12 @@ module.exports = [
     },
 
     {
-        taskName: `Bug where popup annotation isn't reset properly?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Calculate values in live.jsx strategically`,
         workedHours: 0,
         neededHours: 3
     },
 
     // Bugs.
-    {
-        taskName: `Overview logue animation is weird`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     {
         taskName: `Lyric scrolling slowness`,
@@ -1748,6 +1737,11 @@ module.exports = [
     },
     {
         taskName: `Annotation popup z-index is wonky.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Overview logue animation is weird`,
         workedHours: 1,
         neededHours: 1
     }

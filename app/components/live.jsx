@@ -6,7 +6,6 @@ import MainColumn from './main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
 import AudioTimer from './audio/audio-timer'
-// import AudioPopup from './audio/audio-popup'
 import AudioTransitionPopup from './audio/audio-transition-popup'
 import AudioSection from './audio/audio-section'
 import ScoresTipsSection from './scores-tips-section'
@@ -41,7 +40,6 @@ const Live = (props) => {
             stanzaTimes={selectedSong.stanzaTimes}
             annotations={selectedSong.annotations}
             times={selectedSong.times}
-            overviewText={selectedSong.overview}
             selectedWikiUrl={selectedWikiUrl}
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
@@ -74,6 +72,8 @@ const LiveView = ({
     songs,
     annotations,
     popupAnnotation,
+    popupLogueOverview,
+    popupSongOverview,
     title,
     isPlaying,
     isLogue,
@@ -160,7 +160,6 @@ const LiveView = ({
     handleCarouselToggle,
 
     // From controller.
-    overviewText,
     totalTime,
     stanzaTimes,
     times,
@@ -179,7 +178,6 @@ const LiveView = ({
             isPhone,
             isLogue,
             selectedOverviewIndex,
-            overviewText,
             handlePopupContainerClick,
 
             // For toggle in popup in phone.
@@ -249,7 +247,6 @@ const LiveView = ({
             scores,
             songs,
             title,
-            overviewText,
             bookStartingIndices,
             showSingleBookColumn,
             shrinkNavIcon,
@@ -423,6 +420,7 @@ const LiveView = ({
             <div className="column overview-logue-column">
                 <OverviewTransitionPopup {...overviewPopupProps}
                     inOverviewSubfield={false}
+                    overviewText={popupLogueOverview}
                 />
             </div>
             <MainColumn {...mainColumnProps}
@@ -432,6 +430,7 @@ const LiveView = ({
                 overviewPopupChild={
                     <OverviewTransitionPopup {...overviewPopupProps}
                         inOverviewSubfield={true}
+                        overviewText={popupSongOverview}
                         overviewButtonChild={ <OverviewButton {...overviewButtonProps} /> }
                     />
                 }

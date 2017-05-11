@@ -28,7 +28,7 @@ import { SHOWN,
 
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
-import { getSong, getAnnotation, getIsLogue, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
+import { getSong, getAnnotation, getIsLogue, getOverview, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
@@ -106,6 +106,8 @@ class App extends Component {
     constructor(props) {
         super(props)
 
+        const isLogue = getIsLogue(props)
+
         // Bind this to event handlers.
         this._bindEventHandlers()
 
@@ -117,6 +119,8 @@ class App extends Component {
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
 
             popupAnnotation: getAnnotation(props),
+            popupLogueOverview: isLogue ? getOverview(props) : '',
+            popupSongOverview: isLogue ? '' : getOverview(props),
 
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
             isLyricExpanded: false,
@@ -553,8 +557,13 @@ class App extends Component {
             }
         }
 
-        const isLogue = getIsLogue({ selectedSongIndex,
-                                     songs: this.props.songs })
+        const wasLogue = getIsLogue(this.props),
+            isLogue = getIsLogue({ selectedSongIndex,
+                                         songs: this.props.songs }),
+
+            // Allow logue and song overviews to overlap for fade animation.
+            newOverview = getOverview(this.props, selectedSongIndex),
+            newState = {}
 
         // If not selected from portal, show overview if hidden.
         if (!selectedAnnotationIndex) {
@@ -584,13 +593,26 @@ class App extends Component {
         this.interactivateVerse()
 
         if (isLogue) {
-            this.setState({
-                isPlaying: false
-            })
+            newState.isPlaying = false
+            newState.popupLogueOverview = newOverview
+
+            if (wasLogue) {
+                // Remove song overview if two logues in a row.
+                newState.popupSongOverview = ''
+            }
+        } else {
+            newState.popupSongOverview = newOverview
+
+            if (!wasLogue) {
+                // Remove logue overview if two songs in a row.
+                newState.popupLogueOverview = ''
+            }
         }
 
+        this.setState(newState)
         this.accessSong(selectedSongIndex)
         this.props.selectSongIndex(selectedSongIndex)
+
         return true
     }
 

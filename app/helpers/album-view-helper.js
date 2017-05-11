@@ -31,8 +31,14 @@ export const getSong = ({ selectedSongIndex, songs }, nextSongIndex) => {
     return songs[isNaN(nextSongIndex) ? selectedSongIndex : nextSongIndex]
 }
 
-export const getIsLogue = ({ selectedSongIndex, songs }) => {
-    return selectedSongIndex === 0 || selectedSongIndex === songs.length - 1
+export const getIsLogue = ({ selectedSongIndex, songs }, nextSongIndex) => {
+    const songIndex = isNaN(nextSongIndex) ? selectedSongIndex : nextSongIndex
+    return songIndex === 0 || songIndex === songs.length - 1
+}
+
+export const getOverview = (props, nextSongIndex) => {
+    const song = getSong(props, nextSongIndex)
+    return song.overview
 }
 
 export const getSongTitle = (props, isLogue) => {
