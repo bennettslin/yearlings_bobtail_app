@@ -33,10 +33,14 @@
         }
     }
 
-    // Anchors and dot stanzas in lyrics section.
+    /**
+     * Anchors and dot stanzas in lyrics section. This doesn't need to care
+     * whether the anchor is shown as anchor or text, because the access logic
+     * will skip over the anchor if it's shown as text.
+     */
     .dots-section-hidden.nav-collapsed.is-not-verse-interactivated {
         .access-highlighted {
-            &.anchor-block:not(.show-as-text) {
+            &.anchor-block {
                 .text-span {
                     font-weight: bolder;
                     color: @access-text-colour;
@@ -47,13 +51,11 @@
                 }
             }
 
-            // &.stanza, &.anchor-block {
             .dot {
                 &:not(.button), & .button-background {
                     border: @dot-border solid @access-text-colour;
                 }
             }
-            // }
         }
     }
 

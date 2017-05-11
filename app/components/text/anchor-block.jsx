@@ -97,7 +97,6 @@ const AnchorBlockView = ({
                 'anchor-block',
                 annotationIndex && `annotation-${annotationIndex}`,
                 wikiIndex && `wiki-${wikiIndex}`,
-                showAsAnchor ? 'show-as-anchor' : 'show-as-text',
                 { 'enabled': showAsAnchor && !isSelected && !inPortal,
                   'selected': isSelected,
                   'access-highlighted': accessHighlighted && !isSelected,

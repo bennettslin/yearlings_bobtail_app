@@ -62,7 +62,15 @@
     white-space: nowrap;
 }
 
-.anchor-block:not(.show-as-text) {
+.live-app.narrative .anchor-block.narrative,
+.live-app.backstory .anchor-block.backstory,
+.live-app.observation .anchor-block.observation,
+.live-app.pun .anchor-block.pun,
+.live-app.reference .anchor-block.reference,
+.live-app.songwriting .anchor-block.songwriting,
+.live-app.portal .anchor-block.portal,
+.live-app.afterword .anchor-block.afterword {
+
     .underline-bar {
         background-color: @lyric-underline-disabled-colour;
     }
