@@ -390,7 +390,7 @@ const LiveView = ({
             sliderMoving ? 'slider-moving' : 'slider-not-moving',
             interactivatedVerseIndex < 0 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
             selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
-            selectedDotsIndex ? 'dots-shown' : 'dots-hidden',
+            selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
             showOverlay ? 'overlay-shown' : 'overlay-hidden',
             { 'timer-in-audio': timerInAudio,

@@ -1,7 +1,7 @@
 module.exports = [
 
     {
-        taskName: `Lyric dots animate purely based on dot classes.`,
+        taskName: `Lyric dots animate purely based on dot classes, no need for show-as-text or show-as-anchor.`,
         workedHours: 0,
         neededHours: 2
     },

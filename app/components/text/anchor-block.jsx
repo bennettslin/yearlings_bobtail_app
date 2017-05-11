@@ -111,7 +111,6 @@ const AnchorBlockView = ({
                 <span className="underline-bar"></span>
             }
             {/* Don't show any dots in portal block. */}
-            {/* {((shownDotKeys && !wikiIndex && !inPortal) || isPortalAnchor) && */}
             {shownDotKeys && !wikiIndex && !inPortal &&
                 <DotBlock
                     inAnchor={true}

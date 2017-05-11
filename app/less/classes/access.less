@@ -34,7 +34,7 @@
     }
 
     // Anchors and dot stanzas in lyrics section.
-    .dots-hidden.nav-collapsed.is-not-verse-interactivated {
+    .dots-section-hidden.nav-collapsed.is-not-verse-interactivated {
         .access-highlighted {
             &.anchor-block:not(.show-as-text) {
                 .text-span {
@@ -58,10 +58,10 @@
     }
 
     // Anchors and dots in dots section.
-    .dots-shown {
+    .dots-section-shown {
         .dots-section {
             .access-highlighted {
-                .anchor-block:not(.show-as-text) {
+                .anchor-block {
                     .text-span {
                         font-weight: bolder;
                         color: @access-text-colour;
@@ -95,7 +95,7 @@
     }
 
     // Lyrics annotation is accessed.
-    .annotation-hidden.dots-hidden.nav-collapsed.is-not-verse-interactivated {
+    .annotation-hidden.dots-section-hidden.nav-collapsed.is-not-verse-interactivated {
         .lyrics-section {
             background-color: rgba(200, 250, 200, 0.5);
         }
@@ -125,7 +125,7 @@
     }
 
     // Dots section is accessed.
-    .dots-shown.nav-collapsed {
+    .dots-section-shown.nav-collapsed {
         .dots-section {
             background-color: #dfd;
         }
