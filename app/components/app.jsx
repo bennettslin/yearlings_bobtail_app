@@ -29,7 +29,7 @@ import { SHOWN,
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
 import { getSong, getAnnotation, getIsLogue, getOverview, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
 /*********
@@ -123,8 +123,15 @@ class App extends Component {
             popupSongOverview: isLogue ? '' : getOverview(props),
 
             selectedBookColumnIndex: getSelectedBookColumnIndex(props),
-            isLyricExpanded: false,
+            isCarouselExpandable: false,
             isHeightlessLyricColumn: false,
+            isHiddenNav: false,
+            showSingleBookColumn: false,
+            shrinkNavIcon: false,
+            scoresTipsOutsideMenu: false,
+            titleInAudio: false,
+
+            isLyricExpanded: false,
 
             lyricSectionTop: 0,
 
@@ -327,15 +334,14 @@ class App extends Component {
     }
 
     selectCarousel(selectedCarouselIndex =
-        (this.props.selectedCarouselIndex + 1) % 2, appWillMount) {
+        (this.props.selectedCarouselIndex + 1) % 2, noAdditionalCheck) {
         // If no argument passed, then just toggle between on and off.
 
         /**
          * We should ignore this call if carousel is not expandable, or if
          * it's a heightless lyric, or if it's a logue.
          */
-        if ((!appWillMount && !getIsCarouselExpandable(this.state)) ||
-            this.state.isHeightlessLyricColumn ||
+        if ((!noAdditionalCheck && (!this.state.isCarouselExpandable || this.state.isHeightlessLyricColumn)) ||
             getIsLogue(this.props)) {
 
             return false
@@ -530,7 +536,7 @@ class App extends Component {
          * We shouldn't be able to select book column if it's not a single
          * column, or if nav is collapsed.
          */
-        if (!getShowSingleBookColumn(this.state) || !selectedNavIndex) {
+        if (!this.state.showSingleBookColumn || !selectedNavIndex) {
             return false
         }
 
@@ -895,11 +901,15 @@ class App extends Component {
     _windowResize(e) {
         const newState = resizeWindow(e ? e.target : undefined),
             isCarouselExpandable = getIsCarouselExpandable(newState),
-            isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState),
-            isHiddenNav = getIsHiddenNav(newState)
+            isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState)
 
+        newState.isCarouselExpandable = isCarouselExpandable
         newState.isHeightlessLyricColumn = isHeightlessLyricColumn
-        newState.isHiddenNav = isHiddenNav
+        newState.isHiddenNav = getIsHiddenNav(newState)
+        newState.showSingleBookColumn = getShowSingleBookColumn(newState)
+        newState.shrinkNavIcon = getShrinkNavIcon(newState)
+        newState.scoresTipsOutsideMenu = getScoresTipsOutsideMenu(newState)
+        newState.titleInAudio = getTitleInAudio(newState)
 
         // Collapse carousel in state if not expandable, or if heightless lyric.
         if (!isCarouselExpandable || isHeightlessLyricColumn) {
