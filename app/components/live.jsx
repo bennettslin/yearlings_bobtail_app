@@ -16,7 +16,7 @@ import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
 import { getSong, getWikiUrl } from '../helpers/album-view-helper'
-import { getShowSingleBookColumn, getShrinkNavIcon, getIsHiddenNav, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
+import { getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -27,7 +27,6 @@ const Live = (props) => {
     const selectedSong = getSong(props),
         selectedWikiUrl = getWikiUrl(props),
         titleInAudio = getTitleInAudio(props),
-        isHiddenNav = getIsHiddenNav(props),
         scoresTipsOutsideMenu = getScoresTipsOutsideMenu(props),
         showSingleBookColumn = getShowSingleBookColumn(props),
         shrinkNavIcon = getShrinkNavIcon(props)
@@ -43,7 +42,6 @@ const Live = (props) => {
             selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
             titleInAudio={titleInAudio}
-            isHiddenNav={isHiddenNav}
             scoresTipsOutsideMenu={scoresTipsOutsideMenu}
             showSingleBookColumn={showSingleBookColumn}
             shrinkNavIcon={shrinkNavIcon}
@@ -108,6 +106,7 @@ const LiveView = ({
     isLyricExpanded,
     isLyricExpandable,
     isHeightlessLyricColumn,
+    isHiddenNav,
     showOverlay,
     isOverviewShown,
     isOverlaidAnnotation,
@@ -165,7 +164,6 @@ const LiveView = ({
     selectedSongLyrics,
     hasDoubleColumns,
     titleInAudio,
-    isHiddenNav,
     scoresTipsOutsideMenu,
     showSingleBookColumn,
     shrinkNavIcon

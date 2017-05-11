@@ -29,7 +29,7 @@ import { SHOWN,
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
 import { getSong, getAnnotation, getIsLogue, getOverview, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
+import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
 /*********
@@ -895,9 +895,11 @@ class App extends Component {
     _windowResize(e) {
         const newState = resizeWindow(e ? e.target : undefined),
             isCarouselExpandable = getIsCarouselExpandable(newState),
-            isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState)
+            isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState),
+            isHiddenNav = getIsHiddenNav(newState)
 
         newState.isHeightlessLyricColumn = isHeightlessLyricColumn
+        newState.isHiddenNav = isHiddenNav
 
         // Collapse carousel in state if not expandable, or if heightless lyric.
         if (!isCarouselExpandable || isHeightlessLyricColumn) {
