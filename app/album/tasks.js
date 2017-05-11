@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Lyric dots animate purely based on dot classes.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Align carousel annotation cards between edge and centre.`,
         workedHours: 0,
         neededHours: 1

@@ -401,7 +401,8 @@ const LiveView = ({
               'verse-above': isSelectedVerseAbove,
               'verse-below': isSelectedVerseBelow,
               'verse-bar-hidden': verseBarHidden,
-              'scores-tips-outside-menu': scoresTipsOutsideMenu }
+              'scores-tips-outside-menu': scoresTipsOutsideMenu },
+            selectedDotKeys
         )}>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">

@@ -102,7 +102,8 @@ const AnchorBlockView = ({
                   'selected': isSelected,
                   'access-highlighted': accessHighlighted && !isSelected,
                   'portal-anchor': isPortalAnchor,
-                  'todo': hasTodo }
+                  'todo': hasTodo },
+                annotationDotKeys
             )}
             onClick={handleClick}
         >
