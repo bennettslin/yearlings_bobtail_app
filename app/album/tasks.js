@@ -1,9 +1,9 @@
 module.exports = [
 
     {
-        taskName: `Lyric dots animate purely based on dot classes, no need for show-as-text or show-as-anchor.`,
+        taskName: `Anchor no longer needs to check for dot intersection`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
 
     {
@@ -1747,6 +1747,11 @@ module.exports = [
     },
     {
         taskName: `Calculate values in live.jsx strategically`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Lyric dots animate purely based on dot classes, no need for show-as-text or show-as-anchor.`,
         workedHours: 1,
         neededHours: 1
     }

@@ -384,6 +384,7 @@ class EventManager extends Component {
     }
 
     handleLyricAnnotationSelect(e, selectedAnnotationIndex) {
+        console.error('handle lyric annotation select');
         this._stopPropagation(e)
         this._closeSections({
             exemptAnnotation: true,

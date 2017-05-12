@@ -111,7 +111,8 @@ class DotButtonView extends Component {
                     >
                         <span className={classnames(
                             'anchor-block',
-                            { 'enabled': !isInteractivated }
+                            'in-dots-section',
+                            { 'is-not-interactivated': !isInteractivated }
                         )}>
                             <span className="underline-bar"></span>
                             <span className="text-span">{dotKey}</span>
