@@ -29,8 +29,7 @@ const AnnotationCard = ({
     }
 
     const shownDotKeys = getIntersection(dotKeys, selectedDotKeys),
-        showWikis = selectedDotKeys.wiki,
-        showPortals = selectedDotKeys.portal
+        showWikis = selectedDotKeys.wiki
 
     return (
         <AnnotationCardView {...other}
@@ -39,7 +38,6 @@ const AnnotationCard = ({
             annotationDotKeys={dotKeys}
             portalLinks={portalLinks}
             showWikis={showWikis}
-            showPortals={showPortals}
         />
     )
 }
@@ -64,8 +62,7 @@ const AnnotationCardView = ({
     text,
     shownDotKeys,
     portalLinks,
-    showWikis,
-    showPortals
+    showWikis
 
 }) => (
     <div className={classnames(
@@ -89,10 +86,11 @@ const AnnotationCardView = ({
                 accessedPopupAnchorIndex={accessedPopupAnchorIndex}
                 handleAnchorClick={handleAnnotationWikiSelect}
             />
-            {!inPortal && portalLinks && showPortals &&
+            {/* Why does portal need to care about annotation dot keys? */}
+            {!inPortal && portalLinks &&
                 <AnnotationPortalsBlock
                     portalLinks={portalLinks}
-                    annotationDotKeys={annotationDotKeys}
+                    // annotationDotKeys={annotationDotKeys}
                     accessedPopupAnchorIndex={accessedPopupAnchorIndex}
                     handleAnnotationPortalSelect={handleAnnotationPortalSelect}
                 />

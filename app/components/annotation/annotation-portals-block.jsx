@@ -19,7 +19,7 @@ const AnnotationPortalsBlock = (props) => (
 const AnnotationPortalsBlockView = ({
 
     // From props.
-    annotationDotKeys,
+    // annotationDotKeys,
     portalLinks,
     accessedPopupAnchorIndex,
     handleAnnotationPortalSelect,
@@ -68,7 +68,7 @@ const AnnotationPortalsBlockView = ({
                             <TextBlock
                                 inPortal={true}
                                 text={verseObject.lyric || verseObject.centre || verseObject[column]}
-                                selectedDotKeys={annotationDotKeys}
+                                // selectedDotKeys={annotationDotKeys}
                                 portalAnnotationIndex={annotationIndex}
                             />
                             <span className="text-span">{'\u201d'}</span>
