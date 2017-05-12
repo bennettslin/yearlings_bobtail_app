@@ -71,6 +71,9 @@ class DotButtonView extends Component {
         })
 
         this.props.setHasInteractivatedDotText(isInteractivated)
+
+        // Tell event manager to turn off access.
+        this.props.stopPropagation(e)
     }
 
     render() {

@@ -151,6 +151,7 @@ const LiveView = ({
     handleVerseInteractivate,
     handleWikiToggle,
     handleCarouselToggle,
+    stopPropagation,
 
     // From controller.
     totalTime,
@@ -332,7 +333,8 @@ const LiveView = ({
             accessedOn,
             accessedDotIndex,
             handlePopupContainerClick,
-            handleDotToggle
+            handleDotToggle,
+            stopPropagation
         },
         scorePopupProps = {
             isPhone,

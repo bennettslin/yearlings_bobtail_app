@@ -60,6 +60,7 @@ class EventManager extends Component {
         this.handleVerseInteractivate = this.handleVerseInteractivate.bind(this)
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
         this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
+        this.stopPropagation = this.stopPropagation.bind(this)
     }
 
     componentDidMount() {
@@ -72,7 +73,7 @@ class EventManager extends Component {
      ********/
 
     handleBodyClick(e) {
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this._closeSections({
             exemptCarousel: true,
             exemptLyric: true
@@ -84,7 +85,7 @@ class EventManager extends Component {
     }
 
     handlePopupContainerClick(e) {
-        this._stopPropagation(e)
+        this.stopPropagation(e)
     }
 
     handlePopupFocus() {
@@ -173,7 +174,7 @@ class EventManager extends Component {
 
     handleAdminToggle(e) {
         const newAdminIndex = this.props.toggleAdmin()
-        this._stopPropagation(e)
+        this.stopPropagation(e)
 
         // Change focus for keyboard events.
         this._focusBody(newAdminIndex)
@@ -185,7 +186,7 @@ class EventManager extends Component {
      **************/
 
     handleAnnotationWikiSelect(e, selectedWikiIndex, carouselAnnotationIndex) {
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this.props.selectWiki(selectedWikiIndex, carouselAnnotationIndex)
     }
 
@@ -198,7 +199,7 @@ class EventManager extends Component {
         })
 
         if (songSelected) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
 
             if (!isNaN(selectedLyricColumnIndex)) {
                 this.props.selectLyricColumn({
@@ -212,7 +213,7 @@ class EventManager extends Component {
     }
 
     handleAnnotationPrevious(e) {
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction: -1
         })
@@ -220,7 +221,7 @@ class EventManager extends Component {
     }
 
     handleAnnotationNext(e) {
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction: 1
         })
@@ -228,7 +229,7 @@ class EventManager extends Component {
     }
 
     handleCarouselToggle(e, selectedCarouselIndex) {
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this.props.selectCarousel(selectedCarouselIndex)
 
         // Close popup annotation if expanding carousel.
@@ -247,7 +248,7 @@ class EventManager extends Component {
     handleAudioPlay(e) {
         const playToggled = this.props.togglePlay()
         if (playToggled) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
         }
         return playToggled
     }
@@ -258,7 +259,7 @@ class EventManager extends Component {
         })
         this._closeDotsIfOverviewWillShow()
         if (songSelected) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
         }
         return songSelected
     }
@@ -269,7 +270,7 @@ class EventManager extends Component {
         })
         this._closeDotsIfOverviewWillShow()
         if (songSelected) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
         }
         return songSelected
     }
@@ -277,7 +278,7 @@ class EventManager extends Component {
     handleAudioOptionsToggle(e) {
         const optionSelected = this.props.selectAudioOption()
         if (optionSelected) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
         }
         return optionSelected
     }
@@ -307,7 +308,7 @@ class EventManager extends Component {
             return false
         }
 
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this.props.toggleDot(dotIndex)
         return true
     }
@@ -319,7 +320,7 @@ class EventManager extends Component {
     handleDotsSectionToggle(e) {
         const dotsToggled = this.props.selectDotsExpand()
         if (dotsToggled) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
             this._closeSections({
                 exemptCarousel: true,
                 exemptDots: true
@@ -335,7 +336,7 @@ class EventManager extends Component {
     handleLyricSectionExpand(e) {
         const lyricsToggled = this.props.selectLyricExpand()
         if (lyricsToggled) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
             this._closeSections({
                 exemptAnnotation: true,
                 exemptLyric: true
@@ -351,7 +352,7 @@ class EventManager extends Component {
     handleLyricColumnSelect(e) {
         const columnSelected = this.props.selectLyricColumn({})
         if (columnSelected) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
         }
         return columnSelected
     }
@@ -375,7 +376,7 @@ class EventManager extends Component {
             return false
         }
 
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this.props.selectVerse({
             selectedVerseIndex
         })
@@ -385,7 +386,7 @@ class EventManager extends Component {
 
     handleLyricAnnotationSelect(e, selectedAnnotationIndex) {
         console.error('handle lyric annotation select');
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this._closeSections({
             exemptAnnotation: true,
             exemptCarousel: true,
@@ -403,7 +404,7 @@ class EventManager extends Component {
     handleNavExpand(e) {
         const navExpanded = this.props.selectNavExpand()
         if (navExpanded) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
             this._closeSections({
                 exemptNav: true
             })
@@ -412,7 +413,7 @@ class EventManager extends Component {
     }
 
     handleNavSongSelect(e, selectedSongIndex) {
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this.props.selectNavExpand(false)
         return this.props.selectSong({
             selectedSongIndex
@@ -420,7 +421,7 @@ class EventManager extends Component {
     }
 
     handleNavBookSelect(e) {
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this.props.selectBookColumn({})
     }
 
@@ -439,7 +440,7 @@ class EventManager extends Component {
             })
 
         if (overviewToggled) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
             this._closeSections({
                 exemptCarousel: true,
                 exemptOverview: true
@@ -455,7 +456,7 @@ class EventManager extends Component {
     handleScoreToggle(e) {
         const scoreToggled = this.props.selectScore()
         if (scoreToggled) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
         }
         return scoreToggled
     }
@@ -467,7 +468,7 @@ class EventManager extends Component {
     handleTipsToggle(e) {
         const tipsToggled = this.props.selectTips()
         if (tipsToggled) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
         }
         return tipsToggled
     }
@@ -481,7 +482,7 @@ class EventManager extends Component {
             selectedSongIndex: 0
         })
         if (titleSelected) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
         }
         return titleSelected
     }
@@ -497,7 +498,7 @@ class EventManager extends Component {
             clientRect = target.getBoundingClientRect()
 
         if (!isNaN(clientX)) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
             this.props.touchSliderBegin(clientRect, clientX)
         }
     }
@@ -506,7 +507,7 @@ class EventManager extends Component {
         const { clientX } = e.nativeEvent
 
         if (!isNaN(clientX)) {
-            this._stopPropagation(e)
+            this.stopPropagation(e)
             this.props.touchBodyMove(clientX)
         }
 
@@ -514,7 +515,7 @@ class EventManager extends Component {
 
     handleBodyTouchEnd(e) {
         e.preventDefault()
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this.props.touchBodyEnd()
     }
 
@@ -537,7 +538,7 @@ class EventManager extends Component {
     }
 
     handleVerseInteractivate(e, verseIndex) {
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this._closeSections({
             exemptDots: true,
             exemptCarousel: true,
@@ -562,7 +563,7 @@ class EventManager extends Component {
      ********/
 
     handleWikiToggle(e, selectedWikiIndex) {
-        this._stopPropagation(e)
+        this.stopPropagation(e)
         this.props.selectWiki(selectedWikiIndex)
     }
 
@@ -623,7 +624,7 @@ class EventManager extends Component {
         }
     }
 
-    _stopPropagation(e) {
+    stopPropagation(e) {
         if (e && e.stopPropagation) {
             e.stopPropagation()
 
@@ -749,6 +750,7 @@ class EventManager extends Component {
                 handleVerseInteractivate={this.handleVerseInteractivate}
                 handleWikiToggle={this.handleWikiToggle}
                 handleScrollAfterLyricRerender={this.handleScrollAfterLyricRerender}
+                stopPropagation={this.stopPropagation}
             />
         )
     }
