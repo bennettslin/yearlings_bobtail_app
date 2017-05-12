@@ -8,6 +8,15 @@
 @carousel-toggle-tablet-length: @overview-toggle-tablet-width;
 @carousel-toggle-mini-length: @overview-toggle-mini-width;
 
+@carousel-annotation-bookend-margin: 12.5px;
+@carousel-annotation-side-margin: 5px;
+
+@carousel-height-variable: @carousel-toggle-laptop-length + @dots-overview-padding;
+@carousel-position-variable: @carousel-height-variable * 2 + @dots-overview-padding * 2 + @nav-height;
+
+@carousel-tablet-variable: @carousel-toggle-tablet-length * 2;
+@carousel-mini-variable: @carousel-toggle-mini-length * 2;
+
 .carousel-toggle-button-block {
     background-color: #edf;
     padding: @app-thin-margin 0;
@@ -36,9 +45,6 @@
     }
 }
 
-@carousel-height-variable: @carousel-toggle-laptop-length + @dots-overview-padding;
-@carousel-position-variable: @carousel-height-variable * 2 + @dots-overview-padding * 2 + @nav-height;
-
 .carousel {
     position: absolute;
     left: 0;
@@ -65,6 +71,71 @@
     }
 }
 
+.carousel-scroll {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-x: scroll;
+    height: 100%;
+}
+
+.carousel-annotations-block {
+    display: flex;
+    align-items: center;
+    background-color: #ffe;
+}
+
+.carousel-annotation {
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    min-width: 0;
+    transition: min-width 0.2s;
+
+    .annotation-section {
+        width: @annotation-width + @carousel-annotation-side-margin;
+        margin: 10px @carousel-annotation-side-margin;
+    }
+
+    &:first-child {
+        padding-left: @carousel-toggle-laptop-length;
+    }
+
+    &:last-child {
+        .annotation-section {
+            margin-right: @carousel-annotation-bookend-margin;
+        }
+    }
+}
+
+.live-app.narrative .carousel-annotation.narrative,
+.live-app.backstory .carousel-annotation.backstory,
+.live-app.observation .carousel-annotation.observation,
+.live-app.pun .carousel-annotation.pun,
+.live-app.reference .carousel-annotation.reference,
+.live-app.songwriting .carousel-annotation.songwriting,
+.live-app.portal .carousel-annotation.portal,
+.live-app.afterword .carousel-annotation.afterword {
+    min-width: @annotation-width + @carousel-annotation-side-margin * 2;
+}
+
+.monitor-width {
+    .carousel-annotation {
+        &:last-child {
+            padding-right: @golden-cord-width;
+        }
+    }
+}
+
+.laptop-width {
+    .carousel-annotation {
+        &:last-child {
+            padding-right: @uncanny-valley-width;
+        }
+    }
+}
+
 .is-mobile {
 
     .carousel-toggle-button-block {
@@ -75,8 +146,6 @@
         border-radius: 0 0 @nav-border-radius 0;
         transition: left 0.2s;
     }
-
-    @carousel-tablet-variable: @carousel-toggle-tablet-length * 2;
 
     .carousel {
         bottom: auto;
@@ -102,9 +171,15 @@
         }
     }
 
-    &.mini-width {
+    .carousel-annotations-block {
+        align-items: flex-start;
+    }
 
-        @carousel-mini-variable: @carousel-toggle-mini-length * 2;
+    .carousel-annotation {
+        flex-direction: column;
+    }
+
+    &.mini-width {
 
         .carousel {
             top: calc(~"-100% - @{carousel-mini-variable}");
@@ -122,66 +197,5 @@
                 left: -@carousel-toggle-mini-length;
             }
         }
-    }
-}
-
-.carousel-scroll {
-    display: flex;
-    flex-direction: column-reverse;
-    overflow-x: scroll;
-    height: 100%;
-}
-
-.carousel-annotations-block {
-    display: flex;
-    align-items: center;
-    background-color: #ffe;
-}
-
-.carousel-annotation {
-    min-width: @annotation-width + 10px;
-    overflow-y: scroll;
-
-    display: flex;
-    flex-direction: column-reverse;
-
-    .annotation-section {
-        margin: 10px 5px;
-    }
-
-    @annotation-bookend-margin: 12.5px;
-
-    &:last-child {
-        .annotation-section {
-            margin-right: @annotation-bookend-margin;
-        }
-    }
-}
-
-.carousel-annotation {
-    &:first-child {
-        padding-left: @carousel-toggle-laptop-length;
-    }
-}
-
-.monitor-width {
-    .carousel-annotation {
-        &:last-child {
-            padding-right: @golden-cord-width;
-        }
-    }
-}
-
-.laptop-width {
-    .carousel-annotation {
-        &:last-child {
-            padding-right: @uncanny-valley-width;
-        }
-    }
-}
-
-.is-mobile {
-    .carousel-annotation {
-        flex-direction: column;
     }
 }

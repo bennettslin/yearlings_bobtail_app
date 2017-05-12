@@ -31,7 +31,8 @@ class CarouselView extends Component {
                                     key={index}
                                     className={classnames(
                                         'carousel-annotation',
-                                        `carousel-annotation-${index + 1}`
+                                        `carousel-annotation-${index + 1}`,
+                                        annotation.dotKeys
                                     )}
                                 >
                                     <AnnotationSection {...other}
