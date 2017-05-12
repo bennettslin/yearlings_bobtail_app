@@ -28,7 +28,7 @@ const AnchorBlock = ({
             dotKeys: annotationDotKeys,
             wikiIndex } = text,
 
-        { showAsAnchor } = other,
+        // { showAsAnchor } = other,
 
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
         isPortalAnchor = typeof portalAnnotationIndex !== 'undefined' && portalAnnotationIndex === annotationIndex,
@@ -40,7 +40,7 @@ const AnchorBlock = ({
          * click handler is the annotation index. Otherwise, it's a
          * reference, and the argument is a url string.
          */
-        handleClick = showAsAnchor && !isSelected && !other.inPortal &&
+        handleClick = !isSelected && !other.inPortal &&
             (e => handleAnchorClick(e, annotationIndex || wikiIndex, carouselAnnotationIndex))
 
     return (
@@ -66,7 +66,6 @@ const AnchorBlock = ({
 const AnchorBlockView = ({
 
     // From props.
-    showAsAnchor,
     inPortal,
     firstVerseObject,
     lastVerseObject,
@@ -97,12 +96,13 @@ const AnchorBlockView = ({
                 'anchor-block',
                 annotationIndex && `annotation-${annotationIndex}`,
                 wikiIndex && `wiki-${wikiIndex}`,
-                showAsAnchor ? 'show-as-anchor' : 'show-as-text',
-                { 'enabled': showAsAnchor && !isSelected && !inPortal,
-                  'selected': isSelected,
+                { 'selected': isSelected,
                   'access-highlighted': accessHighlighted && !isSelected,
                   'portal-anchor': isPortalAnchor,
-                  'todo': hasTodo }
+                  'is-wiki': !!wikiIndex,
+                  'not-in-portal': !inPortal,
+                  'todo': hasTodo },
+                annotationDotKeys
             )}
             onClick={handleClick}
         >
@@ -110,7 +110,6 @@ const AnchorBlockView = ({
                 <span className="underline-bar"></span>
             }
             {/* Don't show any dots in portal block. */}
-            {/* {((shownDotKeys && !wikiIndex && !inPortal) || isPortalAnchor) && */}
             {shownDotKeys && !wikiIndex && !inPortal &&
                 <DotBlock
                     inAnchor={true}

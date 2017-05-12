@@ -33,53 +33,64 @@
         }
     }
 
-    // Anchors and dot stanzas in lyrics section.
-    .dots-hidden.nav-collapsed.is-not-verse-interactivated {
+    // Dots and dot stanzas in lyrics section.
+    .dots-section-hidden.nav-collapsed.is-not-verse-interactivated {
         .access-highlighted {
-            &.anchor-block:not(.show-as-text) {
-                .text-span {
-                    font-weight: bolder;
-                    color: @access-text-colour;
-                }
-
-                .underline-bar {
-                    background-color: @access-text-colour;
-                }
-            }
-
-            // &.stanza, &.anchor-block {
             .dot {
                 &:not(.button), & .button-background {
-                    border: @dot-border solid @access-text-colour;
+                    border: @dot-border solid @access-link-colour;
                 }
             }
-            // }
         }
     }
 
-    // Anchors and dots in dots section.
-    .dots-shown {
+    // Dots in dots section.
+    .dots-section-shown {
         .dots-section {
             .access-highlighted {
-                .anchor-block:not(.show-as-text) {
-                    .text-span {
-                        font-weight: bolder;
-                        color: @access-text-colour;
-                    }
-
-                    .underline-bar {
-                        background-color: @access-text-colour;
-                    }
-                }
-
                 &.dot-container {
                     .dot {
                         &:not(.button), & .button-background {
-                            border: @dot-border solid @access-text-colour;
+                            border: @dot-border solid @access-link-colour;
                         }
                     }
                 }
             }
+        }
+    }
+
+    /**
+     * Anchors in both lyrics and dots section. This doesn't need to care
+     * whether the anchor is shown as anchor or text, because the access logic
+     * will skip over the anchor if it's shown as text.
+     */
+    .dots-section-hidden.nav-collapsed.is-not-verse-interactivated, .dots-section-shown .dots-section {
+        .access-highlighted {
+
+            // Anchor is same element if lyrics, child element if dots section.
+            &.anchor-block, & .anchor-block {
+                .text-span {
+                    font-weight: bolder;
+                    color: @access-link-colour;
+                }
+
+                &:hover {
+                    .text-span {
+                        color: @access-hover-colour;
+                    }
+                }
+
+                &:active {
+                    .text-span {
+                        color: @access-active-colour;
+                    }
+                }
+
+                .underline-bar {
+                    background-color: @access-underline-colour;
+                }
+            }
+
         }
     }
 
@@ -88,14 +99,14 @@
         .nav-section {
             .access-highlighted {
                 .button-background {
-                    box-shadow: 0 2px 10px 10px @access-text-colour;
+                    box-shadow: 0 2px 10px 10px @access-link-colour;
                 }
             }
         }
     }
 
     // Lyrics annotation is accessed.
-    .annotation-hidden.dots-hidden.nav-collapsed.is-not-verse-interactivated {
+    .annotation-hidden.dots-section-hidden.nav-collapsed.is-not-verse-interactivated {
         .lyrics-section {
             background-color: rgba(200, 250, 200, 0.5);
         }
@@ -125,7 +136,7 @@
     }
 
     // Dots section is accessed.
-    .dots-shown.nav-collapsed {
+    .dots-section-shown.nav-collapsed {
         .dots-section {
             background-color: #dfd;
         }

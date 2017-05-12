@@ -66,7 +66,7 @@
 }
 
 // Hidden to left when is logue, or annotation shown.
-.is-logue, .annotation-shown, .dots-shown {
+.is-logue, .annotation-shown, .dots-section-shown {
     .dots-overview-toggle-section {
         margin-left: -@overview-toggle-width;
     }
@@ -118,7 +118,7 @@
     background-color: @odd-verse-colour;
 }
 
-.dots-shown {
+.dots-section-shown {
     .dots-subfield {
         margin-left: @dots-subfield-margin;
         transform: translateX(0);
@@ -127,11 +127,6 @@
 
 // Responsive rules.
 .is-desktop {
-
-    // Overview is at the top in desktop.
-    // .overview-toggle-button-container, .overview.popup-content-wrapper {
-    //     top: 0;
-    // }
 
     &.laptop-width {
 
@@ -194,7 +189,7 @@
 
     &.phone-width {
 
-        .dots-shown {
+        .dots-section-shown {
             .dots-subfield {
                 margin-left: @dots-subfield-phone-margin;
             }

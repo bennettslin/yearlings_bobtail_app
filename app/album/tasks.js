@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `When switching to logue and carousel is on, then turning on nav in logue, should toggle off nav`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Align carousel annotation cards between edge and centre.`,
         workedHours: 0,
         neededHours: 1
@@ -9,7 +14,7 @@ module.exports = [
     // Bugs.
 
     {
-        taskName: `Lyric scrolling slowness`,
+        taskName: `Lyric scrolling slowness, only update based on certain changes.`,
         workedHours: 0,
         neededHours: 5
     },
@@ -1743,5 +1748,15 @@ module.exports = [
         taskName: `Calculate values in live.jsx strategically`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Lyric dots animate purely based on dot classes, no need for show-as-text or show-as-anchor.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Anchor no longer needs to check for dot intersection`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

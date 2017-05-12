@@ -71,6 +71,9 @@ class DotButtonView extends Component {
         })
 
         this.props.setHasInteractivatedDotText(isInteractivated)
+
+        // Tell event manager to turn off access.
+        this.props.stopPropagation(e)
     }
 
     render() {
@@ -111,7 +114,8 @@ class DotButtonView extends Component {
                     >
                         <span className={classnames(
                             'anchor-block',
-                            { 'enabled': !isInteractivated }
+                            'in-dots-section',
+                            { 'is-not-interactivated': !isInteractivated }
                         )}>
                             <span className="underline-bar"></span>
                             <span className="text-span">{dotKey}</span>
