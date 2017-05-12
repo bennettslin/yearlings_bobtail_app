@@ -347,8 +347,7 @@ class AccessManager extends Component {
                 direction = 1
                 break
             case ENTER:
-                props.handleLyricAnnotationSelect(e, accessedAnnotationIndex)
-                return true
+                return props.handleLyricAnnotationSelect(e, accessedAnnotationIndex)
             default:
                 return false
         }

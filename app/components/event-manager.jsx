@@ -5,6 +5,9 @@ import scrollIntoView from 'scroll-into-view'
 import { OVERVIEW_OPTIONS,
          DISABLED } from '../helpers/constants'
 
+import { getAnnotation } from '../helpers/album-view-helper'
+import { intersects } from '../helpers/dot-helper'
+
 class EventManager extends Component {
 
     constructor(props) {
@@ -385,7 +388,19 @@ class EventManager extends Component {
     }
 
     handleLyricAnnotationSelect(e, selectedAnnotationIndex) {
-        console.error('handle lyric annotation select');
+
+        /**
+         * FIXME: This check is only necessary when clicking an annotation, to
+         * ensure that it is not shown as text. Maybe bypass if done through
+         * access?
+         */
+        const annotation = getAnnotation(this.props.domProps, selectedAnnotationIndex),
+            isAnnotationEnabled = intersects(annotation.dotKeys, this.props.domProps.selectedDotKeys)
+
+        if (!isAnnotationEnabled) {
+            return false
+        }
+
         this.stopPropagation(e)
         this._closeSections({
             exemptAnnotation: true,
@@ -395,6 +410,7 @@ class EventManager extends Component {
         this.props.selectAnnotation({
             selectedAnnotationIndex
         })
+        return true
     }
 
     /*******
