@@ -12,6 +12,8 @@ import { VERSES,
          PUN,
          REFERENCE,
          SONGWRITING,
+         AFTERWORD,
+
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
 module.exports = {
@@ -1103,14 +1105,25 @@ module.exports = {
                 unitMap: true,
                 stanzaType: OUTRO
             }
+        ],
+        [
+            {
+                unitMap: true,
+                dotStanza: {
+
+                    // TODO: Afterword
+                    anchor: DOT_STANZA_CONSTANT,
+                    annotation: {
+                        description: ``,
+                        dotKeys: {
+                            [AFTERWORD]: true
+                        }
+                    }
+                }
+            }
         ]
     ],
     tasks: [
-        {
-            taskName: `afterword annotations`,
-            workedHours: 1,
-            neededHours: 1
-        },
         {
             taskName: `tenses and categorisation`,
             workedHours: 2,

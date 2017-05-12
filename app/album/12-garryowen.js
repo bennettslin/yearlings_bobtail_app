@@ -835,6 +835,11 @@ module.exports = {
     ],
     tasks: [
         {
+            taskName: `afterword annotations`,
+            workedHours: 1,
+            neededHours: 1
+        },
+        {
             taskName: `tenses and categorisation`,
             workedHours: 3,
             neededHours: 3
