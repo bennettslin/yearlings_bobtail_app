@@ -2,7 +2,6 @@ import React from 'react'
 import AnchorBlock from './anchor-block'
 import TextBlock from './text-block'
 import TextSpan from './text-span'
-import { intersects } from '../../helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -11,7 +10,6 @@ import { intersects } from '../../helpers/dot-helper'
 const TextUnit = ({
 
     text,
-    selectedDotKeys,
     showWikis,
 
 ...other }) => {
@@ -33,7 +31,6 @@ const TextUnit = ({
                         text={text.lyric}
                         firstVerseObject={text.firstVerseObject}
                         lastVerseObject={text.lastVerseObject}
-                        selectedDotKeys={selectedDotKeys}
                     />
                 </span>
             )
@@ -43,7 +40,6 @@ const TextUnit = ({
                 <i>
                     <TextBlock {...other}
                         text={text.italic}
-                        selectedDotKeys={selectedDotKeys}
                     />
                 </i>
             )
@@ -53,22 +49,18 @@ const TextUnit = ({
                 <em>
                     <TextBlock {...other}
                         text={text.emphasis}
-                        selectedDotKeys={selectedDotKeys}
                     />
                 </em>
             )
 
         } else if (text.anchor) {
-            const showAsAnchor = intersects(text.dotKeys, selectedDotKeys),
-                showIfWiki = showWikis !== false
+            const showIfWiki = showWikis !== false
 
             return (showIfWiki && !other.inVerseBar && !(other.inPortal && other.inPortalCard) ?
                 <AnchorBlock {...other}
                     text={text}
-                    showAsAnchor={showAsAnchor}
                     firstVerseObject={text.firstVerseObject}
                     lastVerseObject={text.lastVerseObject}
-                    selectedDotKeys={selectedDotKeys}
                 /> :
                 <TextBlock {...other}
                     isPortalAnchor={other.inPortal}

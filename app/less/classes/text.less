@@ -42,7 +42,7 @@
 
 .text-span {
     position: relative;
-    transition: color 0.2s;
+    transition: color 0.2s, text-shadow 0.2s;
 
     color: @lyric-text-colour;
 }
@@ -69,10 +69,32 @@
 .live-app.reference .anchor-block.reference,
 .live-app.songwriting .anchor-block.songwriting,
 .live-app.portal .anchor-block.portal,
-.live-app.afterword .anchor-block.afterword {
+.live-app.afterword .anchor-block.afterword,
+.anchor-block.in-dots-section,
+.anchor-block.is-wiki {
 
     .underline-bar {
         background-color: @lyric-underline-disabled-colour;
+    }
+
+    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated {
+        cursor: pointer;
+
+        .text-span {
+            color: @lyric-link-colour;
+
+            &:hover {
+                color: @lyric-hover-colour;
+            }
+
+            &:active {
+                color: @lyric-active-colour;
+            }
+        }
+
+        .underline-bar {
+            background-color: @lyric-underline-enabled-colour;
+        }
     }
 
     &.selected {
@@ -82,12 +104,6 @@
 
         .underline-bar {
             background-color: @selected-annotation-colour;
-        }
-    }
-
-    &.enabled {
-        .underline-bar {
-            background-color: @lyric-underline-enabled-colour;
         }
     }
 }
