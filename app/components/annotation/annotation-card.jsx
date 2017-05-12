@@ -35,7 +35,6 @@ const AnnotationCard = ({
     return (
         <AnnotationCardView {...other}
             text={description}
-            // shouldShow={shouldShow}
             shownDotKeys={shownDotKeys}
             annotationDotKeys={dotKeys}
             portalLinks={portalLinks}
@@ -63,7 +62,6 @@ const AnnotationCardView = ({
 
     // From controller.
     text,
-    // shouldShow,
     shownDotKeys,
     portalLinks,
     showWikis,
@@ -73,32 +71,33 @@ const AnnotationCardView = ({
     <div className={classnames(
         'annotation-card',
         shownDotKeys
-        // { 'card-hidden': !shouldShow }
     )}>
-        <DotBlock
-            inAnnotationCard={true}
-            shownDotKeys={shownDotKeys}
-            annotationDotKeys={annotationDotKeys}
-        />
-        <TextBlock
-            inPortal={inPortal}
-            inPortalCard={inPortalCard}
-            isLyric={false}
-            text={text}
-            showWikis={showWikis}
-            selectedWikiIndex={selectedWikiIndex}
-            carouselAnnotationIndex={carouselAnnotationIndex}
-            accessedPopupAnchorIndex={accessedPopupAnchorIndex}
-            handleAnchorClick={handleAnnotationWikiSelect}
-        />
-        {!inPortal && portalLinks && showPortals &&
-            <AnnotationPortalsBlock
-                portalLinks={portalLinks}
+        {/* <div className="annotation-card-animatable"> */}
+            <DotBlock
+                inAnnotationCard={true}
+                shownDotKeys={shownDotKeys}
                 annotationDotKeys={annotationDotKeys}
-                accessedPopupAnchorIndex={accessedPopupAnchorIndex}
-                handleAnnotationPortalSelect={handleAnnotationPortalSelect}
             />
-        }
+            <TextBlock
+                inPortal={inPortal}
+                inPortalCard={inPortalCard}
+                isLyric={false}
+                text={text}
+                showWikis={showWikis}
+                selectedWikiIndex={selectedWikiIndex}
+                carouselAnnotationIndex={carouselAnnotationIndex}
+                accessedPopupAnchorIndex={accessedPopupAnchorIndex}
+                handleAnchorClick={handleAnnotationWikiSelect}
+            />
+            {!inPortal && portalLinks && showPortals &&
+                <AnnotationPortalsBlock
+                    portalLinks={portalLinks}
+                    annotationDotKeys={annotationDotKeys}
+                    accessedPopupAnchorIndex={accessedPopupAnchorIndex}
+                    handleAnnotationPortalSelect={handleAnnotationPortalSelect}
+                />
+            }
+        {/* </div> */}
     </div>
 )
 

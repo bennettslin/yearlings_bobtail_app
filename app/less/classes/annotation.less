@@ -34,48 +34,35 @@
     }
 }
 
-.annotation-section {
-
-    .annotation-title {
-        text-align: center;
-    }
-
-    .annotation-card {
-        position: relative;
-        // min-height: 1.8em;
-        margin: 5px 0;
-        padding: 5px;
-        box-shadow: 0 1px 1px 1px @box-shadow-colour;
-        overflow: hidden;
-
-        transition: transform 0.9s, height 0.9s, min-height 0.9s;
-
-        // Select for annotation card dots, not portal dots.
-        > .dots-block {
-            @dot-diameter: 1.8em;
-            .dot-diameter-mixin(@dot-diameter);
-            position: absolute;
-            height: @dot-diameter;
-        }
-
-        .text-shadow-mixin(@annotation-card-colour);
-
-        // TODO: Portals block needs its own text shadow?
-        .text-span {
-        }
-        //
-        // &.card-hidden {
-        //     height: 0;
-        //     // min-height: 0;
-        //     transform: scale(0);
-        // }
-    }
+.annotation-title {
+    text-align: center;
 }
 
 .annotation-card {
-    min-height: 0;
-    transition: min-height 0.2s;
+    position: relative;
+    max-height: 0;
+    padding: 0 5px;
+    opacity: 0.5;
+    overflow: hidden;
+
+    // FIXME: Height transition is still janky.
+    transition: opacity 0.2s, margin 0.2s, padding 0.2s, max-height 0.2s, box-shadow 0.2s;
+
+    .text-shadow-mixin(@annotation-card-colour);
+
+    // TODO: Portals block needs its own text shadow?
+    .text-span {
+    }
+
+    // Select for annotation card dots, not portal dots.
+    > .dots-block {
+        @dot-diameter: 1.8em;
+        .dot-diameter-mixin(@dot-diameter);
+        position: absolute;
+        height: @dot-diameter;
+    }
 }
+
 
 .live-app.narrative .annotation-card.narrative,
 .live-app.backstory .annotation-card.backstory,
@@ -85,5 +72,10 @@
 .live-app.songwriting .annotation-card.songwriting,
 .live-app.portal .annotation-card.portal,
 .live-app.afterword .annotation-card.afterword {
+    max-height: 500px; // Arbitrary large number.
     min-height: 1.8em;
+    margin: 5px 0;
+    padding: 5px;
+    opacity: 1;
+    box-shadow: 0 1px 1px 1px @box-shadow-colour;
 }
