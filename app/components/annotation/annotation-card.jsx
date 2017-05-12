@@ -4,7 +4,7 @@ import DotBlock from '../dot/dots-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
 import { getPortalLinks } from '../../helpers/album-view-helper'
-import { intersects, getIntersection } from '../../helpers/dot-helper'
+import { getIntersection } from '../../helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -28,15 +28,14 @@ const AnnotationCard = ({
         dotKeys.portal = true
     }
 
-    const shouldShow = intersects(dotKeys, selectedDotKeys),
-        shownDotKeys = getIntersection(dotKeys, selectedDotKeys),
+    const shownDotKeys = getIntersection(dotKeys, selectedDotKeys),
         showWikis = selectedDotKeys.wiki,
         showPortals = selectedDotKeys.portal
 
     return (
         <AnnotationCardView {...other}
             text={description}
-            shouldShow={shouldShow}
+            // shouldShow={shouldShow}
             shownDotKeys={shownDotKeys}
             annotationDotKeys={dotKeys}
             portalLinks={portalLinks}
@@ -64,7 +63,7 @@ const AnnotationCardView = ({
 
     // From controller.
     text,
-    shouldShow,
+    // shouldShow,
     shownDotKeys,
     portalLinks,
     showWikis,
@@ -73,7 +72,8 @@ const AnnotationCardView = ({
 }) => (
     <div className={classnames(
         'annotation-card',
-        { 'card-hidden': !shouldShow }
+        shownDotKeys
+        // { 'card-hidden': !shouldShow }
     )}>
         <DotBlock
             inAnnotationCard={true}

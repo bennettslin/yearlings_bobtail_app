@@ -42,7 +42,7 @@
 
     .annotation-card {
         position: relative;
-        min-height: 1.8em;
+        // min-height: 1.8em;
         margin: 5px 0;
         padding: 5px;
         box-shadow: 0 1px 1px 1px @box-shadow-colour;
@@ -63,26 +63,27 @@
         // TODO: Portals block needs its own text shadow?
         .text-span {
         }
-
-        &.card-hidden {
-            height: 0;
-            // min-height: 0;
-            transform: scale(0);
-        }
+        //
+        // &.card-hidden {
+        //     height: 0;
+        //     // min-height: 0;
+        //     transform: scale(0);
+        // }
     }
 }
 
-// .carousel {
-//     .annotation-section {
-//         display: flex;
-//         flex-direction: column;
-//     }
-// }
-//
-// .is-mobile {
-//     .carousel {
-//         .annotation-section {
-//             flex-direction: column-reverse;
-//         }
-//     }
-// }
+.annotation-card {
+    min-height: 0;
+    transition: min-height 0.2s;
+}
+
+.live-app.narrative .annotation-card.narrative,
+.live-app.backstory .annotation-card.backstory,
+.live-app.observation .annotation-card.observation,
+.live-app.pun .annotation-card.pun,
+.live-app.reference .annotation-card.reference,
+.live-app.songwriting .annotation-card.songwriting,
+.live-app.portal .annotation-card.portal,
+.live-app.afterword .annotation-card.afterword {
+    min-height: 1.8em;
+}
