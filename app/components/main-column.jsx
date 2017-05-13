@@ -99,9 +99,9 @@ const MainColumnView = ({
         }
 
     return (
-        <div className="column main-column no-scroll-into-view">
+        <div className="column main-column">
             <MenuField {...menuFieldProps} />
-            <div className="field centre-field no-scroll-into-view">
+            <div className="field centre-field">
 
                 {!isOverlaidAnnotation &&
                     <div className="field popup-field">
@@ -111,7 +111,7 @@ const MainColumnView = ({
                     </div>
                 }
 
-                <div className="subfield dots-overview-subfield no-scroll-into-view">
+                <div className="subfield dots-overview-subfield">
                     {carouselChild}
                     <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
                         scoresTipsSectionChild={

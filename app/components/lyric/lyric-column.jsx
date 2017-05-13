@@ -102,11 +102,11 @@ class LyricColumnView extends Component {
 
         return (
             <div
-                className="column lyric-column no-scroll-into-view"
+                className="column lyric-column"
                 ref={(node) => (this.myLyricColumn = node)}
                 onTransitionEnd={this._handleTransition}
             >
-                <div className="lyric-column-animatable no-scroll-into-view"
+                <div className="lyric-column-animatable"
                     onTransitionEnd={this._handleAnimatableTransition}
                 >
                     {!isLogue &&

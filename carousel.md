@@ -2,6 +2,6 @@
 
 * Selecting annotation from lyrics should behave differently
 
-* Scrolling to from scrollIntoView
+* Toggling carousel on should scroll to selected or accessed.
 
 * Annotation without titles?

@@ -95,6 +95,7 @@ class LyricsSectionView extends Component {
                 className={classnames(
                     'section',
                     'lyrics-section',
+                    'lyrics-scroll',
                     { 'single-column': showSingleLyricColumn }
                 )}
                 tabIndex="-1"

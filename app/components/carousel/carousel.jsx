@@ -22,7 +22,7 @@ class CarouselView extends Component {
             ...other } = this.props
 
         return (
-            <div className="carousel no-scroll-into-view">
+            <div className="carousel">
                 <div className="carousel-scroll">
                     <div className="carousel-scroll-home"></div>
                     <div className="carousel-annotations-block">

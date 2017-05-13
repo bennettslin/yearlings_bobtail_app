@@ -12,7 +12,6 @@ const ANNOTATION_SCROLL = 'annotation',
     CAROUSEL_SCROLL = 'carousel-scroll',
     CAROUSEL_ANNOTATION_SCROLL = 'carousel-annotation',
     LYRICS_SCROLL = 'lyrics-scroll',
-    NO_SCROLL_INTO_VIEW = 'no-scroll-into-view',
     VERSE_SCROLL = 'verse'
 
 class EventManager extends Component {
@@ -694,10 +693,14 @@ class EventManager extends Component {
         const selector = `${className}-${index}`,
             element = document.getElementsByClassName(selector)[0],
 
+            isCarousel = className === CAROUSEL_ANNOTATION_SCROLL,
+            scrollParentClass = isCarousel ?
+                CAROUSEL_SCROLL : LYRICS_SCROLL,
+
             // Don't scroll any immovable parent containers.
             validTarget = (parent) => {
-                const isValidTarget = !(parent.className &&
-                    new RegExp("(\\s|^)" + NO_SCROLL_INTO_VIEW + "(\\s|$)").test(parent.className)) && parent !== window
+                const isValidTarget = parent !== window && (parent.className &&
+                    new RegExp("(\\s|^)" + scrollParentClass + "(\\s|$)").test(parent.className))
 
                 // console.error('parent isValidTarget', parent, isValidTarget);
                 return isValidTarget
@@ -709,8 +712,8 @@ class EventManager extends Component {
             scrollIntoView(element, {
                 time,
                 align: {
-                    top: 0.33,
-                    left: 0
+                    top: isCarousel ? 0 : 0.33,
+                    left: isCarousel ? 0.33 : 0
                 },
                 validTarget
             }, this._scrollElementCallback)
