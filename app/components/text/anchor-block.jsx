@@ -87,7 +87,7 @@ const AnchorBlockView = ({
         <a
             className={classnames(
                 'anchor-block',
-                annotationIndex && `annotation-${annotationIndex}`,
+                !inPortal && annotationIndex && `annotation-${annotationIndex}`,
                 wikiIndex && `wiki-${wikiIndex}`,
                 { 'selected': isSelected,
                   'access-highlighted': accessHighlighted && !isSelected,

@@ -8,6 +8,11 @@ import { OVERVIEW_OPTIONS,
 import { getAnnotation } from '../helpers/album-view-helper'
 import { intersects } from '../helpers/dot-helper'
 
+const ANNOTATION = 'annotation',
+    VERSE = 'verse',
+    LYRICS_SCROLL = 'lyrics-scroll'
+    // LYRIC_COLUMN_ANIMATABLE = 'lyric-column-animatable'
+
 class EventManager extends Component {
 
     constructor(props) {
@@ -131,7 +136,7 @@ class EventManager extends Component {
     }) {
         const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
         if (annotationAccessed && doScroll) {
-            this._scrollElementIntoView('annotation', accessedAnnotationIndex)
+            this._scrollElementIntoView(ANNOTATION, accessedAnnotationIndex)
 
             // if (this.props.domProps.selectedCarouselIndex) {
             //     console.error('accessedAnnotationIndex', accessedAnnotationIndex);
@@ -167,7 +172,7 @@ class EventManager extends Component {
             exemptCarousel: true,
             exemptInteractivatedVerse: true
         })
-        this._scrollElementIntoView('verse', interactivatedVerseIndex)
+        this._scrollElementIntoView(VERSE, interactivatedVerseIndex)
         return true
     }
 
@@ -220,7 +225,7 @@ class EventManager extends Component {
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction: -1
         })
-        this._scrollElementIntoView('annotation', selectedAnnotationIndex)
+        this._scrollElementIntoView(ANNOTATION, selectedAnnotationIndex)
     }
 
     handleAnnotationNext(e) {
@@ -228,7 +233,7 @@ class EventManager extends Component {
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction: 1
         })
-        this._scrollElementIntoView('annotation', selectedAnnotationIndex)
+        this._scrollElementIntoView(ANNOTATION, selectedAnnotationIndex)
     }
 
     handleCarouselToggle(e, selectedCarouselIndex) {
@@ -543,7 +548,7 @@ class EventManager extends Component {
     handleVerseBarSelect() {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props.domProps
-        this._scrollElementIntoView('verse', selectedVerseIndex)
+        this._scrollElementIntoView(VERSE, selectedVerseIndex)
     }
 
     handleVerseBarWheel(e) {
@@ -659,11 +664,11 @@ class EventManager extends Component {
 
             // If a portal was selected, there will be an annotation index.
             if (annotationIndex) {
-                this._scrollElementIntoView('annotation', annotationIndex)
+                this._scrollElementIntoView(ANNOTATION, annotationIndex)
 
                 // Otherwise, scroll to top.
             } else {
-                this._scrollElementIntoView('lyrics-scroll', 'home')
+                this._scrollElementIntoView(LYRICS_SCROLL, 'home')
             }
         }
     }
@@ -672,15 +677,33 @@ class EventManager extends Component {
         const selector = `${className}-${index}`,
             element = document.getElementsByClassName(selector)[0]
 
+        let validTarget
+
         if (element) {
             console.warn(`Scrolling ${selector} into view.`);
+
+            if (className === ANNOTATION ||
+                className === LYRICS_SCROLL ||
+                className === VERSE) {
+
+                // validTarget = (parent) => {
+                //     console.error('parent', parent);
+                //
+                //     const isValidTarget = !(parent.className &&
+                //         new RegExp("(\\s|^)" + LYRIC_COLUMN_ANIMATABLE + "(\\s|$)").test(parent.className))
+                //
+                //     console.error('isValidTarget', isValidTarget);
+                //     return isValidTarget
+                // }
+            }
 
             scrollIntoView(element, {
                 time,
                 align: {
                     top: 0.15,
                     left: 0
-                }
+                },
+                validTarget
             }, this._scrollElementCallback)
         }
     }

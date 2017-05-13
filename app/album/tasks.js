@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `dot stanzas also don't need intersect.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Switch to dom-scroll-into-view?`,
         workedHours: 0,
         neededHours: 2
@@ -1764,5 +1769,10 @@ module.exports = [
         taskName: `Anchor no longer needs to check for dot intersection`,
         workedHours: 2,
         neededHours: 2
-    }
+    },
+    {
+        taskName: `Don't call intersects to animate.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
