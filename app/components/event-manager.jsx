@@ -9,6 +9,8 @@ import { getAnnotation } from '../helpers/album-view-helper'
 import { intersects } from '../helpers/dot-helper'
 
 const ANNOTATION_SCROLL = 'annotation',
+    CAROUSEL_SCROLL = 'carousel-scroll',
+    CAROUSEL_ANNOTATION_SCROLL = 'carousel-annotation',
     LYRICS_SCROLL = 'lyrics-scroll',
     NO_SCROLL_INTO_VIEW = 'no-scroll-into-view',
     VERSE_SCROLL = 'verse'
@@ -137,6 +139,10 @@ class EventManager extends Component {
         const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
         if (annotationAccessed && doScroll) {
             this._scrollElementIntoView(ANNOTATION_SCROLL, accessedAnnotationIndex)
+
+            if (this.props.domProps.selectedCarouselIndex) {
+                this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, accessedAnnotationIndex)
+            }
         }
     }
 
@@ -216,19 +222,22 @@ class EventManager extends Component {
     }
 
     handleAnnotationPrevious(e) {
-        this.stopPropagation(e)
-        const selectedAnnotationIndex = this.props.selectAnnotation({
-            direction: -1
-        })
-        this._scrollElementIntoView(ANNOTATION_SCROLL, selectedAnnotationIndex)
+        this._handleAnnotationAccessSelect(e, -1)
     }
 
     handleAnnotationNext(e) {
+        this._handleAnnotationAccessSelect(e, 1)
+    }
+
+    _handleAnnotationAccessSelect(e, direction) {
         this.stopPropagation(e)
         const selectedAnnotationIndex = this.props.selectAnnotation({
-            direction: 1
+            direction
         })
         this._scrollElementIntoView(ANNOTATION_SCROLL, selectedAnnotationIndex)
+        if (this.props.domProps.selectedCarouselIndex) {
+            this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, selectedAnnotationIndex)
+        }
     }
 
     /*********
@@ -413,6 +422,10 @@ class EventManager extends Component {
         this.props.selectAnnotation({
             selectedAnnotationIndex
         })
+
+        if (this.props.domProps.selectedCarouselIndex) {
+            this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, selectedAnnotationIndex)
+        }
         return true
     }
 
@@ -663,10 +676,16 @@ class EventManager extends Component {
             // If a portal was selected, there will be an annotation index.
             if (annotationIndex) {
                 this._scrollElementIntoView(ANNOTATION_SCROLL, annotationIndex)
+                if (this.props.domProps.selectedCarouselIndex) {
+                    this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, annotationIndex)
+                }
 
                 // Otherwise, scroll to top.
             } else {
                 this._scrollElementIntoView(LYRICS_SCROLL, 'home')
+                if (this.props.domProps.selectedCarouselIndex) {
+                    this._scrollElementIntoView(CAROUSEL_SCROLL, 'home')
+                }
             }
         }
     }
