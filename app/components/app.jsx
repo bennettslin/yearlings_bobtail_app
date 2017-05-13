@@ -148,7 +148,7 @@ class App extends Component {
             interactivatedVerseIndex: -1,
 
             // Selected from annotation in carousel.
-            carouselAnnotationIndex: -1,
+            carouselAnnotationIndex: 0,
 
             // Prevent verse bar from showing upon load.
             appMounted: false
@@ -398,7 +398,7 @@ class App extends Component {
         // Not really necessary, but doing it anyway.
         if (!selectedCarouselIndex) {
             this.setState({
-                carouselAnnotationIndex: -1
+                carouselAnnotationIndex: 0
             })
         }
 
@@ -869,7 +869,7 @@ class App extends Component {
      * WIKI *
      ********/
 
-    selectWiki(selectedWikiIndex = 0, carouselAnnotationIndex = -1) {
+    selectWiki(selectedWikiIndex = 0, carouselAnnotationIndex = 0) {
         this.props.selectWikiIndex(selectedWikiIndex)
         this.setState({
             carouselAnnotationIndex
