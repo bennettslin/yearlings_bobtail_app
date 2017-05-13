@@ -303,7 +303,16 @@ class EventManager extends Component {
 
     handleCarouselToggle(e, selectedCarouselIndex) {
         this.stopPropagation(e)
-        this.props.selectCarousel(selectedCarouselIndex)
+
+        const { domProps } = this.props,
+            presentCarouselIndex = domProps.selectedCarouselIndex,
+            carouselSelected = this.props.selectCarousel(selectedCarouselIndex)
+
+        // Scroll only when expanding carousel.
+        if (carouselSelected && !presentCarouselIndex) {
+            const annotationIndex = domProps.selectedAnnotationIndex ? domProps.selectedAnnotationIndex : this.props.domState.accessedAnnotationIndex
+            this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, annotationIndex)
+        }
 
         this._closeSections({
             exemptAnnotation: true,
