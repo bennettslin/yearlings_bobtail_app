@@ -2,7 +2,6 @@ import React from 'react'
 import classnames from 'classnames'
 import TextBlock from './text-block'
 import DotBlock from '../dot/dots-block'
-import { getIntersection } from '../../helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -14,7 +13,6 @@ const AnchorBlock = ({
     portalAnnotationIndex,
     selectedAnnotationIndex,
     selectedWikiIndex,
-    selectedDotKeys,
     carouselAnnotationIndex,
     accessedAnnotationIndex,
     accessedPopupAnchorIndex,
@@ -28,11 +26,8 @@ const AnchorBlock = ({
             dotKeys: annotationDotKeys,
             wikiIndex } = text,
 
-        // { showAsAnchor } = other,
-
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
         isPortalAnchor = typeof portalAnnotationIndex !== 'undefined' && portalAnnotationIndex === annotationIndex,
-        shownDotKeys = getIntersection(annotationDotKeys, selectedDotKeys),
         accessHighlighted = ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex) || (accessedPopupAnchorIndex && accessedPopupAnchorIndex === wikiIndex)),
 
         /**
@@ -51,7 +46,6 @@ const AnchorBlock = ({
             annotationIndex={annotationIndex}
             accessHighlighted={accessHighlighted}
             wikiIndex={wikiIndex}
-            shownDotKeys={shownDotKeys}
             annotationDotKeys={annotationDotKeys}
             anchorText={anchor}
             handleClick={handleClick}
@@ -79,7 +73,6 @@ const AnchorBlockView = ({
     isPortalAnchor,
     annotationIndex,
     wikiIndex,
-    shownDotKeys,
     annotationDotKeys,
     anchorText,
     handleClick
@@ -110,10 +103,9 @@ const AnchorBlockView = ({
                 <span className="underline-bar"></span>
             }
             {/* Don't show any dots in portal block. */}
-            {shownDotKeys && !wikiIndex && !inPortal &&
+            {!wikiIndex && !inPortal &&
                 <DotBlock
                     inAnchor={true}
-                    shownDotKeys={shownDotKeys}
                     annotationDotKeys={annotationDotKeys}
                 />
             }

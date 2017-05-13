@@ -13,12 +13,9 @@
     }
 
     .dots-block {
-        @dot-radius: 0.9em;
-        .dot-diameter-mixin(@dot-radius);
-
         position: absolute;
-        left: -@dot-radius * 0.2;
-        top: -@dot-radius * 0.2;
+        left: -@lyric-anchor-dot-diameter * 0.2;
+        top: -@lyric-anchor-dot-diameter * 0.2;
     }
 
     // For dev purposes.

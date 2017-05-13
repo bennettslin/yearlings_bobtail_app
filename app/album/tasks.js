@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Switch to dom-scroll-into-view?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `When switching to logue and carousel is on, then turning on nav in logue, should toggle off nav`,
         workedHours: 0,
         neededHours: 1

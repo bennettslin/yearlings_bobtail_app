@@ -1,17 +1,3 @@
-.dot-diameter-mixin(@dot-diameter: @default-dot-diameter, @dot-margin: @dot-diameter * 0.1) {
-
-    .dot-container {
-        &:not(:last-child) {
-            margin-right: @dot-margin;
-        }
-    }
-
-    .dot:not(.dot-hidden) {
-        width: @dot-diameter;
-        height: @dot-diameter;
-    }
-}
-
 .progress-bar-mixin(@progress-bar-colour, @filled-bar-colour) {
     .progress-bar {
         background-color: @progress-bar-colour;

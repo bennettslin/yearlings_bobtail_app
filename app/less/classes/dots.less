@@ -6,32 +6,93 @@
 
 @dot-border: 1px;
 
+@transition-duration-fast: 0.15s;
+
+.dot {
+    &:not(.button), & .button-background {
+        border-radius: 50%;
+
+        // TODO: Key styling.
+        &.songwriting { background-color: @songwriting-dot-colour; }
+        &.narrative { background-color: @narrative-dot-colour; }
+        &.pun { background-color: @pun-dot-colour; }
+        &.reference { background-color: @reference-dot-colour; }
+        &.backstory { background-color: @backstory-dot-colour; }
+        &.observation { background-color: @observation-dot-colour; }
+        &.portal { background-color: @portal-dot-colour; }
+        &.afterword { background-color: @afterword-dot-colour; }
+
+        // Dots section and dot stanzas.
+        &.button-background {
+            border: @dot-border solid @dot-border-colour;
+        }
+    }
+}
+
 .dots-block {
-    .dot-diameter-mixin;
     display: flex;
     width: auto;
     height: 100%;
 }
 
-.anchor-block, .annotation-card {
-    .dot {
-        transition: background-color 0.15s, width 0.15s, transform 0.15s, border 0.15s;
+.live-app.narrative .dot.narrative,
+.live-app.backstory .dot.backstory,
+.live-app.observation .dot.observation,
+.live-app.pun .dot.pun,
+.live-app.reference .dot.reference,
+.live-app.songwriting .dot.songwriting,
+.live-app.portal .dot.portal,
+.live-app.afterword .dot.afterword {
 
-        &.dot-shown {
-            transform: scale(1);
-        }
+    transform: scale(1);
+    border: @dot-border solid @dot-border-colour;
 
-        &.dot-hidden {
-            transform: scale(0);
-            width: 0;
+    &:not(:last-child) {
+        margin-right: 1px;
+    }
+
+    &.in-lyric {
+        width: @lyric-anchor-dot-diameter;
+        height: @lyric-anchor-dot-diameter;
+    }
+
+    &.in-card {
+        width: @annotation-dot-diameter;
+        height: @annotation-dot-diameter;
+    }
+}
+
+// Selected anchors or dot stanza.
+.lyrics-section {
+    .stanza, .anchor-block {
+        &.selected {
+            .dot {
+                &:not(.button), & .button-background {
+                    border: @dot-border solid @selected-annotation-colour;
+                    background-color: @deselected-dot-colour;
+                }
+            }
         }
     }
 }
 
-.annotation-card {
-    .dot-hidden {
-        height: 0;
+.anchor-block, .annotation-card {
+    .dot:not(.button) {
+
+        // FIXME: Animation jankiness is due to the transform, which is expensive.
+        transition: margin @transition-duration-fast,
+                    width @transition-duration-fast,
+                    border @transition-duration-fast,
+                    transform @transition-duration-fast,
+                    background-color @transition-duration-fast;
+        transform: scale(0);
         width: 0;
+    }
+}
+
+.dots-section {
+    .dot .button-background {
+        transition: background-color @transition-duration-fast;
     }
 }
 
@@ -45,7 +106,7 @@
         transition: margin-top 0.2s, margin-left 0.2s;
     }
     .dot .button-background {
-        transition: background-color 0.15s, border 0.15s;
+        transition: background-color @transition-duration-fast, border @transition-duration-fast;
     }
 }
 
@@ -70,7 +131,10 @@
 }
 
 .dots-subfield {
-    .dot-diameter-mixin(@dot-container-diameter, 0);
+    .dot {
+        width: @dot-container-diameter;
+        height: @dot-container-diameter;
+    }
 
     .dots-block {
         display: flex;
@@ -109,7 +173,6 @@
 .dot-description {
     position: absolute;
 
-    // background-color: rgba(255, 255, 255, 0.8);
     width: @dot-container-diameter + @dot-border * 2;
     height: @dot-container-diameter + @dot-border * 2;
     border-radius: 50%;
@@ -141,55 +204,13 @@
     }
 }
 
-.dot {
-    &:not(.button), & .button-background {
-        border: @dot-border solid @dot-border-colour;
-
-        // TODO: Key styling.
-        &.songwriting { background-color: @songwriting-dot-colour; }
-        &.narrative { background-color: @narrative-dot-colour; }
-        &.pun { background-color: @pun-dot-colour; }
-        &.reference { background-color: @reference-dot-colour; }
-        &.backstory { background-color: @backstory-dot-colour; }
-        &.observation { background-color: @observation-dot-colour; }
-        &.portal { background-color: @portal-dot-colour; }
-        &.afterword { background-color: @afterword-dot-colour; }
-
-        &:not(.button) {
-            border-radius: 50%;
-
-            &:not(.dot-hidden):not(:last-child) {
-                margin-right: 1px;
-            }
-
-            &.dot-hidden {
-                border: 0;
-            }
-        }
-    }
-
-    & .button-background {
-        transition: background-color 0.15s;
-    }
-}
-
-// Selected anchors or dot stanza.
-.lyrics-section {
-    .stanza, .anchor-block {
-        &.selected {
-            .dot {
-                &:not(.button):not(.dot-hidden), & .button-background {
-                    border: @dot-border solid @selected-annotation-colour;
-                    background-color: @deselected-dot-colour;
-                }
-            }
-        }
-    }
-}
-
 .phone-width {
     .dots-subfield {
-        .dot-diameter-mixin(@dot-container-phone-diameter, 0);
+
+        .dot {
+            width: @dot-container-phone-diameter;
+            height: @dot-container-phone-diameter;
+        }
 
         box-shadow: -1px 1px 4px 4px @box-shadow-colour;
 

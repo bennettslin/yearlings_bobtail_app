@@ -72,7 +72,6 @@ const AnnotationCardView = ({
         {/* <div className="annotation-card-animatable"> */}
             <DotBlock
                 inAnnotationCard={true}
-                shownDotKeys={shownDotKeys}
                 annotationDotKeys={annotationDotKeys}
             />
             <TextBlock
@@ -90,7 +89,6 @@ const AnnotationCardView = ({
             {!inPortal && portalLinks &&
                 <AnnotationPortalsBlock
                     portalLinks={portalLinks}
-                    // annotationDotKeys={annotationDotKeys}
                     accessedPopupAnchorIndex={accessedPopupAnchorIndex}
                     handleAnnotationPortalSelect={handleAnnotationPortalSelect}
                 />

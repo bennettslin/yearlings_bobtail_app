@@ -4,8 +4,7 @@ import DotButton from './dot-button'
 import { PORTAL, ALL_DOT_KEYS } from '../../helpers/constants'
 
 const defaultProps = {
-    selectedDotKeys: {},
-    shownDotKeys: {}
+    selectedDotKeys: {}
 }
 
 /*************
@@ -26,7 +25,6 @@ const DotBlockView = ({
     inDotsSection,
     inAnnotationCard,
     selectedDotKeys,
-    shownDotKeys,
     annotationDotKeys,
     accessedDotIndex,
 
@@ -60,7 +58,8 @@ const DotBlockView = ({
                         className={classnames(
                             'dot',
                             dotKey,
-                            shownDotKeys[dotKey] ? 'dot-shown' : 'dot-hidden'
+                            { 'in-card': inAnnotationCard,
+                              'in-lyric': other.inAnchor }
                         )}
                     />
                 )

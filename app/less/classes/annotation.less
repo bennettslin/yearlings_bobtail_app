@@ -56,10 +56,8 @@
 
     // Select for annotation card dots, not portal dots.
     > .dots-block {
-        @dot-diameter: 1.8em;
-        .dot-diameter-mixin(@dot-diameter);
         position: absolute;
-        height: @dot-diameter;
+        height: @annotation-dot-diameter;
     }
 }
 
@@ -72,8 +70,8 @@
 .live-app.songwriting .annotation-card.songwriting,
 .live-app.portal .annotation-card.portal,
 .live-app.afterword .annotation-card.afterword {
+    min-height: @annotation-dot-diameter;
     max-height: 500px; // Arbitrary large number.
-    min-height: 1.8em;
     margin: 5px 0;
     padding: 5px;
     opacity: 1;
