@@ -79,6 +79,7 @@ class DomManager extends Component {
                 ref={this.props.domManagerRef}
                 className={classnames(
                     'dom-manager',
+                    'no-scroll-into-view',
                     deviceClassName,
                     selectedAdminIndex ? 'admin' : 'live',
                     isDesktop ? 'is-desktop' : 'is-mobile',

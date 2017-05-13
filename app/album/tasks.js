@@ -1,12 +1,19 @@
 module.exports = [
 
     {
-        taskName: `dot stanzas also don't need intersect.`,
+        taskName: `Scroll to carousel annotation strategically.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 7
     },
+
     {
-        taskName: `Switch to dom-scroll-into-view?`,
+        taskName: `Selecting annotation in carousel.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `dot stanzas also don't need intersect.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -1775,4 +1782,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Prevent scrollIntoView from scrolling parent containers.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

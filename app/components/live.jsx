@@ -386,6 +386,7 @@ const LiveView = ({
     return (
         <div className={classnames(
             'live-app',
+            'no-scroll-into-view',
             isLogue ? 'is-logue' : 'is-song',
             isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
             isOverlaidAnnotation ? 'overlaid-annotation' : 'side-annotation',

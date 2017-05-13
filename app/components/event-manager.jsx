@@ -8,10 +8,10 @@ import { OVERVIEW_OPTIONS,
 import { getAnnotation } from '../helpers/album-view-helper'
 import { intersects } from '../helpers/dot-helper'
 
-const ANNOTATION = 'annotation',
-    VERSE = 'verse',
-    LYRICS_SCROLL = 'lyrics-scroll'
-    // LYRIC_COLUMN_ANIMATABLE = 'lyric-column-animatable'
+const ANNOTATION_SCROLL = 'annotation',
+    LYRICS_SCROLL = 'lyrics-scroll',
+    NO_SCROLL_INTO_VIEW = 'no-scroll-into-view',
+    VERSE_SCROLL = 'verse'
 
 class EventManager extends Component {
 
@@ -136,7 +136,7 @@ class EventManager extends Component {
     }) {
         const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
         if (annotationAccessed && doScroll) {
-            this._scrollElementIntoView(ANNOTATION, accessedAnnotationIndex)
+            this._scrollElementIntoView(ANNOTATION_SCROLL, accessedAnnotationIndex)
 
             // if (this.props.domProps.selectedCarouselIndex) {
             //     console.error('accessedAnnotationIndex', accessedAnnotationIndex);
@@ -172,7 +172,7 @@ class EventManager extends Component {
             exemptCarousel: true,
             exemptInteractivatedVerse: true
         })
-        this._scrollElementIntoView(VERSE, interactivatedVerseIndex)
+        this._scrollElementIntoView(VERSE_SCROLL, interactivatedVerseIndex)
         return true
     }
 
@@ -225,7 +225,7 @@ class EventManager extends Component {
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction: -1
         })
-        this._scrollElementIntoView(ANNOTATION, selectedAnnotationIndex)
+        this._scrollElementIntoView(ANNOTATION_SCROLL, selectedAnnotationIndex)
     }
 
     handleAnnotationNext(e) {
@@ -233,7 +233,7 @@ class EventManager extends Component {
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction: 1
         })
-        this._scrollElementIntoView(ANNOTATION, selectedAnnotationIndex)
+        this._scrollElementIntoView(ANNOTATION_SCROLL, selectedAnnotationIndex)
     }
 
     handleCarouselToggle(e, selectedCarouselIndex) {
@@ -548,7 +548,7 @@ class EventManager extends Component {
     handleVerseBarSelect() {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props.domProps
-        this._scrollElementIntoView(VERSE, selectedVerseIndex)
+        this._scrollElementIntoView(VERSE_SCROLL, selectedVerseIndex)
     }
 
     handleVerseBarWheel(e) {
@@ -664,7 +664,7 @@ class EventManager extends Component {
 
             // If a portal was selected, there will be an annotation index.
             if (annotationIndex) {
-                this._scrollElementIntoView(ANNOTATION, annotationIndex)
+                this._scrollElementIntoView(ANNOTATION_SCROLL, annotationIndex)
 
                 // Otherwise, scroll to top.
             } else {
@@ -675,27 +675,19 @@ class EventManager extends Component {
 
     _scrollElementIntoView(className, index, time = 350) {
         const selector = `${className}-${index}`,
-            element = document.getElementsByClassName(selector)[0]
+            element = document.getElementsByClassName(selector)[0],
 
-        let validTarget
+            // Don't scroll any immovable parent containers.
+            validTarget = (parent) => {
+                const isValidTarget = !(parent.className &&
+                    new RegExp("(\\s|^)" + NO_SCROLL_INTO_VIEW + "(\\s|$)").test(parent.className)) && parent !== window
+
+                // console.error('parent isValidTarget', parent, isValidTarget);
+                return isValidTarget
+            }
 
         if (element) {
             console.warn(`Scrolling ${selector} into view.`);
-
-            if (className === ANNOTATION ||
-                className === LYRICS_SCROLL ||
-                className === VERSE) {
-
-                // validTarget = (parent) => {
-                //     console.error('parent', parent);
-                //
-                //     const isValidTarget = !(parent.className &&
-                //         new RegExp("(\\s|^)" + LYRIC_COLUMN_ANIMATABLE + "(\\s|$)").test(parent.className))
-                //
-                //     console.error('isValidTarget', isValidTarget);
-                //     return isValidTarget
-                // }
-            }
 
             scrollIntoView(element, {
                 time,
