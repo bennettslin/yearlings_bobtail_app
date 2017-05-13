@@ -89,7 +89,7 @@ class TransitionPopup extends Component {
                     handleCloseClick={handleCloseClick}
                     handlePreviousClick={handlePreviousClick}
                     handleNextClick={handleNextClick}
-                    handlePopupContainerClick={handlePopupContainerClick}
+                    handlePopupContainerClick={isDisplayed && handlePopupContainerClick}
                     myChild={myChild}
                 />
             </span>
