@@ -33,64 +33,61 @@
         }
     }
 
-    // Dots and dot stanzas in lyrics section.
-    .dots-section-hidden.nav-collapsed.is-not-verse-interactivated {
+    .dots-section-hidden.nav-collapsed.is-not-verse-interactivated .lyrics-section,
+    .dots-section-shown .dots-section,
+    .annotation-shown .popup-content-wrapper .annotation-section,
+    .carousel .selected-annotation {
+
+        // Dots and dot stanzas in lyrics section.
         .access-highlighted {
             .dot {
                 &:not(.button), & .button-background {
                     border: @dot-border solid @access-link-colour;
                 }
             }
-        }
-    }
 
-    // Dots in dots section.
-    .dots-section-shown {
-        .dots-section {
-            .access-highlighted {
-                &.dot-container {
-                    .dot {
-                        &:not(.button), & .button-background {
-                            border: @dot-border solid @access-link-colour;
+            // Dots in dots section.
+            &.dot-container {
+                .dot {
+                    &:not(.button), & .button-background {
+                        border: @dot-border solid @access-link-colour;
+                    }
+                }
+            }
+
+            /**
+             * Anchors in both lyrics and dots section. This doesn't need to
+             * care whether the anchor is shown as anchor or text, because the
+             * access logic will skip over the anchor if it's shown as text.
+             *
+             * Also, limit to selected annotation in carousel.
+             */
+            &:not(.portal-block) {
+
+                // Anchor is same element if lyrics, child element if dots section.
+                &.anchor-block, & .anchor-block {
+                    .text-span {
+                        font-weight: bolder;
+                        color: @access-link-colour;
+                    }
+
+                    &:hover {
+                        .text-span {
+                            color: @access-hover-colour;
                         }
                     }
-                }
-            }
-        }
-    }
 
-    /**
-     * Anchors in both lyrics and dots section. This doesn't need to care
-     * whether the anchor is shown as anchor or text, because the access logic
-     * will skip over the anchor if it's shown as text.
-     */
-    .dots-section-hidden.nav-collapsed.is-not-verse-interactivated, .dots-section-shown .dots-section {
-        .access-highlighted:not(.portal-block) {
+                    &:active {
+                        .text-span {
+                            color: @access-active-colour;
+                        }
+                    }
 
-            // Anchor is same element if lyrics, child element if dots section.
-            &.anchor-block, & .anchor-block {
-                .text-span {
-                    font-weight: bolder;
-                    color: @access-link-colour;
-                }
-
-                &:hover {
-                    .text-span {
-                        color: @access-hover-colour;
+                    .underline-bar {
+                        background-color: @access-underline-colour;
                     }
                 }
-
-                &:active {
-                    .text-span {
-                        color: @access-active-colour;
-                    }
-                }
-
-                .underline-bar {
-                    background-color: @access-underline-colour;
-                }
             }
-
         }
     }
 
@@ -121,13 +118,6 @@
         }
     }
 
-    // Annotation section is accessed.
-    .annotation-shown {
-        .annotation-section {
-            background-color: #dfd;
-        }
-    }
-
     // Nav section is accessed.
     .nav-expanded {
         .nav-section {
@@ -138,6 +128,20 @@
     // Dots section is accessed.
     .dots-section-shown.nav-collapsed {
         .dots-section {
+            background-color: #dfd;
+        }
+    }
+
+    // Popup annotation section is accessed.
+    .annotation-shown {
+        .popup-content-wrapper .annotation-section {
+            background-color: #dfd;
+        }
+    }
+
+    // Annotation in carousel is accessed.
+    .carousel {
+        .accessed-annotation .annotation-section {
             background-color: #dfd;
         }
     }

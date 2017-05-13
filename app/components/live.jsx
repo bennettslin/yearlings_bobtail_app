@@ -373,6 +373,7 @@ const LiveView = ({
             songs,
             annotations,
             selectedDotKeys,
+            accessedAnnotationIndex,
             selectedAnnotationIndex,
             accessedPopupAnchorIndex,
 

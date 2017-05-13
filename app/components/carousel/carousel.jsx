@@ -26,14 +26,16 @@ class CarouselView extends Component {
                 <div className="carousel-scroll">
                     <div className="carousel-annotations-block">
                         {annotations.map((annotation, index) => {
+                            const trueIndex = index + 1
                             return (
                                 <div
                                     key={index}
                                     className={classnames(
                                         'carousel-annotation',
-                                        `carousel-annotation-${index + 1}`,
+                                        `carousel-annotation-${trueIndex}`,
                                         annotation.dotKeys,
-                                        { 'selected': index + 1 === other.selectedAnnotationIndex }
+                                        { 'selected-annotation': trueIndex === other.selectedAnnotationIndex,
+                                          'accessed-annotation': trueIndex === other.accessedAnnotationIndex }
                                     )}
                                 >
                                     <AnnotationSection {...other}
