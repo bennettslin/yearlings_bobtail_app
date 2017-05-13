@@ -333,36 +333,6 @@ class App extends Component {
         return selectedAnnotationIndex
     }
 
-    selectCarousel(selectedCarouselIndex =
-        (this.props.selectedCarouselIndex + 1) % 2, noAdditionalCheck) {
-        // If no argument passed, then just toggle between on and off.
-
-        /**
-         * We should ignore this call if carousel is not expandable, or if
-         * it's a heightless lyric, or if it's a logue.
-         */
-        if ((!noAdditionalCheck && (!this.state.isCarouselExpandable || this.state.isHeightlessLyricColumn)) ||
-            getIsLogue(this.props)) {
-
-            return false
-        }
-
-        if (typeof selectedCarouselIndex === 'boolean') {
-            selectedCarouselIndex = selectedCarouselIndex ? 1 : 0
-        }
-
-        this.props.selectCarouselIndex(selectedCarouselIndex)
-
-        // Not really necessary, but doing it anyway.
-        if (!selectedCarouselIndex) {
-            this.setState({
-                carouselAnnotationIndex: -1
-            })
-        }
-
-        return true
-    }
-
     /*********
      * AUDIO *
      *********/
@@ -399,6 +369,40 @@ class App extends Component {
                 selectedVerseIndex
             })
         }
+    }
+
+    /************
+     * CAROUSEL *
+     ************/
+
+    selectCarousel(selectedCarouselIndex =
+        (this.props.selectedCarouselIndex + 1) % 2, noAdditionalCheck) {
+        // If no argument passed, then just toggle between on and off.
+
+        /**
+         * We should ignore this call if carousel is not expandable, or if
+         * it's a heightless lyric, or if it's a logue.
+         */
+        if ((!noAdditionalCheck && (!this.state.isCarouselExpandable || this.state.isHeightlessLyricColumn)) ||
+            getIsLogue(this.props)) {
+
+            return false
+        }
+
+        if (typeof selectedCarouselIndex === 'boolean') {
+            selectedCarouselIndex = selectedCarouselIndex ? 1 : 0
+        }
+
+        this.props.selectCarouselIndex(selectedCarouselIndex)
+
+        // Not really necessary, but doing it anyway.
+        if (!selectedCarouselIndex) {
+            this.setState({
+                carouselAnnotationIndex: -1
+            })
+        }
+
+        return true
     }
 
     /*******

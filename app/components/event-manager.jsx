@@ -137,11 +137,6 @@ class EventManager extends Component {
         const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
         if (annotationAccessed && doScroll) {
             this._scrollElementIntoView(ANNOTATION_SCROLL, accessedAnnotationIndex)
-
-            // if (this.props.domProps.selectedCarouselIndex) {
-            //     console.error('accessedAnnotationIndex', accessedAnnotationIndex);
-            //     this._scrollElementIntoView('carousel-annotation', accessedAnnotationIndex)
-            // }
         }
     }
 
@@ -236,19 +231,6 @@ class EventManager extends Component {
         this._scrollElementIntoView(ANNOTATION_SCROLL, selectedAnnotationIndex)
     }
 
-    handleCarouselToggle(e, selectedCarouselIndex) {
-        this.stopPropagation(e)
-        this.props.selectCarousel(selectedCarouselIndex)
-
-        // Close popup annotation if expanding carousel.
-        this._closeSections({
-            exemptCarousel: true,
-            exemptDots: true,
-            exemptInteractivatedVerse: true,
-            exemptOverview: true
-        })
-    }
-
     /*********
      * AUDIO *
      *********/
@@ -305,6 +287,23 @@ class EventManager extends Component {
 
     handlePlayerTimeReset(e) {
         this.props.resetUpdatedTimePlayed(e)
+    }
+
+    /************
+     * CAROUSEL *
+     ************/
+
+    handleCarouselToggle(e, selectedCarouselIndex) {
+        this.stopPropagation(e)
+        this.props.selectCarousel(selectedCarouselIndex)
+
+        this._closeSections({
+            exemptAnnotation: true,
+            exemptCarousel: true,
+            exemptDots: true,
+            exemptInteractivatedVerse: true,
+            exemptOverview: true
+        })
     }
 
     /*******
@@ -393,7 +392,6 @@ class EventManager extends Component {
     }
 
     handleLyricAnnotationSelect(e, selectedAnnotationIndex) {
-
         /**
          * FIXME: This check is only necessary when clicking an annotation, to
          * ensure that it is not shown as text. Maybe bypass if done through
@@ -692,7 +690,7 @@ class EventManager extends Component {
             scrollIntoView(element, {
                 time,
                 align: {
-                    top: 0.15,
+                    top: 0.33,
                     left: 0
                 },
                 validTarget

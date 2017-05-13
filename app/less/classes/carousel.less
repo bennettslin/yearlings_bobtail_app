@@ -54,7 +54,7 @@
     z-index: @carousel-z-index;
     transition: bottom 0.2s;
 
-    background-color: rgba(250, 225, 200, 0.5);
+    // background-color: rgba(250, 225, 200, 0.5);
 }
 
 .carousel-expanded {
@@ -81,7 +81,7 @@
 .carousel-annotations-block {
     display: flex;
     align-items: center;
-    background-color: #ffe;
+    // background-color: #ffe;
 }
 
 .carousel-annotation {
@@ -92,10 +92,7 @@
 
     min-width: 0;
 
-    // TODO: Delete this line, obviously.
-    // min-width: @annotation-width + @carousel-annotation-side-margin * 2;
-
-    transition: min-width 0.2s;
+    transition: min-width 0.2s, background-color 0.2s;
 
     .annotation-section {
         width: @annotation-width + @carousel-annotation-side-margin;
@@ -110,6 +107,10 @@
         .annotation-section {
             margin-right: @carousel-annotation-bookend-margin;
         }
+    }
+
+    &.selected {
+        background-color: @selected-carousel-annotation-colour;
     }
 }
 

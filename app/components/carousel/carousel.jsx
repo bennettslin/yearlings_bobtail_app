@@ -32,7 +32,8 @@ class CarouselView extends Component {
                                     className={classnames(
                                         'carousel-annotation',
                                         `carousel-annotation-${index + 1}`,
-                                        annotation.dotKeys
+                                        annotation.dotKeys,
+                                        { 'selected': index + 1 === other.selectedAnnotationIndex }
                                     )}
                                 >
                                     <AnnotationSection {...other}
