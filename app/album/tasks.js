@@ -30,7 +30,6 @@ module.exports = [
     },
 
     // Bugs.
-
     {
         taskName: `Lyric scrolling slowness, only update based on certain changes.`,
         workedHours: 0,

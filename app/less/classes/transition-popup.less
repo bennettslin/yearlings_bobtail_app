@@ -27,7 +27,7 @@
         }
     }
 
-    &.annotation, &.audio, &.score, &.wiki {
+    &.audio, &.score, &.wiki {
         z-index: @popup-content-z-index;
     }
 
@@ -41,5 +41,14 @@
 
     &.not-displayed {
         z-index: 0;
+    }
+}
+
+// For annotations, only raise z-index if overlaid.
+.overlaid-annotation.annotation-shown {
+    .popup-transition-group {
+        &.annotation {
+            z-index: @popup-content-z-index;
+        }
     }
 }
