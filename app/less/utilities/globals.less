@@ -39,22 +39,17 @@ h1, h2, h3 {
 .enabled {
     cursor: pointer;
 
-    // .text-span {
-    //     color: @lyric-link-colour;
-    //
-    //     &:hover {
-    //         color: @lyric-hover-colour;
-    //     }
-    //
-    //     &:active {
-    //         color: @lyric-active-colour;
-    //     }
-    // }
-
     &.button {
-        &:hover {
-            .button-background {
-                animation: bounceHover 0.15s;
+
+        .button-background {
+            transition: transform 0.05s;
+
+            &:hover {
+                animation: bounceHover 0.2s;
+            }
+
+            &:active {
+                transform: scale(0.9);
             }
         }
     }
