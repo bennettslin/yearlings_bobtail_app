@@ -5,6 +5,8 @@
  */
 
 @carousel-toggle-laptop-length: @overview-toggle-laptop-width;
+@carousel-toggle-tablet-length: @overview-toggle-tablet-width;
+@carousel-toggle-mini-length: @overview-toggle-mini-width;
 
 // This isn't ideal, but I don't know where the extra 2 pixels are coming from.
 @carousel-toggle-tablet-length: @overview-toggle-tablet-width - 2px;
@@ -18,6 +20,10 @@
 
 @carousel-tablet-variable: @carousel-toggle-tablet-length * 2;
 @carousel-mini-variable: @carousel-toggle-mini-length * 2;
+
+@carousel-nav-buttons-block-width: @app-large-icon-diameter * 2 + @app-thin-margin * 3;
+@carousel-nav-buttons-block-tablet-width: @app-tablet-large-icon-diameter * 2 + @app-thin-margin * 3;
+@carousel-nav-buttons-block-mini-width: @app-mini-large-icon-diameter * 2 + @app-thin-margin * 3;
 
 .carousel-toggle-button-block {
     background-color: #edf;
@@ -133,7 +139,7 @@
     }
 
     &:first-child {
-        padding-left: @carousel-toggle-laptop-length;
+        padding-left: @carousel-toggle-laptop-length + @carousel-annotation-bookend-margin;
     }
 
     &:last-child {
@@ -159,17 +165,27 @@
 }
 
 .monitor-width {
+
+    .carousel-nav-buttons-block {
+        right: @golden-cord-width;
+    }
+
     .carousel-annotation {
         &:last-child {
-            padding-right: @golden-cord-width;
+            padding-right: @golden-cord-width + @carousel-nav-buttons-block-width + @carousel-annotation-bookend-margin;
         }
     }
 }
 
 .laptop-width {
+
+    .carousel-nav-buttons-block {
+        right: @uncanny-valley-width;
+    }
+
     .carousel-annotation {
         &:last-child {
-            padding-right: @uncanny-valley-width;
+            padding-right: @uncanny-valley-width + @carousel-nav-buttons-block-width + @carousel-annotation-bookend-margin;
         }
     }
 }
@@ -229,6 +245,14 @@
 
     .carousel-annotation {
         flex-direction: column;
+
+        &:first-child {
+            padding-left: @carousel-toggle-tablet-length + @carousel-annotation-bookend-margin;
+        }
+
+        &:last-child {
+            padding-right: @carousel-nav-buttons-block-tablet-width + @carousel-annotation-bookend-margin;
+        }
     }
 
     &.mini-width {
@@ -256,5 +280,17 @@
                 left: -@carousel-toggle-mini-length;
             }
         }
+
+        .carousel-annotation {
+
+            &:first-child {
+                padding-left: @carousel-toggle-mini-length + @carousel-annotation-bookend-margin;
+            }
+
+            &:last-child {
+                padding-right: @carousel-nav-buttons-block-mini-width + @carousel-annotation-bookend-margin;
+            }
+        }
+
     }
 }
