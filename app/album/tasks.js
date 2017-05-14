@@ -1794,4 +1794,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Calculate scroll position for accessed and selected carousel annotation.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

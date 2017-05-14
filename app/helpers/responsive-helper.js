@@ -7,6 +7,10 @@ import { PHONE_WIDTH,
          MINI_OBJECT,
          DEVICE_OBJECTS,
 
+         GOLDEN_CORD_WIDTH,
+         UNCANNY_VALLEY_WIDTH,
+         CAROUSEL_ANNOTATION_WIDTH,
+
          HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
          HIDDEN_NAV_MIN,
@@ -44,6 +48,10 @@ export const getIsPhone = ({ deviceIndex }) => {
 
 export const getIsMini = ({ deviceIndex }) => {
     return DEVICE_OBJECTS[deviceIndex].className === MINI_WIDTH
+}
+
+export const getIsMonitor = ({ deviceIndex }) => {
+    return DEVICE_OBJECTS[deviceIndex].className === MONITOR_WIDTH
 }
 
 export const getIsDesktop = (deviceIndex) => {
@@ -219,5 +227,40 @@ export const getIsMobileWiki = (state) => {
         isMobileWiki = windowWidth - WIKI_SIDE_PADDING_TOTAL < 892
 
         return isMobileWiki
+    }
+}
+
+export const getCarouselTopAlign = (state) => {
+
+    // If in desktop or lyric column is expanded, set closer to top.
+    if (getIsDesktop(state.deviceIndex) || state.isLyricExpanded) {
+        return {
+            top: 0.33
+        }
+
+    // Otherwise set halfway, which is the default.
+    } else {
+        return null
+    }
+}
+
+export const getCarouselLeftAlign = (state) => {
+
+    // If mobile, then set halfway, which is the default.
+    if (!getIsDesktop(state.deviceIndex)) {
+        return null
+
+    } else {
+        const lyricColumnWidth = getIsMonitor(state) ? GOLDEN_CORD_WIDTH : UNCANNY_VALLEY_WIDTH,
+            centreFieldWidth = state.windowWidth - lyricColumnWidth,
+            left = (centreFieldWidth * 0.5) / state.windowWidth,
+
+            // Don't know why it's not perfectly centred, but whatever.
+            leftOffset = -CAROUSEL_ANNOTATION_WIDTH * left
+
+        return {
+            left,
+            leftOffset
+        }
     }
 }

@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import AccessManager from './access-manager'
 import scrollIntoView from 'scroll-into-view'
+import AccessManager from './access-manager'
 
 import { OVERVIEW_OPTIONS,
          DISABLED } from '../helpers/constants'
 
 import { getAnnotation } from '../helpers/album-view-helper'
 import { intersects } from '../helpers/dot-helper'
+import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsive-helper'
 
 const ANNOTATION_SCROLL = 'annotation',
     CAROUSEL_SCROLL = 'carousel-scroll',
@@ -718,12 +719,13 @@ class EventManager extends Component {
         if (element) {
             console.warn(`Scrolling ${selector} into view.`);
 
+            const align = isCarousel ?
+                getCarouselLeftAlign(this.props.domState) :
+                getCarouselTopAlign(this.props.domState)
+
             scrollIntoView(element, {
                 time,
-                align: {
-                    top: isCarousel ? 0 : 0.33,
-                    left: isCarousel ? 0.33 : 0
-                },
+                align,
                 validTarget
             }, this._scrollElementCallback)
         }
