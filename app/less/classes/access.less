@@ -102,10 +102,18 @@
         }
     }
 
-    // Lyrics annotation is accessed.
     .annotation-hidden.dots-section-hidden.nav-collapsed.is-not-verse-interactivated {
+
+        // Lyrics annotation is accessed.
         .lyrics-section {
             background-color: rgba(200, 250, 200, 0.5);
+        }
+
+        // Annotation in carousel is accessed.
+        .carousel {
+            .accessed-annotation .annotation-section {
+                background-color: #dfd;
+            }
         }
     }
 
@@ -135,13 +143,6 @@
     // Popup annotation section is accessed.
     .annotation-shown {
         .popup-content-wrapper .annotation-section {
-            background-color: #dfd;
-        }
-    }
-
-    // Annotation in carousel is accessed.
-    .carousel {
-        .accessed-annotation .annotation-section {
             background-color: #dfd;
         }
     }
