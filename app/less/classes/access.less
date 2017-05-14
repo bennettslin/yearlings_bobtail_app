@@ -36,13 +36,14 @@
     .dots-section-hidden.nav-collapsed.is-not-verse-interactivated .lyrics-section,
     .dots-section-shown .dots-section,
     .annotation-shown .popup-content-wrapper .annotation-section,
-    .carousel .selected-annotation {
+    .carousel .selected-annotation .annotation-card,
+    .carousel .accessed-annotation:not(.selected-annotation) .carousel-annotation-title {
 
         // Dots and dot stanzas in lyrics section.
         .access-highlighted {
             .dot {
                 &:not(.button), & .button-background {
-                    border: @dot-border solid @access-link-colour;
+                    border: @dot-border solid @access-underline-colour;
                 }
             }
 
@@ -111,8 +112,22 @@
 
         // Annotation in carousel is accessed.
         .carousel {
+            /**
+             * Not using mixin here so that text shadow applies only to annotation
+             * title and not to annotation card.
+             */
             .accessed-annotation .annotation-section {
-                background-color: #dfd;
+                @colour: #dfd;
+                background-color: @colour;
+                .carousel-annotation-title {
+                    .anchor-block {
+                        text-shadow:
+                        -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
+                        @text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
+                        -@text-shadow-offset @text-shadow-offset @text-shadow-blur @colour,
+                        @text-shadow-offset @text-shadow-offset @text-shadow-blur @colour;
+                    }
+                }
             }
         }
     }

@@ -36,9 +36,6 @@ const CarouselAnnotationView = ({
     annotation,
     annotationIndex,
 
-    // From controller.
-    isAccessedAnnotation,
-
 ...other }) => (
 
     <div className={classnames(
@@ -46,7 +43,7 @@ const CarouselAnnotationView = ({
             `carousel-annotation-${annotationIndex}`,
             annotation.dotKeys,
             { 'selected-annotation': other.isSelectedAnnotation,
-              'accessed-annotation': isAccessedAnnotation }
+              'accessed-annotation': other.isAccessedAnnotation }
         )}
     >
         <AnnotationSection {...other}

@@ -26,6 +26,7 @@ const AnnotationSectionView = ({
 
     // From props.
     inCarousel,
+    isAccessedAnnotation,
     isSelectedAnnotation,
     handleTitleClick,
 
@@ -44,7 +45,8 @@ const AnnotationSectionView = ({
                     <a className={classnames(
                         'annotation-title',
                         'anchor-block',
-                        { 'selected': isSelectedAnnotation }
+                        { 'selected': isSelectedAnnotation,
+                          'access-highlighted': isAccessedAnnotation }
                     )}>
                         <span className="underline-bar"></span>
                         <span className="text-span">{`\u201c${title}\u201d`}</span>

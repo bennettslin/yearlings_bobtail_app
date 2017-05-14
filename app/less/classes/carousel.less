@@ -137,12 +137,14 @@
         width: @annotation-width + @carousel-annotation-padding * 2 + @carousel-annotation-side-margin;
         margin: 10px @carousel-annotation-side-margin;
         padding: @carousel-annotation-padding;
-
         transition: background-color 0.2s;
     }
 
     .carousel-annotation-title {
         text-align: center;
+
+        // FIXME: Make text shadow transparent?
+        // .text-shadow-mixin(transparent);
     }
 
     &:not(:last-child) {
@@ -155,8 +157,22 @@
 
     &.selected-annotation {
 
+        /**
+         * Not using mixin here so that text shadow applies only to annotation
+         * title and not to annotation card.
+         */
         .annotation-section {
-            background-color: @selected-carousel-annotation-colour;
+            @colour: #ffe;
+            background-color: @colour;
+            .carousel-annotation-title {
+                .anchor-block {
+                    text-shadow:
+                    -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
+                    @text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
+                    -@text-shadow-offset @text-shadow-offset @text-shadow-blur @colour,
+                    @text-shadow-offset @text-shadow-offset @text-shadow-blur @colour;
+                }
+            }
         }
     }
 }

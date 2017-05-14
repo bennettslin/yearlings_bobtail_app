@@ -60,6 +60,7 @@ const DotStanzaView = ({
             { 'selected': isSelected,
               'access-highlighted': accessHighlighted && !isSelected }
         )}>
+            <span className="underline-bar"></span>
             <DotButton {...other}
                 dotKey={firstShownDotKey}
                 isSelected={isSelected}

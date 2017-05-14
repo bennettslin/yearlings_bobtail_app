@@ -69,13 +69,16 @@
 .live-app.afterword .anchor-block.afterword,
 .anchor-block.in-dots-section,
 .anchor-block.is-wiki,
-.carousel-annotation-title .annotation-title {
+.carousel-annotation-title .annotation-title,
+
+// TODO: Consolidate dots stanza rules.
+.dots-stanza {
 
     .underline-bar {
         background-color: @lyric-underline-disabled-colour;
     }
 
-    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated, &.annotation-title:not(.selected) {
+    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated, &.annotation-title:not(.selected), &.dots-stanza:not(.selected) {
         cursor: pointer;
 
         .text-span {
@@ -105,7 +108,7 @@
         }
 
         .underline-bar {
-            background-color: @selected-annotation-colour;
+            background-color: @selected-annotation-underline-colour;
         }
     }
 }
