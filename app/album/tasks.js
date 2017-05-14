@@ -1,5 +1,11 @@
 module.exports = [
     {
+        taskName: `Changing song with lyric column up will show overview if just hidden.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `dot stanzas also don't need intersect.`,
         workedHours: 0,
         neededHours: 2
@@ -1782,5 +1788,10 @@ module.exports = [
         taskName: `Selecting annotation in carousel.`,
         workedHours: 3,
         neededHours: 3
-    }
+    },
+    {
+        taskName: `Carousel nav buttons and styling.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
