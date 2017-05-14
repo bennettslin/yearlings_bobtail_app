@@ -411,7 +411,7 @@ module.exports = {
                         anchor: `bus seat`,
                         annotation: {
                             description: [
-                                `My family lived in the largely minority neighbourhood of`,
+                                `My family lived in the largely nonwhite neighbourhood of`,
                                 {
                                     anchor: `North Hollywood.`,
                                     wiki: `North_Hollywood,_Los_Angeles`

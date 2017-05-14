@@ -12,8 +12,8 @@
 @carousel-toggle-tablet-length: @overview-toggle-tablet-width - 2px;
 @carousel-toggle-mini-length: @overview-toggle-mini-width - 2px;
 
-@carousel-annotation-bookend-margin: 12.5px;
 @carousel-annotation-side-margin: 5px;
+@carousel-annotation-padding: 20px;
 
 @carousel-height-variable: @carousel-toggle-laptop-length + @dots-overview-padding;
 @carousel-position-variable: @carousel-height-variable * 2 + @dots-overview-padding * 2 + @nav-height;
@@ -129,27 +129,31 @@
     display: flex;
     flex-direction: column-reverse;
 
-    min-width: 0;
+    min-width: @carousel-annotation-padding * 2 - @carousel-annotation-side-margin * 0.5;
 
-    transition: min-width 0.2s, background-color 0.2s;
+    transition: min-width 0.2s;
 
     .annotation-section {
-        width: @annotation-width + @carousel-annotation-side-margin;
+        width: @annotation-width + @carousel-annotation-padding * 2 + @carousel-annotation-side-margin;
         margin: 10px @carousel-annotation-side-margin;
+        padding: @carousel-annotation-padding;
+
+        transition: background-color 0.2s;
+    }
+
+    &:not(:last-child) {
+        margin-right: -@carousel-annotation-padding * 2 + @carousel-annotation-side-margin * 0.5;
     }
 
     &:first-child {
-        padding-left: @carousel-toggle-laptop-length + @carousel-annotation-bookend-margin;
-    }
-
-    &:last-child {
-        .annotation-section {
-            margin-right: @carousel-annotation-bookend-margin;
-        }
+        padding-left: @carousel-toggle-laptop-length;
     }
 
     &.selected-annotation {
-        background-color: @selected-carousel-annotation-colour;
+
+        .annotation-section {
+            background-color: @selected-carousel-annotation-colour;
+        }
     }
 }
 
@@ -161,7 +165,7 @@
 .live-app.songwriting .carousel-annotation.songwriting,
 .live-app.portal .carousel-annotation.portal,
 .live-app.afterword .carousel-annotation.afterword {
-    min-width: @annotation-width + @carousel-annotation-side-margin * 2;
+    min-width: @annotation-width + @carousel-annotation-padding * 2 + @carousel-annotation-side-margin * 2;
 }
 
 .monitor-width {
@@ -172,7 +176,7 @@
 
     .carousel-annotation {
         &:last-child {
-            padding-right: @golden-cord-width + @carousel-nav-buttons-block-width + @carousel-annotation-bookend-margin;
+            padding-right: @golden-cord-width + @carousel-nav-buttons-block-width;
         }
     }
 }
@@ -185,7 +189,7 @@
 
     .carousel-annotation {
         &:last-child {
-            padding-right: @uncanny-valley-width + @carousel-nav-buttons-block-width + @carousel-annotation-bookend-margin;
+            padding-right: @uncanny-valley-width + @carousel-nav-buttons-block-width;
         }
     }
 }
@@ -247,11 +251,11 @@
         flex-direction: column;
 
         &:first-child {
-            padding-left: @carousel-toggle-tablet-length + @carousel-annotation-bookend-margin;
+            padding-left: @carousel-toggle-tablet-length;
         }
 
         &:last-child {
-            padding-right: @carousel-nav-buttons-block-tablet-width + @carousel-annotation-bookend-margin;
+            padding-right: @carousel-nav-buttons-block-tablet-width;
         }
     }
 
@@ -284,11 +288,11 @@
         .carousel-annotation {
 
             &:first-child {
-                padding-left: @carousel-toggle-mini-length + @carousel-annotation-bookend-margin;
+                padding-left: @carousel-toggle-mini-length;
             }
 
             &:last-child {
-                padding-right: @carousel-nav-buttons-block-mini-width + @carousel-annotation-bookend-margin;
+                padding-right: @carousel-nav-buttons-block-mini-width;
             }
         }
 

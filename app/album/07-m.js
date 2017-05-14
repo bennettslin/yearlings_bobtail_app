@@ -205,7 +205,10 @@ module.exports = {
                     {
                         anchor: `sadness with patience,`,
                         annotation: {
-                            description: `I had spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building yourself up into a desirable person, after all, is really just the ultimate art project.`
+                            description: `I had spent my formative years as a child channeling my misery into various art projects, so this was all familiar terrain for me. Building yourself up into a desirable person, after all, is really just the ultimate art project.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     }
                 ]
@@ -472,7 +475,10 @@ module.exports = {
                     {
                         anchor: `Morphined,`,
                         annotation: {
-                            description: `Or else, "Mara-fiend."`
+                            description: `Or else, "Mara-fiend."`,
+                            dotKeys: {
+                                [PUN]: true
+                            }
                         }
                     },
                     `I'll probably`,
