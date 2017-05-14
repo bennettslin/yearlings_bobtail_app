@@ -5,8 +5,10 @@
  */
 
 @carousel-toggle-laptop-length: @overview-toggle-laptop-width;
-@carousel-toggle-tablet-length: @overview-toggle-tablet-width;
-@carousel-toggle-mini-length: @overview-toggle-mini-width;
+
+// This isn't ideal, but I don't know where the extra 2 pixels are coming from.
+@carousel-toggle-tablet-length: @overview-toggle-tablet-width - 2px;
+@carousel-toggle-mini-length: @overview-toggle-mini-width - 2px;
 
 @carousel-annotation-bookend-margin: 12.5px;
 @carousel-annotation-side-margin: 5px;
@@ -42,6 +44,37 @@
 
     .button-background {
         background-color: #dfe;
+    }
+}
+
+.carousel-nav-buttons-block {
+    position: absolute;
+    bottom: -@app-large-icon-diameter - @app-thin-margin * 2;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: @app-thin-margin;
+
+    transition: bottom 0.2s;
+
+    background-color: orange;
+
+    .button:first-child {
+        margin-right: @app-thin-margin;
+    }
+
+    .button {
+        z-index: @carousel-nav-button-z-index;
+    }
+
+    .button-background {
+        background-color: #d84;
+    }
+}
+
+.annotation-shown.carousel-expanded {
+    .carousel-nav-buttons-block {
+        bottom: 0;
     }
 }
 
@@ -152,6 +185,20 @@
         transition: left 0.2s;
     }
 
+    .carousel-nav-buttons-block {
+        top: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
+        bottom: auto;
+
+        transition: top 0.2s;
+    }
+
+    .annotation-shown.carousel-expanded {
+        .carousel-nav-buttons-block {
+            bottom: auto;
+            top: 0;
+        }
+    }
+
     .carousel {
         bottom: auto;
         top: calc(~"-100% - @{carousel-tablet-variable}");
@@ -185,6 +232,13 @@
     }
 
     &.mini-width {
+
+        .carousel-nav-buttons-block {
+            top: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
+            bottom: auto;
+
+            transition: top 0.2s;
+        }
 
         .carousel {
             top: calc(~"-100% - @{carousel-mini-variable}");

@@ -377,6 +377,8 @@ const LiveView = ({
             selectedAnnotationIndex,
             accessedPopupAnchorIndex,
 
+            handleAnnotationPrevious,
+            handleAnnotationNext,
             handleAnnotationWikiSelect,
             handleAnnotationPortalSelect
         },

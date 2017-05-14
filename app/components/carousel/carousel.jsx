@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
 import AnnotationSection from '../annotation/annotation-section'
+import Button from '../button/button'
 // import {  } from '../../helpers/constants'
 
 /*************
@@ -19,6 +20,10 @@ class CarouselView extends Component {
 
     render() {
         const { annotations = [],
+
+            handleAnnotationPrevious,
+            handleAnnotationNext,
+
             ...other } = this.props
 
         return (
@@ -46,6 +51,20 @@ class CarouselView extends Component {
                             )
                         })}
                     </div>
+                </div>
+                <div className="carousel-nav-buttons-block">
+                    <Button
+                        buttonName="previous-position"
+                        iconText={'\u276e'}
+                        isLarge={true}
+                        handleClick={handleAnnotationPrevious}
+                    />
+                    <Button
+                        buttonName="next-position"
+                        iconText={'\u276f'}
+                        isLarge={true}
+                        handleClick={handleAnnotationNext}
+                    />
                 </div>
             </div>
         )
