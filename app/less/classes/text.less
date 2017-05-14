@@ -68,13 +68,14 @@
 .live-app.portal .anchor-block.portal,
 .live-app.afterword .anchor-block.afterword,
 .anchor-block.in-dots-section,
-.anchor-block.is-wiki {
+.anchor-block.is-wiki,
+.carousel-annotation-title .annotation-title {
 
     .underline-bar {
         background-color: @lyric-underline-disabled-colour;
     }
 
-    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated {
+    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated, &.annotation-title:not(.selected) {
         cursor: pointer;
 
         .text-span {

@@ -409,7 +409,7 @@ class EventManager extends Component {
         return true
     }
 
-    handleLyricAnnotationSelect(e, selectedAnnotationIndex) {
+    handleLyricAnnotationSelect(e, selectedAnnotationIndex, fromCarousel) {
         /**
          * FIXME: This check is only necessary when clicking an annotation, to
          * ensure that it is not shown as text. Maybe bypass if done through
@@ -432,9 +432,17 @@ class EventManager extends Component {
             selectedAnnotationIndex
         })
 
-        if (this.props.domProps.selectedCarouselIndex) {
-            this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, selectedAnnotationIndex)
+        // Scroll lyric column only if selecting from carousel.
+        if (fromCarousel) {
+            this._scrollElementIntoView(ANNOTATION_SCROLL, selectedAnnotationIndex)
+
+        // Scroll carousel only if not selecting from carousel.
+        } else {
+            if (this.props.domProps.selectedCarouselIndex) {
+                this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, selectedAnnotationIndex)
+            }
         }
+
         return true
     }
 

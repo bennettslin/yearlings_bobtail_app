@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import classnames from 'classnames'
-import AnnotationSection from '../annotation/annotation-section'
+import CarouselAnnotation from './carousel-annotation'
 import Button from '../button/button'
-// import {  } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -32,22 +30,12 @@ class CarouselView extends Component {
                     <div className="carousel-scroll-home"></div>
                     <div className="carousel-annotations-block">
                         {annotations.map((annotation, index) => {
-                            const trueIndex = index + 1
                             return (
-                                <div
+                                <CarouselAnnotation {...other}
                                     key={index}
-                                    className={classnames(
-                                        'carousel-annotation',
-                                        `carousel-annotation-${trueIndex}`,
-                                        annotation.dotKeys,
-                                        { 'selected-annotation': trueIndex === other.selectedAnnotationIndex,
-                                          'accessed-annotation': trueIndex === other.accessedAnnotationIndex }
-                                    )}
-                                >
-                                    <AnnotationSection {...other}
-                                        popupAnnotation={annotation}
-                                    />
-                                </div>
+                                    annotation={annotation}
+                                    annotationIndex={index + 1}
+                                />
                             )
                         })}
                     </div>
