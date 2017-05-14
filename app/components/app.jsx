@@ -467,9 +467,11 @@ class App extends Component {
         }
 
         // Get isSelectedVerseAbove and isSelectedVerseBelow.
-        const newState = getVerseBarStatus(this.state, verseElement)
 
-        this.setState(newState)
+        // FIXME: Commenting out for now, to make column scroll smoother.
+        // const newState = getVerseBarStatus(this.state, verseElement)
+        //
+        // this.setState(newState)
     }
 
     selectLyricColumn({
