@@ -7,7 +7,7 @@ import { DEVICE_OBJECTS,
          OVERVIEW_OPTIONS,
          SHOWN } from '../helpers/constants'
 import { getSongTitle, getVerse, getHiddenLyricColumnKey } from '../helpers/album-view-helper'
-import { getIsDesktop, getIsPhone, getIsLyricExpandable, getShowSingleLyricColumn } from '../helpers/responsive-helper'
+import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
 class DomManager extends Component {
     render() {
@@ -19,6 +19,8 @@ class DomManager extends Component {
               windowHeight,
 
               isLogue,
+
+              showSingleLyricColumn,
 
               selectedAdminIndex,
               selectedSongIndex,
@@ -49,8 +51,6 @@ class DomManager extends Component {
 
             selectedSongTitle = getSongTitle(props, isLogue),
             selectedVerse = getVerse(props, sliderVerseIndex),
-
-            showSingleLyricColumn = getShowSingleLyricColumn(props, props),
 
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
                 showSingleLyricColumn,

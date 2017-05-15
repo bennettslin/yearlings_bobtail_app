@@ -28,7 +28,7 @@ import { SHOWN,
 
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
-import { getSong, getAnnotation, getIsLogue, getOverview, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus } from '../helpers/album-view-helper'
+import { getSong, getAnnotation, getIsLogue, getOverview, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/album-view-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
@@ -483,9 +483,9 @@ class App extends Component {
 
         /**
          * We shouldn't be able to select lyric column if not in a song that
-         * has double columns.
+         * has double columns. Check for new song if called from portal.
          */
-        if (!getShowSingleLyricColumn(props, state, selectedSongIndex)) {
+        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(props, state, selectedSongIndex) : this.state.showSingleLyricColumn)) {
             return false
         }
 
@@ -907,11 +907,13 @@ class App extends Component {
     _windowResize(e) {
         const newState = resizeWindow(e ? e.target : undefined),
             isCarouselExpandable = getIsCarouselExpandable(newState),
-            isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState)
+            isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState),
+            selectedSong = getSong(this.props)
 
         newState.isCarouselExpandable = isCarouselExpandable
         newState.isHeightlessLyricColumn = isHeightlessLyricColumn
         newState.isHiddenNav = getIsHiddenNav(newState)
+        newState.showSingleLyricColumn = getShowSingleLyricColumn(this.props, newState)
         newState.showSingleBookColumn = getShowSingleBookColumn(newState)
         newState.shrinkNavIcon = getShrinkNavIcon(newState)
         newState.scoresTipsOutsideMenu = getScoresTipsOutsideMenu(newState)
@@ -920,6 +922,14 @@ class App extends Component {
         // Collapse carousel in state if not expandable, or if heightless lyric.
         if (!isCarouselExpandable || isHeightlessLyricColumn) {
             this.selectCarousel(false, true)
+        }
+
+        // Deselect selected annotation if not in new shown column.
+        if (selectedSong.doubleColumns && newState.showSingleLyricColumn && !this.state.showSingleLyricColumn) {
+            const selectedAnnotation = getAnnotation(this.props)
+            if (selectedAnnotation && !shouldShowAnnotationForColumn(this.props, newState, selectedAnnotation)) {
+                this.selectAnnotation({})
+            }
         }
 
         this.setState(newState)

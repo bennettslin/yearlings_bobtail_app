@@ -8,10 +8,10 @@
 
 * Scroll for first and last carousel annotations is wonky.
 
+
 * Reset accessed annotation index strategically (before or after toggle?)
 
 * Smarter button placement
 
-* Carousel should hide annotations in hidden lyric column
-
 * When switching lyric column, carousel should scroll to appropriate annotation
+* Scrolling from portal.

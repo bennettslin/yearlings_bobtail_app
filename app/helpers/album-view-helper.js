@@ -97,8 +97,10 @@ const _getCardFromIndex = ({ annotation, cardIndex }) => {
     }
 }
 
-const _shouldShowAnnotationForColumn = (props, state, annotation, lyricColumnIndex) => {
-    const showSingleLyricColumn = getShowSingleLyricColumn(props, state)
+export const shouldShowAnnotationForColumn = (props, state, annotation, newLyricColumnIndex) => {
+    const lyricColumnIndex = !isNaN(newLyricColumnIndex) ?
+        newLyricColumnIndex : props.selectedLyricColumnIndex,
+        showSingleLyricColumn = getShowSingleLyricColumn(props, state)
 
     return !annotation.column ||
         !showSingleLyricColumn ||
@@ -190,7 +192,7 @@ export const getAnnotationIndexForDirection = ({
                 (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) ||
 
                 // Or if this annotation isn't in the shown column...
-                !_shouldShowAnnotationForColumn(props, state, selectedSong.annotations[returnIndex - 1], lyricColumnIndex)) &&
+                !shouldShowAnnotationForColumn(props, state, selectedSong.annotations[returnIndex - 1], lyricColumnIndex)) &&
 
                 // And if modulo...
                 (useModulo ?
@@ -271,7 +273,7 @@ export const getAnnotationIndexForVerseIndex = ({
             returnToLoop =
                 currentCounter >= 0 &&
                 currentCounter < verse.currentAnnotationIndices.length &&
-                !_shouldShowAnnotationForColumn(props, state, getAnnotation(props, returnIndex), lyricColumnIndex)
+                !shouldShowAnnotationForColumn(props, state, getAnnotation(props, returnIndex), lyricColumnIndex)
 
         } while (returnToLoop)
 
