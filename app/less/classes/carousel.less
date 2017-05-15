@@ -130,6 +130,7 @@
     display: flex;
     flex-direction: column-reverse;
 
+    // TODO: Temporarily disable for now.
     min-width: @carousel-annotation-hidden-width;
 
     transition: min-width 0.2s;
@@ -139,13 +140,6 @@
         margin: 10px @carousel-annotation-side-margin;
         padding: @carousel-annotation-padding;
         transition: background-color 0.2s;
-    }
-
-    .carousel-annotation-title {
-        text-align: center;
-
-        // FIXME: Make text shadow transparent?
-        // .text-shadow-mixin(transparent);
     }
 
     &:not(:last-child) {
@@ -178,6 +172,17 @@
     }
 }
 
+.carousel-annotation-title {
+    text-align: center;
+
+    transition: max-height 0.2s;
+    overflow: hidden;
+    max-height: 0;
+
+    // FIXME: Make text shadow transparent?
+    // .text-shadow-mixin(transparent);
+}
+
 .live-app.narrative .carousel-annotation.narrative,
 .live-app.backstory .carousel-annotation.backstory,
 .live-app.observation .carousel-annotation.observation,
@@ -187,12 +192,20 @@
 .live-app.portal .carousel-annotation.portal,
 .live-app.afterword .carousel-annotation.afterword {
     min-width: @annotation-width + @carousel-annotation-padding * 2 + @carousel-annotation-side-margin * 2;
+
+    .carousel-annotation-title {
+        max-height: 2em; // Arbitrary value that's larger than its max height.
+    }
 }
 
 // Override if hidden by single lyric column.
 .live-app.just-show-right-lyric .carousel-annotation.in-column-left,
 .live-app.just-show-left-lyric .carousel-annotation.in-column-right {
     min-width: @carousel-annotation-hidden-width;
+
+    .carousel-annotation-title {
+        max-height: 0;
+    }
 }
 
 

@@ -15,5 +15,3 @@
 * Carousel should hide annotations in hidden lyric column
 
 * When switching lyric column, carousel should scroll to appropriate annotation
-
-* Cremated last annotation "second hump," when hidden, still shows.
