@@ -7,12 +7,6 @@ module.exports = [
     },
 
     {
-        taskName: `Should deselect selected annotation if it's in hidden lyric column after change`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Changing song with lyric column up will show overview if just hidden.`,
         workedHours: 0,
         neededHours: 1
@@ -1821,5 +1815,10 @@ module.exports = [
         taskName: `Hide annotation title as well.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Should deselect selected annotation if it's in hidden lyric column after change`,
+        workedHours: 2,
+        neededHours: 2
     },
 ]

@@ -8,7 +8,6 @@
 
 * Scroll for first and last carousel annotations is wonky.
 
-
 * Reset accessed annotation index strategically (before or after toggle?)
 
 * Smarter button placement

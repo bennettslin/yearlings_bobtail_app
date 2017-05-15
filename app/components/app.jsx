@@ -489,6 +489,12 @@ class App extends Component {
             return false
         }
 
+        // Deselect selected annotation if not in new selected column.
+        const selectedAnnotation = getAnnotation(this.props)
+        if (selectedAnnotation && !shouldShowAnnotationForColumn(this.props, this.state, selectedAnnotation, selectedLyricColumnIndex)) {
+            this.selectAnnotation({})
+        }
+
         this.props.selectLyricColumnIndex(selectedLyricColumnIndex)
 
         // Switching lyric column might change accessed annotation index.
