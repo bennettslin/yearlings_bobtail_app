@@ -61,7 +61,6 @@
     }
 }
 
-
 .live-app.narrative .annotation-card.narrative,
 .live-app.backstory .annotation-card.backstory,
 .live-app.observation .annotation-card.observation,
@@ -76,4 +75,19 @@
     padding: 5px;
     opacity: 1;
     box-shadow: 0 1px 1px 1px @box-shadow-colour;
+}
+
+// Override if in carousel and hidden by single lyric column.
+.live-app.just-show-right-lyric .carousel-annotation.in-column-left,
+.live-app.just-show-left-lyric .carousel-annotation.in-column-right {
+
+    .annotation-card {
+        min-height: auto;
+        max-height: 0;
+        margin: auto;
+        padding: 0 5px;
+        opacity: 0.5;
+        box-shadow: 0;
+    }
+
 }

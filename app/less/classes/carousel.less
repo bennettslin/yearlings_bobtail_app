@@ -14,6 +14,7 @@
 
 @carousel-annotation-side-margin: 5px;
 @carousel-annotation-padding: 20px;
+@carousel-annotation-hidden-width: @carousel-annotation-padding * 2 - @carousel-annotation-side-margin * 0.5;
 
 @carousel-height-variable: @carousel-toggle-laptop-length + @dots-overview-padding;
 @carousel-position-variable: @carousel-height-variable * 2 + @dots-overview-padding * 2 + @nav-height;
@@ -129,7 +130,7 @@
     display: flex;
     flex-direction: column-reverse;
 
-    min-width: @carousel-annotation-padding * 2 - @carousel-annotation-side-margin * 0.5;
+    min-width: @carousel-annotation-hidden-width;
 
     transition: min-width 0.2s;
 
@@ -187,6 +188,13 @@
 .live-app.afterword .carousel-annotation.afterword {
     min-width: @annotation-width + @carousel-annotation-padding * 2 + @carousel-annotation-side-margin * 2;
 }
+
+// Override if hidden by single lyric column.
+.live-app.just-show-right-lyric .carousel-annotation.in-column-left,
+.live-app.just-show-left-lyric .carousel-annotation.in-column-right {
+    min-width: @carousel-annotation-hidden-width;
+}
+
 
 .monitor-width {
 

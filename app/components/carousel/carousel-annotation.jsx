@@ -41,6 +41,7 @@ const CarouselAnnotationView = ({
     <div className={classnames(
             'carousel-annotation',
             `carousel-annotation-${annotationIndex}`,
+            annotation.column && `in-column-${annotation.column}`,
             annotation.dotKeys,
             { 'selected-annotation': other.isSelectedAnnotation,
               'accessed-annotation': other.isAccessedAnnotation }

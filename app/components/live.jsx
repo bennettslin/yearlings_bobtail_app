@@ -385,7 +385,9 @@ const LiveView = ({
         },
         carouselChild = !isHiddenNav && (
             <Carousel {...carouselProps} />
-        )
+        ),
+
+        hideLyricColumn = showSingleLyricColumn && hasDoubleColumns
 
     return (
         <div className={classnames(
@@ -403,6 +405,8 @@ const LiveView = ({
             { 'timer-in-audio': timerInAudio,
               'title-in-audio': titleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,
+              'just-show-left-lyric': hideLyricColumn && selectedLyricColumnIndex === 0,
+              'just-show-right-lyric': hideLyricColumn && selectedLyricColumnIndex === 1,
               'overview-shown': isOverviewShown,
               'verse-above': isSelectedVerseAbove,
               'verse-below': isSelectedVerseBelow,
