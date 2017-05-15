@@ -1,4 +1,17 @@
 module.exports = [
+
+    {
+        taskName: `Make popup annotation styling consistent with carousel annotation.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Should deselect selected annotation if it's in hidden lyric column after change`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     {
         taskName: `Changing song with lyric column up will show overview if just hidden.`,
         workedHours: 0,
@@ -1796,6 +1809,11 @@ module.exports = [
     },
     {
         taskName: `Calculate scroll position for accessed and selected carousel annotation.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Skip over carousel annotations in hidden lyric columns.`,
         workedHours: 2,
         neededHours: 2
     },
