@@ -245,7 +245,7 @@ export const getCarouselTopAlign = (state) => {
     }
 }
 
-export const getCarouselLeftAlign = (state) => {
+export const getCarouselLeftAlign = (state, index) => {
 
     // If mobile, then set halfway, which is the default.
     if (!getIsDesktop(state.deviceIndex)) {
@@ -257,7 +257,12 @@ export const getCarouselLeftAlign = (state) => {
             left = (centreFieldWidth * 0.5) / state.windowWidth,
 
             // Don't know why it's not perfectly centred, but whatever.
-            leftOffset = -CAROUSEL_ANNOTATION_WIDTH * left
+            /**
+             * Don't have offset if it's the first annotation, so that it's
+             * as close to the centre as possible. This is kind of hacky, but
+             * it's fine for the time being.
+             */
+            leftOffset = index === 1 ? 0 : -CAROUSEL_ANNOTATION_WIDTH * left
 
         return {
             left,

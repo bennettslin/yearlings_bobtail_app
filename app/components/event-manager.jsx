@@ -728,7 +728,7 @@ class EventManager extends Component {
             console.warn(`Scrolling ${selector} into view.`);
 
             const align = isCarousel ?
-                getCarouselLeftAlign(this.props.domState) :
+                getCarouselLeftAlign(this.props.domState, index) :
                 getCarouselTopAlign(this.props.domState)
 
             scrollIntoView(element, {
