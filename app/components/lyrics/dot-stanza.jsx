@@ -1,7 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
 import DotButton from '../dot/dot-button'
-// import { getIntersection } from '../../helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -49,8 +48,8 @@ const DotStanzaView = ({
     <div className={classnames(
         'stanza-block',
         'dots-stanza',
-        { 'dots-stanza-hidden': !shouldShowDotStanza,
-          'selected': isSelected,
+        shouldShowDotStanza ? 'dots-stanza-shown' : 'dots-stanza-hidden',
+        { 'selected': isSelected,
           'access-highlighted': accessHighlighted && !isSelected }
     )}>
         <div className={classnames(

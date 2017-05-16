@@ -76,8 +76,11 @@
         background-color: @lyric-underline-disabled-colour;
     }
 
-    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated, &.annotation-title:not(.selected), &.dots-stanza:not(.selected) {
+    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated, &.annotation-title:not(.selected) {
         cursor: pointer;
+    }
+
+    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated, &.annotation-title:not(.selected), &.dots-stanza:not(.selected) {
 
         &:not(.dots-stanza) .dot, &.dots-stanza .button-background {
             border: @dot-border solid @lyric-underline-enabled-colour;
