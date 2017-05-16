@@ -3,7 +3,6 @@ import classnames from 'classnames'
 import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
 import { TITLE, LEFT, RIGHT } from '../../helpers/constants'
-import { intersects } from '../../helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -13,7 +12,6 @@ const LyricsUnit = (props) => {
 
     const { stanzaArray,
             isTitleUnit,
-            selectedDotKeys,
             hiddenLyricColumnKey } = props,
 
         { unitClassName,
@@ -35,8 +33,7 @@ const LyricsUnit = (props) => {
         truncateMain = hasSide && hiddenLyricColumnKey === LEFT,
         showMain = !isDotOnly && (!hasSide || hiddenLyricColumnKey !== LEFT || truncateMain),
 
-        showSide = hasSide && hiddenLyricColumnKey !== RIGHT,
-        shouldShowDotStanza = dotStanza ? intersects(dotStanza.dotKeys, selectedDotKeys) : false
+        showSide = hasSide && hiddenLyricColumnKey !== RIGHT
 
     return (
         <LyricsUnitView {...props}
@@ -47,7 +44,6 @@ const LyricsUnit = (props) => {
             sideStanzaType={sideStanzaType}
             sideSubstanzaType={sideSubstanzaType}
             subsequent={subsequent}
-            shouldShowDotStanza={shouldShowDotStanza}
             dotStanza={dotStanza}
             subStanza={subStanza}
             topSideStanza={topSideStanza}
@@ -79,7 +75,6 @@ const LyricsUnitView = ({
     subsequent,
     sideStanzaType,
     sideSubstanzaType,
-    selectedDotKeys,
     dotStanza,
     subStanza,
     topSideStanza,
@@ -121,7 +116,6 @@ const LyricsUnitView = ({
                             truncateMain={truncateMain}
                             stanzaIndex={shownStanzaIndex}
                             stanzaType={itsStanzaType}
-                            selectedDotKeys={selectedDotKeys}
                         />
                     )
                 }

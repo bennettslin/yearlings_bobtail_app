@@ -38,7 +38,6 @@ const DotStanzaView = ({
 
     // From controller.
     isSelected,
-    shouldShowDotStanza,
     dotStanzaKeys,
     accessHighlighted,
     annotationIndex,
@@ -49,7 +48,6 @@ const DotStanzaView = ({
         'stanza-block',
         'dots-stanza',
         dotStanzaKeys,
-        shouldShowDotStanza ? 'dots-stanza-shown' : 'dots-stanza-hidden',
         { 'selected': isSelected,
           'access-highlighted': accessHighlighted && !isSelected }
     )}>

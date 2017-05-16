@@ -30,12 +30,6 @@ module.exports = [
     },
 
     {
-        taskName: `dot stanzas also don't need intersect.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `When switching to logue and carousel is on, then turning on nav in logue, should toggle off nav`,
         workedHours: 0,
         neededHours: 1
@@ -1838,4 +1832,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `dot stanzas also don't need intersect.`,
+        workedHours: 4,
+        neededHours: 4
+    }
 ]

@@ -116,6 +116,8 @@
 
     .button {
         transition: width 0.2s, height 0.2s;
+        height: 0;
+        width: 0;
     }
     &.stanza-block {
         transition: margin-top 0.2s, margin-left 0.2s;
@@ -134,46 +136,6 @@
         transition: background-color @transition-duration-fast, border @transition-duration-fast;
     }
 }
-
-// TODO: Classes show and hide dots stanza.
-// .live-app.narrative .dots-stanza.narrative,
-// .live-app.backstory .dots-stanza.backstory,
-// .live-app.observation .dots-stanza.observation,
-// .live-app.pun .dots-stanza.pun,
-// .live-app.reference .dots-stanza.reference,
-// .live-app.songwriting .dots-stanza.songwriting,
-// .live-app.portal .dots-stanza.portal,
-// .live-app.afterword .dots-stanza.afterword {
-//     margin-top: @lyrics-unit-margin;
-//
-//     .button {
-//         width: @app-icon-diameter;
-//         height: @app-icon-diameter;
-//     }
-//
-//     &:not(:first-child) {
-//         margin-left: @stanza-block-margin;
-//     }
-
-    // .dot .button-background {
-    //     border: 0;
-    // }
-// }
-//
-//
-//
-// .dots-stanza-hidden {
-//     .button {
-//         width: 0;
-//         height: 0;
-//     }
-//     &.stanza-block.dots-stanza {
-//         margin-left: 0;
-//     }
-//     .dot .button-background {
-//         border: 0;
-//     }
-// }
 
 // Undo reverse dot order caused by right column's rtl direction.
 .line.right {

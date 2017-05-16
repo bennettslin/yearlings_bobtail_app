@@ -13,7 +13,6 @@ const AnnotationCard = ({
 
     card,
     songs,
-    selectedDotKeys,
 
 ...other }) => {
 
@@ -27,14 +26,11 @@ const AnnotationCard = ({
         dotKeys.portal = true
     }
 
-    const showWikis = selectedDotKeys.wiki
-
     return (
         <AnnotationCardView {...other}
             text={description}
             cardDotKeys={dotKeys}
             portalLinks={portalLinks}
-            showWikis={showWikis}
         />
     )
 }

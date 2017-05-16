@@ -286,7 +286,6 @@ const LiveView = ({
             selectedLyricColumnIndex,
             interactivatedVerseIndex,
             songLyrics: selectedSongLyrics,
-            selectedDotKeys,
             selectedVerseIndex,
 
             lyricSectionRef,
@@ -314,12 +313,12 @@ const LiveView = ({
         annotationPopupProps = {
             songs,
             popupAnnotation,
+            showWikis: !!selectedDotKeys.wiki,
             selectedAnnotationIndex,
             selectedCarouselIndex,
             selectedScoreIndex,
             selectedWikiIndex,
             accessedPopupAnchorIndex,
-            selectedDotKeys,
             handleAnnotationPrevious,
             handleAnnotationNext,
             handlePopupContainerClick,
@@ -372,7 +371,6 @@ const LiveView = ({
         carouselProps = {
             songs,
             annotations,
-            selectedDotKeys,
             accessedAnnotationIndex,
             selectedAnnotationIndex,
             accessedPopupAnchorIndex,
