@@ -1,17 +1,9 @@
 module.exports = [
-
-    {
-        taskName: `Fix portal dot styling for border and access.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     {
         taskName: `Only show wiki anchor if reference is selected.`,
         workedHours: 0,
         neededHours: 1
     },
-
     {
         taskName: `Prevent access of wiki or portal anchor if respective dot is unselected. (Confirm portal already works.)`,
         workedHours: 0,
@@ -1854,5 +1846,10 @@ module.exports = [
         taskName: `dot stanzas also don't need intersect.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Fix portal dot styling for border and access.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
