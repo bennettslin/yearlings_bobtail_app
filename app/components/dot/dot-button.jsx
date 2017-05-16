@@ -81,6 +81,7 @@ class DotButtonView extends Component {
 
             // From props.
             dotKey,
+            dotStanzaKeys,
             accessHighlighted,
             inDotsSection,
             isSelected,
@@ -124,7 +125,8 @@ class DotButtonView extends Component {
                 }
                 <Button
                     buttonClass="dot"
-                    iconClass={dotKey}
+                    buttonName={dotStanzaKeys ? 'dots-stanza' : undefined}
+                    iconClass={dotKey || dotStanzaKeys}
                     isEnabled={inDotsSection || !isSelected}
                     isDeselected={inDotsSection ? !isSelected : undefined}
                     extraChild={dotDescription}

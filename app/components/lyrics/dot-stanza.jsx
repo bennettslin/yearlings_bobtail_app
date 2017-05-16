@@ -1,8 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import DotButton from '../dot/dot-button'
-import { getIntersection } from '../../helpers/dot-helper'
-import { ALL_DOT_KEYS_DOT_STANZA_ORDER } from '../../helpers/constants'
+// import { getIntersection } from '../../helpers/dot-helper'
 
 /*************
  * CONTAINER *
@@ -13,7 +12,6 @@ const DotStanza = ({
     handleLyricAnnotationSelect,
     dotStanzaObject,
     selectedAnnotationIndex,
-    selectedDotKeys,
     accessedAnnotationIndex,
 
 ...other }) => {
@@ -24,15 +22,13 @@ const DotStanza = ({
         isSelected = annotationIndex === selectedAnnotationIndex,
         accessHighlighted = accessedAnnotationIndex === annotationIndex,
 
-        // Hide dot keys that are not present.
-        shownDotKeys = getIntersection(annotationDotKeys, selectedDotKeys),
         handleDotStanzaSelect = e => handleLyricAnnotationSelect(e, annotationIndex)
 
-    return (shownDotKeys &&
+    return (annotationDotKeys &&
         <DotStanzaView {...other}
             annotationIndex={annotationIndex}
             isSelected={isSelected}
-            shownDotKeys={shownDotKeys}
+            dotStanzaKeys={annotationDotKeys}
             handleDotStanzaSelect={handleDotStanzaSelect}
             accessHighlighted={accessHighlighted}
         />
@@ -43,30 +39,31 @@ const DotStanzaView = ({
 
     // From controller.
     isSelected,
-    shownDotKeys,
+    shouldShowDotStanza,
+    dotStanzaKeys,
     accessHighlighted,
     annotationIndex,
 
-...other }) => {
+...other }) => (
 
-    const firstShownDotKey = ALL_DOT_KEYS_DOT_STANZA_ORDER.reduce((shownDotKey, dotKey) => {
-        return shownDotKey || (shownDotKeys[dotKey] && dotKey)
-    }, false)
-
-    return (
+    <div className={classnames(
+        'stanza-block',
+        'dots-stanza',
+        { 'dots-stanza-hidden': !shouldShowDotStanza,
+          'selected': isSelected,
+          'access-highlighted': accessHighlighted && !isSelected }
+    )}>
         <div className={classnames(
             'stanza',
-            annotationIndex && `annotation-${annotationIndex}`,
-            { 'selected': isSelected,
-              'access-highlighted': accessHighlighted && !isSelected }
+            annotationIndex && `annotation-${annotationIndex}`
         )}>
             <span className="underline-bar"></span>
             <DotButton {...other}
-                dotKey={firstShownDotKey}
+                dotStanzaKeys={dotStanzaKeys}
                 isSelected={isSelected}
             />
         </div>
-    )
-}
+    </div>
+)
 
 export default DotStanza

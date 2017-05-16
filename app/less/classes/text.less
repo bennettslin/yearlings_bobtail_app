@@ -70,8 +70,6 @@
 .anchor-block.in-dots-section,
 .anchor-block.is-wiki,
 .carousel-annotation-title .annotation-title,
-
-// TODO: Consolidate dots stanza rules.
 .dots-stanza {
 
     .underline-bar {
@@ -80,6 +78,10 @@
 
     &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated, &.annotation-title:not(.selected), &.dots-stanza:not(.selected) {
         cursor: pointer;
+
+        &:not(.dots-stanza) .dot, &.dots-stanza .button-background {
+            border: @dot-border solid @lyric-underline-enabled-colour;
+        }
 
         .text-span {
             color: @lyric-link-colour;
@@ -105,6 +107,11 @@
     &.selected {
         .text-span {
             color: @selected-annotation-text-colour;
+        }
+
+        &:not(.dots-stanza) .dot, &.dots-stanza .button-background {
+            border: @dot-border solid @selected-annotation-underline-colour;
+            background-color: @deselected-dot-colour;
         }
 
         .underline-bar {

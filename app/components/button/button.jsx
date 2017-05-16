@@ -51,7 +51,10 @@ const Button = ({
 Button.propTypes = {
     buttonName: PropTypes.string,
     buttonClass: PropTypes.string,
-    iconClass: PropTypes.string,
+    iconClass: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ]),
     iconText: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number

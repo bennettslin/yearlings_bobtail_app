@@ -39,8 +39,8 @@
     .carousel .selected-annotation .annotation-card,
     .carousel .accessed-annotation:not(.selected-annotation) .carousel-annotation-title {
 
-        // Dots and dot stanzas in lyrics section.
         .access-highlighted {
+            // Dots and dot stanzas in lyrics section.
             .dot {
                 &:not(.button), & .button-background {
                     border: @dot-border solid @access-underline-colour;
@@ -54,6 +54,10 @@
                         border: @dot-border solid @access-link-colour;
                     }
                 }
+            }
+
+            &:not(.dots-stanza):not(.dot-container) .dot, &.dots-stanza .button-background {
+                border: @dot-border solid @lyric-underline-enabled-colour;
             }
 
             /**
@@ -83,10 +87,10 @@
                             color: @access-active-colour;
                         }
                     }
+                }
 
-                    .underline-bar {
-                        background-color: @access-underline-colour;
-                    }
+                .underline-bar {
+                    background-color: @access-underline-colour;
                 }
             }
         }
@@ -106,9 +110,9 @@
     .annotation-hidden.dots-section-hidden.nav-collapsed.is-not-verse-interactivated {
 
         // Lyrics annotation is accessed.
-        .lyrics-section {
-            background-color: rgba(200, 250, 200, 0.5);
-        }
+        // .lyrics-section {
+            // background-color: rgba(200, 250, 200, 0.5);
+        // }
 
         // Annotation in carousel is accessed.
         .carousel {

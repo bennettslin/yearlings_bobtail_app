@@ -317,18 +317,6 @@ module.exports = {
         AFTERWORD
     ],
 
-    // In dot stanzas, at least songwriting and afterword are always first.
-    ALL_DOT_KEYS_DOT_STANZA_ORDER: [
-        AFTERWORD,
-        SONGWRITING,
-        NARRATIVE,
-        PUN,
-        REFERENCE,
-        BACKSTORY,
-        OBSERVATION,
-        PORTAL
-    ],
-
     DOT_DESCRIPTIONS: {
         [NARRATIVE]: 'the story',
         [BACKSTORY]: 'backstory description',

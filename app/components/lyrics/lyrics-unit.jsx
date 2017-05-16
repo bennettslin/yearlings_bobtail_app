@@ -79,7 +79,6 @@ const LyricsUnitView = ({
     subsequent,
     sideStanzaType,
     sideSubstanzaType,
-    shouldShowDotStanza,
     selectedDotKeys,
     dotStanza,
     subStanza,
@@ -160,16 +159,9 @@ const LyricsUnitView = ({
                 </div>
             }
             {dotStanza &&
-                <div className={classnames(
-                    'stanza-block',
-                    'dots-stanza',
-                    { 'dots-stanza-hidden': !shouldShowDotStanza }
-                )}>
-                    <DotStanza {...other}
-                        dotStanzaObject={dotStanza}
-                        selectedDotKeys={selectedDotKeys}
-                    />
-                </div>
+                <DotStanza {...other}
+                    dotStanzaObject={dotStanza}
+                />
             }
         </div>
     )
