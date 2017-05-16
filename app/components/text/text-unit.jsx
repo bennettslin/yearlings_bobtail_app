@@ -10,7 +10,6 @@ import TextSpan from './text-span'
 const TextUnit = ({
 
     text,
-    showWikis,
 
 ...other }) => {
 
@@ -54,11 +53,7 @@ const TextUnit = ({
             )
 
         } else if (text.anchor) {
-            const showIfWiki = showWikis !== false
-
-            console.error('showIfWiki, text.anchor', showIfWiki, text.anchor);
-
-            return (showIfWiki && !other.inVerseBar && !(other.inPortal && other.inPortalCard) ?
+            return (!other.inVerseBar && !(other.inPortal && other.inPortalCard) ?
                 <AnchorBlock {...other}
                     text={text}
                     firstVerseObject={text.firstVerseObject}

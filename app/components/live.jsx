@@ -313,7 +313,6 @@ const LiveView = ({
         annotationPopupProps = {
             songs,
             popupAnnotation,
-            showWikis: !!selectedDotKeys.wiki,
             selectedAnnotationIndex,
             selectedCarouselIndex,
             selectedScoreIndex,

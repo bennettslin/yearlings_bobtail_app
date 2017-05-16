@@ -53,8 +53,7 @@ const AnnotationCardView = ({
 
     // From controller.
     text,
-    portalLinks,
-    showWikis
+    portalLinks
 
 }) => (
     <div className={classnames(
@@ -70,7 +69,6 @@ const AnnotationCardView = ({
             inPortalCard={inPortalCard}
             isLyric={false}
             text={text}
-            showWikis={showWikis}
             selectedWikiIndex={selectedWikiIndex}
             carouselAnnotationIndex={carouselAnnotationIndex}
             accessedPopupAnchorIndex={accessedPopupAnchorIndex}
