@@ -48,6 +48,7 @@ const DotStanzaView = ({
     <div className={classnames(
         'stanza-block',
         'dots-stanza',
+        dotStanzaKeys,
         shouldShowDotStanza ? 'dots-stanza-shown' : 'dots-stanza-hidden',
         { 'selected': isSelected,
           'access-highlighted': accessHighlighted && !isSelected }

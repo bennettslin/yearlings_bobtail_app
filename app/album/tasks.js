@@ -1,7 +1,18 @@
 module.exports = [
 
     {
+        taskName: `Nav animation when overlay is shown doesn't work?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Make popup annotation styling consistent with carousel annotation.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Make dot animation smoother.`,
         workedHours: 0,
         neededHours: 1
     },

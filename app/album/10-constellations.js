@@ -982,7 +982,7 @@ module.exports = {
                     {
                         anchor: `unsolft quarry rest…`,
                         annotation: {
-                            description: `"Our young invaders" have now arrived at a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches. Pausing for a breather, on this "soft quarry" they rest.`,
+                            description: `"Our young invaders" have now arrived at a clearing where dirt from the ground has been pushed against the walls and shaped into makeshift benches. Pausing for a breather, on this "soft quarry" we rest.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [PUN]: true

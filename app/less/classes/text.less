@@ -70,7 +70,15 @@
 .anchor-block.in-dots-section,
 .anchor-block.is-wiki,
 .carousel-annotation-title .annotation-title,
-.dots-stanza {
+
+.live-app.narrative .dots-stanza.narrative,
+.live-app.backstory .dots-stanza.backstory,
+.live-app.observation .dots-stanza.observation,
+.live-app.pun .dots-stanza.pun,
+.live-app.reference .dots-stanza.reference,
+.live-app.songwriting .dots-stanza.songwriting,
+.live-app.portal .dots-stanza.portal,
+.live-app.afterword .dots-stanza.afterword {
 
     .underline-bar {
         background-color: @lyric-underline-disabled-colour;
@@ -119,6 +127,20 @@
 
         .underline-bar {
             background-color: @selected-annotation-underline-colour;
+        }
+    }
+
+    &.dots-stanza {
+        margin-top: @lyrics-unit-margin;
+        max-width: 720px;
+
+        .button {
+            width: @app-icon-diameter;
+            height: @app-icon-diameter;
+        }
+
+        &:not(:first-child) {
+            margin-left: @stanza-block-margin;
         }
     }
 }

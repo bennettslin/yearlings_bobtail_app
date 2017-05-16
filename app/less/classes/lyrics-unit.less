@@ -70,7 +70,8 @@
      */
     max-width: 720px;
 
-    &:not(:first-child) {
+    // Dots stanza will have this style only if not hidden.
+    &:not(.dots-stanza):not(:first-child) {
         margin-left: @stanza-block-margin;
     }
 

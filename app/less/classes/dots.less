@@ -11,11 +11,6 @@
 .dot {
     &:not(.button), & .button-background {
         border-radius: 50%;
-
-        // Dots section and dot stanzas.
-        &.button-background {
-            border: @dot-border solid @dot-border-colour;
-        }
     }
 
     &:not(.button), &:not(.dots-stanza-button) .button-background {
@@ -105,13 +100,19 @@
 }
 
 .dots-section {
+
+    // Dots section and dot stanzas.
     .dot .button-background {
         transition: background-color @transition-duration-fast;
+        border: @dot-border solid @dot-border-colour;
     }
 }
 
 .dots-stanza {
     padding-bottom: 5px;
+    &:not(:first-child) {
+        margin-left: 0;
+    }
 
     .button {
         transition: width 0.2s, height 0.2s;
@@ -128,39 +129,51 @@
             }
         }
     }
+
     .dot .button-background {
         transition: background-color @transition-duration-fast, border @transition-duration-fast;
     }
 }
 
 // TODO: Classes show and hide dots stanza.
-.live-app.narrative .dots-stanza.narrative,
-.live-app.backstory .dots-stanza.backstory,
-.live-app.observation .dots-stanza.observation,
-.live-app.pun .dots-stanza.pun,
-.live-app.reference .dots-stanza.reference,
-.live-app.songwriting .dots-stanza.songwriting,
-.live-app.portal .dots-stanza.portal,
-.live-app.afterword .dots-stanza.afterword {
+// .live-app.narrative .dots-stanza.narrative,
+// .live-app.backstory .dots-stanza.backstory,
+// .live-app.observation .dots-stanza.observation,
+// .live-app.pun .dots-stanza.pun,
+// .live-app.reference .dots-stanza.reference,
+// .live-app.songwriting .dots-stanza.songwriting,
+// .live-app.portal .dots-stanza.portal,
+// .live-app.afterword .dots-stanza.afterword {
+//     margin-top: @lyrics-unit-margin;
+//
+//     .button {
+//         width: @app-icon-diameter;
+//         height: @app-icon-diameter;
+//     }
+//
+//     &:not(:first-child) {
+//         margin-left: @stanza-block-margin;
+//     }
 
-}
-
-.dots-stanza-hidden {
-    .button {
-        width: 0;
-        height: 0;
-    }
-    &.stanza-block.dots-stanza {
-        margin-left: 0;
-    }
-    .dot .button-background {
-        border: 0;
-    }
-}
-
-.dots-stanza.dots-stanza-shown {
-    margin-top: @lyrics-unit-margin;
-}
+    // .dot .button-background {
+    //     border: 0;
+    // }
+// }
+//
+//
+//
+// .dots-stanza-hidden {
+//     .button {
+//         width: 0;
+//         height: 0;
+//     }
+//     &.stanza-block.dots-stanza {
+//         margin-left: 0;
+//     }
+//     .dot .button-background {
+//         border: 0;
+//     }
+// }
 
 // Undo reverse dot order caused by right column's rtl direction.
 .line.right {

@@ -676,9 +676,9 @@ module.exports = {
             {
                 time: 94,
                 centre: [
-                    `it hums a`,
+                    `it`,
                     {
-                        anchor: `typo`,
+                        anchor: `hums a typo`,
                         annotation: {
                             description: [
                                 `Like a typo, Miriam's involvement with me was a simple mistake that she could easily correct. And like a`,
