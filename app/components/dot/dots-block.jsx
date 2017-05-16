@@ -25,7 +25,7 @@ const DotBlockView = ({
     inDotsSection,
     inAnnotationCard,
     selectedDotKeys,
-    annotationDotKeys,
+    dotKeys,
     accessedDotIndex,
 
 ...other }) => (
@@ -52,7 +52,7 @@ const DotBlockView = ({
                 }
 
                 // Go through all dot keys in array to ensure correct order.
-                return annotationDotKeys[dotKey] && (
+                return dotKeys[dotKey] && (
                     <div
                         key={index}
                         className={classnames(

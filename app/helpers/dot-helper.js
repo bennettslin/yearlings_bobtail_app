@@ -16,21 +16,6 @@ export const intersects = (presentKeys = {}, selectedKeys = {}) => {
     }
 }
 
-// Return an object that only contains keys that are both present and selected.
-export const getIntersection = (presentKeys = {}, selectedKeys = {}) => {
-
-    const intersectionArray = Object.keys(presentKeys).filter(presentKey => {
-            return selectedKeys[presentKey]
-        }),
-        intersectionObject = {}
-
-    intersectionArray.forEach(key => {
-        intersectionObject[key] = true
-    })
-
-    return intersectionObject
-}
-
 export const allDotsDeselected = (props, dotKey) => {
     const { selectedDotKeys } = props,
         annotation = getAnnotation(props),

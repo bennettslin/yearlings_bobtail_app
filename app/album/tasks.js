@@ -7,6 +7,12 @@ module.exports = [
     },
 
     {
+        taskName: `Get rid of activeElement line.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Changing song with lyric column up will show overview if just hidden.`,
         workedHours: 0,
         neededHours: 1

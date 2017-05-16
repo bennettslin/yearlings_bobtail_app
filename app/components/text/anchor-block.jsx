@@ -106,7 +106,7 @@ const AnchorBlockView = ({
             {!wikiIndex && !inPortal &&
                 <DotBlock
                     inAnchor={true}
-                    annotationDotKeys={annotationDotKeys}
+                    dotKeys={annotationDotKeys}
                 />
             }
             {/* Only the first text span inside the anchor will forego space. */}
