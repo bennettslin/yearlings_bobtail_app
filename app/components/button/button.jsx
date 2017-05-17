@@ -11,6 +11,7 @@ const Button = ({
     accessKey,
     isCustomShape,
     isCustomSize,
+    accessHighlighted,
     isEnabled,
     isSelected,
     isDeselected,
@@ -29,6 +30,7 @@ const Button = ({
               'custom-size': isCustomSize,
               'enabled': isEnabled,
               'selected': isSelected,
+              'access-highlighted': accessHighlighted,
               'deselected': isDeselected }
         )}
         onClick={handleClick ? e => handleClick(e) : null}

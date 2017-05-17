@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
-import DotButton from './dot-button'
+import DotToggleButton from './dot-toggle-button'
 import { PORTAL, ALL_DOT_KEYS } from '../../helpers/constants'
 
 const defaultProps = {
@@ -34,7 +34,7 @@ const DotBlockView = ({
 
             if (inDotsSection) {
                 return (
-                    <DotButton {...other}
+                    <DotToggleButton {...other}
                         key={index}
                         dotIndex={index}
                         dotKey={dotKey}

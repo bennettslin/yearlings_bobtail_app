@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Consolidate various dot buttons`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Fix access styling, including annotation card titles and portal button borders.`,
         workedHours: 0,
         neededHours: 3

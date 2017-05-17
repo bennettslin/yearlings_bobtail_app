@@ -1,5 +1,5 @@
 import React from 'react'
-import AnchorBlock from './anchor-block'
+import TextAnchorBlock from './text-anchor-block'
 import TextBlock from './text-block'
 import TextSpan from './text-span'
 
@@ -54,7 +54,7 @@ const TextUnit = ({
 
         } else if (text.anchor) {
             return (!other.inVerseBar && !(other.inPortal && other.inPortalCard) ?
-                <AnchorBlock {...other}
+                <TextAnchorBlock {...other}
                     text={text}
                     firstVerseObject={text.firstVerseObject}
                     lastVerseObject={text.lastVerseObject}
