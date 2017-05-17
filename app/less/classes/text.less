@@ -131,7 +131,6 @@
     }
 
     &.dots-stanza {
-        margin-top: @lyrics-unit-margin;
         max-width: 720px;
 
         .button {
@@ -142,6 +141,11 @@
         &:not(:first-child) {
             margin-left: @stanza-block-margin;
         }
+    }
+
+    // In lyrics, not in carousel.
+    &.dots-stanza.in-lyrics {
+        margin-top: @lyrics-unit-margin;
     }
 }
 

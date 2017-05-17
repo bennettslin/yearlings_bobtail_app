@@ -1,4 +1,23 @@
 module.exports = [
+
+    {
+        taskName: `Fix access styling, including annotation card titles and portal button borders.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Refactor animated dots styling.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Refactor dots stanzas.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     {
         taskName: `Only show wiki anchor if reference is selected.`,
         workedHours: 0,
@@ -1851,5 +1870,10 @@ module.exports = [
         taskName: `Fix portal dot styling for border and access.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Dot stanza as annotation card title, with much further work to do...`,
+        workedHours: 0,
+        neededHours: 1
+    },
 ]

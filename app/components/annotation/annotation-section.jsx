@@ -1,6 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 import AnnotationUnit from './annotation-unit'
+import DotStanza from '../lyrics/dot-stanza'
 import { DOT_STANZA_CONSTANT } from '../../helpers/constants'
 
 /*************
@@ -58,10 +59,16 @@ const AnnotationSectionView = ({
                 </h2>
         )}
         {title === DOT_STANZA_CONSTANT && (
-            <div className={classnames(
-                'dot',
-                other.popupAnnotation.dotKeys
-            )}></div>
+            <DotStanza
+                inCarousel={true}
+                dotStanzaObject={{
+                    annotationIndex: 1,
+                    dotKeys: other.popupAnnotation.dotKeys
+                }}
+                handleTitleClick={handleTitleClick}
+                isSelectedAnnotation={isSelectedAnnotation}
+                isAccessedAnnotation={isAccessedAnnotation}
+            />
         )}
         <div className="cards-block">
             <AnnotationUnit {...other}
