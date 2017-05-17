@@ -74,7 +74,6 @@ const AnnotationCardView = ({
             accessedPopupAnchorIndex={accessedPopupAnchorIndex}
             handleAnchorClick={handleAnnotationWikiSelect}
         />
-        {/* Why does portal need to care about annotation dot keys? */}
         {!inPortal && portalLinks &&
             <AnnotationPortalsBlock
                 portalLinks={portalLinks}

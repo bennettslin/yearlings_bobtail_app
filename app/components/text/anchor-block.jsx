@@ -87,15 +87,17 @@ const AnchorBlockView = ({
         <a
             className={classnames(
                 'anchor-block',
+                'text-anchor-block',
+
+                // inPortal is any anchor in portal.
+                !isPortalAnchor && !inPortal && annotationDotKeys,
                 !inPortal && annotationIndex && `annotation-${annotationIndex}`,
                 wikiIndex && `wiki-${wikiIndex}`,
                 { 'selected': isSelected,
                   'access-highlighted': accessHighlighted && !isSelected,
                   'portal-anchor': isPortalAnchor,
                   'is-wiki': !!wikiIndex,
-                  'not-in-portal': !inPortal,
-                  'todo': hasTodo },
-                annotationDotKeys
+                  'todo': hasTodo }
             )}
             onClick={handleClick}
         >

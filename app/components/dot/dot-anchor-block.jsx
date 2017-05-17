@@ -24,6 +24,7 @@ const DotAnchorBlockView = ({
 ...other }) => (
 
     <div className={classnames(
+        'anchor-block',
         'dot-anchor-block',
         dotKeys,
         { 'selected': isSelected,

@@ -28,7 +28,7 @@ const AnnotationTransitionPopup = ({
 
     return (
         <TransitionPopup
-            popupClassName="annotation"
+            popupClassName="annotation selected-annotation"
             isVisible={isVisible}
             showArrows={true}
             handlePreviousClick={handleAnnotationPrevious}

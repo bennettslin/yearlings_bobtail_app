@@ -68,7 +68,6 @@ const AnnotationPortalsBlockView = ({
                             <TextBlock
                                 inPortal={true}
                                 text={verseObject.lyric || verseObject.centre || verseObject[column]}
-                                // selectedDotKeys={annotationDotKeys}
                                 portalAnnotationIndex={annotationIndex}
                             />
                             <span className="text-span">{'\u201d'}</span>

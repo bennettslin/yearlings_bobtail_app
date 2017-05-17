@@ -37,7 +37,7 @@
     .dots-section-shown .dots-section,
     .annotation-shown .popup-content-wrapper .annotation-section,
     .carousel .selected-annotation .annotation-card,
-    .carousel .accessed-annotation:not(.selected-annotation) .carousel-annotation-title {
+    .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block {
 
         .access-highlighted {
 
@@ -71,7 +71,7 @@
             &:not(.portal-block) {
 
                 // Anchor is same element if lyrics, child element if dots section.
-                &.anchor-block, & .anchor-block {
+                &.text-anchor-block, & .text-anchor-block {
                     .text-span {
                         font-weight: bolder;
                         color: @access-link-colour;
@@ -124,8 +124,8 @@
             .accessed-annotation .annotation-section {
                 @colour: #dfd;
                 background-color: @colour;
-                .carousel-annotation-title {
-                    .anchor-block {
+                .annotation-title-block {
+                    .text-anchor-block {
                         text-shadow:
                         -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
                         @text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,

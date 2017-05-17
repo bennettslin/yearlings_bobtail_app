@@ -1,3 +1,45 @@
+/************
+ * CAROUSEL *
+ ************/
+
+.live-app.narrative .carousel-annotation.narrative,
+.live-app.backstory .carousel-annotation.backstory,
+.live-app.observation .carousel-annotation.observation,
+.live-app.pun .carousel-annotation.pun,
+.live-app.reference .carousel-annotation.reference,
+.live-app.songwriting .carousel-annotation.songwriting,
+.live-app.portal .carousel-annotation.portal,
+.live-app.afterword .carousel-annotation.afterword,
+.popup-content-wrapper.annotation {
+
+    min-width: @annotation-width + @carousel-annotation-padding * 2 + @carousel-annotation-side-margin * 2;
+
+    .annotation-title-block {
+        max-height: 2em; // Arbitrary value that's larger than its max height.
+    }
+
+    .dot-stanza-annotation-title {
+        min-height: 3em;
+    }
+}
+
+.live-app.narrative .annotation-card.narrative,
+.live-app.backstory .annotation-card.backstory,
+.live-app.observation .annotation-card.observation,
+.live-app.pun .annotation-card.pun,
+.live-app.reference .annotation-card.reference,
+.live-app.songwriting .annotation-card.songwriting,
+.live-app.portal .annotation-card.portal,
+.live-app.afterword .annotation-card.afterword {
+
+    min-height: @annotation-dot-diameter;
+    max-height: 500px; // Arbitrary large number.
+    margin: 5px 0;
+    padding: 5px;
+    opacity: 1;
+    box-shadow: 0 1px 1px 1px @box-shadow-colour;
+}
+
 /***************
  * DOT STANZAS *
  ***************/
@@ -12,6 +54,7 @@
 .live-app.afterword .dot-stanza.afterword {
 
     max-width: 720px;
+    margin-top: @lyrics-unit-margin;
 
     .button {
         width: @app-icon-diameter;
@@ -20,11 +63,6 @@
 
     &:not(:first-child) {
         margin-left: @stanza-block-margin;
-    }
-
-    // In lyrics, not in carousel.
-    &.dot-stanza {
-        margin-top: @lyrics-unit-margin;
     }
 }
 
@@ -104,31 +142,15 @@
 
 .anchor-block.in-dots-section,
 .anchor-block.is-wiki,
-
-.live-app.narrative .dot-anchor-block.narrative,
-.live-app.backstory .dot-anchor-block.backstory,
-.live-app.observation .dot-anchor-block.observation,
-.live-app.pun .dot-anchor-block.pun,
-.live-app.reference .dot-anchor-block.reference,
-.live-app.songwriting .dot-anchor-block.songwriting,
-.live-app.portal .dot-anchor-block.portal,
-.live-app.afterword .dot-anchor-block.afterword {
+.popup-content-wrapper.annotation {
 
     // Default.
     .underline-bar {
         background-color: @lyric-underline-disabled-colour;
     }
 
-    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated {
+    &.anchor-block:not(.selected) {
         cursor: pointer;
-    }
-
-    // TODO: Still messy here?
-    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated, &.dot-anchor-block:not(.selected) {
-
-        &:not(.dot-anchor-block) .dot, &.dot-anchor-block .button-background {
-            border: @dot-border solid @lyric-underline-enabled-colour;
-        }
 
         .text-span {
             color: @lyric-link-colour;
@@ -149,6 +171,11 @@
         .underline-bar {
             background-color: @lyric-underline-enabled-colour;
         }
+
+        &.text-anchor-block .dot,
+        &.dot-anchor-block .button-background {
+            border: @dot-border solid @lyric-underline-enabled-colour;
+        }
     }
 
     &.selected {
@@ -156,13 +183,14 @@
             color: @selected-annotation-text-colour;
         }
 
-        &:not(.dot-anchor-block) .dot, &.dot-anchor-block .button-background {
-            border: @dot-border solid @selected-annotation-underline-colour;
-            background-color: @deselected-dot-colour;
-        }
-
         .underline-bar {
             background-color: @selected-annotation-underline-colour;
+        }
+
+        &.text-anchor-block .dot,
+        &.dot-anchor-block .button-background {
+            border: @dot-border solid @selected-annotation-underline-colour;
+            background-color: @deselected-dot-colour;
         }
     }
 }

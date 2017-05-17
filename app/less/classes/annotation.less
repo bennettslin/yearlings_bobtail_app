@@ -34,6 +34,38 @@
     }
 }
 
+.selected-annotation {
+
+    /**
+     * Not using mixin here so that text shadow applies only to annotation
+     * title and not to annotation card.
+     */
+    .annotation-section {
+        @colour: #ffe;
+        background-color: @colour;
+        .annotation-title-block {
+            .text-anchor-block {
+                text-shadow:
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @colour;
+            }
+        }
+    }
+}
+
+.annotation-title-block {
+    text-align: center;
+
+    transition: max-height 0.2s;
+    overflow: hidden;
+    max-height: 0;
+
+    // FIXME: Make text shadow transparent?
+    // .text-shadow-mixin(transparent);
+}
+
 .annotation-title {
     text-align: center;
 }
@@ -59,22 +91,6 @@
         position: absolute;
         height: @annotation-dot-diameter;
     }
-}
-
-.live-app.narrative .annotation-card.narrative,
-.live-app.backstory .annotation-card.backstory,
-.live-app.observation .annotation-card.observation,
-.live-app.pun .annotation-card.pun,
-.live-app.reference .annotation-card.reference,
-.live-app.songwriting .annotation-card.songwriting,
-.live-app.portal .annotation-card.portal,
-.live-app.afterword .annotation-card.afterword {
-    min-height: @annotation-dot-diameter;
-    max-height: 500px; // Arbitrary large number.
-    margin: 5px 0;
-    padding: 5px;
-    opacity: 1;
-    box-shadow: 0 1px 1px 1px @box-shadow-colour;
 }
 
 // Override if in carousel and hidden by single lyric column.

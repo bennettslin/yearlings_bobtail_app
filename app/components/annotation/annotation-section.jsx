@@ -36,38 +36,38 @@ const AnnotationSectionView = ({
 
 ...other }) => (
     <div className="section annotation-section">
-        {title !== DOT_STANZA_CONSTANT && (
 
-            inCarousel ?
-                <div
-                    className="carousel-annotation-title"
-                    onClick={handleTitleClick}
-                >
-                    <a className={classnames(
+        {title === DOT_STANZA_CONSTANT ?
+
+            <div className="annotation-title-block dot-stanza-annotation-title">
+                <div className="annotation-title">
+                    <DotAnchorBlock
+                        isSelected={isSelectedAnnotation}
+                        accessHighlighted={isAccessedAnnotation}
+                        dotKeys={other.popupAnnotation.dotKeys}
+                        handleDotAnchorSelect={handleTitleClick}
+                    />
+                </div>
+            </div> :
+
+            // TODO: Ideally this would use the actual AnchorBlock component.
+            <div className="annotation-title-block" >
+                <a className={classnames(
                         'annotation-title',
                         'anchor-block',
-                        { 'selected': isSelectedAnnotation,
+                        'text-anchor-block',
+                        other.popupAnnotation.dotKeys,
+                        { 'selected': inCarousel ? isSelectedAnnotation : true,
                           'access-highlighted': isAccessedAnnotation }
-                    )}>
-                        <span className="underline-bar"></span>
-                        <span className="text-span">{`\u201c${title}\u201d`}</span>
-                    </a>
-                </div> :
-
-                <h2 className="annotation-title">
-                    {`\u201c${title}\u201d`}
-                </h2>
-        )}
-        {title === DOT_STANZA_CONSTANT && (
-            <div className="carousel-annotation-title">
-                <DotAnchorBlock
-                    isSelected={isSelectedAnnotation}
-                    accessHighlighted={isAccessedAnnotation}
-                    dotKeys={other.popupAnnotation.dotKeys}
-                    handleDotAnchorSelect={handleTitleClick}
-                />
+                        )}
+                    onClick={handleTitleClick}
+                >
+                    <span className="underline-bar"></span>
+                    <span className="text-span">{`\u201c${title}\u201d`}</span>
+                </a>
             </div>
-        )}
+        }
+
         <div className="cards-block">
             <AnnotationUnit {...other}
             />

@@ -110,13 +110,14 @@ class DotButtonView extends Component {
             )}>
                 {inDotsSection &&
                     <a
-                        className="dot-key"
+                        className="dot-section-anchor"
                         onClick={e => this._handleTextContainerClick(e)}
                     >
                         <span className={classnames(
                             'anchor-block',
+                            'text-anchor-block',
                             'in-dots-section',
-                            { 'is-not-interactivated': !isInteractivated }
+                            { 'selected': isInteractivated }
                         )}>
                             <span className="underline-bar"></span>
                             <span className="text-span">{dotKey}</span>
