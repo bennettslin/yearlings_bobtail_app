@@ -7,10 +7,10 @@ import { DOT_DESCRIPTIONS } from '../../helpers/constants'
  * CONTAINER *
  *************/
 
-const DotButton = ({
+const DotToggleButton = ({
 
     dotIndex,
-    handleDotAnchorSelect,
+    handleDotButtonClick,
     handleDotToggle,
     handlePortalDotSelect,
 
@@ -21,8 +21,8 @@ const DotButton = ({
 
     let handleClick
 
-    if (handleDotAnchorSelect) {
-        handleClick = !isSelected && (e => handleDotAnchorSelect(e, dotKey))
+    if (handleDotButtonClick) {
+        handleClick = !isSelected && (e => handleDotButtonClick(e, dotKey))
 
     } else if (handleDotToggle) {
         handleClick = e => handleDotToggle(e, dotIndex)
@@ -32,7 +32,7 @@ const DotButton = ({
     }
 
     return (
-        <DotButtonView {...other}
+        <DotToggleButtonView {...other}
             handleClick={handleClick}
         />
     )
@@ -42,7 +42,7 @@ const DotButton = ({
  * PRESENTATION *
  ****************/
 
-class DotButtonView extends Component {
+class DotToggleButtonView extends Component {
 
     constructor(props) {
         super(props)
@@ -144,4 +144,4 @@ class DotButtonView extends Component {
     }
 }
 
-export default DotButton
+export default DotToggleButton

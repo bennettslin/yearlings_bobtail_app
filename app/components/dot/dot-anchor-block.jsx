@@ -20,6 +20,7 @@ const DotAnchorBlockView = ({
     dotKeys,
     isSelected,
     accessHighlighted,
+    handleDotButtonClick,
 
 ...other }) => (
 
@@ -34,6 +35,7 @@ const DotAnchorBlockView = ({
         <DotButton {...other}
             dotKeys={dotKeys}
             isSelected={isSelected}
+            handleDotButtonClick={!isSelected && handleDotButtonClick}
         />
     </div>
 )

@@ -45,7 +45,7 @@ const AnnotationSectionView = ({
                         isSelected={isSelectedAnnotation}
                         accessHighlighted={isAccessedAnnotation}
                         dotKeys={other.popupAnnotation.dotKeys}
-                        handleDotAnchorSelect={handleTitleClick}
+                        handleDotButtonClick={handleTitleClick}
                     />
                 </div>
             </div> :
@@ -53,9 +53,9 @@ const AnnotationSectionView = ({
             // TODO: Ideally this would use the actual AnchorBlock component.
             <div className="annotation-title-block" >
                 <a className={classnames(
-                        'annotation-title',
                         'anchor-block',
                         'text-anchor-block',
+                        'annotation-title',
                         other.popupAnnotation.dotKeys,
                         { 'selected': inCarousel ? isSelectedAnnotation : true,
                           'access-highlighted': isAccessedAnnotation }

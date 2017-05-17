@@ -55,7 +55,7 @@ const AnnotationPortalsBlockView = ({
                     <div className="portal-column button-portal-column">
                         <DotButton
                             dotKey={PORTAL}
-                            handlePortalDotSelect={handleClick}
+                            handleDotButtonClick={handleClick}
                         />
                     </div>
                     <div className="portal-column text-portal-column">
