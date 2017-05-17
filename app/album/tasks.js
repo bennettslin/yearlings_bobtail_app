@@ -7,13 +7,14 @@ module.exports = [
     },
 
     {
-        taskName: `Refactor animated dots styling.`,
+        taskName: `Refactor dots stanzas.`,
         workedHours: 0,
         neededHours: 3
     },
 
+
     {
-        taskName: `Refactor dots stanzas.`,
+        taskName: `Refactor animated dots styling.`,
         workedHours: 0,
         neededHours: 3
     },

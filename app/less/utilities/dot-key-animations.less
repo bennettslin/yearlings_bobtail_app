@@ -1,0 +1,168 @@
+/***************
+ * DOT STANZAS *
+ ***************/
+
+.live-app.narrative .dot-stanza.narrative,
+.live-app.backstory .dot-stanza.backstory,
+.live-app.observation .dot-stanza.observation,
+.live-app.pun .dot-stanza.pun,
+.live-app.reference .dot-stanza.reference,
+.live-app.songwriting .dot-stanza.songwriting,
+.live-app.portal .dot-stanza.portal,
+.live-app.afterword .dot-stanza.afterword {
+
+    max-width: 720px;
+
+    .button {
+        width: @app-icon-diameter;
+        height: @app-icon-diameter;
+    }
+
+    &:not(:first-child) {
+        margin-left: @stanza-block-margin;
+    }
+
+    // In lyrics, not in carousel.
+    &.dot-stanza {
+        margin-top: @lyrics-unit-margin;
+    }
+}
+
+/***************
+ * DOT ANCHORS *
+ ***************/
+
+// This is the one source of truth for how dot anchors are ordered!
+.live-app.portal .dot-anchor-block:not(.selected) .button-background.portal {
+    background-color: @portal-dot-colour;
+}
+.live-app.observation .dot-anchor-block:not(.selected) .button-background.observation {
+    background-color: @observation-dot-colour;
+}
+.live-app.backstory .dot-anchor-block:not(.selected) .button-background.backstory {
+    background-color: @backstory-dot-colour;
+}
+.live-app.reference .dot-anchor-block:not(.selected) .button-background.reference {
+    background-color: @reference-dot-colour;
+}
+.live-app.pun .dot-anchor-block:not(.selected) .button-background.pun {
+    background-color: @pun-dot-colour;
+}
+.live-app.narrative .dot-anchor-block:not(.selected) .button-background.narrative {
+    background-color: @narrative-dot-colour;
+}
+.live-app.songwriting .dot-anchor-block:not(.selected) .button-background.songwriting {
+    background-color: @songwriting-dot-colour;
+}
+.live-app.afterword .dot-anchor-block:not(.selected) .button-background.afterword {
+    background-color: @afterword-dot-colour;
+}
+
+/********
+ * DOTS *
+ ********/
+
+.live-app.narrative .dot.narrative,
+.live-app.backstory .dot.backstory,
+.live-app.observation .dot.observation,
+.live-app.pun .dot.pun,
+.live-app.reference .dot.reference,
+.live-app.songwriting .dot.songwriting,
+.live-app.portal .dot.portal,
+.live-app.afterword .dot.afterword {
+
+    transform: scale(1);
+    border: @dot-border solid @dot-border-colour;
+
+    &:not(:last-child) {
+        margin-right: 1px;
+    }
+
+    &.in-lyric {
+        width: @lyric-anchor-dot-diameter;
+        height: @lyric-anchor-dot-diameter;
+    }
+
+    &.in-card {
+        width: @annotation-dot-diameter;
+        height: @annotation-dot-diameter;
+    }
+}
+
+/*****************
+ * ANCHOR BLOCKS *
+ *****************/
+
+.live-app.narrative .anchor-block.narrative,
+.live-app.backstory .anchor-block.backstory,
+.live-app.observation .anchor-block.observation,
+.live-app.pun .anchor-block.pun,
+.live-app.reference .anchor-block.reference,
+.live-app.songwriting .anchor-block.songwriting,
+.live-app.portal .anchor-block.portal,
+.live-app.afterword .anchor-block.afterword,
+
+.anchor-block.in-dots-section,
+.anchor-block.is-wiki,
+
+.live-app.narrative .dot-anchor-block.narrative,
+.live-app.backstory .dot-anchor-block.backstory,
+.live-app.observation .dot-anchor-block.observation,
+.live-app.pun .dot-anchor-block.pun,
+.live-app.reference .dot-anchor-block.reference,
+.live-app.songwriting .dot-anchor-block.songwriting,
+.live-app.portal .dot-anchor-block.portal,
+.live-app.afterword .dot-anchor-block.afterword {
+
+    // Default.
+    .underline-bar {
+        background-color: @lyric-underline-disabled-colour;
+    }
+
+    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated {
+        cursor: pointer;
+    }
+
+    // TODO: Still messy here?
+    &.not-in-portal:not(.selected), &.in-dots-section.is-not-interactivated, &.dot-anchor-block:not(.selected) {
+
+        &:not(.dot-anchor-block) .dot, &.dot-anchor-block .button-background {
+            border: @dot-border solid @lyric-underline-enabled-colour;
+        }
+
+        .text-span {
+            color: @lyric-link-colour;
+        }
+
+        &:hover {
+            .text-span {
+                color: @lyric-hover-colour;
+            }
+        }
+
+        &:active {
+            .text-span {
+                color: @lyric-active-colour;
+            }
+        }
+
+        .underline-bar {
+            background-color: @lyric-underline-enabled-colour;
+        }
+    }
+
+    &.selected {
+        .text-span {
+            color: @selected-annotation-text-colour;
+        }
+
+        &:not(.dot-anchor-block) .dot, &.dot-anchor-block .button-background {
+            border: @dot-border solid @selected-annotation-underline-colour;
+            background-color: @deselected-dot-colour;
+        }
+
+        .underline-bar {
+            background-color: @selected-annotation-underline-colour;
+        }
+    }
+}

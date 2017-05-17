@@ -24,7 +24,7 @@
      * bottom dot stanza can override it when faded out.
      */
     &:not(:first-child):not(.subsequent) {
-        .stanza-block:not(.dots-stanza) {
+        .stanza-block:not(.dot-stanza) {
             margin-top: @lyrics-unit-margin;
         }
     }
@@ -71,7 +71,7 @@
     max-width: 720px;
 
     // Dots stanza will have this style only if not hidden.
-    &:not(.dots-stanza):not(:first-child) {
+    &:not(.dot-stanza):not(:first-child) {
         margin-left: @stanza-block-margin;
     }
 

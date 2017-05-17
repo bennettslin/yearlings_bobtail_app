@@ -1,0 +1,57 @@
+.anchor-block {
+    position: relative;
+
+    /**
+     * Stupid hack to keep dots block and underline bar aligned in right column
+     * when anchor breaks onto new line.
+     */
+    &:before {
+        content: 'a';
+        opacity: 0;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .dots-block {
+        position: absolute;
+        left: -@lyric-anchor-dot-diameter * 0.2;
+        top: -@lyric-anchor-dot-diameter * 0.2;
+    }
+
+    // For dev purposes.
+    // &.todo {
+    //     color: #c00;
+    //
+    //     &:hover {
+    //         color: #d33;
+    //     }
+    //
+    //     &:active {
+    //         color: #f66;
+    //     }
+    //
+    //     // Make underline red.
+    //     .underline-bar {
+    //             background-color: mix(red, white, 50%);
+    //     }
+    // }
+}
+
+.underline-bar {
+    transition: background-color 0.15s;
+
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 0;
+    left: 0;
+}
+
+.dot-anchor-block {
+    position: relative;
+
+    .underline-bar {
+        height: 25%;
+        bottom: -10%;
+    }
+}

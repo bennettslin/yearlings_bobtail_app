@@ -10,7 +10,7 @@ import { DOT_DESCRIPTIONS } from '../../helpers/constants'
 const DotButton = ({
 
     dotIndex,
-    handleDotStanzaSelect,
+    handleDotAnchorSelect,
     handleDotToggle,
     handlePortalDotSelect,
 
@@ -21,8 +21,8 @@ const DotButton = ({
 
     let handleClick
 
-    if (handleDotStanzaSelect) {
-        handleClick = !isSelected && (e => handleDotStanzaSelect(e, dotKey))
+    if (handleDotAnchorSelect) {
+        handleClick = !isSelected && (e => handleDotAnchorSelect(e, dotKey))
 
     } else if (handleDotToggle) {
         handleClick = e => handleDotToggle(e, dotIndex)
@@ -81,7 +81,7 @@ class DotButtonView extends Component {
 
             // From props.
             dotKey,
-            dotStanzaKeys,
+            dotKeys,
             accessHighlighted,
             inDotsSection,
             isSelected,
@@ -125,8 +125,8 @@ class DotButtonView extends Component {
                 }
                 <Button
                     buttonClass="dot"
-                    buttonName={dotStanzaKeys ? 'dots-stanza' : undefined}
-                    iconClass={dotKey || dotStanzaKeys}
+                    buttonName={dotKeys ? 'dot-stanza' : undefined}
+                    iconClass={dotKey || dotKeys}
                     isEnabled={inDotsSection || !isSelected}
                     isDeselected={inDotsSection ? !isSelected : undefined}
                     extraChild={dotDescription}

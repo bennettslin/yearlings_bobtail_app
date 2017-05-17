@@ -1,47 +1,35 @@
 import React from 'react'
 import classnames from 'classnames'
-import DotButton from '../dot/dot-button'
+import DotAnchorBlock from '../dot/dot-anchor-block'
 
 /*************
  * CONTAINER *
  *************/
-
-/**
- * FIXME: Now that this component is used both for dot stanzas and for carousel
- * titles, it is *really* messy. Consider refactoring.
- */
 
 const DotStanza = ({
 
     dotStanzaObject,
     selectedAnnotationIndex,
     accessedAnnotationIndex,
-
-    // Passed from carousel.
-    isSelectedAnnotation,
-    isAccessedAnnotation,
-
     handleLyricAnnotationSelect,
-    handleTitleClick,
 
 ...other }) => {
 
     const { annotationIndex,
-            dotKeys: annotationDotKeys } = dotStanzaObject,
+            dotKeys } = dotStanzaObject,
 
-        isSelected = typeof isSelectedAnnotation === 'boolean' ? isSelectedAnnotation : annotationIndex === selectedAnnotationIndex,
-        accessHighlighted = typeof isAccessedAnnotation === 'boolean' ? isAccessedAnnotation : accessedAnnotationIndex === annotationIndex,
+        isSelected = annotationIndex === selectedAnnotationIndex,
+        accessHighlighted = annotationIndex === accessedAnnotationIndex,
 
-        // It's either in the carousel annotation title or a dots staza.
-        handleDotStanzaSelect = other.inCarousel ? handleTitleClick : e => handleLyricAnnotationSelect(e, annotationIndex)
+        handleDotAnchorSelect = e => handleLyricAnnotationSelect(e, annotationIndex)
 
-    return (annotationDotKeys &&
+    return (
         <DotStanzaView {...other}
-            annotationIndex={annotationIndex}
             isSelected={isSelected}
-            dotStanzaKeys={annotationDotKeys}
-            handleDotStanzaSelect={handleDotStanzaSelect}
             accessHighlighted={accessHighlighted}
+            dotKeys={dotKeys}
+            annotationIndex={annotationIndex}
+            handleDotAnchorSelect={handleDotAnchorSelect}
         />
     )
 }
@@ -49,30 +37,26 @@ const DotStanza = ({
 const DotStanzaView = ({
 
     // From controller.
-    inCarousel,
-    isSelected,
-    dotStanzaKeys,
-    accessHighlighted,
+    dotKeys,
     annotationIndex,
 
 ...other }) => (
 
     <div className={classnames(
         'stanza-block',
-        'dots-stanza',
-        dotStanzaKeys,
-        { 'in-lyrics': !inCarousel,
-          'selected': isSelected,
-          'access-highlighted': accessHighlighted && !isSelected }
+        'dot-stanza',
+
+        // Show and hide dot stanza block in and out based on dot keys.
+        dotKeys
     )}>
         <div className={classnames(
-            'stanza',
+            'dot-stanza-anchor-block',
+
+            // Scroll to dot stanza block upon annotation selection.
             annotationIndex && `annotation-${annotationIndex}`
         )}>
-            <span className="underline-bar"></span>
-            <DotButton {...other}
-                dotStanzaKeys={dotStanzaKeys}
-                isSelected={isSelected}
+            <DotAnchorBlock {...other}
+                dotKeys={dotKeys}
             />
         </div>
     </div>
