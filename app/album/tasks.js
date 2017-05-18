@@ -1,11 +1,4 @@
 module.exports = [
-
-    {
-        taskName: `Consolidate various dot buttons`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     {
         taskName: `Fix access styling, including annotation card titles and portal button borders.`,
         workedHours: 0,
@@ -1866,7 +1859,7 @@ module.exports = [
     },
     {
         taskName: `Dot stanza as annotation card title, with much further work to do...`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 1
     },
     {
@@ -1878,5 +1871,10 @@ module.exports = [
         taskName: `Refactor animated dots styling.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Consolidate various dot buttons`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

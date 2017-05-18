@@ -10,26 +10,11 @@ import { DOT_DESCRIPTIONS } from '../../helpers/constants'
 const DotToggleButton = ({
 
     dotIndex,
-    handleDotButtonClick,
     handleDotToggle,
-    handlePortalDotSelect,
 
 ...other }) => {
 
-    const { dotKey,
-            isSelected } = other
-
-    let handleClick
-
-    if (handleDotButtonClick) {
-        handleClick = !isSelected && (e => handleDotButtonClick(e, dotKey))
-
-    } else if (handleDotToggle) {
-        handleClick = e => handleDotToggle(e, dotIndex)
-
-    } else if (handlePortalDotSelect) {
-        handleClick = handlePortalDotSelect
-    }
+    const handleClick = e => handleDotToggle(e, dotIndex)
 
     return (
         <DotToggleButtonView {...other}
@@ -81,9 +66,7 @@ class DotToggleButtonView extends Component {
 
             // From props.
             dotKey,
-            dotKeys,
             accessHighlighted,
-            inDotsSection,
             isSelected,
 
             // From controller.
@@ -92,7 +75,7 @@ class DotToggleButtonView extends Component {
         } = this.props,
         { isInteractivated } = this.state,
 
-        dotDescription = inDotsSection && (
+        dotDescription = (
             <div className={classnames(
                 'dot-description',
                 { 'interactivated': isInteractivated }
@@ -107,23 +90,21 @@ class DotToggleButtonView extends Component {
             <div className={classnames(
                 'dot-container'
             )}>
-                {inDotsSection &&
-                    <a
-                        className="dot-section-anchor"
-                        onClick={e => this._handleTextContainerClick(e)}
-                    >
-                        <span className={classnames(
-                            'anchor-block',
-                            'text-anchor-block',
-                            'in-dots-section',
-                            { 'selected': isInteractivated,
-                              'access-highlighted': accessHighlighted }
-                        )}>
-                            <span className="underline-bar"></span>
-                            <span className="text-span">{dotKey}</span>
-                        </span>
-                    </a>
-                }
+                <a
+                    className="dot-section-anchor"
+                    onClick={e => this._handleTextContainerClick(e)}
+                >
+                    <span className={classnames(
+                        'anchor-block',
+                        'text-anchor-block',
+                        'in-dots-section',
+                        { 'selected': isInteractivated,
+                          'access-highlighted': accessHighlighted }
+                    )}>
+                        <span className="underline-bar"></span>
+                        <span className="text-span">{dotKey}</span>
+                    </span>
+                </a>
                 <div className={classnames(
                     'anchor-block',
                     'dot-anchor-block',
@@ -131,10 +112,8 @@ class DotToggleButtonView extends Component {
                 )}>
                     <Button
                         buttonClass="dot"
-                        buttonName={dotKeys ? 'dot-stanza' : undefined}
-                        iconClass={dotKey || dotKeys}
-                        isEnabled={inDotsSection || !isSelected}
-                        isDeselected={inDotsSection ? !isSelected : undefined}
+                        iconClass={dotKey}
+                        isDeselected={!isSelected}
                         extraChild={dotDescription}
                         handleClick={handleClick}
                     />
