@@ -1,5 +1,16 @@
 module.exports = [
     {
+        taskName: `Consolidate dots in text so that they can also animate.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Make popup annotation styling consistent with carousel annotation.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Only show wiki anchor if reference is selected.`,
         workedHours: 0,
         neededHours: 1
@@ -12,11 +23,6 @@ module.exports = [
 
     {
         taskName: `Nav animation when overlay is shown doesn't work?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Make popup annotation styling consistent with carousel annotation.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -1876,5 +1882,10 @@ module.exports = [
         taskName: `Fix access styling, including annotation card titles and portal button borders.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Annotation title styling.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

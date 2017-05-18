@@ -163,11 +163,19 @@
             .text-span {
                 color: @lyric-hover-colour;
             }
+
+            .underline-bar {
+                animation: bounceHover 0.2s;
+            }
         }
 
         &:active {
             .text-span {
                 color: @lyric-active-colour;
+            }
+
+            .underline-bar {
+                transform: scale(0.9);
             }
         }
 

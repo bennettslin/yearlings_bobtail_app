@@ -1,7 +1,5 @@
 # Carousel notes
 
-* Annotation title styling.
-
 * Carousel scroll home doesn't work? When selecting new song.
 
 * Scroll for first and last carousel annotations is wonky.
