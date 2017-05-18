@@ -57,6 +57,7 @@ const DotBlockView = ({
                         key={index}
                         className={classnames(
                             'dot',
+                            // 'not-button',
                             dotKey,
                             { 'in-card': inAnnotationCard,
                               'in-lyric': other.inAnchor }

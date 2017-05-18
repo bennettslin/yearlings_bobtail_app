@@ -17,6 +17,7 @@ const DotButtonView = ({
 
     // From props.
     isSelected,
+    isSmall,
     dotKey,
     dotKeys,
     handleDotButtonClick
@@ -27,6 +28,7 @@ const DotButtonView = ({
         buttonName={dotKeys ? 'dot-stanza' : undefined}
         iconClass={dotKey || dotKeys}
         isEnabled={!isSelected}
+        isSmall={isSmall}
         handleClick={handleDotButtonClick}
     />
 )

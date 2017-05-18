@@ -13,7 +13,8 @@
 @carousel-toggle-mini-length: @overview-toggle-mini-width - 2px;
 
 @carousel-annotation-side-margin: 5px;
-@carousel-annotation-padding: 20px;
+@carousel-annotation-small-padding: 10px;
+@carousel-annotation-padding: 16px;
 @carousel-annotation-hidden-width: @carousel-annotation-padding * 2 - @carousel-annotation-side-margin * 0.5;
 
 @carousel-height-variable: @carousel-toggle-laptop-length + @dots-overview-padding;
@@ -135,8 +136,8 @@
 
     .annotation-section {
         width: @annotation-width + @carousel-annotation-padding * 2 + @carousel-annotation-side-margin;
-        margin: 10px @carousel-annotation-side-margin;
-        padding: @carousel-annotation-padding;
+        margin: @carousel-annotation-small-padding @carousel-annotation-side-margin;
+        padding: @carousel-annotation-small-padding @carousel-annotation-padding @carousel-annotation-padding;
         transition: background-color 0.2s;
     }
 
@@ -147,11 +148,6 @@
     &:first-child {
         padding-left: @carousel-toggle-laptop-length;
     }
-}
-
-.dot-stanza-annotation-title {
-    display: flex;
-    justify-content: center;
 }
 
 // Override if hidden by single lyric column.

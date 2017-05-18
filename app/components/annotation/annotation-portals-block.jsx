@@ -49,6 +49,7 @@ const AnnotationPortalsBlockView = ({
                     key={index}
                     className={classnames(
                         'portal-block',
+                        'dot-anchor-block',
                         { 'access-highlighted': accessHighlighted }
                     )}
                 >

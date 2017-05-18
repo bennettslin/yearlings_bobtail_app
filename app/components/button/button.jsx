@@ -16,6 +16,7 @@ const Button = ({
     isSelected,
     isDeselected,
     isLarge,
+    isSmall,
     extraChild,
     handleClick
 
@@ -25,8 +26,9 @@ const Button = ({
             'button',
             buttonName && `${buttonName}-button`,
             buttonClass,
-            { 'large': isLarge },
-            { 'custom-shape': isCustomShape,
+            { 'large': isLarge,
+              'small': isSmall,
+              'custom-shape': isCustomShape,
               'custom-size': isCustomSize,
               'enabled': isEnabled,
               'selected': isSelected,
@@ -42,7 +44,7 @@ const Button = ({
             {iconText}
         </div>
         {accessKey &&
-            <div className="access-icon">
+            <div className="access-button-icon">
                 {accessKey}
             </div>
         }
@@ -68,6 +70,7 @@ Button.propTypes = {
     isSelected: PropTypes.bool,
     isDeselected: PropTypes.bool,
     isLarge: PropTypes.bool,
+    isSmall: PropTypes.bool,
     extraChild: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.element

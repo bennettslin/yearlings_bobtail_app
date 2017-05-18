@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Fix access styling, including annotation card titles and portal button borders.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Only show wiki anchor if reference is selected.`,
         workedHours: 0,
         neededHours: 1
@@ -1876,5 +1871,10 @@ module.exports = [
         taskName: `Consolidate various dot buttons`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Fix access styling, including annotation card titles and portal button borders.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

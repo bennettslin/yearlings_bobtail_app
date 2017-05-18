@@ -1,77 +1,44 @@
-.access-icon {
-    @access-icon-edge: 20px;
+@temp-access-background: #dfd;
 
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
-    width: @access-icon-edge;
-    height: @access-icon-edge;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border: 2px solid green;
-    border-radius: 3px;
-
-    background-color: #bfb;
-
-    visibility: hidden;
-}
+/***********
+ * ANCHORS *
+ ***********/
 
 .accessed-on {
 
-    .access-icon {
-        visibility: visible;
-    }
+    // Show access highlight of dots and text...
 
-    // Show dot description in dots section.
-    .access-highlighted {
-        .dot-description {
-            opacity: 1;
-        }
-    }
+    // ... in dots section whenever...
+    .dots-section,
 
-    .dots-section-hidden.nav-collapsed.is-not-verse-interactivated .lyrics-section,
-    .dots-section-shown .dots-section,
-    .annotation-shown .popup-content-wrapper .annotation-section,
+    // ... in carousel anchor when selected...
     .carousel .selected-annotation .annotation-card,
-    .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block {
+
+    // ... in carousel title only when...
+    .dots-section-hidden.is-not-verse-interactivated .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
+
+    // ... in lyrics only when...
+    .dots-section-hidden.nav-collapsed.is-not-verse-interactivated .lyrics-section,
+
+    // ... in popup annotation only when...
+    .annotation-shown .popup-content-wrapper .annotation-card {
 
         .access-highlighted {
 
-            // Dots and dot stanzas in lyrics section.
-            // .dot {
-            //     &:not(.button), & .button-background {
-            //         border: @dot-border solid @access-underline-colour;
-            //     }
-            // }
-
-            // Dots in dots section.
-            // &.dot-container {
-            //     .dot {
-            //         &:not(.button), & .button-background {
-            //             border: @dot-border solid @access-link-colour;
-            //         }
-            //     }
-            // }
-
-            &:not(.dot-anchor-block)&:not(.portal-block):not(.dot-container) .dot, &.dot-anchor-block .button-background, &.portal-block .button-background {
+            &.text-anchor-block .dot, &.dot-anchor-block .button-background {
                 border: @dot-border solid @access-underline-colour;
             }
 
             /**
-             * Anchors in both lyrics and dots section. This doesn't need to
-             * care whether the anchor is shown as anchor or text, because the
-             * access logic will skip over the anchor if it's shown as text.
+             * Text anchors in both lyrics and dots section. This doesn't need
+             * to care whether the anchor is shown as anchor or text, because
+             * the access logic will skip over the anchor if it's shown as text.
              *
-             * Also, limit to selected annotation in carousel.
+             * Also, do not style text anchors in portals.
              */
             &:not(.portal-block) {
 
-                // Anchor is same element if lyrics, child element if dots section.
-                &.text-anchor-block, & .text-anchor-block {
+                &.text-anchor-block {
                     .text-span {
                         font-weight: bolder;
                         color: @access-link-colour;
@@ -108,12 +75,12 @@
         }
     }
 
-    .annotation-hidden.dots-section-hidden.nav-collapsed.is-not-verse-interactivated {
+    .dots-section-hidden.is-not-verse-interactivated {
 
         // Lyrics annotation is accessed.
-        // .lyrics-section {
-            // background-color: rgba(200, 250, 200, 0.5);
-        // }
+        .lyrics-section {
+            background-color: rgba(200, 250, 200, 0.5);
+        }
 
         // Annotation in carousel is accessed.
         .carousel {
@@ -122,8 +89,9 @@
              * title and not to annotation card.
              */
             .accessed-annotation .annotation-section {
-                @colour: #dfd;
+                @colour: @temp-access-background;
                 background-color: @colour;
+
                 .annotation-title-block {
                     .text-anchor-block {
                         text-shadow:
@@ -149,21 +117,55 @@
     // Nav section is accessed.
     .nav-expanded {
         .nav-section {
-            background-color: #dfd;
+            background-color: @temp-access-background;
         }
     }
 
     // Dots section is accessed.
     .dots-section-shown.nav-collapsed {
         .dots-section {
-            background-color: #dfd;
+            background-color: @temp-access-background;
+
+            // Show dot description in dots section.
+            .access-highlighted {
+                .dot-description {
+                    opacity: 1;
+                }
+            }
         }
     }
 
     // Popup annotation section is accessed.
     .annotation-shown {
         .popup-content-wrapper .annotation-section {
-            background-color: #dfd;
+            background-color: @temp-access-background;
         }
     }
+
+    // Keyboard letter shown on accessible button.
+    .access-button-icon {
+        visibility: visible;
+    }
+}
+
+.access-button-icon {
+    @access-button-icon-edge: 20px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: @access-button-icon-edge;
+    height: @access-button-icon-edge;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid green;
+    border-radius: 3px;
+
+    background-color: #bfb;
+
+    visibility: hidden;
 }

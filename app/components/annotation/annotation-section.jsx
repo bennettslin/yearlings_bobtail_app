@@ -36,22 +36,18 @@ const AnnotationSectionView = ({
 
 ...other }) => (
     <div className="section annotation-section">
-
-        {title === DOT_STANZA_CONSTANT ?
-
-            <div className="annotation-title-block dot-stanza-annotation-title">
+        <div className="annotation-title-block">
+            {title === DOT_STANZA_CONSTANT ? (
                 <div className="annotation-title">
                     <DotAnchorBlock
+                        isSmall={true}
                         isSelected={isSelectedAnnotation}
                         accessHighlighted={isAccessedAnnotation}
                         dotKeys={other.popupAnnotation.dotKeys}
                         handleDotButtonClick={handleTitleClick}
                     />
                 </div>
-            </div> :
-
-            // TODO: Ideally this would use the actual AnchorBlock component.
-            <div className="annotation-title-block" >
+            ) : (
                 <a className={classnames(
                         'anchor-block',
                         'text-anchor-block',
@@ -65,9 +61,8 @@ const AnnotationSectionView = ({
                     <span className="underline-bar"></span>
                     <span className="text-span">{`\u201c${title}\u201d`}</span>
                 </a>
-            </div>
-        }
-
+            )}
+        </div>
         <div className="cards-block">
             <AnnotationUnit {...other}
             />
