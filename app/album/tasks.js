@@ -34,9 +34,9 @@ module.exports = [
     },
 
     {
-        taskName: `When switching to logue and carousel is on, then turning on nav in logue, should toggle off nav`,
+        taskName: `When switching to logue and carousel is on, then turning on nav in logue, should toggle off nav (be better about exempting.)`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
 
     // Bugs.
