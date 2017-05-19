@@ -130,29 +130,14 @@
     }
 }
 
-.overlay-shown {
-    .menu-field {
-        top: -@menu-height;
-    }
-
-    .audio-banner-custom-subfield {
-        top: -@menu-height - @audio-banner-custom-subfield-height - 2 * @audio-banner-custom-subfield-padding;
-    }
-}
-
-.tablet-width {
+.is-desktop {
     .overlay-shown {
-        .nav-custom-subfield {
-            top: -@nav-tablet-height - @menu-height;
+        .menu-field {
+            top: -@menu-height;
         }
-    }
-}
 
-
-.mini-width {
-    .overlay-shown {
-        .nav-custom-subfield {
-            top: -@nav-mini-height - @menu-height;
+        .audio-banner-custom-subfield {
+            top: -@menu-height - @audio-banner-custom-subfield-height - 2 * @audio-banner-custom-subfield-padding;
         }
     }
 }

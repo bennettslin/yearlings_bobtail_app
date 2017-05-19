@@ -14,13 +14,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-
-    {
-        taskName: `Nav animation when overlay is shown doesn't work?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     {
         taskName: `Make dot animation smoother.`,
         workedHours: 0,
@@ -1883,6 +1876,11 @@ module.exports = [
     },
     {
         taskName: `Changing song with lyric column up will show overview if just hidden.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Nav animation when overlay is shown doesn't work?`,
         workedHours: 1,
         neededHours: 1
     }
