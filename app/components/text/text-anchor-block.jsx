@@ -96,7 +96,7 @@ const AnchorBlockView = ({
                 { 'selected': isSelected,
                   'access-highlighted': accessHighlighted && !isSelected,
                   'portal-anchor': isPortalAnchor,
-                  'is-wiki': !!wikiIndex,
+                  'reference': !!wikiIndex,
                   'todo': hasTodo }
             )}
             onClick={handleClick}

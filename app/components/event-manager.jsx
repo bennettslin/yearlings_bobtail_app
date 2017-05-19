@@ -3,6 +3,9 @@ import scrollIntoView from 'scroll-into-view'
 import AccessManager from './access-manager'
 
 import { OVERVIEW_OPTIONS,
+
+         REFERENCE,
+
          DISABLED } from '../helpers/constants'
 
 import { getAnnotation } from '../helpers/album-view-helper'
@@ -195,8 +198,17 @@ class EventManager extends Component {
      **************/
 
     handleAnnotationWikiSelect(e, selectedWikiIndex, carouselAnnotationIndex) {
+
+        const isWikiEnabled = this.props.domProps.selectedDotKeys[REFERENCE]
+
+        // Don't register click if reference dot is deselected.
+        if (!isWikiEnabled) {
+            return false
+        }
+
         this.stopPropagation(e)
         this.props.selectWiki(selectedWikiIndex, carouselAnnotationIndex)
+        return true
     }
 
     handleAnnotationPortalSelect(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, selectedLyricColumnIndex) {

@@ -385,17 +385,17 @@ export const getPopupAnchorIndexForDirection = (
         const { popupAnchors } = annotation,
             popupAnchorsLength = popupAnchors.length
 
-        if (popupAnchorsLength < 2) {
-            return popupAnchorsLength
-        }
+        let returnIndex = initialPopupAnchorIndex,
+            counter = 0
 
-        let returnIndex = initialPopupAnchorIndex
+        // Consider each anchor index only once.
+        while (counter < popupAnchorsLength) {
 
-        // Skip over deselected popup anchors.
-        do {
+            // If no direction given, start at first index...
             if (typeof direction === 'undefined') {
                 direction = 0
 
+            // ... then proceed in forward direction.
             } else if (direction === 0) {
                 direction = 1
             }
@@ -403,20 +403,22 @@ export const getPopupAnchorIndexForDirection = (
             // Remember that annotations are 1-based.
             returnIndex = (returnIndex + popupAnchorsLength + direction - 1) % popupAnchorsLength + 1
 
-        /**
-         * Skip wiki anchors if wiki dot not selected, and portal anchors if
-         * portal dot not selected.
-         */
-     } while ((
-            (typeof popupAnchors[returnIndex - 1] === 'string' && !selectedDotKeys[REFERENCE]) ||
-            (typeof popupAnchors[returnIndex - 1] === 'object' && !selectedDotKeys[PORTAL])
-        ) && (direction === 0 || initialPopupAnchorIndex !== returnIndex))
+            /**
+             * It's valid if it's a wiki anchor and reference dot is selected,
+             * or it's a portal anchor and portal dot is selected.
+             */
+            if ((typeof popupAnchors[returnIndex - 1] === 'string' && selectedDotKeys[REFERENCE]) ||
+                (typeof popupAnchors[returnIndex - 1] === 'object' && selectedDotKeys[PORTAL])) {
 
-        return returnIndex
+                return returnIndex
+            }
+
+            counter++
+        }
     }
 
-
-    return initialPopupAnchorIndex
+    // There are no valid anchor indices to return.
+    return -1
 }
 
 export const getTasks = (selectedSong, tasks) => {
