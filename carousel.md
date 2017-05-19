@@ -10,3 +10,4 @@
 
 * When switching lyric column, carousel should scroll to appropriate annotation
 * Scrolling from portal.
+* Scrolling from shivaree to shivering

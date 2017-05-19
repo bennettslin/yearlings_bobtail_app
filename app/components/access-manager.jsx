@@ -188,7 +188,8 @@ class AccessManager extends Component {
             case ENTER: {
                 const { popupAnnotation } = props
 
-                if (popupAnnotation &&
+                if (accessedPopupAnchorIndex > 0 &&
+                    popupAnnotation &&
                     popupAnnotation.popupAnchors &&
                     popupAnnotation.popupAnchors.length) {
 

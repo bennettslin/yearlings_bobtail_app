@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Fix method to select annotation index for direction.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Consolidate dots in text so that they can also animate.`,
         workedHours: 0,
         neededHours: 1
@@ -8,17 +13,6 @@ module.exports = [
         taskName: `Make popup annotation styling consistent with carousel annotation.`,
         workedHours: 0,
         neededHours: 1
-    },
-
-    {
-        taskName: `Only show wiki anchor if reference is selected.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Prevent access of wiki or portal anchor if respective dot is unselected. (Confirm portal already works.)`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     {
@@ -1888,4 +1882,14 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Only show wiki anchor if reference is selected.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Prevent access of wiki or portal anchor if respective dot is unselected. (Confirm portal already works.)`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
