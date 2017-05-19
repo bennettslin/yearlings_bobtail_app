@@ -34,18 +34,7 @@ module.exports = [
     },
 
     {
-        taskName: `Changing song with lyric column up will show overview if just hidden.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `When switching to logue and carousel is on, then turning on nav in logue, should toggle off nav`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Align carousel annotation cards between edge and centre.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -1889,6 +1878,11 @@ module.exports = [
     },
     {
         taskName: `Prevent access of wiki or portal anchor if respective dot is unselected. (Confirm portal already works.)`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Changing song with lyric column up will show overview if just hidden.`,
         workedHours: 1,
         neededHours: 1
     }

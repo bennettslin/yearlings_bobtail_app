@@ -587,8 +587,11 @@ class App extends Component {
             newOverview = getOverview(this.props, selectedSongIndex),
             newState = {}
 
-        // If not selected from portal, show overview if hidden.
-        if (!selectedAnnotationIndex) {
+        /**
+         * If not selected from portal, show overview if hidden, and lyric
+         * column is not expanded.
+         */
+        if (!selectedAnnotationIndex && !this.state.isLyricExpanded) {
             this.selectOverview({
                 justShowIfHidden: true
             })
