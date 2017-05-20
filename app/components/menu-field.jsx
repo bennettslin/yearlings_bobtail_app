@@ -23,6 +23,7 @@ const MenuFieldView = ({
     scoresTipsOutsideMenu,
 
     title,
+    selectedTitleIndex,
 
     handleTitleSelect,
 
@@ -33,6 +34,7 @@ const MenuFieldView = ({
 
     const titleToggleProps = {
             title,
+            selectedTitleIndex,
             handleTitleSelect
         }
 

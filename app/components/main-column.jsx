@@ -42,6 +42,7 @@ const MainColumnView = ({
     selectedBookColumnIndex,
     selectedSongIndex,
     selectedCarouselIndex,
+    selectedTitleIndex,
 
     accessedOn,
     accessedSongIndex,
@@ -68,6 +69,7 @@ const MainColumnView = ({
             title,
             titleInAudio,
             scoresTipsOutsideMenu,
+            selectedTitleIndex,
 
             handleTitleSelect,
 

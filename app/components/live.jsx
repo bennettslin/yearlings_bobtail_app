@@ -80,6 +80,7 @@ const LiveView = ({
     selectedNavIndex,
     selectedBookColumnIndex,
     selectedCarouselIndex,
+    selectedTitleIndex,
     accessedOn,
     accessedSongIndex,
     accessedAnnotationIndex,
@@ -162,15 +163,26 @@ const LiveView = ({
 
 }) => {
 
-    const overviewPopupProps = {
-            isPhone,
-            isLogue,
-            selectedOverviewIndex,
+    const hideLyricColumn = showSingleLyricColumn && hasDoubleColumns,
+        timerInAudio = showOverlay && isPhone,
+        verseBarHidden = !isSelectedVerseAbove && !isSelectedVerseBelow,
+
+        annotationPopupProps = {
+            songs,
+            popupAnnotation,
+            selectedAnnotationIndex,
+            selectedCarouselIndex,
+            selectedScoreIndex,
+            selectedWikiIndex,
+            accessedPopupAnchorIndex,
+            handleAnnotationPrevious,
+            handleAnnotationNext,
             handlePopupContainerClick,
 
-            // For toggle in popup in phone.
-            handleOverviewToggle
+            handleAnnotationPortalSelect,
+            handleAnnotationWikiSelect
         },
+
         audioTimerProps = {
             isLogue,
             selectedTimePlayed
@@ -223,46 +235,34 @@ const LiveView = ({
                 titleInAudio={titleInAudio}
             />
         ),
-        mainColumnProps = {
-            isOverlaidAnnotation,
 
-            isPhone,
-            isDesktop,
-            titleInAudio,
-            isHiddenNav,
-            scoresTipsOutsideMenu,
-
-            scores,
+        carouselProps = {
             songs,
-            title,
-            bookStartingIndices,
-            showSingleBookColumn,
-            shrinkNavIcon,
+            annotations,
+            accessedAnnotationIndex,
+            selectedAnnotationIndex,
+            accessedPopupAnchorIndex,
 
-            selectedNavIndex,
-            selectedBookColumnIndex,
-            selectedDotsIndex,
-            selectedWikiUrl,
-            selectedSongIndex,
-            selectedTipsIndex,
-
-            selectedCarouselIndex,
-
-            accessedOn,
-            accessedSongIndex,
-
-            handleCarouselToggle,
-            handleDotsSectionToggle,
-            handleNavExpand,
-            handleNavSongSelect,
-            handleNavBookSelect,
-            handleTipsToggle,
-            handleTitleSelect,
-
-            audioBannerChild,
-            audioSectionChild
+            handleLyricAnnotationSelect,
+            handleAnnotationPrevious,
+            handleAnnotationNext,
+            handleAnnotationWikiSelect,
+            handleAnnotationPortalSelect
         },
-        verseBarHidden = !isSelectedVerseAbove && !isSelectedVerseBelow,
+        carouselChild = !isHiddenNav && (
+            <Carousel {...carouselProps} />
+        ),
+
+        dotsSectionProps = {
+            selectedDotKeys,
+            selectedDotsIndex,
+            accessedOn,
+            accessedDotIndex,
+            handlePopupContainerClick,
+            handleDotToggle,
+            stopPropagation
+        },
+
         lyricColumnProps = {
             deviceIndex,
             appMounted,
@@ -302,58 +302,6 @@ const LiveView = ({
             handleVerseElementSlide,
             handleScrollAfterLyricRerender
         },
-        scoresTipsSectionProps = {
-            isPhone,
-            selectedScoreIndex,
-            selectedTipsIndex,
-
-            handleScoreToggle,
-            handleTipsToggle
-        },
-        annotationPopupProps = {
-            songs,
-            popupAnnotation,
-            selectedAnnotationIndex,
-            selectedCarouselIndex,
-            selectedScoreIndex,
-            selectedWikiIndex,
-            accessedPopupAnchorIndex,
-            handleAnnotationPrevious,
-            handleAnnotationNext,
-            handlePopupContainerClick,
-
-            handleAnnotationPortalSelect,
-            handleAnnotationWikiSelect
-        },
-        dotsSectionProps = {
-            selectedDotKeys,
-            selectedDotsIndex,
-            accessedOn,
-            accessedDotIndex,
-            handlePopupContainerClick,
-            handleDotToggle,
-            stopPropagation
-        },
-        scorePopupProps = {
-            isPhone,
-            scores,
-            selectedScoreIndex,
-            selectedSongIndex,
-            scoreSectionRef,
-            handleScoreToggle,
-            handlePopupFocus
-        },
-        wikiPopupProps = {
-            selectedWikiIndex,
-            selectedWikiUrl,
-            wikiSectionRef,
-            handleWikiToggle,
-            handlePopupFocus
-        },
-        overviewButtonProps = {
-            selectedOverviewIndex,
-            handleOverviewToggle
-        },
 
         lyricExpandButtonChild = isLyricExpandable && (
             <div className="lyric-button-block expand-button-block">
@@ -365,26 +313,87 @@ const LiveView = ({
             </div>
         ),
 
-        timerInAudio = showOverlay && isPhone,
+        mainColumnProps = {
+            isOverlaidAnnotation,
 
-        carouselProps = {
+            isPhone,
+            isDesktop,
+            titleInAudio,
+            isHiddenNav,
+            scoresTipsOutsideMenu,
+
+            scores,
             songs,
-            annotations,
-            accessedAnnotationIndex,
-            selectedAnnotationIndex,
-            accessedPopupAnchorIndex,
+            title,
+            bookStartingIndices,
+            showSingleBookColumn,
+            shrinkNavIcon,
 
-            handleLyricAnnotationSelect,
-            handleAnnotationPrevious,
-            handleAnnotationNext,
-            handleAnnotationWikiSelect,
-            handleAnnotationPortalSelect
+            selectedNavIndex,
+            selectedBookColumnIndex,
+            selectedDotsIndex,
+            selectedWikiUrl,
+            selectedSongIndex,
+            selectedTipsIndex,
+            selectedCarouselIndex,
+            selectedTitleIndex,
+
+            accessedOn,
+            accessedSongIndex,
+
+            handleCarouselToggle,
+            handleDotsSectionToggle,
+            handleNavExpand,
+            handleNavSongSelect,
+            handleNavBookSelect,
+            handleTipsToggle,
+            handleTitleSelect,
+
+            audioBannerChild,
+            audioSectionChild
         },
-        carouselChild = !isHiddenNav && (
-            <Carousel {...carouselProps} />
-        ),
 
-        hideLyricColumn = showSingleLyricColumn && hasDoubleColumns
+        overviewButtonProps = {
+            selectedOverviewIndex,
+            handleOverviewToggle
+        },
+
+        overviewPopupProps = {
+            isPhone,
+            isLogue,
+            selectedOverviewIndex,
+            handlePopupContainerClick,
+
+            // For toggle in popup in phone.
+            handleOverviewToggle
+        },
+
+        scoresTipsSectionProps = {
+            isPhone,
+            selectedScoreIndex,
+            selectedTipsIndex,
+
+            handleScoreToggle,
+            handleTipsToggle
+        },
+
+        scorePopupProps = {
+            isPhone,
+            scores,
+            selectedScoreIndex,
+            selectedSongIndex,
+            scoreSectionRef,
+            handleScoreToggle,
+            handlePopupFocus
+        },
+
+        wikiPopupProps = {
+            selectedWikiIndex,
+            selectedWikiUrl,
+            wikiSectionRef,
+            handleWikiToggle,
+            handlePopupFocus
+        }
 
     return (
         <div className={classnames(

@@ -21,6 +21,7 @@ const TitleToggleView = ({
 
     // From props.
     title,
+    selectedTitleIndex,
     handleTitleSelect
 
 }) => (
@@ -31,7 +32,7 @@ const TitleToggleView = ({
                 isCustomSize={true}
                 accessKey={TITLE_TOGGLE_KEY}
                 handleClick={handleTitleSelect}
-                iconText={title}
+                iconText={title + selectedTitleIndex}
             />
         </div>
     </div>
