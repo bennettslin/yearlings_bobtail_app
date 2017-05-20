@@ -1,5 +1,5 @@
 import React from 'react'
-import TitleSection from './title/title-section'
+import TitleToggle from './title/title-toggle'
 
 /*************
  * CONTAINER *
@@ -31,7 +31,7 @@ const MenuFieldView = ({
 
 }) => {
 
-    const titleSectionProps = {
+    const titleToggleProps = {
             title,
             handleTitleSelect
         }
@@ -41,7 +41,7 @@ const MenuFieldView = ({
 
             {!titleInAudio &&
                 <div className="menu-subfield title-menu-subfield">
-                    <TitleSection {...titleSectionProps} />
+                    <TitleToggle {...titleToggleProps} />
                 </div>
             }
             <div className="menu-subfield audio-subfield">

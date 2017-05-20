@@ -6,10 +6,10 @@ import { TITLE_SELECT_KEY } from '../../helpers/constants'
  * CONTAINER *
  *************/
 
-const TitleSection = (props) => {
+const TitleToggle = (props) => {
 
     return (
-        <TitleSectionView {...props}/>
+        <TitleToggleView {...props}/>
     )
 }
 
@@ -17,15 +17,15 @@ const TitleSection = (props) => {
  * PRESENTATION *
  ****************/
 
-const TitleSectionView = ({
+const TitleToggleView = ({
 
     // From props.
     title,
     handleTitleSelect
 
 }) => (
-    <div className="section title-section">
-        <div className="title-button-container">
+    <div className="section title-toggle">
+        <div className="title-toggle-button-container">
             <Button
                 isCustomShape={true}
                 isCustomSize={true}
@@ -37,4 +37,4 @@ const TitleSectionView = ({
     </div>
 )
 
-export default TitleSection
+export default TitleToggle

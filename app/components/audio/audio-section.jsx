@@ -1,6 +1,6 @@
 import React from 'react'
 import AudioButtons from './audio-buttons'
-import TitleSection from '../title/title-section'
+import TitleToggle from '../title/title-toggle'
 import { SONG_FILES } from '../../helpers/constants'
 
 /*************
@@ -93,7 +93,7 @@ const AudioSectionView = ({
                 </div>
             )}
             {titleInAudio &&
-                <TitleSection {...titleProps} />
+                <TitleToggle {...titleProps} />
             }
             {(!isPhone || timerInAudio) && audioBannerChild}
             <AudioButtons {...audioButtonsProps} />
