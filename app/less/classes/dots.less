@@ -32,8 +32,12 @@
     height: 100%;
 }
 
-.text-anchor-block, .annotation-card {
-    .animated-background:not(.button) {
+/**
+ * All dot backgrounds in lyrics and annotation cards, except portal annotation
+ * cards.
+ */
+.text-anchor-block, .annotation-card:not(.portal) {
+    .animated-background {
 
         // FIXME: Animation jankiness is due to the transform, which is expensive.
         transition: margin @transition-duration-fast,
