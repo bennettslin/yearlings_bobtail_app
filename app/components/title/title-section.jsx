@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../button/button'
+import { TITLE_SELECT_KEY } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -24,12 +25,15 @@ const TitleSectionView = ({
 
 }) => (
     <div className="section title-section">
-        <Button
-            isCustomShape={true}
-            isCustomSize={true}
-            handleClick={handleTitleSelect}
-            iconText={title}
-        />
+        <div className="title-button-container">
+            <Button
+                isCustomShape={true}
+                isCustomSize={true}
+                accessKey={TITLE_SELECT_KEY}
+                handleClick={handleTitleSelect}
+                iconText={title}
+            />
+        </div>
     </div>
 )
 

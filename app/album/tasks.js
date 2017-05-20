@@ -1,4 +1,5 @@
 module.exports = [
+
     {
         taskName: `Fix method to select annotation index for direction.`,
         workedHours: 0,
@@ -1899,6 +1900,11 @@ module.exports = [
     },
     {
         taskName: `Make popup annotation styling consistent with carousel annotation.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Hovering over access icon resets hover state.`,
         workedHours: 1,
         neededHours: 1
     }

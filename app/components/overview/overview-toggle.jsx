@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../button/button'
-import { OVERVIEW_OPTIONS } from '../../helpers/constants'
+import { OVERVIEW_OPTIONS,
+         OVERVIEW_TOGGLE_KEY } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -28,6 +29,7 @@ const OverviewToggleView = ({
         <Button
             isCustomShape={true}
             isCustomSize={true}
+            accessKey={OVERVIEW_TOGGLE_KEY}
             iconText={OVERVIEW_OPTIONS[selectedOverviewIndex]}
             handleClick={handleOverviewToggle}
         />

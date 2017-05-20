@@ -1,6 +1,8 @@
 import React from 'react'
 import Button from './button/button'
-import { TIPS_OPTIONS } from '../helpers/constants'
+import { TIPS_OPTIONS,
+         SCORE_TOGGLE_KEY,
+         TIPS_TOGGLE_KEY } from '../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -29,6 +31,7 @@ const ScoresTipsSectionView = ({
         <div className="section scores-tips-section">
             {!isPhone &&
                 <Button
+                    accessKey={SCORE_TOGGLE_KEY}
                     buttonName={'scores'}
                     iconText={selectedScoreIndex}
                     isLarge={true}
@@ -36,6 +39,7 @@ const ScoresTipsSectionView = ({
                 />
             }
             <Button
+                accessKey={TIPS_TOGGLE_KEY}
                 buttonName={'tips'}
                 iconText={TIPS_OPTIONS[selectedTipsIndex]}
                 isLarge={true}

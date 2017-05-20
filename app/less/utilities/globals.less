@@ -43,12 +43,16 @@ h1, h2, h3 {
 
         .animated-background {
             transition: background-color 0.2s, transform 0.05s;
+        }
 
-            &:hover {
+        &:hover {
+            .animated-background {
                 animation: bounceHover 0.2s;
             }
+        }
 
-            &:active {
+        &:active {
+            .animated-background {
                 transform: scale(0.9);
             }
         }
