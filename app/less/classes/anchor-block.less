@@ -37,6 +37,24 @@
     // }
 }
 
+/**
+ * All dot backgrounds in lyrics and annotation cards, except portal annotation
+ * cards.
+ */
+.text-anchor-block, .annotation-card:not(.portal) {
+    .animated-background {
+
+        // FIXME: Animation jankiness is due to the transform, which is expensive.
+        transition: margin @transition-duration-fast,
+                    width @transition-duration-fast,
+                    border @transition-duration-fast,
+                    transform 0.05s,
+                    background-color @transition-duration-fast;
+        transform: scale(0);
+        width: 0;
+    }
+}
+
 .underline-bar {
     transition: background-color 0.15s, transform 0.05s;
 

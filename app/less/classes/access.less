@@ -22,7 +22,7 @@
 
         .access-highlighted {
 
-            &.text-anchor-block .dot, &.dot-anchor-block .animated-background {
+            &.anchor-block .animated-background {
                 border: @dot-border solid @access-underline-colour;
             }
 
@@ -66,7 +66,7 @@
         .nav-section {
             .access-highlighted {
                 .animated-background {
-                    box-shadow: 0 2px 10px 10px @access-link-colour;
+                    background-color: @access-underline-colour;
                 }
             }
         }
@@ -80,48 +80,48 @@
         }
 
         // Annotation in carousel is accessed.
-        .carousel {
+        // .carousel {
             /**
              * Not using mixin here so that text shadow applies only to annotation
              * title and not to annotation card.
              */
-            .accessed-annotation .annotation-section {
-                @colour: @temp-access-background;
-                background-color: @colour;
-
-                .annotation-title-block {
-                    .text-anchor-block {
-                        text-shadow:
-                        -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
-                        @text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
-                        -@text-shadow-offset @text-shadow-offset @text-shadow-blur @colour,
-                        @text-shadow-offset @text-shadow-offset @text-shadow-blur @colour;
-                    }
-                }
-            }
-        }
+            // .accessed-annotation:not(.selected-annotation) .annotation-section {
+            //     @colour: @temp-access-background;
+            //     background-color: @colour;
+            //
+            //     .annotation-title-block {
+            //         .text-anchor-block {
+            //             text-shadow:
+            //             -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
+            //             @text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
+            //             -@text-shadow-offset @text-shadow-offset @text-shadow-blur @colour,
+            //             @text-shadow-offset @text-shadow-offset @text-shadow-blur @colour;
+            //         }
+            //     }
+            // }
+        // }
     }
 
     // Interactivated verse is accessed.
     .is-verse-interactivated {
         .lyrics-section {
             .verse.interactivated {
-                box-shadow: 0 2px 10px 10px chartreuse;
+                background-color: @access-underline-colour;
             }
         }
     }
 
     // Nav section is accessed.
-    .nav-expanded {
-        .nav-section {
-            background-color: @temp-access-background;
-        }
-    }
+    // .nav-expanded {
+    //     .nav-section {
+    //         background-color: @temp-access-background;
+    //     }
+    // }
 
     // Dots section is accessed.
     .dots-section-shown.nav-collapsed {
         .dots-section {
-            background-color: @temp-access-background;
+            // background-color: @temp-access-background;
 
             // Show dot description in dots section.
             .access-highlighted {
@@ -133,15 +133,15 @@
     }
 
     // Popup annotation section is accessed.
-    .annotation-shown {
-        .popup-content-wrapper .annotation-section {
-            background-color: @temp-access-background;
-        }
-    }
+    // .annotation-shown {
+    //     .popup-content-wrapper .annotation-section {
+    //         background-color: @temp-access-background;
+    //     }
+    // }
 
     // Keyboard letter shown on accessible button.
     .access-button-icon {
-        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -159,10 +159,11 @@
     justify-content: center;
     align-items: center;
 
+    transition: opacity 0.2s;
+    opacity: 0;
+
     border: 2px solid green;
     border-radius: 3px;
 
     background-color: #bfb;
-
-    visibility: hidden;
 }

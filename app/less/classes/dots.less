@@ -32,24 +32,6 @@
     height: 100%;
 }
 
-/**
- * All dot backgrounds in lyrics and annotation cards, except portal annotation
- * cards.
- */
-.text-anchor-block, .annotation-card:not(.portal) {
-    .animated-background {
-
-        // FIXME: Animation jankiness is due to the transform, which is expensive.
-        transition: margin @transition-duration-fast,
-                    width @transition-duration-fast,
-                    border @transition-duration-fast,
-                    transform @transition-duration-fast,
-                    background-color @transition-duration-fast;
-        transform: scale(0);
-        width: 0;
-    }
-}
-
 .dots-section {
     // Dots section and dot stanzas.
     .dot .animated-background {
@@ -97,7 +79,8 @@
 .dots-section {
     padding: 10px;
 
-    .text-shadow-mixin(#def);
+    // TODO: Maybe consolidate all the text shadows that use this colour.
+    .text-shadow-mixin(@odd-verse-colour);
 
     .dot-container {
         position: relative;
@@ -106,6 +89,21 @@
     .dot.deselected {
         .animated-background {
             background-color: @deselected-dot-colour;
+        }
+    }
+
+    .dot-anchor-block {
+
+        &:hover {
+            .animated-background {
+                animation: bounceHover 0.2s;
+            }
+        }
+
+        &:active {
+            .animated-background {
+                transform: scale(0.9);
+            }
         }
     }
 }

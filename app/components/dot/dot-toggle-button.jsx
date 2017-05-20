@@ -108,6 +108,7 @@ class DotToggleButtonView extends Component {
                 <div className={classnames(
                     'anchor-block',
                     'dot-anchor-block',
+                    // 'in-dots-section',
                     { 'access-highlighted': accessHighlighted }
                 )}>
                     <Button

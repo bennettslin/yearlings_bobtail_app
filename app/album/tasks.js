@@ -4,16 +4,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Make popup annotation styling consistent with carousel annotation.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Make dot animation smoother.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     {
         taskName: `Get rid of activeElement line.`,
@@ -44,6 +34,12 @@ module.exports = [
         taskName: `Lyric scrolling slowness, only update based on certain changes.`,
         workedHours: 0,
         neededHours: 5
+    },
+
+    {
+        taskName: `Make dot animation smoother.`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     {
@@ -1898,6 +1894,11 @@ module.exports = [
     },
     {
         taskName: `Consolidate dots in text and make them animate on hover.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Make popup annotation styling consistent with carousel annotation.`,
         workedHours: 1,
         neededHours: 1
     }
