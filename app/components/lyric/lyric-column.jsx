@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Button from '../button/button'
 import LyricsSection from '../lyrics/lyrics-section'
 import LyricVerseBar from './lyric-verse-bar'
+import { LYRIC_COLUMN_TOGGLE_KEY } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -121,6 +122,7 @@ class LyricColumnView extends Component {
                     {showEarButton &&
                         <div className="lyric-button-block ear-button-block">
                             <Button
+                                accessKey={LYRIC_COLUMN_TOGGLE_KEY}
                                 iconText={earButtonText}
                                 isLarge={true}
                                 handleClick={handleLyricColumnSelect}

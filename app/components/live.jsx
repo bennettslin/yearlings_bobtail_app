@@ -17,6 +17,7 @@ import ScoreTransitionPopup from './score/score-transition-popup'
 import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
 import { getSong, getWikiUrl } from '../helpers/album-view-helper'
+import { LYRIC_SECTION_EXPAND_KEY } from '../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -307,6 +308,7 @@ const LiveView = ({
         lyricExpandButtonChild = isLyricExpandable && (
             <div className="lyric-button-block expand-button-block">
                 <Button
+                    accessKey={LYRIC_SECTION_EXPAND_KEY}
                     iconText={isLyricExpanded ? '-' : '+'}
                     isLarge={true}
                     handleClick={handleLyricSectionExpand}

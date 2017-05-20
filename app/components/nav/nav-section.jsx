@@ -3,6 +3,7 @@ import NavBook from './nav-book'
 import NavItem from './nav-item'
 import ProgressFooter from '../admin/progress/progress-footer'
 import ProgressHelper from '../../helpers/progress-helper'
+import { NAV_SECTION_ACCESS_KEY } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -94,6 +95,7 @@ const NavSectionView = ({
                         <NavBook {...navItemProps}
                             isNavToggle={true}
                             buttonText={selectedNavIndex + ''}
+                            accessKey={NAV_SECTION_ACCESS_KEY}
                             handleButtonClick={handleNavExpand}
                         />
                     </div>

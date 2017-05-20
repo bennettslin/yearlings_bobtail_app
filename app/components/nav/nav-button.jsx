@@ -42,6 +42,7 @@ const NavButtonView = ({
     isNavToggle,
     isSelected,
     accessHighlighted,
+    accessKey,
 
     // From controller.
     iconText,
@@ -58,6 +59,7 @@ const NavButtonView = ({
         <div className="nav-button-wrapper">
             <Button
                 buttonName="nav"
+                accessKey={accessKey}
                 iconText={iconText}
                 isLarge={isNavToggle}
                 isSelected={isSelected}
