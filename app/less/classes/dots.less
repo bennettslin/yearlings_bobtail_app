@@ -9,11 +9,11 @@
 @transition-duration-fast: 0.15s;
 
 .dot {
-    &:not(.button), & .button-background {
+    &:not(.button), & .animated-background {
         border-radius: 50%;
     }
 
-    &:not(.button), &:not(.dot-stanza-button) .button-background {
+    &:not(.button), &:not(.dot-stanza-button) .animated-background {
         // TODO: Key styling.
         &.portal { background-color: @portal-dot-colour; }
         &.observation { background-color: @observation-dot-colour; }
@@ -32,8 +32,12 @@
     height: 100%;
 }
 
-.text-anchor-block, .annotation-card {
-    .dot:not(.button) {
+/**
+ * All dot backgrounds in lyrics and annotation cards, except portal annotation
+ * cards.
+ */
+.text-anchor-block, .annotation-card:not(.portal) {
+    .animated-background {
 
         // FIXME: Animation jankiness is due to the transform, which is expensive.
         transition: margin @transition-duration-fast,
@@ -48,13 +52,13 @@
 
 .dots-section {
     // Dots section and dot stanzas.
-    .dot .button-background {
+    .dot .animated-background {
         transition: background-color @transition-duration-fast;
     }
 }
 
 .dots-section, .portals-block {
-    .dot .button-background {
+    .dot .animated-background {
         border: @dot-border solid @dot-border-colour;
     }
 }
@@ -100,7 +104,7 @@
     }
 
     .dot.deselected {
-        .button-background {
+        .animated-background {
             background-color: @deselected-dot-colour;
         }
     }

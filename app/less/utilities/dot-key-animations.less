@@ -73,14 +73,14 @@
  * DOTS *
  ********/
 
-.live-app.narrative .dot.narrative,
-.live-app.backstory .dot.backstory,
-.live-app.observation .dot.observation,
-.live-app.pun .dot.pun,
-.live-app.reference .dot.reference,
-.live-app.songwriting .dot.songwriting,
-.live-app.portal .dot.portal,
-.live-app.afterword .dot.afterword {
+.live-app.narrative .animated-background.narrative,
+.live-app.backstory .animated-background.backstory,
+.live-app.observation .animated-background.observation,
+.live-app.pun .animated-background.pun,
+.live-app.reference .animated-background.reference,
+.live-app.songwriting .animated-background.songwriting,
+.live-app.portal .animated-background.portal,
+.live-app.afterword .animated-background.afterword {
 
     transform: scale(1);
     border: @dot-border solid @dot-border-colour;
@@ -105,28 +105,28 @@
  ***************/
 
 // This is the one source of truth for how dot anchors are ordered!
-.live-app.portal .dot-anchor-block:not(.selected) .button-background.portal {
+.live-app.portal .dot-anchor-block:not(.selected) .animated-background.portal {
     background-color: @portal-dot-colour;
 }
-.live-app.observation .dot-anchor-block:not(.selected) .button-background.observation {
+.live-app.observation .dot-anchor-block:not(.selected) .animated-background.observation {
     background-color: @observation-dot-colour;
 }
-.live-app.backstory .dot-anchor-block:not(.selected) .button-background.backstory {
+.live-app.backstory .dot-anchor-block:not(.selected) .animated-background.backstory {
     background-color: @backstory-dot-colour;
 }
-.live-app.reference .dot-anchor-block:not(.selected) .button-background.reference {
+.live-app.reference .dot-anchor-block:not(.selected) .animated-background.reference {
     background-color: @reference-dot-colour;
 }
-.live-app.pun .dot-anchor-block:not(.selected) .button-background.pun {
+.live-app.pun .dot-anchor-block:not(.selected) .animated-background.pun {
     background-color: @pun-dot-colour;
 }
-.live-app.narrative .dot-anchor-block:not(.selected) .button-background.narrative {
+.live-app.narrative .dot-anchor-block:not(.selected) .animated-background.narrative {
     background-color: @narrative-dot-colour;
 }
-.live-app.songwriting .dot-anchor-block:not(.selected) .button-background.songwriting {
+.live-app.songwriting .dot-anchor-block:not(.selected) .animated-background.songwriting {
     background-color: @songwriting-dot-colour;
 }
-.live-app.afterword .dot-anchor-block:not(.selected) .button-background.afterword {
+.live-app.afterword .dot-anchor-block:not(.selected) .animated-background.afterword {
     background-color: @afterword-dot-colour;
 }
 
@@ -181,8 +181,7 @@
             background-color: @lyric-underline-enabled-colour;
         }
 
-        &.text-anchor-block .dot,
-        &.dot-anchor-block .button-background {
+        .animated-background {
             border: @dot-border solid @lyric-underline-enabled-colour;
         }
     }
@@ -196,8 +195,7 @@
             background-color: @selected-annotation-underline-colour;
         }
 
-        &.text-anchor-block .dot,
-        &.dot-anchor-block .button-background {
+        .animated-background {
             border: @dot-border solid @selected-annotation-underline-colour;
             background-color: @deselected-dot-colour;
         }
