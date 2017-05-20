@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Create title section`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
         taskName: `Fix method to select annotation index for direction.`,
         workedHours: 0,
         neededHours: 3
@@ -48,11 +54,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Album info in title`,
-        workedHours: 0,
-        neededHours: 3
-    },
+
     {
         taskName: `Logue overview in phone styling`,
         workedHours: 0,
