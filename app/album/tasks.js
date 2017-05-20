@@ -34,6 +34,18 @@ module.exports = [
 
     // Bugs.
     {
+        taskName: `Reset accessed annotation index strategically (before or after toggle?)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
         taskName: `Lyric scrolling slowness, only update based on certain changes.`,
         workedHours: 0,
         neededHours: 5
