@@ -22,7 +22,7 @@ const TitleToggleView = ({
     // From props.
     title,
     selectedTitleIndex,
-    handleTitleSelect
+    handleTitleToggle
 
 }) => (
     <div className="section title-toggle">
@@ -31,7 +31,7 @@ const TitleToggleView = ({
                 isCustomShape={true}
                 isCustomSize={true}
                 accessKey={TITLE_TOGGLE_KEY}
-                handleClick={handleTitleSelect}
+                handleClick={handleTitleToggle}
                 iconText={title + selectedTitleIndex}
             />
         </div>

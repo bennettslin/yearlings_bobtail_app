@@ -52,7 +52,7 @@ const MainColumnView = ({
     handleNavExpand,
     handleNavSongSelect,
     handleNavBookSelect,
-    handleTitleSelect,
+    handleTitleToggle,
 
     annotationPopupChild,
     dotsSectionChild,
@@ -71,7 +71,7 @@ const MainColumnView = ({
             scoresTipsOutsideMenu,
             selectedTitleIndex,
 
-            handleTitleSelect,
+            handleTitleToggle,
 
             audioSectionChild,
             scoresTipsSectionChild

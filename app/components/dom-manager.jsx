@@ -28,6 +28,7 @@ class DomManager extends Component {
               selectedScoreIndex,
               selectedLyricColumnIndex,
               selectedAnnotationIndex,
+              selectedTitleIndex,
               selectedWikiIndex,
               sliderVerseIndex,
 
@@ -61,7 +62,7 @@ class DomManager extends Component {
             isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
 
             isOverlaidAnnotation = !isDesktop && (isLyricExpanded || isPhone),
-            showOverlay = (!isPhone && !!selectedScoreIndex) || !!selectedWikiIndex ||
+            showOverlay = selectedTitleIndex || (!isPhone && !!selectedScoreIndex) || !!selectedWikiIndex ||
                 (!!selectedAnnotationIndex && isOverlaidAnnotation),
 
             audioPlayersProps = {

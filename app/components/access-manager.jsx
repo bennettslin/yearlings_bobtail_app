@@ -436,7 +436,7 @@ class AccessManager extends Component {
                 keyWasRegistered = this.props.handleLyricSectionExpand(e)
                 break
             case TITLE_TOGGLE_KEY:
-                keyWasRegistered = this.props.handleTitleSelect(e)
+                keyWasRegistered = this.props.handleTitleToggle(e)
                 break
             case DOTS_SECTION_ACCESS_KEY:
                 keyWasRegistered = this.props.handleDotsSectionToggle(e)

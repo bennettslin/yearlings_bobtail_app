@@ -1,11 +1,4 @@
 module.exports = [
-
-    {
-        taskName: `Create title section`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
     {
         taskName: `Fix method to select annotation index for direction.`,
         workedHours: 0,
@@ -56,7 +49,7 @@ module.exports = [
     },
 
     {
-        taskName: `Logue overview in phone styling`,
+        taskName: `Logue overview in phone styling, also audio banner animation`,
         workedHours: 0,
         neededHours: 1
     },
@@ -77,6 +70,12 @@ module.exports = [
         taskName: `Annotation slider.`,
         workedHours: 0,
         neededHours: 15
+    },
+
+    {
+        taskName: `Title section content.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     // Touch accessibility.
@@ -1909,5 +1908,10 @@ module.exports = [
         taskName: `Hovering over access icon resets hover state.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Create title section popup.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

@@ -67,7 +67,7 @@ class EventManager extends Component {
         this.handleCarouselToggle = this.handleCarouselToggle.bind(this)
         this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
-        this.handleTitleSelect = this.handleTitleSelect.bind(this)
+        this.handleTitleToggle = this.handleTitleToggle.bind(this)
         this.handleVerseBarSelect = this.handleVerseBarSelect.bind(this)
         this.handleVerseBarWheel = this.handleVerseBarWheel.bind(this)
         this.handleVerseInteractivate = this.handleVerseInteractivate.bind(this)
@@ -538,7 +538,7 @@ class EventManager extends Component {
      * TITLE *
      *********/
 
-    handleTitleSelect(e) {
+    handleTitleToggle(e) {
         const titleToggled = this.props.selectTitle()
         if (titleToggled) {
             this.stopPropagation(e)
@@ -649,6 +649,10 @@ class EventManager extends Component {
 
         } else if (domProps.selectedScoreIndex) {
             this.props.selectScore(false)
+            return
+
+        } else if (domProps.selectedTitleIndex) {
+            this.props.selectTitle(false)
             return
         }
 
@@ -824,7 +828,7 @@ class EventManager extends Component {
                 handleCarouselToggle={this.handleCarouselToggle}
                 handleScoreToggle={this.handleScoreToggle}
                 handleTipsToggle={this.handleTipsToggle}
-                handleTitleSelect={this.handleTitleSelect}
+                handleTitleToggle={this.handleTitleToggle}
                 handleVerseBarSelect={this.handleVerseBarSelect}
                 handleVerseBarWheel={this.handleVerseBarWheel}
                 handleVerseInteractivate={this.handleVerseInteractivate}

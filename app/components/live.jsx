@@ -14,6 +14,7 @@ import OverviewTransitionPopup from './overview/overview-transition-popup'
 import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
 import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
+import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
 import { getSong, getWikiUrl } from '../helpers/album-view-helper'
 
@@ -144,7 +145,7 @@ const LiveView = ({
     handlePopupFocus,
     handleScoreToggle,
     handleTipsToggle,
-    handleTitleSelect,
+    handleTitleToggle,
     handleVerseBarSelect,
     handleVerseBarWheel,
     handleVerseElementSelect,
@@ -224,7 +225,7 @@ const LiveView = ({
             handleAudioPreviousSong,
             handleAudioNextSong,
             handleAudioOptionsToggle,
-            handleTitleSelect,
+            handleTitleToggle,
             handlePopupContainerClick,
 
             audioTimerChild,
@@ -347,7 +348,7 @@ const LiveView = ({
             handleNavSongSelect,
             handleNavBookSelect,
             handleTipsToggle,
-            handleTitleSelect,
+            handleTitleToggle,
 
             audioBannerChild,
             audioSectionChild
@@ -384,6 +385,12 @@ const LiveView = ({
             selectedSongIndex,
             scoreSectionRef,
             handleScoreToggle,
+            handlePopupFocus
+        },
+
+        titlePopupProps = {
+            selectedTitleIndex,
+            handleTitleToggle,
             handlePopupFocus
         },
 
@@ -457,6 +464,7 @@ const LiveView = ({
                         />
                     </div>
                     <div className="overlay-popup-block main-popup-block">
+                        <TitleTransitionPopup {...titlePopupProps} />
                         <ScoreTransitionPopup {...scorePopupProps} />
                         <WikiTransitionPopup {...wikiPopupProps} />
                         {isOverlaidAnnotation &&

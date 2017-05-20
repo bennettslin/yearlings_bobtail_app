@@ -43,7 +43,7 @@ const AudioSectionView = ({
     title,
     selectedAudioOptionIndex,
 
-    handleTitleSelect,
+    handleTitleToggle,
     handleAudioPlay,
     handleAudioPreviousSong,
     handleAudioNextSong,
@@ -77,7 +77,7 @@ const AudioSectionView = ({
         titleProps = {
             titleInAudio,
             title,
-            handleTitleSelect
+            handleTitleToggle
         }
 
     return (

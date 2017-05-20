@@ -25,7 +25,7 @@ const MenuFieldView = ({
     title,
     selectedTitleIndex,
 
-    handleTitleSelect,
+    handleTitleToggle,
 
     audioSectionChild,
     scoresTipsSectionChild
@@ -35,7 +35,7 @@ const MenuFieldView = ({
     const titleToggleProps = {
             title,
             selectedTitleIndex,
-            handleTitleSelect
+            handleTitleToggle
         }
 
     return (

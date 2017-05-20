@@ -50,7 +50,7 @@
         height: ~"calc(100% - @{full-subfield} * 2)";
     }
 
-    &.annotation {
+    &.annotation, &.title {
         width: @popup-annotation-width;
         max-width: @popup-annotation-width;
     }
@@ -59,7 +59,7 @@
 // Multiplier is .95, just like for lyric text in mini.
 .mini-width {
     .popup-wrapper {
-        &.annotation {
+        &.annotation, &.title {
             width: @mini-popup-annotation-width;
             max-width: @mini-popup-annotation-width;
         }
@@ -69,7 +69,7 @@
 // Multiplier is .9, just like for lyric text in phone.
 .phone-width {
     .popup-wrapper {
-        &.annotation {
+        &.annotation, &.title {
             width: @annotation-width;
             max-width: @annotation-width;
         }
@@ -86,8 +86,12 @@
         height: 100%;
     }
 
-    &.annotation {
+    &.annotation, &.title {
         padding: 20px @popup-content-side-padding;
+    }
+
+    &.title {
+        min-height: 200px;
     }
 }
 
@@ -174,7 +178,7 @@
 
         &.phone-width {
             .popup-wrapper {
-                &.wiki, &.score, &.annotation {
+                &.wiki, &.score, &.annotation, &.title {
                     // Make side margin in phone just that much thinner.
                     width: ~"calc(100% - @{mini-full-subfield})";
                 }
