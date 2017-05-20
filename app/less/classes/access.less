@@ -1,5 +1,3 @@
-@temp-access-background: #dfd;
-
 /***********
  * ANCHORS *
  ***********/
@@ -78,28 +76,6 @@
         .lyrics-section {
             background-color: rgba(200, 250, 200, 0.5);
         }
-
-        // Annotation in carousel is accessed.
-        // .carousel {
-            /**
-             * Not using mixin here so that text shadow applies only to annotation
-             * title and not to annotation card.
-             */
-            // .accessed-annotation:not(.selected-annotation) .annotation-section {
-            //     @colour: @temp-access-background;
-            //     background-color: @colour;
-            //
-            //     .annotation-title-block {
-            //         .text-anchor-block {
-            //             text-shadow:
-            //             -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
-            //             @text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
-            //             -@text-shadow-offset @text-shadow-offset @text-shadow-blur @colour,
-            //             @text-shadow-offset @text-shadow-offset @text-shadow-blur @colour;
-            //         }
-            //     }
-            // }
-        // }
     }
 
     // Interactivated verse is accessed.
@@ -110,13 +86,6 @@
             }
         }
     }
-
-    // Nav section is accessed.
-    // .nav-expanded {
-    //     .nav-section {
-    //         background-color: @temp-access-background;
-    //     }
-    // }
 
     // Dots section is accessed.
     .dots-section-shown.nav-collapsed {
@@ -131,13 +100,6 @@
             }
         }
     }
-
-    // Popup annotation section is accessed.
-    // .annotation-shown {
-    //     .popup-content-wrapper .annotation-section {
-    //         background-color: @temp-access-background;
-    //     }
-    // }
 
     // Keyboard letter shown on accessible button.
     .access-button-icon {
