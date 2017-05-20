@@ -14,6 +14,7 @@ import { SELECTED_ADMIN_INDEX,
          SELECTED_NAV_INDEX,
          SELECTED_DOTS_INDEX,
          SELECTED_CAROUSEL_INDEX,
+         SELECTED_TITLE_INDEX,
          ACCESSED_ON } from '../../helpers/constants'
 import SessionHelper from '../../helpers/session-helper'
 
@@ -33,6 +34,7 @@ const { getFromSession } = SessionHelper,
     storedNavIndex = getFromSession(SELECTED_NAV_INDEX),
     storedDotsIndex = getFromSession(SELECTED_DOTS_INDEX),
     storedCarouselIndex = getFromSession(SELECTED_CAROUSEL_INDEX),
+    storedTitleIndex = getFromSession(SELECTED_TITLE_INDEX),
     storedAccessedOn = getFromSession(ACCESSED_ON)
 
 export const AdminIndexReducer = (state = storedAdminIndex, action) => {
@@ -177,6 +179,15 @@ export const CarouselIndexReducer = (state = storedCarouselIndex, action) => {
     }
 }
 
+export const TitleIndexReducer = (state = storedTitleIndex, action) => {
+    switch (action.type) {
+        case SELECTED_TITLE_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
 export const AccessedOnReducer = (state = storedAccessedOn, action) => {
     switch (action.type) {
         case ACCESSED_ON:
@@ -202,6 +213,7 @@ const rootReducer = combineReducers({
     selectedNavIndex: NavIndexReducer,
     selectedDotsIndex: DotsIndexReducer,
     selectedCarouselIndex: CarouselIndexReducer,
+    selectedTitleIndex: TitleIndexReducer,
     accessedOn: AccessedOnReducer
 })
 

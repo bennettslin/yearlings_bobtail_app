@@ -28,7 +28,7 @@ import { CAPS_LOCK,
          TIPS_TOGGLE_KEY,
          LYRIC_COLUMN_TOGGLE_KEY,
          LYRIC_SECTION_EXPAND_KEY,
-         TITLE_SELECT_KEY,
+         TITLE_TOGGLE_KEY,
          DOTS_SECTION_ACCESS_KEY,
          NAV_SECTION_ACCESS_KEY,
 
@@ -435,7 +435,7 @@ class AccessManager extends Component {
             case LYRIC_SECTION_EXPAND_KEY:
                 keyWasRegistered = this.props.handleLyricSectionExpand(e)
                 break
-            case TITLE_SELECT_KEY:
+            case TITLE_TOGGLE_KEY:
                 keyWasRegistered = this.props.handleTitleSelect(e)
                 break
             case DOTS_SECTION_ACCESS_KEY:

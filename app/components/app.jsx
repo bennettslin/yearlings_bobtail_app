@@ -16,6 +16,7 @@ import { selectAdminIndex,
          selectNavIndex,
          selectDotsIndex,
          selectCarouselIndex,
+         selectTitleIndex,
          accessOn } from '../redux/actions'
 import EventManager from './event-manager'
 import { SHOWN,
@@ -52,6 +53,7 @@ const passReduxStateToProps = ({
     selectedNavIndex,
     selectedDotsIndex,
     selectedCarouselIndex,
+    selectedTitleIndex,
     accessedOn
 }) => ({
     // Pass Redux state into component props.
@@ -70,6 +72,7 @@ const passReduxStateToProps = ({
     selectedNavIndex,
     selectedDotsIndex,
     selectedCarouselIndex,
+    selectedTitleIndex,
     accessedOn
 })
 
@@ -91,6 +94,7 @@ const bindDispatchToProps = (dispatch) => (
         selectNavIndex,
         selectDotsIndex,
         selectCarouselIndex,
+        selectTitleIndex,
         accessOn
     }, dispatch)
 )
@@ -715,6 +719,22 @@ class App extends Component {
     }
 
     /*********
+     * TITLE *
+     *********/
+
+    selectTitle(selectedTitleIndex =
+        (this.props.selectedTitleIndex + 1) % 2) {
+        // If no argument passed, then just toggle between on and off.
+
+        if (typeof selectedTitleIndex === 'boolean') {
+            selectedTitleIndex = selectedTitleIndex ? 1 : 0
+        }
+
+        this.props.selectTitleIndex(selectedTitleIndex)
+        return true
+    }
+
+    /*********
      * TOUCH *
      *********/
 
@@ -971,6 +991,7 @@ class App extends Component {
         this.selectBookColumn = this.selectBookColumn.bind(this)
         this.selectDotsExpand = this.selectDotsExpand.bind(this)
         this.selectTips = this.selectTips.bind(this)
+        this.selectTitle = this.selectTitle.bind(this)
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
         this.selectVerseElement = this.selectVerseElement.bind(this)
         this.slideVerseElement = this.slideVerseElement.bind(this)
@@ -1022,6 +1043,7 @@ class App extends Component {
                 selectScore={this.selectScore}
                 selectSong={this.selectSong}
                 selectTime={this.selectTime}
+                selectTitle={this.selectTitle}
                 selectTips={this.selectTips}
                 selectVerse={this.selectVerse}
                 interactivateVerse={this.interactivateVerse}

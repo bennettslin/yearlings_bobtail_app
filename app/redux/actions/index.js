@@ -13,6 +13,7 @@ import { SELECTED_ADMIN_INDEX,
          SELECTED_NAV_INDEX,
          SELECTED_DOTS_INDEX,
          SELECTED_CAROUSEL_INDEX,
+         SELECTED_TITLE_INDEX,
          ACCESSED_ON } from '../../helpers/constants'
  import SessionHelper from '../../helpers/session-helper'
 
@@ -137,6 +138,14 @@ export const selectCarouselIndex = (selectedCarouselIndex = 0) => {
     return {
         type: SELECTED_CAROUSEL_INDEX,
         payload: selectedCarouselIndex
+    }
+}
+
+export const selectTitleIndex = (selectedTitleIndex = 0) => {
+    setInSession(SELECTED_TITLE_INDEX, selectedTitleIndex)
+    return {
+        type: SELECTED_TITLE_INDEX,
+        payload: selectedTitleIndex
     }
 }
 

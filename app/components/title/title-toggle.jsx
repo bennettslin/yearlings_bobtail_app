@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../button/button'
-import { TITLE_SELECT_KEY } from '../../helpers/constants'
+import { TITLE_TOGGLE_KEY } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -29,7 +29,7 @@ const TitleToggleView = ({
             <Button
                 isCustomShape={true}
                 isCustomSize={true}
-                accessKey={TITLE_SELECT_KEY}
+                accessKey={TITLE_TOGGLE_KEY}
                 handleClick={handleTitleSelect}
                 iconText={title}
             />

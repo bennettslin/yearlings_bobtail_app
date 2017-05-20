@@ -219,6 +219,7 @@ module.exports = {
     SELECTED_DOTS_INDEX: 'selectedDotsIndex',
     SELECTED_SCORE_INDEX: 'selectedScoreIndex',
     SELECTED_CAROUSEL_INDEX: 'selectedCarouselIndex',
+    SELECTED_TITLE_INDEX: 'selectedTitleIndex',
     ACCESSED_ON: 'accessedOn',
 
     // This is only used by the stats helper.
@@ -356,7 +357,7 @@ module.exports = {
     TIPS_TOGGLE_KEY: 't',
     LYRIC_COLUMN_TOGGLE_KEY: 'e',
     LYRIC_SECTION_EXPAND_KEY: 'l',
-    TITLE_SELECT_KEY: 'i',
+    TITLE_TOGGLE_KEY: 'i',
     DOTS_SECTION_ACCESS_KEY: 'd',
     NAV_SECTION_ACCESS_KEY: 'n',
 

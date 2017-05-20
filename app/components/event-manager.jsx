@@ -539,13 +539,11 @@ class EventManager extends Component {
      *********/
 
     handleTitleSelect(e) {
-        const titleSelected = this.props.selectSong({
-            selectedSongIndex: 0
-        })
-        if (titleSelected) {
+        const titleToggled = this.props.selectTitle()
+        if (titleToggled) {
             this.stopPropagation(e)
         }
-        return titleSelected
+        return titleToggled
     }
 
     /*********
