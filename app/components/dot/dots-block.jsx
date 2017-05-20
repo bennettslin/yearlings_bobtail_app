@@ -56,13 +56,21 @@ const DotBlockView = ({
                     <div
                         key={index}
                         className={classnames(
-                            'dot',
-                            // 'not-button',
+                            'dot'
+                            // dotKey,
+                            // { 'in-card': inAnnotationCard,
+                            //   'in-lyric': other.inAnchor }
+                        )}
+                    >
+                        <div className={classnames(
+                            'animated-background',
                             dotKey,
                             { 'in-card': inAnnotationCard,
                               'in-lyric': other.inAnchor }
-                        )}
-                    />
+                        )}>
+
+                        </div>
+                    </div>
                 )
             }
         })}
