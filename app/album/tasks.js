@@ -1,20 +1,36 @@
 module.exports = [
+
+    // Full morning tasks.
+    {
+        taskName: `When switching to logue and carousel is on, then turning on nav in logue, should toggle off nav (be better about exempting.)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Consolidate button containers to prepare for access.`,
+        workedHours: 0,
+        neededHours: 3
+    },
     {
         taskName: `Fix method to select annotation index for direction.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Lyric scrolling slowness, only update based on certain changes.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Logue overview in phone styling, also audio banner animation`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     {
         taskName: `Get rid of activeElement line.`,
         workedHours: 0,
         neededHours: 1
-    },
-
-    {
-        taskName: `When switching to logue and carousel is on, then turning on nav in logue, should toggle off nav (be better about exempting.)`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     // Bugs.
@@ -31,12 +47,6 @@ module.exports = [
     },
 
     {
-        taskName: `Lyric scrolling slowness, only update based on certain changes.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    {
         taskName: `Make dot animation smoother.`,
         workedHours: 0,
         neededHours: 1
@@ -48,11 +58,6 @@ module.exports = [
         neededHours: 2
     },
 
-    {
-        taskName: `Logue overview in phone styling, also audio banner animation`,
-        workedHours: 0,
-        neededHours: 1
-    },
     {
         taskName: `Finish instrumentals`,
         workedHours: 0,
