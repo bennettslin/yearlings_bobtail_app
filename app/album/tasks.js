@@ -1883,5 +1883,10 @@ module.exports = [
         taskName: `Nav animation when overlay is shown doesn't work?`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Make carousel scroll home work correctly.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

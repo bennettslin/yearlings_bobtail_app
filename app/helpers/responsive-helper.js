@@ -256,13 +256,13 @@ export const getCarouselLeftAlign = (state, index) => {
             centreFieldWidth = state.windowWidth - lyricColumnWidth,
             left = (centreFieldWidth * 0.5) / state.windowWidth,
 
-            // Don't know why it's not perfectly centred, but whatever.
+            // TODO: Don't know why it's not perfectly centred, but whatever.
             /**
-             * Don't have offset if it's the first annotation, so that it's
-             * as close to the centre as possible. This is kind of hacky, but
-             * it's fine for the time being.
+             * The first annotation card is really just the buffer margin. The
+             * next one is the first real annotation. There won't be any offset
+             * in either case.
              */
-            leftOffset = index === 1 ? 0 : -CAROUSEL_ANNOTATION_WIDTH * left
+            leftOffset = index <= 1 ? 0 : -CAROUSEL_ANNOTATION_WIDTH * left
 
         return {
             left,

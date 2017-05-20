@@ -27,8 +27,8 @@ class CarouselView extends Component {
         return (
             <div className="carousel">
                 <div className="carousel-scroll">
-                    <div className="carousel-scroll-home"></div>
                     <div className="carousel-annotations-block">
+                        <div className="carousel-annotation carousel-annotation-0"></div>
                         {/* <div className="carousel-annotation placeholder first"></div> */}
                         {annotations.map((annotation, index) => {
                             return (

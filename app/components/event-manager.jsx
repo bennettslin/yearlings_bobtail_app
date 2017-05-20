@@ -713,7 +713,7 @@ class EventManager extends Component {
             } else {
                 this._scrollElementIntoView(LYRICS_SCROLL, 'home')
                 if (this.props.domProps.selectedCarouselIndex) {
-                    this._scrollElementIntoView(CAROUSEL_SCROLL, 'home')
+                    this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, 0)
                 }
             }
         }
