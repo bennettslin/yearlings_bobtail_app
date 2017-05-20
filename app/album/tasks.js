@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Consolidate dots in text so that they can also animate.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Make popup annotation styling consistent with carousel annotation.`,
         workedHours: 0,
         neededHours: 1
@@ -1901,4 +1896,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Consolidate dots in text and make them animate on hover.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
