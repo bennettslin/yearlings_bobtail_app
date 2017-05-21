@@ -17,7 +17,7 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Logue overview in phone styling, also audio banner animation`,
+        taskName: `Logue overview in phone styling`,
         workedHours: 0,
         neededHours: 1
     },
