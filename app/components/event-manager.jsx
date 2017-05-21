@@ -334,6 +334,8 @@ class EventManager extends Component {
             exemptInteractivatedVerse: true,
             exemptOverview: true
         })
+
+        return carouselSelected
     }
 
     /*******

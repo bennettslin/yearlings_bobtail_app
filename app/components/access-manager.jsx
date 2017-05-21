@@ -63,6 +63,12 @@ class AccessManager extends Component {
             keyName = String.fromCharCode(keyCode)
         }
 
+        /**
+         * Turn on access if any key was registered. (But escape might turn it
+         * off again.)
+         */
+        this.props.handleAccessToggle(true)
+
         // Do not handle if any modifier keys are present, or if it's an exempt key.
         if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE || keyName === PAGE_UP || keyName === PAGE_DOWN) {
             return
@@ -95,14 +101,6 @@ class AccessManager extends Component {
             // Prevent default for registered key.
             if (keyWasRegistered) {
                 e.preventDefault()
-            }
-
-            /**
-             * Turn access on if key was registered, or if unregistered key was
-             * not arrow up or down.
-             */
-            if (keyWasRegistered || (keyName !== ARROW_UP && keyName !== ARROW_DOWN)) {
-                this.props.handleAccessToggle(true)
             }
         }
     }
