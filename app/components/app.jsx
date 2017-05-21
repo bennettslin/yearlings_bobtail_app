@@ -627,6 +627,8 @@ class App extends Component {
             selectedSongIndex
         })
 
+        newState.showSingleLyricColumn = getShowSingleLyricColumn(this.props, this.state, selectedSongIndex)
+
         this.interactivateVerse()
 
         if (isLogue) {

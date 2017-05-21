@@ -127,7 +127,7 @@ export const getShowSingleLyricColumn = (props, state, nextSongIndex) => {
 
     // Applies to Uncanny Valley Boy.
     } else if (hasSideStanzas && !isDoublespeaker) {
-        return deviceClassName === PHONE_WIDTH
+        showSingleLyricColumn = deviceClassName === PHONE_WIDTH
 
     // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
     } else if (isDoublespeaker) {
@@ -135,7 +135,7 @@ export const getShowSingleLyricColumn = (props, state, nextSongIndex) => {
          * In tablet width, lyrics section takes up full width of bottom,
          * while in monitor width, the screen is wide enough as well.
          */
-        return deviceClassName !== MONITOR_WIDTH && deviceClassName !== TABLET_WIDTH
+        showSingleLyricColumn = deviceClassName !== MONITOR_WIDTH && deviceClassName !== TABLET_WIDTH
     }
 
     return showSingleLyricColumn

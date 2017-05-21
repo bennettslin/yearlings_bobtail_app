@@ -1,5 +1,4 @@
 module.exports = [
-
     {
         taskName: `Consolidate animation durations.`,
         workedHours: 0,
@@ -42,13 +41,6 @@ module.exports = [
     },
 
     // Bugs.
-
-    {
-        taskName: `Window resize in logue breaks mini single column in Odin.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     {
         taskName: `Reset accessed annotation index strategically (before or after toggle?)`,
         workedHours: 0,
@@ -1946,6 +1938,11 @@ module.exports = [
     },
     {
         taskName: `Fix method to select annotation index for direction.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Window resize in logue breaks mini single column in Odin.`,
         workedHours: 1,
         neededHours: 1
     }
