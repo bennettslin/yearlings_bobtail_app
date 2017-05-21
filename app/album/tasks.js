@@ -22,6 +22,18 @@ module.exports = [
         neededHours: 1
     },
 
+    // These go together.
+    {
+        taskName: `Consolidate annotation widths across popup and carousel.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Side annotation in mini and phone is wonky.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     {
         taskName: `Get rid of activeElement line.`,
         workedHours: 0,
@@ -29,6 +41,13 @@ module.exports = [
     },
 
     // Bugs.
+
+    {
+        taskName: `Window resize in logue breaks mini single column in Odin.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     {
         taskName: `Reset accessed annotation index strategically (before or after toggle?)`,
         workedHours: 0,
