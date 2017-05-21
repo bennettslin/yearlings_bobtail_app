@@ -360,7 +360,8 @@ class EventManager extends Component {
             this.stopPropagation(e)
             this._closeSections({
                 exemptCarousel: true,
-                exemptDots: true
+                exemptDots: true,
+                exemptNav: true
             })
         }
         return dotsToggled
@@ -467,7 +468,9 @@ class EventManager extends Component {
         if (navExpanded) {
             this.stopPropagation(e)
             this._closeSections({
-                exemptNav: true
+                exemptDots: true,
+                exemptNav: true,
+                exemptOverview: true
             })
         }
         return navExpanded
@@ -504,6 +507,7 @@ class EventManager extends Component {
             this.stopPropagation(e)
             this._closeSections({
                 exemptCarousel: true,
+                exemptNav: true,
                 exemptOverview: true
             })
         }

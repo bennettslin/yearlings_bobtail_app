@@ -431,14 +431,14 @@ class App extends Component {
         (this.props.selectedDotsIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
-        if (typeof selectedDotsIndex === 'boolean') {
-            selectedDotsIndex = selectedDotsIndex ? 1 : 0
-        }
-
-        // Dots section cannot be expanded in logue.
-        if (getIsLogue(this.props) && selectedDotsIndex) {
+        // Dots section cannot be changed in logue.
+        if (getIsLogue(this.props)) {
             console.error('dots cant select');
             return false
+        }
+
+        if (typeof selectedDotsIndex === 'boolean') {
+            selectedDotsIndex = selectedDotsIndex ? 1 : 0
         }
 
         this.props.selectDotsIndex(selectedDotsIndex)
@@ -489,9 +489,10 @@ class App extends Component {
 
         /**
          * We shouldn't be able to select lyric column if not in a song that
-         * has double columns. Check for new song if called from portal.
+         * has double columns, or if in a logue. Check for new song if called
+         * from portal.
          */
-        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(props, state, selectedSongIndex) : this.state.showSingleLyricColumn)) {
+        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(props, state, selectedSongIndex) : this.state.showSingleLyricColumn) || getIsLogue(this.props, selectedSongIndex)) {
             console.error('lyric column cant select');
             return false
         }
@@ -524,6 +525,12 @@ class App extends Component {
 
     selectNavExpand(selectedNavIndex = (this.props.selectedNavIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
+
+        // Ignore this call if it's a hidden nav.
+        if (this.state.isHiddenNav) {
+            console.error('cant select nav');
+            return false
+        }
 
         if (typeof selectedNavIndex === 'boolean') {
             selectedNavIndex = selectedNavIndex ? 1 : 0
