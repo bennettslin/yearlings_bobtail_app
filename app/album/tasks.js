@@ -13,11 +13,6 @@ module.exports = [
 
     // Full morning tasks.
     {
-        taskName: `Consolidate button containers to prepare for access.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Lyric scrolling slowness, only update based on certain changes.`,
         workedHours: 0,
         neededHours: 5
