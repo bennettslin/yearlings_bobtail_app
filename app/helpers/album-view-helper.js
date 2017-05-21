@@ -130,6 +130,14 @@ export const getAnnotationIndexForDirection = ({
         // If a direction is given for this method, it has modulo.
         useModulo = !!direction
 
+    /**
+     * Begin with a valid annotation index, in case there is no current
+     * accessed annotation index.
+     */
+    if (currentAnnotationIndex < 1) {
+        currentAnnotationIndex = 1
+    }
+
     if (selectedSong.annotations) {
         const annotationsLength = selectedSong.annotations.length,
             selectedDotKeys = props.selectedDotKeys,
@@ -137,6 +145,7 @@ export const getAnnotationIndexForDirection = ({
 
         let returnIndex = currentAnnotationIndex,
             directionSwitchCounter = 0,
+            doesIntersect,
             returnToLoop
 
         // Skip over deselected annotations.
@@ -186,10 +195,11 @@ export const getAnnotationIndexForDirection = ({
                 }
             }
 
+            doesIntersect = intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys)
 
             returnToLoop =
                 // Continue if dots don't intersect...
-                (!intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys) ||
+                (!doesIntersect ||
 
                 // Or if this annotation isn't in the shown column...
                 !shouldShowAnnotationForColumn(props, state, selectedSong.annotations[returnIndex - 1], lyricColumnIndex)) &&
@@ -208,9 +218,13 @@ export const getAnnotationIndexForDirection = ({
          * Prevent index from incrementing forever by stopping after return
          * index is once again current index, with direction set.
          */
-         } while (returnToLoop)
+        } while (returnToLoop)
 
-        return returnIndex
+        /**
+         * Allow for the possibility that all dots are deselected, such that no
+         * annotation can be accessed.
+         */
+        return doesIntersect ? returnIndex : -1
     }
 
     return currentAnnotationIndex

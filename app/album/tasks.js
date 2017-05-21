@@ -1,13 +1,14 @@
 module.exports = [
 
+    {
+        taskName: `Consolidate animation durations.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     // Full morning tasks.
     {
         taskName: `Consolidate button containers to prepare for access.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Fix method to select annotation index for direction.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -1940,6 +1941,11 @@ module.exports = [
     },
     {
         taskName: `Dot descriptions are broken in Safari.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Fix method to select annotation index for direction.`,
         workedHours: 1,
         neededHours: 1
     }
