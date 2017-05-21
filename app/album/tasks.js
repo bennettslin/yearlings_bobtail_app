@@ -2,11 +2,6 @@ module.exports = [
 
     // Full morning tasks.
     {
-        taskName: `When switching to logue and carousel is on, then turning on nav in logue, should toggle off nav (be better about exempting.)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Consolidate button containers to prepare for access.`,
         workedHours: 0,
         neededHours: 3
@@ -1924,5 +1919,10 @@ module.exports = [
         taskName: `Create title section popup.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `When switching to logue and carousel is on, then turning on nav in logue, should toggle off nav (be better about exempting.)`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

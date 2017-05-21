@@ -380,16 +380,17 @@ class App extends Component {
      ************/
 
     selectCarousel(selectedCarouselIndex =
-        (this.props.selectedCarouselIndex + 1) % 2, noAdditionalCheck) {
+        (this.props.selectedCarouselIndex + 1) % 2, overrideException) {
         // If no argument passed, then just toggle between on and off.
 
         /**
          * We should ignore this call if carousel is not expandable, or if
-         * it's a heightless lyric, or if it's a logue.
+         * it's a heightless lyric, or if it's a logue. However, allow nav to
+         * override this exception.
          */
-        if ((!noAdditionalCheck && (!this.state.isCarouselExpandable || this.state.isHeightlessLyricColumn)) ||
-            getIsLogue(this.props)) {
-            console.error('carousel cant select');
+        if (!overrideException && (!this.state.isCarouselExpandable ||
+                this.state.isHeightlessLyricColumn ||
+                getIsLogue(this.props))) {
             return false
         }
 
@@ -433,7 +434,6 @@ class App extends Component {
 
         // Dots section cannot be changed in logue.
         if (getIsLogue(this.props)) {
-            console.error('dots cant select');
             return false
         }
 
@@ -449,13 +449,13 @@ class App extends Component {
      * LYRIC *
      *********/
 
-    selectLyricExpand(isLyricExpanded = !this.state.isLyricExpanded) {
+    selectLyricExpand(isLyricExpanded = !this.state.isLyricExpanded, overrideException) {
+
         /**
          * We should ignore this call if lyric is not expandable, or if it's a
-         * logue.
+         * logue. However, allow nav to override this exception.
          */
-        if (!getIsLyricExpandable(this.state) || getIsLogue(this.props)) {
-            console.error('lyrics cant expand');
+        if (!overrideException && (!getIsLyricExpandable(this.state) || getIsLogue(this.props))) {
             return false
         }
 
@@ -493,7 +493,6 @@ class App extends Component {
          * from portal.
          */
         if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(props, state, selectedSongIndex) : this.state.showSingleLyricColumn) || getIsLogue(this.props, selectedSongIndex)) {
-            console.error('lyric column cant select');
             return false
         }
 
@@ -528,7 +527,6 @@ class App extends Component {
 
         // Ignore this call if it's a hidden nav.
         if (this.state.isHiddenNav) {
-            console.error('cant select nav');
             return false
         }
 
@@ -667,7 +665,6 @@ class App extends Component {
 
         // We shouldn't be able to change overview it's a logue.
         if (getIsLogue(this.props)) {
-            console.error('overview cant select');
             return false
         }
 
@@ -959,7 +956,10 @@ class App extends Component {
         newState.scoresTipsOutsideMenu = getScoresTipsOutsideMenu(newState)
         newState.titleInAudio = getTitleInAudio(newState)
 
-        // Collapse carousel in state if not expandable, or if heightless lyric.
+        /**
+         * Force collapse of carousel in state if not expandable, or if
+         * heightless lyric.
+         */
         if (!isCarouselExpandable || isHeightlessLyricColumn) {
             this.selectCarousel(false, true)
         }

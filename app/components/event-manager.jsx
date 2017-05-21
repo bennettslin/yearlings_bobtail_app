@@ -470,7 +470,11 @@ class EventManager extends Component {
             this._closeSections({
                 exemptDots: true,
                 exemptNav: true,
-                exemptOverview: true
+                exemptOverview: true,
+
+                // Allow nav to close carousel and lyric even in logue.
+                forceCloseCarousel: true,
+                forceCloseLyric: true
             })
         }
         return navExpanded
@@ -641,7 +645,10 @@ class EventManager extends Component {
         exemptLyric,
         exemptNav,
         exemptOverview,
-        exemptInteractivatedVerse
+        exemptInteractivatedVerse,
+
+        forceCloseCarousel,
+        forceCloseLyric
     }) {
 
         const { domProps } = this.props
@@ -665,7 +672,7 @@ class EventManager extends Component {
         }
 
         if (!exemptCarousel) {
-            this.props.selectCarousel(false)
+            this.props.selectCarousel(false, forceCloseCarousel)
         }
 
         if (!exemptDots) {
@@ -673,7 +680,7 @@ class EventManager extends Component {
         }
 
         if (!exemptLyric) {
-            this.props.selectLyricExpand(false)
+            this.props.selectLyricExpand(false, forceCloseLyric)
         }
 
         if (!exemptNav) {
