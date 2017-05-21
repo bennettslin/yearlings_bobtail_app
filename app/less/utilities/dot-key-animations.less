@@ -2,7 +2,8 @@
  * CAROUSEL *
  ************/
 
-@carousel-annotation-title-padding: 5px;
+@annotation-section-padding: 5px;
+@annotation-card-padding: @annotation-section-padding;
 
 .live-app.narrative .carousel-annotation.narrative,
 .live-app.backstory .carousel-annotation.backstory,
@@ -11,15 +12,14 @@
 .live-app.reference .carousel-annotation.reference,
 .live-app.songwriting .carousel-annotation.songwriting,
 .live-app.portal .carousel-annotation.portal,
-.live-app.afterword .carousel-annotation.afterword,
-.popup-content-wrapper.annotation {
+.live-app.afterword .carousel-annotation.afterword {
 
     min-width: @annotation-width + @carousel-annotation-padding * 2 + @carousel-annotation-side-margin * 2;
 
     .annotation-title-block {
         max-height: 2em; // Arbitrary value that's larger than its max height.
         min-height: @app-small-icon-diameter;
-        padding: @carousel-annotation-title-padding 0;
+        padding: @annotation-section-padding 0;
     }
 }
 
@@ -34,12 +34,12 @@
 
     min-height: @annotation-dot-diameter;
     max-height: 500px; // Arbitrary large number.
-    padding: @carousel-annotation-title-padding;
+    padding: @annotation-card-padding;
     opacity: 1;
     box-shadow: 0 1px 1px 1px @box-shadow-colour;
 
     &:not(:last-child) {
-        margin-bottom: @carousel-annotation-title-padding;
+        margin-bottom: @annotation-section-padding;
     }
 }
 

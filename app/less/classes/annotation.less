@@ -56,15 +56,23 @@
     }
 }
 
-.annotation-title-block {
-    text-align: center;
+.carousel {
+    .annotation-title-block {
+        text-align: center;
 
-    transition: max-height 0.2s, padding 0.2s;
-    overflow: hidden;
-    max-height: 0;
+        transition: max-height 0.2s, padding 0.2s;
+        overflow: hidden;
+        max-height: 0;
 
-    // FIXME: Make text shadow transparent?
-    // .text-shadow-mixin(transparent);
+        // FIXME: Make text shadow transparent?
+        // .text-shadow-mixin(transparent);
+    }
+}
+
+.popup-content-wrapper {
+    .annotation-title-block {
+        padding: @annotation-section-padding 0;
+    }
 }
 
 .annotation-title {
@@ -74,7 +82,7 @@
 .annotation-card {
     position: relative;
     max-height: 0;
-    padding: 0 5px;
+    padding: 0 @annotation-card-padding;
     opacity: 0.5;
     overflow: hidden;
 
@@ -102,7 +110,7 @@
         min-height: auto;
         max-height: 0;
         margin: auto;
-        padding: 0 5px;
+        padding: 0 @annotation-card-padding;
         opacity: 0.5;
         box-shadow: none;
     }

@@ -1,6 +1,6 @@
 @popup-content-side-padding: 20px;
-@full-subfield: @app-large-icon-diameter;
-@mini-full-subfield: 10px;
+@full-subfield-margin: @app-large-icon-diameter;
+@mini-full-subfield-margin: 10px;
 
 @popup-box-shadow: -2px 2px 8px 8px @box-shadow-colour;
 @popup-darker-box-shadow: -2px 2px 8px 8px @darker-box-shadow-colour;
@@ -8,8 +8,9 @@
 
 @popup-button-multiplier: 0.72;
 
-@popup-annotation-width: @popup-content-side-padding * 2 + @annotation-width;
-@mini-popup-annotation-width: @mini-full-subfield * 2 + @annotation-width;
+@popup-annotation-width: @annotation-card-width + @annotation-card-padding * 2 + @popup-content-side-padding * 2;
+@mini-popup-annotation-width: @annotation-card-mini-width + @annotation-card-padding * 2 + @popup-content-side-padding * 2;
+@phone-popup-annotation-width: @annotation-card-phone-width + @annotation-card-padding * 2 + @popup-content-side-padding * 2;
 
 .popup-field, .popup-field .subfield, .popup-transition-group {
     position: absolute;
@@ -44,10 +45,10 @@
     z-index: @popup-content-z-index;
 
     &.wiki, &.score {
-        width: ~"calc(100% - @{full-subfield} * 2.5)";
+        width: ~"calc(100% - @{full-subfield-margin} * 2.5)";
         max-width: @laptop-max-width;
 
-        height: ~"calc(100% - @{full-subfield} * 2)";
+        height: ~"calc(100% - @{full-subfield-margin} * 2)";
     }
 
     &.annotation, &.title {
@@ -56,22 +57,22 @@
     }
 }
 
-// Multiplier is .95, just like for lyric text in mini.
+// Multiplier is .9, just like for lyric text in mini.
 .mini-width {
     .popup-wrapper {
         &.annotation, &.title {
-            width: @mini-popup-annotation-width;
+            // width: @mini-popup-annotation-width;
             max-width: @mini-popup-annotation-width;
         }
     }
 }
 
-// Multiplier is .9, just like for lyric text in phone.
+// Multiplier is .98, just like for lyric text in phone.
 .phone-width {
     .popup-wrapper {
         &.annotation, &.title {
-            width: @annotation-width;
-            max-width: @annotation-width;
+            // width: @phone-popup-annotation-width;
+            max-width: @phone-popup-annotation-width;
         }
     }
 }
@@ -165,7 +166,7 @@
     &:not(.tablet-width) {
         .popup-wrapper {
             &.wiki, &.score {
-                width: ~"calc(100% - @{mini-full-subfield} * 2)";
+                width: ~"calc(100% - @{mini-full-subfield-margin} * 2)";
                 height: ~"calc(100% - @{app-icon-diameter} * 2)";
             }
 
@@ -180,14 +181,14 @@
             .popup-wrapper {
                 &.wiki, &.score, &.annotation, &.title {
                     // Make side margin in phone just that much thinner.
-                    width: ~"calc(100% - @{mini-full-subfield})";
+                    width: ~"calc(100% - @{mini-full-subfield-margin})";
                 }
             }
 
             .heightless-lyric {
                 .popup-wrapper {
                     &.wiki, &.score {
-                        height: ~"calc(100% - @{mini-full-subfield})";
+                        height: ~"calc(100% - @{mini-full-subfield-margin})";
                     }
                 }
             }
@@ -198,7 +199,7 @@
             .popup-wrapper {
                 &.wiki, &.score {
                     width: ~"calc(100% - @{app-icon-diameter} * 2)";
-                    height: ~"calc(100% - @{mini-full-subfield} * 2)";
+                    height: ~"calc(100% - @{mini-full-subfield-margin} * 2)";
                 }
             }
         }
