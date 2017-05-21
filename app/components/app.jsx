@@ -389,7 +389,7 @@ class App extends Component {
          */
         if ((!noAdditionalCheck && (!this.state.isCarouselExpandable || this.state.isHeightlessLyricColumn)) ||
             getIsLogue(this.props)) {
-
+            console.error('carousel cant select');
             return false
         }
 
@@ -437,6 +437,7 @@ class App extends Component {
 
         // Dots section cannot be expanded in logue.
         if (getIsLogue(this.props) && selectedDotsIndex) {
+            console.error('dots cant select');
             return false
         }
 
@@ -454,6 +455,7 @@ class App extends Component {
          * logue.
          */
         if (!getIsLyricExpandable(this.state) || getIsLogue(this.props)) {
+            console.error('lyrics cant expand');
             return false
         }
 
@@ -490,6 +492,7 @@ class App extends Component {
          * has double columns. Check for new song if called from portal.
          */
         if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(props, state, selectedSongIndex) : this.state.showSingleLyricColumn)) {
+            console.error('lyric column cant select');
             return false
         }
 
@@ -657,6 +660,7 @@ class App extends Component {
 
         // We shouldn't be able to change overview it's a logue.
         if (getIsLogue(this.props)) {
+            console.error('overview cant select');
             return false
         }
 

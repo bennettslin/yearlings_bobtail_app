@@ -80,7 +80,7 @@
     }
 }
 
-.annotation-shown.carousel-expanded {
+.is-song.annotation-shown.carousel-expanded {
     .carousel-nav-buttons-block {
         bottom: 0;
     }
@@ -204,13 +204,6 @@
         transition: top 0.2s;
     }
 
-    .annotation-shown.carousel-expanded {
-        .carousel-nav-buttons-block {
-            bottom: auto;
-            top: 0;
-        }
-    }
-
     .carousel {
         bottom: auto;
         top: calc(~"-100% - @{carousel-tablet-variable}");
@@ -223,9 +216,16 @@
         flex-direction: column;
     }
 
-    .carousel-expanded {
+    .is-song.carousel-expanded {
         .carousel {
             top: -@carousel-toggle-tablet-length;
+        }
+
+        &.annotation-shown {
+            .carousel-nav-buttons-block {
+                bottom: auto;
+                top: 0;
+            }
         }
     }
 
@@ -265,7 +265,7 @@
             height: calc(~"100% + @{carousel-toggle-mini-length}");
         }
 
-        .carousel-expanded {
+        .is-song.carousel-expanded {
             .carousel {
                 top: -@carousel-toggle-mini-length;
             }

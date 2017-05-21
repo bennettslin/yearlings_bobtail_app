@@ -41,6 +41,12 @@ module.exports = [
     },
 
     {
+        taskName: `Dot descriptions are broken in Safari.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
         workedHours: 0,
         neededHours: 3
