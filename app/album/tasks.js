@@ -34,12 +34,6 @@ module.exports = [
         neededHours: 1
     },
 
-    {
-        taskName: `Get rid of activeElement line.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Bugs.
     {
         taskName: `Reset accessed annotation index strategically (before or after toggle?)`,
@@ -1943,6 +1937,11 @@ module.exports = [
     },
     {
         taskName: `Window resize in logue breaks mini single column in Odin.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Get rid of activeElement line.`,
         workedHours: 1,
         neededHours: 1
     }
