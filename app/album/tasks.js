@@ -1,4 +1,10 @@
 module.exports = [
+
+    {
+        taskName: `Show access upon page navigation keys.`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Consolidate animation durations.`,
         workedHours: 0,
