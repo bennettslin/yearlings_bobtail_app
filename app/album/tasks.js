@@ -51,12 +51,6 @@ module.exports = [
     },
 
     {
-        taskName: `Annotation slider.`,
-        workedHours: 0,
-        neededHours: 15
-    },
-
-    {
         taskName: `Title section content.`,
         workedHours: 0,
         neededHours: 3
