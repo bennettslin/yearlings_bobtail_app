@@ -1,5 +1,11 @@
 module.exports = [
 
+    {
+        taskName: `Refactor album view helper.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     // Full morning tasks.
     {
         taskName: `Lyric scrolling slowness, only update based on certain changes.`,

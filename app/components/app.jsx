@@ -442,6 +442,21 @@ class App extends Component {
             selectedDotsIndex = selectedDotsIndex ? 1 : 0
         }
 
+        /**
+         * If closing dots section, get accessed annotation index because it
+         * might have changed.
+         */
+        if (!selectedDotsIndex) {
+            const accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
+                props: this.props,
+                state: this.state
+            })
+
+            this.setState({
+                accessedAnnotationIndex
+            })
+        }
+
         this.props.selectDotsIndex(selectedDotsIndex)
         return true
     }
@@ -659,19 +674,21 @@ class App extends Component {
             }
         }
 
-        // TODO: Get new accessed annotation index, but instead of this here, start from 1 and go forward. Should always be the title annotation, unless deselected by dots.
-
-        // Get new accessed annotation index.
-        // newState.accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-        //     props: {
-        //         selectedSongIndex,
-        //         songs: props.songs,
-        //         selectedDotKeys: props.selectedDotKeys,
-        //         selectedLyricColumnIndex: props.selectedLyricColumnIndex
-        //     },
-        //     state: this.state,
-        //     verseIndex: selectedVerseIndex
-        // })
+        /**
+         * Get new accessed annotation index by starting from first and going
+         * forward. It should always be the title annotation unless deselected
+         * by dits.
+         */
+        newState.accessedAnnotationIndex = getAnnotationIndexForDirection({
+            props: {
+                selectedSongIndex,
+                songs: props.songs,
+                selectedDotKeys: props.selectedDotKeys,
+                selectedLyricColumnIndex: props.selectedLyricColumnIndex
+            },
+            state: this.state,
+            currentAnnotationIndex: 1
+        })
 
         this.setState(newState)
         this.accessSong(selectedSongIndex)

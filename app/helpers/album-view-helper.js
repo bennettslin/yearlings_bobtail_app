@@ -240,10 +240,10 @@ export const getAnnotationIndexForVerseIndex = ({
      * two lyric columns are shown.
      */
     state,
-    verseIndex,
 
     // Search backwards by default.
     direction = -1,
+    verseIndex = props.selectedVerseIndex,
     lyricColumnIndex = props.selectedLyricColumnIndex
 }) => {
     /**
@@ -276,6 +276,7 @@ export const getAnnotationIndexForVerseIndex = ({
          */
         let currentCounter = direction === 1 ? (verse.currentAnnotationIndices.length - 1) : 0
 
+        // TODO: This doesn't work.
         /**
          * Loop through all the annotations in the verse, in case some are
          * hidden.
