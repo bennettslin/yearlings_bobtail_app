@@ -2,9 +2,6 @@
  * CAROUSEL *
  ************/
 
-@annotation-section-padding: 5px;
-@annotation-card-padding: @annotation-section-padding;
-
 .live-app.narrative .carousel-annotation.narrative,
 .live-app.backstory .carousel-annotation.backstory,
 .live-app.observation .carousel-annotation.observation,
@@ -14,13 +11,27 @@
 .live-app.portal .carousel-annotation.portal,
 .live-app.afterword .carousel-annotation.afterword {
 
-    min-width: @annotation-width + @carousel-annotation-padding * 2 + @carousel-annotation-side-margin * 2;
+    // min-width: @annotation-card-width + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
+    min-width: @annotation-card-width + @annotation-card-padding * 2 + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
 
     .annotation-title-block {
         max-height: 2em; // Arbitrary value that's larger than its max height.
         min-height: @app-small-icon-diameter;
         padding: @annotation-section-padding 0;
     }
+}
+
+.mini-width .live-app.narrative .carousel-annotation.narrative,
+.mini-width .live-app.backstory .carousel-annotation.backstory,
+.mini-width .live-app.observation .carousel-annotation.observation,
+.mini-width .live-app.pun .carousel-annotation.pun,
+.mini-width .live-app.reference .carousel-annotation.reference,
+.mini-width .live-app.songwriting .carousel-annotation.songwriting,
+.mini-width .live-app.portal .carousel-annotation.portal,
+.mini-width .live-app.afterword .carousel-annotation.afterword {
+
+    // min-width: @annotation-card-width + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
+    min-width: @annotation-card-mini-width + @annotation-card-padding * 2 + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
 }
 
 .live-app.narrative .annotation-card.narrative,

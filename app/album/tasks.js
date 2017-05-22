@@ -23,18 +23,6 @@ module.exports = [
         neededHours: 3
     },
 
-    // These go together.
-    {
-        taskName: `Consolidate annotation widths across popup and carousel.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Side annotation in mini and phone is wonky.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Bugs.
     {
         taskName: `Reset accessed annotation index strategically (before or after toggle?)`,
@@ -1945,5 +1933,10 @@ module.exports = [
         taskName: `Get rid of activeElement line.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Consolidate annotation widths across popup and carousel.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

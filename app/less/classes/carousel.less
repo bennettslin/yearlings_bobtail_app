@@ -12,11 +12,6 @@
 @carousel-toggle-tablet-length: @overview-toggle-tablet-width - 2px;
 @carousel-toggle-mini-length: @overview-toggle-mini-width - 2px;
 
-@carousel-annotation-side-margin: 5px;
-@carousel-annotation-small-padding: 10px;
-@carousel-annotation-padding: 16px;
-@carousel-annotation-hidden-width: @carousel-annotation-padding * 2 - @carousel-annotation-side-margin * 0.5;
-
 @carousel-height-variable: @carousel-toggle-laptop-length + @dots-overview-padding;
 @carousel-position-variable: @carousel-height-variable * 2 + @dots-overview-padding * 2 + @nav-height;
 
@@ -26,6 +21,10 @@
 @carousel-nav-buttons-block-width: @app-large-icon-diameter * 2 + @app-thin-margin * 3;
 @carousel-nav-buttons-block-tablet-width: @app-tablet-large-icon-diameter * 2 + @app-thin-margin * 3;
 @carousel-nav-buttons-block-mini-width: @app-mini-large-icon-diameter * 2 + @app-thin-margin * 3;
+
+@carousel-annotation-small-padding: 10px;
+@carousel-annotation-padding: 16px;
+@carousel-annotation-hidden-padding: @carousel-annotation-padding * 2 - @annotation-section-padding * 0.5;
 
 .carousel-toggle-button-block {
     background-color: #edf;
@@ -131,18 +130,17 @@
     display: flex;
     flex-direction: column-reverse;
 
-    min-width: @carousel-annotation-hidden-width;
+    min-width: @carousel-annotation-hidden-padding;
     transition: min-width 0.2s;
 
     .annotation-section {
-        width: @annotation-width + @carousel-annotation-padding * 2 + @carousel-annotation-side-margin;
-        margin: @carousel-annotation-small-padding @carousel-annotation-side-margin;
+        margin: @carousel-annotation-small-padding @annotation-section-padding;
         padding: @carousel-annotation-small-padding @carousel-annotation-padding @carousel-annotation-padding;
         transition: background-color 0.2s;
     }
 
     &:not(:last-child) {
-        margin-right: -@carousel-annotation-padding * 2 + @carousel-annotation-side-margin * 0.5;
+        margin-right: -@carousel-annotation-padding * 2 + @annotation-section-padding * 0.5;
     }
 
     &:first-child {
@@ -150,10 +148,13 @@
     }
 }
 
-// Override if hidden by single lyric column.
-.live-app.just-show-right-lyric .carousel-annotation.in-column-left,
-.live-app.just-show-left-lyric .carousel-annotation.in-column-right {
-    min-width: @carousel-annotation-hidden-width;
+/**
+ * Override if hidden by single lyric column. Must be specific to override
+ * styles for mini width as well.
+ */
+.live .live-app.just-show-right-lyric .carousel-annotation.in-column-left,
+.live .live-app.just-show-left-lyric .carousel-annotation.in-column-right {
+    min-width: @carousel-annotation-hidden-padding;
 
     .annotation-title-block {
         max-height: 0;
