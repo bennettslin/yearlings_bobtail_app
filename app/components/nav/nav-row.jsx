@@ -1,7 +1,7 @@
 import React from 'react'
 import ProgressBar from '../admin/progress/progress-bar'
 import ProgressHelper from '../../helpers/progress-helper'
-import { getSongTitle } from '../../helpers/album-view-helper'
+import { getSongTitle } from '../../helpers/data-helper'
 
 /*************
  * CONTAINER *

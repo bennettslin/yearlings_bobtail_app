@@ -8,7 +8,7 @@ import { OVERVIEW_OPTIONS,
 
          DISABLED } from '../helpers/constants'
 
-import { getAnnotation } from '../helpers/album-view-helper'
+import { getAnnotation } from '../helpers/data-helper'
 import { intersects } from '../helpers/dot-helper'
 import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsive-helper'
 

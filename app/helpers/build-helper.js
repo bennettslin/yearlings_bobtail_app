@@ -6,8 +6,8 @@ import { ALBUM_BUILD_KEYS,
          RIGHT,
          CENTRE,
          REFERENCE } from './constants'
+import { getAnnotationsDotKeys } from './data-helper'
 import { getFormattedAnnotationTitle } from './format-helper'
-import { getAnnotationsDotKeys } from './album-view-helper'
 
 const _tempStore = {
     _songIndex: 0,

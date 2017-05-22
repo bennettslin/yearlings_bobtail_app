@@ -3,7 +3,8 @@ import Drawing from './Drawing'
 import NotesSection from './notes/notes-section'
 import StatsSection from './stats/stats-section'
 import TasksSection from './tasks/tasks-section'
-import { getSong, getTasks } from '../../helpers/album-view-helper'
+import { getSong } from '../../helpers/data-helper'
+import { getTasks } from '../../helpers/logic-helper'
 
 /*************
  * CONTAINER *

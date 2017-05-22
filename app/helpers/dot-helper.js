@@ -1,4 +1,4 @@
-import { getAnnotation } from './album-view-helper'
+import { getAnnotation } from './data-helper'
 
 // Check if at least one present key is selected.
 export const intersects = (presentKeys = {}, selectedKeys = {}) => {

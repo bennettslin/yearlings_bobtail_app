@@ -29,7 +29,8 @@ import { SHOWN,
 
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
-import { getSong, getAnnotation, getIsLogue, getOverview, getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getSongTimes, getVerseIndexForTime, getSelectedBookColumnIndex, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/album-view-helper'
+import { getSong, getIsLogue, getAnnotation, getBookColumnIndex, getOverview, getSongTimes } from '../helpers/data-helper'
+import { getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
@@ -126,7 +127,7 @@ class App extends Component {
             popupLogueOverview: isLogue ? getOverview(props) : '',
             popupSongOverview: isLogue ? '' : getOverview(props),
 
-            selectedBookColumnIndex: getSelectedBookColumnIndex(props),
+            selectedBookColumnIndex: getBookColumnIndex(props),
             isCarouselExpandable: false,
             isHeightlessLyricColumn: false,
             isHiddenNav: false,
@@ -590,7 +591,7 @@ class App extends Component {
 
         // Reset to default upon song change or nav expand.
         if (resetToDefault) {
-            selectedBookColumnIndex = getSelectedBookColumnIndex(this.props, selectedSongIndex)
+            selectedBookColumnIndex = getBookColumnIndex(this.props, selectedSongIndex)
         }
 
         this.setState({

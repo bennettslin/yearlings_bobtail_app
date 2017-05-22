@@ -19,7 +19,7 @@ import { PHONE_WIDTH,
          COLLAPSED_LYRIC_SECTION_HEIGHT,
          WIKI_SIDE_PADDING_TOTAL } from './constants'
 
-import { getSong } from './album-view-helper'
+import { getSong } from './data-helper'
 
 export const resizeWindow = (target = window) => {
 

@@ -6,7 +6,8 @@ import AudioPlayersSection from './audio/audio-players-section'
 import { DEVICE_OBJECTS,
          OVERVIEW_OPTIONS,
          SHOWN } from '../helpers/constants'
-import { getSongTitle, getVerse, getHiddenLyricColumnKey } from '../helpers/album-view-helper'
+import { getSongTitle, getVerse } from '../helpers/data-helper'
+import { getHiddenLyricColumnKey } from '../helpers/logic-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
 class DomManager extends Component {

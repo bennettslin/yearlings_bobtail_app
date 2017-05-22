@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { getFormattedTime } from '../../helpers/format-helper'
-import { getVerseBeginAndEndTimes } from '../../helpers/album-view-helper'
+import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
 
 /*************
  * CONTAINER *

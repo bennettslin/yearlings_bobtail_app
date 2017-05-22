@@ -16,7 +16,8 @@ import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
 import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
-import { getSong, getWikiUrl } from '../helpers/album-view-helper'
+import { getSong } from '../helpers/data-helper'
+import { getWikiUrl } from '../helpers/logic-helper'
 import { LYRIC_SECTION_EXPAND_KEY } from '../helpers/constants'
 
 /*************

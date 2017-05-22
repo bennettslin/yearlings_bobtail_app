@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import DomManager from './dom-manager'
 import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
-         getPopupAnchorIndexForDirection } from '../helpers/album-view-helper'
+         getPopupAnchorIndexForDirection } from '../helpers/logic-helper'
 import { CAPS_LOCK,
          ESCAPE,
          SPACE,

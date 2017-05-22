@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import DotBlock from '../dot/dots-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
-import { getPortalLinks } from '../../helpers/album-view-helper'
+import { getPortalLinks } from '../../helpers/logic-helper'
 
 /*************
  * CONTAINER *
