@@ -1,4 +1,4 @@
-import { getAnnotation } from './data-helper'
+import { getAnnotationObject } from './data-helper'
 
 // Check if at least one present key is selected.
 export const intersects = (presentKeys = {}, selectedKeys = {}) => {
@@ -18,7 +18,7 @@ export const intersects = (presentKeys = {}, selectedKeys = {}) => {
 
 export const allDotsDeselected = (props, dotKey) => {
     const { selectedDotKeys } = props,
-        annotation = getAnnotation(props),
+        annotation = getAnnotationObject(props),
         shownDotKeys = annotation ? annotation.dotKeys : null,
 
         // The dotKey being deselected is still selected at this stage.

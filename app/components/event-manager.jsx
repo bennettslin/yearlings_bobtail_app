@@ -8,7 +8,7 @@ import { OVERVIEW_OPTIONS,
 
          DISABLED } from '../helpers/constants'
 
-import { getAnnotation } from '../helpers/data-helper'
+import { getAnnotationObject } from '../helpers/data-helper'
 import { intersects } from '../helpers/dot-helper'
 import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsive-helper'
 
@@ -430,7 +430,7 @@ class EventManager extends Component {
          * ensure that it is not shown as text. Maybe bypass if done through
          * access?
          */
-        const annotation = getAnnotation(this.props.domProps, selectedAnnotationIndex),
+        const annotation = getAnnotationObject(this.props.domProps, selectedAnnotationIndex),
             isAnnotationEnabled = intersects(annotation.dotKeys, this.props.domProps.selectedDotKeys)
 
         if (!isAnnotationEnabled) {

@@ -4,7 +4,7 @@ import { LYRIC_COLUMN_KEYS,
          PORTAL,
          REFERENCE } from './constants'
 
-import { getSong, getIsLogue, getAnnotation, getAnnotationsLength, getVerse } from './data-helper'
+import { getSongObject, getIsLogue, getAnnotationObject, getAnnotationsLength, getVerse } from './data-helper'
 import { intersects } from './dot-helper'
 import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from './responsive-helper'
 
@@ -45,7 +45,7 @@ export const getAnnotationIndexForDirection = ({
      * - from getAnnotationIndexForVerseIndex.
      */
 
-    const selectedSong = getSong(props),
+    const selectedSong = getSongObject(props),
 
         // If a direction is given for this method, it has modulo.
         useModulo = !!direction
@@ -210,7 +210,7 @@ export const getAnnotationIndexForVerseIndex = ({
             // Move inward, which is the opposite direction.
             currentCounter -= direction
 
-            const annotation = getAnnotation(props, returnIndex),
+            const annotation = getAnnotationObject(props, returnIndex),
                 showAnnotationForColumn = shouldShowAnnotationForColumn({
                     songs: props.songs,
                     selectedSongIndex: props.selectedSongIndex,
@@ -286,7 +286,7 @@ export const getVerseBeginAndEndTimes = (props, verseIndex) => {
         }
     }
 
-    const selectedSong = getSong(props),
+    const selectedSong = getSongObject(props),
         songTimes = selectedSong.times,
 
         beginTime = songTimes[verseIndex],
@@ -299,7 +299,7 @@ export const getVerseBeginAndEndTimes = (props, verseIndex) => {
 }
 
 export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
-    const annotation = getAnnotation(props, annotationIndex),
+    const annotation = getAnnotationObject(props, annotationIndex),
         { verseIndex,
           mostRecentVerseIndex } = annotation
 
@@ -307,7 +307,7 @@ export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
 }
 
 export const getVerseIndexForTime = (props, time) => {
-    const selectedSong = getSong(props)
+    const selectedSong = getSongObject(props)
 
     if (time >= 0 && time <= selectedSong.totalTime) {
         let selectedVerseIndex = 0
@@ -329,7 +329,7 @@ export const getPopupAnchorIndexForDirection = (
     initialPopupAnchorIndex = 1,
     direction
 ) => {
-    const annotation = getAnnotation(props),
+    const annotation = getAnnotationObject(props),
         selectedDotKeys = props.selectedDotKeys
 
     if (annotation && annotation.popupAnchors) {
@@ -428,7 +428,7 @@ export const getWikiUrl = (props) => {
     const { selectedWikiIndex,
             carouselAnnotationIndex } = props
     if (selectedWikiIndex) {
-        const annotation = getAnnotation(props, carouselAnnotationIndex),
+        const annotation = getAnnotationObject(props, carouselAnnotationIndex),
             partialPath = annotation.popupAnchors[selectedWikiIndex - 1]
 
         let fullPath

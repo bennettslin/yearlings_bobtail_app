@@ -16,7 +16,7 @@ import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
 import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
-import { getSong } from '../helpers/data-helper'
+import { getSongObject } from '../helpers/data-helper'
 import { getWikiUrl } from '../helpers/logic-helper'
 import { LYRIC_SECTION_EXPAND_KEY } from '../helpers/constants'
 
@@ -26,7 +26,7 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../helpers/constants'
 
 const Live = (props) => {
 
-    const selectedSong = getSong(props),
+    const selectedSong = getSongObject(props),
         selectedWikiUrl = getWikiUrl(props)
 
     return (

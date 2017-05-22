@@ -29,7 +29,7 @@ import { SHOWN,
 
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
-import { getSong, getIsLogue, getAnnotation, getBookColumnIndex, getOverview, getSongTimes } from '../helpers/data-helper'
+import { getSongObject, getIsLogue, getAnnotationObject, getBookColumnIndex, getOverview, getSongTimes } from '../helpers/data-helper'
 import { getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
@@ -123,7 +123,7 @@ class App extends Component {
             accessedSongIndex: props.selectedSongIndex,
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
 
-            popupAnnotation: getAnnotation(props),
+            popupAnnotation: getAnnotationObject(props),
             popupLogueOverview: isLogue ? getOverview(props) : '',
             popupSongOverview: isLogue ? '' : getOverview(props),
 
@@ -329,7 +329,7 @@ class App extends Component {
          */
         if (selectedAnnotationIndex) {
             this.setState({
-                popupAnnotation: getAnnotation({
+                popupAnnotation: getAnnotationObject({
                     selectedSongIndex,
                     songs: props.songs
                 }, selectedAnnotationIndex)
@@ -514,7 +514,7 @@ class App extends Component {
         }
 
         // Deselect selected annotation if not in new selected column.
-        const selectedAnnotation = getAnnotation(props),
+        const selectedAnnotation = getAnnotationObject(props),
             showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn({
 
                     songs: props.songs,
@@ -796,7 +796,7 @@ class App extends Component {
             sliderWidth = clientRect.width,
             sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
-            sliderTime = sliderRatio * getSong(this.props).totalTime,
+            sliderTime = sliderRatio * getSongObject(this.props).totalTime,
             sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
 
         this.setState({
@@ -826,7 +826,7 @@ class App extends Component {
                     sliderWidth } = this.state,
                 sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
-                sliderTime = sliderRatio * getSong(this.props).totalTime,
+                sliderTime = sliderRatio * getSongObject(this.props).totalTime,
                 sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
 
             this.setState({
@@ -839,7 +839,7 @@ class App extends Component {
 
     touchBodyEnd() {
         if (this.state.sliderMousedOrTouched) {
-            const selectedTime = this.state.sliderRatio * getSong(this.props).totalTime,
+            const selectedTime = this.state.sliderRatio * getSongObject(this.props).totalTime,
                 selectedVerseIndex = getVerseIndexForTime(this.props, selectedTime),
 
                 // We will start at the beginning of the selected verse.
@@ -990,7 +990,7 @@ class App extends Component {
         const newState = resizeWindow(e ? e.target : undefined),
             isCarouselExpandable = getIsCarouselExpandable(newState),
             isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState),
-            selectedSong = getSong(this.props)
+            selectedSong = getSongObject(this.props)
 
         newState.isCarouselExpandable = isCarouselExpandable
         newState.isHeightlessLyricColumn = isHeightlessLyricColumn
@@ -1011,7 +1011,7 @@ class App extends Component {
 
         // Deselect selected annotation if not in new shown column.
         if (selectedSong.doubleColumns && newState.showSingleLyricColumn && !this.state.showSingleLyricColumn) {
-            const selectedAnnotation = getAnnotation(this.props),
+            const selectedAnnotation = getAnnotationObject(this.props),
                 showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn(this.props, newState, selectedAnnotation)
 
             if (selectedAnnotation && !showAnnotationForColumn) {

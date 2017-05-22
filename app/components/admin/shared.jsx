@@ -3,7 +3,7 @@ import Drawing from './Drawing'
 import NotesSection from './notes/notes-section'
 import StatsSection from './stats/stats-section'
 import TasksSection from './tasks/tasks-section'
-import { getSong } from '../../helpers/data-helper'
+import { getSongObject } from '../../helpers/data-helper'
 import { getTasks } from '../../helpers/logic-helper'
 
 /*************
@@ -12,7 +12,7 @@ import { getTasks } from '../../helpers/logic-helper'
 
 const Shared = (props) => {
 
-    const selectedSong = getSong(props),
+    const selectedSong = getSongObject(props),
         tasks = getTasks(selectedSong, props.albumTasks),
         multipleCardAnnotationsCount = selectedSong.multipleCardAnnotationsCount
 

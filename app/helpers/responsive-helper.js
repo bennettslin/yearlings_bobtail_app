@@ -19,7 +19,7 @@ import { PHONE_WIDTH,
          COLLAPSED_LYRIC_SECTION_HEIGHT,
          WIKI_SIDE_PADDING_TOTAL } from './constants'
 
-import { getSong } from './data-helper'
+import { getSongObject } from './data-helper'
 
 export const resizeWindow = (target = window) => {
 
@@ -112,7 +112,7 @@ export const getIsLyricExpandable = ({ deviceIndex }) => {
 
 export const getShowSingleLyricColumn = (props, state, nextSongIndex) => {
     const songIndex = !isNaN(nextSongIndex) ? nextSongIndex : props.selectedSongIndex,
-        selectedSong = getSong(props, songIndex),
+        selectedSong = getSongObject(props, songIndex),
         { hasSideStanzas,
           isDoublespeaker,
           forceSingleColumn } = selectedSong,

@@ -1,6 +1,6 @@
 // Fetch album data. Should know nothing else.
 
-export const getSong = ({ selectedSongIndex, songs }, nextSongIndex) => {
+export const getSongObject = ({ selectedSongIndex, songs }, nextSongIndex) => {
     return songs[isNaN(nextSongIndex) ? selectedSongIndex : nextSongIndex]
 }
 
@@ -9,18 +9,18 @@ export const getIsLogue = ({ selectedSongIndex, songs }, nextSongIndex) => {
     return songIndex === 0 || songIndex === songs.length - 1
 }
 
-export const getAnnotation = ({
+export const getAnnotationObject = ({
     selectedAnnotationIndex,
     selectedSong,
 ...other }, annotationIndex) => {
 
-    selectedSong = selectedSong || getSong(other)
+    selectedSong = selectedSong || getSongObject(other)
     return selectedSong.annotations ?
             selectedSong.annotations[(annotationIndex || selectedAnnotationIndex) - 1] : null
 }
 
 export const getAnnotationsDotKeys = (props) => {
-    const selectedSong = props.selectedSong || getSong(props)
+    const selectedSong = props.selectedSong || getSongObject(props)
 
     return selectedSong ? selectedSong.annotations.map(annotation => {
         return annotation.dotKeys
@@ -28,7 +28,7 @@ export const getAnnotationsDotKeys = (props) => {
 }
 
 export const getAnnotationsLength = (props) => {
-    const selectedSong = getSong(props)
+    const selectedSong = getSongObject(props)
     return selectedSong.annotations ? selectedSong.annotations.length : 0
 }
 
@@ -41,12 +41,12 @@ export const getBookColumnIndex = (props, selectedSongIndex) => {
 }
 
 export const getOverview = (props, nextSongIndex) => {
-    const song = getSong(props, nextSongIndex)
+    const song = getSongObject(props, nextSongIndex)
     return song.overview
 }
 
 export const getSongTimes = (props, nextSongIndex) => {
-    const selectedSong = getSong(props, nextSongIndex)
+    const selectedSong = getSongObject(props, nextSongIndex)
     return selectedSong.times || []
 }
 
@@ -58,7 +58,7 @@ export const getSongTitle = (props, isLogue) => {
 }
 
 export const getVerse = ({ selectedVerseIndex, ...other }, verseIndex) => {
-    const { lyrics } = getSong(other)
+    const { lyrics } = getSongObject(other)
 
     return _parseLyrics(lyrics, (!isNaN(verseIndex) && verseIndex > -1) ? verseIndex : selectedVerseIndex)
 }
