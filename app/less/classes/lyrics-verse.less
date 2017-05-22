@@ -6,7 +6,7 @@
         padding-left: @verse-padding;
         padding-right: @verse-padding;
 
-        transition: color 0.15s, background-color 0.15s;
+        transition: color @animation-fast, background-color @animation-fast;
 
         &:first-child {
             padding-top: @verse-padding;
@@ -57,7 +57,7 @@
         height: 100%;
         width: @lyrics-audio-button-block-width;
 
-        transition: left 0.15s;
+        transition: left @animation-fast;
 
         // Either button or icon.
         .lyrics-audio-button-child {
@@ -75,7 +75,7 @@
             font-size: 0.1em;
             opacity: 0;
             z-index: @lyrics-audio-button-z-index;
-            transition: opacity 0.2s, font 0.2s;
+            transition: opacity @animation-default, font @animation-default;
 
             .animated-background {
                 width: @lyrics-audio-button-block-width;

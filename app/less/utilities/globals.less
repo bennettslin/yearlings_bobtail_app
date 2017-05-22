@@ -42,12 +42,12 @@ h1, h2, h3 {
     &.button {
 
         .animated-background {
-            transition: background-color 0.2s, transform 0.05s;
+            transition: background-color @animation-default, transform @animation-instant;
         }
 
         &:hover {
             .animated-background {
-                animation: bounceHover 0.2s;
+                animation: bounceHover @animation-default;
             }
         }
 

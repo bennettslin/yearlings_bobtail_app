@@ -27,7 +27,7 @@
 }
 
 .menu-subfield.audio-subfield {
-    transition: margin-bottom 0.2s;
+    transition: margin-bottom @animation-default;
 }
 
 .overlay-shown {
@@ -171,7 +171,7 @@
     top: 0;
     height: 100%;
 
-    transition: left 0.2s, width 0.2s, background-color 0.2s, box-shadow 0.2s;
+    transition: left @animation-default, width @animation-default, background-color @animation-default, box-shadow @animation-default;
 }
 
 .is-selected-cursor {
@@ -221,7 +221,7 @@
 }
 
 .verse-time-bar {
-    transition: box-shadow 0.2s, background-color 0.2s;
+    transition: box-shadow @animation-default, background-color @animation-default;
 
     &.hovered {
         transition: box-shadow 0.1s, background-color 0.1s;
@@ -237,7 +237,7 @@
 
 .slider-moving {
     .play-time-bar {
-        transition: background-color 0.2s;
+        transition: background-color @animation-default;
     }
 
     .time-spent-bar {
@@ -257,7 +257,7 @@
 
     .play-time-bar {
         // FIXME: Width animation is buggy if longer than 0.05s?
-        transition: width 0.05s, background-color 0.2s;
+        transition: width @animation-instant, background-color @animation-default;
     }
 }
 
@@ -271,7 +271,7 @@
     opacity: 0;
     transform: translateY(50%);
     font-size: 0.8em;
-    transition: opacity 0.2s;
+    transition: opacity @animation-default;
 
     &.spent {
         left: 0;
@@ -345,7 +345,7 @@
     height: @audio-banner-custom-subfield-height;
     z-index: @custom-audio-banner-z-index;
 
-    transition: top 0.2s;
+    transition: top @animation-default;
 
     // Arbitrary values;
     padding: @audio-banner-custom-subfield-padding 8px;

@@ -60,7 +60,7 @@
     .annotation-title-block {
         text-align: center;
 
-        transition: max-height 0.2s, padding 0.2s;
+        transition: max-height @animation-default, padding @animation-default;
         overflow: hidden;
         max-height: 0;
 
@@ -90,7 +90,11 @@
     overflow: hidden;
 
     // FIXME: Height transition is still janky.
-    transition: opacity 0.2s, margin 0.2s, padding 0.2s, max-height 0.2s, box-shadow 0.2s;
+    transition: opacity @animation-default,
+                margin @animation-default,
+                padding @animation-default,
+                max-height @animation-default,
+                box-shadow @animation-default;
 
     .text-shadow-mixin(@annotation-card-colour);
 

@@ -32,7 +32,7 @@
     margin: @dots-overview-padding 0;
     border-radius: 0 @nav-border-radius @nav-border-radius 0;
 
-    transition: margin 0.2s, border-radius 0.2s, box-shadow 0.2s;
+    transition: margin @animation-default, border-radius @animation-default, box-shadow @animation-default;
 
     display: flex;
     justify-content: center;
@@ -62,7 +62,7 @@
     justify-content: space-between;
     padding: @app-thin-margin;
 
-    transition: bottom 0.2s;
+    transition: bottom @animation-default;
 
     background-color: orange;
 
@@ -92,7 +92,7 @@
     width: 100vw;
     height: calc(~"100% + @{carousel-height-variable}");
     z-index: @carousel-z-index;
-    transition: bottom 0.2s;
+    transition: bottom @animation-default;
 
     // background-color: rgba(250, 225, 200, 0.5);
 }
@@ -131,12 +131,12 @@
     flex-direction: column-reverse;
 
     min-width: @carousel-annotation-hidden-padding;
-    transition: min-width 0.2s;
+    transition: min-width @animation-default;
 
     .annotation-section {
         margin: @carousel-annotation-small-padding @annotation-section-padding;
         padding: @carousel-annotation-small-padding @carousel-annotation-padding @carousel-annotation-padding;
-        transition: background-color 0.2s;
+        transition: background-color @animation-default;
     }
 
     &:not(:last-child) {
@@ -195,14 +195,14 @@
         left: 0;
         margin: 0;
         border-radius: 0 0 @nav-border-radius 0;
-        transition: left 0.2s;
+        transition: left @animation-default;
     }
 
     .carousel-nav-buttons-block {
         top: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
         bottom: auto;
 
-        transition: top 0.2s;
+        transition: top @animation-default;
     }
 
     .carousel {
@@ -210,7 +210,7 @@
         top: calc(~"-100% - @{carousel-tablet-variable}");
         height: calc(~"100% + @{carousel-toggle-tablet-length}");
 
-        transition: top 0.2s;
+        transition: top @animation-default;
     }
 
     .carousel-scroll {
@@ -258,7 +258,7 @@
             top: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
             bottom: auto;
 
-            transition: top 0.2s;
+            transition: top @animation-default;
         }
 
         .carousel {

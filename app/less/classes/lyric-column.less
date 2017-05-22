@@ -1,5 +1,5 @@
 .lyric-column {
-    transition: height 0.2s;
+    transition: height @animation-default;
 }
 
 .is-song {
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center;
 
-    transition: opacity 0.2s, transform 0.2s;
+    transition: opacity @animation-default, transform @animation-default;
 
     // background-color: rgba(200, 225, 250, 0.5);
 }
@@ -44,7 +44,7 @@
     padding: @app-thin-margin;
 
     background-color: gray;
-    transition: transform 0.2s;
+    transition: transform @animation-default;
 
     // Needed to position access icon properly.
     .button {

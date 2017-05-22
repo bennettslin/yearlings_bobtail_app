@@ -20,13 +20,13 @@
     &.above {
         top: -50px;
         margin-top: @verse-bar-margin;
-        transition: top 0.15s, transform 0.15s;
+        transition: top @animation-fast, transform @animation-fast;
     }
 
     &.below {
         bottom: -50px;
         margin-bottom: @verse-bar-margin;
-        transition: bottom 0.15s, transform 0.15s;
+        transition: bottom @animation-fast, transform @animation-fast;
 
         .verse-bar {
             box-shadow: 0 0 12px 5px @darker-box-shadow-colour;

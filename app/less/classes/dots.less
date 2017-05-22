@@ -6,8 +6,6 @@
 
 @dot-border: 1px;
 
-@transition-duration-fast: 0.15s;
-
 .dot {
     .animated-background {
         border-radius: 50%;
@@ -35,7 +33,7 @@
 .dots-section {
     // Dots section and dot stanzas.
     .dot .animated-background {
-        transition: background-color @transition-duration-fast;
+        transition: background-color @animation-fast;
     }
 }
 
@@ -96,7 +94,7 @@
 
         &:hover {
             .animated-background {
-                animation: bounceHover 0.2s;
+                animation: bounceHover @animation-default;
             }
         }
 
@@ -127,7 +125,7 @@
     font-size: .6em;
 
     opacity: 0;
-    transition: opacity 0.2s;
+    transition: opacity @animation-default;
 
     &:hover, &.interactivated {
         opacity: 1;
@@ -138,7 +136,7 @@
     padding-top: 5px;
     text-align: center;
     font-size: 0.75em;
-    transition: box-shadow 0.2s;
+    transition: box-shadow @animation-default;
     cursor: pointer;
 
     .text-span {

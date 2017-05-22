@@ -20,7 +20,7 @@
         width: 100%;
         height: 100%;
         opacity: 1;
-        transition: opacity 0.2s;
+        transition: opacity @animation-default;
 
         &.loading {
             opacity: 0.4;
@@ -36,7 +36,7 @@
     opacity: 0.75;
     z-index: @popup-overlay-z-index;
 
-    transition: opacity 0.2s;
+    transition: opacity @animation-default;
 
     &.hidden {
         opacity: 0;

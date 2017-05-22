@@ -61,7 +61,7 @@
 
     &.nav-toggle-book {
         border-radius: 0 @nav-border-radius 0 0;
-        transition: left 0.2s, box-shadow 0.2s;
+        transition: left @animation-default, box-shadow @animation-default;
         left: 0;
 
         background-color: purple;
@@ -123,7 +123,7 @@
     }
 
     .book-column-block {
-        transition: bottom 0.2s;
+        transition: bottom @animation-default;
         bottom: -@book-height;
     }
 
@@ -145,7 +145,7 @@
     }
 
     .book-column-block {
-        transition: top 0.2s;
+        transition: top @animation-default;
         top: -@book-height;
     }
 
@@ -173,7 +173,7 @@
 
 .nav-title {
     white-space: nowrap;
-    transition: transform 0.2s;
+    transition: transform @animation-default;
 
     transform: scale(0);
 }
@@ -229,12 +229,12 @@
 // TODO: Begin animations.
 .column-1 {
     .book-column {
-        transition: left 0.2s;
+        transition: left @animation-default;
     }
 
     .nav-book {
         &.songs {
-            transition: left 0.2s;
+            transition: left @animation-default;
         }
     }
 }
@@ -244,7 +244,7 @@
 
     .book-column {
         right: 0;
-        transition: right 0.2s;
+        transition: right @animation-default;
     }
 
     .nav-book {
@@ -253,7 +253,7 @@
         }
 
         &.songs {
-            transition: right 0.2s;
+            transition: right @animation-default;
             flex-direction: row-reverse;
         }
 
@@ -265,7 +265,7 @@
 
 .single-book-column {
     .nav-button-block {
-        transition: width 0.2s;
+        transition: width @animation-default;
     }
 }
 

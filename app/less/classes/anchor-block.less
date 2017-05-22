@@ -45,18 +45,18 @@
     .animated-background {
 
         // FIXME: Animation jankiness is due to the transform, which is expensive.
-        transition: margin @transition-duration-fast,
-                    width @transition-duration-fast,
-                    border @transition-duration-fast,
-                    transform 0.05s,
-                    background-color @transition-duration-fast;
+        transition: margin @animation-fast,
+                    width @animation-fast,
+                    border @animation-fast,
+                    transform @animation-instant,
+                    background-color @animation-fast;
         transform: scale(0);
         width: 0;
     }
 }
 
 .underline-bar {
-    transition: background-color 0.15s, transform 0.05s;
+    transition: background-color @animation-fast, transform @animation-instant;
 
     position: absolute;
     width: 100%;

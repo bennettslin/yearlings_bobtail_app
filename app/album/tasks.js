@@ -5,11 +5,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Consolidate animation durations.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Full morning tasks.
     {
@@ -1938,5 +1933,10 @@ module.exports = [
         taskName: `Consolidate annotation widths across popup and carousel.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Consolidate animation durations.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

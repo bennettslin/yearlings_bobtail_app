@@ -44,7 +44,7 @@
     .centre-field {
         .scores-tips-section {
             position: absolute;
-            transition: right 0.2s;
+            transition: right @animation-default;
             right: 0;
             bottom: @dots-overview-padding;
         }
@@ -87,7 +87,7 @@
 
     // Ensure that these buttons are above the carousel.
     z-index: @centre-field-element-z-index;
-    transition: transform 0.2s, opacity 0.2s;
+    transition: transform @animation-default, opacity @animation-default;
 
     .animated-background {
         background-color: #dbb;
