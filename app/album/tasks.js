@@ -19,11 +19,6 @@ module.exports = [
     },
 
     // Bugs.
-    {
-        taskName: `Get accessed annotation index when selecting song, and when selecting/deselecting dot.`,
-        workedHours: 1,
-        neededHours: 3
-    },
 
     {
         taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
@@ -1937,5 +1932,10 @@ module.exports = [
         taskName: `Show access upon page navigation keys.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Get accessed annotation index when selecting song, and when selecting/deselecting dot.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

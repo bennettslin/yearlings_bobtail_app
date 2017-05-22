@@ -270,13 +270,14 @@ export const getAnnotationIndexForVerseIndex = ({
 
     // If the verse has its own annotation, pick it.
     if (verse.currentAnnotationIndices) {
+        const currentAnnotationIndicesLength = verse.currentAnnotationIndices.length
+
         /**
          * If prompted by left arrow, start left and search inward. If prompted
          * by right arrow, start right. If no direction given, start left.
          */
-        let currentCounter = direction === 1 ? (verse.currentAnnotationIndices.length - 1) : 0
+        let currentCounter = direction === 1 ? (currentAnnotationIndicesLength - 1) : 0
 
-        // TODO: This doesn't work.
         /**
          * Loop through all the annotations in the verse, in case some are
          * hidden.
@@ -287,14 +288,22 @@ export const getAnnotationIndexForVerseIndex = ({
             // Move inward, which is the opposite direction.
             currentCounter -= direction
 
-            returnToLoop =
-                currentCounter >= 0 &&
-                currentCounter < verse.currentAnnotationIndices.length &&
-                !shouldShowAnnotationForColumn({
+            const annotation = getAnnotation(props, returnIndex),
+                showAnnotationForColumn = shouldShowAnnotationForColumn({
                     songs: props.songs,
                     selectedSongIndex: props.selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex
-                }, state, getAnnotation(props, returnIndex))
+                }, state, annotation),
+                doesIntersect = intersects(annotation.dotKeys, props.selectedDotKeys)
+
+            /**
+             * Return while not shown for column or dot keys don't intersect,
+             * and current counter is valid.
+             */
+            returnToLoop =
+                currentCounter >= 0 &&
+                currentCounter < currentAnnotationIndicesLength &&
+                (!showAnnotationForColumn || !doesIntersect)
 
         } while (returnToLoop)
 
