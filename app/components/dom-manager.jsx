@@ -6,7 +6,7 @@ import AudioPlayersSection from './audio/audio-players-section'
 import { DEVICE_OBJECTS,
          OVERVIEW_OPTIONS,
          SHOWN } from '../helpers/constants'
-import { getSongTitle, getVerse } from '../helpers/data-helper'
+import { getSongTitle, getVerseObject } from '../helpers/data-helper'
 import { getHiddenLyricColumnKey } from '../helpers/logic-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
@@ -52,7 +52,7 @@ class DomManager extends Component {
             isPhone = getIsPhone({ deviceIndex }),
 
             selectedSongTitle = getSongTitle(props, isLogue),
-            selectedVerse = getVerse(props, sliderVerseIndex),
+            selectedVerse = getVerseObject(props, sliderVerseIndex),
 
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
                 showSingleLyricColumn,

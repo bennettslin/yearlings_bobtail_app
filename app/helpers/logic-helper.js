@@ -4,7 +4,7 @@ import { LYRIC_COLUMN_KEYS,
          PORTAL,
          REFERENCE } from './constants'
 
-import { getSongObject, getIsLogue, getAnnotationObject, getAnnotationsLength, getVerse } from './data-helper'
+import { getSongObject, getIsLogue, getAnnotationObject, getAnnotationsLength, getVerseObject } from './data-helper'
 import { intersects } from './dot-helper'
 import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from './responsive-helper'
 
@@ -176,7 +176,7 @@ export const getAnnotationIndexForVerseIndex = ({
      * - when lyric column is switched.
      */
 
-    const verse = getVerse({
+    const verse = getVerseObject({
             selectedVerseIndex: verseIndex,
             selectedSongIndex: props.selectedSongIndex,
             songs: props.songs
@@ -400,7 +400,7 @@ export const getPortalLinks = (card, songs) => {
                     annotation,
                     cardIndex
                 }),
-                verseObject = getVerse({
+                verseObject = getVerseObject({
                     songs,
                     selectedSongIndex: songIndex,
                     selectedVerseIndex: verseIndex

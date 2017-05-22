@@ -57,7 +57,7 @@ export const getSongTitle = (props, isLogue) => {
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
 }
 
-export const getVerse = ({ selectedVerseIndex, ...other }, verseIndex) => {
+export const getVerseObject = ({ selectedVerseIndex, ...other }, verseIndex) => {
     const { lyrics } = getSongObject(other)
 
     return _parseLyrics(lyrics, (!isNaN(verseIndex) && verseIndex > -1) ? verseIndex : selectedVerseIndex)

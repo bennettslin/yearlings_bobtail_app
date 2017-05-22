@@ -1,5 +1,5 @@
 // For dev purposes. Log object info.
-import { getSongObject, getAnnotationObject, getAnnotationsDotKeys, getVerse } from './data-helper'
+import { getSongObject, getAnnotationObject, getAnnotationsDotKeys, getVerseObject } from './data-helper'
 import { WINDOW_STORAGE, LYRIC_TEXT_KEYS } from './constants'
 
 export default {
@@ -40,7 +40,7 @@ export default {
     },
 
     logVerse({ props }) {
-        const verse = getVerse(props)
+        const verse = getVerseObject(props)
         return this._logObject('selected verse', verse)
     },
 
