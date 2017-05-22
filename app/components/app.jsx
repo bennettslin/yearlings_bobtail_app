@@ -242,6 +242,7 @@ class App extends Component {
     }
 
     accessAnnotation(accessedAnnotationIndex) {
+
         this.setState({
             accessedAnnotationIndex
         })
@@ -492,17 +493,25 @@ class App extends Component {
          * has double columns, or if in a logue. Check for new song if called
          * from portal.
          */
-        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(props, state, selectedSongIndex) : this.state.showSingleLyricColumn) || getIsLogue(this.props, selectedSongIndex)) {
+        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(props, state, selectedSongIndex) : state.showSingleLyricColumn) || getIsLogue(props, selectedSongIndex)) {
             return false
         }
 
         // Deselect selected annotation if not in new selected column.
-        const selectedAnnotation = getAnnotation(this.props)
-        if (selectedAnnotation && !shouldShowAnnotationForColumn(this.props, this.state, selectedAnnotation, selectedLyricColumnIndex)) {
+        const selectedAnnotation = getAnnotation(props),
+            showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn({
+
+                    songs: props.songs,
+                    selectedSongIndex: props.selectedSongIndex,
+                    selectedLyricColumnIndex
+
+                }, state, selectedAnnotation)
+
+        if (selectedAnnotation && !showAnnotationForColumn) {
             this.selectAnnotation({})
         }
 
-        this.props.selectLyricColumnIndex(selectedLyricColumnIndex)
+        props.selectLyricColumnIndex(selectedLyricColumnIndex)
 
         // Switching lyric column might change accessed annotation index.
         const accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
@@ -582,21 +591,23 @@ class App extends Component {
         selectedWikiIndex = 0
     }) {
 
+        const { props } = this
+
         // Called from audio section's previous or next buttons.
         if (direction) {
-            selectedSongIndex = this.props.selectedSongIndex + direction
+            selectedSongIndex = props.selectedSongIndex + direction
 
-            if (selectedSongIndex < 0 || selectedSongIndex >= this.props.songs.length) {
+            if (selectedSongIndex < 0 || selectedSongIndex >= props.songs.length) {
                 return false
             }
         }
 
-        const wasLogue = getIsLogue(this.props),
+        const wasLogue = getIsLogue(props),
             isLogue = getIsLogue({ selectedSongIndex,
-                                         songs: this.props.songs }),
+                                         songs: props.songs }),
 
             // Allow logue and song overviews to overlap for fade animation.
-            newOverview = getOverview(this.props, selectedSongIndex),
+            newOverview = getOverview(props, selectedSongIndex),
             newState = {}
 
         /**
@@ -627,7 +638,7 @@ class App extends Component {
             selectedSongIndex
         })
 
-        newState.showSingleLyricColumn = getShowSingleLyricColumn(this.props, this.state, selectedSongIndex)
+        newState.showSingleLyricColumn = getShowSingleLyricColumn(props, this.state, selectedSongIndex)
 
         this.interactivateVerse()
 
@@ -648,9 +659,23 @@ class App extends Component {
             }
         }
 
+        // TODO: Get new accessed annotation index, but instead of this here, start from 1 and go forward. Should always be the title annotation, unless deselected by dots.
+
+        // Get new accessed annotation index.
+        // newState.accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
+        //     props: {
+        //         selectedSongIndex,
+        //         songs: props.songs,
+        //         selectedDotKeys: props.selectedDotKeys,
+        //         selectedLyricColumnIndex: props.selectedLyricColumnIndex
+        //     },
+        //     state: this.state,
+        //     verseIndex: selectedVerseIndex
+        // })
+
         this.setState(newState)
         this.accessSong(selectedSongIndex)
-        this.props.selectSongIndex(selectedSongIndex)
+        props.selectSongIndex(selectedSongIndex)
 
         return true
     }
@@ -968,8 +993,10 @@ class App extends Component {
 
         // Deselect selected annotation if not in new shown column.
         if (selectedSong.doubleColumns && newState.showSingleLyricColumn && !this.state.showSingleLyricColumn) {
-            const selectedAnnotation = getAnnotation(this.props)
-            if (selectedAnnotation && !shouldShowAnnotationForColumn(this.props, newState, selectedAnnotation)) {
+            const selectedAnnotation = getAnnotation(this.props),
+                showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn(this.props, newState, selectedAnnotation)
+
+            if (selectedAnnotation && !showAnnotationForColumn) {
                 this.selectAnnotation({})
             }
         }

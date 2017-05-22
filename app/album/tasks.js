@@ -1,11 +1,5 @@
 module.exports = [
 
-    {
-        taskName: `Show access upon page navigation keys.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Full morning tasks.
     {
         taskName: `Lyric scrolling slowness, only update based on certain changes.`,
@@ -20,8 +14,8 @@ module.exports = [
 
     // Bugs.
     {
-        taskName: `Reset accessed annotation index strategically (before or after toggle?)`,
-        workedHours: 0,
+        taskName: `Get accessed annotation index when selecting song, and when selecting/deselecting dot.`,
+        workedHours: 1,
         neededHours: 3
     },
 
@@ -1936,6 +1930,11 @@ module.exports = [
     },
     {
         taskName: `Consolidate animation durations.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Show access upon page navigation keys.`,
         workedHours: 1,
         neededHours: 1
     }

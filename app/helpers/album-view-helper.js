@@ -97,14 +97,12 @@ const _getCardFromIndex = ({ annotation, cardIndex }) => {
     }
 }
 
-export const shouldShowAnnotationForColumn = (props, state, annotation, newLyricColumnIndex) => {
-    const lyricColumnIndex = !isNaN(newLyricColumnIndex) ?
-        newLyricColumnIndex : props.selectedLyricColumnIndex,
-        showSingleLyricColumn = getShowSingleLyricColumn(props, state)
+export const shouldShowAnnotationForColumn = (props, state, annotation) => {
+    const showSingleLyricColumn = getShowSingleLyricColumn(props, state)
 
     return !annotation.column ||
         !showSingleLyricColumn ||
-        annotation.column === LYRIC_COLUMN_KEYS[lyricColumnIndex]
+        annotation.column === LYRIC_COLUMN_KEYS[props.selectedLyricColumnIndex]
 }
 
 export const getAnnotationIndexForDirection = ({
@@ -202,7 +200,11 @@ export const getAnnotationIndexForDirection = ({
                 (!doesIntersect ||
 
                 // Or if this annotation isn't in the shown column...
-                !shouldShowAnnotationForColumn(props, state, selectedSong.annotations[returnIndex - 1], lyricColumnIndex)) &&
+                !shouldShowAnnotationForColumn({
+                    songs: props.songs,
+                    selectedSongIndex: props.selectedSongIndex,
+                    selectedLyricColumnIndex: lyricColumnIndex
+                }, state, selectedSong.annotations[returnIndex - 1])) &&
 
                 // And if modulo...
                 (useModulo ?
@@ -287,7 +289,11 @@ export const getAnnotationIndexForVerseIndex = ({
             returnToLoop =
                 currentCounter >= 0 &&
                 currentCounter < verse.currentAnnotationIndices.length &&
-                !shouldShowAnnotationForColumn(props, state, getAnnotation(props, returnIndex), lyricColumnIndex)
+                !shouldShowAnnotationForColumn({
+                    songs: props.songs,
+                    selectedSongIndex: props.selectedSongIndex,
+                    selectedLyricColumnIndex: lyricColumnIndex
+                }, state, getAnnotation(props, returnIndex))
 
         } while (returnToLoop)
 

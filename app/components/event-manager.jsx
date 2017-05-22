@@ -234,14 +234,14 @@ class EventManager extends Component {
     }
 
     handleAnnotationPrevious(e) {
-        this._handleAnnotationAccessSelect(e, -1)
+        this._handleAccessedAnnotationSelect(e, -1)
     }
 
     handleAnnotationNext(e) {
-        this._handleAnnotationAccessSelect(e, 1)
+        this._handleAccessedAnnotationSelect(e, 1)
     }
 
-    _handleAnnotationAccessSelect(e, direction) {
+    _handleAccessedAnnotationSelect(e, direction) {
         this.stopPropagation(e)
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction
