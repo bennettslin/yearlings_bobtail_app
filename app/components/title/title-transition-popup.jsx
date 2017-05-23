@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import TitleSection from './title-section'
 import TransitionPopup from '../popup/transition-popup'
 
@@ -29,6 +30,12 @@ const TitleTransitionPopup = ({
             myChild={myChild}
         />
     )
+}
+
+TitleTransitionPopup.propTypes = {
+    selectedTitleIndex: PropTypes.number.isRequired,
+    handleTitleToggle: PropTypes.func.isRequired,
+    handlePopupFocus: PropTypes.func.isRequired
 }
 
 export default TitleTransitionPopup

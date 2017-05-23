@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Button from '../button/button'
 import { TITLE_TOGGLE_KEY } from '../../helpers/constants'
 
@@ -6,11 +7,14 @@ import { TITLE_TOGGLE_KEY } from '../../helpers/constants'
  * CONTAINER *
  *************/
 
-const TitleToggle = (props) => {
+const TitleToggle = (props) => (
+    <TitleToggleView {...props}/>
+)
 
-    return (
-        <TitleToggleView {...props}/>
-    )
+TitleToggle.propTypes = {
+    title: PropTypes.string.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
+    handleTitleToggle: PropTypes.func.isRequired
 }
 
 /****************

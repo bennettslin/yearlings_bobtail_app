@@ -17,8 +17,8 @@ const Button = ({
     isDeselected,
     isLarge,
     isSmall,
-    extraChild,
-    handleClick
+    handleClick,
+    extraChild
 
 }) => (
     <a
@@ -71,15 +71,16 @@ Button.propTypes = {
     isDeselected: PropTypes.bool,
     isLarge: PropTypes.bool,
     isSmall: PropTypes.bool,
-    extraChild: PropTypes.oneOfType([
-        PropTypes.bool,
-        PropTypes.element
-    ]),
+
     handleClick: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.func
+    ]),
+    extraChild: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.element
     ])
-};
+}
 
 Button.defaultProps = {
     isEnabled: true

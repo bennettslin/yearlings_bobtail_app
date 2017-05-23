@@ -12,6 +12,13 @@ module.exports = [
         neededHours: 3
     },
 
+    // Full day tasks.
+    {
+        taskName: `Perf!`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
     // Bugs.
 
     {

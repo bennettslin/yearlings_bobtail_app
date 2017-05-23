@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 
 /*************
@@ -8,6 +9,11 @@ import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 const WikiSection = (props) => (
     <WikiSectionView {...props} />
 )
+
+WikiSection.propTypes = {
+    selectedWikiUrl: PropTypes.string,
+    wikiSectionRef: PropTypes.func.isRequired
+}
 
 /****************
  * PRESENTATION *
