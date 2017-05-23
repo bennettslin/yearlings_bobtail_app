@@ -2,6 +2,8 @@
 
 .overview-logue-column {
 
+    bottom: 0;
+
     .overview {
         &.popup-transition-group {
             display: flex;
@@ -52,8 +54,8 @@
 
     .overview-logue-column {
         right: 0;
-        width: 50%;
-        height: 100%;
+        width: 60%;
+        height: calc(~"100% - @{menu-height}");
     }
 }
 
@@ -63,11 +65,28 @@
         position: absolute;
 
         width: 100%;
-        height: 50%;
-        bottom: 0;
+        height: 60%;
     }
 
+    // &.mini-width {
+    //     .overview-logue-column {
+    //         height: 70%;
+    //     }
+    // }
+    //
+    // .heightless-lyric {
+    //     .overview-logue-column {
+    //         height: calc(~"100% - @{menu-height}");
+    //     }
+    // }
+
     &.phone-width {
+
+        // .heightless-lyric {
+        //     .overview-logue-column {
+        //         height: calc(~"100% - @{menu-phone-height}");
+        //     }
+        // }
 
         .dots-overview-subfield {
 
