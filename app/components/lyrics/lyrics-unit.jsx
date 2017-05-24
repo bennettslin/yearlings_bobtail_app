@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
@@ -26,7 +27,7 @@ const LyricsUnit = (props) => {
           topSideStanza,
           bottomSideStanza } = stanzaArray[stanzaArray.length - 1],
 
-        isBottomOnly = !topSideStanza && bottomSideStanza,
+        isBottomOnly = !topSideStanza && !!bottomSideStanza,
         topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
         isDotOnly = dotStanza && stanzaArray.length === 1,
         hasSide = topSideStanza || bottomSideStanza,
@@ -55,6 +56,12 @@ const LyricsUnit = (props) => {
             topSideSubStanza={topSideSubStanza}
         />
     )
+}
+
+LyricsUnit.propTypes = {
+    stanzaArray: PropTypes.array.isRequired,
+    isTitleUnit: PropTypes.bool.isRequired,
+    hiddenLyricColumnKey: PropTypes.string
 }
 
 /****************
@@ -159,6 +166,27 @@ const LyricsUnitView = ({
             }
         </div>
     )
+}
+
+LyricsUnitView.propTypes = {
+    stanzaArray: PropTypes.array.isRequired,
+    stanzaIndex: PropTypes.number,
+    isTitleUnit: PropTypes.bool.isRequired,
+    showMain: PropTypes.bool.isRequired,
+    showSide: PropTypes.bool,
+    isBottomOnly: PropTypes.bool,
+    truncateMain: PropTypes.bool,
+    subsequent: PropTypes.bool,
+    unitClassName: PropTypes.string,
+    stanzaType: PropTypes.string,
+    substanzaType: PropTypes.string,
+    sideStanzaType: PropTypes.string,
+    sideSubstanzaType: PropTypes.string,
+    subStanza: PropTypes.array,
+    topSideStanza: PropTypes.array,
+    bottomSideStanza: PropTypes.array,
+    topSideSubStanza: PropTypes.array,
+    dotStanza: PropTypes.object
 }
 
 export default LyricsUnit
