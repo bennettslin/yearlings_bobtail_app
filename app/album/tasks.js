@@ -1938,5 +1938,10 @@ module.exports = [
         taskName: `Get accessed annotation index when selecting song, and when selecting/deselecting dot.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Begin adding prop types.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
