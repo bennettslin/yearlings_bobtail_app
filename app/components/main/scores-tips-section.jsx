@@ -1,8 +1,9 @@
 import React from 'react'
-import Button from './button/button'
+import PropTypes from 'prop-types'
+import Button from '../button/button'
 import { TIPS_OPTIONS,
          SCORE_TOGGLE_KEY,
-         TIPS_TOGGLE_KEY } from '../helpers/constants'
+         TIPS_TOGGLE_KEY } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -11,6 +12,14 @@ import { TIPS_OPTIONS,
 const ScoresTipsSection = (props) => (
     <ScoresTipsSectionView {...props} />
 )
+
+ScoresTipsSection.propTypes = {
+    isPhone: PropTypes.bool.isRequired,
+    selectedScoreIndex: PropTypes.number.isRequired,
+    selectedTipsIndex: PropTypes.number.isRequired,
+    handleScoreToggle: PropTypes.func.isRequired,
+    handleTipsToggle: PropTypes.func.isRequired
+}
 
 /****************
  * PRESENTATION *

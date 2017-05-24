@@ -47,6 +47,7 @@ const AudioSectionView = ({
     isPlaying,
     title,
     selectedAudioOptionIndex,
+    selectedTitleIndex,
 
     handleTitleToggle,
     handleAudioPlay,
@@ -80,6 +81,7 @@ const AudioSectionView = ({
             handleAudioOptionsToggle
         },
         titleProps = {
+            selectedTitleIndex,
             titleInAudio,
             title,
             handleTitleToggle
@@ -104,6 +106,31 @@ const AudioSectionView = ({
             <AudioButtons {...audioButtonsProps} />
         </div>
     )
+}
+
+AudioSectionView.propTypes = {
+    selectedAdminIndex: PropTypes.number,
+    selectedAudioOptionIndex: PropTypes.number.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+
+    isPrologue: PropTypes.bool.isRequired,
+    isFirstSong: PropTypes.bool.isRequired,
+    isLastSong: PropTypes.bool.isRequired,
+    isEpilogue: PropTypes.bool.isRequired,
+    timerInAudio: PropTypes.bool,
+    titleInAudio: PropTypes.bool.isRequired,
+    isPhone: PropTypes.bool.isRequired,
+    isPlaying: PropTypes.bool.isRequired,
+
+    handleTitleToggle: PropTypes.func.isRequired,
+    handleAudioPlay: PropTypes.func.isRequired,
+    handleAudioPreviousSong: PropTypes.func.isRequired,
+    handleAudioNextSong: PropTypes.func.isRequired,
+    handleAudioOptionsToggle: PropTypes.func.isRequired,
+
+    audioTimerChild: PropTypes.element.isRequired,
+    audioBannerChild: PropTypes.element.isRequired
 }
 
 export default AudioSection

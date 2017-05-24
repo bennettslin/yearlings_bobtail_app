@@ -1,15 +1,23 @@
 import React from 'react'
-import TitleToggle from './title/title-toggle'
+import PropTypes from 'prop-types'
+import TitleToggle from '../title/title-toggle'
 
 /*************
  * CONTAINER *
  *************/
 
-const MenuField = (props) => {
+const MenuField = (props) => (
+    <MenuFieldView {...props} />
+)
 
-    return (
-        <MenuFieldView {...props} />
-    )
+MenuField.propTypes = {
+    titleInAudio: PropTypes.bool.isRequired,
+    scoresTipsOutsideMenu: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
+    handleTitleToggle: PropTypes.func.isRequired,
+    audioSectionChild: PropTypes.element.isRequired,
+    scoresTipsSectionChild: PropTypes.element.isRequired
 }
 
 /****************

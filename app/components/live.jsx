@@ -2,13 +2,13 @@ import React from 'react'
 import classnames from 'classnames'
 import Button from './button/button'
 import Carousel from './carousel/carousel'
-import MainColumn from './main-column'
+import MainColumn from './main/main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
 import AudioTimer from './audio/audio-timer'
 import AudioTransitionPopup from './audio/audio-transition-popup'
 import AudioSection from './audio/audio-section'
-import ScoresTipsSection from './scores-tips-section'
+import ScoresTipsSection from './main/scores-tips-section'
 import OverviewButton from './overview/overview-toggle'
 import OverviewTransitionPopup from './overview/overview-transition-popup'
 import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
@@ -221,6 +221,7 @@ const LiveView = ({
             selectedSongIndex,
             isPlaying,
             title,
+            selectedTitleIndex,
             selectedAudioOptionIndex,
 
             handleAudioPlay,

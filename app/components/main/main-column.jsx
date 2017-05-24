@@ -1,9 +1,9 @@
 import React from 'react'
-import Button from './button/button'
+import Button from '../button/button'
 import MenuField from './menu-field'
-import NavSection from './nav/nav-section'
+import NavSection from '../nav/nav-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
-import { CAROUSEL_TOGGLE_KEY } from '../helpers/constants'
+import { CAROUSEL_TOGGLE_KEY } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
@@ -117,8 +117,7 @@ const MainColumnView = ({
                     {carouselChild}
                     <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
                         scoresTipsSectionChild={
-                            isDesktop && scoresTipsOutsideMenu &&
-                                scoresTipsSectionChild
+                            (isDesktop && scoresTipsOutsideMenu) ? scoresTipsSectionChild : null
                         }
                     />
                     <div className="overview-popup-container">
@@ -130,7 +129,7 @@ const MainColumnView = ({
                     <div className="dots-subfield">
                         {dotsSectionChild}
                     </div>
-                    {!isDesktop && scoresTipsOutsideMenu && scoresTipsSectionChild}
+                    {(!isDesktop && scoresTipsOutsideMenu) ? scoresTipsSectionChild : null}
                 </div>
 
                 {isPhone &&
