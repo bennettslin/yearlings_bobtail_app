@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import AudioButtons from './audio-buttons'
 import TitleToggle from '../title/title-toggle'
 import { SONG_FILES } from '../../helpers/constants'
@@ -26,6 +27,10 @@ const AudioSection = ({
             isEpilogue={isEpilogue}
         />
     )
+}
+
+AudioSection.propTypes = {
+    selectedSongIndex: PropTypes.number.isRequired
 }
 
 /****************

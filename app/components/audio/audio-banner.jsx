@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import AudioSlider from './audio-slider'
 
 /*************
@@ -8,6 +9,25 @@ import AudioSlider from './audio-slider'
 const AudioBanner = (props) => (
     <AudioBannerView {...props} />
 )
+
+AudioBanner.propTypes = {
+    songs: PropTypes.array.isRequired,
+    selectedSongTitle: PropTypes.string.isRequired,
+    isLogue: PropTypes.bool.isRequired,
+    sliderMousedOrTouched: PropTypes.bool.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+    interactivatedVerseIndex: PropTypes.number.isRequired,
+    selectedVerseIndex: PropTypes.number.isRequired,
+    sliderVerseIndex: PropTypes.number.isRequired,
+    sliderRatio: PropTypes.number,
+    sliderTime: PropTypes.number,
+    selectedTimePlayed: PropTypes.number.isRequired,
+    totalTime: PropTypes.number,
+    stanzaTimes: PropTypes.array.isRequired,
+    verseTimes: PropTypes.array,
+    handleAudioSliderTouchBegin: PropTypes.func.isRequired,
+    audioTimerChild: PropTypes.element.isRequired
+}
 
 /****************
  * PRESENTATION *

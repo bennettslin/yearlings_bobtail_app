@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { getFormattedTime } from '../../helpers/format-helper'
 import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
 
@@ -9,6 +10,19 @@ import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
 const AudioSlider = (props) => (
     <AudioSliderView {...props} />
 )
+
+AudioSlider.propTypes = {
+    isLogue: PropTypes.bool.isRequired,
+    isMousedOrTouched: PropTypes.bool.isRequired,
+    selectedVerseIndex: PropTypes.number.isRequired,
+    interactivatedVerseIndex: PropTypes.number.isRequired,
+    sliderVerseIndex: PropTypes.number.isRequired,
+    selectedTimePlayed: PropTypes.number.isRequired,
+    sliderRatio: PropTypes.number,
+    totalTime: PropTypes.number,
+    stanzaTimes: PropTypes.array.isRequired,
+    verseTimes: PropTypes.array
+}
 
 /****************
  * PRESENTATION *

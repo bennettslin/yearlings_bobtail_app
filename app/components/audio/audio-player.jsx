@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import ReactAudioPlayer from 'react-audio-player'
 
@@ -138,6 +139,16 @@ class AudioPlayer extends Component {
             </div>
         )
     }
+}
+
+AudioPlayer.propTypes = {
+    mp3: PropTypes.string.isRequired,
+    isPlaying: PropTypes.bool.isRequired,
+    playerIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+    updatedTimePlayed: PropTypes.number,
+    handlePlayerTimeReset: PropTypes.func.isRequired,
+    handlePlayerNextSong: PropTypes.func.isRequired
 }
 
 export default AudioPlayer

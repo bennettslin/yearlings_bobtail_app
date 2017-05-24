@@ -1,15 +1,17 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import AudioPlayer from './audio-player'
 
 /*************
  * CONTAINER *
  *************/
 
-const AudioPlayersSection = (props) => {
+const AudioPlayersSection = (props) => (
+    <AudioPlayersSectionView {...props} />
+)
 
-    return (
-        <AudioPlayersSectionView {...props} />
-    )
+AudioPlayersSection.propTypes = {
+    mp3s: PropTypes.array.isRequired
 }
 
 /****************

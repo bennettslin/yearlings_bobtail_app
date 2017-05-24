@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Button from '../button/button'
 import { AUDIO_OPTIONS,
          AUDIO_OPTIONS_TOGGLE_KEY,
@@ -13,6 +14,20 @@ import { AUDIO_OPTIONS,
 const AudioButtons = (props) =>  (
     <AudioButtonsView {...props} />
 )
+
+AudioButtons.propTypes = {
+    selectedAudioOptionIndex: PropTypes.number.isRequired,
+    titleInAudio: PropTypes.bool.isRequired,
+    isPlaying: PropTypes.bool.isRequired,
+    isPrologue: PropTypes.bool.isRequired,
+    isFirstSong: PropTypes.bool.isRequired,
+    isLastSong: PropTypes.bool.isRequired,
+    isEpilogue: PropTypes.bool.isRequired,
+    handleAudioPlay: PropTypes.func.isRequired,
+    handleAudioOptionsToggle: PropTypes.func.isRequired,
+    handleAudioPreviousSong: PropTypes.func.isRequired,
+    handleAudioNextSong: PropTypes.func.isRequired
+}
 
 /****************
  * PRESENTATION *

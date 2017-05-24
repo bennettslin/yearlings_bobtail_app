@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import AudioSection from './audio-section'
 import TransitionPopup from '../popup/transition-popup'
 
@@ -26,6 +27,11 @@ const AudioTransitionPopup = ({
             myChild={myChild}
         />
     )
+}
+
+AudioTransitionPopup.propTypes = {
+    showOverlay: PropTypes.bool.isRequired,
+    handlePopupContainerClick: PropTypes.func.isRequired
 }
 
 export default AudioTransitionPopup

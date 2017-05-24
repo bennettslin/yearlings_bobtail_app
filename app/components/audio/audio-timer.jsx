@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { getFormattedTime } from '../../helpers/format-helper'
 
 /*************
@@ -20,6 +21,10 @@ const AudioTimer = ({
     )
 }
 
+AudioTimer.propTypes = {
+    selectedTimePlayed: PropTypes.number.isRequired
+}
+
 /****************
  * PRESENTATION *
  ****************/
@@ -38,5 +43,10 @@ const AudioTimerView = ({
         {isLogue ? '' : formattedTime}
     </div>
 )
+
+AudioTimerView.propTypes = {
+    isLogue: PropTypes.bool.isRequired,
+    formattedTime: PropTypes.string.isRequired
+}
 
 export default AudioTimer
