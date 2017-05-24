@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { getFormattedFirstVerseObjectText, getFormattedLastVerseObjectText } from '../../helpers/format-helper'
 
@@ -8,9 +9,9 @@ import { getFormattedFirstVerseObjectText, getFormattedLastVerseObjectText } fro
 
 const TextSpan = ({
 
+    text,
     isLyric,
     foregoSpace,
-    text,
     inPortal,
     inPortalCard,
     firstVerseObject,
@@ -54,6 +55,16 @@ const TextSpan = ({
     )
 }
 
+TextSpan.propTypes = {
+    text: PropTypes.string.isRequired,
+    isLyric: PropTypes.bool,
+    foregoSpace: PropTypes.bool,
+    inPortal: PropTypes.bool,
+    inPortalCard: PropTypes.bool,
+    firstVerseObject: PropTypes.bool,
+    lastVerseObject: PropTypes.bool
+}
+
 /****************
  * PRESENTATION *
  ****************/
@@ -79,5 +90,13 @@ const TextSpanView = ({
         {(hasFirstSpace ? ' ' : '') + text}
     </span>
 )
+
+// FIXME: Does this need to know the first and last verse object bools?
+TextSpanView.propTypes = {
+    text: PropTypes.string.isRequired,
+    hasFirstSpace: PropTypes.bool.isRequired,
+    firstVerseObject: PropTypes.bool,
+    lastVerseObject: PropTypes.bool
+}
 
 export default TextSpan

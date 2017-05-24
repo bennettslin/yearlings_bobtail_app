@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import TextBlock from './text-block'
 import DotBlock from '../dot/dots-block'
@@ -7,7 +8,7 @@ import DotBlock from '../dot/dots-block'
  * CONTAINER *
  *************/
 
-const AnchorBlock = ({
+const TextAnchorBlock = ({
 
     text,
     portalAnnotationIndex,
@@ -35,11 +36,10 @@ const AnchorBlock = ({
          * click handler is the annotation index. Otherwise, it's a
          * reference, and the argument is a url string.
          */
-        handleClick = !isSelected && !other.inPortal &&
-            (e => handleAnchorClick(e, annotationIndex || wikiIndex, carouselAnnotationIndex))
+        handleClick = !isSelected && !other.inPortal ? e => handleAnchorClick(e, annotationIndex || wikiIndex, carouselAnnotationIndex) : null
 
     return (
-        <AnchorBlockView {...other}
+        <TextAnchorBlockView {...other}
             hasTodo={todo}
             isSelected={isSelected}
             isPortalAnchor={isPortalAnchor}
@@ -53,11 +53,22 @@ const AnchorBlock = ({
     )
 }
 
+TextAnchorBlock.propTypes = {
+    text: PropTypes.object.isRequired,
+    portalAnnotationIndex: PropTypes.number,
+    selectedAnnotationIndex: PropTypes.number,
+    selectedWikiIndex: PropTypes.number,
+    carouselAnnotationIndex: PropTypes.number,
+    accessedAnnotationIndex: PropTypes.number,
+    accessedPopupAnchorIndex: PropTypes.number,
+    handleAnchorClick: PropTypes.func,
+}
+
 /****************
  * PRESENTATION *
  ****************/
 
-const AnchorBlockView = ({
+const TextAnchorBlockView = ({
 
     // From props.
     inPortal,
@@ -124,4 +135,21 @@ const AnchorBlockView = ({
     </span>
 )
 
-export default AnchorBlock
+TextAnchorBlockView.propTypes = {
+    inPortal: PropTypes.bool,
+    firstVerseObject: PropTypes.bool,
+    lastVerseObject: PropTypes.bool,
+    isLyric: PropTypes.bool,
+    beginsNewLine: PropTypes.bool,
+    accessHighlighted: PropTypes.bool,
+    hasTodo: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    isPortalAnchor: PropTypes.bool.isRequired,
+    annotationIndex: PropTypes.number,
+    wikiIndex: PropTypes.number,
+    annotationDotKeys: PropTypes.object,
+    anchorText: PropTypes.string.isRequired,
+    handleClick: PropTypes.func
+}
+
+export default TextAnchorBlock

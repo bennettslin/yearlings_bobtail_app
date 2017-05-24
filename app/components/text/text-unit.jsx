@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import TextAnchorBlock from './text-anchor-block'
 import TextBlock from './text-block'
 import TextSpan from './text-span'
@@ -68,6 +69,13 @@ const TextUnit = ({
     }
 
     return null
+}
+
+TextUnit.propTypes = {
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ])
 }
 
 export default TextUnit

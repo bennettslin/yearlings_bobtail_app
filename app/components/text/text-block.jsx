@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import TextUnit from './text-unit'
 
 /*************
@@ -30,6 +31,15 @@ class TextBlock extends Component {
     }
 }
 
+TextBlock.propTypes = {
+    text: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.object,
+        PropTypes.string
+    ]),
+    truncateMain: PropTypes.bool
+}
+
 /****************
  * PRESENTATION *
  ****************/
@@ -52,5 +62,12 @@ const TextBlockView = ({
         )}
     </span>
 )
+
+TextBlockView.propTypes = {
+    text: PropTypes.oneOfType([
+        PropTypes.array
+    ]),
+    foregoSpace: PropTypes.bool
+}
 
 export default TextBlock
