@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Button from '../button/button'
 import { DOTS_SECTION_ACCESS_KEY } from '../../helpers/constants'
 
@@ -6,11 +7,13 @@ import { DOTS_SECTION_ACCESS_KEY } from '../../helpers/constants'
  * CONTAINER *
  *************/
 
-const DotsToggle = (props) => {
+const DotsToggle = (props) => (
+    <DotsToggleView {...props} />
+)
 
-    return (
-        <DotsToggleView {...props} />
-    )
+DotsToggle.propTypes = {
+    selectedDotsIndex: PropTypes.number.isRequired,
+    handleDotsSectionToggle: PropTypes.func.isRequired
 }
 
 /****************
@@ -22,8 +25,6 @@ const DotsToggleView = ({
     // From props.
     selectedDotsIndex,
     handleDotsSectionToggle
-
-    // From controller.
 
 }) => (
     <div className="dots-toggle-button-container">

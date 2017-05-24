@@ -1,16 +1,18 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import DotBlock from '../dot/dots-block'
 
 /*************
  * CONTAINER *
  *************/
 
- const DotsSection = (props) => {
+const DotsSection = (props) => (
+    <DotsSectionView {...props} />
+)
 
-     return (
-         <DotsSectionView {...props} />
-     )
- }
+DotsSection.propTypes = {
+    handlePopupContainerClick: PropTypes.func.isRequired
+}
 
 /****************
  * PRESENTATION *
