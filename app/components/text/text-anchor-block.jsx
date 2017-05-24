@@ -55,6 +55,7 @@ const TextAnchorBlock = ({
 
 TextAnchorBlock.propTypes = {
     text: PropTypes.object.isRequired,
+    inPortal: PropTypes.bool,
     portalAnnotationIndex: PropTypes.number,
     selectedAnnotationIndex: PropTypes.number,
     selectedWikiIndex: PropTypes.number,
@@ -148,7 +149,12 @@ TextAnchorBlockView.propTypes = {
     annotationIndex: PropTypes.number,
     wikiIndex: PropTypes.number,
     annotationDotKeys: PropTypes.object,
-    anchorText: PropTypes.string.isRequired,
+    anchorText: PropTypes.oneOfType([
+        PropTypes.string,
+
+        // "Bobtail's words" in M is an array.
+        PropTypes.array
+    ]).isRequired,
     handleClick: PropTypes.func
 }
 

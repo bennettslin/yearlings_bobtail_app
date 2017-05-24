@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import OverviewSection from './overview-section'
 import TransitionPopup from '../popup/transition-popup'
 
@@ -36,6 +37,14 @@ const OverviewTransitionPopup = ({
             myChild={myChild}
         />
     )
+}
+
+OverviewTransitionPopup.propTypes = {
+    isLogue: PropTypes.bool.isRequired,
+    inOverviewSubfield: PropTypes.bool.isRequired,
+    selectedOverviewIndex: PropTypes.number.isRequired,
+    handleOverviewToggle: PropTypes.func.isRequired,
+    handlePopupContainerClick: PropTypes.func.isRequired
 }
 
 export default OverviewTransitionPopup

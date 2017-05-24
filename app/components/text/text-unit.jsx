@@ -72,6 +72,10 @@ const TextUnit = ({
 }
 
 TextUnit.propTypes = {
+    inPortal: PropTypes.bool,
+    inPortalCard: PropTypes.bool,
+    inVerseBar: PropTypes.bool,
+
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.object

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Button from '../button/button'
 import { OVERVIEW_OPTIONS,
          OVERVIEW_TOGGLE_KEY } from '../../helpers/constants'
@@ -12,6 +13,11 @@ const OverviewToggle = (props) => {
     return (
         <OverviewToggleView {...props} />
     )
+}
+
+OverviewToggle.propTypes = {
+    selectedOverviewIndex: PropTypes.number.isRequired,
+    handleOverviewToggle: PropTypes.func.isRequired
 }
 
 /****************

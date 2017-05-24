@@ -1,15 +1,20 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import TextBlock from '../text/text-block'
 
 /*************
  * CONTAINER *
  *************/
 
-const OverviewSection = (props) => {
+const OverviewSection = (props) => (
+    <OverviewSectionView {...props} />
+)
 
-    return (
-        <OverviewSectionView {...props} />
-    )
+OverviewSection.propTypes = {
+    isPhone: PropTypes.bool.isRequired,
+    isLogue: PropTypes.bool.isRequired,
+    overviewText: PropTypes.string.isRequired,
+    overviewButtonChild: PropTypes.element
 }
 
 /****************
