@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ScoreSection from './score-section'
 import TransitionPopup from '../popup/transition-popup'
 
@@ -30,6 +31,12 @@ const ScoreTransitionPopup = ({
             myChild={myChild}
         />
     )
+}
+
+ScoreTransitionPopup.propTypes = {
+    selectedScoreIndex: PropTypes.number.isRequired,
+    handleScoreToggle: PropTypes.func.isRequired,
+    handlePopupFocus: PropTypes.func.isRequired
 }
 
 export default ScoreTransitionPopup

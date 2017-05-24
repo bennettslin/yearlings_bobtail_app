@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 // import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 
 /*************
@@ -70,6 +71,11 @@ class ScoreSectionView extends Component {
             </div>
         )
     }
+}
+
+ScoreSection.propTypes = {
+    scores: PropTypes.array.isRequired,
+    scoreSectionRef: PropTypes.func.isRequired
 }
 
 export default ScoreSection
