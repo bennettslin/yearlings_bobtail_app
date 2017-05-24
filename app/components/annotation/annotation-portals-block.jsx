@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames';
 import TextBlock from '../text/text-block'
 import DotButton from '../dot/dot-button'
@@ -12,6 +13,12 @@ const AnnotationPortalsBlock = (props) => (
     <AnnotationPortalsBlockView {...props} />
 )
 
+AnnotationPortalsBlock.propTypes = {
+    portalLinks: PropTypes.array.isRequired,
+    accessedPopupAnchorIndex: PropTypes.number.isRequired,
+    handleAnnotationPortalSelect: PropTypes.func.isRequired
+}
+
 /****************
  * PRESENTATION *
  ****************/
@@ -19,7 +26,6 @@ const AnnotationPortalsBlock = (props) => (
 const AnnotationPortalsBlockView = ({
 
     // From props.
-    // annotationDotKeys,
     portalLinks,
     accessedPopupAnchorIndex,
     handleAnnotationPortalSelect,

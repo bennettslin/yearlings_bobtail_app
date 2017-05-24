@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import AnnotationUnit from './annotation-unit'
 import DotAnchorBlock from '../dot/dot-anchor-block'
@@ -17,6 +18,10 @@ const AnnotationSection = (props) => {
             title={popupAnnotation.title}
         />
     ) : null
+}
+
+AnnotationSection.propTypes = {
+    popupAnnotation: PropTypes.object
 }
 
 /****************
@@ -69,5 +74,13 @@ const AnnotationSectionView = ({
         </div>
     </div>
 )
+
+AnnotationSectionView.propTypes = {
+    title: PropTypes.string.isRequired,
+    inCarousel: PropTypes.bool,
+    isAccessedAnnotation: PropTypes.bool,
+    isSelectedAnnotation: PropTypes.bool,
+    handleTitleClick: PropTypes.func
+}
 
 export default AnnotationSection

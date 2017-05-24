@@ -1940,8 +1940,8 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Begin adding prop types.`,
-        workedHours: 3,
-        neededHours: 3
+        taskName: `Add prop types.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

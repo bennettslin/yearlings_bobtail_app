@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import AnnotationCard from './annotation-card'
 
 /*************
@@ -26,6 +27,10 @@ const AnnotationUnit = (props) => {
     }
 }
 
+AnnotationUnit.propTypes = {
+    popupAnnotation: PropTypes.object.isRequired
+}
+
 /****************
  * PRESENTATION *
  ****************/
@@ -45,5 +50,9 @@ const AnnotationUnitView = ({
         ))}
     </div>
 )
+
+AnnotationUnitView.propTypes = {
+    popupAnnotation: PropTypes.object.isRequired
+}
 
 export default AnnotationUnit

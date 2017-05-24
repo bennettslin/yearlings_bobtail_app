@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotBlock from '../dot/dots-block'
 import TextBlock from '../text/text-block'
@@ -33,6 +34,11 @@ const AnnotationCard = ({
             portalLinks={portalLinks}
         />
     )
+}
+
+AnnotationCard.propTypes = {
+    card: PropTypes.object.isRequired,
+    songs: PropTypes.array.isRequired
 }
 
 /****************
@@ -83,5 +89,21 @@ const AnnotationCardView = ({
         }
     </div>
 )
+
+AnnotationCardView.propTypes = {
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array
+    ]),
+    portalLinks: PropTypes.array,
+    inPortal: PropTypes.bool,
+    inPortalCard: PropTypes.bool,
+    cardDotKeys: PropTypes.object.isRequired,
+    carouselAnnotationIndex: PropTypes.number.isRequired,
+    selectedWikiIndex: PropTypes.number,
+    accessedPopupAnchorIndex: PropTypes.number.isRequired,
+    handleAnnotationWikiSelect: PropTypes.func.isRequired,
+    handleAnnotationPortalSelect: PropTypes.func.isRequired,
+}
 
 export default AnnotationCard

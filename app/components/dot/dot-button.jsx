@@ -15,7 +15,7 @@ DotButton.propTypes = {
     isSmall: PropTypes.bool,
     dotKey: PropTypes.string,
     dotKeys: PropTypes.object,
-    handleDotButtonClick: PropTypes.func.isRequired
+    handleDotButtonClick: PropTypes.func
 }
 
 /****************

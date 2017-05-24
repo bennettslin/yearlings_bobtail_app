@@ -13,9 +13,9 @@ const DotAnchorBlock = (props) => (
 
 DotAnchorBlock.propTypes = {
     dotKeys: PropTypes.object.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    accessHighlighted: PropTypes.bool.isRequired,
-    handleDotButtonClick: PropTypes.func.isRequired
+    isSelected: PropTypes.bool,
+    accessHighlighted: PropTypes.bool,
+    handleDotButtonClick: PropTypes.func
 }
 
 /****************
@@ -43,7 +43,7 @@ const DotAnchorBlockView = ({
         <DotButton {...other}
             dotKeys={dotKeys}
             isSelected={isSelected}
-            handleDotButtonClick={!isSelected && handleDotButtonClick}
+            handleDotButtonClick={isSelected ? null : handleDotButtonClick}
         />
     </div>
 )
