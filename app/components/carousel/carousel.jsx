@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import CarouselAnnotation from './carousel-annotation'
 import Button from '../button/button'
 
@@ -9,6 +10,12 @@ import Button from '../button/button'
 const Carousel = (props) => (
     <CarouselView {...props} />
 )
+
+Carousel.propTypes = {
+    annotations: PropTypes.array,
+    handleAnnotationPrevious: PropTypes.func.isRequired,
+    handleAnnotationNext: PropTypes.func.isRequired
+}
 
 /****************
  * PRESENTATION *

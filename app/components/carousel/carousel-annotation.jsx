@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import AnnotationSection from '../annotation/annotation-section'
 
@@ -24,6 +25,11 @@ const CarouselAnnotation = ({
             handleTitleClick={handleTitleClick}
         />
     )
+}
+
+CarouselAnnotation.propTypes = {
+    annotationIndex: PropTypes.number.isRequired,
+    handleLyricAnnotationSelect: PropTypes.func.isRequired
 }
 
 /****************
@@ -53,5 +59,10 @@ const CarouselAnnotationView = ({
         />
     </div>
 )
+
+CarouselAnnotationView.propTypes = {
+    annotation: PropTypes.object.isRequired,
+    annotationIndex: PropTypes.number.isRequired
+}
 
 export default CarouselAnnotation
