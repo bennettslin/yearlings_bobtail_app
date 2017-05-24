@@ -16,7 +16,7 @@ const ScoreTransitionPopup = ({
 
 ...other }) => {
 
-    const isVisible = selectedScoreIndex && !isPhone,
+    const isVisible = !!selectedScoreIndex && !isPhone,
         myChild = (
             <ScoreSection {...other} />
         )

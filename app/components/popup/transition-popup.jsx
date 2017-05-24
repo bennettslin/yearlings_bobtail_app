@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import TransitionPopupButton from './transition-popup-button'
 
@@ -89,7 +90,7 @@ class TransitionPopup extends Component {
                     handleCloseClick={handleCloseClick}
                     handlePreviousClick={handlePreviousClick}
                     handleNextClick={handleNextClick}
-                    handlePopupContainerClick={isDisplayed && handlePopupContainerClick}
+                    handlePopupContainerClick={isDisplayed ? handlePopupContainerClick : null}
                     myChild={myChild}
                 />
             </span>
@@ -97,6 +98,17 @@ class TransitionPopup extends Component {
     }
 }
 
+TransitionPopup.propTypes = {
+    popupClassName: PropTypes.string.isRequired,
+    isVisible: PropTypes.bool.isRequired,
+    showClose: PropTypes.bool,
+    showArrows: PropTypes.bool,
+    handleCloseClick: PropTypes.func,
+    handlePreviousClick: PropTypes.func,
+    handleNextClick: PropTypes.func,
+    handlePopupContainerClick: PropTypes.func,
+    myChild: PropTypes.element.isRequired
+}
 
 /****************
  * PRESENTATION *
@@ -153,4 +165,14 @@ const TransitionPopupView = ({
     )
 }
 
+TransitionPopupView.propTypes = {
+    popupClassName: PropTypes.string.isRequired,
+    showClose: PropTypes.bool,
+    showArrows: PropTypes.bool,
+    handleCloseClick: PropTypes.func,
+    handlePreviousClick: PropTypes.func,
+    handleNextClick: PropTypes.func,
+    handlePopupContainerClick: PropTypes.func,
+    myChild: PropTypes.element.isRequired
+}
 export default TransitionPopup

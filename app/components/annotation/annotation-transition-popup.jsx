@@ -18,7 +18,7 @@ const AnnotationTransitionPopup = ({
 
 ...other }) => {
 
-    const isVisible = selectedAnnotationIndex &&
+    const isVisible = !!selectedAnnotationIndex &&
                       !selectedCarouselIndex &&
                       !selectedScoreIndex &&
                       !selectedWikiIndex,

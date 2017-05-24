@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
 
@@ -49,6 +50,11 @@ const TransitionPopupButton = ({
             />
         </div>
     )
+}
+
+TransitionPopupButton.propTypes = {
+    buttonName: PropTypes.string.isRequired,
+    handlePopupButtonClick: PropTypes.func.isRequired
 }
 
 export default TransitionPopupButton
