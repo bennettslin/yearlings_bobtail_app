@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
 
@@ -30,6 +31,15 @@ const NavButton = ({
             handleClick={handleClick}
         />
     )
+}
+
+NavButton.propTypes = {
+    song: PropTypes.object,
+    songIndex: PropTypes.number,
+    buttonText: PropTypes.string,
+    isSelected: PropTypes.bool.isRequired,
+    handleNavSongSelect: PropTypes.func.isRequired,
+    handleButtonClick: PropTypes.func
 }
 
 /****************
@@ -75,5 +85,18 @@ const NavButtonView = ({
         </div>
     </div>
 )
+
+NavButtonView.propTypes = {
+    isNavToggle: PropTypes.bool,
+    isSelected: PropTypes.bool.isRequired,
+    accessHighlighted: PropTypes.bool.isRequired,
+    accessKey: PropTypes.string,
+    iconText: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
+    ]),
+    songTitle: PropTypes.string,
+    handleClick: PropTypes.func.isRequired
+}
 
 export default NavButton

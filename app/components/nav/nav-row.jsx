@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import ProgressBar from '../admin/progress/progress-bar'
 import ProgressHelper from '../../helpers/progress-helper'
 import { getSongTitle } from '../../helpers/data-helper'
@@ -29,6 +30,13 @@ const NavRow = ({
             onClick={onClick}
         />
     )
+}
+
+NavRow.propTypes = {
+    song: PropTypes.object.isRequired,
+    songIndex: PropTypes.number.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    handleNavSongSelect: PropTypes.func.isRequired
 }
 
 /****************
@@ -67,5 +75,14 @@ const NavRowView = ({
         </div>
     </div>
 )
+
+NavRowView.propTypes = {
+    songTitle: PropTypes.string.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    accessHighlighted: PropTypes.bool.isRequired,
+    sumTask: PropTypes.object.isRequired,
+    maxTotalNeededHours: PropTypes.number.isRequired,
+    onClick: PropTypes.func.isRequired
+}
 
 export default NavRow

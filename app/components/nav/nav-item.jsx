@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import NavRow from './nav-row'
 import NavButton from './nav-button'
 
@@ -28,6 +29,15 @@ const NavItem = ({
     return selectedAdminIndex ?
         <NavRow {...other} {...navItemProps} /> :
         <NavButton {...other} {...navItemProps} />
+}
+
+NavItem.propTypes = {
+    isToggle: PropTypes.bool,
+    hasSelectedSong: PropTypes.bool,
+    index: PropTypes.number,
+    selectedAdminIndex: PropTypes.bool,
+    accessedSongIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired
 }
 
 export default NavItem

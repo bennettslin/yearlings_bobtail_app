@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import NavItem from './nav-item'
 
@@ -6,12 +7,9 @@ import NavItem from './nav-item'
  * CONTAINER *
  *************/
 
-const NavBook = (props) => {
-
-    return (
-        <NavBookView {...props} />
-    )
-}
+const NavBook = (props) => (
+    <NavBookView {...props} />
+)
 
 /****************
  * PRESENTATION *
@@ -53,5 +51,15 @@ const NavBookView = ({
         }
     </div>
 )
+
+NavBookView.propTypes = {
+    isNavToggle: PropTypes.bool,
+    isToggle: PropTypes.bool,
+    isLogue: PropTypes.bool,
+    songs: PropTypes.array,
+    rowReverse: PropTypes.bool,
+    beginArrayIndex: PropTypes.number,
+    endArrayIndex: PropTypes.number
+}
 
 export default NavBook

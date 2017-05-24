@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import NavBook from './nav-book'
 import NavItem from './nav-item'
 import ProgressFooter from '../admin/progress/progress-footer'
@@ -28,6 +29,12 @@ const NavSection = ({
             maxTotalNeededHours={maxTotalNeededHours}
         />
     )
+}
+
+NavSection.propTypes = {
+    songs: PropTypes.array.isRequired,
+    selectedAdminIndex: PropTypes.bool,
+    allTasks: PropTypes.array
 }
 
 /****************
@@ -163,6 +170,23 @@ const NavSectionView = ({
             }
         </div>
     )
+}
+
+NavSectionView.propTypes = {
+    songs: PropTypes.array.isRequired,
+    bookStartingIndices: PropTypes.array,
+    showSingleBookColumn: PropTypes.bool,
+    shrinkNavIcon: PropTypes.bool,
+    selectedAdminIndex: PropTypes.bool,
+    accessedSongIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+    selectedNavIndex: PropTypes.number,
+    selectedBookColumnIndex: PropTypes.number,
+    handleNavExpand: PropTypes.func,
+    handleNavBookSelect: PropTypes.func,
+    handleNavSongSelect: PropTypes.func.isRequired,
+    sumAllTasks: PropTypes.object,
+    maxTotalNeededHours: PropTypes.number
 }
 
 export default NavSection
