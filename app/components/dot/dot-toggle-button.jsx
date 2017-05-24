@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
 import { DOT_DESCRIPTIONS } from '../../helpers/constants'
@@ -21,6 +22,11 @@ const DotToggleButton = ({
             handleClick={handleClick}
         />
     )
+}
+
+DotToggleButton.propTypes = {
+    dotIndex: PropTypes.number.isRequired,
+    handleDotToggle: PropTypes.func.isRequired
 }
 
 /****************
@@ -122,6 +128,13 @@ class DotToggleButtonView extends Component {
             </div>
         )
     }
+}
+
+DotToggleButtonView.propTypes = {
+    dotKey: PropTypes.string.isRequired,
+    accessHighlighted: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    handleClick: PropTypes.func.isRequired
 }
 
 export default DotToggleButton

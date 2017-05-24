@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotToggleButton from './dot-toggle-button'
 import { PORTAL, ALL_DOT_KEYS } from '../../helpers/constants'
@@ -14,6 +15,14 @@ const defaultProps = {
 const DotBlock = (props) => (
     <DotBlockView {...props} />
 )
+
+DotBlock.propTypes = {
+    dotKeys: PropTypes.object,
+    selectedDotKeys: PropTypes.object.isRequired,
+    inDotsSection: PropTypes.bool,
+    inAnnotationCard: PropTypes.bool,
+    accessedDotIndex: PropTypes.number
+}
 
 /****************
  * PRESENTATION *
@@ -55,12 +64,7 @@ const DotBlockView = ({
                 return dotKeys[dotKey] && (
                     <div
                         key={index}
-                        className={classnames(
-                            'dot'
-                            // dotKey,
-                            // { 'in-card': inAnnotationCard,
-                            //   'in-lyric': other.inAnchor }
-                        )}
+                        className="dot"
                     >
                         <div className={classnames(
                             'animated-background',

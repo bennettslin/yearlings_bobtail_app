@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotButton from './dot-button'
 
@@ -9,6 +10,13 @@ import DotButton from './dot-button'
 const DotAnchorBlock = (props) => (
     <DotAnchorBlockView {...props} />
 )
+
+DotAnchorBlock.propTypes = {
+    dotKeys: PropTypes.object.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    accessHighlighted: PropTypes.bool.isRequired,
+    handleDotButtonClick: PropTypes.func.isRequired
+}
 
 /****************
  * PRESENTATION *
