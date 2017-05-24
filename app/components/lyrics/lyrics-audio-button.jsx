@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
 
@@ -44,6 +45,14 @@ const LyricsAudioButton = ({
             </div>
         </div>
     )
+}
+
+LyricsAudioButton.propTypes = {
+    isAudioButtonEnabled: PropTypes.bool.isRequired,
+    isPlaying: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    isAfterSelected: PropTypes.bool.isRequired,
+    handleAudioButtonClick: PropTypes.func.isRequired
 }
 
 export default LyricsAudioButton

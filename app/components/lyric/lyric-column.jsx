@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Button from '../button/button'
 import LyricsSection from '../lyrics/lyrics-section'
 import LyricVerseBar from './lyric-verse-bar'
@@ -19,7 +20,7 @@ const LyricColumn = ({
         selectedLyricColumnIndex
     } = other,
 
-    showEarButton = showSingleLyricColumn && hasDoubleColumns,
+    showEarButton = !!showSingleLyricColumn && !!hasDoubleColumns,
     earButtonText = selectedLyricColumnIndex === 0 ? 'left' : 'right'
 
     return (
@@ -28,6 +29,12 @@ const LyricColumn = ({
             earButtonText={earButtonText}
         />
     )
+}
+
+LyricColumn.propTypes = {
+    hasDoubleColumns: PropTypes.bool,
+    showSingleLyricColumn: PropTypes.bool.isRequired,
+    selectedLyricColumnIndex: PropTypes.number.isRequired
 }
 
 /****************
@@ -138,6 +145,17 @@ class LyricColumnView extends Component {
             </div>
         )
     }
+}
+
+LyricColumnView.propTypes = {
+    selectedVerse: PropTypes.object,
+    earButtonText: PropTypes.string.isRequired,
+    isLogue: PropTypes.bool.isRequired,
+    showEarButton: PropTypes.bool.isRequired,
+    handleLyricColumnSelect: PropTypes.func.isRequired,
+    handleVerseBarSelect: PropTypes.func.isRequired,
+    handleVerseBarWheel: PropTypes.func.isRequired,
+    lyricExpandButtonChild: PropTypes.element
 }
 
 export default LyricColumn

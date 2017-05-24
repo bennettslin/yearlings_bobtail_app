@@ -306,16 +306,16 @@ const LiveView = ({
             handleScrollAfterLyricRerender
         },
 
-        lyricExpandButtonChild = isLyricExpandable && (
-            <div className="lyric-button-block expand-button-block">
-                <Button
-                    accessKey={LYRIC_SECTION_EXPAND_KEY}
-                    iconText={isLyricExpanded ? '-' : '+'}
-                    isLarge={true}
-                    handleClick={handleLyricSectionExpand}
-                />
-            </div>
-        ),
+        lyricExpandButtonChild = isLyricExpandable ? (
+                <div className="lyric-button-block expand-button-block">
+                    <Button
+                        accessKey={LYRIC_SECTION_EXPAND_KEY}
+                        iconText={isLyricExpanded ? '-' : '+'}
+                        isLarge={true}
+                        handleClick={handleLyricSectionExpand}
+                    />
+                </div>
+            ) : null,
 
         mainColumnProps = {
             isOverlaidAnnotation,

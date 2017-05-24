@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import TextBlock from '../text/text-block'
 import { TITLE, CENTRE } from '../../helpers/constants'
 
@@ -126,6 +127,16 @@ class LyricsLine extends Component {
             </div>
         )
     }
+}
+
+LyricsLine.propTypes = {
+    // TODO: Are these still being passed?
+    deviceIndex: PropTypes.number,
+    isPortrait: PropTypes.bool,
+    selectedSongIndex: PropTypes.number,
+    showSingleLyricColumn: PropTypes.bool.isRequired,
+    selectedLyricColumnIndex: PropTypes.number,
+    columnKey: PropTypes.string.isRequired
 }
 
 export default LyricsLine

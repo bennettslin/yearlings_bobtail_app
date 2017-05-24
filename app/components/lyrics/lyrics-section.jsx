@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import LyricsUnit from './lyrics-unit'
 import { getPropsAreSame } from '../../helpers/general-helper'
@@ -7,11 +8,14 @@ import { getPropsAreSame } from '../../helpers/general-helper'
  * CONTAINER *
  *************/
 
-const LyricsSection = (props) => {
+const LyricsSection = (props) => (
+    <LyricsSectionView {...props} />
+)
 
-    return (
-        <LyricsSectionView {...props} />
-    )
+LyricsSection.propTypes = {
+    songLyrics: PropTypes.array,
+    showSingleLyricColumn: PropTypes.bool.isRequired,
+    selectedLyricColumnIndex: PropTypes.number.isRequired
 }
 
 /****************

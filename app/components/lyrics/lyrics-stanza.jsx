@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import LyricsVerse from './lyrics-verse'
 
@@ -55,6 +56,16 @@ const LyricsStanzaView = ({
             </div>
         </div>
     )
+}
+
+LyricsStanza.propTypes = {
+    stanzaArray: PropTypes.array.isRequired,
+    stanzaType: PropTypes.string.isRequired,
+    stanzaIndex: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.number
+    ]),
+    showStanzaTypeAndIndex: PropTypes.bool.isRequired
 }
 
 export default LyricsStanza

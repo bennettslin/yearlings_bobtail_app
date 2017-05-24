@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import LyricsVerse from '../lyrics/lyrics-verse'
 
 /*************
@@ -8,6 +9,12 @@ import LyricsVerse from '../lyrics/lyrics-verse'
 const LyricVerseBar = (props) => (
     <LyricVerseBarView {...props} />
 )
+
+LyricVerseBar.propTypes = {
+    isAbove: PropTypes.bool,
+    handleVerseBarSelect: PropTypes.func.isRequired,
+    handleVerseBarWheel: PropTypes.func.isRequired
+}
 
 /****************
  * PRESENTATION *

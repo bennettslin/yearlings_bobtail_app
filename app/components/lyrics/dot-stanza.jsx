@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotAnchorBlock from '../dot/dot-anchor-block'
 
@@ -34,6 +35,17 @@ const DotStanza = ({
     )
 }
 
+DotStanza.propTypes = {
+    dotStanzaObject: PropTypes.object.isRequired,
+    accessedAnnotationIndex: PropTypes.number,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    handleLyricAnnotationSelect: PropTypes.func.isRequired
+}
+
+/****************
+ * PRESENTATION *
+ ****************/
+
 const DotStanzaView = ({
 
     // From controller.
@@ -61,5 +73,10 @@ const DotStanzaView = ({
         </div>
     </div>
 )
+
+DotStanzaView.propTypes = {
+    dotKeys: PropTypes.object.isRequired,
+    annotationIndex: PropTypes.number.isRequired
+}
 
 export default DotStanza
