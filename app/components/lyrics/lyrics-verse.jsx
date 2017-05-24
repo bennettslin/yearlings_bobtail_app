@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import LyricsLine from './lyrics-line'
@@ -130,6 +131,21 @@ const LyricsVerse = ({
             handleInteractivatableClick={handleInteractivatableClick}
         />
     )
+}
+
+LyricsVerse.propTypes = {
+    verseObject: PropTypes.object.isRequired,
+    inMain: PropTypes.bool,
+    inVerseBar: PropTypes.bool,
+    verseBarHidden: PropTypes.bool,
+    sliderMousedOrTouched: PropTypes.bool,
+    selectedVerseIndex: PropTypes.number,
+    interactivatedVerseIndex: PropTypes.number,
+    sliderVerseIndex: PropTypes.number,
+    handleLyricAnnotationSelect: PropTypes.func,
+    handleLyricPlay: PropTypes.func,
+    handleLyricVerseSelect: PropTypes.func,
+    handleVerseInteractivate: PropTypes.func
 }
 
 /****************
@@ -269,6 +285,26 @@ class LyricsVerseView extends Component {
             </div>
         )
     }
+}
+
+LyricsVerseView.propTypes = {
+    verseObject: PropTypes.object.isRequired,
+    hiddenLyricColumnKey: PropTypes.string,
+    isTitle: PropTypes.bool,
+    inVerseBar: PropTypes.bool,
+    isHoverable: PropTypes.bool,
+    isPlaying: PropTypes.bool,
+    isAudioButtonEnabled: PropTypes.bool.isRequired,
+    isInteractable: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    isAfterSelected: PropTypes.bool.isRequired,
+    isDoubleSpeaker: PropTypes.bool.isRequired,
+    verseIndexClassName: PropTypes.string.isRequired,
+    backgroundClassName: PropTypes.string.isRequired,
+    sliderPlacementClassName: PropTypes.string.isRequired,
+    interactivatedClassName: PropTypes.string.isRequired,
+    handleLyricAudioButtonClick: PropTypes.func,
+    handleInteractivatableClick: PropTypes.func
 }
 
 export default LyricsVerse

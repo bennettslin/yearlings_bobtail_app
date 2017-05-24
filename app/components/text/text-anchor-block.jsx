@@ -153,7 +153,11 @@ TextAnchorBlockView.propTypes = {
         PropTypes.string,
 
         // "Bobtail's words" in M is an array.
-        PropTypes.array
+        PropTypes.array,
+
+        // "Ubermensch" in Golden Cord is an object.
+        PropTypes.object
+
     ]).isRequired,
     handleClick: PropTypes.func
 }
