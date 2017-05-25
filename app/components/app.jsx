@@ -30,7 +30,7 @@ import { SHOWN,
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
 import { getSongObject, getIsLogue, getAnnotationObject, getBookColumnIndex, getOverview, getSongTimes } from '../helpers/data-helper'
-import { getVerseIndexForAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
+import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
@@ -891,7 +891,7 @@ class App extends Component {
             if (accessedOn) {
                 const { accessedAnnotationIndex } = this.state
 
-                interactivatedVerseIndex = getVerseIndexForAnnotationIndex(this.props, accessedAnnotationIndex)
+                interactivatedVerseIndex = getVerseIndexForAccessedAnnotationIndex(this.props.selectedSongIndex, accessedAnnotationIndex)
 
             // If not, start from the selected verse.
             } else {

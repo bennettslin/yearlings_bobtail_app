@@ -289,8 +289,12 @@ export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
     }
 }
 
-export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
-    const annotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex, annotationIndex),
+/**
+ * This method is only used to get the closest verse index for an accessed
+ * annotation index.
+ */
+export const getVerseIndexForAccessedAnnotationIndex = (songIndex, annotationIndex) => {
+    const annotation = getAnnotationObject(songIndex, annotationIndex),
         { verseIndex,
           mostRecentVerseIndex } = annotation
 

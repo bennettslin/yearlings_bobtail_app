@@ -9,19 +9,9 @@ export const getSongObject = (songIndex, songs = AlbumData.songs) => {
     return songs[songIndex]
 }
 
-// TODO: Make it so that only two arguments is needed.
-export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityAnnotationIndex) => {
+export const getAnnotationObject = (songIndex, annotationIndex) => {
     const { annotations } = getSongObject(songIndex)
-
-    if (annotations) {
-        // Valid annotation index will never be 0.
-        const annotationIndex = priorityAnnotationIndex || defaultAnnotationIndex
-
-        // Annotation index is 1-based.
-        return annotations[annotationIndex - 1]
-    } else {
-        return null
-    }
+    return annotations ? annotations[annotationIndex - 1] : null
 }
 
 // TODO: Make it so that only two arguments is needed.
