@@ -10,9 +10,10 @@ export const getSongObject = (defaultSongIndex, prioritySongIndex) => {
     return songs[songIndex]
 }
 
-export const getIsLogue = ({ selectedSongIndex }, nextSongIndex) => {
+// TODO: Make it so that only one argument is needed.
+export const getIsLogue = (defaultSongIndex, prioritySongIndex) => {
     const { songs } = AlbumData,
-        songIndex = isNaN(nextSongIndex) ? selectedSongIndex : nextSongIndex
+        songIndex = isNaN(prioritySongIndex) ? defaultSongIndex : prioritySongIndex
 
     return songIndex === 0 || songIndex === songs.length - 1
 }

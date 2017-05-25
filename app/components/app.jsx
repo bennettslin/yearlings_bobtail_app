@@ -111,7 +111,7 @@ class App extends Component {
     constructor(props) {
         super(props)
 
-        const isLogue = getIsLogue(props)
+        const isLogue = getIsLogue(props.selectedSongIndex)
 
         // Bind this to event handlers.
         this._bindEventHandlers()
@@ -346,7 +346,7 @@ class App extends Component {
      togglePlay(isPlaying = !this.state.isPlaying) {
 
          // Select first song if play button in logue is toggled on.
-         if (getIsLogue(this.props) && isPlaying) {
+         if (getIsLogue(this.props.selectedSongIndex) && isPlaying) {
              this.selectSong({
                  selectedSongIndex: 1
              })
@@ -392,7 +392,7 @@ class App extends Component {
          */
         if (!overrideException && (!this.state.isCarouselExpandable ||
                 this.state.isHeightlessLyricColumn ||
-                getIsLogue(this.props))) {
+                getIsLogue(this.props.selectedSongIndex))) {
             return false
         }
 
@@ -435,7 +435,7 @@ class App extends Component {
         // If no argument passed, then just toggle between on and off.
 
         // Dots section cannot be changed in logue.
-        if (getIsLogue(this.props)) {
+        if (getIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -472,7 +472,7 @@ class App extends Component {
          * We should ignore this call if lyric is not expandable, or if it's a
          * logue. However, allow nav to override this exception.
          */
-        if (!overrideException && (!getIsLyricExpandable(this.state) || getIsLogue(this.props))) {
+        if (!overrideException && (!getIsLyricExpandable(this.state) || getIsLogue(this.props.selectedSongIndex))) {
             return false
         }
 
@@ -509,7 +509,7 @@ class App extends Component {
          * has double columns, or if in a logue. Check for new song if called
          * from portal.
          */
-        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(props, state, selectedSongIndex) : state.showSingleLyricColumn) || getIsLogue(props, selectedSongIndex)) {
+        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(props, state, selectedSongIndex) : state.showSingleLyricColumn) || getIsLogue(props.selectedSongIndex, selectedSongIndex)) {
             return false
         }
 
@@ -618,9 +618,8 @@ class App extends Component {
             }
         }
 
-        const wasLogue = getIsLogue(props),
-            isLogue = getIsLogue({ selectedSongIndex,
-                                         songs: props.songs }),
+        const wasLogue = getIsLogue(props.selectedSongIndex),
+            isLogue = getIsLogue(selectedSongIndex),
 
             // Allow logue and song overviews to overlap for fade animation.
             newOverview = getOverview(props, selectedSongIndex),
@@ -709,7 +708,7 @@ class App extends Component {
     }) {
 
         // We shouldn't be able to change overview it's a logue.
-        if (getIsLogue(this.props)) {
+        if (getIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -1077,7 +1076,7 @@ class App extends Component {
                 // Dom manager props.
                 domProps={this.props}
                 domState={this.state}
-                isLogue={getIsLogue(this.props)}
+                isLogue={getIsLogue(this.props.selectedSongIndex)}
 
                 // Event manager props.
                 accessAnnotation={this.accessAnnotation}

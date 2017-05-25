@@ -279,7 +279,7 @@ export const getVerseBarStatus = (props, selectedVerseElement) => {
 
 export const getVerseBeginAndEndTimes = (props, verseIndex) => {
 
-    if (getIsLogue(props)) {
+    if (getIsLogue(props.selectedSongIndex)) {
         return {
             beginTime: 0,
             endTime: 0
