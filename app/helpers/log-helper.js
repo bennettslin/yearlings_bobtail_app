@@ -35,7 +35,7 @@ export default {
     },
 
     logVerse({ props }) {
-        const verse = getVerseObject(props)
+        const verse = getVerseObject(props.selectedSongIndex, props.selectedVerseIndex)
         return this._logObject('selected verse', verse)
     },
 

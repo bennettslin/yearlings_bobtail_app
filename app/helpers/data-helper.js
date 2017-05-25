@@ -10,14 +10,6 @@ export const getSongObject = (defaultSongIndex, prioritySongIndex) => {
     return songs[songIndex]
 }
 
-// TODO: Make it so that only one argument is needed.
-export const getIsLogue = (defaultSongIndex, prioritySongIndex) => {
-    const { songs } = AlbumData,
-        songIndex = isNaN(prioritySongIndex) ? defaultSongIndex : prioritySongIndex
-
-    return songIndex === 0 || songIndex === songs.length - 1
-}
-
 // TODO: Make it so that only two arguments is needed.
 export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityAnnotationIndex) => {
     const { annotations } = getSongObject(songIndex)
@@ -31,6 +23,23 @@ export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityA
     } else {
         return null
     }
+}
+
+// TODO: Make it so that only two arguments is needed.
+export const getVerseObject = (songIndex, defaultVerseIndex, priorityVerseIndex) => {
+    const { lyrics } = getSongObject(songIndex),
+        verseIndex = !isNaN(priorityVerseIndex) && priorityVerseIndex > -1 ?
+            priorityVerseIndex : defaultVerseIndex
+
+    return _parseLyrics(lyrics, verseIndex)
+}
+
+// TODO: Make it so that only one argument is needed.
+export const getIsLogue = (defaultSongIndex, prioritySongIndex) => {
+    const { songs } = AlbumData,
+        songIndex = isNaN(prioritySongIndex) ? defaultSongIndex : prioritySongIndex
+
+    return songIndex === 0 || songIndex === songs.length - 1
 }
 
 export const getBookColumnIndex = (props, selectedSongIndex) => {
@@ -56,12 +65,6 @@ export const getSongTitle = (props, isLogue) => {
         song = props.song || props.songs[songIndex]
 
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
-}
-
-export const getVerseObject = ({ selectedVerseIndex, ...other }, verseIndex) => {
-    const { lyrics } = getSongObject(other.selectedSongIndex)
-
-    return _parseLyrics(lyrics, (!isNaN(verseIndex) && verseIndex > -1) ? verseIndex : selectedVerseIndex)
 }
 
 /***********

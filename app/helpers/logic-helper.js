@@ -176,11 +176,7 @@ export const getAnnotationIndexForVerseIndex = ({
      * - when lyric column is switched.
      */
 
-    const verse = getVerseObject({
-            selectedVerseIndex: verseIndex,
-            selectedSongIndex: props.selectedSongIndex,
-            songs: props.songs
-        }),
+    const verse = getVerseObject(props.selectedSongIndex, verseIndex),
         annotationsLength = _getAnnotationsLength(props)
 
     if (!verse) {
@@ -405,11 +401,7 @@ export const getPortalLinks = (card, songs) => {
                     annotation,
                     cardIndex
                 }),
-                verseObject = getVerseObject({
-                    songs,
-                    selectedSongIndex: songIndex,
-                    selectedVerseIndex: verseIndex
-                })
+                verseObject = getVerseObject(songIndex, verseIndex)
 
             return {
                 portalIndex,

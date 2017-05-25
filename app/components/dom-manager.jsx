@@ -52,7 +52,7 @@ class DomManager extends Component {
             isPhone = getIsPhone({ deviceIndex }),
 
             selectedSongTitle = getSongTitle(props, isLogue),
-            selectedVerse = getVerseObject(props, sliderVerseIndex),
+            selectedVerse = getVerseObject(props.selectedSongIndex, props.selectedVerseIndex, sliderVerseIndex),
 
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
                 showSingleLyricColumn,
