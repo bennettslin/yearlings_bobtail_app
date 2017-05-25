@@ -171,7 +171,6 @@ const LiveView = ({
         verseBarHidden = !isSelectedVerseAbove && !isSelectedVerseBelow,
 
         annotationPopupProps = {
-            songs,
             popupAnnotation,
             selectedAnnotationIndex,
             selectedCarouselIndex,
@@ -241,7 +240,6 @@ const LiveView = ({
         ),
 
         carouselProps = {
-            songs,
             annotations,
             accessedAnnotationIndex,
             selectedAnnotationIndex,

@@ -4,7 +4,7 @@ import { LYRIC_COLUMN_KEYS,
          PORTAL,
          REFERENCE } from './constants'
 
-import { getSongObject, getIsLogue, getAnnotationObject, getVerseObject } from './data-helper'
+import { getSongObject, getIsLogue, getAnnotationObject, getVerseObject, getSongTitle } from './data-helper'
 import { intersects } from './dot-helper'
 import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from './responsive-helper'
 
@@ -381,7 +381,8 @@ export const getTasks = (selectedSong, tasks) => {
     return songTasks ? songTasks : tasks
 }
 
-export const getPortalLinks = (card, songs) => {
+// FIXME: Call this from build helper, not annotation card!
+export const getPortalLinks = (card) => {
     if (card) {
         const { portalLinks } = card
 
@@ -395,12 +396,12 @@ export const getPortalLinks = (card, songs) => {
                     columnIndex,
                     portalIndex,
                     portalPrefix } = portalLink,
-                song = songs[songIndex],
-                annotation = song.annotations[annotationIndex - 1],
+                annotation = getAnnotationObject(songIndex, annotationIndex),
                 cardObject = _getCardFromIndex({
                     annotation,
                     cardIndex
                 }),
+                songTitle = getSongTitle(songIndex),
                 verseObject = getVerseObject(songIndex, verseIndex)
 
             return {
@@ -408,7 +409,7 @@ export const getPortalLinks = (card, songs) => {
                 songIndex,
                 annotationIndex,
                 verseIndex,
-                songTitle: song.title,
+                songTitle,
                 column,
                 columnIndex,
                 portalPrefix,

@@ -13,14 +13,18 @@ import { getPortalLinks } from '../../helpers/logic-helper'
 const AnnotationCard = ({
 
     card,
-    songs,
 
 ...other }) => {
 
     const { description,
           dotKeys = {} } = card,
 
-        portalLinks = getPortalLinks(card, songs)
+        // FIXME: This really can just live on the card itself.
+        portalLinks = getPortalLinks(card)
+
+    // if (portalLinks) {
+    //     console.error('card, portalLinks', card.portalLinks[0], portalLinks[0]);
+    // }
 
     // Add portal key to dot keys.
     if (portalLinks) {
@@ -37,8 +41,7 @@ const AnnotationCard = ({
 }
 
 AnnotationCard.propTypes = {
-    card: PropTypes.object.isRequired,
-    songs: PropTypes.array.isRequired
+    card: PropTypes.object.isRequired
 }
 
 /****************
