@@ -129,7 +129,7 @@ class App extends Component {
             popupLogueOverview: isLogue ? popupOverview : '',
             popupSongOverview: isLogue ? '' : popupOverview,
 
-            selectedBookColumnIndex: getBookColumnIndex(props),
+            selectedBookColumnIndex: getBookColumnIndex(props.selectedSongIndex),
             isCarouselExpandable: false,
             isHeightlessLyricColumn: false,
             isHiddenNav: false,
@@ -592,7 +592,7 @@ class App extends Component {
 
         // Reset to default upon song change or nav expand.
         if (resetToDefault) {
-            selectedBookColumnIndex = getBookColumnIndex(this.props, selectedSongIndex)
+            selectedBookColumnIndex = getBookColumnIndex(selectedSongIndex)
         }
 
         this.setState({
@@ -839,11 +839,12 @@ class App extends Component {
 
     touchBodyEnd() {
         if (this.state.sliderMousedOrTouched) {
-            const selectedTime = this.state.sliderRatio * getSongObject(this.props.selectedSongIndex).totalTime,
-                selectedVerseIndex = getVerseIndexForTime(this.props, selectedTime),
+            const { props } = this,
+                selectedTime = this.state.sliderRatio * getSongObject(props.selectedSongIndex).totalTime,
+                selectedVerseIndex = getVerseIndexForTime(props, selectedTime),
 
                 // We will start at the beginning of the selected verse.
-                songTimes = getSongTimes(this.props),
+                songTimes = getSongTimes(props.selectedSongIndex),
                 selectedTimePlayed = songTimes[selectedVerseIndex]
 
             this.selectTime(selectedTimePlayed)
@@ -871,8 +872,9 @@ class App extends Component {
     }
 
     interactivateVerseDirection(direction) {
-        const { accessedOn } = this.props,
-            songTimes = getSongTimes(this.props),
+        const { accessedOn,
+                selectedSongIndex } = this.props,
+            songTimes = getSongTimes(selectedSongIndex),
             timesLength = songTimes.length
 
         let { interactivatedVerseIndex } = this.state
@@ -940,7 +942,7 @@ class App extends Component {
         selectedVerseIndex = 0,
         selectedSongIndex
     }) {
-        const songTimes = getSongTimes(this.props, selectedSongIndex),
+        const songTimes = getSongTimes(this.props.selectedSongIndex, selectedSongIndex),
             selectedTimePlayed = songTimes[selectedVerseIndex]
 
         this._selectTimeAndVerse({

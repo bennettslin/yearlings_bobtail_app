@@ -47,16 +47,15 @@ export const getIsLogue = (defaultSongIndex, prioritySongIndex) => {
     return songIndex === 0 || songIndex === songs.length - 1
 }
 
-export const getBookColumnIndex = (props, selectedSongIndex) => {
-    const { bookStartingIndices } = props,
-        songIndex = typeof selectedSongIndex !== 'undefined' ? selectedSongIndex : props.selectedSongIndex
+export const getBookColumnIndex = (songIndex) => {
+    const { bookStartingIndices } = AlbumData
 
     // Assumes two book starting indices.
-    return songIndex < bookStartingIndices[1] ? 1 : 2
+    return 1 + (songIndex >= bookStartingIndices[1])
 }
 
-export const getSongTimes = (props, nextSongIndex) => {
-    const selectedSong = getSongObject(props.selectedSongIndex, nextSongIndex)
+export const getSongTimes = (defaultSongIndex, prioritySongIndex) => {
+    const selectedSong = getSongObject(defaultSongIndex, prioritySongIndex)
     return selectedSong.times || []
 }
 

@@ -1,4 +1,9 @@
 module.exports = [
+    {
+        taskName: `Nav wonkiness`,
+        workedHours: 0,
+        neededHours: 2
+    },
 
     // Full morning tasks.
     {
