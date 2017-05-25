@@ -510,7 +510,7 @@ class App extends Component {
          * has double columns, or if in a logue. Check for new song if called
          * from portal.
          */
-        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(selectedSongIndex, state) : state.showSingleLyricColumn) || getIsLogue(props.selectedSongIndex, selectedSongIndex)) {
+        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(selectedSongIndex, state) : state.showSingleLyricColumn) || getIsLogue(selectedSongIndex)) {
             return false
         }
 

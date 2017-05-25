@@ -1,12 +1,11 @@
-// Fetch album data. Should know nothing else.
-
+/**
+ * Fetch album data. Should know nothing else. Only the build helper will pass
+ * a songs argument, since it is executing before the AlbumData object has been
+ * created.
+ */
 import AlbumData from '../album-data'
 
-export const getSongObject = (songIndex, songs) => {
-
-    // Songs argument is only ever passed by build helper.
-    songs = songs || AlbumData.songs
-
+export const getSongObject = (songIndex, songs = AlbumData.songs) => {
     return songs[songIndex]
 }
 
@@ -39,12 +38,7 @@ export const getOverview = (songIndex) => {
     return song.overview
 }
 
-// TODO: Make it so that only one argument is needed.
-export const getIsLogue = (defaultSongIndex, prioritySongIndex, songs) => {
-    const songIndex = isNaN(prioritySongIndex) ? defaultSongIndex : prioritySongIndex
-
-    songs = songs || AlbumData.songs
-
+export const getIsLogue = (songIndex, songs = AlbumData.songs) => {
     return songIndex === 0 || songIndex === songs.length - 1
 }
 
@@ -62,7 +56,7 @@ export const getSongTimes = (songIndex) => {
 
 export const getSongTitle = (songIndex, songs) => {
     const song = getSongObject(songIndex, songs),
-        isLogue = getIsLogue(songIndex, undefined, songs)
+        isLogue = getIsLogue(songIndex, songs)
 
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
 }
