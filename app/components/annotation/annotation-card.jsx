@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import DotBlock from '../dot/dots-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
-import { getPortalLinks } from '../../helpers/logic-helper'
+// import { getPortalLinks } from '../../helpers/build-helper'
 
 /*************
  * CONTAINER *
@@ -17,14 +17,8 @@ const AnnotationCard = ({
 ...other }) => {
 
     const { description,
-          dotKeys = {} } = card,
-
-        // FIXME: This really can just live on the card itself.
-        portalLinks = getPortalLinks(card)
-
-    // if (portalLinks) {
-    //     console.error('card, portalLinks', card.portalLinks[0], portalLinks[0]);
-    // }
+            dotKeys = {},
+            portalLinks } = card
 
     // Add portal key to dot keys.
     if (portalLinks) {

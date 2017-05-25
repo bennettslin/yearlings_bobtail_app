@@ -6,7 +6,7 @@ import { ALBUM_BUILD_KEYS,
          RIGHT,
          CENTRE,
          REFERENCE } from './constants'
-import { getSongObject } from './data-helper'
+import { getSongObject, getAnnotationObject, getVerseObject, getSongTitle } from './data-helper'
 import { getFormattedAnnotationTitle } from './format-helper'
 
 const _tempStore = {
@@ -45,7 +45,7 @@ export const prepareAlbumData = (album = {}) => {
     _finalPrepareAllSongs(album)
 
     // FIXME: Temporarily add portal links to album for debugging purposes.
-    album.portalLinks = _tempStore._portalLinks
+    // album.portalLinks = _tempStore._portalLinks
 
     console.error('Cool, album data prepared!');
 
@@ -814,7 +814,38 @@ const _injectPortalLinks = (album) => {
                     return Object.assign({}, link)
                 })
 
-            card.portalLinks = portalLinks
+            card.portalLinks = _getPortalLinks(portalLinks, album.songs)
         })
+    }
+}
+
+const _getCardFromIndex = ({ annotation, cardIndex }) => {
+    const { cards } = annotation
+    return Array.isArray(cards) ? cards[cardIndex] : cards
+}
+
+const _getPortalLinks = (portalLinks, songs) => {
+    if (portalLinks) {
+
+        // Each portal link contains a portal title and index.
+        return portalLinks.map(portalLink => {
+            const { songIndex,
+                    annotationIndex,
+                    cardIndex,
+                    verseIndex } = portalLink,
+                annotation = getAnnotationObject(songIndex, annotationIndex, undefined, songs)
+
+                portalLink.songTitle = getSongTitle(songIndex, songs)
+                portalLink.cardObject = _getCardFromIndex({
+                    annotation,
+                    cardIndex
+                })
+                portalLink.verseObject = getVerseObject(songIndex, verseIndex, undefined, songs)
+
+            return portalLink
+        })
+
+    } else {
+        return undefined
     }
 }

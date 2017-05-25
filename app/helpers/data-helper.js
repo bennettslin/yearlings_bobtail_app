@@ -3,16 +3,18 @@
 import AlbumData from '../album-data'
 
 // TODO: Make it so that only one argument is needed.
-export const getSongObject = (defaultSongIndex, prioritySongIndex) => {
-    const { songs } = AlbumData,
-        songIndex = isNaN(prioritySongIndex) ? defaultSongIndex : prioritySongIndex
+export const getSongObject = (defaultSongIndex, prioritySongIndex, songs) => {
+    const songIndex = isNaN(prioritySongIndex) ? defaultSongIndex : prioritySongIndex
+
+    // Songs argument is only ever passed by build helper.
+    songs = songs || AlbumData.songs
 
     return songs[songIndex]
 }
 
 // TODO: Make it so that only two arguments is needed.
-export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityAnnotationIndex) => {
-    const { annotations } = getSongObject(songIndex)
+export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityAnnotationIndex, songs) => {
+    const { annotations } = getSongObject(songIndex, undefined, songs)
 
     if (annotations) {
         // Valid annotation index will never be 0.
@@ -26,8 +28,8 @@ export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityA
 }
 
 // TODO: Make it so that only two arguments is needed.
-export const getVerseObject = (songIndex, defaultVerseIndex, priorityVerseIndex) => {
-    const { lyrics } = getSongObject(songIndex),
+export const getVerseObject = (songIndex, defaultVerseIndex, priorityVerseIndex, songs) => {
+    const { lyrics } = getSongObject(songIndex, undefined, songs),
         verseIndex = !isNaN(priorityVerseIndex) && priorityVerseIndex > -1 ?
             priorityVerseIndex : defaultVerseIndex
 
@@ -40,9 +42,10 @@ export const getOverview = (songIndex) => {
 }
 
 // TODO: Make it so that only one argument is needed.
-export const getIsLogue = (defaultSongIndex, prioritySongIndex) => {
-    const { songs } = AlbumData,
-        songIndex = isNaN(prioritySongIndex) ? defaultSongIndex : prioritySongIndex
+export const getIsLogue = (defaultSongIndex, prioritySongIndex, songs) => {
+    const songIndex = isNaN(prioritySongIndex) ? defaultSongIndex : prioritySongIndex
+
+    songs = songs || AlbumData.songs
 
     return songIndex === 0 || songIndex === songs.length - 1
 }
@@ -60,9 +63,9 @@ export const getSongTimes = (defaultSongIndex, prioritySongIndex) => {
     return selectedSong.times || []
 }
 
-export const getSongTitle = (songIndex) => {
-    const song = getSongObject(songIndex),
-        isLogue = getIsLogue(songIndex)
+export const getSongTitle = (songIndex, songs) => {
+    const song = getSongObject(songIndex, undefined, songs),
+        isLogue = getIsLogue(songIndex, undefined, songs)
 
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
 }

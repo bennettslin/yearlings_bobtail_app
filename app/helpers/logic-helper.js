@@ -4,20 +4,9 @@ import { LYRIC_COLUMN_KEYS,
          PORTAL,
          REFERENCE } from './constants'
 
-import { getSongObject, getIsLogue, getAnnotationObject, getVerseObject, getSongTitle } from './data-helper'
+import { getSongObject, getIsLogue, getAnnotationObject, getVerseObject } from './data-helper'
 import { intersects } from './dot-helper'
 import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from './responsive-helper'
-
-const _getCardFromIndex = ({ annotation, cardIndex }) => {
-    const { cards } = annotation
-
-    if (Array.isArray(cards)) {
-        return cards[cardIndex]
-
-    } else {
-        return cards
-    }
-}
 
 export const shouldShowAnnotationForColumn = (props, state, annotation) => {
     const showSingleLyricColumn = getShowSingleLyricColumn(props, state)
@@ -379,47 +368,6 @@ export const getTasks = (selectedSong, tasks) => {
 
     // If no song tasks, then return album tasks.
     return songTasks ? songTasks : tasks
-}
-
-// FIXME: Call this from build helper, not annotation card!
-export const getPortalLinks = (card) => {
-    if (card) {
-        const { portalLinks } = card
-
-        // Each portal link contains a portal title and index.
-        return portalLinks ? portalLinks.map((portalLink) => {
-            const { songIndex,
-                    annotationIndex,
-                    cardIndex,
-                    verseIndex,
-                    column,
-                    columnIndex,
-                    portalIndex,
-                    portalPrefix } = portalLink,
-                annotation = getAnnotationObject(songIndex, annotationIndex),
-                cardObject = _getCardFromIndex({
-                    annotation,
-                    cardIndex
-                }),
-                songTitle = getSongTitle(songIndex),
-                verseObject = getVerseObject(songIndex, verseIndex)
-
-            return {
-                portalIndex,
-                songIndex,
-                annotationIndex,
-                verseIndex,
-                songTitle,
-                column,
-                columnIndex,
-                portalPrefix,
-                verseObject,
-                cardObject
-            }
-        }) : null
-    } else {
-        return null
-    }
 }
 
 export const getWikiUrl = (props) => {
