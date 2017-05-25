@@ -33,11 +33,6 @@ export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityA
     }
 }
 
-export const getAnnotationsLength = (props) => {
-    const selectedSong = getSongObject(props.selectedSongIndex)
-    return selectedSong.annotations ? selectedSong.annotations.length : 0
-}
-
 export const getBookColumnIndex = (props, selectedSongIndex) => {
     const { bookStartingIndices } = props,
         songIndex = typeof selectedSongIndex !== 'undefined' ? selectedSongIndex : props.selectedSongIndex

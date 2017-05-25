@@ -4,7 +4,7 @@ import { LYRIC_COLUMN_KEYS,
          PORTAL,
          REFERENCE } from './constants'
 
-import { getSongObject, getIsLogue, getAnnotationObject, getAnnotationsLength, getVerseObject } from './data-helper'
+import { getSongObject, getIsLogue, getAnnotationObject, getVerseObject } from './data-helper'
 import { intersects } from './dot-helper'
 import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from './responsive-helper'
 
@@ -181,7 +181,7 @@ export const getAnnotationIndexForVerseIndex = ({
             selectedSongIndex: props.selectedSongIndex,
             songs: props.songs
         }),
-        annotationsLength = getAnnotationsLength(props)
+        annotationsLength = _getAnnotationsLength(props)
 
     if (!verse) {
         return -1
@@ -247,6 +247,11 @@ export const getAnnotationIndexForVerseIndex = ({
         specifiedDirection: direction,
         lyricColumnIndex
     })
+}
+
+const _getAnnotationsLength = (props) => {
+    const selectedSong = getSongObject(props.selectedSongIndex)
+    return selectedSong.annotations ? selectedSong.annotations.length : 0
 }
 
 export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
