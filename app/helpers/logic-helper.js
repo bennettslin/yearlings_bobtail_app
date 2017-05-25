@@ -296,8 +296,8 @@ export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
     return !isNaN(verseIndex) ? verseIndex : mostRecentVerseIndex
 }
 
-export const getVerseIndexForTime = (props, time) => {
-    const selectedSong = getSongObject(props.selectedSongIndex)
+export const getVerseIndexForTime = (songIndex, time) => {
+    const selectedSong = getSongObject(songIndex)
 
     if (time >= 0 && time <= selectedSong.totalTime) {
         let selectedVerseIndex = 0

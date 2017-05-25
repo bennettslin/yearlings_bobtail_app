@@ -368,7 +368,7 @@ class App extends Component {
     }
 
     selectTime(selectedTimePlayed = 0) {
-        const selectedVerseIndex = getVerseIndexForTime(this.props, selectedTimePlayed)
+        const selectedVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, selectedTimePlayed)
 
         if (selectedVerseIndex !== null) {
             this._selectTimeAndVerse({
@@ -797,7 +797,7 @@ class App extends Component {
             sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
             sliderTime = sliderRatio * getSongObject(this.props.selectedSongIndex).totalTime,
-            sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
+            sliderVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, sliderTime)
 
         this.setState({
             sliderLeft,
@@ -827,7 +827,7 @@ class App extends Component {
                 sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
                 sliderTime = sliderRatio * getSongObject(this.props.selectedSongIndex).totalTime,
-                sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
+                sliderVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, sliderTime)
 
             this.setState({
                 sliderRatio,
@@ -841,7 +841,7 @@ class App extends Component {
         if (this.state.sliderMousedOrTouched) {
             const { props } = this,
                 selectedTime = this.state.sliderRatio * getSongObject(props.selectedSongIndex).totalTime,
-                selectedVerseIndex = getVerseIndexForTime(props, selectedTime),
+                selectedVerseIndex = getVerseIndexForTime(props.selectedSongIndex, selectedTime),
 
                 // We will start at the beginning of the selected verse.
                 songTimes = getSongTimes(props.selectedSongIndex),
