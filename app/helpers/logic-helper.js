@@ -45,7 +45,7 @@ export const getAnnotationIndexForDirection = ({
      * - from getAnnotationIndexForVerseIndex.
      */
 
-    const selectedSong = getSongObject(props),
+    const selectedSong = getSongObject(props.selectedSongIndex),
 
         // If a direction is given for this method, it has modulo.
         useModulo = !!direction
@@ -286,7 +286,7 @@ export const getVerseBeginAndEndTimes = (props, verseIndex) => {
         }
     }
 
-    const selectedSong = getSongObject(props),
+    const selectedSong = getSongObject(props.selectedSongIndex),
         songTimes = selectedSong.times,
 
         beginTime = songTimes[verseIndex],
@@ -307,7 +307,7 @@ export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
 }
 
 export const getVerseIndexForTime = (props, time) => {
-    const selectedSong = getSongObject(props)
+    const selectedSong = getSongObject(props.selectedSongIndex)
 
     if (time >= 0 && time <= selectedSong.totalTime) {
         let selectedVerseIndex = 0

@@ -14,7 +14,7 @@ export default {
     },
 
     logSong({ props }) {
-        const selectedSong = getSongObject(props),
+        const selectedSong = getSongObject(props.selectedSongIndex),
             copiedSong = Object.assign({}, selectedSong)
 
         if (!copiedSong.logue) {

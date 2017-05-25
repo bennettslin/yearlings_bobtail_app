@@ -796,7 +796,7 @@ class App extends Component {
             sliderWidth = clientRect.width,
             sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
-            sliderTime = sliderRatio * getSongObject(this.props).totalTime,
+            sliderTime = sliderRatio * getSongObject(this.props.selectedSongIndex).totalTime,
             sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
 
         this.setState({
@@ -826,7 +826,7 @@ class App extends Component {
                     sliderWidth } = this.state,
                 sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
-                sliderTime = sliderRatio * getSongObject(this.props).totalTime,
+                sliderTime = sliderRatio * getSongObject(this.props.selectedSongIndex).totalTime,
                 sliderVerseIndex = getVerseIndexForTime(this.props, sliderTime)
 
             this.setState({
@@ -839,7 +839,7 @@ class App extends Component {
 
     touchBodyEnd() {
         if (this.state.sliderMousedOrTouched) {
-            const selectedTime = this.state.sliderRatio * getSongObject(this.props).totalTime,
+            const selectedTime = this.state.sliderRatio * getSongObject(this.props.selectedSongIndex).totalTime,
                 selectedVerseIndex = getVerseIndexForTime(this.props, selectedTime),
 
                 // We will start at the beginning of the selected verse.
@@ -990,7 +990,7 @@ class App extends Component {
         const newState = resizeWindow(e ? e.target : undefined),
             isCarouselExpandable = getIsCarouselExpandable(newState),
             isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState),
-            selectedSong = getSongObject(this.props)
+            selectedSong = getSongObject(this.props.selectedSongIndex)
 
         newState.isCarouselExpandable = isCarouselExpandable
         newState.isHeightlessLyricColumn = isHeightlessLyricColumn

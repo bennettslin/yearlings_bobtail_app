@@ -111,8 +111,7 @@ export const getIsLyricExpandable = ({ deviceIndex }) => {
 }
 
 export const getShowSingleLyricColumn = (props, state, nextSongIndex) => {
-    const songIndex = !isNaN(nextSongIndex) ? nextSongIndex : props.selectedSongIndex,
-        selectedSong = getSongObject(props, songIndex),
+    const selectedSong = getSongObject(props.selectedSongIndex, nextSongIndex),
         { hasSideStanzas,
           isDoublespeaker,
           forceSingleColumn } = selectedSong,

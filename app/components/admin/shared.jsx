@@ -12,7 +12,7 @@ import { getTasks } from '../../helpers/logic-helper'
 
 const Shared = (props) => {
 
-    const selectedSong = getSongObject(props),
+    const selectedSong = getSongObject(props.selectedSongIndex),
         tasks = getTasks(selectedSong, props.albumTasks),
         multipleCardAnnotationsCount = selectedSong.multipleCardAnnotationsCount
 

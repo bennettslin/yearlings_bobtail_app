@@ -47,6 +47,8 @@ export const prepareAlbumData = (album = {}) => {
     // FIXME: Temporarily add portal links to album for debugging purposes.
     album.portalLinks = _tempStore._portalLinks
 
+    console.error('Cool, album data prepared!');
+
     return album
 }
 

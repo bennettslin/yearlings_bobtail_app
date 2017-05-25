@@ -26,7 +26,7 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../helpers/constants'
 
 const Live = (props) => {
 
-    const selectedSong = getSongObject(props),
+    const selectedSong = getSongObject(props.selectedSongIndex),
         selectedWikiUrl = getWikiUrl(props)
 
     return (
