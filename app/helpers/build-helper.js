@@ -6,7 +6,7 @@ import { ALBUM_BUILD_KEYS,
          RIGHT,
          CENTRE,
          REFERENCE } from './constants'
-import { getSongObject, getAnnotationObject, getVerseObject, getSongTitle } from './data-helper'
+import { getSongObject, getVerseObject, getSongTitle } from './data-helper'
 import { getFormattedAnnotationTitle } from './format-helper'
 
 const _tempStore = {
@@ -819,27 +819,15 @@ const _injectPortalLinks = (album) => {
     }
 }
 
-const _getCardFromIndex = ({ annotation, cardIndex }) => {
-    const { cards } = annotation
-    return Array.isArray(cards) ? cards[cardIndex] : cards
-}
-
 const _getPortalLinks = (portalLinks, songs) => {
     if (portalLinks) {
 
         // Each portal link contains a portal title and index.
         return portalLinks.map(portalLink => {
             const { songIndex,
-                    annotationIndex,
-                    cardIndex,
-                    verseIndex } = portalLink,
-                annotation = getAnnotationObject(songIndex, annotationIndex, undefined, songs)
+                    verseIndex } = portalLink
 
                 portalLink.songTitle = getSongTitle(songIndex, songs)
-                portalLink.cardObject = _getCardFromIndex({
-                    annotation,
-                    cardIndex
-                })
                 portalLink.verseObject = getVerseObject(songIndex, verseIndex, undefined, songs)
 
             return portalLink

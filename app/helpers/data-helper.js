@@ -13,8 +13,8 @@ export const getSongObject = (defaultSongIndex, prioritySongIndex, songs) => {
 }
 
 // TODO: Make it so that only two arguments is needed.
-export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityAnnotationIndex, songs) => {
-    const { annotations } = getSongObject(songIndex, undefined, songs)
+export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityAnnotationIndex) => {
+    const { annotations } = getSongObject(songIndex)
 
     if (annotations) {
         // Valid annotation index will never be 0.
