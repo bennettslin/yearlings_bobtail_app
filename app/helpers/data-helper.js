@@ -54,15 +54,15 @@ export const getBookColumnIndex = (songIndex) => {
     return 1 + (songIndex >= bookStartingIndices[1])
 }
 
+// TODO: Make it so that only one argument is needed.
 export const getSongTimes = (defaultSongIndex, prioritySongIndex) => {
     const selectedSong = getSongObject(defaultSongIndex, prioritySongIndex)
     return selectedSong.times || []
 }
 
-export const getSongTitle = (props, isLogue) => {
-    const { songs } = AlbumData,
-        songIndex = props.songIndex || props.selectedSongIndex,
-        song = props.song || songs[songIndex]
+export const getSongTitle = (songIndex) => {
+    const song = getSongObject(songIndex),
+        isLogue = getIsLogue(songIndex)
 
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
 }

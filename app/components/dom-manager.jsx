@@ -18,11 +18,7 @@ class DomManager extends Component {
               deviceIndex,
               windowWidth,
               windowHeight,
-
-              isLogue,
-
               showSingleLyricColumn,
-
               selectedAdminIndex,
               selectedSongIndex,
               selectedOverviewIndex,
@@ -51,7 +47,7 @@ class DomManager extends Component {
             isDesktop = getIsDesktop(deviceIndex),
             isPhone = getIsPhone({ deviceIndex }),
 
-            selectedSongTitle = getSongTitle(props, isLogue),
+            selectedSongTitle = getSongTitle(props.selectedSongIndex),
             selectedVerse = getVerseObject(props.selectedSongIndex, props.selectedVerseIndex, sliderVerseIndex),
 
             hiddenLyricColumnKey = getHiddenLyricColumnKey({

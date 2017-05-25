@@ -17,8 +17,7 @@ const NavRow = ({
 
 ...other }) => {
 
-    const isLogue = song.logue,
-        songTitle = getSongTitle({ song, songIndex }, isLogue),
+    const songTitle = getSongTitle(songIndex),
         sumTask = ProgressHelper.calculateSumTask(song.tasks),
         onClick = e => handleNavSongSelect(e, songIndex)
 
