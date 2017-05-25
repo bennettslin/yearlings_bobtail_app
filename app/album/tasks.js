@@ -1,4 +1,15 @@
 module.exports = [
+
+    {
+        taskName: `Annotation card should not need to get portal links data`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `get logue status from song itself?`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Nav wonkiness`,
         workedHours: 0,
