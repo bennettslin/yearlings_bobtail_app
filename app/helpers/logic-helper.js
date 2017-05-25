@@ -267,16 +267,17 @@ export const getVerseBarStatus = (props, selectedVerseElement) => {
         }
 }
 
-export const getVerseBeginAndEndTimes = (props, verseIndex) => {
+// FIXME: Call this from build helper!
+export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
 
-    if (getIsLogue(props.selectedSongIndex)) {
+    if (getIsLogue(songIndex)) {
         return {
             beginTime: 0,
             endTime: 0
         }
     }
 
-    const selectedSong = getSongObject(props.selectedSongIndex),
+    const selectedSong = getSongObject(songIndex),
         songTimes = selectedSong.times,
 
         beginTime = songTimes[verseIndex],

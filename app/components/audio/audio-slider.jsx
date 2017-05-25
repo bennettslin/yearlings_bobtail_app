@@ -79,7 +79,7 @@ class AudioSliderView extends Component {
             }
 
             const { beginTime,
-                    endTime } = getVerseBeginAndEndTimes(this.props, cursorVerseIndex),
+                    endTime } = getVerseBeginAndEndTimes(this.props.selectedSongIndex, cursorVerseIndex),
 
                 cursorPosition = beginTime / totalTime * 100,
                 cursorWidth = !isLogue ? (endTime - beginTime) / totalTime * 100 : 0,
