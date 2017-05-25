@@ -123,7 +123,7 @@ class App extends Component {
             accessedSongIndex: props.selectedSongIndex,
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
 
-            popupAnnotation: getAnnotationObject(props),
+            popupAnnotation: getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
             popupLogueOverview: isLogue ? getOverview(props) : '',
             popupSongOverview: isLogue ? '' : getOverview(props),
 
@@ -328,11 +328,10 @@ class App extends Component {
          * suddenly empty when popup fades out.
          */
         if (selectedAnnotationIndex) {
+            const popupAnnotation = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
+
             this.setState({
-                popupAnnotation: getAnnotationObject({
-                    selectedSongIndex,
-                    songs: props.songs
-                }, selectedAnnotationIndex)
+                popupAnnotation
             })
         }
 
@@ -514,7 +513,7 @@ class App extends Component {
         }
 
         // Deselect selected annotation if not in new selected column.
-        const selectedAnnotation = getAnnotationObject(props),
+        const selectedAnnotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
             showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn({
 
                     songs: props.songs,
@@ -1010,8 +1009,9 @@ class App extends Component {
 
         // Deselect selected annotation if not in new shown column.
         if (selectedSong.doubleColumns && newState.showSingleLyricColumn && !this.state.showSingleLyricColumn) {
-            const selectedAnnotation = getAnnotationObject(this.props),
-                showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn(this.props, newState, selectedAnnotation)
+            const { props } = this,
+                selectedAnnotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
+                showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn(props, newState, selectedAnnotation)
 
             if (selectedAnnotation && !showAnnotationForColumn) {
                 this.selectAnnotation({})

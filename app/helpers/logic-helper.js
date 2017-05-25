@@ -210,7 +210,7 @@ export const getAnnotationIndexForVerseIndex = ({
             // Move inward, which is the opposite direction.
             currentCounter -= direction
 
-            const annotation = getAnnotationObject(props, returnIndex),
+            const annotation = getAnnotationObject(props.selectedSongIndex, returnIndex),
                 showAnnotationForColumn = shouldShowAnnotationForColumn({
                     songs: props.songs,
                     selectedSongIndex: props.selectedSongIndex,
@@ -299,7 +299,7 @@ export const getVerseBeginAndEndTimes = (props, verseIndex) => {
 }
 
 export const getVerseIndexForAnnotationIndex = (props, annotationIndex) => {
-    const annotation = getAnnotationObject(props, annotationIndex),
+    const annotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex, annotationIndex),
         { verseIndex,
           mostRecentVerseIndex } = annotation
 
@@ -329,7 +329,7 @@ export const getPopupAnchorIndexForDirection = (
     initialPopupAnchorIndex = 1,
     direction
 ) => {
-    const annotation = getAnnotationObject(props),
+    const annotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
         selectedDotKeys = props.selectedDotKeys
 
     if (annotation && annotation.popupAnchors) {
@@ -428,7 +428,7 @@ export const getWikiUrl = (props) => {
     const { selectedWikiIndex,
             carouselAnnotationIndex } = props
     if (selectedWikiIndex) {
-        const annotation = getAnnotationObject(props, carouselAnnotationIndex),
+        const annotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex, carouselAnnotationIndex),
             partialPath = annotation.popupAnchors[selectedWikiIndex - 1]
 
         let fullPath

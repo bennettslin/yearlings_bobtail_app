@@ -18,14 +18,19 @@ export const getIsLogue = (defaultSongIndex, prioritySongIndex) => {
     return songIndex === 0 || songIndex === songs.length - 1
 }
 
-export const getAnnotationObject = ({
-    selectedAnnotationIndex,
-    selectedSong,
-...other }, annotationIndex) => {
+// TODO: Make it so that only two arguments is needed.
+export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityAnnotationIndex) => {
+    const { annotations } = getSongObject(songIndex)
 
-    selectedSong = selectedSong || getSongObject(other.selectedSongIndex)
-    return selectedSong.annotations ?
-            selectedSong.annotations[(annotationIndex || selectedAnnotationIndex) - 1] : null
+    if (annotations) {
+        // Valid annotation index will never be 0.
+        const annotationIndex = priorityAnnotationIndex || defaultAnnotationIndex
+
+        // Annotation index is 1-based.
+        return annotations[annotationIndex - 1]
+    } else {
+        return null
+    }
 }
 
 export const getAnnotationsDotKeys = (props) => {

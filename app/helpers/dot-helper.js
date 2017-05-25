@@ -18,7 +18,7 @@ export const intersects = (presentKeys = {}, selectedKeys = {}) => {
 
 export const allDotsDeselected = (props, dotKey) => {
     const { selectedDotKeys } = props,
-        annotation = getAnnotationObject(props),
+        annotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
         shownDotKeys = annotation ? annotation.dotKeys : null,
 
         // The dotKey being deselected is still selected at this stage.

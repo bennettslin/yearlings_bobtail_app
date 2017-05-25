@@ -45,7 +45,7 @@ export default {
     },
 
     logAnchorAnnotation({ props }) {
-        const annotation = getAnnotationObject(props)
+        const annotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex)
         return this._logObject('selected annotation', annotation)
     },
 
