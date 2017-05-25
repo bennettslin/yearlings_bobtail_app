@@ -6,7 +6,7 @@ import { ALBUM_BUILD_KEYS,
          RIGHT,
          CENTRE,
          REFERENCE } from './constants'
-import { getAnnotationsDotKeys } from './data-helper'
+import { getSongObject } from './data-helper'
 import { getFormattedAnnotationTitle } from './format-helper'
 
 const _tempStore = {
@@ -115,7 +115,7 @@ const _initialPrepareAllSongs = (album) => {
 
             // Add annotations to song object.
             song.annotations = _tempStore._annotations
-            song.annotationsDotKeys = getAnnotationsDotKeys({ selectedSong: song })
+            song.annotationsDotKeys = _getAnnotationsDotKeys({ selectedSong: song })
 
             // Add available dots to song object.
             // UPDATE: App no longer uses this.
@@ -537,6 +537,10 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
     }
 }
 
+/**************
+ * ANNOTATION *
+ **************/
+
 const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
     const cards = lyric.annotation
 
@@ -647,6 +651,14 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
         // Clean up lyric object.
         delete lyric.properNoun
     }
+}
+
+const _getAnnotationsDotKeys = (props) => {
+    const selectedSong = props.selectedSong || getSongObject(props.selectedSongIndex)
+
+    return selectedSong ? selectedSong.annotations.map(annotation => {
+        return annotation.dotKeys
+    }) : null
 }
 
 const _prepareCard = (card, dotKeys, finalPassThrough) => {

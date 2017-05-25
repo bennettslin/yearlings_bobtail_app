@@ -33,14 +33,6 @@ export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityA
     }
 }
 
-export const getAnnotationsDotKeys = (props) => {
-    const selectedSong = props.selectedSong || getSongObject(props.selectedSongIndex)
-
-    return selectedSong ? selectedSong.annotations.map(annotation => {
-        return annotation.dotKeys
-    }) : null
-}
-
 export const getAnnotationsLength = (props) => {
     const selectedSong = getSongObject(props.selectedSongIndex)
     return selectedSong.annotations ? selectedSong.annotations.length : 0

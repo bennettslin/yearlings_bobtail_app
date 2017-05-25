@@ -1,5 +1,5 @@
 // For dev purposes. Log object info.
-import { getSongObject, getAnnotationObject, getAnnotationsDotKeys, getVerseObject } from './data-helper'
+import { getSongObject, getAnnotationObject, getVerseObject } from './data-helper'
 import { WINDOW_STORAGE, LYRIC_TEXT_KEYS } from './constants'
 
 export default {
@@ -20,7 +20,7 @@ export default {
         if (!copiedSong.logue) {
             copiedSong.lyrics = `lyrics: ${copiedSong.lyrics.length}`
             copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
-            copiedSong.annotationsDotKeys = `annotationsDotKeys: ${copiedSong.annotationsDotKeys.length}`
+            // copiedSong.annotationsDotKeys = `annotationsDotKeys: ${copiedSong.annotationsDotKeys.length}`
             // copiedSong.times = `times: ${copiedSong.times.length}`
         }
 
@@ -32,11 +32,6 @@ export default {
 
     logDrawings({ props }) {
         return this._logObject('drawings', props.drawings)
-    },
-
-    logAnnotationsDotKeys({ props }) {
-        const annotationsDotKeys = getAnnotationsDotKeys(props)
-        return this._logObject('annotations', annotationsDotKeys)
     },
 
     logVerse({ props }) {

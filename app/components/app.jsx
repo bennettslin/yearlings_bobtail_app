@@ -1063,7 +1063,6 @@ class App extends Component {
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
         window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
         window.d = LogHelper.logDrawings.bind(LogHelper, this)
-        window.n = LogHelper.logAnnotationsDotKeys.bind(LogHelper, this)
         window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)
