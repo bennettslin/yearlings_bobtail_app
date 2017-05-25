@@ -2,9 +2,7 @@
 
 import AlbumData from '../album-data'
 
-// TODO: Make it so that only one argument is needed.
-export const getSongObject = (defaultSongIndex, prioritySongIndex, songs) => {
-    const songIndex = isNaN(prioritySongIndex) ? defaultSongIndex : prioritySongIndex
+export const getSongObject = (songIndex, songs) => {
 
     // Songs argument is only ever passed by build helper.
     songs = songs || AlbumData.songs
@@ -29,7 +27,7 @@ export const getAnnotationObject = (songIndex, defaultAnnotationIndex, priorityA
 
 // TODO: Make it so that only two arguments is needed.
 export const getVerseObject = (songIndex, defaultVerseIndex, priorityVerseIndex, songs) => {
-    const { lyrics } = getSongObject(songIndex, undefined, songs),
+    const { lyrics } = getSongObject(songIndex, songs),
         verseIndex = !isNaN(priorityVerseIndex) && priorityVerseIndex > -1 ?
             priorityVerseIndex : defaultVerseIndex
 
@@ -57,14 +55,13 @@ export const getBookColumnIndex = (songIndex) => {
     return 1 + (songIndex >= bookStartingIndices[1])
 }
 
-// TODO: Make it so that only one argument is needed.
-export const getSongTimes = (defaultSongIndex, prioritySongIndex) => {
-    const selectedSong = getSongObject(defaultSongIndex, prioritySongIndex)
+export const getSongTimes = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
     return selectedSong.times || []
 }
 
 export const getSongTitle = (songIndex, songs) => {
-    const song = getSongObject(songIndex, undefined, songs),
+    const song = getSongObject(songIndex, songs),
         isLogue = getIsLogue(songIndex, undefined, songs)
 
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`

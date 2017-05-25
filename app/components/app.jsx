@@ -940,9 +940,9 @@ class App extends Component {
 
     selectVerse({
         selectedVerseIndex = 0,
-        selectedSongIndex
+        selectedSongIndex = this.props.selectedSongIndex
     }) {
-        const songTimes = getSongTimes(this.props.selectedSongIndex, selectedSongIndex),
+        const songTimes = getSongTimes(selectedSongIndex),
             selectedTimePlayed = songTimes[selectedVerseIndex]
 
         this._selectTimeAndVerse({
