@@ -10,6 +10,7 @@ import { getSongObject, getVerseObject, getSongTitle } from './data-helper'
 import { getFormattedAnnotationTitle } from './format-helper'
 
 const _tempStore = {
+    _songs: [],
     _songIndex: 0,
     _songDotKeys: {},
     _annotations: [],
@@ -35,9 +36,11 @@ const _tempStore = {
 }
 
 export const prepareAlbumData = (album = {}) => {
+    _tempStore._songs = album.songs
+
     _initialPrepareAllSongs(album)
 
-    _injectPortalLinks(album)
+    _addDestinationPortalLinks(album)
 
     // Add drawings for admin purposes.
     album.drawings = _finaliseDrawings(album, _tempStore._drawings)
@@ -612,7 +615,7 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
             cards.forEach((card, cardIndex) => {
                 _prepareCard(card, dotKeys)
                 _addDotKeys(card, dotKeys)
-                if (_addPortalLink({
+                if (_addSourcePortalLink({
                     card,
                     dotKeys,
                     annotationIndex,
@@ -627,7 +630,7 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
         } else {
             _prepareCard(cards, dotKeys)
             _addDotKeys(cards, dotKeys)
-            if (_addPortalLink({
+            if (_addSourcePortalLink({
                 card: cards,
                 dotKeys,
                 annotationIndex,
@@ -683,7 +686,7 @@ const _prepareCard = (card, dotKeys, finalPassThrough) => {
 
     if (portalLinks && finalPassThrough) {
         portalLinks.forEach(link => {
-            // delete link.cardIndex
+            delete link.cardIndex
             _tempStore._popupAnchors.push(Object.assign({}, link))
             link.portalIndex = _tempStore._popupAnchorIndex
             _tempStore._popupAnchorIndex++
@@ -743,7 +746,7 @@ const _addDotKeys = (card, dotKeys) => {
  * PORTAL *
  **********/
 
-const _addPortalLink = ({
+const _addSourcePortalLink = ({
     card,
     dotKeys,
     annotationIndex,
@@ -761,8 +764,11 @@ const _addPortalLink = ({
         const { portalKey,
                 portalPrefix } = portal,
 
+            { _songs,
+              _songIndex } = _tempStore,
+
             portalLink = {
-                songIndex: _tempStore._songIndex,
+                songIndex: _songIndex,
                 annotationIndex,
                 cardIndex,
                 verseIndex,
@@ -770,6 +776,10 @@ const _addPortalLink = ({
                 columnIndex,
                 portalPrefix
             }
+
+        // Add data about portal.
+        portalLink.songTitle = getSongTitle(_songIndex, _songs)
+        portalLink.verseObject = getVerseObject(_songIndex, verseIndex, undefined, _songs)
 
         // If first portal link, initialise array.
         if (!_tempStore._portalLinks[portalKey || portal]) {
@@ -793,7 +803,7 @@ const _addPortalLink = ({
     }
 }
 
-const _injectPortalLinks = (album) => {
+const _addDestinationPortalLinks = (album) => {
     /**
      * For each annotation with a portal, add an array of links to all
      * other portals.
@@ -814,26 +824,7 @@ const _injectPortalLinks = (album) => {
                     return Object.assign({}, link)
                 })
 
-            card.portalLinks = _getPortalLinks(portalLinks, album.songs)
+            card.portalLinks = portalLinks
         })
-    }
-}
-
-const _getPortalLinks = (portalLinks, songs) => {
-    if (portalLinks) {
-
-        // Each portal link contains a portal title and index.
-        return portalLinks.map(portalLink => {
-            const { songIndex,
-                    verseIndex } = portalLink
-
-                portalLink.songTitle = getSongTitle(songIndex, songs)
-                portalLink.verseObject = getVerseObject(songIndex, verseIndex, undefined, songs)
-
-            return portalLink
-        })
-
-    } else {
-        return undefined
     }
 }
