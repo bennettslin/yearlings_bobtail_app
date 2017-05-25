@@ -1959,5 +1959,10 @@ module.exports = [
         taskName: `Add prop types.`,
         workedHours: 4,
         neededHours: 4
-    }
+    },
+    {
+        taskName: `Begin separate album data file.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
