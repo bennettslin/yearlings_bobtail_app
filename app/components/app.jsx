@@ -500,7 +500,7 @@ class App extends Component {
 
     selectLyricColumn({
         selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2,
-        selectedSongIndex
+        selectedSongIndex = this.props.selectedSongIndex
     }) {
         const { props,
                 state } = this
@@ -510,7 +510,7 @@ class App extends Component {
          * has double columns, or if in a logue. Check for new song if called
          * from portal.
          */
-        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(props, state, selectedSongIndex) : state.showSingleLyricColumn) || getIsLogue(props.selectedSongIndex, selectedSongIndex)) {
+        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(selectedSongIndex, state) : state.showSingleLyricColumn) || getIsLogue(props.selectedSongIndex, selectedSongIndex)) {
             return false
         }
 
@@ -654,7 +654,7 @@ class App extends Component {
             selectedSongIndex
         })
 
-        newState.showSingleLyricColumn = getShowSingleLyricColumn(props, this.state, selectedSongIndex)
+        newState.showSingleLyricColumn = getShowSingleLyricColumn(selectedSongIndex, this.state)
 
         this.interactivateVerse()
 
@@ -997,7 +997,7 @@ class App extends Component {
         newState.isCarouselExpandable = isCarouselExpandable
         newState.isHeightlessLyricColumn = isHeightlessLyricColumn
         newState.isHiddenNav = getIsHiddenNav(newState)
-        newState.showSingleLyricColumn = getShowSingleLyricColumn(this.props, newState)
+        newState.showSingleLyricColumn = getShowSingleLyricColumn(this.props.selectedSongIndex, newState)
         newState.showSingleBookColumn = getShowSingleBookColumn(newState)
         newState.shrinkNavIcon = getShrinkNavIcon(newState)
         newState.scoresTipsOutsideMenu = getScoresTipsOutsideMenu(newState)

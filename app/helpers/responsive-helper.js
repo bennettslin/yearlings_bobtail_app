@@ -110,8 +110,9 @@ export const getIsLyricExpandable = ({ deviceIndex }) => {
     return !getIsDesktop(deviceIndex)
 }
 
-export const getShowSingleLyricColumn = (props, state, nextSongIndex) => {
-    const selectedSong = getSongObject(props.selectedSongIndex, nextSongIndex),
+export const getShowSingleLyricColumn = (songIndex, state) => {
+
+    const selectedSong = getSongObject(songIndex),
         { hasSideStanzas,
           isDoublespeaker,
           forceSingleColumn } = selectedSong,

@@ -9,7 +9,7 @@ import { intersects } from './dot-helper'
 import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from './responsive-helper'
 
 export const shouldShowAnnotationForColumn = (props, state, annotation) => {
-    const showSingleLyricColumn = getShowSingleLyricColumn(props, state)
+    const showSingleLyricColumn = getShowSingleLyricColumn(props.selectedSongIndex, state)
 
     return !annotation.column ||
         !showSingleLyricColumn ||

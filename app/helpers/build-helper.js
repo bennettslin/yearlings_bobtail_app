@@ -669,6 +669,7 @@ const _prepareCard = (card, dotKeys, finalPassThrough) => {
             portalLinks } = card
 
     if (description) {
+        // This is the wiki key in the song data, *not* the dot key.
         const hasWiki = _parseWiki('wiki', description, finalPassThrough)
 
         if (hasWiki && !finalPassThrough) {
