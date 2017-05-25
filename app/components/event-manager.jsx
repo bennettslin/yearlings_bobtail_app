@@ -430,12 +430,16 @@ class EventManager extends Component {
          * ensure that it is not shown as text. Maybe bypass if done through
          * access?
          */
-        const { domProps } = this.props,
-            annotation = getAnnotationObject(domProps.selectedSongIndex, domProps.selectedAnnotationIndex, selectedAnnotationIndex),
-            isAnnotationEnabled = intersects(annotation.dotKeys, domProps.selectedDotKeys)
 
-        if (!isAnnotationEnabled) {
-            return false
+        const { domProps } = this.props
+
+        // If selecting an annotation, make sure that its dots intersect.
+        if (selectedAnnotationIndex) {
+            const annotation = getAnnotationObject(domProps.selectedSongIndex, selectedAnnotationIndex)
+
+            if (!intersects(annotation.dotKeys, domProps.selectedDotKeys)) {
+                return false
+            }
         }
 
         this.stopPropagation(e)

@@ -372,10 +372,14 @@ export const getTasks = (selectedSong, tasks) => {
 }
 
 export const getWikiUrl = (props) => {
-    const { selectedWikiIndex,
+    const { selectedSongIndex,
+            selectedWikiIndex,
+            selectedAnnotationIndex,
             carouselAnnotationIndex } = props
     if (selectedWikiIndex) {
-        const annotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex, carouselAnnotationIndex),
+        // Since annotation index is 1-based, it's invalid if 0.
+        const annotationIndex = carouselAnnotationIndex || selectedAnnotationIndex,
+            annotation = getAnnotationObject(selectedSongIndex, annotationIndex),
             partialPath = annotation.popupAnchors[selectedWikiIndex - 1]
 
         let fullPath
