@@ -34,6 +34,11 @@ export const getVerseObject = (songIndex, defaultVerseIndex, priorityVerseIndex)
     return _parseLyrics(lyrics, verseIndex)
 }
 
+export const getOverview = (songIndex) => {
+    const song = getSongObject(songIndex)
+    return song.overview
+}
+
 // TODO: Make it so that only one argument is needed.
 export const getIsLogue = (defaultSongIndex, prioritySongIndex) => {
     const { songs } = AlbumData,
@@ -50,19 +55,15 @@ export const getBookColumnIndex = (props, selectedSongIndex) => {
     return songIndex < bookStartingIndices[1] ? 1 : 2
 }
 
-export const getOverview = (props, nextSongIndex) => {
-    const song = getSongObject(props.selectedSongIndex, nextSongIndex)
-    return song.overview
-}
-
 export const getSongTimes = (props, nextSongIndex) => {
     const selectedSong = getSongObject(props.selectedSongIndex, nextSongIndex)
     return selectedSong.times || []
 }
 
 export const getSongTitle = (props, isLogue) => {
-    const songIndex = props.songIndex || props.selectedSongIndex,
-        song = props.song || props.songs[songIndex]
+    const { songs } = AlbumData,
+        songIndex = props.songIndex || props.selectedSongIndex,
+        song = props.song || songs[songIndex]
 
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
 }

@@ -111,7 +111,8 @@ class App extends Component {
     constructor(props) {
         super(props)
 
-        const isLogue = getIsLogue(props.selectedSongIndex)
+        const isLogue = getIsLogue(props.selectedSongIndex),
+            popupOverview = getOverview(props.selectedSongIndex)
 
         // Bind this to event handlers.
         this._bindEventHandlers()
@@ -124,8 +125,9 @@ class App extends Component {
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
 
             popupAnnotation: getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
-            popupLogueOverview: isLogue ? getOverview(props) : '',
-            popupSongOverview: isLogue ? '' : getOverview(props),
+
+            popupLogueOverview: isLogue ? popupOverview : '',
+            popupSongOverview: isLogue ? '' : popupOverview,
 
             selectedBookColumnIndex: getBookColumnIndex(props),
             isCarouselExpandable: false,
@@ -621,7 +623,7 @@ class App extends Component {
             isLogue = getIsLogue(selectedSongIndex),
 
             // Allow logue and song overviews to overlap for fade animation.
-            newOverview = getOverview(props, selectedSongIndex),
+            newOverview = getOverview(selectedSongIndex),
             newState = {}
 
         /**
