@@ -780,7 +780,7 @@ const _addSourcePortalLink = ({
 
         // Add data about portal.
         portalLink.songTitle = getSongTitle(_songIndex, _songs)
-        portalLink.verseObject = getVerseObject(_songIndex, verseIndex, undefined, _songs)
+        portalLink.verseObject = getVerseObject(_songIndex, verseIndex, _songs)
 
         // If first portal link, initialise array.
         if (!_tempStore._portalLinks[portalKey || portal]) {

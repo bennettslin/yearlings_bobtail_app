@@ -14,12 +14,8 @@ export const getAnnotationObject = (songIndex, annotationIndex) => {
     return annotations ? annotations[annotationIndex - 1] : null
 }
 
-// TODO: Make it so that only two arguments is needed.
-export const getVerseObject = (songIndex, defaultVerseIndex, priorityVerseIndex, songs) => {
-    const { lyrics } = getSongObject(songIndex, songs),
-        verseIndex = !isNaN(priorityVerseIndex) && priorityVerseIndex > -1 ?
-            priorityVerseIndex : defaultVerseIndex
-
+export const getVerseObject = (songIndex, verseIndex, songs = AlbumData.songs) => {
+    const { lyrics } = getSongObject(songIndex, songs)
     return _parseLyrics(lyrics, verseIndex)
 }
 

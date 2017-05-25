@@ -27,6 +27,7 @@ class DomManager extends Component {
               selectedAnnotationIndex,
               selectedTitleIndex,
               selectedWikiIndex,
+              selectedVerseIndex,
               sliderVerseIndex,
 
               accessedOn,
@@ -47,8 +48,9 @@ class DomManager extends Component {
             isDesktop = getIsDesktop(deviceIndex),
             isPhone = getIsPhone({ deviceIndex }),
 
-            selectedSongTitle = getSongTitle(props.selectedSongIndex),
-            selectedVerse = getVerseObject(props.selectedSongIndex, props.selectedVerseIndex, sliderVerseIndex),
+            selectedSongTitle = getSongTitle(selectedSongIndex),
+            shownVerseIndex = !isNaN(sliderVerseIndex) && sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
+            selectedVerse = getVerseObject(selectedSongIndex, shownVerseIndex),
 
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
                 showSingleLyricColumn,
