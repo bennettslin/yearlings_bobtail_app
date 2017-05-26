@@ -32,7 +32,6 @@ class DomManager extends Component {
 
               accessedOn,
 
-              mp3s,
               isPlaying,
               updatedTimePlayed,
 
@@ -65,7 +64,6 @@ class DomManager extends Component {
                 (!!selectedAnnotationIndex && isOverlaidAnnotation),
 
             audioPlayersProps = {
-                mp3s,
                 isPlaying,
                 selectedSongIndex,
                 updatedTimePlayed,

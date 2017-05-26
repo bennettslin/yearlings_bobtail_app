@@ -1,6 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import AudioPlayer from './audio-player'
+import AlbumData from '../../album-data'
+
+const { mp3s } = AlbumData
 
 /*************
  * CONTAINER *
@@ -10,10 +12,6 @@ const AudioPlayersSection = (props) => (
     <AudioPlayersSectionView {...props} />
 )
 
-AudioPlayersSection.propTypes = {
-    mp3s: PropTypes.array.isRequired
-}
-
 /****************
  * PRESENTATION *
  ****************/
@@ -21,7 +19,6 @@ AudioPlayersSection.propTypes = {
 const AudioPlayersSectionView = ({
 
     // From props.
-    mp3s,
 
 ...other }) => {
 
