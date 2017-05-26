@@ -48,6 +48,10 @@ const _getIsMini = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === MINI_WIDTH
 }
 
+const _getIsTablet = (deviceIndex) => {
+    return DEVICE_OBJECTS[deviceIndex].className === TABLET_WIDTH
+}
+
 const _getIsMonitor = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === MONITOR_WIDTH
 }
@@ -58,10 +62,8 @@ export const getIsDesktop = (deviceIndex) => {
     return deviceClassName === LAPTOP_WIDTH || deviceClassName === MONITOR_WIDTH
 }
 
-export const getShowSingleBookColumn = (state) => {
-    const { deviceIndex,
-            windowWidth } = state,
-        deviceObject = DEVICE_OBJECTS[deviceIndex],
+export const getShowSingleBookColumn = ({ deviceIndex, windowWidth }) => {
+    const deviceObject = DEVICE_OBJECTS[deviceIndex],
         deviceClassName = deviceObject.className
 
     if (deviceClassName === LAPTOP_WIDTH || deviceClassName === MINI_WIDTH || deviceClassName === PHONE_WIDTH) {
@@ -76,6 +78,7 @@ const _getShrinkNavIconForDeviceObject = (windowWidth, deviceObject) => {
     const { doubleColumnStaticBreakpoint,
             doubleColumnShrinkBreakpoint,
             singleColumnStaticBreakpoint } = deviceObject
+
     return windowWidth < singleColumnStaticBreakpoint ||
         ((doubleColumnShrinkBreakpoint && windowWidth >= doubleColumnShrinkBreakpoint) &&
         (doubleColumnStaticBreakpoint && windowWidth < doubleColumnStaticBreakpoint))
@@ -91,13 +94,9 @@ export const getShrinkNavIcon = (state) => {
     const { deviceIndex,
             windowWidth } = state,
         deviceObject = DEVICE_OBJECTS[deviceIndex],
-        deviceClassName = deviceObject.className
+        isPhoneOrMini = getIsPhone(deviceIndex) || _getIsMini(deviceIndex)
 
-    if (deviceClassName === PHONE_WIDTH || deviceClassName === MINI_WIDTH) {
-        return _getShrinkNavIconForDeviceObject(windowWidth, MINI_OBJECT)
-    } else {
-        return _getShrinkNavIconForDeviceObject(windowWidth, deviceObject)
-    }
+    return _getShrinkNavIconForDeviceObject(windowWidth, isPhoneOrMini ? MINI_OBJECT : deviceObject)
 }
 
 export const getIsCarouselExpandable = (deviceIndex) => {
@@ -140,9 +139,10 @@ export const getShowSingleLyricColumn = (songIndex, state) => {
 }
 
 export const getIsHiddenNav = (state) => {
-    const { windowHeight } = state
+    const { windowHeight,
+            deviceIndex } = state
 
-    return getIsPhone(state.deviceIndex) || windowHeight < HIDDEN_NAV_MIN
+    return getIsPhone(deviceIndex) || windowHeight < HIDDEN_NAV_MIN
 }
 
 export const getIsHeightlessLyricColumn = (state) => {
@@ -165,12 +165,15 @@ export const getIsHeightlessLyricColumn = (state) => {
 export const getScoresTipsOutsideMenu = (state) => {
     const { deviceIndex,
             windowWidth } = state,
+
         deviceObject = DEVICE_OBJECTS[deviceIndex]
 
-    if (deviceObject.className === PHONE_WIDTH) {
+    if (getIsPhone(deviceIndex)) {
         return true
-    } else if (deviceObject.className === TABLET_WIDTH) {
+
+    } else if (_getIsTablet(deviceIndex)) {
         return false
+
     } else {
         return _getScoresTipsOutsideMenuForDeviceObject(windowWidth, deviceObject)
     }
@@ -178,20 +181,18 @@ export const getScoresTipsOutsideMenu = (state) => {
 
 export const getTitleInAudio = (state) => {
     const { deviceIndex,
-            windowWidth } = state,
-        deviceClassName = DEVICE_OBJECTS[deviceIndex].className
+            windowWidth } = state
 
-    return deviceClassName === MINI_WIDTH && windowWidth < MINI_OBJECT.titleInAudioBreakpoint
+    return _getIsMini(deviceIndex) && windowWidth < MINI_OBJECT.titleInAudioBreakpoint
 }
 
 export const getLyricSectionRect = (state) => {
     const { deviceIndex,
             windowHeight,
             isLyricExpanded } = state,
-        deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
         bottom = windowHeight
 
-    if (deviceClassName === MONITOR_WIDTH || deviceClassName === LAPTOP_WIDTH) {
+    if (getIsDesktop(deviceIndex)) {
         /**
          * If monitor or laptop width, then lyric section rect is simply the
          * entire window height.
@@ -202,7 +203,7 @@ export const getLyricSectionRect = (state) => {
         }
 
     } else {
-        const isPhone = deviceClassName === PHONE_WIDTH,
+        const isPhone = getIsPhone(deviceIndex),
             menuHeight = isPhone ? MENU_PHONE_HEIGHT : MENU_HEIGHT,
             top = isLyricExpanded ? menuHeight : windowHeight * (1 - COLLAPSED_LYRIC_SECTION_HEIGHT)
 
@@ -232,9 +233,11 @@ export const getIsMobileWiki = (state) => {
 }
 
 export const getCarouselTopAlign = (state) => {
+    const { deviceIndex,
+            isLyricExpanded } = state
 
     // If in desktop or lyric column is expanded, set closer to top.
-    if (getIsDesktop(state.deviceIndex) || state.isLyricExpanded) {
+    if (getIsDesktop(deviceIndex) || isLyricExpanded) {
         return {
             top: 0.33
         }
@@ -246,7 +249,6 @@ export const getCarouselTopAlign = (state) => {
 }
 
 export const getCarouselLeftAlign = (state, index) => {
-
     const { deviceIndex } = state
 
     // If mobile, then set halfway, which is the default.
