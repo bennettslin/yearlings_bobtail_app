@@ -26,23 +26,21 @@ export const resizeWindow = (target = window) => {
     const newState = { windowHeight: target.innerHeight }
 
     let innerWidth = target.innerWidth,
-        index = 0
+        deviceIndex = 0
 
     if (typeof presentIndex === 'undefined') {
-        while (index < DEVICE_OBJECTS.length - 1 && innerWidth > DEVICE_OBJECTS[index].maxWidth) {
-            index++
+        while (deviceIndex < DEVICE_OBJECTS.length - 1 && innerWidth > DEVICE_OBJECTS[deviceIndex].maxWidth) {
+            deviceIndex++
         }
     }
 
-    // TODO: Nav section cannot be accessed if new device width is phone?
-
-    newState.deviceIndex = index
+    newState.deviceIndex = deviceIndex
     newState.windowWidth = innerWidth
 
     return newState
 }
 
-export const getIsPhone = ({ deviceIndex }) => {
+export const getIsPhone = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === PHONE_WIDTH
 }
 
@@ -103,7 +101,7 @@ export const getShrinkNavIcon = (state) => {
 }
 
 export const getIsCarouselExpandable = ({ deviceIndex }) => {
-    return !getIsPhone({ deviceIndex })
+    return !getIsPhone(deviceIndex)
 }
 
 export const getIsLyricExpandable = ({ deviceIndex }) => {
@@ -144,7 +142,7 @@ export const getShowSingleLyricColumn = (songIndex, state) => {
 export const getIsHiddenNav = (state) => {
     const { windowHeight } = state
 
-    return getIsPhone(state) || windowHeight < HIDDEN_NAV_MIN
+    return getIsPhone(state.deviceIndex) || windowHeight < HIDDEN_NAV_MIN
 }
 
 export const getIsHeightlessLyricColumn = (state) => {
@@ -218,7 +216,7 @@ export const getLyricSectionRect = (state) => {
 export const getIsMobileWiki = (state) => {
 
     // If phone or mini, show mobile wiki.
-    if (getIsPhone(state) || getIsMini(state)) {
+    if (getIsPhone(state.deviceIndex) || getIsMini(state)) {
         return true
 
     } else {

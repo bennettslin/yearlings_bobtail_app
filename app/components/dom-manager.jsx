@@ -46,7 +46,7 @@ class DomManager extends Component {
 
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             isDesktop = getIsDesktop(deviceIndex),
-            isPhone = getIsPhone({ deviceIndex }),
+            isPhone = getIsPhone(deviceIndex),
 
             selectedSongTitle = getSongTitle(selectedSongIndex),
             shownVerseIndex = !isNaN(sliderVerseIndex) && sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
