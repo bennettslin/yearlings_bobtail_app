@@ -45,7 +45,6 @@ const AudioSectionView = ({
     isPhone,
     selectedAdminIndex,
     isPlaying,
-    title,
     selectedAudioOptionIndex,
     selectedTitleIndex,
 
@@ -83,7 +82,6 @@ const AudioSectionView = ({
         titleProps = {
             selectedTitleIndex,
             titleInAudio,
-            title,
             handleTitleToggle
         }
 
@@ -112,7 +110,6 @@ AudioSectionView.propTypes = {
     selectedAdminIndex: PropTypes.number,
     selectedAudioOptionIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired,
 
     isPrologue: PropTypes.bool.isRequired,
     isFirstSong: PropTypes.bool.isRequired,

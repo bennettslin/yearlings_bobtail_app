@@ -12,7 +12,6 @@ const TitleToggle = (props) => (
 )
 
 TitleToggle.propTypes = {
-    title: PropTypes.string.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
     handleTitleToggle: PropTypes.func.isRequired
 }
@@ -24,7 +23,6 @@ TitleToggle.propTypes = {
 const TitleToggleView = ({
 
     // From props.
-    title,
     selectedTitleIndex,
     handleTitleToggle
 
@@ -36,7 +34,7 @@ const TitleToggleView = ({
                 isCustomSize={true}
                 accessKey={TITLE_TOGGLE_KEY}
                 handleClick={handleTitleToggle}
-                iconText={title + selectedTitleIndex}
+                iconText={selectedTitleIndex}
             />
         </div>
     </div>

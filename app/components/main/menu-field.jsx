@@ -13,7 +13,6 @@ const MenuField = (props) => (
 MenuField.propTypes = {
     titleInAudio: PropTypes.bool.isRequired,
     scoresTipsOutsideMenu: PropTypes.bool.isRequired,
-    title: PropTypes.string.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
     handleTitleToggle: PropTypes.func.isRequired,
     audioSectionChild: PropTypes.element.isRequired,
@@ -29,8 +28,6 @@ const MenuFieldView = ({
     // From props.
     titleInAudio,
     scoresTipsOutsideMenu,
-
-    title,
     selectedTitleIndex,
 
     handleTitleToggle,
@@ -41,7 +38,6 @@ const MenuFieldView = ({
 }) => {
 
     const titleToggleProps = {
-            title,
             selectedTitleIndex,
             handleTitleToggle
         }

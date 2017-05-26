@@ -57,7 +57,6 @@ const LiveView = ({
 
     isPhone,
     isDesktop,
-    scores,
     annotations,
     popupAnnotation,
     popupLogueOverview,
@@ -322,7 +321,6 @@ const LiveView = ({
             isHiddenNav,
             scoresTipsOutsideMenu,
 
-            scores,
             title,
 
             showSingleBookColumn,
@@ -378,7 +376,6 @@ const LiveView = ({
 
         scorePopupProps = {
             isPhone,
-            scores,
             selectedScoreIndex,
             selectedSongIndex,
             scoreSectionRef,

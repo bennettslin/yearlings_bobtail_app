@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import AlbumData from '../../album-data'
+
+const { scores } = AlbumData
+
 // import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 
 /*************
@@ -52,8 +56,6 @@ class ScoreSectionView extends Component {
     }
 
     render() {
-        const { scores } = this.props
-
         return (
             <div
                 ref={this.props.scoreSectionRef}
@@ -74,7 +76,6 @@ class ScoreSectionView extends Component {
 }
 
 ScoreSection.propTypes = {
-    scores: PropTypes.array.isRequired,
     scoreSectionRef: PropTypes.func.isRequired
 }
 

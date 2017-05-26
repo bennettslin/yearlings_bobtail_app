@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 
 import './less/main.less'
 import App from './components/app'
-import AlbumData from './album-data'
 
 // class Root extends Component {
 //     render() {
@@ -22,9 +21,7 @@ import AlbumData from './album-data'
  */
 export default class Wrapper extends Component {
     render() {
-        return (
-            <App {...AlbumData} />
-        )
+        return <App />
     }
 }
 
