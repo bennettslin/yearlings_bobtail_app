@@ -112,7 +112,6 @@ export const getAnnotationIndexForDirection = ({
 
                 // Or if this annotation isn't in the shown column...
                 !shouldShowAnnotationForColumn({
-                    songs: props.songs,
                     selectedSongIndex: props.selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex
                 }, state, selectedSong.annotations[returnIndex - 1])) &&
@@ -197,7 +196,6 @@ export const getAnnotationIndexForVerseIndex = ({
 
             const annotation = getAnnotationObject(props.selectedSongIndex, returnIndex),
                 showAnnotationForColumn = shouldShowAnnotationForColumn({
-                    songs: props.songs,
                     selectedSongIndex: props.selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex
                 }, state, annotation),

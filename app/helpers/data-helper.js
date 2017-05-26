@@ -28,6 +28,10 @@ export const getIsLogue = (songIndex, songs = AlbumData.songs) => {
     return songIndex === 0 || songIndex === songs.length - 1
 }
 
+export const getSongsLength = (songs = AlbumData.songs) => {
+    return songs.length
+}
+
 export const getBookColumnIndex = (songIndex) => {
     const { bookStartingIndices } = AlbumData
 

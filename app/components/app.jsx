@@ -29,13 +29,10 @@ import { SHOWN,
 
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
-import { getSongObject, getIsLogue, getAnnotationObject, getBookColumnIndex, getOverview, getSongTimes } from '../helpers/data-helper'
+import { getSongObject, getSongsLength, getIsLogue, getAnnotationObject, getBookColumnIndex, getOverview, getSongTimes } from '../helpers/data-helper'
 import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
-import AlbumData from '../album-data'
-
-const { songs } = AlbumData
 
 /*********
  * STORE *
@@ -311,7 +308,6 @@ class App extends Component {
         if (selectedAnnotationIndex) {
             const { selectedDotKeys } = props,
                 accessedPopupAnchorIndex = getPopupAnchorIndexForDirection({
-                    songs,
                     selectedSongIndex,
                     selectedAnnotationIndex,
                     selectedDotKeys
@@ -520,7 +516,6 @@ class App extends Component {
         const selectedAnnotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
             showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn({
 
-                    songs,
                     selectedSongIndex: props.selectedSongIndex,
                     selectedLyricColumnIndex
 
@@ -616,7 +611,7 @@ class App extends Component {
         if (direction) {
             selectedSongIndex = props.selectedSongIndex + direction
 
-            if (selectedSongIndex < 0 || selectedSongIndex >= songs.length) {
+            if (selectedSongIndex < 0 || selectedSongIndex >= getSongsLength()) {
                 return false
             }
         }
@@ -684,7 +679,6 @@ class App extends Component {
          */
         newState.accessedAnnotationIndex = getAnnotationIndexForDirection({
             props: {
-                songs,
                 selectedSongIndex,
                 selectedDotKeys: props.selectedDotKeys,
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
