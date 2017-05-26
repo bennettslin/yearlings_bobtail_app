@@ -1,7 +1,7 @@
 import React from 'react'
 import Shared from './shared'
 import DevSection from './dev/dev-section'
-import NavSection from '../nav/nav-section'
+import AdminNavSection from './admin-nav/admin-nav-section'
 import ProgressHelper from '../../helpers/progress-helper'
 
 /*************
@@ -42,8 +42,6 @@ const OverallView = ({
     selectedNavIndex,
     selectedDotsIndex,
     showSingleLyricColumn,
-    accessedOn,
-    accessedSongIndex,
 
     handleNavSongSelect,
 
@@ -66,13 +64,10 @@ const OverallView = ({
                     selectedDotsIndex={selectedDotsIndex}
                     showSingleLyricColumn={showSingleLyricColumn}
                 />
-                <NavSection
-                    selectedAdminIndex={true}
+                <AdminNavSection
                     songs={songs}
                     allTasks={allTasks}
                     selectedSongIndex={selectedSongIndex}
-                    accessedOn={accessedOn}
-                    accessedSongIndex={accessedSongIndex}
                     handleNavSongSelect={handleNavSongSelect}
                 />
             </div>
@@ -80,7 +75,6 @@ const OverallView = ({
                 songs={songs}
                 selectedSongIndex={selectedSongIndex}
                 selectedVerseIndex={selectedVerseIndex}
-                accessedOn={accessedOn}
                 showSingleLyricColumn={showSingleLyricColumn}
             />
         </div>
