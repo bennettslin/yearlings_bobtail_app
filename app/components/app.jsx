@@ -473,7 +473,7 @@ class App extends Component {
          * We should ignore this call if lyric is not expandable, or if it's a
          * logue. However, allow nav to override this exception.
          */
-        if (!overrideException && (!getIsLyricExpandable(this.state) || getIsLogue(this.props.selectedSongIndex))) {
+        if (!overrideException && (!getIsLyricExpandable(this.state.deviceIndex) || getIsLogue(this.props.selectedSongIndex))) {
             return false
         }
 
@@ -990,7 +990,7 @@ class App extends Component {
 
     _windowResize(e) {
         const newState = resizeWindow(e ? e.target : undefined),
-            isCarouselExpandable = getIsCarouselExpandable(newState),
+            isCarouselExpandable = getIsCarouselExpandable(newState.deviceIndex),
             isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState),
             selectedSong = getSongObject(this.props.selectedSongIndex)
 

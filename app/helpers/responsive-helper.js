@@ -44,11 +44,11 @@ export const getIsPhone = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === PHONE_WIDTH
 }
 
-export const getIsMini = ({ deviceIndex }) => {
+const _getIsMini = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === MINI_WIDTH
 }
 
-export const getIsMonitor = ({ deviceIndex }) => {
+const _getIsMonitor = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === MONITOR_WIDTH
 }
 
@@ -100,11 +100,11 @@ export const getShrinkNavIcon = (state) => {
     }
 }
 
-export const getIsCarouselExpandable = ({ deviceIndex }) => {
+export const getIsCarouselExpandable = (deviceIndex) => {
     return !getIsPhone(deviceIndex)
 }
 
-export const getIsLyricExpandable = ({ deviceIndex }) => {
+export const getIsLyricExpandable = (deviceIndex) => {
     return !getIsDesktop(deviceIndex)
 }
 
@@ -147,9 +147,10 @@ export const getIsHiddenNav = (state) => {
 
 export const getIsHeightlessLyricColumn = (state) => {
     const { windowWidth,
-            windowHeight } = state
+            windowHeight,
+            deviceIndex } = state
 
-    return getIsLyricExpandable(state) &&
+    return getIsLyricExpandable(deviceIndex) &&
 
         // It is never heightless when above the max...
         windowHeight < HEIGHTLESS_LYRIC_MAX &&
@@ -214,16 +215,17 @@ export const getLyricSectionRect = (state) => {
 }
 
 export const getIsMobileWiki = (state) => {
+    const { deviceIndex } = state
 
     // If phone or mini, show mobile wiki.
-    if (getIsPhone(state.deviceIndex) || getIsMini(state)) {
+    if (getIsPhone(deviceIndex) || _getIsMini(deviceIndex)) {
         return true
 
     } else {
         const { windowWidth } = state,
 
-        // Wikipedia in mobile seems to max out at 892px.
-        isMobileWiki = windowWidth - WIKI_SIDE_PADDING_TOTAL < 892
+            // Wikipedia in mobile seems to max out at 892px.
+            isMobileWiki = windowWidth - WIKI_SIDE_PADDING_TOTAL < 892
 
         return isMobileWiki
     }
@@ -245,12 +247,15 @@ export const getCarouselTopAlign = (state) => {
 
 export const getCarouselLeftAlign = (state, index) => {
 
+    const { deviceIndex } = state
+
     // If mobile, then set halfway, which is the default.
-    if (!getIsDesktop(state.deviceIndex)) {
+    if (!getIsDesktop(deviceIndex)) {
         return null
 
     } else {
-        const lyricColumnWidth = getIsMonitor(state) ? GOLDEN_CORD_WIDTH : UNCANNY_VALLEY_WIDTH,
+        const lyricColumnWidth = _getIsMonitor(deviceIndex) ?
+                GOLDEN_CORD_WIDTH : UNCANNY_VALLEY_WIDTH,
             centreFieldWidth = state.windowWidth - lyricColumnWidth,
             left = (centreFieldWidth * 0.5) / state.windowWidth,
 

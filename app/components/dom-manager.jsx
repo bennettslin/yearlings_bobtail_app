@@ -57,7 +57,7 @@ class DomManager extends Component {
                 selectedLyricColumnIndex
             }),
 
-            isLyricExpandable = getIsLyricExpandable(props),
+            isLyricExpandable = getIsLyricExpandable(deviceIndex),
             isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
 
             isOverlaidAnnotation = !isDesktop && (isLyricExpanded || isPhone),
