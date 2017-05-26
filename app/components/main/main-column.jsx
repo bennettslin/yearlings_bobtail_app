@@ -31,9 +31,7 @@ const MainColumnView = ({
     isHiddenNav,
     scoresTipsOutsideMenu,
 
-    songs,
     title,
-    bookStartingIndices,
     showSingleBookColumn,
     shrinkNavIcon,
 
@@ -85,8 +83,6 @@ const MainColumnView = ({
             dotsSectionChild
         },
         navSectionProps = {
-            songs,
-            bookStartingIndices,
             showSingleBookColumn,
             shrinkNavIcon,
             selectedSongIndex,

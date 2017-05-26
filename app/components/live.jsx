@@ -57,7 +57,6 @@ const LiveView = ({
 
     isPhone,
     isDesktop,
-    bookStartingIndices,
     scores,
     songs,
     annotations,
@@ -326,9 +325,8 @@ const LiveView = ({
             scoresTipsOutsideMenu,
 
             scores,
-            songs,
             title,
-            bookStartingIndices,
+
             showSingleBookColumn,
             shrinkNavIcon,
 
