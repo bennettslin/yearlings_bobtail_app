@@ -63,12 +63,12 @@ export const getIsDesktop = (deviceIndex) => {
 }
 
 export const getShowSingleBookColumn = ({ deviceIndex, windowWidth }) => {
-    const deviceObject = DEVICE_OBJECTS[deviceIndex],
-        deviceClassName = deviceObject.className
+    const deviceObject = DEVICE_OBJECTS[deviceIndex]
 
-    if (deviceClassName === LAPTOP_WIDTH || deviceClassName === MINI_WIDTH || deviceClassName === PHONE_WIDTH) {
+    if (!_getIsMonitor(deviceIndex) && !_getIsTablet(deviceIndex)) {
         // Value for phone doesn't matter. Just keeps it from breaking.
         return true
+
     } else {
         return windowWidth < deviceObject.doubleColumnShrinkBreakpoint
     }
@@ -90,10 +90,8 @@ const _getScoresTipsOutsideMenuForDeviceObject = (windowWidth, deviceObject) => 
 }
 
 
-export const getShrinkNavIcon = (state) => {
-    const { deviceIndex,
-            windowWidth } = state,
-        deviceObject = DEVICE_OBJECTS[deviceIndex],
+export const getShrinkNavIcon = ({ deviceIndex, windowWidth }) => {
+    const deviceObject = DEVICE_OBJECTS[deviceIndex],
         isPhoneOrMini = getIsPhone(deviceIndex) || _getIsMini(deviceIndex)
 
     return _getShrinkNavIconForDeviceObject(windowWidth, isPhoneOrMini ? MINI_OBJECT : deviceObject)
