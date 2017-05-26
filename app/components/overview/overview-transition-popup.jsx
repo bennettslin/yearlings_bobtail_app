@@ -15,7 +15,8 @@ const OverviewTransitionPopup = ({
 
     const { isLogue,
             inOverviewSubfield,
-            selectedOverviewIndex } = other,
+            selectedOverviewIndex,
+            selectedTitleIndex } = other,
 
         myChild = (
             <OverviewSection {...other} />
@@ -27,6 +28,11 @@ const OverviewTransitionPopup = ({
         isVisible = !inOverviewSubfield
     } else {
         isVisible = selectedOverviewIndex ? false : inOverviewSubfield
+    }
+
+    // Always hide overview when title is selected.
+    if (selectedTitleIndex) {
+        isVisible = false
     }
 
     return (
@@ -43,6 +49,7 @@ OverviewTransitionPopup.propTypes = {
     isLogue: PropTypes.bool.isRequired,
     inOverviewSubfield: PropTypes.bool.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
 }

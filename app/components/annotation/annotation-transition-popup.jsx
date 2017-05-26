@@ -12,6 +12,7 @@ const AnnotationTransitionPopup = ({
     selectedAnnotationIndex,
     selectedCarouselIndex,
     selectedScoreIndex,
+    selectedTitleIndex,
     selectedWikiIndex,
     handleAnnotationPrevious,
     handleAnnotationNext,
@@ -22,6 +23,7 @@ const AnnotationTransitionPopup = ({
     const isVisible = !!selectedAnnotationIndex &&
                       !selectedCarouselIndex &&
                       !selectedScoreIndex &&
+                      !selectedTitleIndex &&
                       !selectedWikiIndex,
         myChild = (
             <AnnotationSection {...other} />
@@ -44,6 +46,7 @@ AnnotationTransitionPopup.propTypes = {
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
     selectedWikiIndex: PropTypes.number.isRequired,
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired,

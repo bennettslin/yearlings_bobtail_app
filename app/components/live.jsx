@@ -172,6 +172,7 @@ const LiveView = ({
             selectedAnnotationIndex,
             selectedCarouselIndex,
             selectedScoreIndex,
+            selectedTitleIndex,
             selectedWikiIndex,
             accessedPopupAnchorIndex,
             handleAnnotationPrevious,
@@ -359,6 +360,7 @@ const LiveView = ({
             isPhone,
             isLogue,
             selectedOverviewIndex,
+            selectedTitleIndex,
             handlePopupContainerClick,
 
             // For toggle in popup in phone.
