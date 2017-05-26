@@ -5,32 +5,18 @@ import DrawingsSection from './drawings/drawings-section'
  * CONTAINER *
  *************/
 
-const Drawing = (props) => {
-
-    return (
-        <DrawingView {...props}
-        />
-    )
-}
+const Drawing = (props) => (
+    <DrawingView {...props} />
+)
 
 /****************
  * PRESENTATION *
  ****************/
 
-const DrawingView = ({
-
-    // From props.
-    drawings
-
-    // From controller.
-
-
-}) => (
+const DrawingView = () => (
     <div className="admin-column">
         <div className="admin-field drawing-admin-field">
-            <DrawingsSection
-                drawings={drawings}
-            />
+            <DrawingsSection />
         </div>
     </div>
 )

@@ -3,6 +3,8 @@ import Shared from './shared'
 import DevSection from './dev/dev-section'
 import AdminNavSection from './admin-nav/admin-nav-section'
 import ProgressHelper from '../../helpers/progress-helper'
+import AlbumData from '../../album-data'
+const { songs } = AlbumData
 
 /*************
  * CONTAINER *
@@ -10,7 +12,6 @@ import ProgressHelper from '../../helpers/progress-helper'
 
 const Overall = ({
 
-    songs,
     tasks: albumTasks,
 
 ...other }) => {
@@ -18,7 +19,6 @@ const Overall = ({
 
     return (
         <OverallView {...other}
-            songs={songs}
             albumTasks={albumTasks}
             allTasks={allTasks}
         />
@@ -35,7 +35,6 @@ const OverallView = ({
     deviceIndex,
     windowWidth,
     windowHeight,
-    songs,
     selectedScoreIndex,
     selectedSongIndex,
     selectedVerseIndex,
@@ -65,14 +64,12 @@ const OverallView = ({
                     showSingleLyricColumn={showSingleLyricColumn}
                 />
                 <AdminNavSection
-                    songs={songs}
                     allTasks={allTasks}
                     selectedSongIndex={selectedSongIndex}
                     handleNavSongSelect={handleNavSongSelect}
                 />
             </div>
             <Shared {...other}
-                songs={songs}
                 selectedSongIndex={selectedSongIndex}
                 selectedVerseIndex={selectedVerseIndex}
                 showSingleLyricColumn={showSingleLyricColumn}

@@ -35,7 +35,8 @@ const _tempStore = {
     _dotStanzaCounter: 0,
 }
 
-export const prepareAlbumData = (album = {}) => {
+export const prepareAlbumData = (album) => {
+
     _tempStore._songs = album.songs
 
     _initialPrepareAllSongs(album)
@@ -49,8 +50,6 @@ export const prepareAlbumData = (album = {}) => {
 
     // FIXME: Temporarily add portal links to album for debugging purposes.
     // album.portalLinks = _tempStore._portalLinks
-
-    console.error('Cool, album data prepared!');
 
     return album
 }

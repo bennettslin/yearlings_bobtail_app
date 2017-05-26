@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import AdminNavItem from './admin-nav-item'
 import ProgressFooter from '../progress/progress-footer'
 import ProgressHelper from '../../../helpers/progress-helper'
+import AlbumData from '../../../album-data'
+const { songs } = AlbumData
 
 /*************
  * CONTAINER *
@@ -10,7 +12,6 @@ import ProgressHelper from '../../../helpers/progress-helper'
 
 const AdminNavSection = ({
 
-    songs = [],
     allTasks,
 
 ...other }) => {
@@ -20,7 +21,6 @@ const AdminNavSection = ({
 
     return (
         <AdminNavSectionView {...other}
-            songs={songs}
             sumAllTasks={sumAllTasks}
             maxTotalNeededHours={maxTotalNeededHours}
         />
@@ -28,7 +28,6 @@ const AdminNavSection = ({
 }
 
 AdminNavSection.propTypes = {
-    songs: PropTypes.array.isRequired,
     allTasks: PropTypes.array
 }
 
@@ -39,7 +38,6 @@ AdminNavSection.propTypes = {
 const AdminNavSectionView = ({
 
     // From props.
-    songs,
     selectedSongIndex,
     handleNavSongSelect,
 
@@ -85,7 +83,6 @@ const AdminNavSectionView = ({
 }
 
 AdminNavSectionView.propTypes = {
-    songs: PropTypes.array.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     handleNavSongSelect: PropTypes.func.isRequired,
     sumAllTasks: PropTypes.object.isRequired,
