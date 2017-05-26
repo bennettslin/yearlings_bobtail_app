@@ -8,12 +8,22 @@ import { getSongObject, getIsLogue, getAnnotationObject, getVerseObject } from '
 import { intersects } from './dot-helper'
 import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from './responsive-helper'
 
-export const shouldShowAnnotationForColumn = (props, state, annotation) => {
-    const showSingleLyricColumn = getShowSingleLyricColumn(props.selectedSongIndex, state)
+export const shouldShowAnnotationForColumn = ({
+    selectedSongIndex,
+    selectedLyricColumnIndex,
+    annotationIndex,
+    state
+}) => {
+    const showSingleLyricColumn = getShowSingleLyricColumn(selectedSongIndex, state),
+        annotation = getAnnotationObject(selectedSongIndex, annotationIndex)
 
+    /**
+     * Show annotation if no column is given, both columns are shown, or it's
+     * the shown column.
+     */
     return !annotation.column ||
         !showSingleLyricColumn ||
-        annotation.column === LYRIC_COLUMN_KEYS[props.selectedLyricColumnIndex]
+        annotation.column === LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
 }
 
 export const getAnnotationIndexForDirection = ({
@@ -113,8 +123,10 @@ export const getAnnotationIndexForDirection = ({
                 // Or if this annotation isn't in the shown column...
                 !shouldShowAnnotationForColumn({
                     selectedSongIndex: props.selectedSongIndex,
-                    selectedLyricColumnIndex: lyricColumnIndex
-                }, state, selectedSong.annotations[returnIndex - 1])) &&
+                    selectedLyricColumnIndex: lyricColumnIndex,
+                    annotationIndex: returnIndex,
+                    state
+                })) &&
 
                 // And if modulo...
                 (useModulo ?
@@ -197,8 +209,10 @@ export const getAnnotationIndexForVerseIndex = ({
             const annotation = getAnnotationObject(props.selectedSongIndex, returnIndex),
                 showAnnotationForColumn = shouldShowAnnotationForColumn({
                     selectedSongIndex: props.selectedSongIndex,
-                    selectedLyricColumnIndex: lyricColumnIndex
-                }, state, annotation),
+                    selectedLyricColumnIndex: lyricColumnIndex,
+                    annotationIndex: returnIndex,
+                    state
+                }),
                 doesIntersect = intersects(annotation.dotKeys, props.selectedDotKeys)
 
             /**

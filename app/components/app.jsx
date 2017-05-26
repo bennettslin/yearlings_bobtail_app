@@ -513,17 +513,10 @@ class App extends Component {
         }
 
         // Deselect selected annotation if not in new selected column.
-        const selectedAnnotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
-            showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn({
-
-                    selectedSongIndex: props.selectedSongIndex,
-                    selectedLyricColumnIndex
-
-                }, state, selectedAnnotation)
-
-        if (selectedAnnotation && !showAnnotationForColumn) {
-            this.selectAnnotation({})
-        }
+        this._deselectAnnotationIfSelected({
+            selectedSongIndex,
+            selectedLyricColumnIndex
+        })
 
         props.selectLyricColumnIndex(selectedLyricColumnIndex)
 
@@ -984,11 +977,31 @@ class App extends Component {
         this.props.selectTimePlayed(selectedTimePlayed)
     }
 
+    _deselectAnnotationIfSelected({
+        selectedSongIndex = this.props.selectedSongIndex,
+        selectedLyricColumnIndex = this.props.selectedLyricColumnIndex,
+        annotationIndex = this.props.selectedAnnotationIndex,
+        state = this.state
+    }) {
+        if (annotationIndex) {
+            const showAnnotationForColumn = shouldShowAnnotationForColumn({
+                    selectedSongIndex,
+                    selectedLyricColumnIndex,
+                    annotationIndex,
+                    state
+                })
+            if (!showAnnotationForColumn) {
+                this.selectAnnotation({})
+            }
+        }
+    }
+
     _windowResize(e) {
-        const newState = resizeWindow(e ? e.target : undefined),
+        const { selectedSongIndex } = this.props,
+            newState = resizeWindow(e ? e.target : undefined),
             isCarouselExpandable = getIsCarouselExpandable(newState.deviceIndex),
             isHeightlessLyricColumn = getIsHeightlessLyricColumn(newState),
-            selectedSong = getSongObject(this.props.selectedSongIndex)
+            selectedSong = getSongObject(selectedSongIndex)
 
         newState.isCarouselExpandable = isCarouselExpandable
         newState.isHeightlessLyricColumn = isHeightlessLyricColumn
@@ -1009,13 +1022,9 @@ class App extends Component {
 
         // Deselect selected annotation if not in new shown column.
         if (selectedSong.doubleColumns && newState.showSingleLyricColumn && !this.state.showSingleLyricColumn) {
-            const { props } = this,
-                selectedAnnotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
-                showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn(props, newState, selectedAnnotation)
-
-            if (selectedAnnotation && !showAnnotationForColumn) {
-                this.selectAnnotation({})
-            }
+            this._deselectAnnotationIfSelected({
+                state: newState
+            })
         }
 
         this.setState(newState)

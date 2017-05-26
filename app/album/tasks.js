@@ -1,10 +1,4 @@
 module.exports = [
-
-    {
-        taskName: `Annotation card should not need to get portal links data`,
-        workedHours: 0,
-        neededHours: 2
-    },
     {
         taskName: `get logue status from song itself?`,
         workedHours: 0,
@@ -1965,4 +1959,14 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Annotation card should not need to get portal links data`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Get album data from import.`,
+        workedHours: 3,
+        neededHours: 3
+    }
 ]
