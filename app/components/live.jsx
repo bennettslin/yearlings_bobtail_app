@@ -58,7 +58,6 @@ const LiveView = ({
     isPhone,
     isDesktop,
     scores,
-    songs,
     annotations,
     popupAnnotation,
     popupLogueOverview,
@@ -193,7 +192,6 @@ const LiveView = ({
         ),
         audioBannerProps = {
             isLogue,
-            songs,
             selectedVerseIndex,
             interactivatedVerseIndex,
             selectedSongIndex,

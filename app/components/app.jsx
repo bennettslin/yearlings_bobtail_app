@@ -33,6 +33,9 @@ import { getSongObject, getIsLogue, getAnnotationObject, getBookColumnIndex, get
 import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
+import AlbumData from '../album-data'
+
+const { songs } = AlbumData
 
 /*********
  * STORE *
@@ -306,8 +309,7 @@ class App extends Component {
 
         // Keep accessed index, even if annotation is deselected.
         if (selectedAnnotationIndex) {
-            const { songs,
-                    selectedDotKeys } = props,
+            const { selectedDotKeys } = props,
                 accessedPopupAnchorIndex = getPopupAnchorIndexForDirection({
                     songs,
                     selectedSongIndex,
@@ -518,7 +520,7 @@ class App extends Component {
         const selectedAnnotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
             showAnnotationForColumn = selectedAnnotation && shouldShowAnnotationForColumn({
 
-                    songs: props.songs,
+                    songs,
                     selectedSongIndex: props.selectedSongIndex,
                     selectedLyricColumnIndex
 
@@ -614,7 +616,7 @@ class App extends Component {
         if (direction) {
             selectedSongIndex = props.selectedSongIndex + direction
 
-            if (selectedSongIndex < 0 || selectedSongIndex >= props.songs.length) {
+            if (selectedSongIndex < 0 || selectedSongIndex >= songs.length) {
                 return false
             }
         }
@@ -682,8 +684,8 @@ class App extends Component {
          */
         newState.accessedAnnotationIndex = getAnnotationIndexForDirection({
             props: {
+                songs,
                 selectedSongIndex,
-                songs: props.songs,
                 selectedDotKeys: props.selectedDotKeys,
                 selectedLyricColumnIndex: props.selectedLyricColumnIndex
             },

@@ -11,7 +11,6 @@ const AudioBanner = (props) => (
 )
 
 AudioBanner.propTypes = {
-    songs: PropTypes.array.isRequired,
     selectedSongTitle: PropTypes.string.isRequired,
     isLogue: PropTypes.bool.isRequired,
     sliderMousedOrTouched: PropTypes.bool.isRequired,
@@ -37,7 +36,6 @@ const AudioBannerView = ({
 
     // From props.
     isLogue,
-    songs,
     selectedSongIndex,
     interactivatedVerseIndex,
     selectedVerseIndex,
@@ -59,7 +57,6 @@ const AudioBannerView = ({
         <AudioSlider
             isLogue={isLogue}
             isMousedOrTouched={sliderMousedOrTouched}
-            songs={songs}
             selectedSongIndex={selectedSongIndex}
             interactivatedVerseIndex={interactivatedVerseIndex}
             selectedVerseIndex={selectedVerseIndex}

@@ -27,6 +27,7 @@ const NavBookView = ({
     endArrayIndex,
 
 ...other }) => (
+
     <div className={classnames(
         isNavToggle ? 'nav-toggle-book' : 'nav-book',
         { 'toggle': isToggle,
