@@ -701,7 +701,7 @@ module.exports = {
         [
             {
                 time: 67,
-                // TODO: Portal: Reference to insect in jar in Vegan Proclamation?
+                // CONSIDER: Portal: Reference to insect in jar in Vegan Proclamation?
                 left: `could some bottled butterfly`,
                 right: [
                     `would the`,
@@ -871,7 +871,7 @@ module.exports = {
                 right: [
                     `a casket tilted back where its`,
                     {
-                        // TODO: portal: Hope chest in M?
+                        // CONSIDER: portal: Hope chest in M?
                         anchor: `hopeless rests.`,
                         annotation: {
                             description: `Hope was all that remained in the box opened by Pandora. By contrast, upon having all the hard truths of the world revealed to me by Sasha, all I had left was my own hopeless state.`,
@@ -1015,7 +1015,7 @@ module.exports = {
                 right: [
                     {
                         anchor: `impart warmth`,
-                        // TODO: Portal Foreshadow M?
+                        // CONSIDER: Portal Foreshadow M?
                         annotation: {
                             description: `Cellophane is thin and see-through like gauze, but has the additional property of sealing in heat where heat is present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her tenderest feelings were strictly reserved for those who could show tenderness in return.`,
                             dotKeys: {
@@ -1084,7 +1084,7 @@ module.exports = {
                     anchor: `shivering for shivs unsheathed.`,
                     annotation: [
                         {
-                            // TODO: Portal Kyon for shank?
+                            // CONSIDER: Portal Kyon for shank?
                             description: [
                                 `A`,
                                 {
@@ -1282,7 +1282,7 @@ module.exports = {
                 left: [
                     `But for a`,
                     {
-                        // TODO: Portal to Ash Wednesday?
+                        // CONSIDER: Portal to Ash Wednesday?
                         anchor: `foetus force-fed,`,
                         annotation: {
                             description: `Most maddening of all was that one has no say in being brought into this world, given how distressing the knowledge of one's mortality must always be.`,
@@ -1383,7 +1383,7 @@ module.exports = {
                         }
                     }
                 ],
-                // TODO: Portal: Nora Barnacle in Good Night, Sita?
+                // CONSIDER: Portal: Nora Barnacle in Good Night, Sita?
                 right: `can reach urchins smashed from undertows…`
             },
             {
