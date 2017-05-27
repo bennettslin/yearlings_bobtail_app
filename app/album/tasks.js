@@ -1,4 +1,11 @@
 module.exports = [
+
+    {
+        taskName: `Show selected annotation in carousel on load.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     {
         taskName: `get logue status from song itself?`,
         workedHours: 0,

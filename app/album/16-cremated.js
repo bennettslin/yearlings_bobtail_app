@@ -791,14 +791,18 @@ module.exports = {
                         anchor: `"Bless her,`,
                         annotation: {
                             description: [
-                                ` Mark Medoff's play`,
+                                `The title of Mark Medoff's play`,
                                 {
                                     italic: {
                                         anchor: `Children of a Lesser God,`,
                                         wiki: `Children_of_a_Lesser_God_(play)`
                                     }
                                 },
-                                `which centres on a deaf woman, seems to suggest in its title that being disabled is tantamount to living in a world created by an inferior deity. As a child, `
+                                `which centres on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I understood it differently as a child. Given the autism that ran in my family's genes, combined with our foreign manner of worship, I assumed it to mean that the disabled`,
+                                {
+                                    emphasis: `themselves`
+                                },
+                                `are the lesser creations.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -819,9 +823,8 @@ module.exports = {
                                 }
                             },
                             {
-                                // TODO: Split this between this one and previous?
                                 description: [
-                                    `As a child, I was embarrassed to be seen with my autistic brother during his public outbursts, a feeling that was compounded by the strangeness of my family's Buddhism and its obvious correlation with looking a shade darker than everyone else in Sasha's world. My inferiority complex thus failed to distinguish between having faulty genes, being of a faulty race, and following a faulty faith. They all seemed to derive from the same congenital defect at the core of my being.`
+                                    `The insecurities I felt about being Buddhist were compounded by its obvious correlation with looking a shade darker than everyone else in Sasha's world. My inferiority complex thus failed to distinguish between having faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
