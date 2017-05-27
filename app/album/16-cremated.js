@@ -798,11 +798,11 @@ module.exports = {
                                         wiki: `Children_of_a_Lesser_God_(play)`
                                     }
                                 },
-                                `which centres on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I understood it differently as a child. Given the autism that ran in my family's genes, combined with our foreign manner of worship, I assumed it to mean that the disabled`,
+                                `which centres on a deaf woman, suggests that being disabled is like living in a world created by an inferior deity. But I interpreted it differently as a child. Given the autism that ran in my family's genes, combined with our foreign manner of worship, I assumed that the disabled`,
                                 {
                                     emphasis: `themselves`
                                 },
-                                `are the lesser creations.`
+                                `must be the lesser creations.`
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true
@@ -824,7 +824,7 @@ module.exports = {
                             },
                             {
                                 description: [
-                                    `The insecurities I felt about being Buddhist were compounded by its obvious correlation with looking a shade darker than everyone else in Sasha's world. My inferiority complex thus failed to distinguish between having faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`
+                                    `The insecurities I felt about my family's Buddhism were compounded by its obvious correlation with our having a different complexion from everyone else in Sasha's world. My inferiority complex thus failed to distinguish between having faulty genes, following a faulty faith, and being of a faulty race. They all seemed to derive from a single congenital defect at the core of my being.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true

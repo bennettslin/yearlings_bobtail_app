@@ -15,7 +15,6 @@ import { REFRAIN,
          REFERENCE,
          DOT_STANZA_CONSTANT } from '../helpers/constants'
 
-// TODO: Missing portal for Look Back in Anger. Is it "bell"?
 module.exports = {
     /**
      * All of these scenes repeat twice.
@@ -1115,9 +1114,15 @@ module.exports = {
             {
                 time: 183,
                 lyric: [
-                    `Then you wake by a`,
+                    `Then you`,
                     {
-                        anchor: `bell with a ring.`,
+                        anchor: `wake by a bell`,
+                        annotation: {
+                            portal: `belle`
+                        }
+                    },
+                    {
+                        anchor: `with a ring.`,
                         annotation: [
                             {
                                 description: `Having dozed off, I am roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting room.`,

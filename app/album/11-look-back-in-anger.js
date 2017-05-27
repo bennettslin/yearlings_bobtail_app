@@ -232,19 +232,24 @@ module.exports = {
                     {
                         anchor: `Van Nuys belles`,
                         properNoun: true,
-                        annotation: {
-                            description: [
-                                `I went to high school in`,
-                                {
-                                    anchor: `Van Nuys,`,
-                                    wiki: `Van_Nuys`
-                                },
-                                `a neighbourhood smack-dab in the middle of the San Fernando Valley.`
-                            ],
-                            dotKeys: {
-                                [BACKSTORY]: true
+                        annotation: [
+                            {
+                                description: [
+                                    `I went to high school in`,
+                                    {
+                                        anchor: `Van Nuys,`,
+                                        wiki: `Van_Nuys`
+                                    },
+                                    `a neighbourhood smack-dab in the middle of the San Fernando Valley.`
+                                ],
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            },
+                            {
+                                portal: `belle`
                             }
-                        }
+                        ]
                     },
                     {
                         anchor: `lunched soundless`,
