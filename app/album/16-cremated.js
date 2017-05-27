@@ -798,7 +798,7 @@ module.exports = {
                                         wiki: `Children_of_a_Lesser_God_(play)`
                                     }
                                 },
-                                `which centres on a deaf woman, seems to suggest in its title that being disabled is tantamount to living in a world created by an inferior deity.`
+                                `which centres on a deaf woman, seems to suggest in its title that being disabled is tantamount to living in a world created by an inferior deity. As a child, `
                             ],
                             dotKeys: {
                                 [OBSERVATION]: true

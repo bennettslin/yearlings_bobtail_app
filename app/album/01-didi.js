@@ -392,7 +392,7 @@ module.exports = {
                     {
                         anchor: `sheriff's badge and gun…`,
                         annotation: {
-                            description: `After China stripped Taiwan of international recognition, a bootleg industry emerged to serve a generation of Taiwanese teenagers like my mother who prized all things labelled American. My sister and I thus grew up listening to her country records and watching old Westerns.`,
+                            description: `After China stripped Taiwan of international recognition, a bootleg industry emerged to serve a generation of Taiwanese teenagers like my mother who prized all things deemed American. My sister and I thus grew up listening to her country records and watching old Westerns.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [REFERENCE]: true
