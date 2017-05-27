@@ -67,7 +67,6 @@ const AdminNavSectionView = ({
                     return (
                         <AdminNavItem {...navItemProps}
                             key={index}
-                            song={song}
                             index={index}
                         />
                     )

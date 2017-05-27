@@ -1,8 +1,6 @@
 import React from 'react'
 import AudioPlayer from './audio-player'
-import AlbumData from '../../album-data'
-
-const { mp3s } = AlbumData
+import { getMp3s } from '../../helpers/data-helper'
 
 /*************
  * CONTAINER *
@@ -21,6 +19,8 @@ const AudioPlayersSectionView = ({
     // From props.
 
 ...other }) => {
+
+    const mp3s = getMp3s()
 
     return (
         <div className="audio-players-section">

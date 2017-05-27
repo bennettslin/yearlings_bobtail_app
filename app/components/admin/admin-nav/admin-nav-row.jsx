@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import ProgressBar from '../progress/progress-bar'
 import ProgressHelper from '../../../helpers/progress-helper'
-import { getSongTitle } from '../../../helpers/data-helper'
+import { getSongTitle, getSongTasks } from '../../../helpers/data-helper'
 
 /*************
  * CONTAINER *
@@ -10,7 +10,6 @@ import { getSongTitle } from '../../../helpers/data-helper'
 
 const AdminNavRow = ({
 
-    song,
     songIndex,
     isSelected,
     handleNavSongSelect,
@@ -18,7 +17,8 @@ const AdminNavRow = ({
 ...other }) => {
 
     const songTitle = getSongTitle(songIndex),
-        sumTask = ProgressHelper.calculateSumTask(song.tasks),
+        songTasks = getSongTasks(songIndex),
+        sumTask = ProgressHelper.calculateSumTask(songTasks),
         onClick = e => handleNavSongSelect(e, songIndex)
 
     return (
@@ -32,7 +32,6 @@ const AdminNavRow = ({
 }
 
 AdminNavRow.propTypes = {
-    song: PropTypes.object.isRequired,
     songIndex: PropTypes.number.isRequired,
     isSelected: PropTypes.bool.isRequired,
     handleNavSongSelect: PropTypes.func.isRequired

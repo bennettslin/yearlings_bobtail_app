@@ -51,6 +51,35 @@ export const getSongTitle = (songIndex, songs) => {
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
 }
 
+export const getBookStartingIndices = () => {
+    const { bookStartingIndices } = AlbumData
+    return bookStartingIndices
+}
+
+export const getMp3s = () => {
+    const { mp3s } = AlbumData
+    return mp3s
+}
+
+export const getScoreForIndex = (songIndex) => {
+    const { scores } = AlbumData
+    return scores[songIndex]
+}
+
+/*********
+ * ADMIN *
+ *********/
+
+export const getSongTasks = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.tasks || []
+}
+
+export const getDrawings = () => {
+    const { drawings } = AlbumData
+    return drawings
+}
+
 /***********
  * HELPERS *
  ***********/

@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import AlbumData from '../../album-data'
-
-const { scores } = AlbumData
-
+import { getScoreForIndex } from '../../helpers/data-helper'
 // import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 
 /*************
@@ -56,6 +53,8 @@ class ScoreSectionView extends Component {
     }
 
     render() {
+        const score = getScoreForIndex(0)
+
         return (
             <div
                 ref={this.props.scoreSectionRef}
@@ -66,7 +65,7 @@ class ScoreSectionView extends Component {
                 <iframe
                     ref={(node) => (this.myWebview = node)}
                     className={`webview`}
-                    src={scores[0]}
+                    src={score}
                     onLoad={this.onWebviewLoad}
                     tabIndex="2"
                 />

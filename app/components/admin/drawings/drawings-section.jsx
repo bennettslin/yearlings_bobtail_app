@@ -1,14 +1,18 @@
 import React from 'react'
-import AlbumData from '../../../album-data'
-const { drawings } = AlbumData
+import { getDrawings } from '../../../helpers/data-helper'
 
 /*************
  * sCONTAINER *
  *************/
 
-const DrawingsSection = () => (
-    <DrawingsSectionView {...drawings} />
-)
+const DrawingsSection = () => {
+
+    const drawings = getDrawings()
+
+    return (
+        <DrawingsSectionView {...drawings} />
+    )
+}
 
 /****************
  * PRESENTATION *

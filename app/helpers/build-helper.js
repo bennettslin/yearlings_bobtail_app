@@ -6,7 +6,7 @@ import { ALBUM_BUILD_KEYS,
          RIGHT,
          CENTRE,
          REFERENCE } from './constants'
-import { getSongObject, getVerseObject, getSongTitle } from './data-helper'
+import { getSongObject, getSongTitle, getVerseObject } from './data-helper'
 import { getFormattedAnnotationTitle } from './format-helper'
 
 const _tempStore = {

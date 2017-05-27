@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import DomManager from './dom-manager'
+import { getSongsLength,
+         getBookStartingIndices } from '../helpers/data-helper'
 import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getPopupAnchorIndexForDirection } from '../helpers/logic-helper'
@@ -309,10 +311,9 @@ class AccessManager extends Component {
             }
 
             if (direction) {
-                const { songs,
-                        selectedBookColumnIndex,
-                        bookStartingIndices } = this.props,
-                    songsLength = songs.length
+                const { selectedBookColumnIndex } = this.props,
+                    bookStartingIndices = getBookStartingIndices(),
+                    songsLength = getSongsLength()
 
                 accessedSongIndex = (accessedSongIndex + songsLength + direction) % songsLength
 
