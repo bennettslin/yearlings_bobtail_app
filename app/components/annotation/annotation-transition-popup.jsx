@@ -1,45 +1,65 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import AnnotationSection from './annotation-section'
 import TransitionPopup from '../popup/transition-popup'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const AnnotationTransitionPopup = ({
+class AnnotationTransitionPopup extends Component {
 
-    selectedAnnotationIndex,
-    selectedCarouselIndex,
-    selectedScoreIndex,
-    selectedTitleIndex,
-    selectedWikiIndex,
-    handleAnnotationPrevious,
-    handleAnnotationNext,
-    handlePopupContainerClick,
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'selectedAnnotationIndex',
+                    'selectedCarouselIndex',
+                    'selectedScoreIndex',
+                    'selectedTitleIndex',
+                    'selectedWikiIndex',
+                    'accessedPopupAnchorIndex'
+                ]
+            })
 
-...other }) => {
+        return componentShouldUpdate
+    }
 
-    const isVisible = !!selectedAnnotationIndex &&
-                      !selectedCarouselIndex &&
-                      !selectedScoreIndex &&
-                      !selectedTitleIndex &&
-                      !selectedWikiIndex,
-        myChild = (
-            <AnnotationSection {...other} />
+    render() {
+        const { selectedAnnotationIndex,
+                selectedCarouselIndex,
+                selectedScoreIndex,
+                selectedTitleIndex,
+                selectedWikiIndex,
+                handleAnnotationPrevious,
+                handleAnnotationNext,
+                handlePopupContainerClick,
+                ...other } = this.props,
+
+            isVisible = !!selectedAnnotationIndex &&
+                        !selectedCarouselIndex &&
+                        !selectedScoreIndex &&
+                        !selectedTitleIndex &&
+                        !selectedWikiIndex,
+            myChild = (
+                <AnnotationSection {...other} />
+            )
+
+        return (
+            <TransitionPopup
+                popupClassName="annotation selected-annotation"
+                isVisible={isVisible}
+                showArrows={true}
+                handlePreviousClick={handleAnnotationPrevious}
+                handleNextClick={handleAnnotationNext}
+                handlePopupContainerClick={handlePopupContainerClick}
+                myChild={myChild}
+            />
         )
-
-    return (
-        <TransitionPopup
-            popupClassName="annotation selected-annotation"
-            isVisible={isVisible}
-            showArrows={true}
-            handlePreviousClick={handleAnnotationPrevious}
-            handleNextClick={handleAnnotationNext}
-            handlePopupContainerClick={handlePopupContainerClick}
-            myChild={myChild}
-        />
-    )
+    }
 }
 
 AnnotationTransitionPopup.propTypes = {
@@ -48,6 +68,7 @@ AnnotationTransitionPopup.propTypes = {
     selectedScoreIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
     selectedWikiIndex: PropTypes.number.isRequired,
+    accessedPopupAnchorIndex: PropTypes.number.isRequired,
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
