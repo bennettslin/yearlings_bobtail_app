@@ -239,8 +239,9 @@
 }
 
 .monitor-width {
-    .double-book-column {
-        &.static-icon {
+
+    .static-nav-icon {
+        .double-book-column {
             .nav-toggle-block {
                 margin-right: @monitor-large-unit;
             }
@@ -268,41 +269,9 @@
                     margin-left: @monitor-small-unit;
                 }
             }
-
         }
-        &.shrink-icon {
-            .nav-book {
-                min-width: @monitor-shrink-icon;
-            }
 
-            .column-1 {
-                .nav-book {
-                    &.songs {
-                        left: @monitor-shrink-book-offset;
-                    }
-                }
-            }
-
-            .column-2 {
-                .nav-book {
-                    &.songs {
-                        right: @monitor-shrink-book-offset;
-                    }
-                }
-            }
-
-            .nav-button-block {
-                width: @monitor-shrink-icon;
-            }
-            .nav-button-block .button {
-                width: @monitor-shrink-icon;
-                height: @monitor-shrink-icon;
-            }
-        }
-    }
-
-    .single-book-column {
-        &.static-icon {
+        .single-book-column {
             .nav-toggle-block {
                 margin-right: @monitor-single-large;
             }
@@ -334,6 +303,38 @@
             }
         }
     }
+
+    .shrink-nav-icon {
+        .double-book-column {
+            .nav-book {
+                min-width: @monitor-shrink-icon;
+            }
+
+            .column-1 {
+                .nav-book {
+                    &.songs {
+                        left: @monitor-shrink-book-offset;
+                    }
+                }
+            }
+
+            .column-2 {
+                .nav-book {
+                    &.songs {
+                        right: @monitor-shrink-book-offset;
+                    }
+                }
+            }
+
+            .nav-button-block {
+                width: @monitor-shrink-icon;
+            }
+            .nav-button-block .button {
+                width: @monitor-shrink-icon;
+                height: @monitor-shrink-icon;
+            }
+        }
+    }
 }
 
 /*****************
@@ -342,8 +343,8 @@
 
 .laptop-width {
 
-    .single-book-column {
-        &.static-icon {
+    .static-nav-icon {
+        .single-book-column {
             .nav-toggle-block {
                 margin-right: @laptop-large;
             }
@@ -373,7 +374,10 @@
                 }
             }
         }
-        &.shrink-icon {
+    }
+
+    .shrink-nav-icon {
+        .single-book-column {
             .nav-book {
                 min-width: @laptop-shrink-icon;
             }
@@ -423,6 +427,12 @@
             .nav-toggle-book {
                 left: @tablet-nav-toggle-width;
             }
+
+            &.shrink-nav-icon {
+                .nav-toggle-book {
+                    left: @tablet-shrink-toggle-width;
+                }
+            }
         }
     }
 
@@ -434,8 +444,8 @@
         width: @app-tablet-large-icon-diameter;
     }
 
-    .double-book-column {
-        &.static-icon {
+    .static-nav-icon {
+        .double-book-column {
             .nav-toggle-block {
                 margin-left: @tablet-large-unit;
             }
@@ -465,48 +475,7 @@
             }
         }
 
-        &.shrink-icon {
-            .nav-book {
-                min-width: @tablet-shrink-icon;
-            }
-
-            .column-1 {
-                .nav-book {
-                    &.songs {
-                        left: @tablet-shrink-book-offset;
-                    }
-                }
-            }
-
-            .column-2 {
-                .nav-book {
-                    &.songs {
-                        right: @tablet-shrink-book-offset;
-                    }
-                }
-            }
-
-            .is-song {
-                &.lyric-expanded, &.carousel-expanded, &.overlay-shown {
-                    .nav-toggle-book {
-                        left: @tablet-shrink-toggle-width;
-                    }
-                }
-            }
-
-            .nav-button-block {
-                width: @tablet-shrink-icon;
-            }
-
-            .nav-button-block .button {
-                width: @tablet-shrink-icon;
-                height: @tablet-shrink-icon;
-            }
-        }
-    }
-
-    .single-book-column {
-        &.static-icon {
+        .single-book-column {
             .nav-toggle-block {
                 margin-left: @tablet-single-large;
             }
@@ -538,6 +507,39 @@
             }
         }
     }
+
+    .shrink-nav-icon {
+        .double-book-column {
+            .nav-book {
+                min-width: @tablet-shrink-icon;
+            }
+
+            .column-1 {
+                .nav-book {
+                    &.songs {
+                        left: @tablet-shrink-book-offset;
+                    }
+                }
+            }
+
+            .column-2 {
+                .nav-book {
+                    &.songs {
+                        right: @tablet-shrink-book-offset;
+                    }
+                }
+            }
+
+            .nav-button-block {
+                width: @tablet-shrink-icon;
+            }
+
+            .nav-button-block .button {
+                width: @tablet-shrink-icon;
+                height: @tablet-shrink-icon;
+            }
+        }
+    }
 }
 
 /***************
@@ -555,6 +557,12 @@
             .nav-toggle-book {
                 left: @mini-nav-toggle-width;
             }
+
+            &.shrink-nav-icon {
+                .nav-toggle-book {
+                    left: @mini-shrink-toggle-width;
+                }
+            }
         }
     }
 
@@ -566,8 +574,8 @@
         width: @app-mini-large-icon-diameter;
     }
 
-    .single-book-column {
-        &.static-icon {
+    .static-nav-icon {
+        .single-book-column {
             .nav-toggle-block {
                 margin-left: @mini-large;
             }
@@ -598,7 +606,10 @@
                 }
             }
         }
-        &.shrink-icon {
+    }
+
+    .shrink-nav-icon {
+        .single-book-column {
             .nav-book {
                 min-width: @mini-shrink-icon;
             }
@@ -622,14 +633,6 @@
 
                 .nav-button-block {
                     width: @mini-shrink-icon;
-                }
-            }
-
-            .is-song {
-                &.lyric-expanded, &.carousel-expanded, &.overlay-shown {
-                    .nav-toggle-book {
-                        left: @mini-shrink-toggle-width;
-                    }
                 }
             }
 

@@ -253,7 +253,6 @@ const LiveView = ({
         dotsSectionProps = {
             selectedDotKeys,
             selectedDotsIndex,
-            // accessedOn,
             accessedDotIndex,
             handlePopupContainerClick,
             handleDotToggle,
@@ -323,7 +322,6 @@ const LiveView = ({
             title,
 
             showSingleBookColumn,
-            shrinkNavIcon,
 
             selectedNavIndex,
             selectedBookColumnIndex,
@@ -334,7 +332,6 @@ const LiveView = ({
             selectedCarouselIndex,
             selectedTitleIndex,
 
-            accessedOn,
             accessedSongIndex,
 
             handleCarouselToggle,
@@ -409,6 +406,7 @@ const LiveView = ({
             selectedCarouselIndex ? 'carousel-expanded' : 'carousel-collapsed',
             selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
+            shrinkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
             showOverlay ? 'overlay-shown' : 'overlay-hidden',
             { 'timer-in-audio': timerInAudio,
               'title-in-audio': titleInAudio,

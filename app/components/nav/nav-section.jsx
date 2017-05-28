@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
+import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import NavBook from './nav-book'
 import { NAV_SECTION_ACCESS_KEY } from '../../helpers/constants'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
 import AlbumData from '../../album-data'
 
 const { songs, bookStartingIndices } = AlbumData
@@ -10,13 +13,34 @@ const { songs, bookStartingIndices } = AlbumData
  * CONTAINER *
  *************/
 
-const NavSection = (props) => (
-    <NavSectionView {...props} />
-)
+class NavSection extends Component {
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+
+                ]
+            })
+
+        console.error('props:', JSON.stringify(props, null, 2));
+        console.error('nextProps:', JSON.stringify(nextProps, null, 2));
+        console.error(`componentShouldUpdate:`, componentShouldUpdate);
+
+        return componentShouldUpdate || true
+    }
+
+    render() {
+        return (
+            <NavSectionView {...this.props} />
+        )
+    }
+}
 
 NavSection.propTypes = {
     showSingleBookColumn: PropTypes.bool,
-    shrinkNavIcon: PropTypes.bool,
     accessedSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedNavIndex: PropTypes.number,
@@ -38,7 +62,6 @@ const NavSectionView = ({
     accessedSongIndex,
     selectedBookColumnIndex,
     showSingleBookColumn,
-    shrinkNavIcon,
 
     handleNavExpand,
     handleNavSongSelect,
@@ -56,7 +79,11 @@ const NavSectionView = ({
 
     return (
         <div
-            className={`section nav-section${shrinkNavIcon ? ' shrink-icon' : ' static-icon'}${showSingleBookColumn ? ' single-book-column' : ' double-book-column'}`}
+            className={classnames(
+                'section',
+                'nav-section',
+                showSingleBookColumn ? ' single-book-column' : ' double-book-column'
+            )}
         >
             <div className="live-nav-block">
                 {/* nav toggle */}
