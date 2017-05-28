@@ -14,6 +14,7 @@ import OverviewTransitionPopup from './overview/overview-transition-popup'
 import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
 import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
+import TitleToggle from './title/title-toggle'
 import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
 import { getSongObject } from '../helpers/data-helper'
@@ -59,7 +60,6 @@ const LiveView = ({
     annotationObject,
     popupLogueOverview,
     popupSongOverview,
-    title,
     isPlaying,
     isLogue,
     selectedSongIndex,
@@ -165,6 +165,14 @@ const LiveView = ({
         timerInAudio = showOverlay && isPhone,
         verseBarHidden = !isSelectedVerseAbove && !isSelectedVerseBelow,
 
+        titleToggleProps = {
+            selectedTitleIndex,
+            handleTitleToggle
+        },
+        titleToggleChild = (
+            <TitleToggle {...titleToggleProps} />
+        ),
+
         annotationPopupProps = {
             annotationObject,
             selectedAnnotationIndex,
@@ -212,21 +220,19 @@ const LiveView = ({
         ),
         audioSectionProps = {
             isPhone,
-            selectedSongIndex,
             isPlaying,
-            title,
-            selectedTitleIndex,
+            selectedSongIndex,
             selectedAudioOptionIndex,
 
             handleAudioPlay,
             handleAudioPreviousSong,
             handleAudioNextSong,
             handleAudioOptionsToggle,
-            handleTitleToggle,
             handlePopupContainerClick,
 
             audioTimerChild,
-            audioBannerChild
+            audioBannerChild,
+            titleToggleChild
         },
         audioSectionChild = (
             <AudioSection {...audioSectionProps}
@@ -319,20 +325,16 @@ const LiveView = ({
             isHiddenNav,
             scoresTipsOutsideMenu,
 
-            title,
-
             showSingleBookColumn,
 
+            accessedSongIndex,
+            selectedSongIndex,
             selectedNavIndex,
             selectedBookColumnIndex,
             selectedDotsIndex,
             selectedWikiUrl,
-            selectedSongIndex,
             selectedTipsIndex,
             selectedCarouselIndex,
-            selectedTitleIndex,
-
-            accessedSongIndex,
 
             handleCarouselToggle,
             handleDotsSectionToggle,
@@ -340,10 +342,10 @@ const LiveView = ({
             handleNavSongSelect,
             handleNavBookSelect,
             handleTipsToggle,
-            handleTitleToggle,
 
             audioBannerChild,
-            audioSectionChild
+            audioSectionChild,
+            titleToggleChild
         },
 
         overviewButtonProps = {

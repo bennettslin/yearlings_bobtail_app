@@ -31,24 +31,20 @@ const MainColumnView = ({
     isHiddenNav,
     scoresTipsOutsideMenu,
 
-    title,
     showSingleBookColumn,
 
+    accessedSongIndex,
+    selectedSongIndex,
     selectedDotsIndex,
     selectedNavIndex,
     selectedBookColumnIndex,
-    selectedSongIndex,
     selectedCarouselIndex,
-    selectedTitleIndex,
-
-    accessedSongIndex,
 
     handleCarouselToggle,
     handleDotsSectionToggle,
     handleNavExpand,
     handleNavSongSelect,
     handleNavBookSelect,
-    handleTitleToggle,
 
     annotationPopupChild,
     dotsSectionChild,
@@ -58,19 +54,17 @@ const MainColumnView = ({
     scoresTipsSectionChild,
     audioBannerChild,
     audioSectionChild,
-    carouselChild
+    carouselChild,
+    titleToggleChild
 
 }) => {
     const menuFieldProps = {
-            title,
             titleInAudio,
             scoresTipsOutsideMenu,
-            selectedTitleIndex,
-
-            handleTitleToggle,
 
             audioSectionChild,
-            scoresTipsSectionChild
+            scoresTipsSectionChild,
+            titleToggleChild
         },
         dotsOverviewToggleSectionProps = {
             selectedDotsIndex,

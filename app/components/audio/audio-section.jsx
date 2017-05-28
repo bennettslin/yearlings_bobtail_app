@@ -1,32 +1,55 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import AudioButtons from './audio-buttons'
-import TitleToggle from '../title/title-toggle'
 import { SONG_FILES } from '../../helpers/constants'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const AudioSection = ({
+class AudioSection extends Component {
 
-    selectedSongIndex,
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'selectedAudioOptionIndex',
+                    'selectedSongIndex',
+                    'isPhone',
+                    'isPlaying',
+                    'showOverlay',
+                    'titleInAudio'
+                ]
+            })
 
-...other }) => {
+        // console.error('props:', props);
+        // console.error('nextProps:', nextProps);
+        // console.error(`componentShouldUpdate:`, componentShouldUpdate);
 
-    const isPrologue = selectedSongIndex === 0,
-        isFirstSong = selectedSongIndex === 1,
-        isLastSong = selectedSongIndex === SONG_FILES.length,
-        isEpilogue = selectedSongIndex === SONG_FILES.length + 1
+        return componentShouldUpdate
+    }
 
-    return (
-        <AudioSectionView {...other}
-            isPrologue={isPrologue}
-            isFirstSong={isFirstSong}
-            isLastSong={isLastSong}
-            isEpilogue={isEpilogue}
-        />
-    )
+    render() {
+        const { selectedSongIndex,
+                ...other } = this.props,
+
+            isPrologue = selectedSongIndex === 0,
+            isFirstSong = selectedSongIndex === 1,
+            isLastSong = selectedSongIndex === SONG_FILES.length,
+            isEpilogue = selectedSongIndex === SONG_FILES.length + 1
+
+        return (
+            <AudioSectionView {...other}
+                isPrologue={isPrologue}
+                isFirstSong={isFirstSong}
+                isLastSong={isLastSong}
+                isEpilogue={isEpilogue}
+            />
+        )
+    }
 }
 
 AudioSection.propTypes = {
@@ -46,9 +69,7 @@ const AudioSectionView = ({
     selectedAdminIndex,
     isPlaying,
     selectedAudioOptionIndex,
-    selectedTitleIndex,
 
-    handleTitleToggle,
     handleAudioPlay,
     handleAudioPreviousSong,
     handleAudioNextSong,
@@ -56,6 +77,7 @@ const AudioSectionView = ({
 
     audioTimerChild,
     audioBannerChild,
+    titleToggleChild,
 
     // From controller.
     isPrologue,
@@ -78,11 +100,6 @@ const AudioSectionView = ({
             handleAudioPreviousSong,
             handleAudioNextSong,
             handleAudioOptionsToggle
-        },
-        titleProps = {
-            selectedTitleIndex,
-            titleInAudio,
-            handleTitleToggle
         }
 
     return (
@@ -98,7 +115,7 @@ const AudioSectionView = ({
                 </div>
             )}
             {titleInAudio &&
-                <TitleToggle {...titleProps} />
+                titleToggleChild
             }
             {(!isPhone || timerInAudio) && audioBannerChild}
             <AudioButtons {...audioButtonsProps} />
@@ -109,7 +126,6 @@ const AudioSectionView = ({
 AudioSectionView.propTypes = {
     selectedAdminIndex: PropTypes.number,
     selectedAudioOptionIndex: PropTypes.number.isRequired,
-    selectedTitleIndex: PropTypes.number.isRequired,
 
     isPrologue: PropTypes.bool.isRequired,
     isFirstSong: PropTypes.bool.isRequired,
@@ -120,7 +136,6 @@ AudioSectionView.propTypes = {
     isPhone: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
 
-    handleTitleToggle: PropTypes.func.isRequired,
     handleAudioPlay: PropTypes.func.isRequired,
     handleAudioPreviousSong: PropTypes.func.isRequired,
     handleAudioNextSong: PropTypes.func.isRequired,
