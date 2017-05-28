@@ -11,6 +11,30 @@ export const hasParentWithTagName = (child, parentTagName = '') => {
     return false
 }
 
+export const getComponentShouldUpdate = ({
+
+    props,
+    nextProps,
+    updatingPropsArray
+
+}) => {
+    let counter = 0
+
+    // Loop only until a mismatch is found.
+    while (counter < updatingPropsArray.length) {
+        const updatingKey = updatingPropsArray[counter]
+
+        if (props[updatingKey] !== nextProps[updatingKey]) {
+            return true
+        }
+
+        counter++
+    }
+
+    // If loop ends with no mismatch, return false.
+    return false
+}
+
 export const getPropsAreSame = (smallerSet, largerSet) => {
     // Assume that larger set has the same keys as smaller set.
 

@@ -9,6 +9,11 @@ export const getSongObject = (songIndex, songs = AlbumData.songs) => {
     return songs[songIndex]
 }
 
+export const getAnnotationsArray = (songIndex) => {
+    const songs = getSongObject(songIndex)
+    return songs.annotations || []
+}
+
 export const getAnnotationObject = (songIndex, annotationIndex) => {
     const { annotations } = getSongObject(songIndex)
     return annotations ? annotations[annotationIndex - 1] : null

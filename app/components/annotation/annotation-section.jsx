@@ -40,7 +40,12 @@ const AnnotationSectionView = ({
     title,
 
 ...other }) => (
-    <div className="section annotation-section">
+    <div className={classnames(
+        'section',
+        'annotation-section',
+        { 'selected-annotation': isSelectedAnnotation,
+          'accessed-annotation': isAccessedAnnotation }
+    )}>
         <div className="annotation-title-block">
             {title === DOT_STANZA_CONSTANT ? (
                 <div className="annotation-title">
@@ -60,7 +65,7 @@ const AnnotationSectionView = ({
                         other.popupAnnotation.dotKeys,
                         { 'selected': inCarousel ? isSelectedAnnotation : true,
                           'access-highlighted': isAccessedAnnotation }
-                        )}
+                    )}
                     onClick={handleTitleClick}
                 >
                     <span className="underline-bar"></span>

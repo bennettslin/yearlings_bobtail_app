@@ -1,30 +1,52 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import AnnotationSection from '../annotation/annotation-section'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const CarouselAnnotation = ({
+class CarouselAnnotation extends Component {
 
-    handleLyricAnnotationSelect,
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
 
-...other }) => {
-    const { annotationIndex } = other,
+                ]
+            })
 
-        isSelectedAnnotation = annotationIndex === other.selectedAnnotationIndex,
-        isAccessedAnnotation = annotationIndex === other.accessedAnnotationIndex,
-        handleTitleClick = !isSelectedAnnotation ? e => handleLyricAnnotationSelect(e, annotationIndex, true) : null
+        if (props.annotationIndex === 1) {
+            console.error('props:', JSON.stringify(props, null, 2));
+            console.error('nextProps:', JSON.stringify(nextProps, null, 2));
+            console.error(`componentShouldUpdate:`, componentShouldUpdate);
+        }
 
-    return (
-        <CarouselAnnotationView {...other}
-            isSelectedAnnotation={isSelectedAnnotation}
-            isAccessedAnnotation={isAccessedAnnotation}
-            handleTitleClick={handleTitleClick}
-        />
-    )
+        return componentShouldUpdate || true
+    }
+
+    render() {
+        const { annotationIndex,
+                handleLyricAnnotationSelect,
+                ...other } = this.props,
+
+            isSelectedAnnotation = annotationIndex === other.selectedAnnotationIndex,
+            isAccessedAnnotation = annotationIndex === other.accessedAnnotationIndex,
+            handleTitleClick = !isSelectedAnnotation ? e => handleLyricAnnotationSelect(e, annotationIndex, true) : null
+
+        return (
+            <CarouselAnnotationView {...other}
+                annotationIndex={annotationIndex}
+                isSelectedAnnotation={isSelectedAnnotation}
+                isAccessedAnnotation={isAccessedAnnotation}
+                handleTitleClick={handleTitleClick}
+            />
+        )
+    }
 }
 
 CarouselAnnotation.propTypes = {
@@ -41,16 +63,16 @@ const CarouselAnnotationView = ({
     // From props.
     annotation,
     annotationIndex,
+    annotationColumn,
+    annotationDotKeys,
 
 ...other }) => (
 
     <div className={classnames(
             'carousel-annotation',
             `carousel-annotation-${annotationIndex}`,
-            annotation.column && `in-column-${annotation.column}`,
-            annotation.dotKeys,
-            { 'selected-annotation': other.isSelectedAnnotation,
-              'accessed-annotation': other.isAccessedAnnotation }
+            annotationColumn && `in-column-${annotationColumn}`,
+            annotationDotKeys
         )}
     >
         <AnnotationSection {...other}

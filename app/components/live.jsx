@@ -34,7 +34,6 @@ const Live = (props) => {
             lyrics={selectedSong.lyrics}
             totalTime={selectedSong.totalTime}
             stanzaTimes={selectedSong.stanzaTimes}
-            annotations={selectedSong.annotations}
             times={selectedSong.times}
             selectedWikiUrl={selectedWikiUrl}
             selectedSongLyrics={selectedSong.lyrics}
@@ -57,7 +56,6 @@ const LiveView = ({
 
     isPhone,
     isDesktop,
-    annotations,
     popupAnnotation,
     popupLogueOverview,
     popupSongOverview,
@@ -237,9 +235,9 @@ const LiveView = ({
         ),
 
         carouselProps = {
-            annotations,
             accessedAnnotationIndex,
             selectedAnnotationIndex,
+            selectedSongIndex,
             accessedPopupAnchorIndex,
 
             handleLyricAnnotationSelect,
