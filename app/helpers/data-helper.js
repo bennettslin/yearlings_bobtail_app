@@ -19,6 +19,11 @@ export const getAnnotationObject = (songIndex, annotationIndex) => {
     return annotations ? annotations[annotationIndex - 1] : null
 }
 
+export const getLyricsArray = (songIndex) => {
+    const songs = getSongObject(songIndex)
+    return songs.lyrics || []
+}
+
 export const getVerseObject = (songIndex, verseIndex, songs = AlbumData.songs) => {
     const { lyrics } = getSongObject(songIndex, songs)
     return _parseLyrics(lyrics, verseIndex)
@@ -44,16 +49,26 @@ export const getBookColumnIndex = (songIndex) => {
     return 1 + (songIndex >= bookStartingIndices[1])
 }
 
-export const getSongTimes = (songIndex) => {
-    const selectedSong = getSongObject(songIndex)
-    return selectedSong.times || []
-}
-
 export const getSongTitle = (songIndex, songs) => {
     const song = getSongObject(songIndex, songs),
         isLogue = getIsLogue(songIndex, songs)
 
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
+}
+
+export const getSongStanzaTimes = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.stanzaTimes || []
+}
+
+export const getSongTotalTime = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.totalTime || 0
+}
+
+export const getSongTimes = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.times || []
 }
 
 export const getBookStartingIndices = () => {

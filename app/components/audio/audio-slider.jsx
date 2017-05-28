@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { getIsLogue, getSongTimes, getSongStanzaTimes, getSongTotalTime } from '../../helpers/data-helper'
 import { getFormattedTime } from '../../helpers/format-helper'
 import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
 
@@ -12,16 +13,12 @@ const AudioSlider = (props) => (
 )
 
 AudioSlider.propTypes = {
-    isLogue: PropTypes.bool.isRequired,
     isMousedOrTouched: PropTypes.bool.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
     selectedTimePlayed: PropTypes.number.isRequired,
-    sliderRatio: PropTypes.number,
-    totalTime: PropTypes.number,
-    stanzaTimes: PropTypes.array.isRequired,
-    verseTimes: PropTypes.array
+    sliderRatio: PropTypes.number
 }
 
 /****************
@@ -40,16 +37,18 @@ class AudioSliderView extends Component {
     }
 
     render() {
-        const { isLogue,
-                isMousedOrTouched,
+        const { isMousedOrTouched,
+                selectedSongIndex,
                 selectedVerseIndex,
                 interactivatedVerseIndex,
                 sliderVerseIndex,
                 sliderRatio,
-                selectedTimePlayed,
-                stanzaTimes,
-                verseTimes,
-                totalTime } = this.props,
+                selectedTimePlayed } = this.props,
+
+            isLogue = getIsLogue(selectedSongIndex),
+            verseTimes = getSongTimes(selectedSongIndex),
+            stanzaTimes = getSongStanzaTimes(selectedSongIndex),
+            totalTime = getSongTotalTime(selectedSongIndex),
 
             workingRatio = isMousedOrTouched ? sliderRatio : (selectedTimePlayed / totalTime),
 

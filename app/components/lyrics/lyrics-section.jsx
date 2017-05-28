@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import LyricsUnit from './lyrics-unit'
+import { getLyricsArray } from '../../helpers/data-helper'
 import { getSetsAreSame } from '../../helpers/general-helper'
 
 /*************
@@ -13,7 +14,6 @@ const LyricsSection = (props) => (
 )
 
 LyricsSection.propTypes = {
-    songLyrics: PropTypes.array,
     showSingleLyricColumn: PropTypes.bool.isRequired,
     selectedLyricColumnIndex: PropTypes.number.isRequired
 }
@@ -85,13 +85,14 @@ class LyricsSectionView extends Component {
     render() {
 
                 // From props.
-        const { songLyrics = [],
-                showSingleLyricColumn,
+        const { showSingleLyricColumn,
                 selectedLyricColumnIndex,
 
             ...other } = this.props,
 
-            { fadingOut } = this.state
+            { fadingOut } = this.state,
+
+            songLyrics = getLyricsArray(other.selectedSongIndex)
 
         return (
             <div

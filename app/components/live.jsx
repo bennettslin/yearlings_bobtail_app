@@ -32,12 +32,7 @@ const Live = (props) => {
 
     return (
         <LiveView {...props}
-            lyrics={selectedSong.lyrics}
-            totalTime={selectedSong.totalTime}
-            stanzaTimes={selectedSong.stanzaTimes}
-            times={selectedSong.times}
             selectedWikiUrl={selectedWikiUrl}
-            selectedSongLyrics={selectedSong.lyrics}
             hasDoubleColumns={selectedSong.doubleColumns}
         />
     )
@@ -112,7 +107,6 @@ const LiveView = ({
     scoreSectionRef,
     wikiSectionRef,
 
-    selectedSongTitle,
     handlePlayerTimeChange,
 
     handlePopupContainerClick,
@@ -153,10 +147,6 @@ const LiveView = ({
     stopPropagation,
 
     // From controller.
-    totalTime,
-    stanzaTimes,
-    times,
-    selectedSongLyrics,
     hasDoubleColumns
 
 }) => {
@@ -197,18 +187,13 @@ const LiveView = ({
             <AudioTimer {...audioTimerProps} />
         ),
         audioBannerProps = {
-            isLogue,
+            selectedSongIndex,
             selectedVerseIndex,
             interactivatedVerseIndex,
-            selectedSongIndex,
             sliderVerseIndex,
             sliderRatio,
             sliderMousedOrTouched,
-            selectedSongTitle,
             selectedTimePlayed,
-            totalTime,
-            stanzaTimes,
-            verseTimes: times,
             handlePlayerTimeChange,
 
             handleAudioSliderTouchBegin,
@@ -287,7 +272,6 @@ const LiveView = ({
             selectedAnnotationIndex,
             selectedLyricColumnIndex,
             interactivatedVerseIndex,
-            songLyrics: selectedSongLyrics,
             selectedVerseIndex,
 
             lyricSectionRef,

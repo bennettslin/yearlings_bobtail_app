@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import AudioSlider from './audio-slider'
+import { getSongTitle } from '../../helpers/data-helper'
 
 /*************
  * CONTAINER *
@@ -11,19 +12,14 @@ const AudioBanner = (props) => (
 )
 
 AudioBanner.propTypes = {
-    selectedSongTitle: PropTypes.string.isRequired,
-    isLogue: PropTypes.bool.isRequired,
-    sliderMousedOrTouched: PropTypes.bool.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
+    sliderMousedOrTouched: PropTypes.bool.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
     sliderRatio: PropTypes.number,
     sliderTime: PropTypes.number,
     selectedTimePlayed: PropTypes.number.isRequired,
-    totalTime: PropTypes.number,
-    stanzaTimes: PropTypes.array.isRequired,
-    verseTimes: PropTypes.array,
     handleAudioSliderTouchBegin: PropTypes.func.isRequired,
     audioTimerChild: PropTypes.element.isRequired
 }
@@ -35,19 +31,14 @@ AudioBanner.propTypes = {
 const AudioBannerView = ({
 
     // From props.
-    isLogue,
     selectedSongIndex,
     interactivatedVerseIndex,
     selectedVerseIndex,
     sliderVerseIndex,
     sliderMousedOrTouched,
-    selectedSongTitle,
     sliderRatio,
     sliderTime,
     selectedTimePlayed,
-    totalTime,
-    stanzaTimes,
-    verseTimes,
     handleAudioSliderTouchBegin,
 
     audioTimerChild
@@ -55,7 +46,6 @@ const AudioBannerView = ({
 }) => (
     <div className="audio-block audio-banner-block">
         <AudioSlider
-            isLogue={isLogue}
             isMousedOrTouched={sliderMousedOrTouched}
             selectedSongIndex={selectedSongIndex}
             interactivatedVerseIndex={interactivatedVerseIndex}
@@ -64,14 +54,11 @@ const AudioBannerView = ({
             sliderRatio={sliderRatio}
             sliderTime={sliderTime}
             selectedTimePlayed={selectedTimePlayed}
-            totalTime={totalTime}
-            stanzaTimes={stanzaTimes}
-            verseTimes={verseTimes}
             onTouch={handleAudioSliderTouchBegin}
         />
         <div className="audio-banner audio-display-block">
             <div className="audio-banner-title">
-                {selectedSongTitle}
+                {getSongTitle(selectedSongIndex)}
             </div>
             {audioTimerChild}
         </div>

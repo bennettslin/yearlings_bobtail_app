@@ -392,6 +392,7 @@ export const getWikiUrl = (props) => {
             selectedWikiIndex,
             selectedAnnotationIndex,
             carouselAnnotationIndex } = props
+
     if (selectedWikiIndex) {
         // Since annotation index is 1-based, it's invalid if 0.
         const annotationIndex = carouselAnnotationIndex || selectedAnnotationIndex,
