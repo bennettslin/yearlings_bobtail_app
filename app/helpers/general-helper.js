@@ -25,11 +25,21 @@ export const getComponentShouldUpdate = ({
         const updatingKey = updatingPropsArray[counter]
 
         if (typeof updatingKey === 'string') {
-            // Mismatch, so update!
-            if (props[updatingKey] !== nextProps[updatingKey]) {
-                return true
+
+            // If object, compare first level of values.
+            if (typeof props[updatingKey] === 'object') {
+                return !getSetsAreSame(props[updatingKey], nextProps[updatingKey])
+
+            } else {
+                // Mismatch, so update!
+                if (props[updatingKey] !== nextProps[updatingKey]) {
+                    return true
+                }
             }
 
+        /**
+         * If object, then compare mismatch only if a prop is true.
+         */
         } else {
             const { onlyIfTrueInNextProps,
                     subUpdatingKey } = updatingKey
@@ -49,21 +59,21 @@ export const getComponentShouldUpdate = ({
     return false
 }
 
-export const getPropsAreSame = (smallerSet, largerSet) => {
-    // Assume that larger set has the same keys as smaller set.
+export const getSetsAreSame = (smallerSet, largerSet) => {
+    // Assume that larger set is superset of smaller set.
 
     return Object.keys(smallerSet).reduce((allSame, key) => {
-        const propIsSame = smallerSet[key] === largerSet[key] ||
+        const valueIsSame = smallerSet[key] === largerSet[key] ||
 
             // Functions are exempt, as they constantly change through binding.
             typeof smallerSet[key] === 'function'
 
         // Keep for debugging purposes, for now.
-        // if (!propIsSame) {
+        // if (!valueIsSame) {
         //     console.error('prop not same:', key, smallerSet[key], largerSet[key]);
         // }
 
-        return allSame ? propIsSame : allSame
+        return allSame ? valueIsSame : allSame
     }, true)
 }
 

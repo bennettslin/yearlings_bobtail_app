@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import LyricsUnit from './lyrics-unit'
-import { getPropsAreSame } from '../../helpers/general-helper'
+import { getSetsAreSame } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
@@ -37,7 +37,7 @@ class LyricsSectionView extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return !getPropsAreSame(this.props, nextProps)
+        return !getSetsAreSame(this.props, nextProps)
             // || (!nextState.fadingOut && this.state.fadingOut)
     }
 

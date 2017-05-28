@@ -5,7 +5,7 @@ import classnames from 'classnames'
 import LyricsLine from './lyrics-line'
 import LyricsAudioButton from './lyrics-audio-button'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from '../../helpers/constants'
-import { getPropsAreSame } from '../../helpers/general-helper'
+import { getSetsAreSame } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
@@ -166,7 +166,7 @@ class LyricsVerseView extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return !getPropsAreSame(this.props, nextProps)
+        return !getSetsAreSame(this.props, nextProps)
     }
 
     componentDidUpdate(prevProps) {

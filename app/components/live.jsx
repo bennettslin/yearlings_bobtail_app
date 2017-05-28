@@ -253,7 +253,7 @@ const LiveView = ({
         dotsSectionProps = {
             selectedDotKeys,
             selectedDotsIndex,
-            accessedOn,
+            // accessedOn,
             accessedDotIndex,
             handlePopupContainerClick,
             handleDotToggle,

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import DotBlock from '../dot/dots-block'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
@@ -29,6 +30,27 @@ class DotsSectionView extends Component {
         this.state = {
             hasInteractivatedDotText: 0
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        const { props, state } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'selectedDotsIndex',
+                    'accessedDotIndex',
+                    'selectedDotKeys'
+                ]
+            }) || getComponentShouldUpdate({
+                props: state,
+                nextProps: nextState,
+                updatingPropsArray: [
+                    'hasInteractivatedDotText'
+                ]
+            })
+
+        return componentShouldUpdate
     }
 
     _onContainerClick(e) {
