@@ -195,7 +195,6 @@ const LiveView = ({
             sliderMousedOrTouched,
             selectedTimePlayed,
             handlePlayerTimeChange,
-
             handleAudioSliderTouchBegin,
 
             audioTimerChild
@@ -215,6 +214,7 @@ const LiveView = ({
             handleAudioOptionsToggle,
             handlePopupContainerClick,
 
+            audioBannerProps,
             audioTimerChild,
             audioBannerChild,
             titleToggleChild

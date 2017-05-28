@@ -20,7 +20,10 @@ class AudioSection extends Component {
                     'selectedSongIndex',
                     'isPhone',
                     'isPlaying',
-                    'titleInAudio'
+                    'titleInAudio',
+
+                    // Update when banner props are updated.
+                    'audioBannerProps'
                 ]
             })
 
@@ -52,7 +55,8 @@ AudioSection.propTypes = {
     selectedAudioOptionIndex: PropTypes.number.isRequired,
     isPhone: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
-    titleInAudio: PropTypes.bool.isRequired
+    titleInAudio: PropTypes.bool.isRequired,
+    audioBannerProps: PropTypes.object.isRequired
 }
 
 /****************
