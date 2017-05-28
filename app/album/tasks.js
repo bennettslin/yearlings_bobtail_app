@@ -1975,5 +1975,10 @@ module.exports = [
         taskName: `Get album data from import.`,
         workedHours: 3,
         neededHours: 3
-    }
+    },
+    {
+        taskName: `Begin work on updating components strategically.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]
