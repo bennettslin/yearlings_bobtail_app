@@ -1,39 +1,58 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ScoreSection from './score-section'
 import TransitionPopup from '../popup/transition-popup'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const ScoreTransitionPopup = ({
+class ScoreTransitionPopup extends Component {
 
-    isPhone,
-    selectedScoreIndex,
-    handleScoreToggle,
-    handlePopupFocus,
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'isPhone',
+                    'selectedSongIndex',
+                    'selectedScoreIndex'
+                ]
+            })
 
-...other }) => {
+        return componentShouldUpdate
+    }
 
-    const isVisible = !!selectedScoreIndex && !isPhone,
-        myChild = (
-            <ScoreSection {...other} />
+    render() {
+        const { isPhone,
+                selectedScoreIndex,
+                handleScoreToggle,
+                handlePopupFocus,
+                ...other } = this.props,
+
+            isVisible = !!selectedScoreIndex && !isPhone,
+            myChild = (
+                <ScoreSection {...other} />
+            )
+
+        return (
+            <TransitionPopup
+                popupClassName="score"
+                isVisible={isVisible}
+                showClose={true}
+                handlePopupFocus={handlePopupFocus}
+                handleCloseClick={handleScoreToggle}
+                myChild={myChild}
+            />
         )
-
-    return (
-        <TransitionPopup
-            popupClassName="score"
-            isVisible={isVisible}
-            showClose={true}
-            handlePopupFocus={handlePopupFocus}
-            handleCloseClick={handleScoreToggle}
-            myChild={myChild}
-        />
-    )
+    }
 }
 
 ScoreTransitionPopup.propTypes = {
+    isPhone: PropTypes.bool.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
     handleScoreToggle: PropTypes.func.isRequired,
     handlePopupFocus: PropTypes.func.isRequired
