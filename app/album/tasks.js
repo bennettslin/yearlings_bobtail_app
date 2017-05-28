@@ -1983,7 +1983,7 @@ module.exports = [
     },
     {
         taskName: `Begin work on updating components strategically.`,
-        workedHours: 5,
-        neededHours: 5
-    },
+        workedHours: 13,
+        neededHours: 13
+    }
 ]
