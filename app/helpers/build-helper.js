@@ -17,7 +17,7 @@ const _tempStore = {
     _popupAnchors: [],
     _wikiIndex: 1,
     _portalLinks: {},
-    _songTimes: [],
+    _verseTimes: [],
     _currentStanzaTime: 0,
     _currentStanzaType: null,
     _currentSongStanzaTimes: [],
@@ -82,7 +82,7 @@ const _initialPrepareAllSongs = (album) => {
             _tempStore._annotations = []
             _tempStore._verseIndexCounter = -1
             _tempStore._songDotKeys = {}
-            _tempStore._songTimes = []
+            _tempStore._verseTimes = []
             _tempStore._currentAnnotationIndices = []
             _tempStore._firstRightAnnotationIndexOfVerse = 0
             _tempStore._hasSideStanzas = false
@@ -124,7 +124,7 @@ const _initialPrepareAllSongs = (album) => {
             // song.dotKeys = _tempStore._songDotKeys
 
             // Add times for all verses to song object.
-            song.times = _tempStore._songTimes
+            song.verseTimes = _tempStore._verseTimes
 
             // And dot stanza count for dev purposes.
             song.dotStanzas = _tempStore._dotStanzaCounter
@@ -472,7 +472,7 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
         lyric.lastAnnotationIndex = _tempStore._annotations.length
 
         // Add time to song times.
-        _tempStore._songTimes.push(lyric.time)
+        _tempStore._verseTimes.push(lyric.time)
     }
 
     if (Array.isArray(lyric)) {

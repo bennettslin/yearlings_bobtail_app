@@ -29,7 +29,7 @@ import { SHOWN,
 
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
-import { getSongObject, getSongsLength, getIsLogue, getAnnotationObject, getBookColumnIndex, getOverview, getSongTimes } from '../helpers/data-helper'
+import { getSongObject, getSongsLength, getIsLogue, getAnnotationObject, getBookColumnIndex, getOverview, getSongVerseTimes } from '../helpers/data-helper'
 import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
 import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
@@ -833,7 +833,7 @@ class App extends Component {
                 selectedVerseIndex = getVerseIndexForTime(props.selectedSongIndex, selectedTime),
 
                 // We will start at the beginning of the selected verse.
-                songTimes = getSongTimes(props.selectedSongIndex),
+                songTimes = getSongVerseTimes(props.selectedSongIndex),
                 selectedTimePlayed = songTimes[selectedVerseIndex]
 
             this.selectTime(selectedTimePlayed)
@@ -863,7 +863,7 @@ class App extends Component {
     interactivateVerseDirection(direction) {
         const { accessedOn,
                 selectedSongIndex } = this.props,
-            songTimes = getSongTimes(selectedSongIndex),
+            songTimes = getSongVerseTimes(selectedSongIndex),
             timesLength = songTimes.length
 
         let { interactivatedVerseIndex } = this.state
@@ -931,7 +931,7 @@ class App extends Component {
         selectedVerseIndex = 0,
         selectedSongIndex = this.props.selectedSongIndex
     }) {
-        const songTimes = getSongTimes(selectedSongIndex),
+        const songTimes = getSongVerseTimes(selectedSongIndex),
             selectedTimePlayed = songTimes[selectedVerseIndex]
 
         this._selectTimeAndVerse({

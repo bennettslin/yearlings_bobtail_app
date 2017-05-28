@@ -566,6 +566,14 @@ class EventManager extends Component {
      *********/
 
     handleAudioSliderTouchBegin(e) {
+
+        const { isLogue } = this.props
+
+        // Can't be handled in logue.
+        if (isLogue) {
+            return
+        }
+
         const { nativeEvent,
                 target } = e,
             { clientX } = nativeEvent,

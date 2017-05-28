@@ -13,14 +13,6 @@ const AudioBanner = (props) => (
 
 AudioBanner.propTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
-    sliderMousedOrTouched: PropTypes.bool.isRequired,
-    interactivatedVerseIndex: PropTypes.number.isRequired,
-    selectedVerseIndex: PropTypes.number.isRequired,
-    sliderVerseIndex: PropTypes.number.isRequired,
-    sliderRatio: PropTypes.number,
-    sliderTime: PropTypes.number,
-    selectedTimePlayed: PropTypes.number.isRequired,
-    handleAudioSliderTouchBegin: PropTypes.func.isRequired,
     audioTimerChild: PropTypes.element.isRequired
 }
 
@@ -32,29 +24,13 @@ const AudioBannerView = ({
 
     // From props.
     selectedSongIndex,
-    interactivatedVerseIndex,
-    selectedVerseIndex,
-    sliderVerseIndex,
-    sliderMousedOrTouched,
-    sliderRatio,
-    sliderTime,
-    selectedTimePlayed,
-    handleAudioSliderTouchBegin,
+    audioTimerChild,
 
-    audioTimerChild
+...other }) => (
 
-}) => (
     <div className="audio-block audio-banner-block">
-        <AudioSlider
-            isMousedOrTouched={sliderMousedOrTouched}
+        <AudioSlider {...other}
             selectedSongIndex={selectedSongIndex}
-            interactivatedVerseIndex={interactivatedVerseIndex}
-            selectedVerseIndex={selectedVerseIndex}
-            sliderVerseIndex={sliderVerseIndex}
-            sliderRatio={sliderRatio}
-            sliderTime={sliderTime}
-            selectedTimePlayed={selectedTimePlayed}
-            onTouch={handleAudioSliderTouchBegin}
         />
         <div className="audio-banner audio-display-block">
             <div className="audio-banner-title">

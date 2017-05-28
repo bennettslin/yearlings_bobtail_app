@@ -63,12 +63,12 @@ export const getSongStanzaTimes = (songIndex) => {
 
 export const getSongTotalTime = (songIndex) => {
     const selectedSong = getSongObject(songIndex)
-    return selectedSong.totalTime || 0
+    return selectedSong.totalTime || Number.MAX_SAFE_INTEGER
 }
 
-export const getSongTimes = (songIndex) => {
+export const getSongVerseTimes = (songIndex) => {
     const selectedSong = getSongObject(songIndex)
-    return selectedSong.times || []
+    return selectedSong.verseTimes || []
 }
 
 export const getBookStartingIndices = () => {

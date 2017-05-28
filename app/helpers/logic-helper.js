@@ -290,7 +290,7 @@ export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
     }
 
     const selectedSong = getSongObject(songIndex),
-        songTimes = selectedSong.times,
+        songTimes = selectedSong.verseTimes,
 
         beginTime = songTimes[verseIndex],
         endTime = verseIndex < songTimes.length - 1 ? songTimes[verseIndex + 1] : selectedSong.totalTime
@@ -320,7 +320,7 @@ export const getVerseIndexForTime = (songIndex, time) => {
         let selectedVerseIndex = 0
 
         // Select corresponding verse.
-        while (selectedVerseIndex < selectedSong.times.length - 1 && time >= selectedSong.times[selectedVerseIndex + 1]) {
+        while (selectedVerseIndex < selectedSong.verseTimes.length - 1 && time >= selectedSong.verseTimes[selectedVerseIndex + 1]) {
             selectedVerseIndex++
         }
 
