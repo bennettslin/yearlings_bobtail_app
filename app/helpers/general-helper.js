@@ -24,14 +24,28 @@ export const getComponentShouldUpdate = ({
     while (counter < updatingPropsArray.length) {
         const updatingKey = updatingPropsArray[counter]
 
-        if (props[updatingKey] !== nextProps[updatingKey]) {
-            return true
+        if (typeof updatingKey === 'string') {
+            // Mismatch, so update!
+            if (props[updatingKey] !== nextProps[updatingKey]) {
+                return true
+            }
+
+        } else {
+            const { onlyIfTrueInNextProps,
+                    subUpdatingKey } = updatingKey
+
+            if (nextProps[onlyIfTrueInNextProps]) {
+                // Mismatch, so update!
+                if (props[subUpdatingKey] !== nextProps[subUpdatingKey]) {
+                    return true
+                }
+            }
         }
 
         counter++
     }
 
-    // If loop ends with no mismatch, return false.
+    // If loop ends with no mismatch, don't update.
     return false
 }
 

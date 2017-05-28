@@ -186,14 +186,14 @@ class AccessManager extends Component {
                 break
             }
             case ENTER: {
-                const { popupAnnotation } = props
+                const { annotationObject } = props
 
                 if (accessedPopupAnchorIndex > 0 &&
-                    popupAnnotation &&
-                    popupAnnotation.popupAnchors &&
-                    popupAnnotation.popupAnchors.length) {
+                    annotationObject &&
+                    annotationObject.popupAnchors &&
+                    annotationObject.popupAnchors.length) {
 
-                    const popupAnchorObject = popupAnnotation.popupAnchors[accessedPopupAnchorIndex - 1]
+                    const popupAnchorObject = annotationObject.popupAnchors[accessedPopupAnchorIndex - 1]
 
                     // It's a wiki anchor.
                     if (typeof popupAnchorObject === 'string') {

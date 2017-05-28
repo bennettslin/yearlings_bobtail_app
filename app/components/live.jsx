@@ -56,7 +56,7 @@ const LiveView = ({
 
     isPhone,
     isDesktop,
-    popupAnnotation,
+    annotationObject,
     popupLogueOverview,
     popupSongOverview,
     title,
@@ -166,7 +166,7 @@ const LiveView = ({
         verseBarHidden = !isSelectedVerseAbove && !isSelectedVerseBelow,
 
         annotationPopupProps = {
-            popupAnnotation,
+            annotationObject,
             selectedAnnotationIndex,
             selectedCarouselIndex,
             selectedScoreIndex,

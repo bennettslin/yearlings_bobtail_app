@@ -16,33 +16,31 @@ class CarouselAnnotation extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-
+                    'selectedSongIndex',
+                    'isAccessedAnnotation',
+                    'isSelectedAnnotation',
+                    {
+                        onlyIfTrueInNextProps: 'isSelectedAnnotation',
+                        subUpdatingKey: 'accessedPopupAnchorIndex'
+                    }
                 ]
             })
 
-        if (props.annotationIndex === 1) {
-            console.error('props:', JSON.stringify(props, null, 2));
-            console.error('nextProps:', JSON.stringify(nextProps, null, 2));
-            console.error(`componentShouldUpdate:`, componentShouldUpdate);
-        }
-
-        return componentShouldUpdate || true
+        return componentShouldUpdate
     }
 
     render() {
         const { annotationIndex,
                 handleLyricAnnotationSelect,
+                isSelectedAnnotation,
                 ...other } = this.props,
 
-            isSelectedAnnotation = annotationIndex === other.selectedAnnotationIndex,
-            isAccessedAnnotation = annotationIndex === other.accessedAnnotationIndex,
             handleTitleClick = !isSelectedAnnotation ? e => handleLyricAnnotationSelect(e, annotationIndex, true) : null
 
         return (
             <CarouselAnnotationView {...other}
                 annotationIndex={annotationIndex}
                 isSelectedAnnotation={isSelectedAnnotation}
-                isAccessedAnnotation={isAccessedAnnotation}
                 handleTitleClick={handleTitleClick}
             />
         )
@@ -51,6 +49,9 @@ class CarouselAnnotation extends Component {
 
 CarouselAnnotation.propTypes = {
     annotationIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+    isAccessedAnnotation: PropTypes.bool.isRequired,
+    isSelectedAnnotation: PropTypes.bool.isRequired,
     handleLyricAnnotationSelect: PropTypes.func.isRequired
 }
 
@@ -61,7 +62,6 @@ CarouselAnnotation.propTypes = {
 const CarouselAnnotationView = ({
 
     // From props.
-    annotation,
     annotationIndex,
     annotationColumn,
     annotationDotKeys,
@@ -77,14 +77,14 @@ const CarouselAnnotationView = ({
     >
         <AnnotationSection {...other}
             inCarousel={true}
-            popupAnnotation={annotation}
         />
     </div>
 )
 
 CarouselAnnotationView.propTypes = {
-    annotation: PropTypes.object.isRequired,
-    annotationIndex: PropTypes.number.isRequired
+    annotationIndex: PropTypes.number.isRequired,
+    annotationColumn: PropTypes.string,
+    annotationDotKeys: PropTypes.object.isRequired
 }
 
 export default CarouselAnnotation

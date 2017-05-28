@@ -11,17 +11,17 @@ import { DOT_STANZA_CONSTANT } from '../../helpers/constants'
 
 const AnnotationSection = (props) => {
 
-    const { popupAnnotation } = props
+    const { annotationObject } = props
 
-    return popupAnnotation ? (
+    return annotationObject ? (
         <AnnotationSectionView {...props}
-            title={popupAnnotation.title}
+            title={annotationObject.title}
         />
     ) : null
 }
 
 AnnotationSection.propTypes = {
-    popupAnnotation: PropTypes.object
+    annotationObject: PropTypes.object
 }
 
 /****************
@@ -53,7 +53,7 @@ const AnnotationSectionView = ({
                         isSmall={true}
                         isSelected={isSelectedAnnotation}
                         accessHighlighted={isAccessedAnnotation}
-                        dotKeys={other.popupAnnotation.dotKeys}
+                        dotKeys={other.annotationObject.dotKeys}
                         handleDotButtonClick={handleTitleClick}
                     />
                 </div>
@@ -62,7 +62,7 @@ const AnnotationSectionView = ({
                         'anchor-block',
                         'text-anchor-block',
                         'annotation-title',
-                        other.popupAnnotation.dotKeys,
+                        other.annotationObject.dotKeys,
                         { 'selected': inCarousel ? isSelectedAnnotation : true,
                           'access-highlighted': isAccessedAnnotation }
                     )}

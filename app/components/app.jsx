@@ -124,7 +124,7 @@ class App extends Component {
             accessedSongIndex: props.selectedSongIndex,
             accessedPopupAnchorIndex: getPopupAnchorIndexForDirection(props, 1),
 
-            popupAnnotation: getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
+            annotationObject: getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
 
             popupLogueOverview: isLogue ? popupOverview : '',
             popupSongOverview: isLogue ? '' : popupOverview,
@@ -328,10 +328,10 @@ class App extends Component {
          * suddenly empty when popup fades out.
          */
         if (selectedAnnotationIndex) {
-            const popupAnnotation = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
+            const annotationObject = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
 
             this.setState({
-                popupAnnotation
+                annotationObject
             })
         }
 

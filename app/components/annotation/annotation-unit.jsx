@@ -8,10 +8,10 @@ import AnnotationCard from './annotation-card'
 
 const AnnotationUnit = (props) => {
 
-    const { popupAnnotation } = props,
-        carouselAnnotationIndex = popupAnnotation.annotationIndex
+    const { annotationObject } = props,
+        carouselAnnotationIndex = annotationObject.annotationIndex
 
-    if (Array.isArray(popupAnnotation.cards)) {
+    if (Array.isArray(annotationObject.cards)) {
         return (
             <AnnotationUnitView {...props}
                 carouselAnnotationIndex={carouselAnnotationIndex}
@@ -20,7 +20,7 @@ const AnnotationUnit = (props) => {
     } else {
         return (
             <AnnotationCard {...props}
-                card={popupAnnotation.cards}
+                card={annotationObject.cards}
                 carouselAnnotationIndex={carouselAnnotationIndex}
             />
         )
@@ -28,7 +28,7 @@ const AnnotationUnit = (props) => {
 }
 
 AnnotationUnit.propTypes = {
-    popupAnnotation: PropTypes.object.isRequired
+    annotationObject: PropTypes.object.isRequired
 }
 
 /****************
@@ -38,11 +38,11 @@ AnnotationUnit.propTypes = {
 const AnnotationUnitView = ({
 
     // From props.
-    popupAnnotation,
+    annotationObject,
 
 ...other }) => (
     <div className="annotation-cards-block">
-        {popupAnnotation.cards.map((card, index) => (
+        {annotationObject.cards.map((card, index) => (
             <AnnotationCard {...other}
                 key={index}
                 card={card}
@@ -52,7 +52,7 @@ const AnnotationUnitView = ({
 )
 
 AnnotationUnitView.propTypes = {
-    popupAnnotation: PropTypes.object.isRequired
+    annotationObject: PropTypes.object.isRequired
 }
 
 export default AnnotationUnit

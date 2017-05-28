@@ -17,9 +17,9 @@ class Carousel extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
+                    'selectedSongIndex',
                     'accessedAnnotationIndex',
                     'selectedAnnotationIndex',
-                    'selectedSongIndex',
                     'accessedPopupAnchorIndex'
                 ]
             })
@@ -47,6 +47,8 @@ Carousel.propTypes = {
 const CarouselView = ({
 
     selectedSongIndex,
+    accessedAnnotationIndex,
+    selectedAnnotationIndex,
     handleAnnotationPrevious,
     handleAnnotationNext,
 
@@ -60,13 +62,20 @@ const CarouselView = ({
                 <div className="carousel-annotations-block">
                     <div className="carousel-annotation carousel-annotation-0"></div>
                     {annotations.map((annotation, index) => {
+                        const annotationIndex = index + 1,
+                            isAccessedAnnotation = annotationIndex === accessedAnnotationIndex,
+                            isSelectedAnnotation = annotationIndex === selectedAnnotationIndex
+
                         return (
                             <CarouselAnnotation {...other}
                                 key={index}
-                                annotation={annotation}
-                                annotationIndex={index + 1}
+                                annotationObject={annotation}
                                 annotationColumn={annotation.column}
                                 annotationDotKeys={annotation.dotKeys}
+                                annotationIndex={annotationIndex}
+                                isAccessedAnnotation={isAccessedAnnotation}
+                                isSelectedAnnotation={isSelectedAnnotation}
+                                selectedSongIndex={selectedSongIndex}
                             />
                         )
                     })}
