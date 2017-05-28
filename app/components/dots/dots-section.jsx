@@ -7,19 +7,7 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
  * CONTAINER *
  *************/
 
-const DotsSection = (props) => (
-    <DotsSectionView {...props} />
-)
-
-DotsSection.propTypes = {
-    handlePopupContainerClick: PropTypes.func.isRequired
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-class DotsSectionView extends Component {
+class DotsSection extends Component {
 
     constructor(props) {
         super(props)
@@ -74,18 +62,50 @@ class DotsSectionView extends Component {
         const { hasInteractivatedDotText } = this.state
 
         return (
-            <div
-                className="section dots-section"
-                onClick={this._onContainerClick}
-            >
-                <DotBlock {...this.props}
-                    inDotsSection={true}
-                    hasInteractivatedDotText={hasInteractivatedDotText}
-                    setHasInteractivatedDotText={e => this._setHasInteractivatedDotText(e)}
-                />
-            </div>
+            <DotsSectionView {...this.props}
+                handleContainerClick={this._onContainerClick}
+                hasInteractivatedDotText={hasInteractivatedDotText}
+                setHasInteractivatedDotText={this._setHasInteractivatedDotText}
+            />
         )
     }
+}
+
+DotsSection.propTypes = {
+    handlePopupContainerClick: PropTypes.func.isRequired,
+    selectedDotsIndex: PropTypes.number.isRequired,
+    accessedDotIndex: PropTypes.number.isRequired,
+    selectedDotKeys: PropTypes.object.isRequired
+}
+
+/****************
+ * PRESENTATION *
+ ****************/
+
+const DotsSectionView = ({
+
+    handleContainerClick,
+    hasInteractivatedDotText,
+    setHasInteractivatedDotText,
+
+...other }) => (
+
+    <div
+        className="section dots-section"
+        onClick={handleContainerClick}
+    >
+        <DotBlock {...other}
+            inDotsSection={true}
+            hasInteractivatedDotText={hasInteractivatedDotText}
+            setHasInteractivatedDotText={setHasInteractivatedDotText}
+        />
+    </div>
+)
+
+DotsSectionView.propTypes = {
+    hasInteractivatedDotText: PropTypes.number.isRequired,
+    setHasInteractivatedDotText: PropTypes.func.isRequired,
+    handleContainerClick: PropTypes.func.isRequired
 }
 
 export default DotsSection

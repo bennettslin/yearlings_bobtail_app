@@ -10,6 +10,12 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class CarouselAnnotation extends Component {
 
+    constructor(props) {
+        super(props)
+
+        this._handleTitleClick = this._handleTitleClick.bind(this)
+    }
+
     shouldComponentUpdate(nextProps) {
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
@@ -29,19 +35,19 @@ class CarouselAnnotation extends Component {
         return componentShouldUpdate
     }
 
+    _handleTitleClick(e) {
+        if (!this.props.isSelectedAnnotation) {
+            const { annotationIndex,
+                    handleLyricAnnotationSelect } = this.props
+
+            handleLyricAnnotationSelect(e, annotationIndex, true)
+        }
+    }
+
     render() {
-        const { annotationIndex,
-                handleLyricAnnotationSelect,
-                isSelectedAnnotation,
-                ...other } = this.props,
-
-            handleTitleClick = !isSelectedAnnotation ? e => handleLyricAnnotationSelect(e, annotationIndex, true) : null
-
         return (
-            <CarouselAnnotationView {...other}
-                annotationIndex={annotationIndex}
-                isSelectedAnnotation={isSelectedAnnotation}
-                handleTitleClick={handleTitleClick}
+            <CarouselAnnotationView {...this.props}
+                handleTitleClick={this._handleTitleClick}
             />
         )
     }
