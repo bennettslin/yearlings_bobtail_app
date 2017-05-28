@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import ReactAudioPlayer from 'react-audio-player'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 // https://www.npmjs.com/package/react-audio-player
@@ -13,6 +14,23 @@ class AudioPlayer extends Component {
 
         this._handleListen = this._handleListen.bind(this)
         this._handleEnded = this._handleEnded.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'mp3',
+                    'isPlaying',
+                    'playerIndex',
+                    'selectedSongIndex',
+                    'updatedTimePlayed'
+                ]
+            })
+
+        return componentShouldUpdate
     }
 
     componentDidMount() {
@@ -113,15 +131,10 @@ class AudioPlayer extends Component {
     }
 
     render() {
-
         const { mp3,
                 playerIndex } = this.props,
 
             isSelected = this._getIsSelected()
-
-        // if (isSelected) {
-        //     console.error('render again');
-        // }
 
         return (
             <div className={classnames(

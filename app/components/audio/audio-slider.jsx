@@ -5,6 +5,7 @@ import { getSongVerseTimes,
          getSongStanzaTimes,
          getSongTotalTime } from '../../helpers/data-helper'
 import { getFormattedTime } from '../../helpers/format-helper'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
 
 /*************
@@ -15,6 +16,25 @@ class AudioSlider extends Component {
     constructor(props) {
         super(props)
         this.handleTouchDown = this.handleTouchDown.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'sliderMousedOrTouched',
+                    'selectedSongIndex',
+                    'selectedVerseIndex',
+                    'interactivatedVerseIndex',
+                    'sliderVerseIndex',
+                    'selectedTimePlayed',
+                    'sliderRatio'
+                ]
+            })
+
+        return componentShouldUpdate
     }
 
     handleTouchDown(e) {
