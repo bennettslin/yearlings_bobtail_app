@@ -4,7 +4,13 @@ import { LYRIC_COLUMN_KEYS,
          PORTAL,
          REFERENCE } from './constants'
 
-import { getSongObject, getIsLogue, getAnnotationObject, getVerseObject } from './data-helper'
+import { getAnnotationObject,
+         getVerseObject,
+         getIsLogue,
+         getSongVerseTimes,
+         getSongTotalTime,
+         getSongAnnotationsDotKeys,
+         getAnnotationsLength } from './data-helper'
 import { intersects } from './dot-helper'
 import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from './responsive-helper'
 
@@ -44,7 +50,8 @@ export const getAnnotationIndexForDirection = ({
      * - from getAnnotationIndexForVerseIndex.
      */
 
-    const selectedSong = getSongObject(props.selectedSongIndex),
+    const { selectedSongIndex } = props,
+        annotationsLength = getAnnotationsLength(selectedSongIndex),
 
         // If a direction is given for this method, it has modulo.
         useModulo = !!direction
@@ -57,10 +64,9 @@ export const getAnnotationIndexForDirection = ({
         currentAnnotationIndex = 1
     }
 
-    if (selectedSong.annotations) {
-        const annotationsLength = selectedSong.annotations.length,
-            selectedDotKeys = props.selectedDotKeys,
-            annotationsDotKeys = selectedSong.annotationsDotKeys
+    if (annotationsLength) {
+        const selectedDotKeys = props.selectedDotKeys,
+            annotationsDotKeys = getSongAnnotationsDotKeys(selectedSongIndex)
 
         let returnIndex = currentAnnotationIndex,
             directionSwitchCounter = 0,
@@ -122,7 +128,7 @@ export const getAnnotationIndexForDirection = ({
 
                 // Or if this annotation isn't in the shown column...
                 !shouldShowAnnotationForColumn({
-                    selectedSongIndex: props.selectedSongIndex,
+                    selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex,
                     annotationIndex: returnIndex,
                     state
@@ -167,6 +173,7 @@ export const getAnnotationIndexForVerseIndex = ({
     direction = -1,
     verseIndex = props.selectedVerseIndex,
     lyricColumnIndex = props.selectedLyricColumnIndex
+
 }) => {
     /**
      * Called:
@@ -176,8 +183,10 @@ export const getAnnotationIndexForVerseIndex = ({
      * - when lyric column is switched.
      */
 
-    const verse = getVerseObject(props.selectedSongIndex, verseIndex),
-        annotationsLength = _getAnnotationsLength(props)
+    const { selectedSongIndex } = props,
+
+        verse = getVerseObject(selectedSongIndex, verseIndex),
+        annotationsLength = getAnnotationsLength(selectedSongIndex)
 
     if (!verse) {
         return -1
@@ -206,9 +215,9 @@ export const getAnnotationIndexForVerseIndex = ({
             // Move inward, which is the opposite direction.
             currentCounter -= direction
 
-            const annotation = getAnnotationObject(props.selectedSongIndex, returnIndex),
+            const annotation = getAnnotationObject(selectedSongIndex, returnIndex),
                 showAnnotationForColumn = shouldShowAnnotationForColumn({
-                    selectedSongIndex: props.selectedSongIndex,
+                    selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex,
                     annotationIndex: returnIndex,
                     state
@@ -244,11 +253,6 @@ export const getAnnotationIndexForVerseIndex = ({
         specifiedDirection: direction,
         lyricColumnIndex
     })
-}
-
-const _getAnnotationsLength = (props) => {
-    const selectedSong = getSongObject(props.selectedSongIndex)
-    return selectedSong.annotations ? selectedSong.annotations.length : 0
 }
 
 export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
@@ -289,11 +293,9 @@ export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
         }
     }
 
-    const selectedSong = getSongObject(songIndex),
-        songTimes = selectedSong.verseTimes,
-
-        beginTime = songTimes[verseIndex],
-        endTime = verseIndex < songTimes.length - 1 ? songTimes[verseIndex + 1] : selectedSong.totalTime
+    const verseTimes = getSongVerseTimes(songIndex),
+        beginTime = verseTimes[verseIndex],
+        endTime = verseIndex < verseTimes.length - 1 ? verseTimes[verseIndex + 1] : getSongTotalTime(songIndex)
 
     return {
         beginTime,
@@ -314,13 +316,15 @@ export const getVerseIndexForAccessedAnnotationIndex = (songIndex, annotationInd
 }
 
 export const getVerseIndexForTime = (songIndex, time) => {
-    const selectedSong = getSongObject(songIndex)
 
-    if (time >= 0 && time <= selectedSong.totalTime) {
+    const verseTimes = getSongVerseTimes(songIndex),
+        totalTime = getSongTotalTime(songIndex)
+
+    if (time >= 0 && time <= totalTime) {
         let selectedVerseIndex = 0
 
         // Select corresponding verse.
-        while (selectedVerseIndex < selectedSong.verseTimes.length - 1 && time >= selectedSong.verseTimes[selectedVerseIndex + 1]) {
+        while (selectedVerseIndex < verseTimes.length - 1 && time >= verseTimes[selectedVerseIndex + 1]) {
             selectedVerseIndex++
         }
 

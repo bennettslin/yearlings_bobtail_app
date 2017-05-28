@@ -42,6 +42,10 @@ export const getSongsLength = (songs = AlbumData.songs) => {
     return songs.length
 }
 
+export const getAnnotationsLength = (songIndex) => {
+    return getAnnotationsArray(songIndex).length
+}
+
 export const getBookColumnIndex = (songIndex) => {
     const { bookStartingIndices } = AlbumData
 
@@ -54,6 +58,11 @@ export const getSongTitle = (songIndex, songs) => {
         isLogue = getIsLogue(songIndex, songs)
 
     return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
+}
+
+export const getSongAnnotationsDotKeys = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.annotationsDotKeys || []
 }
 
 export const getSongStanzaTimes = (songIndex) => {
