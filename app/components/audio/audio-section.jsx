@@ -20,14 +20,9 @@ class AudioSection extends Component {
                     'selectedSongIndex',
                     'isPhone',
                     'isPlaying',
-                    'showOverlay',
                     'titleInAudio'
                 ]
             })
-
-        // console.error('props:', props);
-        // console.error('nextProps:', nextProps);
-        // console.error(`componentShouldUpdate:`, componentShouldUpdate);
 
         return componentShouldUpdate
     }
@@ -53,7 +48,11 @@ class AudioSection extends Component {
 }
 
 AudioSection.propTypes = {
-    selectedSongIndex: PropTypes.number.isRequired
+    selectedSongIndex: PropTypes.number.isRequired,
+    selectedAudioOptionIndex: PropTypes.number.isRequired,
+    isPhone: PropTypes.bool.isRequired,
+    isPlaying: PropTypes.bool.isRequired,
+    titleInAudio: PropTypes.bool.isRequired
 }
 
 /****************
@@ -66,7 +65,6 @@ const AudioSectionView = ({
     timerInAudio,
     titleInAudio,
     isPhone,
-    selectedAdminIndex,
     isPlaying,
     selectedAudioOptionIndex,
 
@@ -88,15 +86,15 @@ const AudioSectionView = ({
 }) => {
 
     const audioButtonsProps = {
+            selectedAudioOptionIndex,
             titleInAudio,
             isPlaying,
-            selectedAudioOptionIndex,
             isPrologue,
             isFirstSong,
             isLastSong,
             isEpilogue,
-            handleAudioPlay,
 
+            handleAudioPlay,
             handleAudioPreviousSong,
             handleAudioNextSong,
             handleAudioOptionsToggle
@@ -106,9 +104,6 @@ const AudioSectionView = ({
         <div
             className="section audio-section"
         >
-            {selectedAdminIndex &&
-                <h2>audio</h2>
-            }
             {timerInAudio && (
                 <div className="audio-timer-block">
                     {audioTimerChild}
@@ -124,7 +119,6 @@ const AudioSectionView = ({
 }
 
 AudioSectionView.propTypes = {
-    selectedAdminIndex: PropTypes.number,
     selectedAudioOptionIndex: PropTypes.number.isRequired,
 
     isPrologue: PropTypes.bool.isRequired,
