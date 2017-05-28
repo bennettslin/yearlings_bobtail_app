@@ -25,14 +25,16 @@ export const getComponentShouldUpdate = ({
         const updatingKey = updatingPropsArray[counter]
 
         if (typeof updatingKey === 'string') {
+            const propsValue = props[updatingKey],
+                nextPropsValue = nextProps[updatingKey]
 
             // If object, compare first level of values.
-            if (typeof props[updatingKey] === 'object') {
-                return !getSetsAreSame(props[updatingKey], nextProps[updatingKey])
+            if (typeof propsValue === 'object') {
+                return !getSetsAreSame(propsValue, nextPropsValue)
 
             } else {
                 // Mismatch, so update!
-                if (props[updatingKey] !== nextProps[updatingKey]) {
+                if (propsValue !== nextPropsValue) {
                     return true
                 }
             }
@@ -61,6 +63,11 @@ export const getComponentShouldUpdate = ({
 
 export const getSetsAreSame = (smallerSet, largerSet) => {
     // Assume that larger set is superset of smaller set.
+
+    // If either set is null, just return whether they are both null.
+    if (smallerSet === null || largerSet === null) {
+        return smallerSet === largerSet
+    }
 
     return Object.keys(smallerSet).reduce((allSame, key) => {
         const valueIsSame = smallerSet[key] === largerSet[key] ||

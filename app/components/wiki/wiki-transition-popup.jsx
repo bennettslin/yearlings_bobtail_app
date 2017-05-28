@@ -1,35 +1,47 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import WikiSection from './wiki-section'
 import TransitionPopup from '../popup/transition-popup'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-/*************
- * CONTAINER *
- *************/
+class WikiTransitionPopup extends Component {
 
-const WikiTransitionPopup = ({
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'selectedWikiIndex',
+                    'selectedWikiUrl'
+                ]
+            })
 
-    selectedWikiIndex,
-    handleWikiToggle,
-    handlePopupFocus,
+        return componentShouldUpdate
+    }
 
-...other }) => {
+    render() {
+        const { selectedWikiIndex,
+                handleWikiToggle,
+                handlePopupFocus,
+                ...other } = this.props,
 
-    const isVisible = !!selectedWikiIndex,
-        myChild = (
-            <WikiSection {...other} />
+            isVisible = !!selectedWikiIndex,
+            myChild = (
+                <WikiSection {...other} />
+            )
+
+        return (
+            <TransitionPopup
+                popupClassName="wiki"
+                showClose={true}
+                isVisible={isVisible}
+                handlePopupFocus={handlePopupFocus}
+                handleCloseClick={handleWikiToggle}
+                myChild={myChild}
+            />
         )
-
-    return (
-        <TransitionPopup
-            popupClassName="wiki"
-            isVisible={isVisible}
-            showClose={true}
-            handlePopupFocus={handlePopupFocus}
-            handleCloseClick={handleWikiToggle}
-            myChild={myChild}
-        />
-    )
+    }
 }
 
 WikiTransitionPopup.propTypes = {

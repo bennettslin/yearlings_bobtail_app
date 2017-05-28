@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `Lyric anchor block dot margin is wonky when faded out.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Show selected annotation in carousel on load.`,
         workedHours: 0,
         neededHours: 2
