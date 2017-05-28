@@ -21,15 +21,15 @@ class NavSection extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-
+                    'showSingleBookColumn',
+                    'accessedSongIndex',
+                    'selectedSongIndex',
+                    'selectedNavIndex',
+                    'selectedBookColumnIndex'
                 ]
             })
 
-        console.error('props:', JSON.stringify(props, null, 2));
-        console.error('nextProps:', JSON.stringify(nextProps, null, 2));
-        console.error(`componentShouldUpdate:`, componentShouldUpdate);
-
-        return componentShouldUpdate || true
+        return componentShouldUpdate
     }
 
     render() {
@@ -40,11 +40,11 @@ class NavSection extends Component {
 }
 
 NavSection.propTypes = {
-    showSingleBookColumn: PropTypes.bool,
+    showSingleBookColumn: PropTypes.bool.isRequired,
     accessedSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
-    selectedNavIndex: PropTypes.number,
-    selectedBookColumnIndex: PropTypes.number,
+    selectedNavIndex: PropTypes.number.isRequired,
+    selectedBookColumnIndex: PropTypes.number.isRequired,
     handleNavExpand: PropTypes.func,
     handleNavBookSelect: PropTypes.func,
     handleNavSongSelect: PropTypes.func.isRequired
