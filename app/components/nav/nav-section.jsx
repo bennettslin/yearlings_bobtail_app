@@ -96,8 +96,12 @@ const NavSectionView = ({
                     />
                 </div>
                 <div className="books-block">
-                    <div className={`book-column-block column-1${!showSingleBookColumn || selectedBookColumnIndex === 1 ? ' column-shown' : ' column-hidden'}`}>
-                        <div className={`book-column`}>
+                    <div className={classnames(
+                        'book-column-block',
+                        'column-1',
+                        !showSingleBookColumn || selectedBookColumnIndex === 1 ? ' column-shown' : ' column-hidden'
+                    )}>
+                        <div className="book-column">
                             {/* songs 1 - 9 */}
                             <NavBook {...navItemProps}
                                 songs={songs}
@@ -121,8 +125,12 @@ const NavSectionView = ({
                             }
                         </div>
                     </div>
-                    <div className={`book-column-block column-2${!showSingleBookColumn || selectedBookColumnIndex === 2 ? ' column-shown' : ' column-hidden'}`}>
-                        <div className={`book-column`}>
+                    <div className={classnames(
+                        'book-column-block',
+                        'column-2',
+                        !showSingleBookColumn || selectedBookColumnIndex === 2 ? ' column-shown' : ' column-hidden'
+                    )}>
+                        <div className="book-column">
                             {/* songs 10 - 18 */}
                             <NavBook {...navItemProps}
                                 songs={songs}
