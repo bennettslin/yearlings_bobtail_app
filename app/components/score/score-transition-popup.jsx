@@ -4,10 +4,6 @@ import ScoreSection from './score-section'
 import TransitionPopup from '../popup/transition-popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-/*************
- * CONTAINER *
- *************/
-
 class ScoreTransitionPopup extends Component {
 
     shouldComponentUpdate(nextProps) {
@@ -40,8 +36,8 @@ class ScoreTransitionPopup extends Component {
         return (
             <TransitionPopup
                 popupClassName="score"
-                isVisible={isVisible}
                 showClose={true}
+                isVisible={isVisible}
                 handlePopupFocus={handlePopupFocus}
                 handleCloseClick={handleScoreToggle}
                 myChild={myChild}

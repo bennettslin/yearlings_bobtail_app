@@ -1,35 +1,46 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import TitleSection from './title-section'
 import TransitionPopup from '../popup/transition-popup'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-/*************
- * CONTAINER *
- *************/
+class TitleTransitionPopup extends Component {
 
-const TitleTransitionPopup = ({
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'selectedTitleIndex'
+                ]
+            })
 
-    selectedTitleIndex,
-    handleTitleToggle,
-    handlePopupFocus,
+        return componentShouldUpdate
+    }
 
-...other }) => {
+    render() {
+        const { selectedTitleIndex,
+                handleTitleToggle,
+                handlePopupFocus,
+                ...other } = this.props,
 
-    const isVisible = !!selectedTitleIndex,
-        myChild = (
-            <TitleSection {...other} />
+            isVisible = !!selectedTitleIndex,
+            myChild = (
+                <TitleSection {...other} />
+            )
+
+        return (
+            <TransitionPopup
+                popupClassName="title"
+                showClose={true}
+                isVisible={isVisible}
+                handlePopupFocus={handlePopupFocus}
+                handleCloseClick={handleTitleToggle}
+                myChild={myChild}
+            />
         )
-
-    return (
-        <TransitionPopup
-            popupClassName="title"
-            isVisible={isVisible}
-            showClose={true}
-            handlePopupFocus={handlePopupFocus}
-            handleCloseClick={handleTitleToggle}
-            myChild={myChild}
-        />
-    )
+    }
 }
 
 TitleTransitionPopup.propTypes = {
