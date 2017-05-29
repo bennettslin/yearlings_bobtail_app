@@ -33,7 +33,11 @@ class VerseUnit extends Component {
                     'isSelected',
                     'isAfterSelected',
                     'isSliderSelected',
-                    'isAfterSliderSelected'
+                    'isAfterSliderSelected',
+                    {
+                        onlyIfTrueInNextProps: 'inVerseBar',
+                        subUpdatingKey: 'barVerseIndex'
+                    }
                 ]
             })
 
@@ -139,6 +143,7 @@ class VerseUnit extends Component {
                 isAudioButtonEnabled={isInteractivated}
                 isTitle={isTitle}
                 isSelected={isSelected}
+                isSliderSelected={isSliderSelected}
                 isInteractable={isInteractable}
                 isHoverable={isHoverable}
                 sliderPlacementClassName={sliderPlacementClassName}
