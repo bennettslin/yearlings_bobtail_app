@@ -9,7 +9,7 @@ import Button from '../button/button'
 
 // TODO: Make audio button take up width of line.
 
-const LyricsAudioButton = ({
+const VerseAudioButton = ({
 
     isAudioButtonEnabled,
     isPlaying,
@@ -29,13 +29,13 @@ const LyricsAudioButton = ({
     return (
         <div
             className={classnames(
-                'lyrics-audio-button-block',
+                'verse-audio-button-block',
                 { 'audio-button-enabled': isAudioButtonEnabled }
             )}
         >
-            <div className="lyrics-audio-button-child">
+            <div className="verse-audio-button-child">
                 <Button
-                    buttonName="lyrics-audio"
+                    buttonName="verse-audio"
                     isCustomSize={true}
                     isEnabled={isAudioButtonEnabled}
                     iconClass={isSelected ? 'audio-colour' : 'audio-nav'}
@@ -47,7 +47,7 @@ const LyricsAudioButton = ({
     )
 }
 
-LyricsAudioButton.propTypes = {
+VerseAudioButton.propTypes = {
     isAudioButtonEnabled: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
@@ -55,4 +55,4 @@ LyricsAudioButton.propTypes = {
     handleAudioButtonClick: PropTypes.func.isRequired
 }
 
-export default LyricsAudioButton
+export default VerseAudioButton

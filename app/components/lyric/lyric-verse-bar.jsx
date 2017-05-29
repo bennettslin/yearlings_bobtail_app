@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import LyricsVerse from '../lyrics/lyrics-verse'
+import VerseUnit from '../verse/verse-unit'
 import { getVerseObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
@@ -50,7 +50,7 @@ class LyricVerseBar extends Component {
                 <div className="verse-bar"
                     onClick={handleVerseBarSelect}
                 >
-                    <LyricsVerse {...other}
+                    <VerseUnit {...other}
                         inVerseBar={true}
                         verseObject={verseObject}
                     />

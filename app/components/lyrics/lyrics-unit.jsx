@@ -136,7 +136,8 @@ const LyricsUnitView = ({
                         </div>
                     )
                 } else {
-                    const shownStanzaIndex = inMain && !isSub && stanzaIndex,
+                    const shownStanzaIndex = inMain && !isSub ?
+                        stanzaIndex : undefined,
                         showStanzaTypeAndIndex = !subsequent && !!shownStanzaIndex
 
                     let itsStanzaType

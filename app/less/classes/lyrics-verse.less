@@ -1,4 +1,4 @@
-@lyrics-audio-button-block-width: 1.5em;
+@verse-audio-button-block-width: 1.5em;
 
 .lyrics-block {
     .verse {
@@ -10,17 +10,17 @@
 
         &:first-child {
             padding-top: @verse-padding;
-            .lyrics-audio-button-block {
+            .verse-audio-button-block {
                 margin-top: -@verse-padding;
-                .lyrics-audio-button-child {
+                .verse-audio-button-child {
                     padding-top: @verse-padding;
                 }
             }
         }
         &:last-child {
             padding-bottom: @verse-padding;
-            .lyrics-audio-button-block {
-                .lyrics-audio-button-child {
+            .verse-audio-button-block {
+                .verse-audio-button-child {
                     padding-bottom: @verse-padding;
                 }
             }
@@ -32,13 +32,13 @@
             // Make all this styling better, obviously.
             &.interactivated {
 
-                .lyrics-audio-button-block {
+                .verse-audio-button-block {
                     &.audio-button-enabled {
-                        left: -@lyrics-audio-button-block-width * 0.8;
+                        left: -@verse-audio-button-block-width * 0.8;
                     }
                 }
 
-                .lyrics-audio-button {
+                .verse-audio-button {
                     opacity: 1;
                     font-size: 1em;
                     animation: fontSnapback 0.16s;
@@ -51,16 +51,16 @@
         }
     }
 
-    .lyrics-audio-button-block {
+    .verse-audio-button-block {
         position: absolute;
         left: 0;
         height: 100%;
-        width: @lyrics-audio-button-block-width;
+        width: @verse-audio-button-block-width;
 
         transition: left @animation-fast;
 
         // Either button or icon.
-        .lyrics-audio-button-child {
+        .verse-audio-button-child {
             box-sizing: border-box;
             height: 100%;
             width: 100%;
@@ -70,16 +70,16 @@
             align-items: center;
         }
 
-        .lyrics-audio-button {
+        .verse-audio-button {
             position: relative;
             font-size: 0.1em;
             opacity: 0;
-            z-index: @lyrics-audio-button-z-index;
+            z-index: @verse-audio-button-z-index;
             transition: opacity @animation-default, font @animation-default;
 
             .animated-background {
-                width: @lyrics-audio-button-block-width;
-                height: @lyrics-audio-button-block-width;
+                width: @verse-audio-button-block-width;
+                height: @verse-audio-button-block-width;
             }
         }
     }
