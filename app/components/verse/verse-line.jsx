@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import TextBlock from '../text/text-block'
 import { TITLE, CENTRE } from '../../helpers/constants'
 
-class LyricsLine extends Component {
+class VerseLine extends Component {
 
     componentDidMount() {
         /**
@@ -130,7 +130,7 @@ class LyricsLine extends Component {
     }
 }
 
-LyricsLine.propTypes = {
+VerseLine.propTypes = {
     // TODO: Are these still being passed?
     deviceIndex: PropTypes.number,
     isPortrait: PropTypes.bool,
@@ -139,4 +139,4 @@ LyricsLine.propTypes = {
     columnKey: PropTypes.string.isRequired
 }
 
-export default LyricsLine
+export default VerseLine

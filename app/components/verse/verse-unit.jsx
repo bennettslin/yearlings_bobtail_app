@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-import LyricsLine from '../lyrics/lyrics-line'
+import VerseLine from './verse-line'
 import VerseAudioButton from './verse-audio-button'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from '../../helpers/constants'
 import { getSetsAreSame } from '../../helpers/general-helper'
@@ -187,7 +187,7 @@ class VerseUnitView extends Component {
         props.handleVerseElementSlide(this.myVerse)
     }
 
-    getLyricsLine({ key, index, columnKey, other }) {
+    getVerseLine({ key, index, columnKey, other }) {
 
         const { isSelected,
                 inVerseBar,
@@ -206,7 +206,7 @@ class VerseUnitView extends Component {
             lyricsLineProps.key = index
         }
 
-        return <LyricsLine {...other} {...lyricsLineProps} />
+        return <VerseLine {...other} {...lyricsLineProps} />
     }
 
     render() {
@@ -267,7 +267,7 @@ class VerseUnitView extends Component {
                         {DOUBLESPEAKER_KEYS.filter(key => {
                             return key === hiddenLyricColumnKey ? false : verseObject[key]
                         }).map((key, index) => {
-                            return this.getLyricsLine({
+                            return this.getVerseLine({
                                 key,
                                 index,
                                 columnKey: key,
@@ -276,7 +276,7 @@ class VerseUnitView extends Component {
                         })}
                     </div>
                 ) : (
-                    this.getLyricsLine({
+                    this.getVerseLine({
                         columnKey: isTitle ? TITLE : LEFT,
                         other
                     })
