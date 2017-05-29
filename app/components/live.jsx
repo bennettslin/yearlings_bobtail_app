@@ -96,7 +96,6 @@ const LiveView = ({
     isOverlaidAnnotation,
     isSelectedVerseAbove,
     isSelectedVerseBelow,
-    selectedVerse,
 
     lyricSectionRef,
     scoreSectionRef,
@@ -254,7 +253,6 @@ const LiveView = ({
             isLogue,
             showOneOfTwoLyricColumns,
             isPlaying,
-            selectedVerse,
             accessedAnnotationIndex,
             selectedSongIndex,
             selectedAnnotationIndex,

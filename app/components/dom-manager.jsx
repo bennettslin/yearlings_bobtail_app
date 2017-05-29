@@ -6,7 +6,7 @@ import AudioPlayersSection from './audio/audio-players-section'
 import { DEVICE_OBJECTS,
          OVERVIEW_OPTIONS,
          SHOWN } from '../helpers/constants'
-import { getSongTitle, getVerseObject } from '../helpers/data-helper'
+import { getSongTitle } from '../helpers/data-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
 class DomManager extends Component {
@@ -24,8 +24,6 @@ class DomManager extends Component {
               selectedAnnotationIndex,
               selectedTitleIndex,
               selectedWikiIndex,
-              selectedVerseIndex,
-              sliderVerseIndex,
 
               accessedOn,
 
@@ -45,8 +43,6 @@ class DomManager extends Component {
             isPhone = getIsPhone(deviceIndex),
 
             selectedSongTitle = getSongTitle(selectedSongIndex),
-            shownVerseIndex = !isNaN(sliderVerseIndex) && sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
-            selectedVerse = getVerseObject(selectedSongIndex, shownVerseIndex),
 
             isLyricExpandable = getIsLyricExpandable(deviceIndex),
             isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
@@ -99,7 +95,6 @@ class DomManager extends Component {
                     isDesktop={isDesktop}
                     isPhone={isPhone}
                     selectedSongTitle={selectedSongTitle}
-                    selectedVerse={selectedVerse}
                     isLyricExpandable={isLyricExpandable}
                     showOverlay={showOverlay}
                     isOverviewShown={isOverviewShown}

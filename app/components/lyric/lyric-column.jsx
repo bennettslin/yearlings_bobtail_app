@@ -4,6 +4,7 @@ import Button from '../button/button'
 import LyricsSection from '../lyrics/lyrics-section'
 import LyricVerseBar from './lyric-verse-bar'
 import { LYRIC_COLUMN_TOGGLE_KEY, LYRIC_COLUMN_KEYS } from '../../helpers/constants'
+import { getVerseObject } from '../../helpers/data-helper'
 import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
@@ -94,7 +95,6 @@ class LyricColumn extends Component {
 }
 
 LyricColumn.propTypes = {
-    selectedVerse: PropTypes.object,
     appMounted: PropTypes.bool.isRequired,
     deviceIndex: PropTypes.number.isRequired,
     isLogue: PropTypes.bool.isRequired,
@@ -125,8 +125,6 @@ LyricColumn.propTypes = {
 const LyricColumnView = ({
 
     // From props.
-    selectedVerse,
-
     isLogue,
     showOneOfTwoLyricColumns,
     selectedLyricColumnIndex,
@@ -146,13 +144,21 @@ const LyricColumnView = ({
 
 ...other }) => {
 
-    const hiddenLyricColumnKey = getHiddenLyricColumnKey({
+    const { selectedSongIndex,
+            selectedVerseIndex,
+            sliderVerseIndex } = other,
+
+        // Show the slider verse if there is one.
+        verseIndex = sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
+        verseObject = getVerseObject(selectedSongIndex, verseIndex),
+
+        hiddenLyricColumnKey = getHiddenLyricColumnKey({
             showOneOfTwoLyricColumns,
             selectedLyricColumnIndex
         }),
 
         verseBarProps = {
-            verseObject: selectedVerse,
+            verseObject,
             hiddenLyricColumnKey,
             handleVerseBarSelect,
             handleVerseBarWheel
