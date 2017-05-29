@@ -1,61 +1,81 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotStanza from './dot-stanza'
 import LyricsStanza from './lyrics-stanza'
 import { TITLE, LEFT, RIGHT } from '../../helpers/constants'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const LyricsUnit = (props) => {
+class LyricsUnit extends Component {
 
-    const { stanzaArray,
-            isTitleUnit,
-            hiddenLyricColumnKey } = props,
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
 
-        { unitClassName,
-          stanzaIndex,
-          stanzaType,
-          substanzaType,
-          sideStanzaType,
-          sideSubstanzaType,
-          subsequent,
-          dotStanza,
-          subStanza,
-          topSideStanza,
-          bottomSideStanza } = stanzaArray[stanzaArray.length - 1],
+                ]
+            })
 
-        isBottomOnly = !topSideStanza && !!bottomSideStanza,
-        topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
-        isDotOnly = dotStanza && stanzaArray.length === 1,
-        hasSide = topSideStanza || bottomSideStanza,
-        truncateMain = hasSide && hiddenLyricColumnKey === LEFT,
-        showMain = !isDotOnly && (!hasSide || hiddenLyricColumnKey !== LEFT || truncateMain),
+        // console.error('props:', JSON.stringify(props, null, 2));
+        // console.error('nextProps:', JSON.stringify(nextProps, null, 2));
+        // console.error(`componentShouldUpdate:`, componentShouldUpdate);
 
-        showSide = hasSide && hiddenLyricColumnKey !== RIGHT
+        return componentShouldUpdate || true
+    }
 
-    return (
-        <LyricsUnitView {...props}
-            unitClassName={unitClassName}
-            stanzaIndex={stanzaIndex}
-            stanzaType={isTitleUnit ? TITLE : stanzaType}
-            substanzaType={substanzaType}
-            sideStanzaType={sideStanzaType}
-            sideSubstanzaType={sideSubstanzaType}
-            subsequent={subsequent}
-            dotStanza={dotStanza}
-            subStanza={subStanza}
-            topSideStanza={topSideStanza}
-            bottomSideStanza={bottomSideStanza}
-            isBottomOnly={isBottomOnly}
-            showMain={showMain}
-            truncateMain={truncateMain}
-            showSide={showSide}
-            topSideSubStanza={topSideSubStanza}
-        />
-    )
+    render() {
+        const { stanzaArray,
+                isTitleUnit,
+                hiddenLyricColumnKey } = this.props,
+
+            { unitClassName,
+              stanzaIndex,
+              stanzaType,
+              substanzaType,
+              sideStanzaType,
+              sideSubstanzaType,
+              subsequent,
+              dotStanza,
+              subStanza,
+              topSideStanza,
+              bottomSideStanza } = stanzaArray[stanzaArray.length - 1],
+
+            isBottomOnly = !topSideStanza && !!bottomSideStanza,
+            topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
+            isDotOnly = dotStanza && stanzaArray.length === 1,
+            hasSide = topSideStanza || bottomSideStanza,
+            truncateMain = hasSide && hiddenLyricColumnKey === LEFT,
+            showMain = !isDotOnly && (!hasSide || hiddenLyricColumnKey !== LEFT || truncateMain),
+
+            showSide = hasSide && hiddenLyricColumnKey !== RIGHT
+
+        return (
+            <LyricsUnitView {...this.props}
+                unitClassName={unitClassName}
+                stanzaIndex={stanzaIndex}
+                stanzaType={isTitleUnit ? TITLE : stanzaType}
+                substanzaType={substanzaType}
+                sideStanzaType={sideStanzaType}
+                sideSubstanzaType={sideSubstanzaType}
+                subsequent={subsequent}
+                dotStanza={dotStanza}
+                subStanza={subStanza}
+                topSideStanza={topSideStanza}
+                bottomSideStanza={bottomSideStanza}
+                isBottomOnly={isBottomOnly}
+                showMain={showMain}
+                truncateMain={truncateMain}
+                showSide={showSide}
+                topSideSubStanza={topSideSubStanza}
+            />
+        )
+    }
 }
 
 LyricsUnit.propTypes = {
@@ -93,8 +113,6 @@ const LyricsUnitView = ({
     showSide,
 
 ...other }) => {
-
-    // TODO: Don't bother passing hidden lyric column key to verse if it's not necessary.
     const getStanza = ({ stanzaArray, inMain, truncateMain, addSub, isSub }) => {
             if (stanzaArray) {
                 if (addSub) {
