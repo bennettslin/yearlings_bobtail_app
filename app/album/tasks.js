@@ -1,5 +1,14 @@
 module.exports = [
-
+    {
+        taskName: `Stagger carousel annotation show and hide to prevent weird jump.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Overview prevents carousel scroll.`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Lyric anchor block dot margin is wonky when faded out.`,
         workedHours: 0,

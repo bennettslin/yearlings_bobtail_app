@@ -7,7 +7,6 @@ import { DEVICE_OBJECTS,
          OVERVIEW_OPTIONS,
          SHOWN } from '../helpers/constants'
 import { getSongTitle, getVerseObject } from '../helpers/data-helper'
-import { getHiddenLyricColumnKey } from '../helpers/logic-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
 class DomManager extends Component {
@@ -18,12 +17,10 @@ class DomManager extends Component {
               deviceIndex,
               windowWidth,
               windowHeight,
-              showOneOfTwoLyricColumns,
               selectedAdminIndex,
               selectedSongIndex,
               selectedOverviewIndex,
               selectedScoreIndex,
-              selectedLyricColumnIndex,
               selectedAnnotationIndex,
               selectedTitleIndex,
               selectedWikiIndex,
@@ -50,11 +47,6 @@ class DomManager extends Component {
             selectedSongTitle = getSongTitle(selectedSongIndex),
             shownVerseIndex = !isNaN(sliderVerseIndex) && sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
             selectedVerse = getVerseObject(selectedSongIndex, shownVerseIndex),
-
-            hiddenLyricColumnKey = getHiddenLyricColumnKey({
-                showOneOfTwoLyricColumns,
-                selectedLyricColumnIndex
-            }),
 
             isLyricExpandable = getIsLyricExpandable(deviceIndex),
             isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
@@ -108,9 +100,6 @@ class DomManager extends Component {
                     isPhone={isPhone}
                     selectedSongTitle={selectedSongTitle}
                     selectedVerse={selectedVerse}
-                    hiddenLyricColumnKey={hiddenLyricColumnKey}
-                    showOneOfTwoLyricColumns={showOneOfTwoLyricColumns}
-
                     isLyricExpandable={isLyricExpandable}
                     showOverlay={showOverlay}
                     isOverviewShown={isOverviewShown}

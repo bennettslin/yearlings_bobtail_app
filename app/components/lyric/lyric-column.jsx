@@ -4,27 +4,24 @@ import Button from '../button/button'
 import LyricsSection from '../lyrics/lyrics-section'
 import LyricVerseBar from './lyric-verse-bar'
 import { LYRIC_COLUMN_TOGGLE_KEY } from '../../helpers/constants'
+import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const LyricColumn = ({
-
-    hasDoubleColumns,
-
-...other }) => {
+const LyricColumn = (props) => {
 
     const {
         showOneOfTwoLyricColumns,
         selectedLyricColumnIndex
-    } = other,
+    } = props,
 
-    showEarButton = !!showOneOfTwoLyricColumns && !!hasDoubleColumns,
+    showEarButton = showOneOfTwoLyricColumns,
     earButtonText = selectedLyricColumnIndex === 0 ? 'left' : 'right'
 
     return (
-        <LyricColumnView {...other}
+        <LyricColumnView {...props}
             showEarButton={showEarButton}
             earButtonText={earButtonText}
         />
@@ -32,7 +29,6 @@ const LyricColumn = ({
 }
 
 LyricColumn.propTypes = {
-    hasDoubleColumns: PropTypes.bool,
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     selectedLyricColumnIndex: PropTypes.number.isRequired
 }
@@ -100,10 +96,15 @@ class LyricColumnView extends Component {
 
                 ...other } = this.props,
 
+            hiddenLyricColumnKey = getHiddenLyricColumnKey({
+                showOneOfTwoLyricColumns: other.showOneOfTwoLyricColumns,
+                selectedLyricColumnIndex: other.selectedLyricColumnIndex
+            }),
+
             verseBarProps = {
                 verseObject: selectedVerse,
                 showOneOfTwoLyricColumns: other.showOneOfTwoLyricColumns,
-                hiddenLyricColumnKey: other.hiddenLyricColumnKey,
+                hiddenLyricColumnKey,
                 handleVerseBarSelect,
                 handleVerseBarWheel
             }

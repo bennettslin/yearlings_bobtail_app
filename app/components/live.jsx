@@ -17,7 +17,6 @@ import ScoreTransitionPopup from './score/score-transition-popup'
 import TitleToggle from './title/title-toggle'
 import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
-import { getSongObject } from '../helpers/data-helper'
 import { getWikiUrl } from '../helpers/logic-helper'
 import { LYRIC_SECTION_EXPAND_KEY } from '../helpers/constants'
 
@@ -27,13 +26,11 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../helpers/constants'
 
 const Live = (props) => {
 
-    const selectedSong = getSongObject(props.selectedSongIndex),
-        selectedWikiUrl = getWikiUrl(props)
+    const selectedWikiUrl = getWikiUrl(props)
 
     return (
         <LiveView {...props}
             selectedWikiUrl={selectedWikiUrl}
-            hasDoubleColumns={selectedSong.doubleColumns}
         />
     )
 }
@@ -80,7 +77,6 @@ const LiveView = ({
     accessedPopupAnchorIndex,
     accessedDotIndex,
 
-    hiddenLyricColumnKey,
     interactivatedVerseIndex,
 
     sliderMoving,
@@ -144,10 +140,7 @@ const LiveView = ({
     handleVerseInteractivate,
     handleWikiToggle,
     handleCarouselToggle,
-    stopPropagation,
-
-    // From controller.
-    hasDoubleColumns
+    stopPropagation
 
 }) => {
 
@@ -261,8 +254,6 @@ const LiveView = ({
             sliderVerseIndex,
             isLogue,
             showOneOfTwoLyricColumns,
-            hiddenLyricColumnKey,
-            hasDoubleColumns,
             isPlaying,
             selectedVerse,
             accessedOn,
@@ -393,9 +384,8 @@ const LiveView = ({
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
             shrinkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
             showOverlay ? 'overlay-shown' : 'overlay-hidden',
-            { 'show-one-of-two-lyrics': showOneOfTwoLyricColumns,
-              'show-left-lyric': selectedLyricColumnIndex === 0,
-              'show-right-lyric': selectedLyricColumnIndex === 1,
+            { 'show-only-left': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 0,
+              'show-only-right': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 1,
               'timer-in-audio': timerInAudio,
               'title-in-audio': titleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,

@@ -65,7 +65,6 @@ module.exports = {
     tip: {
         description: 'placeholder tip'
     },
-    doubleColumns: true,
     totalTime: 200,
     overview: `Taiwan showed me how differently I would have turned out had my parents not immigrated to America. And yet, I was still worlds away from what Sasha needed me to be. Life seemed as infinitely fluid as it was immovably fixed, and I wasn't sure which terrified me more. Our house cat Odin died of old age later that summer, just as I was working out my spiritual beliefs. And yet, the eternal life promised by faith seemed no less dreadful to me than the finality of death.`,
     title: {
