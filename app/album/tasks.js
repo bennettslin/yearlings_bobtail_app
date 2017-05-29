@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Nav toggle button doesn't hide all the way`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Stagger carousel annotation show and hide to prevent weird jump.`,
         workedHours: 0,
         neededHours: 1

@@ -5,22 +5,13 @@ import LyricsSection from '../lyrics/lyrics-section'
 import LyricVerseBar from './lyric-verse-bar'
 import { LYRIC_COLUMN_TOGGLE_KEY, LYRIC_COLUMN_KEYS } from '../../helpers/constants'
 import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const LyricColumn = (props) => {
-    return (
-        <LyricColumnView {...props} />
-    )
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-class LyricColumnView extends Component {
+class LyricColumn extends Component {
 
     constructor(props) {
         super(props)
@@ -32,6 +23,33 @@ class LyricColumnView extends Component {
         this.state = {
             handlingHeightTransition: false
         }
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'appMounted',
+                    'deviceIndex',
+                    'isLogue',
+                    'isPlaying',
+                    'isPortrait',
+                    'selectedSongIndex',
+                    'accessedAnnotationIndex',
+                    'selectedAnnotationIndex',
+                    'sliderVerseIndex',
+                    'interactivatedVerseIndex',
+                    'selectedLyricColumnIndex',
+                    'selectedVerseIndex',
+                    'showOneOfTwoLyricColumns',
+                    'sliderMousedOrTouched',
+                    'verseBarHidden'
+                ]
+            })
+
+        return componentShouldUpdate
     }
 
     componentDidUpdate(prevProps) {
@@ -63,72 +81,120 @@ class LyricColumnView extends Component {
     }
 
     render() {
-
-                // From props.
-        const { isLogue,
-                selectedVerse,
-
-                showOneOfTwoLyricColumns,
-                selectedLyricColumnIndex,
-
-                handleLyricColumnSelect,
-                handleVerseBarSelect,
-                handleVerseBarWheel,
-
-                lyricExpandButtonChild,
-
-                ...other } = this.props,
-
-            hiddenLyricColumnKey = getHiddenLyricColumnKey({
-                showOneOfTwoLyricColumns,
-                selectedLyricColumnIndex
-            }),
-
-            verseBarProps = {
-                verseObject: selectedVerse,
-                hiddenLyricColumnKey,
-                handleVerseBarSelect,
-                handleVerseBarWheel
-            }
-
         return (
-            <div
-                className="column lyric-column"
-                ref={(node) => (this.myLyricColumn = node)}
-                onTransitionEnd={this._handleTransition}
-            >
-                <div className="lyric-column-animatable"
-                    onTransitionEnd={this._handleAnimatableTransition}
-                >
-                    {!isLogue &&
-                        <LyricVerseBar {...verseBarProps}
-                            isAbove={true}
-                        />
-                    }
-                    {!isLogue &&
-                        <LyricVerseBar {...verseBarProps}
-                        />
-                    }
-                    {showOneOfTwoLyricColumns &&
-                        <div className="lyric-button-block ear-button-block">
-                            <Button
-                                accessKey={LYRIC_COLUMN_TOGGLE_KEY}
-                                iconText={LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]}
-                                isLarge={true}
-                                handleClick={handleLyricColumnSelect}
-                            />
-                        </div>
-                    }
-                    {lyricExpandButtonChild}
-                    <LyricsSection {...other}
-                        hiddenLyricColumnKey={hiddenLyricColumnKey}
-                        handlingHeightTransition={this.state.handlingHeightTransition}
-                        completeHeightTransition={this.completeHeightTransition}
-                    />
-                </div>
-            </div>
+            <LyricColumnView {...this.props}
+                myRef={(node) => (this.myLyricColumn = node)}
+                handlingHeightTransition={this.state.handlingHeightTransition}
+                handleTransition={this._handleTransition}
+                handleAnimatableTransition={this._handleAnimatableTransition}
+                completeHeightTransition={this.completeHeightTransition}
+            />
         )
     }
+}
+
+LyricColumn.propTypes = {
+    selectedVerse: PropTypes.object,
+    appMounted: PropTypes.bool.isRequired,
+    deviceIndex: PropTypes.number.isRequired,
+    isLogue: PropTypes.bool.isRequired,
+    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
+    sliderMousedOrTouched: PropTypes.bool.isRequired,
+    verseBarHidden: PropTypes.bool.isRequired,
+    isPlaying: PropTypes.bool.isRequired,
+    isPortrait: PropTypes.bool.isRequired,
+
+    selectedSongIndex: PropTypes.number.isRequired,
+    accessedAnnotationIndex: PropTypes.number,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    sliderVerseIndex: PropTypes.number.isRequired,
+    interactivatedVerseIndex: PropTypes.number.isRequired,
+    selectedLyricColumnIndex: PropTypes.number.isRequired,
+    selectedVerseIndex: PropTypes.number.isRequired,
+
+    handleLyricColumnSelect: PropTypes.func.isRequired,
+    handleVerseBarSelect: PropTypes.func.isRequired,
+    handleVerseBarWheel: PropTypes.func.isRequired,
+    lyricExpandButtonChild: PropTypes.element
+}
+
+/****************
+ * PRESENTATION *
+ ****************/
+
+const LyricColumnView = ({
+
+    // From props.
+    selectedVerse,
+
+    isLogue,
+    showOneOfTwoLyricColumns,
+    selectedLyricColumnIndex,
+
+    handleLyricColumnSelect,
+    handleVerseBarSelect,
+    handleVerseBarWheel,
+
+    lyricExpandButtonChild,
+
+    // From controller.
+    myRef,
+    handlingHeightTransition,
+    handleTransition,
+    handleAnimatableTransition,
+    completeHeightTransition,
+
+...other }) => {
+
+    const hiddenLyricColumnKey = getHiddenLyricColumnKey({
+            showOneOfTwoLyricColumns,
+            selectedLyricColumnIndex
+        }),
+
+        verseBarProps = {
+            verseObject: selectedVerse,
+            hiddenLyricColumnKey,
+            handleVerseBarSelect,
+            handleVerseBarWheel
+        }
+
+    return (
+        <div
+            className="column lyric-column"
+            ref={myRef}
+            onTransitionEnd={handleTransition}
+        >
+            <div className="lyric-column-animatable"
+                onTransitionEnd={handleAnimatableTransition}
+            >
+                {!isLogue &&
+                    <LyricVerseBar {...verseBarProps}
+                        isAbove={true}
+                    />
+                }
+                {!isLogue &&
+                    <LyricVerseBar {...verseBarProps}
+                    />
+                }
+                {showOneOfTwoLyricColumns &&
+                    <div className="lyric-button-block ear-button-block">
+                        <Button
+                            accessKey={LYRIC_COLUMN_TOGGLE_KEY}
+                            iconText={LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]}
+                            isLarge={true}
+                            handleClick={handleLyricColumnSelect}
+                        />
+                    </div>
+                }
+                {lyricExpandButtonChild}
+                <LyricsSection {...other}
+                    hiddenLyricColumnKey={hiddenLyricColumnKey}
+                    handlingHeightTransition={handlingHeightTransition}
+                    completeHeightTransition={completeHeightTransition}
+                />
+            </div>
+        </div>
+    )
 }
 
 LyricColumnView.propTypes = {
@@ -138,7 +204,13 @@ LyricColumnView.propTypes = {
     handleLyricColumnSelect: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired,
-    lyricExpandButtonChild: PropTypes.element
+    lyricExpandButtonChild: PropTypes.element,
+
+    myRef: PropTypes.func.isRequired,
+    handlingHeightTransition: PropTypes.bool.isRequired,
+    handleTransition: PropTypes.func.isRequired,
+    handleAnimatableTransition: PropTypes.func.isRequired,
+    completeHeightTransition: PropTypes.func.isRequired
 }
 
 export default LyricColumn
