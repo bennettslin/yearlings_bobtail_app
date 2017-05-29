@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import VerseUnit from '../verse/verse-unit'
+import LyricVerse from './lyric-verse'
 
 /*************
  * CONTAINER *
@@ -18,7 +18,6 @@ const LyricStanza = (props) => (
 const LyricStanzaView = ({
 
     // From props.
-    selectedVerseIndex,
     showStanzaTypeAndIndex,
     stanzaArray,
     stanzaIndex,
@@ -43,16 +42,9 @@ const LyricStanzaView = ({
                 typeClassName
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
-
-                    const { verseIndex } = verseObject,
-                        isSelected = verseIndex === selectedVerseIndex,
-                        isAfterSelected = verseIndex > selectedVerseIndex
-
                     return !verseObject.stanzaMap && !verseObject.unitMap &&
-                        <VerseUnit {...other}
+                        <LyricVerse {...other}
                             key={stanzaVerseIndex}
-                            isSelected={isSelected}
-                            isAfterSelected={isAfterSelected}
                             verseObject={verseObject}
                         />
                     }

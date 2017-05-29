@@ -52,6 +52,7 @@ class VerseBar extends Component {
                 >
                     <VerseUnit {...other}
                         inVerseBar={true}
+                        barVerseIndex={verseIndex}
                         verseObject={verseObject}
                     />
                 </div>

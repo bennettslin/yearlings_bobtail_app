@@ -1,17 +1,48 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-
 import VerseLine from './verse-line'
 import VerseAudioButton from './verse-audio-button'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from '../../helpers/constants'
-import { getSetsAreSame } from '../../helpers/general-helper'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
 class VerseUnit extends Component {
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'deviceIndex',
+                    'appMounted',
+                    'isPortrait',
+                    'verseBarHidden',
+                    'sliderMousedOrTouched',
+                    'isPlaying',
+                    'accessedAnnotationIndex',
+                    'selectedSongIndex',
+                    'selectedAnnotationIndex',
+                    'interactivatedVerseIndex',
+                    'hiddenLyricColumnKey',
+                    'inMain',
+                    'isSelected',
+                    'isAfterSelected',
+                    'isSliderSelected',
+                    'isAfterSliderSelected',
+                    {
+                        onlyIfTrueInNextProps: 'inVerseBar',
+                        subUpdatingKey: 'barVerseIndex'
+                    }
+                ]
+            })
+
+        return componentShouldUpdate
+    }
 
     render() {
         const { inMain,
@@ -22,7 +53,8 @@ class VerseUnit extends Component {
                 handleLyricVerseSelect,
                 handleVerseInteractivate,
                 sliderMousedOrTouched,
-                sliderVerseIndex,
+                isSliderSelected,
+                isAfterSliderSelected,
 
                 ...other } = this.props,
 
@@ -35,8 +67,6 @@ class VerseUnit extends Component {
               time,
               verseIndex } = verseObject,
 
-            isSliderSelected = !isNaN(sliderVerseIndex) && verseIndex === sliderVerseIndex,
-
             /**
              * Not interactable if technically selected, but currently not selected
              * due to verse bar shown.
@@ -47,9 +77,9 @@ class VerseUnit extends Component {
             notVerseBarPrevented = verseBarHidden || !isSelected,
 
             isInteractivated = interactivatedVerseIndex === verseIndex,
-            isHoverable = inMain &&
+            isHoverable =
+                isInteractable &&
                 !isInteractivated &&
-                !isTitle &&
                 interactivatedVerseIndex === -1 &&
                 notVerseBarPrevented,
 
@@ -66,12 +96,14 @@ class VerseUnit extends Component {
         let sliderPlacementClassName = ''
 
         if (sliderMousedOrTouched && inMain && !isTitle) {
-            if (verseIndex < sliderVerseIndex) {
-                sliderPlacementClassName = 'before-slider'
-            } else if (verseIndex > sliderVerseIndex) {
-                sliderPlacementClassName = 'after-slider'
-            } else {
+            if (isSliderSelected) {
                 sliderPlacementClassName = 'on-slider'
+
+            } else if (isAfterSliderSelected) {
+                sliderPlacementClassName = 'after-slider'
+
+            } else {
+                sliderPlacementClassName = 'before-slider'
             }
         }
 
@@ -129,12 +161,12 @@ VerseUnit.propTypes = {
     verseObject: PropTypes.object.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired,
+    isSliderSelected: PropTypes.bool.isRequired,
     inMain: PropTypes.bool,
     inVerseBar: PropTypes.bool,
     verseBarHidden: PropTypes.bool,
     sliderMousedOrTouched: PropTypes.bool,
     interactivatedVerseIndex: PropTypes.number,
-    sliderVerseIndex: PropTypes.number,
     handleLyricAnnotationSelect: PropTypes.func,
     handleLyricPlay: PropTypes.func,
     handleLyricVerseSelect: PropTypes.func,
@@ -143,7 +175,8 @@ VerseUnit.propTypes = {
 
 VerseUnit.defaultProps = {
     isSelected: false,
-    isAfterSelected: false
+    isAfterSelected: false,
+    isSliderSelected: false
 }
 
 /****************
@@ -161,10 +194,6 @@ class VerseUnitView extends Component {
 
     componentDidMount() {
         this._checkIsSelectedVerse(this.props)
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return !getSetsAreSame(this.props, nextProps)
     }
 
     componentDidUpdate(prevProps) {
