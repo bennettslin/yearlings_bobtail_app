@@ -137,10 +137,15 @@
         &.in-side {
             .text-shadow-mixin(@odd-verse-colour);
         }
+    }
+}
 
-        // Interactivated verse.
-        &.interactivated, &.hoverable:hover {
-            .text-shadow-mixin(@audio-highlight-colour);
-        }
+/**
+ * Verse has highlighted styling only when interactivated, or when hovered and
+ * no other verse is interactivated.
+ */
+.slider-not-moving {
+    &.is-not-verse-interactivated .verse.hoverable:hover, &.is-verse-interactivated .verse.interactivated {
+        .text-shadow-mixin(@audio-highlight-colour);
     }
 }

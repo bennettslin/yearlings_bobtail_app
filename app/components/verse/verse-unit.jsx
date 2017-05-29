@@ -80,7 +80,6 @@ class VerseUnit extends Component {
             isHoverable =
                 isInteractable &&
                 !isInteractivated &&
-                interactivatedVerseIndex === -1 &&
                 notVerseBarPrevented,
 
             // Allows clicks on selected or interactivated verse to deinteractivate it.
