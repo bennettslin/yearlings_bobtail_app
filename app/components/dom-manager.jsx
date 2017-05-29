@@ -18,7 +18,7 @@ class DomManager extends Component {
               deviceIndex,
               windowWidth,
               windowHeight,
-              showSingleLyricColumn,
+              showOneOfTwoLyricColumns,
               selectedAdminIndex,
               selectedSongIndex,
               selectedOverviewIndex,
@@ -52,7 +52,7 @@ class DomManager extends Component {
             selectedVerse = getVerseObject(selectedSongIndex, shownVerseIndex),
 
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
-                showSingleLyricColumn,
+                showOneOfTwoLyricColumns,
                 selectedLyricColumnIndex
             }),
 
@@ -109,7 +109,7 @@ class DomManager extends Component {
                     selectedSongTitle={selectedSongTitle}
                     selectedVerse={selectedVerse}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
-                    showSingleLyricColumn={showSingleLyricColumn}
+                    showOneOfTwoLyricColumns={showOneOfTwoLyricColumns}
 
                     isLyricExpandable={isLyricExpandable}
                     showOverlay={showOverlay}

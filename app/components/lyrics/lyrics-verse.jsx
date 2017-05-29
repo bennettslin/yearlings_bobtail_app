@@ -266,7 +266,7 @@ class LyricsVerseView extends Component {
                         hiddenLyricColumnKey && `hidden-${hiddenLyricColumnKey}`
                     )}>
                         {DOUBLESPEAKER_KEYS.filter(key => {
-                            return key === hiddenLyricColumnKey && other.showSingleLyricColumn ? false : verseObject[key]
+                            return key === hiddenLyricColumnKey && other.showOneOfTwoLyricColumns ? false : verseObject[key]
                         }).map((key, index) => {
                             return this.getLyricsLine({
                                 key,

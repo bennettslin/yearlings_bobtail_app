@@ -40,7 +40,6 @@ const OverallView = ({
     selectedVerseIndex,
     selectedNavIndex,
     selectedDotsIndex,
-    showSingleLyricColumn,
 
     handleNavSongSelect,
 
@@ -61,7 +60,6 @@ const OverallView = ({
                     selectedVerseIndex={selectedVerseIndex}
                     selectedNavIndex={selectedNavIndex}
                     selectedDotsIndex={selectedDotsIndex}
-                    showSingleLyricColumn={showSingleLyricColumn}
                 />
                 <AdminNavSection
                     allTasks={allTasks}
@@ -72,7 +70,6 @@ const OverallView = ({
             <Shared {...other}
                 selectedSongIndex={selectedSongIndex}
                 selectedVerseIndex={selectedVerseIndex}
-                showSingleLyricColumn={showSingleLyricColumn}
             />
         </div>
     )

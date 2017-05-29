@@ -23,7 +23,6 @@ const DevSectionView = ({
     selectedVerseIndex,
     // selectedNavIndex,
     // selectedDotsIndex,
-    // showSingleLyricColumn,
     // selectedScoreIndex
 
 }) => (

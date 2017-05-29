@@ -16,11 +16,11 @@ const LyricColumn = ({
 ...other }) => {
 
     const {
-        showSingleLyricColumn,
+        showOneOfTwoLyricColumns,
         selectedLyricColumnIndex
     } = other,
 
-    showEarButton = !!showSingleLyricColumn && !!hasDoubleColumns,
+    showEarButton = !!showOneOfTwoLyricColumns && !!hasDoubleColumns,
     earButtonText = selectedLyricColumnIndex === 0 ? 'left' : 'right'
 
     return (
@@ -33,7 +33,7 @@ const LyricColumn = ({
 
 LyricColumn.propTypes = {
     hasDoubleColumns: PropTypes.bool,
-    showSingleLyricColumn: PropTypes.bool.isRequired,
+    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     selectedLyricColumnIndex: PropTypes.number.isRequired
 }
 
@@ -102,7 +102,7 @@ class LyricColumnView extends Component {
 
             verseBarProps = {
                 verseObject: selectedVerse,
-                showSingleLyricColumn: other.showSingleLyricColumn,
+                showOneOfTwoLyricColumns: other.showOneOfTwoLyricColumns,
                 hiddenLyricColumnKey: other.hiddenLyricColumnKey,
                 handleVerseBarSelect,
                 handleVerseBarWheel

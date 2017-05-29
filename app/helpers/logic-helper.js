@@ -12,24 +12,29 @@ import { getAnnotationObject,
          getSongAnnotationsDotKeys,
          getAnnotationsLength } from './data-helper'
 import { intersects } from './dot-helper'
-import { getIsMobileWiki, getLyricSectionRect, getShowSingleLyricColumn } from './responsive-helper'
+import { getIsMobileWiki, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
 
 export const shouldShowAnnotationForColumn = ({
+
     selectedSongIndex,
     selectedLyricColumnIndex,
     annotationIndex,
     state
-}) => {
-    const showSingleLyricColumn = getShowSingleLyricColumn(selectedSongIndex, state),
-        annotation = getAnnotationObject(selectedSongIndex, annotationIndex)
 
-    /**
-     * Show annotation if no column is given, both columns are shown, or it's
-     * the shown column.
-     */
-    return !annotation.column ||
-        !showSingleLyricColumn ||
-        annotation.column === LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
+}) => {
+    const showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, state),
+        annotation = getAnnotationObject(selectedSongIndex, annotationIndex),
+
+        /**
+         * Show annotation if no column is given, both columns are shown, or
+         * it's the shown column.
+         */
+        showAnnotationForColumn =
+            !annotation.column ||
+            !showOneOfTwoLyricColumns ||
+            annotation.column === LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
+
+    return showAnnotationForColumn
 }
 
 export const getAnnotationIndexForDirection = ({
@@ -425,8 +430,8 @@ export const getWikiUrl = (props) => {
 }
 
 export const getHiddenLyricColumnKey = ({
-    showSingleLyricColumn,
+    showOneOfTwoLyricColumns,
     selectedLyricColumnIndex
 }) => {
-    return showSingleLyricColumn && selectedLyricColumnIndex >= 0 ? LYRIC_COLUMN_KEYS[(selectedLyricColumnIndex + 1) % 2] : null
+    return showOneOfTwoLyricColumns && selectedLyricColumnIndex >= 0 ? LYRIC_COLUMN_KEYS[(selectedLyricColumnIndex + 1) % 2] : null
 }
