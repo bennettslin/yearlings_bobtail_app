@@ -52,8 +52,7 @@ class LyricsLine extends Component {
              * when switching number of columns.
              */
             oldProps.selectedSongIndex !== newProps.selectedSongIndex ||
-            oldProps.showOneOfTwoLyricColumns !== newProps.showOneOfTwoLyricColumns ||
-            oldProps.selectedLyricColumnIndex !== newProps.selectedLyricColumnIndex ||
+            oldProps.hiddenLyricColumnKey !== newProps.hiddenLyricColumnKey ||
 
             // In verse bar.
             (!!oldProps.inVerseBar && oldProps.text !== newProps.text)
@@ -134,8 +133,7 @@ LyricsLine.propTypes = {
     deviceIndex: PropTypes.number,
     isPortrait: PropTypes.bool,
     selectedSongIndex: PropTypes.number,
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-    selectedLyricColumnIndex: PropTypes.number,
+    hiddenLyricColumnKey: PropTypes.string.isRequired,
     columnKey: PropTypes.string.isRequired
 }
 

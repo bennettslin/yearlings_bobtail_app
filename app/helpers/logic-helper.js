@@ -433,5 +433,5 @@ export const getHiddenLyricColumnKey = ({
     showOneOfTwoLyricColumns,
     selectedLyricColumnIndex
 }) => {
-    return showOneOfTwoLyricColumns && selectedLyricColumnIndex >= 0 ? LYRIC_COLUMN_KEYS[(selectedLyricColumnIndex + 1) % 2] : null
+    return showOneOfTwoLyricColumns && selectedLyricColumnIndex >= 0 ? LYRIC_COLUMN_KEYS[(selectedLyricColumnIndex + 1) % 2] : ''
 }

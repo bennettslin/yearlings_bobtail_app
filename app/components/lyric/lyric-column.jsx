@@ -67,6 +67,10 @@ class LyricColumnView extends Component {
                 // From props.
         const { isLogue,
                 selectedVerse,
+
+                showOneOfTwoLyricColumns,
+                selectedLyricColumnIndex,
+
                 handleLyricColumnSelect,
                 handleVerseBarSelect,
                 handleVerseBarWheel,
@@ -76,19 +80,16 @@ class LyricColumnView extends Component {
                 ...other } = this.props,
 
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
-                showOneOfTwoLyricColumns: other.showOneOfTwoLyricColumns,
-                selectedLyricColumnIndex: other.selectedLyricColumnIndex
+                showOneOfTwoLyricColumns,
+                selectedLyricColumnIndex
             }),
 
             verseBarProps = {
                 verseObject: selectedVerse,
-                showOneOfTwoLyricColumns: other.showOneOfTwoLyricColumns,
                 hiddenLyricColumnKey,
                 handleVerseBarSelect,
                 handleVerseBarWheel
             }
-
-        console.error(`hiddenLyricColumnKey`, hiddenLyricColumnKey);
 
         return (
             <div
@@ -108,11 +109,11 @@ class LyricColumnView extends Component {
                         <LyricVerseBar {...verseBarProps}
                         />
                     }
-                    {other.showOneOfTwoLyricColumns &&
+                    {showOneOfTwoLyricColumns &&
                         <div className="lyric-button-block ear-button-block">
                             <Button
                                 accessKey={LYRIC_COLUMN_TOGGLE_KEY}
-                                iconText={LYRIC_COLUMN_KEYS[other.selectedLyricColumnIndex]}
+                                iconText={LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]}
                                 isLarge={true}
                                 handleClick={handleLyricColumnSelect}
                             />

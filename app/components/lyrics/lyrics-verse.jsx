@@ -71,8 +71,6 @@ const LyricsVerse = ({
 
         verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
 
-    console.error(`isDoubleSpeaker`, isDoubleSpeaker);
-
     let sliderPlacementClassName = ''
 
     if (sliderMousedOrTouched && inMain && !isTitle) {
@@ -217,7 +215,6 @@ class LyricsVerseView extends Component {
 
                 // From props.
         const { verseObject,
-                hiddenLyricColumnKey,
                 inVerseBar,
 
                 // From controller.
@@ -236,9 +233,9 @@ class LyricsVerseView extends Component {
                 handleLyricAudioButtonClick,
                 handleInteractivatableClick,
 
-            ...other } = this.props
+            ...other } = this.props,
 
-            console.error(`hiddenLyricColumnKey`, hiddenLyricColumnKey);
+            { hiddenLyricColumnKey } = other
 
         return (
             <div
@@ -267,10 +264,10 @@ class LyricsVerseView extends Component {
                 {isDoubleSpeaker ? (
                     <div className={classnames(
                         'double-lines-block',
-                        hiddenLyricColumnKey && `hidden-${hiddenLyricColumnKey}`
+                        { 'hidden-left': hiddenLyricColumnKey === 'left' }
                     )}>
                         {DOUBLESPEAKER_KEYS.filter(key => {
-                            return key === hiddenLyricColumnKey && other.showOneOfTwoLyricColumns ? false : verseObject[key]
+                            return key === hiddenLyricColumnKey ? false : verseObject[key]
                         }).map((key, index) => {
                             return this.getLyricsLine({
                                 key,

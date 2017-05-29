@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import LyricsUnit from './lyrics-unit'
 import { getLyricsArray } from '../../helpers/data-helper'
@@ -12,11 +11,6 @@ import { getSetsAreSame } from '../../helpers/general-helper'
 const LyricsSection = (props) => (
     <LyricsSectionView {...props} />
 )
-
-LyricsSection.propTypes = {
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-    selectedLyricColumnIndex: PropTypes.number.isRequired
-}
 
 /****************
  * PRESENTATION *
@@ -84,15 +78,9 @@ class LyricsSectionView extends Component {
 
     render() {
 
-                // From props.
-        const { showOneOfTwoLyricColumns,
-                selectedLyricColumnIndex,
-
-            ...other } = this.props,
-
+        const { selectedSongIndex } = this.props,
             { fadingOut } = this.state,
-
-            songLyrics = getLyricsArray(other.selectedSongIndex)
+            songLyrics = getLyricsArray(selectedSongIndex)
 
         return (
             <div
@@ -100,8 +88,7 @@ class LyricsSectionView extends Component {
                 className={classnames(
                     'section',
                     'lyrics-section',
-                    'lyrics-scroll',
-                    { 'single-column': showOneOfTwoLyricColumns }
+                    'lyrics-scroll'
                 )}
                 tabIndex="-1"
                 onScroll={() => this._handleScroll()}
@@ -119,12 +106,10 @@ class LyricsSectionView extends Component {
                     <div className="lyrics-scroll-home"></div>
                     <div className="lyrics-block">
                         {songLyrics.map((stanzaArray, stanzaIndex) => (
-                                <LyricsUnit {...other}
+                                <LyricsUnit {...this.props}
                                     key={stanzaIndex}
-                                    showOneOfTwoLyricColumns={showOneOfTwoLyricColumns}
                                     isTitleUnit={stanzaIndex === 0}
                                     stanzaArray={stanzaArray}
-                                    selectedLyricColumnIndex={selectedLyricColumnIndex}
                                 />
                             )
                         )}
