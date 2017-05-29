@@ -7,7 +7,7 @@ import DotAnchorBlock from '../dot/dot-anchor-block'
  * CONTAINER *
  *************/
 
-const DotStanza = ({
+const LyricDotStanza = ({
 
     dotStanzaObject,
     selectedAnnotationIndex,
@@ -25,7 +25,7 @@ const DotStanza = ({
         handleDotButtonClick = e => handleLyricAnnotationSelect(e, annotationIndex)
 
     return (
-        <DotStanzaView {...other}
+        <LyricDotStanzaView {...other}
             isSelected={isSelected}
             accessHighlighted={accessHighlighted}
             dotKeys={dotKeys}
@@ -35,7 +35,7 @@ const DotStanza = ({
     )
 }
 
-DotStanza.propTypes = {
+LyricDotStanza.propTypes = {
     dotStanzaObject: PropTypes.object.isRequired,
     accessedAnnotationIndex: PropTypes.number,
     selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -46,7 +46,7 @@ DotStanza.propTypes = {
  * PRESENTATION *
  ****************/
 
-const DotStanzaView = ({
+const LyricDotStanzaView = ({
 
     // From controller.
     dotKeys,
@@ -74,9 +74,9 @@ const DotStanzaView = ({
     </div>
 )
 
-DotStanzaView.propTypes = {
+LyricDotStanzaView.propTypes = {
     dotKeys: PropTypes.object.isRequired,
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default DotStanza
+export default LyricDotStanza

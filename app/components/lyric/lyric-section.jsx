@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import LyricsUnit from './lyrics-unit'
+import LyricUnit from './lyric-unit'
 import { getLyricsArray } from '../../helpers/data-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-class LyricsSection extends Component {
+class LyricSection extends Component {
 
     constructor(props) {
         super(props)
@@ -43,7 +43,7 @@ class LyricsSection extends Component {
             lyricsArray = getLyricsArray(props.selectedSongIndex)
 
         return (
-            <LyricsSectionView {...props}
+            <LyricSectionView {...props}
                 lyricsArray={lyricsArray}
                 handleScroll={this._handleScroll}
             />
@@ -55,7 +55,7 @@ class LyricsSection extends Component {
  * PRESENTATION *
  ****************/
 
-const LyricsSectionView = ({
+const LyricSectionView = ({
 
     lyricsArray,
     lyricSectionRef,
@@ -66,7 +66,7 @@ const LyricsSectionView = ({
         ref={lyricSectionRef}
         className={classnames(
             'section',
-            'lyrics-section',
+            'lyric-section',
             'lyrics-scroll'
         )}
         tabIndex="-1"
@@ -74,9 +74,9 @@ const LyricsSectionView = ({
     >
         {/* Upon song change, scroll to element with this class name. */}
         <div className="lyrics-scroll-home"></div>
-        <div className="lyrics-block">
+        <div className="lyric-block">
             {lyricsArray.map((stanzaArray, unitIndex) => (
-                    <LyricsUnit {...other}
+                    <LyricUnit {...other}
                         key={unitIndex}
                         unitIndex={unitIndex}
                         stanzaArray={stanzaArray}
@@ -87,10 +87,10 @@ const LyricsSectionView = ({
     </div>
 )
 
-LyricsSectionView.propTypes = {
+LyricSectionView.propTypes = {
     lyricsArray: PropTypes.array.isRequired,
     lyricSectionRef: PropTypes.func.isRequired,
     handleScroll: PropTypes.func.isRequired
 }
 
-export default LyricsSection
+export default LyricSection

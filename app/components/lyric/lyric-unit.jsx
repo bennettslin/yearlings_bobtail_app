@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import DotStanza from './dot-stanza'
-import LyricsStanza from './lyrics-stanza'
+import LyricDotStanza from './lyric-dot-stanza'
+import LyricStanza from './lyric-stanza'
 import { TITLE, LEFT, RIGHT } from '../../helpers/constants'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
@@ -10,7 +10,7 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
  * CONTAINER *
  *************/
 
-class LyricsUnit extends Component {
+class LyricUnit extends Component {
 
     shouldComponentUpdate(nextProps) {
         const { props } = this,
@@ -69,7 +69,7 @@ class LyricsUnit extends Component {
             showSide = hasSide && hiddenLyricColumnKey !== RIGHT
 
         return (
-            <LyricsUnitView {...other}
+            <LyricUnitView {...other}
                 isTitleUnit={isTitleUnit}
                 unitClassName={unitClassName}
                 stanzaIndex={stanzaIndex}
@@ -92,7 +92,7 @@ class LyricsUnit extends Component {
     }
 }
 
-LyricsUnit.propTypes = {
+LyricUnit.propTypes = {
     stanzaArray: PropTypes.array.isRequired,
     hiddenLyricColumnKey: PropTypes.string
 }
@@ -101,7 +101,7 @@ LyricsUnit.propTypes = {
  * PRESENTATION *
  ****************/
 
-const LyricsUnitView = ({
+const LyricUnitView = ({
 
     // From props.
     stanzaArray,
@@ -148,7 +148,7 @@ const LyricsUnitView = ({
                     }
 
                     return (
-                        <LyricsStanza {...other}
+                        <LyricStanza {...other}
                             stanzaArray={stanzaArray}
                             showStanzaTypeAndIndex={showStanzaTypeAndIndex}
                             inMain={inMain}
@@ -166,7 +166,7 @@ const LyricsUnitView = ({
     return (
         <div
             className={classnames(
-                'lyrics-unit',
+                'lyric-unit',
                 unitClassName,
                 { 'title-unit': isTitleUnit,
                   'custom-sub-block': unitClassName,
@@ -191,7 +191,7 @@ const LyricsUnitView = ({
                 </div>
             }
             {dotStanza &&
-                <DotStanza {...other}
+                <LyricDotStanza {...other}
                     dotStanzaObject={dotStanza}
                 />
             }
@@ -199,7 +199,7 @@ const LyricsUnitView = ({
     )
 }
 
-LyricsUnitView.propTypes = {
+LyricUnitView.propTypes = {
     stanzaArray: PropTypes.array.isRequired,
     stanzaIndex: PropTypes.number,
     isTitleUnit: PropTypes.bool.isRequired,
@@ -220,4 +220,4 @@ LyricsUnitView.propTypes = {
     dotStanza: PropTypes.object
 }
 
-export default LyricsUnit
+export default LyricUnit

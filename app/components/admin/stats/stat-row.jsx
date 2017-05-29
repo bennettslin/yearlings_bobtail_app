@@ -6,7 +6,7 @@ import { LYRIC_TEXT_KEYS } from '../../../helpers/constants'
  * CONTAINER *
  *************/
 
-const DotStanzasRow = ({ dotStanzas }) => {
+const LyricDotStanzasRow = ({ dotStanzas }) => {
      return (
          <StatRowView
              typeName="dot stanzas count"
@@ -78,7 +78,7 @@ const StatRowView = ({
 )
 
 export {
-    DotStanzasRow,
+    LyricDotStanzasRow,
     LyricsWordCountRow,
     AnnotationsCountRow,
     WordsPerAnnotationRow,

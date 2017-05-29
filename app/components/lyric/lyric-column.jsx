@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../button/button'
-import LyricsSection from '../lyrics/lyrics-section'
+import LyricSection from '../lyric/lyric-section'
 import VerseBar from '../verse/verse-bar'
 import { LYRIC_COLUMN_TOGGLE_KEY, LYRIC_COLUMN_KEYS } from '../../helpers/constants'
 import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
@@ -191,7 +191,7 @@ const LyricColumnView = ({
                     </div>
                 }
                 {lyricExpandButtonChild}
-                <LyricsSection {...other}
+                <LyricSection {...other}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
                     handlingHeightTransition={handlingHeightTransition}
                     completeHeightTransition={completeHeightTransition}

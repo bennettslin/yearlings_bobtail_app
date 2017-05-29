@@ -7,15 +7,15 @@ import VerseUnit from '../verse/verse-unit'
  * CONTAINER *
  *************/
 
-const LyricsStanza = (props) => (
-    <LyricsStanzaView {...props} />
+const LyricStanza = (props) => (
+    <LyricStanzaView {...props} />
 )
 
 /****************
  * PRESENTATION *
  ****************/
 
-const LyricsStanzaView = ({
+const LyricStanzaView = ({
 
     // From props.
     selectedVerseIndex,
@@ -62,11 +62,11 @@ const LyricsStanzaView = ({
     )
 }
 
-LyricsStanza.propTypes = {
+LyricStanza.propTypes = {
     stanzaIndex: PropTypes.number,
     stanzaArray: PropTypes.array.isRequired,
     stanzaType: PropTypes.string.isRequired,
     showStanzaTypeAndIndex: PropTypes.bool.isRequired
 }
 
-export default LyricsStanza
+export default LyricStanza

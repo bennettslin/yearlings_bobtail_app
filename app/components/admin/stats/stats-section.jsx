@@ -1,5 +1,5 @@
 import React from 'react'
-import { DotStanzasRow,
+import { LyricDotStanzasRow,
          LyricsWordCountRow,
          AnnotationsCountRow,
          WordsPerAnnotationRow,
@@ -29,7 +29,7 @@ const StatsSectionView = ({
     <div className="section stats-section">
         <h2>stats</h2>
         <div className="row">
-            <DotStanzasRow dotStanzas={dotStanzas} />
+            <LyricDotStanzasRow dotStanzas={dotStanzas} />
             <LyricsWordCountRow lyrics={lyrics} />
             <AnnotationsCountRow annotations={annotations} />
             <WordsPerAnnotationRow annotations={annotations} />

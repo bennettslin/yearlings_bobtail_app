@@ -1,8 +1,8 @@
 @stanza-type-tab-height: 20px;
-@lyrics-unit-margin: @stanza-type-tab-height + 5px;
+@lyric-unit-margin: @stanza-type-tab-height + 5px;
 @stanza-overlap-margin: 6.5px;
 
-.lyrics-unit {
+.lyric-unit {
     display: flex;
     justify-content: center;
     font-size: @lyric-verse-size;
@@ -13,13 +13,13 @@
      */
     &:not(:first-child):not(.subsequent) {
         .stanza-block:not(.dot-stanza) {
-            margin-top: @lyrics-unit-margin;
+            margin-top: @lyric-unit-margin;
         }
     }
 
     &.subsequent {
         .stanza-block {
-            margin-top: @lyrics-unit-margin - @stanza-type-tab-height - 2.5px;
+            margin-top: @lyric-unit-margin - @stanza-type-tab-height - 2.5px;
         }
     }
 }
