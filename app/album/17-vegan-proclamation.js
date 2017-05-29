@@ -109,7 +109,10 @@ module.exports = {
     },
     totalTime: 241,
     overview: `Having doubled down on writing and recording all the songs myself, I'd been burning bridges with my bandmates for some time. Since we stopped playing shows as a result, I had no new opportunities to meet women after Miriam left. Most devastating of all, Sita had fallen in love with someone else. I wasn't to win her back, ever again. All I had now was myself, and I really didn't like myself. And I had no idea how to become a good person again.`,
-    forceSingleColumn: true,
+
+    // Not sure if this is really needed?
+    // forceSingleColumn: true,
+
     title: {
         anchor: `Vegan Proclamation`,
         annotation: {

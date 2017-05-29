@@ -105,24 +105,16 @@ export const getIsLyricExpandable = (deviceIndex) => {
     return !getIsDesktop(deviceIndex)
 }
 
-export const getShowSingleLyricColumn = (songIndex, state) => {
+export const getShowOneOfTwoLyricColumns = (songIndex, state) => {
 
     const selectedSong = getSongObject(songIndex),
         { hasSideStanzas,
-          isDoublespeaker,
-          forceSingleColumn } = selectedSong,
-        { deviceIndex } = state,
-        deviceClassName = DEVICE_OBJECTS[deviceIndex].className
-
-    let showSingleLyricColumn = false
-
-    // Applies to Vegan Proclamation.
-    if (forceSingleColumn) {
-        showSingleLyricColumn = true
+          isDoublespeaker } = selectedSong,
+        { deviceIndex } = state
 
     // Applies to Uncanny Valley Boy.
-    } else if (hasSideStanzas && !isDoublespeaker) {
-        showSingleLyricColumn = deviceClassName === PHONE_WIDTH
+    if (hasSideStanzas && !isDoublespeaker) {
+        return getIsPhone(deviceIndex)
 
     // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
     } else if (isDoublespeaker) {
@@ -130,10 +122,12 @@ export const getShowSingleLyricColumn = (songIndex, state) => {
          * In tablet width, lyrics section takes up full width of bottom,
          * while in monitor width, the screen is wide enough as well.
          */
-        showSingleLyricColumn = deviceClassName !== MONITOR_WIDTH && deviceClassName !== TABLET_WIDTH
-    }
+        return !_getIsMonitor(deviceIndex) && !_getIsTablet(deviceIndex)
 
-    return showSingleLyricColumn
+    // Doesn't apply to other songs.
+    } else {
+        return false
+    }
 }
 
 export const getIsHiddenNav = (state) => {

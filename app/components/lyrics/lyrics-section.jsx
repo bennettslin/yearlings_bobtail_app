@@ -14,7 +14,7 @@ const LyricsSection = (props) => (
 )
 
 LyricsSection.propTypes = {
-    showSingleLyricColumn: PropTypes.bool.isRequired,
+    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     selectedLyricColumnIndex: PropTypes.number.isRequired
 }
 
@@ -85,7 +85,7 @@ class LyricsSectionView extends Component {
     render() {
 
                 // From props.
-        const { showSingleLyricColumn,
+        const { showOneOfTwoLyricColumns,
                 selectedLyricColumnIndex,
 
             ...other } = this.props,
@@ -101,7 +101,7 @@ class LyricsSectionView extends Component {
                     'section',
                     'lyrics-section',
                     'lyrics-scroll',
-                    { 'single-column': showSingleLyricColumn }
+                    { 'single-column': showOneOfTwoLyricColumns }
                 )}
                 tabIndex="-1"
                 onScroll={() => this._handleScroll()}
@@ -121,7 +121,7 @@ class LyricsSectionView extends Component {
                         {songLyrics.map((stanzaArray, stanzaIndex) => (
                                 <LyricsUnit {...other}
                                     key={stanzaIndex}
-                                    showSingleLyricColumn={showSingleLyricColumn}
+                                    showOneOfTwoLyricColumns={showOneOfTwoLyricColumns}
                                     isTitleUnit={stanzaIndex === 0}
                                     stanzaArray={stanzaArray}
                                     selectedLyricColumnIndex={selectedLyricColumnIndex}

@@ -31,7 +31,7 @@ import { SHOWN,
          PAUSE_AT_END } from '../helpers/constants'
 import { getSongObject, getSongsLength, getIsLogue, getAnnotationObject, getBookColumnIndex, getOverview, getSongVerseTimes } from '../helpers/data-helper'
 import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
-import { resizeWindow, getShowSingleLyricColumn, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
+import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
 /*********
@@ -508,7 +508,7 @@ class App extends Component {
          * has double columns, or if in a logue. Check for new song if called
          * from portal.
          */
-        if (!(!isNaN(selectedSongIndex) ? getShowSingleLyricColumn(selectedSongIndex, state) : state.showSingleLyricColumn) || getIsLogue(selectedSongIndex)) {
+        if (!(!isNaN(selectedSongIndex) ? getShowOneOfTwoLyricColumns(selectedSongIndex, state) : state.showOneOfTwoLyricColumns) || getIsLogue(selectedSongIndex)) {
             return false
         }
 
@@ -644,7 +644,7 @@ class App extends Component {
             selectedSongIndex
         })
 
-        newState.showSingleLyricColumn = getShowSingleLyricColumn(selectedSongIndex, this.state)
+        newState.showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, this.state)
 
         this.interactivateVerse()
 
@@ -1006,7 +1006,7 @@ class App extends Component {
         newState.isCarouselExpandable = isCarouselExpandable
         newState.isHeightlessLyricColumn = isHeightlessLyricColumn
         newState.isHiddenNav = getIsHiddenNav(newState)
-        newState.showSingleLyricColumn = getShowSingleLyricColumn(this.props.selectedSongIndex, newState)
+        newState.showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, newState)
         newState.showSingleBookColumn = getShowSingleBookColumn(newState)
         newState.shrinkNavIcon = getShrinkNavIcon(newState)
         newState.scoresTipsOutsideMenu = getScoresTipsOutsideMenu(newState)
@@ -1021,7 +1021,7 @@ class App extends Component {
         }
 
         // Deselect selected annotation if not in new shown column.
-        if (selectedSong.doubleColumns && newState.showSingleLyricColumn && !this.state.showSingleLyricColumn) {
+        if (selectedSong.doubleColumns && newState.showOneOfTwoLyricColumns && !this.state.showOneOfTwoLyricColumns) {
             this._deselectAnnotationIfSelected({
                 state: newState
             })

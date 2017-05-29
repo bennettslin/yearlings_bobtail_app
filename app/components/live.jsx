@@ -87,7 +87,7 @@ const LiveView = ({
     sliderMousedOrTouched,
     sliderRatio,
     sliderVerseIndex,
-    showSingleLyricColumn,
+    showOneOfTwoLyricColumns,
     isLyricExpanded,
     isLyricExpandable,
     isHeightlessLyricColumn,
@@ -151,8 +151,7 @@ const LiveView = ({
 
 }) => {
 
-    const hideLyricColumn = showSingleLyricColumn && hasDoubleColumns,
-        timerInAudio = showOverlay && isPhone,
+    const timerInAudio = showOverlay && isPhone,
         verseBarHidden = !isSelectedVerseAbove && !isSelectedVerseBelow,
 
         titleToggleProps = {
@@ -261,7 +260,7 @@ const LiveView = ({
             sliderMousedOrTouched,
             sliderVerseIndex,
             isLogue,
-            showSingleLyricColumn,
+            showOneOfTwoLyricColumns,
             hiddenLyricColumnKey,
             hasDoubleColumns,
             isPlaying,
@@ -394,11 +393,12 @@ const LiveView = ({
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
             shrinkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
             showOverlay ? 'overlay-shown' : 'overlay-hidden',
-            { 'timer-in-audio': timerInAudio,
+            { 'show-one-of-two-lyrics': showOneOfTwoLyricColumns,
+              'show-left-lyric': selectedLyricColumnIndex === 0,
+              'show-right-lyric': selectedLyricColumnIndex === 1,
+              'timer-in-audio': timerInAudio,
               'title-in-audio': titleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,
-              'just-show-left-lyric': hideLyricColumn && selectedLyricColumnIndex === 0,
-              'just-show-right-lyric': hideLyricColumn && selectedLyricColumnIndex === 1,
               'overview-shown': isOverviewShown,
               'verse-above': isSelectedVerseAbove,
               'verse-below': isSelectedVerseBelow,
