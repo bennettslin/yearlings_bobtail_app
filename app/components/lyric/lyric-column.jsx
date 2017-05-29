@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Button from '../button/button'
 import LyricsSection from '../lyrics/lyrics-section'
 import LyricVerseBar from './lyric-verse-bar'
-import { LYRIC_COLUMN_TOGGLE_KEY } from '../../helpers/constants'
+import { LYRIC_COLUMN_TOGGLE_KEY, LYRIC_COLUMN_KEYS } from '../../helpers/constants'
 import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 
 /*************
@@ -11,26 +11,9 @@ import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
  *************/
 
 const LyricColumn = (props) => {
-
-    const {
-        showOneOfTwoLyricColumns,
-        selectedLyricColumnIndex
-    } = props,
-
-    showEarButton = showOneOfTwoLyricColumns,
-    earButtonText = selectedLyricColumnIndex === 0 ? 'left' : 'right'
-
     return (
-        <LyricColumnView {...props}
-            showEarButton={showEarButton}
-            earButtonText={earButtonText}
-        />
+        <LyricColumnView {...props} />
     )
-}
-
-LyricColumn.propTypes = {
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-    selectedLyricColumnIndex: PropTypes.number.isRequired
 }
 
 /****************
@@ -90,10 +73,6 @@ class LyricColumnView extends Component {
 
                 lyricExpandButtonChild,
 
-                // From controller.
-                showEarButton,
-                earButtonText,
-
                 ...other } = this.props,
 
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
@@ -108,6 +87,8 @@ class LyricColumnView extends Component {
                 handleVerseBarSelect,
                 handleVerseBarWheel
             }
+
+        console.error(`hiddenLyricColumnKey`, hiddenLyricColumnKey);
 
         return (
             <div
@@ -127,11 +108,11 @@ class LyricColumnView extends Component {
                         <LyricVerseBar {...verseBarProps}
                         />
                     }
-                    {showEarButton &&
+                    {other.showOneOfTwoLyricColumns &&
                         <div className="lyric-button-block ear-button-block">
                             <Button
                                 accessKey={LYRIC_COLUMN_TOGGLE_KEY}
-                                iconText={earButtonText}
+                                iconText={LYRIC_COLUMN_KEYS[other.selectedLyricColumnIndex]}
                                 isLarge={true}
                                 handleClick={handleLyricColumnSelect}
                             />
@@ -139,6 +120,7 @@ class LyricColumnView extends Component {
                     }
                     {lyricExpandButtonChild}
                     <LyricsSection {...other}
+                        hiddenLyricColumnKey={hiddenLyricColumnKey}
                         handlingHeightTransition={this.state.handlingHeightTransition}
                         completeHeightTransition={this.completeHeightTransition}
                     />
@@ -150,9 +132,8 @@ class LyricColumnView extends Component {
 
 LyricColumnView.propTypes = {
     selectedVerse: PropTypes.object,
-    earButtonText: PropTypes.string.isRequired,
     isLogue: PropTypes.bool.isRequired,
-    showEarButton: PropTypes.bool.isRequired,
+    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     handleLyricColumnSelect: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired,

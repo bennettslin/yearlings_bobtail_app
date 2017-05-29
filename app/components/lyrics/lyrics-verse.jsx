@@ -71,6 +71,8 @@ const LyricsVerse = ({
 
         verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
 
+    console.error(`isDoubleSpeaker`, isDoubleSpeaker);
+
     let sliderPlacementClassName = ''
 
     if (sliderMousedOrTouched && inMain && !isTitle) {
@@ -235,6 +237,8 @@ class LyricsVerseView extends Component {
                 handleInteractivatableClick,
 
             ...other } = this.props
+
+            console.error(`hiddenLyricColumnKey`, hiddenLyricColumnKey);
 
         return (
             <div
