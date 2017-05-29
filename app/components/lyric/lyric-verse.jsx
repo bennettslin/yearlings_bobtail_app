@@ -6,6 +6,7 @@ const LyricVerse = ({
 
     selectedVerseIndex,
     sliderVerseIndex,
+    interactivatedVerseIndex,
 
 ...other }) => {
 
@@ -16,7 +17,8 @@ const LyricVerse = ({
         isSelected = verseIndex === selectedVerseIndex,
         isAfterSelected = verseIndex > selectedVerseIndex,
         isSliderSelected = verseIndex === sliderVerseIndex,
-        isAfterSliderSelected = verseIndex > sliderVerseIndex
+        isAfterSliderSelected = verseIndex > sliderVerseIndex,
+        isInteractivated = verseIndex === interactivatedVerseIndex
 
     return (
         <VerseUnit {...other}
@@ -24,6 +26,7 @@ const LyricVerse = ({
             isAfterSelected={isAfterSelected}
             isSliderSelected={isSliderSelected}
             isAfterSliderSelected={isAfterSliderSelected}
+            isInteractivated={isInteractivated}
         />
     )
 }

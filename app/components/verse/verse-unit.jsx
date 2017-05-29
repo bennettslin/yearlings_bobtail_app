@@ -27,13 +27,13 @@ class VerseUnit extends Component {
                     'accessedAnnotationIndex',
                     'selectedSongIndex',
                     'selectedAnnotationIndex',
-                    'interactivatedVerseIndex',
                     'hiddenLyricColumnKey',
                     'inMain',
                     'isSelected',
                     'isAfterSelected',
                     'isSliderSelected',
                     'isAfterSliderSelected',
+                    'isInteractivated',
                     {
                         onlyIfTrueInNextProps: 'inVerseBar',
                         subUpdatingKey: 'barVerseIndex'
@@ -47,7 +47,6 @@ class VerseUnit extends Component {
     render() {
         const { inMain,
                 verseBarHidden,
-                interactivatedVerseIndex,
                 handleLyricAnnotationSelect,
                 handleLyricPlay,
                 handleLyricVerseSelect,
@@ -60,7 +59,8 @@ class VerseUnit extends Component {
 
             { inVerseBar,
               verseObject,
-              isSelected } = other,
+              isSelected,
+              isInteractivated } = other,
 
             { lyric,
               isTitle,
@@ -76,7 +76,6 @@ class VerseUnit extends Component {
             // If verse bar is shown, selected verse is not hoverable or interactivatable.
             notVerseBarPrevented = verseBarHidden || !isSelected,
 
-            isInteractivated = interactivatedVerseIndex === verseIndex,
             isHoverable =
                 isInteractable &&
                 !isInteractivated &&
@@ -161,11 +160,11 @@ VerseUnit.propTypes = {
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired,
     isSliderSelected: PropTypes.bool.isRequired,
+    isInteractivated: PropTypes.bool.isRequired,
     inMain: PropTypes.bool,
     inVerseBar: PropTypes.bool,
     verseBarHidden: PropTypes.bool,
     sliderMousedOrTouched: PropTypes.bool,
-    interactivatedVerseIndex: PropTypes.number,
     handleLyricAnnotationSelect: PropTypes.func,
     handleLyricPlay: PropTypes.func,
     handleLyricVerseSelect: PropTypes.func,
@@ -175,7 +174,8 @@ VerseUnit.propTypes = {
 VerseUnit.defaultProps = {
     isSelected: false,
     isAfterSelected: false,
-    isSliderSelected: false
+    isSliderSelected: false,
+    isInteractivated: false
 }
 
 /****************
