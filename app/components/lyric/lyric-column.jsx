@@ -4,7 +4,6 @@ import Button from '../button/button'
 import LyricsSection from '../lyrics/lyrics-section'
 import LyricVerseBar from './lyric-verse-bar'
 import { LYRIC_COLUMN_TOGGLE_KEY, LYRIC_COLUMN_KEYS } from '../../helpers/constants'
-import { getVerseObject } from '../../helpers/data-helper'
 import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
@@ -150,15 +149,14 @@ const LyricColumnView = ({
 
         // Show the slider verse if there is one.
         verseIndex = sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
-        verseObject = getVerseObject(selectedSongIndex, verseIndex),
-
         hiddenLyricColumnKey = getHiddenLyricColumnKey({
             showOneOfTwoLyricColumns,
             selectedLyricColumnIndex
         }),
 
         verseBarProps = {
-            verseObject,
+            selectedSongIndex,
+            verseIndex,
             hiddenLyricColumnKey,
             handleVerseBarSelect,
             handleVerseBarWheel
