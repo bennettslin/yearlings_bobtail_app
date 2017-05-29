@@ -2004,5 +2004,10 @@ module.exports = [
         taskName: `Begin work on updating components strategically.`,
         workedHours: 13,
         neededHours: 13
-    }
+    },
+    {
+        taskName: `Continue work on checking to update components.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]
