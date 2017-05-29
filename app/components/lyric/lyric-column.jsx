@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Button from '../button/button'
 import LyricsSection from '../lyrics/lyrics-section'
-import LyricVerseBar from './lyric-verse-bar'
+import VerseBar from '../verse/verse-bar'
 import { LYRIC_COLUMN_TOGGLE_KEY, LYRIC_COLUMN_KEYS } from '../../helpers/constants'
 import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
@@ -172,12 +172,12 @@ const LyricColumnView = ({
                 onTransitionEnd={handleAnimatableTransition}
             >
                 {!isLogue &&
-                    <LyricVerseBar {...verseBarProps}
+                    <VerseBar {...verseBarProps}
                         isAbove={true}
                     />
                 }
                 {!isLogue &&
-                    <LyricVerseBar {...verseBarProps}
+                    <VerseBar {...verseBarProps}
                     />
                 }
                 {showOneOfTwoLyricColumns &&

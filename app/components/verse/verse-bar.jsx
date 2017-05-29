@@ -5,7 +5,7 @@ import VerseUnit from '../verse/verse-unit'
 import { getVerseObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-class LyricVerseBar extends Component {
+class VerseBar extends Component {
 
     shouldComponentUpdate(nextProps) {
         const { props } = this,
@@ -60,7 +60,7 @@ class LyricVerseBar extends Component {
     }
 }
 
-LyricVerseBar.propTypes = {
+VerseBar.propTypes = {
     'selectedSongIndex': PropTypes.number.isRequired,
     'verseIndex': PropTypes.number,
     'hiddenLyricColumnKey': PropTypes.string.isRequired,
@@ -70,4 +70,4 @@ LyricVerseBar.propTypes = {
     handleVerseBarWheel: PropTypes.func.isRequired
 }
 
-export default LyricVerseBar
+export default VerseBar
