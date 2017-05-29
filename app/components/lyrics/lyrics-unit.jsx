@@ -18,21 +18,34 @@ class LyricsUnit extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-
+                    'deviceIndex',
+                    'appMounted',
+                    'isPortrait',
+                    'verseBarHidden',
+                    'sliderMousedOrTouched',
+                    'sliderVerseIndex',
+                    'isPlaying',
+                    'accessedAnnotationIndex',
+                    'selectedSongIndex',
+                    'selectedAnnotationIndex',
+                    'interactivatedVerseIndex',
+                    'selectedVerseIndex',
+                    'hiddenLyricColumnKey',
+                    'unitIndex'
                 ]
             })
 
-        // console.error('props:', JSON.stringify(props, null, 2));
-        // console.error('nextProps:', JSON.stringify(nextProps, null, 2));
-        // console.error(`componentShouldUpdate:`, componentShouldUpdate);
-
-        return componentShouldUpdate || true
+        return componentShouldUpdate
     }
 
     render() {
-        const { stanzaArray,
-                isTitleUnit,
-                hiddenLyricColumnKey } = this.props,
+        const { unitIndex,
+                ...other } = this.props,
+
+            { stanzaArray,
+              hiddenLyricColumnKey } = other,
+
+            isTitleUnit = unitIndex === 0,
 
             { unitClassName,
               stanzaIndex,
@@ -56,7 +69,8 @@ class LyricsUnit extends Component {
             showSide = hasSide && hiddenLyricColumnKey !== RIGHT
 
         return (
-            <LyricsUnitView {...this.props}
+            <LyricsUnitView {...other}
+                isTitleUnit={isTitleUnit}
                 unitClassName={unitClassName}
                 stanzaIndex={stanzaIndex}
                 stanzaType={isTitleUnit ? TITLE : stanzaType}
@@ -80,7 +94,6 @@ class LyricsUnit extends Component {
 
 LyricsUnit.propTypes = {
     stanzaArray: PropTypes.array.isRequired,
-    isTitleUnit: PropTypes.bool.isRequired,
     hiddenLyricColumnKey: PropTypes.string
 }
 
@@ -91,10 +104,10 @@ LyricsUnit.propTypes = {
 const LyricsUnitView = ({
 
     // From props.
-    isTitleUnit,
     stanzaArray,
 
     // From controller.
+    isTitleUnit,
     unitClassName,
     stanzaIndex,
     stanzaType,
@@ -113,6 +126,7 @@ const LyricsUnitView = ({
     showSide,
 
 ...other }) => {
+
     const getStanza = ({ stanzaArray, inMain, truncateMain, addSub, isSub }) => {
             if (stanzaArray) {
                 if (addSub) {
@@ -126,7 +140,6 @@ const LyricsUnitView = ({
                         showStanzaTypeAndIndex = !subsequent && !!shownStanzaIndex
 
                     let itsStanzaType
-
                     if (inMain) {
                         itsStanzaType = isSub ? substanzaType : stanzaType
                     } else {
@@ -156,8 +169,7 @@ const LyricsUnitView = ({
                 unitClassName,
                 { 'title-unit': isTitleUnit,
                   'custom-sub-block': unitClassName,
-                  subsequent
-                }
+                  subsequent }
             )}
         >
             {showMain &&

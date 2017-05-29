@@ -24,11 +24,9 @@ const LyricsStanzaView = ({
     stanzaType,
 
 ...other }) => {
-    const indexClassName = !isNaN(stanzaIndex) && `stanza-index-${stanzaIndex}`,
-        typeClassName = stanzaType && `stanza-type-${stanzaType}`
+    const typeClassName = stanzaType && `stanza-type-${stanzaType}`
 
     return (
-
         <div className="stanza-container">
             {showStanzaTypeAndIndex &&
                 <div className={classnames(
@@ -41,7 +39,6 @@ const LyricsStanzaView = ({
 
             <div className={classnames(
                 'stanza',
-                indexClassName,
                 typeClassName
             )}>
                 {stanzaArray.map((verseObject, verseIndex) => {

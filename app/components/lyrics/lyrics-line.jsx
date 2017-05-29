@@ -112,7 +112,7 @@ class LyricsLine extends Component {
         const { columnKey,
                 ...other } = this.props
 
-        console.error(`render`, this.props.text);
+        // console.error(`render`, this.props.text);
 
         return (
             <div
