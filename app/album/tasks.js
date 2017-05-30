@@ -65,9 +65,9 @@ module.exports = [
     },
 
     {
-        taskName: `Vixlet`,
+        taskName: `Redux connect`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 8
     },
 
     {

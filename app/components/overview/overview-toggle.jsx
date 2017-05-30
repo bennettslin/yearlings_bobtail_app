@@ -1,19 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import Button from '../button/button'
 import { OVERVIEW_OPTIONS,
          OVERVIEW_TOGGLE_KEY } from '../../helpers/constants'
+
+ const passReduxStateToProps = ({
+     selectedOverviewIndex,
+ }) => ({
+     // Pass Redux state into component props.
+     selectedOverviewIndex,
+ })
 
 /*************
  * CONTAINER *
  *************/
 
-const OverviewToggle = (props) => {
-
-    return (
-        <OverviewToggleView {...props} />
-    )
-}
+const OverviewToggle = (props) => (
+    <OverviewToggleView {...props} />
+)
 
 OverviewToggle.propTypes = {
     selectedOverviewIndex: PropTypes.number.isRequired,
@@ -42,4 +47,4 @@ const OverviewToggleView = ({
     </div>
 )
 
-export default OverviewToggle
+export default connect(passReduxStateToProps)(OverviewToggle)

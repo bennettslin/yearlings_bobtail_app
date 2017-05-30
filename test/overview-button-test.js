@@ -1,13 +1,13 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import OverviewButton from '../app/components/overview/overview-button.jsx'
+import OverviewToggle from '../app/components/overview/overview-button.jsx'
 
-describe('OverviewButton', () => {
+describe('OverviewToggle', () => {
     let overviewButton
 
     beforeEach(() => {
-        overviewButton = shallow(<OverviewButton />)
+        overviewButton = shallow(<OverviewToggle />)
     })
 
     it('should exist', () => {

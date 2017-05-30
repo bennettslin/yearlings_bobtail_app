@@ -1,9 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import CarouselAnnotation from './carousel-annotation'
 import Button from '../button/button'
 import { getAnnotationsArray } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedSongIndex,
+    selectedAnnotationIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedSongIndex,
+    selectedAnnotationIndex
+})
 
 /*************
  * CONTAINER *
@@ -36,6 +46,7 @@ class Carousel extends Component {
 
 Carousel.propTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired
 }
@@ -99,4 +110,4 @@ const CarouselView = ({
     )
 }
 
-export default Carousel
+export default connect(passReduxStateToProps)(Carousel)

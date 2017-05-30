@@ -9,7 +9,7 @@ import AudioTimer from './audio/audio-timer'
 import AudioTransitionPopup from './audio/audio-transition-popup'
 import AudioSection from './audio/audio-section'
 import ScoresTipsSection from './main/scores-tips-section'
-import OverviewButton from './overview/overview-toggle'
+import OverviewToggle from './overview/overview-toggle'
 import OverviewTransitionPopup from './overview/overview-transition-popup'
 import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
 import DotsSection from './dots/dots-section'
@@ -65,7 +65,7 @@ const LiveView = ({
     selectedTipsIndex,
     selectedTimePlayed,
     selectedLyricColumnIndex,
-    selectedOverviewIndex,
+    // selectedOverviewIndex,
     selectedDotsIndex,
     selectedNavIndex,
     selectedBookColumnIndex,
@@ -216,8 +216,8 @@ const LiveView = ({
 
         carouselProps = {
             accessedAnnotationIndex,
-            selectedAnnotationIndex,
-            selectedSongIndex,
+            // selectedAnnotationIndex,
+            // selectedSongIndex,
             accessedPopupAnchorIndex,
 
             handleLyricAnnotationSelect,
@@ -231,8 +231,8 @@ const LiveView = ({
         ),
 
         dotsSectionProps = {
-            selectedDotKeys,
-            selectedDotsIndex,
+            // selectedDotKeys,
+            // selectedDotsIndex,
             accessedDotIndex,
             handlePopupContainerClick,
             handleDotToggle,
@@ -319,16 +319,16 @@ const LiveView = ({
             titleToggleChild
         },
 
-        overviewButtonProps = {
-            selectedOverviewIndex,
+        overviewToggleProps = {
+            // selectedOverviewIndex,
             handleOverviewToggle
         },
 
         overviewPopupProps = {
             isPhone,
             isLogue,
-            selectedOverviewIndex,
-            selectedTitleIndex,
+            // selectedOverviewIndex,
+            // selectedTitleIndex,
             handlePopupContainerClick,
 
             // For toggle in popup in phone.
@@ -408,10 +408,10 @@ const LiveView = ({
                     <OverviewTransitionPopup {...overviewPopupProps}
                         inOverviewSubfield={true}
                         overviewText={popupSongOverview}
-                        overviewButtonChild={ <OverviewButton {...overviewButtonProps} /> }
+                        overviewButtonChild={ <OverviewToggle {...overviewToggleProps} /> }
                     />
                 }
-                overviewButtonChild={ <OverviewButton {...overviewButtonProps} /> }
+                overviewButtonChild={ <OverviewToggle {...overviewToggleProps} /> }
                 lyricExpandButtonChild={lyricExpandButtonChild}
                 scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
             />

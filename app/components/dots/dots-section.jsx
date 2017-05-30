@@ -1,7 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import DotBlock from '../dot/dots-block'
+import { connect } from 'react-redux'
+import DotBlock from '../dot/dot-block'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedDotKeys
+}) => ({
+    // Pass Redux state into component props.
+    selectedDotKeys
+})
 
 /*************
  * CONTAINER *
@@ -26,7 +34,6 @@ class DotsSection extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'selectedDotsIndex',
                     'accessedDotIndex',
                     'selectedDotKeys'
                 ]
@@ -73,7 +80,6 @@ class DotsSection extends Component {
 
 DotsSection.propTypes = {
     handlePopupContainerClick: PropTypes.func.isRequired,
-    selectedDotsIndex: PropTypes.number.isRequired,
     accessedDotIndex: PropTypes.number.isRequired,
     selectedDotKeys: PropTypes.object.isRequired
 }
@@ -108,4 +114,4 @@ DotsSectionView.propTypes = {
     handleContainerClick: PropTypes.func.isRequired
 }
 
-export default DotsSection
+export default connect(passReduxStateToProps)(DotsSection)

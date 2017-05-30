@@ -1,8 +1,18 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import OverviewSection from './overview-section'
 import TransitionPopup from '../popup/transition-popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedOverviewIndex,
+    selectedTitleIndex
+}) => ({
+    // Pass Redux state into component props.
+    selectedOverviewIndex,
+    selectedTitleIndex
+})
 
 /*************
  * CONTAINER *
@@ -77,4 +87,4 @@ OverviewTransitionPopup.propTypes = {
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 
-export default OverviewTransitionPopup
+export default connect(passReduxStateToProps)(OverviewTransitionPopup)
