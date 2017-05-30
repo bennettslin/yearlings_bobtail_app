@@ -125,7 +125,7 @@ const LyricUnitView = ({
     showSide,
 
 ...other }) => {
-
+    // FIXME: Not ideal.
     const getStanza = ({ stanzaArray, inMain, truncateMain, addSub, isSub }) => {
             if (stanzaArray) {
                 if (addSub) {

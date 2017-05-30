@@ -12,6 +12,17 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class VerseUnit extends Component {
 
+    constructor(props) {
+        super(props)
+
+        this._checkIsSelectedVerse = this._checkIsSelectedVerse.bind(this)
+        this._checkIsSliderSelectedVerse = this._checkIsSliderSelectedVerse.bind(this)
+    }
+
+    componentDidMount() {
+        this._checkIsSelectedVerse(this.props)
+    }
+
     shouldComponentUpdate(nextProps) {
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
@@ -41,6 +52,26 @@ class VerseUnit extends Component {
             })
 
         return componentShouldUpdate
+    }
+
+    componentDidUpdate(prevProps) {
+        const { props } = this
+
+        this._checkIsSelectedVerse(props)
+
+        if (props.isSliderSelected && !prevProps.isSliderSelected) {
+            this._checkIsSliderSelectedVerse(props)
+        }
+    }
+
+    _checkIsSelectedVerse(props) {
+        if (props.isSelected) {
+            props.handleVerseElementSelect(this.myVerse)
+        }
+    }
+
+    _checkIsSliderSelectedVerse(props) {
+        props.handleVerseElementSlide(this.myVerse)
     }
 
     _getBackgroundClassName(isEven) {
@@ -129,6 +160,7 @@ class VerseUnit extends Component {
 
         return (
             <VerseUnitView {...other}
+                myRef={(node) => (this.myVerse = node)}
                 verseIndexClassName={verseIndexClassName}
                 backgroundClassName={backgroundClassName}
                 isAudioButtonEnabled={isInteractivated}
@@ -173,46 +205,32 @@ VerseUnit.defaultProps = {
  * PRESENTATION *
  ****************/
 
-class VerseUnitView extends Component {
+const VerseUnitView = ({
+    // From props.
+    verseObject,
+    inVerseBar,
 
-    constructor(props) {
-        super(props)
+    // From controller.
+    myRef,
+    verseIndexClassName,
+    backgroundClassName,
+    isAudioButtonEnabled,
+    isInteractable,
+    sliderPlacementClassName,
+    interactivatedClassName,
+    isSelected,
+    isPlaying,
+    isAfterSelected,
+    isDoubleSpeaker,
+    isTitle,
+    handleLyricAudioButtonClick,
+    handleInteractivatableClick,
 
-        this._checkIsSelectedVerse = this._checkIsSelectedVerse.bind(this)
-        this._checkIsSliderSelectedVerse = this._checkIsSliderSelectedVerse.bind(this)
-    }
+...other }) => {
+    // FIXME: Not ideal.
+    const getVerseLine = ({ key, index, columnKey, other }) => {
 
-    componentDidMount() {
-        this._checkIsSelectedVerse(this.props)
-    }
-
-    componentDidUpdate(prevProps) {
-        const { props } = this
-
-        this._checkIsSelectedVerse(props)
-
-        if (props.isSliderSelected && !prevProps.isSliderSelected) {
-            this._checkIsSliderSelectedVerse(props)
-        }
-    }
-
-    _checkIsSelectedVerse(props) {
-        if (props.isSelected) {
-            props.handleVerseElementSelect(this.myVerse)
-        }
-    }
-
-    _checkIsSliderSelectedVerse(props) {
-        props.handleVerseElementSlide(this.myVerse)
-    }
-
-    getVerseLine({ key, index, columnKey, other }) {
-
-        const { isSelected,
-                inVerseBar,
-                verseObject } = this.props,
-
-            lyricsLineProps = {
+        const lyricsLineProps = {
                 inVerseBar,
                 verseSelected: isSelected,
                 text: key ? verseObject[key] : verseObject.lyric,
@@ -228,79 +246,55 @@ class VerseUnitView extends Component {
         return <VerseLine {...other} {...lyricsLineProps} />
     }
 
-    render() {
+    const { hiddenLyricColumnKey } = other
 
-                // From props.
-        const { verseObject,
-                inVerseBar,
-
-                // From controller.
+    return (
+        <div
+            ref={myRef}
+            className={classnames(
+                'verse',
                 verseIndexClassName,
                 backgroundClassName,
-                isAudioButtonEnabled,
-                isInteractable,
-                sliderPlacementClassName,
                 interactivatedClassName,
-                isSelected,
-                isPlaying,
-                isAfterSelected,
-                isDoubleSpeaker,
-                isTitle,
-                handleLyricAudioButtonClick,
-                handleInteractivatableClick,
-
-            ...other } = this.props,
-
-            { hiddenLyricColumnKey } = other
-
-        return (
-            <div
-                ref={(node) => (this.myVerse = node)}
-                className={classnames(
-                    'verse',
-                    verseIndexClassName,
-                    backgroundClassName,
-                    interactivatedClassName,
-                    sliderPlacementClassName,
-                    { 'selected': isSelected,
-                      'interactable': isInteractable }
-                )}
-                onClick={handleInteractivatableClick}
-            >
-                {isInteractable && !inVerseBar &&
-                    <VerseAudioButton
-                        isAudioButtonEnabled={isAudioButtonEnabled}
-                        isSelected={isSelected}
-                        isPlaying={isPlaying}
-                        isAfterSelected={isAfterSelected}
-                        handleAudioButtonClick={handleLyricAudioButtonClick}
-                    />
-                }
-                {isDoubleSpeaker ? (
-                    <div className={classnames(
-                        'double-lines-block',
-                        { 'hidden-left': hiddenLyricColumnKey === 'left' }
-                    )}>
-                        {DOUBLESPEAKER_KEYS.filter(key => {
-                            return key === hiddenLyricColumnKey ? false : verseObject[key]
-                        }).map((key, index) => {
-                            return this.getVerseLine({
-                                key,
-                                index,
-                                columnKey: key,
-                                other
-                            })
-                        })}
-                    </div>
-                ) : (
-                    this.getVerseLine({
-                        columnKey: isTitle ? TITLE : LEFT,
-                        other
-                    })
-                )}
-            </div>
-        )
-    }
+                sliderPlacementClassName,
+                { 'selected': isSelected,
+                  'interactable': isInteractable }
+            )}
+            onClick={handleInteractivatableClick}
+        >
+            {isInteractable && !inVerseBar &&
+                <VerseAudioButton
+                    isAudioButtonEnabled={isAudioButtonEnabled}
+                    isSelected={isSelected}
+                    isPlaying={isPlaying}
+                    isAfterSelected={isAfterSelected}
+                    handleAudioButtonClick={handleLyricAudioButtonClick}
+                />
+            }
+            {isDoubleSpeaker ? (
+                <div className={classnames(
+                    'double-lines-block',
+                    { 'hidden-left': hiddenLyricColumnKey === 'left' }
+                )}>
+                    {DOUBLESPEAKER_KEYS.filter(key => {
+                        return key === hiddenLyricColumnKey ? false : verseObject[key]
+                    }).map((key, index) => {
+                        return getVerseLine({
+                            key,
+                            index,
+                            columnKey: key,
+                            other
+                        })
+                    })}
+                </div>
+            ) : (
+                getVerseLine({
+                    columnKey: isTitle ? TITLE : LEFT,
+                    other
+                })
+            )}
+        </div>
+    )
 }
 
 VerseUnitView.propTypes = {
@@ -318,6 +312,7 @@ VerseUnitView.propTypes = {
     backgroundClassName: PropTypes.string.isRequired,
     sliderPlacementClassName: PropTypes.string.isRequired,
     interactivatedClassName: PropTypes.string.isRequired,
+    myRef: PropTypes.func.isRequired,
     handleLyricAudioButtonClick: PropTypes.func,
     handleInteractivatableClick: PropTypes.func
 }
