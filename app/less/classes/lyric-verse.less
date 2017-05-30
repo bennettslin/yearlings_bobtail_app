@@ -141,11 +141,11 @@
 }
 
 /**
- * Verse has highlighted styling only when interactivated, or when hovered and
- * no other verse is interactivated.
+ * Interactable verse has highlighted styling only when interactivated, or when
+ * hovered, not selected, and with no other verse interactivated.
  */
 .slider-not-moving {
-    &.is-not-verse-interactivated .verse.hoverable:hover, &.is-verse-interactivated .verse.interactivated {
+    &.is-not-verse-interactivated .verse.interactable:not(.selected):hover, &.is-verse-interactivated .verse.interactivated {
         .text-shadow-mixin(@audio-highlight-colour);
     }
 }

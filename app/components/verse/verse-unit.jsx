@@ -76,20 +76,13 @@ class VerseUnit extends Component {
             // If verse bar is shown, selected verse is not hoverable or interactivatable.
             notVerseBarPrevented = verseBarHidden || !isSelected,
 
-            isHoverable =
-                isInteractable &&
-                !isInteractivated &&
-                notVerseBarPrevented,
-
             // Allows clicks on selected or interactivated verse to deinteractivate it.
             handleInteractivatableClick = !inVerseBar && notVerseBarPrevented && !isInteractivated ? e => handleVerseInteractivate(e, verseIndex) : null,
 
-            hasVerseIndex = !isNaN(verseIndex),
+            // If not an interactable verse, we'll count it as odd.
+            isEven = isInteractable && verseIndex % 2 === 0,
 
-            // If no verse index, we'll count it as odd.
-            isEven = hasVerseIndex && verseIndex % 2 === 0,
-
-            verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${hasVerseIndex ? 'verse-' + verseIndex : ''}`
+            verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${isInteractable ? 'verse-' + verseIndex : ''}`
 
         let sliderPlacementClassName = ''
 
@@ -143,7 +136,6 @@ class VerseUnit extends Component {
                 isSelected={isSelected}
                 isSliderSelected={isSliderSelected}
                 isInteractable={isInteractable}
-                isHoverable={isHoverable}
                 sliderPlacementClassName={sliderPlacementClassName}
                 interactivatedClassName={interactivatedClassName}
                 isDoubleSpeaker={!lyric}
@@ -248,7 +240,6 @@ class VerseUnitView extends Component {
                 backgroundClassName,
                 isAudioButtonEnabled,
                 isInteractable,
-                isHoverable,
                 sliderPlacementClassName,
                 interactivatedClassName,
                 isSelected,
@@ -273,8 +264,7 @@ class VerseUnitView extends Component {
                     interactivatedClassName,
                     sliderPlacementClassName,
                     { 'selected': isSelected,
-                      'interactable': isInteractable,
-                      'hoverable': isHoverable }
+                      'interactable': isInteractable }
                 )}
                 onClick={handleInteractivatableClick}
             >
@@ -319,7 +309,6 @@ VerseUnitView.propTypes = {
     hiddenLyricColumnKey: PropTypes.string,
     isTitle: PropTypes.bool,
     inVerseBar: PropTypes.bool,
-    isHoverable: PropTypes.bool,
     isPlaying: PropTypes.bool,
     isAudioButtonEnabled: PropTypes.bool.isRequired,
     isInteractable: PropTypes.bool.isRequired,
