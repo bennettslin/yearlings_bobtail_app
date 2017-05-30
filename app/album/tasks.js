@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Selected verse index doesn't persist.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Nav toggle button doesn't hide all the way`,
         workedHours: 0,
         neededHours: 1
@@ -2005,4 +2000,9 @@ module.exports = [
         workedHours: 13,
         neededHours: 13
     },
+    {
+        taskName: `Selected verse index doesn't persist.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
