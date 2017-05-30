@@ -620,16 +620,25 @@ class EventManager extends Component {
     }
 
     handleVerseInteractivate(e, verseIndex) {
-        this.stopPropagation(e)
-        this._closeSections({
-            exemptDots: true,
-            exemptCarousel: true,
-            exemptInteractivatedVerse: true,
-            exemptLyric: true,
-            exemptNav: true,
-            exemptOverview: true
-        })
-        this.props.interactivateVerse(verseIndex)
+        const { domProps, domState } = this.props,
+            { selectedVerseIndex } = domProps,
+            { isSelectedVerseAbove,
+              isSelectedVerseBelow } = domState
+
+        // If verse bar is shown, do not allow click on selected verse.
+        if (!(isSelectedVerseAbove || isSelectedVerseBelow) || verseIndex !== selectedVerseIndex) {
+
+            this.stopPropagation(e)
+            this._closeSections({
+                exemptDots: true,
+                exemptCarousel: true,
+                exemptInteractivatedVerse: true,
+                exemptLyric: true,
+                exemptNav: true,
+                exemptOverview: true
+            })
+            this.props.interactivateVerse(verseIndex)
+        }
     }
 
     handleVerseElementSelect(verseElement) {

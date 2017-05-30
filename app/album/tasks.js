@@ -43,11 +43,6 @@ module.exports = [
 
     // Full morning tasks.
     {
-        taskName: `Lyric scrolling slowness, only update based on certain changes.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Logue overview styling, including when title is shown.`,
         workedHours: 0,
         neededHours: 3
@@ -2007,7 +2002,7 @@ module.exports = [
     },
     {
         taskName: `Continue work on checking to update components.`,
-        workedHours: 5,
-        neededHours: 5
+        workedHours: 13,
+        neededHours: 13
     },
 ]

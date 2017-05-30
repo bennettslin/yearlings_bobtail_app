@@ -44,8 +44,7 @@ class LyricColumn extends Component {
                     'selectedLyricColumnIndex',
                     'selectedVerseIndex',
                     'showOneOfTwoLyricColumns',
-                    'sliderMousedOrTouched',
-                    'verseBarHidden'
+                    'sliderMousedOrTouched'
                 ]
             })
 
@@ -99,7 +98,6 @@ LyricColumn.propTypes = {
     isLogue: PropTypes.bool.isRequired,
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     sliderMousedOrTouched: PropTypes.bool.isRequired,
-    verseBarHidden: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
     isPortrait: PropTypes.bool.isRequired,
 

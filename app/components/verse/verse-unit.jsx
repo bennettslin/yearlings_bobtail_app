@@ -21,7 +21,6 @@ class VerseUnit extends Component {
                     'deviceIndex',
                     'appMounted',
                     'isPortrait',
-                    'verseBarHidden',
                     'sliderMousedOrTouched',
                     'isPlaying',
                     'accessedAnnotationIndex',
@@ -44,16 +43,52 @@ class VerseUnit extends Component {
         return componentShouldUpdate
     }
 
-    render() {
+    _getBackgroundClassName(isEven) {
+        const { inVerseBar,
+                inMain,
+                isTitle } = this.props
+
+        if (!inVerseBar) {
+            if (isTitle) {
+                return 'title'
+            } else if (inMain) {
+                return isEven ? 'even' : 'odd'
+            } else {
+                return 'in-side'
+            }
+        }
+
+        return ''
+    }
+
+    _getSliderPlacementClassName() {
         const { inMain,
-                verseBarHidden,
-                handleLyricAnnotationSelect,
+                isTitle,
+                sliderMousedOrTouched,
+                isSliderSelected,
+                isAfterSliderSelected } = this.props
+
+        if (sliderMousedOrTouched && inMain && !isTitle) {
+            if (isSliderSelected) {
+                return 'on-slider'
+
+            } else if (isAfterSliderSelected) {
+                return 'after-slider'
+
+            } else {
+                return 'before-slider'
+            }
+        }
+
+        return ''
+    }
+
+    render() {
+        const { handleLyricAnnotationSelect,
                 handleLyricPlay,
                 handleLyricVerseSelect,
                 handleVerseInteractivate,
-                sliderMousedOrTouched,
                 isSliderSelected,
-                isAfterSliderSelected,
 
                 ...other } = this.props,
 
@@ -64,59 +99,24 @@ class VerseUnit extends Component {
 
             { lyric,
               isTitle,
-              time,
               verseIndex } = verseObject,
 
-            /**
-             * Not interactable if technically selected, but currently not selected
-             * due to verse bar shown.
-             */
-            isInteractable = !isNaN(time),
+            isInteractable = !isNaN(verseIndex),
 
-            // If verse bar is shown, selected verse is not hoverable or interactivatable.
-            notVerseBarPrevented = verseBarHidden || !isSelected,
-
-            // Allows clicks on selected or interactivated verse to deinteractivate it.
-            handleInteractivatableClick = !inVerseBar && notVerseBarPrevented && !isInteractivated ? e => handleVerseInteractivate(e, verseIndex) : null,
 
             // If not an interactable verse, we'll count it as odd.
             isEven = isInteractable && verseIndex % 2 === 0,
+            backgroundClassName = this._getBackgroundClassName(isEven),
+            sliderPlacementClassName = this._getSliderPlacementClassName(),
+            interactivatedClassName = isInteractivated ? 'interactivated' : 'not-interactivated',
+            verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${isInteractable ? 'verse-' + verseIndex : ''}`,
 
-            verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${isInteractable ? 'verse-' + verseIndex : ''}`
-
-        let sliderPlacementClassName = ''
-
-        if (sliderMousedOrTouched && inMain && !isTitle) {
-            if (isSliderSelected) {
-                sliderPlacementClassName = 'on-slider'
-
-            } else if (isAfterSliderSelected) {
-                sliderPlacementClassName = 'after-slider'
-
-            } else {
-                sliderPlacementClassName = 'before-slider'
-            }
-        }
-
-        let backgroundClassName = '',
-            interactivatedClassName = ''
-
-        if (!inVerseBar) {
-            if (isTitle) {
-                backgroundClassName = 'title'
-            } else if (inMain) {
-                backgroundClassName = isEven ? 'even' : 'odd'
-            } else {
-                backgroundClassName = 'in-side'
-            }
-
-            interactivatedClassName = isInteractivated ? 'interactivated' : 'not-interactivated'
-        }
+            // Allow clicks on interactable verses.
+            handleInteractivatableClick = !inVerseBar && isInteractable ? e => handleVerseInteractivate(e, verseIndex) : null
 
         let handleLyricAudioButtonClick = null
 
         if (isInteractable) {
-
             // If verse is selected, audio button will toggle play.
             if (isSelected) {
                 handleLyricAudioButtonClick = handleLyricPlay
@@ -132,12 +132,12 @@ class VerseUnit extends Component {
                 verseIndexClassName={verseIndexClassName}
                 backgroundClassName={backgroundClassName}
                 isAudioButtonEnabled={isInteractivated}
+                sliderPlacementClassName={sliderPlacementClassName}
+                interactivatedClassName={interactivatedClassName}
                 isTitle={isTitle}
                 isSelected={isSelected}
                 isSliderSelected={isSliderSelected}
                 isInteractable={isInteractable}
-                sliderPlacementClassName={sliderPlacementClassName}
-                interactivatedClassName={interactivatedClassName}
                 isDoubleSpeaker={!lyric}
                 handleLyricAudioButtonClick={handleLyricAudioButtonClick}
                 handleAnchorClick={handleLyricAnnotationSelect}
@@ -155,7 +155,6 @@ VerseUnit.propTypes = {
     isInteractivated: PropTypes.bool.isRequired,
     inMain: PropTypes.bool,
     inVerseBar: PropTypes.bool,
-    verseBarHidden: PropTypes.bool,
     sliderMousedOrTouched: PropTypes.bool,
     handleLyricAnnotationSelect: PropTypes.func,
     handleLyricPlay: PropTypes.func,

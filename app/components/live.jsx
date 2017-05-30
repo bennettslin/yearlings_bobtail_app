@@ -143,7 +143,6 @@ const LiveView = ({
 }) => {
 
     const timerInAudio = showOverlay && isPhone,
-        verseBarHidden = !isSelectedVerseAbove && !isSelectedVerseBelow,
 
         titleToggleProps = {
             selectedTitleIndex,
@@ -247,7 +246,6 @@ const LiveView = ({
             // For lyrics line width reset.
             isPortrait: windowHeight > windowWidth,
 
-            verseBarHidden,
             sliderMousedOrTouched,
             sliderVerseIndex,
             isLogue,
@@ -388,7 +386,7 @@ const LiveView = ({
               'overview-shown': isOverviewShown,
               'verse-above': isSelectedVerseAbove,
               'verse-below': isSelectedVerseBelow,
-              'verse-bar-hidden': verseBarHidden,
+              'verse-bar-hidden': !isSelectedVerseAbove && !isSelectedVerseBelow,
               'scores-tips-outside-menu': scoresTipsOutsideMenu },
             selectedDotKeys
         )}>
