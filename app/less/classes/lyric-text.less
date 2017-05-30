@@ -31,17 +31,28 @@
     justify-content: space-between;
 }
 
-// Single right column should be text-aligned to right.
-.hidden-left {
-    flex-direction: row-reverse;
-}
-
 .line {
     @centre-edge-margin: 15%;
 
-    &.hidden {
-        // max-width: 0 !important;
-        display: none;
+    // transition: padding @animation-default,
+    //             margin @animation-default,
+    //             width @animation-default,
+    //             max-width @animation-default,
+    //             max-height @animation-default;
+
+    &.left, &.right {
+        &.hidden {
+            // Override max width set programmatically in verse line.
+            // max-width: 0 !important;
+            width: 0;
+            overflow: hidden;
+            padding: 0;
+            max-height: 0;
+
+            &.right:not(:first-child) {
+                margin: 0;
+            }
+        }
     }
 
     &.left {
@@ -49,12 +60,13 @@
         padding-left: @hanging-indent-width;
     }
 
-    &.centre {
-        width: 100%;
-        text-indent: 0;
-        padding-left: 0;
-        text-align: center;
-    }
+    // Not needed?
+    // &.centre {
+    //     width: 100%;
+    //     text-indent: 0;
+    //     padding-left: 0;
+    //     text-align: center;
+    // }
 
     &.right {
         // If both columns show, have a single gutter between them.
@@ -75,6 +87,17 @@
             opacity: 0;
             font-size: 0;
             line-height: 0;
+        }
+    }
+}
+
+// Single right column should not have margin left.
+.hidden-left {
+    .line {
+        &.right {
+            &:not(:first-child) {
+                margin-left: 0;
+            }
         }
     }
 }

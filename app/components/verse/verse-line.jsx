@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import TextBlock from '../text/text-block'
-import { TITLE } from '../../helpers/constants'
+import { TITLE, CENTRE } from '../../helpers/constants'
 
 class VerseLine extends Component {
 
@@ -81,7 +81,7 @@ class VerseLine extends Component {
          * TODO: Now that the issue seems resolved, can we not exclude centre
          * columns?
          */
-        if (this.props.columnKey !== TITLE) {
+        if (this.props.columnKey !== TITLE && this.props.columnKey !== CENTRE) {
             const parent = this.myParent
             if (parent) {
                 if (unset) {

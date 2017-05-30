@@ -278,10 +278,7 @@ const VerseUnitView = ({
                     'double-lines-block',
                     { 'hidden-left': hiddenLyricColumnKey === LEFT }
                 )}>
-                    {DOUBLESPEAKER_KEYS.filter(() => {
-                        // return key === hiddenLyricColumnKey ? false : verseObject[key]
-                        return true
-                    }).map((key, index) => {
+                    {DOUBLESPEAKER_KEYS.map((key, index) => {
                         return getVerseLine({
                             key,
                             isHidden: key === hiddenLyricColumnKey,
