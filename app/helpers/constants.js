@@ -294,7 +294,7 @@ module.exports = {
 
     DOUBLESPEAKER_KEYS: [
         LEFT,
-        CENTRE,
+        // CENTRE,
         RIGHT
     ],
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import VerseLine from './verse-line'
 import VerseAudioButton from './verse-audio-button'
-import { DOUBLESPEAKER_KEYS, TITLE, LEFT } from '../../helpers/constants'
+import { DOUBLESPEAKER_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../helpers/constants'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -129,6 +129,7 @@ class VerseUnit extends Component {
               isInteractivated } = other,
 
             { lyric,
+              centre,
               isTitle,
               verseIndex } = verseObject,
 
@@ -170,7 +171,7 @@ class VerseUnit extends Component {
                 isSelected={isSelected}
                 isSliderSelected={isSliderSelected}
                 isInteractable={isInteractable}
-                isDoubleSpeaker={!lyric}
+                isDoubleSpeaker={!lyric && !centre}
                 handleLyricAudioButtonClick={handleLyricAudioButtonClick}
                 handleAnchorClick={handleLyricAnnotationSelect}
                 handleInteractivatableClick={handleInteractivatableClick}
@@ -228,14 +229,15 @@ const VerseUnitView = ({
 
 ...other }) => {
     // FIXME: Not ideal.
-    const getVerseLine = ({ key, index, columnKey, other }) => {
+    const getVerseLine = ({ key, isHidden, index, columnKey, other }) => {
 
         const lyricsLineProps = {
                 inVerseBar,
                 verseSelected: isSelected,
-                text: key ? verseObject[key] : verseObject.lyric,
+                    text: key ? verseObject[key] : verseObject[LYRIC] || verseObject[CENTRE],
                 firstVerseObject: verseObject.firstVerseObject,
                 lastVerseObject: verseObject.lastVerseObject,
+                isHidden,
                 columnKey
             }
 
@@ -274,13 +276,15 @@ const VerseUnitView = ({
             {isDoubleSpeaker ? (
                 <div className={classnames(
                     'double-lines-block',
-                    { 'hidden-left': hiddenLyricColumnKey === 'left' }
+                    { 'hidden-left': hiddenLyricColumnKey === LEFT }
                 )}>
-                    {DOUBLESPEAKER_KEYS.filter(key => {
-                        return key === hiddenLyricColumnKey ? false : verseObject[key]
+                    {DOUBLESPEAKER_KEYS.filter(() => {
+                        // return key === hiddenLyricColumnKey ? false : verseObject[key]
+                        return true
                     }).map((key, index) => {
                         return getVerseLine({
                             key,
+                            isHidden: key === hiddenLyricColumnKey,
                             index,
                             columnKey: key,
                             other

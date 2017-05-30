@@ -246,6 +246,9 @@ const LiveView = ({
             // For lyrics line width reset.
             isPortrait: windowHeight > windowWidth,
 
+            // For lyric expand button.
+            isLyricExpanded,
+
             sliderMousedOrTouched,
             sliderVerseIndex,
             isLogue,

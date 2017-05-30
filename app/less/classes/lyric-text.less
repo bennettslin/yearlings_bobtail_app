@@ -39,6 +39,11 @@
 .line {
     @centre-edge-margin: 15%;
 
+    &.hidden {
+        // max-width: 0 !important;
+        display: none;
+    }
+
     &.left {
         text-indent:-@hanging-indent-width;
         padding-left: @hanging-indent-width;

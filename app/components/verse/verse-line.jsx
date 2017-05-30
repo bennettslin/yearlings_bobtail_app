@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import TextBlock from '../text/text-block'
-import { TITLE, CENTRE } from '../../helpers/constants'
+import { TITLE } from '../../helpers/constants'
 
 class VerseLine extends Component {
 
@@ -80,7 +81,7 @@ class VerseLine extends Component {
          * TODO: Now that the issue seems resolved, can we not exclude centre
          * columns?
          */
-        if (this.props.columnKey !== TITLE && this.props.columnKey !== CENTRE) {
+        if (this.props.columnKey !== TITLE) {
             const parent = this.myParent
             if (parent) {
                 if (unset) {
@@ -110,6 +111,7 @@ class VerseLine extends Component {
 
     render() {
         const { columnKey,
+                isHidden,
                 ...other } = this.props
 
         // console.error(`render`, this.props.text);
@@ -117,7 +119,11 @@ class VerseLine extends Component {
         return (
             <div
                 ref={(node) => (this.myParent = node)}
-                className={`line ${columnKey !== TITLE ? columnKey : ''}`}
+                className={classnames(
+                    'line',
+                    { 'hidden': isHidden,
+                      [columnKey]: columnKey !== TITLE }
+                )}
             >
                 <span ref={(node) => (this.myChild = node)}>
                     <TextBlock {...other}

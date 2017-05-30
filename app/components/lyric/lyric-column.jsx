@@ -44,7 +44,10 @@ class LyricColumn extends Component {
                     'selectedLyricColumnIndex',
                     'selectedVerseIndex',
                     'showOneOfTwoLyricColumns',
-                    'sliderMousedOrTouched'
+                    'sliderMousedOrTouched',
+
+                    // For lyric expand button.
+                    'isLyricExpanded'
                 ]
             })
 
@@ -100,6 +103,8 @@ LyricColumn.propTypes = {
     sliderMousedOrTouched: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
     isPortrait: PropTypes.bool.isRequired,
+
+    isLyricExpanded: PropTypes.bool.isRequired,
 
     selectedSongIndex: PropTypes.number.isRequired,
     accessedAnnotationIndex: PropTypes.number,
