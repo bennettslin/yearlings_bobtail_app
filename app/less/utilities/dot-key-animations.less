@@ -111,6 +111,17 @@
     }
 }
 
+.live-app.narrative .text-anchor-block .animated-background.narrative,
+.live-app.backstory .text-anchor-block .animated-background.backstory,
+.live-app.observation .text-anchor-block .animated-background.observation,
+.live-app.pun .text-anchor-block .animated-background.pun,
+.live-app.reference .text-anchor-block .animated-background.reference,
+.live-app.songwriting .text-anchor-block .animated-background.songwriting,
+.live-app.portal .text-anchor-block .animated-background.portal,
+.live-app.afterword .text-anchor-block .animated-background.afterword {
+    border: @dot-border solid @lyric-underline-enabled-colour;
+}
+
 .live-app.narrative .text-anchor-block:hover .animated-background.narrative,
 .live-app.backstory .text-anchor-block:hover .animated-background.backstory,
 .live-app.observation .text-anchor-block:hover .animated-background.observation,
@@ -212,10 +223,6 @@
 
         .underline-bar {
             background-color: @lyric-underline-enabled-colour;
-        }
-
-        .animated-background {
-            border: @dot-border solid @lyric-underline-enabled-colour;
         }
     }
 

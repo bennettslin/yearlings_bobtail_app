@@ -15,11 +15,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Lyric anchor block dot margin is wonky when faded out.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Show selected annotation in carousel on load.`,
         workedHours: 0,
         neededHours: 2
@@ -2002,6 +1997,11 @@ module.exports = [
     },
     {
         taskName: `Selected verse index doesn't persist.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Lyric anchor block dot margin is wonky when faded out.`,
         workedHours: 1,
         neededHours: 1
     }
