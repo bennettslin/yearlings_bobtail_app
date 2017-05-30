@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 import Button from '../button/button'
 
 /*************
@@ -8,9 +7,9 @@ import Button from '../button/button'
  *************/
 
 // TODO: Make audio button take up width of line.
-
 const VerseAudioButton = ({
 
+    // TODO: Would be preferable not to need isAudioButtonEnabled flag.
     isAudioButtonEnabled,
     isPlaying,
     isSelected,
@@ -27,12 +26,7 @@ const VerseAudioButton = ({
     }
 
     return (
-        <div
-            className={classnames(
-                'verse-audio-button-block',
-                { 'audio-button-enabled': isAudioButtonEnabled }
-            )}
-        >
+        <div className="verse-audio-button-block">
             <div className="verse-audio-button-child">
                 <Button
                     buttonName="verse-audio"

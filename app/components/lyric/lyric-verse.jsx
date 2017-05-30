@@ -10,7 +10,7 @@ const LyricVerse = ({
 
 ...other }) => {
 
-    // Allow verse unit not to have knowledge of selected indices.
+    // Allow verse unit not to have knowledge of various verse indices.
     const { verseObject } = other,
         { verseIndex } = verseObject,
 
