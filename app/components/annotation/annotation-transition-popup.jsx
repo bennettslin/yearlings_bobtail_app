@@ -1,8 +1,24 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import AnnotationSection from './annotation-section'
 import TransitionPopup from '../popup/transition-popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedAnnotationIndex,
+    selectedCarouselIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedAnnotationIndex,
+    selectedCarouselIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex
+})
 
 /*************
  * CONTAINER *
@@ -74,4 +90,4 @@ AnnotationTransitionPopup.propTypes = {
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 
-export default AnnotationTransitionPopup
+export default connect(passReduxStateToProps)(AnnotationTransitionPopup)

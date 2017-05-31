@@ -154,11 +154,11 @@ const LiveView = ({
 
         annotationPopupProps = {
             annotationObject,
-            selectedAnnotationIndex,
-            selectedCarouselIndex,
-            selectedScoreIndex,
-            selectedTitleIndex,
-            selectedWikiIndex,
+            // selectedAnnotationIndex,
+            // selectedCarouselIndex,
+            // selectedScoreIndex,
+            // selectedTitleIndex,
+            // selectedWikiIndex,
             accessedPopupAnchorIndex,
             handleAnnotationPrevious,
             handleAnnotationNext,
