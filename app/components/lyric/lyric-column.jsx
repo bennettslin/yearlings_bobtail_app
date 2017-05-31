@@ -13,13 +13,15 @@ const passReduxStateToProps = ({
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
-    selectedVerseIndex
+    selectedVerseIndex,
+    showOneOfTwoLyricColumns
 }) => ({
 // Pass Redux state into component props.
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
-    selectedVerseIndex
+    selectedVerseIndex,
+    showOneOfTwoLyricColumns
 })
 
 /*************

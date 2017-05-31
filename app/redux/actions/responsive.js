@@ -3,7 +3,8 @@ import { IS_CAROUSEL_EXPANDABLE,
          IS_HEIGHTLESS_LYRIC_COLUMN,
          IS_HIDDEN_NAV,
          IS_SCORES_TIPS_IN_MAIN,
-         IS_TITLE_IN_AUDIO } from '../../constants/state'
+         IS_TITLE_IN_AUDIO,
+         SHOW_ONE_OF_TWO_LYRIC_COLUMNS } from '../../constants/state'
 
 export const setIsCarouselExpandable = (isCarouselExpandable = false) => (
     { type: IS_CAROUSEL_EXPANDABLE,
@@ -28,4 +29,9 @@ export const setIsScoresTipsInMain = (isScoresTipsInMain = false) => (
 export const setIsTitleInAudio = (isTitleInAudio = false) => (
     { type: IS_TITLE_IN_AUDIO,
       payload: isTitleInAudio }
+)
+
+export const setShowOneOfTwoLyricColumns = (showOneOfTwoLyricColumns = false) => (
+    { type: SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
+      payload: showOneOfTwoLyricColumns }
 )

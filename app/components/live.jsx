@@ -23,9 +23,9 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns
 })
 
 /*************
@@ -229,7 +229,6 @@ const LiveView = ({
             sliderMousedOrTouched,
             sliderVerseIndex,
             isLogue,
-            showOneOfTwoLyricColumns,
             isPlaying,
             accessedAnnotationIndex,
             interactivatedVerseIndex,
