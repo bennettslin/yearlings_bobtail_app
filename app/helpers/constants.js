@@ -204,28 +204,6 @@ module.exports = {
     PREVIOUS_POPUP_BUTTON: 'side-position previous',
     NEXT_POPUP_BUTTON: 'side-position next',
 
-    SELECTED_ADMIN_INDEX: 'selectedAdminIndex',
-    SELECTED_SONG_INDEX: 'selectedSongIndex',
-    SELECTED_OVERVIEW_INDEX: 'selectedOverviewIndex',
-    SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
-    SELECTED_WIKI_INDEX: 'selectedWikiIndex',
-    SELECTED_VERSE_INDEX: 'selectedVerseIndex',
-    SELECTED_TIME_PLAYED: 'selectedTimePlayed',
-    SELECTED_DOT_KEYS: 'selectedDotKeys',
-    SELECTED_AUDIO_OPTION_INDEX: 'selectedAudioOptionIndex',
-    SELECTED_LYRIC_COLUMN_INDEX: 'selectedLyricColumnIndex',
-    SELECTED_TIPS_INDEX: 'selectedTipsIndex',
-    SELECTED_NAV_INDEX: 'selectedNavIndex',
-    SELECTED_DOTS_INDEX: 'selectedDotsIndex',
-    SELECTED_SCORE_INDEX: 'selectedScoreIndex',
-    SELECTED_CAROUSEL_INDEX: 'selectedCarouselIndex',
-    SELECTED_TITLE_INDEX: 'selectedTitleIndex',
-    SELECTED_ACCESS_INDEX: 'selectedAccessIndex',
-
-    ACCESSED_DOT_INDEX: 'accessedDotIndex',
-    ACCESSED_ANNOTATION_ANCHOR_INDEX: 'accessedAnnotationAnchorIndex',
-    ACCESSED_NAV_SONG_INDEX: 'accessedNavSongIndex',
-
     // This is only used by the stats helper.
     STAT_TEXT_KEYS: [
         ITALIC,

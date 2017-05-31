@@ -44,6 +44,7 @@ class AudioSection extends Component {
         const { selectedSongIndex,
                 ...other } = this.props,
 
+            // TODO: Get these from data helper.
             isPrologue = selectedSongIndex === 0,
             isFirstSong = selectedSongIndex === 1,
             isLastSong = selectedSongIndex === SONG_FILES.length,

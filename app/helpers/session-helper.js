@@ -2,34 +2,32 @@
 import { getTwoToThePowerOfN, convertBitNumberToTrueFalseKeys, convertTrueFalseKeysToBitNumber } from './general-helper'
 import AlbumData from '../album-data'
 
-import { SELECTED_ACCESS_INDEX,
-         SELECTED_ADMIN_INDEX,
-         SELECTED_DOTS_INDEX,
-         SELECTED_NAV_INDEX,
-         SELECTED_SCORE_INDEX,
-
-         SELECTED_AUDIO_OPTION_INDEX,
-         SELECTED_LYRIC_COLUMN_INDEX,
-         SELECTED_OVERVIEW_INDEX,
-         SELECTED_TIPS_INDEX,
-         AUDIO_OPTIONS,
+import { AUDIO_OPTIONS,
          LYRIC_COLUMN_KEYS,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS,
 
-         SELECTED_DOT_KEYS,
          ALL_DOT_KEYS,
 
-         SELECTED_SONG_INDEX,
-         SELECTED_ANNOTATION_INDEX,
-         SELECTED_VERSE_INDEX,
-         SELECTED_WIKI_INDEX,
-         SELECTED_CAROUSEL_INDEX,
-         SELECTED_TITLE_INDEX,
-
-         SELECTED_TIME_PLAYED,
-
          WINDOW_STORAGE } from './constants'
+
+import { SELECTED_ACCESS_INDEX,
+         SELECTED_ADMIN_INDEX,
+         SELECTED_ANNOTATION_INDEX,
+         SELECTED_AUDIO_OPTION_INDEX,
+         SELECTED_CAROUSEL_INDEX,
+         SELECTED_DOT_KEYS,
+         SELECTED_DOTS_INDEX,
+         SELECTED_LYRIC_COLUMN_INDEX,
+         SELECTED_NAV_INDEX,
+         SELECTED_OVERVIEW_INDEX,
+         SELECTED_SCORE_INDEX,
+         SELECTED_SONG_INDEX,
+         SELECTED_TIME_PLAYED,
+         SELECTED_TIPS_INDEX,
+         SELECTED_TITLE_INDEX,
+         SELECTED_VERSE_INDEX,
+         SELECTED_WIKI_INDEX } from '../constants/state'
 
 const setInSession = (key, value) => {
     WINDOW_STORAGE[key] = value
