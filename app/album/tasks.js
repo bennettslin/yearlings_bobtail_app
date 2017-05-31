@@ -1999,5 +1999,10 @@ module.exports = [
         taskName: `Lyric anchor block dot margin is wonky when faded out.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Nav toggle button doesn't hide all the way in tablet.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

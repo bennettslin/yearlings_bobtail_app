@@ -164,9 +164,9 @@
 
 @tablet-shrink-book-offset: ~"calc(@{full-vw} / @{double-icons} + @{tablet-shrink-book-offset-constant})";
 
-@tablet-shrink-toggle-width-constant: @nav-book-padding * 2 - (10 * @nav-book-padding + @double-units * 1px) / @double-icons;
-
-@tablet-shrink-toggle-width: ~"calc(@{full-vw} / @{double-icons} + @{tablet-shrink-toggle-width-constant})";
+// @tablet-shrink-toggle-width-constant: @nav-book-padding * 2 - (10 * @nav-book-padding + @double-units * 1px) / @double-icons;
+//
+// @tablet-shrink-toggle-width: ~"calc(@{full-vw} / @{double-icons} + @{tablet-shrink-toggle-width-constant})";
 
 /**
  * Breakpoint to switch to single column is when icon width is 36px.
@@ -206,9 +206,9 @@
 
 @mini-shrink-book-offset: ~"calc(@{full-vw} / @{single-icons} + @{mini-shrink-book-offset-constant})";
 
-@mini-shrink-toggle-width-constant: @nav-book-padding * 2 - (8 * @nav-book-padding + @single-units * 1px) / @single-icons;
-
-@mini-shrink-toggle-width: ~"calc(@{full-vw} / @{single-icons} + @{mini-shrink-toggle-width-constant})";
+// @mini-shrink-toggle-width-constant: @nav-book-padding * 2 - (8 * @nav-book-padding + @single-units * 1px) / @single-icons;
+//
+// @mini-shrink-toggle-width: ~"calc(@{full-vw} / @{single-icons} + @{mini-shrink-toggle-width-constant})";
 
 @nav-toggle-width: @app-large-icon-diameter + @nav-book-padding * 2;
 @tablet-nav-toggle-width: @app-tablet-large-icon-diameter + @nav-book-padding * 2;
@@ -428,11 +428,11 @@
                 left: @tablet-nav-toggle-width;
             }
 
-            &.shrink-nav-icon {
-                .nav-toggle-book {
-                    left: @tablet-shrink-toggle-width;
-                }
-            }
+            // &.shrink-nav-icon {
+            //     .nav-toggle-book {
+            //         left: @tablet-shrink-toggle-width;
+            //     }
+            // }
         }
     }
 
@@ -558,11 +558,11 @@
                 left: @mini-nav-toggle-width;
             }
 
-            &.shrink-nav-icon {
-                .nav-toggle-book {
-                    left: @mini-shrink-toggle-width;
-                }
-            }
+            // &.shrink-nav-icon {
+            //     .nav-toggle-book {
+            //         left: @mini-shrink-toggle-width;
+            //     }
+            // }
         }
     }
 
