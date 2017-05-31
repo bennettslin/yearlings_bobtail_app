@@ -341,13 +341,14 @@ export const getVerseIndexForTime = (songIndex, time) => {
     }
 }
 
-export const getPopupAnchorIndexForDirection = (
-    props,
+export const getPopupAnchorIndexForDirection = ({
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    selectedDotKeys,
     initialPopupAnchorIndex = 1,
     direction
-) => {
-    const annotation = getAnnotationObject(props.selectedSongIndex, props.selectedAnnotationIndex),
-        selectedDotKeys = props.selectedDotKeys
+}) => {
+    const annotation = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
 
     if (annotation && annotation.popupAnchors) {
 

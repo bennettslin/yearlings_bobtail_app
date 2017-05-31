@@ -204,11 +204,13 @@ class AccessManager extends Component {
                 // If not accessed on, do nothing and just turn access on.
                 if (props.selectedAccessIndex) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(
-                        props,
-                        accessedPopupAnchorIndex,
+                    accessedPopupAnchorIndex = getPopupAnchorIndexForDirection({
+                        selectedSongIndex: props.selectedSongIndex,
+                        selectedAnnotationIndex: props.selectedAnnotationIndex,
+                        selectedDotKeys: props.selectedDotKeys,
+                        initialPopupAnchorIndex: accessedPopupAnchorIndex,
                         direction
-                    )
+                    })
                     this.props.handlePopupAnchorAccess(accessedPopupAnchorIndex)
                 }
                 break
