@@ -32,7 +32,7 @@ class NavSection extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'showSingleBookColumn',
-                    'accessedSongIndex',
+                    'accessedNavSongIndex',
                     'selectedSongIndex',
                     'selectedNavIndex',
                     'shownBookColumnIndex'
@@ -51,7 +51,7 @@ class NavSection extends Component {
 
 NavSection.propTypes = {
     showSingleBookColumn: PropTypes.bool.isRequired,
-    accessedSongIndex: PropTypes.number.isRequired,
+    accessedNavSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedNavIndex: PropTypes.number.isRequired,
     shownBookColumnIndex: PropTypes.number.isRequired,
@@ -69,7 +69,7 @@ const NavSectionView = ({
     // From props.
     selectedSongIndex,
     selectedNavIndex,
-    accessedSongIndex,
+    accessedNavSongIndex,
     shownBookColumnIndex,
     showSingleBookColumn,
 
@@ -82,7 +82,7 @@ const NavSectionView = ({
 }) => {
     const navItemProps = {
         selectedSongIndex,
-        accessedSongIndex,
+        accessedNavSongIndex,
         handleNavSongSelect
     },
     songsLength = songs.length

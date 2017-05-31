@@ -12,12 +12,12 @@ const NavItem = ({
     isToggle,
     hasSelectedSong,
     selectedSongIndex,
-    accessedSongIndex,
+    accessedNavSongIndex,
 
 ...other }) => {
 
     const isSelected = isToggle ? hasSelectedSong : selectedSongIndex === index,
-        accessHighlighted = accessedSongIndex === index,
+        accessHighlighted = accessedNavSongIndex === index,
         navItemProps = {
             songIndex: index,
             isSelected,
@@ -31,7 +31,7 @@ NavItem.propTypes = {
     isToggle: PropTypes.bool,
     hasSelectedSong: PropTypes.bool,
     index: PropTypes.number,
-    accessedSongIndex: PropTypes.number.isRequired,
+    accessedNavSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired
 }
 

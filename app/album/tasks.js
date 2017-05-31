@@ -2003,5 +2003,10 @@ module.exports = [
         taskName: `Redux connect`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Verse bar not updating when song is changed?!`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

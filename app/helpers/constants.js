@@ -222,6 +222,10 @@ module.exports = {
     SELECTED_TITLE_INDEX: 'selectedTitleIndex',
     SELECTED_ACCESS_INDEX: 'selectedAccessIndex',
 
+    ACCESSED_DOT_INDEX: 'accessedDotIndex',
+    ACCESSED_ANNOTATION_ANCHOR_INDEX: 'accessedAnnotationAnchorIndex',
+    ACCESSED_NAV_SONG_INDEX: 'accessedNavSongIndex',
+
     // This is only used by the stats helper.
     STAT_TEXT_KEYS: [
         ITALIC,

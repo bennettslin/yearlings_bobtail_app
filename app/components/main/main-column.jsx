@@ -30,7 +30,7 @@ const MainColumnView = ({
 
     showSingleBookColumn,
 
-    accessedSongIndex,
+    accessedNavSongIndex,
     shownBookColumnIndex,
 
     handleCarouselToggle,
@@ -68,7 +68,7 @@ const MainColumnView = ({
         navSectionProps = {
             showSingleBookColumn,
             shownBookColumnIndex,
-            accessedSongIndex,
+            accessedNavSongIndex,
 
             handleNavExpand,
             handleNavSongSelect,

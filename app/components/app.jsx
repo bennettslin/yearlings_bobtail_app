@@ -14,7 +14,7 @@ import { SHOWN,
          CONTINUE,
          PAUSE_AT_END } from '../helpers/constants'
 import { getSongObject, getSongsLength, getIsLogue, getAnnotationObject, getBookColumnIndex, getOverview, getSongVerseTimes } from '../helpers/data-helper'
-import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getPopupAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
+import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShrinkNavIcon, getScoresTipsOutsideMenu, getTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
@@ -53,12 +53,12 @@ class App extends Component {
             isPlaying: false,
 
             accessedDotIndex: 0,
-            accessedSongIndex: selectedSongIndex,
-            accessedPopupAnchorIndex: getPopupAnchorIndexForDirection({
+            accessedNavSongIndex: selectedSongIndex,
+            accessedAnnotationAnchorIndex: getAnnotationAnchorIndexForDirection({
                 selectedSongIndex,
                 selectedAnnotationIndex: props.selectedAnnotationIndex,
                 selectedDotKeys: props.selectedDotKeys,
-                initialPopupAnchorIndex: 1
+                initialAnnotationAnchorIndex: 1
             }),
 
             annotationObject: getAnnotationObject(selectedSongIndex, props.selectedAnnotationIndex),
@@ -200,15 +200,15 @@ class App extends Component {
         })
     }
 
-    accessPopupAnchor(accessedPopupAnchorIndex) {
+    accessAnnotationAnchor(accessedAnnotationAnchorIndex) {
         this.setState({
-            accessedPopupAnchorIndex
+            accessedAnnotationAnchorIndex
         })
     }
 
-    accessSong(accessedSongIndex) {
+    accessSong(accessedNavSongIndex) {
         this.setState({
-            accessedSongIndex
+            accessedNavSongIndex
         })
     }
 
@@ -250,18 +250,18 @@ class App extends Component {
         // Keep accessed index, even if annotation is deselected.
         if (selectedAnnotationIndex) {
             const { selectedDotKeys } = props,
-                accessedPopupAnchorIndex = getPopupAnchorIndexForDirection({
+                accessedAnnotationAnchorIndex = getAnnotationAnchorIndexForDirection({
                     selectedSongIndex,
                     selectedAnnotationIndex,
                     selectedDotKeys,
-                    initialPopupAnchorIndex: 1
+                    initialAnnotationAnchorIndex: 1
                 })
 
             this.setState({
                 accessedAnnotationIndex: selectedAnnotationIndex,
 
                 // App does not know new index, so pass it directly.
-                accessedPopupAnchorIndex
+                accessedAnnotationAnchorIndex
             })
         }
 
@@ -978,7 +978,7 @@ class App extends Component {
     _bindEventHandlers() {
         this.accessAnnotation = this.accessAnnotation.bind(this)
         this.accessDot = this.accessDot.bind(this)
-        this.accessPopupAnchor = this.accessPopupAnchor.bind(this)
+        this.accessAnnotationAnchor = this.accessAnnotationAnchor.bind(this)
         this.accessSong = this.accessSong.bind(this)
         this.toggleAccess = this.toggleAccess.bind(this)
         this.toggleAdmin = this.toggleAdmin.bind(this)
@@ -1032,7 +1032,7 @@ class App extends Component {
                 // Event manager props.
                 accessAnnotation={this.accessAnnotation}
                 accessDot={this.accessDot}
-                accessPopupAnchor={this.accessPopupAnchor}
+                accessAnnotationAnchor={this.accessAnnotationAnchor}
                 accessSong={this.accessSong}
                 touchSliderBegin={this.touchSliderBegin}
                 touchBodyMove={this.touchBodyMove}

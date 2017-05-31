@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
 import VerseLine from './verse-line'
 import VerseAudioButton from './verse-audio-button'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../helpers/constants'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedSongIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedSongIndex
+})
 
 /*************
  * CONTAINER *
@@ -318,4 +326,4 @@ VerseUnitView.propTypes = {
     handleInteractivatableClick: PropTypes.func
 }
 
-export default VerseUnit
+export default connect(passReduxStateToProps)(VerseUnit)

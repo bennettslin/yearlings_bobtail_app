@@ -27,7 +27,7 @@ class EventManager extends Component {
 
         this.handleAnnotationAccess = this.handleAnnotationAccess.bind(this)
         this.handleDotAccess = this.handleDotAccess.bind(this)
-        this.handlePopupAnchorAccess = this.handlePopupAnchorAccess.bind(this)
+        this.handleAnnotationAnchorAccess = this.handleAnnotationAnchorAccess.bind(this)
         this.handleSongAccess = this.handleSongAccess.bind(this)
         this.handleVerseDirectionAccess = this.handleVerseDirectionAccess.bind(this)
 
@@ -160,12 +160,12 @@ class EventManager extends Component {
         return true
     }
 
-    handlePopupAnchorAccess(accessedPopupAnchorIndex) {
-        this.props.accessPopupAnchor(accessedPopupAnchorIndex)
+    handleAnnotationAnchorAccess(accessedAnnotationAnchorIndex) {
+        this.props.accessAnnotationAnchor(accessedAnnotationAnchorIndex)
     }
 
-    handleSongAccess(accessedSongIndex) {
-        this.props.accessSong(accessedSongIndex)
+    handleSongAccess(accessedNavSongIndex) {
+        this.props.accessSong(accessedNavSongIndex)
     }
 
     handleVerseDirectionAccess(direction) {
@@ -823,7 +823,7 @@ class EventManager extends Component {
 
                 handleAnnotationAccess={this.handleAnnotationAccess}
                 handleDotAccess={this.handleDotAccess}
-                handlePopupAnchorAccess={this.handlePopupAnchorAccess}
+                handleAnnotationAnchorAccess={this.handleAnnotationAnchorAccess}
                 handleSongAccess={this.handleSongAccess}
                 handleVerseDirectionAccess={this.handleVerseDirectionAccess}
                 handlePopupFocus={this.handlePopupFocus}

@@ -30,7 +30,7 @@ class CarouselSection extends Component {
                     'selectedSongIndex',
                     'accessedAnnotationIndex',
                     'selectedAnnotationIndex',
-                    'accessedPopupAnchorIndex'
+                    'accessedAnnotationAnchorIndex'
                 ]
             })
 

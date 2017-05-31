@@ -5,7 +5,7 @@ import { getSongsLength,
          getBookStartingIndices } from '../helpers/data-helper'
 import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
-         getPopupAnchorIndexForDirection } from '../helpers/logic-helper'
+         getAnnotationAnchorIndexForDirection } from '../helpers/logic-helper'
 import { CAPS_LOCK,
          ESCAPE,
          SPACE,
@@ -162,7 +162,7 @@ class AccessManager extends Component {
     _handleAnnotationNavigation(e, keyName) {
         const { props } = this
 
-        let { accessedPopupAnchorIndex } = props,
+        let { accessedAnnotationAnchorIndex } = props,
             annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
@@ -180,37 +180,37 @@ class AccessManager extends Component {
                 // If not accessed on, do nothing and just turn access on.
                 if (props.selectedAccessIndex) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    accessedPopupAnchorIndex = getPopupAnchorIndexForDirection({
+                    accessedAnnotationAnchorIndex = getAnnotationAnchorIndexForDirection({
                         selectedSongIndex: props.selectedSongIndex,
                         selectedAnnotationIndex: props.selectedAnnotationIndex,
                         selectedDotKeys: props.selectedDotKeys,
-                        initialPopupAnchorIndex: accessedPopupAnchorIndex,
+                        initialAnnotationAnchorIndex: accessedAnnotationAnchorIndex,
                         direction
                     })
-                    this.props.handlePopupAnchorAccess(accessedPopupAnchorIndex)
+                    this.props.handleAnnotationAnchorAccess(accessedAnnotationAnchorIndex)
                 }
                 break
             }
             case ENTER: {
                 const { annotationObject } = props
 
-                if (accessedPopupAnchorIndex > 0 &&
+                if (accessedAnnotationAnchorIndex > 0 &&
                     annotationObject &&
-                    annotationObject.popupAnchors &&
-                    annotationObject.popupAnchors.length) {
+                    annotationObject.annotationAnchors &&
+                    annotationObject.annotationAnchors.length) {
 
-                    const popupAnchorObject = annotationObject.popupAnchors[accessedPopupAnchorIndex - 1]
+                    const annotationAnchorObject = annotationObject.annotationAnchors[accessedAnnotationAnchorIndex - 1]
 
                     // It's a wiki anchor.
-                    if (typeof popupAnchorObject === 'string') {
-                        this.props.handleAnnotationWikiSelect(e, accessedPopupAnchorIndex)
+                    if (typeof annotationAnchorObject === 'string') {
+                        this.props.handleAnnotationWikiSelect(e, accessedAnnotationAnchorIndex)
 
                     // It's a portal.
                     } else {
                         const { songIndex,
                                 annotationIndex,
                                 verseIndex,
-                                columnIndex } = popupAnchorObject
+                                columnIndex } = annotationAnchorObject
 
                         keyWasRegistered = this.props.handleAnnotationPortalSelect(
                             e,
@@ -293,7 +293,7 @@ class AccessManager extends Component {
 
         // If access is off, just turn it on.
         if (selectedAccessIndex) {
-            let { accessedSongIndex } = this.props,
+            let { accessedNavSongIndex } = this.props,
                 direction
 
             // Skip appropriate songs if showing single book column.
@@ -305,7 +305,7 @@ class AccessManager extends Component {
                     direction = 1
                     break
                 case ENTER:
-                    keyWasRegistered = this.props.handleNavSongSelect(e, accessedSongIndex)
+                    keyWasRegistered = this.props.handleNavSongSelect(e, accessedNavSongIndex)
                     /**
                      * If song was successfully selected, then annotation index was
                      * also accessed.
@@ -321,14 +321,14 @@ class AccessManager extends Component {
                     bookStartingIndices = getBookStartingIndices(),
                     songsLength = getSongsLength()
 
-                accessedSongIndex = (accessedSongIndex + songsLength + direction) % songsLength
+                accessedNavSongIndex = (accessedNavSongIndex + songsLength + direction) % songsLength
 
                 // Select the book column that contains the accessed song index.
-                if ((shownBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (shownBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
+                if ((shownBookColumnIndex === 1 && accessedNavSongIndex >= bookStartingIndices[1]) || (shownBookColumnIndex === 2 && accessedNavSongIndex < bookStartingIndices[1])) {
                     this.props.handleNavBookSelect(e)
                 }
 
-                this.props.handleSongAccess(accessedSongIndex)
+                this.props.handleSongAccess(accessedNavSongIndex)
             }
         }
 

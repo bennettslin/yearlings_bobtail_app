@@ -37,7 +37,7 @@ class AnnotationTransitionPopup extends Component {
                     'selectedScoreIndex',
                     'selectedTitleIndex',
                     'selectedWikiIndex',
-                    'accessedPopupAnchorIndex'
+                    'accessedAnnotationAnchorIndex'
                 ]
             })
 
@@ -84,7 +84,7 @@ AnnotationTransitionPopup.propTypes = {
     selectedScoreIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
     selectedWikiIndex: PropTypes.number.isRequired,
-    accessedPopupAnchorIndex: PropTypes.number.isRequired,
+    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired

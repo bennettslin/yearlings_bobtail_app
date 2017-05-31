@@ -66,9 +66,9 @@ const LiveView = ({
     selectedNavIndex,
     selectedWikiUrl,
     shownBookColumnIndex,
-    accessedSongIndex,
+    accessedNavSongIndex,
     accessedAnnotationIndex,
-    accessedPopupAnchorIndex,
+    accessedAnnotationAnchorIndex,
     accessedDotIndex,
 
     interactivatedVerseIndex,
@@ -148,7 +148,7 @@ const LiveView = ({
 
         annotationPopupProps = {
             annotationObject,
-            accessedPopupAnchorIndex,
+            accessedAnnotationAnchorIndex,
             handleAnnotationPrevious,
             handleAnnotationNext,
             handlePopupContainerClick,
@@ -199,7 +199,7 @@ const LiveView = ({
 
         carouselSectionProps = {
             accessedAnnotationIndex,
-            accessedPopupAnchorIndex,
+            accessedAnnotationAnchorIndex,
 
             handleLyricAnnotationSelect,
             handleAnnotationPrevious,
@@ -273,7 +273,7 @@ const LiveView = ({
 
             showSingleBookColumn,
 
-            accessedSongIndex,
+            accessedNavSongIndex,
             shownBookColumnIndex,
             selectedWikiUrl,
 

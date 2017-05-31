@@ -341,25 +341,25 @@ export const getVerseIndexForTime = (songIndex, time) => {
     }
 }
 
-export const getPopupAnchorIndexForDirection = ({
+export const getAnnotationAnchorIndexForDirection = ({
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedDotKeys,
-    initialPopupAnchorIndex = 1,
+    initialAnnotationAnchorIndex = 1,
     direction
 }) => {
     const annotation = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
 
-    if (annotation && annotation.popupAnchors) {
+    if (annotation && annotation.annotationAnchors) {
 
-        const { popupAnchors } = annotation,
-            popupAnchorsLength = popupAnchors.length
+        const { annotationAnchors } = annotation,
+            annotationAnchorsLength = annotationAnchors.length
 
-        let returnIndex = initialPopupAnchorIndex,
+        let returnIndex = initialAnnotationAnchorIndex,
             counter = 0
 
         // Consider each anchor index only once.
-        while (counter < popupAnchorsLength) {
+        while (counter < annotationAnchorsLength) {
 
             // If no direction given, start at first index...
             if (typeof direction === 'undefined') {
@@ -371,14 +371,14 @@ export const getPopupAnchorIndexForDirection = ({
             }
 
             // Remember that annotations are 1-based.
-            returnIndex = (returnIndex + popupAnchorsLength + direction - 1) % popupAnchorsLength + 1
+            returnIndex = (returnIndex + annotationAnchorsLength + direction - 1) % annotationAnchorsLength + 1
 
             /**
              * It's valid if it's a wiki anchor and reference dot is selected,
              * or it's a portal anchor and portal dot is selected.
              */
-            if ((typeof popupAnchors[returnIndex - 1] === 'string' && selectedDotKeys[REFERENCE]) ||
-                (typeof popupAnchors[returnIndex - 1] === 'object' && selectedDotKeys[PORTAL])) {
+            if ((typeof annotationAnchors[returnIndex - 1] === 'string' && selectedDotKeys[REFERENCE]) ||
+                (typeof annotationAnchors[returnIndex - 1] === 'object' && selectedDotKeys[PORTAL])) {
 
                 return returnIndex
             }
@@ -408,7 +408,7 @@ export const getWikiUrl = (props) => {
         // Since annotation index is 1-based, it's invalid if 0.
         const annotationIndex = carouselAnnotationIndex || selectedAnnotationIndex,
             annotation = getAnnotationObject(selectedSongIndex, annotationIndex),
-            partialPath = annotation.popupAnchors[selectedWikiIndex - 1]
+            partialPath = annotation.annotationAnchors[selectedWikiIndex - 1]
 
         let fullPath
 

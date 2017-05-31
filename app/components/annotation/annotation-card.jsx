@@ -51,7 +51,7 @@ const AnnotationCardView = ({
     handleAnnotationWikiSelect,
     handleAnnotationPortalSelect,
     selectedWikiIndex,
-    accessedPopupAnchorIndex,
+    accessedAnnotationAnchorIndex,
 
     // From controller.
     text,
@@ -73,13 +73,13 @@ const AnnotationCardView = ({
             text={text}
             selectedWikiIndex={selectedWikiIndex}
             carouselAnnotationIndex={carouselAnnotationIndex}
-            accessedPopupAnchorIndex={accessedPopupAnchorIndex}
+            accessedAnnotationAnchorIndex={accessedAnnotationAnchorIndex}
             handleAnchorClick={handleAnnotationWikiSelect}
         />
         {!inPortal && portalLinks &&
             <AnnotationPortalsBlock
                 portalLinks={portalLinks}
-                accessedPopupAnchorIndex={accessedPopupAnchorIndex}
+                accessedAnnotationAnchorIndex={accessedAnnotationAnchorIndex}
                 handleAnnotationPortalSelect={handleAnnotationPortalSelect}
             />
         }
@@ -97,7 +97,7 @@ AnnotationCardView.propTypes = {
     cardDotKeys: PropTypes.object.isRequired,
     carouselAnnotationIndex: PropTypes.number.isRequired,
     selectedWikiIndex: PropTypes.number,
-    accessedPopupAnchorIndex: PropTypes.number.isRequired,
+    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
     handleAnnotationWikiSelect: PropTypes.func.isRequired,
     handleAnnotationPortalSelect: PropTypes.func.isRequired,
 }

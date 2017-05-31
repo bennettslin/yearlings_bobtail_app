@@ -27,7 +27,7 @@ class CarouselAnnotation extends Component {
                     'isSelectedAnnotation',
                     {
                         onlyIfTrueInNextProps: 'isSelectedAnnotation',
-                        subUpdatingKey: 'accessedPopupAnchorIndex'
+                        subUpdatingKey: 'accessedAnnotationAnchorIndex'
                     }
                 ]
             })

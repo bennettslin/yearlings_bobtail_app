@@ -16,7 +16,7 @@ const TextAnchorBlock = ({
     selectedWikiIndex,
     carouselAnnotationIndex,
     accessedAnnotationIndex,
-    accessedPopupAnchorIndex,
+    accessedAnnotationAnchorIndex,
     handleAnchorClick,
 
 ...other }) => {
@@ -29,7 +29,7 @@ const TextAnchorBlock = ({
 
         isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
         isPortalAnchor = typeof portalAnnotationIndex !== 'undefined' && portalAnnotationIndex === annotationIndex,
-        accessHighlighted = ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex) || (accessedPopupAnchorIndex && accessedPopupAnchorIndex === wikiIndex)),
+        accessHighlighted = ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex) || (accessedAnnotationAnchorIndex && accessedAnnotationAnchorIndex === wikiIndex)),
 
         /**
          * If it's an annotation, then the argument passed to the
@@ -61,7 +61,7 @@ TextAnchorBlock.propTypes = {
     selectedWikiIndex: PropTypes.number,
     carouselAnnotationIndex: PropTypes.number,
     accessedAnnotationIndex: PropTypes.number,
-    accessedPopupAnchorIndex: PropTypes.number,
+    accessedAnnotationAnchorIndex: PropTypes.number,
     handleAnchorClick: PropTypes.func,
 }
 

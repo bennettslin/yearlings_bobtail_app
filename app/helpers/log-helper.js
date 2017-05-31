@@ -46,9 +46,9 @@ export default {
 
     logAccessedAnnotation({ state }) {
         const { accessedAnnotationIndex,
-                accessedPopupAnchorIndex } = state
+                accessedAnnotationAnchorIndex } = state
         this._logObject('accessed annotation index', accessedAnnotationIndex)
-        return this._logObject('accessed popup anchor index', accessedPopupAnchorIndex)
+        return this._logObject('accessed popup anchor index', accessedAnnotationAnchorIndex)
     },
 
     _logObject(description, object) {

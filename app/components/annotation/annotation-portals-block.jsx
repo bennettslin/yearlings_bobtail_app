@@ -15,7 +15,7 @@ const AnnotationPortalsBlock = (props) => (
 
 AnnotationPortalsBlock.propTypes = {
     portalLinks: PropTypes.array.isRequired,
-    accessedPopupAnchorIndex: PropTypes.number.isRequired,
+    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
     handleAnnotationPortalSelect: PropTypes.func.isRequired
 }
 
@@ -27,7 +27,7 @@ const AnnotationPortalsBlockView = ({
 
     // From props.
     portalLinks,
-    accessedPopupAnchorIndex,
+    accessedAnnotationAnchorIndex,
     handleAnnotationPortalSelect,
 
 }) => (
@@ -46,7 +46,7 @@ const AnnotationPortalsBlockView = ({
 
                     verseObject } = portalObject,
 
-                accessHighlighted = accessedPopupAnchorIndex === portalIndex,
+                accessHighlighted = accessedAnnotationAnchorIndex === portalIndex,
 
                 handleClick = e => handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex)
 

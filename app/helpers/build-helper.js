@@ -14,7 +14,7 @@ const _tempStore = {
     _songIndex: 0,
     _songDotKeys: {},
     _annotations: [],
-    _popupAnchors: [],
+    _annotationAnchors: [],
     _wikiIndex: 1,
     _portalLinks: {},
     _verseTimes: [],
@@ -549,8 +549,8 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
     if (finalPassThrough) {
         const annotation = _tempStore._annotations[_tempStore._finalAnnotationIndex]
 
-        _tempStore._popupAnchors = []
-        _tempStore._popupAnchorIndex = 1
+        _tempStore._annotationAnchors = []
+        _tempStore._annotationAnchorIndex = 1
 
         if (Array.isArray(cards)) {
             cards.forEach(card => {
@@ -560,7 +560,7 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
             _prepareCard(cards, undefined, true)
         }
 
-        annotation.popupAnchors = _tempStore._popupAnchors
+        annotation.annotationAnchors = _tempStore._annotationAnchors
 
         // Clean up lyric object, now that it's the final pass through.
         delete lyric.annotation
@@ -687,9 +687,9 @@ const _prepareCard = (card, dotKeys, finalPassThrough) => {
     if (portalLinks && finalPassThrough) {
         portalLinks.forEach(link => {
             delete link.cardIndex
-            _tempStore._popupAnchors.push(Object.assign({}, link))
-            link.portalIndex = _tempStore._popupAnchorIndex
-            _tempStore._popupAnchorIndex++
+            _tempStore._annotationAnchors.push(Object.assign({}, link))
+            link.portalIndex = _tempStore._annotationAnchorIndex
+            _tempStore._annotationAnchorIndex++
         })
     }
 }
@@ -721,9 +721,9 @@ const _parseWiki = (key, object, finalPassThrough) => {
             if (finalPassThrough && !object.wikiIndex && typeof object[key] === 'string') {
 
                 // Popup anchor index is either for portal or wiki.
-                object.wikiIndex = _tempStore._popupAnchorIndex
-                _tempStore._popupAnchorIndex++
-                _tempStore._popupAnchors.push(object[key])
+                object.wikiIndex = _tempStore._annotationAnchorIndex
+                _tempStore._annotationAnchorIndex++
+                _tempStore._annotationAnchors.push(object[key])
                 delete object[key]
             }
 
