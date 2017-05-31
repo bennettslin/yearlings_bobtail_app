@@ -40,32 +40,8 @@ import { CAPS_LOCK,
 
          ALL_DOT_KEYS } from '../helpers/constants'
 
-const passReduxStateToProps = ({
-    selectedAccessIndex,
-    selectedAnnotationIndex,
-    selectedDotsIndex,
-    selectedDotKeys,
-    selectedLyricColumnIndex,
-    selectedNavIndex,
-    selectedOverviewIndex,
-    selectedScoreIndex,
-    selectedSongIndex,
-    selectedVerseIndex,
-    selectedWikiIndex
-}) => ({
 // Pass Redux state into component props.
-    selectedAccessIndex,
-    selectedAnnotationIndex,
-    selectedDotsIndex,
-    selectedDotKeys,
-    selectedLyricColumnIndex,
-    selectedNavIndex,
-    selectedOverviewIndex,
-    selectedScoreIndex,
-    selectedSongIndex,
-    selectedVerseIndex,
-    selectedWikiIndex
-})
+const passReduxStateToProps = ({ selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex }) => ({ selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex })
 
 class AccessManager extends Component {
 

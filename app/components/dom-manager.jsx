@@ -10,26 +10,8 @@ import { DEVICE_OBJECTS,
 import { getSongTitle } from '../helpers/data-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
-const passReduxStateToProps = ({
-    selectedAccessIndex,
-    selectedAdminIndex,
-    selectedAnnotationIndex,
-    selectedOverviewIndex,
-    selectedScoreIndex,
-    selectedSongIndex,
-    selectedTitleIndex,
-    selectedWikiIndex
-}) => ({
 // Pass Redux state into component props.
-    selectedAccessIndex,
-    selectedAdminIndex,
-    selectedAnnotationIndex,
-    selectedOverviewIndex,
-    selectedScoreIndex,
-    selectedSongIndex,
-    selectedTitleIndex,
-    selectedWikiIndex
-})
+const passReduxStateToProps = ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex }) => ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex })
 
 class DomManager extends Component {
     render() {
@@ -110,7 +92,10 @@ class DomManager extends Component {
                 />
                 <AudioPlayersSection {...audioPlayersProps} />
                 <div
-                    className={`popup-overlay${showOverlay ? '' : ' hidden'}`}
+                    className={classnames(
+                        'popup-overlay',
+                        { 'hidden': !showOverlay }
+                    )}
                 >
                 </div>
                 <SwitchManager {...props}

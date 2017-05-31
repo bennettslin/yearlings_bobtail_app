@@ -1,23 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { selectAdminIndex,
-         selectSongIndex,
-         selectAnnotationIndex,
-         selectVerseIndex,
-         selectTimePlayed,
-         selectDotKey,
-         selectOverviewIndex,
-         selectAudioOptionIndex,
-         selectLyricColumnIndex,
-         selectTipsIndex,
-         selectWikiIndex,
-         selectScoreIndex,
-         selectNavIndex,
-         selectDotsIndex,
-         selectCarouselIndex,
-         selectTitleIndex,
-         accessOn } from '../redux/actions'
+import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions'
 import EventManager from './event-manager'
 import { SHOWN,
          HIDDEN,
@@ -38,66 +22,12 @@ import LogHelper from '../helpers/log-helper'
  * STORE *
  *********/
 
-const passReduxStateToProps = ({
-    selectedAdminIndex,
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    selectedVerseIndex,
-    selectedTimePlayed,
-    selectedDotKeys,
-    selectedOverviewIndex,
-    selectedAudioOptionIndex,
-    selectedLyricColumnIndex,
-    selectedTipsIndex,
-    selectedWikiIndex,
-    selectedScoreIndex,
-    selectedNavIndex,
-    selectedDotsIndex,
-    selectedCarouselIndex,
-    selectedTitleIndex,
-    selectedAccessIndex
-}) => ({
-    // Pass Redux state into component props.
-    selectedAdminIndex,
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    selectedVerseIndex,
-    selectedTimePlayed,
-    selectedDotKeys,
-    selectedOverviewIndex,
-    selectedAudioOptionIndex,
-    selectedLyricColumnIndex,
-    selectedTipsIndex,
-    selectedWikiIndex,
-    selectedScoreIndex,
-    selectedNavIndex,
-    selectedDotsIndex,
-    selectedCarouselIndex,
-    selectedTitleIndex,
-    selectedAccessIndex
-})
+// Pass Redux state into component props.
+const passReduxStateToProps = ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex }) => ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex })
 
+// Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
-    // Bind Redux action creators to component props.
-    bindActionCreators({
-        selectAdminIndex,
-        selectSongIndex,
-        selectAnnotationIndex,
-        selectVerseIndex,
-        selectTimePlayed,
-        selectDotKey,
-        selectOverviewIndex,
-        selectAudioOptionIndex,
-        selectLyricColumnIndex,
-        selectTipsIndex,
-        selectWikiIndex,
-        selectScoreIndex,
-        selectNavIndex,
-        selectDotsIndex,
-        selectCarouselIndex,
-        selectTitleIndex,
-        accessOn
-    }, dispatch)
+    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex }, dispatch)
 )
 
 // let _stateLyricSectionTop = 0
@@ -252,7 +182,7 @@ class App extends Component {
             selectedAccessIndex = selectedAccessIndex ? 1 : 0
         }
 
-        this.props.accessOn(selectedAccessIndex)
+        this.props.selectAccessIndex(selectedAccessIndex)
     }
 
     accessAnnotation(accessedAnnotationIndex) {

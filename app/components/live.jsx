@@ -21,22 +21,8 @@ import WikiTransitionPopup from './wiki/wiki-transition-popup'
 import { getWikiUrl } from '../helpers/logic-helper'
 import { LYRIC_SECTION_EXPAND_KEY } from '../helpers/constants'
 
-const passReduxStateToProps = ({
-    selectedAnnotationIndex,
-    selectedCarouselIndex,
-    selectedDotKeys,
-    selectedDotsIndex,
-    selectedLyricColumnIndex,
-    selectedNavIndex
-}) => ({
 // Pass Redux state into component props.
-    selectedAnnotationIndex,
-    selectedCarouselIndex,
-    selectedDotKeys,
-    selectedDotsIndex,
-    selectedLyricColumnIndex,
-    selectedNavIndex
-})
+const passReduxStateToProps = ({ selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex }) => ({ selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex })
 
 /*************
  * CONTAINER *

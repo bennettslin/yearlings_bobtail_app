@@ -55,12 +55,6 @@ module.exports = [
     },
 
     {
-        taskName: `Redux connect`,
-        workedHours: 0,
-        neededHours: 8
-    },
-
-    {
         taskName: `Finish instrumentals`,
         workedHours: 0,
         neededHours: 1
@@ -2004,5 +1998,10 @@ module.exports = [
         taskName: `Nav toggle button doesn't hide all the way in tablet.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Redux connect`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]

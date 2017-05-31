@@ -13,7 +13,7 @@ class CarouselAnnotation extends Component {
     constructor(props) {
         super(props)
 
-        this._handleTitleClick = this._handleTitleClick.bind(this)
+        this._handleAnnotationTitleClick = this._handleAnnotationTitleClick.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -35,7 +35,7 @@ class CarouselAnnotation extends Component {
         return componentShouldUpdate
     }
 
-    _handleTitleClick(e) {
+    _handleAnnotationTitleClick(e) {
         if (!this.props.isSelectedAnnotation) {
             const { annotationIndex,
                     handleLyricAnnotationSelect } = this.props
@@ -47,7 +47,7 @@ class CarouselAnnotation extends Component {
     render() {
         return (
             <CarouselAnnotationView {...this.props}
-                handleTitleClick={this._handleTitleClick}
+                handleTitleClick={this._handleAnnotationTitleClick}
             />
         )
     }
