@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex } from '../redux/actions/access'
-import { setIsCarouselExpandable, setIsHiddenNav } from '../redux/actions/responsive'
+import { setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav } from '../redux/actions/responsive'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './event-manager'
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -24,11 +24,15 @@ import LogHelper from '../helpers/log-helper'
  *********/
 
 // Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHiddenNav }) => ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHiddenNav })
+const passReduxStateToProps = ({
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav
+}) => ({
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav
+})
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHiddenNav }, dispatch)
+    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav }, dispatch)
 )
 
 // let _stateLyricSectionTop = 0
@@ -72,7 +76,6 @@ class App extends Component {
             popupSongOverview: isLogue ? '' : popupOverview,
 
             shownBookColumnIndex: getBookColumnIndex(selectedSongIndex),
-            isHeightlessLyricColumn: false,
             showSingleBookColumn: false,
             shrinkNavIcon: false,
             scoresTipsOutsideMenu: false,
@@ -336,7 +339,7 @@ class App extends Component {
          * override this exception.
          */
         if (!overrideException && (!this.props.isCarouselExpandable ||
-                this.state.isHeightlessLyricColumn ||
+                this.props.isHeightlessLyricColumn ||
                 getIsLogue(this.props.selectedSongIndex))) {
             return false
         }
@@ -952,8 +955,8 @@ class App extends Component {
             isHiddenNav = getIsHiddenNav(newState)
 
         this.props.setIsCarouselExpandable(isCarouselExpandable)
+        this.props.setIsHeightlessLyricColumn(isHeightlessLyricColumn)
         this.props.setIsHiddenNav(isHiddenNav)
-        newState.isHeightlessLyricColumn = isHeightlessLyricColumn
         newState.showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, newState.deviceIndex)
         newState.showSingleBookColumn = getShowSingleBookColumn(newState)
         newState.shrinkNavIcon = getShrinkNavIcon(newState)

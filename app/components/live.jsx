@@ -22,7 +22,11 @@ import { getWikiUrl } from '../helpers/logic-helper'
 import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHiddenNav }) => ({ selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHiddenNav })
+const passReduxStateToProps = ({
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav
+}) => ({
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav
+})
 
 /*************
  * CONTAINER *

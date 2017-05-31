@@ -24,5 +24,6 @@ module.exports = {
     ACCESSED_NAV_SONG_INDEX: 'accessedNavSongIndex',
 
     IS_CAROUSEL_EXPANDABLE: 'isCarouselExpandable',
+    IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',
     IS_HIDDEN_NAV: 'isHiddenNav'
 }
