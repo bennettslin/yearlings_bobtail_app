@@ -38,14 +38,17 @@ export const shouldShowAnnotationForColumn = ({
 }
 
 export const getAnnotationIndexForDirection = ({
-    props,
     state,
     currentAnnotationIndex = 1,
+
+    selectedSongIndex,
+    selectedDotKeys,
+    lyricColumnIndex,
+
     direction,
 
     // Called from getAnnotationIndexForVerseIndex.
-    specifiedDirection,
-    lyricColumnIndex = props.selectedLyricColumnIndex
+    specifiedDirection
 }) => {
     /**
      * Called:
@@ -55,8 +58,7 @@ export const getAnnotationIndexForDirection = ({
      * - from getAnnotationIndexForVerseIndex.
      */
 
-    const { selectedSongIndex } = props,
-        annotationsLength = getAnnotationsLength(selectedSongIndex),
+    const annotationsLength = getAnnotationsLength(selectedSongIndex),
 
         // If a direction is given for this method, it has modulo.
         useModulo = !!direction
@@ -70,8 +72,7 @@ export const getAnnotationIndexForDirection = ({
     }
 
     if (annotationsLength) {
-        const selectedDotKeys = props.selectedDotKeys,
-            annotationsDotKeys = getSongAnnotationsDotKeys(selectedSongIndex)
+        const annotationsDotKeys = getSongAnnotationsDotKeys(selectedSongIndex)
 
         let returnIndex = currentAnnotationIndex,
             directionSwitchCounter = 0,
@@ -252,8 +253,9 @@ export const getAnnotationIndexForVerseIndex = ({
      * direction that we will search if this annotation index is not present.
      */
     return getAnnotationIndexForDirection({
-        props,
         state,
+        selectedSongIndex,
+        selectedDotKeys: props.selectedDotKeys,
         currentAnnotationIndex: returnIndex,
         specifiedDirection: direction,
         lyricColumnIndex

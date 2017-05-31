@@ -11,6 +11,7 @@ import { getSongTitle } from '../helpers/data-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
 const passReduxStateToProps = ({
+    accessedOn,
     selectedAdminIndex,
     selectedAnnotationIndex,
     selectedOverviewIndex,
@@ -20,6 +21,7 @@ const passReduxStateToProps = ({
     selectedWikiIndex
 }) => ({
 // Pass Redux state into component props.
+    accessedOn,
     selectedAdminIndex,
     selectedAnnotationIndex,
     selectedOverviewIndex,

@@ -41,20 +41,28 @@ import { CAPS_LOCK,
          ALL_DOT_KEYS } from '../helpers/constants'
 
 const passReduxStateToProps = ({
+    accessedOn,
     selectedAnnotationIndex,
     selectedDotsIndex,
+    selectedDotKeys,
+    selectedLyricColumnIndex,
     selectedNavIndex,
     selectedOverviewIndex,
     selectedScoreIndex,
+    selectedSongIndex,
     selectedVerseIndex,
     selectedWikiIndex
 }) => ({
 // Pass Redux state into component props.
+    accessedOn,
     selectedAnnotationIndex,
     selectedDotsIndex,
+    selectedDotKeys,
+    selectedLyricColumnIndex,
     selectedNavIndex,
     selectedOverviewIndex,
     selectedScoreIndex,
+    selectedSongIndex,
     selectedVerseIndex,
     selectedWikiIndex
 })
@@ -393,9 +401,11 @@ class AccessManager extends Component {
 
         } else {
             accessedAnnotationIndex = getAnnotationIndexForDirection({
-                props,
                 state: props,
                 currentAnnotationIndex: accessedAnnotationIndex,
+                selectedSongIndex: props.selectedSongIndex,
+                selectedDotKeys: props.selectedDotKeys,
+                lyricColumnIndex: props.selectedLyricColumnIndex,
                 direction
             })
         }
