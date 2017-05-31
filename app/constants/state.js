@@ -21,5 +21,7 @@ module.exports = {
 
     ACCESSED_ANNOTATION_ANCHOR_INDEX: 'accessedAnnotationAnchorIndex',
     ACCESSED_DOT_INDEX: 'accessedDotIndex',
-    ACCESSED_NAV_SONG_INDEX: 'accessedNavSongIndex'
+    ACCESSED_NAV_SONG_INDEX: 'accessedNavSongIndex',
+
+    IS_CAROUSEL_EXPANDABLE: 'isCarouselExpandable'
 }
