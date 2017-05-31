@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AudioButtons from './audio-buttons'
-import { SONG_FILES } from '../../constants/files'
+import { getSongsLength } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const passReduxStateToProps = ({
@@ -44,11 +44,13 @@ class AudioSection extends Component {
         const { selectedSongIndex,
                 ...other } = this.props,
 
-            // TODO: Get these from data helper.
             isPrologue = selectedSongIndex === 0,
             isFirstSong = selectedSongIndex === 1,
-            isLastSong = selectedSongIndex === SONG_FILES.length,
-            isEpilogue = selectedSongIndex === SONG_FILES.length + 1
+
+            songsLength = getSongsLength(),
+
+            isLastSong = selectedSongIndex === songsLength - 2,
+            isEpilogue = selectedSongIndex === songsLength - 1
 
         return (
             <AudioSectionView {...other}

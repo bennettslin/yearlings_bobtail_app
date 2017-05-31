@@ -1,4 +1,5 @@
 module.exports = {
+    // Not currently used.
     SONG_FILES: [
         '01-didi',
         '02-willy-the-cocoa',

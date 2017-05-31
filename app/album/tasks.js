@@ -2018,5 +2018,10 @@ module.exports = [
         taskName: `Verse bar not updating when song is changed?!`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Move constants to constants folder.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
