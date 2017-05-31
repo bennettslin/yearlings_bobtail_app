@@ -1,9 +1,16 @@
 import React from 'react'
-// import Button from '../button/button'
+import { connect } from 'react-redux'
 import MenuField from './menu-field'
 import NavSection from '../nav/nav-section'
 import CarouselToggle from '../carousel/carousel-toggle'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
+
+const passReduxStateToProps = ({
+    isHiddenNav
+}) => ({
+// Pass Redux state into component props.
+    isHiddenNav
+})
 
 /*************
  * CONTAINER *
@@ -126,4 +133,4 @@ const MainColumnView = ({
     )
 }
 
-export default MainColumn
+export default connect(passReduxStateToProps)(MainColumn)

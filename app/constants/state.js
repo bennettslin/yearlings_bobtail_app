@@ -23,5 +23,6 @@ module.exports = {
     ACCESSED_DOT_INDEX: 'accessedDotIndex',
     ACCESSED_NAV_SONG_INDEX: 'accessedNavSongIndex',
 
-    IS_CAROUSEL_EXPANDABLE: 'isCarouselExpandable'
+    IS_CAROUSEL_EXPANDABLE: 'isCarouselExpandable',
+    IS_HIDDEN_NAV: 'isHiddenNav'
 }

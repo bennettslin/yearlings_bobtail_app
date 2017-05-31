@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import { AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
-import { IsCarouselExpandableReducer } from './responsive'
+import { IsCarouselExpandableReducer, IsHiddenNavReducer } from './responsive'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, NavIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
 
 const rootReducer = combineReducers({
@@ -26,7 +26,8 @@ const rootReducer = combineReducers({
     accessedDotIndex: AccessedDotIndexReducer,
     accessedNavSongIndex: AccessedNavSongIndexReducer,
 
-    isCarouselExpandable: IsCarouselExpandableReducer
+    isCarouselExpandable: IsCarouselExpandableReducer,
+    isHiddenNav: IsHiddenNavReducer
 })
 
 export default rootReducer

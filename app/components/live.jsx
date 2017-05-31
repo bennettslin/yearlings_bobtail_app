@@ -22,7 +22,7 @@ import { getWikiUrl } from '../helpers/logic-helper'
 import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex }) => ({ selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex })
+const passReduxStateToProps = ({ selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHiddenNav }) => ({ selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHiddenNav })
 
 /*************
  * CONTAINER *
@@ -66,10 +66,7 @@ const LiveView = ({
     selectedNavIndex,
     selectedWikiUrl,
     shownBookColumnIndex,
-    // accessedNavSongIndex,
     accessedAnnotationIndex,
-    // accessedAnnotationAnchorIndex,
-    // accessedDotIndex,
 
     interactivatedVerseIndex,
 
@@ -268,7 +265,6 @@ const LiveView = ({
             isPhone,
             isDesktop,
             titleInAudio,
-            isHiddenNav,
             scoresTipsOutsideMenu,
 
             showSingleBookColumn,
