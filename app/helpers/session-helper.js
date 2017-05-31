@@ -2,15 +2,14 @@
 import { getTwoToThePowerOfN, convertBitNumberToTrueFalseKeys, convertTrueFalseKeysToBitNumber } from './general-helper'
 import AlbumData from '../album-data'
 
-import { AUDIO_OPTIONS,
-         LYRIC_COLUMN_KEYS,
-         OVERVIEW_OPTIONS,
-         TIPS_OPTIONS,
+import { LYRIC_COLUMN_KEYS,
 
          ALL_DOT_KEYS,
 
          WINDOW_STORAGE } from './constants'
-
+import { AUDIO_OPTIONS,
+         OVERVIEW_OPTIONS,
+         TIPS_OPTIONS } from '../constants/options'
 import { SELECTED_ACCESS_INDEX,
          SELECTED_ADMIN_INDEX,
          SELECTED_ANNOTATION_INDEX,

@@ -6,8 +6,7 @@ import { getSongsLength,
 import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getAnnotationAnchorIndexForDirection } from '../helpers/logic-helper'
-import { OVERVIEW_OPTIONS,
-         SHOWN,
+import { SHOWN,
          ALL_DOT_KEYS } from '../helpers/constants'
 
 import { ARROW_LEFT,
@@ -38,6 +37,7 @@ import { ARROW_LEFT,
          SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY,
          TITLE_TOGGLE_KEY } from '../constants/access'
+import { OVERVIEW_OPTIONS } from '../constants/options'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({ selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex }) => ({ selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex })

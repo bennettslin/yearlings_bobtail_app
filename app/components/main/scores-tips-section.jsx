@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
-import { TIPS_OPTIONS } from '../../helpers/constants'
 import { SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY } from '../../constants/access'
+import { TIPS_OPTIONS } from '../../constants/options'
 
 const passReduxStateToProps = ({
     selectedScoreIndex,

@@ -2,11 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
 import AccessManager from './access-manager'
-
-import { OVERVIEW_OPTIONS,
-         REFERENCE,
-         DISABLED } from '../helpers/constants'
-
+import { REFERENCE } from '../helpers/constants'
+import { DISABLED,
+         OVERVIEW_OPTIONS } from '../constants/options'
 import { getAnnotationObject } from '../helpers/data-helper'
 import { intersects } from '../helpers/dot-helper'
 import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsive-helper'

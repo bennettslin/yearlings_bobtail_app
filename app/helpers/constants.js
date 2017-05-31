@@ -17,16 +17,6 @@ const LYRIC = 'lyric',
     PORTAL = 'portal',
     AFTERWORD = 'afterword',
 
-    // Audio options.
-    CONTINUE = 'continue',
-    REPEAT = 'repeat',
-    PAUSE_AT_END = 'pause_at_end',
-
-    // Tip and overview options.
-    SHOWN = 'shown',
-    HIDDEN = 'hidden',
-    DISABLED = 'disabled',
-
     /**************
      * NAV VALUES *
      **************/
@@ -173,32 +163,6 @@ module.exports = {
     GOLDEN_CORD_WIDTH,
     UNCANNY_VALLEY_WIDTH,
     CAROUSEL_ANNOTATION_WIDTH,
-
-    CONTINUE,
-    REPEAT,
-    PAUSE_AT_END,
-
-    AUDIO_OPTIONS: [
-        CONTINUE,
-        REPEAT,
-        PAUSE_AT_END
-    ],
-
-    SHOWN,
-    HIDDEN,
-    DISABLED,
-
-    TIPS_OPTIONS: [
-        SHOWN,
-        HIDDEN,
-        DISABLED
-    ],
-
-    OVERVIEW_OPTIONS: [
-        SHOWN,
-        DISABLED,
-        HIDDEN
-    ],
 
     CLOSE_POPUP_BUTTON: 'close',
     PREVIOUS_POPUP_BUTTON: 'side-position previous',

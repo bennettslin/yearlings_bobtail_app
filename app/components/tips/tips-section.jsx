@@ -1,5 +1,5 @@
 import React from 'react'
-import { TIPS_OPTIONS } from 'helpers/constants'
+import { TIPS_OPTIONS } from 'constants/options'
 
 /*************
  * CONTAINER *

@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../button/button'
-import { AUDIO_OPTIONS } from '../../helpers/constants'
 import { AUDIO_PLAY_KEY,
          AUDIO_OPTIONS_TOGGLE_KEY,
          AUDIO_PREVIOUS_SONG_KEY,
          AUDIO_NEXT_SONG_KEY } from '../../constants/access'
+import { AUDIO_OPTIONS } from '../../constants/options'
 
 /*************
  * CONTAINER *
