@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotToggleButton from './dot-toggle-button'
-import { PORTAL, ALL_DOT_KEYS } from '../../helpers/constants'
+import { PORTAL, ALL_DOT_KEYS } from '../../constants/dots'
 
 const defaultProps = {
     selectedDotKeys: {}

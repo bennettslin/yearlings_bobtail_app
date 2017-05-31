@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Review responsive constants.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Centre lyrics bugs.`,
         workedHours: 0,
         neededHours: 1

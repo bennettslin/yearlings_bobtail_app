@@ -1,5 +1,5 @@
 import React from 'react'
-import { DEVICE_OBJECTS } from '../../helpers/constants'
+import { DEVICE_OBJECTS } from '../../constants/responsive'
 
 /*************
  * CONTAINER *

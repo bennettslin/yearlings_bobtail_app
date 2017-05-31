@@ -22,6 +22,7 @@ module.exports = {
     HIDDEN,
     DISABLED,
 
+    // Order matters!
     OVERVIEW_OPTIONS: [
         SHOWN,
         DISABLED,

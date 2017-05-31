@@ -1,6 +1,7 @@
 // For dev purposes. Log object info.
 import { getSongObject, getAnnotationObject, getVerseObject } from './data-helper'
-import { WINDOW_STORAGE, LYRIC_TEXT_KEYS } from './constants'
+import { LYRIC_TEXT_KEYS } from './constants'
+import { WINDOW_STORAGE } from '../constants/state'
 
 export default {
 

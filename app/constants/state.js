@@ -1,4 +1,6 @@
 module.exports = {
+    WINDOW_STORAGE: window.localStorage,
+
     SELECTED_ACCESS_INDEX: 'selectedAccessIndex',
     SELECTED_ADMIN_INDEX: 'selectedAdminIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',

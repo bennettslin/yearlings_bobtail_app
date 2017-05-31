@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames';
 import TextBlock from '../text/text-block'
 import DotButton from '../dot/dot-button'
-import { PORTAL } from '../../helpers/constants'
+import { PORTAL } from '../../constants/dots'
 
 /*************
  * CONTAINER *

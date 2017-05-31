@@ -4,9 +4,9 @@ import classnames from 'classnames'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './audio/audio-players-section'
-import { DEVICE_OBJECTS } from '../helpers/constants'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
+import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongTitle } from '../helpers/data-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 

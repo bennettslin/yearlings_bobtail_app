@@ -21,7 +21,7 @@ const TipsSectionView = ({
     handleTipsToggle
 
 }) => (
-    <div className={`section tips-section`}>
+    <div className="section tips-section">
         {selectedAdminIndex &&
             <h2>tips</h2>
         }

@@ -2,11 +2,8 @@
 import { getTwoToThePowerOfN, convertBitNumberToTrueFalseKeys, convertTrueFalseKeysToBitNumber } from './general-helper'
 import AlbumData from '../album-data'
 
-import { LYRIC_COLUMN_KEYS,
-
-         ALL_DOT_KEYS,
-
-         WINDOW_STORAGE } from './constants'
+import { LYRIC_COLUMN_KEYS } from './constants'
+import { ALL_DOT_KEYS } from '../constants/dots'
 import { AUDIO_OPTIONS,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
@@ -26,7 +23,8 @@ import { SELECTED_ACCESS_INDEX,
          SELECTED_TIPS_INDEX,
          SELECTED_TITLE_INDEX,
          SELECTED_VERSE_INDEX,
-         SELECTED_WIKI_INDEX } from '../constants/state'
+         SELECTED_WIKI_INDEX,
+         WINDOW_STORAGE } from '../constants/state'
 
 const setInSession = (key, value) => {
     WINDOW_STORAGE[key] = value

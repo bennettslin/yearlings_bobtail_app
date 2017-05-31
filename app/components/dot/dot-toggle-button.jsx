@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
-import { DOT_DESCRIPTIONS } from '../../helpers/constants'
+import { DOT_DESCRIPTIONS } from '../../constants/dots'
 
 /*************
  * CONTAINER *

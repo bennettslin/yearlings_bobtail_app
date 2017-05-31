@@ -7,17 +7,17 @@ import { PHONE_WIDTH,
          MINI_OBJECT,
          DEVICE_OBJECTS,
 
+         CAROUSEL_ANNOTATION_WIDTH,
          GOLDEN_CORD_WIDTH,
          UNCANNY_VALLEY_WIDTH,
-         CAROUSEL_ANNOTATION_WIDTH,
 
+         COLLAPSED_LYRIC_SECTION_HEIGHT,
          HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
-         HIDDEN_NAV_MIN,
          MENU_HEIGHT,
          MENU_PHONE_HEIGHT,
-         COLLAPSED_LYRIC_SECTION_HEIGHT,
-         WIKI_SIDE_PADDING_TOTAL } from './constants'
+         HIDDEN_NAV_MIN,
+         WIKI_SIDE_PADDING_TOTAL } from '../constants/responsive'
 
 import { getSongObject } from './data-helper'
 
