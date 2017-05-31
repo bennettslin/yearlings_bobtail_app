@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
-import { OVERVIEW_OPTIONS,
-         OVERVIEW_TOGGLE_KEY } from '../../helpers/constants'
+import { OVERVIEW_OPTIONS } from '../../helpers/constants'
+import { OVERVIEW_TOGGLE_KEY } from '../../constants/access'
 
  const passReduxStateToProps = ({
      selectedOverviewIndex,

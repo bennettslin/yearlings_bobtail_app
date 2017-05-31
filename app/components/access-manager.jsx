@@ -6,39 +6,38 @@ import { getSongsLength,
 import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getAnnotationAnchorIndexForDirection } from '../helpers/logic-helper'
-import { CAPS_LOCK,
-         ESCAPE,
-         SPACE,
-         TAB,
-         ARROW_LEFT,
+import { OVERVIEW_OPTIONS,
+         SHOWN,
+         ALL_DOT_KEYS } from '../helpers/constants'
+
+import { ARROW_LEFT,
          ARROW_RIGHT,
          ARROW_UP,
          ARROW_DOWN,
          PAGE_UP,
          PAGE_DOWN,
+         CAPS_LOCK,
          ENTER,
+         ESCAPE,
+         SPACE,
+         TAB,
 
-         OVERVIEW_TOGGLE_KEY,
          ADMIN_TOGGLE_KEY,
-         AUDIO_OPTIONS_TOGGLE_KEY,
          AUDIO_PLAY_KEY,
+         AUDIO_OPTIONS_TOGGLE_KEY,
          AUDIO_PREVIOUS_SONG_KEY,
          AUDIO_NEXT_SONG_KEY,
          AUDIO_REWIND_KEY,
          AUDIO_FAST_FORWARD_KEY,
          CAROUSEL_TOGGLE_KEY,
-         SCORE_TOGGLE_KEY,
-         TIPS_TOGGLE_KEY,
+         DOTS_SECTION_EXPAND_KEY,
          LYRIC_COLUMN_TOGGLE_KEY,
          LYRIC_SECTION_EXPAND_KEY,
-         TITLE_TOGGLE_KEY,
-         DOTS_SECTION_ACCESS_KEY,
-         NAV_SECTION_ACCESS_KEY,
-
-         OVERVIEW_OPTIONS,
-         SHOWN,
-
-         ALL_DOT_KEYS } from '../helpers/constants'
+         NAV_SECTION_EXPAND_KEY,
+         OVERVIEW_TOGGLE_KEY,
+         SCORE_TOGGLE_KEY,
+         TIPS_TOGGLE_KEY,
+         TITLE_TOGGLE_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({ selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex }) => ({ selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex })
@@ -447,10 +446,10 @@ class AccessManager extends Component {
             case TITLE_TOGGLE_KEY:
                 keyWasRegistered = this.props.handleTitleToggle(e)
                 break
-            case DOTS_SECTION_ACCESS_KEY:
+            case DOTS_SECTION_EXPAND_KEY:
                 keyWasRegistered = this.props.handleDotsSectionToggle(e)
                 break
-            case NAV_SECTION_ACCESS_KEY:
+            case NAV_SECTION_EXPAND_KEY:
                 keyWasRegistered = this.props.handleNavExpand(e)
                 break
             default:

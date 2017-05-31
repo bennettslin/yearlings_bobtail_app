@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import NavBook from './nav-book'
-import { NAV_SECTION_ACCESS_KEY } from '../../helpers/constants'
+import { NAV_SECTION_EXPAND_KEY } from '../../constants/access'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 import AlbumData from '../../album-data'
@@ -101,7 +101,7 @@ const NavSectionView = ({
                     <NavBook {...navItemProps}
                         isNavToggle={true}
                         buttonText={selectedNavIndex + ''}
-                        accessKey={NAV_SECTION_ACCESS_KEY}
+                        accessKey={NAV_SECTION_EXPAND_KEY}
                         handleButtonClick={handleNavExpand}
                     />
                 </div>

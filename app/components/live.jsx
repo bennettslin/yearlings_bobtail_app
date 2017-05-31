@@ -19,7 +19,7 @@ import ScoreTransitionPopup from './score/score-transition-popup'
 import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
 import { getWikiUrl } from '../helpers/logic-helper'
-import { LYRIC_SECTION_EXPAND_KEY } from '../helpers/constants'
+import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({ selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex }) => ({ selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex })

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
-import { TITLE_TOGGLE_KEY } from '../../helpers/constants'
+import { TITLE_TOGGLE_KEY } from '../../constants/access'
 
 const passReduxStateToProps = ({
     selectedTitleIndex

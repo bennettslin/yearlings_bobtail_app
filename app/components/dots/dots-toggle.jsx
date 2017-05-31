@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
-import { DOTS_SECTION_ACCESS_KEY } from '../../helpers/constants'
+import { DOTS_SECTION_EXPAND_KEY } from '../../constants/access'
 
 const passReduxStateToProps = ({
     selectedDotsIndex
@@ -40,7 +40,7 @@ const DotsToggleView = ({
             <Button
                 buttonName="dots-toggle"
                 iconText={selectedDotsIndex}
-                accessKey={DOTS_SECTION_ACCESS_KEY}
+                accessKey={DOTS_SECTION_EXPAND_KEY}
                 isLarge={true}
                 handleClick={handleDotsSectionToggle}
             />
