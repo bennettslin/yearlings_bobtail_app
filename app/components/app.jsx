@@ -51,14 +51,14 @@ class App extends Component {
         this.state = {
             isPlaying: false,
 
-            accessedDotIndex: 0,
-            accessedNavSongIndex: selectedSongIndex,
             accessedAnnotationAnchorIndex: getAnnotationAnchorIndexForDirection({
                 selectedSongIndex,
                 selectedAnnotationIndex: props.selectedAnnotationIndex,
                 selectedDotKeys: props.selectedDotKeys,
                 initialAnnotationAnchorIndex: 1
             }),
+            accessedDotIndex: 0,
+            accessedNavSongIndex: selectedSongIndex,
 
             annotationObject: getAnnotationObject(selectedSongIndex, props.selectedAnnotationIndex),
 
