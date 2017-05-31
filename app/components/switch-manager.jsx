@@ -1,6 +1,14 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import Overall from './admin/overall'
 import Live from './live'
+
+const passReduxStateToProps = ({
+    selectedAdminIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedAdminIndex
+})
 
 /*************
  * CONTAINER *
@@ -18,4 +26,4 @@ const SwitchManager = ({
     )
 }
 
-export default SwitchManager
+export default connect(passReduxStateToProps)(SwitchManager)

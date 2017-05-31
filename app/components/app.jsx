@@ -1080,8 +1080,6 @@ class App extends Component {
     render() {
         return (
             <EventManager
-                // Dom manager props.
-                domProps={this.props}
                 domState={this.state}
                 isLogue={getIsLogue(this.props.selectedSongIndex)}
 

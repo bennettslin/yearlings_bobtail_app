@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import ReactAudioPlayer from 'react-audio-player'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedSongIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedSongIndex
+})
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 // https://www.npmjs.com/package/react-audio-player
@@ -164,4 +172,4 @@ AudioPlayer.propTypes = {
     handlePlayerNextSong: PropTypes.func.isRequired
 }
 
-export default AudioPlayer
+export default connect(passReduxStateToProps)(AudioPlayer)

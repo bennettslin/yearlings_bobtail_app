@@ -830,11 +830,10 @@ class EventManager extends Component {
     }
 
     render() {
-        const { domProps,
-                domState } = this.props
+        const { domState } = this.props
 
         return (
-            <AccessManager {...domProps} {...domState}
+            <AccessManager {...domState}
                 isLogue={this.props.isLogue}
 
                 domManagerRef={node => this.myDomManager = node}

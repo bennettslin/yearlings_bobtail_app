@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
 import Button from './button/button'
 import MainColumn from './main/main-column'
@@ -19,6 +20,23 @@ import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
 import { getWikiUrl } from '../helpers/logic-helper'
 import { LYRIC_SECTION_EXPAND_KEY } from '../helpers/constants'
+
+const passReduxStateToProps = ({
+    selectedAnnotationIndex,
+    selectedCarouselIndex,
+    selectedDotKeys,
+    selectedDotsIndex,
+    selectedLyricColumnIndex,
+    selectedNavIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedAnnotationIndex,
+    selectedCarouselIndex,
+    selectedDotKeys,
+    selectedDotsIndex,
+    selectedLyricColumnIndex,
+    selectedNavIndex
+})
 
 /*************
  * CONTAINER *
@@ -55,13 +73,13 @@ const LiveView = ({
     isPlaying,
     isLogue,
     selectedAnnotationIndex,
-    selectedDotKeys,
-    selectedWikiUrl,
-    selectedLyricColumnIndex,
-    selectedDotsIndex,
-    selectedNavIndex,
-    shownBookColumnIndex,
     selectedCarouselIndex,
+    selectedDotKeys,
+    selectedDotsIndex,
+    selectedLyricColumnIndex,
+    selectedNavIndex,
+    selectedWikiUrl,
+    shownBookColumnIndex,
     accessedSongIndex,
     accessedAnnotationIndex,
     accessedPopupAnchorIndex,
@@ -400,4 +418,4 @@ const LiveView = ({
     )
 }
 
-export default Live
+export default connect(passReduxStateToProps)(Live)

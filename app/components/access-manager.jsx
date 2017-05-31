@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import DomManager from './dom-manager'
 import { getSongsLength,
          getBookStartingIndices } from '../helpers/data-helper'
@@ -38,6 +39,25 @@ import { CAPS_LOCK,
          SHOWN,
 
          ALL_DOT_KEYS } from '../helpers/constants'
+
+const passReduxStateToProps = ({
+    selectedAnnotationIndex,
+    selectedDotsIndex,
+    selectedNavIndex,
+    selectedOverviewIndex,
+    selectedScoreIndex,
+    selectedVerseIndex,
+    selectedWikiIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedAnnotationIndex,
+    selectedDotsIndex,
+    selectedNavIndex,
+    selectedOverviewIndex,
+    selectedScoreIndex,
+    selectedVerseIndex,
+    selectedWikiIndex
+})
 
 class AccessManager extends Component {
 
@@ -511,4 +531,4 @@ class AccessManager extends Component {
     }
 }
 
-export default AccessManager
+export default connect(passReduxStateToProps)(AccessManager)

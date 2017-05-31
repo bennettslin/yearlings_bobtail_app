@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
@@ -9,6 +10,25 @@ import { DEVICE_OBJECTS,
 import { getSongTitle } from '../helpers/data-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
+const passReduxStateToProps = ({
+    selectedAdminIndex,
+    selectedAnnotationIndex,
+    selectedOverviewIndex,
+    selectedScoreIndex,
+    selectedSongIndex,
+    selectedTitleIndex,
+    selectedWikiIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedAdminIndex,
+    selectedAnnotationIndex,
+    selectedOverviewIndex,
+    selectedScoreIndex,
+    selectedSongIndex,
+    selectedTitleIndex,
+    selectedWikiIndex
+})
+
 class DomManager extends Component {
     render() {
 
@@ -17,11 +37,12 @@ class DomManager extends Component {
               deviceIndex,
               windowWidth,
               windowHeight,
+
               selectedAdminIndex,
-              selectedSongIndex,
+              selectedAnnotationIndex,
               selectedOverviewIndex,
               selectedScoreIndex,
-              selectedAnnotationIndex,
+              selectedSongIndex,
               selectedTitleIndex,
               selectedWikiIndex,
 
@@ -105,4 +126,4 @@ class DomManager extends Component {
     }
 }
 
-export default DomManager
+export default connect(passReduxStateToProps)(DomManager)
