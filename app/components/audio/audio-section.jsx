@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AudioButtons from './audio-buttons'
-import { SONG_FILES } from '../../helpers/constants'
+import { SONG_FILES } from '../../constants/files'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const passReduxStateToProps = ({

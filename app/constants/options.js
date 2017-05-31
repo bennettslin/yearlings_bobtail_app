@@ -8,6 +8,10 @@ const CONTINUE = 'continue',
 
 module.exports = {
 
+    CLOSE_POPUP_BUTTON: 'close',
+    PREVIOUS_POPUP_BUTTON: 'side-position previous',
+    NEXT_POPUP_BUTTON: 'side-position next',
+
     CONTINUE,
     REPEAT,
     PAUSE_AT_END,

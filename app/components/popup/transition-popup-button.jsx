@@ -5,7 +5,7 @@ import Button from '../button/button'
 
 import { CLOSE_POPUP_BUTTON,
          PREVIOUS_POPUP_BUTTON,
-         NEXT_POPUP_BUTTON } from '../../helpers/constants'
+         NEXT_POPUP_BUTTON } from '../../constants/options'
 
 const TransitionPopupButton = ({
 

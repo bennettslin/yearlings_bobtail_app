@@ -2,7 +2,7 @@ import { expect } from 'chai'
 import { SELECTED_SONG_INDEX,
          SELECTED_ANNOTATION_INDEX,
          SELECTED_VERSE_INDEX,
-         SELECTED_OVERVIEW_INDEX } from '../app/helpers/constants'
+         SELECTED_OVERVIEW_INDEX } from '../app/constants/state'
 import { SongIndexReducer,
          AnnotationIndexReducer,
          LineIndexReducer,

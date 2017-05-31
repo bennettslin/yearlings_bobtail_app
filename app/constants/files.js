@@ -1,10 +1,4 @@
-// Constants used by all components.
 module.exports = {
-
-    CLOSE_POPUP_BUTTON: 'close',
-    PREVIOUS_POPUP_BUTTON: 'side-position previous',
-    NEXT_POPUP_BUTTON: 'side-position next',
-
     SONG_FILES: [
         '01-didi',
         '02-willy-the-cocoa',
