@@ -11,7 +11,7 @@ import { getSongTitle } from '../helpers/data-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
 const passReduxStateToProps = ({
-    accessedOn,
+    selectedAccessIndex,
     selectedAdminIndex,
     selectedAnnotationIndex,
     selectedOverviewIndex,
@@ -21,7 +21,7 @@ const passReduxStateToProps = ({
     selectedWikiIndex
 }) => ({
 // Pass Redux state into component props.
-    accessedOn,
+    selectedAccessIndex,
     selectedAdminIndex,
     selectedAnnotationIndex,
     selectedOverviewIndex,
@@ -48,7 +48,7 @@ class DomManager extends Component {
               selectedTitleIndex,
               selectedWikiIndex,
 
-              accessedOn,
+              selectedAccessIndex,
 
               isPlaying,
               updatedTimePlayed,
@@ -92,7 +92,7 @@ class DomManager extends Component {
                     selectedAdminIndex ? 'admin' : 'live',
                     isDesktop ? 'is-desktop' : 'is-mobile',
                     isPlaying ? 'is-playing' : 'is-paused',
-                    { 'accessed-on': accessedOn }
+                    { 'accessed-on': selectedAccessIndex }
                 )}
                 onClick={handleBodyClick}
                 onMouseMove={handleBodyTouchMove}

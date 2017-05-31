@@ -153,8 +153,8 @@ class EventManager extends Component {
      * ACCESS *
      **********/
 
-    handleAccessToggle(accessedOn) {
-        this.props.toggleAccess(accessedOn)
+    handleAccessToggle(selectedAccessIndex) {
+        this.props.toggleAccess(selectedAccessIndex)
     }
 
     handleAnnotationAccess({

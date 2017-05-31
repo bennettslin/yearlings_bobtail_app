@@ -55,7 +55,7 @@ const passReduxStateToProps = ({
     selectedDotsIndex,
     selectedCarouselIndex,
     selectedTitleIndex,
-    accessedOn
+    selectedAccessIndex
 }) => ({
     // Pass Redux state into component props.
     selectedAdminIndex,
@@ -74,7 +74,7 @@ const passReduxStateToProps = ({
     selectedDotsIndex,
     selectedCarouselIndex,
     selectedTitleIndex,
-    accessedOn
+    selectedAccessIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
@@ -236,14 +236,14 @@ class App extends Component {
      * ACCESS *
      **********/
 
-    toggleAccess(accessedOn = (this.props.accessedOn + 1) % 2) {
+    toggleAccess(selectedAccessIndex = (this.props.selectedAccessIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
-        if (typeof accessedOn === 'boolean') {
-            accessedOn = accessedOn ? 1 : 0
+        if (typeof selectedAccessIndex === 'boolean') {
+            selectedAccessIndex = selectedAccessIndex ? 1 : 0
         }
 
-        this.props.accessOn(accessedOn)
+        this.props.accessOn(selectedAccessIndex)
     }
 
     accessAnnotation(accessedAnnotationIndex) {
@@ -863,7 +863,7 @@ class App extends Component {
     }
 
     interactivateVerseDirection(direction) {
-        const { accessedOn,
+        const { selectedAccessIndex,
                 selectedSongIndex } = this.props,
             songTimes = getSongVerseTimes(selectedSongIndex),
             timesLength = songTimes.length
@@ -879,7 +879,7 @@ class App extends Component {
         if (interactivatedVerseIndex === -1) {
 
             // If accessed on, start from accessed annotation index.
-            if (accessedOn) {
+            if (selectedAccessIndex) {
                 const { accessedAnnotationIndex } = this.state
 
                 interactivatedVerseIndex = getVerseIndexForAccessedAnnotationIndex(this.props.selectedSongIndex, accessedAnnotationIndex)

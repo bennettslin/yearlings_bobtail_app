@@ -2,7 +2,7 @@
 import { getTwoToThePowerOfN, convertBitNumberToTrueFalseKeys, convertTrueFalseKeysToBitNumber } from './general-helper'
 import AlbumData from '../album-data'
 
-import { ACCESSED_ON,
+import { SELECTED_ACCESS_INDEX,
          SELECTED_ADMIN_INDEX,
          SELECTED_DOTS_INDEX,
          SELECTED_NAV_INDEX,
@@ -63,7 +63,7 @@ const _validateValueForKey = (key) => {
 
     switch (key) {
         // These must be a simple 0 or 1.
-        case ACCESSED_ON:
+        case SELECTED_ACCESS_INDEX:
         case SELECTED_ADMIN_INDEX:
         case SELECTED_DOTS_INDEX:
         case SELECTED_SCORE_INDEX:

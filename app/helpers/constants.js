@@ -220,7 +220,7 @@ module.exports = {
     SELECTED_SCORE_INDEX: 'selectedScoreIndex',
     SELECTED_CAROUSEL_INDEX: 'selectedCarouselIndex',
     SELECTED_TITLE_INDEX: 'selectedTitleIndex',
-    ACCESSED_ON: 'accessedOn',
+    SELECTED_ACCESS_INDEX: 'selectedAccessIndex',
 
     // This is only used by the stats helper.
     STAT_TEXT_KEYS: [

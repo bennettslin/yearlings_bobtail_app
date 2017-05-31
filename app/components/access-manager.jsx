@@ -41,7 +41,7 @@ import { CAPS_LOCK,
          ALL_DOT_KEYS } from '../helpers/constants'
 
 const passReduxStateToProps = ({
-    accessedOn,
+    selectedAccessIndex,
     selectedAnnotationIndex,
     selectedDotsIndex,
     selectedDotKeys,
@@ -54,7 +54,7 @@ const passReduxStateToProps = ({
     selectedWikiIndex
 }) => ({
 // Pass Redux state into component props.
-    accessedOn,
+    selectedAccessIndex,
     selectedAnnotationIndex,
     selectedDotsIndex,
     selectedDotKeys,
@@ -124,7 +124,7 @@ class AccessManager extends Component {
              * If just now turning on access, also access annotation index,
              * unless we've already done so.
              */
-            if (!this.props.accessedOn && !annotationIndexWasAccessed) {
+            if (!this.props.selectedAccessIndex && !annotationIndexWasAccessed) {
                 this._accessAnnotationWithoutDirection(this.props.selectedVerseIndex)
             }
 
@@ -202,7 +202,7 @@ class AccessManager extends Component {
             case ARROW_UP:
             case ARROW_DOWN: {
                 // If not accessed on, do nothing and just turn access on.
-                if (props.accessedOn) {
+                if (props.selectedAccessIndex) {
                     const direction = keyName === ARROW_UP ? -1 : 1
                     accessedPopupAnchorIndex = getPopupAnchorIndexForDirection(
                         props,
@@ -265,9 +265,9 @@ class AccessManager extends Component {
 
 
     _handleDotsNavigation(e, keyName) {
-        const { accessedOn } = this.props
+        const { selectedAccessIndex } = this.props
 
-        if (accessedOn) {
+        if (selectedAccessIndex) {
             const dotKeysLength = ALL_DOT_KEYS.length
             let { accessedDotIndex } = this.props
 
@@ -309,12 +309,12 @@ class AccessManager extends Component {
     }
 
     _handleNavNavigation(e, keyName) {
-        const { accessedOn } = this.props
+        const { selectedAccessIndex } = this.props
         let annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
         // If access is off, just turn it on.
-        if (accessedOn) {
+        if (selectedAccessIndex) {
             let { accessedSongIndex } = this.props,
                 direction
 
@@ -384,7 +384,7 @@ class AccessManager extends Component {
          * If this key will turn on access, choose annotation based on selected
          * verse.
          */
-        if (!props.accessedOn || isVerseInteractivated) {
+        if (!props.selectedAccessIndex || isVerseInteractivated) {
             const verseIndex = isVerseInteractivated ?
                 interactivatedVerseIndex : props.selectedVerseIndex
 

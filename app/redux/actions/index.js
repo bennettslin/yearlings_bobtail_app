@@ -14,7 +14,7 @@ import { SELECTED_ADMIN_INDEX,
          SELECTED_DOTS_INDEX,
          SELECTED_CAROUSEL_INDEX,
          SELECTED_TITLE_INDEX,
-         ACCESSED_ON } from '../../helpers/constants'
+         SELECTED_ACCESS_INDEX } from '../../helpers/constants'
  import SessionHelper from '../../helpers/session-helper'
 
  const { setInSession, setDotInSession } = SessionHelper
@@ -149,10 +149,10 @@ export const selectTitleIndex = (selectedTitleIndex = 0) => {
     }
 }
 
-export const accessOn = (accessedOn = 0) => {
-    setInSession(ACCESSED_ON, accessedOn)
+export const accessOn = (selectedAccessIndex = 0) => {
+    setInSession(SELECTED_ACCESS_INDEX, selectedAccessIndex)
     return {
-        type: ACCESSED_ON,
-        payload: accessedOn
+        type: SELECTED_ACCESS_INDEX,
+        payload: selectedAccessIndex
     }
 }
