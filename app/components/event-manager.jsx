@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
 import AccessManager from './access-manager'
 
 import { OVERVIEW_OPTIONS,
-
          REFERENCE,
-
          DISABLED } from '../helpers/constants'
 
 import { getAnnotationObject } from '../helpers/data-helper'
@@ -17,6 +16,29 @@ const ANNOTATION_SCROLL = 'annotation',
     CAROUSEL_ANNOTATION_SCROLL = 'carousel-annotation',
     LYRICS_SCROLL = 'lyrics-scroll',
     VERSE_SCROLL = 'verse'
+
+const passReduxStateToProps = ({
+    selectedAdminIndex,
+    selectedAnnotationIndex,
+    selectedCarouselIndex,
+    selectedDotKeys,
+    selectedScoreIndex,
+    selectedSongIndex,
+    selectedTitleIndex,
+    selectedVerseIndex,
+    selectedWikiIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedAdminIndex,
+    selectedAnnotationIndex,
+    selectedCarouselIndex,
+    selectedDotKeys,
+    selectedScoreIndex,
+    selectedSongIndex,
+    selectedTitleIndex,
+    selectedVerseIndex,
+    selectedWikiIndex
+})
 
 class EventManager extends Component {
 
@@ -103,7 +125,7 @@ class EventManager extends Component {
 
     handlePopupFocus() {
         const { selectedScoreIndex,
-                selectedWikiIndex } = this.props.domProps
+                selectedWikiIndex } = this.props
 
         if (selectedScoreIndex) {
             this.myScoreSection && this.myScoreSection.focus()
@@ -114,10 +136,10 @@ class EventManager extends Component {
     }
 
     _focusBody(newAdminIndex) {
-        const { domProps,
+        const { selectedAdminIndex,
                 isLogue } = this.props,
             doFocusAdmin = typeof newAdminIndex !== 'undefined' ?
-                newAdminIndex : domProps.selectedAdminIndex
+                newAdminIndex : selectedAdminIndex
 
         if (doFocusAdmin || isLogue) {
             this.myDomManager && this.myDomManager.focus()
@@ -143,7 +165,7 @@ class EventManager extends Component {
         if (annotationAccessed && doScroll) {
             this._scrollElementIntoView(ANNOTATION_SCROLL, accessedAnnotationIndex)
 
-            if (this.props.domProps.selectedCarouselIndex) {
+            if (this.props.selectedCarouselIndex) {
                 this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, accessedAnnotationIndex)
             }
         }
@@ -198,8 +220,7 @@ class EventManager extends Component {
      **************/
 
     handleAnnotationWikiSelect(e, selectedWikiIndex, carouselAnnotationIndex) {
-
-        const isWikiEnabled = this.props.domProps.selectedDotKeys[REFERENCE]
+        const isWikiEnabled = this.props.selectedDotKeys[REFERENCE]
 
         // Don't register click if reference dot is deselected.
         if (!isWikiEnabled) {
@@ -247,7 +268,7 @@ class EventManager extends Component {
             direction
         })
         this._scrollElementIntoView(ANNOTATION_SCROLL, selectedAnnotationIndex)
-        if (this.props.domProps.selectedCarouselIndex) {
+        if (this.props.selectedCarouselIndex) {
             this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, selectedAnnotationIndex)
         }
     }
@@ -317,13 +338,13 @@ class EventManager extends Component {
     handleCarouselToggle(e, selectedCarouselIndex) {
         this.stopPropagation(e)
 
-        const { domProps } = this.props,
-            presentCarouselIndex = domProps.selectedCarouselIndex,
+        const presentCarouselIndex = this.props.selectedCarouselIndex,
             carouselSelected = this.props.selectCarousel(selectedCarouselIndex)
 
         // Scroll only when expanding carousel.
         if (carouselSelected && !presentCarouselIndex) {
-            const annotationIndex = domProps.selectedAnnotationIndex ? domProps.selectedAnnotationIndex : this.props.domState.accessedAnnotationIndex
+            const { selectedAnnotationIndex } = this.props,
+                annotationIndex = selectedAnnotationIndex ? selectedAnnotationIndex : this.props.domState.accessedAnnotationIndex
             this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, annotationIndex)
         }
 
@@ -431,13 +452,11 @@ class EventManager extends Component {
          * access?
          */
 
-        const { domProps } = this.props
-
         // If selecting an annotation, make sure that its dots intersect.
         if (selectedAnnotationIndex) {
-            const annotation = getAnnotationObject(domProps.selectedSongIndex, selectedAnnotationIndex)
+            const annotation = getAnnotationObject(this.props.selectedSongIndex, selectedAnnotationIndex)
 
-            if (!intersects(annotation.dotKeys, domProps.selectedDotKeys)) {
+            if (!intersects(annotation.dotKeys, this.props.selectedDotKeys)) {
                 return false
             }
         }
@@ -458,7 +477,7 @@ class EventManager extends Component {
 
         // Scroll carousel only if not selecting from carousel.
         } else {
-            if (this.props.domProps.selectedCarouselIndex) {
+            if (this.props.selectedCarouselIndex) {
                 this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, selectedAnnotationIndex)
             }
         }
@@ -608,7 +627,7 @@ class EventManager extends Component {
 
     handleVerseBarSelect() {
         // No need to know event, since we are just scrolling.
-        const { selectedVerseIndex } = this.props.domProps
+        const { selectedVerseIndex } = this.props
         this._scrollElementIntoView(VERSE_SCROLL, selectedVerseIndex)
     }
 
@@ -620,8 +639,8 @@ class EventManager extends Component {
     }
 
     handleVerseInteractivate(e, verseIndex) {
-        const { domProps, domState } = this.props,
-            { selectedVerseIndex } = domProps,
+        const { domState } = this.props,
+            { selectedVerseIndex } = this.props,
             { isSelectedVerseAbove,
               isSelectedVerseBelow } = domState
 
@@ -675,18 +694,20 @@ class EventManager extends Component {
         forceCloseLyric
     }) {
 
-        const { domProps } = this.props
+        const { selectedScoreIndex,
+                selectedTitleIndex,
+                selectedWikiIndex } = this.props
 
         // If popup is open, close it and do nothing else.
-        if (domProps.selectedWikiIndex) {
+        if (selectedWikiIndex) {
             this.props.selectWiki()
             return
 
-        } else if (domProps.selectedScoreIndex) {
+        } else if (selectedScoreIndex) {
             this.props.selectScore(false)
             return
 
-        } else if (domProps.selectedTitleIndex) {
+        } else if (selectedTitleIndex) {
             this.props.selectTitle(false)
             return
         }
@@ -737,19 +758,19 @@ class EventManager extends Component {
         const { isLogue } = this.props
 
         if (!isLogue) {
-            const annotationIndex = this.props.domProps.selectedAnnotationIndex
+            const annotationIndex = this.props.selectedAnnotationIndex
 
             // If a portal was selected, there will be an annotation index.
             if (annotationIndex) {
                 this._scrollElementIntoView(ANNOTATION_SCROLL, annotationIndex)
-                if (this.props.domProps.selectedCarouselIndex) {
+                if (this.props.selectedCarouselIndex) {
                     this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, annotationIndex)
                 }
 
                 // Otherwise, scroll to top.
             } else {
                 this._scrollElementIntoView(LYRICS_SCROLL, 'home')
-                if (this.props.domProps.selectedCarouselIndex) {
+                if (this.props.selectedCarouselIndex) {
                     this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, 0)
                 }
             }
@@ -797,11 +818,10 @@ class EventManager extends Component {
          * Helper method to close the dots section when selecting new song and
          * overview is not disabled.
          */
-        const { domProps } = this.props,
-            { selectedDotsIndex } = domProps
+        const { selectedDotsIndex } = this.props
 
         if (selectedDotsIndex) {
-            const selectedOverviewOption = OVERVIEW_OPTIONS[domProps.selectedOverviewIndex]
+            const selectedOverviewOption = OVERVIEW_OPTIONS[this.props.selectedOverviewIndex]
 
             if (selectedOverviewOption !== DISABLED) {
                 this.props.selectDotsExpand()
@@ -875,4 +895,4 @@ class EventManager extends Component {
     }
 }
 
-export default EventManager
+export default connect(passReduxStateToProps)(EventManager)
