@@ -96,7 +96,7 @@ export const getTwoToThePowerOfN = (exponent, number = 2) => {
 }
 
 export const convertTrueFalseKeysToBitNumber = (keysArray, trueFalseObject) => {
-    // Allow session helper to store selectedDotKeys as a single number.
+    // Allow storage helper to store selectedDotKeys as a single number.
 
     return keysArray.reduce((bitNumber, key, index) => {
         if (trueFalseObject[key]) {

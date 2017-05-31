@@ -1,4 +1,4 @@
-// Store data in browser's local storage.
+// Helper for getting and setting state persisted in user's local storage.
 import { getTwoToThePowerOfN, convertBitNumberToTrueFalseKeys, convertTrueFalseKeysToBitNumber } from './general-helper'
 import AlbumData from '../album-data'
 
@@ -26,18 +26,18 @@ import { SELECTED_ACCESS_INDEX,
          SELECTED_WIKI_INDEX,
          WINDOW_STORAGE } from '../constants/state'
 
-const setInSession = (key, value) => {
+const setInStorage = (key, value) => {
     WINDOW_STORAGE[key] = value
 }
 
-const setDotInSession = (dotKey, isActive) => {
+const setDotInStorage = (dotKey, isActive) => {
 
     const bitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
         trueFalseKeys = convertBitNumberToTrueFalseKeys(ALL_DOT_KEYS, bitNumber)
 
     trueFalseKeys[dotKey] = isActive
 
-    setInSession(SELECTED_DOT_KEYS, convertTrueFalseKeysToBitNumber(ALL_DOT_KEYS, trueFalseKeys))
+    setInStorage(SELECTED_DOT_KEYS, convertTrueFalseKeysToBitNumber(ALL_DOT_KEYS, trueFalseKeys))
 }
 
 const _getValidatedStoredSong = () => {
@@ -154,7 +154,7 @@ const _validateValueForKey = (key) => {
     if (!isNumber || !isValid) {
         const defaultValue = key === SELECTED_DOT_KEYS ?
             7 : 0
-        setInSession(key, defaultValue)
+        setInStorage(key, defaultValue)
         return defaultValue
 
     } else {
@@ -163,9 +163,9 @@ const _validateValueForKey = (key) => {
 }
 
 export default {
-    setDotInSession,
-    setInSession,
-    getFromSession(key) {
+    setDotInStorage,
+    setInStorage,
+    getFromStorage(key) {
         const validatedValue = _validateValueForKey(key)
 
         // Get true-false object from bit number.

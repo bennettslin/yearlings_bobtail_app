@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Explanatory notes for each file.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Review responsive constants.`,
         workedHours: 0,
         neededHours: 1

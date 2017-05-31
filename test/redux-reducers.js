@@ -13,7 +13,7 @@ describe('reducers', () => {
     describe('SongIndexReducer', () => {
 
         /**
-         * FIXME: This expect doesn't work because session helper seems to know
+         * FIXME: This expect doesn't work because storage helper seems to know
          * a different window object?
          * See: http://stackoverflow.com/questions/29324888/working-with-global-window-variable-in-mocha-js-from-node
          */
