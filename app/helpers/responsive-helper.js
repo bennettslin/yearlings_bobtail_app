@@ -105,12 +105,11 @@ export const getIsLyricExpandable = (deviceIndex) => {
     return !getIsDesktop(deviceIndex)
 }
 
-export const getShowOneOfTwoLyricColumns = (songIndex, state) => {
+export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
 
     const selectedSong = getSongObject(songIndex),
         { hasSideStanzas,
-          isDoublespeaker } = selectedSong,
-        { deviceIndex } = state
+          isDoublespeaker } = selectedSong
 
     // Applies to Uncanny Valley Boy.
     if (hasSideStanzas && !isDoublespeaker) {

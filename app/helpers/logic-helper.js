@@ -19,10 +19,11 @@ export const shouldShowAnnotationForColumn = ({
     selectedSongIndex,
     selectedLyricColumnIndex,
     annotationIndex,
-    state
+
+    deviceIndex
 
 }) => {
-    const showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, state),
+    const showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, deviceIndex),
         annotation = getAnnotationObject(selectedSongIndex, annotationIndex),
 
         /**
@@ -38,9 +39,9 @@ export const shouldShowAnnotationForColumn = ({
 }
 
 export const getAnnotationIndexForDirection = ({
-    state,
-    currentAnnotationIndex = 1,
+    deviceIndex,
 
+    currentAnnotationIndex = 1,
     selectedSongIndex,
     selectedDotKeys,
     lyricColumnIndex,
@@ -137,7 +138,7 @@ export const getAnnotationIndexForDirection = ({
                     selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex,
                     annotationIndex: returnIndex,
-                    state
+                    deviceIndex
                 })) &&
 
                 // And if modulo...
@@ -174,12 +175,12 @@ export const getAnnotationIndexForVerseIndex = ({
     state,
 
     // Search backwards by default.
-    direction = -1,
     verseIndex,
     selectedSongIndex,
     selectedDotKeys,
-    lyricColumnIndex
+    lyricColumnIndex,
 
+    direction = -1
 }) => {
     /**
      * Called:
@@ -224,7 +225,7 @@ export const getAnnotationIndexForVerseIndex = ({
                     selectedSongIndex,
                     selectedLyricColumnIndex: lyricColumnIndex,
                     annotationIndex: returnIndex,
-                    state
+                    deviceIndex: state.deviceIndex
                 }),
                 doesIntersect = intersects(annotation.dotKeys, selectedDotKeys)
 
@@ -251,7 +252,7 @@ export const getAnnotationIndexForVerseIndex = ({
      * direction that we will search if this annotation index is not present.
      */
     return getAnnotationIndexForDirection({
-        state,
+        deviceIndex: state.deviceIndex,
         currentAnnotationIndex: returnIndex,
         selectedSongIndex,
         selectedDotKeys,

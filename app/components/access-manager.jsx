@@ -403,7 +403,7 @@ class AccessManager extends Component {
 
         } else {
             accessedAnnotationIndex = getAnnotationIndexForDirection({
-                state: props,
+                deviceIndex: props.deviceIndex,
                 currentAnnotationIndex: accessedAnnotationIndex,
                 selectedSongIndex: props.selectedSongIndex,
                 selectedDotKeys: props.selectedDotKeys,

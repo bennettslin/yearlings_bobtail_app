@@ -181,7 +181,7 @@ class App extends Component {
             // Based on either selected annotation or selected verse.
             accessedAnnotationIndex: props.selectedAnnotationIndex ?
                 getAnnotationIndexForDirection({
-                    state: passedState,
+                    deviceIndex: passedState.deviceIndex,
                     currentAnnotationIndex: props.selectedAnnotationIndex,
                     selectedSongIndex: props.selectedSongIndex,
                     selectedDotKeys: props.selectedDotKeys,
@@ -301,7 +301,7 @@ class App extends Component {
         // Called from arrow buttons in popup.
         if (direction) {
             selectedAnnotationIndex = getAnnotationIndexForDirection({
-                state,
+                deviceIndex: state.deviceIndex,
                 selectedSongIndex,
                 selectedDotKeys: props.selectedDotKeys,
                 currentAnnotationIndex: props.selectedAnnotationIndex,
@@ -517,7 +517,7 @@ class App extends Component {
          * has double columns, or if in a logue. Check for new song if called
          * from portal.
          */
-        if (!(!isNaN(selectedSongIndex) ? getShowOneOfTwoLyricColumns(selectedSongIndex, state) : state.showOneOfTwoLyricColumns) || getIsLogue(selectedSongIndex)) {
+        if (!(!isNaN(selectedSongIndex) ? getShowOneOfTwoLyricColumns(selectedSongIndex, state.deviceIndex) : state.showOneOfTwoLyricColumns) || getIsLogue(selectedSongIndex)) {
             return false
         }
 
@@ -654,7 +654,7 @@ class App extends Component {
             selectedSongIndex
         })
 
-        newState.showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, this.state)
+        newState.showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, this.state.deviceIndex)
 
         this.interactivateVerse()
 
@@ -681,7 +681,7 @@ class App extends Component {
          * by dits.
          */
         newState.accessedAnnotationIndex = getAnnotationIndexForDirection({
-            state: this.state,
+            deviceIndex: this.state.deviceIndex,
             currentAnnotationIndex: 1,
             selectedSongIndex,
             selectedDotKeys: props.selectedDotKeys,
@@ -996,7 +996,7 @@ class App extends Component {
                     selectedSongIndex,
                     selectedLyricColumnIndex,
                     annotationIndex,
-                    state
+                    deviceIndex: state.deviceIndex
                 })
             if (!showAnnotationForColumn) {
                 this.selectAnnotation({})
@@ -1013,7 +1013,7 @@ class App extends Component {
         newState.isCarouselExpandable = isCarouselExpandable
         newState.isHeightlessLyricColumn = isHeightlessLyricColumn
         newState.isHiddenNav = getIsHiddenNav(newState)
-        newState.showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, newState)
+        newState.showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, newState.deviceIndex)
         newState.showSingleBookColumn = getShowSingleBookColumn(newState)
         newState.shrinkNavIcon = getShrinkNavIcon(newState)
         newState.scoresTipsOutsideMenu = getScoresTipsOutsideMenu(newState)
