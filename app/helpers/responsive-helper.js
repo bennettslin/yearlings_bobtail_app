@@ -74,7 +74,7 @@ export const getShowSingleBookColumn = ({ deviceIndex, windowWidth }) => {
     }
 }
 
-const _getShrinkNavIconForDeviceObject = (windowWidth, deviceObject) => {
+const _getShowShrunkNavIconForDeviceObject = (windowWidth, deviceObject) => {
     const { doubleColumnStaticBreakpoint,
             doubleColumnShrinkBreakpoint,
             singleColumnStaticBreakpoint } = deviceObject
@@ -90,11 +90,11 @@ const _getIsScoresTipsInMainForDeviceObject = (windowWidth, deviceObject) => {
 }
 
 
-export const getShrinkNavIcon = ({ deviceIndex, windowWidth }) => {
+export const getShowShrunkNavIcon = ({ deviceIndex, windowWidth }) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex],
         isPhoneOrMini = getIsPhone(deviceIndex) || _getIsMini(deviceIndex)
 
-    return _getShrinkNavIconForDeviceObject(windowWidth, isPhoneOrMini ? MINI_OBJECT : deviceObject)
+    return _getShowShrunkNavIconForDeviceObject(windowWidth, isPhoneOrMini ? MINI_OBJECT : deviceObject)
 }
 
 export const getIsCarouselExpandable = (deviceIndex) => {

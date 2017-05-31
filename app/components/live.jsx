@@ -23,9 +23,9 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon
 })
 
 /*************
@@ -83,7 +83,7 @@ const LiveView = ({
     isLyricExpandable,
     isHeightlessLyricColumn,
     isHiddenNav,
-    shrinkNavIcon,
+    showShrunkNavIcon,
     isScoresTipsInMain,
     isTitleInAudio,
     showOverlay,
@@ -330,7 +330,7 @@ const LiveView = ({
             selectedCarouselIndex ? 'carousel-expanded' : 'carousel-collapsed',
             selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
-            shrinkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
+            showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
             showOverlay ? 'overlay-shown' : 'overlay-hidden',
             { 'show-only-left': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 0,
               'show-only-right': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 1,

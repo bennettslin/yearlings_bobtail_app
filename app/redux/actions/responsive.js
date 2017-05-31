@@ -5,6 +5,7 @@ import { IS_CAROUSEL_EXPANDABLE,
          IS_SCORES_TIPS_IN_MAIN,
          IS_TITLE_IN_AUDIO,
          SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
+         SHOW_SHRUNK_NAV_ICON,
          SHOW_SINGLE_BOOK_COLUMN } from '../../constants/state'
 
 export const setIsCarouselExpandable = (isCarouselExpandable = false) => (
@@ -35,6 +36,11 @@ export const setIsTitleInAudio = (isTitleInAudio = false) => (
 export const setShowOneOfTwoLyricColumns = (showOneOfTwoLyricColumns = false) => (
     { type: SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
       payload: showOneOfTwoLyricColumns }
+)
+
+export const setShowShrunkNavIcon = (showShrunkNavIcon = false) => (
+    { type: SHOW_SHRUNK_NAV_ICON,
+      payload: showShrunkNavIcon }
 )
 
 export const setShowSingleBookColumn = (showSingleBookColumn = false) => (

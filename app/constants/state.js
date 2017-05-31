@@ -29,5 +29,6 @@ module.exports = {
     IS_SCORES_TIPS_IN_MAIN: 'isScoresTipsInMain',
     IS_TITLE_IN_AUDIO: 'isTitleInAudio',
     SHOW_ONE_OF_TWO_LYRIC_COLUMNS: 'showOneOfTwoLyricColumns',
+    SHOW_SHRUNK_NAV_ICON: 'showShrunkNavIcon',
     SHOW_SINGLE_BOOK_COLUMN: 'showSingleBookColumn'
 }

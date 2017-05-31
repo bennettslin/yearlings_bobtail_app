@@ -5,6 +5,7 @@ import { IS_CAROUSEL_EXPANDABLE,
          IS_SCORES_TIPS_IN_MAIN,
          IS_TITLE_IN_AUDIO,
          SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
+         SHOW_SHRUNK_NAV_ICON,
          SHOW_SINGLE_BOOK_COLUMN } from '../../constants/state'
 
 export const IsCarouselExpandableReducer = (state = false, action) => {
@@ -58,6 +59,15 @@ export const ShowOneOfTwoLyricColumnsReducer = (state = false, action) => {
             return action.payload
         default:
             return state
+    }
+}
+
+export const ShowShrunkNavIconReducer = (state = false, action) => {
+    switch (action.type) {
+        case SHOW_SHRUNK_NAV_ICON:
+        return action.payload
+        default:
+        return state
     }
 }
 
