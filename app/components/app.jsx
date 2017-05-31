@@ -182,15 +182,17 @@ class App extends Component {
             accessedAnnotationIndex: props.selectedAnnotationIndex ?
                 getAnnotationIndexForDirection({
                     state: passedState,
+                    currentAnnotationIndex: props.selectedAnnotationIndex,
                     selectedSongIndex: props.selectedSongIndex,
                     selectedDotKeys: props.selectedDotKeys,
-                    currentAnnotationIndex: props.selectedAnnotationIndex,
                     lyricColumnIndex: props.selectedLyricColumnIndex
                 }) :
                 getAnnotationIndexForVerseIndex({
-                    props,
                     state: passedState,
-                    verseIndex: props.selectedVerseIndex
+                    verseIndex: props.selectedVerseIndex,
+                    selectedSongIndex: props.selectedSongIndex,
+                    selectedDotKeys: props.selectedDotKeys,
+                    lyricColumnIndex: props.selectedLyricColumnIndex
                 }),
         })
     }
@@ -452,8 +454,11 @@ class App extends Component {
          */
         if (!selectedDotsIndex) {
             const accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-                props: this.props,
-                state: this.state
+                state: this.state,
+                verseIndex: this.props.selectedVerseIndex,
+                selectedSongIndex: this.props.selectedSongIndex,
+                selectedDotKeys: this.props.selectedDotKeys,
+                lyricColumnIndex: this.props.selectedLyricColumnIndex
             })
 
             this.setState({
@@ -526,9 +531,10 @@ class App extends Component {
 
         // Switching lyric column might change accessed annotation index.
         const accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-            props,
             state,
             verseIndex: props.selectedVerseIndex,
+            selectedSongIndex,
+            selectedDotKeys: props.selectedDotKeys,
             lyricColumnIndex: selectedLyricColumnIndex
         })
 

@@ -389,9 +389,11 @@ class AccessManager extends Component {
                 interactivatedVerseIndex : props.selectedVerseIndex
 
             accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-                props,
                 state: props,
                 verseIndex,
+                selectedSongIndex: props.selectedSongIndex,
+                selectedDotKeys: props.selectedDotKeys,
+                lyricColumnIndex: props.selectedLyricColumnIndex,
                 direction
             })
 
@@ -521,9 +523,11 @@ class AccessManager extends Component {
          */
         const { props } = this,
             accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-                props,
                 state: props,
-                verseIndex
+                verseIndex,
+                selectedSongIndex: props.selectedSongIndex,
+                selectedDotKeys: props.selectedDotKeys,
+                lyricColumnIndex: props.selectedLyricColumnIndex
             })
 
         props.handleAnnotationAccess({

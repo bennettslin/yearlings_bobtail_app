@@ -167,8 +167,6 @@ export const getAnnotationIndexForDirection = ({
 }
 
 export const getAnnotationIndexForVerseIndex = ({
-    props,
-
     /**
      * State is just needed for the deviceIndex, to determine whether one or
      * two lyric columns are shown.
@@ -177,8 +175,10 @@ export const getAnnotationIndexForVerseIndex = ({
 
     // Search backwards by default.
     direction = -1,
-    verseIndex = props.selectedVerseIndex,
-    lyricColumnIndex = props.selectedLyricColumnIndex
+    verseIndex,
+    selectedSongIndex,
+    selectedDotKeys,
+    lyricColumnIndex
 
 }) => {
     /**
@@ -189,9 +189,7 @@ export const getAnnotationIndexForVerseIndex = ({
      * - when lyric column is switched.
      */
 
-    const { selectedSongIndex } = props,
-
-        verse = getVerseObject(selectedSongIndex, verseIndex),
+    const verse = getVerseObject(selectedSongIndex, verseIndex),
         annotationsLength = getAnnotationsLength(selectedSongIndex)
 
     if (!verse) {
@@ -228,7 +226,7 @@ export const getAnnotationIndexForVerseIndex = ({
                     annotationIndex: returnIndex,
                     state
                 }),
-                doesIntersect = intersects(annotation.dotKeys, props.selectedDotKeys)
+                doesIntersect = intersects(annotation.dotKeys, selectedDotKeys)
 
             /**
              * Return while not shown for column or dot keys don't intersect,
@@ -254,11 +252,11 @@ export const getAnnotationIndexForVerseIndex = ({
      */
     return getAnnotationIndexForDirection({
         state,
-        selectedSongIndex,
-        selectedDotKeys: props.selectedDotKeys,
         currentAnnotationIndex: returnIndex,
-        specifiedDirection: direction,
-        lyricColumnIndex
+        selectedSongIndex,
+        selectedDotKeys,
+        lyricColumnIndex,
+        specifiedDirection: direction
     })
 }
 
