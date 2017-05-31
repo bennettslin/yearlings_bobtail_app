@@ -188,7 +188,7 @@ class App extends Component {
                     lyricColumnIndex: props.selectedLyricColumnIndex
                 }) :
                 getAnnotationIndexForVerseIndex({
-                    state: passedState,
+                    deviceIndex: passedState.deviceIndex,
                     verseIndex: props.selectedVerseIndex,
                     selectedSongIndex: props.selectedSongIndex,
                     selectedDotKeys: props.selectedDotKeys,
@@ -454,7 +454,7 @@ class App extends Component {
          */
         if (!selectedDotsIndex) {
             const accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-                state: this.state,
+                deviceIndex: this.state.deviceIndex,
                 verseIndex: this.props.selectedVerseIndex,
                 selectedSongIndex: this.props.selectedSongIndex,
                 selectedDotKeys: this.props.selectedDotKeys,
@@ -531,7 +531,7 @@ class App extends Component {
 
         // Switching lyric column might change accessed annotation index.
         const accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-            state,
+            deviceIndex: state.deviceIndex,
             verseIndex: props.selectedVerseIndex,
             selectedSongIndex,
             selectedDotKeys: props.selectedDotKeys,
