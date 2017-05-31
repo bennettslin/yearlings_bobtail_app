@@ -163,7 +163,7 @@ class EventManager extends Component {
     }
 
     handleSongAccess(accessedNavSongIndex) {
-        this.props.accessSong(accessedNavSongIndex)
+        this.props.accessNavSong(accessedNavSongIndex)
     }
 
     handleVerseDirectionAccess(direction) {

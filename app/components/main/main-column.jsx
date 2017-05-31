@@ -29,8 +29,6 @@ const MainColumnView = ({
     scoresTipsOutsideMenu,
 
     showSingleBookColumn,
-
-    accessedNavSongIndex,
     shownBookColumnIndex,
 
     handleCarouselToggle,
@@ -68,7 +66,6 @@ const MainColumnView = ({
         navSectionProps = {
             showSingleBookColumn,
             shownBookColumnIndex,
-            accessedNavSongIndex,
 
             handleNavExpand,
             handleNavSongSelect,

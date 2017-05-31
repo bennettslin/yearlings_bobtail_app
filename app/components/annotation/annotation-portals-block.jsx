@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import TextBlock from '../text/text-block'
 import DotButton from '../dot/dot-button'
 import { PORTAL } from '../../constants/dots'
+import { LYRIC, CENTRE } from '../../constants/lyrics'
 
 /*************
  * CONTAINER *
@@ -55,6 +56,7 @@ const AnnotationPortalsBlockView = ({
                     key={index}
                     className={classnames(
                         'portal-block',
+                        'anchor-block',
                         'dot-anchor-block',
                         { 'access-highlighted': accessHighlighted }
                     )}
@@ -74,7 +76,7 @@ const AnnotationPortalsBlockView = ({
                             <span className="text-span">{'\u201c'}</span>
                             <TextBlock
                                 inPortal={true}
-                                text={verseObject.lyric || verseObject.centre || verseObject[column]}
+                                text={verseObject[LYRIC] || verseObject[CENTRE] || verseObject[column]}
                                 portalAnnotationIndex={annotationIndex}
                             />
                             <span className="text-span">{'\u201d'}</span>

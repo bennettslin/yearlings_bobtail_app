@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex } from '../redux/actions/access'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './event-manager'
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -22,11 +23,11 @@ import LogHelper from '../helpers/log-helper'
  *********/
 
 // Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex }) => ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex })
+const passReduxStateToProps = ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex }) => ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex })
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex }, dispatch)
+    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex }, dispatch)
 )
 
 // let _stateLyricSectionTop = 0
@@ -40,10 +41,23 @@ class App extends Component {
     constructor(props) {
         super(props)
 
-        const { selectedSongIndex } = props,
+        const { selectedSongIndex,
+                selectedAnnotationIndex } = props,
 
             isLogue = getIsLogue(selectedSongIndex),
             popupOverview = getOverview(selectedSongIndex)
+
+        // Set initial access state.
+        props.accessAnnotationAnchorIndex(
+            getAnnotationAnchorIndexForDirection({
+                selectedSongIndex,
+                selectedAnnotationIndex,
+                selectedDotKeys: props.selectedDotKeys,
+                initialAnnotationAnchorIndex: 1
+            })
+        )
+        props.accessDotIndex(0)
+        props.accessNavSongIndex(selectedSongIndex)
 
         // Bind this to event handlers.
         this._bindEventHandlers()
@@ -51,16 +65,7 @@ class App extends Component {
         this.state = {
             isPlaying: false,
 
-            accessedAnnotationAnchorIndex: getAnnotationAnchorIndexForDirection({
-                selectedSongIndex,
-                selectedAnnotationIndex: props.selectedAnnotationIndex,
-                selectedDotKeys: props.selectedDotKeys,
-                initialAnnotationAnchorIndex: 1
-            }),
-            accessedDotIndex: 0,
-            accessedNavSongIndex: selectedSongIndex,
-
-            annotationObject: getAnnotationObject(selectedSongIndex, props.selectedAnnotationIndex),
+            annotationObject: getAnnotationObject(selectedSongIndex, selectedAnnotationIndex),
 
             popupLogueOverview: isLogue ? popupOverview : '',
             popupSongOverview: isLogue ? '' : popupOverview,
@@ -194,21 +199,15 @@ class App extends Component {
     }
 
     accessDot(accessedDotIndex) {
-        this.setState({
-            accessedDotIndex
-        })
+        this.props.accessDotIndex(accessedDotIndex)
     }
 
     accessAnnotationAnchor(accessedAnnotationAnchorIndex) {
-        this.setState({
-            accessedAnnotationAnchorIndex
-        })
+        this.props.accessAnnotationAnchorIndex(accessedAnnotationAnchorIndex)
     }
 
-    accessSong(accessedNavSongIndex) {
-        this.setState({
-            accessedNavSongIndex
-        })
+    accessNavSong(accessedNavSongIndex) {
+        this.props.accessNavSongIndex(accessedNavSongIndex)
     }
 
     /*********
@@ -248,20 +247,21 @@ class App extends Component {
 
         // Keep accessed index, even if annotation is deselected.
         if (selectedAnnotationIndex) {
-            const { selectedDotKeys } = props,
-                accessedAnnotationAnchorIndex = getAnnotationAnchorIndexForDirection({
+            const { selectedDotKeys } = props
+
+            this.setState({
+                accessedAnnotationIndex: selectedAnnotationIndex
+            })
+
+            // App does not know new index, so pass it directly.
+            this.props.accessAnnotationAnchorIndex(
+                getAnnotationAnchorIndexForDirection({
                     selectedSongIndex,
                     selectedAnnotationIndex,
                     selectedDotKeys,
                     initialAnnotationAnchorIndex: 1
                 })
-
-            this.setState({
-                accessedAnnotationIndex: selectedAnnotationIndex,
-
-                // App does not know new index, so pass it directly.
-                accessedAnnotationAnchorIndex
-            })
+            )
         }
 
         props.selectAnnotationIndex(selectedAnnotationIndex)
@@ -499,7 +499,7 @@ class App extends Component {
 
         // Reset accessed song index and book column upon nav expand.
         if (selectedNavIndex) {
-            this.accessSong(this.props.selectedSongIndex)
+            this.accessNavSong(this.props.selectedSongIndex)
 
             this.selectBookColumn({
                 resetToDefault: true,
@@ -626,7 +626,7 @@ class App extends Component {
         })
 
         this.setState(newState)
-        this.accessSong(selectedSongIndex)
+        this.accessNavSong(selectedSongIndex)
         props.selectSongIndex(selectedSongIndex)
 
         return true
@@ -978,7 +978,7 @@ class App extends Component {
         this.accessAnnotation = this.accessAnnotation.bind(this)
         this.accessDot = this.accessDot.bind(this)
         this.accessAnnotationAnchor = this.accessAnnotationAnchor.bind(this)
-        this.accessSong = this.accessSong.bind(this)
+        this.accessNavSong = this.accessNavSong.bind(this)
         this.toggleAccess = this.toggleAccess.bind(this)
         this.toggleAdmin = this.toggleAdmin.bind(this)
         this.togglePlay = this.togglePlay.bind(this)
@@ -1030,9 +1030,9 @@ class App extends Component {
 
                 // Event manager props.
                 accessAnnotation={this.accessAnnotation}
-                accessDot={this.accessDot}
                 accessAnnotationAnchor={this.accessAnnotationAnchor}
-                accessSong={this.accessSong}
+                accessDot={this.accessDot}
+                accessNavSong={this.accessNavSong}
                 touchSliderBegin={this.touchSliderBegin}
                 touchBodyMove={this.touchBodyMove}
                 touchBodyEnd={this.touchBodyEnd}

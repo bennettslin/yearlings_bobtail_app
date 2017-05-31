@@ -24,11 +24,7 @@ class CarouselAnnotation extends Component {
                 updatingPropsArray: [
                     'selectedSongIndex',
                     'isAccessedAnnotation',
-                    'isSelectedAnnotation',
-                    {
-                        onlyIfTrueInNextProps: 'isSelectedAnnotation',
-                        subUpdatingKey: 'accessedAnnotationAnchorIndex'
-                    }
+                    'isSelectedAnnotation'
                 ]
             })
 

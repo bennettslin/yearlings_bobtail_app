@@ -5,10 +5,12 @@ import DotBlock from '../dot/dot-block'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const passReduxStateToProps = ({
-    selectedDotKeys
+    selectedDotKeys,
+    accessedDotIndex
 }) => ({
     // Pass Redux state into component props.
-    selectedDotKeys
+    selectedDotKeys,
+    accessedDotIndex
 })
 
 /*************

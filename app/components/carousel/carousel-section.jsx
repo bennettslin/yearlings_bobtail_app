@@ -29,8 +29,7 @@ class CarouselSection extends Component {
                 updatingPropsArray: [
                     'selectedSongIndex',
                     'accessedAnnotationIndex',
-                    'selectedAnnotationIndex',
-                    'accessedAnnotationAnchorIndex'
+                    'selectedAnnotationIndex'
                 ]
             })
 

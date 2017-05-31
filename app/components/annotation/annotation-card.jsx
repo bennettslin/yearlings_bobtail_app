@@ -1,9 +1,17 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotBlock from '../dot/dot-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
+
+// Pass Redux state into component props.
+const passReduxStateToProps = ({
+    accessedAnnotationAnchorIndex
+}) => ({
+    accessedAnnotationAnchorIndex
+})
 
 /*************
  * CONTAINER *
@@ -34,6 +42,7 @@ const AnnotationCard = ({
 }
 
 AnnotationCard.propTypes = {
+    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
     card: PropTypes.object.isRequired
 }
 
@@ -102,4 +111,4 @@ AnnotationCardView.propTypes = {
     handleAnnotationPortalSelect: PropTypes.func.isRequired,
 }
 
-export default AnnotationCard
+export default connect(passReduxStateToProps)(AnnotationCard)

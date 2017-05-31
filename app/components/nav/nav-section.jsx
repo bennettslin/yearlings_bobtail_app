@@ -12,11 +12,13 @@ const { songs, bookStartingIndices } = AlbumData
 
 const passReduxStateToProps = ({
     selectedSongIndex,
-    selectedNavIndex
+    selectedNavIndex,
+    accessedNavSongIndex
 }) => ({
 // Pass Redux state into component props.
     selectedSongIndex,
-    selectedNavIndex
+    selectedNavIndex,
+    accessedNavSongIndex
 })
 
 /*************
