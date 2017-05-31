@@ -36,7 +36,6 @@ const MainColumnView = ({
     isHiddenNav,
     isScoresTipsInMain,
 
-    showSingleBookColumn,
     shownBookColumnIndex,
 
     handleCarouselToggle,
@@ -69,7 +68,6 @@ const MainColumnView = ({
             dotsSectionChild
         },
         navSectionProps = {
-            showSingleBookColumn,
             shownBookColumnIndex,
 
             handleNavExpand,

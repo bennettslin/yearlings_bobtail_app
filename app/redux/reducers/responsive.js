@@ -4,7 +4,8 @@ import { IS_CAROUSEL_EXPANDABLE,
          IS_HIDDEN_NAV,
          IS_SCORES_TIPS_IN_MAIN,
          IS_TITLE_IN_AUDIO,
-         SHOW_ONE_OF_TWO_LYRIC_COLUMNS } from '../../constants/state'
+         SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
+         SHOW_SINGLE_BOOK_COLUMN } from '../../constants/state'
 
 export const IsCarouselExpandableReducer = (state = false, action) => {
     switch (action.type) {
@@ -54,6 +55,15 @@ export const IsTitleInAudioReducer = (state = false, action) => {
 export const ShowOneOfTwoLyricColumnsReducer = (state = false, action) => {
     switch (action.type) {
         case SHOW_ONE_OF_TWO_LYRIC_COLUMNS:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const ShowSingleBookColumnReducer = (state = false, action) => {
+    switch (action.type) {
+        case SHOW_SINGLE_BOOK_COLUMN:
             return action.payload
         default:
             return state

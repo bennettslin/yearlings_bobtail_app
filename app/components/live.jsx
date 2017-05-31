@@ -83,7 +83,6 @@ const LiveView = ({
     isLyricExpandable,
     isHeightlessLyricColumn,
     isHiddenNav,
-    showSingleBookColumn,
     shrinkNavIcon,
     isScoresTipsInMain,
     isTitleInAudio,
@@ -265,7 +264,6 @@ const LiveView = ({
             isPhone,
             isDesktop,
 
-            showSingleBookColumn,
             shownBookColumnIndex,
             selectedWikiUrl,
 
