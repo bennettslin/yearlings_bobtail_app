@@ -17,7 +17,7 @@ const AudioButtons = (props) =>  (
 
 AudioButtons.propTypes = {
     selectedAudioOptionIndex: PropTypes.number.isRequired,
-    titleInAudio: PropTypes.bool.isRequired,
+    isTitleInAudio: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
     isPrologue: PropTypes.bool.isRequired,
     isFirstSong: PropTypes.bool.isRequired,
@@ -36,7 +36,7 @@ AudioButtons.propTypes = {
 const AudioButtonsView = ({
 
     // From props.
-    titleInAudio,
+    isTitleInAudio,
     isPlaying,
     selectedAudioOptionIndex,
     isPrologue,
@@ -66,7 +66,7 @@ const AudioButtonsView = ({
                 iconClass="audio-colour"
                 iconText={isPlaying ? '\u23F8' : '\u25BA'}
                 accessKey={AUDIO_PLAY_KEY}
-                isLarge={!titleInAudio}
+                isLarge={!isTitleInAudio}
                 handleClick={handleAudioPlay}
             />
 

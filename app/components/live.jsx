@@ -23,9 +23,9 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio
 })
 
 /*************
@@ -86,7 +86,7 @@ const LiveView = ({
     showSingleBookColumn,
     shrinkNavIcon,
     isScoresTipsInMain,
-    titleInAudio,
+    isTitleInAudio,
     showOverlay,
     isOverviewShown,
     isOverlaidAnnotation,
@@ -193,14 +193,11 @@ const LiveView = ({
             titleToggleChild
         },
         audioSectionChild = (
-            <AudioSection {...audioSectionProps}
-                titleInAudio={titleInAudio}
-            />
+            <AudioSection {...audioSectionProps} />
         ),
 
         carouselSectionProps = {
             accessedAnnotationIndex,
-            // accessedAnnotationAnchorIndex,
 
             handleLyricAnnotationSelect,
             handleAnnotationPrevious,
@@ -268,11 +265,8 @@ const LiveView = ({
 
             isPhone,
             isDesktop,
-            titleInAudio,
 
             showSingleBookColumn,
-
-            // accessedNavSongIndex,
             shownBookColumnIndex,
             selectedWikiUrl,
 
@@ -344,7 +338,7 @@ const LiveView = ({
             { 'show-only-left': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 0,
               'show-only-right': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 1,
               'timer-in-audio': timerInAudio,
-              'title-in-audio': titleInAudio,
+              'title-in-audio': isTitleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,
               'overview-shown': isOverviewShown,
               'verse-above': isSelectedVerseAbove,
@@ -385,7 +379,7 @@ const LiveView = ({
                     <div className="overlay-popup-block audio-popup-block">
                         <AudioTransitionPopup {...audioSectionProps}
                             timerInAudio={timerInAudio}
-                            titleInAudio={false}
+                            isTitleInAudio={false}
                             showOverlay={showOverlay}
                         />
                     </div>

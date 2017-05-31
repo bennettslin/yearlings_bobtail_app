@@ -164,9 +164,9 @@ export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
     }
 }
 
-export const getTitleInAudio = ({ deviceIndex, windowWidth }) => {
+export const getIsTitleInAudio = ({ deviceIndex, windowWidth }) => {
 
-    return _getIsMini(deviceIndex) && windowWidth < MINI_OBJECT.titleInAudioBreakpoint
+    return _getIsMini(deviceIndex) && windowWidth < MINI_OBJECT.isTitleInAudioBreakpoint
 }
 
 export const getLyricSectionRect = ({

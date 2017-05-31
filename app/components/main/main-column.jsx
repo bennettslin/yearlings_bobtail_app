@@ -33,7 +33,6 @@ const MainColumnView = ({
 
     isPhone,
     isDesktop,
-    titleInAudio,
     isHiddenNav,
     isScoresTipsInMain,
 
@@ -59,8 +58,6 @@ const MainColumnView = ({
 
 }) => {
     const menuFieldProps = {
-            titleInAudio,
-
             audioSectionChild,
             scoresTipsSectionChild,
             titleToggleChild

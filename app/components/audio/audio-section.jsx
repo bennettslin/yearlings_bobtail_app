@@ -7,11 +7,13 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const passReduxStateToProps = ({
     selectedSongIndex,
-    selectedAudioOptionIndex
+    selectedAudioOptionIndex,
+    isTitleInAudio
 }) => ({
 // Pass Redux state into component props.
     selectedSongIndex,
-    selectedAudioOptionIndex
+    selectedAudioOptionIndex,
+    isTitleInAudio
 })
 
 /*************
@@ -30,7 +32,7 @@ class AudioSection extends Component {
                     'selectedAudioOptionIndex',
                     'isPhone',
                     'isPlaying',
-                    'titleInAudio',
+                    'isTitleInAudio',
 
                     // Update when banner props are updated.
                     'audioBannerProps'
@@ -68,7 +70,7 @@ AudioSection.propTypes = {
     selectedAudioOptionIndex: PropTypes.number.isRequired,
     isPhone: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
-    titleInAudio: PropTypes.bool.isRequired,
+    isTitleInAudio: PropTypes.bool.isRequired,
     audioBannerProps: PropTypes.object.isRequired
 }
 
@@ -80,7 +82,7 @@ const AudioSectionView = ({
 
     // From props.
     timerInAudio,
-    titleInAudio,
+    isTitleInAudio,
     isPhone,
     isPlaying,
     selectedAudioOptionIndex,
@@ -104,7 +106,7 @@ const AudioSectionView = ({
 
     const audioButtonsProps = {
             selectedAudioOptionIndex,
-            titleInAudio,
+            isTitleInAudio,
             isPlaying,
             isPrologue,
             isFirstSong,
@@ -126,7 +128,7 @@ const AudioSectionView = ({
                     {audioTimerChild}
                 </div>
             )}
-            {titleInAudio &&
+            {isTitleInAudio &&
                 titleToggleChild
             }
             {(!isPhone || timerInAudio) && audioBannerChild}
@@ -143,7 +145,7 @@ AudioSectionView.propTypes = {
     isLastSong: PropTypes.bool.isRequired,
     isEpilogue: PropTypes.bool.isRequired,
     timerInAudio: PropTypes.bool,
-    titleInAudio: PropTypes.bool.isRequired,
+    isTitleInAudio: PropTypes.bool.isRequired,
     isPhone: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
 

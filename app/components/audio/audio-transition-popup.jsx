@@ -22,7 +22,7 @@ class AudioTransitionPopup extends Component {
                     'isPlaying',
                     'showOverlay',
                     'timerInAudio',
-                    'titleInAudio',
+                    // 'isTitleInAudio',
 
                     // Update when banner props are updated.
                     'audioBannerProps'
@@ -60,7 +60,7 @@ AudioTransitionPopup.propTypes = {
     isPlaying: PropTypes.bool.isRequired,
     showOverlay: PropTypes.bool.isRequired,
     timerInAudio: PropTypes.bool.isRequired,
-    titleInAudio: PropTypes.bool.isRequired,
+    // isTitleInAudio: PropTypes.bool.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired,
     audioBannerProps: PropTypes.object.isRequired
 }

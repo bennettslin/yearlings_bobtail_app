@@ -26,5 +26,6 @@ module.exports = {
     IS_CAROUSEL_EXPANDABLE: 'isCarouselExpandable',
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',
     IS_HIDDEN_NAV: 'isHiddenNav',
-    IS_SCORES_TIPS_IN_MAIN: 'isScoresTipsInMain'
+    IS_SCORES_TIPS_IN_MAIN: 'isScoresTipsInMain',
+    IS_TITLE_IN_AUDIO: 'isTitleInAudio'
 }
