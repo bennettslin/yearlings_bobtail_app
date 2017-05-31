@@ -1,7 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import Button from '../button/button'
 import { TITLE_TOGGLE_KEY } from '../../helpers/constants'
+
+const passReduxStateToProps = ({
+    selectedTitleIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedTitleIndex
+})
 
 /*************
  * CONTAINER *
@@ -39,5 +47,4 @@ const TitleToggleView = ({
         </div>
     </div>
 )
-
-export default TitleToggle
+export default connect(passReduxStateToProps)(TitleToggle)

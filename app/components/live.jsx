@@ -1,20 +1,20 @@
 import React from 'react'
 import classnames from 'classnames'
 import Button from './button/button'
-import Carousel from './carousel/carousel'
 import MainColumn from './main/main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
 import AudioTimer from './audio/audio-timer'
-import AudioTransitionPopup from './audio/audio-transition-popup'
 import AudioSection from './audio/audio-section'
+import CarouselSection from './carousel/carousel-section'
+import DotsSection from './dots/dots-section'
 import ScoresTipsSection from './main/scores-tips-section'
 import OverviewToggle from './overview/overview-toggle'
+import TitleToggle from './title/title-toggle'
+import AudioTransitionPopup from './audio/audio-transition-popup'
 import OverviewTransitionPopup from './overview/overview-transition-popup'
 import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
-import DotsSection from './dots/dots-section'
 import ScoreTransitionPopup from './score/score-transition-popup'
-import TitleToggle from './title/title-toggle'
 import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
 import { getWikiUrl } from '../helpers/logic-helper'
@@ -54,23 +54,14 @@ const LiveView = ({
     popupSongOverview,
     isPlaying,
     isLogue,
-    selectedSongIndex,
     selectedAnnotationIndex,
     selectedDotKeys,
-    selectedWikiIndex,
     selectedWikiUrl,
-    selectedScoreIndex,
-    selectedVerseIndex,
-    selectedAudioOptionIndex,
-    selectedTipsIndex,
-    selectedTimePlayed,
     selectedLyricColumnIndex,
-    // selectedOverviewIndex,
     selectedDotsIndex,
     selectedNavIndex,
-    selectedBookColumnIndex,
+    shownBookColumnIndex,
     selectedCarouselIndex,
-    selectedTitleIndex,
     accessedSongIndex,
     accessedAnnotationIndex,
     accessedPopupAnchorIndex,
@@ -145,7 +136,6 @@ const LiveView = ({
     const timerInAudio = showOverlay && isPhone,
 
         titleToggleProps = {
-            selectedTitleIndex,
             handleTitleToggle
         },
         titleToggleChild = (
@@ -154,11 +144,6 @@ const LiveView = ({
 
         annotationPopupProps = {
             annotationObject,
-            // selectedAnnotationIndex,
-            // selectedCarouselIndex,
-            // selectedScoreIndex,
-            // selectedTitleIndex,
-            // selectedWikiIndex,
             accessedPopupAnchorIndex,
             handleAnnotationPrevious,
             handleAnnotationNext,
@@ -169,20 +154,16 @@ const LiveView = ({
         },
 
         audioTimerProps = {
-            isLogue,
-            selectedTimePlayed
+            isLogue
         },
         audioTimerChild = (
             <AudioTimer {...audioTimerProps} />
         ),
         audioBannerProps = {
-            selectedSongIndex,
-            selectedVerseIndex,
             interactivatedVerseIndex,
             sliderVerseIndex,
             sliderRatio,
             sliderMousedOrTouched,
-            selectedTimePlayed,
             handlePlayerTimeChange,
             handleAudioSliderTouchBegin,
 
@@ -194,8 +175,6 @@ const LiveView = ({
         audioSectionProps = {
             isPhone,
             isPlaying,
-            selectedSongIndex,
-            selectedAudioOptionIndex,
 
             handleAudioPlay,
             handleAudioPreviousSong,
@@ -214,10 +193,8 @@ const LiveView = ({
             />
         ),
 
-        carouselProps = {
+        carouselSectionProps = {
             accessedAnnotationIndex,
-            // selectedAnnotationIndex,
-            // selectedSongIndex,
             accessedPopupAnchorIndex,
 
             handleLyricAnnotationSelect,
@@ -227,12 +204,10 @@ const LiveView = ({
             handleAnnotationPortalSelect
         },
         carouselChild = !isHiddenNav && (
-            <Carousel {...carouselProps} />
+            <CarouselSection {...carouselSectionProps} />
         ),
 
         dotsSectionProps = {
-            // selectedDotKeys,
-            // selectedDotsIndex,
             accessedDotIndex,
             handlePopupContainerClick,
             handleDotToggle,
@@ -255,11 +230,7 @@ const LiveView = ({
             showOneOfTwoLyricColumns,
             isPlaying,
             accessedAnnotationIndex,
-            selectedSongIndex,
-            selectedAnnotationIndex,
-            selectedLyricColumnIndex,
             interactivatedVerseIndex,
-            selectedVerseIndex,
 
             lyricSectionRef,
 
@@ -299,13 +270,8 @@ const LiveView = ({
             showSingleBookColumn,
 
             accessedSongIndex,
-            selectedSongIndex,
-            selectedNavIndex,
-            selectedBookColumnIndex,
-            selectedDotsIndex,
+            shownBookColumnIndex,
             selectedWikiUrl,
-            selectedTipsIndex,
-            selectedCarouselIndex,
 
             handleCarouselToggle,
             handleDotsSectionToggle,
@@ -320,15 +286,12 @@ const LiveView = ({
         },
 
         overviewToggleProps = {
-            // selectedOverviewIndex,
             handleOverviewToggle
         },
 
         overviewPopupProps = {
             isPhone,
             isLogue,
-            // selectedOverviewIndex,
-            // selectedTitleIndex,
             handlePopupContainerClick,
 
             // For toggle in popup in phone.
@@ -337,8 +300,6 @@ const LiveView = ({
 
         scoresTipsSectionProps = {
             isPhone,
-            selectedScoreIndex,
-            selectedTipsIndex,
 
             handleScoreToggle,
             handleTipsToggle
@@ -346,21 +307,17 @@ const LiveView = ({
 
         scorePopupProps = {
             isPhone,
-            selectedScoreIndex,
-            selectedSongIndex,
             scoreSectionRef,
             handleScoreToggle,
             handlePopupFocus
         },
 
         titlePopupProps = {
-            selectedTitleIndex,
             handleTitleToggle,
             handlePopupFocus
         },
 
         wikiPopupProps = {
-            selectedWikiIndex,
             selectedWikiUrl,
             wikiSectionRef,
             handleWikiToggle,

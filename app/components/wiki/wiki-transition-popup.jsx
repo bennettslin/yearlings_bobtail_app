@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import WikiSection from './wiki-section'
 import TransitionPopup from '../popup/transition-popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedWikiIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedWikiIndex
+})
 
 class WikiTransitionPopup extends Component {
 
@@ -49,5 +57,4 @@ WikiTransitionPopup.propTypes = {
     handleWikiToggle: PropTypes.func.isRequired,
     handlePopupFocus: PropTypes.func.isRequired,
 }
-
-export default WikiTransitionPopup
+export default connect(passReduxStateToProps)(WikiTransitionPopup)

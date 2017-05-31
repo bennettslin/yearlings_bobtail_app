@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import NavBook from './nav-book'
 import { NAV_SECTION_ACCESS_KEY } from '../../helpers/constants'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
@@ -8,6 +9,15 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 import AlbumData from '../../album-data'
 
 const { songs, bookStartingIndices } = AlbumData
+
+const passReduxStateToProps = ({
+    selectedSongIndex,
+    selectedNavIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedSongIndex,
+    selectedNavIndex
+})
 
 /*************
  * CONTAINER *
@@ -25,7 +35,7 @@ class NavSection extends Component {
                     'accessedSongIndex',
                     'selectedSongIndex',
                     'selectedNavIndex',
-                    'selectedBookColumnIndex'
+                    'shownBookColumnIndex'
                 ]
             })
 
@@ -44,7 +54,7 @@ NavSection.propTypes = {
     accessedSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedNavIndex: PropTypes.number.isRequired,
-    selectedBookColumnIndex: PropTypes.number.isRequired,
+    shownBookColumnIndex: PropTypes.number.isRequired,
     handleNavExpand: PropTypes.func,
     handleNavBookSelect: PropTypes.func,
     handleNavSongSelect: PropTypes.func.isRequired
@@ -60,7 +70,7 @@ const NavSectionView = ({
     selectedSongIndex,
     selectedNavIndex,
     accessedSongIndex,
-    selectedBookColumnIndex,
+    shownBookColumnIndex,
     showSingleBookColumn,
 
     handleNavExpand,
@@ -99,7 +109,7 @@ const NavSectionView = ({
                     <div className={classnames(
                         'book-column-block',
                         'column-1',
-                        !showSingleBookColumn || selectedBookColumnIndex === 1 ? ' column-shown' : ' column-hidden'
+                        !showSingleBookColumn || shownBookColumnIndex === 1 ? ' column-shown' : ' column-hidden'
                     )}>
                         <div className="book-column">
                             {/* songs 1 - 9 */}
@@ -110,7 +120,7 @@ const NavSectionView = ({
                             />
                             {/* prologue or toggle */}
                             {/* TODO: Make this a single component, not a ternary. */}
-                            {showSingleBookColumn && selectedBookColumnIndex === 2 ?
+                            {showSingleBookColumn && shownBookColumnIndex === 2 ?
                                 <NavBook {...navItemProps}
                                     isToggle={true}
                                     hasSelectedSong={selectedSongIndex < bookStartingIndices[1]}
@@ -128,7 +138,7 @@ const NavSectionView = ({
                     <div className={classnames(
                         'book-column-block',
                         'column-2',
-                        !showSingleBookColumn || selectedBookColumnIndex === 2 ? ' column-shown' : ' column-hidden'
+                        !showSingleBookColumn || shownBookColumnIndex === 2 ? ' column-shown' : ' column-hidden'
                     )}>
                         <div className="book-column">
                             {/* songs 10 - 18 */}
@@ -139,7 +149,7 @@ const NavSectionView = ({
                                 endArrayIndex={songsLength - 1}
                             />
                             {/* epilogue or toggle */}
-                            {showSingleBookColumn && selectedBookColumnIndex === 1 ?
+                            {showSingleBookColumn && shownBookColumnIndex === 1 ?
                                 <NavBook {...navItemProps}
                                     isToggle={true}
                                     hasSelectedSong={selectedSongIndex >= bookStartingIndices[1]}
@@ -160,5 +170,4 @@ const NavSectionView = ({
         </div>
     )
 }
-
-export default NavSection
+export default connect(passReduxStateToProps)(NavSection)

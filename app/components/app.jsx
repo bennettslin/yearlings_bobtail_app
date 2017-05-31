@@ -129,7 +129,7 @@ class App extends Component {
             popupLogueOverview: isLogue ? popupOverview : '',
             popupSongOverview: isLogue ? '' : popupOverview,
 
-            selectedBookColumnIndex: getBookColumnIndex(props.selectedSongIndex),
+            shownBookColumnIndex: getBookColumnIndex(props.selectedSongIndex),
             isCarouselExpandable: false,
             isHeightlessLyricColumn: false,
             isHiddenNav: false,
@@ -565,7 +565,7 @@ class App extends Component {
     }
 
     selectBookColumn({
-        selectedBookColumnIndex = (this.state.selectedBookColumnIndex) % 2 + 1,
+        shownBookColumnIndex = (this.state.shownBookColumnIndex) % 2 + 1,
         resetToDefault,
         selectedNavIndex = this.props.selectedNavIndex,
         selectedSongIndex = this.props.selectedSongIndex
@@ -582,11 +582,11 @@ class App extends Component {
 
         // Reset to default upon song change or nav expand.
         if (resetToDefault) {
-            selectedBookColumnIndex = getBookColumnIndex(selectedSongIndex)
+            shownBookColumnIndex = getBookColumnIndex(selectedSongIndex)
         }
 
         this.setState({
-            selectedBookColumnIndex
+            shownBookColumnIndex
         })
     }
 

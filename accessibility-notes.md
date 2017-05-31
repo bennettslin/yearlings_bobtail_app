@@ -163,7 +163,7 @@
     * "o" to toggle "audioOptionIndex"
     * "t" to toggle "selectedTipsIndex"
     * "z" to toggle "selectedOverviewIndex"
-    * "k" to toggle "selectedBookColumnIndex"
+    * "k" to toggle "shownBookColumnIndex"
     * "x" to expand lyric section
     * "m" to toggle admin field. This won't be possible live, of course.
     * "n" to rotate device width. This won't be possible live, of course.

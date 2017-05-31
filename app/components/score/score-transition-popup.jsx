@@ -1,8 +1,18 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import ScoreSection from './score-section'
 import TransitionPopup from '../popup/transition-popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedSongIndex,
+    selectedScoreIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedSongIndex,
+    selectedScoreIndex
+})
 
 class ScoreTransitionPopup extends Component {
 
@@ -53,5 +63,4 @@ ScoreTransitionPopup.propTypes = {
     handleScoreToggle: PropTypes.func.isRequired,
     handlePopupFocus: PropTypes.func.isRequired
 }
-
-export default ScoreTransitionPopup
+export default connect(passReduxStateToProps)(ScoreTransitionPopup)

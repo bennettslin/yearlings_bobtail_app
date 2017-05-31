@@ -1,7 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import AudioSlider from './audio-slider'
 import { getSongTitle } from '../../helpers/data-helper'
+
+const passReduxStateToProps = ({
+    selectedSongIndex,
+    selectedVerseIndex,
+    selectedTimePlayed
+}) => ({
+// Pass Redux state into component props.
+    selectedSongIndex,
+    selectedVerseIndex,
+    selectedTimePlayed
+})
 
 /*************
  * CONTAINER *
@@ -13,6 +25,8 @@ const AudioBanner = (props) => (
 
 AudioBanner.propTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
+    selectedVerseIndex: PropTypes.number.isRequired,
+    selectedTimePlayed: PropTypes.number.isRequired,
     audioTimerChild: PropTypes.element.isRequired
 }
 
@@ -41,4 +55,4 @@ const AudioBannerView = ({
     </div>
 )
 
-export default AudioBanner
+export default connect(passReduxStateToProps)(AudioBanner)

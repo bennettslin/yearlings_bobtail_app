@@ -16,8 +16,8 @@ class AudioTransitionPopup extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'selectedAudioOptionIndex',
-                    'selectedSongIndex',
+                    // 'selectedAudioOptionIndex',
+                    // 'selectedSongIndex',
                     'isPhone',
                     'isPlaying',
                     'showOverlay',
@@ -54,8 +54,8 @@ class AudioTransitionPopup extends Component {
 }
 
 AudioTransitionPopup.propTypes = {
-    selectedAudioOptionIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
+    // selectedAudioOptionIndex: PropTypes.number.isRequired,
+    // selectedSongIndex: PropTypes.number.isRequired,
     isPhone: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
     showOverlay: PropTypes.bool.isRequired,

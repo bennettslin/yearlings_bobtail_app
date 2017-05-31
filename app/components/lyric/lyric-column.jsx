@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import Button from '../button/button'
 import LyricSection from '../lyric/lyric-section'
 import VerseBar from '../verse/verse-bar'
 import { LYRIC_COLUMN_TOGGLE_KEY, LYRIC_COLUMN_KEYS } from '../../helpers/constants'
 import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    selectedLyricColumnIndex,
+    selectedVerseIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    selectedLyricColumnIndex,
+    selectedVerseIndex
+})
 
 /*************
  * CONTAINER *
@@ -220,4 +234,4 @@ LyricColumnView.propTypes = {
     completeHeightTransition: PropTypes.func.isRequired
 }
 
-export default LyricColumn
+export default connect(passReduxStateToProps)(LyricColumn)

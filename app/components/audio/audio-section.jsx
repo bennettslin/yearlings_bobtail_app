@@ -1,8 +1,18 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import AudioButtons from './audio-buttons'
 import { SONG_FILES } from '../../helpers/constants'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedSongIndex,
+    selectedAudioOptionIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedSongIndex,
+    selectedAudioOptionIndex
+})
 
 /*************
  * CONTAINER *
@@ -16,8 +26,8 @@ class AudioSection extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'selectedAudioOptionIndex',
                     'selectedSongIndex',
+                    'selectedAudioOptionIndex',
                     'isPhone',
                     'isPlaying',
                     'titleInAudio',
@@ -143,4 +153,4 @@ AudioSectionView.propTypes = {
     audioBannerChild: PropTypes.element.isRequired
 }
 
-export default AudioSection
+export default connect(passReduxStateToProps)(AudioSection)

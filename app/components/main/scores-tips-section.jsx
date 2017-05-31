@@ -1,9 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import Button from '../button/button'
 import { TIPS_OPTIONS,
          SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY } from '../../helpers/constants'
+
+const passReduxStateToProps = ({
+    selectedScoreIndex,
+    selectedTipsIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedScoreIndex,
+    selectedTipsIndex
+})
 
 /*************
  * CONTAINER *
@@ -58,4 +68,4 @@ const ScoresTipsSectionView = ({
     )
 }
 
-export default ScoresTipsSection
+export default connect(passReduxStateToProps)(ScoresTipsSection)

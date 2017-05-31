@@ -311,14 +311,14 @@ class AccessManager extends Component {
             }
 
             if (direction) {
-                const { selectedBookColumnIndex } = this.props,
+                const { shownBookColumnIndex } = this.props,
                     bookStartingIndices = getBookStartingIndices(),
                     songsLength = getSongsLength()
 
                 accessedSongIndex = (accessedSongIndex + songsLength + direction) % songsLength
 
                 // Select the book column that contains the accessed song index.
-                if ((selectedBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (selectedBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
+                if ((shownBookColumnIndex === 1 && accessedSongIndex >= bookStartingIndices[1]) || (shownBookColumnIndex === 2 && accessedSongIndex < bookStartingIndices[1])) {
                     this.props.handleNavBookSelect(e)
                 }
 

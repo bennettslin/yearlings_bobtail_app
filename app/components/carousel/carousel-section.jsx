@@ -19,7 +19,7 @@ const passReduxStateToProps = ({
  * CONTAINER *
  *************/
 
-class Carousel extends Component {
+class CarouselSection extends Component {
 
     shouldComponentUpdate(nextProps) {
         const { props } = this,
@@ -39,12 +39,12 @@ class Carousel extends Component {
 
     render() {
         return (
-            <CarouselView {...this.props} />
+            <CarouselSectionView {...this.props} />
         )
     }
 }
 
-Carousel.propTypes = {
+CarouselSection.propTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     handleAnnotationPrevious: PropTypes.func.isRequired,
@@ -55,7 +55,7 @@ Carousel.propTypes = {
  * PRESENTATION *
  ****************/
 
-const CarouselView = ({
+const CarouselSectionView = ({
 
     selectedSongIndex,
     accessedAnnotationIndex,
@@ -110,4 +110,4 @@ const CarouselView = ({
     )
 }
 
-export default connect(passReduxStateToProps)(Carousel)
+export default connect(passReduxStateToProps)(CarouselSection)

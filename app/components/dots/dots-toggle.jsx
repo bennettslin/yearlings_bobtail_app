@@ -1,7 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import Button from '../button/button'
 import { DOTS_SECTION_ACCESS_KEY } from '../../helpers/constants'
+
+const passReduxStateToProps = ({
+    selectedDotsIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedDotsIndex
+})
 
 /*************
  * CONTAINER *
@@ -40,4 +48,4 @@ const DotsToggleView = ({
     </div>
 )
 
-export default DotsToggle
+export default connect(passReduxStateToProps)(DotsToggle)

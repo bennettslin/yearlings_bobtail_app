@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import TitleSection from './title-section'
 import TransitionPopup from '../popup/transition-popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+
+const passReduxStateToProps = ({
+    selectedTitleIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedTitleIndex
+})
 
 class TitleTransitionPopup extends Component {
 
@@ -49,4 +57,4 @@ TitleTransitionPopup.propTypes = {
     handlePopupFocus: PropTypes.func.isRequired
 }
 
-export default TitleTransitionPopup
+export default connect(passReduxStateToProps)(TitleTransitionPopup)

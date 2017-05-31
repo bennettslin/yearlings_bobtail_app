@@ -1,20 +1,17 @@
 import React from 'react'
-import Button from '../button/button'
+// import Button from '../button/button'
 import MenuField from './menu-field'
 import NavSection from '../nav/nav-section'
+import CarouselToggle from '../carousel/carousel-toggle'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
-import { CAROUSEL_TOGGLE_KEY } from '../../helpers/constants'
 
 /*************
  * CONTAINER *
  *************/
 
-const MainColumn = (props) => {
-
-    return (
-        <MainColumnView {...props} />
-    )
-}
+const MainColumn = (props) => (
+    <MainColumnView {...props} />
+)
 
 /****************
  * PRESENTATION *
@@ -34,11 +31,7 @@ const MainColumnView = ({
     showSingleBookColumn,
 
     accessedSongIndex,
-    selectedSongIndex,
-    selectedDotsIndex,
-    selectedNavIndex,
-    selectedBookColumnIndex,
-    selectedCarouselIndex,
+    shownBookColumnIndex,
 
     handleCarouselToggle,
     handleDotsSectionToggle,
@@ -67,8 +60,6 @@ const MainColumnView = ({
             titleToggleChild
         },
         dotsOverviewToggleSectionProps = {
-            selectedDotsIndex,
-
             handleDotsSectionToggle,
 
             overviewButtonChild,
@@ -76,9 +67,7 @@ const MainColumnView = ({
         },
         navSectionProps = {
             showSingleBookColumn,
-            selectedSongIndex,
-            selectedNavIndex,
-            selectedBookColumnIndex,
+            shownBookColumnIndex,
             accessedSongIndex,
 
             handleNavExpand,
@@ -125,15 +114,9 @@ const MainColumnView = ({
                 }
 
                 {!isHiddenNav &&
-                    <div className="carousel-toggle-button-block">
-                        <Button
-                            buttonName="carousel-toggle"
-                            iconText={selectedCarouselIndex}
-                            accessKey={CAROUSEL_TOGGLE_KEY}
-                            isLarge={true}
-                            handleClick={handleCarouselToggle}
-                        />
-                    </div>
+                    <CarouselToggle
+                        handleCarouselToggle={handleCarouselToggle}
+                    />
                 }
 
                 {!isHiddenNav &&
