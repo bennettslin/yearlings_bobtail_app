@@ -5,11 +5,13 @@ import NavSection from '../nav/nav-section'
 import CarouselToggle from '../carousel/carousel-toggle'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
 
-const passReduxStateToProps = ({
-    isHiddenNav
-}) => ({
 // Pass Redux state into component props.
-    isHiddenNav
+const passReduxStateToProps = ({
+    isHiddenNav,
+    isScoresTipsInMain
+}) => ({
+    isHiddenNav,
+    isScoresTipsInMain
 })
 
 /*************
@@ -33,7 +35,7 @@ const MainColumnView = ({
     isDesktop,
     titleInAudio,
     isHiddenNav,
-    scoresTipsOutsideMenu,
+    isScoresTipsInMain,
 
     showSingleBookColumn,
     shownBookColumnIndex,
@@ -58,7 +60,6 @@ const MainColumnView = ({
 }) => {
     const menuFieldProps = {
             titleInAudio,
-            scoresTipsOutsideMenu,
 
             audioSectionChild,
             scoresTipsSectionChild,
@@ -96,7 +97,7 @@ const MainColumnView = ({
                     {carouselChild}
                     <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
                         scoresTipsSectionChild={
-                            (isDesktop && scoresTipsOutsideMenu) ? scoresTipsSectionChild : null
+                            (isDesktop && isScoresTipsInMain) ? scoresTipsSectionChild : null
                         }
                     />
                     <div className="overview-popup-container">
@@ -108,7 +109,7 @@ const MainColumnView = ({
                     <div className="dots-subfield">
                         {dotsSectionChild}
                     </div>
-                    {(!isDesktop && scoresTipsOutsideMenu) ? scoresTipsSectionChild : null}
+                    {(!isDesktop && isScoresTipsInMain) ? scoresTipsSectionChild : null}
                 </div>
 
                 {isPhone &&

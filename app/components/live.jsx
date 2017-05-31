@@ -23,9 +23,9 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain
 })
 
 /*************
@@ -85,7 +85,7 @@ const LiveView = ({
     isHiddenNav,
     showSingleBookColumn,
     shrinkNavIcon,
-    scoresTipsOutsideMenu,
+    isScoresTipsInMain,
     titleInAudio,
     showOverlay,
     isOverviewShown,
@@ -269,7 +269,6 @@ const LiveView = ({
             isPhone,
             isDesktop,
             titleInAudio,
-            scoresTipsOutsideMenu,
 
             showSingleBookColumn,
 
@@ -351,7 +350,7 @@ const LiveView = ({
               'verse-above': isSelectedVerseAbove,
               'verse-below': isSelectedVerseBelow,
               'verse-bar-hidden': !isSelectedVerseAbove && !isSelectedVerseBelow,
-              'scores-tips-outside-menu': scoresTipsOutsideMenu },
+              'scores-tips-in-main': isScoresTipsInMain },
             selectedDotKeys
         )}>
             {/* Ideal for song and logue to not be in separate overview subfields. */}

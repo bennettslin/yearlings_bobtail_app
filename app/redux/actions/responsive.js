@@ -1,7 +1,8 @@
 // Actions for state based on window size.
 import { IS_CAROUSEL_EXPANDABLE,
          IS_HEIGHTLESS_LYRIC_COLUMN,
-         IS_HIDDEN_NAV } from '../../constants/state'
+         IS_HIDDEN_NAV,
+         IS_SCORES_TIPS_IN_MAIN } from '../../constants/state'
 
 export const setIsCarouselExpandable = (isCarouselExpandable = false) => (
     { type: IS_CAROUSEL_EXPANDABLE,
@@ -16,4 +17,9 @@ export const setIsHeightlessLyricColumn = (isHeightlessLyricColumn = false) => (
 export const setIsHiddenNav = (isHiddenNav = false) => (
     { type: IS_HIDDEN_NAV,
       payload: isHiddenNav }
+)
+
+export const setIsScoresTipsInMain = (isScoresTipsInMain = false) => (
+    { type: IS_SCORES_TIPS_IN_MAIN,
+      payload: isScoresTipsInMain }
 )

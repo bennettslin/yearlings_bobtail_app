@@ -1,5 +1,13 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+
+// Pass Redux state into component props.
+const passReduxStateToProps = ({
+    isScoresTipsInMain
+}) => ({
+    isScoresTipsInMain
+})
 
 /*************
  * CONTAINER *
@@ -11,7 +19,7 @@ const MenuField = (props) => (
 
 MenuField.propTypes = {
     titleInAudio: PropTypes.bool.isRequired,
-    scoresTipsOutsideMenu: PropTypes.bool.isRequired,
+    isScoresTipsInMain: PropTypes.bool.isRequired,
     audioSectionChild: PropTypes.element.isRequired,
     scoresTipsSectionChild: PropTypes.element.isRequired
 }
@@ -24,7 +32,7 @@ const MenuFieldView = ({
 
     // From props.
     titleInAudio,
-    scoresTipsOutsideMenu,
+    isScoresTipsInMain,
 
     audioSectionChild,
     scoresTipsSectionChild,
@@ -41,7 +49,7 @@ const MenuFieldView = ({
         <div className="menu-subfield audio-subfield">
             {audioSectionChild}
         </div>
-        {!scoresTipsOutsideMenu &&
+        {!isScoresTipsInMain &&
             <div className="menu-subfield scores-tips-menu-subfield">
                 {scoresTipsSectionChild}
             </div>
@@ -49,4 +57,4 @@ const MenuFieldView = ({
     </div>
 )
 
-export default MenuField
+export default connect(passReduxStateToProps)(MenuField)

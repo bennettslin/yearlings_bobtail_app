@@ -84,9 +84,9 @@ const _getShrinkNavIconForDeviceObject = (windowWidth, deviceObject) => {
         (doubleColumnStaticBreakpoint && windowWidth < doubleColumnStaticBreakpoint))
 }
 
-const _getScoresTipsOutsideMenuForDeviceObject = (windowWidth, deviceObject) => {
-    const { scoresTipsOutsideMenuBreakpoint } = deviceObject
-    return windowWidth < scoresTipsOutsideMenuBreakpoint
+const _getIsScoresTipsInMainForDeviceObject = (windowWidth, deviceObject) => {
+    const { isScoresTipsInMainBreakpoint } = deviceObject
+    return windowWidth < isScoresTipsInMainBreakpoint
 }
 
 
@@ -150,7 +150,7 @@ export const getIsHeightlessLyricColumn = ({
         windowWidth > windowHeight)
 }
 
-export const getScoresTipsOutsideMenu = ({ deviceIndex, windowWidth }) => {
+export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex]
 
     if (getIsPhone(deviceIndex)) {
@@ -160,7 +160,7 @@ export const getScoresTipsOutsideMenu = ({ deviceIndex, windowWidth }) => {
         return false
 
     } else {
-        return _getScoresTipsOutsideMenuForDeviceObject(windowWidth, deviceObject)
+        return _getIsScoresTipsInMainForDeviceObject(windowWidth, deviceObject)
     }
 }
 
