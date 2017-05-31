@@ -1,3 +1,9 @@
+import { BACKSTORY,
+         NARRATIVE,
+         OBSERVATION,
+         PUN,
+         REFERENCE,
+         SONGWRITING } from '../constants/dots'
 import { LEFT,
          OVERLAP,
          VERSES,
@@ -7,17 +13,8 @@ import { LEFT,
          POSTCHORUS,
          INTRO,
          SOLO,
-
-         SONGWRITING,
-         BACKSTORY,
-         NARRATIVE,
-         PUN,
-         REFERENCE,
-         OBSERVATION,
-
          FLASHBACK_TO_PORTAL_PREFIX,
-
-         DOT_STANZA_CONSTANT } from '../helpers/constants'
+         IS_DOT_STANZA } from '../constants/lyrics'
 
 module.exports = {
     scenes: [
@@ -159,7 +156,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `In the past, the developmentally disabled were often thought to be`,
@@ -246,7 +243,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `The chord progression here zigzags between a minor third down, followed by a whole step up. In mimicry, the melodicas play a sped-up and warped version of this descending pattern at the cadence of each line.`
@@ -414,7 +411,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `In some legends, trolls inadvertently reveal their true identity by using some tool in a wrong manner, so I figured they would also have a peculiar way of playing instruments. As such, I muted the lead guitar and mandolin while throwing in a slew of legato slides.`,
                         dotKeys: {
@@ -534,7 +531,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`,
                         dotKeys: {
@@ -908,7 +905,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `I played the electric guitar riff here with both a slide and the whammy bar, which is another nonsensical thing that I could picture trolls doing.`

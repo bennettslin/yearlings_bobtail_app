@@ -1,7 +1,7 @@
 // Parse album data for presentation.
-import { LYRIC_COLUMN_KEYS } from './constants'
 import { PORTAL,
          REFERENCE } from '../constants/dots'
+import { LYRIC_COLUMN_KEYS } from '../constants/lyrics'
 import { getAnnotationObject,
          getVerseObject,
          getIsLogue,

@@ -2,21 +2,20 @@
  * TODO: References, decide on where to put quotations marks. Balance between
  * not being clear and being too obvious.
  */
-
- import { OVERLAP,
-          VERSES,
-          PRECHORUS,
-          CHORUS,
-          BRIDGE,
-          RESPONSE,
-          BACKSTORY,
-          REFRAIN,
-          NARRATIVE,
-          OBSERVATION,
-          PUN,
-          REFERENCE,
-          SONGWRITING,
-          DOT_STANZA_CONSTANT } from '../helpers/constants'
+import { BACKSTORY,
+         NARRATIVE,
+         OBSERVATION,
+         PUN,
+         REFERENCE,
+         SONGWRITING } from '../constants/dots'
+import { OVERLAP,
+         VERSES,
+         PRECHORUS,
+         CHORUS,
+         BRIDGE,
+         RESPONSE,
+         REFRAIN,
+         IS_DOT_STANZA } from '../constants/lyrics'
 
 module.exports = {
     scenes: [
@@ -339,7 +338,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `I never got past the first fifty pages of`,
@@ -637,7 +636,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `The Police's`,
@@ -994,7 +993,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `Sita introduced me to`,
@@ -1327,7 +1326,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `On my solo Robitussin trips, I would mentally search for metaphysical truths while playing video games on my old`,
@@ -1747,7 +1746,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `For a song about recreational drug use, I naturally sought counsel from the Beatles, whose`,

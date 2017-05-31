@@ -1,6 +1,6 @@
 // Helpers for parsing text objects.
 
-import { LYRIC_TEXT_KEYS } from './constants'
+import { LYRIC_TEXT_KEYS } from '../constants/lyrics'
 
 export const getFormattedTime = (time) => {
     if (time === -1) {

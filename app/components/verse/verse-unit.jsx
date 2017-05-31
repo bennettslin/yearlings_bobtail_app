@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import classnames from 'classnames'
 import VerseLine from './verse-line'
 import VerseAudioButton from './verse-audio-button'
-import { DOUBLESPEAKER_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../helpers/constants'
+import { DOUBLESPEAKER_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const passReduxStateToProps = ({

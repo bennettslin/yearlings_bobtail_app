@@ -1,15 +1,14 @@
+import { BACKSTORY,
+         NARRATIVE,
+         OBSERVATION,
+         PUN,
+         SONGWRITING } from '../constants/dots'
 import { VERSES,
          CHORUS,
          INTRO,
          REFRAIN,
          OUTRO,
-
-         SONGWRITING,
-         BACKSTORY,
-         NARRATIVE,
-         OBSERVATION,
-         PUN,
-         DOT_STANZA_CONSTANT } from '../helpers/constants'
+         IS_DOT_STANZA } from '../constants/lyrics'
 
 module.exports = {
     scenes: [
@@ -137,7 +136,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `This song is a carryover from back when the band was still just The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
                         dotKeys: {
@@ -337,7 +336,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this fashion would be.`
@@ -383,7 +382,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `I learned to play banjo by reading`,
@@ -456,7 +455,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `Obviously, Jacob was a far better drummer than I am. To match his tempo, I had to record at a lower tape speed.`,
                         dotKeys: {

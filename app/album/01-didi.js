@@ -1,3 +1,9 @@
+import { AFTERWORD,
+         BACKSTORY,
+         NARRATIVE,
+         OBSERVATION,
+         REFERENCE,
+         SONGWRITING } from '../constants/dots'
 import { VERSES,
          PRECHORUS,
          CHORUS,
@@ -5,17 +11,8 @@ import { VERSES,
          RESPONSE,
          INTRO,
          REFRAIN,
-
-         NARRATIVE,
-         BACKSTORY,
-         REFERENCE,
-         SONGWRITING,
-         AFTERWORD,
-         OBSERVATION,
-
          FLASHBACK_TO_PORTAL_PREFIX,
-
-         DOT_STANZA_CONSTANT } from '../helpers/constants'
+         IS_DOT_STANZA } from '../constants/lyrics'
 
 module.exports = {
     scenes: [
@@ -116,7 +113,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `In this song sung from my sister's perspective when we were children, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
@@ -186,7 +183,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             {
@@ -259,7 +256,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `The nonstop modulations between the`,
@@ -445,7 +442,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `I dampened the lead guitar strings by wrapping tissue around them near the bridge.`,
                         dotKeys: {
@@ -509,7 +506,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `The song ends in G\u2011flat major, the remaining major triad belonging to the`,
@@ -532,7 +529,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `As I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,

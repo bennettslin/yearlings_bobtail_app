@@ -1,19 +1,17 @@
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         BRIDGE,
-
-         INTRO,
-         OUTRO,
-
-         BACKSTORY,
-         SONGWRITING,
+import { BACKSTORY,
          NARRATIVE,
          OBSERVATION,
          PUN,
          REFERENCE,
+         SONGWRITING } from '../constants/dots'
+import { VERSES,
+         PRECHORUS,
+         CHORUS,
+         BRIDGE,
+         INTRO,
+         OUTRO,
          FORESHADOW_OF_PORTAL_PREFIX,
-         DOT_STANZA_CONSTANT } from '../helpers/constants'
+         IS_DOT_STANZA } from '../constants/lyrics'
 
 module.exports = {
     scenes: [
@@ -160,7 +158,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
                         dotKeys: {
@@ -274,7 +272,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `So as not to wake his neighbours, Owen would sing in muffled tones and then double track his vocals. I didn't have a cassette player handy to play his demos, so I took notes from`,
@@ -374,7 +372,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `When I asked Owen to recommend some great lyricists, he named just one: Nas. I hadn't given serious thought to hip hop at the time, believing it too far removed from my own songwriting approach to offer much useful wisdom. I've since corrected this oversight, but even as my lone point of reference back then,`,
@@ -555,7 +553,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `I recorded the cymbals here at an extremely low tape speed, which turned them into pitched percussion upon normal playback.`,
                         dotKeys: {

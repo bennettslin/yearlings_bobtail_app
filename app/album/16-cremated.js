@@ -1,15 +1,14 @@
+import { BACKSTORY,
+         NARRATIVE,
+         OBSERVATION,
+         PUN,
+         REFERENCE,
+         SONGWRITING } from '../constants/dots'
 import { VERSES,
          BRIDGE,
          INTRO,
          REFRAIN,
-
-         SONGWRITING,
-         BACKSTORY,
-         NARRATIVE,
-         PUN,
-         OBSERVATION,
-         REFERENCE,
-         DOT_STANZA_CONSTANT } from '../helpers/constants'
+         IS_DOT_STANZA } from '../constants/lyrics'
 
 module.exports = {
     scenes: [
@@ -106,7 +105,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
@@ -136,7 +135,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `A`,
@@ -351,7 +350,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realise that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
                         dotKeys: {
@@ -836,7 +835,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         // NOTE: Change in recording? Connect to Uncanny Valley?
                         description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,

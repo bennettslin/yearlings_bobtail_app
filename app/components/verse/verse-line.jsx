@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 import TextBlock from '../text/text-block'
-import { TITLE, CENTRE } from '../../helpers/constants'
+import { TITLE, CENTRE } from '../../constants/lyrics'
 
 class VerseLine extends Component {
 

@@ -1,20 +1,18 @@
+import { AFTERWORD,
+         BACKSTORY,
+         OBSERVATION,
+         PUN,
+         REFERENCE,
+         SONGWRITING } from '../constants/dots'
 import { VERSES,
          PRECHORUS,
          CHORUS,
          POSTCHORUS,
          BRIDGE,
          RESPONSE,
-
          INTRO,
          REFRAIN,
-
-         SONGWRITING,
-         OBSERVATION,
-         BACKSTORY,
-         REFERENCE,
-         PUN,
-         AFTERWORD,
-         DOT_STANZA_CONSTANT } from '../helpers/constants'
+         IS_DOT_STANZA } from '../constants/lyrics'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
@@ -160,7 +158,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `I needed a kid's voice to recite this quote, but no one I knew was popping them out just yet. So I had my sister do it.`,
                         dotKeys: {
@@ -181,7 +179,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `In keeping with the Russian theme of space dogs, I tried to evoke the sound of the`,
@@ -709,7 +707,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `The sound of space transmissions in the background was made by bending the whammy bar of an electric guitar while banging it on the carpet floor. It took almost fifty tries, and I had to retune each time.`
@@ -787,7 +785,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `I learned about Tuvan throat singing after a woman I dated took me to see a documentary called`,
@@ -1192,7 +1190,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `Taking a cue from David Bowie's`,
@@ -1252,7 +1250,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `My brother currently lives in his own place and receives round-the-clock care through supported living services. He's doing well.`,
                         dotKeys: {

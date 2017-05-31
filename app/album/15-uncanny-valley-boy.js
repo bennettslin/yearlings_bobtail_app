@@ -1,22 +1,20 @@
+import { BACKSTORY,
+         NARRATIVE,
+         OBSERVATION,
+         PUN,
+         REFERENCE,
+         SONGWRITING } from '../constants/dots'
 import { VERSES,
          PRECHORUS,
          CHORUS,
          BRIDGE,
          CODA,
-
          INTRO,
          OUTRO,
-
          RHYME,
          RESPONSE,
          BACKING,
-         SONGWRITING,
-         NARRATIVE,
-         OBSERVATION,
-         BACKSTORY,
-         PUN,
-         REFERENCE,
-         DOT_STANZA_CONSTANT } from '../helpers/constants'
+         IS_DOT_STANZA } from '../constants/lyrics'
 
 module.exports = {
     scenes: [
@@ -194,7 +192,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `I originally began writing this song after waking from a horrid nightmare, but abandoned it after all my attempts to describe the nightmare only elicited laughter. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
                         dotKeys: {
@@ -520,7 +518,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `As silly as the original lyrics for the chorus were, I liked them enough to keep them, so I just made the former lead melody the new counter melody. The former counter melody, which was written for guitar, then became the new lead melody.`,
                         dotKeys: {
@@ -693,7 +691,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `I wanted to recreate the tremolo effect used by guitarist Jonny Greenwood on the song "Airbag" from Radiohead's`,
@@ -1325,7 +1323,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `To record the gradual shift from "Rama" to "Mara," I made a click track whose tempo sums up to one fewer eighth note after seven measures. I then overlaid multiple tracks in which I quietly took a breath at different points.`,
                         dotKeys: {

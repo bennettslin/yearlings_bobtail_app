@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import LyricDotStanza from './lyric-dot-stanza'
 import LyricStanza from './lyric-stanza'
-import { TITLE, LEFT, RIGHT } from '../../helpers/constants'
+import { TITLE, LEFT, RIGHT } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************

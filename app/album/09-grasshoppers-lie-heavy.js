@@ -1,19 +1,17 @@
+import { BACKSTORY,
+         NARRATIVE,
+         OBSERVATION,
+         PUN,
+         REFERENCE,
+         SONGWRITING } from '../constants/dots'
 import { REFRAIN,
          VERSES,
          PRECHORUS,
          CHORUS,
          BRIDGE,
          CODA,
-
          OUTRO,
-
-         BACKSTORY,
-         NARRATIVE,
-         PUN,
-         OBSERVATION,
-         SONGWRITING,
-         REFERENCE,
-         DOT_STANZA_CONSTANT } from '../helpers/constants'
+         IS_DOT_STANZA } from '../constants/lyrics'
 
 module.exports = {
     /**
@@ -232,7 +230,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `Just as`,
@@ -313,7 +311,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `I wanted the music to sound sentimental with a few rough edges, so channelling`,
@@ -982,7 +980,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `The highlight of Nirvana's`,
@@ -1270,7 +1268,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `The ascending chord progression here symbolises falling in love, and eventually, sexual climax. Simple enough.`,
                         dotKeys: {
@@ -1400,7 +1398,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `The French expression`,

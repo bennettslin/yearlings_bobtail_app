@@ -1,6 +1,6 @@
 // For dev purposes. Calculate words in lyrics and annotations.
 
-import { STAT_TEXT_KEYS } from './constants'
+import { STAT_TEXT_KEYS } from '../constants/lyrics'
 
 export default {
 

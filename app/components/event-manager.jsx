@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
 import AccessManager from './access-manager'
-import { REFERENCE } from '../helpers/constants'
+import { REFERENCE } from '../constants/dots'
 import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { getAnnotationObject } from '../helpers/data-helper'

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import AnnotationUnit from './annotation-unit'
 import DotAnchorBlock from '../dot/dot-anchor-block'
-import { DOT_STANZA_CONSTANT } from '../../helpers/constants'
+import { IS_DOT_STANZA } from '../../constants/lyrics'
 
 /*************
  * CONTAINER *
@@ -47,7 +47,7 @@ const AnnotationSectionView = ({
           'accessed-annotation': isAccessedAnnotation }
     )}>
         <div className="annotation-title-block">
-            {title === DOT_STANZA_CONSTANT ? (
+            {title === IS_DOT_STANZA ? (
                 <div className="annotation-title">
                     <DotAnchorBlock
                         isSmall={true}

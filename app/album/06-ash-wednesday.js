@@ -1,15 +1,14 @@
-import { VERSES,
-         PRECHORUS,
-         CHORUS,
-         BRIDGE,
-
-         BACKSTORY,
+import { BACKSTORY,
          NARRATIVE,
          OBSERVATION,
          PUN,
          REFERENCE,
-         SONGWRITING,
-         DOT_STANZA_CONSTANT } from '../helpers/constants'
+         SONGWRITING } from '../constants/dots'
+import { VERSES,
+         PRECHORUS,
+         CHORUS,
+         BRIDGE,
+         IS_DOT_STANZA } from '../constants/lyrics'
 
 module.exports = {
     scenes: [
@@ -204,7 +203,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `For a song about two people who couldn't be any more different, I juxtaposed`,
@@ -290,7 +289,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `The shrieking whistles, which remind me of`,
@@ -425,7 +424,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the`,
@@ -718,7 +717,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps between the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
                         dotKeys: {
@@ -785,7 +784,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
@@ -848,7 +847,7 @@ module.exports = {
             {
                 unitMap: true,
                 dotStanza: {
-                    anchor: DOT_STANZA_CONSTANT,
+                    anchor: IS_DOT_STANZA,
                     annotation: {
                         description: [
                             `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza corresponded with their`,

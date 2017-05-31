@@ -2,8 +2,8 @@
 import { getTwoToThePowerOfN, convertBitNumberToTrueFalseKeys, convertTrueFalseKeysToBitNumber } from './general-helper'
 import AlbumData from '../album-data'
 
-import { LYRIC_COLUMN_KEYS } from './constants'
 import { ALL_DOT_KEYS } from '../constants/dots'
+import { LYRIC_COLUMN_KEYS } from '../constants/lyrics'
 import { AUDIO_OPTIONS,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'

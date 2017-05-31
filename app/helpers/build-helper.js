@@ -1,11 +1,10 @@
 // Parse album data for build.
-
+import { REFERENCE } from '../constants/dots'
 import { ALBUM_BUILD_KEYS,
          LYRIC,
          LEFT,
          RIGHT,
-         CENTRE,
-         REFERENCE } from './constants'
+         CENTRE } from '../constants/lyrics'
 import { getSongObject, getSongTitle, getVerseObject } from './data-helper'
 import { getFormattedAnnotationTitle } from './format-helper'
 
