@@ -448,7 +448,8 @@ class App extends Component {
 
     selectLyricColumn({
         selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2,
-        selectedSongIndex = this.props.selectedSongIndex
+        selectedSongIndex = this.props.selectedSongIndex,
+        annotationIndex = this.props.selectedAnnotationIndex
     }) {
         const { props,
                 state } = this
@@ -459,13 +460,13 @@ class App extends Component {
          * from portal.
          */
         if (!(getShowOneOfTwoLyricColumns(selectedSongIndex, state.deviceIndex)) || getIsLogue(selectedSongIndex)) {
-            console.error(`cannot select column`);
             return false
         }
 
         // Deselect selected annotation if not in new selected column.
         this._deselectAnnotationIfSelected({
             selectedSongIndex,
+            annotationIndex,
             selectedLyricColumnIndex
         })
 

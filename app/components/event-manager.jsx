@@ -224,7 +224,8 @@ class EventManager extends Component {
             if (!isNaN(selectedLyricColumnIndex)) {
                 this.props.selectLyricColumn({
                     selectedLyricColumnIndex,
-                    selectedSongIndex
+                    selectedSongIndex,
+                    annotationIndex: selectedAnnotationIndex
                 })
             }
         }
