@@ -91,7 +91,6 @@ class App extends Component {
 
             lyricSectionTop: 0,
 
-
             selectedVerseElement: null,
             sliderVerseIndex: -1,
             sliderVerseElement: null,
@@ -113,30 +112,32 @@ class App extends Component {
     }
 
     componentDidMount() {
-        const { props } = this
-            // passedState = {
-            //     deviceIndex: this.state.deviceIndex
-            // }
+        const { deviceIndex,
+                selectedAnnotationIndex,
+                selectedDotKeys,
+                selectedLyricColumnIndex,
+                selectedSongIndex,
+                selectedVerseIndex } = this.props
 
         // This state can only be set after component mounted.
         this.setState({
             appMounted: true,
 
             // Based on either selected annotation or selected verse.
-            accessedAnnotationIndex: props.selectedAnnotationIndex ?
+            accessedAnnotationIndex: selectedAnnotationIndex ?
                 getAnnotationIndexForDirection({
-                    deviceIndex: props.deviceIndex,
-                    currentAnnotationIndex: props.selectedAnnotationIndex,
-                    selectedSongIndex: props.selectedSongIndex,
-                    selectedDotKeys: props.selectedDotKeys,
-                    lyricColumnIndex: props.selectedLyricColumnIndex
+                    deviceIndex,
+                    currentAnnotationIndex: selectedAnnotationIndex,
+                    selectedSongIndex,
+                    selectedDotKeys,
+                    lyricColumnIndex: selectedLyricColumnIndex
                 }) :
                 getAnnotationIndexForVerseIndex({
-                    deviceIndex: props.deviceIndex,
-                    verseIndex: props.selectedVerseIndex,
-                    selectedSongIndex: props.selectedSongIndex,
-                    selectedDotKeys: props.selectedDotKeys,
-                    lyricColumnIndex: props.selectedLyricColumnIndex
+                    deviceIndex,
+                    verseIndex: selectedVerseIndex,
+                    selectedSongIndex,
+                    selectedDotKeys,
+                    lyricColumnIndex: selectedLyricColumnIndex
                 }),
         })
     }

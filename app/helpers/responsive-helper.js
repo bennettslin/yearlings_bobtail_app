@@ -213,7 +213,7 @@ export const getIsMobileWiki = ({ deviceIndex, windowWidth }) => {
     }
 }
 
-export const getCarouselTopAlign = ({ deviceIndex, isLyricExpanded }) => {
+export const getCarouselTopAlign = (deviceIndex, isLyricExpanded) => {
 
     // If in desktop or lyric column is expanded, set closer to top.
     if (getIsDesktop(deviceIndex) || isLyricExpanded) {
@@ -227,7 +227,7 @@ export const getCarouselTopAlign = ({ deviceIndex, isLyricExpanded }) => {
     }
 }
 
-export const getCarouselLeftAlign = ({ deviceIndex, windowWidth }, index) => {
+export const getCarouselLeftAlign = (deviceIndex, windowWidth, index) => {
 
     // If mobile, then set halfway, which is the default.
     if (!getIsDesktop(deviceIndex)) {

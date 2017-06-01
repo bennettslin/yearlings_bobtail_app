@@ -16,7 +16,7 @@ const ANNOTATION_SCROLL = 'annotation',
     VERSE_SCROLL = 'verse'
 
 // Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, isVerseBarAbove, isVerseBarBelow }) => ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, isVerseBarAbove, isVerseBarBelow })
+const passReduxStateToProps = ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth }) => ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth })
 
 class EventManager extends Component {
 
@@ -776,8 +776,8 @@ class EventManager extends Component {
             console.warn(`Scrolling ${selector} into view.`);
 
             const align = isCarousel ?
-                getCarouselLeftAlign(this.props.domState, index) :
-                getCarouselTopAlign(this.props.domState)
+                getCarouselLeftAlign(this.props.deviceIndex, this.props.windowWidth, index) :
+                getCarouselTopAlign(this.props.deviceIndex, this.props.isLyricExpanded)
 
             scrollIntoView(element, {
                 time,
