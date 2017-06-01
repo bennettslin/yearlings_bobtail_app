@@ -135,8 +135,8 @@ export const getIsHiddenNav = ({ deviceIndex, windowHeight }) => {
 
 export const getIsHeightlessLyricColumn = ({
     deviceIndex,
-    windowWidth,
-    windowHeight
+    windowHeight,
+    windowWidth
 }) => {
     return getIsLyricExpandable(deviceIndex) &&
 

@@ -11,7 +11,7 @@ import { getSongTitle } from '../helpers/data-helper'
 import { getIsDesktop, getIsPhone } from '../helpers/responsive-helper'
 
 // Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded }) => ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded })
+const passReduxStateToProps = ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, windowHeight, windowWidth }) => ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, windowHeight, windowWidth })
 
 class DomManager extends Component {
     render() {
@@ -19,8 +19,8 @@ class DomManager extends Component {
         const { props } = this,
             { isLyricExpanded,
               deviceIndex,
-              windowWidth,
               windowHeight,
+              windowWidth,
 
               selectedAdminIndex,
               selectedAnnotationIndex,

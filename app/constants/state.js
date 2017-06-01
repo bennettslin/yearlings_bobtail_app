@@ -39,5 +39,9 @@ module.exports = {
     // Session.
     IS_LYRIC_EXPANDED: 'isLyricExpanded',
     IS_VERSE_BAR_ABOVE: 'isVerseBarAbove',
-    IS_VERSE_BAR_BELOW: 'isVerseBarBelow'
+    IS_VERSE_BAR_BELOW: 'isVerseBarBelow',
+
+    DEVICE_INDEX: 'deviceIndex',
+    WINDOW_HEIGHT: 'windowHeight',
+    WINDOW_WIDTH: 'windowWidth'
 }
