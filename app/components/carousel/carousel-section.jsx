@@ -8,11 +8,13 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const passReduxStateToProps = ({
     selectedSongIndex,
-    selectedAnnotationIndex
+    selectedAnnotationIndex,
+    accessedAnnotationIndex
 }) => ({
 // Pass Redux state into component props.
     selectedSongIndex,
-    selectedAnnotationIndex
+    selectedAnnotationIndex,
+    accessedAnnotationIndex
 })
 
 /*************

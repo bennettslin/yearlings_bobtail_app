@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex } from '../redux/actions/access'
+import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex } from '../redux/actions/access'
 import { setDeviceIndex, setWindowHeight, setWindowWidth } from '../redux/actions/device'
 import { setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
 import { setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setShownBookColumnIndex } from '../redux/actions/session'
@@ -27,14 +27,14 @@ import LogHelper from '../helpers/log-helper'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth
 }) => ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth
 })
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth }, dispatch)
+    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth }, dispatch)
 )
 
 /*************
@@ -61,18 +61,10 @@ class App extends Component {
                 initialAnnotationAnchorIndex: 1
             })
         )
-        props.accessDotIndex(0)
         props.accessNavSongIndex(selectedSongIndex)
 
         // Set initial session state.
-
         // Prevent verse bar from showing upon load.
-        props.setAppMounted(false)
-        props.setCarouselAnnotationIndex(0)
-        props.setInteractivatedVerseIndex(-1)
-        props.setIsLyricExpanded(false)
-        props.setIsVerseBarAbove(false)
-        props.setIsVerseBarBelow(false)
         props.setShownBookColumnIndex(getBookColumnIndex(selectedSongIndex))
 
         // Bind this to event handlers.
@@ -96,6 +88,7 @@ class App extends Component {
     }
 
     componentWillMount() {
+        // For dev purposes.
         this._assignLogFunctions()
 
         // This method sets initial responsive state.
@@ -115,10 +108,9 @@ class App extends Component {
 
         this.props.setAppMounted(true)
 
-        // This state can only be set after component mounted.
-        this.setState({
+        this.props.accessAnnotationIndex(
             // Based on either selected annotation or selected verse.
-            accessedAnnotationIndex: selectedAnnotationIndex ?
+            selectedAnnotationIndex ?
                 getAnnotationIndexForDirection({
                     deviceIndex,
                     currentAnnotationIndex: selectedAnnotationIndex,
@@ -132,8 +124,8 @@ class App extends Component {
                     selectedSongIndex,
                     selectedDotKeys,
                     lyricColumnIndex: selectedLyricColumnIndex
-                }),
-        })
+                })
+        )
     }
 
     /*******************
@@ -189,11 +181,7 @@ class App extends Component {
     }
 
     accessAnnotation(accessedAnnotationIndex) {
-
-        this.setState({
-            accessedAnnotationIndex
-        })
-
+        this.props.accessAnnotationIndex(accessedAnnotationIndex)
         return true
     }
 
@@ -247,9 +235,7 @@ class App extends Component {
         if (selectedAnnotationIndex) {
             const { selectedDotKeys } = props
 
-            this.setState({
-                accessedAnnotationIndex: selectedAnnotationIndex
-            })
+            this.props.accessAnnotationIndex(selectedAnnotationIndex)
 
             // App does not know new index, so pass it directly.
             this.props.accessAnnotationAnchorIndex(
@@ -386,17 +372,15 @@ class App extends Component {
          * might have changed.
          */
         if (!selectedDotsIndex) {
-            const accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-                deviceIndex: this.props.deviceIndex,
-                verseIndex: this.props.selectedVerseIndex,
-                selectedSongIndex: this.props.selectedSongIndex,
-                selectedDotKeys: this.props.selectedDotKeys,
-                lyricColumnIndex: this.props.selectedLyricColumnIndex
-            })
-
-            this.setState({
-                accessedAnnotationIndex
-            })
+            this.props.accessAnnotationIndex(
+                getAnnotationIndexForVerseIndex({
+                    deviceIndex: this.props.deviceIndex,
+                    verseIndex: this.props.selectedVerseIndex,
+                    selectedSongIndex: this.props.selectedSongIndex,
+                    selectedDotKeys: this.props.selectedDotKeys,
+                    lyricColumnIndex: this.props.selectedLyricColumnIndex
+                })
+            )
         }
 
         this.props.selectDotsIndex(selectedDotsIndex)
@@ -461,17 +445,15 @@ class App extends Component {
         props.selectLyricColumnIndex(selectedLyricColumnIndex)
 
         // Switching lyric column might change accessed annotation index.
-        const accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-            deviceIndex: props.deviceIndex,
-            verseIndex: props.selectedVerseIndex,
-            selectedSongIndex,
-            selectedDotKeys: props.selectedDotKeys,
-            lyricColumnIndex: selectedLyricColumnIndex
-        })
-
-        this.setState({
-            accessedAnnotationIndex
-        })
+        this.props.accessAnnotationIndex(
+            getAnnotationIndexForVerseIndex({
+                deviceIndex: props.deviceIndex,
+                verseIndex: props.selectedVerseIndex,
+                selectedSongIndex,
+                selectedDotKeys: props.selectedDotKeys,
+                lyricColumnIndex: selectedLyricColumnIndex
+            })
+        )
         return true
     }
 
@@ -607,15 +589,17 @@ class App extends Component {
         /**
          * Get new accessed annotation index by starting from first and going
          * forward. It should always be the title annotation unless deselected
-         * by dits.
+         * by dots.
          */
-        newState.accessedAnnotationIndex = getAnnotationIndexForDirection({
-            deviceIndex: this.props.deviceIndex,
-            currentAnnotationIndex: 1,
-            selectedSongIndex,
-            selectedDotKeys: props.selectedDotKeys,
-            lyricColumnIndex: props.selectedLyricColumnIndex
-        })
+        this.props.accessAnnotationIndex(
+            getAnnotationIndexForDirection({
+                deviceIndex: this.props.deviceIndex,
+                currentAnnotationIndex: 1,
+                selectedSongIndex,
+                selectedDotKeys: props.selectedDotKeys,
+                lyricColumnIndex: props.selectedLyricColumnIndex
+            })
+        )
 
         this.setState(newState)
         this.accessNavSong(selectedSongIndex)
@@ -813,7 +797,7 @@ class App extends Component {
 
             // If accessed on, start from accessed annotation index.
             if (selectedAccessIndex) {
-                const { accessedAnnotationIndex } = this.state
+                const { accessedAnnotationIndex } = this.props
 
                 interactivatedVerseIndex = getVerseIndexForAccessedAnnotationIndex(this.props.selectedSongIndex, accessedAnnotationIndex)
 

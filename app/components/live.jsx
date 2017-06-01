@@ -68,7 +68,6 @@ const LiveView = ({
     selectedLyricColumnIndex,
     selectedNavIndex,
     selectedWikiUrl,
-    accessedAnnotationIndex,
 
     interactivatedVerseIndex,
 
@@ -193,8 +192,6 @@ const LiveView = ({
         ),
 
         carouselSectionProps = {
-            accessedAnnotationIndex,
-
             handleLyricAnnotationSelect,
             handleAnnotationPrevious,
             handleAnnotationNext,
@@ -206,7 +203,6 @@ const LiveView = ({
         ),
 
         dotsSectionProps = {
-            // accessedDotIndex,
             handlePopupContainerClick,
             handleDotToggle,
             stopPropagation
@@ -222,7 +218,6 @@ const LiveView = ({
             sliderVerseIndex,
             isLogue,
             isPlaying,
-            accessedAnnotationIndex,
 
             lyricSectionRef,
 

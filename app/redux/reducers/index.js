@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
+import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer } from './device'
 import { IsCarouselExpandableReducer, IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsLyricExpandableReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer } from './session'
@@ -24,6 +24,7 @@ const rootReducer = combineReducers({
     selectedVerseIndex: VerseIndexReducer,
     selectedWikiIndex: WikiIndexReducer,
 
+    accessedAnnotationIndex: AccessedAnnotationIndexReducer,
     accessedAnnotationAnchorIndex: AccessedAnnotationAnchorIndexReducer,
     accessedDotIndex: AccessedDotIndexReducer,
     accessedNavSongIndex: AccessedNavSongIndexReducer,

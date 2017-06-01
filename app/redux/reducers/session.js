@@ -7,7 +7,7 @@ import { APP_MOUNTED,
          IS_VERSE_BAR_BELOW,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
-export const AppMountedReducer = (state = 0, action) => {
+export const AppMountedReducer = (state = false, action) => {
     switch (action.type) {
         case APP_MOUNTED:
             return action.payload
@@ -25,7 +25,7 @@ export const CarouselAnnotationIndexReducer = (state = 0, action) => {
     }
 }
 
-export const InteractivatedVerseIndexReducer = (state = 0, action) => {
+export const InteractivatedVerseIndexReducer = (state = -1, action) => {
     switch (action.type) {
         case INTERACTIVATED_VERSE_INDEX:
             return action.payload

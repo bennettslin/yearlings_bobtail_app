@@ -17,7 +17,7 @@ export const setCarouselAnnotationIndex = (carouselAnnotationIndex = 0) => (
       payload: carouselAnnotationIndex }
 )
 
-export const setInteractivatedVerseIndex = (interactivatedVerseIndex = 0) => (
+export const setInteractivatedVerseIndex = (interactivatedVerseIndex = -1) => (
     { type: INTERACTIVATED_VERSE_INDEX,
       payload: interactivatedVerseIndex }
 )

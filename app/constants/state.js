@@ -21,6 +21,7 @@ module.exports = {
     SELECTED_WIKI_INDEX: 'selectedWikiIndex',
 
     // Access.
+    ACCESSED_ANNOTATION_INDEX: 'accessedAnnotationIndex',
     ACCESSED_ANNOTATION_ANCHOR_INDEX: 'accessedAnnotationAnchorIndex',
     ACCESSED_DOT_INDEX: 'accessedDotIndex',
     ACCESSED_NAV_SONG_INDEX: 'accessedNavSongIndex',

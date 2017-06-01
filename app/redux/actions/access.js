@@ -1,7 +1,13 @@
 // Actions for accessed state.
-import { ACCESSED_ANNOTATION_ANCHOR_INDEX,
+import { ACCESSED_ANNOTATION_INDEX,
+         ACCESSED_ANNOTATION_ANCHOR_INDEX,
          ACCESSED_DOT_INDEX,
          ACCESSED_NAV_SONG_INDEX } from '../../constants/state'
+
+export const accessAnnotationIndex = (accessedAnnotationIndex = 0) => (
+    { type: ACCESSED_ANNOTATION_INDEX,
+      payload: accessedAnnotationIndex }
+)
 
 export const accessAnnotationAnchorIndex = (accessedAnnotationAnchorIndex = 0) => (
     { type: ACCESSED_ANNOTATION_ANCHOR_INDEX,
