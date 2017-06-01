@@ -69,10 +69,13 @@ class DotsSection extends Component {
     }
 
     render() {
-        const { hasInteractivatedDotText } = this.state
+        const { selectedDotKeys,
+                ...other } = this.props,
+            { hasInteractivatedDotText } = this.state
 
         return (
-            <DotsSectionView {...this.props}
+            <DotsSectionView {...other}
+                dotKeys={selectedDotKeys}
                 handleContainerClick={this._onContainerClick}
                 hasInteractivatedDotText={hasInteractivatedDotText}
                 setHasInteractivatedDotText={this._setHasInteractivatedDotText}
@@ -93,8 +96,6 @@ DotsSection.propTypes = {
 
 const DotsSectionView = ({
 
-    hasInteractivatedDotText,
-    setHasInteractivatedDotText,
     handleContainerClick,
 
 ...other }) => (
@@ -105,15 +106,11 @@ const DotsSectionView = ({
     >
         <DotBlock {...other}
             inDotsSection={true}
-            hasInteractivatedDotText={hasInteractivatedDotText}
-            setHasInteractivatedDotText={setHasInteractivatedDotText}
         />
     </div>
 )
 
 DotsSectionView.propTypes = {
-    hasInteractivatedDotText: PropTypes.number.isRequired,
-    setHasInteractivatedDotText: PropTypes.func.isRequired,
     handleContainerClick: PropTypes.func.isRequired
 }
 

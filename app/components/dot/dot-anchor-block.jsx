@@ -3,31 +3,11 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotButton from './dot-button'
 
-/*************
- * CONTAINER *
- *************/
+const DotAnchorBlock = ({
 
-const DotAnchorBlock = (props) => (
-    <DotAnchorBlockView {...props} />
-)
-
-DotAnchorBlock.propTypes = {
-    dotKeys: PropTypes.object.isRequired,
-    isSelected: PropTypes.bool,
-    accessHighlighted: PropTypes.bool,
-    handleDotButtonClick: PropTypes.func
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const DotAnchorBlockView = ({
-
-    // From props.
     dotKeys,
-    isSelected,
     accessHighlighted,
+    isSelected,
     handleDotButtonClick,
 
 ...other }) => (
@@ -47,5 +27,12 @@ const DotAnchorBlockView = ({
         />
     </div>
 )
+
+DotAnchorBlock.propTypes = {
+    dotKeys: PropTypes.object.isRequired,
+    accessHighlighted: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    handleDotButtonClick: PropTypes.func
+}
 
 export default DotAnchorBlock

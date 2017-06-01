@@ -1,3 +1,5 @@
+// Button in dots section to select and deselect dot.
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -5,10 +7,10 @@ import classnames from 'classnames'
 import Button from '../button/button'
 import { DOT_DESCRIPTIONS } from '../../constants/dots'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
     selectedDotsIndex
 }) => ({
-// Pass Redux state into component props.
     selectedDotsIndex
 })
 
@@ -16,36 +18,12 @@ const passReduxStateToProps = ({
  * CONTAINER *
  *************/
 
-const DotToggleButton = ({
-
-    dotIndex,
-    handleDotToggle,
-
-...other }) => {
-
-    const handleClick = e => handleDotToggle(e, dotIndex)
-
-    return (
-        <DotToggleButtonView {...other}
-            handleClick={handleClick}
-        />
-    )
-}
-
-DotToggleButton.propTypes = {
-    dotIndex: PropTypes.number.isRequired,
-    handleDotToggle: PropTypes.func.isRequired
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-class DotToggleButtonView extends Component {
+class DotToggleButton extends Component {
 
     constructor(props) {
         super(props)
 
+        this._handleDotToggleClick = this._handleDotToggleClick.bind(this)
         this._handleTextContainerClick = this._handleTextContainerClick.bind(this)
 
         this.state = {
@@ -53,7 +31,13 @@ class DotToggleButtonView extends Component {
         }
     }
 
+    /**
+     * Not necessary to check shouldComponentUpdate, since the changed props
+     * upon which to update are a subset of those in dots section.
+     */
+
     componentWillReceiveProps(nextProps) {
+        // Also deinteractivate if dots section has been hidden.
         if (!nextProps.selectedDotsIndex ||
             (!nextProps.hasInteractivatedDotText && this.props.hasInteractivatedDotText)) {
             this.setState({
@@ -62,88 +46,112 @@ class DotToggleButtonView extends Component {
         }
     }
 
-    _handleTextContainerClick(e, isInteractivated = !this.state.isInteractivated) {
+    _handleDotToggleClick(e) {
+        this.props.handleDotToggle(e, this.props.dotIndex)
+    }
+
+    _handleTextContainerClick(e) {
+        const isInteractivated = !this.state.isInteractivated
+
         e.stopPropagation()
 
         this.setState({
             isInteractivated
         })
 
-        this.props.setHasInteractivatedDotText(isInteractivated)
-
         // Tell event manager to turn off access.
         this.props.stopPropagation(e)
+
+        this.props.setHasInteractivatedDotText(isInteractivated)
     }
 
     render() {
-        const {
-
-            // From props.
-            dotKey,
-            accessHighlighted,
-            isSelected,
-
-            // From controller.
-            handleClick
-
-        } = this.props,
-        { isInteractivated } = this.state,
-
-        dotDescription = (
-            <div className={classnames(
-                'dot-description',
-                { 'interactivated': isInteractivated }
-            )}>
-                <span>
-                    {DOT_DESCRIPTIONS[dotKey]}
-                </span>
-            </div>
-        )
-
         return (
-            <div className={classnames(
-                'dot-container'
-            )}>
-                <a
-                    className="dot-section-anchor"
-                    onClick={e => this._handleTextContainerClick(e)}
-                >
-                    <span className={classnames(
-                        'anchor-block',
-                        'text-anchor-block',
-                        'in-dots-section',
-                        { 'selected': isInteractivated,
-                          'access-highlighted': accessHighlighted }
-                    )}>
-                        <span className="underline-bar"></span>
-                        <span className="text-span">{dotKey}</span>
-                    </span>
-                </a>
-                <div className={classnames(
-                    'anchor-block',
-                    'dot-anchor-block',
-                    // 'in-dots-section',
-                    { 'access-highlighted': accessHighlighted }
-                )}>
-                    <Button
-                        buttonClass="dot"
-                        iconClass={dotKey}
-                        isDeselected={!isSelected}
-                        extraChild={dotDescription}
-                        handleClick={handleClick}
-                    />
-                </div>
-            </div>
+            <DotToggleButtonView {...this.props}
+                isInteractivated={this.state.isInteractivated}
+                handleDotToggleClick={this._handleDotToggleClick}
+                handleTextContainerClick={this._handleTextContainerClick}
+            />
         )
     }
 }
+
+DotToggleButton.propTypes = {
+    dotIndex: PropTypes.number.isRequired,
+    selectedDotsIndex: PropTypes.number.isRequired,
+    hasInteractivatedDotText: PropTypes.number.isRequired,
+    setHasInteractivatedDotText: PropTypes.func.isRequired,
+    stopPropagation: PropTypes.func.isRequired,
+    handleDotToggle: PropTypes.func.isRequired
+}
+
+/****************
+ * PRESENTATION *
+ ****************/
+
+const DotToggleButtonView = ({
+
+    // From props.
+    dotKey,
+    accessHighlighted,
+    isSelected,
+
+    // From controller.
+    isInteractivated,
+    handleDotToggleClick,
+    handleTextContainerClick
+
+}) => (
+    <div className={classnames(
+        'dot-container'
+    )}>
+        <a
+            className="dot-section-anchor"
+            onClick={handleTextContainerClick}
+        >
+            <span className={classnames(
+                'anchor-block',
+                'text-anchor-block',
+                'in-dots-section',
+                { 'selected': isInteractivated,
+                  'access-highlighted': accessHighlighted }
+            )}>
+                <span className="underline-bar"></span>
+                <span className="text-span">{dotKey}</span>
+            </span>
+        </a>
+        <div className={classnames(
+            'anchor-block',
+            'dot-anchor-block',
+            { 'access-highlighted': accessHighlighted }
+        )}>
+            <Button
+                buttonClass="dot"
+                iconClass={dotKey}
+                isDeselected={!isSelected}
+                handleClick={handleDotToggleClick}
+                extraChild={(
+                    <div className={classnames(
+                        'dot-description',
+                        { 'interactivated': isInteractivated }
+                    )}>
+                        <span>
+                            {DOT_DESCRIPTIONS[dotKey]}
+                        </span>
+                    </div>
+                )}
+            />
+        </div>
+    </div>
+)
 
 DotToggleButtonView.propTypes = {
     dotKey: PropTypes.string.isRequired,
     accessHighlighted: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    selectedDotsIndex: PropTypes.number.isRequired,
-    handleClick: PropTypes.func.isRequired
+    isInteractivated: PropTypes.bool.isRequired,
+    handleDotToggleClick: PropTypes.func.isRequired,
+    handleTextContainerClick: PropTypes.func.isRequired
 }
 
 export default connect(passReduxStateToProps)(DotToggleButton)

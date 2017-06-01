@@ -2,29 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../button/button'
 
-/*************
- * CONTAINER *
- *************/
+const DotButton = ({
 
-const DotButton = (props) => (
-    <DotButtonView {...props} />
-)
-
-DotButton.propTypes = {
-    isSelected: PropTypes.bool,
-    isSmall: PropTypes.bool,
-    dotKey: PropTypes.string,
-    dotKeys: PropTypes.object,
-    handleDotButtonClick: PropTypes.func
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const DotButtonView = ({
-
-    // From props.
     isSelected,
     isSmall,
     dotKey,
@@ -41,5 +20,13 @@ const DotButtonView = ({
         handleClick={handleDotButtonClick}
     />
 )
+
+DotButton.propTypes = {
+    isSelected: PropTypes.bool,
+    isSmall: PropTypes.bool,
+    dotKey: PropTypes.string,
+    dotKeys: PropTypes.object,
+    handleDotButtonClick: PropTypes.func
+}
 
 export default DotButton

@@ -17,8 +17,8 @@ class LyricSection extends Component {
     }
 
     /**
-     * Not necessary to check shouldComponentUpdate, since the changed props to
-     * update on are a subset of those in lyric column.
+     * Not necessary to check shouldComponentUpdate, since the changed props
+     * upon which to update are a subset of those in lyric column.
      */
 
     componentWillReceiveProps(nextProps) {

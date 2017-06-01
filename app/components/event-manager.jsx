@@ -18,7 +18,7 @@ const ANNOTATION_SCROLL = 'annotation',
     VERSE_SCROLL = 'verse'
 
 // Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth }) => ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth })
+const passReduxStateToProps = ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth }) => ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth })
 
 class EventManager extends Component {
 
@@ -325,7 +325,7 @@ class EventManager extends Component {
         // Scroll only when expanding carousel.
         if (carouselSelected && !presentCarouselIndex) {
             const { selectedAnnotationIndex } = this.props,
-                annotationIndex = selectedAnnotationIndex ? selectedAnnotationIndex : this.props.domState.accessedAnnotationIndex
+                annotationIndex = selectedAnnotationIndex ? selectedAnnotationIndex : this.props.accessedAnnotationIndex
             this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, annotationIndex)
         }
 
