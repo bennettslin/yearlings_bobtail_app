@@ -1,3 +1,5 @@
+// Component that handles all user events from keyboard.
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import DomManager from './dom-manager'

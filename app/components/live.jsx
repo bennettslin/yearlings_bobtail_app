@@ -1,3 +1,5 @@
+// Component that shows all user-facing UI.
+
 import React from 'react'
 import { connect } from 'react-redux'
 import classnames from 'classnames'

@@ -1,3 +1,5 @@
+// Root component that sets all app state.
+
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'

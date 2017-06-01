@@ -1,3 +1,5 @@
+// Base DOM component for both admin and user-facing views.
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
