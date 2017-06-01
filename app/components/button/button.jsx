@@ -4,28 +4,22 @@ import classnames from 'classnames'
 
 const Button = ({
 
-    buttonName,
-    buttonClass,
-    iconClass,
-    iconText,
-    accessKey,
-    isCustomShape,
-    isCustomSize,
-    accessHighlighted,
-    isEnabled,
-    isSelected,
-    isDeselected,
-    isLarge,
-    isSmall,
+    accessHighlighted, accessKey,
+    buttonClass, buttonName,
+    iconClass, iconText,
+    isSmall, isLarge,
+    isCustomShape, isCustomSize,
+    isDeselected, isEnabled, isSelected,
     handleClick,
     extraChild
 
 }) => (
+
     <a
         className={classnames(
             'button',
-            buttonName && `${buttonName}-button`,
             buttonClass,
+            buttonName && `${buttonName}-button`,
             { 'large': isLarge,
               'small': isSmall,
               'custom-shape': isCustomShape,
@@ -53,8 +47,10 @@ const Button = ({
 )
 
 Button.propTypes = {
-    buttonName: PropTypes.string,
+    accessHighlighted: PropTypes.bool,
+    accessKey: PropTypes.string,
     buttonClass: PropTypes.string,
+    buttonName: PropTypes.string,
     iconClass: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.object
@@ -63,15 +59,13 @@ Button.propTypes = {
         PropTypes.string,
         PropTypes.number
     ]),
-    accessKey: PropTypes.string,
+    isSmall: PropTypes.bool,
+    isLarge: PropTypes.bool,
     isCustomShape: PropTypes.bool,
     isCustomSize: PropTypes.bool,
+    isDeselected: PropTypes.bool,
     isEnabled: PropTypes.bool,
     isSelected: PropTypes.bool,
-    isDeselected: PropTypes.bool,
-    isLarge: PropTypes.bool,
-    isSmall: PropTypes.bool,
-
     handleClick: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.func
