@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Handle case of selecting title or score or wiki when annotation in popup.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Verse bar doesn't always show after collapsing lyric.`,
         workedHours: 0,
         neededHours: 1

@@ -1,34 +1,19 @@
+// Toggle button to show and hide title section.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
 import { TITLE_TOGGLE_KEY } from '../../constants/access'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
     selectedTitleIndex
 }) => ({
-// Pass Redux state into component props.
     selectedTitleIndex
 })
 
-/*************
- * CONTAINER *
- *************/
-
-const TitleToggle = (props) => (
-    <TitleToggleView {...props}/>
-)
-
-TitleToggle.propTypes = {
-    selectedTitleIndex: PropTypes.number.isRequired,
-    handleTitleToggle: PropTypes.func.isRequired
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const TitleToggleView = ({
+const TitleToggle = ({
 
     // From props.
     selectedTitleIndex,
@@ -47,4 +32,13 @@ const TitleToggleView = ({
         </div>
     </div>
 )
+
+TitleToggle.propTypes = {
+    // Through Redux.
+    selectedTitleIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handleTitleToggle: PropTypes.func.isRequired
+}
+
 export default connect(passReduxStateToProps)(TitleToggle)

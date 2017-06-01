@@ -300,7 +300,6 @@ const LiveView = ({
         },
 
         wikiPopupProps = {
-            // selectedWikiUrl,
             wikiSectionRef,
             handleWikiToggle,
             handlePopupFocus

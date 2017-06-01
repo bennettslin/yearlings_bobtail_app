@@ -1,3 +1,5 @@
+// Section to show credits and anchor for band website.
+
 import React from 'react'
 
 /*************

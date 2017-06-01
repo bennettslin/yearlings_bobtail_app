@@ -1,3 +1,5 @@
+// Popup container for title section.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -5,10 +7,10 @@ import TitleSection from './title-section'
 import TransitionPopup from '../popup/transition-popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
     selectedTitleIndex
 }) => ({
-// Pass Redux state into component props.
     selectedTitleIndex
 })
 
@@ -30,12 +32,11 @@ class TitleTransitionPopup extends Component {
     render() {
         const { selectedTitleIndex,
                 handleTitleToggle,
-                handlePopupFocus,
-                ...other } = this.props,
+                handlePopupFocus } = this.props,
 
             isVisible = !!selectedTitleIndex,
             myChild = (
-                <TitleSection {...other} />
+                <TitleSection />
             )
 
         return (
@@ -52,7 +53,10 @@ class TitleTransitionPopup extends Component {
 }
 
 TitleTransitionPopup.propTypes = {
+    // Through Redux.
     selectedTitleIndex: PropTypes.number.isRequired,
+
+    // From parent.
     handleTitleToggle: PropTypes.func.isRequired,
     handlePopupFocus: PropTypes.func.isRequired
 }
