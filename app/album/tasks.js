@@ -2043,5 +2043,10 @@ module.exports = [
         taskName: `Dot toggle text anchor doesn't work.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Begin work to pass app state through Redux.`,
+        workedHours: 10,
+        neededHours: 10
+    },
 ]

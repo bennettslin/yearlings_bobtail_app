@@ -38,6 +38,7 @@ module.exports = {
 
     // Session.
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
+    INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',
     IS_LYRIC_EXPANDED: 'isLyricExpanded',
     IS_VERSE_BAR_ABOVE: 'isVerseBarAbove',
     IS_VERSE_BAR_BELOW: 'isVerseBarBelow',

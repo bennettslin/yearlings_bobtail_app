@@ -15,6 +15,7 @@ const passReduxStateToProps = ({
     selectedLyricColumnIndex,
     selectedVerseIndex,
     showOneOfTwoLyricColumns,
+    interactivatedVerseIndex,
     isLyricExpanded
 }) => ({
 // Pass Redux state into component props.
@@ -23,6 +24,7 @@ const passReduxStateToProps = ({
     selectedLyricColumnIndex,
     selectedVerseIndex,
     showOneOfTwoLyricColumns,
+    interactivatedVerseIndex,
     isLyricExpanded
 })
 

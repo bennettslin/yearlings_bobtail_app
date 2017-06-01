@@ -1,5 +1,6 @@
 // Reducers for state of this user session.
 import { CAROUSEL_ANNOTATION_INDEX,
+         INTERACTIVATED_VERSE_INDEX,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW } from '../../constants/state'
@@ -7,6 +8,15 @@ import { CAROUSEL_ANNOTATION_INDEX,
 export const CarouselAnnotationIndexReducer = (state = 0, action) => {
     switch (action.type) {
         case CAROUSEL_ANNOTATION_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const InteractivatedVerseIndexReducer = (state = 0, action) => {
+    switch (action.type) {
+        case INTERACTIVATED_VERSE_INDEX:
             return action.payload
         default:
             return state

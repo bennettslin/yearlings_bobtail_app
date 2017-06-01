@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
 import { getSongVerseTimes,
          getSongStanzaTimes,
@@ -7,6 +8,13 @@ import { getSongVerseTimes,
 import { getFormattedTime } from '../../helpers/format-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
+
+const passReduxStateToProps = ({
+    interactivatedVerseIndex
+}) => ({
+// Pass Redux state into component props.
+    interactivatedVerseIndex
+})
 
 /*************
  * CONTAINER *
@@ -238,4 +246,4 @@ AudioSliderView.propTypes = {
     handleMouseDown: PropTypes.func.isRequired
 }
 
-export default AudioSlider
+export default connect(passReduxStateToProps)(AudioSlider)
