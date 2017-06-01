@@ -15,6 +15,7 @@ const passReduxStateToProps = ({
     selectedLyricColumnIndex,
     selectedVerseIndex,
     showOneOfTwoLyricColumns,
+    appMounted,
     interactivatedVerseIndex,
     isLyricExpanded
 }) => ({
@@ -24,6 +25,7 @@ const passReduxStateToProps = ({
     selectedLyricColumnIndex,
     selectedVerseIndex,
     showOneOfTwoLyricColumns,
+    appMounted,
     interactivatedVerseIndex,
     isLyricExpanded
 })

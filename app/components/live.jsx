@@ -53,7 +53,6 @@ const LiveView = ({
     deviceIndex,
     windowHeight,
     windowWidth,
-    appMounted,
 
     isPhone,
     isDesktop,
@@ -215,7 +214,6 @@ const LiveView = ({
 
         lyricColumnProps = {
             deviceIndex,
-            appMounted,
 
             // For lyrics line width reset.
             isPortrait: windowHeight > windowWidth,

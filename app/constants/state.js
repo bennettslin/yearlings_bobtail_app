@@ -37,6 +37,7 @@ module.exports = {
     SHOW_SINGLE_BOOK_COLUMN: 'showSingleBookColumn',
 
     // Session.
+    APP_MOUNTED: 'appMounted',
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
     INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',
     IS_LYRIC_EXPANDED: 'isLyricExpanded',

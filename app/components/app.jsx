@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex } from '../redux/actions/access'
 import { setDeviceIndex, setWindowHeight, setWindowWidth } from '../redux/actions/device'
 import { setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
-import { setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setShownBookColumnIndex } from '../redux/actions/session'
+import { setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setShownBookColumnIndex } from '../redux/actions/session'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './event-manager'
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -27,14 +27,14 @@ import LogHelper from '../helpers/log-helper'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth
 }) => ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth
 })
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth }, dispatch)
+    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth }, dispatch)
 )
 
 /*************
@@ -65,6 +65,9 @@ class App extends Component {
         props.accessNavSongIndex(selectedSongIndex)
 
         // Set initial session state.
+
+        // Prevent verse bar from showing upon load.
+        props.setAppMounted(false)
         props.setCarouselAnnotationIndex(0)
         props.setInteractivatedVerseIndex(-1)
         props.setIsLyricExpanded(false)
@@ -88,10 +91,7 @@ class App extends Component {
             selectedVerseElement: null,
             sliderVerseIndex: -1,
             sliderVerseElement: null,
-            sliderMousedOrTouched: false,
-
-            // Prevent verse bar from showing upon load.
-            appMounted: false
+            sliderMousedOrTouched: false
         }
     }
 
@@ -113,10 +113,10 @@ class App extends Component {
                 selectedSongIndex,
                 selectedVerseIndex } = this.props
 
+        this.props.setAppMounted(true)
+
         // This state can only be set after component mounted.
         this.setState({
-            appMounted: true,
-
             // Based on either selected annotation or selected verse.
             accessedAnnotationIndex: selectedAnnotationIndex ?
                 getAnnotationIndexForDirection({
@@ -424,7 +424,7 @@ class App extends Component {
     scrollLyricSection(verseElement = this.state.selectedVerseElement) {
 
         // Prevent verse bar from showing upon initial load.
-        if (!this.state.appMounted || !verseElement) {
+        if (!this.props.appMounted || !verseElement) {
             return false
         }
 
@@ -777,11 +777,11 @@ class App extends Component {
 
             this.setState({
                 sliderLeft: 0,
-                sliderWidth: 0,
                 sliderRatio: 0,
+                sliderWidth: 0,
                 sliderVerseIndex: -1,
-                sliderMousedOrTouched: false,
                 sliderMoving: false,
+                sliderMousedOrTouched: false,
                 sliderVerseElement: null
             })
         }

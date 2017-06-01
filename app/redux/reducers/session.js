@@ -1,10 +1,20 @@
 // Reducers for state of this user session.
-import { CAROUSEL_ANNOTATION_INDEX,
+import { APP_MOUNTED,
+         CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
+
+export const AppMountedReducer = (state = 0, action) => {
+    switch (action.type) {
+        case APP_MOUNTED:
+            return action.payload
+        default:
+            return state
+    }
+}
 
 export const CarouselAnnotationIndexReducer = (state = 0, action) => {
     switch (action.type) {
