@@ -23,9 +23,9 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, isLyricExpanded, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, isLyricExpanded, isVerseBarAbove, isVerseBarBelow
 })
 
 /*************
@@ -89,8 +89,8 @@ const LiveView = ({
     showOverlay,
     isOverviewShown,
     isOverlaidAnnotation,
-    isSelectedVerseAbove,
-    isSelectedVerseBelow,
+    isVerseBarAbove,
+    isVerseBarBelow,
 
     lyricSectionRef,
     scoreSectionRef,
@@ -222,9 +222,6 @@ const LiveView = ({
             // For lyrics line width reset.
             isPortrait: windowHeight > windowWidth,
 
-            // For lyric expand button.
-            isLyricExpanded,
-
             sliderMousedOrTouched,
             sliderVerseIndex,
             isLogue,
@@ -338,9 +335,9 @@ const LiveView = ({
               'title-in-audio': isTitleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,
               'overview-shown': isOverviewShown,
-              'verse-above': isSelectedVerseAbove,
-              'verse-below': isSelectedVerseBelow,
-              'verse-bar-hidden': !isSelectedVerseAbove && !isSelectedVerseBelow,
+              'verse-above': isVerseBarAbove,
+              'verse-below': isVerseBarBelow,
+              'verse-bar-hidden': !isVerseBarAbove && !isVerseBarBelow,
               'scores-tips-in-main': isScoresTipsInMain },
             selectedDotKeys
         )}>

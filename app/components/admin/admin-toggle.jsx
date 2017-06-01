@@ -1,5 +1,13 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { DEVICE_OBJECTS } from '../../constants/responsive'
+
+const passReduxStateToProps = ({
+    isLyricExpanded
+}) => ({
+// Pass Redux state into component props.
+    isLyricExpanded
+})
 
 /*************
  * CONTAINER *
@@ -38,4 +46,4 @@ const AdminToggleView = ({
     </div>
 )
 
-export default AdminToggle
+export default connect(passReduxStateToProps)(AdminToggle)

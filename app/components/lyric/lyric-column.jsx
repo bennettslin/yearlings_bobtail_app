@@ -14,14 +14,16 @@ const passReduxStateToProps = ({
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
     selectedVerseIndex,
-    showOneOfTwoLyricColumns
+    showOneOfTwoLyricColumns,
+    isLyricExpanded
 }) => ({
 // Pass Redux state into component props.
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
     selectedVerseIndex,
-    showOneOfTwoLyricColumns
+    showOneOfTwoLyricColumns,
+    isLyricExpanded
 })
 
 /*************
@@ -64,6 +66,7 @@ class LyricColumn extends Component {
                     'sliderMousedOrTouched',
 
                     // For lyric expand button.
+                    // FIXME: Not ideal.
                     'isLyricExpanded'
                 ]
             })

@@ -1,6 +1,7 @@
 module.exports = {
     WINDOW_STORAGE: window.localStorage,
 
+    // Storage.
     SELECTED_ACCESS_INDEX: 'selectedAccessIndex',
     SELECTED_ADMIN_INDEX: 'selectedAdminIndex',
     SELECTED_ANNOTATION_INDEX: 'selectedAnnotationIndex',
@@ -19,10 +20,12 @@ module.exports = {
     SELECTED_VERSE_INDEX: 'selectedVerseIndex',
     SELECTED_WIKI_INDEX: 'selectedWikiIndex',
 
+    // Access.
     ACCESSED_ANNOTATION_ANCHOR_INDEX: 'accessedAnnotationAnchorIndex',
     ACCESSED_DOT_INDEX: 'accessedDotIndex',
     ACCESSED_NAV_SONG_INDEX: 'accessedNavSongIndex',
 
+    // Responsive.
     IS_CAROUSEL_EXPANDABLE: 'isCarouselExpandable',
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',
     IS_HIDDEN_NAV: 'isHiddenNav',
@@ -31,5 +34,10 @@ module.exports = {
     IS_TITLE_IN_AUDIO: 'isTitleInAudio',
     SHOW_ONE_OF_TWO_LYRIC_COLUMNS: 'showOneOfTwoLyricColumns',
     SHOW_SHRUNK_NAV_ICON: 'showShrunkNavIcon',
-    SHOW_SINGLE_BOOK_COLUMN: 'showSingleBookColumn'
+    SHOW_SINGLE_BOOK_COLUMN: 'showSingleBookColumn',
+
+    // Session.
+    IS_LYRIC_EXPANDED: 'isLyricExpanded',
+    IS_VERSE_BAR_ABOVE: 'isVerseBarAbove',
+    IS_VERSE_BAR_BELOW: 'isVerseBarBelow'
 }

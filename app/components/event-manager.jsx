@@ -16,7 +16,7 @@ const ANNOTATION_SCROLL = 'annotation',
     VERSE_SCROLL = 'verse'
 
 // Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex }) => ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex })
+const passReduxStateToProps = ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, isVerseBarAbove, isVerseBarBelow }) => ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, isVerseBarAbove, isVerseBarBelow })
 
 class EventManager extends Component {
 
@@ -618,13 +618,12 @@ class EventManager extends Component {
     }
 
     handleVerseInteractivate(e, verseIndex) {
-        const { domState } = this.props,
-            { selectedVerseIndex } = this.props,
-            { isSelectedVerseAbove,
-              isSelectedVerseBelow } = domState
+        const { selectedVerseIndex,
+                isVerseBarAbove,
+                isVerseBarBelow } = this.props
 
         // If verse bar is shown, do not allow click on selected verse.
-        if (!(isSelectedVerseAbove || isSelectedVerseBelow) || verseIndex !== selectedVerseIndex) {
+        if (!(isVerseBarAbove || isVerseBarBelow) || verseIndex !== selectedVerseIndex) {
 
             this.stopPropagation(e)
             this._closeSections({
