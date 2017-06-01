@@ -523,8 +523,7 @@ class App extends Component {
             isLogue = getIsLogue(selectedSongIndex),
 
             // Allow logue and song overviews to overlap for fade animation.
-            newOverview = getOverview(selectedSongIndex),
-            newState = {}
+            newOverview = getOverview(selectedSongIndex)
 
         /**
          * If not selected from portal, show overview if hidden, and lyric
@@ -590,7 +589,6 @@ class App extends Component {
             })
         )
 
-        this.setState(newState)
         this.accessNavSong(selectedSongIndex)
         props.selectSongIndex(selectedSongIndex)
 
@@ -986,7 +984,6 @@ class App extends Component {
     render() {
         return (
             <EventManager
-                domState={this.state}
                 isLogue={getIsLogue(this.props.selectedSongIndex)}
 
                 // Event manager props.
