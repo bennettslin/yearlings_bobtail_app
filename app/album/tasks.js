@@ -1,5 +1,20 @@
 module.exports = [
     {
+        taskName: `Verse bar doesn't always show after collapsing lyric.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Dot toggle text anchor doesn't work.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `R and F don't work right after selecting song.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Explanatory notes for each file.`,
         workedHours: 0,
         neededHours: 1

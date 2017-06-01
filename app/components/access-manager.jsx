@@ -335,7 +335,6 @@ class AccessManager extends Component {
     }
 
     _handleLyricNavigation(e, keyName) {
-
         const { props } = this,
             { interactivatedVerseIndex } = props,
             isVerseInteractivated = interactivatedVerseIndex > -1
