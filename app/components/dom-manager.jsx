@@ -11,7 +11,7 @@ import { getSongTitle } from '../helpers/data-helper'
 import { getIsDesktop, getIsPhone } from '../helpers/responsive-helper'
 
 // Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, windowHeight, windowWidth }) => ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, windowHeight, windowWidth })
+const passReduxStateToProps = ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, windowHeight, windowWidth, isPlaying }) => ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, windowHeight, windowWidth, isPlaying })
 
 class DomManager extends Component {
     render() {
@@ -33,7 +33,6 @@ class DomManager extends Component {
               selectedAccessIndex,
 
               isPlaying,
-              updatedTimePlayed,
 
               handleBodyClick,
               handleBodyTouchMove,
@@ -55,9 +54,7 @@ class DomManager extends Component {
                 (!!selectedAnnotationIndex && isOverlaidAnnotation),
 
             audioPlayersProps = {
-                isPlaying,
                 selectedSongIndex,
-                updatedTimePlayed,
                 handlePlayerTimeChange,
                 handlePlayerNextSong,
                 handlePlayerTimeReset

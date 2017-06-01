@@ -6,10 +6,14 @@ import ReactAudioPlayer from 'react-audio-player'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const passReduxStateToProps = ({
-    selectedSongIndex
+    selectedSongIndex,
+    isPlaying,
+    updatedTimePlayed
 }) => ({
 // Pass Redux state into component props.
-    selectedSongIndex
+    selectedSongIndex,
+    isPlaying,
+    updatedTimePlayed
 })
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video

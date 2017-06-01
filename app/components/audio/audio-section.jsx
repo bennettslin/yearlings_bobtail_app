@@ -8,12 +8,14 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 const passReduxStateToProps = ({
     selectedSongIndex,
     selectedAudioOptionIndex,
-    isTitleInAudio
+    isTitleInAudio,
+    isPlaying
 }) => ({
 // Pass Redux state into component props.
     selectedSongIndex,
     selectedAudioOptionIndex,
-    isTitleInAudio
+    isTitleInAudio,
+    isPlaying
 })
 
 /*************

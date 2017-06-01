@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex } from '../redux/actions/access'
+import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth } from '../redux/actions/device'
 import { setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
 import { setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setPopupLogueOverview, setPopupSongOverview, setShownBookColumnIndex } from '../redux/actions/session'
@@ -27,14 +28,14 @@ import LogHelper from '../helpers/log-helper'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth, isPlaying, updatedTimePlayed
 }) => ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth, isPlaying, updatedTimePlayed
 })
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setPopupLogueOverview, setPopupSongOverview, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth }, dispatch)
+    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setPopupLogueOverview, setPopupSongOverview, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed }, dispatch)
 )
 
 /*************
@@ -63,6 +64,10 @@ class App extends Component {
         )
         props.accessNavSongIndex(selectedSongIndex)
 
+        // Set initial audio state.
+        // Start at persisted time.
+        this.props.setUpdatedTimePlayed(props.selectedTimePlayed)
+
         // Set initial session state.
         // Prevent verse bar from showing upon load.
         props.setShownBookColumnIndex(getBookColumnIndex(selectedSongIndex))
@@ -75,10 +80,6 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            isPlaying: false,
-            // Start at persisted time.
-            updatedTimePlayed: props.selectedTimePlayed,
-
             annotationObject: getAnnotationObject(selectedSongIndex, selectedAnnotationIndex),
             selectedVerseElement: null,
 
@@ -162,9 +163,7 @@ class App extends Component {
     }
 
     resetUpdatedTimePlayed() {
-        this.setState({
-            updatedTimePlayed: null
-        })
+        this.props.setUpdatedTimePlayed(null)
     }
 
     /**********
@@ -270,7 +269,7 @@ class App extends Component {
      * AUDIO *
      *********/
 
-     togglePlay(isPlaying = !this.state.isPlaying) {
+     togglePlay(isPlaying = !this.props.isPlaying) {
 
          // Select first song if play button in logue is toggled on.
          if (getIsLogue(this.props.selectedSongIndex) && isPlaying) {
@@ -279,9 +278,7 @@ class App extends Component {
              })
          }
 
-         this.setState({
-             isPlaying
-         })
+         this.props.setIsPlaying(isPlaying)
          return true
      }
 
@@ -571,7 +568,7 @@ class App extends Component {
         this.interactivateVerse()
 
         if (isLogue) {
-            newState.isPlaying = false
+            this.props.setIsPlaying(false)
             this.props.setPopupLogueOverview(newOverview)
 
             if (wasLogue) {
@@ -896,7 +893,7 @@ class App extends Component {
          * the new time selected by user.
          */
         // FIXME: This doesn't work anymore. Selecting verse or time when player is running is buggy.
-        if (this.state.updatedTimePlayed !== null) {
+        if (this.props.updatedTimePlayed !== null) {
             return false
         }
 
