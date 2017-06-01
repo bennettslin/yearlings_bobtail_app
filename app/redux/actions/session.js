@@ -3,7 +3,8 @@ import { CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
-         IS_VERSE_BAR_BELOW } from '../../constants/state'
+         IS_VERSE_BAR_BELOW,
+         SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
 export const setCarouselAnnotationIndex = (carouselAnnotationIndex = 0) => (
     { type: CAROUSEL_ANNOTATION_INDEX,
@@ -28,4 +29,9 @@ export const setIsVerseBarAbove = (isVerseBarAbove = false) => (
 export const setIsVerseBarBelow = (isVerseBarBelow = false) => (
     { type: IS_VERSE_BAR_BELOW,
       payload: isVerseBarBelow }
+)
+
+export const setShownBookColumnIndex = (shownBookColumnIndex = 0) => (
+    { type: SHOWN_BOOK_COLUMN_INDEX,
+      payload: shownBookColumnIndex }
 )

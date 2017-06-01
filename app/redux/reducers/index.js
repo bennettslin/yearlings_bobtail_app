@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import { AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer } from './device'
 import { IsCarouselExpandableReducer, IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsLyricExpandableReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
-import { CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer } from './session'
+import { CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer } from './session'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, NavIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
 
 const rootReducer = combineReducers({
@@ -43,6 +43,7 @@ const rootReducer = combineReducers({
     isLyricExpanded: IsLyricExpandedReducer,
     isVerseBarAbove: IsVerseBarAboveReducer,
     isVerseBarBelow: IsVerseBarBelowReducer,
+    shownBookColumnIndex: ShownBookColumnIndexReducer,
 
     deviceIndex: DeviceIndexReducer,
     windowHeight: WindowHeightReducer,

@@ -69,7 +69,6 @@ const LiveView = ({
     selectedLyricColumnIndex,
     selectedNavIndex,
     selectedWikiUrl,
-    shownBookColumnIndex,
     accessedAnnotationIndex,
 
     interactivatedVerseIndex,
@@ -259,7 +258,6 @@ const LiveView = ({
             isPhone,
             isDesktop,
 
-            shownBookColumnIndex,
             selectedWikiUrl,
 
             handleCarouselToggle,

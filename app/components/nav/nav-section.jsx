@@ -14,13 +14,15 @@ const passReduxStateToProps = ({
     selectedSongIndex,
     selectedNavIndex,
     accessedNavSongIndex,
-    showSingleBookColumn
+    showSingleBookColumn,
+    shownBookColumnIndex
 }) => ({
 // Pass Redux state into component props.
     selectedSongIndex,
     selectedNavIndex,
     accessedNavSongIndex,
-    showSingleBookColumn
+    showSingleBookColumn,
+    shownBookColumnIndex
 })
 
 /*************
