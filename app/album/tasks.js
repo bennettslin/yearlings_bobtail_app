@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Dot toggle text anchor doesn't work.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `R and F don't work right after selecting song.`,
         workedHours: 0,
         neededHours: 1
@@ -2044,4 +2039,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Dot toggle text anchor doesn't work.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

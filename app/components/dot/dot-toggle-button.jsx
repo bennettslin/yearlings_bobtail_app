@@ -1,8 +1,16 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
 import { DOT_DESCRIPTIONS } from '../../constants/dots'
+
+const passReduxStateToProps = ({
+    selectedDotsIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedDotsIndex
+})
 
 /*************
  * CONTAINER *
@@ -134,7 +142,8 @@ DotToggleButtonView.propTypes = {
     dotKey: PropTypes.string.isRequired,
     accessHighlighted: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
+    selectedDotsIndex: PropTypes.number.isRequired,
     handleClick: PropTypes.func.isRequired
 }
 
-export default DotToggleButton
+export default connect(passReduxStateToProps)(DotToggleButton)
