@@ -1,34 +1,19 @@
+// Toggle button to show and hide dots section.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
 import { DOTS_SECTION_EXPAND_KEY } from '../../constants/access'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
     selectedDotsIndex
 }) => ({
-// Pass Redux state into component props.
     selectedDotsIndex
 })
 
-/*************
- * CONTAINER *
- *************/
-
-const DotsToggle = (props) => (
-    <DotsToggleView {...props} />
-)
-
-DotsToggle.propTypes = {
-    selectedDotsIndex: PropTypes.number.isRequired,
-    handleDotsSectionToggle: PropTypes.func.isRequired
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const DotsToggleView = ({
+const DotsToggle = ({
 
     // From props.
     selectedDotsIndex,
@@ -38,14 +23,19 @@ const DotsToggleView = ({
     <div className="dots-toggle-button-container">
         <div className="dots-toggle-button-block">
             <Button
+                accessKey={DOTS_SECTION_EXPAND_KEY}
                 buttonName="dots-toggle"
                 iconText={selectedDotsIndex}
-                accessKey={DOTS_SECTION_EXPAND_KEY}
                 isLarge={true}
                 handleClick={handleDotsSectionToggle}
             />
         </div>
     </div>
 )
+
+DotsToggle.propTypes = {
+    selectedDotsIndex: PropTypes.number.isRequired,
+    handleDotsSectionToggle: PropTypes.func.isRequired
+}
 
 export default connect(passReduxStateToProps)(DotsToggle)

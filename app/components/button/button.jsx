@@ -46,6 +46,10 @@ const Button = ({
     </a>
 )
 
+Button.defaultProps = {
+    isEnabled: true
+}
+
 Button.propTypes = {
     accessHighlighted: PropTypes.bool,
     accessKey: PropTypes.string,
@@ -74,10 +78,6 @@ Button.propTypes = {
         PropTypes.bool,
         PropTypes.element
     ])
-}
-
-Button.defaultProps = {
-    isEnabled: true
 }
 
 export default Button

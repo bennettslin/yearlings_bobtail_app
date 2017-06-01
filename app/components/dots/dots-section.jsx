@@ -1,16 +1,18 @@
+// Section for user to select and deselect dots.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import DotBlock from '../dot/dot-block'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedDotKeys,
-    accessedDotIndex
+    accessedDotIndex,
+    selectedDotKeys
 }) => ({
-    // Pass Redux state into component props.
-    selectedDotKeys,
-    accessedDotIndex
+    accessedDotIndex,
+    selectedDotKeys
 })
 
 /*************
@@ -59,7 +61,6 @@ class DotsSection extends Component {
     }
 
     _setHasInteractivatedDotText(isInteractivated) {
-
         const hasInteractivatedDotText = this.state.hasInteractivatedDotText + (isInteractivated ? 1 : -1)
 
         this.setState({
@@ -81,9 +82,9 @@ class DotsSection extends Component {
 }
 
 DotsSection.propTypes = {
-    handlePopupContainerClick: PropTypes.func.isRequired,
     accessedDotIndex: PropTypes.number.isRequired,
-    selectedDotKeys: PropTypes.object.isRequired
+    selectedDotKeys: PropTypes.object.isRequired,
+    handlePopupContainerClick: PropTypes.func.isRequired
 }
 
 /****************
@@ -92,9 +93,9 @@ DotsSection.propTypes = {
 
 const DotsSectionView = ({
 
-    handleContainerClick,
     hasInteractivatedDotText,
     setHasInteractivatedDotText,
+    handleContainerClick,
 
 ...other }) => (
 
