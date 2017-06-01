@@ -8,7 +8,7 @@ import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongTitle } from '../helpers/data-helper'
-import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
+import { getIsDesktop, getIsPhone } from '../helpers/responsive-helper'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex }) => ({ selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex })
@@ -48,8 +48,6 @@ class DomManager extends Component {
             isPhone = getIsPhone(deviceIndex),
 
             selectedSongTitle = getSongTitle(selectedSongIndex),
-
-            isLyricExpandable = getIsLyricExpandable(deviceIndex),
             isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
 
             isOverlaidAnnotation = !isDesktop && (isLyricExpanded || isPhone),
@@ -103,7 +101,6 @@ class DomManager extends Component {
                     isDesktop={isDesktop}
                     isPhone={isPhone}
                     selectedSongTitle={selectedSongTitle}
-                    isLyricExpandable={isLyricExpandable}
                     showOverlay={showOverlay}
                     isOverviewShown={isOverviewShown}
                     isOverlaidAnnotation={isOverlaidAnnotation}

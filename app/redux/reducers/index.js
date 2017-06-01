@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 import { AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
-import { IsCarouselExpandableReducer, IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
+import { IsCarouselExpandableReducer, IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsLyricExpandableReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, NavIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
 
 const rootReducer = combineReducers({
@@ -29,6 +29,7 @@ const rootReducer = combineReducers({
     isCarouselExpandable: IsCarouselExpandableReducer,
     isHeightlessLyricColumn: IsHeightlessLyricColumnReducer,
     isHiddenNav: IsHiddenNavReducer,
+    isLyricExpandable: IsLyricExpandableReducer,
     isScoresTipsInMain: IsScoresTipsInMainReducer,
     isTitleInAudio: IsTitleInAudioReducer,
     showOneOfTwoLyricColumns: ShowOneOfTwoLyricColumnsReducer,
