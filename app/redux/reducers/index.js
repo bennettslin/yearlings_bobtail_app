@@ -3,7 +3,7 @@ import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, A
 import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer } from './device'
 import { IsCarouselExpandableReducer, IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsLyricExpandableReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
-import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, PopupLogueOverviewReducer, PopupSongOverviewReducer, ShownBookColumnIndexReducer } from './session'
+import { AnnotationObjectReducer, AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, PopupLogueOverviewReducer, PopupSongOverviewReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, NavIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
 
 const rootReducer = combineReducers({
@@ -30,6 +30,7 @@ const rootReducer = combineReducers({
     showShrunkNavIcon: ShowShrunkNavIconReducer,
     showSingleBookColumn: ShowSingleBookColumnReducer,
 
+    annotationObject: AnnotationObjectReducer,
     appMounted: AppMountedReducer,
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
     interactivatedVerseIndex: InteractivatedVerseIndexReducer,
@@ -38,6 +39,7 @@ const rootReducer = combineReducers({
     isVerseBarBelow: IsVerseBarBelowReducer,
     popupLogueOverview: PopupLogueOverviewReducer,
     popupSongOverview: PopupSongOverviewReducer,
+    selectedVerseElement: SelectedVerseElementReducer,
     shownBookColumnIndex: ShownBookColumnIndexReducer,
 
     selectedAccessIndex: AccessIndexReducer,

@@ -5,7 +5,7 @@ import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, acc
 import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth } from '../redux/actions/device'
 import { setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
-import { setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setPopupLogueOverview, setPopupSongOverview, setShownBookColumnIndex } from '../redux/actions/session'
+import { setAnnotationObject, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setPopupLogueOverview, setPopupSongOverview, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './event-manager'
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -27,15 +27,11 @@ import LogHelper from '../helpers/log-helper'
  *********/
 
 // Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth, isPlaying, updatedTimePlayed
-}) => ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, appMounted, carouselAnnotationIndex, interactivatedVerseIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, shownBookColumnIndex, deviceIndex, windowHeight, windowWidth, isPlaying, updatedTimePlayed
-})
+const passReduxStateToProps = (state) => (state)
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setPopupLogueOverview, setPopupSongOverview, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed }, dispatch)
+    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAnnotationObject, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setPopupLogueOverview, setPopupSongOverview, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed }, dispatch)
 )
 
 /*************
@@ -70,6 +66,9 @@ class App extends Component {
 
         // Set initial session state.
         // Prevent verse bar from showing upon load.
+        props.setAnnotationObject(
+            getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
+        )
         props.setShownBookColumnIndex(getBookColumnIndex(selectedSongIndex))
 
         // Allow logue and song overviews to fade in and out simultaneously.
@@ -80,9 +79,6 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            annotationObject: getAnnotationObject(selectedSongIndex, selectedAnnotationIndex),
-            selectedVerseElement: null,
-
             sliderVerseIndex: -1,
             sliderVerseElement: null,
             sliderMousedOrTouched: false
@@ -255,11 +251,9 @@ class App extends Component {
          * suddenly empty when popup fades out.
          */
         if (selectedAnnotationIndex) {
-            const annotationObject = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
-
-            this.setState({
-                annotationObject
-            })
+            this.props.setAnnotationObject(
+                getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
+            )
         }
 
         return selectedAnnotationIndex
@@ -403,7 +397,7 @@ class App extends Component {
         return true
     }
 
-    scrollLyricSection(verseElement = this.state.selectedVerseElement) {
+    scrollLyricSection(verseElement = this.props.selectedVerseElement) {
 
         // Prevent verse bar from showing upon initial load.
         if (!this.props.appMounted || !verseElement) {
@@ -814,18 +808,14 @@ class App extends Component {
     }
 
     selectVerseElement(selectedVerseElement) {
-        if (selectedVerseElement !== this.state.selectedVerseElement) {
+        if (selectedVerseElement !== this.props.selectedVerseElement) {
 
             // Determine if new selected verse element shows or hides verse bar.
             const { isVerseBarAbove,
-                    isVerseBarBelow } = getVerseBarStatus(this.props.deviceIndex, this.props.windowHeight, this.props.isLyricExpanded, selectedVerseElement),
-
-                newState = {}
-
-            newState.selectedVerseElement = selectedVerseElement
+                    isVerseBarBelow } = getVerseBarStatus(this.props.deviceIndex, this.props.windowHeight, this.props.isLyricExpanded, selectedVerseElement)
 
             // App has a reference to the selected verse.
-            this.setState(newState)
+            this.props.setSelectedVerseElement(selectedVerseElement)
 
             this.props.setIsVerseBarAbove(isVerseBarAbove)
             this.props.setIsVerseBarBelow(isVerseBarBelow)

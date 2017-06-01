@@ -1,5 +1,6 @@
 // Reducers for state of this user session.
-import { APP_MOUNTED,
+import { ANNOTATION_OBJECT,
+         APP_MOUNTED,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
          IS_LYRIC_EXPANDED,
@@ -7,7 +8,17 @@ import { APP_MOUNTED,
          IS_VERSE_BAR_BELOW,
          POPUP_LOGUE_OVERVIEW,
          POPUP_SONG_OVERVIEW,
+         SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
+
+export const AnnotationObjectReducer = (state = null, action) => {
+    switch (action.type) {
+        case ANNOTATION_OBJECT:
+            return action.payload
+        default:
+            return state
+    }
+}
 
 export const AppMountedReducer = (state = false, action) => {
     switch (action.type) {
@@ -75,6 +86,15 @@ export const PopupLogueOverviewReducer = (state = '', action) => {
 export const PopupSongOverviewReducer = (state = '', action) => {
     switch (action.type) {
         case POPUP_SONG_OVERVIEW:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const SelectedVerseElementReducer = (state = null, action) => {
+    switch (action.type) {
+        case SELECTED_VERSE_ELEMENT:
             return action.payload
         default:
             return state

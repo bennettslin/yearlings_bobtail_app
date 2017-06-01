@@ -1,5 +1,6 @@
 // Actions for state of this user session.
-import { APP_MOUNTED,
+import { ANNOTATION_OBJECT,
+         APP_MOUNTED,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
          IS_LYRIC_EXPANDED,
@@ -7,7 +8,13 @@ import { APP_MOUNTED,
          IS_VERSE_BAR_BELOW,
          POPUP_LOGUE_OVERVIEW,
          POPUP_SONG_OVERVIEW,
+         SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
+
+export const setAnnotationObject = (annotationObject = null) => (
+    { type: ANNOTATION_OBJECT,
+      payload: annotationObject }
+)
 
 export const setAppMounted = (appMounted = false) => (
     { type: APP_MOUNTED,
@@ -47,6 +54,11 @@ export const setPopupLogueOverview = (popupLogueOverview = '') => (
 export const setPopupSongOverview = (popupSongOverview = '') => (
     { type: POPUP_SONG_OVERVIEW,
       payload: popupSongOverview }
+)
+
+export const setSelectedVerseElement = (selectedVerseElement = null) => (
+    { type: SELECTED_VERSE_ELEMENT,
+      payload: selectedVerseElement }
 )
 
 export const setShownBookColumnIndex = (shownBookColumnIndex = 0) => (

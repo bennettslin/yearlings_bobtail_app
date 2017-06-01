@@ -28,6 +28,7 @@ module.exports = {
     SHOW_SINGLE_BOOK_COLUMN: 'showSingleBookColumn',
 
     // Session.
+    ANNOTATION_OBJECT: 'annotationObject',
     APP_MOUNTED: 'appMounted',
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
     INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',
@@ -36,6 +37,7 @@ module.exports = {
     IS_VERSE_BAR_BELOW: 'isVerseBarBelow',
     POPUP_LOGUE_OVERVIEW: 'popupLogueOverview',
     POPUP_SONG_OVERVIEW: 'popupSongOverview',
+    SELECTED_VERSE_ELEMENT: 'selectedVerseElement',
     SHOWN_BOOK_COLUMN_INDEX: 'shownBookColumnIndex',
 
     // Storage.
