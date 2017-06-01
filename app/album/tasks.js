@@ -2045,8 +2045,8 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Begin work to pass app state through Redux.`,
-        workedHours: 10,
-        neededHours: 10
+        taskName: `Pass app state through Redux.`,
+        workedHours: 15,
+        neededHours: 15
     },
 ]

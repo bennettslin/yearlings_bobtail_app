@@ -77,8 +77,11 @@ class DotToggleButton extends Component {
 }
 
 DotToggleButton.propTypes = {
-    dotIndex: PropTypes.number.isRequired,
+    // Through Redux.
     selectedDotsIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    dotIndex: PropTypes.number.isRequired,
     hasInteractivatedDotText: PropTypes.number.isRequired,
     setHasInteractivatedDotText: PropTypes.func.isRequired,
     stopPropagation: PropTypes.func.isRequired,
@@ -146,6 +149,7 @@ const DotToggleButtonView = ({
 )
 
 DotToggleButtonView.propTypes = {
+    // From parent.
     dotKey: PropTypes.string.isRequired,
     accessHighlighted: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,

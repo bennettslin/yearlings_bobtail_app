@@ -20,7 +20,7 @@ import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
 import ScoreTransitionPopup from './score/score-transition-popup'
 import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
-import { getWikiUrl } from '../helpers/logic-helper'
+// import { getWikiUrl } from '../helpers/logic-helper'
 import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
@@ -36,11 +36,11 @@ const passReduxStateToProps = ({
 
 const Live = (props) => {
 
-    const selectedWikiUrl = getWikiUrl(props)
+    // const selectedWikiUrl = getWikiUrl(props)
 
     return (
         <LiveView {...props}
-            selectedWikiUrl={selectedWikiUrl}
+            // selectedWikiUrl={selectedWikiUrl}
         />
     )
 }
@@ -69,7 +69,7 @@ const LiveView = ({
     selectedDotsIndex,
     selectedLyricColumnIndex,
     selectedNavIndex,
-    selectedWikiUrl,
+    // selectedWikiUrl,
 
     interactivatedVerseIndex,
 
@@ -253,7 +253,7 @@ const LiveView = ({
             isPhone,
             isDesktop,
 
-            selectedWikiUrl,
+            // selectedWikiUrl,
 
             handleCarouselToggle,
             handleDotsSectionToggle,
@@ -300,7 +300,7 @@ const LiveView = ({
         },
 
         wikiPopupProps = {
-            selectedWikiUrl,
+            // selectedWikiUrl,
             wikiSectionRef,
             handleWikiToggle,
             handlePopupFocus

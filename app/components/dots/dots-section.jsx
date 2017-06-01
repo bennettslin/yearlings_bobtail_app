@@ -85,8 +85,11 @@ class DotsSection extends Component {
 }
 
 DotsSection.propTypes = {
+    // Through Redux.
     accessedDotIndex: PropTypes.number.isRequired,
     selectedDotKeys: PropTypes.object.isRequired,
+
+    // From parent.
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 
@@ -111,6 +114,7 @@ const DotsSectionView = ({
 )
 
 DotsSectionView.propTypes = {
+    // From parent.
     handleContainerClick: PropTypes.func.isRequired
 }
 

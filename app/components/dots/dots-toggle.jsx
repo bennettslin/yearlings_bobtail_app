@@ -15,7 +15,6 @@ const passReduxStateToProps = ({
 
 const DotsToggle = ({
 
-    // From props.
     selectedDotsIndex,
     handleDotsSectionToggle
 
@@ -34,7 +33,10 @@ const DotsToggle = ({
 )
 
 DotsToggle.propTypes = {
+    // Through Redux.
     selectedDotsIndex: PropTypes.number.isRequired,
+
+    // From parent.
     handleDotsSectionToggle: PropTypes.func.isRequired
 }
 

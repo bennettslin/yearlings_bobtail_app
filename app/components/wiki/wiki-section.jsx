@@ -1,31 +1,32 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
+import { getWikiUrl } from '../../helpers/logic-helper'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-/*************
- * CONTAINER *
- *************/
-
-const WikiSection = (props) => (
-    <WikiSectionView {...props} />
-)
-
-WikiSection.propTypes = {
-    selectedWikiUrl: PropTypes.string,
-    wikiSectionRef: PropTypes.func.isRequired
-}
-
-/****************
- * PRESENTATION *
- ****************/
+// Pass Redux state into component props.
+const passReduxStateToProps = ({
+    selectedSongIndex,
+    selectedWikiIndex,
+    selectedAnnotationIndex,
+    carouselAnnotationIndex,
+    deviceIndex,
+    windowWidth
+}) => ({
+    selectedSongIndex,
+    selectedWikiIndex,
+    selectedAnnotationIndex,
+    carouselAnnotationIndex,
+    deviceIndex,
+    windowWidth
+})
 
 // TODO: Show that active wiki anchor is disabled.
-// TODO: Automatically scroll to hide search bar on top.
-// TODO: Add navigation and exit button.
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/
 // TODO: If loading time is too long, show page with a "There was a problem connecting to Wikipedia. Try again?"
 
-class WikiSectionView extends Component {
+class WikiSection extends Component {
 
     constructor(props) {
         super(props)
@@ -34,6 +35,30 @@ class WikiSectionView extends Component {
         this.state = {
             webviewLoading: true
         }
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        const { props, state } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'selectedSongIndex',
+                    'selectedWikiIndex',
+                    'selectedAnnotationIndex',
+                    'carouselAnnotationIndex',
+                    'deviceIndex',
+                    'windowWidth'
+                ]
+            }) || getComponentShouldUpdate({
+                props: state,
+                nextProps: nextState,
+                updatingPropsArray: [
+                    'webviewLoading'
+                ]
+            })
+
+        return componentShouldUpdate
     }
 
     componentWillReceiveProps({ selectedWikiUrl }) {
@@ -47,23 +72,16 @@ class WikiSectionView extends Component {
     }
 
     onWebviewLoad() {
-        /**
-         * Pausing this for now, as I've run into cross-origin issues.
-         */
-        // try {
-        //     const webview = this.refs.webview,
-        //     webviewDoc = webview.contentDocument || webview.contentWindow.document
-        // } catch (e) {
-        // }
-
         this.setState({
             webviewLoading: false
         })
     }
 
     render() {
-        const { selectedWikiUrl } = this.props,
-            { webviewLoading } = this.state
+        const { webviewLoading } = this.state,
+
+            // Use all props received through Redux.
+            selectedWikiUrl = getWikiUrl(this.props)
 
         return (
             <div className="section wiki-section">
@@ -76,7 +94,6 @@ class WikiSectionView extends Component {
                     </div>
                 }
                 <iframe
-                    // ref="webview"
                     ref={this.props.wikiSectionRef}
                     className={`webview${webviewLoading ? ' loading' : ''}`}
                     src={selectedWikiUrl}
@@ -87,4 +104,17 @@ class WikiSectionView extends Component {
     }
 }
 
-export default WikiSection
+WikiSection.propTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+    selectedWikiIndex: PropTypes.number.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    carouselAnnotationIndex: PropTypes.number.isRequired,
+    deviceIndex: PropTypes.number.isRequired,
+    windowWidth: PropTypes.number.isRequired,
+
+    // From parent.
+    wikiSectionRef: PropTypes.func.isRequired
+}
+
+export default connect(passReduxStateToProps)(WikiSection)

@@ -31,6 +31,7 @@ const DotAnchorBlock = ({
 )
 
 DotAnchorBlock.propTypes = {
+    // From parent.
     dotKeys: PropTypes.object.isRequired,
     accessHighlighted: PropTypes.bool,
     isSelected: PropTypes.bool,

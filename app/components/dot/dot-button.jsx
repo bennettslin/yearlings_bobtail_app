@@ -24,6 +24,7 @@ const DotButton = ({
 )
 
 DotButton.propTypes = {
+    // From parent.
     isSelected: PropTypes.bool,
     isSmall: PropTypes.bool,
     dotKey: PropTypes.string,

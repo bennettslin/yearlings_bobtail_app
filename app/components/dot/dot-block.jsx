@@ -8,7 +8,6 @@ import { PORTAL, ALL_DOT_KEYS } from '../../constants/dots'
 
 const DotBlock = ({
 
-    // From props.
     dotKeys,
     inDotsSection,
     inAnnotationCard,
@@ -64,6 +63,7 @@ DotBlock.defaultProps = {
 }
 
 DotBlock.propTypes = {
+    // From parent.
     dotKeys: PropTypes.object.isRequired,
     inDotsSection: PropTypes.bool.isRequired,
     inAnnotationCard: PropTypes.bool.isRequired,
