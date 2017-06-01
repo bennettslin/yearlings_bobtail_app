@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex } from '../redux/actions/access'
 import { setDeviceIndex, setWindowHeight, setWindowWidth } from '../redux/actions/device'
 import { setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
-import { setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow } from '../redux/actions/session'
+import { setCarouselAnnotationIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow } from '../redux/actions/session'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './event-manager'
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -27,17 +27,15 @@ import LogHelper from '../helpers/log-helper'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowHeight, windowWidth
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, carouselAnnotationIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowHeight, windowWidth
 }) => ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowHeight, windowWidth
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedAudioOptionIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTimePlayed, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, isCarouselExpandable, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, showSingleBookColumn, carouselAnnotationIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowHeight, windowWidth
 })
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setDeviceIndex, setWindowHeight, setWindowWidth }, dispatch)
+    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setCarouselAnnotationIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setDeviceIndex, setWindowHeight, setWindowWidth }, dispatch)
 )
-
-// let _stateLyricSectionTop = 0
 
 /*************
  * CONTAINER *
@@ -67,6 +65,7 @@ class App extends Component {
         props.accessNavSongIndex(selectedSongIndex)
 
         // Set initial session state.
+        props.setCarouselAnnotationIndex(0)
         props.setIsLyricExpanded(false)
         props.setIsVerseBarAbove(false)
         props.setIsVerseBarBelow(false)
@@ -84,8 +83,6 @@ class App extends Component {
             popupLogueOverview: isLogue ? popupOverview : '',
             popupSongOverview: isLogue ? '' : popupOverview,
 
-            // Selected from annotation in carousel.
-            carouselAnnotationIndex: 0,
             shownBookColumnIndex: getBookColumnIndex(selectedSongIndex),
             interactivatedVerseIndex: -1,
 
@@ -151,8 +148,9 @@ class App extends Component {
          * When selecting next song through audio player, reset annotation and
          * verse, and scroll element into view, but do not access nav section.
          */
-        const { selectedSongIndex } = this.props,
-            selectedAudioOption = AUDIO_OPTIONS[this.props.selectedAudioOptionIndex],
+        const { selectedSongIndex,
+                selectedAudioOptionIndex } = this.props,
+            selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex],
             willAdvance = selectedAudioOption === CONTINUE
 
         // If option is to pause at end, stop play as well.
@@ -231,8 +229,8 @@ class App extends Component {
 
     selectAnnotation({
         selectedAnnotationIndex = 0,
-        direction,
-        selectedSongIndex = this.props.selectedSongIndex
+        selectedSongIndex = this.props.selectedSongIndex,
+        direction
     }) {
         const { props } = this
 
@@ -349,9 +347,7 @@ class App extends Component {
 
         // Not really necessary, but doing it anyway.
         if (!selectedCarouselIndex) {
-            this.setState({
-                carouselAnnotationIndex: 0
-            })
+            this.props.setCarouselAnnotationIndex(0)
         }
 
         return true
@@ -904,9 +900,7 @@ class App extends Component {
 
     selectWiki(selectedWikiIndex = 0, carouselAnnotationIndex = 0) {
         this.props.selectWikiIndex(selectedWikiIndex)
-        this.setState({
-            carouselAnnotationIndex
-        })
+        this.props.setCarouselAnnotationIndex(carouselAnnotationIndex)
     }
 
     /***********

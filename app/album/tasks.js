@@ -5,7 +5,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `R and F don't work right after selecting song.`,
+        taskName: `R and F don't work right after selecting song, because title annotation doesn't have most recent verse index.`,
         workedHours: 0,
         neededHours: 1
     },
