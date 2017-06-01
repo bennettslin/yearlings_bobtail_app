@@ -1,3 +1,5 @@
+// Section to show all song annotations in a carousel layout.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -6,12 +8,12 @@ import Button from '../button/button'
 import { getAnnotationsArray } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
     selectedSongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
 }) => ({
-// Pass Redux state into component props.
     selectedSongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
@@ -47,9 +49,8 @@ class CarouselSection extends Component {
 
 CarouselSection.propTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
-    handleAnnotationPrevious: PropTypes.func.isRequired,
-    handleAnnotationNext: PropTypes.func.isRequired
+    accessedAnnotationIndex: PropTypes.number.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired
 }
 
 /****************
@@ -109,6 +110,14 @@ const CarouselSectionView = ({
             </div>
         </div>
     )
+}
+
+CarouselSectionView.propTypes = {
+    selectedSongIndex: PropTypes.number.isRequired,
+    accessedAnnotationIndex: PropTypes.number.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    handleAnnotationPrevious: PropTypes.func.isRequired,
+    handleAnnotationNext: PropTypes.func.isRequired
 }
 
 export default connect(passReduxStateToProps)(CarouselSection)

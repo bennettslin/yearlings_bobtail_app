@@ -1,3 +1,5 @@
+// Container to show button as dot.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../button/button'
@@ -15,8 +17,8 @@ const DotButton = ({
         buttonClass="dot"
         buttonName={dotKeys ? 'dot-stanza' : undefined}
         iconClass={dotKey || dotKeys}
-        isEnabled={!isSelected}
         isSmall={isSmall}
+        isEnabled={!isSelected}
         handleClick={handleDotButtonClick}
     />
 )

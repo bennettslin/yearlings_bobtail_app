@@ -1,3 +1,5 @@
+// Container to show dot button with underline bar.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
