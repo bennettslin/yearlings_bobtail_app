@@ -5,6 +5,8 @@ import { APP_MOUNTED,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
+         POPUP_LOGUE_OVERVIEW,
+         POPUP_SONG_OVERVIEW,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
 export const setAppMounted = (appMounted = false) => (
@@ -35,6 +37,16 @@ export const setIsVerseBarAbove = (isVerseBarAbove = false) => (
 export const setIsVerseBarBelow = (isVerseBarBelow = false) => (
     { type: IS_VERSE_BAR_BELOW,
       payload: isVerseBarBelow }
+)
+
+export const setPopupLogueOverview = (popupLogueOverview = '') => (
+    { type: POPUP_LOGUE_OVERVIEW,
+      payload: popupLogueOverview }
+)
+
+export const setPopupSongOverview = (popupSongOverview = '') => (
+    { type: POPUP_SONG_OVERVIEW,
+      payload: popupSongOverview }
 )
 
 export const setShownBookColumnIndex = (shownBookColumnIndex = 0) => (

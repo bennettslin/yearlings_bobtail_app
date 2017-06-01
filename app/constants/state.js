@@ -44,6 +44,8 @@ module.exports = {
     IS_LYRIC_EXPANDED: 'isLyricExpanded',
     IS_VERSE_BAR_ABOVE: 'isVerseBarAbove',
     IS_VERSE_BAR_BELOW: 'isVerseBarBelow',
+    POPUP_LOGUE_OVERVIEW: 'popupLogueOverview',
+    POPUP_SONG_OVERVIEW: 'popupSongOverview',
     SHOWN_BOOK_COLUMN_INDEX: 'shownBookColumnIndex',
 
     DEVICE_INDEX: 'deviceIndex',

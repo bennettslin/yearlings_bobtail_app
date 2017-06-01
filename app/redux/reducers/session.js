@@ -5,6 +5,8 @@ import { APP_MOUNTED,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
+         POPUP_LOGUE_OVERVIEW,
+         POPUP_SONG_OVERVIEW,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
 export const AppMountedReducer = (state = false, action) => {
@@ -55,6 +57,24 @@ export const IsVerseBarAboveReducer = (state = false, action) => {
 export const IsVerseBarBelowReducer = (state = false, action) => {
     switch (action.type) {
         case IS_VERSE_BAR_BELOW:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const PopupLogueOverviewReducer = (state = '', action) => {
+    switch (action.type) {
+        case POPUP_LOGUE_OVERVIEW:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const PopupSongOverviewReducer = (state = '', action) => {
+    switch (action.type) {
+        case POPUP_SONG_OVERVIEW:
             return action.payload
         default:
             return state
