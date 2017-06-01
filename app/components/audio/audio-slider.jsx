@@ -10,10 +10,14 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
 
 const passReduxStateToProps = ({
-    interactivatedVerseIndex
+    interactivatedVerseIndex,
+    sliderRatio,
+    sliderVerseIndex
 }) => ({
 // Pass Redux state into component props.
-    interactivatedVerseIndex
+    interactivatedVerseIndex,
+    sliderRatio,
+    sliderVerseIndex
 })
 
 /*************
@@ -32,7 +36,7 @@ class AudioSlider extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'sliderMousedOrTouched',
+                    'isSliderTouched',
                     'selectedSongIndex',
                     'selectedVerseIndex',
                     'interactivatedVerseIndex',
@@ -50,7 +54,7 @@ class AudioSlider extends Component {
     }
 
     render() {
-        const { sliderMousedOrTouched,
+        const { isSliderTouched,
                 selectedSongIndex,
                 selectedVerseIndex,
                 interactivatedVerseIndex,
@@ -62,7 +66,7 @@ class AudioSlider extends Component {
             stanzaTimes = getSongStanzaTimes(selectedSongIndex),
             totalTime = getSongTotalTime(selectedSongIndex),
 
-            workingRatio = sliderMousedOrTouched ? sliderRatio : (selectedTimePlayed / totalTime),
+            workingRatio = isSliderTouched ? sliderRatio : (selectedTimePlayed / totalTime),
 
             spentWidth = workingRatio * 100,
             spentStyle = {
@@ -118,7 +122,7 @@ class AudioSlider extends Component {
 }
 
 AudioSlider.propTypes = {
-    sliderMousedOrTouched: PropTypes.bool.isRequired,
+    isSliderTouched: PropTypes.bool.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,

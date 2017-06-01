@@ -40,7 +40,7 @@ class VerseUnit extends Component {
                     'deviceIndex',
                     'appMounted',
                     'isPortrait',
-                    'sliderMousedOrTouched',
+                    'isSliderTouched',
                     'isPlaying',
                     'accessedAnnotationIndex',
                     'selectedSongIndex',
@@ -103,11 +103,11 @@ class VerseUnit extends Component {
     _getSliderPlacementClassName() {
         const { inMain,
                 isTitle,
-                sliderMousedOrTouched,
+                isSliderTouched,
                 isSliderSelected,
                 isAfterSliderSelected } = this.props
 
-        if (sliderMousedOrTouched && inMain && !isTitle) {
+        if (isSliderTouched && inMain && !isTitle) {
             if (isSliderSelected) {
                 return 'on-slider'
 
@@ -196,7 +196,7 @@ VerseUnit.propTypes = {
     isInteractivated: PropTypes.bool.isRequired,
     inMain: PropTypes.bool,
     inVerseBar: PropTypes.bool,
-    sliderMousedOrTouched: PropTypes.bool,
+    isSliderTouched: PropTypes.bool,
     handleLyricAnnotationSelect: PropTypes.func,
     handleLyricPlay: PropTypes.func,
     handleLyricVerseSelect: PropTypes.func,

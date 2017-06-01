@@ -6,6 +6,7 @@ import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth } from '../redux/actions/device'
 import { setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
 import { setAnnotationObject, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setPopupLogueOverview, setPopupSongOverview, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
+import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './event-manager'
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -31,7 +32,9 @@ const passReduxStateToProps = (state) => (state)
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({ selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAnnotationObject, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setPopupLogueOverview, setPopupSongOverview, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed }, dispatch)
+    bindActionCreators({
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsLyricExpandable, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAnnotationObject, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setPopupLogueOverview, setPopupSongOverview, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+    }, dispatch)
 )
 
 /*************
@@ -77,12 +80,6 @@ class App extends Component {
 
         // Bind this to event handlers.
         this._bindEventHandlers()
-
-        this.state = {
-            sliderVerseIndex: -1,
-            sliderVerseElement: null,
-            sliderMousedOrTouched: false
-        }
     }
 
     componentWillMount() {
@@ -701,48 +698,42 @@ class App extends Component {
             sliderTime = sliderRatio * getSongObject(this.props.selectedSongIndex).totalTime,
             sliderVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, sliderTime)
 
-        this.setState({
-            sliderLeft,
-            sliderWidth,
-            sliderRatio,
-            sliderVerseIndex,
-            sliderMousedOrTouched: true
-        })
+        this.props.setIsSliderTouched(true)
+        this.props.setSliderLeft(sliderLeft)
+        this.props.setSliderRatio(sliderRatio)
+        this.props.setSliderWidth(sliderWidth)
+        this.props.setSliderVerseIndex(sliderVerseIndex)
 
         /**
          * If the move doesn't happen for a while, we recognise that it is
          * moving anyway for styling purposes.
          */
         setTimeout(() => {
-            if (this.state.sliderMousedOrTouched && !this.state.sliderMoving) {
-                this.setState({
-                    sliderMoving: true
-                })
+            if (this.props.isSliderTouched && !this.props.isSliderMoving) {
+                this.props.setIsSliderMoving(true)
             }
         }, 125)
     }
 
     touchBodyMove(clientX) {
-        if (this.state.sliderMousedOrTouched) {
+        if (this.props.isSliderTouched) {
             const { sliderLeft,
-                    sliderWidth } = this.state,
+                    sliderWidth } = this.props,
                 sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
                 sliderTime = sliderRatio * getSongObject(this.props.selectedSongIndex).totalTime,
                 sliderVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, sliderTime)
 
-            this.setState({
-                sliderRatio,
-                sliderVerseIndex,
-                sliderMoving: true
-            })
+            this.props.setSliderRatio(sliderRatio)
+            this.props.setSliderVerseIndex(sliderVerseIndex)
+            this.props.setIsSliderMoving(true)
         }
     }
 
     touchBodyEnd() {
-        if (this.state.sliderMousedOrTouched) {
+        if (this.props.isSliderTouched) {
             const { props } = this,
-                selectedTime = this.state.sliderRatio * getSongObject(props.selectedSongIndex).totalTime,
+                selectedTime = this.props.sliderRatio * getSongObject(props.selectedSongIndex).totalTime,
                 selectedVerseIndex = getVerseIndexForTime(props.selectedSongIndex, selectedTime),
 
                 // We will start at the beginning of the selected verse.
@@ -751,15 +742,14 @@ class App extends Component {
 
             this.selectTime(selectedTimePlayed)
 
-            this.setState({
-                sliderLeft: 0,
-                sliderRatio: 0,
-                sliderWidth: 0,
-                sliderVerseIndex: -1,
-                sliderMoving: false,
-                sliderMousedOrTouched: false,
-                sliderVerseElement: null
-            })
+            // Reset slider state.
+            this.props.setIsSliderMoving(false)
+            this.props.setIsSliderTouched(false)
+            this.props.setSliderLeft(0)
+            this.props.setSliderRatio(0)
+            this.props.setSliderWidth(0)
+            this.props.setSliderVerseElement(null)
+            this.props.setSliderVerseIndex(-1)
         }
     }
 
@@ -823,21 +813,16 @@ class App extends Component {
     }
 
     slideVerseElement(sliderVerseElement) {
-        if (sliderVerseElement !== this.state.sliderVerseElement) {
+        if (sliderVerseElement !== this.props.sliderVerseElement) {
 
             const { isVerseBarAbove,
-                    isVerseBarBelow } = getVerseBarStatus(this.props.deviceIndex, this.props.windowHeight, this.props.isLyricExpanded, sliderVerseElement),
-
-                newState = {}
-
-            newState.sliderVerseElement = sliderVerseElement
+                    isVerseBarBelow } = getVerseBarStatus(this.props.deviceIndex, this.props.windowHeight, this.props.isLyricExpanded, sliderVerseElement)
 
             /**
              * Slider verse element overrides selected verse element, as long
              * as the slider is touched.
              */
-            this.setState(newState)
-
+            this.props.setSliderVerseElement(sliderVerseElement)
             this.props.setIsVerseBarAbove(isVerseBarAbove)
             this.props.setIsVerseBarBelow(isVerseBarBelow)
         }

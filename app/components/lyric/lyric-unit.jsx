@@ -21,7 +21,7 @@ class LyricUnit extends Component {
                     'deviceIndex',
                     'appMounted',
                     'isPortrait',
-                    'sliderMousedOrTouched',
+                    'isSliderTouched',
                     'sliderVerseIndex',
                     'isPlaying',
                     'accessedAnnotationIndex',

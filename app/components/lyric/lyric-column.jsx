@@ -14,6 +14,7 @@ const passReduxStateToProps = ({
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
     selectedVerseIndex,
+    sliderVerseIndex,
     accessedAnnotationIndex,
     showOneOfTwoLyricColumns,
     appMounted,
@@ -26,6 +27,7 @@ const passReduxStateToProps = ({
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
     selectedVerseIndex,
+    sliderVerseIndex,
     accessedAnnotationIndex,
     showOneOfTwoLyricColumns,
     appMounted,
@@ -71,7 +73,7 @@ class LyricColumn extends Component {
                     'selectedLyricColumnIndex',
                     'selectedVerseIndex',
                     'showOneOfTwoLyricColumns',
-                    'sliderMousedOrTouched',
+                    'isSliderTouched',
 
                     // For lyric expand button.
                     // FIXME: Not ideal.
@@ -128,7 +130,7 @@ LyricColumn.propTypes = {
     deviceIndex: PropTypes.number.isRequired,
     isLogue: PropTypes.bool.isRequired,
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-    sliderMousedOrTouched: PropTypes.bool.isRequired,
+    isSliderTouched: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
     isPortrait: PropTypes.bool.isRequired,
 

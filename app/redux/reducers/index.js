@@ -4,6 +4,7 @@ import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer } from './device'
 import { IsCarouselExpandableReducer, IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsLyricExpandableReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AnnotationObjectReducer, AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, PopupLogueOverviewReducer, PopupSongOverviewReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
+import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseElementReducer, SliderVerseIndexReducer } from './slider'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, NavIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
 
 const rootReducer = combineReducers({
@@ -41,6 +42,14 @@ const rootReducer = combineReducers({
     popupSongOverview: PopupSongOverviewReducer,
     selectedVerseElement: SelectedVerseElementReducer,
     shownBookColumnIndex: ShownBookColumnIndexReducer,
+
+    isSliderMoving: IsSliderMovingReducer,
+    isSliderTouched: IsSliderTouchedReducer,
+    sliderLeft: SliderLeftReducer,
+    sliderRatio: SliderRatioReducer,
+    sliderWidth: SliderWidthReducer,
+    sliderVerseElement: SliderVerseElementReducer,
+    sliderVerseIndex: SliderVerseIndexReducer,
 
     selectedAccessIndex: AccessIndexReducer,
     selectedAdminIndex: AdminIndexReducer,

@@ -40,6 +40,15 @@ module.exports = {
     SELECTED_VERSE_ELEMENT: 'selectedVerseElement',
     SHOWN_BOOK_COLUMN_INDEX: 'shownBookColumnIndex',
 
+    // Slider.
+    IS_SLIDER_MOVING: 'isSliderMoving',
+    IS_SLIDER_TOUCHED: 'isSliderTouched',
+    SLIDER_LEFT: 'sliderLeft',
+    SLIDER_RATIO: 'sliderRatio',
+    SLIDER_WIDTH: 'sliderWidth',
+    SLIDER_VERSE_ELEMENT: 'sliderVerseElement',
+    SLIDER_VERSE_INDEX: 'sliderVerseIndex',
+
     // Storage.
     SELECTED_ACCESS_INDEX: 'selectedAccessIndex',
     SELECTED_ADMIN_INDEX: 'selectedAdminIndex',

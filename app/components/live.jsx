@@ -23,9 +23,9 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, isSliderMoving, isSliderTouched
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, isSliderMoving, isSliderTouched
 })
 
 /*************
@@ -71,8 +71,8 @@ const LiveView = ({
 
     interactivatedVerseIndex,
 
-    sliderMoving,
-    sliderMousedOrTouched,
+    isSliderMoving,
+    isSliderTouched,
     sliderRatio,
     sliderVerseIndex,
     showOneOfTwoLyricColumns,
@@ -163,7 +163,7 @@ const LiveView = ({
         audioBannerProps = {
             sliderVerseIndex,
             sliderRatio,
-            sliderMousedOrTouched,
+            isSliderTouched,
             handlePlayerTimeChange,
             handleAudioSliderTouchBegin,
 
@@ -214,7 +214,7 @@ const LiveView = ({
             // For lyrics line width reset.
             isPortrait: windowHeight > windowWidth,
 
-            sliderMousedOrTouched,
+            isSliderTouched,
             sliderVerseIndex,
             isLogue,
             isPlaying,
@@ -310,7 +310,7 @@ const LiveView = ({
             isLogue ? 'is-logue' : 'is-song',
             isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
             isOverlaidAnnotation ? 'overlaid-annotation' : 'side-annotation',
-            sliderMoving ? 'slider-moving' : 'slider-not-moving',
+            isSliderMoving ? 'slider-moving' : 'slider-not-moving',
             interactivatedVerseIndex < 0 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
             selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
             selectedCarouselIndex ? 'carousel-expanded' : 'carousel-collapsed',
