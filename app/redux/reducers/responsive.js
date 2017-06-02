@@ -1,7 +1,7 @@
 // Reducers for state based on window size.
 import { IS_HEIGHTLESS_LYRIC_COLUMN,
          IS_HIDDEN_NAV,
-         IS_LYRIC_EXPANDABLE,
+         IS_MOBILE_WIKI,
          IS_SCORES_TIPS_IN_MAIN,
          IS_TITLE_IN_AUDIO,
          SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
@@ -26,9 +26,9 @@ export const IsHiddenNavReducer = (state = false, action) => {
     }
 }
 
-export const IsLyricExpandableReducer = (state = false, action) => {
+export const IsMobileWikiReducer = (state = false, action) => {
     switch (action.type) {
-        case IS_LYRIC_EXPANDABLE:
+        case IS_MOBILE_WIKI:
             return action.payload
         default:
             return state

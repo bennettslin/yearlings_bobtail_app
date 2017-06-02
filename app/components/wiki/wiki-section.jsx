@@ -13,15 +13,13 @@ const passReduxStateToProps = ({
     selectedWikiIndex,
     selectedAnnotationIndex,
     carouselAnnotationIndex,
-    deviceIndex,
-    windowWidth
+    isMobileWiki
 }) => ({
     selectedSongIndex,
     selectedWikiIndex,
     selectedAnnotationIndex,
     carouselAnnotationIndex,
-    deviceIndex,
-    windowWidth
+    isMobileWiki
 })
 
 // TODO: Show that active wiki anchor is disabled.
@@ -49,8 +47,7 @@ class WikiSection extends Component {
                     'selectedWikiIndex',
                     'selectedAnnotationIndex',
                     'carouselAnnotationIndex',
-                    'deviceIndex',
-                    'windowWidth'
+                    'isMobileWiki'
                 ]
             }) || getComponentShouldUpdate({
                 props: state,
@@ -82,7 +79,7 @@ class WikiSection extends Component {
     render() {
         const { webviewLoading } = this.state,
 
-            // Use all props received through Redux.
+            // Use all props passed through Redux.
             selectedWikiUrl = getWikiUrl(this.props)
 
         return (
@@ -112,8 +109,7 @@ WikiSection.propTypes = {
     selectedWikiIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     carouselAnnotationIndex: PropTypes.number.isRequired,
-    deviceIndex: PropTypes.number.isRequired,
-    windowWidth: PropTypes.number.isRequired,
+    isMobileWiki: PropTypes.bool.isRequired,
 
     // From parent.
     wikiSectionRef: PropTypes.func.isRequired

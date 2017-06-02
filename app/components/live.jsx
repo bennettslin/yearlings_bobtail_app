@@ -20,30 +20,23 @@ import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
 import ScoreTransitionPopup from './score/score-transition-popup'
 import TitleTransitionPopup from './title/title-transition-popup'
 import WikiTransitionPopup from './wiki/wiki-transition-popup'
-// import { getWikiUrl } from '../helpers/logic-helper'
 import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
+import { getIsLyricExpandable } from '../helpers/responsive-helper'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, isSliderMoving, isSliderTouched
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, isSliderMoving, isSliderTouched
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isLyricExpandable, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, isSliderMoving, isSliderTouched
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, isSliderMoving, isSliderTouched
 })
 
 /*************
  * CONTAINER *
  *************/
 
-const Live = (props) => {
-
-    // const selectedWikiUrl = getWikiUrl(props)
-
-    return (
-        <LiveView {...props}
-            // selectedWikiUrl={selectedWikiUrl}
-        />
-    )
-}
+const Live = (props) => (
+    <LiveView {...props} />
+)
 
 /****************
  * PRESENTATION *
@@ -79,7 +72,6 @@ const LiveView = ({
     sliderVerseIndex,
     showOneOfTwoLyricColumns,
     isLyricExpanded,
-    isLyricExpandable,
     isHeightlessLyricColumn,
     isHiddenNav,
     showShrunkNavIcon,
@@ -236,7 +228,7 @@ const LiveView = ({
             handleScrollAfterLyricRerender
         },
 
-        lyricExpandButtonChild = isLyricExpandable ? (
+        lyricExpandButtonChild = getIsLyricExpandable(deviceIndex) ? (
                 <div className="lyric-button-block expand-button-block">
                     <Button
                         accessKey={LYRIC_SECTION_EXPAND_KEY}

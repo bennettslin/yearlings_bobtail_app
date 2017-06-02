@@ -10,7 +10,7 @@ import { getAnnotationObject,
          getSongAnnotationsDotKeys,
          getAnnotationsLength } from './data-helper'
 import { intersects } from './dot-helper'
-import { getIsMobileWiki, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
+import { getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
 
 export const shouldShowAnnotationForColumn = ({
 
@@ -400,12 +400,15 @@ export const getTasks = (selectedSong, tasks) => {
     return songTasks ? songTasks : tasks
 }
 
-export const getWikiUrl = (props) => {
-    const { selectedSongIndex,
-            selectedWikiIndex,
-            selectedAnnotationIndex,
-            carouselAnnotationIndex } = props
+export const getWikiUrl = ({
 
+    selectedSongIndex,
+    selectedWikiIndex,
+    selectedAnnotationIndex,
+    carouselAnnotationIndex,
+    isMobileWiki
+
+}) => {
     if (selectedWikiIndex) {
         // Since annotation index is 1-based, it's invalid if 0.
         const annotationIndex = carouselAnnotationIndex || selectedAnnotationIndex,
@@ -416,8 +419,7 @@ export const getWikiUrl = (props) => {
 
         // It's a Wikipedia page.
         if (partialPath.indexOf('http') === -1) {
-            const isMobileWiki = getIsMobileWiki(props),
-                domainPath = isMobileWiki ? 'https://en.m.wikipedia.org/wiki/' : 'https://www.wikipedia.org/wiki/'
+            const domainPath = isMobileWiki ? 'https://en.m.wikipedia.org/wiki/' : 'https://www.wikipedia.org/wiki/'
 
             fullPath = `${domainPath}${partialPath}`
 

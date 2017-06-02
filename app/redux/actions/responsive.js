@@ -1,7 +1,7 @@
 // Actions for state based on window size.
 import { IS_HEIGHTLESS_LYRIC_COLUMN,
          IS_HIDDEN_NAV,
-         IS_LYRIC_EXPANDABLE,
+         IS_MOBILE_WIKI,
          IS_SCORES_TIPS_IN_MAIN,
          IS_TITLE_IN_AUDIO,
          SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
@@ -18,9 +18,9 @@ export const setIsHiddenNav = (isHiddenNav = false) => (
       payload: isHiddenNav }
 )
 
-export const setIsLyricExpandable = (isLyricExpandable = false) => (
-    { type: IS_LYRIC_EXPANDABLE,
-      payload: isLyricExpandable }
+export const setIsMobileWiki = (isMobileWiki = false) => (
+    { type: IS_MOBILE_WIKI,
+      payload: isMobileWiki }
 )
 
 export const setIsScoresTipsInMain = (isScoresTipsInMain = false) => (
