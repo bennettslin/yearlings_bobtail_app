@@ -6,8 +6,8 @@ import { ANNOTATION_OBJECT,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
-         POPUP_LOGUE_OVERVIEW,
-         POPUP_SONG_OVERVIEW,
+         OVERVIEW_LOGUE_INDEX,
+         OVERVIEW_SONG_INDEX,
          SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
@@ -74,18 +74,18 @@ export const IsVerseBarBelowReducer = (state = false, action) => {
     }
 }
 
-export const PopupLogueOverviewReducer = (state = '', action) => {
+export const OverviewLogueIndexReducer = (state = -1, action) => {
     switch (action.type) {
-        case POPUP_LOGUE_OVERVIEW:
+        case OVERVIEW_LOGUE_INDEX:
             return action.payload
         default:
             return state
     }
 }
 
-export const PopupSongOverviewReducer = (state = '', action) => {
+export const OverviewSongIndexReducer = (state = -1, action) => {
     switch (action.type) {
-        case POPUP_SONG_OVERVIEW:
+        case OVERVIEW_SONG_INDEX:
             return action.payload
         default:
             return state

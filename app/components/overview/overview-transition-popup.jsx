@@ -1,17 +1,22 @@
+// Popup container for overview section.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import OverviewSection from './overview-section'
 import TransitionPopup from '../popup/transition-popup'
 import { getIsLogue } from '../../helpers/data-helper'
+import { getIsToggleInOverview } from '../../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
+    deviceIndex,
     selectedOverviewIndex,
     selectedSongIndex,
     selectedTitleIndex
 }) => ({
+    deviceIndex,
     selectedOverviewIndex,
     selectedSongIndex,
     selectedTitleIndex
@@ -25,12 +30,10 @@ class OverviewTransitionPopup extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'overviewText',
+                    'deviceIndex',
                     'selectedOverviewIndex',
                     'selectedSongIndex',
-                    'selectedTitleIndex',
-                    'isPhone',
-                    'inOverviewSubfield'
+                    'selectedTitleIndex'
                 ]
             })
 
@@ -38,7 +41,8 @@ class OverviewTransitionPopup extends Component {
     }
 
     render() {
-        const { inOverviewSubfield,
+        const { deviceIndex,
+                inOverviewSubfield,
                 selectedOverviewIndex,
                 selectedSongIndex,
                 selectedTitleIndex,
@@ -46,22 +50,24 @@ class OverviewTransitionPopup extends Component {
                 ...other } = this.props,
 
             isLogue = getIsLogue(selectedSongIndex),
+            isToggleInOverview = getIsToggleInOverview(deviceIndex),
 
             myChild = (
                 <OverviewSection {...other}
-                    isLogue={isLogue}
+                    isToggleInOverview={isToggleInOverview}
                 />
             )
 
         let isVisible
 
+        // Switch between logue and song overview sections.
         if (isLogue) {
             isVisible = !inOverviewSubfield
         } else {
             isVisible = selectedOverviewIndex ? false : inOverviewSubfield
         }
 
-        // Always hide overview when title is selected.
+        // Always hide overview section when title is selected.
         if (selectedTitleIndex) {
             isVisible = false
         }
@@ -78,17 +84,14 @@ class OverviewTransitionPopup extends Component {
 }
 
 OverviewTransitionPopup.propTypes = {
-    overviewText: PropTypes.string.isRequired,
-    isPhone: PropTypes.bool.isRequired,
-    inOverviewSubfield: PropTypes.bool.isRequired,
-
     // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
 
-    // From props.
-    handleOverviewToggle: PropTypes.func.isRequired,
+    // From parent.
+    inOverviewSubfield: PropTypes.bool.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 

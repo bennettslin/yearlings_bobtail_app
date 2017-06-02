@@ -1,36 +1,41 @@
+// Section to show song overview.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import TextBlock from '../text/text-block'
+import { getOverview } from '../../helpers/data-helper'
 
 const OverviewSection = ({
 
-    // From props.
-    isPhone,
-    isLogue,
-    overviewText,
+    isToggleInOverview,
+    overviewIndex,
     overviewButtonChild
 
-}) => (
-    <div className="section overview-section">
-        <div className="overview-text">
-            {!isLogue && isPhone &&
-                <div className="overview-toggle-section">
-                    {overviewButtonChild}
-                </div>
-            }
-            <TextBlock
-                isLyric={false}
-                text={overviewText}
-            />
+}) => {
+    const overviewText = getOverview(overviewIndex)
+
+    return (
+        <div className="section overview-section">
+            <div className="overview-text">
+                {isToggleInOverview &&
+                    <div className="overview-toggle-section">
+                        {overviewButtonChild}
+                    </div>
+                }
+                <TextBlock
+                    isLyric={false}
+                    text={overviewText}
+                />
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 OverviewSection.propTypes = {
-    isPhone: PropTypes.bool.isRequired,
-    isLogue: PropTypes.bool.isRequired,
-    overviewText: PropTypes.string.isRequired,
-    overviewButtonChild: PropTypes.element
+    // From parent.
+    isToggleInOverview: PropTypes.bool.isRequired,
+    overviewIndex: PropTypes.number.isRequired,
+    overviewButtonChild: PropTypes.element.isRequired
 }
 
 export default OverviewSection

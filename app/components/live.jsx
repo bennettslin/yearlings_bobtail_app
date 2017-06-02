@@ -25,9 +25,9 @@ import { getIsLyricExpandable } from '../helpers/responsive-helper'
 
 // Pass Redux state into component props.
 const passReduxStateToProps = ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, isSliderMoving, isSliderTouched
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, popupLogueOverview, popupSongOverview, isSliderMoving, isSliderTouched
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
 })
 
 /*************
@@ -52,8 +52,8 @@ const LiveView = ({
     isPhone,
     isDesktop,
     annotationObject,
-    popupLogueOverview,
-    popupSongOverview,
+    overviewLogueIndex,
+    overviewSongIndex,
     isPlaying,
     isLogue,
     selectedAnnotationIndex,
@@ -62,7 +62,6 @@ const LiveView = ({
     selectedDotsIndex,
     selectedLyricColumnIndex,
     selectedNavIndex,
-    // selectedWikiUrl,
 
     interactivatedVerseIndex,
 
@@ -245,8 +244,6 @@ const LiveView = ({
             isPhone,
             isDesktop,
 
-            // selectedWikiUrl,
-
             handleCarouselToggle,
             handleDotsSectionToggle,
             handleNavExpand,
@@ -259,17 +256,14 @@ const LiveView = ({
             titleToggleChild
         },
 
-        overviewToggleProps = {
-            handleOverviewToggle
-        },
-
+        overviewButtonChild = (
+            <OverviewToggle
+                handleOverviewToggle={handleOverviewToggle}
+            />
+        ),
         overviewPopupProps = {
-            isPhone,
-            isLogue,
             handlePopupContainerClick,
-
-            // For toggle in popup in phone.
-            handleOverviewToggle
+            overviewButtonChild
         },
 
         scoresTipsSectionProps = {
@@ -324,7 +318,7 @@ const LiveView = ({
             <div className="column overview-logue-column">
                 <OverviewTransitionPopup {...overviewPopupProps}
                     inOverviewSubfield={false}
-                    overviewText={popupLogueOverview}
+                    overviewIndex={overviewLogueIndex}
                 />
             </div>
             <MainColumn {...mainColumnProps}
@@ -334,11 +328,10 @@ const LiveView = ({
                 overviewPopupChild={
                     <OverviewTransitionPopup {...overviewPopupProps}
                         inOverviewSubfield={true}
-                        overviewText={popupSongOverview}
-                        overviewButtonChild={ <OverviewToggle {...overviewToggleProps} /> }
+                        overviewIndex={overviewSongIndex}
                     />
                 }
-                overviewButtonChild={ <OverviewToggle {...overviewToggleProps} /> }
+                overviewButtonChild={overviewButtonChild}
                 lyricExpandButtonChild={lyricExpandButtonChild}
                 scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
             />

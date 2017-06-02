@@ -6,8 +6,8 @@ import { ANNOTATION_OBJECT,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
-         POPUP_LOGUE_OVERVIEW,
-         POPUP_SONG_OVERVIEW,
+         OVERVIEW_LOGUE_INDEX,
+         OVERVIEW_SONG_INDEX,
          SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
@@ -46,14 +46,14 @@ export const setIsVerseBarBelow = (isVerseBarBelow = false) => (
       payload: isVerseBarBelow }
 )
 
-export const setPopupLogueOverview = (popupLogueOverview = '') => (
-    { type: POPUP_LOGUE_OVERVIEW,
-      payload: popupLogueOverview }
+export const setOverviewLogueIndex = (overviewLogueIndex = -1) => (
+    { type: OVERVIEW_LOGUE_INDEX,
+      payload: overviewLogueIndex }
 )
 
-export const setPopupSongOverview = (popupSongOverview = '') => (
-    { type: POPUP_SONG_OVERVIEW,
-      payload: popupSongOverview }
+export const setOverviewSongIndex = (overviewSongIndex = -1) => (
+    { type: OVERVIEW_SONG_INDEX,
+      payload: overviewSongIndex }
 )
 
 export const setSelectedVerseElement = (selectedVerseElement = null) => (

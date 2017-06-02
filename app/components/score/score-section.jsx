@@ -1,4 +1,4 @@
-// Webview to show score.
+// Webview to show song score.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'

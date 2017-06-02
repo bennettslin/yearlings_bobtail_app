@@ -31,7 +31,7 @@ export const getVerseObject = (songIndex, verseIndex, songs = AlbumData.songs) =
 
 export const getOverview = (songIndex) => {
     const song = getSongObject(songIndex)
-    return song.overview
+    return song ? song.overview : ''
 }
 
 export const getIsLogue = (songIndex, songs = AlbumData.songs) => {
