@@ -668,10 +668,7 @@ class EventManager extends Component {
         exemptLyric,
         exemptNav,
         exemptOverview,
-        exemptInteractivatedVerse,
-
-        forceCloseCarousel,
-        forceCloseLyric
+        exemptInteractivatedVerse
     }) {
 
         const { selectedScoreIndex,
@@ -697,7 +694,7 @@ class EventManager extends Component {
         }
 
         if (!exemptCarousel) {
-            this.props.selectCarousel(false, forceCloseCarousel)
+            this.props.selectCarousel(false)
         }
 
         if (!exemptDots) {
@@ -705,7 +702,7 @@ class EventManager extends Component {
         }
 
         if (!exemptLyric) {
-            this.props.selectLyricExpand(false, forceCloseLyric)
+            this.props.selectLyricExpand(false)
         }
 
         if (!exemptNav) {

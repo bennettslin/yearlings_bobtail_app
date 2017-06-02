@@ -22,7 +22,7 @@ import { CONTINUE,
          TIPS_OPTIONS } from '../constants/options'
 import { getSongObject, getSongsLength, getIsLogue, getAnnotationObject, getBookColumnIndex, getOverview, getSongVerseTimes } from '../helpers/data-helper'
 import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
-import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
+import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
 /*********
@@ -390,14 +390,26 @@ class App extends Component {
      * LYRIC *
      *********/
 
-    selectLyricExpand(isLyricExpanded = !this.props.isLyricExpanded, overrideException) {
+    selectLyricExpand(isLyricExpanded = !this.props.isLyricExpanded) {
+
+        // We shouldn't be able to expand or collapse lyric while in logue.
+        if (getIsLogue(this.props.selectedSongIndex)) {
+            return false
+        }
 
         /**
-         * We should ignore this call if lyric is not expandable, or if it's a
-         * logue. However, allow nav to override this exception.
+         * We shouldn't be able to expand lyric under these conditions. So
+         * return false if it's already collapsed, or collapse it if not.
          */
-        if (!overrideException && (!this.props.isLyricExpandable || getIsLogue(this.props.selectedSongIndex))) {
-            return false
+        if (!getIsLyricExpandable(this.props.deviceIndex) ||
+                this.props.isHeightlessLyricColumn) {
+
+            if (!this.props.isLyricExpanded) {
+                return false
+
+            } else {
+                isLyricExpanded = false
+            }
         }
 
         this.props.setIsLyricExpanded(isLyricExpanded)
@@ -930,6 +942,7 @@ class App extends Component {
               windowWidth } = resizeWindow(e ? e.target : undefined),
 
             isCarouselExpandable = getIsCarouselExpandable(deviceIndex),
+            isLyricExpandable = getIsLyricExpandable(deviceIndex),
             isHeightlessLyricColumn = getIsHeightlessLyricColumn({ deviceIndex, windowHeight, windowWidth }),
             showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, deviceIndex)
 
@@ -952,8 +965,16 @@ class App extends Component {
          * heightless lyric.
          */
         if (!isCarouselExpandable || isHeightlessLyricColumn) {
-            this.selectCarousel(false, true)
+            this.selectCarousel(false)
         }
+
+        /**
+         * Force collapse of lyric in state if not expandable, or if heightless
+         * lyric.
+         */
+         if (!isLyricExpandable || isHeightlessLyricColumn) {
+             this.selectLyricExpand(false)
+         }
 
         // Force collapse of score in state if not expandable.
         if (!getIsScoreExpandable(deviceIndex)) {
