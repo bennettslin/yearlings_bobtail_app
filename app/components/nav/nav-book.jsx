@@ -24,13 +24,13 @@ const NavBookView = ({
 
 ...other }) => {
 
-    const isFirstColumn = bookIndex === 1,
+    const isFirstColumn = bookIndex === 0,
 
         rowReverse = !isFirstColumn,
         songsLength = getSongsLength(),
 
-        beginArrayIndex = getStartingIndexForBook(bookIndex - 1),
-        endArrayIndex = isFirstColumn ? getStartingIndexForBook(bookIndex) : songsLength - 1
+        beginArrayIndex = getStartingIndexForBook(bookIndex),
+        endArrayIndex = isFirstColumn ? getStartingIndexForBook(bookIndex + 1) : songsLength - 1
 
     return (
         <div className="nav-book songs">

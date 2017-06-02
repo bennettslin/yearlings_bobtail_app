@@ -61,7 +61,7 @@ export const setSelectedVerseElement = (selectedVerseElement = null) => (
       payload: selectedVerseElement }
 )
 
-export const setShownBookColumnIndex = (shownBookColumnIndex = 0) => (
+export const setShownBookColumnIndex = (shownBookColumnIndex = -1) => (
     { type: SHOWN_BOOK_COLUMN_INDEX,
       payload: shownBookColumnIndex }
 )

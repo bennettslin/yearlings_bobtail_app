@@ -97,18 +97,18 @@ const NavSectionView = ({
                     <div className={classnames(
                         'books-column-block',
                         'column-1',
-                        !showSingleBookColumn || shownBookColumnIndex === 1 ? ' column-shown' : ' column-hidden'
+                        !showSingleBookColumn || shownBookColumnIndex === 0 ? ' column-shown' : ' column-hidden'
                     )}>
                         <div className="books-column">
                             {/* songs 1 - 9 */}
                             <NavBook {...navItemProps}
-                                bookIndex={1}
+                                bookIndex={0}
                             />
                             {/* prologue or toggle */}
                             {/* TODO: Make this a single component, not a ternary. */}
-                            {showSingleBookColumn && shownBookColumnIndex === 2 ?
+                            {showSingleBookColumn && shownBookColumnIndex === 1 ?
                                 <NavBookButton
-                                    bookIndex={1}
+                                    bookIndex={0}
                                     handleButtonClick={handleNavBookSelect}
                                 /> :
                                 <NavLogueButton {...navItemProps}
@@ -120,17 +120,17 @@ const NavSectionView = ({
                     <div className={classnames(
                         'books-column-block',
                         'column-2',
-                        !showSingleBookColumn || shownBookColumnIndex === 2 ? ' column-shown' : ' column-hidden'
+                        !showSingleBookColumn || shownBookColumnIndex === 1 ? ' column-shown' : ' column-hidden'
                     )}>
                         <div className="books-column">
                             {/* songs 10 - 18 */}
                             <NavBook {...navItemProps}
-                                bookIndex={2}
+                                bookIndex={1}
                             />
                             {/* epilogue or toggle */}
-                            {showSingleBookColumn && shownBookColumnIndex === 1 ?
+                            {showSingleBookColumn && shownBookColumnIndex === 0 ?
                                 <NavBookButton
-                                    bookIndex={2}
+                                    bookIndex={1}
                                     handleButtonClick={handleNavBookSelect}
                                 /> :
                                 <NavLogueButton {...navItemProps}

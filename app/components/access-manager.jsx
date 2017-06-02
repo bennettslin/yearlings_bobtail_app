@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import DomManager from './dom-manager'
 import { getSongsLength,
-         getBookStartingIndices } from '../helpers/data-helper'
+         getBookColumnIndex } from '../helpers/data-helper'
 import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getAnnotationAnchorIndexForDirection } from '../helpers/logic-helper'
@@ -318,13 +318,12 @@ class AccessManager extends Component {
 
             if (direction) {
                 const { shownBookColumnIndex } = this.props,
-                    bookStartingIndices = getBookStartingIndices(),
                     songsLength = getSongsLength()
 
                 accessedNavSongIndex = (accessedNavSongIndex + songsLength + direction) % songsLength
 
                 // Select the book column that contains the accessed song index.
-                if ((shownBookColumnIndex === 1 && accessedNavSongIndex >= bookStartingIndices[1]) || (shownBookColumnIndex === 2 && accessedNavSongIndex < bookStartingIndices[1])) {
+                if (shownBookColumnIndex !== getBookColumnIndex(accessedNavSongIndex)) {
                     this.props.handleNavBookSelect(e)
                 }
 

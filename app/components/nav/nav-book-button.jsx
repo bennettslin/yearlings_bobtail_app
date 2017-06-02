@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from './nav-button'
-import { getStartingIndexForBook } from '../../helpers/data-helper'
+import { getBookColumnIndex } from '../../helpers/data-helper'
 
 const passReduxStateToProps = ({
     selectedSongIndex
@@ -21,10 +21,7 @@ const NavBookButton = ({
 
 ...other }) => {
 
-    const bookTwoStartingIndex = getStartingIndexForBook(1),
-        hasSelectedSong = bookIndex === 1 ?
-            selectedSongIndex < bookTwoStartingIndex :
-            selectedSongIndex >= bookTwoStartingIndex
+    const hasSelectedSong = bookIndex === getBookColumnIndex(selectedSongIndex)
 
     return (
         <div className="nav-book toggle">

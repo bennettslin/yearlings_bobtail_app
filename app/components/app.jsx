@@ -498,7 +498,7 @@ class App extends Component {
     }
 
     selectBookColumn({
-        shownBookColumnIndex = (this.props.shownBookColumnIndex) % 2 + 1,
+        shownBookColumnIndex = (this.props.shownBookColumnIndex + 1) % 2,
         resetToDefault,
         selectedNavIndex = this.props.selectedNavIndex,
         selectedSongIndex = this.props.selectedSongIndex

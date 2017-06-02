@@ -101,7 +101,7 @@ export const SelectedVerseElementReducer = (state = null, action) => {
     }
 }
 
-export const ShownBookColumnIndexReducer = (state = 0, action) => {
+export const ShownBookColumnIndexReducer = (state = -1, action) => {
     switch (action.type) {
         case SHOWN_BOOK_COLUMN_INDEX:
             return action.payload

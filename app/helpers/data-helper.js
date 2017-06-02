@@ -46,13 +46,6 @@ export const getAnnotationsLength = (songIndex) => {
     return getAnnotationsArray(songIndex).length
 }
 
-export const getBookColumnIndex = (songIndex) => {
-    const { bookStartingIndices } = AlbumData
-
-    // Assumes two book starting indices.
-    return 1 + (songIndex >= bookStartingIndices[1])
-}
-
 export const getSongTitle = ({
     songIndex,
     songs = AlbumData.songs,
@@ -89,15 +82,16 @@ export const getSongVerseTimes = (songIndex) => {
     return selectedSong.verseTimes || []
 }
 
-// TODO: Get rid of this one, use getStartingIndexForBook instead.
-export const getBookStartingIndices = () => {
-    const { bookStartingIndices } = AlbumData
-    return bookStartingIndices
-}
-
 export const getStartingIndexForBook = (bookIndex) => {
     const { bookStartingIndices } = AlbumData
     return bookStartingIndices[bookIndex]
+}
+
+export const getBookColumnIndex = (songIndex) => {
+    const { bookStartingIndices } = AlbumData
+
+    // Assumes two book starting indices.
+    return songIndex < bookStartingIndices[1] ? 0 : 1
 }
 
 export const getMp3s = () => {
