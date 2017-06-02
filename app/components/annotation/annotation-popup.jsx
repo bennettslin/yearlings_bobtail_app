@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationSection from './annotation-section'
-import TransitionPopup from '../popup/transition-popup'
+import Popup from '../popup/popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const passReduxStateToProps = ({
@@ -24,7 +24,7 @@ const passReduxStateToProps = ({
  * CONTAINER *
  *************/
 
-class AnnotationTransitionPopup extends Component {
+class AnnotationPopup extends Component {
 
     shouldComponentUpdate(nextProps) {
         const { props } = this,
@@ -64,7 +64,7 @@ class AnnotationTransitionPopup extends Component {
             )
 
         return (
-            <TransitionPopup
+            <Popup
                 popupClassName="annotation selected-annotation"
                 isVisible={isVisible}
                 showArrows={true}
@@ -77,7 +77,7 @@ class AnnotationTransitionPopup extends Component {
     }
 }
 
-AnnotationTransitionPopup.propTypes = {
+AnnotationPopup.propTypes = {
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
@@ -88,4 +88,4 @@ AnnotationTransitionPopup.propTypes = {
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(AnnotationTransitionPopup)
+export default connect(passReduxStateToProps)(AnnotationPopup)

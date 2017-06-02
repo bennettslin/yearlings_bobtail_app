@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import OverviewSection from './overview-section'
-import TransitionPopup from '../popup/transition-popup'
+import Popup from '../popup/popup'
 import { getIsLogue } from '../../helpers/data-helper'
 import { getIsToggleInOverview } from '../../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
@@ -22,7 +22,7 @@ const passReduxStateToProps = ({
     selectedTitleIndex
 })
 
-class OverviewTransitionPopup extends Component {
+class OverviewPopup extends Component {
 
     shouldComponentUpdate(nextProps) {
         const { props } = this,
@@ -73,7 +73,7 @@ class OverviewTransitionPopup extends Component {
         }
 
         return (
-            <TransitionPopup
+            <Popup
                 isVisible={isVisible}
                 popupClassName="overview"
                 handlePopupContainerClick={handlePopupContainerClick}
@@ -83,7 +83,7 @@ class OverviewTransitionPopup extends Component {
     }
 }
 
-OverviewTransitionPopup.propTypes = {
+OverviewPopup.propTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
@@ -95,4 +95,4 @@ OverviewTransitionPopup.propTypes = {
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(OverviewTransitionPopup)
+export default connect(passReduxStateToProps)(OverviewPopup)

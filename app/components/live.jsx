@@ -14,12 +14,12 @@ import DotsSection from './dots/dots-section'
 import ScoresTipsSection from './main/scores-tips-section'
 import OverviewToggle from './overview/overview-toggle'
 import TitleToggle from './title/title-toggle'
-import AudioTransitionPopup from './audio/audio-transition-popup'
-import OverviewTransitionPopup from './overview/overview-transition-popup'
-import AnnotationTransitionPopup from './annotation/annotation-transition-popup'
-import ScoreTransitionPopup from './score/score-transition-popup'
-import TitleTransitionPopup from './title/title-transition-popup'
-import WikiTransitionPopup from './wiki/wiki-transition-popup'
+import AudioPopup from './audio/audio-popup'
+import OverviewPopup from './overview/overview-popup'
+import AnnotationPopup from './annotation/annotation-popup'
+import ScorePopup from './score/score-popup'
+import TitlePopup from './title/title-popup'
+import WikiPopup from './wiki/wiki-popup'
 import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 import { getIsLyricExpandable } from '../helpers/responsive-helper'
 
@@ -316,17 +316,17 @@ const LiveView = ({
         )}>
             {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">
-                <OverviewTransitionPopup {...overviewPopupProps}
+                <OverviewPopup {...overviewPopupProps}
                     inOverviewSubfield={false}
                     overviewIndex={overviewLogueIndex}
                 />
             </div>
             <MainColumn {...mainColumnProps}
-                annotationPopupChild={ <AnnotationTransitionPopup {...annotationPopupProps} /> }
+                annotationPopupChild={ <AnnotationPopup {...annotationPopupProps} /> }
                 carouselChild={carouselChild}
                 dotsSectionChild={ <DotsSection {...dotsSectionProps} /> }
                 overviewPopupChild={
-                    <OverviewTransitionPopup {...overviewPopupProps}
+                    <OverviewPopup {...overviewPopupProps}
                         inOverviewSubfield={true}
                         overviewIndex={overviewSongIndex}
                     />
@@ -343,7 +343,7 @@ const LiveView = ({
             {
                 <div className="overlay-popup-subfield">
                     <div className="overlay-popup-block audio-popup-block">
-                        <AudioTransitionPopup {...audioSectionProps}
+                        <AudioPopup {...audioSectionProps}
                             timerInAudio={timerInAudio}
                             isTitleInAudio={false}
                             showOverlay={showOverlay}
@@ -351,11 +351,11 @@ const LiveView = ({
                     </div>
                     <div className="overlay-popup-block main-popup-block">
                         {isOverlaidAnnotation &&
-                            <AnnotationTransitionPopup {...annotationPopupProps} />
+                            <AnnotationPopup {...annotationPopupProps} />
                         }
-                        <TitleTransitionPopup {...titlePopupProps} />
-                        <ScoreTransitionPopup {...scorePopupProps} />
-                        <WikiTransitionPopup {...wikiPopupProps} />
+                        <TitlePopup {...titlePopupProps} />
+                        <ScorePopup {...scorePopupProps} />
+                        <WikiPopup {...wikiPopupProps} />
                     </div>
                 </div>
             }

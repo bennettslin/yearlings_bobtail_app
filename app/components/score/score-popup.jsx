@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import ScoreSection from './score-section'
-import TransitionPopup from '../popup/transition-popup'
+import Popup from '../popup/popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 // Pass Redux state into component props.
@@ -16,7 +16,7 @@ const passReduxStateToProps = ({
     selectedScoreIndex
 })
 
-class ScoreTransitionPopup extends Component {
+class ScorePopup extends Component {
 
     shouldComponentUpdate(nextProps) {
         const { props } = this,
@@ -44,7 +44,7 @@ class ScoreTransitionPopup extends Component {
             )
 
         return (
-            <TransitionPopup
+            <Popup
                 isVisible={isVisible}
                 popupClassName="score"
                 showClose={true}
@@ -56,7 +56,7 @@ class ScoreTransitionPopup extends Component {
     }
 }
 
-ScoreTransitionPopup.propTypes = {
+ScorePopup.propTypes = {
     // Through props.
     selectedSongIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
@@ -65,4 +65,4 @@ ScoreTransitionPopup.propTypes = {
     handleScoreToggle: PropTypes.func.isRequired,
     handlePopupFocus: PropTypes.func.isRequired
 }
-export default connect(passReduxStateToProps)(ScoreTransitionPopup)
+export default connect(passReduxStateToProps)(ScorePopup)

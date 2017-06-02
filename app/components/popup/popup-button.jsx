@@ -7,7 +7,7 @@ import { CLOSE_POPUP_BUTTON,
          PREVIOUS_POPUP_BUTTON,
          NEXT_POPUP_BUTTON } from '../../constants/options'
 
-const TransitionPopupButton = ({
+const PopupButton = ({
 
     handlePopupButtonClick,
     buttonName
@@ -52,9 +52,9 @@ const TransitionPopupButton = ({
     )
 }
 
-TransitionPopupButton.propTypes = {
+PopupButton.propTypes = {
     buttonName: PropTypes.string.isRequired,
     handlePopupButtonClick: PropTypes.func.isRequired
 }
 
-export default TransitionPopupButton
+export default PopupButton

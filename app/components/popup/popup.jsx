@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import TransitionPopupButton from './transition-popup-button'
+import PopupButton from './popup-button'
 
 import { CLOSE_POPUP_BUTTON,
          PREVIOUS_POPUP_BUTTON,
@@ -11,7 +11,7 @@ import { CLOSE_POPUP_BUTTON,
  * CONTAINER *
  *************/
 
-class TransitionPopup extends Component {
+class Popup extends Component {
 
     constructor(props) {
         super(props)
@@ -83,7 +83,7 @@ class TransitionPopup extends Component {
                 )}
                 onTransitionEnd={this._handleTransitionEnd}
             >
-                <TransitionPopupView
+                <PopupView
                     popupClassName={popupClassName}
                     showClose={showClose}
                     showArrows={showArrows}
@@ -98,7 +98,7 @@ class TransitionPopup extends Component {
     }
 }
 
-TransitionPopup.propTypes = {
+Popup.propTypes = {
     popupClassName: PropTypes.string.isRequired,
     isVisible: PropTypes.bool.isRequired,
     showClose: PropTypes.bool,
@@ -114,7 +114,7 @@ TransitionPopup.propTypes = {
  * PRESENTATION *
  ****************/
 
-const TransitionPopupView = ({
+const PopupView = ({
 
     popupClassName,
     showClose,
@@ -143,19 +143,19 @@ const TransitionPopupView = ({
             >
                 {myChild}
                 {showClose &&
-                    <TransitionPopupButton
+                    <PopupButton
                         handlePopupButtonClick={handleCloseClick}
                         buttonName={CLOSE_POPUP_BUTTON}
                     />
                 }
                 {showArrows &&
-                    <TransitionPopupButton
+                    <PopupButton
                         handlePopupButtonClick={handlePreviousClick}
                         buttonName={PREVIOUS_POPUP_BUTTON}
                     />
                 }
                 {showArrows &&
-                    <TransitionPopupButton
+                    <PopupButton
                         handlePopupButtonClick={handleNextClick}
                         buttonName={NEXT_POPUP_BUTTON}
                     />
@@ -165,7 +165,7 @@ const TransitionPopupView = ({
     )
 }
 
-TransitionPopupView.propTypes = {
+PopupView.propTypes = {
     popupClassName: PropTypes.string.isRequired,
     showClose: PropTypes.bool,
     showArrows: PropTypes.bool,
@@ -175,4 +175,4 @@ TransitionPopupView.propTypes = {
     handlePopupContainerClick: PropTypes.func,
     myChild: PropTypes.element.isRequired
 }
-export default TransitionPopup
+export default Popup

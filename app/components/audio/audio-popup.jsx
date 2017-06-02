@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import AudioSection from './audio-section'
-import TransitionPopup from '../popup/transition-popup'
+import Popup from '../popup/popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-class AudioTransitionPopup extends Component {
+class AudioPopup extends Component {
 
     shouldComponentUpdate(nextProps) {
         const { props } = this,
@@ -43,7 +43,7 @@ class AudioTransitionPopup extends Component {
             )
 
         return (
-            <TransitionPopup
+            <Popup
                 popupClassName="audio"
                 isVisible={isVisible}
                 handlePopupContainerClick={handlePopupContainerClick}
@@ -53,7 +53,7 @@ class AudioTransitionPopup extends Component {
     }
 }
 
-AudioTransitionPopup.propTypes = {
+AudioPopup.propTypes = {
     // selectedAudioOptionIndex: PropTypes.number.isRequired,
     // selectedSongIndex: PropTypes.number.isRequired,
     isPhone: PropTypes.bool.isRequired,
@@ -65,4 +65,4 @@ AudioTransitionPopup.propTypes = {
     audioBannerProps: PropTypes.object.isRequired
 }
 
-export default AudioTransitionPopup
+export default AudioPopup
