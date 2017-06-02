@@ -34,12 +34,12 @@
     height: @book-height;
 }
 
-.column-2 {
+.column-1 {
     margin-right: @nav-last-title-margin;
 }
 
 .tablet-width, .mini-width {
-    .column-2 {
+    .column-1 {
         margin-right: 0;
     }
 }
@@ -195,7 +195,7 @@
 // Static margins after icons begin shrinking.
 .shrink-nav-icon {
     .column-shown {
-        &.column-1 {
+        &.column-0 {
             .nav-button-block {
                 &:not(:last-child) {
                     margin-right: 1px;
@@ -203,7 +203,7 @@
             }
         }
 
-        &.column-2 {
+        &.column-1 {
             .nav-button-block {
                 &:not(:last-child) {
                     margin-left: 1px;
@@ -227,7 +227,7 @@
 }
 
 // TODO: Begin animations.
-.column-1 {
+.column-0 {
     .books-column {
         transition: left @animation-default;
     }
@@ -239,7 +239,7 @@
     }
 }
 
-.column-2 {
+.column-1 {
     right: 0;
 
     .books-column {
@@ -271,13 +271,13 @@
 
 .column-hidden {
 
-    &.column-1 {
+    &.column-0 {
         .nav-book.songs {
             left: 0;
         }
     }
 
-    &.column-2 {
+    &.column-1 {
         .nav-book.logue {
             right: 0;
         }

@@ -14,10 +14,6 @@ const passReduxStateToProps = ({
     accessedNavSongIndex
 })
 
-/*************
- * CONTAINER *
- *************/
-
 const NavItem = ({
 
     songIndex,

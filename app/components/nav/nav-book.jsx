@@ -1,23 +1,11 @@
-// Container for all nav song buttons in a book.
+// Container for all song buttons in a book.
 
 import React from 'react'
 import PropTypes from 'prop-types'
 import NavItem from './nav-item'
 import { getSongsLength, getStartingIndexForBook } from '../../helpers/data-helper'
 
-/*************
- * CONTAINER *
- *************/
-
-const NavBook = (props) => (
-    <NavBookView {...props} />
-)
-
-/****************
- * PRESENTATION *
- ****************/
-
-const NavBookView = ({
+const NavBook = ({
 
     // From props.
     bookIndex,
@@ -47,7 +35,7 @@ const NavBookView = ({
     )
 }
 
-NavBookView.propTypes = {
+NavBook.propTypes = {
     // From parent.
     bookIndex: PropTypes.number.isRequired
 }

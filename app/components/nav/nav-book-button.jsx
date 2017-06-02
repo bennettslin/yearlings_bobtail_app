@@ -13,7 +13,6 @@ const passReduxStateToProps = ({
     selectedSongIndex
 })
 
-// TODO: Get directly from Redux.
 const NavBookButton = ({
 
     selectedSongIndex,

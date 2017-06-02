@@ -7,11 +7,11 @@ import { getSongsLength } from '../../helpers/data-helper'
 
 const NavLogueButton = ({
 
-    isPrologue,
+    bookIndex,
 
 ...other }) => {
 
-    const songIndex = isPrologue ? 0 : getSongsLength() - 1
+    const songIndex = bookIndex === 0 ? 0 : getSongsLength() - 1
 
     return (
         <div className="nav-book logue">
@@ -24,7 +24,7 @@ const NavLogueButton = ({
 
 NavLogueButton.propTypes = {
     // From parent.
-    isPrologue: PropTypes.bool.isRequired
+    bookIndex: PropTypes.number.isRequired
 }
 
 export default NavLogueButton
