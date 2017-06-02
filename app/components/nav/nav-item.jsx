@@ -1,6 +1,18 @@
+// Container to show logue or song button in nav section.
+
 import React from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from './nav-button'
+
+const passReduxStateToProps = ({
+    selectedSongIndex,
+    accessedNavSongIndex
+}) => ({
+// Pass Redux state into component props.
+    selectedSongIndex,
+    accessedNavSongIndex
+})
 
 /*************
  * CONTAINER *
@@ -8,31 +20,34 @@ import NavButton from './nav-button'
 
 const NavItem = ({
 
-    index,
-    isToggle,
-    hasSelectedSong,
+    songIndex,
     selectedSongIndex,
     accessedNavSongIndex,
 
 ...other }) => {
 
-    const isSelected = isToggle ? hasSelectedSong : selectedSongIndex === index,
-        accessHighlighted = accessedNavSongIndex === index,
-        navItemProps = {
-            songIndex: index,
+    const isSelected = selectedSongIndex === songIndex,
+        accessHighlighted = accessedNavSongIndex === songIndex,
+        navButtonProps = {
+            songIndex,
             isSelected,
             accessHighlighted
         }
 
-    return <NavButton {...other} {...navItemProps} />
+    return (
+        <NavButton {...other}
+            {...navButtonProps}
+        />
+    )
 }
 
 NavItem.propTypes = {
-    isToggle: PropTypes.bool,
-    hasSelectedSong: PropTypes.bool,
-    index: PropTypes.number,
+    // Through Redux.
     accessedNavSongIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired
+    selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    songIndex: PropTypes.number.isRequired
 }
 
-export default NavItem
+export default connect(passReduxStateToProps)(NavItem)

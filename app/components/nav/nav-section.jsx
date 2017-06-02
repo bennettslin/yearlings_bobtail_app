@@ -4,22 +4,19 @@ import classnames from 'classnames'
 import { connect } from 'react-redux'
 import NavBook from './nav-book'
 import NavToggle from './nav-toggle'
-import { getBookStartingIndices, getSongsLength } from '../../helpers/data-helper'
+import NavBookButton from './nav-book-button'
+import NavLogueButton from './nav-logue-button'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
-
-import AlbumData from '../../album-data'
-
-const { songs } = AlbumData
 
 const passReduxStateToProps = ({
     selectedSongIndex,
-    accessedNavSongIndex,
+    // accessedNavSongIndex,
     showSingleBookColumn,
     shownBookColumnIndex
 }) => ({
 // Pass Redux state into component props.
     selectedSongIndex,
-    accessedNavSongIndex,
+    // accessedNavSongIndex,
     showSingleBookColumn,
     shownBookColumnIndex
 })
@@ -28,6 +25,7 @@ const passReduxStateToProps = ({
  * CONTAINER *
  *************/
 
+// TODO: Make single component.
 class NavSection extends Component {
 
     shouldComponentUpdate(nextProps) {
@@ -37,8 +35,8 @@ class NavSection extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'showSingleBookColumn',
-                    'accessedNavSongIndex',
-                    'selectedSongIndex',
+                    // 'accessedNavSongIndex',
+                    // 'selectedSongIndex',
                     'shownBookColumnIndex'
                 ]
             })
@@ -55,7 +53,6 @@ class NavSection extends Component {
 
 NavSection.propTypes = {
     showSingleBookColumn: PropTypes.bool.isRequired,
-    accessedNavSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     shownBookColumnIndex: PropTypes.number.isRequired,
     handleNavExpand: PropTypes.func,
@@ -70,8 +67,8 @@ NavSection.propTypes = {
 const NavSectionView = ({
 
     // From props.
-    selectedSongIndex,
-    accessedNavSongIndex,
+    // selectedSongIndex,
+    // accessedNavSongIndex,
     shownBookColumnIndex,
     showSingleBookColumn,
 
@@ -79,23 +76,17 @@ const NavSectionView = ({
     handleNavSongSelect,
     handleNavBookSelect
 
-    // From controller.
-
 }) => {
     const navItemProps = {
-        selectedSongIndex,
-        accessedNavSongIndex,
         handleNavSongSelect
-    },
-    songsLength = getSongsLength(),
-    bookStartingIndices = getBookStartingIndices()
+    }
 
     return (
         <div
             className={classnames(
                 'section',
                 'nav-section',
-                showSingleBookColumn ? ' single-book-column' : ' double-book-column'
+                showSingleBookColumn ? 'single-book-column' : 'double-book-column'
             )}
         >
             <div className="live-nav-block">
@@ -111,22 +102,17 @@ const NavSectionView = ({
                         <div className="books-column">
                             {/* songs 1 - 9 */}
                             <NavBook {...navItemProps}
-                                songs={songs}
-                                beginArrayIndex={bookStartingIndices[0]}
-                                endArrayIndex={bookStartingIndices[1]}
+                                bookIndex={1}
                             />
                             {/* prologue or toggle */}
                             {/* TODO: Make this a single component, not a ternary. */}
                             {showSingleBookColumn && shownBookColumnIndex === 2 ?
-                                <NavBook {...navItemProps}
-                                    isToggle={true}
-                                    hasSelectedSong={selectedSongIndex < bookStartingIndices[1]}
+                                <NavBookButton
+                                    bookIndex={1}
                                     handleButtonClick={handleNavBookSelect}
                                 /> :
-                                <NavBook {...navItemProps}
-                                    isLogue={true}
-                                    song={songs[0]}
-                                    index={0}
+                                <NavLogueButton {...navItemProps}
+                                    isPrologue={true}
                                 />
                             }
                         </div>
@@ -139,22 +125,16 @@ const NavSectionView = ({
                         <div className="books-column">
                             {/* songs 10 - 18 */}
                             <NavBook {...navItemProps}
-                                songs={songs}
-                                rowReverse={true}
-                                beginArrayIndex={bookStartingIndices[1]}
-                                endArrayIndex={songsLength - 1}
+                                bookIndex={2}
                             />
                             {/* epilogue or toggle */}
                             {showSingleBookColumn && shownBookColumnIndex === 1 ?
-                                <NavBook {...navItemProps}
-                                    isToggle={true}
-                                    hasSelectedSong={selectedSongIndex >= bookStartingIndices[1]}
+                                <NavBookButton
+                                    bookIndex={2}
                                     handleButtonClick={handleNavBookSelect}
                                 /> :
-                                <NavBook {...navItemProps}
-                                    isLogue={true}
-                                    song={songs[songsLength - 1]}
-                                    index={songsLength - 1}
+                                <NavLogueButton {...navItemProps}
+                                    isPrologue={false}
                                 />
                             }
                         </div>
@@ -166,51 +146,14 @@ const NavSectionView = ({
     )
 }
 
-// const NavBooksColumn = ({
-//
-//     bookColumnIndex,
-//     shownBookColumnIndex,
-//     showSingleBookColumn,
-//     songs,
-//     navItemProps
-//
-// }) => (
-//     <div className={classnames(
-//         'books-column-block',
-//         `column-${bookColumnIndex}`,
-//         !showSingleBookColumn || shownBookColumnIndex === bookColumnIndex ? 'column-shown' : 'column-hidden'
-//     )}>
-//         <div className="books-column">
-//             {/* songs 10 - 18 */}
-//             <NavBook {...navItemProps}
-//                 songs={songs}
-//                 rowReverse={true}
-//                 beginArrayIndex={bookStartingIndices[1]}
-//                 endArrayIndex={songsLength - 1}
-//             />
-//             {/* epilogue or toggle */}
-//             {showSingleBookColumn && shownBookColumnIndex === 1 ?
-//                 <NavBook {...navItemProps}
-//                     isToggle={true}
-//                     hasSelectedSong={selectedSongIndex >= bookStartingIndices[1]}
-//                     handleButtonClick={handleNavBookSelect}
-//                 /> :
-//                 <NavBook {...navItemProps}
-//                     isLogue={true}
-//                     song={songs[songsLength - 1]}
-//                     index={songsLength - 1}
-//                 />
-//             }
-//         </div>
-//         {/* column 2 toggle */}
-//     </div>
-// )
-
 NavSectionView.propTypes = {
-    showSingleBookColumn: PropTypes.bool.isRequired,
-    accessedNavSongIndex: PropTypes.number.isRequired,
+    // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
+    accessedNavSongIndex: PropTypes.number.isRequired,
+    showSingleBookColumn: PropTypes.bool.isRequired,
     shownBookColumnIndex: PropTypes.number.isRequired,
+
+    // From parent.
     handleNavExpand: PropTypes.func,
     handleNavBookSelect: PropTypes.func,
     handleNavSongSelect: PropTypes.func.isRequired

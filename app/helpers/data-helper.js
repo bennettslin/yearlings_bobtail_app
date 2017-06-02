@@ -89,9 +89,15 @@ export const getSongVerseTimes = (songIndex) => {
     return selectedSong.verseTimes || []
 }
 
+// TODO: Get rid of this one, use getStartingIndexForBook instead.
 export const getBookStartingIndices = () => {
     const { bookStartingIndices } = AlbumData
     return bookStartingIndices
+}
+
+export const getStartingIndexForBook = (bookIndex) => {
+    const { bookStartingIndices } = AlbumData
+    return bookStartingIndices[bookIndex]
 }
 
 export const getMp3s = () => {

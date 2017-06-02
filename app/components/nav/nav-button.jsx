@@ -11,7 +11,6 @@ import { getIsLogue, getSongTitle } from '../../helpers/data-helper'
 const NavButton = ({
 
     songIndex,
-    toggleIconText,
     handleNavSongSelect,
     handleButtonClick,
 
@@ -22,16 +21,8 @@ const NavButton = ({
             songIndex,
             showIndex: false
         }),
+        iconText = isLogue ? null : songIndex,
         handleClick = handleButtonClick || (e => handleNavSongSelect(e, songIndex))
-
-    let iconText
-
-    if (!isNaN(toggleIconText)) {
-        iconText = toggleIconText
-
-    } else {
-        iconText = isLogue ? null : songIndex
-    }
 
     return (
         <NavButtonView {...other}
@@ -44,7 +35,6 @@ const NavButton = ({
 
 NavButton.propTypes = {
     songIndex: PropTypes.number,
-    toggleIconText: PropTypes.number,
     isSelected: PropTypes.bool.isRequired,
     handleNavSongSelect: PropTypes.func.isRequired,
     handleButtonClick: PropTypes.func
