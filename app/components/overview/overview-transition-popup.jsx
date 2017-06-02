@@ -3,20 +3,19 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import OverviewSection from './overview-section'
 import TransitionPopup from '../popup/transition-popup'
+import { getIsLogue } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
     selectedOverviewIndex,
+    selectedSongIndex,
     selectedTitleIndex
 }) => ({
-    // Pass Redux state into component props.
     selectedOverviewIndex,
+    selectedSongIndex,
     selectedTitleIndex
 })
-
-/*************
- * CONTAINER *
- *************/
 
 class OverviewTransitionPopup extends Component {
 
@@ -28,9 +27,9 @@ class OverviewTransitionPopup extends Component {
                 updatingPropsArray: [
                     'overviewText',
                     'selectedOverviewIndex',
+                    'selectedSongIndex',
                     'selectedTitleIndex',
                     'isPhone',
-                    'isLogue',
                     'inOverviewSubfield'
                 ]
             })
@@ -39,12 +38,14 @@ class OverviewTransitionPopup extends Component {
     }
 
     render() {
-        const { isLogue,
-                inOverviewSubfield,
+        const { inOverviewSubfield,
                 selectedOverviewIndex,
+                selectedSongIndex,
                 selectedTitleIndex,
                 handlePopupContainerClick,
                 ...other } = this.props,
+
+            isLogue = getIsLogue(selectedSongIndex),
 
             myChild = (
                 <OverviewSection {...other}
@@ -67,8 +68,8 @@ class OverviewTransitionPopup extends Component {
 
         return (
             <TransitionPopup
-                popupClassName="overview"
                 isVisible={isVisible}
+                popupClassName="overview"
                 handlePopupContainerClick={handlePopupContainerClick}
                 myChild={myChild}
             />
@@ -79,10 +80,14 @@ class OverviewTransitionPopup extends Component {
 OverviewTransitionPopup.propTypes = {
     overviewText: PropTypes.string.isRequired,
     isPhone: PropTypes.bool.isRequired,
-    isLogue: PropTypes.bool.isRequired,
     inOverviewSubfield: PropTypes.bool.isRequired,
+
+    // Through Redux.
     selectedOverviewIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
+
+    // From props.
     handleOverviewToggle: PropTypes.func.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
 }

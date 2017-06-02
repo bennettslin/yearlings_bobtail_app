@@ -357,12 +357,12 @@ const LiveView = ({
                         />
                     </div>
                     <div className="overlay-popup-block main-popup-block">
-                        <TitleTransitionPopup {...titlePopupProps} />
-                        <ScoreTransitionPopup {...scorePopupProps} />
-                        <WikiTransitionPopup {...wikiPopupProps} />
                         {isOverlaidAnnotation &&
                             <AnnotationTransitionPopup {...annotationPopupProps} />
                         }
+                        <TitleTransitionPopup {...titlePopupProps} />
+                        <ScoreTransitionPopup {...scorePopupProps} />
+                        <WikiTransitionPopup {...wikiPopupProps} />
                     </div>
                 </div>
             }

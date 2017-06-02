@@ -109,6 +109,10 @@ export const getIsScoreExpandable = (deviceIndex) => {
     return !getIsPhone(deviceIndex)
 }
 
+export const getIsToggleInOverview = (deviceIndex) => {
+    return getIsPhone(deviceIndex)
+}
+
 export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
 
     const selectedSong = getSongObject(songIndex),

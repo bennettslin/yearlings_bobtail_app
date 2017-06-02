@@ -12,11 +12,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Handle case of selecting title or score or wiki when annotation in popup.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Verse bar doesn't always show after collapsing lyric.`,
         workedHours: 0,
         neededHours: 1
@@ -2061,6 +2056,16 @@ module.exports = [
     },
     {
         taskName: `Begin reorganising components.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Improve rules for collapsing carousel, lyric, score.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Handle case of selecting title or score or wiki when annotation in popup.`,
         workedHours: 1,
         neededHours: 1
     }

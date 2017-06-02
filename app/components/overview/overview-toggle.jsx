@@ -1,3 +1,5 @@
+// Toggle button to show, hide, and disable overview section.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -5,33 +7,15 @@ import Button from '../button/button'
 import { OVERVIEW_TOGGLE_KEY } from '../../constants/access'
 import { OVERVIEW_OPTIONS } from '../../constants/options'
 
- const passReduxStateToProps = ({
-     selectedOverviewIndex,
- }) => ({
-     // Pass Redux state into component props.
-     selectedOverviewIndex,
- })
+// Pass Redux state into component props.
+const passReduxStateToProps = ({
+    selectedOverviewIndex
+}) => ({
+    selectedOverviewIndex
+})
 
-/*************
- * CONTAINER *
- *************/
+const OverviewToggle = ({
 
-const OverviewToggle = (props) => (
-    <OverviewToggleView {...props} />
-)
-
-OverviewToggle.propTypes = {
-    selectedOverviewIndex: PropTypes.number.isRequired,
-    handleOverviewToggle: PropTypes.func.isRequired
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const OverviewToggleView = ({
-
-    // From props.
     selectedOverviewIndex,
     handleOverviewToggle
 
@@ -46,5 +30,13 @@ const OverviewToggleView = ({
         />
     </div>
 )
+
+OverviewToggle.propTypes = {
+    // Through Redux.
+    selectedOverviewIndex: PropTypes.number.isRequired,
+
+    // From props.
+    handleOverviewToggle: PropTypes.func.isRequired
+}
 
 export default connect(passReduxStateToProps)(OverviewToggle)

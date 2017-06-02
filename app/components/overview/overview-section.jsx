@@ -2,26 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import TextBlock from '../text/text-block'
 
-/*************
- * CONTAINER *
- *************/
-
-const OverviewSection = (props) => (
-    <OverviewSectionView {...props} />
-)
-
-OverviewSection.propTypes = {
-    isPhone: PropTypes.bool.isRequired,
-    isLogue: PropTypes.bool.isRequired,
-    overviewText: PropTypes.string.isRequired,
-    overviewButtonChild: PropTypes.element
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const OverviewSectionView = ({
+const OverviewSection = ({
 
     // From props.
     isPhone,
@@ -44,5 +25,12 @@ const OverviewSectionView = ({
         </div>
     </div>
 )
+
+OverviewSection.propTypes = {
+    isPhone: PropTypes.bool.isRequired,
+    isLogue: PropTypes.bool.isRequired,
+    overviewText: PropTypes.string.isRequired,
+    overviewButtonChild: PropTypes.element
+}
 
 export default OverviewSection
