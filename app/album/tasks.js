@@ -17,11 +17,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `R and F don't work right after selecting song, because title annotation doesn't have most recent verse index.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Review responsive constants.`,
         workedHours: 0,
         neededHours: 1
@@ -2066,6 +2061,11 @@ module.exports = [
     },
     {
         taskName: `Handle case of selecting title or score or wiki when annotation in popup.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `R and F don't work right after selecting song, because title annotation doesn't have most recent verse index.`,
         workedHours: 1,
         neededHours: 1
     }

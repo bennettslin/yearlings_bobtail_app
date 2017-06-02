@@ -53,25 +53,6 @@ export const prepareAlbumData = (album) => {
     return album
 }
 
-const _markSideStanzas = (lyrics) => {
-    lyrics.forEach(stanza => {
-        const hasSideStanzas = stanza.reduce((hasSideStanzas, verse) => {
-            return hasSideStanzas || !!verse.topSideStanza || !!verse.bottomSideStanza
-        }, false)
-
-        if (hasSideStanzas) {
-            _tempStore._hasSideStanzas = true
-            stanza.forEach(verse => {
-                if (verse.topSideStanza || verse.bottomSideStanza) {
-                    verse.rightColumn = true
-                } else {
-                    verse.leftColumn = true
-                }
-            })
-        }
-    })
-}
-
 const _initialPrepareAllSongs = (album) => {
     album.songs.forEach((song, songIndex) => {
 
@@ -365,6 +346,25 @@ const _addVerseObjectKeyToLyric = (lyricObject, verseObjectKey) => {
     }
 }
 
+const _markSideStanzas = (lyrics) => {
+    lyrics.forEach(stanza => {
+        const hasSideStanzas = stanza.reduce((hasSideStanzas, verse) => {
+            return hasSideStanzas || !!verse.topSideStanza || !!verse.bottomSideStanza
+        }, false)
+
+        if (hasSideStanzas) {
+            _tempStore._hasSideStanzas = true
+            stanza.forEach(verse => {
+                if (verse.topSideStanza || verse.bottomSideStanza) {
+                    verse.rightColumn = true
+                } else {
+                    verse.leftColumn = true
+                }
+            })
+        }
+    })
+}
+
 const _registerAfterTimeKeyFound = (lyric) => {
     /**
      * Helper method to register first and last verse objects, after time key
@@ -582,7 +582,12 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey) => {
         if (_tempStore._lyricInTime) {
             annotation.verseIndex = _tempStore._verseIndexCounter
         } else {
-            annotation.mostRecentVerseIndex = _tempStore._verseIndexCounter
+            /**
+             * If it's the title, set to first verse. Otherwise, set to most
+             * recent verse.
+             */
+            const mostRecentVerseIndex = _tempStore._verseIndexCounter > -1 ? _tempStore._verseIndexCounter : 0
+            annotation.mostRecentVerseIndex = mostRecentVerseIndex
         }
 
         // Let annotation know if it's in a doublespeaker column.

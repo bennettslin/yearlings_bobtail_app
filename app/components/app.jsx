@@ -398,11 +398,10 @@ class App extends Component {
         }
 
         /**
-         * We shouldn't be able to expand lyric under these conditions. So
+         * We shouldn't be able to expand lyric if it's not expandable. So
          * return false if it's already collapsed, or collapse it if not.
          */
-        if (!getIsLyricExpandable(this.props.deviceIndex) ||
-                this.props.isHeightlessLyricColumn) {
+        if (!getIsLyricExpandable(this.props.deviceIndex)) {
 
             if (!this.props.isLyricExpanded) {
                 return false
