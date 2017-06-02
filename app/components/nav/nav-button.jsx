@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
+import { getIsLogue, getSongTitle } from '../../helpers/data-helper'
 
 /*************
  * CONTAINER *
@@ -9,24 +10,32 @@ import Button from '../button/button'
 
 const NavButton = ({
 
-    song,
     songIndex,
-    buttonText,
-    isSelected,
+    toggleIconText,
     handleNavSongSelect,
     handleButtonClick,
 
 ...other }) => {
 
-    const isLogue = song ? song.logue : null,
-        iconText = buttonText || (isLogue ? null : songIndex),
-        songTitle = song ? song.title : null,
-        handleClick = song ? e => handleNavSongSelect(e, songIndex) : handleButtonClick
+    const isLogue = getIsLogue(songIndex),
+        songTitle = getSongTitle({
+            songIndex,
+            showIndex: false
+        }),
+        handleClick = handleButtonClick || (e => handleNavSongSelect(e, songIndex))
+
+    let iconText
+
+    if (!isNaN(toggleIconText)) {
+        iconText = toggleIconText
+
+    } else {
+        iconText = isLogue ? null : songIndex
+    }
 
     return (
         <NavButtonView {...other}
             iconText={iconText}
-            isSelected={isSelected}
             songTitle={songTitle}
             handleClick={handleClick}
         />
@@ -34,9 +43,8 @@ const NavButton = ({
 }
 
 NavButton.propTypes = {
-    song: PropTypes.object,
     songIndex: PropTypes.number,
-    buttonText: PropTypes.string,
+    toggleIconText: PropTypes.number,
     isSelected: PropTypes.bool.isRequired,
     handleNavSongSelect: PropTypes.func.isRequired,
     handleButtonClick: PropTypes.func
@@ -49,7 +57,6 @@ NavButton.propTypes = {
 const NavButtonView = ({
 
     // From props.
-    isNavToggle,
     isSelected,
     accessHighlighted,
     accessKey,
@@ -62,7 +69,7 @@ const NavButtonView = ({
 }) => (
     <div
         className={classnames(
-            isNavToggle ? 'nav-toggle-button-block' : 'nav-button-block',
+            'nav-button-block',
             { 'access-highlighted': accessHighlighted }
         )}
     >
@@ -71,10 +78,9 @@ const NavButtonView = ({
                 buttonName="nav"
                 accessKey={accessKey}
                 iconText={iconText}
-                isLarge={isNavToggle}
                 isSelected={isSelected}
                 handleClick={handleClick}
-                extraChild={!isNavToggle &&
+                extraChild={
                     <div className="nav-title-block">
                         <div className="nav-title">
                             {songTitle}
@@ -87,7 +93,6 @@ const NavButtonView = ({
 )
 
 NavButtonView.propTypes = {
-    isNavToggle: PropTypes.bool,
     isSelected: PropTypes.bool.isRequired,
     accessHighlighted: PropTypes.bool.isRequired,
     accessKey: PropTypes.string,

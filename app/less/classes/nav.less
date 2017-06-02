@@ -25,12 +25,12 @@
     height: @nav-height * 3; // Just an arbitrary value that's large enough.
 }
 
-.book-column-block, .book-column, .nav-book, .nav-toggle-book {
+.books-column-block, .book-column, .nav-book, .nav-toggle-book {
     position: absolute;
     height: 100%;
 }
 
-.book-column-block {
+.books-column-block {
     height: @book-height;
 }
 
@@ -122,13 +122,13 @@
         overflow: hidden;
     }
 
-    .book-column-block {
+    .books-column-block {
         transition: bottom @animation-default;
         bottom: -@book-height;
     }
 
     .nav-expanded.overlay-hidden {
-        .book-column-block {
+        .books-column-block {
             bottom: 0;
         }
     }
@@ -144,7 +144,7 @@
         top: 0;
     }
 
-    .book-column-block {
+    .books-column-block {
         transition: top @animation-default;
         top: -@book-height;
     }
@@ -165,7 +165,7 @@
     }
 
     .nav-expanded.overlay-hidden {
-        .book-column-block {
+        .books-column-block {
             top: 0;
         }
     }
@@ -228,7 +228,7 @@
 
 // TODO: Begin animations.
 .column-1 {
-    .book-column {
+    .books-column {
         transition: left @animation-default;
     }
 
@@ -242,7 +242,7 @@
 .column-2 {
     right: 0;
 
-    .book-column {
+    .books-column {
         right: 0;
         transition: right @animation-default;
     }

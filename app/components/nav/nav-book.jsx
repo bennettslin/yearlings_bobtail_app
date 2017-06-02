@@ -18,7 +18,6 @@ const NavBook = (props) => (
 const NavBookView = ({
 
     // From props.
-    isNavToggle,
     isToggle,
     isLogue,
     songs,
@@ -29,7 +28,7 @@ const NavBookView = ({
 ...other }) => (
 
     <div className={classnames(
-        isNavToggle ? 'nav-toggle-book' : 'nav-book',
+        'nav-book',
         { 'toggle': isToggle,
           'logue': isLogue,
           songs }
@@ -40,13 +39,11 @@ const NavBookView = ({
                     return (
                         <NavItem {...other}
                             key={currentIndex}
-                            song={songs[songIndex]}
                             index={songIndex}
                         />
                     )
             }) :
             <NavItem {...other}
-                isNavToggle={isNavToggle}
                 isToggle={isToggle}
             />
         }
@@ -54,7 +51,6 @@ const NavBookView = ({
 )
 
 NavBookView.propTypes = {
-    isNavToggle: PropTypes.bool,
     isToggle: PropTypes.bool,
     isLogue: PropTypes.bool,
     songs: PropTypes.array,

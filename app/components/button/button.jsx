@@ -1,4 +1,4 @@
-// General button class.
+// General button component.
 
 import React from 'react'
 import PropTypes from 'prop-types'

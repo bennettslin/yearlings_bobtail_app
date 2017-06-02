@@ -782,7 +782,10 @@ const _addSourcePortalLink = ({
             }
 
         // Add data about portal.
-        portalLink.songTitle = getSongTitle(_songIndex, _songs)
+        portalLink.songTitle = getSongTitle({
+            songIndex: _songIndex,
+            songs: _songs
+        })
         portalLink.verseObject = getVerseObject(_songIndex, verseIndex, _songs)
 
         // If first portal link, initialise array.

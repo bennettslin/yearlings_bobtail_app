@@ -48,7 +48,7 @@ class DomManager extends Component {
             isDesktop = getIsDesktop(deviceIndex),
             isPhone = getIsPhone(deviceIndex),
 
-            selectedSongTitle = getSongTitle(selectedSongIndex),
+            selectedSongTitle = getSongTitle({ songIndex: selectedSongIndex }),
             isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
 
             isOverlaidAnnotation = !isDesktop && (isLyricExpanded || isPhone),

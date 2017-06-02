@@ -16,7 +16,7 @@ const AdminNavRow = ({
 
 ...other }) => {
 
-    const songTitle = getSongTitle(songIndex),
+    const songTitle = getSongTitle({ songIndex }),
         songTasks = getSongTasks(songIndex),
         sumTask = ProgressHelper.calculateSumTask(songTasks),
         onClick = e => handleNavSongSelect(e, songIndex)

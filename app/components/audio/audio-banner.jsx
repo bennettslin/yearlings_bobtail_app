@@ -48,7 +48,7 @@ const AudioBannerView = ({
         />
         <div className="audio-banner audio-display-block">
             <div className="audio-banner-title">
-                {getSongTitle(selectedSongIndex)}
+                {getSongTitle({ songIndex: selectedSongIndex })}
             </div>
             {audioTimerChild}
         </div>

@@ -6,7 +6,7 @@
 import AlbumData from '../album-data'
 
 export const getSongObject = (songIndex, songs = AlbumData.songs) => {
-    return songs[songIndex]
+    return songs[songIndex] || null
 }
 
 export const getAnnotationsArray = (songIndex) => {
@@ -53,11 +53,20 @@ export const getBookColumnIndex = (songIndex) => {
     return 1 + (songIndex >= bookStartingIndices[1])
 }
 
-export const getSongTitle = (songIndex, songs) => {
-    const song = getSongObject(songIndex, songs),
-        isLogue = getIsLogue(songIndex, songs)
+export const getSongTitle = ({
+    songIndex,
+    songs = AlbumData.songs,
+    showIndex = true
+}) => {
+    const song = getSongObject(songIndex, songs)
 
-    return `${!isLogue ? songIndex + '. ' : ''}${song.title}`
+    if (!song) {
+        return undefined
+
+    } else {
+        const isLogue = getIsLogue(songIndex, songs)
+        return `${showIndex && !isLogue ? songIndex + '. ' : ''}${song.title}`
+    }
 }
 
 export const getSongAnnotationsDotKeys = (songIndex) => {
