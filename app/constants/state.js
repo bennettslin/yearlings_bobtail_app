@@ -17,7 +17,6 @@ module.exports = {
     WINDOW_WIDTH: 'windowWidth',
 
     // Responsive.
-    IS_CAROUSEL_EXPANDABLE: 'isCarouselExpandable',
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',
     IS_HIDDEN_NAV: 'isHiddenNav',
     IS_LYRIC_EXPANDABLE: 'isLyricExpandable',

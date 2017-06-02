@@ -1,6 +1,5 @@
 // Actions for state based on window size.
-import { IS_CAROUSEL_EXPANDABLE,
-         IS_HEIGHTLESS_LYRIC_COLUMN,
+import { IS_HEIGHTLESS_LYRIC_COLUMN,
          IS_HIDDEN_NAV,
          IS_LYRIC_EXPANDABLE,
          IS_SCORES_TIPS_IN_MAIN,
@@ -8,11 +7,6 @@ import { IS_CAROUSEL_EXPANDABLE,
          SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
          SHOW_SHRUNK_NAV_ICON,
          SHOW_SINGLE_BOOK_COLUMN } from '../../constants/state'
-
-export const setIsCarouselExpandable = (isCarouselExpandable = false) => (
-    { type: IS_CAROUSEL_EXPANDABLE,
-      payload: isCarouselExpandable }
-)
 
 export const setIsHeightlessLyricColumn = (isHeightlessLyricColumn = false) => (
     { type: IS_HEIGHTLESS_LYRIC_COLUMN,

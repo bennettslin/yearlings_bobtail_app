@@ -1,23 +1,13 @@
+// Webview to show score.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { getScoreForIndex } from '../../helpers/data-helper'
 // import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 
-/*************
- * CONTAINER *
- *************/
-
-const ScoreSection = (props) => (
-    <ScoreSectionView {...props} />
-)
-
-/****************
- * PRESENTATION *
- ****************/
-
 // TODO: Look into http://stackoverflow.com/questions/19654577/html-embedded-pdf-iframe
 
-class ScoreSectionView extends Component {
+class ScoreSection extends Component {
 
     constructor(props) {
         super(props)
@@ -75,6 +65,10 @@ class ScoreSectionView extends Component {
 }
 
 ScoreSection.propTypes = {
+    // Also from parent, for now.
+    selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
     scoreSectionRef: PropTypes.func.isRequired
 }
 

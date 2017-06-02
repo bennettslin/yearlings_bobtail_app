@@ -5,12 +5,15 @@ import Button from '../button/button'
 import { SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY } from '../../constants/access'
 import { TIPS_OPTIONS } from '../../constants/options'
+import { getIsPhone } from '../../helpers/responsive-helper'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
+    deviceIndex,
     selectedScoreIndex,
     selectedTipsIndex
 }) => ({
-// Pass Redux state into component props.
+    deviceIndex,
     selectedScoreIndex,
     selectedTipsIndex
 })
@@ -24,7 +27,7 @@ const ScoresTipsSection = (props) => (
 )
 
 ScoresTipsSection.propTypes = {
-    isPhone: PropTypes.bool.isRequired,
+    deviceIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
     handleScoreToggle: PropTypes.func.isRequired,
@@ -38,7 +41,7 @@ ScoresTipsSection.propTypes = {
 const ScoresTipsSectionView = ({
 
     // From props.
-    isPhone,
+    deviceIndex,
     selectedScoreIndex,
     selectedTipsIndex,
     handleScoreToggle,
@@ -48,10 +51,10 @@ const ScoresTipsSectionView = ({
 
     return (
         <div className="section scores-tips-section">
-            {!isPhone &&
+            {!getIsPhone(deviceIndex) &&
                 <Button
                     accessKey={SCORE_TOGGLE_KEY}
-                    buttonName={'scores'}
+                    buttonName="scores"
                     iconText={selectedScoreIndex}
                     isLarge={true}
                     handleClick={handleScoreToggle}
@@ -59,7 +62,7 @@ const ScoresTipsSectionView = ({
             }
             <Button
                 accessKey={TIPS_TOGGLE_KEY}
-                buttonName={'tips'}
+                buttonName="tips"
                 iconText={TIPS_OPTIONS[selectedTipsIndex]}
                 isLarge={true}
                 handleClick={handleTipsToggle}

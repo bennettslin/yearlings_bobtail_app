@@ -302,17 +302,21 @@ class App extends Component {
         (this.props.selectedCarouselIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
+        // We shouldn't be able to toggle carousel while in logue.
+        if (getIsLogue(this.props.selectedSongIndex)) {
+            return false
+        }
+
         if (typeof selectedCarouselIndex === 'boolean') {
             selectedCarouselIndex = selectedCarouselIndex ? 1 : 0
         }
 
         /**
-         * We shouldn't be able to expand carousel under these conditions. So
-         * return false if it's already collapsed, or collapse it if it's not.
+         * We also shouldn't be able to expand carousel under these conditions.
+         * So return false if it's already collapsed, or collapse it if not.
          */
-        if (!this.props.isCarouselExpandable ||
-                this.props.isHeightlessLyricColumn ||
-                getIsLogue(this.props.selectedSongIndex)) {
+        if (!getIsCarouselExpandable(this.props.deviceIndex) ||
+                this.props.isHeightlessLyricColumn) {
 
             if (!this.props.selectedCarouselIndex) {
                 return false
@@ -656,13 +660,18 @@ class App extends Component {
         (this.props.selectedScoreIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
+        // We shouldn't be able to toggle score while in logue.
+        if (getIsLogue(this.props.selectedSongIndex)) {
+            return false
+        }
+
         if (typeof selectedScoreIndex === 'boolean') {
             selectedScoreIndex = selectedScoreIndex ? 1 : 0
         }
 
         /**
          * We shouldn't be able to expand score if it's phone width. So return
-         * false if it's already collapsed, or collapse it if it's not.
+         * false if it's already collapsed, or collapse it if not.
          */
         if (!getIsScoreExpandable(this.props.deviceIndex)) {
             if (!this.props.selectedScoreIndex) {
@@ -919,6 +928,7 @@ class App extends Component {
             { deviceIndex,
               windowHeight,
               windowWidth } = resizeWindow(e ? e.target : undefined),
+
             isCarouselExpandable = getIsCarouselExpandable(deviceIndex),
             isHeightlessLyricColumn = getIsHeightlessLyricColumn({ deviceIndex, windowHeight, windowWidth }),
             showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, deviceIndex)
@@ -927,7 +937,6 @@ class App extends Component {
         this.props.setWindowHeight(windowHeight)
         this.props.setWindowWidth(windowWidth)
 
-        this.props.setIsCarouselExpandable(isCarouselExpandable)
         this.props.setIsHeightlessLyricColumn(isHeightlessLyricColumn)
         this.props.setShowOneOfTwoLyricColumns(showOneOfTwoLyricColumns)
 

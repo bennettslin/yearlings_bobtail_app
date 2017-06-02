@@ -281,14 +281,11 @@ const LiveView = ({
         },
 
         scoresTipsSectionProps = {
-            isPhone,
-
             handleScoreToggle,
             handleTipsToggle
         },
 
         scorePopupProps = {
-            isPhone,
             scoreSectionRef,
             handleScoreToggle,
             handlePopupFocus
