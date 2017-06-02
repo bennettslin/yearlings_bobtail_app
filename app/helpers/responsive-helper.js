@@ -105,6 +105,10 @@ export const getIsLyricExpandable = (deviceIndex) => {
     return !getIsDesktop(deviceIndex)
 }
 
+export const getIsScoreExpandable = (deviceIndex) => {
+    return !getIsPhone(deviceIndex)
+}
+
 export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
 
     const selectedSong = getSongObject(songIndex),

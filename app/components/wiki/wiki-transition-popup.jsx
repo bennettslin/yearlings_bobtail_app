@@ -42,9 +42,9 @@ class WikiTransitionPopup extends Component {
 
         return (
             <TransitionPopup
+                isVisible={isVisible}
                 popupClassName="wiki"
                 showClose={true}
-                isVisible={isVisible}
                 handlePopupFocus={handlePopupFocus}
                 handleCloseClick={handleWikiToggle}
                 myChild={myChild}

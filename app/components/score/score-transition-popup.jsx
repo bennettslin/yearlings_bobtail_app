@@ -1,3 +1,5 @@
+// Popup container for score section.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -5,11 +7,11 @@ import ScoreSection from './score-section'
 import TransitionPopup from '../popup/transition-popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
     selectedSongIndex,
     selectedScoreIndex
 }) => ({
-// Pass Redux state into component props.
     selectedSongIndex,
     selectedScoreIndex
 })
@@ -22,7 +24,6 @@ class ScoreTransitionPopup extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'isPhone',
                     'selectedSongIndex',
                     'selectedScoreIndex'
                 ]
@@ -32,22 +33,21 @@ class ScoreTransitionPopup extends Component {
     }
 
     render() {
-        const { isPhone,
-                selectedScoreIndex,
+        const { selectedScoreIndex,
                 handleScoreToggle,
                 handlePopupFocus,
                 ...other } = this.props,
 
-            isVisible = !!selectedScoreIndex && !isPhone,
+            isVisible = !!selectedScoreIndex,
             myChild = (
                 <ScoreSection {...other} />
             )
 
         return (
             <TransitionPopup
+                isVisible={isVisible}
                 popupClassName="score"
                 showClose={true}
-                isVisible={isVisible}
                 handlePopupFocus={handlePopupFocus}
                 handleCloseClick={handleScoreToggle}
                 myChild={myChild}
@@ -57,9 +57,11 @@ class ScoreTransitionPopup extends Component {
 }
 
 ScoreTransitionPopup.propTypes = {
-    isPhone: PropTypes.bool.isRequired,
+    // Through props.
     selectedSongIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
+
+    // From Redux.
     handleScoreToggle: PropTypes.func.isRequired,
     handlePopupFocus: PropTypes.func.isRequired
 }

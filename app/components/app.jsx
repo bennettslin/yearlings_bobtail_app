@@ -22,7 +22,7 @@ import { CONTINUE,
          TIPS_OPTIONS } from '../constants/options'
 import { getSongObject, getSongsLength, getIsLogue, getAnnotationObject, getBookColumnIndex, getOverview, getSongVerseTimes } from '../helpers/data-helper'
 import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
-import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
+import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
 /*********
@@ -299,27 +299,31 @@ class App extends Component {
      ************/
 
     selectCarousel(selectedCarouselIndex =
-        (this.props.selectedCarouselIndex + 1) % 2, overrideException) {
+        (this.props.selectedCarouselIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
-
-        /**
-         * We should ignore this call if carousel is not expandable, or if
-         * it's a heightless lyric, or if it's a logue. However, allow nav to
-         * override this exception.
-         */
-        if (!overrideException && (!this.props.isCarouselExpandable ||
-                this.props.isHeightlessLyricColumn ||
-                getIsLogue(this.props.selectedSongIndex))) {
-            return false
-        }
 
         if (typeof selectedCarouselIndex === 'boolean') {
             selectedCarouselIndex = selectedCarouselIndex ? 1 : 0
         }
 
+        /**
+         * We shouldn't be able to expand carousel under these conditions. So
+         * return false if it's already collapsed, or collapse it if it's not.
+         */
+        if (!this.props.isCarouselExpandable ||
+                this.props.isHeightlessLyricColumn ||
+                getIsLogue(this.props.selectedSongIndex)) {
+
+            if (!this.props.selectedCarouselIndex) {
+                return false
+
+            } else {
+                selectedCarouselIndex = 0
+            }
+        }
+
         this.props.selectCarouselIndex(selectedCarouselIndex)
 
-        // Not really necessary, but doing it anyway.
         if (!selectedCarouselIndex) {
             this.props.setCarouselAnnotationIndex(0)
         }
@@ -561,6 +565,8 @@ class App extends Component {
 
         if (isLogue) {
             this.props.setIsPlaying(false)
+            this.selectScore(false)
+
             this.props.setPopupLogueOverview(newOverview)
 
             if (wasLogue) {
@@ -652,6 +658,19 @@ class App extends Component {
 
         if (typeof selectedScoreIndex === 'boolean') {
             selectedScoreIndex = selectedScoreIndex ? 1 : 0
+        }
+
+        /**
+         * We shouldn't be able to expand score if it's phone width. So return
+         * false if it's already collapsed, or collapse it if it's not.
+         */
+        if (!getIsScoreExpandable(this.props.deviceIndex)) {
+            if (!this.props.selectedScoreIndex) {
+                return false
+
+            } else {
+                selectedScoreIndex = 0
+            }
         }
 
         this.props.selectScoreIndex(selectedScoreIndex)
@@ -925,6 +944,11 @@ class App extends Component {
          */
         if (!isCarouselExpandable || isHeightlessLyricColumn) {
             this.selectCarousel(false, true)
+        }
+
+        // Force collapse of score in state if not expandable.
+        if (!getIsScoreExpandable(deviceIndex)) {
+            this.selectScore(false)
         }
 
         // Deselect selected annotation if not in new shown column.

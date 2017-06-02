@@ -41,9 +41,9 @@ class TitleTransitionPopup extends Component {
 
         return (
             <TransitionPopup
+                isVisible={isVisible}
                 popupClassName="title"
                 showClose={true}
-                isVisible={isVisible}
                 handlePopupFocus={handlePopupFocus}
                 handleCloseClick={handleTitleToggle}
                 myChild={myChild}

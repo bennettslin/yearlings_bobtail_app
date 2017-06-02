@@ -1,4 +1,10 @@
 module.exports = [
+    {
+        taskName: `Optimise responsive props`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     // Bugs.
     {
         taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
