@@ -1,4 +1,10 @@
 module.exports = [
+    // Bugs.
+    {
+        taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
+        workedHours: 0,
+        neededHours: 3
+    },
     {
         taskName: `Handle case of selecting title or score or wiki when annotation in popup.`,
         workedHours: 0,
@@ -15,17 +21,18 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Explanatory notes for each file.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Review responsive constants.`,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: `Centre lyrics bugs.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Explanatory notes for each file.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -68,14 +75,6 @@ module.exports = [
         taskName: `Perf!`,
         workedHours: 0,
         neededHours: 8
-    },
-
-    // Bugs.
-
-    {
-        taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     {
@@ -2054,4 +2053,9 @@ module.exports = [
         workedHours: 15,
         neededHours: 15
     },
+    {
+        taskName: `Begin reorganising components.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
