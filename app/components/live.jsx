@@ -118,7 +118,7 @@ const LiveView = ({
 }) => {
 
     // FIXME: Get this somewhere else!
-    const timerInAudio = showOverlay && isPhone,
+    const isTimerInAudio = showOverlay && isPhone,
 
         titleToggleProps = {
             handleTitleToggle
@@ -283,7 +283,7 @@ const LiveView = ({
             showOverlay ? 'overlay-shown' : 'overlay-hidden',
             { 'show-only-left': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 0,
               'show-only-right': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 1,
-              'timer-in-audio': timerInAudio,
+              'timer-in-audio': isTimerInAudio,
               'title-in-audio': isTitleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,
               'overview-shown': isOverviewShown,
@@ -323,8 +323,7 @@ const LiveView = ({
                 <div className="overlay-popup-subfield">
                     <div className="overlay-popup-block audio-popup-block">
                         <AudioPopup {...audioSectionProps}
-                            timerInAudio={timerInAudio}
-                            isTitleInAudio={false}
+                            isTimerInAudio={isTimerInAudio}
                             showOverlay={showOverlay}
                         />
                     </div>

@@ -63,7 +63,7 @@ const AudioSectionView = ({
 
     deviceIndex,
     isTitleInAudio,
-    timerInAudio,
+    isTimerInAudio,
     audioTimerChild,
     audioBannerChild,
     titleToggleChild,
@@ -76,7 +76,7 @@ const AudioSectionView = ({
         <div
             className="section audio-section"
         >
-            {timerInAudio && (
+            {isTimerInAudio && (
                 <div className="audio-timer-block">
                     {audioTimerChild}
                 </div>
@@ -86,7 +86,7 @@ const AudioSectionView = ({
                 titleToggleChild
             }
 
-            {(!isPhone || timerInAudio) && audioBannerChild}
+            {(!isPhone || isTimerInAudio) && audioBannerChild}
 
             <AudioButtons {...other} />
         </div>
@@ -94,7 +94,7 @@ const AudioSectionView = ({
 }
 
 AudioSectionView.defaultProps = {
-    timerInAudio: false
+    isTimerInAudio: false
 }
 
 AudioSectionView.propTypes = {
@@ -103,7 +103,7 @@ AudioSectionView.propTypes = {
     isTitleInAudio: PropTypes.bool.isRequired,
 
     // From parent.
-    timerInAudio: PropTypes.bool.isRequired,
+    isTimerInAudio: PropTypes.bool.isRequired,
     audioTimerChild: PropTypes.element.isRequired,
     audioBannerChild: PropTypes.element.isRequired,
     titleToggleChild: PropTypes.element.isRequired

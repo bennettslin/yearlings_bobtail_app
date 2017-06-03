@@ -2,22 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { DEVICE_OBJECTS } from '../../constants/responsive'
 
-/*************
- * CONTAINER *
- *************/
-
-const AdminToggle = (props) => {
-
-    return (
-        <AdminToggleView {...props} />
-    )
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const AdminToggleView = ({
+const AdminToggle = ({
 
     // From props.
     isLyricExpanded,
@@ -40,7 +25,13 @@ const AdminToggleView = ({
 )
 
 export default connect(({
-    isLyricExpanded
+    isLyricExpanded,
+    deviceIndex,
+    windowWidth,
+    windowHeight
 }) => ({
-    isLyricExpanded
+    isLyricExpanded,
+    deviceIndex,
+    windowWidth,
+    windowHeight
 }))(AdminToggle)

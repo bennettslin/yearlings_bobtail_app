@@ -18,8 +18,6 @@ class DomManager extends Component {
         const { props } = this,
             { isLyricExpanded,
               deviceIndex,
-              windowHeight,
-              windowWidth,
 
               selectedAdminIndex,
               selectedAnnotationIndex,
@@ -77,13 +75,7 @@ class DomManager extends Component {
                 onKeyDown={handleKeyDownPress}
                 tabIndex="-1"
             >
-                <AdminToggle
-                    selectedAdminIndex={selectedAdminIndex}
-                    isLyricExpanded={isLyricExpanded}
-                    deviceIndex={deviceIndex}
-                    windowWidth={windowWidth}
-                    windowHeight={windowHeight}
-                />
+                <AdminToggle />
                 <AudioPlayersSection {...audioPlayersProps} />
                 <div
                     className={classnames(
