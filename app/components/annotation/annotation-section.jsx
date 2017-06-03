@@ -1,3 +1,5 @@
+// Section to show title and all notes and portals for each annotation.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
@@ -13,14 +15,17 @@ const AnnotationSection = (props) => {
 
     const { annotationObject } = props
 
+    // If it's in popup, annotation object won't always exist.
     return annotationObject ? (
         <AnnotationSectionView {...props}
-            title={annotationObject.title}
+            annotationTitle={annotationObject.title}
+            annotationDotKeys={annotationObject.dotKeys}
         />
     ) : null
 }
 
 AnnotationSection.propTypes = {
+    // From parent.
     annotationObject: PropTypes.object
 }
 
@@ -37,9 +42,11 @@ const AnnotationSectionView = ({
     handleTitleClick,
 
     // From controller.
-    title,
+    annotationTitle,
+    annotationDotKeys,
 
 ...other }) => (
+
     <div className={classnames(
         'section',
         'annotation-section',
@@ -47,13 +54,13 @@ const AnnotationSectionView = ({
           'accessed-annotation': isAccessedAnnotation }
     )}>
         <div className="annotation-title-block">
-            {title === IS_DOT_STANZA ? (
+            {annotationTitle === IS_DOT_STANZA ? (
                 <div className="annotation-title">
                     <DotAnchorBlock
                         isSmall={true}
                         isSelected={isSelectedAnnotation}
                         accessHighlighted={isAccessedAnnotation}
-                        dotKeys={other.annotationObject.dotKeys}
+                        dotKeys={annotationDotKeys}
                         handleDotButtonClick={handleTitleClick}
                     />
                 </div>
@@ -62,29 +69,32 @@ const AnnotationSectionView = ({
                         'anchor-block',
                         'text-anchor-block',
                         'annotation-title',
-                        other.annotationObject.dotKeys,
-                        { 'selected': inCarousel ? isSelectedAnnotation : true,
+                        annotationDotKeys,
+                        { 'selected': isSelectedAnnotation || !inCarousel,
                           'access-highlighted': isAccessedAnnotation }
                     )}
                     onClick={handleTitleClick}
                 >
                     <span className="underline-bar"></span>
-                    <span className="text-span">{`\u201c${title}\u201d`}</span>
+                    <span className="text-span">
+                        {`\u201c${annotationTitle}\u201d`}
+                    </span>
                 </a>
             )}
         </div>
         <div className="cards-block">
-            <AnnotationUnit {...other}
-            />
+            <AnnotationUnit {...other} />
         </div>
     </div>
 )
 
 AnnotationSectionView.propTypes = {
-    title: PropTypes.string.isRequired,
+    // From parent.
     inCarousel: PropTypes.bool,
     isAccessedAnnotation: PropTypes.bool,
     isSelectedAnnotation: PropTypes.bool,
+    annotationTitle: PropTypes.string.isRequired,
+    annotationDotKeys: PropTypes.object.isRequired,
     handleTitleClick: PropTypes.func
 }
 

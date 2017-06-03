@@ -36,6 +36,7 @@ class AnnotationPopup extends Component {
                 handleAnnotationPrevious,
                 handleAnnotationNext,
                 handlePopupContainerClick,
+
                 ...other } = this.props,
 
             isVisible = !!selectedAnnotationIndex &&
@@ -44,14 +45,18 @@ class AnnotationPopup extends Component {
                         !selectedTitleIndex &&
                         !selectedWikiIndex,
 
+            /**
+             * Pass annotation object from state so that it persists while
+             * popup is fading out.
+             */
             myChild = (
                 <AnnotationSection {...other} />
             )
 
         return (
             <Popup
-                popupClassName="annotation selected-annotation"
                 isVisible={isVisible}
+                popupClassName="annotation selected-annotation"
                 showArrows={true}
                 handlePreviousClick={handleAnnotationPrevious}
                 handleNextClick={handleAnnotationNext}
@@ -64,6 +69,7 @@ class AnnotationPopup extends Component {
 
 AnnotationPopup.propTypes = {
     // Through Redux.
+    annotationObject: PropTypes.object,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
@@ -77,12 +83,14 @@ AnnotationPopup.propTypes = {
 }
 
 export default connect(({
+    annotationObject,
     selectedAnnotationIndex,
     selectedCarouselIndex,
     selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex
 }) => ({
+    annotationObject,
     selectedAnnotationIndex,
     selectedCarouselIndex,
     selectedScoreIndex,

@@ -1,3 +1,5 @@
+// Component to show all notes and portals for each annotation.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import AnnotationCard from './annotation-card'
@@ -9,25 +11,27 @@ import AnnotationCard from './annotation-card'
 const AnnotationUnit = (props) => {
 
     const { annotationObject } = props,
-        carouselAnnotationIndex = annotationObject.annotationIndex
+        { annotationIndex,
+          cards } = annotationObject
 
-    if (Array.isArray(annotationObject.cards)) {
+    if (Array.isArray(cards)) {
         return (
             <AnnotationUnitView {...props}
-                carouselAnnotationIndex={carouselAnnotationIndex}
+                carouselAnnotationIndex={annotationIndex}
             />
         )
     } else {
         return (
             <AnnotationCard {...props}
-                card={annotationObject.cards}
-                carouselAnnotationIndex={carouselAnnotationIndex}
+                card={cards}
+                carouselAnnotationIndex={annotationIndex}
             />
         )
     }
 }
 
 AnnotationUnit.propTypes = {
+    // From parent.
     annotationObject: PropTypes.object.isRequired
 }
 
@@ -37,10 +41,10 @@ AnnotationUnit.propTypes = {
 
 const AnnotationUnitView = ({
 
-    // From props.
     annotationObject,
 
 ...other }) => (
+
     <div className="annotation-cards-block">
         {annotationObject.cards.map((card, index) => (
             <AnnotationCard {...other}
@@ -52,6 +56,7 @@ const AnnotationUnitView = ({
 )
 
 AnnotationUnitView.propTypes = {
+    // From parent.
     annotationObject: PropTypes.object.isRequired
 }
 

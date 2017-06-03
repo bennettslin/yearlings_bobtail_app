@@ -1,4 +1,4 @@
-// Component to show individual annotation comment or portal.
+// Component to show individual annotation note or all portals.
 
 import React from 'react'
 import { connect } from 'react-redux'
@@ -7,6 +7,7 @@ import classnames from 'classnames'
 import DotBlock from '../dot/dot-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
+import { PORTAL } from '../../constants/dots'
 
 /*************
  * CONTAINER *
@@ -24,7 +25,7 @@ const AnnotationCard = ({
 
     // Add portal key to dot keys.
     if (portalLinks) {
-        dotKeys.portal = true
+        dotKeys[PORTAL] = true
     }
 
     return (
@@ -37,7 +38,7 @@ const AnnotationCard = ({
 }
 
 AnnotationCard.propTypes = {
-    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+    // From parent.
     card: PropTypes.object.isRequired
 }
 
@@ -48,20 +49,18 @@ AnnotationCard.propTypes = {
 const AnnotationCardView = ({
 
     // From props.
-    inPortal,
-    inPortalCard,
     carouselAnnotationIndex,
-    cardDotKeys,
     handleAnnotationWikiSelect,
     handleAnnotationPortalSelect,
-    selectedWikiIndex,
     accessedAnnotationAnchorIndex,
 
     // From controller.
     text,
+    cardDotKeys,
     portalLinks
 
 }) => (
+
     <div className={classnames(
         'annotation-card',
         cardDotKeys
@@ -71,16 +70,13 @@ const AnnotationCardView = ({
             dotKeys={cardDotKeys}
         />
         <TextBlock
-            inPortal={inPortal}
-            inPortalCard={inPortalCard}
-            isLyric={false}
             text={text}
-            selectedWikiIndex={selectedWikiIndex}
+            isLyric={false}
             carouselAnnotationIndex={carouselAnnotationIndex}
             accessedAnnotationAnchorIndex={accessedAnnotationAnchorIndex}
             handleAnchorClick={handleAnnotationWikiSelect}
         />
-        {!inPortal && portalLinks &&
+        {portalLinks &&
             <AnnotationPortalsBlock
                 portalLinks={portalLinks}
                 accessedAnnotationAnchorIndex={accessedAnnotationAnchorIndex}
@@ -92,18 +88,14 @@ const AnnotationCardView = ({
 
 AnnotationCardView.propTypes = {
     // Through Redux.
-    selectedWikiIndex: PropTypes.number,
     accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
     // From parent.
-
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array
     ]),
     portalLinks: PropTypes.array,
-    inPortal: PropTypes.bool,
-    inPortalCard: PropTypes.bool,
     cardDotKeys: PropTypes.object.isRequired,
     carouselAnnotationIndex: PropTypes.number.isRequired,
     handleAnnotationWikiSelect: PropTypes.func.isRequired,
@@ -111,9 +103,7 @@ AnnotationCardView.propTypes = {
 }
 
 export default connect(({
-    selectedWikiIndex,
     accessedAnnotationAnchorIndex
 }) => ({
-    selectedWikiIndex,
     accessedAnnotationAnchorIndex
 }))(AnnotationCard)

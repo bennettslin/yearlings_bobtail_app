@@ -13,7 +13,6 @@ const TextAnchorBlock = ({
     text,
     portalAnnotationIndex,
     selectedAnnotationIndex,
-    selectedWikiIndex,
     carouselAnnotationIndex,
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex,
@@ -27,7 +26,7 @@ const TextAnchorBlock = ({
             dotKeys: annotationDotKeys,
             wikiIndex } = text,
 
-        isSelected = (annotationIndex && annotationIndex === selectedAnnotationIndex) || (wikiIndex && wikiIndex === selectedWikiIndex),
+        isSelected = annotationIndex && annotationIndex === selectedAnnotationIndex,
         isPortalAnchor = typeof portalAnnotationIndex !== 'undefined' && portalAnnotationIndex === annotationIndex,
         accessHighlighted = ((accessedAnnotationIndex && accessedAnnotationIndex === annotationIndex) || (accessedAnnotationAnchorIndex && accessedAnnotationAnchorIndex === wikiIndex)),
 
