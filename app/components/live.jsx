@@ -60,7 +60,6 @@ const LiveView = ({
 
     isSliderMoving,
     isSliderTouched,
-    sliderRatio,
     sliderVerseIndex,
     showOneOfTwoLyricColumns,
     isLyricExpanded,
@@ -139,23 +138,15 @@ const LiveView = ({
             handleAnnotationWikiSelect
         },
 
-        audioTimerProps = {
-            isLogue
-        },
         audioTimerChild = (
-            <AudioTimer {...audioTimerProps} />
+            <AudioTimer />
         ),
         audioSliderProps = {
-            sliderVerseIndex,
-            sliderRatio,
-            isSliderTouched,
             handleAudioSliderTouchBegin,
             audioTimerChild
         },
         audioBannerChild = (
-            <AudioBanner {...audioSliderProps}
-                audioTimerChild={audioTimerChild}
-            />
+            <AudioBanner {...audioSliderProps} />
         ),
         audioSectionProps = {
             handleAudioPlay,
@@ -164,7 +155,6 @@ const LiveView = ({
             handleAudioOptionsToggle,
             handlePopupContainerClick,
 
-            audioSliderProps,
             audioTimerChild,
             audioBannerChild,
             titleToggleChild

@@ -114,11 +114,11 @@ class AudioSlider extends Component {
 
 AudioSlider.propTypes = {
     // Through Redux.
-    isSliderTouched: PropTypes.bool.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     selectedTimePlayed: PropTypes.number.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
+    isSliderTouched: PropTypes.bool.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
     sliderRatio: PropTypes.number.isRequired,
 
@@ -252,13 +252,15 @@ export default connect(({
     selectedTimePlayed,
     selectedVerseIndex,
     interactivatedVerseIndex,
-    sliderRatio,
-    sliderVerseIndex
+    isSliderTouched,
+    sliderVerseIndex,
+    sliderRatio
 }) => ({
     selectedSongIndex,
     selectedTimePlayed,
     selectedVerseIndex,
     interactivatedVerseIndex,
-    sliderRatio,
-    sliderVerseIndex
+    isSliderTouched,
+    sliderVerseIndex,
+    sliderRatio
 }))(AudioSlider)

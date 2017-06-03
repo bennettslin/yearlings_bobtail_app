@@ -21,10 +21,7 @@ class AudioSection extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'deviceIndex',
-                    'selectedSongIndex',
-
-                    // TODO: Not great that it needs to check audio slider props.
-                    'audioSliderProps'
+                    'selectedSongIndex'
                 ]
             })
 
@@ -55,8 +52,7 @@ class AudioSection extends Component {
 }
 
 AudioSection.propTypes = {
-    selectedSongIndex: PropTypes.number.isRequired,
-    audioSliderProps: PropTypes.object.isRequired
+    selectedSongIndex: PropTypes.number.isRequired
 }
 
 /****************

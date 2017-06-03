@@ -18,10 +18,7 @@ class AudioPopup extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'showOverlay',
-
-                    // TODO: Not great that it needs to check audio slider props.
-                    'audioSliderProps'
+                    'showOverlay'
                 ]
             })
 
@@ -51,7 +48,6 @@ class AudioPopup extends Component {
 AudioPopup.propTypes = {
     // From parent.
     showOverlay: PropTypes.bool.isRequired,
-    audioSliderProps: PropTypes.object.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 
