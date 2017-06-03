@@ -10,7 +10,7 @@ import { getAnnotationObject,
          getSongAnnotationsDotKeys,
          getAnnotationsLength } from './data-helper'
 import { intersects } from './dot-helper'
-import { getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
+import { getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
 
 export const shouldShowAnnotationForColumn = ({
 
@@ -440,4 +440,23 @@ export const getHiddenLyricColumnKey = ({
     selectedLyricColumnIndex
 }) => {
     return showOneOfTwoLyricColumns && selectedLyricColumnIndex >= 0 ? LYRIC_COLUMN_KEYS[(selectedLyricColumnIndex + 1) % 2] : ''
+}
+
+export const getShowOverlay = ({
+    deviceIndex,
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex
+}) => {
+    const isOverlayingAnnotation = getIsOverlayingAnnotation({
+        deviceIndex,
+        isLyricExpanded
+    })
+
+    return !!selectedTitleIndex ||
+           !!selectedScoreIndex ||
+           !!selectedWikiIndex ||
+           (!!selectedAnnotationIndex && isOverlayingAnnotation)
 }

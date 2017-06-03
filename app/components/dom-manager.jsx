@@ -7,6 +7,7 @@ import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './player/audio-players-section'
 import { DEVICE_OBJECTS } from '../constants/responsive'
+import { getShowOverlay } from '../helpers/logic-helper'
 import { getIsDesktop, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
 class DomManager extends Component {
@@ -23,6 +24,7 @@ class DomManager extends Component {
                 isPlaying,
 
                 handleBodyClick,
+                handleBodyTouchBegin,
                 handleBodyTouchMove,
                 handleBodyTouchEnd,
                 handleKeyDownPress,
@@ -41,7 +43,15 @@ class DomManager extends Component {
                 deviceIndex,
                 isLyricExpanded
             }),
-            showOverlay = !!selectedTitleIndex || !!selectedScoreIndex || !!selectedWikiIndex || (!!selectedAnnotationIndex && isOverlayingAnnotation),
+
+            showOverlay = getShowOverlay({
+                deviceIndex,
+                isLyricExpanded,
+                selectedAnnotationIndex,
+                selectedScoreIndex,
+                selectedTitleIndex,
+                selectedWikiIndex
+            }),
 
             audioPlayersProps = {
                 handlePlayerTimeChange,
@@ -62,6 +72,7 @@ class DomManager extends Component {
                     { 'accessed-on': selectedAccessIndex }
                 )}
                 onClick={handleBodyClick}
+                onMouseDown={handleBodyTouchBegin}
                 onMouseMove={handleBodyTouchMove}
                 onMouseUp={handleBodyTouchEnd}
                 onMouseLeave={handleBodyTouchEnd}

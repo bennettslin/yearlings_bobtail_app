@@ -90,42 +90,45 @@
     }
 }
 
-.timer-in-audio {
-    .overlay-popup-subfield {
+// Styling for overlaid audio in phone, which has timer in audio section.
+.phone-width {
+    &.overlay-shown {
+        .overlay-popup-subfield {
 
-        @banner-margin: 5px;
+            @banner-margin: 5px;
 
-        .audio-section {
-            align-items: flex-start;
-            height: @app-icon-diameter * 2 + @banner-margin;
-        }
+            .audio-section {
+                align-items: flex-start;
+                height: @app-icon-diameter * 2 + @banner-margin;
+            }
 
-        .audio-buttons-block, .audio-timer-block, .audio-banner-block {
-            height: @app-icon-diameter;
-        }
+            .audio-buttons-block, .audio-timer-block, .audio-banner-block {
+                height: @app-icon-diameter;
+            }
 
-        .audio-buttons-block {
-            max-width: 300px; // Also arbitrary.
-        }
+            .audio-buttons-block {
+                max-width: 300px; // Also arbitrary.
+            }
 
-        .audio-timer-block {
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: @audio-block-padding;
+            .audio-timer-block {
+                flex-grow: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: @audio-block-padding;
 
-            font-size: 1.75em;
-        }
+                font-size: 1.75em;
+            }
 
-        .audio-banner-block {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
+            .audio-banner-block {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
 
-        .audio-display-block {
-            display: none;
+            .audio-display-block {
+                display: none;
+            }
         }
     }
 }

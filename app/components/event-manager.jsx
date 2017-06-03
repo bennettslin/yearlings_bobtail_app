@@ -22,6 +22,12 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
+        // FIXME: This doesn't actually work!
+        // this.state = {
+        //     // Establish that click began on body, not just ended on it.
+        //     bodyClicked: false
+        // }
+
         this.handleAnnotationAccess = this.handleAnnotationAccess.bind(this)
         this.handleDotAccess = this.handleDotAccess.bind(this)
         this.handleAnnotationAnchorAccess = this.handleAnnotationAnchorAccess.bind(this)
@@ -29,6 +35,7 @@ class EventManager extends Component {
         this.handleVerseDirectionAccess = this.handleVerseDirectionAccess.bind(this)
 
         this.handleBodyClick = this.handleBodyClick.bind(this)
+        this.handleBodyTouchBegin = this.handleBodyTouchBegin.bind(this)
         this.handleBodyTouchMove = this.handleBodyTouchMove.bind(this)
         this.handleBodyTouchEnd = this.handleBodyTouchEnd.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
@@ -78,52 +85,6 @@ class EventManager extends Component {
     componentDidMount() {
         // Focus lyric section when app is mounted.
         this._focusBody()
-    }
-
-    /********
-     * BODY *
-     ********/
-
-    handleBodyClick(e) {
-        this.stopPropagation(e)
-        this._closeSections({
-            exemptCarousel: true,
-            exemptLyric: true
-        })
-
-        // Return focus to lyric section so it can have scroll access.
-        // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-        this._focusBody()
-    }
-
-    handlePopupContainerClick(e) {
-        this.stopPropagation(e)
-    }
-
-    handlePopupFocus() {
-        const { selectedScoreIndex,
-                selectedWikiIndex } = this.props
-
-        if (selectedScoreIndex) {
-            this.myScoreSection && this.myScoreSection.focus()
-
-        } else if (selectedWikiIndex) {
-            this.myWikiSection && this.myWikiSection.focus()
-        }
-    }
-
-    _focusBody(newAdminIndex) {
-        const { selectedAdminIndex,
-                isLogue } = this.props,
-            doFocusAdmin = typeof newAdminIndex !== 'undefined' ?
-                newAdminIndex : selectedAdminIndex
-
-        if (doFocusAdmin || isLogue) {
-            this.myDomManager && this.myDomManager.focus()
-
-        } else {
-            this.myLyricSection && this.myLyricSection.focus()
-        }
     }
 
     /**********
@@ -523,6 +484,26 @@ class EventManager extends Component {
     }
 
     /*********
+     * POPUP *
+     *********/
+
+    handlePopupContainerClick(e) {
+        this.stopPropagation(e)
+    }
+
+    handlePopupFocus() {
+        const { selectedScoreIndex,
+                selectedWikiIndex } = this.props
+
+        if (selectedScoreIndex) {
+            this.myScoreSection && this.myScoreSection.focus()
+
+        } else if (selectedWikiIndex) {
+            this.myWikiSection && this.myWikiSection.focus()
+        }
+    }
+
+    /*********
      * SCORE *
      *********/
 
@@ -582,6 +563,12 @@ class EventManager extends Component {
         }
     }
 
+    handleBodyTouchBegin() {
+        // this.setState({
+        //     bodyClicked: true
+        // })
+    }
+
     handleBodyTouchMove(e) {
         const { clientX } = e.nativeEvent
 
@@ -593,11 +580,45 @@ class EventManager extends Component {
     }
 
     handleBodyTouchEnd(e) {
+        // console.error(`touch end`, e.nativeEvent);
         e.preventDefault()
         this.stopPropagation(e)
         this.props.touchBodyEnd()
     }
 
+    handleBodyClick(e) {
+        // console.error(`body click`, e.nativeEvent);
+        // if (this.state.bodyClicked) {
+            this.stopPropagation(e)
+            this._closeSections({
+                exemptCarousel: true,
+                exemptLyric: true
+            })
+
+            // Return focus to lyric section so it can have scroll access.
+            // FIXME: Blind users will use tab to change focus. Will they find this annoying?
+            this._focusBody()
+
+        //     this.setState({
+        //         bodyClicked: false
+        //     })
+        // }
+    }
+
+
+    _focusBody(newAdminIndex) {
+        const { selectedAdminIndex,
+                isLogue } = this.props,
+            doFocusAdmin = typeof newAdminIndex !== 'undefined' ?
+                newAdminIndex : selectedAdminIndex
+
+        if (doFocusAdmin || isLogue) {
+            this.myDomManager && this.myDomManager.focus()
+
+        } else {
+            this.myLyricSection && this.myLyricSection.focus()
+        }
+    }
 
     /*********
      * VERSE *
@@ -822,6 +843,7 @@ class EventManager extends Component {
                 handleVerseDirectionAccess={this.handleVerseDirectionAccess}
                 handlePopupFocus={this.handlePopupFocus}
                 handleBodyClick={this.handleBodyClick}
+                handleBodyTouchBegin={this.handleBodyTouchBegin}
                 handleBodyTouchMove={this.handleBodyTouchMove}
                 handleBodyTouchEnd={this.handleBodyTouchEnd}
                 handlePopupContainerClick={this.handlePopupContainerClick}
@@ -869,7 +891,7 @@ class EventManager extends Component {
 }
 
 export default connect(({
-    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth
+    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }) => ({
-    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth
+    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }))(EventManager)

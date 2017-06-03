@@ -86,6 +86,7 @@ const AudioSectionView = ({
 
             {isTitleInAudio && titleToggleChild}
 
+            {/* In phone, show banner in the overlaid audio section. */}
             {(!isPhone || isTimerInAudio) && audioBannerChild}
 
             <AudioButtons {...other} />

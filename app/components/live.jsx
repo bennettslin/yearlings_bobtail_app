@@ -29,8 +29,8 @@ const Live = ({
 
     // From props.
     deviceIndex,
-    windowHeight,
-    windowWidth,
+    // windowHeight,
+    // windowWidth,
 
     annotationObject,
     overviewLogueIndex,
@@ -57,7 +57,6 @@ const Live = ({
     showShrunkNavIcon,
     isScoresTipsInMain,
     isTitleInAudio,
-    showOverlay,
     isOverlayingAnnotation,
     isVerseBarAbove,
     isVerseBarBelow,
@@ -108,8 +107,6 @@ const Live = ({
     // FIXME: Get this somewhere else!
     const isPhone = getIsPhone(deviceIndex),
         isDesktop = getIsDesktop(deviceIndex),
-
-        isTimerInAudio = showOverlay && isPhone,
 
         titleToggleProps = {
             handleTitleToggle
@@ -175,8 +172,9 @@ const Live = ({
         lyricColumnProps = {
             deviceIndex,
 
+            // TODO: Commenting out for now. If it's still important, pass it through Redux.
             // For lyrics line width reset.
-            isPortrait: windowHeight > windowWidth,
+            // isPortrait: windowHeight > windowWidth,
 
             isSliderTouched,
             sliderVerseIndex,
@@ -274,7 +272,6 @@ const Live = ({
             showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
             { 'show-only-left': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 0,
               'show-only-right': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 1,
-              'timer-in-audio': isTimerInAudio,
               'title-in-audio': isTitleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,
               'overview-shown': OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
@@ -313,10 +310,7 @@ const Live = ({
             {
                 <div className="overlay-popup-subfield">
                     <div className="overlay-popup-block audio-popup-block">
-                        <AudioPopup {...audioSectionProps}
-                            isTimerInAudio={isTimerInAudio}
-                            showOverlay={showOverlay}
-                        />
+                        <AudioPopup {...audioSectionProps} />
                     </div>
                     <div className="overlay-popup-block main-popup-block">
                         {isOverlayingAnnotation &&

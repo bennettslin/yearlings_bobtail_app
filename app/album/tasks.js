@@ -1,6 +1,6 @@
 module.exports = [
     {
-        taskName: `Releasing mouse outside of audio banner closes overlay.`,
+        taskName: `Releasing mouse outside of audio banner closes overlay, dom manager should tell event manager when body touch began.`,
         workedHours: 0,
         neededHours: 1
     },
