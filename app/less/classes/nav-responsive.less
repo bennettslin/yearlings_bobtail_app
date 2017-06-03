@@ -422,17 +422,9 @@
         min-width: @tablet-nav-toggle-width;
     }
 
-    .is-song {
-        &.lyric-expanded, &.carousel-expanded, &.overlay-shown {
-            .nav-toggle-book {
-                left: @tablet-nav-toggle-width;
-            }
-
-            // &.shrink-nav-icon {
-            //     .nav-toggle-book {
-            //         left: @tablet-shrink-toggle-width;
-            //     }
-            // }
+    &.overlay-shown, .is-song.lyric-expanded, .is-song.carousel-expanded {
+        .nav-toggle-book {
+            left: @tablet-nav-toggle-width;
         }
     }
 
@@ -552,17 +544,9 @@
         min-width: @mini-nav-toggle-width;
     }
 
-    .is-song {
-        &.lyric-expanded, &.carousel-expanded, &.overlay-shown {
-            .nav-toggle-book {
-                left: @mini-nav-toggle-width;
-            }
-
-            // &.shrink-nav-icon {
-            //     .nav-toggle-book {
-            //         left: @mini-shrink-toggle-width;
-            //     }
-            // }
+    &.overlay-shown, .is-song.lyric-expanded, .is-song.carousel-expanded {
+        .nav-toggle-book {
+            left: @mini-nav-toggle-width;
         }
     }
 

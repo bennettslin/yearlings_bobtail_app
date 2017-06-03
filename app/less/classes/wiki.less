@@ -37,8 +37,10 @@
     z-index: @popup-overlay-z-index;
 
     transition: opacity @animation-default;
+}
 
-    &.hidden {
+.overlay-hidden {
+    .popup-overlay {
         opacity: 0;
 
         // TODO: pointer-events isn't supported in older browsers. Find other way to prevent overlay from blocking events.

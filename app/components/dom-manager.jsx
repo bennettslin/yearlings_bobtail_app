@@ -6,52 +6,44 @@ import classnames from 'classnames'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './player/audio-players-section'
-import { SHOWN,
-         OVERVIEW_OPTIONS } from '../constants/options'
 import { DEVICE_OBJECTS } from '../constants/responsive'
-import { getSongTitle } from '../helpers/data-helper'
-import { getIsDesktop, getIsPhone } from '../helpers/responsive-helper'
+import { getIsDesktop, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
 class DomManager extends Component {
 
     render() {
-        const { props } = this,
-            { isLyricExpanded,
-              deviceIndex,
+        const { deviceIndex,
+                isLyricExpanded,
+                selectedAccessIndex,
+                selectedAdminIndex,
+                selectedAnnotationIndex,
+                selectedScoreIndex,
+                selectedTitleIndex,
+                selectedWikiIndex,
+                isPlaying,
 
-              selectedAdminIndex,
-              selectedAnnotationIndex,
-              selectedOverviewIndex,
-              selectedScoreIndex,
-              selectedSongIndex,
-              selectedTitleIndex,
-              selectedWikiIndex,
+                handleBodyClick,
+                handleBodyTouchMove,
+                handleBodyTouchEnd,
+                handleKeyDownPress,
+                handlePlayerTimeChange,
+                handlePlayerNextSong,
+                handlePlayerTimeReset,
 
-              selectedAccessIndex,
+                domManagerRef,
 
-              isPlaying,
-
-              handleBodyClick,
-              handleBodyTouchMove,
-              handleBodyTouchEnd,
-              handleKeyDownPress,
-              handlePlayerTimeChange,
-              handlePlayerNextSong,
-              handlePlayerTimeReset } = props,
+                ...other } = this.props,
 
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             isDesktop = getIsDesktop(deviceIndex),
-            isPhone = getIsPhone(deviceIndex),
 
-            selectedSongTitle = getSongTitle({ songIndex: selectedSongIndex }),
-            isOverviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
-
-            isOverlaidAnnotation = !isDesktop && (isLyricExpanded || isPhone),
-            showOverlay = !!selectedTitleIndex || (!isPhone && !!selectedScoreIndex) || !!selectedWikiIndex ||
-                (!!selectedAnnotationIndex && isOverlaidAnnotation),
+            isOverlayingAnnotation = getIsOverlayingAnnotation({
+                deviceIndex,
+                isLyricExpanded
+            }),
+            showOverlay = !!selectedTitleIndex || !!selectedScoreIndex || !!selectedWikiIndex || (!!selectedAnnotationIndex && isOverlayingAnnotation),
 
             audioPlayersProps = {
-                selectedSongIndex,
                 handlePlayerTimeChange,
                 handlePlayerNextSong,
                 handlePlayerTimeReset
@@ -59,13 +51,14 @@ class DomManager extends Component {
 
         return (
             <div
-                ref={this.props.domManagerRef}
+                ref={domManagerRef}
                 className={classnames(
                     'dom-manager',
                     deviceClassName,
                     selectedAdminIndex ? 'admin' : 'live',
                     isDesktop ? 'is-desktop' : 'is-mobile',
                     isPlaying ? 'is-playing' : 'is-paused',
+                    showOverlay ? 'overlay-shown' : 'overlay-hidden',
                     { 'accessed-on': selectedAccessIndex }
                 )}
                 onClick={handleBodyClick}
@@ -76,22 +69,14 @@ class DomManager extends Component {
                 tabIndex="-1"
             >
                 <AdminToggle />
+
                 <AudioPlayersSection {...audioPlayersProps} />
-                <div
-                    className={classnames(
-                        'popup-overlay',
-                        { 'hidden': !showOverlay }
-                    )}
-                >
-                </div>
-                <SwitchManager {...props}
-                    // For scores tips section.
-                    isDesktop={isDesktop}
-                    isPhone={isPhone}
-                    selectedSongTitle={selectedSongTitle}
+
+                <div className="popup-overlay" />
+
+                <SwitchManager {...other}
                     showOverlay={showOverlay}
-                    isOverviewShown={isOverviewShown}
-                    isOverlaidAnnotation={isOverlaidAnnotation}
+                    isOverlayingAnnotation={isOverlayingAnnotation}
                 />
             </div>
         )
@@ -99,7 +84,7 @@ class DomManager extends Component {
 }
 
 export default connect(({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, windowHeight, windowWidth, isPlaying
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying
 }) => ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, windowHeight, windowWidth, isPlaying
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying
 }))(DomManager)

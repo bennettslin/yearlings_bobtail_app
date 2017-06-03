@@ -114,7 +114,6 @@ export const getIsToggleInOverview = (deviceIndex) => {
 }
 
 export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
-
     const selectedSong = getSongObject(songIndex),
         { hasSideStanzas,
           isDoublespeaker } = selectedSong
@@ -156,6 +155,13 @@ export const getIsHeightlessLyricColumn = ({
 
         // Otherwise, it is heightless when width exceeds height.
         windowWidth > windowHeight)
+}
+
+export const getIsOverlayingAnnotation = ({
+    deviceIndex,
+    isLyricExpanded
+}) => {
+    return !getIsDesktop(deviceIndex) && (isLyricExpanded || getIsPhone(deviceIndex))
 }
 
 export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {

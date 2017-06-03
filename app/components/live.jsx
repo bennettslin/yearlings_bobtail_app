@@ -21,29 +21,17 @@ import ScorePopup from './score/score-popup'
 import TitlePopup from './title/title-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
-import { getIsLyricExpandable } from '../helpers/responsive-helper'
+import { SHOWN,
+         OVERVIEW_OPTIONS } from '../constants/options'
+import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
-/*************
- * CONTAINER *
- *************/
-
-const Live = (props) => (
-    <LiveView {...props} />
-)
-
-/****************
- * PRESENTATION *
- ****************/
-
-const LiveView = ({
+const Live = ({
 
     // From props.
     deviceIndex,
     windowHeight,
     windowWidth,
 
-    isPhone,
-    isDesktop,
     annotationObject,
     overviewLogueIndex,
     overviewSongIndex,
@@ -55,6 +43,7 @@ const LiveView = ({
     selectedDotsIndex,
     selectedLyricColumnIndex,
     selectedNavIndex,
+    selectedOverviewIndex,
 
     interactivatedVerseIndex,
 
@@ -69,8 +58,7 @@ const LiveView = ({
     isScoresTipsInMain,
     isTitleInAudio,
     showOverlay,
-    isOverviewShown,
-    isOverlaidAnnotation,
+    isOverlayingAnnotation,
     isVerseBarAbove,
     isVerseBarBelow,
 
@@ -118,7 +106,10 @@ const LiveView = ({
 }) => {
 
     // FIXME: Get this somewhere else!
-    const isTimerInAudio = showOverlay && isPhone,
+    const isPhone = getIsPhone(deviceIndex),
+        isDesktop = getIsDesktop(deviceIndex),
+
+        isTimerInAudio = showOverlay && isPhone,
 
         titleToggleProps = {
             handleTitleToggle
@@ -218,7 +209,7 @@ const LiveView = ({
             ) : null,
 
         mainColumnProps = {
-            isOverlaidAnnotation,
+            isOverlayingAnnotation,
 
             isPhone,
             isDesktop,
@@ -272,7 +263,7 @@ const LiveView = ({
             'live-app',
             isLogue ? 'is-logue' : 'is-song',
             isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
-            isOverlaidAnnotation ? 'overlaid-annotation' : 'side-annotation',
+            isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
             isSliderMoving ? 'slider-moving' : 'slider-not-moving',
             interactivatedVerseIndex < 0 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
             selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
@@ -280,13 +271,12 @@ const LiveView = ({
             selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
             showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
-            showOverlay ? 'overlay-shown' : 'overlay-hidden',
             { 'show-only-left': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 0,
               'show-only-right': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 1,
               'timer-in-audio': isTimerInAudio,
               'title-in-audio': isTitleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,
-              'overview-shown': isOverviewShown,
+              'overview-shown': OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
               'verse-above': isVerseBarAbove,
               'verse-below': isVerseBarBelow,
               'verse-bar-hidden': !isVerseBarAbove && !isVerseBarBelow,
@@ -328,7 +318,7 @@ const LiveView = ({
                         />
                     </div>
                     <div className="overlay-popup-block main-popup-block">
-                        {isOverlaidAnnotation &&
+                        {isOverlayingAnnotation &&
                             <AnnotationPopup {...annotationPopupProps} />
                         }
                         <TitlePopup {...titlePopupProps} />
@@ -342,7 +332,7 @@ const LiveView = ({
 }
 
 export default connect(({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
 }))(Live)
