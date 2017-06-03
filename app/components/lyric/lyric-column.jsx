@@ -37,7 +37,6 @@ class LyricColumn extends Component {
                     'deviceIndex',
                     'isLogue',
                     'isPlaying',
-                    // 'isPortrait',
                     'selectedSongIndex',
                     'accessedAnnotationIndex',
                     'selectedAnnotationIndex',
@@ -105,7 +104,6 @@ LyricColumn.propTypes = {
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     isSliderTouched: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
-    // isPortrait: PropTypes.bool.isRequired,
 
     isLyricExpanded: PropTypes.bool.isRequired,
 

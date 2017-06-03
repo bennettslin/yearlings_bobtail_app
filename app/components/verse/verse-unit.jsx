@@ -32,7 +32,6 @@ class VerseUnit extends Component {
                 updatingPropsArray: [
                     'deviceIndex',
                     'appMounted',
-                    'isPortrait',
                     'isSliderTouched',
                     'isPlaying',
                     'accessedAnnotationIndex',

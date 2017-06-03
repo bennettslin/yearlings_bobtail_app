@@ -172,10 +172,6 @@ const Live = ({
         lyricColumnProps = {
             deviceIndex,
 
-            // TODO: Commenting out for now. If it's still important, pass it through Redux.
-            // For lyrics line width reset.
-            // isPortrait: windowHeight > windowWidth,
-
             isSliderTouched,
             sliderVerseIndex,
             isLogue,

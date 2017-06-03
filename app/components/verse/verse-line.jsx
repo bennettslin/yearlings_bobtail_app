@@ -46,7 +46,7 @@ class VerseLine extends Component {
              * types, or when switching from portait to landscape.
              */
             oldProps.deviceIndex !== newProps.deviceIndex ||
-            oldProps.isPortrait !== newProps.isPortrait ||
+            // oldProps.isPortrait !== newProps.isPortrait ||
 
             /**
              * Resetting is mandatory when selecting a new song or column, or
@@ -139,7 +139,7 @@ class VerseLine extends Component {
 VerseLine.propTypes = {
     // TODO: Are these still being passed?
     deviceIndex: PropTypes.number,
-    isPortrait: PropTypes.bool,
+    // isPortrait: PropTypes.bool,
     selectedSongIndex: PropTypes.number,
     hiddenLyricColumnKey: PropTypes.string.isRequired,
     columnKey: PropTypes.string.isRequired

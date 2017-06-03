@@ -20,7 +20,6 @@ class LyricUnit extends Component {
                 updatingPropsArray: [
                     'deviceIndex',
                     'appMounted',
-                    'isPortrait',
                     'isSliderTouched',
                     'sliderVerseIndex',
                     'isPlaying',
