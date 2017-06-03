@@ -23,13 +23,6 @@ import WikiPopup from './wiki/wiki-popup'
 import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 import { getIsLyricExpandable } from '../helpers/responsive-helper'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
-}) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -363,4 +356,8 @@ const LiveView = ({
     )
 }
 
-export default connect(passReduxStateToProps)(Live)
+export default connect(({
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
+}) => ({
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
+}))(Live)

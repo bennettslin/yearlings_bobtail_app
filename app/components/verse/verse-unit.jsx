@@ -7,13 +7,6 @@ import VerseAudioButton from './verse-audio-button'
 import { DOUBLESPEAKER_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-const passReduxStateToProps = ({
-    selectedSongIndex
-}) => ({
-// Pass Redux state into component props.
-    selectedSongIndex
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -326,4 +319,8 @@ VerseUnitView.propTypes = {
     handleInteractivatableClick: PropTypes.func
 }
 
-export default connect(passReduxStateToProps)(VerseUnit)
+export default connect(({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+}))(VerseUnit)

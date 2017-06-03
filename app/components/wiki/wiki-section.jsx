@@ -7,21 +7,6 @@ import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 import { getWikiUrl } from '../../helpers/logic-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedSongIndex,
-    selectedWikiIndex,
-    selectedAnnotationIndex,
-    carouselAnnotationIndex,
-    isMobileWiki
-}) => ({
-    selectedSongIndex,
-    selectedWikiIndex,
-    selectedAnnotationIndex,
-    carouselAnnotationIndex,
-    isMobileWiki
-})
-
 // TODO: Show that active wiki anchor is disabled.
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/
 // TODO: If loading time is too long, show page with a "There was a problem connecting to Wikipedia. Try again?"
@@ -115,4 +100,16 @@ WikiSection.propTypes = {
     wikiSectionRef: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(WikiSection)
+export default connect(({
+    selectedSongIndex,
+    selectedWikiIndex,
+    selectedAnnotationIndex,
+    carouselAnnotationIndex,
+    isMobileWiki
+}) => ({
+    selectedSongIndex,
+    selectedWikiIndex,
+    selectedAnnotationIndex,
+    carouselAnnotationIndex,
+    isMobileWiki
+}))(WikiSection)

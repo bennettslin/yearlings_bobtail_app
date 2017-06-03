@@ -8,13 +8,6 @@ import NavToggle from './nav-toggle'
 import NavBooksColumn from './nav-books-column'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    showSingleBookColumn
-}) => ({
-    showSingleBookColumn
-})
-
 class NavSection extends Component {
 
     shouldComponentUpdate(nextProps) {
@@ -70,4 +63,8 @@ NavSection.propTypes = {
     handleNavExpand: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(NavSection)
+export default connect(({
+    showSingleBookColumn
+}) => ({
+    showSingleBookColumn
+}))(NavSection)

@@ -6,15 +6,6 @@ import { connect } from 'react-redux'
 import DotBlock from '../dot/dot-block'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    accessedDotIndex,
-    selectedDotKeys
-}) => ({
-    accessedDotIndex,
-    selectedDotKeys
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -118,4 +109,10 @@ DotsSectionView.propTypes = {
     handleContainerClick: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(DotsSection)
+export default connect(({
+    accessedDotIndex,
+    selectedDotKeys
+}) => ({
+    accessedDotIndex,
+    selectedDotKeys
+}))(DotsSection)

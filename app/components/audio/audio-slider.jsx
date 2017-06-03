@@ -9,17 +9,6 @@ import { getFormattedTime } from '../../helpers/format-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
 
-const passReduxStateToProps = ({
-    interactivatedVerseIndex,
-    sliderRatio,
-    sliderVerseIndex
-}) => ({
-// Pass Redux state into component props.
-    interactivatedVerseIndex,
-    sliderRatio,
-    sliderVerseIndex
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -250,4 +239,12 @@ AudioSliderView.propTypes = {
     handleMouseDown: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(AudioSlider)
+export default connect(({
+    interactivatedVerseIndex,
+    sliderRatio,
+    sliderVerseIndex
+}) => ({
+    interactivatedVerseIndex,
+    sliderRatio,
+    sliderVerseIndex
+}))(AudioSlider)

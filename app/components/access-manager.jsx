@@ -40,9 +40,6 @@ import { ALL_DOT_KEYS } from '../constants/dots'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, annotationObject, deviceIndex }) => ({ selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, annotationObject, deviceIndex })
-
 class AccessManager extends Component {
 
     constructor(props) {
@@ -521,4 +518,8 @@ class AccessManager extends Component {
     }
 }
 
-export default connect(passReduxStateToProps)(AccessManager)
+export default connect(({
+    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, annotationObject, deviceIndex
+}) => ({
+    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, annotationObject, deviceIndex
+}))(AccessManager)

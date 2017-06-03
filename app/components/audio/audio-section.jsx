@@ -5,19 +5,6 @@ import AudioButtons from './audio-buttons'
 import { getSongsLength } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-const passReduxStateToProps = ({
-    selectedSongIndex,
-    selectedAudioOptionIndex,
-    isTitleInAudio,
-    isPlaying
-}) => ({
-// Pass Redux state into component props.
-    selectedSongIndex,
-    selectedAudioOptionIndex,
-    isTitleInAudio,
-    isPlaying
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -160,4 +147,14 @@ AudioSectionView.propTypes = {
     audioBannerChild: PropTypes.element.isRequired
 }
 
-export default connect(passReduxStateToProps)(AudioSection)
+export default connect(({
+    selectedSongIndex,
+    selectedAudioOptionIndex,
+    isTitleInAudio,
+    isPlaying
+}) => ({
+    selectedSongIndex,
+    selectedAudioOptionIndex,
+    isTitleInAudio,
+    isPlaying
+}))(AudioSection)

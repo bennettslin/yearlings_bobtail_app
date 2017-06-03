@@ -5,15 +5,6 @@ import NavSection from '../nav/nav-section'
 import CarouselToggle from '../carousel/carousel-toggle'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    isHiddenNav,
-    isScoresTipsInMain
-}) => ({
-    isHiddenNav,
-    isScoresTipsInMain
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -125,4 +116,10 @@ const MainColumnView = ({
     )
 }
 
-export default connect(passReduxStateToProps)(MainColumn)
+export default connect(({
+    isHiddenNav,
+    isScoresTipsInMain
+}) => ({
+    isHiddenNav,
+    isScoresTipsInMain
+}))(MainColumn)

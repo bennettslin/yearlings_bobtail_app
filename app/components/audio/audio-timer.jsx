@@ -3,13 +3,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getFormattedTime } from '../../helpers/format-helper'
 
-const passReduxStateToProps = ({
-    selectedTimePlayed
-}) => ({
-// Pass Redux state into component props.
-    selectedTimePlayed
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -57,4 +50,8 @@ AudioTimerView.propTypes = {
     formattedTime: PropTypes.string.isRequired
 }
 
-export default connect(passReduxStateToProps)(AudioTimer)
+export default connect(({
+    selectedTimePlayed
+}) => ({
+    selectedTimePlayed
+}))(AudioTimer)

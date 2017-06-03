@@ -7,13 +7,6 @@ import TitleSection from './title-section'
 import Popup from '../popup/popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedTitleIndex
-}) => ({
-    selectedTitleIndex
-})
-
 class TitlePopup extends Component {
 
     shouldComponentUpdate(nextProps) {
@@ -61,4 +54,8 @@ TitlePopup.propTypes = {
     handlePopupFocus: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(TitlePopup)
+export default connect(({
+    selectedTitleIndex
+}) => ({
+    selectedTitleIndex
+}))(TitlePopup)

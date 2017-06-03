@@ -6,13 +6,6 @@ import { connect } from 'react-redux'
 import Button from '../button/button'
 import { DOTS_SECTION_EXPAND_KEY } from '../../constants/access'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedDotsIndex
-}) => ({
-    selectedDotsIndex
-})
-
 const DotsToggle = ({
 
     selectedDotsIndex,
@@ -40,4 +33,8 @@ DotsToggle.propTypes = {
     handleDotsSectionToggle: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(DotsToggle)
+export default connect(({
+    selectedDotsIndex
+}) => ({
+    selectedDotsIndex
+}))(DotsToggle)

@@ -8,17 +8,6 @@ import Button from '../button/button'
 import { getAnnotationsArray } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    accessedAnnotationIndex
-}) => ({
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    accessedAnnotationIndex
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -120,4 +109,12 @@ CarouselSectionView.propTypes = {
     handleAnnotationNext: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(CarouselSection)
+export default connect(({
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    accessedAnnotationIndex
+}) => ({
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    accessedAnnotationIndex
+}))(CarouselSection)

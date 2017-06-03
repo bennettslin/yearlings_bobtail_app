@@ -2,15 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    isScoresTipsInMain,
-    isTitleInAudio
-}) => ({
-    isScoresTipsInMain,
-    isTitleInAudio
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -59,4 +50,10 @@ const MenuFieldView = ({
     </div>
 )
 
-export default connect(passReduxStateToProps)(MenuField)
+export default connect(({
+    isScoresTipsInMain,
+    isTitleInAudio
+}) => ({
+    isScoresTipsInMain,
+    isTitleInAudio
+}))(MenuField)

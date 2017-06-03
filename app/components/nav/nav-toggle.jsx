@@ -6,13 +6,6 @@ import { connect } from 'react-redux'
 import Button from '../button/button'
 import { NAV_SECTION_EXPAND_KEY } from '../../constants/access'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedNavIndex
-}) => ({
-    selectedNavIndex
-})
-
 const NavToggle = ({
 
     selectedNavIndex,
@@ -42,4 +35,8 @@ NavToggle.propTypes = {
     handleNavExpand: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(NavToggle)
+export default connect(({
+    selectedNavIndex
+}) => ({
+    selectedNavIndex
+}))(NavToggle)

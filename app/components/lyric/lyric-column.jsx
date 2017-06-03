@@ -9,33 +9,6 @@ import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-const passReduxStateToProps = ({
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    selectedLyricColumnIndex,
-    selectedVerseIndex,
-    sliderVerseIndex,
-    accessedAnnotationIndex,
-    showOneOfTwoLyricColumns,
-    appMounted,
-    interactivatedVerseIndex,
-    isLyricExpanded,
-    isPlaying
-}) => ({
-// Pass Redux state into component props.
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    selectedLyricColumnIndex,
-    selectedVerseIndex,
-    sliderVerseIndex,
-    accessedAnnotationIndex,
-    showOneOfTwoLyricColumns,
-    appMounted,
-    interactivatedVerseIndex,
-    isLyricExpanded,
-    isPlaying
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -250,4 +223,28 @@ LyricColumnView.propTypes = {
     completeHeightTransition: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(LyricColumn)
+export default connect(({
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    selectedLyricColumnIndex,
+    selectedVerseIndex,
+    sliderVerseIndex,
+    accessedAnnotationIndex,
+    showOneOfTwoLyricColumns,
+    appMounted,
+    interactivatedVerseIndex,
+    isLyricExpanded,
+    isPlaying
+}) => ({
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    selectedLyricColumnIndex,
+    selectedVerseIndex,
+    sliderVerseIndex,
+    accessedAnnotationIndex,
+    showOneOfTwoLyricColumns,
+    appMounted,
+    interactivatedVerseIndex,
+    isLyricExpanded,
+    isPlaying
+}))(LyricColumn)

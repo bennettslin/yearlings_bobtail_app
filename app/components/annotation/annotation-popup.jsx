@@ -5,21 +5,6 @@ import AnnotationSection from './annotation-section'
 import Popup from '../popup/popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-const passReduxStateToProps = ({
-    selectedAnnotationIndex,
-    selectedCarouselIndex,
-    selectedScoreIndex,
-    selectedTitleIndex,
-    selectedWikiIndex
-}) => ({
-// Pass Redux state into component props.
-    selectedAnnotationIndex,
-    selectedCarouselIndex,
-    selectedScoreIndex,
-    selectedTitleIndex,
-    selectedWikiIndex
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -88,4 +73,16 @@ AnnotationPopup.propTypes = {
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(AnnotationPopup)
+export default connect(({
+    selectedAnnotationIndex,
+    selectedCarouselIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex
+}) => ({
+    selectedAnnotationIndex,
+    selectedCarouselIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex
+}))(AnnotationPopup)

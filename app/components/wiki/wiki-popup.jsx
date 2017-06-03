@@ -7,13 +7,6 @@ import WikiSection from './wiki-section'
 import Popup from '../popup/popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedWikiIndex
-}) => ({
-    selectedWikiIndex
-})
-
 class WikiPopup extends Component {
 
     shouldComponentUpdate(nextProps) {
@@ -61,4 +54,8 @@ WikiPopup.propTypes = {
     handleWikiToggle: PropTypes.func.isRequired,
     handlePopupFocus: PropTypes.func.isRequired,
 }
-export default connect(passReduxStateToProps)(WikiPopup)
+export default connect(({
+    selectedWikiIndex
+}) => ({
+    selectedWikiIndex
+}))(WikiPopup)

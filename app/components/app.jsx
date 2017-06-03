@@ -25,20 +25,6 @@ import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
-/*********
- * STORE *
- *********/
-
-// Pass Redux state into component props.
-const passReduxStateToProps = (state) => (state)
-
-// Bind Redux action creators to component props.
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAnnotationObject, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
-    }, dispatch)
-)
-
 /*************
  * CONTAINER *
  *************/
@@ -1079,5 +1065,18 @@ class App extends Component {
         )
     }
 }
+
+/*********
+ * STORE *
+ *********/
+
+const passReduxStateToProps = (state) => (state)
+
+// Bind Redux action creators to component props.
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAnnotationObject, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+    }, dispatch)
+)
 
 export default connect(passReduxStateToProps, bindDispatchToProps)(App)

@@ -7,13 +7,6 @@ import Button from '../button/button'
 import { OVERVIEW_TOGGLE_KEY } from '../../constants/access'
 import { OVERVIEW_OPTIONS } from '../../constants/options'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedOverviewIndex
-}) => ({
-    selectedOverviewIndex
-})
-
 const OverviewToggle = ({
 
     selectedOverviewIndex,
@@ -39,4 +32,8 @@ OverviewToggle.propTypes = {
     handleOverviewToggle: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(OverviewToggle)
+export default connect(({
+    selectedOverviewIndex
+}) => ({
+    selectedOverviewIndex
+}))(OverviewToggle)

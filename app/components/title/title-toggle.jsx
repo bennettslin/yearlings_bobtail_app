@@ -6,13 +6,6 @@ import { connect } from 'react-redux'
 import Button from '../button/button'
 import { TITLE_TOGGLE_KEY } from '../../constants/access'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedTitleIndex
-}) => ({
-    selectedTitleIndex
-})
-
 const TitleToggle = ({
 
     // From props.
@@ -41,4 +34,8 @@ TitleToggle.propTypes = {
     handleTitleToggle: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(TitleToggle)
+export default connect(({
+    selectedTitleIndex
+}) => ({
+    selectedTitleIndex
+}))(TitleToggle)

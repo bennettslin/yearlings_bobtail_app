@@ -17,9 +17,6 @@ const ANNOTATION_SCROLL = 'annotation',
     LYRICS_SCROLL = 'lyrics-scroll',
     VERSE_SCROLL = 'verse'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth }) => ({ selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth })
-
 class EventManager extends Component {
 
     constructor(props) {
@@ -871,4 +868,8 @@ class EventManager extends Component {
     }
 }
 
-export default connect(passReduxStateToProps)(EventManager)
+export default connect(({
+    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth
+}) => ({
+    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, deviceIndex, windowWidth
+}))(EventManager)

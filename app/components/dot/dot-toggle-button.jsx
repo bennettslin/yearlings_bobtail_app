@@ -7,13 +7,6 @@ import classnames from 'classnames'
 import Button from '../button/button'
 import { DOT_DESCRIPTIONS } from '../../constants/dots'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedDotsIndex
-}) => ({
-    selectedDotsIndex
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -158,4 +151,8 @@ DotToggleButtonView.propTypes = {
     handleTextContainerClick: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(DotToggleButton)
+export default connect(({
+    selectedDotsIndex
+}) => ({
+    selectedDotsIndex
+}))(DotToggleButton)

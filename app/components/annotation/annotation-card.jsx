@@ -6,13 +6,6 @@ import DotBlock from '../dot/dot-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    accessedAnnotationAnchorIndex
-}) => ({
-    accessedAnnotationAnchorIndex
-})
-
 /*************
  * CONTAINER *
  *************/
@@ -111,4 +104,8 @@ AnnotationCardView.propTypes = {
     handleAnnotationPortalSelect: PropTypes.func.isRequired,
 }
 
-export default connect(passReduxStateToProps)(AnnotationCard)
+export default connect(({
+    accessedAnnotationAnchorIndex
+}) => ({
+    accessedAnnotationAnchorIndex
+}))(AnnotationCard)

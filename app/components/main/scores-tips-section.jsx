@@ -9,17 +9,6 @@ import { SCORE_TOGGLE_KEY,
 import { TIPS_OPTIONS } from '../../constants/options'
 import { getIsPhone } from '../../helpers/responsive-helper'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    deviceIndex,
-    selectedScoreIndex,
-    selectedTipsIndex
-}) => ({
-    deviceIndex,
-    selectedScoreIndex,
-    selectedTipsIndex
-})
-
 const ScoresTipsSection = ({
 
     deviceIndex,
@@ -64,4 +53,12 @@ ScoresTipsSection.propTypes = {
     handleTipsToggle: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(ScoresTipsSection)
+export default connect(({
+    deviceIndex,
+    selectedScoreIndex,
+    selectedTipsIndex
+}) => ({
+    deviceIndex,
+    selectedScoreIndex,
+    selectedTipsIndex
+}))(ScoresTipsSection)

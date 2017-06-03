@@ -7,15 +7,6 @@ import ScoreSection from './score-section'
 import Popup from '../popup/popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedSongIndex,
-    selectedScoreIndex
-}) => ({
-    selectedSongIndex,
-    selectedScoreIndex
-})
-
 class ScorePopup extends Component {
 
     shouldComponentUpdate(nextProps) {
@@ -65,4 +56,10 @@ ScorePopup.propTypes = {
     handleScoreToggle: PropTypes.func.isRequired,
     handlePopupFocus: PropTypes.func.isRequired
 }
-export default connect(passReduxStateToProps)(ScorePopup)
+export default connect(({
+    selectedSongIndex,
+    selectedScoreIndex
+}) => ({
+    selectedSongIndex,
+    selectedScoreIndex
+}))(ScorePopup)

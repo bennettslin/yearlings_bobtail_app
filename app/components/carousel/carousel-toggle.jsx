@@ -6,13 +6,6 @@ import { connect } from 'react-redux'
 import Button from '../button/button'
 import { CAROUSEL_TOGGLE_KEY } from '../../constants/access'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    selectedCarouselIndex
-}) => ({
-    selectedCarouselIndex
-})
-
 const CarouselToggle = ({
 
     selectedCarouselIndex,
@@ -35,4 +28,8 @@ CarouselToggle.propTypes = {
     handleCarouselToggle: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(CarouselToggle)
+export default connect(({
+    selectedCarouselIndex
+}) => ({
+    selectedCarouselIndex
+}))(CarouselToggle)

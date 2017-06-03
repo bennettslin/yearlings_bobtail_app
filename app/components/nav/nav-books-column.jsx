@@ -8,15 +8,6 @@ import NavBook from './nav-book'
 import NavBookButton from './nav-book-button'
 import NavLogueButton from './nav-logue-button'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    showSingleBookColumn,
-    shownBookColumnIndex
-}) => ({
-    showSingleBookColumn,
-    shownBookColumnIndex
-})
-
 const NavBooksColumn = ({
 
     showSingleBookColumn,
@@ -67,4 +58,10 @@ NavBooksColumn.propTypes = {
     handleNavSongSelect: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(NavBooksColumn)
+export default connect(({
+    showSingleBookColumn,
+    shownBookColumnIndex
+}) => ({
+    showSingleBookColumn,
+    shownBookColumnIndex
+}))(NavBooksColumn)

@@ -9,19 +9,6 @@ import { getIsLogue } from '../../helpers/data-helper'
 import { getIsToggleInOverview } from '../../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-// Pass Redux state into component props.
-const passReduxStateToProps = ({
-    deviceIndex,
-    selectedOverviewIndex,
-    selectedSongIndex,
-    selectedTitleIndex
-}) => ({
-    deviceIndex,
-    selectedOverviewIndex,
-    selectedSongIndex,
-    selectedTitleIndex
-})
-
 class OverviewPopup extends Component {
 
     shouldComponentUpdate(nextProps) {
@@ -95,4 +82,14 @@ OverviewPopup.propTypes = {
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 
-export default connect(passReduxStateToProps)(OverviewPopup)
+export default connect(({
+    deviceIndex,
+    selectedOverviewIndex,
+    selectedSongIndex,
+    selectedTitleIndex
+}) => ({
+    deviceIndex,
+    selectedOverviewIndex,
+    selectedSongIndex,
+    selectedTitleIndex
+}))(OverviewPopup)
