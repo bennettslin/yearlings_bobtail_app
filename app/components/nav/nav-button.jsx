@@ -1,43 +1,78 @@
-import React from 'react'
+// Button to select book or song in nav section.
+
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
 import { getIsLogue, getSongTitle } from '../../helpers/data-helper'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const NavButton = ({
+class NavButton extends Component {
 
-    songIndex,
-    handleNavSongSelect,
-    handleButtonClick,
+    constructor(props) {
+        super(props)
 
-...other }) => {
+        this._handleButtonClick = this._handleButtonClick.bind(this)
+    }
 
-    const isLogue = getIsLogue(songIndex),
-        songTitle = getSongTitle({
-            songIndex,
-            showIndex: false
-        }),
-        iconText = isLogue ? null : songIndex,
-        handleClick = handleButtonClick || (e => handleNavSongSelect(e, songIndex))
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'isSelected',
+                    'accessHighlighted'
+                ]
+            })
 
-    return (
-        <NavButtonView {...other}
-            iconText={iconText}
-            songTitle={songTitle}
-            handleClick={handleClick}
-        />
-    )
+        return componentShouldUpdate
+    }
+
+    _handleButtonClick(e) {
+        const { handleButtonClick,
+                songIndex } = this.props
+
+        // Select song or logue.
+        if (!isNaN(songIndex)) {
+            handleButtonClick(e, songIndex)
+
+        // Select book column.
+        } else {
+            handleButtonClick(e)
+        }
+    }
+
+    render() {
+        const { songIndex,
+                ...other } = this.props,
+
+            isLogue = getIsLogue(songIndex),
+            songTitle = getSongTitle({
+                songIndex,
+                showIndex: false
+            }),
+            iconText = !isLogue ? songIndex : undefined
+
+        return (
+            <NavButtonView {...other}
+                iconText={iconText}
+                songTitle={songTitle}
+                handleClick={this._handleButtonClick}
+            />
+        )
+    }
 }
 
 NavButton.propTypes = {
     songIndex: PropTypes.number,
+    accessHighlighted: PropTypes.bool,
     isSelected: PropTypes.bool.isRequired,
-    handleNavSongSelect: PropTypes.func.isRequired,
-    handleButtonClick: PropTypes.func
+    handleButtonClick: PropTypes.func.isRequired
 }
 
 /****************
@@ -49,7 +84,6 @@ const NavButtonView = ({
     // From props.
     isSelected,
     accessHighlighted,
-    accessKey,
 
     // From controller.
     iconText,
@@ -66,9 +100,8 @@ const NavButtonView = ({
         <div className="nav-button-wrapper">
             <Button
                 buttonName="nav"
-                accessKey={accessKey}
-                iconText={iconText}
                 isSelected={isSelected}
+                iconText={iconText}
                 handleClick={handleClick}
                 extraChild={
                     <div className="nav-title-block">
@@ -83,13 +116,10 @@ const NavButtonView = ({
 )
 
 NavButtonView.propTypes = {
+    // From parent.
     isSelected: PropTypes.bool.isRequired,
-    accessHighlighted: PropTypes.bool.isRequired,
-    accessKey: PropTypes.string,
-    iconText: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
-    ]),
+    accessHighlighted: PropTypes.bool,
+    iconText: PropTypes.number,
     songTitle: PropTypes.string,
     handleClick: PropTypes.func.isRequired
 }

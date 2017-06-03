@@ -6,10 +6,10 @@ import PropTypes from 'prop-types'
 import NavButton from './nav-button'
 import { getBookColumnIndex } from '../../helpers/data-helper'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
     selectedSongIndex
 }) => ({
-// Pass Redux state into component props.
     selectedSongIndex
 })
 

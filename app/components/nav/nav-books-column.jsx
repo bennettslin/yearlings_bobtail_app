@@ -38,13 +38,13 @@ const NavBooksColumn = ({
             <div className="books-column">
                 <NavBook
                     bookIndex={bookIndex}
-                    handleNavSongSelect={handleNavSongSelect}
+                    handleButtonClick={handleNavSongSelect}
                 />
                 {/* prologue or toggle */}
                 {isShownColumn ?
                     <NavLogueButton
                         bookIndex={bookIndex}
-                        handleNavSongSelect={handleNavSongSelect}
+                        handleButtonClick={handleNavSongSelect}
                     /> :
                     <NavBookButton
                         bookIndex={bookIndex}

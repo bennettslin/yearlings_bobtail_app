@@ -5,11 +5,11 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from './nav-button'
 
+// Pass Redux state into component props.
 const passReduxStateToProps = ({
     selectedSongIndex,
     accessedNavSongIndex
 }) => ({
-// Pass Redux state into component props.
     selectedSongIndex,
     accessedNavSongIndex
 })
