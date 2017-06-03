@@ -45,7 +45,7 @@ class LyricColumn extends Component {
                     'selectedLyricColumnIndex',
                     'selectedVerseIndex',
                     'showOneOfTwoLyricColumns',
-                    'isSliderTouched',
+                    // 'isSliderTouched',
 
                     // For lyric expand button.
                     // FIXME: Not ideal.
@@ -102,7 +102,7 @@ LyricColumn.propTypes = {
     deviceIndex: PropTypes.number.isRequired,
     isLogue: PropTypes.bool.isRequired,
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-    isSliderTouched: PropTypes.bool.isRequired,
+    // isSliderTouched: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
 
     isLyricExpanded: PropTypes.bool.isRequired,
@@ -222,6 +222,7 @@ LyricColumnView.propTypes = {
 }
 
 export default connect(({
+    appMounted,
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
@@ -229,11 +230,11 @@ export default connect(({
     sliderVerseIndex,
     accessedAnnotationIndex,
     showOneOfTwoLyricColumns,
-    appMounted,
     interactivatedVerseIndex,
     isLyricExpanded,
     isPlaying
 }) => ({
+    appMounted,
     selectedSongIndex,
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
@@ -241,7 +242,6 @@ export default connect(({
     sliderVerseIndex,
     accessedAnnotationIndex,
     showOneOfTwoLyricColumns,
-    appMounted,
     interactivatedVerseIndex,
     isLyricExpanded,
     isPlaying

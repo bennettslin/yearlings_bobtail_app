@@ -1,4 +1,7 @@
+// Component to show single verse. If doublespeaker, includes both lines.
+
 import React from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import VerseUnit from '../verse/verse-unit'
 
@@ -32,9 +35,21 @@ const LyricVerse = ({
 }
 
 LyricVerse.propTypes = {
-    verseObject: PropTypes.object.isRequired,
+    // Through Redux.
     selectedVerseIndex: PropTypes.number.isRequired,
-    sliderVerseIndex: PropTypes.number.isRequired
+    sliderVerseIndex: PropTypes.number.isRequired,
+    interactivatedVerseIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    verseObject: PropTypes.object.isRequired
 }
 
-export default LyricVerse
+export default connect(({
+    selectedVerseIndex,
+    sliderVerseIndex,
+    interactivatedVerseIndex
+}) => ({
+    selectedVerseIndex,
+    sliderVerseIndex,
+    interactivatedVerseIndex
+}))(LyricVerse)

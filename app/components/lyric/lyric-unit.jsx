@@ -1,8 +1,10 @@
+// Component to show main stanza, side stanza, and dot stanza for stanza.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
-import LyricDotStanza from './lyric-dot-stanza'
 import LyricStanza from './lyric-stanza'
+import LyricDotStanza from './lyric-dot-stanza'
 import { TITLE, LEFT, RIGHT } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 

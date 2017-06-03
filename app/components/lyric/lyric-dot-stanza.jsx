@@ -1,5 +1,8 @@
+// Component to show single dot anchor as its own stanza.
+
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
 import DotAnchorBlock from '../dot/dot-anchor-block'
 
@@ -10,8 +13,8 @@ import DotAnchorBlock from '../dot/dot-anchor-block'
 const LyricDotStanza = ({
 
     dotStanzaObject,
-    selectedAnnotationIndex,
     accessedAnnotationIndex,
+    selectedAnnotationIndex,
     handleLyricAnnotationSelect,
 
 ...other }) => {
@@ -36,9 +39,12 @@ const LyricDotStanza = ({
 }
 
 LyricDotStanza.propTypes = {
-    dotStanzaObject: PropTypes.object.isRequired,
-    accessedAnnotationIndex: PropTypes.number,
+    // Through Redux.
+    accessedAnnotationIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    dotStanzaObject: PropTypes.object.isRequired,
     handleLyricAnnotationSelect: PropTypes.func.isRequired
 }
 
@@ -75,8 +81,15 @@ const LyricDotStanzaView = ({
 )
 
 LyricDotStanzaView.propTypes = {
+    // From parent.
     dotKeys: PropTypes.object.isRequired,
     annotationIndex: PropTypes.number.isRequired
 }
 
-export default LyricDotStanza
+export default connect(({
+    accessedAnnotationIndex,
+    selectedAnnotationIndex
+}) => ({
+    accessedAnnotationIndex,
+    selectedAnnotationIndex
+}))(LyricDotStanza)

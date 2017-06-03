@@ -1,29 +1,19 @@
+// Component to show individual stanza.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import LyricVerse from './lyric-verse'
 
-/*************
- * CONTAINER *
- *************/
+const LyricStanza = ({
 
-const LyricStanza = (props) => (
-    <LyricStanzaView {...props} />
-)
-
-/****************
- * PRESENTATION *
- ****************/
-
-const LyricStanzaView = ({
-
-    // From props.
     showStanzaTypeAndIndex,
     stanzaArray,
     stanzaIndex,
     stanzaType,
 
 ...other }) => {
+
     const typeClassName = stanzaType && `stanza-type-${stanzaType}`
 
     return (
@@ -42,11 +32,15 @@ const LyricStanzaView = ({
                 typeClassName
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
-                    return !verseObject.stanzaMap && !verseObject.unitMap &&
-                        <LyricVerse {...other}
-                            key={stanzaVerseIndex}
-                            verseObject={verseObject}
-                        />
+                    const { stanzaMap,
+                            unitMap } = verseObject
+
+                    return !stanzaMap && !unitMap && (
+                            <LyricVerse {...other}
+                                key={stanzaVerseIndex}
+                                verseObject={verseObject}
+                            />
+                        )
                     }
                 )}
             </div>
@@ -55,6 +49,7 @@ const LyricStanzaView = ({
 }
 
 LyricStanza.propTypes = {
+    // From parent.
     stanzaIndex: PropTypes.number,
     stanzaArray: PropTypes.array.isRequired,
     stanzaType: PropTypes.string.isRequired,

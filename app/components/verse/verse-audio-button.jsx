@@ -2,10 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Button from '../button/button'
 
-/*************
- * CONTAINER *
- *************/
-
 // TODO: Make audio button take up width of line.
 const VerseAudioButton = ({
 
