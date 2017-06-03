@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Verse bar needs to change width when changing verse.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Optimise responsive props`,
         workedHours: 0,
         neededHours: 3
@@ -2068,5 +2073,10 @@ module.exports = [
         taskName: `R and F don't work right after selecting song, because title annotation doesn't have most recent verse index.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Refactor components after Redux.`,
+        workedHours: 12,
+        neededHours: 12
     }
 ]

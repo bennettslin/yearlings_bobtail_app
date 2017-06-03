@@ -16,13 +16,10 @@ class AudioPopup extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    // 'selectedAudioOptionIndex',
-                    // 'selectedSongIndex',
                     'isPhone',
                     'isPlaying',
                     'showOverlay',
-                    'timerInAudio',
-                    // 'isTitleInAudio',
+                    // 'timerInAudio',
 
                     // Update when banner props are updated.
                     'audioBannerProps'
@@ -54,13 +51,10 @@ class AudioPopup extends Component {
 }
 
 AudioPopup.propTypes = {
-    // selectedAudioOptionIndex: PropTypes.number.isRequired,
-    // selectedSongIndex: PropTypes.number.isRequired,
     isPhone: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
     showOverlay: PropTypes.bool.isRequired,
     timerInAudio: PropTypes.bool.isRequired,
-    // isTitleInAudio: PropTypes.bool.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired,
     audioBannerProps: PropTypes.object.isRequired
 }

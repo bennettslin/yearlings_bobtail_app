@@ -52,8 +52,11 @@ class CarouselAnnotation extends Component {
 }
 
 CarouselAnnotation.propTypes = {
-    annotationIndex: PropTypes.number.isRequired,
+    // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    annotationIndex: PropTypes.number.isRequired,
     isAccessedAnnotation: PropTypes.bool.isRequired,
     isSelectedAnnotation: PropTypes.bool.isRequired,
     handleLyricAnnotationSelect: PropTypes.func.isRequired
@@ -65,7 +68,6 @@ CarouselAnnotation.propTypes = {
 
 const CarouselAnnotationView = ({
 
-    // From props.
     annotationIndex,
     annotationColumn,
     annotationDotKeys,
@@ -86,6 +88,7 @@ const CarouselAnnotationView = ({
 )
 
 CarouselAnnotationView.propTypes = {
+    // From parent.
     annotationIndex: PropTypes.number.isRequired,
     annotationColumn: PropTypes.string,
     annotationDotKeys: PropTypes.object.isRequired

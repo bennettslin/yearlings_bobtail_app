@@ -111,6 +111,7 @@ class AudioSlider extends Component {
 }
 
 AudioSlider.propTypes = {
+    selectedSongIndex: PropTypes.number.isRequired,
     isSliderTouched: PropTypes.bool.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
@@ -240,10 +241,16 @@ AudioSliderView.propTypes = {
 }
 
 export default connect(({
+    selectedSongIndex,
+    selectedTimePlayed,
+    selectedVerseIndex,
     interactivatedVerseIndex,
     sliderRatio,
     sliderVerseIndex
 }) => ({
+    selectedSongIndex,
+    selectedTimePlayed,
+    selectedVerseIndex,
     interactivatedVerseIndex,
     sliderRatio,
     sliderVerseIndex

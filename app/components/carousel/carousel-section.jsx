@@ -20,7 +20,10 @@ class CarouselSection extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
+
+                    // TODO: Necessary after annotation refactor?
                     'selectedSongIndex',
+
                     'accessedAnnotationIndex',
                     'selectedAnnotationIndex'
                 ]
@@ -102,9 +105,12 @@ const CarouselSectionView = ({
 }
 
 CarouselSectionView.propTypes = {
+    // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
     accessedAnnotationIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
+
+    // From parent.
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired
 }

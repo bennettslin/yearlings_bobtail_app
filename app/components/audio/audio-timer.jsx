@@ -1,57 +1,36 @@
+// Component to show the played audio time.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { getIsLogue } from '../../helpers/data-helper'
 import { getFormattedTime } from '../../helpers/format-helper'
-
-/*************
- * CONTAINER *
- *************/
 
 const AudioTimer = ({
 
-    selectedTimePlayed,
+    selectedSongIndex,
+    selectedTimePlayed
 
-...other }) => {
-
-    const formattedTime = getFormattedTime(selectedTimePlayed)
+}) => {
+    const isLogue = getIsLogue(selectedSongIndex)
 
     return (
-        <AudioTimerView {...other}
-            formattedTime={formattedTime}
-        />
+        <div className="audio-banner-time">
+            {isLogue ? '' : getFormattedTime(selectedTimePlayed)}
+        </div>
     )
 }
 
 AudioTimer.propTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
     selectedTimePlayed: PropTypes.number.isRequired
 }
 
-/****************
- * PRESENTATION *
- ****************/
-
-const AudioTimerView = ({
-
-    // From props.
-    isLogue,
-
-    // From controller.
-    formattedTime
-
-}) => (
-
-    <div className="audio-banner-time">
-        {isLogue ? '' : formattedTime}
-    </div>
-)
-
-AudioTimerView.propTypes = {
-    isLogue: PropTypes.bool.isRequired,
-    formattedTime: PropTypes.string.isRequired
-}
-
 export default connect(({
+    selectedSongIndex,
     selectedTimePlayed
 }) => ({
+    selectedSongIndex,
     selectedTimePlayed
 }))(AudioTimer)

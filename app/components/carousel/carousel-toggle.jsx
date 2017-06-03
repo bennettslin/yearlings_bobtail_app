@@ -24,7 +24,10 @@ const CarouselToggle = ({
 )
 
 CarouselToggle.propTypes = {
+    // Through Redux.
     selectedCarouselIndex: PropTypes.number.isRequired,
+
+    // From parent.
     handleCarouselToggle: PropTypes.func.isRequired
 }
 
