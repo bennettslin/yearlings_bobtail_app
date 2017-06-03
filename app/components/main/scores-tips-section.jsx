@@ -1,3 +1,5 @@
+// Section for score and tips toggle buttons.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -18,29 +20,8 @@ const passReduxStateToProps = ({
     selectedTipsIndex
 })
 
-/*************
- * CONTAINER *
- *************/
+const ScoresTipsSection = ({
 
-const ScoresTipsSection = (props) => (
-    <ScoresTipsSectionView {...props} />
-)
-
-ScoresTipsSection.propTypes = {
-    deviceIndex: PropTypes.number.isRequired,
-    selectedScoreIndex: PropTypes.number.isRequired,
-    selectedTipsIndex: PropTypes.number.isRequired,
-    handleScoreToggle: PropTypes.func.isRequired,
-    handleTipsToggle: PropTypes.func.isRequired
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const ScoresTipsSectionView = ({
-
-    // From props.
     deviceIndex,
     selectedScoreIndex,
     selectedTipsIndex,
@@ -48,10 +29,11 @@ const ScoresTipsSectionView = ({
     handleTipsToggle
 
 }) => {
+    const showScoreToggleButton = !getIsPhone(deviceIndex)
 
     return (
         <div className="section scores-tips-section">
-            {!getIsPhone(deviceIndex) &&
+            {showScoreToggleButton &&
                 <Button
                     accessKey={SCORE_TOGGLE_KEY}
                     buttonName="scores"
@@ -69,6 +51,17 @@ const ScoresTipsSectionView = ({
             />
         </div>
     )
+}
+
+ScoresTipsSection.propTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    selectedScoreIndex: PropTypes.number.isRequired,
+    selectedTipsIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handleScoreToggle: PropTypes.func.isRequired,
+    handleTipsToggle: PropTypes.func.isRequired
 }
 
 export default connect(passReduxStateToProps)(ScoresTipsSection)
