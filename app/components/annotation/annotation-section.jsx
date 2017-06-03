@@ -45,48 +45,53 @@ const AnnotationSectionView = ({
     annotationTitle,
     annotationDotKeys,
 
-...other }) => (
+...other }) => {
 
-    <div className={classnames(
-        'section',
-        'annotation-section',
-        { 'selected-annotation': isSelectedAnnotation,
-          'accessed-annotation': isAccessedAnnotation }
-    )}>
-        <div className="annotation-title-block">
-            {annotationTitle === IS_DOT_STANZA ? (
-                <div className="annotation-title">
-                    <DotAnchorBlock
-                        isSmall={true}
-                        isSelected={isSelectedAnnotation}
-                        accessHighlighted={isAccessedAnnotation}
-                        dotKeys={annotationDotKeys}
-                        handleDotButtonClick={handleTitleClick}
-                    />
-                </div>
-            ) : (
-                <a className={classnames(
-                        'anchor-block',
-                        'text-anchor-block',
-                        'annotation-title',
-                        annotationDotKeys,
-                        { 'selected': isSelectedAnnotation || !inCarousel,
-                          'access-highlighted': isAccessedAnnotation }
-                    )}
-                    onClick={handleTitleClick}
-                >
-                    <span className="underline-bar" />
-                    <span className="text-span">
-                        {`\u201c${annotationTitle}\u201d`}
-                    </span>
-                </a>
-            )}
+    // Show as selected if it's selected in carousel, or if it's in popup.
+    const showAsSelected = isSelectedAnnotation || !inCarousel
+
+    return (
+        <div className={classnames(
+            'section',
+            'annotation-section',
+            { 'selected-annotation': showAsSelected,
+              'accessed-annotation': isAccessedAnnotation }
+        )}>
+            <div className="annotation-title-block">
+                {annotationTitle === IS_DOT_STANZA ? (
+                    <div className="annotation-title">
+                        <DotAnchorBlock
+                            isSmall={true}
+                            isSelected={showAsSelected}
+                            accessHighlighted={isAccessedAnnotation}
+                            dotKeys={annotationDotKeys}
+                            handleDotButtonClick={handleTitleClick}
+                        />
+                    </div>
+                ) : (
+                    <a className={classnames(
+                            'anchor-block',
+                            'text-anchor-block',
+                            'annotation-title',
+                            annotationDotKeys,
+                            { 'selected': showAsSelected,
+                              'access-highlighted': isAccessedAnnotation }
+                        )}
+                        onClick={handleTitleClick}
+                    >
+                        <span className="underline-bar" />
+                        <span className="text-span">
+                            {`\u201c${annotationTitle}\u201d`}
+                        </span>
+                    </a>
+                )}
+            </div>
+            <div className="cards-block">
+                <AnnotationUnit {...other} />
+            </div>
         </div>
-        <div className="cards-block">
-            <AnnotationUnit {...other} />
-        </div>
-    </div>
-)
+    )
+}
 
 AnnotationSectionView.propTypes = {
     // From parent.

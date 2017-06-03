@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Dot stanza title in popup annotation is not selected.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Releasing mouse outside of audio banner closes overlay, dom manager should tell event manager when body touch began.`,
         workedHours: 0,
         neededHours: 1
@@ -2096,6 +2091,11 @@ module.exports = [
     },
     {
         taskName: `Bug with title in audio.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Dot stanza title in popup annotation is not selected.`,
         workedHours: 1,
         neededHours: 1
     }

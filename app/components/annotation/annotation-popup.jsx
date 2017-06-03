@@ -56,7 +56,7 @@ class AnnotationPopup extends Component {
         return (
             <Popup
                 isVisible={isVisible}
-                popupClassName="annotation selected-annotation"
+                popupClassName="annotation"
                 showArrows={true}
                 handlePreviousClick={handleAnnotationPrevious}
                 handleNextClick={handleAnnotationNext}
