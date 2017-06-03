@@ -1,3 +1,5 @@
+// Component to show individual annotation comment or portal.
+
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -89,6 +91,12 @@ const AnnotationCardView = ({
 )
 
 AnnotationCardView.propTypes = {
+    // Through Redux.
+    selectedWikiIndex: PropTypes.number,
+    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+
+    // From parent.
+
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array
@@ -98,14 +106,14 @@ AnnotationCardView.propTypes = {
     inPortalCard: PropTypes.bool,
     cardDotKeys: PropTypes.object.isRequired,
     carouselAnnotationIndex: PropTypes.number.isRequired,
-    selectedWikiIndex: PropTypes.number,
-    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
     handleAnnotationWikiSelect: PropTypes.func.isRequired,
-    handleAnnotationPortalSelect: PropTypes.func.isRequired,
+    handleAnnotationPortalSelect: PropTypes.func.isRequired
 }
 
 export default connect(({
+    selectedWikiIndex,
     accessedAnnotationAnchorIndex
 }) => ({
+    selectedWikiIndex,
     accessedAnnotationAnchorIndex
 }))(AnnotationCard)

@@ -1,13 +1,11 @@
+// Popup container for individual annotation section.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationSection from './annotation-section'
 import Popup from '../popup/popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
-
-/*************
- * CONTAINER *
- *************/
 
 class AnnotationPopup extends Component {
 
@@ -34,6 +32,7 @@ class AnnotationPopup extends Component {
                 selectedScoreIndex,
                 selectedTitleIndex,
                 selectedWikiIndex,
+
                 handleAnnotationPrevious,
                 handleAnnotationNext,
                 handlePopupContainerClick,
@@ -44,6 +43,7 @@ class AnnotationPopup extends Component {
                         !selectedScoreIndex &&
                         !selectedTitleIndex &&
                         !selectedWikiIndex,
+
             myChild = (
                 <AnnotationSection {...other} />
             )
@@ -63,11 +63,14 @@ class AnnotationPopup extends Component {
 }
 
 AnnotationPopup.propTypes = {
+    // Through Redux.
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
     selectedWikiIndex: PropTypes.number.isRequired,
+
+    // From parent.
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
