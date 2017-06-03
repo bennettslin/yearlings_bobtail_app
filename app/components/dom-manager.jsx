@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import classnames from 'classnames'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
-import AudioPlayersSection from './audio/audio-players-section'
+import AudioPlayersSection from './player/audio-players-section'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { DEVICE_OBJECTS } from '../constants/responsive'

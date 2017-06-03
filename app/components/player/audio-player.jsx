@@ -1,7 +1,8 @@
+// Hidden component to wrap an audio DOM element.
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 import ReactAudioPlayer from 'react-audio-player'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
@@ -17,16 +18,15 @@ class AudioPlayer extends Component {
         this._handleEnded = this._handleEnded.bind(this)
     }
 
+    // TODO: Still necessary?
     shouldComponentUpdate(nextProps) {
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'mp3',
                     'isPlaying',
-                    'playerIndex',
-                    'selectedSongIndex',
+                    'isSelected',
                     'updatedTimePlayed'
                 ]
             })
@@ -45,23 +45,16 @@ class AudioPlayer extends Component {
         // })
     }
 
-    // shouldComponentUpdate(nextProps) {
-    //     const songChanged = this._getSongChanged(this.props, nextProps),
-    //         isPlayingChanged = this._getIsPlayingChanged(this.props, nextProps)
-    //
-    //     return songChanged || isPlayingChanged || nextProps.updatedTimePlayed !== null
-    // }
-
     componentWillUpdate(nextProps) {
-        const songChanged = this._getSongChanged(this.props, nextProps),
+        const selectedChanged = this._getSelectedChanged(this.props, nextProps),
             isPlayingChanged = this._getIsPlayingChanged(this.props, nextProps)
 
-        if (songChanged || isPlayingChanged) {
+        if (selectedChanged || isPlayingChanged) {
             this._handleIsPlayingChange(nextProps)
         }
 
-        if (songChanged) {
-            this._handleSongChange(this.props)
+        if (selectedChanged) {
+            this._handleSelectedChange(this.props)
         }
 
         if (nextProps.updatedTimePlayed !== null) {
@@ -69,19 +62,12 @@ class AudioPlayer extends Component {
         }
     }
 
-    _getIsSelected(props = this.props) {
-        const { playerIndex,
-                selectedSongIndex } = props
-
-        return playerIndex === selectedSongIndex
-    }
-
     _getIsPlayingChanged(oldProps, newProps) {
         return oldProps.isPlaying !== newProps.isPlaying
     }
 
-    _getSongChanged(oldProps, newProps) {
-        return oldProps.selectedSongIndex !== newProps.selectedSongIndex
+    _getSelectedChanged(oldProps, newProps) {
+        return oldProps.isSelected !== newProps.isSelected
     }
 
     _getTimeChanged(oldProps, newProps) {
@@ -89,33 +75,35 @@ class AudioPlayer extends Component {
     }
 
     _handleListen(currentTime) {
-        if (this._getIsSelected()) {
+        if (this.props.isSelected) {
             this.props.handlePlayerTimeChange(currentTime)
         }
     }
 
     _handleEnded() {
         // FIXME: Waiting for the player to send onEnded event takes too long. Have this be based on the song's own time.
-        if (this._getIsSelected()) {
+        if (this.props.isSelected) {
             this.props.handlePlayerNextSong()
         }
     }
 
     _handleIsPlayingChange(props = this.props) {
-        const isSelected = this._getIsSelected(props)
+        const { isSelected,
+                isPlaying } = props,
+            { myPlayer } = this
 
         // Play only if selected and is playing.
-        if (isSelected && props.isPlaying && this.myPlayer.paused) {
-            this.myPlayer.play()
+        if (isSelected && isPlaying && myPlayer.paused) {
+            myPlayer.play()
 
         // Otherwise pause.
-        } else if (!this.myPlayer.paused) {
-            this.myPlayer.pause()
+        } else if (!myPlayer.paused) {
+            myPlayer.pause()
         }
     }
 
-    _handleSongChange(oldProps) {
-        const wasSelected = this._getIsSelected(oldProps)
+    _handleSelectedChange(oldProps) {
+        const wasSelected = oldProps.isSelected
 
         if (wasSelected) {
             this.myPlayer.currentTime = 0
@@ -123,7 +111,9 @@ class AudioPlayer extends Component {
     }
 
     _handleTimeChange(props = this.props) {
-        if (this._getIsSelected(props)) {
+        const { isSelected } = props
+
+        if (isSelected) {
 
             // FIXME: Something should happen here to keep the player calling the onListen handler.
             this.myPlayer.currentTime = props.updatedTimePlayed
@@ -132,45 +122,34 @@ class AudioPlayer extends Component {
     }
 
     render() {
-        const { mp3,
-                playerIndex } = this.props,
-
-            isSelected = this._getIsSelected()
-
         return (
-            <div className={classnames(
-                'audio-player',
-                `player-${playerIndex}`,
-                { 'selected': isSelected }
-            )}>
-                <ReactAudioPlayer
-                    src={mp3}
-                    ref={(node) => (this.myReactPlayer = node)}
-                    listenInterval={100}
-                    onListen={this._handleListen}
-                    onEnded={this._handleEnded}
-                />
-            </div>
+            <ReactAudioPlayer
+                src={this.props.mp3}
+                ref={(node) => (this.myReactPlayer = node)}
+                listenInterval={100}
+                onListen={this._handleListen}
+                onEnded={this._handleEnded}
+            />
         )
     }
 }
 
 AudioPlayer.propTypes = {
-    mp3: PropTypes.string.isRequired,
+    // Through Redux.
     isPlaying: PropTypes.bool.isRequired,
-    playerIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
     updatedTimePlayed: PropTypes.number,
+
+    // From parent.
+    mp3: PropTypes.string.isRequired,
+    isSelected: PropTypes.bool.isRequired,
     handlePlayerTimeReset: PropTypes.func.isRequired,
     handlePlayerNextSong: PropTypes.func.isRequired
 }
 
 export default connect(({
-    selectedSongIndex,
     isPlaying,
     updatedTimePlayed
 }) => ({
-    selectedSongIndex,
     isPlaying,
     updatedTimePlayed
 }))(AudioPlayer)
