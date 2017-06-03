@@ -206,7 +206,7 @@ const AudioSliderView = ({
         <div
             className="audio-cursor"
             style={cursorStyle}
-        ></div>
+        />
 
         <div className="below spent play-time-display">{displayedSpentTime}</div>
         <div

@@ -21,7 +21,7 @@ const DotAnchorBlock = ({
         { 'selected': isSelected,
           'access-highlighted': accessHighlighted && !isSelected }
     )}>
-        <span className="underline-bar"></span>
+        <span className="underline-bar" />
         <DotButton {...other}
             dotKeys={dotKeys}
             isSelected={isSelected}

@@ -129,13 +129,13 @@ const PopupView = ({
     return (
         <div className={`popup-wrapper ${popupClassName}`}>
             {showClose &&
-                <div className="popup-button-block close-position shadow"></div>
+                <div className="popup-button-block close-position shadow" />
             }
             {showArrows &&
-                <div className="popup-button-block side-position previous-position shadow"></div>
+                <div className="popup-button-block side-position previous-position shadow" />
             }
             {showArrows &&
-                <div className="popup-button-block side-position next-position shadow"></div>
+                <div className="popup-button-block side-position next-position shadow" />
             }
             <div
                 className={`popup-content-wrapper ${popupClassName}`}

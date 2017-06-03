@@ -73,7 +73,7 @@ const LyricSectionView = ({
         onScroll={handleScroll}
     >
         {/* Upon song change, scroll to element with this class name. */}
-        <div className="lyrics-scroll-home"></div>
+        <div className="lyrics-scroll-home" />
         <div className="lyric-block">
             {lyricsArray.map((stanzaArray, unitIndex) => (
                     <LyricUnit {...other}

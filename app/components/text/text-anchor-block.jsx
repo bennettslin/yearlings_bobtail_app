@@ -113,7 +113,7 @@ const TextAnchorBlockView = ({
             onClick={handleClick}
         >
             {isLyric &&
-                <span className="underline-bar"></span>
+                <span className="underline-bar" />
             }
             {/* Don't show any dots in portal block. */}
             {!wikiIndex && !inPortal &&

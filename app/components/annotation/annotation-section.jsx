@@ -75,7 +75,7 @@ const AnnotationSectionView = ({
                     )}
                     onClick={handleTitleClick}
                 >
-                    <span className="underline-bar"></span>
+                    <span className="underline-bar" />
                     <span className="text-span">
                         {`\u201c${annotationTitle}\u201d`}
                     </span>

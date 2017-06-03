@@ -65,7 +65,7 @@ const CarouselSectionView = ({
         <div className="carousel">
             <div className="carousel-scroll">
                 <div className="carousel-annotations-block">
-                    <div className="carousel-annotation carousel-annotation-0"></div>
+                    <div className="carousel-annotation carousel-annotation-0" />
                     {annotations.map((annotation, index) => {
                         const annotationIndex = index + 1,
                             isAccessedAnnotation = annotationIndex === accessedAnnotationIndex,
