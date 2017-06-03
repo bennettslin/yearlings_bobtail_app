@@ -147,11 +147,12 @@ const Live = ({
             handlePopupContainerClick,
 
             audioTimerChild,
-            audioBannerChild,
-            titleToggleChild
+            audioBannerChild
         },
-        audioSectionChild = (
-            <AudioSection {...audioSectionProps} />
+        audioSectionMenuChild = (
+            <AudioSection {...audioSectionProps}
+                titleToggleChild={titleToggleChild}
+            />
         ),
 
         carouselSectionProps = {
@@ -222,7 +223,7 @@ const Live = ({
             handleTipsToggle,
 
             audioBannerChild,
-            audioSectionChild,
+            audioSectionMenuChild,
             titleToggleChild
         },
 

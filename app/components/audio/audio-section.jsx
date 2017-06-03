@@ -21,6 +21,8 @@ class AudioSection extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'deviceIndex',
+                    'isTimerInAudio',
+                    'isTitleInAudio',
                     'selectedSongIndex'
                 ]
             })
@@ -82,9 +84,7 @@ const AudioSectionView = ({
                 </div>
             )}
 
-            {isTitleInAudio &&
-                titleToggleChild
-            }
+            {isTitleInAudio && titleToggleChild}
 
             {(!isPhone || isTimerInAudio) && audioBannerChild}
 
@@ -106,7 +106,7 @@ AudioSectionView.propTypes = {
     isTimerInAudio: PropTypes.bool.isRequired,
     audioTimerChild: PropTypes.element.isRequired,
     audioBannerChild: PropTypes.element.isRequired,
-    titleToggleChild: PropTypes.element.isRequired
+    titleToggleChild: PropTypes.element
 }
 
 export default connect(({

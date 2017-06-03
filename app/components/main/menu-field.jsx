@@ -13,7 +13,7 @@ const MenuField = (props) => (
 MenuField.propTypes = {
     isTitleInAudio: PropTypes.bool.isRequired,
     isScoresTipsInMain: PropTypes.bool.isRequired,
-    audioSectionChild: PropTypes.element.isRequired,
+    audioSectionMenuChild: PropTypes.element.isRequired,
     scoresTipsSectionChild: PropTypes.element.isRequired
 }
 
@@ -27,7 +27,7 @@ const MenuFieldView = ({
     isTitleInAudio,
     isScoresTipsInMain,
 
-    audioSectionChild,
+    audioSectionMenuChild,
     scoresTipsSectionChild,
     titleToggleChild
 
@@ -40,7 +40,7 @@ const MenuFieldView = ({
             </div>
         }
         <div className="menu-subfield audio-subfield">
-            {audioSectionChild}
+            {audioSectionMenuChild}
         </div>
         {!isScoresTipsInMain &&
             <div className="menu-subfield scores-tips-menu-subfield">

@@ -40,13 +40,13 @@ const MainColumnView = ({
     lyricExpandButtonChild,
     scoresTipsSectionChild,
     audioBannerChild,
-    audioSectionChild,
+    audioSectionMenuChild,
     carouselChild,
     titleToggleChild
 
 }) => {
     const menuFieldProps = {
-            audioSectionChild,
+            audioSectionMenuChild,
             scoresTipsSectionChild,
             titleToggleChild
         },

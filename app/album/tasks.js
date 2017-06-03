@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Breakpoint for timer in audio should happen sooner in overlay, bug with title in audio.`,
+        taskName: `Releasing mouse outside of audio banner closes overlay.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `Annotation popup container is wrong height in phone.`,
@@ -2088,5 +2088,10 @@ module.exports = [
         taskName: `Refactor components after Redux.`,
         workedHours: 12,
         neededHours: 12
+    },
+    {
+        taskName: `Bug with title in audio.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

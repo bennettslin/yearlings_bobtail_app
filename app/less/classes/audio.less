@@ -23,7 +23,7 @@
 
 .audio-subfield, .popup-wrapper.audio {
     min-width: @audio-banner-min-width + @audio-buttons-constant + @app-large-icon-diameter + @audio-block-padding * 3;
-    max-width: 720px; // Arbitrary.
+    max-width: 640px; // Arbitrary.
 }
 
 .menu-subfield.audio-subfield {
@@ -64,15 +64,13 @@
     align-items: center;
 }
 
+// Parent container of both audio sections.
 .audio-subfield, .popup-wrapper.audio {
     box-sizing: border-box;
-
-    .audio-section {
-        padding: @audio-block-padding-y @audio-block-padding;
-    }
 }
 
 .audio-section {
+    padding: @audio-block-padding-y @audio-block-padding;
     flex-grow: 1;
     background-color: #dbb;
 
@@ -356,27 +354,21 @@
 }
 
 .title-in-audio {
-    .menu-field {
 
-        .title-toggle {
-            margin-right: @title-in-audio-block-padding;
-        }
+    .title-toggle {
+        margin-right: @title-in-audio-block-padding;
+    }
 
-        .audio-subfield {
+    .audio-section {
+        padding: @audio-block-padding-y @title-in-audio-block-padding;
+    }
 
-            .audio-section {
-                padding: @audio-block-padding-y @title-in-audio-block-padding;
-            }
-        }
+    .audio-banner-block {
+        min-width: 200px;
+    }
 
-        .audio-banner-block {
-            min-width: 200px;
-        }
-
-        .audio-banner-block {
-            margin-right: @title-in-audio-block-padding;
-        }
-
+    .audio-banner-block {
+        margin-right: @title-in-audio-block-padding;
     }
 }
 

@@ -179,7 +179,6 @@ export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
 }
 
 export const getIsTitleInAudio = ({ deviceIndex, windowWidth }) => {
-
     return _getIsMini(deviceIndex) && windowWidth < MINI_OBJECT.isTitleInAudioBreakpoint
 }
 

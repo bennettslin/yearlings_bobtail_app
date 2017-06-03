@@ -18,7 +18,8 @@ class AudioPopup extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'showOverlay'
+                    'showOverlay',
+                    'isTimerInAudio'
                 ]
             })
 
