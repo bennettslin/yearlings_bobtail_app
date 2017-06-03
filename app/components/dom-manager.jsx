@@ -9,8 +9,30 @@ import AudioPlayersSection from './player/audio-players-section'
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getShowOverlay } from '../helpers/logic-helper'
 import { getIsDesktop, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
+import { getComponentShouldUpdate } from '../helpers/general-helper'
 
 class DomManager extends Component {
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'deviceIndex',
+                    'isLyricExpanded',
+                    'selectedAccessIndex',
+                    'selectedAdminIndex',
+                    'selectedAnnotationIndex',
+                    'selectedScoreIndex',
+                    'selectedTitleIndex',
+                    'selectedWikiIndex',
+                    'isPlaying'
+                ]
+            })
+
+        return componentShouldUpdate
+    }
 
     render() {
         const { deviceIndex,
@@ -86,7 +108,6 @@ class DomManager extends Component {
                 <div className="popup-overlay" />
 
                 <SwitchManager {...other}
-                    showOverlay={showOverlay}
                     isOverlayingAnnotation={isOverlayingAnnotation}
                 />
             </div>
