@@ -1,8 +1,11 @@
+// Section for user to select and play songs.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AudioButtons from './audio-buttons'
 import { getSongsLength } from '../../helpers/data-helper'
+import { getIsPhone } from '../../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -17,14 +20,11 @@ class AudioSection extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
+                    'deviceIndex',
                     'selectedSongIndex',
-                    'selectedAudioOptionIndex',
-                    'isPhone',
-                    'isPlaying',
-                    'isTitleInAudio',
 
-                    // Update when banner props are updated.
-                    'audioBannerProps'
+                    // TODO: Not great that it needs to check audio slider props.
+                    'audioSliderProps'
                 ]
             })
 
@@ -56,11 +56,7 @@ class AudioSection extends Component {
 
 AudioSection.propTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
-    selectedAudioOptionIndex: PropTypes.number.isRequired,
-    isPhone: PropTypes.bool.isRequired,
-    isPlaying: PropTypes.bool.isRequired,
-    isTitleInAudio: PropTypes.bool.isRequired,
-    audioBannerProps: PropTypes.object.isRequired
+    audioSliderProps: PropTypes.object.isRequired
 }
 
 /****************
@@ -69,44 +65,16 @@ AudioSection.propTypes = {
 
 const AudioSectionView = ({
 
-    // From props.
-    timerInAudio,
+    deviceIndex,
     isTitleInAudio,
-    isPhone,
-    isPlaying,
-    selectedAudioOptionIndex,
-
-    handleAudioPlay,
-    handleAudioPreviousSong,
-    handleAudioNextSong,
-    handleAudioOptionsToggle,
-
+    timerInAudio,
     audioTimerChild,
     audioBannerChild,
     titleToggleChild,
 
-    // From controller.
-    isPrologue,
-    isFirstSong,
-    isLastSong,
-    isEpilogue
+...other }) => {
 
-}) => {
-
-    const audioButtonsProps = {
-            selectedAudioOptionIndex,
-            isTitleInAudio,
-            isPlaying,
-            isPrologue,
-            isFirstSong,
-            isLastSong,
-            isEpilogue,
-
-            handleAudioPlay,
-            handleAudioPreviousSong,
-            handleAudioNextSong,
-            handleAudioOptionsToggle
-        }
+    const isPhone = getIsPhone(deviceIndex)
 
     return (
         <div
@@ -117,44 +85,40 @@ const AudioSectionView = ({
                     {audioTimerChild}
                 </div>
             )}
+
             {isTitleInAudio &&
                 titleToggleChild
             }
+
             {(!isPhone || timerInAudio) && audioBannerChild}
-            <AudioButtons {...audioButtonsProps} />
+
+            <AudioButtons {...other} />
         </div>
     )
 }
 
+AudioSectionView.defaultProps = {
+    timerInAudio: false
+}
+
 AudioSectionView.propTypes = {
-    selectedAudioOptionIndex: PropTypes.number.isRequired,
-
-    isPrologue: PropTypes.bool.isRequired,
-    isFirstSong: PropTypes.bool.isRequired,
-    isLastSong: PropTypes.bool.isRequired,
-    isEpilogue: PropTypes.bool.isRequired,
-    timerInAudio: PropTypes.bool,
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
     isTitleInAudio: PropTypes.bool.isRequired,
-    isPhone: PropTypes.bool.isRequired,
-    isPlaying: PropTypes.bool.isRequired,
 
-    handleAudioPlay: PropTypes.func.isRequired,
-    handleAudioPreviousSong: PropTypes.func.isRequired,
-    handleAudioNextSong: PropTypes.func.isRequired,
-    handleAudioOptionsToggle: PropTypes.func.isRequired,
-
+    // From parent.
+    timerInAudio: PropTypes.bool.isRequired,
     audioTimerChild: PropTypes.element.isRequired,
-    audioBannerChild: PropTypes.element.isRequired
+    audioBannerChild: PropTypes.element.isRequired,
+    titleToggleChild: PropTypes.element.isRequired
 }
 
 export default connect(({
+    deviceIndex,
     selectedSongIndex,
-    selectedAudioOptionIndex,
-    isTitleInAudio,
-    isPlaying
+    isTitleInAudio
 }) => ({
+    deviceIndex,
     selectedSongIndex,
-    selectedAudioOptionIndex,
-    isTitleInAudio,
-    isPlaying
+    isTitleInAudio
 }))(AudioSection)

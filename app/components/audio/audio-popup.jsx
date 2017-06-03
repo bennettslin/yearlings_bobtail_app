@@ -1,7 +1,9 @@
+// Popup container for audio section in overlay.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import AudioSection from './audio-section'
 import Popup from '../popup/popup'
+import AudioSection from './audio-section'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -16,13 +18,10 @@ class AudioPopup extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'isPhone',
-                    'isPlaying',
                     'showOverlay',
-                    // 'timerInAudio',
 
-                    // Update when banner props are updated.
-                    'audioBannerProps'
+                    // TODO: Not great that it needs to check audio slider props.
+                    'audioSliderProps'
                 ]
             })
 
@@ -34,7 +33,6 @@ class AudioPopup extends Component {
                 handlePopupContainerClick,
                 ...other } = this.props,
 
-            isVisible = showOverlay,
             myChild = (
                 <AudioSection {...other} />
             )
@@ -42,7 +40,7 @@ class AudioPopup extends Component {
         return (
             <Popup
                 popupClassName="audio"
-                isVisible={isVisible}
+                isVisible={showOverlay}
                 handlePopupContainerClick={handlePopupContainerClick}
                 myChild={myChild}
             />
@@ -51,12 +49,10 @@ class AudioPopup extends Component {
 }
 
 AudioPopup.propTypes = {
-    isPhone: PropTypes.bool.isRequired,
-    isPlaying: PropTypes.bool.isRequired,
+    // From parent.
     showOverlay: PropTypes.bool.isRequired,
-    timerInAudio: PropTypes.bool.isRequired,
-    handlePopupContainerClick: PropTypes.func.isRequired,
-    audioBannerProps: PropTypes.object.isRequired
+    audioSliderProps: PropTypes.object.isRequired,
+    handlePopupContainerClick: PropTypes.func.isRequired
 }
 
 export default AudioPopup

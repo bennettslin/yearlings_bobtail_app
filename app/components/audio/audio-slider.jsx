@@ -1,3 +1,5 @@
+// Component to manually change played time and verse.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -16,7 +18,7 @@ import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
 class AudioSlider extends Component {
     constructor(props) {
         super(props)
-        this.handleTouchDown = this.handleTouchDown.bind(this)
+        this._handleTouchDown = this._handleTouchDown.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -38,7 +40,7 @@ class AudioSlider extends Component {
         return componentShouldUpdate
     }
 
-    handleTouchDown(e) {
+    _handleTouchDown(e) {
         this.props.handleAudioSliderTouchBegin(e)
     }
 
@@ -46,10 +48,10 @@ class AudioSlider extends Component {
         const { isSliderTouched,
                 selectedSongIndex,
                 selectedVerseIndex,
+                selectedTimePlayed,
                 interactivatedVerseIndex,
                 sliderVerseIndex,
-                sliderRatio,
-                selectedTimePlayed } = this.props,
+                sliderRatio } = this.props,
 
             verseTimes = getSongVerseTimes(selectedSongIndex),
             stanzaTimes = getSongStanzaTimes(selectedSongIndex),
@@ -104,20 +106,24 @@ class AudioSlider extends Component {
                 verseTimes={verseTimes}
                 stanzaTimes={stanzaTimes}
                 totalTime={totalTime}
-                handleMouseDown={this.handleTouchDown}
+                handleTouchDown={this._handleTouchDown}
             />
         )
     }
 }
 
 AudioSlider.propTypes = {
-    selectedSongIndex: PropTypes.number.isRequired,
+    // Through Redux.
     isSliderTouched: PropTypes.bool.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
+    selectedTimePlayed: PropTypes.number.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
-    selectedTimePlayed: PropTypes.number.isRequired,
-    sliderRatio: PropTypes.number
+    sliderRatio: PropTypes.number.isRequired,
+
+    // From parent.
+    handleAudioSliderTouchBegin: PropTypes.func.isRequired
 }
 
 /****************
@@ -135,7 +141,7 @@ const AudioSliderView = ({
     verseTimes,
     stanzaTimes,
     totalTime,
-    handleMouseDown
+    handleTouchDown
 }) => (
     <div
         className={`audio-banner audio-slider-block is-${cursorClassName}-cursor`}
@@ -219,14 +225,15 @@ const AudioSliderView = ({
         </div>
         <div
             className="time-bar audio-touch-bar"
-            onMouseDown={handleMouseDown}
-            // onTouchStart={e => this.handleTouchDown(e)}
+            onMouseDown={handleTouchDown}
+            // onTouchStart={e => this._handleTouchDown(e)}
         >
         </div>
     </div>
 )
 
 AudioSliderView.propTypes = {
+    // From parent.
     cursorVerseIndex: PropTypes.number.isRequired,
     cursorClassName: PropTypes.string.isRequired,
     cursorStyle: PropTypes.object.isRequired,
@@ -237,7 +244,7 @@ AudioSliderView.propTypes = {
     verseTimes: PropTypes.array.isRequired,
     stanzaTimes: PropTypes.array.isRequired,
     totalTime: PropTypes.number.isRequired,
-    handleMouseDown: PropTypes.func.isRequired
+    handleTouchDown: PropTypes.func.isRequired
 }
 
 export default connect(({

@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `Breakpoint for timer in audio should happen sooner in overlay.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Annotation popup container is wrong height in phone.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Verse bar needs to change width when changing verse.`,
         workedHours: 0,
         neededHours: 2

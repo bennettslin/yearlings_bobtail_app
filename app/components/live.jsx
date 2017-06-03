@@ -79,8 +79,6 @@ const LiveView = ({
     scoreSectionRef,
     wikiSectionRef,
 
-    handlePlayerTimeChange,
-
     handlePopupContainerClick,
     handleScrollAfterLyricRerender,
 
@@ -120,6 +118,7 @@ const LiveView = ({
 
 }) => {
 
+    // FIXME: Get this somewhere else!
     const timerInAudio = showOverlay && isPhone,
 
         titleToggleProps = {
@@ -146,29 +145,26 @@ const LiveView = ({
         audioTimerChild = (
             <AudioTimer {...audioTimerProps} />
         ),
-        audioBannerProps = {
+        audioSliderProps = {
             sliderVerseIndex,
             sliderRatio,
             isSliderTouched,
-            handlePlayerTimeChange,
             handleAudioSliderTouchBegin,
-
             audioTimerChild
         },
         audioBannerChild = (
-            <AudioBanner {...audioBannerProps} />
+            <AudioBanner {...audioSliderProps}
+                audioTimerChild={audioTimerChild}
+            />
         ),
         audioSectionProps = {
-            isPhone,
-            isPlaying,
-
             handleAudioPlay,
             handleAudioPreviousSong,
             handleAudioNextSong,
             handleAudioOptionsToggle,
             handlePopupContainerClick,
 
-            audioBannerProps,
+            audioSliderProps,
             audioTimerChild,
             audioBannerChild,
             titleToggleChild
