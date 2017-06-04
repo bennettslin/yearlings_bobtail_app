@@ -29,7 +29,8 @@ class AnnotationPortal extends Component {
                 ]
             })
 
-        return componentShouldUpdate
+        // TODO: This is broken.
+        return componentShouldUpdate || true
     }
 
     _handlePortalClick(e) {

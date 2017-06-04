@@ -1,7 +1,11 @@
 module.exports = [
-
     {
-        taskName: `Make anchor block have knowledge of indices, not anchor.`,
+        taskName: `Selecting new song with dots open shows overview over dots.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Make anchor parent have knowledge of indices, not anchor.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -69,7 +73,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Overview prevents carousel scroll.`,
+        taskName: `Overview comes in from behind carousel.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -2112,6 +2116,16 @@ module.exports = [
     },
     {
         taskName: `Dot stanza title in popup annotation is not selected.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `More component refactoring after Redux.`,
+        workedHours: 8,
+        neededHours: 8
+    },
+    {
+        taskName: `Bug where verse bar is breaking in logue..`,
         workedHours: 1,
         neededHours: 1
     }
