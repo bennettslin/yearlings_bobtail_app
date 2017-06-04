@@ -5,6 +5,11 @@ module.exports = [
         neededHours: 1
     },
     {
+        taskName: `Handle hidden columns through CSS.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Handle truncateMain through CSS.`,
         workedHours: 0,
         neededHours: 3

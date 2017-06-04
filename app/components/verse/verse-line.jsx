@@ -1,4 +1,4 @@
-// Component for verse element to know the width of a single line.
+// Component for a single line in a verse.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'

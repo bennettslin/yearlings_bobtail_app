@@ -30,10 +30,6 @@ const Live = ({
 
     // From props.
     deviceIndex,
-    // windowHeight,
-    // windowWidth,
-
-    // annotationObject,
     overviewLogueIndex,
     overviewSongIndex,
     isPlaying,
@@ -117,12 +113,9 @@ const Live = ({
         ),
 
         annotationPopupProps = {
-            // annotationObject,
-
             handleAnnotationPrevious,
             handleAnnotationNext,
             handlePopupContainerClick,
-
             handleAnnotationPortalSelect,
             handleAnnotationWikiSelect
         },

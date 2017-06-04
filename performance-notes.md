@@ -6,6 +6,7 @@ https://blog.vixlet.com/react-at-light-speed-78cd172a6411
 Phase 1:
 * Don't bind arguments. Instead call an instance method in a React component.
 * Have React components have no knowledge of selected indices, only their own.
+* Components know to render themselves.
 
 Phase 2:
 * Be strategic about shouldComponentUpdate checks.
