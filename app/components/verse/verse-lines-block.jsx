@@ -31,11 +31,11 @@ const VerseLinesBlock = ({
             lyricsLineProps = {
                 inVerseBar,
                 verseSelected: isSelected,
-                text: columnKey ? verseObject[columnKey] : verseObject[LYRIC] || verseObject[CENTRE],
+                text: columnKey ? verseObject[columnKey] : (verseObject[LYRIC] || verseObject[CENTRE]),
                 isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
                 isVerseEndingSpan: verseObject.isVerseEndingSpan,
-                isHidden: !!hiddenLyricColumnKey,
-                columnKey: columnKey || isTitle ? TITLE : LEFT
+                isHidden: columnKey && hiddenLyricColumnKey === columnKey,
+                columnKey: columnKey || (isTitle ? TITLE : LEFT)
             }
 
         return <VerseLine {...other} {...lyricsLineProps} />
