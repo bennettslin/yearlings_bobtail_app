@@ -234,7 +234,7 @@ const VerseUnitView = ({
         const lyricsLineProps = {
                 inVerseBar,
                 verseSelected: isSelected,
-                    text: key ? verseObject[key] : verseObject[LYRIC] || verseObject[CENTRE],
+                text: key ? verseObject[key] : verseObject[LYRIC] || verseObject[CENTRE],
                 isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
                 isVerseEndingSpan: verseObject.isVerseEndingSpan,
                 isHidden,

@@ -20,7 +20,7 @@ class DotAnchor extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    // TODO: Ensure that this is all that's needed.
+                    'annotationIndex',
                     'isSelected',
                     'accessHighlighted'
                 ]

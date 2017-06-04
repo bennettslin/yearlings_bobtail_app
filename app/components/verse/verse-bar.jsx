@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import VerseUnit from '../verse/verse-unit'
@@ -28,6 +29,7 @@ class VerseBar extends Component {
     }
 
     render() {
+
         const { isAbove,
 
                 selectedSongIndex,
@@ -39,7 +41,8 @@ class VerseBar extends Component {
 
             verseObject = getVerseObject(selectedSongIndex, verseIndex)
 
-        return (
+        // Logue will not have verse object.
+        return verseObject ? (
             <div
                 className={classnames(
                     'verse-bar-block',
@@ -57,12 +60,15 @@ class VerseBar extends Component {
                     />
                 </div>
             </div>
-        )
+        ) : null
     }
 }
 
 VerseBar.propTypes = {
+    // Through Redux.
     'selectedSongIndex': PropTypes.number.isRequired,
+
+    // From parent.
     'verseIndex': PropTypes.number,
     'hiddenLyricColumnKey': PropTypes.string.isRequired,
 
@@ -71,4 +77,8 @@ VerseBar.propTypes = {
     handleVerseBarWheel: PropTypes.func.isRequired
 }
 
-export default VerseBar
+export default connect(({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+}))(VerseBar)

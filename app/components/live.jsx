@@ -23,6 +23,7 @@ import WikiPopup from './wiki/wiki-popup'
 import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
+import { getIsLogue } from '../helpers/data-helper'
 import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
 
 const Live = ({
@@ -36,7 +37,6 @@ const Live = ({
     overviewLogueIndex,
     overviewSongIndex,
     isPlaying,
-    isLogue,
     selectedAnnotationIndex,
     selectedCarouselIndex,
     selectedDotKeys,
@@ -44,6 +44,7 @@ const Live = ({
     selectedLyricColumnIndex,
     selectedNavIndex,
     selectedOverviewIndex,
+    selectedSongIndex,
 
     interactivatedVerseIndex,
 
@@ -104,9 +105,9 @@ const Live = ({
 
 }) => {
 
-    // FIXME: Get this somewhere else!
     const isPhone = getIsPhone(deviceIndex),
         isDesktop = getIsDesktop(deviceIndex),
+        isLogue = getIsLogue(selectedSongIndex),
 
         titleToggleProps = {
             handleTitleToggle
@@ -323,7 +324,7 @@ const Live = ({
 }
 
 export default connect(({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, carouselAnnotationIndex, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
 }))(Live)

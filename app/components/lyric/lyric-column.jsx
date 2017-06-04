@@ -35,11 +35,11 @@ class LyricColumn extends Component {
                 updatingPropsArray: [
                     'appMounted',
                     'deviceIndex',
-                    'isLogue',
                     'isPlaying',
                     'selectedSongIndex',
                     'accessedAnnotationIndex',
                     'selectedAnnotationIndex',
+                    'selectedSongIndex',
                     'sliderVerseIndex',
                     'interactivatedVerseIndex',
                     'selectedLyricColumnIndex',
@@ -100,7 +100,6 @@ class LyricColumn extends Component {
 LyricColumn.propTypes = {
     appMounted: PropTypes.bool.isRequired,
     deviceIndex: PropTypes.number.isRequired,
-    isLogue: PropTypes.bool.isRequired,
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     // isSliderTouched: PropTypes.bool.isRequired,
     isPlaying: PropTypes.bool.isRequired,
@@ -128,7 +127,6 @@ LyricColumn.propTypes = {
 const LyricColumnView = ({
 
     // From props.
-    isLogue,
     showOneOfTwoLyricColumns,
     selectedLyricColumnIndex,
 
@@ -175,12 +173,12 @@ const LyricColumnView = ({
             <div className="lyric-column-animatable"
                 onTransitionEnd={handleAnimatableTransition}
             >
-                {!isLogue &&
+                {
                     <VerseBar {...verseBarProps}
                         isAbove={true}
                     />
                 }
-                {!isLogue &&
+                {
                     <VerseBar {...verseBarProps}
                     />
                 }
@@ -207,7 +205,6 @@ const LyricColumnView = ({
 
 LyricColumnView.propTypes = {
     selectedVerse: PropTypes.object,
-    isLogue: PropTypes.bool.isRequired,
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     handleLyricColumnSelect: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
