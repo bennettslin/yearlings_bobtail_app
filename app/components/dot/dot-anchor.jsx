@@ -1,38 +1,81 @@
 // Container to show dot button with underline bar.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotButton from './dot-button'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-const DotAnchor = ({
+class DotAnchor extends Component {
 
-    dotKeys,
-    accessHighlighted,
-    isSelected,
-    handleDotButtonClick,
+    constructor(props) {
+        super(props)
 
-...other }) => (
+        this._handleDotButtonClick = this._handleDotButtonClick.bind(this)
+    }
 
-    <div className={classnames(
-        'anchor-block',
-        'dot-anchor',
-        dotKeys,
-        { 'selected': isSelected,
-          'access-highlighted': accessHighlighted && !isSelected }
-    )}>
-        <span className="underline-bar" />
-        <DotButton {...other}
-            dotKeys={dotKeys}
-            isSelected={isSelected}
-            handleDotButtonClick={isSelected ? null : handleDotButtonClick}
-        />
-    </div>
-)
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    // TODO: Ensure that this is all that's needed.
+                    'isSelected',
+                    'accessHighlighted'
+                ]
+            })
+
+        return componentShouldUpdate
+    }
+
+    _handleDotButtonClick(e) {
+        const { isSelected,
+                annotationIndex,
+                handleDotButtonClick } = this.props
+
+        if (!isSelected) {
+
+            // It's in lyric dot stanza.
+            if (!isNaN(annotationIndex)) {
+                handleDotButtonClick(e, annotationIndex)
+
+            // It's in carousel annotation title.
+            } else {
+                handleDotButtonClick(e)
+            }
+        }
+    }
+
+    render() {
+        const { dotKeys,
+                accessHighlighted,
+                isSelected,
+                ...other } = this.props
+
+        return (
+            <div className={classnames(
+                'anchor-block',
+                'dot-anchor',
+                dotKeys,
+                { 'selected': isSelected,
+                  'access-highlighted': accessHighlighted && !isSelected }
+            )}>
+                <span className="underline-bar" />
+                <DotButton {...other}
+                    dotKeys={dotKeys}
+                    isSelected={isSelected}
+                    handleDotButtonClick={this._handleDotButtonClick}
+                />
+            </div>
+        )
+    }
+}
 
 DotAnchor.propTypes = {
     // From parent.
     dotKeys: PropTypes.object.isRequired,
+    annotationIndex: PropTypes.number,
     accessHighlighted: PropTypes.bool,
     isSelected: PropTypes.bool,
     handleDotButtonClick: PropTypes.func

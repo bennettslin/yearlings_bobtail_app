@@ -23,9 +23,7 @@ const LyricDotStanza = ({
             dotKeys } = dotStanzaObject,
 
         isSelected = annotationIndex === selectedAnnotationIndex,
-        accessHighlighted = annotationIndex === accessedAnnotationIndex,
-
-        handleDotButtonClick = e => handleLyricAnnotationSelect(e, annotationIndex)
+        accessHighlighted = annotationIndex === accessedAnnotationIndex
 
     return (
         <LyricDotStanzaView {...other}
@@ -33,7 +31,7 @@ const LyricDotStanza = ({
             accessHighlighted={accessHighlighted}
             dotKeys={dotKeys}
             annotationIndex={annotationIndex}
-            handleDotButtonClick={handleDotButtonClick}
+            handleDotButtonClick={handleLyricAnnotationSelect}
         />
     )
 }
@@ -75,6 +73,7 @@ const LyricDotStanzaView = ({
         )}>
             <DotAnchor {...other}
                 dotKeys={dotKeys}
+                annotationIndex={annotationIndex}
             />
         </div>
     </div>
