@@ -4,9 +4,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
-import VerseLine from './verse-line'
+import VerseLinesBlock from './verse-lines-block'
 import VerseAudioButton from './verse-audio-button'
-import { DOUBLESPEAKER_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -208,7 +207,6 @@ VerseUnit.propTypes = {
 
 const VerseUnitView = ({
     // From props.
-    verseObject,
     inVerseBar,
 
     // From controller.
@@ -223,35 +221,12 @@ const VerseUnitView = ({
     isInteractable,
     isSelected,
     isAfterSelected,
-    isTitle,
-    isDoubleSpeaker,
 
     handleInteractivatableClick,
     handleLyricPlay,
     handleLyricVerseSelect,
 
 ...other }) => {
-    // FIXME: Not ideal.
-    const getVerseLine = ({ key, isHidden, index, columnKey, other }) => {
-
-        const lyricsLineProps = {
-                inVerseBar,
-                verseSelected: isSelected,
-                text: key ? verseObject[key] : verseObject[LYRIC] || verseObject[CENTRE],
-                isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
-                isVerseEndingSpan: verseObject.isVerseEndingSpan,
-                isHidden,
-                columnKey
-            }
-
-        if (typeof index !== 'undefined') {
-            lyricsLineProps.key = index
-        }
-
-        return <VerseLine {...other} {...lyricsLineProps} />
-    }
-
-    const { hiddenLyricColumnKey } = other
 
     return (
         <div
@@ -277,27 +252,9 @@ const VerseUnitView = ({
                     handleLyricVerseSelect={handleLyricVerseSelect}
                 />
             }
-            {isDoubleSpeaker ? (
-                <div className={classnames(
-                    'double-lines-block',
-                    { 'hidden-left': hiddenLyricColumnKey === LEFT }
-                )}>
-                    {DOUBLESPEAKER_KEYS.map((key, index) => {
-                        return getVerseLine({
-                            key,
-                            isHidden: key === hiddenLyricColumnKey,
-                            index,
-                            columnKey: key,
-                            other
-                        })
-                    })}
-                </div>
-            ) : (
-                getVerseLine({
-                    columnKey: isTitle ? TITLE : LEFT,
-                    other
-                })
-            )}
+            <VerseLinesBlock {...other}
+                inVerseBar={inVerseBar}
+            />
         </div>
     )
 }
@@ -305,7 +262,6 @@ const VerseUnitView = ({
 VerseUnitView.propTypes = {
     // From parent.
     verseIndex: PropTypes.number,
-    verseObject: PropTypes.object.isRequired,
     hiddenLyricColumnKey: PropTypes.string,
     isTitle: PropTypes.bool,
     inVerseBar: PropTypes.bool,
@@ -313,7 +269,6 @@ VerseUnitView.propTypes = {
     isInteractable: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired,
-    isDoubleSpeaker: PropTypes.bool.isRequired,
     verseIndexClassName: PropTypes.string.isRequired,
     backgroundClassName: PropTypes.string.isRequired,
     sliderPlacementClassName: PropTypes.string.isRequired,
