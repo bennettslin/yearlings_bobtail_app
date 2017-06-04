@@ -136,12 +136,8 @@ const _hasSpecialCharacterAtIndex = (text, index) => {
         indexedChar === '…'
 }
 
-export const getFormattedVerseBeginningSpanText = (text) => {
-    return text
-}
-
 export const getFormattedEndingVerseSpanText = (text) => {
-    // Last verse object will always end in an ellipsis.
+    // End in ellipsis.
     if (_hasSpecialCharacterAtIndex(text, text.length - 1)) {
         text = `${text.slice(0, text.length - 1)}…`
 
@@ -150,4 +146,15 @@ export const getFormattedEndingVerseSpanText = (text) => {
     }
 
     return text
+}
+
+export const getFormattedLyricSpanText = (text) => {
+    const lastSpaceIndex = text.lastIndexOf(' ')
+
+    if (lastSpaceIndex > -1) {
+        return `${text.slice(0, lastSpaceIndex)}\u00a0${text.slice(lastSpaceIndex + 1)}`
+
+    } else {
+        return text
+    }
 }

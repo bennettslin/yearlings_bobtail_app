@@ -63,6 +63,8 @@ class LyricUnit extends Component {
             topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
             isDotOnly = dotStanza && stanzaArray.length === 1,
             hasSide = topSideStanza || bottomSideStanza,
+
+            // FIXME: Take care of this through CSS.
             truncateMain = hasSide && hiddenLyricColumnKey === LEFT,
             showMain = !isDotOnly && (!hasSide || hiddenLyricColumnKey !== LEFT || truncateMain),
 

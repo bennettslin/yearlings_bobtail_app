@@ -1,12 +1,14 @@
+// Component for a single span of text.
+
 import React from 'react'
 import PropTypes from 'prop-types'
-import { getFormattedVerseBeginningSpanText, getFormattedEndingVerseSpanText } from '../../helpers/format-helper'
+import { getFormattedLyricSpanText, getFormattedEndingVerseSpanText } from '../../helpers/format-helper'
 
 const TextSpan = ({
 
     text,
     isLyric,
-    foregoSpace,
+    inTextAnchor,
     inPortal,
     isVerseBeginningSpan,
     isVerseEndingSpan
@@ -14,36 +16,26 @@ const TextSpan = ({
 }) => {
     /**
      * Subsequent spans of text on a line will begin with a space, unless
-     * it's in an anchor, it begins with "'s," or it's the first verse object
+     * it's in an anchor, it begins with "'s," or it's the beginning verse span
      * in a portal.
      */
-    const hasFirstSpace = !isVerseBeginningSpan && !foregoSpace && (text.indexOf('\'s') !== 0)
+    const hasFirstSpace = !isVerseBeginningSpan && !inTextAnchor && (text.indexOf('\'s') !== 0)
 
-    /**
-     * Add nonbreaking space between last two words if it's a lyric.
-     */
     let formattedText = text
 
     if (isLyric) {
-        const lastSpaceIndex = text.lastIndexOf(' ')
-        if (lastSpaceIndex > -1) {
-            formattedText = `${text.slice(0, lastSpaceIndex)}\u00a0${text.slice(lastSpaceIndex + 1)}`
-        }
+        // And nonbreaking space between last two words.
+        formattedText = getFormattedLyricSpanText(formattedText)
     }
 
-    if (inPortal) {
-        if (isVerseBeginningSpan) {
-            formattedText = getFormattedVerseBeginningSpanText(formattedText)
-        }
-
-        if (isVerseEndingSpan) {
-            formattedText = getFormattedEndingVerseSpanText(formattedText)
-        }
+    if (inPortal && isVerseEndingSpan) {
+        // Last verse span in portal will always end in an ellipsis.
+        formattedText = getFormattedEndingVerseSpanText(formattedText)
     }
 
     return (
         <TextSpanView
-            text={formattedText}
+            formattedText={formattedText}
             hasFirstSpace={hasFirstSpace}
         />
     )
@@ -53,8 +45,10 @@ TextSpan.propTypes = {
     // From parent.
     text: PropTypes.string.isRequired,
     isLyric: PropTypes.bool,
-    foregoSpace: PropTypes.bool,
-    inPortal: PropTypes.bool
+    inTextAnchor: PropTypes.bool,
+    inPortal: PropTypes.bool,
+    isVerseBeginningSpan: PropTypes.bool,
+    isVerseEndingSpan: PropTypes.bool
 }
 
 /****************
@@ -63,23 +57,21 @@ TextSpan.propTypes = {
 
 const TextSpanView = ({
 
-    // From controller.
-    text,
+    formattedText,
     hasFirstSpace
 
 }) => (
     <span
-        className="text-span">
-        {(hasFirstSpace ? ' ' : '') + text}
+        className="text-span"
+    >
+        {(hasFirstSpace ? ' ' : '') + formattedText}
     </span>
 )
 
-// FIXME: Does this need to know the first and last verse object bools?
 TextSpanView.propTypes = {
-    text: PropTypes.string.isRequired,
-    hasFirstSpace: PropTypes.bool.isRequired,
-    isVerseBeginningSpan: PropTypes.bool,
-    isVerseEndingSpan: PropTypes.bool
+    // From parent.
+    formattedText: PropTypes.string.isRequired,
+    hasFirstSpace: PropTypes.bool.isRequired
 }
 
 export default TextSpan

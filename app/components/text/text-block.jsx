@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+// Component to iterate through array of text.
+
+import React from 'react'
 import PropTypes from 'prop-types'
 import TextUnit from './text-unit'
 
@@ -6,32 +8,33 @@ import TextUnit from './text-unit'
  * CONTAINER *
  *************/
 
- // Making this a React component to attach ref for line width resizing.
-class TextBlock extends Component {
+const TextBlock = ({
 
-    render() {
-        const { text,
-                truncateMain } = this.props,
+    text,
+    truncateMain,
 
-            isArray = Array.isArray(text)
+...other }) => {
+    const isArray = Array.isArray(text)
 
-        if (typeof text === 'string' || !isArray || truncateMain) {
-            if (truncateMain) {
-                return (
-                    <TextUnit {...this.props}
-                        text={'\u2026'}
-                    />
-                )
-            } else {
-                return <TextUnit {...this.props} />
-            }
-        } else {
-            return <TextBlockView {...this.props} />
-        }
+    if (!isArray || truncateMain) {
+        // Truncate if it's in the main verse but in the hidden lyric column.
+        return (
+            <TextUnit {...other}
+                text={truncateMain ? '\u2026' : text}
+            />
+        )
+
+    } else {
+        return (
+            <TextBlockView {...other}
+                textArray={text}
+            />
+        )
     }
 }
 
 TextBlock.propTypes = {
+    // From parent.
     text: PropTypes.oneOfType([
         PropTypes.array,
         PropTypes.object,
@@ -46,17 +49,17 @@ TextBlock.propTypes = {
 
 const TextBlockView = ({
 
-    // From props.
-    text,
-    foregoSpace,
+    textArray,
+    inTextAnchor,
 
 ...other }) => (
+
     <span>
-        {text.map((textElement, index) => (
+        {textArray.map((textElement, index) => (
                 <TextBlock {...other}
                     key={index}
                     text={textElement}
-                    foregoSpace={foregoSpace && index === 0}
+                    inTextAnchor={inTextAnchor && index === 0}
                 />
             )
         )}
@@ -64,10 +67,9 @@ const TextBlockView = ({
 )
 
 TextBlockView.propTypes = {
-    text: PropTypes.oneOfType([
-        PropTypes.array
-    ]),
-    foregoSpace: PropTypes.bool
+    // From parent.
+    textArray: PropTypes.array.isRequired,
+    inTextAnchor: PropTypes.bool
 }
 
 export default TextBlock

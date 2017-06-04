@@ -1,4 +1,10 @@
 module.exports = [
+
+    {
+        taskName: `Handle truncateMain through CSS.`,
+        workedHours: 0,
+        neededHours: 3
+    },
     {
         taskName: `Overview toggle in popup is clickable even when hidden.`,
         workedHours: 0,

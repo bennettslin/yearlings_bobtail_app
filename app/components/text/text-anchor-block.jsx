@@ -129,7 +129,7 @@ const TextAnchorBlockView = ({
                 inPortal={inPortal}
                 isVerseBeginningSpan={isVerseBeginningSpan}
                 isVerseEndingSpan={isVerseEndingSpan}
-                foregoSpace={true}
+                inTextAnchor={true}
             />
         </a>
     </span>
