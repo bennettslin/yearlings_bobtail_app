@@ -14,6 +14,7 @@ const ScoresTipsSection = ({
     deviceIndex,
     selectedScoreIndex,
     selectedTipsIndex,
+
     handleScoreToggle,
     handleTipsToggle
 
