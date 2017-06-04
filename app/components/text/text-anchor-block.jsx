@@ -72,8 +72,8 @@ const TextAnchorBlockView = ({
 
     // From props.
     inPortal,
-    firstVerseObject,
-    lastVerseObject,
+    isVerseBeginningSpan,
+    isVerseEndingSpan,
     isLyric,
     beginsNewLine,
     accessHighlighted,
@@ -92,7 +92,7 @@ const TextAnchorBlockView = ({
 
     <span>
         {/* This non-anchor space negates the space that starts the text in the anchor tag. Kind of hackish, but there are no immediate solutions since two anchor tags next to each other have no other element between them. */}
-        {!beginsNewLine && !firstVerseObject &&
+        {!beginsNewLine && !isVerseBeginningSpan &&
             ' '
         }
         <a
@@ -127,8 +127,8 @@ const TextAnchorBlockView = ({
                 isLyric={isLyric}
                 text={anchorText}
                 inPortal={inPortal}
-                firstVerseObject={firstVerseObject}
-                lastVerseObject={lastVerseObject}
+                isVerseBeginningSpan={isVerseBeginningSpan}
+                isVerseEndingSpan={isVerseEndingSpan}
                 foregoSpace={true}
             />
         </a>
@@ -137,8 +137,8 @@ const TextAnchorBlockView = ({
 
 TextAnchorBlockView.propTypes = {
     inPortal: PropTypes.bool,
-    firstVerseObject: PropTypes.bool,
-    lastVerseObject: PropTypes.bool,
+    isVerseBeginningSpan: PropTypes.bool,
+    isVerseEndingSpan: PropTypes.bool,
     isLyric: PropTypes.bool,
     beginsNewLine: PropTypes.bool,
     accessHighlighted: PropTypes.bool,

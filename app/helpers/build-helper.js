@@ -129,7 +129,7 @@ const _finalPrepareAllSongs = (album) => {
             _tempStore._currentSongStanzaTypeCounters = song.stanzaTypeCounters
 
             _parseLyrics(song.lyrics, true)
-            _registerFirstAndLastVerseObjects(song.lyrics)
+            _registerBeginningAndEndingVerseSpanss(song.lyrics)
 
 
             // Not needed after stanza is told its index.
@@ -376,21 +376,21 @@ const _registerAfterTimeKeyFound = (lyric) => {
             _registerAfterTimeKeyFound(lyric[0])
 
         } else {
-            lyric[0] = _addVerseObjectKeyToLyric(lyric[0], 'firstVerseObject')
-            lyric[lyric.length - 1] = _addVerseObjectKeyToLyric(lyric[lyric.length - 1], 'lastVerseObject')
+            lyric[0] = _addVerseObjectKeyToLyric(lyric[0], 'isVerseBeginningSpan')
+            lyric[lyric.length - 1] = _addVerseObjectKeyToLyric(lyric[lyric.length - 1], 'isVerseEndingSpan')
         }
 
     } else if (typeof lyric === 'object') {
         _registerAfterTimeKeyFound(lyric.italic)
 
         if (typeof lyric.anchor === 'string') {
-            lyric = _addVerseObjectKeyToLyric(lyric, 'firstVerseObject')
-            lyric = _addVerseObjectKeyToLyric(lyric, 'lastVerseObject')
+            lyric = _addVerseObjectKeyToLyric(lyric, 'isVerseBeginningSpan')
+            lyric = _addVerseObjectKeyToLyric(lyric, 'isVerseEndingSpan')
         }
     }
 }
 
-const _registerFirstAndLastVerseObjects = (lyric) => {
+const _registerBeginningAndEndingVerseSpanss = (lyric) => {
     /**
      * Let verses with portals know their first and last objects, which are
      * formatted differently in the portal.
@@ -398,7 +398,7 @@ const _registerFirstAndLastVerseObjects = (lyric) => {
 
     if (Array.isArray(lyric)) {
         lyric.forEach(childLyric => {
-            _registerFirstAndLastVerseObjects(childLyric)
+            _registerBeginningAndEndingVerseSpanss(childLyric)
         })
 
     } else if (typeof lyric === 'object') {
@@ -410,14 +410,14 @@ const _registerFirstAndLastVerseObjects = (lyric) => {
                 _registerAfterTimeKeyFound(lyric[lyricKey])
 
                 if (typeof lyric[lyricKey] === 'string') {
-                    lyric[lyricKey] = _addVerseObjectKeyToLyric(lyric[lyricKey], 'firstVerseObject')
-                    lyric[lyricKey] = _addVerseObjectKeyToLyric(lyric[lyricKey], 'lastVerseObject')
+                    lyric[lyricKey] = _addVerseObjectKeyToLyric(lyric[lyricKey], 'isVerseBeginningSpan')
+                    lyric[lyricKey] = _addVerseObjectKeyToLyric(lyric[lyricKey], 'isVerseEndingSpan')
                 }
             })
         }
 
         if (typeof lyric.unitMap !== 'undefined') {
-            _registerFirstAndLastVerseObjects(lyric.subStanza)
+            _registerBeginningAndEndingVerseSpanss(lyric.subStanza)
         }
     }
 }

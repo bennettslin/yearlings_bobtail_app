@@ -235,8 +235,8 @@ const VerseUnitView = ({
                 inVerseBar,
                 verseSelected: isSelected,
                     text: key ? verseObject[key] : verseObject[LYRIC] || verseObject[CENTRE],
-                firstVerseObject: verseObject.firstVerseObject,
-                lastVerseObject: verseObject.lastVerseObject,
+                isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
+                isVerseEndingSpan: verseObject.isVerseEndingSpan,
                 isHidden,
                 columnKey
             }

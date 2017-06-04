@@ -136,11 +136,11 @@ const _hasSpecialCharacterAtIndex = (text, index) => {
         indexedChar === '…'
 }
 
-export const getFormattedFirstVerseObjectText = (text) => {
+export const getFormattedVerseBeginningSpanText = (text) => {
     return text
 }
 
-export const getFormattedLastVerseObjectText = (text) => {
+export const getFormattedEndingVerseSpanText = (text) => {
     // Last verse object will always end in an ellipsis.
     if (_hasSpecialCharacterAtIndex(text, text.length - 1)) {
         text = `${text.slice(0, text.length - 1)}…`

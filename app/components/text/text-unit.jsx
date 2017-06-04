@@ -28,8 +28,8 @@ const TextUnit = ({
                 <span>
                     <TextBlock {...other}
                         text={text.lyric}
-                        firstVerseObject={text.firstVerseObject}
-                        lastVerseObject={text.lastVerseObject}
+                        isVerseBeginningSpan={text.isVerseBeginningSpan}
+                        isVerseEndingSpan={text.isVerseEndingSpan}
                     />
                 </span>
             )
@@ -59,8 +59,8 @@ const TextUnit = ({
                 /> :
                 <TextAnchorBlock {...other}
                     text={text}
-                    firstVerseObject={text.firstVerseObject}
-                    lastVerseObject={text.lastVerseObject}
+                    isVerseBeginningSpan={text.isVerseBeginningSpan}
+                    isVerseEndingSpan={text.isVerseEndingSpan}
                 />
             )
         }

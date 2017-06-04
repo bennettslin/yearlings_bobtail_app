@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { getFormattedFirstVerseObjectText, getFormattedLastVerseObjectText } from '../../helpers/format-helper'
+import { getFormattedVerseBeginningSpanText, getFormattedEndingVerseSpanText } from '../../helpers/format-helper'
 
 const TextSpan = ({
 
@@ -8,8 +8,8 @@ const TextSpan = ({
     isLyric,
     foregoSpace,
     inPortal,
-    firstVerseObject,
-    lastVerseObject
+    isVerseBeginningSpan,
+    isVerseEndingSpan
 
 }) => {
     /**
@@ -17,7 +17,7 @@ const TextSpan = ({
      * it's in an anchor, it begins with "'s," or it's the first verse object
      * in a portal.
      */
-    const hasFirstSpace = !firstVerseObject && !foregoSpace && (text.indexOf('\'s') !== 0)
+    const hasFirstSpace = !isVerseBeginningSpan && !foregoSpace && (text.indexOf('\'s') !== 0)
 
     /**
      * Add nonbreaking space between last two words if it's a lyric.
@@ -32,12 +32,12 @@ const TextSpan = ({
     }
 
     if (inPortal) {
-        if (firstVerseObject) {
-            formattedText = getFormattedFirstVerseObjectText(formattedText)
+        if (isVerseBeginningSpan) {
+            formattedText = getFormattedVerseBeginningSpanText(formattedText)
         }
 
-        if (lastVerseObject) {
-            formattedText = getFormattedLastVerseObjectText(formattedText)
+        if (isVerseEndingSpan) {
+            formattedText = getFormattedEndingVerseSpanText(formattedText)
         }
     }
 
@@ -78,8 +78,8 @@ const TextSpanView = ({
 TextSpanView.propTypes = {
     text: PropTypes.string.isRequired,
     hasFirstSpace: PropTypes.bool.isRequired,
-    firstVerseObject: PropTypes.bool,
-    lastVerseObject: PropTypes.bool
+    isVerseBeginningSpan: PropTypes.bool,
+    isVerseEndingSpan: PropTypes.bool
 }
 
 export default TextSpan
