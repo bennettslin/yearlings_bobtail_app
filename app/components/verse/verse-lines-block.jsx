@@ -1,4 +1,5 @@
 // Component to show all lines in a single verse.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
@@ -21,21 +22,17 @@ const VerseLinesBlock = ({
         )
 
     } else {
-        const { inVerseBar,
-                isSelected,
-                verseObject,
+        const { verseObject,
                 hiddenLyricColumnKey,
-                columnKey,
+                doublespeakerKey,
                 isTitle } = other,
 
             lyricsLineProps = {
-                inVerseBar,
-                verseSelected: isSelected,
-                text: columnKey ? verseObject[columnKey] : (verseObject[LYRIC] || verseObject[CENTRE]),
+                text: doublespeakerKey ? verseObject[doublespeakerKey] : (verseObject[LYRIC] || verseObject[CENTRE]),
                 isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
                 isVerseEndingSpan: verseObject.isVerseEndingSpan,
-                isHidden: columnKey && hiddenLyricColumnKey === columnKey,
-                columnKey: columnKey || (isTitle ? TITLE : LEFT)
+                isHidden: doublespeakerKey && hiddenLyricColumnKey === doublespeakerKey,
+                columnKey: doublespeakerKey || (isTitle ? TITLE : LEFT)
             }
 
         return <VerseLine {...other} {...lyricsLineProps} />
@@ -47,7 +44,12 @@ VerseLinesBlock.defaultProps = {
 }
 
 VerseLinesBlock.propTypes = {
-    isDoubleSpeaker: PropTypes.bool.isRequired
+    // From parent.
+    isDoubleSpeaker: PropTypes.bool.isRequired,
+    verseObject: PropTypes.object.isRequired,
+    hiddenLyricColumnKey: PropTypes.string.isRequired,
+    doublespeakerKey: PropTypes.string,
+    isTitle: PropTypes.bool,
 }
 
 /****************
@@ -63,19 +65,18 @@ const VerseLinesBlockView = (props) => {
             // FIXME: Take care of this in CSS.
             { 'hidden-left': hiddenLyricColumnKey === LEFT }
         )}>
-            {DOUBLESPEAKER_KEYS.map((columnKey, index) => {
-                return (
-                    <VerseLinesBlock {...props}
-                        key={index}
-                        columnKey={columnKey}
-                    />
-                )
-            })}
+            {DOUBLESPEAKER_KEYS.map((doublespeakerKey, index) => (
+                <VerseLinesBlock {...props}
+                    key={index}
+                    doublespeakerKey={doublespeakerKey}
+                />
+            ))}
         </div>
     )
 }
 
 VerseLinesBlockView.propTypes = {
+    // From parent.
     hiddenLyricColumnKey: PropTypes.string.isRequired
 }
 

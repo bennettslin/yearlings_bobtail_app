@@ -144,7 +144,7 @@ class VerseUnit extends Component {
               isTitle,
               verseIndex } = verseObject,
 
-            isInteractable = !isNaN(verseIndex),
+            isInteractable = !isNaN(verseIndex) && !inVerseBar,
 
             // If not an interactable verse, we'll count it as odd.
             isEven = isInteractable && verseIndex % 2 === 0,
@@ -206,8 +206,6 @@ VerseUnit.propTypes = {
  ****************/
 
 const VerseUnitView = ({
-    // From props.
-    inVerseBar,
 
     // From controller.
     myRef,
@@ -242,7 +240,7 @@ const VerseUnitView = ({
             )}
             onClick={handleInteractivatableClick}
         >
-            {isInteractable && !inVerseBar &&
+            {isInteractable &&
                 <VerseAudioButton
                     isAudioButtonEnabled={isAudioButtonEnabled}
                     verseIndex={verseIndex}
@@ -252,9 +250,7 @@ const VerseUnitView = ({
                     handleLyricVerseSelect={handleLyricVerseSelect}
                 />
             }
-            <VerseLinesBlock {...other}
-                inVerseBar={inVerseBar}
-            />
+            <VerseLinesBlock {...other} />
         </div>
     )
 }

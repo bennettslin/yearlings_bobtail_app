@@ -62,10 +62,6 @@ class VerseLine extends Component {
             // In verse bar.
             (!!oldProps.inVerseBar && oldProps.text !== newProps.text)
 
-        // if (this.props.verseSelected && shouldResetWidthBasedOnProps) {
-        //     console.error('shouldResetWidthBasedOnProps', shouldResetWidthBasedOnProps);
-        // }
-
         // if (oldProps.inVerseBar) {
         //     console.error('shouldResetWidthBasedOnProps', shouldResetWidthBasedOnProps);
         // }
@@ -154,6 +150,7 @@ VerseLine.propTypes = {
         PropTypes.array,
         PropTypes.object
     ]).isRequired,
+
     inVerseBar: PropTypes.bool.isRequired,
     isHidden: PropTypes.bool.isRequired,
     columnKey: PropTypes.string.isRequired,
