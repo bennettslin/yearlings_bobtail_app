@@ -1,11 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 import { getFormattedFirstVerseObjectText, getFormattedLastVerseObjectText } from '../../helpers/format-helper'
-
-/*************
- * CONTAINER *
- *************/
 
 const TextSpan = ({
 
@@ -13,21 +8,22 @@ const TextSpan = ({
     isLyric,
     foregoSpace,
     inPortal,
-    inPortalCard,
     firstVerseObject,
-    lastVerseObject,
+    lastVerseObject
 
-...other }) => {
+}) => {
     /**
      * Subsequent spans of text on a line will begin with a space, unless
      * it's in an anchor, it begins with "'s," or it's the first verse object
      * in a portal.
      */
     const hasFirstSpace = !firstVerseObject && !foregoSpace && (text.indexOf('\'s') !== 0)
+
     /**
      * Add nonbreaking space between last two words if it's a lyric.
      */
     let formattedText = text
+
     if (isLyric) {
         const lastSpaceIndex = text.lastIndexOf(' ')
         if (lastSpaceIndex > -1) {
@@ -35,7 +31,7 @@ const TextSpan = ({
         }
     }
 
-    if (inPortal && !inPortalCard) {
+    if (inPortal) {
         if (firstVerseObject) {
             formattedText = getFormattedFirstVerseObjectText(formattedText)
         }
@@ -46,23 +42,19 @@ const TextSpan = ({
     }
 
     return (
-        <TextSpanView {...other}
+        <TextSpanView
             text={formattedText}
             hasFirstSpace={hasFirstSpace}
-            firstVerseObject={firstVerseObject}
-            lastVerseObject={lastVerseObject}
         />
     )
 }
 
 TextSpan.propTypes = {
+    // From parent.
     text: PropTypes.string.isRequired,
     isLyric: PropTypes.bool,
     foregoSpace: PropTypes.bool,
-    inPortal: PropTypes.bool,
-    inPortalCard: PropTypes.bool,
-    firstVerseObject: PropTypes.bool,
-    lastVerseObject: PropTypes.bool
+    inPortal: PropTypes.bool
 }
 
 /****************
@@ -71,22 +63,13 @@ TextSpan.propTypes = {
 
 const TextSpanView = ({
 
-    // From props.
-    // TODO: This won't always need first and last verse objects.
-    firstVerseObject,
-    lastVerseObject,
-
     // From controller.
     text,
     hasFirstSpace
 
 }) => (
     <span
-        className={classnames(
-            'text-span',
-            { 'first-verse-object': firstVerseObject,
-              'last-verse-object': lastVerseObject }
-        )}>
+        className="text-span">
         {(hasFirstSpace ? ' ' : '') + text}
     </span>
 )

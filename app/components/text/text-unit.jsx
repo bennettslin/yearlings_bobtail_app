@@ -1,12 +1,10 @@
+// Component to wrap text span in appropriate parent element.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import TextAnchorBlock from './text-anchor-block'
 import TextBlock from './text-block'
 import TextSpan from './text-span'
-
-/*************
- * CONTAINER *
- *************/
 
 const TextUnit = ({
 
@@ -14,6 +12,7 @@ const TextUnit = ({
 
 ...other }) => {
 
+    // It's a text span.
     if (typeof text === 'string') {
         return (
             <TextSpan {...other}
@@ -54,28 +53,26 @@ const TextUnit = ({
             )
 
         } else if (text.anchor) {
-            return (!other.inVerseBar && !(other.inPortal && other.inPortalCard) ?
+            return (other.inVerseBar ?
+                <TextBlock {...other}
+                    text={text.anchor}
+                /> :
                 <TextAnchorBlock {...other}
                     text={text}
                     firstVerseObject={text.firstVerseObject}
                     lastVerseObject={text.lastVerseObject}
-                /> :
-                <TextBlock {...other}
-                    isPortalAnchor={other.inPortal}
-                    text={text.anchor}
                 />
             )
         }
     }
 
+    // Portals don't have a text description, so return null.
     return null
 }
 
 TextUnit.propTypes = {
-    inPortal: PropTypes.bool,
-    inPortalCard: PropTypes.bool,
+    // From parent.
     inVerseBar: PropTypes.bool,
-
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.object
