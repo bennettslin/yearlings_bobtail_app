@@ -1,31 +1,13 @@
+// Section for dots and overview toggle buttons.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import DotsToggle from '../dots/dots-toggle'
 
-/*************
- * CONTAINER *
- *************/
+const DotsOverviewToggleSection = ({
 
-const DotsOverviewToggleSection = (props) => (
-    <DotsOverviewToggleSectionView {...props} />
-)
-
-DotsOverviewToggleSection.propTypes = {
-    overviewButtonChild: PropTypes.element.isRequired,
-    scoresTipsSectionChild: PropTypes.element
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const DotsOverviewToggleSectionView = ({
-
-    // From props.
     overviewButtonChild,
     scoresTipsSectionChild,
-
-    // From controller.
 
 ...other }) => (
 
@@ -35,5 +17,11 @@ const DotsOverviewToggleSectionView = ({
         {scoresTipsSectionChild}
     </div>
 )
+
+DotsOverviewToggleSection.propTypes = {
+    // From parent.
+    overviewButtonChild: PropTypes.element.isRequired,
+    scoresTipsSectionChild: PropTypes.element
+}
 
 export default DotsOverviewToggleSection
