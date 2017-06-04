@@ -1,3 +1,5 @@
+// Container for lyric section.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -23,7 +25,7 @@ class LyricColumn extends Component {
         this.completeHeightTransition = this.completeHeightTransition.bind(this)
 
         this.state = {
-            handlingHeightTransition: false
+            isTransitioningHeight: false
         }
     }
 
@@ -33,27 +35,15 @@ class LyricColumn extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'appMounted',
-                    'deviceIndex',
-                    'isPlaying',
                     'selectedSongIndex',
-                    'accessedAnnotationIndex',
-                    'selectedAnnotationIndex',
-                    'selectedSongIndex',
-                    'sliderVerseIndex',
-                    'interactivatedVerseIndex',
                     'selectedLyricColumnIndex',
                     'selectedVerseIndex',
-                    'showOneOfTwoLyricColumns',
-                    // 'isSliderTouched',
-
-                    // For lyric expand button.
-                    // FIXME: Not ideal.
-                    'isLyricExpanded'
+                    'sliderVerseIndex',
+                    'showOneOfTwoLyricColumns'
                 ]
             })
 
-        return componentShouldUpdate
+        return componentShouldUpdate || true
     }
 
     componentDidUpdate(prevProps) {
@@ -65,7 +55,7 @@ class LyricColumn extends Component {
     _handleTransition(e) {
         if (e.propertyName === 'height') {
             this.setState({
-                handlingHeightTransition: true
+                isTransitioningHeight: true
             })
         }
     }
@@ -73,14 +63,14 @@ class LyricColumn extends Component {
     _handleAnimatableTransition(e) {
         if (e.propertyName === 'opacity') {
             this.setState({
-                handlingHeightTransition: true
+                isTransitioningHeight: true
             })
         }
     }
 
     completeHeightTransition() {
         this.setState({
-            handlingHeightTransition: false
+            isTransitioningHeight: false
         })
     }
 
@@ -88,7 +78,7 @@ class LyricColumn extends Component {
         return (
             <LyricColumnView {...this.props}
                 myRef={(node) => (this.myLyricColumn = node)}
-                handlingHeightTransition={this.state.handlingHeightTransition}
+                isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
                 handleAnimatableTransition={this._handleAnimatableTransition}
                 completeHeightTransition={this.completeHeightTransition}
@@ -98,26 +88,11 @@ class LyricColumn extends Component {
 }
 
 LyricColumn.propTypes = {
-    appMounted: PropTypes.bool.isRequired,
-    deviceIndex: PropTypes.number.isRequired,
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-    // isSliderTouched: PropTypes.bool.isRequired,
-    isPlaying: PropTypes.bool.isRequired,
-
-    isLyricExpanded: PropTypes.bool.isRequired,
-
+    // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
-    accessedAnnotationIndex: PropTypes.number,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
-    sliderVerseIndex: PropTypes.number.isRequired,
-    interactivatedVerseIndex: PropTypes.number.isRequired,
-    selectedLyricColumnIndex: PropTypes.number.isRequired,
-    selectedVerseIndex: PropTypes.number.isRequired,
 
-    handleLyricColumnSelect: PropTypes.func.isRequired,
-    handleVerseBarSelect: PropTypes.func.isRequired,
-    handleVerseBarWheel: PropTypes.func.isRequired,
-    lyricExpandButtonChild: PropTypes.element
+    // From parent.
+    handleScrollAfterLyricRerender: PropTypes.func.isRequired
 }
 
 /****************
@@ -129,6 +104,8 @@ const LyricColumnView = ({
     // From props.
     showOneOfTwoLyricColumns,
     selectedLyricColumnIndex,
+    selectedVerseIndex,
+    sliderVerseIndex,
 
     handleLyricColumnSelect,
     handleVerseBarSelect,
@@ -138,23 +115,20 @@ const LyricColumnView = ({
 
     // From controller.
     myRef,
-    handlingHeightTransition,
+    isTransitioningHeight,
     handleTransition,
     handleAnimatableTransition,
     completeHeightTransition,
 
 ...other }) => {
 
-    const { selectedVerseIndex,
-            sliderVerseIndex } = other,
-
-        // Show the slider verse if there is one.
-        verseIndex = sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
-        hiddenLyricColumnKey = getHiddenLyricColumnKey({
+    const hiddenLyricColumnKey = getHiddenLyricColumnKey({
             showOneOfTwoLyricColumns,
             selectedLyricColumnIndex
         }),
 
+        // If there is a slider verse, override selected verse.
+        verseIndex = sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
         verseBarProps = {
             verseIndex,
             hiddenLyricColumnKey,
@@ -193,7 +167,7 @@ const LyricColumnView = ({
                 {lyricExpandButtonChild}
                 <LyricSection {...other}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
-                    handlingHeightTransition={handlingHeightTransition}
+                    isTransitioningHeight={isTransitioningHeight}
                     completeHeightTransition={completeHeightTransition}
                 />
             </div>
@@ -202,42 +176,35 @@ const LyricColumnView = ({
 }
 
 LyricColumnView.propTypes = {
-    selectedVerse: PropTypes.object,
+    // Through Redux.
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
+    selectedLyricColumnIndex: PropTypes.number.isRequired,
+    selectedVerseIndex: PropTypes.number.isRequired,
+    sliderVerseIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    myRef: PropTypes.func.isRequired,
+    isTransitioningHeight: PropTypes.bool.isRequired,
+    handleTransition: PropTypes.func.isRequired,
+    handleAnimatableTransition: PropTypes.func.isRequired,
+    completeHeightTransition: PropTypes.func.isRequired,
+
     handleLyricColumnSelect: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired,
-    lyricExpandButtonChild: PropTypes.element,
-
-    myRef: PropTypes.func.isRequired,
-    handlingHeightTransition: PropTypes.bool.isRequired,
-    handleTransition: PropTypes.func.isRequired,
-    handleAnimatableTransition: PropTypes.func.isRequired,
-    completeHeightTransition: PropTypes.func.isRequired
+    lyricExpandButtonChild: PropTypes.element
 }
 
 export default connect(({
-    appMounted,
     selectedSongIndex,
-    selectedAnnotationIndex,
     selectedLyricColumnIndex,
     selectedVerseIndex,
     sliderVerseIndex,
-    accessedAnnotationIndex,
-    showOneOfTwoLyricColumns,
-    interactivatedVerseIndex,
-    isLyricExpanded,
-    isPlaying
+    showOneOfTwoLyricColumns
 }) => ({
-    appMounted,
     selectedSongIndex,
-    selectedAnnotationIndex,
     selectedLyricColumnIndex,
     selectedVerseIndex,
     sliderVerseIndex,
-    accessedAnnotationIndex,
-    showOneOfTwoLyricColumns,
-    interactivatedVerseIndex,
-    isLyricExpanded,
-    isPlaying
+    showOneOfTwoLyricColumns
 }))(LyricColumn)

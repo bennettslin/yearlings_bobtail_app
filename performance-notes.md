@@ -14,3 +14,5 @@ Phase 2:
 
 Phase 3:
 * Avoid passing data objects if they can be fetched by indices.
+
+* Avoid hiddenLyricColumnKey ?

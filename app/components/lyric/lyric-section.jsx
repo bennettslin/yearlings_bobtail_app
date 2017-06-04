@@ -1,5 +1,8 @@
+// Container for lyrics that handles scrolling.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
 import LyricUnit from './lyric-unit'
 import { getLyricsArray } from '../../helpers/data-helper'
@@ -22,7 +25,7 @@ class LyricSection extends Component {
      */
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.handlingHeightTransition && !this.props.handlingHeightTransition) {
+        if (nextProps.isTransitioningHeight && !this.props.isTransitioningHeight) {
             this._handleScroll()
             this.props.completeHeightTransition()
         }
@@ -49,6 +52,17 @@ class LyricSection extends Component {
             />
         )
     }
+}
+
+LyricSection.propTypes = {
+    // Through Redux.
+    appMounted: PropTypes.bool.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    isTransitioningHeight: PropTypes.bool.isRequired,
+    completeHeightTransition: PropTypes.func.isRequired,
+    handleLyricSectionScroll: PropTypes.func.isRequired
 }
 
 /****************
@@ -88,9 +102,16 @@ const LyricSectionView = ({
 )
 
 LyricSectionView.propTypes = {
+    // From parent.
     lyricsArray: PropTypes.array.isRequired,
     lyricSectionRef: PropTypes.func.isRequired,
     handleScroll: PropTypes.func.isRequired
 }
 
-export default LyricSection
+export default connect(({
+    appMounted,
+    selectedSongIndex
+}) => ({
+    appMounted,
+    selectedSongIndex
+}))(LyricSection)

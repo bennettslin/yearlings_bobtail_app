@@ -21,7 +21,7 @@ class LyricUnit extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'deviceIndex',
-                    'appMounted',
+                    // 'appMounted',
                     'isSliderTouched',
                     'sliderVerseIndex',
                     'isPlaying',
@@ -95,6 +95,8 @@ class LyricUnit extends Component {
 }
 
 LyricUnit.propTypes = {
+    // From parent.
+    unitIndex: PropTypes.number.isRequired,
     stanzaArray: PropTypes.array.isRequired,
     hiddenLyricColumnKey: PropTypes.string
 }
@@ -111,59 +113,21 @@ const LyricUnitView = ({
     // From controller.
     isTitleUnit,
     unitClassName,
-    stanzaIndex,
-    stanzaType,
-    substanzaType,
-    subsequent,
-    sideStanzaType,
-    sideSubstanzaType,
+
     dotStanza,
     subStanza,
     topSideStanza,
     bottomSideStanza,
     topSideSubStanza,
+
     isBottomOnly,
-    showMain,
     truncateMain,
+    showMain,
     showSide,
 
 ...other }) => {
-    // FIXME: Not ideal.
-    const getStanza = ({ stanzaArray, inMain, truncateMain, addSub, isSub }) => {
-            if (stanzaArray) {
-                if (addSub) {
-                    return (
-                        <div className="sub-block custom-sub-block right">
-                            {getStanza({ stanzaArray, inMain, truncateMain, isSub: true })}
-                        </div>
-                    )
-                } else {
-                    const shownStanzaIndex = inMain && !isSub ?
-                        stanzaIndex : undefined,
-                        showStanzaTypeAndIndex = !subsequent && !!shownStanzaIndex
 
-                    let itsStanzaType
-                    if (inMain) {
-                        itsStanzaType = isSub ? substanzaType : stanzaType
-                    } else {
-                        itsStanzaType = isSub ? sideSubstanzaType : sideStanzaType
-                    }
-
-                    return (
-                        <LyricStanza {...other}
-                            stanzaArray={stanzaArray}
-                            showStanzaTypeAndIndex={showStanzaTypeAndIndex}
-                            inMain={inMain}
-                            truncateMain={truncateMain}
-                            stanzaIndex={shownStanzaIndex}
-                            stanzaType={itsStanzaType}
-                        />
-                    )
-                }
-            } else {
-                return null
-            }
-        }
+    const { subsequent } = other
 
     return (
         <div
@@ -177,8 +141,17 @@ const LyricUnitView = ({
         >
             {showMain &&
                 <div className="stanza-block">
-                    {getStanza({ stanzaArray, inMain: true, truncateMain })}
-                    {getStanza({ stanzaArray: subStanza, inMain: true, truncateMain, addSub: true })}
+                    <LyricStanza {...other}
+                        stanzaArray={stanzaArray}
+                        truncateMain={truncateMain}
+                        inMain={true}
+                    />
+                    <LyricStanza {...other}
+                        stanzaArray={subStanza}
+                        truncateMain={truncateMain}
+                        inMain={true}
+                        addSub={true}
+                    />
                 </div>
             }
             {showSide &&
@@ -187,9 +160,16 @@ const LyricUnitView = ({
                     'side',
                     { 'bottom-only': isBottomOnly }
                 )}>
-                    {getStanza({ stanzaArray: topSideStanza })}
-                    {getStanza({ stanzaArray: bottomSideStanza })}
-                    {getStanza({ stanzaArray: topSideSubStanza, addSub: true })}
+                    <LyricStanza {...other}
+                        stanzaArray={topSideStanza}
+                    />
+                    <LyricStanza {...other}
+                        stanzaArray={bottomSideStanza}
+                    />
+                    <LyricStanza {...other}
+                        stanzaArray={topSideSubStanza}
+                        addSub={true}
+                    />
                 </div>
             }
             {dotStanza &&
@@ -201,25 +181,29 @@ const LyricUnitView = ({
     )
 }
 
+LyricUnitView.defaultProps = {
+    subsequent: false,
+    truncateMain: false,
+    showSide: false
+}
+
 LyricUnitView.propTypes = {
+    // From parent.
     stanzaArray: PropTypes.array.isRequired,
-    stanzaIndex: PropTypes.number,
     isTitleUnit: PropTypes.bool.isRequired,
-    showMain: PropTypes.bool.isRequired,
-    showSide: PropTypes.bool,
-    isBottomOnly: PropTypes.bool,
-    truncateMain: PropTypes.bool,
-    subsequent: PropTypes.bool,
     unitClassName: PropTypes.string,
-    stanzaType: PropTypes.string,
-    substanzaType: PropTypes.string,
-    sideStanzaType: PropTypes.string,
-    sideSubstanzaType: PropTypes.string,
+
+    dotStanza: PropTypes.object,
     subStanza: PropTypes.array,
     topSideStanza: PropTypes.array,
     bottomSideStanza: PropTypes.array,
     topSideSubStanza: PropTypes.array,
-    dotStanza: PropTypes.object
+    subsequent: PropTypes.bool.isRequired,
+
+    isBottomOnly: PropTypes.bool.isRequired,
+    truncateMain: PropTypes.bool.isRequired,
+    showMain: PropTypes.bool.isRequired,
+    showSide: PropTypes.bool.isRequired
 }
 
 export default LyricUnit
