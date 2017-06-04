@@ -1,3 +1,5 @@
+// Component to show selected verse when scrolled outside visible window.
+
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -64,15 +66,18 @@ class VerseBar extends Component {
     }
 }
 
+VerseBar.defaultProps = {
+    isAbove: false
+}
+
 VerseBar.propTypes = {
     // Through Redux.
-    'selectedSongIndex': PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
-    'verseIndex': PropTypes.number,
-    'hiddenLyricColumnKey': PropTypes.string.isRequired,
-
     isAbove: PropTypes.bool,
+    verseIndex: PropTypes.number,
+    hiddenLyricColumnKey: PropTypes.string.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired
 }

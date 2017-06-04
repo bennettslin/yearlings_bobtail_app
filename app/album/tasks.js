@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Make anchor parent have knowledge of indices, not anchor.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Handle truncateMain through CSS.`,
         workedHours: 0,
         neededHours: 3

@@ -145,8 +145,7 @@ const LyricColumnView = ({
 
 ...other }) => {
 
-    const { selectedSongIndex,
-            selectedVerseIndex,
+    const { selectedVerseIndex,
             sliderVerseIndex } = other,
 
         // Show the slider verse if there is one.
@@ -157,7 +156,6 @@ const LyricColumnView = ({
         }),
 
         verseBarProps = {
-            selectedSongIndex,
             verseIndex,
             hiddenLyricColumnKey,
             handleVerseBarSelect,

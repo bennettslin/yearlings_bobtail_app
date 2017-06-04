@@ -1,48 +1,88 @@
-import React from 'react'
+/**
+ * Button shown only when verse is interactivated. If verse is already selected,
+ * it toggles play. Otherwise, it navigates to that verse.
+ */
+
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import Button from '../button/button'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-// TODO: Make audio button take up width of line.
-const VerseAudioButton = ({
+class VerseAudioButton extends Component {
 
-    // TODO: Would be preferable not to need isAudioButtonEnabled flag.
-    isAudioButtonEnabled,
-    isPlaying,
-    isSelected,
-    isAfterSelected,
-    handleAudioButtonClick
+    constructor(props) {
+        super(props)
 
-}) => {
-    let buttonIcon
-
-    if (isSelected) {
-        buttonIcon = isPlaying ? `\u23F8` : `\u25BA`
-    } else {
-        buttonIcon = isAfterSelected ? `\u23E9` : `\u23EA`
+        this._handleAudioButtonClick = this._handleAudioButtonClick.bind(this)
     }
 
-    return (
-        <div className="verse-audio-button-block">
-            <div className="verse-audio-button-child">
-                <Button
-                    buttonName="verse-audio"
-                    isCustomSize={true}
-                    isEnabled={isAudioButtonEnabled}
-                    iconClass={isSelected ? 'audio-colour' : 'audio-nav'}
-                    iconText={buttonIcon}
-                    handleClick={isAudioButtonEnabled && handleAudioButtonClick}
-                />
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'isPlaying',
+                    'isAudioButtonEnabled',
+                    'isSelected',
+                    'isAfterSelected'
+                ]
+            })
+
+        return componentShouldUpdate
+    }
+
+    _handleAudioButtonClick(e) {
+        if (this.props.isAudioButtonEnabled) {
+            this.props.handleAudioButtonClick(e)
+        }
+    }
+
+    render() {
+        const { isAudioButtonEnabled,
+                isPlaying,
+                isSelected,
+                isAfterSelected } = this.props
+
+        let buttonIcon
+
+        if (isSelected) {
+            buttonIcon = isPlaying ? `\u23F8` : `\u25BA`
+        } else {
+            buttonIcon = isAfterSelected ? `\u23E9` : `\u23EA`
+        }
+
+        return (
+            <div className="verse-audio-button-block">
+                <div className="verse-audio-button-child">
+                    <Button
+                        buttonName="verse-audio"
+                        isCustomSize={true}
+                        isEnabled={isAudioButtonEnabled}
+                        iconClass={isSelected ? 'audio-colour' : 'audio-nav'}
+                        iconText={buttonIcon}
+                        handleClick={this._handleAudioButtonClick}
+                    />
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 VerseAudioButton.propTypes = {
-    isAudioButtonEnabled: PropTypes.bool.isRequired,
+    // Through Redux.
     isPlaying: PropTypes.bool.isRequired,
+
+    // From parent.
+    isAudioButtonEnabled: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired,
     handleAudioButtonClick: PropTypes.func.isRequired
 }
 
-export default VerseAudioButton
+export default connect(({
+    isPlaying
+}) => ({
+    isPlaying
+}))(VerseAudioButton)

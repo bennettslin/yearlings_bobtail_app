@@ -1,9 +1,13 @@
+// Component for verse element to know the width of a single line.
+
 import React, { Component } from 'react'
-import classnames from 'classnames'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import classnames from 'classnames'
 import TextBlock from '../text/text-block'
 import { TITLE, CENTRE } from '../../constants/lyrics'
 
+// FIXME: This whole thing is a mess...
 class VerseLine extends Component {
 
     componentDidMount() {
@@ -114,8 +118,6 @@ class VerseLine extends Component {
                 isHidden,
                 ...other } = this.props
 
-        // console.error(`render`, this.props.text);
-
         return (
             <div
                 ref={(node) => (this.myParent = node)}
@@ -136,13 +138,32 @@ class VerseLine extends Component {
     }
 }
 
-VerseLine.propTypes = {
-    // TODO: Are these still being passed?
-    deviceIndex: PropTypes.number,
-    // isPortrait: PropTypes.bool,
-    selectedSongIndex: PropTypes.number,
-    hiddenLyricColumnKey: PropTypes.string.isRequired,
-    columnKey: PropTypes.string.isRequired
+VerseLine.defaultProps = {
+    inVerseBar: false,
+    isHidden: false
 }
 
-export default VerseLine
+VerseLine.propTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array,
+        PropTypes.object
+    ]).isRequired,
+    inVerseBar: PropTypes.bool.isRequired,
+    isHidden: PropTypes.bool.isRequired,
+    columnKey: PropTypes.string.isRequired,
+    hiddenLyricColumnKey: PropTypes.string.isRequired
+}
+
+export default connect(({
+    deviceIndex,
+    selectedSongIndex
+}) => ({
+    deviceIndex,
+    selectedSongIndex
+}))(VerseLine)

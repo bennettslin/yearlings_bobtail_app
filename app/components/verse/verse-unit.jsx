@@ -1,3 +1,5 @@
+// Container for a single verse, including both lines of a doublespeaker verse.
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -33,7 +35,6 @@ class VerseUnit extends Component {
                     'deviceIndex',
                     'appMounted',
                     'isSliderTouched',
-                    'isPlaying',
                     'accessedAnnotationIndex',
                     'selectedSongIndex',
                     'selectedAnnotationIndex',
@@ -220,7 +221,6 @@ const VerseUnitView = ({
     sliderPlacementClassName,
     interactivatedClassName,
     isSelected,
-    isPlaying,
     isAfterSelected,
     isDoubleSpeaker,
     isTitle,
@@ -268,7 +268,6 @@ const VerseUnitView = ({
                 <VerseAudioButton
                     isAudioButtonEnabled={isAudioButtonEnabled}
                     isSelected={isSelected}
-                    isPlaying={isPlaying}
                     isAfterSelected={isAfterSelected}
                     handleAudioButtonClick={handleLyricAudioButtonClick}
                 />
@@ -299,11 +298,14 @@ const VerseUnitView = ({
 }
 
 VerseUnitView.propTypes = {
+    // Through Redux.
+
+    // From parent.
+
     verseObject: PropTypes.object.isRequired,
     hiddenLyricColumnKey: PropTypes.string,
     isTitle: PropTypes.bool,
     inVerseBar: PropTypes.bool,
-    isPlaying: PropTypes.bool,
     isAudioButtonEnabled: PropTypes.bool.isRequired,
     isInteractable: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
