@@ -1,4 +1,4 @@
-// Container for a single verse, including both lines of a doublespeaker verse.
+// Container for lyric audio button and all lines of a single verse.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -20,6 +20,7 @@ class VerseUnit extends Component {
 
         this._checkIsSelectedVerse = this._checkIsSelectedVerse.bind(this)
         this._checkIsSliderSelectedVerse = this._checkIsSliderSelectedVerse.bind(this)
+        this._handleInteractivatableClick = this._handleInteractivatableClick.bind(this)
     }
 
     componentDidMount() {
@@ -35,9 +36,9 @@ class VerseUnit extends Component {
                     'deviceIndex',
                     'appMounted',
                     'isSliderTouched',
-                    'accessedAnnotationIndex',
+
+                    // TODO: Possible to update without selected song index?
                     'selectedSongIndex',
-                    'selectedAnnotationIndex',
                     'hiddenLyricColumnKey',
                     'inMain',
                     'isSelected',
@@ -115,11 +116,21 @@ class VerseUnit extends Component {
         return ''
     }
 
+    _handleInteractivatableClick(e) {
+        // Allow clicks on interactable verses.
+        const { verseObject,
+                inVerseBar,
+                handleVerseInteractivate } = this.props,
+
+            { verseIndex } = verseObject
+
+        if (!isNaN(verseIndex) && !inVerseBar) {
+            handleVerseInteractivate(e, verseIndex)
+        }
+    }
+
     render() {
         const { handleLyricAnnotationSelect,
-                handleLyricPlay,
-                handleLyricVerseSelect,
-                handleVerseInteractivate,
                 isSliderSelected,
 
                 ...other } = this.props,
@@ -136,71 +147,59 @@ class VerseUnit extends Component {
 
             isInteractable = !isNaN(verseIndex),
 
-
             // If not an interactable verse, we'll count it as odd.
             isEven = isInteractable && verseIndex % 2 === 0,
             backgroundClassName = this._getBackgroundClassName(isEven),
             sliderPlacementClassName = this._getSliderPlacementClassName(),
             interactivatedClassName = isInteractivated ? 'interactivated' : 'not-interactivated',
-            verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${isInteractable ? 'verse-' + verseIndex : ''}`,
-
-            // Allow clicks on interactable verses.
-            handleInteractivatableClick = !inVerseBar && isInteractable ? e => handleVerseInteractivate(e, verseIndex) : null
-
-        let handleLyricAudioButtonClick = null
-
-        if (isInteractable) {
-            // If verse is selected, audio button will toggle play.
-            if (isSelected) {
-                handleLyricAudioButtonClick = handleLyricPlay
-
-            // Otherwise, audio button will select verse.
-            } else {
-                handleLyricAudioButtonClick = e => handleLyricVerseSelect(e, verseIndex)
-            }
-        }
+            verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${isInteractable ? 'verse-' + verseIndex : ''}`
 
         return (
             <VerseUnitView {...other}
                 myRef={(node) => (this.myVerse = node)}
+                verseIndex={verseIndex}
                 verseIndexClassName={verseIndexClassName}
                 backgroundClassName={backgroundClassName}
                 isAudioButtonEnabled={isInteractivated}
                 sliderPlacementClassName={sliderPlacementClassName}
                 interactivatedClassName={interactivatedClassName}
                 isTitle={isTitle}
+                isDoubleSpeaker={!lyric && !centre}
                 isSelected={isSelected}
                 isSliderSelected={isSliderSelected}
                 isInteractable={isInteractable}
-                isDoubleSpeaker={!lyric && !centre}
-                handleLyricAudioButtonClick={handleLyricAudioButtonClick}
                 handleAnchorClick={handleLyricAnnotationSelect}
-                handleInteractivatableClick={handleInteractivatableClick}
+                handleInteractivatableClick={this._handleInteractivatableClick}
             />
         )
     }
-}
-
-VerseUnit.propTypes = {
-    verseObject: PropTypes.object.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    isAfterSelected: PropTypes.bool.isRequired,
-    isSliderSelected: PropTypes.bool.isRequired,
-    isInteractivated: PropTypes.bool.isRequired,
-    inMain: PropTypes.bool,
-    inVerseBar: PropTypes.bool,
-    isSliderTouched: PropTypes.bool,
-    handleLyricAnnotationSelect: PropTypes.func,
-    handleLyricPlay: PropTypes.func,
-    handleLyricVerseSelect: PropTypes.func,
-    handleVerseInteractivate: PropTypes.func
 }
 
 VerseUnit.defaultProps = {
     isSelected: false,
     isAfterSelected: false,
     isSliderSelected: false,
-    isInteractivated: false
+    isInteractivated: false,
+    inMain: true,
+    inVerseBar: false,
+    isSliderTouched: false
+}
+
+VerseUnit.propTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    verseObject: PropTypes.object.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    isAfterSelected: PropTypes.bool.isRequired,
+    isSliderSelected: PropTypes.bool.isRequired,
+    isInteractivated: PropTypes.bool.isRequired,
+    inMain: PropTypes.bool.isRequired,
+    inVerseBar: PropTypes.bool.isRequired,
+    isSliderTouched: PropTypes.bool.isRequired,
+    handleLyricAnnotationSelect: PropTypes.func,
+    handleVerseInteractivate: PropTypes.func
 }
 
 /****************
@@ -214,18 +213,22 @@ const VerseUnitView = ({
 
     // From controller.
     myRef,
+    verseIndex,
     verseIndexClassName,
     backgroundClassName,
-    isAudioButtonEnabled,
-    isInteractable,
     sliderPlacementClassName,
     interactivatedClassName,
+
+    isAudioButtonEnabled,
+    isInteractable,
     isSelected,
     isAfterSelected,
-    isDoubleSpeaker,
     isTitle,
-    handleLyricAudioButtonClick,
+    isDoubleSpeaker,
+
     handleInteractivatableClick,
+    handleLyricPlay,
+    handleLyricVerseSelect,
 
 ...other }) => {
     // FIXME: Not ideal.
@@ -267,9 +270,11 @@ const VerseUnitView = ({
             {isInteractable && !inVerseBar &&
                 <VerseAudioButton
                     isAudioButtonEnabled={isAudioButtonEnabled}
+                    verseIndex={verseIndex}
                     isSelected={isSelected}
                     isAfterSelected={isAfterSelected}
-                    handleAudioButtonClick={handleLyricAudioButtonClick}
+                    handleLyricPlay={handleLyricPlay}
+                    handleLyricVerseSelect={handleLyricVerseSelect}
                 />
             }
             {isDoubleSpeaker ? (
@@ -298,10 +303,8 @@ const VerseUnitView = ({
 }
 
 VerseUnitView.propTypes = {
-    // Through Redux.
-
     // From parent.
-
+    verseIndex: PropTypes.number,
     verseObject: PropTypes.object.isRequired,
     hiddenLyricColumnKey: PropTypes.string,
     isTitle: PropTypes.bool,
@@ -316,8 +319,10 @@ VerseUnitView.propTypes = {
     sliderPlacementClassName: PropTypes.string.isRequired,
     interactivatedClassName: PropTypes.string.isRequired,
     myRef: PropTypes.func.isRequired,
-    handleLyricAudioButtonClick: PropTypes.func,
-    handleInteractivatableClick: PropTypes.func
+
+    handleInteractivatableClick: PropTypes.func,
+    handleLyricPlay: PropTypes.func,
+    handleLyricVerseSelect: PropTypes.func
 }
 
 export default connect(({

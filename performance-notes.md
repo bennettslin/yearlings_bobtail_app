@@ -10,3 +10,6 @@ Phase 1:
 Phase 2:
 * Be strategic about shouldComponentUpdate checks.
 * Avoid shouldComponentUpdate if possible.
+
+Phase 3:
+* Avoid passing data objects if they can be fetched by indices.

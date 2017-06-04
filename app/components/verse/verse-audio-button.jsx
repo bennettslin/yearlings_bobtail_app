@@ -24,6 +24,7 @@ class VerseAudioButton extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'isPlaying',
+                    'verseIndex',
                     'isAudioButtonEnabled',
                     'isSelected',
                     'isAfterSelected'
@@ -34,8 +35,22 @@ class VerseAudioButton extends Component {
     }
 
     _handleAudioButtonClick(e) {
+
         if (this.props.isAudioButtonEnabled) {
-            this.props.handleAudioButtonClick(e)
+
+            const { isSelected,
+                    verseIndex,
+                    handleLyricPlay,
+                    handleLyricVerseSelect } = this.props
+
+            // If verse is selected, audio button will toggle play.
+            if (isSelected) {
+                handleLyricPlay(e)
+
+            // Otherwise, audio button will select verse.
+            } else {
+                handleLyricVerseSelect(e, verseIndex)
+            }
         }
     }
 
@@ -75,10 +90,12 @@ VerseAudioButton.propTypes = {
     isPlaying: PropTypes.bool.isRequired,
 
     // From parent.
+    verseIndex: PropTypes.number.isRequired,
     isAudioButtonEnabled: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired,
-    handleAudioButtonClick: PropTypes.func.isRequired
+    handleLyricPlay: PropTypes.func.isRequired,
+    handleLyricVerseSelect: PropTypes.func.isRequired
 }
 
 export default connect(({
