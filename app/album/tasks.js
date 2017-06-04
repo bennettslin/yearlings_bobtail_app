@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `Make anchor block have knowledge of indices, not anchor.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Handle truncateMain through CSS.`,
         workedHours: 0,
         neededHours: 3

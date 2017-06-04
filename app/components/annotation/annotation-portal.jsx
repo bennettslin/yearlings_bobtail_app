@@ -60,7 +60,7 @@ class AnnotationPortal extends Component {
                 className={classnames(
                     'portal-block',
                     'anchor-block',
-                    'dot-anchor-block',
+                    'dot-anchor',
                     { 'access-highlighted': isAccessedPortal }
                 )}
             >

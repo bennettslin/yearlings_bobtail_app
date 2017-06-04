@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
-import DotAnchorBlock from '../dot/dot-anchor-block'
+import DotAnchor from '../dot/dot-anchor'
 
 /*************
  * CONTAINER *
@@ -73,7 +73,7 @@ const LyricDotStanzaView = ({
             // Scroll to dot stanza block upon annotation selection.
             annotationIndex && `annotation-${annotationIndex}`
         )}>
-            <DotAnchorBlock {...other}
+            <DotAnchor {...other}
                 dotKeys={dotKeys}
             />
         </div>

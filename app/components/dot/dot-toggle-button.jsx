@@ -118,7 +118,7 @@ const DotToggleButtonView = ({
         </a>
         <div className={classnames(
             'anchor-block',
-            'dot-anchor-block',
+            'dot-anchor',
             { 'access-highlighted': accessHighlighted }
         )}>
             <Button

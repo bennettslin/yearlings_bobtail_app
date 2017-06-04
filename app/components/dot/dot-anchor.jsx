@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotButton from './dot-button'
 
-const DotAnchorBlock = ({
+const DotAnchor = ({
 
     dotKeys,
     accessHighlighted,
@@ -16,7 +16,7 @@ const DotAnchorBlock = ({
 
     <div className={classnames(
         'anchor-block',
-        'dot-anchor-block',
+        'dot-anchor',
         dotKeys,
         { 'selected': isSelected,
           'access-highlighted': accessHighlighted && !isSelected }
@@ -30,7 +30,7 @@ const DotAnchorBlock = ({
     </div>
 )
 
-DotAnchorBlock.propTypes = {
+DotAnchor.propTypes = {
     // From parent.
     dotKeys: PropTypes.object.isRequired,
     accessHighlighted: PropTypes.bool,
@@ -38,4 +38,4 @@ DotAnchorBlock.propTypes = {
     handleDotButtonClick: PropTypes.func
 }
 
-export default DotAnchorBlock
+export default DotAnchor

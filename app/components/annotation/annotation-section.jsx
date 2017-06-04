@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import AnnotationUnit from './annotation-unit'
-import DotAnchorBlock from '../dot/dot-anchor-block'
+import DotAnchor from '../dot/dot-anchor'
 import { IS_DOT_STANZA } from '../../constants/lyrics'
 
 /*************
@@ -60,7 +60,7 @@ const AnnotationSectionView = ({
             <div className="annotation-title-block">
                 {annotationTitle === IS_DOT_STANZA ? (
                     <div className="annotation-title">
-                        <DotAnchorBlock
+                        <DotAnchor
                             isSmall={true}
                             isSelected={showAsSelected}
                             accessHighlighted={isAccessedAnnotation}
