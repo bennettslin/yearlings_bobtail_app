@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
@@ -113,6 +114,30 @@ class DomManager extends Component {
             </div>
         )
     }
+}
+
+DomManager.propTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    isPlaying: PropTypes.bool.isRequired,
+    isLyricExpanded: PropTypes.bool.isRequired,
+    selectedAccessIndex: PropTypes.number.isRequired,
+    selectedAdminIndex: PropTypes.number.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    selectedScoreIndex: PropTypes.number.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
+    selectedWikiIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handleBodyClick: PropTypes.func.isRequired,
+    handleBodyTouchBegin: PropTypes.func.isRequired,
+    handleBodyTouchMove: PropTypes.func.isRequired,
+    handleBodyTouchEnd: PropTypes.func.isRequired,
+    handleKeyDownPress: PropTypes.func.isRequired,
+    handlePlayerTimeChange: PropTypes.func.isRequired,
+    handlePlayerNextSong: PropTypes.func.isRequired,
+    handlePlayerTimeReset: PropTypes.func.isRequired,
+    domManagerRef: PropTypes.func.isRequired
 }
 
 export default connect(({
