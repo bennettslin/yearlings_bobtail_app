@@ -1,41 +1,75 @@
 // Section to show song overview.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import TextBlock from '../text/text-block'
+import OverviewToggle from './overview-toggle'
 import { getOverview } from '../../helpers/data-helper'
+import { getIsToggleInOverview } from '../../helpers/responsive-helper'
+import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'
 
-const OverviewSection = ({
+class OverviewSection extends Component {
 
-    isToggleInOverview,
-    overviewIndex,
-    overviewButtonChild
+    constructor(props) {
+        super(props)
 
-}) => {
-    const overviewText = getOverview(overviewIndex)
+        this._handleOverviewToggle = this._handleOverviewToggle.bind(this)
+    }
 
-    return (
-        <div className="section overview-section">
-            <div className="overview-text">
-                {isToggleInOverview &&
-                    <div className="overview-toggle-section">
-                        {overviewButtonChild}
-                    </div>
-                }
-                <TextBlock
-                    isLyric={false}
-                    text={overviewText}
-                />
+    _handleOverviewToggle(e) {
+        const { selectedOverviewIndex,
+                handleOverviewToggle } = this.props
+
+        if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
+            handleOverviewToggle(e)
+        }
+    }
+
+    render() {
+        const { deviceIndex,
+                selectedOverviewIndex,
+                overviewIndex } = this.props,
+
+            overviewText = getOverview(overviewIndex),
+            isToggleInOverview = getIsToggleInOverview(deviceIndex),
+            isEnabled = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN
+
+        return (
+            <div className="section overview-section">
+                <div className="overview-text">
+                    {isToggleInOverview &&
+                        <div className="overview-toggle-section">
+                            <OverviewToggle
+                                isEnabled={isEnabled}
+                                handleOverviewToggle={this._handleOverviewToggle}
+                            />
+                        </div>
+                    }
+                    <TextBlock
+                        isLyric={false}
+                        text={overviewText}
+                    />
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 OverviewSection.propTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    selectedOverviewIndex: PropTypes.number.isRequired,
+
     // From parent.
-    isToggleInOverview: PropTypes.bool.isRequired,
     overviewIndex: PropTypes.number.isRequired,
-    overviewButtonChild: PropTypes.element.isRequired
+    handleOverviewToggle: PropTypes.func.isRequired
 }
 
-export default OverviewSection
+export default connect(({
+    deviceIndex,
+    selectedOverviewIndex
+}) => ({
+    deviceIndex,
+    selectedOverviewIndex
+}))(OverviewSection)

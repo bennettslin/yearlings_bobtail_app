@@ -3,16 +3,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DotsToggle from '../dots/dots-toggle'
+import OverviewToggle from '../overview/overview-toggle'
 
 const DotsOverviewToggleSection = ({
 
-    overviewButtonChild,
+    handleOverviewToggle,
     scoresTipsSectionChild,
 
 ...other }) => (
 
     <div className="section dots-overview-toggle-section">
-        {overviewButtonChild}
+        <OverviewToggle
+            handleOverviewToggle={handleOverviewToggle}
+        />
         <DotsToggle {...other} />
         {scoresTipsSectionChild}
     </div>
@@ -20,7 +23,7 @@ const DotsOverviewToggleSection = ({
 
 DotsOverviewToggleSection.propTypes = {
     // From parent.
-    overviewButtonChild: PropTypes.element.isRequired,
+    handleOverviewToggle: PropTypes.func.isRequired,
     scoresTipsSectionChild: PropTypes.element
 }
 

@@ -10,6 +10,7 @@ import { OVERVIEW_OPTIONS } from '../../constants/options'
 const OverviewToggle = ({
 
     selectedOverviewIndex,
+    isEnabled,
     handleOverviewToggle
 
 }) => (
@@ -17,6 +18,7 @@ const OverviewToggle = ({
         <Button
             isCustomShape={true}
             isCustomSize={true}
+            isEnabled={isEnabled}
             accessKey={OVERVIEW_TOGGLE_KEY}
             iconText={OVERVIEW_OPTIONS[selectedOverviewIndex]}
             handleClick={handleOverviewToggle}
@@ -24,11 +26,16 @@ const OverviewToggle = ({
     </div>
 )
 
+OverviewToggle.defaultProps = {
+    isEnabled: true
+}
+
 OverviewToggle.propTypes = {
     // Through Redux.
     selectedOverviewIndex: PropTypes.number.isRequired,
 
     // From props.
+    isEnabled: PropTypes.bool.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired
 }
 

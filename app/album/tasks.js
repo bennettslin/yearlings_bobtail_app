@@ -5,11 +5,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Overview toggle in popup is clickable even when hidden.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Day bug.
     {
@@ -2143,4 +2138,9 @@ module.exports = [
         workedHours: 8,
         neededHours: 8
     },
+    {
+        taskName: `Overview toggle in popup is clickable even when hidden.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

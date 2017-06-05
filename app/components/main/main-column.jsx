@@ -23,6 +23,7 @@ const MainColumn = ({
     handleNavExpand,
     handleNavSongSelect,
     handleNavBookSelect,
+    handleOverviewToggle,
 
     annotationPopupChild,
     audioBannerChild,
@@ -31,7 +32,6 @@ const MainColumn = ({
     dotsSectionChild,
     lyricExpandButtonChild,
     overviewPopupChild,
-    overviewButtonChild,
     scoresTipsSectionChild,
     titleToggleChild
 
@@ -46,8 +46,8 @@ const MainColumn = ({
         },
         dotsOverviewToggleSectionProps = {
             handleDotsSectionToggle,
+            handleOverviewToggle,
 
-            overviewButtonChild,
             dotsSectionChild
         },
         navSectionProps = {
@@ -124,6 +124,7 @@ MainColumn.propTypes = {
     handleNavExpand: PropTypes.func.isRequired,
     handleNavSongSelect: PropTypes.func.isRequired,
     handleNavBookSelect: PropTypes.func.isRequired,
+    handleOverviewToggle: PropTypes.func.isRequired,
 
     annotationPopupChild: PropTypes.element.isRequired,
     audioBannerChild: PropTypes.element.isRequired,
@@ -132,7 +133,6 @@ MainColumn.propTypes = {
     dotsSectionChild: PropTypes.element.isRequired,
     lyricExpandButtonChild: PropTypes.element.isRequired,
     overviewPopupChild: PropTypes.element.isRequired,
-    overviewButtonChild: PropTypes.element.isRequired,
     scoresTipsSectionChild: PropTypes.element.isRequired,
     titleToggleChild: PropTypes.element.isRequired
 }

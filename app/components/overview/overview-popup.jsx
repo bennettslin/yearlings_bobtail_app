@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import OverviewSection from './overview-section'
 import Popup from '../popup/popup'
 import { getIsLogue } from '../../helpers/data-helper'
-import { getIsToggleInOverview } from '../../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class OverviewPopup extends Component {
@@ -17,7 +16,6 @@ class OverviewPopup extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'deviceIndex',
                     'selectedOverviewIndex',
                     'selectedSongIndex',
                     'selectedTitleIndex'
@@ -28,8 +26,7 @@ class OverviewPopup extends Component {
     }
 
     render() {
-        const { deviceIndex,
-                inOverviewSubfield,
+        const { inOverviewSubfield,
                 selectedOverviewIndex,
                 selectedSongIndex,
                 selectedTitleIndex,
@@ -37,12 +34,9 @@ class OverviewPopup extends Component {
                 ...other } = this.props,
 
             isLogue = getIsLogue(selectedSongIndex),
-            isToggleInOverview = getIsToggleInOverview(deviceIndex),
 
             myChild = (
-                <OverviewSection {...other}
-                    isToggleInOverview={isToggleInOverview}
-                />
+                <OverviewSection {...other} />
             )
 
         let isVisible
@@ -72,7 +66,6 @@ class OverviewPopup extends Component {
 
 OverviewPopup.propTypes = {
     // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
@@ -83,12 +76,10 @@ OverviewPopup.propTypes = {
 }
 
 export default connect(({
-    deviceIndex,
     selectedOverviewIndex,
     selectedSongIndex,
     selectedTitleIndex
 }) => ({
-    deviceIndex,
     selectedOverviewIndex,
     selectedSongIndex,
     selectedTitleIndex

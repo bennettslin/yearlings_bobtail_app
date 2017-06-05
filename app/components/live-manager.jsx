@@ -13,7 +13,6 @@ import AudioSection from './audio/audio-section'
 import CarouselSection from './carousel/carousel-section'
 import DotsSection from './dots/dots-section'
 import ScoresTipsSection from './main/scores-tips-section'
-import OverviewToggle from './overview/overview-toggle'
 import TitleToggle from './title/title-toggle'
 import AudioPopup from './audio/audio-popup'
 import OverviewPopup from './overview/overview-popup'
@@ -191,6 +190,7 @@ const Live = ({
             handleNavExpand,
             handleNavSongSelect,
             handleNavBookSelect,
+            handleOverviewToggle,
             handleTipsToggle,
 
             audioBannerChild,
@@ -198,14 +198,9 @@ const Live = ({
             titleToggleChild
         },
 
-        overviewButtonChild = (
-            <OverviewToggle
-                handleOverviewToggle={handleOverviewToggle}
-            />
-        ),
         overviewPopupProps = {
-            handlePopupContainerClick,
-            overviewButtonChild
+            handleOverviewToggle,
+            handlePopupContainerClick
         },
 
         scoresTipsSectionProps = {
@@ -271,7 +266,6 @@ const Live = ({
                         overviewIndex={overviewSongIndex}
                     />
                 }
-                overviewButtonChild={overviewButtonChild}
                 lyricExpandButtonChild={lyricExpandButtonChild}
                 scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
             />
