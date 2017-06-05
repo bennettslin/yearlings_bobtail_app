@@ -18,7 +18,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Handle slider verses through CSS.`,
+        taskName: `Handle slider verses through CSS, and fix present bug.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -2142,5 +2142,10 @@ module.exports = [
         taskName: `Overview toggle in popup is clickable even when hidden.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Begin work for components to know to render themselves.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
