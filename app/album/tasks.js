@@ -1,9 +1,17 @@
 module.exports = [
+    // Day bugs.
     {
         taskName: `Selecting new song with dots open shows overview over dots.`,
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Overview toggle in popup is clickable even when hidden.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    // Day bug.
     {
         taskName: `Handle hidden columns through CSS.`,
         workedHours: 0,
@@ -15,10 +23,11 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Overview toggle in popup is clickable even when hidden.`,
+        taskName: `Handle slider verses through CSS.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
+
     {
         taskName: `Releasing mouse outside of audio banner closes overlay, dom manager should tell event manager when body touch began.`,
         workedHours: 0,
@@ -2128,5 +2137,10 @@ module.exports = [
         taskName: `Bug where verse bar is breaking in logue..`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Finish preliminary refactoring after Redux.`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]

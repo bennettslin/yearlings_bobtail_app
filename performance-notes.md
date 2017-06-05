@@ -3,6 +3,9 @@ https://facebook.github.io/react/docs/perf.html
 https://marmelab.com/blog/2017/02/06/react-is-slow-react-is-fast.html
 https://blog.vixlet.com/react-at-light-speed-78cd172a6411
 
+Phase 0: (/)
+* Prop types for all dom components. (/)
+
 Phase 1:
 * Don't bind arguments. Instead call an instance method in a React component.
 * Have React components have no knowledge of selected indices, only their own.
