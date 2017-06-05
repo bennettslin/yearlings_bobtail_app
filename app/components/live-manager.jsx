@@ -1,6 +1,7 @@
 // Component that shows all user-facing UI.
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
 import Button from './button/button'
@@ -24,15 +25,13 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { getIsLogue } from '../helpers/data-helper'
-import { getIsDesktop, getIsPhone, getIsLyricExpandable } from '../helpers/responsive-helper'
+import { getIsLyricExpandable } from '../helpers/responsive-helper'
 
 const Live = ({
 
-    // From props.
     deviceIndex,
     overviewLogueIndex,
     overviewSongIndex,
-    isPlaying,
     selectedAnnotationIndex,
     selectedCarouselIndex,
     selectedDotKeys,
@@ -41,12 +40,9 @@ const Live = ({
     selectedNavIndex,
     selectedOverviewIndex,
     selectedSongIndex,
-
     interactivatedVerseIndex,
 
     isSliderMoving,
-    isSliderTouched,
-    sliderVerseIndex,
     showOneOfTwoLyricColumns,
     isLyricExpanded,
     isHeightlessLyricColumn,
@@ -101,9 +97,7 @@ const Live = ({
 
 }) => {
 
-    const isPhone = getIsPhone(deviceIndex),
-        isDesktop = getIsDesktop(deviceIndex),
-        isLogue = getIsLogue(selectedSongIndex),
+    const isLogue = getIsLogue(selectedSongIndex),
 
         titleToggleProps = {
             handleTitleToggle
@@ -164,15 +158,7 @@ const Live = ({
         },
 
         lyricColumnProps = {
-            deviceIndex,
-
-            isSliderTouched,
-            sliderVerseIndex,
-            isLogue,
-            isPlaying,
-
             lyricSectionRef,
-
             handleLyricAnnotationSelect,
             handleLyricColumnSelect,
             handleLyricSectionScroll,
@@ -199,9 +185,6 @@ const Live = ({
 
         mainColumnProps = {
             isOverlayingAnnotation,
-
-            isPhone,
-            isDesktop,
 
             handleCarouselToggle,
             handleDotsSectionToggle,
@@ -316,8 +299,77 @@ const Live = ({
     )
 }
 
+Live.propTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    overviewLogueIndex: PropTypes.number.isRequired,
+    overviewSongIndex: PropTypes.number.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    selectedCarouselIndex: PropTypes.number.isRequired,
+    selectedDotKeys: PropTypes.object.isRequired,
+    selectedDotsIndex: PropTypes.number.isRequired,
+    selectedLyricColumnIndex: PropTypes.number.isRequired,
+    selectedNavIndex: PropTypes.number.isRequired,
+    selectedOverviewIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+    interactivatedVerseIndex: PropTypes.number.isRequired,
+
+    isSliderMoving: PropTypes.bool.isRequired,
+    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
+    isLyricExpanded: PropTypes.bool.isRequired,
+    isHeightlessLyricColumn: PropTypes.bool.isRequired,
+    isHiddenNav: PropTypes.bool.isRequired,
+    showShrunkNavIcon: PropTypes.bool.isRequired,
+    isScoresTipsInMain: PropTypes.bool.isRequired,
+    isTitleInAudio: PropTypes.bool.isRequired,
+    isOverlayingAnnotation: PropTypes.bool.isRequired,
+    isVerseBarAbove: PropTypes.bool.isRequired,
+    isVerseBarBelow: PropTypes.bool.isRequired,
+
+    // From parent.
+    lyricSectionRef: PropTypes.func.isRequired,
+    scoreSectionRef: PropTypes.func.isRequired,
+    wikiSectionRef: PropTypes.func.isRequired,
+
+    handleAnnotationPrevious: PropTypes.func.isRequired,
+    handleAnnotationNext: PropTypes.func.isRequired,
+    handleAnnotationWikiSelect: PropTypes.func.isRequired,
+    handleAnnotationPortalSelect: PropTypes.func.isRequired,
+    handleAudioPlay: PropTypes.func.isRequired,
+    handleAudioPreviousSong: PropTypes.func.isRequired,
+    handleAudioNextSong: PropTypes.func.isRequired,
+    handleAudioOptionsToggle: PropTypes.func.isRequired,
+    handleAudioSliderTouchBegin: PropTypes.func.isRequired,
+    handleCarouselToggle: PropTypes.func.isRequired,
+    handleDotToggle: PropTypes.func.isRequired,
+    handleDotsSectionToggle: PropTypes.func.isRequired,
+    handleNavExpand: PropTypes.func.isRequired,
+    handleNavSongSelect: PropTypes.func.isRequired,
+    handleNavBookSelect: PropTypes.func.isRequired,
+    handleLyricColumnSelect: PropTypes.func.isRequired,
+    handleLyricSectionExpand: PropTypes.func.isRequired,
+    handleLyricAnnotationSelect: PropTypes.func.isRequired,
+    handleLyricSectionScroll: PropTypes.func.isRequired,
+    handleLyricPlay: PropTypes.func.isRequired,
+    handleLyricVerseSelect: PropTypes.func.isRequired,
+    handleOverviewToggle: PropTypes.func.isRequired,
+    handlePopupContainerClick: PropTypes.func.isRequired,
+    handlePopupFocus: PropTypes.func.isRequired,
+    handleScoreToggle: PropTypes.func.isRequired,
+    handleScrollAfterLyricRerender: PropTypes.func.isRequired,
+    handleTipsToggle: PropTypes.func.isRequired,
+    handleTitleToggle: PropTypes.func.isRequired,
+    handleVerseBarSelect: PropTypes.func.isRequired,
+    handleVerseBarWheel: PropTypes.func.isRequired,
+    handleVerseElementSelect: PropTypes.func.isRequired,
+    handleVerseElementSlide: PropTypes.func.isRequired,
+    handleVerseInteractivate: PropTypes.func.isRequired,
+    handleWikiToggle: PropTypes.func.isRequired,
+    stopPropagation: PropTypes.func.isRequired
+}
+
 export default connect(({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving, isSliderTouched
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving
 }))(Live)

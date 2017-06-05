@@ -10,7 +10,7 @@ const { songs } = AlbumData
  * CONTAINER *
  *************/
 
-const Overall = ({
+const AdminManager = ({
 
     tasks: albumTasks,
 
@@ -18,7 +18,7 @@ const Overall = ({
     const allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs)
 
     return (
-        <OverallView {...other}
+        <AdminManagerView {...other}
             albumTasks={albumTasks}
             allTasks={allTasks}
         />
@@ -29,7 +29,7 @@ const Overall = ({
  * PRESENTATION *
  ****************/
 
-const OverallView = ({
+const AdminManagerView = ({
 
     // From props.
     deviceIndex,
@@ -75,4 +75,4 @@ const OverallView = ({
     )
 }
 
-export default Overall
+export default AdminManager
