@@ -45,7 +45,6 @@ const Live = ({
     showOneOfTwoLyricColumns,
     isLyricExpanded,
     isHeightlessLyricColumn,
-    isHiddenNav,
     showShrunkNavIcon,
     isScoresTipsInMain,
     isTitleInAudio,
@@ -146,7 +145,7 @@ const Live = ({
             handleAnnotationWikiSelect,
             handleAnnotationPortalSelect
         },
-        carouselChild = !isHiddenNav && (
+        carouselChild = (
             <CarouselSection {...carouselSectionProps} />
         ),
 
@@ -312,7 +311,6 @@ Live.propTypes = {
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
     isHeightlessLyricColumn: PropTypes.bool.isRequired,
-    isHiddenNav: PropTypes.bool.isRequired,
     showShrunkNavIcon: PropTypes.bool.isRequired,
     isScoresTipsInMain: PropTypes.bool.isRequired,
     isTitleInAudio: PropTypes.bool.isRequired,
@@ -363,7 +361,7 @@ Live.propTypes = {
 }
 
 export default connect(({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isHiddenNav, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving
 }))(Live)

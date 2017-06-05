@@ -15,7 +15,6 @@ const MainColumn = ({
     isOverlayingAnnotation,
 
     deviceIndex,
-    isHiddenNav,
     isScoresTipsInMain,
 
     handleCarouselToggle,
@@ -94,17 +93,11 @@ const MainColumn = ({
                     </div>
                 }
 
-                {!isHiddenNav &&
-                    <CarouselToggle
-                        handleCarouselToggle={handleCarouselToggle}
-                    />
-                }
+                <CarouselToggle
+                    handleCarouselToggle={handleCarouselToggle}
+                />
 
-                {!isHiddenNav &&
-                    <div className="nav-custom-subfield">
-                        <NavSection {...navSectionProps} />
-                    </div>
-                }
+                <NavSection {...navSectionProps} />
             </div>
         </div>
     )
@@ -113,7 +106,6 @@ const MainColumn = ({
 MainColumn.propTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
-    isHiddenNav: PropTypes.bool.isRequired,
     isScoresTipsInMain: PropTypes.bool.isRequired,
 
     // From parent.
@@ -139,10 +131,8 @@ MainColumn.propTypes = {
 
 export default connect(({
     deviceIndex,
-    isHiddenNav,
     isScoresTipsInMain
 }) => ({
     deviceIndex,
-    isHiddenNav,
     isScoresTipsInMain
 }))(MainColumn)

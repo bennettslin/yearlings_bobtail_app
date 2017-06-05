@@ -12,6 +12,7 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
  * CONTAINER *
  *************/
 
+// TODO: Don't need separate container and presentation for this one.
 class CarouselSection extends Component {
 
     shouldComponentUpdate(nextProps) {
@@ -22,6 +23,7 @@ class CarouselSection extends Component {
                 updatingPropsArray: [
 
                     // TODO: Necessary after annotation refactor?
+                    'isHiddenNav',
                     'selectedSongIndex',
 
                     'accessedAnnotationIndex',
@@ -40,6 +42,7 @@ class CarouselSection extends Component {
 }
 
 CarouselSection.propTypes = {
+    // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
     accessedAnnotationIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired
@@ -51,6 +54,7 @@ CarouselSection.propTypes = {
 
 const CarouselSectionView = ({
 
+    isHiddenNav,
     selectedSongIndex,
     accessedAnnotationIndex,
     selectedAnnotationIndex,
@@ -58,6 +62,10 @@ const CarouselSectionView = ({
     handleAnnotationNext,
 
 ...other }) => {
+
+    if (isHiddenNav) {
+        return null
+    }
 
     const annotations = getAnnotationsArray(selectedSongIndex)
 
@@ -106,6 +114,7 @@ const CarouselSectionView = ({
 
 CarouselSectionView.propTypes = {
     // Through Redux.
+    isHiddenNav: PropTypes.bool.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     accessedAnnotationIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -116,10 +125,12 @@ CarouselSectionView.propTypes = {
 }
 
 export default connect(({
+    isHiddenNav,
     selectedSongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
 }) => ({
+    isHiddenNav,
     selectedSongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
