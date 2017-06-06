@@ -1,4 +1,11 @@
 module.exports = [
+
+    {
+        taskName: `Audio banner changes border radius on wrong width.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     // Day bug.
     {
         taskName: `Handle hidden columns through CSS.`,

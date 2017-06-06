@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AudioButtons from './audio-buttons'
+import AudioTimer from './audio-timer'
 import { getSongsLength } from '../../helpers/data-helper'
 import { getIsPhone } from '../../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
@@ -66,7 +67,6 @@ const AudioSectionView = ({
     deviceIndex,
     isTitleInAudio,
     isTimerInAudio,
-    audioTimerChild,
     audioBannerChild,
     titleToggleChild,
 
@@ -80,7 +80,7 @@ const AudioSectionView = ({
         >
             {isTimerInAudio && (
                 <div className="audio-timer-block">
-                    {audioTimerChild}
+                    <AudioTimer />
                 </div>
             )}
 
@@ -105,7 +105,6 @@ AudioSectionView.propTypes = {
 
     // From parent.
     isTimerInAudio: PropTypes.bool.isRequired,
-    audioTimerChild: PropTypes.element.isRequired,
     audioBannerChild: PropTypes.element.isRequired,
     titleToggleChild: PropTypes.element
 }

@@ -393,60 +393,61 @@ class AccessManager extends Component {
     }
 
     _handleLetterKey(e, keyName) {
+        const { props } = this
         let annotationIndexWasAccessed = false,
             keyWasRegistered
 
         switch (keyName) {
             case ADMIN_TOGGLE_KEY:
-                keyWasRegistered = this.props.handleAdminToggle(e)
+                keyWasRegistered = props.handleAdminToggle(e)
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
-                keyWasRegistered = this.props.handleAudioOptionsToggle(e)
+                keyWasRegistered = props.handleAudioOptionsToggle(e)
                 break
             case AUDIO_PLAY_KEY:
-                keyWasRegistered = this.props.handleAudioPlay(e)
+                keyWasRegistered = props.handleAudioPlay(e)
                 break
             case AUDIO_PREVIOUS_SONG_KEY:
-                keyWasRegistered = this.props.handleAudioPreviousSong(e)
+                keyWasRegistered = props.handleAudioPreviousSong(e)
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_NEXT_SONG_KEY:
-                keyWasRegistered = this.props.handleAudioNextSong(e)
+                keyWasRegistered = props.handleAudioNextSong(e)
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_REWIND_KEY:
-                keyWasRegistered = this.props.handleVerseDirectionAccess(-1)
+                keyWasRegistered = props.handleVerseDirectionAccess(-1)
                 break
             case AUDIO_FAST_FORWARD_KEY:
-                keyWasRegistered = this.props.handleVerseDirectionAccess(1)
+                keyWasRegistered = props.handleVerseDirectionAccess(1)
                 break
             case OVERVIEW_TOGGLE_KEY:
-                keyWasRegistered = this.props.handleOverviewToggle(e)
+                keyWasRegistered = props.handleOverviewToggle(e)
                 break
             case CAROUSEL_TOGGLE_KEY:
-                keyWasRegistered = this.props.handleCarouselToggle(e)
+                keyWasRegistered = props.handleCarouselToggle(e)
                 break
             case SCORE_TOGGLE_KEY:
-                keyWasRegistered = this.props.handleScoreToggle(e)
+                keyWasRegistered = props.handleScoreToggle(e)
                 break
             case TIPS_TOGGLE_KEY:
-                keyWasRegistered = this.props.handleTipsToggle(e)
+                keyWasRegistered = props.handleTipsToggle(e)
                 break
             case LYRIC_COLUMN_TOGGLE_KEY:
-                keyWasRegistered = this.props.handleLyricColumnSelect(e)
+                keyWasRegistered = props.handleLyricColumnSelect(e)
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case LYRIC_SECTION_EXPAND_KEY:
-                keyWasRegistered = this.props.handleLyricSectionExpand(e)
+                keyWasRegistered = props.handleLyricSectionExpand(e)
                 break
             case TITLE_TOGGLE_KEY:
-                keyWasRegistered = this.props.handleTitleToggle(e)
+                keyWasRegistered = props.handleTitleToggle(e)
                 break
             case DOTS_SECTION_EXPAND_KEY:
-                keyWasRegistered = this.props.handleDotsSectionToggle(e)
+                keyWasRegistered = props.handleDotsSectionToggle(e)
                 break
             case NAV_SECTION_EXPAND_KEY:
-                keyWasRegistered = this.props.handleNavExpand(e)
+                keyWasRegistered = props.handleNavExpand(e)
                 break
             default:
                 keyWasRegistered = false

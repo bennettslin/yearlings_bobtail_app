@@ -4,12 +4,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AudioSlider from './audio-slider'
+import AudioTimer from './audio-timer'
 import { getSongTitle } from '../../helpers/data-helper'
 
 const AudioBanner = ({
 
     selectedSongIndex,
-    audioTimerChild,
 
 ...other }) => (
 
@@ -21,17 +21,14 @@ const AudioBanner = ({
             <div className="audio-banner-title">
                 {getSongTitle({ songIndex: selectedSongIndex })}
             </div>
-            {audioTimerChild}
+            <AudioTimer />
         </div>
     </div>
 )
 
 AudioBanner.propTypes = {
     // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    audioTimerChild: PropTypes.element.isRequired
+    selectedSongIndex: PropTypes.number.isRequired
 }
 
 export default connect(({

@@ -8,7 +8,6 @@ import Button from './button/button'
 import MainColumn from './main/main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
-import AudioTimer from './audio/audio-timer'
 import AudioSection from './audio/audio-section'
 import CarouselSection from './carousel/carousel-section'
 import DotsSection from './dots/dots-section'
@@ -24,6 +23,7 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { getIsLogue } from '../helpers/data-helper'
+import { getHiddenLyricColumnKey } from '../helpers/logic-helper'
 import { getIsLyricExpandable, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
 const Live = ({
@@ -96,16 +96,20 @@ const Live = ({
 
     const isLogue = getIsLogue(selectedSongIndex),
 
+        hiddenLyricColumnKey = getHiddenLyricColumnKey({
+            showOneOfTwoLyricColumns,
+            selectedLyricColumnIndex
+        }),
+
         isOverlayingAnnotation = getIsOverlayingAnnotation({
             deviceIndex,
             isLyricExpanded
         }),
 
-        titleToggleProps = {
-            handleTitleToggle
-        },
         titleToggleChild = (
-            <TitleToggle {...titleToggleProps} />
+            <TitleToggle
+                handleTitleToggle={handleTitleToggle}
+            />
         ),
 
         annotationPopupProps = {
@@ -115,16 +119,10 @@ const Live = ({
             handleAnnotationPortalSelect,
             handleAnnotationWikiSelect
         },
-
-        audioTimerChild = (
-            <AudioTimer />
-        ),
-        audioSliderProps = {
-            handleAudioSliderTouchBegin,
-            audioTimerChild
-        },
         audioBannerChild = (
-            <AudioBanner {...audioSliderProps} />
+            <AudioBanner
+                handleAudioSliderTouchBegin={handleAudioSliderTouchBegin}
+            />
         ),
         audioSectionProps = {
             handleAudioPlay,
@@ -132,8 +130,6 @@ const Live = ({
             handleAudioNextSong,
             handleAudioOptionsToggle,
             handlePopupContainerClick,
-
-            audioTimerChild,
             audioBannerChild
         },
         audioSectionMenuChild = (
@@ -236,6 +232,8 @@ const Live = ({
             isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
             isSliderMoving ? 'slider-moving' : 'slider-not-moving',
             interactivatedVerseIndex < 0 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
+
+            hiddenLyricColumnKey && `hidden-lyric-${hiddenLyricColumnKey}`,
             selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
             selectedCarouselIndex ? 'carousel-expanded' : 'carousel-collapsed',
             selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
