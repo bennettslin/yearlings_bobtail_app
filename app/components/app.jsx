@@ -18,6 +18,7 @@ import { CONTINUE,
 
          SHOWN,
          HIDDEN,
+         DISABLED,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
 import { getSongObject, getSongsLength, getIsLogue, getAnnotationObject, getBookColumnIndex, getSongVerseTimes } from '../helpers/data-helper'
@@ -529,14 +530,20 @@ class App extends Component {
         const wasLogue = getIsLogue(props.selectedSongIndex),
             isLogue = getIsLogue(selectedSongIndex)
 
-        /**
-         * If not selected from portal, show overview if hidden, and lyric
-         * column is not expanded.
-         */
-        if (!selectedAnnotationIndex && !this.props.isLyricExpanded) {
+        // If not selected from portal, show overview if hidden.
+        if (!selectedAnnotationIndex) {
             this.selectOverview({
                 justShowIfHidden: true
             })
+
+            /**
+             * If overview is being shown, collapse lyric column and hide dots
+             * section.
+             */
+            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED) {
+                this.selectDotsExpand(false)
+                this.selectLyricExpand(false)
+            }
         }
 
         this.selectAnnotation({

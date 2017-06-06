@@ -24,7 +24,7 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { getIsLogue } from '../helpers/data-helper'
-import { getIsLyricExpandable } from '../helpers/responsive-helper'
+import { getIsLyricExpandable, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
 const Live = ({
 
@@ -48,7 +48,6 @@ const Live = ({
     showShrunkNavIcon,
     isScoresTipsInMain,
     isTitleInAudio,
-    isOverlayingAnnotation,
     isVerseBarAbove,
     isVerseBarBelow,
 
@@ -96,6 +95,11 @@ const Live = ({
 }) => {
 
     const isLogue = getIsLogue(selectedSongIndex),
+
+        isOverlayingAnnotation = getIsOverlayingAnnotation({
+            deviceIndex,
+            isLyricExpanded
+        }),
 
         titleToggleProps = {
             handleTitleToggle
@@ -314,7 +318,6 @@ Live.propTypes = {
     showShrunkNavIcon: PropTypes.bool.isRequired,
     isScoresTipsInMain: PropTypes.bool.isRequired,
     isTitleInAudio: PropTypes.bool.isRequired,
-    isOverlayingAnnotation: PropTypes.bool.isRequired,
     isVerseBarAbove: PropTypes.bool.isRequired,
     isVerseBarBelow: PropTypes.bool.isRequired,
 

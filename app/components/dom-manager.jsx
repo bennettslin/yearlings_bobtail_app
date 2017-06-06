@@ -9,7 +9,7 @@ import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './player/audio-players-section'
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getShowOverlay } from '../helpers/logic-helper'
-import { getIsDesktop, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
+import { getIsDesktop } from '../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../helpers/general-helper'
 
 class DomManager extends Component {
@@ -62,11 +62,6 @@ class DomManager extends Component {
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             isDesktop = getIsDesktop(deviceIndex),
 
-            isOverlayingAnnotation = getIsOverlayingAnnotation({
-                deviceIndex,
-                isLyricExpanded
-            }),
-
             showOverlay = getShowOverlay({
                 deviceIndex,
                 isLyricExpanded,
@@ -108,9 +103,7 @@ class DomManager extends Component {
 
                 <div className="popup-overlay" />
 
-                <SwitchManager {...other}
-                    isOverlayingAnnotation={isOverlayingAnnotation}
-                />
+                <SwitchManager {...other} />
             </div>
         )
     }

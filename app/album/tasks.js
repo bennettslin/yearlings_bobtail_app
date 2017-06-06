@@ -1,11 +1,4 @@
 module.exports = [
-    // Day bugs.
-    {
-        taskName: `Selecting new song with dots open shows overview over dots.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Day bug.
     {
         taskName: `Handle hidden columns through CSS.`,
@@ -2148,4 +2141,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Selecting new song with dots open shows overview over dots.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
