@@ -2158,5 +2158,10 @@ module.exports = [
         taskName: `Selecting new song with dots open shows overview over dots.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Begin build helper refactor.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
