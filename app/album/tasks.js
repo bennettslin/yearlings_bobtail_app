@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Refactor build helper.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
         taskName: `Audio banner changes border radius on wrong width.`,
         workedHours: 0,
         neededHours: 1

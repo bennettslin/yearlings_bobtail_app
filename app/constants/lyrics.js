@@ -4,7 +4,15 @@ const LYRIC = 'lyric',
       RIGHT = 'right',
       ITALIC = 'italic',
       EMPHASIS = 'emphasis',
-      ANCHOR = 'anchor'
+      ANCHOR = 'anchor',
+
+      DOT_STANZA = 'dotStanza',
+      TOP_SIDE_STANZA = 'topSideStanza',
+      BOTTOM_SIDE_STANZA = 'bottomSideStanza',
+      SUB_STANZA = 'subStanza',
+
+      LEFT_COLUMN = 'leftColumn',
+      RIGHT_COLUMN = 'rightColumn'
 
 module.exports = {
     IS_DOT_STANZA: '***DOT_STANZA***',
@@ -13,6 +21,15 @@ module.exports = {
     LEFT,
     CENTRE,
     RIGHT,
+    ANCHOR,
+
+    DOT_STANZA,
+    TOP_SIDE_STANZA,
+    BOTTOM_SIDE_STANZA,
+    SUB_STANZA,
+
+    LEFT_COLUMN,
+    RIGHT_COLUMN,
 
     OVERLAP: 'overlap',
 
@@ -46,10 +63,10 @@ module.exports = {
         ITALIC,
         EMPHASIS,
         ANCHOR,
-        'dotStanza',
-        'topSideStanza',
-        'bottomSideStanza',
-        'subStanza'
+        DOT_STANZA,
+        TOP_SIDE_STANZA,
+        BOTTOM_SIDE_STANZA,
+        SUB_STANZA
     ],
 
     /**

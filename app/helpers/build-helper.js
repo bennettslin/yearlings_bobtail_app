@@ -1,26 +1,15 @@
 // Parse album data for build.
 import { REFERENCE } from '../constants/dots'
-import { ALBUM_BUILD_KEYS,
-         LYRIC,
-         LEFT,
-         RIGHT,
-         CENTRE } from '../constants/lyrics'
-import { getSongObject, getSongTitle, getVerseObject } from './data-helper'
+import { ALBUM_BUILD_KEYS, LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, DOT_STANZA, TOP_SIDE_STANZA, BOTTOM_SIDE_STANZA, LEFT_COLUMN, RIGHT_COLUMN } from '../constants/lyrics'
+import { getIsLogue, getSongObject, getSongTitle, getVerseObject } from './data-helper'
 import { getFormattedAnnotationTitle } from './format-helper'
 
 const _tempStore = {
-    _songs: [],
-    _songIndex: 0,
-    _songDotKeys: {},
     _annotations: [],
     _annotationAnchors: [],
     _wikiIndex: 1,
     _portalLinks: {},
     _verseTimes: [],
-    _currentStanzaTime: 0,
-    _currentStanzaType: null,
-    _currentSongStanzaTimes: [],
-    _currentSongStanzaTypeCounters: {},
     _currentSongMultipleCardAnnotationsCounter: 0,
     _largestStanzaTimesLength: 0,
     _verseIndexCounter: -1,
@@ -28,7 +17,6 @@ const _tempStore = {
     _drawings: {},
     _firstRightAnnotationIndexOfVerse: 0,
     _finalAnnotationIndex: 0,
-    _hasSideStanzas: false,
     _isDoublespeaker: false,
     _lyricInTime: false,
     _dotStanzaCounter: 0,
@@ -36,6 +24,7 @@ const _tempStore = {
 
 export const prepareAlbumData = (album) => {
 
+    // Allow helper methods to get data from songs directly.
     _tempStore._songs = album.songs
 
     _initialPrepareAllSongs(album)
@@ -54,54 +43,42 @@ export const prepareAlbumData = (album) => {
 }
 
 const _initialPrepareAllSongs = (album) => {
+
     album.songs.forEach((song, songIndex) => {
 
-        if (!song.logue) {
-            // Song indices start at 1.
+        if (!getIsLogue(songIndex, album.songs)) {
+
             _tempStore._songIndex = songIndex
             _tempStore._annotations = []
             _tempStore._verseIndexCounter = -1
-            _tempStore._songDotKeys = {}
             _tempStore._verseTimes = []
             _tempStore._currentAnnotationIndices = []
             _tempStore._firstRightAnnotationIndexOfVerse = 0
-            _tempStore._hasSideStanzas = false
             _tempStore._isDoublespeaker = false
             _tempStore._dotStanzaCounter = 0
-            _tempStore._currentStanzaTime = 0
-            _tempStore._currentStanzaType = null
-            _tempStore._currentSongStanzaTimes = []
-            _tempStore._currentSongStanzaTypeCounters = {}
             _tempStore._currentSongMultipleCardAnnotationsCounter = 0
 
-            _addTitleToLyrics(song.title, song.lyrics)
-            // Do not confuse anchor key with string prototype anchor method.
-            if (typeof song.title.anchor !== 'function') {
-                song.title = song.title.anchor
-            }
+            // Add title object to lyrics array.
+            _registerTitle(song)
 
-            _markSideStanzas(song.lyrics)
-            // Only applies to "On a Golden Cord" and "Uncanny Valley Boy."
-            song.hasSideStanzas = _tempStore._hasSideStanzas
+            /**
+             * Let app know that song has side stanzas. Only applies to "On a
+             * Golden Cord" and "Uncanny Valley Boy."
+             */
+            _registerHasSideStanzas(song)
 
+            /**
+             * Associate a type and index for each stanza, like verse, chorus,
+             * and so forth.
+             */
+            _registerStanzaTypes(song)
             _parseLyrics(song.lyrics)
-
-            song.stanzaTimes = _tempStore._currentSongStanzaTimes
-            if (song.stanzaTimes.length > _tempStore._largestStanzaTimesLength) {
-                _tempStore._largestStanzaTimesLength = song.stanzaTimes.length
-            }
-
-            song.stanzaTypeCounters = _tempStore._currentSongStanzaTypeCounters
 
             song.isDoublespeaker = _tempStore._isDoublespeaker
 
             // Add annotations to song object.
             song.annotations = _tempStore._annotations
             song.annotationsDotKeys = _getAnnotationsDotKeys({ selectedSong: song })
-
-            // Add available dots to song object.
-            // UPDATE: App no longer uses this.
-            // song.dotKeys = _tempStore._songDotKeys
 
             // Add times for all verses to song object.
             song.verseTimes = _tempStore._verseTimes
@@ -117,23 +94,151 @@ const _initialPrepareAllSongs = (album) => {
     })
 }
 
+/***********
+ * INITIAL *
+ ***********/
+
+const _registerTitle = (song) => {
+
+    const { title, lyrics } = song,
+        { annotation } = title,
+        titleObject = {
+
+            // Set title time to -1.
+            lyric: title,
+            isTitle: true
+        }
+
+    // Capitalise song title in annotation title.
+    if (annotation) {
+        title.properNoun = true
+    }
+
+    /**
+     * If first unit contains a lone dot stanza, append title to unit. (This is
+     * now never the case.)
+     */
+    if (lyrics[0][lyrics[0].length - 1].unitMap && lyrics[0].length === 1) {
+        lyrics[0].unshift(titleObject)
+
+    // Otherwise, create a new first unit that just contains the title.
+    } else {
+        lyrics.unshift([titleObject])
+    }
+
+    /**
+     * Now that title object is pushed into lyrics, replace it in song object
+     * with just text. (Don't confuse anchor key with string prototype anchor
+     * method!)
+     */
+    if (typeof title.anchor !== 'function') {
+        song.title = title.anchor
+    }
+}
+
+const _registerHasSideStanzas = (song) => {
+
+    const { lyrics } = song
+    let hasSideStanzas = false
+
+    lyrics.forEach(stanza => {
+        hasSideStanzas = stanza.reduce((hasSideStanzas, verse) => {
+            return hasSideStanzas || !!verse[TOP_SIDE_STANZA] || !!verse[BOTTOM_SIDE_STANZA]
+        }, false)
+
+        if (hasSideStanzas) {
+
+            // Let app know which column to hide if single column is shown.
+            stanza.forEach(verse => {
+                if (verse[TOP_SIDE_STANZA] || verse[BOTTOM_SIDE_STANZA]) {
+                    verse[RIGHT_COLUMN] = true
+
+                } else {
+                    verse[LEFT_COLUMN] = true
+                }
+            })
+        }
+    })
+
+    song.hasSideStanzas = hasSideStanzas
+}
+
+const _registerStanzaTypes = (song, finalPassThrough) => {
+
+    const { lyrics } = song,
+        stanzaTypeCounters = song.stanzaTypeCounters || {},
+        stanzaTimes = []
+
+    // FIXME: This can certainly be more efficient. Shouldn't need to do the finalPassThrough thing.
+    lyrics.forEach(unitArray => {
+
+        // Starting time of the first verse is the starting time of the unit.
+        const unitFirstVerseTime = unitArray[0].time,
+            unitMapObject = unitArray[unitArray.length - 1]
+
+        if (unitMapObject.unitMap && unitMapObject.stanzaType) {
+
+            const { stanzaType } = unitMapObject
+
+            if (finalPassThrough) {
+
+                // Don't show stanzaIndex if it's the only one of its kind.
+                if (stanzaTypeCounters[stanzaType] === 1) {
+                    unitMapObject.stanzaIndex = -1
+                }
+
+            } else {
+                // If it's not a subsequent stanza, establish new index.
+                if (!unitMapObject.subsequent) {
+
+                    /**
+                     * This will let audio slider know the relative width of
+                     * each unit, based on its time length.
+                     */
+                    stanzaTimes.push({
+                        time: unitFirstVerseTime,
+                        type: stanzaType
+                    })
+
+                    stanzaTypeCounters[stanzaType] = (stanzaTypeCounters[stanzaType] || 0) + 1
+                }
+
+                unitMapObject.stanzaIndex = stanzaTypeCounters[stanzaType]
+            }
+        }
+    })
+
+    if (!finalPassThrough) {
+        song.stanzaTimes = stanzaTimes
+        song.stanzaTypeCounters = stanzaTypeCounters
+
+        // Establish which song has the largest number of stanzas.
+        if (song.stanzaTimes.length > _tempStore._largestStanzaTimesLength) {
+            _tempStore._largestStanzaTimesLength = song.stanzaTimes.length
+        }
+
+    } else {
+        // Not needed after each stanza is told its index.
+        delete song.stanzaTypeCounters
+    }
+}
+
 /**
  * Add wiki and portal indices. These can only be determined after collecting
  * portal links from the entire album.
  */
 const _finalPrepareAllSongs = (album) => {
-    album.songs.forEach(song => {
-        if (!song.logue) {
+
+    album.songs.forEach((song, songIndex) => {
+
+        if (!getIsLogue(songIndex, album.songs)) {
             _tempStore._annotations = song.annotations
             _tempStore._finalAnnotationIndex = 0
-            _tempStore._currentSongStanzaTypeCounters = song.stanzaTypeCounters
+
+            _registerStanzaTypes(song, true)
 
             _parseLyrics(song.lyrics, true)
             _registerBeginningAndEndingVerseSpanss(song.lyrics)
-
-
-            // Not needed after stanza is told its index.
-            delete song.stanzaTypeCounters
         }
 
         _finaliseDrawingTasks(song)
@@ -305,33 +410,6 @@ const _finaliseDrawingTasks = (song) => {
     })
 }
 
-const _addTitleToLyrics = (title, lyrics) => {
-    // Add title object to lyrics object.
-    const { annotation } = title,
-        titleObject = {
-
-            // Set title time to -1.
-            lyric: title,
-            isTitle: true
-        }
-
-    if (annotation) {
-        title.properNoun = true
-    }
-
-    /**
-     * If first unit contains a lone dot stanza, append title to unit. This is
-     * always the case, actually.
-     */
-    if (lyrics[0][lyrics[0].length - 1].unitMap && lyrics[0].length === 1) {
-        lyrics[0].unshift(titleObject)
-
-    // Otherwise, create a new first unit that just contains the title.
-    } else {
-        lyrics.unshift([titleObject])
-    }
-}
-
 const _addVerseObjectKeyToLyric = (lyricObject, verseObjectKey) => {
 
     if (typeof lyricObject === 'object') {
@@ -344,25 +422,6 @@ const _addVerseObjectKeyToLyric = (lyricObject, verseObjectKey) => {
             [verseObjectKey]: true
         }
     }
-}
-
-const _markSideStanzas = (lyrics) => {
-    lyrics.forEach(stanza => {
-        const hasSideStanzas = stanza.reduce((hasSideStanzas, verse) => {
-            return hasSideStanzas || !!verse.topSideStanza || !!verse.bottomSideStanza
-        }, false)
-
-        if (hasSideStanzas) {
-            _tempStore._hasSideStanzas = true
-            stanza.forEach(verse => {
-                if (verse.topSideStanza || verse.bottomSideStanza) {
-                    verse.rightColumn = true
-                } else {
-                    verse.leftColumn = true
-                }
-            })
-        }
-    })
 }
 
 const _registerAfterTimeKeyFound = (lyric) => {
@@ -429,35 +488,6 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
 
     lyricInTime = !isNaN(lyric.time) || lyricInTime
 
-    if (lyric.unitMap && lyric.stanzaType) {
-        const { _currentSongStanzaTypeCounters: counters } = _tempStore,
-            { stanzaType } = lyric
-
-        if (finalPassThrough) {
-            // Don't show stanzaIndex if it's the only one of its kind.
-            if (counters[stanzaType] === 1) {
-                lyric.stanzaIndex = -1
-            }
-
-        } else {
-            // If it's not a subsequent stanza, establish new index.
-            if (!lyric.subsequent) {
-                if (_tempStore._currentStanzaType !== stanzaType) {
-                    _tempStore._currentStanzaType = stanzaType
-
-                    _tempStore._currentSongStanzaTimes.push({
-                        time: _tempStore._currentStanzaTime,
-                        type: stanzaType
-                    })
-                }
-
-                counters[stanzaType] = (counters[stanzaType] || 0) + 1
-            }
-
-            lyric.stanzaIndex = counters[stanzaType]
-        }
-    }
-
     // In other words, if lyric.time is a valid number.
     if (!finalPassThrough && !isNaN(lyric.time)) {
 
@@ -476,35 +506,31 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
 
     if (Array.isArray(lyric)) {
 
-        // If first object has a time, then it's the current stanza's time.
-        if (!isNaN(lyric[0].time)) {
-            _tempStore._currentStanzaTime = lyric[0].time
-        }
-
         lyric.forEach(childLyricValue => {
             _parseLyrics(childLyricValue, finalPassThrough, textKey, lyricInTime)
         })
 
     } else if (typeof lyric === 'object') {
 
-        if (lyric.anchor) {
+        if (lyric[ANCHOR]) {
             _prepareAnnotation(lyric, finalPassThrough, textKey)
 
         } else {
             ALBUM_BUILD_KEYS.forEach(childTextKey => {
 
-                if (childTextKey !== 'anchor' && lyric[childTextKey]) {
+                if (childTextKey !== ANCHOR && lyric[childTextKey]) {
                     let sideStanzaTextKey
 
-                    // Let song know that it is a doublespeaker song.
-                    if (childTextKey === LEFT || childTextKey === RIGHT) {
-                        _tempStore._isDoublespeaker = true
+                    if (lyric[LEFT_COLUMN]) {
+                        sideStanzaTextKey = LEFT_COLUMN
+
+                    } else if (lyric[RIGHT_COLUMN]) {
+                        sideStanzaTextKey = RIGHT_COLUMN
                     }
 
-                    if (lyric.leftColumn) {
-                        sideStanzaTextKey = 'leftColumn'
-                    } else if (lyric.rightColumn) {
-                        sideStanzaTextKey = 'rightColumn'
+                    // Let app know that it is a doublespeaker song.
+                    if (childTextKey === LEFT || childTextKey === RIGHT) {
+                        _tempStore._isDoublespeaker = true
                     }
 
                     /**
@@ -520,9 +546,9 @@ const _parseLyrics = (lyric, finalPassThrough, textKey, lyricInTime) => {
     }
 
     // Doublespeaker lyrics have separate keys for each column.
-    if (lyric[LYRIC] || lyric[LEFT] || lyric[RIGHT] || lyric[CENTRE] || lyric.dotStanza) {
+    if (lyric[LYRIC] || lyric[LEFT] || lyric[RIGHT] || lyric[CENTRE] || lyric[DOT_STANZA]) {
 
-        if (lyric.dotStanza && !finalPassThrough) {
+        if (lyric[DOT_STANZA] && !finalPassThrough) {
             _tempStore._dotStanzaCounter++
         }
 
@@ -684,7 +710,6 @@ const _prepareCard = (card, dotKeys, finalPassThrough) => {
             // If card has a wiki link, add 'reference' key to dot keys.
             card.dotKeys[REFERENCE] = true
             dotKeys[REFERENCE] = true
-            _tempStore._songDotKeys[REFERENCE] = true
         }
     }
 
@@ -741,7 +766,6 @@ const _addDotKeys = (card, dotKeys) => {
     if (card.dotKeys) {
         Object.keys(card.dotKeys).forEach(dotKey => {
             dotKeys[dotKey] = true
-            _tempStore._songDotKeys[dotKey] = true
         })
     }
 }
@@ -798,7 +822,6 @@ const _addSourcePortalLink = ({
 
         // Add portal key to dot keys.
         dotKeys.portal = true
-        _tempStore._songDotKeys.portal = true
 
         // Clean up card unit.
         delete card.portal
