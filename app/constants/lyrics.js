@@ -31,6 +31,9 @@ module.exports = {
     LEFT_COLUMN,
     RIGHT_COLUMN,
 
+    IS_VERSE_BEGINNING_SPAN: 'isVerseBeginningSpan',
+    IS_VERSE_ENDING_SPAN: 'isVerseEndingSpan',
+
     OVERLAP: 'overlap',
 
     TITLE: 'title',
@@ -62,7 +65,6 @@ module.exports = {
         RIGHT,
         ITALIC,
         EMPHASIS,
-        ANCHOR,
         DOT_STANZA,
         TOP_SIDE_STANZA,
         BOTTOM_SIDE_STANZA,

@@ -2161,7 +2161,7 @@ module.exports = [
     },
     {
         taskName: `Begin build helper refactor.`,
-        workedHours: 3,
-        neededHours: 3
+        workedHours: 6,
+        neededHours: 6
     },
 ]
