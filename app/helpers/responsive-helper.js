@@ -1,3 +1,4 @@
+import { HAS_SIDE_STANZAS, IS_DOUBLESPEAKER } from '../constants/lyrics'
 import { PHONE_WIDTH,
          MINI_WIDTH,
          TABLET_WIDTH,
@@ -115,8 +116,8 @@ export const getIsToggleInOverview = (deviceIndex) => {
 
 export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
     const selectedSong = getSongObject(songIndex),
-        { hasSideStanzas,
-          isDoublespeaker } = selectedSong
+        { [HAS_SIDE_STANZAS]: hasSideStanzas,
+          [IS_DOUBLESPEAKER]: isDoublespeaker } = selectedSong
 
     // Applies to Uncanny Valley Boy.
     if (hasSideStanzas && !isDoublespeaker) {

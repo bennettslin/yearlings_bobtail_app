@@ -15,7 +15,6 @@ const LYRIC = 'lyric',
       RIGHT_COLUMN = 'rightColumn'
 
 module.exports = {
-    IS_DOT_STANZA: '***DOT_STANZA***',
 
     LYRIC,
     LEFT,
@@ -31,8 +30,12 @@ module.exports = {
     LEFT_COLUMN,
     RIGHT_COLUMN,
 
+    IS_DOT_STANZA: '***DOT_STANZA***',
+    HAS_SIDE_STANZAS: 'hasSideStanzas',
+    IS_DOUBLESPEAKER: 'isDoublespeaker',
     IS_VERSE_BEGINNING_SPAN: 'isVerseBeginningSpan',
     IS_VERSE_ENDING_SPAN: 'isVerseEndingSpan',
+    PROPER_NOUN: 'properNoun',
 
     OVERLAP: 'overlap',
 
