@@ -13,7 +13,7 @@ import { ALBUM_BUILD_KEYS,
          LEFT_COLUMN,
          RIGHT_COLUMN,
 
-         PROPER_NOUN } from '../constants/lyrics'
+         PROPER_NOUN } from '../../constants/lyrics'
 
 /***********
  * INITIAL *
