@@ -374,7 +374,7 @@ const _prepareAnnotation = ({
 
         const annotationIndex = song.annotations.length + 1,
             annotation = {},
-            dotKeys = {}
+            allDotKeys = {}
 
         // Tell verse object its annotation anchors.
         verseObject.currentAnnotationIndices = verseObject.currentAnnotationIndices || []
@@ -414,11 +414,11 @@ const _prepareAnnotation = ({
         if (Array.isArray(cards)) {
             _tempStore._currentSongMultipleCardAnnotationsCounter++
             cards.forEach((card, cardIndex) => {
-                _prepareCard(card, dotKeys)
-                _addDotKeys(card, dotKeys)
+                _prepareCard(card, allDotKeys)
+                _getAllDotKeys(card, allDotKeys)
                 if (_addSourcePortalLink({
                     card,
-                    dotKeys,
+                    dotKeys: allDotKeys,
                     annotationIndex,
                     cardIndex,
                     verseIndex: annotation.verseIndex,
@@ -429,11 +429,11 @@ const _prepareAnnotation = ({
                 }
             })
         } else {
-            _prepareCard(cards, dotKeys)
-            _addDotKeys(cards, dotKeys)
+            _prepareCard(cards, allDotKeys)
+            _getAllDotKeys(cards, allDotKeys)
             if (_addSourcePortalLink({
                 card: cards,
-                dotKeys,
+                dotKeys: allDotKeys,
                 annotationIndex,
                 verseIndex: annotation.verseIndex,
                 [COLUMN]: annotation[COLUMN],
@@ -447,9 +447,9 @@ const _prepareAnnotation = ({
 
         // TODO: Add all these things at the end.
 
-        // Add dot keys to both lyrics and annotation.
-        lyric.dotKeys = dotKeys
-        annotation.dotKeys = dotKeys
+        // Add dot keys to both anchored lyric and annotation.
+        lyric.dotKeys = allDotKeys
+        annotation.dotKeys = allDotKeys
 
         // Add annotation object to annotations array.
         song.annotations.push(annotation)
@@ -556,11 +556,11 @@ const _parseWiki = (key, object, finalPassThrough) => {
     }
 }
 
-const _addDotKeys = (card, dotKeys) => {
+const _getAllDotKeys = (card, allDotKeys) => {
     // Add dot keys to both song and annotation card.
     if (card.dotKeys) {
         Object.keys(card.dotKeys).forEach(dotKey => {
-            dotKeys[dotKey] = true
+            allDotKeys[dotKey] = true
         })
     }
 }
