@@ -253,7 +253,6 @@ const _parseLyrics = (song, finalPassThrough) => {
             }
         })
     })
-
 }
 
 const _registerVerses = (song, verseObject) => {
@@ -381,11 +380,8 @@ const _prepareAnnotation = ({
         verseObject.currentAnnotationIndices = verseObject.currentAnnotationIndices || []
         verseObject.currentAnnotationIndices.push(annotationIndex)
 
-        // Tell annotation its index. 1-based index.
+        // Tell annotation and anchored lyric the index. 1-based index.
         annotation.annotationIndex = annotationIndex
-
-        // Tell lyric its annotation index.
-        // TODO: I don't really understand this.
         lyric.annotationIndex = annotationIndex
 
         // If in a verse with time, tell annotation its verse index.
@@ -394,10 +390,9 @@ const _prepareAnnotation = ({
 
         // Otherwise, tell it the most recent verse index.
         } else {
-            // If it's the title, set to first verse.
-            const mostRecentVerseIndex = song.verseIndexCounter > -1 ? song.verseIndexCounter : 0
-
-            annotation.mostRecentVerseIndex = mostRecentVerseIndex
+            annotation.mostRecentVerseIndex =
+                // If it's the title, set to first verse.
+                song.verseIndexCounter > -1 ? song.verseIndexCounter : 0
         }
 
         // Let annotation know if it's in a doublespeaker column.
@@ -412,11 +407,6 @@ const _prepareAnnotation = ({
 
         // Add formatted title to annotation.
         annotation.title = getFormattedAnnotationTitle(lyric[ANCHOR], lyric[PROPER_NOUN], lyric.keepEndCharacter)
-
-        // Add todo to annotation.
-        if (lyric.todo) {
-            annotation.todo = lyric.todo
-        }
 
         // Cards may be single annotation card or array of cards.
 
@@ -588,7 +578,6 @@ const _finalPrepareAllSongs = (album) => {
     album.songs.forEach((song, songIndex) => {
 
         if (!getIsLogue(songIndex, album.songs)) {
-            // _tempStore._annotations = song.annotations
             _tempStore._finalAnnotationIndex = 0
 
             _registerStanzaTypes(song, true)
