@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `Annotation anchors is broken for trophy blondes.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Refactor build helper.`,
         workedHours: 0,
         neededHours: 3

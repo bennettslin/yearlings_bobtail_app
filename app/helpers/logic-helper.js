@@ -7,7 +7,7 @@ import { getAnnotationObject,
          getIsLogue,
          getSongVerseTimes,
          getSongTotalTime,
-         getSongAnnotationsDotKeys,
+         getAnnotationDotKeys,
          getAnnotationsLength } from './data-helper'
 import { intersects } from './dot-helper'
 import { getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
@@ -71,8 +71,6 @@ export const getAnnotationIndexForDirection = ({
     }
 
     if (annotationsLength) {
-        const annotationsDotKeys = getSongAnnotationsDotKeys(selectedSongIndex)
-
         let returnIndex = currentAnnotationIndex,
             directionSwitchCounter = 0,
             doesIntersect,
@@ -125,7 +123,11 @@ export const getAnnotationIndexForDirection = ({
                 }
             }
 
-            doesIntersect = intersects(annotationsDotKeys[returnIndex - 1], selectedDotKeys)
+            // Check that this annotation is enabled, given selected dot keys.
+            doesIntersect = intersects(getAnnotationDotKeys(
+                selectedSongIndex,
+                returnIndex
+            ), selectedDotKeys)
 
             returnToLoop =
                 // Continue if dots don't intersect...

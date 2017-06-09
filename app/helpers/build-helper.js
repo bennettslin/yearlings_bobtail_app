@@ -1,7 +1,7 @@
 // Parse album data for build.
 import { REFERENCE } from '../constants/dots'
 import { ALBUM_BUILD_KEYS, LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, ITALIC, DOT_STANZA, TOP_SIDE_STANZA, BOTTOM_SIDE_STANZA, COLUMN, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN, HAS_SIDE_STANZAS, IS_DOUBLESPEAKER, PROPER_NOUN } from '../constants/lyrics'
-import { getIsLogue, getSongObject, getSongTitle, getVerseObject } from './data-helper'
+import { getIsLogue, getSongTitle, getVerseObject } from './data-helper'
 import { getFormattedAnnotationTitle } from './format-helper'
 
 const _tempStore = {
@@ -66,9 +66,6 @@ const _initialPrepareAllSongs = (album) => {
 
             // Parse lyrics.
             _parseLyrics(song)
-
-            // Add annotations to song object.
-            song.annotationsDotKeys = _getAnnotationsDotKeys({ selectedSong: song })
 
             // Add times for all verses to song object.
             song.verseTimes = _tempStore._verseTimes
@@ -459,14 +456,6 @@ const _prepareAnnotation = ({
 
         _tempStore._finalAnnotationIndex++
     }
-}
-
-const _getAnnotationsDotKeys = (props) => {
-    const selectedSong = props.selectedSong || getSongObject(props.selectedSongIndex)
-
-    return selectedSong ? selectedSong.annotations.map(annotation => {
-        return annotation.dotKeys
-    }) : null
 }
 
 const _prepareCard = (card, dotKeys, finalPassThrough) => {

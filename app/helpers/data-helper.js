@@ -62,9 +62,9 @@ export const getSongTitle = ({
     }
 }
 
-export const getSongAnnotationsDotKeys = (songIndex) => {
-    const selectedSong = getSongObject(songIndex)
-    return selectedSong.annotationsDotKeys || []
+export const getAnnotationDotKeys = (songIndex, annotationIndex) => {
+    const annotation = getAnnotationObject(songIndex, annotationIndex)
+    return annotation ? annotation.dotKeys : null
 }
 
 export const getSongStanzaTimes = (songIndex) => {
