@@ -1,19 +1,16 @@
 // Parse album data for build.
 import { REFERENCE } from '../constants/dots'
-import { ALBUM_BUILD_KEYS, LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, ITALIC, DOT_STANZA, TOP_SIDE_STANZA, BOTTOM_SIDE_STANZA, LEFT_COLUMN, RIGHT_COLUMN, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN, HAS_SIDE_STANZAS, IS_DOUBLESPEAKER, PROPER_NOUN } from '../constants/lyrics'
+import { ALBUM_BUILD_KEYS, LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, ITALIC, DOT_STANZA, TOP_SIDE_STANZA, BOTTOM_SIDE_STANZA, COLUMN, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN, HAS_SIDE_STANZAS, IS_DOUBLESPEAKER, PROPER_NOUN } from '../constants/lyrics'
 import { getIsLogue, getSongObject, getSongTitle, getVerseObject } from './data-helper'
 import { getFormattedAnnotationTitle } from './format-helper'
 
 const _tempStore = {
-    _annotations: [],
     _annotationAnchors: [],
     _wikiIndex: 1,
     _portalLinks: {},
     _verseTimes: [],
     _currentSongMultipleCardAnnotationsCounter: 0,
     _largestStanzaTimesLength: 0,
-    _verseIndexCounter: -1,
-    _currentAnnotationIndices: [],
     _drawings: {},
     _finalAnnotationIndex: 0,
     _adminDotStanzaCounter: 0,
@@ -45,11 +42,11 @@ const _initialPrepareAllSongs = (album) => {
 
         if (!getIsLogue(songIndex, album.songs)) {
 
+            // Initialise annotations array.
+            song.annotations = []
+
             _tempStore._songIndex = songIndex
-            _tempStore._annotations = []
-            _tempStore._verseIndexCounter = -1
             _tempStore._verseTimes = []
-            _tempStore._currentAnnotationIndices = []
             _tempStore._adminDotStanzaCounter = 0
             _tempStore._currentSongMultipleCardAnnotationsCounter = 0
 
@@ -72,7 +69,6 @@ const _initialPrepareAllSongs = (album) => {
             _parseLyrics(song)
 
             // Add annotations to song object.
-            song.annotations = _tempStore._annotations
             song.annotationsDotKeys = _getAnnotationsDotKeys({ selectedSong: song })
 
             // Add times for all verses to song object.
@@ -84,6 +80,9 @@ const _initialPrepareAllSongs = (album) => {
             // Add count of annotations with multiple cards.
             // TODO: This is also for admin purposes.
             song.multipleCardAnnotationsCount = _tempStore._currentSongMultipleCardAnnotationsCounter
+
+            // TODO: Have a cleanup method.
+            delete song.verseIndexCounter
         }
 
         _gatherDrawings(song.scenes, songIndex)
@@ -233,7 +232,7 @@ const _parseLyrics = (song, finalPassThrough) => {
 
             if (!finalPassThrough) {
                 // Tell each verse with time its index.
-                _registerVerseIndices(verseObject)
+                _registerVerses(song, verseObject)
             }
 
             if (!finalPassThrough) {
@@ -242,31 +241,35 @@ const _parseLyrics = (song, finalPassThrough) => {
             }
 
             // Recurse until all anchors are found.
-            _registerAnchors(verseObject, finalPassThrough)
+            _registerAnchors({
+                song,
+                verseObject,
+                finalPassThrough
+            })
 
             if (!finalPassThrough) {
                 // Tell each verse all its annotations.
-                _registerVerseAnnotationIndices(verseObject)
+                _registerVerseAnnotations(verseObject)
             }
         })
     })
 
 }
 
-const _registerVerseIndices = (verseObject) => {
+const _registerVerses = (song, verseObject) => {
 
     // Only register verses associated with a song time.
     if (!isNaN(verseObject.time)) {
 
-        // TODO: Do we need this?
-        _tempStore._verseIndexCounter++
+        song.verseIndexCounter = !isNaN(song.verseIndexCounter) ?
+            song.verseIndexCounter + 1 : 0
 
         // Add index to verse object.
-        verseObject.verseIndex = _tempStore._verseIndexCounter
+        verseObject.verseIndex = song.verseIndexCounter
         _tempStore._lastLyricWithVerseIndex = verseObject
 
         // Add most recent annotation index.
-        verseObject.lastAnnotationIndex = _tempStore._annotations.length
+        verseObject.lastAnnotationIndex = song.annotations.length
 
         // Add verse time to song times.
         _tempStore._verseTimes.push(verseObject.time)
@@ -281,22 +284,39 @@ const _registerIsDoublespeaker = (song, verseObject) => {
     }
 }
 
-const _registerAnchors = (lyric, finalPassThrough, textKey, anchorInVerseWithTime) => {
+const _registerAnchors = ({
 
-    // Let annotation know it is in a verse with time.
-    anchorInVerseWithTime = !isNaN(lyric.time) || anchorInVerseWithTime
+    song,
+    verseObject,
+    lyric = verseObject,
+    textKey,
+    finalPassThrough
+
+}) => {
 
     // Recurse until object with anchor key is found.
     if (Array.isArray(lyric)) {
 
         lyric.forEach(childLyric => {
-            _registerAnchors(childLyric, finalPassThrough, textKey, anchorInVerseWithTime)
+            _registerAnchors({
+                song,
+                verseObject,
+                lyric: childLyric,
+                textKey,
+                finalPassThrough
+            })
         })
 
     } else if (typeof lyric === 'object') {
 
         if (lyric[ANCHOR]) {
-            _prepareAnnotation(lyric, finalPassThrough, textKey, anchorInVerseWithTime)
+            _prepareAnnotation({
+                song,
+                verseObject,
+                lyric,
+                textKey,
+                finalPassThrough
+            })
 
         } else {
             ALBUM_BUILD_KEYS.forEach(childTextKey => {
@@ -304,37 +324,30 @@ const _registerAnchors = (lyric, finalPassThrough, textKey, anchorInVerseWithTim
                 if (lyric[childTextKey]) {
 
                     // TODO: Not sure what this is doing exactly...
-                    let sideStanzaTextKey
+                    let sideStanzaTextKey =
+                        (lyric[LEFT_COLUMN] && LEFT_COLUMN) ||
+                        (lyric[RIGHT_COLUMN] && RIGHT_COLUMN)
 
-                    if (lyric[LEFT_COLUMN]) {
-                        sideStanzaTextKey = LEFT_COLUMN
-
-                    } else if (lyric[RIGHT_COLUMN]) {
-                        sideStanzaTextKey = RIGHT_COLUMN
-                    }
-
-                    _registerAnchors(lyric[childTextKey], finalPassThrough, (textKey || sideStanzaTextKey || childTextKey), anchorInVerseWithTime)
+                    _registerAnchors({
+                        song,
+                        verseObject,
+                        lyric: lyric[childTextKey],
+                        textKey: (textKey || sideStanzaTextKey || childTextKey),
+                        finalPassThrough
+                    })
                 }
             })
         }
     }
 }
 
-const _registerVerseAnnotationIndices = (verseObject) => {
+const _registerVerseAnnotations = (verseObject) => {
 
     if (verseObject[LYRIC] || verseObject[LEFT] || verseObject[RIGHT] || verseObject[CENTRE] || verseObject[DOT_STANZA]) {
 
-        // Add first annotation index of verse, if any.
-        if (_tempStore._currentAnnotationIndices.length) {
-
-            // Last annotation index is no longer needed.
-            delete verseObject.lastAnnotationIndex
-
-            // TODO: What's happening here, exactly?
-            verseObject.currentAnnotationIndices = _tempStore._currentAnnotationIndices
-
-            _tempStore._currentAnnotationIndices = []
-        }
+        // Last annotation index is no longer needed.
+        // TODO: Move into cleanup method.
+        delete verseObject.lastAnnotationIndex
     }
 
     // For admin purposes.
@@ -347,67 +360,67 @@ const _registerVerseAnnotationIndices = (verseObject) => {
  * ANNOTATION *
  **************/
 
-const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey, anchorInVerseWithTime) => {
+const _prepareAnnotation = ({
+
+    song,
+    verseObject,
+    lyric,
+    textKey,
+    finalPassThrough
+
+}) => {
     const cards = lyric.annotation
 
     if (!finalPassThrough) {
 
-        const annotationIndex = _tempStore._annotations.length + 1,
+        const annotationIndex = song.annotations.length + 1,
             annotation = {},
             dotKeys = {}
 
-        _tempStore._currentAnnotationIndices.push(annotationIndex)
+        // Tell verse object its annotation anchors.
+        verseObject.currentAnnotationIndices = verseObject.currentAnnotationIndices || []
+        verseObject.currentAnnotationIndices.push(annotationIndex)
 
         // Tell annotation its index. 1-based index.
         annotation.annotationIndex = annotationIndex
 
-        /**
-         * If in a verse with time, tell annotation the verse index.
-         */
-        if (anchorInVerseWithTime) {
-            // TODO: Can we just pass the verse index directly?
-            annotation.verseIndex = _tempStore._verseIndexCounter
+        // Tell lyric its annotation index.
+        // TODO: I don't really understand this.
+        lyric.annotationIndex = annotationIndex
 
+        // If in a verse with time, tell annotation its verse index.
+        if (!isNaN(verseObject.verseIndex)) {
+            annotation.verseIndex = verseObject.verseIndex
+
+        // Otherwise, tell it the most recent verse index.
         } else {
-
-            /**
-             * If it's the title, set to first verse. Otherwise, set to most
-             * recent verse.
-             */
-            const mostRecentVerseIndex = _tempStore._verseIndexCounter > -1 ? _tempStore._verseIndexCounter : 0
+            // If it's the title, set to first verse.
+            const mostRecentVerseIndex = song.verseIndexCounter > -1 ? song.verseIndexCounter : 0
 
             annotation.mostRecentVerseIndex = mostRecentVerseIndex
         }
 
         // Let annotation know if it's in a doublespeaker column.
         if (textKey === LEFT || textKey === LEFT_COLUMN) {
-
-            // TODO: Make column and column index constants.
-            annotation.column = LEFT
-
-            // Easier just to hard-code this.
-            annotation.columnIndex = 0
+            annotation[COLUMN] = LEFT
+            annotation[COLUMN_INDEX] = 0
 
         } else if (textKey === RIGHT || textKey === RIGHT_COLUMN) {
-            annotation.column = RIGHT
-            annotation.columnIndex = 1
+            annotation[COLUMN] = RIGHT
+            annotation[COLUMN_INDEX] = 1
         }
 
-        lyric.annotationIndex = annotationIndex
-
         // Add formatted title to annotation.
-
-        // TODO: Make annotation title its own unique constant.
         annotation.title = getFormattedAnnotationTitle(lyric[ANCHOR], lyric[PROPER_NOUN], lyric.keepEndCharacter)
 
         // Add todo to annotation.
-
-        // TODO: Make todo a constant.
         if (lyric.todo) {
             annotation.todo = lyric.todo
         }
 
         // Cards may be single annotation card or array of cards.
+
+        // TODO: This can probably be simplified considerably.
         if (Array.isArray(cards)) {
             _tempStore._currentSongMultipleCardAnnotationsCounter++
             cards.forEach((card, cardIndex) => {
@@ -419,8 +432,8 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey, anchorInVerse
                     annotationIndex,
                     cardIndex,
                     verseIndex: annotation.verseIndex,
-                    column: annotation.column,
-                    columnIndex: annotation.columnIndex
+                    [COLUMN]: annotation[COLUMN],
+                    [COLUMN_INDEX]: annotation[COLUMN_INDEX]
                 })) {
                     _tempStore._lastLyricWithVerseIndex.verseHasPortal = true
                 }
@@ -433,8 +446,8 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey, anchorInVerse
                 dotKeys,
                 annotationIndex,
                 verseIndex: annotation.verseIndex,
-                column: annotation.column,
-                columnIndex: annotation.columnIndex
+                [COLUMN]: annotation[COLUMN],
+                [COLUMN_INDEX]: annotation[COLUMN_INDEX]
             })) {
                 _tempStore._lastLyricWithVerseIndex.verseHasPortal = true
             }
@@ -449,13 +462,13 @@ const _prepareAnnotation = (lyric = {}, finalPassThrough, textKey, anchorInVerse
         annotation.dotKeys = dotKeys
 
         // Add annotation object to annotations array.
-        _tempStore._annotations.push(annotation)
+        song.annotations.push(annotation)
 
         // Clean up lyric object.
         delete lyric[PROPER_NOUN]
 
     } else {
-        const annotation = _tempStore._annotations[_tempStore._finalAnnotationIndex]
+        const annotation = song.annotations[_tempStore._finalAnnotationIndex]
 
         _tempStore._annotationAnchors = []
         _tempStore._annotationAnchorIndex = 1
@@ -575,7 +588,7 @@ const _finalPrepareAllSongs = (album) => {
     album.songs.forEach((song, songIndex) => {
 
         if (!getIsLogue(songIndex, album.songs)) {
-            _tempStore._annotations = song.annotations
+            // _tempStore._annotations = song.annotations
             _tempStore._finalAnnotationIndex = 0
 
             _registerStanzaTypes(song, true)

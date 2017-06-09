@@ -9,10 +9,7 @@ const LYRIC = 'lyric',
       DOT_STANZA = 'dotStanza',
       TOP_SIDE_STANZA = 'topSideStanza',
       BOTTOM_SIDE_STANZA = 'bottomSideStanza',
-      SUB_STANZA = 'subStanza',
-
-      LEFT_COLUMN = 'leftColumn',
-      RIGHT_COLUMN = 'rightColumn'
+      SUB_STANZA = 'subStanza'
 
 module.exports = {
 
@@ -27,8 +24,10 @@ module.exports = {
     BOTTOM_SIDE_STANZA,
     SUB_STANZA,
 
-    LEFT_COLUMN,
-    RIGHT_COLUMN,
+    COLUMN: 'column',
+    COLUMN_INDEX: 'columnIndex',
+    LEFT_COLUMN: 'leftColumn',
+    RIGHT_COLUMN: 'rightColumn',
 
     IS_DOT_STANZA: '***DOT_STANZA***',
     HAS_SIDE_STANZAS: 'hasSideStanzas',
