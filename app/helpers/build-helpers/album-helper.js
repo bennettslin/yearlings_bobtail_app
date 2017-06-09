@@ -8,7 +8,6 @@ import { getIsLogue, getSongTitle, getVerseObject } from '../data-helper'
 import { getFormattedAnnotationTitle } from '../format-helper'
 
 const _tempStore = {
-    _annotationAnchors: [],
     _wikiIndex: 1,
     _portalLinks: {},
     _largestStanzaTimesLength: 0,
@@ -216,19 +215,17 @@ const _finalRegisterAnnotation = ({
     let cards = lyric.annotation
 
     const annotation = song.annotations[_tempStore._finalAnnotationIndex]
-
-    _tempStore._annotationAnchors = []
     _tempStore._annotationAnchorIndex = 1
+
+    annotation.annotationAnchors = []
 
     if (Array.isArray(cards)) {
         cards.forEach(card => {
-            _finalPrepareCard(card)
+            _finalPrepareCard(annotation, card)
         })
     } else {
-        _finalPrepareCard(cards)
+        _finalPrepareCard(annotation, cards)
     }
-
-    annotation.annotationAnchors = _tempStore._annotationAnchors
 
     // Clean up lyric object, now that it's the final pass through.
     delete lyric.annotation
@@ -256,19 +253,19 @@ const _initialPrepareCard = (card, dotKeys) => {
     }
 }
 
-const _finalPrepareCard = (card) => {
+const _finalPrepareCard = (annotation, card) => {
     const { description,
             portalLinks } = card
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
-        _finalParseWiki('wiki', description)
+        _finalParseWiki(annotation, 'wiki', description)
     }
 
     if (portalLinks) {
         portalLinks.forEach(link => {
             delete link.cardIndex
-            _tempStore._annotationAnchors.push(Object.assign({}, link))
+            annotation.annotationAnchors.push(Object.assign({}, link))
             link.portalIndex = _tempStore._annotationAnchorIndex
             _tempStore._annotationAnchorIndex++
         })
@@ -299,7 +296,7 @@ const _initialParseWiki = (key, object) => {
     }
 }
 
-const _finalParseWiki = (key, object) => {
+const _finalParseWiki = (annotation, key, object) => {
     /**
      * This method gets called in two places. The first time is simply to check
      * if there is a wiki key. The second is in the final pass through, to add
@@ -312,7 +309,7 @@ const _finalParseWiki = (key, object) => {
     } else if (Array.isArray(object)) {
         return object.reduce((keyFound, element) => {
             // Reversing order so that index gets added if needed.
-            return _finalParseWiki(key, element) || keyFound
+            return _finalParseWiki(annotation, key, element) || keyFound
         }, false)
 
     } else {
@@ -324,11 +321,11 @@ const _finalParseWiki = (key, object) => {
                 // Popup anchor index is either for portal or wiki.
                 object.wikiIndex = _tempStore._annotationAnchorIndex
                 _tempStore._annotationAnchorIndex++
-                _tempStore._annotationAnchors.push(object[key])
+                annotation.annotationAnchors.push(object[key])
                 delete object[key]
             }
 
-            return keyFound || hasWiki || _finalParseWiki(key, object[currentKey])
+            return keyFound || hasWiki || _finalParseWiki(annotation, key, object[currentKey])
         }, false)
     }
 }
