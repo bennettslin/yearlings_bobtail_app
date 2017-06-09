@@ -9,7 +9,6 @@ const _tempStore = {
     _wikiIndex: 1,
     _portalLinks: {},
     _verseTimes: [],
-    _currentSongMultipleCardAnnotationsCounter: 0,
     _largestStanzaTimesLength: 0,
     _drawings: {},
     _finalAnnotationIndex: 0,
@@ -44,11 +43,11 @@ const _initialPrepareAllSongs = (album) => {
 
             // Initialise annotations array.
             song.annotations = []
+            song.adminPluralCardsCount = 0
 
             _tempStore._songIndex = songIndex
             _tempStore._verseTimes = []
             _tempStore._adminDotStanzaCounter = 0
-            _tempStore._currentSongMultipleCardAnnotationsCounter = 0
 
             // Add title object to lyrics array.
             _registerTitle(song)
@@ -76,10 +75,6 @@ const _initialPrepareAllSongs = (album) => {
 
             // And dot stanza count for dev purposes.
             song.dotStanzas = _tempStore._adminDotStanzaCounter
-
-            // Add count of annotations with multiple cards.
-            // TODO: This is also for admin purposes.
-            song.multipleCardAnnotationsCount = _tempStore._currentSongMultipleCardAnnotationsCounter
 
             // TODO: Have a cleanup method.
             delete song.verseIndexCounter
@@ -265,7 +260,6 @@ const _registerVerses = (song, verseObject) => {
 
         // Add index to verse object.
         verseObject.verseIndex = song.verseIndexCounter
-        _tempStore._lastLyricWithVerseIndex = verseObject
 
         // Add most recent annotation index.
         verseObject.lastAnnotationIndex = song.annotations.length
@@ -342,13 +336,6 @@ const _registerAnchors = ({
 
 const _registerVerseAnnotations = (verseObject) => {
 
-    if (verseObject[LYRIC] || verseObject[LEFT] || verseObject[RIGHT] || verseObject[CENTRE] || verseObject[DOT_STANZA]) {
-
-        // Last annotation index is no longer needed.
-        // TODO: Move into cleanup method.
-        delete verseObject.lastAnnotationIndex
-    }
-
     // For admin purposes.
     if (verseObject[DOT_STANZA]) {
         _tempStore._adminDotStanzaCounter++
@@ -368,7 +355,7 @@ const _prepareAnnotation = ({
     finalPassThrough
 
 }) => {
-    const cards = lyric.annotation
+    let cards = lyric.annotation
 
     if (!finalPassThrough) {
 
@@ -410,46 +397,40 @@ const _prepareAnnotation = ({
 
         // Cards may be single annotation card or array of cards.
 
-        // TODO: This can probably be simplified considerably.
-        if (Array.isArray(cards)) {
-            _tempStore._currentSongMultipleCardAnnotationsCounter++
-            cards.forEach((card, cardIndex) => {
-                _prepareCard(card, allDotKeys)
-                _getAllDotKeys(card, allDotKeys)
-                if (_addSourcePortalLink({
-                    card,
-                    dotKeys: allDotKeys,
-                    annotationIndex,
-                    cardIndex,
-                    verseIndex: annotation.verseIndex,
-                    [COLUMN]: annotation[COLUMN],
-                    [COLUMN_INDEX]: annotation[COLUMN_INDEX]
-                })) {
-                    _tempStore._lastLyricWithVerseIndex.verseHasPortal = true
-                }
-            })
+        // Temporarily make single card an array of one object.
+        if (!Array.isArray(cards)) {
+            cards = [cards]
+
+        /**
+         * Or else add to count of annotations with plural cards, for admin
+         * purposes.
+         */
         } else {
-            _prepareCard(cards, allDotKeys)
-            _getAllDotKeys(cards, allDotKeys)
-            if (_addSourcePortalLink({
-                card: cards,
-                dotKeys: allDotKeys,
-                annotationIndex,
-                verseIndex: annotation.verseIndex,
-                [COLUMN]: annotation[COLUMN],
-                [COLUMN_INDEX]: annotation[COLUMN_INDEX]
-            })) {
-                _tempStore._lastLyricWithVerseIndex.verseHasPortal = true
-            }
+            song.adminPluralCardsCount++
         }
 
-        annotation.cards = cards
+        cards.forEach((card, cardIndex) => {
+            _prepareCard(card, allDotKeys)
+            _getAllDotKeys(card, allDotKeys)
+            if (_addSourcePortalLink({
+                card,
+                cardIndex,
+                dotKeys: allDotKeys,
+                annotation
+            })) {
+                verseObject.verseHasPortal = true
+            }
+        })
 
-        // TODO: Add all these things at the end.
+        // Revert array of one object to a single card.
+        if (cards.length === 1) {
+            cards = cards[0]
+        }
 
         // Add dot keys to both anchored lyric and annotation.
-        lyric.dotKeys = allDotKeys
+        annotation.cards = cards
         annotation.dotKeys = allDotKeys
+        lyric.dotKeys = allDotKeys
 
         // Add annotation object to annotations array.
         song.annotations.push(annotation)
@@ -597,19 +578,21 @@ const _finalPrepareAllSongs = (album) => {
  **********/
 
 const _addSourcePortalLink = ({
+
     card,
     dotKeys,
-    annotationIndex,
-    cardIndex = 0,
-    verseIndex,
-    column,
-    columnIndex
+    annotation,
+    cardIndex = 0
+
 }) => {
-    // Add portal link to annotation card..
-    const { portal } = card
+    // Add portal link to annotation card.
+    const { portal } = card,
+        { verseIndex,
+          annotationIndex,
+          column,
+          columnIndex } = annotation
 
     if (portal) {
-
         // Portal is either object or string.
         const { portalKey,
                 portalPrefix } = portal,

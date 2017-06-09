@@ -14,7 +14,7 @@ const Shared = (props) => {
 
     const selectedSong = getSongObject(props.selectedSongIndex),
         tasks = getTasks(selectedSong, props.albumTasks),
-        multipleCardAnnotationsCount = selectedSong.multipleCardAnnotationsCount
+        adminPluralCardsCount = selectedSong.adminPluralCardsCount
 
     return (
         <SharedView {...props}
@@ -22,7 +22,7 @@ const Shared = (props) => {
             dotStanzas={selectedSong.dotStanzas}
             lyrics={selectedSong.lyrics}
             annotations={selectedSong.annotations}
-            multipleCardAnnotationsCount={multipleCardAnnotationsCount}
+            adminPluralCardsCount={adminPluralCardsCount}
         />
     )
 }
@@ -40,7 +40,7 @@ const SharedView = ({
     dotStanzas,
     lyrics,
     annotations,
-    multipleCardAnnotationsCount,
+    adminPluralCardsCount,
 
 ...other }) => (
     <div className="admin-column">
@@ -49,7 +49,7 @@ const SharedView = ({
                 dotStanzas={dotStanzas}
                 lyrics={lyrics}
                 annotations={annotations}
-                multipleCardAnnotationsCount={multipleCardAnnotationsCount}
+                adminPluralCardsCount={adminPluralCardsCount}
             />
             <TasksSection
                 tasks={tasks}

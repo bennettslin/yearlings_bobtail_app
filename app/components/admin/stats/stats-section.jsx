@@ -23,7 +23,7 @@ const StatsSectionView = ({
     dotStanzas,
     lyrics,
     annotations,
-    multipleCardAnnotationsCount
+    adminPluralCardsCount
 
 }) => (
     <div className="section stats-section">
@@ -35,7 +35,7 @@ const StatsSectionView = ({
             <WordsPerAnnotationRow annotations={annotations} />
             <StatRowView
                 typeName="multiple card annotations count"
-                typeCount={multipleCardAnnotationsCount}
+                typeCount={adminPluralCardsCount}
             />
         </div>
     </div>
