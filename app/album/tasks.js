@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `Get children out of live manager.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Admin can't change songs, probably because of shouldComponentUpdate`,
         workedHours: 0,
         neededHours: 1
@@ -2171,7 +2176,7 @@ module.exports = [
     },
     {
         taskName: `Begin build helper refactor.`,
-        workedHours: 6,
-        neededHours: 6
+        workedHours: 7,
+        neededHours: 7
     },
 ]
