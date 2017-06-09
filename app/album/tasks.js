@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `Admin can't change songs, probably because of shouldComponentUpdate`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Annotation anchors is broken for trophy blondes.`,
         workedHours: 0,
         neededHours: 2

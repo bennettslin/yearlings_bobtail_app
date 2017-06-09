@@ -1,8 +1,9 @@
 /**
- * Fetch album data. Should know nothing else. Only the build helper will pass
+ * Fetch album data. Should know nothing else. Only the album helper will pass
  * a songs argument, since it is executing before the AlbumData object has been
  * created.
  */
+
 import AlbumData from '../album-data'
 
 export const getSongObject = (songIndex, songs = AlbumData.songs) => {

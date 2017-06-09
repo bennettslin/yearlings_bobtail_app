@@ -1,0 +1,691 @@
+// Parse album data for build.
+
+import { REFERENCE } from '../constants/dots'
+import { LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, ITALIC, COLUMN, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN, PROPER_NOUN } from '../constants/lyrics'
+import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerVerses, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes } from './build-helper'
+import { getIsLogue, getSongTitle, getVerseObject } from './data-helper'
+import { getFormattedAnnotationTitle } from './format-helper'
+
+const _tempStore = {
+    _annotationAnchors: [],
+    _wikiIndex: 1,
+    _portalLinks: {},
+    _largestStanzaTimesLength: 0,
+    _drawings: {},
+    _finalAnnotationIndex: 0,
+}
+
+export const parseAlbumData = (album) => {
+
+    // Allow helpers to access songs directly.
+    _tempStore._songs = album.songs
+
+    _initialPrepareAllSongs(album)
+
+    _addDestinationPortalLinks(album)
+
+    // Add drawings for admin purposes.
+    album.drawings = _finaliseDrawings(album, _tempStore._drawings)
+
+    _finalPrepareAllSongs(album)
+
+    // FIXME: Temporarily add portal links to album for debugging purposes.
+    // album.portalLinks = _tempStore._portalLinks
+
+    return album
+}
+
+/***********
+ * INITIAL *
+ ***********/
+
+const _initialPrepareAllSongs = (album) => {
+
+    album.songs.forEach((song, songIndex) => {
+
+        if (!getIsLogue(songIndex, album.songs)) {
+
+            _tempStore._songIndex = songIndex
+
+            // Add title object to lyrics array.
+            registerTitle(song)
+
+            /**
+             * Let app know that song has side stanzas. Only applies to "On a
+             * Golden Cord" and "Uncanny Valley Boy."
+             */
+            registerHasSideStanzas(song)
+
+            /**
+             * Associate a type and index for each stanza, like verse, chorus,
+             * and so forth.
+             */
+            initialRegisterStanzaTypes(song)
+
+            // Establish which song has the largest number of stanzas.
+            // TODO: Make this its own method.
+            if (song.stanzaTimes.length > _tempStore._largestStanzaTimesLength) {
+                _tempStore._largestStanzaTimesLength = song.stanzaTimes.length
+            }
+
+            // Parse lyrics.
+            _initialParseLyrics(song)
+        }
+
+        _gatherDrawings(song.scenes, songIndex)
+    })
+}
+
+const _initialParseLyrics = (song) => {
+
+    const { lyrics } = song
+
+    // Initialise song.
+    song.adminDotStanzas = 0
+    song.adminPluralCardsCount = 0
+    song.annotations = []
+    song.verseIndexCounter = 0
+    song.verseTimes = []
+
+    lyrics.forEach(unitArray => {
+
+        unitArray.forEach(verseObject => {
+
+            // Tell each verse with time its index.
+            registerVerses(song, verseObject)
+
+            // Tell song it is a doublespeaker song
+            registerIsDoublespeaker(song, verseObject)
+
+            // Recurse until each anchor is found.
+            recurseToFindAnchors({
+                song,
+                verseObject,
+                callbackFunction: _initialRegisterAnnotation
+            })
+
+            // Tell song its dot stanza count, for admin purposes.
+            registerAdminDotStanzas(song, verseObject)
+        })
+    })
+
+    // Clean up.
+    delete song.verseIndexCounter
+}
+
+/**************
+ * ANNOTATION *
+ **************/
+
+const _initialRegisterAnnotation = ({
+
+    song,
+    verseObject,
+    lyric,
+    textKey
+
+}) => {
+    let cards = lyric.annotation
+
+    const annotationIndex = song.annotations.length + 1,
+        annotation = {},
+        allDotKeys = {}
+
+    // Tell verse object its annotation anchors.
+    verseObject.currentAnnotationIndices = verseObject.currentAnnotationIndices || []
+    verseObject.currentAnnotationIndices.push(annotationIndex)
+
+    // Tell annotation and anchored lyric the index. 1-based index.
+    annotation.annotationIndex = annotationIndex
+    lyric.annotationIndex = annotationIndex
+
+    // If in a verse with time, tell annotation its verse index.
+    if (!isNaN(verseObject.verseIndex)) {
+        annotation.verseIndex = verseObject.verseIndex
+
+    // Otherwise, tell it the most recent verse index.
+    } else {
+        annotation.mostRecentVerseIndex =
+            // If it's the title, set to first verse.
+            song.verseIndexCounter > -1 ? song.verseIndexCounter : 0
+    }
+
+    // Let annotation know if it's in a doublespeaker column.
+    if (textKey === LEFT || textKey === LEFT_COLUMN) {
+        annotation[COLUMN] = LEFT
+        annotation[COLUMN_INDEX] = 0
+
+    } else if (textKey === RIGHT || textKey === RIGHT_COLUMN) {
+        annotation[COLUMN] = RIGHT
+        annotation[COLUMN_INDEX] = 1
+    }
+
+    // Add formatted title to annotation.
+    annotation.title = getFormattedAnnotationTitle(lyric[ANCHOR], lyric[PROPER_NOUN], lyric.keepEndCharacter)
+
+    // Cards may be single annotation card or array of cards.
+
+    // Temporarily make single card an array of one object.
+    if (!Array.isArray(cards)) {
+        cards = [cards]
+
+    /**
+     * Or else add to count of annotations with plural cards, for admin
+     * purposes.
+     */
+    } else {
+        song.adminPluralCardsCount++
+    }
+
+    cards.forEach((card, cardIndex) => {
+        _prepareCard(card, allDotKeys)
+        _getAllDotKeys(card, allDotKeys)
+        if (_addSourcePortalLink({
+            card,
+            cardIndex,
+            dotKeys: allDotKeys,
+            annotation
+        })) {
+            verseObject.verseHasPortal = true
+        }
+    })
+
+    // Revert array of one object to a single card.
+    if (cards.length === 1) {
+        cards = cards[0]
+    }
+
+    // Add dot keys to both anchored lyric and annotation.
+    annotation.cards = cards
+    annotation.dotKeys = allDotKeys
+    lyric.dotKeys = allDotKeys
+
+    // Add annotation object to annotations array.
+    song.annotations.push(annotation)
+
+    // Clean up lyric object.
+    delete lyric[PROPER_NOUN]
+}
+
+const _finalRegisterAnnotation = ({
+
+    song,
+    lyric
+
+}) => {
+    let cards = lyric.annotation
+
+    const annotation = song.annotations[_tempStore._finalAnnotationIndex]
+
+    _tempStore._annotationAnchors = []
+    _tempStore._annotationAnchorIndex = 1
+
+    if (Array.isArray(cards)) {
+        cards.forEach(card => {
+            _prepareCard(card, undefined, true)
+        })
+    } else {
+        _prepareCard(cards, undefined, true)
+    }
+
+    annotation.annotationAnchors = _tempStore._annotationAnchors
+
+    // Clean up lyric object, now that it's the final pass through.
+    delete lyric.annotation
+
+    _tempStore._finalAnnotationIndex++
+}
+
+const _prepareCard = (card, dotKeys, finalPassThrough) => {
+    const { description,
+            portalLinks } = card
+
+    if (description) {
+        // This is the wiki key in the song data, *not* the dot key.
+        const hasWiki = _parseWiki('wiki', description, finalPassThrough)
+
+        if (hasWiki && !finalPassThrough) {
+            // Add wiki anchor index to each anchor with wiki.
+            if (!card.dotKeys) {
+                card.dotKeys = {}
+            }
+
+            // If card has a wiki link, add 'reference' key to dot keys.
+            card.dotKeys[REFERENCE] = true
+            dotKeys[REFERENCE] = true
+        }
+    }
+
+    if (portalLinks && finalPassThrough) {
+        portalLinks.forEach(link => {
+            delete link.cardIndex
+            _tempStore._annotationAnchors.push(Object.assign({}, link))
+            link.portalIndex = _tempStore._annotationAnchorIndex
+            _tempStore._annotationAnchorIndex++
+        })
+    }
+}
+
+const _parseWiki = (key, object, finalPassThrough) => {
+    /**
+     * This method gets called in two places. The first time is simply to check
+     * if there is a wiki key. The second is in the final pass through, to add
+     * the wiki index.
+     */
+
+    if (!object || typeof object !== 'object') {
+        return false
+
+    } else if (Array.isArray(object)) {
+        return object.reduce((keyFound, element) => {
+            // Reversing order so that index gets added if needed.
+            if (finalPassThrough) {
+                return _parseWiki(key, element, finalPassThrough) || keyFound
+            } else {
+                return keyFound || _parseWiki(key, element, finalPassThrough)
+            }
+        }, false)
+
+    } else {
+        return Object.keys(object).reduce((keyFound, currentKey) => {
+            const hasWiki = !!object[key]
+
+            if (finalPassThrough && !object.wikiIndex && typeof object[key] === 'string') {
+
+                // Popup anchor index is either for portal or wiki.
+                object.wikiIndex = _tempStore._annotationAnchorIndex
+                _tempStore._annotationAnchorIndex++
+                _tempStore._annotationAnchors.push(object[key])
+                delete object[key]
+            }
+
+            return keyFound || hasWiki || _parseWiki(key, object[currentKey], finalPassThrough)
+        }, false)
+    }
+}
+
+const _getAllDotKeys = (card, allDotKeys) => {
+    // Add dot keys to both song and annotation card.
+    if (card.dotKeys) {
+        Object.keys(card.dotKeys).forEach(dotKey => {
+            allDotKeys[dotKey] = true
+        })
+    }
+}
+
+/*********
+ * FINAL *
+ *********/
+
+/**
+ * Add wiki and portal indices. These can only be determined after collecting
+ * portal links from the entire album.
+ */
+const _finalPrepareAllSongs = (album) => {
+
+    album.songs.forEach((song, songIndex) => {
+
+        if (!getIsLogue(songIndex, album.songs)) {
+            _tempStore._finalAnnotationIndex = 0
+
+            finalRegisterStanzaTypes(song)
+
+            _finalParseLyrics(song)
+
+            _registerBeginningAndEndingVerseSpans(song.lyrics)
+        }
+
+        _finaliseDrawingTasks(song)
+        _expandStanzaTimes(song)
+    })
+}
+
+const _finalParseLyrics = (song) => {
+    const { lyrics } = song
+
+    lyrics.forEach(unitArray => {
+
+        unitArray.forEach(verseObject => {
+
+            // Recurse until each anchor is found.
+            recurseToFindAnchors({
+                song,
+                verseObject,
+                callbackFunction: _finalRegisterAnnotation
+            })
+        })
+    })
+}
+
+/**********
+ * PORTAL *
+ **********/
+
+const _addSourcePortalLink = ({
+
+    card,
+    dotKeys,
+    annotation,
+    cardIndex = 0
+
+}) => {
+    // Add portal link to annotation card.
+    const { portal } = card,
+        { verseIndex,
+          annotationIndex,
+          column,
+          columnIndex } = annotation
+
+    if (portal) {
+        // Portal is either object or string.
+        const { portalKey,
+                portalPrefix } = portal,
+
+            { _songs,
+              _songIndex } = _tempStore,
+
+            portalLink = {
+                songIndex: _songIndex,
+                annotationIndex,
+                cardIndex,
+                verseIndex,
+                column,
+                columnIndex,
+                portalPrefix
+            }
+
+        // Add data about portal.
+        portalLink.songTitle = getSongTitle({
+            songIndex: _songIndex,
+            songs: _songs
+        })
+        portalLink.verseObject = getVerseObject(_songIndex, verseIndex, _songs)
+
+        // If first portal link, initialise array.
+        if (!_tempStore._portalLinks[portalKey || portal]) {
+            _tempStore._portalLinks[portalKey || portal] = []
+        }
+
+        // Add portal link to portal links array.
+        _tempStore._portalLinks[portalKey || portal].push(portalLink)
+
+        // Add portal key to dot keys.
+        dotKeys.portal = true
+
+        // Clean up card unit.
+        delete card.portal
+
+        return true
+
+    } else {
+        return false
+    }
+}
+
+const _addDestinationPortalLinks = (album) => {
+    /**
+     * For each annotation with a portal, add an array of links to all
+     * other portals.
+     */
+    for (const linkKey in _tempStore._portalLinks) {
+        const links = _tempStore._portalLinks[linkKey]
+
+        links.forEach((link, index) => {
+            const song = album.songs[link.songIndex],
+                annotation = song.annotations[link.annotationIndex - 1],
+                card = Array.isArray(annotation.cards) ?
+                    annotation.cards[link.cardIndex] : annotation.cards,
+                portalLinks = links.filter((link, thisIndex) => {
+                    return index !== thisIndex
+                }).map(link => {
+
+                    // Return a *copy* of the link object.
+                    return Object.assign({}, link)
+                })
+
+            card.portalLinks = portalLinks
+        })
+    }
+}
+
+
+// FIXME: Can this be taken care of in the view itself?
+const _expandStanzaTimes = (song) => {
+
+    // Include logues.
+    if (!song.stanzaTimes) {
+        song.stanzaTimes = []
+    }
+
+    /**
+     * We want the stanza time bars to animate nicely. As such, the number of
+     * stanza times for each song will be the same.
+     */
+    while (song.stanzaTimes.length < _tempStore._largestStanzaTimesLength) {
+        song.stanzaTimes.push({
+            type: 'placeholder',
+            time: song.totalTime
+        })
+    }
+}
+
+const _gatherDrawings = (scenes, songIndex) => {
+    const drawingTypes = ['actors', 'backdrops', 'stageProps']
+
+    scenes.forEach((scene, sceneIndex) => {
+        drawingTypes.forEach(drawingType => {
+
+            // Initialise object for actors, backdrops, stageProps.
+            if (!_tempStore._drawings[drawingType]) {
+                _tempStore._drawings[drawingType] = {}
+            }
+
+            for (const key in scene[drawingType]) {
+
+                const keyObject = {
+                    songIndex,
+                    sceneIndex: sceneIndex + 1
+                }
+
+                // Initialise array for each actor, backdrop, stageProp.
+                if (!_tempStore._drawings[drawingType][key]) {
+                    _tempStore._drawings[drawingType][key] = []
+                }
+
+                if (drawingType === 'actors') {
+
+                    /**
+                     * If actor and character are the same, the entry will be a
+                     * string. If not, the entry will be an object.
+                     */
+                    const characterEntry = scene[drawingType][key],
+                        entryIsObject = typeof characterEntry === 'object' && !characterEntry.description,
+                        character = entryIsObject ? Object.keys(characterEntry)[0] : key,
+                        descriptionObject = entryIsObject ? scene[drawingType][key][character] : characterEntry
+
+                    keyObject.character = character
+                    keyObject.descriptionObject = descriptionObject
+
+                } else {
+                    keyObject.descriptionObject = scene[drawingType][key]
+                }
+
+                _tempStore._drawings[drawingType][key].push(keyObject)
+            }
+        })
+
+    })
+}
+
+const _addVerseObjectKeyToLyric = (lyricObject, verseObjectKey) => {
+
+    if (typeof lyricObject === 'object') {
+        lyricObject[verseObjectKey] = true
+        return lyricObject
+
+    } else {
+        return {
+            lyric: lyricObject,
+            [verseObjectKey]: true
+        }
+    }
+}
+
+const _registerAfterTimeKeyFound = (lyric) => {
+    /**
+     * Helper method to register first and last verse objects, after time key
+     * has been found.
+     */
+    if (Array.isArray(lyric)) {
+
+        if (lyric[0][ITALIC]) {
+            _registerAfterTimeKeyFound(lyric[0])
+
+        } else {
+            lyric[0] = _addVerseObjectKeyToLyric(lyric[0], IS_VERSE_BEGINNING_SPAN)
+            lyric[lyric.length - 1] = _addVerseObjectKeyToLyric(lyric[lyric.length - 1], IS_VERSE_ENDING_SPAN)
+        }
+
+    } else if (typeof lyric === 'object') {
+        _registerAfterTimeKeyFound(lyric[ITALIC])
+
+        if (typeof lyric.anchor === 'string') {
+            lyric = _addVerseObjectKeyToLyric(lyric, IS_VERSE_BEGINNING_SPAN)
+            lyric = _addVerseObjectKeyToLyric(lyric, IS_VERSE_ENDING_SPAN)
+        }
+    }
+}
+
+const _registerBeginningAndEndingVerseSpans = (lyric) => {
+    /**
+     * Let verses with portals know their first and last objects, which are
+     * formatted differently in the portal.
+     */
+
+    if (Array.isArray(lyric)) {
+        lyric.forEach(childLyric => {
+            _registerBeginningAndEndingVerseSpans(childLyric)
+        })
+
+    } else if (typeof lyric === 'object') {
+
+        // Only register verses that have a portal.
+        if (typeof lyric.time !== 'undefined' && lyric.verseHasPortal) {
+
+            [LYRIC, LEFT, RIGHT, CENTRE].forEach(lyricKey => {
+                _registerAfterTimeKeyFound(lyric[lyricKey])
+
+                if (typeof lyric[lyricKey] === 'string') {
+                    lyric[lyricKey] = _addVerseObjectKeyToLyric(lyric[lyricKey], IS_VERSE_BEGINNING_SPAN)
+
+                    lyric[lyricKey] = _addVerseObjectKeyToLyric(lyric[lyricKey], IS_VERSE_ENDING_SPAN)
+                }
+            })
+        }
+
+        if (typeof lyric.unitMap !== 'undefined') {
+            _registerBeginningAndEndingVerseSpans(lyric.subStanza)
+        }
+    }
+}
+
+/************
+ * DRAWINGS *
+ ************/
+
+const _finaliseDrawings = (album, drawings) => {
+
+    // Turn actors object into array for easier frontend parsing.
+    const actors = []
+        // backdrops = []
+    let actorsTotalCount = 0,
+        actorsTodoCount = 0
+    //     backdropsTotalCount = 0,
+    //     backdropsTodoCount = 0
+    // //
+    // Object.keys(drawings.backdrops).forEach(backdrop => {
+    //
+    // })
+
+    Object.keys(drawings.actors).forEach(actor => {
+        const roles = drawings.actors[actor],
+            rolesTotalCount = roles.length,
+            characters = {}
+
+        let rolesTodoCount = 0
+
+        roles.forEach(role => {
+
+            const { songIndex,
+                    sceneIndex,
+                    descriptionObject } = role,
+                roleObject = { songIndex,
+                               sceneIndex }
+
+            // This will eventually always be an object.
+            if (typeof descriptionObject === 'object') {
+                roleObject.todo = descriptionObject.todo
+                roleObject.description = descriptionObject.description
+
+                if (roleObject.todo) {
+                    rolesTodoCount++
+                }
+            }
+
+            // Initialise array for each character.
+            if (!characters[role.character]) {
+                characters[role.character] = []
+            }
+
+            characters[role.character].push(roleObject)
+
+            // Let song know its individual todos.
+            if (isNaN(album.songs[songIndex].actorsTodoCount)) {
+                album.songs[songIndex].actorsTodoCount = 0
+                album.songs[songIndex].actorsTotalCount = 0
+            }
+            if (roleObject.todo) {
+                album.songs[songIndex].actorsTodoCount++
+            }
+            album.songs[songIndex].actorsTotalCount++
+
+        })
+
+        actorsTodoCount += rolesTodoCount
+        actorsTotalCount += rolesTotalCount
+
+        actors.push({
+            actor,
+            characters,
+            rolesTodoCount,
+            rolesTotalCount
+        })
+    })
+
+    drawings.actors = actors
+    drawings.actorsTodoCount = actorsTodoCount
+    drawings.actorsTotalCount = actorsTotalCount
+
+    return drawings
+}
+
+const _finaliseDrawingTasks = (song) => {
+
+    // Assume two hours per rough drawing.
+    const hoursPerRoughDrawing = 2,
+        drawingActorsHoursWorked = (song.actorsTotalCount - song.actorsTodoCount) * hoursPerRoughDrawing,
+        drawingActorsHoursTotal = song.actorsTotalCount * hoursPerRoughDrawing
+
+    if (!song.tasks) {
+        song.tasks = []
+    }
+
+    delete song.actorsTodoCount
+    delete song.actorsTotalCount
+
+    song.tasks.push({
+        taskName: 'rough drawings of actors',
+        workedHours: drawingActorsHoursWorked,
+        neededHours: drawingActorsHoursTotal
+    })
+}

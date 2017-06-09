@@ -6,11 +6,11 @@ import { LYRIC_TEXT_KEYS } from '../../../constants/lyrics'
  * CONTAINER *
  *************/
 
-const LyricDotStanzasRow = ({ dotStanzas }) => {
+const LyricDotStanzasRow = ({ adminDotStanzas }) => {
      return (
          <StatRowView
              typeName="dot stanzas count"
-             typeCount={dotStanzas}
+             typeCount={adminDotStanzas}
          />
      )
  }

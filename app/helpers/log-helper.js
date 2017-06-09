@@ -21,7 +21,7 @@ export default {
         if (!copiedSong.logue) {
             copiedSong.lyrics = `lyrics: ${copiedSong.lyrics.length}`
             copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
-            // copiedSong.times = `times: ${copiedSong.times.length}`
+            copiedSong.verseTimes = `verseTimes: ${copiedSong.verseTimes.length}`
         }
 
         // copiedSong.stanzaTimes = `stanzaTimes: ${copiedSong.stanzaTimes.length}`

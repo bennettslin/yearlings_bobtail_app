@@ -1,6 +1,6 @@
 import RawData from './album/yearlings-bobtail'
-import { prepareAlbumData } from './helpers/build-helper'
+import { parseAlbumData } from './helpers/album-helper'
 
 // Restructure raw data to be usable by app.
-const AlbumData = prepareAlbumData(RawData)
+const AlbumData = parseAlbumData(RawData)
 export default AlbumData

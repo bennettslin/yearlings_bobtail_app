@@ -483,7 +483,10 @@ module.exports = {
                         // NOTE: I made "My" capitalised.
                         anchor: `ticklish piglet,`,
                         annotation: {
-                            description: `Perversely, Sita and I were always at our best during the months immediately after getting back together. She got to bask in the knowledge of being the better woman, while I still enjoyed the afterglow of my latest romantic escapade.`
+                            description: `Perversely, Sita and I were always at our best during the months immediately after getting back together. She got to bask in the knowledge of being the better woman, while I still enjoyed the afterglow of my latest romantic escapade.`,
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
                         }
                     },
                     `you'll bounce back to me, giggly, having fully gorged yourself.`
