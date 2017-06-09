@@ -498,45 +498,6 @@ const _expandStanzaTimes = (song) => {
     }
 }
 
-const _addVerseObjectKeyToLyric = (lyricObject, verseObjectKey) => {
-
-    if (typeof lyricObject === 'object') {
-        lyricObject[verseObjectKey] = true
-        return lyricObject
-
-    } else {
-        return {
-            lyric: lyricObject,
-            [verseObjectKey]: true
-        }
-    }
-}
-
-const _registerAfterTimeKeyFound = (lyric) => {
-    /**
-     * Helper method to register first and last verse objects, after time key
-     * has been found.
-     */
-    if (Array.isArray(lyric)) {
-
-        if (lyric[0][ITALIC]) {
-            _registerAfterTimeKeyFound(lyric[0])
-
-        } else {
-            lyric[0] = _addVerseObjectKeyToLyric(lyric[0], IS_VERSE_BEGINNING_SPAN)
-            lyric[lyric.length - 1] = _addVerseObjectKeyToLyric(lyric[lyric.length - 1], IS_VERSE_ENDING_SPAN)
-        }
-
-    } else if (typeof lyric === 'object') {
-        _registerAfterTimeKeyFound(lyric[ITALIC])
-
-        if (typeof lyric.anchor === 'string') {
-            lyric = _addVerseObjectKeyToLyric(lyric, IS_VERSE_BEGINNING_SPAN)
-            lyric = _addVerseObjectKeyToLyric(lyric, IS_VERSE_ENDING_SPAN)
-        }
-    }
-}
-
 const _registerBeginningAndEndingVerseSpans = (lyric) => {
     /**
      * Let verses with portals know their first and last objects, which are
@@ -566,6 +527,45 @@ const _registerBeginningAndEndingVerseSpans = (lyric) => {
 
         if (typeof lyric.unitMap !== 'undefined') {
             _registerBeginningAndEndingVerseSpans(lyric.subStanza)
+        }
+    }
+}
+
+const _registerAfterTimeKeyFound = (lyric) => {
+    /**
+     * Helper method to register first and last verse objects, after time key
+     * has been found.
+     */
+    if (Array.isArray(lyric)) {
+
+        if (lyric[0][ITALIC]) {
+            _registerAfterTimeKeyFound(lyric[0])
+
+        } else {
+            lyric[0] = _addVerseObjectKeyToLyric(lyric[0], IS_VERSE_BEGINNING_SPAN)
+            lyric[lyric.length - 1] = _addVerseObjectKeyToLyric(lyric[lyric.length - 1], IS_VERSE_ENDING_SPAN)
+        }
+
+    } else if (typeof lyric === 'object') {
+        _registerAfterTimeKeyFound(lyric[ITALIC])
+
+        if (typeof lyric.anchor === 'string') {
+            lyric = _addVerseObjectKeyToLyric(lyric, IS_VERSE_BEGINNING_SPAN)
+            lyric = _addVerseObjectKeyToLyric(lyric, IS_VERSE_ENDING_SPAN)
+        }
+    }
+}
+
+const _addVerseObjectKeyToLyric = (lyricObject, verseObjectKey) => {
+
+    if (typeof lyricObject === 'object') {
+        lyricObject[verseObjectKey] = true
+        return lyricObject
+
+    } else {
+        return {
+            lyric: lyricObject,
+            [verseObjectKey]: true
         }
     }
 }

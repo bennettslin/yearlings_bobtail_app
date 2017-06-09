@@ -4,7 +4,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
-import Button from './button/button'
 import MainColumn from './main/main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
@@ -19,12 +18,11 @@ import AnnotationPopup from './annotation/annotation-popup'
 import ScorePopup from './score/score-popup'
 import TitlePopup from './title/title-popup'
 import WikiPopup from './wiki/wiki-popup'
-import { LYRIC_SECTION_EXPAND_KEY } from '../constants/access'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { getIsLogue } from '../helpers/data-helper'
 import { getHiddenLyricColumnKey } from '../helpers/logic-helper'
-import { getIsLyricExpandable, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
+import { getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
 const Live = ({
 
@@ -159,6 +157,7 @@ const Live = ({
             lyricSectionRef,
             handleLyricAnnotationSelect,
             handleLyricColumnSelect,
+            handleLyricSectionExpand,
             handleLyricSectionScroll,
             handleLyricPlay,
             handleLyricVerseSelect,
@@ -170,22 +169,12 @@ const Live = ({
             handleScrollAfterLyricRerender
         },
 
-        lyricExpandButtonChild = getIsLyricExpandable(deviceIndex) ? (
-                <div className="lyric-button-block expand-button-block">
-                    <Button
-                        accessKey={LYRIC_SECTION_EXPAND_KEY}
-                        iconText={isLyricExpanded ? '-' : '+'}
-                        isLarge={true}
-                        handleClick={handleLyricSectionExpand}
-                    />
-                </div>
-            ) : null,
-
         mainColumnProps = {
             isOverlayingAnnotation,
 
             handleCarouselToggle,
             handleDotsSectionToggle,
+            handleLyricSectionExpand,
             handleNavExpand,
             handleNavSongSelect,
             handleNavBookSelect,
@@ -267,13 +256,10 @@ const Live = ({
                         overviewIndex={overviewSongIndex}
                     />
                 }
-                lyricExpandButtonChild={lyricExpandButtonChild}
                 scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
             />
 
-            <LyricColumn {...lyricColumnProps}
-                lyricExpandButtonChild={lyricExpandButtonChild}
-            />
+            <LyricColumn {...lyricColumnProps} />
 
             {
                 <div className="overlay-popup-subfield">
