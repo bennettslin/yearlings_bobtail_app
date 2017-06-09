@@ -20,14 +20,14 @@ export const parseAlbumData = (album) => {
     // Allow helpers to access songs directly.
     _tempStore._songs = album.songs
 
-    _initialPrepareAllSongs(album)
+    _initialPrepareAlbum(album)
 
     _addDestinationPortalLinks(album)
 
     // Add drawings for admin purposes.
     album.drawings = _finaliseDrawings(album, _tempStore._drawings)
 
-    _finalPrepareAllSongs(album)
+    _finalPrepareAlbum(album)
 
     // FIXME: Temporarily add portal links to album for debugging purposes.
     // album.portalLinks = _tempStore._portalLinks
@@ -39,7 +39,7 @@ export const parseAlbumData = (album) => {
  * INITIAL *
  ***********/
 
-const _initialPrepareAllSongs = (album) => {
+const _initialPrepareAlbum = (album) => {
 
     album.songs.forEach((song, songIndex) => {
 
@@ -69,14 +69,14 @@ const _initialPrepareAllSongs = (album) => {
             }
 
             // Parse lyrics.
-            _initialParseLyrics(song)
+            _initialPrepareLyrics(song)
         }
 
         _gatherDrawings(song.scenes, songIndex)
     })
 }
 
-const _initialParseLyrics = (song) => {
+const _initialPrepareLyrics = (song) => {
 
     const { lyrics } = song
 
@@ -178,8 +178,8 @@ const _initialRegisterAnnotation = ({
     }
 
     cards.forEach((card, cardIndex) => {
-        _prepareCard(card, allDotKeys)
-        _getAllDotKeys(card, allDotKeys)
+        _initialPrepareCard(card, allDotKeys)
+        _getDotKeysInAllCards(card, allDotKeys)
         if (_addSourcePortalLink({
             card,
             cardIndex,
@@ -222,10 +222,10 @@ const _finalRegisterAnnotation = ({
 
     if (Array.isArray(cards)) {
         cards.forEach(card => {
-            _prepareCard(card, undefined, true)
+            _finalPrepareCard(card)
         })
     } else {
-        _prepareCard(cards, undefined, true)
+        _finalPrepareCard(cards)
     }
 
     annotation.annotationAnchors = _tempStore._annotationAnchors
@@ -236,15 +236,14 @@ const _finalRegisterAnnotation = ({
     _tempStore._finalAnnotationIndex++
 }
 
-const _prepareCard = (card, dotKeys, finalPassThrough) => {
-    const { description,
-            portalLinks } = card
+const _initialPrepareCard = (card, dotKeys) => {
+    const { description } = card
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
-        const hasWiki = _parseWiki('wiki', description, finalPassThrough)
+        const hasWiki = _initialParseWiki('wiki', description)
 
-        if (hasWiki && !finalPassThrough) {
+        if (hasWiki) {
             // Add wiki anchor index to each anchor with wiki.
             if (!card.dotKeys) {
                 card.dotKeys = {}
@@ -255,8 +254,18 @@ const _prepareCard = (card, dotKeys, finalPassThrough) => {
             dotKeys[REFERENCE] = true
         }
     }
+}
 
-    if (portalLinks && finalPassThrough) {
+const _finalPrepareCard = (card) => {
+    const { description,
+            portalLinks } = card
+
+    if (description) {
+        // This is the wiki key in the song data, *not* the dot key.
+        _finalParseWiki('wiki', description)
+    }
+
+    if (portalLinks) {
         portalLinks.forEach(link => {
             delete link.cardIndex
             _tempStore._annotationAnchors.push(Object.assign({}, link))
@@ -266,7 +275,31 @@ const _prepareCard = (card, dotKeys, finalPassThrough) => {
     }
 }
 
-const _parseWiki = (key, object, finalPassThrough) => {
+const _initialParseWiki = (key, object) => {
+    /**
+     * This method gets called in two places. The first time is simply to check
+     * if there is a wiki key. The second is in the final pass through, to add
+     * the wiki index.
+     */
+
+    if (!object || typeof object !== 'object') {
+        return false
+
+    } else if (Array.isArray(object)) {
+        return object.reduce((keyFound, element) => {
+            return keyFound || _initialParseWiki(key, element)
+        }, false)
+
+    } else {
+        return Object.keys(object).reduce((keyFound, currentKey) => {
+            const hasWiki = !!object[key]
+
+            return keyFound || hasWiki || _initialParseWiki(key, object[currentKey])
+        }, false)
+    }
+}
+
+const _finalParseWiki = (key, object) => {
     /**
      * This method gets called in two places. The first time is simply to check
      * if there is a wiki key. The second is in the final pass through, to add
@@ -279,18 +312,14 @@ const _parseWiki = (key, object, finalPassThrough) => {
     } else if (Array.isArray(object)) {
         return object.reduce((keyFound, element) => {
             // Reversing order so that index gets added if needed.
-            if (finalPassThrough) {
-                return _parseWiki(key, element, finalPassThrough) || keyFound
-            } else {
-                return keyFound || _parseWiki(key, element, finalPassThrough)
-            }
+            return _finalParseWiki(key, element) || keyFound
         }, false)
 
     } else {
         return Object.keys(object).reduce((keyFound, currentKey) => {
             const hasWiki = !!object[key]
 
-            if (finalPassThrough && !object.wikiIndex && typeof object[key] === 'string') {
+            if (!object.wikiIndex && typeof object[key] === 'string') {
 
                 // Popup anchor index is either for portal or wiki.
                 object.wikiIndex = _tempStore._annotationAnchorIndex
@@ -299,12 +328,12 @@ const _parseWiki = (key, object, finalPassThrough) => {
                 delete object[key]
             }
 
-            return keyFound || hasWiki || _parseWiki(key, object[currentKey], finalPassThrough)
+            return keyFound || hasWiki || _finalParseWiki(key, object[currentKey])
         }, false)
     }
 }
 
-const _getAllDotKeys = (card, allDotKeys) => {
+const _getDotKeysInAllCards = (card, allDotKeys) => {
     // Add dot keys to both song and annotation card.
     if (card.dotKeys) {
         Object.keys(card.dotKeys).forEach(dotKey => {
@@ -321,7 +350,7 @@ const _getAllDotKeys = (card, allDotKeys) => {
  * Add wiki and portal indices. These can only be determined after collecting
  * portal links from the entire album.
  */
-const _finalPrepareAllSongs = (album) => {
+const _finalPrepareAlbum = (album) => {
 
     album.songs.forEach((song, songIndex) => {
 
@@ -330,7 +359,7 @@ const _finalPrepareAllSongs = (album) => {
 
             finalRegisterStanzaTypes(song)
 
-            _finalParseLyrics(song)
+            _finalPrepareLyrics(song)
 
             _registerBeginningAndEndingVerseSpans(song.lyrics)
         }
@@ -340,7 +369,7 @@ const _finalPrepareAllSongs = (album) => {
     })
 }
 
-const _finalParseLyrics = (song) => {
+const _finalPrepareLyrics = (song) => {
     const { lyrics } = song
 
     lyrics.forEach(unitArray => {
