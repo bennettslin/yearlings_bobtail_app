@@ -3,14 +3,13 @@
 import { REFERENCE } from '../../constants/dots'
 import { LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, ITALIC, COLUMN, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN, PROPER_NOUN } from '../../constants/lyrics'
 import { adminGatherDrawings, finaliseDrawings, registerDrawingTasks } from './drawings-helper'
-import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes } from './lyrics-helper'
+import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes, finalAddPlaceholderStanzas } from './lyrics-helper'
 import { getIsLogue, getSongTitle, getVerseObject } from '../data-helper'
 import { getFormattedAnnotationTitle } from '../format-helper'
 
 const _tempStore = {
     _wikiIndex: 1,
     _portalLinks: {},
-    _largestStanzaTimesLength: 0,
     _finalAnnotationIndex: 0,
 }
 
@@ -59,13 +58,7 @@ const _initialPrepareAlbum = (album) => {
              * Associate a type and index for each stanza, like verse, chorus,
              * and so forth.
              */
-            initialRegisterStanzaTypes(song)
-
-            // Establish which song has the largest number of stanzas.
-            // TODO: Make this its own method.
-            if (song.stanzaTimes.length > _tempStore._largestStanzaTimesLength) {
-                _tempStore._largestStanzaTimesLength = song.stanzaTimes.length
-            }
+            initialRegisterStanzaTypes(album, song)
 
             // Parse lyrics.
             _initialPrepareLyrics(song)
@@ -364,8 +357,10 @@ const _finalPrepareAlbum = (album) => {
         }
 
         registerDrawingTasks(song)
-        _expandStanzaTimes(song)
+        finalAddPlaceholderStanzas(album, song)
     })
+
+    delete album.largestStanzaTimesLength
 }
 
 const _finalPrepareLyrics = (song) => {
@@ -472,27 +467,6 @@ const _addDestinationPortalLinks = (album) => {
                 })
 
             card.portalLinks = portalLinks
-        })
-    }
-}
-
-
-// FIXME: Can this be taken care of in the view itself?
-const _expandStanzaTimes = (song) => {
-
-    // Include logues.
-    if (!song.stanzaTimes) {
-        song.stanzaTimes = []
-    }
-
-    /**
-     * We want the stanza time bars to animate nicely. As such, the number of
-     * stanza times for each song will be the same.
-     */
-    while (song.stanzaTimes.length < _tempStore._largestStanzaTimesLength) {
-        song.stanzaTimes.push({
-            type: 'placeholder',
-            time: song.totalTime
         })
     }
 }

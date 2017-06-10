@@ -1,9 +1,8 @@
 module.exports = [
-
     {
-        taskName: `Get children out of live manager.`,
+        taskName: `Slider verses are blank`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `Admin can't change songs, probably because of shouldComponentUpdate`,
