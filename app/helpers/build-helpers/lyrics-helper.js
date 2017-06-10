@@ -19,9 +19,9 @@ import { ALBUM_BUILD_KEYS,
  * INITIAL *
  ***********/
 
-export const registerTitle = (song) => {
+export const registerTitle = (songObject) => {
 
-    const { title, lyrics } = song,
+    const { title, lyrics } = songObject,
         { annotation } = title,
         titleObject = {
 
@@ -53,13 +53,13 @@ export const registerTitle = (song) => {
      * method!)
      */
     if (typeof title[ANCHOR] !== 'function') {
-        song.title = title[ANCHOR]
+        songObject.title = title[ANCHOR]
     }
 }
 
-export const registerHasSideStanzas = (song) => {
+export const registerHasSideStanzas = (songObject) => {
 
-    const { lyrics } = song
+    const { lyrics } = songObject
     let songHasSideStanzas = false
 
     lyrics.forEach(unit => {
@@ -85,12 +85,12 @@ export const registerHasSideStanzas = (song) => {
     })
 
     // Tell song it has side stanzas, so ear button can be shown if needed.
-    song[HAS_SIDE_STANZAS] = songHasSideStanzas
+    songObject[HAS_SIDE_STANZAS] = songHasSideStanzas
 }
 
-export const initialRegisterStanzaTypes = (album, song) => {
+export const initialRegisterStanzaTypes = (album, songObject) => {
 
-    const { lyrics } = song,
+    const { lyrics } = songObject,
         stanzaTypeCounters = {},
         stanzaTimes = []
 
@@ -124,28 +124,28 @@ export const initialRegisterStanzaTypes = (album, song) => {
         }
     })
 
-    song.stanzaTypeCounters = stanzaTypeCounters
-    song.stanzaTimes = stanzaTimes
+    songObject.stanzaTypeCounters = stanzaTypeCounters
+    songObject.stanzaTimes = stanzaTimes
 
     // Establish which song on the album has the most stanzas.
-    if (song.stanzaTimes.length > album.largestStanzaTimesLength) {
-        album.largestStanzaTimesLength = song.stanzaTimes.length
+    if (songObject.stanzaTimes.length > album.largestStanzaTimesLength) {
+        album.largestStanzaTimesLength = songObject.stanzaTimes.length
     }
 }
 
-export const registerIsDoublespeaker = (song, verseObject) => {
+export const registerIsDoublespeaker = (songObject, verseObject) => {
 
     // It's a doublespeaker song if it has "left" or "right" keys.
     if (verseObject[LEFT] || verseObject[RIGHT]) {
-        song[IS_DOUBLESPEAKER] = true
+        songObject[IS_DOUBLESPEAKER] = true
     }
 }
 
-export const registerAdminDotStanzas = (song, verseObject) => {
+export const registerAdminDotStanzas = (songObject, verseObject) => {
 
     // For admin purposes.
     if (verseObject[DOT_STANZA]) {
-        song.adminDotStanzas++
+        songObject.adminDotStanzas++
     }
 }
 
@@ -153,10 +153,10 @@ export const registerAdminDotStanzas = (song, verseObject) => {
  * FINAL *
  *********/
 
-export const finalRegisterStanzaTypes = (song) => {
+export const finalRegisterStanzaTypes = (songObject) => {
 
     const { lyrics,
-            stanzaTypeCounters } = song
+            stanzaTypeCounters } = songObject
 
     lyrics.forEach(unitArray => {
 
@@ -174,24 +174,24 @@ export const finalRegisterStanzaTypes = (song) => {
     })
 
     // Not needed after each unit is told its index.
-    delete song.stanzaTypeCounters
+    delete songObject.stanzaTypeCounters
 }
 
-export const finalAddPlaceholderStanzas = (album, song) => {
+export const finalAddPlaceholderStanzas = (album, songObject) => {
 
     // Include logues.
-    if (!song.stanzaTimes) {
-        song.stanzaTimes = []
+    if (!songObject.stanzaTimes) {
+        songObject.stanzaTimes = []
     }
 
     /**
      * We want the stanza time bars to animate nicely. As such, the number of
      * stanza times for each song will be the same.
      */
-    while (song.stanzaTimes.length < album.largestStanzaTimesLength) {
-        song.stanzaTimes.push({
+    while (songObject.stanzaTimes.length < album.largestStanzaTimesLength) {
+        songObject.stanzaTimes.push({
             type: 'placeholder',
-            time: song.totalTime
+            time: songObject.totalTime
         })
     }
 }
@@ -204,7 +204,7 @@ export const recurseToFindAnchors = ({
 
     inVerseWithTimeIndex = -1,
     registerVerseTimes = false,
-    song,
+    songObject,
     verseObject,
     lyric = verseObject,
     textKey,
@@ -219,18 +219,18 @@ export const recurseToFindAnchors = ({
     if (registerVerseTimes && !isNaN(lyric.time)) {
         // All recursed lyrics will know they're nested in verse with time.
 
-        inVerseWithTimeIndex = song.verseIndexCounter
+        inVerseWithTimeIndex = songObject.verseIndexCounter
 
         // Add index to verse object.
-        lyric.verseIndex = song.verseIndexCounter
+        lyric.verseIndex = songObject.verseIndexCounter
 
         // Add most recent annotation index.
-        lyric.lastAnnotationIndex = song.annotations.length
+        lyric.lastAnnotationIndex = songObject.annotations.length
 
         // Add verse time to song times.
-        song.verseTimes.push(lyric.time)
+        songObject.verseTimes.push(lyric.time)
 
-        song.verseIndexCounter++
+        songObject.verseIndexCounter++
     }
 
     // Recurse until object with anchor key is found.
@@ -240,7 +240,7 @@ export const recurseToFindAnchors = ({
             recurseToFindAnchors({
                 inVerseWithTimeIndex,
                 registerVerseTimes,
-                song,
+                songObject,
                 verseObject,
                 lyric: childLyric,
                 textKey,
@@ -253,7 +253,7 @@ export const recurseToFindAnchors = ({
         if (lyric[ANCHOR]) {
             callbackFunction({
                 inVerseWithTimeIndex,
-                song,
+                songObject,
                 verseObject,
                 lyric,
                 textKey
@@ -272,7 +272,7 @@ export const recurseToFindAnchors = ({
                     recurseToFindAnchors({
                         inVerseWithTimeIndex,
                         registerVerseTimes,
-                        song,
+                        songObject,
                         verseObject,
                         lyric: lyric[childTextKey],
                         textKey: (textKey || sideStanzaTextKey || childTextKey),

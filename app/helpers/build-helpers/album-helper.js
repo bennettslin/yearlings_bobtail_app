@@ -39,52 +39,52 @@ export const parseAlbumData = (album) => {
 
 const _initialPrepareAlbum = (album) => {
 
-    album.songs.forEach((song, songIndex) => {
+    album.songs.forEach((songObject, songIndex) => {
 
         if (!getIsLogue(songIndex, album.songs)) {
 
             _tempStore._songIndex = songIndex
 
             // Add title object to lyrics array.
-            registerTitle(song)
+            registerTitle(songObject)
 
             /**
              * Let app know that song has side stanzas. Only applies to "On a
              * Golden Cord" and "Uncanny Valley Boy."
              */
-            registerHasSideStanzas(song)
+            registerHasSideStanzas(songObject)
 
             /**
              * Associate a type and index for each stanza, like verse, chorus,
              * and so forth.
              */
-            initialRegisterStanzaTypes(album, song)
+            initialRegisterStanzaTypes(album, songObject)
 
             // Parse lyrics.
-            _initialPrepareLyrics(song)
+            _initialPrepareLyrics(songObject)
         }
 
-        adminGatherDrawings(album, song.scenes, songIndex)
+        adminGatherDrawings(album, songObject.scenes, songIndex)
     })
 }
 
-const _initialPrepareLyrics = (song) => {
+const _initialPrepareLyrics = (songObject) => {
 
-    const { lyrics } = song
+    const { lyrics } = songObject
 
     // Initialise song.
-    song.adminDotStanzas = 0
-    song.adminPluralCardsCount = 0
-    song.annotations = []
-    song.verseIndexCounter = 0
-    song.verseTimes = []
+    songObject.adminDotStanzas = 0
+    songObject.adminPluralCardsCount = 0
+    songObject.annotations = []
+    songObject.verseIndexCounter = 0
+    songObject.verseTimes = []
 
     lyrics.forEach(unitArray => {
 
         unitArray.forEach(verseObject => {
 
-            // Tell song it is a doublespeaker song
-            registerIsDoublespeaker(song, verseObject)
+            // Tell song it is a doublespeaker song.
+            registerIsDoublespeaker(songObject, verseObject)
 
             /**
              * Recurse until each anchor is found. Initially, we will also
@@ -92,18 +92,18 @@ const _initialPrepareLyrics = (song) => {
              */
             recurseToFindAnchors({
                 registerVerseTimes: true,
-                song,
+                songObject,
                 verseObject,
                 callbackFunction: _initialRegisterAnnotation
             })
 
-            // Tell song its dot stanza count, for admin purposes.
-            registerAdminDotStanzas(song, verseObject)
+            // Tell song. its dot stanza count, for admin purposes.
+            registerAdminDotStanzas(songObject, verseObject)
         })
     })
 
     // Clean up.
-    delete song.verseIndexCounter
+    delete songObject.verseIndexCounter
 }
 
 /**************
@@ -113,7 +113,7 @@ const _initialPrepareLyrics = (song) => {
 const _initialRegisterAnnotation = ({
 
     inVerseWithTimeIndex = -1,
-    song,
+    songObject,
     verseObject,
     lyric,
     textKey
@@ -121,7 +121,7 @@ const _initialRegisterAnnotation = ({
 }) => {
     let cards = lyric.annotation
 
-    const annotationIndex = song.annotations.length + 1,
+    const annotationIndex = songObject.annotations.length + 1,
 
         // Create new annotation object to be known by song.
         annotationObject = {},
@@ -141,7 +141,7 @@ const _initialRegisterAnnotation = ({
 
     // Otherwise, tell it the most recent verse index. For title, this is 0.
     } else {
-        annotationObject.mostRecentVerseIndex = song.verseIndexCounter
+        annotationObject.mostRecentVerseIndex = songObject.verseIndexCounter
     }
 
     // Add formatted title to annotation.
@@ -156,7 +156,7 @@ const _initialRegisterAnnotation = ({
     }
 
     _registerCards({
-        song,
+        songObject,
         verseObject,
         annotationObject,
         cards,
@@ -171,7 +171,7 @@ const _initialRegisterAnnotation = ({
     lyric.dotKeys = allCardDotKeys
 
     // Add annotation object to annotations array.
-    song.annotations.push(annotationObject)
+    songObject.annotations.push(annotationObject)
 
     // Clean up lyric object.
     delete lyric[PROPER_NOUN]
@@ -179,7 +179,7 @@ const _initialRegisterAnnotation = ({
 
 const _registerCards = ({
 
-    song,
+    songObject,
     verseObject,
     annotationObject,
     cards,
@@ -196,7 +196,7 @@ const _registerCards = ({
 
     // For admin purposes, add to count of annotations with plural cards.
     } else {
-        song.adminPluralCardsCount++
+        songObject.adminPluralCardsCount++
     }
 
     cards.forEach((card, cardIndex) => {
@@ -219,12 +219,14 @@ const _registerCards = ({
 }
 
 const _finalRegisterAnnotation = ({
-    song,
+
+    songObject,
     lyric
+
 }) => {
     let cards = lyric.annotation
 
-    const annotation = song.annotations[_tempStore._finalAnnotationIndex]
+    const annotation = songObject.annotations[_tempStore._finalAnnotationIndex]
     _tempStore._annotationAnchorIndex = 1
 
     annotation.annotationAnchors = []
@@ -359,27 +361,27 @@ const _getDotKeysInAllCards = (card, allCardDotKeys) => {
  */
 const _finalPrepareAlbum = (album) => {
 
-    album.songs.forEach((song, songIndex) => {
+    album.songs.forEach((songObject, songIndex) => {
 
         if (!getIsLogue(songIndex, album.songs)) {
             _tempStore._finalAnnotationIndex = 0
 
-            finalRegisterStanzaTypes(song)
+            finalRegisterStanzaTypes(songObject)
 
-            _finalPrepareLyrics(song)
+            _finalPrepareLyrics(songObject)
 
-            _registerBeginningAndEndingVerseSpans(song.lyrics)
+            _registerBeginningAndEndingVerseSpans(songObject.lyrics)
         }
 
-        registerDrawingTasks(song)
-        finalAddPlaceholderStanzas(album, song)
+        registerDrawingTasks(songObject)
+        finalAddPlaceholderStanzas(album, songObject)
     })
 
     delete album.largestStanzaTimesLength
 }
 
-const _finalPrepareLyrics = (song) => {
-    const { lyrics } = song
+const _finalPrepareLyrics = (songObject) => {
+    const { lyrics } = songObject
 
     lyrics.forEach(unitArray => {
 
@@ -387,7 +389,7 @@ const _finalPrepareLyrics = (song) => {
 
             // Recurse until each anchor is found.
             recurseToFindAnchors({
-                song,
+                songObject,
                 verseObject,
                 callbackFunction: _finalRegisterAnnotation
             })
