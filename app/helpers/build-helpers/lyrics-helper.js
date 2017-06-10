@@ -206,7 +206,7 @@ export const recurseToFindAnchors = ({
     registerVerseTimes = false,
     songObject,
     verseObject,
-    lyric = verseObject,
+    lyricObject = verseObject,
     textKey,
     callbackFunction
 
@@ -216,66 +216,66 @@ export const recurseToFindAnchors = ({
      * Only register lyric objects associated with a song time. This is
      * typically the verse object itself, but sometimes it's a sub stanza.
      */
-    if (registerVerseTimes && !isNaN(lyric.time)) {
+    if (registerVerseTimes && !isNaN(lyricObject.time)) {
         // All recursed lyrics will know they're nested in verse with time.
 
         inVerseWithTimeIndex = songObject.verseIndexCounter
 
         // Add index to verse object.
-        lyric.verseIndex = songObject.verseIndexCounter
+        lyricObject.verseIndex = songObject.verseIndexCounter
 
         // Add most recent annotation index.
-        lyric.lastAnnotationIndex = songObject.annotations.length
+        lyricObject.lastAnnotationIndex = songObject.annotations.length
 
         // Add verse time to song times.
-        songObject.verseTimes.push(lyric.time)
+        songObject.verseTimes.push(lyricObject.time)
 
         songObject.verseIndexCounter++
     }
 
     // Recurse until object with anchor key is found.
-    if (Array.isArray(lyric)) {
+    if (Array.isArray(lyricObject)) {
 
-        lyric.forEach(childLyric => {
+        lyricObject.forEach(childObject => {
             recurseToFindAnchors({
                 inVerseWithTimeIndex,
                 registerVerseTimes,
                 songObject,
                 verseObject,
-                lyric: childLyric,
+                lyricObject: childObject,
                 textKey,
                 callbackFunction
             })
         })
 
-    } else if (typeof lyric === 'object') {
+    } else if (typeof lyricObject === 'object') {
 
-        if (lyric[ANCHOR]) {
+        if (lyricObject[ANCHOR]) {
             callbackFunction({
                 inVerseWithTimeIndex,
                 songObject,
                 verseObject,
-                lyric,
+                lyricObject,
                 textKey
             })
 
         } else {
-            ALBUM_BUILD_KEYS.forEach(childTextKey => {
+            ALBUM_BUILD_KEYS.forEach(childKey => {
 
-                if (lyric[childTextKey]) {
+                if (lyricObject[childKey]) {
 
                     // TODO: Not sure what this is doing exactly...
                     let sideStanzaTextKey =
-                        (lyric[LEFT_COLUMN] && LEFT_COLUMN) ||
-                        (lyric[RIGHT_COLUMN] && RIGHT_COLUMN)
+                        (lyricObject[LEFT_COLUMN] && LEFT_COLUMN) ||
+                        (lyricObject[RIGHT_COLUMN] && RIGHT_COLUMN)
 
                     recurseToFindAnchors({
                         inVerseWithTimeIndex,
                         registerVerseTimes,
                         songObject,
                         verseObject,
-                        lyric: lyric[childTextKey],
-                        textKey: (textKey || sideStanzaTextKey || childTextKey),
+                        lyricObject: lyricObject[childKey],
+                        textKey: (textKey || sideStanzaTextKey || childKey),
                         callbackFunction
                     })
                 }

@@ -115,11 +115,11 @@ const _initialRegisterAnnotation = ({
     inVerseWithTimeIndex = -1,
     songObject,
     verseObject,
-    lyric,
+    lyricObject,
     textKey
 
 }) => {
-    let cards = lyric.annotation
+    let cards = lyricObject.annotation
 
     const annotationIndex = songObject.annotations.length + 1,
 
@@ -133,7 +133,7 @@ const _initialRegisterAnnotation = ({
 
     // Tell annotation and anchored lyric the index. 1-based index.
     annotationObject.annotationIndex = annotationIndex
-    lyric.annotationIndex = annotationIndex
+    lyricObject.annotationIndex = annotationIndex
 
     // If in a verse with time, tell annotation its verse index.
     if (inVerseWithTimeIndex > -1) {
@@ -145,7 +145,7 @@ const _initialRegisterAnnotation = ({
     }
 
     // Add formatted title to annotation.
-    annotationObject.title = getFormattedAnnotationTitle(lyric[ANCHOR], lyric[PROPER_NOUN], lyric.keepEndCharacter)
+    annotationObject.title = getFormattedAnnotationTitle(lyricObject[ANCHOR], lyricObject[PROPER_NOUN], lyricObject.keepEndCharacter)
 
     // Let annotation know if it's in a doublespeaker column.
     if (textKey === LEFT || textKey === LEFT_COLUMN) {
@@ -168,13 +168,13 @@ const _initialRegisterAnnotation = ({
 
     // Add dot keys to both anchored lyric and annotation.
     annotationObject.dotKeys = allCardDotKeys
-    lyric.dotKeys = allCardDotKeys
+    lyricObject.dotKeys = allCardDotKeys
 
     // Add annotation object to annotations array.
     songObject.annotations.push(annotationObject)
 
     // Clean up lyric object.
-    delete lyric[PROPER_NOUN]
+    delete lyricObject[PROPER_NOUN]
 }
 
 const _registerCards = ({
@@ -221,10 +221,10 @@ const _registerCards = ({
 const _finalRegisterAnnotation = ({
 
     songObject,
-    lyric
+    lyricObject
 
 }) => {
-    let cards = lyric.annotation
+    let cards = lyricObject.annotation
 
     const annotation = songObject.annotations[_tempStore._finalAnnotationIndex]
     _tempStore._annotationAnchorIndex = 1
@@ -239,8 +239,8 @@ const _finalRegisterAnnotation = ({
         _finalPrepareCard(annotation, cards)
     }
 
-    // Clean up lyric object, now that it's the final pass through.
-    delete lyric.annotation
+    // Clean up object, now that it's the final pass through.
+    delete lyricObject.annotation
 
     _tempStore._finalAnnotationIndex++
 }
