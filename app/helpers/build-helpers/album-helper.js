@@ -119,9 +119,11 @@ const _initialRegisterAnnotation = ({
     textKey
 
 }) => {
-    let cards = lyricObject.annotation
+    // If just a single card, make it an array of one.
+    const cards = Array.isArray(lyricObject.annotation) ?
+            lyricObject.annotation : [lyricObject.annotation],
 
-    const annotationIndex = songObject.annotations.length + 1,
+        annotationIndex = songObject.annotations.length + 1,
 
         // Create new annotation object to be known by song.
         annotationObject = {},
@@ -187,15 +189,8 @@ const _registerCards = ({
 
 }) => {
 
-    /**
-     * Cards may be single annotationObject card or array of cards, so temporarily
-     * make single card an array of one object.
-     */
-    if (!Array.isArray(cards)) {
-        cards = [cards]
-
     // For admin purposes, add to count of annotations with plural cards.
-    } else {
+    if (cards.length > 1) {
         songObject.adminPluralCardsCount++
     }
 
@@ -211,11 +206,6 @@ const _registerCards = ({
             verseObject.verseHasPortal = true
         }
     })
-
-    // Revert array of one object to a single card.
-    if (cards.length === 1) {
-        cards = cards[0]
-    }
 }
 
 const _finalRegisterAnnotation = ({
