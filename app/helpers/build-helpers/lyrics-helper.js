@@ -202,7 +202,7 @@ export const finalAddPlaceholderStanzas = (album, song) => {
 
 export const recurseToFindAnchors = ({
 
-    inVerseWithTime = -1,
+    inVerseWithTimeIndex = -1,
     registerVerseTimes = false,
     song,
     verseObject,
@@ -219,7 +219,7 @@ export const recurseToFindAnchors = ({
     if (registerVerseTimes && !isNaN(lyric.time)) {
         // All recursed lyrics will know they're nested in verse with time.
 
-        inVerseWithTime = lyric.time
+        inVerseWithTimeIndex = song.verseIndexCounter
 
         // Add index to verse object.
         lyric.verseIndex = song.verseIndexCounter
@@ -238,7 +238,7 @@ export const recurseToFindAnchors = ({
 
         lyric.forEach(childLyric => {
             recurseToFindAnchors({
-                inVerseWithTime,
+                inVerseWithTimeIndex,
                 registerVerseTimes,
                 song,
                 verseObject,
@@ -252,7 +252,7 @@ export const recurseToFindAnchors = ({
 
         if (lyric[ANCHOR]) {
             callbackFunction({
-                inVerseWithTime,
+                inVerseWithTimeIndex,
                 song,
                 verseObject,
                 lyric,
@@ -270,7 +270,7 @@ export const recurseToFindAnchors = ({
                         (lyric[RIGHT_COLUMN] && RIGHT_COLUMN)
 
                     recurseToFindAnchors({
-                        inVerseWithTime,
+                        inVerseWithTimeIndex,
                         registerVerseTimes,
                         song,
                         verseObject,

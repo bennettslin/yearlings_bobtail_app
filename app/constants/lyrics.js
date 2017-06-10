@@ -59,7 +59,7 @@ module.exports = {
     // substanza or sideSubstanza type
     RESPONSE: 'response',
 
-    // Temporary.
+    // This is the order by which annotations will be assigned.
     ALBUM_BUILD_KEYS: [
         LYRIC,
         LEFT,
@@ -67,10 +67,10 @@ module.exports = {
         RIGHT,
         ITALIC,
         EMPHASIS,
-        DOT_STANZA,
+        SUB_STANZA,
         TOP_SIDE_STANZA,
         BOTTOM_SIDE_STANZA,
-        SUB_STANZA
+        DOT_STANZA
     ],
 
     /**

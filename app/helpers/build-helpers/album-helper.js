@@ -112,7 +112,7 @@ const _initialPrepareLyrics = (song) => {
 
 const _initialRegisterAnnotation = ({
 
-    inVerseWithTime = -1,
+    inVerseWithTimeIndex = -1,
     song,
     verseObject,
     lyric,
@@ -134,18 +134,16 @@ const _initialRegisterAnnotation = ({
     lyric.annotationIndex = annotationIndex
 
     // If in a verse with time, tell annotation its verse index.
-    // TODO: Is there a better way?
-    if (inVerseWithTime > -1) {
-        annotation.verseIndex = song.verseIndexCounter - 1
+    if (inVerseWithTimeIndex > -1) {
+        annotation.verseIndex = inVerseWithTimeIndex
 
-    // Otherwise, tell it the most recent verse index.
-    // TODO: Is checking title still necessary?
+    // Otherwise, tell it the most recent verse index. For title, this is 0.
     } else {
-        // TODO: Check is number right? And dot stanzas are before side stanzas why?
-        annotation.mostRecentVerseIndex =
-            // If it's the title, set to first verse.
-            song.verseIndexCounter > -1 ? song.verseIndexCounter : 0
+        annotation.mostRecentVerseIndex = song.verseIndexCounter
     }
+
+    // Add formatted title to annotation.
+    annotation.title = getFormattedAnnotationTitle(lyric[ANCHOR], lyric[PROPER_NOUN], lyric.keepEndCharacter)
 
     // Let annotation know if it's in a doublespeaker column.
     if (textKey === LEFT || textKey === LEFT_COLUMN) {
@@ -156,9 +154,6 @@ const _initialRegisterAnnotation = ({
         annotation[COLUMN] = RIGHT
         annotation[COLUMN_INDEX] = 1
     }
-
-    // Add formatted title to annotation.
-    annotation.title = getFormattedAnnotationTitle(lyric[ANCHOR], lyric[PROPER_NOUN], lyric.keepEndCharacter)
 
     // Cards may be single annotation card or array of cards.
 

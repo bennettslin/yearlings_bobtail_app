@@ -919,6 +919,7 @@ class App extends Component {
                     annotationIndex,
                     deviceIndex
                 })
+
             if (!showAnnotationForColumn) {
                 this.selectAnnotation({})
             }
@@ -935,6 +936,16 @@ class App extends Component {
             isLyricExpandable = getIsLyricExpandable(deviceIndex),
             isHeightlessLyricColumn = getIsHeightlessLyricColumn({ deviceIndex, windowHeight, windowWidth }),
             showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, deviceIndex)
+
+        /**
+         * Deselect selected annotation if not in new shown column. Do it here,
+         * before we tell Redux to update the prop.
+         */
+        if (showOneOfTwoLyricColumns && !this.props.showOneOfTwoLyricColumns) {
+            this._deselectAnnotationIfSelected({
+                deviceIndex
+            })
+        }
 
         this.props.setDeviceIndex(deviceIndex)
         this.props.setWindowHeight(windowHeight)
@@ -969,13 +980,6 @@ class App extends Component {
         // Force collapse of score in state if not expandable.
         if (!getIsScoreExpandable(deviceIndex)) {
             this.selectScore(false)
-        }
-
-        // Deselect selected annotation if not in new shown column.
-        if (showOneOfTwoLyricColumns && !this.props.showOneOfTwoLyricColumns) {
-            this._deselectAnnotationIfSelected({
-                deviceIndex
-            })
         }
     }
 
