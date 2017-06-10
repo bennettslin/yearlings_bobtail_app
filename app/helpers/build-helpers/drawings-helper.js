@@ -129,7 +129,7 @@ export const adminFinaliseDrawings = (album) => {
 }
 
 
-export const registerDrawingTasks = (song) => {
+export const adminRegisterDrawingTasks = (song) => {
 
     // Assume two hours per rough drawing.
     const hoursPerRoughDrawing = 2,

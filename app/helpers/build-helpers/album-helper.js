@@ -1,8 +1,8 @@
 // Parse album data for build.
 
-import { LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, ITALIC, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN, PROPER_NOUN } from '../../constants/lyrics'
-import { registerCards, addDestinationPortalLinks } from './annotations-helper'
-import { adminGatherDrawings, adminFinaliseDrawings, registerDrawingTasks } from './drawings-helper'
+import { LEFT, RIGHT, ANCHOR, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, PROPER_NOUN } from '../../constants/lyrics'
+import { registerCards, addDestinationPortalLinks, registerBeginningAndEndingVerseSpans } from './annotations-helper'
+import { adminGatherDrawings, adminFinaliseDrawings, adminRegisterDrawingTasks } from './drawings-helper'
 import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes, finalAddPlaceholderStanzas } from './lyrics-helper'
 import { getIsLogue } from '../data-helper'
 import { getFormattedAnnotationTitle } from '../format-helper'
@@ -179,6 +179,7 @@ const _initialRegisterAnnotation = ({
 
     // Clean up lyric object.
     delete lyricObject[PROPER_NOUN]
+    delete lyricObject.annotation
 }
 
 /*********
@@ -202,13 +203,14 @@ const _finalPrepareAlbum = (albumObject) => {
              */
             _finalPrepareLyrics(songObject)
 
-            _registerBeginningAndEndingVerseSpans(songObject.lyrics)
+            // For each verse in a portal, tell portal how to format it.
+            registerBeginningAndEndingVerseSpans(songObject.lyrics)
 
             // Clean up.
             delete songObject.tempFinalAnnotationIndex
         }
 
-        registerDrawingTasks(songObject)
+        adminRegisterDrawingTasks(songObject)
         finalAddPlaceholderStanzas(albumObject, songObject)
     })
 
@@ -234,8 +236,7 @@ const _finalPrepareLyrics = (songObject) => {
 
 const _finalRegisterAnnotation = ({
 
-    songObject,
-    lyricObject
+    songObject
 
 }) => {
 
@@ -249,9 +250,6 @@ const _finalRegisterAnnotation = ({
     cards.forEach(cardObject => {
         _finalPrepareCard(annotationObject, cardObject)
     })
-
-    // Clean up object, now that it's the final pass through.
-    delete lyricObject.annotation
 
     songObject.tempFinalAnnotationIndex++
 }
@@ -276,12 +274,8 @@ const _finalPrepareCard = (annotationObject, cardObject) => {
 }
 
 const _finalParseWiki = (annotationObject, key, entity) => {
-    /**
-     * This method gets called in two places. The first time is simply to check
-     * if there is a wiki key. The second is in the final pass through, to add
-     * the wiki index.
-     */
 
+    // Add the wiki index.
     if (!entity || typeof entity !== 'object') {
         return false
 
@@ -306,77 +300,5 @@ const _finalParseWiki = (annotationObject, key, entity) => {
 
             return keyFound || hasWiki || _finalParseWiki(annotationObject, key, entity[currentKey])
         }, false)
-    }
-}
-
-const _registerBeginningAndEndingVerseSpans = (lyricEntity) => {
-    /**
-     * Let verses with portals know their first and last objects, which are
-     * formatted differently in the portal.
-     */
-
-    if (Array.isArray(lyricEntity)) {
-        lyricEntity.forEach(childLyric => {
-            _registerBeginningAndEndingVerseSpans(childLyric)
-        })
-
-    } else if (typeof lyricEntity === 'object') {
-
-        // Only register verses that have a portal.
-        if (lyricEntity.verseHasPortal) {
-
-            [LYRIC, LEFT, RIGHT, CENTRE].forEach(lyricKey => {
-                _registerAfterTimeKeyFound(lyricEntity[lyricKey])
-
-                if (typeof lyricEntity[lyricKey] === 'string') {
-                    lyricEntity[lyricKey] = _addVerseObjectKeyToLyric(lyricEntity[lyricKey], IS_VERSE_BEGINNING_SPAN)
-
-                    lyricEntity[lyricKey] = _addVerseObjectKeyToLyric(lyricEntity[lyricKey], IS_VERSE_ENDING_SPAN)
-                }
-            })
-        }
-
-        if (typeof lyricEntity.unitMap !== 'undefined') {
-            _registerBeginningAndEndingVerseSpans(lyricEntity.subStanza)
-        }
-    }
-}
-
-const _registerAfterTimeKeyFound = (lyricEntity) => {
-    /**
-     * Helper method to register first and last verse objects, after time key
-     * has been found.
-     */
-    if (Array.isArray(lyricEntity)) {
-
-        if (lyricEntity[0][ITALIC]) {
-            _registerAfterTimeKeyFound(lyricEntity[0])
-
-        } else {
-            lyricEntity[0] = _addVerseObjectKeyToLyric(lyricEntity[0], IS_VERSE_BEGINNING_SPAN)
-            lyricEntity[lyricEntity.length - 1] = _addVerseObjectKeyToLyric(lyricEntity[lyricEntity.length - 1], IS_VERSE_ENDING_SPAN)
-        }
-
-    } else if (typeof lyricEntity === 'object') {
-        _registerAfterTimeKeyFound(lyricEntity[ITALIC])
-
-        if (typeof lyricEntity[ANCHOR] === 'string') {
-            lyricEntity = _addVerseObjectKeyToLyric(lyricEntity, IS_VERSE_BEGINNING_SPAN)
-            lyricEntity = _addVerseObjectKeyToLyric(lyricEntity, IS_VERSE_ENDING_SPAN)
-        }
-    }
-}
-
-const _addVerseObjectKeyToLyric = (lyricEntity, verseObjectKey) => {
-
-    if (typeof lyricEntity === 'object') {
-        lyricEntity[verseObjectKey] = true
-        return lyricEntity
-
-    } else {
-        return {
-            lyric: lyricEntity,
-            [verseObjectKey]: true
-        }
     }
 }
