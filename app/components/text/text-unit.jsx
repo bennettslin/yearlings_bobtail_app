@@ -8,59 +8,59 @@ import TextSpan from './text-span'
 
 const TextUnit = ({
 
-    text,
+    text: textEntity,
 
 ...other }) => {
 
     // It's a text span.
-    if (typeof text === 'string') {
+    if (typeof textEntity === 'string') {
         return (
             <TextSpan {...other}
-                text={text}
+                text={textEntity}
             />
         )
 
-    } else if (typeof text === 'object') {
+    } else if (typeof textEntity === 'object') {
 
         // Needed for first and last verse object in portal.
-        if (text.lyric) {
+        if (textEntity.lyric) {
             return (
                 <span>
                     <TextBlock {...other}
-                        text={text.lyric}
-                        isVerseBeginningSpan={text.isVerseBeginningSpan}
-                        isVerseEndingSpan={text.isVerseEndingSpan}
+                        text={textEntity.lyric}
+                        isVerseBeginningSpan={textEntity.isVerseBeginningSpan}
+                        isVerseEndingSpan={textEntity.isVerseEndingSpan}
                     />
                 </span>
             )
 
-        } else if (text.italic) {
+        } else if (textEntity.italic) {
             return (
                 <i>
                     <TextBlock {...other}
-                        text={text.italic}
+                        text={textEntity.italic}
                     />
                 </i>
             )
 
-        } else if (text.emphasis) {
+        } else if (textEntity.emphasis) {
             return (
                 <em>
                     <TextBlock {...other}
-                        text={text.emphasis}
+                        text={textEntity.emphasis}
                     />
                 </em>
             )
 
-        } else if (text.anchor) {
+        } else if (textEntity.anchor) {
             return (other.inVerseBar ?
                 <TextBlock {...other}
-                    text={text.anchor}
+                    text={textEntity.anchor}
                 /> :
                 <TextAnchorBlock {...other}
-                    text={text}
-                    isVerseBeginningSpan={text.isVerseBeginningSpan}
-                    isVerseEndingSpan={text.isVerseEndingSpan}
+                    text={textEntity}
+                    isVerseBeginningSpan={textEntity.isVerseBeginningSpan}
+                    isVerseEndingSpan={textEntity.isVerseEndingSpan}
                 />
             )
         }

@@ -196,10 +196,10 @@ class AccessManager extends Component {
                     annotationObject.annotationAnchors &&
                     annotationObject.annotationAnchors.length) {
 
-                    const annotationAnchorObject = annotationObject.annotationAnchors[accessedAnnotationAnchorIndex - 1]
+                    const annotationAnchorEntity = annotationObject.annotationAnchors[accessedAnnotationAnchorIndex - 1]
 
                     // It's a wiki anchor.
-                    if (typeof annotationAnchorObject === 'string') {
+                    if (typeof annotationAnchorEntity === 'string') {
                         this.props.handleAnnotationWikiSelect(e, accessedAnnotationAnchorIndex)
 
                     // It's a portal.
@@ -207,7 +207,7 @@ class AccessManager extends Component {
                         const { songIndex,
                                 annotationIndex,
                                 verseIndex,
-                                columnIndex } = annotationAnchorObject
+                                columnIndex } = annotationAnchorEntity
 
                         keyWasRegistered = this.props.handleAnnotationPortalSelect(
                             e,

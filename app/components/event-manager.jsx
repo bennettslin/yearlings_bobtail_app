@@ -609,7 +609,7 @@ class EventManager extends Component {
     _focusBody(newAdminIndex) {
         const { selectedAdminIndex,
                 isLogue } = this.props,
-            doFocusAdmin = typeof newAdminIndex !== 'undefined' ?
+            doFocusAdmin = isNaN(newAdminIndex) ?
                 newAdminIndex : selectedAdminIndex
 
         if (doFocusAdmin || isLogue) {

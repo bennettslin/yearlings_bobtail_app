@@ -23,7 +23,7 @@ export const getFormattedAnnotationTitle = (anchor, properNoun, keepEndCharacter
     let title = anchor
 
     // Convert from object if necessary.
-    if (typeof title === 'object') {
+    if (typeof anchor === 'object') {
         title = _getStringFromObject(title)
     }
 

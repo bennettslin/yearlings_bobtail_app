@@ -22,19 +22,19 @@ export const getComponentShouldUpdate = ({
 
     // Loop only until a mismatch is found.
     while (counter < updatingPropsArray.length) {
-        const updatingKey = updatingPropsArray[counter]
+        const updatingKeyEntity = updatingPropsArray[counter]
 
-        if (typeof updatingKey === 'string') {
-            const propsValue = props[updatingKey],
-                nextPropsValue = nextProps[updatingKey]
+        if (typeof updatingKeyEntity === 'string') {
+            const updatingValueEntity = props[updatingKeyEntity],
+                nextPropsValue = nextProps[updatingKeyEntity]
 
             // If object, compare first level of values.
-            if (typeof propsValue === 'object') {
-                return !getSetsAreSame(propsValue, nextPropsValue)
+            if (typeof updatingValueEntity === 'object') {
+                return !getSetsAreSame(updatingValueEntity, nextPropsValue)
 
             } else {
                 // Mismatch, so update!
-                if (propsValue !== nextPropsValue) {
+                if (updatingValueEntity !== nextPropsValue) {
                     return true
                 }
             }
@@ -44,7 +44,7 @@ export const getComponentShouldUpdate = ({
          */
         } else {
             const { onlyIfTrueInNextProps,
-                    subUpdatingKey } = updatingKey
+                    subUpdatingKey } = updatingKeyEntity
 
             if (nextProps[onlyIfTrueInNextProps]) {
                 // Mismatch, so update!

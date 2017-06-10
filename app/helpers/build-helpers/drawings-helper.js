@@ -31,16 +31,16 @@ export const adminGatherDrawings = (album, scenes, songIndex) => {
                      * If actor and character are the same, the entry will be a
                      * string. If not, the entry will be an object.
                      */
-                    const characterEntry = scene[drawingType][key],
-                        entryIsObject = typeof characterEntry === 'object' && !characterEntry.description,
-                        character = entryIsObject ? Object.keys(characterEntry)[0] : key,
-                        descriptionObject = entryIsObject ? scene[drawingType][key][character] : characterEntry
+                    const characterEntity = scene[drawingType][key],
+                        entityIsObject = typeof characterEntity === 'object' && !characterEntity.description,
+                        character = entityIsObject ? Object.keys(characterEntity)[0] : key,
+                        descriptionEntity = entityIsObject ? scene[drawingType][key][character] : characterEntity
 
                     keyObject.character = character
-                    keyObject.descriptionObject = descriptionObject
+                    keyObject.descriptionEntity = descriptionEntity
 
                 } else {
-                    keyObject.descriptionObject = scene[drawingType][key]
+                    keyObject.descriptionEntity = scene[drawingType][key]
                 }
 
                 album._drawings[drawingType][key].push(keyObject)
@@ -75,14 +75,14 @@ export const finaliseDrawings = (album) => {
 
             const { songIndex,
                     sceneIndex,
-                    descriptionObject } = role,
+                    descriptionEntity } = role,
                 roleObject = { songIndex,
                                sceneIndex }
 
             // This will eventually always be an object.
-            if (typeof descriptionObject === 'object') {
-                roleObject.todo = descriptionObject.todo
-                roleObject.description = descriptionObject.description
+            if (typeof descriptionEntity === 'object') {
+                roleObject.todo = descriptionEntity.todo
+                roleObject.description = descriptionEntity.description
 
                 if (roleObject.todo) {
                     rolesTodoCount++

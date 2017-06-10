@@ -500,7 +500,7 @@ const _registerBeginningAndEndingVerseSpans = (lyricEntity) => {
     } else if (typeof lyricEntity === 'object') {
 
         // Only register verses that have a portal.
-        if (typeof lyricEntity.time !== 'undefined' && lyricEntity.verseHasPortal) {
+        if (!isNaN(lyricEntity.time) && lyricEntity.verseHasPortal) {
 
             [LYRIC, LEFT, RIGHT, CENTRE].forEach(lyricKey => {
                 _registerAfterTimeKeyFound(lyricEntity[lyricKey])

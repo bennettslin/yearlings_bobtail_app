@@ -83,7 +83,7 @@ export const getAnnotationIndexForDirection = ({
              * This gets called upon initial load and upon deselecting a dot, so
              * allow for the possibility that we don't need to change the index.
              */
-            if (typeof direction === 'undefined') {
+            if (isNaN(direction)) {
                 direction = 0
 
             // But if this is the second time around, then begin incrementing.
@@ -367,7 +367,7 @@ export const getAnnotationAnchorIndexForDirection = ({
         while (counter < annotationAnchorsLength) {
 
             // If no direction given, start at first index...
-            if (typeof direction === 'undefined') {
+            if (isNaN(direction)) {
                 direction = 0
 
             // ... then proceed in forward direction.

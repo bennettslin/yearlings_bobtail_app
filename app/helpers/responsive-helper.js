@@ -29,10 +29,8 @@ export const resizeWindow = (target = window) => {
     let innerWidth = target.innerWidth,
         deviceIndex = 0
 
-    if (typeof presentIndex === 'undefined') {
-        while (deviceIndex < DEVICE_OBJECTS.length - 1 && innerWidth > DEVICE_OBJECTS[deviceIndex].maxWidth) {
-            deviceIndex++
-        }
+    while (deviceIndex < DEVICE_OBJECTS.length - 1 && innerWidth > DEVICE_OBJECTS[deviceIndex].maxWidth) {
+        deviceIndex++
     }
 
     newState.deviceIndex = deviceIndex
