@@ -122,59 +122,91 @@ const _initialRegisterAnnotation = ({
     let cards = lyric.annotation
 
     const annotationIndex = song.annotations.length + 1,
-        annotation = {},
-        allDotKeys = {}
+
+        // Create new annotation object to be known by song.
+        annotationObject = {},
+        allCardDotKeys = {}
 
     // Tell verse object its annotation anchors.
     verseObject.currentAnnotationIndices = verseObject.currentAnnotationIndices || []
     verseObject.currentAnnotationIndices.push(annotationIndex)
 
     // Tell annotation and anchored lyric the index. 1-based index.
-    annotation.annotationIndex = annotationIndex
+    annotationObject.annotationIndex = annotationIndex
     lyric.annotationIndex = annotationIndex
 
     // If in a verse with time, tell annotation its verse index.
     if (inVerseWithTimeIndex > -1) {
-        annotation.verseIndex = inVerseWithTimeIndex
+        annotationObject.verseIndex = inVerseWithTimeIndex
 
     // Otherwise, tell it the most recent verse index. For title, this is 0.
     } else {
-        annotation.mostRecentVerseIndex = song.verseIndexCounter
+        annotationObject.mostRecentVerseIndex = song.verseIndexCounter
     }
 
     // Add formatted title to annotation.
-    annotation.title = getFormattedAnnotationTitle(lyric[ANCHOR], lyric[PROPER_NOUN], lyric.keepEndCharacter)
+    annotationObject.title = getFormattedAnnotationTitle(lyric[ANCHOR], lyric[PROPER_NOUN], lyric.keepEndCharacter)
 
     // Let annotation know if it's in a doublespeaker column.
     if (textKey === LEFT || textKey === LEFT_COLUMN) {
-        annotation[COLUMN_INDEX] = 0
+        annotationObject[COLUMN_INDEX] = 0
 
     } else if (textKey === RIGHT || textKey === RIGHT_COLUMN) {
-        annotation[COLUMN_INDEX] = 1
+        annotationObject[COLUMN_INDEX] = 1
     }
 
-    // Cards may be single annotation card or array of cards.
+    _registerCards({
+        song,
+        verseObject,
+        annotationObject,
+        cards,
+        allCardDotKeys
+    })
 
-    // Temporarily make single card an array of one object.
+    // Let annotation object know its cards.
+    annotationObject.cards = cards
+
+    // Add dot keys to both anchored lyric and annotation.
+    annotationObject.dotKeys = allCardDotKeys
+    lyric.dotKeys = allCardDotKeys
+
+    // Add annotation object to annotations array.
+    song.annotations.push(annotationObject)
+
+    // Clean up lyric object.
+    delete lyric[PROPER_NOUN]
+}
+
+const _registerCards = ({
+
+    song,
+    verseObject,
+    annotationObject,
+    cards,
+    allCardDotKeys
+
+}) => {
+
+    /**
+     * Cards may be single annotationObject card or array of cards, so temporarily
+     * make single card an array of one object.
+     */
     if (!Array.isArray(cards)) {
         cards = [cards]
 
-    /**
-     * Or else add to count of annotations with plural cards, for admin
-     * purposes.
-     */
+    // For admin purposes, add to count of annotations with plural cards.
     } else {
         song.adminPluralCardsCount++
     }
 
     cards.forEach((card, cardIndex) => {
-        _initialPrepareCard(card, allDotKeys)
-        _getDotKeysInAllCards(card, allDotKeys)
+        _initialPrepareCard(card, allCardDotKeys)
+        _getDotKeysInAllCards(card, allCardDotKeys)
         if (_addSourcePortalLink({
             card,
             cardIndex,
-            dotKeys: allDotKeys,
-            annotation
+            dotKeys: allCardDotKeys,
+            annotation: annotationObject
         })) {
             verseObject.verseHasPortal = true
         }
@@ -184,24 +216,11 @@ const _initialRegisterAnnotation = ({
     if (cards.length === 1) {
         cards = cards[0]
     }
-
-    // Add dot keys to both anchored lyric and annotation.
-    annotation.cards = cards
-    annotation.dotKeys = allDotKeys
-    lyric.dotKeys = allDotKeys
-
-    // Add annotation object to annotations array.
-    song.annotations.push(annotation)
-
-    // Clean up lyric object.
-    delete lyric[PROPER_NOUN]
 }
 
 const _finalRegisterAnnotation = ({
-
     song,
     lyric
-
 }) => {
     let cards = lyric.annotation
 
@@ -321,11 +340,11 @@ const _finalParseWiki = (annotation, key, object) => {
     }
 }
 
-const _getDotKeysInAllCards = (card, allDotKeys) => {
+const _getDotKeysInAllCards = (card, allCardDotKeys) => {
     // Add dot keys to both song and annotation card.
     if (card.dotKeys) {
         Object.keys(card.dotKeys).forEach(dotKey => {
-            allDotKeys[dotKey] = true
+            allCardDotKeys[dotKey] = true
         })
     }
 }
