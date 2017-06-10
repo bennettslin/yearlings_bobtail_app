@@ -134,11 +134,14 @@ const _initialRegisterAnnotation = ({
     lyric.annotationIndex = annotationIndex
 
     // If in a verse with time, tell annotation its verse index.
+    // TODO: Is there a better way?
     if (inVerseWithTime > -1) {
         annotation.verseIndex = song.verseIndexCounter - 1
 
     // Otherwise, tell it the most recent verse index.
+    // TODO: Is checking title still necessary?
     } else {
+        // TODO: Check is number right? And dot stanzas are before side stanzas why?
         annotation.mostRecentVerseIndex =
             // If it's the title, set to first verse.
             song.verseIndexCounter > -1 ? song.verseIndexCounter : 0

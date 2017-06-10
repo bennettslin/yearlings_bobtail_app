@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Show all state in admin component.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Slider verses are blank`,
         workedHours: 0,
         neededHours: 1
