@@ -152,14 +152,14 @@ class App extends Component {
      * ACCESS *
      **********/
 
-    toggleAccess(selectedAccessIndex = (this.props.selectedAccessIndex + 1) % 2) {
+    toggleAccess(selectedAccessValue = (this.props.selectedAccessIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
-        if (typeof selectedAccessIndex === 'boolean') {
-            selectedAccessIndex = selectedAccessIndex ? 1 : 0
+        if (typeof selectedAccessValue === 'boolean') {
+            selectedAccessValue = selectedAccessValue ? 1 : 0
         }
 
-        this.props.selectAccessIndex(selectedAccessIndex)
+        this.props.selectAccessIndex(selectedAccessValue)
     }
 
     accessAnnotation(accessedAnnotationIndex) {
@@ -285,7 +285,7 @@ class App extends Component {
      * CAROUSEL *
      ************/
 
-    selectCarousel(selectedCarouselIndex =
+    selectCarousel(selectedCarouselValue =
         (this.props.selectedCarouselIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
@@ -294,8 +294,8 @@ class App extends Component {
             return false
         }
 
-        if (typeof selectedCarouselIndex === 'boolean') {
-            selectedCarouselIndex = selectedCarouselIndex ? 1 : 0
+        if (typeof selectedCarouselValue === 'boolean') {
+            selectedCarouselValue = selectedCarouselValue ? 1 : 0
         }
 
         /**
@@ -309,13 +309,13 @@ class App extends Component {
                 return false
 
             } else {
-                selectedCarouselIndex = 0
+                selectedCarouselValue = 0
             }
         }
 
-        this.props.selectCarouselIndex(selectedCarouselIndex)
+        this.props.selectCarouselIndex(selectedCarouselValue)
 
-        if (!selectedCarouselIndex) {
+        if (!selectedCarouselValue) {
             this.props.setCarouselAnnotationIndex(0)
         }
 
@@ -340,7 +340,7 @@ class App extends Component {
      * DOTS *
      ********/
 
-    selectDotsExpand(selectedDotsIndex =
+    selectDotsExpand(selectedDotsValue =
         (this.props.selectedDotsIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
@@ -349,15 +349,15 @@ class App extends Component {
             return false
         }
 
-        if (typeof selectedDotsIndex === 'boolean') {
-            selectedDotsIndex = selectedDotsIndex ? 1 : 0
+        if (typeof selectedDotsValue === 'boolean') {
+            selectedDotsValue = selectedDotsValue ? 1 : 0
         }
 
         /**
          * If closing dots section, get accessed annotation index because it
          * might have changed.
          */
-        if (!selectedDotsIndex) {
+        if (!selectedDotsValue) {
             this.props.accessAnnotationIndex(
                 getAnnotationIndexForVerseIndex({
                     deviceIndex: this.props.deviceIndex,
@@ -369,7 +369,7 @@ class App extends Component {
             )
         }
 
-        this.props.selectDotsIndex(selectedDotsIndex)
+        this.props.selectDotsIndex(selectedDotsValue)
         return true
     }
 
@@ -458,7 +458,7 @@ class App extends Component {
      * NAV *
      *******/
 
-    selectNavExpand(selectedNavIndex = (this.props.selectedNavIndex + 1) % 2) {
+    selectNavExpand(selectedNavValue = (this.props.selectedNavIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
         // Ignore this call if it's a hidden nav.
@@ -466,21 +466,21 @@ class App extends Component {
             return false
         }
 
-        if (typeof selectedNavIndex === 'boolean') {
-            selectedNavIndex = selectedNavIndex ? 1 : 0
+        if (typeof selectedNavValue === 'boolean') {
+            selectedNavValue = selectedNavValue ? 1 : 0
         }
 
         // Reset accessed song index and book column upon nav expand.
-        if (selectedNavIndex) {
+        if (selectedNavValue) {
             this.accessNavSong(this.props.selectedSongIndex)
 
             this.selectBookColumn({
                 resetToDefault: true,
-                selectedNavIndex
+                selectedNavValue
             })
         }
 
-        this.props.selectNavIndex(selectedNavIndex)
+        this.props.selectNavIndex(selectedNavValue)
         return true
     }
 
@@ -658,7 +658,7 @@ class App extends Component {
      * SCORE *
      *********/
 
-    selectScore(selectedScoreIndex =
+    selectScore(selectedScoreValue =
         (this.props.selectedScoreIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
@@ -667,8 +667,8 @@ class App extends Component {
             return false
         }
 
-        if (typeof selectedScoreIndex === 'boolean') {
-            selectedScoreIndex = selectedScoreIndex ? 1 : 0
+        if (typeof selectedScoreValue === 'boolean') {
+            selectedScoreValue = selectedScoreValue ? 1 : 0
         }
 
         /**
@@ -680,11 +680,11 @@ class App extends Component {
                 return false
 
             } else {
-                selectedScoreIndex = 0
+                selectedScoreValue = 0
             }
         }
 
-        this.props.selectScoreIndex(selectedScoreIndex)
+        this.props.selectScoreIndex(selectedScoreValue)
         return true
     }
 
@@ -704,15 +704,15 @@ class App extends Component {
      * TITLE *
      *********/
 
-    selectTitle(selectedTitleIndex =
+    selectTitle(selectedTitleValue =
         (this.props.selectedTitleIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
-        if (typeof selectedTitleIndex === 'boolean') {
-            selectedTitleIndex = selectedTitleIndex ? 1 : 0
+        if (typeof selectedTitleValue === 'boolean') {
+            selectedTitleValue = selectedTitleValue ? 1 : 0
         }
 
-        this.props.selectTitleIndex(selectedTitleIndex)
+        this.props.selectTitleIndex(selectedTitleValue)
         return true
     }
 
