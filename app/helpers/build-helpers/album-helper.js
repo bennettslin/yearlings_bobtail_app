@@ -1,15 +1,11 @@
 // Parse album data for build.
 
 import { LEFT, RIGHT, ANCHOR, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, PROPER_NOUN } from '../../constants/lyrics'
-import { registerCards, addDestinationPortalLinks, registerBeginningAndEndingVerseSpans } from './annotations-helper'
+import { registerCards, addDestinationPortalLinks, finalPrepareCard, registerBeginningAndEndingVerseSpans } from './annotations-helper'
 import { adminGatherDrawings, adminFinaliseDrawings, adminRegisterDrawingTasks } from './drawings-helper'
 import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes, finalAddPlaceholderStanzas } from './lyrics-helper'
 import { getIsLogue } from '../data-helper'
 import { getFormattedAnnotationTitle } from '../format-helper'
-
-const _tempStore = {
-    _wikiIndex: 1,
-}
 
 export const parseAlbumData = (albumObject) => {
 
@@ -240,65 +236,19 @@ const _finalRegisterAnnotation = ({
 
 }) => {
 
-    // TODO: Get annotation through data helper.
     const annotationObject = songObject.annotations[songObject.tempFinalAnnotationIndex]
-    _tempStore._annotationAnchorIndex = 1
+
+    annotationObject.tempAnnotationAnchorIndex = 1
 
     annotationObject.annotationAnchors = []
     let cards = annotationObject.cards
 
     cards.forEach(cardObject => {
-        _finalPrepareCard(annotationObject, cardObject)
+        finalPrepareCard(annotationObject, cardObject)
     })
 
     songObject.tempFinalAnnotationIndex++
-}
 
-const _finalPrepareCard = (annotationObject, cardObject) => {
-    const { description,
-            portalLinks } = cardObject
-
-    if (description) {
-        // This is the wiki key in the song data, *not* the dot key.
-        _finalParseWiki(annotationObject, 'wiki', description)
-    }
-
-    if (portalLinks) {
-        portalLinks.forEach(link => {
-            delete link.cardIndex
-            annotationObject.annotationAnchors.push(Object.assign({}, link))
-            link.portalIndex = _tempStore._annotationAnchorIndex
-            _tempStore._annotationAnchorIndex++
-        })
-    }
-}
-
-const _finalParseWiki = (annotationObject, key, entity) => {
-
-    // Add the wiki index.
-    if (!entity || typeof entity !== 'object') {
-        return false
-
-    } else if (Array.isArray(entity)) {
-        return entity.reduce((keyFound, element) => {
-            // Reversing order so that index gets added if needed.
-            return _finalParseWiki(annotationObject, key, element) || keyFound
-        }, false)
-
-    } else {
-        return Object.keys(entity).reduce((keyFound, currentKey) => {
-            const hasWiki = !!entity[key]
-
-            if (!entity.wikiIndex && typeof entity[key] === 'string') {
-
-                // Popup anchor index is either for portal or wiki.
-                entity.wikiIndex = _tempStore._annotationAnchorIndex
-                _tempStore._annotationAnchorIndex++
-                annotationObject.annotationAnchors.push(entity[key])
-                delete entity[key]
-            }
-
-            return keyFound || hasWiki || _finalParseWiki(annotationObject, key, entity[currentKey])
-        }, false)
-    }
+    // Clean up.
+    delete annotationObject.tempAnnotationAnchorIndex
 }

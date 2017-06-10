@@ -4,6 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import TextAnchor from './text-anchor'
+import { WIKI_INDEX } from '../../constants/lyrics'
 
 const TextAnchorBlock = ({
 
@@ -19,7 +20,7 @@ const TextAnchorBlock = ({
             anchor,
             todo,
             dotKeys: annotationDotKeys,
-            wikiIndex } = text,
+            [WIKI_INDEX]: wikiIndex } = text,
 
         isSelected = annotationIndex === selectedAnnotationIndex,
 

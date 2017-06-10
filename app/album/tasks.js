@@ -9,11 +9,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Refactor build helper.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     // Day bug.
     {
@@ -2173,7 +2168,7 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: `Slider verses are blank`,
+        taskName: `Slider verses are blank.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -2181,5 +2176,10 @@ module.exports = [
         taskName: `Audio banner changes border radius on wrong width.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Finish refactoring build helper.`,
+        workedHours: 7,
+        neededHours: 7
     }
 ]

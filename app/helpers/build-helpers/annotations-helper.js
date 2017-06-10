@@ -1,4 +1,4 @@
-import { LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, WIKI, ITALIC, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
+import { LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, WIKI, ITALIC, WIKI_INDEX, PORTAL_INDEX, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
 import { PORTAL, REFERENCE } from '../../constants/dots'
 import { getSongTitle, getAnnotationObject, getVerseObject } from '../data-helper'
 
@@ -192,6 +192,56 @@ export const addDestinationPortalLinks = (albumObject) => {
 /*********
  * FINAL *
  *********/
+
+export const finalPrepareCard = (annotationObject, cardObject) => {
+    const { description,
+            portalLinks } = cardObject
+
+    if (description) {
+        // This is the wiki key in the song data, *not* the dot key.
+        _finalParseWiki(annotationObject, description)
+    }
+
+    if (portalLinks) {
+        portalLinks.forEach(link => {
+            delete link.cardIndex
+            annotationObject.annotationAnchors.push(Object.assign({}, link))
+            link[PORTAL_INDEX] = annotationObject.tempAnnotationAnchorIndex
+            annotationObject.tempAnnotationAnchorIndex++
+        })
+    }
+}
+
+const _finalParseWiki = (annotationObject, entity) => {
+
+    // Add the wiki index.
+    if (!entity || typeof entity !== 'object') {
+        return false
+
+    } else if (Array.isArray(entity)) {
+        return entity.reduce((keyFound, element) => {
+            // Reversing order so that index gets added if needed.
+            return _finalParseWiki(annotationObject, element) || keyFound
+        }, false)
+
+    } else {
+        return Object.keys(entity).reduce((keyFound, currentKey) => {
+            const hasWiki = !!entity[WIKI]
+
+            if (!entity[WIKI_INDEX] && typeof entity[WIKI] === 'string') {
+
+                // Popup anchor index is either for portal or wiki.
+                entity[WIKI_INDEX] = annotationObject.tempAnnotationAnchorIndex
+                annotationObject.tempAnnotationAnchorIndex++
+                annotationObject.annotationAnchors.push(entity[WIKI])
+
+                delete entity[WIKI]
+            }
+
+            return keyFound || hasWiki || _finalParseWiki(annotationObject, entity[currentKey])
+        }, false)
+    }
+}
 
 export const registerBeginningAndEndingVerseSpans = (lyricEntity) => {
     /**

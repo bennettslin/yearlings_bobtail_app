@@ -30,6 +30,9 @@ module.exports = {
     LEFT_COLUMN: 'leftColumn',
     RIGHT_COLUMN: 'rightColumn',
 
+    WIKI_INDEX: 'wikiIndex',
+    PORTAL_INDEX: 'portalIndex',
+
     IS_DOT_STANZA: '***DOT_STANZA***',
     HAS_SIDE_STANZAS: 'hasSideStanzas',
     IS_DOUBLESPEAKER: 'isDoublespeaker',
