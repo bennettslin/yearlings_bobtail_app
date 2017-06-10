@@ -790,7 +790,7 @@ class EventManager extends Component {
             }
 
         if (element) {
-            console.warn(`Scrolling ${selector} into view.`);
+            // console.warn(`Scrolling ${selector} into view.`);
 
             const align = isCarousel ?
                 getCarouselLeftAlign(this.props.deviceIndex, this.props.windowWidth, index) :
@@ -800,13 +800,14 @@ class EventManager extends Component {
                 time,
                 align,
                 validTarget
-            }, this._scrollElementCallback)
+            // }, this._scrollElementCallback)
+            })
         }
     }
 
-    _scrollElementCallback(status) {
-        console.warn('scroll status:', status);
-    }
+    // _scrollElementCallback(status) {
+    //     console.warn('scroll status:', status);
+    // }
 
     _closeDotsIfOverviewWillShow() {
         /**
