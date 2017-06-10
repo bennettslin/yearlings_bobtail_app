@@ -15,8 +15,8 @@ export const getAnnotationsArray = (songIndex) => {
     return songs.annotations || []
 }
 
-export const getAnnotationObject = (songIndex, annotationIndex) => {
-    const { annotations } = getSongObject(songIndex)
+export const getAnnotationObject = (songIndex, annotationIndex, songs) => {
+    const { annotations } = getSongObject(songIndex, songs)
     return annotations ? annotations[annotationIndex - 1] : null
 }
 

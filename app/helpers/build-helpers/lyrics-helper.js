@@ -128,8 +128,8 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
     songObject.stanzaTimes = stanzaTimes
 
     // Establish which song on the album has the most stanzas.
-    if (songObject.stanzaTimes.length > albumObject.largestStanzaTimesLength) {
-        albumObject.largestStanzaTimesLength = songObject.stanzaTimes.length
+    if (songObject.stanzaTimes.length > albumObject.tempLargestStanzaTimesLength) {
+        albumObject.tempLargestStanzaTimesLength = songObject.stanzaTimes.length
     }
 }
 
@@ -188,7 +188,7 @@ export const finalAddPlaceholderStanzas = (albumObject, songObject) => {
      * We want the stanza time bars to animate nicely. As such, the number of
      * stanza times for each song will be the same.
      */
-    while (songObject.stanzaTimes.length < albumObject.largestStanzaTimesLength) {
+    while (songObject.stanzaTimes.length < albumObject.tempLargestStanzaTimesLength) {
         songObject.stanzaTimes.push({
             type: 'placeholder',
             time: songObject.totalTime
@@ -204,6 +204,7 @@ export const recurseToFindAnchors = ({
 
     inVerseWithTimeIndex = -1,
     registerVerseTimes = false,
+    albumObject,
     songObject,
     verseObject,
     lyricEntity = verseObject,
@@ -219,10 +220,10 @@ export const recurseToFindAnchors = ({
     if (registerVerseTimes && !isNaN(lyricEntity.time)) {
         // All recursed lyrics will know they're nested in verse with time.
 
-        inVerseWithTimeIndex = songObject.verseIndexCounter
+        inVerseWithTimeIndex = songObject.tempVerseIndexCounter
 
         // Add index to verse object.
-        lyricEntity.verseIndex = songObject.verseIndexCounter
+        lyricEntity.verseIndex = songObject.tempVerseIndexCounter
 
         // Add most recent annotation index.
         lyricEntity.lastAnnotationIndex = songObject.annotations.length
@@ -230,7 +231,7 @@ export const recurseToFindAnchors = ({
         // Add verse time to song times.
         songObject.verseTimes.push(lyricEntity.time)
 
-        songObject.verseIndexCounter++
+        songObject.tempVerseIndexCounter++
     }
 
     // Recurse until object with anchor key is found.
@@ -240,6 +241,7 @@ export const recurseToFindAnchors = ({
             recurseToFindAnchors({
                 inVerseWithTimeIndex,
                 registerVerseTimes,
+                albumObject,
                 songObject,
                 verseObject,
                 lyricEntity: childEntity,
@@ -253,6 +255,7 @@ export const recurseToFindAnchors = ({
         if (lyricEntity[ANCHOR]) {
             callbackFunction({
                 inVerseWithTimeIndex,
+                albumObject,
                 songObject,
                 verseObject,
                 lyricObject: lyricEntity,
@@ -272,6 +275,7 @@ export const recurseToFindAnchors = ({
                     recurseToFindAnchors({
                         inVerseWithTimeIndex,
                         registerVerseTimes,
+                        albumObject,
                         songObject,
                         verseObject,
                         lyricEntity: lyricEntity[childKey],

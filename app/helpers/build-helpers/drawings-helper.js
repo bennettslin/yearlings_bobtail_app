@@ -49,7 +49,7 @@ export const adminGatherDrawings = (album, scenes, songIndex) => {
     })
 }
 
-export const finaliseDrawings = (album) => {
+export const adminFinaliseDrawings = (album) => {
 
     // Turn actors object into array for easier frontend parsing.
     const { _drawings } = album,

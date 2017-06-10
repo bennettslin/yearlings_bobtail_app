@@ -1,34 +1,33 @@
 // Parse album data for build.
 
-import { REFERENCE } from '../../constants/dots'
 import { LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, ITALIC, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN, PROPER_NOUN } from '../../constants/lyrics'
-import { adminGatherDrawings, finaliseDrawings, registerDrawingTasks } from './drawings-helper'
+import { registerCards, addDestinationPortalLinks } from './annotations-helper'
+import { adminGatherDrawings, adminFinaliseDrawings, registerDrawingTasks } from './drawings-helper'
 import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes, finalAddPlaceholderStanzas } from './lyrics-helper'
-import { getIsLogue, getSongTitle, getVerseObject } from '../data-helper'
+import { getIsLogue } from '../data-helper'
 import { getFormattedAnnotationTitle } from '../format-helper'
 
 const _tempStore = {
     _wikiIndex: 1,
-    _portalLinks: {},
-    _finalAnnotationIndex: 0,
 }
 
 export const parseAlbumData = (albumObject) => {
 
-    // Allow helpers to access songs directly.
-    _tempStore._songs = albumObject.songs
+    // Initialise album.
+    albumObject.tempPortalLinks = {}
 
+    // Initial preparation.
     _initialPrepareAlbum(albumObject)
 
-    _addDestinationPortalLinks(albumObject)
+    // In-between preparation.
+    addDestinationPortalLinks(albumObject)
+    adminFinaliseDrawings(albumObject)
 
-    // Add drawings for admin purposes.
-    finaliseDrawings(albumObject)
-
+    // Finap preparation.
     _finalPrepareAlbum(albumObject)
 
-    // FIXME: Temporarily add portal links to album for debugging purposes.
-    // albumObject.portalLinks = _tempStore._portalLinks
+    // Clean up.
+    delete albumObject.tempPortalLinks
 
     return albumObject
 }
@@ -43,7 +42,8 @@ const _initialPrepareAlbum = (albumObject) => {
 
         if (!getIsLogue(songIndex, albumObject.songs)) {
 
-            _tempStore._songIndex = songIndex
+            // Initialise song.
+            songObject.tempSongIndex = songIndex
 
             // Add title object to lyrics array.
             registerTitle(songObject)
@@ -61,14 +61,17 @@ const _initialPrepareAlbum = (albumObject) => {
             initialRegisterStanzaTypes(albumObject, songObject)
 
             // Parse lyrics.
-            _initialPrepareLyrics(songObject)
+            _initialPrepareLyrics(albumObject, songObject)
+
+            // Clean up.
+            delete songObject.tempSongIndex
         }
 
         adminGatherDrawings(albumObject, songObject.scenes, songIndex)
     })
 }
 
-const _initialPrepareLyrics = (songObject) => {
+const _initialPrepareLyrics = (albumObject, songObject) => {
 
     const { lyrics } = songObject
 
@@ -76,7 +79,7 @@ const _initialPrepareLyrics = (songObject) => {
     songObject.adminDotStanzas = 0
     songObject.adminPluralCardsCount = 0
     songObject.annotations = []
-    songObject.verseIndexCounter = 0
+    songObject.tempVerseIndexCounter = 0
     songObject.verseTimes = []
 
     lyrics.forEach(unitArray => {
@@ -92,6 +95,7 @@ const _initialPrepareLyrics = (songObject) => {
              */
             recurseToFindAnchors({
                 registerVerseTimes: true,
+                albumObject,
                 songObject,
                 verseObject,
                 callbackFunction: _initialRegisterAnnotation
@@ -103,16 +107,13 @@ const _initialPrepareLyrics = (songObject) => {
     })
 
     // Clean up.
-    delete songObject.verseIndexCounter
+    delete songObject.tempVerseIndexCounter
 }
-
-/**************
- * ANNOTATION *
- **************/
 
 const _initialRegisterAnnotation = ({
 
     inVerseWithTimeIndex = -1,
+    albumObject,
     songObject,
     verseObject,
     lyricObject,
@@ -127,7 +128,7 @@ const _initialRegisterAnnotation = ({
 
         // Create new annotation object to be known by song.
         annotationObject = {},
-        allCardDotKeys = {}
+        annotationDotKeys = {}
 
     // Tell verse object its annotation anchors.
     verseObject.currentAnnotationIndices = verseObject.currentAnnotationIndices || []
@@ -143,7 +144,7 @@ const _initialRegisterAnnotation = ({
 
     // Otherwise, tell it the most recent verse index. For title, this is 0.
     } else {
-        annotationObject.mostRecentVerseIndex = songObject.verseIndexCounter
+        annotationObject.mostRecentVerseIndex = songObject.tempVerseIndexCounter
     }
 
     // Add formatted title to annotation.
@@ -157,20 +158,21 @@ const _initialRegisterAnnotation = ({
         annotationObject[COLUMN_INDEX] = 1
     }
 
-    _registerCards({
+    registerCards({
+        albumObject,
         songObject,
         verseObject,
         annotationObject,
         cards,
-        allCardDotKeys
+        annotationDotKeys
     })
 
     // Let annotation object know its cards.
     annotationObject.cards = cards
 
     // Add dot keys to both anchored lyric and annotation.
-    annotationObject.dotKeys = allCardDotKeys
-    lyricObject.dotKeys = allCardDotKeys
+    annotationObject.dotKeys = annotationDotKeys
+    lyricObject.dotKeys = annotationDotKeys
 
     // Add annotation object to annotations array.
     songObject.annotations.push(annotationObject)
@@ -179,195 +181,38 @@ const _initialRegisterAnnotation = ({
     delete lyricObject[PROPER_NOUN]
 }
 
-const _registerCards = ({
-
-    songObject,
-    verseObject,
-    annotationObject,
-    cards,
-    allCardDotKeys
-
-}) => {
-
-    // For admin purposes, add to count of annotations with plural cards.
-    if (cards.length > 1) {
-        songObject.adminPluralCardsCount++
-    }
-
-    cards.forEach((cardObject, cardIndex) => {
-        _initialPrepareCard(cardObject, allCardDotKeys)
-        _getDotKeysInAllCards(cardObject, allCardDotKeys)
-        if (_addSourcePortalLink({
-            cardObject,
-            cardIndex,
-            dotKeys: allCardDotKeys,
-            annotation: annotationObject
-        })) {
-            verseObject.verseHasPortal = true
-        }
-    })
-}
-
-const _finalRegisterAnnotation = ({
-
-    songObject,
-    lyricObject
-
-}) => {
-    let cards = lyricObject.annotation
-
-    const annotation = songObject.annotations[_tempStore._finalAnnotationIndex]
-    _tempStore._annotationAnchorIndex = 1
-
-    annotation.annotationAnchors = []
-
-    if (Array.isArray(cards)) {
-        cards.forEach(cardObject => {
-            _finalPrepareCard(annotation, cardObject)
-        })
-    } else {
-        _finalPrepareCard(annotation, cards)
-    }
-
-    // Clean up object, now that it's the final pass through.
-    delete lyricObject.annotation
-
-    _tempStore._finalAnnotationIndex++
-}
-
-const _initialPrepareCard = (cardObject, dotKeys) => {
-    const { description } = cardObject
-
-    if (description) {
-        // This is the wiki key in the song data, *not* the dot key.
-        const hasWiki = _initialParseWiki('wiki', description)
-
-        if (hasWiki) {
-            // Add wiki anchor index to each anchor with wiki.
-            if (!cardObject.dotKeys) {
-                cardObject.dotKeys = {}
-            }
-
-            // If card has a wiki link, add 'reference' key to dot keys.
-            cardObject.dotKeys[REFERENCE] = true
-            dotKeys[REFERENCE] = true
-        }
-    }
-}
-
-const _finalPrepareCard = (annotation, cardObject) => {
-    const { description,
-            portalLinks } = cardObject
-
-    if (description) {
-        // This is the wiki key in the song data, *not* the dot key.
-        _finalParseWiki(annotation, 'wiki', description)
-    }
-
-    if (portalLinks) {
-        portalLinks.forEach(link => {
-            delete link.cardIndex
-            annotation.annotationAnchors.push(Object.assign({}, link))
-            link.portalIndex = _tempStore._annotationAnchorIndex
-            _tempStore._annotationAnchorIndex++
-        })
-    }
-}
-
-const _initialParseWiki = (key, entity) => {
-    /**
-     * This method gets called in two places. The first time is simply to check
-     * if there is a wiki key. The second is in the final pass through, to add
-     * the wiki index.
-     */
-
-    if (!entity || typeof entity !== 'object') {
-        return false
-
-    } else if (Array.isArray(entity)) {
-        return entity.reduce((keyFound, element) => {
-            return keyFound || _initialParseWiki(key, element)
-        }, false)
-
-    } else {
-        return Object.keys(entity).reduce((keyFound, currentKey) => {
-            const hasWiki = !!entity[key]
-
-            return keyFound || hasWiki || _initialParseWiki(key, entity[currentKey])
-        }, false)
-    }
-}
-
-const _finalParseWiki = (annotation, key, entity) => {
-    /**
-     * This method gets called in two places. The first time is simply to check
-     * if there is a wiki key. The second is in the final pass through, to add
-     * the wiki index.
-     */
-
-    if (!entity || typeof entity !== 'object') {
-        return false
-
-    } else if (Array.isArray(entity)) {
-        return entity.reduce((keyFound, element) => {
-            // Reversing order so that index gets added if needed.
-            return _finalParseWiki(annotation, key, element) || keyFound
-        }, false)
-
-    } else {
-        return Object.keys(entity).reduce((keyFound, currentKey) => {
-            const hasWiki = !!entity[key]
-
-            if (!entity.wikiIndex && typeof entity[key] === 'string') {
-
-                // Popup anchor index is either for portal or wiki.
-                entity.wikiIndex = _tempStore._annotationAnchorIndex
-                _tempStore._annotationAnchorIndex++
-                annotation.annotationAnchors.push(entity[key])
-                delete entity[key]
-            }
-
-            return keyFound || hasWiki || _finalParseWiki(annotation, key, entity[currentKey])
-        }, false)
-    }
-}
-
-const _getDotKeysInAllCards = (cardObject, allCardDotKeys) => {
-    // Add dot keys to both song and annotation card.
-    if (cardObject.dotKeys) {
-        Object.keys(cardObject.dotKeys).forEach(dotKey => {
-            allCardDotKeys[dotKey] = true
-        })
-    }
-}
-
 /*********
  * FINAL *
  *********/
 
-/**
- * Add wiki and portal indices. These can only be determined after collecting
- * portal links from the entire album.
- */
 const _finalPrepareAlbum = (albumObject) => {
 
     albumObject.songs.forEach((songObject, songIndex) => {
 
         if (!getIsLogue(songIndex, albumObject.songs)) {
-            _tempStore._finalAnnotationIndex = 0
+
+            // Initialise song.
+            songObject.tempFinalAnnotationIndex = 0
 
             finalRegisterStanzaTypes(songObject)
 
+            /**
+             * Add wiki and portal indices. These can only be determined after
+             * collecting portal links from the entire album.
+             */
             _finalPrepareLyrics(songObject)
 
             _registerBeginningAndEndingVerseSpans(songObject.lyrics)
+
+            // Clean up.
+            delete songObject.tempFinalAnnotationIndex
         }
 
         registerDrawingTasks(songObject)
         finalAddPlaceholderStanzas(albumObject, songObject)
     })
 
-    delete albumObject.largestStanzaTimesLength
+    delete albumObject.tempLargestStanzaTimesLength
 }
 
 const _finalPrepareLyrics = (songObject) => {
@@ -387,94 +232,80 @@ const _finalPrepareLyrics = (songObject) => {
     })
 }
 
-/**********
- * PORTAL *
- **********/
+const _finalRegisterAnnotation = ({
 
-const _addSourcePortalLink = ({
-
-    cardObject,
-    dotKeys,
-    annotation,
-    cardIndex = 0
+    songObject,
+    lyricObject
 
 }) => {
-    // Add portal link to annotation card.
-    const { portal } = cardObject,
-        { verseIndex,
-          annotationIndex,
-          columnIndex } = annotation
 
-    if (portal) {
-        // Portal is either object or string.
-        const { portalKey,
-                portalPrefix } = portal,
+    // TODO: Get annotation through data helper.
+    const annotationObject = songObject.annotations[songObject.tempFinalAnnotationIndex]
+    _tempStore._annotationAnchorIndex = 1
 
-            { _songs,
-              _songIndex } = _tempStore,
+    annotationObject.annotationAnchors = []
+    let cards = annotationObject.cards
 
-            portalLink = {
-                songIndex: _songIndex,
-                annotationIndex,
-                cardIndex,
-                verseIndex,
-                columnIndex,
-                portalPrefix
-            }
+    cards.forEach(cardObject => {
+        _finalPrepareCard(annotationObject, cardObject)
+    })
 
-        // Add data about portal.
-        portalLink.songTitle = getSongTitle({
-            songIndex: _songIndex,
-            songs: _songs
+    // Clean up object, now that it's the final pass through.
+    delete lyricObject.annotation
+
+    songObject.tempFinalAnnotationIndex++
+}
+
+const _finalPrepareCard = (annotationObject, cardObject) => {
+    const { description,
+            portalLinks } = cardObject
+
+    if (description) {
+        // This is the wiki key in the song data, *not* the dot key.
+        _finalParseWiki(annotationObject, 'wiki', description)
+    }
+
+    if (portalLinks) {
+        portalLinks.forEach(link => {
+            delete link.cardIndex
+            annotationObject.annotationAnchors.push(Object.assign({}, link))
+            link.portalIndex = _tempStore._annotationAnchorIndex
+            _tempStore._annotationAnchorIndex++
         })
-        portalLink.verseObject = getVerseObject(_songIndex, verseIndex, _songs)
-
-        // If first portal link, initialise array.
-        if (!_tempStore._portalLinks[portalKey || portal]) {
-            _tempStore._portalLinks[portalKey || portal] = []
-        }
-
-        // Add portal link to portal links array.
-        _tempStore._portalLinks[portalKey || portal].push(portalLink)
-
-        // Add portal key to dot keys.
-        dotKeys.portal = true
-
-        // Clean up card unit.
-        delete cardObject.portal
-
-        return true
-
-    } else {
-        return false
     }
 }
 
-const _addDestinationPortalLinks = (albumObject) => {
+const _finalParseWiki = (annotationObject, key, entity) => {
     /**
-     * For each annotation with a portal, add an array of links to all
-     * other portals.
+     * This method gets called in two places. The first time is simply to check
+     * if there is a wiki key. The second is in the final pass through, to add
+     * the wiki index.
      */
-    for (const linkKey in _tempStore._portalLinks) {
-        const links = _tempStore._portalLinks[linkKey]
 
-        links.forEach((link, index) => {
-            const song = albumObject.songs[link.songIndex],
+    if (!entity || typeof entity !== 'object') {
+        return false
 
-                // TODO: Can get annotation from data helper.
-                annotationObject = song.annotations[link.annotationIndex - 1],
-                cardObject = annotationObject.cards[link.cardIndex],
+    } else if (Array.isArray(entity)) {
+        return entity.reduce((keyFound, element) => {
+            // Reversing order so that index gets added if needed.
+            return _finalParseWiki(annotationObject, key, element) || keyFound
+        }, false)
 
-                portalLinks = links.filter((link, thisIndex) => {
-                    return index !== thisIndex
-                }).map(link => {
+    } else {
+        return Object.keys(entity).reduce((keyFound, currentKey) => {
+            const hasWiki = !!entity[key]
 
-                    // Return a *copy* of the link object.
-                    return Object.assign({}, link)
-                })
+            if (!entity.wikiIndex && typeof entity[key] === 'string') {
 
-            cardObject.portalLinks = portalLinks
-        })
+                // Popup anchor index is either for portal or wiki.
+                entity.wikiIndex = _tempStore._annotationAnchorIndex
+                _tempStore._annotationAnchorIndex++
+                annotationObject.annotationAnchors.push(entity[key])
+                delete entity[key]
+            }
+
+            return keyFound || hasWiki || _finalParseWiki(annotationObject, key, entity[currentKey])
+        }, false)
     }
 }
 

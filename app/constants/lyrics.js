@@ -19,6 +19,8 @@ module.exports = {
     RIGHT,
     ANCHOR,
 
+    WIKI: 'wiki',
+
     DOT_STANZA,
     TOP_SIDE_STANZA,
     BOTTOM_SIDE_STANZA,
