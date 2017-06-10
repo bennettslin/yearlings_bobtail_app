@@ -24,7 +24,6 @@ module.exports = {
     BOTTOM_SIDE_STANZA,
     SUB_STANZA,
 
-    COLUMN: 'column',
     COLUMN_INDEX: 'columnIndex',
     LEFT_COLUMN: 'leftColumn',
     RIGHT_COLUMN: 'rightColumn',
@@ -88,11 +87,6 @@ module.exports = {
     ],
 
     LYRIC_COLUMN_KEYS: [
-        LEFT,
-        RIGHT
-    ],
-
-    DOUBLESPEAKER_KEYS: [
         LEFT,
         RIGHT
     ],

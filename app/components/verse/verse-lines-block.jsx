@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import VerseLine from './verse-line'
-import { DOUBLESPEAKER_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../constants/lyrics'
+import { LYRIC_COLUMN_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../constants/lyrics'
 
 /*************
  * CONTAINER *
@@ -65,7 +65,7 @@ const VerseLinesBlockView = (props) => {
             // FIXME: Take care of this in CSS.
             { 'hidden-left': hiddenLyricColumnKey === LEFT }
         )}>
-            {DOUBLESPEAKER_KEYS.map((doublespeakerKey, index) => (
+            {LYRIC_COLUMN_KEYS.map((doublespeakerKey, index) => (
                 <VerseLinesBlock {...props}
                     key={index}
                     doublespeakerKey={doublespeakerKey}

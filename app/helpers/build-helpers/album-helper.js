@@ -1,7 +1,7 @@
 // Parse album data for build.
 
 import { REFERENCE } from '../../constants/dots'
-import { LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, ITALIC, COLUMN, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN, PROPER_NOUN } from '../../constants/lyrics'
+import { LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, ITALIC, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN, PROPER_NOUN } from '../../constants/lyrics'
 import { adminGatherDrawings, finaliseDrawings, registerDrawingTasks } from './drawings-helper'
 import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes, finalAddPlaceholderStanzas } from './lyrics-helper'
 import { getIsLogue, getSongTitle, getVerseObject } from '../data-helper'
@@ -147,11 +147,9 @@ const _initialRegisterAnnotation = ({
 
     // Let annotation know if it's in a doublespeaker column.
     if (textKey === LEFT || textKey === LEFT_COLUMN) {
-        annotation[COLUMN] = LEFT
         annotation[COLUMN_INDEX] = 0
 
     } else if (textKey === RIGHT || textKey === RIGHT_COLUMN) {
-        annotation[COLUMN] = RIGHT
         annotation[COLUMN_INDEX] = 1
     }
 
@@ -394,7 +392,6 @@ const _addSourcePortalLink = ({
     const { portal } = card,
         { verseIndex,
           annotationIndex,
-          column,
           columnIndex } = annotation
 
     if (portal) {
@@ -410,7 +407,6 @@ const _addSourcePortalLink = ({
                 annotationIndex,
                 cardIndex,
                 verseIndex,
-                column,
                 columnIndex,
                 portalPrefix
             }

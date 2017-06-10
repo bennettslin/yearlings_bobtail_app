@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import TextBlock from '../text/text-block'
 import DotButton from '../dot/dot-button'
 import { PORTAL } from '../../constants/dots'
-import { LYRIC, CENTRE } from '../../constants/lyrics'
+import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class AnnotationPortal extends Component {
@@ -49,12 +49,14 @@ class AnnotationPortal extends Component {
 
             { annotationIndex,
               songTitle,
-              column,
+              columnIndex,
 
               // Default if no portal prefix.
               portalPrefix = 'portal to',
 
-              verseObject } = portalObject
+              verseObject } = portalObject,
+
+              columnKey = LYRIC_COLUMN_KEYS[columnIndex]
 
         return (
             <div
@@ -80,7 +82,7 @@ class AnnotationPortal extends Component {
                         <span className="text-span">{'\u201c'}</span>
                         <TextBlock
                             inPortal={true}
-                            text={verseObject[LYRIC] || verseObject[CENTRE] || verseObject[column]}
+                            text={verseObject[LYRIC] || verseObject[CENTRE] || verseObject[columnKey]}
                             portalAnnotationIndex={annotationIndex}
                         />
                         <span className="text-span">{'\u201d'}</span>

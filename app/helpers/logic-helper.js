@@ -1,7 +1,7 @@
 // Parse album data for presentation.
 import { PORTAL,
          REFERENCE } from '../constants/dots'
-import { LYRIC_COLUMN_KEYS } from '../constants/lyrics'
+import { LYRIC_COLUMN_KEYS, COLUMN_INDEX } from '../constants/lyrics'
 import { getAnnotationObject,
          getVerseObject,
          getIsLogue,
@@ -23,15 +23,16 @@ export const shouldShowAnnotationForColumn = ({
 }) => {
     const showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, deviceIndex),
         annotation = getAnnotationObject(selectedSongIndex, annotationIndex),
+        columnIndex = annotation[COLUMN_INDEX],
 
         /**
-         * Show annotation if no column is given, both columns are shown, or
-         * it's the shown column.
+         * Show annotation if both columns are shown, no column is given, or
+         * column is given and it's the shown column.
          */
         showAnnotationForColumn =
-            !annotation.column ||
             !showOneOfTwoLyricColumns ||
-            annotation.column === LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]
+            isNaN(columnIndex) ||
+            columnIndex === selectedLyricColumnIndex
 
     return showAnnotationForColumn
 }
