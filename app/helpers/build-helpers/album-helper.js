@@ -3,7 +3,7 @@
 import { REFERENCE } from '../../constants/dots'
 import { LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, ITALIC, COLUMN, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN, PROPER_NOUN } from '../../constants/lyrics'
 import { adminGatherDrawings, finaliseDrawings, registerDrawingTasks } from './drawings-helper'
-import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerVerses, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes } from './lyrics-helper'
+import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes } from './lyrics-helper'
 import { getIsLogue, getSongTitle, getVerseObject } from '../data-helper'
 import { getFormattedAnnotationTitle } from '../format-helper'
 
@@ -90,14 +90,15 @@ const _initialPrepareLyrics = (song) => {
 
         unitArray.forEach(verseObject => {
 
-            // Tell each verse with time its index.
-            registerVerses(song, verseObject)
-
             // Tell song it is a doublespeaker song
             registerIsDoublespeaker(song, verseObject)
 
-            // Recurse until each anchor is found.
+            /**
+             * Recurse until each anchor is found. Initially, we will also
+             * register each verse with time.
+             */
             recurseToFindAnchors({
+                registerVerseTimes: true,
                 song,
                 verseObject,
                 callbackFunction: _initialRegisterAnnotation
@@ -118,6 +119,7 @@ const _initialPrepareLyrics = (song) => {
 
 const _initialRegisterAnnotation = ({
 
+    inVerseWithTime = -1,
     song,
     verseObject,
     lyric,
@@ -139,8 +141,8 @@ const _initialRegisterAnnotation = ({
     lyric.annotationIndex = annotationIndex
 
     // If in a verse with time, tell annotation its verse index.
-    if (!isNaN(verseObject.verseIndex)) {
-        annotation.verseIndex = verseObject.verseIndex
+    if (inVerseWithTime > -1) {
+        annotation.verseIndex = song.verseIndexCounter - 1
 
     // Otherwise, tell it the most recent verse index.
     } else {
