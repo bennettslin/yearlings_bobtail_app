@@ -186,6 +186,7 @@ VerseUnit.defaultProps = {
 
 VerseUnit.propTypes = {
     // Through Redux.
+    isSliderTouched: PropTypes.bool.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -196,7 +197,6 @@ VerseUnit.propTypes = {
     isInteractivated: PropTypes.bool.isRequired,
     inMain: PropTypes.bool.isRequired,
     inVerseBar: PropTypes.bool.isRequired,
-    isSliderTouched: PropTypes.bool.isRequired,
     handleLyricAnnotationSelect: PropTypes.func,
     handleVerseInteractivate: PropTypes.func
 }
@@ -277,7 +277,9 @@ VerseUnitView.propTypes = {
 }
 
 export default connect(({
+    isSliderTouched,
     selectedSongIndex
 }) => ({
+    isSliderTouched,
     selectedSongIndex
 }))(VerseUnit)

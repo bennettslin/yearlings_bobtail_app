@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Slider verses are blank`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Admin can't change songs, probably because of shouldComponentUpdate`,
         workedHours: 0,
         neededHours: 1
@@ -2182,5 +2177,10 @@ module.exports = [
         taskName: `Annotation anchors is broken for trophy blondes.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Slider verses are blank`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
