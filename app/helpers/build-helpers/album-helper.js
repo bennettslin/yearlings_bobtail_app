@@ -194,11 +194,11 @@ const _registerCards = ({
         songObject.adminPluralCardsCount++
     }
 
-    cards.forEach((card, cardIndex) => {
-        _initialPrepareCard(card, allCardDotKeys)
-        _getDotKeysInAllCards(card, allCardDotKeys)
+    cards.forEach((cardObject, cardIndex) => {
+        _initialPrepareCard(cardObject, allCardDotKeys)
+        _getDotKeysInAllCards(cardObject, allCardDotKeys)
         if (_addSourcePortalLink({
-            card,
+            cardObject,
             cardIndex,
             dotKeys: allCardDotKeys,
             annotation: annotationObject
@@ -222,8 +222,8 @@ const _finalRegisterAnnotation = ({
     annotation.annotationAnchors = []
 
     if (Array.isArray(cards)) {
-        cards.forEach(card => {
-            _finalPrepareCard(annotation, card)
+        cards.forEach(cardObject => {
+            _finalPrepareCard(annotation, cardObject)
         })
     } else {
         _finalPrepareCard(annotation, cards)
@@ -235,8 +235,8 @@ const _finalRegisterAnnotation = ({
     _tempStore._finalAnnotationIndex++
 }
 
-const _initialPrepareCard = (card, dotKeys) => {
-    const { description } = card
+const _initialPrepareCard = (cardObject, dotKeys) => {
+    const { description } = cardObject
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
@@ -244,20 +244,20 @@ const _initialPrepareCard = (card, dotKeys) => {
 
         if (hasWiki) {
             // Add wiki anchor index to each anchor with wiki.
-            if (!card.dotKeys) {
-                card.dotKeys = {}
+            if (!cardObject.dotKeys) {
+                cardObject.dotKeys = {}
             }
 
             // If card has a wiki link, add 'reference' key to dot keys.
-            card.dotKeys[REFERENCE] = true
+            cardObject.dotKeys[REFERENCE] = true
             dotKeys[REFERENCE] = true
         }
     }
 }
 
-const _finalPrepareCard = (annotation, card) => {
+const _finalPrepareCard = (annotation, cardObject) => {
     const { description,
-            portalLinks } = card
+            portalLinks } = cardObject
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
@@ -332,10 +332,10 @@ const _finalParseWiki = (annotation, key, entity) => {
     }
 }
 
-const _getDotKeysInAllCards = (card, allCardDotKeys) => {
+const _getDotKeysInAllCards = (cardObject, allCardDotKeys) => {
     // Add dot keys to both song and annotation card.
-    if (card.dotKeys) {
-        Object.keys(card.dotKeys).forEach(dotKey => {
+    if (cardObject.dotKeys) {
+        Object.keys(cardObject.dotKeys).forEach(dotKey => {
             allCardDotKeys[dotKey] = true
         })
     }
@@ -393,14 +393,14 @@ const _finalPrepareLyrics = (songObject) => {
 
 const _addSourcePortalLink = ({
 
-    card,
+    cardObject,
     dotKeys,
     annotation,
     cardIndex = 0
 
 }) => {
     // Add portal link to annotation card.
-    const { portal } = card,
+    const { portal } = cardObject,
         { verseIndex,
           annotationIndex,
           columnIndex } = annotation
@@ -441,7 +441,7 @@ const _addSourcePortalLink = ({
         dotKeys.portal = true
 
         // Clean up card unit.
-        delete card.portal
+        delete cardObject.portal
 
         return true
 
@@ -460,9 +460,11 @@ const _addDestinationPortalLinks = (albumObject) => {
 
         links.forEach((link, index) => {
             const song = albumObject.songs[link.songIndex],
-                annotation = song.annotations[link.annotationIndex - 1],
-                card = Array.isArray(annotation.cards) ?
-                    annotation.cards[link.cardIndex] : annotation.cards,
+
+                // TODO: Can get annotation from data helper.
+                annotationObject = song.annotations[link.annotationIndex - 1],
+                cardObject = annotationObject.cards[link.cardIndex],
+
                 portalLinks = links.filter((link, thisIndex) => {
                     return index !== thisIndex
                 }).map(link => {
@@ -471,7 +473,7 @@ const _addDestinationPortalLinks = (albumObject) => {
                     return Object.assign({}, link)
                 })
 
-            card.portalLinks = portalLinks
+            cardObject.portalLinks = portalLinks
         })
     }
 }
