@@ -13,35 +13,35 @@ const _tempStore = {
     _finalAnnotationIndex: 0,
 }
 
-export const parseAlbumData = (album) => {
+export const parseAlbumData = (albumObject) => {
 
     // Allow helpers to access songs directly.
-    _tempStore._songs = album.songs
+    _tempStore._songs = albumObject.songs
 
-    _initialPrepareAlbum(album)
+    _initialPrepareAlbum(albumObject)
 
-    _addDestinationPortalLinks(album)
+    _addDestinationPortalLinks(albumObject)
 
     // Add drawings for admin purposes.
-    finaliseDrawings(album)
+    finaliseDrawings(albumObject)
 
-    _finalPrepareAlbum(album)
+    _finalPrepareAlbum(albumObject)
 
     // FIXME: Temporarily add portal links to album for debugging purposes.
-    // album.portalLinks = _tempStore._portalLinks
+    // albumObject.portalLinks = _tempStore._portalLinks
 
-    return album
+    return albumObject
 }
 
 /***********
  * INITIAL *
  ***********/
 
-const _initialPrepareAlbum = (album) => {
+const _initialPrepareAlbum = (albumObject) => {
 
-    album.songs.forEach((songObject, songIndex) => {
+    albumObject.songs.forEach((songObject, songIndex) => {
 
-        if (!getIsLogue(songIndex, album.songs)) {
+        if (!getIsLogue(songIndex, albumObject.songs)) {
 
             _tempStore._songIndex = songIndex
 
@@ -58,13 +58,13 @@ const _initialPrepareAlbum = (album) => {
              * Associate a type and index for each stanza, like verse, chorus,
              * and so forth.
              */
-            initialRegisterStanzaTypes(album, songObject)
+            initialRegisterStanzaTypes(albumObject, songObject)
 
             // Parse lyrics.
             _initialPrepareLyrics(songObject)
         }
 
-        adminGatherDrawings(album, songObject.scenes, songIndex)
+        adminGatherDrawings(albumObject, songObject.scenes, songIndex)
     })
 }
 
@@ -359,11 +359,11 @@ const _getDotKeysInAllCards = (card, allCardDotKeys) => {
  * Add wiki and portal indices. These can only be determined after collecting
  * portal links from the entire album.
  */
-const _finalPrepareAlbum = (album) => {
+const _finalPrepareAlbum = (albumObject) => {
 
-    album.songs.forEach((songObject, songIndex) => {
+    albumObject.songs.forEach((songObject, songIndex) => {
 
-        if (!getIsLogue(songIndex, album.songs)) {
+        if (!getIsLogue(songIndex, albumObject.songs)) {
             _tempStore._finalAnnotationIndex = 0
 
             finalRegisterStanzaTypes(songObject)
@@ -374,10 +374,10 @@ const _finalPrepareAlbum = (album) => {
         }
 
         registerDrawingTasks(songObject)
-        finalAddPlaceholderStanzas(album, songObject)
+        finalAddPlaceholderStanzas(albumObject, songObject)
     })
 
-    delete album.largestStanzaTimesLength
+    delete albumObject.largestStanzaTimesLength
 }
 
 const _finalPrepareLyrics = (songObject) => {
@@ -460,7 +460,7 @@ const _addSourcePortalLink = ({
     }
 }
 
-const _addDestinationPortalLinks = (album) => {
+const _addDestinationPortalLinks = (albumObject) => {
     /**
      * For each annotation with a portal, add an array of links to all
      * other portals.
@@ -469,7 +469,7 @@ const _addDestinationPortalLinks = (album) => {
         const links = _tempStore._portalLinks[linkKey]
 
         links.forEach((link, index) => {
-            const song = album.songs[link.songIndex],
+            const song = albumObject.songs[link.songIndex],
                 annotation = song.annotations[link.annotationIndex - 1],
                 card = Array.isArray(annotation.cards) ?
                     annotation.cards[link.cardIndex] : annotation.cards,

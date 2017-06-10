@@ -88,7 +88,7 @@ export const registerHasSideStanzas = (songObject) => {
     songObject[HAS_SIDE_STANZAS] = songHasSideStanzas
 }
 
-export const initialRegisterStanzaTypes = (album, songObject) => {
+export const initialRegisterStanzaTypes = (albumObject, songObject) => {
 
     const { lyrics } = songObject,
         stanzaTypeCounters = {},
@@ -128,8 +128,8 @@ export const initialRegisterStanzaTypes = (album, songObject) => {
     songObject.stanzaTimes = stanzaTimes
 
     // Establish which song on the album has the most stanzas.
-    if (songObject.stanzaTimes.length > album.largestStanzaTimesLength) {
-        album.largestStanzaTimesLength = songObject.stanzaTimes.length
+    if (songObject.stanzaTimes.length > albumObject.largestStanzaTimesLength) {
+        albumObject.largestStanzaTimesLength = songObject.stanzaTimes.length
     }
 }
 
@@ -177,7 +177,7 @@ export const finalRegisterStanzaTypes = (songObject) => {
     delete songObject.stanzaTypeCounters
 }
 
-export const finalAddPlaceholderStanzas = (album, songObject) => {
+export const finalAddPlaceholderStanzas = (albumObject, songObject) => {
 
     // Include logues.
     if (!songObject.stanzaTimes) {
@@ -188,7 +188,7 @@ export const finalAddPlaceholderStanzas = (album, songObject) => {
      * We want the stanza time bars to animate nicely. As such, the number of
      * stanza times for each song will be the same.
      */
-    while (songObject.stanzaTimes.length < album.largestStanzaTimesLength) {
+    while (songObject.stanzaTimes.length < albumObject.largestStanzaTimesLength) {
         songObject.stanzaTimes.push({
             type: 'placeholder',
             time: songObject.totalTime
