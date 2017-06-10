@@ -1,14 +1,18 @@
 module.exports = [
-
     {
-        taskName: `Admin can't change songs, probably because of shouldComponentUpdate`,
+        taskName: `Show all state in admin component.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Slider verses are blank`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Annotation anchors is broken for trophy blondes.`,
+        taskName: `Admin can't change songs, probably because of shouldComponentUpdate`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `Refactor build helper.`,
@@ -2171,7 +2175,12 @@ module.exports = [
     },
     {
         taskName: `Begin build helper refactor.`,
-        workedHours: 6,
-        neededHours: 6
+        workedHours: 7,
+        neededHours: 7
     },
+    {
+        taskName: `Annotation anchors is broken for trophy blondes.`,
+        workedHours: 4,
+        neededHours: 4
+    }
 ]

@@ -7,6 +7,7 @@ import MenuField from './menu-field'
 import NavSection from '../nav/nav-section'
 import CarouselToggle from '../carousel/carousel-toggle'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
+import LyricToggle from '../lyric/lyric-toggle'
 import { getIsPhone, getIsDesktop } from '../../helpers/responsive-helper'
 
 const MainColumn = ({
@@ -19,6 +20,7 @@ const MainColumn = ({
 
     handleCarouselToggle,
     handleDotsSectionToggle,
+    handleLyricSectionExpand,
     handleNavExpand,
     handleNavSongSelect,
     handleNavBookSelect,
@@ -29,7 +31,6 @@ const MainColumn = ({
     audioSectionMenuChild,
     carouselChild,
     dotsSectionChild,
-    lyricExpandButtonChild,
     overviewPopupChild,
     scoresTipsSectionChild,
     titleToggleChild
@@ -79,7 +80,9 @@ const MainColumn = ({
                         {overviewPopupChild}
                     </div>
 
-                    {lyricExpandButtonChild}
+                    <LyricToggle
+                        handleLyricSectionExpand={handleLyricSectionExpand}
+                    />
 
                     <div className="dots-subfield">
                         {dotsSectionChild}
@@ -113,6 +116,7 @@ MainColumn.propTypes = {
 
     handleCarouselToggle: PropTypes.func.isRequired,
     handleDotsSectionToggle: PropTypes.func.isRequired,
+    handleLyricSectionExpand: PropTypes.func.isRequired,
     handleNavExpand: PropTypes.func.isRequired,
     handleNavSongSelect: PropTypes.func.isRequired,
     handleNavBookSelect: PropTypes.func.isRequired,
@@ -123,7 +127,6 @@ MainColumn.propTypes = {
     audioSectionMenuChild: PropTypes.element.isRequired,
     carouselChild: PropTypes.element.isRequired,
     dotsSectionChild: PropTypes.element.isRequired,
-    lyricExpandButtonChild: PropTypes.element.isRequired,
     overviewPopupChild: PropTypes.element.isRequired,
     scoresTipsSectionChild: PropTypes.element.isRequired,
     titleToggleChild: PropTypes.element.isRequired

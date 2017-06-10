@@ -13,7 +13,7 @@ import { ALBUM_BUILD_KEYS,
          LEFT_COLUMN,
          RIGHT_COLUMN,
 
-         PROPER_NOUN } from '../constants/lyrics'
+         PROPER_NOUN } from '../../constants/lyrics'
 
 /***********
  * INITIAL *
@@ -88,7 +88,7 @@ export const registerHasSideStanzas = (song) => {
     song[HAS_SIDE_STANZAS] = songHasSideStanzas
 }
 
-export const initialRegisterStanzaTypes = (song) => {
+export const initialRegisterStanzaTypes = (album, song) => {
 
     const { lyrics } = song,
         stanzaTypeCounters = {},
@@ -126,23 +126,10 @@ export const initialRegisterStanzaTypes = (song) => {
 
     song.stanzaTypeCounters = stanzaTypeCounters
     song.stanzaTimes = stanzaTimes
-}
 
-export const registerVerses = (song, verseObject) => {
-
-    // Only register verses associated with a song time.
-    if (!isNaN(verseObject.time)) {
-
-        // Add index to verse object.
-        verseObject.verseIndex = song.verseIndexCounter
-
-        // Add most recent annotation index.
-        verseObject.lastAnnotationIndex = song.annotations.length
-
-        // Add verse time to song times.
-        song.verseTimes.push(verseObject.time)
-
-        song.verseIndexCounter++
+    // Establish which song on the album has the most stanzas.
+    if (song.stanzaTimes.length > album.largestStanzaTimesLength) {
+        album.largestStanzaTimesLength = song.stanzaTimes.length
     }
 }
 
@@ -190,12 +177,33 @@ export const finalRegisterStanzaTypes = (song) => {
     delete song.stanzaTypeCounters
 }
 
+export const finalAddPlaceholderStanzas = (album, song) => {
+
+    // Include logues.
+    if (!song.stanzaTimes) {
+        song.stanzaTimes = []
+    }
+
+    /**
+     * We want the stanza time bars to animate nicely. As such, the number of
+     * stanza times for each song will be the same.
+     */
+    while (song.stanzaTimes.length < album.largestStanzaTimesLength) {
+        song.stanzaTimes.push({
+            type: 'placeholder',
+            time: song.totalTime
+        })
+    }
+}
+
 /***********
  * HELPERS *
  ***********/
 
 export const recurseToFindAnchors = ({
 
+    inVerseWithTime = -1,
+    registerVerseTimes = false,
     song,
     verseObject,
     lyric = verseObject,
@@ -204,11 +212,34 @@ export const recurseToFindAnchors = ({
 
 }) => {
 
+    /**
+     * Only register lyric objects associated with a song time. This is
+     * typically the verse object itself, but sometimes it's a sub stanza.
+     */
+    if (registerVerseTimes && !isNaN(lyric.time)) {
+        // All recursed lyrics will know they're nested in verse with time.
+
+        inVerseWithTime = lyric.time
+
+        // Add index to verse object.
+        lyric.verseIndex = song.verseIndexCounter
+
+        // Add most recent annotation index.
+        lyric.lastAnnotationIndex = song.annotations.length
+
+        // Add verse time to song times.
+        song.verseTimes.push(lyric.time)
+
+        song.verseIndexCounter++
+    }
+
     // Recurse until object with anchor key is found.
     if (Array.isArray(lyric)) {
 
         lyric.forEach(childLyric => {
             recurseToFindAnchors({
+                inVerseWithTime,
+                registerVerseTimes,
                 song,
                 verseObject,
                 lyric: childLyric,
@@ -221,6 +252,7 @@ export const recurseToFindAnchors = ({
 
         if (lyric[ANCHOR]) {
             callbackFunction({
+                inVerseWithTime,
                 song,
                 verseObject,
                 lyric,
@@ -238,6 +270,8 @@ export const recurseToFindAnchors = ({
                         (lyric[RIGHT_COLUMN] && RIGHT_COLUMN)
 
                     recurseToFindAnchors({
+                        inVerseWithTime,
+                        registerVerseTimes,
                         song,
                         verseObject,
                         lyric: lyric[childTextKey],

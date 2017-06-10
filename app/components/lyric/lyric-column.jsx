@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
+import LyricToggle from '../lyric/lyric-toggle'
 import LyricSection from '../lyric/lyric-section'
 import VerseBar from '../verse/verse-bar'
 import { LYRIC_COLUMN_TOGGLE_KEY } from '../../constants/access'
@@ -108,10 +109,10 @@ const LyricColumnView = ({
     sliderVerseIndex,
 
     handleLyricColumnSelect,
+    handleLyricSectionExpand,
     handleVerseBarSelect,
     handleVerseBarWheel,
 
-    lyricExpandButtonChild,
 
     // From controller.
     myRef,
@@ -164,7 +165,9 @@ const LyricColumnView = ({
                         />
                     </div>
                 }
-                {lyricExpandButtonChild}
+                <LyricToggle
+                    handleLyricSectionExpand={handleLyricSectionExpand}
+                />
                 <LyricSection {...other}
                     hiddenLyricColumnKey={hiddenLyricColumnKey}
                     isTransitioningHeight={isTransitioningHeight}
@@ -190,9 +193,9 @@ LyricColumnView.propTypes = {
     completeHeightTransition: PropTypes.func.isRequired,
 
     handleLyricColumnSelect: PropTypes.func.isRequired,
+    handleLyricSectionExpand: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
-    handleVerseBarWheel: PropTypes.func.isRequired,
-    lyricExpandButtonChild: PropTypes.element
+    handleVerseBarWheel: PropTypes.func.isRequired
 }
 
 export default connect(({
