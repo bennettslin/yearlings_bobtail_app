@@ -10,11 +10,11 @@ import TextUnit from './text-unit'
 
 const TextBlock = ({
 
-    text,
+    text: textEntity,
     truncateMain,
 
 ...other }) => {
-    const isArray = Array.isArray(text)
+    const isArray = Array.isArray(textEntity)
 
     if (!isArray || truncateMain) {
 
@@ -23,14 +23,14 @@ const TextBlock = ({
         // FIXME: But really, this is better taken care of in CSS.
         return (
             <TextUnit {...other}
-                text={truncateMain ? '\u2026' : text}
+                text={truncateMain ? '\u2026' : textEntity}
             />
         )
 
     } else {
         return (
             <TextBlockView {...other}
-                textArray={text}
+                textArray={textEntity}
             />
         )
     }

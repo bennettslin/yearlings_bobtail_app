@@ -12,9 +12,9 @@ const AnnotationUnit = (props) => {
 
     const { annotationObject } = props,
         { annotationIndex,
-          cards } = annotationObject
+          cards: cardEntity } = annotationObject
 
-    if (Array.isArray(cards)) {
+    if (Array.isArray(cardEntity)) {
         return (
             <AnnotationUnitView {...props}
                 carouselAnnotationIndex={annotationIndex}
@@ -23,7 +23,7 @@ const AnnotationUnit = (props) => {
     } else {
         return (
             <AnnotationCard {...props}
-                card={cards}
+                card={cardEntity}
                 carouselAnnotationIndex={annotationIndex}
             />
         )

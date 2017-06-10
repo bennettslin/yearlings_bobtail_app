@@ -44,28 +44,28 @@ export const getFormattedAnnotationTitle = (anchor, properNoun, keepEndCharacter
     return title.replace(/"/g, "'")
 }
 
-const _getStringFromObject = (text) => {
+const _getStringFromObject = (textEntity) => {
 
-    if (Array.isArray(text)) {
+    if (Array.isArray(textEntity)) {
         /**
          * This adds a whitespace unless the following text begins with "'s."
          * Check "Bobtail's words" in M and "surrendered for Bobtail's sake" in
          * Uncanny Valley.
          */
-        return text.reduce((textString, textObject) => {
+        return textEntity.reduce((textString, textObject) => {
             const objectString = _getStringFromObject(textObject),
                 whiteSpace = objectString.indexOf('\'s') === 0 ? '' : ' '
 
             return textString + whiteSpace + objectString
         }, '')
 
-    } else if (typeof text === 'object') {
+    } else if (typeof textEntity === 'object') {
         return LYRIC_TEXT_KEYS.reduce((prevString, textKey) => {
-            return text[textKey] ? _getStringFromObject(text[textKey]) : prevString
+            return textEntity[textKey] ? _getStringFromObject(textEntity[textKey]) : prevString
         }, '')
 
     } else {
-        return text
+        return textEntity
     }
 }
 

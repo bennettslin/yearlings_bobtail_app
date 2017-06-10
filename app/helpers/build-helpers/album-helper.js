@@ -284,60 +284,60 @@ const _finalPrepareCard = (annotation, card) => {
     }
 }
 
-const _initialParseWiki = (key, object) => {
+const _initialParseWiki = (key, entity) => {
     /**
      * This method gets called in two places. The first time is simply to check
      * if there is a wiki key. The second is in the final pass through, to add
      * the wiki index.
      */
 
-    if (!object || typeof object !== 'object') {
+    if (!entity || typeof entity !== 'object') {
         return false
 
-    } else if (Array.isArray(object)) {
-        return object.reduce((keyFound, element) => {
+    } else if (Array.isArray(entity)) {
+        return entity.reduce((keyFound, element) => {
             return keyFound || _initialParseWiki(key, element)
         }, false)
 
     } else {
-        return Object.keys(object).reduce((keyFound, currentKey) => {
-            const hasWiki = !!object[key]
+        return Object.keys(entity).reduce((keyFound, currentKey) => {
+            const hasWiki = !!entity[key]
 
-            return keyFound || hasWiki || _initialParseWiki(key, object[currentKey])
+            return keyFound || hasWiki || _initialParseWiki(key, entity[currentKey])
         }, false)
     }
 }
 
-const _finalParseWiki = (annotation, key, object) => {
+const _finalParseWiki = (annotation, key, entity) => {
     /**
      * This method gets called in two places. The first time is simply to check
      * if there is a wiki key. The second is in the final pass through, to add
      * the wiki index.
      */
 
-    if (!object || typeof object !== 'object') {
+    if (!entity || typeof entity !== 'object') {
         return false
 
-    } else if (Array.isArray(object)) {
-        return object.reduce((keyFound, element) => {
+    } else if (Array.isArray(entity)) {
+        return entity.reduce((keyFound, element) => {
             // Reversing order so that index gets added if needed.
             return _finalParseWiki(annotation, key, element) || keyFound
         }, false)
 
     } else {
-        return Object.keys(object).reduce((keyFound, currentKey) => {
-            const hasWiki = !!object[key]
+        return Object.keys(entity).reduce((keyFound, currentKey) => {
+            const hasWiki = !!entity[key]
 
-            if (!object.wikiIndex && typeof object[key] === 'string') {
+            if (!entity.wikiIndex && typeof entity[key] === 'string') {
 
                 // Popup anchor index is either for portal or wiki.
-                object.wikiIndex = _tempStore._annotationAnchorIndex
+                entity.wikiIndex = _tempStore._annotationAnchorIndex
                 _tempStore._annotationAnchorIndex++
-                annotation.annotationAnchors.push(object[key])
-                delete object[key]
+                annotation.annotationAnchors.push(entity[key])
+                delete entity[key]
             }
 
-            return keyFound || hasWiki || _finalParseWiki(annotation, key, object[currentKey])
+            return keyFound || hasWiki || _finalParseWiki(annotation, key, entity[currentKey])
         }, false)
     }
 }
@@ -486,73 +486,73 @@ const _addDestinationPortalLinks = (albumObject) => {
     }
 }
 
-const _registerBeginningAndEndingVerseSpans = (lyric) => {
+const _registerBeginningAndEndingVerseSpans = (lyricEntity) => {
     /**
      * Let verses with portals know their first and last objects, which are
      * formatted differently in the portal.
      */
 
-    if (Array.isArray(lyric)) {
-        lyric.forEach(childLyric => {
+    if (Array.isArray(lyricEntity)) {
+        lyricEntity.forEach(childLyric => {
             _registerBeginningAndEndingVerseSpans(childLyric)
         })
 
-    } else if (typeof lyric === 'object') {
+    } else if (typeof lyricEntity === 'object') {
 
         // Only register verses that have a portal.
-        if (typeof lyric.time !== 'undefined' && lyric.verseHasPortal) {
+        if (typeof lyricEntity.time !== 'undefined' && lyricEntity.verseHasPortal) {
 
             [LYRIC, LEFT, RIGHT, CENTRE].forEach(lyricKey => {
-                _registerAfterTimeKeyFound(lyric[lyricKey])
+                _registerAfterTimeKeyFound(lyricEntity[lyricKey])
 
-                if (typeof lyric[lyricKey] === 'string') {
-                    lyric[lyricKey] = _addVerseObjectKeyToLyric(lyric[lyricKey], IS_VERSE_BEGINNING_SPAN)
+                if (typeof lyricEntity[lyricKey] === 'string') {
+                    lyricEntity[lyricKey] = _addVerseObjectKeyToLyric(lyricEntity[lyricKey], IS_VERSE_BEGINNING_SPAN)
 
-                    lyric[lyricKey] = _addVerseObjectKeyToLyric(lyric[lyricKey], IS_VERSE_ENDING_SPAN)
+                    lyricEntity[lyricKey] = _addVerseObjectKeyToLyric(lyricEntity[lyricKey], IS_VERSE_ENDING_SPAN)
                 }
             })
         }
 
-        if (typeof lyric.unitMap !== 'undefined') {
-            _registerBeginningAndEndingVerseSpans(lyric.subStanza)
+        if (typeof lyricEntity.unitMap !== 'undefined') {
+            _registerBeginningAndEndingVerseSpans(lyricEntity.subStanza)
         }
     }
 }
 
-const _registerAfterTimeKeyFound = (lyric) => {
+const _registerAfterTimeKeyFound = (lyricEntity) => {
     /**
      * Helper method to register first and last verse objects, after time key
      * has been found.
      */
-    if (Array.isArray(lyric)) {
+    if (Array.isArray(lyricEntity)) {
 
-        if (lyric[0][ITALIC]) {
-            _registerAfterTimeKeyFound(lyric[0])
+        if (lyricEntity[0][ITALIC]) {
+            _registerAfterTimeKeyFound(lyricEntity[0])
 
         } else {
-            lyric[0] = _addVerseObjectKeyToLyric(lyric[0], IS_VERSE_BEGINNING_SPAN)
-            lyric[lyric.length - 1] = _addVerseObjectKeyToLyric(lyric[lyric.length - 1], IS_VERSE_ENDING_SPAN)
+            lyricEntity[0] = _addVerseObjectKeyToLyric(lyricEntity[0], IS_VERSE_BEGINNING_SPAN)
+            lyricEntity[lyricEntity.length - 1] = _addVerseObjectKeyToLyric(lyricEntity[lyricEntity.length - 1], IS_VERSE_ENDING_SPAN)
         }
 
-    } else if (typeof lyric === 'object') {
-        _registerAfterTimeKeyFound(lyric[ITALIC])
+    } else if (typeof lyricEntity === 'object') {
+        _registerAfterTimeKeyFound(lyricEntity[ITALIC])
 
-        if (typeof lyric.anchor === 'string') {
-            lyric = _addVerseObjectKeyToLyric(lyric, IS_VERSE_BEGINNING_SPAN)
-            lyric = _addVerseObjectKeyToLyric(lyric, IS_VERSE_ENDING_SPAN)
+        if (typeof lyricEntity[ANCHOR] === 'string') {
+            lyricEntity = _addVerseObjectKeyToLyric(lyricEntity, IS_VERSE_BEGINNING_SPAN)
+            lyricEntity = _addVerseObjectKeyToLyric(lyricEntity, IS_VERSE_ENDING_SPAN)
         }
     }
 }
 
-const _addVerseObjectKeyToLyric = (lyricObject, verseObjectKey) => {
+const _addVerseObjectKeyToLyric = (lyricEntity, verseObjectKey) => {
 
-    if (typeof lyricObject === 'object') {
-        lyricObject[verseObjectKey] = true
-        return lyricObject
+    if (typeof lyricEntity === 'object') {
+        lyricEntity[verseObjectKey] = true
+        return lyricEntity
 
     } else {
         return {
-            lyric: lyricObject,
+            lyric: lyricEntity,
             [verseObjectKey]: true
         }
     }

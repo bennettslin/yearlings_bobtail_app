@@ -58,26 +58,26 @@ export default {
         return true
     },
 
-    _getLyricObjectForAnnotationIndex(annotationIndex, object, returnObject) {
+    _getLyricObjectForAnnotationIndex(annotationIndex, entity, returnObject) {
         // For logging purposes.
 
-        if (Array.isArray(object)) {
-            return object.reduce((previousObject, element) => {
-                return this._getLyricObjectForAnnotationIndex(annotationIndex, element, returnObject) || previousObject
+        if (Array.isArray(entity)) {
+            return entity.reduce((previousEntity, childEntity) => {
+                return this._getLyricObjectForAnnotationIndex(annotationIndex, childEntity, returnObject) || previousEntity
             }, null)
 
-        } else if (typeof object === 'object') {
+        } else if (typeof entity === 'object') {
 
             // If it has an annotation index, return the parent lyric object.
-            if (object.annotationIndex) {
-                return object.annotationIndex === annotationIndex ? returnObject : null
+            if (entity.annotationIndex) {
+                return entity.annotationIndex === annotationIndex ? returnObject : null
             }
 
             // Otherwise, keep recursing until we find the object with an annotation index.
-            return LYRIC_TEXT_KEYS.reduce((previousObject, textKey) => {
-                const currentLyricObject = (textKey.toLowerCase().indexOf('lyric') > -1) ? object[textKey] : returnObject
+            return LYRIC_TEXT_KEYS.reduce((previousEntity, textKey) => {
+                const currentLyricObject = (textKey.toLowerCase().indexOf('lyric') > -1) ? entity[textKey] : returnObject
 
-                return this._getLyricObjectForAnnotationIndex(annotationIndex, object[textKey], currentLyricObject) || previousObject
+                return this._getLyricObjectForAnnotationIndex(annotationIndex, entity[textKey], currentLyricObject) || previousEntity
             }, null)
 
         } else {

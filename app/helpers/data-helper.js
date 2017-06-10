@@ -123,22 +123,22 @@ export const getDrawings = () => {
  * HELPERS *
  ***********/
 
-const _parseLyrics = (lyric, selectedVerseIndex) => {
+const _parseLyrics = (lyricEntity, selectedVerseIndex) => {
     // Recurse until object with verse index is found.
 
     // Method does not apply to logues.
-    if (lyric) {
-        if (lyric.verseIndex === selectedVerseIndex) {
-            return lyric
+    if (lyricEntity) {
+        if (lyricEntity.verseIndex === selectedVerseIndex) {
+            return lyricEntity
 
-        } else if (Array.isArray(lyric)) {
-            return lyric.reduce((childSelectedLyric, childLyric) => {
+        } else if (Array.isArray(lyricEntity)) {
+            return lyricEntity.reduce((childSelectedLyric, childLyric) => {
                 return childSelectedLyric || _parseLyrics(childLyric, selectedVerseIndex)
             }, null)
 
             // Object with verseIndex key not found, so dig into subStanza.
-        } else if (lyric.subStanza) {
-            return _parseLyrics(lyric.subStanza, selectedVerseIndex)
+        } else if (lyricEntity.subStanza) {
+            return _parseLyrics(lyricEntity.subStanza, selectedVerseIndex)
         }
     }
 }
