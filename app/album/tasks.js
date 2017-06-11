@@ -5,6 +5,11 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: `Let lyric verse get verseObject through Redux.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Access portal index when going to it.`,
         workedHours: 0,
         neededHours: 1
