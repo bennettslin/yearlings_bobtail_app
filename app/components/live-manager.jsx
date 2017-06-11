@@ -141,7 +141,8 @@ const Live = ({
             handleAnnotationPrevious,
             handleAnnotationNext,
             handleAnnotationWikiSelect,
-            handleAnnotationPortalSelect
+            handleAnnotationPortalSelect,
+            handlePopupContainerClick
         },
         carouselChild = (
             <CarouselSection {...carouselSectionProps} />

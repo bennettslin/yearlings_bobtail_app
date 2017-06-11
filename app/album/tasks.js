@@ -2223,4 +2223,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Clicking on selected carousel annotation should not deselect it.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -82,15 +82,18 @@ const CarouselAnnotationView = ({
     annotationIndex,
     annotationColumn,
     annotationDotKeys,
+    handlePopupContainerClick,
 
 ...other }) => (
 
-    <div className={classnames(
+    <div
+        className={classnames(
             'carousel-annotation',
             `carousel-annotation-${annotationIndex}`,
             annotationColumn && `in-column-${annotationColumn}`,
             annotationDotKeys
         )}
+        onClick={handlePopupContainerClick}
     >
         <AnnotationSection {...other}
             inCarousel={true}
@@ -102,7 +105,8 @@ CarouselAnnotationView.propTypes = {
     // From parent.
     annotationIndex: PropTypes.number.isRequired,
     annotationColumn: PropTypes.string,
-    annotationDotKeys: PropTypes.object.isRequired
+    annotationDotKeys: PropTypes.object.isRequired,
+    handlePopupContainerClick: PropTypes.func.isRequired
 }
 
 export default connect(({
