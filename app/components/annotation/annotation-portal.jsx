@@ -7,6 +7,7 @@ import TextBlock from '../text/text-block'
 import DotButton from '../dot/dot-button'
 import { PORTAL } from '../../constants/dots'
 import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE } from '../../constants/lyrics'
+import { getSongTitle, getVerseObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class AnnotationPortal extends Component {
@@ -47,15 +48,16 @@ class AnnotationPortal extends Component {
         const { portalObject,
                 isAccessedPortal } = this.props,
 
-            { annotationIndex,
-              songTitle,
+            { songIndex,
+              annotationIndex,
+              verseIndex,
               columnIndex,
 
               // Default if no portal prefix.
-              portalPrefix = 'portal to',
+              portalPrefix = 'portal to' } = portalObject,
 
-              verseObject } = portalObject,
-
+              songTitle = getSongTitle({ songIndex }),
+              verseObject = getVerseObject(songIndex, verseIndex),
               columnKey = LYRIC_COLUMN_KEYS[columnIndex]
 
         return (

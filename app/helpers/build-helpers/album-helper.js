@@ -1,7 +1,7 @@
 // Parse album data for build.
 
 import { LEFT, RIGHT, ANCHOR, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, PROPER_NOUN } from '../../constants/lyrics'
-import { registerCards, addDestinationPortalLinks, finalPrepareCard, registerBeginningAndEndingVerseSpans } from './annotations-helper'
+import { registerCards, addDestinationPortalLinks, finalPrepareCard, addDestinationPortalFormats } from './annotations-helper'
 import { adminGatherDrawings, adminFinaliseDrawings, adminRegisterDrawingTasks } from './drawings-helper'
 import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes, finalAddPlaceholderStanzas } from './lyrics-helper'
 import { getIsLogue } from '../data-helper'
@@ -200,7 +200,7 @@ const _finalPrepareAlbum = (albumObject) => {
             _finalPrepareLyrics(songObject)
 
             // For each verse in a portal, tell portal how to format it.
-            registerBeginningAndEndingVerseSpans(songObject.lyrics)
+            addDestinationPortalFormats(songObject.lyrics)
 
             // Clean up.
             delete songObject.tempFinalAnnotationIndex

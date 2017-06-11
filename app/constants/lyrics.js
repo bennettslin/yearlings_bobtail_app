@@ -92,6 +92,13 @@ module.exports = {
         ANCHOR
     ],
 
+    PORTAL_SEARCH_KEYS: [
+        LYRIC,
+        LEFT,
+        RIGHT,
+        CENTRE
+    ],
+
     LYRIC_COLUMN_KEYS: [
         LEFT,
         RIGHT

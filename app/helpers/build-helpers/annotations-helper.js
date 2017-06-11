@@ -1,6 +1,6 @@
-import { LYRIC, LEFT, RIGHT, CENTRE, ANCHOR, WIKI, ITALIC, WIKI_INDEX, PORTAL_INDEX, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
+import { LYRIC, ANCHOR, WIKI, ITALIC, WIKI_INDEX, PORTAL_INDEX, PORTAL_SEARCH_KEYS, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
 import { PORTAL, REFERENCE } from '../../constants/dots'
-import { getSongTitle, getAnnotationObject, getVerseObject } from '../data-helper'
+import { getAnnotationObject } from '../data-helper'
 
 /***********
  * INITIAL *
@@ -37,24 +37,7 @@ export const registerCards = ({
             dotKeys: annotationDotKeys
 
         })) {
-            // if (verseObject.subStanza && verseObject.subStanza.lyric) {
-            //     verseObject.subStanza.lyric.verseHasPortal = true
-            //
-            // } else {
-            // }
-
-            verseObject.verseHasPortal = true
-
-            // if (!verseObject.time) {
-            //     console.error('here');
-            //     console.error('JSON.stringify(verseObject, null, 2)', JSON.stringify(verseObject, null, 2));
-            // }
-
-            if (!window.verseHasPortalCount) {
-                window.verseHasPortalCount = 1
-            } else {
-                window.verseHasPortalCount++
-            }
+            verseObject.tempVerseHasPortal = true
         }
     })
 }
@@ -126,13 +109,19 @@ const _addSourcePortalLink = ({
         return false
     }
 
-    // Portal is either object or string.
-    const { portalKey,
-            portalPrefix } = portal,
-
-        { songs } = albumObject,
+    /**
+     * Portal is either object or string. If it's an object, then the string
+     * we want is the portalKey.
+     */
+    const portalKey = portal.portalKey || portal,
+        { portalPrefix } = portal,
         { tempSongIndex } = songObject,
 
+        /**
+         * NOTE: I wrote this code with the assumption that every portal would
+         * be in a timed verse, and thus have a verse index. Had there been one
+         * that wasn't, such as in a side stanza, this wouldn't work for it!
+         */
         { verseIndex,
           annotationIndex,
           columnIndex } = annotationObject,
@@ -146,23 +135,15 @@ const _addSourcePortalLink = ({
             portalPrefix
         }
 
-    // Add data about portal.
-    portalLink.songTitle = getSongTitle({
-        songIndex: tempSongIndex,
-        songs
-    })
-
-    portalLink.verseObject = getVerseObject(tempSongIndex, verseIndex, songs)
-
     // If first portal link, initialise array.
-    if (!albumObject.tempPortalLinks[portalKey || portal]) {
-        albumObject.tempPortalLinks[portalKey || portal] = []
+    if (!albumObject.tempPortalLinks[portalKey]) {
+        albumObject.tempPortalLinks[portalKey] = []
     }
 
     // Add portal link to portal links array.
-    albumObject.tempPortalLinks[portalKey || portal].push(portalLink)
+    albumObject.tempPortalLinks[portalKey].push(portalLink)
 
-    // Add portal key to dot keys.
+    // Add portal to dot keys.
     dotKeys[PORTAL] = true
 
     // Clean up card unit.
@@ -202,7 +183,11 @@ export const addDestinationPortalLinks = (albumObject) => {
                 })
 
             cardObject.portalLinks = portalLinks
+
+            // Clean up.
+            delete link.cardIndex
         })
+
     }
 }
 
@@ -221,9 +206,10 @@ export const finalPrepareCard = (annotationObject, cardObject) => {
 
     if (portalLinks) {
         portalLinks.forEach(link => {
-            delete link.cardIndex
-            annotationObject.annotationAnchors.push(Object.assign({}, link))
-            link[PORTAL_INDEX] = annotationObject.tempAnnotationAnchorIndex
+            const { tempAnnotationAnchorIndex } = annotationObject
+
+            annotationObject.annotationAnchors.push(tempAnnotationAnchorIndex)
+            link[PORTAL_INDEX] = tempAnnotationAnchorIndex
             annotationObject.tempAnnotationAnchorIndex++
         })
     }
@@ -260,7 +246,12 @@ const _finalParseWiki = (annotationObject, entity) => {
     }
 }
 
-export const registerBeginningAndEndingVerseSpans = (lyricEntity, verseHasPortal = false) => {
+
+/**
+ * FIXME: This is extremely fragile, as it has to make exceptions for too many
+ * special cases, like italics in sub stanzas...
+ */
+export const addDestinationPortalFormats = (lyricEntity, verseHasPortal = false) => {
     /**
      * Let verses with portals know their first and last objects, which are
      * formatted differently in the portal.
@@ -268,60 +259,57 @@ export const registerBeginningAndEndingVerseSpans = (lyricEntity, verseHasPortal
 
     if (Array.isArray(lyricEntity)) {
         lyricEntity.forEach(childLyric => {
-            registerBeginningAndEndingVerseSpans(childLyric, verseHasPortal)
+            addDestinationPortalFormats(childLyric, verseHasPortal)
         })
 
     } else if (typeof lyricEntity === 'object') {
 
-        if (lyricEntity.verseHasPortal) {
+        if (lyricEntity.tempVerseHasPortal) {
+
+            // Keep knowing that verse has portal in subsequent recursions.
             verseHasPortal = true
 
             // Clean up.
-            delete lyricEntity.verseHasPortal
+            delete lyricEntity.tempVerseHasPortal
         }
 
         // Only register verses that have a portal.
         if (verseHasPortal) {
 
-            [LYRIC, LEFT, RIGHT, CENTRE].forEach(lyricKey => {
+            PORTAL_SEARCH_KEYS.forEach(lyricKey => {
 
                 if (typeof lyricEntity[lyricKey] === 'object') {
-                    _registerAfterTimeKeyFound(lyricEntity[lyricKey])
+                    _registerPortalFormats(lyricEntity[lyricKey])
                 }
 
                 if (typeof lyricEntity[lyricKey] === 'string') {
-                    lyricEntity[lyricKey] = _addVerseObjectKeyToLyric(lyricEntity[lyricKey], IS_VERSE_BEGINNING_SPAN)
-
-                    lyricEntity[lyricKey] = _addVerseObjectKeyToLyric(lyricEntity[lyricKey], IS_VERSE_ENDING_SPAN)
+                    lyricEntity[lyricKey] = _addPortalFormat(lyricEntity[lyricKey], IS_VERSE_BEGINNING_SPAN)
+                    lyricEntity[lyricKey] = _addPortalFormat(lyricEntity[lyricKey], IS_VERSE_ENDING_SPAN)
                 }
             })
         }
 
         if (lyricEntity.unitMap) {
             // This applies to "unsalvaged soul," "tarpid lies," and "trophy blondes."
-            registerBeginningAndEndingVerseSpans(lyricEntity.subStanza, verseHasPortal)
+            addDestinationPortalFormats(lyricEntity.subStanza, verseHasPortal)
         }
     }
 }
 
-/**
- * FIXME: This is extremely fragile, as it has to make exceptions for too many
- * special cases.
- */
-const _registerAfterTimeKeyFound = (lyricEntity) => {
+const _registerPortalFormats = (lyricEntity) => {
     /**
      * Helper method to register first and last verse objects, after time key
      * has been found.
      */
     if (Array.isArray(lyricEntity)) {
-        const lastIndex = lyricEntity.length - 1
-        lyricEntity[0] = _addVerseObjectKeyToLyric(lyricEntity[0], IS_VERSE_BEGINNING_SPAN)
-        lyricEntity[lastIndex] = _addVerseObjectKeyToLyric(lyricEntity[lastIndex], IS_VERSE_ENDING_SPAN)
+        const endIndex = lyricEntity.length - 1
+        lyricEntity[0] = _addPortalFormat(lyricEntity[0], IS_VERSE_BEGINNING_SPAN)
+        lyricEntity[endIndex] = _addPortalFormat(lyricEntity[endIndex], IS_VERSE_ENDING_SPAN)
 
     } else if (typeof lyricEntity === 'object') {
         if (typeof lyricEntity[ANCHOR] === 'string') {
-            lyricEntity = _addVerseObjectKeyToLyric(lyricEntity, IS_VERSE_BEGINNING_SPAN)
-            lyricEntity = _addVerseObjectKeyToLyric(lyricEntity, IS_VERSE_ENDING_SPAN)
+            lyricEntity = _addPortalFormat(lyricEntity, IS_VERSE_BEGINNING_SPAN)
+            lyricEntity = _addPortalFormat(lyricEntity, IS_VERSE_ENDING_SPAN)
         }
 
         if (lyricEntity[ITALIC]) {
@@ -329,12 +317,12 @@ const _registerAfterTimeKeyFound = (lyricEntity) => {
              * This applies to "unsalvaged soul," "pompous autumn," "tarpid
              * lies," and "trophy blondes."
              */
-            _registerAfterTimeKeyFound(lyricEntity[ITALIC])
+            _registerPortalFormats(lyricEntity[ITALIC])
         }
     }
 }
 
-const _addVerseObjectKeyToLyric = (lyricEntity, verseObjectKey) => {
+const _addPortalFormat = (lyricEntity, verseObjectKey) => {
 
     if (typeof lyricEntity === 'object') {
         lyricEntity[verseObjectKey] = true
@@ -342,7 +330,7 @@ const _addVerseObjectKeyToLyric = (lyricEntity, verseObjectKey) => {
 
     } else {
         return {
-            lyric: lyricEntity,
+            [LYRIC]: lyricEntity,
             [verseObjectKey]: true
         }
     }

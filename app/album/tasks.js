@@ -1,14 +1,10 @@
 module.exports = [
     {
-        taskName: `Don't store verse object in portal, instead get it from data helper.`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
         taskName: `Let lyric verse get verseObject through Redux.`,
         workedHours: 0,
         neededHours: 2
     },
+
     {
         taskName: `Access portal index when going to it.`,
         workedHours: 0,
@@ -2216,5 +2212,15 @@ module.exports = [
         taskName: `Iterate through integer array in carousel.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Don't store verse object in portal, instead get it from data helper.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Don't store verse object in annotation anchors, let data helper get it from portal links instead.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

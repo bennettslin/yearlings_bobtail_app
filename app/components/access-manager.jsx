@@ -4,7 +4,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import DomManager from './dom-manager'
 import { getSongsLength,
-         getBookColumnIndex } from '../helpers/data-helper'
+         getBookColumnIndex,
+         getPortalLink } from '../helpers/data-helper'
 import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getAnnotationAnchorIndexForDirection } from '../helpers/logic-helper'
@@ -202,12 +203,14 @@ class AccessManager extends Component {
                     if (typeof annotationAnchorEntity === 'string') {
                         this.props.handleAnnotationWikiSelect(e, accessedAnnotationAnchorIndex)
 
-                    // It's a portal.
+                    // It's a portal index.
                     } else {
-                        const { songIndex,
-                                annotationIndex,
-                                verseIndex,
-                                columnIndex } = annotationAnchorEntity
+                        const portalLink = getPortalLink(annotationObject, annotationAnchorEntity),
+
+                            { songIndex,
+                              annotationIndex,
+                              verseIndex,
+                              columnIndex } = portalLink,
 
                         keyWasRegistered = this.props.handleAnnotationPortalSelect(
                             e,
