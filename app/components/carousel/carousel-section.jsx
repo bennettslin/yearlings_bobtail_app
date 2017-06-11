@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import CarouselAnnotation from './carousel-annotation'
 import Button from '../button/button'
-import { getAnnotationsArray } from '../../helpers/data-helper'
+import { getAnnotationsLength } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class CarouselSection extends Component {
@@ -42,14 +42,20 @@ class CarouselSection extends Component {
             return null
         }
 
-        const annotations = getAnnotationsArray(selectedSongIndex)
+        const annotationsLength = getAnnotationsLength(selectedSongIndex),
+
+            /**
+             * Dynamically create array of just indices. Carousel annotation
+             * will fetch annotation object directly from data helper.
+             */
+            indicesArray = Array.from(Array(annotationsLength))
 
         return (
             <div className="carousel">
                 <div className="carousel-scroll">
                     <div className="carousel-annotations-block">
                         <div className="carousel-annotation carousel-annotation-0" />
-                        {annotations.map((annotation, index) => {
+                        {indicesArray.map((nothing, index) => {
                             const annotationIndex = index + 1,
                                 isAccessedAnnotation = annotationIndex === accessedAnnotationIndex,
                                 isSelectedAnnotation = annotationIndex === selectedAnnotationIndex
@@ -57,13 +63,9 @@ class CarouselSection extends Component {
                             return (
                                 <CarouselAnnotation {...other}
                                     key={index}
-                                    annotationObject={annotation}
-                                    annotationColumn={annotation.column}
-                                    annotationDotKeys={annotation.dotKeys}
                                     annotationIndex={annotationIndex}
                                     isAccessedAnnotation={isAccessedAnnotation}
                                     isSelectedAnnotation={isSelectedAnnotation}
-                                    selectedSongIndex={selectedSongIndex}
                                 />
                             )
                         })}

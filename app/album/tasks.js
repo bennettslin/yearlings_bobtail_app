@@ -2206,5 +2206,10 @@ module.exports = [
         taskName: `Scroll to accessed or selected annotation in carousel upon load.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Iterate through integer array in carousel.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

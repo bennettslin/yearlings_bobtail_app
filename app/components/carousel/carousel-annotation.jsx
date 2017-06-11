@@ -1,9 +1,11 @@
 // Container to show single annotation in carousel.
 
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import AnnotationSection from '../annotation/annotation-section'
+import { getAnnotationObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -43,9 +45,18 @@ class CarouselAnnotation extends Component {
     }
 
     render() {
+
+        const { selectedSongIndex,
+                annotationIndex } = this.props,
+
+            annotationObject = getAnnotationObject(selectedSongIndex, annotationIndex)
+
         return (
             <CarouselAnnotationView {...this.props}
                 handleTitleClick={this._handleAnnotationTitleClick}
+                annotationObject={annotationObject}
+                annotationColumn={annotationObject.column}
+                annotationDotKeys={annotationObject.dotKeys}
             />
         )
     }
@@ -94,4 +105,8 @@ CarouselAnnotationView.propTypes = {
     annotationDotKeys: PropTypes.object.isRequired
 }
 
-export default CarouselAnnotation
+export default connect(({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+}))(CarouselAnnotation)
