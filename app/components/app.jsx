@@ -590,10 +590,11 @@ class App extends Component {
 
         /**
          * Get new accessed annotation index by starting from first and going
-         * forward. It should always be the title annotation unless deselected
-         * by dots.
+         * forward. If not called from portal, it should always be the title
+         * annotation unless deselected by dots.
          */
         this.props.accessAnnotationIndex(
+            selectedAnnotationIndex ||
             getAnnotationIndexForDirection({
                 deviceIndex: this.props.deviceIndex,
                 currentAnnotationIndex: 1,

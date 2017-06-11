@@ -2187,4 +2187,9 @@ module.exports = [
         workedHours: 4,
         neededHours: 4
     },
+    {
+        taskName: `Accessed annotation is selected annotation when song selected from portal.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
