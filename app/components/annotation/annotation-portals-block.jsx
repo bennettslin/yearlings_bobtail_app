@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationPortal from './annotation-portal'
-import { PORTAL_INDEX } from '../../constants/lyrics'
+import { SOURCE_PORTAL_INDEX } from '../../constants/lyrics'
 
 const AnnotationPortalsBlock = ({
 
@@ -16,7 +16,7 @@ const AnnotationPortalsBlock = ({
     <div className="portals-block">
         {portalLinks.map((portalObject, index) => {
 
-            const { [PORTAL_INDEX]: portalIndex } = portalObject,
+            const { [SOURCE_PORTAL_INDEX]: portalIndex } = portalObject,
                 isAccessedPortal = accessedAnnotationAnchorIndex === portalIndex
 
             return (

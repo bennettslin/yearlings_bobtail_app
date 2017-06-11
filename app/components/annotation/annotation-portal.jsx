@@ -6,7 +6,7 @@ import classnames from 'classnames';
 import TextBlock from '../text/text-block'
 import DotButton from '../dot/dot-button'
 import { PORTAL } from '../../constants/dots'
-import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE } from '../../constants/lyrics'
+import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
 import { getSongTitle, getVerseObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
@@ -39,9 +39,10 @@ class AnnotationPortal extends Component {
         const { songIndex,
                 annotationIndex,
                 verseIndex,
-                columnIndex } = this.props.portalObject
+                columnIndex,
+                [DESTINATION_PORTAL_INDEX]: destinationPortalIndex } = this.props.portalObject
 
-        this.props.handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex)
+        this.props.handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex, destinationPortalIndex)
     }
 
     render() {

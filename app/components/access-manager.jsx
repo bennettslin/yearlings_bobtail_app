@@ -38,6 +38,7 @@ import { ARROW_LEFT,
          TIPS_TOGGLE_KEY,
          TITLE_TOGGLE_KEY } from '../constants/access'
 import { ALL_DOT_KEYS } from '../constants/dots'
+import { DESTINATION_PORTAL_INDEX } from '../constants/lyrics'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 
@@ -210,14 +211,16 @@ class AccessManager extends Component {
                             { songIndex,
                               annotationIndex,
                               verseIndex,
-                              columnIndex } = portalLink,
+                              columnIndex,
+                              [DESTINATION_PORTAL_INDEX]: destinationPortalIndex } = portalLink,
 
                         keyWasRegistered = this.props.handleAnnotationPortalSelect(
                             e,
                             songIndex,
                             annotationIndex,
                             verseIndex,
-                            columnIndex
+                            columnIndex,
+                            destinationPortalIndex
                         )
 
                         /**

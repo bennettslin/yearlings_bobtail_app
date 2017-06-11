@@ -5,7 +5,7 @@
  */
 
 import AlbumData from '../album-data'
-import { PORTAL_INDEX } from '../constants/lyrics'
+import { SOURCE_PORTAL_INDEX } from '../constants/lyrics'
 
 export const getSongObject = (songIndex, songs = AlbumData.songs) => {
     return songs[songIndex] || null
@@ -117,7 +117,7 @@ export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
         if (portalLinks) {
             // Loop through portal links until we find the portal index we want.
             foundCardObject = portalLinks.reduce((foundPortalLink, portalLink) => {
-                if (portalLink[PORTAL_INDEX] === annotationAnchorIndex) {
+                if (portalLink[SOURCE_PORTAL_INDEX] === annotationAnchorIndex) {
                     foundPortalLink = portalLink
                 }
 

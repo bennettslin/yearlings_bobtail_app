@@ -1,4 +1,4 @@
-import { LYRIC, ANCHOR, WIKI, ITALIC, WIKI_INDEX, PORTAL_INDEX, PORTAL_SEARCH_KEYS, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
+import { LYRIC, ANCHOR, WIKI, ITALIC, WIKI_INDEX, PORTAL_SEARCH_KEYS, DESTINATION_PORTAL_INDEX, SOURCE_PORTAL_INDEX, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
 import { PORTAL, REFERENCE } from '../../constants/dots'
 import { getAnnotationObject } from '../data-helper'
 
@@ -130,8 +130,8 @@ const _addSourcePortalLink = ({
             songIndex: tempSongIndex,
             annotationIndex,
             cardIndex,
-            verseIndex,
             columnIndex,
+            verseIndex,
             portalPrefix
         }
 
@@ -164,28 +164,19 @@ export const addDestinationPortalLinks = (albumObject) => {
     for (const linkKey in albumObject.tempPortalLinks) {
         const links = albumObject.tempPortalLinks[linkKey]
 
-        links.forEach((link, index) => {
+        links.forEach((destinationLink, index) => {
             const { songIndex,
                     annotationIndex,
-                    cardIndex } = link,
+                    cardIndex } = destinationLink,
 
-                annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
-                cardObject = annotationObject.cards[cardIndex],
+            annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
+            cardObject = annotationObject.cards[cardIndex]
+
+            cardObject.portalLinks = links.filter((sourceLink, thisIndex) => {
 
                 // Don't add link to its own portal.
-                portalLinks = links.filter((link, thisIndex) => {
-                    return index !== thisIndex
-
-                }).map(link => {
-
-                    // Return a *copy* of the link object.
-                    return Object.assign({}, link)
-                })
-
-            cardObject.portalLinks = portalLinks
-
-            // Clean up.
-            delete link.cardIndex
+                return index !== thisIndex
+            })
         })
 
     }
@@ -195,9 +186,11 @@ export const addDestinationPortalLinks = (albumObject) => {
  * FINAL *
  *********/
 
-export const finalPrepareCard = (annotationObject, cardObject) => {
-    const { description,
-            portalLinks } = cardObject
+export const finalPrepareCard = (songObject, annotationObject, cardObject) => {
+    const { tempSongIndex } = songObject,
+
+        { description,
+          portalLinks } = cardObject
 
     if (description) {
         // This is the wiki key in the song data, *not* the dot key.
@@ -208,8 +201,28 @@ export const finalPrepareCard = (annotationObject, cardObject) => {
         portalLinks.forEach(link => {
             const { tempAnnotationAnchorIndex } = annotationObject
 
+            // Access will loop through this array.
+            if (!annotationObject.annotationAnchors) {
+                annotationObject.annotationAnchors = []
+            }
             annotationObject.annotationAnchors.push(tempAnnotationAnchorIndex)
-            link[PORTAL_INDEX] = tempAnnotationAnchorIndex
+
+            // Allow each portal to know its source portal index.
+            if (!annotationObject.tempSourcePortalIndices) {
+                annotationObject.tempSourcePortalIndices = []
+            }
+            annotationObject.tempSourcePortalIndices.push(tempAnnotationAnchorIndex)
+
+            // Temporarily, also allow portal to know its source annotations.
+            if (!link.tempSourcePortalLinks) {
+                link.tempSourcePortalLinks = []
+            }
+            link.tempSourcePortalLinks.push({
+                tempSourceSongIndex: tempSongIndex,
+                tempSourceAnnotationIndex: annotationObject.annotationIndex,
+                tempSourcePortalIndex: tempAnnotationAnchorIndex
+            })
+
             annotationObject.tempAnnotationAnchorIndex++
         })
     }
@@ -236,6 +249,10 @@ const _finalParseWiki = (annotationObject, entity) => {
                 // Popup anchor index is either for portal or wiki.
                 entity[WIKI_INDEX] = annotationObject.tempAnnotationAnchorIndex
                 annotationObject.tempAnnotationAnchorIndex++
+
+                if (!annotationObject.annotationAnchors) {
+                    annotationObject.annotationAnchors = []
+                }
                 annotationObject.annotationAnchors.push(entity[WIKI])
 
                 delete entity[WIKI]
@@ -334,4 +351,68 @@ const _addPortalFormat = (lyricEntity, verseObjectKey) => {
             [verseObjectKey]: true
         }
     }
+}
+
+export const addDestinationPortalIndices = (albumObject) => {
+    // Now that each portal knows its source index, get destination indices.
+
+    for (const linkKey in albumObject.tempPortalLinks) {
+        const links = albumObject.tempPortalLinks[linkKey]
+
+        links.forEach((destinationLink, index) => {
+
+            const { songIndex,
+                    annotationIndex,
+                    cardIndex } = destinationLink,
+
+            annotationObject = getAnnotationObject(songIndex, annotationIndex, albumObject.songs),
+            cardObject = annotationObject.cards[cardIndex]
+
+            cardObject.portalLinks = links.filter((sourceLink, thisIndex) => {
+
+                /**
+                 * Add destination portal indices. This is as complicated as it
+                 * is because of the three "shiv" portals.
+                 */
+                destinationLink.tempSourcePortalLinks.forEach((tempSourceLink) => {
+                    const { tempSourceSongIndex,
+                            tempSourceAnnotationIndex,
+                            tempSourcePortalIndex } = tempSourceLink,
+
+                        /**
+                         * This will happen only once for each source and
+                         * destination pair.
+                         */
+                        linksMatch = sourceLink.songIndex === tempSourceSongIndex &&
+                                     sourceLink.annotationIndex === tempSourceAnnotationIndex
+
+                    if (linksMatch) {
+                        // Exchange knowledge of source and destination indices.
+                        sourceLink[DESTINATION_PORTAL_INDEX] = tempSourcePortalIndex
+                        sourceLink[SOURCE_PORTAL_INDEX] = annotationObject.tempSourcePortalIndices.shift()
+                    }
+                })
+
+                // Don't add link to its own portal.
+                return index !== thisIndex
+
+            }).map(sourceLink => {
+
+                // Give card a *copy* of this link object.
+                const newLink = Object.assign({}, sourceLink)
+
+                // Clean up.
+                delete newLink.cardIndex
+                delete newLink.tempSourcePortalLinks
+
+                return newLink
+            })
+
+            // Clean up.
+            delete annotationObject.tempSourcePortalIndices
+        })
+    }
+
+    // Clean up.
+    delete albumObject.tempPortalLinks
 }

@@ -1,7 +1,7 @@
 // Parse album data for build.
 
 import { LEFT, RIGHT, ANCHOR, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, PROPER_NOUN } from '../../constants/lyrics'
-import { registerCards, addDestinationPortalLinks, finalPrepareCard, addDestinationPortalFormats } from './annotations-helper'
+import { registerCards, addDestinationPortalLinks, finalPrepareCard, addDestinationPortalIndices, addDestinationPortalFormats } from './annotations-helper'
 import { adminGatherDrawings, adminFinaliseDrawings, adminRegisterDrawingTasks } from './drawings-helper'
 import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes, finalAddPlaceholderStanzas } from './lyrics-helper'
 import { getIsLogue } from '../data-helper'
@@ -22,8 +22,8 @@ export const parseAlbumData = (albumObject) => {
     // Finap preparation.
     _finalPrepareAlbum(albumObject)
 
-    // Clean up.
-    delete albumObject.tempPortalLinks
+    // After preparation.
+    addDestinationPortalIndices(albumObject)
 
     return albumObject
 }
@@ -58,9 +58,6 @@ const _initialPrepareAlbum = (albumObject) => {
 
             // Parse lyrics.
             _initialPrepareLyrics(albumObject, songObject)
-
-            // Clean up.
-            delete songObject.tempSongIndex
         }
 
         adminGatherDrawings(albumObject, songObject.scenes, songIndex)
@@ -204,12 +201,14 @@ const _finalPrepareAlbum = (albumObject) => {
 
             // Clean up.
             delete songObject.tempFinalAnnotationIndex
+            delete songObject.tempSongIndex
         }
 
         adminRegisterDrawingTasks(songObject)
         finalAddPlaceholderStanzas(albumObject, songObject)
     })
 
+    // Clean up.
     delete albumObject.tempLargestStanzaTimesLength
 }
 
@@ -240,11 +239,10 @@ const _finalRegisterAnnotation = ({
 
     annotationObject.tempAnnotationAnchorIndex = 1
 
-    annotationObject.annotationAnchors = []
     let cards = annotationObject.cards
 
     cards.forEach(cardObject => {
-        finalPrepareCard(annotationObject, cardObject)
+        finalPrepareCard(songObject, annotationObject, cardObject)
     })
 
     songObject.tempFinalAnnotationIndex++

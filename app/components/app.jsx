@@ -197,6 +197,7 @@ class App extends Component {
     selectAnnotation({
         selectedAnnotationIndex = 0,
         selectedSongIndex = this.props.selectedSongIndex,
+        initialAnnotationAnchorIndex = 1,
         direction
     }) {
         const { props } = this
@@ -225,7 +226,7 @@ class App extends Component {
                     selectedSongIndex,
                     selectedAnnotationIndex,
                     selectedDotKeys,
-                    initialAnnotationAnchorIndex: 1
+                    initialAnnotationAnchorIndex
                 })
             )
         }
@@ -513,7 +514,8 @@ class App extends Component {
         direction,
         selectedAnnotationIndex = 0,
         selectedVerseIndex = 0,
-        selectedWikiIndex = 0
+        selectedWikiIndex = 0,
+        destinationPortalIndex
     }) {
 
         const { props } = this
@@ -548,7 +550,10 @@ class App extends Component {
 
         this.selectAnnotation({
             selectedAnnotationIndex,
-            selectedSongIndex
+            selectedSongIndex,
+
+            // If from portal, access destination portal index.
+            initialAnnotationAnchorIndex: destinationPortalIndex
         })
 
         this.selectVerse({

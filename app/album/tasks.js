@@ -1,14 +1,18 @@
 module.exports = [
     {
+        taskName: `Typing "window" is weird.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `When selecting song from portal, carousel scroll should be called strategically, especially Odin shivs.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Let lyric verse get verseObject through Redux.`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    {
-        taskName: `Access portal index when going to it.`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Show all state in admin component.`,
@@ -2228,4 +2232,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Access portal index when going to it.`,
+        workedHours: 4,
+        neededHours: 4
+    }
 ]

@@ -32,7 +32,8 @@ module.exports = {
     RIGHT_COLUMN: 'rightColumn',
 
     WIKI_INDEX: 'wikiIndex',
-    PORTAL_INDEX: 'portalIndex',
+    DESTINATION_PORTAL_INDEX: 'destinationPortalIndex',
+    SOURCE_PORTAL_INDEX: 'sourcePortalIndex',
 
     IS_DOT_STANZA: '***DOT_STANZA***',
     HAS_SIDE_STANZAS: 'hasSideStanzas',
