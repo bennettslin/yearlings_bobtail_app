@@ -772,28 +772,26 @@ module.exports = {
                 subStanza: [
                     {
                         time: 126,
-                        lyric: [
-                            {
-                                italic: [
-                                    `Shelled skull has freed`,
-                                    {
-                                        anchor: `unsalvaged soul…`,
-                                        annotation: [
-                                            {
-                                                description: `Religious doctrine in the past often sanctioned the abuse of disabled children by giving assurance that they were devoid of souls. But I came to a different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.`,
-                                                dotKeys: {
-                                                    [OBSERVATION]: true,
-                                                    [REFERENCE]: true
-                                                }
-                                            },
-                                            {
-                                                portal: `unsalvaged_sows`
+                        lyric: {
+                            italic: [
+                                `Shelled skull has freed`,
+                                {
+                                    anchor: `unsalvaged soul…`,
+                                    annotation: [
+                                        {
+                                            description: `Religious doctrine in the past often sanctioned the abuse of disabled children by giving assurance that they were devoid of souls. But I came to a different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.`,
+                                            dotKeys: {
+                                                [OBSERVATION]: true,
+                                                [REFERENCE]: true
                                             }
-                                        ],
-                                    }
-                                ]
-                            }
-                        ]
+                                        },
+                                        {
+                                            portal: `unsalvaged_sows`
+                                        }
+                                    ],
+                                }
+                            ]
+                        }
                     }
                 ],
             }

@@ -37,7 +37,24 @@ export const registerCards = ({
             dotKeys: annotationDotKeys
 
         })) {
+            // if (verseObject.subStanza && verseObject.subStanza.lyric) {
+            //     verseObject.subStanza.lyric.verseHasPortal = true
+            //
+            // } else {
+            // }
+
             verseObject.verseHasPortal = true
+
+            // if (!verseObject.time) {
+            //     console.error('here');
+            //     console.error('JSON.stringify(verseObject, null, 2)', JSON.stringify(verseObject, null, 2));
+            // }
+
+            if (!window.verseHasPortalCount) {
+                window.verseHasPortalCount = 1
+            } else {
+                window.verseHasPortalCount++
+            }
         }
     })
 }
@@ -243,7 +260,7 @@ const _finalParseWiki = (annotationObject, entity) => {
     }
 }
 
-export const registerBeginningAndEndingVerseSpans = (lyricEntity) => {
+export const registerBeginningAndEndingVerseSpans = (lyricEntity, verseHasPortal = false) => {
     /**
      * Let verses with portals know their first and last objects, which are
      * formatted differently in the portal.
@@ -251,16 +268,26 @@ export const registerBeginningAndEndingVerseSpans = (lyricEntity) => {
 
     if (Array.isArray(lyricEntity)) {
         lyricEntity.forEach(childLyric => {
-            registerBeginningAndEndingVerseSpans(childLyric)
+            registerBeginningAndEndingVerseSpans(childLyric, verseHasPortal)
         })
 
     } else if (typeof lyricEntity === 'object') {
 
-        // Only register verses that have a portal.
         if (lyricEntity.verseHasPortal) {
+            verseHasPortal = true
+
+            // Clean up.
+            delete lyricEntity.verseHasPortal
+        }
+
+        // Only register verses that have a portal.
+        if (verseHasPortal) {
 
             [LYRIC, LEFT, RIGHT, CENTRE].forEach(lyricKey => {
-                _registerAfterTimeKeyFound(lyricEntity[lyricKey])
+
+                if (typeof lyricEntity[lyricKey] === 'object') {
+                    _registerAfterTimeKeyFound(lyricEntity[lyricKey])
+                }
 
                 if (typeof lyricEntity[lyricKey] === 'string') {
                     lyricEntity[lyricKey] = _addVerseObjectKeyToLyric(lyricEntity[lyricKey], IS_VERSE_BEGINNING_SPAN)
@@ -270,33 +297,39 @@ export const registerBeginningAndEndingVerseSpans = (lyricEntity) => {
             })
         }
 
-        if (typeof lyricEntity.unitMap !== 'undefined') {
-            registerBeginningAndEndingVerseSpans(lyricEntity.subStanza)
+        if (lyricEntity.unitMap) {
+            // This applies to "unsalvaged soul," "tarpid lies," and "trophy blondes."
+            registerBeginningAndEndingVerseSpans(lyricEntity.subStanza, verseHasPortal)
         }
     }
 }
 
+/**
+ * FIXME: This is extremely fragile, as it has to make exceptions for too many
+ * special cases.
+ */
 const _registerAfterTimeKeyFound = (lyricEntity) => {
     /**
      * Helper method to register first and last verse objects, after time key
      * has been found.
      */
     if (Array.isArray(lyricEntity)) {
-
-        if (lyricEntity[0][ITALIC]) {
-            _registerAfterTimeKeyFound(lyricEntity[0])
-
-        } else {
-            lyricEntity[0] = _addVerseObjectKeyToLyric(lyricEntity[0], IS_VERSE_BEGINNING_SPAN)
-            lyricEntity[lyricEntity.length - 1] = _addVerseObjectKeyToLyric(lyricEntity[lyricEntity.length - 1], IS_VERSE_ENDING_SPAN)
-        }
+        const lastIndex = lyricEntity.length - 1
+        lyricEntity[0] = _addVerseObjectKeyToLyric(lyricEntity[0], IS_VERSE_BEGINNING_SPAN)
+        lyricEntity[lastIndex] = _addVerseObjectKeyToLyric(lyricEntity[lastIndex], IS_VERSE_ENDING_SPAN)
 
     } else if (typeof lyricEntity === 'object') {
-        _registerAfterTimeKeyFound(lyricEntity[ITALIC])
-
         if (typeof lyricEntity[ANCHOR] === 'string') {
             lyricEntity = _addVerseObjectKeyToLyric(lyricEntity, IS_VERSE_BEGINNING_SPAN)
             lyricEntity = _addVerseObjectKeyToLyric(lyricEntity, IS_VERSE_ENDING_SPAN)
+        }
+
+        if (lyricEntity[ITALIC]) {
+            /**
+             * This applies to "unsalvaged soul," "pompous autumn," "tarpid
+             * lies," and "trophy blondes."
+             */
+            _registerAfterTimeKeyFound(lyricEntity[ITALIC])
         }
     }
 }

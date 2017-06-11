@@ -2181,5 +2181,10 @@ module.exports = [
         taskName: `Finish refactoring build helper.`,
         workedHours: 7,
         neededHours: 7
-    }
+    },
+    {
+        taskName: `Fix bug where some portal verses were being formatted wrong.`,
+        workedHours: 4,
+        neededHours: 4
+    },
 ]

@@ -18,6 +18,7 @@ module.exports = {
     CENTRE,
     RIGHT,
     ANCHOR,
+    ITALIC,
 
     WIKI: 'wiki',
 
