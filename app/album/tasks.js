@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `Don't store verse object in portal, instead get it from data helper.`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: `Access portal index when going to it.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Show all state in admin component.`,
         workedHours: 0,
         neededHours: 3
@@ -2189,6 +2199,11 @@ module.exports = [
     },
     {
         taskName: `Accessed annotation is selected annotation when song selected from portal.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Scroll to accessed or selected annotation in carousel upon load.`,
         workedHours: 1,
         neededHours: 1
     }

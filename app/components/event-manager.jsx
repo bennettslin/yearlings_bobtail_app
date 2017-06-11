@@ -87,6 +87,25 @@ class EventManager extends Component {
         this._focusBody()
     }
 
+    componentWillReceiveProps(nextProps) {
+
+        // If annotation is selected or accessed in carousel, scroll to it.
+        if (nextProps.appMounted && !this.props.appMounted) {
+            const { selectedCarouselIndex,
+                    selectedAnnotationIndex,
+                    accessedAnnotationIndex } = nextProps,
+
+                scrollToAnnotationIndex = selectedAnnotationIndex || accessedAnnotationIndex
+
+            if (selectedCarouselIndex && scrollToAnnotationIndex) {
+                // Animation is slightly less janky with setTimeout.
+                setTimeout(() => {
+                    this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, scrollToAnnotationIndex)
+                }, 0)
+            }
+        }
+    }
+
     /**********
      * ACCESS *
      **********/
@@ -892,7 +911,7 @@ class EventManager extends Component {
 }
 
 export default connect(({
-    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
+    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }) => ({
-    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
+    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }))(EventManager)
