@@ -12,7 +12,7 @@ module.exports = [
     {
         taskName: `Let lyric verse get verseObject through Redux.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `Show all state in admin component.`,
@@ -2239,6 +2239,11 @@ module.exports = [
     },
     {
         taskName: `Fix rules for closing sections.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Let lyric unit get unit array through Redux and data helper.`,
         workedHours: 1,
         neededHours: 1
     }

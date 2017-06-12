@@ -48,14 +48,14 @@ class CarouselSection extends Component {
              * Dynamically create array of just indices. Carousel annotation
              * will fetch annotation object directly from data helper.
              */
-            indicesArray = Array.from(Array(annotationsLength))
+            indicesArray = Array.from(Array(annotationsLength).keys())
 
         return (
             <div className="carousel">
                 <div className="carousel-scroll">
                     <div className="carousel-annotations-block">
                         <div className="carousel-annotation carousel-annotation-0" />
-                        {indicesArray.map((nothing, index) => {
+                        {indicesArray.map(index => {
                             const annotationIndex = index + 1,
                                 isAccessedAnnotation = annotationIndex === accessedAnnotationIndex,
                                 isSelectedAnnotation = annotationIndex === selectedAnnotationIndex

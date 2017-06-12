@@ -2,10 +2,12 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
 import LyricStanza from './lyric-stanza'
 import LyricDotStanza from './lyric-dot-stanza'
 import { TITLE, LEFT, RIGHT } from '../../constants/lyrics'
+import { getLyricsUnitArray } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -39,11 +41,13 @@ class LyricUnit extends Component {
     }
 
     render() {
-        const { unitIndex,
+        const { selectedSongIndex,
+                unitIndex,
                 ...other } = this.props,
 
-            { stanzaArray,
-              hiddenLyricColumnKey } = other,
+            unitArray = getLyricsUnitArray(selectedSongIndex, unitIndex),
+
+            { hiddenLyricColumnKey } = other,
 
             isTitleUnit = unitIndex === 0,
 
@@ -57,11 +61,11 @@ class LyricUnit extends Component {
               dotStanza,
               subStanza,
               topSideStanza,
-              bottomSideStanza } = stanzaArray[stanzaArray.length - 1],
+              bottomSideStanza } = unitArray[unitArray.length - 1],
 
             isBottomOnly = !topSideStanza && !!bottomSideStanza,
             topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
-            isDotOnly = dotStanza && stanzaArray.length === 1,
+            isDotOnly = dotStanza && unitArray.length === 1,
             hasSide = topSideStanza || bottomSideStanza,
 
             // FIXME: Take care of this through CSS.
@@ -75,6 +79,7 @@ class LyricUnit extends Component {
                 isTitleUnit={isTitleUnit}
                 unitClassName={unitClassName}
                 stanzaIndex={stanzaIndex}
+                unitArray={unitArray}
                 stanzaType={isTitleUnit ? TITLE : stanzaType}
                 substanzaType={substanzaType}
                 sideStanzaType={sideStanzaType}
@@ -95,9 +100,11 @@ class LyricUnit extends Component {
 }
 
 LyricUnit.propTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+
     // From parent.
     unitIndex: PropTypes.number.isRequired,
-    stanzaArray: PropTypes.array.isRequired,
     hiddenLyricColumnKey: PropTypes.string
 }
 
@@ -108,7 +115,7 @@ LyricUnit.propTypes = {
 const LyricUnitView = ({
 
     // From props.
-    stanzaArray,
+    unitArray,
 
     // From controller.
     isTitleUnit,
@@ -142,7 +149,7 @@ const LyricUnitView = ({
             {showMain &&
                 <div className="stanza-block">
                     <LyricStanza {...other}
-                        stanzaArray={stanzaArray}
+                        stanzaArray={unitArray}
                         truncateMain={truncateMain}
                         inMain={true}
                     />
@@ -189,7 +196,7 @@ LyricUnitView.defaultProps = {
 
 LyricUnitView.propTypes = {
     // From parent.
-    stanzaArray: PropTypes.array.isRequired,
+    unitArray: PropTypes.array.isRequired,
     isTitleUnit: PropTypes.bool.isRequired,
     unitClassName: PropTypes.string,
 
@@ -206,4 +213,8 @@ LyricUnitView.propTypes = {
     showSide: PropTypes.bool.isRequired
 }
 
-export default LyricUnit
+export default connect(({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+}))(LyricUnit)

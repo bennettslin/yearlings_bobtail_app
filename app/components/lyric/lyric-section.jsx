@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
 import LyricUnit from './lyric-unit'
-import { getLyricsArray } from '../../helpers/data-helper'
+import { getLyricsLength } from '../../helpers/data-helper'
 
 /*************
  * CONTAINER *
@@ -42,12 +42,8 @@ class LyricSection extends Component {
     }
 
     render() {
-        const { props } = this,
-            lyricsArray = getLyricsArray(props.selectedSongIndex)
-
         return (
-            <LyricSectionView {...props}
-                lyricsArray={lyricsArray}
+            <LyricSectionView {...this.props}
                 handleScroll={this._handleScroll}
             />
         )
@@ -57,7 +53,6 @@ class LyricSection extends Component {
 LyricSection.propTypes = {
     // Through Redux.
     appMounted: PropTypes.bool.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
     isTransitioningHeight: PropTypes.bool.isRequired,
@@ -71,39 +66,52 @@ LyricSection.propTypes = {
 
 const LyricSectionView = ({
 
-    lyricsArray,
+    selectedSongIndex,
+
     lyricSectionRef,
     handleScroll,
 
-...other }) => (
-    <div
-        ref={lyricSectionRef}
-        className={classnames(
-            'section',
-            'lyric-section',
-            'lyrics-scroll'
-        )}
-        tabIndex="-1"
-        onScroll={handleScroll}
-    >
-        {/* Upon song change, scroll to element with this class name. */}
-        <div className="lyrics-scroll-home" />
-        <div className="lyric-block">
-            {lyricsArray.map((stanzaArray, unitIndex) => (
-                    <LyricUnit {...other}
-                        key={unitIndex}
-                        unitIndex={unitIndex}
-                        stanzaArray={stanzaArray}
-                    />
-                )
+...other }) => {
+
+    const lyricsLength = getLyricsLength(selectedSongIndex),
+
+        /**
+         * Dynamically create array of just indices. Lyric unit will fetch
+         * unit array directly from data helper.
+         */
+        indicesArray = Array.from(Array(lyricsLength).keys())
+
+    return (
+        <div
+            ref={lyricSectionRef}
+            className={classnames(
+                'section',
+                'lyric-section',
+                'lyrics-scroll'
             )}
+            tabIndex="-1"
+            onScroll={handleScroll}
+        >
+            {/* Upon song change, scroll to element with this class name. */}
+            <div className="lyrics-scroll-home" />
+            <div className="lyric-block">
+                {indicesArray.map(unitIndex => (
+                        <LyricUnit {...other}
+                            key={unitIndex}
+                            unitIndex={unitIndex}
+                        />
+                    )
+                )}
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 LyricSectionView.propTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+
     // From parent.
-    lyricsArray: PropTypes.array.isRequired,
     lyricSectionRef: PropTypes.func.isRequired,
     handleScroll: PropTypes.func.isRequired
 }
