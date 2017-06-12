@@ -24,7 +24,7 @@ class LyricUnit extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'deviceIndex',
-                    // 'appMounted',
+                    'selectedSongIndex',
                     'isSliderTouched',
                     'sliderVerseIndex',
                     'isPlaying',
@@ -49,6 +49,27 @@ class LyricUnit extends Component {
 
             unitArray = getLyricsUnitArray(selectedSongIndex, unitIndex),
 
+            /**
+             * Provided by Willy the Cocoa, Odin, and Constellations. Provide
+             * special formatting for custom sub blocks.
+             */
+            { unitClassName,
+
+              stanzaIndex,
+              stanzaType,
+              substanzaType,
+              sideStanzaType,
+              sideSubstanzaType,
+
+              subsequent,
+              dotStanza,
+              subStanza,
+              topSideStanza,
+              bottomSideStanza } = unitArray[unitArray.length - 1],
+
+            // This exists solely for "Maranatha."
+            topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
+
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
                 showOneOfTwoLyricColumns,
                 selectedLyricColumnIndex
@@ -56,27 +77,13 @@ class LyricUnit extends Component {
 
             isTitleUnit = unitIndex === 0,
 
-            { unitClassName,
-              stanzaIndex,
-              stanzaType,
-              substanzaType,
-              sideStanzaType,
-              sideSubstanzaType,
-              subsequent,
-              dotStanza,
-              subStanza,
-              topSideStanza,
-              bottomSideStanza } = unitArray[unitArray.length - 1],
-
             isBottomOnly = !topSideStanza && !!bottomSideStanza,
-            topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
             isDotOnly = dotStanza && unitArray.length === 1,
-            hasSide = topSideStanza || bottomSideStanza,
+            hasSide = !!(topSideStanza || bottomSideStanza),
 
             // FIXME: Take care of this through CSS.
             truncateMain = hasSide && hiddenLyricColumnKey === LEFT,
             showMain = !isDotOnly && (!hasSide || hiddenLyricColumnKey !== LEFT || truncateMain),
-
             showSide = hasSide && hiddenLyricColumnKey !== RIGHT
 
         return (

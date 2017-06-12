@@ -32,7 +32,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Handle slider verses through CSS, and fix present bug.`,
+        taskName: `Handle slider verses through CSS.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -2246,5 +2246,10 @@ module.exports = [
         taskName: `Keep verse bar at minimum width.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Fix bug where Sasha did not have certain dots.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

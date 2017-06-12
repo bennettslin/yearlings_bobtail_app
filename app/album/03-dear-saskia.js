@@ -1,13 +1,13 @@
-import { NARRATIVE,
+import { BACKSTORY,
+         NARRATIVE,
          OBSERVATION,
          PUN,
          REFERENCE,
+         AFTERWORD,
          SONGWRITING } from '../constants/dots'
 import { VERSES,
          PRECHORUS,
          CHORUS,
-         AFTERWORD,
-         BACKSTORY,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
 
