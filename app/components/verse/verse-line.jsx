@@ -57,7 +57,10 @@ class VerseLine extends Component {
              * when switching number of columns.
              */
             oldProps.selectedSongIndex !== newProps.selectedSongIndex ||
-            oldProps.hiddenLyricColumnKey !== newProps.hiddenLyricColumnKey ||
+
+            // TEMP NOTE: This used to check for the hidden lyric column key.
+            oldProps.selectedLyricColumnIndex !== newProps.selectedLyricColumnIndex ||
+            oldProps.showOneOfTwoLyricColumns !== newProps.showOneOfTwoLyricColumns ||
 
             // In verse bar.
             (!!oldProps.inVerseBar && oldProps.text !== newProps.text)
@@ -143,6 +146,8 @@ VerseLine.propTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
+    selectedLyricColumnIndex: PropTypes.number.isRequired,
+    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
     // From parent.
     text: PropTypes.oneOfType([
@@ -154,13 +159,16 @@ VerseLine.propTypes = {
     inVerseBar: PropTypes.bool.isRequired,
     isHidden: PropTypes.bool.isRequired,
     columnKey: PropTypes.string.isRequired,
-    hiddenLyricColumnKey: PropTypes.string.isRequired
 }
 
 export default connect(({
     deviceIndex,
-    selectedSongIndex
+    selectedSongIndex,
+    selectedLyricColumnIndex,
+    showOneOfTwoLyricColumns
 }) => ({
     deviceIndex,
-    selectedSongIndex
+    selectedSongIndex,
+    selectedLyricColumnIndex,
+    showOneOfTwoLyricColumns
 }))(VerseLine)

@@ -9,7 +9,6 @@ import LyricSection from '../lyric/lyric-section'
 import VerseBar from '../verse/verse-bar'
 import { LYRIC_COLUMN_TOGGLE_KEY } from '../../constants/access'
 import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
-import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -123,16 +122,10 @@ const LyricColumnView = ({
 
 ...other }) => {
 
-    const hiddenLyricColumnKey = getHiddenLyricColumnKey({
-            showOneOfTwoLyricColumns,
-            selectedLyricColumnIndex
-        }),
-
-        // If there is a slider verse, override selected verse.
-        verseIndex = sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
+    // If there is a slider verse, override selected verse.
+    const verseIndex = sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
         verseBarProps = {
             verseIndex,
-            hiddenLyricColumnKey,
             handleVerseBarSelect,
             handleVerseBarWheel
         }
@@ -169,7 +162,6 @@ const LyricColumnView = ({
                     handleLyricSectionExpand={handleLyricSectionExpand}
                 />
                 <LyricSection {...other}
-                    hiddenLyricColumnKey={hiddenLyricColumnKey}
                     isTransitioningHeight={isTransitioningHeight}
                     completeHeightTransition={completeHeightTransition}
                 />

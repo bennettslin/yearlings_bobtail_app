@@ -38,7 +38,6 @@ class VerseUnit extends Component {
 
                     // TODO: Possible to update without selected song index?
                     'selectedSongIndex',
-                    'hiddenLyricColumnKey',
                     'inMain',
                     'isSelected',
                     'isAfterSelected',
@@ -258,7 +257,6 @@ const VerseUnitView = ({
 VerseUnitView.propTypes = {
     // From parent.
     verseIndex: PropTypes.number,
-    hiddenLyricColumnKey: PropTypes.string,
     isTitle: PropTypes.bool,
     inVerseBar: PropTypes.bool,
     isAudioButtonEnabled: PropTypes.bool.isRequired,

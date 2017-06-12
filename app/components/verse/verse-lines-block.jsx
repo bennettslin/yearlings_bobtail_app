@@ -2,9 +2,11 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
 import VerseLine from './verse-line'
 import { LYRIC_COLUMN_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../constants/lyrics'
+import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 
 /*************
  * CONTAINER *
@@ -12,18 +14,32 @@ import { LYRIC_COLUMN_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../constants/l
 
 const VerseLinesBlock = ({
 
+
+    // Parent gets these from Redux.
+    selectedLyricColumnIndex,
+    showOneOfTwoLyricColumns,
+
+    // Subsequent children get these from parent.
+    hiddenLyricColumnKey,
+
     isDoubleSpeaker,
 
 ...other }) => {
 
+    hiddenLyricColumnKey = hiddenLyricColumnKey || getHiddenLyricColumnKey({
+            showOneOfTwoLyricColumns,
+            selectedLyricColumnIndex
+        })
+
     if (isDoubleSpeaker) {
         return (
-            <VerseLinesBlockView {...other} />
+            <VerseLinesBlockView {...other}
+                hiddenLyricColumnKey={hiddenLyricColumnKey}
+            />
         )
 
     } else {
         const { verseObject,
-                hiddenLyricColumnKey,
                 doublespeakerKey,
                 isTitle } = other,
 
@@ -44,12 +60,16 @@ VerseLinesBlock.defaultProps = {
 }
 
 VerseLinesBlock.propTypes = {
+    // Through Redux.
+    selectedLyricColumnIndex: PropTypes.number,
+    showOneOfTwoLyricColumns: PropTypes.bool,
+
     // From parent.
+    hiddenLyricColumnKey: PropTypes.string,
     isDoubleSpeaker: PropTypes.bool.isRequired,
     verseObject: PropTypes.object.isRequired,
-    hiddenLyricColumnKey: PropTypes.string.isRequired,
     doublespeakerKey: PropTypes.string,
-    isTitle: PropTypes.bool,
+    isTitle: PropTypes.bool
 }
 
 /****************
@@ -80,4 +100,10 @@ VerseLinesBlockView.propTypes = {
     hiddenLyricColumnKey: PropTypes.string.isRequired
 }
 
-export default VerseLinesBlock
+export default connect(({
+    selectedLyricColumnIndex,
+    showOneOfTwoLyricColumns
+}) => ({
+    selectedLyricColumnIndex,
+    showOneOfTwoLyricColumns
+}))(VerseLinesBlock)

@@ -8,6 +8,7 @@ import LyricStanza from './lyric-stanza'
 import LyricDotStanza from './lyric-dot-stanza'
 import { TITLE, LEFT, RIGHT } from '../../constants/lyrics'
 import { getLyricsUnitArray } from '../../helpers/data-helper'
+import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -32,7 +33,6 @@ class LyricUnit extends Component {
                     'selectedAnnotationIndex',
                     'interactivatedVerseIndex',
                     'selectedVerseIndex',
-                    'hiddenLyricColumnKey',
                     'unitIndex'
                 ]
             })
@@ -42,12 +42,17 @@ class LyricUnit extends Component {
 
     render() {
         const { selectedSongIndex,
+                selectedLyricColumnIndex,
+                showOneOfTwoLyricColumns,
                 unitIndex,
                 ...other } = this.props,
 
             unitArray = getLyricsUnitArray(selectedSongIndex, unitIndex),
 
-            { hiddenLyricColumnKey } = other,
+            hiddenLyricColumnKey = getHiddenLyricColumnKey({
+                showOneOfTwoLyricColumns,
+                selectedLyricColumnIndex
+            }),
 
             isTitleUnit = unitIndex === 0,
 
@@ -102,10 +107,11 @@ class LyricUnit extends Component {
 LyricUnit.propTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
+    selectedLyricColumnIndex: PropTypes.number.isRequired,
+    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
     // From parent.
-    unitIndex: PropTypes.number.isRequired,
-    hiddenLyricColumnKey: PropTypes.string
+    unitIndex: PropTypes.number.isRequired
 }
 
 /****************
@@ -214,7 +220,11 @@ LyricUnitView.propTypes = {
 }
 
 export default connect(({
-    selectedSongIndex
+    selectedSongIndex,
+    selectedLyricColumnIndex,
+    showOneOfTwoLyricColumns
 }) => ({
-    selectedSongIndex
+    selectedSongIndex,
+    selectedLyricColumnIndex,
+    showOneOfTwoLyricColumns
 }))(LyricUnit)

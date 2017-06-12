@@ -21,9 +21,7 @@ class VerseBar extends Component {
                      * update.
                      */
                     'selectedSongIndex',
-                    'verseIndex',
-
-                    'hiddenLyricColumnKey'
+                    'verseIndex'
                 ]
             })
 
@@ -77,7 +75,6 @@ VerseBar.propTypes = {
     // From parent.
     isAbove: PropTypes.bool,
     verseIndex: PropTypes.number,
-    hiddenLyricColumnKey: PropTypes.string.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired
 }
