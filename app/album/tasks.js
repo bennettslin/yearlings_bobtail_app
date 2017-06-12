@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Keep verse bar at minimum width.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `When selecting song from portal, carousel scroll should be called strategically, especially Odin shivs.`,
         workedHours: 0,
         neededHours: 1
@@ -2244,6 +2239,11 @@ module.exports = [
     },
     {
         taskName: `Let lyric unit get unit array through Redux and data helper.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Keep verse bar at minimum width.`,
         workedHours: 1,
         neededHours: 1
     }

@@ -12,7 +12,7 @@
 .verse-bar-block {
     position: absolute;
 
-    width: ~"calc(100% - @{verse-bar-desktop-margins})";
+    max-width: ~"calc(100% - @{verse-bar-desktop-margins})";
     z-index: @selected-verse-bar-z-index;
 
     @verse-bar-margin: 8px;
@@ -38,19 +38,19 @@
 
 .tablet-width {
     .verse-bar-block {
-        width: ~"calc(100% - @{verse-bar-tablet-margins})";
+        max-width: ~"calc(100% - @{verse-bar-tablet-margins})";
     }
 }
 
 .mini-width {
     .verse-bar-block {
-        width: ~"calc(100% - @{verse-bar-mini-margins})";
+        max-width: ~"calc(100% - @{verse-bar-mini-margins})";
     }
 }
 
 .phone-width {
     .verse-bar-block {
-        width: ~"calc(100% - @{verse-bar-phone-margins})";
+        max-width: ~"calc(100% - @{verse-bar-phone-margins})";
     }
 }
 
