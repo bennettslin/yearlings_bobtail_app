@@ -24,7 +24,6 @@ class LyricUnit extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'deviceIndex',
-                    'selectedSongIndex',
                     'isSliderTouched',
                     'sliderVerseIndex',
                     'isPlaying',
@@ -33,6 +32,8 @@ class LyricUnit extends Component {
                     'selectedAnnotationIndex',
                     'interactivatedVerseIndex',
                     'selectedVerseIndex',
+                    'selectedLyricColumnIndex',
+                    'showOneOfTwoLyricColumns',
                     'unitIndex'
                 ]
             })
@@ -68,7 +69,8 @@ class LyricUnit extends Component {
               bottomSideStanza } = unitArray[unitArray.length - 1],
 
             // This exists solely for "Maranatha."
-            topSideSubStanza = topSideStanza ? topSideStanza[topSideStanza.length - 1].subStanza : null,
+            topSideSubStanza = topSideStanza ?
+                topSideStanza[topSideStanza.length - 1].subStanza : null,
 
             hiddenLyricColumnKey = getHiddenLyricColumnKey({
                 showOneOfTwoLyricColumns,
@@ -78,13 +80,19 @@ class LyricUnit extends Component {
             isTitleUnit = unitIndex === 0,
 
             isBottomOnly = !topSideStanza && !!bottomSideStanza,
-            isDotOnly = dotStanza && unitArray.length === 1,
+            isDotOnly = !!dotStanza && unitArray.length === 1,
             hasSide = !!(topSideStanza || bottomSideStanza),
 
-            // FIXME: Take care of this through CSS.
+            // FIXME: Take care of these through CSS.
+            // Applies to Golden Cord and Uncanny Valley.
             truncateMain = hasSide && hiddenLyricColumnKey === LEFT,
-            showMain = !isDotOnly && (!hasSide || hiddenLyricColumnKey !== LEFT || truncateMain),
+
+            // Applies to Golden Cord and Uncanny Valley.
             showSide = hasSide && hiddenLyricColumnKey !== RIGHT
+
+        if (truncateMain !== showSide) {
+            console.error('selectedSongIndex', selectedSongIndex);
+        }
 
         return (
             <LyricUnitView {...other}
@@ -101,11 +109,11 @@ class LyricUnit extends Component {
                 subStanza={subStanza}
                 topSideStanza={topSideStanza}
                 bottomSideStanza={bottomSideStanza}
+                topSideSubStanza={topSideSubStanza}
+                isDotOnly={isDotOnly}
                 isBottomOnly={isBottomOnly}
-                showMain={showMain}
                 truncateMain={truncateMain}
                 showSide={showSide}
-                topSideSubStanza={topSideSubStanza}
             />
         )
     }
@@ -142,7 +150,7 @@ const LyricUnitView = ({
 
     isBottomOnly,
     truncateMain,
-    showMain,
+    isDotOnly,
     showSide,
 
 ...other }) => {
@@ -159,7 +167,7 @@ const LyricUnitView = ({
                   subsequent }
             )}
         >
-            {showMain &&
+            {!isDotOnly &&
                 <div className="stanza-block">
                     <LyricStanza {...other}
                         stanzaArray={unitArray}
@@ -220,9 +228,9 @@ LyricUnitView.propTypes = {
     topSideSubStanza: PropTypes.array,
     subsequent: PropTypes.bool.isRequired,
 
+    isDotOnly: PropTypes.bool.isRequired,
     isBottomOnly: PropTypes.bool.isRequired,
     truncateMain: PropTypes.bool.isRequired,
-    showMain: PropTypes.bool.isRequired,
     showSide: PropTypes.bool.isRequired
 }
 

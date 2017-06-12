@@ -14,12 +14,11 @@ import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 
 const VerseLinesBlock = ({
 
-
     // Parent gets these from Redux.
     selectedLyricColumnIndex,
     showOneOfTwoLyricColumns,
 
-    // Subsequent children get these from parent.
+    // Recursed children get this from parent.
     hiddenLyricColumnKey,
 
     isDoubleSpeaker,
