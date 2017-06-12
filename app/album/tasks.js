@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Typing "window" is weird.`,
+        taskName: `Keep verse bar at minimum width.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: `When selecting song from portal, carousel scroll should be called strategically, especially Odin shivs.`,
@@ -2236,5 +2236,10 @@ module.exports = [
         taskName: `Access portal index when going to it.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Fix rules for closing sections.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

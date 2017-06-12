@@ -312,7 +312,8 @@ class EventManager extends Component {
             exemptCarousel: true,
             exemptDots: true,
             exemptInteractivatedVerse: true,
-            exemptOverview: true
+            exemptOverview: true,
+            continuePastClosingPopups: true
         })
 
         return carouselSelected
@@ -343,7 +344,8 @@ class EventManager extends Component {
             this._closeSections({
                 exemptCarousel: true,
                 exemptDots: true,
-                exemptNav: true
+                exemptNav: true,
+                continuePastClosingPopups: true
             })
         }
         return dotsToggled
@@ -359,7 +361,8 @@ class EventManager extends Component {
             this.stopPropagation(e)
             this._closeSections({
                 exemptAnnotation: true,
-                exemptLyric: true
+                exemptLyric: true,
+                continuePastClosingPopups: true
             })
         }
         return lyricsToggled
@@ -452,14 +455,12 @@ class EventManager extends Component {
         const navExpanded = this.props.selectNavExpand()
         if (navExpanded) {
             this.stopPropagation(e)
+
             this._closeSections({
                 exemptDots: true,
                 exemptNav: true,
                 exemptOverview: true,
-
-                // Allow nav to close carousel and lyric even in logue.
-                forceCloseCarousel: true,
-                forceCloseLyric: true
+                continuePastClosingPopups: true
             })
         }
         return navExpanded
@@ -497,7 +498,8 @@ class EventManager extends Component {
             this._closeSections({
                 exemptCarousel: true,
                 exemptNav: true,
-                exemptOverview: true
+                exemptOverview: true,
+                continuePastClosingPopups: true
             })
         }
         return overviewToggled
@@ -531,6 +533,13 @@ class EventManager extends Component {
         const scoreToggled = this.props.selectScore()
         if (scoreToggled) {
             this.stopPropagation(e)
+
+            // If score is off and we're toggling it on, then close other popups.
+            if (!this.props.selectedScoreIndex) {
+                this._closeSections({
+                    justClosePopups: true
+                })
+            }
         }
         return scoreToggled
     }
@@ -555,6 +564,13 @@ class EventManager extends Component {
         const titleToggled = this.props.selectTitle()
         if (titleToggled) {
             this.stopPropagation(e)
+
+            // If title is off and we're toggling it on, then close other popups.
+            if (!this.props.selectedTitleIndex) {
+                this._closeSections({
+                    justClosePopups: true
+                })
+            }
         }
         return titleToggled
     }
@@ -692,6 +708,12 @@ class EventManager extends Component {
 
     handleWikiToggle(e, selectedWikiIndex) {
         this.stopPropagation(e)
+        // If wiki is off and we're toggling it on, then close other popups.
+        if (!this.props.selectedWikiIndex) {
+            this._closeSections({
+                justClosePopups: true
+            })
+        }
         this.props.selectWiki(selectedWikiIndex)
     }
 
@@ -700,13 +722,18 @@ class EventManager extends Component {
      ***********/
 
     _closeSections({
+
         exemptAnnotation,
         exemptCarousel,
         exemptDots,
         exemptLyric,
         exemptNav,
         exemptOverview,
-        exemptInteractivatedVerse
+        exemptInteractivatedVerse,
+
+        continuePastClosingPopups,
+        justClosePopups
+
     }) {
 
         const { selectedScoreIndex,
@@ -716,14 +743,24 @@ class EventManager extends Component {
         // If popup is open, close it and do nothing else.
         if (selectedWikiIndex) {
             this.props.selectWiki()
-            return
+            if (!continuePastClosingPopups) {
+                return
+            }
 
         } else if (selectedScoreIndex) {
             this.props.selectScore(false)
-            return
+            if (!continuePastClosingPopups) {
+                return
+            }
 
         } else if (selectedTitleIndex) {
             this.props.selectTitle(false)
+            if (!continuePastClosingPopups) {
+                return
+            }
+        }
+
+        if (justClosePopups) {
             return
         }
 
