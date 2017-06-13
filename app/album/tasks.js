@@ -55,21 +55,11 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Verse bar doesn't always show after collapsing lyric.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Review responsive constants.`,
         workedHours: 0,
         neededHours: 1
     },
 
-    {
-        taskName: `Explanatory notes for each file.`,
-        workedHours: 0,
-        neededHours: 1
-    },
     {
         taskName: `Stagger carousel annotation show and hide to prevent weird jump.`,
         workedHours: 0,
