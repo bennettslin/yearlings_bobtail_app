@@ -91,7 +91,7 @@ export const registerHasSideStanzas = (songObject) => {
 export const initialRegisterStanzaTypes = (albumObject, songObject) => {
 
     const { lyrics } = songObject,
-        stanzaTypeCounters = {},
+        tempStanzaTypeCounters = {},
         stanzaTimes = []
 
     lyrics.forEach(unitArray => {
@@ -116,21 +116,21 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
                     type: stanzaType
                 })
 
-                stanzaTypeCounters[stanzaType] = (stanzaTypeCounters[stanzaType] || 0) + 1
+                tempStanzaTypeCounters[stanzaType] = (tempStanzaTypeCounters[stanzaType] || 0) + 1
             }
 
             // Tell unit its index.
-            unitMapObject.stanzaIndex = stanzaTypeCounters[stanzaType]
+            unitMapObject.stanzaIndex = tempStanzaTypeCounters[stanzaType]
         }
     })
 
-    songObject.stanzaTypeCounters = stanzaTypeCounters
-    songObject.stanzaTimes = stanzaTimes
-
     // Establish which song on the album has the most stanzas.
-    if (songObject.stanzaTimes.length > albumObject.tempLargestStanzaTimesLength) {
-        albumObject.tempLargestStanzaTimesLength = songObject.stanzaTimes.length
+    if (stanzaTimes.length > albumObject.maxStanzaTimesCount) {
+        albumObject.maxStanzaTimesCount = stanzaTimes.length
     }
+
+    songObject.tempStanzaTypeCounters = tempStanzaTypeCounters
+    songObject.stanzaTimes = stanzaTimes
 }
 
 export const registerIsDoublespeaker = (songObject, verseObject) => {
@@ -156,7 +156,7 @@ export const registerAdminDotStanzas = (songObject, verseObject) => {
 export const finalRegisterStanzaTypes = (songObject) => {
 
     const { lyrics,
-            stanzaTypeCounters } = songObject
+            tempStanzaTypeCounters } = songObject
 
     lyrics.forEach(unitArray => {
 
@@ -167,33 +167,14 @@ export const finalRegisterStanzaTypes = (songObject) => {
             const { stanzaType } = unitMapObject
 
             // Don't show stanzaIndex if it's the only one of its kind.
-            if (stanzaTypeCounters[stanzaType] === 1) {
+            if (tempStanzaTypeCounters[stanzaType] === 1) {
                 unitMapObject.stanzaIndex = -1
             }
         }
     })
 
     // Not needed after each unit is told its index.
-    delete songObject.stanzaTypeCounters
-}
-
-export const finalAddPlaceholderStanzas = (albumObject, songObject) => {
-
-    // Include logues.
-    if (!songObject.stanzaTimes) {
-        songObject.stanzaTimes = []
-    }
-
-    /**
-     * We want the stanza time bars to animate nicely. As such, the number of
-     * stanza times for each song will be the same.
-     */
-    while (songObject.stanzaTimes.length < albumObject.tempLargestStanzaTimesLength) {
-        songObject.stanzaTimes.push({
-            type: 'placeholder',
-            time: songObject.totalTime
-        })
-    }
+    delete songObject.tempStanzaTypeCounters
 }
 
 /***********

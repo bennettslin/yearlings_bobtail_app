@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import AudioSlider from './audio-slider'
+import SliderSection from '../slider/slider-section'
 import AudioTimer from './audio-timer'
 import { getSongTitle } from '../../helpers/data-helper'
 
@@ -15,7 +15,7 @@ const AudioBanner = ({
 
     <div className="audio-block audio-banner-block">
 
-        <AudioSlider {...other} />
+        <SliderSection {...other} />
 
         <div className="audio-banner audio-display-block">
             <div className="audio-banner-title">

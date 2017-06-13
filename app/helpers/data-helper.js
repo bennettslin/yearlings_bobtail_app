@@ -134,6 +134,28 @@ export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
     }, null)
 }
 
+export const getMaxStanzaTimesCount = () => {
+    return AlbumData.maxStanzaTimesCount
+}
+
+export const getStanzaTimeObject = (songIndex, stanzaTimeIndex) => {
+    const songObject = getSongObject(songIndex),
+        { stanzaTimes: stanzaTimesArray } = songObject
+
+    // Logues do not have this array.
+    if (stanzaTimesArray && stanzaTimeIndex < stanzaTimesArray.length) {
+
+        // Return stanza time object.
+        return stanzaTimesArray[stanzaTimeIndex]
+
+    } else {
+
+        // Return placeholder object.
+        return { type: 'placeholder',
+                 time: songObject.totalTime }
+    }
+}
+
 /*********
  * ADMIN *
  *********/

@@ -51,7 +51,7 @@ class EventManager extends Component {
         this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
         this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
         this.handleAudioOptionsToggle = this.handleAudioOptionsToggle.bind(this)
-        this.handleAudioSliderTouchBegin = this.handleAudioSliderTouchBegin.bind(this)
+        this.handleSliderTouchBegin = this.handleSliderTouchBegin.bind(this)
 
         this.handlePlayerTimeChange = this.handlePlayerTimeChange.bind(this)
         this.handlePlayerNextSong = this.handlePlayerNextSong.bind(this)
@@ -579,7 +579,7 @@ class EventManager extends Component {
      * TOUCH *
      *********/
 
-    handleAudioSliderTouchBegin(e) {
+    handleSliderTouchBegin(e) {
 
         const { isLogue } = this.props
 
@@ -917,7 +917,7 @@ class EventManager extends Component {
                 handleAudioPreviousSong={this.handleAudioPreviousSong}
                 handleAudioNextSong={this.handleAudioNextSong}
                 handleAudioOptionsToggle={this.handleAudioOptionsToggle}
-                handleAudioSliderTouchBegin={this.handleAudioSliderTouchBegin}
+                handleSliderTouchBegin={this.handleSliderTouchBegin}
                 handlePlayerTimeChange={this.handlePlayerTimeChange}
                 handlePlayerNextSong={this.handlePlayerNextSong}
                 handlePlayerTimeReset={this.handlePlayerTimeReset}

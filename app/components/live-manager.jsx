@@ -64,7 +64,7 @@ const Live = ({
     handleAudioPreviousSong,
     handleAudioNextSong,
     handleAudioOptionsToggle,
-    handleAudioSliderTouchBegin,
+    handleSliderTouchBegin,
     handleDotToggle,
     handleDotsSectionToggle,
     handleNavExpand,
@@ -119,7 +119,7 @@ const Live = ({
         },
         audioBannerChild = (
             <AudioBanner
-                handleAudioSliderTouchBegin={handleAudioSliderTouchBegin}
+                handleSliderTouchBegin={handleSliderTouchBegin}
             />
         ),
         audioSectionProps = {
@@ -316,7 +316,7 @@ Live.propTypes = {
     handleAudioPreviousSong: PropTypes.func.isRequired,
     handleAudioNextSong: PropTypes.func.isRequired,
     handleAudioOptionsToggle: PropTypes.func.isRequired,
-    handleAudioSliderTouchBegin: PropTypes.func.isRequired,
+    handleSliderTouchBegin: PropTypes.func.isRequired,
     handleCarouselToggle: PropTypes.func.isRequired,
     handleDotToggle: PropTypes.func.isRequired,
     handleDotsSectionToggle: PropTypes.func.isRequired,

@@ -4,8 +4,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
-import { getSongVerseTimes,
-         getSongStanzaTimes,
+import { getMaxStanzaTimesCount,
+         getStanzaTimeObject,
+         getSongVerseTimes,
          getSongTotalTime } from '../../helpers/data-helper'
 import { getFormattedTime } from '../../helpers/format-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
@@ -15,7 +16,7 @@ import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
  * CONTAINER *
  *************/
 
-class AudioSlider extends Component {
+class SliderSection extends Component {
     constructor(props) {
         super(props)
         this._handleTouchDown = this._handleTouchDown.bind(this)
@@ -41,7 +42,7 @@ class AudioSlider extends Component {
     }
 
     _handleTouchDown(e) {
-        this.props.handleAudioSliderTouchBegin(e)
+        this.props.handleSliderTouchBegin(e)
     }
 
     render() {
@@ -53,8 +54,8 @@ class AudioSlider extends Component {
                 sliderVerseIndex,
                 sliderRatio } = this.props,
 
+            // FIXME: Calculate all these in logic helper.
             verseTimes = getSongVerseTimes(selectedSongIndex),
-            stanzaTimes = getSongStanzaTimes(selectedSongIndex),
             totalTime = getSongTotalTime(selectedSongIndex),
 
             workingRatio = isSliderTouched ? sliderRatio : (selectedTimePlayed / totalTime),
@@ -95,7 +96,7 @@ class AudioSlider extends Component {
             }
 
         return (
-            <AudioSliderView
+            <SliderSectionView
                 cursorVerseIndex={cursorVerseIndex}
                 cursorClassName={cursorClassName}
                 cursorStyle={cursorStyle}
@@ -104,7 +105,7 @@ class AudioSlider extends Component {
                 displayedSpentTime={displayedSpentTime}
                 displayedRemainTime={displayedRemainTime}
                 verseTimes={verseTimes}
-                stanzaTimes={stanzaTimes}
+                selectedSongIndex={selectedSongIndex}
                 totalTime={totalTime}
                 handleTouchDown={this._handleTouchDown}
             />
@@ -112,7 +113,7 @@ class AudioSlider extends Component {
     }
 }
 
-AudioSlider.propTypes = {
+SliderSection.propTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
@@ -123,14 +124,14 @@ AudioSlider.propTypes = {
     sliderRatio: PropTypes.number.isRequired,
 
     // From parent.
-    handleAudioSliderTouchBegin: PropTypes.func.isRequired
+    handleSliderTouchBegin: PropTypes.func.isRequired
 }
 
 /****************
  * PRESENTATION *
  ****************/
 
-const AudioSliderView = ({
+const SliderSectionView = ({
     cursorVerseIndex,
     cursorClassName,
     cursorStyle,
@@ -139,101 +140,116 @@ const AudioSliderView = ({
     displayedSpentTime,
     displayedRemainTime,
     verseTimes,
-    stanzaTimes,
+
+    // TODO: Get this from Redux directly.
+    selectedSongIndex,
     totalTime,
     handleTouchDown
-}) => (
-    <div
-        className={`audio-banner audio-slider-block is-${cursorClassName}-cursor`}
-    >
-        {stanzaTimes.map((stanzaTime, index) => {
-            const stanzaWidth = (totalTime - stanzaTime.time) / totalTime * 100,
-                stanzaStyle = {
-                    width: `${stanzaWidth}%`
+}) => {
+
+    const maxStanzaTimesCount = getMaxStanzaTimesCount(),
+        /**
+         * Dynamically create array of just indices. Audio slider will fetch
+         * stanza times object directly from data helper.
+         */
+        indicesArray = Array.from(Array(maxStanzaTimesCount).keys())
+
+    return (
+        <div
+            className={`audio-banner audio-slider-block is-${cursorClassName}-cursor`}
+        >
+            {indicesArray.map((nothing, stanzaTimeIndex) => {
+
+                const stanzaTimeObject = getStanzaTimeObject(selectedSongIndex, stanzaTimeIndex),
+                    stanzaWidth = (totalTime - stanzaTimeObject.time) / totalTime * 100,
+                    stanzaStyle = {
+                        width: `${stanzaWidth}%`
+                    }
+
+                return (
+                    <div
+                        key={stanzaTimeIndex}
+                        className={`time-bar stanza-time-bar stanza-type-${stanzaTimeObject.type}`}
+                        style={stanzaStyle}
+                    >
+                    </div>
+                )
+            })}
+
+            <div
+                className="time-bar play-time-bar time-remain-bar"
+            >
+            </div>
+
+            {false && verseTimes.map((verseTime, index) => {
+
+                // Don't show title verse.
+                if (verseTime < 0) {
+                    return null
                 }
 
-            return (
-                <div
-                    key={index}
-                    className={`time-bar stanza-time-bar stanza-type-${stanzaTime.type}`}
-                    style={stanzaStyle}
-                >
-                </div>
-            )
-        })}
+                const verseWidth = (totalTime - verseTime) / totalTime * 100,
+                    verseStyle = {
+                        width: `${verseWidth}%`
+                    }
 
-        <div
-            className="time-bar play-time-bar time-remain-bar"
-        >
-        </div>
+                let cursorPlacementClassName
 
-        {false && verseTimes.map((verseTime, index) => {
-
-            // Don't show title verse.
-            if (verseTime < 0) {
-                return null
-            }
-
-            const verseWidth = (totalTime - verseTime) / totalTime * 100,
-                verseStyle = {
-                    width: `${verseWidth}%`
+                if (index === cursorVerseIndex) {
+                    cursorPlacementClassName = 'on-cursor'
+                } else if (index < cursorVerseIndex) {
+                    cursorPlacementClassName = 'before-cursor'
+                } else {
+                    cursorPlacementClassName = 'after-cursor'
                 }
 
-            let cursorPlacementClassName
+                return (
+                    <div
+                        key={index}
+                        className={classnames(
+                            'time-bar',
+                            'verse-time-bar',
+                            cursorPlacementClassName
+                        )}
+                        style={verseStyle}
+                    >
+                    </div>
+                )
+            })}
 
-            if (index === cursorVerseIndex) {
-                cursorPlacementClassName = 'on-cursor'
-            } else if (index < cursorVerseIndex) {
-                cursorPlacementClassName = 'before-cursor'
-            } else {
-                cursorPlacementClassName = 'after-cursor'
-            }
+            <div
+                className="audio-cursor"
+                style={cursorStyle}
+            />
 
-            return (
-                <div
-                    key={index}
-                    className={classnames(
-                        'time-bar',
-                        'verse-time-bar',
-                        cursorPlacementClassName
-                    )}
-                    style={verseStyle}
-                >
-                </div>
-            )
-        })}
+            <div className="below spent play-time-display">{displayedSpentTime}</div>
+            <div
+                className="time-bar play-time-bar time-spent-bar"
+                style={spentStyle}
+            >
+                <div className="above spent play-time-display">{displayedSpentTime}</div>
+            </div>
+            <div className="below remain play-time-display">{displayedRemainTime}</div>
 
-        <div
-            className="audio-cursor"
-            style={cursorStyle}
-        />
-
-        <div className="below spent play-time-display">{displayedSpentTime}</div>
-        <div
-            className="time-bar play-time-bar time-spent-bar"
-            style={spentStyle}
-        >
-            <div className="above spent play-time-display">{displayedSpentTime}</div>
+            <div
+                className="above remain play-time-display"
+                style={remainStyle}
+            >
+                {displayedRemainTime}
+            </div>
+            <div
+                className="time-bar audio-touch-bar"
+                onMouseDown={handleTouchDown}
+                // onTouchStart={e => this._handleTouchDown(e)}
+            >
+            </div>
         </div>
-        <div className="below remain play-time-display">{displayedRemainTime}</div>
+    )
+}
 
-        <div
-            className="above remain play-time-display"
-            style={remainStyle}
-        >
-            {displayedRemainTime}
-        </div>
-        <div
-            className="time-bar audio-touch-bar"
-            onMouseDown={handleTouchDown}
-            // onTouchStart={e => this._handleTouchDown(e)}
-        >
-        </div>
-    </div>
-)
-
-AudioSliderView.propTypes = {
+SliderSectionView.propTypes = {
     // From parent.
+    selectedSongIndex: PropTypes.number.isRequired,
     cursorVerseIndex: PropTypes.number.isRequired,
     cursorClassName: PropTypes.string.isRequired,
     cursorStyle: PropTypes.object.isRequired,
@@ -242,7 +258,6 @@ AudioSliderView.propTypes = {
     displayedSpentTime: PropTypes.string.isRequired,
     displayedRemainTime: PropTypes.string.isRequired,
     verseTimes: PropTypes.array.isRequired,
-    stanzaTimes: PropTypes.array.isRequired,
     totalTime: PropTypes.number.isRequired,
     handleTouchDown: PropTypes.func.isRequired
 }
@@ -263,4 +278,4 @@ export default connect(({
     isSliderTouched,
     sliderVerseIndex,
     sliderRatio
-}))(AudioSlider)
+}))(SliderSection)

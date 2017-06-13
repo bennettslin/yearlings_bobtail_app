@@ -3,7 +3,7 @@
 import { LEFT, RIGHT, ANCHOR, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, PROPER_NOUN } from '../../constants/lyrics'
 import { registerCards, addDestinationPortalLinks, finalPrepareCard, addDestinationPortalIndices, addDestinationPortalFormats } from './annotations-helper'
 import { adminGatherDrawings, adminFinaliseDrawings, adminRegisterDrawingTasks } from './drawings-helper'
-import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes, finalAddPlaceholderStanzas } from './lyrics-helper'
+import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes } from './lyrics-helper'
 import { getIsLogue } from '../data-helper'
 import { getFormattedAnnotationTitle } from '../format-helper'
 
@@ -33,6 +33,9 @@ export const parseAlbumData = (albumObject) => {
  ***********/
 
 const _initialPrepareAlbum = (albumObject) => {
+
+    // Initialise.
+    albumObject.maxStanzaTimesCount = 0
 
     albumObject.songs.forEach((songObject, songIndex) => {
 
@@ -205,11 +208,7 @@ const _finalPrepareAlbum = (albumObject) => {
         }
 
         adminRegisterDrawingTasks(songObject)
-        finalAddPlaceholderStanzas(albumObject, songObject)
     })
-
-    // Clean up.
-    delete albumObject.tempLargestStanzaTimesLength
 }
 
 const _finalPrepareLyrics = (songObject) => {
