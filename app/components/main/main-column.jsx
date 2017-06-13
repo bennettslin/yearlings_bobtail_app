@@ -22,9 +22,6 @@ const MainColumn = ({
     handleCarouselToggle,
     handleDotsSectionToggle,
     handleLyricSectionExpand,
-    handleNavExpand,
-    handleNavSongSelect,
-    handleNavBookSelect,
     handleOverviewToggle,
 
     annotationPopupChild,
@@ -35,7 +32,8 @@ const MainColumn = ({
     scoresTipsSectionChild,
     titleToggleChild,
 
-    carouselSectionProps
+    carouselSectionProps,
+    navSectionProps
 
 }) => {
     const isPhone = getIsPhone(deviceIndex),
@@ -51,11 +49,6 @@ const MainColumn = ({
             handleOverviewToggle,
 
             dotsSectionChild
-        },
-        navSectionProps = {
-            handleNavExpand,
-            handleNavSongSelect,
-            handleNavBookSelect
         }
 
     return (
@@ -119,9 +112,6 @@ MainColumn.propTypes = {
     handleCarouselToggle: PropTypes.func.isRequired,
     handleDotsSectionToggle: PropTypes.func.isRequired,
     handleLyricSectionExpand: PropTypes.func.isRequired,
-    handleNavExpand: PropTypes.func.isRequired,
-    handleNavSongSelect: PropTypes.func.isRequired,
-    handleNavBookSelect: PropTypes.func.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired,
 
     annotationPopupChild: PropTypes.element.isRequired,
@@ -132,7 +122,8 @@ MainColumn.propTypes = {
     scoresTipsSectionChild: PropTypes.element.isRequired,
     titleToggleChild: PropTypes.element.isRequired,
 
-    carouselSectionProps: PropTypes.object.isRequired
+    carouselSectionProps: PropTypes.object.isRequired,
+    navSectionProps: PropTypes.object.isRequired
 }
 
 export default connect(({

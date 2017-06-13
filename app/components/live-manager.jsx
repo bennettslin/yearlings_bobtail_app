@@ -164,9 +164,6 @@ const Live = ({
             handleCarouselToggle,
             handleDotsSectionToggle,
             handleLyricSectionExpand,
-            handleNavExpand,
-            handleNavSongSelect,
-            handleNavBookSelect,
             handleOverviewToggle,
             handleTipsToggle,
 
@@ -182,6 +179,12 @@ const Live = ({
                 handleAnnotationPortalSelect,
                 handlePopupContainerClick
             },
+
+            navSectionProps: {
+                handleNavExpand,
+                handleNavSongSelect,
+                handleNavBookSelect
+            }
         },
 
         overviewPopupProps = {
