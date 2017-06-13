@@ -438,11 +438,11 @@ export const getWikiUrl = ({
     }
 }
 
-export const getHiddenLyricColumnKey = ({
+export const getSingleShownLyricColumnKey = ({
     showOneOfTwoLyricColumns,
     selectedLyricColumnIndex
 }) => {
-    return showOneOfTwoLyricColumns && selectedLyricColumnIndex >= 0 ? LYRIC_COLUMN_KEYS[(selectedLyricColumnIndex + 1) % 2] : ''
+    return showOneOfTwoLyricColumns && selectedLyricColumnIndex >= 0 ? LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2] : ''
 }
 
 export const getShowOverlay = ({

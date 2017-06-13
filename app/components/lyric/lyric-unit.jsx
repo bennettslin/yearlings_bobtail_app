@@ -69,11 +69,10 @@ class LyricUnit extends Component {
 
             isTitleUnit = unitIndex === 0,
 
-            isBottomOnly = !topSideStanza && !!bottomSideStanza,
+            hasSide = !!(topSideStanza || bottomSideStanza),
             isDotOnly = !!dotStanza && unitArray.length === 1,
+            isBottomOnly = !topSideStanza && !!bottomSideStanza
 
-            // Applies to Golden Cord and Uncanny Valley.
-            truncatableMain = !!(topSideStanza || bottomSideStanza)
 
         return (
             <LyricUnitView {...other}
@@ -91,9 +90,9 @@ class LyricUnit extends Component {
                 topSideStanza={topSideStanza}
                 bottomSideStanza={bottomSideStanza}
                 topSideSubStanza={topSideSubStanza}
+                hasSide={hasSide}
                 isDotOnly={isDotOnly}
                 isBottomOnly={isBottomOnly}
-                truncatableMain={truncatableMain}
             />
         )
     }
@@ -126,9 +125,9 @@ const LyricUnitView = ({
     bottomSideStanza,
     topSideSubStanza,
 
-    isBottomOnly,
-    truncatableMain,
+    hasSide,
     isDotOnly,
+    isBottomOnly,
 
 ...other }) => {
 
@@ -151,33 +150,35 @@ const LyricUnitView = ({
                 )}>
                     <LyricStanza {...other}
                         stanzaArray={unitArray}
-                        truncatableMain={truncatableMain}
+                        truncatableMain={hasSide}
                         inMain={true}
                     />
                     <LyricStanza {...other}
                         stanzaArray={subStanza}
-                        truncatableMain={truncatableMain}
+                        truncatableMain={hasSide}
                         inMain={true}
                         addSub={true}
                     />
                 </div>
             }
-            <div className={classnames(
-                'stanza-block',
-                'side',
-                { 'bottom-only': isBottomOnly }
-            )}>
-                <LyricStanza {...other}
-                    stanzaArray={topSideStanza}
-                />
-                <LyricStanza {...other}
-                    stanzaArray={bottomSideStanza}
-                />
-                <LyricStanza {...other}
-                    stanzaArray={topSideSubStanza}
-                    addSub={true}
-                />
-            </div>
+            {hasSide &&
+                <div className={classnames(
+                    'stanza-block',
+                    'side',
+                    { 'bottom-only': isBottomOnly }
+                )}>
+                    <LyricStanza {...other}
+                        stanzaArray={topSideStanza}
+                    />
+                    <LyricStanza {...other}
+                        stanzaArray={bottomSideStanza}
+                    />
+                    <LyricStanza {...other}
+                        stanzaArray={topSideSubStanza}
+                        addSub={true}
+                    />
+                </div>
+            }
             {dotStanza &&
                 <LyricDotStanza {...other}
                     dotStanzaObject={dotStanza}
@@ -204,9 +205,9 @@ LyricUnitView.propTypes = {
     topSideSubStanza: PropTypes.array,
     subsequent: PropTypes.bool.isRequired,
 
+    hasSide: PropTypes.bool.isRequired,
     isDotOnly: PropTypes.bool.isRequired,
-    isBottomOnly: PropTypes.bool.isRequired,
-    truncatableMain: PropTypes.bool.isRequired
+    isBottomOnly: PropTypes.bool.isRequired
 }
 
 export default connect(({

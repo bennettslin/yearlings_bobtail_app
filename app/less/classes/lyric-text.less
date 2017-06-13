@@ -31,6 +31,20 @@
     justify-content: space-between;
 }
 
+.show-only-left .double-lines-block .line.right,
+.show-only-right .double-lines-block .line.left {
+    // Override max width set programmatically in verse line.
+    // max-width: 0 !important;
+    width: 0;
+    overflow: hidden;
+    padding: 0;
+    max-height: 0;
+
+    &.right:not(:first-child) {
+        margin: 0;
+    }
+}
+
 .line {
     @centre-edge-margin: 15%;
 
@@ -39,21 +53,6 @@
     //             width @animation-default,
     //             max-width @animation-default,
     //             max-height @animation-default;
-
-    &.left, &.right {
-        &.hidden {
-            // Override max width set programmatically in verse line.
-            // max-width: 0 !important;
-            width: 0;
-            overflow: hidden;
-            padding: 0;
-            max-height: 0;
-
-            &.right:not(:first-child) {
-                margin: 0;
-            }
-        }
-    }
 
     &.left {
         text-indent:-@hanging-indent-width;
@@ -92,7 +91,7 @@
 }
 
 // Single right column should not have margin left.
-.hidden-left {
+.show-only-right {
     .line {
         &.right {
             &:not(:first-child) {

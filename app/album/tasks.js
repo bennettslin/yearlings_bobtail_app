@@ -22,16 +22,6 @@ module.exports = [
 
     // Day bug.
     {
-        taskName: `Handle hidden columns through CSS.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Handle truncatableMain through CSS.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Handle slider verses through CSS.`,
         workedHours: 0,
         neededHours: 3
@@ -2251,5 +2241,10 @@ module.exports = [
         taskName: `Fix bug where Sasha did not have certain dots.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Handle hidden columns through CSS.`,
+        workedHours: 3,
+        neededHours: 3
     },
 ]

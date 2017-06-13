@@ -114,7 +114,6 @@ class VerseLine extends Component {
 
     render() {
         const { columnKey,
-                isHidden,
                 ...other } = this.props
 
         return (
@@ -122,8 +121,7 @@ class VerseLine extends Component {
                 ref={(node) => (this.myParent = node)}
                 className={classnames(
                     'line',
-                    { 'hidden': isHidden,
-                      [columnKey]: columnKey !== TITLE }
+                    { [columnKey]: columnKey !== TITLE }
                 )}
             >
                 <span ref={(node) => (this.myChild = node)}>
@@ -138,14 +136,15 @@ class VerseLine extends Component {
 }
 
 VerseLine.defaultProps = {
-    inVerseBar: false,
-    isHidden: false
+    inVerseBar: false
 }
 
 VerseLine.propTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
+
+    // FIXME: Are these still needed, now that verse lines don't need to know which column is shown?
     selectedLyricColumnIndex: PropTypes.number.isRequired,
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
@@ -157,7 +156,6 @@ VerseLine.propTypes = {
     ]).isRequired,
 
     inVerseBar: PropTypes.bool.isRequired,
-    isHidden: PropTypes.bool.isRequired,
     columnKey: PropTypes.string.isRequired,
 }
 

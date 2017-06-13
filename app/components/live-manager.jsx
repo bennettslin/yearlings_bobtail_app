@@ -21,7 +21,7 @@ import WikiPopup from './wiki/wiki-popup'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { getIsLogue } from '../helpers/data-helper'
-import { getHiddenLyricColumnKey } from '../helpers/logic-helper'
+import { getSingleShownLyricColumnKey } from '../helpers/logic-helper'
 import { getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
 const Live = ({
@@ -94,7 +94,7 @@ const Live = ({
 
     const isLogue = getIsLogue(selectedSongIndex),
 
-        hiddenLyricColumnKey = getHiddenLyricColumnKey({
+        singleShownLyricColumnKey = getSingleShownLyricColumnKey({
             showOneOfTwoLyricColumns,
             selectedLyricColumnIndex
         }),
@@ -222,16 +222,13 @@ const Live = ({
             isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
             isSliderMoving ? 'slider-moving' : 'slider-not-moving',
             interactivatedVerseIndex < 0 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
-
-            hiddenLyricColumnKey && `hidden-lyric-${hiddenLyricColumnKey}`,
+            singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
             selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
             selectedCarouselIndex ? 'carousel-expanded' : 'carousel-collapsed',
             selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
             showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
-            { 'show-only-left': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 0,
-              'show-only-right': showOneOfTwoLyricColumns && selectedLyricColumnIndex === 1,
-              'title-in-audio': isTitleInAudio,
+            { 'title-in-audio': isTitleInAudio,
               'heightless-lyric': isHeightlessLyricColumn,
               'overview-shown': OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
               'verse-above': isVerseBarAbove,
