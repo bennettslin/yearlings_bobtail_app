@@ -1,4 +1,10 @@
 module.exports = [
+
+    {
+        taskName: `Organise dom and live manager better.`,
+        workedHours: 0,
+        neededHours: 2
+    },
     {
         taskName: `Lyrics and carousel take their time to render when song is changed.`,
         workedHours: 0,

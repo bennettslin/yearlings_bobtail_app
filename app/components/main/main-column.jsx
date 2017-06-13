@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 import MenuField from './menu-field'
 import NavSection from '../nav/nav-section'
 import CarouselToggle from '../carousel/carousel-toggle'
+import CarouselSection from '../carousel/carousel-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
 import LyricToggle from '../lyric/lyric-toggle'
 import { getIsPhone, getIsDesktop } from '../../helpers/responsive-helper'
@@ -29,11 +30,12 @@ const MainColumn = ({
     annotationPopupChild,
     audioBannerChild,
     audioSectionMenuChild,
-    carouselChild,
     dotsSectionChild,
     overviewPopupChild,
     scoresTipsSectionChild,
-    titleToggleChild
+    titleToggleChild,
+
+    carouselSectionProps
 
 }) => {
     const isPhone = getIsPhone(deviceIndex),
@@ -70,7 +72,7 @@ const MainColumn = ({
                 }
 
                 <div className="subfield dots-overview-subfield">
-                    {carouselChild}
+                    <CarouselSection {...carouselSectionProps} />
                     <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
                         scoresTipsSectionChild={
                             (isDesktop && isScoresTipsInMain) ? scoresTipsSectionChild : null
@@ -125,11 +127,12 @@ MainColumn.propTypes = {
     annotationPopupChild: PropTypes.element.isRequired,
     audioBannerChild: PropTypes.element.isRequired,
     audioSectionMenuChild: PropTypes.element.isRequired,
-    carouselChild: PropTypes.element.isRequired,
     dotsSectionChild: PropTypes.element.isRequired,
     overviewPopupChild: PropTypes.element.isRequired,
     scoresTipsSectionChild: PropTypes.element.isRequired,
-    titleToggleChild: PropTypes.element.isRequired
+    titleToggleChild: PropTypes.element.isRequired,
+
+    carouselSectionProps: PropTypes.object.isRequired
 }
 
 export default connect(({

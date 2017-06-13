@@ -8,7 +8,6 @@ import MainColumn from './main/main-column'
 import LyricColumn from './lyric/lyric-column'
 import AudioBanner from './audio/audio-banner'
 import AudioSection from './audio/audio-section'
-import CarouselSection from './carousel/carousel-section'
 import DotsSection from './dots/dots-section'
 import ScoresTipsSection from './main/scores-tips-section'
 import TitleToggle from './title/title-toggle'
@@ -136,18 +135,7 @@ const Live = ({
             />
         ),
 
-        carouselSectionProps = {
-            handleLyricAnnotationSelect,
-            handleAnnotationPrevious,
-            handleAnnotationNext,
-            handleAnnotationWikiSelect,
-            handleAnnotationPortalSelect,
-            handlePopupContainerClick
-        },
-        carouselChild = (
-            <CarouselSection {...carouselSectionProps} />
-        ),
-
+        // TODO: Main can get this directly.
         dotsSectionProps = {
             handlePopupContainerClick,
             handleDotToggle,
@@ -184,7 +172,16 @@ const Live = ({
 
             audioBannerChild,
             audioSectionMenuChild,
-            titleToggleChild
+            titleToggleChild,
+
+            carouselSectionProps: {
+                handleLyricAnnotationSelect,
+                handleAnnotationPrevious,
+                handleAnnotationNext,
+                handleAnnotationWikiSelect,
+                handleAnnotationPortalSelect,
+                handlePopupContainerClick
+            },
         },
 
         overviewPopupProps = {
@@ -246,7 +243,6 @@ const Live = ({
             </div>
             <MainColumn {...mainColumnProps}
                 annotationPopupChild={ <AnnotationPopup {...annotationPopupProps} /> }
-                carouselChild={carouselChild}
                 dotsSectionChild={ <DotsSection {...dotsSectionProps} /> }
                 overviewPopupChild={
                     <OverviewPopup {...overviewPopupProps}
