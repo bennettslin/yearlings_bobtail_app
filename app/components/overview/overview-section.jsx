@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import TextBlock from '../text/text-block'
 import OverviewToggle from './overview-toggle'
-import { getOverview } from '../../helpers/data-helper'
+import { getSongOverview } from '../../helpers/data-helper'
 import { getIsToggleInOverview } from '../../helpers/responsive-helper'
 import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'
 
@@ -31,7 +31,7 @@ class OverviewSection extends Component {
                 selectedOverviewIndex,
                 overviewIndex } = this.props,
 
-            overviewText = getOverview(overviewIndex),
+            overviewText = getSongOverview(overviewIndex),
             isToggleInOverview = getIsToggleInOverview(deviceIndex),
             isEnabled = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN
 

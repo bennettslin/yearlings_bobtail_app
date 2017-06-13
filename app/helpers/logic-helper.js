@@ -1,10 +1,12 @@
-// Parse album data for presentation.
+// General file for calculating stuff.
+// TODO: Break into smaller files.
+
 import { PORTAL,
          REFERENCE } from '../constants/dots'
 import { LYRIC_COLUMN_KEYS, COLUMN_INDEX } from '../constants/lyrics'
 import { getAnnotationObject,
          getVerseObject,
-         getIsLogue,
+         getSongIsLogue,
          getSongVerseTimes,
          getSongTotalTime,
          getAnnotationDotKeys,
@@ -297,7 +299,7 @@ export const getVerseBarStatus = (deviceIndex, windowHeight, isLyricExpanded, se
 // FIXME: Call this from build helper!
 export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
 
-    if (getIsLogue(songIndex)) {
+    if (getSongIsLogue(songIndex)) {
         return {
             beginTime: 0,
             endTime: 0

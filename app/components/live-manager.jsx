@@ -20,7 +20,7 @@ import TitlePopup from './title/title-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
-import { getIsLogue } from '../helpers/data-helper'
+import { getSongIsLogue } from '../helpers/data-helper'
 import { getSingleShownLyricColumnKey } from '../helpers/logic-helper'
 import { getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
@@ -92,7 +92,7 @@ const Live = ({
 
 }) => {
 
-    const isLogue = getIsLogue(selectedSongIndex),
+    const isLogue = getSongIsLogue(selectedSongIndex),
 
         singleShownLyricColumnKey = getSingleShownLyricColumnKey({
             showOneOfTwoLyricColumns,

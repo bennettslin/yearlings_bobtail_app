@@ -1,4 +1,5 @@
-// These are a mess, but they're only for admin purposes so whatever.
+// Parse drawing data for build.
+// FIXME: These are a mess, but they're only for admin purposes so whatever.
 
 export const adminGatherDrawings = (album, scenes, songIndex) => {
     const drawingTypes = ['actors', 'backdrops', 'stageProps']

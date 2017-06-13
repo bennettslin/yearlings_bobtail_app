@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { getScoreForIndex } from '../../helpers/data-helper'
+import { getSongScore } from '../../helpers/data-helper'
 // import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 
 // TODO: Look into http://stackoverflow.com/questions/19654577/html-embedded-pdf-iframe
@@ -43,7 +43,7 @@ class ScoreSection extends Component {
     }
 
     render() {
-        const score = getScoreForIndex(0)
+        const score = getSongScore(0)
 
         return (
             <div

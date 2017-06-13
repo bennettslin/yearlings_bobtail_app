@@ -1,4 +1,5 @@
-// Helpers for parsing album data for build.
+// Parse lyric data for build.
+
 import { ALBUM_BUILD_KEYS,
          ANCHOR,
 

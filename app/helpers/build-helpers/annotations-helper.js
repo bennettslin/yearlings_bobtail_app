@@ -1,3 +1,5 @@
+// Parse annotation data for build.
+
 import { LYRIC, ANCHOR, WIKI, ITALIC, WIKI_INDEX, PORTAL_SEARCH_KEYS, DESTINATION_PORTAL_INDEX, SOURCE_PORTAL_INDEX, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
 import { PORTAL, REFERENCE } from '../../constants/dots'
 import { getAnnotationObject } from '../data-helper'

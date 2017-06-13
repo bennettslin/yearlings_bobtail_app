@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { getIsLogue } from '../../helpers/data-helper'
+import { getSongIsLogue } from '../../helpers/data-helper'
 import { getFormattedTime } from '../../helpers/format-helper'
 
 const AudioTimer = ({
@@ -12,7 +12,7 @@ const AudioTimer = ({
     selectedTimePlayed
 
 }) => {
-    const isLogue = getIsLogue(selectedSongIndex)
+    const isLogue = getSongIsLogue(selectedSongIndex)
 
     return (
         <div className="audio-banner-time">

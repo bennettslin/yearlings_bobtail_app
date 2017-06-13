@@ -21,7 +21,7 @@ import { CONTINUE,
          DISABLED,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
-import { getSongObject, getSongsCount, getIsLogue, getAnnotationObject, getBookColumnIndex, getSongVerseTimes } from '../helpers/data-helper'
+import { getSongObject, getSongsCount, getSongIsLogue, getAnnotationObject, getBookColumnIndex, getSongVerseTimes } from '../helpers/data-helper'
 import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
@@ -38,7 +38,7 @@ class App extends Component {
         const { selectedSongIndex,
                 selectedAnnotationIndex } = props,
 
-            isLogue = getIsLogue(selectedSongIndex),
+            isLogue = getSongIsLogue(selectedSongIndex),
             initialOverviewIndex = selectedSongIndex
 
         // Set initial access state.
@@ -253,7 +253,7 @@ class App extends Component {
      togglePlay(isPlaying = !this.props.isPlaying) {
 
          // Select first song if play button in logue is toggled on.
-         if (getIsLogue(this.props.selectedSongIndex) && isPlaying) {
+         if (getSongIsLogue(this.props.selectedSongIndex) && isPlaying) {
              this.selectSong({
                  selectedSongIndex: 1
              })
@@ -291,7 +291,7 @@ class App extends Component {
         // If no argument passed, then just toggle between on and off.
 
         // We shouldn't be able to toggle carousel while in logue.
-        if (getIsLogue(this.props.selectedSongIndex)) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -346,7 +346,7 @@ class App extends Component {
         // If no argument passed, then just toggle between on and off.
 
         // Dots section cannot be changed in logue.
-        if (getIsLogue(this.props.selectedSongIndex)) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -381,7 +381,7 @@ class App extends Component {
     selectLyricExpand(isLyricExpanded = !this.props.isLyricExpanded) {
 
         // We shouldn't be able to expand or collapse lyric while in logue.
-        if (getIsLogue(this.props.selectedSongIndex)) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -429,7 +429,7 @@ class App extends Component {
          * has double columns, or if in a logue. Check for new song if called
          * from portal.
          */
-        if (!(getShowOneOfTwoLyricColumns(selectedSongIndex, props.deviceIndex)) || getIsLogue(selectedSongIndex)) {
+        if (!(getShowOneOfTwoLyricColumns(selectedSongIndex, props.deviceIndex)) || getSongIsLogue(selectedSongIndex)) {
             return false
         }
 
@@ -529,8 +529,8 @@ class App extends Component {
             }
         }
 
-        const wasLogue = getIsLogue(props.selectedSongIndex),
-            isLogue = getIsLogue(selectedSongIndex)
+        const wasLogue = getSongIsLogue(props.selectedSongIndex),
+            isLogue = getSongIsLogue(selectedSongIndex)
 
         // If not selected from portal, show overview if hidden.
         if (!selectedAnnotationIndex) {
@@ -626,7 +626,7 @@ class App extends Component {
     }) {
 
         // We shouldn't be able to change overview it's a logue.
-        if (getIsLogue(this.props.selectedSongIndex)) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -669,7 +669,7 @@ class App extends Component {
         // If no argument passed, then just toggle between on and off.
 
         // We shouldn't be able to toggle score while in logue.
-        if (getIsLogue(this.props.selectedSongIndex)) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -1040,7 +1040,7 @@ class App extends Component {
     render() {
         return (
             <EventManager
-                isLogue={getIsLogue(this.props.selectedSongIndex)}
+                isLogue={getSongIsLogue(this.props.selectedSongIndex)}
 
                 // Event manager props.
                 accessAnnotation={this.accessAnnotation}

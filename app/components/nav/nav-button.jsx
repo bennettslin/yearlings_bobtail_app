@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
-import { getIsLogue, getSongTitle } from '../../helpers/data-helper'
+import { getSongIsLogue, getSongTitle } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -51,7 +51,7 @@ class NavButton extends Component {
         const { songIndex,
                 ...other } = this.props,
 
-            isLogue = getIsLogue(songIndex),
+            isLogue = getSongIsLogue(songIndex),
             songTitle = getSongTitle({
                 songIndex,
                 showIndex: false

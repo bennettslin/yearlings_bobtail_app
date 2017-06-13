@@ -1,5 +1,20 @@
 module.exports = [
     {
+        taskName: `Lyrics and carousel take their time to render when song is changed.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Verse lines take their time to render when their width needs to be changed.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Show key down, handle on key up.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `When selecting song from portal, carousel scroll should be called strategically, especially Odin shivs.`,
         workedHours: 0,
         neededHours: 1

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import OverviewSection from './overview-section'
 import Popup from '../popup/popup'
-import { getIsLogue } from '../../helpers/data-helper'
+import { getSongIsLogue } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class OverviewPopup extends Component {
@@ -33,7 +33,7 @@ class OverviewPopup extends Component {
                 handlePopupContainerClick,
                 ...other } = this.props,
 
-            isLogue = getIsLogue(selectedSongIndex),
+            isLogue = getSongIsLogue(selectedSongIndex),
 
             myChild = (
                 <OverviewSection {...other} />

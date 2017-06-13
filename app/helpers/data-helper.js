@@ -7,19 +7,113 @@
 import AlbumData from '../album-data'
 import { SOURCE_PORTAL_INDEX } from '../constants/lyrics'
 
+/*********
+ * ALBUM *
+ *********/
+
+export const getMp3s = () => {
+    const { mp3s } = AlbumData
+    return mp3s
+}
+
+export const getStartingIndexForBook = (bookIndex) => {
+    const { bookStartingIndices } = AlbumData
+    return bookStartingIndices[bookIndex]
+}
+
+export const getBookColumnIndex = (songIndex) => {
+    const { bookStartingIndices } = AlbumData
+
+    // Assumes two book starting indices.
+    return songIndex < bookStartingIndices[1] ? 0 : 1
+}
+
+export const getMaxStanzaTimesCount = () => {
+    return AlbumData.maxStanzaTimesCount
+}
+
+/*********
+ * SONGS *
+ *********/
+
+export const getSongsCount = (songs = AlbumData.songs) => {
+    return songs.length
+}
+
 export const getSongObject = (songIndex, songs = AlbumData.songs) => {
     return songs[songIndex] || null
 }
 
-export const getAnnotationsArray = (songIndex) => {
-    const song = getSongObject(songIndex)
-    return song.annotations || []
+export const getSongIsLogue = (songIndex, songs = AlbumData.songs) => {
+    return songIndex === 0 || songIndex === songs.length - 1
 }
 
-export const getAnnotationObject = (songIndex, annotationIndex, songs) => {
-    const { annotations } = getSongObject(songIndex, songs)
-    return annotations ? annotations[annotationIndex - 1] : null
+export const getSongTitle = ({
+    songIndex,
+    songs = AlbumData.songs,
+    showIndex = true
+}) => {
+    const song = getSongObject(songIndex, songs)
+
+    if (!song) {
+        return undefined
+
+    } else {
+        const isLogue = getSongIsLogue(songIndex, songs)
+        return `${showIndex && !isLogue ? songIndex + '. ' : ''}${song.title}`
+    }
 }
+
+export const getSongScore = (songIndex) => {
+    const { scores } = AlbumData
+    return scores[songIndex]
+}
+
+export const getSongOverview = (songIndex) => {
+    const song = getSongObject(songIndex)
+    return song ? song.overview : ''
+}
+
+/*********
+ * TIMES *
+ *********/
+
+export const getSongTotalTime = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.totalTime || Number.MAX_SAFE_INTEGER
+}
+
+export const getSongStanzaTimes = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.stanzaTimes || []
+}
+
+export const getSongVerseTimes = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.verseTimes || []
+}
+
+export const getStanzaTimeObject = (songIndex, stanzaTimeIndex) => {
+    const songObject = getSongObject(songIndex),
+        { stanzaTimes: stanzaTimesArray } = songObject
+
+    // Logues do not have this array.
+    if (stanzaTimesArray && stanzaTimeIndex < stanzaTimesArray.length) {
+
+        // Return stanza time object.
+        return stanzaTimesArray[stanzaTimeIndex]
+
+    } else {
+
+        // Return placeholder object.
+        return { type: 'placeholder',
+                 time: songObject.totalTime }
+    }
+}
+
+/**********
+ * LYRICS *
+ **********/
 
 export const getLyricUnitsCount = (songIndex) => {
     const songs = getSongObject(songIndex)
@@ -36,79 +130,25 @@ export const getVerseObject = (songIndex, verseIndex, songs = AlbumData.songs) =
     return _parseLyrics(lyrics, verseIndex)
 }
 
-export const getOverview = (songIndex) => {
-    const song = getSongObject(songIndex)
-    return song ? song.overview : ''
-}
-
-export const getIsLogue = (songIndex, songs = AlbumData.songs) => {
-    return songIndex === 0 || songIndex === songs.length - 1
-}
-
-export const getSongsCount = (songs = AlbumData.songs) => {
-    return songs.length
-}
+/***************
+ * ANNOTATIONS *
+ ***************/
 
 export const getAnnotationsCount = (songIndex) => {
-    return getAnnotationsArray(songIndex).length
+    const song = getSongObject(songIndex),
+        { annotations } = song
+
+    return annotations ? annotations.length : 0
 }
 
-export const getSongTitle = ({
-    songIndex,
-    songs = AlbumData.songs,
-    showIndex = true
-}) => {
-    const song = getSongObject(songIndex, songs)
-
-    if (!song) {
-        return undefined
-
-    } else {
-        const isLogue = getIsLogue(songIndex, songs)
-        return `${showIndex && !isLogue ? songIndex + '. ' : ''}${song.title}`
-    }
+export const getAnnotationObject = (songIndex, annotationIndex, songs) => {
+    const { annotations } = getSongObject(songIndex, songs)
+    return annotations ? annotations[annotationIndex - 1] : null
 }
 
 export const getAnnotationDotKeys = (songIndex, annotationIndex) => {
     const annotation = getAnnotationObject(songIndex, annotationIndex)
     return annotation ? annotation.dotKeys : null
-}
-
-export const getSongStanzaTimes = (songIndex) => {
-    const selectedSong = getSongObject(songIndex)
-    return selectedSong.stanzaTimes || []
-}
-
-export const getSongTotalTime = (songIndex) => {
-    const selectedSong = getSongObject(songIndex)
-    return selectedSong.totalTime || Number.MAX_SAFE_INTEGER
-}
-
-export const getSongVerseTimes = (songIndex) => {
-    const selectedSong = getSongObject(songIndex)
-    return selectedSong.verseTimes || []
-}
-
-export const getStartingIndexForBook = (bookIndex) => {
-    const { bookStartingIndices } = AlbumData
-    return bookStartingIndices[bookIndex]
-}
-
-export const getBookColumnIndex = (songIndex) => {
-    const { bookStartingIndices } = AlbumData
-
-    // Assumes two book starting indices.
-    return songIndex < bookStartingIndices[1] ? 0 : 1
-}
-
-export const getMp3s = () => {
-    const { mp3s } = AlbumData
-    return mp3s
-}
-
-export const getScoreForIndex = (songIndex) => {
-    const { scores } = AlbumData
-    return scores[songIndex]
 }
 
 export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
@@ -132,28 +172,6 @@ export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
 
         return foundCardObject
     }, null)
-}
-
-export const getMaxStanzaTimesCount = () => {
-    return AlbumData.maxStanzaTimesCount
-}
-
-export const getStanzaTimeObject = (songIndex, stanzaTimeIndex) => {
-    const songObject = getSongObject(songIndex),
-        { stanzaTimes: stanzaTimesArray } = songObject
-
-    // Logues do not have this array.
-    if (stanzaTimesArray && stanzaTimeIndex < stanzaTimesArray.length) {
-
-        // Return stanza time object.
-        return stanzaTimesArray[stanzaTimeIndex]
-
-    } else {
-
-        // Return placeholder object.
-        return { type: 'placeholder',
-                 time: songObject.totalTime }
-    }
 }
 
 /*********
