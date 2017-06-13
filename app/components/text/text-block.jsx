@@ -11,19 +11,14 @@ import TextUnit from './text-unit'
 const TextBlock = ({
 
     text: textEntity,
-    truncateMain,
 
 ...other }) => {
     const isArray = Array.isArray(textEntity)
 
-    if (!isArray || truncateMain) {
-
-        // Truncate if it's in the main verse but in the hidden lyric column.
-
-        // FIXME: But really, this is better taken care of in CSS.
+    if (!isArray) {
         return (
             <TextUnit {...other}
-                text={truncateMain ? '\u2026' : textEntity}
+                text={textEntity}
             />
         )
 
@@ -42,8 +37,7 @@ TextBlock.propTypes = {
         PropTypes.string,
         PropTypes.array,
         PropTypes.object
-    ]),
-    truncateMain: PropTypes.bool
+    ])
 }
 
 /****************

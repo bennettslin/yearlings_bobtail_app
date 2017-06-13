@@ -79,6 +79,33 @@
     }
 }
 
+// TODO: Can these be animated?
+// Rules to show or hide stanzas when only one lyric column is shown.
+.show-only-left {
+
+    .stanza-block {
+
+        // Hide side stanzas when only left lyric column is shown.
+        &.side {
+            display: none;
+        }
+    }
+}
+
+.truncated-main {
+    display: none;
+}
+
+.show-only-right {
+    .complete-main {
+        display: none;
+    }
+
+    .truncated-main {
+        display: inline;
+    }
+}
+
 @custom-sub-block-side-padding: 15%;
 
 .custom-sub-block {

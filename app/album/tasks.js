@@ -27,7 +27,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Handle truncateMain through CSS.`,
+        taskName: `Handle truncatableMain through CSS.`,
         workedHours: 0,
         neededHours: 3
     },

@@ -22,6 +22,7 @@ const VerseLinesBlock = ({
     hiddenLyricColumnKey,
 
     isDoubleSpeaker,
+    truncatableMain,
 
 ...other }) => {
 
@@ -50,7 +51,22 @@ const VerseLinesBlock = ({
                 columnKey: doublespeakerKey || (isTitle ? TITLE : LEFT)
             }
 
-        return <VerseLine {...other} {...lyricsLineProps} />
+        /**
+         * If it's truncatable, we will only ever show either the complete or the
+         * truncated text.
+         */
+        return truncatableMain ? (
+            <span>
+                <span className="complete-main">
+                    <VerseLine {...other} {...lyricsLineProps} />
+                </span>
+                <span className="truncated-main">
+                    {'\u2026'}
+                </span>
+            </span>
+        ) : (
+            <VerseLine {...other} {...lyricsLineProps} />
+        )
     }
 }
 
@@ -64,10 +80,11 @@ VerseLinesBlock.propTypes = {
     showOneOfTwoLyricColumns: PropTypes.bool,
 
     // From parent.
+    verseObject: PropTypes.object.isRequired,
     hiddenLyricColumnKey: PropTypes.string,
     isDoubleSpeaker: PropTypes.bool.isRequired,
-    verseObject: PropTypes.object.isRequired,
     doublespeakerKey: PropTypes.string,
+    truncatableMain: PropTypes.bool,
     isTitle: PropTypes.bool
 }
 

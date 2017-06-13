@@ -6,9 +6,8 @@ import { connect } from 'react-redux'
 import classnames from 'classnames'
 import LyricStanza from './lyric-stanza'
 import LyricDotStanza from './lyric-dot-stanza'
-import { TITLE, LEFT, RIGHT } from '../../constants/lyrics'
+import { TITLE } from '../../constants/lyrics'
 import { getLyricsUnitArray } from '../../helpers/data-helper'
-import { getHiddenLyricColumnKey } from '../../helpers/logic-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -32,8 +31,6 @@ class LyricUnit extends Component {
                     'selectedAnnotationIndex',
                     'interactivatedVerseIndex',
                     'selectedVerseIndex',
-                    'selectedLyricColumnIndex',
-                    'showOneOfTwoLyricColumns',
                     'unitIndex'
                 ]
             })
@@ -43,8 +40,6 @@ class LyricUnit extends Component {
 
     render() {
         const { selectedSongIndex,
-                selectedLyricColumnIndex,
-                showOneOfTwoLyricColumns,
                 unitIndex,
                 ...other } = this.props,
 
@@ -72,27 +67,13 @@ class LyricUnit extends Component {
             topSideSubStanza = topSideStanza ?
                 topSideStanza[topSideStanza.length - 1].subStanza : null,
 
-            hiddenLyricColumnKey = getHiddenLyricColumnKey({
-                showOneOfTwoLyricColumns,
-                selectedLyricColumnIndex
-            }),
-
             isTitleUnit = unitIndex === 0,
 
             isBottomOnly = !topSideStanza && !!bottomSideStanza,
             isDotOnly = !!dotStanza && unitArray.length === 1,
-            hasSide = !!(topSideStanza || bottomSideStanza),
-
-            // FIXME: Take care of these through CSS.
-            // Applies to Golden Cord and Uncanny Valley.
-            truncateMain = hasSide && hiddenLyricColumnKey === LEFT,
 
             // Applies to Golden Cord and Uncanny Valley.
-            showSide = hasSide && hiddenLyricColumnKey !== RIGHT
-
-        if (truncateMain !== showSide) {
-            console.error('selectedSongIndex', selectedSongIndex);
-        }
+            truncatableMain = !!(topSideStanza || bottomSideStanza)
 
         return (
             <LyricUnitView {...other}
@@ -112,8 +93,7 @@ class LyricUnit extends Component {
                 topSideSubStanza={topSideSubStanza}
                 isDotOnly={isDotOnly}
                 isBottomOnly={isBottomOnly}
-                truncateMain={truncateMain}
-                showSide={showSide}
+                truncatableMain={truncatableMain}
             />
         )
     }
@@ -122,8 +102,6 @@ class LyricUnit extends Component {
 LyricUnit.propTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
-    selectedLyricColumnIndex: PropTypes.number.isRequired,
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
     // From parent.
     unitIndex: PropTypes.number.isRequired
@@ -149,9 +127,8 @@ const LyricUnitView = ({
     topSideSubStanza,
 
     isBottomOnly,
-    truncateMain,
+    truncatableMain,
     isDotOnly,
-    showSide,
 
 ...other }) => {
 
@@ -168,38 +145,39 @@ const LyricUnitView = ({
             )}
         >
             {!isDotOnly &&
-                <div className="stanza-block">
+                <div className={classnames(
+                    'stanza-block',
+                    'main'
+                )}>
                     <LyricStanza {...other}
                         stanzaArray={unitArray}
-                        truncateMain={truncateMain}
+                        truncatableMain={truncatableMain}
                         inMain={true}
                     />
                     <LyricStanza {...other}
                         stanzaArray={subStanza}
-                        truncateMain={truncateMain}
+                        truncatableMain={truncatableMain}
                         inMain={true}
                         addSub={true}
                     />
                 </div>
             }
-            {showSide &&
-                <div className={classnames(
-                    'stanza-block',
-                    'side',
-                    { 'bottom-only': isBottomOnly }
-                )}>
-                    <LyricStanza {...other}
-                        stanzaArray={topSideStanza}
-                    />
-                    <LyricStanza {...other}
-                        stanzaArray={bottomSideStanza}
-                    />
-                    <LyricStanza {...other}
-                        stanzaArray={topSideSubStanza}
-                        addSub={true}
-                    />
-                </div>
-            }
+            <div className={classnames(
+                'stanza-block',
+                'side',
+                { 'bottom-only': isBottomOnly }
+            )}>
+                <LyricStanza {...other}
+                    stanzaArray={topSideStanza}
+                />
+                <LyricStanza {...other}
+                    stanzaArray={bottomSideStanza}
+                />
+                <LyricStanza {...other}
+                    stanzaArray={topSideSubStanza}
+                    addSub={true}
+                />
+            </div>
             {dotStanza &&
                 <LyricDotStanza {...other}
                     dotStanzaObject={dotStanza}
@@ -210,9 +188,7 @@ const LyricUnitView = ({
 }
 
 LyricUnitView.defaultProps = {
-    subsequent: false,
-    truncateMain: false,
-    showSide: false
+    subsequent: false
 }
 
 LyricUnitView.propTypes = {
@@ -230,16 +206,11 @@ LyricUnitView.propTypes = {
 
     isDotOnly: PropTypes.bool.isRequired,
     isBottomOnly: PropTypes.bool.isRequired,
-    truncateMain: PropTypes.bool.isRequired,
-    showSide: PropTypes.bool.isRequired
+    truncatableMain: PropTypes.bool.isRequired
 }
 
 export default connect(({
-    selectedSongIndex,
-    selectedLyricColumnIndex,
-    showOneOfTwoLyricColumns
+    selectedSongIndex
 }) => ({
-    selectedSongIndex,
-    selectedLyricColumnIndex,
-    showOneOfTwoLyricColumns
+    selectedSongIndex
 }))(LyricUnit)
