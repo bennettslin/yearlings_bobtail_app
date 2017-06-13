@@ -31,8 +31,8 @@
     justify-content: space-between;
 }
 
-.show-only-left .double-lines-block .line.right,
-.show-only-right .double-lines-block .line.left {
+.show-only-left .line.right,
+.show-only-right .line.left {
     // Override max width set programmatically in verse line.
     // max-width: 0 !important;
     width: 0;
@@ -54,18 +54,22 @@
     //             max-width @animation-default,
     //             max-height @animation-default;
 
+    /**
+     * Maintain distinction between regular lyric line and left line in
+     * doublespeaker block, even though they're styled the same.
+     */
+    &.lyric,
     &.left {
         text-indent:-@hanging-indent-width;
         padding-left: @hanging-indent-width;
     }
 
-    // Not needed?
-    // &.centre {
-    //     width: 100%;
-    //     text-indent: 0;
-    //     padding-left: 0;
-    //     text-align: center;
-    // }
+    &.centre {
+        width: 100%;
+        text-indent: 0;
+        padding-left: 0;
+        text-align: center;
+    }
 
     &.right {
         // If both columns show, have a single gutter between them.

@@ -64,11 +64,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Centre lyrics bugs.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     {
         taskName: `Explanatory notes for each file.`,
@@ -2247,4 +2242,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Centre lyrics bugs.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

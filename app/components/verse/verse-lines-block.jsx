@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import VerseLine from './verse-line'
-import { LYRIC_COLUMN_KEYS, TITLE, LEFT, CENTRE, LYRIC } from '../../constants/lyrics'
+import { LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC } from '../../constants/lyrics'
 
 /*************
  * CONTAINER *
@@ -29,9 +29,20 @@ const VerseLinesBlock = ({
             lyricsLineProps = {
                 text: doublespeakerKey ? verseObject[doublespeakerKey] : (verseObject[LYRIC] || verseObject[CENTRE]),
                 isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
-                isVerseEndingSpan: verseObject.isVerseEndingSpan,
-                columnKey: doublespeakerKey || (isTitle ? TITLE : LEFT)
+                isVerseEndingSpan: verseObject.isVerseEndingSpan
             }
+
+        let columnKey = LYRIC
+
+        if (doublespeakerKey) {
+            columnKey = doublespeakerKey
+        } else if (isTitle) {
+            columnKey = TITLE
+        } else if (verseObject[CENTRE]) {
+            columnKey = CENTRE
+        }
+
+        lyricsLineProps.columnKey = columnKey
 
         /**
          * If it's truncatable, we will only ever show either the complete or the
