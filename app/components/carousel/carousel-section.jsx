@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import CarouselAnnotation from './carousel-annotation'
 import Button from '../button/button'
-import { getAnnotationsLength } from '../../helpers/data-helper'
+import { getAnnotationsCount } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class CarouselSection extends Component {
@@ -42,20 +42,20 @@ class CarouselSection extends Component {
             return null
         }
 
-        const annotationsLength = getAnnotationsLength(selectedSongIndex),
+        const annotationsCount = getAnnotationsCount(selectedSongIndex),
 
             /**
              * Dynamically create array of just indices. Carousel annotation
              * will fetch annotation object directly from data helper.
              */
-            indicesArray = Array.from(Array(annotationsLength).keys())
+            annotationsIndices = Array.from(Array(annotationsCount).keys())
 
         return (
             <div className="carousel">
                 <div className="carousel-scroll">
                     <div className="carousel-annotations-block">
                         <div className="carousel-annotation carousel-annotation-0" />
-                        {indicesArray.map(index => {
+                        {annotationsIndices.map(index => {
                             const annotationIndex = index + 1,
                                 isAccessedAnnotation = annotationIndex === accessedAnnotationIndex,
                                 isSelectedAnnotation = annotationIndex === selectedAnnotationIndex

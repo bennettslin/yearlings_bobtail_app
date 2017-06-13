@@ -8,7 +8,7 @@ import { getAnnotationObject,
          getSongVerseTimes,
          getSongTotalTime,
          getAnnotationDotKeys,
-         getAnnotationsLength } from './data-helper'
+         getAnnotationsCount } from './data-helper'
 import { intersects } from './dot-helper'
 import { getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
 
@@ -58,7 +58,7 @@ export const getAnnotationIndexForDirection = ({
      * - from getAnnotationIndexForVerseIndex.
      */
 
-    const annotationsLength = getAnnotationsLength(selectedSongIndex),
+    const annotationsCount = getAnnotationsCount(selectedSongIndex),
 
         // If a direction is given for this method, it has modulo.
         useModulo = !!direction
@@ -71,7 +71,7 @@ export const getAnnotationIndexForDirection = ({
         currentAnnotationIndex = 1
     }
 
-    if (annotationsLength) {
+    if (annotationsCount) {
         let returnIndex = currentAnnotationIndex,
             directionSwitchCounter = 0,
             doesIntersect,
@@ -101,21 +101,21 @@ export const getAnnotationIndexForDirection = ({
             // Called from a user-inputted direction.
             if (useModulo) {
                 // Remember that annotations are 1-based.
-                returnIndex = (returnIndex + annotationsLength + direction - 1) % annotationsLength + 1
+                returnIndex = (returnIndex + annotationsCount + direction - 1) % annotationsCount + 1
 
             // Searching for the closest one, in the direction we prefer.
             } else {
                 returnIndex = returnIndex + direction
 
                 // We've reached the end.
-                if (returnIndex < 1 && direction === -1 || returnIndex > annotationsLength && direction === 1) {
+                if (returnIndex < 1 && direction === -1 || returnIndex > annotationsCount && direction === 1) {
 
                     // Reset index and switch direction.
                     if (direction === -1) {
                         returnIndex = 1
                         direction = 1
                     } else {
-                        returnIndex = annotationsLength
+                        returnIndex = annotationsCount
                         direction = -1
                     }
 
@@ -192,7 +192,7 @@ export const getAnnotationIndexForVerseIndex = ({
      */
 
     const verse = getVerseObject(selectedSongIndex, verseIndex),
-        annotationsLength = getAnnotationsLength(selectedSongIndex)
+        annotationsCount = getAnnotationsCount(selectedSongIndex)
 
     if (!verse) {
         return -1
@@ -203,13 +203,13 @@ export const getAnnotationIndexForVerseIndex = ({
 
     // If the verse has its own annotation, pick it.
     if (verse.currentAnnotationIndices) {
-        const currentAnnotationIndicesLength = verse.currentAnnotationIndices.length
+        const currentAnnotationIndicesCount = verse.currentAnnotationIndices.length
 
         /**
          * If prompted by left arrow, start left and search inward. If prompted
          * by right arrow, start right. If no direction given, start left.
          */
-        let currentCounter = direction === 1 ? (currentAnnotationIndicesLength - 1) : 0
+        let currentCounter = direction === 1 ? (currentAnnotationIndicesCount - 1) : 0
 
         /**
          * Loop through all the annotations in the verse, in case some are
@@ -236,7 +236,7 @@ export const getAnnotationIndexForVerseIndex = ({
              */
             returnToLoop =
                 currentCounter >= 0 &&
-                currentCounter < currentAnnotationIndicesLength &&
+                currentCounter < currentAnnotationIndicesCount &&
                 (!showAnnotationForColumn || !doesIntersect)
 
         } while (returnToLoop)
@@ -245,7 +245,7 @@ export const getAnnotationIndexForVerseIndex = ({
     } else {
         returnIndex = direction === -1 ?
             verse.lastAnnotationIndex :
-            (verse.lastAnnotationIndex + 1) % annotationsLength
+            (verse.lastAnnotationIndex + 1) % annotationsCount
     }
 
     /**
@@ -358,13 +358,13 @@ export const getAnnotationAnchorIndexForDirection = ({
     if (annotation && annotation.annotationAnchors) {
 
         const { annotationAnchors } = annotation,
-            annotationAnchorsLength = annotationAnchors.length
+            annotationAnchorsCount = annotationAnchors.length
 
         let returnIndex = initialAnnotationAnchorIndex,
             counter = 0
 
         // Consider each anchor index only once.
-        while (counter < annotationAnchorsLength) {
+        while (counter < annotationAnchorsCount) {
 
             // If no direction given, start at first index...
             if (isNaN(direction)) {
@@ -376,7 +376,7 @@ export const getAnnotationAnchorIndexForDirection = ({
             }
 
             // Remember that annotations are 1-based.
-            returnIndex = (returnIndex + annotationAnchorsLength + direction - 1) % annotationAnchorsLength + 1
+            returnIndex = (returnIndex + annotationAnchorsCount + direction - 1) % annotationAnchorsCount + 1
 
             /**
              * It's valid if it's a wiki anchor and reference dot is selected,

@@ -21,7 +21,7 @@ export const getAnnotationObject = (songIndex, annotationIndex, songs) => {
     return annotations ? annotations[annotationIndex - 1] : null
 }
 
-export const getLyricsLength = (songIndex) => {
+export const getLyricUnitsCount = (songIndex) => {
     const songs = getSongObject(songIndex)
     return songs.lyrics ? songs.lyrics.length : 0
 }
@@ -45,11 +45,11 @@ export const getIsLogue = (songIndex, songs = AlbumData.songs) => {
     return songIndex === 0 || songIndex === songs.length - 1
 }
 
-export const getSongsLength = (songs = AlbumData.songs) => {
+export const getSongsCount = (songs = AlbumData.songs) => {
     return songs.length
 }
 
-export const getAnnotationsLength = (songIndex) => {
+export const getAnnotationsCount = (songIndex) => {
     return getAnnotationsArray(songIndex).length
 }
 

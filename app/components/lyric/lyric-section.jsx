@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
 import LyricUnit from './lyric-unit'
-import { getLyricsLength } from '../../helpers/data-helper'
+import { getLyricUnitsCount } from '../../helpers/data-helper'
 
 /*************
  * CONTAINER *
@@ -73,13 +73,13 @@ const LyricSectionView = ({
 
 ...other }) => {
 
-    const lyricsLength = getLyricsLength(selectedSongIndex),
+    const lyricUnitsCount = getLyricUnitsCount(selectedSongIndex),
 
         /**
          * Dynamically create array of just indices. Lyric unit will fetch
          * unit array directly from data helper.
          */
-        indicesArray = Array.from(Array(lyricsLength).keys())
+        lyricUnitsIndices = Array.from(Array(lyricUnitsCount).keys())
 
     return (
         <div
@@ -95,7 +95,7 @@ const LyricSectionView = ({
             {/* Upon song change, scroll to element with this class name. */}
             <div className="lyrics-scroll-home" />
             <div className="lyric-block">
-                {indicesArray.map(unitIndex => (
+                {lyricUnitsIndices.map(unitIndex => (
                         <LyricUnit {...other}
                             key={unitIndex}
                             unitIndex={unitIndex}

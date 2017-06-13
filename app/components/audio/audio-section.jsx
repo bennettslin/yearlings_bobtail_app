@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AudioButtons from './audio-buttons'
 import AudioTimer from './audio-timer'
-import { getSongsLength } from '../../helpers/data-helper'
+import { getSongsCount } from '../../helpers/data-helper'
 import { getIsPhone } from '../../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
@@ -38,10 +38,10 @@ class AudioSection extends Component {
             isPrologue = selectedSongIndex === 0,
             isFirstSong = selectedSongIndex === 1,
 
-            songsLength = getSongsLength(),
+            songsCount = getSongsCount(),
 
-            isLastSong = selectedSongIndex === songsLength - 2,
-            isEpilogue = selectedSongIndex === songsLength - 1
+            isLastSong = selectedSongIndex === songsCount - 2,
+            isEpilogue = selectedSongIndex === songsCount - 1
 
         return (
             <AudioSectionView {...other}

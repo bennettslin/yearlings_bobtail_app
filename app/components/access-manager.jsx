@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import DomManager from './dom-manager'
-import { getSongsLength,
+import { getSongsCount,
          getBookColumnIndex,
          getPortalLink } from '../helpers/data-helper'
 import { getAnnotationIndexForDirection,
@@ -249,32 +249,32 @@ class AccessManager extends Component {
         const { selectedAccessIndex } = this.props
 
         if (selectedAccessIndex) {
-            const dotKeysLength = ALL_DOT_KEYS.length
+            const dotKeysCount = ALL_DOT_KEYS.length
             let { accessedDotIndex } = this.props
 
             switch (keyName) {
                 case ARROW_LEFT:
-                    accessedDotIndex = (accessedDotIndex + (dotKeysLength - 1)) % dotKeysLength
+                    accessedDotIndex = (accessedDotIndex + (dotKeysCount - 1)) % dotKeysCount
                     break
                 case ARROW_RIGHT:
-                    accessedDotIndex = (accessedDotIndex + 1) % dotKeysLength
+                    accessedDotIndex = (accessedDotIndex + 1) % dotKeysCount
                     break
                 case ARROW_UP:
-                    if (accessedDotIndex >= dotKeysLength / 2) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2)) % dotKeysLength
+                    if (accessedDotIndex >= dotKeysCount / 2) {
+                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2)) % dotKeysCount
                     } else if (accessedDotIndex !== 0) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2) - 1) % dotKeysLength
+                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2) - 1) % dotKeysCount
                     } else {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysLength - 1)) % dotKeysLength
+                        accessedDotIndex = (accessedDotIndex + (dotKeysCount - 1)) % dotKeysCount
                     }
                     break
                 case ARROW_DOWN:
-                    if (accessedDotIndex < dotKeysLength / 2) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2)) % dotKeysLength
-                    } else if (accessedDotIndex !== dotKeysLength - 1) {
-                        accessedDotIndex = (accessedDotIndex + (dotKeysLength / 2) + 1) % dotKeysLength
+                    if (accessedDotIndex < dotKeysCount / 2) {
+                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2)) % dotKeysCount
+                    } else if (accessedDotIndex !== dotKeysCount - 1) {
+                        accessedDotIndex = (accessedDotIndex + (dotKeysCount / 2) + 1) % dotKeysCount
                     } else {
-                        accessedDotIndex = (accessedDotIndex + 1) % dotKeysLength
+                        accessedDotIndex = (accessedDotIndex + 1) % dotKeysCount
                     }
                     break
                 case ENTER:
@@ -321,9 +321,9 @@ class AccessManager extends Component {
 
             if (direction) {
                 const { shownBookColumnIndex } = this.props,
-                    songsLength = getSongsLength()
+                    songsCount = getSongsCount()
 
-                accessedNavSongIndex = (accessedNavSongIndex + songsLength + direction) % songsLength
+                accessedNavSongIndex = (accessedNavSongIndex + songsCount + direction) % songsCount
 
                 // Select the book column that contains the accessed song index.
                 if (shownBookColumnIndex !== getBookColumnIndex(accessedNavSongIndex)) {

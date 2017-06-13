@@ -21,7 +21,7 @@ import { CONTINUE,
          DISABLED,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
-import { getSongObject, getSongsLength, getIsLogue, getAnnotationObject, getBookColumnIndex, getSongVerseTimes } from '../helpers/data-helper'
+import { getSongObject, getSongsCount, getIsLogue, getAnnotationObject, getBookColumnIndex, getSongVerseTimes } from '../helpers/data-helper'
 import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseIndexForTime, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
@@ -524,7 +524,7 @@ class App extends Component {
         if (direction) {
             selectedSongIndex = props.selectedSongIndex + direction
 
-            if (selectedSongIndex < 0 || selectedSongIndex >= getSongsLength()) {
+            if (selectedSongIndex < 0 || selectedSongIndex >= getSongsCount()) {
                 return false
             }
         }
@@ -773,8 +773,8 @@ class App extends Component {
                 selectedVerseIndex = getVerseIndexForTime(props.selectedSongIndex, selectedTime),
 
                 // We will start at the beginning of the selected verse.
-                songTimes = getSongVerseTimes(props.selectedSongIndex),
-                selectedTimePlayed = songTimes[selectedVerseIndex]
+                songVerseTimes = getSongVerseTimes(props.selectedSongIndex),
+                selectedTimePlayed = songVerseTimes[selectedVerseIndex]
 
             this.selectTime(selectedTimePlayed)
 
@@ -800,14 +800,14 @@ class App extends Component {
     interactivateVerseDirection(direction) {
         const { selectedAccessIndex,
                 selectedSongIndex } = this.props,
-            songTimes = getSongVerseTimes(selectedSongIndex),
-            timesLength = songTimes.length
+            songVerseTimes = getSongVerseTimes(selectedSongIndex),
+            songVerseTimesCount = songVerseTimes.length
 
         let { interactivatedVerseIndex } = this.props
 
         // Ensure modulo.
         if (direction === -1) {
-            direction = timesLength - 1
+            direction = songVerseTimesCount - 1
         }
 
         // We are turning on interactivation.
@@ -821,12 +821,12 @@ class App extends Component {
 
             // If not, start from the selected verse.
             } else {
-                interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % timesLength
+                interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % songVerseTimesCount
             }
 
         // We already have an interactivated verse.
         } else {
-            interactivatedVerseIndex = (interactivatedVerseIndex + direction) % timesLength
+            interactivatedVerseIndex = (interactivatedVerseIndex + direction) % songVerseTimesCount
         }
 
         this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)
@@ -868,8 +868,8 @@ class App extends Component {
         selectedVerseIndex = 0,
         selectedSongIndex = this.props.selectedSongIndex
     }) {
-        const songTimes = getSongVerseTimes(selectedSongIndex),
-            selectedTimePlayed = songTimes[selectedVerseIndex]
+        const songVerseTimes = getSongVerseTimes(selectedSongIndex),
+            selectedTimePlayed = songVerseTimes[selectedVerseIndex]
 
         this._selectTimeAndVerse({
             selectedTimePlayed,

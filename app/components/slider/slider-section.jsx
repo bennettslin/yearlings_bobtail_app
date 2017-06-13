@@ -4,9 +4,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
-import { getMaxStanzaTimesCount,
-         getStanzaTimeObject,
-         getSongVerseTimes,
+import SliderStanzas from './slider-stanzas'
+import { getSongVerseTimes,
          getSongTotalTime } from '../../helpers/data-helper'
 import { getFormattedTime } from '../../helpers/format-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
@@ -141,43 +140,26 @@ const SliderSectionView = ({
     displayedRemainTime,
     verseTimes,
 
-    // TODO: Get this from Redux directly.
-    selectedSongIndex,
     totalTime,
     handleTouchDown
 }) => {
 
-    const maxStanzaTimesCount = getMaxStanzaTimesCount(),
-        /**
-         * Dynamically create array of just indices. Audio slider will fetch
-         * stanza times object directly from data helper.
-         */
-        indicesArray = Array.from(Array(maxStanzaTimesCount).keys())
-
     return (
         <div
-            className={`audio-banner audio-slider-block is-${cursorClassName}-cursor`}
+            className={classnames(
+                'audio-banner',
+                'audio-slider-block',
+                `is-${cursorClassName}-cursor`
+            )}
         >
-            {indicesArray.map((nothing, stanzaTimeIndex) => {
-
-                const stanzaTimeObject = getStanzaTimeObject(selectedSongIndex, stanzaTimeIndex),
-                    stanzaWidth = (totalTime - stanzaTimeObject.time) / totalTime * 100,
-                    stanzaStyle = {
-                        width: `${stanzaWidth}%`
-                    }
-
-                return (
-                    <div
-                        key={stanzaTimeIndex}
-                        className={`time-bar stanza-time-bar stanza-type-${stanzaTimeObject.type}`}
-                        style={stanzaStyle}
-                    >
-                    </div>
-                )
-            })}
+            <SliderStanzas />
 
             <div
-                className="time-bar play-time-bar time-remain-bar"
+                className={classnames(
+                    'time-bar',
+                    'play-time-bar',
+                    'time-remain-bar'
+                )}
             >
             </div>
 
@@ -249,7 +231,6 @@ const SliderSectionView = ({
 
 SliderSectionView.propTypes = {
     // From parent.
-    selectedSongIndex: PropTypes.number.isRequired,
     cursorVerseIndex: PropTypes.number.isRequired,
     cursorClassName: PropTypes.string.isRequired,
     cursorStyle: PropTypes.object.isRequired,
