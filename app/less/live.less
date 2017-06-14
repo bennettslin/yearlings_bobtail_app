@@ -49,11 +49,11 @@
 
 @hanging-indent-width: 1.5em;
 
-.live {
+.is-live-view {
     background-color: black;
 }
 
-.live-app {
+.live-manager {
     position: relative;
     width: 100%;
     height: 100%;
@@ -113,7 +113,7 @@
     }
 }
 
-.live {
+.is-live-view {
     .nav-section {
         height: 100%;
         width: 200px;
@@ -138,7 +138,7 @@
 
     // For admin device width toggle. Should be the same as in constants.js.
     &.laptop-width {
-        .live-app {
+        .live-manager {
             max-width: @laptop-max-width;
         }
 
@@ -151,7 +151,7 @@
 .is-mobile {
 
     // For admin device width toggle. Should be the same as in constants.js.
-    .live-app {
+    .live-manager {
         max-width: @tablet-max-width;
     }
 
@@ -176,7 +176,7 @@
 
     // For admin device width toggle. Should be the same as in constants.js.
     &.mini-width {
-        .live-app {
+        .live-manager {
             max-width: @mini-max-width;
         }
     }
@@ -185,7 +185,7 @@
         // Phone has no nav field.
 
         // For admin device width toggle. Should be the same as in constants.js.
-        .live-app {
+        .live-manager {
             max-width: @phone-max-width;
         }
     }

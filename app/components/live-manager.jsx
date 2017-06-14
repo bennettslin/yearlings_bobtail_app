@@ -216,7 +216,7 @@ const Live = ({
 
     return (
         <div className={classnames(
-            'live-app',
+            'live-manager',
             isLogue ? 'is-logue' : 'is-song',
             isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
             isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',

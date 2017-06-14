@@ -83,7 +83,7 @@ class DomManager extends Component {
                 className={classnames(
                     'dom-manager',
                     deviceClassName,
-                    selectedAdminIndex ? 'admin' : 'live',
+                    selectedAdminIndex ? 'is-admin-view' : 'is-live-view',
                     isDesktop ? 'is-desktop' : 'is-mobile',
                     isPlaying ? 'is-playing' : 'is-paused',
                     showOverlay ? 'overlay-shown' : 'overlay-hidden',
