@@ -231,7 +231,7 @@
 }
 
 .is-song {
-    .carousel-expanded {
+    &.carousel-expanded {
         .nav-toggle-book {
             left: -@app-large-icon-diameter + @app-thin-margin * 2;
         }
@@ -422,7 +422,7 @@
         min-width: @tablet-nav-toggle-width;
     }
 
-    &.overlay-shown, &.is-song.lyric-expanded, &.is-song .carousel-expanded {
+    &.overlay-shown, &.is-song.lyric-expanded, &.is-song.carousel-expanded {
         .nav-toggle-book {
             left: @tablet-nav-toggle-width;
         }
@@ -544,7 +544,7 @@
         min-width: @mini-nav-toggle-width;
     }
 
-    &.overlay-shown, &.is-song.lyric-expanded, &.is-song .carousel-expanded {
+    &.overlay-shown, &.is-song.lyric-expanded, &.is-song.carousel-expanded {
         .nav-toggle-book {
             left: @mini-nav-toggle-width;
         }

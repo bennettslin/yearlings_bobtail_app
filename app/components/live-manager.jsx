@@ -25,8 +25,6 @@ const LiveManager = ({
     deviceIndex,
     overviewLogueIndex,
     overviewSongIndex,
-    selectedAnnotationIndex,
-    selectedCarouselIndex,
     selectedDotKeys,
     selectedDotsIndex,
     selectedLyricColumnIndex,
@@ -204,8 +202,6 @@ const LiveManager = ({
             'live-manager',
             isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
             singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
-            selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
-            selectedCarouselIndex ? 'carousel-expanded' : 'carousel-collapsed',
             selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
             selectedDotKeys
@@ -254,8 +250,6 @@ LiveManager.propTypes = {
     deviceIndex: PropTypes.number.isRequired,
     overviewLogueIndex: PropTypes.number.isRequired,
     overviewSongIndex: PropTypes.number.isRequired,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
-    selectedCarouselIndex: PropTypes.number.isRequired,
     selectedDotKeys: PropTypes.object.isRequired,
     selectedDotsIndex: PropTypes.number.isRequired,
     selectedLyricColumnIndex: PropTypes.number.isRequired,
@@ -307,7 +301,7 @@ LiveManager.propTypes = {
 }
 
 export default connect(({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }))(LiveManager)
