@@ -29,6 +29,7 @@ class DomManager extends Component {
                     'selectedAdminIndex',
                     'selectedAnnotationIndex',
                     'selectedCarouselIndex',
+                    'selectedDotKeys',
                     'selectedDotsIndex',
                     'selectedLyricColumnIndex',
                     'selectedNavIndex',
@@ -51,7 +52,8 @@ class DomManager extends Component {
                 ]
             })
 
-        return componentShouldUpdate
+        // FIXME: Not sure why this is not updating singleShownLyricColumnKey.
+        return componentShouldUpdate || true
     }
 
     render() {
@@ -61,6 +63,7 @@ class DomManager extends Component {
                 selectedAdminIndex,
                 selectedAnnotationIndex,
                 selectedCarouselIndex,
+                selectedDotKeys,
                 selectedDotsIndex,
                 selectedLyricColumnIndex,
                 selectedNavIndex,
@@ -125,7 +128,7 @@ class DomManager extends Component {
                 className={classnames(
                     'dom-manager',
                     deviceClassName,
-
+                    selectedDotKeys,
                     selectedAdminIndex ? 'is-admin-view' : 'is-live-view',
                     selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
                     selectedCarouselIndex ? 'carousel-expanded' : 'carousel-collapsed',
@@ -142,8 +145,8 @@ class DomManager extends Component {
                     showOverlay ? 'overlay-shown' : 'overlay-hidden',
 
                     isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
-                    singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
                     showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
+                    singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
 
                     { 'accessed-on': selectedAccessIndex,
                       'heightless-lyric': isHeightlessLyricColumn,
@@ -184,6 +187,7 @@ DomManager.propTypes = {
     selectedAdminIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselIndex: PropTypes.number.isRequired,
+    selectedDotKeys: PropTypes.object.isRequired,
     selectedDotsIndex: PropTypes.number.isRequired,
     selectedLyricColumnIndex: PropTypes.number.isRequired,
     selectedNavIndex: PropTypes.number.isRequired,
@@ -215,7 +219,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }))(DomManager)

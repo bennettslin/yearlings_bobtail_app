@@ -2,14 +2,14 @@
  * CAROUSEL *
  ************/
 
-.live-manager.narrative .carousel-annotation.narrative,
-.live-manager.backstory .carousel-annotation.backstory,
-.live-manager.observation .carousel-annotation.observation,
-.live-manager.pun .carousel-annotation.pun,
-.live-manager.reference .carousel-annotation.reference,
-.live-manager.songwriting .carousel-annotation.songwriting,
-.live-manager.portal .carousel-annotation.portal,
-.live-manager.afterword .carousel-annotation.afterword {
+.dom-manager.narrative .carousel-annotation.narrative,
+.dom-manager.backstory .carousel-annotation.backstory,
+.dom-manager.observation .carousel-annotation.observation,
+.dom-manager.pun .carousel-annotation.pun,
+.dom-manager.reference .carousel-annotation.reference,
+.dom-manager.songwriting .carousel-annotation.songwriting,
+.dom-manager.portal .carousel-annotation.portal,
+.dom-manager.afterword .carousel-annotation.afterword {
 
     // min-width: @annotation-card-width + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
     min-width: @annotation-card-width + @annotation-card-padding * 2 + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
@@ -21,27 +21,27 @@
     }
 }
 
-.mini-width .live-manager.narrative .carousel-annotation.narrative,
-.mini-width .live-manager.backstory .carousel-annotation.backstory,
-.mini-width .live-manager.observation .carousel-annotation.observation,
-.mini-width .live-manager.pun .carousel-annotation.pun,
-.mini-width .live-manager.reference .carousel-annotation.reference,
-.mini-width .live-manager.songwriting .carousel-annotation.songwriting,
-.mini-width .live-manager.portal .carousel-annotation.portal,
-.mini-width .live-manager.afterword .carousel-annotation.afterword {
+.dom-manager.mini-width.narrative .carousel-annotation.narrative,
+.dom-manager.mini-width.backstory .carousel-annotation.backstory,
+.dom-manager.mini-width.observation .carousel-annotation.observation,
+.dom-manager.mini-width.pun .carousel-annotation.pun,
+.dom-manager.mini-width.reference .carousel-annotation.reference,
+.dom-manager.mini-width.songwriting .carousel-annotation.songwriting,
+.dom-manager.mini-width.portal .carousel-annotation.portal,
+.dom-manager.mini-width.afterword .carousel-annotation.afterword {
 
     // min-width: @annotation-card-width + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
     min-width: @annotation-card-mini-width + @annotation-card-padding * 2 + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
 }
 
-.live-manager.narrative .annotation-card.narrative,
-.live-manager.backstory .annotation-card.backstory,
-.live-manager.observation .annotation-card.observation,
-.live-manager.pun .annotation-card.pun,
-.live-manager.reference .annotation-card.reference,
-.live-manager.songwriting .annotation-card.songwriting,
-.live-manager.portal .annotation-card.portal,
-.live-manager.afterword .annotation-card.afterword {
+.dom-manager.narrative .annotation-card.narrative,
+.dom-manager.backstory .annotation-card.backstory,
+.dom-manager.observation .annotation-card.observation,
+.dom-manager.pun .annotation-card.pun,
+.dom-manager.reference .annotation-card.reference,
+.dom-manager.songwriting .annotation-card.songwriting,
+.dom-manager.portal .annotation-card.portal,
+.dom-manager.afterword .annotation-card.afterword {
 
     min-height: @annotation-dot-diameter;
     max-height: 500px; // Arbitrary large number.
@@ -58,14 +58,14 @@
  * DOT STANZAS *
  ***************/
 
-.live-manager.narrative .dot-stanza.narrative,
-.live-manager.backstory .dot-stanza.backstory,
-.live-manager.observation .dot-stanza.observation,
-.live-manager.pun .dot-stanza.pun,
-.live-manager.reference .dot-stanza.reference,
-.live-manager.songwriting .dot-stanza.songwriting,
-.live-manager.portal .dot-stanza.portal,
-.live-manager.afterword .dot-stanza.afterword {
+.dom-manager.narrative .dot-stanza.narrative,
+.dom-manager.backstory .dot-stanza.backstory,
+.dom-manager.observation .dot-stanza.observation,
+.dom-manager.pun .dot-stanza.pun,
+.dom-manager.reference .dot-stanza.reference,
+.dom-manager.songwriting .dot-stanza.songwriting,
+.dom-manager.portal .dot-stanza.portal,
+.dom-manager.afterword .dot-stanza.afterword {
 
     max-width: 720px;
     margin-top: @lyric-unit-margin;
@@ -84,14 +84,14 @@
  * DOTS *
  ********/
 
-.live-manager.narrative .animated-background.narrative,
-.live-manager.backstory .animated-background.backstory,
-.live-manager.observation .animated-background.observation,
-.live-manager.pun .animated-background.pun,
-.live-manager.reference .animated-background.reference,
-.live-manager.songwriting .animated-background.songwriting,
-.live-manager.portal .animated-background.portal,
-.live-manager.afterword .animated-background.afterword {
+.dom-manager.narrative .animated-background.narrative,
+.dom-manager.backstory .animated-background.backstory,
+.dom-manager.observation .animated-background.observation,
+.dom-manager.pun .animated-background.pun,
+.dom-manager.reference .animated-background.reference,
+.dom-manager.songwriting .animated-background.songwriting,
+.dom-manager.portal .animated-background.portal,
+.dom-manager.afterword .animated-background.afterword {
 
     transform: scale(1);
     border: @dot-border solid @dot-border-colour;
@@ -111,36 +111,36 @@
     }
 }
 
-.live-manager.narrative .text-anchor-block .animated-background.narrative,
-.live-manager.backstory .text-anchor-block .animated-background.backstory,
-.live-manager.observation .text-anchor-block .animated-background.observation,
-.live-manager.pun .text-anchor-block .animated-background.pun,
-.live-manager.reference .text-anchor-block .animated-background.reference,
-.live-manager.songwriting .text-anchor-block .animated-background.songwriting,
-.live-manager.portal .text-anchor-block .animated-background.portal,
-.live-manager.afterword .text-anchor-block .animated-background.afterword {
+.dom-manager.narrative .text-anchor-block .animated-background.narrative,
+.dom-manager.backstory .text-anchor-block .animated-background.backstory,
+.dom-manager.observation .text-anchor-block .animated-background.observation,
+.dom-manager.pun .text-anchor-block .animated-background.pun,
+.dom-manager.reference .text-anchor-block .animated-background.reference,
+.dom-manager.songwriting .text-anchor-block .animated-background.songwriting,
+.dom-manager.portal .text-anchor-block .animated-background.portal,
+.dom-manager.afterword .text-anchor-block .animated-background.afterword {
     border: @dot-border solid @lyric-underline-enabled-colour;
 }
 
-.live-manager.narrative .text-anchor-block:hover .animated-background.narrative,
-.live-manager.backstory .text-anchor-block:hover .animated-background.backstory,
-.live-manager.observation .text-anchor-block:hover .animated-background.observation,
-.live-manager.pun .text-anchor-block:hover .animated-background.pun,
-.live-manager.reference .text-anchor-block:hover .animated-background.reference,
-.live-manager.songwriting .text-anchor-block:hover .animated-background.songwriting,
-.live-manager.portal .text-anchor-block:hover .animated-background.portal,
-.live-manager.afterword .text-anchor-block:hover .animated-background.afterword {
+.dom-manager.narrative .text-anchor-block:hover .animated-background.narrative,
+.dom-manager.backstory .text-anchor-block:hover .animated-background.backstory,
+.dom-manager.observation .text-anchor-block:hover .animated-background.observation,
+.dom-manager.pun .text-anchor-block:hover .animated-background.pun,
+.dom-manager.reference .text-anchor-block:hover .animated-background.reference,
+.dom-manager.songwriting .text-anchor-block:hover .animated-background.songwriting,
+.dom-manager.portal .text-anchor-block:hover .animated-background.portal,
+.dom-manager.afterword .text-anchor-block:hover .animated-background.afterword {
     animation: bounceHover @animation-slow;
 }
 
-.live-manager.narrative .text-anchor-block:active .animated-background.narrative,
-.live-manager.backstory .text-anchor-block:active .animated-background.backstory,
-.live-manager.observation .text-anchor-block:active .animated-background.observation,
-.live-manager.pun .text-anchor-block:active .animated-background.pun,
-.live-manager.reference .text-anchor-block:active .animated-background.reference,
-.live-manager.songwriting .text-anchor-block:active .animated-background.songwriting,
-.live-manager.portal .text-anchor-block:active .animated-background.portal,
-.live-manager.afterword .text-anchor-block:active .animated-background.afterword {
+.dom-manager.narrative .text-anchor-block:active .animated-background.narrative,
+.dom-manager.backstory .text-anchor-block:active .animated-background.backstory,
+.dom-manager.observation .text-anchor-block:active .animated-background.observation,
+.dom-manager.pun .text-anchor-block:active .animated-background.pun,
+.dom-manager.reference .text-anchor-block:active .animated-background.reference,
+.dom-manager.songwriting .text-anchor-block:active .animated-background.songwriting,
+.dom-manager.portal .text-anchor-block:active .animated-background.portal,
+.dom-manager.afterword .text-anchor-block:active .animated-background.afterword {
     transform: scale(0.75);
 }
 
@@ -149,28 +149,28 @@
  ***************/
 
 // This is the one source of truth for how dot anchors are ordered!
-.live-manager.portal .dot-anchor:not(.selected) .animated-background.portal {
+.dom-manager.portal .dot-anchor:not(.selected) .animated-background.portal {
     background-color: @portal-dot-colour;
 }
-.live-manager.observation .dot-anchor:not(.selected) .animated-background.observation {
+.dom-manager.observation .dot-anchor:not(.selected) .animated-background.observation {
     background-color: @observation-dot-colour;
 }
-.live-manager.backstory .dot-anchor:not(.selected) .animated-background.backstory {
+.dom-manager.backstory .dot-anchor:not(.selected) .animated-background.backstory {
     background-color: @backstory-dot-colour;
 }
-.live-manager.reference .dot-anchor:not(.selected) .animated-background.reference {
+.dom-manager.reference .dot-anchor:not(.selected) .animated-background.reference {
     background-color: @reference-dot-colour;
 }
-.live-manager.pun .dot-anchor:not(.selected) .animated-background.pun {
+.dom-manager.pun .dot-anchor:not(.selected) .animated-background.pun {
     background-color: @pun-dot-colour;
 }
-.live-manager.narrative .dot-anchor:not(.selected) .animated-background.narrative {
+.dom-manager.narrative .dot-anchor:not(.selected) .animated-background.narrative {
     background-color: @narrative-dot-colour;
 }
-.live-manager.songwriting .dot-anchor:not(.selected) .animated-background.songwriting {
+.dom-manager.songwriting .dot-anchor:not(.selected) .animated-background.songwriting {
     background-color: @songwriting-dot-colour;
 }
-.live-manager.afterword .dot-anchor:not(.selected) .animated-background.afterword {
+.dom-manager.afterword .dot-anchor:not(.selected) .animated-background.afterword {
     background-color: @afterword-dot-colour;
 }
 
@@ -178,14 +178,14 @@
  * ANCHOR BLOCKS *
  *****************/
 
-.live-manager.narrative .anchor-block.narrative,
-.live-manager.backstory .anchor-block.backstory,
-.live-manager.observation .anchor-block.observation,
-.live-manager.pun .anchor-block.pun,
-.live-manager.reference .anchor-block.reference,
-.live-manager.songwriting .anchor-block.songwriting,
-.live-manager.portal .anchor-block.portal,
-.live-manager.afterword .anchor-block.afterword,
+.dom-manager.narrative .anchor-block.narrative,
+.dom-manager.backstory .anchor-block.backstory,
+.dom-manager.observation .anchor-block.observation,
+.dom-manager.pun .anchor-block.pun,
+.dom-manager.reference .anchor-block.reference,
+.dom-manager.songwriting .anchor-block.songwriting,
+.dom-manager.portal .anchor-block.portal,
+.dom-manager.afterword .anchor-block.afterword,
 
 .anchor-block.in-dots-section {
 

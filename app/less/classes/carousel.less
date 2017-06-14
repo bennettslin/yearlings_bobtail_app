@@ -153,11 +153,11 @@
 }
 
 /**
- * Override if hidden by single lyric column. Must be specific to override
- * styles for mini width as well.
+ * Override if hidden by single lyric column. Using specific selectors to
+ * override styles for mini width as well.
  */
-.show-only-right .carousel-annotation.in-column-left,
-.show-only-left .carousel-annotation.in-column-right {
+.dom-manager.is-song.show-only-right .carousel-annotation.in-column-left,
+.dom-manager.is-song.show-only-left .carousel-annotation.in-column-right {
     min-width: @carousel-annotation-hidden-padding;
 
     .annotation-title-block {

@@ -1,5 +1,9 @@
 module.exports = [
-
+    {
+        taskName: `Figure out why shouldComponentUpdate is broken in dom manager.`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Organise dom and live manager better.`,
         workedHours: 0,
@@ -2255,6 +2259,16 @@ module.exports = [
     },
     {
         taskName: `Centre lyrics bugs.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Begin refactoring dom and live managers.`,
+        workedHours: 6,
+        neededHours: 6
+    },
+    {
+        taskName: `Carousel annotation hiding mechanism is broken because of changed column key, and possibly moved classes.`,
         workedHours: 1,
         neededHours: 1
     }

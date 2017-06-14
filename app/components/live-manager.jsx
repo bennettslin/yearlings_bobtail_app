@@ -24,7 +24,6 @@ const LiveManager = ({
     deviceIndex,
     overviewLogueIndex,
     overviewSongIndex,
-    selectedDotKeys,
     isLyricExpanded,
 
     lyricSectionRef,
@@ -191,8 +190,7 @@ const LiveManager = ({
     return (
         <div className={classnames(
             'live-manager',
-            isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
-            selectedDotKeys
+            isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation'
         )}>
             <div className="column overview-logue-column">
                 <OverviewPopup {...overviewPopupProps}
@@ -238,7 +236,6 @@ LiveManager.propTypes = {
     deviceIndex: PropTypes.number.isRequired,
     overviewLogueIndex: PropTypes.number.isRequired,
     overviewSongIndex: PropTypes.number.isRequired,
-    selectedDotKeys: PropTypes.object.isRequired,
 
     isLyricExpanded: PropTypes.bool.isRequired,
 
@@ -285,7 +282,7 @@ LiveManager.propTypes = {
 }
 
 export default connect(({
-    selectedDotKeys, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }) => ({
-    selectedDotKeys, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }))(LiveManager)

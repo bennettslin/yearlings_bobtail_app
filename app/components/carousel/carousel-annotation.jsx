@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import AnnotationSection from '../annotation/annotation-section'
+import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 import { getAnnotationObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
@@ -49,14 +50,18 @@ class CarouselAnnotation extends Component {
         const { selectedSongIndex,
                 annotationIndex } = this.props,
 
-            annotationObject = getAnnotationObject(selectedSongIndex, annotationIndex)
+            annotationObject = getAnnotationObject(selectedSongIndex, annotationIndex),
+            { columnIndex,
+              dotKeys } = annotationObject,
+
+            columnKey = !isNaN(columnIndex) ? LYRIC_COLUMN_KEYS[columnIndex] : ''
 
         return (
             <CarouselAnnotationView {...this.props}
                 handleTitleClick={this._handleAnnotationTitleClick}
                 annotationObject={annotationObject}
-                annotationColumn={annotationObject.column}
-                annotationDotKeys={annotationObject.dotKeys}
+                annotationColumn={columnKey}
+                annotationDotKeys={dotKeys}
             />
         )
     }
@@ -104,7 +109,7 @@ const CarouselAnnotationView = ({
 CarouselAnnotationView.propTypes = {
     // From parent.
     annotationIndex: PropTypes.number.isRequired,
-    annotationColumn: PropTypes.string,
+    annotationColumn: PropTypes.string.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
 }

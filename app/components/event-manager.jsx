@@ -886,7 +886,10 @@ class EventManager extends Component {
         const { domState } = this.props
 
         return (
+            // TODO: What is in domState at this point?
             <AccessManager {...domState}
+
+                // TODO: Don't do this.
                 isLogue={this.props.isLogue}
 
                 domManagerRef={node => this.myDomManager = node}
