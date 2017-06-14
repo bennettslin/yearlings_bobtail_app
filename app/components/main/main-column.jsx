@@ -14,8 +14,6 @@ import { getIsPhone, getIsDesktop } from '../../helpers/responsive-helper'
 const MainColumn = ({
 
     // From props.
-    isOverlayingAnnotation,
-
     deviceIndex,
     isScoresTipsInMain,
 
@@ -56,13 +54,11 @@ const MainColumn = ({
             <MenuField {...menuFieldProps} />
             <div className="field centre-field">
 
-                {!isOverlayingAnnotation &&
-                    <div className="field popup-field">
-                        <div className="subfield annotation-subfield">
-                            {annotationPopupChild}
-                        </div>
+                <div className="field popup-field">
+                    <div className="subfield annotation-subfield">
+                        {annotationPopupChild}
                     </div>
-                }
+                </div>
 
                 <div className="subfield dots-overview-subfield">
                     <CarouselSection {...carouselSectionProps} />
@@ -107,8 +103,6 @@ MainColumn.propTypes = {
     isScoresTipsInMain: PropTypes.bool.isRequired,
 
     // From parent.
-    isOverlayingAnnotation: PropTypes.bool.isRequired,
-
     handleCarouselToggle: PropTypes.func.isRequired,
     handleDotsSectionToggle: PropTypes.func.isRequired,
     handleLyricSectionExpand: PropTypes.func.isRequired,

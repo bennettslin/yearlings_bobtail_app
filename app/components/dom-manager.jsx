@@ -12,7 +12,7 @@ import { SHOWN,
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongIsLogue } from '../helpers/data-helper'
 import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logic-helper'
-import { getIsDesktop } from '../helpers/responsive-helper'
+import { getIsDesktop, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../helpers/general-helper'
 
 class DomManager extends Component {
@@ -102,6 +102,11 @@ class DomManager extends Component {
 
             isLogue = getSongIsLogue(selectedSongIndex),
 
+            isOverlayingAnnotation = getIsOverlayingAnnotation({
+                    deviceIndex,
+                    isLyricExpanded
+                }),
+
             singleShownLyricColumnKey = getSingleShownLyricColumnKey({
                 showOneOfTwoLyricColumns,
                 selectedLyricColumnIndex
@@ -143,6 +148,7 @@ class DomManager extends Component {
                     interactivatedVerseIndex < 0 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
 
                     showOverlay ? 'overlay-shown' : 'overlay-hidden',
+                    isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
 
                     isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
                     showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',

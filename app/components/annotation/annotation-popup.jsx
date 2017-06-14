@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import AnnotationSection from './annotation-section'
 import Popup from '../popup/popup'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getIsOverlayingAnnotation } from '../../helpers/responsive-helper'
 
 class AnnotationPopup extends Component {
 
@@ -15,6 +16,8 @@ class AnnotationPopup extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
+                    'deviceIndex',
+                    'isLyricExpanded',
                     'selectedAnnotationIndex',
                     'selectedCarouselIndex',
                     'selectedScoreIndex',
@@ -27,48 +30,71 @@ class AnnotationPopup extends Component {
     }
 
     render() {
-        const { selectedAnnotationIndex,
-                selectedCarouselIndex,
-                selectedScoreIndex,
-                selectedTitleIndex,
-                selectedWikiIndex,
 
-                handleAnnotationPrevious,
-                handleAnnotationNext,
-                handlePopupContainerClick,
-
+        const { deviceIndex,
+                isLyricExpanded,
+                isOverlayAnnotation,
                 ...other } = this.props,
 
-            isVisible = !!selectedAnnotationIndex &&
-                        !selectedCarouselIndex &&
-                        !selectedScoreIndex &&
-                        !selectedTitleIndex &&
-                        !selectedWikiIndex,
+            isOverlayingAnnotation = getIsOverlayingAnnotation({
+                deviceIndex,
+                isLyricExpanded
+            })
 
-            /**
-             * Pass annotation object from state so that it persists while
-             * popup is fading out.
-             */
-            myChild = (
-                <AnnotationSection {...other} />
+        /**
+         * Annotation popup is told whether it is in overlay. It then checks
+         * data helper to decide whether to render itself.
+         */
+        if (isOverlayAnnotation !== isOverlayingAnnotation) {
+            return null
+
+        } else {
+            const { selectedAnnotationIndex,
+                    selectedCarouselIndex,
+                    selectedScoreIndex,
+                    selectedTitleIndex,
+                    selectedWikiIndex,
+
+                    handleAnnotationPrevious,
+                    handleAnnotationNext,
+                    handlePopupContainerClick,
+
+                    ...childOther } = other,
+
+                isVisible = !!selectedAnnotationIndex &&
+                            !selectedCarouselIndex &&
+                            !selectedScoreIndex &&
+                            !selectedTitleIndex &&
+                            !selectedWikiIndex,
+
+                /**
+                 * Pass annotation object from state so that it persists while
+                 * popup is fading out.
+                 */
+                myChild = (
+                    <AnnotationSection {...childOther} />
+                )
+
+            return (
+                <Popup
+                    isVisible={isVisible}
+                    popupClassName="annotation"
+                    showArrows={true}
+                    handlePreviousClick={handleAnnotationPrevious}
+                    handleNextClick={handleAnnotationNext}
+                    handlePopupContainerClick={handlePopupContainerClick}
+                    myChild={myChild}
+                />
             )
-
-        return (
-            <Popup
-                isVisible={isVisible}
-                popupClassName="annotation"
-                showArrows={true}
-                handlePreviousClick={handleAnnotationPrevious}
-                handleNextClick={handleAnnotationNext}
-                handlePopupContainerClick={handlePopupContainerClick}
-                myChild={myChild}
-            />
-        )
+        }
     }
 }
 
 AnnotationPopup.propTypes = {
     // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    isLyricExpanded: PropTypes.bool.isRequired,
+
     annotationObject: PropTypes.object,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselIndex: PropTypes.number.isRequired,
@@ -77,12 +103,15 @@ AnnotationPopup.propTypes = {
     selectedWikiIndex: PropTypes.number.isRequired,
 
     // From parent.
+    isOverlayAnnotation: PropTypes.bool.isRequired,
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 
 export default connect(({
+    deviceIndex,
+    isLyricExpanded,
     annotationObject,
     selectedAnnotationIndex,
     selectedCarouselIndex,
@@ -90,6 +119,8 @@ export default connect(({
     selectedTitleIndex,
     selectedWikiIndex
 }) => ({
+    deviceIndex,
+    isLyricExpanded,
     annotationObject,
     selectedAnnotationIndex,
     selectedCarouselIndex,

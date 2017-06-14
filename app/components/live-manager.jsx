@@ -17,14 +17,11 @@ import AnnotationPopup from './annotation/annotation-popup'
 import ScorePopup from './score/score-popup'
 import TitlePopup from './title/title-popup'
 import WikiPopup from './wiki/wiki-popup'
-import { getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
 const LiveManager = ({
 
-    deviceIndex,
     overviewLogueIndex,
     overviewSongIndex,
-    isLyricExpanded,
 
     lyricSectionRef,
     scoreSectionRef,
@@ -70,12 +67,6 @@ const LiveManager = ({
 }) => {
 
     const
-
-        isOverlayingAnnotation = getIsOverlayingAnnotation({
-            deviceIndex,
-            isLyricExpanded
-        }),
-
         titleToggleChild = (
             <TitleToggle
                 handleTitleToggle={handleTitleToggle}
@@ -132,8 +123,6 @@ const LiveManager = ({
         },
 
         mainColumnProps = {
-            isOverlayingAnnotation,
-
             handleCarouselToggle,
             handleDotsSectionToggle,
             handleLyricSectionExpand,
@@ -189,8 +178,7 @@ const LiveManager = ({
 
     return (
         <div className={classnames(
-            'live-manager',
-            isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation'
+            'live-manager'
         )}>
             <div className="column overview-logue-column">
                 <OverviewPopup {...overviewPopupProps}
@@ -199,7 +187,11 @@ const LiveManager = ({
                 />
             </div>
             <MainColumn {...mainColumnProps}
-                annotationPopupChild={ <AnnotationPopup {...annotationPopupProps} /> }
+                annotationPopupChild={
+                    <AnnotationPopup {...annotationPopupProps}
+                        isOverlayAnnotation={false}
+                    />
+                }
                 dotsSectionChild={ <DotsSection {...dotsSectionProps} /> }
                 overviewPopupChild={
                     <OverviewPopup {...overviewPopupProps}
@@ -218,9 +210,9 @@ const LiveManager = ({
                         <AudioPopup {...audioSectionProps} />
                     </div>
                     <div className="overlay-popup-block main-popup-block">
-                        {isOverlayingAnnotation &&
-                            <AnnotationPopup {...annotationPopupProps} />
-                        }
+                        <AnnotationPopup {...annotationPopupProps}
+                            isOverlayAnnotation={true}
+                        />
                         <TitlePopup {...titlePopupProps} />
                         <ScorePopup {...scorePopupProps} />
                         <WikiPopup {...wikiPopupProps} />
@@ -233,11 +225,8 @@ const LiveManager = ({
 
 LiveManager.propTypes = {
     // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
     overviewLogueIndex: PropTypes.number.isRequired,
     overviewSongIndex: PropTypes.number.isRequired,
-
-    isLyricExpanded: PropTypes.bool.isRequired,
 
     // From parent.
     lyricSectionRef: PropTypes.func.isRequired,
@@ -282,7 +271,7 @@ LiveManager.propTypes = {
 }
 
 export default connect(({
-    annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    annotationObject, overviewLogueIndex, overviewSongIndex
 }) => ({
-    annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    annotationObject, overviewLogueIndex, overviewSongIndex
 }))(LiveManager)
