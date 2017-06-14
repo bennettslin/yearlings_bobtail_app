@@ -32,7 +32,10 @@ class DomManager extends Component {
                     'selectedTitleIndex',
                     'selectedWikiIndex',
                     'isPlaying',
-                    'isSliderMoving'
+                    'isSliderMoving',
+
+                    'isVerseBarAbove',
+                    'isVerseBarBelow'
                 ]
             })
 
@@ -52,6 +55,9 @@ class DomManager extends Component {
                 selectedWikiIndex,
                 isPlaying,
                 isSliderMoving,
+
+                isVerseBarAbove,
+                isVerseBarBelow,
 
                 handleBodyClick,
                 handleBodyTouchBegin,
@@ -104,7 +110,10 @@ class DomManager extends Component {
 
                     isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
 
-                    { 'accessed-on': selectedAccessIndex }
+                    { 'accessed-on': selectedAccessIndex,
+                      'verse-bar-above': isVerseBarAbove,
+                      'verse-bar-below': isVerseBarBelow,
+                      'verse-bar-hidden': !isVerseBarAbove && !isVerseBarBelow }
                 )}
                 onClick={handleBodyClick}
                 onMouseDown={handleBodyTouchBegin}
@@ -141,6 +150,9 @@ DomManager.propTypes = {
     selectedTitleIndex: PropTypes.number.isRequired,
     selectedWikiIndex: PropTypes.number.isRequired,
 
+    isVerseBarAbove: PropTypes.bool.isRequired,
+    isVerseBarBelow: PropTypes.bool.isRequired,
+
     // From parent.
     handleBodyClick: PropTypes.func.isRequired,
     handleBodyTouchBegin: PropTypes.func.isRequired,
@@ -154,7 +166,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isVerseBarAbove, isVerseBarBelow
 }))(DomManager)
