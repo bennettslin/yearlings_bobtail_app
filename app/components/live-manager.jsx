@@ -39,7 +39,6 @@ const LiveManager = ({
     isLyricExpanded,
     showShrunkNavIcon,
     isScoresTipsInMain,
-    isTitleInAudio,
 
     lyricSectionRef,
     scoreSectionRef,
@@ -215,7 +214,7 @@ const LiveManager = ({
             selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
             showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
-            { 'title-in-audio': isTitleInAudio,
+            {
               'overview-shown': OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
               'scores-tips-in-main': isScoresTipsInMain },
             selectedDotKeys
@@ -276,7 +275,6 @@ LiveManager.propTypes = {
     isLyricExpanded: PropTypes.bool.isRequired,
     showShrunkNavIcon: PropTypes.bool.isRequired,
     isScoresTipsInMain: PropTypes.bool.isRequired,
-    isTitleInAudio: PropTypes.bool.isRequired,
 
     // From parent.
     lyricSectionRef: PropTypes.func.isRequired,
@@ -321,7 +319,7 @@ LiveManager.propTypes = {
 }
 
 export default connect(({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, isScoresTipsInMain, showOneOfTwoLyricColumns, showShrunkNavIcon, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, isScoresTipsInMain, showOneOfTwoLyricColumns, showShrunkNavIcon, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }))(LiveManager)
