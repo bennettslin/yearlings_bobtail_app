@@ -13,10 +13,10 @@
     .selected-annotation .annotation-card,
 
     // ... in carousel title only when...
-    .dots-section-hidden.is-not-verse-interactivated .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
+    &.is-not-verse-interactivated .dots-section-hidden .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
 
     // ... in lyrics only when...
-    .dots-section-hidden.nav-collapsed.is-not-verse-interactivated .lyric-section {
+    &.is-not-verse-interactivated .dots-section-hidden.nav-collapsed .lyric-section {
 
         .access-highlighted {
 
@@ -69,7 +69,7 @@
         }
     }
 
-    .annotation-hidden.dots-section-hidden.is-not-verse-interactivated {
+    &.is-not-verse-interactivated .annotation-hidden.dots-section-hidden {
 
         // Lyrics annotation is accessed.
         .lyric-section {
@@ -78,7 +78,7 @@
     }
 
     // Interactivated verse is accessed.
-    .is-verse-interactivated {
+    &.is-verse-interactivated {
         .lyric-section {
             .verse.interactivated {
                 background-color: @access-underline-colour;

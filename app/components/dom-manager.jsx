@@ -23,6 +23,7 @@ class DomManager extends Component {
                 updatingPropsArray: [
                     'deviceIndex',
                     'isLyricExpanded',
+                    'interactivatedVerseIndex',
                     'selectedAccessIndex',
                     'selectedAdminIndex',
                     'selectedAnnotationIndex',
@@ -41,6 +42,7 @@ class DomManager extends Component {
     render() {
         const { deviceIndex,
                 isLyricExpanded,
+                interactivatedVerseIndex,
                 selectedAccessIndex,
                 selectedAdminIndex,
                 selectedAnnotationIndex,
@@ -96,10 +98,12 @@ class DomManager extends Component {
 
                     isPlaying ? 'is-playing' : 'is-paused',
                     isSliderMoving ? 'slider-moving' : 'slider-not-moving',
+                    interactivatedVerseIndex < 0 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
 
                     showOverlay ? 'overlay-shown' : 'overlay-hidden',
 
                     isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
+
                     { 'accessed-on': selectedAccessIndex }
                 )}
                 onClick={handleBodyClick}
@@ -128,6 +132,7 @@ DomManager.propTypes = {
     isPlaying: PropTypes.bool.isRequired,
     isSliderMoving: PropTypes.bool.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
+    interactivatedVerseIndex: PropTypes.number.isRequired,
     selectedAccessIndex: PropTypes.number.isRequired,
     selectedAdminIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -149,7 +154,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving
 }) => ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving
 }))(DomManager)
