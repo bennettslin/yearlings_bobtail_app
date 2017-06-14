@@ -13,10 +13,10 @@
     .selected-annotation .annotation-card,
 
     // ... in carousel title only when...
-    &.is-not-verse-interactivated .dots-section-hidden .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
+    &.is-not-verse-interactivated.dots-section-hidden .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
 
     // ... in lyrics only when...
-    &.is-not-verse-interactivated .dots-section-hidden.nav-collapsed .lyric-section {
+    &.is-not-verse-interactivated.dots-section-hidden.nav-collapsed .lyric-section {
 
         .access-highlighted {
 
@@ -59,7 +59,7 @@
     }
 
     // Nav buttons in nav section.
-    .nav-expanded {
+    &.nav-expanded {
         .nav-section {
             .access-highlighted {
                 .animated-background {
@@ -69,7 +69,7 @@
         }
     }
 
-    &.is-not-verse-interactivated.annotation-hidden .dots-section-hidden {
+    &.is-not-verse-interactivated.annotation-hidden.dots-section-hidden {
 
         // Lyrics annotation is accessed.
         .lyric-section {
@@ -87,7 +87,7 @@
     }
 
     // Dots section is accessed.
-    .dots-section-shown.nav-collapsed {
+    &.dots-section-shown.nav-collapsed {
         .dots-section {
             // background-color: @temp-access-background;
 

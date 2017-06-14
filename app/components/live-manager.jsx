@@ -26,9 +26,7 @@ const LiveManager = ({
     overviewLogueIndex,
     overviewSongIndex,
     selectedDotKeys,
-    selectedDotsIndex,
     selectedLyricColumnIndex,
-    selectedNavIndex,
 
     showOneOfTwoLyricColumns,
     isLyricExpanded,
@@ -202,8 +200,6 @@ const LiveManager = ({
             'live-manager',
             isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
             singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
-            selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
-            selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
             selectedDotKeys
         )}>
             <div className="column overview-logue-column">
@@ -251,9 +247,7 @@ LiveManager.propTypes = {
     overviewLogueIndex: PropTypes.number.isRequired,
     overviewSongIndex: PropTypes.number.isRequired,
     selectedDotKeys: PropTypes.object.isRequired,
-    selectedDotsIndex: PropTypes.number.isRequired,
     selectedLyricColumnIndex: PropTypes.number.isRequired,
-    selectedNavIndex: PropTypes.number.isRequired,
 
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
@@ -301,7 +295,7 @@ LiveManager.propTypes = {
 }
 
 export default connect(({
-    selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedDotKeys, selectedLyricColumnIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }) => ({
-    selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedDotKeys, selectedLyricColumnIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }))(LiveManager)
