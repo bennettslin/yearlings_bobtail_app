@@ -34,7 +34,6 @@ const LiveManager = ({
 
     showOneOfTwoLyricColumns,
     isLyricExpanded,
-    showShrunkNavIcon,
 
     lyricSectionRef,
     scoreSectionRef,
@@ -209,7 +208,6 @@ const LiveManager = ({
             selectedCarouselIndex ? 'carousel-expanded' : 'carousel-collapsed',
             selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
-            showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
             selectedDotKeys
         )}>
             <div className="column overview-logue-column">
@@ -265,7 +263,6 @@ LiveManager.propTypes = {
 
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
-    showShrunkNavIcon: PropTypes.bool.isRequired,
 
     // From parent.
     lyricSectionRef: PropTypes.func.isRequired,
@@ -310,7 +307,7 @@ LiveManager.propTypes = {
 }
 
 export default connect(({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, showShrunkNavIcon, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, showShrunkNavIcon, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }))(LiveManager)

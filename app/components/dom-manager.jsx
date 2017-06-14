@@ -38,6 +38,7 @@ class DomManager extends Component {
                     'isSliderMoving',
 
                     'isHeightlessLyricColumn',
+                    'showShrunkNavIcon',
                     'isScoresTipsInMain',
                     'isTitleInAudio',
                     'isVerseBarAbove',
@@ -64,6 +65,7 @@ class DomManager extends Component {
                 isSliderMoving,
 
                 isHeightlessLyricColumn,
+                showShrunkNavIcon,
                 isScoresTipsInMain,
                 isTitleInAudio,
                 isVerseBarAbove,
@@ -119,6 +121,7 @@ class DomManager extends Component {
                     showOverlay ? 'overlay-shown' : 'overlay-hidden',
 
                     isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
+                    showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
 
                     { 'accessed-on': selectedAccessIndex,
                       'heightless-lyric': isHeightlessLyricColumn,
@@ -166,6 +169,7 @@ DomManager.propTypes = {
     selectedWikiIndex: PropTypes.number.isRequired,
 
     isHeightlessLyricColumn: PropTypes.bool.isRequired,
+    showShrunkNavIcon: PropTypes.bool.isRequired,
     isScoresTipsInMain: PropTypes.bool.isRequired,
     isTitleInAudio: PropTypes.bool.isRequired,
     isVerseBarAbove: PropTypes.bool.isRequired,
@@ -184,7 +188,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }))(DomManager)
