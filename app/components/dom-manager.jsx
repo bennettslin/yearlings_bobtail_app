@@ -11,7 +11,7 @@ import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongIsLogue } from '../helpers/data-helper'
-import { getShowOverlay } from '../helpers/logic-helper'
+import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logic-helper'
 import { getIsDesktop } from '../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../helpers/general-helper'
 
@@ -24,13 +24,13 @@ class DomManager extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'deviceIndex',
-                    'isLyricExpanded',
                     'interactivatedVerseIndex',
                     'selectedAccessIndex',
                     'selectedAdminIndex',
                     'selectedAnnotationIndex',
                     'selectedCarouselIndex',
                     'selectedDotsIndex',
+                    'selectedLyricColumnIndex',
                     'selectedNavIndex',
                     'selectedOverviewIndex',
                     'selectedScoreIndex',
@@ -40,6 +40,8 @@ class DomManager extends Component {
                     'isPlaying',
                     'isSliderMoving',
 
+                    'isLyricExpanded',
+                    'showOneOfTwoLyricColumns',
                     'isHeightlessLyricColumn',
                     'showShrunkNavIcon',
                     'isScoresTipsInMain',
@@ -54,13 +56,13 @@ class DomManager extends Component {
 
     render() {
         const { deviceIndex,
-                isLyricExpanded,
                 interactivatedVerseIndex,
                 selectedAccessIndex,
                 selectedAdminIndex,
                 selectedAnnotationIndex,
                 selectedCarouselIndex,
                 selectedDotsIndex,
+                selectedLyricColumnIndex,
                 selectedNavIndex,
                 selectedOverviewIndex,
                 selectedScoreIndex,
@@ -70,6 +72,8 @@ class DomManager extends Component {
                 isPlaying,
                 isSliderMoving,
 
+                isLyricExpanded,
+                showOneOfTwoLyricColumns,
                 isHeightlessLyricColumn,
                 showShrunkNavIcon,
                 isScoresTipsInMain,
@@ -94,6 +98,11 @@ class DomManager extends Component {
             isDesktop = getIsDesktop(deviceIndex),
 
             isLogue = getSongIsLogue(selectedSongIndex),
+
+            singleShownLyricColumnKey = getSingleShownLyricColumnKey({
+                showOneOfTwoLyricColumns,
+                selectedLyricColumnIndex
+            }),
 
             showOverlay = getShowOverlay({
                 deviceIndex,
@@ -133,6 +142,7 @@ class DomManager extends Component {
                     showOverlay ? 'overlay-shown' : 'overlay-hidden',
 
                     isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
+                    singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
                     showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
 
                     { 'accessed-on': selectedAccessIndex,
@@ -169,13 +179,13 @@ DomManager.propTypes = {
     deviceIndex: PropTypes.number.isRequired,
     isPlaying: PropTypes.bool.isRequired,
     isSliderMoving: PropTypes.bool.isRequired,
-    isLyricExpanded: PropTypes.bool.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
     selectedAccessIndex: PropTypes.number.isRequired,
     selectedAdminIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselIndex: PropTypes.number.isRequired,
     selectedDotsIndex: PropTypes.number.isRequired,
+    selectedLyricColumnIndex: PropTypes.number.isRequired,
     selectedNavIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
@@ -183,6 +193,8 @@ DomManager.propTypes = {
     selectedTitleIndex: PropTypes.number.isRequired,
     selectedWikiIndex: PropTypes.number.isRequired,
 
+    isLyricExpanded: PropTypes.bool.isRequired,
+    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     isHeightlessLyricColumn: PropTypes.bool.isRequired,
     showShrunkNavIcon: PropTypes.bool.isRequired,
     isScoresTipsInMain: PropTypes.bool.isRequired,
@@ -203,7 +215,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotsIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotsIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }))(DomManager)

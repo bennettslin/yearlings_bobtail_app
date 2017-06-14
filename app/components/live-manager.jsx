@@ -17,7 +17,6 @@ import AnnotationPopup from './annotation/annotation-popup'
 import ScorePopup from './score/score-popup'
 import TitlePopup from './title/title-popup'
 import WikiPopup from './wiki/wiki-popup'
-import { getSingleShownLyricColumnKey } from '../helpers/logic-helper'
 import { getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
 const LiveManager = ({
@@ -26,9 +25,6 @@ const LiveManager = ({
     overviewLogueIndex,
     overviewSongIndex,
     selectedDotKeys,
-    selectedLyricColumnIndex,
-
-    showOneOfTwoLyricColumns,
     isLyricExpanded,
 
     lyricSectionRef,
@@ -74,10 +70,7 @@ const LiveManager = ({
 
 }) => {
 
-    const singleShownLyricColumnKey = getSingleShownLyricColumnKey({
-            showOneOfTwoLyricColumns,
-            selectedLyricColumnIndex
-        }),
+    const
 
         isOverlayingAnnotation = getIsOverlayingAnnotation({
             deviceIndex,
@@ -199,7 +192,6 @@ const LiveManager = ({
         <div className={classnames(
             'live-manager',
             isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
-            singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
             selectedDotKeys
         )}>
             <div className="column overview-logue-column">
@@ -247,9 +239,7 @@ LiveManager.propTypes = {
     overviewLogueIndex: PropTypes.number.isRequired,
     overviewSongIndex: PropTypes.number.isRequired,
     selectedDotKeys: PropTypes.object.isRequired,
-    selectedLyricColumnIndex: PropTypes.number.isRequired,
 
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
 
     // From parent.
@@ -295,7 +285,7 @@ LiveManager.propTypes = {
 }
 
 export default connect(({
-    selectedDotKeys, selectedLyricColumnIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedDotKeys, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }) => ({
-    selectedDotKeys, selectedLyricColumnIndex, showOneOfTwoLyricColumns, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedDotKeys, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }))(LiveManager)
