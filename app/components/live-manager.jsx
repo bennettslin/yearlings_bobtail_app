@@ -35,7 +35,6 @@ const LiveManager = ({
     showOneOfTwoLyricColumns,
     isLyricExpanded,
     showShrunkNavIcon,
-    isScoresTipsInMain,
 
     lyricSectionRef,
     scoreSectionRef,
@@ -211,9 +210,6 @@ const LiveManager = ({
             selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
             selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
             showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
-            {
-
-              'scores-tips-in-main': isScoresTipsInMain },
             selectedDotKeys
         )}>
             <div className="column overview-logue-column">
@@ -270,7 +266,6 @@ LiveManager.propTypes = {
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
     showShrunkNavIcon: PropTypes.bool.isRequired,
-    isScoresTipsInMain: PropTypes.bool.isRequired,
 
     // From parent.
     lyricSectionRef: PropTypes.func.isRequired,
@@ -315,7 +310,7 @@ LiveManager.propTypes = {
 }
 
 export default connect(({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isScoresTipsInMain, showOneOfTwoLyricColumns, showShrunkNavIcon, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, showShrunkNavIcon, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, isScoresTipsInMain, showOneOfTwoLyricColumns, showShrunkNavIcon, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, showOneOfTwoLyricColumns, showShrunkNavIcon, annotationObject, deviceIndex, isLyricExpanded, overviewLogueIndex, overviewSongIndex
 }))(LiveManager)
