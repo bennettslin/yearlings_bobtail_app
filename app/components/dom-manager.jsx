@@ -34,6 +34,7 @@ class DomManager extends Component {
                     'isPlaying',
                     'isSliderMoving',
 
+                    'isHeightlessLyricColumn',
                     'isVerseBarAbove',
                     'isVerseBarBelow'
                 ]
@@ -56,6 +57,7 @@ class DomManager extends Component {
                 isPlaying,
                 isSliderMoving,
 
+                isHeightlessLyricColumn,
                 isVerseBarAbove,
                 isVerseBarBelow,
 
@@ -111,6 +113,7 @@ class DomManager extends Component {
                     isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
 
                     { 'accessed-on': selectedAccessIndex,
+                      'heightless-lyric': isHeightlessLyricColumn,
                       'verse-bar-above': isVerseBarAbove,
                       'verse-bar-below': isVerseBarBelow,
                       'verse-bar-hidden': !isVerseBarAbove && !isVerseBarBelow }
@@ -150,6 +153,7 @@ DomManager.propTypes = {
     selectedTitleIndex: PropTypes.number.isRequired,
     selectedWikiIndex: PropTypes.number.isRequired,
 
+    isHeightlessLyricColumn: PropTypes.bool.isRequired,
     isVerseBarAbove: PropTypes.bool.isRequired,
     isVerseBarBelow: PropTypes.bool.isRequired,
 
@@ -166,7 +170,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, isVerseBarAbove, isVerseBarBelow
 }))(DomManager)
