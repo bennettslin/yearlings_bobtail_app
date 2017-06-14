@@ -7,6 +7,8 @@ import classnames from 'classnames'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './player/audio-players-section'
+import { SHOWN,
+         OVERVIEW_OPTIONS } from '../constants/options'
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongIsLogue } from '../helpers/data-helper'
 import { getShowOverlay } from '../helpers/logic-helper'
@@ -27,6 +29,7 @@ class DomManager extends Component {
                     'selectedAccessIndex',
                     'selectedAdminIndex',
                     'selectedAnnotationIndex',
+                    'selectedOverviewIndex',
                     'selectedScoreIndex',
                     'selectedSongIndex',
                     'selectedTitleIndex',
@@ -51,6 +54,7 @@ class DomManager extends Component {
                 selectedAccessIndex,
                 selectedAdminIndex,
                 selectedAnnotationIndex,
+                selectedOverviewIndex,
                 selectedScoreIndex,
                 selectedSongIndex,
                 selectedTitleIndex,
@@ -116,6 +120,7 @@ class DomManager extends Component {
 
                     { 'accessed-on': selectedAccessIndex,
                       'heightless-lyric': isHeightlessLyricColumn,
+                      'overview-shown': OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
                       'title-in-audio': isTitleInAudio,
                       'verse-bar-above': isVerseBarAbove,
                       'verse-bar-below': isVerseBarBelow,
@@ -151,6 +156,7 @@ DomManager.propTypes = {
     selectedAccessIndex: PropTypes.number.isRequired,
     selectedAdminIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
+    selectedOverviewIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
@@ -174,7 +180,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }))(DomManager)
