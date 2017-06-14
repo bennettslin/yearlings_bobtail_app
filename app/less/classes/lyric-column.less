@@ -143,8 +143,8 @@
         bottom: 0;
     }
 
-    .lyric-expanded {
-        &.is-song {
+    &.is-song {
+        .lyric-expanded {
             .lyric-column {
                 height: ~"calc(100% - @{menu-height})";
             }
@@ -160,8 +160,8 @@
     @phone-lyric-column-subtraction: @menu-phone-height + @audio-banner-custom-subfield-height + @audio-banner-custom-subfield-padding * 2;
 
     &.phone-width {
-        .lyric-expanded {
-            &.is-song {
+        &.is-song {
+            .lyric-expanded {
                 .lyric-column {
                     height: ~"calc(100% - @{phone-lyric-column-subtraction})";
                 }

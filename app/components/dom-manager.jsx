@@ -8,6 +8,7 @@ import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
 import AudioPlayersSection from './player/audio-players-section'
 import { DEVICE_OBJECTS } from '../constants/responsive'
+import { getSongIsLogue } from '../helpers/data-helper'
 import { getShowOverlay } from '../helpers/logic-helper'
 import { getIsDesktop } from '../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../helpers/general-helper'
@@ -26,6 +27,7 @@ class DomManager extends Component {
                     'selectedAdminIndex',
                     'selectedAnnotationIndex',
                     'selectedScoreIndex',
+                    'selectedSongIndex',
                     'selectedTitleIndex',
                     'selectedWikiIndex',
                     'isPlaying'
@@ -42,6 +44,7 @@ class DomManager extends Component {
                 selectedAdminIndex,
                 selectedAnnotationIndex,
                 selectedScoreIndex,
+                selectedSongIndex,
                 selectedTitleIndex,
                 selectedWikiIndex,
                 isPlaying,
@@ -61,6 +64,8 @@ class DomManager extends Component {
 
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             isDesktop = getIsDesktop(deviceIndex),
+
+            isLogue = getSongIsLogue(selectedSongIndex),
 
             showOverlay = getShowOverlay({
                 deviceIndex,
@@ -85,6 +90,7 @@ class DomManager extends Component {
                     deviceClassName,
                     selectedAdminIndex ? 'is-admin-view' : 'is-live-view',
                     isDesktop ? 'is-desktop' : 'is-mobile',
+                    isLogue ? 'is-logue' : 'is-song',
                     isPlaying ? 'is-playing' : 'is-paused',
                     showOverlay ? 'overlay-shown' : 'overlay-hidden',
                     { 'accessed-on': selectedAccessIndex }
@@ -118,6 +124,7 @@ DomManager.propTypes = {
     selectedAdminIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
     selectedWikiIndex: PropTypes.number.isRequired,
 
@@ -134,7 +141,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying
 }) => ({
-    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying
+    selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, deviceIndex, isPlaying
 }))(DomManager)

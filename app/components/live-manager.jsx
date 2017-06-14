@@ -19,11 +19,10 @@ import TitlePopup from './title/title-popup'
 import WikiPopup from './wiki/wiki-popup'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
-import { getSongIsLogue } from '../helpers/data-helper'
 import { getSingleShownLyricColumnKey } from '../helpers/logic-helper'
 import { getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
-const Live = ({
+const LiveManager = ({
 
     deviceIndex,
     overviewLogueIndex,
@@ -35,7 +34,6 @@ const Live = ({
     selectedLyricColumnIndex,
     selectedNavIndex,
     selectedOverviewIndex,
-    selectedSongIndex,
     interactivatedVerseIndex,
 
     isSliderMoving,
@@ -91,9 +89,7 @@ const Live = ({
 
 }) => {
 
-    const isLogue = getSongIsLogue(selectedSongIndex),
-
-        singleShownLyricColumnKey = getSingleShownLyricColumnKey({
+    const singleShownLyricColumnKey = getSingleShownLyricColumnKey({
             showOneOfTwoLyricColumns,
             selectedLyricColumnIndex
         }),
@@ -217,7 +213,6 @@ const Live = ({
     return (
         <div className={classnames(
             'live-manager',
-            isLogue ? 'is-logue' : 'is-song',
             isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
             isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
             isSliderMoving ? 'slider-moving' : 'slider-not-moving',
@@ -237,7 +232,6 @@ const Live = ({
               'scores-tips-in-main': isScoresTipsInMain },
             selectedDotKeys
         )}>
-            {/* Ideal for song and logue to not be in separate overview subfields. */}
             <div className="column overview-logue-column">
                 <OverviewPopup {...overviewPopupProps}
                     inOverviewSubfield={false}
@@ -277,7 +271,7 @@ const Live = ({
     )
 }
 
-Live.propTypes = {
+LiveManager.propTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     overviewLogueIndex: PropTypes.number.isRequired,
@@ -289,7 +283,6 @@ Live.propTypes = {
     selectedLyricColumnIndex: PropTypes.number.isRequired,
     selectedNavIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
 
     isSliderMoving: PropTypes.bool.isRequired,
@@ -345,7 +338,7 @@ Live.propTypes = {
 }
 
 export default connect(({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, isHeightlessLyricColumn, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving
 }) => ({
-    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedSongIndex, isHeightlessLyricColumn, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving
-}))(Live)
+    selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, isHeightlessLyricColumn, isScoresTipsInMain, isTitleInAudio, showOneOfTwoLyricColumns, showShrunkNavIcon, interactivatedVerseIndex, annotationObject, deviceIndex, isLyricExpanded, isVerseBarAbove, isVerseBarBelow, overviewLogueIndex, overviewSongIndex, isSliderMoving
+}))(LiveManager)

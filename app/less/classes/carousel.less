@@ -79,9 +79,11 @@
     }
 }
 
-.is-song.annotation-shown.carousel-expanded {
-    .carousel-nav-buttons-block {
-        bottom: 0;
+.is-song {
+    .annotation-shown.carousel-expanded {
+        .carousel-nav-buttons-block {
+            bottom: 0;
+        }
     }
 }
 
@@ -103,8 +105,10 @@
         border-radius: 0 @nav-border-radius 0 0;
         box-shadow: @popup-box-shadow;
     }
+}
 
-    &.is-song {
+.is-song {
+    .carousel-expanded {
         .carousel {
             bottom: -@carousel-height-variable;
         }
@@ -217,20 +221,22 @@
         flex-direction: column;
     }
 
-    .is-song.carousel-expanded {
-        .carousel {
-            top: -@carousel-toggle-tablet-length;
-        }
+    &.is-song {
+        .carousel-expanded {
+            .carousel {
+                top: -@carousel-toggle-tablet-length;
+            }
 
-        &.annotation-shown {
-            .carousel-nav-buttons-block {
-                bottom: auto;
-                top: 0;
+            &.annotation-shown {
+                .carousel-nav-buttons-block {
+                    bottom: auto;
+                    top: 0;
+                }
             }
         }
     }
 
-    .lyric-expanded, .heightless-lyric, .nav-expanded, .is-logue {
+    .lyric-expanded, .heightless-lyric, .nav-expanded, &.is-logue {
         .carousel-toggle-button-block {
             left: -@overview-toggle-tablet-width;
         }
@@ -266,13 +272,15 @@
             height: calc(~"100% + @{carousel-toggle-mini-length}");
         }
 
-        .is-song.carousel-expanded {
-            .carousel {
-                top: -@carousel-toggle-mini-length;
+        &.is-song {
+            .carousel-expanded {
+                .carousel {
+                    top: -@carousel-toggle-mini-length;
+                }
             }
         }
 
-        .lyric-expanded, .heightless-lyric, .nav-expanded, .is-logue {
+        .lyric-expanded, .heightless-lyric, .nav-expanded, &.is-logue {
             .carousel-toggle-button-block {
                 left: -@overview-toggle-mini-width;
             }
