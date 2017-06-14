@@ -93,6 +93,8 @@ class DomManager extends Component {
                     isLogue ? 'is-logue' : 'is-song',
                     isPlaying ? 'is-playing' : 'is-paused',
                     showOverlay ? 'overlay-shown' : 'overlay-hidden',
+
+                    isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
                     { 'accessed-on': selectedAccessIndex }
                 )}
                 onClick={handleBodyClick}

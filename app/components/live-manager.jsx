@@ -213,7 +213,6 @@ const LiveManager = ({
     return (
         <div className={classnames(
             'live-manager',
-            isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
             isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
             isSliderMoving ? 'slider-moving' : 'slider-not-moving',
             interactivatedVerseIndex < 0 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
