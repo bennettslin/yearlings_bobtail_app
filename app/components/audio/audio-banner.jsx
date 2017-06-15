@@ -13,23 +13,33 @@ const AudioBanner = ({
     deviceIndex,
     selectedSongIndex,
 
+    inOverlay,
     inAudioSection,
     inCustomSubfield,
 
 ...other }) => {
 
-    const isPhone = getIsPhone(deviceIndex)
+    const isPhone = getIsPhone(deviceIndex),
 
-    console.error('inAudioSection', inAudioSection);
+        // Render if...
+        shouldRender = isPhone ?
 
-    return isPhone === inCustomSubfield && (
+            // ...in custom subfield or in overlay on phone.
+            inCustomSubfield || inOverlay :
+
+            // ...in menu or in overlay if not on phone.
+            inAudioSection,
+
+        songTitle = getSongTitle({
+                songIndex: selectedSongIndex
+            })
+
+    return shouldRender && (
         <div className="audio-block audio-banner-block">
-
             <SliderSection {...other} />
-
             <div className="audio-banner audio-display-block">
                 <div className="audio-banner-title">
-                    {getSongTitle({ songIndex: selectedSongIndex })}
+                    {songTitle}
                 </div>
                 <AudioTimer />
             </div>
@@ -38,6 +48,7 @@ const AudioBanner = ({
 }
 
 AudioBanner.defaultProps = {
+    inOverlay: false,
     inAudioSection: false,
     inCustomSubfield: false
 }
@@ -48,6 +59,7 @@ AudioBanner.propTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
+    inOverlay: PropTypes.bool.isRequired,
     inAudioSection: PropTypes.bool.isRequired,
     inCustomSubfield: PropTypes.bool.isRequired
 }

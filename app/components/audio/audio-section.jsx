@@ -9,7 +9,6 @@ import AudioTimer from './audio-timer'
 import TitleToggle from '../title/title-toggle'
 import { getSongsCount } from '../../helpers/data-helper'
 import { getIsTimerInAudio } from '../../helpers/logic-helper'
-import { getIsPhone } from '../../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -79,20 +78,20 @@ const AudioSectionView = ({
     selectedTitleIndex,
     selectedWikiIndex,
     isTitleInAudio,
+
+    inOverlay,
     audioBannerHandlers,
     titleToggleHandlers,
 
 ...other }) => {
 
-    const isPhone = getIsPhone(deviceIndex),
-
-        isTimerInAudio = getIsTimerInAudio({
-                deviceIndex,
-                isLyricExpanded,
-                selectedAnnotationIndex,
-                selectedScoreIndex,
-                selectedTitleIndex,
-                selectedWikiIndex
+    const isTimerInAudio = getIsTimerInAudio({
+            deviceIndex,
+            isLyricExpanded,
+            selectedAnnotationIndex,
+            selectedScoreIndex,
+            selectedTitleIndex,
+            selectedWikiIndex
         })
 
     return (
@@ -110,15 +109,18 @@ const AudioSectionView = ({
             )}
 
             {/* In phone, show banner in the overlaid audio section. */}
-            {(!isPhone || isTimerInAudio) && (
-                <AudioBanner {...audioBannerHandlers}
-                    inAudioSection={true}
-                />
-            )}
+            <AudioBanner {...audioBannerHandlers}
+                inAudioSection={true}
+                inOverlay={inOverlay}
+            />
 
             <AudioButtons {...other} />
         </div>
     )
+}
+
+AudioSectionView.defaultProps = {
+    inOverlay: false
 }
 
 AudioSectionView.propTypes = {
@@ -132,6 +134,7 @@ AudioSectionView.propTypes = {
     isTitleInAudio: PropTypes.bool.isRequired,
 
     // From parent.
+    inOverlay: PropTypes.bool.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
     titleToggleHandlers: PropTypes.object.isRequired
 }

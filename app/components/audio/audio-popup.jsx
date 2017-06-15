@@ -52,7 +52,9 @@ class AudioPopup extends Component {
             }),
 
             myChild = (
-                <AudioSection {...other} />
+                <AudioSection {...other}
+                    inOverlay={true}
+                />
             )
 
         return (

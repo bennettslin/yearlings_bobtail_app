@@ -28,13 +28,13 @@ const ScoresTipsSection = ({
         // Render if...
         shouldRender = isScoresTipsInMain ?
 
-            // In subfield on mobile.
+            // ...in subfield on mobile.
             (inSubfield && !isDesktop) ||
 
-            // In toggle section on desktop.
+            // ...in toggle section on desktop.
             (inToggleSection && isDesktop) :
 
-            // In menu.
+            // ...in menu.
             (!inSubfield && !inToggleSection),
 
         showScoreToggleButton = !getIsPhone(deviceIndex)
