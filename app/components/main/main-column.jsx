@@ -13,13 +13,13 @@ import DotsSection from '../dots/dots-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
 import LyricToggle from '../lyric/lyric-toggle'
 import OverviewPopup from '../overview/overview-popup'
-import { getIsPhone, getIsDesktop } from '../../helpers/responsive-helper'
+import ScoresTipsSection from './scores-tips-section'
+import { getIsPhone } from '../../helpers/responsive-helper'
 
 const MainColumn = ({
 
     // From props.
     deviceIndex,
-    isScoresTipsInMain,
 
     handleCarouselToggle,
     handleDotsSectionToggle,
@@ -29,21 +29,20 @@ const MainColumn = ({
     audioBannerHandlers,
     audioSectionHandlers,
     dotsSectionHandlers,
-    scoresTipsSectionChild,
     titleToggleHandlers,
 
     annotationPopupHandlers,
     carouselSectionHandlers,
     navSectionHandlers,
-    overviewPopupHandlers
+    overviewPopupHandlers,
+    scoresTipsSectionHandlers
 
 }) => {
     const isPhone = getIsPhone(deviceIndex),
-        isDesktop = getIsDesktop(deviceIndex),
 
         menuFieldProps = {
             audioSectionHandlers,
-            scoresTipsSectionChild,
+            scoresTipsSectionHandlers,
             titleToggleHandlers
         },
         dotsOverviewToggleSectionProps = {
@@ -65,12 +64,12 @@ const MainColumn = ({
                 </div>
 
                 <div className="subfield dots-overview-subfield">
+
                     <CarouselSection {...carouselSectionHandlers} />
                     <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
-                        scoresTipsSectionChild={
-                            (isDesktop && isScoresTipsInMain) ? scoresTipsSectionChild : null
-                        }
+                        scoresTipsSectionHandlers={scoresTipsSectionHandlers}
                     />
+
                     <div className="overview-popup-container">
                         <OverviewPopup {...overviewPopupHandlers}
                             inOverviewSubfield={true}
@@ -84,7 +83,10 @@ const MainColumn = ({
                     <div className="dots-subfield">
                         <DotsSection {...dotsSectionHandlers} />
                     </div>
-                    {(!isDesktop && isScoresTipsInMain) ? scoresTipsSectionChild : null}
+
+                    <ScoresTipsSection {...scoresTipsSectionHandlers}
+                        inSubfield={true}
+                    />
                 </div>
 
                 {isPhone &&
@@ -106,15 +108,12 @@ const MainColumn = ({
 MainColumn.propTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
-    isScoresTipsInMain: PropTypes.bool.isRequired,
 
     // From parent.
     handleCarouselToggle: PropTypes.func.isRequired,
     handleDotsSectionToggle: PropTypes.func.isRequired,
     handleLyricSectionExpand: PropTypes.func.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired,
-
-    scoresTipsSectionChild: PropTypes.element.isRequired,
 
     annotationPopupHandlers: PropTypes.object.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
@@ -123,13 +122,12 @@ MainColumn.propTypes = {
     dotsSectionHandlers: PropTypes.object.isRequired,
     navSectionHandlers: PropTypes.object.isRequired,
     overviewPopupHandlers: PropTypes.object.isRequired,
+    scoresTipsSectionHandlers: PropTypes.object.isRequired,
     titleToggleHandlers: PropTypes.object.isRequired
 }
 
 export default connect(({
-    deviceIndex,
-    isScoresTipsInMain
+    deviceIndex
 }) => ({
-    deviceIndex,
-    isScoresTipsInMain
+    deviceIndex
 }))(MainColumn)

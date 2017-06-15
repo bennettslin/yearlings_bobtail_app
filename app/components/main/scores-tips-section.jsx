@@ -7,21 +7,39 @@ import Button from '../button/button'
 import { SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY } from '../../constants/access'
 import { TIPS_OPTIONS } from '../../constants/options'
-import { getIsPhone } from '../../helpers/responsive-helper'
+import { getIsDesktop, getIsPhone } from '../../helpers/responsive-helper'
 
 const ScoresTipsSection = ({
 
     deviceIndex,
+    isScoresTipsInMain,
     selectedScoreIndex,
     selectedTipsIndex,
+
+    inSubfield,
+    inToggleSection,
 
     handleScoreToggle,
     handleTipsToggle
 
 }) => {
-    const showScoreToggleButton = !getIsPhone(deviceIndex)
+    const isDesktop = getIsDesktop(deviceIndex),
 
-    return (
+        // Render if...
+        shouldRender = isScoresTipsInMain ?
+
+            // In subfield on mobile.
+            (inSubfield && !isDesktop) ||
+
+            // In toggle section on desktop.
+            (inToggleSection && isDesktop) :
+
+            // In menu.
+            (!inSubfield && !inToggleSection),
+
+        showScoreToggleButton = !getIsPhone(deviceIndex)
+
+    return shouldRender && (
         <div className="section scores-tips-section">
             {showScoreToggleButton &&
                 <Button
@@ -43,23 +61,33 @@ const ScoresTipsSection = ({
     )
 }
 
+ScoresTipsSection.defaultProps = {
+    inSubfield: false,
+    inToggleSection: false
+}
+
 ScoresTipsSection.propTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
+    isScoresTipsInMain: PropTypes.bool.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
 
     // From parent.
+    inSubfield: PropTypes.bool.isRequired,
+    inToggleSection: PropTypes.bool.isRequired,
     handleScoreToggle: PropTypes.func.isRequired,
     handleTipsToggle: PropTypes.func.isRequired
 }
 
 export default connect(({
     deviceIndex,
+    isScoresTipsInMain,
     selectedScoreIndex,
     selectedTipsIndex
 }) => ({
     deviceIndex,
+    isScoresTipsInMain,
     selectedScoreIndex,
     selectedTipsIndex
 }))(ScoresTipsSection)

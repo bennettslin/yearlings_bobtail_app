@@ -4,7 +4,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import MainColumn from './main/main-column'
 import LyricColumn from './lyric/lyric-column'
-import ScoresTipsSection from './main/scores-tips-section'
 import AudioPopup from './audio/audio-popup'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
@@ -158,6 +157,7 @@ const LiveManager = ({
                 handleNavBookSelect
             },
             overviewPopupHandlers,
+            scoresTipsSectionHandlers,
             titleToggleHandlers
         }
 
@@ -168,27 +168,24 @@ const LiveManager = ({
                     inOverviewSubfield={false}
                 />
             </div>
-            <MainColumn {...mainColumnHandlers}
-                scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionHandlers} /> }
-            />
+
+            <MainColumn {...mainColumnHandlers} />
 
             <LyricColumn {...lyricColumnHandlers} />
 
-            {
-                <div className="overlay-popup-subfield">
-                    <div className="overlay-popup-block audio-popup-block">
-                        <AudioPopup {...audioSectionHandlers} />
-                    </div>
-                    <div className="overlay-popup-block main-popup-block">
-                        <AnnotationPopup {...annotationPopupHandlers}
-                            isOverlayAnnotation={true}
-                        />
-                        <TitlePopup {...titlePopupHandlers} />
-                        <ScorePopup {...scorePopupHandlers} />
-                        <WikiPopup {...wikiPopupHandlers} />
-                    </div>
+            <div className="overlay-popup-subfield">
+                <div className="overlay-popup-block audio-popup-block">
+                    <AudioPopup {...audioSectionHandlers} />
                 </div>
-            }
+                <div className="overlay-popup-block main-popup-block">
+                    <AnnotationPopup {...annotationPopupHandlers}
+                        isOverlayAnnotation={true}
+                    />
+                    <TitlePopup {...titlePopupHandlers} />
+                    <ScorePopup {...scorePopupHandlers} />
+                    <WikiPopup {...wikiPopupHandlers} />
+                </div>
+            </div>
         </div>
     )
 }
