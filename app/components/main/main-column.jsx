@@ -1,7 +1,6 @@
 // Column to show all sections, excluding lyrics and popups.
 
 import React from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import MenuField from './menu-field'
 import NavSection from '../nav/nav-section'
@@ -14,12 +13,8 @@ import DotsOverviewToggleSection from './dots-overview-toggle-section'
 import LyricToggle from '../lyric/lyric-toggle'
 import OverviewPopup from '../overview/overview-popup'
 import ScoresTipsSection from './scores-tips-section'
-import { getIsPhone } from '../../helpers/responsive-helper'
 
 const MainColumn = ({
-
-    // From props.
-    deviceIndex,
 
     handleCarouselToggle,
     handleDotsSectionToggle,
@@ -38,9 +33,7 @@ const MainColumn = ({
     scoresTipsSectionHandlers
 
 }) => {
-    const isPhone = getIsPhone(deviceIndex),
-
-        menuFieldProps = {
+    const menuFieldProps = {
             audioSectionHandlers,
             scoresTipsSectionHandlers,
             titleToggleHandlers
@@ -89,11 +82,11 @@ const MainColumn = ({
                     />
                 </div>
 
-                {isPhone &&
-                    <div className="audio-banner-custom-subfield">
-                        <AudioBanner {...audioBannerHandlers} />
-                    </div>
-                }
+                <div className="audio-banner-custom-subfield">
+                    <AudioBanner {...audioBannerHandlers}
+                        inCustomSubfield={true}
+                    />
+                </div>
 
                 <CarouselToggle
                     handleCarouselToggle={handleCarouselToggle}
@@ -106,9 +99,6 @@ const MainColumn = ({
 }
 
 MainColumn.propTypes = {
-    // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-
     // From parent.
     handleCarouselToggle: PropTypes.func.isRequired,
     handleDotsSectionToggle: PropTypes.func.isRequired,
@@ -126,8 +116,4 @@ MainColumn.propTypes = {
     titleToggleHandlers: PropTypes.object.isRequired
 }
 
-export default connect(({
-    deviceIndex
-}) => ({
-    deviceIndex
-}))(MainColumn)
+export default MainColumn

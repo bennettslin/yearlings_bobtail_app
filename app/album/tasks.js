@@ -2271,5 +2271,10 @@ module.exports = [
         taskName: `Organise dom and live manager better.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Get rid of children in live manager.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

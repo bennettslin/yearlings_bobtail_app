@@ -92,7 +92,9 @@ const AudioSectionView = ({
 
             {/* In phone, show banner in the overlaid audio section. */}
             {(!isPhone || isTimerInAudio) && (
-                <AudioBanner {...audioBannerHandlers} />
+                <AudioBanner {...audioBannerHandlers}
+                    inAudioSection={true}
+                />
             )}
 
             <AudioButtons {...other} />
