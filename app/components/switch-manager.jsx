@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AdminManager from './admin/admin-manager'
-import LiveManager from './live-manager'
+import LiveManager from './main/live-manager'
 
 /*************
  * CONTAINER *

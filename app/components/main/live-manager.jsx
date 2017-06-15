@@ -2,14 +2,14 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import MainColumn from './main/main-column'
-import LyricColumn from './lyric/lyric-column'
-import AudioPopup from './audio/audio-popup'
-import OverviewPopup from './overview/overview-popup'
-import AnnotationPopup from './annotation/annotation-popup'
-import ScorePopup from './score/score-popup'
-import TitlePopup from './title/title-popup'
-import WikiPopup from './wiki/wiki-popup'
+import MainColumn from './main-column'
+import LyricColumn from '../lyric/lyric-column'
+import AudioPopup from '../audio/audio-popup'
+import OverviewPopup from '../overview/overview-popup'
+import AnnotationPopup from '../annotation/annotation-popup'
+import ScorePopup from '../score/score-popup'
+import TitlePopup from '../title/title-popup'
+import WikiPopup from '../wiki/wiki-popup'
 
 const LiveManager = ({
 
@@ -82,12 +82,6 @@ const LiveManager = ({
             titleToggleHandlers
         },
 
-        dotsSectionHandlers = {
-            handlePopupContainerClick,
-            handleDotToggle,
-            stopPropagation
-        },
-
         lyricColumnHandlers = {
             lyricSectionRef,
             handleLyricAnnotationSelect,
@@ -133,15 +127,12 @@ const LiveManager = ({
 
         mainColumnHandlers = {
             handleCarouselToggle,
-            handleDotsSectionToggle,
             handleLyricSectionExpand,
-            handleOverviewToggle,
-            handleTipsToggle,
 
             annotationPopupHandlers,
             audioBannerHandlers,
-            audioSectionHandlers,
-            dotsSectionHandlers,
+            overviewPopupHandlers,
+            scoresTipsSectionHandlers,
 
             carouselSectionHandlers: {
                 handleLyricAnnotationSelect,
@@ -151,14 +142,26 @@ const LiveManager = ({
                 handleAnnotationPortalSelect,
                 handlePopupContainerClick
             },
+            dotsOverviewToggleSectionHandlers: {
+                handleDotsSectionToggle,
+                handleOverviewToggle
+            },
+            dotsSectionHandlers: {
+                handlePopupContainerClick,
+                handleDotToggle,
+                stopPropagation
+            },
             navSectionHandlers: {
                 handleNavExpand,
                 handleNavSongSelect,
                 handleNavBookSelect
             },
-            overviewPopupHandlers,
-            scoresTipsSectionHandlers,
-            titleToggleHandlers
+
+            menuFieldHandlers: {
+                audioSectionHandlers,
+                scoresTipsSectionHandlers,
+                titleToggleHandlers
+            }
         }
 
     return (

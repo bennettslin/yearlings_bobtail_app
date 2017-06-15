@@ -17,103 +17,87 @@ import ScoresTipsSection from './scores-tips-section'
 const MainColumn = ({
 
     handleCarouselToggle,
-    handleDotsSectionToggle,
     handleLyricSectionExpand,
-    handleOverviewToggle,
-
-    audioBannerHandlers,
-    audioSectionHandlers,
-    dotsSectionHandlers,
-    titleToggleHandlers,
 
     annotationPopupHandlers,
+    audioBannerHandlers,
     carouselSectionHandlers,
+    dotsOverviewToggleSectionHandlers,
+    dotsSectionHandlers,
     navSectionHandlers,
     overviewPopupHandlers,
-    scoresTipsSectionHandlers
+    scoresTipsSectionHandlers,
 
-}) => {
-    const menuFieldProps = {
-            audioSectionHandlers,
-            scoresTipsSectionHandlers,
-            titleToggleHandlers
-        },
-        dotsOverviewToggleSectionProps = {
-            handleDotsSectionToggle,
-            handleOverviewToggle
-        }
+    menuFieldHandlers
 
-    return (
-        <div className="column main-column">
-            <MenuField {...menuFieldProps} />
-            <div className="field centre-field">
+}) => (
+    <div className="column main-column">
+        <MenuField {...menuFieldHandlers} />
+        <div className="field centre-field">
 
-                <div className="field popup-field">
-                    <div className="subfield annotation-subfield">
-                        <AnnotationPopup {...annotationPopupHandlers}
-                            isOverlayAnnotation={false}
-                        />
-                    </div>
-                </div>
-
-                <div className="subfield dots-overview-subfield">
-
-                    <CarouselSection {...carouselSectionHandlers} />
-                    <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
-                        scoresTipsSectionHandlers={scoresTipsSectionHandlers}
-                    />
-
-                    <div className="overview-popup-container">
-                        <OverviewPopup {...overviewPopupHandlers}
-                            inOverviewSubfield={true}
-                        />
-                    </div>
-
-                    <LyricToggle
-                        handleLyricSectionExpand={handleLyricSectionExpand}
-                    />
-
-                    <div className="dots-subfield">
-                        <DotsSection {...dotsSectionHandlers} />
-                    </div>
-
-                    <ScoresTipsSection {...scoresTipsSectionHandlers}
-                        inSubfield={true}
+            <div className="field popup-field">
+                <div className="subfield annotation-subfield">
+                    <AnnotationPopup {...annotationPopupHandlers}
+                        isOverlayAnnotation={false}
                     />
                 </div>
+            </div>
 
-                <div className="audio-banner-custom-subfield">
-                    <AudioBanner {...audioBannerHandlers}
-                        inCustomSubfield={true}
-                    />
-                </div>
+            <div className="subfield dots-overview-subfield">
 
-                <CarouselToggle
-                    handleCarouselToggle={handleCarouselToggle}
+                <CarouselSection {...carouselSectionHandlers} />
+                <DotsOverviewToggleSection {...dotsOverviewToggleSectionHandlers}
+                    scoresTipsSectionHandlers={scoresTipsSectionHandlers}
                 />
 
-                <NavSection {...navSectionHandlers} />
+                <div className="overview-popup-container">
+                    <OverviewPopup {...overviewPopupHandlers}
+                        inOverviewSubfield={true}
+                    />
+                </div>
+
+                <LyricToggle
+                    handleLyricSectionExpand={handleLyricSectionExpand}
+                />
+
+                <div className="dots-subfield">
+                    <DotsSection {...dotsSectionHandlers} />
+                </div>
+
+                <ScoresTipsSection {...scoresTipsSectionHandlers}
+                    inSubfield={true}
+                />
             </div>
+
+            <div className="audio-banner-custom-subfield">
+                <AudioBanner {...audioBannerHandlers}
+                    inCustomSubfield={true}
+                />
+            </div>
+
+            <CarouselToggle
+                handleCarouselToggle={handleCarouselToggle}
+            />
+
+            <NavSection {...navSectionHandlers} />
         </div>
-    )
-}
+    </div>
+)
 
 MainColumn.propTypes = {
     // From parent.
     handleCarouselToggle: PropTypes.func.isRequired,
-    handleDotsSectionToggle: PropTypes.func.isRequired,
     handleLyricSectionExpand: PropTypes.func.isRequired,
-    handleOverviewToggle: PropTypes.func.isRequired,
 
     annotationPopupHandlers: PropTypes.object.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
-    audioSectionHandlers: PropTypes.object.isRequired,
     carouselSectionHandlers: PropTypes.object.isRequired,
+    dotsOverviewToggleSectionHandlers: PropTypes.object.isRequired,
     dotsSectionHandlers: PropTypes.object.isRequired,
+    menuFieldHandlers: PropTypes.object.isRequired,
     navSectionHandlers: PropTypes.object.isRequired,
     overviewPopupHandlers: PropTypes.object.isRequired,
-    scoresTipsSectionHandlers: PropTypes.object.isRequired,
-    titleToggleHandlers: PropTypes.object.isRequired
+    scoresTipsSectionHandlers: PropTypes.object.isRequired
 }
 
 export default MainColumn
