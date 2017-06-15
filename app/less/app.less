@@ -1,0 +1,162 @@
+@import "./utilities/constants";
+@import "./utilities/animations";
+@import "./utilities/dot-key-animations";
+@import "./utilities/globals";
+@import "./utilities/mixins";
+
+@import "./admin/admin";
+@import "./admin/admin-nav";
+@import "./admin/progress";
+@import "./admin/tasks";
+@import "./admin/drawings";
+
+@import "./live";
+@import "./menu";
+
+@import "./classes/popups";
+@import "./classes/transition-popup";
+@import "./classes/overlay";
+@import "./classes/text";
+@import "./classes/anchor-block";
+@import "./classes/title";
+@import "./classes/audio";
+@import "./classes/dots-overview";
+@import "./classes/scores-tips";
+@import "./classes/nav-responsive";
+@import "./classes/nav";
+@import "./classes/annotation";
+@import "./classes/portal";
+@import "./classes/wiki";
+@import "./classes/overview";
+@import "./classes/dots";
+@import "./classes/carousel";
+@import "./classes/lyric-column";
+@import "./classes/lyric-unit";
+@import "./classes/lyric-dot-stanza";
+@import "./classes/lyric-verse";
+@import "./classes/lyric-slider-verse";
+@import "./classes/lyric-text";
+@import "./classes/lyric-verse-bar";
+@import "./classes/button";
+@import "./classes/access";
+
+@import "./components/annotation/annotation-card.less";
+@import "./components/annotation/annotation-popup.less";
+@import "./components/annotation/annotation-portal.less";
+@import "./components/annotation/annotation-portals-block.less";
+@import "./components/annotation/annotation-section.less";
+@import "./components/annotation/annotation-unit.less";
+
+@import "./components/audio/audio-banner.less";
+@import "./components/audio/audio-buttons.less";
+@import "./components/audio/audio-popup.less";
+@import "./components/audio/audio-section.less";
+@import "./components/audio/audio-timer.less";
+
+@import "./components/button/button.less";
+
+@import "./components/carousel/carousel-annotation.less";
+@import "./components/carousel/carousel-section.less";
+@import "./components/carousel/carousel-toggle.less";
+
+@import "./components/dot/dot-anchor.less";
+@import "./components/dot/dot-block.less";
+@import "./components/dot/dot-button.less";
+@import "./components/dot/dot-toggle-button.less";
+
+@import "./components/dots/dots-section.less";
+@import "./components/dots/dots-toggle.less";
+
+@import "./components/lyric/lyric-column.less";
+@import "./components/lyric/lyric-dot-stanza.less";
+@import "./components/lyric/lyric-section.less";
+@import "./components/lyric/lyric-stanza.less";
+@import "./components/lyric/lyric-toggle.less";
+@import "./components/lyric/lyric-unit.less";
+@import "./components/lyric/lyric-verse.less";
+
+@import "./components/main/dots-overview-toggle-section.less";
+@import "./components/main/live-manager.less";
+@import "./components/main/main-column.less";
+@import "./components/main/menu-field.less";
+@import "./components/main/scores-tips-section.less";
+
+@import "./components/nav/nav-book-button.less";
+@import "./components/nav/nav-book.less";
+@import "./components/nav/nav-books-column.less";
+@import "./components/nav/nav-button.less";
+@import "./components/nav/nav-item.less";
+@import "./components/nav/nav-logue-button.less";
+@import "./components/nav/nav-section.less";
+@import "./components/nav/nav-toggle.less";
+
+@import "./components/overview/overview-popup.less";
+@import "./components/overview/overview-section.less";
+@import "./components/overview/overview-toggle.less";
+
+@import "./components/player/player.less";
+@import "./components/player/players-section.less";
+
+@import "./components/popup/popup-button.less";
+@import "./components/popup/popup.less";
+
+@import "./components/score/score-popup.less";
+@import "./components/score/score-section.less";
+
+@import "./components/slider/slider-section.less";
+@import "./components/slider/slider-stanzas.less";
+
+@import "./components/stage/stage-section.less";
+
+@import "./components/text/text-anchor-block.less";
+@import "./components/text/text-anchor.less";
+@import "./components/text/text-block.less";
+@import "./components/text/text-span.less";
+@import "./components/text/text-unit.less";
+
+@import "./components/tips/tips-section.less";
+
+@import "./components/title/title-popup.less";
+@import "./components/title/title-section.less";
+@import "./components/title/title-toggle.less";
+
+@import "./components/verse/verse-audio-button.less";
+@import "./components/verse/verse-bar.less";
+@import "./components/verse/verse-line.less";
+@import "./components/verse/verse-lines-block.less";
+@import "./components/verse/verse-unit.less";
+
+@import "./components/wiki/wiki-popup.less";
+@import "./components/wiki/wiki-section.less";
+
+body {
+    background-color: #bbb;
+    margin: 0;
+    cursor: default;
+}
+
+.dom-manager {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    min-height: 100vh;
+    font-family: PTSansNarrow;
+    font-size: 1.1em;
+    user-select: none;
+
+    // FIXME: Temp styling, of course.
+    background-color: #bbb;
+}
+
+/**
+ * Don't bother to show if not in phone. Child component also will not be
+ * rendered.
+ */
+.audio-banner-custom-subfield {
+    display: none;
+}
+.phone-width {
+    .audio-banner-custom-subfield {
+        display: block;
+    }
+}

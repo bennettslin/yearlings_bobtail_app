@@ -9,7 +9,7 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 // https://www.npmjs.com/package/react-audio-player
 
-class AudioPlayer extends Component {
+class Player extends Component {
 
     constructor(props) {
         super(props)
@@ -134,7 +134,7 @@ class AudioPlayer extends Component {
     }
 }
 
-AudioPlayer.propTypes = {
+Player.propTypes = {
     // Through Redux.
     isPlaying: PropTypes.bool.isRequired,
     updatedTimePlayed: PropTypes.number,
@@ -152,4 +152,4 @@ export default connect(({
 }) => ({
     isPlaying,
     updatedTimePlayed
-}))(AudioPlayer)
+}))(Player)

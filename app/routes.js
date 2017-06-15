@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // import { Route, IndexRoute } from 'react-router'
 
-import './less/main.less'
+import './less/app.less'
 import App from './components/app'
 
 // class Root extends Component {

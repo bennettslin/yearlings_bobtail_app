@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
-import AudioPlayersSection from './player/audio-players-section'
+import PlayersSection from './player/players-section'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { DEVICE_OBJECTS } from '../constants/responsive'
@@ -136,7 +136,7 @@ class DomManager extends Component {
             >
                 <AdminToggle />
 
-                <AudioPlayersSection {...audioPlayersProps} />
+                <PlayersSection {...audioPlayersProps} />
 
                 <div className="popup-overlay" />
 

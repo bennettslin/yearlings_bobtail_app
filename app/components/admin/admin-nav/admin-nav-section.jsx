@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import AdminNavItem from './admin-nav-item'
 import ProgressFooter from '../progress/progress-footer'
 import ProgressHelper from '../../../helpers/progress-helper'
@@ -82,10 +83,17 @@ const AdminNavSectionView = ({
 }
 
 AdminNavSectionView.propTypes = {
+    // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
     handleNavSongSelect: PropTypes.func.isRequired,
     sumAllTasks: PropTypes.object.isRequired,
     maxTotalNeededHours: PropTypes.number.isRequired
 }
 
-export default AdminNavSection
+export default connect(({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+}))(AdminNavSection)

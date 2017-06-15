@@ -5,7 +5,12 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Figure out why shouldComponentUpdate is broken in dom manager.`,
+        taskName: `Annotation popup container is wrong height in phone.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Keep styles with components.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -54,11 +59,6 @@ module.exports = [
 
     {
         taskName: `Releasing mouse outside of audio banner closes overlay, dom manager should tell event manager when body touch began.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Annotation popup container is wrong height in phone.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -2281,5 +2281,10 @@ module.exports = [
         taskName: `Get rid of children in live manager.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `More refactoring of dom and live manager.`,
+        workedHours: 1,
+        neededHours: 1
     },
 ]

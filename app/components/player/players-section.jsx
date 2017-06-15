@@ -3,11 +3,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import AudioPlayer from './audio-player'
+import Player from './player'
 import { getMp3s } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-class AudioPlayersSection extends Component {
+class PlayersSection extends Component {
 
     // TODO: Still necessary?
     shouldComponentUpdate(nextProps) {
@@ -35,7 +35,7 @@ class AudioPlayersSection extends Component {
                         isSelected = playerIndex === selectedSongIndex
 
                     return (
-                        <AudioPlayer {...other}
+                        <Player {...other}
                             key={index}
                             mp3={mp3}
                             isSelected={isSelected}
@@ -47,7 +47,7 @@ class AudioPlayersSection extends Component {
     }
 }
 
-AudioPlayersSection.propTypes = {
+PlayersSection.propTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired
 }
@@ -56,4 +56,4 @@ export default connect(({
     selectedSongIndex
 }) => ({
     selectedSongIndex
-}))(AudioPlayersSection)
+}))(PlayersSection)
