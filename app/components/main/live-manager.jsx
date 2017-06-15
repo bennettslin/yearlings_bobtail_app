@@ -1,6 +1,6 @@
 // Component that routes event handlers to their components. Knows no state.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import MainColumn from './main-column'
 import LyricColumn from '../lyric/lyric-column'
@@ -11,186 +11,190 @@ import ScorePopup from '../score/score-popup'
 import TitlePopup from '../title/title-popup'
 import WikiPopup from '../wiki/wiki-popup'
 
-const LiveManager = ({
+class LiveManager extends Component {
 
-    lyricSectionRef,
-    scoreSectionRef,
-    wikiSectionRef,
+    shouldComponentUpdate() {
+        return false
+    }
 
-    handlePopupContainerClick,
-    handleScrollAfterLyricRerender,
+    render() {
+        const { lyricSectionRef,
+                scoreSectionRef,
+                wikiSectionRef,
 
-    handleAnnotationPrevious,
-    handleAnnotationNext,
-    handleAnnotationWikiSelect,
-    handleAnnotationPortalSelect,
-    handleAudioPlay,
-    handleAudioPreviousSong,
-    handleAudioNextSong,
-    handleAudioOptionsToggle,
-    handleSliderTouchBegin,
-    handleDotToggle,
-    handleDotsSectionToggle,
-    handleNavExpand,
-    handleNavSongSelect,
-    handleNavBookSelect,
-    handleLyricColumnSelect,
-    handleLyricSectionExpand,
-    handleLyricAnnotationSelect,
-    handleLyricSectionScroll,
-    handleLyricPlay,
-    handleLyricVerseSelect,
-    handleOverviewToggle,
-    handlePopupFocus,
-    handleScoreToggle,
-    handleTipsToggle,
-    handleTitleToggle,
-    handleVerseBarSelect,
-    handleVerseBarWheel,
-    handleVerseElementSelect,
-    handleVerseElementSlide,
-    handleVerseInteractivate,
-    handleWikiToggle,
-    handleCarouselToggle,
-    stopPropagation
+                handlePopupContainerClick,
+                handleScrollAfterLyricRerender,
 
-}) => {
-
-    const titleToggleHandlers = {
-            handleTitleToggle
-        },
-
-        annotationPopupHandlers = {
-            handleAnnotationPrevious,
-            handleAnnotationNext,
-            handlePopupContainerClick,
-            handleAnnotationPortalSelect,
-            handleAnnotationWikiSelect
-        },
-
-        audioBannerHandlers = {
-            handleSliderTouchBegin
-        },
-        audioSectionHandlers = {
-            handleAudioPlay,
-            handleAudioPreviousSong,
-            handleAudioNextSong,
-            handleAudioOptionsToggle,
-            handlePopupContainerClick,
-
-            audioBannerHandlers,
-            titleToggleHandlers
-        },
-
-        lyricColumnHandlers = {
-            lyricSectionRef,
-            handleLyricAnnotationSelect,
-            handleLyricColumnSelect,
-            handleLyricSectionExpand,
-            handleLyricSectionScroll,
-            handleLyricPlay,
-            handleLyricVerseSelect,
-            handleVerseBarSelect,
-            handleVerseBarWheel,
-            handleVerseInteractivate,
-            handleVerseElementSelect,
-            handleVerseElementSlide,
-            handleScrollAfterLyricRerender
-        },
-
-        overviewPopupHandlers = {
-            handleOverviewToggle,
-            handlePopupContainerClick
-        },
-
-        scoresTipsSectionHandlers = {
-            handleScoreToggle,
-            handleTipsToggle
-        },
-
-        scorePopupHandlers = {
-            scoreSectionRef,
-            handleScoreToggle,
-            handlePopupFocus
-        },
-
-        titlePopupHandlers = {
-            handleTitleToggle,
-            handlePopupFocus
-        },
-
-        wikiPopupHandlers = {
-            wikiSectionRef,
-            handleWikiToggle,
-            handlePopupFocus
-        },
-
-        mainColumnHandlers = {
-            handleCarouselToggle,
-            handleLyricSectionExpand,
-
-            annotationPopupHandlers,
-            audioBannerHandlers,
-            overviewPopupHandlers,
-            scoresTipsSectionHandlers,
-
-            carouselSectionHandlers: {
-                handleLyricAnnotationSelect,
                 handleAnnotationPrevious,
                 handleAnnotationNext,
                 handleAnnotationWikiSelect,
                 handleAnnotationPortalSelect,
-                handlePopupContainerClick
-            },
-            dotsOverviewToggleSectionHandlers: {
-                handleDotsSectionToggle,
-                handleOverviewToggle
-            },
-            dotsSectionHandlers: {
-                handlePopupContainerClick,
+                handleAudioPlay,
+                handleAudioPreviousSong,
+                handleAudioNextSong,
+                handleAudioOptionsToggle,
+                handleSliderTouchBegin,
                 handleDotToggle,
-                stopPropagation
-            },
-            navSectionHandlers: {
+                handleDotsSectionToggle,
                 handleNavExpand,
                 handleNavSongSelect,
-                handleNavBookSelect
+                handleNavBookSelect,
+                handleLyricColumnSelect,
+                handleLyricSectionExpand,
+                handleLyricAnnotationSelect,
+                handleLyricSectionScroll,
+                handleLyricPlay,
+                handleLyricVerseSelect,
+                handleOverviewToggle,
+                handlePopupFocus,
+                handleScoreToggle,
+                handleTipsToggle,
+                handleTitleToggle,
+                handleVerseBarSelect,
+                handleVerseBarWheel,
+                handleVerseElementSelect,
+                handleVerseElementSlide,
+                handleVerseInteractivate,
+                handleWikiToggle,
+                handleCarouselToggle,
+                stopPropagation } = this.props,
+
+            titleToggleHandlers = {
+                handleTitleToggle
             },
 
-            menuFieldHandlers: {
-                audioSectionHandlers,
-                scoresTipsSectionHandlers,
+            annotationPopupHandlers = {
+                handleAnnotationPrevious,
+                handleAnnotationNext,
+                handlePopupContainerClick,
+                handleAnnotationPortalSelect,
+                handleAnnotationWikiSelect
+            },
+
+            audioBannerHandlers = {
+                handleSliderTouchBegin
+            },
+            audioSectionHandlers = {
+                handleAudioPlay,
+                handleAudioPreviousSong,
+                handleAudioNextSong,
+                handleAudioOptionsToggle,
+                handlePopupContainerClick,
+
+                audioBannerHandlers,
                 titleToggleHandlers
+            },
+
+            lyricColumnHandlers = {
+                lyricSectionRef,
+                handleLyricAnnotationSelect,
+                handleLyricColumnSelect,
+                handleLyricSectionExpand,
+                handleLyricSectionScroll,
+                handleLyricPlay,
+                handleLyricVerseSelect,
+                handleVerseBarSelect,
+                handleVerseBarWheel,
+                handleVerseInteractivate,
+                handleVerseElementSelect,
+                handleVerseElementSlide,
+                handleScrollAfterLyricRerender
+            },
+
+            overviewPopupHandlers = {
+                handleOverviewToggle,
+                handlePopupContainerClick
+            },
+
+            scoresTipsSectionHandlers = {
+                handleScoreToggle,
+                handleTipsToggle
+            },
+
+            scorePopupHandlers = {
+                scoreSectionRef,
+                handleScoreToggle,
+                handlePopupFocus
+            },
+
+            titlePopupHandlers = {
+                handleTitleToggle,
+                handlePopupFocus
+            },
+
+            wikiPopupHandlers = {
+                wikiSectionRef,
+                handleWikiToggle,
+                handlePopupFocus
+            },
+
+            mainColumnHandlers = {
+                handleCarouselToggle,
+                handleLyricSectionExpand,
+
+                annotationPopupHandlers,
+                audioBannerHandlers,
+                overviewPopupHandlers,
+                scoresTipsSectionHandlers,
+
+                carouselSectionHandlers: {
+                    handleLyricAnnotationSelect,
+                    handleAnnotationPrevious,
+                    handleAnnotationNext,
+                    handleAnnotationWikiSelect,
+                    handleAnnotationPortalSelect,
+                    handlePopupContainerClick
+                },
+                dotsOverviewToggleSectionHandlers: {
+                    handleDotsSectionToggle,
+                    handleOverviewToggle
+                },
+                dotsSectionHandlers: {
+                    handlePopupContainerClick,
+                    handleDotToggle,
+                    stopPropagation
+                },
+                navSectionHandlers: {
+                    handleNavExpand,
+                    handleNavSongSelect,
+                    handleNavBookSelect
+                },
+
+                menuFieldHandlers: {
+                    audioSectionHandlers,
+                    scoresTipsSectionHandlers,
+                    titleToggleHandlers
+                }
             }
-        }
 
-    return (
-        <div className="live-manager">
-            <div className="column overview-logue-column">
-                <OverviewPopup {...overviewPopupHandlers}
-                    inOverviewSubfield={false}
-                />
-            </div>
-
-            <MainColumn {...mainColumnHandlers} />
-
-            <LyricColumn {...lyricColumnHandlers} />
-
-            <div className="overlay-popup-subfield">
-                <div className="overlay-popup-block audio-popup-block">
-                    <AudioPopup {...audioSectionHandlers} />
-                </div>
-                <div className="overlay-popup-block main-popup-block">
-                    <AnnotationPopup {...annotationPopupHandlers}
-                        isOverlayAnnotation={true}
+        return (
+            <div className="live-manager">
+                <div className="column overview-logue-column">
+                    <OverviewPopup {...overviewPopupHandlers}
+                        inOverviewSubfield={false}
                     />
-                    <TitlePopup {...titlePopupHandlers} />
-                    <ScorePopup {...scorePopupHandlers} />
-                    <WikiPopup {...wikiPopupHandlers} />
+                </div>
+
+                <MainColumn {...mainColumnHandlers} />
+
+                <LyricColumn {...lyricColumnHandlers} />
+
+                <div className="overlay-popup-subfield">
+                    <div className="overlay-popup-block audio-popup-block">
+                        <AudioPopup {...audioSectionHandlers} />
+                    </div>
+                    <div className="overlay-popup-block main-popup-block">
+                        <AnnotationPopup {...annotationPopupHandlers}
+                            isOverlayAnnotation={true}
+                        />
+                        <TitlePopup {...titlePopupHandlers} />
+                        <ScorePopup {...scorePopupHandlers} />
+                        <WikiPopup {...wikiPopupHandlers} />
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 LiveManager.propTypes = {
