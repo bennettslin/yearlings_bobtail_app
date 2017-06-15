@@ -16,6 +16,7 @@ const ScoresTipsSection = ({
     selectedScoreIndex,
     selectedTipsIndex,
 
+    inMenu,
     inSubfield,
     inToggleSection,
 
@@ -35,7 +36,7 @@ const ScoresTipsSection = ({
             (inToggleSection && isDesktop) :
 
             // ...in menu.
-            (!inSubfield && !inToggleSection),
+            inMenu,
 
         showScoreToggleButton = !getIsPhone(deviceIndex)
 
@@ -62,6 +63,7 @@ const ScoresTipsSection = ({
 }
 
 ScoresTipsSection.defaultProps = {
+    inMenu: false,
     inSubfield: false,
     inToggleSection: false
 }
@@ -74,6 +76,7 @@ ScoresTipsSection.propTypes = {
     selectedTipsIndex: PropTypes.number.isRequired,
 
     // From parent.
+    inMenu: PropTypes.bool.isRequired,
     inSubfield: PropTypes.bool.isRequired,
     inToggleSection: PropTypes.bool.isRequired,
     handleScoreToggle: PropTypes.func.isRequired,

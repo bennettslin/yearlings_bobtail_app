@@ -58,3 +58,16 @@ body {
     // FIXME: Temp styling, of course.
     background-color: #bbb;
 }
+
+/**
+ * Don't bother to show if not in phone. Child component also will not be
+ * rendered.
+ */
+.audio-banner-custom-subfield {
+    display: none;
+}
+.phone-width {
+    .audio-banner-custom-subfield {
+        display: block;
+    }
+}

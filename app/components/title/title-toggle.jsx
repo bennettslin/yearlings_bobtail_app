@@ -8,34 +8,46 @@ import { TITLE_TOGGLE_KEY } from '../../constants/access'
 
 const TitleToggle = ({
 
-    // From props.
+    isTitleInAudio,
     selectedTitleIndex,
+
+    inMenu,
     handleTitleToggle
 
-}) => (
-    <div className="section title-toggle">
-        <div className="title-toggle-button-container">
-            <Button
-                isCustomShape={true}
-                isCustomSize={true}
-                accessKey={TITLE_TOGGLE_KEY}
-                handleClick={handleTitleToggle}
-                iconText={selectedTitleIndex}
-            />
+}) => {
+    return inMenu !== isTitleInAudio && (
+        <div className="section title-toggle">
+            <div className="title-toggle-button-container">
+                <Button
+                    isCustomShape={true}
+                    isCustomSize={true}
+                    accessKey={TITLE_TOGGLE_KEY}
+                    handleClick={handleTitleToggle}
+                    iconText={selectedTitleIndex}
+                />
+            </div>
         </div>
-    </div>
-)
+    )
+}
+
+TitleToggle.defaultProps = {
+    inMenu: false
+}
 
 TitleToggle.propTypes = {
     // Through Redux.
+    isTitleInAudio: PropTypes.bool.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
+    inMenu: PropTypes.bool.isRequired,
     handleTitleToggle: PropTypes.func.isRequired
 }
 
 export default connect(({
+    isTitleInAudio,
     selectedTitleIndex
 }) => ({
+    isTitleInAudio,
     selectedTitleIndex
 }))(TitleToggle)

@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Take care of margin right in menu when scores tips is not shown.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Figure out why shouldComponentUpdate is broken in dom manager.`,
         workedHours: 0,
         neededHours: 1
