@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import Drawing from './Drawing'
 import NotesSection from './notes/notes-section'
 import StatsSection from './stats/stats-section'
@@ -61,4 +62,8 @@ const SharedView = ({
     </div>
 )
 
-export default Shared
+export default connect(({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+}))(Shared)

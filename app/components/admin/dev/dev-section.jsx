@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 /*************
  * CONTAINER *
@@ -49,4 +50,8 @@ const DevSectionView = ({
     </div>
 )
 
-export default DevSection
+export default connect(({
+    selectedVerseIndex
+}) => ({
+    selectedVerseIndex
+}))(DevSection)

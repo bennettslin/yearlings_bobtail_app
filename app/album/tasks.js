@@ -39,11 +39,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Admin can't change songs, probably because of shouldComponentUpdate`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Day bug.
     {
@@ -105,7 +100,7 @@ module.exports = [
 
     // Full day tasks.
     {
-        taskName: `Perf!`,
+        taskName: `Optimise shouldComponentUpdate.`,
         workedHours: 0,
         neededHours: 8
     },
@@ -2273,6 +2268,11 @@ module.exports = [
     },
     {
         taskName: `Create empty component less files.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Admin can't change songs, probably because of shouldComponentUpdate`,
         workedHours: 1,
         neededHours: 1
     }

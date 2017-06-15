@@ -32,15 +32,6 @@ const AdminManager = ({
 const AdminManagerView = ({
 
     // From props.
-    deviceIndex,
-    windowWidth,
-    windowHeight,
-    selectedScoreIndex,
-    selectedSongIndex,
-    selectedVerseIndex,
-    selectedNavIndex,
-    selectedDotsIndex,
-
     handleNavSongSelect,
 
     // From controller.
@@ -51,26 +42,13 @@ const AdminManagerView = ({
     return (
         <div className="admin-column">
             <div className="admin-field album-admin-field">
-                <DevSection
-                    deviceIndex={deviceIndex}
-                    windowWidth={windowWidth}
-                    windowHeight={windowHeight}
-                    selectedScoreIndex={selectedScoreIndex}
-                    selectedSongIndex={selectedSongIndex}
-                    selectedVerseIndex={selectedVerseIndex}
-                    selectedNavIndex={selectedNavIndex}
-                    selectedDotsIndex={selectedDotsIndex}
-                />
+                <DevSection />
                 <AdminNavSection
                     allTasks={allTasks}
-                    selectedSongIndex={selectedSongIndex}
                     handleNavSongSelect={handleNavSongSelect}
                 />
             </div>
-            <Shared {...other}
-                selectedSongIndex={selectedSongIndex}
-                selectedVerseIndex={selectedVerseIndex}
-            />
+            <Shared {...other} />
         </div>
     )
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import AdminNavRow from './admin-nav-row'
 
@@ -25,10 +26,17 @@ const AdminNavItem = ({
 }
 
 AdminNavItem.propTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
     index: PropTypes.number,
     isToggle: PropTypes.bool,
     hasSelectedSong: PropTypes.bool,
-    selectedSongIndex: PropTypes.number.isRequired
 }
 
-export default AdminNavItem
+export default connect(({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+}))(AdminNavItem)
