@@ -12,7 +12,7 @@ import { getAnnotationObject,
          getAnnotationDotKeys,
          getAnnotationsCount } from './data-helper'
 import { intersects } from './dot-helper'
-import { getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
+import { getIsPhone, getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
 
 export const shouldShowAnnotationForColumn = ({
 
@@ -456,12 +456,32 @@ export const getShowOverlay = ({
     selectedWikiIndex
 }) => {
     const isOverlayingAnnotation = getIsOverlayingAnnotation({
-        deviceIndex,
-        isLyricExpanded
-    })
+            deviceIndex,
+            isLyricExpanded
+        })
 
     return !!selectedTitleIndex ||
            !!selectedScoreIndex ||
            !!selectedWikiIndex ||
            (!!selectedAnnotationIndex && isOverlayingAnnotation)
+}
+
+export const getIsTimerInAudio = ({
+    deviceIndex,
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex
+}) => {
+    const showOverlay = getShowOverlay({
+            deviceIndex,
+            isLyricExpanded,
+            selectedAnnotationIndex,
+            selectedScoreIndex,
+            selectedTitleIndex,
+            selectedWikiIndex
+        })
+
+    return showOverlay && getIsPhone(deviceIndex)
 }

@@ -8,6 +8,7 @@ import AudioButtons from './audio-buttons'
 import AudioTimer from './audio-timer'
 import TitleToggle from '../title/title-toggle'
 import { getSongsCount } from '../../helpers/data-helper'
+import { getIsTimerInAudio } from '../../helpers/logic-helper'
 import { getIsPhone } from '../../helpers/responsive-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
@@ -24,7 +25,12 @@ class AudioSection extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'deviceIndex',
-                    'isTimerInAudio',
+                    'isLyricExpanded',
+                    'selectedAnnotationIndex',
+                    'selectedScoreIndex',
+                    'selectedTitleIndex',
+                    'selectedWikiIndex',
+                    'selectedSongIndex',
                     'isTitleInAudio',
                     'selectedSongIndex'
                 ]
@@ -67,14 +73,27 @@ AudioSection.propTypes = {
 const AudioSectionView = ({
 
     deviceIndex,
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex,
     isTitleInAudio,
-    isTimerInAudio,
     audioBannerHandlers,
     titleToggleHandlers,
 
 ...other }) => {
 
-    const isPhone = getIsPhone(deviceIndex)
+    const isPhone = getIsPhone(deviceIndex),
+
+        isTimerInAudio = getIsTimerInAudio({
+                deviceIndex,
+                isLyricExpanded,
+                selectedAnnotationIndex,
+                selectedScoreIndex,
+                selectedTitleIndex,
+                selectedWikiIndex
+        })
 
     return (
         <div
@@ -102,27 +121,37 @@ const AudioSectionView = ({
     )
 }
 
-AudioSectionView.defaultProps = {
-    isTimerInAudio: false
-}
-
 AudioSectionView.propTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
+    isLyricExpanded: PropTypes.bool.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    selectedScoreIndex: PropTypes.number.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
+    selectedWikiIndex: PropTypes.number.isRequired,
     isTitleInAudio: PropTypes.bool.isRequired,
 
     // From parent.
-    isTimerInAudio: PropTypes.bool.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
     titleToggleHandlers: PropTypes.object.isRequired
 }
 
 export default connect(({
     deviceIndex,
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex,
     selectedSongIndex,
     isTitleInAudio
 }) => ({
     deviceIndex,
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex,
     selectedSongIndex,
     isTitleInAudio
 }))(AudioSection)

@@ -7,7 +7,6 @@ import Popup from '../popup/popup'
 import AudioSection from './audio-section'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 import { getShowOverlay } from '../../helpers/logic-helper'
-import { getIsPhone } from '../../helpers/responsive-helper'
 
 /*************
  * CONTAINER *
@@ -52,12 +51,8 @@ class AudioPopup extends Component {
                 selectedWikiIndex
             }),
 
-            isTimerInAudio = showOverlay && getIsPhone(deviceIndex),
-
             myChild = (
-                <AudioSection {...other}
-                    isTimerInAudio={isTimerInAudio}
-                />
+                <AudioSection {...other} />
             )
 
         return (
