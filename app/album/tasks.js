@@ -10,11 +10,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Keep styles with components.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Lyrics and carousel take their time to render when song is changed.`,
         workedHours: 0,
         neededHours: 3
@@ -92,17 +87,6 @@ module.exports = [
     },
     {
         taskName: `Overview comes in from behind carousel.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Show selected annotation in carousel on load.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `get logue status from song itself?`,
         workedHours: 0,
         neededHours: 1
     },
@@ -2287,4 +2271,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Create empty component less files.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

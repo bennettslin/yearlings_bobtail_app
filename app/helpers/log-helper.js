@@ -18,11 +18,9 @@ export default {
         const selectedSong = getSongObject(props.selectedSongIndex),
             copiedSong = Object.assign({}, selectedSong)
 
-        if (!copiedSong.logue) {
-            copiedSong.lyrics = `lyrics: ${copiedSong.lyrics.length}`
-            copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
-            copiedSong.verseTimes = `verseTimes: ${copiedSong.verseTimes.length}`
-        }
+        // copiedSong.lyrics = `lyrics: ${copiedSong.lyrics.length}`
+        // copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
+        // copiedSong.verseTimes = `verseTimes: ${copiedSong.verseTimes.length}`
 
         // copiedSong.stanzaTimes = `stanzaTimes: ${copiedSong.stanzaTimes.length}`
         copiedSong.tasks = `tasks: ${copiedSong.tasks.length}`

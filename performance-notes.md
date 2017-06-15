@@ -7,15 +7,13 @@ Phase 0: (/)
 * Prop types for all dom components. (/)
 
 Phase 1:
-* Don't bind arguments. Instead call an instance method in a React component.
-* Have React components have no knowledge of selected indices, only their own.
-* Components know to render themselves.
+* Don't bind arguments. Instead call an instance method in a React component. (/)
+* Have React components have no knowledge of selected indices, only their own. (/)
+* Components know to render themselves. (/)
 
 Phase 2:
 * Be strategic about shouldComponentUpdate checks.
 * Avoid shouldComponentUpdate if possible.
 
 Phase 3:
-* Avoid passing data objects if they can be fetched by indices.
-
-* Avoid hiddenLyricColumnKey ?
+* Avoid passing data objects if they can be fetched by indices. (/)
