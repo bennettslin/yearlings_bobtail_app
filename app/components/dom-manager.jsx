@@ -16,47 +16,8 @@ import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongIsLogue } from '../helpers/data-helper'
 import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logic-helper'
 import { getIsDesktop, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
-import { getComponentShouldUpdate } from '../helpers/general-helper'
 
 class DomManager extends Component {
-
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'deviceIndex',
-                    'interactivatedVerseIndex',
-                    'selectedAccessIndex',
-                    'selectedAdminIndex',
-                    'selectedAnnotationIndex',
-                    'selectedCarouselIndex',
-                    'selectedDotKeys',
-                    'selectedDotsIndex',
-                    'selectedLyricColumnIndex',
-                    'selectedNavIndex',
-                    'selectedOverviewIndex',
-                    'selectedScoreIndex',
-                    'selectedSongIndex',
-                    'selectedTitleIndex',
-                    'selectedWikiIndex',
-                    'isPlaying',
-                    'isSliderMoving',
-                    'isLyricExpanded',
-                    'showOneOfTwoLyricColumns',
-                    'isHeightlessLyricColumn',
-                    'showShrunkNavIcon',
-                    'isScoresTipsInMain',
-                    'isTitleInAudio',
-                    'isVerseBarAbove',
-                    'isVerseBarBelow'
-                ]
-            })
-
-        // FIXME: Not sure why this is not updating singleShownLyricColumnKey.
-        return componentShouldUpdate || true
-    }
 
     render() {
         const { deviceIndex,

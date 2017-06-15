@@ -1,4 +1,7 @@
-// Component that routes event handlers to their components. Knows no state.
+/**
+ * Component that routes event handlers to their components. Knows no state, so
+ * should not update.
+ */
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'

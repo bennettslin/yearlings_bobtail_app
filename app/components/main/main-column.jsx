@@ -1,4 +1,7 @@
-// Column to show all sections, excluding lyrics and popups.
+/**
+ * Column to show all sections, excluding lyrics and popups. Knows no state, so
+ * should not update.
+ */
 
 import React from 'react'
 import PropTypes from 'prop-types'

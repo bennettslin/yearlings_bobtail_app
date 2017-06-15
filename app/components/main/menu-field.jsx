@@ -1,4 +1,7 @@
-// Field for title toggle, audio section, and scores and tips section.
+/**
+ * Field for title toggle, audio section, and scores and tips section. Knows no
+ * state, so should not update.
+ */
 
 import React from 'react'
 import PropTypes from 'prop-types'
