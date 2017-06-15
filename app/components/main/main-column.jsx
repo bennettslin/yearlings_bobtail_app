@@ -5,12 +5,14 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import MenuField from './menu-field'
 import NavSection from '../nav/nav-section'
+import AnnotationPopup from '../annotation/annotation-popup'
 import AudioBanner from '../audio/audio-banner'
 import CarouselToggle from '../carousel/carousel-toggle'
 import CarouselSection from '../carousel/carousel-section'
 import DotsSection from '../dots/dots-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
 import LyricToggle from '../lyric/lyric-toggle'
+import OverviewPopup from '../overview/overview-popup'
 import { getIsPhone, getIsDesktop } from '../../helpers/responsive-helper'
 
 const MainColumn = ({
@@ -24,16 +26,16 @@ const MainColumn = ({
     handleLyricSectionExpand,
     handleOverviewToggle,
 
-    annotationPopupChild,
     audioBannerHandlers,
     audioSectionHandlers,
     dotsSectionHandlers,
-    overviewPopupChild,
     scoresTipsSectionChild,
     titleToggleHandlers,
 
+    annotationPopupHandlers,
     carouselSectionHandlers,
-    navSectionHandlers
+    navSectionHandlers,
+    overviewPopupHandlers
 
 }) => {
     const isPhone = getIsPhone(deviceIndex),
@@ -56,7 +58,9 @@ const MainColumn = ({
 
                 <div className="field popup-field">
                     <div className="subfield annotation-subfield">
-                        {annotationPopupChild}
+                        <AnnotationPopup {...annotationPopupHandlers}
+                            isOverlayAnnotation={false}
+                        />
                     </div>
                 </div>
 
@@ -68,7 +72,9 @@ const MainColumn = ({
                         }
                     />
                     <div className="overview-popup-container">
-                        {overviewPopupChild}
+                        <OverviewPopup {...overviewPopupHandlers}
+                            inOverviewSubfield={true}
+                        />
                     </div>
 
                     <LyricToggle
@@ -108,15 +114,15 @@ MainColumn.propTypes = {
     handleLyricSectionExpand: PropTypes.func.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired,
 
-    annotationPopupChild: PropTypes.element.isRequired,
-    overviewPopupChild: PropTypes.element.isRequired,
     scoresTipsSectionChild: PropTypes.element.isRequired,
 
+    annotationPopupHandlers: PropTypes.object.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
     audioSectionHandlers: PropTypes.object.isRequired,
     carouselSectionHandlers: PropTypes.object.isRequired,
     dotsSectionHandlers: PropTypes.object.isRequired,
     navSectionHandlers: PropTypes.object.isRequired,
+    overviewPopupHandlers: PropTypes.object.isRequired,
     titleToggleHandlers: PropTypes.object.isRequired
 }
 

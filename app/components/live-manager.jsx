@@ -2,7 +2,6 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 import MainColumn from './main/main-column'
 import LyricColumn from './lyric/lyric-column'
 import ScoresTipsSection from './main/scores-tips-section'
@@ -58,9 +57,7 @@ const LiveManager = ({
 
 }) => {
 
-    const
-
-        titleToggleHandlers = {
+    const titleToggleHandlers = {
             handleTitleToggle
         },
 
@@ -86,7 +83,6 @@ const LiveManager = ({
             titleToggleHandlers
         },
 
-        // TODO: Main can get this directly.
         dotsSectionHandlers = {
             handlePopupContainerClick,
             handleDotToggle,
@@ -143,6 +139,7 @@ const LiveManager = ({
             handleOverviewToggle,
             handleTipsToggle,
 
+            annotationPopupHandlers,
             audioBannerHandlers,
             audioSectionHandlers,
             dotsSectionHandlers,
@@ -160,29 +157,18 @@ const LiveManager = ({
                 handleNavSongSelect,
                 handleNavBookSelect
             },
+            overviewPopupHandlers,
             titleToggleHandlers
         }
 
     return (
-        <div className={classnames(
-            'live-manager'
-        )}>
+        <div className="live-manager">
             <div className="column overview-logue-column">
                 <OverviewPopup {...overviewPopupHandlers}
                     inOverviewSubfield={false}
                 />
             </div>
             <MainColumn {...mainColumnHandlers}
-                annotationPopupChild={
-                    <AnnotationPopup {...annotationPopupHandlers}
-                        isOverlayAnnotation={false}
-                    />
-                }
-                overviewPopupChild={
-                    <OverviewPopup {...overviewPopupHandlers}
-                        inOverviewSubfield={true}
-                    />
-                }
                 scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionHandlers} /> }
             />
 
