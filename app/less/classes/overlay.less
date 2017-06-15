@@ -93,12 +93,20 @@
 // Styling for overlaid audio in phone, which has timer in audio section.
 .phone-width {
     &.overlay-shown {
+
+        .audio-banner-custom-subfield {
+            top: -@menu-height - @audio-banner-custom-subfield-height - 2 * @audio-banner-custom-subfield-padding;
+        }
+
         .overlay-popup-subfield {
 
             @banner-margin: 5px;
 
             .audio-section {
                 align-items: flex-start;
+            }
+
+            .audio-section, .audio-popup-block {
                 height: @app-icon-diameter * 2 + @banner-margin;
             }
 
@@ -139,14 +147,6 @@
             top: -@menu-height;
         }
 
-        .audio-banner-custom-subfield {
-            top: -@menu-height - @audio-banner-custom-subfield-height - 2 * @audio-banner-custom-subfield-padding;
-        }
-    }
-}
-
-.phone-width {
-    &.overlay-shown {
         .audio-banner-custom-subfield {
             top: -@menu-height - @audio-banner-custom-subfield-height - 2 * @audio-banner-custom-subfield-padding;
         }

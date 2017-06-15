@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Annotation popup container is wrong height in phone.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Lyrics and carousel take their time to render when song is changed.`,
         workedHours: 0,
         neededHours: 3
@@ -2273,6 +2268,11 @@ module.exports = [
     },
     {
         taskName: `Admin can't change songs, probably because of shouldComponentUpdate`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Annotation popup container is wrong height in phone.`,
         workedHours: 1,
         neededHours: 1
     }
