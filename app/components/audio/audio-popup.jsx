@@ -26,8 +26,7 @@ class AudioPopup extends Component {
                     'selectedAnnotationIndex',
                     'selectedScoreIndex',
                     'selectedTitleIndex',
-                    'selectedWikiIndex',
-                    'isTimerInAudio'
+                    'selectedWikiIndex'
                 ]
             })
 
