@@ -43,7 +43,6 @@ class DomManager extends Component {
                     'selectedWikiIndex',
                     'isPlaying',
                     'isSliderMoving',
-
                     'isLyricExpanded',
                     'showOneOfTwoLyricColumns',
                     'isHeightlessLyricColumn',

@@ -5,10 +5,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import MainColumn from './main/main-column'
 import LyricColumn from './lyric/lyric-column'
-import AudioSection from './audio/audio-section'
-import DotsSection from './dots/dots-section'
 import ScoresTipsSection from './main/scores-tips-section'
-import TitleToggle from './title/title-toggle'
 import AudioPopup from './audio/audio-popup'
 import OverviewPopup from './overview/overview-popup'
 import AnnotationPopup from './annotation/annotation-popup'
@@ -62,13 +59,12 @@ const LiveManager = ({
 }) => {
 
     const
-        titleToggleChild = (
-            <TitleToggle
-                handleTitleToggle={handleTitleToggle}
-            />
-        ),
 
-        annotationPopupProps = {
+        titleToggleHandlers = {
+            handleTitleToggle
+        },
+
+        annotationPopupHandlers = {
             handleAnnotationPrevious,
             handleAnnotationNext,
             handlePopupContainerClick,
@@ -76,31 +72,28 @@ const LiveManager = ({
             handleAnnotationWikiSelect
         },
 
-        audioBannerProps = {
+        audioBannerHandlers = {
             handleSliderTouchBegin
         },
-        audioSectionProps = {
+        audioSectionHandlers = {
             handleAudioPlay,
             handleAudioPreviousSong,
             handleAudioNextSong,
             handleAudioOptionsToggle,
             handlePopupContainerClick,
-            audioBannerProps
+
+            audioBannerHandlers,
+            titleToggleHandlers
         },
-        audioSectionMenuChild = (
-            <AudioSection {...audioSectionProps}
-                titleToggleChild={titleToggleChild}
-            />
-        ),
 
         // TODO: Main can get this directly.
-        dotsSectionProps = {
+        dotsSectionHandlers = {
             handlePopupContainerClick,
             handleDotToggle,
             stopPropagation
         },
 
-        lyricColumnProps = {
+        lyricColumnHandlers = {
             lyricSectionRef,
             handleLyricAnnotationSelect,
             handleLyricColumnSelect,
@@ -116,19 +109,45 @@ const LiveManager = ({
             handleScrollAfterLyricRerender
         },
 
-        mainColumnProps = {
+        overviewPopupHandlers = {
+            handleOverviewToggle,
+            handlePopupContainerClick
+        },
+
+        scoresTipsSectionHandlers = {
+            handleScoreToggle,
+            handleTipsToggle
+        },
+
+        scorePopupHandlers = {
+            scoreSectionRef,
+            handleScoreToggle,
+            handlePopupFocus
+        },
+
+        titlePopupHandlers = {
+            handleTitleToggle,
+            handlePopupFocus
+        },
+
+        wikiPopupHandlers = {
+            wikiSectionRef,
+            handleWikiToggle,
+            handlePopupFocus
+        },
+
+        mainColumnHandlers = {
             handleCarouselToggle,
             handleDotsSectionToggle,
             handleLyricSectionExpand,
             handleOverviewToggle,
             handleTipsToggle,
 
-            audioSectionMenuChild,
-            titleToggleChild,
+            audioBannerHandlers,
+            audioSectionHandlers,
+            dotsSectionHandlers,
 
-            audioBannerProps,
-
-            carouselSectionProps: {
+            carouselSectionHandlers: {
                 handleLyricAnnotationSelect,
                 handleAnnotationPrevious,
                 handleAnnotationNext,
@@ -136,39 +155,12 @@ const LiveManager = ({
                 handleAnnotationPortalSelect,
                 handlePopupContainerClick
             },
-
-            navSectionProps: {
+            navSectionHandlers: {
                 handleNavExpand,
                 handleNavSongSelect,
                 handleNavBookSelect
-            }
-        },
-
-        overviewPopupProps = {
-            handleOverviewToggle,
-            handlePopupContainerClick
-        },
-
-        scoresTipsSectionProps = {
-            handleScoreToggle,
-            handleTipsToggle
-        },
-
-        scorePopupProps = {
-            scoreSectionRef,
-            handleScoreToggle,
-            handlePopupFocus
-        },
-
-        titlePopupProps = {
-            handleTitleToggle,
-            handlePopupFocus
-        },
-
-        wikiPopupProps = {
-            wikiSectionRef,
-            handleWikiToggle,
-            handlePopupFocus
+            },
+            titleToggleHandlers
         }
 
     return (
@@ -176,41 +168,38 @@ const LiveManager = ({
             'live-manager'
         )}>
             <div className="column overview-logue-column">
-                <OverviewPopup {...overviewPopupProps}
+                <OverviewPopup {...overviewPopupHandlers}
                     inOverviewSubfield={false}
-                    // overviewIndex={overviewLogueIndex}
                 />
             </div>
-            <MainColumn {...mainColumnProps}
+            <MainColumn {...mainColumnHandlers}
                 annotationPopupChild={
-                    <AnnotationPopup {...annotationPopupProps}
+                    <AnnotationPopup {...annotationPopupHandlers}
                         isOverlayAnnotation={false}
                     />
                 }
-                dotsSectionChild={ <DotsSection {...dotsSectionProps} /> }
                 overviewPopupChild={
-                    <OverviewPopup {...overviewPopupProps}
+                    <OverviewPopup {...overviewPopupHandlers}
                         inOverviewSubfield={true}
-                        // overviewIndex={overviewSongIndex}
                     />
                 }
-                scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
+                scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionHandlers} /> }
             />
 
-            <LyricColumn {...lyricColumnProps} />
+            <LyricColumn {...lyricColumnHandlers} />
 
             {
                 <div className="overlay-popup-subfield">
                     <div className="overlay-popup-block audio-popup-block">
-                        <AudioPopup {...audioSectionProps} />
+                        <AudioPopup {...audioSectionHandlers} />
                     </div>
                     <div className="overlay-popup-block main-popup-block">
-                        <AnnotationPopup {...annotationPopupProps}
+                        <AnnotationPopup {...annotationPopupHandlers}
                             isOverlayAnnotation={true}
                         />
-                        <TitlePopup {...titlePopupProps} />
-                        <ScorePopup {...scorePopupProps} />
-                        <WikiPopup {...wikiPopupProps} />
+                        <TitlePopup {...titlePopupHandlers} />
+                        <ScorePopup {...scorePopupHandlers} />
+                        <WikiPopup {...wikiPopupHandlers} />
                     </div>
                 </div>
             }

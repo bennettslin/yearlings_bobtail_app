@@ -8,6 +8,7 @@ import NavSection from '../nav/nav-section'
 import AudioBanner from '../audio/audio-banner'
 import CarouselToggle from '../carousel/carousel-toggle'
 import CarouselSection from '../carousel/carousel-section'
+import DotsSection from '../dots/dots-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
 import LyricToggle from '../lyric/lyric-toggle'
 import { getIsPhone, getIsDesktop } from '../../helpers/responsive-helper'
@@ -24,30 +25,28 @@ const MainColumn = ({
     handleOverviewToggle,
 
     annotationPopupChild,
-    audioBannerProps,
-    audioSectionMenuChild,
-    dotsSectionChild,
+    audioBannerHandlers,
+    audioSectionHandlers,
+    dotsSectionHandlers,
     overviewPopupChild,
     scoresTipsSectionChild,
-    titleToggleChild,
+    titleToggleHandlers,
 
-    carouselSectionProps,
-    navSectionProps
+    carouselSectionHandlers,
+    navSectionHandlers
 
 }) => {
     const isPhone = getIsPhone(deviceIndex),
         isDesktop = getIsDesktop(deviceIndex),
 
         menuFieldProps = {
-            audioSectionMenuChild,
+            audioSectionHandlers,
             scoresTipsSectionChild,
-            titleToggleChild
+            titleToggleHandlers
         },
         dotsOverviewToggleSectionProps = {
             handleDotsSectionToggle,
-            handleOverviewToggle,
-
-            dotsSectionChild
+            handleOverviewToggle
         }
 
     return (
@@ -62,7 +61,7 @@ const MainColumn = ({
                 </div>
 
                 <div className="subfield dots-overview-subfield">
-                    <CarouselSection {...carouselSectionProps} />
+                    <CarouselSection {...carouselSectionHandlers} />
                     <DotsOverviewToggleSection {...dotsOverviewToggleSectionProps}
                         scoresTipsSectionChild={
                             (isDesktop && isScoresTipsInMain) ? scoresTipsSectionChild : null
@@ -77,14 +76,14 @@ const MainColumn = ({
                     />
 
                     <div className="dots-subfield">
-                        {dotsSectionChild}
+                        <DotsSection {...dotsSectionHandlers} />
                     </div>
                     {(!isDesktop && isScoresTipsInMain) ? scoresTipsSectionChild : null}
                 </div>
 
                 {isPhone &&
                     <div className="audio-banner-custom-subfield">
-                        <AudioBanner {...audioBannerProps} />
+                        <AudioBanner {...audioBannerHandlers} />
                     </div>
                 }
 
@@ -92,7 +91,7 @@ const MainColumn = ({
                     handleCarouselToggle={handleCarouselToggle}
                 />
 
-                <NavSection {...navSectionProps} />
+                <NavSection {...navSectionHandlers} />
             </div>
         </div>
     )
@@ -110,15 +109,15 @@ MainColumn.propTypes = {
     handleOverviewToggle: PropTypes.func.isRequired,
 
     annotationPopupChild: PropTypes.element.isRequired,
-    audioSectionMenuChild: PropTypes.element.isRequired,
-    dotsSectionChild: PropTypes.element.isRequired,
     overviewPopupChild: PropTypes.element.isRequired,
     scoresTipsSectionChild: PropTypes.element.isRequired,
-    titleToggleChild: PropTypes.element.isRequired,
 
-    audioBannerProps: PropTypes.object.isRequired,
-    carouselSectionProps: PropTypes.object.isRequired,
-    navSectionProps: PropTypes.object.isRequired
+    audioBannerHandlers: PropTypes.object.isRequired,
+    audioSectionHandlers: PropTypes.object.isRequired,
+    carouselSectionHandlers: PropTypes.object.isRequired,
+    dotsSectionHandlers: PropTypes.object.isRequired,
+    navSectionHandlers: PropTypes.object.isRequired,
+    titleToggleHandlers: PropTypes.object.isRequired
 }
 
 export default connect(({

@@ -3,25 +3,27 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import AudioSection from '../audio/audio-section'
+import TitleToggle from '../title/title-toggle'
 
 const MenuField = ({
 
     isTitleInAudio,
     isScoresTipsInMain,
-    audioSectionMenuChild,
+    audioSectionHandlers,
     scoresTipsSectionChild,
-    titleToggleChild
+    titleToggleHandlers
 
 }) => (
     <div className="field menu-field">
 
         {!isTitleInAudio &&
             <div className="menu-subfield title-menu-subfield">
-                {titleToggleChild}
+                <TitleToggle {...titleToggleHandlers} />
             </div>
         }
         <div className="menu-subfield audio-subfield">
-            {audioSectionMenuChild}
+            <AudioSection {...audioSectionHandlers} />
         </div>
         {!isScoresTipsInMain &&
             <div className="menu-subfield scores-tips-menu-subfield">
@@ -37,9 +39,9 @@ MenuField.propTypes = {
     isScoresTipsInMain: PropTypes.bool.isRequired,
 
     // From parent.
-    audioSectionMenuChild: PropTypes.element.isRequired,
+    audioSectionHandlers: PropTypes.object.isRequired,
     scoresTipsSectionChild: PropTypes.element.isRequired,
-    titleToggleChild: PropTypes.element.isRequired
+    titleToggleHandlers: PropTypes.object.isRequired
 }
 
 export default connect(({
