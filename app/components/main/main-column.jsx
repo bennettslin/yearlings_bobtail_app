@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import MenuField from './menu-field'
 import NavSection from '../nav/nav-section'
+import AudioBanner from '../audio/audio-banner'
 import CarouselToggle from '../carousel/carousel-toggle'
 import CarouselSection from '../carousel/carousel-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
@@ -23,7 +24,7 @@ const MainColumn = ({
     handleOverviewToggle,
 
     annotationPopupChild,
-    audioBannerChild,
+    audioBannerProps,
     audioSectionMenuChild,
     dotsSectionChild,
     overviewPopupChild,
@@ -83,7 +84,7 @@ const MainColumn = ({
 
                 {isPhone &&
                     <div className="audio-banner-custom-subfield">
-                        {audioBannerChild}
+                        <AudioBanner {...audioBannerProps} />
                     </div>
                 }
 
@@ -109,13 +110,13 @@ MainColumn.propTypes = {
     handleOverviewToggle: PropTypes.func.isRequired,
 
     annotationPopupChild: PropTypes.element.isRequired,
-    audioBannerChild: PropTypes.element.isRequired,
     audioSectionMenuChild: PropTypes.element.isRequired,
     dotsSectionChild: PropTypes.element.isRequired,
     overviewPopupChild: PropTypes.element.isRequired,
     scoresTipsSectionChild: PropTypes.element.isRequired,
     titleToggleChild: PropTypes.element.isRequired,
 
+    audioBannerProps: PropTypes.object.isRequired,
     carouselSectionProps: PropTypes.object.isRequired,
     navSectionProps: PropTypes.object.isRequired
 }

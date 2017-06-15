@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Organise dom and live manager better.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Lyrics and carousel take their time to render when song is changed.`,
         workedHours: 0,
         neededHours: 3
@@ -2269,6 +2264,11 @@ module.exports = [
     },
     {
         taskName: `Carousel annotation hiding mechanism is broken because of changed column key, and possibly moved classes.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Organise dom and live manager better.`,
         workedHours: 1,
         neededHours: 1
     }

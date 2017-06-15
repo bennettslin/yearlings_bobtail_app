@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import AudioBanner from './audio-banner'
 import AudioButtons from './audio-buttons'
 import AudioTimer from './audio-timer'
 import { getSongsCount } from '../../helpers/data-helper'
@@ -67,7 +68,7 @@ const AudioSectionView = ({
     deviceIndex,
     isTitleInAudio,
     isTimerInAudio,
-    audioBannerChild,
+    audioBannerProps,
     titleToggleChild,
 
 ...other }) => {
@@ -87,7 +88,9 @@ const AudioSectionView = ({
             {isTitleInAudio && titleToggleChild}
 
             {/* In phone, show banner in the overlaid audio section. */}
-            {(!isPhone || isTimerInAudio) && audioBannerChild}
+            {(!isPhone || isTimerInAudio) && (
+                <AudioBanner {...audioBannerProps} />
+            )}
 
             <AudioButtons {...other} />
         </div>
@@ -105,7 +108,7 @@ AudioSectionView.propTypes = {
 
     // From parent.
     isTimerInAudio: PropTypes.bool.isRequired,
-    audioBannerChild: PropTypes.element.isRequired,
+    audioBannerProps: PropTypes.object.isRequired,
     titleToggleChild: PropTypes.element
 }
 

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import MainColumn from './main/main-column'
 import LyricColumn from './lyric/lyric-column'
-import AudioBanner from './audio/audio-banner'
 import AudioSection from './audio/audio-section'
 import DotsSection from './dots/dots-section'
 import ScoresTipsSection from './main/scores-tips-section'
@@ -76,18 +75,17 @@ const LiveManager = ({
             handleAnnotationPortalSelect,
             handleAnnotationWikiSelect
         },
-        audioBannerChild = (
-            <AudioBanner
-                handleSliderTouchBegin={handleSliderTouchBegin}
-            />
-        ),
+
+        audioBannerProps = {
+            handleSliderTouchBegin
+        },
         audioSectionProps = {
             handleAudioPlay,
             handleAudioPreviousSong,
             handleAudioNextSong,
             handleAudioOptionsToggle,
             handlePopupContainerClick,
-            audioBannerChild
+            audioBannerProps
         },
         audioSectionMenuChild = (
             <AudioSection {...audioSectionProps}
@@ -125,9 +123,10 @@ const LiveManager = ({
             handleOverviewToggle,
             handleTipsToggle,
 
-            audioBannerChild,
             audioSectionMenuChild,
             titleToggleChild,
+
+            audioBannerProps,
 
             carouselSectionProps: {
                 handleLyricAnnotationSelect,
