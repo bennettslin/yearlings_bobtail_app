@@ -1,8 +1,7 @@
-// Component that shows all user-facing UI.
+// Component that routes event handlers to their components. Knows no state.
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import classnames from 'classnames'
 import MainColumn from './main/main-column'
 import LyricColumn from './lyric/lyric-column'
@@ -19,9 +18,6 @@ import TitlePopup from './title/title-popup'
 import WikiPopup from './wiki/wiki-popup'
 
 const LiveManager = ({
-
-    overviewLogueIndex,
-    overviewSongIndex,
 
     lyricSectionRef,
     scoreSectionRef,
@@ -183,7 +179,7 @@ const LiveManager = ({
             <div className="column overview-logue-column">
                 <OverviewPopup {...overviewPopupProps}
                     inOverviewSubfield={false}
-                    overviewIndex={overviewLogueIndex}
+                    // overviewIndex={overviewLogueIndex}
                 />
             </div>
             <MainColumn {...mainColumnProps}
@@ -196,7 +192,7 @@ const LiveManager = ({
                 overviewPopupChild={
                     <OverviewPopup {...overviewPopupProps}
                         inOverviewSubfield={true}
-                        overviewIndex={overviewSongIndex}
+                        // overviewIndex={overviewSongIndex}
                     />
                 }
                 scoresTipsSectionChild={ <ScoresTipsSection {...scoresTipsSectionProps} /> }
@@ -224,10 +220,6 @@ const LiveManager = ({
 }
 
 LiveManager.propTypes = {
-    // Through Redux.
-    overviewLogueIndex: PropTypes.number.isRequired,
-    overviewSongIndex: PropTypes.number.isRequired,
-
     // From parent.
     lyricSectionRef: PropTypes.func.isRequired,
     scoreSectionRef: PropTypes.func.isRequired,
@@ -270,8 +262,4 @@ LiveManager.propTypes = {
     stopPropagation: PropTypes.func.isRequired
 }
 
-export default connect(({
-    annotationObject, overviewLogueIndex, overviewSongIndex
-}) => ({
-    annotationObject, overviewLogueIndex, overviewSongIndex
-}))(LiveManager)
+export default LiveManager

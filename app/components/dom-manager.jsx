@@ -1,4 +1,7 @@
-// Base DOM component for both admin and user-facing views.
+/**
+ * Parent component that handles knowledge of state so that child components
+ * deal with as little state change as possible.
+ */
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'

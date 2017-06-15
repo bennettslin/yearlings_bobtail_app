@@ -16,6 +16,8 @@ class OverviewPopup extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
+                    'overviewLogueIndex',
+                    'overviewSongIndex',
                     'selectedOverviewIndex',
                     'selectedSongIndex',
                     'selectedTitleIndex'
@@ -27,6 +29,8 @@ class OverviewPopup extends Component {
 
     render() {
         const { inOverviewSubfield,
+                overviewLogueIndex,
+                overviewSongIndex,
                 selectedOverviewIndex,
                 selectedSongIndex,
                 selectedTitleIndex,
@@ -35,8 +39,12 @@ class OverviewPopup extends Component {
 
             isLogue = getSongIsLogue(selectedSongIndex),
 
+            overviewIndex = inOverviewSubfield ? overviewSongIndex : overviewLogueIndex,
+
             myChild = (
-                <OverviewSection {...other} />
+                <OverviewSection {...other}
+                    overviewIndex={overviewIndex}
+                />
             )
 
         let isVisible
@@ -66,6 +74,8 @@ class OverviewPopup extends Component {
 
 OverviewPopup.propTypes = {
     // Through Redux.
+    overviewLogueIndex: PropTypes.number.isRequired,
+    overviewSongIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
@@ -78,9 +88,13 @@ OverviewPopup.propTypes = {
 export default connect(({
     selectedOverviewIndex,
     selectedSongIndex,
-    selectedTitleIndex
+    selectedTitleIndex,
+    overviewLogueIndex,
+    overviewSongIndex
 }) => ({
     selectedOverviewIndex,
     selectedSongIndex,
-    selectedTitleIndex
+    selectedTitleIndex,
+    overviewLogueIndex,
+    overviewSongIndex
 }))(OverviewPopup)

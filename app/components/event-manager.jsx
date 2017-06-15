@@ -883,15 +883,8 @@ class EventManager extends Component {
     }
 
     render() {
-        const { domState } = this.props
-
         return (
-            // TODO: What is in domState at this point?
-            <AccessManager {...domState}
-
-                // TODO: Don't do this.
-                isLogue={this.props.isLogue}
-
+            <AccessManager
                 domManagerRef={node => this.myDomManager = node}
                 lyricSectionRef={node => this.myLyricSection = node}
                 scoreSectionRef={node => this.myScoreSection = node}
