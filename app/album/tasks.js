@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Take care of margin right in menu when scores tips is not shown.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Lyrics and carousel take their time to render when song is changed.`,
         workedHours: 0,
         neededHours: 3
@@ -23,16 +18,6 @@ module.exports = [
         taskName: `When selecting song from portal, carousel scroll should be called strategically, especially Odin shivs.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Let lyric verse get verseObject through Redux.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Show all state in admin component.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     // Day bug.
@@ -2273,6 +2258,11 @@ module.exports = [
     },
     {
         taskName: `Annotation popup container is wrong height in phone.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Take care of margin right in menu when scores tips is not shown.`,
         workedHours: 1,
         neededHours: 1
     }

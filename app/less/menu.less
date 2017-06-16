@@ -34,16 +34,8 @@
 
     &.audio-subfield {
         flex-grow: 2;
-    }
 
-    &:not(:last-child) {
-        margin-right: @menu-subfield-margin;
-    }
-}
-
-.title-in-audio {
-    .menu-subfield {
-        border-radius: 0;
+        margin: 0 @menu-subfield-margin;
     }
 }
 
@@ -64,13 +56,12 @@
     background-color: #8d8;
 }
 
-.is-desktop {
+.laptop-width, .mini-width {
 
-    &.laptop-width {
-        .menu-subfield {
-            &:not(:last-child) {
-                margin-right: @menu-subfield-narrow-margin;
-            }
+    .menu-subfield {
+
+        &.audio-subfield {
+            margin: 0 @menu-subfield-narrow-margin;
         }
     }
 }
@@ -80,38 +71,48 @@
     .scores-tips-menu-subfield {
         justify-content: flex-end;
     }
+}
 
-    &.mini-width {
-        .menu-subfield {
-            &:not(:last-child) {
-                margin-right: @menu-subfield-narrow-margin;
-            }
-        }
-    }
-
-    &.phone-width {
-        .menu-field {
-            height: @menu-phone-height;
-        }
+.phone-width {
+    .menu-field {
+        height: @menu-phone-height;
     }
 }
 
-/**
- * Don't bother to show if title in audio. Child component also will not be
- * rendered.
- */
 .title-in-audio {
+
+    /**
+     * Don't bother to show if title in audio. Child component also will not be
+     * rendered.
+     */
     .title-menu-subfield {
         display: none;
     }
+
+    .menu-subfield {
+        border-radius: 0;
+
+        // If title is hidden, remove audio subfield's left margin.
+        &.audio-subfield {
+            margin-left: 0;
+        }
+    }
 }
 
-/**
- * Don't bother to show if scores tips in main. Child component also will not be
- * rendered.
- */
 .scores-tips-in-main {
+
+    /**
+     * Don't bother to show if scores tips in main. Child component also will
+     * not be rendered.
+     */
     .scores-tips-menu-subfield {
         display: none;
+    }
+
+    // If scores tips is hidden, remove audio subfield's right margin.
+    .menu-subfield {
+        &.audio-subfield {
+            margin-right: 0;
+        }
     }
 }
