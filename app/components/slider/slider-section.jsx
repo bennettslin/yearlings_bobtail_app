@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
 import SliderStanzas from './slider-stanzas'
-import { getSongVerseTimes,
-         getSongTotalTime } from '../../helpers/data-helper'
+import SliderVerses from './slider-verses'
+import { getSongTotalTime } from '../../helpers/data-helper'
 import { getFormattedTime } from '../../helpers/format-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 import { getVerseBeginAndEndTimes } from '../../helpers/logic-helper'
@@ -53,8 +53,6 @@ class SliderSection extends Component {
                 sliderVerseIndex,
                 sliderRatio } = this.props,
 
-            // FIXME: Calculate all these in logic helper.
-            verseTimes = getSongVerseTimes(selectedSongIndex),
             totalTime = getSongTotalTime(selectedSongIndex),
 
             workingRatio = isSliderTouched ? sliderRatio : (selectedTimePlayed / totalTime),
@@ -63,12 +61,14 @@ class SliderSection extends Component {
             spentStyle = {
                 width: `${spentWidth}%`
             },
+            displayedSpentTime = getFormattedTime(workingRatio * totalTime),
+
             remainWidth = 100 - spentWidth,
             remainStyle = {
                 width: `${remainWidth}%`
             },
-            displayedSpentTime = getFormattedTime(workingRatio * totalTime),
             displayedRemainTime = getFormattedTime((1 - workingRatio) * totalTime) + '-'
+
 
         let cursorVerseIndex,
             cursorClassName
@@ -103,9 +103,6 @@ class SliderSection extends Component {
                 remainStyle={remainStyle}
                 displayedSpentTime={displayedSpentTime}
                 displayedRemainTime={displayedRemainTime}
-                verseTimes={verseTimes}
-                selectedSongIndex={selectedSongIndex}
-                totalTime={totalTime}
                 handleTouchDown={this._handleTouchDown}
             />
         )
@@ -131,16 +128,14 @@ SliderSection.propTypes = {
  ****************/
 
 const SliderSectionView = ({
-    cursorVerseIndex,
     cursorClassName,
     cursorStyle,
     spentStyle,
     remainStyle,
     displayedSpentTime,
     displayedRemainTime,
-    verseTimes,
+    cursorVerseIndex,
 
-    totalTime,
     handleTouchDown
 }) => {
 
@@ -152,6 +147,7 @@ const SliderSectionView = ({
                 `is-${cursorClassName}-cursor`
             )}
         >
+            {/* These are static for each song. */}
             <SliderStanzas />
 
             <div
@@ -160,69 +156,72 @@ const SliderSectionView = ({
                     'play-time-bar',
                     'time-remain-bar'
                 )}
-            >
-            </div>
+            />
 
-            {false && verseTimes.map((verseTime, index) => {
-
-                // Don't show title verse.
-                if (verseTime < 0) {
-                    return null
-                }
-
-                const verseWidth = (totalTime - verseTime) / totalTime * 100,
-                    verseStyle = {
-                        width: `${verseWidth}%`
-                    }
-
-                let cursorPlacementClassName
-
-                if (index === cursorVerseIndex) {
-                    cursorPlacementClassName = 'on-cursor'
-                } else if (index < cursorVerseIndex) {
-                    cursorPlacementClassName = 'before-cursor'
-                } else {
-                    cursorPlacementClassName = 'after-cursor'
-                }
-
-                return (
-                    <div
-                        key={index}
-                        className={classnames(
-                            'time-bar',
-                            'verse-time-bar',
-                            cursorPlacementClassName
-                        )}
-                        style={verseStyle}
-                    >
-                    </div>
-                )
-            })}
+            <SliderVerses
+                cursorVerseIndex={cursorVerseIndex}
+            />
 
             <div
                 className="audio-cursor"
                 style={cursorStyle}
             />
 
-            <div className="below spent play-time-display">{displayedSpentTime}</div>
-            <div
-                className="time-bar play-time-bar time-spent-bar"
-                style={spentStyle}
-            >
-                <div className="above spent play-time-display">{displayedSpentTime}</div>
+            {/* Spent time display below spent bar. */}
+            <div className={classnames(
+                'below',
+                'spent',
+                'play-time-display'
+            )}>
+                {displayedSpentTime}
             </div>
-            <div className="below remain play-time-display">{displayedRemainTime}</div>
 
             <div
-                className="above remain play-time-display"
+                className={classnames(
+                    'time-bar',
+                    'play-time-bar',
+                    'time-spent-bar'
+                )}
+                style={spentStyle}
+            >
+                {/* Spent time display above spent bar. */}
+                <div className={classnames(
+                    'above',
+                    'spent',
+                    'play-time-display'
+                )}>
+                    {displayedSpentTime}
+                </div>
+            </div>
+
+            {/* Remaining time display below spent bar. */}
+            <div className={classnames(
+                'below',
+                'remain',
+                'play-time-display'
+            )}>
+                {displayedRemainTime}
+            </div>
+
+            {/* Remaining time display above spent bar. */}
+            <div
+                className={classnames(
+                    'above',
+                    'remain',
+                    'play-time-display'
+                )}
                 style={remainStyle}
             >
                 {displayedRemainTime}
             </div>
+
+            {/* Handle touch interactions. */}
             <div
-                className="time-bar audio-touch-bar"
+                className={classnames(
+                    'time-bar',
+                    'audio-touch-bar'
+                )}
                 onMouseDown={handleTouchDown}
-                // onTouchStart={e => this._handleTouchDown(e)}
             >
             </div>
         </div>
@@ -238,8 +237,6 @@ SliderSectionView.propTypes = {
     remainStyle: PropTypes.object.isRequired,
     displayedSpentTime: PropTypes.string.isRequired,
     displayedRemainTime: PropTypes.string.isRequired,
-    verseTimes: PropTypes.array.isRequired,
-    totalTime: PropTypes.number.isRequired,
     handleTouchDown: PropTypes.func.isRequired
 }
 
