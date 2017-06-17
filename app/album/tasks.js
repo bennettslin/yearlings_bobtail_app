@@ -57,8 +57,6 @@ module.exports = [
         neededHours: 3
     },
 
-
-
     {
         taskName: `get verseObject from verseIndex or other index.`,
         workedHours: 0,
