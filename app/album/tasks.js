@@ -1,4 +1,69 @@
 module.exports = [
+
+    /**
+     * Short tasks.
+     */
+    {
+        taskName: `Review responsive constants.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    /**
+     * Content.
+     */
+    {
+        taskName: `Finish instrumentals`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Finalise portals`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Title section content.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    /**
+     * Audio stuff.
+     */
+    {
+        taskName: `Selecting time or verse while audio player is running is now buggy.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `When song finishes playing, proceed to next more smoothly.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Weird bug where player stops sending listen events after having currentTime changed.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Fix weird glitch two seconds into new song after load.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Handle slider verses through CSS.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+
+
+    {
+        taskName: `get verseObject from verseIndex or other index.`,
+        workedHours: 0,
+        neededHours: 2
+    },
     {
         taskName: `Lyrics and carousel take their time to render when song is changed.`,
         workedHours: 0,
@@ -10,22 +75,12 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Show key down, handle on key up.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `When selecting song from portal, carousel scroll should be called strategically, especially Odin shivs.`,
         workedHours: 0,
         neededHours: 1
     },
 
     // Day bug.
-    {
-        taskName: `Handle slider verses through CSS.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     {
         taskName: `Releasing mouse outside of audio banner closes overlay, dom manager should tell event manager when body touch began.`,
@@ -37,22 +92,12 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Optimise responsive props`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     // Bugs.
     {
         taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Review responsive constants.`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     {
@@ -91,24 +136,6 @@ module.exports = [
         neededHours: 1
     },
 
-    {
-        taskName: `Finish instrumentals`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    // Portals.
-    {
-        taskName: `Finalise portals`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Title section content.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     // Touch accessibility.
     {
@@ -150,29 +177,6 @@ module.exports = [
         taskName: `Allow arrows for score and wiki, and still allow for handling keydown.`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    {
-        taskName: `Selecting time or verse while audio player is running is now buggy.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    // Hack Week.
-    {
-        taskName: `When song finishes playing, proceed to next more smoothly.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Weird bug where player stops sending listen events after having currentTime changed.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Fix weird glitch two seconds into new song after load.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     {
