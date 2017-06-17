@@ -12,6 +12,7 @@ Phase 1:
 * Components know to render themselves. (/)
 
 Phase 2:
+* Avoid all unneeded re-renders.
 * Be strategic about shouldComponentUpdate checks.
 * Avoid shouldComponentUpdate if possible.
 

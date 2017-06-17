@@ -1,0 +1,96 @@
+@verse-bar-margin: 8px;
+@verse-bar-hidden-offset: -50px;
+
+@verse-bar-desktop-margins: @lyric-button-side-padding * 2 +
+                            @app-large-icon-diameter * 2 +
+                            @verse-bar-margin * 2;
+
+@verse-bar-tablet-margins: @lyric-button-side-padding * 2 +
+                           @app-tablet-large-icon-diameter * 2 +
+                           @verse-bar-margin * 2;
+
+@verse-bar-mini-margins: @lyric-button-side-padding * 2 +
+                         @app-mini-large-icon-diameter * 2 +
+                         @verse-bar-margin * 2;
+
+@verse-bar-phone-margins: @lyric-button-side-padding * 2 +
+                          @app-icon-diameter * 2 +
+                          @verse-bar-margin * 2;
+
+// TODO: Make this styling better, of course.
+
+.verse-bar {
+    max-width: 100%;
+
+    margin: 0 5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    box-shadow: 0 3px 12px 5px @darker-box-shadow-colour;
+
+    .text-span {
+        z-index: @verse-bar-text-z-index;
+    }
+}
+
+.verse-bar-block {
+    position: absolute;
+
+    max-width: ~"calc(100% - @{verse-bar-desktop-margins})";
+    z-index: @selected-verse-bar-z-index;
+
+    &.above {
+        top: @verse-bar-hidden-offset;
+        margin-top: @verse-bar-margin;
+        transition: top @animation-fast, transform @animation-fast;
+    }
+
+    &.below {
+        bottom: @verse-bar-hidden-offset;
+        margin-bottom: @verse-bar-margin;
+        transition: bottom @animation-fast, transform @animation-fast;
+
+        .verse-bar {
+            box-shadow: 0 0 12px 5px @darker-box-shadow-colour;
+        }
+    }
+
+    transform: scale(0);
+}
+
+.verse-bar-above {
+    .verse-bar-block {
+        &.above {
+            top: 0;
+            transform: scale(1);
+        }
+    }
+}
+
+.verse-bar-below {
+    .verse-bar-block {
+        &.below {
+            bottom: 0;
+            transform: scale(1);
+        }
+    }
+}
+
+.tablet-width {
+    .verse-bar-block {
+        max-width: ~"calc(100% - @{verse-bar-tablet-margins})";
+    }
+}
+
+.mini-width {
+    .verse-bar-block {
+        max-width: ~"calc(100% - @{verse-bar-mini-margins})";
+    }
+}
+
+.phone-width {
+    .verse-bar-block {
+        max-width: ~"calc(100% - @{verse-bar-phone-margins})";
+    }
+}
