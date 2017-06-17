@@ -95,7 +95,6 @@ AnnotationPopup.propTypes = {
     deviceIndex: PropTypes.number.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
 
-    annotationObject: PropTypes.object,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
@@ -112,7 +111,6 @@ AnnotationPopup.propTypes = {
 export default connect(({
     deviceIndex,
     isLyricExpanded,
-    annotationObject,
     selectedAnnotationIndex,
     selectedCarouselIndex,
     selectedScoreIndex,
@@ -121,7 +119,6 @@ export default connect(({
 }) => ({
     deviceIndex,
     isLyricExpanded,
-    annotationObject,
     selectedAnnotationIndex,
     selectedCarouselIndex,
     selectedScoreIndex,

@@ -3,7 +3,7 @@ import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, A
 import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer } from './device'
 import { IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
-import { AnnotationObjectReducer, AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, OverviewLogueIndexReducer, OverviewSongIndexReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
+import { ShownAnnotationSongIndexReducer, ShownAnnotationIndexReducer, AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, OverviewLogueIndexReducer, OverviewSongIndexReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
 import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseElementReducer, SliderVerseIndexReducer } from './slider'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, NavIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
 
@@ -30,7 +30,8 @@ const rootReducer = combineReducers({
     showShrunkNavIcon: ShowShrunkNavIconReducer,
     showSingleBookColumn: ShowSingleBookColumnReducer,
 
-    annotationObject: AnnotationObjectReducer,
+    shownAnnotationSongIndex: ShownAnnotationSongIndexReducer,
+    shownAnnotationIndex: ShownAnnotationIndexReducer,
     appMounted: AppMountedReducer,
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
     interactivatedVerseIndex: InteractivatedVerseIndexReducer,

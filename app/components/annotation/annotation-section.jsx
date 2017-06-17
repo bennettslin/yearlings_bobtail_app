@@ -2,10 +2,12 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
 import AnnotationUnit from './annotation-unit'
 import DotAnchor from '../dot/dot-anchor'
 import { IS_DOT_STANZA } from '../../constants/lyrics'
+import { getAnnotationObject } from '../../helpers/data-helper'
 
 /*************
  * CONTAINER *
@@ -13,18 +15,32 @@ import { IS_DOT_STANZA } from '../../constants/lyrics'
 
 const AnnotationSection = (props) => {
 
-    const { annotationObject } = props
+    const { annotationObject,
+            shownAnnotationSongIndex,
+            shownAnnotationIndex } = props,
+
+        /**
+         * If in carousel, get annotation object from parent. Otherwise, fetch
+         * indices from store and get it from data helper.
+         */
+        shownAnnotationObject = annotationObject ||
+            getAnnotationObject(shownAnnotationSongIndex, shownAnnotationIndex)
 
     // If it's in popup, annotation object won't always exist.
-    return annotationObject ? (
+    return shownAnnotationObject ? (
         <AnnotationSectionView {...props}
-            annotationTitle={annotationObject.title}
-            annotationDotKeys={annotationObject.dotKeys}
+            annotationObject={shownAnnotationObject}
+            annotationTitle={shownAnnotationObject.title}
+            annotationDotKeys={shownAnnotationObject.dotKeys}
         />
     ) : null
 }
 
 AnnotationSection.propTypes = {
+    // Through Redux.
+    shownAnnotationSongIndex: PropTypes.number.isRequired,
+    shownAnnotationIndex: PropTypes.number.isRequired,
+
     // From parent.
     annotationObject: PropTypes.object
 }
@@ -103,4 +119,10 @@ AnnotationSectionView.propTypes = {
     handleTitleClick: PropTypes.func
 }
 
-export default AnnotationSection
+export default connect(({
+    shownAnnotationSongIndex,
+    shownAnnotationIndex
+}) => ({
+    shownAnnotationSongIndex,
+    shownAnnotationIndex
+}))(AnnotationSection)

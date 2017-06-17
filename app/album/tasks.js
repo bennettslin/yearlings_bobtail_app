@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Change annotationObject in state to shownAnnotationSongIndex and shownAnnotationINdex.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Lyrics and carousel take their time to render when song is changed.`,
         workedHours: 0,
         neededHours: 3
@@ -2268,6 +2263,11 @@ module.exports = [
     },
     {
         taskName: `Take care of margin right in menu when scores tips is not shown.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Change annotationObject in state to shownAnnotationSongIndex and shownAnnotationINdex.`,
         workedHours: 1,
         neededHours: 1
     }

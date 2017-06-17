@@ -1,5 +1,6 @@
 // Reducers for state of this user session.
-import { ANNOTATION_OBJECT,
+import { SHOWN_ANNOTATION_SONG_INDEX,
+         SHOWN_ANNOTATION_INDEX,
          APP_MOUNTED,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
@@ -11,9 +12,18 @@ import { ANNOTATION_OBJECT,
          SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
-export const AnnotationObjectReducer = (state = null, action) => {
+export const ShownAnnotationSongIndexReducer = (state = null, action) => {
     switch (action.type) {
-        case ANNOTATION_OBJECT:
+        case SHOWN_ANNOTATION_SONG_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const ShownAnnotationIndexReducer = (state = null, action) => {
+    switch (action.type) {
+        case SHOWN_ANNOTATION_INDEX:
             return action.payload
         default:
             return state

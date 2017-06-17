@@ -1,5 +1,6 @@
 // Actions for state of this user session.
-import { ANNOTATION_OBJECT,
+import { SHOWN_ANNOTATION_SONG_INDEX,
+         SHOWN_ANNOTATION_INDEX,
          APP_MOUNTED,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
@@ -11,9 +12,14 @@ import { ANNOTATION_OBJECT,
          SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
-export const setAnnotationObject = (annotationObject = null) => (
-    { type: ANNOTATION_OBJECT,
-      payload: annotationObject }
+export const setShownAnnotationSongIndex = (shownAnnotationSongIndex = null) => (
+    { type: SHOWN_ANNOTATION_SONG_INDEX,
+      payload: shownAnnotationSongIndex }
+)
+
+export const setShownAnnotationIndex = (shownAnnotationIndex = null) => (
+    { type: SHOWN_ANNOTATION_INDEX,
+      payload: shownAnnotationIndex }
 )
 
 export const setAppMounted = (appMounted = false) => (
