@@ -104,7 +104,7 @@ const webpack = require('webpack'),
              * localhost.
              */
             host: process.env.HOST,
-            port: 1337 || process.env.PORT
+            port: 1113 || process.env.PORT
         }),
         parts.loadStyles({
             include: PATHS.less
