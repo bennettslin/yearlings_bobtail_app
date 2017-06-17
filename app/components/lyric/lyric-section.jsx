@@ -42,8 +42,16 @@ class LyricSection extends Component {
     }
 
     render() {
+
+        // Don't pass these props.
+        /* eslint-disable no-unused-vars */
+        const { appMounted,
+                isTransitioningHeight,
+                completeHeightTransition,
+        /* eslint-enable no-unused-vars */
+                ...other } = this.props
         return (
-            <LyricSectionView {...this.props}
+            <LyricSectionView {...other}
                 handleScroll={this._handleScroll}
             />
         )

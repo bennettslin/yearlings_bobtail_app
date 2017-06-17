@@ -41,6 +41,7 @@ import { ALL_DOT_KEYS } from '../constants/dots'
 import { DESTINATION_PORTAL_INDEX } from '../constants/lyrics'
 import { SHOWN,
          OVERVIEW_OPTIONS } from '../constants/options'
+import { getComponentShouldUpdate } from '../helpers/general-helper'
 
 class AccessManager extends Component {
 
@@ -56,6 +57,36 @@ class AccessManager extends Component {
         this._handleLyricNavigation = this._handleLyricNavigation.bind(this)
         this._handleLetterKey = this._handleLetterKey.bind(this)
         this._handleEscape = this._handleEscape.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'selectedAccessIndex',
+                    'selectedAnnotationIndex',
+                    'selectedDotsIndex',
+                    'selectedDotKeys',
+                    'selectedLyricColumnIndex',
+                    'selectedNavIndex',
+                    'selectedOverviewIndex',
+                    'selectedScoreIndex',
+                    'selectedSongIndex',
+                    'selectedVerseIndex',
+                    'selectedWikiIndex',
+                    'accessedAnnotationIndex',
+                    'accessedAnnotationAnchorIndex',
+                    'accessedDotIndex',
+                    'accessedNavSongIndex',
+                    'interactivatedVerseIndex',
+                    'shownBookColumnIndex',
+                    'deviceIndex'
+                ]
+            })
+
+        return componentShouldUpdate
     }
 
     handleKeyDownPress(e) {
@@ -526,7 +557,7 @@ class AccessManager extends Component {
 }
 
 export default connect(({
-    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, annotationObject, deviceIndex
+    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }) => ({
-    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, annotationObject, deviceIndex
+    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }))(AccessManager)

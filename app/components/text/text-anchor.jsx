@@ -104,19 +104,22 @@ class TextAnchor extends Component {
 }
 
 TextAnchor.defaultProps = {
-    inPortal: false
+    isLyric: false,
+    inPortal: false,
+    isVerseBeginningSpan: false,
+    isVerseEndingSpan: false
 }
 
 TextAnchor.propTypes = {
     // From parent.
     isSelected: PropTypes.bool.isRequired,
     accessHighlighted: PropTypes.bool.isRequired,
-    isLyric: PropTypes.bool,
+    isLyric: PropTypes.bool.isRequired,
     inPortal: PropTypes.bool.isRequired,
     hasTodo: PropTypes.bool,
     isPortalAnchor: PropTypes.bool.isRequired,
-    isVerseBeginningSpan: PropTypes.bool,
-    isVerseEndingSpan: PropTypes.bool,
+    isVerseBeginningSpan: PropTypes.bool.isRequired,
+    isVerseEndingSpan: PropTypes.bool.isRequired,
 
     anchorText: PropTypes.oneOfType([
         PropTypes.string,

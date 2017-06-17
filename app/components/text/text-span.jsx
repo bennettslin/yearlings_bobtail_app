@@ -41,11 +41,16 @@ const TextSpan = ({
     )
 }
 
+TextSpan.defaultProps = {
+    inTextAnchor: false,
+    isLyric: false
+}
+
 TextSpan.propTypes = {
     // From parent.
     text: PropTypes.string.isRequired,
-    isLyric: PropTypes.bool,
-    inTextAnchor: PropTypes.bool,
+    isLyric: PropTypes.bool.isRequired,
+    inTextAnchor: PropTypes.bool.isRequired,
     inPortal: PropTypes.bool,
     isVerseBeginningSpan: PropTypes.bool,
     isVerseEndingSpan: PropTypes.bool

@@ -33,7 +33,6 @@ class VerseUnit extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'deviceIndex',
-                    'appMounted',
                     'isSliderTouched',
 
                     // TODO: Possible to update without selected song index?
@@ -74,10 +73,12 @@ class VerseUnit extends Component {
         props.handleVerseElementSlide(this.myVerse)
     }
 
-    _getBackgroundClassName(isEven) {
-        const { inVerseBar,
-                inMain,
-                isTitle } = this.props
+    _getBackgroundClassName({
+        isEven,
+        inVerseBar,
+        inMain,
+        isTitle
+    }) {
 
         if (!inVerseBar) {
             if (isTitle) {
@@ -92,12 +93,13 @@ class VerseUnit extends Component {
         return ''
     }
 
-    _getSliderPlacementClassName() {
-        const { inMain,
-                isTitle,
-                isSliderTouched,
-                isSliderSelected,
-                isAfterSliderSelected } = this.props
+    _getSliderPlacementClassName({
+        inMain,
+        isTitle,
+        isSliderTouched,
+        isSliderSelected,
+        isAfterSliderSelected
+    }) {
 
         if (isSliderTouched && inMain && !isTitle) {
             if (isSliderSelected) {
@@ -128,15 +130,17 @@ class VerseUnit extends Component {
     }
 
     render() {
-        const { handleLyricAnnotationSelect,
+        const { inMain,
+                isSliderTouched,
                 isSliderSelected,
-
+                isAfterSliderSelected,
+                isInteractivated,
+                handleLyricAnnotationSelect,
                 ...other } = this.props,
 
             { inVerseBar,
               verseObject,
-              isSelected,
-              isInteractivated } = other,
+              isSelected } = other,
 
             { lyric,
               centre,
@@ -147,8 +151,19 @@ class VerseUnit extends Component {
 
             // If not an interactable verse, we'll count it as odd.
             isEven = isInteractable && verseIndex % 2 === 0,
-            backgroundClassName = this._getBackgroundClassName(isEven),
-            sliderPlacementClassName = this._getSliderPlacementClassName(),
+            backgroundClassName = this._getBackgroundClassName({
+                isEven,
+                inVerseBar,
+                inMain,
+                isTitle
+            }),
+            sliderPlacementClassName = this._getSliderPlacementClassName({
+                inMain,
+                isTitle,
+                isSliderTouched,
+                isSliderSelected,
+                isAfterSliderSelected
+            }),
             interactivatedClassName = isInteractivated ? 'interactivated' : 'not-interactivated',
             verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${isInteractable ? 'verse-' + verseIndex : ''}`
 
