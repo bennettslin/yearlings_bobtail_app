@@ -222,6 +222,7 @@ const SliderSectionView = ({
                     'audio-touch-bar'
                 )}
                 onMouseDown={handleTouchDown}
+                onTouchStart={handleTouchDown}
             >
             </div>
         </div>

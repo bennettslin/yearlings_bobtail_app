@@ -581,9 +581,8 @@ class EventManager extends Component {
             return
         }
 
-        const { nativeEvent,
-                target } = e,
-            { clientX } = nativeEvent,
+        const { target } = e,
+            clientX = this._getClientX(e),
             clientRect = target.getBoundingClientRect()
 
         if (!isNaN(clientX)) {
@@ -593,13 +592,21 @@ class EventManager extends Component {
     }
 
     handleBodyTouchMove(e) {
-        const { clientX } = e.nativeEvent
+        const clientX = this._getClientX(e)
 
         if (!isNaN(clientX)) {
             this.stopPropagation(e)
             this.props.touchBodyMove(clientX)
         }
+    }
 
+    _getClientX(e) {
+        const { nativeEvent } = e,
+            { touches,
+              clientX } = nativeEvent
+
+        // If mouse, clientX is in native event. If touch, it's in first touch.
+        return touches ? touches[0].clientX : clientX
     }
 
     handleBodyTouchEnd(e) {

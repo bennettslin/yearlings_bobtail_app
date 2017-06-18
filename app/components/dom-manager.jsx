@@ -175,8 +175,11 @@ class DomManager extends Component {
                 )}
                 onClick={this._handleClick}
                 onMouseMove={handleBodyTouchMove}
+                onTouchMove={handleBodyTouchMove}
                 onMouseUp={this._handleMouseUp}
                 onMouseLeave={this._handleMouseUp}
+                onTouchEnd={this._handleMouseUp}
+                onTouchCancel={this._handleMouseUp}
                 onKeyDown={handleKeyDownPress}
                 tabIndex="-1"
             >
