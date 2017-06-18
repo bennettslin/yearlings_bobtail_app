@@ -150,3 +150,6 @@
 @popup-content-z-index: @popup-overlay-z-index + 1;
 
 @audio-in-overlay-z-index: @popup-content-z-index + 1;
+
+// The overlay preventing popup interaction should be the highest.
+@super-overlay-z-index: @audio-in-overlay-z-index + 1;
