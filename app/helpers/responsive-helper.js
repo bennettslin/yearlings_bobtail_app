@@ -8,7 +8,7 @@ import { PHONE_WIDTH,
          MINI_OBJECT,
          DEVICE_OBJECTS,
 
-         CAROUSEL_ANNOTATION_WIDTH,
+         CAROUSEL_ANNOTATION_MIN_WIDTH,
          GOLDEN_CORD_WIDTH,
          UNCANNY_VALLEY_WIDTH,
 
@@ -248,16 +248,23 @@ export const getCarouselLeftAlign = (deviceIndex, windowWidth, index) => {
     } else {
         const lyricColumnWidth = _getIsMonitor(deviceIndex) ?
                 GOLDEN_CORD_WIDTH : UNCANNY_VALLEY_WIDTH,
+
             centreFieldWidth = windowWidth - lyricColumnWidth,
+
+            // Percentage. It would be 0.5 if not for the lyric column.
             left = (centreFieldWidth * 0.5) / windowWidth,
 
-            // TODO: Don't know why it's not perfectly centred, but whatever.
             /**
              * The first annotation card is really just the buffer margin. The
              * next one is the first real annotation. There won't be any offset
              * in either case.
              */
-            leftOffset = index <= 1 ? 0 : -CAROUSEL_ANNOTATION_WIDTH * left
+            /**
+             * NOTE: This isn't perfectly centred. I think it's because the
+             * value for the carousel annotation min width isn't exactly right.
+             */
+            leftOffset = index <= 1 ?
+                0 : -CAROUSEL_ANNOTATION_MIN_WIDTH * (0.5 - left)
 
         return {
             left,

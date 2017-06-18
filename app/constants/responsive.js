@@ -72,8 +72,13 @@ POPUP_CONTENT_SIDE_PADDING = 20,
 
 WIKI_SIDE_PADDING_TOTAL = POPUP_CONTENT_SIDE_PADDING * 2 + APP_LARGE_ICON_DIAMETER * 2,
 
-// TODO:
-CAROUSEL_ANNOTATION_WIDTH = 405,
+/*******************
+ * CAROUSEL VALUES *
+ *******************/
+
+// This value *must* be the same in less.
+// FIXME: Not great that this value is hard-coded.
+CAROUSEL_ANNOTATION_MIN_WIDTH = 406,
 
 /************************
  * DEVICE WIDTH OBJECTS *
@@ -152,7 +157,7 @@ module.exports = {
     HIDDEN_NAV_MIN: 400,
     WIKI_SIDE_PADDING_TOTAL,
 
-    CAROUSEL_ANNOTATION_WIDTH,
+    CAROUSEL_ANNOTATION_MIN_WIDTH,
     GOLDEN_CORD_WIDTH,
     UNCANNY_VALLEY_WIDTH
 }

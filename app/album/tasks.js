@@ -4,11 +4,6 @@ module.exports = [
      * Short bugs and tasks.
      */
     {
-        taskName: `Review responsive constants.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Overview comes in from behind carousel.`,
         workedHours: 0,
         neededHours: 1
@@ -2278,5 +2273,15 @@ module.exports = [
         taskName: `Refocus app strategically.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Review responsive constants.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Improve carousel scrolling putting annotation at centre.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

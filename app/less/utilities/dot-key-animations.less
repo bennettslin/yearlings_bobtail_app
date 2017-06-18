@@ -2,6 +2,18 @@
  * CAROUSEL *
  ************/
 
+// This value *must* be the same in js.
+// FIXME: Not great that this value is hard-coded as 406.
+@carousel-annotation-min-width: @annotation-card-width +
+                                @annotation-card-padding * 2 +
+                                @carousel-annotation-padding * 2 +
+                                @annotation-section-padding * 2;
+
+@carousel-annotation-mini-min-width: @annotation-card-mini-width +
+                                     @annotation-card-padding * 2 +
+                                     @carousel-annotation-padding * 2 +
+                                     @annotation-section-padding * 2;
+
 .dom-manager.narrative .carousel-annotation.narrative,
 .dom-manager.backstory .carousel-annotation.backstory,
 .dom-manager.observation .carousel-annotation.observation,
@@ -11,8 +23,7 @@
 .dom-manager.portal .carousel-annotation.portal,
 .dom-manager.afterword .carousel-annotation.afterword {
 
-    // min-width: @annotation-card-width + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
-    min-width: @annotation-card-width + @annotation-card-padding * 2 + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
+    min-width: @carousel-annotation-min-width;
 
     .annotation-title-block {
         max-height: 2em; // Arbitrary value that's larger than its max height.
@@ -30,8 +41,7 @@
 .dom-manager.mini-width.portal .carousel-annotation.portal,
 .dom-manager.mini-width.afterword .carousel-annotation.afterword {
 
-    // min-width: @annotation-card-width + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
-    min-width: @annotation-card-mini-width + @annotation-card-padding * 2 + @carousel-annotation-padding * 2 + @annotation-section-padding * 2;
+    min-width: @carousel-annotation-min-width;
 }
 
 .dom-manager.narrative .annotation-card.narrative,
