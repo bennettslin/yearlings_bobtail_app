@@ -71,11 +71,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `audio banner is touch accessible.`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     /**
      * User experience stuff.
@@ -95,23 +90,8 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Allow arrows for score and wiki, and still allow for handling keydown.`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     // Day tasks.
-    {
-        taskName: `Releasing mouse outside of audio banner closes overlay, dom manager should tell event manager when body touch began.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Verse bar needs to change width when changing verse.`,
-        workedHours: 0,
-        neededHours: 2
-    },
     {
         taskName: `Nav wonkiness`,
         workedHours: 0,
@@ -2266,6 +2246,26 @@ module.exports = [
     },
     {
         taskName: `Change annotationObject in state to shownAnnotationSongIndex and shownAnnotationIndex.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `audio banner is touch accessible.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Allow arrows for score and wiki, and still allow for handling keydown. (Can't be done. Just won't focus popups.)`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Releasing mouse outside of audio banner closes overlay, dom manager should tell event manager when body touch began.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Verse bar needs to change width when changing verse.`,
         workedHours: 1,
         neededHours: 1
     }
