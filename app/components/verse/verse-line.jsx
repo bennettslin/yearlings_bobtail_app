@@ -20,10 +20,7 @@ class VerseLine extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'deviceIndex',
                     'selectedSongIndex',
-                    'selectedLyricColumnIndex',
-                    'showOneOfTwoLyricColumns',
                     {
                         onlyIfTrueInNextProps: 'inVerseBar',
                         subUpdatingKey: 'text'
@@ -59,10 +56,7 @@ VerseLine.defaultProps = {
 
 VerseLine.propTypes = {
     // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
-    selectedLyricColumnIndex: PropTypes.number.isRequired,
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
     // From parent.
     text: PropTypes.oneOfType([
@@ -76,13 +70,7 @@ VerseLine.propTypes = {
 }
 
 export default connect(({
-    deviceIndex,
-    selectedSongIndex,
-    selectedLyricColumnIndex,
-    showOneOfTwoLyricColumns
+    selectedSongIndex
 }) => ({
-    deviceIndex,
-    selectedSongIndex,
-    selectedLyricColumnIndex,
-    showOneOfTwoLyricColumns
+    selectedSongIndex
 }))(VerseLine)
