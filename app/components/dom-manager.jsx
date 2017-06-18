@@ -192,7 +192,9 @@ class DomManager extends Component {
                 <SwitchManager {...other} />
 
                 {/* Prevent popup interaction when slider is touched. */}
-                <div className="super-overlay" />
+                {!selectedAdminIndex ? (
+                    <div className="super-overlay" />
+                ) : null}
             </div>
         )
     }

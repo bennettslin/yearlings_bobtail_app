@@ -13,6 +13,16 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Accessed annotation is wrong after deselecting annotation.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Task calculations are wrong. :(`,
+        workedHours: 0,
+        neededHours: 2
+    },
 
     /**
      * Medium bugs and tasks.
