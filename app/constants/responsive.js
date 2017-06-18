@@ -1,23 +1,23 @@
 const
 
+/*****************
+ * BUTTON VALUES *
+ *****************/
+
+// These values *must* be the same in less.
+APP_ICON_DIAMETER = 44,
+APP_MINI_LARGE_ICON_DIAMETER = 47,
+APP_TABLET_LARGE_ICON_DIAMETER = 50,
+APP_LARGE_ICON_DIAMETER = 54,
+APP_THIN_MARGIN = 4,
+
 /**************
  * NAV VALUES *
  **************/
 
-// These values *must* be the same in nav.less.
-APP_ICON_DIAMETER = 44,
-APP_LARGE_ICON_DIAMETER = 54,
-APP_TABLET_LARGE_ICON_DIAMETER = 50,
-APP_MINI_LARGE_ICON_DIAMETER = 47,
-APP_THIN_MARGIN = 4,
+// These values *must* be the same in less.
 NAV_BOOK_PADDING = APP_THIN_MARGIN,
 NAV_LAST_TITLE_MARGIN = 50,
-
-CAROUSEL_ANNOTATION_WIDTH = 405,
-
-// These values *must* be the same in live.less.
-GOLDEN_CORD_WIDTH = 745,
-UNCANNY_VALLEY_WIDTH = 570,
 
 // Less files do not know these values.
 SHRINK_ICON_DIAMETER = 36,
@@ -32,43 +32,56 @@ SINGLE_COLUMN_STATIC_BREAKPOINT = 11 * APP_ICON_DIAMETER + 8 * NAV_BOOK_PADDING 
  * MENU VALUES *
  ***************/
 
-// These values *must* be the same in Less.
-MENU_SUBFIELD_MARGIN = 10,
-MENU_SUBFIELD_NARROW_MARGIN = 3,
+// These values *must* be the same in less.
 MENU_HEIGHT = 72,
 MENU_PHONE_HEIGHT = APP_ICON_DIAMETER + 2 * MENU_SUBFIELD_NARROW_MARGIN,
-
+MENU_SUBFIELD_MARGIN = 10,
+MENU_SUBFIELD_NARROW_MARGIN = 3,
 TITLE_SUBFIELD_MIN_WIDTH = 72,
 
+/****************
+ * AUDIO VALUES *
+ ****************/
+
+// These values *must* be the same in less.
 AUDIO_BLOCK_PADDING = 12,
 AUDIO_BUTTON_MARGIN = 3,
 AUDIO_OPTION_BUTTON_MARGIN = 8,
 AUDIO_BANNER_MIN_WIDTH = 220,
+
 AUDIO_CONSTANT = AUDIO_BANNER_MIN_WIDTH + 3 * AUDIO_BLOCK_PADDING + 3 * APP_ICON_DIAMETER + 2 * AUDIO_BUTTON_MARGIN + AUDIO_OPTION_BUTTON_MARGIN,
 
+/**********************
+ * SCORES TIPS VALUES *
+ **********************/
+
+// These values *must* be the same in less.
 SCORES_TIPS_PADDING = APP_THIN_MARGIN,
 SCORES_TIPS_MARGIN = 10,
+
 SCORES_TIPS_CONSTANT = 2 * SCORES_TIPS_PADDING + SCORES_TIPS_MARGIN,
 
 SCORES_TIPS_IN_MAIN_CONSTANT = TITLE_SUBFIELD_MIN_WIDTH + AUDIO_CONSTANT + SCORES_TIPS_CONSTANT,
 TITLE_IN_AUDIO_BREAKPOINT = AUDIO_CONSTANT + SCORES_TIPS_CONSTANT + 2 * MENU_SUBFIELD_NARROW_MARGIN + 3 * APP_MINI_LARGE_ICON_DIAMETER,
 
+// This value *must* be the same in less.
 COLLAPSED_LYRIC_SECTION_HEIGHT = 0.32,
 
+// This value *must* be the same in less.
 POPUP_CONTENT_SIDE_PADDING = 20,
-WIKI_SUBFIELD_PADDING = APP_LARGE_ICON_DIAMETER,
 
-WIKI_SIDE_PADDING_TOTAL = POPUP_CONTENT_SIDE_PADDING * 2 + WIKI_SUBFIELD_PADDING * 2,
+WIKI_SIDE_PADDING_TOTAL = POPUP_CONTENT_SIDE_PADDING * 2 + APP_LARGE_ICON_DIAMETER * 2,
+
+// TODO:
+CAROUSEL_ANNOTATION_WIDTH = 405,
 
 /************************
  * DEVICE WIDTH OBJECTS *
  ************************/
 
-// Device widths.
-// TODO: Make sure these maxWidths are right.
-// Final TODO: Get rid of unused breakpoints.
-
-// maxWidth values should be the same in live.less. (Only used by admin.)
+// These values *must* be the same in less.
+GOLDEN_CORD_WIDTH = 745,
+UNCANNY_VALLEY_WIDTH = 570,
 
 PHONE_WIDTH = 'phone-width',
 MINI_WIDTH = 'mini-width',
@@ -76,6 +89,7 @@ TABLET_WIDTH = 'tablet-width',
 LAPTOP_WIDTH = 'laptop-width',
 MONITOR_WIDTH = 'monitor-width',
 
+// These max width values *must* be the same in less.
 PHONE_OBJECT = {
     className: PHONE_WIDTH,
     maxWidth: 475
