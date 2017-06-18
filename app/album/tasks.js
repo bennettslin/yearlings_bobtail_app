@@ -2265,7 +2265,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Change annotationObject in state to shownAnnotationSongIndex and shownAnnotationINdex.`,
+        taskName: `Change annotationObject in state to shownAnnotationSongIndex and shownAnnotationIndex.`,
         workedHours: 1,
         neededHours: 1
     }

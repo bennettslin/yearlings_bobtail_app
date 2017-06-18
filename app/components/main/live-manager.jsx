@@ -49,7 +49,6 @@ class LiveManager extends Component {
                 handleLyricPlay,
                 handleLyricVerseSelect,
                 handleOverviewToggle,
-                handlePopupFocus,
                 handleScoreToggle,
                 handleTipsToggle,
                 handleTitleToggle,
@@ -116,19 +115,16 @@ class LiveManager extends Component {
 
             scorePopupHandlers = {
                 scoreSectionRef,
-                handleScoreToggle,
-                handlePopupFocus
+                handleScoreToggle
             },
 
             titlePopupHandlers = {
-                handleTitleToggle,
-                handlePopupFocus
+                handleTitleToggle
             },
 
             wikiPopupHandlers = {
                 wikiSectionRef,
-                handleWikiToggle,
-                handlePopupFocus
+                handleWikiToggle
             },
 
             mainColumnHandlers = {
@@ -229,7 +225,6 @@ LiveManager.propTypes = {
     handleLyricVerseSelect: PropTypes.func.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired,
-    handlePopupFocus: PropTypes.func.isRequired,
     handleScoreToggle: PropTypes.func.isRequired,
     handleScrollAfterLyricRerender: PropTypes.func.isRequired,
     handleTipsToggle: PropTypes.func.isRequired,

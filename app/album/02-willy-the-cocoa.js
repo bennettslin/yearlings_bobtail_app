@@ -311,22 +311,20 @@ module.exports = {
                 subStanza: [
                     {
                         time: 30,
-                        lyric: [
-                            {
-                                italic: [
-                                    {
-                                        anchor: `Chilled cola's free`,
-                                        annotation: {
-                                            description: `Willy eagerly awaits the complimentary soft drink that is part of his reimbursement at the recycling center.`,
-                                            dotKeys: {
-                                                [NARRATIVE]: true
-                                            }
+                        lyric: {
+                            italic: [
+                                {
+                                    anchor: `Chilled cola's free`,
+                                    annotation: {
+                                        description: `Willy eagerly awaits the complimentary soft drink that is part of his reimbursement at the recycling center.`,
+                                        dotKeys: {
+                                            [NARRATIVE]: true
                                         }
-                                    },
-                                    `with salvage sold…`
-                                ]
-                            }
-                        ]
+                                    }
+                                },
+                                `with salvage sold…`
+                            ]
+                        }
                     }
                 ],
             }

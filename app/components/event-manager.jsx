@@ -22,12 +22,6 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
-        // FIXME: This doesn't actually work!
-        // this.state = {
-        //     // Establish that click began on body, not just ended on it.
-        //     bodyClicked: false
-        // }
-
         this.handleAnnotationAccess = this.handleAnnotationAccess.bind(this)
         this.handleDotAccess = this.handleDotAccess.bind(this)
         this.handleAnnotationAnchorAccess = this.handleAnnotationAnchorAccess.bind(this)
@@ -35,7 +29,6 @@ class EventManager extends Component {
         this.handleVerseDirectionAccess = this.handleVerseDirectionAccess.bind(this)
 
         this.handleBodyClick = this.handleBodyClick.bind(this)
-        this.handleBodyTouchBegin = this.handleBodyTouchBegin.bind(this)
         this.handleBodyTouchMove = this.handleBodyTouchMove.bind(this)
         this.handleBodyTouchEnd = this.handleBodyTouchEnd.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
@@ -513,6 +506,7 @@ class EventManager extends Component {
         this.stopPropagation(e)
     }
 
+    // NOTE: This is now no longer used anywhere.
     handlePopupFocus() {
         const { selectedScoreIndex,
                 selectedWikiIndex } = this.props
@@ -588,9 +582,8 @@ class EventManager extends Component {
             return
         }
 
-        const { nativeEvent,
-                target } = e,
-            { clientX } = nativeEvent,
+        const { target } = e,
+            clientX = this._getClientX(e),
             clientRect = target.getBoundingClientRect()
 
         if (!isNaN(clientX)) {
@@ -599,46 +592,40 @@ class EventManager extends Component {
         }
     }
 
-    handleBodyTouchBegin() {
-        // this.setState({
-        //     bodyClicked: true
-        // })
-    }
-
     handleBodyTouchMove(e) {
-        const { clientX } = e.nativeEvent
+        const clientX = this._getClientX(e)
 
         if (!isNaN(clientX)) {
             this.stopPropagation(e)
             this.props.touchBodyMove(clientX)
         }
+    }
 
+    _getClientX(e) {
+        const { nativeEvent } = e,
+            { touches,
+              clientX } = nativeEvent
+
+        // If mouse, clientX is in native event. If touch, it's in first touch.
+        return touches ? touches[0].clientX : clientX
     }
 
     handleBodyTouchEnd(e) {
-        // console.error(`touch end`, e.nativeEvent);
         e.preventDefault()
         this.stopPropagation(e)
         this.props.touchBodyEnd()
     }
 
     handleBodyClick(e) {
-        // console.error(`body click`, e.nativeEvent);
-        // if (this.state.bodyClicked) {
-            this.stopPropagation(e)
-            this._closeSections({
-                exemptCarousel: true,
-                exemptLyric: true
-            })
+        this.stopPropagation(e)
+        this._closeSections({
+            exemptCarousel: true,
+            exemptLyric: true
+        })
 
-            // Return focus to lyric section so it can have scroll access.
-            // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-            this._focusBody()
-
-        //     this.setState({
-        //         bodyClicked: false
-        //     })
-        // }
+        // Return focus to lyric section so it can have scroll access.
+        // FIXME: Blind users will use tab to change focus. Will they find this annoying?
+        this._focusBody()
     }
 
 
@@ -897,7 +884,6 @@ class EventManager extends Component {
                 handleVerseDirectionAccess={this.handleVerseDirectionAccess}
                 handlePopupFocus={this.handlePopupFocus}
                 handleBodyClick={this.handleBodyClick}
-                handleBodyTouchBegin={this.handleBodyTouchBegin}
                 handleBodyTouchMove={this.handleBodyTouchMove}
                 handleBodyTouchEnd={this.handleBodyTouchEnd}
                 handlePopupContainerClick={this.handlePopupContainerClick}

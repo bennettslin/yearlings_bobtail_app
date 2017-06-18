@@ -2,17 +2,17 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
+
 import { createStore,
          applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-// import { Router, browserHistory } from 'react-router'
-
 import reducers from './redux/reducers'
-// import routes from './routes'
-import Wrapper from './routes'
 
+import './less/app.less'
+import App from './components/app'
+
+// Why did you update?
 const turnOnWDYULogging = false
-
 if (process.env.NODE_ENV !== 'production' && turnOnWDYULogging) {
     const { whyDidYouUpdate } = require('why-did-you-update')
     whyDidYouUpdate(React)
@@ -23,8 +23,7 @@ const createStoreWithMiddleware = applyMiddleware()(createStore)
 
 ReactDOM.render(
     <Provider store={createStoreWithMiddleware(reducers)}>
-        {/* <Router history={browserHistory} routes={routes} /> */}
-        <Wrapper />
+        <App />
     </Provider>,
     document.getElementById('app')
 )

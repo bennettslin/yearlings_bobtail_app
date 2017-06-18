@@ -19,6 +19,54 @@ import { getIsDesktop, getIsOverlayingAnnotation } from '../helpers/responsive-h
 
 class DomManager extends Component {
 
+    constructor(props) {
+        super(props)
+
+        this._handleClick = this._handleClick.bind(this)
+        this._handleMouseUp = this._handleMouseUp.bind(this)
+        this._resetSliderMousedUp = this._resetSliderMousedUp.bind(this)
+
+        this.state = {
+            sliderMousedUp: false
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        // If slider touch ended, then tell dom manager.
+        if (!nextProps.isSliderTouched && this.props.isSliderTouched) {
+
+            // Let click handler get called first, then reset state.
+            setTimeout(this._resetSliderMousedUp, 0)
+        }
+    }
+
+    _resetSliderMousedUp() {
+        this.setState({
+            sliderMousedUp: false
+        })
+    }
+
+    _handleMouseUp(e) {
+        this.props.handleBodyTouchEnd(e)
+
+        if (this.props.isSliderTouched) {
+            this.setState({
+                sliderMousedUp: true
+            })
+
+        }
+    }
+
+    _handleClick(e) {
+        /**
+         * Don't register the click event that happens after mouseUp if we're
+         * lifting up from moving the slider.
+         */
+        if (!this.state.sliderMousedUp) {
+            this.props.handleBodyClick(e)
+        }
+    }
+
     render() {
         const { deviceIndex,
                 interactivatedVerseIndex,
@@ -36,6 +84,7 @@ class DomManager extends Component {
                 selectedTitleIndex,
                 selectedWikiIndex,
                 isPlaying,
+                isSliderTouched,
                 isSliderMoving,
 
                 isLyricExpanded,
@@ -47,10 +96,7 @@ class DomManager extends Component {
                 isVerseBarAbove,
                 isVerseBarBelow,
 
-                handleBodyClick,
-                handleBodyTouchBegin,
                 handleBodyTouchMove,
-                handleBodyTouchEnd,
                 handleKeyDownPress,
                 handlePlayerTimeChange,
                 handlePlayerNextSong,
@@ -124,13 +170,16 @@ class DomManager extends Component {
                       'title-in-audio': isTitleInAudio,
                       'verse-bar-above': isVerseBarAbove,
                       'verse-bar-below': isVerseBarBelow,
-                      'verse-bar-hidden': !isVerseBarAbove && !isVerseBarBelow }
+                      'verse-bar-hidden': !isVerseBarAbove && !isVerseBarBelow,
+                      'slider-touched': isSliderTouched }
                 )}
-                onClick={handleBodyClick}
-                onMouseDown={handleBodyTouchBegin}
+                onClick={this._handleClick}
                 onMouseMove={handleBodyTouchMove}
-                onMouseUp={handleBodyTouchEnd}
-                onMouseLeave={handleBodyTouchEnd}
+                onTouchMove={handleBodyTouchMove}
+                onMouseUp={this._handleMouseUp}
+                onMouseLeave={this._handleMouseUp}
+                onTouchEnd={this._handleMouseUp}
+                onTouchCancel={this._handleMouseUp}
                 onKeyDown={handleKeyDownPress}
                 tabIndex="-1"
             >
@@ -141,6 +190,9 @@ class DomManager extends Component {
                 <div className="popup-overlay" />
 
                 <SwitchManager {...other} />
+
+                {/* Prevent popup interaction when slider is touched. */}
+                <div className="super-overlay" />
             </div>
         )
     }
@@ -151,6 +203,7 @@ DomManager.propTypes = {
     deviceIndex: PropTypes.number.isRequired,
     isPlaying: PropTypes.bool.isRequired,
     isSliderMoving: PropTypes.bool.isRequired,
+    isSliderTouched: PropTypes.bool.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
     selectedAccessIndex: PropTypes.number.isRequired,
     selectedAdminIndex: PropTypes.number.isRequired,
@@ -177,7 +230,6 @@ DomManager.propTypes = {
 
     // From parent.
     handleBodyClick: PropTypes.func.isRequired,
-    handleBodyTouchBegin: PropTypes.func.isRequired,
     handleBodyTouchMove: PropTypes.func.isRequired,
     handleBodyTouchEnd: PropTypes.func.isRequired,
     handleKeyDownPress: PropTypes.func.isRequired,
@@ -188,7 +240,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }))(DomManager)
