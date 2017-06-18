@@ -398,13 +398,6 @@ export const getAnnotationAnchorIndexForDirection = ({
     return -1
 }
 
-export const getTasks = (selectedSong, tasks) => {
-    const songTasks = selectedSong.tasks
-
-    // If no song tasks, then return album tasks.
-    return songTasks ? songTasks : tasks
-}
-
 export const getWikiUrl = ({
 
     selectedSongIndex,

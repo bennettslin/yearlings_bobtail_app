@@ -2,24 +2,17 @@ import React from 'react'
 import Shared from './shared'
 import DevSection from './dev/dev-section'
 import AdminNavSection from './admin-nav/admin-nav-section'
-import ProgressHelper from '../../helpers/progress-helper'
-import AlbumData from '../../album-data'
-const { songs } = AlbumData
+import { getAllTaskObjects } from '../../helpers/data-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const AdminManager = ({
-
-    tasks: albumTasks,
-
-...other }) => {
-    const allTasks = ProgressHelper.getAllTaskObjects(albumTasks, songs)
+const AdminManager = (props) => {
+    const allTasks = getAllTaskObjects()
 
     return (
-        <AdminManagerView {...other}
-            albumTasks={albumTasks}
+        <AdminManagerView {...props}
             allTasks={allTasks}
         />
     )

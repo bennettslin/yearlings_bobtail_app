@@ -18,11 +18,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Task calculations are wrong. :(`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     /**
      * Medium bugs and tasks.
@@ -2278,5 +2273,10 @@ module.exports = [
         taskName: `Verse bar needs to change width when changing verse.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Task calculations are wrong. :(`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

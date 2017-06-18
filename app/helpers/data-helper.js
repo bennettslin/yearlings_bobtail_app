@@ -178,6 +178,15 @@ export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
  * ADMIN *
  *********/
 
+export const getAllTaskObjects = (songs = AlbumData.songs) => {
+    const { tasks } = AlbumData,
+        allTaskObjects = songs.map(song => song.tasks)
+
+    allTaskObjects.push(tasks)
+
+    return allTaskObjects
+}
+
 export const getSongTasks = (songIndex) => {
     const selectedSong = getSongObject(songIndex)
     return selectedSong.tasks || []

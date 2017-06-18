@@ -120,14 +120,6 @@ export default {
         return (JSON.stringify(objects1) === JSON.stringify(objects2))
     },
 
-    getAllTaskObjects(albumTasks, songs) {
-        let allTaskObjects = songs.map(song => song.tasks)
-
-        allTaskObjects.push(albumTasks)
-
-        return allTaskObjects
-    },
-
     getBarWidthStyle(numerator, denominator) {
         return (numerator / (denominator || 0.01) * 100) + '%'
     }
