@@ -1039,6 +1039,7 @@ class App extends Component {
     render() {
         return (
             <EventManager
+                // TODO: Don't do this.
                 isLogue={getSongIsLogue(this.props.selectedSongIndex)}
 
                 // Event manager props.

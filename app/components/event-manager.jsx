@@ -22,6 +22,8 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
+        this.focusBody = this.focusBody.bind(this)
+
         this.handleAnnotationAccess = this.handleAnnotationAccess.bind(this)
         this.handleDotAccess = this.handleDotAccess.bind(this)
         this.handleAnnotationAnchorAccess = this.handleAnnotationAnchorAccess.bind(this)
@@ -77,7 +79,7 @@ class EventManager extends Component {
 
     componentDidMount() {
         // Focus lyric section when app is mounted.
-        this._focusBody()
+        this.focusBody()
     }
 
     componentWillReceiveProps(nextProps) {
@@ -157,11 +159,8 @@ class EventManager extends Component {
      *********/
 
     handleAdminToggle(e) {
-        const newAdminIndex = this.props.toggleAdmin()
         this.stopPropagation(e)
-
-        // Change focus for keyboard events.
-        this._focusBody(newAdminIndex)
+        this.props.toggleAdmin()
         return true
     }
 
@@ -625,21 +624,27 @@ class EventManager extends Component {
 
         // Return focus to lyric section so it can have scroll access.
         // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-        this._focusBody()
+        this.focusBody()
     }
 
 
-    _focusBody(newAdminIndex) {
-        const { selectedAdminIndex,
-                isLogue } = this.props,
-            doFocusAdmin = isNaN(newAdminIndex) ?
-                newAdminIndex : selectedAdminIndex
+    focusBody() {
+        // const { selectedAdminIndex,
+        //         isLogue } = this.props,
+        //     doFocusAdmin = isNaN(newAdminIndex) ?
+        //         newAdminIndex : selectedAdminIndex
+        //
+        // console.error('doFocusAdmin', doFocusAdmin);
 
-        if (doFocusAdmin || isLogue) {
-            this.myDomManager && this.myDomManager.focus()
+        if (this.myLyricSection) {
+            console.error('focus lyric');
+            this.myLyricSection.focus()
 
+        } else if (this.myDomManager) {
+            console.error('focus dom manager');
+            this.myDomManager.focus()
         } else {
-            this.myLyricSection && this.myLyricSection.focus()
+            console.error('no focus');
         }
     }
 
@@ -870,61 +875,73 @@ class EventManager extends Component {
     }
 
     render() {
+
+        const domManagerRef = node => this.myDomManager = node,
+            lyricSectionRef = node => this.myLyricSection = node,
+            scoreSectionRef = node => this.myScoreSection = node,
+            wikiSectionRef = node => this.myWikiSection = node,
+
+            eventHandlers = {
+
+                domManagerRef,
+                lyricSectionRef,
+                scoreSectionRef,
+                wikiSectionRef,
+
+                focusBody: this.focusBody,
+                handleAnnotationAccess: this.handleAnnotationAccess,
+                handleDotAccess: this.handleDotAccess,
+                handleAnnotationAnchorAccess: this.handleAnnotationAnchorAccess,
+                handleSongAccess: this.handleSongAccess,
+                handleVerseDirectionAccess: this.handleVerseDirectionAccess,
+                handlePopupFocus: this.handlePopupFocus,
+                handleBodyClick: this.handleBodyClick,
+                handleBodyTouchMove: this.handleBodyTouchMove,
+                handleBodyTouchEnd: this.handleBodyTouchEnd,
+                handlePopupContainerClick: this.handlePopupContainerClick,
+                handleVerseElementSelect: this.handleVerseElementSelect,
+                handleVerseElementSlide: this.handleVerseElementSlide,
+                handleAccessToggle: this.handleAccessToggle,
+                handleAdminToggle: this.handleAdminToggle,
+                handleAnnotationWikiSelect: this.handleAnnotationWikiSelect,
+                handleAnnotationPortalSelect: this.handleAnnotationPortalSelect,
+                handleAnnotationPrevious: this.handleAnnotationPrevious,
+                handleAnnotationNext: this.handleAnnotationNext,
+                handleAudioPlay: this.handleAudioPlay,
+                handleAudioPreviousSong: this.handleAudioPreviousSong,
+                handleAudioNextSong: this.handleAudioNextSong,
+                handleAudioOptionsToggle: this.handleAudioOptionsToggle,
+                handleSliderTouchBegin: this.handleSliderTouchBegin,
+                handlePlayerTimeChange: this.handlePlayerTimeChange,
+                handlePlayerNextSong: this.handlePlayerNextSong,
+                handlePlayerTimeReset: this.handlePlayerTimeReset,
+                handleDotToggle: this.handleDotToggle,
+                handleDotsSectionToggle: this.handleDotsSectionToggle,
+                handleLyricSectionExpand: this.handleLyricSectionExpand,
+                handleLyricColumnSelect: this.handleLyricColumnSelect,
+                handleLyricPlay: this.handleLyricPlay,
+                handleLyricVerseSelect: this.handleLyricVerseSelect,
+                handleLyricAnnotationSelect: this.handleLyricAnnotationSelect,
+                handleLyricSectionScroll: this.handleLyricSectionScroll,
+                handleNavExpand: this.handleNavExpand,
+                handleNavSongSelect: this.handleNavSongSelect,
+                handleNavBookSelect: this.handleNavBookSelect,
+                handleOverviewToggle: this.handleOverviewToggle,
+                handleCarouselToggle: this.handleCarouselToggle,
+                handleScoreToggle: this.handleScoreToggle,
+                handleTipsToggle: this.handleTipsToggle,
+                handleTitleToggle: this.handleTitleToggle,
+                handleVerseBarSelect: this.handleVerseBarSelect,
+                handleVerseBarWheel: this.handleVerseBarWheel,
+                handleVerseInteractivate: this.handleVerseInteractivate,
+                handleWikiToggle: this.handleWikiToggle,
+                handleScrollAfterLyricRerender: this.handleScrollAfterLyricRerender,
+                stopPropagation: this.stopPropagation
+            }
+
         return (
             <AccessManager
-                domManagerRef={node => this.myDomManager = node}
-                lyricSectionRef={node => this.myLyricSection = node}
-                scoreSectionRef={node => this.myScoreSection = node}
-                wikiSectionRef={node => this.myWikiSection = node}
-
-                handleAnnotationAccess={this.handleAnnotationAccess}
-                handleDotAccess={this.handleDotAccess}
-                handleAnnotationAnchorAccess={this.handleAnnotationAnchorAccess}
-                handleSongAccess={this.handleSongAccess}
-                handleVerseDirectionAccess={this.handleVerseDirectionAccess}
-                handlePopupFocus={this.handlePopupFocus}
-                handleBodyClick={this.handleBodyClick}
-                handleBodyTouchMove={this.handleBodyTouchMove}
-                handleBodyTouchEnd={this.handleBodyTouchEnd}
-                handlePopupContainerClick={this.handlePopupContainerClick}
-                handleVerseElementSelect={this.handleVerseElementSelect}
-                handleVerseElementSlide={this.handleVerseElementSlide}
-                handleAccessToggle={this.handleAccessToggle}
-                handleAdminToggle={this.handleAdminToggle}
-                handleAnnotationWikiSelect={this.handleAnnotationWikiSelect}
-                handleAnnotationPortalSelect={this.handleAnnotationPortalSelect}
-                handleAnnotationPrevious={this.handleAnnotationPrevious}
-                handleAnnotationNext={this.handleAnnotationNext}
-                handleAudioPlay={this.handleAudioPlay}
-                handleAudioPreviousSong={this.handleAudioPreviousSong}
-                handleAudioNextSong={this.handleAudioNextSong}
-                handleAudioOptionsToggle={this.handleAudioOptionsToggle}
-                handleSliderTouchBegin={this.handleSliderTouchBegin}
-                handlePlayerTimeChange={this.handlePlayerTimeChange}
-                handlePlayerNextSong={this.handlePlayerNextSong}
-                handlePlayerTimeReset={this.handlePlayerTimeReset}
-                handleDotToggle={this.handleDotToggle}
-                handleDotsSectionToggle={this.handleDotsSectionToggle}
-                handleLyricSectionExpand={this.handleLyricSectionExpand}
-                handleLyricColumnSelect={this.handleLyricColumnSelect}
-                handleLyricPlay={this.handleLyricPlay}
-                handleLyricVerseSelect={this.handleLyricVerseSelect}
-                handleLyricAnnotationSelect={this.handleLyricAnnotationSelect}
-                handleLyricSectionScroll={this.handleLyricSectionScroll}
-                handleNavExpand={this.handleNavExpand}
-                handleNavSongSelect={this.handleNavSongSelect}
-                handleNavBookSelect={this.handleNavBookSelect}
-                handleOverviewToggle={this.handleOverviewToggle}
-                handleCarouselToggle={this.handleCarouselToggle}
-                handleScoreToggle={this.handleScoreToggle}
-                handleTipsToggle={this.handleTipsToggle}
-                handleTitleToggle={this.handleTitleToggle}
-                handleVerseBarSelect={this.handleVerseBarSelect}
-                handleVerseBarWheel={this.handleVerseBarWheel}
-                handleVerseInteractivate={this.handleVerseInteractivate}
-                handleWikiToggle={this.handleWikiToggle}
-                handleScrollAfterLyricRerender={this.handleScrollAfterLyricRerender}
-                stopPropagation={this.stopPropagation}
+                eventHandlers={eventHandlers}
             />
         )
     }

@@ -50,6 +50,7 @@ class LyricSection extends Component {
                 completeHeightTransition,
         /* eslint-enable no-unused-vars */
                 ...other } = this.props
+
         return (
             <LyricSectionView {...other}
                 handleScroll={this._handleScroll}

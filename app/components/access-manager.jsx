@@ -92,6 +92,8 @@ class AccessManager extends Component {
 
     handleKeyDownPress(e) {
 
+        const { eventHandlers } = this.props
+
         let { key: keyName,
             keyCode } = e
 
@@ -104,7 +106,7 @@ class AccessManager extends Component {
          * Turn on access if any key was registered. (But escape might turn it
          * off again.)
          */
-        this.props.handleAccessToggle(true)
+        eventHandlers.handleAccessToggle(true)
 
         // Do not handle if any modifier keys are present, or if it's an exempt key.
         if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE || keyName === PAGE_UP || keyName === PAGE_DOWN) {
@@ -143,23 +145,27 @@ class AccessManager extends Component {
     }
 
     _routeNavigation(e, keyName) {
-        const { selectedScoreIndex,
-                selectedWikiIndex } = this.props
+        const { interactivatedVerseIndex,
+                selectedScoreIndex,
+                selectedVerseIndex,
+                selectedWikiIndex,
+
+                eventHandlers } = this.props
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
         if (!selectedScoreIndex && !selectedWikiIndex) {
-            if (this.props.interactivatedVerseIndex > -1 && keyName === ENTER) {
+            if (interactivatedVerseIndex > -1 && keyName === ENTER) {
 
                 // Interactivated verse is already selected, so toggle play.
-                if (this.props.interactivatedVerseIndex === this.props.selectedVerseIndex) {
-                    keyWasRegistered = this.props.handleLyricPlay(e)
+                if (interactivatedVerseIndex === selectedVerseIndex) {
+                    keyWasRegistered = eventHandlers.handleLyricPlay(e)
 
                     // We're selecting the interactivated verse.
                 } else {
-                    keyWasRegistered = this.props.handleLyricVerseSelect(e, this.props.interactivatedVerseIndex)
-                    this._accessAnnotationWithoutDirection(this.props.interactivatedVerseIndex)
+                    keyWasRegistered = eventHandlers.handleLyricVerseSelect(e, interactivatedVerseIndex)
+                    this._accessAnnotationWithoutDirection(interactivatedVerseIndex)
                     annotationIndexWasAccessed = true
                 }
 
@@ -191,7 +197,9 @@ class AccessManager extends Component {
     }
 
     _handleAnnotationNavigation(e, keyName) {
-        const { props } = this
+
+        const { props } = this,
+            { eventHandlers } = props
 
         let { accessedAnnotationAnchorIndex } = props,
             annotationIndexWasAccessed = false,
@@ -200,11 +208,11 @@ class AccessManager extends Component {
         switch (keyName) {
             case ARROW_LEFT:
                 annotationIndexWasAccessed = true
-                this.props.handleAnnotationPrevious(e)
+                eventHandlers.handleAnnotationPrevious(e)
                 break
             case ARROW_RIGHT:
                 annotationIndexWasAccessed = true
-                this.props.handleAnnotationNext(e)
+                eventHandlers.handleAnnotationNext(e)
                 break
             case ARROW_UP:
             case ARROW_DOWN: {
@@ -218,7 +226,7 @@ class AccessManager extends Component {
                         initialAnnotationAnchorIndex: accessedAnnotationAnchorIndex,
                         direction
                     })
-                    this.props.handleAnnotationAnchorAccess(accessedAnnotationAnchorIndex)
+                    eventHandlers.handleAnnotationAnchorAccess(accessedAnnotationAnchorIndex)
                 }
                 break
             }
@@ -237,7 +245,7 @@ class AccessManager extends Component {
 
                     // It's a wiki anchor.
                     if (typeof annotationAnchorEntity === 'string') {
-                        this.props.handleAnnotationWikiSelect(e, accessedAnnotationAnchorIndex)
+                        eventHandlers.handleAnnotationWikiSelect(e, accessedAnnotationAnchorIndex)
 
                     // It's a portal index.
                     } else {
@@ -249,7 +257,7 @@ class AccessManager extends Component {
                               columnIndex,
                               [DESTINATION_PORTAL_INDEX]: destinationPortalIndex } = portalLink,
 
-                        keyWasRegistered = this.props.handleAnnotationPortalSelect(
+                        keyWasRegistered = eventHandlers.handleAnnotationPortalSelect(
                             e,
                             songIndex,
                             annotationIndex,
@@ -281,7 +289,8 @@ class AccessManager extends Component {
 
 
     _handleDotsNavigation(e, keyName) {
-        const { selectedAccessIndex } = this.props
+        const { selectedAccessIndex,
+                eventHandlers } = this.props
 
         if (selectedAccessIndex) {
             const dotKeysCount = ALL_DOT_KEYS.length
@@ -313,19 +322,21 @@ class AccessManager extends Component {
                     }
                     break
                 case ENTER:
-                    return this.props.handleDotToggle(e, accessedDotIndex)
+                    return eventHandlers.handleDotToggle(e, accessedDotIndex)
                 default:
                     return false
             }
 
-            return this.props.handleDotAccess(accessedDotIndex)
+            return eventHandlers.handleDotAccess(accessedDotIndex)
         }
 
         return false
     }
 
     _handleNavNavigation(e, keyName) {
-        const { selectedAccessIndex } = this.props
+        const { selectedAccessIndex,
+                eventHandlers } = this.props
+
         let annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
@@ -343,7 +354,7 @@ class AccessManager extends Component {
                     direction = 1
                     break
                 case ENTER:
-                    keyWasRegistered = this.props.handleNavSongSelect(e, accessedNavSongIndex)
+                    keyWasRegistered = eventHandlers.handleNavSongSelect(e, accessedNavSongIndex)
                     /**
                      * If song was successfully selected, then annotation index was
                      * also accessed.
@@ -362,10 +373,10 @@ class AccessManager extends Component {
 
                 // Select the book column that contains the accessed song index.
                 if (shownBookColumnIndex !== getBookColumnIndex(accessedNavSongIndex)) {
-                    this.props.handleNavBookSelect(e)
+                    eventHandlers.handleNavBookSelect(e)
                 }
 
-                this.props.handleSongAccess(accessedNavSongIndex)
+                eventHandlers.handleSongAccess(accessedNavSongIndex)
             }
         }
 
@@ -375,7 +386,8 @@ class AccessManager extends Component {
 
     _handleLyricNavigation(e, keyName) {
         const { props } = this,
-            { interactivatedVerseIndex } = props,
+            { interactivatedVerseIndex,
+              eventHandlers } = props,
             isVerseInteractivated = interactivatedVerseIndex > -1
 
         let { accessedAnnotationIndex } = props,
@@ -389,7 +401,7 @@ class AccessManager extends Component {
                 direction = 1
                 break
             case ENTER:
-                return props.handleLyricAnnotationSelect(e, accessedAnnotationIndex)
+                return eventHandlers.handleLyricAnnotationSelect(e, accessedAnnotationIndex)
             default:
                 return false
         }
@@ -412,7 +424,7 @@ class AccessManager extends Component {
             })
 
             if (isVerseInteractivated) {
-                props.handleVerseInteractivate()
+                eventHandlers.handleVerseInteractivate()
             }
 
         } else {
@@ -426,7 +438,7 @@ class AccessManager extends Component {
             })
         }
 
-        props.handleAnnotationAccess({
+        eventHandlers.handleAnnotationAccess({
             accessedAnnotationIndex,
             doScroll: true
         })
@@ -434,61 +446,62 @@ class AccessManager extends Component {
     }
 
     _handleLetterKey(e, keyName) {
-        const { props } = this
+        const { eventHandlers } = this.props
+
         let annotationIndexWasAccessed = false,
             keyWasRegistered
 
         switch (keyName) {
             case ADMIN_TOGGLE_KEY:
-                keyWasRegistered = props.handleAdminToggle(e)
+                keyWasRegistered = eventHandlers.handleAdminToggle(e)
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
-                keyWasRegistered = props.handleAudioOptionsToggle(e)
+                keyWasRegistered = eventHandlers.handleAudioOptionsToggle(e)
                 break
             case AUDIO_PLAY_KEY:
-                keyWasRegistered = props.handleAudioPlay(e)
+                keyWasRegistered = eventHandlers.handleAudioPlay(e)
                 break
             case AUDIO_PREVIOUS_SONG_KEY:
-                keyWasRegistered = props.handleAudioPreviousSong(e)
+                keyWasRegistered = eventHandlers.handleAudioPreviousSong(e)
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_NEXT_SONG_KEY:
-                keyWasRegistered = props.handleAudioNextSong(e)
+                keyWasRegistered = eventHandlers.handleAudioNextSong(e)
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case AUDIO_REWIND_KEY:
-                keyWasRegistered = props.handleVerseDirectionAccess(-1)
+                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(-1)
                 break
             case AUDIO_FAST_FORWARD_KEY:
-                keyWasRegistered = props.handleVerseDirectionAccess(1)
+                keyWasRegistered = eventHandlers.handleVerseDirectionAccess(1)
                 break
             case OVERVIEW_TOGGLE_KEY:
-                keyWasRegistered = props.handleOverviewToggle(e)
+                keyWasRegistered = eventHandlers.handleOverviewToggle(e)
                 break
             case CAROUSEL_TOGGLE_KEY:
-                keyWasRegistered = props.handleCarouselToggle(e)
+                keyWasRegistered = eventHandlers.handleCarouselToggle(e)
                 break
             case SCORE_TOGGLE_KEY:
-                keyWasRegistered = props.handleScoreToggle(e)
+                keyWasRegistered = eventHandlers.handleScoreToggle(e)
                 break
             case TIPS_TOGGLE_KEY:
-                keyWasRegistered = props.handleTipsToggle(e)
+                keyWasRegistered = eventHandlers.handleTipsToggle(e)
                 break
             case LYRIC_COLUMN_TOGGLE_KEY:
-                keyWasRegistered = props.handleLyricColumnSelect(e)
+                keyWasRegistered = eventHandlers.handleLyricColumnSelect(e)
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case LYRIC_SECTION_EXPAND_KEY:
-                keyWasRegistered = props.handleLyricSectionExpand(e)
+                keyWasRegistered = eventHandlers.handleLyricSectionExpand(e)
                 break
             case TITLE_TOGGLE_KEY:
-                keyWasRegistered = props.handleTitleToggle(e)
+                keyWasRegistered = eventHandlers.handleTitleToggle(e)
                 break
             case DOTS_SECTION_EXPAND_KEY:
-                keyWasRegistered = props.handleDotsSectionToggle(e)
+                keyWasRegistered = eventHandlers.handleDotsSectionToggle(e)
                 break
             case NAV_SECTION_EXPAND_KEY:
-                keyWasRegistered = props.handleNavExpand(e)
+                keyWasRegistered = eventHandlers.handleNavExpand(e)
                 break
             default:
                 keyWasRegistered = false
@@ -502,32 +515,33 @@ class AccessManager extends Component {
     }
 
     _handleEscape(e) {
-        const { props } = this
+        const { props } = this,
+            { eventHandlers } = props
 
         // Close score popup.
         if (props.selectedScoreIndex) {
-            props.handleScoreToggle(e)
+            eventHandlers.handleScoreToggle(e)
 
         // Close wiki popup.
         } else if (props.selectedWikiIndex) {
-            props.handleWikiToggle(e)
+            eventHandlers.handleWikiToggle(e)
 
         // Close overview popup.
         } else if (OVERVIEW_OPTIONS[props.selectedOverviewIndex] === SHOWN) {
-            props.handleOverviewToggle(e)
+            eventHandlers.handleOverviewToggle(e)
 
         // Close dots popup.
         } else if (props.selectedDotsIndex) {
-            props.handleDotsSectionToggle(e)
+            eventHandlers.handleDotsSectionToggle(e)
 
         // Close annotation popup.
         } else if (props.selectedAnnotationIndex) {
-            props.handleLyricAnnotationSelect(e)
+            eventHandlers.handleLyricAnnotationSelect(e)
 
         // Turn access off.
         } else {
-            props.handleAccessToggle(false)
-            props.handleVerseInteractivate(e)
+            eventHandlers.handleAccessToggle(false)
+            eventHandlers.handleVerseInteractivate(e)
         }
     }
 
@@ -537,6 +551,7 @@ class AccessManager extends Component {
          * interactivated verse is selected.
          */
         const { props } = this,
+            { eventHandlers } = props,
             accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
                 deviceIndex: props.deviceIndex,
                 verseIndex,
@@ -545,15 +560,16 @@ class AccessManager extends Component {
                 lyricColumnIndex: props.selectedLyricColumnIndex
             })
 
-        props.handleAnnotationAccess({
+        eventHandlers.handleAnnotationAccess({
             accessedAnnotationIndex,
             doScroll: false
         })
     }
 
     render() {
+
         return (
-            <DomManager {...this.props}
+            <DomManager {...this.props.eventHandlers}
                 handleKeyDownPress={this.handleKeyDownPress}
             />
         )
