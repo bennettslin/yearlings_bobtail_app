@@ -5,7 +5,8 @@ import { connect } from 'react-redux'
 import DomManager from './dom-manager'
 import { getSongsCount,
          getBookColumnIndex,
-         getPortalLink } from '../helpers/data-helper'
+         getPortalLink,
+         getAnnotationObject } from '../helpers/data-helper'
 import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
          getAnnotationAnchorIndexForDirection } from '../helpers/logic-helper'
@@ -222,7 +223,10 @@ class AccessManager extends Component {
                 break
             }
             case ENTER: {
-                const { annotationObject } = props
+                const { shownAnnotationSongIndex,
+                        shownAnnotationIndex } = props,
+
+                    annotationObject = getAnnotationObject(shownAnnotationSongIndex, shownAnnotationIndex)
 
                 if (accessedAnnotationAnchorIndex > 0 &&
                     annotationObject &&
@@ -557,7 +561,7 @@ class AccessManager extends Component {
 }
 
 export default connect(({
-    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, shownAnnotationSongIndex, shownAnnotationIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }) => ({
-    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, shownAnnotationSongIndex, shownAnnotationIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }))(AccessManager)
