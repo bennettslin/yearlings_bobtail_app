@@ -1,35 +1,45 @@
 module.exports = [
 
     /**
-     * Short tasks.
+     * Short bugs and tasks.
      */
     {
         taskName: `Review responsive constants.`,
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Overview comes in from behind carousel.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     /**
-     * Content.
+     * Medium bugs and tasks.
      */
     {
-        taskName: `Finish instrumentals`,
+        taskName: `get verseObject from verseIndex or other index.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `When selecting song from portal, carousel scroll should be called strategically, especially Odin shivs.`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Finalise portals`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Title section content.`,
+        taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
         workedHours: 0,
         neededHours: 3
     },
+    {
+        taskName: `Stagger carousel annotation show and hide to prevent weird jump.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     /**
-     * Audio stuff.
+     * Audio and slider stuff.
      */
     {
         taskName: `Selecting time or verse while audio player is running is now buggy.`,
@@ -56,14 +66,20 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-
-
-
     {
-        taskName: `get verseObject from verseIndex or other index.`,
+        taskName: `Slider in verse styling, determine slider selected verse.`,
         workedHours: 0,
         neededHours: 2
     },
+    {
+        taskName: `audio banner is touch accessible.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    /**
+     * User experience stuff.
+     */
     {
         taskName: `Lyrics and carousel take their time to render when song is changed.`,
         workedHours: 0,
@@ -75,100 +91,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `When selecting song from portal, carousel scroll should be called strategically, especially Odin shivs.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    // Day bug.
-
-    {
-        taskName: `Releasing mouse outside of audio banner closes overlay, dom manager should tell event manager when body touch began.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Verse bar needs to change width when changing verse.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    // Bugs.
-    {
-        taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: `Stagger carousel annotation show and hide to prevent weird jump.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Overview comes in from behind carousel.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Nav wonkiness`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    // Full morning tasks.
-    {
-        taskName: `Logue overview styling, including when title is shown, and disable overview toggle in logue phone.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    // Full day tasks.
-    {
-        taskName: `Optimise shouldComponentUpdate.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-
-    {
-        taskName: `Make dot animation smoother.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-
-    // Touch accessibility.
-    {
-        taskName: `audio banner is touch accessible.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    // Audio slider.
-    {
-        taskName: `Slider in verse styling, determine slider selected verse.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `make visual keyboard keys`,
-        workedHours: 1,
-        neededHours: 3
-    },
-
-    {
-        taskName: `Allow buttons to use svgs.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `Allow borders to use svgs.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-
-    {
         taskName: `Refocus app strategically, maybe in stopPropagation.`,
         workedHours: 0,
         neededHours: 1
@@ -179,6 +101,90 @@ module.exports = [
         neededHours: 2
     },
 
+    // Day tasks.
+    {
+        taskName: `Releasing mouse outside of audio banner closes overlay, dom manager should tell event manager when body touch began.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Verse bar needs to change width when changing verse.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Nav wonkiness`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Logue overview styling, including when title is shown, and disable overview toggle in logue phone.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Make dot animation smoother.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    /**
+     * Content.
+     */
+    {
+        taskName: `Finish instrumentals`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Finalise portals`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Title section content.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    // Full day tasks.
+    {
+        taskName: `Optimise shouldComponentUpdate.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `progressive tips`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Routing and copy link button`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `make visual keyboard keys with navigation logic`,
+        workedHours: 1,
+        neededHours: 8
+    },
+
+    // Further in the future.
+    {
+        taskName: `create stage section`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Allow buttons to use svgs.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Allow borders to use svgs.`,
+        workedHours: 0,
+        neededHours: 8
+    },
     {
         taskName: `Individual score pdfs.`,
         workedHours: 0,
@@ -189,27 +195,15 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Routing and copy link button`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `create stage section`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `progressive tips`,
-        workedHours: 0,
-        neededHours: 8
-    },
+
+    // Low priority tasks.
     {
         taskName: `method to assemble backdrops and stageProps drawings.`,
         workedHours: 0,
         neededHours: 3
     },
 
+    // Dumb bugs.
     {
         taskName: `Safari doesn't recognise continuous scroll from trackpad?`,
         workedHours: 0,
