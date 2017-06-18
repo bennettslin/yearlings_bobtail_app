@@ -506,6 +506,7 @@ class EventManager extends Component {
         this.stopPropagation(e)
     }
 
+    // NOTE: This is now no longer used anywhere.
     handlePopupFocus() {
         const { selectedScoreIndex,
                 selectedWikiIndex } = this.props

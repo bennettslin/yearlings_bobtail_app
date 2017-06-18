@@ -25,7 +25,6 @@ class WikiPopup extends Component {
     render() {
         const { selectedWikiIndex,
                 handleWikiToggle,
-                handlePopupFocus,
                 ...other } = this.props,
 
             isVisible = !!selectedWikiIndex,
@@ -38,7 +37,6 @@ class WikiPopup extends Component {
                 isVisible={isVisible}
                 popupClassName="wiki"
                 showClose={true}
-                handlePopupFocus={handlePopupFocus}
                 handleCloseClick={handleWikiToggle}
                 myChild={myChild}
             />
@@ -51,8 +49,7 @@ WikiPopup.propTypes = {
     selectedWikiIndex: PropTypes.number.isRequired,
 
     // From parent.
-    handleWikiToggle: PropTypes.func.isRequired,
-    handlePopupFocus: PropTypes.func.isRequired,
+    handleWikiToggle: PropTypes.func.isRequired
 }
 export default connect(({
     selectedWikiIndex

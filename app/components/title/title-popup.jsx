@@ -24,8 +24,7 @@ class TitlePopup extends Component {
 
     render() {
         const { selectedTitleIndex,
-                handleTitleToggle,
-                handlePopupFocus } = this.props,
+                handleTitleToggle } = this.props,
 
             isVisible = !!selectedTitleIndex,
             myChild = (
@@ -37,7 +36,6 @@ class TitlePopup extends Component {
                 isVisible={isVisible}
                 popupClassName="title"
                 showClose={true}
-                handlePopupFocus={handlePopupFocus}
                 handleCloseClick={handleTitleToggle}
                 myChild={myChild}
             />
@@ -50,8 +48,7 @@ TitlePopup.propTypes = {
     selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
-    handleTitleToggle: PropTypes.func.isRequired,
-    handlePopupFocus: PropTypes.func.isRequired
+    handleTitleToggle: PropTypes.func.isRequired
 }
 
 export default connect(({

@@ -26,7 +26,6 @@ class ScorePopup extends Component {
     render() {
         const { selectedScoreIndex,
                 handleScoreToggle,
-                handlePopupFocus,
                 ...other } = this.props,
 
             isVisible = !!selectedScoreIndex,
@@ -39,7 +38,6 @@ class ScorePopup extends Component {
                 isVisible={isVisible}
                 popupClassName="score"
                 showClose={true}
-                handlePopupFocus={handlePopupFocus}
                 handleCloseClick={handleScoreToggle}
                 myChild={myChild}
             />
@@ -53,8 +51,7 @@ ScorePopup.propTypes = {
     selectedScoreIndex: PropTypes.number.isRequired,
 
     // From Redux.
-    handleScoreToggle: PropTypes.func.isRequired,
-    handlePopupFocus: PropTypes.func.isRequired
+    handleScoreToggle: PropTypes.func.isRequired
 }
 export default connect(({
     selectedSongIndex,
