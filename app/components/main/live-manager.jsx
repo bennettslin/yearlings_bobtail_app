@@ -16,6 +16,10 @@ import WikiPopup from '../wiki/wiki-popup'
 
 class LiveManager extends Component {
 
+    componentDidMount() {
+        this.props.focusBody()
+    }
+
     shouldComponentUpdate() {
         return false
     }

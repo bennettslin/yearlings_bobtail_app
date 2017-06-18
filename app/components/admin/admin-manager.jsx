@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Shared from './shared'
 import DevSection from './dev/dev-section'
 import AdminNavSection from './admin-nav/admin-nav-section'
@@ -8,42 +8,32 @@ import { getAllTaskObjects } from '../../helpers/data-helper'
  * CONTAINER *
  *************/
 
-const AdminManager = (props) => {
-    const allTasks = getAllTaskObjects()
+class AdminManager extends Component {
 
-    return (
-        <AdminManagerView {...props}
-            allTasks={allTasks}
-        />
-    )
-}
+    componentDidMount() {
+        this.props.focusBody()
+    }
 
-/****************
- * PRESENTATION *
- ****************/
+    render() {
 
-const AdminManagerView = ({
+        const { handleNavSongSelect,
+                ...other } = this.props,
 
-    // From props.
-    handleNavSongSelect,
+            allTasks = getAllTaskObjects()
 
-    // From controller.
-    allTasks,
-
-...other }) => {
-
-    return (
-        <div className="admin-column">
-            <div className="admin-field album-admin-field">
-                <DevSection />
-                <AdminNavSection
-                    allTasks={allTasks}
-                    handleNavSongSelect={handleNavSongSelect}
-                />
+        return (
+            <div className="admin-column">
+                <div className="admin-field album-admin-field">
+                    <DevSection />
+                    <AdminNavSection
+                        allTasks={allTasks}
+                        handleNavSongSelect={handleNavSongSelect}
+                    />
+                </div>
+                <Shared {...other} />
             </div>
-            <Shared {...other} />
-        </div>
-    )
+        )
+    }
 }
 
 export default AdminManager

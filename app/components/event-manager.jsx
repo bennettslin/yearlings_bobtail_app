@@ -627,21 +627,27 @@ class EventManager extends Component {
 
 
     focusBody() {
-        // const { selectedAdminIndex } = this.props,
-        //     doFocusAdmin = isNaN(newAdminIndex) ?
-        //         newAdminIndex : selectedAdminIndex
-        //
-        // console.error('doFocusAdmin', doFocusAdmin);
 
+        // In live view.
         if (this.myLyricSection) {
-            console.error('focus lyric');
             this.myLyricSection.focus()
 
+        // In admin view.
         } else if (this.myDomManager) {
-            console.error('focus dom manager');
             this.myDomManager.focus()
+
+        /**
+         * Not sure why the refs sometimes don't work, but if that's the case,
+         * we'll find the elements through the document.
+         */
         } else {
-            console.error('no focus');
+            const element =
+                document.getElementsByClassName('lyric-section')[0] ||
+                document.getElementsByClassName('dom-manager')[0]
+
+            if (element) {
+                element.focus()
+            }
         }
     }
 

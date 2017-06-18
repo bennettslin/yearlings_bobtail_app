@@ -90,11 +90,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
-    {
-        taskName: `Refocus app strategically, maybe in stopPropagation.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Day tasks.
     {
@@ -2279,4 +2274,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Refocus app strategically.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
