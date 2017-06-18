@@ -7,7 +7,7 @@ import AccessManager from './access-manager'
 import { REFERENCE } from '../constants/dots'
 import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
-import { getAnnotationObject } from '../helpers/data-helper'
+import { getSongIsLogue, getAnnotationObject } from '../helpers/data-helper'
 import { intersects } from '../helpers/dot-helper'
 import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsive-helper'
 
@@ -124,7 +124,7 @@ class EventManager extends Component {
     }
 
     handleDotAccess(accessedDotIndex) {
-        if (this.props.isLogue) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -141,7 +141,7 @@ class EventManager extends Component {
     }
 
     handleVerseDirectionAccess(direction) {
-        if (this.props.isLogue) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -316,7 +316,7 @@ class EventManager extends Component {
      *******/
 
     handleDotToggle(e, dotIndex) {
-        if (this.props.isLogue) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -377,7 +377,7 @@ class EventManager extends Component {
      **********/
 
     handleLyricPlay() {
-        if (this.props.isLogue) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -387,7 +387,7 @@ class EventManager extends Component {
     }
 
     handleLyricVerseSelect(e, selectedVerseIndex) {
-        if (this.props.isLogue) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
@@ -574,10 +574,8 @@ class EventManager extends Component {
 
     handleSliderTouchBegin(e) {
 
-        const { isLogue } = this.props
-
         // Can't be handled in logue.
-        if (isLogue) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return
         }
 
@@ -629,8 +627,7 @@ class EventManager extends Component {
 
 
     focusBody() {
-        // const { selectedAdminIndex,
-        //         isLogue } = this.props,
+        // const { selectedAdminIndex } = this.props,
         //     doFocusAdmin = isNaN(newAdminIndex) ?
         //         newAdminIndex : selectedAdminIndex
         //
@@ -799,24 +796,25 @@ class EventManager extends Component {
     }
 
     handleScrollAfterLyricRerender() {
-        const { isLogue } = this.props
 
-        if (!isLogue) {
-            const annotationIndex = this.props.selectedAnnotationIndex
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
+            return
+        }
 
-            // If a portal was selected, there will be an annotation index.
-            if (annotationIndex) {
-                this._scrollElementIntoView(ANNOTATION_SCROLL, annotationIndex)
-                if (this.props.selectedCarouselIndex) {
-                    this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, annotationIndex)
-                }
+        const annotationIndex = this.props.selectedAnnotationIndex
 
-                // Otherwise, scroll to top.
-            } else {
-                this._scrollElementIntoView(LYRICS_SCROLL, 'home')
-                if (this.props.selectedCarouselIndex) {
-                    this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, 0)
-                }
+        // If a portal was selected, there will be an annotation index.
+        if (annotationIndex) {
+            this._scrollElementIntoView(ANNOTATION_SCROLL, annotationIndex)
+            if (this.props.selectedCarouselIndex) {
+                this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, annotationIndex)
+            }
+
+            // Otherwise, scroll to top.
+        } else {
+            this._scrollElementIntoView(LYRICS_SCROLL, 'home')
+            if (this.props.selectedCarouselIndex) {
+                this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, 0)
             }
         }
     }
