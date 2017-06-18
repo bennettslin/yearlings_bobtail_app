@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import classnames from 'classnames'
 import TextBlock from '../text/text-block'
 import { TITLE, CENTRE } from '../../constants/lyrics'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-// FIXME: This whole thing is a mess...
 class VerseLine extends Component {
 
     componentDidMount() {
@@ -17,10 +17,28 @@ class VerseLine extends Component {
          * final fix for this issue.
          */
 
-        // this.setDOMWidth(false, true) // Debug statement
-
         window.setTimeout(this.setDOMWidth.bind(this, true), 0)
         window.setTimeout(this.setDOMWidth.bind(this), 1)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'deviceIndex',
+                    'selectedSongIndex',
+                    'selectedLyricColumnIndex',
+                    'showOneOfTwoLyricColumns',
+                    {
+                        onlyIfTrueInNextProps: 'inVerseBar',
+                        subUpdatingKey: 'text'
+                    }
+                ]
+            })
+
+        return componentShouldUpdate
     }
 
     /**
@@ -29,47 +47,12 @@ class VerseLine extends Component {
      * this only needs to be done when component is updated, not when it is
      * first mounted?
      */
-    componentWillUpdate(nextProps) {
-        if (this._shouldResetWidthBasedOnProps(this.props, nextProps)) {
-            this.setDOMWidth(true)
-        }
+    componentWillUpdate() {
+        this.setDOMWidth(true)
     }
 
-    componentDidUpdate(prevProps) {
-        if (this._shouldResetWidthBasedOnProps(prevProps, this.props)) {
-            this.setDOMWidth()
-        }
-    }
-
-    _shouldResetWidthBasedOnProps(oldProps, newProps) {
-        const shouldResetWidthBasedOnProps =
-            /**
-             * If performance were not an issue, we would reset based on any
-             * screen width change. Since it is, we will do so strategically.
-             * We will reset for large width changes such as between device
-             * types, or when switching from portait to landscape.
-             */
-            oldProps.deviceIndex !== newProps.deviceIndex ||
-            // oldProps.isPortrait !== newProps.isPortrait ||
-
-            /**
-             * Resetting is mandatory when selecting a new song or column, or
-             * when switching number of columns.
-             */
-            oldProps.selectedSongIndex !== newProps.selectedSongIndex ||
-
-            // TEMP NOTE: This used to check for the hidden lyric column key.
-            oldProps.selectedLyricColumnIndex !== newProps.selectedLyricColumnIndex ||
-            oldProps.showOneOfTwoLyricColumns !== newProps.showOneOfTwoLyricColumns ||
-
-            // In verse bar.
-            (!!oldProps.inVerseBar && oldProps.text !== newProps.text)
-
-        // if (oldProps.inVerseBar) {
-        //     console.error('shouldResetWidthBasedOnProps', shouldResetWidthBasedOnProps);
-        // }
-
-        return shouldResetWidthBasedOnProps
+    componentDidUpdate() {
+        this.setDOMWidth()
     }
 
     setDOMWidth(unset, debugLogOnly) {
@@ -99,7 +82,7 @@ class VerseLine extends Component {
                     const child = this.myChild,
                         offsetWidth = child.offsetWidth
 
-                    // if (this.props.verseSelected) {
+                    // if (this.props.text === 'Oh, has Willy the Cocoa come') {
                     //     console.error('offsetWidth', offsetWidth);
                     // }
 
@@ -143,8 +126,6 @@ VerseLine.propTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
-
-    // FIXME: Are these still needed, now that verse lines don't need to know which column is shown?
     selectedLyricColumnIndex: PropTypes.number.isRequired,
     showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
@@ -156,7 +137,7 @@ VerseLine.propTypes = {
     ]).isRequired,
 
     inVerseBar: PropTypes.bool.isRequired,
-    columnKey: PropTypes.string.isRequired,
+    columnKey: PropTypes.string.isRequired
 }
 
 export default connect(({
