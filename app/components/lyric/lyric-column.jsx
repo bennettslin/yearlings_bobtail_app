@@ -139,15 +139,12 @@ const LyricColumnView = ({
             <div className="lyric-column-animatable"
                 onTransitionEnd={handleAnimatableTransition}
             >
-                {
-                    <VerseBar {...verseBarProps}
-                        isAbove={true}
-                    />
-                }
-                {
-                    <VerseBar {...verseBarProps}
-                    />
-                }
+                <VerseBar {...verseBarProps}
+                    isAbove={true}
+                />
+                <VerseBar {...verseBarProps} />
+
+                {/* Make this its own component? */}
                 {showOneOfTwoLyricColumns &&
                     <div className="lyric-button-block ear-button-block">
                         <Button

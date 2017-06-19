@@ -1,0 +1,53 @@
+.stanza-container {
+    position: relative;
+}
+
+.stanza {
+    &.stanza-type-title { border: 2px solid @stanza-title-colour; }
+    &.stanza-type-refrain { border: 2px solid @stanza-refrain-colour; }
+    &.stanza-type-verse { border: 2px solid @stanza-verse-colour; }
+    &.stanza-type-prechorus { border: 2px solid @stanza-prechorus-colour; }
+    &.stanza-type-chorus { border: 2px solid @stanza-chorus-colour; }
+    &.stanza-type-postchorus { border: 2px solid @stanza-postchorus-colour; }
+    &.stanza-type-bridge { border: 2px solid @stanza-bridge-colour; }
+    &.stanza-type-coda { border: 2px solid @stanza-coda-colour; }
+    &.stanza-type-intro { border: 2px solid @stanza-instrumental-colour; }
+    &.stanza-type-solo { border: 2px solid @stanza-instrumental-colour; }
+    &.stanza-type-outro { border: 2px solid @stanza-instrumental-colour; }
+    &.stanza-type-rhyme { border: 2px solid @stanza-rhyme-colour; }
+    &.stanza-type-backing { border: 2px solid @stanza-backing-colour; }
+    &.stanza-type-response { border: 2px solid @stanza-response-colour; }
+}
+
+.stanza-tab {
+    position: absolute;
+    height: @stanza-type-tab-height;
+    top: -@stanza-type-tab-height;
+    left: 0;
+    border-radius: 7.5px 7.5px 0 0;
+
+    padding: 0 5px;
+    color: white;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 0.6em;
+}
+
+// Also apply these styles to stanza bars in audio slider.
+.stanza-tab, .stanza-time-bar {
+    &.stanza-type-title { background-color: @stanza-title-colour; }
+    &.stanza-type-refrain { background-color: @stanza-refrain-colour; }
+    &.stanza-type-verse { background-color: @stanza-verse-colour; }
+    &.stanza-type-prechorus { background-color: @stanza-prechorus-colour; }
+    &.stanza-type-chorus { background-color: @stanza-chorus-colour; }
+    &.stanza-type-postchorus { background-color: @stanza-postchorus-colour; }
+    &.stanza-type-bridge { background-color: @stanza-bridge-colour; }
+    &.stanza-type-coda { background-color: @stanza-coda-colour; }
+    &.stanza-type-intro { background-color: @stanza-instrumental-colour; }
+    &.stanza-type-solo { background-color: @stanza-instrumental-colour; }
+    &.stanza-type-outro { background-color: @stanza-instrumental-colour; }
+    &.stanza-type-rhyme { background-color: @stanza-rhyme-colour; }
+    &.stanza-type-backing { background-color: @stanza-backing-colour; }
+    &.stanza-type-response { background-color: @stanza-response-colour; }
+}

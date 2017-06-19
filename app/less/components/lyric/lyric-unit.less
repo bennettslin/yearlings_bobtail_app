@@ -1,0 +1,105 @@
+.lyric-unit {
+    display: flex;
+    justify-content: center;
+    font-size: @lyric-verse-size;
+
+    /**
+     * Apply margin top to stanza block rather than lyrics unit, so that
+     * bottom dot stanza can override it when faded out.
+     */
+    &:not(:first-child):not(.subsequent) {
+        .stanza-block:not(.dot-stanza) {
+            margin-top: @lyric-unit-margin;
+        }
+    }
+
+    &.subsequent {
+        .stanza-block {
+            margin-top: @lyric-unit-margin - @stanza-type-tab-height - 2.5px;
+        }
+    }
+}
+
+.title-unit {
+    font-size: @lyric-title-size;
+
+    .stanza {
+
+        @title-verse-padding: 15px;
+
+        .verse {
+            padding: @title-verse-padding;
+
+            .verse-audio-button-block {
+                margin-top: -@title-verse-padding;
+            }
+        }
+    }
+}
+
+.stanza-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    /**
+     * Limit width of stanzas when lyric column is full width of screen.
+     * This is necessary for Vegan Proclamation. This value doesn't affect
+     * the layout anywhere else.
+     */
+    max-width: 720px;
+
+    // Dots stanza will have this style only if not hidden.
+    &:not(.dot-stanza):not(:first-child) {
+        margin-left: @stanza-block-margin;
+    }
+
+    &.side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &.bottom-only {
+            justify-content: flex-end;
+        }
+    }
+
+    .sub-block {
+        margin-top: -@stanza-overlap-margin;
+        display: flex;
+    }
+}
+
+// TODO: Can these be animated?
+// Rules to show or hide stanzas when only one lyric column is shown.
+.show-only-left {
+
+    .stanza-block {
+
+        // Hide side stanzas when only left lyric column is shown.
+        &.side {
+            display: none;
+        }
+    }
+}
+
+@custom-sub-block-side-padding: 15%;
+@stanza-overlap-margin: 6.5px;
+
+.custom-sub-block {
+    &.left {
+        padding-right: @custom-sub-block-side-padding;
+    }
+    &.overlap {
+        margin-top: -@stanza-overlap-margin;
+    }
+}
+
+.stanza-block:not(.side) {
+    .custom-sub-block {
+        &.right {
+            padding-left: @custom-sub-block-side-padding;
+        }
+    }
+}

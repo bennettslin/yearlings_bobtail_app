@@ -1,0 +1,65 @@
+.lyric-button-block {
+    position: absolute;
+    padding: @app-thin-margin;
+
+    background-color: gray;
+    transition: transform @animation-default;
+
+    // Needed to position access icon properly.
+    .button {
+        position: inherit;
+    }
+
+    .animated-background {
+        background-color: orange;
+    }
+}
+
+.lyric-column {
+    .lyric-button-block {
+        z-index: @lyric-column-button-z-index;
+    }
+}
+
+@lyric-button-side-padding: 17px;
+@lyric-button-top-padding: 8.5px;
+
+.lyric-column {
+    .lyric-button-block {
+        top: @lyric-button-top-padding;
+    }
+
+    .ear-button-block {
+        // Needed to expand properly in Chrome.
+        right: @lyric-button-side-padding;
+    }
+
+    .expand-button-block {
+        left: @lyric-button-side-padding;
+    }
+}
+
+.centre-field {
+    .expand-button-block {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+        z-index: @dots-overview-section-z-index;
+    }
+}
+
+.is-logue, .lyric-expanded, .overview-shown, .dots-section-shown, .annotation-shown.carousel-collapsed {
+    .centre-field {
+        .expand-button-block {
+            transform: translateX(-50%) scale(0);
+        }
+    }
+}
+
+.lyric-collapsed {
+    .lyric-column {
+        .expand-button-block {
+            transform: scale(0);
+        }
+    }
+}
