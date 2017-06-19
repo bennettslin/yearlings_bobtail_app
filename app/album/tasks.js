@@ -2284,4 +2284,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Add gradient to lyric column background.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
