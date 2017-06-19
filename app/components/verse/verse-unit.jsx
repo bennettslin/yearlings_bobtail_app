@@ -165,6 +165,8 @@ class VerseUnit extends Component {
                 isAfterSliderSelected
             }),
             interactivatedClassName = isInteractivated ? 'interactivated' : 'not-interactivated',
+
+            // FIXME: Is this needed?
             verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${isInteractable ? 'verse-' + verseIndex : ''}`
 
         return (
