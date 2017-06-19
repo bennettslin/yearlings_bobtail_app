@@ -18,7 +18,6 @@ class Player extends Component {
         this._handleEnded = this._handleEnded.bind(this)
     }
 
-    // TODO: Still necessary?
     shouldComponentUpdate(nextProps) {
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
@@ -31,6 +30,12 @@ class Player extends Component {
                 ]
             })
 
+        // if (nextProps.isSelected) {
+        //     console.error('props:', JSON.stringify(props, null, 2));
+        //     console.error('nextProps:', JSON.stringify(nextProps, null, 2));
+        //     console.error(`componentShouldUpdate:`, componentShouldUpdate);
+        // }
+
         return componentShouldUpdate
     }
 
@@ -39,15 +44,12 @@ class Player extends Component {
 
         this._handleTimeChange()
         this._handleIsPlayingChange()
-
-        // this.myPlayer.addEventListener('timeupdate', e => {
-        //     console.error('this.myPlayer.currentTime', this.myPlayer.currentTime);
-        // })
     }
 
     componentWillUpdate(nextProps) {
-        const selectedChanged = this._getSelectedChanged(this.props, nextProps),
-            isPlayingChanged = this._getIsPlayingChanged(this.props, nextProps)
+        const { props } = this,
+            selectedChanged = nextProps.isSelected !== props.isSelected,
+            isPlayingChanged = nextProps.isPlaying !== props.isPlaying
 
         if (selectedChanged || isPlayingChanged) {
             this._handleIsPlayingChange(nextProps)
@@ -62,29 +64,9 @@ class Player extends Component {
         }
     }
 
-    _getIsPlayingChanged(oldProps, newProps) {
-        return oldProps.isPlaying !== newProps.isPlaying
-    }
-
-    _getSelectedChanged(oldProps, newProps) {
-        return oldProps.isSelected !== newProps.isSelected
-    }
-
-    _getTimeChanged(oldProps, newProps) {
-        return oldProps.updatedTimePlayed !== newProps.updatedTimePlayed
-    }
-
     _handleListen(currentTime) {
-        if (this.props.isSelected) {
-            this.props.handlePlayerTimeChange(currentTime)
-        }
-    }
-
-    _handleEnded() {
-        // FIXME: Waiting for the player to send onEnded event takes too long. Have this be based on the song's own time.
-        if (this.props.isSelected) {
-            this.props.handlePlayerNextSong()
-        }
+        // Tell app that player has advanced in time.
+        this.props.handlePlayerTimeChange(currentTime)
     }
 
     _handleIsPlayingChange(props = this.props) {
@@ -121,11 +103,18 @@ class Player extends Component {
         }
     }
 
+    _handleEnded() {
+        // FIXME: Waiting for the player to send onEnded event takes too long. Have this be based on the song's own time.
+        if (this.props.isSelected) {
+            this.props.handlePlayerNextSong()
+        }
+    }
+
     render() {
         return (
             <ReactAudioPlayer
-                src={this.props.mp3}
                 ref={(node) => (this.myReactPlayer = node)}
+                src={this.props.mp3}
                 listenInterval={100}
                 onListen={this._handleListen}
                 onEnded={this._handleEnded}
@@ -142,6 +131,7 @@ Player.propTypes = {
     // From parent.
     mp3: PropTypes.string.isRequired,
     isSelected: PropTypes.bool.isRequired,
+    handlePlayerTimeChange: PropTypes.func.isRequired,
     handlePlayerTimeReset: PropTypes.func.isRequired,
     handlePlayerNextSong: PropTypes.func.isRequired
 }

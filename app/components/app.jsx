@@ -903,9 +903,9 @@ class App extends Component {
          * the new time selected by user.
          */
         // FIXME: This doesn't work anymore. Selecting verse or time when player is running is buggy.
-        if (this.props.updatedTimePlayed !== null) {
-            return false
-        }
+        // if (this.props.updatedTimePlayed !== null) {
+        //     return false
+        // }
 
         this.props.selectVerseIndex(selectedVerseIndex)
         this.props.selectTimePlayed(selectedTimePlayed)

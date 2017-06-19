@@ -5,23 +5,10 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Player from './player'
 import { getMp3s } from '../../helpers/data-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class PlayersSection extends Component {
 
-    // TODO: Still necessary?
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'selectedSongIndex'
-                ]
-            })
-
-        return componentShouldUpdate
-    }
+    // Don't need shouldComponentUpdate.
 
     render() {
         const { selectedSongIndex,
