@@ -13,6 +13,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Popup annotation now comes up behind lyric column.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     /**
      * Medium bugs and tasks.
@@ -52,9 +57,9 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Weird bug where player stops sending listen events after having currentTime changed.`,
+        taskName: `Weird bug where player stops sending listen events after having currentTime changed. Use setInterval.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
     },
     {
         taskName: `Fix weird glitch two seconds into new song after load.`,
