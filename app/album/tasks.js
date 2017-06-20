@@ -42,9 +42,9 @@ module.exports = [
      * Audio and slider stuff.
      */
     {
-        taskName: `Selecting time or verse while audio player is running is now buggy.`,
+        taskName: `Player advances to prologue rather than next song.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 2
     },
     {
         taskName: `When song finishes playing, proceed to next more smoothly.`,
@@ -2289,4 +2289,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Selecting time or verse while audio player is running is now buggy.`,
+        workedHours: 3,
+        neededHours: 3
+    }
 ]

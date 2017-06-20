@@ -14,8 +14,8 @@ class Player extends Component {
     constructor(props) {
         super(props)
 
-        this._handleListen = this._handleListen.bind(this)
-        this._handleEnded = this._handleEnded.bind(this)
+        this._handleAudioElementAdvance = this._handleAudioElementAdvance.bind(this)
+        this._handleAudioElementEnded = this._handleAudioElementEnded.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -30,20 +30,15 @@ class Player extends Component {
                 ]
             })
 
-        // if (nextProps.isSelected) {
-        //     console.error('props:', JSON.stringify(props, null, 2));
-        //     console.error('nextProps:', JSON.stringify(nextProps, null, 2));
-        //     console.error(`componentShouldUpdate:`, componentShouldUpdate);
-        // }
-
         return componentShouldUpdate
     }
 
     componentDidMount() {
         this.myPlayer = this.myReactPlayer.audioEl
 
-        this._handleTimeChange()
-        this._handleIsPlayingChange()
+        // Tell audio element its initial state.
+        this._updateAudioElementTime()
+        this._updateAudioElementIsPlaying()
     }
 
     componentWillUpdate(nextProps) {
@@ -51,25 +46,23 @@ class Player extends Component {
             selectedChanged = nextProps.isSelected !== props.isSelected,
             isPlayingChanged = nextProps.isPlaying !== props.isPlaying
 
+        // Update playing status.
         if (selectedChanged || isPlayingChanged) {
-            this._handleIsPlayingChange(nextProps)
+            this._updateAudioElementIsPlaying(nextProps)
         }
 
-        if (selectedChanged) {
-            this._handleSelectedChange(this.props)
+        // Reset audio element if no longer selected.
+        if (!nextProps.isSelected && props.isSelected) {
+            this.myPlayer.currentTime = 0
         }
 
+        // Handle user selected time.
         if (nextProps.updatedTimePlayed !== null) {
-            this._handleTimeChange(nextProps)
+            this._updateAudioElementTime(nextProps)
         }
     }
 
-    _handleListen(currentTime) {
-        // Tell app that player has advanced in time.
-        this.props.handlePlayerTimeChange(currentTime)
-    }
-
-    _handleIsPlayingChange(props = this.props) {
+    _updateAudioElementIsPlaying(props = this.props) {
         const { isSelected,
                 isPlaying } = props,
             { myPlayer } = this
@@ -84,27 +77,34 @@ class Player extends Component {
         }
     }
 
-    _handleSelectedChange(oldProps) {
-        const wasSelected = oldProps.isSelected
-
-        if (wasSelected) {
-            this.myPlayer.currentTime = 0
-        }
-    }
-
-    _handleTimeChange(props = this.props) {
-        const { isSelected } = props
+    _updateAudioElementTime(props = this.props) {
+        const { isSelected,
+                isPlaying } = props
 
         if (isSelected) {
 
-            // FIXME: Something should happen here to keep the player calling the onListen handler.
-            this.myPlayer.currentTime = props.updatedTimePlayed
+            if (isPlaying) {
+
+                // FIXME: This doesn't actually fix the issue of the audio element no longer sending listen events when the time is changed while playing.
+                this.myPlayer.pause()
+                this.myPlayer.currentTime = props.updatedTimePlayed
+                this.myPlayer.play()
+
+            } else {
+                this.myPlayer.currentTime = props.updatedTimePlayed
+            }
+
             this.props.handlePlayerTimeReset()
         }
     }
 
-    _handleEnded() {
-        // FIXME: Waiting for the player to send onEnded event takes too long. Have this be based on the song's own time.
+    _handleAudioElementAdvance(currentTime) {
+        // Tell app that audio element has advanced in time.
+        this.props.handlePlayerTimeChange(currentTime)
+    }
+
+    _handleAudioElementEnded() {
+        // FIXME: Waiting for the audio element to send onEnded event takes too long. Have this be based on the song's own time.
         if (this.props.isSelected) {
             this.props.handlePlayerNextSong()
         }
@@ -116,8 +116,8 @@ class Player extends Component {
                 ref={(node) => (this.myReactPlayer = node)}
                 src={this.props.mp3}
                 listenInterval={100}
-                onListen={this._handleListen}
-                onEnded={this._handleEnded}
+                onListen={this._handleAudioElementAdvance}
+                onEnded={this._handleAudioElementEnded}
             />
         )
     }

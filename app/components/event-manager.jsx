@@ -271,7 +271,7 @@ class EventManager extends Component {
      ****************/
 
     handlePlayerTimeChange(time) {
-        this.props.selectTime(time)
+        this.props.selectTime(time, true)
     }
 
     handlePlayerNextSong(e) {

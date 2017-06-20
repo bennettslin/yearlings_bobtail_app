@@ -5,7 +5,9 @@ import { DEVICE_OBJECTS } from '../../constants/responsive'
 const AdminToggle = ({
 
     // From props.
-    isLyricExpanded,
+    isPlaying,
+    selectedTimePlayed,
+    updatedTimePlayed,
     deviceIndex,
     windowWidth,
     windowHeight
@@ -13,7 +15,13 @@ const AdminToggle = ({
 }) => (
     <div className="admin-toggle">
         <div>
-            {isLyricExpanded ? 'expanded' : 'collapsed'}
+            now {isPlaying ? 'playing' : 'paused'}
+        </div>
+        <div>
+            selected time: {selectedTimePlayed}
+        </div>
+        <div>
+            updated time: {updatedTimePlayed}
         </div>
         <div>
             {DEVICE_OBJECTS[deviceIndex].className}
@@ -25,12 +33,16 @@ const AdminToggle = ({
 )
 
 export default connect(({
-    isLyricExpanded,
+    isPlaying,
+    selectedTimePlayed,
+    updatedTimePlayed,
     deviceIndex,
     windowWidth,
     windowHeight
 }) => ({
-    isLyricExpanded,
+    isPlaying,
+    selectedTimePlayed,
+    updatedTimePlayed,
     deviceIndex,
     windowWidth,
     windowHeight

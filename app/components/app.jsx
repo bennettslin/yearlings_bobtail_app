@@ -270,13 +270,14 @@ class App extends Component {
         return true
     }
 
-    selectTime(selectedTimePlayed = 0) {
+    selectTime(selectedTimePlayed = 0, isPlayerAdvancing) {
         const selectedVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, selectedTimePlayed)
 
         if (selectedVerseIndex !== null) {
             this._selectTimeAndVerse({
                 selectedTimePlayed,
-                selectedVerseIndex
+                selectedVerseIndex,
+                isPlayerAdvancing
             })
         }
     }
@@ -891,24 +892,24 @@ class App extends Component {
 
     _selectTimeAndVerse({
         selectedTimePlayed,
-        selectedVerseIndex
+        selectedVerseIndex,
+        isPlayerAdvancing
     }) {
         /**
          * Since time and verse are in sync, this helper method can be called
          * by either one.
          */
 
-        /**
-         * Don't let player change time before it has been updated to reflect
-         * the new time selected by user.
-         */
-        // FIXME: This doesn't work anymore. Selecting verse or time when player is running is buggy.
-        // if (this.props.updatedTimePlayed !== null) {
-        //     return false
-        // }
-
         this.props.selectVerseIndex(selectedVerseIndex)
         this.props.selectTimePlayed(selectedTimePlayed)
+
+        /**
+         * If time was not changed by the audio element advancing, tell player
+         * to update audio element's time.
+         */
+        if (!isPlayerAdvancing) {
+            this.props.setUpdatedTimePlayed(selectedTimePlayed)
+        }
     }
 
     _deselectAnnotationIfSelected({
