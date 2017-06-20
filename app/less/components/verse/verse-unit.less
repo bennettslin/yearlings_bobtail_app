@@ -1,0 +1,36 @@
+.slider-moving {
+
+    .verse {
+        // Slider side verse.
+        &.in-side {
+            .text-shadow-mixin(@even-verse-colour);
+        }
+
+        // Slider selected verse.
+        &.on-slider {
+            .text-shadow-mixin(@audio-neutral-colour);
+        }
+
+        // Before slider.
+        &.before-slider {
+            &.odd {
+                .text-shadow-mixin(@odd-before-slider-colour);
+            }
+
+            &.even {
+                .text-shadow-mixin(@even-before-slider-colour);
+            }
+        }
+
+        // After slider.
+        &.after-slider {
+            &.odd {
+                .text-shadow-mixin(@odd-after-slider-colour);
+            }
+
+            &.even {
+                .text-shadow-mixin(@even-after-slider-colour);
+            }
+        }
+    }
+}

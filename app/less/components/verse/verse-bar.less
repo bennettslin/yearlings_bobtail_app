@@ -17,23 +17,6 @@
                           @app-icon-diameter * 2 +
                           @verse-bar-margin * 2;
 
-// TODO: Make this styling better, of course.
-
-.verse-bar {
-    max-width: 100%;
-
-    margin: 0 5px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-
-    box-shadow: 0 3px 12px 5px @darker-box-shadow-colour;
-
-    .text-span {
-        z-index: @verse-bar-text-z-index;
-    }
-}
-
 .verse-bar-block {
     position: absolute;
 
@@ -92,5 +75,27 @@
 .phone-width {
     .verse-bar-block {
         max-width: ~"calc(100% - @{verse-bar-phone-margins})";
+    }
+}
+
+.verse-bar {
+    max-width: 100%;
+
+    margin: 0 5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    box-shadow: 0 3px 12px 5px @darker-box-shadow-colour;
+
+    .text-span {
+        z-index: @verse-bar-text-z-index;
+    }
+}
+
+.slider-moving {
+
+    .verse-bar {
+        background-color: @audio-neutral-colour;
     }
 }

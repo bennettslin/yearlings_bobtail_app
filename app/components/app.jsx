@@ -123,6 +123,7 @@ class App extends Component {
          */
         const { selectedSongIndex,
                 selectedAudioOptionIndex } = this.props,
+
             selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex],
             willAdvance = selectedAudioOption === CONTINUE
 
