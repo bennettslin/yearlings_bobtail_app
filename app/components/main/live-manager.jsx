@@ -21,6 +21,7 @@ class LiveManager extends Component {
     }
 
     shouldComponentUpdate() {
+        // Not sure why clicking on dot or anchor calls this?
         return false
     }
 

@@ -8,15 +8,18 @@ import ScoresTipsSection from './scores-tips-section'
 
 const DotsOverviewToggleSection = ({
 
+    handleDotsSectionToggle,
     handleOverviewToggle,
-    scoresTipsSectionHandlers,
+    scoresTipsSectionHandlers
 
-...other }) => (
+}) => (
     <div className="section dots-overview-toggle-section">
         <OverviewToggle
             handleOverviewToggle={handleOverviewToggle}
         />
-        <DotsToggle {...other} />
+        <DotsToggle
+            handleDotsSectionToggle={handleDotsSectionToggle}
+        />
         <ScoresTipsSection {...scoresTipsSectionHandlers}
             inToggleSection={true}
         />
@@ -25,6 +28,7 @@ const DotsOverviewToggleSection = ({
 
 DotsOverviewToggleSection.propTypes = {
     // From parent.
+    handleDotsSectionToggle: PropTypes.func.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired,
     scoresTipsSectionHandlers: PropTypes.object.isRequired
 }
