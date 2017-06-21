@@ -567,9 +567,9 @@ class AccessManager extends Component {
     }
 
     render() {
-
         return (
-            <DomManager {...this.props.eventHandlers}
+            <DomManager
+                eventHandlers={this.props.eventHandlers}
                 handleKeyDownPress={this.handleKeyDownPress}
             />
         )

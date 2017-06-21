@@ -47,7 +47,8 @@ class DomManager extends Component {
     }
 
     _handleMouseUp(e) {
-        this.props.handleBodyTouchEnd(e)
+        const { handleBodyTouchEnd } = this.props.eventHandlers
+        handleBodyTouchEnd(e)
 
         if (this.props.isSliderTouched) {
             this.setState({
@@ -58,12 +59,14 @@ class DomManager extends Component {
     }
 
     _handleClick(e) {
+        const { handleBodyClick } = this.props.eventHandlers
+
         /**
          * Don't register the click event that happens after mouseUp if we're
          * lifting up from moving the slider.
          */
         if (!this.state.sliderMousedUp) {
-            this.props.handleBodyClick(e)
+            handleBodyClick(e)
         }
     }
 
@@ -96,15 +99,15 @@ class DomManager extends Component {
                 isVerseBarAbove,
                 isVerseBarBelow,
 
-                handleBodyTouchMove,
-                handleKeyDownPress,
-                handlePlayerTimeChange,
-                handlePlayerNextSong,
-                handlePlayerTimeReset,
+                // Passed directly from access manaager.
+                handleKeyDownPress } = this.props,
 
-                domManagerRef,
-
-                ...other } = this.props,
+            { handleBodyTouchMove,
+              handlePlayerTimeChange,
+              handlePlayerNextSong,
+              handlePlayerTimeReset,
+              domManagerRef,
+              ...other } = this.props.eventHandlers,
 
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             isDesktop = getIsDesktop(deviceIndex),
@@ -231,14 +234,16 @@ DomManager.propTypes = {
     isVerseBarBelow: PropTypes.bool.isRequired,
 
     // From parent.
-    handleBodyClick: PropTypes.func.isRequired,
-    handleBodyTouchMove: PropTypes.func.isRequired,
-    handleBodyTouchEnd: PropTypes.func.isRequired,
     handleKeyDownPress: PropTypes.func.isRequired,
-    handlePlayerTimeChange: PropTypes.func.isRequired,
-    handlePlayerNextSong: PropTypes.func.isRequired,
-    handlePlayerTimeReset: PropTypes.func.isRequired,
-    domManagerRef: PropTypes.func.isRequired
+    eventHandlers: PropTypes.shape({
+        handleBodyClick: PropTypes.func.isRequired,
+        handleBodyTouchMove: PropTypes.func.isRequired,
+        handleBodyTouchEnd: PropTypes.func.isRequired,
+        handlePlayerTimeChange: PropTypes.func.isRequired,
+        handlePlayerNextSong: PropTypes.func.isRequired,
+        handlePlayerTimeReset: PropTypes.func.isRequired,
+        domManagerRef: PropTypes.func.isRequired
+    })
 }
 
 export default connect(({
