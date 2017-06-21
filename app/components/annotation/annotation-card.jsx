@@ -8,6 +8,7 @@ import DotBlock from '../dot/dot-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
 import { PORTAL } from '../../constants/dots'
+import { getCardObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -22,24 +23,53 @@ class AnnotationCard extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-
+                    'selectedSongIndex',
+                    'inSelectedAnnotation',
+                    {
+                        conditionalNextProp: 'carouselAnnotationIndex',
+                        conditionalShouldBe: false,
+                        subUpdatingKey: 'popupAnnotationSongIndex'
+                    },
+                    {
+                        conditionalNextProp: 'carouselAnnotationIndex',
+                        conditionalShouldBe: false,
+                        subUpdatingKey: 'popupAnnotationIndex'
+                    },
+                    {
+                        conditionalNextProp: 'inSelectedAnnotation',
+                        subUpdatingKey: 'accessedAnnotationAnchorIndex'
+                    }
                 ]
             })
 
-        console.error('props:', JSON.stringify(props, null, 2));
-        console.error('nextProps:', JSON.stringify(nextProps, null, 2));
-        console.error(`componentShouldUpdate:`, componentShouldUpdate);
-
-        return componentShouldUpdate || true
+        return componentShouldUpdate
     }
 
     render() {
-        const { card,
+        const { selectedSongIndex,
+                popupAnnotationIndex,
+                popupAnnotationSongIndex,
+                cardIndex,
+
+                /* eslint-disable no-unused-vars */
+                inSelectedAnnotation,
+                /* eslint-enable no-unused-vars */
+
                 ...other } = this.props,
+
+            { carouselAnnotationIndex } = other,
+
+            cardObject = getCardObject({
+                carouselAnnotationIndex,
+                selectedSongIndex,
+                popupAnnotationIndex,
+                popupAnnotationSongIndex,
+                cardIndex
+            }),
 
             { description,
               dotKeys = {},
-              portalLinks } = card
+              portalLinks } = cardObject
 
         // Add portal key to dot keys.
         if (portalLinks) {
@@ -57,8 +87,15 @@ class AnnotationCard extends Component {
 }
 
 AnnotationCard.propTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+    popupAnnotationSongIndex: PropTypes.number.isRequired,
+    popupAnnotationIndex: PropTypes.number.isRequired,
+
     // From parent.
-    card: PropTypes.object.isRequired
+    carouselAnnotationIndex: PropTypes.number,
+    cardIndex: PropTypes.number.isRequired,
+    inSelectedAnnotation: PropTypes.bool.isRequired
 }
 
 /****************
@@ -91,6 +128,11 @@ const AnnotationCardView = ({
         <TextBlock
             text={text}
             isLyric={false}
+
+            /**
+             * Allow for clicking on anchor in unselected annotation in
+             * carousel.
+             */
             carouselAnnotationIndex={carouselAnnotationIndex}
             accessedAnnotationAnchorIndex={accessedAnnotationAnchorIndex}
             handleAnchorClick={handleAnnotationWikiSelect}
@@ -116,13 +158,19 @@ AnnotationCardView.propTypes = {
     ]),
     portalLinks: PropTypes.array,
     cardDotKeys: PropTypes.object.isRequired,
-    carouselAnnotationIndex: PropTypes.number.isRequired,
+    carouselAnnotationIndex: PropTypes.number,
     handleAnnotationWikiSelect: PropTypes.func.isRequired,
     handleAnnotationPortalSelect: PropTypes.func.isRequired
 }
 
 export default connect(({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex,
     accessedAnnotationAnchorIndex
 }) => ({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex,
     accessedAnnotationAnchorIndex
 }))(AnnotationCard)

@@ -2,24 +2,34 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import AnnotationCard from './annotation-card'
+import { getCarouselOrPopupAnnotationObject } from '../../helpers/data-helper'
 
 const AnnotationUnit = ({
 
-    annotationObject,
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex,
 
 ...other }) => {
 
-    // TODO: Can this just get the annotation object directly from state?
-    const { annotationIndex } = annotationObject
+    const { carouselAnnotationIndex } = other,
+        annotationObject = getCarouselOrPopupAnnotationObject({
+                selectedSongIndex,
+                carouselAnnotationIndex,
+                popupAnnotationSongIndex,
+                popupAnnotationIndex
+            }),
+
+        cardsIndices = Array.from(Array(annotationObject.cards.length).keys())
 
     return (
         <div className="annotation-cards-block">
-            {annotationObject.cards.map((card, index) => (
+            {cardsIndices.map(cardIndex => (
                 <AnnotationCard {...other}
-                    key={index}
-                    card={card}
-                    carouselAnnotationIndex={annotationIndex}
+                    key={cardIndex}
+                    cardIndex={cardIndex}
                 />
             ))}
         </div>
@@ -27,8 +37,21 @@ const AnnotationUnit = ({
 }
 
 AnnotationUnit.propTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+    popupAnnotationSongIndex: PropTypes.number.isRequired,
+    popupAnnotationIndex: PropTypes.number.isRequired,
+
     // From parent.
-    annotationObject: PropTypes.object.isRequired
+    carouselAnnotationIndex: PropTypes.number
 }
 
-export default AnnotationUnit
+export default connect(({
+    selectedSongIndex,
+    popupAnnotationIndex,
+    popupAnnotationSongIndex
+}) => ({
+    selectedSongIndex,
+    popupAnnotationIndex,
+    popupAnnotationSongIndex
+}))(AnnotationUnit)

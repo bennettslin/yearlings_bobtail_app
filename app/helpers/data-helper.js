@@ -146,6 +146,32 @@ export const getAnnotationObject = (songIndex, annotationIndex, songs) => {
     return annotations ? annotations[annotationIndex - 1] : null
 }
 
+export const getCarouselOrPopupAnnotationObject = ({
+    selectedSongIndex,
+    carouselAnnotationIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
+}) => {
+    // All conditional upon whether carousel annotation index exists.
+    const annotationSongIndex = carouselAnnotationIndex ?
+            selectedSongIndex : popupAnnotationSongIndex,
+        annotationIndex = carouselAnnotationIndex ?
+            carouselAnnotationIndex : popupAnnotationIndex
+
+    return getAnnotationObject(annotationSongIndex, annotationIndex)
+}
+
+export const getCardObject = (props) => {
+    // Called by annotation card component.
+
+    const annotationObject = getCarouselOrPopupAnnotationObject(props),
+        { cardIndex } = props
+
+    if (annotationObject) {
+        return annotationObject.cards[cardIndex]
+    }
+}
+
 export const getAnnotationDotKeys = (songIndex, annotationIndex) => {
     const annotation = getAnnotationObject(songIndex, annotationIndex)
     return annotation ? annotation.dotKeys : null

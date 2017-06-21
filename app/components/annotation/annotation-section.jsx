@@ -7,7 +7,7 @@ import classnames from 'classnames'
 import AnnotationUnit from './annotation-unit'
 import DotAnchor from '../dot/dot-anchor'
 import { IS_DOT_STANZA } from '../../constants/lyrics'
-import { getAnnotationObject } from '../../helpers/data-helper'
+import { getCarouselOrPopupAnnotationObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -49,24 +49,27 @@ class AnnotationSection extends Component {
         const { selectedSongIndex,
                 popupAnnotationSongIndex,
                 popupAnnotationIndex,
-
-                carouselAnnotationIndex,
                 ...other } = this.props,
 
+            { carouselAnnotationIndex } = other,
+
             /**
-             * If in carousel, get annotation index from parent. Otherwise, fetch
-             * indices from store and get it from data helper.
+             * If in carousel, get annotation index from parent. Otherwise,
+             * fetch popup annotation indices from store and get it from data
+             * helper.
              */
-            shownAnnotationObject = carouselAnnotationIndex ?
-                getAnnotationObject(selectedSongIndex, carouselAnnotationIndex) :
-                getAnnotationObject(popupAnnotationSongIndex, popupAnnotationIndex)
+            annotationObject = getCarouselOrPopupAnnotationObject({
+                selectedSongIndex,
+                carouselAnnotationIndex,
+                popupAnnotationSongIndex,
+                popupAnnotationIndex
+            })
 
         // If it's in popup, annotation object won't always exist.
-        return shownAnnotationObject ? (
+        return annotationObject ? (
             <AnnotationSectionView {...other}
-                annotationObject={shownAnnotationObject}
-                annotationTitle={shownAnnotationObject.title}
-                annotationDotKeys={shownAnnotationObject.dotKeys}
+                annotationTitle={annotationObject.title}
+                annotationDotKeys={annotationObject.dotKeys}
             />
         ) : null
     }
@@ -140,7 +143,14 @@ const AnnotationSectionView = ({
                 )}
             </div>
             <div className="cards-block">
-                <AnnotationUnit {...other} />
+                <AnnotationUnit {...other}
+
+                    /**
+                     * Tell card it's in selected annotation so it knows
+                     * whether to care about accessed annotation anchor.
+                     */
+                    inSelectedAnnotation={showAsSelected}
+                />
             </div>
         </div>
     )
