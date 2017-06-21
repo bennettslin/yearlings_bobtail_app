@@ -9,13 +9,20 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 // https://www.npmjs.com/package/react-audio-player
 
+const LISTEN_INTERVAL = 100
+
 class Player extends Component {
 
     constructor(props) {
         super(props)
 
-        this._handleAudioElementAdvance = this._handleAudioElementAdvance.bind(this)
-        this._handleAudioElementEnded = this._handleAudioElementEnded.bind(this)
+        this._tellAppCurrentTimeOfAudioElement = this._tellAppCurrentTimeOfAudioElement.bind(this)
+
+        this.state = {
+
+            // Unique identifier for clearing setInterval.
+            intervalId: null
+        }
     }
 
     shouldComponentUpdate(nextProps) {
@@ -35,6 +42,8 @@ class Player extends Component {
 
     componentDidMount() {
         this.myPlayer = this.myReactPlayer.audioEl
+
+        // this._listenForDebugStatements()
 
         // Tell audio element its initial state.
         this._updateAudioElementTime()
@@ -62,6 +71,49 @@ class Player extends Component {
         }
     }
 
+    _listenForDebugStatements() {
+        // https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events
+        this.myPlayer.addEventListener('canplay', () => {
+            console.error('canplay', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('canplaythrough', () => {
+            console.error('canplaythrough', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('ended', () => {
+            console.error('ended', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('pause', () => {
+            console.error('pause', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('play', () => {
+            console.error('play', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('playing', () => {
+            console.error('playing', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('progress', () => {
+            console.error('progress', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('seeked', () => {
+            console.error('seeked', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('seeking', () => {
+            console.error('seeking', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('stalled', () => {
+            console.error('stalled', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('suspend', () => {
+            console.error('suspend', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('timeupdate', () => {
+            console.error('timeupdate', this.props.songIndex);
+        })
+        this.myPlayer.addEventListener('waiting', () => {
+            console.error('waiting', this.props.songIndex);
+        })
+    }
+
     _updateAudioElementIsPlaying(props = this.props) {
         const { isSelected,
                 isPlaying } = props,
@@ -71,42 +123,46 @@ class Player extends Component {
         if (isSelected && isPlaying && myPlayer.paused) {
             myPlayer.play()
 
+            // Begin listening.
+            const intervalId = setInterval(
+                    this._tellAppCurrentTimeOfAudioElement,
+                    LISTEN_INTERVAL
+                )
+            this.setState({
+                intervalId
+            })
+
         // Otherwise pause.
         } else if (!myPlayer.paused) {
             myPlayer.pause()
+
+            // Stop listening.
+            clearInterval(this.state.intervalId)
+            this.setState({
+                intervalId: null
+            })
         }
     }
 
     _updateAudioElementTime(props = this.props) {
-        const { isSelected,
-                isPlaying } = props
-
-        if (isSelected) {
-
-            if (isPlaying) {
-
-                // FIXME: This doesn't actually fix the issue of the audio element no longer sending listen events when the time is changed while playing.
-                this.myPlayer.pause()
-                this.myPlayer.currentTime = props.updatedTimePlayed
-                this.myPlayer.play()
-
-            } else {
-                this.myPlayer.currentTime = props.updatedTimePlayed
-            }
-
+        // Let app update the audio element's current time.
+        if (props.isSelected) {
+            this.myPlayer.currentTime = props.updatedTimePlayed
             this.props.handlePlayerTimeReset()
         }
     }
 
-    _handleAudioElementAdvance(currentTime) {
-        // Tell app that audio element has advanced in time.
-        this.props.handlePlayerTimeChange(currentTime)
-    }
+    _tellAppCurrentTimeOfAudioElement() {
+        const { currentTime } = this.myPlayer,
+            { totalTime } = this.props
 
-    _handleAudioElementEnded() {
-        // FIXME: Waiting for the audio element to send onEnded event takes too long. Have this be based on the song's own time.
-        if (this.props.isSelected) {
+        // If the song has ended, tell app to handle next song selection.
+        if (currentTime > totalTime) {
             this.props.handlePlayerNextSong()
+
+        // Otherwise, just tell app the audio element's current time.
+        } else {
+            this.props.handlePlayerTimeChange(currentTime)
         }
     }
 
@@ -115,9 +171,6 @@ class Player extends Component {
             <ReactAudioPlayer
                 ref={(node) => (this.myReactPlayer = node)}
                 src={this.props.mp3}
-                listenInterval={100}
-                onListen={this._handleAudioElementAdvance}
-                onEnded={this._handleAudioElementEnded}
             />
         )
     }
@@ -130,6 +183,8 @@ Player.propTypes = {
 
     // From parent.
     mp3: PropTypes.string.isRequired,
+    songIndex: PropTypes.number.isRequired,
+    totalTime: PropTypes.number.isRequired,
     isSelected: PropTypes.bool.isRequired,
     handlePlayerTimeChange: PropTypes.func.isRequired,
     handlePlayerTimeReset: PropTypes.func.isRequired,

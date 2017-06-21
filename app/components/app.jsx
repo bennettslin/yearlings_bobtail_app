@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex } from '../redux/actions/access'
 import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth } from '../redux/actions/device'
-import { setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
+import { setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
 import { setShownAnnotationSongIndex, setShownAnnotationIndex, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
@@ -124,25 +124,26 @@ class App extends Component {
         const { selectedSongIndex,
                 selectedAudioOptionIndex } = this.props,
 
-            selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex],
-            willAdvance = selectedAudioOption === CONTINUE
+            selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex]
 
-        // If option is to pause at end, stop play as well.
+        // If option is to pause at end, stop play.
         if (selectedAudioOption === PAUSE_AT_END) {
             this.togglePlay()
+
+        } else {
+
+            /**
+             * If option is to continue, advance to next song. Otherwise, stay
+             * on same song, and start at beginning. (True evaluates to 1, false 0.)
+             */
+            const nextSongIndex = selectedSongIndex +
+                (selectedAudioOption === CONTINUE)
+
+            this.selectSong({
+                selectedSongIndex: nextSongIndex,
+                selectedVerseIndex: 0
+            })
         }
-
-        // FIXME: This currently doesn't work, because audio player stops playing when currentTime is changed.
-
-        /**
-         * If option is to continue, advance to next song. Otherwise, stay
-         * on same song, and start at beginning. (True evaluates to 1, false 0.)
-         */
-        this.selectSong({
-
-            // FIXME: This should be set based on whether an annotation, score, or wiki popup is currently shown.
-            preservePreviousPopupIndex: true
-        }, selectedSongIndex + willAdvance)
     }
 
     resetUpdatedTimePlayed() {
@@ -1091,7 +1092,7 @@ const passReduxStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsCarouselExpandable, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setShownAnnotationSongIndex, setShownAnnotationIndex, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setShownAnnotationSongIndex, setShownAnnotationIndex, setAppMounted, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
     }, dispatch)
 )
 

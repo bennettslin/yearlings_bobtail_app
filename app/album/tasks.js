@@ -47,29 +47,14 @@ module.exports = [
      * Audio and slider stuff.
      */
     {
-        taskName: `Player advances to prologue rather than next song.`,
+        taskName: `Strategically handle cases where audio element doesn't load. Should I use a different format? https://stackoverflow.com/questions/6037756/audio-not-loading-in-htmls-audio-tag`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
     {
         taskName: `When song finishes playing, proceed to next more smoothly.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Weird bug where player stops sending listen events after having currentTime changed. Use setInterval.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Fix weird glitch two seconds into new song after load.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Handle slider verses through CSS.`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Slider in verse styling, determine slider selected verse.`,
@@ -2298,5 +2283,15 @@ module.exports = [
         taskName: `Selecting time or verse while audio player is running is now buggy.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Weird bug where player stops sending listen events after having currentTime changed. Use setInterval.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Player advances to prologue rather than next song.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
