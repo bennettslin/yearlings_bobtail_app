@@ -1,3 +1,45 @@
+.selected-annotation {
+
+    /**
+     * Not using mixin here so that text shadow applies only to annotation
+     * title and not to annotation card.
+     */
+    &.annotation-section {
+        @colour: @odd-verse-colour;
+        background-color: @colour;
+
+        .annotation-title-block {
+            .text-anchor-block {
+                text-shadow:
+                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
+                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
+                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @colour,
+                @text-shadow-offset @text-shadow-offset @text-shadow-blur @colour;
+            }
+        }
+    }
+}
+
+.carousel {
+    .annotation-title-block {
+        text-align: center;
+
+        transition: max-height @animation-default, padding @animation-default;
+        overflow: hidden;
+        max-height: 0;
+
+        // FIXME: Make text shadow transparent?
+        // .text-shadow-mixin(transparent);
+    }
+}
+
+.popup-content-wrapper {
+    .annotation-title-block {
+        padding: @annotation-section-padding 0;
+    }
+}
+
 .annotation-title {
+    text-align: center;
     font-size: @mini-title-size;
 }

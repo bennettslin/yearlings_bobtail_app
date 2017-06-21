@@ -1,0 +1,41 @@
+.annotation-card {
+    position: relative;
+
+    max-height: 0;
+    padding: 0 @annotation-card-padding;
+    opacity: 0.5;
+    overflow: hidden;
+
+    // FIXME: Height transition is still janky.
+    transition: opacity @animation-default,
+                margin @animation-default,
+                padding @animation-default,
+                max-height @animation-default,
+                box-shadow @animation-default;
+
+    .text-shadow-mixin(@annotation-card-colour);
+
+    // TODO: Portals block needs its own text shadow?
+    .text-span {
+    }
+
+    // Select for annotation card dots, not portal dots.
+    > .dots-block {
+        position: absolute;
+        height: @annotation-dot-diameter;
+    }
+}
+
+// Override if in carousel and hidden by single lyric column.
+.show-only-right .carousel-annotation.in-column-left,
+.show-only-left .carousel-annotation.in-column-right {
+
+    .annotation-card {
+        min-height: auto;
+        max-height: 0;
+        margin: auto;
+        padding: 0 @annotation-card-padding;
+        opacity: 0.5;
+        box-shadow: none;
+    }
+}
