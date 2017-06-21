@@ -103,3 +103,24 @@
         }
     }
 }
+
+// Make font size smaller in mini and phone.
+.mini-width {
+    .lyric-unit, .verse-bar-block, .annotation-card {
+        font-size: @mini-verse-size;
+    }
+
+    .title-unit {
+        font-size: @mini-title-size;
+    }
+}
+
+.phone-width {
+    .lyric-unit, .verse-bar-block, .annotation-card {
+        font-size: @phone-verse-size;
+    }
+
+    .title-unit, .annotation-title {
+        font-size: @phone-title-size;
+    }
+}

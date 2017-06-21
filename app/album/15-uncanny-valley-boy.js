@@ -1075,7 +1075,7 @@ module.exports = {
                                     anchor: `trophy blondes.`,
                                     annotation: [
                                         {
-                                            description: `To add insult to injury, every woman I left Sita for was white, which bothered her greatly. In my defence, it wasn't at all by design, but seeing her loss as my gain, I let her believe the worst.`,
+                                            description: `To add insult to injury, the women I left Sita for were mostly white, which bothered her greatly. In my defence, it wasn't at all by design, but seeing her loss as my gain, I let her believe the worst.`,
                                             dotKeys: {
                                                 [BACKSTORY]: true
                                             }

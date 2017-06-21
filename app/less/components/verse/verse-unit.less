@@ -1,3 +1,81 @@
+.lyric-block {
+    .verse {
+        padding-left: @verse-padding;
+        padding-right: @verse-padding;
+        transition: color @animation-fast, background-color @animation-fast;
+    }
+}
+
+/**
+ * Verse colours.
+ */
+
+// Selected verse, playing.
+.is-playing {
+    &.slider-not-moving {
+        &.verse-bar-hidden {
+            .verse.selected {
+                .text-shadow-mixin(@audio-play-colour);
+            }
+        }
+
+        .verse-bar {
+            background-color: @audio-play-colour;
+        }
+    }
+}
+
+// Selected verse, paused.
+.is-paused {
+    &.slider-not-moving {
+        &.verse-bar-hidden {
+            .verse.selected {
+                .text-shadow-mixin(@audio-pause-colour);
+            }
+        }
+
+        .verse-bar {
+            background-color: @audio-pause-colour;
+        }
+    }
+}
+
+// Title.
+.verse {
+    &.title {
+        .text-shadow-mixin(@odd-verse-colour);
+    }
+}
+
+/**
+ * Interactable verse has highlighted styling only when interactivated, or when
+ * hovered, not selected, and with no other verse interactivated.
+ */
+.slider-not-moving {
+    &.is-not-verse-interactivated .lyric-section .verse.interactable:not(.selected):hover,
+    &.is-verse-interactivated .lyric-section .verse.interactivated {
+        .text-shadow-mixin(@audio-highlight-colour);
+    }
+
+    .verse {
+
+        // Default odd verse.
+        &.odd {
+            .text-shadow-mixin(@odd-verse-colour);
+        }
+
+        // Default even verse.
+        &.even {
+            .text-shadow-mixin(@even-verse-colour);
+        }
+
+        // Default side verse.
+        &.in-side {
+            .text-shadow-mixin(@odd-verse-colour);
+        }
+    }
+}
+
 .slider-moving {
 
     .verse {
