@@ -43,10 +43,14 @@ export const getComponentShouldUpdate = ({
          * If object, then compare mismatch only if a prop is true.
          */
         } else {
-            const { onlyIfTrueInNextProps,
+            const { conditionalNextProp,
+
+                    // Default condition is true.
+                    conditionalShouldBe = true,
                     subUpdatingKey } = updatingKeyEntity
 
-            if (nextProps[onlyIfTrueInNextProps]) {
+            if (!!nextProps[conditionalNextProp] === conditionalShouldBe) {
+
                 // Mismatch, so update!
                 if (props[subUpdatingKey] !== nextProps[subUpdatingKey]) {
                     return true

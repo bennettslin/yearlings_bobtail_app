@@ -48,18 +48,19 @@ class CarouselAnnotation extends Component {
     render() {
 
         const { selectedSongIndex,
-                annotationIndex } = this.props,
-
+                ...other } = this.props,
+            { annotationIndex } = other,
             annotationObject = getAnnotationObject(selectedSongIndex, annotationIndex),
+
             { columnIndex,
               dotKeys } = annotationObject,
 
             columnKey = !isNaN(columnIndex) ? LYRIC_COLUMN_KEYS[columnIndex] : ''
 
         return (
-            <CarouselAnnotationView {...this.props}
+            <CarouselAnnotationView {...other}
                 handleTitleClick={this._handleAnnotationTitleClick}
-                annotationObject={annotationObject}
+                carouselAnnotationIndex={annotationIndex}
                 annotationColumn={columnKey}
                 annotationDotKeys={dotKeys}
             />

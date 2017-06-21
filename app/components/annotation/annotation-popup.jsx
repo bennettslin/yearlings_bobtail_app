@@ -34,6 +34,17 @@ class AnnotationPopup extends Component {
         const { deviceIndex,
                 isLyricExpanded,
                 isOverlayAnnotation,
+
+                selectedAnnotationIndex,
+                selectedCarouselIndex,
+                selectedScoreIndex,
+                selectedTitleIndex,
+                selectedWikiIndex,
+
+                handleAnnotationPrevious,
+                handleAnnotationNext,
+                handlePopupContainerClick,
+
                 ...other } = this.props,
 
             isOverlayingAnnotation = getIsOverlayingAnnotation({
@@ -49,30 +60,18 @@ class AnnotationPopup extends Component {
             return null
 
         } else {
-            const { selectedAnnotationIndex,
-                    selectedCarouselIndex,
-                    selectedScoreIndex,
-                    selectedTitleIndex,
-                    selectedWikiIndex,
-
-                    handleAnnotationPrevious,
-                    handleAnnotationNext,
-                    handlePopupContainerClick,
-
-                    ...childOther } = other,
-
-                isVisible = !!selectedAnnotationIndex &&
-                            !selectedCarouselIndex &&
-                            !selectedScoreIndex &&
-                            !selectedTitleIndex &&
-                            !selectedWikiIndex,
+            const isVisible = !!selectedAnnotationIndex &&
+                              !selectedCarouselIndex &&
+                              !selectedScoreIndex &&
+                              !selectedTitleIndex &&
+                              !selectedWikiIndex,
 
                 /**
                  * Pass annotation object from state so that it persists while
                  * popup is fading out.
                  */
                 myChild = (
-                    <AnnotationSection {...childOther} />
+                    <AnnotationSection {...other} />
                 )
 
             return (

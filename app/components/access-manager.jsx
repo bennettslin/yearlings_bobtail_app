@@ -231,10 +231,10 @@ class AccessManager extends Component {
                 break
             }
             case ENTER: {
-                const { shownAnnotationSongIndex,
-                        shownAnnotationIndex } = props,
+                const { popupAnnotationSongIndex,
+                        popupAnnotationIndex } = props,
 
-                    annotationObject = getAnnotationObject(shownAnnotationSongIndex, shownAnnotationIndex)
+                    annotationObject = getAnnotationObject(popupAnnotationSongIndex, popupAnnotationIndex)
 
                 if (accessedAnnotationAnchorIndex > 0 &&
                     annotationObject &&
@@ -577,7 +577,7 @@ class AccessManager extends Component {
 }
 
 export default connect(({
-    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, shownAnnotationSongIndex, shownAnnotationIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, popupAnnotationSongIndex, popupAnnotationIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }) => ({
-    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, shownAnnotationSongIndex, shownAnnotationIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, popupAnnotationSongIndex, popupAnnotationIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }))(AccessManager)

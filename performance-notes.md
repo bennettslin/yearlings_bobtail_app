@@ -16,5 +16,11 @@ Phase 2:
 * Be strategic about shouldComponentUpdate checks.
 * Avoid shouldComponentUpdate if possible.
 
+Completed:
+* main
+
+Currently working on:
+* annotation
+
 Phase 3:
 * Avoid passing data objects if they can be fetched by indices. (/)

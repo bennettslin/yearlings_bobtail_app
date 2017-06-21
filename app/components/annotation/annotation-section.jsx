@@ -1,6 +1,6 @@
 // Section to show title and all notes and portals for each annotation.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
@@ -8,41 +8,78 @@ import AnnotationUnit from './annotation-unit'
 import DotAnchor from '../dot/dot-anchor'
 import { IS_DOT_STANZA } from '../../constants/lyrics'
 import { getAnnotationObject } from '../../helpers/data-helper'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const AnnotationSection = (props) => {
+class AnnotationSection extends Component {
 
-    const { annotationObject,
-            shownAnnotationSongIndex,
-            shownAnnotationIndex } = props,
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
 
-        /**
-         * If in carousel, get annotation object from parent. Otherwise, fetch
-         * indices from store and get it from data helper.
-         */
-        shownAnnotationObject = annotationObject ||
-            getAnnotationObject(shownAnnotationSongIndex, shownAnnotationIndex)
+                    // Container props.
+                    'selectedSongIndex',
+                    {
+                        conditionalNextProp: 'carouselAnnotationIndex',
+                        conditionalShouldBe: false,
+                        subUpdatingKey: 'popupAnnotationSongIndex'
+                    },
+                    {
+                        conditionalNextProp: 'carouselAnnotationIndex',
+                        conditionalShouldBe: false,
+                        subUpdatingKey: 'popupAnnotationIndex'
+                    },
 
-    // If it's in popup, annotation object won't always exist.
-    return shownAnnotationObject ? (
-        <AnnotationSectionView {...props}
-            annotationObject={shownAnnotationObject}
-            annotationTitle={shownAnnotationObject.title}
-            annotationDotKeys={shownAnnotationObject.dotKeys}
-        />
-    ) : null
+                    // Presentation props.
+                    'isAccessedAnnotation',
+                    'isSelectedAnnotation'
+                ]
+            })
+
+        return componentShouldUpdate
+    }
+
+    render() {
+        const { selectedSongIndex,
+                popupAnnotationSongIndex,
+                popupAnnotationIndex,
+
+                carouselAnnotationIndex,
+                ...other } = this.props,
+
+            /**
+             * If in carousel, get annotation index from parent. Otherwise, fetch
+             * indices from store and get it from data helper.
+             */
+            shownAnnotationObject = carouselAnnotationIndex ?
+                getAnnotationObject(selectedSongIndex, carouselAnnotationIndex) :
+                getAnnotationObject(popupAnnotationSongIndex, popupAnnotationIndex)
+
+        // If it's in popup, annotation object won't always exist.
+        return shownAnnotationObject ? (
+            <AnnotationSectionView {...other}
+                annotationObject={shownAnnotationObject}
+                annotationTitle={shownAnnotationObject.title}
+                annotationDotKeys={shownAnnotationObject.dotKeys}
+            />
+        ) : null
+    }
 }
 
 AnnotationSection.propTypes = {
     // Through Redux.
-    shownAnnotationSongIndex: PropTypes.number.isRequired,
-    shownAnnotationIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+    popupAnnotationSongIndex: PropTypes.number.isRequired,
+    popupAnnotationIndex: PropTypes.number.isRequired,
 
     // From parent.
-    annotationObject: PropTypes.object
+    carouselAnnotationIndex: PropTypes.number
 }
 
 /****************
@@ -120,9 +157,11 @@ AnnotationSectionView.propTypes = {
 }
 
 export default connect(({
-    shownAnnotationSongIndex,
-    shownAnnotationIndex
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
 }) => ({
-    shownAnnotationSongIndex,
-    shownAnnotationIndex
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
 }))(AnnotationSection)

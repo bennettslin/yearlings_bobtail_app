@@ -44,7 +44,7 @@ class VerseUnit extends Component {
                     'isAfterSliderSelected',
                     'isInteractivated',
                     {
-                        onlyIfTrueInNextProps: 'inVerseBar',
+                        conditionalNextProp: 'inVerseBar',
                         subUpdatingKey: 'barVerseIndex'
                     }
                 ]

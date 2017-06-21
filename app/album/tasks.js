@@ -18,6 +18,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Annotation card gets card object from song index, annotation index, and card index.`,
+        workedHours: 0,
+        neededHours: 2
+    },
 
     /**
      * Medium bugs and tasks.
@@ -2230,7 +2235,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Change annotationObject in state to shownAnnotationSongIndex and shownAnnotationIndex.`,
+        taskName: `Change annotationObject in state to popupAnnotationSongIndex and popupAnnotationIndex.`,
         workedHours: 1,
         neededHours: 1
     },

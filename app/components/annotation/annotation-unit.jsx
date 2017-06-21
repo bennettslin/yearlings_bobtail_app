@@ -10,6 +10,7 @@ const AnnotationUnit = ({
 
 ...other }) => {
 
+    // TODO: Can this just get the annotation object directly from state?
     const { annotationIndex } = annotationObject
 
     return (

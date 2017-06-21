@@ -1,6 +1,6 @@
 // Component to show individual annotation note or all portals.
 
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
@@ -8,33 +8,52 @@ import DotBlock from '../dot/dot-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
 import { PORTAL } from '../../constants/dots'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-const AnnotationCard = ({
+class AnnotationCard extends Component {
 
-    card,
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
 
-...other }) => {
+                ]
+            })
 
-    const { description,
-            dotKeys = {},
-            portalLinks } = card
+        console.error('props:', JSON.stringify(props, null, 2));
+        console.error('nextProps:', JSON.stringify(nextProps, null, 2));
+        console.error(`componentShouldUpdate:`, componentShouldUpdate);
 
-    // Add portal key to dot keys.
-    if (portalLinks) {
-        dotKeys[PORTAL] = true
+        return componentShouldUpdate || true
     }
 
-    return (
-        <AnnotationCardView {...other}
-            text={description}
-            cardDotKeys={dotKeys}
-            portalLinks={portalLinks}
-        />
-    )
+    render() {
+        const { card,
+                ...other } = this.props,
+
+            { description,
+              dotKeys = {},
+              portalLinks } = card
+
+        // Add portal key to dot keys.
+        if (portalLinks) {
+            dotKeys[PORTAL] = true
+        }
+
+        return (
+            <AnnotationCardView {...other}
+                text={description}
+                cardDotKeys={dotKeys}
+                portalLinks={portalLinks}
+            />
+        )
+    }
 }
 
 AnnotationCard.propTypes = {
