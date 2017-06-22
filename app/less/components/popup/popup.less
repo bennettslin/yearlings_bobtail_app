@@ -27,7 +27,7 @@
         }
     }
 
-    &.audio, &.score, &.title, &.wiki {
+    &.audio, &.score, &.title, &.wiki, &.annotation.visible {
         z-index: @popup-content-z-index;
     }
 
@@ -40,6 +40,6 @@
     }
 
     &.not-displayed {
-        z-index: 0;
+        z-index: @popup-container-z-index;
     }
 }

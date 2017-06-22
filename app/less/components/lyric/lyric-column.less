@@ -22,6 +22,16 @@
             width: @uncanny-valley-width;
         }
     }
+
+    .lyric-column {
+        background-image: linear-gradient(
+            to right,
+            rgba(200, 200, 200, 0),
+            rgba(200, 200, 200, 0.95) 20%,
+            rgba(200, 200, 200, 0.95) 80%,
+            rgba(200, 200, 200, 0.5)
+        );
+    }
 }
 
 .is-mobile {
@@ -68,13 +78,6 @@
     justify-content: center;
 
     transition: opacity @animation-default, transform @animation-default;
-    background-image: linear-gradient(
-        to right,
-        rgba(200, 200, 200, 0),
-        rgba(200, 200, 200, 0.95) 20%,
-        rgba(200, 200, 200, 0.95) 80%,
-        rgba(200, 200, 200, 0.5)
-    );
 }
 
 .is-song {

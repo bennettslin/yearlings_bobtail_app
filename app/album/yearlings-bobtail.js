@@ -46,5 +46,6 @@ module.exports = {
         require('./18-my-100000th-dream'),
         require('./19-epilogue')
     ],
-    tasks: require('./tasks')
+    remainingTasks: require('./remaining-tasks'),
+    completedTasks: require('./completed-tasks')
 }

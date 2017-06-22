@@ -41,7 +41,10 @@
     position: relative;
     width: @overview-toggle-width;
 
-    transition: margin-left @toggle-animation-duration;
+    transition: opacity @toggle-animation-duration,
+                margin-left @toggle-animation-duration;
+
+    opacity: 1;
     margin-left: 0;
 
     background-color: rgba(190, 210, 225, 0.5);
@@ -69,6 +72,7 @@
 // Hidden to left when is logue, or annotation shown and carousel hidden.
 .is-logue, .annotation-shown.carousel-collapsed, .dots-section-shown {
     .dots-overview-toggle-section {
+        opacity: 0;
         margin-left: -@overview-toggle-width;
     }
 }
@@ -108,11 +112,16 @@
 .dots-subfield {
     position: absolute;
     left: 0;
+    opacity: 0;
     margin-left: -@dots-subfield-margin;
     margin-top: @dots-subfield-margin / 2;
     z-index: @dots-overview-section-z-index;
 
-    transition: margin-left @animation-default, transform @animation-default;
+    // TODO: Ideal for dots section to fade to halfway left, then move all the way out to prevent user interaction.
+    transition: opacity @animation-default,
+                margin-left @animation-slow,
+                transform @animation-slow;
+
     transform: translateX(-100%);
 
     box-shadow: -2px 2px 8px 8px @box-shadow-colour;
@@ -122,6 +131,7 @@
 .is-song {
     &.dots-section-shown {
         .dots-subfield {
+            opacity: 1;
             margin-left: @dots-subfield-margin;
             transform: translateX(0);
         }
@@ -148,6 +158,7 @@
     // In mobile, also hidden to left when lyric expanded.
     &.lyric-expanded {
         .dots-overview-toggle-section {
+            opacity: 0;
             margin-left: -@overview-toggle-tablet-width;
         }
     }
@@ -201,6 +212,7 @@
         // In phone, also hidden to left when overview is shown.
         &.overview-shown {
             .dots-overview-toggle-section {
+                opacity: 0;
                 margin-left: -@overview-toggle-phone-width;
             }
         }

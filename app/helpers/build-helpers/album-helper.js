@@ -12,6 +12,9 @@ export const parseAlbumData = (albumObject) => {
     // Initialise album.
     albumObject.tempPortalLinks = {}
 
+    // Combine completed and remaining tasks.
+    _mergeAlbumTasks(albumObject)
+
     // Initial preparation.
     _initialPrepareAlbum(albumObject)
 
@@ -26,6 +29,16 @@ export const parseAlbumData = (albumObject) => {
     addDestinationPortalIndices(albumObject)
 
     return albumObject
+}
+
+const _mergeAlbumTasks = (albumObject) => {
+    const { remainingTasks,
+            completedTasks } = albumObject
+
+    albumObject.tasks = remainingTasks.concat(completedTasks)
+
+    delete albumObject.remainingTasks
+    delete albumObject.completedTasks
 }
 
 /***********
