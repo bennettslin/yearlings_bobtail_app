@@ -21,6 +21,7 @@ Completed:
 * annotation
 * audio
 * button
+* carousel
 
 Currently working on:
 

@@ -1,93 +1,73 @@
 // Section to show all song annotations in a carousel layout.
 
-import React, { Component } from 'react'
+// Component class not needed after all.
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import CarouselAnnotation from './carousel-annotation'
 import Button from '../button/button'
 import { getAnnotationsCount } from '../../helpers/data-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-class CarouselSection extends Component {
+const CarouselSection = ({
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
+    isHiddenNav,
+    selectedSongIndex,
+    accessedAnnotationIndex,
+    selectedAnnotationIndex,
+    handleAnnotationPrevious,
+    handleAnnotationNext,
 
-                    // TODO: Necessary after annotation refactor?
-                    'isHiddenNav',
-                    'selectedSongIndex',
+...other }) => {
 
-                    'accessedAnnotationIndex',
-                    'selectedAnnotationIndex'
-                ]
-            })
-
-        return componentShouldUpdate
+    if (isHiddenNav) {
+        return null
     }
 
-    render() {
-        const { isHiddenNav,
-                selectedSongIndex,
-                accessedAnnotationIndex,
-                selectedAnnotationIndex,
-                handleAnnotationPrevious,
-                handleAnnotationNext,
-                ...other } = this.props
+    const annotationsCount = getAnnotationsCount(selectedSongIndex),
 
-        if (isHiddenNav) {
-            return null
-        }
+        /**
+         * Dynamically create array of just indices. Carousel annotation
+         * will fetch annotation object directly from data helper.
+         */
+        annotationsIndices = Array.from(Array(annotationsCount).keys())
 
-        const annotationsCount = getAnnotationsCount(selectedSongIndex),
+    return (
+        <div className="carousel">
+            <div className="carousel-scroll">
+                <div className="carousel-annotations-block">
+                    <div className="carousel-annotation carousel-annotation-0" />
+                    {annotationsIndices.map(index => {
+                        const annotationIndex = index + 1,
+                            isAccessedAnnotation = annotationIndex === accessedAnnotationIndex,
+                            isSelectedAnnotation = annotationIndex === selectedAnnotationIndex
 
-            /**
-             * Dynamically create array of just indices. Carousel annotation
-             * will fetch annotation object directly from data helper.
-             */
-            annotationsIndices = Array.from(Array(annotationsCount).keys())
-
-        return (
-            <div className="carousel">
-                <div className="carousel-scroll">
-                    <div className="carousel-annotations-block">
-                        <div className="carousel-annotation carousel-annotation-0" />
-                        {annotationsIndices.map(index => {
-                            const annotationIndex = index + 1,
-                                isAccessedAnnotation = annotationIndex === accessedAnnotationIndex,
-                                isSelectedAnnotation = annotationIndex === selectedAnnotationIndex
-
-                            return (
-                                <CarouselAnnotation {...other}
-                                    key={index}
-                                    annotationIndex={annotationIndex}
-                                    isAccessedAnnotation={isAccessedAnnotation}
-                                    isSelectedAnnotation={isSelectedAnnotation}
-                                />
-                            )
-                        })}
-                    </div>
-                </div>
-                <div className="carousel-nav-buttons-block">
-                    <Button
-                        buttonName="previous-position"
-                        iconText={'\u276e'}
-                        isLarge={true}
-                        handleClick={handleAnnotationPrevious}
-                    />
-                    <Button
-                        buttonName="next-position"
-                        iconText={'\u276f'}
-                        isLarge={true}
-                        handleClick={handleAnnotationNext}
-                    />
+                        return (
+                            <CarouselAnnotation {...other}
+                                key={index}
+                                annotationIndex={annotationIndex}
+                                isAccessedAnnotation={isAccessedAnnotation}
+                                isSelectedAnnotation={isSelectedAnnotation}
+                            />
+                        )
+                    })}
                 </div>
             </div>
-        )
-    }
+            <div className="carousel-nav-buttons-block">
+                <Button
+                    buttonName="previous-position"
+                    iconText={'\u276e'}
+                    isLarge={true}
+                    handleClick={handleAnnotationPrevious}
+                />
+                <Button
+                    buttonName="next-position"
+                    iconText={'\u276f'}
+                    isLarge={true}
+                    handleClick={handleAnnotationNext}
+                />
+            </div>
+        </div>
+    )
 }
 
 CarouselSection.propTypes = {
