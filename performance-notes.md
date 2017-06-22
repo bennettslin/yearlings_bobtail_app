@@ -19,6 +19,7 @@ Phase 2:
 Completed:
 * main
 * annotation
+* audio
 
 Currently working on:
 

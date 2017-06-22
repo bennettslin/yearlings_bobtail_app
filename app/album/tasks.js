@@ -2304,4 +2304,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Audio performance optimisation.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -26,12 +26,11 @@ class AudioSection extends Component {
                     'deviceIndex',
                     'isLyricExpanded',
                     'selectedAnnotationIndex',
+                    'selectedSongIndex',
                     'selectedScoreIndex',
                     'selectedTitleIndex',
                     'selectedWikiIndex',
-                    'selectedSongIndex',
-                    'isTitleInAudio',
-                    'selectedSongIndex'
+                    'isTitleInAudio'
                 ]
             })
 
