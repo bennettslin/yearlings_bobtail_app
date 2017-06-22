@@ -2,6 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import classnames from 'classnames'
 import DotToggleButton from './dot-toggle-button'
 import { PORTAL, ALL_DOT_KEYS } from '../../constants/dots'
@@ -63,11 +64,17 @@ DotBlock.defaultProps = {
 }
 
 DotBlock.propTypes = {
+    // Through Redux.
+    accessedDotIndex: PropTypes.number,
+
     // From parent.
     dotKeys: PropTypes.object.isRequired,
     inDotsSection: PropTypes.bool.isRequired,
-    inAnnotationCard: PropTypes.bool.isRequired,
-    accessedDotIndex: PropTypes.number
+    inAnnotationCard: PropTypes.bool.isRequired
 }
 
-export default DotBlock
+export default connect(({
+    accessedDotIndex
+}) => ({
+    accessedDotIndex
+}))(DotBlock)

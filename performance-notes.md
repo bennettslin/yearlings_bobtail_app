@@ -22,6 +22,7 @@ Completed:
 * audio
 * button
 * carousel
+* dots
 
 Currently working on:
 

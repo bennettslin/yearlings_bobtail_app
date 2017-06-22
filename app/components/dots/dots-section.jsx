@@ -28,10 +28,7 @@ class DotsSection extends Component {
             componentShouldUpdate = getComponentShouldUpdate({
                 props,
                 nextProps,
-
-                // FIXME: Pass accessedDotIndex to dot-block through Redux.
                 updatingPropsArray: [
-                    'accessedDotIndex',
                     'selectedDotKeys'
                 ]
             }) || getComponentShouldUpdate({
@@ -79,7 +76,6 @@ class DotsSection extends Component {
 
 DotsSection.propTypes = {
     // Through Redux.
-    accessedDotIndex: PropTypes.number.isRequired,
     selectedDotKeys: PropTypes.object.isRequired,
 
     // From parent.
@@ -112,9 +108,7 @@ DotsSectionView.propTypes = {
 }
 
 export default connect(({
-    accessedDotIndex,
     selectedDotKeys
 }) => ({
-    accessedDotIndex,
     selectedDotKeys
 }))(DotsSection)
