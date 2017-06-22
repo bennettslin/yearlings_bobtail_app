@@ -2,12 +2,13 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import classnames from 'classnames';
 import TextBlock from '../text/text-block'
 import DotButton from '../dot/dot-button'
 import { PORTAL } from '../../constants/dots'
 import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
-import { getSongTitle, getVerseObject } from '../../helpers/data-helper'
+import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class AnnotationPortal extends Component {
@@ -24,30 +25,55 @@ class AnnotationPortal extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    // TODO: Ensure no need to change on portalObject.
-
-                    'isAccessedPortal'
+                    'selectedSongIndex',
+                    'isAccessedPortal',
+                    {
+                        conditionalNextProp: 'carouselAnnotationIndex',
+                        conditionalShouldBe: false,
+                        subUpdatingKey: 'popupAnnotationSongIndex'
+                    },
+                    {
+                        conditionalNextProp: 'carouselAnnotationIndex',
+                        conditionalShouldBe: false,
+                        subUpdatingKey: 'popupAnnotationIndex'
+                    }
                 ]
             })
 
-        // TODO: This is broken.
-        return componentShouldUpdate || true
+        return componentShouldUpdate
     }
 
     _handlePortalClick(e) {
 
-        const { songIndex,
-                annotationIndex,
-                verseIndex,
-                columnIndex,
-                [DESTINATION_PORTAL_INDEX]: destinationPortalIndex } = this.props.portalObject
+        const portalObject = getCarouselOrPopupCardPortalObject(this.props),
+
+            { songIndex,
+              annotationIndex,
+              verseIndex,
+              columnIndex,
+              [DESTINATION_PORTAL_INDEX]: destinationPortalIndex } = portalObject
 
         this.props.handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex, destinationPortalIndex)
     }
 
     render() {
-        const { portalObject,
+
+        const { selectedSongIndex,
+                carouselAnnotationIndex,
+                popupAnnotationSongIndex,
+                popupAnnotationIndex,
+                cardIndex,
+                portalLinkIndex,
                 isAccessedPortal } = this.props,
+
+            portalObject = getCarouselOrPopupCardPortalObject({
+                selectedSongIndex,
+                carouselAnnotationIndex,
+                popupAnnotationSongIndex,
+                popupAnnotationIndex,
+                cardIndex,
+                portalLinkIndex
+            }),
 
             { songIndex,
               annotationIndex,
@@ -97,10 +123,25 @@ class AnnotationPortal extends Component {
 }
 
 AnnotationPortal.propTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+    popupAnnotationSongIndex: PropTypes.number.isRequired,
+    popupAnnotationIndex: PropTypes.number.isRequired,
+
     // From parent.
-    portalObject: PropTypes.object.isRequired,
+    carouselAnnotationIndex: PropTypes.number,
+    cardIndex: PropTypes.number.isRequired,
+    portalLinkIndex: PropTypes.number.isRequired,
     isAccessedPortal: PropTypes.bool.isRequired,
     handleAnnotationPortalSelect: PropTypes.func.isRequired
 }
 
-export default AnnotationPortal
+export default connect(({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
+}) => ({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
+}))(AnnotationPortal)

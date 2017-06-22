@@ -2298,5 +2298,10 @@ module.exports = [
         taskName: `Player advances to prologue rather than next song.`,
         workedHours: 2,
         neededHours: 2
-    }
+    },
+    {
+        taskName: `Annotation performance optimisation.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

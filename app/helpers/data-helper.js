@@ -161,7 +161,7 @@ export const getCarouselOrPopupAnnotationObject = ({
     return getAnnotationObject(annotationSongIndex, annotationIndex)
 }
 
-export const getCardObject = (props) => {
+export const getCarouselOrPopupCardObject = (props) => {
     // Called by annotation card component.
 
     const annotationObject = getCarouselOrPopupAnnotationObject(props),
@@ -170,6 +170,24 @@ export const getCardObject = (props) => {
     if (annotationObject) {
         return annotationObject.cards[cardIndex]
     }
+}
+
+export const getCarouselOrPopupCardPortalLinksArray = (props) => {
+    // Called by annotation portals block component.
+
+    const cardObject = getCarouselOrPopupCardObject(props),
+        portalLinksArray = cardObject ? cardObject.portalLinks : null
+
+    return portalLinksArray
+}
+
+export const getCarouselOrPopupCardPortalObject = (props) => {
+    // Called by annotation portal component.
+
+    const portalLinksArray = getCarouselOrPopupCardPortalLinksArray(props),
+        { portalLinkIndex } = props
+
+    return portalLinksArray ? portalLinksArray[portalLinkIndex] : null
 }
 
 export const getAnnotationDotKeys = (songIndex, annotationIndex) => {

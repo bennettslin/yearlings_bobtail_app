@@ -8,7 +8,7 @@ import DotBlock from '../dot/dot-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
 import { PORTAL } from '../../constants/dots'
-import { getCardObject } from '../../helpers/data-helper'
+import { getCarouselOrPopupCardObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -34,10 +34,6 @@ class AnnotationCard extends Component {
                         conditionalNextProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
                         subUpdatingKey: 'popupAnnotationIndex'
-                    },
-                    {
-                        conditionalNextProp: 'inSelectedAnnotation',
-                        subUpdatingKey: 'accessedAnnotationAnchorIndex'
                     }
                 ]
             })
@@ -50,16 +46,11 @@ class AnnotationCard extends Component {
                 popupAnnotationIndex,
                 popupAnnotationSongIndex,
                 cardIndex,
-
-                /* eslint-disable no-unused-vars */
-                inSelectedAnnotation,
-                /* eslint-enable no-unused-vars */
-
                 ...other } = this.props,
 
             { carouselAnnotationIndex } = other,
 
-            cardObject = getCardObject({
+            cardObject = getCarouselOrPopupCardObject({
                 carouselAnnotationIndex,
                 selectedSongIndex,
                 popupAnnotationIndex,
@@ -80,7 +71,7 @@ class AnnotationCard extends Component {
             <AnnotationCardView {...other}
                 text={description}
                 cardDotKeys={dotKeys}
-                portalLinks={portalLinks}
+                cardIndex={cardIndex}
             />
         )
     }
@@ -106,14 +97,14 @@ const AnnotationCardView = ({
 
     // From props.
     carouselAnnotationIndex,
+    inSelectedAnnotation,
     handleAnnotationWikiSelect,
     handleAnnotationPortalSelect,
-    accessedAnnotationAnchorIndex,
 
     // From controller.
     text,
     cardDotKeys,
-    portalLinks
+    cardIndex
 
 }) => (
 
@@ -134,31 +125,27 @@ const AnnotationCardView = ({
              * carousel.
              */
             carouselAnnotationIndex={carouselAnnotationIndex}
-            accessedAnnotationAnchorIndex={accessedAnnotationAnchorIndex}
             handleAnchorClick={handleAnnotationWikiSelect}
         />
-        {portalLinks &&
-            <AnnotationPortalsBlock
-                portalLinks={portalLinks}
-                accessedAnnotationAnchorIndex={accessedAnnotationAnchorIndex}
-                handleAnnotationPortalSelect={handleAnnotationPortalSelect}
-            />
-        }
+        <AnnotationPortalsBlock
+            cardIndex={cardIndex}
+            carouselAnnotationIndex={carouselAnnotationIndex}
+            inSelectedAnnotation={inSelectedAnnotation}
+            handleAnnotationPortalSelect={handleAnnotationPortalSelect}
+        />
     </div>
 )
 
 AnnotationCardView.propTypes = {
-    // Through Redux.
-    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
-
     // From parent.
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array
     ]),
-    portalLinks: PropTypes.array,
-    cardDotKeys: PropTypes.object.isRequired,
     carouselAnnotationIndex: PropTypes.number,
+    cardDotKeys: PropTypes.object.isRequired,
+    cardIndex: PropTypes.number.isRequired,
+    inSelectedAnnotation: PropTypes.bool.isRequired,
     handleAnnotationWikiSelect: PropTypes.func.isRequired,
     handleAnnotationPortalSelect: PropTypes.func.isRequired
 }
@@ -166,11 +153,9 @@ AnnotationCardView.propTypes = {
 export default connect(({
     selectedSongIndex,
     popupAnnotationSongIndex,
-    popupAnnotationIndex,
-    accessedAnnotationAnchorIndex
+    popupAnnotationIndex
 }) => ({
     selectedSongIndex,
     popupAnnotationSongIndex,
-    popupAnnotationIndex,
-    accessedAnnotationAnchorIndex
+    popupAnnotationIndex
 }))(AnnotationCard)

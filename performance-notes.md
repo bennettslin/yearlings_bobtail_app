@@ -18,9 +18,9 @@ Phase 2:
 
 Completed:
 * main
+* annotation
 
 Currently working on:
-* annotation, just need portals block and portal
 
 Phase 3:
 * Avoid passing data objects if they can be fetched by indices. (/)
