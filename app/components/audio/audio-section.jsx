@@ -1,6 +1,7 @@
 // Section for user to select and play songs.
 
-import React, { Component } from 'react'
+// Component class not needed after all.
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AudioBanner from './audio-banner'
@@ -9,55 +10,33 @@ import AudioTimer from './audio-timer'
 import TitleToggle from '../title/title-toggle'
 import { getSongsCount } from '../../helpers/data-helper'
 import { getIsTimerInAudio } from '../../helpers/logic-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-class AudioSection extends Component {
+const AudioSection = ({
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'deviceIndex',
-                    'isLyricExpanded',
-                    'selectedAnnotationIndex',
-                    'selectedSongIndex',
-                    'selectedScoreIndex',
-                    'selectedTitleIndex',
-                    'selectedWikiIndex',
-                    'isTitleInAudio'
-                ]
-            })
+    selectedSongIndex,
 
-        return componentShouldUpdate
-    }
+...other }) => {
 
-    render() {
-        const { selectedSongIndex,
-                ...other } = this.props,
+    const isPrologue = selectedSongIndex === 0,
+        isFirstSong = selectedSongIndex === 1,
 
-            isPrologue = selectedSongIndex === 0,
-            isFirstSong = selectedSongIndex === 1,
+        songsCount = getSongsCount(),
 
-            songsCount = getSongsCount(),
+        isLastSong = selectedSongIndex === songsCount - 2,
+        isEpilogue = selectedSongIndex === songsCount - 1
 
-            isLastSong = selectedSongIndex === songsCount - 2,
-            isEpilogue = selectedSongIndex === songsCount - 1
-
-        return (
-            <AudioSectionView {...other}
-                isPrologue={isPrologue}
-                isFirstSong={isFirstSong}
-                isLastSong={isLastSong}
-                isEpilogue={isEpilogue}
-            />
-        )
-    }
+    return (
+        <AudioSectionView {...other}
+            isPrologue={isPrologue}
+            isFirstSong={isFirstSong}
+            isLastSong={isLastSong}
+            isEpilogue={isEpilogue}
+        />
+    )
 }
 
 AudioSection.propTypes = {
@@ -143,17 +122,17 @@ export default connect(({
     isLyricExpanded,
     selectedAnnotationIndex,
     selectedScoreIndex,
+    selectedSongIndex,
     selectedTitleIndex,
     selectedWikiIndex,
-    selectedSongIndex,
     isTitleInAudio
 }) => ({
     deviceIndex,
     isLyricExpanded,
     selectedAnnotationIndex,
     selectedScoreIndex,
+    selectedSongIndex,
     selectedTitleIndex,
     selectedWikiIndex,
-    selectedSongIndex,
     isTitleInAudio
 }))(AudioSection)

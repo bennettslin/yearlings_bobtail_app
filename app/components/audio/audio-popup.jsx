@@ -1,71 +1,52 @@
 // Popup container for audio section in overlay.
 
-import React, { Component } from 'react'
+// Component class not needed after all.
+import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Popup from '../popup/popup'
 import AudioSection from './audio-section'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 import { getShowOverlay } from '../../helpers/logic-helper'
 
 /*************
  * CONTAINER *
  *************/
 
-class AudioPopup extends Component {
+const AudioPopup = ({
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'deviceIndex',
-                    'isLyricExpanded',
-                    'selectedAnnotationIndex',
-                    'selectedScoreIndex',
-                    'selectedTitleIndex',
-                    'selectedWikiIndex'
-                ]
-            })
+    deviceIndex,
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex,
+    handlePopupContainerClick,
 
-        return componentShouldUpdate
-    }
+...other }) => {
 
-    render() {
-        const { deviceIndex,
-                isLyricExpanded,
-                selectedAnnotationIndex,
-                selectedScoreIndex,
-                selectedTitleIndex,
-                selectedWikiIndex,
-                handlePopupContainerClick,
-                ...other } = this.props,
+    const showOverlay = getShowOverlay({
+            deviceIndex,
+            isLyricExpanded,
+            selectedAnnotationIndex,
+            selectedScoreIndex,
+            selectedTitleIndex,
+            selectedWikiIndex
+        }),
 
-            showOverlay = getShowOverlay({
-                deviceIndex,
-                isLyricExpanded,
-                selectedAnnotationIndex,
-                selectedScoreIndex,
-                selectedTitleIndex,
-                selectedWikiIndex
-            }),
-
-            myChild = (
-                <AudioSection {...other}
-                    inOverlay={true}
-                />
-            )
-
-        return (
-            <Popup
-                popupClassName="audio"
-                isVisible={showOverlay}
-                handlePopupContainerClick={handlePopupContainerClick}
-                myChild={myChild}
+        myChild = (
+            <AudioSection {...other}
+                inOverlay={true}
             />
         )
-    }
+
+    return (
+        <Popup
+            popupClassName="audio"
+            isVisible={showOverlay}
+            handlePopupContainerClick={handlePopupContainerClick}
+            myChild={myChild}
+        />
+    )
 }
 
 AudioPopup.propTypes = {

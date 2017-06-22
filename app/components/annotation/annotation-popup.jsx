@@ -1,91 +1,69 @@
 // Popup container for individual annotation section.
 
-import React, { Component } from 'react'
+// Component class not needed after all.
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationSection from './annotation-section'
 import Popup from '../popup/popup'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 import { getIsOverlayingAnnotation } from '../../helpers/responsive-helper'
 
-class AnnotationPopup extends Component {
+const AnnotationPopup = ({
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'deviceIndex',
-                    'isLyricExpanded',
-                    'selectedAnnotationIndex',
-                    'selectedCarouselIndex',
-                    'selectedScoreIndex',
-                    'selectedTitleIndex',
-                    'selectedWikiIndex'
-                ]
-            })
+    deviceIndex,
+    isLyricExpanded,
+    isOverlayAnnotation,
 
-        return componentShouldUpdate
-    }
+    selectedAnnotationIndex,
+    selectedCarouselIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex,
 
-    render() {
+    handleAnnotationPrevious,
+    handleAnnotationNext,
+    handlePopupContainerClick,
 
-        const { deviceIndex,
-                isLyricExpanded,
-                isOverlayAnnotation,
+...other }) => {
 
-                selectedAnnotationIndex,
-                selectedCarouselIndex,
-                selectedScoreIndex,
-                selectedTitleIndex,
-                selectedWikiIndex,
+    const isOverlayingAnnotation = getIsOverlayingAnnotation({
+            deviceIndex,
+            isLyricExpanded
+        })
 
-                handleAnnotationPrevious,
-                handleAnnotationNext,
-                handlePopupContainerClick,
+    /**
+     * Annotation popup is told whether it is in overlay. It then checks
+     * data helper to decide whether to render itself.
+     */
+    if (isOverlayAnnotation !== isOverlayingAnnotation) {
+        return null
 
-                ...other } = this.props,
+    } else {
+        const isVisible = !!selectedAnnotationIndex &&
+                          !selectedCarouselIndex &&
+                          !selectedScoreIndex &&
+                          !selectedTitleIndex &&
+                          !selectedWikiIndex,
 
-            isOverlayingAnnotation = getIsOverlayingAnnotation({
-                deviceIndex,
-                isLyricExpanded
-            })
-
-        /**
-         * Annotation popup is told whether it is in overlay. It then checks
-         * data helper to decide whether to render itself.
-         */
-        if (isOverlayAnnotation !== isOverlayingAnnotation) {
-            return null
-
-        } else {
-            const isVisible = !!selectedAnnotationIndex &&
-                              !selectedCarouselIndex &&
-                              !selectedScoreIndex &&
-                              !selectedTitleIndex &&
-                              !selectedWikiIndex,
-
-                /**
-                 * Pass annotation object from state so that it persists while
-                 * popup is fading out.
-                 */
-                myChild = (
-                    <AnnotationSection {...other} />
-                )
-
-            return (
-                <Popup
-                    isVisible={isVisible}
-                    popupClassName="annotation"
-                    showArrows={true}
-                    handlePreviousClick={handleAnnotationPrevious}
-                    handleNextClick={handleAnnotationNext}
-                    handlePopupContainerClick={handlePopupContainerClick}
-                    myChild={myChild}
-                />
+            /**
+             * Pass annotation object from state so that it persists while
+             * popup is fading out.
+             */
+            myChild = (
+                <AnnotationSection {...other} />
             )
-        }
+
+        return (
+            <Popup
+                isVisible={isVisible}
+                popupClassName="annotation"
+                showArrows={true}
+                handlePreviousClick={handleAnnotationPrevious}
+                handleNextClick={handleAnnotationNext}
+                handlePopupContainerClick={handlePopupContainerClick}
+                myChild={myChild}
+            />
+        )
     }
 }
 
