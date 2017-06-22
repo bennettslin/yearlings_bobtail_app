@@ -18,6 +18,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Scrolling over verse bar is broken in Safari, and its's off centre.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     /**
      * Medium bugs and tasks.
