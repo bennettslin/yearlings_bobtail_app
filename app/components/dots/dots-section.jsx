@@ -28,6 +28,8 @@ class DotsSection extends Component {
             componentShouldUpdate = getComponentShouldUpdate({
                 props,
                 nextProps,
+
+                // FIXME: Pass accessedDotIndex to dot-block through Redux.
                 updatingPropsArray: [
                     'accessedDotIndex',
                     'selectedDotKeys'
