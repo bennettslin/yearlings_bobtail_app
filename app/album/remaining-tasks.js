@@ -9,7 +9,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Scrolling over verse bar is broken in Safari, and its's off centre.`,
+        taskName: `Scrolling over verse bar is broken in Safari and Firefox, and its's off centre.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -20,6 +20,16 @@ module.exports = [
     },
     {
         taskName: `Menu in logue upon logue is stuck?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Overview shadow hidden by lyric fade top.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Don't move carousel toggle in desktop.`,
         workedHours: 0,
         neededHours: 1
     },
