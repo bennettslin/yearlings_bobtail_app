@@ -155,10 +155,11 @@
 // Menu should be higher than centre field and lyrics.
 @menu-subfield-z-index: @menu-field-z-index + 1;
 
+// Score, title, and wiki popups are higher.
 @popup-overlay-z-index: @menu-subfield-z-index + 1;
-@popup-content-z-index: @popup-overlay-z-index + 1;
+@popup-overlay-content-z-index: @popup-overlay-z-index + 1;
 
-@audio-in-overlay-z-index: @popup-content-z-index + 1;
+@audio-in-overlay-z-index: @popup-overlay-content-z-index + 1;
 
 // The overlay preventing popup interaction should be the highest.
 @super-overlay-z-index: @audio-in-overlay-z-index + 1;

@@ -18,12 +18,27 @@
     position: absolute;
     width: 100%;
     height: 100%;
+
+    &.annotation-subfield {
+        height: auto;
+    }
 }
 
 .popup-field {
     .subfield {
         top: 0;
         left: 0;
+    }
+}
+
+.is-mobile {
+    .popup-field {
+        .subfield {
+            &.annotation-subfield {
+                top: auto;
+                bottom: 0;
+            }
+        }
     }
 }
 
@@ -44,7 +59,8 @@
 
 .popup-wrapper {
     position: relative;
-    z-index: @popup-content-z-index;
+
+    z-index: @popup-overlay-content-z-index;
 
     &.wiki, &.score {
         width: ~"calc(100% - @{full-subfield-margin} * 2.5)";

@@ -27,8 +27,9 @@
         }
     }
 
-    &.audio, &.score, &.title, &.wiki, &.annotation.visible {
-        z-index: @popup-content-z-index;
+    // Including annotation is possible because its height is auto, not 100%.
+    &.annotation, &.audio, &.score, &.title, &.wiki {
+        z-index: @popup-overlay-content-z-index;
     }
 
     transition: opacity @popup-transition-duration-out;
