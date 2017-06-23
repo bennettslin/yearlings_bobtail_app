@@ -24,6 +24,7 @@ Completed:
 * carousel
 * dot
 * dots
+* overview
 
 
 Currently working on:
