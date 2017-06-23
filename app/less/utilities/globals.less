@@ -35,26 +35,3 @@ h1, h2, h3 {
     justify-content: center;
     align-items: center;
 }
-
-.enabled {
-    cursor: pointer;
-
-    &.button {
-
-        .animated-background {
-            transition: background-color @animation-default, transform @animation-instant;
-        }
-
-        &:hover {
-            .animated-background {
-                animation: bounceHover @animation-default;
-            }
-        }
-
-        &:active {
-            .animated-background {
-                transform: scale(0.9);
-            }
-        }
-    }
-}
