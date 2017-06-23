@@ -24,6 +24,7 @@ Completed:
 * dot
 * dots
 * main
+* nav
 * overview
 * player
 * score
@@ -36,7 +37,6 @@ Currently working on:
 
 Left to do:
 * lyric
-* nav
 * popup
 * slider
 * text

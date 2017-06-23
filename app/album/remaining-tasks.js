@@ -11,10 +11,15 @@ module.exports = [
     {
         taskName: `Scrolling over verse bar is broken in Safari, and its's off centre.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: `Logue to song transition is janky?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Menu in logue upon logue is stuck?`,
         workedHours: 0,
         neededHours: 1
     },

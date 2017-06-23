@@ -1,62 +1,45 @@
 // Section for user to navigate between songs.
 
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { connect } from 'react-redux'
 import NavToggle from './nav-toggle'
 import NavBooksColumn from './nav-books-column'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-class NavSection extends Component {
+const NavSection = ({
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'isHiddenNav',
-                    'showSingleBookColumn'
-                ]
-            })
+    isHiddenNav,
+    showSingleBookColumn,
+    handleNavExpand,
 
-        return componentShouldUpdate
-    }
+...other }) => {
 
-    render() {
-
-        const { isHiddenNav,
-                showSingleBookColumn,
-                handleNavExpand,
-                ...other } = this.props
-
-        return !isHiddenNav ? (
-            <div className="nav-custom-subfield">
-                <div
-                    className={classnames(
-                        'section',
-                        'nav-section',
-                        showSingleBookColumn ? 'single-book-column' : 'double-book-column'
-                    )}
-                >
-                    <div className="live-nav-block">
-                        <NavToggle
-                            handleNavExpand={handleNavExpand}
+    return !isHiddenNav ? (
+        <div className="nav-custom-subfield">
+            <div
+                className={classnames(
+                    'section',
+                    'nav-section',
+                    showSingleBookColumn ? 'single-book-column' : 'double-book-column'
+                )}
+            >
+                <div className="live-nav-block">
+                    <NavToggle
+                        handleNavExpand={handleNavExpand}
+                    />
+                    <div className="books-block">
+                        <NavBooksColumn {...other}
+                            bookIndex={0}
                         />
-                        <div className="books-block">
-                            <NavBooksColumn {...other}
-                                bookIndex={0}
-                            />
-                            <NavBooksColumn {...other}
-                                bookIndex={1}
-                            />
-                        </div>
+                        <NavBooksColumn {...other}
+                            bookIndex={1}
+                        />
                     </div>
                 </div>
             </div>
-        ) : null
-    }
+        </div>
+    ) : null
 }
 
 NavSection.propTypes = {

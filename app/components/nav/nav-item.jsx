@@ -14,16 +14,13 @@ const NavItem = ({
 ...other }) => {
 
     const isSelected = selectedSongIndex === songIndex,
-        accessHighlighted = accessedNavSongIndex === songIndex,
-        navButtonProps = {
-            songIndex,
-            isSelected,
-            accessHighlighted
-        }
+        accessHighlighted = accessedNavSongIndex === songIndex
 
     return (
         <NavButton {...other}
-            {...navButtonProps}
+            songIndex={songIndex}
+            isSelected={isSelected}
+            accessHighlighted={accessHighlighted}
         />
     )
 }

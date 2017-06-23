@@ -49,6 +49,11 @@ class NavButton extends Component {
 
     render() {
         const { songIndex,
+
+                /* eslint-disable no-unused-vars */
+                handleButtonClick,
+                /* eslint-enable no-unused-vars */
+
                 ...other } = this.props,
 
             isLogue = getSongIsLogue(songIndex),

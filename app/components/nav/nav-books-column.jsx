@@ -18,7 +18,8 @@ const NavBooksColumn = ({
 
 }) => {
 
-    const isShownColumn = !showSingleBookColumn || shownBookColumnIndex === bookIndex
+    const isShownColumn = !showSingleBookColumn ||
+        shownBookColumnIndex === bookIndex
 
     return (
         <div className={classnames(
