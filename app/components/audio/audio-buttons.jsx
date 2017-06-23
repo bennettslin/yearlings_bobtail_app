@@ -1,6 +1,5 @@
 // Component to show buttons for audio navigation.
 
-// Component class not needed after all.
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'

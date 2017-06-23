@@ -1,47 +1,32 @@
 // Popup container for wiki section.
 
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import WikiSection from './wiki-section'
 import Popup from '../popup/popup'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-class WikiPopup extends Component {
+const WikiPopup = ({
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'selectedWikiIndex'
-                ]
-            })
+    selectedWikiIndex,
+    handleWikiToggle,
 
-        return componentShouldUpdate
-    }
+...other }) => {
 
-    render() {
-        const { selectedWikiIndex,
-                handleWikiToggle,
-                ...other } = this.props,
-
-            isVisible = !!selectedWikiIndex,
-            myChild = (
-                <WikiSection {...other} />
-            )
-
-        return (
-            <Popup
-                isVisible={isVisible}
-                popupClassName="wiki"
-                showClose={true}
-                handleCloseClick={handleWikiToggle}
-                myChild={myChild}
-            />
+    const isVisible = !!selectedWikiIndex,
+        myChild = (
+            <WikiSection {...other} />
         )
-    }
+
+    return (
+        <Popup
+            isVisible={isVisible}
+            popupClassName="wiki"
+            showClose={true}
+            handleCloseClick={handleWikiToggle}
+            myChild={myChild}
+        />
+    )
 }
 
 WikiPopup.propTypes = {

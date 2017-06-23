@@ -1,6 +1,5 @@
 // Container to show multiple dots in sequence.
 
-// Component class not needed after all.
 import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'

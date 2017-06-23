@@ -1,6 +1,5 @@
 // Popup container for audio section in overlay.
 
-// Component class not needed after all.
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'

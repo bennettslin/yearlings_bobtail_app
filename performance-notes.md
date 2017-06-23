@@ -17,22 +17,34 @@ Phase 2:
 * Avoid shouldComponentUpdate if possible.
 
 Completed:
-* main
 * annotation
 * audio
 * button
 * carousel
 * dot
 * dots
+* main
 * overview
 * player
 * score
 * stage (not presently used)
 * tips (not presently used)
 * title
-
+* wiki
 
 Currently working on:
 
+Left to do:
+* lyric
+* nav
+* popup
+* slider
+* text
+* verse
+
 Phase 3:
 * Avoid passing data objects if they can be fetched by indices. (/)
+
+Phase 4:
+* Refine shouldComponentUpdate.
+    * Should popups care about selectedAnnotationIndex?
