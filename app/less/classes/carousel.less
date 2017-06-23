@@ -12,8 +12,10 @@
 @carousel-toggle-tablet-length: @overview-toggle-tablet-width - 2px;
 @carousel-toggle-mini-length: @overview-toggle-mini-width - 2px;
 
-@carousel-height-variable: @carousel-toggle-laptop-length + @dots-overview-padding;
-@carousel-position-variable: @carousel-height-variable * 2 + @dots-overview-padding * 2 + @nav-height;
+@carousel-height-variable: @carousel-toggle-laptop-length + @dots-overview-padding * 2 + @nav-height;
+
+// NOTE: I'm not sure how this was calculated...
+@carousel-position-variable: @carousel-height-variable + @dots-overview-padding * 2 + @nav-height * 2;
 
 @carousel-tablet-variable: @carousel-toggle-tablet-length * 2;
 @carousel-mini-variable: @carousel-toggle-mini-length * 2;
@@ -101,8 +103,8 @@
 
 .carousel-expanded {
     .carousel-toggle-button-block {
-        margin-bottom: -@nav-height;
-        border-radius: 0 @nav-border-radius 0 0;
+        // margin-bottom: -@nav-height;
+        // border-radius: 0 @nav-border-radius 0 0;
         box-shadow: @popup-box-shadow;
     }
 }

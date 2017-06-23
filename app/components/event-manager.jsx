@@ -460,7 +460,7 @@ class EventManager extends Component {
 
     handleNavSongSelect(e, selectedSongIndex) {
         this.stopPropagation(e)
-        this.props.selectNavExpand(false)
+        // this.props.selectNavExpand(false)
         return this.props.selectSong({
             selectedSongIndex
         })
@@ -625,7 +625,8 @@ class EventManager extends Component {
         this.stopPropagation(e)
         this._closeSections({
             exemptCarousel: true,
-            exemptLyric: true
+            exemptLyric: true,
+            exemptNav: true
         })
 
         // Return focus to lyric section so it can have scroll access.
