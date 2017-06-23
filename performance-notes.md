@@ -26,6 +26,10 @@ Completed:
 * dots
 * overview
 * player
+* score
+* stage (not presently used)
+* tips (not presently used)
+* title
 
 
 Currently working on:

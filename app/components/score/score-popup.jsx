@@ -1,56 +1,44 @@
 // Popup container for score section.
 
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import ScoreSection from './score-section'
 import Popup from '../popup/popup'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-class ScorePopup extends Component {
+const ScorePopup = ({
+    selectedScoreIndex,
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'selectedSongIndex',
-                    'selectedScoreIndex'
-                ]
-            })
+    /* eslint-disable no-unused-vars */
+    selectedSongIndex,
+    /* eslint-enable no-unused-vars */
 
-        return componentShouldUpdate
-    }
+    handleScoreToggle,
 
-    render() {
-        const { selectedScoreIndex,
-                handleScoreToggle,
-                ...other } = this.props,
+...other }) => {
 
-            isVisible = !!selectedScoreIndex,
-            myChild = (
-                <ScoreSection {...other} />
-            )
-
-        return (
-            <Popup
-                isVisible={isVisible}
-                popupClassName="score"
-                showClose={true}
-                handleCloseClick={handleScoreToggle}
-                myChild={myChild}
-            />
+    const isVisible = !!selectedScoreIndex,
+        myChild = (
+            <ScoreSection {...other} />
         )
-    }
+
+    return (
+        <Popup
+            isVisible={isVisible}
+            popupClassName="score"
+            showClose={true}
+            handleCloseClick={handleScoreToggle}
+            myChild={myChild}
+        />
+    )
 }
 
 ScorePopup.propTypes = {
-    // Through props.
+    // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
 
-    // From Redux.
+    // From props.
     handleScoreToggle: PropTypes.func.isRequired
 }
 export default connect(({

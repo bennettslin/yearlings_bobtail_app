@@ -1,3 +1,5 @@
+// TODO: Not presently used.
+
 import React from 'react'
 import { TIPS_OPTIONS } from 'constants/options'
 

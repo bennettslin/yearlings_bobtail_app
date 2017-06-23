@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import { getSongScore } from '../../helpers/data-helper'
 // import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 
@@ -43,7 +44,8 @@ class ScoreSection extends Component {
     }
 
     render() {
-        const score = getSongScore(0)
+        const { selectedSongIndex } = this.props,
+            score = getSongScore(selectedSongIndex)
 
         return (
             <div
@@ -65,11 +67,15 @@ class ScoreSection extends Component {
 }
 
 ScoreSection.propTypes = {
-    // Also from parent, for now.
+    // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
     scoreSectionRef: PropTypes.func.isRequired
 }
 
-export default ScoreSection
+export default connect(({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+}))(ScoreSection)

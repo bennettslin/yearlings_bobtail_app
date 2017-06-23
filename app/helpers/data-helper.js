@@ -66,7 +66,7 @@ export const getSongTitle = ({
 
 export const getSongScore = (songIndex) => {
     const { scores } = AlbumData
-    return scores[songIndex]
+    return scores[songIndex - 1]
 }
 
 export const getSongOverview = (songIndex) => {

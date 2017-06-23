@@ -23,6 +23,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Logue to song transition is janky?`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     /**
      * Medium bugs and tasks.

@@ -1,46 +1,31 @@
 // Popup container for title section.
 
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import TitleSection from './title-section'
 import Popup from '../popup/popup'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
-class TitlePopup extends Component {
+const TitlePopup = ({
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'selectedTitleIndex'
-                ]
-            })
+    selectedTitleIndex,
+    handleTitleToggle
 
-        return componentShouldUpdate
-    }
-
-    render() {
-        const { selectedTitleIndex,
-                handleTitleToggle } = this.props,
-
-            isVisible = !!selectedTitleIndex,
-            myChild = (
-                <TitleSection />
-            )
-
-        return (
-            <Popup
-                isVisible={isVisible}
-                popupClassName="title"
-                showClose={true}
-                handleCloseClick={handleTitleToggle}
-                myChild={myChild}
-            />
+}) => {
+    const isVisible = !!selectedTitleIndex,
+        myChild = (
+            <TitleSection />
         )
-    }
+
+    return (
+        <Popup
+            isVisible={isVisible}
+            popupClassName="title"
+            showClose={true}
+            handleCloseClick={handleTitleToggle}
+            myChild={myChild}
+        />
+    )
 }
 
 TitlePopup.propTypes = {
