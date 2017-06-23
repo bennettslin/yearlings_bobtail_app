@@ -29,8 +29,8 @@ class LyricColumn extends Component {
         }
     }
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
+    shouldComponentUpdate(nextProps, nextState) {
+        const { props, state } = this,
             componentShouldUpdate = getComponentShouldUpdate({
                 props,
                 nextProps,
@@ -41,9 +41,15 @@ class LyricColumn extends Component {
                     'sliderVerseIndex',
                     'showOneOfTwoLyricColumns'
                 ]
+            }) || getComponentShouldUpdate({
+                props: state,
+                nextProps: nextState,
+                updatingPropsArray: [
+                    'isTransitioningHeight'
+                ]
             })
 
-        return componentShouldUpdate || true
+        return componentShouldUpdate
     }
 
     componentDidUpdate(prevProps) {

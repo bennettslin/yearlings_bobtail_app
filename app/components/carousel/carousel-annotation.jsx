@@ -18,6 +18,7 @@ class CarouselAnnotation extends Component {
     constructor(props) {
         super(props)
 
+        this._handleAnnotationContainerClick = this._handleAnnotationContainerClick.bind(this)
         this._handleAnnotationTitleClick = this._handleAnnotationTitleClick.bind(this)
     }
 
@@ -45,9 +46,23 @@ class CarouselAnnotation extends Component {
         }
     }
 
+    _handleAnnotationContainerClick(e) {
+
+        /**
+         * Ensure that dots and overview get dismissed when carousel annotation
+         * container is clicked.
+         */
+        this.props.handlePopupContainerClick(e, true)
+    }
+
     render() {
 
         const { selectedSongIndex,
+
+                /* eslint-disable no-unused-vars */
+                handlePopupContainerClick,
+                /* eslint-enable no-unused-vars */
+
                 ...other } = this.props,
             { annotationIndex } = other,
             annotationObject = getAnnotationObject(selectedSongIndex, annotationIndex),
@@ -59,10 +74,11 @@ class CarouselAnnotation extends Component {
 
         return (
             <CarouselAnnotationView {...other}
-                handleTitleClick={this._handleAnnotationTitleClick}
                 carouselAnnotationIndex={annotationIndex}
                 annotationColumn={columnKey}
                 annotationDotKeys={dotKeys}
+                handleTitleClick={this._handleAnnotationTitleClick}
+                handleContainerClick={this._handleAnnotationContainerClick}
             />
         )
     }
@@ -88,7 +104,7 @@ const CarouselAnnotationView = ({
     annotationIndex,
     annotationColumn,
     annotationDotKeys,
-    handlePopupContainerClick,
+    handleContainerClick,
 
 ...other }) => (
 
@@ -99,7 +115,7 @@ const CarouselAnnotationView = ({
             annotationColumn && `in-column-${annotationColumn}`,
             annotationDotKeys
         )}
-        onClick={handlePopupContainerClick}
+        onClick={handleContainerClick}
     >
         <AnnotationSection {...other}
             inCarousel={true}
@@ -112,7 +128,7 @@ CarouselAnnotationView.propTypes = {
     annotationIndex: PropTypes.number.isRequired,
     annotationColumn: PropTypes.string.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
-    handlePopupContainerClick: PropTypes.func.isRequired
+    handleContainerClick: PropTypes.func.isRequired
 }
 
 export default connect(({

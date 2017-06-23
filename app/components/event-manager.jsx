@@ -501,8 +501,16 @@ class EventManager extends Component {
      * POPUP *
      *********/
 
-    handlePopupContainerClick(e) {
+    handlePopupContainerClick(e, closeDotsOverview) {
         this.stopPropagation(e)
+
+        // Carousel annotation was clicked.
+        if (closeDotsOverview) {
+            this.props.selectDotsExpand(false)
+            this.props.selectOverview({
+                justHideIfShown: true
+            })
+        }
     }
 
     // NOTE: This is now no longer used anywhere.

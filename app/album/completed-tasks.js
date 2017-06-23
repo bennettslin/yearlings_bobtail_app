@@ -2149,4 +2149,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Clicking annotation card should dismiss dots section and overview.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
