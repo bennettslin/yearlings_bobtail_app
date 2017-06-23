@@ -2168,5 +2168,10 @@ module.exports = [
         taskName: `Don't move carousel toggle in desktop.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Verse bar is off centre in Safari and Firefox. (Spacing between doublespeaker lines is still weird in Safari, but oh well).`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

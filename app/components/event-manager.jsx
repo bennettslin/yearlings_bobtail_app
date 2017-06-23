@@ -671,8 +671,6 @@ class EventManager extends Component {
     }
 
     handleVerseBarWheel(e) {
-        // FIXME: Safari doesn't recognise trackpad's continuous scroll?
-
         const { deltaY } = e.nativeEvent
         this.myLyricSection.scrollTop += deltaY
     }

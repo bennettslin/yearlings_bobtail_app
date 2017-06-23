@@ -19,6 +19,8 @@
 
 .verse-bar-block {
     position: absolute;
+    left: 50%;
+    width: 100%;
 
     max-width: ~"calc(100% - @{verse-bar-desktop-margins})";
     z-index: @selected-verse-bar-z-index;
@@ -39,14 +41,16 @@
         }
     }
 
-    transform: scale(0);
+    transform: translateX(-50%) scale(0);
+    // transform: scale(0);
 }
 
 .verse-bar-above {
     .verse-bar-block {
         &.above {
             top: 0;
-            transform: scale(1);
+            transform: translateX(-50%) scale(1);
+            // transform: scale(1);
         }
     }
 }
@@ -55,7 +59,8 @@
     .verse-bar-block {
         &.below {
             bottom: 0;
-            transform: scale(1);
+            transform: translateX(-50%) scale(1);
+            // transform: scale(1);
         }
     }
 }

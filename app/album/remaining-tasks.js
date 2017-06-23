@@ -9,17 +9,12 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Scrolling over verse bar is broken in Safari and Firefox, and its's off centre.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Logue to song transition is janky?`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Menu in logue upon logue is stuck?`,
+        taskName: `Menu in logue upon load is stuck in Chrome?`,
         workedHours: 0,
         neededHours: 1
     },
@@ -180,8 +175,8 @@ module.exports = [
 
     // Dumb bugs.
     {
-        taskName: `Safari doesn't recognise continuous scroll from trackpad?`,
+        taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,
         workedHours: 0,
         neededHours: 1
-    }
+    },
 ]
