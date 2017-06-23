@@ -131,7 +131,8 @@ const LyricUnitView = ({
 
 ...other }) => {
 
-    const { subsequent } = other
+    const { subsequent,
+            handleLyricAnnotationSelect } = other
 
     return (
         <div
@@ -180,8 +181,9 @@ const LyricUnitView = ({
                 </div>
             }
             {dotStanza &&
-                <LyricDotStanza {...other}
+                <LyricDotStanza
                     dotStanzaObject={dotStanza}
+                    handleLyricAnnotationSelect={handleLyricAnnotationSelect}
                 />
             }
         </div>
@@ -207,7 +209,9 @@ LyricUnitView.propTypes = {
 
     hasSide: PropTypes.bool.isRequired,
     isDotOnly: PropTypes.bool.isRequired,
-    isBottomOnly: PropTypes.bool.isRequired
+    isBottomOnly: PropTypes.bool.isRequired,
+
+    handleLyricAnnotationSelect: PropTypes.func.isRequired
 }
 
 export default connect(({

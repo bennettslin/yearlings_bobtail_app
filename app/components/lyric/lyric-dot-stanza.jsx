@@ -1,6 +1,6 @@
 // Component to show single dot anchor as its own stanza.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
@@ -10,30 +10,48 @@ import DotAnchor from '../dot/dot-anchor'
  * CONTAINER *
  *************/
 
-const LyricDotStanza = ({
+class LyricDotStanza extends Component {
 
-    dotStanzaObject,
-    accessedAnnotationIndex,
-    selectedAnnotationIndex,
-    handleLyricAnnotationSelect,
+    constructor(props) {
+        super(props)
 
-...other }) => {
+        this._handleDotButtonClick = this._handleDotButtonClick.bind(this)
+    }
 
-    const { annotationIndex,
-            dotKeys } = dotStanzaObject,
+    _handleDotButtonClick(e) {
+        const { dotStanzaObject } = this.props,
+            { annotationIndex } = dotStanzaObject
 
-        isSelected = annotationIndex === selectedAnnotationIndex,
-        accessHighlighted = annotationIndex === accessedAnnotationIndex
+        this.props.handleLyricAnnotationSelect(e, annotationIndex)
+    }
 
-    return (
-        <LyricDotStanzaView {...other}
-            isSelected={isSelected}
-            accessHighlighted={accessHighlighted}
-            dotKeys={dotKeys}
-            annotationIndex={annotationIndex}
-            handleDotButtonClick={handleLyricAnnotationSelect}
-        />
-    )
+    render() {
+        const { dotStanzaObject,
+                accessedAnnotationIndex,
+                selectedAnnotationIndex,
+
+                /* eslint-disable no-unused-vars */
+                handleLyricAnnotationSelect,
+                /* eslint-enable no-unused-vars */
+
+                ...other } = this.props,
+
+            { annotationIndex,
+              dotKeys } = dotStanzaObject,
+
+            isSelected = annotationIndex === selectedAnnotationIndex,
+            accessHighlighted = annotationIndex === accessedAnnotationIndex
+
+        return (
+            <LyricDotStanzaView {...other}
+                dotKeys={dotKeys}
+                isSelected={isSelected}
+                accessHighlighted={accessHighlighted}
+                annotationIndex={annotationIndex}
+                handleDotButtonClick={this._handleDotButtonClick}
+            />
+        )
+    }
 }
 
 LyricDotStanza.propTypes = {
@@ -73,7 +91,6 @@ const LyricDotStanzaView = ({
         )}>
             <DotAnchor {...other}
                 dotKeys={dotKeys}
-                annotationIndex={annotationIndex}
             />
         </div>
     </div>

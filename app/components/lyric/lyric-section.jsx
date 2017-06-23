@@ -48,6 +48,7 @@ class LyricSection extends Component {
         const { appMounted,
                 isTransitioningHeight,
                 completeHeightTransition,
+                handleLyricSectionScroll,
         /* eslint-enable no-unused-vars */
                 ...other } = this.props
 

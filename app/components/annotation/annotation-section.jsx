@@ -163,6 +163,8 @@ AnnotationSectionView.propTypes = {
     isSelectedAnnotation: PropTypes.bool,
     annotationTitle: PropTypes.string.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
+
+    // (Absent in popup annotation.)
     handleTitleClick: PropTypes.func
 }
 

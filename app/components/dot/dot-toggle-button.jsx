@@ -59,8 +59,20 @@ class DotToggleButton extends Component {
     }
 
     render() {
+
+        // Don't pass these props.
+        /* eslint-disable no-unused-vars */
+        const { dotIndex,
+                selectedDotsIndex,
+                handleDotToggle,
+                hasInteractivatedDotText,
+                setHasInteractivatedDotText,
+                stopPropagation,
+                ...other } = this.props
+        /* eslint-enable no-unused-vars */
+
         return (
-            <DotToggleButtonView {...this.props}
+            <DotToggleButtonView {...other}
                 isInteractivated={this.state.isInteractivated}
                 handleDotToggleClick={this._handleDotToggleClick}
                 handleTextContainerClick={this._handleTextContainerClick}

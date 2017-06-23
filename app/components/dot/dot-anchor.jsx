@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import DotButton from './dot-button'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class DotAnchor extends Component {
 
@@ -14,36 +13,12 @@ class DotAnchor extends Component {
         this._handleDotButtonClick = this._handleDotButtonClick.bind(this)
     }
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'annotationIndex',
-                    'isSelected',
-                    'accessHighlighted'
-                ]
-            })
-
-        return componentShouldUpdate
-    }
-
     _handleDotButtonClick(e) {
         const { isSelected,
-                annotationIndex,
                 handleDotButtonClick } = this.props
 
         if (!isSelected) {
-
-            // It's in lyric dot stanza.
-            if (!isNaN(annotationIndex)) {
-                handleDotButtonClick(e, annotationIndex)
-
-            // It's in carousel annotation title.
-            } else {
-                handleDotButtonClick(e)
-            }
+            handleDotButtonClick(e)
         }
     }
 
@@ -51,6 +26,11 @@ class DotAnchor extends Component {
         const { dotKeys,
                 accessHighlighted,
                 isSelected,
+
+                /* eslint-disable no-unused-vars */
+                handleDotButtonClick,
+                /* eslint-enable no-unused-vars */
+
                 ...other } = this.props
 
         return (
@@ -72,12 +52,18 @@ class DotAnchor extends Component {
     }
 }
 
+DotAnchor.defaultProps = {
+    accessHighlighted: false,
+    isSelected: false
+}
+
 DotAnchor.propTypes = {
     // From parent.
     dotKeys: PropTypes.object.isRequired,
-    annotationIndex: PropTypes.number,
-    accessHighlighted: PropTypes.bool,
-    isSelected: PropTypes.bool,
+    accessHighlighted: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+
+    // (Absent in popup annotation.)
     handleDotButtonClick: PropTypes.func
 }
 

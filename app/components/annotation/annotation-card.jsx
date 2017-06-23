@@ -113,7 +113,6 @@ const AnnotationCardView = ({
         cardDotKeys
     )}>
         <DotBlock
-            inAnnotationCard={true}
             dotKeys={cardDotKeys}
         />
         <TextBlock

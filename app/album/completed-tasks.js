@@ -2138,5 +2138,10 @@ module.exports = [
         taskName: `Popup annotation now comes up behind lyric column. (After fix, issue is still present when fading out, but this is good enough.).`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Dot and dots performance optimisation.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

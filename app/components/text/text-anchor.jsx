@@ -84,7 +84,6 @@ class TextAnchor extends Component {
                     {/* Don't show any dots in portal block. */}
                     {!wikiIndex && !inPortal &&
                         <DotBlock
-                            inAnchor={true}
                             dotKeys={annotationDotKeys}
                         />
                     }

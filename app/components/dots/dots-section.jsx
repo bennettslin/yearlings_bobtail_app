@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import DotBlock from '../dot/dot-block'
+import DotToggleBlock from '../dot/dot-toggle-block'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -96,9 +96,7 @@ const DotsSectionView = ({
         className="section dots-section"
         onClick={handleContainerClick}
     >
-        <DotBlock {...other}
-            inDotsSection={true}
-        />
+        <DotToggleBlock {...other} />
     </div>
 )
 
