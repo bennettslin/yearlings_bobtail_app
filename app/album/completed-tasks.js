@@ -2159,4 +2159,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Popup annotation position is buggy in Firefox.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
