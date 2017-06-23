@@ -28,11 +28,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Don't move carousel toggle in desktop.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     /**
      * Medium bugs and tasks.

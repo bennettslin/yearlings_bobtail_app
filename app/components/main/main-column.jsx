@@ -6,6 +6,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import MenuField from './menu-field'
+import NavToggle from '../nav/nav-toggle'
 import NavSection from '../nav/nav-section'
 import AnnotationPopup from '../annotation/annotation-popup'
 import AudioBanner from '../audio/audio-banner'
@@ -21,6 +22,7 @@ const MainColumn = ({
 
     handleCarouselToggle,
     handleLyricSectionExpand,
+    handleNavExpand,
 
     annotationPopupHandlers,
     audioBannerHandlers,
@@ -82,6 +84,11 @@ const MainColumn = ({
                 handleCarouselToggle={handleCarouselToggle}
             />
 
+            <NavToggle
+                inMain={true}
+                handleNavExpand={handleNavExpand}
+            />
+
             <NavSection {...navSectionHandlers} />
         </div>
     </div>
@@ -91,6 +98,7 @@ MainColumn.propTypes = {
     // From parent.
     handleCarouselToggle: PropTypes.func.isRequired,
     handleLyricSectionExpand: PropTypes.func.isRequired,
+    handleNavExpand: PropTypes.func.isRequired,
 
     annotationPopupHandlers: PropTypes.object.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,

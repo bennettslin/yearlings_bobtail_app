@@ -135,6 +135,7 @@ class LiveManager extends Component {
             mainColumnHandlers = {
                 handleCarouselToggle,
                 handleLyricSectionExpand,
+                handleNavExpand,
 
                 annotationPopupHandlers,
                 audioBannerHandlers,

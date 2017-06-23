@@ -2163,5 +2163,10 @@ module.exports = [
         taskName: `Popup annotation position is buggy in Firefox.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Don't move carousel toggle in desktop.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
