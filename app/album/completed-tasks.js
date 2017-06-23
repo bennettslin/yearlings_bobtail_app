@@ -2144,4 +2144,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Player performance optimisation.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

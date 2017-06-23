@@ -26,12 +26,12 @@ class AnnotationSection extends Component {
                     // Container props.
                     'selectedSongIndex',
                     {
-                        conditionalNextProp: 'carouselAnnotationIndex',
+                        staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
                         subUpdatingKey: 'popupAnnotationSongIndex'
                     },
                     {
-                        conditionalNextProp: 'carouselAnnotationIndex',
+                        staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
                         subUpdatingKey: 'popupAnnotationIndex'
                     },

@@ -28,12 +28,12 @@ class AnnotationPortal extends Component {
                     'selectedSongIndex',
                     'isAccessedPortal',
                     {
-                        conditionalNextProp: 'carouselAnnotationIndex',
+                        staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
                         subUpdatingKey: 'popupAnnotationSongIndex'
                     },
                     {
-                        conditionalNextProp: 'carouselAnnotationIndex',
+                        staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
                         subUpdatingKey: 'popupAnnotationIndex'
                     }

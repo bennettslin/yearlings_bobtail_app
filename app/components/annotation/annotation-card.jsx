@@ -26,12 +26,12 @@ class AnnotationCard extends Component {
                     'selectedSongIndex',
                     'inSelectedAnnotation',
                     {
-                        conditionalNextProp: 'carouselAnnotationIndex',
+                        staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
                         subUpdatingKey: 'popupAnnotationSongIndex'
                     },
                     {
-                        conditionalNextProp: 'carouselAnnotationIndex',
+                        staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
                         subUpdatingKey: 'popupAnnotationIndex'
                     }

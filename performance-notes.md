@@ -25,6 +25,7 @@ Completed:
 * dot
 * dots
 * overview
+* player
 
 
 Currently working on:

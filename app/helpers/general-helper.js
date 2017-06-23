@@ -43,13 +43,18 @@ export const getComponentShouldUpdate = ({
          * If object, then compare mismatch only if a prop is true.
          */
         } else {
-            const { conditionalNextProp,
+            const { staticProp,
 
                     // Default condition is true.
                     conditionalShouldBe = true,
-                    subUpdatingKey } = updatingKeyEntity
 
-            if (!!nextProps[conditionalNextProp] === conditionalShouldBe) {
+                    subUpdatingKey } = updatingKeyEntity,
+
+                // We care that a static prop happens to be a certain value.
+                staticConditionalMet = staticProp &&
+                    !!nextProps[staticProp] === conditionalShouldBe
+
+            if (staticConditionalMet) {
 
                 // Mismatch, so update!
                 if (props[subUpdatingKey] !== nextProps[subUpdatingKey]) {

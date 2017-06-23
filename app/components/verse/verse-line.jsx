@@ -22,7 +22,7 @@ class VerseLine extends Component {
                 updatingPropsArray: [
                     'selectedSongIndex',
                     {
-                        conditionalNextProp: 'inVerseBar',
+                        staticProp: 'inVerseBar',
                         subUpdatingKey: 'text'
                     }
                 ]

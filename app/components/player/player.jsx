@@ -31,9 +31,15 @@ class Player extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'isPlaying',
                     'isSelected',
-                    'updatedTimePlayed'
+                    {
+                        staticProp: 'isSelected',
+                        subUpdatingKey: 'isPlaying'
+                    },
+                    {
+                        staticProp: 'isSelected',
+                        subUpdatingKey: 'updatedTimePlayed'
+                    }
                 ]
             })
 
