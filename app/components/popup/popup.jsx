@@ -16,6 +16,7 @@ class Popup extends Component {
     constructor(props) {
         super(props)
 
+        this._handlePopupContainerClick = this._handlePopupContainerClick.bind(this)
         this._handleTransitionEnd = this._handleTransitionEnd.bind(this)
 
         this.state = {
@@ -60,6 +61,12 @@ class Popup extends Component {
         }
     }
 
+    _handlePopupContainerClick(e) {
+        if (this.state.isDisplayed) {
+            this.props.handlePopupContainerClick(e)
+        }
+    }
+
     render() {
         const { popupClassName,
                 isVisible,
@@ -68,7 +75,11 @@ class Popup extends Component {
                 handleCloseClick,
                 handlePreviousClick,
                 handleNextClick,
+
+                /* eslint-disable no-unused-vars */
                 handlePopupContainerClick,
+                /* eslint-enable no-unused-vars */
+
                 myChild } = this.props,
 
             { isDisplayed } = this.state
@@ -76,8 +87,8 @@ class Popup extends Component {
         return (
             <span
                 className={classnames(
-                    'popup-transition-group',
                     popupClassName,
+                    'popup-transition-group',
                     { 'visible': isVisible,
                       'not-displayed': !isDisplayed }
                 )}
@@ -90,7 +101,7 @@ class Popup extends Component {
                     handleCloseClick={handleCloseClick}
                     handlePreviousClick={handlePreviousClick}
                     handleNextClick={handleNextClick}
-                    handlePopupContainerClick={isDisplayed ? handlePopupContainerClick : null}
+                    handleContainerClick={this._handlePopupContainerClick}
                     myChild={myChild}
                 />
             </span>
@@ -122,57 +133,80 @@ const PopupView = ({
     handleCloseClick,
     handlePreviousClick,
     handleNextClick,
-    handlePopupContainerClick,
+    handleContainerClick,
     myChild
 
-}) => {
-    return (
-        <div className={`popup-wrapper ${popupClassName}`}>
+}) => (
+    <div className={classnames(
+        'popup-wrapper',
+        popupClassName
+    )}>
+        {showClose &&
+            <div className={classnames(
+                'popup-button-block',
+                'close-position',
+                'shadow'
+            )} />
+        }
+        {showArrows &&
+            <div className={classnames(
+                'popup-button-block',
+                'side-position',
+                'previous-position',
+                'shadow'
+            )} />
+        }
+        {showArrows &&
+            <div className={classnames(
+                'popup-button-block',
+                'side-position',
+                'next-position',
+                'shadow'
+            )} />
+        }
+        <div
+            className={classnames(
+                'popup-content-wrapper',
+                popupClassName
+            )}
+            onClick={handleContainerClick}
+        >
+            {myChild}
             {showClose &&
-                <div className="popup-button-block close-position shadow" />
+                <PopupButton
+                    handlePopupButtonClick={handleCloseClick}
+                    buttonName={CLOSE_POPUP_BUTTON}
+                />
             }
             {showArrows &&
-                <div className="popup-button-block side-position previous-position shadow" />
+                <PopupButton
+                    handlePopupButtonClick={handlePreviousClick}
+                    buttonName={PREVIOUS_POPUP_BUTTON}
+                />
             }
             {showArrows &&
-                <div className="popup-button-block side-position next-position shadow" />
+                <PopupButton
+                    handlePopupButtonClick={handleNextClick}
+                    buttonName={NEXT_POPUP_BUTTON}
+                />
             }
-            <div
-                className={`popup-content-wrapper ${popupClassName}`}
-                onClick={handlePopupContainerClick}
-            >
-                {myChild}
-                {showClose &&
-                    <PopupButton
-                        handlePopupButtonClick={handleCloseClick}
-                        buttonName={CLOSE_POPUP_BUTTON}
-                    />
-                }
-                {showArrows &&
-                    <PopupButton
-                        handlePopupButtonClick={handlePreviousClick}
-                        buttonName={PREVIOUS_POPUP_BUTTON}
-                    />
-                }
-                {showArrows &&
-                    <PopupButton
-                        handlePopupButtonClick={handleNextClick}
-                        buttonName={NEXT_POPUP_BUTTON}
-                    />
-                }
-            </div>
         </div>
-    )
+    </div>
+)
+
+PopupView.defaultProps = {
+    showClose: false,
+    showArrows: false
 }
 
 PopupView.propTypes = {
     popupClassName: PropTypes.string.isRequired,
-    showClose: PropTypes.bool,
-    showArrows: PropTypes.bool,
+    showClose: PropTypes.bool.isRequired,
+    showArrows: PropTypes.bool.isRequired,
     handleCloseClick: PropTypes.func,
     handlePreviousClick: PropTypes.func,
     handleNextClick: PropTypes.func,
-    handlePopupContainerClick: PropTypes.func,
+    handleContainerClick: PropTypes.func.isRequired,
     myChild: PropTypes.element.isRequired
 }
 export default Popup

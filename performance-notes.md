@@ -27,6 +27,7 @@ Completed:
 * nav
 * overview
 * player
+* popup (for now)
 * score
 * stage (not presently used)
 * tips (not presently used)
@@ -37,7 +38,6 @@ Currently working on:
 
 Left to do:
 * lyric
-* popup
 * slider
 * text
 * verse
