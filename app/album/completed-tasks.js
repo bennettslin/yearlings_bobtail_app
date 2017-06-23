@@ -2153,5 +2153,10 @@ module.exports = [
         taskName: `Clicking annotation card should dismiss dots section and overview.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Add fade top to lyric column in mobile.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
