@@ -14,9 +14,33 @@ const AudioTimer = ({
 }) => {
     const isLogue = getSongIsLogue(selectedSongIndex)
 
+    let displayBase,
+        displayJiffy
+
+    if (!isLogue) {
+
+        const { base,
+                jiffy } = getFormattedTime(selectedTimePlayed, true)
+
+        displayBase = base
+        displayJiffy = jiffy
+    }
+
     return (
         <div className="audio-banner-time">
-            {isLogue ? '' : getFormattedTime(selectedTimePlayed)}
+
+            {displayBase && (
+                <span className="base">
+                    {displayBase}
+                </span>
+            )}
+
+            {displayJiffy && (
+                <span className="jiffy">
+                    {displayJiffy}
+                </span>
+            )}
+
         </div>
     )
 }
