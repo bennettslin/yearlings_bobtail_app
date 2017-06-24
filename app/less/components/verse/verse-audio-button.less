@@ -1,4 +1,11 @@
-@verse-audio-button-block-width: 1.5em;
+/**
+ * FIXME: It's 26px in the browser, so I've hard-coded it here. This isn't
+ * great, obviously. It would be better to know where the 26px comes from.
+ */
+@verse-height: 26px;
+@verse-audio-button-block-extra: 3px;
+
+@verse-audio-button-block-width: @verse-height + @verse-audio-button-block-extra * 2;
 
 .lyric-block {
     .verse {
@@ -6,19 +13,26 @@
             padding-top: @verse-padding;
 
             .verse-audio-button-block {
-                margin-top: -@verse-padding;
                 .verse-audio-button-child {
                     padding-top: @verse-padding;
                 }
             }
+
+            .interactable-indicator {
+                padding-top: @verse-padding;
+            }
         }
         &:last-child {
-
             padding-bottom: @verse-padding;
+
             .verse-audio-button-block {
                 .verse-audio-button-child {
                     padding-bottom: @verse-padding;
                 }
+            }
+
+            .interactable-indicator {
+                padding-bottom: @verse-padding;
             }
         }
 
@@ -29,7 +43,13 @@
             &.interactivated {
 
                 .verse-audio-button-block {
-                    left: -@verse-audio-button-block-width * 0.8;
+                    left: -@verse-audio-button-block-width * 0.5;
+
+                    z-index: 5000;
+
+                    .animated-background {
+                        box-shadow: -1px 1px 4px 4px @box-shadow-colour;
+                    }
                 }
 
                 .verse-audio-button {
@@ -46,11 +66,22 @@
     }
 }
 
+.interactable-indicator {
+    position: absolute;
+    top: 0;
+    left: @verse-padding * 0.5;
+}
+
 .verse-audio-button-block {
     position: absolute;
     left: 0;
     height: 100%;
     width: @verse-audio-button-block-width;
+
+    margin-top: -@verse-audio-button-block-extra;
+
+    top: 50%;
+    transform: translateY(-50%);
 
     transition: left @animation-fast;
 

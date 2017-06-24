@@ -17,9 +17,22 @@
     justify-content: space-between;
 }
 
-.show-both-columns {
+// Make font sizes smaller when showing both columns.
+.is-desktop, .tablet-width {
+    &.show-both-columns {
 
-    .double-lines-block, .has-side {
-        font-size: 0.975em;
+        .double-lines-block, .has-side {
+            font-size: 0.96em;
+        }
+    }
+}
+
+.mini-width {
+    &.show-both-columns {
+
+        // In mini, only has side can still show both columns.
+        .has-side {
+            font-size: 0.96em * @mini-multiplier;
+        }
     }
 }

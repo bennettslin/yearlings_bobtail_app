@@ -256,7 +256,7 @@ const VerseUnitView = ({
             )}
             onClick={handleInteractivatableClick}
         >
-            {isInteractable &&
+            {isInteractable && (
                 <VerseAudioButton
                     isAudioButtonEnabled={isAudioButtonEnabled}
                     verseIndex={verseIndex}
@@ -265,7 +265,11 @@ const VerseUnitView = ({
                     handleLyricPlay={handleLyricPlay}
                     handleLyricVerseSelect={handleLyricVerseSelect}
                 />
-            }
+            )}
+            {isInteractable && (
+                <div className="interactable-indicator">{`\u2022`}</div>
+            )}
+
             <VerseLinesBlock {...other} />
         </div>
     )
