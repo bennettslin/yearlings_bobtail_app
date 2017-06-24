@@ -26,15 +26,15 @@ class LyricDotStanza extends Component {
     }
 
     render() {
+
+        // FIXME: Ideal to get dotStanza object from indices.
         const { dotStanzaObject,
                 accessedAnnotationIndex,
                 selectedAnnotationIndex,
 
                 /* eslint-disable no-unused-vars */
-                handleLyricAnnotationSelect,
+                handleLyricAnnotationSelect } = this.props,
                 /* eslint-enable no-unused-vars */
-
-                ...other } = this.props,
 
             { annotationIndex,
               dotKeys } = dotStanzaObject,
@@ -43,7 +43,7 @@ class LyricDotStanza extends Component {
             accessHighlighted = annotationIndex === accessedAnnotationIndex
 
         return (
-            <LyricDotStanzaView {...other}
+            <LyricDotStanzaView
                 dotKeys={dotKeys}
                 isSelected={isSelected}
                 accessHighlighted={accessHighlighted}

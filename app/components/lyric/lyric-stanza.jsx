@@ -17,11 +17,14 @@ const LyricStanza = ({
 
     // From controller.
     stanzaArray,
-    inMain,
     addSub,
+
+    // Passed recursively.
     isSub,
 
 ...other }) => {
+
+    const { inMain } = other
 
     if (stanzaArray) {
         if (addSub) {
@@ -29,7 +32,6 @@ const LyricStanza = ({
                 <div className="sub-block custom-sub-block right">
                     <LyricStanza {...other}
                         stanzaArray={stanzaArray}
-                        inMain={inMain}
                         isSub={true}
 
                         // Not ideal to repeat like this, but oh well.
@@ -42,10 +44,11 @@ const LyricStanza = ({
             )
         } else {
             const shownStanzaIndex = inMain && !isSub ?
-                stanzaIndex : undefined,
+                    stanzaIndex : undefined,
                 showStanzaTypeAndIndex = !subsequent && !!shownStanzaIndex
 
             let itsStanzaType
+
             if (inMain) {
                 itsStanzaType = isSub ? substanzaType : stanzaType
             } else {
@@ -55,10 +58,9 @@ const LyricStanza = ({
             return (
                 <LyricStanzaView {...other}
                     stanzaArray={stanzaArray}
-                    inMain={inMain}
-                    showStanzaTypeAndIndex={showStanzaTypeAndIndex}
                     stanzaIndex={shownStanzaIndex}
                     stanzaType={itsStanzaType}
+                    showStanzaTypeAndIndex={showStanzaTypeAndIndex}
                 />
             )
         }

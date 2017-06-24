@@ -3,12 +3,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Button from '../button/button'
 import LyricToggle from '../lyric/lyric-toggle'
+import LyricEarToggle from '../lyric/lyric-ear-toggle'
 import LyricSection from '../lyric/lyric-section'
 import VerseBar from '../verse/verse-bar'
-import { LYRIC_COLUMN_TOGGLE_KEY } from '../../constants/access'
-import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -35,11 +33,7 @@ class LyricColumn extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'selectedSongIndex',
-                    'selectedLyricColumnIndex',
-                    'selectedVerseIndex',
-                    'sliderVerseIndex',
-                    'showOneOfTwoLyricColumns'
+                    'selectedSongIndex'
                 ]
             }) || getComponentShouldUpdate({
                 props: state,
@@ -81,8 +75,16 @@ class LyricColumn extends Component {
     }
 
     render() {
+
+        /* eslint-disable no-unused-vars */
+        const { selectedSongIndex,
+                handleScrollAfterLyricRerender,
+        /* eslint-enable no-unused-vars */
+
+                ...other } = this.props
+
         return (
-            <LyricColumnView {...this.props}
+            <LyricColumnView {...other}
                 myRef={(node) => (this.myLyricColumn = node)}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
@@ -108,8 +110,6 @@ LyricColumn.propTypes = {
 const LyricColumnView = ({
 
     // From props.
-    showOneOfTwoLyricColumns,
-    selectedLyricColumnIndex,
     selectedVerseIndex,
     sliderVerseIndex,
 
@@ -117,7 +117,6 @@ const LyricColumnView = ({
     handleLyricSectionExpand,
     handleVerseBarSelect,
     handleVerseBarWheel,
-
 
     // From controller.
     myRef,
@@ -152,20 +151,14 @@ const LyricColumnView = ({
                 />
                 <VerseBar {...verseBarProps} />
 
-                {/* Make this its own component? */}
-                {showOneOfTwoLyricColumns &&
-                    <div className="lyric-button-block ear-button-block">
-                        <Button
-                            accessKey={LYRIC_COLUMN_TOGGLE_KEY}
-                            iconText={LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]}
-                            isLarge={true}
-                            handleClick={handleLyricColumnSelect}
-                        />
-                    </div>
-                }
+                <LyricEarToggle
+                    handleLyricColumnSelect={handleLyricColumnSelect}
+                />
+
                 <LyricToggle
                     handleLyricSectionExpand={handleLyricSectionExpand}
                 />
+
                 <LyricSection {...other}
                     isTransitioningHeight={isTransitioningHeight}
                     completeHeightTransition={completeHeightTransition}
@@ -177,8 +170,6 @@ const LyricColumnView = ({
 
 LyricColumnView.propTypes = {
     // Through Redux.
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-    selectedLyricColumnIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
 
@@ -197,14 +188,10 @@ LyricColumnView.propTypes = {
 
 export default connect(({
     selectedSongIndex,
-    selectedLyricColumnIndex,
     selectedVerseIndex,
-    sliderVerseIndex,
-    showOneOfTwoLyricColumns
+    sliderVerseIndex
 }) => ({
     selectedSongIndex,
-    selectedLyricColumnIndex,
     selectedVerseIndex,
-    sliderVerseIndex,
-    showOneOfTwoLyricColumns
+    sliderVerseIndex
 }))(LyricColumn)

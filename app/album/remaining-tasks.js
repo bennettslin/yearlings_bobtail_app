@@ -14,11 +14,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Menu in logue upon load is stuck in Chrome?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Overview shadow hidden by lyric fade top.`,
         workedHours: 0,
         neededHours: 1
@@ -176,6 +171,11 @@ module.exports = [
     // Dumb bugs.
     {
         taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Menu in logue upon load is stuck in Chrome?`,
         workedHours: 0,
         neededHours: 1
     },

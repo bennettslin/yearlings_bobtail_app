@@ -22,16 +22,8 @@ class LyricUnit extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'deviceIndex',
-                    'isSliderTouched',
-                    'sliderVerseIndex',
-                    'isPlaying',
-                    'accessedAnnotationIndex',
-                    'selectedSongIndex',
-                    'selectedAnnotationIndex',
-                    'interactivatedVerseIndex',
-                    'selectedVerseIndex',
-                    'unitIndex'
+                    'unitIndex',
+                    'selectedSongIndex'
                 ]
             })
 
@@ -72,7 +64,6 @@ class LyricUnit extends Component {
             hasSide = !!(topSideStanza || bottomSideStanza),
             isDotOnly = !!dotStanza && unitArray.length === 1,
             isBottomOnly = !topSideStanza && !!bottomSideStanza
-
 
         return (
             <LyricUnitView {...other}

@@ -23,6 +23,7 @@ Completed:
 * carousel
 * dot
 * dots
+* lyric
 * main
 * nav
 * overview
@@ -37,7 +38,6 @@ Completed:
 Currently working on:
 
 Left to do:
-* lyric
 * slider
 * text
 * verse

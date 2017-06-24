@@ -2173,5 +2173,10 @@ module.exports = [
         taskName: `Verse bar is off centre in Safari and Firefox. (Spacing between doublespeaker lines is still weird in Safari, but oh well).`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Lyric performance optimisation.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]
