@@ -4,11 +4,6 @@ module.exports = [
      * Short bugs and tasks.
      */
     {
-        taskName: `Accessed annotation is wrong after deselecting annotation.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Logue to song transition is janky?`,
         workedHours: 0,
         neededHours: 1
@@ -27,8 +22,10 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
+
+    // Figure out accessed annotation rules.
     {
-        taskName: `When selecting song from portal, carousel scroll should be called strategically, especially Odin shivs.`,
+        taskName: `Accessed annotation is wrong after deselecting annotation.`,
         workedHours: 0,
         neededHours: 1
     },

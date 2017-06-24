@@ -130,7 +130,8 @@ const LyricUnitView = ({
             className={classnames(
                 'lyric-unit',
                 unitClassName,
-                { 'title-unit': isTitleUnit,
+                { 'has-side': hasSide,
+                  'title-unit': isTitleUnit,
                   'custom-sub-block': unitClassName,
                   subsequent }
             )}

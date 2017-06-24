@@ -174,6 +174,7 @@ class DomManager extends Component {
                       'verse-bar-above': isVerseBarAbove,
                       'verse-bar-below': isVerseBarBelow,
                       'verse-bar-hidden': !isVerseBarAbove && !isVerseBarBelow,
+                      'show-both-columns': !singleShownLyricColumnKey,
                       'slider-touched': isSliderTouched }
                 )}
                 onClick={this._handleClick}

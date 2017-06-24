@@ -210,8 +210,13 @@ module.exports = {
         [
             {
                 time: 20,
+                left: `This latest piece`,
+                right: `In safest sleep,`
+            },
+            {
+                time: 23,
                 left: [
-                    `This latest piece you drew with`,
+                    `you drew with`,
                     {
                         anchor: `crayons least whittled…`,
                         annotation: [
@@ -238,7 +243,7 @@ module.exports = {
                     }
                 ],
                 right: [
-                    `In safest sleep, you`,
+                    `you`,
                     {
                         anchor: `ruminate on these riddles…`,
                         annotation: {
@@ -865,9 +870,14 @@ module.exports = {
             },
             {
                 time: 87,
-                left: `can that which kills a cat spare his home if spread?`,
+                left: `can that which kills a cat`,
+                right: `a casket tilted back`
+            },
+            {
+                time: 90,
+                left: `spare his home if spread?`,
                 right: [
-                    `a casket tilted back where its`,
+                    `where its`,
                     {
                         // CONSIDER: portal: Hope chest in M?
                         anchor: `hopeless rests.`,
@@ -1444,7 +1454,26 @@ module.exports = {
                                 [OBSERVATION]: true
                             }
                         }
-                    },
+                    }
+                ],
+                right: [
+                    `while`,
+                    {
+                        anchor: `Thursday's child`,
+                        properNoun: true,
+                        annotation: {
+                            description: `Wednesday is "Odin's day" in Old English, and I was born on a Thursday. So my day literally begins as Odin's day ends.`,
+                            dotKeys: {
+                                [NARRATIVE]: true,
+                                [OBSERVATION]: true
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                time: 183,
+                left: [
                     `past a`,
                     {
                         anchor: `guileless garden gnome…`,
@@ -1470,18 +1499,6 @@ module.exports = {
                     }
                 ],
                 right: [
-                    `while`,
-                    {
-                        anchor: `Thursday's child`,
-                        properNoun: true,
-                        annotation: {
-                            description: `Wednesday is "Odin's day" in Old English, and I was born on a Thursday. So my day literally begins as Odin's day ends.`,
-                            dotKeys: {
-                                [NARRATIVE]: true,
-                                [OBSERVATION]: true
-                            }
-                        }
-                    },
                     `has a`,
                     {
                         anchor: `mile less far to go…`,
