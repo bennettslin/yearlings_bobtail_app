@@ -2184,4 +2184,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Finish verse audio button refactor, for now.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

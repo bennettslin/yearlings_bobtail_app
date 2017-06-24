@@ -158,3 +158,77 @@ export const getFormattedLyricSpanText = (text) => {
         return text
     }
 }
+
+export const getVerseAudioIconText = ({
+    isPlaying,
+    isSelected,
+    isAfterSelected
+}) => {
+    let iconText
+
+    if (isSelected) {
+        iconText = isPlaying ? `\u23F8` : `\u25BA`
+    } else {
+        iconText = isAfterSelected ? `\u23E9` : `\u23EA`
+    }
+
+    return iconText
+}
+
+export const getVerseAudioIndicatorText = ({
+    isPlaying,
+    isSelected
+}) => {
+    let indicatorText
+
+    if (isSelected) {
+        indicatorText = isPlaying ? `\u23F8` : `\u25BA`
+    } else {
+        indicatorText = `\u25E6`
+    }
+
+    return indicatorText
+}
+
+export const getVerseUnitClassName = ({
+    isEven,
+    inVerseBar,
+    inMain,
+    isTitle
+}) => {
+
+    if (!inVerseBar) {
+        if (isTitle) {
+            return 'title'
+        } else if (inMain) {
+            return isEven ? 'even' : 'odd'
+        } else {
+            return 'in-side'
+        }
+    }
+
+    return ''
+}
+
+export const getSliderStatusClassName = ({
+    inMain,
+    isTitle,
+    isSliderTouched,
+    isSliderSelected,
+    isAfterSliderSelected
+}) => {
+
+    if (isSliderTouched && inMain && !isTitle) {
+        if (isSliderSelected) {
+            return 'on-slider'
+
+        } else if (isAfterSliderSelected) {
+            return 'after-slider'
+
+        } else {
+            return 'before-slider'
+        }
+    }
+
+    return ''
+}

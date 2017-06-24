@@ -55,6 +55,11 @@
         margin-left: @stanza-block-margin;
     }
 
+    &.main {
+        // Account for verse audio button and its box shadow.
+        padding-left: @verse-padding + 5px;
+    }
+
     &.side {
         display: flex;
         flex-direction: column;

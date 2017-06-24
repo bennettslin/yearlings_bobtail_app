@@ -18,7 +18,7 @@
                 }
             }
 
-            .interactable-indicator {
+            .verse-audio-indicator {
                 padding-top: @verse-padding;
             }
         }
@@ -31,7 +31,7 @@
                 }
             }
 
-            .interactable-indicator {
+            .verse-audio-indicator {
                 padding-bottom: @verse-padding;
             }
         }
@@ -54,7 +54,7 @@
 
                 .verse-audio-button {
                     opacity: 1;
-                    font-size: 1em;
+                    // font-size: 1em;
                     animation: fontSnapback 0.16s;
                 }
             }
@@ -66,19 +66,11 @@
     }
 }
 
-.interactable-indicator {
-    position: absolute;
-    top: 0;
-    left: @verse-padding * 0.5;
-}
-
 .verse-audio-button-block {
     position: absolute;
     left: 0;
     height: 100%;
     width: @verse-audio-button-block-width;
-
-    margin-top: -@verse-audio-button-block-extra;
 
     top: 50%;
     transform: translateY(-50%);
@@ -98,12 +90,12 @@
 
     .verse-audio-button {
         position: relative;
-        font-size: 0.1em;
+        // font-size: 0.1em;
         opacity: 0;
         z-index: @verse-audio-button-z-index;
-        transition: opacity @animation-default, font @animation-default;
+        transition: opacity @animation-default;
 
-        .animated-background {
+        &, .animated-background {
             width: @verse-audio-button-block-width;
             height: @verse-audio-button-block-width;
         }

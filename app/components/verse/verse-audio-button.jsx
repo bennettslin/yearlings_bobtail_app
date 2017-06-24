@@ -7,6 +7,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
+import { getVerseAudioIconText } from '../../helpers/format-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class VerseAudioButton extends Component {
@@ -23,11 +24,14 @@ class VerseAudioButton extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'isPlaying',
                     'verseIndex',
-                    'isAudioButtonEnabled',
+                    'isEnabled',
                     'isSelected',
-                    'isAfterSelected'
+                    'isAfterSelected',
+                    {
+                        staticProp: 'isSelected',
+                        subUpdatingKey: 'isPlaying'
+                    }
                 ]
             })
 
@@ -36,7 +40,7 @@ class VerseAudioButton extends Component {
 
     _handleAudioButtonClick(e) {
 
-        if (this.props.isAudioButtonEnabled) {
+        if (this.props.isEnabled) {
 
             const { isSelected,
                     verseIndex,
@@ -55,18 +59,10 @@ class VerseAudioButton extends Component {
     }
 
     render() {
-        const { isAudioButtonEnabled,
-                isPlaying,
-                isSelected,
-                isAfterSelected } = this.props
+        const { isEnabled,
+                isSelected } = this.props,
 
-        let buttonIcon
-
-        if (isSelected) {
-            buttonIcon = isPlaying ? `\u23F8` : `\u25BA`
-        } else {
-            buttonIcon = isAfterSelected ? `\u23E9` : `\u23EA`
-        }
+            iconText = getVerseAudioIconText(this.props)
 
         return (
             <div className="verse-audio-button-block">
@@ -74,9 +70,9 @@ class VerseAudioButton extends Component {
                     <Button
                         buttonName="verse-audio"
                         isCustomSize={true}
-                        isEnabled={isAudioButtonEnabled}
+                        isEnabled={isEnabled}
                         iconClass={isSelected ? 'audio-colour' : 'audio-nav'}
-                        iconText={buttonIcon}
+                        iconText={iconText}
                         handleClick={this._handleAudioButtonClick}
                     />
                 </div>
@@ -91,7 +87,7 @@ VerseAudioButton.propTypes = {
 
     // From parent.
     verseIndex: PropTypes.number.isRequired,
-    isAudioButtonEnabled: PropTypes.bool.isRequired,
+    isEnabled: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired,
     handleLyricPlay: PropTypes.func.isRequired,

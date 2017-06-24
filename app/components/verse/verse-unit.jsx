@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 import classnames from 'classnames'
 import VerseLinesBlock from './verse-lines-block'
 import VerseAudioButton from './verse-audio-button'
+import VerseAudioIndicator from './verse-audio-indicator'
+import { getVerseUnitClassName, getSliderStatusClassName } from '../../helpers/format-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -73,49 +75,6 @@ class VerseUnit extends Component {
         props.handleVerseElementSlide(this.myVerse)
     }
 
-    _getBackgroundClassName({
-        isEven,
-        inVerseBar,
-        inMain,
-        isTitle
-    }) {
-
-        if (!inVerseBar) {
-            if (isTitle) {
-                return 'title'
-            } else if (inMain) {
-                return isEven ? 'even' : 'odd'
-            } else {
-                return 'in-side'
-            }
-        }
-
-        return ''
-    }
-
-    _getSliderPlacementClassName({
-        inMain,
-        isTitle,
-        isSliderTouched,
-        isSliderSelected,
-        isAfterSliderSelected
-    }) {
-
-        if (isSliderTouched && inMain && !isTitle) {
-            if (isSliderSelected) {
-                return 'on-slider'
-
-            } else if (isAfterSliderSelected) {
-                return 'after-slider'
-
-            } else {
-                return 'before-slider'
-            }
-        }
-
-        return ''
-    }
-
     _handleInteractivatableClick(e) {
         // Allow clicks on interactable verses.
         const { verseObject,
@@ -130,11 +89,15 @@ class VerseUnit extends Component {
     }
 
     render() {
-        const { inMain,
+
+        /* eslint-disable no-unused-vars */
+        const { selectedSongIndex,
+        /* eslint-enable no-unused-vars */
+
+                inMain,
                 isSliderTouched,
                 isSliderSelected,
                 isAfterSliderSelected,
-                isInteractivated,
                 handleLyricAnnotationSelect,
                 ...other } = this.props,
 
@@ -151,33 +114,26 @@ class VerseUnit extends Component {
 
             // If not an interactable verse, we'll count it as odd.
             isEven = isInteractable && verseIndex % 2 === 0,
-            backgroundClassName = this._getBackgroundClassName({
+            verseUnitClassName = getVerseUnitClassName({
                 isEven,
                 inVerseBar,
                 inMain,
                 isTitle
             }),
-            sliderPlacementClassName = this._getSliderPlacementClassName({
+            sliderStatusClassName = getSliderStatusClassName({
                 inMain,
                 isTitle,
                 isSliderTouched,
                 isSliderSelected,
                 isAfterSliderSelected
-            }),
-            interactivatedClassName = isInteractivated ? 'interactivated' : 'not-interactivated',
-
-            // FIXME: Is this needed?
-            verseIndexClassName = `${inVerseBar ? 'bar-' : ''}${isInteractable ? 'verse-' + verseIndex : ''}`
+            })
 
         return (
             <VerseUnitView {...other}
                 myRef={(node) => (this.myVerse = node)}
                 verseIndex={verseIndex}
-                verseIndexClassName={verseIndexClassName}
-                backgroundClassName={backgroundClassName}
-                isAudioButtonEnabled={isInteractivated}
-                sliderPlacementClassName={sliderPlacementClassName}
-                interactivatedClassName={interactivatedClassName}
+                verseUnitClassName={verseUnitClassName}
+                sliderStatusClassName={sliderStatusClassName}
                 isTitle={isTitle}
                 isDoubleSpeaker={!lyric && !centre}
                 isSelected={isSelected}
@@ -194,7 +150,6 @@ VerseUnit.defaultProps = {
     isSelected: false,
     isAfterSelected: false,
     isSliderSelected: false,
-    isInteractivated: false,
     inMain: true,
     inVerseBar: false,
     isSliderTouched: false
@@ -210,7 +165,6 @@ VerseUnit.propTypes = {
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired,
     isSliderSelected: PropTypes.bool.isRequired,
-    isInteractivated: PropTypes.bool.isRequired,
     inMain: PropTypes.bool.isRequired,
     inVerseBar: PropTypes.bool.isRequired,
     handleLyricAnnotationSelect: PropTypes.func,
@@ -226,12 +180,10 @@ const VerseUnitView = ({
     // From controller.
     myRef,
     verseIndex,
-    verseIndexClassName,
-    backgroundClassName,
-    sliderPlacementClassName,
-    interactivatedClassName,
+    verseUnitClassName,
+    sliderStatusClassName,
+    isInteractivated,
 
-    isAudioButtonEnabled,
     isInteractable,
     isSelected,
     isAfterSelected,
@@ -247,18 +199,18 @@ const VerseUnitView = ({
             ref={myRef}
             className={classnames(
                 'verse',
-                verseIndexClassName,
-                backgroundClassName,
-                interactivatedClassName,
-                sliderPlacementClassName,
+                isInteractable && 'verse-' + verseIndex,
+                verseUnitClassName,
+                sliderStatusClassName,
                 { 'selected': isSelected,
-                  'interactable': isInteractable }
+                  'interactable': isInteractable,
+                  'interactivated': isInteractivated }
             )}
             onClick={handleInteractivatableClick}
         >
             {isInteractable && (
                 <VerseAudioButton
-                    isAudioButtonEnabled={isAudioButtonEnabled}
+                    isEnabled={isInteractivated}
                     verseIndex={verseIndex}
                     isSelected={isSelected}
                     isAfterSelected={isAfterSelected}
@@ -267,7 +219,9 @@ const VerseUnitView = ({
                 />
             )}
             {isInteractable && (
-                <div className="interactable-indicator">{`\u2022`}</div>
+                <VerseAudioIndicator
+                    isSelected={isSelected}
+                />
             )}
 
             <VerseLinesBlock {...other} />
@@ -275,19 +229,19 @@ const VerseUnitView = ({
     )
 }
 
+VerseUnitView.defaultProps = {
+    isInteractivated: false
+}
+
 VerseUnitView.propTypes = {
     // From parent.
     verseIndex: PropTypes.number,
-    isTitle: PropTypes.bool,
-    inVerseBar: PropTypes.bool,
-    isAudioButtonEnabled: PropTypes.bool.isRequired,
     isInteractable: PropTypes.bool.isRequired,
+    isInteractivated: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired,
-    verseIndexClassName: PropTypes.string.isRequired,
-    backgroundClassName: PropTypes.string.isRequired,
-    sliderPlacementClassName: PropTypes.string.isRequired,
-    interactivatedClassName: PropTypes.string.isRequired,
+    verseUnitClassName: PropTypes.string.isRequired,
+    sliderStatusClassName: PropTypes.string.isRequired,
     myRef: PropTypes.func.isRequired,
 
     handleInteractivatableClick: PropTypes.func,

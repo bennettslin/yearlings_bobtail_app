@@ -382,7 +382,6 @@ class EventManager extends Component {
         }
 
         this.props.togglePlay()
-        this.props.interactivateVerse()
         return true
     }
 
@@ -395,7 +394,6 @@ class EventManager extends Component {
         this.props.selectVerse({
             selectedVerseIndex
         })
-        this.props.interactivateVerse()
         return true
     }
 
@@ -595,6 +593,8 @@ class EventManager extends Component {
             this.stopPropagation(e)
             this.props.touchSliderBegin(clientRect, clientX)
         }
+
+        this.props.interactivateVerse()
     }
 
     handleBodyTouchMove(e) {
