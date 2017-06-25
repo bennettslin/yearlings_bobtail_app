@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import classnames from 'classnames'
 import LyricUnit from './lyric-unit'
 import { getLyricUnitsCount } from '../../helpers/data-helper'
+import { getArrayOfLength } from '../../helpers/general-helper'
 
 /*************
  * CONTAINER *
@@ -89,7 +90,9 @@ const LyricSectionView = ({
          * Dynamically create array of just indices. Lyric unit will fetch
          * unit array directly from data helper.
          */
-        lyricUnitsIndices = Array.from(Array(lyricUnitsCount).keys())
+        lyricUnitsIndices = getArrayOfLength({
+            length: lyricUnitsCount
+        })
 
     return (
         <div

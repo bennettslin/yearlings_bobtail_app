@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationCard from './annotation-card'
 import { getCarouselOrPopupAnnotationObject } from '../../helpers/data-helper'
+import { getArrayOfLength } from '../../helpers/general-helper'
 
 const AnnotationUnit = ({
 
@@ -16,13 +17,15 @@ const AnnotationUnit = ({
 
     const { carouselAnnotationIndex } = other,
         annotationObject = getCarouselOrPopupAnnotationObject({
-                selectedSongIndex,
-                carouselAnnotationIndex,
-                popupAnnotationSongIndex,
-                popupAnnotationIndex
-            }),
+            selectedSongIndex,
+            carouselAnnotationIndex,
+            popupAnnotationSongIndex,
+            popupAnnotationIndex
+        }),
 
-        cardsIndices = Array.from(Array(annotationObject.cards.length).keys())
+        cardsIndices = getArrayOfLength({
+            length: annotationObject.cards.length
+        })
 
     return (
         <div className="annotation-cards-block">

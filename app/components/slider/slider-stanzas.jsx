@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { getMaxStanzaTimesCount,
          getStanzaTimeObject,
          getSongTotalTime } from '../../helpers/data-helper'
+import { getArrayOfLength } from '../../helpers/general-helper'
 
 const SliderStanzas = ({
 
@@ -21,7 +22,9 @@ const SliderStanzas = ({
          * Dynamically create array of just indices. Audio slider will fetch
          * stanza times object directly from data helper.
          */
-        stanzaTimesIndices = Array.from(Array(maxStanzaTimesCount).keys())
+        stanzaTimesIndices = getArrayOfLength({
+            length: maxStanzaTimesCount
+        })
 
     return (
         <div className="slider-stanzas-block">

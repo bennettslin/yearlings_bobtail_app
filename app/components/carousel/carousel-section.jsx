@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import CarouselAnnotation from './carousel-annotation'
 import Button from '../button/button'
 import { getAnnotationsCount } from '../../helpers/data-helper'
+import { getArrayOfLength } from '../../helpers/general-helper'
 
 const CarouselSection = ({
 
@@ -28,7 +29,9 @@ const CarouselSection = ({
          * Dynamically create array of just indices. Carousel annotation
          * will fetch annotation object directly from data helper.
          */
-        annotationsIndices = Array.from(Array(annotationsCount).keys())
+        annotationsIndices = getArrayOfLength({
+            length: annotationsCount
+        })
 
     return (
         <div className="carousel">
