@@ -1,0 +1,75 @@
+@audio-max-width: 640px; // Arbitrary
+
+// Parent container of both audio sections.
+.audio-subfield, .popup-wrapper.audio {
+
+    min-width: @audio-banner-min-width + @audio-buttons-constant + @app-large-icon-diameter + @audio-block-padding * 3;
+    max-width: @audio-max-width;
+
+    box-sizing: border-box;
+}
+
+.audio-subfield {
+    transition: margin-bottom @animation-default;
+
+    .audio-section {
+        height: 100%;
+    }
+}
+
+.overlay-shown {
+    .audio-subfield {
+        // TODO: I don't understand this number, but it doesn't push it up all the way.
+        margin-bottom: @nav-height * 2;
+    }
+}
+
+.tablet-width {
+    .audio-subfield, .popup-wrapper.audio {
+        min-width: @audio-banner-min-width + @audio-buttons-constant + @app-tablet-large-icon-diameter + @audio-block-padding * 3;
+    }
+}
+
+.mini-width {
+    .audio-subfield, .popup-wrapper.audio {
+        min-width: @audio-banner-min-width + @audio-buttons-constant + @app-mini-large-icon-diameter + @audio-block-padding * 3;
+    }
+}
+
+.phone-width {
+    .audio-subfield, .popup-wrapper.audio {
+        min-width: @audio-buttons-constant + @app-icon-diameter + @audio-block-padding * 3;
+    }
+
+    .audio-section {
+        justify-content: center;
+    }
+}
+
+.audio-section, .audio-block, .audio-subblock, .audio-display-block {
+    display: flex;
+    align-items: center;
+}
+
+.audio-section {
+
+    flex-grow: 1;
+
+    // Needed for audio banner in overlay.
+    position: relative;
+    padding: @audio-block-padding-y @audio-block-padding;
+
+    background-color: #dbb;
+}
+
+.audio-block {
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+
+.title-in-audio {
+
+    .audio-section {
+        padding: @audio-block-padding-y @title-in-audio-block-padding;
+    }
+}

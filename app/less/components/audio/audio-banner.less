@@ -1,0 +1,47 @@
+.audio-banner-block, .audio-timer-block {
+    background-color: #8dd;
+}
+
+.audio-banner-block {
+    height: 100%;
+    position: relative;
+    margin-right: @audio-block-padding;
+    min-width: @audio-banner-min-width;
+    line-height: 1em;
+
+    background-color: #dbd;
+
+    .audio-banner {
+        flex-grow: 1;
+    }
+}
+
+.audio-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.audio-display-block {
+    box-sizing: border-box;
+    padding: 0 5px;
+
+    height: @audio-banner-height;
+    justify-content: space-between;
+
+    background-color: rgba(150, 150, 250, 1.0);
+}
+
+.title-in-audio {
+
+    .audio-banner-block {
+        min-width: 200px;
+        margin-right: @title-in-audio-block-padding;
+    }
+
+    // Make text smaller when width is narrow.
+    .audio-banner-title {
+        font-size: 0.85em;
+    }
+}

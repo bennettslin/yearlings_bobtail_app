@@ -1,4 +1,4 @@
-// Container to show logue or song button in nav section.
+// Icon to show which verses are interactable.
 
 import React from 'react'
 import { connect } from 'react-redux'

@@ -16,6 +16,7 @@ const SliderStanzas = ({
     const totalTime = getSongTotalTime(selectedSongIndex),
 
         maxStanzaTimesCount = getMaxStanzaTimesCount(),
+
         /**
          * Dynamically create array of just indices. Audio slider will fetch
          * stanza times object directly from data helper.

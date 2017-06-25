@@ -6,7 +6,6 @@ import { PORTAL,
 import { LYRIC_COLUMN_KEYS, COLUMN_INDEX } from '../constants/lyrics'
 import { getAnnotationObject,
          getVerseObject,
-         getSongIsLogue,
          getSongVerseTimes,
          getSongTotalTime,
          getAnnotationDotKeys,
@@ -294,26 +293,6 @@ export const getVerseBarStatus = (deviceIndex, windowHeight, isLyricExpanded, se
             isVerseBarAbove,
             isVerseBarBelow
         }
-}
-
-// FIXME: Call this from build helper!
-export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
-
-    if (getSongIsLogue(songIndex)) {
-        return {
-            beginTime: 0,
-            endTime: 0
-        }
-    }
-
-    const verseTimes = getSongVerseTimes(songIndex),
-        beginTime = verseTimes[verseIndex],
-        endTime = verseIndex < verseTimes.length - 1 ? verseTimes[verseIndex + 1] : getSongTotalTime(songIndex)
-
-    return {
-        beginTime,
-        endTime
-    }
 }
 
 /**

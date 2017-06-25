@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
     CleanPlugin = require('clean-webpack-plugin'),
     BabiliPlugin = require('babili-webpack-plugin'),
     OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
@@ -27,6 +28,12 @@ exports.devServer = ({ host, port } = {}) => ({
         // Display only errors to reduce the amount of output.
         stats: 'errors-only'
     }
+})
+
+exports.loadBundleAnalyzer = () => ({
+    plugins: [
+        new BundleAnalyzerPlugin()
+    ]
 })
 
 exports.loadJavaScript = ({ include }) => ({

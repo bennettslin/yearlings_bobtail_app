@@ -1,0 +1,23 @@
+.audio-slider-block {
+    height: 100%;
+}
+
+.verse-time-bar {
+    transition: box-shadow @animation-default, background-color @animation-default;
+
+    &.hovered {
+        transition: box-shadow 0.1s, background-color 0.1s;
+        background-color: @audio-highlight-colour;
+        box-shadow: 0 0 1px 1px @audio-highlight-colour;
+    }
+}
+
+.audio-touch-bar {
+    width: 100%;
+}
+
+.is-song {
+    .audio-touch-bar {
+        cursor: pointer;
+    }
+}

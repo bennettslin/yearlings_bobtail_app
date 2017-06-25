@@ -1,0 +1,51 @@
+// 232 px.
+@audio-button-margin: 3px;
+@audio-option-button-margin: 8px;
+@audio-buttons-constant: @app-icon-diameter * 3 +
+                         @audio-button-margin * 2 +
+                         @audio-option-button-margin;
+
+.audio-buttons-block {
+    justify-content: space-between;
+    height: 100%;
+
+    // Give audio banner more room.
+    max-width: 220px;
+
+    background-color: #bbb;
+
+    .button:not(:last-child) {
+        margin-right: @audio-button-margin;
+    }
+}
+
+.player-subblock {
+    justify-content: space-between;
+    margin-right: @audio-option-button-margin;
+    flex-grow: 4;
+}
+
+.option-subblock {
+    justify-content: flex-end;
+    flex-grow: 3;
+}
+
+.audio-nav {
+    background-color: @audio-nav-colour;
+}
+
+.audio-neutral {
+    background-color: @audio-neutral-colour;
+}
+
+.is-playing {
+    .audio-colour {
+        background-color: @audio-pause-colour;
+    }
+}
+
+.is-paused {
+    .audio-colour {
+        background-color: @audio-play-colour;
+    }
+}

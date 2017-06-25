@@ -1,0 +1,35 @@
+.audio-cursor {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    transition: left @animation-default,
+                width @animation-default,
+                background-color @animation-default,
+                box-shadow @animation-default;
+}
+
+// NOTE: The order of the following styling rules matters.
+.is-playing {
+    .audio-cursor {
+        background-color: @audio-play-colour;
+    }
+}
+
+.is-paused {
+    .audio-cursor {
+        background-color: @audio-pause-colour;
+    }
+}
+
+.is-verse-interactivated {
+    .audio-cursor {
+        background-color: @audio-highlight-colour;
+    }
+}
+
+.slider-moving {
+    .audio-cursor {
+        background-color: @audio-neutral-colour;
+    }
+}

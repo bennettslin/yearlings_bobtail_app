@@ -93,6 +93,27 @@ export const getSongVerseTimes = (songIndex) => {
     return selectedSong.verseTimes || []
 }
 
+// FIXME: Call this from build helper!
+export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
+
+    if (getSongIsLogue(songIndex)) {
+        return {
+            beginTime: 0,
+            endTime: 0
+        }
+    }
+
+    const verseTimes = getSongVerseTimes(songIndex),
+        beginTime = verseTimes[verseIndex],
+        endTime = verseIndex < verseTimes.length - 1 ?
+            verseTimes[verseIndex + 1] : getSongTotalTime(songIndex)
+
+    return {
+        beginTime,
+        endTime
+    }
+}
+
 export const getStanzaTimeObject = (songIndex, stanzaTimeIndex) => {
     const songObject = getSongObject(songIndex),
         { stanzaTimes: stanzaTimesArray } = songObject
