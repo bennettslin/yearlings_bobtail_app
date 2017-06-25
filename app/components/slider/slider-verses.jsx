@@ -1,4 +1,4 @@
-// Not presently used.
+// Static field that shows the song verses in the slider.
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -9,17 +9,16 @@ import { getSongVerseTimes,
 
 const SliderVerses = ({
 
-    selectedSongIndex,
-    cursorVerseIndex
+    selectedSongIndex
 
 }) => {
 
     const verseTimes = getSongVerseTimes(selectedSongIndex),
         totalTime = getSongTotalTime(selectedSongIndex)
 
-    return false && (
+    return (
         <div className="slider-verses-block">
-            {verseTimes.map((verseTime, index) => {
+            {verseTimes.map((verseTime, verseIndex) => {
 
                 // Don't show title verse.
                 if (verseTime < 0) {
@@ -29,25 +28,16 @@ const SliderVerses = ({
                 const verseWidth = (totalTime - verseTime) / totalTime * 100,
                     verseStyle = {
                         width: `${verseWidth}%`
-                    }
-
-                let cursorPlacementClassName
-
-                if (index === cursorVerseIndex) {
-                    cursorPlacementClassName = 'on-cursor'
-                } else if (index < cursorVerseIndex) {
-                    cursorPlacementClassName = 'before-cursor'
-                } else {
-                    cursorPlacementClassName = 'after-cursor'
-                }
+                    },
+                    isEven = verseIndex % 2 === 0
 
                 return (
                     <div
-                        key={index}
+                        key={verseIndex}
                         className={classnames(
                             'slider-bar',
                             'verse-slider-bar',
-                            cursorPlacementClassName
+                            isEven ? 'even' : 'odd'
                         )}
                         style={verseStyle}
                     >
@@ -60,10 +50,7 @@ const SliderVerses = ({
 
 SliderVerses.propTypes = {
     // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    cursorVerseIndex: PropTypes.number.isRequired
+    selectedSongIndex: PropTypes.number.isRequired
 }
 
 export default connect(({

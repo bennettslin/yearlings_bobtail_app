@@ -83,11 +83,6 @@ export const getSongTotalTime = (songIndex) => {
     return selectedSong.totalTime || Number.MAX_SAFE_INTEGER
 }
 
-export const getSongStanzaTimes = (songIndex) => {
-    const selectedSong = getSongObject(songIndex)
-    return selectedSong.stanzaTimes || []
-}
-
 export const getSongVerseTimes = (songIndex) => {
     const selectedSong = getSongObject(songIndex)
     return selectedSong.verseTimes || []

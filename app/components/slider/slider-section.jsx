@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import SliderCursor from './slider-cursor'
 import SliderStanzas from './slider-stanzas'
+import SliderVerses from './slider-verses'
 import SliderTimeBars from './slider-time-bars'
 
 /*************
@@ -52,11 +53,9 @@ const SliderSectionView = ({
                 'slider-block'
             )}
         >
-            {/* These are static for each song. */}
             <SliderStanzas />
-
+            <SliderVerses />
             <SliderTimeBars />
-
             <SliderCursor />
 
             {/* Handle touch interactions. */}
