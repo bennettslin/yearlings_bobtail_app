@@ -21,7 +21,7 @@ const PlayersSection = ({
                     isSelected = songIndex === selectedSongIndex,
                     totalTime = getSongTotalTime(songIndex)
 
-                return (
+                return isSelected ? (
                     <Player {...other}
                         key={index}
                         songIndex={songIndex}
@@ -29,7 +29,7 @@ const PlayersSection = ({
                         isSelected={isSelected}
                         totalTime={totalTime}
                     />
-                )
+                ) : null
             })}
         </div>
     )

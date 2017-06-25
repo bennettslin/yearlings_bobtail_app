@@ -16,6 +16,9 @@ module.exports = {
     WINDOW_HEIGHT: 'windowHeight',
     WINDOW_WIDTH: 'windowWidth',
 
+    // Player.
+    CAN_PLAY_THROUGHS: 'canPlayThroughs',
+
     // Responsive.
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',
     IS_HIDDEN_NAV: 'isHiddenNav',

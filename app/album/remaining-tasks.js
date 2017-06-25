@@ -121,7 +121,7 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Routing and copy link button`,
+        taskName: `Routing`,
         workedHours: 0,
         neededHours: 8
     },

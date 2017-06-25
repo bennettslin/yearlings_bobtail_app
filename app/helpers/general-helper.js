@@ -94,6 +94,11 @@ export const getSetsAreSame = (smallerSet, largerSet) => {
 }
 
 export const getTwoToThePowerOfN = (exponent, number = 2) => {
+    /**
+     * Call this method with just the exponent argument. The number argument is
+     * only passed recursively.
+     */
+
     if (exponent === 0) {
         return 1
 
@@ -105,8 +110,10 @@ export const getTwoToThePowerOfN = (exponent, number = 2) => {
 }
 
 export const convertTrueFalseKeysToBitNumber = (keysArray, trueFalseObject) => {
-    // Allow storage helper to store selectedDotKeys as a single number.
-
+    /**
+     * Allow storage helper to store object as a single number. Order of keys
+     * is established through keysArray.
+     */
     return keysArray.reduce((bitNumber, key, index) => {
         if (trueFalseObject[key]) {
             bitNumber += getTwoToThePowerOfN(index)

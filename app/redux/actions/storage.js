@@ -37,7 +37,8 @@ export const selectCarouselIndex = (selectedCarouselIndex = 0) => {
 export const selectDotKey = (selectedDotKey, isSelected = false) => {
     setDotInStorage(selectedDotKey, isSelected)
     return { type: SELECTED_DOT_KEYS,
-             payload: { selectedDotKey,                isSelected }
+             payload: { selectedDotKey,
+                        isSelected }
     }
 }
 

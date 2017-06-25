@@ -7,6 +7,9 @@ import ReactAudioPlayer from 'react-audio-player'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
+
+// https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events
+
 // https://www.npmjs.com/package/react-audio-player
 
 const LISTEN_INTERVAL = 100
@@ -49,7 +52,7 @@ class Player extends Component {
     componentDidMount() {
         this.myPlayer = this.myReactPlayer.audioEl
 
-        // this._listenForDebugStatements()
+        this._listenForDebugStatements(true)
 
         // Tell audio element its initial state.
         this._updateAudioElementTime()
@@ -77,47 +80,68 @@ class Player extends Component {
         }
     }
 
-    _listenForDebugStatements() {
-        // https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Media_events
-        this.myPlayer.addEventListener('canplay', () => {
-            console.error('canplay', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('canplaythrough', () => {
-            console.error('canplaythrough', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('ended', () => {
-            console.error('ended', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('pause', () => {
-            console.error('pause', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('play', () => {
-            console.error('play', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('playing', () => {
-            console.error('playing', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('progress', () => {
-            console.error('progress', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('seeked', () => {
-            console.error('seeked', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('seeking', () => {
-            console.error('seeking', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('stalled', () => {
-            console.error('stalled', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('suspend', () => {
-            console.error('suspend', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('timeupdate', () => {
-            console.error('timeupdate', this.props.songIndex);
-        })
-        this.myPlayer.addEventListener('waiting', () => {
-            console.error('waiting', this.props.songIndex);
-        })
+    _listenForDebugStatements(onlyIfSelected) {
+
+        const showDebugStatements =
+            this.props.isSelected || !onlyIfSelected
+
+        if (showDebugStatements) {
+
+            // Enough data is available that the media can be played for now.
+            this.myPlayer.addEventListener('canplay', () => {
+                console.error('canplay', this.props.songIndex);
+            })
+
+            // Entire media can be played without interruption.
+            this.myPlayer.addEventListener('canplaythrough', () => {
+                console.error('canplaythrough', this.props.songIndex);
+            })
+
+            // this.myPlayer.addEventListener('ended', () => {
+            //     console.error('ended', this.props.songIndex);
+            // })
+            // this.myPlayer.addEventListener('pause', () => {
+            //     console.error('pause', this.props.songIndex);
+            // })
+            // this.myPlayer.addEventListener('play', () => {
+            //     console.error('play', this.props.songIndex);
+            // })
+            // this.myPlayer.addEventListener('playing', () => {
+            //     console.error('playing', this.props.songIndex);
+            // })
+            // this.myPlayer.addEventListener('timeupdate', () => {
+            //     console.error('timeupdate', this.props.songIndex);
+            // })
+
+            // Determine which times ranges have been buffered.
+            this.myPlayer.addEventListener('progress', () => {
+                console.error('progress', this.props.songIndex);
+            })
+
+            // Seek operation has completed.
+            this.myPlayer.addEventListener('seeked', () => {
+                console.error('seeked', this.props.songIndex);
+            })
+
+            // Seek operation has begun.
+            this.myPlayer.addEventListener('seeking', () => {
+                console.error('seeking', this.props.songIndex);
+            })
+
+            // Data is not forthcoming.
+            this.myPlayer.addEventListener('stalled', () => {
+                console.error('stalled', this.props.songIndex);
+            })
+
+            // Download has completed.
+            this.myPlayer.addEventListener('suspend', () => {
+                console.error('suspend', this.props.songIndex);
+            })
+
+            this.myPlayer.addEventListener('waiting', () => {
+                console.error('waiting', this.props.songIndex);
+            })
+        }
     }
 
     _updateAudioElementIsPlaying(props = this.props) {
