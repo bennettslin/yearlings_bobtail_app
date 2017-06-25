@@ -1,16 +1,11 @@
 // Reducers for player state.
 import { CAN_PLAY_THROUGHS } from '../../constants/state'
 
-export const canPlayThroughsReducer = (state, action) => {
+export const CanPlayThroughsReducer = (state = 0, action) => {
+    // This is a bit number.
     switch (action.type) {
-        case CAN_PLAY_THROUGHS: {
-            const { playerSongIndex,
-                    canPlayThrough } = action.payload,
-                // Copy state object.
-                newState = Object.assign({}, state)
-            newState[playerSongIndex] = canPlayThrough
-            return newState
-        }
+        case CAN_PLAY_THROUGHS:
+            return action.payload
         default:
             return state
     }

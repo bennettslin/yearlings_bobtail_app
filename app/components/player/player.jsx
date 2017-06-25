@@ -1,10 +1,13 @@
 // Hidden component to wrap an audio DOM element.
 
 import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { setCanPlayThroughs } from '../../redux/actions/player'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getSongsNotLoguesCount } from '../../helpers/data-helper'
+import { getComponentShouldUpdate, setNewValueInBitNumber } from '../../helpers/general-helper'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 
@@ -19,6 +22,7 @@ class Player extends Component {
     constructor(props) {
         super(props)
 
+        this._handleCanPlayThrough = this._handleCanPlayThrough.bind(this)
         this._tellAppCurrentTimeOfAudioElement = this._tellAppCurrentTimeOfAudioElement.bind(this)
 
         this.state = {
@@ -61,9 +65,10 @@ class Player extends Component {
         // Add event listeners.
 
         // Tell app that player can now be played without interruption.
-        this.myPlayer.addEventListener('canplaythrough', e => {
-            this.props.handleCanPlayThrough(e, this.props.songIndex)
-        })
+        this.myPlayer.addEventListener(
+            'canplaythrough',
+            this._handleCanPlayThrough
+        )
     }
 
     componentWillUpdate(nextProps) {
@@ -85,6 +90,25 @@ class Player extends Component {
         if (nextProps.updatedTimePlayed !== null) {
             this._updateAudioElementTime(nextProps)
         }
+    }
+
+    _handleCanPlayThrough(e) {
+        this.props.handleCanPlayThrough(e, this.props.songIndex)
+
+        const { canPlayThroughs,
+                songIndex } = this.props,
+
+            newBitNumber = setNewValueInBitNumber({
+                keysCount: getSongsNotLoguesCount(),
+                bitNumber: canPlayThroughs,
+                updatedKey: songIndex,
+                newValue: true
+            })
+
+        console.error('canPlayThroughs', canPlayThroughs);
+        console.error('newBitNumber', newBitNumber);
+
+        this.props.setCanPlayThroughs(newBitNumber)
     }
 
     _listenForDebugStatements(onlyIfSelected) {
@@ -212,6 +236,7 @@ Player.propTypes = {
     // Through Redux.
     isPlaying: PropTypes.bool.isRequired,
     updatedTimePlayed: PropTypes.number,
+    canPlayThroughs: PropTypes.number.isRequired,
 
     // From parent.
     mp3: PropTypes.string.isRequired,
@@ -226,10 +251,19 @@ Player.propTypes = {
     handleCanPlayThrough: PropTypes.func.isRequired
 }
 
+// Bind Redux action creators to component props.
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        setCanPlayThroughs
+    }, dispatch)
+)
+
 export default connect(({
     isPlaying,
-    updatedTimePlayed
+    updatedTimePlayed,
+    canPlayThroughs
 }) => ({
     isPlaying,
-    updatedTimePlayed
-}))(Player)
+    updatedTimePlayed,
+    canPlayThroughs
+}), bindDispatchToProps)(Player)

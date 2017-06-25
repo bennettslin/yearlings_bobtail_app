@@ -1,5 +1,5 @@
 // Helper for getting and setting state persisted in user's local storage.
-import { getTwoToThePowerOfN, convertBitNumberToTrueFalseKeys, convertTrueFalseKeysToBitNumber } from './general-helper'
+import { getTwoToThePowerOfN, convertBitNumberToTrueFalseKeys, setNewValueInBitNumber } from './general-helper'
 import AlbumData from '../album-data'
 
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -33,11 +33,14 @@ const setInStorage = (key, value) => {
 const setDotInStorage = (dotKey, isActive) => {
 
     const bitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
-        trueFalseKeys = convertBitNumberToTrueFalseKeys(ALL_DOT_KEYS, bitNumber)
+        newBitNumber = setNewValueInBitNumber({
+            keysArray: ALL_DOT_KEYS,
+            bitNumber,
+            updatedKey: dotKey,
+            newValue: isActive
+        })
 
-    trueFalseKeys[dotKey] = isActive
-
-    setInStorage(SELECTED_DOT_KEYS, convertTrueFalseKeysToBitNumber(ALL_DOT_KEYS, trueFalseKeys))
+    setInStorage(SELECTED_DOT_KEYS, newBitNumber)
 }
 
 const _getValidatedStoredSong = () => {
@@ -171,7 +174,10 @@ export default {
         // Get true-false object from bit number.
         if (key === SELECTED_DOT_KEYS) {
             const bitNumber = validatedValue,
-                trueFalseKeys = convertBitNumberToTrueFalseKeys(ALL_DOT_KEYS, bitNumber)
+                trueFalseKeys = convertBitNumberToTrueFalseKeys({
+                    keysArray: ALL_DOT_KEYS,
+                    bitNumber
+                })
 
             return trueFalseKeys
 
