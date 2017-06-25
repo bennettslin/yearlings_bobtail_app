@@ -49,7 +49,7 @@ const SliderSectionView = ({
         <div
             className={classnames(
                 'audio-banner',
-                'audio-slider-block'
+                'slider-block'
             )}
         >
             {/* These are static for each song. */}
@@ -62,8 +62,8 @@ const SliderSectionView = ({
             {/* Handle touch interactions. */}
             <div
                 className={classnames(
-                    'time-bar',
-                    'audio-touch-bar'
+                    'slider-bar',
+                    'slider-touch-bar'
                 )}
                 onMouseDown={handleTouchDown}
                 onTouchStart={handleTouchDown}

@@ -39,8 +39,8 @@ const SliderTimeBars = ({
 
             <div
                 className={classnames(
+                    'slider-bar',
                     'time-bar',
-                    'play-time-bar',
                     'time-remain-bar'
                 )}
             />
@@ -49,15 +49,15 @@ const SliderTimeBars = ({
             <div className={classnames(
                 'below',
                 'spent',
-                'play-time-display'
+                'time-display'
             )}>
                 {displayedSpentTime}
             </div>
 
             <div
                 className={classnames(
+                    'slider-bar',
                     'time-bar',
-                    'play-time-bar',
                     'time-spent-bar'
                 )}
                 style={spentStyle}
@@ -66,27 +66,27 @@ const SliderTimeBars = ({
                 <div className={classnames(
                     'above',
                     'spent',
-                    'play-time-display'
+                    'time-display'
                 )}>
                     {displayedSpentTime}
                 </div>
             </div>
 
-            {/* Remaining time display below spent bar. */}
+            {/* Remaining time display below remain bar. */}
             <div className={classnames(
                 'below',
                 'remain',
-                'play-time-display'
+                'time-display'
             )}>
                 {displayedRemainTime}
             </div>
 
-            {/* Remaining time display above spent bar. */}
+            {/* Remaining time display above remain bar. */}
             <div
                 className={classnames(
                     'above',
                     'remain',
-                    'play-time-display'
+                    'time-display'
                 )}
                 style={remainStyle}
             >

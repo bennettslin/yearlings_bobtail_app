@@ -1,4 +1,4 @@
-.time-bar {
+.slider-bar {
     position: absolute;
     top: 0;
     left: 0;
@@ -6,16 +6,39 @@
     overflow: hidden;
 }
 
-.stanza-time-bar, .verse-time-bar {
-    left: auto;
-    right: 0;
+.slider-not-moving.is-not-verse-interactivated {
 
-    &.stanza-time-bar {
-        transition: width 0.3s, background-color 0.3s;
+    .time-bar {
+        // FIXME: Width animation is buggy if longer than 0.05s?
+        transition: width @animation-instant,
+                    background-color @animation-default;
+    }
+
+    .time-spent-bar {
+        background-color: rgba(225, 225, 200, 0.8);
     }
 }
 
-.play-time-display {
+.time-remain-bar {
+    width: 100%;
+}
+
+.slider-moving {
+
+    .time-bar {
+        transition: background-color @animation-default;
+    }
+
+    .time-spent-bar {
+        background-color: @time-spent-bar-colour;
+    }
+
+    .time-remain-bar {
+        background-color: @time-remain-bar-colour;
+    }
+}
+
+.time-display {
     box-sizing: border-box;
 
     @time-display-margin: 5px;
@@ -58,38 +81,7 @@
 }
 
 .slider-moving {
-    .play-time-display {
+    .time-display {
         opacity: 1;
-    }
-}
-
-
-.time-remain-bar {
-    width: 100%;
-}
-
-.slider-moving {
-    .play-time-bar {
-        transition: background-color @animation-default;
-    }
-
-    .time-spent-bar {
-        background-color: @time-spent-bar-colour;
-    }
-
-    .time-remain-bar {
-        background-color: @time-remain-bar-colour;
-    }
-}
-
-.slider-not-moving.is-not-verse-interactivated {
-
-    .time-spent-bar {
-        background-color: rgba(225, 225, 200, 0.8);
-    }
-
-    .play-time-bar {
-        // FIXME: Width animation is buggy if longer than 0.05s?
-        transition: width @animation-instant, background-color @animation-default;
     }
 }

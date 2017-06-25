@@ -24,7 +24,7 @@ const SliderStanzas = ({
         stanzaTimesIndices = Array.from(Array(maxStanzaTimesCount).keys())
 
     return (
-        <div className="slider-stanzas-field">
+        <div className="slider-stanzas-block">
             {stanzaTimesIndices.map((nothing, stanzaTimeIndex) => {
 
                 const stanzaTimeObject = getStanzaTimeObject(selectedSongIndex, stanzaTimeIndex),
@@ -36,7 +36,7 @@ const SliderStanzas = ({
                 return (
                     <div
                         key={stanzaTimeIndex}
-                        className={`time-bar stanza-time-bar stanza-type-${stanzaTimeObject.type}`}
+                        className={`slider-bar stanza-slider-bar stanza-type-${stanzaTimeObject.type}`}
                         style={stanzaStyle}
                     >
                     </div>

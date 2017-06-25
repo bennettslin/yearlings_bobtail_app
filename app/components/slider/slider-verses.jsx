@@ -18,7 +18,7 @@ const SliderVerses = ({
         totalTime = getSongTotalTime(selectedSongIndex)
 
     return false && (
-        <div className="slider-verses-field">
+        <div className="slider-verses-block">
             {verseTimes.map((verseTime, index) => {
 
                 // Don't show title verse.
@@ -45,8 +45,8 @@ const SliderVerses = ({
                     <div
                         key={index}
                         className={classnames(
-                            'time-bar',
-                            'verse-time-bar',
+                            'slider-bar',
+                            'verse-slider-bar',
                             cursorPlacementClassName
                         )}
                         style={verseStyle}
