@@ -2193,5 +2193,10 @@ module.exports = [
         taskName: `Begin work on slider refactor.`,
         workedHours: 8,
         neededHours: 8
-    }
+    },
+    {
+        taskName: `Players render one at a time.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

@@ -40,6 +40,10 @@ export const getSongsCount = (songs = AlbumData.songs) => {
     return songs.length
 }
 
+export const getSongsNotLoguesCount = (songs = AlbumData.songs) => {
+    return songs.length - 2
+}
+
 export const getSongObject = (songIndex, songs = AlbumData.songs) => {
     return songs[songIndex] || null
 }

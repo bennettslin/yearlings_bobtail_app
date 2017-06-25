@@ -8,10 +8,50 @@ import { getAnnotationObject,
          getVerseObject,
          getSongVerseTimes,
          getSongTotalTime,
+         getSongsNotLoguesCount,
          getAnnotationDotKeys,
          getAnnotationsCount } from './data-helper'
 import { intersects } from './dot-helper'
 import { getIsPhone, getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
+
+export const getNextPlayerToRender = (selectedSongIndex, canPlayThroughs) => {
+    /**
+     * Given an array of players that have passed canPlayThrough, return
+     * the next player in the queue to be rendered, starting with the
+     * selected song.
+     */
+
+    const songsCount = getSongsNotLoguesCount()
+
+    // Song indices are 1-based.
+    let currentSongIndex = selectedSongIndex,
+        nextPlayerToRender,
+        counter = 0
+
+    do {
+        // Counter song can play through, so increment.
+        if (canPlayThroughs[currentSongIndex]) {
+            currentSongIndex = (currentSongIndex % songsCount) + 1
+
+        /**
+         * This is the first song that hasn't passed canPlayThrough
+         * that is either the selected song or coming after it.
+         */
+        } else {
+            nextPlayerToRender = currentSongIndex
+        }
+
+        counter++
+
+    } while (!nextPlayerToRender && counter < songsCount)
+
+    /**
+     * Return next song in the queue, or else -1 if all are now rendered.
+     */
+    nextPlayerToRender = nextPlayerToRender || -1
+
+    return nextPlayerToRender
+}
 
 export const shouldShowAnnotationForColumn = ({
 

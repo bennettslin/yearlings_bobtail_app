@@ -52,11 +52,18 @@ class Player extends Component {
     componentDidMount() {
         this.myPlayer = this.myReactPlayer.audioEl
 
-        this._listenForDebugStatements(true)
+        // this._listenForDebugStatements(true)
 
         // Tell audio element its initial state.
         this._updateAudioElementTime()
         this._updateAudioElementIsPlaying()
+
+        // Add event listeners.
+
+        // Tell app that player can now be played without interruption.
+        this.myPlayer.addEventListener('canplaythrough', e => {
+            this.props.handleCanPlayThrough(e, this.props.songIndex)
+        })
     }
 
     componentWillUpdate(nextProps) {
@@ -90,11 +97,6 @@ class Player extends Component {
             // Enough data is available that the media can be played for now.
             this.myPlayer.addEventListener('canplay', () => {
                 console.error('canplay', this.props.songIndex);
-            })
-
-            // Entire media can be played without interruption.
-            this.myPlayer.addEventListener('canplaythrough', () => {
-                console.error('canplaythrough', this.props.songIndex);
             })
 
             // this.myPlayer.addEventListener('ended', () => {
@@ -218,7 +220,10 @@ Player.propTypes = {
     isSelected: PropTypes.bool.isRequired,
     handlePlayerTimeChange: PropTypes.func.isRequired,
     handlePlayerTimeReset: PropTypes.func.isRequired,
-    handlePlayerNextSong: PropTypes.func.isRequired
+    handlePlayerNextSong: PropTypes.func.isRequired,
+
+    // Temporary.
+    handleCanPlayThrough: PropTypes.func.isRequired
 }
 
 export default connect(({
