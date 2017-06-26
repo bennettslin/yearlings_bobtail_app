@@ -14,7 +14,10 @@ import { getAnnotationObject,
 import { intersects } from './dot-helper'
 import { getIsPhone, getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
 
-export const getNextPlayerToRender = (selectedSongIndex, canPlayThroughs) => {
+export const getNextPlayerToRender = (
+    selectedSongIndex,
+    canPlayThroughsObject
+) => {
     /**
      * Given an array of players that have passed canPlayThrough, return
      * the next player in the queue to be rendered, starting with the
@@ -30,7 +33,7 @@ export const getNextPlayerToRender = (selectedSongIndex, canPlayThroughs) => {
 
     do {
         // Counter song can play through, so increment.
-        if (canPlayThroughs[currentSongIndex]) {
+        if (canPlayThroughsObject[currentSongIndex]) {
             currentSongIndex = (currentSongIndex % songsCount) + 1
 
         /**

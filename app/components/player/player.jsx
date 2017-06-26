@@ -47,6 +47,7 @@ class Player extends Component {
                         staticProp: 'isSelected',
                         subUpdatingKey: 'updatedTimePlayed'
                     }
+                    // Player itself does not update on canPlayThroughs.
                 ]
             })
 
@@ -92,21 +93,17 @@ class Player extends Component {
         }
     }
 
-    _handleCanPlayThrough(e) {
-        this.props.handleCanPlayThrough(e, this.props.songIndex)
-
+    _handleCanPlayThrough() {
         const { canPlayThroughs,
                 songIndex } = this.props,
 
+            // Convert to bit number before setting in Redux.
             newBitNumber = setNewValueInBitNumber({
                 keysCount: getSongsNotLoguesCount(),
                 bitNumber: canPlayThroughs,
                 updatedKey: songIndex,
                 newValue: true
             })
-
-        console.error('canPlayThroughs', canPlayThroughs);
-        console.error('newBitNumber', newBitNumber);
 
         this.props.setCanPlayThroughs(newBitNumber)
     }
@@ -237,6 +234,7 @@ Player.propTypes = {
     isPlaying: PropTypes.bool.isRequired,
     updatedTimePlayed: PropTypes.number,
     canPlayThroughs: PropTypes.number.isRequired,
+    setCanPlayThroughs: PropTypes.func.isRequired,
 
     // From parent.
     mp3: PropTypes.string.isRequired,
@@ -245,10 +243,7 @@ Player.propTypes = {
     isSelected: PropTypes.bool.isRequired,
     handlePlayerTimeChange: PropTypes.func.isRequired,
     handlePlayerTimeReset: PropTypes.func.isRequired,
-    handlePlayerNextSong: PropTypes.func.isRequired,
-
-    // Temporary.
-    handleCanPlayThrough: PropTypes.func.isRequired
+    handlePlayerNextSong: PropTypes.func.isRequired
 }
 
 // Bind Redux action creators to component props.

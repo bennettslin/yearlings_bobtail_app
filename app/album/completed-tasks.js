@@ -2199,4 +2199,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Move logic of canPlayThrough to Redux.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
