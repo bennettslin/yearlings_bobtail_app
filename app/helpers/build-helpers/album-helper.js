@@ -93,6 +93,9 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
 
     lyrics.forEach(unitArray => {
 
+        // Let unit know all the verse indices that it contains.
+        const verseIndices = {}
+
         unitArray.forEach(verseObject => {
 
             // Tell song it is a doublespeaker song.
@@ -109,6 +112,16 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
                 verseObject,
                 callbackFunction: _initialRegisterAnnotation
             })
+
+            // Add verse index, if there is one.
+            if (!isNaN(verseObject.verseIndex)) {
+                verseIndices[verseObject.verseIndex] = true
+            }
+
+            // If this is the unit map, add verse indices.
+            if (verseObject.unitMap) {
+                verseObject.verseIndices = verseIndices
+            }
 
             // Tell song. its dot stanza count, for admin purposes.
             registerAdminDotStanzas(songObject, verseObject)

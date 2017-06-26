@@ -131,6 +131,32 @@ export const getStanzaTimeObject = (songIndex, stanzaTimeIndex) => {
     }
 }
 
+// export const getUnitIndexForVerseIndex = (songIndex, verseIndex) => {
+//     const lyricUnitsArray
+// }
+
+export const getVerseIndexForTime = (songIndex, time) => {
+
+    const verseTimes = getSongVerseTimes(songIndex),
+        totalTime = getSongTotalTime(songIndex)
+
+    if (time >= 0 && time <= totalTime) {
+        let selectedVerseIndex = 0
+
+        // Select corresponding verse.
+        while (selectedVerseIndex < verseTimes.length - 1 &&
+               time >= verseTimes[selectedVerseIndex + 1]) {
+
+            selectedVerseIndex++
+        }
+
+        return selectedVerseIndex
+
+    } else {
+        return null
+    }
+}
+
 /**********
  * LYRICS *
  **********/
@@ -140,7 +166,7 @@ export const getLyricUnitsCount = (songIndex) => {
     return songs.lyrics ? songs.lyrics.length : 0
 }
 
-export const getLyricsUnitArray = (songIndex, unitIndex) => {
+export const getLyricUnitArray = (songIndex, unitIndex) => {
     const songs = getSongObject(songIndex)
     return songs.lyrics ? songs.lyrics[unitIndex] : []
 }

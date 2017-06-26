@@ -7,8 +7,6 @@ import { LYRIC_COLUMN_KEYS, COLUMN_INDEX } from '../constants/lyrics'
 import { getAnnotationObject,
          getSongIsLogue,
          getVerseObject,
-         getSongVerseTimes,
-         getSongTotalTime,
          getSongsNotLoguesCount,
          getAnnotationDotKeys,
          getAnnotationsCount } from './data-helper'
@@ -352,26 +350,6 @@ export const getVerseIndexForAccessedAnnotationIndex = (songIndex, annotationInd
           mostRecentVerseIndex } = annotation
 
     return !isNaN(verseIndex) ? verseIndex : mostRecentVerseIndex
-}
-
-export const getVerseIndexForTime = (songIndex, time) => {
-
-    const verseTimes = getSongVerseTimes(songIndex),
-        totalTime = getSongTotalTime(songIndex)
-
-    if (time >= 0 && time <= totalTime) {
-        let selectedVerseIndex = 0
-
-        // Select corresponding verse.
-        while (selectedVerseIndex < verseTimes.length - 1 && time >= verseTimes[selectedVerseIndex + 1]) {
-            selectedVerseIndex++
-        }
-
-        return selectedVerseIndex
-
-    } else {
-        return null
-    }
 }
 
 export const getAnnotationAnchorIndexForDirection = ({

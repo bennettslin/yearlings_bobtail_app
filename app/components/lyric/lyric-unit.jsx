@@ -7,7 +7,7 @@ import classnames from 'classnames'
 import LyricStanza from './lyric-stanza'
 import LyricDotStanza from './lyric-dot-stanza'
 import { TITLE } from '../../constants/lyrics'
-import { getLyricsUnitArray } from '../../helpers/data-helper'
+import { getLyricUnitArray } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -35,7 +35,7 @@ class LyricUnit extends Component {
                 unitIndex,
                 ...other } = this.props,
 
-            unitArray = getLyricsUnitArray(selectedSongIndex, unitIndex),
+            unitArray = getLyricUnitArray(selectedSongIndex, unitIndex),
 
             /**
              * Provided by Willy the Cocoa, Odin, and Constellations. Provide
