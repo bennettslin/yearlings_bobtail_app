@@ -66,16 +66,28 @@
         // Default odd verse.
         &.odd {
             .text-shadow-mixin(@odd-verse-colour);
+
+            .text-span {
+                color: #644;
+            }
         }
 
         // Default even verse.
         &.even {
             .text-shadow-mixin(@even-verse-colour);
+
+            .text-span {
+                color: #533;
+            }
         }
 
         // Default side verse.
         &.in-side {
             .text-shadow-mixin(@odd-verse-colour);
+
+            .text-span {
+                color: green;
+            }
         }
     }
 }

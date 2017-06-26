@@ -41,6 +41,25 @@ module.exports = [
     },
 
     /**
+     * Text colours.
+     */
+    {
+        taskName: `Allow stanzas to know if it's before, selected, or after. Necessary for side.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Hook up less constants.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Establish initial colours. (But keep playing with indefinitely.)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    /**
      * Audio and slider stuff.
      */
     {
