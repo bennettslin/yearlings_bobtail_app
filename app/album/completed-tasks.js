@@ -2204,4 +2204,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Players don't load in logues.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

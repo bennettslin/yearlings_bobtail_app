@@ -5,6 +5,7 @@ import { PORTAL,
          REFERENCE } from '../constants/dots'
 import { LYRIC_COLUMN_KEYS, COLUMN_INDEX } from '../constants/lyrics'
 import { getAnnotationObject,
+         getSongIsLogue,
          getVerseObject,
          getSongVerseTimes,
          getSongTotalTime,
@@ -24,10 +25,13 @@ export const getNextPlayerToRender = (
      * selected song.
      */
 
-    const songsCount = getSongsNotLoguesCount()
+    const songsCount = getSongsNotLoguesCount(),
+        isLogue = getSongIsLogue(selectedSongIndex)
 
-    // Song indices are 1-based.
-    let currentSongIndex = selectedSongIndex,
+    /**
+     * If logue, set to first song. Song indices are 1-based.
+     */
+    let currentSongIndex = isLogue ? 1 : selectedSongIndex,
         nextPlayerToRender,
         counter = 0
 
