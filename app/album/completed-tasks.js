@@ -2209,4 +2209,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Allow lyric unit to know if it's before, selected, or after verse. Necessary for side.`,
+        workedHours: 2,
+        neededHours: 2
+    }
 ]

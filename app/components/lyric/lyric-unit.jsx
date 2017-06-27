@@ -23,7 +23,9 @@ class LyricUnit extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'unitIndex',
-                    'selectedSongIndex'
+                    'selectedSongIndex',
+                    'selectedVerseIndex',
+                    'sliderVerseIndex'
                 ]
             })
 
@@ -32,6 +34,8 @@ class LyricUnit extends Component {
 
     render() {
         const { selectedSongIndex,
+                selectedVerseIndex,
+                sliderVerseIndex,
                 unitIndex,
                 ...other } = this.props,
 
@@ -49,6 +53,9 @@ class LyricUnit extends Component {
               sideStanzaType,
               sideSubstanzaType,
 
+              firstVerseIndex,
+              lastVerseIndex,
+
               subsequent,
               dotStanza,
               subStanza,
@@ -63,7 +70,16 @@ class LyricUnit extends Component {
 
             hasSide = !!(topSideStanza || bottomSideStanza),
             isDotOnly = !!dotStanza && unitArray.length === 1,
-            isBottomOnly = !topSideStanza && !!bottomSideStanza
+            isBottomOnly = !topSideStanza && !!bottomSideStanza,
+
+            /**
+             * If slider touched, compare unit to slider verse. Otherwise,
+             * compare to selected verse.
+             */
+            unitVerseIndex = sliderVerseIndex > -1 ?
+                sliderVerseIndex : selectedVerseIndex,
+            verseAfterUnit = lastVerseIndex < unitVerseIndex,
+            verseBeforeUnit = firstVerseIndex > unitVerseIndex
 
         return (
             <LyricUnitView {...other}
@@ -84,6 +100,8 @@ class LyricUnit extends Component {
                 hasSide={hasSide}
                 isDotOnly={isDotOnly}
                 isBottomOnly={isBottomOnly}
+                verseAfterUnit={verseAfterUnit}
+                verseBeforeUnit={verseBeforeUnit}
             />
         )
     }
@@ -92,6 +110,8 @@ class LyricUnit extends Component {
 LyricUnit.propTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
+    selectedVerseIndex: PropTypes.number.isRequired,
+    sliderVerseIndex: PropTypes.number.isRequired,
 
     // From parent.
     unitIndex: PropTypes.number.isRequired
@@ -120,10 +140,15 @@ const LyricUnitView = ({
     isDotOnly,
     isBottomOnly,
 
+    verseBeforeUnit,
+    verseAfterUnit,
+
 ...other }) => {
 
     const { subsequent,
-            handleLyricAnnotationSelect } = other
+            handleLyricAnnotationSelect } = other,
+
+        verseInUnit = !isTitleUnit && !verseBeforeUnit && !verseAfterUnit
 
     return (
         <div
@@ -133,6 +158,12 @@ const LyricUnitView = ({
                 { 'has-side': hasSide,
                   'title-unit': isTitleUnit,
                   'custom-sub-block': unitClassName,
+
+                  // It's only ever one of these three.
+                  'verse-before-unit': verseBeforeUnit,
+                  'verse-after-unit': verseAfterUnit,
+                  'verse-in-unit': verseInUnit,
+
                   subsequent }
             )}
         >
@@ -202,12 +233,18 @@ LyricUnitView.propTypes = {
     hasSide: PropTypes.bool.isRequired,
     isDotOnly: PropTypes.bool.isRequired,
     isBottomOnly: PropTypes.bool.isRequired,
+    verseBeforeUnit: PropTypes.bool.isRequired,
+    verseAfterUnit: PropTypes.bool.isRequired,
 
     handleLyricAnnotationSelect: PropTypes.func.isRequired
 }
 
 export default connect(({
-    selectedSongIndex
+    selectedSongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex
 }) => ({
-    selectedSongIndex
+    selectedSongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex
 }))(LyricUnit)

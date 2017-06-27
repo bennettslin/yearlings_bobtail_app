@@ -94,7 +94,8 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
     lyrics.forEach(unitArray => {
 
         // Let unit know all the verse indices that it contains.
-        const verseIndices = {}
+        let firstVerseIndex,
+            lastVerseIndex
 
         unitArray.forEach(verseObject => {
 
@@ -113,14 +114,21 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
                 callbackFunction: _initialRegisterAnnotation
             })
 
-            // Add verse index, if there is one.
             if (!isNaN(verseObject.verseIndex)) {
-                verseIndices[verseObject.verseIndex] = true
+
+                // Set first verse index once.
+                if (isNaN(firstVerseIndex)) {
+                    firstVerseIndex = verseObject.verseIndex
+                }
+
+                // Keep setting last verse index.
+                lastVerseIndex = verseObject.verseIndex
             }
 
-            // If this is the unit map, add verse indices.
+            // If this is the unit map, add first and last verse indices.
             if (verseObject.unitMap) {
-                verseObject.verseIndices = verseIndices
+                verseObject.firstVerseIndex = firstVerseIndex;
+                verseObject.lastVerseIndex = lastVerseIndex;
             }
 
             // Tell song. its dot stanza count, for admin purposes.
