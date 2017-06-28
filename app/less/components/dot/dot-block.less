@@ -7,7 +7,15 @@
 .dom-manager.portal .animated-background.portal,
 .dom-manager.afterword .animated-background.afterword {
 
-   transform: scale(1);
+    // Transition size first, then fade in.
+    transition: margin @animation-fast,
+                height @animation-fast,
+                width @animation-fast,
+                border @animation-fast,
+                background-color @animation-fast,
+                opacity @animation-fast @animation-faster;
+
+   opacity: 1;
 }
 
 // Portals are not included here.

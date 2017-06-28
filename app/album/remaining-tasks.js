@@ -102,11 +102,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Make dot animation smoother.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     /**
      * Content.

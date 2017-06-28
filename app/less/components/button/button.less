@@ -54,14 +54,17 @@
 .text-anchor-block, .annotation-card:not(.portal) {
     .animated-background {
 
-        // FIXME: Animation jankiness is due to the transform, which is expensive.
-        transition: margin @animation-fast,
-                    width @animation-fast,
-                    border @animation-fast,
-                    transform @animation-instant,
-                    background-color @animation-fast;
-        transform: scale(0);
+        // Fade out first, then transition size.
+        transition: margin @animation-fast @animation-faster,
+                    height @animation-fast @animation-faster,
+                    width @animation-fast @animation-faster,
+                    border @animation-fast @animation-faster,
+                    background-color @animation-fast @animation-faster,
+                    opacity @animation-fast;
+
+        opacity: 0;
         width: 0;
+        height: 0;
     }
 }
 

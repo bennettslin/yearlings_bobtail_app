@@ -2218,5 +2218,10 @@ module.exports = [
         taskName: `Audio knows when player for selected song canPlayThrough, and is not playable till then. (Worry about canPlay later.)`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Make dot animation smoother. (Well, good enough for now.)`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
