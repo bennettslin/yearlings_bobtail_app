@@ -79,7 +79,9 @@ class LyricUnit extends Component {
             unitVerseIndex = sliderVerseIndex > -1 ?
                 sliderVerseIndex : selectedVerseIndex,
             verseAfterUnit = lastVerseIndex < unitVerseIndex,
-            verseBeforeUnit = firstVerseIndex > unitVerseIndex
+            verseBeforeUnit = firstVerseIndex > unitVerseIndex,
+            verseInUnit = firstVerseIndex <= unitVerseIndex &&
+                lastVerseIndex >= unitVerseIndex
 
         return (
             <LyricUnitView {...other}
@@ -102,6 +104,7 @@ class LyricUnit extends Component {
                 isBottomOnly={isBottomOnly}
                 verseAfterUnit={verseAfterUnit}
                 verseBeforeUnit={verseBeforeUnit}
+                verseInUnit={verseInUnit}
             />
         )
     }
@@ -142,13 +145,12 @@ const LyricUnitView = ({
 
     verseBeforeUnit,
     verseAfterUnit,
+    verseInUnit,
 
 ...other }) => {
 
     const { subsequent,
-            handleLyricAnnotationSelect } = other,
-
-        verseInUnit = !isTitleUnit && !verseBeforeUnit && !verseAfterUnit
+            handleLyricAnnotationSelect } = other
 
     return (
         <div
@@ -156,8 +158,8 @@ const LyricUnitView = ({
                 'lyric-unit',
                 unitClassName,
                 { 'has-side': hasSide,
-                  'title-unit': isTitleUnit,
                   'custom-sub-block': unitClassName,
+                  'title-unit': isTitleUnit,
 
                   // It's only ever one of these three.
                   'verse-before-unit': verseBeforeUnit,
@@ -235,6 +237,7 @@ LyricUnitView.propTypes = {
     isBottomOnly: PropTypes.bool.isRequired,
     verseBeforeUnit: PropTypes.bool.isRequired,
     verseAfterUnit: PropTypes.bool.isRequired,
+    verseInUnit: PropTypes.bool.isRequired,
 
     handleLyricAnnotationSelect: PropTypes.func.isRequired
 }
