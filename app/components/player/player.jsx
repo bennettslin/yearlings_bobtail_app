@@ -101,8 +101,8 @@ class Player extends Component {
             newBitNumber = setNewValueInBitNumber({
                 keysCount: getSongsNotLoguesCount(),
                 bitNumber: canPlayThroughs,
-                updatedKey: songIndex,
-                newValue: true
+                key: songIndex,
+                value: true
             })
 
         this.props.setCanPlayThroughs(newBitNumber)

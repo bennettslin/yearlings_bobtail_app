@@ -7,8 +7,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
+import { getSongsNotLoguesCount } from '../../helpers/data-helper'
 import { getVerseAudioIconText } from '../../helpers/format-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getComponentShouldUpdate, getValueInBitNumber } from '../../helpers/general-helper'
 
 class VerseAudioButton extends Component {
 
@@ -25,9 +26,16 @@ class VerseAudioButton extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'verseIndex',
-                    'isEnabled',
+                    'isInteractivated',
                     'isSelected',
                     'isAfterSelected',
+
+                    /**
+                     * Don't need to update on selectedSongIndex, as it's only
+                     * needed to calculate whether song can play through when
+                     * canPlayThroughs is changed.
+                     */
+                    'canPlayThroughs',
                     {
                         staticProp: 'isSelected',
                         subUpdatingKey: 'isPlaying'
@@ -40,7 +48,7 @@ class VerseAudioButton extends Component {
 
     _handleAudioButtonClick(e) {
 
-        if (this.props.isEnabled) {
+        if (this.props.isInteractivated) {
 
             const { isSelected,
                     verseIndex,
@@ -59,10 +67,26 @@ class VerseAudioButton extends Component {
     }
 
     render() {
-        const { isEnabled,
-                isSelected } = this.props,
+        const { isInteractivated,
+                isSelected,
+                selectedSongIndex,
+                canPlayThroughs } = this.props,
 
-            iconText = getVerseAudioIconText(this.props)
+            songCanPlayThrough = getValueInBitNumber({
+                keysCount: getSongsNotLoguesCount(),
+                bitNumber: canPlayThroughs,
+                key: selectedSongIndex
+            }),
+
+            /**
+             * If interactivated, disable only if it's selected and song can't
+             * play through.
+             */
+            isEnabled = isInteractivated && (songCanPlayThrough || !isSelected),
+
+            // TODO: Make this a real icon, of course.
+            iconText = !songCanPlayThrough && isSelected ?
+                'x' : getVerseAudioIconText(this.props)
 
         return (
             <div className="verse-audio-button-block">
@@ -71,7 +95,7 @@ class VerseAudioButton extends Component {
                         buttonName="verse-audio"
                         isCustomSize={true}
                         isEnabled={isEnabled}
-                        iconClass={isSelected ? 'audio-colour' : 'audio-nav'}
+                        iconClass={isSelected ? 'audio-play-toggle' : 'audio-nav'}
                         iconText={iconText}
                         handleClick={this._handleAudioButtonClick}
                     />
@@ -87,7 +111,7 @@ VerseAudioButton.propTypes = {
 
     // From parent.
     verseIndex: PropTypes.number.isRequired,
-    isEnabled: PropTypes.bool.isRequired,
+    isInteractivated: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired,
     handleLyricPlay: PropTypes.func.isRequired,
@@ -95,7 +119,11 @@ VerseAudioButton.propTypes = {
 }
 
 export default connect(({
-    isPlaying
+    isPlaying,
+    selectedSongIndex,
+    canPlayThroughs
 }) => ({
-    isPlaying
+    isPlaying,
+    selectedSongIndex,
+    canPlayThroughs
 }))(VerseAudioButton)

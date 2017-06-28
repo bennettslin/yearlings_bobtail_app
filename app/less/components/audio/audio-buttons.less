@@ -39,13 +39,22 @@
 }
 
 .is-playing {
-    .audio-colour {
-        background-color: @audio-pause-colour;
+    .enabled {
+        .audio-play-toggle {
+            background-color: @audio-pause-colour;
+        }
     }
 }
 
 .is-paused {
-    .audio-colour {
-        background-color: @audio-play-colour;
+
+    .audio-play-toggle {
+        background-color: @audio-disabled-colour;
+    }
+
+    .enabled {
+        .audio-play-toggle {
+            background-color: @audio-play-colour;
+        }
     }
 }

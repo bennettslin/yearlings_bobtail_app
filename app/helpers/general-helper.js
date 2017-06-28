@@ -171,12 +171,29 @@ export const convertBitNumberToTrueFalseKeys = ({
     return trueFalseObject
 }
 
+// TODO: Have dotKeys in Redux call this method.
+export const getValueInBitNumber = ({
+    keysArray,
+    keysCount,
+    bitNumber = 0,
+    key
+}) => {
+    // Convert the bit number to an object whose values true or false.
+    const trueFalseObject = convertBitNumberToTrueFalseKeys({
+            keysArray,
+            keysCount,
+            bitNumber
+        })
+
+    return trueFalseObject[key]
+}
+
 export const setNewValueInBitNumber = ({
     keysArray,
     keysCount,
     bitNumber = 0,
-    updatedKey,
-    newValue
+    key,
+    value
 }) => {
     // First convert the bit number to an object whose values true or false.
     const trueFalseObject = convertBitNumberToTrueFalseKeys({
@@ -186,7 +203,7 @@ export const setNewValueInBitNumber = ({
         })
 
     // Set the value in this object.
-    trueFalseObject[updatedKey] = newValue
+    trueFalseObject[key] = value
 
     // Convert object to new bit number, which is then returned.
     return convertTrueFalseKeysToBitNumber({

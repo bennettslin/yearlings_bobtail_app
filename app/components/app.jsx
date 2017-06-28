@@ -21,7 +21,8 @@ import { CONTINUE,
          DISABLED,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
-import { getSongObject, getSongsCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime } from '../helpers/data-helper'
+import { getSongObject, getSongsCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime } from '../helpers/data-helper'
+import { getValueInBitNumber } from '../helpers/general-helper'
 import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
@@ -251,18 +252,32 @@ class App extends Component {
      * AUDIO *
      *********/
 
-     togglePlay(isPlaying = !this.props.isPlaying) {
+    togglePlay(isPlaying = !this.props.isPlaying) {
 
-         // Select first song if play button in logue is toggled on.
-         if (getSongIsLogue(this.props.selectedSongIndex) && isPlaying) {
-             this.selectSong({
-                 selectedSongIndex: 1
-             })
-         }
+        const { selectedSongIndex,
+                canPlayThroughs } = this.props
 
-         this.props.setIsPlaying(isPlaying)
-         return true
-     }
+        const songCanPlayThrough = getValueInBitNumber({
+            keysCount: getSongsNotLoguesCount(),
+            bitNumber: canPlayThroughs,
+            key: selectedSongIndex
+        })
+
+        // Do not toggle play if player is not ready to play through.
+        if (!songCanPlayThrough) {
+            return false
+        }
+
+        // Select first song if play button in logue is toggled on.
+        if (getSongIsLogue(this.props.selectedSongIndex) && isPlaying) {
+            this.selectSong({
+                selectedSongIndex: 1
+            })
+        }
+
+        this.props.setIsPlaying(isPlaying)
+        return true
+    }
 
     selectAudioOption(selectedAudioOptionIndex =
         (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length) {

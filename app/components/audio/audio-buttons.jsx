@@ -9,8 +9,13 @@ import { AUDIO_PLAY_KEY,
          AUDIO_PREVIOUS_SONG_KEY,
          AUDIO_NEXT_SONG_KEY } from '../../constants/access'
 import { AUDIO_OPTIONS } from '../../constants/options'
+import { getSongsNotLoguesCount } from '../../helpers/data-helper'
+import { getValueInBitNumber } from '../../helpers/general-helper'
 
 const AudioButtons = ({
+
+    selectedSongIndex,
+    canPlayThroughs,
 
     isPlaying,
     isTitleInAudio,
@@ -25,53 +30,72 @@ const AudioButtons = ({
     handleAudioPreviousSong,
     handleAudioNextSong
 
-}) => (
-    <div className="audio-block audio-buttons-block">
-        <div className="audio-subblock player-subblock">
-            {/* Previous button. */}
-            <Button
-                iconClass="audio-nav"
-                iconText={isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
-                accessKey={AUDIO_PREVIOUS_SONG_KEY}
-                isEnabled={!isPrologue}
-                handleClick={handleAudioPreviousSong}
-            />
+}) => {
 
-            {/* Play button. */}
-            <Button
-                iconClass="audio-colour"
-                iconText={isPlaying ? '\u23F8' : '\u25BA'}
-                accessKey={AUDIO_PLAY_KEY}
-                isLarge={!isTitleInAudio}
-                handleClick={handleAudioPlay}
-            />
+    const songCanPlayThrough = getValueInBitNumber({
+            keysCount: getSongsNotLoguesCount(),
+            bitNumber: canPlayThroughs,
+            key: selectedSongIndex
+        })
 
-            {/* Next button. */}
-            <Button
-                iconClass="audio-nav"
-                iconText={isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
-                accessKey={AUDIO_NEXT_SONG_KEY}
-                isEnabled={!isEpilogue}
-                handleClick={handleAudioNextSong}
-            />
+    let playButtonText = isPlaying ? '\u23F8' : '\u25BA'
+
+    if (!songCanPlayThrough) {
+        // TODO: Make this a real icon, of course.
+        playButtonText = 'x'
+    }
+
+    return (
+        <div className="audio-block audio-buttons-block">
+            <div className="audio-subblock player-subblock">
+                {/* Previous button. */}
+                <Button
+                    iconClass="audio-nav"
+                    iconText={isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
+                    accessKey={AUDIO_PREVIOUS_SONG_KEY}
+                    isEnabled={!isPrologue}
+                    handleClick={handleAudioPreviousSong}
+                />
+
+                {/* Play button. */}
+                <Button
+                    iconClass="audio-play-toggle"
+                    iconText={playButtonText}
+                    accessKey={AUDIO_PLAY_KEY}
+                    isLarge={!isTitleInAudio}
+                    isEnabled={songCanPlayThrough}
+                    handleClick={handleAudioPlay}
+                />
+
+                {/* Next button. */}
+                <Button
+                    iconClass="audio-nav"
+                    iconText={isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
+                    accessKey={AUDIO_NEXT_SONG_KEY}
+                    isEnabled={!isEpilogue}
+                    handleClick={handleAudioNextSong}
+                />
+            </div>
+
+            <div className="audio-subblock option-subblock">
+                <Button
+                    iconClass="audio-neutral"
+                    iconText={AUDIO_OPTIONS[selectedAudioOptionIndex]}
+                    accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
+                    handleClick={handleAudioOptionsToggle}
+                />
+            </div>
         </div>
-
-        <div className="audio-subblock option-subblock">
-            <Button
-                iconClass="audio-neutral"
-                iconText={AUDIO_OPTIONS[selectedAudioOptionIndex]}
-                accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
-                handleClick={handleAudioOptionsToggle}
-            />
-        </div>
-    </div>
-)
+    )
+}
 
 AudioButtons.propTypes = {
     // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
     isPlaying: PropTypes.bool.isRequired,
     isTitleInAudio: PropTypes.bool.isRequired,
     selectedAudioOptionIndex: PropTypes.number.isRequired,
+    canPlayThroughs: PropTypes.number.isRequired,
 
     // From parent.
     isPrologue: PropTypes.bool.isRequired,
@@ -85,11 +109,15 @@ AudioButtons.propTypes = {
 }
 
 export default connect(({
+    selectedSongIndex,
     isPlaying,
     isTitleInAudio,
-    selectedAudioOptionIndex
+    selectedAudioOptionIndex,
+    canPlayThroughs
 }) => ({
+    selectedSongIndex,
     isPlaying,
     isTitleInAudio,
-    selectedAudioOptionIndex
+    selectedAudioOptionIndex,
+    canPlayThroughs
 }))(AudioButtons)

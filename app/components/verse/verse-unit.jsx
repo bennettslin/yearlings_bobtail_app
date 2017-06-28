@@ -210,7 +210,7 @@ const VerseUnitView = ({
         >
             {isInteractable && (
                 <VerseAudioButton
-                    isEnabled={isInteractivated}
+                    isInteractivated={isInteractivated}
                     verseIndex={verseIndex}
                     isSelected={isSelected}
                     isAfterSelected={isAfterSelected}
