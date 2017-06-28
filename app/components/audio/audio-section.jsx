@@ -7,46 +7,9 @@ import AudioBanner from './audio-banner'
 import AudioButtons from './audio-buttons'
 import AudioTimer from './audio-timer'
 import TitleToggle from '../title/title-toggle'
-import { getSongsCount } from '../../helpers/data-helper'
 import { getIsTimerInAudio } from '../../helpers/logic-helper'
 
-/*************
- * CONTAINER *
- *************/
-
 const AudioSection = ({
-
-    selectedSongIndex,
-
-...other }) => {
-
-    const isPrologue = selectedSongIndex === 0,
-        isFirstSong = selectedSongIndex === 1,
-
-        songsCount = getSongsCount(),
-
-        isLastSong = selectedSongIndex === songsCount - 2,
-        isEpilogue = selectedSongIndex === songsCount - 1
-
-    return (
-        <AudioSectionView {...other}
-            isPrologue={isPrologue}
-            isFirstSong={isFirstSong}
-            isLastSong={isLastSong}
-            isEpilogue={isEpilogue}
-        />
-    )
-}
-
-AudioSection.propTypes = {
-    selectedSongIndex: PropTypes.number.isRequired
-}
-
-/****************
- * PRESENTATION *
- ****************/
-
-const AudioSectionView = ({
 
     deviceIndex,
     isLyricExpanded,
@@ -96,11 +59,11 @@ const AudioSectionView = ({
     )
 }
 
-AudioSectionView.defaultProps = {
+AudioSection.defaultProps = {
     inOverlay: false
 }
 
-AudioSectionView.propTypes = {
+AudioSection.propTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
@@ -121,7 +84,6 @@ export default connect(({
     isLyricExpanded,
     selectedAnnotationIndex,
     selectedScoreIndex,
-    selectedSongIndex,
     selectedTitleIndex,
     selectedWikiIndex,
     isTitleInAudio
@@ -130,7 +92,6 @@ export default connect(({
     isLyricExpanded,
     selectedAnnotationIndex,
     selectedScoreIndex,
-    selectedSongIndex,
     selectedTitleIndex,
     selectedWikiIndex,
     isTitleInAudio

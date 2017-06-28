@@ -36,7 +36,7 @@ export const getMaxStanzaTimesCount = () => {
  * SONGS *
  *********/
 
-export const getSongsCount = (songs = AlbumData.songs) => {
+export const getSongsAndLoguesCount = (songs = AlbumData.songs) => {
     return songs.length
 }
 

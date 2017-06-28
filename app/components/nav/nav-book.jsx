@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NavItem from './nav-item'
-import { getSongsCount, getStartingIndexForBook } from '../../helpers/data-helper'
+import { getSongsAndLoguesCount, getStartingIndexForBook } from '../../helpers/data-helper'
 
 const NavBook = ({
 
@@ -15,7 +15,7 @@ const NavBook = ({
     const isFirstColumn = bookIndex === 0,
 
         rowReverse = !isFirstColumn,
-        songsCount = getSongsCount(),
+        songsCount = getSongsAndLoguesCount(),
 
         beginArrayIndex = getStartingIndexForBook(bookIndex),
         endArrayIndex = isFirstColumn ? getStartingIndexForBook(bookIndex + 1) : songsCount - 1

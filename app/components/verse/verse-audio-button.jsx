@@ -29,16 +29,18 @@ class VerseAudioButton extends Component {
                     'isInteractivated',
                     'isSelected',
                     'isAfterSelected',
-
                     /**
                      * Don't need to update on selectedSongIndex, as it's only
                      * needed to calculate whether song can play through when
                      * canPlayThroughs is changed.
                      */
-                    'canPlayThroughs',
                     {
                         staticProp: 'isSelected',
                         subUpdatingKey: 'isPlaying'
+                    },
+                    {
+                        staticProp: 'isSelected',
+                        subUpdatingKey: 'canPlayThroughs'
                     }
                 ]
             })

@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import DomManager from './dom-manager'
-import { getSongsCount,
+import { getSongsAndLoguesCount,
          getBookColumnIndex,
          getPortalLink,
          getAnnotationObject } from '../helpers/data-helper'
@@ -367,7 +367,7 @@ class AccessManager extends Component {
 
             if (direction) {
                 const { shownBookColumnIndex } = this.props,
-                    songsCount = getSongsCount()
+                    songsCount = getSongsAndLoguesCount()
 
                 accessedNavSongIndex = (accessedNavSongIndex + songsCount + direction) % songsCount
 
