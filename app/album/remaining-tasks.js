@@ -76,11 +76,6 @@ module.exports = [
     /**
      * Player stuff.
      */
-    {
-        taskName: `Audio knows when player for selected song canPlayThrough, and is not playable till then. (Worry about canPlay later.)`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     /**
      * User experience stuff.

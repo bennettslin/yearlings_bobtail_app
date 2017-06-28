@@ -2213,5 +2213,10 @@ module.exports = [
         taskName: `Allow lyric unit to know if it's before, selected, or after verse. Necessary for side.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Audio knows when player for selected song canPlayThrough, and is not playable till then. (Worry about canPlay later.)`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
