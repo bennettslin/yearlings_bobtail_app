@@ -36,8 +36,8 @@ const setDotInStorage = (dotKey, isActive) => {
         newBitNumber = setNewValueInBitNumber({
             keysArray: ALL_DOT_KEYS,
             bitNumber,
-            updatedKey: dotKey,
-            newValue: isActive
+            key: dotKey,
+            value: isActive
         })
 
     setInStorage(SELECTED_DOT_KEYS, newBitNumber)
