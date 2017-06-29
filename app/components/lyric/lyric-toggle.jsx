@@ -14,7 +14,7 @@ const LyricToggle = ({
     handleLyricSectionExpand
 
 }) => {
-    return getIsLyricExpandable(deviceIndex) ? (
+    return getIsLyricExpandable(deviceIndex) && (
         <div className="lyric-button-block expand-button-block">
             <Button
                 accessKey={LYRIC_SECTION_EXPAND_KEY}
@@ -23,7 +23,7 @@ const LyricToggle = ({
                 handleClick={handleLyricSectionExpand}
             />
         </div>
-    ) : null
+    )
 }
 
 LyricToggle.propTypes = {
