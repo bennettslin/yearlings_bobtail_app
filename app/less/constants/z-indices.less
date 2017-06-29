@@ -1,0 +1,53 @@
+// This should be the lowest one.
+@popup-container-z-index: 0;
+
+@admin-toggle-z-index: @popup-container-z-index + 1;
+
+@nav-custom-subfield-z-index: @admin-toggle-z-index + 1;
+@dots-overview-subfield-z-index: @nav-custom-subfield-z-index + 1;
+@carousel-z-index: @dots-overview-subfield-z-index + 1;
+
+@dots-overview-section-z-index: @carousel-z-index + 1;
+@centre-field-element-z-index: @dots-overview-section-z-index + 1;
+
+// This should be over overview toggle button for animation purposes.
+@custom-audio-banner-z-index: @centre-field-element-z-index + 1;
+
+// Lyrics should be higher than anything in centre field.
+@lyric-column-z-index: @custom-audio-banner-z-index + 1;
+@verse-audio-button-z-index: @lyric-column-z-index + 1;
+
+// This is in lyrics and annotation.
+@text-span-z-index: @verse-audio-button-z-index + 1;
+
+// This needs to be above annotation text in carousel.
+@carousel-nav-button-z-index: @text-span-z-index + 1;
+
+// This is above text but below verse bar and buttons.
+@lyric-column-fade-top-z-index: @carousel-nav-button-z-index + 1;
+
+// Selected verse should be above normal text span.
+@selected-verse-bar-z-index: @lyric-column-fade-top-z-index + 1;
+
+// Verse bar text should be even more above.
+@verse-bar-text-z-index: @selected-verse-bar-z-index + 1;
+
+/**
+ * Lyric buttons should be higher than everything else in lyric column,
+ * including text span.
+ */
+@lyric-column-button-z-index: @verse-bar-text-z-index + 1;
+
+@menu-field-z-index: @lyric-column-button-z-index + 1;
+
+// Menu should be higher than centre field and lyrics.
+@menu-subfield-z-index: @menu-field-z-index + 1;
+
+// Score, title, and wiki popups are higher.
+@popup-overlay-z-index: @menu-subfield-z-index + 1;
+@popup-overlay-content-z-index: @popup-overlay-z-index + 1;
+
+@audio-in-overlay-z-index: @popup-overlay-content-z-index + 1;
+
+// The overlay preventing popup interaction should be the highest.
+@super-overlay-z-index: @audio-in-overlay-z-index + 1;
