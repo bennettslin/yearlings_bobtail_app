@@ -33,7 +33,7 @@ module.exports = [
      * Text colours.
      */
     {
-        taskName: `Hook up less constants.`,
+        taskName: `Hook up text constants.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -41,6 +41,11 @@ module.exports = [
         taskName: `Establish initial colours. (But keep playing with indefinitely.)`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Organise box shadow constants.`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     /**

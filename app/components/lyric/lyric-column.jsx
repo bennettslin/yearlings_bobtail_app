@@ -33,7 +33,9 @@ class LyricColumn extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'selectedSongIndex'
+                    'selectedSongIndex',
+                    'selectedVerseIndex',
+                    'sliderVerseIndex'
                 ]
             }) || getComponentShouldUpdate({
                 props: state,
@@ -128,7 +130,8 @@ const LyricColumnView = ({
 ...other }) => {
 
     // If there is a slider verse, override selected verse.
-    const verseIndex = sliderVerseIndex > -1 ? sliderVerseIndex : selectedVerseIndex,
+    const verseIndex = sliderVerseIndex > -1 ?
+            sliderVerseIndex : selectedVerseIndex,
         verseBarProps = {
             verseIndex,
             handleVerseBarSelect,
