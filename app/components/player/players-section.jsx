@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Player from './player'
 import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from '../../helpers/data-helper'
-import { convertBitNumberToTrueFalseKeys } from '../../helpers/general-helper'
+import { convertBitNumberToTrueFalseKeys } from '../../helpers/bit-helper'
 import { getNextPlayerToRender } from '../../helpers/logic-helper'
 
 class PlayersSection extends Component {

@@ -10,7 +10,8 @@ import { AUDIO_PLAY_KEY,
          AUDIO_NEXT_SONG_KEY } from '../../constants/access'
 import { AUDIO_OPTIONS } from '../../constants/options'
 import { getSongsAndLoguesCount, getSongsNotLoguesCount } from '../../helpers/data-helper'
-import { getComponentShouldUpdate, getValueInBitNumber } from '../../helpers/general-helper'
+import { getValueInBitNumber } from '../../helpers/bit-helper'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class AudioButtons extends Component {
 

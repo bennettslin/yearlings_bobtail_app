@@ -4,7 +4,7 @@ module.exports = [
      * Short bugs and tasks.
      */
     {
-        taskName: `Prologue to song transition is janky? But not epilogue, for some reason?`,
+        taskName: `Prologue to song transition is janky because of score being loaded. Be more strategic about that. (Do it with canPLayThroughs.)`,
         workedHours: 0,
         neededHours: 2
     },

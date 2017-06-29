@@ -7,7 +7,8 @@ import { setCanPlayThroughs } from '../../redux/actions/player'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
 import { getSongsNotLoguesCount } from '../../helpers/data-helper'
-import { getComponentShouldUpdate, setNewValueInBitNumber } from '../../helpers/general-helper'
+import { setNewValueInBitNumber } from '../../helpers/bit-helper'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 

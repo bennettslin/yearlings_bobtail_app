@@ -9,7 +9,8 @@ import { connect } from 'react-redux'
 import Button from '../button/button'
 import { getSongsNotLoguesCount } from '../../helpers/data-helper'
 import { getVerseAudioIconText } from '../../helpers/format-helper'
-import { getComponentShouldUpdate, getValueInBitNumber } from '../../helpers/general-helper'
+import { getValueInBitNumber } from '../../helpers/bit-helper'
+import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class VerseAudioButton extends Component {
 

@@ -1,5 +1,7 @@
 // Helper for getting and setting state persisted in user's local storage.
-import { getTwoToThePowerOfN, convertBitNumberToTrueFalseKeys, setNewValueInBitNumber } from './general-helper'
+import { getTwoToThePowerOfN,
+         convertBitNumberToTrueFalseKeys,
+         setNewValueInBitNumber } from './bit-helper'
 import AlbumData from '../album-data'
 
 import { ALL_DOT_KEYS } from '../constants/dots'
