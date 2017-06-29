@@ -6,7 +6,7 @@ module.exports = [
     {
         taskName: `Prologue to song transition is janky because of score being loaded. Be more strategic about that. (Do it with canPLayThroughs.)`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 5
     },
     {
         taskName: `Overview shadow hidden by lyric fade top.`,
@@ -23,17 +23,6 @@ module.exports = [
         neededHours: 2
     },
 
-    // Figure out accessed annotation rules.
-    {
-        taskName: `Accessed annotation is wrong after deselecting annotation.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `When switching lyric column, carousel should scroll to appropriate annotation.`,
-        workedHours: 0,
-        neededHours: 3
-    },
     {
         taskName: `Stagger carousel annotation show and hide to prevent weird jump.`,
         workedHours: 0,
@@ -57,11 +46,6 @@ module.exports = [
     /**
      * Audio and slider stuff.
      */
-    {
-        taskName: `Strategically handle cases where audio element doesn't load. Should I use a different format? https://stackoverflow.com/questions/6037756/audio-not-loading-in-htmls-audio-tag`,
-        workedHours: 0,
-        neededHours: 3
-    },
     {
         taskName: `When song finishes playing, proceed to next more smoothly.`,
         workedHours: 0,
