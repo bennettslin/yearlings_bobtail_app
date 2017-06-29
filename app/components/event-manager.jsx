@@ -148,7 +148,11 @@ class EventManager extends Component {
         const interactivatedVerseIndex = this.props.interactivateVerseDirection(direction)
         this._closeSections({
             exemptCarousel: true,
-            exemptInteractivatedVerse: true
+            exemptDots: true,
+            exemptNav: true,
+            exemptOverview: true,
+            exemptInteractivatedVerse: true,
+            exemptLyric: true
         })
         this._scrollElementIntoView(VERSE_SCROLL, interactivatedVerseIndex)
         return true
