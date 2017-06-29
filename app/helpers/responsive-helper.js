@@ -51,6 +51,10 @@ const _getIsTablet = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === TABLET_WIDTH
 }
 
+const _getIsLaptop = (deviceIndex) => {
+    return DEVICE_OBJECTS[deviceIndex].className === LAPTOP_WIDTH
+}
+
 const _getIsMonitor = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === MONITOR_WIDTH
 }
@@ -166,7 +170,7 @@ export const getIsOverlayingAnnotation = ({
 export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex]
 
-    if (getIsPhone(deviceIndex)) {
+    if (getIsPhone(deviceIndex) || _getIsLaptop(deviceIndex)) {
         return true
 
     } else if (_getIsTablet(deviceIndex)) {
