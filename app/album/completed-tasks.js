@@ -2223,5 +2223,10 @@ module.exports = [
         taskName: `Make dot animation smoother. (Well, good enough for now.)`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Menu in logue upon load is stuck in Chrome? (Just needed to hide overflow in lyric column.)`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

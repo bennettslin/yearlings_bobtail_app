@@ -53,7 +53,7 @@ class AudioButtons extends Component {
             songCanPlayThrough = getValueInBitNumber({
                 keysCount: getSongsNotLoguesCount(),
                 bitNumber: canPlayThroughs,
-                key: selectedSongIndex
+                key: (isPrologue || isEpilogue) ? 1 : selectedSongIndex
             })
 
         let playButtonText
