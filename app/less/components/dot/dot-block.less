@@ -4,24 +4,19 @@
     height: 100%;
 }
 
-.dom-manager.narrative .animated-background.narrative,
-.dom-manager.backstory .animated-background.backstory,
-.dom-manager.observation .animated-background.observation,
-.dom-manager.pun .animated-background.pun,
-.dom-manager.reference .animated-background.reference,
-.dom-manager.songwriting .animated-background.songwriting,
-.dom-manager.portal .animated-background.portal,
-.dom-manager.afterword .animated-background.afterword {
+/**
+ * All dot backgrounds in lyrics and annotation cards, except portal annotation
+ * cards.
+ */
+.text-anchor-block, .annotation-card:not(.portal) {
 
-    // Transition size first, then fade in.
-    transition: margin @animation-fast,
-                height @animation-fast,
-                width @animation-fast,
-                border @animation-fast,
-                background-color @animation-fast,
-                opacity @animation-fast @animation-faster;
-
-   opacity: 1;
+    .animated-background-container {
+        // Fade out first, then reduce width.
+        transition: opacity @animation-default,
+                    width @animation-default @animation-faster;
+        width: 0;
+        opacity: 0;
+    }
 }
 
 // Portals are not included here.
@@ -29,62 +24,79 @@
  * NOTE: This might turn out to be a fragile way to not show the portal dot in
  * the annotation card.
  */
-.dom-manager.narrative .annotation-card .animated-background.narrative,
-.dom-manager.backstory .annotation-card .animated-background.backstory,
-.dom-manager.observation .annotation-card .animated-background.observation,
-.dom-manager.pun .annotation-card .animated-background.pun,
-.dom-manager.reference .annotation-card .animated-background.reference,
-.dom-manager.songwriting .annotation-card .animated-background.songwriting,
-.dom-manager.afterword .annotation-card .animated-background.afterword {
-
-   border: @dot-border solid @dot-border-colour;
-   width: @annotation-dot-diameter;
-   height: @annotation-dot-diameter;
+.dom-manager.narrative .annotation-card .animated-background-container.narrative,
+.dom-manager.backstory .annotation-card .animated-background-container.backstory,
+.dom-manager.observation .annotation-card .animated-background-container.observation,
+.dom-manager.pun .annotation-card .animated-background-container.pun,
+.dom-manager.reference .annotation-card .animated-background-container.reference,
+.dom-manager.songwriting .annotation-card .animated-background-container.songwriting,
+.dom-manager.afterword .annotation-card .animated-background-container.afterword {
+    // Increase width first, then fade in.
+    transition: width @animation-default,
+                opacity @animation-default @animation-faster;
+    width: @annotation-dot-diameter;
+    opacity: 1;
 }
 
-.dom-manager.narrative .anchor-block .animated-background.narrative,
-.dom-manager.backstory .anchor-block .animated-background.backstory,
-.dom-manager.observation .anchor-block .animated-background.observation,
-.dom-manager.pun .anchor-block .animated-background.pun,
-.dom-manager.reference .anchor-block .animated-background.reference,
-.dom-manager.songwriting .anchor-block .animated-background.songwriting,
-.dom-manager.portal .anchor-block .animated-background.portal,
-.dom-manager.afterword .anchor-block .animated-background.afterword {
+.annotation-card {
+    .dot {
+        &, & .animated-background {
+            height: @annotation-dot-diameter;
+        }
+    }
 
-   border: @dot-border solid @lyric-underline-enabled-colour;
+    .animated-background {
+        width: @annotation-dot-diameter;
+        border: @dot-border solid @dot-border-colour;
+    }
 }
 
-.dom-manager.narrative .text-anchor-block .animated-background.narrative,
-.dom-manager.backstory .text-anchor-block .animated-background.backstory,
-.dom-manager.observation .text-anchor-block .animated-background.observation,
-.dom-manager.pun .text-anchor-block .animated-background.pun,
-.dom-manager.reference .text-anchor-block .animated-background.reference,
-.dom-manager.songwriting .text-anchor-block .animated-background.songwriting,
-.dom-manager.portal .text-anchor-block .animated-background.portal,
-.dom-manager.afterword .text-anchor-block .animated-background.afterword {
-
-   width: @lyric-anchor-dot-diameter;
-   height: @lyric-anchor-dot-diameter;
+.dom-manager.narrative .text-anchor-block .animated-background-container.narrative,
+.dom-manager.backstory .text-anchor-block .animated-background-container.backstory,
+.dom-manager.observation .text-anchor-block .animated-background-container.observation,
+.dom-manager.pun .text-anchor-block .animated-background-container.pun,
+.dom-manager.reference .text-anchor-block .animated-background-container.reference,
+.dom-manager.songwriting .text-anchor-block .animated-background-container.songwriting,
+.dom-manager.portal .text-anchor-block .animated-background-container.portal,
+.dom-manager.afterword .text-anchor-block .animated-background-container.afterword {
+    // Increase width first, then fade in.
+    transition: width @animation-default,
+                opacity @animation-default @animation-faster;
+    width: @lyric-anchor-dot-diameter;
+    opacity: 1;
 }
 
-.dom-manager.narrative .text-anchor-block:hover .animated-background.narrative,
-.dom-manager.backstory .text-anchor-block:hover .animated-background.backstory,
-.dom-manager.observation .text-anchor-block:hover .animated-background.observation,
-.dom-manager.pun .text-anchor-block:hover .animated-background.pun,
-.dom-manager.reference .text-anchor-block:hover .animated-background.reference,
-.dom-manager.songwriting .text-anchor-block:hover .animated-background.songwriting,
-.dom-manager.portal .text-anchor-block:hover .animated-background.portal,
-.dom-manager.afterword .text-anchor-block:hover .animated-background.afterword {
+.text-anchor-block {
+    .dot {
+        &, & .animated-background {
+            height: @lyric-anchor-dot-diameter;
+        }
+    }
+
+    .animated-background {
+        width: @lyric-anchor-dot-diameter;
+        border: @dot-border solid @lyric-underline-enabled-colour;
+    }
+}
+
+.dom-manager.narrative .text-anchor-block:hover .animated-background-container.narrative,
+.dom-manager.backstory .text-anchor-block:hover .animated-background-container.backstory,
+.dom-manager.observation .text-anchor-block:hover .animated-background-container.observation,
+.dom-manager.pun .text-anchor-block:hover .animated-background-container.pun,
+.dom-manager.reference .text-anchor-block:hover .animated-background-container.reference,
+.dom-manager.songwriting .text-anchor-block:hover .animated-background-container.songwriting,
+.dom-manager.portal .text-anchor-block:hover .animated-background-container.portal,
+.dom-manager.afterword .text-anchor-block:hover .animated-background-container.afterword {
    animation: bounceHover @animation-slow;
 }
 
-.dom-manager.narrative .text-anchor-block:active .animated-background.narrative,
-.dom-manager.backstory .text-anchor-block:active .animated-background.backstory,
-.dom-manager.observation .text-anchor-block:active .animated-background.observation,
-.dom-manager.pun .text-anchor-block:active .animated-background.pun,
-.dom-manager.reference .text-anchor-block:active .animated-background.reference,
-.dom-manager.songwriting .text-anchor-block:active .animated-background.songwriting,
-.dom-manager.portal .text-anchor-block:active .animated-background.portal,
-.dom-manager.afterword .text-anchor-block:active .animated-background.afterword {
-   transform: scale(0.75);
+.dom-manager.narrative .text-anchor-block:active .animated-background-container.narrative,
+.dom-manager.backstory .text-anchor-block:active .animated-background-container.backstory,
+.dom-manager.observation .text-anchor-block:active .animated-background-container.observation,
+.dom-manager.pun .text-anchor-block:active .animated-background-container.pun,
+.dom-manager.reference .text-anchor-block:active .animated-background-container.reference,
+.dom-manager.songwriting .text-anchor-block:active .animated-background-container.songwriting,
+.dom-manager.portal .text-anchor-block:active .animated-background-container.portal,
+.dom-manager.afterword .text-anchor-block:active .animated-background-container.afterword {
+   transform: scale(0.8);
 }
