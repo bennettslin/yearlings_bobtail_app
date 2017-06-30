@@ -39,16 +39,21 @@
 }
 
 .annotation-card {
-    .dot {
-        &, & .animated-background {
-            height: @annotation-dot-diameter;
+
+    // Only style dots that are not in portal.
+    .dots-block {
+        .dot {
+            &, & .animated-background {
+                height: @annotation-dot-diameter;
+            }
+        }
+
+        .animated-background {
+            width: @annotation-dot-diameter;
+            border: @dot-border solid @dot-border-colour;
         }
     }
 
-    .animated-background {
-        width: @annotation-dot-diameter;
-        border: @dot-border solid @dot-border-colour;
-    }
 }
 
 .dom-manager.narrative .text-anchor-block .animated-background-container.narrative,

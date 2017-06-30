@@ -107,14 +107,15 @@ const AnnotationCardView = ({
     cardIndex
 
 }) => (
-
     <div className={classnames(
         'annotation-card',
         cardDotKeys
     )}>
-        <DotBlock
-            dotKeys={cardDotKeys}
-        />
+        {!cardDotKeys.portal && (
+            <DotBlock
+                dotKeys={cardDotKeys}
+            />
+        )}
         <TextBlock
             text={text}
             isLyric={false}
