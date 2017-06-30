@@ -33,9 +33,9 @@ const Button = ({
         )}
         onClick={handleClick ? e => handleClick(e) : null}
     >
-        <div className="animated-background-container">
+        <div className="icon-canvas-block">
             <div className={classnames(
-                'animated-background',
+                'icon-canvas',
                 iconClass
             )}>
                 {iconText}

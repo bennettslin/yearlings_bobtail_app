@@ -20,11 +20,11 @@ const DotBlock = ({
                     className="dot"
                 >
                     <div className={classnames(
-                        'animated-background-container',
+                        'icon-canvas-block',
                         dotKey
                     )}>
                         <div className={classnames(
-                            'animated-background',
+                            'icon-canvas',
                             dotKey
                         )} />
                     </div>
