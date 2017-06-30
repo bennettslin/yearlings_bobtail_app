@@ -20,10 +20,6 @@
 }
 
 // Portals are not included here.
-/**
- * NOTE: This might turn out to be a fragile way to not show the portal dot in
- * the annotation card.
- */
 .dom-manager.narrative .annotation-card .animated-background-container.narrative,
 .dom-manager.backstory .annotation-card .animated-background-container.backstory,
 .dom-manager.observation .annotation-card .animated-background-container.observation,
@@ -53,7 +49,6 @@
             border: @dot-border solid @dot-border-colour;
         }
     }
-
 }
 
 .dom-manager.narrative .text-anchor-block .animated-background-container.narrative,
@@ -80,6 +75,11 @@
 
     .animated-background {
         width: @lyric-anchor-dot-diameter;
+    }
+}
+
+.anchor-block {
+    .animated-background {
         border: @dot-border solid @lyric-underline-enabled-colour;
     }
 }
