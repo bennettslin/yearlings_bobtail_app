@@ -2207,4 +2207,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Nav wonkiness mostly fixed, with wonkiness added elsewhere.`,
+        workedHours: 2,
+        neededHours: 2
+    }
 ]

@@ -92,7 +92,7 @@ const NavButtonView = ({
 
     // From controller.
     iconText,
-    // songTitle,
+    songTitle,
     handleClick
 
 }) => (
@@ -108,13 +108,13 @@ const NavButtonView = ({
                 isSelected={isSelected}
                 iconText={iconText}
                 handleClick={handleClick}
-                // extraChild={
-                //     <div className="nav-title-block">
-                //         <div className="nav-title">
-                //             {songTitle}
-                //         </div>
-                //     </div>
-                // }
+                extraChild={
+                    <div className="nav-title-block">
+                        <div className="nav-title">
+                            {songTitle}
+                        </div>
+                    </div>
+                }
             />
         </div>
     </div>

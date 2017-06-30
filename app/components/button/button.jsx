@@ -33,11 +33,13 @@ const Button = ({
         )}
         onClick={handleClick ? e => handleClick(e) : null}
     >
-        <div className={classnames(
-            'animated-background',
-            iconClass
-        )}>
-            {iconText}
+        <div className="animated-background-container">
+            <div className={classnames(
+                'animated-background',
+                iconClass
+            )}>
+                {iconText}
+            </div>
         </div>
         {accessKey &&
             <div className="access-button-icon">

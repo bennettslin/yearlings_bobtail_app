@@ -8,13 +8,30 @@
 
 .single-book-column {
     .nav-button-block {
+        transition: width @animation-default, margin @animation-default;
+    }
+
+    .animated-background-container {
         transition: width @animation-default;
+        overflow: hidden;
     }
 }
 
 .static-nav-icon {
     .nav-button-block {
         width: @app-icon-diameter;
+    }
+}
+
+.column-hidden {
+    .nav-book.songs {
+        .nav-button-block {
+            width: 0;
+        }
+
+        .animated-background-container {
+            width: 0;
+        }
     }
 }
 

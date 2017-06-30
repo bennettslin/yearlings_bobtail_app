@@ -330,8 +330,10 @@
                 width: @monitor-shrink-icon;
             }
             .nav-button-block .button {
-                width: @monitor-shrink-icon;
-                height: @monitor-shrink-icon;
+                &, & .animated-background {
+                    width: @monitor-shrink-icon;
+                    height: @monitor-shrink-icon;
+                }
             }
         }
     }
@@ -398,15 +400,23 @@
                         }
                     }
                 }
+            }
 
+            /**
+             * Show song buttons in shown column, along with toggle button in
+             * hidden column.
+             */
+            .column-shown, .column-hidden .nav-book.toggle {
                 .nav-button-block {
                     width: @laptop-shrink-icon;
                 }
             }
 
             .nav-button-block .button {
-                width: @laptop-shrink-icon;
-                height: @laptop-shrink-icon;
+                &, & .animated-background {
+                    width: @laptop-shrink-icon;
+                    height: @laptop-shrink-icon;
+                }
             }
         }
     }
@@ -527,8 +537,10 @@
             }
 
             .nav-button-block .button {
-                width: @tablet-shrink-icon;
-                height: @tablet-shrink-icon;
+                &, & .animated-background {
+                    width: @tablet-shrink-icon;
+                    height: @tablet-shrink-icon;
+                }
             }
         }
     }
@@ -614,15 +626,23 @@
                         }
                     }
                 }
+            }
 
+            /**
+             * Show song buttons in shown column, along with toggle button in
+             * hidden column.
+             */
+            .column-shown, .column-hidden .nav-book.toggle {
                 .nav-button-block {
                     width: @mini-shrink-icon;
                 }
             }
 
             .nav-button-block .button {
-                width: @mini-shrink-icon;
-                height: @mini-shrink-icon;
+                &, & .animated-background {
+                    width: @mini-shrink-icon;
+                    height: @mini-shrink-icon;
+                }
             }
         }
     }

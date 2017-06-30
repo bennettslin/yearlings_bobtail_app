@@ -1,12 +1,24 @@
 .button {
     position: relative;
-    width: @app-icon-diameter;
-    height: @app-icon-diameter;
+}
+
+.animated-background-container {
+    width: 100%;
+    height: 100%;
+}
+
+/**
+ * Button and animated background will have same width, so that animated
+ * background container can animate to zero width.
+ */
+.button {
+    &, & .animated-background {
+        width: @app-icon-diameter;
+        height: @app-icon-diameter;
+    }
 }
 
 .animated-background {
-    width: 100%;
-    height: 100%;
     border-radius: 50%;
 }
 
@@ -18,17 +30,19 @@
         &.button {
 
             .animated-background {
-                transition: background-color @animation-default, transform @animation-instant;
+                transition: background-color @animation-default,
+                            transform @animation-instant;
             }
 
+            // Animate container itself, because its overflow is hidden.
             &:hover {
-                .animated-background {
+                .animated-background-container {
                     animation: bounceHover @animation-default;
                 }
             }
 
             &:active {
-                .animated-background {
+                .animated-background-container {
                     transform: scale(0.9);
                 }
             }
@@ -76,32 +90,42 @@
 }
 
 .button.small {
-    width: @app-small-icon-diameter;
-    height: @app-small-icon-diameter;
+    &, & .animated-background {
+        width: @app-small-icon-diameter;
+        height: @app-small-icon-diameter;
+    }
 }
 
 .button.large, .popup-button-block, .lyric-button-block {
-    width: @app-large-icon-diameter;
-    height: @app-large-icon-diameter;
+    &, & .animated-background {
+        width: @app-large-icon-diameter;
+        height: @app-large-icon-diameter;
+    }
 }
 
 .tablet-width {
     .button.large, .popup-button-block, .lyric-button-block {
-        width: @app-tablet-large-icon-diameter;
-        height: @app-tablet-large-icon-diameter;
+        &, & .animated-background {
+            width: @app-tablet-large-icon-diameter;
+            height: @app-tablet-large-icon-diameter;
+        }
     }
 }
 
 .mini-width {
     .button.large, .popup-button-block, .lyric-button-block {
-        width: @app-mini-large-icon-diameter;
-        height: @app-mini-large-icon-diameter;
+        &, & .animated-background {
+            width: @app-mini-large-icon-diameter;
+            height: @app-mini-large-icon-diameter;
+        }
     }
 }
 
 .phone-width {
     .button.large, .popup-button-block, .lyric-button-block {
-        width: @app-icon-diameter;
-        height: @app-icon-diameter;
+        &, & .animated-background {
+            width: @app-icon-diameter;
+            height: @app-icon-diameter;
+        }
     }
 }
