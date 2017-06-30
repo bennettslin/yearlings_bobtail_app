@@ -1,0 +1,34 @@
+.books-column-block, .book-column, .nav-book, .nav-toggle-book {
+    position: absolute;
+    height: 100%;
+}
+
+.books-column-block {
+    height: @book-height;
+}
+
+.column-1 {
+    margin-right: @nav-last-title-margin;
+}
+
+.tablet-width, .mini-width {
+    .column-1 {
+        margin-right: 0;
+    }
+}
+
+.is-desktop {
+
+    .books-column-block {
+        transition: bottom @animation-default;
+        bottom: -@book-height;
+    }
+
+    &.overlay-hidden {
+        &.nav-expanded {
+            .books-column-block {
+                bottom: 0;
+            }
+        }
+    }
+}

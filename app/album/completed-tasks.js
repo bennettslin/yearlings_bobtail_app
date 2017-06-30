@@ -2201,5 +2201,10 @@ module.exports = [
         taskName: `Menu in logue upon load is stuck in Chrome? (Just needed to hide overflow in lyric column.)`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Scores tips always in main in laptop, lyric expand toggle always in lyric column.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -1,0 +1,75 @@
+.is-live-view {
+    .nav-section {
+        position: absolute;
+        width: 100%;
+        overflow: visible;
+    }
+}
+
+// All containers.
+.live-nav-block, .nav-book, .nav-toggle-book {
+    display: flex;
+}
+
+.live-nav-block {
+    height: 100%;
+}
+
+.books-block {
+    position: relative;
+    width: 100%;
+
+    // TODO: Consider adjusting this animatable height for tablet and mini?
+    height: @nav-height * 3; // Just an arbitrary value that's large enough.
+}
+
+.is-desktop {
+
+    .books-block {
+        bottom: @nav-height * 2;
+
+        // Prevent lyric scrolling from pushing app offscreen.
+        overflow: hidden;
+    }
+}
+
+@nav-border-radius: @nav-height / 3;
+
+.tablet-width, .mini-width {
+
+    .live-nav-block {
+        flex-direction: row-reverse;
+    }
+
+    .books-block {
+        top: 0;
+    }
+
+    .books-column-block {
+        transition: top @animation-default;
+        top: -@book-height;
+    }
+
+    .nav-book {
+        border-radius: 0 0 @nav-border-radius @nav-border-radius;
+    }
+
+    .nav-toggle-book {
+        border-radius: 0 0 0 @nav-border-radius;
+    }
+
+    .nav-title-block {
+        transform: rotate(45deg);
+        transform-origin: left bottom;
+        bottom: auto;
+        top: 50%;
+    }
+
+    &.overlay-hidden {
+        &.nav-expanded {
+            .books-column-block {
+                top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.nav-button-block {
+    position: relative;
+
+    .animated-background {
+        background-color: #dd8;
+    }
+}
+
+.single-book-column {
+    .nav-button-block {
+        transition: width @animation-default;
+    }
+}
+
+.static-nav-icon {
+    .nav-button-block {
+        width: @app-icon-diameter;
+    }
+}
+
+// Static margins after icons begin shrinking.
+.shrink-nav-icon {
+    .column-shown {
+        &.column-0 {
+            .nav-button-block {
+                &:not(:last-child) {
+                    margin-right: 1px;
+                }
+            }
+        }
+
+        &.column-1 {
+            .nav-button-block {
+                &:not(:last-child) {
+                    margin-left: 1px;
+                }
+            }
+        }
+    }
+
+    .nav-toggle-block {
+        margin-right: 3px;
+    }
+}
+
+.nav-button-wrapper {
+    position: absolute;
+    top: 0;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-button {
+    &.selected {
+        .animated-background {
+            background-color: orange;
+        }
+    }
+}
+
+.nav-title-block {
+    position: absolute;
+    bottom: 50%;
+    left: 25%;
+    width: 0;
+
+    transform: rotate(315deg);
+    transform-origin: left top;
+}
+
+.nav-title {
+    white-space: nowrap;
+    transition: transform @animation-default;
+
+    transform: scale(0);
+}

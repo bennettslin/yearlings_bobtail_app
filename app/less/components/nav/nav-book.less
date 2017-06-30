@@ -1,0 +1,77 @@
+.nav-book, .nav-toggle-book {
+    padding: 0 @nav-book-padding;
+
+    &.nav-book {
+        min-width: @app-icon-diameter;
+        border-radius: @nav-border-radius @nav-border-radius 0 0;
+        background-color: #48d;
+    }
+
+    &.nav-toggle-book {
+        border-radius: 0 @nav-border-radius 0 0;
+        transition: left @animation-default, box-shadow @animation-default;
+        left: 0;
+
+        background-color: purple;
+    }
+}
+
+.column-hidden {
+
+    &.column-0 {
+        .nav-book.songs {
+            left: 0;
+        }
+    }
+
+    &.column-1 {
+        .nav-book.logue {
+            right: 0;
+        }
+
+        .nav-book.songs {
+            right: 0;
+        }
+    }
+
+    .nav-book.songs {
+        width: 0;
+        overflow: hidden;
+    }
+}
+
+.column-0 {
+    .books-column {
+        transition: left @animation-default;
+    }
+
+    .nav-book {
+        &.songs {
+            transition: left @animation-default;
+        }
+    }
+}
+
+.column-1 {
+    right: 0;
+
+    .books-column {
+        right: 0;
+        transition: right @animation-default;
+    }
+
+    .nav-book {
+        &.logue {
+            right: 0;
+        }
+
+        &.songs {
+            transition: right @animation-default;
+            flex-direction: row-reverse;
+        }
+
+        &.toggle {
+            right: 0;
+        }
+    }
+}
