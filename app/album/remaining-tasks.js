@@ -13,6 +13,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Fix dots section dot sizes.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     /**
      * Medium bugs and tasks.
