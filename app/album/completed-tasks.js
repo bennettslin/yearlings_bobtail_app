@@ -2211,5 +2211,10 @@ module.exports = [
         taskName: `Nav wonkiness mostly fixed, with wonkiness added elsewhere.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Fix dots section dot sizes.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

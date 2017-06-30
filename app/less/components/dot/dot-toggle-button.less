@@ -1,0 +1,58 @@
+.dot-description {
+    position: absolute;
+
+    // Specify for Safari.
+    top: 0;
+    left: 0;
+
+    width: @dot-container-diameter;
+    height: @dot-container-diameter;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: .6em;
+
+    opacity: 0;
+    transition: opacity @animation-default;
+
+    &:hover, &.interactivated {
+        opacity: 1;
+    }
+}
+
+.dot-section-anchor {
+    padding-top: 5px;
+    text-align: center;
+    font-size: 0.75em;
+    transition: box-shadow @animation-default;
+    cursor: pointer;
+}
+
+.dot-container {
+    .dot-anchor {
+
+        &:hover {
+            .animated-background {
+                animation: bounceHover @animation-default;
+            }
+        }
+
+        &:active {
+            .animated-background {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    .dot {
+        &.deselected {
+            .animated-background {
+                background-color: @deselected-dot-colour;
+            }
+        }
+    }
+}
