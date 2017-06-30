@@ -42,6 +42,18 @@
    height: @annotation-dot-diameter;
 }
 
+.dom-manager.narrative .anchor-block .animated-background.narrative,
+.dom-manager.backstory .anchor-block .animated-background.backstory,
+.dom-manager.observation .anchor-block .animated-background.observation,
+.dom-manager.pun .anchor-block .animated-background.pun,
+.dom-manager.reference .anchor-block .animated-background.reference,
+.dom-manager.songwriting .anchor-block .animated-background.songwriting,
+.dom-manager.portal .anchor-block .animated-background.portal,
+.dom-manager.afterword .anchor-block .animated-background.afterword {
+
+   border: @dot-border solid @lyric-underline-enabled-colour;
+}
+
 .dom-manager.narrative .text-anchor-block .animated-background.narrative,
 .dom-manager.backstory .text-anchor-block .animated-background.backstory,
 .dom-manager.observation .text-anchor-block .animated-background.observation,
@@ -51,7 +63,6 @@
 .dom-manager.portal .text-anchor-block .animated-background.portal,
 .dom-manager.afterword .text-anchor-block .animated-background.afterword {
 
-   border: @dot-border solid @lyric-underline-enabled-colour;
    width: @lyric-anchor-dot-diameter;
    height: @lyric-anchor-dot-diameter;
 }
