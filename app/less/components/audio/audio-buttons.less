@@ -30,12 +30,14 @@
     flex-grow: 3;
 }
 
-.audio-nav {
-    background-color: @audio-nav-colour;
-}
+.enabled {
+    .audio-nav {
+        background-color: @audio-nav-colour;
+    }
 
-.audio-neutral {
-    background-color: @audio-neutral-colour;
+    .audio-neutral {
+        background-color: @audio-neutral-colour;
+    }
 }
 
 .is-playing {
@@ -47,11 +49,6 @@
 }
 
 .is-paused {
-
-    .audio-play-toggle {
-        background-color: @audio-disabled-colour;
-    }
-
     .enabled {
         .audio-play-toggle {
             background-color: @audio-play-colour;
