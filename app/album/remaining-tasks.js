@@ -81,11 +81,6 @@ module.exports = [
     },
 
     // Day tasks.
-    {
-        taskName: `Logue overview styling, including when title is shown, and disable overview toggle in logue phone.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     /**
      * Content.

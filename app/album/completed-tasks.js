@@ -2216,5 +2216,10 @@ module.exports = [
         taskName: `Fix dots section dot sizes.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Logue overview styling, including when title is shown, and disable overview toggle in logue phone.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]
