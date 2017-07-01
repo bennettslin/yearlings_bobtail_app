@@ -162,5 +162,11 @@ module.exports = [
         taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,
         workedHours: 0,
         neededHours: 1
-    }
+    },
+
+    {
+        taskName: `Lyric toggle in main only in heightless lyric.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 ]

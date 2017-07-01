@@ -14,14 +14,14 @@ import CarouselToggle from '../carousel/carousel-toggle'
 import CarouselSection from '../carousel/carousel-section'
 import DotsSection from '../dots/dots-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
-// import LyricToggle from '../lyric/lyric-toggle'
+import LyricToggle from '../lyric/lyric-toggle'
 import OverviewPopup from '../overview/overview-popup'
 import ScoresTipsSection from './scores-tips-section'
 
 const MainColumn = ({
 
     handleCarouselToggle,
-    // handleLyricSectionExpand,
+    handleLyricSectionExpand,
     handleNavExpand,
 
     annotationPopupHandlers,
@@ -61,9 +61,10 @@ const MainColumn = ({
                     />
                 </div>
 
-                {/* <LyricToggle
+                <LyricToggle
                     handleLyricSectionExpand={handleLyricSectionExpand}
-                /> */}
+                    inMain={true}
+                />
 
                 <div className="dots-subfield">
                     <DotsSection {...dotsSectionHandlers} />
@@ -97,7 +98,7 @@ const MainColumn = ({
 MainColumn.propTypes = {
     // From parent.
     handleCarouselToggle: PropTypes.func.isRequired,
-    // handleLyricSectionExpand: PropTypes.func.isRequired,
+    handleLyricSectionExpand: PropTypes.func.isRequired,
     handleNavExpand: PropTypes.func.isRequired,
 
     annotationPopupHandlers: PropTypes.object.isRequired,
