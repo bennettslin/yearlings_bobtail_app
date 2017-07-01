@@ -428,7 +428,13 @@ class App extends Component {
         }
 
         const { isVerseBarAbove,
-                isVerseBarBelow } = getVerseBarStatus(this.props.deviceIndex, this.props.windowHeight, this.props.isLyricExpanded, verseElement)
+                isVerseBarBelow } = getVerseBarStatus({
+                    deviceIndex: this.props.deviceIndex,
+                    windowHeight: this.props.windowHeight,
+                    isLyricExpanded: this.props.isLyricExpanded,
+                    isHeightlessLyricColumn: this.props.isHeightlessLyricColumn,
+                    verseElement
+                })
 
         this.props.setIsVerseBarAbove(isVerseBarAbove)
         this.props.setIsVerseBarBelow(isVerseBarBelow)
@@ -855,7 +861,13 @@ class App extends Component {
 
             // Determine if new selected verse element shows or hides verse bar.
             const { isVerseBarAbove,
-                    isVerseBarBelow } = getVerseBarStatus(this.props.deviceIndex, this.props.windowHeight, this.props.isLyricExpanded, selectedVerseElement)
+                    isVerseBarBelow } = getVerseBarStatus({
+                        deviceIndex: this.props.deviceIndex,
+                        windowHeight: this.props.windowHeight,
+                        isLyricExpanded: this.props.isLyricExpanded,
+                        isHeightlessLyricColumn: this.props.isHeightlessLyricColumn,
+                        verseElement: selectedVerseElement
+                    })
 
             // App has a reference to the selected verse.
             this.props.setSelectedVerseElement(selectedVerseElement)
@@ -869,7 +881,13 @@ class App extends Component {
         if (sliderVerseElement !== this.props.sliderVerseElement) {
 
             const { isVerseBarAbove,
-                    isVerseBarBelow } = getVerseBarStatus(this.props.deviceIndex, this.props.windowHeight, this.props.isLyricExpanded, sliderVerseElement)
+                    isVerseBarBelow } = getVerseBarStatus({
+                        deviceIndex: this.props.deviceIndex,
+                        windowHeight: this.props.windowHeight,
+                        isLyricExpanded: this.props.isLyricExpanded,
+                        isHeightlessLyricColumn: this.props.isHeightlessLyricColumn,
+                        verseElement: sliderVerseElement
+                    })
 
             /**
              * Slider verse element overrides selected verse element, as long

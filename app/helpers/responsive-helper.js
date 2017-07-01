@@ -204,8 +204,10 @@ export const getLyricSectionRect = ({
 
     } else {
         const isPhone = getIsPhone(deviceIndex),
-            menuHeight = isPhone ? MENU_PHONE_HEIGHT : MENU_HEIGHT,
-            top = isLyricExpanded ? menuHeight : windowHeight * (1 - COLLAPSED_LYRIC_SECTION_HEIGHT)
+            menuHeight = isPhone ?
+                MENU_PHONE_HEIGHT : MENU_HEIGHT,
+            top = isLyricExpanded ?
+                menuHeight : windowHeight * (1 - COLLAPSED_LYRIC_SECTION_HEIGHT)
 
         // TODO: Consider lyric hidden?
         return {

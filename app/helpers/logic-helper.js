@@ -321,14 +321,29 @@ export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
     }
 }
 
-export const getVerseBarStatus = (deviceIndex, windowHeight, isLyricExpanded, selectedVerseElement) => {
-    const lyricSectionRect = getLyricSectionRect({
-        deviceIndex,
-        windowHeight,
-        isLyricExpanded
-    }),
-        selectedVerseRect = selectedVerseElement.getBoundingClientRect(),
+export const getVerseBarStatus = ({
+    deviceIndex,
+    windowHeight,
+    isLyricExpanded,
+    isHeightlessLyricColumn,
+    verseElement
+}) => {
 
+    // If lyric is collapsed and heightless, verse bars should never show.
+    if (isHeightlessLyricColumn && !isLyricExpanded) {
+        return {
+            isVerseBarAbove: false,
+            isVerseBarBelow: false
+        }
+    }
+
+    const lyricSectionRect = getLyricSectionRect({
+            deviceIndex,
+            windowHeight,
+            isLyricExpanded
+        }),
+
+        selectedVerseRect = verseElement.getBoundingClientRect(),
         selectedVerseMidHeight = (selectedVerseRect.top + selectedVerseRect.bottom) / 2,
 
         isVerseBarAbove = selectedVerseMidHeight < lyricSectionRect.top,
