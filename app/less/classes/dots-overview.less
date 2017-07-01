@@ -167,10 +167,6 @@
         width: @overview-toggle-tablet-width;
     }
 
-    .overview-toggle-button-container {
-        height: @overview-toggle-tablet-height;
-    }
-
     // Overview and dots toggle are at the bottom in tablet and mini.
     &:not(.phone-width) {
 
@@ -188,54 +184,6 @@
 
             margin-top: 0;
             margin-bottom: @dots-subfield-margin / 2;
-        }
-    }
-
-    &.mini-width {
-        .dots-overview-toggle-section, .carousel-toggle-button-block {
-            width: @overview-toggle-mini-width;
-        }
-
-        .overview-toggle-button-container {
-            height: @overview-toggle-mini-height;
-        }
-    }
-
-    &.phone-width {
-
-        &.dots-section-shown {
-            .dots-subfield {
-                margin-left: @dots-subfield-phone-margin;
-            }
-        }
-
-        // In phone, also hidden to left when overview is shown.
-        &.overview-shown {
-            .dots-overview-toggle-section {
-                opacity: 0;
-                margin-left: -@overview-toggle-phone-width;
-            }
-        }
-
-        .dots-overview-toggle-section {
-            width: @overview-toggle-phone-width;
-        }
-
-        // Inside overview bubble.
-        .overview-toggle-section {
-                position: relative;
-                width: @overview-toggle-phone-width;
-                height: @overview-toggle-phone-height;
-                margin-right: 10px;
-                float: left;
-        }
-
-        .overview-toggle-button-container {
-            height: @overview-toggle-phone-height;
-        }
-
-        .overview-toggle-button-container, .overview.popup-wrapper {
-            min-width: 100%;
         }
     }
 }
