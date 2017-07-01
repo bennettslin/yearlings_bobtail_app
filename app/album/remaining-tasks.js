@@ -1,10 +1,26 @@
 module.exports = [
 
+    {
+        taskName: `Fix menu height constant, as it doesn't consider slider in main.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Make annotation card hiding better.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Be smarter about showing and hiding things in heightless lyric.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     /**
      * Short bugs and tasks.
      */
     {
-        taskName: `Prologue to song transition is janky because of score being loaded. Be more strategic about that. (Do it with canPLayThroughs.)`,
+        taskName: `Prologue to song transition is janky because of score being loaded. Be more strategic about that. (Do it with canPlayThroughs.)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -27,6 +43,11 @@ module.exports = [
         taskName: `Stagger carousel annotation show and hide to prevent weird jump.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Accessed sections conflict because they're up at the same time.`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     /**
@@ -162,11 +183,5 @@ module.exports = [
         taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,
         workedHours: 0,
         neededHours: 1
-    },
-
-    {
-        taskName: `Lyric toggle in main only in heightless lyric.`,
-        workedHours: 0,
-        neededHours: 1
-    },
+    }
 ]

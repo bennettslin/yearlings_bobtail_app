@@ -2222,4 +2222,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Lyric toggle in main only in heightless lyric.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
