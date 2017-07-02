@@ -8,6 +8,12 @@ module.exports = {
             actors: {
                 oldBennett: {
                     todo: true,
+                    remainTodo: {
+                        skeletonOutline: true,
+                        faceHandsClothes: true,
+                        digitise: true,
+                        colourShading: true
+                    },
                     description: 'standing, facing forward, welcoming'
                 }
             }
@@ -22,6 +28,6 @@ module.exports = {
             taskName: `overview`,
             workedHours: 3,
             neededHours: 3
-        },
+        }
     ]
 }

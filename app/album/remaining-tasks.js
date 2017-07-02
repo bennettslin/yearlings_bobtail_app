@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Register drawing tasks in admin.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Be smarter about showing and hiding things in heightless lyric.`,
         workedHours: 0,
         neededHours: 2
