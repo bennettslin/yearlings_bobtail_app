@@ -1,10 +1,4 @@
 module.exports = [
-
-    {
-        taskName: `Fix menu height constant, as it doesn't consider slider in main.`,
-        workedHours: 0,
-        neededHours: 1
-    },
     {
         taskName: `Make annotation card hiding better.`,
         workedHours: 0,

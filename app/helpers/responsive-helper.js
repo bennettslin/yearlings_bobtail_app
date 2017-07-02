@@ -16,7 +16,7 @@ import { PHONE_WIDTH,
          HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
          MENU_HEIGHT,
-         MENU_PHONE_HEIGHT,
+         MENU_PLUS_CUSTOM_SUBFIELD_PHONE_HEIGHT,
          HIDDEN_NAV_MIN,
          WIKI_SIDE_PADDING_TOTAL } from '../constants/responsive'
 
@@ -205,7 +205,7 @@ export const getLyricSectionRect = ({
     } else {
         const isPhone = getIsPhone(deviceIndex),
             menuHeight = isPhone ?
-                MENU_PHONE_HEIGHT : MENU_HEIGHT,
+                MENU_PLUS_CUSTOM_SUBFIELD_PHONE_HEIGHT : MENU_HEIGHT,
             top = isLyricExpanded ?
                 menuHeight : windowHeight * (1 - COLLAPSED_LYRIC_SECTION_HEIGHT)
 

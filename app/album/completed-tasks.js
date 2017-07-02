@@ -2226,5 +2226,10 @@ module.exports = [
         taskName: `Lyric toggle in main only in heightless lyric.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Fix menu height constant, as it doesn't consider slider in main.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -4,7 +4,7 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
-            description: 'epilogue description',
+            description: 'Everyone is standing at the end of the play. We are all really just actors.',
             actors: {
                 oldBennett: {
                     todo: true,
