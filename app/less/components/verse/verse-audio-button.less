@@ -45,7 +45,7 @@
                 .verse-audio-button-block {
                     left: -@verse-audio-button-block-width * 0.5;
 
-                    z-index: 5000;
+                    z-index: @verse-audio-button-z-index;
 
                     .icon-canvas {
                         box-shadow: -1px 1px 4px 4px @box-shadow-colour;
@@ -92,7 +92,7 @@
         position: relative;
         // font-size: 0.1em;
         opacity: 0;
-        z-index: @verse-audio-button-z-index;
+        // z-index: @verse-audio-button-z-index;
         transition: opacity @animation-default;
 
         &, .icon-canvas {
