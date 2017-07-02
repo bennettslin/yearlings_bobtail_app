@@ -132,6 +132,7 @@
 
 .carousel-annotation {
     overflow-y: scroll;
+    overflow-x: hidden;
 
     display: flex;
     flex-direction: column-reverse;
@@ -140,13 +141,17 @@
     transition: min-width @animation-default;
 
     .annotation-section {
-        margin: @carousel-annotation-small-padding @annotation-section-padding;
-        padding: @carousel-annotation-small-padding @carousel-annotation-padding @carousel-annotation-padding;
+        margin: @carousel-annotation-small-padding
+                @annotation-section-padding;
+        padding: @carousel-annotation-small-padding
+                 @carousel-annotation-padding
+                 @carousel-annotation-padding;
         transition: background-color @animation-default;
     }
 
     &:not(:last-child) {
-        margin-right: -@carousel-annotation-padding * 2 + @annotation-section-padding * 0.5;
+        margin-right: @annotation-section-padding * 0.5 -
+                      @carousel-annotation-padding * 2;
     }
 
     &:first-child {

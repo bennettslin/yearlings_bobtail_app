@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Make annotation card hiding better.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Be smarter about showing and hiding things in heightless lyric.`,
         workedHours: 0,
         neededHours: 2
@@ -31,12 +26,6 @@ module.exports = [
         taskName: `get verseObject from verseIndex or other index.`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    {
-        taskName: `Stagger carousel annotation show and hide to prevent weird jump.`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Accessed sections conflict because they're up at the same time.`,
