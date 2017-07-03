@@ -54,6 +54,7 @@ module.exports = {
                 },
                 eduardo: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, playing tennis, confident, manly'
                 }
             }

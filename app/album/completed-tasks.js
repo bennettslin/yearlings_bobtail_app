@@ -2236,5 +2236,10 @@ module.exports = [
         taskName: `Make annotation card hiding better.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Register drawing tasks in admin.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

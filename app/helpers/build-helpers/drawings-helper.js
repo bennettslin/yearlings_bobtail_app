@@ -102,11 +102,22 @@ export const adminFinaliseDrawings = (album) => {
                 album.songs[songIndex].actorsTodoCount = 0
                 album.songs[songIndex].actorsTotalCount = 0
             }
+            if (isNaN(album.songs[songIndex].actorsWorkedHours)) {
+                album.songs[songIndex].actorsWorkedHours = 0
+            }
+            if (isNaN(album.songs[songIndex].actorsNeededHours)) {
+                album.songs[songIndex].actorsNeededHours = 0
+            }
+
             if (roleObject.todo) {
                 album.songs[songIndex].actorsTodoCount++
+                album.songs[songIndex].actorsWorkedHours += (descriptionEntity.workedHours || 0)
+
+                // Assume four hours per drawing.
+                album.songs[songIndex].actorsNeededHours += (descriptionEntity.neededHours || 4)
+
             }
             album.songs[songIndex].actorsTotalCount++
-
         })
 
         actorsTodoCount += rolesTodoCount
@@ -132,21 +143,23 @@ export const adminFinaliseDrawings = (album) => {
 
 export const adminRegisterDrawingTasks = (song) => {
 
-    // Assume two hours per rough drawing.
-    const hoursPerRoughDrawing = 2,
-        drawingActorsHoursWorked = (song.actorsTotalCount - song.actorsTodoCount) * hoursPerRoughDrawing,
-        drawingActorsHoursTotal = song.actorsTotalCount * hoursPerRoughDrawing
+    const { actorsWorkedHours,
+            actorsNeededHours } = song
 
     if (!song.tasks) {
         song.tasks = []
     }
 
+    if (actorsNeededHours) {
+        song.tasks.push({
+            taskName: 'Drawings of actors',
+            workedHours: actorsWorkedHours,
+            neededHours: actorsNeededHours
+        })
+    }
+
     delete song.actorsTodoCount
     delete song.actorsTotalCount
-
-    song.tasks.push({
-        taskName: 'rough drawings of actors',
-        workedHours: drawingActorsHoursWorked,
-        neededHours: drawingActorsHoursTotal
-    })
+    delete song.actorsWorkedHours
+    delete song.actorsNeededHours
 }

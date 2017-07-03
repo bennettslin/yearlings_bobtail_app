@@ -88,6 +88,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 mara: {
@@ -108,10 +109,12 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 eduardo: {
                     todo: true,
+                    workedHours: 1,
                     description: 'standing'
                 }
             }

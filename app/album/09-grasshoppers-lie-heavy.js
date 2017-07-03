@@ -53,6 +53,7 @@ module.exports = {
                 eduardo: {
                     jogger: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side, jogging, spry'
                     }
                 }

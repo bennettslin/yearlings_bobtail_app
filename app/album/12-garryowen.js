@@ -47,6 +47,7 @@ module.exports = {
                 },
                 eduardo: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front, clutching at fist, laughing through pain'
                 }
             }

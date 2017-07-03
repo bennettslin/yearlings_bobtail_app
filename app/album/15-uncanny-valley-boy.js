@@ -120,6 +120,7 @@ module.exports = {
                 },
                 eduardo: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, cocky, confident'
                 },
                 sita: {
@@ -128,6 +129,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, cheerful, making a point'
                 }
             }

@@ -32,6 +32,7 @@ module.exports = {
                 khari: {
                     audienceMember: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side, holding beer'
                     }
                 },

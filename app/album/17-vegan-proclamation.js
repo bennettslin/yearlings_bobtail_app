@@ -29,6 +29,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, protective, judgmental'
                 }
             }
@@ -51,6 +52,7 @@ module.exports = {
                 },
                 eduardo: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, eager'
                 }
             }
