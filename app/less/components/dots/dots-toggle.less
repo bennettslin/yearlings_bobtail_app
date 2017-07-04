@@ -1,0 +1,32 @@
+@dots-toggle-padding: 24px;
+
+.dots-toggle-button-container {
+    position: relative;
+
+    padding: @dots-toggle-padding 0;
+}
+
+.dots-toggle-button-block {
+    width: 100%;
+    display: flex;
+    margin-left: 0;
+    box-sizing: border-box;
+
+    // Ensure toggle button is above its popup container and the carousel.
+    z-index: @centre-field-element-z-index;
+
+    padding-left: @app-thin-margin;
+    align-items: center;
+
+    transition: margin @animation-default;
+
+    .icon-canvas {
+        background-color: purple;
+    }
+}
+
+.overview-shown {
+    .dots-toggle-button-block {
+        margin-left: -@overview-toggle-width;
+    }
+}
