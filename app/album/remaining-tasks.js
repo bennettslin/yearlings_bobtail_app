@@ -4,6 +4,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
+    {
+        taskName: `Figure out seasons for each song.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     /**
      * Short bugs and tasks.

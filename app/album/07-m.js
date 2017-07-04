@@ -67,7 +67,8 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    description: 'sitting, eating burger, arm around Mara'
+                    workedHours: 1,
+                    description: 'sitting, eating burger, holding Mara\'s hand'
                 },
                 mara: {
                     todo: true,

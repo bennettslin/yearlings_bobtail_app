@@ -2241,5 +2241,10 @@ module.exports = [
         taskName: `Register drawing tasks in admin.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Figure out relative heights`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
