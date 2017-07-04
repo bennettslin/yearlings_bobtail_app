@@ -1,3 +1,16 @@
+@overview-mobile-bottom-margin: 5px;
+
+.tablet-width, .mini-width {
+    .overview-toggle-button-container,
+
+    // This applies only to overviews in songs, not logues.
+    .overview-popup-container .overview.popup-wrapper {
+
+        // Give some room to lyric section below.
+        margin-bottom: @overview-mobile-bottom-margin;
+    }
+}
+
 .tablet-width {
     .overview-toggle-button-container {
         height: @overview-toggle-tablet-height;

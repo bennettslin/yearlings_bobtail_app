@@ -18,11 +18,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
-    {
-        taskName: `Overview shadow hidden by lyric fade top.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     /**
      * Medium bugs and tasks.

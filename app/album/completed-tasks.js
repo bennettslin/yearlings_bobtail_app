@@ -2246,5 +2246,10 @@ module.exports = [
         taskName: `Figure out relative heights`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Overview shadow hidden by lyric fade top.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
