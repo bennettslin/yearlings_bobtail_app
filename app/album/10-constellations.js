@@ -33,6 +33,7 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, holding large bottle'
                 },
                 tomer: {
@@ -55,7 +56,8 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    description: 'side angle, zoned out'
+                    workedHours: 1,
+                    description: 'side angle, bored by conversation'
                 },
                 tomer: {
                     todo: true,
@@ -77,6 +79,7 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, arm around Ana'
                 },
                 tomer: {

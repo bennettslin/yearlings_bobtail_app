@@ -61,6 +61,7 @@ module.exports = {
                 wade: {
                     catholic: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side angle, walking, looking pious'
                     }
                 },

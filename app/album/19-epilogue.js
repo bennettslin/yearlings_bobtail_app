@@ -54,6 +54,7 @@ module.exports = {
                 howie: {
                     todo: true,
                     realHeight: `6'0"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 tomer: {
@@ -95,6 +96,7 @@ module.exports = {
                 wade: {
                     todo: true,
                     realHeight: `5'10"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 amy: {

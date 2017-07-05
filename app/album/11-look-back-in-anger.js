@@ -106,6 +106,7 @@ module.exports = {
                 wade: {
                     redheadFriend: {
                         todo: true,
+                        workedHours: 1,
                         description: 'front, looking at Bennett'
                     }
                 }
