@@ -162,12 +162,12 @@ module.exports = {
         },
         {
             taskName: `rough illustration synopsis`,
-            workedHours: 0,
+            workedHours: 1,
             neededHours: 1
         },
         {
             taskName: `review rough illustrations, including consolidating characters`,
-            workedHours: 0,
+            workedHours: 2,
             neededHours: 2
         },
     ]

@@ -27,11 +27,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Accessed sections conflict because they're up at the same time.`,
-        workedHours: 0,
-        neededHours: 5
-    },
 
     /**
      * Text colours.

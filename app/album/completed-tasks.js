@@ -2251,5 +2251,10 @@ module.exports = [
         taskName: `Overview shadow hidden by lyric fade top.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Accessed sections conflict because they're up at the same time.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
