@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Be smarter about showing and hiding things in heightless lyric.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Figure out seasons for each song.`,
         workedHours: 0,
         neededHours: 1

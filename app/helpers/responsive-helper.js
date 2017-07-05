@@ -148,12 +148,14 @@ export const getIsHeightlessLyricColumn = ({
     windowHeight,
     windowWidth
 }) => {
+
+    // It is only ever heightless in mobile.
     return getIsLyricExpandable(deviceIndex) &&
 
-        // It is never heightless when above the max...
+        // It is never heightless when above the max of 720...
         windowHeight < HEIGHTLESS_LYRIC_MAX &&
 
-        // It is always heightless when below the min...
+        // It is always heightless when below the min of 540...
         (windowHeight < HEIGHTLESS_LYRIC_MIN ||
 
         // Otherwise, it is heightless when width exceeds height.
