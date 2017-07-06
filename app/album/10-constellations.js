@@ -21,6 +21,29 @@ module.exports = {
     scenes: [
         {
             verseIndex: 0,
+            description: `Abbey Road`,
+            actors: {
+                bennett: {
+                    todo: true,
+                    description: 'side, walking'
+                },
+                ana: {
+                    todo: true,
+                    description: 'side, walking'
+                },
+                howie: {
+                    todo: true,
+                    workedHours: 1,
+                    description: 'side, walking'
+                },
+                tomer: {
+                    todo: true,
+                    description: 'side, walking'
+                }
+            }
+        },
+        {
+            verseIndex: 1,
             description: `The gang is at Walgreens, picking out cough syrup.`,
             actors: {
                 bennett: {
@@ -102,6 +125,7 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
+                    workedHours: 1,
                     description: 'driving car, alert, wigging out'
                 },
                 tomer: {
@@ -120,6 +144,7 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
+                    workedHours: 1,
                     description: 'downstairs, in agony'
                 }
             }
