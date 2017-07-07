@@ -38,6 +38,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, walking'
                 }
             }
@@ -61,6 +62,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, feigning superiority'
                 }
             }

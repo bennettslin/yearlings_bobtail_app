@@ -60,6 +60,7 @@ module.exports = {
                 tomer: {
                     todo: true,
                     realHeight: `5'6"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 sasha: {

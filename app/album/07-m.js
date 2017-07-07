@@ -97,6 +97,7 @@ module.exports = {
                 howie: {
                     maskedMan: {
                         todo: true,
+                        workedHours: 1,
                         description: 'resting against wall, checking time'
                     }
                 }
@@ -109,6 +110,13 @@ module.exports = {
                 bennett: {
                     todo: true,
                     description: 'side, inspired by sudden thought'
+                },
+                howie: {
+                    maskedMan: {
+                        todo: true,
+                        workedHours: 1,
+                        description: 'looking at Bennett'
+                    }
                 }
             }
         }
