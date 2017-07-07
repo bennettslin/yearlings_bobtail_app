@@ -52,6 +52,7 @@ module.exports = {
                 tomer: {
                     hipster: {
                         todo: true,
+                        workedHours: 1,
                         description: 'chatting with Bennett, gushing about music'
                     }
                 }

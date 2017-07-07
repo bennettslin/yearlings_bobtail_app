@@ -110,6 +110,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, squatting, pouring water on grave'
                 }
             }
@@ -133,6 +134,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
+                    workedHours: 1,
                     description: 'back angle, sleeping in car'
                 }
             }

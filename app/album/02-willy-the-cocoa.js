@@ -94,6 +94,7 @@ module.exports = {
                 tomer: {
                     gangbanger: {
                         todo: true,
+                        workedHours: 1,
                         description: 'pulling bottle from cart, about to strike, threatening'
                     }
                 }
