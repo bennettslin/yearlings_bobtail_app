@@ -86,6 +86,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, play fighting'
                 }
             }
