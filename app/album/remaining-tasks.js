@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Make all hips wider.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Figure out seasons for each song.`,
         workedHours: 0,
         neededHours: 1

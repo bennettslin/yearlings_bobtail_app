@@ -112,6 +112,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front angle, arms crossed, righteous'
                 },
                 miriam: {
