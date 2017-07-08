@@ -29,6 +29,7 @@ module.exports = {
                 willy: {
                     todo: true,
                     realHeight: `5'3"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 mother: {
