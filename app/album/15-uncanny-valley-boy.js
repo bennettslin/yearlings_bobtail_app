@@ -36,6 +36,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, accusatory'
                 },
                 sita: {
@@ -54,6 +55,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, gesturing to scene below'
                 },
                 preteenBennett: {
@@ -80,6 +82,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front angle, gesturing with blame'
                 },
                 sita: {
@@ -153,6 +156,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, knocked over'
                 },
                 sita: {
