@@ -49,6 +49,7 @@ module.exports = {
                 father: {
                     todo: true,
                     realHeight: `5'4"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 howie: {

@@ -64,6 +64,7 @@ module.exports = {
             actors: {
                 father: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, running, angry'
                 },
                 christopher: {
