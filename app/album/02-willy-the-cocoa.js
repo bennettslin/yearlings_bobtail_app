@@ -123,6 +123,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, merrily greeting trolls'
                 },
                 christopher: {
