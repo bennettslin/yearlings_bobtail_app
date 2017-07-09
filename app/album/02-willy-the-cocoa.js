@@ -24,6 +24,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, holding up a bottle, squinting'
                 }
             },
@@ -42,6 +43,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, ducking behind a pole, laughing merrily'
                 },
                 mother: {
