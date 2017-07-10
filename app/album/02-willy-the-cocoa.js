@@ -48,6 +48,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
+                    workedHours: 1,
                     description: 'squatting, righting chair, exasperated, concerned'
                 },
                 christopher: {
@@ -85,6 +86,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, defending himself, fearful'
                 },
                 howie: {
@@ -109,6 +111,7 @@ module.exports = {
             actors: {
                 mother: {
                     todo: true,
+                    workedHours: 1,
                     description: 'getting up to close curtain, trying to be reassuring'
                 },
                 preteenBennett: {

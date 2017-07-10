@@ -90,6 +90,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, angry, accusatory'
                 },
                 tristan: {

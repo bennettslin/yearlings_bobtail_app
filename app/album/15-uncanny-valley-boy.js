@@ -78,6 +78,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, gesturing with empathy'
                 },
                 father: {
@@ -111,6 +112,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front angle, wanting to console Bennett'
                 },
                 father: {
