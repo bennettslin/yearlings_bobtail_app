@@ -1,6 +1,15 @@
 .text-span {
     position: relative;
-    transition: color @animation-default, text-shadow @animation-default;
+    transition: color @animation-default,
+                text-shadow @animation-default;
 
     color: @lyric-text-colour;
+}
+
+.annotation-section, .lyric-section {
+
+    // Text span and portals block should be in front of dots block.
+    .text-span, .portals-block {
+        z-index: @text-span-z-index;
+    }
 }
