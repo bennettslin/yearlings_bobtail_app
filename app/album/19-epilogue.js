@@ -9,6 +9,7 @@ module.exports = {
                 oldBennett: {
                     todo: true,
                     realHeight: `5'4"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 youngAnita: {
@@ -90,6 +91,7 @@ module.exports = {
                 bennett: {
                     todo: true,
                     realHeight: `5'4"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 catherine: {
