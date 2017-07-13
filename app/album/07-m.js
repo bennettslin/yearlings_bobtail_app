@@ -66,6 +66,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'sitting, silently eating burger, uncomfortable'
                 },
                 jacob: {
@@ -89,6 +90,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, walking, sulking with head down'
                 },
                 miriam: {
@@ -112,6 +114,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, inspired by sudden thought'
                 },
                 howie: {
