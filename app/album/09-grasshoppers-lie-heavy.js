@@ -50,6 +50,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, walking, mopey'
                 },
                 eduardo: {
@@ -67,6 +68,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'back, punching code, surprised'
                 },
                 sita: {
@@ -81,6 +83,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front, opening gate, silent, attentive'
                 },
                 sita: {
@@ -95,6 +98,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front, turning on light, smiling'
                 },
                 sita: {
@@ -109,6 +113,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'sitting, eyes closed, falling asleep'
                 }
             }
