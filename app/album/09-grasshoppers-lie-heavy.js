@@ -124,6 +124,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'sitting, abruptly woken'
                 },
                 sita: {

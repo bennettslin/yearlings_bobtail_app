@@ -25,6 +25,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, walking'
                 },
                 ana: {
@@ -49,6 +50,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, holding body and gesturing its smallness'
                 },
                 ana: {
@@ -73,6 +75,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, blathering'
                 },
                 ana: {
@@ -97,6 +100,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front, looking upwards, inspired'
                 },
                 ana: {
@@ -121,6 +125,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, sleeping in car'
                 },
                 ana: {
@@ -145,6 +150,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'lying on couch, watching TV, alert'
                 },
                 howie: {
