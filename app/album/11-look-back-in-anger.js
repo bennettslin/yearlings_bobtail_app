@@ -24,6 +24,10 @@ module.exports = {
                     workedHours: 1,
                     description: 'side angle, playing banjo, emotive'
                 },
+                ana: {
+                    todo: true,
+                    description: 'side angle, playing bass, looking cool'
+                },
                 tomer: {
                     hipster: {
                         todo: true,
