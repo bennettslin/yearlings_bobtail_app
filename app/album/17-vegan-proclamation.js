@@ -21,6 +21,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, slumped over, despondent'
                 },
                 sita: {
@@ -40,6 +41,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'back, looking to side, annoyed'
                 },
                 miriam: {
