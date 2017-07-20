@@ -66,6 +66,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'back angle, confusedly being rushed'
                 },
                 sita: {
@@ -94,6 +95,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, old, lying, dying'
                 }
             }
