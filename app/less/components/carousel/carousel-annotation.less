@@ -1,0 +1,47 @@
+.carousel-annotations-block {
+    display: flex;
+    align-items: center;
+    // background-color: #ffe;
+}
+
+.carousel-annotation {
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    min-width: @carousel-annotation-hidden-padding;
+    transition: min-width @animation-default;
+
+    .annotation-section {
+        margin: @carousel-annotation-small-padding
+                @annotation-section-padding;
+        padding: @carousel-annotation-small-padding
+                 @carousel-annotation-padding
+                 @carousel-annotation-padding;
+        transition: background-color @animation-default;
+    }
+
+    &:not(:last-child) {
+        margin-right: @annotation-section-padding * 0.5 -
+                      @carousel-annotation-padding * 2;
+    }
+
+    &:first-child {
+        padding-left: @carousel-toggle-laptop-length;
+    }
+}
+
+/**
+ * Override if hidden by single lyric column. Using specific selectors to
+ * override styles for mini width as well.
+ */
+.dom-manager.is-song.show-only-right .carousel-annotation.in-column-left,
+.dom-manager.is-song.show-only-left .carousel-annotation.in-column-right {
+    min-width: @carousel-annotation-hidden-padding;
+
+    .annotation-title-block {
+        max-height: 0;
+    }
+}

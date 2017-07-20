@@ -1,0 +1,29 @@
+/**
+ * I'm not happy with how complicated this styling became, but it was needed
+ * to ensure that the carousel remains under all other interactable elements in
+ * the centre field.
+ */
+
+@carousel-toggle-laptop-length: @overview-toggle-laptop-width;
+@carousel-toggle-tablet-length: @overview-toggle-tablet-width;
+@carousel-toggle-mini-length: @overview-toggle-mini-width;
+
+// This isn't ideal, but I don't know where the extra 2 pixels are coming from.
+@carousel-toggle-tablet-length: @overview-toggle-tablet-width - 2px;
+@carousel-toggle-mini-length: @overview-toggle-mini-width - 2px;
+
+@carousel-height-variable: @carousel-toggle-laptop-length + @dots-overview-padding * 2 + @nav-height;
+
+// NOTE: I'm not sure how this was calculated...
+@carousel-position-variable: @carousel-height-variable + @dots-overview-padding * 2 + @nav-height * 2;
+
+@carousel-tablet-variable: @carousel-toggle-tablet-length * 2;
+@carousel-mini-variable: @carousel-toggle-mini-length * 2;
+
+@carousel-nav-buttons-block-width: @app-large-icon-diameter * 2 + @app-thin-margin * 3;
+@carousel-nav-buttons-block-tablet-width: @app-tablet-large-icon-diameter * 2 + @app-thin-margin * 3;
+@carousel-nav-buttons-block-mini-width: @app-mini-large-icon-diameter * 2 + @app-thin-margin * 3;
+
+@carousel-annotation-small-padding: 10px;
+@carousel-annotation-padding: 16px;
+@carousel-annotation-hidden-padding: @carousel-annotation-padding * 2 - @annotation-section-padding * 0.5;

@@ -1,66 +1,152 @@
-.popup-overlay {
-    position: fixed;
+.popup-field, .popup-field .subfield, .popup-transition-group {
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #333;
-    opacity: 0.75;
-    z-index: @popup-overlay-z-index;
 
-    transition: opacity @animation-default;
-}
-
-.overlay-hidden {
-    .popup-overlay {
-        opacity: 0;
-
-        // TODO: pointer-events isn't supported in older browsers. Find other way to prevent overlay from blocking events.
-        pointer-events: none;
+    &.annotation-subfield {
+        height: auto;
     }
 }
 
-@popup-transition-duration-in: @animation-slow;
-@popup-transition-duration-out: @animation-fast;
+.popup-field {
+    top: 0;
+    left: 0;
 
-.popup-transition-group {
+    .subfield {
+        top: 0;
+        left: 0;
+    }
+}
 
-    &.annotation, &.overview, &.title {
-        .popup-wrapper {
-            animation: bounceOut @popup-transition-duration-out;
+.is-mobile {
+    .popup-field {
+        .subfield {
+            &.annotation-subfield {
+                top: auto;
+                bottom: 0;
+            }
         }
+    }
+}
 
-        &.visible {
-            .popup-wrapper {
-                animation: bounceIn @popup-transition-duration-in;
+.popup-wrapper {
+    position: relative;
+
+    z-index: @popup-overlay-content-z-index;
+
+    &.wiki, &.score {
+        width: ~"calc(100% - @{full-subfield-margin} * 2.5)";
+        max-width: @laptop-max-width;
+
+        height: ~"calc(100% - @{full-subfield-margin} * 2)";
+    }
+
+    &.annotation, &.title {
+        width: @popup-annotation-width;
+        max-width: @popup-annotation-width;
+    }
+}
+
+// Multiplier is .9, just like for lyric text in mini.
+.mini-width {
+    .popup-wrapper {
+        &.annotation, &.title {
+            // width: @mini-popup-annotation-width;
+            max-width: @mini-popup-annotation-width;
+        }
+    }
+}
+
+// Multiplier is .98, just like for lyric text in phone.
+.phone-width {
+    .popup-wrapper {
+        &.annotation, &.title {
+            // width: @phone-popup-annotation-width;
+            max-width: @phone-popup-annotation-width;
+        }
+    }
+}
+
+.popup-content-wrapper {
+    box-shadow: @popup-box-shadow;
+    background-color: @odd-verse-colour;
+    position: relative;
+
+    &:not(.overview) {
+        width: 100%;
+        height: 100%;
+    }
+
+    &.annotation, &.title {
+        padding: 20px @popup-content-side-padding;
+    }
+
+    &.title {
+        min-height: 200px;
+    }
+}
+
+.is-mobile {
+
+    &.phone-width, &.side-annotation {
+
+        .popup-button-block {
+            &.side-position {
+                // Override default styling.
+                transform: none;
+                top: auto;
+                bottom: -@app-icon-diameter * @popup-button-multiplier;
+            }
+
+            &.previous-position {
+                left: @app-icon-diameter * 0.2;
+            }
+
+            &.next-position {
+                right: @app-icon-diameter * 0.2;
             }
         }
     }
 
-    &.wiki, &.audio {
+    &:not(.tablet-width) {
         .popup-wrapper {
-            animation: shrinkOut @popup-transition-duration-out;
-        }
+            &.wiki, &.score {
+                width: ~"calc(100% - @{mini-full-subfield-margin} * 2)";
+                height: ~"calc(100% - @{app-icon-diameter} * 2)";
+            }
 
-        &.visible {
-            .popup-wrapper {
-                animation: shrinkIn @popup-transition-duration-in;
+            .popup-button-block {
+                &.close-position {
+                    display: none;
+                }
             }
         }
-    }
 
-    // Including annotation is possible because its height is auto, not 100%.
-    &.annotation, &.audio, &.score, &.title, &.wiki {
-        z-index: @popup-overlay-content-z-index;
-    }
+        &.phone-width {
+            .popup-wrapper {
+                &.wiki, &.score, &.annotation, &.title {
+                    // Make side margin in phone just that much thinner.
+                    width: ~"calc(100% - @{mini-full-subfield-margin})";
+                }
+            }
 
-    transition: opacity @popup-transition-duration-out;
-    opacity: 0;
+            &.heightless-lyric {
+                .popup-wrapper {
+                    &.wiki, &.score {
+                        height: ~"calc(100% - @{mini-full-subfield-margin})";
+                    }
+                }
+            }
+        }
 
-    &.visible {
-        transition: opacity @popup-transition-duration-in;
-        opacity: 1;
-    }
-
-    &.not-displayed {
-        z-index: @popup-container-z-index;
+        // Reverse width and height when width is greater than height.
+        &.heightless-lyric {
+            .popup-wrapper {
+                &.wiki, &.score {
+                    width: ~"calc(100% - @{app-icon-diameter} * 2)";
+                    height: ~"calc(100% - @{mini-full-subfield-margin} * 2)";
+                }
+            }
+        }
     }
 }

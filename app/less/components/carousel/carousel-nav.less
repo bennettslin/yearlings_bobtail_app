@@ -1,0 +1,32 @@
+.carousel-nav-buttons-block {
+    position: absolute;
+    bottom: -@app-large-icon-diameter - @app-thin-margin * 2;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: @app-thin-margin;
+
+    transition: bottom @animation-default;
+
+    background-color: orange;
+
+    .button:first-child {
+        margin-right: @app-thin-margin;
+    }
+
+    .button {
+        z-index: @carousel-nav-button-z-index;
+    }
+
+    .icon-canvas {
+        background-color: #d84;
+    }
+}
+
+.is-song {
+    &.annotation-shown.carousel-expanded {
+        .carousel-nav-buttons-block {
+            bottom: 0;
+        }
+    }
+}

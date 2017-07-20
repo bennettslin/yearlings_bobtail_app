@@ -1,0 +1,161 @@
+.carousel {
+    position: absolute;
+    left: 0;
+    bottom: calc(~"-100% - @{carousel-position-variable}");
+    width: 100vw;
+    height: calc(~"100% + @{carousel-height-variable}");
+    z-index: @carousel-z-index;
+    transition: bottom @animation-default;
+
+    // background-color: rgba(250, 225, 200, 0.5);
+}
+
+.is-song {
+    &.carousel-expanded {
+        .carousel {
+            bottom: -@carousel-height-variable;
+        }
+    }
+}
+
+.carousel-scroll {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-x: scroll;
+    height: 100%;
+}
+
+.monitor-width {
+
+    .carousel-nav-buttons-block {
+        right: @golden-cord-width;
+    }
+
+    .carousel-annotation {
+        &:last-child {
+            padding-right: @golden-cord-width + @carousel-nav-buttons-block-width;
+        }
+    }
+}
+
+.laptop-width {
+
+    .carousel-nav-buttons-block {
+        right: @uncanny-valley-width;
+    }
+
+    .carousel-annotation {
+        &:last-child {
+            padding-right: @uncanny-valley-width + @carousel-nav-buttons-block-width;
+        }
+    }
+}
+
+.is-mobile {
+
+    .carousel-toggle-button-block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        border-radius: 0 0 @nav-border-radius 0;
+        transition: left @animation-default;
+    }
+
+    .carousel-nav-buttons-block {
+        top: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
+        bottom: auto;
+
+        transition: top @animation-default;
+    }
+
+    .carousel {
+        bottom: auto;
+        top: calc(~"-100% - @{carousel-tablet-variable}");
+        height: calc(~"100% + @{carousel-toggle-tablet-length}");
+
+        transition: top @animation-default;
+    }
+
+    .carousel-scroll {
+        flex-direction: column;
+    }
+
+    &.is-song {
+        &.carousel-expanded {
+            .carousel {
+                top: -@carousel-toggle-tablet-length;
+            }
+
+            &.annotation-shown {
+                .carousel-nav-buttons-block {
+                    bottom: auto;
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    &.lyric-expanded, &.heightless-lyric, &.nav-expanded, &.is-logue {
+        .carousel-toggle-button-block {
+            left: -@overview-toggle-tablet-width;
+        }
+    }
+
+    .carousel-annotations-block {
+        align-items: flex-start;
+    }
+
+    .carousel-annotation {
+        flex-direction: column;
+
+        &:first-child {
+            padding-left: @carousel-toggle-tablet-length;
+        }
+
+        &:last-child {
+            padding-right: @carousel-nav-buttons-block-tablet-width;
+        }
+    }
+
+    &.mini-width {
+
+        .carousel-nav-buttons-block {
+            top: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
+            bottom: auto;
+
+            transition: top @animation-default;
+        }
+
+        .carousel {
+            top: calc(~"-100% - @{carousel-mini-variable}");
+            height: calc(~"100% + @{carousel-toggle-mini-length}");
+        }
+
+        &.is-song {
+            &.carousel-expanded {
+                .carousel {
+                    top: -@carousel-toggle-mini-length;
+                }
+            }
+        }
+
+        &.lyric-expanded, &.heightless-lyric, &.nav-expanded, &.is-logue {
+            .carousel-toggle-button-block {
+                left: -@overview-toggle-mini-width;
+            }
+        }
+
+        .carousel-annotation {
+
+            &:first-child {
+                padding-left: @carousel-toggle-mini-length;
+            }
+
+            &:last-child {
+                padding-right: @carousel-nav-buttons-block-mini-width;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,207 @@
+@full-vw: 100vw;
+
+// These values *must* be the same in js.
+@nav-book-padding: @app-thin-margin; // Left and right padding for each book.
+@nav-last-title-margin: 50px; // Margin to accommodate last title.
+
+@double-icons: 20;
+@single-icons: 11;
+
+@double-units: 26;
+@single-units: 16;
+
+@medium-unit: 2;
+@large-unit: 3;
+
+@medium-double-units: @medium-unit / @double-units;
+@large-double-units: @large-unit / @double-units;
+
+@medium-single-units: @medium-unit / @single-units;
+@large-single-units: @large-unit / @single-units;
+
+/************************************************
+ * MONITOR WIDTH: double, double shrink, single *
+ ************************************************/
+
+/**
+ * Total width of wide desktop nav field is:
+ * 20 * @app-icon-diameter +
+ * 1 * @app-large-icon-diameter
+ * 10 * @nav-book-padding +
+ * 1 * @nav-last-title-margin
+ *
+ * Monitor adds Golden Cord lyric column width.
+ *
+ * Margins are as follows:
+ * nav toggle right margin: 1 * 3 units
+ * between books margin: 1 * 3 units
+ * between logue and book margin: 2 * 2 units
+ * between buttons: 16 * 1 unit
+ * Total units: 26 units
+ */
+
+@monitor-double-unit-constant: @golden-cord-width + @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin;
+
+@monitor-small-unit: ~"calc((@{full-vw} - @{monitor-double-unit-constant}) / @{double-units})";
+@monitor-large-unit: ~"calc((@{full-vw} - @{monitor-double-unit-constant}) * @{large-double-units})";
+
+@monitor-book-offset-constant: -@medium-double-units * (@golden-cord-width + @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @nav-book-padding;
+
+@monitor-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{monitor-book-offset-constant})";
+
+/**
+ * Breakpoint to start shrinking icon is when unit width is 1px.
+ *
+ * Each unit is a pixel. There are 26 units, so 26 pixels.
+ * To be divided amongst 20 icons.
+ */
+
+@monitor-shrink-icon-constant: @golden-cord-width + 10 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units * 1px;
+
+@monitor-shrink-icon: ~"calc((@{full-vw} - @{monitor-shrink-icon-constant}) / @{double-icons})";
+
+@monitor-shrink-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (@golden-cord-width + 10 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units) / @double-icons;
+
+@monitor-shrink-book-offset: ~"calc(@{full-vw} / @{double-icons} + @{monitor-shrink-book-offset-constant})";
+
+@monitor-shrink-toggle-width-constant: @nav-book-padding * 2 - (@golden-cord-width + 10 * @nav-book-padding + @nav-last-title-margin + @double-units * 1px) / @double-icons;
+
+@monitor-shrink-toggle-width: ~"calc(@{full-vw} / @{double-icons} + @{monitor-shrink-toggle-width-constant})";
+
+/**
+ * Breakpoint to switch to single column is when icon width is 36px.
+ *
+ * Total width of single column desktop nav field is:
+ * 11 * @app-icon-diameter +
+ * 1 * @app-large-icon-diameter
+ * 8 * @nav-book-padding +
+ * 1 * @nav-last-title-margin
+ *
+ * Margins are as follows:
+ * nav toggle right margin: 1 * 3 units
+ * between books margin: 1 * 3 units
+ * between logue and book margin: 1 * 2 units
+ * between buttons: 8 * 1 unit
+ * Total units: 16 units
+ */
+
+@monitor-single-unit-constant: @golden-cord-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+
+@monitor-single-small: ~"calc((@{full-vw} - @{monitor-single-unit-constant}) / @{single-units})";
+@monitor-single-large: ~"calc((@{full-vw} - @{monitor-single-unit-constant}) * @{large-single-units})";
+
+@monitor-single-book-offset-constant: -@medium-single-units * (@golden-cord-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @nav-book-padding;
+
+@monitor-single-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{monitor-single-book-offset-constant})";
+
+/***************************************
+ * LAPTOP WIDTH: single, single shrink *
+ ***************************************/
+
+/**
+ * Monitor does not need to shrink icon for single column before screen width
+ * switches to laptop at 1400px.
+ *
+ * Laptop width is too narrow for double column, so begins with single column.
+ * Laptop follows same equations, with Uncanny Valley lyric column width.
+ */
+
+@laptop-unit-constant: @uncanny-valley-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @nav-book-padding + @nav-last-title-margin;
+
+@laptop-small: ~"calc((@{full-vw} - @{laptop-unit-constant}) / @{single-units})";
+@laptop-large: ~"calc((@{full-vw} - @{laptop-unit-constant}) * @{large-single-units})";
+
+@laptop-book-offset-constant: -@medium-single-units * (@uncanny-valley-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @nav-book-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @nav-book-padding;
+
+@laptop-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{laptop-book-offset-constant})";
+
+/**
+ * Breakpoint to start shrinking icon is when unit width is 1px.
+ *
+ * In single column, there are 16 units, so 16 pixels.
+ * To be divided amongst 11 icons.
+ */
+
+@laptop-shrink-icon-constant: @uncanny-valley-width + 8 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units * 1px;
+
+@laptop-shrink-icon: ~"calc((@{full-vw} - @{laptop-shrink-icon-constant}) / @{single-icons})";
+
+@laptop-shrink-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (@uncanny-valley-width + 8 * @nav-book-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units) / @single-icons;
+
+@laptop-shrink-book-offset: ~"calc(@{full-vw} / @{single-icons} + @{laptop-shrink-book-offset-constant})";
+
+@laptop-shrink-toggle-width-constant: @nav-book-padding * 2 - (@uncanny-valley-width + 8 * @nav-book-padding + @nav-last-title-margin + @single-units * 1px) / @single-icons;
+
+@laptop-shrink-toggle-width: ~"calc(@{full-vw} / @{single-icons} + @{laptop-shrink-toggle-width-constant})";
+
+/***********************************************
+ * TABLET WIDTH: double, double shrink, single *
+ ***********************************************/
+
+/**
+ * Tablet/mini follows the same equations, without a lyric column width, and
+ * without nav last title margin. Switch at 1100px.
+ */
+
+@tablet-double-unit-constant: @double-icons * @app-icon-diameter + @app-tablet-large-icon-diameter + 10 * @nav-book-padding;
+
+@tablet-small-unit: ~"calc((@{full-vw} - @{tablet-double-unit-constant}) / @{double-units})";
+@tablet-large-unit: ~"calc((@{full-vw} - @{tablet-double-unit-constant}) * @{large-double-units})";
+
+@tablet-book-offset-constant: -@medium-double-units * (@double-icons * @app-icon-diameter + @app-tablet-large-icon-diameter + 10 * @nav-book-padding) + @app-icon-diameter + 2 * @nav-book-padding;
+
+@tablet-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{tablet-book-offset-constant})";
+
+/**
+ * Breakpoint to start shrinking icon is when unit width is 1px.
+ */
+
+@tablet-shrink-icon-constant: 10 * @nav-book-padding + @app-tablet-large-icon-diameter + @double-units * 1px;
+
+@tablet-shrink-icon: ~"calc((@{full-vw} - @{tablet-shrink-icon-constant}) / @{double-icons})";
+
+@tablet-shrink-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (10 * @nav-book-padding + @app-tablet-large-icon-diameter + @double-units) / @double-icons;
+
+@tablet-shrink-book-offset: ~"calc(@{full-vw} / @{double-icons} + @{tablet-shrink-book-offset-constant})";
+
+/**
+ * Breakpoint to switch to single column is when icon width is 36px.
+ */
+
+@tablet-single-unit-constant: @single-icons * @app-icon-diameter + @app-tablet-large-icon-diameter + 8 * @nav-book-padding;
+
+@tablet-single-small: ~"calc((@{full-vw} - @{tablet-single-unit-constant}) / @{single-units})";
+@tablet-single-large: ~"calc((@{full-vw} - @{tablet-single-unit-constant}) * @{large-single-units})";
+
+@tablet-single-book-offset-constant: -@medium-single-units * (@single-icons * @app-icon-diameter + @app-tablet-large-icon-diameter + 10 * @nav-book-padding) + @app-icon-diameter + 2 * @nav-book-padding;
+
+@tablet-single-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{tablet-single-book-offset-constant})";
+
+/*************************************
+ * MINI WIDTH: single, single shrink *
+ *************************************/
+
+@mini-unit-constant: @single-icons * @app-icon-diameter + @app-mini-large-icon-diameter + 8 * @nav-book-padding;
+
+@mini-small: ~"calc((@{full-vw} - @{mini-unit-constant}) / @{single-units})";
+@mini-large: ~"calc((@{full-vw} - @{mini-unit-constant}) * @{large-single-units})";
+
+@mini-book-offset-constant: -@medium-single-units * (@single-icons * @app-icon-diameter + @app-mini-large-icon-diameter + 10 * @nav-book-padding) + @app-icon-diameter + 2 * @nav-book-padding;
+
+@mini-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{mini-book-offset-constant})";
+
+/**
+ * Breakpoint to start shrinking icon is when unit width is 1px.
+ */
+
+@mini-shrink-icon-constant: 8 * @nav-book-padding + @app-mini-large-icon-diameter + @single-units * 1px;
+
+@mini-shrink-icon: ~"calc((@{full-vw} - @{mini-shrink-icon-constant}) / @{single-icons})";
+
+@mini-shrink-book-offset-constant: @medium-unit * 1px + @nav-book-padding * 2 - (8 * @nav-book-padding + @app-mini-large-icon-diameter + @single-units) / @single-icons;
+
+@mini-shrink-book-offset: ~"calc(@{full-vw} / @{single-icons} + @{mini-shrink-book-offset-constant})";
+
+@nav-toggle-width: @app-large-icon-diameter + @nav-book-padding * 2;
+@tablet-nav-toggle-width: @app-tablet-large-icon-diameter + @nav-book-padding * 2;
+@mini-nav-toggle-width: @app-mini-large-icon-diameter + @nav-book-padding * 2;
