@@ -78,7 +78,8 @@ export const adminFinaliseDrawings = (album) => {
                     sceneIndex,
                     descriptionEntity } = role,
                 roleObject = { songIndex,
-                               sceneIndex }
+                               sceneIndex,
+                               workedHours: descriptionEntity.workedHours }
 
             // This will eventually always be an object.
             if (typeof descriptionEntity === 'object') {

@@ -44,7 +44,7 @@ module.exports = {
                 willy: {
                     todo: true,
                     workedHours: 1,
-                    description: 'side angle, ducking behind a pole, laughing merrily'
+                    description: 'side, ducking behind post, chuckling'
                 },
                 mother: {
                     todo: true,

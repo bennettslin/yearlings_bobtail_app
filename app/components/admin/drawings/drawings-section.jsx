@@ -77,9 +77,10 @@ const DrawingsSectionView = ({
                                             <div className="character-info-row">
                                                 {characters[characterName].map((character, index) => {
                                                     const { songIndex,
-                                                        sceneIndex,
-                                                        description,
-                                                        todo } = character
+                                                            sceneIndex,
+                                                            workedHours,
+                                                            description,
+                                                            todo } = character
 
                                                     return (
                                                         <div
@@ -88,6 +89,7 @@ const DrawingsSectionView = ({
                                                         >
                                                             <div className="role-info song-index-column">{songIndex}</div>
                                                             <div className="role-info scene-index-column">{sceneIndex}</div>
+                                                            <div className="role-info worked-hours-column">{workedHours ? workedHours : 0}</div>
                                                             <div className="role-info description-column">{description}</div>
                                                         </div>
                                                     )
