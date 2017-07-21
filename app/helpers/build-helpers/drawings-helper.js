@@ -86,8 +86,14 @@ export const adminFinaliseDrawings = (album) => {
                 roleObject.todo = descriptionEntity.todo
                 roleObject.description = descriptionEntity.description
 
+                /**
+                 * FIXME: Keep modifying this conditional so that it reflects
+                 * the latest task. Currently, the task is skeletons.
+                 */
                 if (roleObject.todo) {
-                    rolesTodoCount++
+                    if (descriptionEntity.workedHours !== 1) {
+                        rolesTodoCount++
+                    }
                 }
             }
 
