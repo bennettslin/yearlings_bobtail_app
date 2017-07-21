@@ -41,11 +41,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Organise box shadow constants.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     /**
      * Audio and slider stuff.

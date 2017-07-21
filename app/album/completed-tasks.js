@@ -2261,5 +2261,10 @@ module.exports = [
         taskName: `Be smarter about showing and hiding things in heightless lyric. (I'm not sure what I meant by this originally. At present, it doesn't seem necessary.)`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Organise box shadow constants.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

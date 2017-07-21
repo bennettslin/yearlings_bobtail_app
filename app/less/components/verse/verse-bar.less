@@ -29,6 +29,10 @@
         top: @verse-bar-hidden-offset;
         margin-top: @verse-bar-margin;
         transition: top @animation-fast, transform @animation-fast;
+
+        .verse-bar {
+            box-shadow: @verse-bar-above-box-shadow;
+        }
     }
 
     &.below {
@@ -37,7 +41,7 @@
         transition: bottom @animation-fast, transform @animation-fast;
 
         .verse-bar {
-            box-shadow: 0 0 12px 5px @darker-box-shadow-colour;
+            box-shadow: @verse-bar-below-box-shadow;
         }
     }
 
@@ -90,8 +94,6 @@
     padding: 10px 15px;
     border-radius: 10px;
     cursor: pointer;
-
-    box-shadow: 0 3px 12px 5px @darker-box-shadow-colour;
 
     .text-span {
         z-index: @verse-bar-text-z-index;
