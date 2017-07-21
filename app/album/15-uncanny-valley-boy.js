@@ -138,7 +138,6 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 1,
                     description: 'side angle, cheerful, making a point'
                 }
             }
