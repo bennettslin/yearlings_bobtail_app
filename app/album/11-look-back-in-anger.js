@@ -97,12 +97,13 @@ module.exports = {
                 },
                 stephanie: {
                     todo: true,
-                    description: 'side angle, looking at Bennett'
+                    workedHours: 1,
+                    description: 'side angle, talking to Wade'
                 },
                 wade: {
                     todo: true,
                     workedHours: 1,
-                    description: 'front, looking at Bennett'
+                    description: 'front, talking to Stephanie'
                 }
             }
         },
