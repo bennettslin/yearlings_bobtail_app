@@ -24,6 +24,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
+                        workedHours: 1,
                         description: 'sitting on floor, back turned, holding guitar'
                     }
                 }

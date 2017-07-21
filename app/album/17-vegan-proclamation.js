@@ -101,6 +101,7 @@ module.exports = {
                 stephanie: {
                     demonstrator: {
                         todo: true,
+                        workedHours: 1,
                         description: 'standing, demonstrating'
                     }
                 },

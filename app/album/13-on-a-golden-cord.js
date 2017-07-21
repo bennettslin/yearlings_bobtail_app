@@ -43,6 +43,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
+                        workedHours: 1,
                         description: 'back, shaking fist at sky'
                     }
                 },

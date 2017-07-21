@@ -103,7 +103,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        description: 'making out with Miriam'
+                        description: 'making out with Miriam, holding melodica'
                     }
                 }
             }
@@ -115,7 +115,14 @@ module.exports = {
                 bennett: {
                     todo: true,
                     workedHours: 1,
-                    description: 'side, squatting, recording, dejected'
+                    description: 'concerned'
+                },
+                stephanie: {
+                    bennett: {
+                        todo: true,
+                        workedHours: 1,
+                        description: 'side, squatting, recording, dejected'
+                    }
                 },
                 mother: {
                     todo: true,
