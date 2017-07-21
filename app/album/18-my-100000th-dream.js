@@ -22,9 +22,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, walking, pleasantly confused'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side angle, opening a door, pleasantly surprised'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side angle, opening a door, pleasantly surprised'
+                    }
                 }
             }
         },
@@ -36,9 +38,11 @@ module.exports = {
                     todo: true,
                     description: 'sitting cross-legged, playing recorder, content'
                 },
-                sita: {
-                    todo: true,
-                    description: 'resting on Bennett, content'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'resting on Bennett, content'
+                    }
                 },
                 catherine: {
                     gopi: {
@@ -69,9 +73,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'back angle, confusedly being rushed'
                 },
-                sita: {
-                    todo: true,
-                    description: 'front, urging'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'front, urging'
+                    }
                 }
             }
         },
@@ -83,9 +89,11 @@ module.exports = {
                     todo: true,
                     description: 'front angle, reacting to threat'
                 },
-                sita: {
-                    todo: true,
-                    description: 'front angle, gesturing to grave'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'front angle, gesturing to grave'
+                    }
                 }
             }
         },

@@ -88,7 +88,7 @@ module.exports = {
                 },
                 catherine: {
                     todo: true,
-                    description: 'walking forward, looking at Bennett, confused and curious'
+                    description: 'walking forward, confused and curious at Bennett'
                 }
             }
         }

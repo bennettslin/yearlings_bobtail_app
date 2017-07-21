@@ -136,7 +136,7 @@ module.exports = {
                     realHeight: `5'1"`,
                     description: 'standing'
                 },
-                sita: {
+                liz: {
                     todo: true,
                     realHeight: `4'9"`,
                     description: 'standing'
@@ -147,7 +147,7 @@ module.exports = {
                     workedHours: 1,
                     description: 'standing'
                 },
-                eduardo: {
+                nestor: {
                     todo: true,
                     realHeight: `5'7"`,
                     workedHours: 1,

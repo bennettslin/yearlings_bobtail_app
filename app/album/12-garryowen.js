@@ -24,9 +24,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'front, putting on jacket, cold, distant'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, shivering, pleading'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, shivering, pleading'
+                    }
                 }
             }
         },
@@ -48,7 +50,7 @@ module.exports = {
                     todo: true,
                     description: 'side, holding paper bottle, laughing'
                 },
-                eduardo: {
+                nestor: {
                     todo: true,
                     workedHours: 1,
                     description: 'front, clutching at fist, laughing through pain'
@@ -64,9 +66,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'on couch, ignoring Sita, drunk'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, naked, making Bennett touch her breast'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, naked, making Bennett touch her breast'
+                    }
                 }
             }
         },
@@ -103,9 +107,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'standing, cold, looking away'
                 },
-                sita: {
-                    todo: true,
-                    description: 'crumbled on floor, begging, sobbing'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'crumbled on floor, begging, sobbing'
+                    }
                 }
             }
         }

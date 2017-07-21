@@ -38,9 +38,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, handing lancet pen, exuberant'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, taken aback, politely friendly'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, taken aback, politely friendly'
+                    }
                 }
             }
         },
@@ -53,7 +55,7 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, walking, mopey'
                 },
-                eduardo: {
+                nestor: {
                     jogger: {
                         todo: true,
                         workedHours: 1,
@@ -71,9 +73,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'back, punching code, surprised'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, hesitantly greeting'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, hesitantly greeting'
+                    }
                 }
             }
         },
@@ -86,9 +90,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'front, opening gate, silent, attentive'
                 },
-                sita: {
-                    todo: true,
-                    description: 'front, chatting, more comfortable'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'front, chatting, more comfortable'
+                    }
                 }
             }
         },
@@ -101,9 +107,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'front, turning on light, smiling'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, surprised, embarrassed smile'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, surprised, embarrassed smile'
+                    }
                 }
             }
         },
@@ -127,9 +135,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'sitting, abruptly woken'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, reaching for purse, cheeky'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, reaching for purse, cheeky'
+                    }
                 }
             }
         },
@@ -141,9 +151,11 @@ module.exports = {
                     todo: true,
                     description: 'front, sitting on bed, unsure'
                 },
-                sita: {
-                    todo: true,
-                    description: 'front, sitting on bed, irreverently reassuring'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'front, sitting on bed, irreverently reassuring'
+                    }
                 }
             }
         },
@@ -155,9 +167,11 @@ module.exports = {
                     todo: true,
                     description: 'side, about to stick it in'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, spread open'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, spread open'
+                    }
                 }
             }
         },
@@ -169,9 +183,11 @@ module.exports = {
                     todo: true,
                     description: 'lying down, warm, content, slightly worried'
                 },
-                sita: {
-                    todo: true,
-                    description: 'lying down, warm, content, slightly worried'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'lying down, warm, content, slightly worried'
+                    }
                 }
             }
         }

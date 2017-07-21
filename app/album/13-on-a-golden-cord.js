@@ -23,9 +23,11 @@ module.exports = {
                     todo: true,
                     description: 'side angle, disingenuously consoling'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side angle, returning bracelet, fighting tears'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side angle, returning bracelet, fighting tears'
+                    }
                 }
             }
         },

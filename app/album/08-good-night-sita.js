@@ -20,9 +20,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, awkward, wanting to make a move'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, friendly, guarded'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, friendly, guarded'
+                    }
                 }
             }
         },
@@ -35,9 +37,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'front, leaning towards Sita'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, hands behind back, guarded'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, hands behind back, guarded'
+                    }
                 }
             }
         },
@@ -50,9 +54,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side angle, jealous'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, warm, guard down'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, warm, guard down'
+                    }
                 },
                 khari: {
                     todo: true,
@@ -76,9 +82,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, in go-kart, leaning forward'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, in go-kart, relaxed'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, in go-kart, relaxed'
+                    }
                 }
             }
         },
@@ -91,9 +99,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, walking away dejected, slumped over'
                 },
-                sita: {
-                    todo: true,
-                    description: 'front, closing gate, looking concerned'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'front, closing gate, looking concerned'
+                    }
                 }
             }
         }

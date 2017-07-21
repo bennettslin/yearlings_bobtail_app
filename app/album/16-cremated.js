@@ -53,7 +53,7 @@ module.exports = {
                     todo: true,
                     description: 'side, playing tennis, vibrant, youthful'
                 },
-                eduardo: {
+                nestor: {
                     todo: true,
                     workedHours: 1,
                     description: 'side, playing tennis, confident, manly'

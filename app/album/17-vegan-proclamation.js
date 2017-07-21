@@ -24,9 +24,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, slumped over, despondent'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side angle, looking back, concerned'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side angle, looking back, concerned'
+                    }
                 },
                 khari: {
                     todo: true,
@@ -53,7 +55,7 @@ module.exports = {
                     workedHours: 1,
                     description: 'front, introducing miriam'
                 },
-                eduardo: {
+                nestor: {
                     todo: true,
                     workedHours: 1,
                     description: 'side, eager'
@@ -69,9 +71,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, on phone, hunched over, sobbing'
                 },
-                sita: {
-                    todo: true,
-                    description: 'sitting up in bed, on phone, concerned'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'sitting up in bed, on phone, concerned'
+                    }
                 },
                 khari: {
                     todo: true,

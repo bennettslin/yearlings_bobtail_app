@@ -35,24 +35,18 @@ module.exports = {
                         description: 'side angle, holding beer, turning to make room'
                     }
                 },
-                khari: {
-                    audienceMember: {
-                        todo: true,
-                        workedHours: 1,
-                        description: 'side, holding beer'
-                    }
+                wade: {
+                    todo: true,
+                    workedHours: 1,
+                    description: 'side, holding beer'
                 },
                 amy: {
-                    redhead: {
-                        todo: true,
-                        description: 'side, squeezing through, awkward'
-                    }
+                    todo: true,
+                    description: 'side, squeezing through, awkward'
                 },
                 stephanie: {
-                    redheadFriend: {
-                        todo: true,
-                        description: 'side, squeezing through, apologetic'
-                    }
+                    todo: true,
+                    description: 'side, squeezing through, apologetic'
                 }
             }
         },
@@ -66,10 +60,8 @@ module.exports = {
                     description: 'side angle, charmed'
                 },
                 amy: {
-                    redhead: {
-                        todo: true,
-                        description: 'side angle, same Mara pose'
-                    }
+                    todo: true,
+                    description: 'side angle, same Mara pose'
                 },
                 jacob: {
                     todo: true,
@@ -100,23 +92,17 @@ module.exports = {
                     description: 'side angle, looking at watch'
                 },
                 amy: {
-                    redhead: {
-                        todo: true,
-                        description: 'side, looking back, uncertain'
-                    }
+                    todo: true,
+                    description: 'side, looking back, uncertain'
                 },
                 stephanie: {
-                    redheadFriend: {
-                        todo: true,
-                        description: 'side angle, looking at Bennett'
-                    }
+                    todo: true,
+                    description: 'side angle, looking at Bennett'
                 },
                 wade: {
-                    redheadFriend: {
-                        todo: true,
-                        workedHours: 1,
-                        description: 'front, looking at Bennett'
-                    }
+                    todo: true,
+                    workedHours: 1,
+                    description: 'front, looking at Bennett'
                 }
             }
         },
@@ -129,9 +115,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, sitting on edge of bed, discontented'
                 },
-                sita: {
-                    todo: true,
-                    description: 'lying, reaching forward to touch Bennett'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'lying, reaching forward to touch Bennett'
+                    }
                 }
             }
         }

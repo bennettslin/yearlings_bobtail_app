@@ -39,9 +39,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, accusatory'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side angle, sobbing'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side angle, sobbing'
+                    }
                 }
             }
         },
@@ -88,9 +90,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'front angle, gesturing with blame'
                 },
-                sita: {
-                    todo: true,
-                    description: 'depressed'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'depressed'
+                    }
                 },
                 miriam: {
                     todo: true,
@@ -127,14 +131,16 @@ module.exports = {
                     todo: true,
                     description: 'side, vibrant'
                 },
-                eduardo: {
+                nestor: {
                     todo: true,
                     workedHours: 1,
                     description: 'side angle, cocky, confident'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side, amused by conversation'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side, amused by conversation'
+                    }
                 },
                 khari: {
                     todo: true,
@@ -163,9 +169,11 @@ module.exports = {
                     workedHours: 1,
                     description: 'side angle, knocked over'
                 },
-                sita: {
-                    todo: true,
-                    description: 'side angle, sobbing uncontrollably'
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'side angle, sobbing uncontrollably'
+                    }
                 }
             }
         }
