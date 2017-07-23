@@ -55,17 +55,20 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, playful, waving'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
+                        workedHours: 1,
                         description: 'back, playful'
                     }
                 },
                 amy: {
                     officer: {
                         todo: true,
+                        workedHours: 1,
                         description: 'back, facing back, waving'
                     }
                 }
@@ -77,11 +80,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'back, consoling'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
+                        workedHours: 1,
                         description: 'back, head in hands, holding bracelet'
                     }
                 },

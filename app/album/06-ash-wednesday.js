@@ -72,6 +72,7 @@ module.exports = {
                 amy: {
                     smoker: {
                         todo: true,
+                        workedHours: 1,
                         description: 'walking up stairs, back forward, exhaling smoke'
                     }
                 }

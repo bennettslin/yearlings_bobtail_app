@@ -42,11 +42,13 @@ module.exports = {
                 },
                 amy: {
                     todo: true,
-                    description: 'side, squeezing through, awkward'
+                    workedHours: 1,
+                    description: 'side, squeezing through, apologetic'
                 },
                 stephanie: {
                     todo: true,
-                    description: 'side, squeezing through, apologetic'
+                    workedHours: 1,
+                    description: 'side, squeezing through, awkward'
                 }
             }
         },
@@ -61,6 +63,7 @@ module.exports = {
                 },
                 amy: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, same Mara pose'
                 },
                 jacob: {
@@ -93,6 +96,7 @@ module.exports = {
                 },
                 amy: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, looking back, uncertain'
                 },
                 stephanie: {

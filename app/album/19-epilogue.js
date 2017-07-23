@@ -107,6 +107,7 @@ module.exports = {
                 },
                 amy: {
                     todo: true,
+                    workedHours: 1,
                     realHeight: `5'6"`,
                     description: 'standing'
                 },
