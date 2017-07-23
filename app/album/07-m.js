@@ -50,7 +50,8 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    description: 'squatting, back turned, putting bass in guitar'
+                    workedHours: 1,
+                    description: 'squatting, back turned, putting bass back in case'
                 },
                 tomer: {
                     hipster: {
