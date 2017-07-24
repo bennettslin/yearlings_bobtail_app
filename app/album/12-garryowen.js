@@ -48,6 +48,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, holding paper bottle, laughing'
                 },
                 nestor: {
@@ -94,6 +95,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front, removing bass, rolling eyes'
                 }
             }
