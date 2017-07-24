@@ -78,11 +78,12 @@ module.exports = {
                 },
                 mara: {
                     todo: true,
-                    description: 'sitting, eating fries, chatting'
+                    description: 'sitting, chatting'
                 },
                 ana: {
                     todo: true,
-                    description: 'sitting, laughing'
+                    workedHours: 1,
+                    description: 'sitting, eating fries, laughing'
                 }
             }
         },
