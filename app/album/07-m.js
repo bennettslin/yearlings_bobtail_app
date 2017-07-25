@@ -46,6 +46,7 @@ module.exports = {
                 },
                 mara: {
                     todo: true,
+                    workedHours: 1,
                     description: 'flirting with Jacob'
                 },
                 ana: {
