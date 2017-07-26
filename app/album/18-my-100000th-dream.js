@@ -54,6 +54,7 @@ module.exports = {
                 mara: {
                     gopi: {
                         todo: true,
+                        workedHours: 1,
                         description: 'dancing'
                     }
                 },
