@@ -86,6 +86,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, greeting Bennett'
                 },
                 tristan: {
