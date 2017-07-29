@@ -18,10 +18,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front angle, impotent, apologetic'
                 },
                 miriam: {
                     todo: true,
+                    workedHours: 1,
                     description: 'back angle, eyes closed, trying to get off'
                 }
             }
@@ -32,10 +34,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front angle, trying to get off'
                 },
                 miriam: {
                     todo: true,
+                    workedHours: 1,
                     description: 'back angle, giving blowjob'
                 }
             }
