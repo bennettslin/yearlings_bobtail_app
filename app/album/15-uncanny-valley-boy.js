@@ -100,11 +100,13 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, making out with Bennett'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
+                        workedHours: 1,
                         description: 'making out with Miriam, holding melodica'
                     }
                 }

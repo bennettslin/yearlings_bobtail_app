@@ -101,6 +101,7 @@ module.exports = {
                 miriam: {
                     maskedWoman: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side, walking dog, looking back at Bennett'
                     },
                 },

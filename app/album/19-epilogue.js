@@ -145,6 +145,7 @@ module.exports = {
                 liz: {
                     todo: true,
                     realHeight: `4'9"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 khari: {

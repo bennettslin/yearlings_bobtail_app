@@ -52,15 +52,6 @@ module.exports = {
                     todo: true,
                     workedHours: 1,
                     description: 'front angle, dying, infirm'
-                },
-                miriam: {
-                    todo: true,
-                    description: 'side, playing tennis, vibrant, youthful'
-                },
-                nestor: {
-                    todo: true,
-                    workedHours: 1,
-                    description: 'side, playing tennis, confident, manly'
                 }
             }
         },
@@ -70,10 +61,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'pensive, laying condom on ground'
                 },
                 miriam: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, looking back, reversing car'
                 }
             }

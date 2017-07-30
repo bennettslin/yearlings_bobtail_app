@@ -61,6 +61,7 @@ module.exports = {
                 miriam: {
                     gopi: {
                         todo: true,
+                        workedHours: 1,
                         description: 'dancing'
                     }
                 },
