@@ -25,6 +25,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side angle, opening a door, pleasantly surprised'
                     }
                 }
@@ -79,6 +80,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'front, urging'
                     }
                 }

@@ -388,7 +388,7 @@ module.exports = {
                     {
                         anchor: `buys your grief`,
                         annotation: {
-                            description: `My worlds collided when a local kid who liked my band found out that I had vandalised his friend's bike in a fit of drunken rage. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
+                            description: `My worlds collided when a neighbourhood kid who liked my band found out that I had vandalised his friend's bike in a fit of drunken rage. He had related so strongly to my songs about unfulfilled hopes. I was disgusted with myself for disappointing him.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }

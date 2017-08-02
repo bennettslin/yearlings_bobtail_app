@@ -95,6 +95,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'depressed'
                     }
                 },
