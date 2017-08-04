@@ -27,6 +27,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side angle, looking back, concerned'
                     }
                 },
@@ -78,10 +79,22 @@ module.exports = {
                         description: 'sitting up in bed, on phone, concerned'
                     }
                 },
+                lizReflection: {
+                    reflection: {
+                        todo: true,
+                        description: 'reflection'
+                    }
+                },
                 khari: {
                     todo: true,
                     description: 'lying in bed, caressing Sita'
-                }
+                },
+                khariReflection: {
+                    reflection: {
+                        todo: true,
+                        description: 'reflection'
+                    }
+                },
             }
         },
         {

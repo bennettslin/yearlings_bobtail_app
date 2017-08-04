@@ -124,11 +124,22 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, sitting on edge of bed, discontented'
                 },
+                bennettReflection: {
+                    reflection: {
+                        todo: true,
+                        description: 'reflection'
+                    }
+                },
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1,
                         description: 'lying, reaching forward to touch Bennett'
+                    }
+                },
+                lizReflection: {
+                    reflection: {
+                        todo: true,
+                        description: 'reflection'
                     }
                 }
             }

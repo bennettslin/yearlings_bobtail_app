@@ -154,14 +154,26 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'front, sitting on bed, unsure'
+                    description: 'side, standing beside bed, unsure'
+                },
+                bennettReflection: {
+                    reflection: {
+                        todo: true,
+                        description: 'reflection'
+                    }
                 },
                 liz: {
                     sita: {
                         todo: true,
                         description: 'front, sitting on bed, irreverently reassuring'
                     }
-                }
+                },
+                lizReflection: {
+                    reflection: {
+                        todo: true,
+                        description: 'reflection'
+                    }
+                },
             }
         },
         {
@@ -172,12 +184,24 @@ module.exports = {
                     todo: true,
                     description: 'side, about to stick it in'
                 },
+                bennettReflection: {
+                    reflection: {
+                        todo: true,
+                        description: 'reflection'
+                    }
+                },
                 liz: {
                     sita: {
                         todo: true,
                         description: 'side, spread open'
                     }
-                }
+                },
+                lizReflection: {
+                    reflection: {
+                        todo: true,
+                        description: 'reflection'
+                    }
+                },
             }
         },
         {
@@ -188,10 +212,22 @@ module.exports = {
                     todo: true,
                     description: 'lying down, warm, content, slightly worried'
                 },
+                bennettReflection: {
+                    reflection: {
+                        todo: true,
+                        description: 'reflection'
+                    }
+                },
                 liz: {
                     sita: {
                         todo: true,
                         description: 'lying down, warm, content, slightly worried'
+                    }
+                },
+                lizReflection: {
+                    reflection: {
+                        todo: true,
+                        description: 'reflection'
                     }
                 }
             }

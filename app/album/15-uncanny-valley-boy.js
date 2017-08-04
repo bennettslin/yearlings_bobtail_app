@@ -41,8 +41,8 @@ module.exports = {
                     workedHours: 1,
                     description: 'side, accusatory'
                 },
-                liz: {
-                    sita: {
+                youngGirl: {
+                    youngSita: {
                         todo: true,
                         description: 'side angle, sobbing'
                     }
@@ -184,8 +184,8 @@ module.exports = {
                     workedHours: 1,
                     description: 'side angle, knocked over'
                 },
-                liz: {
-                    sita: {
+                youngGirl: {
+                    youngSita: {
                         todo: true,
                         description: 'side angle, sobbing uncontrollably'
                     }
