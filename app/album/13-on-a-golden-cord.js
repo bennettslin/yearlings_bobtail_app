@@ -21,11 +21,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, disingenuously consoling'
                 },
                 liz: {
                     sita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side angle, returning bracelet, fighting tears'
                     }
                 }

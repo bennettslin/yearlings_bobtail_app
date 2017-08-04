@@ -152,11 +152,13 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side, amused by conversation'
                     }
                 },
                 khari: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, cheerful, making a point'
                 }
             }
