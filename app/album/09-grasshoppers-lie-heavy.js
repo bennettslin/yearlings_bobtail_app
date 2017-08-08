@@ -154,23 +154,27 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, standing beside bed, unsure'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
+                        workedHours: 1,
                         description: 'reflection'
                     }
                 },
                 liz: {
                     sita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'front, sitting on bed, irreverently reassuring'
                     }
                 },
                 lizReflection: {
                     reflection: {
                         todo: true,
+                        workedHours: 1,
                         description: 'reflection'
                     }
                 },
@@ -182,23 +186,27 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, about to stick it in'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
+                        workedHours: 1,
                         description: 'reflection'
                     }
                 },
                 liz: {
                     sita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side, spread open'
                     }
                 },
                 lizReflection: {
                     reflection: {
                         todo: true,
+                        workedHours: 1,
                         description: 'reflection'
                     }
                 },
@@ -210,23 +218,27 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'lying down, warm, content, slightly worried'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
+                        workedHours: 1,
                         description: 'reflection'
                     }
                 },
                 liz: {
                     sita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'lying down, warm, content, slightly worried'
                     }
                 },
                 lizReflection: {
                     reflection: {
                         todo: true,
+                        workedHours: 1,
                         description: 'reflection'
                     }
                 }

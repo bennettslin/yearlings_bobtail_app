@@ -74,12 +74,12 @@ module.exports = {
                 },
                 brad: {
                     todo: true,
-                    realHeight: `4'6"`,
+                    realHeight: `4'5"`,
                     description: 'standing'
                 },
                 andrew: {
                     todo: true,
-                    realHeight: `4'5"`,
+                    realHeight: `4'6"`,
                     description: 'standing'
                 },
                 tristan: {
