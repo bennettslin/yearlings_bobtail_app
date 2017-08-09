@@ -71,6 +71,7 @@ module.exports = {
                 andrew: {
                     bully: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side angle, throwing rocks, angry'
                     }
                 }

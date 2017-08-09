@@ -82,7 +82,6 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1,
                     description: 'side angle, play fighting'
                 },
                 howie: {

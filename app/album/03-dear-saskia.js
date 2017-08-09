@@ -61,6 +61,7 @@ module.exports = {
                 andrew: {
                     bully: {
                         todo: true,
+                        workedHours: 1,
                         description: 'laughing, feigning fear of Sasha'
                     }
                 },

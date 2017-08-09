@@ -47,6 +47,7 @@ module.exports = {
                 preteenBennett: {
                     todo: true,
                     realHeight: `4'2"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 father: {
@@ -69,17 +70,20 @@ module.exports = {
                 },
                 sasha: {
                     todo: true,
-                    realHeight: `4'2"`,
+                    realHeight: `4'1"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 brad: {
                     todo: true,
                     realHeight: `4'5"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 andrew: {
                     todo: true,
                     realHeight: `4'6"`,
+                    workedHours: 1,
                     description: 'standing'
                 },
                 tristan: {
