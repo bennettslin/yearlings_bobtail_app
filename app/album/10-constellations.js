@@ -98,7 +98,7 @@ module.exports = {
         },
         {
             verseIndex: 19,
-            description: `The gang is at the cemetery, standing over Adam's grave. Tomer is kneeling and pouring a bottle of water over the gravestone. Bennett is. Howie and Ana `,
+            description: `The gang is at the cemetery, standing over Adam's grave. Tomer is kneeling and pouring a bottle of water over the gravestone. Bennett is looking up. Howie and Ana are tentatively cuddling.`,
             actors: {
                 bennett: {
                     todo: true,
