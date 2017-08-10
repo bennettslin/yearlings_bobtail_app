@@ -116,6 +116,7 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'sitting up in bed, worried, scared'
                 }
             }
