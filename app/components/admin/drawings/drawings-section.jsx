@@ -47,9 +47,12 @@ const DrawingsSectionView = ({
                 })}
             </div>
         </div> */}
-        <h3>actors</h3>
+        {/* <h3>actors</h3> */}
         <div className="actors-table">
             <div className="actors-row">
+                <div className="actors-count-row count-row">
+                    actors: {actorsTotalCount - actorsTodoCount} / {actorsTotalCount}
+                </div>
                 {actors.map((actorObject, actorIndex) => {
                     const { actor,
                             characters,
@@ -105,9 +108,6 @@ const DrawingsSectionView = ({
                         </div>
                     )
                 })}
-                <div className="actors-count-row count-row">
-                    actors: {actorsTotalCount - actorsTodoCount} / {actorsTotalCount}
-                </div>
             </div>
         </div>
     </div>

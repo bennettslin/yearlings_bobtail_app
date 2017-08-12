@@ -57,6 +57,7 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'stepping off porch, cautious, trying to calm Christopher'
                 }
             }
@@ -76,6 +77,7 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, aggressive stance, angry'
                 }
             }

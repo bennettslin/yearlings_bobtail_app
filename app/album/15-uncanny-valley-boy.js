@@ -65,10 +65,12 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'sitting, hurt, lashing out in anger'
                 },
                 sasha: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, consoling, cautious'
                 }
             }
