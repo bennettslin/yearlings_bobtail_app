@@ -92,9 +92,11 @@ module.exports = {
                         description: 'back, head in hands, holding bracelet'
                     }
                 },
-                youngGirl: {
-                    todo: true,
-                    description: 'side, walking'
+                esther: {
+                    youngGirl: {
+                        todo: true,
+                        description: 'side, walking'
+                    }
                 },
                 youngAnita: {
                     youngGirl: {

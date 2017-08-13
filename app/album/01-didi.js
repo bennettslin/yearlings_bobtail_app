@@ -44,7 +44,7 @@ module.exports = {
                     todo: true,
                     description: 'sitting, flustered'
                 },
-                youngGirl: {
+                esther: {
                     todo: true,
                     description: 'side, skipping, pointing back and laughing'
                 }
