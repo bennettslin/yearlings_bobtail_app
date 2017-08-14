@@ -21,12 +21,19 @@ module.exports = {
             scene: 1,
             description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
             actors: {
-                youngAnita: {
+                anita: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, rushing, exasperated'
+                },
+                esther: {
+                    todo: true,
+                    workedHours: 1,
+                    description: 'side, looking at Anita'
                 },
                 youngBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, running, panicked'
                 }
             }
@@ -36,16 +43,19 @@ module.exports = {
             scene: 2,
             description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells the playground about this. Anita overhears and looks upset.`,
             actors: {
-                youngAnita: {
+                anita: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front, playing ball, offended'
                 },
                 youngBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'sitting, flustered'
                 },
                 esther: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, skipping, pointing back and laughing'
                 }
             }
@@ -66,12 +76,14 @@ module.exports = {
             scene: 4,
             description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
             actors: {
-                youngAnita: {
+                anita: {
                     todo: true,
+                    workedHours: 1,
                     description: 'back, squatting, smiling'
                 },
                 youngBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, facing front, singing, smiling'
                 }
             }

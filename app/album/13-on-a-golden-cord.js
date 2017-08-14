@@ -98,7 +98,7 @@ module.exports = {
                         description: 'side, walking'
                     }
                 },
-                youngAnita: {
+                anita: {
                     youngGirl: {
                         todo: true,
                         description: 'side, walking'
