@@ -67,6 +67,7 @@ module.exports = {
             actors: {
                 youngBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, in bathtub, downcast'
                 }
             }

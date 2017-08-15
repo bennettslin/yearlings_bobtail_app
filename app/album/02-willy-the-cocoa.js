@@ -53,6 +53,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
+                    workedHours: 1,
                     description: 'off balance, having a tantrum'
                 },
                 preteenBennett: {
