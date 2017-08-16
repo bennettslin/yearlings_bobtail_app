@@ -27,11 +27,12 @@ module.exports = {
                 preteenBennett: {
                     todo: true,
                     workedHours: 1,
-                    description: 'sitting cross-legged, guilty'
+                    description: 'lying down, drawing, guilty'
                 },
                 christopher: {
                     todo: true,
-                    description: 'sitting, blissful'
+                    workedHours: 1,
+                    description: 'w sitting, blissful'
                 }
             }
         },

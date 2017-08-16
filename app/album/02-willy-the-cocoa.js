@@ -74,6 +74,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
+                    workedHours: 1,
                     description: 'lying on side, in pain, clenching stomach'
                 },
                 preteenBennett: {
