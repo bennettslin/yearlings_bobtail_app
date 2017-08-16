@@ -94,6 +94,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front, sitting, staring'
                 },
                 mother: {

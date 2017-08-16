@@ -136,10 +136,12 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, looking up at Bennett, reassuring'
                 },
                 preteenBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, wide-eyed, needing reassurance'
                 }
             }
