@@ -52,6 +52,9 @@ const _initialPrepareAlbum = (albumObject) => {
 
     albumObject.songs.forEach((songObject, songIndex) => {
 
+        // This also collects the unit index for each scene.
+        adminGatherDrawings(albumObject, songObject, songIndex)
+
         if (!getSongIsLogue(songIndex, albumObject.songs)) {
 
             // Initialise song.
@@ -75,8 +78,6 @@ const _initialPrepareAlbum = (albumObject) => {
             // Parse lyrics.
             _initialPrepareLyrics(albumObject, songObject)
         }
-
-        adminGatherDrawings(albumObject, songObject.scenes, songIndex)
     })
 }
 

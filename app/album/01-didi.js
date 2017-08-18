@@ -17,8 +17,7 @@ import { VERSES,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
-            scene: 1,
+            unitIndex: 1,
             description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
             actors: {
                 anita: {
@@ -39,8 +38,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 9,
-            scene: 2,
+            unitIndex: 6,
             description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells the playground about this. Anita overhears and looks upset.`,
             actors: {
                 anita: {
@@ -61,8 +59,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 15,
-            scene: 3,
+            unitIndex: 8,
             description: `Bennett is soaking in a bathtub at home, looking downcast. A window shows that it is midday outside.`,
             actors: {
                 youngBennett: {
@@ -73,8 +70,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 25,
-            scene: 4,
+            unitIndex: 12,
             description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
             actors: {
                 anita: {

@@ -41,11 +41,14 @@ class LyricUnit extends Component {
 
             unitArray = getLyricUnitArray(selectedSongIndex, unitIndex),
 
+            unitMapObject = unitArray[unitArray.length - 1],
+
             /**
              * Provided by Willy the Cocoa, Odin, and Constellations. Provide
              * special formatting for custom sub blocks.
              */
             { unitClassName,
+              sceneIndex,
 
               stanzaIndex,
               stanzaType,
@@ -60,7 +63,7 @@ class LyricUnit extends Component {
               dotStanza,
               subStanza,
               topSideStanza,
-              bottomSideStanza } = unitArray[unitArray.length - 1],
+              bottomSideStanza } = unitMapObject,
 
             // This exists solely for "Maranatha."
             topSideSubStanza = topSideStanza ?
@@ -87,6 +90,7 @@ class LyricUnit extends Component {
             <LyricUnitView {...other}
                 isTitleUnit={isTitleUnit}
                 unitClassName={unitClassName}
+                sceneIndex={sceneIndex}
                 stanzaIndex={stanzaIndex}
                 unitArray={unitArray}
                 stanzaType={isTitleUnit ? TITLE : stanzaType}
@@ -132,6 +136,7 @@ const LyricUnitView = ({
     // From controller.
     isTitleUnit,
     unitClassName,
+    sceneIndex,
 
     dotStanza,
     subStanza,
@@ -156,6 +161,7 @@ const LyricUnitView = ({
         <div
             className={classnames(
                 'lyric-unit',
+                sceneIndex && `scene-${sceneIndex}`,
                 unitClassName,
                 { 'has-side': hasSide,
                   'custom-sub-block': unitClassName,
@@ -224,6 +230,7 @@ LyricUnitView.propTypes = {
     unitArray: PropTypes.array.isRequired,
     isTitleUnit: PropTypes.bool.isRequired,
     unitClassName: PropTypes.string,
+    sceneIndex: PropTypes.number,
 
     dotStanza: PropTypes.object,
     subStanza: PropTypes.array,

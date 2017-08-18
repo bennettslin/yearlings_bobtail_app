@@ -91,11 +91,12 @@ export const registerHasSideStanzas = (songObject) => {
 
 export const initialRegisterStanzaTypes = (albumObject, songObject) => {
 
-    const { lyrics } = songObject,
+    const { lyrics,
+            tempSceneUnitIndices } = songObject,
         tempStanzaTypeCounters = {},
         stanzaTimes = []
 
-    lyrics.forEach(unitArray => {
+    lyrics.forEach((unitArray, unitIndex) => {
 
         // Starting time of the first verse is the starting time of the unit.
         const unitFirstVerseTime = unitArray[0].time,
@@ -120,9 +121,24 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
                 tempStanzaTypeCounters[stanzaType] = (tempStanzaTypeCounters[stanzaType] || 0) + 1
             }
 
-            // Tell unit its index.
+            // Tell unit its stanza index.
             unitMapObject.stanzaIndex = tempStanzaTypeCounters[stanzaType]
         }
+
+        // This is for telling each unit its scene.
+        let sceneUnitCounter = 0
+
+        while (sceneUnitCounter < tempSceneUnitIndices.length) {
+            const sceneUnitIndex = tempSceneUnitIndices[sceneUnitCounter]
+
+            if (unitIndex >= sceneUnitIndex) {
+                unitMapObject.sceneIndex = sceneUnitCounter + 1
+            }
+
+            sceneUnitCounter++
+        }
+
+        delete songObject.tempSceneUnitIndices
     })
 
     // Establish which song on the album has the most stanzas.

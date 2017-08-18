@@ -1,12 +1,18 @@
 // Parse drawing data for build.
 // FIXME: These are a mess, but they're only for admin purposes so whatever.
 
-export const adminGatherDrawings = (album, scenes, songIndex) => {
-    const drawingTypes = ['actors', 'backdrops', 'stageProps']
+export const adminGatherDrawings = (album, songObject, songIndex) => {
+    const drawingTypes = ['actors', 'backdrops', 'stageProps'],
+        { scenes } = songObject
 
     album._drawings = album._drawings || {}
 
+    songObject.tempSceneUnitIndices = []
+
     scenes.forEach((scene, sceneIndex) => {
+
+        songObject.tempSceneUnitIndices.push(scene.unitIndex)
+
         drawingTypes.forEach(drawingType => {
 
             // Initialise object for actors, backdrops, stageProps.
