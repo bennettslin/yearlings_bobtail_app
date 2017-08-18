@@ -16,7 +16,7 @@ import { VERSES,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Bennett is onstage performing with his band, a speech bubble showing the scene of Sita rejecting him. A redheaded woman is arriving late, and making her way through the crowd.`,
             actors: {
                 bennett: {
@@ -54,7 +54,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 12,
+            unitIndex: 5,
             description: `After the show, Bennett is breaking down the set. Another band is setting up. The redhead has introduced herself to Bennett, and is flirting with him.`,
             actors: {
                 bennett: {
@@ -80,7 +80,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 23,
+            unitIndex: 8,
             description: `At the end of the show, Bennett and his bandmates are loading their equipment into their van. The redhead and her friends are looking in his direction, but Bennett walks by them.`,
             actors: {
                 bennett: {
@@ -116,7 +116,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 34,
+            unitIndex: 11,
             description: `Bennett is back home, sitting on the edge of Sita's bed. Sita is half asleep, looking peaceful, and is reaching towards him. He does not respond. In his thought bubble, he is reaching for the redhead, who is in bed in place of Sita.`,
             actors: {
                 bennett: {

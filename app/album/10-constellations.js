@@ -20,7 +20,7 @@ import { OVERLAP,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Abbey Road`,
             actors: {
                 bennett: {
@@ -46,7 +46,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 1,
+            unitIndex: 3,
             description: `The gang is at Walgreens, picking out cough syrup.`,
             actors: {
                 bennett: {
@@ -72,7 +72,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 9,
+            unitIndex: 5,
             description: `The gang is wandering through the steam tunnels. Bennett is blathering, Howie is half paying attention. Tomer and Ana are play fighting.`,
             actors: {
                 bennett: {
@@ -98,7 +98,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 19,
+            unitIndex: 9,
             description: `The gang is at the cemetery, standing over Adam's grave. Tomer is kneeling and pouring a bottle of water over the gravestone. Bennett is looking up. Howie and Ana are tentatively cuddling.`,
             actors: {
                 bennett: {
@@ -124,7 +124,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 26,
+            unitIndex: 11,
             description: `The gang is driving in a car. Bennett is sitting in the back with his eyes closed. He pictures himself and Sita as a mastodon and a sabre-tooth tiger, and his brother and sister as Loki and Freyja.`,
             actors: {
                 bennett: {
@@ -150,7 +150,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 34,
+            unitIndex: 15,
             description: `Bennett is in the attic, huddled under a blanket on a couch, lit up by an old television facing away from the audience. Howie is downstairs, in anguish, clutching at his head.`,
             actors: {
                 bennett: {

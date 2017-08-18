@@ -16,7 +16,7 @@ import { VERSES,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Bennett and Sita are at her apartment, breaking up. Sita is a wreck, turning away from Bennett as she returns the gold bracelet to him. He is trying to console her, but in a mechanical way.`,
             actors: {
                 bennett: {
@@ -34,7 +34,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 15,
+            unitIndex: 4,
             description: `Bennett and Garry are walking along down the street. (Garry is the one wearing the jacket.) Garry is shaking his fist at the twin streetlights. Bennett turns around to face the audience, a look of uncertainty on his face. He is caressing the gold bracelet in his hand.`,
             actors: {
                 bennett: {
@@ -52,7 +52,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 27,
+            unitIndex: 7,
             description: `Bennett and Garry are yucking it up, in a panicked and delirious kind of way. Bennett is yodelling, Garry is playing the banjo, saluting a female cop on a horse. The cop waves back.`,
             actors: {
                 bennett: {
@@ -77,7 +77,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 43,
+            unitIndex: 10,
             description: `Garry is now facing the audience, his hand over his face, crying, and holding the gold bracelet over a group of kids crossing the street with a crossing guard. Bennett is trying to console him, as he faces forward.`,
             actors: {
                 bennett: {

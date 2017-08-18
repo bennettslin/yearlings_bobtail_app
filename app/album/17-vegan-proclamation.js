@@ -16,7 +16,7 @@ import { VERSES,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Bennett is walking with the ghost of Odin in a park. He passes Sita, who is holding hands with her friend. Bennett looks down, her friend looks up, while Sita looks concerned.`,
             actors: {
                 bennett: {
@@ -39,7 +39,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 11,
+            unitIndex: 5,
             description: `Bennett is by himself with Odin at a show, looking agitated and bored. Miriam is on the other side of the crowd, being introduced by Tristan to her future boyfriend.`,
             actors: {
                 bennett: {
@@ -65,7 +65,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 22,
+            unitIndex: 10,
             description: `Bennett is in his apartment, in tears on the phone with Sita, who is in bed snuggling with her friend.`,
             actors: {
                 bennett: {
@@ -102,7 +102,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 27,
+            unitIndex: 12,
             description: `Bennett is with Odin, and happens upon a Peta demonstration. One of the demonstrators is petting Odin.`,
             actors: {
                 bennett: {

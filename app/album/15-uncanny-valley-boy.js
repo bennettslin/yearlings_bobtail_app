@@ -19,7 +19,7 @@ import { VERSES,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. They are dressed in traditional Indian garb. His father is stern and disapproving, while his mother consoles a weeping Sita, who is wearing traditional Chinese garb.`,
             actors: {
                 bennett: {
@@ -52,7 +52,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 8,
+            unitIndex: 4,
             description: `Bennett's father takes him to visit his childhood past. They watch as young Bennett, having just been bullied, lashes out in anger, to no one in particular. Sasha is with him, and is understanding but clearly keeping her distance. Bennett winces.`,
             actors: {
                 bennett: {
@@ -78,7 +78,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 21,
+            unitIndex: 8,
             description: `Bennett's mother is back. They next take him to visit the present. Sita is at home crying, while Bennett is playing guitar next to Miriam on her bed.`,
             actors: {
                 bennett: {
@@ -118,7 +118,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 28,
+            unitIndex: 11,
             description: `Finally, they take him to visit the future. Miriam is walking arm in arm with her new boyfriend. Unknowingly, they cross paths with Sita who is laughing with her friend in a park. Meanwhile, Bennett is at home alone, recording and depressed.`,
             actors: {
                 bennett: {
@@ -168,7 +168,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 35,
+            unitIndex: 14,
             description: `Bringing him back, Bennett unrepentantly crawls into Miriam's arms, who is casting an imaginary spell to release him from their grasp. His father flinches, while his mother shields Sita from the view.`,
             actors: {
                 bennett: {

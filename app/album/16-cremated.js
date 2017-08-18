@@ -13,7 +13,7 @@ import { VERSES,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Bennett and Miriam are having sex in a car overlooking a cliff. Miriam is on top.`,
             actors: {
                 bennett: {
@@ -29,7 +29,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 10,
+            unitIndex: 5,
             description: `Miriam is now giving Bennett a blowjob. Meanwhile, they are both thinking a thought bubble in which they are now married. He is drunk, and their child is autistic.`,
             actors: {
                 bennett: {
@@ -45,7 +45,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 17,
+            unitIndex: 8,
             description: `In a thought bubble, Bennett is dying in a hospital bed next to a record player. In another thought bubble, Miriam is playing tennis with her new boyfriend.`,
             actors: {
                 bennett: {
@@ -56,7 +56,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 23,
+            unitIndex: 9,
             description: `They drive away. Bennett, with his seat back, hesitantly drops the used condom on the ground, looking at it wistfully. Miriam is looking away, backing up the car.`,
             actors: {
                 bennett: {
