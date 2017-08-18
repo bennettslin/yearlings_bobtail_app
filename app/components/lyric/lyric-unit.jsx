@@ -91,6 +91,7 @@ class LyricUnit extends Component {
                 isTitleUnit={isTitleUnit}
                 unitClassName={unitClassName}
                 sceneIndex={sceneIndex}
+                unitIndex={unitIndex}
                 stanzaIndex={stanzaIndex}
                 unitArray={unitArray}
                 stanzaType={isTitleUnit ? TITLE : stanzaType}
@@ -136,6 +137,7 @@ const LyricUnitView = ({
     // From controller.
     isTitleUnit,
     unitClassName,
+    unitIndex,
     sceneIndex,
 
     dotStanza,
@@ -161,6 +163,7 @@ const LyricUnitView = ({
         <div
             className={classnames(
                 'lyric-unit',
+                unitIndex && `unit-${unitIndex}`,
                 sceneIndex && `scene-${sceneIndex}`,
                 unitClassName,
                 { 'has-side': hasSide,

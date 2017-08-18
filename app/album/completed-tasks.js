@@ -2266,5 +2266,10 @@ module.exports = [
         taskName: `Organise box shadow constants.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Tell unit its scene index`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

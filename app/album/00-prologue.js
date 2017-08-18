@@ -3,7 +3,7 @@ module.exports = {
     title: 'prologue',
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Old Bennett is standing onstage, addressing the audience.`,
             actors: {
                 oldBennett: {
