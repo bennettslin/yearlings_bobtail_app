@@ -34,6 +34,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
+                    workedHours: 1,
                     description: 'front, consoling Sita'
                 },
                 father: {
@@ -44,6 +45,7 @@ module.exports = {
                 esther: {
                     youngSita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side angle, sobbing'
                     }
                 }
@@ -181,6 +183,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side angle, protecting Sita'
                 },
                 father: {
@@ -191,6 +194,7 @@ module.exports = {
                 esther: {
                     youngSita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'side angle, sobbing uncontrollably'
                     }
                 }
