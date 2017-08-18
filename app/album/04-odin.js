@@ -21,7 +21,7 @@ import { LEFT,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Bennett is lying on a mat on the floor. In the distance, he sees himself creeping out of the house in pitch darkness. Papers are strewn where he walked.`,
             actors: {
                 preteenBennett: {
@@ -32,7 +32,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 13,
+            unitIndex: 6,
             description: `Bennett is stepping through the front gate. He sees himself in a rickshaw, driving away. The rickshaw leaves a trail.`,
             actors: {
                 preteenBennett: {
@@ -43,7 +43,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 22,
+            unitIndex: 11,
             description: `Bennett is standing on the shore. He sees himself in the water, on a buoy. Footprints lead into the water.`,
             actors: {
                 preteenBennett: {
@@ -54,7 +54,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 38,
+            unitIndex: 18,
             description: `Bennett sits on the shore gazing at the Odin. Further ahead, another Bennett is making his bed on the beach. Footprints lead up to him.`,
             actors: {
                 preteenBennett: {

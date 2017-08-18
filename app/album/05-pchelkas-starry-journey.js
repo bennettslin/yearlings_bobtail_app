@@ -21,7 +21,7 @@ import { VERSES,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Bennett and Christopher are under his bunk bed. Christopher is injured, but and happily playing. Bennett looks guilty.`,
             actors: {
                 preteenBennett: {
@@ -37,7 +37,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 14,
+            unitIndex: 6,
             description: `Bennett is at home in bed, pretending to be sick. He is stuffing money from red pouches into a postage envelope. In the window, the schoolbus is driving off, leaving him behind. The bullies are visible through the schoolbus windows, laughing at him.`,
             actors: {
                 preteenBennett: {
@@ -48,7 +48,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 32,
+            unitIndex: 10,
             description: `Bennett is at his desk, reading a letter and crying. In his thought bubble, he is standing alone on Earth, looking up into space.`,
             actors: {
                 preteenBennett: {
@@ -59,7 +59,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 41,
+            unitIndex: 14,
             description: `Bennett is sitting on the grass by himself, away from the lunch crowd. The two bullies have been throwing rocks at him, trying to rile him up, but to no avail. One looks confused, the other is suggesting that they should leave.`,
             actors: {
                 preteenBennett: {
@@ -84,7 +84,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 54,
+            unitIndex: 17,
             description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is chewing out the principal..`,
             actors: {
                 preteenBennett: {

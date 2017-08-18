@@ -14,20 +14,20 @@ import { VERSES,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
             actors: {
 
             }
         },
         {
-            verseIndex: 6,
+            unitIndex: 5,
             description: `On a page from a Chinese language workbook, Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
             actors: {
             }
         },
         {
-            verseIndex: 13,
+            unitIndex: 8,
             description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated next to her who is wearing a yarmulke.`,
             actors: {
                 preteenBennett: {
@@ -50,7 +50,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 22,
+            unitIndex: 11,
             description: `In Bennett's thought bubble, he is being tied to a tetherball pole by two bullies. Sasha is yelling at them, telling them to untie Bennett and to leave him alone. Bennett looks physically roughed up, and emotionally mortified.`,
             actors: {
                 preteenBennett: {
@@ -80,7 +80,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 33,
+            unitIndex: 13,
             description: `In Bennett's thought bubble, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
             actors: {}
         }

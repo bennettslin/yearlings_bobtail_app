@@ -12,7 +12,7 @@ import { VERSES,
 module.exports = {
     scenes: [
         {
-            verseIndex: 0,
+            unitIndex: 1,
             description: `Bennett and Sita are standing outside her gate at night. In a thought bubble, he is reaching out to Sita, who is reaching back.`,
             actors: {
                 bennett: {
@@ -30,7 +30,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 16,
+            unitIndex: 5,
             description: `In a thought bubble, Bennett and Sita are at a museum, looking at the skeleton of an early human. Bennett is standing behind the display case, leaning in towards Sita.`,
             actors: {
                 bennett: {
@@ -48,7 +48,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 28,
+            unitIndex: 8,
             description: `In a thought bubble, Bennett and Sita are backstage after a play. While Sita and her friend are chatting away, Bennett looks away and is visibly uncomfortable.`,
             actors: {
                 bennett: {
@@ -78,7 +78,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 42,
+            unitIndex: 11,
             description: `In a thought bubble, Bennett and Sita are at a motorsports course, riding in separate go-karts.`,
             actors: {
                 bennett: {
@@ -96,7 +96,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 56,
+            unitIndex: 14,
             description: `Having bid each other good night, Bennett is walking away, looking dejected. Sita is closing the gate from the inside, looking towards him with concern. In his thought bubble, she is inviting him in.`,
             actors: {
                 bennett: {

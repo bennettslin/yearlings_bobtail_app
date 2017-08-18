@@ -38,7 +38,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 9,
+            unitIndex: 5,
             description: `Outside next to the porch, Bennett's mother had been cutting Christopher's hair a moment ago. Christopher has just leapt out of his chair in panic. The cloth that had been draped around him has been tossed in the air. Looking exasperated, Bennett tries to catch him. Having just arrived, Willy is ducked behind the porch, a kind chuckle on his face.`,
             actors: {
                 willy: {
@@ -64,7 +64,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 19,
+            unitIndex: 7,
             description: `Inside the house, holding his X-ray specs, Bennett is kicking Christopher, who rolls on the ground, in tears and clenching his stomach. Tattered comics and cut-out letters are on the ground. Bennett's father is rushing in, angry and determined to stop the fight.`,
             actors: {
                 father: {
@@ -85,7 +85,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 27,
+            unitIndex: 9,
             description: `Willy is in a fight with two gangbangers. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`,
             actors: {
                 willy: {
@@ -110,7 +110,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 34,
+            unitIndex: 12,
             description: `Inside the house, Bennett is in bed, with his mother beside him giving comfort. Outside, the window shows a scene with police hovering over a dead body. Mother is getting up to close the window.`,
             actors: {
                 mother: {
@@ -126,7 +126,7 @@ module.exports = {
             }
         },
         {
-            verseIndex: 44,
+            unitIndex: 14,
             description: `Bennett is now dreaming. It's night, and he and Willy are holding Christopher's hand, one on each side. Christopher gazes up at Bennett with a knowing, comforting smile. Willy's and Christopher's shadows both reveal them to be trolls. Together, they are leading Bennett to a circle of trolls.`,
             actors: {
                 willy: {
