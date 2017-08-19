@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import SliderCursor from './slider-cursor'
+import SliderScenes from './slider-scenes'
 import SliderStanzas from './slider-stanzas'
 import SliderVerses from './slider-verses'
 import SliderTimeBars from './slider-time-bars'
@@ -55,6 +56,7 @@ const SliderSectionView = ({
         >
             <SliderStanzas />
             <SliderVerses />
+            <SliderScenes />
             <SliderTimeBars />
             <SliderCursor />
 
@@ -66,8 +68,7 @@ const SliderSectionView = ({
                 )}
                 onMouseDown={handleTouchDown}
                 onTouchStart={handleTouchDown}
-            >
-            </div>
+            />
         </div>
     )
 }

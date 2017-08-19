@@ -41,8 +41,7 @@ const SliderStanzas = ({
                         key={stanzaTimeIndex}
                         className={`slider-bar stanza-slider-bar stanza-type-${stanzaTimeObject.type}`}
                         style={stanzaStyle}
-                    >
-                    </div>
+                    />
                 )
             })}
         </div>

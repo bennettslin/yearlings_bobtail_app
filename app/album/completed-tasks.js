@@ -2268,8 +2268,18 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Tell unit its scene index`,
+        taskName: `Tell unit its scene index.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Change scenes to use unit index.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Show scene widths in audio slider.`,
+        workedHours: 2,
+        neededHours: 2
     },
 ]

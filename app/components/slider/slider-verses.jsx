@@ -40,8 +40,7 @@ const SliderVerses = ({
                             isEven ? 'even' : 'odd'
                         )}
                         style={verseStyle}
-                    >
-                    </div>
+                    />
                 )
             })}
         </div>

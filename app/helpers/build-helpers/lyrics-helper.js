@@ -94,7 +94,10 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
     const { lyrics,
             tempSceneUnitIndices } = songObject,
         tempStanzaTypeCounters = {},
-        stanzaTimes = []
+        stanzaTimes = [],
+        sceneTimes = []
+
+    let sceneIndexCounter = 0
 
     lyrics.forEach((unitArray, unitIndex) => {
 
@@ -125,19 +128,21 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
             unitMapObject.stanzaIndex = tempStanzaTypeCounters[stanzaType]
         }
 
+        // This is for letting the slider show each scene's length.
+        if (unitIndex === tempSceneUnitIndices[sceneIndexCounter]) {
+            sceneTimes.push(unitFirstVerseTime)
+            sceneIndexCounter++
+        }
+
         // This is for telling each unit its scene.
         let sceneUnitCounter = 0
-
         while (sceneUnitCounter < tempSceneUnitIndices.length) {
             const sceneUnitIndex = tempSceneUnitIndices[sceneUnitCounter]
-
             if (unitIndex >= sceneUnitIndex) {
                 unitMapObject.sceneIndex = sceneUnitCounter + 1
             }
-
             sceneUnitCounter++
         }
-
         delete songObject.tempSceneUnitIndices
     })
 
@@ -148,6 +153,7 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
 
     songObject.tempStanzaTypeCounters = tempStanzaTypeCounters
     songObject.stanzaTimes = stanzaTimes
+    songObject.sceneTimes = sceneTimes
 }
 
 export const registerIsDoublespeaker = (songObject, verseObject) => {

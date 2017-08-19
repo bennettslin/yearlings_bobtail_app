@@ -131,6 +131,13 @@ export const getStanzaTimeObject = (songIndex, stanzaTimeIndex) => {
     }
 }
 
+export const getSceneTimesArray = (songIndex) => {
+    const songObject = getSongObject(songIndex),
+        { sceneTimes: sceneTimesArray } = songObject
+
+    return sceneTimesArray
+}
+
 // export const getUnitIndexForVerseIndex = (songIndex, verseIndex) => {
 //     const lyricUnitsArray
 // }
