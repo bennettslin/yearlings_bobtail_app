@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --env production",
+    "postinstall": "webpack --env production",
     "start": "webpack-dev-server --env development",
     "test": "mocha --compilers js:babel-core/register --require ./test/helpers/test-helper.js --recursive ./test",
     "test:lint": "eslint . --ext .js --ext .jsx --cache",
