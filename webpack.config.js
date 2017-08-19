@@ -30,6 +30,12 @@ const webpack = require('webpack'),
 
             output: {
                 path: PATHS.build,
+
+                /**
+                 * To deploy to GitHub Pages. Also forces change to path name
+                 * for local development as well.
+                 */
+                publicPath: '/yearlings_bobtail_app',
                 filename: '[name].js'
             },
 
@@ -60,9 +66,6 @@ const webpack = require('webpack'),
              * likely result in an error.
              */
             include: PATHS.app
-        }),
-        parts.loadUrls({
-            include: PATHS.app
         })
     ]),
     productionConfig = merge([
@@ -74,6 +77,10 @@ const webpack = require('webpack'),
         //         maxAssetSize: 450000
         //     }
         // },
+        parts.loadUrls({
+            include: PATHS.app,
+            isProduction: true
+        }),
         parts.clean(PATHS.build),
         parts.minifyJavaScript({ useSourceMap: true }),
         parts.minifyStyles({
@@ -91,6 +98,9 @@ const webpack = require('webpack'),
         })
     ]),
     developmentConfig = merge([
+        parts.loadUrls({
+            include: PATHS.app
+        }),
         {
             output: {
                 devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'

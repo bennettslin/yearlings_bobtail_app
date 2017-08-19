@@ -129,17 +129,60 @@ exports.generateSourceMaps = ({ type }) => ({
     devtool: type
 })
 
-exports.loadUrls = ({ include }) => ({
-    module: {
-        rules: [
-            {
-                include,
-                test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|mp3|pdf)$/,
-                loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
-            }
-        ]
+exports.loadUrls = ({ include, isProduction }) => {
+
+    return isProduction ? {
+        module: {
+            rules: [
+                {
+                    include,
+                    test: /\.(ttf)$/,
+                    loader: 'url-loader',
+                    options: {
+                        limit: 50000,
+                        name: 'assets/fonts/[name]-[hash].[ext]',
+                        publicPath: './'
+                    }
+                },
+                {
+                    include,
+                    test: /\.(mp3)$/,
+                    loader: 'url-loader',
+                    options: {
+                        limit: 50000,
+                        name: 'assets/mp3s/[name]-[hash].[ext]',
+                        publicPath: './'
+                    }
+                },
+                {
+                    include,
+                    test: /\.(pdf)$/,
+                    loader: 'url-loader',
+                    options: {
+                        limit: 50000,
+                        name: 'assets/scores/[name]-[hash].[ext]',
+                        publicPath: './'
+                    }
+                },
+                {
+                    include,
+                    test: /\.(svg|png|jpg|gif)$/,
+                    loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+                }
+            ]
+        }
+    } : {
+        module: {
+            rules: [
+                {
+                    include,
+                    test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|mp3|pdf)$/,
+                    loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+                }
+            ]
+        }
     }
-})
+}
 
 exports.clean = (path) => ({
     plugins: [

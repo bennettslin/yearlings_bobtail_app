@@ -2282,4 +2282,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Deploy to basic GitHub page.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]
