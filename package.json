@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --env production",
+    "deploy": "gh-pages -d build",
     "start": "webpack-dev-server --env development",
     "test": "mocha --compilers js:babel-core/register --require ./test/helpers/test-helper.js --recursive ./test",
     "test:lint": "eslint . --ext .js --ext .jsx --cache",
@@ -50,6 +51,7 @@
     "eslint-plugin-react": "^7.1.0",
     "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.11.2",
+    "gh-pages": "^1.0.0",
     "html-webpack-plugin": "^2.29.0",
     "jsdom": "^11.0.0",
     "less": "^2.7.2",
