@@ -1093,7 +1093,7 @@ module.exports = {
                         anchor: `needle done,`,
                         annotation: [
                             {
-                                description: `My mother suggests that my life will be a patchwork onto which I continually sew new experiences.`,
+                                description: `My mother suggests that my life will be a patchwork onto which I continually sew new experiences. In turn, the insights gained from these experiences may then inform and enrich my art.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1106,27 +1106,20 @@ module.exports = {
                     `you'll write this`,
                     {
                         anchor: `book of yours.`,
-                        annotation: [
-                            {
-                                description: `In turn, the insights I gain from these experiences will then inform and enrich my art.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true
-                                }
-                            },
-                            {
-                                description: [
-                                    // TODO
-                                    `My mother always insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums.`,
-                                    {
-                                        italic: `Bobtail`
-                                    },
-                                    `was my catch-all title for the epic masterpiece I would one day create, whatever it was. At the time, we assumed it would be a comic book.`
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true
-                                }
+                        annotation: {
+                            description: [
+                                // TODO
+                                `I wore an eyepatch as a child to correct my`,
+                                {
+                                    anchor: `lazy eye.`,
+                                    wiki: `Amblyopia`
+                                },
+                                `This lack of depth perception helped me to understand perspective early on, which was reflected in my drawings. Impressed, my mother insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums. I thus had it in my head that I would one day be famous for writing comic books.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
                             }
-                        ]
+                        }
                     }
                 ]
             },
@@ -1144,9 +1137,26 @@ module.exports = {
                 time: 191,
                 lyric: [
                     {
-                        italic: `Bobtail`
+                        anchor: [
+                            {
+                                italic: `Bobtail`
+                            },
+                            `'s cover`
+                        ],
+                        annotation: {
+                            description: [
+                                // TODO: Make it about my favourite word instead.
+                                {
+                                    italic: `Bobtail`
+                                },
+                                `was my catch-all title for the epic masterpiece I would one day create, whatever it was. At the time, we assumed it would be a comic book.`
+                            ],
+                            dotKeys: {
+                                [BACKSTORY]: true
+                            }
+                        }
                     },
-                    `'s cover could say sorry for the world!`
+                    `could say sorry for the world!`
                 ]
             },
             {
