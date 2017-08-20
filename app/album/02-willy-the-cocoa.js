@@ -1115,6 +1115,7 @@ module.exports = {
                             },
                             {
                                 description: [
+                                    // TODO
                                     `My mother always insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums.`,
                                     {
                                         italic: `Bobtail`

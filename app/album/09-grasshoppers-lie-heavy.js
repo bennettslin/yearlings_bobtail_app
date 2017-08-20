@@ -680,8 +680,7 @@ module.exports = {
                     {
                         anchor: `no convert's missed,`,
                         annotation: {
-                            // TODO: Make more clear that this was intentional on their part.
-                            description: `After I grew disillusioned with the mail-order cult, I never heard from them again. Having asked for the largest payment upfront, any further effort on their part would only yield diminishing returns. Sita's rejection left me with the same feeling that I had served my purpose, and thus was no longer of use.`,
+                            description: `In asking for the largest payments upfront, the mail-order cult correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after she had so profoundly made an impact, seemed like evidence that I was once again the sucker in a similarly perfected scam.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
