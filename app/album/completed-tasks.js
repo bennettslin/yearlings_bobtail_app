@@ -2287,4 +2287,9 @@ module.exports = [
         workedHours: 5,
         neededHours: 5
     },
+    {
+        taskName: `Move figure drawings to binder.`,
+        workedHours: 0,
+        neededHours: 2
+    },
 ]
