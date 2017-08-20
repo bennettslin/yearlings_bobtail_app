@@ -15,19 +15,16 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
-            description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
-            actors: {
-
-            }
+            description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`
         },
         {
-            unitIndex: 5,
-            description: `On a page from a Chinese language workbook, Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
+            unitIndex: 4,
+            description: `Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
             actors: {
             }
         },
         {
-            unitIndex: 8,
+            unitIndex: 6,
             description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated next to her who is wearing a yarmulke.`,
             actors: {
                 preteenBennett: {
@@ -50,7 +47,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 11,
+            unitIndex: 9,
             description: `In Bennett's thought bubble, he is being tied to a tetherball pole by two bullies. Sasha is yelling at them, telling them to untie Bennett and to leave him alone. Bennett looks physically roughed up, and emotionally mortified.`,
             actors: {
                 preteenBennett: {
@@ -80,8 +77,8 @@ module.exports = {
             }
         },
         {
-            unitIndex: 13,
-            description: `In Bennett's thought bubble, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
+            unitIndex: 12,
+            description: `In Bennett's sketch, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
             actors: {}
         }
     ],

@@ -18,6 +18,10 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
+            description: `Neighbourhood houses.`
+        },
+        {
+            unitIndex: 3,
             description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
             actors: {
                 anita: {

@@ -20,6 +20,10 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
+            description: ``
+        },
+        {
+            unitIndex: 2,
             description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`,
             actors: {
                 willy: {
@@ -583,7 +587,7 @@ module.exports = {
                     {
                         anchor: `pages clawed,`,
                         annotation: {
-                            description: `My brother used to cut letters of the alphabet out of paper, an activity encouraged my parents since it was creative and kept him occupied. Unfortunately, my comic books seem to have accidentally made their way into his scrap pile of old magazines.`,
+                            description: `My brother enjoyed cutting shapes of alphabet letters out of paper, an activity encouraged by my parents since it was creative and kept him occupied. Unfortunately, if I left a comic book lying on the floor, he might easily mistake it for an old magazine from his scrap pile.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
@@ -1108,13 +1112,12 @@ module.exports = {
                         anchor: `book of yours.`,
                         annotation: {
                             description: [
-                                // TODO
                                 `I wore an eyepatch as a child to correct my`,
                                 {
-                                    anchor: `lazy eye.`,
+                                    anchor: `lazy eye,`,
                                     wiki: `Amblyopia`
                                 },
-                                `This lack of depth perception helped me to understand perspective early on, which was reflected in my drawings. Impressed, my mother insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums. I thus had it in my head that I would one day be famous for writing comic books.`
+                                `which caused a lack of depth perception that led me to figure out perspective early on. Impressed by my drawings, my mother insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums. I thus had it in my head that I would someday create an epic masterpiece, which we assumed at the time would be a comic book.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
@@ -1145,11 +1148,16 @@ module.exports = {
                         ],
                         annotation: {
                             description: [
-                                // TODO: Make it about my favourite word instead.
+                                `My favourite word as a child was "bobtail." I think I was just so proud of myself when I realised that the line "bells on bobtail ring" from the song`,
+                                {
+                                    anchor: `"Jingle Bells"`,
+                                    wiki: `Jingle_Bells`
+                                },
+                                `isn't actually a nonsensical phrase. In any case,`,
                                 {
                                     italic: `Bobtail`
                                 },
-                                `was my catch-all title for the epic masterpiece I would one day create, whatever it was. At the time, we assumed it would be a comic book.`
+                                `became my catchall title for the great artistic work I would one day create.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true
