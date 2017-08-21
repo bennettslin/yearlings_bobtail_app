@@ -6,6 +6,9 @@
 2a. San Fernando Valley
 2b. telephone poles
 2f. house from afar
+6a. trees, telephone poles
+6d. campus trees
+6e. campus quad
 
 # Flat walls
 (realistic, not touched)
@@ -16,6 +19,10 @@
 3a. mountain outlines
 3c. road scene (thought bubble)
 3d. junior high schoolyard
+6b. Bennett's room (flashback)
+6c. Oakland church
+6d. campus building front
+6e. campus building side
 
 # 3d walls
 (realistic, not touched)
@@ -25,6 +32,9 @@
 2b. porch
 2c. Bennett's room
 3a. Taiwan mountains, cloud blanket
+6a. Bennett's apartment front, rain curtain
+6d. campus building front deck
+6e. campus building side deck
 
 # Fixtures
 (realistic, not touched, more detailed)
@@ -37,6 +47,11 @@
 2d. shopping cart with single garbage bag
 2e. Willy's body, police car
 2f. campfire
+3b. schoolbus
+6b. small table, record player
+6c. streetlamp, newspaper dispensers
+6d. ashtray
+6e. campus bench, directions post
 
 
 # Furniture and vehicles
@@ -48,6 +63,8 @@
 2e. chair
 3c. schoolbus
 3d. tetherball pole
+5a. captain bed cutaway
+6b. Bennett's couch
 
 # Props
 (realistic, touched, small)

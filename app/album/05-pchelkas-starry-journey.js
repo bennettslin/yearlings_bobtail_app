@@ -59,7 +59,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 14,
+            unitIndex: 13,
             description: `Bennett is sitting on the grass by himself, away from the lunch crowd. The two bullies have been throwing rocks at him, trying to rile him up, but to no avail. One looks confused, the other is suggesting that they should leave.`,
             actors: {
                 preteenBennett: {
