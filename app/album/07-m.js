@@ -14,6 +14,10 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
+            description: `Bennett's room`
+        },
+        {
+            unitIndex: 2,
             description: `Bennett is in his room, doing many things, such that there are many copies of him. One is playing a guitar and writing stuff down on a notepad, another is reading a book, while a third is trying to figure out a Rubik's Cube.`,
             actors: {
                 bennett: {
@@ -115,7 +119,11 @@ module.exports = {
             }
         },
         {
-            unitIndex: 12,
+            unitIndex: 11,
+            description: 'Bennett is thinking about a baby.'
+        },
+        {
+            unitIndex: 14,
             description: `Bennett suddenly has an epiphany. In sketches in his head, he imagines himself recording all the instruments in a band. Finally, he imagines Mara finding his album in a record store.`,
             actors: {
                 bennett: {

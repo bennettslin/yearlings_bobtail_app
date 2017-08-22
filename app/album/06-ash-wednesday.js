@@ -29,7 +29,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 4,
+            unitIndex: 3,
             description: `In Bennett's thoughts, he and Catherine are together on the couch. She is putting down the book she is reading, while he is playing the guitar, a pencil and notepad in hand, implying that he is writing a song, looking at her inquisitively.`,
             actors: {
                 bennett: {
@@ -45,7 +45,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 6,
+            unitIndex: 5,
             description: `Bennett is standing in the rain at night, staring at a Catholic church across the street.`,
             actors: {
                 bennett: {

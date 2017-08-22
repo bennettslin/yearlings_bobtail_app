@@ -9,6 +9,7 @@
 6a. trees, telephone poles
 6d. campus trees
 6e. campus quad
+8a. Liz neighbourhood
 
 # Flat walls
 (realistic, not touched)
@@ -23,6 +24,10 @@
 6c. Oakland church
 6d. campus building front
 6e. campus building side
+7d. matinee
+8a. boarding house
+8b. museum wall
+8d. go kart track
 
 # 3d walls
 (realistic, not touched)
@@ -35,6 +40,10 @@
 6a. Bennett's apartment front, rain curtain
 6d. campus building front deck
 6e. campus building side deck
+7b. stage front
+7c. Jacob's apartment
+8a. boarding house wall
+8c. theatre backstage
 
 # Fixtures
 (realistic, not touched, more detailed)
@@ -52,7 +61,11 @@
 6c. streetlamp, newspaper dispensers
 6d. ashtray
 6e. campus bench, directions post
-
+7b. drums, amps, instruments, mic stands
+7c. drums, amps, instrument cases
+8a. traffic light
+8b. caveman display
+8c. theatre clothing rack
 
 # Furniture and vehicles
 (realistic, touched, large)
@@ -65,6 +78,8 @@
 3d. tetherball pole
 5a. captain bed cutaway
 6b. Bennett's couch
+7c. table, milk crates
+8d. go karts
 
 # Props
 (realistic, touched, small)
@@ -74,6 +89,7 @@
 2a. glass bottles
 2c. comic book cutouts
 2d. spilled garbage bag
+7b. Ana's bass and case
 
 # Puppets
 (figure standins)
@@ -81,6 +97,7 @@
 3a. family
 3b. family
 3e. family
+7d. dog
 
 # Cartoons
 (cartoonish)
