@@ -72,7 +72,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 5,
+            unitIndex: 6,
             description: `The gang is wandering through the steam tunnels. Bennett is blathering, Howie is half paying attention. Tomer and Ana are play fighting.`,
             actors: {
                 bennett: {

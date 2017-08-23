@@ -10,6 +10,7 @@
 6d. campus trees
 6e. campus quad
 8a. Liz neighbourhood
+10e. road scenery
 
 # Flat walls
 (realistic, not touched)
@@ -28,6 +29,11 @@
 8a. boarding house
 8b. museum wall
 8d. go kart track
+10a. Royce Hall
+10b. Walgreens wall (flashback)
+10c. steam tunnel
+10d. cemetery
+11a. club backdrop
 
 # 3d walls
 (realistic, not touched)
@@ -44,6 +50,9 @@
 7c. Jacob's apartment
 8a. boarding house wall
 8c. theatre backstage
+10f. attic
+11a. stage
+11c. outside club
 
 # Fixtures
 (realistic, not touched, more detailed)
@@ -66,6 +75,11 @@
 8a. traffic light
 8b. caveman display
 8c. theatre clothing rack
+10b. Walgreens aisle
+10d. Adam's gravestone
+10f. old television
+11b. drums, instruments, amps
+11c. instruments, amps
 
 # Furniture and vehicles
 (realistic, touched, large)
@@ -80,6 +94,10 @@
 6b. Bennett's couch
 7c. table, milk crates
 8d. go karts
+10e. old Buick
+10f. couch
+11d. Liz's bed
+
 
 # Props
 (realistic, touched, small)
@@ -90,6 +108,8 @@
 2c. comic book cutouts
 2d. spilled garbage bag
 7b. Ana's bass and case
+11a. instruments
+11b. drums
 
 # Puppets
 (figure standins)
@@ -104,3 +124,4 @@
 
 3b. sketch of Bennett and Sasha
 3e. sketch of Bennett, Sasha, and Jewish boy
+10e. thought bubble of sabre-tooth and mastodon, Loki and Freyja

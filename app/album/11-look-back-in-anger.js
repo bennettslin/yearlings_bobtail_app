@@ -116,7 +116,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 11,
+            unitIndex: 12,
             description: `Bennett is back home, sitting on the edge of Sita's bed. Sita is half asleep, looking peaceful, and is reaching towards him. He does not respond. In his thought bubble, he is reaching for the redhead, who is in bed in place of Sita.`,
             actors: {
                 bennett: {
