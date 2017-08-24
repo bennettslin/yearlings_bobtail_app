@@ -14,11 +14,29 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
-            description: `Bennett's room`
+            description: `Bennett's room`,
+            actors: {
+                bennett: {
+                    todo: true,
+                    workedHours: 1,
+                    description: 'looking at Leonard Cohen poster'
+                }
+            }
         },
         {
             unitIndex: 2,
-            description: `Bennett is in his room, doing many things, such that there are many copies of him. One is playing a guitar and writing stuff down on a notepad, another is reading a book, while a third is trying to figure out a Rubik's Cube.`,
+            description: `Bennett is in his room, trying to figure out a Rubik's Cube.`,
+            actors: {
+                bennett: {
+                    todo: true,
+                    workedHours: 1,
+                    description: 'sitting on couch, figuring out Rubiks Cube'
+                }
+            }
+        },
+        {
+            unitIndex: 4,
+            description: `Bennett is in his room, doing many things, such that there are many copies of him. One is playing a keyboard and writing stuff down on a notepad, another is reading a book.`,
             actors: {
                 bennett: {
                     todo: true,
@@ -29,7 +47,7 @@ module.exports = {
                     bennett: {
                         todo: true,
                         workedHours: 1,
-                        description: 'sitting on floor, back turned, holding guitar'
+                        description: 'sitting on floor, back turned, playing keyboard'
                     }
                 }
             }
@@ -106,21 +124,35 @@ module.exports = {
                     maskedWoman: {
                         todo: true,
                         workedHours: 1,
-                        description: 'side, walking dog, looking back at Bennett'
+                        description: 'side, holding baby, looking back at Bennett'
+                    },
+                }
+            }
+        },
+        {
+            unitIndex: 11,
+            description: 'Bennett is looking at the woman holding a baby who just passed by.',
+            actors: {
+                bennett: {
+                    todo: true,
+                    workedHours: 1,
+                    description: 'side, looking back at baby'
+                },
+                miriam: {
+                    maskedWoman: {
+                        todo: true,
+                        workedHours: 1,
+                        description: 'side, walking away'
                     },
                 },
                 howie: {
                     maskedMan: {
                         todo: true,
                         workedHours: 1,
-                        description: 'resting against wall, checking time'
+                        description: 'checking watch'
                     }
                 }
             }
-        },
-        {
-            unitIndex: 11,
-            description: 'Bennett is thinking about a baby.'
         },
         {
             unitIndex: 14,

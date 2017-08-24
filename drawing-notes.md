@@ -9,6 +9,7 @@
 6a. trees, telephone poles
 6d. campus trees
 6e. campus quad
+7h. cityscape
 8a. Liz neighbourhood
 10e. road scenery
 
@@ -25,7 +26,7 @@
 6c. Oakland church
 6d. campus building front
 6e. campus building side
-7d. matinee
+7f. matinee
 8a. boarding house
 8b. museum wall
 8d. go kart track
@@ -46,8 +47,10 @@
 6a. Bennett's apartment front, rain curtain
 6d. campus building front deck
 6e. campus building side deck
-7b. stage front
-7c. Jacob's apartment
+7a. Bennett's living room
+7d. stage front
+7e. Jacob's apartment
+7h. matinee side
 8a. boarding house wall
 8c. theatre backstage
 10f. attic
@@ -70,8 +73,8 @@
 6c. streetlamp, newspaper dispensers
 6d. ashtray
 6e. campus bench, directions post
-7b. drums, amps, instruments, mic stands
-7c. drums, amps, instrument cases
+7d. drums, amps, instruments, mic stands
+7e. drums, amps, instrument cases
 8a. traffic light
 8b. caveman display
 8c. theatre clothing rack
@@ -92,7 +95,7 @@
 3d. tetherball pole
 5a. captain bed cutaway
 6b. Bennett's couch
-7c. table, milk crates
+7e. table, milk crates
 8d. go karts
 10e. old Buick
 10f. couch
@@ -107,7 +110,9 @@
 2a. glass bottles
 2c. comic book cutouts
 2d. spilled garbage bag
-7b. Ana's bass and case
+7d. Ana's bass and case
+7f. baby in harness
+7g. baby in harness
 11a. instruments
 11b. drums
 
@@ -124,4 +129,5 @@
 
 3b. sketch of Bennett and Sasha
 3e. sketch of Bennett, Sasha, and Jewish boy
+7h. thought bubble of Bennetts recording, Mara finding record
 10e. thought bubble of sabre-tooth and mastodon, Loki and Freyja
