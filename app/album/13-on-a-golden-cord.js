@@ -17,6 +17,10 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
+            description: 'Bennett is walking down street.'
+        },
+        {
+            unitIndex: 3,
             description: `Bennett and Sita are at her apartment, breaking up. Sita is a wreck, turning away from Bennett as she returns the gold bracelet to him. He is trying to console her, but in a mechanical way.`,
             actors: {
                 bennett: {

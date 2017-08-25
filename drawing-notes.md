@@ -12,6 +12,7 @@
 7h. cityscape
 8a. Liz neighbourhood
 10e. road scenery
+12b. street scene
 
 # Flat walls
 (realistic, not touched)
@@ -56,6 +57,8 @@
 10f. attic
 11a. stage
 11c. outside club
+12d. stage
+14a. Liz apartment, boarding house wall
 
 # Fixtures
 (realistic, not touched, more detailed)
@@ -83,6 +86,8 @@
 10f. old television
 11b. drums, instruments, amps
 11c. instruments, amps
+12d. amps, instruments
+14b. keepsake box
 
 # Furniture and vehicles
 (realistic, touched, large)
@@ -100,6 +105,9 @@
 10e. old Buick
 10f. couch
 11d. Liz's bed
+12b. Volkswagen
+14a. Liz couch
+14d. stool
 
 
 # Props
@@ -115,6 +123,9 @@
 7g. baby in harness
 11a. instruments
 11b. drums
+12b. meat packages
+12c. guitar
+12d. Ana's bass
 
 # Puppets
 (figure standins)
@@ -123,6 +134,12 @@
 3b. family
 3e. family
 7d. dog
+14a. cat
+14b. cat
+14c. cat
+14d. cat
+14e. cat
+14f. cat
 
 # Cartoons
 (cartoonish)
@@ -131,3 +148,6 @@
 3e. sketch of Bennett, Sasha, and Jewish boy
 7h. thought bubble of Bennetts recording, Mara finding record
 10e. thought bubble of sabre-tooth and mastodon, Loki and Freyja
+14b. thought bubbles
+14d. speech bubbles
+14e. thought bubble

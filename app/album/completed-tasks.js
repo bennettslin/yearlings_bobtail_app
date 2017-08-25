@@ -2296,5 +2296,10 @@ module.exports = [
         taskName: `Begin refining storyboards.`,
         workedHours: 16,
         neededHours: 16
-    }
+    },
+    {
+        taskName: `Refine storyboard for Kyon and Garryowen.`,
+        workedHours: 0,
+        neededHours: 5
+    },
 ]
