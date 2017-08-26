@@ -2289,7 +2289,7 @@ module.exports = [
     },
     {
         taskName: `Move figure drawings to binder.`,
-        workedHours: 0,
+        workedHours: 2,
         neededHours: 2
     },
     {
@@ -2299,7 +2299,12 @@ module.exports = [
     },
     {
         taskName: `Refine storyboard for Kyon and Garryowen.`,
-        workedHours: 0,
+        workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Refine storyboard for Golden Cord.`,
+        workedHours: 3,
+        neededHours: 3
     },
 ]
