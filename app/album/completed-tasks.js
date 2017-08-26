@@ -2307,4 +2307,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Refine storyboard for Cremated.`,
+        workedHours: 3,
+        neededHours: 3
+    }
 ]

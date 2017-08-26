@@ -14,6 +14,20 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
+            description: `Bennett and Miriam are sitting in her car.`,
+            actors: {
+                bennett: {
+                    todo: true,
+                    description: 'sitting in car, opening condom wrapper'
+                },
+                miriam: {
+                    todo: true,
+                    description: 'sitting in car, putting on perfume'
+                }
+            }
+        },
+        {
+            unitIndex: 3,
             description: `Bennett and Miriam are having sex in a car overlooking a cliff. Miriam is on top.`,
             actors: {
                 bennett: {
@@ -30,7 +44,7 @@ module.exports = {
         },
         {
             unitIndex: 5,
-            description: `Miriam is now giving Bennett a blowjob. Meanwhile, they are both thinking a thought bubble in which they are now married. He is drunk, and their child is autistic.`,
+            description: `Miriam is now giving Bennett a blowjob. Meanwhile, they are both thinking a thought bubble in which they are now married. Their child is a pinhead.`,
             actors: {
                 bennett: {
                     todo: true,
@@ -45,13 +59,23 @@ module.exports = {
             }
         },
         {
-            unitIndex: 8,
-            description: `In a thought bubble, Bennett is dying in a hospital bed next to a record player. In another thought bubble, Miriam is playing tennis with her new boyfriend.`,
+            unitIndex: 7,
+            description: `In a thought bubble, Bennett is dying in a hospital bed next to a record player. In another thought bubble, Miriam is playing tennis.`,
             actors: {
                 bennett: {
                     todo: true,
                     workedHours: 1,
                     description: 'front angle, dying, infirm'
+                }
+            }
+        },
+        {
+            unitIndex: 8,
+            description: `In the same scene, Miriam now appears in Bennett's thought bubble. She is playing tennis.`,
+            actors: {
+                miriam: {
+                    todo: true,
+                    description: 'serving in tennis'
                 }
             }
         },
@@ -70,6 +94,10 @@ module.exports = {
                     description: 'side, looking back, reversing car'
                 }
             }
+        },
+        {
+            unitIndex: 11,
+            description: `The car is in the background.`
         }
     ],
     tip: {
