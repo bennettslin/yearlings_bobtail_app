@@ -39,7 +39,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 5,
+            unitIndex: 4,
             description: `Bennett is by himself with Odin at a show, looking agitated and bored. Miriam is on the other side of the crowd, being introduced by Tristan to her future boyfriend.`,
             actors: {
                 bennett: {
@@ -61,6 +61,17 @@ module.exports = {
                     todo: true,
                     workedHours: 1,
                     description: 'side, eager'
+                }
+            }
+        },
+        {
+            unitIndex: 7,
+            description: 'Bennett is walking through an alley.',
+            actors: {
+                bennett: {
+                    todo: true,
+                    workedHours: 1,
+                    description: 'walking through alley'
                 }
             }
         },

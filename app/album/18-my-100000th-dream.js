@@ -108,12 +108,30 @@ module.exports = {
         },
         {
             unitIndex: 8,
-            description: `The whole thing turns out to have been a dream. Bennett is in bed, old and decrepit. A thought bubble shows the previous scene, with Bennett now accepting his fate, and Sita comforting him.`,
+            description: `The whole thing turns out to have been a dream. Bennett is in bed, old and dying. A doctor is pulling the sheet over him. A thought bubble shows the previous scene, with Bennett now accepting his fate, and Sita comforting him.`,
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
-                    description: 'side angle, old, lying, dying'
+                    description: 'calm'
+                },
+                liz: {
+                    sita: {
+                        todo: true,
+                        description: 'comforting'
+                    }
+                },
+                amy: {
+                    doctor: {
+                        todo: true,
+                        description: 'pulling sheet over Bennett'
+                    }
+                },
+                stephanie: {
+                    bennett: {
+                        todo: true,
+                        workedHours: 1,
+                        description: 'side angle, old, lying, dying'
+                    }
                 }
             }
         }

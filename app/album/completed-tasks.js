@@ -2311,5 +2311,15 @@ module.exports = [
         taskName: `Refine storyboard for Cremated.`,
         workedHours: 3,
         neededHours: 3
-    }
+    },
+    {
+        taskName: `Refine storyboard for 100,000th Dream.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Refine storyboard for Vegan.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]
