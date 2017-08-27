@@ -2322,4 +2322,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Clean up Tristan and Nestor in Vegan.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]
