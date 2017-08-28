@@ -2327,4 +2327,14 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Add legs to figures in vehicle scenes.`,
+        workedHours: 5,
+        neededHours: 5
+    },
+    {
+        taskName: `Clean up Tristan and Nestor in Epilogue.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

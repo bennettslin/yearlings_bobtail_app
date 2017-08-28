@@ -75,6 +75,7 @@ module.exports = {
             actors: {
                 miriam: {
                     todo: true,
+                    workedHours: 1,
                     description: 'serving in tennis'
                 }
             }
