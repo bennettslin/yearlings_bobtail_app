@@ -2337,4 +2337,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Begin storyboard for Grasshoppers.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]
