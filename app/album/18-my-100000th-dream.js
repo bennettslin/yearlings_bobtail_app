@@ -123,6 +123,7 @@ module.exports = {
                 amy: {
                     doctor: {
                         todo: true,
+                        workedHours: 1,
                         description: 'pulling sheet over Bennett'
                     }
                 },

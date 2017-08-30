@@ -2342,4 +2342,9 @@ module.exports = [
         workedHours: 5,
         neededHours: 5
     },
+    {
+        taskName: `Redo first Bennett in Grasshoppers.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
