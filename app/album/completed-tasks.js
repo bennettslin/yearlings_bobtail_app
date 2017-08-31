@@ -2357,4 +2357,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Finish storyboard for Uncanny Valley.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]
