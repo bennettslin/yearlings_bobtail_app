@@ -2346,5 +2346,15 @@ module.exports = [
         taskName: `Redo first Bennett in Grasshoppers.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Finish storyboard for Grasshoppers.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Begin storyboard for Uncanny Valley.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

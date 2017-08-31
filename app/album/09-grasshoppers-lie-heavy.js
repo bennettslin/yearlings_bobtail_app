@@ -49,6 +49,14 @@ module.exports = {
         },
         {
             unitIndex: 6,
+            description: 'Grasshoppers scene 1'
+        },
+        {
+            unitIndex: 7,
+            description: 'Grasshoppers scene 5'
+        },
+        {
+            unitIndex: 8,
             description: `Bennett is walking home from work, looking dejected. In his thought bubble, he is remembering the night that he walked home from the date with Sita. A jogger passes by.`,
             actors: {
                 bennett: {
@@ -66,7 +74,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 8,
+            unitIndex: 10,
             description: `Same scene. As he begins to enter the front gate, he notices that Sita is standing several feet behind him.`,
             actors: {
                 bennett: {
@@ -84,7 +92,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 10,
+            unitIndex: 11,
             description: `Bennett's apartment is dark inside. Through a window, we see him opening the gate for Sita to pass through. She takes his arm.`,
             actors: {
                 bennett: {
@@ -1318,6 +1326,7 @@ module.exports = {
                     {
                         anchor: `hard-on in a sleeve."`,
                         annotation: {
+                            // TODO: Not technically my quote.
                             description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with a past self-assessment of mine. I had once judged myself to be too upfront about my feelings, or as I had put it, to wear my "heart on my sleeve."`,
                             dotKeys: {
                                 [NARRATIVE]: true,

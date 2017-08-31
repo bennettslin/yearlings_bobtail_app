@@ -112,11 +112,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    description: 'calm'
+                    workedHours: 1,
+                    description: 'calm, accepting of impending doom'
                 },
                 liz: {
                     sita: {
                         todo: true,
+                        workedHours: 1,
                         description: 'comforting'
                     }
                 },
