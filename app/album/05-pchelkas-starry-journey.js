@@ -22,7 +22,7 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
-            description: `Bennett and Christopher are under his bunk bed. Christopher is injured, but and happily playing. Bennett looks guilty.`,
+            description: `Bennett and Christopher are under his bunk bed. Christopher is injured, but happily playing. Bennett looks guilty. There is a drawing of the two as dogs.`,
             actors: {
                 preteenBennett: {
                     todo: true,
@@ -46,6 +46,10 @@ module.exports = {
                     description: 'side, sitting up in bed, feigning sick'
                 }
             }
+        },
+        {
+            unitIndex: 9,
+            description: ``
         },
         {
             unitIndex: 10,
@@ -85,6 +89,10 @@ module.exports = {
         },
         {
             unitIndex: 17,
+            description: ``
+        },
+        {
+            unitIndex: 18,
             description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is chewing out the principal..`,
             actors: {
                 preteenBennett: {
