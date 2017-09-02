@@ -2367,4 +2367,14 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Finish storyboard for Pchelka.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Begin storyboard for Odin.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
