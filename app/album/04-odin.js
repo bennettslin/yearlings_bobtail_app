@@ -32,6 +32,16 @@ module.exports = {
             }
         },
         {
+            unitIndex: 4,
+            description: 'From top of stairs, Bennett sees himself opening the gate and peering out.',
+            actors: {
+                preteenBennett: {
+                    todo: true,
+                    description: 'looking down from stairs'
+                }
+            }
+        },
+        {
             unitIndex: 6,
             description: `Bennett is stepping through the front gate. He sees himself in a rickshaw, driving away. The rickshaw leaves a trail.`,
             actors: {
@@ -41,6 +51,10 @@ module.exports = {
                     description: 'side angle, peeking out from gate'
                 }
             }
+        },
+        {
+            unitIndex: 9,
+            description: ``
         },
         {
             unitIndex: 11,
@@ -54,6 +68,10 @@ module.exports = {
             }
         },
         {
+            unitIndex: 14,
+            description: ``
+        },
+        {
             unitIndex: 18,
             description: `Bennett sits on the shore gazing at the Odin. Further ahead, another Bennett is making his bed on the beach. Footprints lead up to him.`,
             actors: {
@@ -63,6 +81,10 @@ module.exports = {
                     description: 'side angle, crouched in sand, looking back'
                 }
             }
+        },
+        {
+            unitIndex: 20,
+            description: ``
         }
     ],
     tip: {

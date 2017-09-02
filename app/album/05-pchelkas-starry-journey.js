@@ -49,7 +49,13 @@ module.exports = {
         },
         {
             unitIndex: 9,
-            description: ``
+            description: `Bennett is in bed sleeping. In his dream bubble, he imagines two dogs pulling a rocket.`,
+            actors: {
+                preteenBennett: {
+                    todo: true,
+                    description: 'in bed, asleep, turned away'
+                }
+            }
         },
         {
             unitIndex: 10,
@@ -64,7 +70,7 @@ module.exports = {
         },
         {
             unitIndex: 13,
-            description: `Bennett is sitting on the grass by himself, away from the lunch crowd. The two bullies have been throwing rocks at him, trying to rile him up, but to no avail. One looks confused, the other is suggesting that they should leave.`,
+            description: `Bennett is sitting by himself, away from the lunch crowd. The two bullies have been throwing food at him, trying to rile him up, but to no avail. One looks angry, the other is suggesting that they should leave.`,
             actors: {
                 preteenBennett: {
                     todo: true,
@@ -89,7 +95,31 @@ module.exports = {
         },
         {
             unitIndex: 17,
-            description: ``
+            description: `Bennett is in his secluded spot, watching the bullies flirt with a girl.`,
+            actors: {
+                preteenBennett: {
+                    todo: true,
+                    description: 'side, wistful'
+                },
+                brad: {
+                    bully: {
+                        todo: true,
+                        description: 'side, flirting'
+                    }
+                },
+                andrew: {
+                    bully: {
+                        todo: true,
+                        description: 'side front, boastful'
+                    }
+                },
+                sasha: {
+                    hotGirl: {
+                        todo: true,
+                        description: 'back'
+                    }
+                }
+            }
         },
         {
             unitIndex: 18,
