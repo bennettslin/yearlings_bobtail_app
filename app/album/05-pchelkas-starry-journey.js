@@ -53,6 +53,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'in bed, asleep, turned away'
                 }
             }
@@ -99,23 +100,27 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'side, wistful'
                 },
                 brad: {
                     bully: {
                         todo: true,
-                        description: 'side, flirting'
+                        workedHours: 1,
+                        description: 'eating chips'
                     }
                 },
                 andrew: {
                     bully: {
                         todo: true,
-                        description: 'side front, boastful'
+                        workedHours: 1,
+                        description: 'playing guitar like an amateur'
                     }
                 },
                 sasha: {
-                    hotGirl: {
+                    popularGirl: {
                         todo: true,
+                        workedHours: 1,
                         description: 'back'
                     }
                 }

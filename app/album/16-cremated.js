@@ -18,10 +18,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'sitting in car, opening condom wrapper'
                 },
                 miriam: {
                     todo: true,
+                    workedHours: 1,
                     description: 'sitting in car, putting on perfume'
                 }
             }

@@ -54,7 +54,13 @@ module.exports = {
         },
         {
             unitIndex: 9,
-            description: ``
+            description: ``,
+            actors: {
+                preteenBennett: {
+                    todo: true,
+                    description: ''
+                }
+            }
         },
         {
             unitIndex: 11,
@@ -69,7 +75,13 @@ module.exports = {
         },
         {
             unitIndex: 14,
-            description: ``
+            description: ``,
+            actors: {
+                preteenBennett: {
+                    todo: true,
+                    description: ''
+                }
+            }
         },
         {
             unitIndex: 18,
@@ -84,7 +96,13 @@ module.exports = {
         },
         {
             unitIndex: 20,
-            description: ``
+            description: ``,
+            actors: {
+                preteenBennett: {
+                    todo: true,
+                    description: ''
+                }
+            }
         }
     ],
     tip: {
