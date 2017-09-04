@@ -37,7 +37,8 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: 'looking down from stairs'
+                    workedHours: 1,
+                    description: 'side angle, looking down stairs'
                 }
             }
         },
@@ -58,7 +59,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: ''
+                    description: 'getting off rickshaw bike'
                 }
             }
         },
@@ -75,32 +76,36 @@ module.exports = {
         },
         {
             unitIndex: 14,
-            description: ``,
+            description: `Sea serpents are surrounding Bennett in the ocean.`,
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: ''
-                }
-            }
-        },
-        {
-            unitIndex: 18,
-            description: `Bennett sits on the shore gazing at the Odin. Further ahead, another Bennett is making his bed on the beach. Footprints lead up to him.`,
-            actors: {
-                preteenBennett: {
-                    todo: true,
-                    workedHours: 1,
-                    description: 'side angle, crouched in sand, looking back'
+                    description: 'peering down from buoy'
                 }
             }
         },
         {
             unitIndex: 20,
-            description: ``,
+            description: `Sasha is a mermaid, rescuing Bennett. She points down to Bennett on the ocean floor.`,
             actors: {
                 preteenBennett: {
                     todo: true,
-                    description: ''
+                    description: 'hugging self'
+                },
+                sasha: {
+                    todo: true,
+                    description: 'mermaid'
+                }
+            }
+        },
+        {
+            unitIndex: 18,
+            description: `Bennett sits on the shore gazing at the ocean. Further ahead, another Bennett is making his bed on the beach. Footprints lead up to him.`,
+            actors: {
+                preteenBennett: {
+                    todo: true,
+                    workedHours: 1,
+                    description: 'side angle, crouched in sand, looking back'
                 }
             }
         }

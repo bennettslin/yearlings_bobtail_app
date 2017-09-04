@@ -2377,4 +2377,19 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Clean up Jacob and Howie in Epilogue.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Clean up Khari in Epilogue.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Finish storyboard for Odin.`,
+        workedHours: 7,
+        neededHours: 7
+    },
 ]

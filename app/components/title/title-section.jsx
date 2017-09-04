@@ -4,7 +4,15 @@ import React from 'react'
 
 const TitleSection = () => (
     <div className="section title-section">
-        Title Section!!!!
+        <div className="title-paragraph">
+            Album written and performed by Bennett Lin.
+        </div>
+        <div className="title-paragraph">
+            Website developed and illustrated by Bennett Lin.
+        </div>
+        <div className="title-paragraph">
+            For Liz.
+        </div>
     </div>
 )
 
