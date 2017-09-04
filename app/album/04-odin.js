@@ -59,6 +59,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'getting off rickshaw bike'
                 }
             }
@@ -80,6 +81,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'peering down from buoy'
                 }
             }
@@ -90,10 +92,12 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
+                    workedHours: 1,
                     description: 'hugging self'
                 },
                 sasha: {
                     todo: true,
+                    workedHours: 1,
                     description: 'mermaid'
                 }
             }
