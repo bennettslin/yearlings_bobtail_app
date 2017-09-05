@@ -12,6 +12,7 @@ const Button = ({
     isSmall, isLarge,
     isCustomShape, isCustomSize,
     isDeselected, isEnabled, isSelected,
+    isOverflowShown,
     handleClick,
     extraChild
 
@@ -29,7 +30,8 @@ const Button = ({
               'enabled': isEnabled,
               'selected': isSelected,
               'access-highlighted': accessHighlighted,
-              'deselected': isDeselected }
+              'deselected': isDeselected,
+              'overflow-shown': isOverflowShown }
         )}
         onClick={handleClick ? e => handleClick(e) : null}
     >
@@ -74,6 +76,7 @@ Button.propTypes = {
     isDeselected: PropTypes.bool,
     isEnabled: PropTypes.bool,
     isSelected: PropTypes.bool,
+    isOverflowShown: PropTypes.bool,
     handleClick: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.func

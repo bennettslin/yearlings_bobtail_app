@@ -46,6 +46,7 @@ const PopupButton = ({
             )}
         >
             <Button
+                isOverflowShown={true}
                 iconText={tempUnicodeSymbol}
                 handleClick={handleClick}
             />

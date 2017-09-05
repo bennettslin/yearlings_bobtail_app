@@ -2399,7 +2399,7 @@ module.exports = [
     },
     {
         taskName: `Fix annotation popup buttons.`,
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 2,
+        neededHours: 2
     }
 ]

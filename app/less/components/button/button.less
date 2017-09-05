@@ -5,9 +5,14 @@
 .icon-canvas-block {
     width: 100%;
     height: 100%;
+}
 
-    // This was causing the shallow shadow of popup buttons to be cut off.
-    // overflow: hidden;
+.button:not(.overflow-shown) {
+
+    // Dot stanzas and nav need to hide overflow, popup buttons need to show.
+    .icon-canvas-block {
+        overflow: hidden;
+    }
 }
 
 /**
