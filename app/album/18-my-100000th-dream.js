@@ -107,7 +107,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 8,
+            unitIndex: 9,
             description: `The whole thing turns out to have been a dream. Bennett is in bed, old and dying. A doctor is pulling the sheet over him. A thought bubble shows the previous scene, with Bennett now accepting his fate, and Sita comforting him.`,
             actors: {
                 bennett: {
@@ -411,6 +411,19 @@ module.exports = {
                     }
                 },
                 stanzaType: SOLO
+            }
+        ],
+        [
+            {
+                time: 149,
+                centre: {
+                    italic: `(Sita's theme)`
+                }
+            },
+            {
+                unitMap: true,
+                stanzaType: SOLO,
+                subsequent: true
             }
         ],
         [

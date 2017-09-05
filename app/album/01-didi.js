@@ -10,6 +10,7 @@ import { VERSES,
          BRIDGE,
          RESPONSE,
          INTRO,
+         OUTRO,
          REFRAIN,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
@@ -536,6 +537,18 @@ module.exports = {
                 },
                 stanzaType: CHORUS,
                 subsequent: true
+            }
+        ],
+        [
+            {
+                time: 163,
+                centre: {
+                    italic: `(fade out)`
+                }
+            },
+            {
+                unitMap: true,
+                stanzaType: OUTRO
             }
         ],
         [
