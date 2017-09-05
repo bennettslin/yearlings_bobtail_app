@@ -9,7 +9,8 @@ import Popup from '../popup/popup'
 const TitlePopup = ({
 
     selectedTitleIndex,
-    handleTitleToggle
+    handleTitleToggle,
+    handlePopupContainerClick
 
 }) => {
     const isVisible = !!selectedTitleIndex,
@@ -23,6 +24,7 @@ const TitlePopup = ({
             popupClassName="title"
             showClose={true}
             handleCloseClick={handleTitleToggle}
+            handlePopupContainerClick={handlePopupContainerClick}
             myChild={myChild}
         />
     )
@@ -33,7 +35,8 @@ TitlePopup.propTypes = {
     selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
-    handleTitleToggle: PropTypes.func.isRequired
+    handleTitleToggle: PropTypes.func.isRequired,
+    handlePopupContainerClick: PropTypes.func.isRequired
 }
 
 export default connect(({

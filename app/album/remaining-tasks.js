@@ -1,15 +1,5 @@
 module.exports = [
     {
-        taskName: `Fix title popup click.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Fix annotation popup buttons.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Make all hips wider.`,
         workedHours: 0,
         neededHours: 1

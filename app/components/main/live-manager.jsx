@@ -124,7 +124,8 @@ class LiveManager extends Component {
             },
 
             titlePopupHandlers = {
-                handleTitleToggle
+                handleTitleToggle,
+                handlePopupContainerClick
             },
 
             wikiPopupHandlers = {

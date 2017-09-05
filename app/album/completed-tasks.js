@@ -2392,4 +2392,14 @@ module.exports = [
         workedHours: 7,
         neededHours: 7
     },
+    {
+        taskName: `Fix title popup click.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Fix annotation popup buttons.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
