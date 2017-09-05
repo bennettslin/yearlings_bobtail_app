@@ -16,6 +16,7 @@ import DotsSection from '../dots/dots-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
 import LyricToggle from '../lyric/lyric-toggle'
 import OverviewPopup from '../overview/overview-popup'
+import TipsPopup from '../tips/tips-popup'
 import ScoresTipsSection from './scores-tips-section'
 
 const MainColumn = ({
@@ -32,6 +33,7 @@ const MainColumn = ({
     navSectionHandlers,
     overviewPopupHandlers,
     scoresTipsSectionHandlers,
+    tipsPopupHandlers,
 
     menuFieldHandlers
 
@@ -59,6 +61,7 @@ const MainColumn = ({
                     <OverviewPopup {...overviewPopupHandlers}
                         inOverviewSubfield={true}
                     />
+                    <TipsPopup {...tipsPopupHandlers} />
                 </div>
 
                 <LyricToggle
@@ -109,6 +112,7 @@ MainColumn.propTypes = {
     menuFieldHandlers: PropTypes.object.isRequired,
     navSectionHandlers: PropTypes.object.isRequired,
     overviewPopupHandlers: PropTypes.object.isRequired,
+    tipsPopupHandlers: PropTypes.object.isRequired,
     scoresTipsSectionHandlers: PropTypes.object.isRequired
 }
 

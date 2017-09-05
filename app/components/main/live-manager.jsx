@@ -123,6 +123,11 @@ class LiveManager extends Component {
                 handleScoreToggle
             },
 
+            tipsPopupHandlers = {
+                handleTipsToggle,
+                handlePopupContainerClick
+            },
+
             titlePopupHandlers = {
                 handleTitleToggle,
                 handlePopupContainerClick
@@ -142,6 +147,7 @@ class LiveManager extends Component {
                 audioBannerHandlers,
                 overviewPopupHandlers,
                 scoresTipsSectionHandlers,
+                tipsPopupHandlers,
 
                 carouselSectionHandlers: {
                     handleLyricAnnotationSelect,

@@ -41,7 +41,7 @@
         height: ~"calc(100% - @{full-subfield-margin} * 2)";
     }
 
-    &.annotation, &.title {
+    &.annotation, &.tips, &.title {
         width: @popup-annotation-width;
         max-width: @popup-annotation-width;
     }
@@ -50,7 +50,7 @@
 // Multiplier is .9, just like for lyric text in mini.
 .mini-width {
     .popup-wrapper {
-        &.annotation, &.title {
+        &.annotation, &.tips, &.title {
             // width: @mini-popup-annotation-width;
             max-width: @mini-popup-annotation-width;
         }
@@ -60,7 +60,7 @@
 // Multiplier is .98, just like for lyric text in phone.
 .phone-width {
     .popup-wrapper {
-        &.annotation, &.title {
+        &.annotation, &.tips, &.title {
             // width: @phone-popup-annotation-width;
             max-width: @phone-popup-annotation-width;
         }
@@ -81,8 +81,14 @@
         padding: 20px @popup-content-side-padding;
     }
 
+    &.tips {
+        // Arbitrary for now.
+        min-height: 150px;
+    }
+
     &.title {
-        min-height: 200px;
+        // Arbitrary for now.
+        // min-height: 150px;
     }
 }
 
