@@ -35,7 +35,7 @@ module.exports = {
 
     TIPS_OPTIONS: [
         SHOWN,
-        HIDDEN,
-        DISABLED
+        DISABLED,
+        HIDDEN
     ]
 }

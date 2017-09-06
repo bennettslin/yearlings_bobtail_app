@@ -561,6 +561,10 @@ class App extends Component {
                 justShowIfHidden: true
             })
 
+            this.selectTips({
+                justShowIfHidden: true
+            })
+
             /**
              * If overview is being shown, collapse lyric column and hide dots
              * section.
@@ -721,11 +725,45 @@ class App extends Component {
      * TIPS *
      ********/
 
-    selectTips(selectedTipsIndex =
-        (this.props.selectedTipsIndex + 1) % TIPS_OPTIONS.length) {
-        // If no argument passed, then just toggle amongst tips options.
+    selectTips({
+        clickToggle,
+        justHideIfShown,
+        justShowIfHidden
+    }) {
+        // Duplicated from selectOverview.
 
-        this.props.selectTipsIndex(selectedTipsIndex)
+        // We shouldn't be able to change overview it's a logue.
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
+            return false
+        }
+
+        let selectedTipsIndex = this.props.selectedTipsIndex
+
+        // If called from body click, hide if shown.
+        if (justHideIfShown) {
+            if (TIPS_OPTIONS[selectedTipsIndex] === SHOWN) {
+                selectedTipsIndex = 2 // Hidden.
+            }
+
+        // If called from song select, show if hidden.
+        } else if (justShowIfHidden) {
+            if (TIPS_OPTIONS[selectedTipsIndex] === HIDDEN) {
+                selectedTipsIndex = 0 // Shown.
+            }
+
+        } else {
+            do {
+                // If it's a keydown event, cycle through all three options.
+                selectedTipsIndex = (selectedTipsIndex + 1) % TIPS_OPTIONS.length
+
+                // If it's a click event, skip hidden.
+            } while (clickToggle && TIPS_OPTIONS[selectedTipsIndex] === HIDDEN)
+        }
+
+        // Overview options are shown, disabled, hidden.
+        if (selectedTipsIndex !== this.props.selectedTipsIndex) {
+            this.props.selectTipsIndex(selectedTipsIndex)
+        }
         return true
     }
 

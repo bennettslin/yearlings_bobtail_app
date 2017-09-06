@@ -9,12 +9,13 @@ import Popup from '../popup/popup'
 const TipsPopup = ({
 
     selectedTipsIndex,
-    handlePopupContainerClick
+    selectedTitleIndex,
+    handlePopupContainerClick,
 
-}) => {
-    const isVisible = !selectedTipsIndex,
+...other }) => {
+    const isVisible = !selectedTipsIndex && !selectedTitleIndex,
         myChild = (
-            <TipsSection />
+            <TipsSection {...other} />
         )
 
     return (
@@ -30,13 +31,16 @@ const TipsPopup = ({
 TipsPopup.propTypes = {
     // Through Redux.
     selectedTipsIndex: PropTypes.number.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
     handlePopupContainerClick: PropTypes.func.isRequired
 }
 
 export default connect(({
-    selectedTipsIndex
+    selectedTipsIndex,
+    selectedTitleIndex
 }) => ({
-    selectedTipsIndex
+    selectedTipsIndex,
+    selectedTitleIndex
 }))(TipsPopup)

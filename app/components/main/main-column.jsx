@@ -51,7 +51,6 @@ const MainColumn = ({
             </div>
 
             <div className="subfield dots-overview-subfield">
-
                 <CarouselSection {...carouselSectionHandlers} />
                 <DotsOverviewToggleSection {...dotsOverviewToggleSectionHandlers}
                     scoresTipsSectionHandlers={scoresTipsSectionHandlers}
@@ -61,7 +60,6 @@ const MainColumn = ({
                     <OverviewPopup {...overviewPopupHandlers}
                         inOverviewSubfield={true}
                     />
-                    <TipsPopup {...tipsPopupHandlers} />
                 </div>
 
                 <LyricToggle
@@ -76,6 +74,8 @@ const MainColumn = ({
                 <ScoresTipsSection {...scoresTipsSectionHandlers}
                     inSubfield={true}
                 />
+
+                <TipsPopup {...tipsPopupHandlers} />
             </div>
 
             <div className="audio-banner-custom-subfield">

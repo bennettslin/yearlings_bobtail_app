@@ -2,21 +2,23 @@
 
 import React from 'react'
 
-/*************
- * CONTAINER *
- *************/
+import TipsToggle from './tips-toggle'
+import TextBlock from '../text/text-block'
 
-const TipsSection = (props) => (
-    <TipsSectionView {...props} />
-)
+const TipsSection = ({
 
-/****************
- * PRESENTATION *
- ****************/
+...other }) => (
 
-const TipsSectionView = () => (
     <div className="section tips-section">
-
+        <div className="tips-text">
+            <div className="tips-toggle-section">
+                <TipsToggle {...other} />
+            </div>
+            <TextBlock
+                isLyric={false}
+                text={"hello there"}
+            />
+        </div>
     </div>
 )
 

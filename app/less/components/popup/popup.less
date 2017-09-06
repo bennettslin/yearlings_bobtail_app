@@ -77,8 +77,14 @@
         height: 100%;
     }
 
+    &.overview, &.tips {
+        // Standard narrow padding.
+        padding: @text-popup-content-wrapper-padding;
+    }
+
     &.annotation, &.title {
-        padding: 20px @popup-content-side-padding;
+        // Wider padding to accommodate popup buttons.
+        padding: @popup-content-side-padding;
     }
 
     &.tips {

@@ -151,6 +151,7 @@ class EventManager extends Component {
             exemptDots: true,
             exemptNav: true,
             exemptOverview: true,
+            exemptTips: true,
             exemptInteractivatedVerse: true,
             exemptLyric: true
         })
@@ -309,6 +310,7 @@ class EventManager extends Component {
             exemptDots: true,
             exemptInteractivatedVerse: true,
             exemptOverview: true,
+            exemptTips: true,
             continuePastClosingPopups: true
         })
 
@@ -454,6 +456,7 @@ class EventManager extends Component {
                 exemptDots: true,
                 exemptNav: true,
                 exemptOverview: true,
+                exemptTips: true,
                 continuePastClosingPopups: true
             })
         }
@@ -512,6 +515,9 @@ class EventManager extends Component {
             this.props.selectOverview({
                 justHideIfShown: true
             })
+            this.props.selectTips({
+                justHideIfShown: true
+            })
         }
     }
 
@@ -552,9 +558,25 @@ class EventManager extends Component {
      ********/
 
     handleTipsToggle(e) {
-        const tipsToggled = this.props.selectTips()
+        // Duplicated from handleOverviewToggle.
+
+        /**
+         * If from click, alternate between shown and disabled. If from keydown,
+         * cycle through all three options.
+         */
+        const clickToggle = e.type === 'click',
+            tipsToggled = this.props.selectTips({
+                clickToggle
+            })
+
         if (tipsToggled) {
             this.stopPropagation(e)
+            this._closeSections({
+                exemptCarousel: true,
+                exemptNav: true,
+                exemptTips: true,
+                continuePastClosingPopups: true
+            })
         }
         return tipsToggled
     }
@@ -694,7 +716,8 @@ class EventManager extends Component {
                 exemptInteractivatedVerse: true,
                 exemptLyric: true,
                 exemptNav: true,
-                exemptOverview: true
+                exemptOverview: true,
+                exemptTips: true
             })
             this.props.interactivateVerse(verseIndex)
         }
@@ -735,6 +758,7 @@ class EventManager extends Component {
         exemptLyric,
         exemptNav,
         exemptOverview,
+        exemptTips,
         exemptInteractivatedVerse,
 
         continuePastClosingPopups,
@@ -792,6 +816,12 @@ class EventManager extends Component {
 
         if (!exemptOverview) {
             this.props.selectOverview({
+                justHideIfShown: true
+            })
+        }
+
+        if (!exemptTips) {
+            this.props.selectTips({
                 justHideIfShown: true
             })
         }

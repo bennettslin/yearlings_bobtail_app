@@ -11,7 +11,8 @@ import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
 import PlayersSection from './player/players-section'
 import { SHOWN,
-         OVERVIEW_OPTIONS } from '../constants/options'
+         OVERVIEW_OPTIONS,
+         TIPS_OPTIONS } from '../constants/options'
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongIsLogue } from '../helpers/data-helper'
 import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logic-helper'
@@ -84,6 +85,7 @@ class DomManager extends Component {
                 selectedOverviewIndex,
                 selectedScoreIndex,
                 selectedSongIndex,
+                selectedTipsIndex,
                 selectedTitleIndex,
                 selectedWikiIndex,
                 isPlaying,
@@ -169,6 +171,7 @@ class DomManager extends Component {
                     { 'accessed-on': selectedAccessIndex,
                       'heightless-lyric': isHeightlessLyricColumn,
                       'overview-shown': OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
+                      'tips-shown': TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
                       'scores-tips-in-main': isScoresTipsInMain,
                       'title-in-audio': isTitleInAudio,
                       'verse-bar-above': isVerseBarAbove,
@@ -220,6 +223,7 @@ DomManager.propTypes = {
     selectedLyricColumnIndex: PropTypes.number.isRequired,
     selectedNavIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
+    selectedTipsIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
@@ -248,7 +252,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }))(DomManager)
