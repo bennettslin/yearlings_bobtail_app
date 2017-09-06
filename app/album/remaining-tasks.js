@@ -102,9 +102,9 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `progressive tips`,
+        taskName: `tips content`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 5
     },
     {
         taskName: `Routing`,

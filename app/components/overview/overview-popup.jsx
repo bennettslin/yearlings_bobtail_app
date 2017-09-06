@@ -14,6 +14,7 @@ const OverviewPopup = ({
     overviewSongIndex,
     selectedOverviewIndex,
     selectedSongIndex,
+    selectedTipsIndex,
     selectedTitleIndex,
     handlePopupContainerClick,
 
@@ -38,8 +39,8 @@ const OverviewPopup = ({
         isVisible = selectedOverviewIndex ? false : inOverviewSubfield
     }
 
-    // Always hide overview section when title is selected.
-    if (selectedTitleIndex) {
+    // Always hide overview section when tips or title is open.
+    if (!selectedTipsIndex || selectedTitleIndex) {
         isVisible = false
     }
 
@@ -59,6 +60,7 @@ OverviewPopup.propTypes = {
     overviewSongIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
+    selectedTipsIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -70,12 +72,14 @@ export default connect(({
     selectedOverviewIndex,
     selectedSongIndex,
     selectedTitleIndex,
+    selectedTipsIndex,
     overviewLogueIndex,
     overviewSongIndex
 }) => ({
     selectedOverviewIndex,
     selectedSongIndex,
     selectedTitleIndex,
+    selectedTipsIndex,
     overviewLogueIndex,
     overviewSongIndex
 }))(OverviewPopup)

@@ -574,6 +574,7 @@ class EventManager extends Component {
             this._closeSections({
                 exemptCarousel: true,
                 exemptNav: true,
+                exemptOverview: true,
                 exemptTips: true,
                 continuePastClosingPopups: true
             })
@@ -649,10 +650,15 @@ class EventManager extends Component {
 
     handleBodyClick(e) {
         this.stopPropagation(e)
+
+        // If overview is open when tips is open, leave overview open.
+        const exemptOverview = !this.props.selectedTipsIndex;
+
         this._closeSections({
             exemptCarousel: true,
             exemptLyric: true,
-            exemptNav: true
+            exemptNav: true,
+            exemptOverview
         })
 
         // Return focus to lyric section so it can have scroll access.
@@ -993,7 +999,7 @@ class EventManager extends Component {
 }
 
 export default connect(({
-    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
+    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }) => ({
-    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
+    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }))(EventManager)
