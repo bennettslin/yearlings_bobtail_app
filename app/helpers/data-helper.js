@@ -164,6 +164,20 @@ export const getVerseIndexForTime = (songIndex, time) => {
     }
 }
 
+/********
+ * TIPS *
+ ********/
+
+export const getSongTip = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+
+    if (selectedSong.tip) {
+        return selectedSong.tip.description
+    } else {
+        return null
+    }
+}
+
 /**********
  * LYRICS *
  **********/

@@ -10,6 +10,21 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Make tips text not go away when transitioning from logue?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Correct access icon in tip.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Strategically place image in tip.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Make all hips wider.`,
         workedHours: 0,
         neededHours: 1

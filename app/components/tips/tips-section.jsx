@@ -1,25 +1,43 @@
-// TODO: Not presently used.
-
 import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 import TipsToggle from './tips-toggle'
 import TextBlock from '../text/text-block'
+import { getSongTip } from '../../helpers/data-helper'
 
 const TipsSection = ({
 
-...other }) => (
+    selectedSongIndex,
 
-    <div className="section tips-section">
-        <div className="tips-text">
-            <div className="tips-toggle-section">
-                <TipsToggle {...other} />
+...other }) => {
+
+    const tipText = getSongTip(selectedSongIndex)
+
+    return (
+        <div className="section tips-section">
+            <div className="tips-text">
+                <div className="tips-toggle-section">
+                    <TipsToggle {...other} />
+                </div>
+                {tipText && (
+                    <TextBlock
+                        isLyric={false}
+                        text={tipText}
+                    />
+                )}
             </div>
-            <TextBlock
-                isLyric={false}
-                text={"hello there"}
-            />
         </div>
-    </div>
-)
+    )
+}
 
-export default TipsSection
+TipsSection.propTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired
+}
+
+export default connect(({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+}))(TipsSection)

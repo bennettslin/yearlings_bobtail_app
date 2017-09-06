@@ -5,15 +5,19 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import TipsSection from './tips-section'
 import Popup from '../popup/popup'
+import { getSongIsLogue } from '../../helpers/data-helper'
 
 const TipsPopup = ({
 
+    selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
     handlePopupContainerClick,
 
 ...other }) => {
-    const isVisible = !selectedTipsIndex && !selectedTitleIndex,
+
+    const isLogue = getSongIsLogue(selectedSongIndex),
+        isVisible = !isLogue && !selectedTipsIndex && !selectedTitleIndex,
         myChild = (
             <TipsSection {...other} />
         )
@@ -30,6 +34,7 @@ const TipsPopup = ({
 
 TipsPopup.propTypes = {
     // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
 
@@ -38,9 +43,11 @@ TipsPopup.propTypes = {
 }
 
 export default connect(({
+    selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex
 }) => ({
+    selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex
 }))(TipsPopup)

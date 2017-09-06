@@ -39,8 +39,11 @@ const OverviewPopup = ({
         isVisible = selectedOverviewIndex ? false : inOverviewSubfield
     }
 
-    // Always hide overview section when tips or title is open.
-    if (!selectedTipsIndex || selectedTitleIndex) {
+    /**
+     * Always hide overview section when title is open, or when tip is shown
+     * in song.
+     */
+    if (selectedTitleIndex || (!isLogue && !selectedTipsIndex)) {
         isVisible = false
     }
 
