@@ -2407,4 +2407,9 @@ module.exports = [
         workedHours: 5,
         neededHours: 5
     },
+    {
+        taskName: `Correct access icon in tip.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

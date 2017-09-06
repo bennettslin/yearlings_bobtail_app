@@ -15,11 +15,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Correct access icon in tip.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Strategically place image in tip.`,
         workedHours: 0,
         neededHours: 2
