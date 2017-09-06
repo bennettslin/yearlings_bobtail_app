@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Show tips toggle strategically.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Shouldn't have to access overview or tips twice to go from disabled to hidden.`,
         workedHours: 0,
         neededHours: 2

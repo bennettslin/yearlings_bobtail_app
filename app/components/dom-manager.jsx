@@ -166,13 +166,13 @@ class DomManager extends Component {
 
                     isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
                     showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
+                    isScoresTipsInMain ? 'scores-tips-in-main' : 'scores-tips-in-menu',
                     singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
 
                     { 'accessed-on': selectedAccessIndex,
                       'heightless-lyric': isHeightlessLyricColumn,
                       'overview-shown': OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
                       'tips-shown': TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
-                      'scores-tips-in-main': isScoresTipsInMain,
                       'title-in-audio': isTitleInAudio,
                       'verse-bar-above': isVerseBarAbove,
                       'verse-bar-below': isVerseBarBelow,

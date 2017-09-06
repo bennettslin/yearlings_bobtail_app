@@ -1,3 +1,31 @@
-// .tips.popup-wrapper {
-//     position: absolute;
-// }
+.is-desktop {
+
+    &.scores-tips-in-menu {
+
+        /**
+         * In desktop, when tip button is in menu, show tip popup closer to
+         * menu. When it's in main, show it in centre.
+         */
+        .tips.popup-wrapper {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+        }
+    }
+}
+
+.tablet-width, .mini-width {
+
+    &.scores-tips-in-main {
+
+        /**
+         * In tablet and mini, when tip button is in menu, show tip in centre.
+         * When it's in main, show it closer to tip button.
+         */
+         .tips.popup-wrapper {
+             position: absolute;
+             bottom: 5%;
+             right: 5%;
+         }
+    }
+}

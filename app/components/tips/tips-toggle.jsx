@@ -10,14 +10,16 @@ import { TIPS_OPTIONS } from '../../constants/options'
 const TipsToggle = ({
 
     selectedTipsIndex,
+    isEnabled,
     handleTipsToggle
 
 }) => (
     <div className="tips-toggle-button-container">
         <Button
+            isLarge={true}
+            isEnabled={isEnabled}
             accessKey={TIPS_TOGGLE_KEY}
             iconText={TIPS_OPTIONS[selectedTipsIndex]}
-            isLarge={true}
             handleClick={handleTipsToggle}
         />
     </div>
@@ -28,6 +30,7 @@ TipsToggle.propTypes = {
     selectedTipsIndex: PropTypes.number.isRequired,
 
     // From props.
+    isEnabled: PropTypes.bool.isRequired,
     handleTipsToggle: PropTypes.func.isRequired
 }
 

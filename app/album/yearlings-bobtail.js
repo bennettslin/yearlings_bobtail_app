@@ -3,58 +3,76 @@ module.exports = {
     bookStartingIndices: [1, 10],
     tips: {
         1: {
-            description: `Didi this is a placeholder tip`
+            description: `Didi Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         2: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         3: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         4: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         5: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         6: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         7: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         8: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         9: {
-            description: `Grasshoppers this is a placeholder tip`
+            description: `Grasshoppers Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         10: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         11: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         12: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         13: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         14: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         15: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         16: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         17: {
-            description: `this is a placeholder tip`
+            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
         18: {
-            description: `Dream this is a placeholder tip`
+            description: `Dream Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
+`
         },
     },
     mp3s: [
