@@ -166,9 +166,6 @@ module.exports = {
             }
         }
     ],
-    tip: {
-        description: 'placeholder tip'
-    },
     totalTime: 180,
     overview: `One night, I went with my bassist Ana and her friends to explore the steam tunnels under UCLA while high on Robitussin. I got us to pretend we were Vikings and Mongols and other waves of human migration throughout history, though in hindsight, they were probably just humouring me. I wound up doing a lot of Robitussin that summer. It took me a while to regain my grip on reality.`,
     title: {

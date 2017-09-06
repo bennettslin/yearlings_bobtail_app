@@ -1,6 +1,62 @@
 module.exports = {
     title: `Yearling's Bobtail`,
     bookStartingIndices: [1, 10],
+    tips: {
+        1: {
+            description: `Didi this is a placeholder tip`
+        },
+        2: {
+            description: `this is a placeholder tip`
+        },
+        3: {
+            description: `this is a placeholder tip`
+        },
+        4: {
+            description: `this is a placeholder tip`
+        },
+        5: {
+            description: `this is a placeholder tip`
+        },
+        6: {
+            description: `this is a placeholder tip`
+        },
+        7: {
+            description: `this is a placeholder tip`
+        },
+        8: {
+            description: `this is a placeholder tip`
+        },
+        9: {
+            description: `Grasshoppers this is a placeholder tip`
+        },
+        10: {
+            description: `this is a placeholder tip`
+        },
+        11: {
+            description: `this is a placeholder tip`
+        },
+        12: {
+            description: `this is a placeholder tip`
+        },
+        13: {
+            description: `this is a placeholder tip`
+        },
+        14: {
+            description: `this is a placeholder tip`
+        },
+        15: {
+            description: `this is a placeholder tip`
+        },
+        16: {
+            description: `this is a placeholder tip`
+        },
+        17: {
+            description: `this is a placeholder tip`
+        },
+        18: {
+            description: `Dream this is a placeholder tip`
+        },
+    },
     mp3s: [
         require('../assets/mp3s/01-didi.mp3'),
         require('../assets/mp3s/02-willy-the-cocoa.mp3'),

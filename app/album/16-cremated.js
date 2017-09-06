@@ -103,9 +103,6 @@ module.exports = {
             description: `The car is in the background.`
         }
     ],
-    tip: {
-        description: 'placeholder tip'
-    },
     totalTime: 164,
     overview: `While I can't deny that dating white women helped silence the nagging feeling I had of being genetically inferior, I really didn't seek them out. A case in point is Miriam, who approached me at a party right after my band performed. She was the storybook ending my ego had been waiting for: cute, hip, and drawn to me with no effort on my part. We lasted a few months. In the end, I had to wonder if she was slumming it, and whether I was just one more checkbox to mark off.`,
     title: {
