@@ -26,11 +26,11 @@ class TipsSection extends Component {
     }
 
     render() {
-        const { selectedSongIndex,
+        const { tipsSongIndex,
                 selectedTipsIndex,
                 isScoresTipsInMain } = this.props,
 
-            tipText = getSongTip(selectedSongIndex),
+            tipText = getSongTip(tipsSongIndex),
             isEnabled = TIPS_OPTIONS[selectedTipsIndex] === SHOWN
 
         return (
@@ -51,6 +51,9 @@ class TipsSection extends Component {
                         />
                     )}
                 </div>
+                <div className="tips-image">
+
+                </div>
             </div>
         )
     }
@@ -58,6 +61,7 @@ class TipsSection extends Component {
 
 TipsSection.propTypes = {
     // Through Redux.
+    tipsSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
     isScoresTipsInMain: PropTypes.bool.isRequired,
@@ -67,10 +71,12 @@ TipsSection.propTypes = {
 }
 
 export default connect(({
+    tipsSongIndex,
     selectedSongIndex,
     selectedTipsIndex,
     isScoresTipsInMain
 }) => ({
+    tipsSongIndex,
     selectedSongIndex,
     selectedTipsIndex,
     isScoresTipsInMain

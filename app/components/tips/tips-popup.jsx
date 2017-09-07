@@ -17,7 +17,9 @@ const TipsPopup = ({
 ...other }) => {
 
     const isLogue = getSongIsLogue(selectedSongIndex),
+
         isVisible = !isLogue && !selectedTipsIndex && !selectedTitleIndex,
+
         myChild = (
             <TipsSection {...other} />
         )

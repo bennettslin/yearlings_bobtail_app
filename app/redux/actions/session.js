@@ -9,6 +9,7 @@ import { POPUP_ANNOTATION_SONG_INDEX,
          IS_VERSE_BAR_BELOW,
          OVERVIEW_LOGUE_INDEX,
          OVERVIEW_SONG_INDEX,
+         TIPS_SONG_INDEX,
          SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
@@ -60,6 +61,11 @@ export const setOverviewLogueIndex = (overviewLogueIndex = -1) => (
 export const setOverviewSongIndex = (overviewSongIndex = -1) => (
     { type: OVERVIEW_SONG_INDEX,
       payload: overviewSongIndex }
+)
+
+export const setTipsSongIndex = (tipsSongIndex = -1) => (
+    { type: TIPS_SONG_INDEX,
+      payload: tipsSongIndex }
 )
 
 export const setSelectedVerseElement = (selectedVerseElement = null) => (

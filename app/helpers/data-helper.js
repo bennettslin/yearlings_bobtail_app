@@ -169,6 +169,11 @@ export const getVerseIndexForTime = (songIndex, time) => {
  ********/
 
 export const getSongTip = (songIndex) => {
+
+    if (songIndex < 0) {
+        return null
+    }
+
     const isLogue = getSongIsLogue(songIndex),
         { tips } = AlbumData
 

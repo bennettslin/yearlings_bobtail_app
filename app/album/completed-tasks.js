@@ -2417,4 +2417,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Make tips text not go away when transitioning from logue.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
