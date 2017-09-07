@@ -42,8 +42,10 @@
         z-index: @popup-overlay-content-z-index;
     }
 
-    transition: opacity @popup-transition-duration-out;
-    opacity: 0;
+    &.not-visible {
+        transition: opacity @popup-transition-duration-out;
+        opacity: 0;
+    }
 
     &.visible {
         transition: opacity @popup-transition-duration-in;

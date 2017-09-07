@@ -89,8 +89,8 @@ class Popup extends Component {
                 className={classnames(
                     popupClassName,
                     'popup-transition-group',
-                    { 'visible': isVisible,
-                      'not-displayed': !isDisplayed }
+                    isVisible ? 'visible' : 'not-visible',
+                    { 'not-displayed': !isDisplayed }
                 )}
                 onTransitionEnd={this._handleTransitionEnd}
             >
