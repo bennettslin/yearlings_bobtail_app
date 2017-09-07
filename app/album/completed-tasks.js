@@ -2422,4 +2422,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Shouldn't have to access overview or tips twice to go from disabled to hidden.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

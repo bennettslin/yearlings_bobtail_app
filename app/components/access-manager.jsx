@@ -41,7 +41,8 @@ import { ARROW_LEFT,
 import { ALL_DOT_KEYS } from '../constants/dots'
 import { DESTINATION_PORTAL_INDEX } from '../constants/lyrics'
 import { SHOWN,
-         OVERVIEW_OPTIONS } from '../constants/options'
+         OVERVIEW_OPTIONS,
+         TIPS_OPTIONS } from '../constants/options'
 import { getComponentShouldUpdate } from '../helpers/general-helper'
 
 class AccessManager extends Component {
@@ -528,7 +529,13 @@ class AccessManager extends Component {
 
         // Close overview popup.
         } else if (OVERVIEW_OPTIONS[props.selectedOverviewIndex] === SHOWN) {
-            eventHandlers.handleOverviewToggle(e)
+            // Just hide if shown.
+            eventHandlers.handleOverviewToggle(e, true)
+
+        // Close tips popup.
+        } else if (TIPS_OPTIONS[props.selectedTipsIndex] === SHOWN) {
+            // Just hide if shown.
+            eventHandlers.handleTipsToggle(e, true)
 
         // Close dots popup.
         } else if (props.selectedDotsIndex) {
@@ -577,7 +584,7 @@ class AccessManager extends Component {
 }
 
 export default connect(({
-    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, popupAnnotationSongIndex, popupAnnotationIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, popupAnnotationSongIndex, popupAnnotationIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }) => ({
-    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, popupAnnotationSongIndex, popupAnnotationIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, popupAnnotationSongIndex, popupAnnotationIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }))(AccessManager)

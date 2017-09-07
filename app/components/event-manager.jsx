@@ -480,14 +480,15 @@ class EventManager extends Component {
      * OVERVIEW *
      ************/
 
-    handleOverviewToggle(e) {
+    handleOverviewToggle(e, justHideIfShown) {
         /**
          * If from click, alternate between shown and disabled. If from keydown,
          * cycle through all three options.
          */
         const clickToggle = e.type === 'click',
             overviewToggled = this.props.selectOverview({
-                clickToggle
+                clickToggle,
+                justHideIfShown
             })
 
         if (overviewToggled) {
@@ -557,7 +558,7 @@ class EventManager extends Component {
      * TIPS *
      ********/
 
-    handleTipsToggle(e) {
+    handleTipsToggle(e, justHideIfShown) {
         // Duplicated from handleOverviewToggle.
 
         /**
@@ -566,7 +567,8 @@ class EventManager extends Component {
          */
         const clickToggle = e.type === 'click',
             tipsToggled = this.props.selectTips({
-                clickToggle
+                clickToggle,
+                justHideIfShown
             })
 
         if (tipsToggled) {

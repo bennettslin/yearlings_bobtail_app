@@ -23,7 +23,7 @@ import { CONTINUE,
          TIPS_OPTIONS } from '../constants/options'
 import { getSongObject, getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime } from '../helpers/data-helper'
 import { getValueInBitNumber } from '../helpers/bit-helper'
-import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logic-helper'
+import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn, getIsSomethingBeingShown } from '../helpers/logic-helper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
 import LogHelper from '../helpers/log-helper'
 
@@ -677,12 +677,21 @@ class App extends Component {
             }
 
         } else {
-            do {
-                // If it's a keydown event, cycle through all three options.
-                selectedOverviewIndex = (selectedOverviewIndex + 1) % OVERVIEW_OPTIONS.length
+            // If called when something else is shown, show right away.
+            if (getIsSomethingBeingShown({
+                props: this.props,
+                calledByOverview: true
+            })) {
+                selectedOverviewIndex = 0
 
-            // If it's a click event, skip hidden.
-            } while (clickToggle && OVERVIEW_OPTIONS[selectedOverviewIndex] === HIDDEN)
+            } else {
+                do {
+                    // If it's a keydown event, cycle through all three options.
+                    selectedOverviewIndex = (selectedOverviewIndex + 1) % OVERVIEW_OPTIONS.length
+
+                    // If it's a click event, skip hidden.
+                } while (clickToggle && OVERVIEW_OPTIONS[selectedOverviewIndex] === HIDDEN)
+            }
         }
 
         // Overview options are shown, disabled, hidden.
@@ -757,12 +766,21 @@ class App extends Component {
             }
 
         } else {
-            do {
-                // If it's a keydown event, cycle through all three options.
-                selectedTipsIndex = (selectedTipsIndex + 1) % TIPS_OPTIONS.length
+            // If called when something else is shown, show right away.
+            if (getIsSomethingBeingShown({
+                props: this.props,
+                calledByTips: true
+            })) {
+                selectedTipsIndex = 0
 
-                // If it's a click event, skip hidden.
-            } while (clickToggle && TIPS_OPTIONS[selectedTipsIndex] === HIDDEN)
+            } else {
+                do {
+                    // If it's a keydown event, cycle through all three options.
+                    selectedTipsIndex = (selectedTipsIndex + 1) % TIPS_OPTIONS.length
+
+                    // If it's a click event, skip hidden.
+                } while (clickToggle && TIPS_OPTIONS[selectedTipsIndex] === HIDDEN)
+            }
         }
 
         // Overview options are shown, disabled, hidden.
