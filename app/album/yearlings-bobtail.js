@@ -96,6 +96,23 @@ module.exports = {
         require('../assets/mp3s/18-my-100000th-dream.mp3')
     ],
     scores: [
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
+        require('../assets/scores/yearlings_bobtail.pdf'),
         require('../assets/scores/yearlings_bobtail.pdf')
     ],
     songs: [

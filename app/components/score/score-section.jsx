@@ -43,6 +43,10 @@ class ScoreSection extends Component {
         // })
     }
 
+    onWebviewLoad(e) {
+        console.error('webview load e', e);
+    }
+
     render() {
         const { selectedSongIndex } = this.props,
             score = getSongScore(selectedSongIndex)
