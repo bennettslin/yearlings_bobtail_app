@@ -23,6 +23,7 @@
   "homepage": "https://github.com/bennettslin/yearlings_bobtail_app",
   "dependencies": {
     "classnames": "^2.2.5",
+    "debounce": "^1.0.2",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-audio-player": "^0.5.0",

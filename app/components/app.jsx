@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import debounce from 'debounce'
 import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex } from '../redux/actions/access'
 import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth } from '../redux/actions/device'
@@ -81,7 +82,7 @@ class App extends Component {
         this._windowResize()
 
         // Then watch for any subsequent window resize.
-        window.onresize = this._windowResize
+        window.onresize = debounce(this._windowResize, 100)
     }
 
     componentDidMount() {
