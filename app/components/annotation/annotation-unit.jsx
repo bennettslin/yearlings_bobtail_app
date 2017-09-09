@@ -8,18 +8,18 @@ import { getCarouselOrPopupAnnotationObject } from '../../helpers/data-helper'
 import { getArrayOfLength } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
-    selectedSongIndex,
+    renderReadySongIndex,
     popupAnnotationIndex,
     popupAnnotationSongIndex
 }) => ({
-    selectedSongIndex,
+    renderReadySongIndex,
     popupAnnotationIndex,
     popupAnnotationSongIndex
 })
 
 const annotationUnitPropTypes = {
     // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
+    renderReadySongIndex: PropTypes.number.isRequired,
     popupAnnotationSongIndex: PropTypes.number.isRequired,
     popupAnnotationIndex: PropTypes.number.isRequired,
 
@@ -29,7 +29,7 @@ const annotationUnitPropTypes = {
 
 AnnotationUnit = ({
 
-    selectedSongIndex,
+    renderReadySongIndex,
     popupAnnotationSongIndex,
     popupAnnotationIndex,
 
@@ -37,7 +37,7 @@ AnnotationUnit = ({
 
     const { carouselAnnotationIndex } = other,
         annotationObject = getCarouselOrPopupAnnotationObject({
-            selectedSongIndex,
+            renderReadySongIndex,
             carouselAnnotationIndex,
             popupAnnotationSongIndex,
             popupAnnotationIndex

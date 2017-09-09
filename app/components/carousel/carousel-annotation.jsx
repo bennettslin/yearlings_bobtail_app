@@ -10,11 +10,9 @@ import { getAnnotationObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
-    isHeavyRenderReady,
-    selectedSongIndex
+    renderReadySongIndex
 }) => ({
-    isHeavyRenderReady,
-    selectedSongIndex
+    renderReadySongIndex
 })
 
 /*************
@@ -25,8 +23,7 @@ class CarouselAnnotation extends Component {
 
     static propTypes = {
         // Through Redux.
-        isHeavyRenderReady: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+        renderReadySongIndex: PropTypes.number.isRequired,
 
         // From parent.
         annotationIndex: PropTypes.number.isRequired,
@@ -44,17 +41,12 @@ class CarouselAnnotation extends Component {
 
     shouldComponentUpdate(nextProps) {
 
-        if (!nextProps.isHeavyRenderReady) {
-            return false
-        }
-
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'isHeavyRenderReady',
-                    'selectedSongIndex',
+                    'renderReadySongIndex',
                     'isAccessedAnnotation',
                     'isSelectedAnnotation'
                 ]
@@ -83,7 +75,7 @@ class CarouselAnnotation extends Component {
 
     render() {
 
-        const { selectedSongIndex,
+        const { renderReadySongIndex,
 
                 /* eslint-disable no-unused-vars */
                 handlePopupContainerClick,
@@ -91,7 +83,7 @@ class CarouselAnnotation extends Component {
 
                 ...other } = this.props,
             { annotationIndex } = other,
-            annotationObject = getAnnotationObject(selectedSongIndex, annotationIndex),
+            annotationObject = getAnnotationObject(renderReadySongIndex, annotationIndex),
 
             { columnIndex,
               dotKeys } = annotationObject,

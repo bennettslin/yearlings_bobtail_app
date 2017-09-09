@@ -87,6 +87,8 @@ class App extends Component {
         this.selectTips({
             justShowIfHidden: true
         })
+
+        this._songIndexDidChange(this.props)
     }
 
     componentDidMount() {
@@ -98,8 +100,6 @@ class App extends Component {
                 selectedVerseIndex } = this.props
 
         this.props.setAppMounted(true)
-
-        this._songIndexDidChange(this.props)
 
         this.props.accessAnnotationIndex(
             // Based on either selected annotation or selected verse.

@@ -13,13 +13,13 @@ import { getArrayOfLength } from '../../helpers/general-helper'
 const mapStateToProps = ({
     isHiddenNav,
     isHeavyRenderReady,
-    selectedSongIndex,
+    renderReadySongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
 }) => ({
     isHiddenNav,
     isHeavyRenderReady,
-    selectedSongIndex,
+    renderReadySongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
 })
@@ -30,7 +30,7 @@ class CarouselSection extends Component {
         // Through Redux.
         isHiddenNav: PropTypes.bool.isRequired,
         isHeavyRenderReady: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+        renderReadySongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
 
@@ -39,14 +39,10 @@ class CarouselSection extends Component {
         handleAnnotationNext: PropTypes.func.isRequired
     }
 
-    shouldComponentUpdate(nextProps) {
-        return nextProps.isHeavyRenderReady || (!this.props.isHeavyRenderReady && nextProps.isHeavyRenderReady)
-    }
-
     render() {
         const { isHiddenNav,
                 isHeavyRenderReady,
-                selectedSongIndex,
+                renderReadySongIndex,
                 accessedAnnotationIndex,
                 selectedAnnotationIndex,
                 handleAnnotationPrevious,
@@ -57,7 +53,7 @@ class CarouselSection extends Component {
             return null
         }
 
-        const annotationsCount = getAnnotationsCount(selectedSongIndex),
+        const annotationsCount = getAnnotationsCount(renderReadySongIndex),
 
             /**
              * Dynamically create array of just indices. Carousel annotation
@@ -67,7 +63,7 @@ class CarouselSection extends Component {
                 length: annotationsCount
             })
 
-        return 1 + 2 === 4 && (
+        return (
             <div className={classnames(
                 'carousel',
                 isHeavyRenderReady && 'render-ready'

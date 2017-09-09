@@ -138,10 +138,6 @@ export const getSceneTimesArray = (songIndex) => {
     return sceneTimesArray
 }
 
-// export const getUnitIndexForVerseIndex = (songIndex, verseIndex) => {
-//     const lyricUnitsArray
-// }
-
 export const getVerseIndexForTime = (songIndex, time) => {
 
     const verseTimes = getSongVerseTimes(songIndex),
@@ -189,6 +185,11 @@ export const getSongTip = (songIndex) => {
  **********/
 
 export const getLyricUnitsCount = (songIndex) => {
+
+    if (songIndex < 0) {
+        return 0
+    }
+
     const songs = getSongObject(songIndex)
     return songs.lyrics ? songs.lyrics.length : 0
 }
@@ -208,6 +209,11 @@ export const getVerseObject = (songIndex, verseIndex, songs = AlbumData.songs) =
  ***************/
 
 export const getAnnotationsCount = (songIndex) => {
+
+    if (songIndex < 0) {
+        return 0
+    }
+
     const song = getSongObject(songIndex),
         { annotations } = song
 
@@ -220,14 +226,15 @@ export const getAnnotationObject = (songIndex, annotationIndex, songs) => {
 }
 
 export const getCarouselOrPopupAnnotationObject = ({
-    selectedSongIndex,
+    renderReadySongIndex,
     carouselAnnotationIndex,
     popupAnnotationSongIndex,
     popupAnnotationIndex
 }) => {
+
     // All conditional upon whether carousel annotation index exists.
     const annotationSongIndex = carouselAnnotationIndex ?
-            selectedSongIndex : popupAnnotationSongIndex,
+            renderReadySongIndex : popupAnnotationSongIndex,
         annotationIndex = carouselAnnotationIndex ?
             carouselAnnotationIndex : popupAnnotationIndex
 

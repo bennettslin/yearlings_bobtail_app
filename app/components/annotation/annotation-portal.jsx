@@ -12,11 +12,11 @@ import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
-    selectedSongIndex,
+    renderReadySongIndex,
     popupAnnotationSongIndex,
     popupAnnotationIndex
 }) => ({
-    selectedSongIndex,
+    renderReadySongIndex,
     popupAnnotationSongIndex,
     popupAnnotationIndex
 })
@@ -25,7 +25,7 @@ class AnnotationPortal extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
+        renderReadySongIndex: PropTypes.number.isRequired,
         popupAnnotationSongIndex: PropTypes.number.isRequired,
         popupAnnotationIndex: PropTypes.number.isRequired,
 
@@ -49,7 +49,7 @@ class AnnotationPortal extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'selectedSongIndex',
+                    'renderReadySongIndex',
                     'isAccessedPortal',
                     {
                         staticProp: 'carouselAnnotationIndex',
@@ -82,7 +82,7 @@ class AnnotationPortal extends Component {
 
     render() {
 
-        const { selectedSongIndex,
+        const { renderReadySongIndex,
                 carouselAnnotationIndex,
                 popupAnnotationSongIndex,
                 popupAnnotationIndex,
@@ -91,7 +91,7 @@ class AnnotationPortal extends Component {
                 isAccessedPortal } = this.props,
 
             portalObject = getCarouselOrPopupCardPortalObject({
-                selectedSongIndex,
+                renderReadySongIndex,
                 carouselAnnotationIndex,
                 popupAnnotationSongIndex,
                 popupAnnotationIndex,

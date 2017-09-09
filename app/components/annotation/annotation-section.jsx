@@ -12,12 +12,12 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     isHeavyRenderReady,
-    selectedSongIndex,
+    renderReadySongIndex,
     popupAnnotationSongIndex,
     popupAnnotationIndex
 }) => ({
     isHeavyRenderReady,
-    selectedSongIndex,
+    renderReadySongIndex,
     popupAnnotationSongIndex,
     popupAnnotationIndex
 })
@@ -31,7 +31,7 @@ class AnnotationSection extends Component {
     static propTypes = {
         // Through Redux.
         isHeavyRenderReady: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+        renderReadySongIndex: PropTypes.number.isRequired,
         popupAnnotationSongIndex: PropTypes.number.isRequired,
         popupAnnotationIndex: PropTypes.number.isRequired,
 
@@ -53,7 +53,7 @@ class AnnotationSection extends Component {
                     'isHeavyRenderReady',
 
                     // Container props.
-                    'selectedSongIndex',
+                    'renderReadySongIndex',
                     {
                         staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
@@ -75,7 +75,7 @@ class AnnotationSection extends Component {
     }
 
     render() {
-        const { selectedSongIndex,
+        const { renderReadySongIndex,
                 popupAnnotationSongIndex,
                 popupAnnotationIndex,
                 ...other } = this.props,
@@ -88,7 +88,7 @@ class AnnotationSection extends Component {
              * helper.
              */
             annotationObject = getCarouselOrPopupAnnotationObject({
-                selectedSongIndex,
+                renderReadySongIndex,
                 carouselAnnotationIndex,
                 popupAnnotationSongIndex,
                 popupAnnotationIndex
