@@ -11,11 +11,11 @@ import { getLyricUnitArray } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
-    selectedSongIndex,
+    renderReadySongIndex,
     selectedVerseIndex,
     sliderVerseIndex
 }) => ({
-    selectedSongIndex,
+    renderReadySongIndex,
     selectedVerseIndex,
     sliderVerseIndex
 })
@@ -28,7 +28,7 @@ class LyricUnit extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
+        renderReadySongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
 
@@ -43,7 +43,7 @@ class LyricUnit extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'unitIndex',
-                    'selectedSongIndex',
+                    'renderReadySongIndex',
                     'selectedVerseIndex',
                     'sliderVerseIndex'
                 ]
@@ -53,13 +53,13 @@ class LyricUnit extends Component {
     }
 
     render() {
-        const { selectedSongIndex,
+        const { renderReadySongIndex,
                 selectedVerseIndex,
                 sliderVerseIndex,
                 unitIndex,
                 ...other } = this.props,
 
-            unitArray = getLyricUnitArray(selectedSongIndex, unitIndex),
+            unitArray = getLyricUnitArray(renderReadySongIndex, unitIndex),
 
             unitMapObject = unitArray[unitArray.length - 1],
 

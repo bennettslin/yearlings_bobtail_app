@@ -23,10 +23,48 @@
     }
 }
 
+.monitor-width {
+    .carousel-nav-buttons-block {
+        right: @golden-cord-width;
+    }
+}
+
+.laptop-width {
+    .carousel-nav-buttons-block {
+        right: @uncanny-valley-width;
+    }
+}
+
 .is-song {
     &.annotation-shown.carousel-expanded {
         .carousel-nav-buttons-block {
             bottom: 0;
+        }
+    }
+}
+
+.is-mobile {
+    .carousel-nav-buttons-block {
+        top: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
+        bottom: auto;
+
+        transition: top @animation-default;
+    }
+
+    &.mini-width {
+        .carousel-nav-buttons-block {
+            top: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
+        }
+    }
+
+    &.is-song {
+        &.carousel-expanded {
+            &.annotation-shown {
+                .carousel-nav-buttons-block {
+                    bottom: auto;
+                    top: 0;
+                }
+            }
         }
     }
 }

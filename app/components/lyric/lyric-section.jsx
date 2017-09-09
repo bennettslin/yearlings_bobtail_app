@@ -10,10 +10,10 @@ import { getArrayOfLength } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     appMounted,
-    selectedSongIndex
+    renderReadySongIndex
 }) => ({
     appMounted,
-    selectedSongIndex
+    renderReadySongIndex
 })
 
 /*************
@@ -71,7 +71,7 @@ class LyricSection extends Component {
         /* eslint-enable no-unused-vars */
                 ...other } = this.props
 
-        return (1 + 2 === 4) && (
+        return (
             <LyricSectionView {...other}
                 handleScroll={this._handleScroll}
             />
@@ -85,7 +85,7 @@ class LyricSection extends Component {
 
 const lyricSectionViewPropTypes = {
     // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
+    renderReadySongIndex: PropTypes.number.isRequired,
 
     // From parent.
     lyricSectionRef: PropTypes.func.isRequired,
@@ -94,14 +94,14 @@ const lyricSectionViewPropTypes = {
 
 LyricSectionView = ({
 
-    selectedSongIndex,
+    renderReadySongIndex,
 
     lyricSectionRef,
     handleScroll,
 
 ...other }) => {
 
-    const lyricUnitsCount = getLyricUnitsCount(selectedSongIndex),
+    const lyricUnitsCount = getLyricUnitsCount(renderReadySongIndex),
 
         /**
          * Dynamically create array of just indices. Lyric unit will fetch

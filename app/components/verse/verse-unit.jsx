@@ -12,10 +12,10 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     isSliderTouched,
-    selectedSongIndex
+    renderReadySongIndex
 }) => ({
     isSliderTouched,
-    selectedSongIndex
+    renderReadySongIndex
 })
 
 /*************
@@ -36,7 +36,7 @@ class VerseUnit extends Component {
     static propTypes = {
         // Through Redux.
         isSliderTouched: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+        renderReadySongIndex: PropTypes.number.isRequired,
 
         // From parent.
         verseObject: PropTypes.object.isRequired,
@@ -71,7 +71,7 @@ class VerseUnit extends Component {
                     'isSliderTouched',
 
                     // TODO: Possible to update without selected song index?
-                    'selectedSongIndex',
+                    'renderReadySongIndex',
                     'inMain',
                     'isSelected',
                     'isAfterSelected',
@@ -124,7 +124,7 @@ class VerseUnit extends Component {
     render() {
 
         /* eslint-disable no-unused-vars */
-        const { selectedSongIndex,
+        const { renderReadySongIndex,
         /* eslint-enable no-unused-vars */
 
                 inMain,

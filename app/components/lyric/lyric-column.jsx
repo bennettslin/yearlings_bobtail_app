@@ -175,7 +175,7 @@ LyricColumnView = ({
         >
             <div className={classnames(
                     'lyric-column-animatable',
-                    isHeavyRenderReady && 'render-ready'
+                    isHeavyRenderReady ? 'render-ready' : 'render-unready'
                 )}
                 onTransitionEnd={handleAnimatableTransition}
             >

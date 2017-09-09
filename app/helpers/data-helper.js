@@ -200,6 +200,11 @@ export const getLyricUnitArray = (songIndex, unitIndex) => {
 }
 
 export const getVerseObject = (songIndex, verseIndex, songs = AlbumData.songs) => {
+
+    if (songIndex < 0) {
+        return null
+    }
+
     const { lyrics } = getSongObject(songIndex, songs)
     return _parseLyrics(lyrics, verseIndex)
 }

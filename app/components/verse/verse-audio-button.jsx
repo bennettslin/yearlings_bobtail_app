@@ -14,11 +14,11 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     isPlaying,
-    selectedSongIndex,
+    renderReadySongIndex,
     canPlayThroughs
 }) => ({
     isPlaying,
-    selectedSongIndex,
+    renderReadySongIndex,
     canPlayThroughs
 })
 
@@ -54,7 +54,7 @@ class VerseAudioButton extends Component {
                     'isSelected',
                     'isAfterSelected',
                     /**
-                     * Don't need to update on selectedSongIndex, as it's only
+                     * Don't need to update on renderReadySongIndex, as it's only
                      * needed to calculate whether song can play through when
                      * canPlayThroughs is changed.
                      */
@@ -95,13 +95,13 @@ class VerseAudioButton extends Component {
     render() {
         const { isInteractivated,
                 isSelected,
-                selectedSongIndex,
+                renderReadySongIndex,
                 canPlayThroughs } = this.props,
 
             songCanPlayThrough = getValueInBitNumber({
                 keysCount: getSongsNotLoguesCount(),
                 bitNumber: canPlayThroughs,
-                key: selectedSongIndex
+                key: renderReadySongIndex
             }),
 
             /**
