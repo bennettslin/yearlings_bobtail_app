@@ -4,7 +4,7 @@ import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer } from './device'
 import { CanPlayThroughsReducer } from './player'
 import { IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
-import { PopupAnnotationSongIndexReducer, PopupAnnotationIndexReducer, AppMountedReducer, renderReadySongIndexReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, OverviewLogueIndexReducer, OverviewSongIndexReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
+import { PopupAnnotationSongIndexReducer, PopupAnnotationIndexReducer, AppMountedReducer, isHeavyRenderReadyReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, OverviewLogueIndexReducer, OverviewSongIndexReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
 import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseElementReducer, SliderVerseIndexReducer } from './slider'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, NavIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
 
@@ -36,7 +36,7 @@ const rootReducer = combineReducers({
     popupAnnotationSongIndex: PopupAnnotationSongIndexReducer,
     popupAnnotationIndex: PopupAnnotationIndexReducer,
     appMounted: AppMountedReducer,
-    renderReadySongIndex: renderReadySongIndexReducer,
+    isHeavyRenderReady: isHeavyRenderReadyReducer,
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
     interactivatedVerseIndex: InteractivatedVerseIndexReducer,
     isLyricExpanded: IsLyricExpandedReducer,

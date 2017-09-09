@@ -11,11 +11,11 @@ import VerseBar from '../verse/verse-bar'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedVerseIndex,
     sliderVerseIndex
 }) => ({
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedVerseIndex,
     sliderVerseIndex
 })
@@ -51,7 +51,7 @@ class LyricColumn extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'renderReadySongIndex',
+                    'isHeavyRenderReady',
                     'selectedVerseIndex',
                     'sliderVerseIndex'
                 ]
@@ -67,7 +67,7 @@ class LyricColumn extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (!prevProps.renderReadySongIndex && this.props.renderReadySongIndex) {
+        if (!prevProps.isHeavyRenderReady && this.props.isHeavyRenderReady) {
             this.props.handleScrollAfterLyricRerender()
         }
     }
@@ -120,7 +120,7 @@ class LyricColumn extends Component {
 
 const lyricColumnViewPropTypes = {
     // Through Redux.
-    renderReadySongIndex: PropTypes.number.isRequired,
+    isHeavyRenderReady: PropTypes.bool.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
 
@@ -140,7 +140,7 @@ const lyricColumnViewPropTypes = {
 LyricColumnView = ({
 
     // From props.
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedVerseIndex,
     sliderVerseIndex,
 
@@ -175,7 +175,7 @@ LyricColumnView = ({
         >
             <div className={classnames(
                     'lyric-column-animatable',
-                    renderReadySongIndex > -1 && 'render-ready'
+                    isHeavyRenderReady && 'render-ready'
                 )}
                 onTransitionEnd={handleAnimatableTransition}
             >

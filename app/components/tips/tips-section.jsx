@@ -8,12 +8,12 @@ import { getSongTip } from '../../helpers/data-helper'
 import { SHOWN, TIPS_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedSongIndex,
     selectedTipsIndex,
     isScoresTipsInMain
 }) => ({
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedSongIndex,
     selectedTipsIndex,
     isScoresTipsInMain
@@ -23,7 +23,7 @@ class TipsSection extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderReadySongIndex: PropTypes.number.isRequired,
+        isHeavyRenderReady: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
@@ -39,7 +39,7 @@ class TipsSection extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.renderReadySongIndex > -1
+        return nextProps.isHeavyRenderReady
     }
 
     _handleTipsToggle(e) {

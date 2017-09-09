@@ -9,7 +9,7 @@ import { getSongIsLogue } from '../../helpers/data-helper'
 
 const mapStateToProps = ({
     selectedOverviewIndex,
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedSongIndex,
     selectedTitleIndex,
     selectedTipsIndex,
@@ -17,7 +17,7 @@ const mapStateToProps = ({
     overviewSongIndex
 }) => ({
     selectedOverviewIndex,
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedSongIndex,
     selectedTitleIndex,
     selectedTipsIndex,
@@ -30,7 +30,7 @@ const overviewPopupPropTypes = {
     overviewLogueIndex: PropTypes.number.isRequired,
     overviewSongIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
-    renderReadySongIndex: PropTypes.number.isRequired,
+    isHeavyRenderReady: PropTypes.bool.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
@@ -46,7 +46,7 @@ OverviewPopup = ({
     overviewLogueIndex,
     overviewSongIndex,
     selectedOverviewIndex,
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
@@ -75,14 +75,9 @@ OverviewPopup = ({
 
     /**
      * Always hide overview section when title is open, or when tip is shown
-     * in song.
+     * in song. Always hide before ready to render.
      */
-    if (selectedTitleIndex || (!isLogue && !selectedTipsIndex)) {
-        isVisible = false
-    }
-
-    // Always hide before ready to render.
-    if (renderReadySongIndex === -1) {
+    if (!isHeavyRenderReady || selectedTitleIndex || (!isLogue && !selectedTipsIndex)) {
         isVisible = false
     }
 

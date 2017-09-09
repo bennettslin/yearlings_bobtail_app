@@ -12,13 +12,13 @@ import { getArrayOfLength } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     isHiddenNav,
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedSongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
 }) => ({
     isHiddenNav,
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedSongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
@@ -27,6 +27,7 @@ const mapStateToProps = ({
 const carouselSectionPropTypes = {
     // Through Redux.
     isHiddenNav: PropTypes.bool.isRequired,
+    isHeavyRenderReady: PropTypes.bool.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     accessedAnnotationIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -39,7 +40,7 @@ const carouselSectionPropTypes = {
 CarouselSection = ({
 
     isHiddenNav,
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedSongIndex,
     accessedAnnotationIndex,
     selectedAnnotationIndex,
@@ -65,7 +66,7 @@ CarouselSection = ({
     return (
         <div className={classnames(
             'carousel',
-            renderReadySongIndex > -1 && 'render-ready'
+            isHeavyRenderReady && 'render-ready'
         )}>
             <div className="carousel-scroll">
                 <div className="carousel-annotations-block">

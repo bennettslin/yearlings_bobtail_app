@@ -13,13 +13,13 @@ const mapStateToProps = ({
     deviceIndex,
     isHeightlessLyricColumn,
     selectedOverviewIndex,
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedSongIndex
 }) => ({
     deviceIndex,
     isHeightlessLyricColumn,
     selectedOverviewIndex,
-    renderReadySongIndex,
+    isHeavyRenderReady,
     selectedSongIndex
 })
 
@@ -29,7 +29,7 @@ class OverviewSection extends Component {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
-        renderReadySongIndex: PropTypes.number.isRequired,
+        isHeavyRenderReady: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -44,7 +44,7 @@ class OverviewSection extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.renderReadySongIndex > -1
+        return nextProps.isHeavyRenderReady
     }
 
     _handleOverviewToggle(e) {
