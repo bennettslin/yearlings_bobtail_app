@@ -6,7 +6,24 @@ import { connect } from 'react-redux'
 import Button from '../button/button'
 import { CAROUSEL_TOGGLE_KEY } from '../../constants/access'
 
-const CarouselToggle = ({
+const mapStateToProps = ({
+    isHiddenNav,
+    selectedCarouselIndex
+}) => ({
+    isHiddenNav,
+    selectedCarouselIndex
+})
+
+const carouselTogglePropTypes = {
+    // Through Redux.
+    isHiddenNav: PropTypes.bool.isRequired,
+    selectedCarouselIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handleCarouselToggle: PropTypes.func.isRequired
+},
+
+CarouselToggle = ({
 
     isHiddenNav,
     selectedCarouselIndex,
@@ -26,19 +43,6 @@ const CarouselToggle = ({
     ) : null
 }
 
-CarouselToggle.propTypes = {
-    // Through Redux.
-    isHiddenNav: PropTypes.bool.isRequired,
-    selectedCarouselIndex: PropTypes.number.isRequired,
+CarouselToggle.propTypes = carouselTogglePropTypes
 
-    // From parent.
-    handleCarouselToggle: PropTypes.func.isRequired
-}
-
-export default connect(({
-    isHiddenNav,
-    selectedCarouselIndex
-}) => ({
-    isHiddenNav,
-    selectedCarouselIndex
-}))(CarouselToggle)
+export default connect(mapStateToProps)(CarouselToggle)

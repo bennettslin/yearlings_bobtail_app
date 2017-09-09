@@ -9,6 +9,12 @@ import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 import { getAnnotationObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+})
+
 /*************
  * CONTAINER *
  *************/
@@ -99,7 +105,15 @@ class CarouselAnnotation extends Component {
  * PRESENTATION *
  ****************/
 
-const CarouselAnnotationView = ({
+const carouselAnnotationViewPropTypes = {
+    // From parent.
+    annotationIndex: PropTypes.number.isRequired,
+    annotationColumn: PropTypes.string.isRequired,
+    annotationDotKeys: PropTypes.object.isRequired,
+    handleContainerClick: PropTypes.func.isRequired
+},
+
+CarouselAnnotationView = ({
 
     annotationIndex,
     annotationColumn,
@@ -123,16 +137,6 @@ const CarouselAnnotationView = ({
     </div>
 )
 
-CarouselAnnotationView.propTypes = {
-    // From parent.
-    annotationIndex: PropTypes.number.isRequired,
-    annotationColumn: PropTypes.string.isRequired,
-    annotationDotKeys: PropTypes.object.isRequired,
-    handleContainerClick: PropTypes.func.isRequired
-}
+CarouselAnnotationView.propTypes = carouselAnnotationViewPropTypes
 
-export default connect(({
-    selectedSongIndex
-}) => ({
-    selectedSongIndex
-}))(CarouselAnnotation)
+export default connect(mapStateToProps)(CarouselAnnotation)

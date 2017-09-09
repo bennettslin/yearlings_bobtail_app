@@ -8,7 +8,31 @@ import Button from '../button/button'
 import { getAnnotationsCount } from '../../helpers/data-helper'
 import { getArrayOfLength } from '../../helpers/general-helper'
 
-const CarouselSection = ({
+const mapStateToProps = ({
+    isHiddenNav,
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    accessedAnnotationIndex
+}) => ({
+    isHiddenNav,
+    selectedSongIndex,
+    selectedAnnotationIndex,
+    accessedAnnotationIndex
+})
+
+const carouselSectionPropTypes = {
+    // Through Redux.
+    isHiddenNav: PropTypes.bool.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+    accessedAnnotationIndex: PropTypes.number.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handleAnnotationPrevious: PropTypes.func.isRequired,
+    handleAnnotationNext: PropTypes.func.isRequired
+},
+
+CarouselSection = ({
 
     isHiddenNav,
     selectedSongIndex,
@@ -72,26 +96,6 @@ const CarouselSection = ({
     )
 }
 
-CarouselSection.propTypes = {
-    // Through Redux.
-    isHiddenNav: PropTypes.bool.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-    accessedAnnotationIndex: PropTypes.number.isRequired,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
+CarouselSection.propTypes = carouselSectionPropTypes
 
-    // From parent.
-    handleAnnotationPrevious: PropTypes.func.isRequired,
-    handleAnnotationNext: PropTypes.func.isRequired
-}
-
-export default connect(({
-    isHiddenNav,
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    accessedAnnotationIndex
-}) => ({
-    isHiddenNav,
-    selectedSongIndex,
-    selectedAnnotationIndex,
-    accessedAnnotationIndex
-}))(CarouselSection)
+export default connect(mapStateToProps)(CarouselSection)
