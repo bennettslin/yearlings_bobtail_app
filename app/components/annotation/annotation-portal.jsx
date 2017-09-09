@@ -11,6 +11,16 @@ import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../.
 import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
+}) => ({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
+})
+
 class AnnotationPortal extends Component {
 
     static propTypes = {
@@ -136,12 +146,4 @@ class AnnotationPortal extends Component {
     }
 }
 
-export default connect(({
-    selectedSongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex
-}) => ({
-    selectedSongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex
-}))(AnnotationPortal)
+export default connect(mapStateToProps)(AnnotationPortal)

@@ -11,6 +11,16 @@ import { PORTAL } from '../../constants/dots'
 import { getCarouselOrPopupCardObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
+}) => ({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
+})
+
 /*************
  * CONTAINER *
  *************/
@@ -152,12 +162,4 @@ AnnotationCardView = ({
 
 AnnotationCardView.propTypes = annotationCardViewProptypes
 
-export default connect(({
-    selectedSongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex
-}) => ({
-    selectedSongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex
-}))(AnnotationCard)
+export default connect(mapStateToProps)(AnnotationCard)

@@ -7,7 +7,32 @@ import AnnotationPortal from './annotation-portal'
 import { SOURCE_PORTAL_INDEX } from '../../constants/lyrics'
 import { getCarouselOrPopupCardPortalLinksArray } from '../../helpers/data-helper'
 
-const AnnotationPortalsBlock = ({
+const mapStateToProps = ({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex,
+    accessedAnnotationAnchorIndex
+}) => ({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex,
+    accessedAnnotationAnchorIndex
+})
+
+const annotationPortalsBlockPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+    popupAnnotationSongIndex: PropTypes.number.isRequired,
+    popupAnnotationIndex: PropTypes.number.isRequired,
+    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    carouselAnnotationIndex: PropTypes.number,
+    cardIndex: PropTypes.number.isRequired,
+    inSelectedAnnotation: PropTypes.bool.isRequired
+},
+
+AnnotationPortalsBlock = ({
 
     selectedSongIndex,
     popupAnnotationSongIndex,
@@ -53,27 +78,6 @@ const AnnotationPortalsBlock = ({
     ) : null
 }
 
-AnnotationPortalsBlock.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    popupAnnotationSongIndex: PropTypes.number.isRequired,
-    popupAnnotationIndex: PropTypes.number.isRequired,
-    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+AnnotationPortalsBlock.propTypes = annotationPortalsBlockPropTypes
 
-    // From parent.
-    carouselAnnotationIndex: PropTypes.number,
-    cardIndex: PropTypes.number.isRequired,
-    inSelectedAnnotation: PropTypes.bool.isRequired
-}
-
-export default connect(({
-    selectedSongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex,
-    accessedAnnotationAnchorIndex
-}) => ({
-    selectedSongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex,
-    accessedAnnotationAnchorIndex
-}))(AnnotationPortalsBlock)
+export default connect(mapStateToProps)(AnnotationPortalsBlock)

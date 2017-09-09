@@ -10,6 +10,16 @@ import { IS_DOT_STANZA } from '../../constants/lyrics'
 import { getCarouselOrPopupAnnotationObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
+}) => ({
+    selectedSongIndex,
+    popupAnnotationSongIndex,
+    popupAnnotationIndex
+})
+
 /*************
  * CONTAINER *
  *************/
@@ -89,7 +99,19 @@ class AnnotationSection extends Component {
  * PRESENTATION *
  ****************/
 
-const AnnotationSectionView = ({
+const annotationSectionViewPropTypes = {
+    // From parent.
+    inCarousel: PropTypes.bool,
+    isAccessedAnnotation: PropTypes.bool,
+    isSelectedAnnotation: PropTypes.bool,
+    annotationTitle: PropTypes.string.isRequired,
+    annotationDotKeys: PropTypes.object.isRequired,
+
+    // (Absent in popup annotation.)
+    handleTitleClick: PropTypes.func
+},
+
+AnnotationSectionView = ({
 
     // From props.
     inCarousel,
@@ -156,24 +178,6 @@ const AnnotationSectionView = ({
     )
 }
 
-AnnotationSectionView.propTypes = {
-    // From parent.
-    inCarousel: PropTypes.bool,
-    isAccessedAnnotation: PropTypes.bool,
-    isSelectedAnnotation: PropTypes.bool,
-    annotationTitle: PropTypes.string.isRequired,
-    annotationDotKeys: PropTypes.object.isRequired,
+AnnotationSectionView.propTypes = annotationSectionViewPropTypes
 
-    // (Absent in popup annotation.)
-    handleTitleClick: PropTypes.func
-}
-
-export default connect(({
-    selectedSongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex
-}) => ({
-    selectedSongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex
-}))(AnnotationSection)
+export default connect(mapStateToProps)(AnnotationSection)

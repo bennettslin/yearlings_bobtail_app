@@ -7,7 +7,27 @@ import AnnotationCard from './annotation-card'
 import { getCarouselOrPopupAnnotationObject } from '../../helpers/data-helper'
 import { getArrayOfLength } from '../../helpers/general-helper'
 
-const AnnotationUnit = ({
+const mapStateToProps = ({
+    selectedSongIndex,
+    popupAnnotationIndex,
+    popupAnnotationSongIndex
+}) => ({
+    selectedSongIndex,
+    popupAnnotationIndex,
+    popupAnnotationSongIndex
+})
+
+const annotationUnitPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+    popupAnnotationSongIndex: PropTypes.number.isRequired,
+    popupAnnotationIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    carouselAnnotationIndex: PropTypes.number
+},
+
+AnnotationUnit = ({
 
     selectedSongIndex,
     popupAnnotationSongIndex,
@@ -39,22 +59,6 @@ const AnnotationUnit = ({
     )
 }
 
-AnnotationUnit.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    popupAnnotationSongIndex: PropTypes.number.isRequired,
-    popupAnnotationIndex: PropTypes.number.isRequired,
+AnnotationUnit.propTypes = annotationUnitPropTypes
 
-    // From parent.
-    carouselAnnotationIndex: PropTypes.number
-}
-
-export default connect(({
-    selectedSongIndex,
-    popupAnnotationIndex,
-    popupAnnotationSongIndex
-}) => ({
-    selectedSongIndex,
-    popupAnnotationIndex,
-    popupAnnotationSongIndex
-}))(AnnotationUnit)
+export default connect(mapStateToProps)(AnnotationUnit)
