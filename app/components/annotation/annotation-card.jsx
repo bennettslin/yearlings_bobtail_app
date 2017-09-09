@@ -12,10 +12,12 @@ import { getCarouselOrPopupCardObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
+    isHeavyRenderReady,
     selectedSongIndex,
     popupAnnotationSongIndex,
     popupAnnotationIndex
 }) => ({
+    isHeavyRenderReady,
     selectedSongIndex,
     popupAnnotationSongIndex,
     popupAnnotationIndex
@@ -29,6 +31,7 @@ class AnnotationCard extends Component {
 
     static propTypes = {
         // Through Redux.
+        isHeavyRenderReady: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         popupAnnotationSongIndex: PropTypes.number.isRequired,
         popupAnnotationIndex: PropTypes.number.isRequired,
@@ -40,11 +43,17 @@ class AnnotationCard extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
+
+        if (!nextProps.isHeavyRenderReady) {
+            return false
+        }
+
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
                 props,
                 nextProps,
                 updatingPropsArray: [
+                    'isHeavyRenderReady',
                     'selectedSongIndex',
                     'inSelectedAnnotation',
                     {

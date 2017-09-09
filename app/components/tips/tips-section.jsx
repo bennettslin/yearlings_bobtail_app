@@ -8,13 +8,13 @@ import { getSongTip } from '../../helpers/data-helper'
 import { SHOWN, TIPS_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({
-    isHeavyRenderReady,
-    selectedSongIndex,
+    // isHeavyRenderReady,
+    renderReadySongIndex,
     selectedTipsIndex,
     isScoresTipsInMain
 }) => ({
-    isHeavyRenderReady,
-    selectedSongIndex,
+    // isHeavyRenderReady,
+    renderReadySongIndex,
     selectedTipsIndex,
     isScoresTipsInMain
 })
@@ -23,8 +23,8 @@ class TipsSection extends Component {
 
     static propTypes = {
         // Through Redux.
-        isHeavyRenderReady: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+        // isHeavyRenderReady: PropTypes.bool.isRequired,
+        renderReadySongIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
 
@@ -38,9 +38,9 @@ class TipsSection extends Component {
         this._handleTipsToggle = this._handleTipsToggle.bind(this)
     }
 
-    shouldComponentUpdate(nextProps) {
-        return nextProps.isHeavyRenderReady
-    }
+    // shouldComponentUpdate(nextProps) {
+    //     return nextProps.isHeavyRenderReady
+    // }
 
     _handleTipsToggle(e) {
         // Prevent toggle from firing when not shown.
@@ -53,11 +53,11 @@ class TipsSection extends Component {
     }
 
     render() {
-        const { selectedSongIndex,
+        const { renderReadySongIndex,
                 selectedTipsIndex,
                 isScoresTipsInMain } = this.props,
 
-            tipText = getSongTip(selectedSongIndex),
+            tipText = getSongTip(renderReadySongIndex),
             isEnabled = TIPS_OPTIONS[selectedTipsIndex] === SHOWN
 
         return (

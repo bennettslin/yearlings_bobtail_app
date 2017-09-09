@@ -10,8 +10,10 @@ import { getAnnotationObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
+    isHeavyRenderReady,
     selectedSongIndex
 }) => ({
+    isHeavyRenderReady,
     selectedSongIndex
 })
 
@@ -23,6 +25,7 @@ class CarouselAnnotation extends Component {
 
     static propTypes = {
         // Through Redux.
+        isHeavyRenderReady: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -40,11 +43,17 @@ class CarouselAnnotation extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
+
+        if (!nextProps.isHeavyRenderReady) {
+            return false
+        }
+
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
                 props,
                 nextProps,
                 updatingPropsArray: [
+                    'isHeavyRenderReady',
                     'selectedSongIndex',
                     'isAccessedAnnotation',
                     'isSelectedAnnotation'

@@ -3,6 +3,7 @@ import { POPUP_ANNOTATION_SONG_INDEX,
          POPUP_ANNOTATION_INDEX,
          APP_MOUNTED,
          IS_HEAVY_RENDER_READY,
+         RENDER_READY_SONG_INDEX,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
          IS_LYRIC_EXPANDED,
@@ -31,6 +32,11 @@ export const setAppMounted = (appMounted = false) => (
 export const setIsHeavyRenderReady = (isHeavyRenderReady = false) => (
     { type: IS_HEAVY_RENDER_READY,
       payload: isHeavyRenderReady }
+)
+
+export const setRenderReadySongIndex = (renderReadySongIndex = -1) => (
+    { type: RENDER_READY_SONG_INDEX,
+      payload: renderReadySongIndex }
 )
 
 export const setCarouselAnnotationIndex = (carouselAnnotationIndex = 0) => (

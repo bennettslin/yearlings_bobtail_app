@@ -9,12 +9,12 @@ import { getSongIsLogue } from '../../helpers/data-helper'
 
 const mapStateToProps = ({
     isHeavyRenderReady,
-    selectedSongIndex,
+    renderReadySongIndex,
     selectedTipsIndex,
     selectedTitleIndex
 }) => ({
     isHeavyRenderReady,
-    selectedSongIndex,
+    renderReadySongIndex,
     selectedTipsIndex,
     selectedTitleIndex
 })
@@ -22,7 +22,7 @@ const mapStateToProps = ({
 const tipsPopupPropTypes = {
     // Through Redux.
     isHeavyRenderReady: PropTypes.bool.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
+    renderReadySongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
 
@@ -33,14 +33,14 @@ const tipsPopupPropTypes = {
 TipsPopup = ({
 
     isHeavyRenderReady,
-    selectedSongIndex,
+    renderReadySongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
     handlePopupContainerClick,
 
 ...other }) => {
 
-    const isLogue = getSongIsLogue(selectedSongIndex),
+    const isLogue = getSongIsLogue(renderReadySongIndex),
 
         isVisible = isHeavyRenderReady && !isLogue && !selectedTipsIndex && !selectedTitleIndex,
 

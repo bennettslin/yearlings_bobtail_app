@@ -12,23 +12,17 @@ const mapStateToProps = ({
     isHeavyRenderReady,
     selectedSongIndex,
     selectedTitleIndex,
-    selectedTipsIndex,
-    overviewLogueIndex,
-    overviewSongIndex
+    selectedTipsIndex
 }) => ({
     selectedOverviewIndex,
     isHeavyRenderReady,
     selectedSongIndex,
     selectedTitleIndex,
-    selectedTipsIndex,
-    overviewLogueIndex,
-    overviewSongIndex
+    selectedTipsIndex
 })
 
 const overviewPopupPropTypes = {
     // Through Redux.
-    overviewLogueIndex: PropTypes.number.isRequired,
-    overviewSongIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
     isHeavyRenderReady: PropTypes.bool.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
@@ -43,8 +37,6 @@ const overviewPopupPropTypes = {
 OverviewPopup = ({
 
     inOverviewSubfield,
-    overviewLogueIndex,
-    overviewSongIndex,
     selectedOverviewIndex,
     isHeavyRenderReady,
     selectedSongIndex,
@@ -56,12 +48,8 @@ OverviewPopup = ({
 
     const isLogue = getSongIsLogue(selectedSongIndex),
 
-        overviewIndex = inOverviewSubfield ? overviewSongIndex : overviewLogueIndex,
-
         myChild = (
-            <OverviewSection {...other}
-                overviewIndex={overviewIndex}
-            />
+            <OverviewSection {...other} />
         )
 
     let isVisible

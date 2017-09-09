@@ -13,14 +13,12 @@ const mapStateToProps = ({
     deviceIndex,
     isHeightlessLyricColumn,
     selectedOverviewIndex,
-    isHeavyRenderReady,
-    selectedSongIndex
+    renderReadySongIndex
 }) => ({
     deviceIndex,
     isHeightlessLyricColumn,
     selectedOverviewIndex,
-    isHeavyRenderReady,
-    selectedSongIndex
+    renderReadySongIndex
 })
 
 class OverviewSection extends Component {
@@ -29,11 +27,9 @@ class OverviewSection extends Component {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
-        isHeavyRenderReady: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+        renderReadySongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        overviewIndex: PropTypes.number.isRequired,
         handleOverviewToggle: PropTypes.func.isRequired
     }
 
@@ -41,10 +37,6 @@ class OverviewSection extends Component {
         super(props)
 
         this._handleOverviewToggle = this._handleOverviewToggle.bind(this)
-    }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.isHeavyRenderReady
     }
 
     _handleOverviewToggle(e) {
@@ -61,11 +53,10 @@ class OverviewSection extends Component {
         const { deviceIndex,
                 isHeightlessLyricColumn,
                 selectedOverviewIndex,
-                selectedSongIndex,
-                overviewIndex } = this.props,
+                renderReadySongIndex } = this.props,
 
-            overviewText = getSongOverview(overviewIndex),
-            isLogue = getSongIsLogue(selectedSongIndex),
+            overviewText = getSongOverview(renderReadySongIndex),
+            isLogue = getSongIsLogue(renderReadySongIndex),
 
             /**
              * Always show in phone. Also show when is logue and is heightless
