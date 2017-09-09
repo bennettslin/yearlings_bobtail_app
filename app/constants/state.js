@@ -40,8 +40,6 @@ module.exports = {
     IS_LYRIC_EXPANDED: 'isLyricExpanded',
     IS_VERSE_BAR_ABOVE: 'isVerseBarAbove',
     IS_VERSE_BAR_BELOW: 'isVerseBarBelow',
-    OVERVIEW_LOGUE_INDEX: 'overviewLogueIndex',
-    OVERVIEW_SONG_INDEX: 'overviewSongIndex',
     SELECTED_VERSE_ELEMENT: 'selectedVerseElement',
     SHOWN_BOOK_COLUMN_INDEX: 'shownBookColumnIndex',
 

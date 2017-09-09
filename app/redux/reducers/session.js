@@ -9,8 +9,6 @@ import { POPUP_ANNOTATION_SONG_INDEX,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
-         OVERVIEW_LOGUE_INDEX,
-         OVERVIEW_SONG_INDEX,
          SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
@@ -98,24 +96,6 @@ export const IsVerseBarAboveReducer = (state = false, action) => {
 export const IsVerseBarBelowReducer = (state = false, action) => {
     switch (action.type) {
         case IS_VERSE_BAR_BELOW:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const OverviewLogueIndexReducer = (state = -1, action) => {
-    switch (action.type) {
-        case OVERVIEW_LOGUE_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const OverviewSongIndexReducer = (state = -1, action) => {
-    switch (action.type) {
-        case OVERVIEW_SONG_INDEX:
             return action.payload
         default:
             return state
