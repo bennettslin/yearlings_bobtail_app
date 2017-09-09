@@ -7,12 +7,42 @@ import TextBlock from '../text/text-block'
 import { getSongTip } from '../../helpers/data-helper'
 import { SHOWN, TIPS_OPTIONS } from '../../constants/options'
 
+const mapStateToProps = ({
+    tipsSongIndex,
+    renderReadySongIndex,
+    selectedSongIndex,
+    selectedTipsIndex,
+    isScoresTipsInMain
+}) => ({
+    tipsSongIndex,
+    renderReadySongIndex,
+    selectedSongIndex,
+    selectedTipsIndex,
+    isScoresTipsInMain
+})
+
 class TipsSection extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        tipsSongIndex: PropTypes.number.isRequired,
+        renderReadySongIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedTipsIndex: PropTypes.number.isRequired,
+        isScoresTipsInMain: PropTypes.bool.isRequired,
+
+        // From parent.
+        handleTipsToggle: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
 
         this._handleTipsToggle = this._handleTipsToggle.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.renderReadySongIndex > -1
     }
 
     _handleTipsToggle(e) {
@@ -59,25 +89,4 @@ class TipsSection extends Component {
     }
 }
 
-TipsSection.propTypes = {
-    // Through Redux.
-    tipsSongIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedTipsIndex: PropTypes.number.isRequired,
-    isScoresTipsInMain: PropTypes.bool.isRequired,
-
-    // From parent.
-    handleTipsToggle: PropTypes.func.isRequired
-}
-
-export default connect(({
-    tipsSongIndex,
-    selectedSongIndex,
-    selectedTipsIndex,
-    isScoresTipsInMain
-}) => ({
-    tipsSongIndex,
-    selectedSongIndex,
-    selectedTipsIndex,
-    isScoresTipsInMain
-}))(TipsSection)
+export default connect(mapStateToProps)(TipsSection)

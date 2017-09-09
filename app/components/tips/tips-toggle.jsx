@@ -7,7 +7,22 @@ import Button from '../button/button'
 import { TIPS_TOGGLE_KEY } from '../../constants/access'
 import { TIPS_OPTIONS } from '../../constants/options'
 
-const TipsToggle = ({
+const mapStateToProps = ({
+    selectedTipsIndex
+}) => ({
+    selectedTipsIndex
+})
+
+const tipsTogglePropTypes = {
+    // Through Redux.
+    selectedTipsIndex: PropTypes.number.isRequired,
+
+    // From props.
+    isEnabled: PropTypes.bool.isRequired,
+    handleTipsToggle: PropTypes.func.isRequired
+},
+
+TipsToggle = ({
 
     selectedTipsIndex,
     isEnabled,
@@ -25,17 +40,6 @@ const TipsToggle = ({
     </div>
 )
 
-TipsToggle.propTypes = {
-    // Through Redux.
-    selectedTipsIndex: PropTypes.number.isRequired,
+TipsToggle.propTypes = tipsTogglePropTypes
 
-    // From props.
-    isEnabled: PropTypes.bool.isRequired,
-    handleTipsToggle: PropTypes.func.isRequired
-}
-
-export default connect(({
-    selectedTipsIndex
-}) => ({
-    selectedTipsIndex
-}))(TipsToggle)
+export default connect(mapStateToProps)(TipsToggle)

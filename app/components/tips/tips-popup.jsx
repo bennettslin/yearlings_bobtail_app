@@ -7,8 +7,32 @@ import TipsSection from './tips-section'
 import Popup from '../popup/popup'
 import { getSongIsLogue } from '../../helpers/data-helper'
 
-const TipsPopup = ({
+const mapStateToProps = ({
+    renderReadySongIndex,
+    selectedSongIndex,
+    selectedTipsIndex,
+    selectedTitleIndex
+}) => ({
+    renderReadySongIndex,
+    selectedSongIndex,
+    selectedTipsIndex,
+    selectedTitleIndex
+})
 
+const tipsPopupPropTypes = {
+    // Through Redux.
+    renderReadySongIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+    selectedTipsIndex: PropTypes.number.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handlePopupContainerClick: PropTypes.func.isRequired
+},
+
+TipsPopup = ({
+
+    renderReadySongIndex,
     selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
@@ -18,7 +42,7 @@ const TipsPopup = ({
 
     const isLogue = getSongIsLogue(selectedSongIndex),
 
-        isVisible = !isLogue && !selectedTipsIndex && !selectedTitleIndex,
+        isVisible = renderReadySongIndex > -1 && !isLogue && !selectedTipsIndex && !selectedTitleIndex,
 
         myChild = (
             <TipsSection {...other} />
@@ -34,22 +58,6 @@ const TipsPopup = ({
     )
 }
 
-TipsPopup.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedTipsIndex: PropTypes.number.isRequired,
-    selectedTitleIndex: PropTypes.number.isRequired,
+TipsPopup.propTypes = tipsPopupPropTypes
 
-    // From parent.
-    handlePopupContainerClick: PropTypes.func.isRequired
-}
-
-export default connect(({
-    selectedSongIndex,
-    selectedTipsIndex,
-    selectedTitleIndex
-}) => ({
-    selectedSongIndex,
-    selectedTipsIndex,
-    selectedTitleIndex
-}))(TipsPopup)
+export default connect(mapStateToProps)(TipsPopup)
