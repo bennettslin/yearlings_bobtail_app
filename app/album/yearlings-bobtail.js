@@ -67,8 +67,7 @@ module.exports = {
 `
         },
         17: {
-            description: `Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.
-`
+            description: `Lorem ipsum`
         },
         18: {
             description: `Dream Lorem ipsum dolor sit amet, ne eros libris vim. Ignota suscipit vim an, te mundi indoctum sit. Doctus epicuri sed an. Quodsi fabulas quo an, amet patrioque in est, nam eu aliquid deterruisset. Mazim soluta facete pri ea, pri no congue mandamus signiferumque, numquam consulatu delicatissimi vim at.

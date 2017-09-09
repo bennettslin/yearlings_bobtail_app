@@ -8,13 +8,11 @@ import { getSongTip } from '../../helpers/data-helper'
 import { SHOWN, TIPS_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({
-    tipsSongIndex,
     renderReadySongIndex,
     selectedSongIndex,
     selectedTipsIndex,
     isScoresTipsInMain
 }) => ({
-    tipsSongIndex,
     renderReadySongIndex,
     selectedSongIndex,
     selectedTipsIndex,
@@ -25,7 +23,6 @@ class TipsSection extends Component {
 
     static propTypes = {
         // Through Redux.
-        tipsSongIndex: PropTypes.number.isRequired,
         renderReadySongIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
@@ -56,11 +53,11 @@ class TipsSection extends Component {
     }
 
     render() {
-        const { tipsSongIndex,
+        const { selectedSongIndex,
                 selectedTipsIndex,
                 isScoresTipsInMain } = this.props,
 
-            tipText = getSongTip(tipsSongIndex),
+            tipText = getSongTip(selectedSongIndex),
             isEnabled = TIPS_OPTIONS[selectedTipsIndex] === SHOWN
 
         return (

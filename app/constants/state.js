@@ -41,7 +41,6 @@ module.exports = {
     IS_VERSE_BAR_BELOW: 'isVerseBarBelow',
     OVERVIEW_LOGUE_INDEX: 'overviewLogueIndex',
     OVERVIEW_SONG_INDEX: 'overviewSongIndex',
-    TIPS_SONG_INDEX: 'tipsSongIndex',
     SELECTED_VERSE_ELEMENT: 'selectedVerseElement',
     SHOWN_BOOK_COLUMN_INDEX: 'shownBookColumnIndex',
 

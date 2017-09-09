@@ -10,7 +10,6 @@ import { POPUP_ANNOTATION_SONG_INDEX,
          IS_VERSE_BAR_BELOW,
          OVERVIEW_LOGUE_INDEX,
          OVERVIEW_SONG_INDEX,
-         TIPS_SONG_INDEX,
          SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
@@ -107,15 +106,6 @@ export const OverviewLogueIndexReducer = (state = -1, action) => {
 export const OverviewSongIndexReducer = (state = -1, action) => {
     switch (action.type) {
         case OVERVIEW_SONG_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const TipsSongIndexReducer = (state = -1, action) => {
-    switch (action.type) {
-        case TIPS_SONG_INDEX:
             return action.payload
         default:
             return state

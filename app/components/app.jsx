@@ -8,7 +8,7 @@ import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, acc
 import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth } from '../redux/actions/device'
 import { setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
-import { setPopupAnnotationSongIndex, setPopupAnnotationIndex, setAppMounted, setRenderReadySongIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setTipsSongIndex, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
+import { setPopupAnnotationSongIndex, setPopupAnnotationIndex, setAppMounted, setRenderReadySongIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './event-manager'
@@ -67,8 +67,6 @@ class App extends Component {
         // Allow logue and song overviews to fade in and out simultaneously.
         props.setOverviewLogueIndex(isLogue ? selectedSongIndex : -1)
         props.setOverviewSongIndex(isLogue ? -1 : selectedSongIndex)
-
-        props.setTipsSongIndex(isLogue ? -1 : selectedSongIndex)
 
         // Bind this to event handlers.
         this._bindEventHandlers()
@@ -648,13 +646,9 @@ class App extends Component {
             if (wasLogue) {
                 // Remove song overview if two logues in a row.
                 this.props.setOverviewSongIndex(-1)
-
-                this.props.setTipsSongIndex(-1)
             }
         } else {
             this.props.setOverviewSongIndex(selectedSongIndex)
-
-            this.props.setTipsSongIndex(selectedSongIndex)
 
             if (!wasLogue) {
                 // Remove logue overview if two songs in a row.
@@ -1226,7 +1220,7 @@ const passReduxStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setPopupAnnotationSongIndex, setPopupAnnotationIndex, setAppMounted, setRenderReadySongIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setTipsSongIndex, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setPopupAnnotationSongIndex, setPopupAnnotationIndex, setAppMounted, setRenderReadySongIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
     }, dispatch)
 )
 
