@@ -7,7 +7,26 @@ import Button from '../button/button'
 import { OVERVIEW_TOGGLE_KEY } from '../../constants/access'
 import { OVERVIEW_OPTIONS } from '../../constants/options'
 
-const OverviewToggle = ({
+const mapStateToProps = ({
+    selectedOverviewIndex
+}) => ({
+    selectedOverviewIndex
+})
+
+const overviewToggleDefaultProps = {
+    isEnabled: true
+},
+
+overviewTogglePropTypes = {
+    // Through Redux.
+    selectedOverviewIndex: PropTypes.number.isRequired,
+
+    // From props.
+    isEnabled: PropTypes.bool.isRequired,
+    handleOverviewToggle: PropTypes.func.isRequired
+},
+
+OverviewToggle = ({
 
     selectedOverviewIndex,
     isEnabled,
@@ -26,21 +45,7 @@ const OverviewToggle = ({
     </div>
 )
 
-OverviewToggle.defaultProps = {
-    isEnabled: true
-}
+OverviewToggle.defaultProps = overviewToggleDefaultProps
+OverviewToggle.propTypes = overviewTogglePropTypes
 
-OverviewToggle.propTypes = {
-    // Through Redux.
-    selectedOverviewIndex: PropTypes.number.isRequired,
-
-    // From props.
-    isEnabled: PropTypes.bool.isRequired,
-    handleOverviewToggle: PropTypes.func.isRequired
-}
-
-export default connect(({
-    selectedOverviewIndex
-}) => ({
-    selectedOverviewIndex
-}))(OverviewToggle)
+export default connect(mapStateToProps)(OverviewToggle)

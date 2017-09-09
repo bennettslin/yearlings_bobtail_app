@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import classnames from 'classnames'
+
 import CarouselAnnotation from './carousel-annotation'
 import Button from '../button/button'
 import { getAnnotationsCount } from '../../helpers/data-helper'
@@ -10,11 +12,13 @@ import { getArrayOfLength } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     isHiddenNav,
+    renderReadySongIndex,
     selectedSongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
 }) => ({
     isHiddenNav,
+    renderReadySongIndex,
     selectedSongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
@@ -35,6 +39,7 @@ const carouselSectionPropTypes = {
 CarouselSection = ({
 
     isHiddenNav,
+    renderReadySongIndex,
     selectedSongIndex,
     accessedAnnotationIndex,
     selectedAnnotationIndex,
@@ -58,7 +63,10 @@ CarouselSection = ({
         })
 
     return (
-        <div className="carousel">
+        <div className={classnames(
+            'carousel',
+            renderReadySongIndex > -1 && 'render-ready'
+        )}>
             <div className="carousel-scroll">
                 <div className="carousel-annotations-block">
                     <div className="carousel-annotation carousel-annotation-0" />

@@ -9,12 +9,42 @@ import { getSongOverview, getSongIsLogue } from '../../helpers/data-helper'
 import { getIsToggleInOverview } from '../../helpers/responsive-helper'
 import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'
 
+const mapStateToProps = ({
+    deviceIndex,
+    isHeightlessLyricColumn,
+    selectedOverviewIndex,
+    renderReadySongIndex,
+    selectedSongIndex
+}) => ({
+    deviceIndex,
+    isHeightlessLyricColumn,
+    selectedOverviewIndex,
+    renderReadySongIndex,
+    selectedSongIndex
+})
+
 class OverviewSection extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        deviceIndex: PropTypes.number.isRequired,
+        selectedOverviewIndex: PropTypes.number.isRequired,
+        renderReadySongIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        overviewIndex: PropTypes.number.isRequired,
+        handleOverviewToggle: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
 
         this._handleOverviewToggle = this._handleOverviewToggle.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.renderReadySongIndex > -1
     }
 
     _handleOverviewToggle(e) {
@@ -68,25 +98,4 @@ class OverviewSection extends Component {
     }
 }
 
-OverviewSection.propTypes = {
-    // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-    selectedOverviewIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    overviewIndex: PropTypes.number.isRequired,
-    handleOverviewToggle: PropTypes.func.isRequired
-}
-
-export default connect(({
-    deviceIndex,
-    isHeightlessLyricColumn,
-    selectedOverviewIndex,
-    selectedSongIndex
-}) => ({
-    deviceIndex,
-    isHeightlessLyricColumn,
-    selectedOverviewIndex,
-    selectedSongIndex
-}))(OverviewSection)
+export default connect(mapStateToProps)(OverviewSection)

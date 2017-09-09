@@ -7,12 +7,46 @@ import OverviewSection from './overview-section'
 import Popup from '../popup/popup'
 import { getSongIsLogue } from '../../helpers/data-helper'
 
-const OverviewPopup = ({
+const mapStateToProps = ({
+    selectedOverviewIndex,
+    renderReadySongIndex,
+    selectedSongIndex,
+    selectedTitleIndex,
+    selectedTipsIndex,
+    overviewLogueIndex,
+    overviewSongIndex
+}) => ({
+    selectedOverviewIndex,
+    renderReadySongIndex,
+    selectedSongIndex,
+    selectedTitleIndex,
+    selectedTipsIndex,
+    overviewLogueIndex,
+    overviewSongIndex
+})
+
+const overviewPopupPropTypes = {
+    // Through Redux.
+    overviewLogueIndex: PropTypes.number.isRequired,
+    overviewSongIndex: PropTypes.number.isRequired,
+    selectedOverviewIndex: PropTypes.number.isRequired,
+    renderReadySongIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+    selectedTipsIndex: PropTypes.number.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    inOverviewSubfield: PropTypes.bool.isRequired,
+    handlePopupContainerClick: PropTypes.func.isRequired
+},
+
+OverviewPopup = ({
 
     inOverviewSubfield,
     overviewLogueIndex,
     overviewSongIndex,
     selectedOverviewIndex,
+    renderReadySongIndex,
     selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
@@ -47,6 +81,11 @@ const OverviewPopup = ({
         isVisible = false
     }
 
+    // Always hide before ready to render.
+    if (renderReadySongIndex === -1) {
+        isVisible = false
+    }
+
     return (
         <Popup
             isVisible={isVisible}
@@ -57,32 +96,6 @@ const OverviewPopup = ({
     )
 }
 
-OverviewPopup.propTypes = {
-    // Through Redux.
-    overviewLogueIndex: PropTypes.number.isRequired,
-    overviewSongIndex: PropTypes.number.isRequired,
-    selectedOverviewIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedTipsIndex: PropTypes.number.isRequired,
-    selectedTitleIndex: PropTypes.number.isRequired,
+OverviewPopup.propTypes = overviewPopupPropTypes
 
-    // From parent.
-    inOverviewSubfield: PropTypes.bool.isRequired,
-    handlePopupContainerClick: PropTypes.func.isRequired
-}
-
-export default connect(({
-    selectedOverviewIndex,
-    selectedSongIndex,
-    selectedTitleIndex,
-    selectedTipsIndex,
-    overviewLogueIndex,
-    overviewSongIndex
-}) => ({
-    selectedOverviewIndex,
-    selectedSongIndex,
-    selectedTitleIndex,
-    selectedTipsIndex,
-    overviewLogueIndex,
-    overviewSongIndex
-}))(OverviewPopup)
+export default connect(mapStateToProps)(OverviewPopup)

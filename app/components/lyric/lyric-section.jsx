@@ -71,7 +71,7 @@ class LyricSection extends Component {
         /* eslint-enable no-unused-vars */
                 ...other } = this.props
 
-        return (
+        return (1 + 2 === 4) && (
             <LyricSectionView {...other}
                 handleScroll={this._handleScroll}
             />

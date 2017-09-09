@@ -13,7 +13,9 @@
 .is-song {
     &.carousel-expanded {
         .carousel {
-            bottom: -@carousel-height-variable;
+            &.render-ready {
+                bottom: -@carousel-height-variable;
+            }
         }
     }
 }
@@ -84,7 +86,9 @@
     &.is-song {
         &.carousel-expanded {
             .carousel {
-                top: -@carousel-toggle-tablet-length;
+                &.render-ready {
+                    top: -@carousel-toggle-tablet-length;
+                }
             }
 
             &.annotation-shown {
@@ -135,7 +139,9 @@
         &.is-song {
             &.carousel-expanded {
                 .carousel {
-                    top: -@carousel-toggle-mini-length;
+                    &.render-ready {
+                        top: -@carousel-toggle-mini-length;
+                    }
                 }
             }
         }
