@@ -46,7 +46,13 @@ exports.loadJavaScript = ({ include }) => ({
                 test: /\.jsx?$/,
                 enforce: 'pre',
                 loaders: [
-                    'babel-loader?presets[]=es2015&presets[]=react',
+                    {
+                        loader: "babel-loader",
+                        query: {
+                            plugins: ['transform-class-properties'],
+                            presets: ['react', 'es2015', 'stage-2']
+                        }
+                    },
                     'eslint-loader'
                 ]
             }
