@@ -6,11 +6,29 @@ import { connect } from 'react-redux'
 import classnames from 'classnames'
 import DotAnchor from '../dot/dot-anchor'
 
+const mapStateToProps = ({
+    accessedAnnotationIndex,
+    selectedAnnotationIndex
+}) => ({
+    accessedAnnotationIndex,
+    selectedAnnotationIndex
+})
+
 /*************
  * CONTAINER *
  *************/
 
 class LyricDotStanza extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        accessedAnnotationIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        dotStanzaObject: PropTypes.object.isRequired,
+        handleLyricAnnotationSelect: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -54,21 +72,17 @@ class LyricDotStanza extends Component {
     }
 }
 
-LyricDotStanza.propTypes = {
-    // Through Redux.
-    accessedAnnotationIndex: PropTypes.number.isRequired,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    dotStanzaObject: PropTypes.object.isRequired,
-    handleLyricAnnotationSelect: PropTypes.func.isRequired
-}
-
 /****************
  * PRESENTATION *
  ****************/
 
-const LyricDotStanzaView = ({
+const lyricDotStanzaViewPropTypes = {
+    // From parent.
+    dotKeys: PropTypes.object.isRequired,
+    annotationIndex: PropTypes.number.isRequired
+},
+
+LyricDotStanzaView = ({
 
     // From controller.
     dotKeys,
@@ -96,16 +110,6 @@ const LyricDotStanzaView = ({
     </div>
 )
 
-LyricDotStanzaView.propTypes = {
-    // From parent.
-    dotKeys: PropTypes.object.isRequired,
-    annotationIndex: PropTypes.number.isRequired
-}
+LyricDotStanzaView.propTypes = lyricDotStanzaViewPropTypes
 
-export default connect(({
-    accessedAnnotationIndex,
-    selectedAnnotationIndex
-}) => ({
-    accessedAnnotationIndex,
-    selectedAnnotationIndex
-}))(LyricDotStanza)
+export default connect(mapStateToProps)(LyricDotStanza)

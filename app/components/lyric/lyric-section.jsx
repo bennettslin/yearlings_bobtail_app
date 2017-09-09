@@ -8,11 +8,29 @@ import LyricUnit from './lyric-unit'
 import { getLyricUnitsCount } from '../../helpers/data-helper'
 import { getArrayOfLength } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    appMounted,
+    selectedSongIndex
+}) => ({
+    appMounted,
+    selectedSongIndex
+})
+
 /*************
  * CONTAINER *
  *************/
 
 class LyricSection extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        appMounted: PropTypes.bool.isRequired,
+
+        // From parent.
+        isTransitioningHeight: PropTypes.bool.isRequired,
+        completeHeightTransition: PropTypes.func.isRequired,
+        handleLyricSectionScroll: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -61,21 +79,20 @@ class LyricSection extends Component {
     }
 }
 
-LyricSection.propTypes = {
-    // Through Redux.
-    appMounted: PropTypes.bool.isRequired,
-
-    // From parent.
-    isTransitioningHeight: PropTypes.bool.isRequired,
-    completeHeightTransition: PropTypes.func.isRequired,
-    handleLyricSectionScroll: PropTypes.func.isRequired
-}
-
 /****************
  * PRESENTATION *
  ****************/
 
-const LyricSectionView = ({
+const lyricSectionViewPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    lyricSectionRef: PropTypes.func.isRequired,
+    handleScroll: PropTypes.func.isRequired
+},
+
+LyricSectionView = ({
 
     selectedSongIndex,
 
@@ -120,19 +137,6 @@ const LyricSectionView = ({
     )
 }
 
-LyricSectionView.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
+LyricSectionView.propTypes = lyricSectionViewPropTypes
 
-    // From parent.
-    lyricSectionRef: PropTypes.func.isRequired,
-    handleScroll: PropTypes.func.isRequired
-}
-
-export default connect(({
-    appMounted,
-    selectedSongIndex
-}) => ({
-    appMounted,
-    selectedSongIndex
-}))(LyricSection)
+export default connect(mapStateToProps)(LyricSection)

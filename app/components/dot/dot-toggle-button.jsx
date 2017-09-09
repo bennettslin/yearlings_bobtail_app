@@ -13,6 +13,18 @@ import { DOT_DESCRIPTIONS } from '../../constants/dots'
 
 class DotToggleButton extends Component {
 
+    static propTypes = {
+        // Through Redux.
+        selectedDotsIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        dotIndex: PropTypes.number.isRequired,
+        hasInteractivatedDotText: PropTypes.number.isRequired,
+        setHasInteractivatedDotText: PropTypes.func.isRequired,
+        stopPropagation: PropTypes.func.isRequired,
+        handleDotToggle: PropTypes.func.isRequired
+    }
+
     constructor(props) {
         super(props)
 
@@ -79,18 +91,6 @@ class DotToggleButton extends Component {
             />
         )
     }
-}
-
-DotToggleButton.propTypes = {
-    // Through Redux.
-    selectedDotsIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    dotIndex: PropTypes.number.isRequired,
-    hasInteractivatedDotText: PropTypes.number.isRequired,
-    setHasInteractivatedDotText: PropTypes.func.isRequired,
-    stopPropagation: PropTypes.func.isRequired,
-    handleDotToggle: PropTypes.func.isRequired
 }
 
 /****************

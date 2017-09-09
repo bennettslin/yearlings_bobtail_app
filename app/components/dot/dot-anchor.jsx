@@ -7,6 +7,21 @@ import DotButton from './dot-button'
 
 class DotAnchor extends Component {
 
+    static defaultProps = {
+        accessHighlighted: false,
+        isSelected: false
+    }
+
+    static propTypes = {
+        // From parent.
+        dotKeys: PropTypes.object.isRequired,
+        accessHighlighted: PropTypes.bool.isRequired,
+        isSelected: PropTypes.bool.isRequired,
+
+        // (Absent in popup annotation.)
+        handleDotButtonClick: PropTypes.func
+    }
+
     constructor(props) {
         super(props)
 
@@ -50,21 +65,6 @@ class DotAnchor extends Component {
             </div>
         )
     }
-}
-
-DotAnchor.defaultProps = {
-    accessHighlighted: false,
-    isSelected: false
-}
-
-DotAnchor.propTypes = {
-    // From parent.
-    dotKeys: PropTypes.object.isRequired,
-    accessHighlighted: PropTypes.bool.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-
-    // (Absent in popup annotation.)
-    handleDotButtonClick: PropTypes.func
 }
 
 export default DotAnchor

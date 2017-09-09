@@ -10,11 +10,28 @@ import LyricSection from '../lyric/lyric-section'
 import VerseBar from '../verse/verse-bar'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    renderReadySongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex
+}) => ({
+    renderReadySongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex
+})
+
 /*************
  * CONTAINER *
  *************/
 
 class LyricColumn extends Component {
+
+    static propTypes = {
+        // Through Redux.
+
+        // From parent.
+        handleScrollAfterLyricRerender: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -97,18 +114,30 @@ class LyricColumn extends Component {
     }
 }
 
-LyricColumn.propTypes = {
-    // Through Redux.
-
-    // From parent.
-    handleScrollAfterLyricRerender: PropTypes.func.isRequired
-}
-
 /****************
  * PRESENTATION *
  ****************/
 
-const LyricColumnView = ({
+const lyricColumnViewPropTypes = {
+    // Through Redux.
+    renderReadySongIndex: PropTypes.number.isRequired,
+    selectedVerseIndex: PropTypes.number.isRequired,
+    sliderVerseIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    myRef: PropTypes.func.isRequired,
+    isTransitioningHeight: PropTypes.bool.isRequired,
+    handleTransition: PropTypes.func.isRequired,
+    handleAnimatableTransition: PropTypes.func.isRequired,
+    completeHeightTransition: PropTypes.func.isRequired,
+
+    handleLyricColumnSelect: PropTypes.func.isRequired,
+    handleLyricSectionExpand: PropTypes.func.isRequired,
+    handleVerseBarSelect: PropTypes.func.isRequired,
+    handleVerseBarWheel: PropTypes.func.isRequired
+},
+
+LyricColumnView = ({
 
     // From props.
     renderReadySongIndex,
@@ -174,31 +203,6 @@ const LyricColumnView = ({
     )
 }
 
-LyricColumnView.propTypes = {
-    // Through Redux.
-    renderReadySongIndex: PropTypes.number.isRequired,
-    selectedVerseIndex: PropTypes.number.isRequired,
-    sliderVerseIndex: PropTypes.number.isRequired,
+LyricColumnView.propTypes = lyricColumnViewPropTypes
 
-    // From parent.
-    myRef: PropTypes.func.isRequired,
-    isTransitioningHeight: PropTypes.bool.isRequired,
-    handleTransition: PropTypes.func.isRequired,
-    handleAnimatableTransition: PropTypes.func.isRequired,
-    completeHeightTransition: PropTypes.func.isRequired,
-
-    handleLyricColumnSelect: PropTypes.func.isRequired,
-    handleLyricSectionExpand: PropTypes.func.isRequired,
-    handleVerseBarSelect: PropTypes.func.isRequired,
-    handleVerseBarWheel: PropTypes.func.isRequired
-}
-
-export default connect(({
-    renderReadySongIndex,
-    selectedVerseIndex,
-    sliderVerseIndex
-}) => ({
-    renderReadySongIndex,
-    selectedVerseIndex,
-    sliderVerseIndex
-}))(LyricColumn)
+export default connect(mapStateToProps)(LyricColumn)

@@ -5,7 +5,33 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import LyricVerse from './lyric-verse'
 
-const LyricStanza = ({
+/*************
+ * CONTAINER *
+ *************/
+
+const lyricStanzaDefaultProps = {
+    inMain: false,
+    subsequent: false,
+    addSub: false,
+    isSub: false
+},
+
+lyricStanzaPropTypes = {
+    // From parent.
+    stanzaIndex: PropTypes.number,
+    stanzaType: PropTypes.string,
+    substanzaType: PropTypes.string,
+    sideStanzaType: PropTypes.string,
+    sideSubstanzaType: PropTypes.string,
+    subsequent: PropTypes.bool.isRequired,
+
+    stanzaArray: PropTypes.array,
+    inMain: PropTypes.bool.isRequired,
+    addSub: PropTypes.bool.isRequired,
+    isSub: PropTypes.bool.isRequired
+},
+
+LyricStanza = ({
 
     // From props.
     stanzaIndex,
@@ -69,29 +95,22 @@ const LyricStanza = ({
     }
 }
 
-LyricStanza.defaultProps = {
-    inMain: false,
-    subsequent: false,
-    addSub: false,
-    isSub: false
-}
+LyricStanza.defaultProps = lyricStanzaDefaultProps
+LyricStanza.propTypes = lyricStanzaPropTypes
 
-LyricStanza.propTypes = {
+/****************
+ * PRESENTATION *
+ ****************/
+
+const lyricStanzaViewPropTypes = {
     // From parent.
     stanzaIndex: PropTypes.number,
-    stanzaType: PropTypes.string,
-    substanzaType: PropTypes.string,
-    sideStanzaType: PropTypes.string,
-    sideSubstanzaType: PropTypes.string,
-    subsequent: PropTypes.bool.isRequired,
+    stanzaArray: PropTypes.array.isRequired,
+    stanzaType: PropTypes.string.isRequired,
+    showStanzaTypeAndIndex: PropTypes.bool.isRequired
+},
 
-    stanzaArray: PropTypes.array,
-    inMain: PropTypes.bool.isRequired,
-    addSub: PropTypes.bool.isRequired,
-    isSub: PropTypes.bool.isRequired
-}
-
-const LyricStanzaView = ({
+LyricStanzaView = ({
 
     showStanzaTypeAndIndex,
     stanzaArray,
@@ -134,12 +153,6 @@ const LyricStanzaView = ({
     )
 }
 
-LyricStanzaView.propTypes = {
-    // From parent.
-    stanzaIndex: PropTypes.number,
-    stanzaArray: PropTypes.array.isRequired,
-    stanzaType: PropTypes.string.isRequired,
-    showStanzaTypeAndIndex: PropTypes.bool.isRequired
-}
+LyricStanzaView.propTypes = lyricStanzaViewPropTypes
 
 export default LyricStanza

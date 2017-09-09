@@ -15,6 +15,17 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class CarouselAnnotation extends Component {
 
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        annotationIndex: PropTypes.number.isRequired,
+        isAccessedAnnotation: PropTypes.bool.isRequired,
+        isSelectedAnnotation: PropTypes.bool.isRequired,
+        handleLyricAnnotationSelect: PropTypes.func.isRequired
+    }
+
     constructor(props) {
         super(props)
 
@@ -82,17 +93,6 @@ class CarouselAnnotation extends Component {
             />
         )
     }
-}
-
-CarouselAnnotation.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    annotationIndex: PropTypes.number.isRequired,
-    isAccessedAnnotation: PropTypes.bool.isRequired,
-    isSelectedAnnotation: PropTypes.bool.isRequired,
-    handleLyricAnnotationSelect: PropTypes.func.isRequired
 }
 
 /****************

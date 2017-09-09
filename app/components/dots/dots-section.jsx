@@ -12,6 +12,14 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class DotsSection extends Component {
 
+    static propTypes = {
+        // Through Redux.
+        selectedDotKeys: PropTypes.object.isRequired,
+
+        // From parent.
+        handlePopupContainerClick: PropTypes.func.isRequired
+    }
+
     constructor(props) {
         super(props)
 
@@ -72,14 +80,6 @@ class DotsSection extends Component {
             />
         )
     }
-}
-
-DotsSection.propTypes = {
-    // Through Redux.
-    selectedDotKeys: PropTypes.object.isRequired,
-
-    // From parent.
-    handlePopupContainerClick: PropTypes.func.isRequired
 }
 
 /****************

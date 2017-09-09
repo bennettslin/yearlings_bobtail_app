@@ -5,7 +5,27 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import VerseUnit from '../verse/verse-unit'
 
-const LyricVerse = ({
+const mapStateToProps = ({
+    selectedVerseIndex,
+    sliderVerseIndex,
+    interactivatedVerseIndex
+}) => ({
+    selectedVerseIndex,
+    sliderVerseIndex,
+    interactivatedVerseIndex
+})
+
+const lyricVersePropTypes = {
+    // Through Redux.
+    selectedVerseIndex: PropTypes.number.isRequired,
+    sliderVerseIndex: PropTypes.number.isRequired,
+    interactivatedVerseIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    verseObject: PropTypes.object.isRequired
+},
+
+LyricVerse = ({
 
     selectedVerseIndex,
     sliderVerseIndex,
@@ -34,22 +54,6 @@ const LyricVerse = ({
     )
 }
 
-LyricVerse.propTypes = {
-    // Through Redux.
-    selectedVerseIndex: PropTypes.number.isRequired,
-    sliderVerseIndex: PropTypes.number.isRequired,
-    interactivatedVerseIndex: PropTypes.number.isRequired,
+LyricVerse.propTypes = lyricVersePropTypes
 
-    // From parent.
-    verseObject: PropTypes.object.isRequired
-}
-
-export default connect(({
-    selectedVerseIndex,
-    sliderVerseIndex,
-    interactivatedVerseIndex
-}) => ({
-    selectedVerseIndex,
-    sliderVerseIndex,
-    interactivatedVerseIndex
-}))(LyricVerse)
+export default connect(mapStateToProps)(LyricVerse)

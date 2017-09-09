@@ -13,6 +13,20 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class AnnotationPortal extends Component {
 
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+        popupAnnotationSongIndex: PropTypes.number.isRequired,
+        popupAnnotationIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        carouselAnnotationIndex: PropTypes.number,
+        cardIndex: PropTypes.number.isRequired,
+        portalLinkIndex: PropTypes.number.isRequired,
+        isAccessedPortal: PropTypes.bool.isRequired,
+        handleAnnotationPortalSelect: PropTypes.func.isRequired
+    }
+
     constructor(props) {
         super(props)
 
@@ -120,20 +134,6 @@ class AnnotationPortal extends Component {
             </div>
         )
     }
-}
-
-AnnotationPortal.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    popupAnnotationSongIndex: PropTypes.number.isRequired,
-    popupAnnotationIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    carouselAnnotationIndex: PropTypes.number,
-    cardIndex: PropTypes.number.isRequired,
-    portalLinkIndex: PropTypes.number.isRequired,
-    isAccessedPortal: PropTypes.bool.isRequired,
-    handleAnnotationPortalSelect: PropTypes.func.isRequired
 }
 
 export default connect(({

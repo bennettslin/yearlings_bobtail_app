@@ -16,6 +16,16 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class AnnotationSection extends Component {
 
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+        popupAnnotationSongIndex: PropTypes.number.isRequired,
+        popupAnnotationIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        carouselAnnotationIndex: PropTypes.number
+    }
+
     shouldComponentUpdate(nextProps) {
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
@@ -73,16 +83,6 @@ class AnnotationSection extends Component {
             />
         ) : null
     }
-}
-
-AnnotationSection.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    popupAnnotationSongIndex: PropTypes.number.isRequired,
-    popupAnnotationIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    carouselAnnotationIndex: PropTypes.number
 }
 
 /****************

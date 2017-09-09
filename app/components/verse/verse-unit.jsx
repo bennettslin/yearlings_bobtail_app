@@ -17,11 +17,28 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 class VerseUnit extends Component {
 
     static defaultProps = {
-
+        isSelected: false,
+        isAfterSelected: false,
+        isSliderSelected: false,
+        inMain: true,
+        inVerseBar: false,
+        isSliderTouched: false
     }
 
     static propTypes = {
+        // Through Redux.
+        isSliderTouched: PropTypes.bool.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
 
+        // From parent.
+        verseObject: PropTypes.object.isRequired,
+        isSelected: PropTypes.bool.isRequired,
+        isAfterSelected: PropTypes.bool.isRequired,
+        isSliderSelected: PropTypes.bool.isRequired,
+        inMain: PropTypes.bool.isRequired,
+        inVerseBar: PropTypes.bool.isRequired,
+        handleLyricAnnotationSelect: PropTypes.func,
+        handleVerseInteractivate: PropTypes.func
     }
 
     constructor(props) {
@@ -152,31 +169,6 @@ class VerseUnit extends Component {
             />
         )
     }
-}
-
-VerseUnit.defaultProps = {
-    isSelected: false,
-    isAfterSelected: false,
-    isSliderSelected: false,
-    inMain: true,
-    inVerseBar: false,
-    isSliderTouched: false
-}
-
-VerseUnit.propTypes = {
-    // Through Redux.
-    isSliderTouched: PropTypes.bool.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    verseObject: PropTypes.object.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    isAfterSelected: PropTypes.bool.isRequired,
-    isSliderSelected: PropTypes.bool.isRequired,
-    inMain: PropTypes.bool.isRequired,
-    inVerseBar: PropTypes.bool.isRequired,
-    handleLyricAnnotationSelect: PropTypes.func,
-    handleVerseInteractivate: PropTypes.func
 }
 
 /****************

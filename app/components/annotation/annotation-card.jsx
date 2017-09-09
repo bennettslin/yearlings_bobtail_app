@@ -17,6 +17,18 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class AnnotationCard extends Component {
 
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+        popupAnnotationSongIndex: PropTypes.number.isRequired,
+        popupAnnotationIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        carouselAnnotationIndex: PropTypes.number,
+        cardIndex: PropTypes.number.isRequired,
+        inSelectedAnnotation: PropTypes.bool.isRequired
+    }
+
     shouldComponentUpdate(nextProps) {
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
@@ -77,23 +89,25 @@ class AnnotationCard extends Component {
     }
 }
 
-AnnotationCard.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    popupAnnotationSongIndex: PropTypes.number.isRequired,
-    popupAnnotationIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    carouselAnnotationIndex: PropTypes.number,
-    cardIndex: PropTypes.number.isRequired,
-    inSelectedAnnotation: PropTypes.bool.isRequired
-}
-
 /****************
  * PRESENTATION *
  ****************/
 
-const AnnotationCardView = ({
+const annotationCardViewProptypes = {
+    // From parent.
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array
+    ]),
+    carouselAnnotationIndex: PropTypes.number,
+    cardDotKeys: PropTypes.object.isRequired,
+    cardIndex: PropTypes.number.isRequired,
+    inSelectedAnnotation: PropTypes.bool.isRequired,
+    handleAnnotationWikiSelect: PropTypes.func.isRequired,
+    handleAnnotationPortalSelect: PropTypes.func.isRequired
+},
+
+AnnotationCardView = ({
 
     // From props.
     carouselAnnotationIndex,
@@ -136,19 +150,7 @@ const AnnotationCardView = ({
     </div>
 )
 
-AnnotationCardView.propTypes = {
-    // From parent.
-    text: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.array
-    ]),
-    carouselAnnotationIndex: PropTypes.number,
-    cardDotKeys: PropTypes.object.isRequired,
-    cardIndex: PropTypes.number.isRequired,
-    inSelectedAnnotation: PropTypes.bool.isRequired,
-    handleAnnotationWikiSelect: PropTypes.func.isRequired,
-    handleAnnotationPortalSelect: PropTypes.func.isRequired
-}
+AnnotationCardView.propTypes = annotationCardViewProptypes
 
 export default connect(({
     selectedSongIndex,

@@ -7,7 +7,24 @@ import Button from '../button/button'
 import { LYRIC_COLUMN_TOGGLE_KEY } from '../../constants/access'
 import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 
-const LyricEarToggle = ({
+const mapStateToProps = ({
+    showOneOfTwoLyricColumns,
+    selectedLyricColumnIndex
+}) => ({
+    showOneOfTwoLyricColumns,
+    selectedLyricColumnIndex
+})
+
+const lyricEarTogglePropTypes = {
+    // Through Redux.
+    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
+    selectedLyricColumnIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handleLyricColumnSelect: PropTypes.func.isRequired
+},
+
+LyricEarToggle = ({
 
     showOneOfTwoLyricColumns,
     selectedLyricColumnIndex,
@@ -27,19 +44,6 @@ const LyricEarToggle = ({
     )
 }
 
-LyricEarToggle.propTypes = {
-    // Through Redux.
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-    selectedLyricColumnIndex: PropTypes.number.isRequired,
+LyricEarToggle.propTypes = lyricEarTogglePropTypes
 
-    // From parent.
-    handleLyricColumnSelect: PropTypes.func.isRequired
-}
-
-export default connect(({
-    showOneOfTwoLyricColumns,
-    selectedLyricColumnIndex
-}) => ({
-    showOneOfTwoLyricColumns,
-    selectedLyricColumnIndex
-}))(LyricEarToggle)
+export default connect(mapStateToProps)(LyricEarToggle)

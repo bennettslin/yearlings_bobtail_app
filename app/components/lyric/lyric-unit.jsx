@@ -10,11 +10,31 @@ import { TITLE } from '../../constants/lyrics'
 import { getLyricUnitArray } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    selectedSongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex
+}) => ({
+    selectedSongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex
+})
+
 /*************
  * CONTAINER *
  *************/
 
 class LyricUnit extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
+        sliderVerseIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        unitIndex: PropTypes.number.isRequired
+    }
 
     shouldComponentUpdate(nextProps) {
         const { props } = this,
@@ -115,21 +135,39 @@ class LyricUnit extends Component {
     }
 }
 
-LyricUnit.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedVerseIndex: PropTypes.number.isRequired,
-    sliderVerseIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    unitIndex: PropTypes.number.isRequired
-}
-
 /****************
  * PRESENTATION *
  ****************/
 
-const LyricUnitView = ({
+const lyricUnitViewDefaultProps = {
+    subsequent: false
+},
+
+lyricUnitViewPropTypes = {
+    // From parent.
+    unitArray: PropTypes.array.isRequired,
+    isTitleUnit: PropTypes.bool.isRequired,
+    unitClassName: PropTypes.string,
+    sceneIndex: PropTypes.number,
+
+    dotStanza: PropTypes.object,
+    subStanza: PropTypes.array,
+    topSideStanza: PropTypes.array,
+    bottomSideStanza: PropTypes.array,
+    topSideSubStanza: PropTypes.array,
+    subsequent: PropTypes.bool.isRequired,
+
+    hasSide: PropTypes.bool.isRequired,
+    isDotOnly: PropTypes.bool.isRequired,
+    isBottomOnly: PropTypes.bool.isRequired,
+    verseBeforeUnit: PropTypes.bool.isRequired,
+    verseAfterUnit: PropTypes.bool.isRequired,
+    verseInUnit: PropTypes.bool.isRequired,
+
+    handleLyricAnnotationSelect: PropTypes.func.isRequired
+},
+
+LyricUnitView = ({
 
     // From props.
     unitArray,
@@ -224,40 +262,7 @@ const LyricUnitView = ({
     )
 }
 
-LyricUnitView.defaultProps = {
-    subsequent: false
-}
+LyricUnitView.defaultProps = lyricUnitViewDefaultProps
+LyricUnitView.propTypes = lyricUnitViewPropTypes
 
-LyricUnitView.propTypes = {
-    // From parent.
-    unitArray: PropTypes.array.isRequired,
-    isTitleUnit: PropTypes.bool.isRequired,
-    unitClassName: PropTypes.string,
-    sceneIndex: PropTypes.number,
-
-    dotStanza: PropTypes.object,
-    subStanza: PropTypes.array,
-    topSideStanza: PropTypes.array,
-    bottomSideStanza: PropTypes.array,
-    topSideSubStanza: PropTypes.array,
-    subsequent: PropTypes.bool.isRequired,
-
-    hasSide: PropTypes.bool.isRequired,
-    isDotOnly: PropTypes.bool.isRequired,
-    isBottomOnly: PropTypes.bool.isRequired,
-    verseBeforeUnit: PropTypes.bool.isRequired,
-    verseAfterUnit: PropTypes.bool.isRequired,
-    verseInUnit: PropTypes.bool.isRequired,
-
-    handleLyricAnnotationSelect: PropTypes.func.isRequired
-}
-
-export default connect(({
-    selectedSongIndex,
-    selectedVerseIndex,
-    sliderVerseIndex
-}) => ({
-    selectedSongIndex,
-    selectedVerseIndex,
-    sliderVerseIndex
-}))(LyricUnit)
+export default connect(mapStateToProps)(LyricUnit)

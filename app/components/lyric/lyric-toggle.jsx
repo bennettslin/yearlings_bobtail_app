@@ -7,7 +7,32 @@ import Button from '../button/button'
 import { LYRIC_SECTION_EXPAND_KEY } from '../../constants/access'
 import { getIsLyricExpandable } from '../../helpers/responsive-helper'
 
-const LyricToggle = ({
+const mapStateToProps = ({
+    deviceIndex,
+    isHeightlessLyricColumn,
+    isLyricExpanded
+}) => ({
+    deviceIndex,
+    isHeightlessLyricColumn,
+    isLyricExpanded
+})
+
+const lyricToggleDefaultProps = {
+    inMain: false
+},
+
+lyricTogglePropTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    isHeightlessLyricColumn: PropTypes.bool.isRequired,
+    isLyricExpanded: PropTypes.bool.isRequired,
+
+    // From parent.
+    inMain: PropTypes.bool.isRequired,
+    handleLyricSectionExpand: PropTypes.func.isRequired
+},
+
+LyricToggle = ({
 
     deviceIndex,
     isHeightlessLyricColumn,
@@ -34,27 +59,7 @@ const LyricToggle = ({
     )
 }
 
-LyricToggle.defaultProps = {
-    inMain: false
-}
+LyricToggle.defaultProps = lyricToggleDefaultProps
+LyricToggle.propTypes = lyricTogglePropTypes
 
-LyricToggle.propTypes = {
-    // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-    isHeightlessLyricColumn: PropTypes.bool.isRequired,
-    isLyricExpanded: PropTypes.bool.isRequired,
-
-    // From parent.
-    inMain: PropTypes.bool.isRequired,
-    handleLyricSectionExpand: PropTypes.func.isRequired
-}
-
-export default connect(({
-    deviceIndex,
-    isHeightlessLyricColumn,
-    isLyricExpanded
-}) => ({
-    deviceIndex,
-    isHeightlessLyricColumn,
-    isLyricExpanded
-}))(LyricToggle)
+export default connect(mapStateToProps)(LyricToggle)

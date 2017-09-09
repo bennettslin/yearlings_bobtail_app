@@ -15,6 +15,21 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class AudioButtons extends Component {
 
+    static propTypes = {
+        // Through Redux.
+        isPlaying: PropTypes.bool.isRequired,
+        isTitleInAudio: PropTypes.bool.isRequired,
+        canPlayThroughs: PropTypes.number.isRequired,
+        selectedAudioOptionIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        handleAudioPlay: PropTypes.func.isRequired,
+        handleAudioOptionsToggle: PropTypes.func.isRequired,
+        handleAudioPreviousSong: PropTypes.func.isRequired,
+        handleAudioNextSong: PropTypes.func.isRequired
+    }
+
     shouldComponentUpdate(nextProps) {
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
@@ -110,21 +125,6 @@ class AudioButtons extends Component {
             </div>
         )
     }
-}
-
-AudioButtons.propTypes = {
-    // Through Redux.
-    isPlaying: PropTypes.bool.isRequired,
-    isTitleInAudio: PropTypes.bool.isRequired,
-    canPlayThroughs: PropTypes.number.isRequired,
-    selectedAudioOptionIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    handleAudioPlay: PropTypes.func.isRequired,
-    handleAudioOptionsToggle: PropTypes.func.isRequired,
-    handleAudioPreviousSong: PropTypes.func.isRequired,
-    handleAudioNextSong: PropTypes.func.isRequired
 }
 
 export default connect(({
