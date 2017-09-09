@@ -8,7 +8,28 @@ import VerseUnit from '../verse/verse-unit'
 import { getVerseObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+})
+
 class VerseBar extends Component {
+
+    static defaultProps = {
+        isAbove: false
+    }
+
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        isAbove: PropTypes.bool,
+        verseIndex: PropTypes.number,
+        handleVerseBarSelect: PropTypes.func.isRequired,
+        handleVerseBarWheel: PropTypes.func.isRequired
+    }
 
     shouldComponentUpdate(nextProps) {
         const { props } = this,
@@ -64,23 +85,4 @@ class VerseBar extends Component {
     }
 }
 
-VerseBar.defaultProps = {
-    isAbove: false
-}
-
-VerseBar.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    isAbove: PropTypes.bool,
-    verseIndex: PropTypes.number,
-    handleVerseBarSelect: PropTypes.func.isRequired,
-    handleVerseBarWheel: PropTypes.func.isRequired
-}
-
-export default connect(({
-    selectedSongIndex
-}) => ({
-    selectedSongIndex
-}))(VerseBar)
+export default connect(mapStateToProps)(VerseBar)

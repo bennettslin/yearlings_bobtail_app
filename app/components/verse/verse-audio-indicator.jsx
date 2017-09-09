@@ -5,7 +5,13 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { getVerseAudioIndicatorText } from '../../helpers/format-helper'
 
-const VerseAudioIndicator = ({
+const mapStateToProps = ({
+    isPlaying
+}) => ({
+    isPlaying
+}),
+
+VerseAudioIndicator = ({
     isPlaying,
     isSelected
 }) => {
@@ -31,8 +37,4 @@ VerseAudioIndicator.propTypes = {
     isSelected: PropTypes.bool.isRequired
 }
 
-export default connect(({
-    isPlaying
-}) => ({
-    isPlaying
-}))(VerseAudioIndicator)
+export default connect(mapStateToProps)(VerseAudioIndicator)

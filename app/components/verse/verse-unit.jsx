@@ -10,6 +10,14 @@ import VerseAudioIndicator from './verse-audio-indicator'
 import { getVerseUnitClassName, getSliderStatusClassName } from '../../helpers/format-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    isSliderTouched,
+    selectedSongIndex
+}) => ({
+    isSliderTouched,
+    selectedSongIndex
+})
+
 /*************
  * CONTAINER *
  *************/
@@ -175,7 +183,27 @@ class VerseUnit extends Component {
  * PRESENTATION *
  ****************/
 
-const VerseUnitView = ({
+const verseUnitViewDefaultProps = {
+    isInteractivated: false
+},
+
+verseUnitViewPropTypes = {
+    // From parent.
+    verseIndex: PropTypes.number,
+    isInteractable: PropTypes.bool.isRequired,
+    isInteractivated: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    isAfterSelected: PropTypes.bool.isRequired,
+    verseUnitClassName: PropTypes.string.isRequired,
+    sliderStatusClassName: PropTypes.string.isRequired,
+    myRef: PropTypes.func.isRequired,
+
+    handleInteractivatableClick: PropTypes.func,
+    handleLyricPlay: PropTypes.func,
+    handleLyricVerseSelect: PropTypes.func
+},
+
+VerseUnitView = ({
 
     // From controller.
     myRef,
@@ -229,30 +257,7 @@ const VerseUnitView = ({
     )
 }
 
-VerseUnitView.defaultProps = {
-    isInteractivated: false
-}
+VerseUnitView.defaultProps = verseUnitViewDefaultProps
+VerseUnitView.propTypes = verseUnitViewPropTypes
 
-VerseUnitView.propTypes = {
-    // From parent.
-    verseIndex: PropTypes.number,
-    isInteractable: PropTypes.bool.isRequired,
-    isInteractivated: PropTypes.bool.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    isAfterSelected: PropTypes.bool.isRequired,
-    verseUnitClassName: PropTypes.string.isRequired,
-    sliderStatusClassName: PropTypes.string.isRequired,
-    myRef: PropTypes.func.isRequired,
-
-    handleInteractivatableClick: PropTypes.func,
-    handleLyricPlay: PropTypes.func,
-    handleLyricVerseSelect: PropTypes.func
-}
-
-export default connect(({
-    isSliderTouched,
-    selectedSongIndex
-}) => ({
-    isSliderTouched,
-    selectedSongIndex
-}))(VerseUnit)
+export default connect(mapStateToProps)(VerseUnit)

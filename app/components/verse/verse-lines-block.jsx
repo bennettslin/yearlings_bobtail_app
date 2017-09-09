@@ -9,7 +9,21 @@ import { LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC } from '../../constants/lyrics'
  * CONTAINER *
  *************/
 
-const VerseLinesBlock = ({
+const verseLinesBlockDefaultProps = {
+    truncatableMain: false,
+    isDoubleSpeaker: false
+},
+
+verseLinesBlockPropTypes = {
+    // From parent.
+    verseObject: PropTypes.object.isRequired,
+    truncatableMain: PropTypes.bool.isRequired,
+    isDoubleSpeaker: PropTypes.bool.isRequired,
+    doublespeakerKey: PropTypes.string,
+    isTitle: PropTypes.bool
+},
+
+VerseLinesBlock = ({
 
     isDoubleSpeaker,
     truncatableMain,
@@ -63,19 +77,8 @@ const VerseLinesBlock = ({
     }
 }
 
-VerseLinesBlock.defaultProps = {
-    truncatableMain: false,
-    isDoubleSpeaker: false
-}
-
-VerseLinesBlock.propTypes = {
-    // From parent.
-    verseObject: PropTypes.object.isRequired,
-    truncatableMain: PropTypes.bool.isRequired,
-    isDoubleSpeaker: PropTypes.bool.isRequired,
-    doublespeakerKey: PropTypes.string,
-    isTitle: PropTypes.bool
-}
+VerseLinesBlock.defaultProps = verseLinesBlockDefaultProps
+VerseLinesBlock.propTypes = verseLinesBlockPropTypes
 
 /****************
  * PRESENTATION *

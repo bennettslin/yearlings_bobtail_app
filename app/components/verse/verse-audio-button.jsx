@@ -12,7 +12,30 @@ import { getVerseAudioIconText } from '../../helpers/format-helper'
 import { getValueInBitNumber } from '../../helpers/bit-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    isPlaying,
+    selectedSongIndex,
+    canPlayThroughs
+}) => ({
+    isPlaying,
+    selectedSongIndex,
+    canPlayThroughs
+})
+
 class VerseAudioButton extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        isPlaying: PropTypes.bool.isRequired,
+
+        // From parent.
+        verseIndex: PropTypes.number.isRequired,
+        isInteractivated: PropTypes.bool.isRequired,
+        isSelected: PropTypes.bool.isRequired,
+        isAfterSelected: PropTypes.bool.isRequired,
+        handleLyricPlay: PropTypes.func.isRequired,
+        handleLyricVerseSelect: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -109,25 +132,4 @@ class VerseAudioButton extends Component {
     }
 }
 
-VerseAudioButton.propTypes = {
-    // Through Redux.
-    isPlaying: PropTypes.bool.isRequired,
-
-    // From parent.
-    verseIndex: PropTypes.number.isRequired,
-    isInteractivated: PropTypes.bool.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    isAfterSelected: PropTypes.bool.isRequired,
-    handleLyricPlay: PropTypes.func.isRequired,
-    handleLyricVerseSelect: PropTypes.func.isRequired
-}
-
-export default connect(({
-    isPlaying,
-    selectedSongIndex,
-    canPlayThroughs
-}) => ({
-    isPlaying,
-    selectedSongIndex,
-    canPlayThroughs
-}))(VerseAudioButton)
+export default connect(mapStateToProps)(VerseAudioButton)

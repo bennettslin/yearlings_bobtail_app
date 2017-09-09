@@ -8,7 +8,32 @@ import TextBlock from '../text/text-block'
 import { TITLE } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+})
+
 class VerseLine extends Component {
+
+    static defaultProps = {
+        inVerseBar: false
+    }
+
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        text: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.array,
+            PropTypes.object
+        ]).isRequired,
+
+        inVerseBar: PropTypes.bool.isRequired,
+        columnKey: PropTypes.string.isRequired
+    }
 
     /**
      * NOTE: There is still some lingering weirdness with calculating width,
@@ -50,27 +75,4 @@ class VerseLine extends Component {
     }
 }
 
-VerseLine.defaultProps = {
-    inVerseBar: false
-}
-
-VerseLine.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    text: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.array,
-        PropTypes.object
-    ]).isRequired,
-
-    inVerseBar: PropTypes.bool.isRequired,
-    columnKey: PropTypes.string.isRequired
-}
-
-export default connect(({
-    selectedSongIndex
-}) => ({
-    selectedSongIndex
-}))(VerseLine)
+export default connect(mapStateToProps)(VerseLine)
