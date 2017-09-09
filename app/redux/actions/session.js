@@ -29,7 +29,7 @@ export const setAppMounted = (appMounted = false) => (
       payload: appMounted }
 )
 
-export const setreadyForHeavyRender = (readyForHeavyRender = false) => (
+export const setReadyForHeavyRender = (readyForHeavyRender = false) => (
     { type: READY_FOR_HEAVY_TEXT,
       payload: readyForHeavyRender }
 )

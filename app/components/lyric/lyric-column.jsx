@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import classnames from 'classnames'
 import LyricToggle from '../lyric/lyric-toggle'
 import LyricEarToggle from '../lyric/lyric-ear-toggle'
 import LyricSection from '../lyric/lyric-section'
@@ -33,7 +34,7 @@ class LyricColumn extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'selectedSongIndex',
+                    'readyForHeavyRender',
                     'selectedVerseIndex',
                     'sliderVerseIndex'
                 ]
@@ -49,7 +50,7 @@ class LyricColumn extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.selectedSongIndex !== this.props.selectedSongIndex) {
+        if (!prevProps.readyForHeavyRender && this.props.readyForHeavyRender) {
             this.props.handleScrollAfterLyricRerender()
         }
     }
@@ -79,8 +80,7 @@ class LyricColumn extends Component {
     render() {
 
         /* eslint-disable no-unused-vars */
-        const { selectedSongIndex,
-                handleScrollAfterLyricRerender,
+        const { handleScrollAfterLyricRerender,
         /* eslint-enable no-unused-vars */
 
                 ...other } = this.props
@@ -99,7 +99,6 @@ class LyricColumn extends Component {
 
 LyricColumn.propTypes = {
     // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
     handleScrollAfterLyricRerender: PropTypes.func.isRequired
@@ -112,6 +111,7 @@ LyricColumn.propTypes = {
 const LyricColumnView = ({
 
     // From props.
+    readyForHeavyRender,
     selectedVerseIndex,
     sliderVerseIndex,
 
@@ -144,7 +144,10 @@ const LyricColumnView = ({
             ref={myRef}
             onTransitionEnd={handleTransition}
         >
-            <div className="lyric-column-animatable"
+            <div className={classnames(
+                    'lyric-column-animatable',
+                    readyForHeavyRender && 'render-ready'
+                )}
                 onTransitionEnd={handleAnimatableTransition}
             >
                 <div className="lyric-collapsed-fade-top" />
@@ -173,6 +176,7 @@ const LyricColumnView = ({
 
 LyricColumnView.propTypes = {
     // Through Redux.
+    readyForHeavyRender: PropTypes.bool.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
 
@@ -190,11 +194,11 @@ LyricColumnView.propTypes = {
 }
 
 export default connect(({
-    selectedSongIndex,
+    readyForHeavyRender,
     selectedVerseIndex,
     sliderVerseIndex
 }) => ({
-    selectedSongIndex,
+    readyForHeavyRender,
     selectedVerseIndex,
     sliderVerseIndex
 }))(LyricColumn)

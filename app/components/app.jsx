@@ -8,7 +8,7 @@ import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, acc
 import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth } from '../redux/actions/device'
 import { setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
-import { setPopupAnnotationSongIndex, setPopupAnnotationIndex, setAppMounted, setreadyForHeavyRender, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setTipsSongIndex, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
+import { setPopupAnnotationSongIndex, setPopupAnnotationIndex, setAppMounted, setReadyForHeavyRender, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setTipsSongIndex, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './event-manager'
@@ -72,6 +72,10 @@ class App extends Component {
 
         // Bind this to event handlers.
         this._bindEventHandlers()
+
+        this.state = {
+            songChangeTimeoutId: null
+        }
     }
 
     componentWillMount() {
@@ -122,17 +126,30 @@ class App extends Component {
     }
 
     _songIndexDidChange(nextProps, prevProps) {
+        const { selectedSongIndex } = nextProps
 
-        const { readyForHeavyRender,
-                selectedSongIndex } = nextProps
+        if (!prevProps || selectedSongIndex !== prevProps.selectedSongIndex) {
 
-        // Set ready for heavy text if mounting, or if song just changed.
-        if (!prevProps || (!readyForHeavyRender && selectedSongIndex !== prevProps.selectedSongIndex)) {
+            /**
+             * Render is synchronous, so wait a bit after selecting new song
+             * before rendering the most performance intensive components.
+             */
+            const songChangeTimeoutId = setTimeout(this._setReadyForHeavyRender, 200)
 
-            console.error('readyForHeavyRender', readyForHeavyRender);
+            // Clear previous timeout.
+            clearTimeout(this.state.songChangeTimeoutId)
 
-            this.props.setreadyForHeavyRender(true)
+            console.error('cleartimeout', songChangeTimeoutId);
+
+            this.setState({
+                songChangeTimeoutId
+            })
         }
+    }
+
+    _setReadyForHeavyRender() {
+        console.error('set ready for heavy render');
+        this.props.setReadyForHeavyRender(true)
     }
 
     /*******************
@@ -664,7 +681,7 @@ class App extends Component {
 
         this.accessNavSong(selectedSongIndex)
         props.selectSongIndex(selectedSongIndex)
-        props.setreadyForHeavyRender(false)
+        props.setReadyForHeavyRender(false)
 
         return true
     }
@@ -1109,6 +1126,7 @@ class App extends Component {
 
     _bindEventHandlers() {
         this._songIndexDidChange = this._songIndexDidChange.bind(this)
+        this._setReadyForHeavyRender = this._setReadyForHeavyRender.bind(this)
         this.accessAnnotation = this.accessAnnotation.bind(this)
         this.accessDot = this.accessDot.bind(this)
         this.accessAnnotationAnchor = this.accessAnnotationAnchor.bind(this)
@@ -1209,7 +1227,7 @@ const passReduxStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setPopupAnnotationSongIndex, setPopupAnnotationIndex, setAppMounted, setreadyForHeavyRender, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setTipsSongIndex, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setPopupAnnotationSongIndex, setPopupAnnotationIndex, setAppMounted, setReadyForHeavyRender, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setOverviewLogueIndex, setOverviewSongIndex, setTipsSongIndex, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
     }, dispatch)
 )
 
