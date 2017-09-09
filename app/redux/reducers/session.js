@@ -2,6 +2,7 @@
 import { POPUP_ANNOTATION_SONG_INDEX,
          POPUP_ANNOTATION_INDEX,
          APP_MOUNTED,
+         READY_FOR_HEAVY_TEXT,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
          IS_LYRIC_EXPANDED,
@@ -34,6 +35,15 @@ export const PopupAnnotationIndexReducer = (state = null, action) => {
 export const AppMountedReducer = (state = false, action) => {
     switch (action.type) {
         case APP_MOUNTED:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const readyForHeavyRenderReducer = (state = false, action) => {
+    switch (action.type) {
+        case READY_FOR_HEAVY_TEXT:
             return action.payload
         default:
             return state

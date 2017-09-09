@@ -33,6 +33,7 @@ module.exports = {
     POPUP_ANNOTATION_SONG_INDEX: 'popupAnnotationSongIndex',
     POPUP_ANNOTATION_INDEX: 'popupAnnotationIndex',
     APP_MOUNTED: 'appMounted',
+    READY_FOR_HEAVY_TEXT: 'readyForHeavyRender',
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
     INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',
     IS_LYRIC_EXPANDED: 'isLyricExpanded',
