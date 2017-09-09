@@ -149,16 +149,6 @@ class App extends Component {
         }
     }
 
-    _setIsHeavyRenderReady() {
-        this.props.setIsHeavyRenderReady(
-            true
-        )
-
-        this.props.setRenderReadySongIndex(
-            this.props.selectedSongIndex
-        )
-    }
-
     /*******************
      * EVENT LISTENERS *
      *******************/
@@ -636,13 +626,6 @@ class App extends Component {
         // TODO: This prevents app from breaking when wiki is selected and song is changed. But this might be handled more strategically.
         this.selectWiki(selectedWikiIndex)
 
-        this.selectBookColumn({
-            resetToDefault: true,
-            selectedSongIndex
-        })
-
-        this.props.setShowOneOfTwoLyricColumns(getShowOneOfTwoLyricColumns(selectedSongIndex, this.props.deviceIndex))
-
         this.interactivateVerse()
 
         if (isLogue) {
@@ -671,6 +654,28 @@ class App extends Component {
         props.setIsHeavyRenderReady(false)
 
         return true
+    }
+
+    _setIsHeavyRenderReady() {
+        const { selectedSongIndex } = this.props
+
+        this.props.setIsHeavyRenderReady(
+            true
+        )
+
+        this.props.setRenderReadySongIndex(
+            selectedSongIndex
+        )
+
+        // Handle doublespeaker columns only when lyrics are ready to render.
+        this.selectBookColumn({
+            resetToDefault: true,
+            selectedSongIndex
+        })
+
+        this.props.setShowOneOfTwoLyricColumns(
+            getShowOneOfTwoLyricColumns(selectedSongIndex, this.props.deviceIndex)
+        )
     }
 
     /************
