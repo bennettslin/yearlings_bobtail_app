@@ -16,6 +16,14 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class VerseUnit extends Component {
 
+    static defaultProps = {
+
+    }
+
+    static propTypes = {
+
+    }
+
     constructor(props) {
         super(props)
 

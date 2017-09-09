@@ -34,7 +34,7 @@ class LyricColumn extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'readyForHeavyRender',
+                    'renderReadySongIndex',
                     'selectedVerseIndex',
                     'sliderVerseIndex'
                 ]
@@ -50,7 +50,7 @@ class LyricColumn extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (!prevProps.readyForHeavyRender && this.props.readyForHeavyRender) {
+        if (!prevProps.renderReadySongIndex && this.props.renderReadySongIndex) {
             this.props.handleScrollAfterLyricRerender()
         }
     }
@@ -111,7 +111,7 @@ LyricColumn.propTypes = {
 const LyricColumnView = ({
 
     // From props.
-    readyForHeavyRender,
+    renderReadySongIndex,
     selectedVerseIndex,
     sliderVerseIndex,
 
@@ -146,7 +146,7 @@ const LyricColumnView = ({
         >
             <div className={classnames(
                     'lyric-column-animatable',
-                    readyForHeavyRender && 'render-ready'
+                    renderReadySongIndex > -1 && 'render-ready'
                 )}
                 onTransitionEnd={handleAnimatableTransition}
             >
@@ -176,7 +176,7 @@ const LyricColumnView = ({
 
 LyricColumnView.propTypes = {
     // Through Redux.
-    readyForHeavyRender: PropTypes.bool.isRequired,
+    renderReadySongIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
 
@@ -194,11 +194,11 @@ LyricColumnView.propTypes = {
 }
 
 export default connect(({
-    readyForHeavyRender,
+    renderReadySongIndex,
     selectedVerseIndex,
     sliderVerseIndex
 }) => ({
-    readyForHeavyRender,
+    renderReadySongIndex,
     selectedVerseIndex,
     sliderVerseIndex
 }))(LyricColumn)

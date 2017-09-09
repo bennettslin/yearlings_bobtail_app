@@ -2,7 +2,7 @@
 import { POPUP_ANNOTATION_SONG_INDEX,
          POPUP_ANNOTATION_INDEX,
          APP_MOUNTED,
-         READY_FOR_HEAVY_TEXT,
+         RENDER_READY_SONG_INDEX,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
          IS_LYRIC_EXPANDED,
@@ -41,9 +41,9 @@ export const AppMountedReducer = (state = false, action) => {
     }
 }
 
-export const readyForHeavyRenderReducer = (state = false, action) => {
+export const renderReadySongIndexReducer = (state = -1, action) => {
     switch (action.type) {
-        case READY_FOR_HEAVY_TEXT:
+        case RENDER_READY_SONG_INDEX:
             return action.payload
         default:
             return state
