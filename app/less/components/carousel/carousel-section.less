@@ -16,7 +16,11 @@
     &.carousel-expanded {
         .carousel {
             bottom: -@carousel-height-variable;
+        }
+    }
 
+    &.overview-hidden.tips-hidden {
+        .carousel {
             &.render-ready {
                 opacity: 1;
             }

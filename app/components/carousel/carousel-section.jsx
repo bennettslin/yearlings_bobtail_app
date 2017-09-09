@@ -66,7 +66,7 @@ class CarouselSection extends Component {
         return (
             <div className={classnames(
                 'carousel',
-                isHeavyRenderReady && 'render-ready'
+                isHeavyRenderReady ? 'render-ready' : 'render-unready'
             )}>
                 <div className="carousel-scroll">
                     <div className="carousel-annotations-block">

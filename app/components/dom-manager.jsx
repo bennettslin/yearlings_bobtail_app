@@ -163,6 +163,8 @@ class DomManager extends Component {
 
                     showOverlay ? 'overlay-shown' : 'overlay-hidden',
                     isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
+                    OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN ? 'overview-shown' : 'overview-hidden',
+                    TIPS_OPTIONS[selectedTipsIndex] === SHOWN ? 'tips-shown' : 'tips-hidden',
 
                     isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
                     showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
@@ -171,8 +173,6 @@ class DomManager extends Component {
 
                     { 'accessed-on': selectedAccessIndex,
                       'heightless-lyric': isHeightlessLyricColumn,
-                      'overview-shown': OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
-                      'tips-shown': TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
                       'title-in-audio': isTitleInAudio,
                       'verse-bar-above': isVerseBarAbove,
                       'verse-bar-below': isVerseBarBelow,
