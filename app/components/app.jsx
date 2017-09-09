@@ -80,14 +80,7 @@ class App extends Component {
         // Then watch for any subsequent window resize.
         window.onresize = debounce(this._windowResize, 100)
 
-        this.selectOverview({
-            justShowIfHidden: true
-        })
-
-        this.selectTips({
-            justShowIfHidden: true
-        })
-
+        // Upon page load, should render immediately.
         this._songIndexDidChange(this.props)
     }
 
@@ -119,6 +112,17 @@ class App extends Component {
                     lyricColumnIndex: selectedLyricColumnIndex
                 })
         )
+
+        // As long as annotation is not selected, show overview and/or tips.
+        if (!this.props.selectedAnnotationIndex) {
+            this.selectOverview({
+                justShowIfHidden: true
+            })
+
+            this.selectTips({
+                justShowIfHidden: true
+            })
+        }
     }
 
     componentDidUpdate(prevProps) {
@@ -146,8 +150,6 @@ class App extends Component {
     }
 
     _setIsHeavyRenderReady() {
-
-        console.error('is heavy render ready');
         this.props.setIsHeavyRenderReady(
             true
         )
