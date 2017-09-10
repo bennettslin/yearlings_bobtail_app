@@ -82,7 +82,7 @@ class App extends Component {
         window.onresize = debounce(this._windowResize, 100)
 
         // Upon page load, should render immediately.
-        this._songIndexDidChange(this.props)
+        this._setIsHeavyRenderReady()
     }
 
     componentDidMount() {
@@ -280,6 +280,15 @@ class App extends Component {
         if (selectedAnnotationIndex) {
             props.setPopupAnnotationSongIndex(selectedSongIndex)
             props.setPopupAnnotationIndex(selectedAnnotationIndex)
+        }
+
+        /**
+         * If selecting or changing annotation in same song, change index to
+         * be rendered right away.
+         */
+        if (selectedAnnotationIndex &&
+            selectedSongIndex === this.props.selectedSongIndex) {
+            props.setRenderReadyAnnotationIndex(selectedAnnotationIndex)
         }
 
         return selectedAnnotationIndex
@@ -663,7 +672,8 @@ class App extends Component {
     }
 
     _setIsHeavyRenderReady() {
-        const { selectedSongIndex } = this.props
+        const { selectedSongIndex,
+                selectedAnnotationIndex } = this.props
 
         this.props.setIsHeavyRenderReady(
             true
@@ -671,6 +681,10 @@ class App extends Component {
 
         this.props.setRenderReadySongIndex(
             selectedSongIndex
+        )
+
+        this.props.setRenderReadyAnnotationIndex(
+            selectedAnnotationIndex
         )
 
         // Handle doublespeaker columns only when lyrics are ready to render.
