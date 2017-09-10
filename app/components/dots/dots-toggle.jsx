@@ -6,7 +6,21 @@ import { connect } from 'react-redux'
 import Button from '../button/button'
 import { DOTS_SECTION_EXPAND_KEY } from '../../constants/access'
 
-const DotsToggle = ({
+const mapStateToProps = ({
+    selectedDotsIndex
+}) => ({
+    selectedDotsIndex
+})
+
+const dotsTogglePropTypes = {
+    // Through Redux.
+    selectedDotsIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handleDotsSectionToggle: PropTypes.func.isRequired
+},
+
+DotsToggle = ({
 
     selectedDotsIndex,
     handleDotsSectionToggle
@@ -25,16 +39,6 @@ const DotsToggle = ({
     </div>
 )
 
-DotsToggle.propTypes = {
-    // Through Redux.
-    selectedDotsIndex: PropTypes.number.isRequired,
+DotsToggle.propTypes = dotsTogglePropTypes
 
-    // From parent.
-    handleDotsSectionToggle: PropTypes.func.isRequired
-}
-
-export default connect(({
-    selectedDotsIndex
-}) => ({
-    selectedDotsIndex
-}))(DotsToggle)
+export default connect(mapStateToProps)(DotsToggle)

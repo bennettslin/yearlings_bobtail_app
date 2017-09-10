@@ -6,6 +6,12 @@ import { connect } from 'react-redux'
 import DotToggleBlock from '../dot/dot-toggle-block'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    selectedDotKeys
+}) => ({
+    selectedDotKeys
+})
+
 /*************
  * CONTAINER *
  *************/
@@ -86,7 +92,12 @@ class DotsSection extends Component {
  * PRESENTATION *
  ****************/
 
-const DotsSectionView = ({
+const dotsSectionViewPropTypes = {
+    // From parent.
+    handleContainerClick: PropTypes.func.isRequired
+},
+
+DotsSectionView = ({
 
     handleContainerClick,
 
@@ -100,13 +111,6 @@ const DotsSectionView = ({
     </div>
 )
 
-DotsSectionView.propTypes = {
-    // From parent.
-    handleContainerClick: PropTypes.func.isRequired
-}
+DotsSectionView.propTypes = dotsSectionViewPropTypes
 
-export default connect(({
-    selectedDotKeys
-}) => ({
-    selectedDotKeys
-}))(DotsSection)
+export default connect(mapStateToProps)(DotsSection)

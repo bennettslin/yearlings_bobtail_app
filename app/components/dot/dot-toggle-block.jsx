@@ -6,7 +6,21 @@ import { connect } from 'react-redux'
 import DotToggleButton from './dot-toggle-button'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
-const DotToggleBlock = ({
+const mapStateToProps = ({
+    accessedDotIndex
+}) => ({
+    accessedDotIndex
+})
+
+const dotToggleBlockPropTypes = {
+    // Through Redux.
+    accessedDotIndex: PropTypes.number,
+
+    // From parent.
+    dotKeys: PropTypes.object.isRequired
+},
+
+DotToggleBlock = ({
 
     dotKeys,
     accessedDotIndex,
@@ -48,16 +62,6 @@ const DotToggleBlock = ({
     )
 }
 
-DotToggleBlock.propTypes = {
-    // Through Redux.
-    accessedDotIndex: PropTypes.number,
+DotToggleBlock.propTypes = dotToggleBlockPropTypes
 
-    // From parent.
-    dotKeys: PropTypes.object.isRequired
-}
-
-export default connect(({
-    accessedDotIndex
-}) => ({
-    accessedDotIndex
-}))(DotToggleBlock)
+export default connect(mapStateToProps)(DotToggleBlock)

@@ -7,6 +7,12 @@ import classnames from 'classnames'
 import Button from '../button/button'
 import { DOT_DESCRIPTIONS } from '../../constants/dots'
 
+const mapStateToProps = ({
+    selectedDotsIndex
+}) => ({
+    selectedDotsIndex
+})
+
 /*************
  * CONTAINER *
  *************/
@@ -97,7 +103,17 @@ class DotToggleButton extends Component {
  * PRESENTATION *
  ****************/
 
-const DotToggleButtonView = ({
+const dotToggleButtonViewPropTypes = {
+    // From parent.
+    dotKey: PropTypes.string.isRequired,
+    accessHighlighted: PropTypes.bool.isRequired,
+    isSelected: PropTypes.bool.isRequired,
+    isInteractivated: PropTypes.bool.isRequired,
+    handleDotToggleClick: PropTypes.func.isRequired,
+    handleTextContainerClick: PropTypes.func.isRequired
+},
+
+DotToggleButtonView = ({
 
     // From props.
     dotKey,
@@ -153,18 +169,6 @@ const DotToggleButtonView = ({
     </div>
 )
 
-DotToggleButtonView.propTypes = {
-    // From parent.
-    dotKey: PropTypes.string.isRequired,
-    accessHighlighted: PropTypes.bool.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    isInteractivated: PropTypes.bool.isRequired,
-    handleDotToggleClick: PropTypes.func.isRequired,
-    handleTextContainerClick: PropTypes.func.isRequired
-}
+DotToggleButtonView.propTypes = dotToggleButtonViewPropTypes
 
-export default connect(({
-    selectedDotsIndex
-}) => ({
-    selectedDotsIndex
-}))(DotToggleButton)
+export default connect(mapStateToProps)(DotToggleButton)
