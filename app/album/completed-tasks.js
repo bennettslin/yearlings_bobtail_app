@@ -2442,4 +2442,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Figure out popup annotation song index and annotation index weirdness.`,
+        workedHours: 3,
+        neededHours: 3
+    }
 ]

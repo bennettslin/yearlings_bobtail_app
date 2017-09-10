@@ -13,12 +13,10 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     renderReadySongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex
+    renderReadyAnnotationIndex
 }) => ({
     renderReadySongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex
+    renderReadyAnnotationIndex
 })
 
 /*************
@@ -30,8 +28,7 @@ class AnnotationCard extends Component {
     static propTypes = {
         // Through Redux.
         renderReadySongIndex: PropTypes.number.isRequired,
-        popupAnnotationSongIndex: PropTypes.number.isRequired,
-        popupAnnotationIndex: PropTypes.number.isRequired,
+        renderReadyAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
         carouselAnnotationIndex: PropTypes.number,
@@ -51,12 +48,7 @@ class AnnotationCard extends Component {
                     {
                         staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
-                        subUpdatingKey: 'popupAnnotationSongIndex'
-                    },
-                    {
-                        staticProp: 'carouselAnnotationIndex',
-                        conditionalShouldBe: false,
-                        subUpdatingKey: 'popupAnnotationIndex'
+                        subUpdatingKey: 'renderReadyAnnotationIndex'
                     }
                 ]
             })
@@ -66,8 +58,7 @@ class AnnotationCard extends Component {
 
     render() {
         const { renderReadySongIndex,
-                popupAnnotationIndex,
-                popupAnnotationSongIndex,
+                renderReadyAnnotationIndex,
                 cardIndex,
                 ...other } = this.props,
 
@@ -76,8 +67,7 @@ class AnnotationCard extends Component {
             cardObject = getCarouselOrPopupCardObject({
                 carouselAnnotationIndex,
                 renderReadySongIndex,
-                popupAnnotationIndex,
-                popupAnnotationSongIndex,
+                renderReadyAnnotationIndex,
                 cardIndex
             }),
 

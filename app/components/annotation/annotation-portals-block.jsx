@@ -9,21 +9,18 @@ import { getCarouselOrPopupCardPortalLinksArray } from '../../helpers/data-helpe
 
 const mapStateToProps = ({
     renderReadySongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex,
+    renderReadyAnnotationIndex,
     accessedAnnotationAnchorIndex
 }) => ({
     renderReadySongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex,
+    renderReadyAnnotationIndex,
     accessedAnnotationAnchorIndex
 })
 
 const annotationPortalsBlockPropTypes = {
     // Through Redux.
     renderReadySongIndex: PropTypes.number.isRequired,
-    popupAnnotationSongIndex: PropTypes.number.isRequired,
-    popupAnnotationIndex: PropTypes.number.isRequired,
+    renderReadyAnnotationIndex: PropTypes.number.isRequired,
     accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -35,8 +32,7 @@ const annotationPortalsBlockPropTypes = {
 AnnotationPortalsBlock = ({
 
     renderReadySongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex,
+    renderReadyAnnotationIndex,
     accessedAnnotationAnchorIndex,
     inSelectedAnnotation,
 
@@ -48,8 +44,7 @@ AnnotationPortalsBlock = ({
         portalLinksArray = getCarouselOrPopupCardPortalLinksArray({
             carouselAnnotationIndex,
             renderReadySongIndex,
-            popupAnnotationIndex,
-            popupAnnotationSongIndex,
+            renderReadyAnnotationIndex,
             cardIndex
         })
 

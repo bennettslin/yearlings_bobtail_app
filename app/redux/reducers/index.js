@@ -4,7 +4,7 @@ import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
 import { IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
-import { PopupAnnotationSongIndexReducer, PopupAnnotationIndexReducer, AppMountedReducer, IsHeavyRenderReadyReducer, RenderReadySongIndexReducer, RenderReadyAnnotationIndexReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
+import { AppMountedReducer, IsHeavyRenderReadyReducer, RenderReadySongIndexReducer, RenderReadyAnnotationIndexReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
 import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseElementReducer, SliderVerseIndexReducer } from './slider'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, NavIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
 
@@ -34,8 +34,6 @@ const rootReducer = combineReducers({
     showShrunkNavIcon: ShowShrunkNavIconReducer,
     showSingleBookColumn: ShowSingleBookColumnReducer,
 
-    popupAnnotationSongIndex: PopupAnnotationSongIndexReducer,
-    popupAnnotationIndex: PopupAnnotationIndexReducer,
     appMounted: AppMountedReducer,
     isHeavyRenderReady: IsHeavyRenderReadyReducer,
     renderReadyAnnotationIndex: RenderReadyAnnotationIndexReducer,

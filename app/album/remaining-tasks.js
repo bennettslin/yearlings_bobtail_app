@@ -18,11 +18,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Figure out popup annotation song index and annotation index weirdness.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Weirdness when advancing to next song. (Uncanny to Cremated)`,
         workedHours: 0,
         neededHours: 2

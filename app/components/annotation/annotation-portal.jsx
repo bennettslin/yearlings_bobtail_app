@@ -13,12 +13,10 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     renderReadySongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex
+    renderReadyAnnotationIndex
 }) => ({
     renderReadySongIndex,
-    popupAnnotationSongIndex,
-    popupAnnotationIndex
+    renderReadyAnnotationIndex
 })
 
 class AnnotationPortal extends Component {
@@ -26,8 +24,7 @@ class AnnotationPortal extends Component {
     static propTypes = {
         // Through Redux.
         renderReadySongIndex: PropTypes.number.isRequired,
-        popupAnnotationSongIndex: PropTypes.number.isRequired,
-        popupAnnotationIndex: PropTypes.number.isRequired,
+        renderReadyAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
         carouselAnnotationIndex: PropTypes.number,
@@ -54,12 +51,7 @@ class AnnotationPortal extends Component {
                     {
                         staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
-                        subUpdatingKey: 'popupAnnotationSongIndex'
-                    },
-                    {
-                        staticProp: 'carouselAnnotationIndex',
-                        conditionalShouldBe: false,
-                        subUpdatingKey: 'popupAnnotationIndex'
+                        subUpdatingKey: 'renderReadyAnnotationIndex'
                     }
                 ]
             })
@@ -83,9 +75,8 @@ class AnnotationPortal extends Component {
     render() {
 
         const { renderReadySongIndex,
+                renderReadyAnnotationIndex,
                 carouselAnnotationIndex,
-                popupAnnotationSongIndex,
-                popupAnnotationIndex,
                 cardIndex,
                 portalLinkIndex,
                 isAccessedPortal } = this.props,
@@ -93,8 +84,7 @@ class AnnotationPortal extends Component {
             portalObject = getCarouselOrPopupCardPortalObject({
                 renderReadySongIndex,
                 carouselAnnotationIndex,
-                popupAnnotationSongIndex,
-                popupAnnotationIndex,
+                renderReadyAnnotationIndex,
                 cardIndex,
                 portalLinkIndex
             }),

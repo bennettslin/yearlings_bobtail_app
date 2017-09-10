@@ -31,8 +31,6 @@ module.exports = {
     SHOW_SINGLE_BOOK_COLUMN: 'showSingleBookColumn',
 
     // Session.
-    POPUP_ANNOTATION_SONG_INDEX: 'popupAnnotationSongIndex',
-    POPUP_ANNOTATION_INDEX: 'popupAnnotationIndex',
     APP_MOUNTED: 'appMounted',
     IS_HEAVY_RENDER_READY: 'isHeavyRenderReady',
     RENDER_READY_ANNOTATION_INDEX: 'renderReadyAnnotationIndex',

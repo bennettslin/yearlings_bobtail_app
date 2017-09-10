@@ -1,7 +1,5 @@
 // Reducers for state of this user session.
-import { POPUP_ANNOTATION_SONG_INDEX,
-         POPUP_ANNOTATION_INDEX,
-         APP_MOUNTED,
+import { APP_MOUNTED,
          IS_HEAVY_RENDER_READY,
          RENDER_READY_SONG_INDEX,
          RENDER_READY_ANNOTATION_INDEX,
@@ -12,24 +10,6 @@ import { POPUP_ANNOTATION_SONG_INDEX,
          IS_VERSE_BAR_BELOW,
          SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
-
-export const PopupAnnotationSongIndexReducer = (state = null, action) => {
-    switch (action.type) {
-        case POPUP_ANNOTATION_SONG_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const PopupAnnotationIndexReducer = (state = null, action) => {
-    switch (action.type) {
-        case POPUP_ANNOTATION_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
 
 export const AppMountedReducer = (state = false, action) => {
     switch (action.type) {
