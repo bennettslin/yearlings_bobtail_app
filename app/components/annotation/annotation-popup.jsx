@@ -10,6 +10,7 @@ import { getIsOverlayingAnnotation } from '../../helpers/responsive-helper'
 const mapStateToProps = ({
     deviceIndex,
     isLyricExpanded,
+    isHeavyRenderReady,
     selectedAnnotationIndex,
     selectedCarouselIndex,
     selectedScoreIndex,
@@ -18,6 +19,7 @@ const mapStateToProps = ({
 }) => ({
     deviceIndex,
     isLyricExpanded,
+    isHeavyRenderReady,
     selectedAnnotationIndex,
     selectedCarouselIndex,
     selectedScoreIndex,
@@ -30,6 +32,7 @@ const annotationPopupPropTypes = {
     deviceIndex: PropTypes.number.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
 
+    isHeavyRenderReady: PropTypes.bool.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
@@ -47,6 +50,7 @@ AnnotationPopup = ({
 
     deviceIndex,
     isLyricExpanded,
+    isHeavyRenderReady,
     isOverlayAnnotation,
 
     selectedAnnotationIndex,
@@ -74,7 +78,8 @@ AnnotationPopup = ({
         return null
 
     } else {
-        const isVisible = !!selectedAnnotationIndex &&
+        const isVisible = isHeavyRenderReady &&
+                          !!selectedAnnotationIndex &&
                           !selectedCarouselIndex &&
                           !selectedScoreIndex &&
                           !selectedTitleIndex &&
