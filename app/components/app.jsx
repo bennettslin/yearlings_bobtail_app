@@ -601,10 +601,11 @@ class App extends Component {
             })
 
             /**
-             * If overview is being shown, collapse lyric column and hide dots
-             * section.
+             * If overview or tips are being shown, collapse lyric column and
+             * hide dots section.
              */
-            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED) {
+            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED ||
+                TIPS_OPTIONS[this.props.selectedTipsIndex] !== DISABLED) {
                 this.selectDotsExpand(false)
                 this.selectLyricExpand(false)
             }
