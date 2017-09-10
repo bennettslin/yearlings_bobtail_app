@@ -89,17 +89,17 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+    {
+        taskName: `tips content`,
+        workedHours: 0,
+        neededHours: 5
+    },
 
     // Full day tasks.
     {
         taskName: `Optimise shouldComponentUpdate.`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `tips content`,
-        workedHours: 0,
-        neededHours: 5
     },
     {
         taskName: `Routing`,
