@@ -557,9 +557,9 @@ class App extends Component {
 
         /**
          * We shouldn't be able to select book column if it's not a single
-         * column, or if nav is collapsed.
+         * column, or if nav is collapsed, unless we are resetting to default.
          */
-        if (!this.props.showSingleBookColumn || !selectedNavIndex) {
+        if (!resetToDefault && !(this.props.showSingleBookColumn && selectedNavIndex)) {
             return false
         }
 
@@ -637,6 +637,12 @@ class App extends Component {
             this.selectScore(false)
         }
 
+        // Nav will update book column right away.
+        this.selectBookColumn({
+            resetToDefault: true,
+            selectedSongIndex
+        })
+
         /**
          * Get new accessed annotation index by starting from first and going
          * forward. If not called from portal, it should always be the title
@@ -656,17 +662,25 @@ class App extends Component {
         this.accessNavSong(selectedSongIndex)
         props.selectSongIndex(selectedSongIndex)
 
-        // FIXME: Accommodate possibility that song index didn't change.
+        // If not selecting a new song, no need to render again.
+        if (selectedSongIndex === this.props.selectedSongIndex) {
+            this._setIsHeavyRenderReady(
+                selectedSongIndex,
+                selectedAnnotationIndex
+            )
 
-        props.setIsHeavyRenderReady(false)
-        props.setIsScoreLoaded(false)
+        } else {
+            props.setIsHeavyRenderReady(false)
+            props.setIsScoreLoaded(false)
+        }
 
         return true
     }
 
-    _setIsHeavyRenderReady() {
-        const { selectedSongIndex,
-                selectedAnnotationIndex } = this.props
+    _setIsHeavyRenderReady(
+        selectedSongIndex = this.props.selectedSongIndex,
+        selectedAnnotationIndex = this.props.selectedAnnotationIndex
+    ) {
 
         this.props.setIsHeavyRenderReady(
             true
@@ -681,11 +695,6 @@ class App extends Component {
         )
 
         // Handle doublespeaker columns only when lyrics are ready to render.
-        this.selectBookColumn({
-            resetToDefault: true,
-            selectedSongIndex
-        })
-
         this.props.setShowOneOfTwoLyricColumns(
             getShowOneOfTwoLyricColumns(selectedSongIndex, this.props.deviceIndex)
         )
