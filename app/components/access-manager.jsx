@@ -527,15 +527,15 @@ class AccessManager extends Component {
         } else if (props.selectedWikiIndex) {
             eventHandlers.handleWikiToggle(e)
 
-        // Close overview popup.
-        } else if (OVERVIEW_OPTIONS[props.selectedOverviewIndex] === SHOWN) {
-            // Just hide if shown.
-            eventHandlers.handleOverviewToggle(e, true)
-
         // Close tips popup.
         } else if (TIPS_OPTIONS[props.selectedTipsIndex] === SHOWN) {
             // Just hide if shown.
             eventHandlers.handleTipsToggle(e, true)
+
+        // Close overview popup.
+        } else if (OVERVIEW_OPTIONS[props.selectedOverviewIndex] === SHOWN) {
+            // Just hide if shown.
+            eventHandlers.handleOverviewToggle(e, true)
 
         // Close dots popup.
         } else if (props.selectedDotsIndex) {
