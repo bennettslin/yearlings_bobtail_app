@@ -2431,5 +2431,15 @@ module.exports = [
         taskName: `Lyrics and carousel take their time to render when song is changed.`,
         workedHours: 8,
         neededHours: 8
-    }
+    },
+    {
+        taskName: `Individual score pdfs.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Prologue to song transition is janky because of score being loaded. Be more strategic about that. (Do it with canPlayThroughs.)`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

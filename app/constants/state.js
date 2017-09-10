@@ -18,6 +18,7 @@ module.exports = {
 
     // Player.
     CAN_PLAY_THROUGHS: 'canPlayThroughs',
+    IS_SCORE_LOADED: 'scoreLoaded',
 
     // Responsive.
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',

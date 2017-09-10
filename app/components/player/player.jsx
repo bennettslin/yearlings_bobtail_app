@@ -18,7 +18,34 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const LISTEN_INTERVAL = 100
 
+const mapStateToProps = ({
+    isPlaying,
+    updatedTimePlayed,
+    canPlayThroughs
+}) => ({
+    isPlaying,
+    updatedTimePlayed,
+    canPlayThroughs
+})
+
 class Player extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        isPlaying: PropTypes.bool.isRequired,
+        updatedTimePlayed: PropTypes.number,
+        canPlayThroughs: PropTypes.number.isRequired,
+        setCanPlayThroughs: PropTypes.func.isRequired,
+
+        // From parent.
+        mp3: PropTypes.string.isRequired,
+        songIndex: PropTypes.number.isRequired,
+        totalTime: PropTypes.number.isRequired,
+        isSelected: PropTypes.bool.isRequired,
+        handlePlayerTimeChange: PropTypes.func.isRequired,
+        handlePlayerTimeReset: PropTypes.func.isRequired,
+        handlePlayerNextSong: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -230,23 +257,6 @@ class Player extends Component {
     }
 }
 
-Player.propTypes = {
-    // Through Redux.
-    isPlaying: PropTypes.bool.isRequired,
-    updatedTimePlayed: PropTypes.number,
-    canPlayThroughs: PropTypes.number.isRequired,
-    setCanPlayThroughs: PropTypes.func.isRequired,
-
-    // From parent.
-    mp3: PropTypes.string.isRequired,
-    songIndex: PropTypes.number.isRequired,
-    totalTime: PropTypes.number.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    handlePlayerTimeChange: PropTypes.func.isRequired,
-    handlePlayerTimeReset: PropTypes.func.isRequired,
-    handlePlayerNextSong: PropTypes.func.isRequired
-}
-
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
@@ -254,12 +264,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(({
-    isPlaying,
-    updatedTimePlayed,
-    canPlayThroughs
-}) => ({
-    isPlaying,
-    updatedTimePlayed,
-    canPlayThroughs
-}), bindDispatchToProps)(Player)
+export default connect(mapStateToProps, bindDispatchToProps)(Player)

@@ -2,7 +2,7 @@ import { combineReducers } from 'redux'
 import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
 import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer } from './device'
-import { CanPlayThroughsReducer } from './player'
+import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
 import { IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { PopupAnnotationSongIndexReducer, PopupAnnotationIndexReducer, AppMountedReducer, IsHeavyRenderReadyReducer, RenderReadySongIndexReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
 import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseElementReducer, SliderVerseIndexReducer } from './slider'
@@ -23,6 +23,7 @@ const rootReducer = combineReducers({
     windowWidth: WindowWidthReducer,
 
     canPlayThroughs: CanPlayThroughsReducer,
+    isScoreLoaded: IsScoreLoadedReducer,
 
     isHeightlessLyricColumn: IsHeightlessLyricColumnReducer,
     isHiddenNav: IsHiddenNavReducer,

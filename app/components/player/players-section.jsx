@@ -8,7 +8,21 @@ import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from '../../helpers
 import { convertBitNumberToTrueFalseKeys } from '../../helpers/bit-helper'
 import { getNextPlayerToRender } from '../../helpers/logic-helper'
 
+const mapStateToProps = ({
+    selectedSongIndex,
+    canPlayThroughs
+}) => ({
+    selectedSongIndex,
+    canPlayThroughs
+})
+
 class PlayersSection extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+        canPlayThroughs: PropTypes.number.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -97,16 +111,4 @@ class PlayersSection extends Component {
     }
 }
 
-PlayersSection.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    canPlayThroughs: PropTypes.number.isRequired
-}
-
-export default connect(({
-    selectedSongIndex,
-    canPlayThroughs
-}) => ({
-    selectedSongIndex,
-    canPlayThroughs
-}))(PlayersSection)
+export default connect(mapStateToProps)(PlayersSection)

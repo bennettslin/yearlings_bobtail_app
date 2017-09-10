@@ -6,7 +6,24 @@ import { connect } from 'react-redux'
 import ScoreSection from './score-section'
 import Popup from '../popup/popup'
 
-const ScorePopup = ({
+const mapStateToProps = ({
+    selectedSongIndex,
+    selectedScoreIndex
+}) => ({
+    selectedSongIndex,
+    selectedScoreIndex
+})
+
+const scorePopupPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+    selectedScoreIndex: PropTypes.number.isRequired,
+
+    // From props.
+    handleScoreToggle: PropTypes.func.isRequired
+},
+
+ScorePopup = ({
     selectedScoreIndex,
 
     /* eslint-disable no-unused-vars */
@@ -33,18 +50,6 @@ const ScorePopup = ({
     )
 }
 
-ScorePopup.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedScoreIndex: PropTypes.number.isRequired,
+ScorePopup.propTypes = scorePopupPropTypes
 
-    // From props.
-    handleScoreToggle: PropTypes.func.isRequired
-}
-export default connect(({
-    selectedSongIndex,
-    selectedScoreIndex
-}) => ({
-    selectedSongIndex,
-    selectedScoreIndex
-}))(ScorePopup)
+export default connect(mapStateToProps)(ScorePopup)

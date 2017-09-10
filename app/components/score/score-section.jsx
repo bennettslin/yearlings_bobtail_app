@@ -2,54 +2,40 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+import { setIsScoreLoaded } from '../../redux/actions/player'
 import { getSongScore } from '../../helpers/data-helper'
-// import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 
-// TODO: Look into http://stackoverflow.com/questions/19654577/html-embedded-pdf-iframe
+const mapStateToProps = ({
+    renderReadySongIndex
+}) => ({
+    renderReadySongIndex
+})
 
 class ScoreSection extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        renderReadySongIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        scoreSectionRef: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
 
-        this.hi = this.hi.bind(this)
+        this.onWebviewLoad = this.onWebviewLoad.bind(this)
     }
 
-    // FIXME: How to do key press when iframe is activeElement?
-    hi() {
-        // TODO: Keep focus on score section. Pass up and down and page up and down and space events to iframe.
-
-        // console.error('e.nativeEvent', e.nativeEvent);
-
-        const iframeEvent = new KeyboardEvent('keydown', { key: 'ArrowDown' })
-
-        this.myWebview.dispatchEvent(iframeEvent);
-
-        const contentWindow = this.myWebview.contentWindow
-
-        window.z = contentWindow
-
-        // console.error('contentWindow', contentWindow);
-        //
-        contentWindow.scrollBy(0, 100)
-
-        // console.error('contentWindow.scrollTop', contentWindow.scrollTop);
-
-        // const myDocument = this.myWebview.contentWindow.document
-
-        // this.myWebview.addEventListener('keydown', e => {
-        //     console.error('e', e);
-        // })
-    }
-
-    onWebviewLoad(e) {
-        console.error('webview load e', e);
+    onWebviewLoad() {
+        this.props.setIsScoreLoaded(true)
     }
 
     render() {
-        const { selectedSongIndex } = this.props,
-            score = getSongScore(selectedSongIndex)
+        const { renderReadySongIndex } = this.props,
+            score = getSongScore(renderReadySongIndex)
 
         return (
             <div
@@ -70,16 +56,11 @@ class ScoreSection extends Component {
     }
 }
 
-ScoreSection.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
+// Bind Redux action creators to component props.
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        setIsScoreLoaded
+    }, dispatch)
+)
 
-    // From parent.
-    scoreSectionRef: PropTypes.func.isRequired
-}
-
-export default connect(({
-    selectedSongIndex
-}) => ({
-    selectedSongIndex
-}))(ScoreSection)
+export default connect(mapStateToProps, bindDispatchToProps)(ScoreSection)

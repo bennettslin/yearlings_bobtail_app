@@ -3,11 +3,6 @@ module.exports = [
     /**
      * Short bugs and tasks.
      */
-    {
-        taskName: `Prologue to song transition is janky because of score being loaded. Be more strategic about that. (Do it with canPlayThroughs.)`,
-        workedHours: 0,
-        neededHours: 5
-    },
 
     /**
      * Medium bugs and tasks.
@@ -127,11 +122,6 @@ module.exports = [
         taskName: `Allow borders to use svgs.`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `Individual score pdfs.`,
-        workedHours: 0,
-        neededHours: 2
     },
     {
         taskName: `Show pdfs properly in all browsers.`,

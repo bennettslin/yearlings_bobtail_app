@@ -9,9 +9,46 @@ import { SCORE_TOGGLE_KEY,
 import { TIPS_OPTIONS } from '../../constants/options'
 import { getIsDesktop, getIsPhone } from '../../helpers/responsive-helper'
 
-const ScoresTipsSection = ({
+const mapStateToProps = ({
+    deviceIndex,
+    isScoreLoaded,
+    isScoresTipsInMain,
+    selectedScoreIndex,
+    selectedTipsIndex
+}) => ({
+    deviceIndex,
+    isScoreLoaded,
+    isScoresTipsInMain,
+    selectedScoreIndex,
+    selectedTipsIndex
+})
+
+const scoresTipsSectionDefaultProps = {
+    inMenu: false,
+    inSubfield: false,
+    inToggleSection: false
+},
+
+scoresTipsSectionPropTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    isScoreLoaded: PropTypes.bool.isRequired,
+    isScoresTipsInMain: PropTypes.bool.isRequired,
+    selectedScoreIndex: PropTypes.number.isRequired,
+    selectedTipsIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    inMenu: PropTypes.bool.isRequired,
+    inSubfield: PropTypes.bool.isRequired,
+    inToggleSection: PropTypes.bool.isRequired,
+    handleScoreToggle: PropTypes.func.isRequired,
+    handleTipsToggle: PropTypes.func.isRequired
+},
+
+ScoresTipsSection = ({
 
     deviceIndex,
+    isScoreLoaded,
     isScoresTipsInMain,
     selectedScoreIndex,
     selectedTipsIndex,
@@ -48,6 +85,7 @@ const ScoresTipsSection = ({
                     buttonName="scores"
                     iconText={selectedScoreIndex}
                     isLarge={true}
+                    isEnabled={isScoreLoaded}
                     handleClick={handleScoreToggle}
                 />
             }
@@ -62,35 +100,7 @@ const ScoresTipsSection = ({
     )
 }
 
-ScoresTipsSection.defaultProps = {
-    inMenu: false,
-    inSubfield: false,
-    inToggleSection: false
-}
+ScoresTipsSection.defaultProps = scoresTipsSectionDefaultProps
+ScoresTipsSection.propTypes = scoresTipsSectionPropTypes
 
-ScoresTipsSection.propTypes = {
-    // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-    isScoresTipsInMain: PropTypes.bool.isRequired,
-    selectedScoreIndex: PropTypes.number.isRequired,
-    selectedTipsIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    inMenu: PropTypes.bool.isRequired,
-    inSubfield: PropTypes.bool.isRequired,
-    inToggleSection: PropTypes.bool.isRequired,
-    handleScoreToggle: PropTypes.func.isRequired,
-    handleTipsToggle: PropTypes.func.isRequired
-}
-
-export default connect(({
-    deviceIndex,
-    isScoresTipsInMain,
-    selectedScoreIndex,
-    selectedTipsIndex
-}) => ({
-    deviceIndex,
-    isScoresTipsInMain,
-    selectedScoreIndex,
-    selectedTipsIndex
-}))(ScoresTipsSection)
+export default connect(mapStateToProps)(ScoresTipsSection)

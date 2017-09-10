@@ -20,8 +20,10 @@
         z-index: @centre-field-element-z-index;
         transition: transform @animation-default, opacity @animation-default;
 
-        .icon-canvas {
-            background-color: #dbb;
+        &.enabled {
+            .icon-canvas {
+                background-color: #dbb;
+            }
         }
     }
 }
