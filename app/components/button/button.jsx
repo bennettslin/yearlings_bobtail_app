@@ -4,7 +4,42 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
-const Button = ({
+const buttonDefaultProps = {
+    isEnabled: true
+},
+
+buttonPropTypes = {
+    accessHighlighted: PropTypes.bool,
+    accessKey: PropTypes.string,
+    buttonClass: PropTypes.string,
+    buttonName: PropTypes.string,
+    iconClass: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ]),
+    iconText: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
+    isSmall: PropTypes.bool,
+    isLarge: PropTypes.bool,
+    isCustomShape: PropTypes.bool,
+    isCustomSize: PropTypes.bool,
+    isDeselected: PropTypes.bool,
+    isEnabled: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    isOverflowShown: PropTypes.bool,
+    handleClick: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.func
+    ]),
+    extraChild: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.element
+    ])
+},
+
+Button = ({
 
     accessHighlighted, accessKey,
     buttonClass, buttonName,
@@ -52,39 +87,7 @@ const Button = ({
     </a>
 )
 
-Button.defaultProps = {
-    isEnabled: true
-}
-
-Button.propTypes = {
-    accessHighlighted: PropTypes.bool,
-    accessKey: PropTypes.string,
-    buttonClass: PropTypes.string,
-    buttonName: PropTypes.string,
-    iconClass: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.object
-    ]),
-    iconText: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
-    ]),
-    isSmall: PropTypes.bool,
-    isLarge: PropTypes.bool,
-    isCustomShape: PropTypes.bool,
-    isCustomSize: PropTypes.bool,
-    isDeselected: PropTypes.bool,
-    isEnabled: PropTypes.bool,
-    isSelected: PropTypes.bool,
-    isOverflowShown: PropTypes.bool,
-    handleClick: PropTypes.oneOfType([
-        PropTypes.bool,
-        PropTypes.func
-    ]),
-    extraChild: PropTypes.oneOfType([
-        PropTypes.bool,
-        PropTypes.element
-    ])
-}
+Button.defaultProps = buttonDefaultProps
+Button.propTypes = buttonPropTypes
 
 export default Button

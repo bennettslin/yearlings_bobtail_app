@@ -13,6 +13,20 @@ import { getSongsAndLoguesCount, getSongsNotLoguesCount } from '../../helpers/da
 import { getValueInBitNumber } from '../../helpers/bit-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
+const mapStateToProps = ({
+    isPlaying,
+    isTitleInAudio,
+    canPlayThroughs,
+    selectedAudioOptionIndex,
+    selectedSongIndex
+}) => ({
+    isPlaying,
+    isTitleInAudio,
+    canPlayThroughs,
+    selectedAudioOptionIndex,
+    selectedSongIndex
+})
+
 class AudioButtons extends Component {
 
     static propTypes = {
@@ -127,16 +141,4 @@ class AudioButtons extends Component {
     }
 }
 
-export default connect(({
-    isPlaying,
-    isTitleInAudio,
-    canPlayThroughs,
-    selectedAudioOptionIndex,
-    selectedSongIndex
-}) => ({
-    isPlaying,
-    isTitleInAudio,
-    canPlayThroughs,
-    selectedAudioOptionIndex,
-    selectedSongIndex
-}))(AudioButtons)
+export default connect(mapStateToProps)(AudioButtons)

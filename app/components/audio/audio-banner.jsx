@@ -8,7 +8,32 @@ import AudioTimer from './audio-timer'
 import { getSongTitle } from '../../helpers/data-helper'
 import { getIsPhone } from '../../helpers/responsive-helper'
 
-const AudioBanner = ({
+const mapStateToProps = ({
+    deviceIndex,
+    selectedSongIndex
+}) => ({
+    deviceIndex,
+    selectedSongIndex
+})
+
+const audioBannerDefaultProps = {
+    inOverlay: false,
+    inAudioSection: false,
+    inCustomSubfield: false
+},
+
+audioBannerPropTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    inOverlay: PropTypes.bool.isRequired,
+    inAudioSection: PropTypes.bool.isRequired,
+    inCustomSubfield: PropTypes.bool.isRequired
+},
+
+AudioBanner = ({
 
     deviceIndex,
     selectedSongIndex,
@@ -47,27 +72,7 @@ const AudioBanner = ({
     )
 }
 
-AudioBanner.defaultProps = {
-    inOverlay: false,
-    inAudioSection: false,
-    inCustomSubfield: false
-}
+AudioBanner.defaultProps = audioBannerDefaultProps
+AudioBanner.propTypes = audioBannerPropTypes
 
-AudioBanner.propTypes = {
-    // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    inOverlay: PropTypes.bool.isRequired,
-    inAudioSection: PropTypes.bool.isRequired,
-    inCustomSubfield: PropTypes.bool.isRequired
-}
-
-export default connect(({
-    deviceIndex,
-    selectedSongIndex
-}) => ({
-    deviceIndex,
-    selectedSongIndex
-}))(AudioBanner)
+export default connect(mapStateToProps)(AudioBanner)

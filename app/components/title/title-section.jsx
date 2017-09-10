@@ -11,7 +11,7 @@ const TitleSection = () => (
             Website developed and illustrated by Bennett Lin.
         </div>
         <div className="title-paragraph">
-            For Liz.
+            For Liz. In my sorry way, I loved you.
         </div>
     </div>
 )

@@ -9,7 +9,45 @@ import AudioTimer from './audio-timer'
 import TitleToggle from '../title/title-toggle'
 import { getIsTimerInAudio } from '../../helpers/logic-helper'
 
-const AudioSection = ({
+const mapStateToProps = ({
+    deviceIndex,
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex,
+    isTitleInAudio
+}) => ({
+    deviceIndex,
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex,
+    isTitleInAudio
+})
+
+const audioSectionDefaultProps = {
+    inOverlay: false
+},
+
+audioSectionPropTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    isLyricExpanded: PropTypes.bool.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    selectedScoreIndex: PropTypes.number.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
+    selectedWikiIndex: PropTypes.number.isRequired,
+    isTitleInAudio: PropTypes.bool.isRequired,
+
+    // From parent.
+    inOverlay: PropTypes.bool.isRequired,
+    audioBannerHandlers: PropTypes.object.isRequired,
+    titleToggleHandlers: PropTypes.object.isRequired
+},
+
+AudioSection = ({
 
     deviceIndex,
     isLyricExpanded,
@@ -59,40 +97,7 @@ const AudioSection = ({
     )
 }
 
-AudioSection.defaultProps = {
-    inOverlay: false
-}
+AudioSection.defaultProps = audioSectionDefaultProps
+AudioSection.propTypes = audioSectionPropTypes
 
-AudioSection.propTypes = {
-    // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-    isLyricExpanded: PropTypes.bool.isRequired,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
-    selectedScoreIndex: PropTypes.number.isRequired,
-    selectedTitleIndex: PropTypes.number.isRequired,
-    selectedWikiIndex: PropTypes.number.isRequired,
-    isTitleInAudio: PropTypes.bool.isRequired,
-
-    // From parent.
-    inOverlay: PropTypes.bool.isRequired,
-    audioBannerHandlers: PropTypes.object.isRequired,
-    titleToggleHandlers: PropTypes.object.isRequired
-}
-
-export default connect(({
-    deviceIndex,
-    isLyricExpanded,
-    selectedAnnotationIndex,
-    selectedScoreIndex,
-    selectedTitleIndex,
-    selectedWikiIndex,
-    isTitleInAudio
-}) => ({
-    deviceIndex,
-    isLyricExpanded,
-    selectedAnnotationIndex,
-    selectedScoreIndex,
-    selectedTitleIndex,
-    selectedWikiIndex,
-    isTitleInAudio
-}))(AudioSection)
+export default connect(mapStateToProps)(AudioSection)

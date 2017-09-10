@@ -6,7 +6,21 @@ import { connect } from 'react-redux'
 import { getSongIsLogue } from '../../helpers/data-helper'
 import { getFormattedTime } from '../../helpers/format-helper'
 
-const AudioTimer = ({
+const mapStateToProps = ({
+    selectedSongIndex,
+    selectedTimePlayed
+}) => ({
+    selectedSongIndex,
+    selectedTimePlayed
+})
+
+const audioTimerPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+    selectedTimePlayed: PropTypes.number.isRequired
+},
+
+AudioTimer = ({
 
     selectedSongIndex,
     selectedTimePlayed
@@ -45,16 +59,6 @@ const AudioTimer = ({
     )
 }
 
-AudioTimer.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedTimePlayed: PropTypes.number.isRequired
-}
+AudioTimer.propTypes = audioTimerPropTypes
 
-export default connect(({
-    selectedSongIndex,
-    selectedTimePlayed
-}) => ({
-    selectedSongIndex,
-    selectedTimePlayed
-}))(AudioTimer)
+export default connect(mapStateToProps)(AudioTimer)

@@ -7,11 +7,40 @@ import Popup from '../popup/popup'
 import AudioSection from './audio-section'
 import { getShowOverlay } from '../../helpers/logic-helper'
 
+const mapStateToProps = ({
+    deviceIndex,
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex
+}) => ({
+    deviceIndex,
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedScoreIndex,
+    selectedTitleIndex,
+    selectedWikiIndex
+})
+
 /*************
  * CONTAINER *
  *************/
 
-const AudioPopup = ({
+const audioPopupPropTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    isLyricExpanded: PropTypes.bool.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    selectedScoreIndex: PropTypes.number.isRequired,
+    selectedTitleIndex: PropTypes.number.isRequired,
+    selectedWikiIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handlePopupContainerClick: PropTypes.func.isRequired
+},
+
+AudioPopup = ({
 
     deviceIndex,
     isLyricExpanded,
@@ -48,31 +77,6 @@ const AudioPopup = ({
     )
 }
 
-AudioPopup.propTypes = {
-    // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-    isLyricExpanded: PropTypes.bool.isRequired,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
-    selectedScoreIndex: PropTypes.number.isRequired,
-    selectedTitleIndex: PropTypes.number.isRequired,
-    selectedWikiIndex: PropTypes.number.isRequired,
+AudioPopup.propTypes = audioPopupPropTypes
 
-    // From parent.
-    handlePopupContainerClick: PropTypes.func.isRequired
-}
-
-export default connect(({
-    deviceIndex,
-    isLyricExpanded,
-    selectedAnnotationIndex,
-    selectedScoreIndex,
-    selectedTitleIndex,
-    selectedWikiIndex
-}) => ({
-    deviceIndex,
-    isLyricExpanded,
-    selectedAnnotationIndex,
-    selectedScoreIndex,
-    selectedTitleIndex,
-    selectedWikiIndex
-}))(AudioPopup)
+export default connect(mapStateToProps)(AudioPopup)
