@@ -5,7 +5,7 @@ import { DEVICE_OBJECTS } from '../../constants/responsive'
 const AdminToggle = ({
 
     // From props.
-    popupAnnotationSongIndex,
+    renderReadySongIndex,
     isPlaying,
     selectedTimePlayed,
     updatedTimePlayed,
@@ -16,7 +16,7 @@ const AdminToggle = ({
 }) => (
     <div className="admin-toggle">
         <div>
-            popupAnnotationSongIndex: {popupAnnotationSongIndex}
+            renderReadySongIndex: {renderReadySongIndex}
         </div>
         <div>
             now {isPlaying ? 'playing' : 'paused'}
@@ -38,7 +38,7 @@ const AdminToggle = ({
 
 export default connect(({
     selectedSongIndex,
-    popupAnnotationSongIndex,
+    renderReadySongIndex,
     isPlaying,
     selectedTimePlayed,
     updatedTimePlayed,
@@ -47,7 +47,7 @@ export default connect(({
     windowHeight
 }) => ({
     selectedSongIndex,
-    popupAnnotationSongIndex,
+    renderReadySongIndex,
     isPlaying,
     selectedTimePlayed,
     updatedTimePlayed,

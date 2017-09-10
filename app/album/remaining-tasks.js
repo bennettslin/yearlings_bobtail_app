@@ -1,14 +1,4 @@
 module.exports = [
-    {
-        taskName: `Make all hips wider.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Figure out seasons for each song.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     /**
      * Short bugs and tasks.
@@ -24,6 +14,21 @@ module.exports = [
      */
     {
         taskName: `get verseObject from verseIndex or other index.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Fix lyric and carousel scrolling from portal select.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Figure out popup annotation song index and annotation index weirdness.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Weirdness when advancing to next song. (Uncanny to Cremated)`,
         workedHours: 0,
         neededHours: 2
     },
@@ -63,16 +68,6 @@ module.exports = [
     /**
      * User experience stuff.
      */
-    {
-        taskName: `Lyrics and carousel take their time to render when song is changed.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Verse lines take their time to render when their width needs to be changed.`,
-        workedHours: 0,
-        neededHours: 5
-    },
 
     // Day tasks.
 

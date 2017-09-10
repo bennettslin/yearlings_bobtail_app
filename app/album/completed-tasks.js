@@ -2427,4 +2427,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Lyrics and carousel take their time to render when song is changed.`,
+        workedHours: 8,
+        neededHours: 8
+    }
 ]
