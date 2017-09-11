@@ -13,7 +13,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Fix lyric and carousel scrolling from portal select.`,
+        taskName: `Fix lyric and carousel scrolling from portal select. (down the steppes)`,
         workedHours: 0,
         neededHours: 2
     },
@@ -36,11 +36,6 @@ module.exports = [
      * Audio and slider stuff.
      */
     {
-        taskName: `When song finishes playing, proceed to next more smoothly.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Slider in verse styling, determine slider selected verse.`,
         workedHours: 0,
         neededHours: 2
@@ -49,12 +44,11 @@ module.exports = [
     /**
      * Player stuff.
      */
-
-    /**
-     * User experience stuff.
-     */
-
-    // Day tasks.
+     {
+         taskName: `When song finishes playing, proceed to next more smoothly.`,
+         workedHours: 0,
+         neededHours: 1
+     },
 
     /**
      * Content.
@@ -104,7 +98,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Allow buttons to use svgs.`,
+        taskName: `Set up buttons to use svgs, including loading icons.`,
         workedHours: 0,
         neededHours: 8
     },
