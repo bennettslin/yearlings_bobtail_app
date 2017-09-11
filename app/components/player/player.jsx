@@ -95,7 +95,9 @@ class Player extends Component {
 
         // Tell app that player can now be played without interruption.
         this.myPlayer.addEventListener(
-            'canplaythrough',
+
+            // iOS doesn't fire canplaythrough.
+            'suspend',
             this._handleCanPlayThrough
         )
     }
@@ -143,11 +145,6 @@ class Player extends Component {
 
         if (showDebugStatements) {
 
-            // Enough data is available that the media can be played for now.
-            this.myPlayer.addEventListener('canplay', () => {
-                console.error('canplay', this.props.songIndex);
-            })
-
             // this.myPlayer.addEventListener('ended', () => {
             //     console.error('ended', this.props.songIndex);
             // })
@@ -187,6 +184,15 @@ class Player extends Component {
             // Download has completed.
             this.myPlayer.addEventListener('suspend', () => {
                 console.error('suspend', this.props.songIndex);
+            })
+
+            // Enough data is available that the media can be played for now.
+            this.myPlayer.addEventListener('canplay', () => {
+                console.error('canplay', this.props.songIndex);
+            })
+
+            this.myPlayer.addEventListener('canplaythrough', () => {
+                console.error('canplaythrough', this.props.songIndex);
             })
 
             this.myPlayer.addEventListener('waiting', () => {

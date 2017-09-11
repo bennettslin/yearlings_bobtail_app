@@ -22,11 +22,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Audio players don't work in Safari...`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     /**
      * Text colours.

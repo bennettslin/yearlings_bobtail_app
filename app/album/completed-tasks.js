@@ -2446,5 +2446,10 @@ module.exports = [
         taskName: `Figure out popup annotation song index and annotation index weirdness.`,
         workedHours: 3,
         neededHours: 3
-    }
+    },
+    {
+        taskName: `Audio players don't work in Safari. (Fix was to go by suspend, not canplaythrough. Hopefully this doesn't wreak havoc anywhere else.)`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
