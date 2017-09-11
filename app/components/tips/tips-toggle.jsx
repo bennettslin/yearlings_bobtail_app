@@ -1,4 +1,4 @@
-// Toggle button to show, hide, and disable overview section.
+// Toggle button to show, hide, and disable tips section.
 
 import React from 'react'
 import PropTypes from 'prop-types'

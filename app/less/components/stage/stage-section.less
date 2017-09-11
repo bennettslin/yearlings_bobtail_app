@@ -1,0 +1,33 @@
+@aspect-ratio-width: 2.75;
+@aspect-ratio-height: 2.5;
+@aspect-ratio: @aspect-ratio-height / @aspect-ratio-width * 100%;
+
+.stage-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &:after {
+        padding-top: @aspect-ratio;
+        display: block;
+        content: '';
+    }
+}
+
+.aspect-ratio-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #8be;
+    border: 1px solid green;
+}
+
+.phone-width {
+    .stage-section {
+        // Accommodate slider in main.
+        top: @menu-height;
+    }
+}

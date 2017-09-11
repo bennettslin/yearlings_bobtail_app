@@ -136,7 +136,7 @@ class App extends Component {
              * Render is synchronous, so wait a bit after selecting new song
              * before rendering the most performance intensive components.
              */
-            const songChangeTimeoutId = setTimeout(this._setIsHeavyRenderReady, 200)
+            const songChangeTimeoutId = setTimeout(this._setIsHeavyRenderReady, 50) // Was 200.
 
             // Clear previous timeout.
             clearTimeout(this.state.songChangeTimeoutId)

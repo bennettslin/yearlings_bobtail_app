@@ -1,4 +1,4 @@
-// TODO: Not presently used.
+// Section to show the stage illustrations.
 
 import React from 'react'
 
@@ -14,16 +14,11 @@ const StageSection = (props) => (
  * PRESENTATION *
  ****************/
 
-const StageSectionView = ({
+const StageSectionView = () => (
+    <div className="section stage-section">
+        <div className="aspect-ratio-container">
 
-    // From props.
-    selectedAdminIndex
-
-}) => (
-    <div className={`section stage-section`}>
-        {selectedAdminIndex &&
-            <h2>stage</h2>
-        }
+        </div>
     </div>
 )
 

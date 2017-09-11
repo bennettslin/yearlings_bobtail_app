@@ -15,6 +15,7 @@ import CarouselSection from '../carousel/carousel-section'
 import DotsSection from '../dots/dots-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
 import LyricToggle from '../lyric/lyric-toggle'
+import StageSection from '../stage/stage-section'
 import OverviewPopup from '../overview/overview-popup'
 import TipsPopup from '../tips/tips-popup'
 import ScoresTipsSection from './scores-tips-section'
@@ -59,6 +60,8 @@ MainColumn = ({
     <div className="column main-column">
         <MenuField {...menuFieldHandlers} />
         <div className="field centre-field">
+
+            <StageSection />
 
             <div className="field popup-field">
                 <div className="subfield annotation-subfield">
