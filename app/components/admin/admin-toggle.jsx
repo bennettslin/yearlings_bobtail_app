@@ -5,6 +5,7 @@ import { DEVICE_OBJECTS } from '../../constants/responsive'
 const AdminToggle = ({
 
     // From props.
+    isHeavyRenderReady,
     renderReadySongIndex,
     isPlaying,
     selectedTimePlayed,
@@ -15,6 +16,9 @@ const AdminToggle = ({
 
 }) => (
     <div className="admin-toggle">
+        <div>
+            isHeavyRenderReady: {isHeavyRenderReady ? 'true' : 'false'}
+        </div>
         <div>
             renderReadySongIndex: {renderReadySongIndex}
         </div>
@@ -38,6 +42,7 @@ const AdminToggle = ({
 
 export default connect(({
     selectedSongIndex,
+    isHeavyRenderReady,
     renderReadySongIndex,
     isPlaying,
     selectedTimePlayed,
@@ -47,6 +52,7 @@ export default connect(({
     windowHeight
 }) => ({
     selectedSongIndex,
+    isHeavyRenderReady,
     renderReadySongIndex,
     isPlaying,
     selectedTimePlayed,

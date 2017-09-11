@@ -17,11 +17,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Weirdness when advancing to next song. (Uncanny to Cremated)`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     /**
      * Text colours.

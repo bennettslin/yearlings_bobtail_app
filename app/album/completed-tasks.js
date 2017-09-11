@@ -2452,4 +2452,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Weirdness when advancing to next song. (Uncanny to Cremated) (Fix was that player didn't know it ended because the song time given was longer than the player time.)`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

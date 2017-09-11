@@ -51,6 +51,7 @@ class Player extends Component {
         super(props)
 
         this._handleCanPlayThrough = this._handleCanPlayThrough.bind(this)
+        this._handleEnded = this._handleEnded.bind(this)
         this._tellAppCurrentTimeOfAudioElement = this._tellAppCurrentTimeOfAudioElement.bind(this)
 
         this.state = {
@@ -100,6 +101,11 @@ class Player extends Component {
             'suspend',
             this._handleCanPlayThrough
         )
+
+        this.myPlayer.addEventListener(
+            'ended',
+            this._handleEnded
+        )
     }
 
     componentWillUpdate(nextProps) {
@@ -138,6 +144,20 @@ class Player extends Component {
         this.props.setCanPlayThroughs(newBitNumber)
     }
 
+    _handleEnded() {
+        const { intervalId } = this.state
+
+        // Ensure that this does not get called twice in same song.
+        if (intervalId) {
+            this.props.handlePlayerNextSong()
+
+            clearInterval(intervalId)
+            this.setState({
+                intervalId: null
+            })
+        }
+    }
+
     _listenForDebugStatements(onlyIfSelected) {
 
         const showDebugStatements =
@@ -145,21 +165,21 @@ class Player extends Component {
 
         if (showDebugStatements) {
 
-            // this.myPlayer.addEventListener('ended', () => {
-            //     console.error('ended', this.props.songIndex);
-            // })
-            // this.myPlayer.addEventListener('pause', () => {
-            //     console.error('pause', this.props.songIndex);
-            // })
-            // this.myPlayer.addEventListener('play', () => {
-            //     console.error('play', this.props.songIndex);
-            // })
-            // this.myPlayer.addEventListener('playing', () => {
-            //     console.error('playing', this.props.songIndex);
-            // })
-            // this.myPlayer.addEventListener('timeupdate', () => {
-            //     console.error('timeupdate', this.props.songIndex);
-            // })
+            this.myPlayer.addEventListener('ended', () => {
+                console.error('ended', this.props.songIndex);
+            })
+            this.myPlayer.addEventListener('pause', () => {
+                console.error('pause', this.props.songIndex);
+            })
+            this.myPlayer.addEventListener('play', () => {
+                console.error('play', this.props.songIndex);
+            })
+            this.myPlayer.addEventListener('playing', () => {
+                console.error('playing', this.props.songIndex);
+            })
+            this.myPlayer.addEventListener('timeupdate', () => {
+                console.error('timeupdate', this.props.songIndex);
+            })
 
             // Determine which times ranges have been buffered.
             this.myPlayer.addEventListener('progress', () => {
@@ -245,7 +265,7 @@ class Player extends Component {
 
         // If the song has ended, tell app to handle next song selection.
         if (currentTime > totalTime) {
-            this.props.handlePlayerNextSong()
+            this._handleEnded()
 
         // Otherwise, just tell app the audio element's current time.
         } else {
