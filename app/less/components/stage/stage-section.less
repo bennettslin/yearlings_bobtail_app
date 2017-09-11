@@ -1,26 +1,28 @@
+// Desired ratio is 1.1 for now.
+
 @aspect-ratio-width: 2.75;
 @aspect-ratio-height: 2.5;
 @aspect-ratio: @aspect-ratio-height / @aspect-ratio-width * 100%;
 
-.stage-section {
-    position: absolute;
+.stage-section, .aspect-ratio-container {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+}
 
-    &:after {
-        padding-top: @aspect-ratio;
-        display: block;
-        content: '';
-    }
+.stage-section {
+    position: absolute;
 }
 
 .aspect-ratio-container {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+
+    // Layout set through JavaScript.
+
+    // TODO: This won't be needed after border is no longer needed.
+    box-sizing: border-box;
+
     background-color: #8be;
     border: 1px solid green;
 }

@@ -1,3 +1,24 @@
+.nav-custom-subfield {
+    position: relative;
+    width: 100%;
+    height: @nav-height;
+    z-index: @nav-custom-subfield-z-index;
+
+    transition: top @animation-default;
+}
+
+.tablet-width {
+    .nav-custom-subfield {
+        height: @nav-tablet-height;
+    }
+}
+
+.mini-width {
+    .nav-custom-subfield {
+        height: @nav-mini-height;
+    }
+}
+
 .is-live-view {
     .nav-section {
         position: absolute;

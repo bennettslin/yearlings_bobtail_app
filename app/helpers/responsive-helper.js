@@ -12,6 +12,8 @@ import { PHONE_WIDTH,
          GOLDEN_CORD_WIDTH,
          UNCANNY_VALLEY_WIDTH,
 
+         STAGE_ASPECT_RATIO,
+
          COLLAPSED_LYRIC_SECTION_HEIGHT,
          HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
@@ -37,6 +39,76 @@ export const resizeWindow = (target = window) => {
     newState.windowWidth = innerWidth
 
     return newState
+}
+
+export const getStageCoordinates = ({
+    deviceIndex,
+    windowWidth,
+    windowHeight,
+    isHeightlessLyricColumn
+}) => {
+
+    const centreFieldWidth = _getCentreFieldWidth(deviceIndex, windowWidth),
+        centreFieldHeight = _getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn),
+
+        centreFieldRatio = centreFieldWidth / centreFieldHeight
+
+    let top,
+        left,
+        width = 100,
+        height = 100
+
+    // Maintain width, adjust height.
+    if (centreFieldRatio < STAGE_ASPECT_RATIO) {
+        height = centreFieldRatio / STAGE_ASPECT_RATIO * 100
+    }
+
+    // Maintain height, adjust width.
+    if (centreFieldRatio > STAGE_ASPECT_RATIO) {
+        width = STAGE_ASPECT_RATIO / centreFieldRatio * 100
+    }
+
+    top = (100 - height) * 0.5
+    left = (100 - width) * 0.5
+
+    if (getIsPhone(deviceIndex)) {
+        // FIXME: In phone width, slider in main does not affect centre field height.
+    }
+
+    // FIXME: Care about dots-overview section?
+
+    console.error('centreFieldWidth, centreFieldHeight', centreFieldWidth, centreFieldHeight, isHeightlessLyricColumn);
+
+    return {
+        top,
+        left,
+        width,
+        height
+    }
+}
+
+const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
+    let lyricWidth = 0
+
+    if (getIsDesktop(deviceIndex)) {
+        if (_getIsMonitor(deviceIndex)) {
+            lyricWidth = GOLDEN_CORD_WIDTH
+        } else {
+            lyricWidth = UNCANNY_VALLEY_WIDTH
+        }
+    }
+
+    return windowWidth - lyricWidth
+}
+
+const _getCentreFieldHeight = (deviceIndex, windowHeight, isHeightlessLyricColumn) => {
+    const menuHeight = getIsPhone(deviceIndex) ?
+        MENU_PLUS_CUSTOM_SUBFIELD_PHONE_HEIGHT : MENU_HEIGHT,
+
+    lyricHeight = (isHeightlessLyricColumn || getIsDesktop(deviceIndex)) ?
+        0 : windowHeight * COLLAPSED_LYRIC_SECTION_HEIGHT
+
+    return windowHeight - menuHeight - lyricHeight
 }
 
 export const getIsPhone = (deviceIndex) => {

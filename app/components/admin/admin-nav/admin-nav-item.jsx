@@ -3,6 +3,12 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import AdminNavRow from './admin-nav-row'
 
+const mapStateToProps = ({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+})
+
 /*************
  * CONTAINER *
  *************/
@@ -35,8 +41,4 @@ AdminNavItem.propTypes = {
     hasSelectedSong: PropTypes.bool,
 }
 
-export default connect(({
-    selectedSongIndex
-}) => ({
-    selectedSongIndex
-}))(AdminNavItem)
+export default connect(mapStateToProps)(AdminNavItem)

@@ -15,6 +15,13 @@ module.exports = {
     DEVICE_INDEX: 'deviceIndex',
     WINDOW_HEIGHT: 'windowHeight',
     WINDOW_WIDTH: 'windowWidth',
+    STAGE_COORDINATES: 'stageLayout',
+    STAGE_COORDINATES_DEFAULT: {
+        top: 0,
+        left: 0,
+        width: 100,
+        height: 100
+    },
 
     // Player.
     CAN_PLAY_THROUGHS: 'canPlayThroughs',

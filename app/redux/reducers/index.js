@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
 import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
-import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer } from './device'
+import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer, StageCoordinatesReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
 import { IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AppMountedReducer, IsHeavyRenderReadyReducer, RenderReadySongIndexReducer, RenderReadyAnnotationIndexReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
@@ -21,6 +21,7 @@ const rootReducer = combineReducers({
     deviceIndex: DeviceIndexReducer,
     windowHeight: WindowHeightReducer,
     windowWidth: WindowWidthReducer,
+    stageCoordinates: StageCoordinatesReducer,
 
     canPlayThroughs: CanPlayThroughsReducer,
     isScoreLoaded: IsScoreLoadedReducer,
