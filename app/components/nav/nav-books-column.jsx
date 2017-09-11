@@ -8,7 +8,26 @@ import NavBook from './nav-book'
 import NavBookButton from './nav-book-button'
 import NavLogueButton from './nav-logue-button'
 
-const NavBooksColumn = ({
+const mapStateToProps = ({
+    showSingleBookColumn,
+    shownBookColumnIndex
+}) => ({
+    showSingleBookColumn,
+    shownBookColumnIndex
+})
+
+const navBooksColumnPropTypes = {
+    // Through Redux.
+    showSingleBookColumn: PropTypes.bool.isRequired,
+    shownBookColumnIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    bookIndex: PropTypes.number.isRequired,
+    handleNavBookSelect: PropTypes.func.isRequired,
+    handleNavSongSelect: PropTypes.func.isRequired
+},
+
+NavBooksColumn = ({
 
     showSingleBookColumn,
     shownBookColumnIndex,
@@ -48,21 +67,6 @@ const NavBooksColumn = ({
     )
 }
 
-NavBooksColumn.propTypes = {
-    // Through Redux.
-    showSingleBookColumn: PropTypes.bool.isRequired,
-    shownBookColumnIndex: PropTypes.number.isRequired,
+NavBooksColumn.propTypes = navBooksColumnPropTypes
 
-    // From parent.
-    bookIndex: PropTypes.number.isRequired,
-    handleNavBookSelect: PropTypes.func.isRequired,
-    handleNavSongSelect: PropTypes.func.isRequired
-}
-
-export default connect(({
-    showSingleBookColumn,
-    shownBookColumnIndex
-}) => ({
-    showSingleBookColumn,
-    shownBookColumnIndex
-}))(NavBooksColumn)
+export default connect(mapStateToProps)(NavBooksColumn)

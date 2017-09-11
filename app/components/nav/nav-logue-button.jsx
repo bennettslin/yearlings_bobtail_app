@@ -5,7 +5,12 @@ import PropTypes from 'prop-types'
 import NavItem from './nav-item'
 import { getSongsAndLoguesCount } from '../../helpers/data-helper'
 
-const NavLogueButton = ({
+const navLogueButtonPropTypes = {
+    // From parent.
+    bookIndex: PropTypes.number.isRequired
+},
+
+NavLogueButton = ({
 
     bookIndex,
 
@@ -22,9 +27,6 @@ const NavLogueButton = ({
     )
 }
 
-NavLogueButton.propTypes = {
-    // From parent.
-    bookIndex: PropTypes.number.isRequired
-}
+NavLogueButton.propTypes = navLogueButtonPropTypes
 
 export default NavLogueButton

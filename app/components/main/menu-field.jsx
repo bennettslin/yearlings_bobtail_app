@@ -9,7 +9,14 @@ import AudioSection from '../audio/audio-section'
 import ScoresTipsSection from './scores-tips-section'
 import TitleToggle from '../title/title-toggle'
 
-const MenuField = ({
+const menuFieldPropTypes = {
+    // From parent.
+    audioSectionHandlers: PropTypes.object.isRequired,
+    scoresTipsSectionHandlers: PropTypes.object.isRequired,
+    titleToggleHandlers: PropTypes.object.isRequired
+},
+
+MenuField = ({
 
     audioSectionHandlers,
     scoresTipsSectionHandlers,
@@ -34,11 +41,6 @@ const MenuField = ({
     </div>
 )
 
-MenuField.propTypes = {
-    // From parent.
-    audioSectionHandlers: PropTypes.object.isRequired,
-    scoresTipsSectionHandlers: PropTypes.object.isRequired,
-    titleToggleHandlers: PropTypes.object.isRequired
-}
+MenuField.propTypes = menuFieldPropTypes
 
 export default MenuField

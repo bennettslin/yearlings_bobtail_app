@@ -13,6 +13,18 @@ import { CLOSE_POPUP_BUTTON,
 
 class Popup extends Component {
 
+    static propTypes = {
+        popupClassName: PropTypes.string.isRequired,
+        isVisible: PropTypes.bool.isRequired,
+        showClose: PropTypes.bool,
+        showArrows: PropTypes.bool,
+        handleCloseClick: PropTypes.func,
+        handlePreviousClick: PropTypes.func,
+        handleNextClick: PropTypes.func,
+        handlePopupContainerClick: PropTypes.func,
+        myChild: PropTypes.element.isRequired
+    }
+
     constructor(props) {
         super(props)
 
@@ -109,23 +121,27 @@ class Popup extends Component {
     }
 }
 
-Popup.propTypes = {
-    popupClassName: PropTypes.string.isRequired,
-    isVisible: PropTypes.bool.isRequired,
-    showClose: PropTypes.bool,
-    showArrows: PropTypes.bool,
-    handleCloseClick: PropTypes.func,
-    handlePreviousClick: PropTypes.func,
-    handleNextClick: PropTypes.func,
-    handlePopupContainerClick: PropTypes.func,
-    myChild: PropTypes.element.isRequired
-}
-
 /****************
  * PRESENTATION *
  ****************/
 
-const PopupView = ({
+const popupViewDefaultProps = {
+    showClose: false,
+    showArrows: false
+},
+
+popupViewPropTypes = {
+    popupClassName: PropTypes.string.isRequired,
+    showClose: PropTypes.bool.isRequired,
+    showArrows: PropTypes.bool.isRequired,
+    handleCloseClick: PropTypes.func,
+    handlePreviousClick: PropTypes.func,
+    handleNextClick: PropTypes.func,
+    handleContainerClick: PropTypes.func.isRequired,
+    myChild: PropTypes.element.isRequired
+},
+
+PopupView = ({
 
     popupClassName,
     showClose,
@@ -194,19 +210,7 @@ const PopupView = ({
     </div>
 )
 
-PopupView.defaultProps = {
-    showClose: false,
-    showArrows: false
-}
+PopupView.defaultProps = popupViewDefaultProps
+PopupView.propTypes = popupViewPropTypes
 
-PopupView.propTypes = {
-    popupClassName: PropTypes.string.isRequired,
-    showClose: PropTypes.bool.isRequired,
-    showArrows: PropTypes.bool.isRequired,
-    handleCloseClick: PropTypes.func,
-    handlePreviousClick: PropTypes.func,
-    handleNextClick: PropTypes.func,
-    handleContainerClick: PropTypes.func.isRequired,
-    myChild: PropTypes.element.isRequired
-}
 export default Popup

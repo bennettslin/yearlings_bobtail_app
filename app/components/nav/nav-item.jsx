@@ -5,7 +5,24 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from './nav-button'
 
-const NavItem = ({
+const mapStateToProps = ({
+    selectedSongIndex,
+    accessedNavSongIndex
+}) => ({
+    selectedSongIndex,
+    accessedNavSongIndex
+})
+
+const navItemPropTypes = {
+    // Through Redux.
+    accessedNavSongIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    songIndex: PropTypes.number.isRequired
+},
+
+NavItem = ({
 
     songIndex,
     selectedSongIndex,
@@ -25,19 +42,6 @@ const NavItem = ({
     )
 }
 
-NavItem.propTypes = {
-    // Through Redux.
-    accessedNavSongIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
+NavItem.propTypes = navItemPropTypes
 
-    // From parent.
-    songIndex: PropTypes.number.isRequired
-}
-
-export default connect(({
-    selectedSongIndex,
-    accessedNavSongIndex
-}) => ({
-    selectedSongIndex,
-    accessedNavSongIndex
-}))(NavItem)
+export default connect(mapStateToProps)(NavItem)

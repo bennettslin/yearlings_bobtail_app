@@ -7,7 +7,24 @@ import { connect } from 'react-redux'
 import NavToggle from './nav-toggle'
 import NavBooksColumn from './nav-books-column'
 
-const NavSection = ({
+const mapStateToProps = ({
+    isHiddenNav,
+    showSingleBookColumn
+}) => ({
+    isHiddenNav,
+    showSingleBookColumn
+})
+
+const navSectionPropTypes = {
+    // Through Redux.
+    isHiddenNav: PropTypes.bool.isRequired,
+    showSingleBookColumn: PropTypes.bool.isRequired,
+
+    // From parent.
+    handleNavExpand: PropTypes.func.isRequired
+},
+
+NavSection = ({
 
     isHiddenNav,
     showSingleBookColumn,
@@ -42,19 +59,6 @@ const NavSection = ({
     ) : null
 }
 
-NavSection.propTypes = {
-    // Through Redux.
-    isHiddenNav: PropTypes.bool.isRequired,
-    showSingleBookColumn: PropTypes.bool.isRequired,
+NavSection.propTypes = navSectionPropTypes
 
-    // From parent.
-    handleNavExpand: PropTypes.func.isRequired
-}
-
-export default connect(({
-    isHiddenNav,
-    showSingleBookColumn
-}) => ({
-    isHiddenNav,
-    showSingleBookColumn
-}))(NavSection)
+export default connect(mapStateToProps)(NavSection)

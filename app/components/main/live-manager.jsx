@@ -16,6 +16,48 @@ import WikiPopup from '../wiki/wiki-popup'
 
 class LiveManager extends Component {
 
+    static propTypes = {
+        // From parent.
+        lyricSectionRef: PropTypes.func.isRequired,
+        scoreSectionRef: PropTypes.func.isRequired,
+        wikiSectionRef: PropTypes.func.isRequired,
+
+        handleAnnotationPrevious: PropTypes.func.isRequired,
+        handleAnnotationNext: PropTypes.func.isRequired,
+        handleAnnotationWikiSelect: PropTypes.func.isRequired,
+        handleAnnotationPortalSelect: PropTypes.func.isRequired,
+        handleAudioPlay: PropTypes.func.isRequired,
+        handleAudioPreviousSong: PropTypes.func.isRequired,
+        handleAudioNextSong: PropTypes.func.isRequired,
+        handleAudioOptionsToggle: PropTypes.func.isRequired,
+        handleSliderTouchBegin: PropTypes.func.isRequired,
+        handleCarouselToggle: PropTypes.func.isRequired,
+        handleDotToggle: PropTypes.func.isRequired,
+        handleDotsSectionToggle: PropTypes.func.isRequired,
+        handleNavExpand: PropTypes.func.isRequired,
+        handleNavSongSelect: PropTypes.func.isRequired,
+        handleNavBookSelect: PropTypes.func.isRequired,
+        handleLyricColumnSelect: PropTypes.func.isRequired,
+        handleLyricSectionExpand: PropTypes.func.isRequired,
+        handleLyricAnnotationSelect: PropTypes.func.isRequired,
+        handleLyricSectionScroll: PropTypes.func.isRequired,
+        handleLyricPlay: PropTypes.func.isRequired,
+        handleLyricVerseSelect: PropTypes.func.isRequired,
+        handleOverviewToggle: PropTypes.func.isRequired,
+        handlePopupContainerClick: PropTypes.func.isRequired,
+        handleScoreToggle: PropTypes.func.isRequired,
+        handleScrollAfterLyricRerender: PropTypes.func.isRequired,
+        handleTipsToggle: PropTypes.func.isRequired,
+        handleTitleToggle: PropTypes.func.isRequired,
+        handleVerseBarSelect: PropTypes.func.isRequired,
+        handleVerseBarWheel: PropTypes.func.isRequired,
+        handleVerseElementSelect: PropTypes.func.isRequired,
+        handleVerseElementSlide: PropTypes.func.isRequired,
+        handleVerseInteractivate: PropTypes.func.isRequired,
+        handleWikiToggle: PropTypes.func.isRequired,
+        stopPropagation: PropTypes.func.isRequired
+    }
+
     componentDidMount() {
         this.props.focusBody()
     }
@@ -207,48 +249,6 @@ class LiveManager extends Component {
             </div>
         )
     }
-}
-
-LiveManager.propTypes = {
-    // From parent.
-    lyricSectionRef: PropTypes.func.isRequired,
-    scoreSectionRef: PropTypes.func.isRequired,
-    wikiSectionRef: PropTypes.func.isRequired,
-
-    handleAnnotationPrevious: PropTypes.func.isRequired,
-    handleAnnotationNext: PropTypes.func.isRequired,
-    handleAnnotationWikiSelect: PropTypes.func.isRequired,
-    handleAnnotationPortalSelect: PropTypes.func.isRequired,
-    handleAudioPlay: PropTypes.func.isRequired,
-    handleAudioPreviousSong: PropTypes.func.isRequired,
-    handleAudioNextSong: PropTypes.func.isRequired,
-    handleAudioOptionsToggle: PropTypes.func.isRequired,
-    handleSliderTouchBegin: PropTypes.func.isRequired,
-    handleCarouselToggle: PropTypes.func.isRequired,
-    handleDotToggle: PropTypes.func.isRequired,
-    handleDotsSectionToggle: PropTypes.func.isRequired,
-    handleNavExpand: PropTypes.func.isRequired,
-    handleNavSongSelect: PropTypes.func.isRequired,
-    handleNavBookSelect: PropTypes.func.isRequired,
-    handleLyricColumnSelect: PropTypes.func.isRequired,
-    handleLyricSectionExpand: PropTypes.func.isRequired,
-    handleLyricAnnotationSelect: PropTypes.func.isRequired,
-    handleLyricSectionScroll: PropTypes.func.isRequired,
-    handleLyricPlay: PropTypes.func.isRequired,
-    handleLyricVerseSelect: PropTypes.func.isRequired,
-    handleOverviewToggle: PropTypes.func.isRequired,
-    handlePopupContainerClick: PropTypes.func.isRequired,
-    handleScoreToggle: PropTypes.func.isRequired,
-    handleScrollAfterLyricRerender: PropTypes.func.isRequired,
-    handleTipsToggle: PropTypes.func.isRequired,
-    handleTitleToggle: PropTypes.func.isRequired,
-    handleVerseBarSelect: PropTypes.func.isRequired,
-    handleVerseBarWheel: PropTypes.func.isRequired,
-    handleVerseElementSelect: PropTypes.func.isRequired,
-    handleVerseElementSlide: PropTypes.func.isRequired,
-    handleVerseInteractivate: PropTypes.func.isRequired,
-    handleWikiToggle: PropTypes.func.isRequired,
-    stopPropagation: PropTypes.func.isRequired
 }
 
 export default LiveManager

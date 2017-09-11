@@ -6,7 +6,21 @@ import PropTypes from 'prop-types'
 import NavButton from './nav-button'
 import { getBookColumnIndex } from '../../helpers/data-helper'
 
-const NavBookButton = ({
+const mapStateToProps = ({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+})
+
+const navBookButtonPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    bookIndex: PropTypes.number.isRequired
+},
+
+NavBookButton = ({
 
     selectedSongIndex,
     bookIndex,
@@ -24,16 +38,6 @@ const NavBookButton = ({
     )
 }
 
-NavBookButton.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
+NavBookButton.propTypes = navBookButtonPropTypes
 
-    // From parent.
-    bookIndex: PropTypes.number.isRequired
-}
-
-export default connect(({
-    selectedSongIndex
-}) => ({
-    selectedSongIndex
-}))(NavBookButton)
+export default connect(mapStateToProps)(NavBookButton)

@@ -13,6 +13,13 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 class NavButton extends Component {
 
+    static propTypes = {
+        songIndex: PropTypes.number,
+        accessHighlighted: PropTypes.bool,
+        isSelected: PropTypes.bool.isRequired,
+        handleButtonClick: PropTypes.func.isRequired
+    }
+
     constructor(props) {
         super(props)
 
@@ -73,18 +80,20 @@ class NavButton extends Component {
     }
 }
 
-NavButton.propTypes = {
-    songIndex: PropTypes.number,
-    accessHighlighted: PropTypes.bool,
-    isSelected: PropTypes.bool.isRequired,
-    handleButtonClick: PropTypes.func.isRequired
-}
-
 /****************
  * PRESENTATION *
  ****************/
 
-const NavButtonView = ({
+const navButtonViewPropTypes = {
+    // From parent.
+    isSelected: PropTypes.bool.isRequired,
+    accessHighlighted: PropTypes.bool,
+    iconText: PropTypes.number,
+    songTitle: PropTypes.string,
+    handleClick: PropTypes.func.isRequired
+},
+
+NavButtonView = ({
 
     // From props.
     isSelected,
@@ -120,13 +129,6 @@ const NavButtonView = ({
     </div>
 )
 
-NavButtonView.propTypes = {
-    // From parent.
-    isSelected: PropTypes.bool.isRequired,
-    accessHighlighted: PropTypes.bool,
-    iconText: PropTypes.number,
-    songTitle: PropTypes.string,
-    handleClick: PropTypes.func.isRequired
-}
+NavButtonView.propTypes = navButtonViewPropTypes
 
 export default NavButton

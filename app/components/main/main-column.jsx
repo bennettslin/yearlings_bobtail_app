@@ -19,7 +19,25 @@ import OverviewPopup from '../overview/overview-popup'
 import TipsPopup from '../tips/tips-popup'
 import ScoresTipsSection from './scores-tips-section'
 
-const MainColumn = ({
+const mainColumnPropTypes = {
+    // From parent.
+    handleCarouselToggle: PropTypes.func.isRequired,
+    handleLyricSectionExpand: PropTypes.func.isRequired,
+    handleNavExpand: PropTypes.func.isRequired,
+
+    annotationPopupHandlers: PropTypes.object.isRequired,
+    audioBannerHandlers: PropTypes.object.isRequired,
+    carouselSectionHandlers: PropTypes.object.isRequired,
+    dotsOverviewToggleSectionHandlers: PropTypes.object.isRequired,
+    dotsSectionHandlers: PropTypes.object.isRequired,
+    menuFieldHandlers: PropTypes.object.isRequired,
+    navSectionHandlers: PropTypes.object.isRequired,
+    overviewPopupHandlers: PropTypes.object.isRequired,
+    tipsPopupHandlers: PropTypes.object.isRequired,
+    scoresTipsSectionHandlers: PropTypes.object.isRequired
+},
+
+MainColumn = ({
 
     handleCarouselToggle,
     handleLyricSectionExpand,
@@ -98,22 +116,6 @@ const MainColumn = ({
     </div>
 )
 
-MainColumn.propTypes = {
-    // From parent.
-    handleCarouselToggle: PropTypes.func.isRequired,
-    handleLyricSectionExpand: PropTypes.func.isRequired,
-    handleNavExpand: PropTypes.func.isRequired,
-
-    annotationPopupHandlers: PropTypes.object.isRequired,
-    audioBannerHandlers: PropTypes.object.isRequired,
-    carouselSectionHandlers: PropTypes.object.isRequired,
-    dotsOverviewToggleSectionHandlers: PropTypes.object.isRequired,
-    dotsSectionHandlers: PropTypes.object.isRequired,
-    menuFieldHandlers: PropTypes.object.isRequired,
-    navSectionHandlers: PropTypes.object.isRequired,
-    overviewPopupHandlers: PropTypes.object.isRequired,
-    tipsPopupHandlers: PropTypes.object.isRequired,
-    scoresTipsSectionHandlers: PropTypes.object.isRequired
-}
+MainColumn.propTypes = mainColumnPropTypes
 
 export default MainColumn

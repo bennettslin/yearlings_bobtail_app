@@ -5,7 +5,12 @@ import PropTypes from 'prop-types'
 import NavItem from './nav-item'
 import { getSongsAndLoguesCount, getStartingIndexForBook } from '../../helpers/data-helper'
 
-const NavBook = ({
+const navBookPropTypes = {
+    // From parent.
+    bookIndex: PropTypes.number.isRequired
+},
+
+NavBook = ({
 
     // From props.
     bookIndex,
@@ -35,9 +40,6 @@ const NavBook = ({
     )
 }
 
-NavBook.propTypes = {
-    // From parent.
-    bookIndex: PropTypes.number.isRequired
-}
+NavBook.propTypes = navBookPropTypes
 
 export default NavBook

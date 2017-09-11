@@ -7,7 +7,29 @@ import Button from '../button/button'
 import { getIsDesktop } from '../../helpers/responsive-helper'
 import { NAV_SECTION_EXPAND_KEY } from '../../constants/access'
 
-const NavToggle = ({
+const mapStateToProps = ({
+    deviceIndex,
+    selectedNavIndex
+}) => ({
+    deviceIndex,
+    selectedNavIndex
+})
+
+const navToggleDefaultProps = {
+    inMain: false
+},
+
+navTogglePropTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+    selectedNavIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    inMain: PropTypes.bool.isRequired,
+    handleNavExpand: PropTypes.func.isRequired
+},
+
+NavToggle = ({
 
     inMain,
     deviceIndex,
@@ -43,24 +65,7 @@ const NavToggle = ({
     ) : null
 }
 
-NavToggle.defaultProps = {
-    inMain: false
-}
+NavToggle.defaultProps = navToggleDefaultProps
+NavToggle.propTypes = navTogglePropTypes
 
-NavToggle.propTypes = {
-    // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-    selectedNavIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    inMain: PropTypes.bool.isRequired,
-    handleNavExpand: PropTypes.func.isRequired
-}
-
-export default connect(({
-    deviceIndex,
-    selectedNavIndex
-}) => ({
-    deviceIndex,
-    selectedNavIndex
-}))(NavToggle)
+export default connect(mapStateToProps)(NavToggle)
