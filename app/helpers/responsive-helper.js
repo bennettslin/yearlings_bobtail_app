@@ -14,6 +14,14 @@ import { PHONE_WIDTH,
 
          STAGE_ASPECT_RATIO,
 
+         APP_ICON_DIAMETER,
+         APP_MINI_LARGE_ICON_DIAMETER,
+         APP_TABLET_LARGE_ICON_DIAMETER,
+         APP_LARGE_ICON_DIAMETER,
+         APP_THIN_MARGIN,
+         AUDIO_BANNER_CUSTOM_SUBFIELD_HEIGHT,
+         AUDIO_BANNER_CUSTOM_SUBFIELD_PADDING,
+
          COLLAPSED_LYRIC_SECTION_HEIGHT,
          HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
@@ -23,6 +31,8 @@ import { PHONE_WIDTH,
          WIKI_SIDE_PADDING_TOTAL } from '../constants/responsive'
 
 import { getSongObject } from './data-helper'
+
+const STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE = 1.05
 
 export const resizeWindow = (target = window) => {
 
@@ -48,36 +58,46 @@ export const getStageCoordinates = ({
     isHeightlessLyricColumn
 }) => {
 
-    const centreFieldWidth = _getCentreFieldWidth(deviceIndex, windowWidth),
-        centreFieldHeight = _getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn),
+    const isDesktop = getIsDesktop(deviceIndex),
+
+        dotsOverviewOverflow = isDesktop ? _getDotsOverviewOverflow(deviceIndex) : 0,
+        centreFieldWidth = _getCentreFieldWidth(deviceIndex, windowWidth) - dotsOverviewOverflow,
+
+        isPhone = getIsPhone(deviceIndex),
+
+        audioBannerOverflow = isPhone ? AUDIO_BANNER_CUSTOM_SUBFIELD_HEIGHT + AUDIO_BANNER_CUSTOM_SUBFIELD_PADDING * 2 : 0,
+        centreFieldHeight = _getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - audioBannerOverflow,
 
         centreFieldRatio = centreFieldWidth / centreFieldHeight
 
-    let top,
-        left,
-        width = 100,
-        height = 100
+    let top = 0,
+        left = 0,
+        width = centreFieldWidth,
+        height = centreFieldHeight
 
-    // Maintain width, adjust height.
+    // Maintain stage width, adjust stage height.
     if (centreFieldRatio < STAGE_ASPECT_RATIO) {
-        height = centreFieldRatio / STAGE_ASPECT_RATIO * 100
+        height *= centreFieldRatio / STAGE_ASPECT_RATIO
+
+    // Maintain stage height, adjust stage width.
+    } else if (centreFieldRatio > STAGE_ASPECT_RATIO) {
+        width *= STAGE_ASPECT_RATIO / centreFieldRatio
     }
 
-    // Maintain height, adjust width.
-    if (centreFieldRatio > STAGE_ASPECT_RATIO) {
-        width = STAGE_ASPECT_RATIO / centreFieldRatio * 100
+    if (isDesktop) {
+        // If stage height is adjustable, put closer to top in desktop.
+        top = (centreFieldHeight - height) * 0.1
+
+        // Scoot left a bit to give room to dots overview.
+        left = dotsOverviewOverflow + (centreFieldWidth - width) * 0.5
+
+    } else {
+        // If stage height is adjustable, put closer to bottom in mobile.
+        top = audioBannerOverflow + (centreFieldHeight - height) * 0.9
+
+        // Keep centred in mobile, even with dots overview.
+        left = (centreFieldWidth - width) * 0.5
     }
-
-    top = (100 - height) * 0.5
-    left = (100 - width) * 0.5
-
-    if (getIsPhone(deviceIndex)) {
-        // FIXME: In phone width, slider in main does not affect centre field height.
-    }
-
-    // FIXME: Care about dots-overview section?
-
-    console.error('centreFieldWidth, centreFieldHeight', centreFieldWidth, centreFieldHeight, isHeightlessLyricColumn);
 
     return {
         top,
@@ -88,9 +108,12 @@ export const getStageCoordinates = ({
 }
 
 const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
-    let lyricWidth = 0
+    let lyricWidth = 0,
+        overflowPercentage = 1
 
     if (getIsDesktop(deviceIndex)) {
+        overflowPercentage = STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
+
         if (_getIsMonitor(deviceIndex)) {
             lyricWidth = GOLDEN_CORD_WIDTH
         } else {
@@ -98,17 +121,36 @@ const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
         }
     }
 
-    return windowWidth - lyricWidth
+    return windowWidth * overflowPercentage - lyricWidth
 }
 
 const _getCentreFieldHeight = (deviceIndex, windowHeight, isHeightlessLyricColumn) => {
-    const menuHeight = getIsPhone(deviceIndex) ?
-        MENU_PLUS_CUSTOM_SUBFIELD_PHONE_HEIGHT : MENU_HEIGHT,
-
-    lyricHeight = (isHeightlessLyricColumn || getIsDesktop(deviceIndex)) ?
+    const lyricHeight = (isHeightlessLyricColumn || getIsDesktop(deviceIndex)) ?
         0 : windowHeight * COLLAPSED_LYRIC_SECTION_HEIGHT
 
-    return windowHeight - menuHeight - lyricHeight
+    return windowHeight - MENU_HEIGHT - lyricHeight
+}
+
+export const _getDotsOverviewOverflow = (deviceIndex) => {
+    let toggleButtonWidth = 0
+
+    switch (DEVICE_OBJECTS[deviceIndex].className) {
+        case MONITOR_WIDTH:
+        case LAPTOP_WIDTH:
+            toggleButtonWidth = APP_LARGE_ICON_DIAMETER
+            break
+        case TABLET_WIDTH:
+            toggleButtonWidth = APP_TABLET_LARGE_ICON_DIAMETER
+            break
+        case MINI_WIDTH:
+            toggleButtonWidth = APP_MINI_LARGE_ICON_DIAMETER
+            break
+        case PHONE_WIDTH:
+            toggleButtonWidth = APP_ICON_DIAMETER
+            break
+    }
+
+    return (toggleButtonWidth + APP_THIN_MARGIN) * 0.5
 }
 
 export const getIsPhone = (deviceIndex) => {

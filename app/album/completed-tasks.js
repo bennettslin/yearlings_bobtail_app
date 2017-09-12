@@ -2462,4 +2462,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Figure out stage section aspect ratios for all resolutions.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

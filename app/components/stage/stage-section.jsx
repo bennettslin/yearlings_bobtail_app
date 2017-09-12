@@ -35,10 +35,10 @@ const StageSectionView = ({
             height } = stageCoordinates,
 
         aspectRatioContainerStyle = {
-            top: `${top}%`,
-            left: `${left}%`,
-            width: `${width}%`,
-            height: `${height}%`
+            top: `${top}px`,
+            left: `${left}px`,
+            width: `${width}px`,
+            height: `${height}px`
         }
 
     return (
