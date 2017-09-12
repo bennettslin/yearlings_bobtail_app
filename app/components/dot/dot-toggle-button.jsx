@@ -132,6 +132,7 @@ DotToggleButtonView = ({
         <a
             className="dot-section-anchor"
             onClick={handleTextContainerClick}
+            onTouchStart={handleTextContainerClick}
         >
             <span className={classnames(
                 'anchor-block',

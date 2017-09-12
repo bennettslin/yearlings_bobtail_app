@@ -80,6 +80,7 @@ class Button extends Component {
                       'overflow-shown': isOverflowShown }
                 )}
                 onClick={handleClick && isEnabled ? this._handleClick : null}
+                onTouchStart={handleClick && isEnabled ? this._handleClick : null}
             >
                 <div className="icon-canvas-block">
                     <div className={classnames(

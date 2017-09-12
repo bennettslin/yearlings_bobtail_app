@@ -106,6 +106,7 @@ DotsSectionView = ({
     <div
         className="section dots-section"
         onClick={handleContainerClick}
+        onTouchStart={handleContainerClick}
     >
         <DotToggleBlock {...other} />
     </div>

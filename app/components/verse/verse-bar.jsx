@@ -73,6 +73,7 @@ class VerseBar extends Component {
             >
                 <div className="verse-bar"
                     onClick={handleVerseBarSelect}
+                    onTouchStart={handleVerseBarSelect}
                 >
                     <VerseUnit {...other}
                         inVerseBar={true}

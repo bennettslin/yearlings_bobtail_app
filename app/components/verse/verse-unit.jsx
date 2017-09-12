@@ -235,6 +235,7 @@ VerseUnitView = ({
                   'interactivated': isInteractivated }
             )}
             onClick={handleInteractivatableClick}
+            onTouchStart={handleInteractivatableClick}
         >
             {isInteractable && (
                 <VerseAudioButton

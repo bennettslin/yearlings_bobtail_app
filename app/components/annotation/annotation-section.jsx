@@ -147,6 +147,7 @@ AnnotationSectionView = ({
                               'access-highlighted': isAccessedAnnotation }
                         )}
                         onClick={handleTitleClick}
+                        onTouchStart={handleTitleClick}
                     >
                         <span className="underline-bar" />
                         <span className="text-span">

@@ -77,6 +77,7 @@ class TextAnchor extends Component {
                           'todo': hasTodo }
                     )}
                     onClick={this._handleAnchorClick}
+                    onTouchStart={this._handleAnchorClick}
                 >
                     {isLyric &&
                         <span className="underline-bar" />

@@ -181,6 +181,7 @@ class DomManager extends Component {
                       'slider-touched': isSliderTouched }
                 )}
                 onClick={this._handleClick}
+                onTouchStart={this._handleClick}
                 onMouseMove={handleBodyTouchMove}
                 onTouchMove={handleBodyTouchMove}
                 onMouseUp={this._handleMouseUp}

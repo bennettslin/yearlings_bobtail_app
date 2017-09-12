@@ -186,6 +186,7 @@ PopupView = ({
                 popupClassName
             )}
             onClick={handleContainerClick}
+            onTouchStart={handleContainerClick}
         >
             {myChild}
             {showClose &&

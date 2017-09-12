@@ -131,6 +131,7 @@ CarouselAnnotationView = ({
             annotationDotKeys
         )}
         onClick={handleContainerClick}
+        onTouchStart={handleContainerClick}
     >
         <AnnotationSection {...other}
             inCarousel={true}
