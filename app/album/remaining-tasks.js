@@ -3,6 +3,11 @@ module.exports = [
     /**
      * Short bugs and tasks.
      */
+    {
+        taskName: `Bug where audio banner in actual mobile phone has weird position.`,
+        workedHours: 0,
+        neededHours: 2
+    },
 
     /**
      * Medium bugs and tasks.
