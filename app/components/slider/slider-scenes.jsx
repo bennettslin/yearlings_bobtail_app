@@ -1,4 +1,4 @@
-// Static field that shows the song scenes in the slider.
+// Static field that shows the song scenes in the slider. Probably admin only.
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -8,7 +8,18 @@ import classnames from 'classnames'
 import { getSceneTimesArray,
          getSongTotalTime } from '../../helpers/data-helper'
 
-const SliderScenes = ({
+const mapStateToProps = ({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+})
+
+const sliderScenesPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired
+},
+
+SliderScenes = ({
 
     selectedSongIndex
 
@@ -43,13 +54,6 @@ const SliderScenes = ({
     )
 }
 
-SliderScenes.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired
-}
+SliderScenes.propTypes = sliderScenesPropTypes
 
-export default connect(({
-    selectedSongIndex
-}) => ({
-    selectedSongIndex
-}))(SliderScenes)
+export default connect(mapStateToProps)(SliderScenes)

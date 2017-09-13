@@ -5,7 +5,27 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getSongTotalTime, getVerseBeginAndEndTimes } from '../../helpers/data-helper'
 
-const SliderCursor = ({
+const mapStateToProps = ({
+    selectedSongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex,
+    interactivatedVerseIndex
+}) => ({
+    selectedSongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex,
+    interactivatedVerseIndex
+})
+
+const sliderCursorPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+    selectedVerseIndex: PropTypes.number.isRequired,
+    sliderVerseIndex: PropTypes.number.isRequired,
+    interactivatedVerseIndex: PropTypes.number.isRequired
+},
+
+SliderCursor = ({
 
     selectedSongIndex,
     selectedVerseIndex,
@@ -41,22 +61,6 @@ const SliderCursor = ({
     )
 }
 
-SliderCursor.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedVerseIndex: PropTypes.number.isRequired,
-    sliderVerseIndex: PropTypes.number.isRequired,
-    interactivatedVerseIndex: PropTypes.number.isRequired
-}
+SliderCursor.propTypes = sliderCursorPropTypes
 
-export default connect(({
-    selectedSongIndex,
-    selectedVerseIndex,
-    sliderVerseIndex,
-    interactivatedVerseIndex
-}) => ({
-    selectedSongIndex,
-    selectedVerseIndex,
-    sliderVerseIndex,
-    interactivatedVerseIndex
-}))(SliderCursor)
+export default connect(mapStateToProps)(SliderCursor)

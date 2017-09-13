@@ -8,7 +8,18 @@ import { getMaxStanzaTimesCount,
          getSongTotalTime } from '../../helpers/data-helper'
 import { getArrayOfLength } from '../../helpers/general-helper'
 
-const SliderStanzas = ({
+const mapStateToProps = ({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+})
+
+const sliderStanzasPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired
+},
+
+SliderStanzas = ({
 
     selectedSongIndex
 
@@ -48,13 +59,6 @@ const SliderStanzas = ({
     )
 }
 
-SliderStanzas.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired
-}
+SliderStanzas.propTypes = sliderStanzasPropTypes
 
-export default connect(({
-    selectedSongIndex
-}) => ({
-    selectedSongIndex
-}))(SliderStanzas)
+export default connect(mapStateToProps)(SliderStanzas)

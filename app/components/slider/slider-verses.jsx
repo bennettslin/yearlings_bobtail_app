@@ -7,7 +7,18 @@ import classnames from 'classnames'
 import { getSongVerseTimes,
          getSongTotalTime } from '../../helpers/data-helper'
 
-const SliderVerses = ({
+const mapStateToProps = ({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+})
+
+const sliderVersesPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired
+},
+
+SliderVerses = ({
 
     selectedSongIndex
 
@@ -47,13 +58,6 @@ const SliderVerses = ({
     )
 }
 
-SliderVerses.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired
-}
+SliderVerses.propTypes = sliderVersesPropTypes
 
-export default connect(({
-    selectedSongIndex
-}) => ({
-    selectedSongIndex
-}))(SliderVerses)
+export default connect(mapStateToProps)(SliderVerses)

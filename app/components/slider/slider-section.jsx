@@ -14,6 +14,12 @@ import SliderTimeBars from './slider-time-bars'
  *************/
 
 class SliderSection extends Component {
+
+    static propTypes = {
+        // From parent.
+        handleSliderTouchBegin: PropTypes.func.isRequired
+    }
+
     constructor(props) {
         super(props)
         this._handleTouchDown = this._handleTouchDown.bind(this)
@@ -32,16 +38,16 @@ class SliderSection extends Component {
     }
 }
 
-SliderSection.propTypes = {
-    // From parent.
-    handleSliderTouchBegin: PropTypes.func.isRequired
-}
-
 /****************
  * PRESENTATION *
  ****************/
 
-const SliderSectionView = ({
+const sliderSectionViewPropTypes = {
+    // From parent.
+    handleTouchDown: PropTypes.func.isRequired
+},
+
+SliderSectionView = ({
 
     handleTouchDown
 
@@ -73,9 +79,6 @@ const SliderSectionView = ({
     )
 }
 
-SliderSectionView.propTypes = {
-    // From parent.
-    handleTouchDown: PropTypes.func.isRequired
-}
+SliderSectionView.propTypes = sliderSectionViewPropTypes
 
 export default SliderSection

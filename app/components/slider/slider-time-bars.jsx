@@ -7,7 +7,27 @@ import classnames from 'classnames'
 import { getSongTotalTime } from '../../helpers/data-helper'
 import { getFormattedTime } from '../../helpers/format-helper'
 
-const SliderTimeBars = ({
+const mapStateToProps = ({
+    selectedSongIndex,
+    selectedTimePlayed,
+    isSliderTouched,
+    sliderRatio
+}) => ({
+    selectedSongIndex,
+    selectedTimePlayed,
+    isSliderTouched,
+    sliderRatio
+})
+
+const sliderTimeBarsPropTypes = {
+    // Through Redux.
+    selectedSongIndex: PropTypes.number.isRequired,
+    selectedTimePlayed: PropTypes.number.isRequired,
+    isSliderTouched: PropTypes.bool.isRequired,
+    sliderRatio: PropTypes.number.isRequired,
+},
+
+SliderTimeBars = ({
 
     selectedSongIndex,
     selectedTimePlayed,
@@ -96,22 +116,6 @@ const SliderTimeBars = ({
     )
 }
 
-SliderTimeBars.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedTimePlayed: PropTypes.number.isRequired,
-    isSliderTouched: PropTypes.bool.isRequired,
-    sliderRatio: PropTypes.number.isRequired,
-}
+SliderTimeBars.propTypes = sliderTimeBarsPropTypes
 
-export default connect(({
-    selectedSongIndex,
-    selectedTimePlayed,
-    isSliderTouched,
-    sliderRatio
-}) => ({
-    selectedSongIndex,
-    selectedTimePlayed,
-    isSliderTouched,
-    sliderRatio
-}))(SliderTimeBars)
+export default connect(mapStateToProps)(SliderTimeBars)
