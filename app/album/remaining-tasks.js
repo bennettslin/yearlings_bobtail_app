@@ -1,5 +1,17 @@
 module.exports = [
 
+    {
+        taskName: `Use svg in slider.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
+        taskName: `Hover over verse to show lyric button.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     /**
      * Short bugs and tasks.
      */
@@ -70,11 +82,11 @@ module.exports = [
     },
     {
         taskName: `Title section content.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 3
     },
     {
-        taskName: `tips content`,
+        taskName: `Tips content`,
         workedHours: 0,
         neededHours: 5
     },
