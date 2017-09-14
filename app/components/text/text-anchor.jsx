@@ -8,6 +8,43 @@ import DotBlock from '../dot/dot-block'
 
 class TextAnchor extends Component {
 
+    static defaultProps = {
+        isLyric: false,
+        inPortal: false,
+        isVerseBeginningSpan: false,
+        isVerseEndingSpan: false
+    }
+
+    static propTypes = {
+        // From parent.
+        isSelected: PropTypes.bool.isRequired,
+        accessHighlighted: PropTypes.bool.isRequired,
+        isLyric: PropTypes.bool.isRequired,
+        inPortal: PropTypes.bool.isRequired,
+        hasTodo: PropTypes.bool,
+        isPortalAnchor: PropTypes.bool.isRequired,
+        isVerseBeginningSpan: PropTypes.bool.isRequired,
+        isVerseEndingSpan: PropTypes.bool.isRequired,
+
+        anchorText: PropTypes.oneOfType([
+            PropTypes.string,
+
+            // "Bobtail's words" in M is an array.
+            PropTypes.array,
+
+            // "Ubermensch" in Golden Cord is an object.
+            PropTypes.object
+
+        ]).isRequired,
+        annotationDotKeys: PropTypes.object,
+
+        annotationIndex: PropTypes.number,
+        carouselAnnotationIndex: PropTypes.number,
+        wikiIndex: PropTypes.number,
+
+        handleAnchorClick: PropTypes.func
+    }
+
     constructor(props) {
         super(props)
 
@@ -101,43 +138,6 @@ class TextAnchor extends Component {
             </span>
         )
     }
-}
-
-TextAnchor.defaultProps = {
-    isLyric: false,
-    inPortal: false,
-    isVerseBeginningSpan: false,
-    isVerseEndingSpan: false
-}
-
-TextAnchor.propTypes = {
-    // From parent.
-    isSelected: PropTypes.bool.isRequired,
-    accessHighlighted: PropTypes.bool.isRequired,
-    isLyric: PropTypes.bool.isRequired,
-    inPortal: PropTypes.bool.isRequired,
-    hasTodo: PropTypes.bool,
-    isPortalAnchor: PropTypes.bool.isRequired,
-    isVerseBeginningSpan: PropTypes.bool.isRequired,
-    isVerseEndingSpan: PropTypes.bool.isRequired,
-
-    anchorText: PropTypes.oneOfType([
-        PropTypes.string,
-
-        // "Bobtail's words" in M is an array.
-        PropTypes.array,
-
-        // "Ubermensch" in Golden Cord is an object.
-        PropTypes.object
-
-    ]).isRequired,
-    annotationDotKeys: PropTypes.object,
-
-    annotationIndex: PropTypes.number,
-    carouselAnnotationIndex: PropTypes.number,
-    wikiIndex: PropTypes.number,
-
-    handleAnchorClick: PropTypes.func
 }
 
 export default TextAnchor

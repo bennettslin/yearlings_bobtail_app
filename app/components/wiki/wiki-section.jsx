@@ -11,7 +11,33 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/
 // TODO: If loading time is too long, show page with a "There was a problem connecting to Wikipedia. Try again?"
 
+const mapStateToProps = ({
+    selectedSongIndex,
+    selectedWikiIndex,
+    selectedAnnotationIndex,
+    carouselAnnotationIndex,
+    isMobileWiki
+}) => ({
+    selectedSongIndex,
+    selectedWikiIndex,
+    selectedAnnotationIndex,
+    carouselAnnotationIndex,
+    isMobileWiki
+})
+
 class WikiSection extends Component {
+
+    static propTypes = {
+        // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedWikiIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
+        carouselAnnotationIndex: PropTypes.number.isRequired,
+        isMobileWiki: PropTypes.bool.isRequired,
+
+        // From parent.
+        wikiSectionRef: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -88,28 +114,4 @@ class WikiSection extends Component {
     }
 }
 
-WikiSection.propTypes = {
-    // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedWikiIndex: PropTypes.number.isRequired,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
-    carouselAnnotationIndex: PropTypes.number.isRequired,
-    isMobileWiki: PropTypes.bool.isRequired,
-
-    // From parent.
-    wikiSectionRef: PropTypes.func.isRequired
-}
-
-export default connect(({
-    selectedSongIndex,
-    selectedWikiIndex,
-    selectedAnnotationIndex,
-    carouselAnnotationIndex,
-    isMobileWiki
-}) => ({
-    selectedSongIndex,
-    selectedWikiIndex,
-    selectedAnnotationIndex,
-    carouselAnnotationIndex,
-    isMobileWiki
-}))(WikiSection)
+export default connect(mapStateToProps)(WikiSection)

@@ -9,7 +9,15 @@ const mapStateToProps = ({
     isPlaying
 }) => ({
     isPlaying
-}),
+})
+
+const verseAudioIndicatorPropTypes = {
+    // Through Redux.
+    isPlaying: PropTypes.bool.isRequired,
+
+    // From parent.
+    isSelected: PropTypes.bool.isRequired
+},
 
 VerseAudioIndicator = ({
     isPlaying,
@@ -29,12 +37,6 @@ VerseAudioIndicator = ({
     )
 }
 
-VerseAudioIndicator.propTypes = {
-    // Through Redux.
-    isPlaying: PropTypes.bool.isRequired,
-
-    // From parent.
-    isSelected: PropTypes.bool.isRequired
-}
+VerseAudioIndicator.propTypes = verseAudioIndicatorPropTypes
 
 export default connect(mapStateToProps)(VerseAudioIndicator)

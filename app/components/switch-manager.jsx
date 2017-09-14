@@ -6,11 +6,21 @@ import { connect } from 'react-redux'
 import AdminManager from './admin/admin-manager'
 import LiveManager from './main/live-manager'
 
+const mapStateToProps = ({
+    selectedAdminIndex
+}) => ({
+    selectedAdminIndex
+})
+
 /*************
  * CONTAINER *
  *************/
 
 class SwitchManager extends Component {
+
+    static propTypes = {
+        selectedAdminIndex: PropTypes.number.isRequired
+    }
 
     render() {
         const { selectedAdminIndex,
@@ -22,12 +32,4 @@ class SwitchManager extends Component {
     }
 }
 
-SwitchManager.propTypes = {
-    selectedAdminIndex: PropTypes.number.isRequired
-}
-
-export default connect(({
-    selectedAdminIndex
-}) => ({
-    selectedAdminIndex
-}))(SwitchManager)
+export default connect(mapStateToProps)(SwitchManager)

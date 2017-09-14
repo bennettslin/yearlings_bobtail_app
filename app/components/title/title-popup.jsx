@@ -6,7 +6,22 @@ import { connect } from 'react-redux'
 import TitleSection from './title-section'
 import Popup from '../popup/popup'
 
-const TitlePopup = ({
+const mapStateToProps = ({
+    selectedTitleIndex
+}) => ({
+    selectedTitleIndex
+})
+
+const titlePopupPropTypes = {
+    // Through Redux.
+    selectedTitleIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handleTitleToggle: PropTypes.func.isRequired,
+    handlePopupContainerClick: PropTypes.func.isRequired
+},
+
+TitlePopup = ({
 
     selectedTitleIndex,
     handleTitleToggle,
@@ -30,17 +45,6 @@ const TitlePopup = ({
     )
 }
 
-TitlePopup.propTypes = {
-    // Through Redux.
-    selectedTitleIndex: PropTypes.number.isRequired,
+TitlePopup.propTypes = titlePopupPropTypes
 
-    // From parent.
-    handleTitleToggle: PropTypes.func.isRequired,
-    handlePopupContainerClick: PropTypes.func.isRequired
-}
-
-export default connect(({
-    selectedTitleIndex
-}) => ({
-    selectedTitleIndex
-}))(TitlePopup)
+export default connect(mapStateToProps)(TitlePopup)

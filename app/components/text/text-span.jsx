@@ -4,7 +4,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { getFormattedLyricSpanText, getFormattedEndingVerseSpanText } from '../../helpers/format-helper'
 
-const TextSpan = ({
+const textSpanDefaultProps = {
+    inTextAnchor: false,
+    isLyric: false
+},
+
+textSpanPropTypes = {
+    // From parent.
+    text: PropTypes.string.isRequired,
+    isLyric: PropTypes.bool.isRequired,
+    inTextAnchor: PropTypes.bool.isRequired,
+    inPortal: PropTypes.bool,
+    isVerseBeginningSpan: PropTypes.bool,
+    isVerseEndingSpan: PropTypes.bool
+},
+
+TextSpan = ({
 
     text,
     isLyric,
@@ -41,26 +56,20 @@ const TextSpan = ({
     )
 }
 
-TextSpan.defaultProps = {
-    inTextAnchor: false,
-    isLyric: false
-}
-
-TextSpan.propTypes = {
-    // From parent.
-    text: PropTypes.string.isRequired,
-    isLyric: PropTypes.bool.isRequired,
-    inTextAnchor: PropTypes.bool.isRequired,
-    inPortal: PropTypes.bool,
-    isVerseBeginningSpan: PropTypes.bool,
-    isVerseEndingSpan: PropTypes.bool
-}
+TextSpan.defaultProps = textSpanDefaultProps
+TextSpan.propTypes = textSpanPropTypes
 
 /****************
  * PRESENTATION *
  ****************/
 
-const TextSpanView = ({
+const textSpanViewPropTypes = {
+    // From parent.
+    formattedText: PropTypes.string.isRequired,
+    hasFirstSpace: PropTypes.bool.isRequired
+},
+
+TextSpanView = ({
 
     formattedText,
     hasFirstSpace
@@ -73,10 +82,6 @@ const TextSpanView = ({
     </span>
 )
 
-TextSpanView.propTypes = {
-    // From parent.
-    formattedText: PropTypes.string.isRequired,
-    hasFirstSpace: PropTypes.bool.isRequired
-}
+TextSpanView.propTypes = textSpanViewPropTypes
 
 export default TextSpan

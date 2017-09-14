@@ -8,7 +8,16 @@ import TextUnit from './text-unit'
  * CONTAINER *
  *************/
 
-const TextBlock = ({
+const textBlockPropTypes = {
+    // From parent.
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.array,
+        PropTypes.object
+    ])
+},
+
+TextBlock = ({
 
     text: textEntity,
 
@@ -31,20 +40,19 @@ const TextBlock = ({
     }
 }
 
-TextBlock.propTypes = {
-    // From parent.
-    text: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.array,
-        PropTypes.object
-    ])
-}
+TextBlock.propTypes = textBlockPropTypes
 
 /****************
  * PRESENTATION *
  ****************/
 
-const TextBlockView = ({
+const textBlockViewPropTypes = {
+    // From parent.
+    textArray: PropTypes.array.isRequired,
+    inTextAnchor: PropTypes.bool
+},
+
+TextBlockView = ({
 
     textArray,
     inTextAnchor,
@@ -63,10 +71,6 @@ const TextBlockView = ({
     </span>
 )
 
-TextBlockView.propTypes = {
-    // From parent.
-    textArray: PropTypes.array.isRequired,
-    inTextAnchor: PropTypes.bool
-}
+TextBlockView.propTypes = textBlockViewPropTypes
 
 export default TextBlock

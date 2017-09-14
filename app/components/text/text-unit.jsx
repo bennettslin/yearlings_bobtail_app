@@ -6,7 +6,16 @@ import TextAnchorBlock from './text-anchor-block'
 import TextBlock from './text-block'
 import TextSpan from './text-span'
 
-const TextUnit = ({
+const textUnitPropTypes = {
+    // From parent.
+    inVerseBar: PropTypes.bool,
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object
+    ])
+},
+
+TextUnit = ({
 
     text: textEntity,
 
@@ -70,13 +79,6 @@ const TextUnit = ({
     return null
 }
 
-TextUnit.propTypes = {
-    // From parent.
-    inVerseBar: PropTypes.bool,
-    text: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.object
-    ])
-}
+TextUnit.propTypes = textUnitPropTypes
 
 export default TextUnit

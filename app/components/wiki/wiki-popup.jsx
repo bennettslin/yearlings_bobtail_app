@@ -6,7 +6,21 @@ import { connect } from 'react-redux'
 import WikiSection from './wiki-section'
 import Popup from '../popup/popup'
 
-const WikiPopup = ({
+const mapStateToProps = ({
+    selectedWikiIndex
+}) => ({
+    selectedWikiIndex
+})
+
+const wikiPopupPropTypes = {
+    // Through Redux.
+    selectedWikiIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    handleWikiToggle: PropTypes.func.isRequired
+},
+
+WikiPopup = ({
 
     selectedWikiIndex,
     handleWikiToggle,
@@ -29,15 +43,6 @@ const WikiPopup = ({
     )
 }
 
-WikiPopup.propTypes = {
-    // Through Redux.
-    selectedWikiIndex: PropTypes.number.isRequired,
+WikiPopup.propTypes = wikiPopupPropTypes
 
-    // From parent.
-    handleWikiToggle: PropTypes.func.isRequired
-}
-export default connect(({
-    selectedWikiIndex
-}) => ({
-    selectedWikiIndex
-}))(WikiPopup)
+export default connect(mapStateToProps)(WikiPopup)

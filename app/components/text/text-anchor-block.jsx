@@ -6,7 +6,28 @@ import { connect } from 'react-redux'
 import TextAnchor from './text-anchor'
 import { WIKI_INDEX } from '../../constants/lyrics'
 
-const TextAnchorBlock = ({
+const mapStateToProps = ({
+    selectedAnnotationIndex,
+    accessedAnnotationIndex,
+    accessedAnnotationAnchorIndex
+}) => ({
+    selectedAnnotationIndex,
+    accessedAnnotationIndex,
+    accessedAnnotationAnchorIndex
+})
+
+const textAnchorBlockPropTypes = {
+    // Through Redux.
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    accessedAnnotationIndex: PropTypes.number.isRequired,
+    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+
+    // From parent.
+    portalAnnotationIndex: PropTypes.number,
+    text: PropTypes.object.isRequired
+},
+
+TextAnchorBlock = ({
 
     selectedAnnotationIndex,
     accessedAnnotationIndex,
@@ -44,23 +65,6 @@ const TextAnchorBlock = ({
     )
 }
 
-TextAnchorBlock.propTypes = {
-    // Through Redux.
-    selectedAnnotationIndex: PropTypes.number.isRequired,
-    accessedAnnotationIndex: PropTypes.number.isRequired,
-    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+TextAnchorBlock.propTypes = textAnchorBlockPropTypes
 
-    // From parent.
-    portalAnnotationIndex: PropTypes.number,
-    text: PropTypes.object.isRequired
-}
-
-export default connect(({
-    selectedAnnotationIndex,
-    accessedAnnotationIndex,
-    accessedAnnotationAnchorIndex
-}) => ({
-    selectedAnnotationIndex,
-    accessedAnnotationIndex,
-    accessedAnnotationAnchorIndex
-}))(TextAnchorBlock)
+export default connect(mapStateToProps)(TextAnchorBlock)
