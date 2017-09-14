@@ -131,13 +131,6 @@ export const getStanzaTimeObject = (songIndex, stanzaTimeIndex) => {
     }
 }
 
-export const getSceneTimesArray = (songIndex) => {
-    const songObject = getSongObject(songIndex),
-        { sceneTimes: sceneTimesArray } = songObject
-
-    return sceneTimesArray
-}
-
 export const getVerseIndexForTime = (songIndex, time) => {
 
     const verseTimes = getSongVerseTimes(songIndex),
@@ -298,6 +291,23 @@ export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
 
         return foundCardObject
     }, null)
+}
+
+/**********
+ * SCENES *
+ **********/
+
+// export const getSceneObject = (songIndex, verseIndex) => {
+//     const song = getSongObject(songIndex),
+//         scenesObject = song.scenes
+//
+// }
+
+export const getSceneTimesArray = (songIndex) => {
+    const songObject = getSongObject(songIndex),
+        { sceneTimes: sceneTimesArray } = songObject
+
+    return sceneTimesArray
 }
 
 /*********

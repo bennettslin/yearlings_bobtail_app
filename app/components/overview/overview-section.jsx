@@ -59,10 +59,10 @@ class OverviewSection extends Component {
             isLogue = getSongIsLogue(renderReadySongIndex),
 
             /**
-             * Always show in phone. Also show when is logue and is heightless
-             * lyric.
+             * Always show when is song in phone. Also show when is logue and is
+             * heightless lyric.
              */
-            isToggleInOverview = getIsToggleInOverview(deviceIndex) ||
+            isToggleInOverview = (!isLogue && getIsToggleInOverview(deviceIndex)) ||
                 (isLogue && isHeightlessLyricColumn),
             isEnabled =
                 OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN &&

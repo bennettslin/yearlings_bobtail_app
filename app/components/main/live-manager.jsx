@@ -223,13 +223,14 @@ class LiveManager extends Component {
 
         return (
             <div className="live-manager">
+
+                <MainColumn {...mainColumnHandlers} />
+
                 <div className="column overview-logue-column">
                     <OverviewPopup {...overviewPopupHandlers}
                         inOverviewSubfield={false}
                     />
                 </div>
-
-                <MainColumn {...mainColumnHandlers} />
 
                 <LyricColumn {...lyricColumnHandlers} />
 

@@ -104,15 +104,31 @@
         width: ~"calc(100% - @{golden-cord-width})";
     }
 
-    .lyric-column {
+    .lyric-column, .overview-logue-column {
+        width: @golden-cord-width;
         right: 0;
     }
 
-    // For admin device width toggle. Should be the same as in constants.js.
     &.laptop-width {
         .main-column {
             width: ~"calc(100% - @{uncanny-valley-width})";
         }
+
+        .lyric-column, .overview-logue-column {
+            width: @uncanny-valley-width;
+        }
+    }
+
+    .overview-logue-column {
+
+        // TODO: Don't hard code.
+        background-image: linear-gradient(
+            to right,
+            rgba(200, 200, 200, 0),
+            rgba(200, 200, 200, 0.95) 20%,
+            rgba(200, 200, 200, 0.95) 80%,
+            rgba(200, 200, 200, 0.5)
+        );
     }
 }
 
@@ -127,8 +143,11 @@
         flex-direction: column-reverse;
     }
 
-    .lyric-column {
+    .lyric-column, .overview-logue-column {
         position: absolute;
+        height: @collapsed-lyric-section-height;
+        width: 100%;
+        bottom: 0;
     }
 
     &.heightless-lyric {

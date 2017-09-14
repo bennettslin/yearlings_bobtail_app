@@ -1,5 +1,5 @@
 .lyric-column {
-    transition: height @animation-default;
+    transition: height @animation-default, background-image @animation-default;
 
     // Keeps elements inside window!
     overflow: hidden;
@@ -15,38 +15,7 @@
     }
 }
 
-.is-desktop {
-    .lyric-column {
-        width: @golden-cord-width;
-    }
-
-    &.laptop-width {
-        .lyric-column {
-            width: @uncanny-valley-width;
-        }
-    }
-
-    &.is-song {
-        .lyric-column {
-
-            // TODO: Don't hard code.
-            background-image: linear-gradient(
-                to right,
-                rgba(200, 200, 200, 0),
-                rgba(200, 200, 200, 0.95) 20%,
-                rgba(200, 200, 200, 0.95) 80%,
-                rgba(200, 200, 200, 0.5)
-            );
-        }
-    }
-}
-
 .is-mobile {
-    .lyric-column {
-        height: @collapsed-lyric-section-height;
-        width: 100%;
-        bottom: 0;
-    }
 
     &.is-song {
         &.lyric-expanded {

@@ -1,6 +1,6 @@
 .overview-logue-column {
 
-    bottom: 0;
+    // bottom: 0;
 
     .overview {
         &.popup-transition-group {
@@ -30,6 +30,7 @@
     &.popup-wrapper {
         // width: 60%;
         // min-width: 200px;
+        position: absolute;
         max-width: 480px;
     }
 
@@ -48,21 +49,21 @@
 // Responsive rules.
 .is-desktop {
 
-    .overview-logue-column {
-        right: 0;
-        width: 60%;
-        height: calc(~"100% - @{menu-height}");
-    }
+    // .overview-logue-column {
+    //     right: 0;
+    //     width: 60%;
+    //     height: calc(~"100% - @{menu-height}");
+    // }
 }
 
 .is-mobile {
 
-    .overview-logue-column {
-        position: absolute;
-
-        width: 100%;
-        height: 60%;
-    }
+    // .overview-logue-column {
+    //     position: absolute;
+    //
+    //     width: 100%;
+    //     height: 60%;
+    // }
 
     &.mini-width {
         .overview {
@@ -73,9 +74,9 @@
     }
 
     &.heightless-lyric, &.phone-width {
-        .overview-logue-column {
-            height: calc(~"100% - @{menu-height}");
-        }
+        // .overview-logue-column {
+        //     height: calc(~"100% - @{menu-height}");
+        // }
 
         .overview {
             &.popup-wrapper {

@@ -1,31 +1,30 @@
 // Section to show the stage illustrations.
 
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 const mapStateToProps = ({
-    stageCoordinates
+    stageCoordinates,
+    renderReadySongIndex
 }) => ({
-    stageCoordinates
+    stageCoordinates,
+    renderReadySongIndex
 })
 
-// TODO: prop types
+const stageSectionPropTypes = {
+    stageCoordinates: PropTypes.shape({
+        top: PropTypes.number.isRequired,
+        left: PropTypes.number.isRequired,
+        width: PropTypes.number.isRequired,
+        height: PropTypes.number.isRequired
+    })
+},
 
-/*************
- * CONTAINER *
- *************/
+StageSection = ({
 
-const StageSection = (props) => (
-    <StageSectionView {...props} />
-)
-
-/****************
- * PRESENTATION *
- ****************/
-
-const StageSectionView = ({
-
-    stageCoordinates
+    stageCoordinates,
+    // renderReadySongIndex
 
 }) => {
 
@@ -41,16 +40,20 @@ const StageSectionView = ({
             height: `${height}px`
         }
 
+    // console.error('renderReadySongIndex', renderReadySongIndex);
+
     return (
         <div className="section stage-section">
             <div
                 className="aspect-ratio-container"
                 style={aspectRatioContainerStyle}
             >
-
+                <div className="sky" />
             </div>
         </div>
     )
 }
+
+StageSection.propTypes = stageSectionPropTypes
 
 export default connect(mapStateToProps)(StageSection)
