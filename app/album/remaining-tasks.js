@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Toggle in overview logue is wonky.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Use svg in slider.`,
         workedHours: 0,
         neededHours: 5
