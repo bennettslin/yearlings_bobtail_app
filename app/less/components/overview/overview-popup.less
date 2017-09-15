@@ -1,21 +1,25 @@
 .overview-logue-column {
 
-    // bottom: 0;
-
     .overview {
         &.popup-transition-group {
             display: flex;
-            justify-content: center;
+
+            // Desktop settings.
             align-items: center;
+
+            background-color: rgba(250, 150, 200, 0.5);
         }
     }
 }
 
 .is-song {
-    .overview {
-        &.popup-wrapper {
-            // Space for speech bubble arrow. Overridden in phone width.
-            margin-left: 16px;
+    .dots-overview-subfield {
+        .overview {
+            &.popup-wrapper {
+
+                // Space for speech bubble arrow. Overridden in phone width.
+                margin-left: 16px;
+            }
         }
     }
 }
@@ -26,11 +30,16 @@
     flex-grow: 1;
 }
 
+.dots-overview-subfield {
+    .overview {
+        &.popup-wrapper {
+            position: absolute;
+        }
+    }
+}
+
 .overview {
     &.popup-wrapper {
-        // width: 60%;
-        // min-width: 200px;
-        position: absolute;
         max-width: 480px;
     }
 
@@ -46,24 +55,17 @@
     }
 }
 
-// Responsive rules.
-.is-desktop {
-
-    // .overview-logue-column {
-    //     right: 0;
-    //     width: 60%;
-    //     height: calc(~"100% - @{menu-height}");
-    // }
-}
-
 .is-mobile {
 
-    // .overview-logue-column {
-    //     position: absolute;
-    //
-    //     width: 100%;
-    //     height: 60%;
-    // }
+    .overview-logue-column {
+
+        .overview {
+            &.popup-transition-group {
+                flex-direction: column-reverse;
+                padding-bottom: 25px;
+            }
+        }
+    }
 
     &.mini-width {
         .overview {
@@ -74,9 +76,6 @@
     }
 
     &.heightless-lyric, &.phone-width {
-        // .overview-logue-column {
-        //     height: calc(~"100% - @{menu-height}");
-        // }
 
         .overview {
             &.popup-wrapper {
@@ -106,11 +105,5 @@
                 left: 0;
             }
         }
-
-        // &.is-song {
-        //     .overview.popup-wrapper {
-        //         margin-left: 0;
-        //     }
-        // }
     }
 }
