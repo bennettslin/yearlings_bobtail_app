@@ -2471,5 +2471,10 @@ module.exports = [
         taskName: `Put logue overview over lyrics.`,
         workedHours: 3,
         neededHours: 3
-    }
+    },
+    {
+        taskName: `Begin linking scenes.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

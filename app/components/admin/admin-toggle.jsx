@@ -7,6 +7,7 @@ const AdminToggle = ({
     // From props.
     isHeavyRenderReady,
     renderReadySongIndex,
+    currentSceneIndex,
     isPlaying,
     selectedTimePlayed,
     updatedTimePlayed,
@@ -21,6 +22,9 @@ const AdminToggle = ({
         </div>
         <div>
             renderReadySongIndex: {renderReadySongIndex}
+        </div>
+        <div>
+            currentSceneIndex: {currentSceneIndex}
         </div>
         <div>
             now {isPlaying ? 'playing' : 'paused'}
@@ -44,6 +48,7 @@ export default connect(({
     selectedSongIndex,
     isHeavyRenderReady,
     renderReadySongIndex,
+    currentSceneIndex,
     isPlaying,
     selectedTimePlayed,
     updatedTimePlayed,
@@ -54,6 +59,7 @@ export default connect(({
     selectedSongIndex,
     isHeavyRenderReady,
     renderReadySongIndex,
+    currentSceneIndex,
     isPlaying,
     selectedTimePlayed,
     updatedTimePlayed,

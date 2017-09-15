@@ -1,59 +1,54 @@
 // Section to show the stage illustrations.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import StageSceneSection from './stage-scene-section'
 
 const mapStateToProps = ({
-    stageCoordinates,
-    renderReadySongIndex
+    stageCoordinates
 }) => ({
-    stageCoordinates,
-    renderReadySongIndex
+    stageCoordinates
 })
 
-const stageSectionPropTypes = {
-    stageCoordinates: PropTypes.shape({
-        top: PropTypes.number.isRequired,
-        left: PropTypes.number.isRequired,
-        width: PropTypes.number.isRequired,
-        height: PropTypes.number.isRequired
-    })
-},
+class StageSection extends Component {
 
-StageSection = ({
+    static propTypes = {
+        stageCoordinates: PropTypes.shape({
+            top: PropTypes.number.isRequired,
+            left: PropTypes.number.isRequired,
+            width: PropTypes.number.isRequired,
+            height: PropTypes.number.isRequired
+        })
+    }
 
-    stageCoordinates,
-    // renderReadySongIndex
+    render() {
 
-}) => {
+        const { stageCoordinates } = this.props,
 
-    const { top,
-            left,
-            width,
-            height } = stageCoordinates,
+            { top,
+              left,
+              width,
+              height } = stageCoordinates,
 
-        aspectRatioContainerStyle = {
-            top: `${top}px`,
-            left: `${left}px`,
-            width: `${width}px`,
-            height: `${height}px`
-        }
+            aspectRatioContainerStyle = {
+                top: `${top}px`,
+                left: `${left}px`,
+                width: `${width}px`,
+                height: `${height}px`
+            }
 
-    // console.error('renderReadySongIndex', renderReadySongIndex);
-
-    return (
-        <div className="section stage-section">
-            <div
-                className="aspect-ratio-container"
-                style={aspectRatioContainerStyle}
-            >
-                <div className="sky" />
+        return (
+            <div className="section stage-section">
+                <div
+                    className="aspect-ratio-container"
+                    style={aspectRatioContainerStyle}
+                >
+                    <StageSceneSection />
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
-
-StageSection.propTypes = stageSectionPropTypes
 
 export default connect(mapStateToProps)(StageSection)

@@ -297,11 +297,38 @@ export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
  * SCENES *
  **********/
 
-// export const getSceneObject = (songIndex, verseIndex) => {
-//     const song = getSongObject(songIndex),
-//         scenesObject = song.scenes
-//
-// }
+export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
+    const song = getSongObject(songIndex),
+        { sceneFirstVerseIndices } = song
+
+    if (sceneFirstVerseIndices) {
+
+        let counter = 0,
+            sceneIndex = 0
+
+        while (counter < sceneFirstVerseIndices.length) {
+            const currentVerseIndex = sceneFirstVerseIndices[counter]
+
+            if (verseIndex < currentVerseIndex) {
+                break
+            }
+
+            sceneIndex = counter
+            counter++
+        }
+
+        return sceneIndex
+    }
+
+    return -1
+}
+
+export const getSceneObject = (songIndex, sceneIndex = 0) => {
+    const song = getSongObject(songIndex),
+        sceneObject = song.scenes
+
+    return sceneObject[sceneIndex]
+}
 
 export const getSceneTimesArray = (songIndex) => {
     const songObject = getSongObject(songIndex),

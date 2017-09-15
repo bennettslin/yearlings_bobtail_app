@@ -44,6 +44,7 @@ module.exports = {
     RENDER_READY_SONG_INDEX: 'renderReadySongIndex',
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
     INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',
+    CURRENT_SCENE_INDEX: 'currentSceneIndex',
     IS_LYRIC_EXPANDED: 'isLyricExpanded',
     IS_VERSE_BAR_ABOVE: 'isVerseBarAbove',
     IS_VERSE_BAR_BELOW: 'isVerseBarBelow',

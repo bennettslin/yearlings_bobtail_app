@@ -5,6 +5,7 @@ import { APP_MOUNTED,
          RENDER_READY_ANNOTATION_INDEX,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
+         CURRENT_SCENE_INDEX,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
@@ -59,6 +60,15 @@ export const CarouselAnnotationIndexReducer = (state = 0, action) => {
 export const InteractivatedVerseIndexReducer = (state = -1, action) => {
     switch (action.type) {
         case INTERACTIVATED_VERSE_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const CurrentSceneIndexReducer = (state = -1, action) => {
+    switch (action.type) {
+        case CURRENT_SCENE_INDEX:
             return action.payload
         default:
             return state
