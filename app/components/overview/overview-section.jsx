@@ -11,12 +11,10 @@ import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({
     deviceIndex,
-    isHeightlessLyricColumn,
     selectedOverviewIndex,
     renderReadySongIndex
 }) => ({
     deviceIndex,
-    isHeightlessLyricColumn,
     selectedOverviewIndex,
     renderReadySongIndex
 })
@@ -51,7 +49,6 @@ class OverviewSection extends Component {
 
     render() {
         const { deviceIndex,
-                isHeightlessLyricColumn,
                 selectedOverviewIndex,
                 renderReadySongIndex } = this.props,
 
@@ -63,8 +60,7 @@ class OverviewSection extends Component {
              * Always show when is song in phone. Also show when is logue and is
              * heightless lyric.
              */
-            isToggleInOverview = (!isLogue && getIsToggleInOverview(deviceIndex)) ||
-                (isLogue && isHeightlessLyricColumn),
+            isToggleInOverview = !isLogue && getIsToggleInOverview(deviceIndex),
             isEnabled =
                 OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN &&
                 !isLogue

@@ -2477,4 +2477,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Get device index from state when app is mounting.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
