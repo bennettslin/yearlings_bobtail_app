@@ -63,10 +63,10 @@ export const shouldShowAnnotationForColumn = ({
     selectedSongIndex,
     selectedLyricColumnIndex,
     annotationIndex,
-
     deviceIndex
 
 }) => {
+
     const showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, deviceIndex),
         annotation = getAnnotationObject(selectedSongIndex, annotationIndex),
         columnIndex = annotation[COLUMN_INDEX],

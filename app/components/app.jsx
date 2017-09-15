@@ -69,7 +69,10 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            songChangeTimeoutId: null
+            songChangeTimeoutId: null,
+
+            // Device index is needed in state only upon mount.
+            deviceIndex: -1
         }
     }
 
@@ -88,12 +91,14 @@ class App extends Component {
     }
 
     componentDidMount() {
-        const { deviceIndex,
-                selectedAnnotationIndex,
+        const { selectedAnnotationIndex,
                 selectedDotKeys,
                 selectedLyricColumnIndex,
                 selectedSongIndex,
-                selectedVerseIndex } = this.props
+                selectedVerseIndex } = this.props,
+
+            // At this point, deviceIndex still hasn't come through in props.
+            { deviceIndex } = this.state
 
         this.props.setAppMounted(true)
 
@@ -703,10 +708,13 @@ class App extends Component {
             selectedAnnotationIndex
         )
 
-        // Handle doublespeaker columns only when lyrics are ready to render.
-        this.props.setShowOneOfTwoLyricColumns(
-            getShowOneOfTwoLyricColumns(selectedSongIndex, this.props.deviceIndex)
-        )
+        if (this.props.appMounted) {
+
+            // Handle doublespeaker columns only when lyrics are ready to render.
+            this.props.setShowOneOfTwoLyricColumns(
+                getShowOneOfTwoLyricColumns(selectedSongIndex, this.props.deviceIndex)
+            )
+        }
 
         this.props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
             selectedSongIndex,
@@ -1122,7 +1130,10 @@ class App extends Component {
             isCarouselExpandable = getIsCarouselExpandable(deviceIndex),
             isLyricExpandable = getIsLyricExpandable(deviceIndex),
             isHeightlessLyricColumn = getIsHeightlessLyricColumn({ deviceIndex, windowHeight, windowWidth }),
-            showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(selectedSongIndex, deviceIndex)
+            showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(
+                selectedSongIndex,
+                deviceIndex
+            )
 
         /**
          * Deselect selected annotation if not in new shown column. Do it here,
@@ -1134,6 +1145,7 @@ class App extends Component {
             })
         }
 
+        this.setState({ deviceIndex })
         this.props.setDeviceIndex(deviceIndex)
         this.props.setWindowHeight(windowHeight)
         this.props.setWindowWidth(windowWidth)
