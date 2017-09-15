@@ -2467,4 +2467,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Put logue overview over lyrics.`,
+        workedHours: 3,
+        neededHours: 3
+    }
 ]

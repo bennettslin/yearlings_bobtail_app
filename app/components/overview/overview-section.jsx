@@ -58,6 +58,7 @@ class OverviewSection extends Component {
             overviewText = getSongOverview(renderReadySongIndex),
             isLogue = getSongIsLogue(renderReadySongIndex),
 
+            // TODO: Revisit whether to show toggle in logue when it is heightless lyric.
             /**
              * Always show when is song in phone. Also show when is logue and is
              * heightless lyric.
