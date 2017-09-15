@@ -37,8 +37,8 @@ const rootReducer = combineReducers({
 
     appMounted: AppMountedReducer,
     isHeavyRenderReady: IsHeavyRenderReadyReducer,
-    renderReadyAnnotationIndex: RenderReadyAnnotationIndexReducer,
     renderReadySongIndex: RenderReadySongIndexReducer,
+    renderReadyAnnotationIndex: RenderReadyAnnotationIndexReducer,
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
     interactivatedVerseIndex: InteractivatedVerseIndexReducer,
     currentSceneIndex: CurrentSceneIndexReducer,

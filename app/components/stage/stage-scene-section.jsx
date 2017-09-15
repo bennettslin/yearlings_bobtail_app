@@ -26,7 +26,7 @@ class StageSceneSection extends Component {
 
             sceneObject = getSceneObject(renderReadySongIndex, currentSceneIndex)
 
-        console.error('sceneObject', sceneObject);
+        console.error('sceneObject', sceneObject, renderReadySongIndex);
 
         return (
             <div className="section stage-scene-section">

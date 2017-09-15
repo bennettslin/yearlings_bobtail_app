@@ -2473,8 +2473,8 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Begin linking scenes.`,
-        workedHours: 2,
-        neededHours: 2
+        taskName: `Link scene to stage section strategically.`,
+        workedHours: 3,
+        neededHours: 3
     },
 ]

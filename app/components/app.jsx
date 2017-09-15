@@ -338,6 +338,9 @@ class App extends Component {
             this._selectTimeAndVerse({
                 selectedTimePlayed,
                 selectedVerseIndex,
+
+                // When time is being selected, always render verse immediately.
+                renderVerseImmediately: true,
                 isPlayerAdvancing
             })
         }
@@ -684,7 +687,8 @@ class App extends Component {
 
     _setIsHeavyRenderReady(
         selectedSongIndex = this.props.selectedSongIndex,
-        selectedAnnotationIndex = this.props.selectedAnnotationIndex
+        selectedAnnotationIndex = this.props.selectedAnnotationIndex,
+        selectedVerseIndex = this.props.selectedVerseIndex
     ) {
 
         this.props.setIsHeavyRenderReady(
@@ -704,10 +708,9 @@ class App extends Component {
             getShowOneOfTwoLyricColumns(selectedSongIndex, this.props.deviceIndex)
         )
 
-
         this.props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
             selectedSongIndex,
-            this.props.selectedVerseIndex
+            selectedVerseIndex
         ))
     }
 
@@ -1029,11 +1032,19 @@ class App extends Component {
         selectedSongIndex = this.props.selectedSongIndex
     }) {
         const songVerseTimes = getSongVerseTimes(selectedSongIndex),
-            selectedTimePlayed = songVerseTimes[selectedVerseIndex]
+            selectedTimePlayed = songVerseTimes[selectedVerseIndex],
+
+            /**
+             * If selecting or changing verse in same song, change index to be
+             * rendered right away.
+             */
+            renderVerseImmediately =
+                selectedSongIndex === this.props.selectedSongIndex
 
         this._selectTimeAndVerse({
             selectedTimePlayed,
-            selectedVerseIndex
+            selectedVerseIndex,
+            renderVerseImmediately
         })
     }
 
@@ -1053,6 +1064,7 @@ class App extends Component {
     _selectTimeAndVerse({
         selectedTimePlayed,
         selectedVerseIndex,
+        renderVerseImmediately,
         isPlayerAdvancing
     }) {
         /**
@@ -1069,6 +1081,15 @@ class App extends Component {
          */
         if (!isPlayerAdvancing) {
             this.props.setUpdatedTimePlayed(selectedTimePlayed)
+        }
+
+        // Render verse and scene immediately.
+        if (renderVerseImmediately) {
+
+            this.props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
+                this.props.selectedSongIndex,
+                selectedVerseIndex
+            ))
         }
     }
 
