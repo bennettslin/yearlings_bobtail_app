@@ -99,21 +99,21 @@ module.exports = {
                 esther: {
                     youngGirl: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.15,
                         description: 'side, walking'
                     }
                 },
                 anita: {
                     youngGirl: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.15,
                         description: 'side, walking'
                     },
                 },
                 youngBennett: {
                     youngBoy: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.15,
                         description: 'side, turned, looking at Bennetts'
                     },
                 },

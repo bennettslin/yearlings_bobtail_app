@@ -45,7 +45,7 @@ module.exports = {
                 esther: {
                     youngSita: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.15,
                         description: 'side angle, sobbing'
                     }
                 }
@@ -194,7 +194,7 @@ module.exports = {
                 esther: {
                     youngSita: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.15,
                         description: 'side angle, sobbing uncontrollably'
                     }
                 }

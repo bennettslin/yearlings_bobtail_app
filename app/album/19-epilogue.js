@@ -14,19 +14,19 @@ module.exports = {
                 },
                 anita: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.15,
                     realHeight: `3'9"`,
                     description: 'standing'
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.15,
                     realHeight: `3'6"`,
                     description: 'standing'
                 },
                 esther: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.15,
                     realHeight: `3'10"`,
                     description: 'standing'
                 },
@@ -44,7 +44,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.15,
                     realHeight: `3'5"`,
                     description: 'standing'
                 },
