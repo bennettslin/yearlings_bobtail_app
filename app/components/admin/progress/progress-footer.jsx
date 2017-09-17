@@ -45,9 +45,9 @@ const ProgressFooterView = ({
         {neededHours &&
             <div className="text-cell footer">
                 <div>{parseInt(neededHours)} - {parseInt(workedHours)} = {parseInt(remainingHours)}h</div>
-                <div>needed time: {neededTime}</div>
-                <div>worked time: {workedTime}</div>
-                <div>remaining time: {remainingTime}</div>
+                <div>needed time: {parseInt(neededTime)}</div>
+                <div>worked time: {parseInt(workedTime)}</div>
+                <div>remaining time: {parseInt(remainingTime)}</div>
             </div>
         }
     </div>

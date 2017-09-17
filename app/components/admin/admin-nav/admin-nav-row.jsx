@@ -68,7 +68,7 @@ const AdminNavRowView = ({
                 {songTitle}
             </a>
             <span className="text-cell figure">
-                {sumTask.workedHours}/{sumTask.neededHours}h
+                {parseInt(sumTask.workedHours)}/{parseInt(sumTask.neededHours)}h
             </span>
         </div>
     </div>
