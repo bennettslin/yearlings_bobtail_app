@@ -1,8 +1,8 @@
 module.exports = [
     {
-        taskName: `Toggle in overview logue is wonky.`,
+        taskName: `Don't animate lyrics when not rendered.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: `Use svg in slider.`,

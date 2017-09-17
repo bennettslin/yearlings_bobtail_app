@@ -59,7 +59,7 @@ module.exports = {
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     description: 'side, eager'
                 }
             }
