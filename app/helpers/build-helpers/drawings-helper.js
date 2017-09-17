@@ -97,7 +97,7 @@ export const adminFinaliseDrawings = (album) => {
                  * the latest task. Skeletons is done. Now it's shoes.
                  */
                 if (roleObject.todo) {
-                    if (descriptionEntity.workedHours < 1.15) {
+                    if (descriptionEntity.workedHours < 1.1) {
                         rolesTodoCount++
                     }
                 }

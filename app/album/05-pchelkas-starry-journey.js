@@ -26,12 +26,12 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1,
-                    description: 'lying down, drawing, guilty'
+                    workedHours: 1.1,
+                    description: 'lying on stomach, drawing, guilty'
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 1.15,
+                    workedHours: 1.1,
                     description: 'w sitting, blissful'
                 }
             }
@@ -42,7 +42,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     description: 'side, sitting up in bed, feigning sick'
                 }
             }
@@ -53,7 +53,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     description: 'in bed, asleep, turned away'
                 }
             }
@@ -64,7 +64,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     description: 'side, sitting, shaken, scared'
                 }
             }
@@ -75,7 +75,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     description: 'side, stoic'
                 },
                 brad: {
@@ -100,7 +100,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     description: 'side, wistful'
                 },
                 brad: {
@@ -132,12 +132,12 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     description: 'front, sitting, sheepish'
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 1.15,
+                    workedHours: 1.1,
                     description: 'front, sitting, staring'
                 },
                 mother: {
