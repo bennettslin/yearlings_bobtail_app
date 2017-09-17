@@ -32,7 +32,7 @@ module.exports = {
                 },
                 willy: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     realHeight: `5'3"`,
                     description: 'standing'
                 },
