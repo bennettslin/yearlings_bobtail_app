@@ -34,13 +34,13 @@ module.exports = {
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     description: 'side seated, laughing, braids trailing'
                 },
                 brad: {
                     jewishBoy: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.1,
                         description: 'side seated, turned away, pointing to window'
                     }
                 }
@@ -57,22 +57,18 @@ module.exports = {
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     description: 'indignant, yelling at bullies'
                 },
                 andrew: {
-                    bully: {
-                        todo: true,
-                        workedHours: 1,
-                        description: 'laughing, feigning fear of Sasha'
-                    }
+                    todo: true,
+                    workedHours: 1.1,
+                    description: 'laughing, feigning fear of Sasha'
                 },
                 brad: {
-                    bully: {
-                        todo: true,
-                        workedHours: 1,
-                        description: 'laughing, tying up Bennett'
-                    }
+                    todo: true,
+                    workedHours: 1.1,
+                    description: 'laughing, tying up Bennett'
                 }
             }
         },

@@ -74,19 +74,19 @@ module.exports = {
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     realHeight: `4'1"`,
                     description: 'standing'
                 },
                 brad: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     realHeight: `4'6"`,
                     description: 'standing'
                 },
                 andrew: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.1,
                     realHeight: `4'7"`,
                     description: 'standing'
                 },

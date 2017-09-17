@@ -79,18 +79,14 @@ module.exports = {
                     description: 'side, stoic'
                 },
                 brad: {
-                    bully: {
-                        todo: true,
-                        workedHours: 1,
-                        description: 'front angle, gesturing at friend to leave'
-                    }
+                    todo: true,
+                    workedHours: 1.1,
+                    description: 'front angle, gesturing at friend to leave'
                 },
                 andrew: {
-                    bully: {
-                        todo: true,
-                        workedHours: 1,
-                        description: 'side angle, throwing rocks, angry'
-                    }
+                    todo: true,
+                    workedHours: 1.1,
+                    description: 'side angle, throwing rocks, angry'
                 }
             }
         },
@@ -104,23 +100,19 @@ module.exports = {
                     description: 'side, wistful'
                 },
                 brad: {
-                    bully: {
-                        todo: true,
-                        workedHours: 1,
-                        description: 'eating chips'
-                    }
+                    todo: true,
+                    workedHours: 1.1,
+                    description: 'eating chips'
                 },
                 andrew: {
-                    bully: {
-                        todo: true,
-                        workedHours: 1,
-                        description: 'playing guitar like an amateur'
-                    }
+                    todo: true,
+                    workedHours: 1.1,
+                    description: 'playing guitar like an amateur'
                 },
                 sasha: {
                     popularGirl: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.1,
                         description: 'back'
                     }
                 }
