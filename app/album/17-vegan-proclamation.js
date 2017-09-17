@@ -54,12 +54,12 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'front, introducing miriam'
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'side, eager'
                 }
             }

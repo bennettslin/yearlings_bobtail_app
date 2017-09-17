@@ -37,7 +37,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'side angle, looking down stairs'
                 }
             }
@@ -48,7 +48,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'side angle, peeking out from gate'
                 }
             }
@@ -59,7 +59,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'getting off rickshaw bike'
                 }
             }
@@ -70,7 +70,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'side back, looking out to ocean'
                 }
             }
@@ -81,7 +81,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'peering down from buoy'
                 }
             }
@@ -92,12 +92,12 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'hugging self'
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'mermaid'
                 }
             }
@@ -108,7 +108,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'side angle, crouched in sand, looking back'
                 }
             }

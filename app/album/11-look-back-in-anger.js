@@ -38,7 +38,7 @@ module.exports = {
                 },
                 wade: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'side, drinking beer'
                 },
                 amy: {
@@ -69,7 +69,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'side, walking, carrying drums, smiling at Mara'
                 },
                 mara: {
@@ -110,7 +110,7 @@ module.exports = {
                 },
                 wade: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'front, talking to Stephanie'
                 }
             }

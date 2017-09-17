@@ -45,7 +45,7 @@ module.exports = {
                 esther: {
                     youngSita: {
                         todo: true,
-                        workedHours: 1.1,
+                        workedHours: 1.16,
                         description: 'side angle, sobbing'
                     }
                 }
@@ -67,12 +67,12 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'sitting, hurt, lashing out in anger'
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'side angle, consoling, cautious'
                 }
             }
@@ -150,7 +150,7 @@ module.exports = {
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 1.1,
+                    workedHours: 1.16,
                     description: 'side angle, cocky, confident'
                 },
                 liz: {
@@ -194,7 +194,7 @@ module.exports = {
                 esther: {
                     youngSita: {
                         todo: true,
-                        workedHours: 1.1,
+                        workedHours: 1.16,
                         description: 'side angle, sobbing uncontrollably'
                     }
                 }
