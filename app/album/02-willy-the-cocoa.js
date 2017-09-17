@@ -73,7 +73,7 @@ module.exports = {
             actors: {
                 father: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, running, angry'
                 },
                 christopher: {
