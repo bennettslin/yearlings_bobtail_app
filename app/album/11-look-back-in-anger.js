@@ -30,9 +30,9 @@ module.exports = {
                     description: 'side angle, playing bass, looking cool'
                 },
                 tomer: {
-                    hipster: {
+                    shane: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'side angle, holding beer, turning to make room'
                     }
                 },

@@ -77,9 +77,9 @@ module.exports = {
                     description: 'squatting, back turned, putting bass back in case'
                 },
                 tomer: {
-                    hipster: {
+                    shane: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'chatting with Bennett, gushing about music'
                     }
                 }
@@ -148,7 +148,7 @@ module.exports = {
                 howie: {
                     maskedMan: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'checking watch'
                     }
                 }
@@ -166,7 +166,7 @@ module.exports = {
                 howie: {
                     maskedMan: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'looking at Bennett'
                     }
                 }

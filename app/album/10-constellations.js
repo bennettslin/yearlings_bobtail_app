@@ -35,12 +35,12 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, walking'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, walking'
                 }
             }
@@ -61,12 +61,12 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side angle, holding large bottle'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side angle, feigning superiority'
                 }
             }
@@ -87,12 +87,12 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side angle, bored by conversation'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side angle, play fighting'
                 }
             }
@@ -113,12 +113,12 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side angle, arm around Ana'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side angle, squatting, pouring water on grave'
                 }
             }
@@ -139,12 +139,12 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'driving car, alert, wigging out'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'back angle, sleeping in car'
                 }
             }
@@ -160,7 +160,7 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'downstairs, in agony'
                 }
             }

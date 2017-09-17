@@ -33,7 +33,7 @@ const TaskRowView = ({
             </span>
             {task.neededHours &&
                 <span className="text-cell figure">
-                    {task.workedHours}/{task.neededHours}h
+                    {parseInt(task.workedHours)}/{parseInt(task.neededHours)}h
                 </span>
             }
         </div>

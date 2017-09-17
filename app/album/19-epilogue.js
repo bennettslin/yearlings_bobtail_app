@@ -62,13 +62,13 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     realHeight: `6'0"`,
                     description: 'standing'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     realHeight: `5'6"`,
                     description: 'standing'
                 },
