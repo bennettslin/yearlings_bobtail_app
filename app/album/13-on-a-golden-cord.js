@@ -17,7 +17,14 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
-            description: 'Bennett is walking down street.'
+            description: 'Bennett is walking down street.',
+            actors: {
+                bennett: {
+                    todo: true,
+                    workedHours: 1.16,
+                    description: 'side angle, cradling bracelet, blank'
+                }
+            }
         },
         {
             unitIndex: 3,
@@ -25,7 +32,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side angle, disingenuously consoling'
                 },
                 liz: {
@@ -43,13 +50,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'back, cradling bracelet, blank'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'back, shaking fist at sky'
                     }
                 },
@@ -61,13 +68,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side angle, playful, waving'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'back, playful'
                     }
                 },
@@ -86,13 +93,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'back, consoling'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'back, head in hands, holding bracelet'
                     }
                 },

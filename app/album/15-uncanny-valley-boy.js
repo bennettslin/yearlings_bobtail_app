@@ -24,7 +24,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'lying sitting up, arm around Miriam, scared, guilty'
                 },
                 miriam: {
@@ -129,8 +129,8 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1,
-                        description: 'side, squatting, recording, dejected'
+                        workedHours: 1.16,
+                        description: 'back, squatting, recording, dejected'
                     }
                 },
                 mother: {

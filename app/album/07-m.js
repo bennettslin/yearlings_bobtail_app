@@ -18,7 +18,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'looking at Leonard Cohen poster'
                 }
             }
@@ -46,7 +46,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'sitting on floor, back turned, playing keyboard'
                     }
                 }
@@ -58,7 +58,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'chatting with hipster, paying attention to Mara'
                 },
                 jacob: {
@@ -91,7 +91,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'sitting, silently eating burger, uncomfortable'
                 },
                 jacob: {
@@ -117,7 +117,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, walking, sulking with head down'
                 },
                 miriam: {
@@ -135,7 +135,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, looking back at baby'
                 },
                 miriam: {
@@ -160,7 +160,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, inspired by sudden thought'
                 },
                 howie: {
