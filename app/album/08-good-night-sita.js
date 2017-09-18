@@ -65,7 +65,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side angle, friendly'
                 },
                 stephanie: {
