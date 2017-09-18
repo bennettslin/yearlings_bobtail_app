@@ -122,7 +122,7 @@ module.exports = {
                 },
                 stephanie: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
