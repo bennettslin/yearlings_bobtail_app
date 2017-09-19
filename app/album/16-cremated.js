@@ -23,7 +23,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'sitting in car, putting on perfume'
                 }
             }
@@ -39,7 +39,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'back angle, eyes closed, trying to get off'
                 }
             }
@@ -55,7 +55,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'back angle, giving blowjob'
                 }
             }
@@ -77,7 +77,7 @@ module.exports = {
             actors: {
                 miriam: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'serving in tennis'
                 }
             }
@@ -93,7 +93,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, looking back, reversing car'
                 }
             }
