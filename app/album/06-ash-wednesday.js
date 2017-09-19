@@ -23,7 +23,7 @@ module.exports = {
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'walking away, in a bad mood'
                 }
             }
@@ -39,7 +39,7 @@ module.exports = {
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'sitting upright, droll smile'
                 }
             }
@@ -91,7 +91,7 @@ module.exports = {
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'walking forward, confused and curious at Bennett'
                 }
             }

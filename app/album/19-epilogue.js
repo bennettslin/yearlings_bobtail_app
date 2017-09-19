@@ -104,7 +104,7 @@ module.exports = {
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     realHeight: `4'11"`,
                     description: 'standing'
                 },
@@ -134,7 +134,7 @@ module.exports = {
                 },
                 mara: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     realHeight: `5'0"`,
                     description: 'standing'
                 },
