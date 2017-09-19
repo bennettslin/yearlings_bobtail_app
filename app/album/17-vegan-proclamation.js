@@ -124,7 +124,7 @@ module.exports = {
                 amy: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'back, passing out flyers'
                     }
                 },
