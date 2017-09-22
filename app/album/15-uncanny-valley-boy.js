@@ -111,7 +111,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'making out with Miriam, holding melodica'
                     }
                 }

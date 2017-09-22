@@ -50,21 +50,21 @@ module.exports = {
                 catherine: {
                     gopi: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'dancing'
                     }
                 },
                 mara: {
                     gopi: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'dancing'
                     }
                 },
                 miriam: {
                     gopi: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'dancing'
                     }
                 },

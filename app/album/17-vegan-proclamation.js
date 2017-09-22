@@ -138,7 +138,7 @@ module.exports = {
                 wade: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'standing, demonstrating'
                     }
                 }
