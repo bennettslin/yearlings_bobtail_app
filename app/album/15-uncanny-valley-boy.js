@@ -105,7 +105,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, making out with Bennett'
                 },
                 stephanie: {
@@ -173,7 +173,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, seeking protection'
                 },
                 miriam: {
