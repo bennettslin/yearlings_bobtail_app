@@ -57,7 +57,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'front angle, wincing'
                 },
                 father: {
@@ -83,7 +83,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'front, dismissive, not feeling bad'
                 },
                 mother: {
@@ -123,7 +123,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'concerned'
                 },
                 stephanie: {
