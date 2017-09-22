@@ -121,13 +121,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, sitting on edge of bed, discontented'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'reflection'
                     }
                 },
