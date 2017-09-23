@@ -132,7 +132,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'side angle, old, lying, dying'
                     }
                 }

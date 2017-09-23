@@ -134,14 +134,14 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'lying, reaching forward to touch Bennett'
                     }
                 },
                 lizReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'reflection'
                     }
                 }

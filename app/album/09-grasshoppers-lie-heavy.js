@@ -162,27 +162,27 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, standing beside bed, unsure'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'reflection'
                     }
                 },
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'front, sitting on bed, irreverently reassuring'
                     }
                 },
                 lizReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'reflection'
                     }
                 },
@@ -194,27 +194,27 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'side, about to stick it in'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'reflection'
                     }
                 },
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'side, spread open'
                     }
                 },
                 lizReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'reflection'
                     }
                 },
@@ -226,27 +226,27 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'lying down, warm, content, slightly worried'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'reflection'
                     }
                 },
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'lying down, warm, content, slightly worried'
                     }
                 },
                 lizReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'reflection'
                     }
                 }

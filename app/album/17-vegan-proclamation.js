@@ -87,26 +87,26 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'Lying in bed, on phone with Bennett'
                     }
                 },
                 lizReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'reflection'
                     }
                 },
                 khari: {
                     todo: true,
-                    workedHours: 1,
+                    workedHours: 1.16,
                     description: 'lying in bed, caressing Sita'
                 },
                 khariReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1,
+                        workedHours: 1.16,
                         description: 'reflection'
                     }
                 },
