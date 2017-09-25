@@ -27,17 +27,17 @@ module.exports = {
             actors: {
                 anita: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, rushing, exasperated'
                 },
                 esther: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, looking at Anita'
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, running, panicked'
                 }
             }
@@ -48,17 +48,17 @@ module.exports = {
             actors: {
                 anita: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'front, playing ball, offended'
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'sitting, flustered'
                 },
                 esther: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, skipping, pointing back and laughing'
                 }
             }
@@ -69,7 +69,7 @@ module.exports = {
             actors: {
                 youngBennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, in bathtub, downcast'
                 }
             }
@@ -80,12 +80,12 @@ module.exports = {
             actors: {
                 anita: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'back, squatting, smiling'
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, facing front, singing, smiling'
                 }
             }

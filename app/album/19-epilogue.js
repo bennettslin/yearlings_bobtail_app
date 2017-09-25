@@ -14,19 +14,19 @@ module.exports = {
                 },
                 anita: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `3'9"`,
                     description: 'standing'
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `3'6"`,
                     description: 'standing'
                 },
                 esther: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `3'10"`,
                     description: 'standing'
                 },
@@ -44,13 +44,13 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `3'5"`,
                     description: 'standing'
                 },
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `4'2"`,
                     description: 'standing'
                 },
@@ -74,19 +74,19 @@ module.exports = {
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `4'1"`,
                     description: 'standing'
                 },
                 brad: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `4'6"`,
                     description: 'standing'
                 },
                 andrew: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `4'7"`,
                     description: 'standing'
                 },

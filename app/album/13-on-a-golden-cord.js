@@ -106,21 +106,21 @@ module.exports = {
                 esther: {
                     youngGirl: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'side, walking'
                     }
                 },
                 anita: {
                     youngGirl: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'side, walking'
                     },
                 },
                 youngBennett: {
                     youngBoy: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'side, turned, looking at Bennetts'
                     },
                 },
