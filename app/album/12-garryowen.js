@@ -44,7 +44,7 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side angle, eagerly aggressive, about to punch car'
                 },
                 ana: {
@@ -54,7 +54,7 @@ module.exports = {
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'front, clutching at fist, laughing through pain'
                 }
             }
@@ -93,7 +93,7 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'front, playfully giving Miriam a noogie'
                 },
                 ana: {

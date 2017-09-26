@@ -67,7 +67,7 @@ module.exports = {
                 nestor: {
                     jogger: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'side, jogging, spry'
                     }
                 }

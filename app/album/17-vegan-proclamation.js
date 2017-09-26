@@ -54,12 +54,12 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'front, introducing miriam'
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, eager'
                 }
             }
@@ -138,7 +138,7 @@ module.exports = {
                 wade: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'standing, demonstrating'
                     }
                 }

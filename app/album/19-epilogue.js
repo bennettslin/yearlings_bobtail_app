@@ -62,13 +62,13 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `6'0"`,
                     description: 'standing'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'6"`,
                     description: 'standing'
                 },
@@ -92,7 +92,7 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'8"`,
                     description: 'standing'
                 },
@@ -110,7 +110,7 @@ module.exports = {
                 },
                 wade: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'10"`,
                     description: 'standing'
                 },
@@ -128,7 +128,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'11"`,
                     description: 'standing'
                 },
@@ -164,7 +164,7 @@ module.exports = {
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'7"`,
                     description: 'standing'
                 }
