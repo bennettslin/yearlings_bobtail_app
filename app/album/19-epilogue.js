@@ -38,7 +38,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'0"`,
                     description: 'standing'
                 },
