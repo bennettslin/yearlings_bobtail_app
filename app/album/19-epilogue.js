@@ -32,7 +32,7 @@ module.exports = {
                 },
                 willy: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'3"`,
                     description: 'standing'
                 },
@@ -56,7 +56,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
@@ -158,7 +158,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'9"`,
                     description: 'standing'
                 },

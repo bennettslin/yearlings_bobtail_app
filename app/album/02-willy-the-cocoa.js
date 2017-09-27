@@ -28,7 +28,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side angle, holding up a bottle, squinting'
                 }
             },
@@ -47,7 +47,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, ducking behind post, chuckling'
                 },
                 mother: {
@@ -73,7 +73,7 @@ module.exports = {
             actors: {
                 father: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, running, angry'
                 },
                 christopher: {
@@ -94,7 +94,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side angle, defending himself, fearful'
                 },
                 howie: {
@@ -135,7 +135,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side angle, merrily greeting trolls'
                 },
                 christopher: {
