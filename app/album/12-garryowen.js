@@ -21,7 +21,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'front, putting on jacket, cold, distant'
                 },
                 liz: {
@@ -39,7 +39,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'front, tripping as meats fall out of pockets'
                 },
                 tristan: {
@@ -65,7 +65,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'on couch, ignoring Sita, drunk'
                 },
                 liz: {
@@ -83,7 +83,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side angle, sweaty, giddy'
                 },
                 miriam: {
@@ -109,7 +109,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'standing, cold, looking away'
                 },
                 liz: {

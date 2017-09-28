@@ -24,7 +24,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'back, reading book, pulling tray from belt.'
                 }
             }
@@ -35,7 +35,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, handing lancet pen, exuberant'
                 },
                 liz: {
@@ -61,7 +61,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, walking, mopey'
                 },
                 nestor: {
@@ -79,7 +79,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'back, punching code, surprised'
                 },
                 liz: {
@@ -97,7 +97,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'front, opening gate, silent, attentive'
                 },
                 liz: {
@@ -115,7 +115,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'front, turning on light, smiling'
                 },
                 liz: {
@@ -133,7 +133,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'sitting, eyes closed, falling asleep'
                 }
             }
@@ -144,7 +144,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'sitting, abruptly woken'
                 },
                 liz: {
@@ -162,13 +162,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, standing beside bed, unsure'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'reflection'
                     }
                 },
@@ -194,13 +194,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, about to stick it in'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'reflection'
                     }
                 },
@@ -226,13 +226,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'lying down, warm, content, slightly worried'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'reflection'
                     }
                 },
