@@ -50,7 +50,7 @@ module.exports = {
                 catherine: {
                     gopi: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'dancing'
                     }
                 },
