@@ -49,7 +49,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, flirting'
                 },
                 tristan: {

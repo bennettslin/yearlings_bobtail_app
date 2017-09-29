@@ -29,7 +29,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, asleep'
                 },
                 mother: {
@@ -105,7 +105,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, making out with Bennett'
                 },
                 stephanie: {
@@ -145,7 +145,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, vibrant'
                 },
                 nestor: {
@@ -178,7 +178,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side sitting, vindictive, magical gesture'
                 },
                 mother: {

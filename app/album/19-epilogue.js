@@ -8,7 +8,7 @@ module.exports = {
             actors: {
                 oldBennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
@@ -146,7 +146,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'1"`,
                     description: 'standing'
                 },
