@@ -74,7 +74,7 @@ module.exports = {
                 },
                 mara: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, walking, carrying cymbal, talking'
                 }
             }
@@ -95,7 +95,7 @@ module.exports = {
                 },
                 mara: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side angle, looking at watch'
                 },
                 amy: {
