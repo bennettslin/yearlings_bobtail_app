@@ -125,7 +125,7 @@ module.exports = {
                 amy: {
                     doctor: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'pulling sheet over Bennett'
                     }
                 }
