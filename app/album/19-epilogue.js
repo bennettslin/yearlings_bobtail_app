@@ -98,7 +98,7 @@ module.exports = {
                 },
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
@@ -122,7 +122,7 @@ module.exports = {
                 },
                 stephanie: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
@@ -140,7 +140,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     realHeight: `5'8"`,
                     description: 'standing'
                 },

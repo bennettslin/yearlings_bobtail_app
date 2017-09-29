@@ -21,7 +21,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, slumped over, despondent'
                 },
                 liz: {
@@ -44,7 +44,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'back, looking to side, annoyed'
                 },
                 miriam: {
@@ -70,7 +70,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'walking through alley'
                 }
             }
@@ -81,7 +81,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, on phone, hunched over, sobbing'
                 },
                 liz: {
@@ -118,7 +118,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, desperately hopeful'
                 },
                 amy: {
@@ -131,7 +131,7 @@ module.exports = {
                 stephanie: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'standing, demonstrating'
                     }
                 },

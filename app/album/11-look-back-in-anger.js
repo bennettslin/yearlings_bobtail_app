@@ -26,7 +26,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side angle, playing bass, looking cool'
                 },
                 tomer: {
@@ -48,7 +48,7 @@ module.exports = {
                 },
                 stephanie: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, squeezing through, awkward'
                 }
             }
@@ -90,7 +90,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'front, leaning against wall, waiting for Jacob'
                 },
                 mara: {
@@ -105,7 +105,7 @@ module.exports = {
                 },
                 stephanie: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side angle, talking to Wade'
                 },
                 wade: {

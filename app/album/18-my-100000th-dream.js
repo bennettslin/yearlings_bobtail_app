@@ -19,7 +19,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'side, walking, pleasantly confused'
                 },
                 liz: {
@@ -37,7 +37,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'sitting cross-legged, playing recorder, content'
                 },
                 liz: {
@@ -76,7 +76,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'back angle, confusedly being rushed'
                 },
                 liz: {
@@ -94,7 +94,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'front angle, reacting to threat'
                 },
                 liz: {
@@ -112,7 +112,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'calm, accepting of impending doom'
                 },
                 liz: {
@@ -127,13 +127,6 @@ module.exports = {
                         todo: true,
                         workedHours: 1.16,
                         description: 'pulling sheet over Bennett'
-                    }
-                },
-                stephanie: {
-                    bennett: {
-                        todo: true,
-                        workedHours: 1.16,
-                        description: 'side angle, old, lying, dying'
                     }
                 }
             }

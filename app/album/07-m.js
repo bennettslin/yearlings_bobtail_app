@@ -46,7 +46,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'sitting on floor, back turned, playing keyboard'
                     }
                 }
@@ -73,7 +73,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'squatting, back turned, putting bass back in case'
                 },
                 tomer: {
@@ -106,7 +106,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.16,
+                    workedHours: 1.25,
                     description: 'sitting, eating fries, laughing'
                 }
             }
