@@ -27,7 +27,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'side angle, looking back, concerned'
                     }
                 },
@@ -87,14 +87,14 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'Lying in bed, on phone with Bennett'
                     }
                 },
                 lizReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'reflection'
                     }
                 },

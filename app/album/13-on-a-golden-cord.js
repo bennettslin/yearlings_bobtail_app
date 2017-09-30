@@ -38,7 +38,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.16,
+                        workedHours: 1.25,
                         description: 'side angle, returning bracelet, fighting tears'
                     }
                 }
