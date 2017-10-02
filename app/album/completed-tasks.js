@@ -2497,4 +2497,9 @@ module.exports = [
         workedHours: 8,
         neededHours: 8
     },
+    {
+        taskName: `Fix children's heads.`,
+        workedHours: 4,
+        neededHours: 4
+    },
 ]
