@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Fix children's heads.`,
+        workedHours: 3,
+        neededHours: 3
+    },
+    {
         taskName: `Don't animate lyrics when not rendered.`,
         workedHours: 0,
         neededHours: 2
