@@ -6,16 +6,35 @@
     }
 
     .button {
-        transition: width @animation-default, height @animation-default;
+        transition: width @animation-default,
+                    height @animation-default;
         height: 0;
         width: 0;
     }
 
     &.stanza-block {
-        transition: margin-top @animation-default, margin-left @animation-default;
+        transition: margin-top @animation-default,
+                    margin-left @animation-default;
     }
 
     .dot .icon-canvas {
-        transition: background-color @animation-fast, border @animation-fast;
+        transition: background-color @animation-fast,
+                    border @animation-fast;
+    }
+}
+
+.override-animate {
+    .dot-stanza {
+        .button {
+            transition: none;
+        }
+    
+        &.stanza-block {
+            transition: none;
+        }
+    
+        .dot .icon-canvas {
+            transition: none;
+        }
     }
 }

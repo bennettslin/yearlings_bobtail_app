@@ -41,7 +41,13 @@ class LyricColumn extends Component {
         this.completeHeightTransition = this.completeHeightTransition.bind(this)
 
         this.state = {
-            isTransitioningHeight: false
+            isTransitioningHeight: false,
+
+            /**
+             * When a dot is deselected, don't animate elements that get hidden
+             * when transitioning between songs.
+             */
+            shouldOverrideAnimate: false
         }
     }
 
@@ -64,6 +70,14 @@ class LyricColumn extends Component {
             })
 
         return componentShouldUpdate
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.isHeavyRenderReady && !nextProps.isHeavyRenderReady) {
+            this.setState({
+                shouldOverrideAnimate: true
+            })
+        }
     }
 
     componentDidUpdate(prevProps) {
@@ -90,7 +104,8 @@ class LyricColumn extends Component {
 
     completeHeightTransition() {
         this.setState({
-            isTransitioningHeight: false
+            isTransitioningHeight: false,
+            shouldOverrideAnimate: false
         })
     }
 
@@ -105,6 +120,7 @@ class LyricColumn extends Component {
         return (
             <LyricColumnView {...other}
                 myRef={(node) => (this.myLyricColumn = node)}
+                shouldOverrideAnimate={this.state.shouldOverrideAnimate}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
                 handleAnimatableTransition={this._handleAnimatableTransition}
@@ -126,6 +142,7 @@ const lyricColumnViewPropTypes = {
 
     // From parent.
     myRef: PropTypes.func.isRequired,
+    shouldOverrideAnimate: PropTypes.bool.isRequired,
     isTransitioningHeight: PropTypes.bool.isRequired,
     handleTransition: PropTypes.func.isRequired,
     handleAnimatableTransition: PropTypes.func.isRequired,
@@ -151,6 +168,7 @@ LyricColumnView = ({
 
     // From controller.
     myRef,
+    shouldOverrideAnimate,
     isTransitioningHeight,
     handleTransition,
     handleAnimatableTransition,
@@ -175,7 +193,8 @@ LyricColumnView = ({
         >
             <div className={classnames(
                     'lyric-column-animatable',
-                    isHeavyRenderReady ? 'render-ready' : 'render-unready'
+                    isHeavyRenderReady ? 'render-ready' : 'render-unready',
+                    { 'override-animate': shouldOverrideAnimate }
                 )}
                 onTransitionEnd={handleAnimatableTransition}
             >
