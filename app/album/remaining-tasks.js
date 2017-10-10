@@ -24,6 +24,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
+    {
+        taskName: `Dot in dots section hover animation overflow hidden.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     /**
      * Medium bugs and tasks.

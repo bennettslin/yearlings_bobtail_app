@@ -8,7 +8,8 @@ import { ALL_DOT_KEYS } from '../constants/dots'
 import { LYRIC_COLUMN_KEYS } from '../constants/lyrics'
 import { AUDIO_OPTIONS,
          OVERVIEW_OPTIONS,
-         TIPS_OPTIONS } from '../constants/options'
+         TIPS_OPTIONS,
+         DISABLED } from '../constants/options'
 import { SELECTED_ACCESS_INDEX,
          SELECTED_ADMIN_INDEX,
          SELECTED_ANNOTATION_INDEX,
@@ -65,7 +66,6 @@ const _validateValueForKey = (key) => {
         // These must be a simple 0 or 1.
         case SELECTED_ACCESS_INDEX:
         case SELECTED_ADMIN_INDEX:
-        case SELECTED_DOTS_INDEX:
         case SELECTED_SCORE_INDEX:
         case SELECTED_NAV_INDEX:
         case SELECTED_CAROUSEL_INDEX:
@@ -95,6 +95,19 @@ const _validateValueForKey = (key) => {
             const maxBitNumber = getTwoToThePowerOfN(ALL_DOT_KEYS.length)
 
             isValid = isNumber && parsedValue < maxBitNumber
+            break
+        }
+
+        /**
+         * Don't show dots section if overview or tips will show.
+         */
+        case SELECTED_DOTS_INDEX: {
+            const selectedOverviewIndex = _validateValueForKey(SELECTED_OVERVIEW_INDEX),
+                selectedTipsIndex = _validateValueForKey(SELECTED_TIPS_INDEX),
+                overviewWillShow = OVERVIEW_OPTIONS[selectedOverviewIndex] !== DISABLED,
+                tipsWillShow = TIPS_OPTIONS[selectedTipsIndex] !== DISABLED
+
+            isValid = isNumber && parsedValue <= 1 && !overviewWillShow && !tipsWillShow
             break
         }
 
