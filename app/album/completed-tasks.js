@@ -2506,5 +2506,10 @@ module.exports = [
         taskName: `Don't show dots section upon load if overview or tips will show.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Dot in dots section hover animation overflow hidden.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

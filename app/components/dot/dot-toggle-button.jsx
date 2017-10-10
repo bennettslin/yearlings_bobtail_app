@@ -154,6 +154,7 @@ DotToggleButtonView = ({
                 buttonClass="dot"
                 iconClass={dotKey}
                 isDeselected={!isSelected}
+                isOverflowShown={true}
                 handleClick={handleDotToggleClick}
                 extraChild={(
                     <div className={classnames(
