@@ -2502,4 +2502,9 @@ module.exports = [
         workedHours: 4,
         neededHours: 4
     },
+    {
+        taskName: `Don't show dots section upon load if overview or tips will show.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
