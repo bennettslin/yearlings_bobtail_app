@@ -39,6 +39,36 @@ class CarouselSection extends Component {
         handleAnnotationNext: PropTypes.func.isRequired
     }
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            /**
+             * When a dot is deselected, don't animate elements that get hidden
+             * when transitioning between songs.
+             */
+            shouldOverrideAnimate: false
+        }
+
+        this._handleTransition = this._handleTransition.bind(this)
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.isHeavyRenderReady && !nextProps.isHeavyRenderReady) {
+            this.setState({
+                shouldOverrideAnimate: true
+            })
+        }
+    }
+
+    _handleTransition(e) {
+        if (e.propertyName === 'opacity') {
+            this.setState({
+                shouldOverrideAnimate: false
+            })
+        }
+    }
+
     render() {
         const { isHiddenNav,
                 isHeavyRenderReady,
@@ -47,7 +77,9 @@ class CarouselSection extends Component {
                 selectedAnnotationIndex,
                 handleAnnotationPrevious,
                 handleAnnotationNext,
-                ...other } = this.props
+                ...other } = this.props,
+
+            { shouldOverrideAnimate } = this.state
 
         if (isHiddenNav) {
             return null
@@ -64,10 +96,14 @@ class CarouselSection extends Component {
             })
 
         return (
-            <div className={classnames(
-                'carousel',
-                isHeavyRenderReady ? 'render-ready' : 'render-unready'
-            )}>
+            <div
+                className={classnames(
+                    'carousel',
+                    isHeavyRenderReady ? 'render-ready' : 'render-unready',
+                    { 'override-animate': shouldOverrideAnimate }
+                )}
+                onTransitionEnd={this._handleTransition}
+            >
                 <div className="carousel-scroll">
                     <div className="carousel-annotations-block">
                         <div className="carousel-annotation carousel-annotation-0" />
