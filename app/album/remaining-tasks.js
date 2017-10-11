@@ -17,6 +17,12 @@ module.exports = [
         neededHours: 2
     },
 
+    {
+        taskName: `Selecting portals is now buggy.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     /**
      * Short bugs and tasks.
      */
