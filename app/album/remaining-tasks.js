@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Don't animate lyrics when not rendered.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Use svg in slider.`,
         workedHours: 0,
         neededHours: 5
@@ -12,6 +7,12 @@ module.exports = [
 
     {
         taskName: `Hover over verse to show lyric button.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Override transition doesn't work when skipping several songs at a time.`,
         workedHours: 0,
         neededHours: 2
     },

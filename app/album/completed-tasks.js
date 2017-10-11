@@ -2512,4 +2512,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Don't animate lyrics when not rendered.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
