@@ -819,6 +819,7 @@ module.exports = {
                     {
                         anchor: `fail your Sita`,
                         annotation: {
+                            // TODO: Mention that Yearling's Bobtail is also about failing Sita forever.
                             description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. The same self-serving chauvinism is what prompted my need to be the more sexually experienced partner, leading me to stray from Sita and shack up with other women.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
