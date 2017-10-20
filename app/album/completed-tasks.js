@@ -2519,8 +2519,8 @@ module.exports = [
     },
     {
         taskName: `Draw raw hands.`,
-        workedHours: 38,
-        neededHours: 38
+        workedHours: 44,
+        neededHours: 44
     },
     {
         taskName: `Draw raw eyes`,
