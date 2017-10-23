@@ -2527,4 +2527,9 @@ module.exports = [
         workedHours: 13,
         neededHours: 13
     },
+    {
+        taskName: `Draw sample heads`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
