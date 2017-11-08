@@ -136,6 +136,6 @@ module.exports = {
         require('./18-my-100000th-dream'),
         require('./19-epilogue')
     ],
-    remainingTasks: require('./remaining-tasks'),
+    remainingTasks: require('./remaining-tasks').concat(require('./remaining-drawing-tasks')),
     completedTasks: require('./completed-tasks')
 }

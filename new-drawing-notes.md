@@ -105,6 +105,7 @@ Club exterior (Look Back)
 Porch (Willy)
 2 * Stage (M, Look Back, Garryowen)
 Cliff (Cremated, Dream)
+Gravesite (Dream)
 
 # Vehicles
 Bus (Sasha)
@@ -114,7 +115,6 @@ Buoy (Odin)
 Howie's station wagon (Constellations)
 VW bug (Garryowen)
 Miriam's convertible (Cremated)
-Gravesite (Dream)
 
 # Furniture and touched props
 2 * Bench (Didi, Pchelka)
@@ -126,7 +126,7 @@ Tetherball pole (Sasha)
 Sleeping mat (Odin)
 Stairwell railing (Odin)
 Bennett's couch (Ash, M, Garryowen)
-Milk crates (M)
+5 * Milk crates (M, Vegan)
 Dishroom sink (Grasshoppers)
 Bennett's bed (Grasshoppers, Uncanny)
 2 * Waiting room armchair (Grasshoppers)
@@ -135,7 +135,6 @@ Howie's couch (Constellations)
 Sita's couch (Garryowen, Golden Cord, Kyon)
 Khari's stool (Kyon)
 Hospital bed (Cremated, Dream)
-Bennett's milk crate (Vegan)
 
 # Fixtures and untouched props
 Sink (Didi)
