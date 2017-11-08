@@ -1,9 +1,10 @@
 module.exports = [
     {
-        taskName: `Organise tasks for props.`,
-        workedHours: 2,
-        neededHours: 4
+        taskName: `Create tasks for drawing props.`,
+        workedHours: 0,
+        neededHours: 3
     },
+
     {
         taskName: `Use svg in slider.`,
         workedHours: 0,
