@@ -551,7 +551,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Tetherball pole (Saskia)`,
+        taskName: `2 * Tetherball pole (Saskia)`,
         workedHours: 0,
         neededHours: 3
     },
