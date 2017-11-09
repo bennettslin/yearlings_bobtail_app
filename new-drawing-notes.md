@@ -1,10 +1,10 @@
-# App
+# Todo
+Posters, paintings, app UI
+
+# Stage
 Theatre seating
 Theatre stage
-
-# Stage things
 Stage curtains
-Sita's bedroom mirror (Grasshoppers, Look Back, Vegan)
 
 # Large sceneries
 North Hollywood houses (Didi, Willy)
@@ -12,7 +12,7 @@ Playground (Didi)
 Valley overlooking freeway (Willy)
 Family house (Willy)
 Family house in distance (Willy)
-Taiwan mountains (Sasha)
+Taiwan mountains (Saskia)
 Taiwan kitchen (Odin)
 Taiwan stairwell (Odin)
 Taiwan street (Odin)
@@ -24,8 +24,8 @@ Ocean floor (Odin)
 Middle school quad (Pchelka)
 Catholic church (Ash)
 Campus building panorama (Ash)
-Street behind movie theatre (M)
-Sita's apartment exterior (Good Night)
+Movie theatre exterior panorama (M)
+Sita's apartment exterior panorama (Good Night)
 Bennett's apartment exterior (Grasshoppers)
 UCLA (Constellations)
 Cemetery (Constellations)
@@ -43,9 +43,9 @@ Alley scene (Vegan)
 Demonstration scene (Vegan)
 Pampas full panorama (Dream)
 
-# Small sceneries
-Bus backdrop (Sasha)
-Playground (Sasha)
+# Small sceneries and paintings.
+Bus backdrop (Saskia)
+Playground (Saskia)
 Go-kart racetracks (Good Night)
 
 # Window scenes
@@ -54,7 +54,7 @@ Bus scene (Pchelka)
 Bennett's living room from outside (Ash)
 Bennett's apartment view (Grasshoppers)
 Howie's kitchen (Constellations)
-Sita's living room view (Garryowen, Kyon)
+Sita's gate from living room (Garryowen, Kyon)
 
 # Large walls
 Bathroom (Didi)
@@ -62,14 +62,14 @@ Bennett's room (Willy, Pchelka)
 Cave wall (Willy)
 Principal's office (Pchelka)
 Bennett's living room (M, Garryowen)
-Stage set (M, Garryowen, Vegan)
+Club stage set (M, Garryowen, Vegan)
 Jacob's apartment (M)
 Theatre backstage (Good Night)
 Bennett's bedroom (Grasshoppers, Uncanny)
 Waiting room (Grasshoppers)
-Sita's bedroom (Grasshoppers, Look Back, Vegan)
+Sita's bedroom and ceiling mirror (Grasshoppers, Look Back, Vegan)
 Steam tunnel (Constellations)
-Stage set side (Look Back)
+Club stage set side (Look Back)
 Sita's living room (Garryowen, Kyon)
 El Torito (Dream)
 
@@ -103,15 +103,15 @@ Club exterior (Look Back)
 
 # Platforms
 Porch (Willy)
-2 * Stage (M, Look Back, Garryowen)
+2 * Club stage (M, Look Back, Garryowen)
 Cliff (Cremated, Dream)
 Gravesite (Dream)
 
 # Vehicles
-Bus (Sasha)
+Bus (Saskia)
 Rickshaw bike (Odin)
 Buoy (Odin)
-2 * go-karts (Good Night)
+2 * Go-karts (Good Night)
 Howie's station wagon (Constellations)
 VW bug (Garryowen)
 Miriam's convertible (Cremated)
@@ -122,7 +122,7 @@ Bathtub (Didi)
 2 * Captain bed (Willy, Pchelka)
 Desk (Willy, Pchelka)
 3 * Chair (Willy, Pchelka)
-Tetherball pole (Sasha)
+Tetherball pole (Saskia)
 Sleeping mat (Odin)
 Stairwell railing (Odin)
 Bennett's couch (Ash, M, Garryowen)
@@ -141,8 +141,9 @@ Sink (Didi)
 Record player on chair (Didi)
 2 * Shopping cart with garbage bags (Willy)
 Troll shadows (Willy)
-Blanket of clouds (Sasha)
-Mountains (Sasha)
+Campfire (Willy)
+Blanket of clouds (Saskia)
+Mountains (Saskia)
 Barbecue grill (Odin)
 Bennett's couch stand (Ash, M, Garryowen)
 Bennett's record player (Ash, M, Garryowen)
@@ -175,8 +176,8 @@ Dumpster (Vegan)
 Demonstration banner (Vegan)
 
 # Sketches and bubbles
-Bennett and Sasha on bridge (Sasha)
-Bennett and Sasha an ocean apart (Sasha)
+Bennett and Sasha on bridge (Saskia)
+Bennett and Sasha an ocean apart (Saskia)
 Two stray dogs (Pchelka)
 Two dogs pulling rocket (Pchelka) (revisit)
 Bennett on planet (Pchelka) (revisit)
@@ -192,7 +193,7 @@ Bennett and Sita back together (Kyon)
 Miriam's family (Cremated)
 
 # Animals and puppets
-Family * 3 (Sasha)
+3 * Family (Saskia)
 Horse (Golden Cord)
 7 * Sita's cat (Kyon, Uncanny)
 5 * Odin (Vegan)
