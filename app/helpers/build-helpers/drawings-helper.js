@@ -41,7 +41,12 @@ export const adminGatherDrawings = (album, songObject, songIndex) => {
                     const characterEntity = scene[drawingType][key],
                         entityIsObject = typeof characterEntity === 'object' && !characterEntity.description,
                         character = entityIsObject ? Object.keys(characterEntity)[0] : key,
-                        descriptionEntity = entityIsObject ? scene[drawingType][key][character] : characterEntity
+                        descriptionEntity = entityIsObject ? characterEntity[character] : characterEntity
+
+                    // This is for props logged in epilogue.
+                    if (characterEntity.subtasks) {
+                        keyObject.subtasks = characterEntity.subtasks
+                    }
 
                     keyObject.character = character
                     keyObject.descriptionEntity = descriptionEntity
@@ -61,15 +66,8 @@ export const adminFinaliseDrawings = (album) => {
     // Turn actors object into array for easier frontend parsing.
     const { _drawings } = album,
             actors = []
-        // backdrops = []
     let actorsTotalCount = 0,
         actorsTodoCount = 0
-    //     backdropsTotalCount = 0,
-    //     backdropsTodoCount = 0
-    // //
-    // Object.keys(_drawings.backdrops).forEach(backdrop => {
-    //
-    // })
 
     Object.keys(_drawings.actors).forEach(actor => {
         const roles = _drawings.actors[actor],
@@ -82,10 +80,12 @@ export const adminFinaliseDrawings = (album) => {
 
             const { songIndex,
                     sceneIndex,
-                    descriptionEntity } = role,
+                    descriptionEntity,
+                    subtasks } = role,
                 roleObject = { songIndex,
                                sceneIndex,
-                               workedHours: descriptionEntity.workedHours }
+                               workedHours: descriptionEntity.workedHours,
+                               subtasks }
 
             // This will eventually always be an object.
             if (typeof descriptionEntity === 'object') {
@@ -123,6 +123,16 @@ export const adminFinaliseDrawings = (album) => {
             }
 
             if (roleObject.todo) {
+                const { subtasks } = roleObject
+
+                if (subtasks && subtasks.length) {
+                    subtasks.forEach(subtask => {
+                        album.songs[songIndex].actorsWorkedHours += subtask.workedHours
+
+                        album.songs[songIndex].actorsNeededHours += subtask.neededHours
+                    })
+                }
+
                 album.songs[songIndex].actorsTodoCount++
                 album.songs[songIndex].actorsWorkedHours += (descriptionEntity.workedHours || 0)
 
