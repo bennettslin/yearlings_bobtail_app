@@ -336,7 +336,7 @@ module.exports = {
                         },
                         {
                             taskName: `meat packages`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -550,7 +550,7 @@ module.exports = {
                             // INSTRUMENT
                             taskName: `3 * bass`,
                             workedHours: 0,
-                            neededHours: 6
+                            neededHours: 9
                         },
                         {
                             // INSTRUMENT
