@@ -283,8 +283,8 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `hamburger, hamburger container, food bag and beer`,
-                            workedHours: 0,
+                            taskName: `hamburger, container, and beer`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -485,7 +485,7 @@ module.exports = {
                         },
                         {
                             taskName: `beers`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -522,8 +522,8 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `food, food containers, beer, beer on floor`,
-                            workedHours: 0,
+                            taskName: `food, container, and beers`,
+                            workedHours: 2,
                             neededHours: 2
                         },
                         {
@@ -564,8 +564,8 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `beers`,
-                            workedHours: 0,
+                            taskName: `beer, beer box`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {

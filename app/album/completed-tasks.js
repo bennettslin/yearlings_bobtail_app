@@ -2534,7 +2534,7 @@ module.exports = [
     },
     {
         taskName: `Organise tasks for props.`,
-        workedHours: 4,
-        neededHours: 4
+        workedHours: 6,
+        neededHours: 6
     },
 ]

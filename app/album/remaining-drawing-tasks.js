@@ -1,6 +1,45 @@
 module.exports = [
 
     /**
+     * Head preparation.
+     */
+    {
+        taskName: `neck`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `chin`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `cheeks`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `lips`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `full nose`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `eyebrows`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `hairline`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    /**
      * Stage
      */
     {

@@ -1,9 +1,4 @@
 module.exports = [
-    {
-        taskName: `Create tasks for drawing props.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     {
         taskName: `Use svg in slider.`,
@@ -115,7 +110,7 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Routing`,
+        taskName: `React Router v4`,
         workedHours: 0,
         neededHours: 8
     },
@@ -147,12 +142,6 @@ module.exports = [
         neededHours: 2
     },
 
-    // Low priority tasks.
-    {
-        taskName: `method to assemble backdrops and stageProps drawings.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     // Dumb bugs.
     {
