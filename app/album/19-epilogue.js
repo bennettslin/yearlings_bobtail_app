@@ -70,7 +70,7 @@ module.exports = {
                     subtasks: [
                         {
                             taskName: `stop sign`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         }
                     ]
@@ -157,13 +157,13 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `Robitussin`,
-                            workedHours: 0,
+                            taskName: `Robitussin bottle`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
                             taskName: `makeshift weapon`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                     ]
@@ -175,13 +175,13 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `Robitussin`,
-                            workedHours: 0,
+                            taskName: `Robitussin bottle`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
                             taskName: `makeshift weapon`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -215,7 +215,7 @@ module.exports = {
                         },
                         {
                             taskName: `bag of chips`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -309,12 +309,12 @@ module.exports = {
                         },
                         {
                             taskName: `Robitussin bottle`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
-                            taskName: `weapon`,
-                            workedHours: 0,
+                            taskName: `makeshift weapon`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -341,7 +341,7 @@ module.exports = {
                         },
                         {
                             taskName: `beer bottle`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -368,7 +368,7 @@ module.exports = {
                         },
                         {
                             taskName: `used condom`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -570,17 +570,17 @@ module.exports = {
                         },
                         {
                             taskName: `Robitussin bottle`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
-                            taskName: `weapon`,
-                            workedHours: 0,
+                            taskName: `makeshift weapon`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
                             taskName: `beer in bag`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                     ]
@@ -599,12 +599,12 @@ module.exports = {
                         },
                         {
                             taskName: `perfume`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
                             taskName: `tennis racquet`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -627,7 +627,7 @@ module.exports = {
                         },
                         {
                             taskName: `condom wrapper`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -637,7 +637,7 @@ module.exports = {
                         },
                         {
                             taskName: `chopsticks and food container`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -661,12 +661,12 @@ module.exports = {
                     subtasks: [
                         {
                             taskName: `bag of food`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
                             taskName: `food container and chopsticks`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                     ]
