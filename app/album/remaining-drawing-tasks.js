@@ -9,11 +9,6 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `chin`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: `cheeks`,
         workedHours: 0,
         neededHours: 8
