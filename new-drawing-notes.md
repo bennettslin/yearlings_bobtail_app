@@ -1,5 +1,5 @@
 # Todo
-Posters, photos and paintings, dropped clothes and blankets, app UI
+Prints, posters, photos and paintings, dropped clothes and blankets, app UI
 
 # Stage
 Theatre seating

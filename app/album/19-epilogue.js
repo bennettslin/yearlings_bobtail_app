@@ -56,8 +56,8 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `2 * pinky promise picture frame`,
-                            workedHours: 0,
+                            taskName: `picture frame`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                     ]
@@ -139,7 +139,7 @@ module.exports = {
                         },
                         {
                             taskName: `thrown food`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                     ]
@@ -186,7 +186,7 @@ module.exports = {
                         },
                         {
                             taskName: `record`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -283,7 +283,7 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `hamburger, container, and beer`,
+                            taskName: `hamburger, container, beer, beer box`,
                             workedHours: 1,
                             neededHours: 1
                         },
@@ -559,12 +559,7 @@ module.exports = {
                             neededHours: 3
                         },
                         {
-                            taskName: `fries container`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `beer, beer box`,
+                            taskName: `food, container, and beer`,
                             workedHours: 1,
                             neededHours: 1
                         },
