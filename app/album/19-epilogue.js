@@ -128,12 +128,12 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `red envelope, envelope and money`,
-                            workedHours: 0,
+                            taskName: `red envelopes, envelope and money`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
-                            taskName: `Beyonder envelope and money`,
+                            taskName: `Beyonder envelope`,
                             workedHours: 0,
                             neededHours: 1
                         },
