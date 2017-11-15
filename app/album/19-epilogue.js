@@ -41,7 +41,7 @@ module.exports = {
                             taskName: `violin`,
                             workedHours: 0,
                             neededHours: 3
-                        },
+                        }
                     ]
                 },
                 esther: {
@@ -59,7 +59,7 @@ module.exports = {
                             taskName: `picture frame`,
                             workedHours: 1,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 willy: {
@@ -90,7 +90,7 @@ module.exports = {
                             taskName: `scissors`,
                             workedHours: 0,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 christopher: {
@@ -133,15 +133,15 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `Beyonder envelope`,
-                            workedHours: 0,
+                            taskName: `Beyonder envelope and letter`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
                             taskName: `thrown food`,
                             workedHours: 1,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 father: {
@@ -165,7 +165,7 @@ module.exports = {
                             taskName: `makeshift weapon`,
                             workedHours: 1,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 tomer: {
@@ -193,7 +193,7 @@ module.exports = {
                             taskName: `garbage bag of bottles`,
                             workedHours: 0,
                             neededHours: 2
-                        },
+                        }
                     ]
                 },
                 sasha: {
@@ -222,7 +222,7 @@ module.exports = {
                             taskName: `Jewish book`,
                             workedHours: 0,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 andrew: {
@@ -241,7 +241,7 @@ module.exports = {
                             taskName: `guitar`,
                             workedHours: 0,
                             neededHours: 3
-                        },
+                        }
                     ]
                 },
                 tristan: {
@@ -386,7 +386,7 @@ module.exports = {
                             taskName: `flute`,
                             workedHours: 0,
                             neededHours: 3
-                        },
+                        }
                     ]
                 },
                 catherine: {
@@ -409,7 +409,7 @@ module.exports = {
                             taskName: `backpack`,
                             workedHours: 0,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 wade: {
@@ -427,7 +427,7 @@ module.exports = {
                             taskName: `demonstration sign`,
                             workedHours: 0,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 amy: {
@@ -450,7 +450,7 @@ module.exports = {
                             taskName: `demonstration sign`,
                             workedHours: 0,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 stephanie: {
@@ -487,12 +487,7 @@ module.exports = {
                             taskName: `beers`,
                             workedHours: 1,
                             neededHours: 1
-                        },
-                        {
-                            taskName: `demonstration sign`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
+                        }
                     ]
                 },
                 jacob: {
@@ -512,7 +507,7 @@ module.exports = {
                             taskName: `drums`,
                             workedHours: 0,
                             neededHours: 2
-                        },
+                        }
                     ]
                 },
                 mara: {
@@ -537,7 +532,7 @@ module.exports = {
                             taskName: `drum stand`,
                             workedHours: 0,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 ana: {
@@ -577,7 +572,7 @@ module.exports = {
                             taskName: `beer in bag`,
                             workedHours: 1,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 miriam: {
@@ -606,7 +601,7 @@ module.exports = {
                             taskName: `2 * baby in holder`,
                             workedHours: 0,
                             neededHours: 2
-                        },
+                        }
                     ]
                 },
                 liz: {
@@ -645,7 +640,7 @@ module.exports = {
                             taskName: `finger cymbals`,
                             workedHours: 0,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 khari: {
@@ -663,7 +658,7 @@ module.exports = {
                             taskName: `food container and chopsticks`,
                             workedHours: 1,
                             neededHours: 1
-                        },
+                        }
                     ]
                 },
                 nestor: {
