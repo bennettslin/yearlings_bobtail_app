@@ -111,7 +111,7 @@ module.exports = [
     },
     {
         taskName: `React Router v4`,
-        workedHours: 0,
+        workedHours: 3,
         neededHours: 8
     },
     {

@@ -1,5 +1,5 @@
 /**
- * TODO: Yet to include prints, posters, photos and paintings, dropped clothes 
+ * TODO: Yet to include prints, posters, photos and paintings, dropped clothes
  * and blankets, app UI.
  */
 

@@ -35,7 +35,8 @@ const webpack = require('webpack'),
                  * To deploy to GitHub Pages. Also forces change to path name
                  * for local development as well.
                  */
-                publicPath: '/yearlings_bobtail_app',
+                // FIXME: Commenting out for now to get React Router to work.
+                // publicPath: '/yearlings_bobtail_app',
                 filename: '[name].js'
             },
 
