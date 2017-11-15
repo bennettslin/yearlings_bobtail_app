@@ -114,7 +114,7 @@ module.exports = {
                     subtasks: [
                         {
                             taskName: `3 * drawing pad and pencil`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -124,7 +124,7 @@ module.exports = {
                         },
                         {
                             taskName: `x-ray specs`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -258,7 +258,7 @@ module.exports = {
                     subtasks: [
                         {
                             taskName: `notepad and pencil`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -325,7 +325,7 @@ module.exports = {
                         },
                         {
                             taskName: `cords`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {

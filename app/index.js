@@ -2,14 +2,14 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducers from './redux/reducers'
 
 import './less/app.less'
-import App from './components/app'
+import RoutingContainer from './components/routing-container'
 
 // Why did you update?
 const turnOnWDYULogging = false
@@ -23,9 +23,12 @@ if (process.env.NODE_ENV !== 'production' && turnOnWDYULogging) {
 
 ReactDOM.render(
     <Provider store={createStore(reducers)}>
-        <BrowserRouter>
-            <Route path="/:routerSongIndex" component={App} />
-        </BrowserRouter>
+        <Router>
+            <div>
+                <Route exact path="/:routingParamString/" component={RoutingContainer} />
+                <Route exact path="/" component={RoutingContainer} />
+            </div>
+        </Router>
     </Provider>,
     document.getElementById('app')
 )

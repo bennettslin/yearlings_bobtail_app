@@ -110,8 +110,8 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `React Router v4`,
-        workedHours: 3,
+        taskName: `Routing container for moving to React Router v4`,
+        workedHours: 4,
         neededHours: 8
     },
     {
