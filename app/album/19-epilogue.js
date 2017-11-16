@@ -279,7 +279,7 @@ module.exports = {
                         },
                         {
                             taskName: `cash box and cash`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -442,8 +442,8 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `demonstration samples`,
-                            workedHours: 0,
+                            taskName: `sample vegan treats`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
