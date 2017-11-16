@@ -1,5 +1,12 @@
 // Helpers for routing.
 
+import AlbumData from '../album-data'
+
+// Somewhat duplicate code in storage helper.
+export const getIsValidSongIndex = (tentativeSongIndex) => {
+    return !isNaN(tentativeSongIndex) && tentativeSongIndex < AlbumData.songs.length
+}
+
 export const getRoutingIndicesObject = (routingParamString) => {
 
     // Split along hyphen.
