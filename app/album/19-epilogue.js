@@ -119,7 +119,7 @@ module.exports = {
                         },
                         {
                             taskName: `2 * comic book`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -220,7 +220,7 @@ module.exports = {
                         },
                         {
                             taskName: `Jewish book`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         }
                     ]
@@ -274,7 +274,7 @@ module.exports = {
                         },
                         {
                             taskName: `3 * book`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -402,7 +402,7 @@ module.exports = {
                         },
                         {
                             taskName: `2 * book`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
