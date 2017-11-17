@@ -380,12 +380,12 @@ module.exports = {
                         },
                         {
                             taskName: `burger wrapper`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
                             taskName: `phone`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -432,7 +432,7 @@ module.exports = {
                         },
                         {
                             taskName: `demonstration sign`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         }
                     ]
@@ -455,7 +455,7 @@ module.exports = {
                         },
                         {
                             taskName: `demonstration sign`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         }
                     ]
@@ -639,7 +639,7 @@ module.exports = {
                         },
                         {
                             taskName: `2 * phone`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
