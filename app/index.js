@@ -25,8 +25,8 @@ ReactDOM.render(
     <Provider store={createStore(reducers)}>
         <Router>
             <div>
-                <Route exact path="/:routingParamString/" component={RoutingContainer} />
                 <Route exact path="/" component={RoutingContainer} />
+                <Route exact path="/:routingParamString/" component={RoutingContainer} />
             </div>
         </Router>
     </Provider>,

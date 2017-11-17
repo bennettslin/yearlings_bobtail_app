@@ -181,24 +181,26 @@ const _validateValueForKey = (key) => {
     }
 }
 
-export default {
-    setDotInStorage,
-    setInStorage,
-    getFromStorage(key) {
-        const validatedValue = _validateValueForKey(key)
+const getFromStorage = (key) => {
+    const validatedValue = _validateValueForKey(key)
 
-        // Get true-false object from bit number.
-        if (key === SELECTED_DOT_KEYS) {
-            const bitNumber = validatedValue,
-                trueFalseKeys = convertBitNumberToTrueFalseKeys({
-                    keysArray: ALL_DOT_KEYS,
-                    bitNumber
-                })
+    // Get true-false object from bit number.
+    if (key === SELECTED_DOT_KEYS) {
+        const bitNumber = validatedValue,
+            trueFalseKeys = convertBitNumberToTrueFalseKeys({
+                keysArray: ALL_DOT_KEYS,
+                bitNumber
+            })
 
-            return trueFalseKeys
+        return trueFalseKeys
 
-        } else {
-            return validatedValue
-        }
+    } else {
+        return validatedValue
     }
+}
+
+export default {
+    getFromStorage,
+    setInStorage,
+    setDotInStorage
 }
