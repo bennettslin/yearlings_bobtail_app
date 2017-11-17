@@ -32,7 +32,7 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `2 * backpack`,
+                            taskName: `3 * backpack`,
                             workedHours: 0,
                             neededHours: 1
                         },
@@ -128,6 +128,11 @@ module.exports = {
                             neededHours: 1
                         },
                         {
+                            taskName: `backpack`,
+                            workedHours: 0,
+                            neededHours: 1
+                        },
+                        {
                             taskName: `red envelopes, envelope and money`,
                             workedHours: 1,
                             neededHours: 1
@@ -200,7 +205,14 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `4'1"`,
-                    description: 'standing'
+                    description: 'standing',
+                    subtasks: [
+                        {
+                            taskName: `backpack`,
+                            workedHours: 0,
+                            neededHours: 1
+                        }
+                    ]
                 },
                 brad: {
                     todo: true,
@@ -209,13 +221,13 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `2 * backpack`,
-                            workedHours: 0,
+                            taskName: `bag of chips`,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
-                            taskName: `bag of chips`,
-                            workedHours: 1,
+                            taskName: `backpack`,
+                            workedHours: 0,
                             neededHours: 1
                         },
                         {
@@ -231,11 +243,6 @@ module.exports = {
                     realHeight: `4'7"`,
                     description: 'standing',
                     subtasks: [
-                        {
-                            taskName: `2 * backpack`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
                         {
                             // INSTRUMENT
                             taskName: `guitar`,
