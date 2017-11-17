@@ -1,4 +1,5 @@
 // Helper for getting and setting state persisted in user's local storage.
+
 import { getTwoToThePowerOfN,
          convertBitNumberToTrueFalseKeys,
          setNewValueInBitNumber } from './bit-helper'
@@ -28,23 +29,6 @@ import { SELECTED_ACCESS_INDEX,
          SELECTED_VERSE_INDEX,
          SELECTED_WIKI_INDEX,
          WINDOW_STORAGE } from '../constants/state'
-
-const setInStorage = (key, value) => {
-    WINDOW_STORAGE[key] = value
-}
-
-const setDotInStorage = (dotKey, isActive) => {
-
-    const bitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
-        newBitNumber = setNewValueInBitNumber({
-            keysArray: ALL_DOT_KEYS,
-            bitNumber,
-            key: dotKey,
-            value: isActive
-        })
-
-    setInStorage(SELECTED_DOT_KEYS, newBitNumber)
-}
 
 const _getValidatedStoredSong = () => {
     const selectedSongIndex = _validateValueForKey(SELECTED_SONG_INDEX)
@@ -169,8 +153,8 @@ const _validateValueForKey = (key) => {
      * If value is invalid, select and persist the default value of 0 for
      * all other keys but selected dot keys.
      */
-    // TODO: Decide default for selected dot keys.
     if (!isNumber || !isValid) {
+        // TODO: Decide default for selected dot keys.
         const defaultValue = key === SELECTED_DOT_KEYS ?
             7 : 0
         setInStorage(key, defaultValue)
@@ -197,6 +181,22 @@ const getFromStorage = (key) => {
     } else {
         return validatedValue
     }
+}
+
+const setInStorage = (key, value) => {
+    WINDOW_STORAGE[key] = value
+}
+
+const setDotInStorage = (dotKey, isActive) => {
+    const bitNumber = parseInt(WINDOW_STORAGE[SELECTED_DOT_KEYS]),
+        newBitNumber = setNewValueInBitNumber({
+            keysArray: ALL_DOT_KEYS,
+            bitNumber,
+            key: dotKey,
+            value: isActive
+        })
+
+    setInStorage(SELECTED_DOT_KEYS, newBitNumber)
 }
 
 export default {
