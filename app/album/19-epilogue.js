@@ -271,7 +271,7 @@ module.exports = {
                         {
                             // INSTRUMENT
                             taskName: `acoustic guitar`,
-                            workedHours: 0,
+                            workedHours: 3,
                             neededHours: 3
                         },
                         {
@@ -354,13 +354,13 @@ module.exports = {
                         {
                             // INSTRUMENT
                             taskName: `dobro guitar`,
-                            workedHours: 0,
+                            workedHours: 3,
                             neededHours: 3
                         },
                         {
                             // INSTRUMENT
                             taskName: `mandolin`,
-                            workedHours: 0,
+                            workedHours: 3,
                             neededHours: 3
                         },
                         {

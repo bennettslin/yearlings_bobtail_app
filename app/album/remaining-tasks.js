@@ -1,6 +1,17 @@
 module.exports = [
 
     {
+        taskName: `Keep admin stuff in dev, not in production.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Use date-fns in admin task manager.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Use svg in slider.`,
         workedHours: 0,
         neededHours: 5
