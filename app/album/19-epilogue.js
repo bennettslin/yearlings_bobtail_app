@@ -326,8 +326,8 @@ module.exports = {
                         },
                         {
                             // INSTRUMENT
-                            taskName: `banjo`,
-                            workedHours: 0,
+                            taskName: `electric guitar`,
+                            workedHours: 3,
                             neededHours: 3
                         },
                         {

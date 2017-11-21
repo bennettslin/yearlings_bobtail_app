@@ -765,7 +765,7 @@ module.exports = [
     },
     {
         taskName: `Bass case (M, Look Back)`,
-        workedHours: 0,
+        workedHours: 3,
         neededHours: 3
     },
     {
