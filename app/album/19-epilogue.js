@@ -551,13 +551,13 @@ module.exports = {
                         {
                             // INSTRUMENT
                             taskName: `3 * bass`,
-                            workedHours: 0,
+                            workedHours: 9,
                             neededHours: 9
                         },
                         {
                             // INSTRUMENT
                             taskName: `bass case`,
-                            workedHours: 0,
+                            workedHours: 3,
                             neededHours: 3
                         },
                         {
