@@ -39,7 +39,7 @@ module.exports = {
                         {
                             // INSTRUMENT
                             taskName: `violin`,
-                            workedHours: 0,
+                            workedHours: 3,
                             neededHours: 3
                         }
                     ]
@@ -246,7 +246,7 @@ module.exports = {
                         {
                             // INSTRUMENT
                             taskName: `guitar`,
-                            workedHours: 0,
+                            workedHours: 3,
                             neededHours: 3
                         }
                     ]
@@ -390,8 +390,8 @@ module.exports = {
                         },
                         {
                             // INSTRUMENT
-                            taskName: `flute`,
-                            workedHours: 0,
+                            taskName: `tenor recorder`,
+                            workedHours: 3,
                             neededHours: 3
                         }
                     ]
@@ -469,13 +469,13 @@ module.exports = {
                         {
                             // INSTRUMENT
                             taskName: `keyboard`,
-                            workedHours: 0,
+                            workedHours: 3,
                             neededHours: 3
                         },
                         {
                             // INSTRUMENT
                             taskName: `violin`,
-                            workedHours: 0,
+                            workedHours: 3,
                             neededHours: 3
                         },
                         {
@@ -645,7 +645,7 @@ module.exports = {
                         {
                             // INSTRUMENT
                             taskName: `finger cymbals`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         }
                     ]

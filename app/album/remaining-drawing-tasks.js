@@ -610,7 +610,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `5 * Milk crates (M, Vegan)`,
+        taskName: `7 * Milk crates (M, Vegan)`,
         workedHours: 0,
         neededHours: 3
     },
