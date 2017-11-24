@@ -480,7 +480,7 @@ module.exports = {
                         },
                         {
                             // INSTRUMENT
-                            taskName: `recording mic`,
+                            taskName: `recording mic and stand`,
                             workedHours: 0,
                             neededHours: 1
                         },
@@ -505,14 +505,20 @@ module.exports = {
                     subtasks: [
                         {
                             // INSTRUMENT
+                            taskName: `drum sticks`,
+                            workedHours: 1,
+                            neededHours: 1
+                        },
+                        {
+                            // INSTRUMENT
                             taskName: `cymbal`,
-                            workedHours: 0,
+                            workedHours: 1,
                             neededHours: 1
                         },
                         {
                             // INSTRUMENT
                             taskName: `drums`,
-                            workedHours: 0,
+                            workedHours: 2,
                             neededHours: 2
                         }
                     ]
@@ -530,13 +536,13 @@ module.exports = {
                         },
                         {
                             // INSTRUMENT
-                            taskName: `cymbals and drum stands`,
-                            workedHours: 0,
+                            taskName: `cymbal bag and cymbal stand`,
+                            workedHours: 3,
                             neededHours: 3
                         },
                         {
                             // INSTRUMENT
-                            taskName: `drum stand`,
+                            taskName: `hi hat stand`,
                             workedHours: 0,
                             neededHours: 1
                         }
@@ -592,7 +598,7 @@ module.exports = {
                             // INSTRUMENT
                             taskName: `banjo`,
                             workedHours: 0,
-                            neededHours: 1
+                            neededHours: 3
                         },
                         {
                             taskName: `perfume`,

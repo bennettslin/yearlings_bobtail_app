@@ -664,9 +664,14 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Record player on chair (Didi)`,
-        workedHours: 0,
-        neededHours: 3
+        taskName: `Stepstool (Didi)`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Record player with album (Didi)`,
+        workedHours: 2,
+        neededHours: 2
     },
     {
         taskName: `2 * Shopping cart with garbage bags (Willy)`,
@@ -729,18 +734,23 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `4 * Drums (M, Look Back, Garryowen)`,
+        taskName: `4 * Drums (M, Garryowen)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `2 * Electric guitar (M, Garryowen)`,
-        workedHours: 0,
+        taskName: `2 * Electric guitar (M)`,
+        workedHours: 3,
         neededHours: 3
     },
     {
         taskName: `4 * Guitar amp (M, Look Back, Garryowen)`,
         workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `3 * Guitar case (M, Look Back)`,
+        workedHours: 3,
         neededHours: 3
     },
     {
@@ -750,16 +760,11 @@ module.exports = [
     },
     {
         taskName: `2 * Mic stands (M, Look Back, Garryowen)`,
-        workedHours: 0,
+        workedHours: 3,
         neededHours: 3
     },
     {
         taskName: `2 * Stage monitors (M, Look Back, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `2 * Guitar case (M, Look Back)`,
         workedHours: 0,
         neededHours: 3
     },
