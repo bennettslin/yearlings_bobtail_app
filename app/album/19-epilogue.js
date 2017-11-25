@@ -337,8 +337,8 @@ module.exports = {
                         },
                         {
                             // INSTRUMENT
-                            taskName: `instrument cases`,
-                            workedHours: 0,
+                            taskName: `guitar case`,
+                            workedHours: 2,
                             neededHours: 2
                         },
                         {
@@ -480,14 +480,20 @@ module.exports = {
                         },
                         {
                             // INSTRUMENT
-                            taskName: `recording mic and stand`,
+                            taskName: `recording mic stand`,
+                            workedHours: 1,
+                            neededHours: 1
+                        },
+                        {
+                            // INSTRUMENT
+                            taskName: `recording microphone`,
                             workedHours: 0,
                             neededHours: 1
                         },
                         {
                             // INSTRUMENT
                             taskName: `recording console`,
-                            workedHours: 0,
+                            workedHours: 3,
                             neededHours: 3
                         },
                         {
