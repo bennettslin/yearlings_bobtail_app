@@ -5,22 +5,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Use date-fns in admin task manager.`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     {
         taskName: `Use svg in slider.`,
         workedHours: 0,
         neededHours: 5
-    },
-
-    {
-        taskName: `Hover over verse to show lyric button.`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     {
@@ -47,11 +36,6 @@ module.exports = [
     /**
      * Medium bugs and tasks.
      */
-    {
-        taskName: `get verseObject from verseIndex or other index.`,
-        workedHours: 0,
-        neededHours: 2
-    },
     {
         taskName: `Fix lyric and carousel scrolling from portal select. (down the steppes)`,
         workedHours: 0,
@@ -115,11 +99,7 @@ module.exports = [
     },
 
     // Full day tasks.
-    {
-        taskName: `Optimise shouldComponentUpdate.`,
-        workedHours: 0,
-        neededHours: 8
-    },
+
     {
         taskName: `Routing container for moving to React Router v4`,
         workedHours: 6,
@@ -154,10 +134,27 @@ module.exports = [
     },
 
 
-    // Dumb bugs.
-    {
-        taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,
-        workedHours: 0,
-        neededHours: 1
-    }
+    // Low priority bugs.
+    // {
+    //     taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,
+    //     workedHours: 0,
+    //     neededHours: 1
+    // },
+
+    // Probably won't do.
+    // {
+    //     taskName: `get verseObject from verseIndex or other index.`,
+    //     workedHours: 0,
+    //     neededHours: 2
+    // },
+    // {
+    //     taskName: `Optimise shouldComponentUpdate.`,
+    //     workedHours: 0,
+    //     neededHours: 8
+    // },
+    // {
+    //     taskName: `Hover over verse to show lyric button.`,
+    //     workedHours: 0,
+    //     neededHours: 2
+    // }
 ]
