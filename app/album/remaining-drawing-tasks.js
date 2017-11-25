@@ -915,44 +915,5 @@ module.exports = [
         taskName: `5 * Odin (Vegan)`,
         workedHours: 0,
         neededHours: 5
-    },
-
-    /**
-     * Done
-     */
-    {
-        taskName: `Stepstool (Didi)`,
-        workedHours: 1,
-        neededHours: 1
-    },
-    {
-        taskName: `Record player with album (Didi)`,
-        workedHours: 2,
-        neededHours: 2
-    },
-    {
-        taskName: `4 * Drums (M, Garryowen)`,
-        workedHours: 3,
-        neededHours: 3
-    },
-    {
-        taskName: `2 * Electric guitar (M)`,
-        workedHours: 3,
-        neededHours: 3
-    },
-    {
-        taskName: `3 * Guitar case (M, Look Back)`,
-        workedHours: 3,
-        neededHours: 3
-    },
-    {
-        taskName: `2 * Mic stands (M, Look Back, Garryowen)`,
-        workedHours: 3,
-        neededHours: 3
-    },
-    {
-        taskName: `Bass case (M, Look Back)`,
-        workedHours: 3,
-        neededHours: 3
-    },
+    }
 ]

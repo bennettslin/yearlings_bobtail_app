@@ -1,0 +1,501 @@
+module.exports = [
+    {
+        taskName: `youngBennett`,
+        subtasks: [
+            {
+                // INSTRUMENT
+                taskName: `violin`,
+                workedHours: 3,
+                neededHours: 3
+            }
+        ]
+    },
+    {
+        taskName: `esther`,
+        subtasks: [
+            {
+                taskName: `picture frame`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `willy`,
+        subtasks: [
+            {
+                taskName: `stop sign`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `mother`,
+        subtasks: [
+
+        ]
+    },
+    {
+        taskName: `christopher`,
+        subtasks: [
+
+        ]
+    },
+    {
+        taskName: `preteenBennett`,
+        subtasks: [
+            {
+                taskName: `3 * drawing pad and pencil`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `2 * comic book`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `x-ray specs`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `red envelopes, envelope and money`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `Beyonder envelope and letter`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `thrown food`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `howie`,
+        subtasks: [
+            {
+                taskName: `Robitussin bottle`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `makeshift weapon`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `tomer`,
+        subtasks: [
+            {
+                taskName: `Robitussin bottle`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `makeshift weapon`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `record`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `sasha`,
+        subtasks: [
+
+        ]
+    },
+    {
+        taskName: `brad`,
+        subtasks: [
+            {
+                taskName: `bag of chips`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `Jewish book`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `andrew`,
+        subtasks: [
+            {
+                // INSTRUMENT
+                taskName: `guitar`,
+                workedHours: 3,
+                neededHours: 3
+            }
+        ]
+    },
+    {
+        taskName: `bennett`,
+        subtasks: [
+            {
+                taskName: `notepad and pencil`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                // INSTRUMENT
+                taskName: `acoustic guitar`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                taskName: `3 * book`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `cash box and cash`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `hamburger, container, beer, beer box`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `Robitussin bottle`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `makeshift weapon`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                // INSTRUMENT
+                taskName: `electric guitar`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                taskName: `cords`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                // INSTRUMENT
+                taskName: `guitar case`,
+                workedHours: 2,
+                neededHours: 2
+            },
+            {
+                taskName: `meat packages`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `beer bottle`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                // INSTRUMENT
+                taskName: `dobro guitar`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                // INSTRUMENT
+                taskName: `mandolin`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                taskName: `used condom`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `burger wrapper`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `phone`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                // INSTRUMENT
+                taskName: `tenor recorder`,
+                workedHours: 3,
+                neededHours: 3
+            }
+        ]
+    },
+    {
+        taskName: `catherine`,
+        subtasks: [
+            {
+                taskName: `2 * book`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `wade`,
+        subtasks: [
+            {
+                taskName: `demonstration sign`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `amy`,
+        subtasks: [
+            {
+                taskName: `sample vegan treats`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `demonstration sign`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `stephanie`,
+        subtasks: [
+            {
+                // INSTRUMENT
+                taskName: `keyboard`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                // INSTRUMENT
+                taskName: `violin`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                // INSTRUMENT
+                taskName: `recording mic stand`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                // INSTRUMENT
+                taskName: `recording console`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                taskName: `beers`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `jacob`,
+        subtasks: [
+            {
+                // INSTRUMENT
+                taskName: `drum sticks`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                // INSTRUMENT
+                taskName: `cymbal`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                // INSTRUMENT
+                taskName: `drums`,
+                workedHours: 2,
+                neededHours: 2
+            }
+        ]
+    },
+    {
+        taskName: `mara`,
+        subtasks: [
+            {
+                taskName: `food, container, and beers`,
+                workedHours: 2,
+                neededHours: 2
+            },
+            {
+                // INSTRUMENT
+                taskName: `cymbal bag and cymbal stand`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                // INSTRUMENT
+                taskName: `hi hat stand`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `ana`,
+        subtasks: [
+            {
+                // INSTRUMENT
+                taskName: `3 * bass`,
+                workedHours: 9,
+                neededHours: 9
+            },
+            {
+                // INSTRUMENT
+                taskName: `bass case`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                taskName: `food, container, and beer`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `Robitussin bottle`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `makeshift weapon`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `beer in bag`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `miriam`,
+        subtasks: [
+            {
+                taskName: `perfume`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `tennis racquet`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `liz`,
+        subtasks: [
+            {
+                taskName: `condom wrapper`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `chopsticks and food container`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `2 * phone`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                // INSTRUMENT
+                taskName: `finger cymbals`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `khari`,
+        subtasks: [
+            {
+                taskName: `bag of food`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `food container and chopsticks`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
+        taskName: `nestor`,
+        subtasks: [
+
+        ]
+    },
+    {
+        taskName: `props`,
+        subtasks: [
+            {
+                taskName: `Stepstool (Didi)`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `Record player with album (Didi)`,
+                workedHours: 2,
+                neededHours: 2
+            },
+            {
+                taskName: `4 * Drums (M, Garryowen)`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                taskName: `2 * Electric guitar (M)`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                taskName: `3 * Guitar case (M, Look Back)`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                taskName: `2 * Mic stands (M, Look Back, Garryowen)`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                taskName: `Bass case (M, Look Back)`,
+                workedHours: 3,
+                neededHours: 3
+            }
+        ]
+    },
+]

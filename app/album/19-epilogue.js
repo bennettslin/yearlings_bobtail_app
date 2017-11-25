@@ -35,12 +35,6 @@ module.exports = {
                             taskName: `3 * backpack`,
                             workedHours: 0,
                             neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `violin`,
-                            workedHours: 3,
-                            neededHours: 3
                         }
                     ]
                 },
@@ -54,11 +48,6 @@ module.exports = {
                             taskName: `2 * backpacks`,
                             workedHours: 0,
                             neededHours: 1
-                        },
-                        {
-                            taskName: `picture frame`,
-                            workedHours: 1,
-                            neededHours: 1
                         }
                     ]
                 },
@@ -66,14 +55,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'3"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `stop sign`,
-                            workedHours: 1,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 mother: {
                     todo: true,
@@ -113,38 +95,8 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `3 * drawing pad and pencil`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `2 * comic book`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `x-ray specs`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
                             taskName: `backpack`,
                             workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `red envelopes, envelope and money`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `Beyonder envelope and letter`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `thrown food`,
-                            workedHours: 1,
                             neededHours: 1
                         }
                     ]
@@ -159,19 +111,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `6'0"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `Robitussin bottle`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `makeshift weapon`,
-                            workedHours: 1,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 tomer: {
                     todo: true,
@@ -179,21 +119,6 @@ module.exports = {
                     realHeight: `5'6"`,
                     description: 'standing',
                     subtasks: [
-                        {
-                            taskName: `Robitussin bottle`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `makeshift weapon`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `record`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
                         {
                             taskName: `garbage bag of bottles`,
                             workedHours: 0,
@@ -221,18 +146,8 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `bag of chips`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
                             taskName: `backpack`,
                             workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `Jewish book`,
-                            workedHours: 1,
                             neededHours: 1
                         }
                     ]
@@ -241,15 +156,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `4'7"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            // INSTRUMENT
-                            taskName: `guitar`,
-                            workedHours: 3,
-                            neededHours: 3
-                        }
-                    ]
+                    description: 'standing'
                 },
                 tristan: {
                     todo: true,
@@ -264,34 +171,8 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `notepad and pencil`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `acoustic guitar`,
-                            workedHours: 3,
-                            neededHours: 3
-                        },
-                        {
                             taskName: `6 * messenger bag`,
                             workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `3 * book`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `cash box and cash`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `hamburger, container, beer, beer box`,
-                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -315,55 +196,6 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `Robitussin bottle`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `makeshift weapon`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `electric guitar`,
-                            workedHours: 3,
-                            neededHours: 3
-                        },
-                        {
-                            taskName: `cords`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `guitar case`,
-                            workedHours: 2,
-                            neededHours: 2
-                        },
-                        {
-                            taskName: `meat packages`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `beer bottle`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `dobro guitar`,
-                            workedHours: 3,
-                            neededHours: 3
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `mandolin`,
-                            workedHours: 3,
-                            neededHours: 3
-                        },
-                        {
                             taskName: `5 * bracelet`,
                             workedHours: 0,
                             neededHours: 1
@@ -372,27 +204,6 @@ module.exports = {
                             taskName: `4 * tentacle`,
                             workedHours: 0,
                             neededHours: 1
-                        },
-                        {
-                            taskName: `used condom`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `burger wrapper`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `phone`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `tenor recorder`,
-                            workedHours: 3,
-                            neededHours: 3
                         }
                     ]
                 },
@@ -405,11 +216,6 @@ module.exports = {
                         {
                             taskName: `purse`,
                             workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `2 * book`,
-                            workedHours: 1,
                             neededHours: 1
                         },
                         {
@@ -429,11 +235,6 @@ module.exports = {
                             taskName: `backpack`,
                             workedHours: 0,
                             neededHours: 1
-                        },
-                        {
-                            taskName: `demonstration sign`,
-                            workedHours: 1,
-                            neededHours: 1
                         }
                     ]
                 },
@@ -447,16 +248,6 @@ module.exports = {
                             taskName: `backpack`,
                             workedHours: 0,
                             neededHours: 1
-                        },
-                        {
-                            taskName: `sample vegan treats`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `demonstration sign`,
-                            workedHours: 1,
-                            neededHours: 1
                         }
                     ]
                 },
@@ -468,37 +259,8 @@ module.exports = {
                     subtasks: [
                         {
                             // INSTRUMENT
-                            taskName: `keyboard`,
-                            workedHours: 3,
-                            neededHours: 3
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `violin`,
-                            workedHours: 3,
-                            neededHours: 3
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `recording mic stand`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
                             taskName: `recording microphone`,
                             workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `recording console`,
-                            workedHours: 3,
-                            neededHours: 3
-                        },
-                        {
-                            taskName: `beers`,
-                            workedHours: 1,
                             neededHours: 1
                         }
                     ]
@@ -507,92 +269,19 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'11"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            // INSTRUMENT
-                            taskName: `drum sticks`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `cymbal`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `drums`,
-                            workedHours: 2,
-                            neededHours: 2
-                        }
-                    ]
+                    description: 'standing'
                 },
                 mara: {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'0"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `food, container, and beers`,
-                            workedHours: 2,
-                            neededHours: 2
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `cymbal bag and cymbal stand`,
-                            workedHours: 3,
-                            neededHours: 3
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `hi hat stand`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 ana: {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'8"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            // INSTRUMENT
-                            taskName: `3 * bass`,
-                            workedHours: 9,
-                            neededHours: 9
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `bass case`,
-                            workedHours: 3,
-                            neededHours: 3
-                        },
-                        {
-                            taskName: `food, container, and beer`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `Robitussin bottle`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `makeshift weapon`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `beer in bag`,
-                            workedHours: 1,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 miriam: {
                     todo: true,
@@ -605,16 +294,6 @@ module.exports = {
                             taskName: `banjo`,
                             workedHours: 0,
                             neededHours: 3
-                        },
-                        {
-                            taskName: `perfume`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `tennis racquet`,
-                            workedHours: 1,
-                            neededHours: 1
                         },
                         {
                             taskName: `2 * baby in holder`,
@@ -635,29 +314,8 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `condom wrapper`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
                             taskName: `keepsakes and keepsake box`,
                             workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `chopsticks and food container`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `2 * phone`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            // INSTRUMENT
-                            taskName: `finger cymbals`,
-                            workedHours: 1,
                             neededHours: 1
                         }
                     ]
@@ -666,19 +324,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'9"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `bag of food`,
-                            workedHours: 1,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `food container and chopsticks`,
-                            workedHours: 1,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 nestor: {
                     todo: true,

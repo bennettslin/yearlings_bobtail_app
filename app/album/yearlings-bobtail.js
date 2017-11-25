@@ -137,5 +137,5 @@ module.exports = {
         require('./19-epilogue')
     ],
     remainingTasks: require('./remaining-tasks').concat(require('./remaining-drawing-tasks')),
-    completedTasks: require('./completed-tasks')
+    completedTasks: require('./completed-tasks').concat(require('./completed-drawing-tasks'))
 }
