@@ -98,6 +98,11 @@ module.exports = {
                             taskName: `backpack`,
                             workedHours: 0,
                             neededHours: 1
+                        },
+                        {
+                            taskName: `table lamp`,
+                            workedHours: 0,
+                            neededHours: 1
                         }
                     ]
                 },

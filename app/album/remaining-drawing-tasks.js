@@ -523,13 +523,8 @@ module.exports = [
     },
 
     /**
-     * Vehicles
+     * Actual vehicles.
      */
-    {
-        taskName: `Bus (Saskia)`,
-        workedHours: 0,
-        neededHours: 5
-    },
     {
         taskName: `Rickshaw bike (Odin)`,
         workedHours: 0,
@@ -542,6 +537,20 @@ module.exports = [
     },
     {
         taskName: `2 * Go-karts (Good Night)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    /**
+     * Things with facades
+     */
+    {
+        taskName: `Bathtub (Didi)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Bus (Saskia)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -565,12 +574,7 @@ module.exports = [
      * Furniture and touched props
      */
     {
-        taskName: `2 * Bench (Didi, Pchelka)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Bathtub (Didi)`,
+        taskName: `2 * School bench (Didi, Pchelka)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -585,7 +589,12 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `3 * Chair (Willy, Pchelka)`,
+        taskName: `3 * Bennett's chair (Willy, Pchelka)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `2 * Shopping cart with garbage bags (Willy)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -610,7 +619,37 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Bennett's couch stand (Ash, M, Garryowen)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Bennett's record player (Ash, M, Garryowen)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Ash can (Ash)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `4 * Guitar amp (M, Look Back, Garryowen)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `4 * Bass amp (M, Look Back, Garryowen)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `7 * Milk crates (M, Vegan)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Caveman display (Good Night)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -625,7 +664,27 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Bennett's bed stand (Grasshoppers, Uncanny)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `2 * Sita's bed stand (Grasshoppers, Look Back, Vegan)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `2 * Waiting room armchair (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Adam's tombstone (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Howie's television (Constellations)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -645,7 +704,17 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Khari's stool`,
+        taskName: `Khari's stool (Kyon)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Hospital drip (Cremated, Dream)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Record player (Cremated, Dream)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -654,9 +723,14 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+    {
+        taskName: `Demonstration banner (Vegan)`,
+        workedHours: 0,
+        neededHours: 3
+    },
 
     /**
-     * Fixtures and untouched props
+     * Untouched fixtures, painted foam panels.
      */
     {
         taskName: `Sink (Didi)`,
@@ -664,7 +738,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `2 * Shopping cart with garbage bags (Willy)`,
+        taskName: `Fire hydrant and puddle (Willy)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -694,16 +768,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Bennett's couch stand (Ash, M, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Bennett's record player (Ash, M, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Lamppost (Ash)`,
         workedHours: 0,
         neededHours: 3
@@ -714,22 +778,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Ash can (Ash)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Campus direction sign (Ash)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `4 * Guitar amp (M, Look Back, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `4 * Bass amp (M, Look Back, Garryowen)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -744,37 +793,12 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Caveman display (Good Night)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Theatre ladder (Good Night)`,
         workedHours: 0,
         neededHours: 3
     },
     {
         taskName: `Theatre wardrobe (Good Night)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Bennett's bed stand (Grasshoppers, Uncanny)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `2 * Sita's bed stand (Grasshoppers, Look Back, Vegan)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Adam's tombstone (Constellations)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Howie's television (Constellations)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -789,27 +813,12 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Hospital drip (Cremated, Dream)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Record player (Cremated, Dream)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Park bench (Vegan)`,
         workedHours: 0,
         neededHours: 3
     },
     {
         taskName: `Dumpster (Vegan)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Demonstration banner (Vegan)`,
         workedHours: 0,
         neededHours: 3
     },
