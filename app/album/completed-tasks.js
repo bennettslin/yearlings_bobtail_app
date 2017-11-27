@@ -2518,28 +2518,13 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Draw raw hands.`,
-        workedHours: 116,
-        neededHours: 116
-    },
-    {
-        taskName: `Draw raw eyes.`,
-        workedHours: 13,
-        neededHours: 13
-    },
-    {
-        taskName: `Draw sample heads`,
-        workedHours: 1,
-        neededHours: 1
-    },
-    {
         taskName: `Organise tasks for props.`,
         workedHours: 6,
         neededHours: 6
     },
     {
-        taskName: `Draw raw chins.`,
-        workedHours: 2,
-        neededHours: 2
-    },
+        taskName: `Routing container for moving to React Router v4`,
+        workedHours: 10,
+        neededHours: 10
+    }
 ]

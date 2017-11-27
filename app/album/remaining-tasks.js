@@ -99,12 +99,6 @@ module.exports = [
     },
 
     // Full day tasks.
-
-    {
-        taskName: `Routing container for moving to React Router v4`,
-        workedHours: 6,
-        neededHours: 8
-    },
     {
         taskName: `make visual keyboard keys with navigation logic`,
         workedHours: 1,

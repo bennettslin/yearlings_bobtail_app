@@ -459,6 +459,31 @@ module.exports = [
         ]
     },
     {
+        taskName: `Draw raw hands.`,
+        workedHours: 116,
+        neededHours: 116
+    },
+    {
+        taskName: `Heads`,
+        subtasks: [
+            {
+                taskName: `Draw raw eyes.`,
+                workedHours: 13,
+                neededHours: 13
+            },
+            {
+                taskName: `Draw sample heads`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `Draw raw chins.`,
+                workedHours: 2,
+                neededHours: 2
+            }
+        ]
+    },
+    {
         taskName: `props`,
         subtasks: [
             {
