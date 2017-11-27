@@ -67,7 +67,7 @@ class RoutingContainer extends Component {
         // Path is something like 9-grasshoppers-lie-heavy-20.
         const isLogue = getSongIsLogue(pathSongIndex),
 
-            pathName = `${pathSongIndex}-${HYPHENATED_SONG_PATHS[pathSongIndex]}${isLogue ? '' : '-' + pathVerseIndex}`
+            pathName = `${pathSongIndex}-${HYPHENATED_SONG_PATHS[pathSongIndex]}${pathVerseIndex && !isLogue ? '-v_' + pathVerseIndex : ''}`
 
         this.props.history.replace(pathName);
     }
