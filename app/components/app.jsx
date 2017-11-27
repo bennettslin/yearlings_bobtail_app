@@ -1,6 +1,7 @@
 // Root component that sets all app state.
 
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import debounce from 'debounce'
@@ -34,6 +35,10 @@ import LogHelper from '../helpers/log-helper'
  *************/
 
 class App extends Component {
+
+    static propTypes = {
+        replacePath: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -1051,6 +1056,7 @@ class App extends Component {
 
         this._selectTimeAndVerse({
             selectedTimePlayed,
+            selectedSongIndex,
             selectedVerseIndex,
             renderVerseImmediately
         })
@@ -1071,10 +1077,15 @@ class App extends Component {
 
     _selectTimeAndVerse({
         selectedTimePlayed,
+        selectedSongIndex = this.props.selectedSongIndex,
         selectedVerseIndex,
         renderVerseImmediately,
         isPlayerAdvancing
     }) {
+
+        // This is the only place where app will replace router path.
+        this.props.replacePath(selectedSongIndex, selectedVerseIndex)
+
         /**
          * Since time and verse are in sync, this helper method can be called
          * by either one.

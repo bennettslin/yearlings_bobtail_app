@@ -1,13 +1,18 @@
-// Helpers for routing.
+// Helper for getting param values from routing.
+import {
+    getSongObject,
+    getVerseObject
+} from './data-helper'
 
-import AlbumData from '../album-data'
-
-// Somewhat duplicate code in storage helper.
-export const getIsValidSongIndex = (tentativeSongIndex) => {
-    return !isNaN(tentativeSongIndex) && tentativeSongIndex < AlbumData.songs.length
+const _isValidSongIndex = (songIndex) => {
+    return Boolean(getSongObject(songIndex))
 }
 
-export const getRoutingIndicesObject = (routingParamString) => {
+const _isValidVerseIndexForSongIndex = (songIndex, verseIndex) => {
+    return Boolean(getVerseObject(songIndex, verseIndex))
+}
+
+export const getValidRoutingIndicesObject = (routingParamString = '') => {
 
     // Split along hyphen.
     const routingIndicesObject = {},
@@ -19,16 +24,39 @@ export const getRoutingIndicesObject = (routingParamString) => {
         })
         .filter(param => {
 
-            // Remove non-numbers.
-            return !isNaN(param)
+            /**
+             * Remove non-numbers, and large numbers (to accommodate My
+             * 100,000th Dream).
+             */
+            return !isNaN(param) && param < 1000
         })
 
     if (routingIndices.length) {
-        routingIndicesObject.routingSongIndex = routingIndices[0]
-    }
+        const routingSongIndex = routingIndices[0]
 
-    if (routingIndices.length > 1) {
-        routingIndicesObject.routingVerseIndex = routingIndices[1]
+        // Only set routing song index if valid.
+        if (_isValidSongIndex(routingSongIndex)) {
+            routingIndicesObject.routingSongIndex = routingSongIndex
+
+            /**
+             * If routing song index is set, always set routing verse index.
+             * Default to 0.
+             */
+            let routingVerseIndex
+
+            if (routingIndices.length > 1 &&
+                    _isValidVerseIndexForSongIndex(
+                        routingSongIndex,
+                        routingIndices[1]
+            )) {
+                routingVerseIndex = routingIndices[1]
+
+            } else {
+                routingVerseIndex = 0
+            }
+
+            routingIndicesObject.routingVerseIndex = routingVerseIndex
+        }
     }
 
     return routingIndicesObject

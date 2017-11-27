@@ -2,12 +2,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-
-/* eslint-disable no-unused-vars */
-// Import here and now to ensure that it is parsed.
-import AlbumData from './album-data'
-/* eslint-enable no-unused-vars */
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
@@ -29,10 +24,10 @@ if (process.env.NODE_ENV !== 'production' && turnOnWDYULogging) {
 ReactDOM.render(
     <Provider store={createStore(reducers)}>
         <Router>
-            <div>
+            <Switch>
                 <Route exact path="/" component={RoutingContainer} />
                 <Route exact path="/:routingParamString/" component={RoutingContainer} />
-            </div>
+            </Switch>
         </Router>
     </Provider>,
     document.getElementById('app')
