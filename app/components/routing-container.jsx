@@ -18,6 +18,8 @@ class RoutingContainer extends Component {
 
             { routingSongIndex } = routingIndicesObject
 
+        console.error('routingIndicesObject', routingIndicesObject);
+
         // If the route gives us a song index, validate and save it.
         if (getIsValidSongIndex(routingSongIndex)) {
             state.routingSongIndex = routingSongIndex
