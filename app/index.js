@@ -4,6 +4,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
+/* eslint-disable no-unused-vars */
+// Import here and now to ensure that it is parsed.
+import AlbumData from './album-data'
+/* eslint-enable no-unused-vars */
+
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducers from './redux/reducers'

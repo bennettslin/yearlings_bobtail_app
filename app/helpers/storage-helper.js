@@ -5,11 +5,6 @@
 import { convertBitNumberToTrueFalseKeys,
          setNewValueInBitNumber } from './bit-helper'
 
-/* eslint-disable no-unused-vars */
-// FIXME: Make sure this gets called before album is parsed.
-import AlbumData from '../album-data'
-/* eslint-enable no-unused-vars */
-
 import { ALL_DOT_KEYS } from '../constants/dots'
 import { SELECTED_DOT_KEYS,
          SELECTED_TIME_PLAYED,
