@@ -45,216 +45,22 @@ module.exports = [
     {
         taskName: `Theatre seating`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 8
     },
     {
         taskName: `Theatre stage`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 8
+    },
+    {
+        taskName: `Theatre floor`,
+        workedHours: 0,
+        neededHours: 15
     },
     {
         taskName: `Stage curtains`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    /**
-     * Large sceneries (Do last)
-     */
-    {
-        taskName: `North Hollywood houses (Didi, Willy)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Playground (Didi)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Valley overlooking freeway (Willy)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Family house (Willy)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Family house in distance (Willy)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Taiwan mountains (Saskia)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Taiwan kitchen (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Taiwan stairwell (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Taiwan street (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Taiwan beach farther (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Taiwan beach nearer (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Ocean with serpents (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Deep ocean (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Ocean floor (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Middle school quad (Pchelka)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Catholic church (Ash)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Campus building panorama (Ash)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Movie theatre exterior panorama (M)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Sita's apartment exterior panorama (Good Night)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bennett's apartment exterior (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `UCLA (Constellations)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Cemetery (Constellations)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `LA streets (Constellations)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bay Area streets (Garryowen, Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bay Area commercial area (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bay Area park area (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bay Area residential area (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Past roads (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Present roads (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Future roads (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `El Cerrito (Cremated)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Park scene (Vegan)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Alley scene (Vegan)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Demonstration scene (Vegan)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Pampas full panorama (Dream)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    /**
-     * Small sceneries and paintings.
-     */
-
-    {
-        taskName: `Bus backdrop (Saskia)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Playground (Saskia)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Go-kart racetracks (Good Night)`,
-        workedHours: 0,
-        neededHours: 4
     },
 
     /**
@@ -266,7 +72,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Bus scene (Pchelka)`,
+        taskName: `Bus driving by (Pchelka)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -292,12 +98,17 @@ module.exports = [
     },
 
     /**
-     * Large walls (Do first)
+     * Large painted panels (Do first)
      */
     {
-        taskName: `Bathroom (Didi)`,
+        taskName: `Bathroom with sink, mirror, towel rack (Didi)`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Family house facade (Willy)`,
+        workedHours: 0,
+        neededHours: 4
     },
     {
         taskName: `Bennett's room (Willy, Pchelka)`,
@@ -310,9 +121,19 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Principal's office (Pchelka)`,
+        taskName: `Hallway with principal's office door (Pchelka)`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Bennett's apartment exterior with garbage (Ash)`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: `Campus building facade panorama (Ash)`,
+        workedHours: 0,
+        neededHours: 4
     },
     {
         taskName: `Bennett's living room (M, Garryowen)`,
@@ -371,15 +192,25 @@ module.exports = [
     },
 
     /**
-     * Small walls
+     * Small painted panels
      */
     {
-        taskName: `Nurse's office (Didi)`,
+        taskName: `Hallway with nurse's office door speech bubble (Didi)`,
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: `Bennett's living room (Ash)`,
+        taskName: `Bus backdrop thought bubble (Saskia)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Playground thought bubble (Saskia)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Bennett's living room thought bubble (Ash)`,
         workedHours: 0,
         neededHours: 2
     },
@@ -420,40 +251,20 @@ module.exports = [
     },
 
     /**
-     * Structures
+     * Unique structures (Mostly because transparent.)
      */
     {
-        taskName: `Freeway overpass (Willy)`,
+        taskName: `Freeway overpass fence (Willy)`,
         workedHours: 0,
         neededHours: 4
     },
     {
-        taskName: `Family house facade (Willy)`,
+        taskName: `Stairwell railing (Odin)`,
         workedHours: 0,
         neededHours: 4
     },
     {
-        taskName: `Taiwan house facade (Odin)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Locker bank from inside (Pchelka)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Locker bank from outside (Pchelka)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Bennett's apartment compex (Ash)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Campus building facade (Ash)`,
+        taskName: `2 * Bennett's apartment complex gate (Ash, Grasshoppers)`,
         workedHours: 0,
         neededHours: 4
     },
@@ -469,11 +280,6 @@ module.exports = [
     },
     {
         taskName: `Dishroom (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Bennett's apartment complex gate (Grasshoppers)`,
         workedHours: 0,
         neededHours: 4
     },
@@ -501,11 +307,6 @@ module.exports = [
     /**
      * Platforms
      */
-    {
-        taskName: `Porch (Willy)`,
-        workedHours: 0,
-        neededHours: 3
-    },
     {
         taskName: `2 * Club stage (M, Look Back, Garryowen)`,
         workedHours: 0,
@@ -542,18 +343,9 @@ module.exports = [
     },
 
     /**
-     * Things with facades
+     * Things with facades (get rid of this distinction)
      */
-    {
-        taskName: `Bathtub (Didi)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Bus (Saskia)`,
-        workedHours: 0,
-        neededHours: 5
-    },
+
     {
         taskName: `Howie's station wagon (Constellations)`,
         workedHours: 0,
@@ -571,25 +363,15 @@ module.exports = [
     },
 
     /**
-     * Furniture and touched props
+     * Furniture and touched props (lifelike)
      */
     {
-        taskName: `2 * School bench (Didi, Pchelka)`,
+        taskName: `2 * Captain bed mattress and drawers (Willy, Pchelka)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `2 * Captain bed (Willy, Pchelka)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Desk (Willy, Pchelka)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `3 * Bennett's chair (Willy, Pchelka)`,
+        taskName: `Desk top (Willy, Pchelka)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -599,32 +381,32 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Puppet show stage (Saskia)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Bus seats (Saskia)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `2 * Tetherball pole (Saskia)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Sleeping mat (Odin)`,
+        taskName: `Bennett's couch cushions (Ash, M, Garryowen)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Stairwell railing (Odin)`,
+        taskName: `Bennett's couch stand lamp (Ash, M, Garryowen)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Bennett's couch (Ash, M, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Bennett's couch stand (Ash, M, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Bennett's record player (Ash, M, Garryowen)`,
+        taskName: `Bennett's record player and milk crates with records (Ash, M, Garryowen)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -733,12 +515,17 @@ module.exports = [
      * Untouched fixtures, painted foam panels.
      */
     {
-        taskName: `Sink (Didi)`,
+        taskName: `Bathtub facade (Didi)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Fire hydrant and puddle (Willy)`,
+        taskName: `Fire hydrant (Didi, Willy)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Freeway overpass sign (Willy)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -753,17 +540,37 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Blanket of clouds (Saskia)`,
+        taskName: `Bus facade (Saskia)`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
     },
     {
-        taskName: `Mountains (Saskia)`,
+        taskName: `Taiwan house gate (Odin)`,
         workedHours: 0,
         neededHours: 3
     },
     {
         taskName: `Barbecue grill (Odin)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Buoy waves (Odin)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `2 * Locker bank (inside and outside) (Pchelka)`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: `Trash can (Pchelka)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Bushes (Pchelka)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -903,6 +710,35 @@ module.exports = [
     },
 
     /**
+     * Posters and pictures.
+     */
+    {
+        taskName: `Teen pop idols on bathroom mirror (Didi)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Johnny Horton album`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Tintin poster (Willy)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Puppet show set (Saskia)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Nirvana poster (Ash)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    /**
      * Animals and puppets
      */
     {
@@ -924,5 +760,184 @@ module.exports = [
         taskName: `5 * Odin (Vegan)`,
         workedHours: 0,
         neededHours: 5
+    },
+
+        /**
+     * Large sceneries (Mimic painting)
+     */
+    {
+        taskName: `North Hollywood houses (Didi, Willy)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Playground (Didi)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Valley overlooking freeway (Willy)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Family house in distance (Willy)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Taiwan kitchen (Odin)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Taiwan stairwell (Odin)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Taiwan street (Odin)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Taiwan beach farther (Odin)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Taiwan beach nearer (Odin)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Ocean with serpents (Odin)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Deep ocean (Odin)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Ocean floor (Odin)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Middle school quad (Pchelka)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Catholic church (Ash)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Campus panorama (Ash)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Movie theatre exterior panorama (M)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Sita's apartment exterior panorama (Good Night)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Bennett's apartment exterior (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `UCLA (Constellations)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Cemetery (Constellations)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `LA streets (Constellations)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Bay Area streets (Garryowen, Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Bay Area commercial area (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Bay Area park area (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Bay Area residential area (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Past roads (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Present roads (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Future roads (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `El Cerrito (Cremated)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Park scene (Vegan)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Alley scene (Vegan)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Demonstration scene (Vegan)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Pampas full panorama (Dream)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    /**
+     * Small sceneries (Mimic painting)
+     */
+
+    {
+        taskName: `Go-kart racetracks (Good Night)`,
+        workedHours: 0,
+        neededHours: 4
     }
 ]
