@@ -2537,4 +2537,9 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+    {
+        taskName: `Finish modifying storyboards.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 ]

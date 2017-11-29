@@ -1,6 +1,5 @@
 /**
- * TODO: Yet to include prints, posters, photos and paintings, dropped clothes
- * and blankets, app UI.
+ * TODO: Yet to include dropped clothes and blankets, app UI.
  */
 
 module.exports = [
@@ -92,7 +91,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Sita's gate from living room (Garryowen, Kyon)`,
+        taskName: `Sita's gate from living room (Garryowen, Kyon, Uncanny)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -211,7 +210,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `El Torito (Dream)`,
+        taskName: `El Torito facade (Dream)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -275,17 +274,17 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Sita's living room (Golden Cord)`,
+        taskName: `2 * Sita's living room (Golden Cord, Uncanny)`,
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: `2 * Hospital room (Cremated, Dream)`,
+        taskName: `2 * Hospital room, one with inverse thought bubbles (Cremated, Dream)`,
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: `Tennis court (Cremated)`,
+        taskName: `Tennis court backdrop (Cremated)`,
         workedHours: 0,
         neededHours: 2
     },
@@ -295,9 +294,9 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Cemetery background (Dream)`,
+        taskName: `Cliff and small cliff (Cremated, Dream)`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
 
     /**
@@ -332,20 +331,6 @@ module.exports = [
         taskName: `5 * Globes (Uncanny)`,
         workedHours: 0,
         neededHours: 4
-    },
-
-    /**
-     * Platforms
-     */
-    {
-        taskName: `Cliff (Cremated, Dream)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Gravesite (Dream)`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     /**
@@ -486,12 +471,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Sita's couch cushions (Garryowen, Golden Cord, Kyon)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Khari's stool (Kyon)`,
+        taskName: `Sita's couch cushions (Garryowen, Golden Cord, Kyon, Uncanny)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -714,7 +694,7 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Miriam's family (Cremated)`,
+        taskName: `Bennett drunk with Miriam's family (Cremated)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -764,6 +744,11 @@ module.exports = [
     },
     {
         taskName: `Bennett's nude drawings (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Elliott Smith poster (Garryowen)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -926,7 +911,7 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `El Cerrito (Cremated)`,
+        taskName: `El Cerrito backdrop (Cremated)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -946,7 +931,7 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Pampas full panorama (Dream)`,
+        taskName: `Pampas and graveyard full panorama (Dream)`,
         workedHours: 0,
         neededHours: 5
     }
