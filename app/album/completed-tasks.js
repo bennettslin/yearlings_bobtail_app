@@ -2532,4 +2532,9 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+    {
+        taskName: `Modify storyboards up to Golden Cord.`,
+        workedHours: 0,
+        neededHours: 3
+    },
 ]

@@ -82,12 +82,12 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Bennett's apartment view (Grasshoppers)`,
+        taskName: `Basement practise space outside view (M)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Howie's kitchen (Constellations)`,
+        taskName: `Bennett's apartment view (Grasshoppers)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -103,7 +103,7 @@ module.exports = [
     {
         taskName: `Bathroom with sink, mirror, towel rack (Didi)`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 4
     },
     {
         taskName: `Family house facade (Willy)`,
@@ -136,24 +136,39 @@ module.exports = [
         neededHours: 4
     },
     {
+        taskName: `Dishroom (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
         taskName: `Bennett's living room (M, Garryowen)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Club stage set (M, Garryowen, Vegan)`,
+        taskName: `Club stage set from front with wall speakers (M, Garryowen, Vegan)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Jacob's apartment (M)`,
+        taskName: `Movie theatre (M)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Theatre backstage (Good Night)`,
+        taskName: `Sita's apartment exterior panorama (Good Night)`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
+    },
+    {
+        taskName: `Theatre backstage with ladder and wardrobe (Good Night)`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: `Bennett's apartment exterior (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 5
     },
     {
         taskName: `Bennett's bedroom (Grasshoppers, Uncanny)`,
@@ -176,7 +191,17 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Club stage set side (Look Back)`,
+        taskName: `Howie's attic (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Club stage set panorama from side with wall speakers (Look Back)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Club exterior (Look Back)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -210,9 +235,24 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Taiwan house gate (Odin)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Bennett's living room thought bubble (Ash)`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Basement practise space (M)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Sita's gate (Good Night)`,
+        workedHours: 0,
+        neededHours: 4
     },
     {
         taskName: `Museum (Good Night)`,
@@ -220,9 +260,19 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Pharmacy aisle (Constellations)`,
+        taskName: `Go-kart racetracks (Good Night)`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Pharmacy aisle (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Howie's kitchen (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `Sita's living room (Golden Cord)`,
@@ -251,7 +301,7 @@ module.exports = [
     },
 
     /**
-     * Unique structures (Mostly because transparent.)
+     * Transparent structures
      */
     {
         taskName: `Freeway overpass fence (Willy)`,
@@ -269,27 +319,7 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: `Movie theatre (M)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Sita's gate (Good Night)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Dishroom (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Howie's attic (Constellations)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Club exterior (Look Back)`,
+        taskName: `Club gated area (Look Back)`,
         workedHours: 0,
         neededHours: 4
     },
@@ -307,11 +337,6 @@ module.exports = [
     /**
      * Platforms
      */
-    {
-        taskName: `2 * Club stage (M, Look Back, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
     {
         taskName: `Cliff (Cremated, Dream)`,
         workedHours: 0,
@@ -338,26 +363,6 @@ module.exports = [
     },
     {
         taskName: `2 * Go-karts (Good Night)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    /**
-     * Things with facades (get rid of this distinction)
-     */
-
-    {
-        taskName: `Howie's station wagon (Constellations)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `VW bug (Garryowen)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Miriam's convertible (Cremated)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -426,42 +431,47 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `7 * Milk crates (M, Vegan)`,
+        taskName: `Milk crate with Yearlings albums (M)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Caveman display (Good Night)`,
+        taskName: `Caveman skeleton and plaque sign (Good Night)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Dishroom sink (Grasshoppers)`,
+        taskName: `Bennett's bed mattress (Grasshoppers, Uncanny)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Bennett's bed (Grasshoppers, Uncanny)`,
+        taskName: `Bennett's bedside stand and lamp (Grasshoppers, Uncanny)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Bennett's bed stand (Grasshoppers, Uncanny)`,
+        taskName: `2 * Sita's bed mattress (Grasshoppers, Look Back, Vegan)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `2 * Sita's bed stand (Grasshoppers, Look Back, Vegan)`,
+        taskName: `2 * Sita's bedside stand lamp and phone (Grasshoppers, Look Back, Vegan)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `2 * Waiting room armchair (Grasshoppers)`,
+        taskName: `2 * Waiting room armchair cushions (Grasshoppers)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Adam's tombstone (Constellations)`,
+        taskName: `Adam's gravestone with menorah (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Evian bottles pack in car (Constellations)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -471,17 +481,12 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `2 * Sita's bed (Grasshoppers, Look Back, Vegan)`,
+        taskName: `Howie's couch cushions (Constellations)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Howie's couch (Constellations)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Sita's couch (Garryowen, Golden Cord, Kyon)`,
+        taskName: `Sita's couch cushions (Garryowen, Golden Cord, Kyon)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -545,11 +550,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Taiwan house gate (Odin)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Barbecue grill (Odin)`,
         workedHours: 0,
         neededHours: 3
@@ -600,14 +600,14 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Theatre ladder (Good Night)`,
+        taskName: `Dishroom sink and other stuff (Grasshoppers)`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Theatre wardrobe (Good Night)`,
+        taskName: `Howie's station wagon (Constellations)`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
     },
     {
         taskName: `Crowd shadows (Look Back, Vegan)`,
@@ -615,9 +615,19 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `VW bug (Garryowen)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Twin streetlamp (Golden Cord)`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Miriam's convertible (Cremated)`,
+        workedHours: 0,
+        neededHours: 5
     },
     {
         taskName: `Park bench (Vegan)`,
@@ -737,6 +747,26 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+    {
+        taskName: `Leonard Cohen poster (M)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Yearlings logo on kick drum (M, Garryowen)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Mara movie posters (M)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Bennett's nude drawings (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 3
+    },
 
     /**
      * Animals and puppets
@@ -752,7 +782,7 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `7 * Sita's cat (Kyon, Uncanny)`,
+        taskName: `9 * Opal (Garryowen, Kyon, Uncanny)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -836,22 +866,12 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Campus panorama (Ash)`,
+        taskName: `Campus quad panorama (Ash)`,
         workedHours: 0,
         neededHours: 5
     },
     {
-        taskName: `Movie theatre exterior panorama (M)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Sita's apartment exterior panorama (Good Night)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bennett's apartment exterior (Grasshoppers)`,
+        taskName: `Movie theatre surrounding street panorama (M)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -891,17 +911,17 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Past roads (Golden Cord)`,
+        taskName: `Past roads (Uncanny)`,
         workedHours: 0,
         neededHours: 5
     },
     {
-        taskName: `Present roads (Golden Cord)`,
+        taskName: `Present roads (Uncanny)`,
         workedHours: 0,
         neededHours: 5
     },
     {
-        taskName: `Future roads (Golden Cord)`,
+        taskName: `Future roads (Uncanny)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -929,15 +949,5 @@ module.exports = [
         taskName: `Pampas full panorama (Dream)`,
         workedHours: 0,
         neededHours: 5
-    },
-
-    /**
-     * Small sceneries (Mimic painting)
-     */
-
-    {
-        taskName: `Go-kart racetracks (Good Night)`,
-        workedHours: 0,
-        neededHours: 4
     }
 ]
