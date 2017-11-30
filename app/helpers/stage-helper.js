@@ -26,7 +26,7 @@ import { PHONE_WIDTH,
 
 import { getIsDesktop, getIsPhone, getIsMonitor } from './responsive-helper'
 
-export const getPercentageCoordinatesForCornerAndElevation = (
+export const getFloorPanelCoordinatesForCornerAndElevation = (
 
     // This is an interval from 0 to 18. There are eighteen floor panel columns.
     xCornerIndex,

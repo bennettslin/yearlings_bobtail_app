@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getSceneObject } from '../../helpers/data-helper'
 import { getArrayOfLength } from '../../helpers/general-helper'
-import { getPercentageCoordinatesForCornerAndElevation } from '../../helpers/stage-helper'
+import { getFloorPanelCoordinatesForCornerAndElevation } from '../../helpers/stage-helper'
 
 const mapStateToProps = ({
     renderReadySongIndex,
@@ -35,7 +35,7 @@ class StageSceneSection extends Component {
                 {getArrayOfLength({ length: 7 }).map(y => (
                     getArrayOfLength({ length: 19 }).map(x => {
                         const percentageCoordinates =
-                            getPercentageCoordinatesForCornerAndElevation(x, y, 0)
+                            getFloorPanelCoordinatesForCornerAndElevation(x, y, 0)
 
                         return (
                             <div

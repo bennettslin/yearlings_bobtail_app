@@ -16,6 +16,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Floor panels consider stage padding`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Timeout show and hide elements in mobile?`,
         workedHours: 0,
         neededHours: 3
