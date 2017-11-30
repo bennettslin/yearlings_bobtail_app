@@ -425,6 +425,11 @@ module.exports = [
                 neededHours: 1
             },
             {
+                taskName: `keepsakes and keepsake box`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
                 taskName: `2 * phone`,
                 workedHours: 1,
                 neededHours: 1
@@ -520,7 +525,22 @@ module.exports = [
                 taskName: `Bass case (M, Look Back)`,
                 workedHours: 3,
                 neededHours: 3
-            }
+            },
+            {
+                taskName: `Bennett's couch stand lamp (Ash, M, Garryowen)`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `2 * Tetherball pole (Saskia, Uncanny)`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
+                taskName: `Adam's gravestone (Constellations)`,
+                workedHours: 3,
+                neededHours: 3
+            },
         ]
     },
 ]

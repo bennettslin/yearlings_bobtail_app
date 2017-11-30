@@ -1,5 +1,5 @@
 /**
- * TODO: Yet to include dropped clothes and blankets, app UI.
+ * TODO: Yet to include dropped clothes and blankets, app UI, and rendering.
  */
 
 module.exports = [
@@ -54,7 +54,7 @@ module.exports = [
     {
         taskName: `Theatre floor`,
         workedHours: 0,
-        neededHours: 15
+        neededHours: 12
     },
     {
         taskName: `Stage curtains`,
@@ -381,17 +381,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `2 * Tetherball pole (Saskia)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Bennett's couch cushions (Ash, M, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Bennett's couch stand lamp (Ash, M, Garryowen)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -447,11 +437,6 @@ module.exports = [
     },
     {
         taskName: `2 * Waiting room armchair cushions (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Adam's gravestone with menorah (Constellations)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -751,6 +736,11 @@ module.exports = [
         taskName: `Elliott Smith poster (Garryowen)`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `keepsake photos`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     /**

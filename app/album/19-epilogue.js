@@ -317,11 +317,6 @@ module.exports = {
                             taskName: `4 * backpack`,
                             workedHours: 0,
                             neededHours: 1
-                        },
-                        {
-                            taskName: `keepsakes and keepsake box`,
-                            workedHours: 0,
-                            neededHours: 1
                         }
                     ]
                 },

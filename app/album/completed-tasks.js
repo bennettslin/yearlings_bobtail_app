@@ -2542,4 +2542,9 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Figure out floor panel dimensions.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
