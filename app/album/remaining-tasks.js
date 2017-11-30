@@ -1,6 +1,31 @@
 module.exports = [
 
     {
+        taskName: `Always show either carousel or nav, with single toggle button on left.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Show nav image and title only on hover.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Redo stage to always consider nav at bottom in desktop, nav at top in mobile.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Timeout show and hide elements in mobile?`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Theatre views and coordinates.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Keep admin stuff in dev, not in production.`,
         workedHours: 0,
         neededHours: 3

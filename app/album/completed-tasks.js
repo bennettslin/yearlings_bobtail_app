@@ -2547,4 +2547,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Programmatically calculate floor panel dimensions`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
