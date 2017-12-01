@@ -1,4 +1,5 @@
 // Toggle button to show and hide nav section.
+// Mostly deprecated, just keep around to take up space.
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -48,7 +49,7 @@ NavToggle = ({
 
     return shouldRender ? (
         <div className="nav-toggle-block">
-            {showContent && (
+            {showContent && !showContent && (
                 <div className="nav-toggle-book">
                     <div className="nav-button-wrapper">
                         <Button

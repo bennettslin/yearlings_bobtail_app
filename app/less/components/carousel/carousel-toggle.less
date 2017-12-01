@@ -1,8 +1,10 @@
 .carousel-toggle-button-block {
+    position: absolute;
+    left: 0;
     background-color: #edf;
     padding: @app-thin-margin 0;
-    margin: @dots-overview-padding 0;
-    border-radius: 0 @nav-border-radius @nav-border-radius 0;
+    // margin: @dots-overview-padding 0;
+    border-radius: 0 @nav-border-radius 0 0;
 
     transition: margin @animation-default,
                 border-radius @animation-default,
@@ -15,13 +17,18 @@
     width: @carousel-toggle-laptop-length;
 }
 
+.is-desktop {
+    .carousel-toggle-button-block {
+        bottom: 0;
+    }
+}
+
 .is-mobile {
 
     .carousel-toggle-button-block {
-        position: absolute;
         top: 0;
-        left: 0;
-        margin: 0;
+        bottom: auto;
+        // margin: 0;
         border-radius: 0 0 @nav-border-radius 0;
     }
 }
@@ -32,11 +39,11 @@
     }
 }
 
-.carousel-expanded {
+// .carousel-expanded {
     .carousel-toggle-button-block {
         box-shadow: @popup-box-shadow;
     }
-}
+// }
 
 .carousel-toggle-button {
 
