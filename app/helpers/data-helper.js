@@ -327,7 +327,7 @@ export const getSceneObject = (songIndex, sceneIndex = 0) => {
     const song = getSongObject(songIndex),
         sceneObject = song.scenes
 
-    return sceneObject[sceneIndex]
+    return sceneObject[sceneIndex] || {}
 }
 
 export const getSceneTimesArray = (songIndex) => {

@@ -3,14 +3,18 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import classnames from 'classnames'
+
+import StageFloorField from './stage-floor-field'
+
 import { getSceneObject } from '../../helpers/data-helper'
-import { getArrayOfLength } from '../../helpers/general-helper'
-import { getFloorPanelCoordinatesForCornerAndElevation } from '../../helpers/stage-helper'
 
 const mapStateToProps = ({
+    isHeavyRenderReady,
     renderReadySongIndex,
     currentSceneIndex
 }) => ({
+    isHeavyRenderReady,
     renderReadySongIndex,
     currentSceneIndex
 })
@@ -23,32 +27,23 @@ class StageSceneSection extends Component {
     }
 
     render() {
-        const { renderReadySongIndex,
+        const { isHeavyRenderReady,
+                renderReadySongIndex,
                 currentSceneIndex } = this.props,
 
-            sceneObject = getSceneObject(renderReadySongIndex, currentSceneIndex)
+            sceneObject = getSceneObject(renderReadySongIndex, currentSceneIndex),
 
-        console.error('sceneObject', sceneObject, renderReadySongIndex);
+            { floorPanels } = sceneObject
 
         return (
-            <div className="section stage-scene-section">
-                {getArrayOfLength({ length: 7 }).map(y => (
-                    getArrayOfLength({ length: 19 }).map(x => {
-                        const percentageCoordinates =
-                            getFloorPanelCoordinatesForCornerAndElevation(x, y, 0)
-
-                        return (
-                            <div
-                                key={x + '-' + y}
-                                className="test-floor-panel-pixel"
-                                style={{
-                                    left: percentageCoordinates.xPercentage + '%',
-                                    bottom: percentageCoordinates.yPercentage + '%'
-                                }}
-                            />
-                        )
-                    })
-                ))}
+            <div className={classnames(
+                'section',
+                'stage-scene-section',
+                isHeavyRenderReady ? 'render-ready' : 'render-unready'
+            )}>
+                <StageFloorField
+                    floorPanels={floorPanels}
+                />
             </div>
         )
     }

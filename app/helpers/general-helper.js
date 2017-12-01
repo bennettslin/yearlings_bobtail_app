@@ -1,5 +1,9 @@
 // Basic helpers that only know DOM elements and JavaScript objects.
 
+export const roundPercentage = (rawPercentage) => {
+    return Math.round(rawPercentage * 100) / 100
+}
+
 export const hasParentWithTagName = (child, parentTagName = '') => {
     let node = child
     while (node !== null) {

@@ -36,11 +36,23 @@ const
         yHeight0 + yHeight1 + yHeight2 + yHeight3,
         yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4,
         yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4 + yHeight5
+    ],
+
+    DEFAULT_FLOOR_PANELS_MATRIX = [
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     ]
 
 module.exports = {
     STAGE_ASPECT_RATIO: 1.2,
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE: 1.05,
     VANISHING_POINT_Y_PERCENTAGE: 60,
-    FLOOR_PANEL_Y_PERCENTAGES
+    FLOOR_PANEL_Y_PERCENTAGES,
+    FLOOR_PANEL_ROWS_LENGTH: 6,
+    FLOOR_PANEL_COLUMNS_LENGTH: 12,
+    DEFAULT_FLOOR_PANELS_MATRIX
 }
