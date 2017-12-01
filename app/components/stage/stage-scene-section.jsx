@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
 
+import StageActionField from './stage-action-field'
 import StageFloorField from './stage-floor-field'
 
 import { getSceneObject } from '../../helpers/data-helper'
@@ -44,6 +45,7 @@ class StageSceneSection extends Component {
                 <StageFloorField
                     floorPanels={floorPanels}
                 />
+                <StageActionField />
             </div>
         )
     }
