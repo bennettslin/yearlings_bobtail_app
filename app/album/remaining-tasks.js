@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `Floor panel colouring.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Figure out floor panel matrices for all scenes.`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
         taskName: `Show nav image and title only on hover.`,
         workedHours: 0,
         neededHours: 3

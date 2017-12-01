@@ -2567,4 +2567,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Make carousel annotation padding consistent across devices.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
