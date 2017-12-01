@@ -508,7 +508,7 @@ export const getIsSomethingBeingShown = ({
            props.selectedScoreIndex ||
            props.selectedTitleIndex ||
            props.selectedWikiIndex ||
-           (!props.selectedCarouselIndex && props.selectedAnnotationIndex) ||
+           (!props.selectedCarouselNavIndex && props.selectedAnnotationIndex) ||
            (calledByOverview && !props.selectedTipsIndex) ||
 
            /**

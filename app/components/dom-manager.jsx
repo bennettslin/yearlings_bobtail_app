@@ -77,11 +77,10 @@ class DomManager extends Component {
                 selectedAccessIndex,
                 selectedAdminIndex,
                 selectedAnnotationIndex,
-                selectedCarouselIndex,
+                selectedCarouselNavIndex,
                 selectedDotKeys,
                 selectedDotsIndex,
                 selectedLyricColumnIndex,
-                selectedNavIndex,
                 selectedOverviewIndex,
                 selectedScoreIndex,
                 selectedSongIndex,
@@ -150,9 +149,8 @@ class DomManager extends Component {
                     selectedDotKeys,
                     selectedAdminIndex ? 'is-admin-view' : 'is-live-view',
                     selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
-                    selectedCarouselIndex ? 'carousel-expanded' : 'carousel-collapsed',
+                    selectedCarouselNavIndex ? 'carousel-expanded' : 'nav-expanded',
                     selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
-                    selectedNavIndex ? 'nav-expanded' : 'nav-collapsed',
 
                     isLogue ? 'is-logue' : 'is-song',
                     isDesktop ? 'is-desktop' : 'is-mobile',
@@ -218,11 +216,10 @@ DomManager.propTypes = {
     selectedAccessIndex: PropTypes.number.isRequired,
     selectedAdminIndex: PropTypes.number.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
-    selectedCarouselIndex: PropTypes.number.isRequired,
+    selectedCarouselNavIndex: PropTypes.number.isRequired,
     selectedDotKeys: PropTypes.object.isRequired,
     selectedDotsIndex: PropTypes.number.isRequired,
     selectedLyricColumnIndex: PropTypes.number.isRequired,
-    selectedNavIndex: PropTypes.number.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
@@ -253,7 +250,7 @@ DomManager.propTypes = {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }))(DomManager)

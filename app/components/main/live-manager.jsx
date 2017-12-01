@@ -31,10 +31,9 @@ class LiveManager extends Component {
         handleAudioNextSong: PropTypes.func.isRequired,
         handleAudioOptionsToggle: PropTypes.func.isRequired,
         handleSliderTouchBegin: PropTypes.func.isRequired,
-        handleCarouselToggle: PropTypes.func.isRequired,
+        handleCarouselNavToggle: PropTypes.func.isRequired,
         handleDotToggle: PropTypes.func.isRequired,
         handleDotsSectionToggle: PropTypes.func.isRequired,
-        handleNavExpand: PropTypes.func.isRequired,
         handleNavSongSelect: PropTypes.func.isRequired,
         handleNavBookSelect: PropTypes.func.isRequired,
         handleLyricColumnSelect: PropTypes.func.isRequired,
@@ -84,9 +83,9 @@ class LiveManager extends Component {
                 handleAudioNextSong,
                 handleAudioOptionsToggle,
                 handleSliderTouchBegin,
+                handleCarouselNavToggle,
                 handleDotToggle,
                 handleDotsSectionToggle,
-                handleNavExpand,
                 handleNavSongSelect,
                 handleNavBookSelect,
                 handleLyricColumnSelect,
@@ -105,7 +104,6 @@ class LiveManager extends Component {
                 handleVerseElementSlide,
                 handleVerseInteractivate,
                 handleWikiToggle,
-                handleCarouselToggle,
                 stopPropagation } = this.props,
 
             titleToggleHandlers = {
@@ -181,9 +179,8 @@ class LiveManager extends Component {
             },
 
             mainColumnHandlers = {
-                handleCarouselToggle,
+                handleCarouselNavToggle,
                 handleLyricSectionExpand,
-                handleNavExpand,
 
                 annotationPopupHandlers,
                 audioBannerHandlers,
@@ -209,7 +206,7 @@ class LiveManager extends Component {
                     stopPropagation
                 },
                 navSectionHandlers: {
-                    handleNavExpand,
+                    handleCarouselNavToggle,
                     handleNavSongSelect,
                     handleNavBookSelect
                 },

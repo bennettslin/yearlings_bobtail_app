@@ -33,7 +33,6 @@ import { ARROW_LEFT,
          DOTS_SECTION_EXPAND_KEY,
          LYRIC_COLUMN_TOGGLE_KEY,
          LYRIC_SECTION_EXPAND_KEY,
-         NAV_SECTION_EXPAND_KEY,
          OVERVIEW_TOGGLE_KEY,
          SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY,
@@ -72,7 +71,7 @@ class AccessManager extends Component {
                     'selectedDotsIndex',
                     'selectedDotKeys',
                     'selectedLyricColumnIndex',
-                    'selectedNavIndex',
+                    'selectedCarouselNavIndex',
                     'selectedOverviewIndex',
                     'selectedScoreIndex',
                     'selectedSongIndex',
@@ -180,7 +179,7 @@ class AccessManager extends Component {
                 keyWasRegistered = this._handleDotsNavigation(e, keyName)
 
                 // We're in nav section.
-            } else if (this.props.selectedNavIndex) {
+            } else if (!this.props.selectedCarouselNavIndex) {
                 ({ annotationIndexWasAccessed,
                     keyWasRegistered } = this._handleNavNavigation(e, keyName))
 
@@ -480,7 +479,7 @@ class AccessManager extends Component {
                 keyWasRegistered = eventHandlers.handleOverviewToggle(e)
                 break
             case CAROUSEL_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleCarouselToggle(e)
+                keyWasRegistered = eventHandlers.handleCarouselNavToggle(e)
                 break
             case SCORE_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleScoreToggle(e)
@@ -500,9 +499,6 @@ class AccessManager extends Component {
                 break
             case DOTS_SECTION_EXPAND_KEY:
                 keyWasRegistered = eventHandlers.handleDotsSectionToggle(e)
-                break
-            case NAV_SECTION_EXPAND_KEY:
-                keyWasRegistered = eventHandlers.handleNavExpand(e)
                 break
             default:
                 keyWasRegistered = false
@@ -584,7 +580,7 @@ class AccessManager extends Component {
 }
 
 export default connect(({
-    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }) => ({
-    selectedAccessIndex, selectedAnnotationIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedNavIndex, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }))(AccessManager)

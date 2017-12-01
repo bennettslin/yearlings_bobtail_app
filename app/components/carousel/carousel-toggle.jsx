@@ -8,26 +8,26 @@ import { CAROUSEL_TOGGLE_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
     isHiddenNav,
-    selectedCarouselIndex
+    selectedCarouselNavIndex
 }) => ({
     isHiddenNav,
-    selectedCarouselIndex
+    selectedCarouselNavIndex
 })
 
 const carouselTogglePropTypes = {
     // Through Redux.
     isHiddenNav: PropTypes.bool.isRequired,
-    selectedCarouselIndex: PropTypes.number.isRequired,
+    selectedCarouselNavIndex: PropTypes.number.isRequired,
 
     // From parent.
-    handleCarouselToggle: PropTypes.func.isRequired
+    handleCarouselNavToggle: PropTypes.func.isRequired
 },
 
 CarouselToggle = ({
 
     isHiddenNav,
-    selectedCarouselIndex,
-    handleCarouselToggle
+    selectedCarouselNavIndex,
+    handleCarouselNavToggle
 
 }) => {
     return !isHiddenNav ? (
@@ -35,9 +35,9 @@ CarouselToggle = ({
             <Button
                 accessKey={CAROUSEL_TOGGLE_KEY}
                 buttonName="carousel-toggle"
-                iconText={selectedCarouselIndex}
+                iconText={selectedCarouselNavIndex}
                 isLarge={true}
-                handleClick={handleCarouselToggle}
+                handleClick={handleCarouselNavToggle}
             />
         </div>
     ) : null

@@ -12,7 +12,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     isHeavyRenderReady,
     selectedAnnotationIndex,
-    selectedCarouselIndex,
+    selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex
@@ -21,7 +21,7 @@ const mapStateToProps = ({
     isLyricExpanded,
     isHeavyRenderReady,
     selectedAnnotationIndex,
-    selectedCarouselIndex,
+    selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex
@@ -34,7 +34,7 @@ const annotationPopupPropTypes = {
 
     isHeavyRenderReady: PropTypes.bool.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
-    selectedCarouselIndex: PropTypes.number.isRequired,
+    selectedCarouselNavIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
     selectedWikiIndex: PropTypes.number.isRequired,
@@ -54,7 +54,7 @@ AnnotationPopup = ({
     isOverlayAnnotation,
 
     selectedAnnotationIndex,
-    selectedCarouselIndex,
+    selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex,
@@ -80,7 +80,7 @@ AnnotationPopup = ({
     } else {
         const isVisible = isHeavyRenderReady &&
                           !!selectedAnnotationIndex &&
-                          !selectedCarouselIndex &&
+                          !selectedCarouselNavIndex &&
                           !selectedScoreIndex &&
                           !selectedTitleIndex &&
                           !selectedWikiIndex,

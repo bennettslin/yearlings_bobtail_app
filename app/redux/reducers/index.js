@@ -6,7 +6,7 @@ import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
 import { IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AppMountedReducer, IsHeavyRenderReadyReducer, RenderReadySongIndexReducer, RenderReadyAnnotationIndexReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, CurrentSceneIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
 import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseElementReducer, SliderVerseIndexReducer } from './slider'
-import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, NavIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
+import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
 
 const rootReducer = combineReducers({
 
@@ -60,11 +60,10 @@ const rootReducer = combineReducers({
     selectedAdminIndex: AdminIndexReducer,
     selectedAnnotationIndex: AnnotationIndexReducer,
     selectedAudioOptionIndex: AudioOptionIndexReducer,
-    selectedCarouselIndex: CarouselIndexReducer,
+    selectedCarouselNavIndex: CarouselNavIndexReducer,
     selectedDotKeys: DotKeysReducer,
     selectedDotsIndex: DotsIndexReducer,
     selectedLyricColumnIndex: LyricColumnIndexReducer,
-    selectedNavIndex: NavIndexReducer,
     selectedOverviewIndex: OverviewIndexReducer,
     selectedScoreIndex: ScoreIndexReducer,
     selectedSongIndex: SongIndexReducer,

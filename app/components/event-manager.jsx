@@ -60,12 +60,11 @@ class EventManager extends Component {
         this.handleLyricPlay = this.handleLyricPlay.bind(this)
         this.handleLyricVerseSelect = this.handleLyricVerseSelect.bind(this)
         this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
-        this.handleNavExpand = this.handleNavExpand.bind(this)
         this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
         this.handleNavBookSelect = this.handleNavBookSelect.bind(this)
         this.handleOverviewToggle = this.handleOverviewToggle.bind(this)
         this.handlePopupFocus = this.handlePopupFocus.bind(this)
-        this.handleCarouselToggle = this.handleCarouselToggle.bind(this)
+        this.handleCarouselNavToggle = this.handleCarouselNavToggle.bind(this)
         this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
         this.handleTitleToggle = this.handleTitleToggle.bind(this)
@@ -86,13 +85,13 @@ class EventManager extends Component {
 
         // If annotation is selected or accessed in carousel, scroll to it.
         if (nextProps.appMounted && !this.props.appMounted) {
-            const { selectedCarouselIndex,
+            const { selectedCarouselNavIndex,
                     selectedAnnotationIndex,
                     accessedAnnotationIndex } = nextProps,
 
                 scrollToAnnotationIndex = selectedAnnotationIndex || accessedAnnotationIndex
 
-            if (selectedCarouselIndex && scrollToAnnotationIndex) {
+            if (selectedCarouselNavIndex && scrollToAnnotationIndex) {
                 // Animation is slightly less janky with setTimeout.
                 setTimeout(() => {
                     this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, scrollToAnnotationIndex)
@@ -117,7 +116,7 @@ class EventManager extends Component {
         if (annotationAccessed && doScroll) {
             this._scrollElementIntoView(ANNOTATION_SCROLL, accessedAnnotationIndex)
 
-            if (this.props.selectedCarouselIndex) {
+            if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, accessedAnnotationIndex)
             }
         }
@@ -149,7 +148,6 @@ class EventManager extends Component {
         this._closeSections({
             exemptCarousel: true,
             exemptDots: true,
-            exemptNav: true,
             exemptOverview: true,
             exemptTips: true,
             exemptInteractivatedVerse: true,
@@ -224,7 +222,7 @@ class EventManager extends Component {
             direction
         })
         this._scrollElementIntoView(ANNOTATION_SCROLL, selectedAnnotationIndex)
-        if (this.props.selectedCarouselIndex) {
+        if (this.props.selectedCarouselNavIndex) {
             this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, selectedAnnotationIndex)
         }
     }
@@ -291,11 +289,11 @@ class EventManager extends Component {
      * CAROUSEL *
      ************/
 
-    handleCarouselToggle(e, selectedCarouselIndex) {
+    handleCarouselNavToggle(e, selectedCarouselNavIndex) {
         this.stopPropagation(e)
 
-        const presentCarouselIndex = this.props.selectedCarouselIndex,
-            carouselSelected = this.props.selectCarousel(selectedCarouselIndex)
+        const presentCarouselIndex = this.props.selectedCarouselNavIndex,
+            carouselSelected = this.props.selectCarouselNav(selectedCarouselNavIndex)
 
         // Scroll only when expanding carousel.
         if (carouselSelected && !presentCarouselIndex) {
@@ -342,7 +340,6 @@ class EventManager extends Component {
             this._closeSections({
                 exemptCarousel: true,
                 exemptDots: true,
-                exemptNav: true,
                 continuePastClosingPopups: true
             })
         }
@@ -435,7 +432,7 @@ class EventManager extends Component {
 
         // Scroll carousel only if not selecting from carousel.
         } else {
-            if (this.props.selectedCarouselIndex) {
+            if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, selectedAnnotationIndex)
             }
         }
@@ -447,25 +444,8 @@ class EventManager extends Component {
      * NAV *
      *******/
 
-    handleNavExpand(e) {
-        const navExpanded = this.props.selectNavExpand()
-        if (navExpanded) {
-            this.stopPropagation(e)
-
-            this._closeSections({
-                exemptDots: true,
-                exemptNav: true,
-                exemptOverview: true,
-                exemptTips: true,
-                continuePastClosingPopups: true
-            })
-        }
-        return navExpanded
-    }
-
     handleNavSongSelect(e, selectedSongIndex) {
         this.stopPropagation(e)
-        // this.props.selectNavExpand(false)
         return this.props.selectSong({
             selectedSongIndex
         })
@@ -495,7 +475,6 @@ class EventManager extends Component {
             this.stopPropagation(e)
             this._closeSections({
                 exemptCarousel: true,
-                exemptNav: true,
                 exemptOverview: true,
                 continuePastClosingPopups: true
             })
@@ -575,7 +554,6 @@ class EventManager extends Component {
             this.stopPropagation(e)
             this._closeSections({
                 exemptCarousel: true,
-                exemptNav: true,
                 exemptOverview: true,
                 exemptTips: true,
                 continuePastClosingPopups: true
@@ -659,7 +637,6 @@ class EventManager extends Component {
         this._closeSections({
             exemptCarousel: true,
             exemptLyric: true,
-            exemptNav: true,
             exemptOverview
         })
 
@@ -723,7 +700,6 @@ class EventManager extends Component {
                 exemptCarousel: true,
                 exemptInteractivatedVerse: true,
                 exemptLyric: true,
-                exemptNav: true,
                 exemptOverview: true,
                 exemptTips: true
             })
@@ -764,7 +740,6 @@ class EventManager extends Component {
         exemptCarousel,
         exemptDots,
         exemptLyric,
-        exemptNav,
         exemptOverview,
         exemptTips,
         exemptInteractivatedVerse,
@@ -807,7 +782,7 @@ class EventManager extends Component {
         }
 
         if (!exemptCarousel) {
-            this.props.selectCarousel(false)
+            this.props.selectCarouselNav(false)
         }
 
         if (!exemptDots) {
@@ -816,10 +791,6 @@ class EventManager extends Component {
 
         if (!exemptLyric) {
             this.props.selectLyricExpand(false)
-        }
-
-        if (!exemptNav) {
-            this.props.selectNavExpand(false)
         }
 
         if (!exemptOverview) {
@@ -861,14 +832,14 @@ class EventManager extends Component {
         // If a portal was selected, there will be an annotation index.
         if (annotationIndex) {
             this._scrollElementIntoView(ANNOTATION_SCROLL, annotationIndex)
-            if (this.props.selectedCarouselIndex) {
+            if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, annotationIndex)
             }
 
             // Otherwise, scroll to top.
         } else {
             this._scrollElementIntoView(LYRICS_SCROLL, 'home')
-            if (this.props.selectedCarouselIndex) {
+            if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView(CAROUSEL_ANNOTATION_SCROLL, 0)
             }
         }
@@ -976,11 +947,10 @@ class EventManager extends Component {
                 handleLyricVerseSelect: this.handleLyricVerseSelect,
                 handleLyricAnnotationSelect: this.handleLyricAnnotationSelect,
                 handleLyricSectionScroll: this.handleLyricSectionScroll,
-                handleNavExpand: this.handleNavExpand,
                 handleNavSongSelect: this.handleNavSongSelect,
                 handleNavBookSelect: this.handleNavBookSelect,
                 handleOverviewToggle: this.handleOverviewToggle,
-                handleCarouselToggle: this.handleCarouselToggle,
+                handleCarouselNavToggle: this.handleCarouselNavToggle,
                 handleScoreToggle: this.handleScoreToggle,
                 handleTipsToggle: this.handleTipsToggle,
                 handleTitleToggle: this.handleTitleToggle,
@@ -1001,7 +971,7 @@ class EventManager extends Component {
 }
 
 export default connect(({
-    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
+    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }) => ({
-    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
+    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }))(EventManager)

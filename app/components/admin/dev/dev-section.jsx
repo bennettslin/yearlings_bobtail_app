@@ -22,7 +22,6 @@ const DevSectionView = ({
     // windowHeight,
     // selectedSongIndex,
     selectedVerseIndex,
-    // selectedNavIndex,
     // selectedDotsIndex,
     // selectedScoreIndex
 
@@ -34,9 +33,6 @@ const DevSectionView = ({
         </div>
         <div className="row">
             selected verse index: {selectedVerseIndex}
-        </div>
-        <div className="row">
-            {/* selected nav index: {selectedNavIndex} */}
         </div>
         <div className="row">
             {/* selected dots index: {selectedDotsIndex} */}

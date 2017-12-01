@@ -22,9 +22,8 @@ import ScoresTipsSection from './scores-tips-section'
 
 const mainColumnPropTypes = {
     // From parent.
-    handleCarouselToggle: PropTypes.func.isRequired,
+    handleCarouselNavToggle: PropTypes.func.isRequired,
     handleLyricSectionExpand: PropTypes.func.isRequired,
-    handleNavExpand: PropTypes.func.isRequired,
 
     annotationPopupHandlers: PropTypes.object.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
@@ -40,9 +39,8 @@ const mainColumnPropTypes = {
 
 MainColumn = ({
 
-    handleCarouselToggle,
+    handleCarouselNavToggle,
     handleLyricSectionExpand,
-    handleNavExpand,
 
     annotationPopupHandlers,
     audioBannerHandlers,
@@ -106,12 +104,12 @@ MainColumn = ({
             </div>
 
             <CarouselToggle
-                handleCarouselToggle={handleCarouselToggle}
+                handleCarouselNavToggle={handleCarouselNavToggle}
             />
 
             <NavToggle
                 inMain={true}
-                handleNavExpand={handleNavExpand}
+                handleCarouselNavToggle={handleCarouselNavToggle}
             />
 
             <NavSection {...navSectionHandlers} />

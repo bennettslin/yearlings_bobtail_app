@@ -21,14 +21,14 @@ const navSectionPropTypes = {
     showSingleBookColumn: PropTypes.bool.isRequired,
 
     // From parent.
-    handleNavExpand: PropTypes.func.isRequired
+    handleCarouselNavToggle: PropTypes.func.isRequired
 },
 
 NavSection = ({
 
     isHiddenNav,
     showSingleBookColumn,
-    handleNavExpand,
+    handleCarouselNavToggle,
 
 ...other }) => {
 
@@ -43,7 +43,7 @@ NavSection = ({
             >
                 <div className="live-nav-block">
                     <NavToggle
-                        handleNavExpand={handleNavExpand}
+                        handleCarouselNavToggle={handleCarouselNavToggle}
                     />
                     <div className="books-block">
                         <NavBooksColumn {...other}

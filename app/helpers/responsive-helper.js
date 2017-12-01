@@ -100,10 +100,6 @@ export const getShowShrunkNavIcon = ({ deviceIndex, windowWidth }) => {
     return _getShowShrunkNavIconForDeviceObject(windowWidth, isPhoneOrMini ? MINI_OBJECT : deviceObject)
 }
 
-export const getIsCarouselExpandable = (deviceIndex) => {
-    return !getIsPhone(deviceIndex)
-}
-
 export const getIsLyricExpandable = (deviceIndex) => {
     return !getIsDesktop(deviceIndex)
 }

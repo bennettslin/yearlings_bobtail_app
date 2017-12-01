@@ -9,10 +9,10 @@ import { NAV_SECTION_EXPAND_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
     deviceIndex,
-    selectedNavIndex
+    selectedCarouselNavIndex
 }) => ({
     deviceIndex,
-    selectedNavIndex
+    selectedCarouselNavIndex
 })
 
 const navToggleDefaultProps = {
@@ -22,19 +22,19 @@ const navToggleDefaultProps = {
 navTogglePropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
-    selectedNavIndex: PropTypes.number.isRequired,
+    selectedCarouselNavIndex: PropTypes.number.isRequired,
 
     // From parent.
     inMain: PropTypes.bool.isRequired,
-    handleNavExpand: PropTypes.func.isRequired
+    handleCarouselNavToggle: PropTypes.func.isRequired
 },
 
 NavToggle = ({
 
     inMain,
     deviceIndex,
-    selectedNavIndex,
-    handleNavExpand
+    selectedCarouselNavIndex,
+    handleCarouselNavToggle
 
 }) => {
 
@@ -54,9 +54,9 @@ NavToggle = ({
                         <Button
                             accessKey={NAV_SECTION_EXPAND_KEY}
                             buttonName="nav"
-                            iconText={selectedNavIndex}
+                            iconText={selectedCarouselNavIndex}
                             isLarge={true}
-                            handleClick={handleNavExpand}
+                            handleClick={handleCarouselNavToggle}
                         />
                     </div>
                 </div>

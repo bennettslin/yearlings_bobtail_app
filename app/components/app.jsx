@@ -12,7 +12,7 @@ import { setIsScoreLoaded } from '../redux/actions/player'
 import { setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
 import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
-import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
+import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './event-manager'
 import { ALL_DOT_KEYS } from '../constants/dots'
 import { CONTINUE,
@@ -27,7 +27,7 @@ import { CONTINUE,
 import { getSongObject, getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex } from '../helpers/data-helper'
 import { getValueInBitNumber } from '../helpers/bit-helper'
 import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn, getIsSomethingBeingShown } from '../helpers/logic-helper'
-import { resizeWindow, getShowOneOfTwoLyricColumns, getIsCarouselExpandable, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
+import { resizeWindow, getShowOneOfTwoLyricColumns, getIsPhone, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
 import { getStageCoordinates } from '../helpers/stage-helper'
 import LogHelper from '../helpers/log-helper'
 
@@ -361,41 +361,62 @@ class App extends Component {
      * CAROUSEL *
      ************/
 
-    selectCarousel(selectedCarouselValue =
-        (this.props.selectedCarouselIndex + 1) % 2) {
+    selectCarouselNav(selectedCarouselNavValue =
+        (this.props.selectedCarouselNavIndex + 1) % 2) {
         // If no argument passed, then just toggle between on and off.
 
-        // We shouldn't be able to toggle carousel while in logue.
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        // We shouldn't be able to toggle carousel under these conditions.
+        if (getSongIsLogue(this.props.selectedSongIndex) ||
+            getIsPhone(this.props.deviceIndex) ||
+            this.props.isHiddenNav) {
+
             return false
         }
 
-        if (typeof selectedCarouselValue === 'boolean') {
-            selectedCarouselValue = selectedCarouselValue ? 1 : 0
+        if (typeof selectedCarouselNavValue === 'boolean') {
+            selectedCarouselNavValue = selectedCarouselNavValue ? 1 : 0
         }
 
         /**
-         * We also shouldn't be able to expand carousel under these conditions.
-         * So return false if it's already collapsed, or collapse it if not.
+         * If it has heightless lyrics, carousel is always collapsed.
          */
-        if (!getIsCarouselExpandable(this.props.deviceIndex) ||
-                this.props.isHeightlessLyricColumn) {
+        if (this.props.isHeightlessLyricColumn) {
 
-            if (!this.props.selectedCarouselIndex) {
+            if (!this.props.selectedCarouselNavIndex) {
                 return false
 
             } else {
-                selectedCarouselValue = 0
+                selectedCarouselNavValue = 0
             }
         }
 
-        this.props.selectCarouselIndex(selectedCarouselValue)
+        this.props.selectCarouselNavIndex(selectedCarouselNavValue)
 
-        if (!selectedCarouselValue) {
-            this.props.setCarouselAnnotationIndex(0)
-        }
+        /**
+         * New behaviour is that nav is expanded when carousel is hidden, and
+         * vice versa.
+         */
+        this._selectCarouselToggle(selectedCarouselNavValue)
+        this._selectNavExpand(selectedCarouselNavValue)
 
         return true
+    }
+
+    _selectCarouselToggle(selectedCarouselNavIndex) {
+        if (!selectedCarouselNavIndex) {
+            this.props.setCarouselAnnotationIndex(0)
+        }
+    }
+
+    _selectNavExpand(selectedCarouselNavIndex) {
+        // Reset accessed song index and book column upon nav expand.
+        if (!selectedCarouselNavIndex) {
+            this.accessNavSong(this.props.selectedSongIndex)
+
+            this.selectBookColumn({
+                resetToDefault: true
+            })
+        }
     }
 
     /*******
@@ -540,36 +561,10 @@ class App extends Component {
      * NAV *
      *******/
 
-    selectNavExpand(selectedNavValue = (this.props.selectedNavIndex + 1) % 2) {
-        // If no argument passed, then just toggle between on and off.
-
-        // Ignore this call if it's a hidden nav.
-        if (this.props.isHiddenNav) {
-            return false
-        }
-
-        if (typeof selectedNavValue === 'boolean') {
-            selectedNavValue = selectedNavValue ? 1 : 0
-        }
-
-        // Reset accessed song index and book column upon nav expand.
-        if (selectedNavValue) {
-            this.accessNavSong(this.props.selectedSongIndex)
-
-            this.selectBookColumn({
-                resetToDefault: true,
-                selectedNavValue
-            })
-        }
-
-        this.props.selectNavIndex(selectedNavValue)
-        return true
-    }
-
     selectBookColumn({
         shownBookColumnIndex = (this.props.shownBookColumnIndex + 1) % 2,
         resetToDefault,
-        selectedNavIndex = this.props.selectedNavIndex,
+        selectedCarouselNavIndex = this.props.selectedCarouselNavIndex,
         selectedSongIndex = this.props.selectedSongIndex
     }) {
         // Either toggle or reset. Book column index is 1-based.
@@ -578,7 +573,7 @@ class App extends Component {
          * We shouldn't be able to select book column if it's not a single
          * column, or if nav is collapsed, unless we are resetting to default.
          */
-        if (!resetToDefault && !(this.props.showSingleBookColumn && selectedNavIndex)) {
+        if (!resetToDefault && !(this.props.showSingleBookColumn && !selectedCarouselNavIndex)) {
             return false
         }
 
@@ -1139,7 +1134,6 @@ class App extends Component {
               windowHeight,
               windowWidth } = resizeWindow(e ? e.target : undefined),
 
-            isCarouselExpandable = getIsCarouselExpandable(deviceIndex),
             isLyricExpandable = getIsLyricExpandable(deviceIndex),
             isHeightlessLyricColumn = getIsHeightlessLyricColumn({ deviceIndex, windowHeight, windowWidth }),
             showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(
@@ -1179,11 +1173,10 @@ class App extends Component {
         this.props.setShowShrunkNavIcon(getShowShrunkNavIcon({ deviceIndex, windowWidth }))
 
         /**
-         * Force collapse of carousel in state if not expandable, or if
-         * heightless lyric.
+         * Force collapse of carousel if heightless lyric.
          */
-        if (!isCarouselExpandable || isHeightlessLyricColumn) {
-            this.selectCarousel(false)
+        if (isHeightlessLyricColumn) {
+            this.selectCarouselNav(false)
         }
 
         /**
@@ -1219,13 +1212,12 @@ class App extends Component {
         this.resetUpdatedTimePlayed = this.resetUpdatedTimePlayed.bind(this)
         this.toggleDot = this.toggleDot.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
-        this.selectCarousel = this.selectCarousel.bind(this)
+        this.selectCarouselNav = this.selectCarouselNav.bind(this)
         this.selectScore = this.selectScore.bind(this)
         this.interactivateVerse = this.interactivateVerse.bind(this)
         this.interactivateVerseDirection = this.interactivateVerseDirection.bind(this)
         this.selectLyricColumn = this.selectLyricColumn.bind(this)
         this.selectLyricExpand = this.selectLyricExpand.bind(this)
-        this.selectNavExpand = this.selectNavExpand.bind(this)
         this.selectBookColumn = this.selectBookColumn.bind(this)
         this.selectDotsExpand = this.selectDotsExpand.bind(this)
         this.selectTips = this.selectTips.bind(this)
@@ -1269,9 +1261,8 @@ class App extends Component {
                 selectLyricColumn={this.selectLyricColumn}
                 selectLyricExpand={this.selectLyricExpand}
                 scrollLyricSection={this.scrollLyricSection}
-                selectNavExpand={this.selectNavExpand}
                 selectOverview={this.selectOverview}
-                selectCarousel={this.selectCarousel}
+                selectCarouselNav={this.selectCarouselNav}
                 selectScore={this.selectScore}
                 selectSong={this.selectSong}
                 selectTime={this.selectTime}
@@ -1303,7 +1294,7 @@ const passReduxStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectNavIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTitleInAudio, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
     }, dispatch)
 )
 

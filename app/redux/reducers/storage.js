@@ -1,5 +1,5 @@
 // Reducers for state persisted in user's local storage.
-import { SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_ANNOTATION_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_NAV_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_SONG_INDEX, SELECTED_TIME_PLAYED, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_VERSE_INDEX, SELECTED_WIKI_INDEX } from '../../constants/state'
+import { SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_ANNOTATION_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_SONG_INDEX, SELECTED_TIME_PLAYED, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_VERSE_INDEX, SELECTED_WIKI_INDEX } from '../../constants/state'
 import StorageHelper from '../../helpers/storage-helper'
 
 const { getFromStorage } = StorageHelper,
@@ -7,11 +7,10 @@ const { getFromStorage } = StorageHelper,
     storedAdminIndex = getFromStorage(SELECTED_ADMIN_INDEX),
     storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
     storedAudioOptionIndex = getFromStorage(SELECTED_AUDIO_OPTION_INDEX),
-    storedCarouselIndex = getFromStorage(SELECTED_CAROUSEL_INDEX),
+    storedCarouselNavIndex = getFromStorage(SELECTED_CAROUSEL_NAV_INDEX),
     storedDotKeys = getFromStorage(SELECTED_DOT_KEYS),
     storedDotsIndex = getFromStorage(SELECTED_DOTS_INDEX),
     storedLyricColumnIndex = getFromStorage(SELECTED_LYRIC_COLUMN_INDEX),
-    storedNavIndex = getFromStorage(SELECTED_NAV_INDEX),
     storedOverviewIndex = getFromStorage(SELECTED_OVERVIEW_INDEX),
     storedScoreIndex = getFromStorage(SELECTED_SCORE_INDEX),
     storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
@@ -57,9 +56,9 @@ export const AudioOptionIndexReducer = (state = storedAudioOptionIndex, action) 
     }
 }
 
-export const CarouselIndexReducer = (state = storedCarouselIndex, action) => {
+export const CarouselNavIndexReducer = (state = storedCarouselNavIndex, action) => {
     switch (action.type) {
-        case SELECTED_CAROUSEL_INDEX:
+        case SELECTED_CAROUSEL_NAV_INDEX:
             return action.payload
         default:
             return state
@@ -93,16 +92,6 @@ export const DotsIndexReducer = (state = storedDotsIndex, action) => {
 export const LyricColumnIndexReducer = (state = storedLyricColumnIndex, action) => {
     switch (action.type) {
         case SELECTED_LYRIC_COLUMN_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-
-export const NavIndexReducer = (state = storedNavIndex, action) => {
-    switch (action.type) {
-        case SELECTED_NAV_INDEX:
             return action.payload
         default:
             return state
