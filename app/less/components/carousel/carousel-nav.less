@@ -68,3 +68,50 @@
         }
     }
 }
+
+&.overlay-hidden {
+    &.dots-section-hidden.lyric-collapsed.overview-hidden.tips-hidden {
+
+        &.nav-expanded {
+            .column-shown {
+                .nav-title {
+                    transform: scale(1);
+                }
+            }
+
+            // No need to make an exception for phone, since it isn't rendered.
+            &.is-mobile {
+                .books-column-block {
+                    top: 0;
+                }
+            }
+
+            &.is-desktop {
+                .books-column-block {
+                    bottom: 0;
+                }
+            }
+        }
+
+        &.is-song.carousel-expanded {
+
+            .carousel {
+                &.render-ready {
+                    opacity: 1;
+                }
+            }
+
+            &.is-desktop {
+                .carousel {
+                    bottom: -@carousel-height-variable;
+                }
+            }
+
+            &.is-mobile {
+                .carousel {
+                    top: -@carousel-toggle-tablet-length;
+                }
+            }
+        }
+    }
+}

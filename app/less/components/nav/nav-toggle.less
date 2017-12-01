@@ -1,19 +1,5 @@
 .nav-toggle-block {
     position: relative;
-
-    .icon-canvas {
-        background-color: #8dd;
-    }
-}
-
-// The "real" nav toggle that is in the centre field, not nav section.
-.centre-field {
-    >.nav-toggle-block {
-        position: absolute;
-        bottom: 0;
-        z-index: @dots-overview-subfield-z-index;
-        height: @dot-container-diameter;
-    }
 }
 
 .tablet-width, .mini-width {
@@ -21,20 +7,6 @@
         .nav-toggle-block {
             margin-left: 3px;
             margin-right: 0;
-        }
-    }
-}
-
-.overlay-hidden {
-    &.nav-expanded {
-        .nav-toggle-book {
-            box-shadow: @popup-box-shadow;
-        }
-
-        .column-shown {
-            .nav-title {
-                transform: scale(1);
-            }
         }
     }
 }

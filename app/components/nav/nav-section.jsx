@@ -4,7 +4,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { connect } from 'react-redux'
-import NavToggle from './nav-toggle'
 import NavBooksColumn from './nav-books-column'
 
 const mapStateToProps = ({
@@ -18,17 +17,13 @@ const mapStateToProps = ({
 const navSectionPropTypes = {
     // Through Redux.
     isHiddenNav: PropTypes.bool.isRequired,
-    showSingleBookColumn: PropTypes.bool.isRequired,
-
-    // From parent.
-    handleCarouselNavToggle: PropTypes.func.isRequired
+    showSingleBookColumn: PropTypes.bool.isRequired
 },
 
 NavSection = ({
 
     isHiddenNav,
     showSingleBookColumn,
-    handleCarouselNavToggle,
 
 ...other }) => {
 
@@ -42,9 +37,10 @@ NavSection = ({
                 )}
             >
                 <div className="live-nav-block">
-                    <NavToggle
-                        handleCarouselNavToggle={handleCarouselNavToggle}
-                    />
+
+                    {/* Placeholder, has no other purpose. */}
+                    <div className="nav-toggle-block" />
+
                     <div className="books-block">
                         <NavBooksColumn {...other}
                             bookIndex={0}

@@ -356,6 +356,7 @@ class EventManager extends Component {
             this.stopPropagation(e)
             this._closeSections({
                 exemptAnnotation: true,
+                exemptCarousel: true,
                 exemptLyric: true,
                 continuePastClosingPopups: true
             })

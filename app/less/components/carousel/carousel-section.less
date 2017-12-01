@@ -7,25 +7,7 @@
     z-index: @carousel-z-index;
     transition: bottom @animation-slow,
                 opacity @animation-default;
-
-    // background-color: rgba(250, 225, 200, 0.5);
     opacity: 0;
-}
-
-.is-song {
-    &.carousel-expanded.overview-hidden.tips-hidden {
-        .carousel {
-            bottom: -@carousel-height-variable;
-        }
-    }
-
-    &.overview-hidden.tips-hidden {
-        .carousel {
-            &.render-ready {
-                opacity: 1;
-            }
-        }
-    }
 }
 
 .carousel-scroll {
@@ -66,14 +48,6 @@
 
     .carousel-scroll {
         flex-direction: column;
-    }
-
-    &.is-song {
-        &.carousel-expanded.overview-hidden.tips-hidden {
-            .carousel {
-                top: -@carousel-toggle-tablet-length;
-            }
-        }
     }
 
     &.lyric-expanded, &.heightless-lyric, &.is-logue {

@@ -206,7 +206,6 @@ class LiveManager extends Component {
                     stopPropagation
                 },
                 navSectionHandlers: {
-                    handleCarouselNavToggle,
                     handleNavSongSelect,
                     handleNavBookSelect
                 },

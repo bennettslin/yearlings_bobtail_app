@@ -1,10 +1,4 @@
 module.exports = [
-
-    {
-        taskName: `Show single carousel and nav toggle button.`,
-        workedHours: 0,
-        neededHours: 2
-    },
     {
         taskName: `Show nav image and title only on hover.`,
         workedHours: 0,

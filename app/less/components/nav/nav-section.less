@@ -28,7 +28,7 @@
 }
 
 // All containers.
-.live-nav-block, .nav-book, .nav-toggle-book {
+.live-nav-block, .nav-book {
     display: flex;
 }
 
@@ -58,10 +58,6 @@
 
 .tablet-width, .mini-width {
 
-    // .live-nav-block {
-    //     flex-direction: row-reverse;
-    // }
-
     .books-block {
         top: 0;
     }
@@ -75,22 +71,10 @@
         border-radius: 0 0 @nav-border-radius @nav-border-radius;
     }
 
-    .nav-toggle-book {
-        border-radius: 0 0 0 @nav-border-radius;
-    }
-
     .nav-title-block {
         transform: rotate(45deg);
         transform-origin: left bottom;
         bottom: auto;
         top: 50%;
-    }
-
-    &.overlay-hidden {
-        &.nav-expanded {
-            .books-column-block {
-                top: 0;
-            }
-        }
     }
 }

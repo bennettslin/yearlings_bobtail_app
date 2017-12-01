@@ -1,4 +1,4 @@
-.books-column-block, .book-column, .nav-book, .nav-toggle-book {
+.books-column-block, .book-column, .nav-book {
     position: absolute;
     height: 100%;
 }
@@ -22,13 +22,5 @@
     .books-column-block {
         transition: bottom @animation-default;
         bottom: -@book-height;
-    }
-
-    &.overlay-hidden {
-        &.nav-expanded {
-            .books-column-block {
-                bottom: 0;
-            }
-        }
     }
 }

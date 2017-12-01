@@ -1,18 +1,10 @@
-.nav-book, .nav-toggle-book {
+.nav-book {
     padding: 0 @nav-book-padding;
 
     &.nav-book {
         min-width: @app-icon-diameter;
         border-radius: @nav-border-radius @nav-border-radius 0 0;
         background-color: #48d;
-    }
-
-    &.nav-toggle-book {
-        border-radius: 0 @nav-border-radius 0 0;
-        transition: left @animation-default, box-shadow @animation-default;
-        left: 0;
-
-        background-color: purple;
     }
 }
 
