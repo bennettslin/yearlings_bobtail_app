@@ -2552,4 +2552,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Always show either carousel or nav.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

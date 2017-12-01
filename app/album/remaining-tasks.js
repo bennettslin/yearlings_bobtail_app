@@ -1,9 +1,9 @@
 module.exports = [
 
     {
-        taskName: `Always show either carousel or nav, with single toggle button on left.`,
+        taskName: `Show single carousel and nav toggle button.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 2
     },
     {
         taskName: `Show nav image and title only on hover.`,
@@ -21,7 +21,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Timeout show and hide elements in mobile?`,
+        taskName: `Hide elements when clicking stage. Show upon everything else.`,
         workedHours: 0,
         neededHours: 3
     },
