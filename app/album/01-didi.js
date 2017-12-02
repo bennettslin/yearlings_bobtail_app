@@ -20,13 +20,16 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
-            floorPanels: [
-                [6],
-                [5],
-                [4],
-                [3],
-                [2],
-                [1],
+            floorPanelZIndices: [
+                [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]
+            ],
+            floorPanelColours: [
+                ['red'],
+                ['orange'],
+                ['yellow'],
+                ['green'],
+                ['blue'],
+                ['purple'],
             ]
         },
         {
@@ -48,10 +51,7 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, running, panicked'
                 }
-            },
-            floorPanels: [
-                [0]
-            ]
+            }
         },
         {
             unitIndex: 6,
@@ -72,10 +72,7 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, skipping, pointing back and laughing'
                 }
-            },
-            floorPanels: [
-                [0]
-            ]
+            }
         },
         {
             unitIndex: 8,
@@ -86,10 +83,7 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, in bathtub, downcast'
                 }
-            },
-            floorPanels: [
-                [0]
-            ]
+            }
         },
         {
             unitIndex: 12,
@@ -105,10 +99,7 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, facing front, singing, smiling'
                 }
-            },
-            floorPanels: [
-                [0]
-            ]
+            }
         }
     ],
     totalTime: 177,

@@ -34,7 +34,8 @@ class StageSceneSection extends Component {
 
             sceneObject = getSceneObject(renderReadySongIndex, currentSceneIndex),
 
-            { floorPanels } = sceneObject
+            { floorPanelZIndices,
+              floorPanelColours } = sceneObject
 
         return (
             <div className={classnames(
@@ -43,7 +44,8 @@ class StageSceneSection extends Component {
                 isHeavyRenderReady ? 'render-ready' : 'render-unready'
             )}>
                 <StageFloorField
-                    floorPanels={floorPanels}
+                    floorPanelZIndices={floorPanelZIndices}
+                    floorPanelColours={floorPanelColours}
                 />
                 <StageActionField />
             </div>

@@ -2582,4 +2582,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Floor panel colouring.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

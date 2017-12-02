@@ -5,17 +5,22 @@ import PropTypes from 'prop-types'
 import { getArrayOfLength } from '../../helpers/general-helper'
 import { getFloorPanelCornersForXYAndZ } from '../../helpers/stage-helper'
 
-import { DEFAULT_FLOOR_PANELS_MATRIX,
+import { DEFAULT_FLOOR_PANEL_Z_INDICES,
+         DEFAULT_FLOOR_PANEL_COLOURS,
          FLOOR_PANEL_ROWS_LENGTH,
          FLOOR_PANEL_COLUMNS_LENGTH } from '../../constants/stage'
 
 const defaultProps = {
-    floorPanels: DEFAULT_FLOOR_PANELS_MATRIX
+    floorPanelZIndices: DEFAULT_FLOOR_PANEL_Z_INDICES,
+    floorPanelColours: DEFAULT_FLOOR_PANEL_COLOURS
 }
 
 const propTypes = {
-    floorPanels: PropTypes.arrayOf(
+    floorPanelZIndices: PropTypes.arrayOf(
         PropTypes.arrayOf(PropTypes.number)
+    ).isRequired,
+    floorPanelColours: PropTypes.arrayOf(
+        PropTypes.arrayOf(PropTypes.string)
     ).isRequired
 }
 
@@ -28,7 +33,8 @@ const rowIndicesArray = getArrayOfLength({
 
 const StageFloorField = ({
 
-    floorPanels
+    floorPanelZIndices,
+    floorPanelColours
 
 }) => {
 
@@ -38,8 +44,13 @@ const StageFloorField = ({
             {rowIndicesArray.map(rawYIndex => {
 
                 // Use last row array if no row array for this y-index.
-                const rowArray = floorPanels.length > rawYIndex ?
-                    floorPanels[rawYIndex] : floorPanels[floorPanels.length - 1]
+                const zIndicesRowArray = floorPanelZIndices.length > rawYIndex ?
+                        floorPanelZIndices[rawYIndex] :
+                        floorPanelZIndices[floorPanelZIndices.length - 1],
+
+                    coloursRowArray = floorPanelColours.length > rawYIndex ?
+                        floorPanelColours[rawYIndex] :
+                        floorPanelColours[floorPanelColours.length - 1]
 
                 /**
                  * Invert the rows, since top row in array should be top row
@@ -51,12 +62,17 @@ const StageFloorField = ({
                     columnIndicesArray.map(xIndex => {
 
                         // Use last entry if no entry for this x-index.
-                        const zIndex = rowArray.length > xIndex ?
-                            rowArray[xIndex] : rowArray[rowArray.length - 1]
+                        const zIndex = zIndicesRowArray.length > xIndex ?
+                                zIndicesRowArray[xIndex] :
+                                zIndicesRowArray[zIndicesRowArray.length - 1],
 
-                        const corners = getFloorPanelCornersForXYAndZ(
-                            xIndex, yIndex, zIndex
-                        )
+                            colour = coloursRowArray.length > xIndex ?
+                                coloursRowArray[xIndex] :
+                                coloursRowArray[coloursRowArray.length - 1],
+
+                            corners = getFloorPanelCornersForXYAndZ(
+                                xIndex, yIndex, zIndex
+                            )
 
                         return (
                             <div
@@ -72,7 +88,8 @@ const StageFloorField = ({
                                             className="test-floor-panel-pixel"
                                             style={{
                                                 left: xPercentage + '%',
-                                                bottom: yPercentage + '%'
+                                                bottom: yPercentage + '%',
+                                                backgroundColor: colour
                                             }}
                                         />
                                     )
