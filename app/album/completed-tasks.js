@@ -2576,5 +2576,10 @@ module.exports = [
         taskName: `Adjust stage position to consider nav at bottom in desktop, nav at top in mobile.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Fix various issues with carousel wonkiness.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
