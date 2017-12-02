@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     padding: @app-thin-margin;
+    z-index: @carousel-nav-button-z-index;
 
     transition: bottom @animation-default;
 
@@ -12,10 +13,6 @@
 
     .button:first-child {
         margin-right: @app-thin-margin;
-    }
-
-    .button {
-        z-index: @carousel-nav-button-z-index;
     }
 
     .icon-canvas {
