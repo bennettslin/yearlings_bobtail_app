@@ -1,6 +1,6 @@
 .carousel-annotations-block {
     display: flex;
-    // align-items: center;
+    align-items: center;
 }
 
 .carousel-annotation {
@@ -15,6 +15,13 @@
 
     .annotation-section {
         transition: background-color @animation-default;
+
+        margin: @carousel-annotation-small-padding
+                @annotation-section-padding;
+
+        padding: @carousel-annotation-small-padding
+                 @carousel-annotation-padding
+                 @carousel-annotation-padding;
     }
 
     &:not(:last-child) {
@@ -24,27 +31,6 @@
 
     &:first-child {
         padding-left: @carousel-toggle-laptop-length;
-    }
-}
-
-.is-desktop {
-    .carousel-annotation {
-        .annotation-section {
-            margin: @carousel-annotation-small-padding
-                    @annotation-section-padding;
-            padding: @carousel-annotation-small-padding
-                    @carousel-annotation-padding
-                    @carousel-annotation-padding;
-        }
-    }
-}
-
-.is-mobile {
-    .carousel-annotation {
-        .annotation-section {
-            margin: 0 @annotation-section-padding;
-            padding: 0 @carousel-annotation-padding;
-        }
     }
 }
 
