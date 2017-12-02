@@ -1,6 +1,20 @@
 .carousel-annotations-block {
     display: flex;
-    align-items: center;
+}
+
+.is-desktop {
+    .carousel-annotations-block {
+        margin-bottom: -@carousel-annotation-padding;
+
+        // TODO: Do I like this better or not?
+        align-items: center;
+    }
+}
+
+.is-mobile {
+    .carousel-annotations-block {
+        margin-top: -@carousel-annotation-padding;
+    }
 }
 
 .carousel-annotation {

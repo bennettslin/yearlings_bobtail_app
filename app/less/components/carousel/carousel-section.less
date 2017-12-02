@@ -38,12 +38,8 @@
 .is-mobile {
 
     .carousel {
-        bottom: auto;
-        top: calc(~"-100% - @{carousel-tablet-variable}");
-        height: calc(~"100% + @{carousel-toggle-tablet-length}");
-
         transition: top @animation-slow,
-                    opacity @animation-default;
+        opacity @animation-default;
     }
 
     .carousel-scroll {
@@ -54,10 +50,6 @@
         .carousel-toggle-button-block {
             left: -@overview-toggle-tablet-width;
         }
-    }
-
-    .carousel-annotations-block {
-        align-items: flex-start;
     }
 
     .carousel-annotation {
@@ -72,6 +64,14 @@
         }
     }
 
+    &.tablet-width {
+        .carousel {
+            bottom: auto;
+            top: calc(~"-100% - @{carousel-tablet-variable}");
+            height: calc(~"100% + @{carousel-toggle-tablet-length}");
+        }
+    }
+
     &.mini-width {
 
         .carousel {
@@ -79,13 +79,13 @@
             height: calc(~"100% + @{carousel-toggle-mini-length}");
         }
 
-        &.is-song {
-            &.carousel-expanded.overview-hidden.tips-hidden {
-                .carousel {
-                    top: -@carousel-toggle-mini-length;
-                }
-            }
-        }
+        // &.is-song {
+        //     &.carousel-expanded.overview-hidden.tips-hidden {
+        //         .carousel {
+        //             top: -@carousel-toggle-mini-length;
+        //         }
+        //     }
+        // }
 
         &.lyric-expanded, &.heightless-lyric, &.is-logue {
             .carousel-toggle-button-block {
