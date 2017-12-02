@@ -70,7 +70,13 @@ class CarouselAnnotation extends Component {
          * Ensure that dots and overview get dismissed when carousel annotation
          * container is clicked.
          */
-        this.props.handlePopupContainerClick(e, true)
+        /**
+         * FIXME: Not perfect because annotations overlap, so it's still
+         * possible to deselect the annotation by clicking it on the far right.
+         */
+        if (this.props.isSelectedAnnotation) {
+            this.props.handlePopupContainerClick(e, true)
+        }
     }
 
     render() {
