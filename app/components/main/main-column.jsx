@@ -96,11 +96,9 @@ MainColumn = ({
                 <TipsPopup {...tipsPopupHandlers} />
             </div>
 
-            <div className="audio-banner-custom-subfield">
-                <AudioBanner {...audioBannerHandlers}
-                    inCustomSubfield={true}
-                />
-            </div>
+            <AudioBanner {...audioBannerHandlers}
+                inCustomSubfield={true}
+            />
 
             <CarouselToggle
                 handleCarouselNavToggle={handleCarouselNavToggle}

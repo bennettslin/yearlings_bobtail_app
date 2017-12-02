@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import classnames from 'classnames'
+
 import SliderSection from '../slider/slider-section'
 import AudioTimer from './audio-timer'
 import { getSongTitle } from '../../helpers/data-helper'
@@ -57,19 +59,35 @@ AudioBanner = ({
 
         songTitle = getSongTitle({
                 songIndex: selectedSongIndex
-            })
+            }),
 
-    return shouldRender && (
-        <div className="audio-block audio-banner-block">
-            <SliderSection {...other} />
-            <div className="audio-banner audio-display-block">
-                <div className="audio-banner-title">
-                    {songTitle}
+        audioBannerComponent = (
+            <div className={classnames(
+                'audio-block',
+                'audio-banner-block'
+            )}>
+                <SliderSection {...other} />
+                <div className="audio-banner audio-display-block">
+                    <div className="audio-banner-title">
+                        {songTitle}
+                    </div>
+                    <AudioTimer />
                 </div>
-                <AudioTimer />
             </div>
-        </div>
-    )
+        )
+
+    if (shouldRender) {
+
+        // If in custom subfield, wrap in parent element.
+        return inCustomSubfield ? (
+            <div className="audio-banner-custom-subfield">
+                {audioBannerComponent}
+            </div>
+        ) : audioBannerComponent
+
+    } else {
+        return null
+    }
 }
 
 AudioBanner.defaultProps = audioBannerDefaultProps
