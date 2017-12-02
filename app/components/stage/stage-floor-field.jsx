@@ -24,6 +24,7 @@ const propTypes = {
     ).isRequired
 }
 
+// TODO: Make indices in order of lowest in DOM to highest.
 const rowIndicesArray = getArrayOfLength({
         length: FLOOR_PANEL_ROWS_LENGTH
     }),
