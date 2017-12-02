@@ -17,17 +17,17 @@ const mapStateToProps = ({
 const sliderStanzasPropTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired
-},
+}
 
-SliderStanzas = ({
+const maxStanzaTimesCount = getMaxStanzaTimesCount()
+
+const SliderStanzas = ({
 
     selectedSongIndex
 
 }) => {
 
     const totalTime = getSongTotalTime(selectedSongIndex),
-
-        maxStanzaTimesCount = getMaxStanzaTimesCount(),
 
         /**
          * Dynamically create array of just indices. Audio slider will fetch

@@ -30,10 +30,10 @@ import { PHONE_WIDTH,
 import { roundPercentage } from './general-helper'
 import { getIsDesktop, getIsPhone, getIsMonitor } from './responsive-helper'
 
-export const getFloorPanelCornersForXYAndElevation = (
+export const getFloorPanelCornersForXYAndZ = (
     xIndex,
     yIndex,
-    elevation = 0
+    zIndex = 0
 ) => {
     /**
      * Like CSS corners, order is:
@@ -41,22 +41,22 @@ export const getFloorPanelCornersForXYAndElevation = (
      * top left, top right, bottom right, bottom left.
      */
     return [
-        _getFloorPanelXYPercentageForCornerAndElevation(
-            xIndex, yIndex + 1, elevation
+        _getFloorPanelXYPercentageForXYCornerAndZ(
+            xIndex, yIndex + 1, zIndex
         ),
-        _getFloorPanelXYPercentageForCornerAndElevation(
-            xIndex + 1, yIndex + 1, elevation
+        _getFloorPanelXYPercentageForXYCornerAndZ(
+            xIndex + 1, yIndex + 1, zIndex
         ),
-        _getFloorPanelXYPercentageForCornerAndElevation(
-            xIndex + 1, yIndex, elevation
+        _getFloorPanelXYPercentageForXYCornerAndZ(
+            xIndex + 1, yIndex, zIndex
         ),
-        _getFloorPanelXYPercentageForCornerAndElevation(
-            xIndex, yIndex, elevation
+        _getFloorPanelXYPercentageForXYCornerAndZ(
+            xIndex, yIndex, zIndex
         )
     ]
 }
 
-const _getFloorPanelXYPercentageForCornerAndElevation = (
+const _getFloorPanelXYPercentageForXYCornerAndZ = (
 
     // This is an interval from 0 to 12. There are twelve floor panel columns.
     xCornerIndex,
@@ -65,19 +65,19 @@ const _getFloorPanelXYPercentageForCornerAndElevation = (
     yCornerIndex,
 
     /**
-     * This is a percentage from 0 to 100, with 0 being ground level, and 100
+     * This is an interval from 0 to 10, with 0 being ground level, and 10
      * being level with the vanishing point.
      */
-    elevationIndex = 0
+    zIndex = 0
 ) => {
     return {
         xPercentage: _getXPercentageForXCornerAndYCorner(
             xCornerIndex,
             yCornerIndex
         ),
-        yPercentage: _getYPercentageForYCornerAndElevation(
+        yPercentage: _getYPercentageForYCornerAndZ(
             yCornerIndex,
-            elevationIndex
+            zIndex
         )
     }
 }
@@ -86,8 +86,8 @@ const _getXPercentageForXCornerAndYCorner = (
     xCornerIndex,
     yCornerIndex
 ) => {
-    // Get x-coordinate percentage at elevation 0.
-    const baseYPercentage = _getYPercentageForYCornerAndElevation(
+    // Get x-coordinate percentage at zIndex 0.
+    const baseYPercentage = _getYPercentageForYCornerAndZ(
             yCornerIndex, 0
         ),
         floorPanelsWidthPercentage =
@@ -101,13 +101,13 @@ const _getXPercentageForXCornerAndYCorner = (
     return roundPercentage(rawXPercentage)
 }
 
-const _getYPercentageForYCornerAndElevation = (
+const _getYPercentageForYCornerAndZ = (
     yCornerIndex,
-    elevationPercentage
+    zIndex
 ) => {
     const floorPanelYPercentage = FLOOR_PANEL_Y_PERCENTAGES[yCornerIndex],
         rawYPercentage =
-            floorPanelYPercentage + elevationPercentage / 100 *
+            floorPanelYPercentage + zIndex / 10 *
             (VANISHING_POINT_Y_PERCENTAGE - floorPanelYPercentage)
 
     return roundPercentage(rawYPercentage)

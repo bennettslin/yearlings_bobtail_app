@@ -15,11 +15,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Hide elements when clicking stage. Show upon everything else.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Theatre views and coordinates.`,
         workedHours: 0,
         neededHours: 3
