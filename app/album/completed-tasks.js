@@ -2572,4 +2572,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Adjust stage position to consider nav at bottom in desktop, nav at top in mobile.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

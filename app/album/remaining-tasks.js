@@ -15,16 +15,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Redo stage to always consider nav at bottom in desktop, nav at top in mobile.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Floor panels consider stage padding`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Hide elements when clicking stage. Show upon everything else.`,
         workedHours: 0,
         neededHours: 3

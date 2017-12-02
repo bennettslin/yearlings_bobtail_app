@@ -23,7 +23,9 @@ import { PHONE_WIDTH,
          AUDIO_BANNER_CUSTOM_SUBFIELD_PADDING,
 
          COLLAPSED_LYRIC_SECTION_HEIGHT,
-         MENU_HEIGHT } from '../constants/responsive'
+         MENU_HEIGHT,
+
+         NAV_BOOK_HEIGHT } from '../constants/responsive'
 
 import { roundPercentage } from './general-helper'
 import { getIsDesktop, getIsPhone, getIsMonitor } from './responsive-helper'
@@ -126,7 +128,7 @@ export const getStageCoordinates = ({
         isPhone = getIsPhone(deviceIndex),
 
         audioBannerOverflow = isPhone ? AUDIO_BANNER_CUSTOM_SUBFIELD_HEIGHT + AUDIO_BANNER_CUSTOM_SUBFIELD_PADDING * 2 : 0,
-        centreFieldHeight = _getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - audioBannerOverflow,
+        centreFieldHeight = _getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - audioBannerOverflow - NAV_BOOK_HEIGHT,
 
         centreFieldRatio = centreFieldWidth / centreFieldHeight
 
@@ -153,7 +155,7 @@ export const getStageCoordinates = ({
 
     } else {
         // If stage height is adjustable, put closer to bottom in mobile.
-        top = audioBannerOverflow + (centreFieldHeight - height) * 0.9
+        top = audioBannerOverflow + NAV_BOOK_HEIGHT + (centreFieldHeight - height) * 0.9
 
         // Keep centred in mobile, even with dots overview.
         left = (centreFieldWidth - width) * 0.5
