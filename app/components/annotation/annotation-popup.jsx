@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationSection from './annotation-section'
 import Popup from '../popup/popup'
-import { getIsOverlayingAnnotation } from '../../helpers/responsive-helper'
+import { getIsOverlayingAnnotation,
+         getIsPhone } from '../../helpers/responsive-helper'
 
 const mapStateToProps = ({
     deviceIndex,
@@ -67,8 +68,10 @@ AnnotationPopup = ({
 
     const isOverlayingAnnotation = getIsOverlayingAnnotation({
             deviceIndex,
-            isLyricExpanded
-        })
+            isLyricExpanded,
+            selectedCarouselNavIndex
+        }),
+        isPhone = getIsPhone(deviceIndex)
 
     /**
      * Annotation popup is told whether it is in overlay. It then checks
@@ -80,7 +83,13 @@ AnnotationPopup = ({
     } else {
         const isVisible = isHeavyRenderReady &&
                           !!selectedAnnotationIndex &&
-                          !selectedCarouselNavIndex &&
+
+                          /**
+                           * If an annotation is selected, always show in popup
+                           * if it's a phone.
+                           */
+                          (!selectedCarouselNavIndex || isPhone) &&
+
                           !selectedScoreIndex &&
                           !selectedTitleIndex &&
                           !selectedWikiIndex,
