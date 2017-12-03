@@ -6,7 +6,7 @@ module.exports = [
     },
     {
         taskName: `Figure out floor panel matrices for all scenes.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 4
     },
     {

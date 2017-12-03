@@ -1,5 +1,5 @@
 /**
- * TODO: Yet to include dropped clothes and blankets, app UI, and rendering.
+ * TODO: Yet to include app UI and rendering.
  */
 
 module.exports = [
@@ -90,6 +90,51 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+
+    /**
+     * Fabrics.
+     */
+    {
+        taskName: `Bennett's blanket (Odin)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Bennett's blanket (Pchelka)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Sita's blanket and pillows (Grasshoppers, Look Back)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Bennett and Sita's clothes (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Sita's blanket on couch (Kyon)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Bennett's blanket and pillows (Grasshoppers, Uncanny)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `2 * Bennett's hospital blanket (Cremated, Dream)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Sita and Khari's clothes (Vegan)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
 
     /**
      * Large painted panels (Do first)
@@ -733,9 +778,14 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `keepsake photos`,
+        taskName: `keepsake photos (Kyon)`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Pinky promise portrait (Uncanny)`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     /**
