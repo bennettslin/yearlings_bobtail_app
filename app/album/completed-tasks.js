@@ -2587,4 +2587,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `eyebrows and general direction pupils`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]

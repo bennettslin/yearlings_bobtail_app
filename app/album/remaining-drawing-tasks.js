@@ -28,11 +28,6 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `eyebrows`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: `hairline`,
         workedHours: 0,
         neededHours: 8
