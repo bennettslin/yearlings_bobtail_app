@@ -14,23 +14,16 @@ import { VERSES,
          REFRAIN,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
+         PLAYGROUND_FLOOR_PANELS,
+         CHILDHOOD_BATHROOM_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
-            floorPanelZIndices: [
-                [1, 2, 3, 4, 5, 6, 5, 4, 3, 2, 1]
-            ],
-            floorPanelColours: [
-                ['red'],
-                ['orange'],
-                ['yellow'],
-                ['green'],
-                ['blue'],
-                ['purple'],
-            ]
+            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS
         },
         {
             unitIndex: 3,
@@ -51,7 +44,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, running, panicked'
                 }
-            }
+            },
+            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS
         },
         {
             unitIndex: 6,
@@ -72,7 +66,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, skipping, pointing back and laughing'
                 }
-            }
+            },
+            floorPanels: PLAYGROUND_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -83,7 +78,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, in bathtub, downcast'
                 }
-            }
+            },
+            floorPanels: CHILDHOOD_BATHROOM_FLOOR_PANELS
         },
         {
             unitIndex: 12,
@@ -99,7 +95,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, facing front, singing, smiling'
                 }
-            }
+            },
+            floorPanels: CHILDHOOD_BATHROOM_FLOOR_PANELS
         }
     ],
     totalTime: 177,

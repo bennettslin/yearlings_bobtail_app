@@ -5,23 +5,27 @@ import PropTypes from 'prop-types'
 import { getArrayOfLength } from '../../helpers/general-helper'
 import { getFloorPanelCornersForXYAndZ } from '../../helpers/stage-helper'
 
-import { DEFAULT_FLOOR_PANEL_Z_INDICES,
-         DEFAULT_FLOOR_PANEL_COLOURS,
+import { DEFAULT_STAGE_FLOOR_PANELS,
          FLOOR_PANEL_ROWS_LENGTH,
          FLOOR_PANEL_COLUMNS_LENGTH } from '../../constants/stage'
 
 const defaultProps = {
-    floorPanelZIndices: DEFAULT_FLOOR_PANEL_Z_INDICES,
-    floorPanelColours: DEFAULT_FLOOR_PANEL_COLOURS
+    floorPanels: DEFAULT_STAGE_FLOOR_PANELS,
 }
 
 const propTypes = {
-    floorPanelZIndices: PropTypes.arrayOf(
-        PropTypes.arrayOf(PropTypes.number)
-    ).isRequired,
-    floorPanelColours: PropTypes.arrayOf(
-        PropTypes.arrayOf(PropTypes.string)
-    ).isRequired
+    floorPanels: PropTypes.shape({
+        zIndices: PropTypes.arrayOf(
+            PropTypes.arrayOf(
+                PropTypes.number
+            )
+        ),
+        colours: PropTypes.arrayOf(
+            PropTypes.arrayOf(
+                PropTypes.string
+            )
+        )
+    }).isRequired
 }
 
 // TODO: Make indices in order of lowest in DOM to highest.
@@ -34,10 +38,11 @@ const rowIndicesArray = getArrayOfLength({
 
 const StageFloorField = ({
 
-    floorPanelZIndices,
-    floorPanelColours
+    floorPanels
 
 }) => {
+
+    const { zIndices, colours } = floorPanels
 
     return (
         <div className="stage-floor-field">
@@ -45,13 +50,13 @@ const StageFloorField = ({
             {rowIndicesArray.map(rawYIndex => {
 
                 // Use last row array if no row array for this y-index.
-                const zIndicesRowArray = floorPanelZIndices.length > rawYIndex ?
-                        floorPanelZIndices[rawYIndex] :
-                        floorPanelZIndices[floorPanelZIndices.length - 1],
+                const zIndicesRowArray = zIndices.length > rawYIndex ?
+                        zIndices[rawYIndex] :
+                        zIndices[zIndices.length - 1],
 
-                    coloursRowArray = floorPanelColours.length > rawYIndex ?
-                        floorPanelColours[rawYIndex] :
-                        floorPanelColours[floorPanelColours.length - 1]
+                    coloursRowArray = colours.length > rawYIndex ?
+                        colours[rawYIndex] :
+                        colours[colours.length - 1]
 
                 /**
                  * Invert the rows, since top row in array should be top row

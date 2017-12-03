@@ -15,12 +15,18 @@ import { LEFT,
          SOLO,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { FREEWAY_FLOOR_PANELS,
+         PORCH_FLOOR_PANELS,
+         PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+         CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
+         CHANGELING_CAVE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
-            description: ``
+            description: ``,
+            floorPanels: FREEWAY_FLOOR_PANELS
         },
         {
             unitIndex: 2,
@@ -39,7 +45,8 @@ module.exports = {
             },
             stageProps: {
                 couch: 1
-            }
+            },
+            floorPanels: FREEWAY_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -65,7 +72,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'stepping off porch, cautious, trying to calm Christopher'
                 }
-            }
+            },
+            floorPanels: PORCH_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -86,7 +94,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, aggressive stance, angry'
                 }
-            }
+            },
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -111,7 +120,8 @@ module.exports = {
                         description: 'pulling bottle from cart, about to strike, threatening'
                     }
                 }
-            }
+            },
+            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS
         },
         {
             unitIndex: 12,
@@ -127,7 +137,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'sitting up in bed, worried, scared'
                 }
-            }
+            },
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
         },
         {
             unitIndex: 14,
@@ -148,7 +159,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, wide-eyed, needing reassurance'
                 }
-            }
+            },
+            floorPanels: CHANGELING_CAVE_FLOOR_PANELS
         }
     ],
     totalTime: 207,

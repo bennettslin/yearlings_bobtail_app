@@ -320,7 +320,7 @@ export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
         return sceneIndex
     }
 
-    return -1
+    return 0
 }
 
 export const getSceneObject = (songIndex, sceneIndex = 0) => {

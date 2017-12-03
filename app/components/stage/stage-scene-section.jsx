@@ -23,6 +23,7 @@ const mapStateToProps = ({
 class StageSceneSection extends Component {
 
     static propTypes = {
+        isHeavyRenderReady: PropTypes.bool.isRequired,
         renderReadySongIndex: PropTypes.number.isRequired,
         currentSceneIndex: PropTypes.number.isRequired
     }
@@ -34,8 +35,9 @@ class StageSceneSection extends Component {
 
             sceneObject = getSceneObject(renderReadySongIndex, currentSceneIndex),
 
-            { floorPanelZIndices,
-              floorPanelColours } = sceneObject
+            { floorPanels } = sceneObject
+
+        console.error('sceneObject', sceneObject, renderReadySongIndex, currentSceneIndex)
 
         return (
             <div className={classnames(
@@ -44,8 +46,7 @@ class StageSceneSection extends Component {
                 isHeavyRenderReady ? 'render-ready' : 'render-unready'
             )}>
                 <StageFloorField
-                    floorPanelZIndices={floorPanelZIndices}
-                    floorPanelColours={floorPanelColours}
+                    floorPanels={floorPanels}
                 />
                 <StageActionField />
             </div>

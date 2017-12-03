@@ -1,15 +1,13 @@
 // Check out Peoria Symphony Orchestra.
 
-const
+/**
+ * Number to multiply one number to get the next, such that after six times,
+ * 2 becomes 3, resulting in seven values.
+ */
+const exponent = 1.069913193933663,
 
-    /**
-     * Number to multiply one number to get the next, such that after six
-     * times 2 becomes 3, resulting in seven values.
-     */
-    exponent = 1.069913193933663,
-
-    // Assume that floor height is 20% of stage height.
-    stageYPercentage = 20,
+    // Assume that floor height is this percent of stage height.
+    stageYPercentage = 12,
 
     yPercentageUnit =
         exponent * exponent * exponent * exponent * exponent +
@@ -36,14 +34,6 @@ const
         yHeight0 + yHeight1 + yHeight2 + yHeight3,
         yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4,
         yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4 + yHeight5
-    ],
-
-    DEFAULT_FLOOR_PANEL_Z_INDICES = [
-        [0]
-    ],
-
-    DEFAULT_FLOOR_PANEL_COLOURS = [
-        ['black']
     ]
 
 module.exports = {
@@ -52,7 +42,5 @@ module.exports = {
     VANISHING_POINT_Y_PERCENTAGE: 60,
     FLOOR_PANEL_Y_PERCENTAGES,
     FLOOR_PANEL_ROWS_LENGTH: 6,
-    FLOOR_PANEL_COLUMNS_LENGTH: 12,
-    DEFAULT_FLOOR_PANEL_Z_INDICES,
-    DEFAULT_FLOOR_PANEL_COLOURS
+    FLOOR_PANEL_COLUMNS_LENGTH: 12
 }
