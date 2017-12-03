@@ -5,9 +5,10 @@ import PropTypes from 'prop-types'
 import { getArrayOfLength } from '../../helpers/general-helper'
 import { getFloorPanelCornersForXYAndZ } from '../../helpers/stage-helper'
 
-import { DEFAULT_STAGE_FLOOR_PANELS,
-         FLOOR_PANEL_ROWS_LENGTH,
+import { FLOOR_PANEL_ROWS_LENGTH,
          FLOOR_PANEL_COLUMNS_LENGTH } from '../../constants/stage'
+
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../../constants/stageFloor'
 
 const defaultProps = {
     floorPanels: DEFAULT_STAGE_FLOOR_PANELS,
