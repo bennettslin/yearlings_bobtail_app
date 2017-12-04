@@ -191,11 +191,6 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `2 * Sita's purse`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
                             taskName: `5 * bracelet`,
                             workedHours: 0,
                             neededHours: 1
@@ -213,11 +208,6 @@ module.exports = {
                     realHeight: `4'11"`,
                     description: 'standing',
                     subtasks: [
-                        {
-                            taskName: `purse`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
                         {
                             taskName: `backpack`,
                             workedHours: 0,
@@ -312,7 +302,7 @@ module.exports = {
                             taskName: `4 * backpack`,
                             workedHours: 0,
                             neededHours: 1
-                        }
+                        },
                     ]
                 },
                 khari: {
@@ -325,15 +315,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'7"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            // INSTRUMENT
-                            taskName: `drumsticks`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 }
             }
         }
