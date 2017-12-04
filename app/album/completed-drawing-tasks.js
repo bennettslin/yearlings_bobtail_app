@@ -115,7 +115,11 @@ module.exports = [
     {
         taskName: `sasha`,
         subtasks: [
-
+            {
+                taskName: `backpack`,
+                workedHours: 1,
+                neededHours: 1
+            }
         ]
     },
     {
@@ -128,6 +132,11 @@ module.exports = [
             },
             {
                 taskName: `Jewish book`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `backpack`,
                 workedHours: 1,
                 neededHours: 1
             }
