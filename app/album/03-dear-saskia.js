@@ -10,18 +10,23 @@ import { VERSES,
          CHORUS,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { TAIWAN_PUPPET_SHOW_FLOOR_PANELS,
+         BUS_SCENE_FLOOR_PANELS,
+         TETHERBALL_SCENE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
-            description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`
+            description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
+            floorPanels: TAIWAN_PUPPET_SHOW_FLOOR_PANELS
         },
         {
             unitIndex: 4,
             description: `Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
             actors: {
-            }
+            },
+            floorPanels: TAIWAN_PUPPET_SHOW_FLOOR_PANELS
         },
         {
             unitIndex: 6,
@@ -44,7 +49,8 @@ module.exports = {
                         description: 'side seated, turned away, pointing to window'
                     }
                 }
-            }
+            },
+            floorPanels: BUS_SCENE_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -70,12 +76,14 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'laughing, tying up Bennett'
                 }
-            }
+            },
+            floorPanels: TETHERBALL_SCENE_FLOOR_PANELS
         },
         {
             unitIndex: 12,
             description: `In Bennett's sketch, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
-            actors: {}
+            actors: {},
+            floorPanels: TAIWAN_PUPPET_SHOW_FLOOR_PANELS
         }
     ],
     totalTime: 171,

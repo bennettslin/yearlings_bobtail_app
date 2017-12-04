@@ -57,6 +57,8 @@ const BATHROOM_COLOUR = 'purple',
             [BATHROOM_COLOUR]
         ]
     },
+
+    // TODO...
     FREEWAY_FLOOR_PANELS = {
         zIndices: [
             [0]
@@ -88,6 +90,30 @@ const BATHROOM_COLOUR = 'purple',
         colours: [
             [STAGE_COLOUR]
         ]
+    },
+    TAIWAN_PUPPET_SHOW_FLOOR_PANELS = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    BUS_SCENE_FLOOR_PANELS = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    TETHERBALL_SCENE_FLOOR_PANELS = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
     }
 
 module.exports = {
@@ -99,4 +125,7 @@ module.exports = {
     PORCH_FLOOR_PANELS,
     PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
     CHANGELING_CAVE_FLOOR_PANELS,
+    TAIWAN_PUPPET_SHOW_FLOOR_PANELS,
+    BUS_SCENE_FLOOR_PANELS,
+    TETHERBALL_SCENE_FLOOR_PANELS
 }

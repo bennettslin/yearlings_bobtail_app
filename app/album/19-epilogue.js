@@ -270,11 +270,6 @@ module.exports = {
                             taskName: `banjo`,
                             workedHours: 0,
                             neededHours: 3
-                        },
-                        {
-                            taskName: `2 * baby in holder`,
-                            workedHours: 0,
-                            neededHours: 2
                         }
                     ]
                 },

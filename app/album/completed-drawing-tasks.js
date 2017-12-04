@@ -427,6 +427,11 @@ module.exports = [
                 taskName: `tennis racquet`,
                 workedHours: 1,
                 neededHours: 1
+            },
+            {
+                taskName: `2 * baby in holder`,
+                workedHours: 2,
+                neededHours: 2
             }
         ]
     },
