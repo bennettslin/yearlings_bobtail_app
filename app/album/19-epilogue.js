@@ -176,11 +176,6 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `6 * messenger bag`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
                             taskName: `food tray`,
                             workedHours: 0,
                             neededHours: 1

@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Always show nav in logue, even if not selected index.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Figure out floor panel matrices for all scenes.`,
         workedHours: 1,
         neededHours: 4

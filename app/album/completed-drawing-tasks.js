@@ -164,6 +164,11 @@ module.exports = [
                 neededHours: 1
             },
             {
+                taskName: `6 * messenger bag`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
                 taskName: `cash box and cash`,
                 workedHours: 1,
                 neededHours: 1
@@ -485,7 +490,17 @@ module.exports = [
                 taskName: `Draw raw chins.`,
                 workedHours: 2,
                 neededHours: 2
-            }
+            },
+            {
+                taskName: `Draw eyebrows and general direction pupils.`,
+                workedHours: 5,
+                neededHours: 5
+            },
+            {
+                taskName: `Draw lips.`,
+                workedHours: 5,
+                neededHours: 5
+            },
         ]
     },
     {

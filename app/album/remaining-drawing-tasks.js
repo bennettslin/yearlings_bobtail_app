@@ -13,17 +13,7 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `cheeks`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `lips`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `full nose`,
+        taskName: `full nose and cheeks`,
         workedHours: 0,
         neededHours: 8
     },
