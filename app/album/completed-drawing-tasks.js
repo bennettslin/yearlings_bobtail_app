@@ -1,5 +1,15 @@
 module.exports = [
     {
+        taskName: `anita`,
+        subtasks: [
+            {
+                taskName: `2 * backpacks`,
+                workedHours: 1,
+                neededHours: 1
+            }
+        ]
+    },
+    {
         taskName: `youngBennett`,
         subtasks: [
             {
@@ -13,6 +23,11 @@ module.exports = [
     {
         taskName: `esther`,
         subtasks: [
+            {
+                taskName: `2 * backpacks`,
+                workedHours: 1,
+                neededHours: 1
+            },
             {
                 taskName: `picture frame`,
                 workedHours: 1,
@@ -39,7 +54,11 @@ module.exports = [
     {
         taskName: `christopher`,
         subtasks: [
-
+            {
+                taskName: `2 * scissors, letters, and magazines`,
+                workedHours: 2,
+                neededHours: 2
+            }
         ]
     },
     {

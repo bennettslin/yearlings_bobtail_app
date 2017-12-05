@@ -16,14 +16,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `3'9"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `2 * backpack`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 youngBennett: {
                     todo: true,
@@ -42,14 +35,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `3'10"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `2 * backpacks`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 willy: {
                     todo: true,
@@ -79,14 +65,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `3'5"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `2 * scissors, letters, and magazines`,
-                            workedHours: 0,
-                            neededHours: 2
-                        }
-                    ]
+                    description: 'standing'
                 },
                 preteenBennett: {
                     todo: true,
