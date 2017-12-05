@@ -192,14 +192,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `4'11"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `backpack`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 wade: {
                     todo: true,
@@ -218,14 +211,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'6"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `backpack`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 stephanie: {
                     todo: true,
@@ -277,14 +263,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `4'9"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `3 * backpack`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
-                    ]
+                    description: 'standing'
                 },
                 khari: {
                     todo: true,

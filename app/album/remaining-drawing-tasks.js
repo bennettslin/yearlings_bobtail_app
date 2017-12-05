@@ -421,11 +421,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Ash can (Ash)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `4 * Guitar amp (M, Look Back, Garryowen)`,
         workedHours: 0,
         neededHours: 3
@@ -754,6 +749,11 @@ module.exports = [
     },
     {
         taskName: `Mara movie posters (M)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Mara masks`,
         workedHours: 0,
         neededHours: 3
     },

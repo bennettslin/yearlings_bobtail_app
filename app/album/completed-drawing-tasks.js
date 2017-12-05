@@ -271,6 +271,11 @@ module.exports = [
                 taskName: `2 * book`,
                 workedHours: 1,
                 neededHours: 1
+            },
+            {
+                taskName: `backpack`,
+                workedHours: 1,
+                neededHours: 1
             }
         ]
     },
@@ -287,6 +292,11 @@ module.exports = [
     {
         taskName: `amy`,
         subtasks: [
+            {
+                taskName: `hand bag`,
+                workedHours: 1,
+                neededHours: 1
+            },
             {
                 taskName: `sample vegan treats`,
                 workedHours: 1,
@@ -439,6 +449,11 @@ module.exports = [
         taskName: `liz`,
         subtasks: [
             {
+                taskName: `3 * backpack`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
                 taskName: `3 * Sita's purse`,
                 workedHours: 1,
                 neededHours: 1
@@ -584,6 +599,11 @@ module.exports = [
                 taskName: `Adam's gravestone (Constellations)`,
                 workedHours: 3,
                 neededHours: 3
+            },
+            {
+                taskName: `Outdoor ash can (Ash)`,
+                workedHours: 1,
+                neededHours: 1
             },
         ]
     },
