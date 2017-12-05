@@ -95,11 +95,6 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `backpack`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
                             taskName: `table lamp`,
                             workedHours: 0,
                             neededHours: 1
@@ -198,14 +193,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'10"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `backpack`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 amy: {
                     todo: true,

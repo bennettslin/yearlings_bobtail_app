@@ -61,6 +61,11 @@ module.exports = [
                 neededHours: 1
             },
             {
+                taskName: `backpack`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
                 taskName: `red envelopes, envelope and money`,
                 workedHours: 1,
                 neededHours: 1
@@ -282,6 +287,11 @@ module.exports = [
     {
         taskName: `wade`,
         subtasks: [
+            {
+                taskName: `backpack`,
+                workedHours: 1,
+                neededHours: 1
+            },
             {
                 taskName: `demonstration sign`,
                 workedHours: 1,
