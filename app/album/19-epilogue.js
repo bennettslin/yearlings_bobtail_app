@@ -22,14 +22,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `3'6"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `2 / 3 * backpack`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 esther: {
                     todo: true,

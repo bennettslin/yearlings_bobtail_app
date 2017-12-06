@@ -13,6 +13,11 @@ module.exports = [
         taskName: `youngBennett`,
         subtasks: [
             {
+                taskName: `3 * backpack`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
                 // INSTRUMENT
                 taskName: `violin`,
                 workedHours: 3,
@@ -631,6 +636,11 @@ module.exports = [
             },
             {
                 taskName: `Outdoor ash can (Ash)`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `Untied shoelaces (Didi, Look Back)`,
                 workedHours: 1,
                 neededHours: 1
             },
