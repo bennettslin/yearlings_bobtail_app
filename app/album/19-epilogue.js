@@ -25,7 +25,7 @@ module.exports = {
                     description: 'standing',
                     subtasks: [
                         {
-                            taskName: `3 * backpack`,
+                            taskName: `2 / 3 * backpack`,
                             workedHours: 0,
                             neededHours: 1
                         }
