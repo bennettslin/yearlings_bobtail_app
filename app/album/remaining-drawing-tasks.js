@@ -19,7 +19,7 @@ module.exports = [
     },
     {
         taskName: `hairline`,
-        workedHours: 0,
+        workedHours: 4,
         neededHours: 8
     },
 
