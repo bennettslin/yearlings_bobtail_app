@@ -33,6 +33,7 @@ NavBookButton = ({
         <div className="nav-book toggle">
             <NavButton {...other}
                 isSelected={hasSelectedSong}
+                bookIndex={bookIndex}
             />
         </div>
     )

@@ -4,7 +4,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
-import { getSongIsLogue, getSongTitle } from '../../helpers/data-helper'
+import NavPanel from './nav-panel'
+import { getSongIsLogue } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 /*************
@@ -14,6 +15,7 @@ import { getComponentShouldUpdate } from '../../helpers/general-helper'
 class NavButton extends Component {
 
     static propTypes = {
+        bookIndex: PropTypes.number,
         songIndex: PropTypes.number,
         accessHighlighted: PropTypes.bool,
         isSelected: PropTypes.bool.isRequired,
@@ -55,25 +57,20 @@ class NavButton extends Component {
     }
 
     render() {
-        const { songIndex,
+        /* eslint-disable no-unused-vars */
+        const { handleButtonClick,
+        /* eslint-enable no-unused-vars */
 
-                /* eslint-disable no-unused-vars */
-                handleButtonClick,
-                /* eslint-enable no-unused-vars */
+            ...other } = this.props,
 
-                ...other } = this.props,
+            { songIndex } = other,
 
             isLogue = getSongIsLogue(songIndex),
-            songTitle = getSongTitle({
-                songIndex,
-                showIndex: false
-            }),
             iconText = !isLogue ? songIndex : undefined
 
         return (
             <NavButtonView {...other}
                 iconText={iconText}
-                songTitle={songTitle}
                 handleClick={this._handleButtonClick}
             />
         )
@@ -85,23 +82,26 @@ class NavButton extends Component {
  ****************/
 
 const navButtonViewPropTypes = {
+
     // From parent.
     isSelected: PropTypes.bool.isRequired,
     accessHighlighted: PropTypes.bool,
     iconText: PropTypes.number,
-    songTitle: PropTypes.string,
+    bookIndex: PropTypes.number,
+    songIndex: PropTypes.number,
     handleClick: PropTypes.func.isRequired
 },
 
 NavButtonView = ({
 
     // From props.
+    bookIndex,
+    songIndex,
     isSelected,
     accessHighlighted,
 
     // From controller.
     iconText,
-    songTitle,
     handleClick
 
 }) => (
@@ -118,11 +118,10 @@ NavButtonView = ({
                 iconText={iconText}
                 handleClick={handleClick}
                 extraChild={
-                    <div className="nav-title-block">
-                        <div className="nav-title">
-                            {songTitle}
-                        </div>
-                    </div>
+                    <NavPanel
+                        bookIndex={bookIndex}
+                        songIndex={songIndex}
+                    />
                 }
             />
         </div>

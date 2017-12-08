@@ -44,7 +44,7 @@ NavBooksColumn = ({
         <div className={classnames(
             'books-column-block',
             `column-${bookIndex}`,
-            isShownColumn ? ' column-shown' : ' column-hidden'
+            isShownColumn ? 'column-shown' : 'column-hidden'
         )}>
             <div className="books-column">
                 <NavBook

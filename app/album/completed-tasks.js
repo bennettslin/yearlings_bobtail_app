@@ -2586,5 +2586,10 @@ module.exports = [
         taskName: `Floor panel colouring.`,
         workedHours: 2,
         neededHours: 2
-    }
+    },
+    {
+        taskName: `Show nav panel components.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

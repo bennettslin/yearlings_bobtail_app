@@ -1,13 +1,23 @@
 module.exports = [
     {
-        taskName: `Figure out floor panel matrices for all scenes.`,
-        workedHours: 1,
-        neededHours: 4
+        taskName: `Set storage expiration date.`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
-        taskName: `Show nav image and title only on hover.`,
+        taskName: `Figure out floor panel matrices for all scenes.`,
+        workedHours: 1,
+        neededHours: 9
+    },
+    {
+        taskName: `Work on nav panels.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Keys to switch between scenes`,
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: `Theatre views and coordinates.`,
