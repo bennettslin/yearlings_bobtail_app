@@ -10,14 +10,14 @@ module.exports = [
         neededHours: 9
     },
     {
-        taskName: `Work on nav panels.`,
+        taskName: `Final nav panel issues`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 2
     },
     {
         taskName: `Keys to switch between scenes`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: `Theatre views and coordinates.`,

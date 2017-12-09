@@ -63,13 +63,32 @@ class NavButton extends Component {
 
             ...other } = this.props,
 
-            { songIndex } = other,
+            { bookIndex, songIndex } = other,
 
             isLogue = getSongIsLogue(songIndex),
-            iconText = !isLogue ? songIndex : undefined
+
+            isLeftmost = bookIndex === 0 || songIndex === 0,
+            isRightmost = bookIndex === 1 || songIndex === 19
+
+        let iconText
+
+        if (isNaN(bookIndex)) {
+
+            if (isLogue) {
+                iconText = songIndex === 0 ? 'p' : 'e'
+
+            } else {
+                iconText = `${songIndex}`
+            }
+
+        } else {
+            iconText = bookIndex === 0 ? 'I' : 'II'
+        }
 
         return (
             <NavButtonView {...other}
+                isLeftmost={isLeftmost}
+                isRightmost={isRightmost}
                 iconText={iconText}
                 handleClick={this._handleButtonClick}
             />
@@ -86,9 +105,11 @@ const navButtonViewPropTypes = {
     // From parent.
     isSelected: PropTypes.bool.isRequired,
     accessHighlighted: PropTypes.bool,
-    iconText: PropTypes.number,
+    iconText: PropTypes.string.isRequired,
     bookIndex: PropTypes.number,
     songIndex: PropTypes.number,
+    isLeftmost: PropTypes.bool.isRequired,
+    isRightmost: PropTypes.bool.isRequired,
     handleClick: PropTypes.func.isRequired
 },
 
@@ -97,26 +118,25 @@ NavButtonView = ({
     // From props.
     bookIndex,
     songIndex,
-    isSelected,
     accessHighlighted,
 
     // From controller.
-    iconText,
-    handleClick
+    isLeftmost,
+    isRightmost,
 
-}) => (
+...other }) => (
+
     <div
         className={classnames(
             'nav-button-block',
-            { 'access-highlighted': accessHighlighted }
+            { 'leftmost': isLeftmost,
+              'rightmost': isRightmost,
+              'access-highlighted': accessHighlighted }
         )}
     >
         <div className="nav-button-wrapper">
-            <Button
+            <Button {...other}
                 buttonName="nav"
-                isSelected={isSelected}
-                iconText={iconText}
-                handleClick={handleClick}
                 extraChild={
                     <NavPanel
                         bookIndex={bookIndex}

@@ -1,31 +1,75 @@
-.nav-button {
-    &:hover, &:active {
-        .nav-panel-block {
-            opacity: 1;
-        }
-    }
-}
-
 .nav-panel-block {
     position: absolute;
-    bottom: 100%;
     left: 50%;
 
+    /**
+     * Arbitrary for now. However, make sure that it is never too wide that the
+     * next to leftmost or rightmost goes outside the books block.
+     */
     width: 100px;
     height: 100px;
+
+    z-index: @nav-custom-subfield-z-index;
+    
     border: 1px solid purple;
     
     display: flex;
     flex-direction: column;
 
-    transform: translateX(-50%);    
+    transform: translateX(-50%);
 
-    // FIXME: Hide for now, just to get styling done.
     opacity: 0;
+
+    // FIXME: Make animation better.
+    transition: opacity @animation-default;
+}
+
+.is-desktop {
+    .nav-panel-block {
+        bottom: 100%;
+    }
     
-    // width: 0;
-    // transform: rotate(315deg);
-    // transform-origin: left top;
+    .nav-panel {
+        margin-bottom: @app-thin-margin;        
+    }
+}
+    
+.is-mobile {
+    .nav-panel-block {
+        top: 100%;
+    }
+    
+    .nav-panel {
+        margin-top: @app-thin-margin;        
+    }
+}
+
+// FIXME: Show only when is song, and only when nav is selected.
+.accessed-on .access-highlighted, .nav-button:hover, .nav-button:active {
+    .nav-panel-block {
+        opacity: 1;
+        z-index: @centre-field-element-z-index;
+    }
+}
+
+// FIXME: Hide panel block so that it cannot be hovered upon when hidden.
+.leftmost {
+    .nav-panel-block {
+        left: 0;
+        transform: none;
+    }
+}
+
+.rightmost {
+    .nav-panel-block {
+        left: auto;
+        right: 0;
+        transform: none;
+    }
+}
+
+.nav-panel {
+    white-space: nowrap;
 }
 
 .nav-panel-image {
@@ -42,20 +86,4 @@
     width: 100%;
     text-align: center;
     font-size: 0.75em;
-}
-
-.tablet-width, .mini-width {
-
-    .nav-panel-block {
-        // transform: rotate(45deg);
-        // transform-origin: left bottom;
-        bottom: auto;
-        top: 100%;
-    }
-}
-
-.nav-panel {
-    white-space: nowrap;
-    // transition: transform @animation-default;
-    // transform: scale(0);
 }

@@ -2592,4 +2592,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Basic nav panel positioning.`,
+        workedHours: 2,
+        neededHours: 2
+    }
 ]
