@@ -17,11 +17,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 8
     },
-    {
-        taskName: `hairline`,
-        workedHours: 4,
-        neededHours: 8
-    },
 
     /**
      * Stage

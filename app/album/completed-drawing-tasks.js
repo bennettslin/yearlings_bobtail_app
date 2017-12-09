@@ -584,6 +584,11 @@ module.exports = [
                 workedHours: 5,
                 neededHours: 5
             },
+            {
+                taskName: `hairline`,
+                workedHours: 10,
+                neededHours: 10
+            }
         ]
     },
     {
