@@ -102,14 +102,19 @@ class AccessManager extends Component {
             keyName = String.fromCharCode(keyCode)
         }
 
+        // Do not handle at all if any modifier keys are present.
+        if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) {
+            return
+        }
+
         /**
          * Turn on access if any key was registered. (But escape might turn it
          * off again.)
          */
         eventHandlers.handleAccessToggle(true)
 
-        // Do not handle if any modifier keys are present, or if it's an exempt key.
-        if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE || keyName === PAGE_UP || keyName === PAGE_DOWN) {
+        // Do not handle any further if it's an exempt key.
+        if (keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE || keyName === PAGE_UP || keyName === PAGE_DOWN) {
             return
         }
 
