@@ -10,11 +10,6 @@ module.exports = [
         neededHours: 9
     },
     {
-        taskName: `Keys to switch between scenes`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Theatre views and coordinates.`,
         workedHours: 0,
         neededHours: 3

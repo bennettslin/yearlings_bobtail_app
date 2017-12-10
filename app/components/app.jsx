@@ -781,8 +781,48 @@ class App extends Component {
      * SCENE *
      *********/
 
+    /**
+     * FIXME: This is an admin method, so it doesn't matter that it isn't very
+     * performant. Make it dev only before release.
+     */
     selectScene(direction) {
-        console.error('direction', direction)
+        const { selectedSongIndex } = this.props
+
+        if (getSongIsLogue(selectedSongIndex)) {
+            return
+        }
+
+        const { selectedVerseIndex } = this.props,
+
+            songVersesCount = getSongVerseTimes(selectedSongIndex).length,
+
+            selectedSceneIndex = getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
+
+        let nextSceneIndex = selectedSceneIndex,
+            nextVerseIndex = selectedVerseIndex
+
+        /**
+         * Find the closest verse index that changes the scene index. This
+         * selects the first verse for that scene when going forward, and the
+         * last verse for that scene when going backward.
+         */
+        while (nextSceneIndex === selectedSceneIndex) {
+
+            nextVerseIndex += (songVersesCount + direction)
+            nextVerseIndex %= songVersesCount
+
+            nextSceneIndex = getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                nextVerseIndex
+            )
+        }
+
+        this.selectVerse({
+            selectedVerseIndex: nextVerseIndex
+        })
     }
 
     /*********
@@ -1211,6 +1251,7 @@ class App extends Component {
         this.toggleAccess = this.toggleAccess.bind(this)
         this.toggleAdmin = this.toggleAdmin.bind(this)
         this.togglePlay = this.togglePlay.bind(this)
+        this.selectScene = this.selectScene.bind(this)
         this.selectSong = this.selectSong.bind(this)
         this.selectOverview = this.selectOverview.bind(this)
         this.selectAudioOption = this.selectAudioOption.bind(this)
