@@ -2,19 +2,23 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
+
 import { getSongTitle } from '../../helpers/data-helper'
 
 const navPanelPropTypes = {
     // From parent.
+    isLeftmost: PropTypes.bool,
+    isRightmost: PropTypes.bool,
     bookIndex: PropTypes.number,
     songIndex: PropTypes.number
 },
 
-// TODO: Have panel know the device width and height, position accordingly, and then never again render upon update unless those values change.
-
 NavPanel = ({
 
     // From props.
+    isLeftmost,
+    isRightmost,
     bookIndex,
     songIndex
 
@@ -28,7 +32,13 @@ NavPanel = ({
     }) : `show Book ${bookIndex === 0 ? 'I' : 'II'}`
 
     return (
-        <div className="nav-panel-block">
+        <div className={classnames(
+            'nav-panel-block',
+            { 'leftmost': isLeftmost,
+              'rightmost': isRightmost,
+              'centred': !isLeftmost && !isRightmost }
+            )}
+        >
             <div className="nav-panel">
                 <div className="nav-panel-image">
                 </div>

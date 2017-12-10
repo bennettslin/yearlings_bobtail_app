@@ -129,9 +129,7 @@ NavButtonView = ({
     <div
         className={classnames(
             'nav-button-block',
-            { 'leftmost': isLeftmost,
-              'rightmost': isRightmost,
-              'access-highlighted': accessHighlighted }
+            { 'access-highlighted': accessHighlighted }
         )}
     >
         <div className="nav-button-wrapper">
@@ -139,6 +137,8 @@ NavButtonView = ({
                 buttonName="nav"
                 extraChild={
                     <NavPanel
+                        isLeftmost={isLeftmost}
+                        isRightmost={isRightmost}
                         bookIndex={bookIndex}
                         songIndex={songIndex}
                     />

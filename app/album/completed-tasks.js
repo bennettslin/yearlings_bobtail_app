@@ -2596,5 +2596,10 @@ module.exports = [
         taskName: `Basic nav panel positioning.`,
         workedHours: 2,
         neededHours: 2
-    }
+    },
+    {
+        taskName: `Final nav panel issues with animation and hovering.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

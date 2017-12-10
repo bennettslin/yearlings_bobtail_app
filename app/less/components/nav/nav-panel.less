@@ -1,3 +1,5 @@
+@nav-panel-length: 100px;
+
 .nav-panel-block {
     position: absolute;
     left: 50%;
@@ -6,30 +8,39 @@
      * Arbitrary for now. However, make sure that it is never too wide that the
      * next to leftmost or rightmost goes outside the books block.
      */
-    width: 100px;
-    height: 100px;
-
-    z-index: @nav-custom-subfield-z-index;
+    width: @nav-panel-length;
+    height: @nav-panel-length;
     
     border: 1px solid purple;
     
     display: flex;
     flex-direction: column;
 
-    transform: translateX(-50%);
-
     opacity: 0;
 
-    // FIXME: Make animation better.
-    transition: opacity @animation-default;
+    transition: opacity @animation-fast,
+                transform @animation-fast;
+
+    // Needed to prevent button hovering and selecting wonkiness.
+    z-index: @negative-z-index;
+
+    &.centred {
+        transform: translateX(-50%);
+    }
+
+    &.leftmost {
+        left: 0;
+    }
+
+    &.rightmost {
+        left: auto;
+        right: 0;
+    }
 }
 
 .is-desktop {
     .nav-panel-block {
         bottom: 100%;
-    }
-    
-    .nav-panel {
         margin-bottom: @app-thin-margin;        
     }
 }
@@ -37,34 +48,39 @@
 .is-mobile {
     .nav-panel-block {
         top: 100%;
-    }
-    
-    .nav-panel {
         margin-top: @app-thin-margin;        
     }
 }
 
-// FIXME: Show only when is song, and only when nav is selected.
-.accessed-on .access-highlighted, .nav-button:hover, .nav-button:active {
-    .nav-panel-block {
-        opacity: 1;
-        z-index: @centre-field-element-z-index;
-    }
-}
+.is-song.nav-expanded.overview-hidden.tips-hidden {
 
-// FIXME: Hide panel block so that it cannot be hovered upon when hidden.
-.leftmost {
-    .nav-panel-block {
-        left: 0;
-        transform: none;
-    }
-}
+    // Show panel if access highlighted only when access is on.
+    &.accessed-on .access-highlighted,
 
-.rightmost {
-    .nav-panel-block {
-        left: auto;
-        right: 0;
-        transform: none;
+    // Show panel upon hover only when access is off.
+    &.accessed-off .nav-button:hover {
+        .nav-panel-block {
+            opacity: 1;
+            z-index: @nav-custom-subfield-z-index;
+        }
+    }
+
+    // Show panel when button is active, and give it the higher z-index.
+    .nav-button:active {
+        .nav-panel-block {
+            opacity: 1;
+            z-index: @centre-field-element-z-index;
+
+            &.centred {
+                transform: translateX(-50%) scale(1.1);
+            }
+
+            &.leftmost, &.rightmost {
+                left: auto;
+                right: 0;
+                transform: scale(1.1);
+            }
+        }
     }
 }
 

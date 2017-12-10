@@ -168,9 +168,9 @@ class DomManager extends Component {
                     showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
                     isScoresTipsInMain ? 'scores-tips-in-main' : 'scores-tips-in-menu',
                     singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
+                    selectedAccessIndex ? 'accessed-on' : 'accessed-off',
 
-                    { 'accessed-on': selectedAccessIndex,
-                      'heightless-lyric': isHeightlessLyricColumn,
+                    { 'heightless-lyric': isHeightlessLyricColumn,
                       'title-in-audio': isTitleInAudio,
                       'verse-bar-above': isVerseBarAbove,
                       'verse-bar-below': isVerseBarBelow,
