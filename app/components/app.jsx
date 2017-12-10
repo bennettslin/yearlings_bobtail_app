@@ -778,6 +778,14 @@ class App extends Component {
     }
 
     /*********
+     * SCENE *
+     *********/
+
+    selectScene(direction) {
+        console.error('direction', direction)
+    }
+
+    /*********
      * SCORE *
      *********/
 
@@ -1264,6 +1272,7 @@ class App extends Component {
                 selectOverview={this.selectOverview}
                 selectCarouselNav={this.selectCarouselNav}
                 selectScore={this.selectScore}
+                selectScene={this.selectScene}
                 selectSong={this.selectSong}
                 selectTime={this.selectTime}
                 selectTitle={this.selectTitle}

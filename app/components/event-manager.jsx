@@ -521,8 +521,8 @@ class EventManager extends Component {
      *********/
 
     handleSceneDirection(e, direction) {
-        console.error('direction', direction)
         this.stopPropagation(e)
+        this.props.selectScene(direction)
         return true
     }
 
