@@ -13,9 +13,9 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `full nose and cheeks`,
-        workedHours: 0,
-        neededHours: 8
+        taskName: `full nose`,
+        workedHours: 3,
+        neededHours: 10
     },
 
     /**
