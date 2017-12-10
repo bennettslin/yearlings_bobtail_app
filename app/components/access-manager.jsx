@@ -35,6 +35,8 @@ import { ARROW_LEFT,
          LYRIC_SECTION_EXPAND_KEY,
          OVERVIEW_TOGGLE_KEY,
          SCORE_TOGGLE_KEY,
+         SCENE_REWIND_KEY,
+         SCENE_FORWARD_KEY,
          TIPS_TOGGLE_KEY,
          TITLE_TOGGLE_KEY } from '../constants/access'
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -480,17 +482,8 @@ class AccessManager extends Component {
             case AUDIO_FAST_FORWARD_KEY:
                 keyWasRegistered = eventHandlers.handleVerseDirectionAccess(1)
                 break
-            case OVERVIEW_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleOverviewToggle(e)
-                break
             case CAROUSEL_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleCarouselNavToggle(e)
-                break
-            case SCORE_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleScoreToggle(e)
-                break
-            case TIPS_TOGGLE_KEY:
-                keyWasRegistered = eventHandlers.handleTipsToggle(e)
                 break
             case LYRIC_COLUMN_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleLyricColumnSelect(e)
@@ -498,6 +491,21 @@ class AccessManager extends Component {
                 break
             case LYRIC_SECTION_EXPAND_KEY:
                 keyWasRegistered = eventHandlers.handleLyricSectionExpand(e)
+                break
+            case OVERVIEW_TOGGLE_KEY:
+                keyWasRegistered = eventHandlers.handleOverviewToggle(e)
+                break
+            case SCENE_REWIND_KEY:
+                keyWasRegistered = eventHandlers.handleSceneDirection(e, -1)
+                break
+            case SCENE_FORWARD_KEY:
+                keyWasRegistered = eventHandlers.handleSceneDirection(e, 1)
+                break
+            case SCORE_TOGGLE_KEY:
+                keyWasRegistered = eventHandlers.handleScoreToggle(e)
+                break
+            case TIPS_TOGGLE_KEY:
+                keyWasRegistered = eventHandlers.handleTipsToggle(e)
                 break
             case TITLE_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleTitleToggle(e)

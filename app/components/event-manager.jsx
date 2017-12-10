@@ -65,6 +65,7 @@ class EventManager extends Component {
         this.handleOverviewToggle = this.handleOverviewToggle.bind(this)
         this.handlePopupFocus = this.handlePopupFocus.bind(this)
         this.handleCarouselNavToggle = this.handleCarouselNavToggle.bind(this)
+        this.handleSceneDirection = this.handleSceneDirection.bind(this)
         this.handleScoreToggle = this.handleScoreToggle.bind(this)
         this.handleTipsToggle = this.handleTipsToggle.bind(this)
         this.handleTitleToggle = this.handleTitleToggle.bind(this)
@@ -516,6 +517,16 @@ class EventManager extends Component {
     }
 
     /*********
+     * SCENE *
+     *********/
+
+    handleSceneDirection(e, direction) {
+        console.error('direction', direction)
+        this.stopPropagation(e)
+        return true
+    }
+
+    /*********
      * SCORE *
      *********/
 
@@ -952,6 +963,7 @@ class EventManager extends Component {
                 handleNavBookSelect: this.handleNavBookSelect,
                 handleOverviewToggle: this.handleOverviewToggle,
                 handleCarouselNavToggle: this.handleCarouselNavToggle,
+                handleSceneDirection: this.handleSceneDirection,
                 handleScoreToggle: this.handleScoreToggle,
                 handleTipsToggle: this.handleTipsToggle,
                 handleTitleToggle: this.handleTitleToggle,

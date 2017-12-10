@@ -11,7 +11,7 @@ module.exports = {
     SPACE: ' ',
     TAB: 'Tab',
 
-    ADMIN_TOGGLE_KEY: 'm',
+    ADMIN_TOGGLE_KEY: 'a',
     AUDIO_PLAY_KEY: 'p',
     AUDIO_OPTIONS_TOGGLE_KEY: 'o',
     AUDIO_PREVIOUS_SONG_KEY: 'j',
@@ -22,7 +22,8 @@ module.exports = {
     DOTS_SECTION_EXPAND_KEY: 'd',
     LYRIC_COLUMN_TOGGLE_KEY: 'e',
     LYRIC_SECTION_EXPAND_KEY: 'l',
-    NAV_SECTION_EXPAND_KEY: 'n',
+    SCENE_REWIND_KEY: 'n',
+    SCENE_FORWARD_KEY: 'm',
     OVERVIEW_TOGGLE_KEY: 'b',
     SCORE_TOGGLE_KEY: 's',
     TIPS_TOGGLE_KEY: 't',
