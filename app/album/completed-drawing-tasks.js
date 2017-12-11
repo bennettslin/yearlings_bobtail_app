@@ -588,6 +588,11 @@ module.exports = [
                 taskName: `hairline`,
                 workedHours: 10,
                 neededHours: 10
+            },
+            {
+                taskName: `full nose`,
+                workedHours: 9,
+                neededHours: 9
             }
         ]
     },

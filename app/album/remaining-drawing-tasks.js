@@ -12,11 +12,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 8
     },
-    {
-        taskName: `full nose`,
-        workedHours: 3,
-        neededHours: 10
-    },
 
     /**
      * Stage
