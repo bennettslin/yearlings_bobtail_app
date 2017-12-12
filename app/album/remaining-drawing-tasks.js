@@ -4,6 +4,12 @@
 
 module.exports = [
 
+    {
+        taskName: `Howie tripping`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     /**
      * Head preparation.
      */

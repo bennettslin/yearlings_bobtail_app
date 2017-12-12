@@ -222,6 +222,16 @@ module.exports = [
                 neededHours: 1
             },
             {
+                taskName: `Walkman and headphones`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `7 * bracelet`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
                 taskName: `Robitussin bottle`,
                 workedHours: 1,
                 neededHours: 1

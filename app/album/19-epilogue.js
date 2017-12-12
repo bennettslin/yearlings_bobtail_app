@@ -132,16 +132,6 @@ module.exports = {
                             neededHours: 1
                         },
                         {
-                            taskName: `Walkman and headphones`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `5 * bracelet`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
                             taskName: `4 * tentacle`,
                             workedHours: 0,
                             neededHours: 1
