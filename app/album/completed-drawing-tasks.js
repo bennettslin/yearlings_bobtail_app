@@ -671,4 +671,14 @@ module.exports = [
             },
         ]
     },
+    {
+        taskName: `Revisions`,
+        subtasks: [
+            {
+                taskName: `Howie tripping`,
+                workedHours: 2,
+                neededHours: 2
+            },
+        ]
+    }
 ]
