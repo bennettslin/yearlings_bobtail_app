@@ -40,19 +40,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'0"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `overturned chair`,
-                            workedHours: 0,
-                            neededHours: 1
-                        },
-                        {
-                            taskName: `scissors`,
-                            workedHours: 0,
-                            neededHours: 1
-                        }
-                    ]
+                    description: 'standing'
                 },
                 christopher: {
                     todo: true,

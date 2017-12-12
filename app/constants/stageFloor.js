@@ -69,7 +69,12 @@ const BATHROOM_COLOUR = 'purple',
     },
     PORCH_FLOOR_PANELS = {
         zIndices: [
-            [0]
+            [4],
+            [4],
+            [4],
+            [3],
+            [2],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]

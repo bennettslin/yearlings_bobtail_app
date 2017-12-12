@@ -53,7 +53,16 @@ module.exports = [
     {
         taskName: `mother`,
         subtasks: [
-
+            {
+                taskName: `overturned chair`,
+                workedHours: 1,
+                neededHours: 1
+            },
+            {
+                taskName: `scissors`,
+                workedHours: 1,
+                neededHours: 1
+            }
         ]
     },
     {
