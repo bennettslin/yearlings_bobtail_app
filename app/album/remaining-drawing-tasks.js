@@ -3,13 +3,6 @@
  */
 
 module.exports = [
-
-    {
-        taskName: `Howie tripping`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     /**
      * Head preparation.
      */
@@ -109,6 +102,11 @@ module.exports = [
         taskName: `Sita's blanket on couch (Kyon)`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `4 * tentacle`,
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: `Bennett's blanket and pillows (Grasshoppers, Uncanny)`,

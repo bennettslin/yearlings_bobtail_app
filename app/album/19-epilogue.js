@@ -118,11 +118,6 @@ module.exports = {
                             taskName: `lancet pen`,
                             workedHours: 0,
                             neededHours: 1
-                        },
-                        {
-                            taskName: `4 * tentacle`,
-                            workedHours: 0,
-                            neededHours: 1
                         }
                     ]
                 },
