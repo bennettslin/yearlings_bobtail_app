@@ -9,6 +9,7 @@ import { VERSES,
          CHORUS,
          BRIDGE,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -26,7 +27,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'walking away, in a bad mood'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 3,
@@ -42,7 +44,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'sitting upright, droll smile'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -53,7 +56,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'standing, back forward, hands in pocket'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -78,7 +82,8 @@ module.exports = {
                         description: 'walking up stairs, back forward, exhaling smoke'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -94,7 +99,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'walking forward, confused and curious at Bennett'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 163,

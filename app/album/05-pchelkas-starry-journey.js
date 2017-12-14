@@ -13,7 +13,7 @@ import { VERSES,
          INTRO,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
  * list order on the album.
@@ -34,7 +34,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'w sitting, blissful'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 6,
@@ -45,7 +46,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, sitting up in bed, feigning sick'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -56,7 +58,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'in bed, asleep, turned away'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 10,
@@ -67,7 +70,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, sitting, shaken, scared'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 13,
@@ -88,7 +92,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, throwing rocks, angry'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 17,
@@ -116,7 +121,8 @@ module.exports = {
                         description: 'back'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 18,
@@ -144,7 +150,8 @@ module.exports = {
                         description: 'side, confused, defensive, apologetic'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 211,

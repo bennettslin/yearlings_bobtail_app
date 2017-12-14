@@ -15,6 +15,7 @@ import { VERSES,
          RESPONSE,
          BACKING,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -49,7 +50,8 @@ module.exports = {
                         description: 'side angle, sobbing'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -75,7 +77,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, consoling, cautious'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -115,7 +118,8 @@ module.exports = {
                         description: 'making out with Miriam, holding melodica'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -165,7 +169,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, cheerful, making a point'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 14,
@@ -198,7 +203,8 @@ module.exports = {
                         description: 'side angle, sobbing uncontrollably'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 204,

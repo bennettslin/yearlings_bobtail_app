@@ -12,6 +12,7 @@ import { VERSES,
          SOLO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -36,7 +37,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, protective, judgmental'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -62,7 +64,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, eager'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -73,7 +76,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'walking through alley'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 10,
@@ -110,7 +114,8 @@ module.exports = {
                         description: 'reflection'
                     }
                 },
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 12,
@@ -142,7 +147,8 @@ module.exports = {
                         description: 'standing, demonstrating'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 241,

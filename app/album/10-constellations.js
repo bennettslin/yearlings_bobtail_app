@@ -16,6 +16,7 @@ import { OVERLAP,
          RESPONSE,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -43,7 +44,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, walking'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 3,
@@ -69,7 +71,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, feigning superiority'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 6,
@@ -95,7 +98,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, play fighting'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -121,7 +125,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, squatting, pouring water on grave'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -147,7 +152,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'back angle, sleeping in car'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 15,
@@ -163,7 +169,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'downstairs, in agony'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 180,

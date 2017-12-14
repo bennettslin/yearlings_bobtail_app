@@ -17,6 +17,7 @@ import { LEFT,
          OUTRO,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -29,7 +30,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, lying on floor, propped up'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -40,7 +42,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, looking down stairs'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 6,
@@ -51,7 +54,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, peeking out from gate'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -62,7 +66,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'getting off rickshaw bike'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -73,7 +78,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side back, looking out to ocean'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 14,
@@ -84,10 +90,11 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'peering down from buoy'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
-            unitIndex: 20,
+            unitIndex: 18,
             description: `Sasha is a mermaid, rescuing Bennett. She points down to Bennett on the ocean floor.`,
             actors: {
                 preteenBennett: {
@@ -100,10 +107,11 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'mermaid'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
-            unitIndex: 18,
+            unitIndex: 20,
             description: `Bennett sits on the shore gazing at the ocean. Further ahead, another Bennett is making his bed on the beach. Footprints lead up to him.`,
             actors: {
                 preteenBennett: {
@@ -111,7 +119,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, crouched in sand, looking back'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 200,

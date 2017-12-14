@@ -11,6 +11,7 @@ import { VERSES,
          REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -25,7 +26,8 @@ module.exports = {
                         description: 'side, seated, petting cat, sad'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -38,7 +40,8 @@ module.exports = {
                         description: 'side, seated, pensive'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -56,7 +59,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, cheery in a low-key way'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -74,7 +78,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, seated, eating, judgmental'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -92,7 +97,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'back angle, concerned'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 12,
@@ -105,7 +111,8 @@ module.exports = {
                         description: 'side, seated, asleep'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 225,

@@ -8,6 +8,7 @@ import { VERSES,
          CHORUS,
          POSTCHORUS,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -27,7 +28,8 @@ module.exports = {
                         description: 'side, friendly, guarded'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -45,7 +47,8 @@ module.exports = {
                         description: 'side, hands behind back, guarded'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -75,7 +78,8 @@ module.exports = {
                         description: 'side, rushing'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -93,7 +97,8 @@ module.exports = {
                         description: 'side, in go-kart, relaxed'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 14,
@@ -111,7 +116,8 @@ module.exports = {
                         description: 'front, closing gate, looking concerned'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 131,

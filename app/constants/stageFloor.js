@@ -7,6 +7,7 @@ const BATHROOM_COLOUR = 'purple',
     STAGE_COLOUR = 'brown',
     STREET_COLOUR = 'black',
     SIDEWALK_COLOUR = 'gray',
+    FURNITURE_COLOUR = '#bbb',
     DEFAULT_STAGE_FLOOR_PANELS = {
         zIndices: [
             [0]
@@ -35,9 +36,19 @@ const BATHROOM_COLOUR = 'purple',
     },
     PLAYGROUND_FLOOR_PANELS = {
         zIndices: [
+            [1],
+            [1],
+            [1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1],
             [1]
         ],
         colours: [
+            [CAMPUS_COLOUR],
+            [CAMPUS_COLOUR],
+            [CAMPUS_COLOUR],
+            [CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, FURNITURE_COLOUR, CAMPUS_COLOUR],
+            [CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, FURNITURE_COLOUR, CAMPUS_COLOUR],
             [CAMPUS_COLOUR]
         ]
     },
@@ -54,6 +65,8 @@ const BATHROOM_COLOUR = 'purple',
             [STAGE_COLOUR],
             [STAGE_COLOUR],
             [STAGE_COLOUR],
+            [BATHROOM_COLOUR],
+            [BATHROOM_COLOUR, BATHROOM_COLOUR, BATHROOM_COLOUR, BATHROOM_COLOUR, FURNITURE_COLOUR, FURNITURE_COLOUR, FURNITURE_COLOUR, BATHROOM_COLOUR],
             [BATHROOM_COLOUR]
         ]
     },
@@ -61,6 +74,11 @@ const BATHROOM_COLOUR = 'purple',
     // TODO...
     FREEWAY_FLOOR_PANELS = {
         zIndices: [
+            [5],
+            [5],
+            [5],
+            [0],
+            [0],
             [0]
         ],
         colours: [
@@ -69,11 +87,11 @@ const BATHROOM_COLOUR = 'purple',
     },
     PORCH_FLOOR_PANELS = {
         zIndices: [
-            [4],
-            [4],
-            [4],
-            [3],
-            [2],
+            [1],
+            [1],
+            [1, 1, 1, 3, 3, 3, 3, 3, 3, 1],
+            [1, 1, 1, 3, 3, 3, 3, 3, 3, 1],
+            [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
             [1]
         ],
         colours: [
@@ -82,7 +100,7 @@ const BATHROOM_COLOUR = 'purple',
     },
     PRETEEN_BENNETT_ROOM_FLOOR_PANELS = {
         zIndices: [
-            [0]
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]

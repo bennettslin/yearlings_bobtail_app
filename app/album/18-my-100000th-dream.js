@@ -10,6 +10,7 @@ import { VERSES,
          OUTRO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -29,7 +30,8 @@ module.exports = {
                         description: 'side angle, opening a door, pleasantly surprised'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 3,
@@ -67,8 +69,9 @@ module.exports = {
                         workedHours: 1.25,
                         description: 'dancing'
                     }
-                },
-            }
+                }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -86,7 +89,8 @@ module.exports = {
                         description: 'front, urging'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -104,7 +108,8 @@ module.exports = {
                         description: 'front angle, gesturing to grave'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -129,7 +134,8 @@ module.exports = {
                         description: 'pulling sheet over Bennett'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 244,

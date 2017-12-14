@@ -12,6 +12,7 @@ import { REFRAIN,
          CODA,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     /**
@@ -27,7 +28,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'back, reading book, pulling tray from belt.'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -45,15 +47,18 @@ module.exports = {
                         description: 'side, taken aback, politely friendly'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 6,
-            description: 'Grasshoppers scene 1'
+            description: 'Grasshoppers scene 1',
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 7,
-            description: 'Grasshoppers scene 5'
+            description: 'Grasshoppers scene 5',
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -71,7 +76,8 @@ module.exports = {
                         description: 'side, jogging, spry'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 10,
@@ -89,7 +95,8 @@ module.exports = {
                         description: 'side, hesitantly greeting'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -107,7 +114,8 @@ module.exports = {
                         description: 'front, chatting, more comfortable'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 12,
@@ -125,7 +133,8 @@ module.exports = {
                         description: 'side, surprised, embarrassed smile'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 13,
@@ -136,7 +145,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'sitting, eyes closed, falling asleep'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 15,
@@ -154,7 +164,8 @@ module.exports = {
                         description: 'side, reaching for purse, cheeky'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 16,
@@ -186,7 +197,8 @@ module.exports = {
                         description: 'reflection'
                     }
                 },
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 17,
@@ -218,7 +230,8 @@ module.exports = {
                         description: 'reflection'
                     }
                 },
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 19,
@@ -250,7 +263,8 @@ module.exports = {
                         description: 'reflection'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 272,

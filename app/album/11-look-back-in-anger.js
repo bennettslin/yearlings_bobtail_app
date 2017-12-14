@@ -12,6 +12,7 @@ import { VERSES,
          OUTRO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -51,7 +52,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, squeezing through, awkward'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -77,7 +79,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side, walking, carrying cymbal, talking'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -113,7 +116,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'front, talking to Stephanie'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 12,
@@ -145,7 +149,8 @@ module.exports = {
                         description: 'reflection'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 175,

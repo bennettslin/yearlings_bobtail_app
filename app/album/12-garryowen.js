@@ -12,6 +12,7 @@ import { REFRAIN,
          SOLO,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -31,7 +32,8 @@ module.exports = {
                         description: 'side, shivering, pleading'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -57,7 +59,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'front, clutching at fist, laughing through pain'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -75,7 +78,8 @@ module.exports = {
                         description: 'side, naked, making Bennett touch her breast'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 10,
@@ -101,7 +105,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'front, removing bass, rolling eyes'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 14,
@@ -119,7 +124,8 @@ module.exports = {
                         description: 'crumbled on floor, begging, sobbing'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 187,

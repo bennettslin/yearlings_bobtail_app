@@ -9,6 +9,7 @@ import { VERSES,
          REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -21,7 +22,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'looking at Leonard Cohen poster'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 2,
@@ -32,7 +34,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'sitting on couch, figuring out Rubiks Cube'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -50,7 +53,8 @@ module.exports = {
                         description: 'sitting on floor, back turned, playing keyboard'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -83,7 +87,8 @@ module.exports = {
                         description: 'chatting with Bennett, gushing about music'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -109,7 +114,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'sitting, eating fries, laughing'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -127,7 +133,8 @@ module.exports = {
                         description: 'side, holding baby, looking back at Bennett'
                     },
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -152,7 +159,8 @@ module.exports = {
                         description: 'checking watch'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 14,
@@ -170,7 +178,8 @@ module.exports = {
                         description: 'looking at Bennett'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 215,

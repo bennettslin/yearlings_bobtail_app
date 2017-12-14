@@ -12,6 +12,7 @@ import { VERSES,
          INTRO,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -24,7 +25,8 @@ module.exports = {
                     workedHours: 1.25,
                     description: 'side angle, cradling bracelet, blank'
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 3,
@@ -42,7 +44,8 @@ module.exports = {
                         description: 'side angle, returning bracelet, fighting tears'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -60,7 +63,8 @@ module.exports = {
                         description: 'back, shaking fist at sky'
                     }
                 },
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -85,7 +89,8 @@ module.exports = {
                         description: 'back, facing back, waving'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         },
         {
             unitIndex: 10,
@@ -131,7 +136,8 @@ module.exports = {
                         description: 'front, holding up stop sign'
                     }
                 }
-            }
+            },
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
         }
     ],
     totalTime: 201,
