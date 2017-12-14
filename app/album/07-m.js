@@ -9,7 +9,11 @@ import { VERSES,
          REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
+         SHOW_STAGE_FRONT_FLOOR_PANELS,
+         JACOB_APARTMENT_FLOOR_PANELS,
+         MOVIE_THEATRE_1_FLOOR_PANELS,
+         MOVIE_THEATRE_2_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -23,7 +27,7 @@ module.exports = {
                     description: 'looking at Leonard Cohen poster'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 2,
@@ -35,7 +39,7 @@ module.exports = {
                     description: 'sitting on couch, figuring out Rubiks Cube'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -54,7 +58,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -88,7 +92,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SHOW_STAGE_FRONT_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -115,7 +119,7 @@ module.exports = {
                     description: 'sitting, eating fries, laughing'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: JACOB_APARTMENT_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -134,7 +138,7 @@ module.exports = {
                     },
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: MOVIE_THEATRE_1_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -160,7 +164,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: MOVIE_THEATRE_1_FLOOR_PANELS
         },
         {
             unitIndex: 14,
@@ -179,7 +183,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: MOVIE_THEATRE_2_FLOOR_PANELS
         }
     ],
     totalTime: 215,

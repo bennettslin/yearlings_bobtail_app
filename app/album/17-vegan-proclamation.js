@@ -12,7 +12,11 @@ import { VERSES,
          SOLO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { PARK_FLOOR_PANELS,
+         SHOW_STAGE_FRONT_FLOOR_PANELS,
+         ALLEY_FLOOR_PANELS,
+         SITA_APARTMENT_BED_FLOOR_PANELS,
+         DEMONSTRATION_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [

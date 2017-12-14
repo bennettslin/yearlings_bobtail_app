@@ -15,7 +15,10 @@ import { VERSES,
          RESPONSE,
          BACKING,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { BENNETT_APARTMENT_BED_FLOOR_PANELS,
+         SNOW_GLOBES_1_FLOOR_PANELS,
+         SNOW_GLOBES_2_FLOOR_PANELS,
+         SNOW_GLOBES_3_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -51,7 +54,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -78,7 +81,7 @@ module.exports = {
                     description: 'side angle, consoling, cautious'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SNOW_GLOBES_1_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -119,7 +122,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SNOW_GLOBES_2_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -170,7 +173,7 @@ module.exports = {
                     description: 'side angle, cheerful, making a point'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SNOW_GLOBES_3_FLOOR_PANELS
         },
         {
             unitIndex: 14,
@@ -204,7 +207,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS
         }
     ],
     totalTime: 204,

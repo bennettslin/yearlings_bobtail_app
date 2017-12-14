@@ -17,7 +17,14 @@ import { LEFT,
          OUTRO,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { ODIN_SCENE_1_FLOOR_PANELS,
+         ODIN_SCENE_2_FLOOR_PANELS,
+         ODIN_SCENE_3_FLOOR_PANELS,
+         ODIN_SCENE_4_FLOOR_PANELS,
+         ODIN_SCENE_5_FLOOR_PANELS,
+         ODIN_SCENE_6_FLOOR_PANELS,
+         ODIN_SCENE_7_FLOOR_PANELS,
+         ODIN_SCENE_8_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -31,7 +38,7 @@ module.exports = {
                     description: 'side, lying on floor, propped up'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: ODIN_SCENE_1_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -43,7 +50,7 @@ module.exports = {
                     description: 'side angle, looking down stairs'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: ODIN_SCENE_2_FLOOR_PANELS
         },
         {
             unitIndex: 6,
@@ -55,7 +62,7 @@ module.exports = {
                     description: 'side angle, peeking out from gate'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: ODIN_SCENE_3_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -67,7 +74,7 @@ module.exports = {
                     description: 'getting off rickshaw bike'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: ODIN_SCENE_4_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -79,7 +86,7 @@ module.exports = {
                     description: 'side back, looking out to ocean'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: ODIN_SCENE_5_FLOOR_PANELS
         },
         {
             unitIndex: 14,
@@ -91,7 +98,7 @@ module.exports = {
                     description: 'peering down from buoy'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: ODIN_SCENE_6_FLOOR_PANELS
         },
         {
             unitIndex: 18,
@@ -108,7 +115,7 @@ module.exports = {
                     description: 'mermaid'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: ODIN_SCENE_7_FLOOR_PANELS
         },
         {
             unitIndex: 20,
@@ -120,7 +127,7 @@ module.exports = {
                     description: 'side angle, crouched in sand, looking back'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: ODIN_SCENE_8_FLOOR_PANELS
         }
     ],
     totalTime: 200,

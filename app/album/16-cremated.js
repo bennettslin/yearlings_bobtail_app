@@ -9,7 +9,7 @@ import { VERSES,
          INTRO,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { CLIFF_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -28,7 +28,7 @@ module.exports = {
                     description: 'sitting in car, putting on perfume'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS
         },
         {
             unitIndex: 3,
@@ -45,7 +45,7 @@ module.exports = {
                     description: 'back angle, eyes closed, trying to get off'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -62,7 +62,7 @@ module.exports = {
                     description: 'back angle, giving blowjob'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -74,7 +74,7 @@ module.exports = {
                     description: 'front angle, dying, infirm'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -86,7 +86,7 @@ module.exports = {
                     description: 'serving in tennis'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -103,12 +103,12 @@ module.exports = {
                     description: 'side, looking back, reversing car'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS
         },
         {
             unitIndex: 11,
             description: `The car is in the background.`,
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS
         }
     ],
     totalTime: 164,

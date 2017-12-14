@@ -12,7 +12,10 @@ import { REFRAIN,
          SOLO,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { SITA_APARTMENT_COUCH_FLOOR_PANELS,
+         VOLKSWAGEN_FLOOR_PANELS,
+         BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
+         SHOW_STAGE_FRONT_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -33,7 +36,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -60,7 +63,7 @@ module.exports = {
                     description: 'front, clutching at fist, laughing through pain'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: VOLKSWAGEN_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -79,7 +82,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 10,
@@ -106,7 +109,7 @@ module.exports = {
                     description: 'front, removing bass, rolling eyes'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SHOW_STAGE_FRONT_FLOOR_PANELS
         },
         {
             unitIndex: 14,
@@ -125,7 +128,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
         }
     ],
     totalTime: 187,

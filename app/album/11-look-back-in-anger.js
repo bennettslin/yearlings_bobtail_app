@@ -12,7 +12,10 @@ import { VERSES,
          OUTRO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { SHOW_STAGE_SIDE_1_FLOOR_PANELS,
+         SHOW_STAGE_SIDE_2_FLOOR_PANELS,
+         SHOW_UNLOADING_FLOOR_PANELS,
+         SITA_APARTMENT_BED_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -53,7 +56,7 @@ module.exports = {
                     description: 'side, squeezing through, awkward'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SHOW_STAGE_SIDE_1_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -80,7 +83,7 @@ module.exports = {
                     description: 'side, walking, carrying cymbal, talking'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SHOW_STAGE_SIDE_2_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -117,7 +120,7 @@ module.exports = {
                     description: 'front, talking to Stephanie'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SHOW_UNLOADING_FLOOR_PANELS
         },
         {
             unitIndex: 12,
@@ -150,7 +153,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS
         }
     ],
     totalTime: 175,

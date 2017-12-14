@@ -16,7 +16,12 @@ import { OVERLAP,
          RESPONSE,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { UCLA_CAMPUS_FLOOR_PANELS,
+         WALGREENS_FLOOR_PANELS,
+         STEAM_TUNNEL_FLOOR_PANELS,
+         CEMETERY_FLOOR_PANELS,
+         STATION_WAGON_FLOOR_PANELS,
+         HOWIE_ATTIC_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -45,7 +50,7 @@ module.exports = {
                     description: 'side, walking'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: UCLA_CAMPUS_FLOOR_PANELS
         },
         {
             unitIndex: 3,
@@ -72,7 +77,7 @@ module.exports = {
                     description: 'side angle, feigning superiority'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: WALGREENS_FLOOR_PANELS
         },
         {
             unitIndex: 6,
@@ -99,7 +104,7 @@ module.exports = {
                     description: 'side angle, play fighting'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: STEAM_TUNNEL_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -126,7 +131,7 @@ module.exports = {
                     description: 'side angle, squatting, pouring water on grave'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: CEMETERY_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -153,7 +158,7 @@ module.exports = {
                     description: 'back angle, sleeping in car'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: STATION_WAGON_FLOOR_PANELS
         },
         {
             unitIndex: 15,
@@ -170,7 +175,7 @@ module.exports = {
                     description: 'downstairs, in agony'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: HOWIE_ATTIC_FLOOR_PANELS
         }
     ],
     totalTime: 180,

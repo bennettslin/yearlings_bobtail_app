@@ -11,7 +11,7 @@ import { VERSES,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { TAIWAN_PUPPET_SHOW_FLOOR_PANELS,
-         BUS_SCENE_FLOOR_PANELS,
+         SCHOOLBUS_FLOOR_PANELS,
          TETHERBALL_SCENE_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
@@ -50,7 +50,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BUS_SCENE_FLOOR_PANELS
+            floorPanels: SCHOOLBUS_FLOOR_PANELS
         },
         {
             unitIndex: 9,

@@ -10,7 +10,11 @@ import { VERSES,
          OUTRO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { EL_TORITO_FLOOR_PANELS,
+         PAMPAS_FLOOR_PANELS,
+         OUTDOOR_WEDDING_FLOOR_PANELS,
+         CLIFF_FLOOR_PANELS,
+         DEATHBED_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -31,7 +35,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: EL_TORITO_FLOOR_PANELS
         },
         {
             unitIndex: 3,
@@ -71,7 +75,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: PAMPAS_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -90,7 +94,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: OUTDOOR_WEDDING_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -109,7 +113,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -135,7 +139,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: DEATHBED_FLOOR_PANELS
         }
     ],
     totalTime: 244,

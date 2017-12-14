@@ -12,7 +12,11 @@ import { VERSES,
          INTRO,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { OAKLAND_STREET_SIDE_FLOOR_PANELS,
+         SITA_APARTMENT_COUCH_FLOOR_PANELS,
+         OAKLAND_STREET_FRONT_1_FLOOR_PANELS,
+         OAKLAND_STREET_FRONT_2_FLOOR_PANELS,
+         OAKLAND_STREET_FRONT_3_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -26,7 +30,7 @@ module.exports = {
                     description: 'side angle, cradling bracelet, blank'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: OAKLAND_STREET_SIDE_FLOOR_PANELS
         },
         {
             unitIndex: 3,
@@ -45,7 +49,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -64,7 +68,7 @@ module.exports = {
                     }
                 },
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: OAKLAND_STREET_FRONT_1_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -90,7 +94,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: OAKLAND_STREET_FRONT_2_FLOOR_PANELS
         },
         {
             unitIndex: 10,
@@ -137,7 +141,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: OAKLAND_STREET_FRONT_3_FLOOR_PANELS
         }
     ],
     totalTime: 201,

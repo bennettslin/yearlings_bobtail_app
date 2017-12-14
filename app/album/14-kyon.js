@@ -11,7 +11,7 @@ import { VERSES,
          REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { SITA_APARTMENT_COUCH_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -27,7 +27,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -41,7 +41,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -60,7 +60,7 @@ module.exports = {
                     description: 'side, cheery in a low-key way'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -79,7 +79,7 @@ module.exports = {
                     description: 'side, seated, eating, judgmental'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -98,7 +98,7 @@ module.exports = {
                     description: 'back angle, concerned'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 12,
@@ -112,7 +112,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
         }
     ],
     totalTime: 225,

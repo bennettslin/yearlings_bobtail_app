@@ -12,7 +12,13 @@ import { REFRAIN,
          CODA,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { DISHROOM_FLOOR_PANELS,
+         SITA_APARTMENT_GATE_1_FLOOR_PANELS,
+         SITA_APARTMENT_GATE_2_FLOOR_PANELS,
+         BENNETT_APARTMENT_GATE_FLOOR_PANELS,
+         BENNETT_APARTMENT_BED_FLOOR_PANELS,
+         WAITING_ROOM_FLOOR_PANELS,
+         SITA_APARTMENT_BED_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     /**
@@ -29,7 +35,7 @@ module.exports = {
                     description: 'back, reading book, pulling tray from belt.'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: DISHROOM_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -48,17 +54,17 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: DISHROOM_FLOOR_PANELS
         },
         {
             unitIndex: 6,
             description: 'Grasshoppers scene 1',
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_GATE_1_FLOOR_PANELS
         },
         {
             unitIndex: 7,
             description: 'Grasshoppers scene 5',
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_GATE_2_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -77,7 +83,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_GATE_FLOOR_PANELS
         },
         {
             unitIndex: 10,
@@ -96,7 +102,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_GATE_FLOOR_PANELS
         },
         {
             unitIndex: 11,
@@ -115,7 +121,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS
         },
         {
             unitIndex: 12,
@@ -134,7 +140,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS
         },
         {
             unitIndex: 13,
@@ -146,7 +152,7 @@ module.exports = {
                     description: 'sitting, eyes closed, falling asleep'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: WAITING_ROOM_FLOOR_PANELS
         },
         {
             unitIndex: 15,
@@ -165,7 +171,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: WAITING_ROOM_FLOOR_PANELS
         },
         {
             unitIndex: 16,
@@ -198,7 +204,7 @@ module.exports = {
                     }
                 },
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS
         },
         {
             unitIndex: 17,
@@ -231,7 +237,7 @@ module.exports = {
                     }
                 },
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS
         },
         {
             unitIndex: 19,
@@ -264,7 +270,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS
         }
     ],
     totalTime: 272,

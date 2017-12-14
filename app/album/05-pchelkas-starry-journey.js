@@ -13,7 +13,10 @@ import { VERSES,
          INTRO,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+         JUNIOR_HIGH_LOCKERS_FLOOR_PANELS,
+         JUNIOR_HIGH_QUAD_FLOOR_PANELS,
+         JUNIOR_HIGH_HALLWAY_FLOOR_PANELS } from '../constants/stageFloor'
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
  * list order on the album.
@@ -35,7 +38,7 @@ module.exports = {
                     description: 'w sitting, blissful'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
         },
         {
             unitIndex: 6,
@@ -47,7 +50,7 @@ module.exports = {
                     description: 'side, sitting up in bed, feigning sick'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
         },
         {
             unitIndex: 9,
@@ -59,7 +62,7 @@ module.exports = {
                     description: 'in bed, asleep, turned away'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
         },
         {
             unitIndex: 10,
@@ -71,7 +74,7 @@ module.exports = {
                     description: 'side, sitting, shaken, scared'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
         },
         {
             unitIndex: 13,
@@ -93,7 +96,7 @@ module.exports = {
                     description: 'side angle, throwing rocks, angry'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: JUNIOR_HIGH_LOCKERS_FLOOR_PANELS
         },
         {
             unitIndex: 17,
@@ -122,7 +125,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: JUNIOR_HIGH_QUAD_FLOOR_PANELS
         },
         {
             unitIndex: 18,
@@ -151,7 +154,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: JUNIOR_HIGH_HALLWAY_FLOOR_PANELS
         }
     ],
     totalTime: 211,

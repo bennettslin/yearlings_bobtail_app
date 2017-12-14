@@ -9,7 +9,11 @@ import { VERSES,
          CHORUS,
          BRIDGE,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { BENNETT_APARTMENT_COURTYARD_FLOOR_PANELS,
+         BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
+         CATHOLIC_CHURCH_FLOOR_PANELS,
+         BERKELEY_CAMPUS_1_FLOOR_PANELS,
+         BERKELEY_CAMPUS_2_FLOOR_PANELS } from '../constants/stageFloor'
 
 module.exports = {
     scenes: [
@@ -28,7 +32,7 @@ module.exports = {
                     description: 'walking away, in a bad mood'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_COURTYARD_FLOOR_PANELS
         },
         {
             unitIndex: 3,
@@ -45,7 +49,7 @@ module.exports = {
                     description: 'sitting upright, droll smile'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS
         },
         {
             unitIndex: 5,
@@ -57,7 +61,7 @@ module.exports = {
                     description: 'standing, back forward, hands in pocket'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: CATHOLIC_CHURCH_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -83,7 +87,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BERKELEY_CAMPUS_1_FLOOR_PANELS
         },
         {
             unitIndex: 8,
@@ -100,7 +104,7 @@ module.exports = {
                     description: 'walking forward, confused and curious at Bennett'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: BERKELEY_CAMPUS_2_FLOOR_PANELS
         }
     ],
     totalTime: 163,
