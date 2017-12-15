@@ -42,7 +42,7 @@ module.exports = {
                     description: 'side, protective, judgmental'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: PARK_FLOOR_PANELS
         },
         {
             unitIndex: 4,
@@ -69,7 +69,7 @@ module.exports = {
                     description: 'side, eager'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SHOW_STAGE_FRONT_FLOOR_PANELS
         },
         {
             unitIndex: 7,
@@ -81,7 +81,7 @@ module.exports = {
                     description: 'walking through alley'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: ALLEY_FLOOR_PANELS
         },
         {
             unitIndex: 10,
@@ -119,7 +119,7 @@ module.exports = {
                     }
                 },
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS
         },
         {
             unitIndex: 12,
@@ -152,7 +152,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: DEMONSTRATION_FLOOR_PANELS
         }
     ],
     totalTime: 241,

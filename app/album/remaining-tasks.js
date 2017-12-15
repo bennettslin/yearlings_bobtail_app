@@ -5,11 +5,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Figure out floor panel matrices for all scenes.`,
-        workedHours: 1,
-        neededHours: 9
-    },
-    {
         taskName: `Theatre views and coordinates.`,
         workedHours: 0,
         neededHours: 3

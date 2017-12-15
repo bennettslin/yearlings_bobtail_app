@@ -2607,4 +2607,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Floor panel constants for all scenes, to be filled out ad hoc.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
