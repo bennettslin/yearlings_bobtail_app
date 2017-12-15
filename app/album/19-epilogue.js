@@ -177,15 +177,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'1"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            // INSTRUMENT
-                            taskName: `banjo`,
-                            workedHours: 0,
-                            neededHours: 3
-                        }
-                    ]
+                    description: 'standing'
                 },
                 liz: {
                     todo: true,
