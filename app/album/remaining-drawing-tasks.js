@@ -435,11 +435,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Plaque sign for Lucy skeleton (Good Night)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Bennett's bed mattress (Grasshoppers, Uncanny)`,
         workedHours: 0,
         neededHours: 3
