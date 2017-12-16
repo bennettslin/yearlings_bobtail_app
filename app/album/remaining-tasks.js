@@ -55,11 +55,6 @@ module.exports = [
      * Text colours.
      */
     {
-        taskName: `Hook up text constants.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Establish initial colours. (But keep playing with indefinitely.)`,
         workedHours: 0,
         neededHours: 3
@@ -159,5 +154,10 @@ module.exports = [
     //     taskName: `Hover over verse to show lyric button.`,
     //     workedHours: 0,
     //     neededHours: 2
+    // },
+    // {
+    //     taskName: `Hook up text constants.`,
+    //     workedHours: 0,
+    //     neededHours: 3
     // }
 ]
