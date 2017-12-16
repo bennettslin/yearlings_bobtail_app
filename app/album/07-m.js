@@ -9,11 +9,11 @@ import { VERSES,
          REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
-         SHOW_STAGE_FRONT_FLOOR_PANELS,
-         JACOB_APARTMENT_FLOOR_PANELS,
-         MOVIE_THEATRE_1_FLOOR_PANELS,
-         MOVIE_THEATRE_2_FLOOR_PANELS } from '../constants/stageFloor'
+import { BENNETT_APARTMENT_COUCH_TILES,
+         SHOW_STAGE_FRONT_TILES,
+         JACOB_APARTMENT_TILES,
+         MOVIE_THEATRE_1_TILES,
+         MOVIE_THEATRE_2_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
@@ -28,7 +28,7 @@ module.exports = {
                     description: 'looking at Leonard Cohen poster'
                 }
             },
-            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
+            tiles: BENNETT_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -44,7 +44,7 @@ module.exports = {
                     description: 'sitting on couch, figuring out Rubiks Cube'
                 }
             },
-            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
+            tiles: BENNETT_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -67,7 +67,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
+            tiles: BENNETT_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -105,7 +105,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SHOW_STAGE_FRONT_FLOOR_PANELS,
+            tiles: SHOW_STAGE_FRONT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -136,7 +136,7 @@ module.exports = {
                     description: 'sitting, eating fries, laughing'
                 }
             },
-            floorPanels: JACOB_APARTMENT_FLOOR_PANELS,
+            tiles: JACOB_APARTMENT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -159,7 +159,7 @@ module.exports = {
                     },
                 }
             },
-            floorPanels: MOVIE_THEATRE_1_FLOOR_PANELS,
+            tiles: MOVIE_THEATRE_1_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -189,7 +189,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: MOVIE_THEATRE_1_FLOOR_PANELS,
+            tiles: MOVIE_THEATRE_1_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -212,7 +212,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: MOVIE_THEATRE_2_FLOOR_PANELS,
+            tiles: MOVIE_THEATRE_2_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

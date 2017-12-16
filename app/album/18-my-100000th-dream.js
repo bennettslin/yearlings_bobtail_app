@@ -10,11 +10,11 @@ import { VERSES,
          OUTRO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { EL_TORITO_FLOOR_PANELS,
-         PAMPAS_FLOOR_PANELS,
-         OUTDOOR_WEDDING_FLOOR_PANELS,
-         CLIFF_FLOOR_PANELS,
-         DEATHBED_FLOOR_PANELS } from '../constants/stageFloor'
+import { EL_TORITO_TILES,
+         PAMPAS_TILES,
+         OUTDOOR_WEDDING_TILES,
+         CLIFF_TILES,
+         DEATHBED_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
@@ -36,7 +36,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: EL_TORITO_FLOOR_PANELS,
+            tiles: EL_TORITO_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -80,7 +80,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: PAMPAS_FLOOR_PANELS,
+            tiles: PAMPAS_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -103,7 +103,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: OUTDOOR_WEDDING_FLOOR_PANELS,
+            tiles: OUTDOOR_WEDDING_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -126,7 +126,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS,
+            tiles: CLIFF_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -156,7 +156,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEATHBED_FLOOR_PANELS,
+            tiles: DEATHBED_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

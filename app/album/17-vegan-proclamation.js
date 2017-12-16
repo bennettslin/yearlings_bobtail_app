@@ -12,11 +12,11 @@ import { VERSES,
          SOLO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { PARK_FLOOR_PANELS,
-         SHOW_STAGE_FRONT_FLOOR_PANELS,
-         ALLEY_FLOOR_PANELS,
-         SITA_APARTMENT_BED_FLOOR_PANELS,
-         DEMONSTRATION_FLOOR_PANELS } from '../constants/stageFloor'
+import { PARK_TILES,
+         SHOW_STAGE_FRONT_TILES,
+         ALLEY_TILES,
+         SITA_APARTMENT_BED_TILES,
+         DEMONSTRATION_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
@@ -43,7 +43,7 @@ module.exports = {
                     description: 'side, protective, judgmental'
                 }
             },
-            floorPanels: PARK_FLOOR_PANELS,
+            tiles: PARK_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -74,7 +74,7 @@ module.exports = {
                     description: 'side, eager'
                 }
             },
-            floorPanels: SHOW_STAGE_FRONT_FLOOR_PANELS,
+            tiles: SHOW_STAGE_FRONT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -90,7 +90,7 @@ module.exports = {
                     description: 'walking through alley'
                 }
             },
-            floorPanels: ALLEY_FLOOR_PANELS,
+            tiles: ALLEY_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -132,7 +132,7 @@ module.exports = {
                     }
                 },
             },
-            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS,
+            tiles: SITA_APARTMENT_BED_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -169,7 +169,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEMONSTRATION_FLOOR_PANELS,
+            tiles: DEMONSTRATION_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

@@ -10,7 +10,7 @@ import {
     FURNITURE_COLOUR
 } from './stageValues'
 
-const DEFAULT_STAGE_FLOOR_PANELS = {
+const DEFAULT_STAGE_TILES = {
         zIndices: [
             [0]
         ],
@@ -18,7 +18,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS = {
+    CHILDHOOD_NEIGHBOURHOOD_TILES = {
         zIndices: [
             [1],
             [1],
@@ -36,7 +36,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STREET_COLOUR]
         ]
     },
-    PLAYGROUND_FLOOR_PANELS = {
+    PLAYGROUND_TILES = {
         zIndices: [
             [1],
             [1],
@@ -54,7 +54,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [CAMPUS_COLOUR]
         ]
     },
-    CHILDHOOD_BATHROOM_FLOOR_PANELS = {
+    CHILDHOOD_BATHROOM_TILES = {
         zIndices: [
             [0],
             [0],
@@ -74,7 +74,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
     },
 
     // TODO...
-    FREEWAY_FLOOR_PANELS = {
+    FREEWAY_TILES = {
         zIndices: [
             [5],
             [5],
@@ -87,7 +87,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    PORCH_FLOOR_PANELS = {
+    PORCH_TILES = {
         zIndices: [
             [1],
             [1],
@@ -100,7 +100,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    PRETEEN_BENNETT_ROOM_FLOOR_PANELS = {
+    PRETEEN_BENNETT_ROOM_TILES = {
         zIndices: [
             [1]
         ],
@@ -108,7 +108,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    CHANGELING_CAVE_FLOOR_PANELS = {
+    CHANGELING_CAVE_TILES = {
         zIndices: [
             [0]
         ],
@@ -116,7 +116,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    TAIWAN_PUPPET_SHOW_FLOOR_PANELS = {
+    TAIWAN_PUPPET_SHOW_TILES = {
         zIndices: [
             [0]
         ],
@@ -124,7 +124,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    SCHOOLBUS_FLOOR_PANELS = {
+    SCHOOLBUS_TILES = {
         zIndices: [
             [0]
         ],
@@ -132,7 +132,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    TETHERBALL_SCENE_FLOOR_PANELS = {
+    TETHERBALL_SCENE_TILES = {
         zIndices: [
             [0]
         ],
@@ -140,7 +140,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    ODIN_SCENE_1_FLOOR_PANELS = {
+    ODIN_SCENE_1_TILES = {
         zIndices: [
             [0]
         ],
@@ -148,7 +148,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    ODIN_SCENE_2_FLOOR_PANELS = {
+    ODIN_SCENE_2_TILES = {
         zIndices: [
             [0]
         ],
@@ -156,7 +156,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    ODIN_SCENE_3_FLOOR_PANELS = {
+    ODIN_SCENE_3_TILES = {
         zIndices: [
             [0]
         ],
@@ -164,7 +164,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    ODIN_SCENE_4_FLOOR_PANELS = {
+    ODIN_SCENE_4_TILES = {
         zIndices: [
             [0]
         ],
@@ -172,7 +172,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    ODIN_SCENE_5_FLOOR_PANELS = {
+    ODIN_SCENE_5_TILES = {
         zIndices: [
             [0]
         ],
@@ -180,7 +180,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    ODIN_SCENE_6_FLOOR_PANELS = {
+    ODIN_SCENE_6_TILES = {
         zIndices: [
             [0]
         ],
@@ -188,7 +188,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    ODIN_SCENE_7_FLOOR_PANELS = {
+    ODIN_SCENE_7_TILES = {
         zIndices: [
             [0]
         ],
@@ -196,7 +196,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    ODIN_SCENE_8_FLOOR_PANELS = {
+    ODIN_SCENE_8_TILES = {
         zIndices: [
             [0]
         ],
@@ -204,7 +204,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    JUNIOR_HIGH_LOCKERS_FLOOR_PANELS = {
+    JUNIOR_HIGH_LOCKERS_TILES = {
         zIndices: [
             [0]
         ],
@@ -212,7 +212,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    JUNIOR_HIGH_QUAD_FLOOR_PANELS = {
+    JUNIOR_HIGH_QUAD_TILES = {
         zIndices: [
             [0]
         ],
@@ -220,7 +220,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    JUNIOR_HIGH_HALLWAY_FLOOR_PANELS = {
+    JUNIOR_HIGH_HALLWAY_TILES = {
         zIndices: [
             [0]
         ],
@@ -228,7 +228,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    BENNETT_APARTMENT_COURTYARD_FLOOR_PANELS = {
+    BENNETT_APARTMENT_COURTYARD_TILES = {
         zIndices: [
             [0]
         ],
@@ -236,7 +236,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    BENNETT_APARTMENT_COUCH_FLOOR_PANELS = {
+    BENNETT_APARTMENT_COUCH_TILES = {
         zIndices: [
             [0]
         ],
@@ -244,7 +244,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    CATHOLIC_CHURCH_FLOOR_PANELS = {
+    CATHOLIC_CHURCH_TILES = {
         zIndices: [
             [0]
         ],
@@ -252,7 +252,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    BERKELEY_CAMPUS_1_FLOOR_PANELS = {
+    BERKELEY_CAMPUS_1_TILES = {
         zIndices: [
             [0]
         ],
@@ -260,7 +260,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    BERKELEY_CAMPUS_2_FLOOR_PANELS = {
+    BERKELEY_CAMPUS_2_TILES = {
         zIndices: [
             [0]
         ],
@@ -268,7 +268,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    JACOB_APARTMENT_FLOOR_PANELS = {
+    JACOB_APARTMENT_TILES = {
         zIndices: [
             [0]
         ],
@@ -276,7 +276,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    MOVIE_THEATRE_1_FLOOR_PANELS = {
+    MOVIE_THEATRE_1_TILES = {
         zIndices: [
             [0]
         ],
@@ -284,112 +284,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    MOVIE_THEATRE_2_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-
-    MUSEUM_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    BACKSTAGE_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    GO_KART_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    DISHROOM_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    BENNETT_APARTMENT_GATE_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    BENNETT_APARTMENT_BED_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    WAITING_ROOM_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    UCLA_CAMPUS_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    WALGREENS_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    STEAM_TUNNEL_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    CEMETERY_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    STATION_WAGON_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    HOWIE_ATTIC_FLOOR_PANELS = {
+    MOVIE_THEATRE_2_TILES = {
         zIndices: [
             [0]
         ],
@@ -398,7 +293,112 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
         ]
     },
 
-    SHOW_STAGE_FRONT_FLOOR_PANELS = {
+    MUSEUM_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    BACKSTAGE_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    GO_KART_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    DISHROOM_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    BENNETT_APARTMENT_GATE_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    BENNETT_APARTMENT_BED_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    WAITING_ROOM_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    UCLA_CAMPUS_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    WALGREENS_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    STEAM_TUNNEL_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    CEMETERY_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    STATION_WAGON_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    HOWIE_ATTIC_TILES = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+
+    SHOW_STAGE_FRONT_TILES = {
         zIndices: [
             [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
             [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
@@ -412,7 +412,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
         ]
     },
 
-    SHOW_STAGE_SIDE_1_FLOOR_PANELS = {
+    SHOW_STAGE_SIDE_1_TILES = {
         zIndices: [
             [4, 4, 4, 1],
             [4, 4, 4, 1],
@@ -425,7 +425,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    SHOW_STAGE_SIDE_2_FLOOR_PANELS = {
+    SHOW_STAGE_SIDE_2_TILES = {
         zIndices: [
             [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
             [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
@@ -438,7 +438,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    SHOW_UNLOADING_FLOOR_PANELS = {
+    SHOW_UNLOADING_TILES = {
         zIndices: [
             [0]
         ],
@@ -447,7 +447,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
         ]
     },
 
-    SITA_APARTMENT_BED_FLOOR_PANELS = {
+    SITA_APARTMENT_BED_TILES = {
         zIndices: [
             [0]
         ],
@@ -455,7 +455,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    SITA_APARTMENT_COUCH_FLOOR_PANELS = {
+    SITA_APARTMENT_COUCH_TILES = {
         zIndices: [
             [0]
         ],
@@ -463,7 +463,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    SITA_APARTMENT_GATE_1_FLOOR_PANELS = {
+    SITA_APARTMENT_GATE_1_TILES = {
         zIndices: [
             [0]
         ],
@@ -471,7 +471,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    SITA_APARTMENT_GATE_2_FLOOR_PANELS = {
+    SITA_APARTMENT_GATE_2_TILES = {
         zIndices: [
             [0]
         ],
@@ -480,7 +480,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
         ]
     },
 
-    VOLKSWAGEN_FLOOR_PANELS = {
+    VOLKSWAGEN_TILES = {
         zIndices: [
             [0]
         ],
@@ -488,7 +488,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    OAKLAND_STREET_SIDE_FLOOR_PANELS = {
+    OAKLAND_STREET_SIDE_TILES = {
         zIndices: [
             [0]
         ],
@@ -496,7 +496,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    OAKLAND_STREET_FRONT_1_FLOOR_PANELS = {
+    OAKLAND_STREET_FRONT_1_TILES = {
         zIndices: [
             [0]
         ],
@@ -504,7 +504,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    OAKLAND_STREET_FRONT_2_FLOOR_PANELS = {
+    OAKLAND_STREET_FRONT_2_TILES = {
         zIndices: [
             [0]
         ],
@@ -512,7 +512,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    OAKLAND_STREET_FRONT_3_FLOOR_PANELS = {
+    OAKLAND_STREET_FRONT_3_TILES = {
         zIndices: [
             [0]
         ],
@@ -520,7 +520,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    SNOW_GLOBES_1_FLOOR_PANELS = {
+    SNOW_GLOBES_1_TILES = {
         zIndices: [
             [0]
         ],
@@ -528,7 +528,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    SNOW_GLOBES_2_FLOOR_PANELS = {
+    SNOW_GLOBES_2_TILES = {
         zIndices: [
             [0]
         ],
@@ -536,7 +536,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    SNOW_GLOBES_3_FLOOR_PANELS = {
+    SNOW_GLOBES_3_TILES = {
         zIndices: [
             [0]
         ],
@@ -544,7 +544,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    CLIFF_FLOOR_PANELS = {
+    CLIFF_TILES = {
         zIndices: [
             [0]
         ],
@@ -552,7 +552,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    PARK_FLOOR_PANELS = {
+    PARK_TILES = {
         zIndices: [
             [0]
         ],
@@ -560,7 +560,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    ALLEY_FLOOR_PANELS = {
+    ALLEY_TILES = {
         zIndices: [
             [0]
         ],
@@ -568,7 +568,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    DEMONSTRATION_FLOOR_PANELS = {
+    DEMONSTRATION_TILES = {
         zIndices: [
             [0]
         ],
@@ -576,7 +576,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    EL_TORITO_FLOOR_PANELS = {
+    EL_TORITO_TILES = {
         zIndices: [
             [0]
         ],
@@ -584,7 +584,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    PAMPAS_FLOOR_PANELS = {
+    PAMPAS_TILES = {
         zIndices: [
             [0]
         ],
@@ -592,7 +592,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    OUTDOOR_WEDDING_FLOOR_PANELS = {
+    OUTDOOR_WEDDING_TILES = {
         zIndices: [
             [0]
         ],
@@ -600,7 +600,7 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
             [STAGE_COLOUR]
         ]
     },
-    DEATHBED_FLOOR_PANELS = {
+    DEATHBED_TILES = {
         zIndices: [
             [0]
         ],
@@ -610,71 +610,71 @@ const DEFAULT_STAGE_FLOOR_PANELS = {
     }
 
 module.exports = {
-    DEFAULT_STAGE_FLOOR_PANELS,
-    CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
-    PLAYGROUND_FLOOR_PANELS,
-    CHILDHOOD_BATHROOM_FLOOR_PANELS,
-    FREEWAY_FLOOR_PANELS,
-    PORCH_FLOOR_PANELS,
-    PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
-    CHANGELING_CAVE_FLOOR_PANELS,
-    TAIWAN_PUPPET_SHOW_FLOOR_PANELS,
-    SCHOOLBUS_FLOOR_PANELS,
-    TETHERBALL_SCENE_FLOOR_PANELS,
-    ODIN_SCENE_1_FLOOR_PANELS,
-    ODIN_SCENE_2_FLOOR_PANELS,
-    ODIN_SCENE_3_FLOOR_PANELS,
-    ODIN_SCENE_4_FLOOR_PANELS,
-    ODIN_SCENE_5_FLOOR_PANELS,
-    ODIN_SCENE_6_FLOOR_PANELS,
-    ODIN_SCENE_7_FLOOR_PANELS,
-    ODIN_SCENE_8_FLOOR_PANELS,
-    JUNIOR_HIGH_LOCKERS_FLOOR_PANELS,
-    JUNIOR_HIGH_QUAD_FLOOR_PANELS,
-    JUNIOR_HIGH_HALLWAY_FLOOR_PANELS,
-    BENNETT_APARTMENT_COURTYARD_FLOOR_PANELS,
-    BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
-    CATHOLIC_CHURCH_FLOOR_PANELS,
-    BERKELEY_CAMPUS_1_FLOOR_PANELS,
-    BERKELEY_CAMPUS_2_FLOOR_PANELS,
-    SHOW_STAGE_FRONT_FLOOR_PANELS,
-    JACOB_APARTMENT_FLOOR_PANELS,
-    MOVIE_THEATRE_1_FLOOR_PANELS,
-    MOVIE_THEATRE_2_FLOOR_PANELS,
-    SITA_APARTMENT_GATE_1_FLOOR_PANELS,
-    SITA_APARTMENT_GATE_2_FLOOR_PANELS,
-    MUSEUM_FLOOR_PANELS,
-    BACKSTAGE_FLOOR_PANELS,
-    GO_KART_FLOOR_PANELS,
-    DISHROOM_FLOOR_PANELS,
-    BENNETT_APARTMENT_GATE_FLOOR_PANELS,
-    BENNETT_APARTMENT_BED_FLOOR_PANELS,
-    WAITING_ROOM_FLOOR_PANELS,
-    SITA_APARTMENT_BED_FLOOR_PANELS,
-    UCLA_CAMPUS_FLOOR_PANELS,
-    WALGREENS_FLOOR_PANELS,
-    STEAM_TUNNEL_FLOOR_PANELS,
-    CEMETERY_FLOOR_PANELS,
-    STATION_WAGON_FLOOR_PANELS,
-    HOWIE_ATTIC_FLOOR_PANELS,
-    SHOW_STAGE_SIDE_1_FLOOR_PANELS,
-    SHOW_STAGE_SIDE_2_FLOOR_PANELS,
-    SHOW_UNLOADING_FLOOR_PANELS,
-    SITA_APARTMENT_COUCH_FLOOR_PANELS,
-    VOLKSWAGEN_FLOOR_PANELS,
-    OAKLAND_STREET_SIDE_FLOOR_PANELS,
-    OAKLAND_STREET_FRONT_1_FLOOR_PANELS,
-    OAKLAND_STREET_FRONT_2_FLOOR_PANELS,
-    OAKLAND_STREET_FRONT_3_FLOOR_PANELS,
-    SNOW_GLOBES_1_FLOOR_PANELS,
-    SNOW_GLOBES_2_FLOOR_PANELS,
-    SNOW_GLOBES_3_FLOOR_PANELS,
-    CLIFF_FLOOR_PANELS,
-    PARK_FLOOR_PANELS,
-    ALLEY_FLOOR_PANELS,
-    DEMONSTRATION_FLOOR_PANELS,
-    EL_TORITO_FLOOR_PANELS,
-    PAMPAS_FLOOR_PANELS,
-    OUTDOOR_WEDDING_FLOOR_PANELS,
-    DEATHBED_FLOOR_PANELS
+    DEFAULT_STAGE_TILES,
+    CHILDHOOD_NEIGHBOURHOOD_TILES,
+    PLAYGROUND_TILES,
+    CHILDHOOD_BATHROOM_TILES,
+    FREEWAY_TILES,
+    PORCH_TILES,
+    PRETEEN_BENNETT_ROOM_TILES,
+    CHANGELING_CAVE_TILES,
+    TAIWAN_PUPPET_SHOW_TILES,
+    SCHOOLBUS_TILES,
+    TETHERBALL_SCENE_TILES,
+    ODIN_SCENE_1_TILES,
+    ODIN_SCENE_2_TILES,
+    ODIN_SCENE_3_TILES,
+    ODIN_SCENE_4_TILES,
+    ODIN_SCENE_5_TILES,
+    ODIN_SCENE_6_TILES,
+    ODIN_SCENE_7_TILES,
+    ODIN_SCENE_8_TILES,
+    JUNIOR_HIGH_LOCKERS_TILES,
+    JUNIOR_HIGH_QUAD_TILES,
+    JUNIOR_HIGH_HALLWAY_TILES,
+    BENNETT_APARTMENT_COURTYARD_TILES,
+    BENNETT_APARTMENT_COUCH_TILES,
+    CATHOLIC_CHURCH_TILES,
+    BERKELEY_CAMPUS_1_TILES,
+    BERKELEY_CAMPUS_2_TILES,
+    SHOW_STAGE_FRONT_TILES,
+    JACOB_APARTMENT_TILES,
+    MOVIE_THEATRE_1_TILES,
+    MOVIE_THEATRE_2_TILES,
+    SITA_APARTMENT_GATE_1_TILES,
+    SITA_APARTMENT_GATE_2_TILES,
+    MUSEUM_TILES,
+    BACKSTAGE_TILES,
+    GO_KART_TILES,
+    DISHROOM_TILES,
+    BENNETT_APARTMENT_GATE_TILES,
+    BENNETT_APARTMENT_BED_TILES,
+    WAITING_ROOM_TILES,
+    SITA_APARTMENT_BED_TILES,
+    UCLA_CAMPUS_TILES,
+    WALGREENS_TILES,
+    STEAM_TUNNEL_TILES,
+    CEMETERY_TILES,
+    STATION_WAGON_TILES,
+    HOWIE_ATTIC_TILES,
+    SHOW_STAGE_SIDE_1_TILES,
+    SHOW_STAGE_SIDE_2_TILES,
+    SHOW_UNLOADING_TILES,
+    SITA_APARTMENT_COUCH_TILES,
+    VOLKSWAGEN_TILES,
+    OAKLAND_STREET_SIDE_TILES,
+    OAKLAND_STREET_FRONT_1_TILES,
+    OAKLAND_STREET_FRONT_2_TILES,
+    OAKLAND_STREET_FRONT_3_TILES,
+    SNOW_GLOBES_1_TILES,
+    SNOW_GLOBES_2_TILES,
+    SNOW_GLOBES_3_TILES,
+    CLIFF_TILES,
+    PARK_TILES,
+    ALLEY_TILES,
+    DEMONSTRATION_TILES,
+    EL_TORITO_TILES,
+    PAMPAS_TILES,
+    OUTDOOR_WEDDING_TILES,
+    DEATHBED_TILES
 }

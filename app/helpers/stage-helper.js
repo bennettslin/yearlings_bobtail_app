@@ -1,8 +1,8 @@
 import { STAGE_ASPECT_RATIO,
          STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE,
          VANISHING_POINT_Y_PERCENTAGE,
-         FLOOR_PANEL_Y_PERCENTAGES,
-         FLOOR_PANEL_COLUMNS_LENGTH } from '../constants/stage'
+         TILE_Y_PERCENTAGES,
+         TILE_COLUMNS_LENGTH } from '../constants/stage'
 
 import { PHONE_WIDTH,
          MINI_WIDTH,
@@ -30,7 +30,7 @@ import { PHONE_WIDTH,
 import { roundPercentage } from './general-helper'
 import { getIsDesktop, getIsPhone, getIsMonitor } from './responsive-helper'
 
-export const getFloorPanelCornersForXYAndZ = (
+export const getTileCornersForXYAndZ = (
     xIndex,
     yIndex,
     zIndex = 0
@@ -41,22 +41,22 @@ export const getFloorPanelCornersForXYAndZ = (
      * top left, top right, bottom right, bottom left.
      */
     return [
-        _getFloorPanelXYPercentageForXYCornerAndZ(
+        _getTileXYPercentageForXYCornerAndZ(
             xIndex, yIndex + 1, zIndex
         ),
-        _getFloorPanelXYPercentageForXYCornerAndZ(
+        _getTileXYPercentageForXYCornerAndZ(
             xIndex + 1, yIndex + 1, zIndex
         ),
-        _getFloorPanelXYPercentageForXYCornerAndZ(
+        _getTileXYPercentageForXYCornerAndZ(
             xIndex + 1, yIndex, zIndex
         ),
-        _getFloorPanelXYPercentageForXYCornerAndZ(
+        _getTileXYPercentageForXYCornerAndZ(
             xIndex, yIndex, zIndex
         )
     ]
 }
 
-const _getFloorPanelXYPercentageForXYCornerAndZ = (
+const _getTileXYPercentageForXYCornerAndZ = (
 
     // This is an interval from 0 to 12. There are twelve floor panel columns.
     xCornerIndex,
@@ -90,13 +90,13 @@ const _getXPercentageForXCornerAndYCorner = (
     const baseYPercentage = _getYPercentageForYCornerAndZ(
             yCornerIndex, 0
         ),
-        floorPanelsWidthPercentage =
+        tilesWidthPercentage =
             100 / VANISHING_POINT_Y_PERCENTAGE *
             (VANISHING_POINT_Y_PERCENTAGE - baseYPercentage),
 
-        rawXPercentage = (100 - floorPanelsWidthPercentage) / 2 +
-            xCornerIndex * floorPanelsWidthPercentage /
-            FLOOR_PANEL_COLUMNS_LENGTH
+        rawXPercentage = (100 - tilesWidthPercentage) / 2 +
+            xCornerIndex * tilesWidthPercentage /
+            TILE_COLUMNS_LENGTH
 
     return roundPercentage(rawXPercentage)
 }
@@ -105,10 +105,10 @@ const _getYPercentageForYCornerAndZ = (
     yCornerIndex,
     zIndex
 ) => {
-    const floorPanelYPercentage = FLOOR_PANEL_Y_PERCENTAGES[yCornerIndex],
+    const tileYPercentage = TILE_Y_PERCENTAGES[yCornerIndex],
         rawYPercentage =
-            floorPanelYPercentage + zIndex / 10 *
-            (VANISHING_POINT_Y_PERCENTAGE - floorPanelYPercentage)
+            tileYPercentage + zIndex / 10 *
+            (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
 
     return roundPercentage(rawYPercentage)
 }

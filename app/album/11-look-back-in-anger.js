@@ -12,10 +12,10 @@ import { VERSES,
          OUTRO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { SHOW_STAGE_SIDE_1_FLOOR_PANELS,
-         SHOW_STAGE_SIDE_2_FLOOR_PANELS,
-         SHOW_UNLOADING_FLOOR_PANELS,
-         SITA_APARTMENT_BED_FLOOR_PANELS } from '../constants/stageFloor'
+import { SHOW_STAGE_SIDE_1_TILES,
+         SHOW_STAGE_SIDE_2_TILES,
+         SHOW_UNLOADING_TILES,
+         SITA_APARTMENT_BED_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
@@ -57,7 +57,7 @@ module.exports = {
                     description: 'side, squeezing through, awkward'
                 }
             },
-            floorPanels: SHOW_STAGE_SIDE_1_FLOOR_PANELS,
+            tiles: SHOW_STAGE_SIDE_1_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -88,7 +88,7 @@ module.exports = {
                     description: 'side, walking, carrying cymbal, talking'
                 }
             },
-            floorPanels: SHOW_STAGE_SIDE_2_FLOOR_PANELS,
+            tiles: SHOW_STAGE_SIDE_2_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -129,7 +129,7 @@ module.exports = {
                     description: 'front, talking to Stephanie'
                 }
             },
-            floorPanels: SHOW_UNLOADING_FLOOR_PANELS,
+            tiles: SHOW_UNLOADING_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -166,7 +166,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS,
+            tiles: SITA_APARTMENT_BED_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

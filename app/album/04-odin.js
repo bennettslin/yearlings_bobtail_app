@@ -17,14 +17,14 @@ import { LEFT,
          OUTRO,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { ODIN_SCENE_1_FLOOR_PANELS,
-         ODIN_SCENE_2_FLOOR_PANELS,
-         ODIN_SCENE_3_FLOOR_PANELS,
-         ODIN_SCENE_4_FLOOR_PANELS,
-         ODIN_SCENE_5_FLOOR_PANELS,
-         ODIN_SCENE_6_FLOOR_PANELS,
-         ODIN_SCENE_7_FLOOR_PANELS,
-         ODIN_SCENE_8_FLOOR_PANELS } from '../constants/stageFloor'
+import { ODIN_SCENE_1_TILES,
+         ODIN_SCENE_2_TILES,
+         ODIN_SCENE_3_TILES,
+         ODIN_SCENE_4_TILES,
+         ODIN_SCENE_5_TILES,
+         ODIN_SCENE_6_TILES,
+         ODIN_SCENE_7_TILES,
+         ODIN_SCENE_8_TILES } from '../constants/stageFloor'
 
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
@@ -40,7 +40,7 @@ module.exports = {
                     description: 'side, lying on floor, propped up'
                 }
             },
-            floorPanels: ODIN_SCENE_1_FLOOR_PANELS,
+            tiles: ODIN_SCENE_1_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -56,7 +56,7 @@ module.exports = {
                     description: 'side angle, looking down stairs'
                 }
             },
-            floorPanels: ODIN_SCENE_2_FLOOR_PANELS,
+            tiles: ODIN_SCENE_2_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -72,7 +72,7 @@ module.exports = {
                     description: 'side angle, peeking out from gate'
                 }
             },
-            floorPanels: ODIN_SCENE_3_FLOOR_PANELS,
+            tiles: ODIN_SCENE_3_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -88,7 +88,7 @@ module.exports = {
                     description: 'getting off rickshaw bike'
                 }
             },
-            floorPanels: ODIN_SCENE_4_FLOOR_PANELS,
+            tiles: ODIN_SCENE_4_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -104,7 +104,7 @@ module.exports = {
                     description: 'side back, looking out to ocean'
                 }
             },
-            floorPanels: ODIN_SCENE_5_FLOOR_PANELS,
+            tiles: ODIN_SCENE_5_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -120,7 +120,7 @@ module.exports = {
                     description: 'peering down from buoy'
                 }
             },
-            floorPanels: ODIN_SCENE_6_FLOOR_PANELS,
+            tiles: ODIN_SCENE_6_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -141,7 +141,7 @@ module.exports = {
                     description: 'mermaid'
                 }
             },
-            floorPanels: ODIN_SCENE_7_FLOOR_PANELS,
+            tiles: ODIN_SCENE_7_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -157,7 +157,7 @@ module.exports = {
                     description: 'side angle, crouched in sand, looking back'
                 }
             },
-            floorPanels: ODIN_SCENE_8_FLOOR_PANELS,
+            tiles: ODIN_SCENE_8_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

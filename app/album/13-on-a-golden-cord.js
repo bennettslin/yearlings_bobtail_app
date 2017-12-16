@@ -12,11 +12,11 @@ import { VERSES,
          INTRO,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { OAKLAND_STREET_SIDE_FLOOR_PANELS,
-         SITA_APARTMENT_COUCH_FLOOR_PANELS,
-         OAKLAND_STREET_FRONT_1_FLOOR_PANELS,
-         OAKLAND_STREET_FRONT_2_FLOOR_PANELS,
-         OAKLAND_STREET_FRONT_3_FLOOR_PANELS } from '../constants/stageFloor'
+import { OAKLAND_STREET_SIDE_TILES,
+         SITA_APARTMENT_COUCH_TILES,
+         OAKLAND_STREET_FRONT_1_TILES,
+         OAKLAND_STREET_FRONT_2_TILES,
+         OAKLAND_STREET_FRONT_3_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
@@ -31,7 +31,7 @@ module.exports = {
                     description: 'side angle, cradling bracelet, blank'
                 }
             },
-            floorPanels: OAKLAND_STREET_SIDE_FLOOR_PANELS,
+            tiles: OAKLAND_STREET_SIDE_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -54,7 +54,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS,
+            tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -77,7 +77,7 @@ module.exports = {
                     }
                 },
             },
-            floorPanels: OAKLAND_STREET_FRONT_1_FLOOR_PANELS,
+            tiles: OAKLAND_STREET_FRONT_1_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -107,7 +107,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: OAKLAND_STREET_FRONT_2_FLOOR_PANELS,
+            tiles: OAKLAND_STREET_FRONT_2_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -158,7 +158,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: OAKLAND_STREET_FRONT_3_FLOOR_PANELS,
+            tiles: OAKLAND_STREET_FRONT_3_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

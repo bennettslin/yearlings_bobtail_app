@@ -26,7 +26,7 @@ const exponent = 1.069913193933663,
     yHeight4 = unit * exponent,
     yHeight5 = unit,
 
-    FLOOR_PANEL_Y_PERCENTAGES = [
+    TILE_Y_PERCENTAGES = [
         0,
         yHeight0,
         yHeight0 + yHeight1,
@@ -40,7 +40,7 @@ module.exports = {
     STAGE_ASPECT_RATIO: 1.2,
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE: 1.05,
     VANISHING_POINT_Y_PERCENTAGE: 50,
-    FLOOR_PANEL_Y_PERCENTAGES,
-    FLOOR_PANEL_ROWS_LENGTH: 6,
-    FLOOR_PANEL_COLUMNS_LENGTH: 12
+    TILE_Y_PERCENTAGES,
+    TILE_ROWS_LENGTH: 6,
+    TILE_COLUMNS_LENGTH: 12
 }

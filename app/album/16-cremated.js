@@ -9,7 +9,7 @@ import { VERSES,
          INTRO,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { CLIFF_FLOOR_PANELS } from '../constants/stageFloor'
+import { CLIFF_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
@@ -29,7 +29,7 @@ module.exports = {
                     description: 'sitting in car, putting on perfume'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS,
+            tiles: CLIFF_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -50,7 +50,7 @@ module.exports = {
                     description: 'back angle, eyes closed, trying to get off'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS,
+            tiles: CLIFF_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -71,7 +71,7 @@ module.exports = {
                     description: 'back angle, giving blowjob'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS,
+            tiles: CLIFF_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -87,7 +87,7 @@ module.exports = {
                     description: 'front angle, dying, infirm'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS,
+            tiles: CLIFF_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -103,7 +103,7 @@ module.exports = {
                     description: 'serving in tennis'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS,
+            tiles: CLIFF_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -124,7 +124,7 @@ module.exports = {
                     description: 'side, looking back, reversing car'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS,
+            tiles: CLIFF_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -133,7 +133,7 @@ module.exports = {
         {
             unitIndex: 11,
             description: `The car is in the background.`,
-            floorPanels: CLIFF_FLOOR_PANELS,
+            tiles: CLIFF_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

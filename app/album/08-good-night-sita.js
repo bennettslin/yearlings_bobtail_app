@@ -8,11 +8,11 @@ import { VERSES,
          CHORUS,
          POSTCHORUS,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { SITA_APARTMENT_GATE_1_FLOOR_PANELS,
-         SITA_APARTMENT_GATE_2_FLOOR_PANELS,
-         MUSEUM_FLOOR_PANELS,
-         BACKSTAGE_FLOOR_PANELS,
-         GO_KART_FLOOR_PANELS } from '../constants/stageFloor'
+import { SITA_APARTMENT_GATE_1_TILES,
+         SITA_APARTMENT_GATE_2_TILES,
+         MUSEUM_TILES,
+         BACKSTAGE_TILES,
+         GO_KART_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
@@ -34,7 +34,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_GATE_1_FLOOR_PANELS,
+            tiles: SITA_APARTMENT_GATE_1_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -57,7 +57,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: MUSEUM_FLOOR_PANELS,
+            tiles: MUSEUM_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -92,7 +92,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BACKSTAGE_FLOOR_PANELS,
+            tiles: BACKSTAGE_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -115,7 +115,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: GO_KART_FLOOR_PANELS,
+            tiles: GO_KART_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -138,7 +138,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_GATE_2_FLOOR_PANELS,
+            tiles: SITA_APARTMENT_GATE_2_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

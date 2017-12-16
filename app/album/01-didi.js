@@ -14,9 +14,9 @@ import { VERSES,
          REFRAIN,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
-         PLAYGROUND_FLOOR_PANELS,
-         CHILDHOOD_BATHROOM_FLOOR_PANELS } from '../constants/stageFloor'
+import { CHILDHOOD_NEIGHBOURHOOD_TILES,
+         PLAYGROUND_TILES,
+         CHILDHOOD_BATHROOM_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 
@@ -25,7 +25,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
-            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
+            tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -65,7 +65,7 @@ module.exports = {
                     left: 0.5
                 }
             },
-            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
+            tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -91,7 +91,7 @@ module.exports = {
                     description: 'side, skipping, pointing back and laughing'
                 }
             },
-            floorPanels: PLAYGROUND_FLOOR_PANELS,
+            tiles: PLAYGROUND_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -107,7 +107,7 @@ module.exports = {
                     description: 'side, in bathtub, downcast'
                 }
             },
-            floorPanels: CHILDHOOD_BATHROOM_FLOOR_PANELS,
+            tiles: CHILDHOOD_BATHROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -128,7 +128,7 @@ module.exports = {
                     description: 'side, facing front, singing, smiling'
                 }
             },
-            floorPanels: CHILDHOOD_BATHROOM_FLOOR_PANELS,
+            tiles: CHILDHOOD_BATHROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

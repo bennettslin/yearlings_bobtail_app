@@ -1,4 +1,4 @@
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
+import { DEFAULT_STAGE_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
                     description: 'standing, facing forward, welcoming'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS,
+            tiles: DEFAULT_STAGE_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

@@ -3,19 +3,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { getArrayOfLength } from '../../helpers/general-helper'
-import { getFloorPanelCornersForXYAndZ } from '../../helpers/stage-helper'
+import { getTileCornersForXYAndZ } from '../../helpers/stage-helper'
 
-import { FLOOR_PANEL_ROWS_LENGTH,
-         FLOOR_PANEL_COLUMNS_LENGTH } from '../../constants/stage'
+import { TILE_ROWS_LENGTH,
+         TILE_COLUMNS_LENGTH } from '../../constants/stage'
 
-import { DEFAULT_STAGE_FLOOR_PANELS } from '../../constants/stageFloor'
+import { DEFAULT_STAGE_TILES } from '../../constants/stageFloor'
 
 const defaultProps = {
-    floorPanels: DEFAULT_STAGE_FLOOR_PANELS,
+    tiles: DEFAULT_STAGE_TILES,
 }
 
 const propTypes = {
-    floorPanels: PropTypes.shape({
+    tiles: PropTypes.shape({
         zIndices: PropTypes.arrayOf(
             PropTypes.arrayOf(
                 PropTypes.number
@@ -31,19 +31,19 @@ const propTypes = {
 
 // TODO: Make indices in order of lowest in DOM to highest.
 const rowIndicesArray = getArrayOfLength({
-        length: FLOOR_PANEL_ROWS_LENGTH
+        length: TILE_ROWS_LENGTH
     }),
     columnIndicesArray = getArrayOfLength({
-        length: FLOOR_PANEL_COLUMNS_LENGTH
+        length: TILE_COLUMNS_LENGTH
     })
 
 const StageFloorField = ({
 
-    floorPanels
+    tiles
 
 }) => {
 
-    const { zIndices, colours } = floorPanels
+    const { zIndices, colours } = tiles
 
     return (
         <div className="stage-floor-field">
@@ -63,7 +63,7 @@ const StageFloorField = ({
                  * Invert the rows, since top row in array should be top row
                  * shown in floor field.
                  */
-                const yIndex = FLOOR_PANEL_ROWS_LENGTH - rawYIndex - 1
+                const yIndex = TILE_ROWS_LENGTH - rawYIndex - 1
 
                 return (
                     columnIndicesArray.map(xIndex => {
@@ -77,7 +77,7 @@ const StageFloorField = ({
                                 coloursRowArray[xIndex] :
                                 coloursRowArray[coloursRowArray.length - 1],
 
-                            corners = getFloorPanelCornersForXYAndZ(
+                            corners = getTileCornersForXYAndZ(
                                 xIndex, yIndex, zIndex
                             )
 

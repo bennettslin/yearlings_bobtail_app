@@ -16,12 +16,12 @@ import { OVERLAP,
          RESPONSE,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { UCLA_CAMPUS_FLOOR_PANELS,
-         WALGREENS_FLOOR_PANELS,
-         STEAM_TUNNEL_FLOOR_PANELS,
-         CEMETERY_FLOOR_PANELS,
-         STATION_WAGON_FLOOR_PANELS,
-         HOWIE_ATTIC_FLOOR_PANELS } from '../constants/stageFloor'
+import { UCLA_CAMPUS_TILES,
+         WALGREENS_TILES,
+         STEAM_TUNNEL_TILES,
+         CEMETERY_TILES,
+         STATION_WAGON_TILES,
+         HOWIE_ATTIC_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
@@ -51,7 +51,7 @@ module.exports = {
                     description: 'side, walking'
                 }
             },
-            floorPanels: UCLA_CAMPUS_FLOOR_PANELS,
+            tiles: UCLA_CAMPUS_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -82,7 +82,7 @@ module.exports = {
                     description: 'side angle, feigning superiority'
                 }
             },
-            floorPanels: WALGREENS_FLOOR_PANELS,
+            tiles: WALGREENS_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -113,7 +113,7 @@ module.exports = {
                     description: 'side angle, play fighting'
                 }
             },
-            floorPanels: STEAM_TUNNEL_FLOOR_PANELS,
+            tiles: STEAM_TUNNEL_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -144,7 +144,7 @@ module.exports = {
                     description: 'side angle, squatting, pouring water on grave'
                 }
             },
-            floorPanels: CEMETERY_FLOOR_PANELS,
+            tiles: CEMETERY_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -175,7 +175,7 @@ module.exports = {
                     description: 'back angle, sleeping in car'
                 }
             },
-            floorPanels: STATION_WAGON_FLOOR_PANELS,
+            tiles: STATION_WAGON_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -196,7 +196,7 @@ module.exports = {
                     description: 'downstairs, in agony'
                 }
             },
-            floorPanels: HOWIE_ATTIC_FLOOR_PANELS,
+            tiles: HOWIE_ATTIC_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

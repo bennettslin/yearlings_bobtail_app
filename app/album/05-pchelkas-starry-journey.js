@@ -13,10 +13,10 @@ import { VERSES,
          INTRO,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
-         JUNIOR_HIGH_LOCKERS_FLOOR_PANELS,
-         JUNIOR_HIGH_QUAD_FLOOR_PANELS,
-         JUNIOR_HIGH_HALLWAY_FLOOR_PANELS } from '../constants/stageFloor'
+import { PRETEEN_BENNETT_ROOM_TILES,
+         JUNIOR_HIGH_LOCKERS_TILES,
+         JUNIOR_HIGH_QUAD_TILES,
+         JUNIOR_HIGH_HALLWAY_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 /**
@@ -40,7 +40,7 @@ module.exports = {
                     description: 'w sitting, blissful'
                 }
             },
-            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+            tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -56,7 +56,7 @@ module.exports = {
                     description: 'side, sitting up in bed, feigning sick'
                 }
             },
-            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+            tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -72,7 +72,7 @@ module.exports = {
                     description: 'in bed, asleep, turned away'
                 }
             },
-            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+            tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -88,7 +88,7 @@ module.exports = {
                     description: 'side, sitting, shaken, scared'
                 }
             },
-            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+            tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -114,7 +114,7 @@ module.exports = {
                     description: 'side angle, throwing rocks, angry'
                 }
             },
-            floorPanels: JUNIOR_HIGH_LOCKERS_FLOOR_PANELS,
+            tiles: JUNIOR_HIGH_LOCKERS_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -147,7 +147,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: JUNIOR_HIGH_QUAD_FLOOR_PANELS,
+            tiles: JUNIOR_HIGH_QUAD_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON
@@ -180,7 +180,7 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: JUNIOR_HIGH_HALLWAY_FLOOR_PANELS,
+            tiles: JUNIOR_HIGH_HALLWAY_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

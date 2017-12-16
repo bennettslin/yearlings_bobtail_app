@@ -36,7 +36,7 @@ class StageSceneSection extends Component {
 
             sceneObject = getSceneObject(renderReadySongIndex, currentSceneIndex),
 
-            { actors, fixtures, walls, sky, floorPanels } = sceneObject
+            { actors, fixtures, walls, sky, tiles } = sceneObject
 
         console.error('sceneObject', sceneObject, renderReadySongIndex, currentSceneIndex)
 
@@ -50,7 +50,7 @@ class StageSceneSection extends Component {
                     sky={sky}
                 />
                 <StageFloorField
-                    floorPanels={floorPanels}
+                    tiles={tiles}
                 />
                 <StageActionField
                     walls={walls}
