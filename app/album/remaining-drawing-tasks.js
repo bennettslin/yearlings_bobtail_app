@@ -35,6 +35,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
+    {
+        taskName: `Theatre sky and config setup`,
+        workedHours: 0,
+        neededHours: 8
+    },
 
     /**
      * Window scenes.
