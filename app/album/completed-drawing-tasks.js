@@ -139,6 +139,11 @@ module.exports = [
         taskName: `tomer`,
         subtasks: [
             {
+                taskName: `garbage bag of bottles`,
+                workedHours: 2,
+                neededHours: 2
+            },
+            {
                 taskName: `Robitussin bottle`,
                 workedHours: 1,
                 neededHours: 1

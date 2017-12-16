@@ -266,14 +266,6 @@ const BATHROOM_COLOUR = 'purple',
             [STAGE_COLOUR]
         ]
     },
-    SHOW_STAGE_FRONT_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
     JACOB_APARTMENT_FLOOR_PANELS = {
         zIndices: [
             [0]
@@ -298,22 +290,7 @@ const BATHROOM_COLOUR = 'purple',
             [STAGE_COLOUR]
         ]
     },
-    SITA_APARTMENT_GATE_1_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    SITA_APARTMENT_GATE_2_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
+
     MUSEUM_FLOOR_PANELS = {
         zIndices: [
             [0]
@@ -370,14 +347,6 @@ const BATHROOM_COLOUR = 'purple',
             [STAGE_COLOUR]
         ]
     },
-    SITA_APARTMENT_BED_FLOOR_PANELS = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
     UCLA_CAMPUS_FLOOR_PANELS = {
         zIndices: [
             [0]
@@ -426,9 +395,29 @@ const BATHROOM_COLOUR = 'purple',
             [STAGE_COLOUR]
         ]
     },
+
+    SHOW_STAGE_FRONT_FLOOR_PANELS = {
+        zIndices: [
+            [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
+            [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
+            [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
+            [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
+            [1],
+            [1]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+
     SHOW_STAGE_SIDE_1_FLOOR_PANELS = {
         zIndices: [
-            [0]
+            [4, 4, 4, 1],
+            [4, 4, 4, 1],
+            [4, 4, 4, 1],
+            [4, 4, 4, 1],
+            [4, 4, 4, 1],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -436,13 +425,27 @@ const BATHROOM_COLOUR = 'purple',
     },
     SHOW_STAGE_SIDE_2_FLOOR_PANELS = {
         zIndices: [
-            [0]
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     SHOW_UNLOADING_FLOOR_PANELS = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+
+    SITA_APARTMENT_BED_FLOOR_PANELS = {
         zIndices: [
             [0]
         ],
@@ -458,6 +461,23 @@ const BATHROOM_COLOUR = 'purple',
             [STAGE_COLOUR]
         ]
     },
+    SITA_APARTMENT_GATE_1_FLOOR_PANELS = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    SITA_APARTMENT_GATE_2_FLOOR_PANELS = {
+        zIndices: [
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+
     VOLKSWAGEN_FLOOR_PANELS = {
         zIndices: [
             [0]

@@ -72,14 +72,7 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     realHeight: `5'6"`,
-                    description: 'standing',
-                    subtasks: [
-                        {
-                            taskName: `garbage bag of bottles`,
-                            workedHours: 0,
-                            neededHours: 2
-                        }
-                    ]
+                    description: 'standing'
                 },
                 sasha: {
                     todo: true,
