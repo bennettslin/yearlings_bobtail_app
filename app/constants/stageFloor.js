@@ -1,14 +1,16 @@
 // Check out Peoria Symphony Orchestra.
 
-// TODO: Tweak colours.
-const BATHROOM_COLOUR = 'purple',
-    CAMPUS_COLOUR = 'gray',
-    LAWN_COLOUR = 'green',
-    STAGE_COLOUR = 'brown',
-    STREET_COLOUR = 'black',
-    SIDEWALK_COLOUR = 'gray',
-    FURNITURE_COLOUR = '#bbb',
-    DEFAULT_STAGE_FLOOR_PANELS = {
+import {
+    BATHROOM_COLOUR,
+    CAMPUS_COLOUR,
+    LAWN_COLOUR,
+    STAGE_COLOUR,
+    STREET_COLOUR,
+    SIDEWALK_COLOUR,
+    FURNITURE_COLOUR
+} from './stageValues'
+
+const DEFAULT_STAGE_FLOOR_PANELS = {
         zIndices: [
             [0]
         ],

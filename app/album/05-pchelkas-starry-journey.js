@@ -17,6 +17,8 @@ import { PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
          JUNIOR_HIGH_LOCKERS_FLOOR_PANELS,
          JUNIOR_HIGH_QUAD_FLOOR_PANELS,
          JUNIOR_HIGH_HALLWAY_FLOOR_PANELS } from '../constants/stageFloor'
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
  * list order on the album.
@@ -38,7 +40,11 @@ module.exports = {
                     description: 'w sitting, blissful'
                 }
             },
-            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 6,
@@ -50,7 +56,11 @@ module.exports = {
                     description: 'side, sitting up in bed, feigning sick'
                 }
             },
-            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 9,
@@ -62,7 +72,11 @@ module.exports = {
                     description: 'in bed, asleep, turned away'
                 }
             },
-            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 10,
@@ -74,7 +88,11 @@ module.exports = {
                     description: 'side, sitting, shaken, scared'
                 }
             },
-            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 13,
@@ -96,7 +114,11 @@ module.exports = {
                     description: 'side angle, throwing rocks, angry'
                 }
             },
-            floorPanels: JUNIOR_HIGH_LOCKERS_FLOOR_PANELS
+            floorPanels: JUNIOR_HIGH_LOCKERS_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 17,
@@ -125,7 +147,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: JUNIOR_HIGH_QUAD_FLOOR_PANELS
+            floorPanels: JUNIOR_HIGH_QUAD_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 18,
@@ -154,7 +180,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: JUNIOR_HIGH_HALLWAY_FLOOR_PANELS
+            floorPanels: JUNIOR_HIGH_HALLWAY_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 211,

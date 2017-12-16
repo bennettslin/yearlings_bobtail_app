@@ -19,7 +19,8 @@ import { BENNETT_APARTMENT_BED_FLOOR_PANELS,
          SNOW_GLOBES_1_FLOOR_PANELS,
          SNOW_GLOBES_2_FLOOR_PANELS,
          SNOW_GLOBES_3_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -54,7 +55,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 4,
@@ -81,7 +86,11 @@ module.exports = {
                     description: 'side angle, consoling, cautious'
                 }
             },
-            floorPanels: SNOW_GLOBES_1_FLOOR_PANELS
+            floorPanels: SNOW_GLOBES_1_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 8,
@@ -122,7 +131,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SNOW_GLOBES_2_FLOOR_PANELS
+            floorPanels: SNOW_GLOBES_2_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 11,
@@ -173,7 +186,11 @@ module.exports = {
                     description: 'side angle, cheerful, making a point'
                 }
             },
-            floorPanels: SNOW_GLOBES_3_FLOOR_PANELS
+            floorPanels: SNOW_GLOBES_3_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 14,
@@ -207,7 +224,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 204,

@@ -22,7 +22,8 @@ import { UCLA_CAMPUS_FLOOR_PANELS,
          CEMETERY_FLOOR_PANELS,
          STATION_WAGON_FLOOR_PANELS,
          HOWIE_ATTIC_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -50,7 +51,11 @@ module.exports = {
                     description: 'side, walking'
                 }
             },
-            floorPanels: UCLA_CAMPUS_FLOOR_PANELS
+            floorPanels: UCLA_CAMPUS_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 3,
@@ -77,7 +82,11 @@ module.exports = {
                     description: 'side angle, feigning superiority'
                 }
             },
-            floorPanels: WALGREENS_FLOOR_PANELS
+            floorPanels: WALGREENS_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 6,
@@ -104,7 +113,11 @@ module.exports = {
                     description: 'side angle, play fighting'
                 }
             },
-            floorPanels: STEAM_TUNNEL_FLOOR_PANELS
+            floorPanels: STEAM_TUNNEL_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 9,
@@ -131,7 +144,11 @@ module.exports = {
                     description: 'side angle, squatting, pouring water on grave'
                 }
             },
-            floorPanels: CEMETERY_FLOOR_PANELS
+            floorPanels: CEMETERY_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 11,
@@ -158,7 +175,11 @@ module.exports = {
                     description: 'back angle, sleeping in car'
                 }
             },
-            floorPanels: STATION_WAGON_FLOOR_PANELS
+            floorPanels: STATION_WAGON_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 15,
@@ -175,7 +196,11 @@ module.exports = {
                     description: 'downstairs, in agony'
                 }
             },
-            floorPanels: HOWIE_ATTIC_FLOOR_PANELS
+            floorPanels: HOWIE_ATTIC_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 180,

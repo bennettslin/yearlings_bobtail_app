@@ -20,13 +20,19 @@ import { FREEWAY_FLOOR_PANELS,
          PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
          CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
          CHANGELING_CAVE_FLOOR_PANELS } from '../constants/stageFloor'
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: ``,
-            floorPanels: FREEWAY_FLOOR_PANELS
+            floorPanels: FREEWAY_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 2,
@@ -46,7 +52,11 @@ module.exports = {
             stageProps: {
                 couch: 1
             },
-            floorPanels: FREEWAY_FLOOR_PANELS
+            floorPanels: FREEWAY_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 5,
@@ -73,7 +83,11 @@ module.exports = {
                     description: 'stepping off porch, cautious, trying to calm Christopher'
                 }
             },
-            floorPanels: PORCH_FLOOR_PANELS
+            floorPanels: PORCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 7,
@@ -95,7 +109,11 @@ module.exports = {
                     description: 'side angle, aggressive stance, angry'
                 }
             },
-            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 9,
@@ -121,7 +139,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS
+            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 12,
@@ -138,7 +160,11 @@ module.exports = {
                     description: 'sitting up in bed, worried, scared'
                 }
             },
-            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS
+            floorPanels: PRETEEN_BENNETT_ROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 14,
@@ -160,7 +186,11 @@ module.exports = {
                     description: 'side angle, wide-eyed, needing reassurance'
                 }
             },
-            floorPanels: CHANGELING_CAVE_FLOOR_PANELS
+            floorPanels: CHANGELING_CAVE_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 207,

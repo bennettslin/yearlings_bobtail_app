@@ -16,7 +16,8 @@ import { SHOW_STAGE_SIDE_1_FLOOR_PANELS,
          SHOW_STAGE_SIDE_2_FLOOR_PANELS,
          SHOW_UNLOADING_FLOOR_PANELS,
          SITA_APARTMENT_BED_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -56,7 +57,11 @@ module.exports = {
                     description: 'side, squeezing through, awkward'
                 }
             },
-            floorPanels: SHOW_STAGE_SIDE_1_FLOOR_PANELS
+            floorPanels: SHOW_STAGE_SIDE_1_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 5,
@@ -83,7 +88,11 @@ module.exports = {
                     description: 'side, walking, carrying cymbal, talking'
                 }
             },
-            floorPanels: SHOW_STAGE_SIDE_2_FLOOR_PANELS
+            floorPanels: SHOW_STAGE_SIDE_2_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 8,
@@ -120,7 +129,11 @@ module.exports = {
                     description: 'front, talking to Stephanie'
                 }
             },
-            floorPanels: SHOW_UNLOADING_FLOOR_PANELS
+            floorPanels: SHOW_UNLOADING_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 12,
@@ -153,7 +166,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 175,

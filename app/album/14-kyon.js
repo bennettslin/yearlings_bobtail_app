@@ -12,7 +12,8 @@ import { VERSES,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { SITA_APARTMENT_COUCH_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -27,7 +28,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 4,
@@ -41,7 +46,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 7,
@@ -60,7 +69,11 @@ module.exports = {
                     description: 'side, cheery in a low-key way'
                 }
             },
-            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 9,
@@ -79,7 +92,11 @@ module.exports = {
                     description: 'side, seated, eating, judgmental'
                 }
             },
-            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 11,
@@ -98,7 +115,11 @@ module.exports = {
                     description: 'back angle, concerned'
                 }
             },
-            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 12,
@@ -112,7 +133,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 225,

@@ -17,7 +17,8 @@ import { OAKLAND_STREET_SIDE_FLOOR_PANELS,
          OAKLAND_STREET_FRONT_1_FLOOR_PANELS,
          OAKLAND_STREET_FRONT_2_FLOOR_PANELS,
          OAKLAND_STREET_FRONT_3_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -30,7 +31,11 @@ module.exports = {
                     description: 'side angle, cradling bracelet, blank'
                 }
             },
-            floorPanels: OAKLAND_STREET_SIDE_FLOOR_PANELS
+            floorPanels: OAKLAND_STREET_SIDE_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 3,
@@ -49,7 +54,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 4,
@@ -68,7 +77,11 @@ module.exports = {
                     }
                 },
             },
-            floorPanels: OAKLAND_STREET_FRONT_1_FLOOR_PANELS
+            floorPanels: OAKLAND_STREET_FRONT_1_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 7,
@@ -94,7 +107,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: OAKLAND_STREET_FRONT_2_FLOOR_PANELS
+            floorPanels: OAKLAND_STREET_FRONT_2_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 10,
@@ -141,7 +158,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: OAKLAND_STREET_FRONT_3_FLOOR_PANELS
+            floorPanels: OAKLAND_STREET_FRONT_3_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 201,

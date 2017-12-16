@@ -1,5 +1,6 @@
 import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     logue: true,
     title: 'prologue',
@@ -14,7 +15,11 @@ module.exports = {
                     description: 'standing, facing forward, welcoming'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     overview: `Hi, I'm Bennett. In 2001, I was going through a messy breakup. So I decided to create a double album examining all that had led up to my life at that point, from growing up with an autistic brother to joining a mail-order cult in middle school. I then spent the next five years writing all the songs and performing all the parts for what I was sure would be hailed as both a musical and literary masterpiece. Upon its release in 2006, however, the album was treated as a mere hobby project and thus ignored by the indie labels and press. In the many years since, I've tried to figure out how to bring this dense and difficult work to the public, given that I remain a complete unknown. I'm hoping this website does the trick!`,

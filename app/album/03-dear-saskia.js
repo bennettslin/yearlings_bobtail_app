@@ -13,20 +13,29 @@ import { VERSES,
 import { TAIWAN_PUPPET_SHOW_FLOOR_PANELS,
          SCHOOLBUS_FLOOR_PANELS,
          TETHERBALL_SCENE_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
-            floorPanels: TAIWAN_PUPPET_SHOW_FLOOR_PANELS
+            floorPanels: TAIWAN_PUPPET_SHOW_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 4,
             description: `Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
             actors: {
             },
-            floorPanels: TAIWAN_PUPPET_SHOW_FLOOR_PANELS
+            floorPanels: TAIWAN_PUPPET_SHOW_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 6,
@@ -50,7 +59,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SCHOOLBUS_FLOOR_PANELS
+            floorPanels: SCHOOLBUS_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 9,
@@ -77,13 +90,21 @@ module.exports = {
                     description: 'laughing, tying up Bennett'
                 }
             },
-            floorPanels: TETHERBALL_SCENE_FLOOR_PANELS
+            floorPanels: TETHERBALL_SCENE_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 12,
             description: `In Bennett's sketch, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
             actors: {},
-            floorPanels: TAIWAN_PUPPET_SHOW_FLOOR_PANELS
+            floorPanels: TAIWAN_PUPPET_SHOW_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 171,

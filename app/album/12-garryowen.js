@@ -16,7 +16,8 @@ import { SITA_APARTMENT_COUCH_FLOOR_PANELS,
          VOLKSWAGEN_FLOOR_PANELS,
          BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
          SHOW_STAGE_FRONT_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -36,7 +37,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 4,
@@ -63,7 +68,11 @@ module.exports = {
                     description: 'front, clutching at fist, laughing through pain'
                 }
             },
-            floorPanels: VOLKSWAGEN_FLOOR_PANELS
+            floorPanels: VOLKSWAGEN_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 7,
@@ -82,7 +91,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 10,
@@ -109,7 +122,11 @@ module.exports = {
                     description: 'front, removing bass, rolling eyes'
                 }
             },
-            floorPanels: SHOW_STAGE_FRONT_FLOOR_PANELS
+            floorPanels: SHOW_STAGE_FRONT_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 14,
@@ -128,7 +145,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 187,

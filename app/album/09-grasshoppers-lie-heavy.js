@@ -19,7 +19,8 @@ import { DISHROOM_FLOOR_PANELS,
          BENNETT_APARTMENT_BED_FLOOR_PANELS,
          WAITING_ROOM_FLOOR_PANELS,
          SITA_APARTMENT_BED_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     /**
      * All of these scenes repeat twice.
@@ -35,7 +36,11 @@ module.exports = {
                     description: 'back, reading book, pulling tray from belt.'
                 }
             },
-            floorPanels: DISHROOM_FLOOR_PANELS
+            floorPanels: DISHROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 4,
@@ -54,17 +59,29 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DISHROOM_FLOOR_PANELS
+            floorPanels: DISHROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 6,
             description: 'Grasshoppers scene 1',
-            floorPanels: SITA_APARTMENT_GATE_1_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_GATE_1_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 7,
             description: 'Grasshoppers scene 5',
-            floorPanels: SITA_APARTMENT_GATE_2_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_GATE_2_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 8,
@@ -83,7 +100,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BENNETT_APARTMENT_GATE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_GATE_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 10,
@@ -102,7 +123,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BENNETT_APARTMENT_GATE_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_GATE_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 11,
@@ -121,7 +146,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 12,
@@ -140,7 +169,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_BED_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 13,
@@ -152,7 +185,11 @@ module.exports = {
                     description: 'sitting, eyes closed, falling asleep'
                 }
             },
-            floorPanels: WAITING_ROOM_FLOOR_PANELS
+            floorPanels: WAITING_ROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 15,
@@ -171,7 +208,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: WAITING_ROOM_FLOOR_PANELS
+            floorPanels: WAITING_ROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 16,
@@ -204,7 +245,11 @@ module.exports = {
                     }
                 },
             },
-            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 17,
@@ -237,7 +282,11 @@ module.exports = {
                     }
                 },
             },
-            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 19,
@@ -270,7 +319,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 272,

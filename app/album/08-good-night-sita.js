@@ -13,7 +13,8 @@ import { SITA_APARTMENT_GATE_1_FLOOR_PANELS,
          MUSEUM_FLOOR_PANELS,
          BACKSTAGE_FLOOR_PANELS,
          GO_KART_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -33,7 +34,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_GATE_1_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_GATE_1_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 5,
@@ -52,7 +57,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: MUSEUM_FLOOR_PANELS
+            floorPanels: MUSEUM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 8,
@@ -83,7 +92,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BACKSTAGE_FLOOR_PANELS
+            floorPanels: BACKSTAGE_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 11,
@@ -102,7 +115,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: GO_KART_FLOOR_PANELS
+            floorPanels: GO_KART_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 14,
@@ -121,7 +138,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: SITA_APARTMENT_GATE_2_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_GATE_2_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 131,

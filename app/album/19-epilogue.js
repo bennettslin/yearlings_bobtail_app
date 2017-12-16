@@ -1,5 +1,6 @@
 import { DEFAULT_STAGE_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     logue: true,
     title: 'epilogue',
@@ -191,7 +192,11 @@ module.exports = {
                     description: 'standing'
                 }
             },
-            floorPanels: DEFAULT_STAGE_FLOOR_PANELS
+            floorPanels: DEFAULT_STAGE_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     overview: `Thanks for listening! It really means a lot. So what do I hope to gain by putting up this website, thirteen years after the album's original release? In short, I'm looking for help. The truth is, I never stopped wanting it, whether in the form of a straightforward record deal, or through some modern arrangement devised by forward-thinking Millennials. In 2006, so many indie labels rejected me, fearing that, while I seemed fully determined to create this century's best rock albums, I wouldn't lift a finger to promote myself if left on my own. Their fears were correct, and now in 2019, I'm doubling down on my convictions. Interdependence was the reason for rock music's great past. Why wouldn't it hold the key to a better future?`,

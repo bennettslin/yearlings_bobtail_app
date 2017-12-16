@@ -10,7 +10,8 @@ import { VERSES,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { CLIFF_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -28,7 +29,11 @@ module.exports = {
                     description: 'sitting in car, putting on perfume'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 3,
@@ -45,7 +50,11 @@ module.exports = {
                     description: 'back angle, eyes closed, trying to get off'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 5,
@@ -62,7 +71,11 @@ module.exports = {
                     description: 'back angle, giving blowjob'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 7,
@@ -74,7 +87,11 @@ module.exports = {
                     description: 'front angle, dying, infirm'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 8,
@@ -86,7 +103,11 @@ module.exports = {
                     description: 'serving in tennis'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 9,
@@ -103,12 +124,20 @@ module.exports = {
                     description: 'side, looking back, reversing car'
                 }
             },
-            floorPanels: CLIFF_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 11,
             description: `The car is in the background.`,
-            floorPanels: CLIFF_FLOOR_PANELS
+            floorPanels: CLIFF_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 164,

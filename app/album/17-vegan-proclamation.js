@@ -17,7 +17,8 @@ import { PARK_FLOOR_PANELS,
          ALLEY_FLOOR_PANELS,
          SITA_APARTMENT_BED_FLOOR_PANELS,
          DEMONSTRATION_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -42,7 +43,11 @@ module.exports = {
                     description: 'side, protective, judgmental'
                 }
             },
-            floorPanels: PARK_FLOOR_PANELS
+            floorPanels: PARK_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 4,
@@ -69,7 +74,11 @@ module.exports = {
                     description: 'side, eager'
                 }
             },
-            floorPanels: SHOW_STAGE_FRONT_FLOOR_PANELS
+            floorPanels: SHOW_STAGE_FRONT_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 7,
@@ -81,7 +90,11 @@ module.exports = {
                     description: 'walking through alley'
                 }
             },
-            floorPanels: ALLEY_FLOOR_PANELS
+            floorPanels: ALLEY_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 10,
@@ -119,7 +132,11 @@ module.exports = {
                     }
                 },
             },
-            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS
+            floorPanels: SITA_APARTMENT_BED_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 12,
@@ -152,7 +169,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: DEMONSTRATION_FLOOR_PANELS
+            floorPanels: DEMONSTRATION_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 241,

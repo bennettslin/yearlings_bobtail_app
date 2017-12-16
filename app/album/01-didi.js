@@ -17,13 +17,19 @@ import { VERSES,
 import { CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
          PLAYGROUND_FLOOR_PANELS,
          CHILDHOOD_BATHROOM_FLOOR_PANELS } from '../constants/stageFloor'
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
-            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS
+            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 3,
@@ -45,7 +51,11 @@ module.exports = {
                     description: 'side, running, panicked'
                 }
             },
-            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS
+            floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 6,
@@ -67,7 +77,11 @@ module.exports = {
                     description: 'side, skipping, pointing back and laughing'
                 }
             },
-            floorPanels: PLAYGROUND_FLOOR_PANELS
+            floorPanels: PLAYGROUND_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 8,
@@ -79,7 +93,11 @@ module.exports = {
                     description: 'side, in bathtub, downcast'
                 }
             },
-            floorPanels: CHILDHOOD_BATHROOM_FLOOR_PANELS
+            floorPanels: CHILDHOOD_BATHROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 12,
@@ -96,7 +114,11 @@ module.exports = {
                     description: 'side, facing front, singing, smiling'
                 }
             },
-            floorPanels: CHILDHOOD_BATHROOM_FLOOR_PANELS
+            floorPanels: CHILDHOOD_BATHROOM_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 177,

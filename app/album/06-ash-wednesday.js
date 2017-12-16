@@ -14,7 +14,8 @@ import { BENNETT_APARTMENT_COURTYARD_FLOOR_PANELS,
          CATHOLIC_CHURCH_FLOOR_PANELS,
          BERKELEY_CAMPUS_1_FLOOR_PANELS,
          BERKELEY_CAMPUS_2_FLOOR_PANELS } from '../constants/stageFloor'
-
+import { SKY_NO_TIME,
+         SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -32,7 +33,11 @@ module.exports = {
                     description: 'walking away, in a bad mood'
                 }
             },
-            floorPanels: BENNETT_APARTMENT_COURTYARD_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_COURTYARD_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 3,
@@ -49,7 +54,11 @@ module.exports = {
                     description: 'sitting upright, droll smile'
                 }
             },
-            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS
+            floorPanels: BENNETT_APARTMENT_COUCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 5,
@@ -61,7 +70,11 @@ module.exports = {
                     description: 'standing, back forward, hands in pocket'
                 }
             },
-            floorPanels: CATHOLIC_CHURCH_FLOOR_PANELS
+            floorPanels: CATHOLIC_CHURCH_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 7,
@@ -87,7 +100,11 @@ module.exports = {
                     }
                 }
             },
-            floorPanels: BERKELEY_CAMPUS_1_FLOOR_PANELS
+            floorPanels: BERKELEY_CAMPUS_1_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         },
         {
             unitIndex: 8,
@@ -104,7 +121,11 @@ module.exports = {
                     description: 'walking forward, confused and curious at Bennett'
                 }
             },
-            floorPanels: BERKELEY_CAMPUS_2_FLOOR_PANELS
+            floorPanels: BERKELEY_CAMPUS_2_FLOOR_PANELS,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_NO_SEASON
+            }
         }
     ],
     totalTime: 163,

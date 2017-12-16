@@ -1,0 +1,25 @@
+module.exports = {
+
+    // Floor panel colours.
+    BATHROOM_COLOUR: 'purple',
+    CAMPUS_COLOUR: 'gray',
+    LAWN_COLOUR: 'green',
+    STAGE_COLOUR: 'brown',
+    STREET_COLOUR: 'black',
+    SIDEWALK_COLOUR: 'gray',
+    FURNITURE_COLOUR: '#bbb',
+
+    // Sky times and seasons.
+    SKY_NO_TIME: 'noTime',
+    SKY_MORNING: 'morning',
+    SKY_NOON: 'noon',
+    SKY_AFTERNOON: 'afternoon',
+    SKY_EVENING: 'evening',
+    SKY_NIGHT: 'night',
+
+    SKY_NO_SEASON: 'noSeason',
+    SKY_SPRING: 'spring',
+    SKY_SUMMER: 'summer',
+    SKY_AUTUMN: 'autumn',
+    SKY_WINTER: 'winter'
+}
