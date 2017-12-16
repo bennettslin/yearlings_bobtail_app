@@ -7,6 +7,7 @@ import classnames from 'classnames'
 
 import StageActionField from './stage-action-field'
 import StageFloorField from './stage-floor-field'
+import StageSkyField from './stage-sky-field'
 
 import { getSceneObject } from '../../helpers/data-helper'
 
@@ -35,7 +36,7 @@ class StageSceneSection extends Component {
 
             sceneObject = getSceneObject(renderReadySongIndex, currentSceneIndex),
 
-            { floorPanels } = sceneObject
+            { actors, fixtures, walls, sky, floorPanels } = sceneObject
 
         console.error('sceneObject', sceneObject, renderReadySongIndex, currentSceneIndex)
 
@@ -45,10 +46,17 @@ class StageSceneSection extends Component {
                 'stage-scene-section',
                 isHeavyRenderReady ? 'render-ready' : 'render-unready'
             )}>
+                <StageSkyField
+                    sky={sky}
+                />
                 <StageFloorField
                     floorPanels={floorPanels}
                 />
-                <StageActionField />
+                <StageActionField
+                    walls={walls}
+                    fixtures={fixtures}
+                    actors={actors}
+                />
             </div>
         )
     }

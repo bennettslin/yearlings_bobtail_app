@@ -51,6 +51,20 @@ module.exports = {
                     description: 'side, running, panicked'
                 }
             },
+            fixtures: {
+                example: {
+                    scale: 1,
+                    bottom: 0.5,
+                    left: 0.5
+                }
+            },
+            walls: {
+                example: {
+                    scale: 1,
+                    bottom: 0.5,
+                    left: 0.5
+                }
+            },
             floorPanels: CHILDHOOD_NEIGHBOURHOOD_FLOOR_PANELS,
             sky: {
                 time: SKY_NO_TIME,
