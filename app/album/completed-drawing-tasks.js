@@ -635,6 +635,11 @@ module.exports = [
                 neededHours: 2
             },
             {
+                taskName: `2 * Shopping cart with garbage bags (Willy)`,
+                workedHours: 3,
+                neededHours: 3
+            },
+            {
                 taskName: `Lucy skeleton (Good Night)`,
                 workedHours: 3,
                 neededHours: 3

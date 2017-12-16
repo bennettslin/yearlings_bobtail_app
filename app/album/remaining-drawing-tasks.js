@@ -395,11 +395,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `2 * Shopping cart with garbage bags (Willy)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Puppet show stage (Saskia)`,
         workedHours: 0,
         neededHours: 3
