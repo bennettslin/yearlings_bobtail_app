@@ -90,7 +90,7 @@ class App extends Component {
         this._windowResize()
 
         // Then watch for any subsequent window resize.
-        window.onresize = debounce(this._windowResize, 50) // Was 100.
+        window.onresize = debounce(this._windowResize, 50)
 
         // Upon page load, should render immediately.
         this._setIsHeavyRenderReady()

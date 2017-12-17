@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
+import debounce from 'debounce'
+
 import LyricUnit from './lyric-unit'
 import { getLyricUnitsCount } from '../../helpers/data-helper'
 import { getArrayOfLength } from '../../helpers/general-helper'
@@ -36,6 +38,11 @@ class LyricSection extends Component {
         super(props)
 
         this._handleScroll = this._handleScroll.bind(this)
+
+        // Handle only once every 10ms at most.
+        this._handleDebouncedScroll = debounce(
+            this._handleDebouncedScroll, 25
+        )
     }
 
     /**
@@ -57,6 +64,10 @@ class LyricSection extends Component {
     }
 
     _handleScroll() {
+        this._handleDebouncedScroll()
+    }
+
+    _handleDebouncedScroll() {
         this.props.handleLyricSectionScroll()
     }
 
