@@ -5,7 +5,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Theatre views and coordinates.`,
+        taskName: `Theatre seats and balconies calculations.`,
         workedHours: 0,
         neededHours: 3
     },

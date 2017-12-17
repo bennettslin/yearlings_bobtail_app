@@ -2616,5 +2616,10 @@ module.exports = [
         taskName: `Theatre sky and stage things, to be filled out ad hoc`,
         workedHours: 8,
         neededHours: 8
-    }
+    },
+    {
+        taskName: `Theatre fields and coordinates.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]
