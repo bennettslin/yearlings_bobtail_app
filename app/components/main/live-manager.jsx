@@ -5,6 +5,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import TheatreSection from '../theatre/theatre-section'
 import MainColumn from './main-column'
 import LyricColumn from '../lyric/lyric-column'
 import AudioPopup from '../audio/audio-popup'
@@ -219,6 +220,8 @@ class LiveManager extends Component {
 
         return (
             <div className="live-manager">
+
+                <TheatreSection />
 
                 <MainColumn {...mainColumnHandlers} />
 

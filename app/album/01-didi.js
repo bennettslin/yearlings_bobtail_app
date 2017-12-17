@@ -110,7 +110,7 @@ module.exports = {
             unitIndex: 8,
             description: `Bennett is soaking in a bathtub at home, looking downcast. A window shows that it is midday outside.`,
             walls: {
-                bathroom: {}
+                bathroomWall: {}
             },
             fixtures: {
                 bathtub: {}
@@ -132,7 +132,7 @@ module.exports = {
             unitIndex: 12,
             description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
             walls: {
-                bathroom: {}
+                bathroomWall: {}
             },
             fixtures: {
                 bathtub: {},
