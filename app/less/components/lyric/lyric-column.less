@@ -15,17 +15,29 @@
     }
 }
 
-.is-desktop {
-    .lyric-column-animatable {
+.lyric-column-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity @animation-default;
 
-        // TODO: Don't hard code.
-        background-image: linear-gradient(
-            to right,
-            rgba(200, 200, 200, 0),
-            rgba(200, 200, 200, 0.95) 20%,
-            rgba(200, 200, 200, 0.95) 80%,
-            rgba(200, 200, 200, 0.5)
-        );
+    // TODO: Don't hard code.
+    background-image: linear-gradient(
+        to right,
+        rgba(200, 200, 200, 0),
+        rgba(200, 200, 200, 0.95) 20%,
+        rgba(200, 200, 200, 0.95) 80%,
+        rgba(200, 200, 200, 0.5)
+    );
+}
+
+.is-desktop,
+.is-mobile.lyric-expanded {
+    .lyric-column-gradient {
+        opacity: 1;
     }
 }
 
@@ -67,7 +79,8 @@
     display: flex;
     justify-content: center;
 
-    transition: opacity @animation-default, transform @animation-default;
+    transition: opacity @animation-default,
+                transform @animation-default;
 }
 
 .is-logue {
