@@ -1,15 +1,17 @@
-.stage-section, .aspect-ratio-container {
+.stage-section, .aspect-ratio-container, .stage-action-field {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
-    padding: 10px;
-    box-sizing: border-box;
+    
+    &.stage-section, &.aspect-ratio-container {        
+        padding: 10px;
+        box-sizing: border-box;
+    }
 }
 
 .aspect-ratio-container {
     // Layout set through JavaScript.
-    background-color: #def;
+    background-color: #448;
 }

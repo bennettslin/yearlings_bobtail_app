@@ -56,6 +56,8 @@ class StageSceneSection extends Component {
                     walls={walls}
                     fixtures={fixtures}
                     actors={actors}
+                    sceneIndex={currentSceneIndex}
+                    songIndex={renderReadySongIndex}
                 />
             </div>
         )

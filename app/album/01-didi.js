@@ -25,6 +25,16 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
+            walls: {
+                northHollywoodBackdrop: {
+
+                }
+            },
+            fixtures: {
+                fireHydrant: {
+
+                }
+            },
             tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
             sky: {
                 time: SKY_NO_TIME,
@@ -34,6 +44,12 @@ module.exports = {
         {
             unitIndex: 3,
             description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
+            walls: {
+                northHollywoodBackdrop: {}
+            },
+            fixtures: {
+                fireHydrant: {}
+            },
             actors: {
                 anita: {
                     todo: true,
@@ -51,20 +67,6 @@ module.exports = {
                     description: 'side, running, panicked'
                 }
             },
-            fixtures: {
-                example: {
-                    scale: 1,
-                    bottom: 0.5,
-                    left: 0.5
-                }
-            },
-            walls: {
-                example: {
-                    scale: 1,
-                    bottom: 0.5,
-                    left: 0.5
-                }
-            },
             tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
             sky: {
                 time: SKY_NO_TIME,
@@ -74,6 +76,13 @@ module.exports = {
         {
             unitIndex: 6,
             description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells the playground about this. Anita overhears and looks upset.`,
+            walls: {
+                playgroundBackdrop: {},
+                nurseOfficePanel: {}
+            },
+            fixtures: {
+
+            },
             actors: {
                 anita: {
                     todo: true,
@@ -100,6 +109,12 @@ module.exports = {
         {
             unitIndex: 8,
             description: `Bennett is soaking in a bathtub at home, looking downcast. A window shows that it is midday outside.`,
+            walls: {
+                bathroom: {}
+            },
+            fixtures: {
+                bathtub: {}
+            },
             actors: {
                 youngBennett: {
                     todo: true,
@@ -116,6 +131,13 @@ module.exports = {
         {
             unitIndex: 12,
             description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
+            walls: {
+                bathroom: {}
+            },
+            fixtures: {
+                bathtub: {},
+                childRecordPlayer: {}
+            },
             actors: {
                 anita: {
                     todo: true,
