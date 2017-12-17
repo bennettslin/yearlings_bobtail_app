@@ -24,6 +24,7 @@ import { PHONE_WIDTH,
 
          COLLAPSED_LYRIC_SECTION_HEIGHT,
          MENU_HEIGHT,
+         MENU_PHONE_HEIGHT,
 
          NAV_BOOK_HEIGHT } from '../constants/responsive'
 
@@ -128,7 +129,10 @@ export const getStageCoordinates = ({
         isPhone = getIsPhone(deviceIndex),
 
         audioBannerOverflow = isPhone ? AUDIO_BANNER_CUSTOM_SUBFIELD_HEIGHT + AUDIO_BANNER_CUSTOM_SUBFIELD_PADDING * 2 : 0,
-        centreFieldHeight = getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - audioBannerOverflow - NAV_BOOK_HEIGHT,
+
+        navHeight = isPhone ? 0 : NAV_BOOK_HEIGHT,
+
+        centreFieldHeight = getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - audioBannerOverflow - navHeight,
 
         centreFieldRatio = centreFieldWidth / centreFieldHeight
 
@@ -155,7 +159,7 @@ export const getStageCoordinates = ({
 
     } else {
         // If stage height is adjustable, put closer to bottom in mobile.
-        top = audioBannerOverflow + NAV_BOOK_HEIGHT + (centreFieldHeight - height) * 0.9
+        top = audioBannerOverflow + navHeight + (centreFieldHeight - height) * 0.9
 
         // Keep centred in mobile, even with dots overview.
         left = (centreFieldWidth - width) * 0.5
@@ -203,13 +207,11 @@ export const getTheatreSeatingHeight = ({
     isHeightlessLyricColumn
 }) => {
 
-    if (isHeightlessLyricColumn) {
-        return 0
-    }
+    const lyricColumnHeight = _getLyricColumnHeight(
+        deviceIndex, isHeightlessLyricColumn, windowHeight
+    )
 
-    return getIsDesktop(deviceIndex) ?
-        centreFieldHeight - stageTop - stageHeight :
-        windowHeight * COLLAPSED_LYRIC_SECTION_HEIGHT
+    return centreFieldHeight - stageTop - stageHeight + lyricColumnHeight
 }
 
 const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
@@ -235,10 +237,13 @@ export const getCentreFieldHeight = (
     isHeightlessLyricColumn
 ) => {
     const lyricColumnHeight = _getLyricColumnHeight(
-        deviceIndex, isHeightlessLyricColumn, windowHeight
-    )
+            deviceIndex, isHeightlessLyricColumn, windowHeight
+        ),
 
-    return windowHeight - MENU_HEIGHT - lyricColumnHeight
+        menuHeight = getIsPhone(deviceIndex) ?
+            MENU_PHONE_HEIGHT : MENU_HEIGHT
+
+    return windowHeight - menuHeight - lyricColumnHeight
 }
 
 export const _getDotsOverviewOverflow = (deviceIndex) => {
