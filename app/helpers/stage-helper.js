@@ -123,7 +123,9 @@ export const getStageCoordinates = ({
 
     const isDesktop = getIsDesktop(deviceIndex),
 
-        dotsOverviewOverflow = isDesktop ? _getDotsOverviewOverflow(deviceIndex) : 0,
+        dotsOverviewOverflow =
+            _getDotsOverviewOverflow(deviceIndex),
+
         centreFieldWidth = _getCentreFieldWidth(deviceIndex, windowWidth) - dotsOverviewOverflow,
 
         isPhone = getIsPhone(deviceIndex),
@@ -164,7 +166,7 @@ export const getStageCoordinates = ({
         top = audioBannerOverflow + navHeight + (centreFieldHeight - height) * 0.9
 
         // Keep centred in mobile, even with dots overview.
-        left = (centreFieldWidth - width) * 0.5
+        left = (dotsOverviewOverflow + centreFieldWidth - width) * 0.5
     }
 
     return {

@@ -2622,4 +2622,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Lyric and stage layout tweaks.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
