@@ -169,9 +169,9 @@ class DomManager extends Component {
                     isScoresTipsInMain ? 'scores-tips-in-main' : 'scores-tips-in-menu',
                     singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
                     selectedAccessIndex ? 'accessed-on' : 'accessed-off',
+                    isHeightlessLyricColumn ? 'heightless-lyric' : 'not-heightless-lyric',
 
-                    { 'heightless-lyric': isHeightlessLyricColumn,
-                      'title-in-audio': isTitleInAudio,
+                    { 'title-in-audio': isTitleInAudio,
                       'verse-bar-above': isVerseBarAbove,
                       'verse-bar-below': isVerseBarBelow,
                       'verse-bar-hidden': !isVerseBarAbove && !isVerseBarBelow,

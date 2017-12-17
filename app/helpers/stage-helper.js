@@ -29,7 +29,7 @@ import { PHONE_WIDTH,
          NAV_BOOK_HEIGHT } from '../constants/responsive'
 
 import { roundPercentage } from './general-helper'
-import { getIsDesktop, getIsPhone, getIsMonitor } from './responsive-helper'
+import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenNav } from './responsive-helper'
 
 export const getTileCornersForXYAndZ = (
     xIndex,
@@ -130,7 +130,9 @@ export const getStageCoordinates = ({
 
         audioBannerOverflow = isPhone ? AUDIO_BANNER_CUSTOM_SUBFIELD_HEIGHT + AUDIO_BANNER_CUSTOM_SUBFIELD_PADDING * 2 : 0,
 
-        navHeight = isPhone ? 0 : NAV_BOOK_HEIGHT,
+        isHiddenNav = getIsHiddenNav({ deviceIndex, windowHeight }),
+
+        navHeight = isPhone || isHeightlessLyricColumn || isHiddenNav ? 0 : NAV_BOOK_HEIGHT,
 
         centreFieldHeight = getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - audioBannerOverflow - navHeight,
 
