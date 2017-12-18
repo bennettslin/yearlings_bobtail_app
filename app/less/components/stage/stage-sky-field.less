@@ -9,53 +9,55 @@
         position: absolute;
         top: 0;
         left: 0;
+
+        transition: background-color @animation-default;
     }
 
     .season-filter {
         &.none {
-            background-color: #ddf;
+            background-color: #444;
         }
 
         &.spring {
-            background-color: #ddf;            
+            background-color: #aad;
         }
 
         &.summer {
-            background-color: #ddf;            
+            background-color: #ccf;
         }
 
         &.autumn {
-            background-color: #ddf;            
+            background-color: #88b;
         }
 
         &.winter {
-            background-color: #ddf;            
+            background-color: #669;   
         }
     }
 
     .time-filter {
         &.none {
-            background-color: rgba(100, 100, 50, 0.1);
+            background-color: rgba(100, 100, 50, 0.05);
         }
 
         &.morning {
-            background-color: rgba(100, 100, 50, 0.1);            
+            background-color: rgba(100, 100, 50, 0.05);
         }
 
         &.noon {
-            background-color: rgba(100, 100, 50, 0.1);            
+            background-color: rgba(100, 100, 50, 0.05);
         }
 
         &.afternoon {
-            background-color: rgba(100, 100, 50, 0.1);            
+            background-color: rgba(100, 100, 50, 0.05);
         }
 
         &.evening {
-            background-color: rgba(100, 100, 50, 0.1);            
+            background-color: rgba(100, 100, 50, 0.05);
         }
 
         &.night {
-            background-color: rgba(100, 100, 50, 0.1);            
+            background-color: rgba(100, 100, 50, 0.05);
         }
     }
 }

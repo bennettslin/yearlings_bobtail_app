@@ -18,7 +18,7 @@ import { OAKLAND_STREET_SIDE_TILES,
          OAKLAND_STREET_FRONT_2_TILES,
          OAKLAND_STREET_FRONT_3_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_AUTUMN } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -34,7 +34,7 @@ module.exports = {
             tiles: OAKLAND_STREET_SIDE_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -57,7 +57,7 @@ module.exports = {
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -80,7 +80,7 @@ module.exports = {
             tiles: OAKLAND_STREET_FRONT_1_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -110,7 +110,7 @@ module.exports = {
             tiles: OAKLAND_STREET_FRONT_2_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -161,7 +161,7 @@ module.exports = {
             tiles: OAKLAND_STREET_FRONT_3_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         }
     ],

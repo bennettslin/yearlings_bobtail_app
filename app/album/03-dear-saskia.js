@@ -14,7 +14,7 @@ import { TAIWAN_PUPPET_SHOW_TILES,
          SCHOOLBUS_TILES,
          TETHERBALL_SCENE_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_SUMMER } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -23,7 +23,7 @@ module.exports = {
             tiles: TAIWAN_PUPPET_SHOW_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -34,7 +34,7 @@ module.exports = {
             tiles: TAIWAN_PUPPET_SHOW_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -62,7 +62,7 @@ module.exports = {
             tiles: SCHOOLBUS_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -93,7 +93,7 @@ module.exports = {
             tiles: TETHERBALL_SCENE_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -103,7 +103,7 @@ module.exports = {
             tiles: TAIWAN_PUPPET_SHOW_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         }
     ],

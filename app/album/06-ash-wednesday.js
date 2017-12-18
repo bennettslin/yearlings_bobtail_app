@@ -15,7 +15,7 @@ import { BENNETT_APARTMENT_COURTYARD_TILES,
          BERKELEY_CAMPUS_1_TILES,
          BERKELEY_CAMPUS_2_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_SPRING } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -36,7 +36,7 @@ module.exports = {
             tiles: BENNETT_APARTMENT_COURTYARD_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -57,7 +57,7 @@ module.exports = {
             tiles: BENNETT_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -73,7 +73,7 @@ module.exports = {
             tiles: CATHOLIC_CHURCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -103,7 +103,7 @@ module.exports = {
             tiles: BERKELEY_CAMPUS_1_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -124,7 +124,7 @@ module.exports = {
             tiles: BERKELEY_CAMPUS_2_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         }
     ],

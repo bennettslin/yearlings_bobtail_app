@@ -18,7 +18,7 @@ import { PRETEEN_BENNETT_ROOM_TILES,
          JUNIOR_HIGH_QUAD_TILES,
          JUNIOR_HIGH_HALLWAY_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_WINTER } from '../constants/stageValues'
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
  * list order on the album.
@@ -43,7 +43,7 @@ module.exports = {
             tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_WINTER
             }
         },
         {
@@ -59,7 +59,7 @@ module.exports = {
             tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_WINTER
             }
         },
         {
@@ -75,7 +75,7 @@ module.exports = {
             tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_WINTER
             }
         },
         {
@@ -91,7 +91,7 @@ module.exports = {
             tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_WINTER
             }
         },
         {
@@ -117,7 +117,7 @@ module.exports = {
             tiles: JUNIOR_HIGH_LOCKERS_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_WINTER
             }
         },
         {
@@ -150,7 +150,7 @@ module.exports = {
             tiles: JUNIOR_HIGH_QUAD_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_WINTER
             }
         },
         {
@@ -183,7 +183,7 @@ module.exports = {
             tiles: JUNIOR_HIGH_HALLWAY_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_WINTER
             }
         }
     ],

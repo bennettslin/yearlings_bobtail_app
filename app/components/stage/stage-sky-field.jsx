@@ -36,10 +36,10 @@ const StageSkyField = ({
                     'filter',
                     'season-filter',
                     { 'none': season === SKY_NO_SEASON,
-                    'morning': season === SKY_SPRING,
-                    'noon': season === SKY_SUMMER,
-                    'afternoon': season === SKY_AUTUMN,
-                    'evening': season === SKY_WINTER }
+                    'spring': season === SKY_SPRING,
+                    'summer': season === SKY_SUMMER,
+                    'autumn': season === SKY_AUTUMN,
+                    'winter': season === SKY_WINTER }
                 )}
             />
             <div

@@ -21,7 +21,7 @@ import { FREEWAY_TILES,
          CHILDHOOD_NEIGHBOURHOOD_TILES,
          CHANGELING_CAVE_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_SUMMER } from '../constants/stageValues'
 
 module.exports = {
     scenes: [
@@ -38,7 +38,7 @@ module.exports = {
             tiles: FREEWAY_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -69,7 +69,7 @@ module.exports = {
             tiles: FREEWAY_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -100,7 +100,7 @@ module.exports = {
             tiles: PORCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -126,7 +126,7 @@ module.exports = {
             tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -156,7 +156,7 @@ module.exports = {
             tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -177,7 +177,7 @@ module.exports = {
             tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -203,7 +203,7 @@ module.exports = {
             tiles: CHANGELING_CAVE_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         }
     ],

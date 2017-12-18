@@ -18,7 +18,7 @@ import { CHILDHOOD_NEIGHBOURHOOD_TILES,
          PLAYGROUND_TILES,
          CHILDHOOD_BATHROOM_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_SPRING } from '../constants/stageValues'
 
 module.exports = {
     scenes: [
@@ -38,7 +38,7 @@ module.exports = {
             tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -70,7 +70,7 @@ module.exports = {
             tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -103,7 +103,7 @@ module.exports = {
             tiles: PLAYGROUND_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -125,7 +125,7 @@ module.exports = {
             tiles: CHILDHOOD_BATHROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -153,7 +153,7 @@ module.exports = {
             tiles: CHILDHOOD_BATHROOM_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         }
     ],

@@ -17,7 +17,7 @@ import { SHOW_STAGE_SIDE_1_TILES,
          SHOW_UNLOADING_TILES,
          SITA_APARTMENT_BED_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_SUMMER } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -60,7 +60,7 @@ module.exports = {
             tiles: SHOW_STAGE_SIDE_1_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -91,7 +91,7 @@ module.exports = {
             tiles: SHOW_STAGE_SIDE_2_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -132,7 +132,7 @@ module.exports = {
             tiles: SHOW_UNLOADING_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         },
         {
@@ -169,7 +169,7 @@ module.exports = {
             tiles: SITA_APARTMENT_BED_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SUMMER
             }
         }
     ],

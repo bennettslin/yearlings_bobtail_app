@@ -16,7 +16,7 @@ import { EL_TORITO_TILES,
          CLIFF_TILES,
          DEATHBED_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_SPRING } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -39,7 +39,7 @@ module.exports = {
             tiles: EL_TORITO_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -83,7 +83,7 @@ module.exports = {
             tiles: PAMPAS_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -106,7 +106,7 @@ module.exports = {
             tiles: OUTDOOR_WEDDING_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -129,7 +129,7 @@ module.exports = {
             tiles: CLIFF_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         },
         {
@@ -159,7 +159,7 @@ module.exports = {
             tiles: DEATHBED_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_SPRING
             }
         }
     ],

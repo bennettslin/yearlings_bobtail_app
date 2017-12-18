@@ -13,7 +13,7 @@ import { VERSES,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { SITA_APARTMENT_COUCH_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_AUTUMN } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -31,7 +31,7 @@ module.exports = {
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -49,7 +49,7 @@ module.exports = {
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -72,7 +72,7 @@ module.exports = {
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -95,7 +95,7 @@ module.exports = {
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -118,7 +118,7 @@ module.exports = {
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -136,7 +136,7 @@ module.exports = {
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         }
     ],

@@ -17,7 +17,7 @@ import { SITA_APARTMENT_COUCH_TILES,
          BENNETT_APARTMENT_COUCH_TILES,
          SHOW_STAGE_FRONT_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_AUTUMN } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -40,7 +40,7 @@ module.exports = {
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -71,7 +71,7 @@ module.exports = {
             tiles: VOLKSWAGEN_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -94,7 +94,7 @@ module.exports = {
             tiles: BENNETT_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -125,7 +125,7 @@ module.exports = {
             tiles: SHOW_STAGE_FRONT_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         },
         {
@@ -148,7 +148,7 @@ module.exports = {
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                season: SKY_AUTUMN
             }
         }
     ],
