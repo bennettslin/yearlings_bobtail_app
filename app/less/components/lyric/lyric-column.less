@@ -36,8 +36,12 @@
 
 .is-desktop,
 .is-mobile.lyric-expanded {
-    .lyric-column-gradient {
-        opacity: 1;
+    &.is-song {
+        .render-ready {
+            .lyric-column-gradient {
+                opacity: 1;
+            }
+        }
     }
 }
 
@@ -91,14 +95,14 @@
 }
 
 .is-song {
-    .lyric-column-animatable {
-        // transform: scale(1);
-
-        &.render-unready {
+    .render-unready {
+        .lyric-column-animatable {
             opacity: 0;
         }
+    }
 
-        &.render-ready {
+    .render-ready {
+        .lyric-column-animatable {
             opacity: 1;
         }
     }

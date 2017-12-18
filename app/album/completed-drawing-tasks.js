@@ -714,6 +714,11 @@ module.exports = [
                 workedHours: 2,
                 neededHours: 2
             },
+            {
+                taskName: `Check postures`,
+                workedHours: 1,
+                neededHours: 1
+            },
         ]
     }
 ]

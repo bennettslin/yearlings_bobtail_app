@@ -187,14 +187,17 @@ LyricColumnView = ({
 
     return (
         <div
-            className="column lyric-column"
+            className={classnames(
+                'column',
+                'lyric-column',
+                isHeavyRenderReady ? 'render-ready' : 'render-unready'
+            )}
             ref={myRef}
             onTransitionEnd={handleTransition}
         >
             <div className="lyric-column-gradient" />
             <div className={classnames(
                     'lyric-column-animatable',
-                    isHeavyRenderReady ? 'render-ready' : 'render-unready',
                     { 'override-animate': shouldOverrideAnimate }
                 )}
                 onTransitionEnd={handleAnimatableTransition}
