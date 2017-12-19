@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 import { getArrayOfLength } from '../../helpers/general-helper'
 import { getTileCornersForXYAndZ } from '../../helpers/stage-helper'
 
-import { TILE_ROWS_LENGTH,
+import { STAGE_FLOOR_PERCENTAGE,
+         TILE_ROWS_LENGTH,
          TILE_COLUMNS_LENGTH } from '../../constants/stage'
 
 import { DEFAULT_STAGE_TILES } from '../../constants/stageFloor'
@@ -43,10 +44,18 @@ const StageFloorField = ({
 
 }) => {
 
-    const { zIndices, colours } = tiles
+    const { zIndices, colours } = tiles,
+
+        stageFloorWoodStyle = {
+            height: `${STAGE_FLOOR_PERCENTAGE}%`
+        }
 
     return (
         <div className="stage-floor-field">
+            <div
+                className="stage-floor-wood"
+                style={stageFloorWoodStyle}
+            />
 
             {rowIndicesArray.map(rawYIndex => {
 
