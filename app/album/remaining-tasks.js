@@ -6,8 +6,8 @@ module.exports = [
     },
     {
         taskName: `Theatre seats and balconies calculations.`,
-        workedHours: 3,
-        neededHours: 6
+        workedHours: 6,
+        neededHours: 8
     },
     {
         taskName: `Keep admin stuff in dev, not in production.`,
