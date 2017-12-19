@@ -55,7 +55,7 @@ class TheatreSection extends Component {
                 isHeightlessLyricColumn
             ),
 
-            centrePointFromLeft = stageLeft + (stageWidth / 2),
+            stageCentreFromLeft = stageLeft + (stageWidth / 2),
 
             theatreCeilingHeight = getTheatreCeilingHeight({
                 deviceIndex,
@@ -78,7 +78,7 @@ class TheatreSection extends Component {
 
             ceilingFieldCoordinates = {
                 height: theatreCeilingHeight,
-                centrePointFromLeft
+                stageCentreFromLeft
             },
 
             balconyFieldCoordinates = {
@@ -90,7 +90,8 @@ class TheatreSection extends Component {
 
             seatingFieldCoordinates = {
                 height: theatreSeatingHeight,
-                centrePointFromLeft
+                firstRowSeatWidth: stageWidth / 12, // Arbitrary constant for now.
+                stageCentreFromLeft
             }
 
         return (

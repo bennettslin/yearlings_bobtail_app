@@ -2,12 +2,14 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
 // import classnames from 'classnames'
 
 const propTypes = {
     seatingFieldCoordinates: PropTypes.shape({
         height: PropTypes.number.isRequired,
-        centrePointFromLeft: PropTypes.number.isRequired
+        firstRowSeatWidth: PropTypes.number.isRequired,
+        stageCentreFromLeft: PropTypes.number.isRequired
     })
 }
 
@@ -17,18 +19,46 @@ const TheatreSeatingField = ({
 
 }) => {
 
-    const { height } = seatingFieldCoordinates,
+    const { height,
+            firstRowSeatWidth } = seatingFieldCoordinates,
 
         seatingFieldStyle = {
             height: `${height}px`
-        }
+        },
+
+        firstRowSeatHeight = firstRowSeatWidth * 1.5,
+
+        seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
+            minLength: height,
+            firstLength: firstRowSeatHeight,
+            multiplyFactor: 1.5, // Arbitrary for now.
+            overlapRatio: 0.95 // Arbitrary for now.
+        })
 
     return (
         <div
             className="field theatre-seating-field"
             style={seatingFieldStyle}
         >
+            {seatingRowCoordinates.map((currentCoordinates, index) => {
+                const { length,
+                        position } = currentCoordinates,
 
+                    seatingRowStyle = {
+                        height: `${length}px`,
+                        top: `${position}px`
+                    }
+
+                return (
+                    <div
+                        key={index}
+                        className="theatre-seating-row"
+                        style={seatingRowStyle}
+                    >
+                        {index}
+                    </div>
+                )
+            })}
         </div>
     )
 }

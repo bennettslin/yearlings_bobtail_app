@@ -103,3 +103,53 @@ export const getArrayOfLength = ({ length, indexBase = 0 }) => {
         (nothing, i) => i + indexBase
     )
 }
+
+export const getArrayOfCoordinatesForFactoredLengths = ({
+    minLength,
+    firstLength,
+    multiplyFactor,
+
+    // The ratio of the *previous* length that gets overlapped.
+    overlapRatio = 0
+}) => {
+    /**
+     * Get an array of lengths where each subsequent length is a multiple of the
+     * previous one by the given factor. The total number of these lengths is the minimum needed for their sum to exceed the given minimum length.
+     */
+
+    const arrayOfLengths = []
+    let totalLength = 0
+
+    console.error('minLength, firstLength, multiplyFactor, overlapRatio', minLength, firstLength, multiplyFactor, overlapRatio)
+
+    while (minLength && totalLength < minLength) {
+
+        // Current position is total length as of previous length.
+        const position = totalLength
+
+        let currentLength
+
+        // If this is the first length, just set to given first length.
+        if (!arrayOfLengths.length) {
+            currentLength = firstLength
+
+        } else {
+            /**
+             * Get the current length by multiplying the previous one by the
+             * specified factor.
+             */
+            currentLength =
+                arrayOfLengths[arrayOfLengths.length - 1].length * multiplyFactor
+        }
+
+        // Ensure that overlapped areas are included right up to the end.
+        totalLength += (currentLength * (1 - overlapRatio))
+
+        arrayOfLengths.push({
+            length: currentLength,
+            position
+        })
+    }
+
+    return arrayOfLengths
+}

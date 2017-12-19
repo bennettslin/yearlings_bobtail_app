@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 const propTypes = {
     ceilingFieldCoordinates: PropTypes.shape({
         height: PropTypes.number.isRequired,
-        centrePointFromLeft: PropTypes.number.isRequired
+        stageCentreFromLeft: PropTypes.number.isRequired
     })
 }
 
