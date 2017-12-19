@@ -92,22 +92,48 @@ class TheatreSection extends Component {
                 height: theatreSeatingHeight,
                 firstRowSeatWidth: stageWidth / 12, // Arbitrary constant for now.
                 stageCentreFromLeft
+            },
+
+            prosceniumSideWidth = stageWidth * 0.05, // Arbitrary value for now,
+            prosceniumTopHeight = stageHeight * 0.05,
+            prosceniumBottomHeight = stageHeight * 0.05,
+            prosceniumWidth = stageWidth + prosceniumSideWidth * 2,
+            prosceniumPositionLeft = stageCentreFromLeft - prosceniumWidth / 2,
+
+            prosceniumTopStyle = {
+                width: `${prosceniumWidth}px`,
+                height: `${prosceniumTopHeight}px`,
+                left: `${prosceniumPositionLeft}px`
+            },
+
+            prosceniumBottomStyle = {
+                width: `${prosceniumWidth}px`,
+                height: `${prosceniumBottomHeight}px`,
+                left: `${prosceniumPositionLeft}px`
+            },
+
+            prosceniumSideStyle = {
+                width: prosceniumSideWidth
             }
 
         return (
             <div className="section theatre-section">
                 <TheatreCeilingField
                     ceilingFieldCoordinates={ceilingFieldCoordinates}
+                    prosceniumTopStyle={prosceniumTopStyle}
                 />
                 <TheatreBalconyField
                     balconyFieldCoordinates={balconyFieldCoordinates}
+                    prosceniumSideStyle={prosceniumSideStyle}
                 />
                 <TheatreBalconyField
                     isRight
                     balconyFieldCoordinates={balconyFieldCoordinates}
+                    prosceniumSideStyle={prosceniumSideStyle}
                 />
                 <TheatreSeatingField
                     seatingFieldCoordinates={seatingFieldCoordinates}
+                    prosceniumBottomStyle={prosceniumBottomStyle}
                 />
             </div>
         )

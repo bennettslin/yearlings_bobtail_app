@@ -1,3 +1,5 @@
+// TODO: Refactor.
+
 .theatre-section {
     position: absolute;
     width: 100%;
@@ -6,22 +8,44 @@
     left: 0;
     background-color: rgba(200, 250, 250, 0.2);
 
-    .field {
+    .field, .proscenium {
         position: absolute;
+    }
+
+    .field {
         left: 0;
     }
 }
 
-.theatre-balcony-field {
-    background-color: rgba(150, 250, 150, 0.5); 
-    border: 2px solid green;    
-    
+.theatre-balcony-field {  
+
+    &.left {
+        background-color: rgba(150, 250, 150, 0.5); 
+        border: 2px solid green;  
+
+        .theatre-balcony-column {
+            border: 1px solid #484;
+        }
+        
+        .proscenium-side {
+            right: 0;
+        }
+    }
+
     &.right {
         left: auto;
         right: 0;
 
         background-color: rgba(250, 250, 150, 0.5); 
         border: 2px solid orange;
+
+        .theatre-balcony-column {
+            border: 1px solid #884;
+        }
+
+        .proscenium-side {
+            left: 0;
+        }
     }
 }
 
@@ -37,10 +61,43 @@
     border: 2px solid red;
 }
 
-.theatre-seating-row {
+.theatre-repeated {
     position: absolute;
-    width: 100%;
-    left: 0;
 
+    &.row {
+        width: 100%;
+    }
+
+    &.column {
+        height: 100%;
+    }
+}
+
+.theatre-seating-row {
+    left: 0;
     border: 1px solid #844;
+}
+
+.theatre-ceiling-row {
+    left: 0;
+    border: 1px solid #448;
+}
+
+.theatre-balcony-column {
+    top: 0;
+}
+
+.proscenium-top {
+    bottom: 0;
+    background-color: #88b;
+}
+
+.proscenium-bottom {
+    top: 0;
+    background-color: #b88;
+}
+
+.proscenium-side {
+    height: 100%;
+    background-color: #8b8;
 }

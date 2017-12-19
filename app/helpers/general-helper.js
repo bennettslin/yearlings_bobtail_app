@@ -120,8 +120,6 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
     const arrayOfLengths = []
     let totalLength = 0
 
-    console.error('minLength, firstLength, multiplyFactor, overlapRatio', minLength, firstLength, multiplyFactor, overlapRatio)
-
     while (minLength && totalLength < minLength) {
 
         // Current position is total length as of previous length.

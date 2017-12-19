@@ -2,20 +2,27 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
+
 import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
-// import classnames from 'classnames'
 
 const propTypes = {
     seatingFieldCoordinates: PropTypes.shape({
         height: PropTypes.number.isRequired,
         firstRowSeatWidth: PropTypes.number.isRequired,
         stageCentreFromLeft: PropTypes.number.isRequired
-    })
+    }),
+    prosceniumBottomStyle: PropTypes.shape({
+        width: PropTypes.number.isRequired,
+        height: PropTypes.number.isRequired,
+        left: PropTypes.number.isRequired
+    }).isRequired
 }
 
 const TheatreSeatingField = ({
 
-    seatingFieldCoordinates
+    seatingFieldCoordinates,
+    prosceniumBottomStyle
 
 }) => {
 
@@ -37,9 +44,21 @@ const TheatreSeatingField = ({
 
     return (
         <div
-            className="field theatre-seating-field"
+            className={classnames(
+                'field',
+                'theatre-seating-field'
+            )}
             style={seatingFieldStyle}
         >
+            {/* Proscenium bottom is behind seating. */}
+            <div
+                className={classnames(
+                    'proscenium',
+                    'proscenium-bottom'
+                )}
+                style={prosceniumBottomStyle}
+            />
+
             {seatingRowCoordinates.map((currentCoordinates, index) => {
                 const { length,
                         position } = currentCoordinates,
@@ -52,7 +71,11 @@ const TheatreSeatingField = ({
                 return (
                     <div
                         key={index}
-                        className="theatre-seating-row"
+                        className={classnames(
+                            'theatre-repeated',
+                            'row',
+                            'theatre-seating-row'
+                        )}
                         style={seatingRowStyle}
                     >
                         {index}
