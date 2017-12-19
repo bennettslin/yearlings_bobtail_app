@@ -113,7 +113,7 @@ class TheatreSection extends Component {
             },
 
             prosceniumSideStyle = {
-                width: prosceniumSideWidth
+                width: `${prosceniumSideWidth}px`
             }
 
         return (

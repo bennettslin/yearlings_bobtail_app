@@ -15,7 +15,7 @@ const propTypes = {
         rightWidth: PropTypes.number.isRequired
     }),
     prosceniumSideStyle: PropTypes.shape({
-        width: PropTypes.number.isRequired
+        width: PropTypes.string.isRequired
     }).isRequired
 }
 

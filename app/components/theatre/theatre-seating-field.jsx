@@ -13,9 +13,9 @@ const propTypes = {
         stageCentreFromLeft: PropTypes.number.isRequired
     }),
     prosceniumBottomStyle: PropTypes.shape({
-        width: PropTypes.number.isRequired,
-        height: PropTypes.number.isRequired,
-        left: PropTypes.number.isRequired
+        width: PropTypes.string.isRequired,
+        height: PropTypes.string.isRequired,
+        left: PropTypes.string.isRequired
     }).isRequired
 }
 
