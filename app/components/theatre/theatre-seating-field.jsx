@@ -36,15 +36,15 @@ const TheatreSeatingField = ({
             height: `${height}px`
         },
 
-        seatHeightToWidthRatio = 1.5,
+        seatHeightToWidthRatio = 1.55,
 
         firstRowSeatHeight = firstRowSeatWidth * seatHeightToWidthRatio,
 
         seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
             minLength: height,
             firstLength: firstRowSeatHeight,
-            multiplyFactor: 1.5, // Arbitrary for now.
-            overlapRatio: 0.75 // Arbitrary for now.
+            multiplyFactor: 1.32, // Arbitrary for now.
+            overlapRatio: 0.8 // Arbitrary for now.
         })
 
     return (
@@ -64,26 +64,31 @@ const TheatreSeatingField = ({
                 style={prosceniumBottomStyle}
             />
 
-            {seatingRowCoordinates.map((currentCoordinates, rowIndex) => {
+            {seatingRowCoordinates.map((currentRowCoordinates, rowIndex) => {
                 const { length: rowHeight,
-                        position } = currentCoordinates,
+                        position: rowTop } = currentRowCoordinates,
 
                     seatingRowStyle = {
                         height: `${rowHeight}px`,
-                        top: `${position}px`
+                        top: `${rowTop}px`
                     },
 
                     seatWidth = rowHeight / seatHeightToWidthRatio,
 
-                    // If row is even, right side has an extra half seat.
+                    /**
+                     * If row is even, have centre seat by offsetting right
+                     * side with one more half seat, and left side with one
+                     * less.
+                     */
                     isEven = rowIndex % 2 === 0,
-
                     seatWidthOffset = isEven ? seatWidth / 2 : 0,
 
+                    // TODO: Have max number of seats.
                     leftSeatsArray = getArrayOfCoordinatesForFactoredLengths({
                         minLength: stageCentreFromLeft - seatWidthOffset,
                         firstLength: seatWidth,
-                        // positionOffset: seatWidthOffset,
+
+                        // Start from centre, and go towards left.
                         reversePosition: true
                     }),
 
@@ -94,10 +99,8 @@ const TheatreSeatingField = ({
                         positionOffset: stageCentreFromLeft - seatWidthOffset
                     }),
 
-                    // seatsArray = leftSeatsArray
+                    // Combine left and right side seating.
                     seatsArray = leftSeatsArray.concat(rightSeatsArray)
-
-                    // console.error('rightSeatsArray', rightSeatsArray, isEven)
 
                 return (
                     <div
@@ -111,12 +114,12 @@ const TheatreSeatingField = ({
                     >
                         {seatsArray.map((seat, seatIndex) => {
 
-                            const { length,
-                                    position } = seat,
+                            const { length: seatWidth,
+                                    position: seatLeft } = seat,
 
                                 seatStyle = {
-                                    width: `${length}px`,
-                                    left: `${position}px`
+                                    width: `${seatWidth}px`,
+                                    left: `${seatLeft}px`
                                 }
 
                             return (

@@ -185,7 +185,7 @@ LyricColumnView = ({
             handleVerseBarWheel
         }
 
-    return null && (
+    return (
         <div
             className={classnames(
                 'column',
