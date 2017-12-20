@@ -132,6 +132,7 @@ class TheatreSection extends Component {
                     prosceniumSideStyle={prosceniumSideStyle}
                 />
                 <TheatreSeatingField
+                    windowWidth={windowWidth}
                     seatingFieldCoordinates={seatingFieldCoordinates}
                     prosceniumBottomStyle={prosceniumBottomStyle}
                 />

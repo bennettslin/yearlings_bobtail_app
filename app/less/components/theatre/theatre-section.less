@@ -8,6 +8,7 @@
 
     .field, .proscenium {
         position: absolute;
+        box-sizing: border-box;
     }
 
     .field {
@@ -62,11 +63,11 @@
 .theatre-repeated {
     position: absolute;
 
-    &.row {
+    &.theatre-row {
         width: 100%;
     }
 
-    &.column {
+    &.theatre-column {
         height: 100%;
     }
 }
@@ -98,4 +99,12 @@
 .proscenium-side {
     height: 100%;
     background-color: #8b8;
+}
+
+.seat {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    box-sizing: border-box;
+    border: 1px solid #88f;
 }

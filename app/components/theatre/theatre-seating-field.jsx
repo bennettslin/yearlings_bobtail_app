@@ -16,30 +16,35 @@ const propTypes = {
         width: PropTypes.string.isRequired,
         height: PropTypes.string.isRequired,
         left: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    windowWidth: PropTypes.number.isRequired
 }
 
 const TheatreSeatingField = ({
 
     seatingFieldCoordinates,
-    prosceniumBottomStyle
+    prosceniumBottomStyle,
+    windowWidth
 
 }) => {
 
     const { height,
-            firstRowSeatWidth } = seatingFieldCoordinates,
+            firstRowSeatWidth,
+            stageCentreFromLeft } = seatingFieldCoordinates,
 
         seatingFieldStyle = {
             height: `${height}px`
         },
 
-        firstRowSeatHeight = firstRowSeatWidth * 1.5,
+        seatHeightToWidthRatio = 1.5,
+
+        firstRowSeatHeight = firstRowSeatWidth * seatHeightToWidthRatio,
 
         seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
             minLength: height,
             firstLength: firstRowSeatHeight,
             multiplyFactor: 1.5, // Arbitrary for now.
-            overlapRatio: 0.95 // Arbitrary for now.
+            overlapRatio: 0.75 // Arbitrary for now.
         })
 
     return (
@@ -59,26 +64,69 @@ const TheatreSeatingField = ({
                 style={prosceniumBottomStyle}
             />
 
-            {seatingRowCoordinates.map((currentCoordinates, index) => {
-                const { length,
+            {seatingRowCoordinates.map((currentCoordinates, rowIndex) => {
+                const { length: rowHeight,
                         position } = currentCoordinates,
 
                     seatingRowStyle = {
-                        height: `${length}px`,
+                        height: `${rowHeight}px`,
                         top: `${position}px`
-                    }
+                    },
+
+                    seatWidth = rowHeight / seatHeightToWidthRatio,
+
+                    // If row is even, right side has an extra half seat.
+                    isEven = rowIndex % 2 === 0,
+
+                    seatWidthOffset = isEven ? seatWidth / 2 : 0,
+
+                    leftSeatsArray = getArrayOfCoordinatesForFactoredLengths({
+                        minLength: stageCentreFromLeft - seatWidthOffset,
+                        firstLength: seatWidth,
+                        // positionOffset: seatWidthOffset,
+                        reversePosition: true
+                    }),
+
+                    rightSeatsArray = getArrayOfCoordinatesForFactoredLengths({
+                        minLength: windowWidth - stageCentreFromLeft +
+                            seatWidthOffset,
+                        firstLength: seatWidth,
+                        positionOffset: stageCentreFromLeft - seatWidthOffset
+                    }),
+
+                    // seatsArray = leftSeatsArray
+                    seatsArray = leftSeatsArray.concat(rightSeatsArray)
+
+                    // console.error('rightSeatsArray', rightSeatsArray, isEven)
 
                 return (
                     <div
-                        key={index}
+                        key={rowIndex}
                         className={classnames(
                             'theatre-repeated',
-                            'row',
+                            'theatre-row',
                             'theatre-seating-row'
                         )}
                         style={seatingRowStyle}
                     >
-                        {index}
+                        {seatsArray.map((seat, seatIndex) => {
+
+                            const { length,
+                                    position } = seat,
+
+                                seatStyle = {
+                                    width: `${length}px`,
+                                    left: `${position}px`
+                                }
+
+                            return (
+                                <div
+                                    key={seatIndex}
+                                    className="seat"
+                                    style={seatStyle}
+                                />
+                            )
+                        })}
                     </div>
                 )
             })}

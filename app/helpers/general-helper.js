@@ -107,10 +107,16 @@ export const getArrayOfLength = ({ length, indexBase = 0 }) => {
 export const getArrayOfCoordinatesForFactoredLengths = ({
     minLength,
     firstLength,
-    multiplyFactor,
+    multiplyFactor = 1,
 
     // The ratio of the *previous* length that gets overlapped.
-    overlapRatio = 0
+    overlapRatio = 0,
+
+    // Add this constant to each position.
+    positionOffset = 0,
+
+    // Position assumes start from right and go to left.
+    reversePosition = false
 }) => {
     /**
      * Get an array of lengths where each subsequent length is a multiple of the
@@ -123,9 +129,9 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
     while (minLength && totalLength < minLength) {
 
         // Current position is total length as of previous length.
-        const position = totalLength
+        let position = totalLength,
 
-        let currentLength
+            currentLength
 
         // If this is the first length, just set to given first length.
         if (!arrayOfLengths.length) {
@@ -142,6 +148,13 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
 
         // Ensure that overlapped areas are included right up to the end.
         totalLength += (currentLength * (1 - overlapRatio))
+
+        if (reversePosition) {
+            position = minLength - currentLength - position
+
+        } else {
+            position += positionOffset
+        }
 
         arrayOfLengths.push({
             length: currentLength,

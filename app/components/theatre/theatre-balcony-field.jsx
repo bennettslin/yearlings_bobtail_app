@@ -72,7 +72,7 @@ const TheatreBalconyField = ({
                         key={index}
                         className={classnames(
                             'theatre-repeated',
-                            'column',
+                            'theatre-column',
                             'theatre-balcony-column'
                         )}
                         style={balconyColumnStyle}

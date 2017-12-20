@@ -60,7 +60,7 @@ const TheatreCeilingField = ({
                         key={index}
                         className={classnames(
                             'theatre-repeated',
-                            'row',
+                            'theatre-row',
                             'theatre-ceiling-row'
                         )}
                         style={ceilingRowStyle}
