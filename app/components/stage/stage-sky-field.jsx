@@ -17,6 +17,13 @@ import { SKY_NO_TIME,
          SKY_AUTUMN,
          SKY_WINTER } from '../../constants/stageValues'
 
+const defaultProps = {
+    sky: {
+        time: SKY_NO_TIME,
+        season: SKY_NO_SEASON
+    }
+}
+
 const propTypes = {
     sky: PropTypes.shape({
         time: PropTypes.string.isRequired,
@@ -58,6 +65,7 @@ const StageSkyField = ({
     )
 }
 
+StageSkyField.defaultProps = defaultProps
 StageSkyField.propTypes = propTypes
 
 export default StageSkyField
