@@ -79,7 +79,7 @@
 
 .theatre-ceiling-row {
     left: 0;
-    border: 1px solid #448;
+    border: 1px solid rgba(100, 100, 150, 0.4);
 }
 
 .theatre-balcony-column {
@@ -101,10 +101,19 @@
     background-color: #8b8;
 }
 
-.seat {
+.seat, .rafter {
     position: absolute;
     height: 100%;
     top: 0;
+    box-sizing: border-box;
+    border: 1px solid #88f;
+    background-color: #bbf;
+}
+
+.balcony {
+    position: absolute;
+    width: 100%;
+    left: 0;
     box-sizing: border-box;
     border: 1px solid #88f;
     background-color: #bbf;

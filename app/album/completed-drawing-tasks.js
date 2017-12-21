@@ -623,7 +623,12 @@ module.exports = [
                 taskName: `full nose`,
                 workedHours: 9,
                 neededHours: 9
-            }
+            },
+            {
+                taskName: `Final ears on sample heads.`,
+                workedHours: 1,
+                neededHours: 1
+            },
         ]
     },
     {

@@ -2627,4 +2627,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Theatre seats and balconies calculations.`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]

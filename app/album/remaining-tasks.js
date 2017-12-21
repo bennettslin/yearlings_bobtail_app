@@ -1,13 +1,8 @@
 module.exports = [
     {
-        taskName: `Set storage expiration date.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Theatre seats and balconies calculations.`,
-        workedHours: 8,
-        neededHours: 9
+        taskName: `Limit width of theatre seating and ceiling, balconies gradually increase height`,
+        workedHours: 2,
+        neededHours: 3
     },
     {
         taskName: `Keep admin stuff in dev, not in production.`,
@@ -159,5 +154,10 @@ module.exports = [
     //     taskName: `Hook up text constants.`,
     //     workedHours: 0,
     //     neededHours: 3
-    // }
+    // },
+    // {
+    //     taskName: `Set storage expiration date.`,
+    //     workedHours: 0,
+    //     neededHours: 2
+    // },
 ]

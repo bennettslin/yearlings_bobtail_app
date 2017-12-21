@@ -11,6 +11,7 @@ const propTypes = {
     balconyFieldCoordinates: PropTypes.shape({
         top: PropTypes.number.isRequired,
         height: PropTypes.number.isRequired,
+        firstColumnBalconyHeight: PropTypes.number.isRequired,
         leftWidth: PropTypes.number.isRequired,
         rightWidth: PropTypes.number.isRequired
     }),
@@ -29,6 +30,7 @@ const TheatreBalconyField = ({
 
     const { top,
             height,
+            firstColumnBalconyHeight,
             leftWidth,
             rightWidth } = balconyFieldCoordinates,
 
@@ -40,11 +42,16 @@ const TheatreBalconyField = ({
             height: `${height}px`
         },
 
+        balconyWidthToHeightRatio = 0.2,
+
+        // Arbitrary for now.
+        firstColumnBalconyWidth = firstColumnBalconyHeight * balconyWidthToHeightRatio,
+
         balconyColumnCoordinates = getArrayOfCoordinatesForFactoredLengths({
             minLength: width,
-            firstLength: 50, // Arbitrary for now.
-            multiplyFactor: 1.5, // Arbitrary for now.
-            overlapRatio: 0.95 // Arbitrary for now.
+            firstLength: firstColumnBalconyWidth, // Arbitrary for now.
+            multiplyFactor: 1.05, // Arbitrary for now.
+            overlapRatio: 0.2 // Arbitrary for now.
         })
 
     return (
@@ -57,14 +64,21 @@ const TheatreBalconyField = ({
             style={balconyFieldStyle}
         >
             {balconyColumnCoordinates.map((currentCoordinates, index) => {
-                const { length,
+                const { length: columnWidth,
                         position } = currentCoordinates,
 
                     direction = isRight ? 'left' : 'right',
 
                     balconyColumnStyle = {
-                        width: `${length}px`,
+                        width: `${columnWidth}px`,
                         [direction]: `${position}px`
+                    },
+
+                    balconyHeight = columnWidth / balconyWidthToHeightRatio,
+
+                    balconyStyle = {
+                        height: balconyHeight,
+                        bottom: (height - balconyHeight) / 2
                     }
 
                 return (
@@ -77,7 +91,10 @@ const TheatreBalconyField = ({
                         )}
                         style={balconyColumnStyle}
                     >
-                        {index}
+                        <div
+                            className="balcony"
+                            style={balconyStyle}
+                        />
                     </div>
                 )
             })}

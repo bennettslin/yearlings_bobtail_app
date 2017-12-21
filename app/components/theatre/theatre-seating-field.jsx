@@ -36,7 +36,7 @@ const TheatreSeatingField = ({
             height: `${height}px`
         },
 
-        seatHeightToWidthRatio = 1.55,
+        seatHeightToWidthRatio = 1.55, // Arbitrary for now.
 
         firstRowSeatHeight = firstRowSeatWidth * seatHeightToWidthRatio,
 
@@ -82,11 +82,13 @@ const TheatreSeatingField = ({
                      */
                     isEven = rowIndex % 2 === 0,
                     seatWidthOffset = isEven ? seatWidth / 2 : 0,
+                    maxSeats = 10, // Arbitrary for now.
 
                     // TODO: Have max number of seats.
                     leftSeatsArray = getArrayOfCoordinatesForFactoredLengths({
                         minLength: stageCentreFromLeft - seatWidthOffset,
                         firstLength: seatWidth,
+                        maxCount: maxSeats,
 
                         // Start from centre, and go towards left.
                         reversePosition: true
@@ -96,6 +98,7 @@ const TheatreSeatingField = ({
                         minLength: windowWidth - stageCentreFromLeft +
                             seatWidthOffset,
                         firstLength: seatWidth,
+                        maxCount: maxSeats + (isEven ? 1 : 0),
                         positionOffset: stageCentreFromLeft - seatWidthOffset
                     }),
 

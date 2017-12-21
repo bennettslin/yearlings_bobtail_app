@@ -9,6 +9,7 @@ import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-h
 const propTypes = {
     ceilingFieldCoordinates: PropTypes.shape({
         height: PropTypes.number.isRequired,
+        firstRowRafterWidth: PropTypes.number.isRequired,
         stageCentreFromLeft: PropTypes.number.isRequired
     }),
     prosceniumTopStyle: PropTypes.shape({
@@ -25,17 +26,24 @@ const TheatreCeilingField = ({
 
 }) => {
 
-    const { height } = ceilingFieldCoordinates,
+    const { height,
+            firstRowRafterWidth,
+            stageCentreFromLeft } = ceilingFieldCoordinates,
 
         ceilingFieldStyle = {
             height: `${height}px`
         },
 
+        rafterHeightToWidthRatio = 0.02,
+
+        // Arbitrary for now.
+        firstRowRafterHeight = firstRowRafterWidth * rafterHeightToWidthRatio,
+
         ceilingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
             minLength: height,
-            firstLength: 50, // Arbitrary for now.
-            multiplyFactor: 1.5, // Arbitrary for now.
-            overlapRatio: 0.95 // Arbitrary for now.
+            firstLength: firstRowRafterHeight, // Arbitrary for now.
+            multiplyFactor: 1.2, // Arbitrary for now.
+            overlapRatio: 0.3 // Arbitrary for now.
         })
 
     return (
@@ -47,12 +55,19 @@ const TheatreCeilingField = ({
             style={ceilingFieldStyle}
         >
             {ceilingRowCoordinates.map((currentCoordinates, index) => {
-                const { length,
-                        position } = currentCoordinates,
+                const { length: rowHeight,
+                        position: rowBottom } = currentCoordinates,
 
                     ceilingRowStyle = {
-                        height: `${length}px`,
-                        bottom: `${position}px`
+                        height: `${rowHeight}px`,
+                        bottom: `${rowBottom}px`
+                    },
+
+                    rafterWidth = rowHeight / rafterHeightToWidthRatio,
+
+                    rafterStyle = {
+                        width: rafterWidth,
+                        left: stageCentreFromLeft - rafterWidth / 2
                     }
 
                 return (
@@ -65,7 +80,10 @@ const TheatreCeilingField = ({
                         )}
                         style={ceilingRowStyle}
                     >
-                        {index}
+                        <div
+                            className="rafter"
+                            style={rafterStyle}
+                        />
                     </div>
                 )
             })}

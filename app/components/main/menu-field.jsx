@@ -22,24 +22,26 @@ MenuField = ({
     scoresTipsSectionHandlers,
     titleToggleHandlers
 
-}) => (
-    <div className="field menu-field">
+}) => {
+    return (
+        <div className="field menu-field">
 
-        <div className="menu-subfield title-menu-subfield">
-            <TitleToggle {...titleToggleHandlers}
-                inMenu={true}
-            />
+            <div className="menu-subfield title-menu-subfield">
+                <TitleToggle {...titleToggleHandlers}
+                    inMenu={true}
+                />
+            </div>
+            <div className="menu-subfield audio-subfield">
+                <AudioSection {...audioSectionHandlers} />
+            </div>
+            <div className="menu-subfield scores-tips-menu-subfield">
+                <ScoresTipsSection {...scoresTipsSectionHandlers}
+                    inMenu={true}
+                />
+            </div>
         </div>
-        <div className="menu-subfield audio-subfield">
-            <AudioSection {...audioSectionHandlers} />
-        </div>
-        <div className="menu-subfield scores-tips-menu-subfield">
-            <ScoresTipsSection {...scoresTipsSectionHandlers}
-                inMenu={true}
-            />
-        </div>
-    </div>
-)
+    )
+}
 
 MenuField.propTypes = menuFieldPropTypes
 

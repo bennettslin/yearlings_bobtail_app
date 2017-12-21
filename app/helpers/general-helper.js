@@ -116,7 +116,10 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
     positionOffset = 0,
 
     // Position assumes start from right and go to left.
-    reversePosition = false
+    reversePosition = false,
+
+    // Array count should not exceed this value.
+    maxCount = Number.MAX_SAFE_INTEGER
 }) => {
     /**
      * Get an array of lengths where each subsequent length is a multiple of the
@@ -126,7 +129,11 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
     const arrayOfLengths = []
     let totalLength = 0
 
-    while (minLength && totalLength < minLength) {
+    while (
+        minLength &&
+        totalLength < minLength &&
+        arrayOfLengths.length < maxCount
+    ) {
 
         // Current position is total length as of previous length.
         let position = totalLength,

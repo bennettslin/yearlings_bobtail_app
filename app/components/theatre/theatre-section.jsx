@@ -78,18 +78,23 @@ class TheatreSection extends Component {
 
             ceilingFieldCoordinates = {
                 height: theatreCeilingHeight,
+                // TODO: Pass firstRowRafterHeight instead.
+                firstRowRafterWidth: stageWidth * 1.1,
                 stageCentreFromLeft
             },
 
             balconyFieldCoordinates = {
                 top: theatreCeilingHeight,
                 height: theatreBalconyHeight,
+                // TODO: Pass firstColumnBalconyWidth instead.
+                firstColumnBalconyHeight: stageHeight,
                 leftWidth: stageLeft,
                 rightWidth: windowWidth - stageLeft - stageWidth
             },
 
             seatingFieldCoordinates = {
                 height: theatreSeatingHeight,
+                // TODO: Pass firstRowSeatHeight instead.
                 firstRowSeatWidth: stageWidth / 12, // Arbitrary constant for now.
                 stageCentreFromLeft
             },
