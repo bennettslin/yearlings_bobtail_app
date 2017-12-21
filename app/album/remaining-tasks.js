@@ -1,13 +1,18 @@
 module.exports = [
     {
-        taskName: `Limit width of theatre seating and ceiling, balconies gradually increase height`,
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
         taskName: `Keep admin stuff in dev, not in production.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Make proscenium a child of stage, not theatre.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Refactor theatre components and styling.`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     {

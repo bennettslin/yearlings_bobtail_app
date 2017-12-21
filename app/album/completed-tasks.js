@@ -2632,4 +2632,9 @@ module.exports = [
         workedHours: 8,
         neededHours: 8
     },
+    {
+        taskName: `Limit width of theatre seating and ceiling, balconies gradually increase height`,
+        workedHours: 2,
+        neededHours: 3
+    },
 ]
