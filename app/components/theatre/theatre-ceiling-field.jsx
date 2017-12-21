@@ -9,7 +9,7 @@ import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-h
 const propTypes = {
     ceilingFieldCoordinates: PropTypes.shape({
         height: PropTypes.number.isRequired,
-        firstRowRafterWidth: PropTypes.number.isRequired,
+        stageWidth: PropTypes.number.isRequired,
         stageCentreFromLeft: PropTypes.number.isRequired
     }),
     prosceniumTopStyle: PropTypes.shape({
@@ -27,23 +27,23 @@ const TheatreCeilingField = ({
 }) => {
 
     const { height,
-            firstRowRafterWidth,
+            stageWidth,
             stageCentreFromLeft } = ceilingFieldCoordinates,
 
         ceilingFieldStyle = {
             height: `${height}px`
         },
 
-        rafterHeightToWidthRatio = 0.02,
-
-        // Arbitrary for now.
+        // Arbitrary values for now.
+        firstRowRafterWidth = stageWidth * 1.1,
+        rafterHeightToWidthRatio = 0.02, // How tall is the rafter.
         firstRowRafterHeight = firstRowRafterWidth * rafterHeightToWidthRatio,
 
         ceilingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
             minLength: height,
-            firstLength: firstRowRafterHeight, // Arbitrary for now.
-            multiplyFactor: 1.2, // Arbitrary for now.
-            overlapRatio: 0.3 // Arbitrary for now.
+            firstLength: firstRowRafterHeight,
+            multiplyFactor: 1.2, // Gets wider faster with larger value.
+            overlapRatio: 0.3 // Less bunched up when closer to 0.
         })
 
     return (

@@ -11,7 +11,7 @@ const propTypes = {
     balconyFieldCoordinates: PropTypes.shape({
         top: PropTypes.number.isRequired,
         height: PropTypes.number.isRequired,
-        firstColumnBalconyHeight: PropTypes.number.isRequired,
+        stageHeight: PropTypes.number.isRequired,
         leftWidth: PropTypes.number.isRequired,
         rightWidth: PropTypes.number.isRequired
     }),
@@ -30,7 +30,7 @@ const TheatreBalconyField = ({
 
     const { top,
             height,
-            firstColumnBalconyHeight,
+            stageHeight,
             leftWidth,
             rightWidth } = balconyFieldCoordinates,
 
@@ -42,16 +42,17 @@ const TheatreBalconyField = ({
             height: `${height}px`
         },
 
-        balconyWidthToHeightRatio = 0.2,
-
-        // Arbitrary for now.
-        firstColumnBalconyWidth = firstColumnBalconyHeight * balconyWidthToHeightRatio,
+        // Arbitrary values for now.
+        firstColumnBalconyHeight = stageHeight,
+        balconyWidthToHeightRatio = 0.2, // How wide is the balcony.
+        firstColumnBalconyWidth =
+            firstColumnBalconyHeight * balconyWidthToHeightRatio,
 
         balconyColumnCoordinates = getArrayOfCoordinatesForFactoredLengths({
             minLength: width,
-            firstLength: firstColumnBalconyWidth, // Arbitrary for now.
-            multiplyFactor: 1.05, // Arbitrary for now.
-            overlapRatio: 0.2 // Arbitrary for now.
+            firstLength: firstColumnBalconyWidth,
+            multiplyFactor: 1.05, // Gets taller faster with larger value.
+            overlapRatio: 0.2 // Less bunched up when closer to 0.
         })
 
     return (

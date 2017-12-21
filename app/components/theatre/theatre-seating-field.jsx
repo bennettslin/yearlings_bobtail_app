@@ -9,7 +9,7 @@ import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-h
 const propTypes = {
     seatingFieldCoordinates: PropTypes.shape({
         height: PropTypes.number.isRequired,
-        firstRowSeatWidth: PropTypes.number.isRequired,
+        stageWidth: PropTypes.number.isRequired,
         stageCentreFromLeft: PropTypes.number.isRequired
     }),
     prosceniumBottomStyle: PropTypes.shape({
@@ -29,22 +29,23 @@ const TheatreSeatingField = ({
 }) => {
 
     const { height,
-            firstRowSeatWidth,
+            stageWidth,
             stageCentreFromLeft } = seatingFieldCoordinates,
 
         seatingFieldStyle = {
             height: `${height}px`
         },
 
-        seatHeightToWidthRatio = 1.55, // Arbitrary for now.
-
+        // Arbitrary values for now.
+        firstRowSeatWidth = stageWidth / 12,
+        seatHeightToWidthRatio = 1.55, // How tall is the seat.
         firstRowSeatHeight = firstRowSeatWidth * seatHeightToWidthRatio,
 
         seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
             minLength: height,
             firstLength: firstRowSeatHeight,
-            multiplyFactor: 1.32, // Arbitrary for now.
-            overlapRatio: 0.8 // Arbitrary for now.
+            multiplyFactor: 1.21, // Gets wider faster with larger value.
+            overlapRatio: 0.8 // More bunched up when closer to 1.
         })
 
     return (
@@ -84,7 +85,6 @@ const TheatreSeatingField = ({
                     seatWidthOffset = isEven ? seatWidth / 2 : 0,
                     maxSeats = 10, // Arbitrary for now.
 
-                    // TODO: Have max number of seats.
                     leftSeatsArray = getArrayOfCoordinatesForFactoredLengths({
                         minLength: stageCentreFromLeft - seatWidthOffset,
                         firstLength: seatWidth,
