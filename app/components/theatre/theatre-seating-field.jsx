@@ -10,26 +10,26 @@ const propTypes = {
     seatingFieldCoordinates: PropTypes.shape({
         height: PropTypes.number.isRequired,
         stageWidth: PropTypes.number.isRequired,
+        windowWidth: PropTypes.number.isRequired,
         stageCentreFromLeft: PropTypes.number.isRequired
     }),
-    prosceniumBottomStyle: PropTypes.shape({
+    pitStyle: PropTypes.shape({
         width: PropTypes.string.isRequired,
         height: PropTypes.string.isRequired,
         left: PropTypes.string.isRequired
     }).isRequired,
-    windowWidth: PropTypes.number.isRequired
 }
 
 const TheatreSeatingField = ({
 
     seatingFieldCoordinates,
-    prosceniumBottomStyle,
-    windowWidth
+    pitStyle
 
 }) => {
 
     const { height,
             stageWidth,
+            windowWidth,
             stageCentreFromLeft } = seatingFieldCoordinates,
 
         seatingFieldStyle = {
@@ -56,13 +56,9 @@ const TheatreSeatingField = ({
             )}
             style={seatingFieldStyle}
         >
-            {/* Proscenium bottom is behind seating. */}
             <div
-                className={classnames(
-                    'proscenium',
-                    'proscenium-bottom'
-                )}
-                style={prosceniumBottomStyle}
+                className="theatre-pit"
+                style={pitStyle}
             />
 
             {seatingRowCoordinates.map((currentRowCoordinates, rowIndex) => {

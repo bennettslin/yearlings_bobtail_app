@@ -1,0 +1,55 @@
+.stage-proscenium {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    border: 1px solid red;
+}
+
+@proscenium-top-height: 5%;
+@proscenium-bottom-height: 0%;
+@proscenium-side-width: 5%;
+
+@proscenium-top-overlap: 3%;
+@proscenium-bottom-overlap: 0%;
+@proscenium-side-overlap: 3%;
+
+@proscenium-top-edge: @proscenium-top-overlap - @proscenium-top-height;
+@proscenium-bottom-edge: @proscenium-bottom-overlap - @proscenium-bottom-height;
+@proscenium-side-edge: @proscenium-side-overlap - @proscenium-side-width;
+
+.proscenium-layer {
+    position: absolute;
+    top: @proscenium-top-edge;
+
+    &.top {
+        left: @proscenium-side-edge;
+        width: 100% - @proscenium-side-edge * 2;
+        height: @proscenium-top-height;
+        background-color: rgba(250, 250, 200, 0.5);
+    }
+    
+    // &.bottom {
+    //     bottom: @proscenium-bottom-edge;
+    //     left: @proscenium-side-edge;
+    //     width: 100% - @proscenium-side-edge * 2;
+    //     height: @proscenium-bottom-height;
+    //     background-color: rgba(250, 200, 200, 0.5);
+    // }
+    
+    &.side {
+        height: 100% - @proscenium-top-edge - @proscenium-bottom-edge;
+        width: @proscenium-side-width;
+        background-color: rgba(200, 250, 200, 0.5);
+
+        &.left {
+            left: @proscenium-side-edge;
+        }
+
+        &.right {
+            right: @proscenium-side-edge;
+        }
+    }
+}

@@ -4,16 +4,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Make proscenium a child of stage, not theatre.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Refactor theatre components and styling.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     {
         taskName: `Use svg in slider.`,

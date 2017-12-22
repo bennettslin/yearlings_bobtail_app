@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import StageSceneSection from './stage-scene-section'
+import StageProscenium from './stage-proscenium';
 
 const mapStateToProps = ({
     stageCoordinates
@@ -45,6 +46,7 @@ class StageSection extends Component {
                     style={aspectRatioContainerStyle}
                 >
                     <StageSceneSection />
+                    <StageProscenium />
                 </div>
             </div>
         )

@@ -2637,4 +2637,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 3
     },
+    {
+        taskName: `Make proscenium a child of stage, not theatre.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

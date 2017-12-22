@@ -11,18 +11,12 @@ const propTypes = {
         height: PropTypes.number.isRequired,
         stageWidth: PropTypes.number.isRequired,
         stageCentreFromLeft: PropTypes.number.isRequired
-    }),
-    prosceniumTopStyle: PropTypes.shape({
-        width: PropTypes.string.isRequired,
-        height: PropTypes.string.isRequired,
-        left: PropTypes.string.isRequired
-    }).isRequired
+    })
 }
 
 const TheatreCeilingField = ({
 
-    ceilingFieldCoordinates,
-    prosceniumTopStyle
+    ceilingFieldCoordinates
 
 }) => {
 
@@ -87,14 +81,6 @@ const TheatreCeilingField = ({
                     </div>
                 )
             })}
-
-            <div
-                className={classnames(
-                    'proscenium',
-                    'proscenium-top'
-                )}
-                style={prosceniumTopStyle}
-            />
         </div>
     )
 }

@@ -6,45 +6,13 @@
     left: 0;
     background-color: rgba(200, 250, 250, 0.2);
 
-    .field, .proscenium {
+    .field, .theatre-pit {
         position: absolute;
         box-sizing: border-box;
     }
 
     .field {
         left: 0;
-    }
-}
-
-.theatre-balcony-field {  
-
-    &.left {
-        background-color: rgba(150, 250, 150, 0.5); 
-        border: 2px solid green;  
-
-        .theatre-balcony-column {
-            border: 1px solid #484;
-        }
-        
-        .proscenium-side {
-            right: 0;
-        }
-    }
-
-    &.right {
-        left: auto;
-        right: 0;
-
-        background-color: rgba(250, 250, 150, 0.2); 
-        border: 2px solid orange;
-
-        .theatre-balcony-column {
-            border: 1px solid #884;
-        }
-
-        .proscenium-side {
-            left: 0;
-        }
     }
 }
 
@@ -58,6 +26,30 @@
     bottom: 0;
     background-color: rgba(250, 150, 150, 0.2); 
     border: 2px solid red;
+}
+
+.theatre-balcony-field {  
+
+    &.left {
+        background-color: rgba(150, 250, 150, 0.5); 
+        border: 2px solid green;  
+
+        .theatre-balcony-column {
+            border: 1px solid #484;
+        }
+    }
+
+    &.right {
+        left: auto;
+        right: 0;
+
+        background-color: rgba(250, 250, 150, 0.2); 
+        border: 2px solid orange;
+
+        .theatre-balcony-column {
+            border: 1px solid #884;
+        }
+    }
 }
 
 .theatre-repeated {
@@ -86,35 +78,24 @@
     top: 0;
 }
 
-.proscenium-top {
-    bottom: 0;
-    background-color: #88b;
-}
-
-.proscenium-bottom {
+.theatre-pit {
     top: 0;
     background-color: #b88;
 }
 
-.proscenium-side {
-    height: 100%;
-    background-color: #8b8;
+.seat, .rafter, .balcony {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid #88f;
+    background-color: rgba(200, 200, 250, 0.75);
 }
 
 .seat, .rafter {
-    position: absolute;
     height: 100%;
     top: 0;
-    box-sizing: border-box;
-    border: 1px solid #88f;
-    background-color: #bbf;
 }
 
 .balcony {
-    position: absolute;
     width: 100%;
     left: 0;
-    box-sizing: border-box;
-    border: 1px solid #88f;
-    background-color: #bbf;
 }

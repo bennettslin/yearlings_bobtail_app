@@ -14,17 +14,13 @@ const propTypes = {
         stageHeight: PropTypes.number.isRequired,
         leftWidth: PropTypes.number.isRequired,
         rightWidth: PropTypes.number.isRequired
-    }),
-    prosceniumSideStyle: PropTypes.shape({
-        width: PropTypes.string.isRequired
-    }).isRequired
+    })
 }
 
 const TheatreBalconyField = ({
 
     isRight,
-    balconyFieldCoordinates,
-    prosceniumSideStyle
+    balconyFieldCoordinates
 
 }) => {
 
@@ -99,14 +95,6 @@ const TheatreBalconyField = ({
                     </div>
                 )
             })}
-
-            <div
-                className={classnames(
-                    'proscenium',
-                    'proscenium-side'
-                )}
-                style={prosceniumSideStyle}
-            />
         </div>
     )
 }

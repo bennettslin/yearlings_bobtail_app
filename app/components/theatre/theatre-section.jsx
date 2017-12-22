@@ -93,50 +93,37 @@ class TheatreSection extends Component {
             seatingFieldCoordinates = {
                 height: theatreSeatingHeight,
                 stageWidth,
+                windowWidth,
                 stageCentreFromLeft
             },
 
-            prosceniumSideWidth = stageWidth * 0.05, // Arbitrary value for now,
-            prosceniumTopHeight = stageHeight * 0.05,
-            prosceniumBottomHeight = stageHeight * 0.05,
-            prosceniumWidth = stageWidth + prosceniumSideWidth * 2,
-            prosceniumPositionLeft = stageCentreFromLeft - prosceniumWidth / 2,
+            pitSideWidth = stageWidth * 0.05, // Arbitrary value for now,
+            pitBottomHeight = stageHeight * 0.05,
+            pitWidth = stageWidth + pitSideWidth * 2,
+            pitPositionLeft = stageCentreFromLeft - pitWidth / 2,
 
-            prosceniumTopStyle = {
-                width: `${prosceniumWidth}px`,
-                height: `${prosceniumTopHeight}px`,
-                left: `${prosceniumPositionLeft}px`
-            },
-
-            prosceniumBottomStyle = {
-                width: `${prosceniumWidth}px`,
-                height: `${prosceniumBottomHeight}px`,
-                left: `${prosceniumPositionLeft}px`
-            },
-
-            prosceniumSideStyle = {
-                width: `${prosceniumSideWidth}px`
+            pitStyle = {
+                width: `${pitWidth}px`,
+                height: `${pitBottomHeight}px`,
+                left: `${pitPositionLeft}px`
             }
 
         return (
             <div className="section theatre-section">
                 <TheatreCeilingField
                     ceilingFieldCoordinates={ceilingFieldCoordinates}
-                    prosceniumTopStyle={prosceniumTopStyle}
                 />
                 <TheatreBalconyField
                     balconyFieldCoordinates={balconyFieldCoordinates}
-                    prosceniumSideStyle={prosceniumSideStyle}
                 />
                 <TheatreBalconyField
                     isRight
                     balconyFieldCoordinates={balconyFieldCoordinates}
-                    prosceniumSideStyle={prosceniumSideStyle}
                 />
                 <TheatreSeatingField
                     windowWidth={windowWidth}
                     seatingFieldCoordinates={seatingFieldCoordinates}
-                    prosceniumBottomStyle={prosceniumBottomStyle}
+                    pitStyle={pitStyle}
                 />
             </div>
         )
