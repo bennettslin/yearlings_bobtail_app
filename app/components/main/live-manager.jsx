@@ -7,9 +7,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import TheatreSection from '../theatre/theatre-section'
 import MainColumn from './main-column'
+import OverviewLogueColumn from './overview-logue-column'
 import LyricColumn from '../lyric/lyric-column'
 import AudioPopup from '../audio/audio-popup'
-import OverviewPopup from '../overview/overview-popup'
 import AnnotationPopup from '../annotation/annotation-popup'
 import ScorePopup from '../score/score-popup'
 import TitlePopup from '../title/title-popup'
@@ -225,11 +225,9 @@ class LiveManager extends Component {
 
                 <MainColumn {...mainColumnHandlers} />
 
-                <div className="column overview-logue-column">
-                    <OverviewPopup {...overviewPopupHandlers}
-                        inOverviewSubfield={false}
-                    />
-                </div>
+                <OverviewLogueColumn
+                    overviewPopupHandlers={overviewPopupHandlers}
+                />
 
                 <LyricColumn {...lyricColumnHandlers} />
 

@@ -16,9 +16,14 @@ module.exports = [
      * Stage
      */
     {
-        taskName: `Theatre seating`,
+        taskName: `Theatre seat`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 3
+    },
+    {
+        taskName: `Theater balcony`,
+        workedHours: 0,
+        neededHours: 5
     },
     {
         taskName: `Theatre proscenium`,
@@ -26,14 +31,9 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Theatre ceiling`,
+        taskName: `Theatre rafters`,
         workedHours: 0,
-        neededHours: 6
-    },
-    {
-        taskName: `Stage curtains`,
-        workedHours: 0,
-        neededHours: 3
+        neededHours: 5
     },
 
     /**

@@ -34,7 +34,11 @@ class TheatreSection extends Component {
             left: PropTypes.number.isRequired,
             width: PropTypes.number.isRequired,
             height: PropTypes.number.isRequired
-        })
+        }),
+        deviceIndex: PropTypes.number.isRequired,
+        isHeightlessLyricColumn: PropTypes.bool.isRequired,
+        windowHeight: PropTypes.number.isRequired,
+        windowWidth: PropTypes.number.isRequired
     }
 
     render() {

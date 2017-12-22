@@ -45,7 +45,7 @@ const TheatreSeatingField = ({
             minLength: height,
             firstLength: firstRowSeatHeight,
             multiplyFactor: 1.21, // Gets wider faster with larger value.
-            overlapRatio: 0.8 // More bunched up when closer to 1.
+            overlapRatio: 0.9 // More bunched up when closer to 1.
         })
 
     return (
