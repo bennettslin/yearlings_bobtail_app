@@ -399,6 +399,10 @@ class EventManager extends Component {
         this.props.selectVerse({
             selectedVerseIndex
         })
+
+        // Deinteractivate after selecting.
+        this.props.interactivateVerse()
+
         return true
     }
 
