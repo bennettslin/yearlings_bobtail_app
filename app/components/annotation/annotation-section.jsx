@@ -99,7 +99,8 @@ const annotationSectionViewPropTypes = {
     annotationDotKeys: PropTypes.object.isRequired,
 
     // (Absent in popup annotation.)
-    handleTitleClick: PropTypes.func
+    handleTitleClick: PropTypes.func,
+    handleContainerClick: PropTypes.func
 },
 
 AnnotationSectionView = ({
@@ -109,6 +110,7 @@ AnnotationSectionView = ({
     isAccessedAnnotation,
     isSelectedAnnotation,
     handleTitleClick,
+    handleContainerClick,
 
     // From controller.
     annotationTitle,
@@ -120,12 +122,16 @@ AnnotationSectionView = ({
     const showAsSelected = isSelectedAnnotation || !inCarousel
 
     return (
-        <div className={classnames(
-            'section',
-            'annotation-section',
-            { 'selected-annotation': showAsSelected,
-              'accessed-annotation': isAccessedAnnotation }
-        )}>
+        <div
+            className={classnames(
+                'section',
+                'annotation-section',
+                { 'selected-annotation': showAsSelected,
+                'accessed-annotation': isAccessedAnnotation }
+            )}
+            onClick={handleContainerClick}
+            onTouchStart={handleContainerClick}
+        >
             <div className="annotation-title-block">
                 {annotationTitle === IS_DOT_STANZA ? (
                     <div className="annotation-title">

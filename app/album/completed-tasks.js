@@ -2646,5 +2646,10 @@ module.exports = [
         taskName: `Move overview logue to not block stage.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Click outside annotation section to close carousel.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

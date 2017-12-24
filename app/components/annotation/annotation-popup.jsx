@@ -86,9 +86,9 @@ AnnotationPopup = ({
 
                           /**
                            * If an annotation is selected, always show in popup
-                           * if it's a phone.
+                           * if it's a phone or lyric is expanded.
                            */
-                          (!selectedCarouselNavIndex || isPhone) &&
+                          (!selectedCarouselNavIndex || isPhone || isLyricExpanded) &&
 
                           !selectedScoreIndex &&
                           !selectedTitleIndex &&

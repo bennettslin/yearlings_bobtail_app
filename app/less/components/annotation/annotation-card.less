@@ -9,6 +9,22 @@
                                      @carousel-annotation-padding * 2 +
                                      @annotation-section-padding * 2;
 
+.is-desktop {
+    .carousel {
+        .cards-block {
+            margin-bottom: @carousel-annotation-padding;
+        }
+    }
+}
+
+.is-mobile {
+    .carousel {
+        .annotation-title-block {
+            margin-top: @carousel-annotation-padding;
+        }
+    }
+}
+
 .carousel {
     .cards-block, .annotation-title-block {
         /**

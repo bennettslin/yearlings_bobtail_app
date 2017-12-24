@@ -136,11 +136,10 @@ CarouselAnnotationView = ({
             annotationColumn && `in-column-${annotationColumn}`,
             annotationDotKeys
         )}
-        onClick={handleContainerClick}
-        onTouchStart={handleContainerClick}
     >
         <AnnotationSection {...other}
             inCarousel={true}
+            handleContainerClick={handleContainerClick}
         />
     </div>
 )
