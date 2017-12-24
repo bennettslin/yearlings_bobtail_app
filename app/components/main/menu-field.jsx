@@ -24,7 +24,7 @@ MenuField = ({
 
 }) => {
     return (
-        <div className="field menu-field">
+        <div className="field menu-field access-keys-shown">
 
             <div className="menu-subfield title-menu-subfield">
                 <TitleToggle {...titleToggleHandlers}

@@ -33,7 +33,7 @@ LyricEarToggle = ({
 }) => {
 
     return showOneOfTwoLyricColumns && (
-        <div className="lyric-button-block ear-button-block">
+        <div className="lyric-button-block ear-button-block access-keys-shown">
             <Button
                 isLarge={true}
                 accessKey={LYRIC_COLUMN_TOGGLE_KEY}

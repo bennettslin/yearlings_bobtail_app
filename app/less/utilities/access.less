@@ -60,10 +60,12 @@
 
     // Nav buttons in nav section.
     &.nav-expanded.dots-section-hidden {
-        .nav-section {
-            .access-highlighted {
-                .icon-canvas {
-                    background-color: @access-underline-colour;
+        .access-keys-shown {
+            .nav-section {
+                .access-highlighted {
+                    .icon-canvas {
+                        background-color: @access-underline-colour;
+                    }
                 }
             }
         }
@@ -100,10 +102,12 @@
         }
     }
 
-    .enabled {
-        // Keyboard letter shown on accessible button.
-        .access-button-icon {
-            opacity: 1;
+    .access-keys-shown {
+        .enabled {
+            // Keyboard letter shown on accessible button.
+            .access-button-icon {
+                opacity: 1;
+            }
         }
     }
 }

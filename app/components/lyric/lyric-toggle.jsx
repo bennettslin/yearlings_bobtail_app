@@ -48,7 +48,7 @@ LyricToggle = ({
 
     // And, of course, it should even be expandable at all.
     return getIsLyricExpandable(deviceIndex) && shouldRender && (
-        <div className="lyric-button-block expand-button-block">
+        <div className="lyric-button-block expand-button-block access-keys-shown">
             <Button
                 accessKey={LYRIC_SECTION_EXPAND_KEY}
                 iconText={isLyricExpanded ? '-' : '+'}

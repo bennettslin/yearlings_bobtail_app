@@ -8,10 +8,12 @@ import NavBooksColumn from './nav-books-column'
 
 const mapStateToProps = ({
     isHiddenNav,
-    showSingleBookColumn
+    showSingleBookColumn,
+    selectedAnnotationIndex
 }) => ({
     isHiddenNav,
-    showSingleBookColumn
+    showSingleBookColumn,
+    selectedAnnotationIndex
 })
 
 const navSectionPropTypes = {
@@ -24,11 +26,15 @@ NavSection = ({
 
     isHiddenNav,
     showSingleBookColumn,
+    selectedAnnotationIndex,
 
 ...other }) => {
 
     return !isHiddenNav ? (
-        <div className="nav-custom-subfield">
+        <div className={classnames(
+            'nav-custom-subfield',
+            { 'access-keys-shown': !selectedAnnotationIndex }
+        )}>
             <div
                 className={classnames(
                     'section',
