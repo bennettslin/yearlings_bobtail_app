@@ -116,7 +116,6 @@ module.exports = [
         neededHours: 2
     },
 
-
     // Low priority bugs.
     // {
     //     taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,

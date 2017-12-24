@@ -2652,4 +2652,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Fix issue with carousel annotations of hidden lyric column still showing.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
