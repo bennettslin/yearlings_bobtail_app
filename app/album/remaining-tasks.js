@@ -36,7 +36,7 @@ module.exports = [
      * Medium bugs and tasks.
      */
     {
-        taskName: `Fix lyric and carousel scrolling from portal select. (down the steppes)`,
+        taskName: `Fix lyric and carousel scrolling from portal select. (grey starling)`,
         workedHours: 0,
         neededHours: 2
     },
