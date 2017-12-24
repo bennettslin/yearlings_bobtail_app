@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import DomManager from './dom-manager'
 import { getSongsAndLoguesCount,
+         getSongIsLogue,
          getBookColumnIndex,
          getPortalLink,
          getAnnotationObject } from '../helpers/data-helper'
@@ -160,13 +161,16 @@ class AccessManager extends Component {
                 selectedScoreIndex,
                 selectedVerseIndex,
                 selectedWikiIndex,
+                selectedSongIndex,
 
-                eventHandlers } = this.props
+                eventHandlers } = this.props,
+
+            isLogue = getSongIsLogue(selectedSongIndex)
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
-        if (!selectedScoreIndex && !selectedWikiIndex) {
+        if (!isLogue && !selectedScoreIndex && !selectedWikiIndex) {
             if (interactivatedVerseIndex > -1 && keyName === ENTER) {
 
                 // Interactivated verse is already selected, so toggle play.
