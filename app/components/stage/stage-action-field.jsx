@@ -42,7 +42,7 @@ const StageActionField = ({
      * Things that are already there should not change in any way.
      */
 
-    console.error('walls, fixtures, actors', walls, fixtures, actors);
+    // console.error('walls, fixtures, actors', walls, fixtures, actors);
 
     // Actors always change from scene to scene.
     const actorsArray = Object.keys(actors),

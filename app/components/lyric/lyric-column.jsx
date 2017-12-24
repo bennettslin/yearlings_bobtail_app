@@ -36,6 +36,7 @@ class LyricColumn extends Component {
     constructor(props) {
         super(props)
 
+        this._handleScrollAfterLyricRerender = this._handleScrollAfterLyricRerender.bind(this)
         this._handleTransition = this._handleTransition.bind(this)
         this._handleAnimatableTransition = this._handleAnimatableTransition.bind(this)
         this.completeHeightTransition = this.completeHeightTransition.bind(this)
@@ -47,7 +48,9 @@ class LyricColumn extends Component {
              * When a dot is deselected, don't animate elements that get hidden
              * when transitioning between songs.
              */
-            shouldOverrideAnimate: false
+            shouldOverrideAnimate: false,
+
+            scrollTimeoutId: null
         }
     }
 
@@ -82,8 +85,20 @@ class LyricColumn extends Component {
 
     componentDidUpdate(prevProps) {
         if (!prevProps.isHeavyRenderReady && this.props.isHeavyRenderReady) {
-            this.props.handleScrollAfterLyricRerender()
+            const scrollTimeoutId = setTimeout(
+                this._handleScrollAfterLyricRerender, 200
+            )
+
+            clearTimeout(this.state.scrollTimeoutId)
+
+            this.setState({
+                scrollTimeoutId
+            })
         }
+    }
+
+    _handleScrollAfterLyricRerender() {
+        this.props.handleScrollAfterLyricRerender()
     }
 
     _handleTransition(e) {

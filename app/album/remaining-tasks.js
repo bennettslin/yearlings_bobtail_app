@@ -17,12 +17,6 @@ module.exports = [
         neededHours: 2
     },
 
-    {
-        taskName: `Selecting portals is now buggy.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     /**
      * Short bugs and tasks.
      */
@@ -35,11 +29,6 @@ module.exports = [
     /**
      * Medium bugs and tasks.
      */
-    {
-        taskName: `Fix lyric and carousel scrolling from portal select. (grey starling)`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     /**
      * Text colours.

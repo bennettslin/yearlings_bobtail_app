@@ -2657,4 +2657,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Fix lyric and carousel scrolling from portal select. (grey starling)`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

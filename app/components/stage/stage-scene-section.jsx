@@ -38,7 +38,7 @@ class StageSceneSection extends Component {
 
             { actors, fixtures, walls, sky, tiles } = sceneObject
 
-        console.error('sceneObject', sceneObject, renderReadySongIndex, currentSceneIndex)
+        // console.error('sceneObject', sceneObject, renderReadySongIndex, currentSceneIndex)
 
         return (
             <div className={classnames(
