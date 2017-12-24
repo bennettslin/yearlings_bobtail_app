@@ -826,8 +826,10 @@ class EventManager extends Component {
         if (e && e.stopPropagation) {
             e.stopPropagation()
 
+            const { type } = e
+
             // Turn access off if not from a keyboard event.
-            if (e.type === 'click') {
+            if (type === 'click' || type === 'mousedown') {
                 this.props.toggleAccess(false)
             }
         }
