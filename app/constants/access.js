@@ -27,5 +27,11 @@ module.exports = {
     OVERVIEW_TOGGLE_KEY: 'b',
     SCORE_TOGGLE_KEY: 's',
     TIPS_TOGGLE_KEY: 't',
-    TITLE_TOGGLE_KEY: 'i'
+    TITLE_TOGGLE_KEY: 'i',
+
+    NAVIGATION_ENTER_KEY: '\u21b5',
+    NAVIGATION_LEFT_KEY: '\u21e6',
+    NAVIGATION_UP_KEY: '\u21e7',
+    NAVIGATION_RIGHT_KEY: '\u21e8',
+    NAVIGATION_DOWN_KEY: '\u21e9'
 }

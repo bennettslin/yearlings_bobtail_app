@@ -1,4 +1,4 @@
-// Container for all song buttons in a book.
+// Container for image above each button.
 
 import React from 'react'
 import PropTypes from 'prop-types'

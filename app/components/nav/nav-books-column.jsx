@@ -47,11 +47,14 @@ NavBooksColumn = ({
             isShownColumn ? 'column-shown' : 'column-hidden'
         )}>
             <div className="books-column">
+
+                {/* Nav book. */}
                 <NavBook
                     bookIndex={bookIndex}
                     handleButtonClick={handleNavSongSelect}
                 />
-                {/* prologue or toggle */}
+
+                {/* Logue or toggle. */}
                 {isShownColumn ?
                     <NavLogueButton
                         bookIndex={bookIndex}
