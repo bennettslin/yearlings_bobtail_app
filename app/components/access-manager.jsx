@@ -140,8 +140,12 @@ class AccessManager extends Component {
              * If just now turning on access, also access annotation index,
              * unless we've already done so.
              */
-            if (!this.props.selectedAccessIndex && !annotationIndexWasAccessed) {
-                this._accessAnnotationWithoutDirection(this.props.selectedVerseIndex)
+            if (!this.props.selectedAnnotationIndex &&
+                !this.props.selectedAccessIndex &&
+                !annotationIndexWasAccessed) {
+                this._accessAnnotationWithoutDirection(
+                    this.props.selectedVerseIndex
+                )
             }
 
             // Prevent default for registered key.
@@ -204,7 +208,6 @@ class AccessManager extends Component {
     }
 
     _handleAnnotationNavigation(e, keyName) {
-
         const { props } = this,
             { eventHandlers } = props
 

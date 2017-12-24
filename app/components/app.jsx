@@ -273,10 +273,10 @@ class App extends Component {
         if (selectedAnnotationIndex) {
             const { selectedDotKeys } = props
 
-            this.props.accessAnnotationIndex(selectedAnnotationIndex)
+            props.accessAnnotationIndex(selectedAnnotationIndex)
 
             // App does not know new index, so pass it directly.
-            this.props.accessAnnotationAnchorIndex(
+            props.accessAnnotationAnchorIndex(
                 getAnnotationAnchorIndexForDirection({
                     selectedSongIndex,
                     selectedAnnotationIndex,
@@ -298,7 +298,7 @@ class App extends Component {
          * be rendered right away.
          */
         if (selectedAnnotationIndex &&
-            selectedSongIndex === this.props.selectedSongIndex) {
+            selectedSongIndex === props.selectedSongIndex) {
             props.setRenderReadyAnnotationIndex(selectedAnnotationIndex)
         }
 

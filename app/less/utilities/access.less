@@ -13,7 +13,10 @@
     .selected-annotation .annotation-card,
 
     // ... in carousel title only when...
-    &.is-not-verse-interactivated.dots-section-hidden .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
+    &.is-not-verse-interactivated .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
+
+    // ... in carousel cards only when...
+    &.is-not-verse-interactivated .carousel .accessed-annotation.selected-annotation .cards-block,
 
     // ... in lyrics only when...
     &.is-not-verse-interactivated.dots-section-hidden.carousel-expanded .lyric-section {
