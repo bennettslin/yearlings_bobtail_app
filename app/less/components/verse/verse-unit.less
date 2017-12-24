@@ -94,7 +94,7 @@
             .text-shadow-mixin(@odd-verse-colour);
 
             .text-span {
-                color: green;
+                color: #644;
             }
         }
     }
@@ -105,7 +105,11 @@
     .verse {
         // Slider side verse.
         &.in-side {
-            .text-shadow-mixin(@even-verse-colour);
+            .text-shadow-mixin(@side-slider-colour);
+
+            .text-span {
+                color: @side-slider-text-colour;
+            }
         }
 
         // Slider selected verse.
@@ -117,10 +121,18 @@
         &.before-slider {
             &.odd {
                 .text-shadow-mixin(@odd-before-slider-colour);
+
+                .text-span {
+                    color: @odd-before-slider-text-colour;
+                }
             }
 
             &.even {
                 .text-shadow-mixin(@even-before-slider-colour);
+
+                .text-span {
+                    color: @even-before-slider-text-colour;
+                }
             }
         }
 
@@ -128,10 +140,18 @@
         &.after-slider {
             &.odd {
                 .text-shadow-mixin(@odd-after-slider-colour);
+
+                .text-span {
+                    color: @odd-after-slider-text-colour;
+                }
             }
 
             &.even {
                 .text-shadow-mixin(@even-after-slider-colour);
+
+                .text-span {
+                    color: @odd-after-slider-text-colour;
+                }
             }
         }
     }

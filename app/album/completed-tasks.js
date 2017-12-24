@@ -2642,4 +2642,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Move overview logue to not block stage.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

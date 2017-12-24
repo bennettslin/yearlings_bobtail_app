@@ -12,12 +12,6 @@ module.exports = [
     },
 
     {
-        taskName: `Move overview logue to not block stage.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Override transition doesn't work when skipping several songs at a time.`,
         workedHours: 0,
         neededHours: 2
@@ -106,11 +100,6 @@ module.exports = [
     },
 
     // Further in the future.
-    {
-        taskName: `create stage section`,
-        workedHours: 0,
-        neededHours: 3
-    },
     {
         taskName: `Set up buttons to use svgs, including loading icons.`,
         workedHours: 0,
