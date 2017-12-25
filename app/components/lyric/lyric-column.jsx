@@ -23,6 +23,7 @@ const mapStateToProps = ({
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
+    selectedDotsIndex,
     selectedVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex
@@ -31,6 +32,7 @@ const mapStateToProps = ({
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
+    selectedDotsIndex,
     selectedVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex
@@ -80,6 +82,7 @@ class LyricColumn extends Component {
                     'isHeavyRenderReady',
                     'selectedAnnotationIndex',
                     'selectedCarouselNavIndex',
+                    'selectedDotsIndex',
                     'selectedVerseIndex',
                     'sliderVerseIndex'
                 ]
@@ -193,6 +196,7 @@ const lyricColumnViewPropTypes = {
     isHeavyRenderReady: PropTypes.bool.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselNavIndex: PropTypes.number.isRequired,
+    selectedDotsIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
@@ -218,6 +222,7 @@ LyricColumnView = ({
     isHeavyRenderReady,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
+    selectedDotsIndex,
     selectedVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex,
@@ -294,6 +299,7 @@ LyricColumnView = ({
                         accessKeysShown={Boolean(
                             selectedCarouselNavIndex &&
                             hasSelectedDots &&
+                            !selectedDotsIndex &&
                             !selectedAnnotationIndex
                         )}
                     />
@@ -306,6 +312,7 @@ LyricColumnView = ({
                         accessKeysShown={Boolean(
                             selectedCarouselNavIndex &&
                             hasSelectedDots &&
+                            !selectedDotsIndex &&
                             !selectedAnnotationIndex &&
                             interactivatedVerseIndex < 0
                         )}
