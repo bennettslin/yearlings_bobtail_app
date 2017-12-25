@@ -5,8 +5,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
 
+// import AccessIconsBlock from '../access/access-icons-block'
 import SliderSection from '../slider/slider-section'
 import AudioTimer from './audio-timer'
+// import { NAVIGATION_ENTER_KEY,
+//          AUDIO_REWIND_KEY,
+//          AUDIO_FAST_FORWARD_KEY } from '../../constants/access'
 import { getSongTitle } from '../../helpers/data-helper'
 import { getIsPhone } from '../../helpers/responsive-helper'
 

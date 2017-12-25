@@ -4,18 +4,28 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
-import LyricToggle from '../lyric/lyric-toggle'
-import LyricEarToggle from '../lyric/lyric-ear-toggle'
-import LyricSection from '../lyric/lyric-section'
+import LyricToggle from './lyric-toggle'
+import LyricEarToggle from './lyric-ear-toggle'
+import LyricSection from './lyric-section'
+import AccessIconsBlock from '../access/access-icons-block'
 import VerseBar from '../verse/verse-bar'
+import { NAVIGATION_ENTER_KEY,
+         NAVIGATION_LEFT_KEY,
+         NAVIGATION_RIGHT_KEY,
+         NAVIGATION_UP_KEY,
+         NAVIGATION_DOWN_KEY } from '../../constants/access'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     isHeavyRenderReady,
+    selectedAnnotationIndex,
+    selectedCarouselNavIndex,
     selectedVerseIndex,
     sliderVerseIndex
 }) => ({
     isHeavyRenderReady,
+    selectedAnnotationIndex,
+    selectedCarouselNavIndex,
     selectedVerseIndex,
     sliderVerseIndex
 })
@@ -61,6 +71,8 @@ class LyricColumn extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'isHeavyRenderReady',
+                    'selectedAnnotationIndex',
+                    'selectedCarouselNavIndex',
                     'selectedVerseIndex',
                     'sliderVerseIndex'
                 ]
@@ -152,6 +164,8 @@ class LyricColumn extends Component {
 const lyricColumnViewPropTypes = {
     // Through Redux.
     isHeavyRenderReady: PropTypes.bool.isRequired,
+    selectedAnnotationIndex: PropTypes.number.isRequired,
+    selectedCarouselNavIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
 
@@ -173,6 +187,8 @@ LyricColumnView = ({
 
     // From props.
     isHeavyRenderReady,
+    selectedAnnotationIndex,
+    selectedCarouselNavIndex,
     selectedVerseIndex,
     sliderVerseIndex,
 
@@ -235,6 +251,25 @@ LyricColumnView = ({
                 <LyricSection {...other}
                     isTransitioningHeight={isTransitioningHeight}
                     completeHeightTransition={completeHeightTransition}
+                />
+
+                <AccessIconsBlock
+                    className="up-down"
+                    accessIconKeys={[
+                        NAVIGATION_UP_KEY,
+                        NAVIGATION_DOWN_KEY
+                    ]}
+                    accessKeysShown={!selectedAnnotationIndex}
+                />
+
+                <AccessIconsBlock
+                    className="left-right-enter"
+                    accessIconKeys={[
+                        NAVIGATION_LEFT_KEY,
+                        NAVIGATION_RIGHT_KEY,
+                        NAVIGATION_ENTER_KEY
+                    ]}
+                    accessKeysShown={selectedCarouselNavIndex && !selectedAnnotationIndex}
                 />
             </div>
         </div>

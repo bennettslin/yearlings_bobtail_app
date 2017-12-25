@@ -106,21 +106,23 @@
     }
 
     .access-keys-shown {
-        .enabled {
-            // Keyboard letter shown on accessible button.
-            .access-button-icon {
-                opacity: 1;
-            }
+        // Keyboard letter shown on accessible button.
+        .access-button-icon {
+            opacity: 1;
         }
+    }
+}
+
+.button {
+    .access-button-icon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 }
 
 .access-button-icon {
     @access-button-icon-edge: 20px;
-
-    position: absolute;
-    bottom: 0;
-    right: 0;
 
     width: @access-button-icon-edge;
     height: @access-button-icon-edge;

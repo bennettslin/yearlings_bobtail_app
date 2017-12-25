@@ -3,6 +3,21 @@
 
     // Keeps elements inside window!
     overflow: hidden;
+
+    @access-icons-block-margin: 10px;
+
+    .access-icons-block {
+        bottom: @access-icons-block-margin;
+        z-index: @lyric-column-fade-top-z-index;
+
+        &.up-down {
+            left: @access-icons-block-margin;
+        }
+
+        &.left-right-enter {
+            right: @access-icons-block-margin;
+        }
+    }
 }
 
 .is-song {

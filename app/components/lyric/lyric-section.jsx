@@ -41,7 +41,7 @@ class LyricSection extends Component {
 
         // Handle only once every 10ms at most.
         this._handleDebouncedScroll = debounce(
-            this._handleDebouncedScroll, 25
+            this._handleDebouncedScroll, 10
         )
     }
 
