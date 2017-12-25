@@ -6,21 +6,29 @@
 
     @access-icons-block-margin: 10px;
 
-    .access-icons-block {
+    .left-right-enter, .access-icons-block.up-down {
+        position: absolute;
         bottom: @access-icons-block-margin;
+    }
+
+    .left-right-enter {
+        left: @access-icons-block-margin;
+        display: flex;
+    }
+
+    .access-icons-block {
         z-index: @lyric-column-fade-top-z-index;
 
         &.up-down {
             right: @access-icons-block-margin;
         }
 
-        &.left-right {
-            left: @access-icons-block-margin;
+        &.left-right, &.enter {
+            position: initial;
         }
 
         &.enter {
-            // TODO: Don't hard code.
-            left: 62px;
+            margin-left: @access-icons-block-margin;
         }
     }
 }

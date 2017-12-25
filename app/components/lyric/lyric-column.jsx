@@ -257,6 +257,32 @@ LyricColumnView = ({
                     completeHeightTransition={completeHeightTransition}
                 />
 
+                <div className="left-right-enter">
+                    <AccessIconsBlock
+                        className="left-right"
+                        accessIconKeys={[
+                            NAVIGATION_LEFT_KEY,
+                            NAVIGATION_RIGHT_KEY
+                        ]}
+                        accessKeysShown={Boolean(
+                            selectedCarouselNavIndex &&
+                            !selectedAnnotationIndex
+                        )}
+                    />
+
+                    <AccessIconsBlock
+                        className="enter"
+                        accessIconKeys={[
+                            NAVIGATION_ENTER_KEY
+                        ]}
+                        accessKeysShown={Boolean(
+                            selectedCarouselNavIndex &&
+                            !selectedAnnotationIndex &&
+                            interactivatedVerseIndex < 0
+                        )}
+                    />
+                </div>
+
                 <AccessIconsBlock
                     className="up-down"
                     accessIconKeys={[
@@ -265,30 +291,6 @@ LyricColumnView = ({
                     ]}
                     accessKeysShown={Boolean(
                         !selectedAnnotationIndex
-                    )}
-                />
-
-                <AccessIconsBlock
-                    className="left-right"
-                    accessIconKeys={[
-                        NAVIGATION_LEFT_KEY,
-                        NAVIGATION_RIGHT_KEY
-                    ]}
-                    accessKeysShown={Boolean(
-                        selectedCarouselNavIndex &&
-                        !selectedAnnotationIndex
-                    )}
-                />
-
-                <AccessIconsBlock
-                    className="enter"
-                    accessIconKeys={[
-                        NAVIGATION_ENTER_KEY
-                    ]}
-                    accessKeysShown={Boolean(
-                        selectedCarouselNavIndex &&
-                        !selectedAnnotationIndex &&
-                        interactivatedVerseIndex < 0
                     )}
                 />
             </div>
