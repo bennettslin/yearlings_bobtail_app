@@ -4,38 +4,21 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
+import LyricAccess from './lyric-access'
 import LyricToggle from './lyric-toggle'
 import LyricEarToggle from './lyric-ear-toggle'
 import LyricSection from './lyric-section'
-import AccessIconsBlock from '../access/access-icons-block'
 import VerseBar from '../verse/verse-bar'
-import { NAVIGATION_ENTER_KEY,
-         NAVIGATION_LEFT_KEY,
-         NAVIGATION_RIGHT_KEY,
-         NAVIGATION_UP_KEY,
-         NAVIGATION_DOWN_KEY } from '../../constants/access'
-import { ALL_DOT_KEYS } from '../../constants/dots'
-import { convertTrueFalseKeysToBitNumber } from '../../helpers/bit-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     isHeavyRenderReady,
-    selectedAnnotationIndex,
-    selectedCarouselNavIndex,
-    selectedDotKeys,
-    selectedDotsIndex,
     selectedVerseIndex,
-    sliderVerseIndex,
-    interactivatedVerseIndex
+    sliderVerseIndex
 }) => ({
     isHeavyRenderReady,
-    selectedAnnotationIndex,
-    selectedCarouselNavIndex,
-    selectedDotKeys,
-    selectedDotsIndex,
     selectedVerseIndex,
-    sliderVerseIndex,
-    interactivatedVerseIndex
+    sliderVerseIndex
 })
 
 /*************
@@ -46,7 +29,6 @@ class LyricColumn extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.
         handleScrollAfterLyricRerender: PropTypes.func.isRequired
@@ -80,9 +62,6 @@ class LyricColumn extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'isHeavyRenderReady',
-                    'selectedAnnotationIndex',
-                    'selectedCarouselNavIndex',
-                    'selectedDotsIndex',
                     'selectedVerseIndex',
                     'sliderVerseIndex'
                 ]
@@ -92,21 +71,9 @@ class LyricColumn extends Component {
                 updatingPropsArray: [
                     'isTransitioningHeight'
                 ]
-            }),
+            })
 
-            thisHasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
-                keysArray: ALL_DOT_KEYS,
-                trueFalseObject: props.selectedDotKeys
-            })),
-
-            nextHasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
-                keysArray: ALL_DOT_KEYS,
-                trueFalseObject: nextProps.selectedDotKeys
-            })),
-
-            hasSelectedDotsChanged = thisHasSelectedDots !== nextHasSelectedDots
-
-        return componentShouldUpdate || hasSelectedDotsChanged
+        return componentShouldUpdate
     }
 
     componentWillReceiveProps(nextProps) {
@@ -164,19 +131,12 @@ class LyricColumn extends Component {
         const { handleScrollAfterLyricRerender,
         /* eslint-enable no-unused-vars */
 
-                selectedDotKeys,
 
-                ...other } = this.props,
-
-            hasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
-                keysArray: ALL_DOT_KEYS,
-                trueFalseObject: selectedDotKeys
-            }))
+                ...other } = this.props
 
         return (
             <LyricColumnView {...other}
                 myRef={(node) => (this.myLyricColumn = node)}
-                hasSelectedDots={hasSelectedDots}
                 shouldOverrideAnimate={this.state.shouldOverrideAnimate}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
@@ -194,16 +154,11 @@ class LyricColumn extends Component {
 const lyricColumnViewPropTypes = {
     // Through Redux.
     isHeavyRenderReady: PropTypes.bool.isRequired,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
-    selectedCarouselNavIndex: PropTypes.number.isRequired,
-    selectedDotsIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
-    interactivatedVerseIndex: PropTypes.number.isRequired,
 
     // From parent.
     myRef: PropTypes.func.isRequired,
-    hasSelectedDots: PropTypes.bool.isRequired,
     shouldOverrideAnimate: PropTypes.bool.isRequired,
     isTransitioningHeight: PropTypes.bool.isRequired,
     handleTransition: PropTypes.func.isRequired,
@@ -220,12 +175,8 @@ LyricColumnView = ({
 
     // From props.
     isHeavyRenderReady,
-    selectedAnnotationIndex,
-    selectedCarouselNavIndex,
-    selectedDotsIndex,
     selectedVerseIndex,
     sliderVerseIndex,
-    interactivatedVerseIndex,
 
     handleLyricColumnSelect,
     handleLyricSectionExpand,
@@ -234,7 +185,6 @@ LyricColumnView = ({
 
     // From controller.
     myRef,
-    hasSelectedDots,
     shouldOverrideAnimate,
     isTransitioningHeight,
     handleTransition,
@@ -289,46 +239,7 @@ LyricColumnView = ({
                     completeHeightTransition={completeHeightTransition}
                 />
 
-                <div className="left-right-enter">
-                    <AccessIconsBlock
-                        className="left-right"
-                        accessIconKeys={[
-                            NAVIGATION_LEFT_KEY,
-                            NAVIGATION_RIGHT_KEY
-                        ]}
-                        accessKeysShown={Boolean(
-                            selectedCarouselNavIndex &&
-                            hasSelectedDots &&
-                            !selectedDotsIndex &&
-                            !selectedAnnotationIndex
-                        )}
-                    />
-
-                    <AccessIconsBlock
-                        className="enter"
-                        accessIconKeys={[
-                            NAVIGATION_ENTER_KEY
-                        ]}
-                        accessKeysShown={Boolean(
-                            selectedCarouselNavIndex &&
-                            hasSelectedDots &&
-                            !selectedDotsIndex &&
-                            !selectedAnnotationIndex &&
-                            interactivatedVerseIndex < 0
-                        )}
-                    />
-                </div>
-
-                <AccessIconsBlock
-                    className="up-down"
-                    accessIconKeys={[
-                        NAVIGATION_UP_KEY,
-                        NAVIGATION_DOWN_KEY
-                    ]}
-                    accessKeysShown={Boolean(
-                        !selectedAnnotationIndex
-                    )}
-                />
+                <LyricAccess />
             </div>
         </div>
     )
