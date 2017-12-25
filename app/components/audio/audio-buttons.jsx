@@ -97,7 +97,7 @@ class AudioButtons extends Component {
         }
 
         return (
-            <div className="audio-block audio-buttons-block">
+            <div className="audio-block audio-buttons-block access-keys-shown">
                 <div className="audio-subblock player-subblock">
                     {/* Previous button. */}
                     <Button

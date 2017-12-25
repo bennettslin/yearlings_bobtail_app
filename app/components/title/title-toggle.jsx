@@ -38,7 +38,7 @@ TitleToggle = ({
 
 }) => {
     return inMenu !== isTitleInAudio && (
-        <div className="section title-toggle-section">
+        <div className="section title-toggle-section access-keys-shown">
             <div className="title-toggle-button-container">
                 <Button
                     isCustomShape={true}

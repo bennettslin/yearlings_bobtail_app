@@ -5,21 +5,23 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
 
-// import AccessIconsBlock from '../access/access-icons-block'
+import AccessIconsBlock from '../access/access-icons-block'
 import SliderSection from '../slider/slider-section'
 import AudioTimer from './audio-timer'
-// import { NAVIGATION_ENTER_KEY,
-//          AUDIO_REWIND_KEY,
-//          AUDIO_FAST_FORWARD_KEY } from '../../constants/access'
+import { NAVIGATION_ENTER_KEY,
+         AUDIO_REWIND_KEY,
+         AUDIO_FAST_FORWARD_KEY } from '../../constants/access'
 import { getSongTitle } from '../../helpers/data-helper'
 import { getIsPhone } from '../../helpers/responsive-helper'
 
 const mapStateToProps = ({
     deviceIndex,
-    selectedSongIndex
+    selectedSongIndex,
+    interactivatedVerseIndex
 }) => ({
     deviceIndex,
-    selectedSongIndex
+    selectedSongIndex,
+    interactivatedVerseIndex
 })
 
 const audioBannerDefaultProps = {
@@ -32,6 +34,7 @@ audioBannerPropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
+    interactivatedVerseIndex: PropTypes.number.isRequired,
 
     // From parent.
     inOverlay: PropTypes.bool.isRequired,
@@ -43,6 +46,7 @@ AudioBanner = ({
 
     deviceIndex,
     selectedSongIndex,
+    interactivatedVerseIndex,
 
     inOverlay,
     inAudioSection,
@@ -77,6 +81,21 @@ AudioBanner = ({
                     </div>
                     <AudioTimer />
                 </div>
+                <AccessIconsBlock
+                    className="rewind-forward"
+                    accessIconKeys={[
+                        AUDIO_REWIND_KEY,
+                        AUDIO_FAST_FORWARD_KEY
+                    ]}
+                    accessKeysShown
+                />
+                <AccessIconsBlock
+                    className="enter"
+                    accessIconKeys={[
+                        NAVIGATION_ENTER_KEY
+                    ]}
+                    accessKeysShown={interactivatedVerseIndex >= 0}
+                />
             </div>
         )
 
