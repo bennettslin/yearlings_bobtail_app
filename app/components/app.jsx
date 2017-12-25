@@ -26,7 +26,7 @@ import { CONTINUE,
          TIPS_OPTIONS } from '../constants/options'
 import { getSongObject, getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex } from '../helpers/data-helper'
 import { getValueInBitNumber } from '../helpers/bit-helper'
-import { getVerseIndexForAccessedAnnotationIndex, getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn, getIsSomethingBeingShown } from '../helpers/logic-helper'
+import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn, getIsSomethingBeingShown } from '../helpers/logic-helper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsPhone, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
 import { getStageCoordinates } from '../helpers/stage-helper'
 import LogHelper from '../helpers/log-helper'
@@ -1008,8 +1008,7 @@ class App extends Component {
     }
 
     interactivateVerseDirection(direction) {
-        const { selectedAccessIndex,
-                selectedSongIndex } = this.props,
+        const { selectedSongIndex } = this.props,
             songVerseTimes = getSongVerseTimes(selectedSongIndex),
             songVerseTimesCount = songVerseTimes.length
 
@@ -1020,19 +1019,9 @@ class App extends Component {
             direction = songVerseTimesCount - 1
         }
 
-        // We are turning on interactivation.
+        // We are turning on interactivation, so start from selected verse.
         if (interactivatedVerseIndex === -1) {
-
-            // If accessed on, start from accessed annotation index.
-            if (selectedAccessIndex) {
-                const { accessedAnnotationIndex } = this.props
-
-                interactivatedVerseIndex = getVerseIndexForAccessedAnnotationIndex(this.props.selectedSongIndex, accessedAnnotationIndex)
-
-            // If not, start from the selected verse.
-            } else {
-                interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % songVerseTimesCount
-            }
+            interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % songVerseTimesCount
 
         // We already have an interactivated verse.
         } else {
