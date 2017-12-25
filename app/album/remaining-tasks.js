@@ -83,9 +83,14 @@ module.exports = [
 
     // Full day tasks.
     {
-        taskName: `make visual keyboard keys with navigation logic`,
-        workedHours: 1,
-        neededHours: 8
+        taskName: `Logic for showing keyboard access icons in dots and annotations`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Allow cursor to touch audio banner above keyboard access icons.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     // Further in the future.

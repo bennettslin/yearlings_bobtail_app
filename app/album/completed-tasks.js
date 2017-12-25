@@ -2662,4 +2662,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Begin logic for keyboard access icons`,
+        workedHours: 9,
+        neededHours: 9
+    },
 ]
