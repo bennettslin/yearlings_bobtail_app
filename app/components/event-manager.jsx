@@ -413,6 +413,10 @@ class EventManager extends Component {
          * ensure that it is not shown as text. Maybe bypass if done through
          * access?
          */
+        // Do nothing if no dots are selected, as no annotation can be selected.
+        if (selectedAnnotationIndex < 0) {
+            return false
+        }
 
         // If selecting an annotation, make sure that its dots intersect.
         if (selectedAnnotationIndex) {

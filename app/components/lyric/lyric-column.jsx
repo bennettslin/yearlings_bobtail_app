@@ -14,12 +14,15 @@ import { NAVIGATION_ENTER_KEY,
          NAVIGATION_RIGHT_KEY,
          NAVIGATION_UP_KEY,
          NAVIGATION_DOWN_KEY } from '../../constants/access'
+import { ALL_DOT_KEYS } from '../../constants/dots'
+import { convertTrueFalseKeysToBitNumber } from '../../helpers/bit-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
     isHeavyRenderReady,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
+    selectedDotKeys,
     selectedVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex
@@ -27,6 +30,7 @@ const mapStateToProps = ({
     isHeavyRenderReady,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
+    selectedDotKeys,
     selectedVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex
@@ -40,6 +44,7 @@ class LyricColumn extends Component {
 
     static propTypes = {
         // Through Redux.
+        selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.
         handleScrollAfterLyricRerender: PropTypes.func.isRequired
@@ -84,9 +89,21 @@ class LyricColumn extends Component {
                 updatingPropsArray: [
                     'isTransitioningHeight'
                 ]
-            })
+            }),
 
-        return componentShouldUpdate
+            thisHasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
+                keysArray: ALL_DOT_KEYS,
+                trueFalseObject: props.selectedDotKeys
+            })),
+
+            nextHasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
+                keysArray: ALL_DOT_KEYS,
+                trueFalseObject: nextProps.selectedDotKeys
+            })),
+
+            hasSelectedDotsChanged = thisHasSelectedDots !== nextHasSelectedDots
+
+        return componentShouldUpdate || hasSelectedDotsChanged
     }
 
     componentWillReceiveProps(nextProps) {
@@ -144,11 +161,19 @@ class LyricColumn extends Component {
         const { handleScrollAfterLyricRerender,
         /* eslint-enable no-unused-vars */
 
-                ...other } = this.props
+                selectedDotKeys,
+
+                ...other } = this.props,
+
+            hasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
+                keysArray: ALL_DOT_KEYS,
+                trueFalseObject: selectedDotKeys
+            }))
 
         return (
             <LyricColumnView {...other}
                 myRef={(node) => (this.myLyricColumn = node)}
+                hasSelectedDots={hasSelectedDots}
                 shouldOverrideAnimate={this.state.shouldOverrideAnimate}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
@@ -174,6 +199,7 @@ const lyricColumnViewPropTypes = {
 
     // From parent.
     myRef: PropTypes.func.isRequired,
+    hasSelectedDots: PropTypes.bool.isRequired,
     shouldOverrideAnimate: PropTypes.bool.isRequired,
     isTransitioningHeight: PropTypes.bool.isRequired,
     handleTransition: PropTypes.func.isRequired,
@@ -203,6 +229,7 @@ LyricColumnView = ({
 
     // From controller.
     myRef,
+    hasSelectedDots,
     shouldOverrideAnimate,
     isTransitioningHeight,
     handleTransition,
@@ -266,6 +293,7 @@ LyricColumnView = ({
                         ]}
                         accessKeysShown={Boolean(
                             selectedCarouselNavIndex &&
+                            hasSelectedDots &&
                             !selectedAnnotationIndex
                         )}
                     />
@@ -277,6 +305,7 @@ LyricColumnView = ({
                         ]}
                         accessKeysShown={Boolean(
                             selectedCarouselNavIndex &&
+                            hasSelectedDots &&
                             !selectedAnnotationIndex &&
                             interactivatedVerseIndex < 0
                         )}
