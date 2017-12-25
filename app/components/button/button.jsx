@@ -91,7 +91,10 @@ class Button extends Component {
                     </div>
                 </div>
                 {accessKey &&
-                    <div className="access-button-icon">
+                    <div className={classnames(
+                        'access-button-icon',
+                        { 'is-hidden': !isEnabled }
+                    )}>
                         {accessKey}
                     </div>
                 }
