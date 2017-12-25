@@ -259,7 +259,9 @@ LyricColumnView = ({
                         NAVIGATION_UP_KEY,
                         NAVIGATION_DOWN_KEY
                     ]}
-                    accessKeysShown={!selectedAnnotationIndex}
+                    accessKeysShown={Boolean(
+                        !selectedAnnotationIndex
+                    )}
                 />
 
                 <AccessIconsBlock
@@ -269,7 +271,10 @@ LyricColumnView = ({
                         NAVIGATION_RIGHT_KEY,
                         NAVIGATION_ENTER_KEY
                     ]}
-                    accessKeysShown={selectedCarouselNavIndex && !selectedAnnotationIndex}
+                    accessKeysShown={Boolean(
+                        selectedCarouselNavIndex &&
+                        !selectedAnnotationIndex
+                    )}
                 />
             </div>
         </div>
