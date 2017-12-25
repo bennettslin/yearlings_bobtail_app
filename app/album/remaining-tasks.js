@@ -87,11 +87,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
-    {
-        taskName: `Allow cursor to touch audio banner above keyboard access icons.`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     // Further in the future.
     {
