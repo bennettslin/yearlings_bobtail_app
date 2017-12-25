@@ -152,7 +152,8 @@ class EventManager extends Component {
             exemptOverview: true,
             exemptTips: true,
             exemptInteractivatedVerse: true,
-            exemptLyric: true
+            exemptLyric: true,
+            leaveOpenPopups: true
         })
         this._scrollElementIntoView(VERSE_SCROLL, interactivatedVerseIndex)
         return true
@@ -761,7 +762,8 @@ class EventManager extends Component {
         exemptInteractivatedVerse,
 
         continuePastClosingPopups,
-        justClosePopups
+        justClosePopups,
+        leaveOpenPopups
 
     }) {
 
@@ -769,23 +771,26 @@ class EventManager extends Component {
                 selectedTitleIndex,
                 selectedWikiIndex } = this.props
 
-        // If popup is open, close it and do nothing else.
-        if (selectedWikiIndex) {
-            this.props.selectWiki()
-            if (!continuePastClosingPopups) {
-                return
-            }
+        if (!leaveOpenPopups) {
 
-        } else if (selectedScoreIndex) {
-            this.props.selectScore(false)
-            if (!continuePastClosingPopups) {
-                return
-            }
+            // If popup is open, close it and do nothing else.
+            if (selectedWikiIndex) {
+                this.props.selectWiki()
+                if (!continuePastClosingPopups) {
+                    return
+                }
 
-        } else if (selectedTitleIndex) {
-            this.props.selectTitle(false)
-            if (!continuePastClosingPopups) {
-                return
+            } else if (selectedScoreIndex) {
+                this.props.selectScore(false)
+                if (!continuePastClosingPopups) {
+                    return
+                }
+
+            } else if (selectedTitleIndex) {
+                this.props.selectTitle(false)
+                if (!continuePastClosingPopups) {
+                    return
+                }
             }
         }
 
