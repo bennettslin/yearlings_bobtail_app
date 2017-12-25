@@ -1,26 +1,15 @@
 // Component to manually change played time and verse.
 
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import SliderAccess from './slider-access'
 import SliderCursor from './slider-cursor'
 import SliderScenes from './slider-scenes'
 import SliderStanzas from './slider-stanzas'
 import SliderVerses from './slider-verses'
 import SliderTimeBars from './slider-time-bars'
-
-import AccessIconsBlock from '../access/access-icons-block'
-import { NAVIGATION_ENTER_KEY,
-         AUDIO_REWIND_KEY,
-         AUDIO_FAST_FORWARD_KEY } from '../../constants/access'
-
-const mapStateToProps = ({
-    interactivatedVerseIndex
-}) => ({
-    interactivatedVerseIndex
-})
 
 /*************
  * CONTAINER *
@@ -61,8 +50,6 @@ class SliderSection extends Component {
  ****************/
 
 const sliderSectionViewPropTypes = {
-    // From Redux.
-    interactivatedVerseIndex: PropTypes.number,
 
     // From parent.
     handleTouchDown: PropTypes.func.isRequired
@@ -70,52 +57,35 @@ const sliderSectionViewPropTypes = {
 
 SliderSectionView = ({
 
-    interactivatedVerseIndex,
     handleTouchDown
 
-}) => {
+}) => (
+    <div
+        className={classnames(
+            'audio-banner',
+            'slider-block'
+        )}
+    >
+        <SliderStanzas />
+        <SliderVerses />
+        <SliderScenes />
+        <SliderTimeBars />
+        <SliderCursor />
 
-    return (
+        <SliderAccess />
+
+        {/* Handle touch interactions. */}
         <div
             className={classnames(
-                'audio-banner',
-                'slider-block'
+                'slider-bar',
+                'slider-touch-bar'
             )}
-        >
-            <SliderStanzas />
-            <SliderVerses />
-            <SliderScenes />
-            <SliderTimeBars />
-            <SliderCursor />
-            <AccessIconsBlock
-                className="rewind-forward"
-                accessIconKeys={[
-                    AUDIO_REWIND_KEY,
-                    AUDIO_FAST_FORWARD_KEY
-                ]}
-                accessKeysShown
-            />
-            <AccessIconsBlock
-                className="enter"
-                accessIconKeys={[
-                    NAVIGATION_ENTER_KEY
-                ]}
-                accessKeysShown={interactivatedVerseIndex >= 0}
-            />
-
-            {/* Handle touch interactions. */}
-            <div
-                className={classnames(
-                    'slider-bar',
-                    'slider-touch-bar'
-                )}
-                onMouseDown={handleTouchDown}
-                onTouchStart={handleTouchDown}
-            />
-        </div>
-    )
-}
+            onMouseDown={handleTouchDown}
+            onTouchStart={handleTouchDown}
+        />
+    </div>
+)
 
 SliderSectionView.propTypes = sliderSectionViewPropTypes
 
-export default connect(mapStateToProps)(SliderSection)
+export default SliderSection
