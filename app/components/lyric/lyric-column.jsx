@@ -21,13 +21,15 @@ const mapStateToProps = ({
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedVerseIndex,
-    sliderVerseIndex
+    sliderVerseIndex,
+    interactivatedVerseIndex
 }) => ({
     isHeavyRenderReady,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedVerseIndex,
-    sliderVerseIndex
+    sliderVerseIndex,
+    interactivatedVerseIndex
 })
 
 /*************
@@ -168,6 +170,7 @@ const lyricColumnViewPropTypes = {
     selectedCarouselNavIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
+    interactivatedVerseIndex: PropTypes.number.isRequired,
 
     // From parent.
     myRef: PropTypes.func.isRequired,
@@ -191,6 +194,7 @@ LyricColumnView = ({
     selectedCarouselNavIndex,
     selectedVerseIndex,
     sliderVerseIndex,
+    interactivatedVerseIndex,
 
     handleLyricColumnSelect,
     handleLyricSectionExpand,
@@ -265,15 +269,26 @@ LyricColumnView = ({
                 />
 
                 <AccessIconsBlock
-                    className="left-right-enter"
+                    className="left-right"
                     accessIconKeys={[
                         NAVIGATION_LEFT_KEY,
-                        NAVIGATION_RIGHT_KEY,
-                        NAVIGATION_ENTER_KEY
+                        NAVIGATION_RIGHT_KEY
                     ]}
                     accessKeysShown={Boolean(
                         selectedCarouselNavIndex &&
                         !selectedAnnotationIndex
+                    )}
+                />
+
+                <AccessIconsBlock
+                    className="enter"
+                    accessIconKeys={[
+                        NAVIGATION_ENTER_KEY
+                    ]}
+                    accessKeysShown={Boolean(
+                        selectedCarouselNavIndex &&
+                        !selectedAnnotationIndex &&
+                        interactivatedVerseIndex < 0
                     )}
                 />
             </div>
