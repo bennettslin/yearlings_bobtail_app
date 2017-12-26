@@ -5,23 +5,16 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from './nav-button'
 import { getBookColumnIndex } from '../../helpers/data-helper'
-import { getNavDirectionToAccessHighlight } from '../../helpers/access-helper'
 
 const mapStateToProps = ({
-    selectedSongIndex,
-    accessedNavSongIndex,
-    showSingleBookColumn
+    selectedSongIndex
 }) => ({
-    selectedSongIndex,
-    accessedNavSongIndex,
-    showSingleBookColumn
+    selectedSongIndex
 })
 
 const navBookButtonPropTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
-    accessedNavSongIndex: PropTypes.number.isRequired,
-    showSingleBookColumn: PropTypes.bool.isRequired,
 
     // From parent.
     bookIndex: PropTypes.number.isRequired
@@ -30,26 +23,17 @@ const navBookButtonPropTypes = {
 NavBookButton = ({
 
     selectedSongIndex,
-    accessedNavSongIndex,
-    showSingleBookColumn,
     bookIndex,
 
 ...other }) => {
 
     const hasSelectedSong =
-        bookIndex === getBookColumnIndex(selectedSongIndex),
-
-        directionKey = getNavDirectionToAccessHighlight({
-            bookIndex,
-            accessedNavSongIndex,
-            showSingleBookColumn
-        })
+        bookIndex === getBookColumnIndex(selectedSongIndex)
 
     return (
         <div className="nav-book toggle">
             <NavButton {...other}
                 isSelected={hasSelectedSong}
-                directionKey={directionKey}
                 bookIndex={bookIndex}
             />
         </div>

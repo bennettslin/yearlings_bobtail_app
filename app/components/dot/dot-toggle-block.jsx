@@ -4,7 +4,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import DotToggleButton from './dot-toggle-button'
-import { getDotDirectionToAccessHighlight } from '../../helpers/access-helper'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
 const mapStateToProps = ({
@@ -37,17 +36,11 @@ DotToggleBlock = ({
             <div className="dots-toggle-row">
                 {firstHalfArray.map((dotKey, firstHalfIndex) => {
 
-                    const firstHalfDirectionKey =
-                        getDotDirectionToAccessHighlight({
-                            dotIndex: firstHalfIndex,
-                            accessedDotIndex
-                        }),
-                        accessHighlighted = accessedDotIndex === firstHalfIndex
+                    const accessHighlighted = accessedDotIndex === firstHalfIndex
 
                     return (
                         <DotToggleButton {...other}
                             key={firstHalfIndex}
-                            directionKey={firstHalfDirectionKey}
                             dotIndex={firstHalfIndex}
                             dotKey={dotKey}
                             isSelected={dotKeys[dotKey]}
@@ -60,17 +53,11 @@ DotToggleBlock = ({
                 {secondHalfArray.map((dotKey, index) => {
 
                     const secondHalfIndex = index + firstHalfEnd,
-                        secondHalfDirectionKey =
-                            getDotDirectionToAccessHighlight({
-                            dotIndex: secondHalfIndex,
-                            accessedDotIndex
-                        }),
                         accessHighlighted = accessedDotIndex === secondHalfIndex
 
                     return (
                         <DotToggleButton {...other}
                             key={index}
-                            directionKey={secondHalfDirectionKey}
                             dotIndex={secondHalfIndex}
                             dotKey={dotKey}
                             isSelected={dotKeys[dotKey]}

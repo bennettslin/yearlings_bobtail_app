@@ -19,7 +19,6 @@ class NavButton extends Component {
         bookIndex: PropTypes.number,
         songIndex: PropTypes.number,
         accessHighlighted: PropTypes.bool,
-        directionKey: PropTypes.string,
         isSelected: PropTypes.bool.isRequired,
         handleButtonClick: PropTypes.func.isRequired
     }
@@ -38,7 +37,6 @@ class NavButton extends Component {
                 updatingPropsArray: [
                     'isSelected',
                     'accessHighlighted',
-                    'directionKey'
                 ]
             })
 
@@ -108,7 +106,6 @@ const navButtonViewPropTypes = {
     // From parent.
     isSelected: PropTypes.bool.isRequired,
     accessHighlighted: PropTypes.bool,
-    directionKey: PropTypes.string,
     iconText: PropTypes.string.isRequired,
     bookIndex: PropTypes.number,
     songIndex: PropTypes.number,
@@ -123,7 +120,6 @@ NavButtonView = ({
     bookIndex,
     songIndex,
     accessHighlighted,
-    directionKey,
 
     // From controller.
     isLeftmost,
@@ -131,16 +127,10 @@ NavButtonView = ({
 
 ...other }) => {
 
-    // const { isSelected } = other
-
     let accessKey
 
     if (accessHighlighted) {
         accessKey = NAVIGATION_ENTER_KEY
-
-    } else if (directionKey) {
-        accessKey = directionKey
-
     }
 
     return (

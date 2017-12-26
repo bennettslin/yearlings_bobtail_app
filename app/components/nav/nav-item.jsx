@@ -4,7 +4,6 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from './nav-button'
-import { getNavDirectionToAccessHighlight } from '../../helpers/access-helper'
 
 const mapStateToProps = ({
     selectedSongIndex,
@@ -31,25 +30,17 @@ NavItem = ({
     songIndex,
     selectedSongIndex,
     accessedNavSongIndex,
-    showSingleBookColumn,
 
 ...other }) => {
 
     const isSelected = selectedSongIndex === songIndex,
-        accessHighlighted = accessedNavSongIndex === songIndex,
-
-        directionKey = getNavDirectionToAccessHighlight({
-            songIndex,
-            accessedNavSongIndex,
-            showSingleBookColumn
-        })
+        accessHighlighted = accessedNavSongIndex === songIndex
 
     return (
         <NavButton {...other}
             songIndex={songIndex}
             isSelected={isSelected}
             accessHighlighted={accessHighlighted}
-            directionKey={directionKey}
         />
     )
 }

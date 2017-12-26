@@ -26,7 +26,6 @@ class DotToggleButton extends Component {
 
         // From parent.
         dotIndex: PropTypes.number.isRequired,
-        directionKey: PropTypes.string,
         hasInteractivatedDotText: PropTypes.number.isRequired,
         setHasInteractivatedDotText: PropTypes.func.isRequired,
         stopPropagation: PropTypes.func.isRequired,
@@ -109,7 +108,6 @@ const dotToggleButtonViewPropTypes = {
     // From parent.
     dotKey: PropTypes.string.isRequired,
     accessHighlighted: PropTypes.bool.isRequired,
-    directionKey: PropTypes.string,
     isSelected: PropTypes.bool.isRequired,
     isInteractivated: PropTypes.bool.isRequired,
     handleDotToggleClick: PropTypes.func.isRequired,
@@ -121,7 +119,6 @@ DotToggleButtonView = ({
     // From props.
     dotKey,
     accessHighlighted,
-    directionKey,
     isSelected,
 
     // From controller.
@@ -135,10 +132,6 @@ DotToggleButtonView = ({
 
     if (accessHighlighted) {
         accessKey = NAVIGATION_ENTER_KEY
-
-    } else if (directionKey) {
-        accessKey = directionKey
-
     }
 
     return (
