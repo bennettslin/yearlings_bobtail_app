@@ -41,7 +41,7 @@ module.exports = {
     // Percentage height of tiles plus a margin, arbitrary for now.
     STAGE_FLOOR_PERCENTAGE: stageYPercentage + 2,
 
-    STAGE_ASPECT_RATIO: 1.2,
+    STAGE_ASPECT_RATIO: 1.66, // Was 1.2.
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE: 1.05,
     VANISHING_POINT_Y_PERCENTAGE: 50,
     TILE_Y_PERCENTAGES,
