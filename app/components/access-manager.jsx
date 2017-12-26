@@ -349,13 +349,17 @@ class AccessManager extends Component {
 
     _handleNavNavigation(e, keyName) {
         const { selectedAccessIndex,
+                interactivatedVerseIndex,
                 eventHandlers } = this.props
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
-        // If access is off, just turn it on.
-        if (selectedAccessIndex) {
+        /**
+         * If access is off, just turn it on. Also ensure there is no
+         * interactivated verse.
+         */
+        if (selectedAccessIndex && interactivatedVerseIndex < 0) {
             let { accessedNavSongIndex } = this.props,
                 direction
 

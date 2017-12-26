@@ -2672,4 +2672,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Disable nav access when verse is interactivated`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
