@@ -83,9 +83,19 @@ module.exports = [
 
     // Full day tasks.
     {
-        taskName: `Logic for showing keyboard access icons in dots and annotations`,
+        taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 2
+    },
+    {
+        taskName: `Show left/right/enter access keys in general area on nav.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Show up/down/left/right/enter access keys in general area on dots section.`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     // Further in the future.

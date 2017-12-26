@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
+import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { DOT_DESCRIPTIONS } from '../../constants/dots'
 
 const mapStateToProps = ({
@@ -25,6 +26,7 @@ class DotToggleButton extends Component {
 
         // From parent.
         dotIndex: PropTypes.number.isRequired,
+        directionKey: PropTypes.string,
         hasInteractivatedDotText: PropTypes.number.isRequired,
         setHasInteractivatedDotText: PropTypes.func.isRequired,
         stopPropagation: PropTypes.func.isRequired,
@@ -107,6 +109,7 @@ const dotToggleButtonViewPropTypes = {
     // From parent.
     dotKey: PropTypes.string.isRequired,
     accessHighlighted: PropTypes.bool.isRequired,
+    directionKey: PropTypes.string,
     isSelected: PropTypes.bool.isRequired,
     isInteractivated: PropTypes.bool.isRequired,
     handleDotToggleClick: PropTypes.func.isRequired,
@@ -118,6 +121,7 @@ DotToggleButtonView = ({
     // From props.
     dotKey,
     accessHighlighted,
+    directionKey,
     isSelected,
 
     // From controller.
@@ -125,51 +129,65 @@ DotToggleButtonView = ({
     handleDotToggleClick,
     handleTextContainerClick
 
-}) => (
-    <div className={classnames(
-        'dot-container'
-    )}>
-        <a
-            className="dot-section-anchor"
-            onClick={handleTextContainerClick}
-            onTouchStart={handleTextContainerClick}
-        >
-            <span className={classnames(
-                'anchor-block',
-                'text-anchor-block',
-                'in-dots-section',
-                { 'selected': isInteractivated,
-                  'access-highlighted': accessHighlighted }
-            )}>
-                <span className="underline-bar" />
-                <span className="text-span">{dotKey}</span>
-            </span>
-        </a>
+}) => {
+
+    let accessKey
+
+    if (accessHighlighted) {
+        accessKey = NAVIGATION_ENTER_KEY
+
+    } else if (directionKey) {
+        accessKey = directionKey
+
+    }
+
+    return (
         <div className={classnames(
-            'anchor-block',
-            'dot-anchor',
-            { 'access-highlighted': accessHighlighted }
+            'dot-container'
         )}>
-            <Button
-                buttonClass="dot"
-                iconClass={dotKey}
-                isDeselected={!isSelected}
-                isOverflowShown={true}
-                handleClick={handleDotToggleClick}
-                extraChild={(
-                    <div className={classnames(
-                        'dot-description',
-                        { 'interactivated': isInteractivated }
-                    )}>
-                        <span>
-                            {DOT_DESCRIPTIONS[dotKey]}
-                        </span>
-                    </div>
-                )}
-            />
+            <a
+                className="dot-section-anchor"
+                onClick={handleTextContainerClick}
+                onTouchStart={handleTextContainerClick}
+            >
+                <span className={classnames(
+                    'anchor-block',
+                    'text-anchor-block',
+                    'in-dots-section',
+                    { 'selected': isInteractivated,
+                      'access-highlighted': accessHighlighted }
+                )}>
+                    <span className="underline-bar" />
+                    <span className="text-span">{dotKey}</span>
+                </span>
+            </a>
+            <div className={classnames(
+                'anchor-block',
+                'dot-anchor',
+                { 'access-highlighted': accessHighlighted }
+            )}>
+                <Button
+                    accessKey={accessKey}
+                    buttonClass="dot"
+                    iconClass={dotKey}
+                    isDeselected={!isSelected}
+                    isOverflowShown={true}
+                    handleClick={handleDotToggleClick}
+                    extraChild={(
+                        <div className={classnames(
+                            'dot-description',
+                            { 'interactivated': isInteractivated }
+                        )}>
+                            <span>
+                                {DOT_DESCRIPTIONS[dotKey]}
+                            </span>
+                        </div>
+                    )}
+                />
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 DotToggleButtonView.propTypes = dotToggleButtonViewPropTypes
 
