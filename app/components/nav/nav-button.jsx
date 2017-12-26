@@ -5,9 +5,7 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import Button from '../button/button'
 import NavPanel from './nav-panel'
-import { NAVIGATION_ENTER_KEY,
-         NAVIGATION_LEFT_KEY,
-         NAVIGATION_RIGHT_KEY } from '../../constants/access'
+import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { getSongIsLogue } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
 
@@ -21,8 +19,7 @@ class NavButton extends Component {
         bookIndex: PropTypes.number,
         songIndex: PropTypes.number,
         accessHighlighted: PropTypes.bool,
-        leftOfAccessHighlight: PropTypes.bool,
-        rightOfAccessHighlight: PropTypes.bool,
+        directionKey: PropTypes.string,
         isSelected: PropTypes.bool.isRequired,
         handleButtonClick: PropTypes.func.isRequired
     }
@@ -41,8 +38,7 @@ class NavButton extends Component {
                 updatingPropsArray: [
                     'isSelected',
                     'accessHighlighted',
-                    'leftOfAccessHighlight',
-                    'rightOfAccessHighlight'
+                    'directionKey'
                 ]
             })
 
@@ -112,8 +108,7 @@ const navButtonViewPropTypes = {
     // From parent.
     isSelected: PropTypes.bool.isRequired,
     accessHighlighted: PropTypes.bool,
-    leftOfAccessHighlight: PropTypes.bool,
-    rightOfAccessHighlight: PropTypes.bool,
+    directionKey: PropTypes.string,
     iconText: PropTypes.string.isRequired,
     bookIndex: PropTypes.number,
     songIndex: PropTypes.number,
@@ -128,8 +123,7 @@ NavButtonView = ({
     bookIndex,
     songIndex,
     accessHighlighted,
-    leftOfAccessHighlight,
-    rightOfAccessHighlight,
+    directionKey,
 
     // From controller.
     isLeftmost,
@@ -144,11 +138,9 @@ NavButtonView = ({
     if (accessHighlighted) {
         accessKey = NAVIGATION_ENTER_KEY
 
-    } else if (leftOfAccessHighlight) {
-        accessKey = NAVIGATION_LEFT_KEY
+    } else if (directionKey) {
+        accessKey = directionKey
 
-    } else if (rightOfAccessHighlight) {
-        accessKey = NAVIGATION_RIGHT_KEY
     }
 
     return (

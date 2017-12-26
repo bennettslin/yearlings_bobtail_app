@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from './nav-button'
 import { getBookColumnIndex } from '../../helpers/data-helper'
-import { getLeftOrRightOfAccessHighlight } from '../../helpers/nav-helper'
+import { getNavDirectionToAccessHighlight } from '../../helpers/access-helper'
 
 const mapStateToProps = ({
     selectedSongIndex,
@@ -39,8 +39,7 @@ NavBookButton = ({
     const hasSelectedSong =
         bookIndex === getBookColumnIndex(selectedSongIndex),
 
-        { leftOfAccessHighlight,
-          rightOfAccessHighlight } = getLeftOrRightOfAccessHighlight({
+        directionKey = getNavDirectionToAccessHighlight({
             bookIndex,
             accessedNavSongIndex,
             showSingleBookColumn
@@ -50,8 +49,7 @@ NavBookButton = ({
         <div className="nav-book toggle">
             <NavButton {...other}
                 isSelected={hasSelectedSong}
-                leftOfAccessHighlight={leftOfAccessHighlight}
-                rightOfAccessHighlight={rightOfAccessHighlight}
+                directionKey={directionKey}
                 bookIndex={bookIndex}
             />
         </div>

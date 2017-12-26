@@ -1,9 +1,35 @@
+import { NAVIGATION_LEFT_KEY,
+         NAVIGATION_RIGHT_KEY } from '../constants/access'
+
+export const getDotDirectionToAccessHighlight = ({
+
+    dotIndex,
+    accessedDotIndex
+
+}) => {
+    let leftOfAccessHighlight,
+        rightOfAccessHighlight,
+        aboveAccessHighlight,
+        belowAccessHighlight
+
+    console.error('dotIndex, accessedDotIndex', dotIndex, accessedDotIndex)
+
+    return {
+        leftOfAccessHighlight,
+        rightOfAccessHighlight,
+        aboveAccessHighlight,
+        belowAccessHighlight
+    }
+}
+
 // Check if at least one present key is selected.
-export const getLeftOrRightOfAccessHighlight = ({
+export const getNavDirectionToAccessHighlight = ({
+
     bookIndex,
     songIndex,
     accessedNavSongIndex,
     showSingleBookColumn
+
 }) => {
     let leftOfAccessHighlight,
         rightOfAccessHighlight
@@ -52,6 +78,11 @@ export const getLeftOrRightOfAccessHighlight = ({
         }
     }
 
-    return { leftOfAccessHighlight,
-             rightOfAccessHighlight }
+    if (leftOfAccessHighlight) {
+        return NAVIGATION_LEFT_KEY
+    } else if (rightOfAccessHighlight) {
+        return NAVIGATION_RIGHT_KEY
+    } else {
+        return ''
+    }
 }

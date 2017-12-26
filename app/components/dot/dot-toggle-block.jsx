@@ -4,6 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import DotToggleButton from './dot-toggle-button'
+import { getDotDirectionToAccessHighlight } from '../../helpers/access-helper'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
 const mapStateToProps = ({
@@ -34,26 +35,46 @@ DotToggleBlock = ({
     return (
         <span className="dots-block dots-toggle-block">
             <div className="dots-toggle-row">
-                {firstHalfArray.map((dotKey, index) => (
-                    <DotToggleButton {...other}
-                        key={index}
-                        dotIndex={index}
-                        dotKey={dotKey}
-                        isSelected={dotKeys[dotKey]}
-                        accessHighlighted={accessedDotIndex === index}
-                    />
-                ))}
+                {firstHalfArray.map((dotKey, firstHalfIndex) => {
+
+                    const firstHalfDirectionKey =
+                        getDotDirectionToAccessHighlight({
+                            dotIndex: firstHalfIndex,
+                            accessedDotIndex
+                        }),
+                        accessHighlighted = accessedDotIndex === firstHalfIndex
+
+                    return (
+                        <DotToggleButton {...other}
+                            key={firstHalfIndex}
+                            directionKey={firstHalfDirectionKey}
+                            dotIndex={firstHalfIndex}
+                            dotKey={dotKey}
+                            isSelected={dotKeys[dotKey]}
+                            accessHighlighted={accessHighlighted}
+                        />
+                    )
+                })}
             </div>
             <div className="dots-toggle-row">
                 {secondHalfArray.map((dotKey, index) => {
-                    const secondHalfIndex = index + firstHalfEnd;
+
+                    const secondHalfIndex = index + firstHalfEnd,
+                        secondHalfDirectionKey =
+                            getDotDirectionToAccessHighlight({
+                            dotIndex: secondHalfIndex,
+                            accessedDotIndex
+                        }),
+                        accessHighlighted = accessedDotIndex === secondHalfIndex
+
                     return (
                         <DotToggleButton {...other}
                             key={index}
+                            directionKey={secondHalfDirectionKey}
                             dotIndex={secondHalfIndex}
                             dotKey={dotKey}
                             isSelected={dotKeys[dotKey]}
-                            accessHighlighted={accessedDotIndex === secondHalfIndex}
+                            accessHighlighted={accessHighlighted}
                         />
                     )
                 })}

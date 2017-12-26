@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from './nav-button'
-import { getLeftOrRightOfAccessHighlight } from '../../helpers/nav-helper'
+import { getNavDirectionToAccessHighlight } from '../../helpers/access-helper'
 
 const mapStateToProps = ({
     selectedSongIndex,
@@ -38,8 +38,7 @@ NavItem = ({
     const isSelected = selectedSongIndex === songIndex,
         accessHighlighted = accessedNavSongIndex === songIndex,
 
-        { leftOfAccessHighlight,
-          rightOfAccessHighlight } = getLeftOrRightOfAccessHighlight({
+        directionKey = getNavDirectionToAccessHighlight({
             songIndex,
             accessedNavSongIndex,
             showSingleBookColumn
@@ -50,8 +49,7 @@ NavItem = ({
             songIndex={songIndex}
             isSelected={isSelected}
             accessHighlighted={accessHighlighted}
-            leftOfAccessHighlight={leftOfAccessHighlight}
-            rightOfAccessHighlight={rightOfAccessHighlight}
+            directionKey={directionKey}
         />
     )
 }

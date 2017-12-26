@@ -104,7 +104,7 @@ DotsSectionView = ({
 ...other }) => (
 
     <div
-        className="section dots-section"
+        className="section dots-section access-keys-shown"
         onClick={handleContainerClick}
         onTouchStart={handleContainerClick}
     >
