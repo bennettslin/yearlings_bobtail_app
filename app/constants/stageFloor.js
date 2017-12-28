@@ -50,7 +50,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     PLAYGROUND_TILES = {
-        // Raised nurse's office bench.
+        // Raised nurse's office bench is 1.5'.
         zIndices: [
             [1],
             [1],
@@ -69,7 +69,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     CHILDHOOD_BATHROOM_TILES = {
-        // Raised bathtub.
+        // Indoor wall is 7.5'. Raised bathtub.
         zIndices: [
             [0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 0],
             [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
@@ -88,7 +88,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     FREEWAY_TILES = {
-        // Raised overpass.
+        // Solid overpass wall is 1.5'. Fence will extend higher.
         zIndices: [
             [0],
             [8],
@@ -102,10 +102,9 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     PORCH_TILES = {
+        // Outdoor wall is 8'.
         zIndices: [
-            [1, 1, 1, 18, 18, 18, 18, 18, 18, 1],
-            [1, 1, 1, 4, 4, 4, 4, 4, 4, 1],
-            [1, 1, 1, 4, 4, 4, 4, 4, 4, 1],
+            [17, 17, 17, 19, 19, 19, 19, 19, 19, 17],
             [1, 1, 1, 3, 3, 3, 3, 3, 3, 1],
             [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
             [1]
@@ -132,7 +131,9 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     SCHOOLBUS_TILES = {
-        // https://www.the-blueprints.com/blueprints/buses/international-buses/56427/view/international_school_bus_%281992%29/
+        // Assume height of 9'.
+        /** https://www.the-blueprints.com/blueprints/buses/international-buses/56427/view/international_school_bus_%281992%29/
+         */
         zIndices: [
             [0],
             [0, 18, 9, 9, 9, 9, 9, 9, 18, 18, 9, 0],
@@ -154,39 +155,40 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     ODIN_SCENE_1_TILES = {
+        // Indoor wall is 7.5'. Floor of 2' to imply second story.
         zIndices: [
-            [4],
-            [4],
-            [4],
-            [16, 16, 16, 16, 16, 16, 4, 4, 4, 16],
-            [4],
-            [4]
+            [5],
+            [5],
+            [5],
+            [20, 20, 20, 20, 20, 20, 5, 5, 5, 20],
+            [5],
+            [5]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     ODIN_SCENE_2_TILES = {
-        // Stairwell down.
+        // Windowsill height of 3'.
         zIndices: [
-            [16, 16, 16, 8, 8, 8, 8, 8, 8, 16],
-            [16, 4, 4, 3, 2, 1, 0],
-            [16, 4, 4, 3, 2, 1, 0],
-            [16, 4, 4, 3, 2, 1, 0],
-            [16, 4]
+            [20, 20, 20, 11, 11, 11, 11, 11, 11, 20],
+            [20, 5, 5, 4, 3, 2, 1, 0],
+            [20, 5, 5, 4, 3, 2, 1, 0],
+            [20, 5, 5, 4, 3, 2, 1, 0],
+            [20, 5, 5]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     ODIN_SCENE_3_TILES = {
-        // House wall.
+        // House wall is 6'.
         zIndices: [
-            [1, 1, 14, 1, 1, 1, 0],
-            [1, 1, 14, 1, 1, 1, 0],
-            [1, 1, 14, 1, 1, 1, 0],
-            [1, 1, 14, 1, 1, 1, 0],
-            [1, 1, 14, 1, 1, 1, 0],
+            [1, 1, 13, 1, 1, 1, 0],
+            [1, 1, 13, 1, 1, 1, 0],
+            [1, 1, 13, 1, 1, 1, 0],
+            [1, 1, 13, 1, 1, 1, 0],
+            [1, 1, 13, 1, 1, 1, 0],
             [1, 1, 1, 1, 1, 1, 0]
         ],
         colours: [
@@ -249,11 +251,12 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     PRETEEN_BENNETT_ROOM_TILES = {
+        // Captain bed height is 3.5'.
         zIndices: [
             [1],
-            [1, 1, 1, 1, 1, 1, 6, 6, 6, 1],
-            [1, 1, 5, 5, 1, 1, 1, 6, 6, 6, 1],
-            [1, 5, 5, 1, 1, 1, 1, 1, 6],
+            [1, 1, 1, 1, 1, 1, 8, 8, 8, 1],
+            [1, 1, 5, 5, 1, 1, 1, 8, 8, 8, 1],
+            [1, 5, 5, 1, 1, 1, 1, 1, 8, 8, 8, 1],
             [1]
         ],
         colours: [
@@ -276,9 +279,9 @@ const DEFAULT_STAGE_TILES = {
         // TODO: Figure out.
         zIndices: [
             [1],
-            [1, 1, 1, 1, 1, 1, 6, 6, 6, 1],
-            [1, 1, 1, 1, 1, 1, 1, 6, 6, 6, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 6],
+            [1, 1, 1, 1, 1, 1, 8, 8, 8, 1],
+            [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 8, 8, 8, 1],
             [1]
         ],
         colours: [
@@ -299,7 +302,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     JUNIOR_HIGH_LOCKERS_TILES = {
-        // Overall height of lockers is 78".
+        // Overall height of lockers is 6.5'.
         zIndices: [
             [1],
             [1],
@@ -324,6 +327,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     JUNIOR_HIGH_HALLWAY_TILES = {
+        // Indoor wall is 7.5'.
         zIndices: [
             [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
             [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
@@ -337,7 +341,11 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     BENNETT_APARTMENT_COURTYARD_TILES = {
+        // Outdoor wall is 8'. Windowsill height is 3'.
         zIndices: [
+            [1, 17],
+            [1, 17, 1],
+            [1, 17, 7, 7, 7, 7, 17, 1, 1, 1, 17],
             [1]
         ],
         colours: [
@@ -345,14 +353,26 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     BENNETT_APARTMENT_COUCH_TILES = {
-        // Couch seat cushions add extra half foot.
+        // Indoor wall is 7.5'. Couch seat cushions add extra 0.5'.
         zIndices: [
-            [1],
             [16],
             [16, 1, 1, 7, 7, 7, 7, 7, 1, 1, 1, 16],
             [16, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 16],
             [16, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 16],
             [16, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 16]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    BENNETT_APARTMENT_COUCH_THOUGHT_TILES = {
+        // Couch seat cushions add extra half foot.
+        zIndices: [
+            [1],
+            [1, 1, 1, 7, 7, 7, 7, 7, 1],
+            [1, 1, 4, 3, 3, 3, 3, 3, 1],
+            [1, 1, 4, 3, 3, 3, 3, 3, 1],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -373,7 +393,11 @@ const DEFAULT_STAGE_TILES = {
     },
     BERKELEY_CAMPUS_1_TILES = {
         zIndices: [
-            [0]
+            [1, 9, 3, 19],
+            [1, 9, 3],
+            [1, 9, 9, 9, 9, 9, 9, 9, 3, 3, 3, 9],
+            [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -381,16 +405,21 @@ const DEFAULT_STAGE_TILES = {
     },
     BERKELEY_CAMPUS_2_TILES = {
         zIndices: [
-            [0]
+            [19, 19, 19, 3, 9, 1],
+            [3, 3, 3, 3, 9, 1],
+            [9, 9, 9, 9, 9, 1],
+            [1],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     JACOB_APARTMENT_TILES = {
+        // Basement wall is 6', depth is 2.5'.
         zIndices: [
-            [16, 16, 16, 16, 16, 16, 16, 16, 16, 6, 6, 16],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0],
+            [17, 17, 17, 17, 17, 17, 17, 17, 17, 5, 5, 17],
+            [5],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0],
@@ -401,10 +430,11 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     MOVIE_THEATRE_1_TILES = {
+        // Outdoor wall is 8'.
         zIndices: [
-            [18],
-            [18, 18, 18, 1, 1, 1, 1, 1, 1, 18],
-            [18, 18, 18, 1, 1, 1, 1, 1, 1, 18],
+            [17],
+            [17, 17, 17, 1, 1, 1, 1, 1, 1, 17],
+            [17, 17, 17, 1, 1, 1, 1, 1, 1, 17],
             [1],
             [1],
             [0]
@@ -415,9 +445,9 @@ const DEFAULT_STAGE_TILES = {
     },
     MOVIE_THEATRE_2_TILES = {
         zIndices: [
-            [18, 18, 18, 1, 1, 1, 0],
-            [18, 18, 18, 1, 1, 1, 0],
-            [18, 18, 18, 1, 1, 1, 0],
+            [17, 17, 17, 1, 1, 1, 0],
+            [17, 17, 17, 1, 1, 1, 0],
+            [17, 17, 17, 1, 1, 1, 0],
             [1],
             [1],
             [0]
@@ -533,8 +563,9 @@ const DEFAULT_STAGE_TILES = {
     },
 
     SHOW_STAGE_FRONT_TILES = {
+        // Indoor wall of club is 9'. Club stage is 2.5'.
         zIndices: [
-            [18],
+            [19],
             [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
@@ -548,7 +579,7 @@ const DEFAULT_STAGE_TILES = {
 
     SHOW_STAGE_SIDE_1_TILES = {
         zIndices: [
-            [18],
+            [19],
             [6, 6, 6, 1],
             [6, 6, 6, 1],
             [6, 6, 6, 1],
@@ -561,7 +592,7 @@ const DEFAULT_STAGE_TILES = {
     },
     SHOW_STAGE_SIDE_2_TILES = {
         zIndices: [
-            [18],
+            [19],
             [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
@@ -772,6 +803,7 @@ module.exports = {
     JUNIOR_HIGH_HALLWAY_TILES,
     BENNETT_APARTMENT_COURTYARD_TILES,
     BENNETT_APARTMENT_COUCH_TILES,
+    BENNETT_APARTMENT_COUCH_THOUGHT_TILES,
     CATHOLIC_CHURCH_TILES,
     BERKELEY_CAMPUS_1_TILES,
     BERKELEY_CAMPUS_2_TILES,

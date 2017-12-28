@@ -10,7 +10,7 @@ import { VERSES,
          BRIDGE,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { BENNETT_APARTMENT_COURTYARD_TILES,
-         BENNETT_APARTMENT_COUCH_TILES,
+         BENNETT_APARTMENT_COUCH_THOUGHT_TILES,
          CATHOLIC_CHURCH_TILES,
          BERKELEY_CAMPUS_1_TILES,
          BERKELEY_CAMPUS_2_TILES } from '../constants/stageFloor'
@@ -54,7 +54,7 @@ module.exports = {
                     description: 'sitting upright, droll smile'
                 }
             },
-            tiles: BENNETT_APARTMENT_COUCH_TILES,
+            tiles: BENNETT_APARTMENT_COUCH_THOUGHT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_SPRING
