@@ -15,7 +15,7 @@ const AdminToggle = ({
     windowWidth,
     windowHeight
 
-}) => (
+}) => null && (
     <div className="admin-toggle">
         <div>
             isHeavyRenderReady: {isHeavyRenderReady ? 'true' : 'false'}

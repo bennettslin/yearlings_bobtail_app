@@ -114,18 +114,6 @@ const DEFAULT_STAGE_TILES = {
             [STAGE_COLOUR]
         ]
     },
-    PRETEEN_BENNETT_ROOM_TILES = {
-        zIndices: [
-            [1],
-            [1, 1, 1, 1, 1, 1, 6, 6, 6, 1],
-            [1, 1, 5, 5, 1, 1, 1, 6, 6, 6, 1],
-            [1, 5, 5, 1, 1, 1, 1, 1, 6],
-            [1]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
     CHANGELING_CAVE_TILES = {
         zIndices: [
             [0]
@@ -135,15 +123,22 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     TAIWAN_PUPPET_SHOW_TILES = {
+        // Just panels.
         zIndices: [
-            [0]
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     SCHOOLBUS_TILES = {
+        // https://www.the-blueprints.com/blueprints/buses/international-buses/56427/view/international_school_bus_%281992%29/
         zIndices: [
+            [0],
+            [0, 18, 9, 9, 9, 9, 9, 9, 18, 18, 9, 0],
+            [0, 18, 6, 6, 3, 6, 6, 3, 18, 18, 9, 0],
+            [0, 18, 6, 6, 3, 6, 6, 3, 18, 18, 9, 0],
+            [0, 18, 3, 3, 3, 3, 3, 3, 18, 18, 9, 0],
             [0]
         ],
         colours: [
@@ -152,7 +147,7 @@ const DEFAULT_STAGE_TILES = {
     },
     TETHERBALL_SCENE_TILES = {
         zIndices: [
-            [0]
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -253,6 +248,18 @@ const DEFAULT_STAGE_TILES = {
             [STAGE_COLOUR]
         ]
     },
+    PRETEEN_BENNETT_ROOM_TILES = {
+        zIndices: [
+            [1],
+            [1, 1, 1, 1, 1, 1, 6, 6, 6, 1],
+            [1, 1, 5, 5, 1, 1, 1, 6, 6, 6, 1],
+            [1, 5, 5, 1, 1, 1, 1, 1, 6],
+            [1]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
     PRETEEN_BENNETT_ROOM_OPEN_BED_TILES = {
         zIndices: [
             [1],
@@ -331,7 +338,7 @@ const DEFAULT_STAGE_TILES = {
     },
     BENNETT_APARTMENT_COURTYARD_TILES = {
         zIndices: [
-            [0]
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -340,6 +347,7 @@ const DEFAULT_STAGE_TILES = {
     BENNETT_APARTMENT_COUCH_TILES = {
         // Couch seat cushions add extra half foot.
         zIndices: [
+            [1],
             [16],
             [16, 1, 1, 7, 7, 7, 7, 7, 1, 1, 1, 16],
             [16, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 16],
@@ -352,7 +360,12 @@ const DEFAULT_STAGE_TILES = {
     },
     CATHOLIC_CHURCH_TILES = {
         zIndices: [
-            [0]
+            [0],
+            [0],
+            [0],
+            [0],
+            [1],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
