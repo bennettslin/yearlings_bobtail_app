@@ -1,4 +1,4 @@
-import { DEFAULT_STAGE_TILES } from '../constants/stageFloor'
+import { LOGUE_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {
@@ -192,7 +192,7 @@ module.exports = {
                     description: 'standing'
                 }
             },
-            tiles: DEFAULT_STAGE_TILES,
+            tiles: LOGUE_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_NO_SEASON

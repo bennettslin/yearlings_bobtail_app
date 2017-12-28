@@ -6,8 +6,8 @@ module.exports = {
     LAWN_COLOUR: 'green',
     STAGE_COLOUR: 'brown',
     STREET_COLOUR: 'black',
-    SIDEWALK_COLOUR: 'gray',
-    FURNITURE_COLOUR: '#bbb',
+    SIDEWALK_COLOUR: 'blue',
+    FURNITURE_COLOUR: 'brown',
 
     // Sky times and seasons.
     SKY_NO_TIME: 'noTime',

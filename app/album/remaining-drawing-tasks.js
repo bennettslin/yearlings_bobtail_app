@@ -45,6 +45,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
+    {
+        taskName: `Figure out stage floor tiles.`,
+        workedHours: 8,
+        neededHours: 16
+    },
 
     /**
      * Window scenes.

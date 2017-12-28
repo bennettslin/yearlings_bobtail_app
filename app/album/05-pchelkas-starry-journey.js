@@ -14,6 +14,9 @@ import { VERSES,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { PRETEEN_BENNETT_ROOM_TILES,
+         PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
+         PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES,
+         PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES,
          JUNIOR_HIGH_LOCKERS_TILES,
          JUNIOR_HIGH_QUAD_TILES,
          JUNIOR_HIGH_HALLWAY_TILES } from '../constants/stageFloor'
@@ -40,7 +43,7 @@ module.exports = {
                     description: 'w sitting, blissful'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_TILES,
+            tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_WINTER
@@ -72,7 +75,7 @@ module.exports = {
                     description: 'in bed, asleep, turned away'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_TILES,
+            tiles: PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_WINTER
@@ -88,7 +91,7 @@ module.exports = {
                     description: 'side, sitting, shaken, scared'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_TILES,
+            tiles: PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_WINTER

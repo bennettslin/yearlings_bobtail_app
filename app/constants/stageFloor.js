@@ -18,6 +18,19 @@ const DEFAULT_STAGE_TILES = {
             [STAGE_COLOUR]
         ]
     },
+    LOGUE_TILES = {
+        zIndices: [
+            [0],
+            [0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 0],
+            [0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 0],
+            [0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
     CHILDHOOD_NEIGHBOURHOOD_TILES = {
         zIndices: [
             [1],
@@ -31,18 +44,19 @@ const DEFAULT_STAGE_TILES = {
             [LAWN_COLOUR],
             [LAWN_COLOUR],
             [LAWN_COLOUR],
-            [LAWN_COLOUR],
+            [SIDEWALK_COLOUR],
             [SIDEWALK_COLOUR],
             [STREET_COLOUR]
         ]
     },
     PLAYGROUND_TILES = {
+        // Raised nurse's office bench.
         zIndices: [
             [1],
             [1],
             [1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
             [1]
         ],
         colours: [
@@ -55,13 +69,14 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     CHILDHOOD_BATHROOM_TILES = {
+        // Raised bathtub.
         zIndices: [
-            [0],
-            [0],
-            [0],
-            [1],
-            [1, 1, 1, 1, 2, 2, 2, 1],
-            [1]
+            [0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 0],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 0, 1, 2, 2, 2, 2, 1, 1, 1, 0],
+            [0, 0, 1, 2, 2, 2, 2, 1, 1, 1, 0],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0]
         ],
         colours: [
             [STAGE_COLOUR],
@@ -72,14 +87,13 @@ const DEFAULT_STAGE_TILES = {
             [BATHROOM_COLOUR]
         ]
     },
-
-    // TODO...
     FREEWAY_TILES = {
+        // Raised overpass.
         zIndices: [
-            [5],
-            [5],
-            [5],
             [0],
+            [8],
+            [5],
+            [5],
             [0],
             [0]
         ],
@@ -89,9 +103,9 @@ const DEFAULT_STAGE_TILES = {
     },
     PORCH_TILES = {
         zIndices: [
-            [1],
-            [1],
-            [1, 1, 1, 3, 3, 3, 3, 3, 3, 1],
+            [1, 1, 1, 18, 18, 18, 18, 18, 18, 1],
+            [1, 1, 1, 4, 4, 4, 4, 4, 4, 1],
+            [1, 1, 1, 4, 4, 4, 4, 4, 4, 1],
             [1, 1, 1, 3, 3, 3, 3, 3, 3, 1],
             [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
             [1]
@@ -102,6 +116,10 @@ const DEFAULT_STAGE_TILES = {
     },
     PRETEEN_BENNETT_ROOM_TILES = {
         zIndices: [
+            [1],
+            [1, 1, 1, 1, 1, 1, 6, 6, 6, 1],
+            [1, 1, 5, 5, 1, 1, 1, 6, 6, 6, 1],
+            [1, 5, 5, 1, 1, 1, 1, 1, 6],
             [1]
         ],
         colours: [
@@ -142,29 +160,47 @@ const DEFAULT_STAGE_TILES = {
     },
     ODIN_SCENE_1_TILES = {
         zIndices: [
-            [0]
+            [4],
+            [4],
+            [4],
+            [16, 16, 16, 16, 16, 16, 4, 4, 4, 16],
+            [4],
+            [4]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     ODIN_SCENE_2_TILES = {
+        // Stairwell down.
         zIndices: [
-            [0]
+            [16, 16, 16, 8, 8, 8, 8, 8, 8, 16],
+            [16, 4, 4, 3, 2, 1, 0],
+            [16, 4, 4, 3, 2, 1, 0],
+            [16, 4, 4, 3, 2, 1, 0],
+            [16, 4]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     ODIN_SCENE_3_TILES = {
+        // House wall.
         zIndices: [
-            [0]
+            [1, 1, 14, 1, 1, 1, 0],
+            [1, 1, 14, 1, 1, 1, 0],
+            [1, 1, 14, 1, 1, 1, 0],
+            [1, 1, 14, 1, 1, 1, 0],
+            [1, 1, 14, 1, 1, 1, 0],
+            [1, 1, 1, 1, 1, 1, 0]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     ODIN_SCENE_4_TILES = {
+        // TODO: Make more natural.
+        // Sand.
         zIndices: [
             [0]
         ],
@@ -173,6 +209,8 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     ODIN_SCENE_5_TILES = {
+        // TODO: Make more natural.
+        // Sand.
         zIndices: [
             [0]
         ],
@@ -181,14 +219,23 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     ODIN_SCENE_6_TILES = {
+        // TODO: Make more natural.
+        // Ocean wave.
         zIndices: [
-            [0]
+            [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+            [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+            [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     ODIN_SCENE_7_TILES = {
+        // TODO: Make more natural.
+        // Ocean floor.
         zIndices: [
             [0]
         ],
@@ -197,6 +244,8 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     ODIN_SCENE_8_TILES = {
+        // TODO: Make more natural.
+        // Ocean floor.
         zIndices: [
             [0]
         ],
@@ -204,9 +253,52 @@ const DEFAULT_STAGE_TILES = {
             [STAGE_COLOUR]
         ]
     },
-    JUNIOR_HIGH_LOCKERS_TILES = {
+    PRETEEN_BENNETT_ROOM_OPEN_BED_TILES = {
         zIndices: [
-            [0]
+            [1],
+            [1],
+            [1, 1, 5, 5, 1],
+            [1, 5, 5, 1],
+            [1]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES = {
+        // TODO: Figure out.
+        zIndices: [
+            [1],
+            [1, 1, 1, 1, 1, 1, 6, 6, 6, 1],
+            [1, 1, 1, 1, 1, 1, 1, 6, 6, 6, 1],
+            [1, 1, 1, 1, 1, 1, 1, 1, 6],
+            [1]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES = {
+        // TODO: Figure out.
+        zIndices: [
+            [1],
+            [1],
+            [1, 1, 5, 5, 1],
+            [1, 5, 5, 1],
+            [1]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    JUNIOR_HIGH_LOCKERS_TILES = {
+        // Overall height of lockers is 78".
+        zIndices: [
+            [1],
+            [1],
+            [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+            [1, 1, 2, 15, 15, 15, 15, 2, 2, 2, 1],
+            [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -214,7 +306,11 @@ const DEFAULT_STAGE_TILES = {
     },
     JUNIOR_HIGH_QUAD_TILES = {
         zIndices: [
-            [0]
+            [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+            [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+            [1, 1, 2, 2, 2, 15, 15, 15, 15, 2, 1],
+            [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -222,7 +318,12 @@ const DEFAULT_STAGE_TILES = {
     },
     JUNIOR_HIGH_HALLWAY_TILES = {
         zIndices: [
-            [0]
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 16, 1, 1, 1, 16, 16, 16, 16, 16, 1, 0],
+            [0, 1, 1, 1, 1, 1, 4, 4, 4, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -237,8 +338,13 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     BENNETT_APARTMENT_COUCH_TILES = {
+        // Couch seat cushions add extra half foot.
         zIndices: [
-            [0]
+            [16],
+            [16, 1, 1, 7, 7, 7, 7, 7, 1, 1, 1, 16],
+            [16, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 16],
+            [16, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 16],
+            [16, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 16]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -270,7 +376,12 @@ const DEFAULT_STAGE_TILES = {
     },
     JACOB_APARTMENT_TILES = {
         zIndices: [
-            [0]
+            [16, 16, 16, 16, 16, 16, 16, 16, 16, 6, 6, 16],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -278,6 +389,11 @@ const DEFAULT_STAGE_TILES = {
     },
     MOVIE_THEATRE_1_TILES = {
         zIndices: [
+            [18],
+            [18, 18, 18, 1, 1, 1, 1, 1, 1, 18],
+            [18, 18, 18, 1, 1, 1, 1, 1, 1, 18],
+            [1],
+            [1],
             [0]
         ],
         colours: [
@@ -286,6 +402,11 @@ const DEFAULT_STAGE_TILES = {
     },
     MOVIE_THEATRE_2_TILES = {
         zIndices: [
+            [18, 18, 18, 1, 1, 1, 0],
+            [18, 18, 18, 1, 1, 1, 0],
+            [18, 18, 18, 1, 1, 1, 0],
+            [1],
+            [1],
             [0]
         ],
         colours: [
@@ -400,11 +521,11 @@ const DEFAULT_STAGE_TILES = {
 
     SHOW_STAGE_FRONT_TILES = {
         zIndices: [
-            [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
-            [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
-            [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
-            [1, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
-            [1],
+            [18],
+            [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+            [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+            [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+            [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [1]
         ],
         colours: [
@@ -414,11 +535,11 @@ const DEFAULT_STAGE_TILES = {
 
     SHOW_STAGE_SIDE_1_TILES = {
         zIndices: [
-            [4, 4, 4, 1],
-            [4, 4, 4, 1],
-            [4, 4, 4, 1],
-            [4, 4, 4, 1],
-            [4, 4, 4, 1],
+            [18],
+            [6, 6, 6, 1],
+            [6, 6, 6, 1],
+            [6, 6, 6, 1],
+            [6, 6, 6, 1],
             [1]
         ],
         colours: [
@@ -427,11 +548,11 @@ const DEFAULT_STAGE_TILES = {
     },
     SHOW_STAGE_SIDE_2_TILES = {
         zIndices: [
-            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
-            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
-            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
-            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
-            [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1],
+            [18],
+            [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+            [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+            [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+            [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [1]
         ],
         colours: [
@@ -611,12 +732,14 @@ const DEFAULT_STAGE_TILES = {
 
 module.exports = {
     DEFAULT_STAGE_TILES,
+    LOGUE_TILES,
     CHILDHOOD_NEIGHBOURHOOD_TILES,
     PLAYGROUND_TILES,
     CHILDHOOD_BATHROOM_TILES,
     FREEWAY_TILES,
     PORCH_TILES,
     PRETEEN_BENNETT_ROOM_TILES,
+    PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
     CHANGELING_CAVE_TILES,
     TAIWAN_PUPPET_SHOW_TILES,
     SCHOOLBUS_TILES,
@@ -629,6 +752,8 @@ module.exports = {
     ODIN_SCENE_6_TILES,
     ODIN_SCENE_7_TILES,
     ODIN_SCENE_8_TILES,
+    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES,
+    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES,
     JUNIOR_HIGH_LOCKERS_TILES,
     JUNIOR_HIGH_QUAD_TILES,
     JUNIOR_HIGH_HALLWAY_TILES,
