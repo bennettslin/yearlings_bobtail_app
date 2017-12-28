@@ -368,11 +368,11 @@ const DEFAULT_STAGE_TILES = {
     BENNETT_APARTMENT_COUCH_THOUGHT_TILES = {
         // Couch seat cushions add extra half foot.
         zIndices: [
-            [1],
-            [1, 1, 1, 7, 7, 7, 7, 7, 1],
-            [1, 1, 4, 3, 3, 3, 3, 3, 1],
-            [1, 1, 4, 3, 3, 3, 3, 3, 1],
-            [1]
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 7, 7, 7, 7, 7, 1, 1, 1, 0],
+            [0, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 0],
+            [0, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -392,6 +392,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     BERKELEY_CAMPUS_1_TILES = {
+        // Outdoor wall is 8'. Platform is 1'.
         zIndices: [
             [1, 9, 3, 19],
             [1, 9, 3],
@@ -445,9 +446,9 @@ const DEFAULT_STAGE_TILES = {
     },
     MOVIE_THEATRE_2_TILES = {
         zIndices: [
-            [17, 17, 17, 1, 1, 1, 0],
-            [17, 17, 17, 1, 1, 1, 0],
-            [17, 17, 17, 1, 1, 1, 0],
+            [17, 17, 17, 1, 1, 0],
+            [17, 17, 17, 1, 1, 0],
+            [17, 17, 17, 1, 1, 0],
             [1],
             [1],
             [0]
@@ -459,7 +460,12 @@ const DEFAULT_STAGE_TILES = {
 
     MUSEUM_TILES = {
         zIndices: [
-            [0]
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 0, 1, 1, 1, 1, 1, 3, 3, 1, 0],
+            [0, 0, 1, 1, 1, 1, 1, 3, 3, 1, 0],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -467,7 +473,7 @@ const DEFAULT_STAGE_TILES = {
     },
     BACKSTAGE_TILES = {
         zIndices: [
-            [0]
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -629,7 +635,13 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     SITA_APARTMENT_GATE_1_TILES = {
+        // Outdoor wall is 8'.
         zIndices: [
+            [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 1],
+            [1],
+            [7, 7, 7, 7, 7, 7, 1, 1, 1, 7, 7, 7],
+            [1],
+            [1],
             [0]
         ],
         colours: [
@@ -638,6 +650,11 @@ const DEFAULT_STAGE_TILES = {
     },
     SITA_APARTMENT_GATE_2_TILES = {
         zIndices: [
+            [17, 17, 17, 17, 17, 1, 7, 1, 1, 0],
+            [1, 1, 1, 1, 1, 1, 7, 1, 1, 0],
+            [7, 1, 1, 1, 7, 7, 7, 1, 1, 0],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
             [0]
         ],
         colours: [
