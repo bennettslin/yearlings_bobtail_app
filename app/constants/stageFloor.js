@@ -691,7 +691,6 @@ const DEFAULT_STAGE_TILES = {
     SITA_APARTMENT_COUCH_TILES = {
         // Indoor wall is 7.5'.
         zIndices: [
-
             [1],
             [16, 16, 16, 16, 16, 7, 7, 7, 7, 7, 16, 16],
             [16, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 16],
