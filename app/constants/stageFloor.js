@@ -1,4 +1,4 @@
-// Check out Peoria Symphony Orchestra.
+// Check out Peoria Symphony Orchestra. Okay.
 
 import {
     BATHROOM_COLOUR,
