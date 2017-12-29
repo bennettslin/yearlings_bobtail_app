@@ -38,17 +38,12 @@ module.exports = [
     {
         taskName: `Theatre proscenium`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 5
     },
     {
         taskName: `Theatre rafters`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Figure out stage floor tiles.`,
-        workedHours: 16,
-        neededHours: 18
     },
 
     /**

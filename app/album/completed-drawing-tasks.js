@@ -713,7 +713,17 @@ module.exports = [
                 taskName: `Untied shoelaces (Didi, Look Back)`,
                 workedHours: 1,
                 neededHours: 1
-            },
+            }
+        ]
+    },
+    {
+        taskName: `Stage`,
+        subtasks: [
+            {
+                taskName: `Figure out stage floor tiles.`,
+                workedHours: 18,
+                neededHours: 18
+            }
         ]
     },
     {
