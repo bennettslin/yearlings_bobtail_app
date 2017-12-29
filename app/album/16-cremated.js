@@ -9,7 +9,10 @@ import { VERSES,
          INTRO,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { CLIFF_TILES } from '../constants/stageFloor'
+import { CLIFF_TILES,
+         CLIFF_CONVERTIBLE_TILES,
+         DEATHBED_TILES,
+         DEATHBED_TENNIS_THOUGHT_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/stageValues'
 module.exports = {
@@ -29,7 +32,7 @@ module.exports = {
                     description: 'sitting in car, putting on perfume'
                 }
             },
-            tiles: CLIFF_TILES,
+            tiles: CLIFF_CONVERTIBLE_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN
@@ -50,7 +53,7 @@ module.exports = {
                     description: 'back angle, eyes closed, trying to get off'
                 }
             },
-            tiles: CLIFF_TILES,
+            tiles: CLIFF_CONVERTIBLE_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN
@@ -71,7 +74,7 @@ module.exports = {
                     description: 'back angle, giving blowjob'
                 }
             },
-            tiles: CLIFF_TILES,
+            tiles: CLIFF_CONVERTIBLE_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN
@@ -87,7 +90,7 @@ module.exports = {
                     description: 'front angle, dying, infirm'
                 }
             },
-            tiles: CLIFF_TILES,
+            tiles: DEATHBED_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN
@@ -103,7 +106,7 @@ module.exports = {
                     description: 'serving in tennis'
                 }
             },
-            tiles: CLIFF_TILES,
+            tiles: DEATHBED_TENNIS_THOUGHT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN
@@ -124,7 +127,7 @@ module.exports = {
                     description: 'side, looking back, reversing car'
                 }
             },
-            tiles: CLIFF_TILES,
+            tiles: CLIFF_CONVERTIBLE_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN

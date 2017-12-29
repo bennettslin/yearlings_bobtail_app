@@ -14,7 +14,7 @@ import { EL_TORITO_TILES,
          PAMPAS_TILES,
          OUTDOOR_WEDDING_TILES,
          CLIFF_TILES,
-         DEATHBED_TILES } from '../constants/stageFloor'
+         DEATHBED_CLIFF_THOUGHT_TILES } from '../constants/stageFloor'
 import { SKY_NO_TIME,
          SKY_SPRING } from '../constants/stageValues'
 module.exports = {
@@ -156,7 +156,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: DEATHBED_TILES,
+            tiles: DEATHBED_CLIFF_THOUGHT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_SPRING

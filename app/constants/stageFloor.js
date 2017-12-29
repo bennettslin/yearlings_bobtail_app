@@ -622,6 +622,17 @@ const DEFAULT_STAGE_TILES = {
             [STAGE_COLOUR]
         ]
     },
+    SHOW_STAGE_FRONT_FAR_TILES = {
+        // Indoor wall of club is 9'. Club stage is 2.5'.
+        zIndices: [
+            [19],
+            [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+            [1]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
 
     SHOW_STAGE_SIDE_1_TILES = {
         zIndices: [
@@ -680,12 +691,23 @@ const DEFAULT_STAGE_TILES = {
     SITA_APARTMENT_COUCH_TILES = {
         // Indoor wall is 7.5'.
         zIndices: [
-            [7],
+
             [1],
             [16, 16, 16, 16, 16, 7, 7, 7, 7, 7, 16, 16],
+            [16, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 16],
             [16, 7, 3, 3, 1],
             [16, 7, 3, 3, 1],
             [16, 7, 3, 3, 1]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    SITA_APARTMENT_COUCH_THOUGHT_TILES = {
+        zIndices: [
+            [1],
+            [1],
+            [1, 7, 3, 3, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -720,8 +742,14 @@ const DEFAULT_STAGE_TILES = {
     },
 
     VOLKSWAGEN_TILES = {
+        // Same as Catholic church tiles.
         zIndices: [
-            [0]
+            [0],
+            [0],
+            [0],
+            [0],
+            [1],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -729,7 +757,12 @@ const DEFAULT_STAGE_TILES = {
     },
     OAKLAND_STREET_SIDE_TILES = {
         zIndices: [
-            [0]
+            [1],
+            [0],
+            [0],
+            [0],
+            [0],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -737,7 +770,9 @@ const DEFAULT_STAGE_TILES = {
     },
     OAKLAND_STREET_FRONT_1_TILES = {
         zIndices: [
-            [0]
+            [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -745,7 +780,7 @@ const DEFAULT_STAGE_TILES = {
     },
     OAKLAND_STREET_FRONT_2_TILES = {
         zIndices: [
-            [0]
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -753,7 +788,7 @@ const DEFAULT_STAGE_TILES = {
     },
     OAKLAND_STREET_FRONT_3_TILES = {
         zIndices: [
-            [0]
+            [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -785,7 +820,20 @@ const DEFAULT_STAGE_TILES = {
     },
     CLIFF_TILES = {
         zIndices: [
-            [0]
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    CLIFF_CONVERTIBLE_TILES = {
+        zIndices: [
+            [4, 4, 6, 4, 4, 4, 4, 4, 4, 0],
+            [4, 6, 6, 6, 4, 4, 4, 4, 4, 0],
+            [4, 4, 6, 6, 8, 4, 4, 4, 4, 0],
+            [4, 4, 4, 8, 6, 6, 4, 4, 4, 0],
+            [4, 4, 4, 4, 6, 4, 4, 4, 4, 0],
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -793,15 +841,17 @@ const DEFAULT_STAGE_TILES = {
     },
     PARK_TILES = {
         zIndices: [
-            [0]
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     ALLEY_TILES = {
+        // Outdoor wall is 8'.
         zIndices: [
-            [0]
+            [17],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -809,14 +859,20 @@ const DEFAULT_STAGE_TILES = {
     },
     DEMONSTRATION_TILES = {
         zIndices: [
-            [0]
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     EL_TORITO_TILES = {
+        // Outdoor wall is 8'.
         zIndices: [
+            [17, 17, 17, 17, 1, 1, 1, 1, 17],
+            [1],
+            [1, 17, 1, 1, 1, 1, 1, 1, 1, 1, 17, 1],
+            [1],
+            [1],
             [0]
         ],
         colours: [
@@ -824,16 +880,20 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     PAMPAS_TILES = {
+        // TODO: Make more natural.
+        // Grass.
         zIndices: [
-            [0]
+            [4]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     OUTDOOR_WEDDING_TILES = {
+        // TODO: Make more natural.
+        // Grass.
         zIndices: [
-            [0]
+            [4]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -841,7 +901,38 @@ const DEFAULT_STAGE_TILES = {
     },
     DEATHBED_TILES = {
         zIndices: [
-            [0]
+            [0, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 7, 1, 1, 1, 0],
+            [0, 1, 7, 7, 7, 1, 1, 0],
+            [0, 1, 1, 7, 7, 7, 1, 0],
+            [0, 1, 1, 1, 7, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    DEATHBED_CLIFF_THOUGHT_TILES = {
+        zIndices: [
+            [0, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 7, 1, 1, 1, 0],
+            [0, 1, 7, 7, 7, 1, 1, 0, 4, 4, 4, 0],
+            [0, 1, 1, 7, 7, 7, 1, 0, 4, 4, 4, 0],
+            [0, 1, 1, 1, 7, 1, 1, 0, 4, 4, 4, 0],
+            [0, 1, 1, 1, 1, 1, 1, 0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    DEATHBED_TENNIS_THOUGHT_TILES = {
+        zIndices: [
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 7, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 7, 7, 7, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 7, 7, 7, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 7, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -882,6 +973,7 @@ module.exports = {
     BERKELEY_CAMPUS_1_TILES,
     BERKELEY_CAMPUS_2_TILES,
     SHOW_STAGE_FRONT_TILES,
+    SHOW_STAGE_FRONT_FAR_TILES,
     JACOB_APARTMENT_TILES,
     MOVIE_THEATRE_1_TILES,
     MOVIE_THEATRE_2_TILES,
@@ -905,6 +997,7 @@ module.exports = {
     SHOW_STAGE_SIDE_2_TILES,
     SHOW_UNLOADING_TILES,
     SITA_APARTMENT_COUCH_TILES,
+    SITA_APARTMENT_COUCH_THOUGHT_TILES,
     VOLKSWAGEN_TILES,
     OAKLAND_STREET_SIDE_TILES,
     OAKLAND_STREET_FRONT_1_TILES,
@@ -914,11 +1007,14 @@ module.exports = {
     SNOW_GLOBES_2_TILES,
     SNOW_GLOBES_3_TILES,
     CLIFF_TILES,
+    CLIFF_CONVERTIBLE_TILES,
     PARK_TILES,
     ALLEY_TILES,
     DEMONSTRATION_TILES,
     EL_TORITO_TILES,
     PAMPAS_TILES,
     OUTDOOR_WEDDING_TILES,
-    DEATHBED_TILES
+    DEATHBED_TILES,
+    DEATHBED_CLIFF_THOUGHT_TILES,
+    DEATHBED_TENNIS_THOUGHT_TILES
 }

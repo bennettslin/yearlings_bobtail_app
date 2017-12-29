@@ -13,7 +13,7 @@ import { VERSES,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { PARK_TILES,
-         SHOW_STAGE_FRONT_TILES,
+         SHOW_STAGE_FRONT_FAR_TILES,
          ALLEY_TILES,
          SITA_APARTMENT_BED_TILES,
          DEMONSTRATION_TILES } from '../constants/stageFloor'
@@ -74,7 +74,7 @@ module.exports = {
                     description: 'side, eager'
                 }
             },
-            tiles: SHOW_STAGE_FRONT_TILES,
+            tiles: SHOW_STAGE_FRONT_FAR_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_WINTER
