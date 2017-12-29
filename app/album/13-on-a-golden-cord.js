@@ -13,7 +13,7 @@ import { VERSES,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { OAKLAND_STREET_SIDE_TILES,
-         SITA_APARTMENT_COUCH_TILES,
+         SITA_APARTMENT_COUCH_THOUGHT_TILES,
          OAKLAND_STREET_FRONT_1_TILES,
          OAKLAND_STREET_FRONT_2_TILES,
          OAKLAND_STREET_FRONT_3_TILES } from '../constants/stageFloor'
@@ -54,7 +54,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_TILES,
+            tiles: SITA_APARTMENT_COUCH_THOUGHT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN

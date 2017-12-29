@@ -1,4 +1,4 @@
-// Check out Peoria Symphony Orchestra. Okay.
+// Check out Peoria Symphony Orchestra.
 
 import {
     BATHROOM_COLOUR,
@@ -340,6 +340,20 @@ const DEFAULT_STAGE_TILES = {
             [STAGE_COLOUR]
         ]
     },
+    BENNETT_APARTMENT_BED_TILES = {
+        // Outdoor wall is 8'. Indoor wall is 7.5'. Bed is 7.5 long, 1' tall.
+        zIndices: [
+            [17],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 17],
+            [16, 16, 1, 1, 1, 16, 7, 7, 7, 7, 16],
+            [16, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 16],
+            [16, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 16],
+            [16, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 16]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
     BENNETT_APARTMENT_COURTYARD_TILES = {
         // Outdoor wall is 8'. Windowsill height is 3'.
         zIndices: [
@@ -356,9 +370,9 @@ const DEFAULT_STAGE_TILES = {
         // Indoor wall is 7.5'. Couch seat cushions add extra 0.5'.
         zIndices: [
             [16],
-            [16, 1, 1, 7, 7, 7, 7, 7, 1, 1, 1, 16],
+            [16, 1, 4, 7, 7, 7, 7, 7, 1, 1, 1, 16],
             [16, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 16],
-            [16, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 16],
+            [16, 1, 1, 3, 3, 3, 3, 3, 1, 1, 1, 16],
             [16, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 16]
         ],
         colours: [
@@ -373,6 +387,19 @@ const DEFAULT_STAGE_TILES = {
             [0, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 0],
             [0, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 0],
             [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    BENNETT_APARTMENT_GATE_TILES = {
+        zIndices: [
+            [17],
+            [17, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 17],
+            [17, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 17],
+            [1],
+            [1],
+            [0],
         ],
         colours: [
             [STAGE_COLOUR]
@@ -417,13 +444,13 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     JACOB_APARTMENT_TILES = {
-        // Basement wall is 6', depth is 2.5'.
+        // Basement wall is 6', depth is 2.5'. Seats are 1'.
         zIndices: [
             [17, 17, 17, 17, 17, 17, 17, 17, 17, 5, 5, 17],
             [5],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0],
+            [0, 0, 0, 2, 0, 2, 0, 0, 0, 3, 3, 0],
+            [0, 0, 2, 0, 0, 0, 0, 2, 0, 2, 2, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
         ],
         colours: [
@@ -481,6 +508,10 @@ const DEFAULT_STAGE_TILES = {
     },
     GO_KART_TILES = {
         zIndices: [
+            [0],
+            [0],
+            [0, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0],
+            [0, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0],
             [0]
         ],
         colours: [
@@ -488,24 +519,14 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     DISHROOM_TILES = {
+        // Indoor wall is 7.5'. Sink is 3'. Conveyor is 5.5'.
         zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    BENNETT_APARTMENT_GATE_TILES = {
-        zIndices: [
-            [0]
-        ],
-        colours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    BENNETT_APARTMENT_BED_TILES = {
-        zIndices: [
-            [0]
+            [16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 6],
+            [1, 1, 12, 12, 12, 12, 12, 12, 1, 16, 5],
+            [1, 1, 7, 7, 7, 7, 7, 7, 1, 16, 4],
+            [1, 1, 7, 7, 7, 7, 7, 7, 1, 16, 3],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 16, 2],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -513,7 +534,12 @@ const DEFAULT_STAGE_TILES = {
     },
     WAITING_ROOM_TILES = {
         zIndices: [
-            [0]
+            [0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 0],
+            [0, 1, 7, 7, 1, 7, 7, 1, 1, 1, 16, 0],
+            [0, 1, 3, 3, 1, 3, 3, 1, 1, 1, 1, 0],
+            [0, 1, 3, 3, 1, 3, 3, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 16, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -521,7 +547,7 @@ const DEFAULT_STAGE_TILES = {
     },
     UCLA_CAMPUS_TILES = {
         zIndices: [
-            [0]
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -529,7 +555,7 @@ const DEFAULT_STAGE_TILES = {
     },
     WALGREENS_TILES = {
         zIndices: [
-            [0]
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -537,6 +563,8 @@ const DEFAULT_STAGE_TILES = {
     },
     STEAM_TUNNEL_TILES = {
         zIndices: [
+            [17],
+            [5],
             [0]
         ],
         colours: [
@@ -544,6 +572,8 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     CEMETERY_TILES = {
+        // TODO: Make more natural.
+        // Hill.
         zIndices: [
             [0]
         ],
@@ -553,6 +583,11 @@ const DEFAULT_STAGE_TILES = {
     },
     STATION_WAGON_TILES = {
         zIndices: [
+            [0],
+            [0, 10, 10, 10, 10, 10, 10, 10, 10, 6, 6, 0],
+            [0, 2, 2, 4, 4, 2, 4, 4, 2, 6, 6, 0],
+            [0, 2, 2, 4, 4, 2, 4, 4, 2, 6, 6, 0],
+            [0, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 0],
             [0]
         ],
         colours: [
@@ -561,7 +596,12 @@ const DEFAULT_STAGE_TILES = {
     },
     HOWIE_ATTIC_TILES = {
         zIndices: [
-            [0]
+            [20],
+            [9, 16, 16, 16, 16, 16, 9, 8, 7, 7, 1],
+            [9, 12, 12, 12, 12, 12, 9, 15, 6, 6, 1],
+            [9, 12, 12, 12, 12, 12, 9, 15, 5, 5, 1],
+            [9, 9, 9, 9, 9, 9, 9, 15, 4, 4, 1],
+            [9, 9, 12, 12, 9, 9, 9, 15, 3, 3, 2, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -575,6 +615,17 @@ const DEFAULT_STAGE_TILES = {
             [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+            [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+            [1]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    SHOW_STAGE_FRONT_FAR_TILES = {
+        // Indoor wall of club is 9'. Club stage is 2.5'.
+        zIndices: [
+            [19],
             [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [1]
         ],
@@ -602,7 +653,7 @@ const DEFAULT_STAGE_TILES = {
             [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
-            [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
+            [19, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
             [1]
         ],
         colours: [
@@ -610,8 +661,14 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     SHOW_UNLOADING_TILES = {
+        // Outdoor wall is 8'.
         zIndices: [
-            [0]
+            [1, 1, 18],
+            [1, 1, 18, 1],
+            [1, 1, 18, 1, 1, 1, 18],
+            [1, 1, 1, 1, 1, 1, 7, 1],
+            [1, 1, 1, 1, 1, 1, 7, 1],
+            [1, 1, 1, 1, 1, 1, 7, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -620,15 +677,37 @@ const DEFAULT_STAGE_TILES = {
 
     SITA_APARTMENT_BED_TILES = {
         zIndices: [
-            [0]
+            [1, 7, 7, 7, 9, 9, 9, 9, 7, 7, 7, 1],
+            [1, 7, 7, 7, 9, 9, 9, 9, 7, 7, 7, 1],
+            [1, 7, 7, 7, 9, 9, 9, 9, 7, 7, 7, 1],
+            [1, 7, 7, 10, 9, 9, 9, 9, 7, 7, 7, 1],
+            [1, 7, 7, 10, 9, 9, 9, 9, 7, 7, 7, 1],
+            [1, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 1]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     SITA_APARTMENT_COUCH_TILES = {
+        // Indoor wall is 7.5'.
         zIndices: [
-            [0]
+
+            [1],
+            [16, 16, 16, 16, 16, 7, 7, 7, 7, 7, 16, 16],
+            [16, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 16],
+            [16, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1],
+            [16, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1],
+            [16, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    SITA_APARTMENT_COUCH_THOUGHT_TILES = {
+        zIndices: [
+            [1],
+            [1],
+            [1, 7, 3, 3, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -637,8 +716,8 @@ const DEFAULT_STAGE_TILES = {
     SITA_APARTMENT_GATE_1_TILES = {
         // Outdoor wall is 8'.
         zIndices: [
-            [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 1],
-            [1],
+            [17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 1, 7],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 7],
             [7, 7, 7, 7, 7, 7, 1, 1, 1, 7, 7, 7],
             [1],
             [1],
@@ -663,8 +742,14 @@ const DEFAULT_STAGE_TILES = {
     },
 
     VOLKSWAGEN_TILES = {
+        // Same as Catholic church tiles.
         zIndices: [
-            [0]
+            [0],
+            [0],
+            [0],
+            [0],
+            [1],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -672,7 +757,12 @@ const DEFAULT_STAGE_TILES = {
     },
     OAKLAND_STREET_SIDE_TILES = {
         zIndices: [
-            [0]
+            [1],
+            [0],
+            [0],
+            [0],
+            [0],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -680,7 +770,9 @@ const DEFAULT_STAGE_TILES = {
     },
     OAKLAND_STREET_FRONT_1_TILES = {
         zIndices: [
-            [0]
+            [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -688,7 +780,7 @@ const DEFAULT_STAGE_TILES = {
     },
     OAKLAND_STREET_FRONT_2_TILES = {
         zIndices: [
-            [0]
+            [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -696,7 +788,7 @@ const DEFAULT_STAGE_TILES = {
     },
     OAKLAND_STREET_FRONT_3_TILES = {
         zIndices: [
-            [0]
+            [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -728,7 +820,20 @@ const DEFAULT_STAGE_TILES = {
     },
     CLIFF_TILES = {
         zIndices: [
-            [0]
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    CLIFF_CONVERTIBLE_TILES = {
+        zIndices: [
+            [4, 4, 6, 4, 4, 4, 4, 4, 4, 0],
+            [4, 6, 6, 6, 4, 4, 4, 4, 4, 0],
+            [4, 4, 6, 6, 8, 4, 4, 4, 4, 0],
+            [4, 4, 4, 8, 6, 6, 4, 4, 4, 0],
+            [4, 4, 4, 4, 6, 4, 4, 4, 4, 0],
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -736,15 +841,17 @@ const DEFAULT_STAGE_TILES = {
     },
     PARK_TILES = {
         zIndices: [
-            [0]
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     ALLEY_TILES = {
+        // Outdoor wall is 8'.
         zIndices: [
-            [0]
+            [17],
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -752,14 +859,20 @@ const DEFAULT_STAGE_TILES = {
     },
     DEMONSTRATION_TILES = {
         zIndices: [
-            [0]
+            [1]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     EL_TORITO_TILES = {
+        // Outdoor wall is 8'.
         zIndices: [
+            [17, 17, 17, 17, 1, 1, 1, 1, 17],
+            [1],
+            [1, 17, 1, 1, 1, 1, 1, 1, 1, 1, 17, 1],
+            [1],
+            [1],
             [0]
         ],
         colours: [
@@ -767,16 +880,20 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     PAMPAS_TILES = {
+        // TODO: Make more natural.
+        // Grass.
         zIndices: [
-            [0]
+            [4]
         ],
         colours: [
             [STAGE_COLOUR]
         ]
     },
     OUTDOOR_WEDDING_TILES = {
+        // TODO: Make more natural.
+        // Grass.
         zIndices: [
-            [0]
+            [4]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -784,7 +901,38 @@ const DEFAULT_STAGE_TILES = {
     },
     DEATHBED_TILES = {
         zIndices: [
-            [0]
+            [0, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 7, 1, 1, 1, 0],
+            [0, 1, 7, 7, 7, 1, 1, 0],
+            [0, 1, 1, 7, 7, 7, 1, 0],
+            [0, 1, 1, 1, 7, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    DEATHBED_CLIFF_THOUGHT_TILES = {
+        zIndices: [
+            [0, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 7, 1, 1, 1, 0],
+            [0, 1, 7, 7, 7, 1, 1, 0, 4, 4, 4, 0],
+            [0, 1, 1, 7, 7, 7, 1, 0, 4, 4, 4, 0],
+            [0, 1, 1, 1, 7, 1, 1, 0, 4, 4, 4, 0],
+            [0, 1, 1, 1, 1, 1, 1, 0]
+        ],
+        colours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    DEATHBED_TENNIS_THOUGHT_TILES = {
+        zIndices: [
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 7, 1, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 7, 7, 7, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 7, 7, 7, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 7, 1, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
         ],
         colours: [
             [STAGE_COLOUR]
@@ -825,6 +973,7 @@ module.exports = {
     BERKELEY_CAMPUS_1_TILES,
     BERKELEY_CAMPUS_2_TILES,
     SHOW_STAGE_FRONT_TILES,
+    SHOW_STAGE_FRONT_FAR_TILES,
     JACOB_APARTMENT_TILES,
     MOVIE_THEATRE_1_TILES,
     MOVIE_THEATRE_2_TILES,
@@ -848,6 +997,7 @@ module.exports = {
     SHOW_STAGE_SIDE_2_TILES,
     SHOW_UNLOADING_TILES,
     SITA_APARTMENT_COUCH_TILES,
+    SITA_APARTMENT_COUCH_THOUGHT_TILES,
     VOLKSWAGEN_TILES,
     OAKLAND_STREET_SIDE_TILES,
     OAKLAND_STREET_FRONT_1_TILES,
@@ -857,11 +1007,14 @@ module.exports = {
     SNOW_GLOBES_2_TILES,
     SNOW_GLOBES_3_TILES,
     CLIFF_TILES,
+    CLIFF_CONVERTIBLE_TILES,
     PARK_TILES,
     ALLEY_TILES,
     DEMONSTRATION_TILES,
     EL_TORITO_TILES,
     PAMPAS_TILES,
     OUTDOOR_WEDDING_TILES,
-    DEATHBED_TILES
+    DEATHBED_TILES,
+    DEATHBED_CLIFF_THOUGHT_TILES,
+    DEATHBED_TENNIS_THOUGHT_TILES
 }
