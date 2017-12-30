@@ -11,6 +11,8 @@ import StageSkyField from './stage-sky-field'
 
 import { getSceneObject } from '../../helpers/data-helper'
 
+import { DEFAULT_STAGE_TILES } from '../../constants/stageTiles'
+
 const mapStateToProps = ({
     isHeavyRenderReady,
     renderReadySongIndex,
@@ -36,7 +38,12 @@ class StageSceneSection extends Component {
 
             sceneObject = getSceneObject(renderReadySongIndex, currentSceneIndex),
 
-            { actors, fixtures, walls, sky, tiles } = sceneObject
+            { actors, fixtures, walls, sky, tiles } = sceneObject,
+
+            { ceilingZIndices = DEFAULT_STAGE_TILES.ceilingZIndices,
+              ceilingColours = DEFAULT_STAGE_TILES.ceilingColours,
+              floorZIndices = DEFAULT_STAGE_TILES.floorZIndices,
+              floorColours = DEFAULT_STAGE_TILES.floorColours } = tiles
 
         // console.error('sceneObject', sceneObject, renderReadySongIndex, currentSceneIndex)
 
@@ -50,7 +57,13 @@ class StageSceneSection extends Component {
                     sky={sky}
                 />
                 <StageFloorField
-                    tiles={tiles}
+                    zIndices={ceilingZIndices}
+                    colours={ceilingColours}
+                />
+                <StageFloorField
+                    isFloor
+                    zIndices={floorZIndices}
+                    colours={floorColours}
                 />
                 <StageActionField
                     walls={walls}

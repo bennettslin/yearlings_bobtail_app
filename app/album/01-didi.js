@@ -16,7 +16,7 @@ import { VERSES,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { CHILDHOOD_NEIGHBOURHOOD_TILES,
          PLAYGROUND_TILES,
-         CHILDHOOD_BATHROOM_TILES } from '../constants/stageFloor'
+         CHILDHOOD_BATHROOM_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_SPRING } from '../constants/stageValues'
 

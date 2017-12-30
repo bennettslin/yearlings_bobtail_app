@@ -12,7 +12,7 @@ import { SITA_APARTMENT_GATE_1_TILES,
          SITA_APARTMENT_GATE_2_TILES,
          MUSEUM_TILES,
          BACKSTAGE_TILES,
-         GO_KART_TILES } from '../constants/stageFloor'
+         GO_KART_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_WINTER } from '../constants/stageValues'
 module.exports = {

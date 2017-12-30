@@ -16,7 +16,7 @@ import { PARK_TILES,
          SHOW_STAGE_FRONT_FAR_TILES,
          ALLEY_TILES,
          SITA_APARTMENT_BED_TILES,
-         DEMONSTRATION_TILES } from '../constants/stageFloor'
+         DEMONSTRATION_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_WINTER } from '../constants/stageValues'
 module.exports = {

@@ -24,7 +24,7 @@ import { ODIN_SCENE_1_TILES,
          ODIN_SCENE_5_TILES,
          ODIN_SCENE_6_TILES,
          ODIN_SCENE_7_TILES,
-         ODIN_SCENE_8_TILES } from '../constants/stageFloor'
+         ODIN_SCENE_8_TILES } from '../constants/stageTiles'
 
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/stageValues'

@@ -15,7 +15,7 @@ import { REFRAIN,
 import { SITA_APARTMENT_COUCH_TILES,
          VOLKSWAGEN_TILES,
          BENNETT_APARTMENT_COUCH_TILES,
-         SHOW_STAGE_FRONT_TILES } from '../constants/stageFloor'
+         SHOW_STAGE_FRONT_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/stageValues'
 module.exports = {

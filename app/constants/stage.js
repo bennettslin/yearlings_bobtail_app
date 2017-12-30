@@ -39,7 +39,7 @@ const exponent = 1.069913193933663,
 module.exports = {
 
     // Percentage height of tiles plus a margin, arbitrary for now.
-    STAGE_FLOOR_PERCENTAGE: stageYPercentage + 2,
+    // STAGE_FLOOR_PERCENTAGE: stageYPercentage + 2,
 
     // Was 1.2.
     STAGE_ASPECT_RATIO: 1.8, // Was 1.2.

@@ -1,4 +1,4 @@
-import { LOGUE_TILES } from '../constants/stageFloor'
+import { LOGUE_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/stageValues'
 module.exports = {

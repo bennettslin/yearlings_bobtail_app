@@ -13,7 +13,7 @@ import { BENNETT_APARTMENT_COUCH_TILES,
          SHOW_STAGE_FRONT_TILES,
          JACOB_APARTMENT_TILES,
          MOVIE_THEATRE_1_TILES,
-         MOVIE_THEATRE_2_TILES } from '../constants/stageFloor'
+         MOVIE_THEATRE_2_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/stageValues'
 module.exports = {

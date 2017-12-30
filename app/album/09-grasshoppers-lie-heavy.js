@@ -18,7 +18,7 @@ import { DISHROOM_TILES,
          BENNETT_APARTMENT_GATE_TILES,
          BENNETT_APARTMENT_BED_TILES,
          WAITING_ROOM_TILES,
-         SITA_APARTMENT_BED_TILES } from '../constants/stageFloor'
+         SITA_APARTMENT_BED_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_WINTER } from '../constants/stageValues'
 module.exports = {

@@ -15,7 +15,7 @@ import { VERSES,
 import { SHOW_STAGE_SIDE_1_TILES,
          SHOW_STAGE_SIDE_2_TILES,
          SHOW_UNLOADING_TILES,
-         SITA_APARTMENT_BED_TILES } from '../constants/stageFloor'
+         SITA_APARTMENT_BED_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_SUMMER } from '../constants/stageValues'
 module.exports = {

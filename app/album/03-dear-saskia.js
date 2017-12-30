@@ -12,7 +12,7 @@ import { VERSES,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { TAIWAN_PUPPET_SHOW_TILES,
          SCHOOLBUS_TILES,
-         TETHERBALL_SCENE_TILES } from '../constants/stageFloor'
+         TETHERBALL_SCENE_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_SUMMER } from '../constants/stageValues'
 module.exports = {

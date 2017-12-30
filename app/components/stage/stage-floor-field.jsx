@@ -2,32 +2,25 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 import { getArrayOfLength } from '../../helpers/general-helper'
 import { getTileCornersForXYAndZ } from '../../helpers/stage-helper'
 
-import { STAGE_FLOOR_PERCENTAGE,
-         TILE_ROWS_LENGTH,
+import { TILE_ROWS_LENGTH,
          TILE_COLUMNS_LENGTH } from '../../constants/stage'
 
-import { DEFAULT_STAGE_TILES } from '../../constants/stageFloor'
-
-const defaultProps = {
-    tiles: DEFAULT_STAGE_TILES,
-}
-
 const propTypes = {
-    tiles: PropTypes.shape({
-        zIndices: PropTypes.arrayOf(
-            PropTypes.arrayOf(
-                PropTypes.number
-            )
-        ),
-        colours: PropTypes.arrayOf(
-            PropTypes.arrayOf(
-                PropTypes.string
-            )
-        )
-    }).isRequired
+    isFloor: PropTypes.bool,
+    zIndices: PropTypes.arrayOf(
+        PropTypes.arrayOf(
+            PropTypes.number
+        ).isRequired
+    ).isRequired,
+    colours: PropTypes.arrayOf(
+        PropTypes.arrayOf(
+            PropTypes.string
+        ).isRequired
+    ).isRequired
 }
 
 // TODO: Make indices in order of lowest in DOM to highest.
@@ -40,21 +33,22 @@ const rowIndicesArray = getArrayOfLength({
 
 const StageFloorField = ({
 
-    tiles
+    isFloor,
+    zIndices,
+    colours
 
 }) => {
 
-    const { zIndices, colours } = tiles,
-
-        stageFloorWoodStyle = {
-            height: `${STAGE_FLOOR_PERCENTAGE}%`
-        }
-
     return (
-        <div className="stage-floor-field">
+        <div className={classnames(
+            'stage-tiles-field',
+            isFloor ? 'stage-floor-field' : 'stage-ceiling-field'
+        )}>
             <div
-                className="stage-floor-wood"
-                style={stageFloorWoodStyle}
+                className={classnames(
+                    'stage-tiles-wood',
+                    isFloor ? 'stage-floor-wood' : 'stage-ceiling-wood'
+                )}
             />
 
             {rowIndicesArray.map(rawYIndex => {
@@ -101,7 +95,7 @@ const StageFloorField = ({
                                     return (
                                         <div
                                             key={cornerIndex}
-                                            className="test-floor-panel-pixel"
+                                            className="test-tile-corner-pixel"
                                             style={{
                                                 left: xPercentage + '%',
                                                 bottom: yPercentage + '%',
@@ -119,7 +113,6 @@ const StageFloorField = ({
     )
 }
 
-StageFloorField.defaultProps = defaultProps
 StageFloorField.propTypes = propTypes
 
 export default StageFloorField

@@ -18,7 +18,7 @@ import { VERSES,
 import { BENNETT_APARTMENT_BED_TILES,
          SNOW_GLOBES_1_TILES,
          SNOW_GLOBES_2_TILES,
-         SNOW_GLOBES_3_TILES } from '../constants/stageFloor'
+         SNOW_GLOBES_3_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/stageValues'
 module.exports = {

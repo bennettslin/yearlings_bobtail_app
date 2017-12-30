@@ -12,7 +12,7 @@ import { VERSES,
 import { CLIFF_TILES,
          CLIFF_CONVERTIBLE_TILES,
          DEATHBED_TILES,
-         DEATHBED_TENNIS_THOUGHT_TILES } from '../constants/stageFloor'
+         DEATHBED_TENNIS_THOUGHT_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/stageValues'
 module.exports = {

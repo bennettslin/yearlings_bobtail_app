@@ -14,7 +14,7 @@ import { EL_TORITO_TILES,
          PAMPAS_TILES,
          OUTDOOR_WEDDING_TILES,
          CLIFF_TILES,
-         DEATHBED_CLIFF_THOUGHT_TILES } from '../constants/stageFloor'
+         DEATHBED_CLIFF_THOUGHT_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_SPRING } from '../constants/stageValues'
 module.exports = {

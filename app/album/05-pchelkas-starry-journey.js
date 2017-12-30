@@ -19,7 +19,7 @@ import { PRETEEN_BENNETT_ROOM_TILES,
          PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES,
          JUNIOR_HIGH_LOCKERS_TILES,
          JUNIOR_HIGH_QUAD_TILES,
-         JUNIOR_HIGH_HALLWAY_TILES } from '../constants/stageFloor'
+         JUNIOR_HIGH_HALLWAY_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_WINTER } from '../constants/stageValues'
 /**

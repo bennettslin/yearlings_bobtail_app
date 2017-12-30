@@ -19,7 +19,7 @@ import { FREEWAY_TILES,
          PORCH_TILES,
          PRETEEN_BENNETT_ROOM_TILES,
          CHILDHOOD_NEIGHBOURHOOD_TILES,
-         CHANGELING_CAVE_TILES } from '../constants/stageFloor'
+         CHANGELING_CAVE_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_SUMMER } from '../constants/stageValues'
 
