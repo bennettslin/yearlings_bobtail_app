@@ -719,7 +719,7 @@ module.exports = {
                     {
                         anchor: `gesture then`,
                         annotation: {
-                            description: `I had bought Sita the gold bracelet from a jewelry store at the local mall. It was quite expensive relative to my wage at the time, which made its underlying meaning seem all the more potent.`,
+                            description: `I had bought Sita the gold bracelet from a jewelry store at the local mall. It was quite expensive relative to my hourly wage at the time, which made its underlying meaning seem all the more potent.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
