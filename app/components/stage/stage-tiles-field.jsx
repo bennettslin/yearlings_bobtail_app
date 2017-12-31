@@ -10,18 +10,20 @@ import StageTile from './stage-tile'
 import { TILE_ROWS_LENGTH,
          TILE_COLUMNS_LENGTH } from '../../constants/stage'
 
+import { DEFAULT_STAGE_TILES } from '../../constants/stageTiles'
+
 const propTypes = {
     isFloor: PropTypes.bool,
     zIndices: PropTypes.arrayOf(
         PropTypes.arrayOf(
             PropTypes.number
         ).isRequired
-    ).isRequired,
+    ),
     colours: PropTypes.arrayOf(
         PropTypes.arrayOf(
             PropTypes.string
         ).isRequired
-    ).isRequired
+    )
 }
 
 // TODO: Make indices in order of lowest in DOM to highest.
@@ -40,6 +42,13 @@ const StageTilesField = ({
 
 }) => {
 
+    const
+        finalZIndices =
+            zIndices || (isFloor ? DEFAULT_STAGE_TILES.floorZIndices : DEFAULT_STAGE_TILES.ceilingZIndices),
+
+        finalColours =
+            colours || (isFloor ? DEFAULT_STAGE_TILES.floorColours : DEFAULT_STAGE_TILES.ceilingColours)
+
     return (
         <div className={classnames(
             'stage-tiles-field',
@@ -55,13 +64,13 @@ const StageTilesField = ({
             {rowIndicesArray.map(rawYIndex => {
 
                 // Use last row array if no row array for this y-index.
-                const zIndicesRowArray = zIndices.length > rawYIndex ?
-                        zIndices[rawYIndex] :
-                        zIndices[zIndices.length - 1],
+                const zIndicesRowArray = finalZIndices.length > rawYIndex ?
+                        finalZIndices[rawYIndex] :
+                        finalZIndices[finalZIndices.length - 1],
 
-                    coloursRowArray = colours.length > rawYIndex ?
-                        colours[rawYIndex] :
-                        colours[colours.length - 1]
+                    coloursRowArray = finalColours.length > rawYIndex ?
+                        finalColours[rawYIndex] :
+                        finalColours[finalColours.length - 1]
 
                 /**
                  * Invert the rows, since top row in array should be top row
