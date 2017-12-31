@@ -2,7 +2,7 @@
  * ANCHORS *
  ***********/
 
-.accessed-on {
+.dom-manager.accessed-on {
 
     // Show access highlight of dots and text...
 
@@ -19,7 +19,10 @@
     &.is-not-verse-interactivated .carousel .accessed-annotation.selected-annotation .cards-block,
 
     // ... in lyrics only when...
-    &.is-not-verse-interactivated.dots-section-hidden.carousel-expanded .lyric-section {
+    &.is-not-verse-interactivated.dots-section-hidden.carousel-expanded .lyric-section,
+    
+    // ... or...
+    &.is-not-verse-interactivated.dots-section-hidden.lyric-expanded .lyric-section {
 
         .access-highlighted {
 
