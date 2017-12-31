@@ -12,7 +12,7 @@ import {
 
 const DEFAULT_STAGE_TILES = {
         ceilingZIndices: [
-            [0]
+            [20]
         ],
         ceilingColours: [
             [STAGE_COLOUR]

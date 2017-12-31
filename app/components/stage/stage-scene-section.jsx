@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import classnames from 'classnames'
 
 import StageActionField from './stage-action-field'
-import StageFloorField from './stage-floor-field'
+import StageTilesField from './stage-tiles-field'
 import StageSkyField from './stage-sky-field'
 
 import { getSceneObject } from '../../helpers/data-helper'
@@ -56,11 +56,13 @@ class StageSceneSection extends Component {
                 <StageSkyField
                     sky={sky}
                 />
-                <StageFloorField
+                {/* Ceiling tiles. */}
+                <StageTilesField
                     zIndices={ceilingZIndices}
                     colours={ceilingColours}
                 />
-                <StageFloorField
+                {/* Floor tiles. */}
+                <StageTilesField
                     isFloor
                     zIndices={floorZIndices}
                     colours={floorColours}

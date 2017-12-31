@@ -4,7 +4,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { getArrayOfLength } from '../../helpers/general-helper'
-import { getTileCornersForXYAndZ } from '../../helpers/stage-helper'
+
+import StageTile from './stage-tile'
 
 import { TILE_ROWS_LENGTH,
          TILE_COLUMNS_LENGTH } from '../../constants/stage'
@@ -31,7 +32,7 @@ const rowIndicesArray = getArrayOfLength({
         length: TILE_COLUMNS_LENGTH
     })
 
-const StageFloorField = ({
+const StageTilesField = ({
 
     isFloor,
     zIndices,
@@ -42,7 +43,7 @@ const StageFloorField = ({
     return (
         <div className={classnames(
             'stage-tiles-field',
-            isFloor ? 'stage-floor-field' : 'stage-ceiling-field'
+            isFloor ? 'stage-tiles-field' : 'stage-ceiling-field'
         )}>
             <div
                 className={classnames(
@@ -78,33 +79,16 @@ const StageFloorField = ({
 
                             colour = coloursRowArray.length > xIndex ?
                                 coloursRowArray[xIndex] :
-                                coloursRowArray[coloursRowArray.length - 1],
-
-                            corners = getTileCornersForXYAndZ(
-                                xIndex, yIndex, zIndex
-                            )
+                                coloursRowArray[coloursRowArray.length - 1]
 
                         return (
-                            <div
+                            <StageTile
                                 key={`${xIndex}_${yIndex}`}
-                            >
-                                {corners.map((corner, cornerIndex) => {
-                                    const { xPercentage,
-                                            yPercentage } = corner
-
-                                    return (
-                                        <div
-                                            key={cornerIndex}
-                                            className="test-tile-corner-pixel"
-                                            style={{
-                                                left: xPercentage + '%',
-                                                bottom: yPercentage + '%',
-                                                backgroundColor: colour
-                                            }}
-                                        />
-                                    )
-                                })}
-                            </div>
+                                xIndex={xIndex}
+                                yIndex={yIndex}
+                                zIndex={zIndex}
+                                colour={colour}
+                            />
                         )
                     })
                 )
@@ -113,6 +97,6 @@ const StageFloorField = ({
     )
 }
 
-StageFloorField.propTypes = propTypes
+StageTilesField.propTypes = propTypes
 
-export default StageFloorField
+export default StageTilesField
