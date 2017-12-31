@@ -45,6 +45,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
+    {
+        taskName: `Matrices for ceiling tiles.`,
+        workedHours: 0,
+        neededHours: 5
+    },
 
     /**
      * Window scenes.
