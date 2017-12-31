@@ -7,9 +7,11 @@ import { connect } from 'react-redux'
 import NavBooksColumn from './nav-books-column'
 
 const mapStateToProps = ({
+    isHeightlessLyricColumn,
     isHiddenNav,
     showSingleBookColumn
 }) => ({
+    isHeightlessLyricColumn,
     isHiddenNav,
     showSingleBookColumn
 })
@@ -22,12 +24,13 @@ const navSectionPropTypes = {
 
 NavSection = ({
 
+    isHeightlessLyricColumn,
     isHiddenNav,
     showSingleBookColumn,
 
 ...other }) => {
 
-    return !isHiddenNav ? (
+    return isHiddenNav || isHeightlessLyricColumn ? null : (
         <div className={classnames(
             'nav-custom-subfield'
         )}>
@@ -54,7 +57,7 @@ NavSection = ({
                 </div>
             </div>
         </div>
-    ) : null
+    )
 }
 
 NavSection.propTypes = navSectionPropTypes

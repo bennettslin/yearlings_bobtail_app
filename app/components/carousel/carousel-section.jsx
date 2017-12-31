@@ -13,12 +13,14 @@ import { getAnnotationsCount } from '../../helpers/data-helper'
 import { getArrayOfLength } from '../../helpers/general-helper'
 
 const mapStateToProps = ({
+    isHeightlessLyricColumn,
     isHiddenNav,
     isHeavyRenderReady,
     renderReadySongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
 }) => ({
+    isHeightlessLyricColumn,
     isHiddenNav,
     isHeavyRenderReady,
     renderReadySongIndex,
@@ -72,7 +74,8 @@ class CarouselSection extends Component {
     }
 
     render() {
-        const { isHiddenNav,
+        const { isHeightlessLyricColumn,
+                isHiddenNav,
                 isHeavyRenderReady,
                 renderReadySongIndex,
                 accessedAnnotationIndex,
@@ -97,7 +100,7 @@ class CarouselSection extends Component {
                 length: annotationsCount
             })
 
-        return (
+        return isHeightlessLyricColumn ? null : (
             <div
                 className={classnames(
                     'carousel',
