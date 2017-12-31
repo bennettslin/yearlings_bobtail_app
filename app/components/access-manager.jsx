@@ -130,7 +130,8 @@ class AccessManager extends Component {
     }
 
     _routeNavigation(e, keyName) {
-        const { isLyricExpanded,
+        const { isHeightlessLyricColumn,
+                isLyricExpanded,
                 interactivatedVerseIndex,
                 selectedScoreIndex,
                 selectedVerseIndex,
@@ -169,13 +170,13 @@ class AccessManager extends Component {
 
                 // We're in nav section.
             } else if (!this.props.selectedCarouselNavIndex &&
-                       !isLyricExpanded) {
+                       !isHeightlessLyricColumn && !isLyricExpanded) {
 
                 ({ annotationIndexWasAccessed,
                     keyWasRegistered } = this._handleNavNavigation(e, keyName))
 
                 // We're in lyrics section.
-            } else {
+            } else if (!isHeightlessLyricColumn || isLyricExpanded) {
                 keyWasRegistered = this._handleLyricNavigation(e, keyName)
 
                 // If key was registered, then annotation index was accessed.
