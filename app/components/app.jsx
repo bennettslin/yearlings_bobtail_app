@@ -24,7 +24,7 @@ import { CONTINUE,
          DISABLED,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
-import { getSongObject, getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex } from '../helpers/data-helper'
+import { getSongObject, getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex, getVerseIndexForNextScene } from '../helpers/data-helper'
 import { getValueInBitNumber } from '../helpers/bit-helper'
 import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn, getIsSomethingBeingShown } from '../helpers/logic-helper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsPhone, getIsHeightlessLyricColumn, getIsHiddenNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTitleInAudio } from '../helpers/responsive-helper'
@@ -783,48 +783,18 @@ class App extends Component {
      * SCENE *
      *********/
 
-    /**
-     * FIXME: This is an admin method, so it doesn't matter that it isn't very
-     * performant. Make it dev only before release.
-     */
     selectScene(direction) {
-        const { selectedSongIndex } = this.props
+        const { selectedSongIndex, selectedVerseIndex } = this.props
 
-        if (getSongIsLogue(selectedSongIndex)) {
-            return
+        const nextVerseIndex = getVerseIndexForNextScene(
+            selectedSongIndex, selectedVerseIndex, direction
+        )
+
+        if (nextVerseIndex > -1) {
+            this.selectVerse({
+                selectedVerseIndex: nextVerseIndex
+            })
         }
-
-        const { selectedVerseIndex } = this.props,
-
-            songVersesCount = getSongVerseTimes(selectedSongIndex).length,
-
-            selectedSceneIndex = getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
-
-        let nextSceneIndex = selectedSceneIndex,
-            nextVerseIndex = selectedVerseIndex
-
-        /**
-         * Find the closest verse index that changes the scene index. This
-         * selects the first verse for that scene when going forward, and the
-         * last verse for that scene when going backward.
-         */
-        while (nextSceneIndex === selectedSceneIndex) {
-
-            nextVerseIndex += (songVersesCount + direction)
-            nextVerseIndex %= songVersesCount
-
-            nextSceneIndex = getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                nextVerseIndex
-            )
-        }
-
-        this.selectVerse({
-            selectedVerseIndex: nextVerseIndex
-        })
     }
 
     /*********
