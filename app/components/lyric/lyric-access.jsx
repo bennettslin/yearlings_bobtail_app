@@ -13,12 +13,14 @@ import { NAVIGATION_ENTER_KEY,
          NAVIGATION_DOWN_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
+    isLyricExpanded,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedDotKeys,
     interactivatedVerseIndex
 }) => ({
+    isLyricExpanded,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
@@ -38,6 +40,7 @@ const lyricAccessPropTypes = {
 
 const LyricAccess = ({
 
+    isLyricExpanded,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
@@ -47,9 +50,27 @@ const LyricAccess = ({
 }) => {
 
     const hasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
-        keysArray: ALL_DOT_KEYS,
-        trueFalseObject: selectedDotKeys
-    }))
+            keysArray: ALL_DOT_KEYS,
+            trueFalseObject: selectedDotKeys
+        })),
+
+        showLeftRight = Boolean(
+
+            // Must have at least one selected dot, and no selected annotation.
+            hasSelectedDots && !selectedAnnotationIndex && (
+                (
+                    // Must show carousel and not have dots section open...
+                    selectedCarouselNavIndex &&
+                    !selectedDotsIndex
+                ) || (
+                    // ... or else have lyric section open.
+                    isLyricExpanded
+                )
+            )
+        ),
+
+        // Must not have interactivated verse.
+        showEnter = showLeftRight && interactivatedVerseIndex < 0
 
     return (
         <div>
@@ -60,12 +81,7 @@ const LyricAccess = ({
                         NAVIGATION_LEFT_KEY,
                         NAVIGATION_RIGHT_KEY
                     ]}
-                    accessKeysShown={Boolean(
-                        selectedCarouselNavIndex &&
-                        hasSelectedDots &&
-                        !selectedDotsIndex &&
-                        !selectedAnnotationIndex
-                    )}
+                    accessKeysShown={showLeftRight}
                 />
 
                 <AccessIconsBlock
@@ -73,13 +89,7 @@ const LyricAccess = ({
                     accessIconKeys={[
                         NAVIGATION_ENTER_KEY
                     ]}
-                    accessKeysShown={Boolean(
-                        selectedCarouselNavIndex &&
-                        hasSelectedDots &&
-                        !selectedDotsIndex &&
-                        !selectedAnnotationIndex &&
-                        interactivatedVerseIndex < 0
-                    )}
+                    accessKeysShown={showEnter}
                 />
             </div>
 
