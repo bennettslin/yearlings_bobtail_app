@@ -671,26 +671,31 @@ class EventManager extends Component {
 
     focusBody() {
 
+        const { isHeightlessLyricColumn,
+                isLyricExpanded } = this.props,
+
+            focusLyricSectionFirst =
+                !isHeightlessLyricColumn || isLyricExpanded
+
+        let focusElement
+
         // In live view.
-        if (this.myLyricSection) {
-            this.myLyricSection.focus()
+        if (focusLyricSectionFirst) {
+            /**
+             * Not sure why the refs sometimes don't work, but if that's the
+             * case, we'll find the elements through the document.
+             */
+            focusElement = this.myLyricSection ||
+                document.getElementsByClassName('lyric-section')[0]
 
         // In admin view.
-        } else if (this.myDomManager) {
-            this.myDomManager.focus()
-
-        /**
-         * Not sure why the refs sometimes don't work, but if that's the case,
-         * we'll find the elements through the document.
-         */
         } else {
-            const element =
-                document.getElementsByClassName('lyric-section')[0] ||
+            focusElement = this.myDomManager ||
                 document.getElementsByClassName('dom-manager')[0]
+        }
 
-            if (element) {
-                element.focus()
-            }
+        if (focusElement) {
+            focusElement.focus()
         }
     }
 
@@ -1001,7 +1006,7 @@ class EventManager extends Component {
 }
 
 export default connect(({
-    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
+    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }) => ({
-    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
+    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }))(EventManager)
