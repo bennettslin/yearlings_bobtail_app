@@ -34,25 +34,28 @@ import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenNav } from './respon
 export const getTileCornersForXYAndZ = (
     xIndex,
     yIndex,
-    zIndex = 0
+    zIndex = 0,
+    isDiagonal = false
 ) => {
     /**
      * Like CSS corners, order is:
-     *
      * top left, top right, bottom right, bottom left.
+     *
+     * When diagonal, order is:
+     * top, right, bottom, left.
      */
     return [
         _getTileXYPercentageForXYCornerAndZ(
-            xIndex, yIndex + 1, zIndex
+            xIndex, yIndex + 1, zIndex, isDiagonal
         ),
         _getTileXYPercentageForXYCornerAndZ(
-            xIndex + 1, yIndex + 1, zIndex
+            xIndex + 1, yIndex + 1, zIndex, isDiagonal
         ),
         _getTileXYPercentageForXYCornerAndZ(
-            xIndex + 1, yIndex, zIndex
+            xIndex + 1, yIndex, zIndex, isDiagonal
         ),
         _getTileXYPercentageForXYCornerAndZ(
-            xIndex, yIndex, zIndex
+            xIndex, yIndex, zIndex, isDiagonal
         )
     ]
 }
@@ -69,18 +72,28 @@ const _getTileXYPercentageForXYCornerAndZ = (
      * This is an interval from 0 to 10, with 0 being ground level, and 10
      * being level with the vanishing point.
      */
-    zIndex = 0
+    zIndex = 0,
+
+    isDiagonal
 ) => {
-    return {
-        xPercentage: _getXPercentageForXCornerAndYCorner(
-            xCornerIndex,
-            yCornerIndex
-        ),
-        yPercentage: _getYPercentageForYCornerAndZ(
-            yCornerIndex,
-            zIndex
-        )
-    }
+
+    return isDiagonal ? {
+
+            xPercentage: 50,
+            yPercentage: 50
+
+        } : {
+            xPercentage: _getXPercentageForXCornerAndYCorner(
+                xCornerIndex,
+                yCornerIndex,
+                isDiagonal
+            ),
+            yPercentage: _getYPercentageForYCornerAndZ(
+                yCornerIndex,
+                zIndex,
+                isDiagonal
+            )
+        }
 }
 
 const _getXPercentageForXCornerAndYCorner = (

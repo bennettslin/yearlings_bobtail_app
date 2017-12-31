@@ -11,6 +11,7 @@ class StageTile extends Component {
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
         zIndex: PropTypes.number.isRequired,
+        isDiagonal: PropTypes.bool,
         colour: PropTypes.string.isRequired
     }
 
@@ -24,6 +25,7 @@ class StageTile extends Component {
                     'xIndex',
                     'yIndex',
                     'zIndex',
+                    'isDiagonal',
                     'colour'
                 ]
             })
@@ -33,12 +35,13 @@ class StageTile extends Component {
 
     render() {
         const { colour,
+                isDiagonal,
                 xIndex,
                 yIndex,
                 zIndex } = this.props,
 
             corners = getTileCornersForXYAndZ(
-                xIndex, yIndex, zIndex
+                xIndex, yIndex, zIndex, isDiagonal
             )
 
         return (

@@ -39,7 +39,8 @@ class StageSceneSection extends Component {
 
             { actors, fixtures, walls, sky, tiles } = sceneObject,
 
-            { ceilingZIndices = DEFAULT_STAGE_TILES.ceilingZIndices,
+            { isDiagonal = false,
+              ceilingZIndices = DEFAULT_STAGE_TILES.ceilingZIndices,
               ceilingColours = DEFAULT_STAGE_TILES.ceilingColours,
               floorZIndices = DEFAULT_STAGE_TILES.floorZIndices,
               floorColours = DEFAULT_STAGE_TILES.floorColours } = tiles
@@ -55,12 +56,15 @@ class StageSceneSection extends Component {
                 />
                 {/* Ceiling tiles. */}
                 <StageTilesField
+                    isFloor={false}
+                    isDiagonal={isDiagonal}
                     zIndices={ceilingZIndices}
                     colours={ceilingColours}
                 />
                 {/* Floor tiles. */}
                 <StageTilesField
-                    isFloor
+                    isFloor={true}
+                    isDiagonal={isDiagonal}
                     zIndices={floorZIndices}
                     colours={floorColours}
                 />
