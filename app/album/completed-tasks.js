@@ -2677,4 +2677,14 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Fix bug where clicking app makes screen jump in heightless lyric.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Make lyric accessible when lyric is expanded.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
