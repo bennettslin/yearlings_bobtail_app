@@ -7,11 +7,8 @@ import { getArrayOfLength } from '../../helpers/general-helper'
 
 import StageTile from './stage-tile'
 
-// import { TILE_ROWS_LENGTH,
-//          TILE_COLUMNS_LENGTH } from '../../constants/stage'
-
-const TILE_ROWS_LENGTH = 6,
-    TILE_COLUMNS_LENGTH = 12
+import { TILE_ROWS_LENGTH,
+         TILE_COLUMNS_LENGTH } from '../../constants/stage'
 
 const propTypes = {
     isFloor: PropTypes.bool.isRequired,

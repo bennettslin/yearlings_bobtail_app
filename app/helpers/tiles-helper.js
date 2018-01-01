@@ -10,7 +10,8 @@ import {
     roundPercentage
 } from './general-helper'
 
-const SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
+const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
+    SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
 
 /*********
  * TILES *
@@ -22,11 +23,11 @@ export const getTileCornersForXYAndZ = (
     zIndex = 0,
     slantDirection
 ) => {
-    if (slantDirection === 'right') {
-        return _getSlantedRightCoordinates(
+    if (slantDirection === 'left') {
+        return _getSlantedLeftCoordinates(
             xIndex, yIndex, zIndex
         )
-    } else if (slantDirection === 'left') {
+    } else if (slantDirection === 'right') {
         return _getSlantedRightCoordinates(
             xIndex, yIndex, zIndex
         )
@@ -59,6 +60,59 @@ const _getDefaultCoordinates = (
         )
     ]
 }
+
+const _getSlantedLeftCoordinates = (
+    xIndex, yIndex, zIndex
+) => {
+
+    let xModulo,
+        yModulo
+
+    // If yIndex is 1, 2, or 3...
+    if (yIndex >= 1 && yIndex <= 3) {
+        // xModulo for even xIndex is 3 above that for previous odd xIndex.
+        xModulo = xIndex % 2 ? -0.5 : 0
+
+        // yModulo for even xIndex is 1 below that for previous odd xIndex.
+        yModulo = xIndex % 2 ? 1 : 0
+
+        // If yIndex is 0, 4, or 5...
+    } else {
+        // xModulo for even xIndex is 2 above that for previous odd xIndex.
+        xModulo = xIndex % 2 ? 0.5 : 0
+
+        // yModulo for even xIndex is 1 above that for previous odd xIndex.
+        yModulo = xIndex % 2 ? 0 : 1
+    }
+
+    const
+        xConstant = SLANTED_LEFT_X_CONSTANTS[yIndex],
+        yConstant = yIndex * 2,
+
+        // These are the coordinates for the top left corner.
+        slantedLeftXIndex = xConstant + xIndex * 2.5 + xModulo,
+        slantedLeftYIndex = yConstant + yModulo
+
+    /**
+     * When slanted, order is:
+     * top, right, bottom, left.
+     */
+    return [
+        _getTileXYPercentage(
+            slantedLeftXIndex + 1, slantedLeftYIndex, zIndex, true
+        ),
+        _getTileXYPercentage(
+            slantedLeftXIndex + 3, slantedLeftYIndex + 1, zIndex, true
+        ),
+        _getTileXYPercentage(
+            slantedLeftXIndex + 2, slantedLeftYIndex + 3, zIndex, true
+        ),
+        _getTileXYPercentage(
+            slantedLeftXIndex, slantedLeftYIndex + 2, zIndex, true
+        )
+    ]
+}
+
 
 const _getSlantedRightCoordinates = (
     xIndex, yIndex, zIndex
