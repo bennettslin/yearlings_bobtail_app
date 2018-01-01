@@ -925,6 +925,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     DEATHBED_TILES = {
+        isDiagonal: true,
         floorZIndices: [
             [0, 1, 1, 1, 1, 1, 1, 0],
             [0, 1, 1, 7, 1, 1, 1, 0],

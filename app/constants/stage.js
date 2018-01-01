@@ -1,48 +1,63 @@
 // Check out Peoria Symphony Orchestra.
+import { getExponentFactorialSum, getArrayOfIncreasingSums } from '../helpers/general-helper'
 
 const
-    // TODO: Make this recursive so that it can be used for fourteen as well.
-    getTileYPercentages = (exponent, stageYPercentage) => {
-        const yPercentageUnit =
-        exponent * exponent * exponent * exponent * exponent +
-        exponent * exponent * exponent * exponent +
-        exponent * exponent * exponent +
-        exponent * exponent +
-        exponent +
-        1,
+    getTileYPercentages = (base, stageYPercentage, exponent) => {
+        const
+            /**
+             * yPercentageUnit =
+             * base * base * base * base * base +
+             * base * base * base * base +
+             * base * base * base +
+             * base * base +
+             * base +
+             * 1
+             */
+            yPercentageUnit = getExponentFactorialSum(base, exponent - 1),
 
-        unit = stageYPercentage / yPercentageUnit,
+            unit = stageYPercentage / yPercentageUnit,
+            /**
+             * yHeight0 = unit * base * base * base * base * base,
+             * yHeight1 = unit * base * base * base * base,
+             * yHeight2 = unit * base * base * base,
+             * yHeight3 = unit * base * base,
+             * yHeight4 = unit * base,
+             * yHeight5 = unit,
 
-        yHeight0 = unit * exponent * exponent * exponent * exponent * exponent,
-        yHeight1 = unit * exponent * exponent * exponent * exponent,
-        yHeight2 = unit * exponent * exponent * exponent,
-        yHeight3 = unit * exponent * exponent,
-        yHeight4 = unit * exponent,
-        yHeight5 = unit,
+             * tileYPercentages = [
+             * 0,
+             * yHeight0,
+             * yHeight0 + yHeight1,
+             * yHeight0 + yHeight1 + yHeight2,
+             * yHeight0 + yHeight1 + yHeight2 + yHeight3,
+             * yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4,
+             * yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4 + yHeight5
+             * ]
+             */
 
-        tileYPercentages = [
-            0,
-            yHeight0,
-            yHeight0 + yHeight1,
-            yHeight0 + yHeight1 + yHeight2,
-            yHeight0 + yHeight1 + yHeight2 + yHeight3,
-            yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4,
-            yHeight0 + yHeight1 + yHeight2 + yHeight3 + yHeight4 + yHeight5
-        ]
+            tileYPercentages = getArrayOfIncreasingSums(
+                base, exponent - 1, unit
+            )
 
         return tileYPercentages
     }
 
 /**
  * Number to multiply one number to get the next, such that after six times,
- * 2 becomes 3, resulting in seven values.
+ * 2 becomes 3, resulting in seven values. This number can be fudged, since it
+ * only determines relative foreshortening.
  */
-const exponent = 1.069913193933663,
+const base = 1.069913193933663,
 
     // Assume that floor height is this percent of stage height.
     stageYPercentage = 12,
 
-    TILE_Y_PERCENTAGES = getTileYPercentages(exponent, stageYPercentage)
+    TILE_Y_PERCENTAGES = getTileYPercentages(
+        base, stageYPercentage, 6
+    ),
+    DIAGONAL_TILE_Y_PERCENTAGES = getTileYPercentages(
+        base, stageYPercentage, 14
+    )
 
 module.exports = {
 
@@ -56,8 +71,6 @@ module.exports = {
     TILE_ROWS_LENGTH: 6,
     TILE_COLUMNS_LENGTH: 12,
 
-    // Use regular ones for diagonals, for now.
-    // DIAGONAL_TILE_Y_PERCENTAGES: [],
-    // DIAGONAL_ROWS_LENGTH: 14,
-    DIAGONAL_COLUMNS_LENGTH: 32
+    DIAGONAL_TILE_Y_PERCENTAGES,
+    DIAGONAL_TILE_COLUMNS_LENGTH: 32
 }

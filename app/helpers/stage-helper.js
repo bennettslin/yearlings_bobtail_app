@@ -3,7 +3,8 @@ import { STAGE_ASPECT_RATIO,
          VANISHING_POINT_Y_PERCENTAGE,
          TILE_Y_PERCENTAGES,
          TILE_COLUMNS_LENGTH,
-         DIAGONAL_COLUMNS_LENGTH } from '../constants/stage'
+         DIAGONAL_TILE_Y_PERCENTAGES,
+         DIAGONAL_TILE_COLUMNS_LENGTH } from '../constants/stage'
 
 import { PHONE_WIDTH,
          MINI_WIDTH,
@@ -32,7 +33,8 @@ import { PHONE_WIDTH,
 import { roundPercentage } from './general-helper'
 import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenNav } from './responsive-helper'
 
-const DIAGONAL_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
+const DIAGONAL_X_CONSTANTS = [0, 1, 0, 1, 2, 0],
+    DIAGONAL_TILE_ROWS_LENGTH = 14
 
 /*********
  * TILES *
@@ -87,35 +89,34 @@ const _getTileRelativeCoordinatesForDiagonalXYAndZ = (
         diagonalXIndex = xConstant + xIndex * 2.5 + xModulo,
         diagonalYIndex = yConstant + yModulo
 
-    console.error('xIndex, yIndex', xIndex, yIndex)
-    console.error('diagonalXIndex, diagonalYIndex', diagonalXIndex, diagonalYIndex)
-
     /**
      * When diagonal, order is:
      * top, right, bottom, left.
+     *
+     * Invert diagonal Y values.
      */
     return [
         _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex + 2, diagonalYIndex, zIndex
+            diagonalXIndex + 2, DIAGONAL_TILE_ROWS_LENGTH - diagonalYIndex, zIndex
         ),
         _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex + 3, diagonalYIndex + 2, zIndex
+            diagonalXIndex + 3, DIAGONAL_TILE_ROWS_LENGTH - diagonalYIndex - 2, zIndex
         ),
         _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex + 1, diagonalYIndex + 3, zIndex
+            diagonalXIndex + 1, DIAGONAL_TILE_ROWS_LENGTH - diagonalYIndex - 3, zIndex
         ),
         _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex, diagonalYIndex + 1, zIndex
+            diagonalXIndex, DIAGONAL_TILE_ROWS_LENGTH - diagonalYIndex - 1, zIndex
         )
     ]
 }
 
 const _getTileXYPercentageForDiagonalXYCornerAndZ = (
 
-    // This is an interval from 0 to 12. There are twelve floor panel columns.
+    // This is an interval from 0 to 32. There are 32 floor panel columns.
     xCornerIndex,
 
-    // This is an interval from 0 to 6. There are six floor panel rows.
+    // This is an interval from 0 to 14. There are 14 floor panel rows.
     yCornerIndex,
 
     /**
@@ -151,7 +152,7 @@ const _getXPercentageForDiagonalXCornerAndYCorner = (
 
     rawXPercentage = (100 - tilesWidthPercentage) / 2 +
         xCornerIndex * tilesWidthPercentage /
-        DIAGONAL_COLUMNS_LENGTH
+        DIAGONAL_TILE_COLUMNS_LENGTH
 
 return roundPercentage(rawXPercentage)
 }
@@ -160,7 +161,7 @@ const _getYPercentageForDiagonalYCornerAndZ = (
     yCornerIndex,
     zIndex
 ) => {
-    const tileYPercentage = TILE_Y_PERCENTAGES[yCornerIndex],
+    const tileYPercentage = DIAGONAL_TILE_Y_PERCENTAGES[yCornerIndex],
         rawYPercentage =
             tileYPercentage + zIndex / 10 *
             (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)

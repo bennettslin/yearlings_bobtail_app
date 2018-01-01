@@ -1,5 +1,43 @@
 // Basic helpers that only know DOM elements and JavaScript objects.
 
+const getPower = (base, exponent) => {
+    if (exponent === 0) {
+        return 1;
+    } else {
+        return base * getPower(base, exponent - 1)
+    }
+}
+
+export const getExponentFactorialSum = (base, exponent) => {
+    let sum = 0
+
+    while (exponent > -1) {
+        sum += getPower(base, exponent)
+        exponent--
+    }
+
+    return sum
+}
+
+export const getArrayOfIncreasingSums = (base, exponent, constant) => {
+    const arrayOfIncreasingSums = [0]
+
+    let mutableExponent = exponent,
+        currentSum = 0
+
+    while (mutableExponent > -1) {
+        const currentPower = getPower(base, mutableExponent) * constant
+
+        currentSum += currentPower
+
+        arrayOfIncreasingSums.push(currentSum)
+
+        mutableExponent--
+    }
+
+    return arrayOfIncreasingSums
+}
+
 export const roundPercentage = (rawPercentage) => {
     return Math.round(rawPercentage * 100) / 100
 }
