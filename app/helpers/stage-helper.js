@@ -33,8 +33,7 @@ import { PHONE_WIDTH,
 import { roundPercentage } from './general-helper'
 import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenNav } from './responsive-helper'
 
-const DIAGONAL_X_CONSTANTS = [0, 1, 0, 1, 2, 0],
-    DIAGONAL_TILE_ROWS_LENGTH = 14
+const DIAGONAL_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
 
 /*********
  * TILES *
@@ -97,16 +96,16 @@ const _getTileRelativeCoordinatesForDiagonalXYAndZ = (
      */
     return [
         _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex + 2, DIAGONAL_TILE_ROWS_LENGTH - diagonalYIndex, zIndex
+            diagonalXIndex + 2, diagonalYIndex, zIndex
         ),
         _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex + 3, DIAGONAL_TILE_ROWS_LENGTH - diagonalYIndex - 2, zIndex
+            diagonalXIndex + 3, diagonalYIndex + 2, zIndex
         ),
         _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex + 1, DIAGONAL_TILE_ROWS_LENGTH - diagonalYIndex - 3, zIndex
+            diagonalXIndex + 1, diagonalYIndex + 3, zIndex
         ),
         _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex, DIAGONAL_TILE_ROWS_LENGTH - diagonalYIndex - 1, zIndex
+            diagonalXIndex, diagonalYIndex + 1, zIndex
         )
     ]
 }
