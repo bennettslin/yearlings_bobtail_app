@@ -1,5 +1,25 @@
 module.exports = [
     {
+        taskName: `Hover over stage shows buttons to switch scenes.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Redo tile matrices for slanted.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Rethink tasks for panels, doors, and windows.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Make tasks for app UI.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Keep admin stuff in dev, not in production.`,
         workedHours: 0,
         neededHours: 3
