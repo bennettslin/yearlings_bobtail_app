@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Diagonal stage tiles`,
-        workedHours: 8,
-        neededHours: 16
-    },
-    {
         taskName: `Keep admin stuff in dev, not in production.`,
         workedHours: 0,
         neededHours: 3

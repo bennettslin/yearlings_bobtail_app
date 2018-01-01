@@ -2687,4 +2687,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Diagonal stage tiles`,
+        workedHours: 12,
+        neededHours: 12
+    }
 ]

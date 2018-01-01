@@ -846,29 +846,6 @@ const
             [STAGE_COLOUR]
         ]
     },
-    CLIFF_TILES = {
-        slantDirection: RIGHT,
-        floorZIndices: [
-            [4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
-        ],
-        floorColours: [
-            [STAGE_COLOUR]
-        ]
-    },
-    CLIFF_CONVERTIBLE_TILES = {
-        slantDirection: RIGHT,
-        floorZIndices: [
-            [4, 4, 6, 4, 4, 4, 4, 4, 4, 0],
-            [4, 6, 6, 6, 4, 4, 4, 4, 4, 0],
-            [4, 4, 6, 6, 8, 4, 4, 4, 4, 0],
-            [4, 4, 4, 8, 6, 6, 4, 4, 4, 0],
-            [4, 4, 4, 4, 6, 4, 4, 4, 4, 0],
-            [4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
-        ],
-        floorColours: [
-            [STAGE_COLOUR]
-        ]
-    },
     PARK_TILES = {
         floorZIndices: [
             [1]
@@ -929,7 +906,31 @@ const
             [STAGE_COLOUR]
         ]
     },
+    CLIFF_TILES = {
+        slantDirection: RIGHT,
+        floorZIndices: [
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
+        ],
+        floorColours: [
+            [STAGE_COLOUR]
+        ]
+    },
+    CLIFF_CONVERTIBLE_TILES = {
+        slantDirection: RIGHT,
+        floorZIndices: [
+            [4, 4, 6, 4, 4, 4, 4, 4, 4, 0],
+            [4, 6, 6, 6, 4, 4, 4, 4, 4, 0],
+            [4, 4, 6, 6, 8, 4, 4, 4, 4, 0],
+            [4, 4, 4, 8, 6, 6, 4, 4, 4, 0],
+            [4, 4, 4, 4, 6, 4, 4, 4, 4, 0],
+            [4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
+        ],
+        floorColours: [
+            [STAGE_COLOUR]
+        ]
+    },
     DEATHBED_TILES = {
+        // Only in Cremated.
         slantDirection: RIGHT,
         floorZIndices: [
             [0, 1, 1, 1, 1, 1, 1, 0],
@@ -944,6 +945,7 @@ const
         ]
     },
     DEATHBED_CLIFF_THOUGHT_TILES = {
+        // Only in 100,000th Dream.
         slantDirection: RIGHT,
         floorZIndices: [
             [0, 1, 1, 1, 1, 1, 1, 0],
