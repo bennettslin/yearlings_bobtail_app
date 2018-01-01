@@ -2,15 +2,15 @@ import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
     TILE_COLUMNS_LENGTH,
-    DIAGONAL_TILE_Y_PERCENTAGES,
-    DIAGONAL_TILE_COLUMNS_LENGTH
+    SLANTED_TILE_Y_PERCENTAGES,
+    SLANTED_TILE_COLUMNS_LENGTH
 } from '../constants/stage'
 
 import {
     roundPercentage
 } from './general-helper'
 
-const DIAGONAL_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
+const SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
 
 /*********
  * TILES *
@@ -20,20 +20,47 @@ export const getTileCornersForXYAndZ = (
     xIndex,
     yIndex,
     zIndex = 0,
-    slantDirection = false
+    slantDirection
 ) => {
-    if (slantDirection) {
-        return _getTileRelativeCoordinatesForDiagonalXYAndZ(
+    if (slantDirection === 'right') {
+        return _getSlantedRightCoordinates(
+            xIndex, yIndex, zIndex
+        )
+    } else if (slantDirection === 'left') {
+        return _getSlantedRightCoordinates(
             xIndex, yIndex, zIndex
         )
     } else {
-        return _getTileRelativeCoordinatesForXYAndZ(
+        return _getDefaultCoordinates(
             xIndex, yIndex, zIndex
         )
     }
 }
 
-const _getTileRelativeCoordinatesForDiagonalXYAndZ = (
+const _getDefaultCoordinates = (
+    xIndex, yIndex, zIndex
+) => {
+    /**
+     * Like CSS corners, order is:
+     * top left, top right, bottom right, bottom left.
+     */
+    return [
+        _getTileXYPercentage(
+            xIndex, yIndex + 1, zIndex
+        ),
+        _getTileXYPercentage(
+            xIndex + 1, yIndex + 1, zIndex
+        ),
+        _getTileXYPercentage(
+            xIndex + 1, yIndex, zIndex
+        ),
+        _getTileXYPercentage(
+            xIndex, yIndex, zIndex
+        )
+    ]
+}
+
+const _getSlantedRightCoordinates = (
     xIndex, yIndex, zIndex
 ) => {
 
@@ -58,69 +85,84 @@ const _getTileRelativeCoordinatesForDiagonalXYAndZ = (
     }
 
     const
-        xConstant = DIAGONAL_X_CONSTANTS[yIndex],
+        xConstant = SLANTED_RIGHT_X_CONSTANTS[yIndex],
         yConstant = yIndex * 2,
 
         // These are the coordinates for the top left corner.
-        diagonalXIndex = xConstant + xIndex * 2.5 + xModulo,
-        diagonalYIndex = yConstant + yModulo
+        slantedRightXIndex = xConstant + xIndex * 2.5 + xModulo,
+        slantedRightYIndex = yConstant + yModulo
 
     /**
-     * When diagonal, order is:
+     * When slanted, order is:
      * top, right, bottom, left.
-     *
-     * Invert diagonal Y values.
      */
     return [
-        _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex + 2, diagonalYIndex, zIndex
+        _getTileXYPercentage(
+            slantedRightXIndex + 2, slantedRightYIndex, zIndex, true
         ),
-        _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex + 3, diagonalYIndex + 2, zIndex
+        _getTileXYPercentage(
+            slantedRightXIndex + 3, slantedRightYIndex + 2, zIndex, true
         ),
-        _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex + 1, diagonalYIndex + 3, zIndex
+        _getTileXYPercentage(
+            slantedRightXIndex + 1, slantedRightYIndex + 3, zIndex, true
         ),
-        _getTileXYPercentageForDiagonalXYCornerAndZ(
-            diagonalXIndex, diagonalYIndex + 1, zIndex
+        _getTileXYPercentage(
+            slantedRightXIndex, slantedRightYIndex + 1, zIndex, true
         )
     ]
 }
 
-const _getTileXYPercentageForDiagonalXYCornerAndZ = (
+const _getTileXYPercentage = (
 
-    // This is an interval from 0 to 32. There are 32 floor panel columns.
+    /**
+     * When default, this is an interval from 0 to 12. There are twelve floor
+     * panel columns.
+     */
     xCornerIndex,
 
-    // This is an interval from 0 to 14. There are 14 floor panel rows.
+    /**
+     * When default, this is an interval from 0 to 6. There are six floor panel
+     * rows.
+     */
     yCornerIndex,
 
     /**
      * This is an interval from 0 to 10, with 0 being ground level, and 10
      * being level with the vanishing point.
      */
-    zIndex = 0
+    zIndex = 0,
+
+    isSlanted
+
 ) => {
 
     return {
-        xPercentage: _getXPercentageForDiagonalXCornerAndYCorner(
+        xPercentage: _getXPercentage(
             xCornerIndex,
-            yCornerIndex
-        ),
-        yPercentage: _getYPercentageForDiagonalYCornerAndZ(
             yCornerIndex,
-            zIndex
+            isSlanted
+        ),
+        yPercentage: _getYPercentage(
+            yCornerIndex,
+            zIndex,
+            isSlanted
         )
     }
 }
 
-const _getXPercentageForDiagonalXCornerAndYCorner = (
+const _getXPercentage = (
     xCornerIndex,
-    yCornerIndex
+    yCornerIndex,
+    isSlanted
 ) => {
-    // Get x-coordinate percentage at zIndex 0.
-    const baseYPercentage = _getYPercentageForDiagonalYCornerAndZ(
-            yCornerIndex, 0
+    const
+        // Use columns length value based on default or slanted arrangement.
+        tileColumnsLength = isSlanted ?
+            SLANTED_TILE_COLUMNS_LENGTH : TILE_COLUMNS_LENGTH,
+
+        // Get x-coordinate percentage at zIndex 0.
+        baseYPercentage = _getYPercentage(
+            yCornerIndex, 0, isSlanted
         ),
         tilesWidthPercentage =
         100 / VANISHING_POINT_Y_PERCENTAGE *
@@ -128,100 +170,26 @@ const _getXPercentageForDiagonalXCornerAndYCorner = (
 
         rawXPercentage = (100 - tilesWidthPercentage) / 2 +
         xCornerIndex * tilesWidthPercentage /
-        DIAGONAL_TILE_COLUMNS_LENGTH
+        tileColumnsLength
 
     return roundPercentage(rawXPercentage)
 }
 
-const _getYPercentageForDiagonalYCornerAndZ = (
+const _getYPercentage = (
     yCornerIndex,
-    zIndex
+    zIndex,
+    isSlanted
 ) => {
-    const tileYPercentage = DIAGONAL_TILE_Y_PERCENTAGES[yCornerIndex],
+    const
+        // Use array based on default or slanted arrangement.
+        tileYPercentages = isSlanted ?
+            SLANTED_TILE_Y_PERCENTAGES : TILE_Y_PERCENTAGES,
+
+        tileYPercentage = tileYPercentages[yCornerIndex],
+
         rawYPercentage =
-        tileYPercentage + zIndex / 10 *
-        (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
-
-    return roundPercentage(rawYPercentage)
-}
-
-const _getTileRelativeCoordinatesForXYAndZ = (
-    xIndex, yIndex, zIndex
-) => {
-    /**
-     * Like CSS corners, order is:
-     * top left, top right, bottom right, bottom left.
-     */
-    return [
-        _getTileXYPercentageForXYCornerAndZ(
-            xIndex, yIndex + 1, zIndex
-        ),
-        _getTileXYPercentageForXYCornerAndZ(
-            xIndex + 1, yIndex + 1, zIndex
-        ),
-        _getTileXYPercentageForXYCornerAndZ(
-            xIndex + 1, yIndex, zIndex
-        ),
-        _getTileXYPercentageForXYCornerAndZ(
-            xIndex, yIndex, zIndex
-        )
-    ]
-}
-
-const _getTileXYPercentageForXYCornerAndZ = (
-
-    // This is an interval from 0 to 12. There are twelve floor panel columns.
-    xCornerIndex,
-
-    // This is an interval from 0 to 6. There are six floor panel rows.
-    yCornerIndex,
-
-    /**
-     * This is an interval from 0 to 10, with 0 being ground level, and 10
-     * being level with the vanishing point.
-     */
-    zIndex = 0
-) => {
-
-    return {
-        xPercentage: _getXPercentageForXCornerAndYCorner(
-            xCornerIndex,
-            yCornerIndex
-        ),
-        yPercentage: _getYPercentageForYCornerAndZ(
-            yCornerIndex,
-            zIndex
-        )
-    }
-}
-
-const _getXPercentageForXCornerAndYCorner = (
-    xCornerIndex,
-    yCornerIndex
-) => {
-    // Get x-coordinate percentage at zIndex 0.
-    const baseYPercentage = _getYPercentageForYCornerAndZ(
-            yCornerIndex, 0
-        ),
-        tilesWidthPercentage =
-        100 / VANISHING_POINT_Y_PERCENTAGE *
-        (VANISHING_POINT_Y_PERCENTAGE - baseYPercentage),
-
-        rawXPercentage = (100 - tilesWidthPercentage) / 2 +
-        xCornerIndex * tilesWidthPercentage /
-        TILE_COLUMNS_LENGTH
-
-    return roundPercentage(rawXPercentage)
-}
-
-const _getYPercentageForYCornerAndZ = (
-    yCornerIndex,
-    zIndex
-) => {
-    const tileYPercentage = TILE_Y_PERCENTAGES[yCornerIndex],
-        rawYPercentage =
-        tileYPercentage + zIndex / 10 *
-        (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
+            tileYPercentage + zIndex / 10 *
+            (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
 
     return roundPercentage(rawYPercentage)
 }

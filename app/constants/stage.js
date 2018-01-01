@@ -55,7 +55,7 @@ const base = 1.069913193933663,
     TILE_Y_PERCENTAGES = getTileYPercentages(
         base, stageYPercentage, 6
     ),
-    DIAGONAL_TILE_Y_PERCENTAGES = getTileYPercentages(
+    SLANTED_TILE_Y_PERCENTAGES = getTileYPercentages(
         base, stageYPercentage, 14
     )
 
@@ -71,6 +71,6 @@ module.exports = {
     TILE_ROWS_LENGTH: 6,
     TILE_COLUMNS_LENGTH: 12,
 
-    DIAGONAL_TILE_Y_PERCENTAGES,
-    DIAGONAL_TILE_COLUMNS_LENGTH: 32
+    SLANTED_TILE_Y_PERCENTAGES,
+    SLANTED_TILE_COLUMNS_LENGTH: 32
 }
