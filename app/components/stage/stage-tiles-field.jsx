@@ -7,12 +7,15 @@ import { getArrayOfLength } from '../../helpers/general-helper'
 
 import StageTile from './stage-tile'
 
-import { TILE_ROWS_LENGTH,
-         TILE_COLUMNS_LENGTH } from '../../constants/stage'
+// import { TILE_ROWS_LENGTH,
+//          TILE_COLUMNS_LENGTH } from '../../constants/stage'
+
+const TILE_ROWS_LENGTH = 6,
+    TILE_COLUMNS_LENGTH = 12
 
 const propTypes = {
     isFloor: PropTypes.bool.isRequired,
-    isDiagonal: PropTypes.bool.isRequired,
+    slantDirection: PropTypes.string.isRequired,
     zIndices: PropTypes.arrayOf(
         PropTypes.arrayOf(
             PropTypes.number
@@ -36,7 +39,7 @@ const rowIndicesArray = getArrayOfLength({
 const StageTilesField = ({
 
     isFloor,
-    isDiagonal,
+    slantDirection,
     zIndices,
     colours
 
@@ -86,7 +89,7 @@ const StageTilesField = ({
                         return (
                             <StageTile
                                 key={`${xIndex}_${yIndex}`}
-                                isDiagonal={isDiagonal}
+                                slantDirection={slantDirection}
                                 xIndex={xIndex}
                                 yIndex={yIndex}
                                 zIndex={zIndex}

@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
-import { getTileCornersForXYAndZ } from '../../helpers/stage-helper'
+import { getTileCornersForXYAndZ } from '../../helpers/tiles-helper'
 
 class StageTile extends Component {
 
@@ -11,7 +11,7 @@ class StageTile extends Component {
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
         zIndex: PropTypes.number.isRequired,
-        isDiagonal: PropTypes.bool,
+        slantDirection: PropTypes.string.isRequired,
         colour: PropTypes.string.isRequired
     }
 
@@ -25,7 +25,7 @@ class StageTile extends Component {
                     'xIndex',
                     'yIndex',
                     'zIndex',
-                    'isDiagonal',
+                    'slantDirection',
                     'colour'
                 ]
             })
@@ -35,13 +35,13 @@ class StageTile extends Component {
 
     render() {
         const { colour,
-                isDiagonal,
+                slantDirection,
                 xIndex,
                 yIndex,
                 zIndex } = this.props,
 
             corners = getTileCornersForXYAndZ(
-                xIndex, yIndex, zIndex, isDiagonal
+                xIndex, yIndex, zIndex, slantDirection
             )
 
         return (

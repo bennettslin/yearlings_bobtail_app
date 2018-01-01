@@ -10,7 +10,12 @@ import {
     FURNITURE_COLOUR
 } from './stageValues'
 
-const DEFAULT_STAGE_TILES = {
+const
+
+    LEFT = 'left',
+    RIGHT = 'right',
+
+    DEFAULT_STAGE_TILES = {
         ceilingZIndices: [
             [20]
         ],
@@ -257,7 +262,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     PRETEEN_BENNETT_ROOM_TILES = {
-        isDiagonal: true,
+        slantDirection: LEFT,
         // Captain bed height is 3.5'.
         floorZIndices: [
             [1],
@@ -271,7 +276,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     PRETEEN_BENNETT_ROOM_OPEN_BED_TILES = {
-        isDiagonal: true,
+        slantDirection: LEFT,
         floorZIndices: [
             [1],
             [1],
@@ -284,7 +289,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES = {
-        isDiagonal: true,
+        slantDirection: LEFT,
         // TODO: Figure out.
         floorZIndices: [
             [1],
@@ -298,7 +303,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES = {
-        isDiagonal: true,
+        slantDirection: LEFT,
         // TODO: Figure out.
         floorZIndices: [
             [1],
@@ -842,7 +847,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     CLIFF_TILES = {
-        isDiagonal: true,
+        slantDirection: RIGHT,
         floorZIndices: [
             [4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
         ],
@@ -851,7 +856,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     CLIFF_CONVERTIBLE_TILES = {
-        isDiagonal: true,
+        slantDirection: RIGHT,
         floorZIndices: [
             [4, 4, 6, 4, 4, 4, 4, 4, 4, 0],
             [4, 6, 6, 6, 4, 4, 4, 4, 4, 0],
@@ -925,7 +930,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     DEATHBED_TILES = {
-        isDiagonal: true,
+        slantDirection: RIGHT,
         floorZIndices: [
             [0, 1, 1, 1, 1, 1, 1, 0],
             [0, 1, 1, 7, 1, 1, 1, 0],
@@ -939,7 +944,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     DEATHBED_CLIFF_THOUGHT_TILES = {
-        isDiagonal: true,
+        slantDirection: RIGHT,
         floorZIndices: [
             [0, 1, 1, 1, 1, 1, 1, 0],
             [0, 1, 1, 7, 1, 1, 1, 0],
@@ -953,7 +958,7 @@ const DEFAULT_STAGE_TILES = {
         ]
     },
     DEATHBED_TENNIS_THOUGHT_TILES = {
-        isDiagonal: true,
+        slantDirection: RIGHT,
         floorZIndices: [
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
