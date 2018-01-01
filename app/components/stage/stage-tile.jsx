@@ -52,6 +52,8 @@ class StageTile extends Component {
                     const { xPercentage,
                             yPercentage } = corner
 
+                    console.error('xPercentage, yPercentage', xPercentage, yPercentage)
+
                     return (
                         <div
                             key={cornerIndex}

@@ -954,12 +954,7 @@ const DEFAULT_STAGE_TILES = {
     DEATHBED_TENNIS_THOUGHT_TILES = {
         isDiagonal: true,
         floorZIndices: [
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 7, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 7, 7, 7, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 7, 7, 7, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 1, 7, 1, 1, 1, 1, 1, 1, 0],
-            [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+            [0]
         ],
         floorColours: [
             [STAGE_COLOUR]
