@@ -713,6 +713,11 @@ module.exports = [
                 taskName: `Untied shoelaces (Didi, Look Back)`,
                 workedHours: 1,
                 neededHours: 1
+            },
+            {
+                taskName: `Rickshaw bike (Odin)`,
+                workedHours: 5,
+                neededHours: 5
             }
         ]
     },

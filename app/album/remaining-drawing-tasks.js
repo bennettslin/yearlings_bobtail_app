@@ -381,11 +381,6 @@ module.exports = [
      * Actual vehicles.
      */
     {
-        taskName: `Rickshaw bike (Odin)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Buoy (Odin)`,
         workedHours: 0,
         neededHours: 5
