@@ -23,8 +23,8 @@ import { PRETEEN_BENNETT_ROOM_TILES,
 import { SKY_NO_TIME,
          SKY_WINTER } from '../constants/stageValues'
 /**
- * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the song
- * list order on the album.
+ * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
+ * song list order on the album.
  */
 module.exports = {
     scenes: [
