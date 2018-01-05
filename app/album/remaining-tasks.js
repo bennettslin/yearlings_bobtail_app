@@ -6,8 +6,8 @@ module.exports = [
     },
     {
         taskName: `Redo tile matrices for slanted.`,
-        workedHours: 0,
-        neededHours: 2
+        workedHours: 2,
+        neededHours: 3
     },
     {
         taskName: `Rethink tasks for panels, doors, and windows.`,
