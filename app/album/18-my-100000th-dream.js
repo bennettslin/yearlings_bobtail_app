@@ -13,8 +13,8 @@ import { VERSES,
 import { EL_TORITO_TILES,
          PAMPAS_TILES,
          OUTDOOR_WEDDING_TILES,
-         CLIFF_TILES,
-         DEATHBED_CLIFF_THOUGHT_TILES } from '../constants/stageTiles'
+         DREAM_CLIFF_TILES,
+         DREAM_DEATHBED_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_SPRING } from '../constants/stageValues'
 module.exports = {
@@ -126,7 +126,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: CLIFF_TILES,
+            tiles: DREAM_CLIFF_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_SPRING
@@ -156,7 +156,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: DEATHBED_CLIFF_THOUGHT_TILES,
+            tiles: DREAM_DEATHBED_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_SPRING
