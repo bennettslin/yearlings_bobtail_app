@@ -91,13 +91,15 @@ const
     },
     CHILDHOOD_BATHROOM_TILES = {
         // Indoor wall is 7.5'. Raised bathtub.
+        ceilingZIndices: [
+            [k, g, g, g, g, g, g, g, g, g, g, k]
+        ],
         floorZIndices: [
-            [0, 0, g, g, g, g, g, g, g, g, 0],
-            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 0, 1, 2, 2, 2, 2, 1, 1, 1, 0],
-            [0, 0, 1, 2, 2, 2, 2, 1, 1, 1, 0],
-            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+            [0, g, g, g, g, g, g, g, g, g, g, 0],
+            [0, g, 1, 1, 1, 1, 1, 1, 1, 1, g, 0],
+            [0, g, 1, 2, 2, 2, 2, 1, 1, 1, g, 0],
+            [0, g, 1, 2, 2, 2, 2, 1, 1, 1, g, 0],
+            [0, g, 1, 1, 1, 1, 1, 1, 1, 1, g, 0]
         ],
         floorColours: [
             [STAGE_COLOUR],
@@ -271,9 +273,18 @@ const
             [STAGE_COLOUR]
         ]
     },
+    PRETEEN_BENNETT_ROOM_CEILING = [
+        [k, k, k, k, k, g, k, g, g, g, k],
+        [k, k, k, g, g, g, g, g, g, g, k],
+        [k, k, g, g, g, g, g, g, g, g, g, k],
+        [g, g, g, g, g, g, g, g, g, g, g, k],
+        [g, g, g, g, g, g, g, g, g, g, g, k],
+        [g]
+    ],
     PRETEEN_BENNETT_ROOM_TILES = {
         slantDirection: LEFT,
         // Captain bed height is 3.5'.
+        ceilingZIndices: PRETEEN_BENNETT_ROOM_CEILING,
         /**
          * --.-----------
          * --...---------
@@ -288,11 +299,11 @@ const
          * -----------#--
          */
         floorZIndices: [
-            [1, 1, 1, 1, 1, g, 1, g, g, g, 1],
-            [1, 1, 1, g, g, 1, g, 8, 8, g, 1],
-            [1, 1, g, g, 5, 1, 1, 8, 8, 8, g, 1],
-            [g, g, 5, 5, 1, 1, 1, 8, 8, 8, g, 1],
-            [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 1],
+            [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
+            [0, 0, 0, g, g, 1, g, 8, 8, g, 0],
+            [0, 0, g, g, 5, 1, 1, 8, 8, 8, g, 0],
+            [g, g, 5, 5, 1, 1, 1, 8, 8, 8, g, 0],
+            [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 0],
             [1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, g]
         ],
         floorColours: [
@@ -301,12 +312,13 @@ const
     },
     PRETEEN_BENNETT_ROOM_OPEN_BED_TILES = {
         slantDirection: LEFT,
+        ceilingZIndices: PRETEEN_BENNETT_ROOM_CEILING,
         floorZIndices: [
-            [1, 1, 1, 1, 1, g, 1, g, g, g, 1],
-            [1, 1, 1, g, g, 1, g, 1, 1, g, 1],
-            [1, 1, g, g, 5, 1, 1, 1, 1, 1, g, 1],
-            [g, g, 5, 5, 1, 1, 1, 1, 1, 1, g, 1],
-            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g, 1],
+            [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
+            [0, 0, 0, g, g, 1, g, 1, 1, g, 0],
+            [0, 0, g, g, 5, 1, 1, 1, 1, 1, g, 0],
+            [g, g, 5, 5, 1, 1, 1, 1, 1, 1, g, 0],
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g, 0],
             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
         ],
         floorColours: [
@@ -315,12 +327,13 @@ const
     },
     PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES = {
         slantDirection: LEFT,
+        ceilingZIndices: PRETEEN_BENNETT_ROOM_CEILING,
         floorZIndices: [
-            [1, 1, 1, 1, 1, 1, 1, g, g, g, 1],
-            [1, 1, 1, 1, 1, 1, g, 8, 8, g, 1],
-            [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 1],
-            [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 1],
-            [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 1],
+            [1, 1, 1, 1, 1, 1, 1, g, g, g, 0],
+            [1, 1, 1, 1, 1, 1, g, 8, 8, g, 0],
+            [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 0],
+            [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 0],
+            [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 0],
             [1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, g]
         ],
         floorColours: [
@@ -329,10 +342,11 @@ const
     },
     PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES = {
         slantDirection: LEFT,
+        ceilingZIndices: PRETEEN_BENNETT_ROOM_CEILING,
         floorZIndices: [
-            [1, 1, 1, 1, 1, g, 1],
-            [1, 1, 1, g, g, 1],
-            [1, 1, g, g, 5, 1],
+            [0, 0, 0, 0, 0, g, 1],
+            [0, 0, 0, g, g, 1],
+            [0, 0, g, g, 5, 1],
             [g, g, 5, 5, 1],
             [1]
         ],
@@ -342,6 +356,11 @@ const
     },
     JUNIOR_HIGH_LOCKERS_TILES = {
         // Overall height of lockers is 6.5'.
+        ceilingZIndices: [
+            [k],
+            [k],
+            [k, k, j, j, j, j, j, j, j, j, k]
+        ],
         floorZIndices: [
             [1],
             [1],
@@ -354,6 +373,13 @@ const
         ]
     },
     JUNIOR_HIGH_QUAD_TILES = {
+        ceilingZIndices: [
+            [k, k, j, j, j, j, j, j, j, j, k],
+            [k, k, j, j, j, j, j, j, j, j, k],
+            [k, k, j, j, j, j, j, j, j, j, k],
+            [k, k, j, j, j, j, j, j, j, j, k],
+            [k]
+        ],
         floorZIndices: [
             [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
             [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
@@ -367,11 +393,14 @@ const
     },
     JUNIOR_HIGH_HALLWAY_TILES = {
         // Indoor wall is 7.5'.
+        ceilingZIndices: [
+            [k, g, g, g, g, g, g, g, g, g, g, k]
+        ],
         floorZIndices: [
             [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
             [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
             [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-            [0, g, 1, 1, 1, g, g, g, g, g, 1, 0],
+            [0, g, 1, 1, 1, g, g, g, g, g, g, 0],
             [0, 1, 1, 1, 1, 1, 4, 4, 4, 1, 1, 0],
             [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
         ],
@@ -407,6 +436,9 @@ const
     },
     BENNETT_APARTMENT_COUCH_TILES = {
         // Indoor wall is 7.5'. Couch seat cushions add extra 0.5'.
+        ceilingZIndices: [
+            [g]
+        ],
         floorZIndices: [
             [g],
             [g, 1, 4, 7, 7, 7, 7, 7, 1, 1, 1, g],
@@ -484,6 +516,9 @@ const
     },
     JACOB_APARTMENT_TILES = {
         // Basement wall is 6', depth is 2.5'. Seats are 1'.
+        ceilingZIndices: [
+            [h]
+        ],
         floorZIndices: [
             [h, h, h, h, h, h, h, h, h, 5, 5, h],
             [5],
@@ -663,6 +698,9 @@ const
     },
     SHOW_STAGE_FRONT_FAR_TILES = {
         // Indoor wall of club is 9'. Club stage is 2.5'.
+        ceilingZIndices: [
+            [j]
+        ],
         floorZIndices: [
             [j],
             [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
@@ -674,6 +712,9 @@ const
     },
 
     SHOW_STAGE_SIDE_1_TILES = {
+        ceilingZIndices: [
+            [j]
+        ],
         floorZIndices: [
             [j],
             [6, 6, 6, 1],
@@ -687,6 +728,9 @@ const
         ]
     },
     SHOW_STAGE_SIDE_2_TILES = {
+        ceilingZIndices: [
+            [j]
+        ],
         floorZIndices: [
             [j],
             [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],

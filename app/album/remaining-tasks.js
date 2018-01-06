@@ -1,10 +1,5 @@
 module.exports = [
     {
-        taskName: `Hover over stage shows buttons to switch scenes.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Rethink tasks for panels, doors, and windows.`,
         workedHours: 0,
         neededHours: 3
@@ -162,5 +157,10 @@ module.exports = [
     //     taskName: `Set storage expiration date.`,
     //     workedHours: 0,
     //     neededHours: 2
+    // },
+    // {
+    //     taskName: `Hover over stage shows buttons to switch scenes.`,
+    //     workedHours: 0,
+    //     neededHours: 3
     // },
 ]
