@@ -2691,5 +2691,10 @@ module.exports = [
         taskName: `Diagonal stage tiles`,
         workedHours: 12,
         neededHours: 12
+    },
+    {
+        taskName: `Redo tile matrices for slanted.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
