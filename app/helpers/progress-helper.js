@@ -1,5 +1,16 @@
 // For dev purposes. Calculate progress completed and left to do on tasks.
 
+import { addDays, format } from 'date-fns'
+
+/**
+ * Assume 3 hours per weekday, and 15 hours per weekend.
+ * So each week is 30 hours, so on average each day is
+ * 4.3 hours.
+ */
+const WORK_HOURS_IN_DAY = 36 / 7,
+    DAYS_IN_WEEK = 7,
+    DAYS_IN_MONTH = 365 / 12
+
 export default {
 
     hasRemainingHours(task) {
@@ -78,15 +89,7 @@ export default {
     },
 
     _getRemainingTimeFromHours(hours = 0) {
-        /**
-         * Assume 3 hours per weekday, and 15 hours per weekend.
-         * So each week is 30 hours, so on average each day is
-         * 4.3 hours.
-         */
-        const HOURS_IN_DAY = 30 / 7,
-            DAYS_IN_WEEK = 7,
-            DAYS_IN_MONTH = 365 / 12,
-            totalDays = hours / HOURS_IN_DAY,
+        const totalDays = hours / WORK_HOURS_IN_DAY,
             totalMonths = Math.floor(totalDays / DAYS_IN_MONTH),
             remainingWeeks = Math.floor((totalDays - (totalMonths * DAYS_IN_MONTH)) / DAYS_IN_WEEK),
             remainingDays = Math.floor(totalDays - (totalMonths * DAYS_IN_MONTH) - (remainingWeeks * DAYS_IN_WEEK))
@@ -96,6 +99,14 @@ export default {
             weeks: remainingWeeks,
             days: remainingDays
         }
+    },
+
+    getNextCheckInDateFromHours(hours = 0, raw) {
+        const totalDays = hours / WORK_HOURS_IN_DAY,
+            today = new Date(),
+            finishDate = addDays(today, totalDays)
+
+        return raw ? finishDate : format(finishDate, 'MMM D, YYYY')
     },
 
     getRemainingTimeStringFromHours(hours = 0) {

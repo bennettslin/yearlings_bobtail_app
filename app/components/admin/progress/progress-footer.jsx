@@ -12,16 +12,18 @@ const ProgressFooter = ({ sumTask }) => {
         remainingHours = neededHours - workedHours,
         neededTime = ProgressHelper.getRemainingTimeStringFromHours(neededHours),
         workedTime = ProgressHelper.getRemainingTimeStringFromHours(workedHours),
-        remainingTime = ProgressHelper.getRemainingTimeStringFromHours(remainingHours)
+        remainingTime = ProgressHelper.getRemainingTimeStringFromHours(remainingHours),
+        nextCheckInDate = ProgressHelper.getNextCheckInDateFromHours(remainingHours)
 
     return (
         <ProgressFooterView
             neededHours={neededHours}
-            workedHours={workedHours}
-            remainingHours={remainingHours}
+            // workedHours={workedHours}
+            // remainingHours={remainingHours}
             neededTime={neededTime}
             workedTime={workedTime}
             remainingTime={remainingTime}
+            nextCheckInDate={nextCheckInDate}
         />
     )
 }
@@ -34,20 +36,22 @@ const ProgressFooterView = ({
 
     // From controller.
     neededHours,
-    workedHours,
-    remainingHours,
+    // workedHours,
+    // remainingHours,
     neededTime,
     workedTime,
-    remainingTime
+    remainingTime,
+    nextCheckInDate
 
 }) => (
     <div className="text-cell-wrapper">
         {neededHours &&
             <div className="text-cell footer">
-                <div>{parseInt(neededHours)} - {parseInt(workedHours)} = {parseInt(remainingHours)}h</div>
+                {/* <div>{parseInt(neededHours)} - {parseInt(workedHours)} = {parseInt(remainingHours)}h</div> */}
                 <div>needed time: {neededTime}</div>
                 <div>worked time: {workedTime}</div>
                 <div>remaining time: {remainingTime}</div>
+                <div>next check-in: {nextCheckInDate}</div>
             </div>
         }
     </div>

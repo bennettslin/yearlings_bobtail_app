@@ -2696,5 +2696,10 @@ module.exports = [
         taskName: `Redo tile matrices for slanted.`,
         workedHours: 3,
         neededHours: 3
-    }
+    },
+    {
+        taskName: `Calculate next checkin date.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
