@@ -95,7 +95,7 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     realHeight: `5'8"`,
                     description: 'standing'
                 },
@@ -187,7 +187,7 @@ module.exports = {
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     realHeight: `5'7"`,
                     description: 'standing'
                 }

@@ -139,7 +139,7 @@ module.exports = {
         },
         {
             unitIndex: 11,
-            description: `Finally, they take him to visit the future. Miriam is walking arm in arm with her new boyfriend. Unknowingly, they cross paths with Sita who is laughing with her friend in a park. Meanwhile, Bennett is at home alone, recording and depressed.`,
+            description: `Finally, they take him to visit the future. Unknowingly, they cross paths with Sita who is laughing with her friend in a park. Meanwhile, Bennett is at home alone, recording and depressed.`,
             actors: {
                 bennett: {
                     todo: true,
@@ -162,16 +162,6 @@ module.exports = {
                     todo: true,
                     workedHours: 1.25,
                     description: 'front angle, arms crossed, righteous'
-                },
-                miriam: {
-                    todo: true,
-                    workedHours: 1.25,
-                    description: 'side, vibrant'
-                },
-                nestor: {
-                    todo: true,
-                    workedHours: 1.25,
-                    description: 'side angle, cocky, confident'
                 },
                 liz: {
                     sita: {

@@ -94,7 +94,7 @@ export const adminFinaliseDrawings = (album) => {
 
                 /**
                  * FIXME: Keep modifying this conditional so that it reflects
-                 * the latest task. Currently it's raw clothes without folds,
+                 * the latest task. Currently it's pants,
                  * assumed to take 30 minutes.
                  */
                 if (roleObject.todo) {
