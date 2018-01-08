@@ -125,7 +125,7 @@ module.exports = {
                 },
                 wade: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     realHeight: `5'10"`,
                     description: 'standing'
                 },
@@ -151,7 +151,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     realHeight: `5'11"`,
                     description: 'standing'
                 },

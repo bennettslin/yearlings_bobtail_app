@@ -84,7 +84,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'wiping sweat, chatting with Mara, laughing'
                 },
                 mara: {
@@ -122,7 +122,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'sitting, eating burger, holding Mara\'s hand'
                 },
                 mara: {
