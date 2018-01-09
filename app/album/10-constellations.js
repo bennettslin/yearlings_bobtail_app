@@ -109,7 +109,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, play fighting'
                 }
             },
@@ -140,7 +140,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, squatting, pouring water on grave'
                 }
             },
