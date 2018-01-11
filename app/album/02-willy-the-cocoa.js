@@ -141,14 +141,14 @@ module.exports = {
                 howie: {
                     gangbanger: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'side angle, pointing at shoe, pushing Willy'
                     }
                 },
                 tomer: {
                     gangbanger: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'pulling bottle from cart, about to strike, threatening'
                     }
                 }
@@ -212,7 +212,7 @@ module.exports = {
     title: {
         anchor: 'Willy the Cocoa',
         annotation: {
-            description: `Kids in the neighbourhood knew Willy as "The Cocoa," referring both to his Coke bottles and to his seeming a bit "cuckoo." I don't think there was an official way to spell it.`,
+            description: `Kids in the neighbourhood knew Willy as "The Cocoa," referring both to the Coke bottles he collected and to his seeming a bit "cuckoo." I don't think there was an official way to spell it.`,
             dotKeys: {
                 [BACKSTORY]: true
             }
