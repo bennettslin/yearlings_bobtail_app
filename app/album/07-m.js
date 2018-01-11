@@ -100,7 +100,7 @@ module.exports = {
                 tomer: {
                     shane: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'chatting with Bennett, gushing about music'
                     }
                 }
@@ -184,7 +184,7 @@ module.exports = {
                 howie: {
                     maskedMan: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'checking watch'
                     }
                 }
@@ -207,7 +207,7 @@ module.exports = {
                 howie: {
                     maskedMan: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'looking at Bennett'
                     }
                 }

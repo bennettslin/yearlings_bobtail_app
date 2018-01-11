@@ -37,7 +37,7 @@ module.exports = {
                 tomer: {
                     shane: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'side angle, holding beer, turning to make room'
                     }
                 },
