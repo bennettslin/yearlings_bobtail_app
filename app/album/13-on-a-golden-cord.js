@@ -153,7 +153,7 @@ module.exports = {
                 willy: {
                     crossingGuard: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'front, holding up stop sign'
                     }
                 }
