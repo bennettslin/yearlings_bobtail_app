@@ -101,7 +101,7 @@ module.exports = {
                 },
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     realHeight: `5'4"`,
                     description: 'standing',
                     subtasks: [

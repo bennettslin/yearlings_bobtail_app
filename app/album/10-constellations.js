@@ -63,7 +63,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, holding body and gesturing its smallness'
                 },
                 ana: {
@@ -125,7 +125,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'front, looking upwards, inspired'
                 },
                 ana: {

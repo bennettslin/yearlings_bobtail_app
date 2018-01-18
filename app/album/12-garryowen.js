@@ -26,7 +26,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'front, putting on jacket, cold, distant'
                 },
                 liz: {

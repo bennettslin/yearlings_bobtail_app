@@ -24,7 +24,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'standing forward, disappointed, defeated'
                 },
                 catherine: {
@@ -82,7 +82,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, noticing Catholic'
                 },
                 wade: {
