@@ -25,7 +25,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, walking, pleasantly confused'
                 },
                 liz: {
@@ -115,7 +115,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'front angle, reacting to threat'
                 },
                 liz: {

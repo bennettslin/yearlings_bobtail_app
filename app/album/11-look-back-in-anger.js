@@ -26,7 +26,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, playing banjo, emotive'
                 },
                 ana: {
@@ -100,7 +100,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, carrying gear, looking back, hesitant'
                 },
                 ana: {
