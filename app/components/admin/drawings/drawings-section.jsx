@@ -83,12 +83,12 @@ const DrawingsSectionView = ({
                                                             sceneIndex,
                                                             workedHours,
                                                             description,
-                                                            todo } = character
+                                                            doneForNow } = character
 
                                                     return (
                                                         <div
                                                             key={index}
-                                                            className={`role-row flex-row ${todo ? 'todo' : 'done'}`}
+                                                            className={`role-row flex-row ${doneForNow ? 'done' : 'todo'}`}
                                                         >
                                                             <div className="role-info song-index-column">{songIndex}</div>
                                                             <div className="role-info scene-index-column">{sceneIndex}</div>

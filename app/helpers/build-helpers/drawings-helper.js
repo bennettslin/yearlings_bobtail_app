@@ -100,6 +100,9 @@ export const adminFinaliseDrawings = (album) => {
                 if (roleObject.todo) {
                     if (descriptionEntity.workedHours < 1.75) {
                         rolesTodoCount++
+
+                    } else {
+                        roleObject.doneForNow = true;
                     }
                 }
             }
