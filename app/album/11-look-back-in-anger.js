@@ -31,7 +31,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, playing bass, looking cool'
                 },
                 tomer: {
@@ -105,7 +105,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'front, leaning against wall, waiting for Jacob'
                 },
                 mara: {
@@ -141,13 +141,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, sitting on edge of bed, discontented'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'reflection'
                     }
                 },

@@ -37,7 +37,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, walking'
                 },
                 howie: {
@@ -68,7 +68,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, reading bottle intently'
                 },
                 howie: {
@@ -99,7 +99,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, play fighting'
                 },
                 howie: {
@@ -130,7 +130,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, shivering, feeling comforted'
                 },
                 howie: {
@@ -156,12 +156,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, sleeping in car'
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, sleeping in car'
                 },
                 howie: {
@@ -187,7 +187,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 1.25,
                     description: 'lying on couch, watching TV, alert'
                 },
                 howie: {

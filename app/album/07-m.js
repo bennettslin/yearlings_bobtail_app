@@ -79,7 +79,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'chatting with hipster, paying attention to Mara'
                 },
                 jacob: {
@@ -94,7 +94,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'squatting, back turned, putting bass back in case'
                 },
                 tomer: {
@@ -132,7 +132,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'sitting, eating fries, laughing'
                 }
             },
