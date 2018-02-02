@@ -108,7 +108,7 @@ module.exports = {
                 },
                 brad: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'front angle, gesturing at friend to leave'
                 },
                 andrew: {
@@ -134,7 +134,7 @@ module.exports = {
                 },
                 brad: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'eating chips'
                 },
                 andrew: {
