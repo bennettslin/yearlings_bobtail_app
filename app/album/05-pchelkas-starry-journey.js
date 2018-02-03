@@ -34,7 +34,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'lying on stomach, drawing, guilty'
                 },
                 christopher: {
@@ -55,7 +55,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, sitting up in bed, feigning sick'
                 }
             },
@@ -71,7 +71,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'in bed, asleep, turned away'
                 }
             },
@@ -87,7 +87,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, sitting, shaken, scared'
                 }
             },
@@ -103,7 +103,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, stoic'
                 },
                 brad: {
@@ -129,7 +129,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, wistful'
                 },
                 brad: {
@@ -145,7 +145,7 @@ module.exports = {
                 sasha: {
                     popularGirl: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'back'
                     }
                 }
@@ -162,7 +162,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'front, sitting, sheepish'
                 },
                 christopher: {

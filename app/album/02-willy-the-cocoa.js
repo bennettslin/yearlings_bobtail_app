@@ -93,7 +93,7 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'stepping off porch, cautious, trying to calm Christopher'
                 }
             },
@@ -119,7 +119,7 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, aggressive stance, angry'
                 }
             },
@@ -170,7 +170,7 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'sitting up in bed, worried, scared'
                 }
             },
@@ -196,7 +196,7 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side angle, wide-eyed, needing reassurance'
                 }
             },

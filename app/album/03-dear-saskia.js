@@ -43,12 +43,12 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side seated, pretending to read, panicked'
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side seated, laughing, braids trailing'
                 },
                 brad: {
@@ -71,12 +71,12 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'tied up, greeting Sasha with nervous laughter'
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'indignant, yelling at bullies'
                 },
                 andrew: {

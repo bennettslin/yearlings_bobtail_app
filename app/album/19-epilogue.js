@@ -29,7 +29,7 @@ module.exports = {
                 },
                 esther: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     realHeight: `3'10"`,
                     description: 'standing'
                 },
@@ -53,7 +53,7 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     realHeight: `4'2"`,
                     description: 'standing'
                 },
@@ -77,7 +77,7 @@ module.exports = {
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     realHeight: `4'1"`,
                     description: 'standing'
                 },
