@@ -23,7 +23,7 @@ module.exports = {
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     realHeight: `3'6"`,
                     description: 'standing'
                 },

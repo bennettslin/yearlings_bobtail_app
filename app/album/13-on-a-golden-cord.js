@@ -146,7 +146,7 @@ module.exports = {
                 youngBennett: {
                     youngBoy: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'side, turned, looking at Bennetts'
                     },
                 },
