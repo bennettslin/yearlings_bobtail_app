@@ -102,7 +102,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, on phone, hunched over, sobbing'
                 },
                 liz: {

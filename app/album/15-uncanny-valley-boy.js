@@ -29,7 +29,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'lying sitting up, arm around Miriam, scared, guilty'
                 },
                 miriam: {
@@ -67,7 +67,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'front angle, wincing'
                 },
                 father: {
@@ -98,7 +98,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'front, dismissive, not feeling bad'
                 },
                 mother: {
@@ -126,7 +126,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'making out with Miriam, holding melodica'
                     }
                 }
@@ -143,13 +143,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'concerned'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'back, squatting, recording, dejected'
                     }
                 },
@@ -188,7 +188,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, seeking protection'
                 },
                 miriam: {

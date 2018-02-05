@@ -40,7 +40,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'sitting on couch, figuring out Rubiks Cube'
                 }
             },
@@ -56,13 +56,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'sitting on couch, reading a book'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'sitting on floor, back turned, playing keyboard'
                     }
                 }
