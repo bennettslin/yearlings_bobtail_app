@@ -47,7 +47,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     realHeight: `3'5"`,
                     description: 'standing'
                 },

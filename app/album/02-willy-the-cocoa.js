@@ -88,7 +88,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'off balance, having a tantrum'
                 },
                 preteenBennett: {
