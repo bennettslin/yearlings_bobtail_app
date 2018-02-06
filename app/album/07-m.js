@@ -154,7 +154,7 @@ module.exports = {
                 miriam: {
                     maskedWoman: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'side, holding baby, looking back at Bennett'
                     },
                 }
@@ -177,7 +177,7 @@ module.exports = {
                 miriam: {
                     maskedWoman: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'side, walking away'
                     },
                 },
