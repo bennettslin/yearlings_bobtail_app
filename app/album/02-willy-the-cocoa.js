@@ -83,7 +83,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'squatting, righting chair, exasperated, concerned'
                 },
                 christopher: {
@@ -165,7 +165,7 @@ module.exports = {
             actors: {
                 mother: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'getting up to close curtain, trying to be reassuring'
                 },
                 preteenBennett: {

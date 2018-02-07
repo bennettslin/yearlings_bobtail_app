@@ -172,7 +172,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, angry, accusatory'
                 },
                 tristan: {
