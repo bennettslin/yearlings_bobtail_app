@@ -102,7 +102,7 @@ module.exports = {
             actors: {
                 miriam: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'serving in tennis'
                 }
             },

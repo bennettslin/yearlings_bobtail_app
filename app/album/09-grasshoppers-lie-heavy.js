@@ -54,7 +54,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'side, taken aback, politely friendly'
                     }
                 }
@@ -118,7 +118,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'side, hesitantly greeting'
                     }
                 }
@@ -141,7 +141,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'front, chatting, more comfortable'
                     }
                 }
@@ -164,7 +164,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'side, surprised, embarrassed smile'
                     }
                 }
@@ -203,7 +203,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'side, reaching for purse, cheeky'
                     }
                 }

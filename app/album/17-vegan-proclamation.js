@@ -33,7 +33,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.25,
+                        workedHours: 1.75,
                         description: 'side angle, looking back, concerned'
                     }
                 },
@@ -65,7 +65,7 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'front, introducing miriam'
                 },
                 nestor: {
