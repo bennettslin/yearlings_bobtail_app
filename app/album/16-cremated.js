@@ -24,11 +24,11 @@ module.exports = {
                 bennett: {
                     todo: true,
                     workedHours: 1.25,
-                    description: 'sitting in car, opening condom wrapper'
+                    description: 'sitting in car, taking off pants'
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'sitting in car, putting on perfume'
                 }
             },
@@ -49,7 +49,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'back angle, eyes closed, trying to get off'
                 }
             },
@@ -70,7 +70,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'back angle, giving blowjob'
                 }
             },
@@ -123,7 +123,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.25,
+                    workedHours: 1.75,
                     description: 'side, looking back, reversing car'
                 }
             },
