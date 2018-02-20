@@ -95,7 +95,7 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     realHeight: `5'8"`,
                     description: 'standing'
                 },
