@@ -98,7 +98,7 @@ export const adminFinaliseDrawings = (album) => {
                  * assumed to take 30 minutes.
                  */
                 if (roleObject.todo) {
-                    if (descriptionEntity.workedHours < 1.75) {
+                    if (descriptionEntity.workedHours < 2.75) {
                         rolesTodoCount++
 
                     } else {

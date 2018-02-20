@@ -43,7 +43,7 @@ module.exports = {
                 },
                 wade: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     description: 'side, drinking beer'
                 },
                 amy: {
@@ -125,7 +125,7 @@ module.exports = {
                 },
                 wade: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     description: 'front, talking to Stephanie'
                 }
             },

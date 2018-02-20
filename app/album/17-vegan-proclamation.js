@@ -70,7 +70,7 @@ module.exports = {
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     description: 'side, eager'
                 }
             },
@@ -164,7 +164,7 @@ module.exports = {
                 wade: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.75,
                         description: 'standing, demonstrating'
                     }
                 }

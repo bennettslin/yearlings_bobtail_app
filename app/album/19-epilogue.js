@@ -125,7 +125,7 @@ module.exports = {
                 },
                 wade: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     realHeight: `5'10"`,
                     description: 'standing'
                 },
@@ -187,7 +187,7 @@ module.exports = {
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     realHeight: `5'7"`,
                     description: 'standing'
                 }

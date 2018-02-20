@@ -64,7 +64,7 @@ module.exports = {
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     description: 'front, clutching at fist, laughing through pain'
                 }
             },
