@@ -86,7 +86,7 @@ module.exports = {
                 },
                 brad: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     description: 'laughing, tying up Bennett'
                 }
             },

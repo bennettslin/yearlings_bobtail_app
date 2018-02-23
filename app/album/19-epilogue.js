@@ -83,13 +83,13 @@ module.exports = {
                 },
                 brad: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     realHeight: `4'6"`,
                     description: 'standing'
                 },
                 andrew: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     realHeight: `4'7"`,
                     description: 'standing'
                 },
