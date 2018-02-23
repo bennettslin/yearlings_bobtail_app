@@ -79,7 +79,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     description: 'side, walking, carrying drums, smiling at Mara'
                 },
                 mara: {

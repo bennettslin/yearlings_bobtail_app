@@ -151,7 +151,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     realHeight: `5'11"`,
                     description: 'standing'
                 },
