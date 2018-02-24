@@ -113,7 +113,7 @@ module.exports = {
                 },
                 andrew: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     description: 'side angle, throwing rocks, angry'
                 }
             },
@@ -139,7 +139,7 @@ module.exports = {
                 },
                 andrew: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     description: 'playing guitar like an amateur'
                 },
                 sasha: {
