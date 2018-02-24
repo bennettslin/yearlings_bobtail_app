@@ -59,7 +59,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
@@ -181,7 +181,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     realHeight: `5'9"`,
                     description: 'standing'
                 },

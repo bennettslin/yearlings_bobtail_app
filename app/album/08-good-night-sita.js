@@ -14,7 +14,7 @@ import { SITA_APARTMENT_GATE_1_TILES,
          BACKSTAGE_TILES,
          GO_KART_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
-         SKY_WINTER } from '../constants/stageValues'
+         SKY_AUTUMN } from '../constants/stageValues'
 module.exports = {
     scenes: [
         {
@@ -37,7 +37,7 @@ module.exports = {
             tiles: SITA_APARTMENT_GATE_1_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_WINTER
+                season: SKY_AUTUMN
             }
         },
         {
@@ -60,7 +60,7 @@ module.exports = {
             tiles: MUSEUM_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_WINTER
+                season: SKY_AUTUMN
             }
         },
         {
@@ -95,7 +95,7 @@ module.exports = {
             tiles: BACKSTAGE_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_WINTER
+                season: SKY_AUTUMN
             }
         },
         {
@@ -118,7 +118,7 @@ module.exports = {
             tiles: GO_KART_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_WINTER
+                season: SKY_AUTUMN
             }
         },
         {
@@ -141,7 +141,7 @@ module.exports = {
             tiles: SITA_APARTMENT_GATE_2_TILES,
             sky: {
                 time: SKY_NO_TIME,
-                season: SKY_WINTER
+                season: SKY_AUTUMN
             }
         }
     ],
