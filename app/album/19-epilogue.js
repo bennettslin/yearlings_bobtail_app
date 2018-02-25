@@ -65,7 +65,7 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.75,
                     realHeight: `6'0"`,
                     description: 'standing'
                 },
