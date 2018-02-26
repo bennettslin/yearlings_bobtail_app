@@ -54,7 +54,7 @@ module.exports = {
                 brad: {
                     jewishBoy: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.75,
                         description: 'side seated, turned away, pointing to window'
                     }
                 }
