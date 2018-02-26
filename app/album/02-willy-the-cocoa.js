@@ -54,7 +54,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side angle, holding up a bottle, squinting'
                 }
             },
@@ -78,7 +78,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side, ducking behind post, chuckling'
                 },
                 mother: {
@@ -109,7 +109,7 @@ module.exports = {
             actors: {
                 father: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side, running, angry'
                 },
                 christopher: {
@@ -135,20 +135,20 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side angle, defending himself, fearful'
                 },
                 howie: {
                     gangbanger: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 2.5,
                         description: 'side angle, pointing at shoe, pushing Willy'
                     }
                 },
                 tomer: {
                     gangbanger: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 2.5,
                         description: 'pulling bottle from cart, about to strike, threatening'
                     }
                 }
@@ -186,7 +186,7 @@ module.exports = {
             actors: {
                 willy: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side angle, merrily greeting trolls'
                 },
                 christopher: {

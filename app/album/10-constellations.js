@@ -42,12 +42,12 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side, walking'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side, walking'
                 }
             },
@@ -73,12 +73,12 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side angle, holding large bottle'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side angle, feigning superiority'
                 }
             },
@@ -104,12 +104,12 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side angle, bored by conversation'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side angle, play fighting'
                 }
             },
@@ -135,12 +135,12 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side angle, arm around Ana'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side angle, squatting, pouring water on grave'
                 }
             },
@@ -166,12 +166,12 @@ module.exports = {
                 },
                 howie: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'driving car, alert, wigging out'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'back angle, sleeping in car'
                 }
             },
@@ -187,12 +187,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'lying on couch, watching TV, alert'
                 },
                 howie: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'downstairs, in agony'
                 }
             },

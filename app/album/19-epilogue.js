@@ -35,7 +35,7 @@ module.exports = {
                 },
                 willy: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `5'3"`,
                     description: 'standing'
                 },
@@ -59,19 +59,19 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
                 howie: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `6'0"`,
                     description: 'standing'
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `5'6"`,
                     description: 'standing'
                 },
@@ -83,19 +83,19 @@ module.exports = {
                 },
                 brad: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `4'6"`,
                     description: 'standing'
                 },
                 andrew: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `4'7"`,
                     description: 'standing'
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `5'8"`,
                     description: 'standing'
                 },
@@ -125,7 +125,7 @@ module.exports = {
                 },
                 wade: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `5'10"`,
                     description: 'standing'
                 },
@@ -151,7 +151,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `5'11"`,
                     description: 'standing'
                 },
@@ -181,13 +181,13 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `5'9"`,
                     description: 'standing'
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     realHeight: `5'7"`,
                     description: 'standing'
                 }

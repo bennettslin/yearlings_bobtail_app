@@ -108,12 +108,12 @@ module.exports = {
                 },
                 brad: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'front angle, gesturing at friend to leave'
                 },
                 andrew: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side angle, throwing rocks, angry'
                 }
             },
@@ -134,12 +134,12 @@ module.exports = {
                 },
                 brad: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'eating chips'
                 },
                 andrew: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'playing guitar like an amateur'
                 },
                 sasha: {
@@ -178,7 +178,7 @@ module.exports = {
                 tristan: {
                     principal: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 2.5,
                         description: 'side, confused, defensive, apologetic'
                     }
                 }

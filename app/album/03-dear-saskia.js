@@ -54,7 +54,7 @@ module.exports = {
                 brad: {
                     jewishBoy: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 2.5,
                         description: 'side seated, turned away, pointing to window'
                     }
                 }
@@ -81,12 +81,12 @@ module.exports = {
                 },
                 andrew: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'laughing, feigning fear of Sasha'
                 },
                 brad: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'laughing, tying up Bennett'
                 }
             },

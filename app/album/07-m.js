@@ -84,7 +84,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'wiping sweat, chatting with Mara, laughing'
                 },
                 mara: {
@@ -100,7 +100,7 @@ module.exports = {
                 tomer: {
                     shane: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 2.5,
                         description: 'chatting with Bennett, gushing about music'
                     }
                 }
@@ -122,7 +122,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'sitting, eating burger, holding Mara\'s hand'
                 },
                 mara: {
@@ -184,7 +184,7 @@ module.exports = {
                 howie: {
                     maskedUsher: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 2.5,
                         description: 'checking watch'
                     }
                 }
@@ -207,7 +207,7 @@ module.exports = {
                 howie: {
                     maskedUsher: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 2.5,
                         description: 'looking at Bennett'
                     }
                 }

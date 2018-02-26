@@ -65,7 +65,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side, cheery in a low-key way'
                 }
             },
@@ -88,7 +88,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side, seated, eating, judgmental'
                 }
             },
@@ -111,7 +111,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'back angle, concerned'
                 }
             },

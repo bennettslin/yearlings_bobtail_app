@@ -39,7 +39,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side, protective, judgmental'
                 }
             },
@@ -65,12 +65,12 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'front, introducing miriam'
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 2.5,
                     description: 'side, eager'
                 }
             },
@@ -164,7 +164,7 @@ module.exports = {
                 wade: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 2.5,
                         description: 'standing, demonstrating'
                     }
                 }
