@@ -72,7 +72,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'back, shaking fist at sky'
                     }
                 },
@@ -95,7 +95,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'back, playful'
                     }
                 },
@@ -125,7 +125,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'back, head in hands, holding bracelet'
                     }
                 },
