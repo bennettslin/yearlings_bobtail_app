@@ -44,7 +44,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'front angle, impotent, apologetic'
                 },
                 miriam: {
@@ -65,7 +65,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'front angle, trying to get off'
                 },
                 miriam: {
@@ -86,7 +86,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'front angle, dying, infirm'
                 }
             },
