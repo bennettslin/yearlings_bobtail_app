@@ -24,7 +24,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'looking at Leonard Cohen poster'
                 }
             },
@@ -117,7 +117,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'sitting, silently eating burger, uncomfortable'
                 },
                 jacob: {
@@ -148,7 +148,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, walking, sulking with head down'
                 },
                 miriam: {
