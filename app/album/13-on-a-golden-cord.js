@@ -27,7 +27,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side angle, cradling bracelet, blank'
                 }
             },
@@ -43,7 +43,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side angle, disingenuously consoling'
                 },
                 liz: {
@@ -66,7 +66,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'back, cradling bracelet, blank'
                 },
                 stephanie: {
@@ -89,7 +89,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side angle, playful, waving'
                 },
                 stephanie: {
@@ -119,7 +119,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'back, consoling'
                 },
                 stephanie: {
