@@ -53,7 +53,7 @@ module.exports = {
                 },
                 stephanie: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, squeezing through, awkward'
                 }
             },
@@ -120,7 +120,7 @@ module.exports = {
                 },
                 stephanie: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side angle, talking to Wade'
                 },
                 wade: {
