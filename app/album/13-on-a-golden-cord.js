@@ -102,7 +102,7 @@ module.exports = {
                 amy: {
                     officer: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'back, facing back, waving'
                     }
                 }

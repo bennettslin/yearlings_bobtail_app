@@ -29,7 +29,7 @@ module.exports = {
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'walking away, in a bad mood'
                 }
             },
@@ -50,7 +50,7 @@ module.exports = {
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'sitting upright, droll smile'
                 }
             },
@@ -95,7 +95,7 @@ module.exports = {
                 amy: {
                     smoker: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'walking up stairs, back forward, exhaling smoke'
                     }
                 }
@@ -117,7 +117,7 @@ module.exports = {
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'walking forward, confused and curious at Bennett'
                 }
             },
