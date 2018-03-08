@@ -94,7 +94,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'squatting, back turned, putting bass back in case'
                 },
                 tomer: {
@@ -132,7 +132,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'sitting, eating fries, laughing'
                 }
             },

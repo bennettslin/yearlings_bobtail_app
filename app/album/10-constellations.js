@@ -37,7 +37,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, walking'
                 },
                 howie: {
@@ -68,7 +68,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side angle, reading bottle intently'
                 },
                 howie: {
@@ -99,7 +99,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side angle, play fighting'
                 },
                 howie: {
@@ -130,7 +130,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side angle, shivering, feeling comforted'
                 },
                 howie: {
@@ -161,7 +161,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, sleeping in car'
                 },
                 howie: {
