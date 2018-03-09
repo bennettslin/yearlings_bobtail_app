@@ -48,7 +48,7 @@ module.exports = {
                 },
                 amy: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, squeezing through, apologetic'
                 },
                 stephanie: {
@@ -74,7 +74,7 @@ module.exports = {
                 },
                 amy: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side angle, same Mara pose'
                 },
                 jacob: {
@@ -115,7 +115,7 @@ module.exports = {
                 },
                 amy: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, looking back, uncertain'
                 },
                 stephanie: {
