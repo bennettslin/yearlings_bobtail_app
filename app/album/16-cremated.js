@@ -28,7 +28,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'sitting in car, putting on perfume'
                 }
             },
@@ -49,7 +49,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'back angle, eyes closed, trying to get off'
                 }
             },
@@ -123,7 +123,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, looking back, reversing car'
                 }
             },

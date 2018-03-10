@@ -169,7 +169,7 @@ module.exports = {
                 },
                 miriam: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     realHeight: `5'1"`,
                     description: 'standing'
                 },
