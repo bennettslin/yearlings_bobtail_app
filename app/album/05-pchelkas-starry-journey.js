@@ -103,7 +103,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, stoic'
                 },
                 brad: {
@@ -129,7 +129,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, wistful'
                 },
                 brad: {
@@ -162,7 +162,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'front, sitting, sheepish'
                 },
                 christopher: {
