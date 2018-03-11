@@ -77,7 +77,7 @@ module.exports = {
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     realHeight: `4'1"`,
                     description: 'standing'
                 },
