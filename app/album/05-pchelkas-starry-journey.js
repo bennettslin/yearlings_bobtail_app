@@ -55,7 +55,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, sitting up in bed, feigning sick'
                 }
             },
@@ -71,7 +71,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'in bed, asleep, turned away'
                 }
             },

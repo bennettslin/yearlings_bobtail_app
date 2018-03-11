@@ -170,8 +170,8 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
-                    workedHours: 1.75,
-                    description: 'sitting up in bed, worried, scared'
+                    workedHours: 2.5,
+                    description: 'lying in bed, worried, scared'
                 }
             },
             tiles: PRETEEN_BENNETT_ROOM_TILES,
