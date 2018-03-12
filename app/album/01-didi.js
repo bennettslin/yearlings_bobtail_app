@@ -118,7 +118,7 @@ module.exports = {
             actors: {
                 youngBennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, in bathtub, downcast'
                 }
             },
@@ -146,7 +146,7 @@ module.exports = {
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, facing front, singing, smiling'
                 }
             },
