@@ -17,7 +17,7 @@ module.exports = {
                 },
                 anita: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     realHeight: `3'9"`,
                     description: 'standing'
                 },
