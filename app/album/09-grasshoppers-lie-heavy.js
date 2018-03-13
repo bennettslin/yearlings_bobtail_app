@@ -142,7 +142,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'front, chatting, more comfortable'
                     }
                 }
@@ -165,7 +165,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'side, surprised, embarrassed smile'
                     }
                 }
