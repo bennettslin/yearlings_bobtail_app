@@ -86,7 +86,7 @@ module.exports = {
             actors: {
                 anita: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'front, playing ball, offended'
                 },
                 youngBennett: {
@@ -141,7 +141,7 @@ module.exports = {
             actors: {
                 anita: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'back, squatting, smiling'
                 },
                 youngBennett: {
