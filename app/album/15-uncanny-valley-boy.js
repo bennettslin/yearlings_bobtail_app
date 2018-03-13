@@ -149,7 +149,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'back, squatting, recording, dejected'
                     }
                 },
