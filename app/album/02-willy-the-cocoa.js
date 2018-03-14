@@ -88,7 +88,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'off balance, having a tantrum'
                 },
                 preteenBennett: {
@@ -114,7 +114,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'lying on side, in pain, clenching stomach'
                 },
                 preteenBennett: {
@@ -191,7 +191,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side angle, looking up at Bennett, reassuring'
                 },
                 preteenBennett: {
