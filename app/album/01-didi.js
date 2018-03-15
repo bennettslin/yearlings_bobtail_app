@@ -91,7 +91,7 @@ module.exports = {
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'sitting, flustered'
                 },
                 esther: {
