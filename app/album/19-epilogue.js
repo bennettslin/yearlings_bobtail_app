@@ -175,7 +175,7 @@ module.exports = {
                 },
                 liz: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     realHeight: `4'9"`,
                     description: 'standing'
                 },
