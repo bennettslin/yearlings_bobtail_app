@@ -796,6 +796,8 @@ module.exports = [
         neededHours: 5
     },
 
+    // Peacocks? Dogs?
+
         /**
      * Large sceneries (Mimic painting)
      */
