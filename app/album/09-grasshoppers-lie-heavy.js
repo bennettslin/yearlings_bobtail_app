@@ -221,13 +221,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, standing beside bed, unsure'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'reflection'
                     }
                 },
@@ -258,13 +258,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'side, about to stick it in'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'reflection'
                     }
                 },
@@ -295,13 +295,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'lying down, warm, content, slightly worried'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'reflection'
                     }
                 },
