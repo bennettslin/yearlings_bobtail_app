@@ -40,7 +40,7 @@ module.exports = {
                 christopher: {
                     todo: true,
                     workedHours: 2.5,
-                    description: 'w sitting, blissful'
+                    description: 'w-sitting, blissful'
                 }
             },
             tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
@@ -167,7 +167,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'front, sitting, staring'
                 },
                 mother: {
