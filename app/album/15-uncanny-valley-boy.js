@@ -121,13 +121,13 @@ module.exports = {
                 miriam: {
                     todo: true,
                     workedHours: 1.75,
-                    description: 'side, making out with Bennett'
+                    description: 'side, jumping on Bennett, grabbing his banjo'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 1.75,
-                        description: 'making out with Miriam, holding melodica'
+                        workedHours: 2.5,
+                        description: 'making out with Miriam'
                     }
                 }
             },
