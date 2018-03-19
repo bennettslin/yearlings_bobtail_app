@@ -31,7 +31,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'side angle, opening a door, pleasantly surprised'
                     }
                 }
@@ -48,34 +48,34 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 1.75,
+                    workedHours: 2.5,
                     description: 'sitting cross-legged, playing recorder, content'
                 },
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'resting on Bennett, content'
                     }
                 },
                 catherine: {
                     gopi: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'dancing'
                     }
                 },
                 mara: {
                     gopi: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'dancing'
                     }
                 },
                 miriam: {
                     gopi: {
                         todo: true,
-                        workedHours: 1.75,
+                        workedHours: 2.5,
                         description: 'dancing'
                     }
                 }
