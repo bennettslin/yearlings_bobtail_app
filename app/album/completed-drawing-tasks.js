@@ -748,6 +748,11 @@ module.exports = [
                 taskName: `Change Miriam's shoes to flats`,
                 workedHours: 1,
                 neededHours: 1
+            },
+            {
+                taskName: `Fix Liz blouses.`,
+                workedHours: 3,
+                neededHours: 3
             }
         ]
     }
