@@ -251,7 +251,7 @@ module.exports = {
                     {
                         anchor: `opt for bed not street.`,
                         annotation: {
-                            description: `To save money after my lease ended, I put my stuff in storage and alternated between sleeping with Sita and crashing at the punk house. This gave me the regular comfort of Sita's bed while ensuring that she never held too much leverage over me.`,
+                            description: `To save money after my lease ended, I put my stuff in storage and alternated between sleeping with Sita and crashing in the basement of the punk house. This gave me the regular comfort of Sita's bed while ensuring that she never held too much leverage over me.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -594,7 +594,7 @@ module.exports = {
                     {
                         anchor: `make her strip bare`,
                         annotation: {
-                            description: `One time, Sita stripped naked only to start shivering from the cold, in a desperate appeal to both my predatory and protective instincts. But I just kept sipping my beer, quietly enjoying my cruelty.`,
+                            description: `Sita learned early on that however occupied I might be in the moment, she could always lure me away for some lovemaking by hovering naked over me and feigning to shiver from the cold. But in time, I grew tired of this brazen appeal to both my primal and protective instincts, and found myself enjoying the cruelty of leaving her to shiver indefinitely.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
@@ -616,7 +616,7 @@ module.exports = {
                     {
                         anchor: `have her for your pet.`,
                         annotation: {
-                            description: `Despite everything, I really did love Sita, and I never once doubted that the breakup would be wrenching for us both. This is precisely why I kept putting it off, even as putting it off just made things worse.`,
+                            description: `Despite everything, I really did love Sita, and I never once doubted that the breakup would be wrenching for us both. And so I kept putting it off, even as putting it off just made things worse.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }
