@@ -157,18 +157,11 @@ export const registerAdminDotStanzas = (songObject, verseObject) => {
 export const finalRegisterStanzaTypes = (songObject) => {
 
     const { lyrics,
-            tempSceneUnitIndices,
-            tempStanzaTypeCounters } = songObject,
-            sceneTimes = [],
-            sceneFirstVerseIndices = []
+            tempStanzaTypeCounters } = songObject
 
-    let sceneIndexCounter = 0
+    lyrics.forEach((unitArray) => {
 
-    lyrics.forEach((unitArray, unitIndex) => {
-
-        const unitMapObject = unitArray[unitArray.length - 1],
-            unitFirstVerseTime = unitArray[0].time,
-            unitFirstVerseIndex = unitMapObject.firstVerseIndex
+        const unitMapObject = unitArray[unitArray.length - 1]
 
         if (unitMapObject.unitMap && unitMapObject.stanzaType) {
 
@@ -179,31 +172,48 @@ export const finalRegisterStanzaTypes = (songObject) => {
                 unitMapObject.stanzaIndex = -1
             }
         }
+    })
 
-        // This is for letting the slider show each scene's length.
-        if (unitIndex === tempSceneUnitIndices[sceneIndexCounter]) {
+    // Not needed after each unit is told its index.
+    delete songObject.tempStanzaTypeCounters
+}
+
+// TODO: Move to drawings helper?
+export const finalRegisterScenes = (songObject) => {
+    const {
+            lyrics,
+            tempSceneRawIndices
+        } = songObject,
+
+        sceneTimes = [],
+        sceneFirstVerseIndices = []
+
+    tempSceneRawIndices.forEach((rawIndexObject) => {
+
+        const { isUnitIndex, rawIndex } = rawIndexObject
+
+        // Either scene is identified by a unit index...
+        if (isUnitIndex) {
+            const unitArray = lyrics[rawIndex],
+                unitMapObject = unitArray[unitArray.length - 1],
+                unitFirstVerseIndex = unitMapObject.firstVerseIndex,
+                unitFirstVerseTime = unitArray[0].time
+
+            // This is for letting the slider show each scene's length.
             sceneTimes.push(unitFirstVerseTime)
             sceneFirstVerseIndices.push(unitFirstVerseIndex)
-            sceneIndexCounter++
-        }
 
-        // This is for telling each unit its scene.
-        let sceneUnitCounter = 0
-        while (sceneUnitCounter < tempSceneUnitIndices.length) {
-            const sceneUnitIndex = tempSceneUnitIndices[sceneUnitCounter]
-            if (unitIndex >= sceneUnitIndex) {
-                unitMapObject.sceneIndex = sceneUnitCounter + 1
-            }
-            sceneUnitCounter++
+        // ... or else scene is identified by a verse index.
+        } else {
+            // TODO
         }
     })
 
     songObject.sceneTimes = sceneTimes
     songObject.sceneFirstVerseIndices = sceneFirstVerseIndices
 
-    // Not needed after each unit is told its index.
-    delete songObject.tempStanzaTypeCounters
-    delete songObject.tempSceneUnitIndices
+    // Not needed after song scenes are registered.
+    delete songObject.tempSceneRawIndices
 }
 
 /***********

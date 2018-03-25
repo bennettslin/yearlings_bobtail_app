@@ -151,3 +151,13 @@
 14b. thought bubbles
 14d. speech bubbles
 14e. thought bubble
+
+# Clothing logos
+Christopher dinosaur shirt (stegosaurus)
+Tristan patches
+Jacob shirt (unicorn)
+Tomer shirt (Escher)
+Shane shirt (Lookout)
+Chinese clothes patterns
+Willy shirt 
+Indian clothes patterns

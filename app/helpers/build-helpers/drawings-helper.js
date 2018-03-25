@@ -1,5 +1,8 @@
 // Parse drawing data for build.
-// FIXME: These are a mess, but they're only for admin purposes so whatever.
+/**
+ * FIXME: These are a mess. They are named admin methods, but some of them are
+ * doing work that will stay in production.
+ */
 
 export const adminGatherDrawings = (album, songObject, songIndex) => {
     const drawingTypes = ['actors', 'backdrops', 'stageProps'],
@@ -7,11 +10,18 @@ export const adminGatherDrawings = (album, songObject, songIndex) => {
 
     album._drawings = album._drawings || {}
 
-    songObject.tempSceneUnitIndices = []
+    songObject.tempSceneRawIndices = []
 
     scenes.forEach((scene, sceneIndex) => {
 
-        songObject.tempSceneUnitIndices.push(scene.unitIndex)
+        const isUnitIndex = !isNaN(scene.unitIndex)
+
+        songObject.tempSceneRawIndices.push({
+            isUnitIndex,
+
+            // Scene either has a unit index or a verse index.
+            rawIndex: isUnitIndex ? scene.unitIndex : scene.verseIndex
+        })
 
         drawingTypes.forEach(drawingType => {
 

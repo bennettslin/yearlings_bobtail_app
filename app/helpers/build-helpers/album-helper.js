@@ -4,7 +4,7 @@ import { LEFT, RIGHT, ANCHOR, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, PROPER_NO
 import { registerCards, addDestinationPortalLinks, finalPrepareCard, addDestinationPortalIndices, addDestinationPortalFormats } from './annotations-helper'
 import { getSongIsLogue } from '../data-helper'
 import { adminGatherDrawings, adminFinaliseDrawings, adminRegisterDrawingTasks } from './drawings-helper'
-import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes } from './lyrics-helper'
+import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterScenes, finalRegisterStanzaTypes } from './lyrics-helper'
 import { getFormattedAnnotationTitle } from '../format-helper'
 
 export const parseAlbumData = (albumObject) => {
@@ -233,6 +233,8 @@ const _finalPrepareAlbum = (albumObject) => {
              * collecting portal links from the entire album.
              */
             _finalPrepareLyrics(songObject)
+
+            finalRegisterScenes(songObject)
 
             // For each verse in a portal, tell portal how to format it.
             addDestinationPortalFormats(songObject.lyrics)

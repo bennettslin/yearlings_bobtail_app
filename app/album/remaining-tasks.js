@@ -28,10 +28,20 @@ module.exports = [
     },
 
     /**
-     * Short bugs and tasks.
+     * Mobile bugs.
      */
     {
         taskName: `Bug where audio banner in actual mobile phone has weird position.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `iOS scrolling isn't smooth.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `PDF in modal doesn't scroll.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -39,6 +49,11 @@ module.exports = [
     /**
      * Medium bugs and tasks.
      */
+    {
+        taskName: `Scene can be based on verseIndex.`,
+        workedHours: 0,
+        neededHours: 2
+    },
 
     /**
      * Text colours.
