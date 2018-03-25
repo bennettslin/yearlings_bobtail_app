@@ -14,7 +14,7 @@ import { REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { SITA_APARTMENT_COUCH_TILES,
          VOLKSWAGEN_TILES,
-         BENNETT_APARTMENT_COUCH_TILES,
+         BENNETT_BASEMENT_TILES,
          SHOW_STAGE_FRONT_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/stageValues'
@@ -91,7 +91,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_APARTMENT_COUCH_TILES,
+            tiles: BENNETT_BASEMENT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN

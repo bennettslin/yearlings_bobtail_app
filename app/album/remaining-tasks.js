@@ -45,6 +45,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
+    {
+        taskName: `Bug where annotation isn't saved because of routing.`,
+        workedHours: 0,
+        neededHours: 2
+    },
 
     /**
      * Medium bugs and tasks.

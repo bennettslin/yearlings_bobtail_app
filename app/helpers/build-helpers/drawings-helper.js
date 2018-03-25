@@ -104,11 +104,11 @@ export const adminFinaliseDrawings = (album) => {
 
                 /**
                  * FIXME: Keep modifying this conditional so that it reflects
-                 * the latest task. Currently it's pants,
-                 * assumed to take 30 minutes.
+                 * the latest task. Currently it's hair, assumed to take 15
+                 * minutes.
                  */
                 if (roleObject.todo) {
-                    if (descriptionEntity.workedHours < 2.5) {
+                    if (descriptionEntity.workedHours < 2.75) {
                         rolesTodoCount++
 
                     } else {
