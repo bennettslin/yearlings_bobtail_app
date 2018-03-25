@@ -178,44 +178,6 @@ export const finalRegisterStanzaTypes = (songObject) => {
     delete songObject.tempStanzaTypeCounters
 }
 
-// TODO: Move to drawings helper?
-export const finalRegisterScenes = (songObject) => {
-    const {
-            lyrics,
-            tempSceneRawIndices
-        } = songObject,
-
-        sceneTimes = [],
-        sceneFirstVerseIndices = []
-
-    tempSceneRawIndices.forEach((rawIndexObject) => {
-
-        const { isUnitIndex, rawIndex } = rawIndexObject
-
-        // Either scene is identified by a unit index...
-        if (isUnitIndex) {
-            const unitArray = lyrics[rawIndex],
-                unitMapObject = unitArray[unitArray.length - 1],
-                unitFirstVerseIndex = unitMapObject.firstVerseIndex,
-                unitFirstVerseTime = unitArray[0].time
-
-            // This is for letting the slider show each scene's length.
-            sceneTimes.push(unitFirstVerseTime)
-            sceneFirstVerseIndices.push(unitFirstVerseIndex)
-
-        // ... or else scene is identified by a verse index.
-        } else {
-            // TODO
-        }
-    })
-
-    songObject.sceneTimes = sceneTimes
-    songObject.sceneFirstVerseIndices = sceneFirstVerseIndices
-
-    // Not needed after song scenes are registered.
-    delete songObject.tempSceneRawIndices
-}
-
 /***********
  * HELPERS *
  ***********/

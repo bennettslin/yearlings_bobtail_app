@@ -2702,4 +2702,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Scene can be based on verseIndex.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

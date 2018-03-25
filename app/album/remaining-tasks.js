@@ -49,11 +49,6 @@ module.exports = [
     /**
      * Medium bugs and tasks.
      */
-    {
-        taskName: `Scene can be based on verseIndex.`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     /**
      * Text colours.

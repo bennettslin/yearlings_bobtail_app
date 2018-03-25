@@ -35,6 +35,24 @@ module.exports = {
             }
         },
         {
+            unitIndex: 2,
+            description: `Sita is standing by the window, still depressed.`,
+            actors: {
+                liz: {
+                    sita: {
+                        todo: true,
+                        workedHours: 2.5,
+                        description: 'side, seated, petting cat, sad'
+                    }
+                }
+            },
+            tiles: SITA_APARTMENT_COUCH_TILES,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_AUTUMN
+            }
+        },
+        {
             unitIndex: 4,
             description: `Sita is imagining how she met Bennett in three thought bubbles. In the first, she is breaking up with her ex over a cafeteria dinner. In the second, in tears over the incident, she busses her tray, leaving her lancing device behind. In the third, Bennett is hitting on her in the cafeteria, while she looks uncertain.`,
             actors: {
@@ -76,7 +94,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 9,
+            unitIndex: 8,
             description: `Sita and her friend are eating the food. In his speech bubble, Bennett is flirting with a fan, while Sita looks on jealous. In her speech bubble, she is going home with Bennett, triumphant.`,
             actors: {
                 liz: {
@@ -99,7 +117,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 11,
+            unitIndex: 10,
             description: `Sita's friend has left, looking back at her through the window. She is absorbed in her thoughts. In her thought bubble, she and Bennett have gotten back together, both in tears.`,
             actors: {
                 liz: {
@@ -122,7 +140,7 @@ module.exports = {
             }
         },
         {
-            unitIndex: 12,
+            unitIndex: 11,
             description: `Same scene. No thought bubble. The room is now completely dark.`,
             actors: {
                 liz: {
@@ -133,6 +151,15 @@ module.exports = {
                     }
                 }
             },
+            tiles: SITA_APARTMENT_COUCH_TILES,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_AUTUMN
+            }
+        },
+        {
+            unitIndex: 12,
+            description: `Same scene. Peacocks.`,
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
                 time: SKY_NO_TIME,

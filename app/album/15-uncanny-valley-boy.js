@@ -25,7 +25,7 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
-            description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. They are dressed in traditional Indian garb. His father is stern and disapproving, while his mother consoles a weeping Sita, who is wearing traditional Chinese garb.`,
+            description: `Bennett is sleeping in bed with Miriam.`,
             actors: {
                 bennett: {
                     todo: true,
@@ -36,7 +36,18 @@ module.exports = {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side, asleep'
-                },
+                }
+            },
+            tiles: BENNETT_APARTMENT_BED_TILES,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_AUTUMN
+            }
+        },
+        {
+            unitIndex: 2,
+            description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. They are dressed in traditional Chinese garb. His father is stern and disapproving, while his mother consoles a weeping Sita.`,
+            actors: {
                 mother: {
                     todo: true,
                     workedHours: 2.5,
@@ -94,7 +105,7 @@ module.exports = {
         },
         {
             unitIndex: 8,
-            description: `Bennett's mother is back. They next take him to visit the present. Sita is at home crying, while Bennett is playing guitar next to Miriam on her bed.`,
+            description: `Bennett's mother is back. They next take him to visit the present. Sita is at home crying, as in the first scene of Kyon, while Bennett is playing guitar next to Miriam on her bed.`,
             actors: {
                 bennett: {
                     todo: true,
@@ -110,13 +121,6 @@ module.exports = {
                     todo: true,
                     workedHours: 2.5,
                     description: 'front angle, gesturing with blame'
-                },
-                liz: {
-                    sita: {
-                        todo: true,
-                        workedHours: 2.5,
-                        description: 'depressed'
-                    }
                 },
                 miriam: {
                     todo: true,

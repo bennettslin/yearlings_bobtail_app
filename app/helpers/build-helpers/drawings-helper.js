@@ -200,3 +200,41 @@ export const adminRegisterDrawingTasks = (song) => {
     delete song.actorsWorkedHours
     delete song.actorsNeededHours
 }
+
+export const finalRegisterScenes = (songObject) => {
+    const {
+            lyrics,
+            tempSceneRawIndices,
+            verseTimes
+        } = songObject,
+
+        sceneTimes = [],
+        sceneFirstVerseIndices = []
+
+    tempSceneRawIndices.forEach((rawIndexObject) => {
+
+        const { isUnitIndex, rawIndex } = rawIndexObject
+
+        // Either scene is identified by a unit index...
+        if (isUnitIndex) {
+            const unitArray = lyrics[rawIndex],
+                unitMapObject = unitArray[unitArray.length - 1],
+                unitFirstVerseIndex = unitMapObject.firstVerseIndex,
+                unitFirstVerseTime = unitArray[0].time
+
+            sceneTimes.push(unitFirstVerseTime)
+            sceneFirstVerseIndices.push(unitFirstVerseIndex)
+
+        // ... or else scene is identified by a verse index.
+        } else {
+            sceneTimes.push(verseTimes[rawIndex])
+            sceneFirstVerseIndices.push(rawIndex)
+        }
+    })
+
+    songObject.sceneTimes = sceneTimes
+    songObject.sceneFirstVerseIndices = sceneFirstVerseIndices
+
+    // Not needed after song scenes are registered.
+    delete songObject.tempSceneRawIndices
+}

@@ -828,8 +828,18 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
+        {
+        taskName: `Dogs (Pchelka)`,
+        workedHours: 0,
+        neededHours: 5
+    },
     {
         taskName: `Horse (Golden Cord)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Peafowl (Kyon)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -843,8 +853,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
-
-    // Peacocks? Dogs?
 
         /**
      * Large sceneries (Mimic painting)
