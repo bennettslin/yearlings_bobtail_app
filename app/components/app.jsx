@@ -38,7 +38,7 @@ import LogHelper from '../helpers/log-helper'
 class App extends Component {
 
     static propTypes = {
-        replacePath: PropTypes.func.isRequired
+        updatePath: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -301,6 +301,15 @@ class App extends Component {
             selectedSongIndex === props.selectedSongIndex) {
             props.setRenderReadyAnnotationIndex(selectedAnnotationIndex)
         }
+
+        /** This is the only place where app will change the router path based
+         * on a new annotation index.
+         */
+        props.updatePath({
+            props,
+            selectedSongIndex,
+            selectedAnnotationIndex
+        })
 
         return selectedAnnotationIndex
     }
@@ -1088,30 +1097,38 @@ class App extends Component {
         isPlayerAdvancing
     }) {
 
-        // This is the only place where app will replace router path.
-        this.props.replacePath(selectedSongIndex, selectedVerseIndex)
+        const { props } = this
+
+        /** This is the only place where app will change the router path based
+         * on a new song or verse index.
+         */
+        props.updatePath({
+            props,
+            selectedSongIndex,
+            selectedVerseIndex
+        })
 
         /**
          * Since time and verse are in sync, this helper method can be called
          * by either one.
          */
 
-        this.props.selectVerseIndex(selectedVerseIndex)
-        this.props.selectTimePlayed(selectedTimePlayed)
+        props.selectVerseIndex(selectedVerseIndex)
+        props.selectTimePlayed(selectedTimePlayed)
 
         /**
          * If time was not changed by the audio element advancing, tell player
          * to update audio element's time.
          */
         if (!isPlayerAdvancing) {
-            this.props.setUpdatedTimePlayed(selectedTimePlayed)
+            props.setUpdatedTimePlayed(selectedTimePlayed)
         }
 
         // Render verse and scene immediately.
         if (renderVerseImmediately) {
 
-            this.props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
-                this.props.selectedSongIndex,
+            props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
+                props.selectedSongIndex,
                 selectedVerseIndex
             ))
         }

@@ -2707,4 +2707,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Bug where annotation isn't saved because of routing.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

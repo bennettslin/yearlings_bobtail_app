@@ -3,9 +3,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import App from './App'
 
-import { getSongIsLogue, getSongVerseTimes } from '../helpers/data-helper'
-import { getValidRoutingIndicesObject } from '../helpers/routing-helper'
-import { HYPHENATED_SONG_PATHS } from '../constants/paths'
+import { getSongVerseTimes } from '../helpers/data-helper'
+import { getValidRoutingIndicesObject, getPathForIndices } from '../helpers/routing-helper'
 
 import { selectAnnotationIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 
@@ -21,10 +20,12 @@ class RoutingContainer extends Component {
                 getValidRoutingIndicesObject(routingParamString),
 
             { routingSongIndex,
-              routingVerseIndex } = routingIndicesObject
+              routingVerseIndex,
+              routingAnnotationIndex } = routingIndicesObject
 
         let selectedSongIndex = props.selectedSongIndex,
-            selectedVerseIndex = props.selectedVerseIndex
+            selectedVerseIndex = props.selectedVerseIndex,
+            selectedAnnotationIndex = props.selectedAnnotationIndex
 
         // If route gives us its own song index, set in store.
         if (!isNaN(routingSongIndex)) {
@@ -34,6 +35,7 @@ class RoutingContainer extends Component {
 
             selectedSongIndex = routingSongIndex
             selectedVerseIndex = routingVerseIndex
+            selectedAnnotationIndex = routingAnnotationIndex
 
             props.selectSongIndex(routingSongIndex)
 
@@ -41,50 +43,73 @@ class RoutingContainer extends Component {
             props.selectVerseIndex(routingVerseIndex)
             props.selectTimePlayed(routingTimePlayed)
 
-            // Reset annotation and wiki.
-            props.selectAnnotationIndex(0)
+            // Store annotation index.
+            props.selectAnnotationIndex(routingAnnotationIndex)
+
+            // Reset wiki.
             props.selectWikiIndex(0)
         }
 
         this.state = {
             selectedSongIndex,
-            selectedVerseIndex
+            selectedVerseIndex,
+            selectedAnnotationIndex
         }
 
-        this.replacePath = this.replacePath.bind(this)
+        this.updatePath = this.updatePath.bind(this)
     }
 
     componentDidMount() {
         // If routing changed what was in store, set the new path name.
         this.replacePath(
             this.state.selectedSongIndex,
-            this.state.selectedVerseIndex
+            this.state.selectedVerseIndex,
+            this.state.selectedAnnotationIndex
         )
     }
 
-    replacePath(pathSongIndex, pathVerseIndex) {
+    replacePath(pathSongIndex, pathVerseIndex, pathAnnotationIndex) {
 
-        // Path is something like 9-grasshoppers-lie-heavy-20.
-        const isLogue = getSongIsLogue(pathSongIndex),
-
-            pathName = `${pathSongIndex}-${HYPHENATED_SONG_PATHS[pathSongIndex]}${pathVerseIndex && !isLogue ? '-v_' + pathVerseIndex : ''}`
+        const pathName = getPathForIndices(
+            pathSongIndex, pathVerseIndex, pathAnnotationIndex
+        )
 
         this.props.history.replace(pathName);
+    }
+
+    updatePath({
+        props,
+        selectedSongIndex,
+        selectedVerseIndex = props.selectedVerseIndex,
+        selectedAnnotationIndex = props.selectedAnnotationIndex
+    }) {
+        // Only update path if it has changed.
+        if (
+            props.selectedSongIndex !== selectedSongIndex ||
+            props.selectedVerseIndex !== selectedVerseIndex ||
+            props.selectedAnnotationIndex !== selectedAnnotationIndex
+        ) {
+            this.replacePath(
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex
+            )
+        }
     }
 
     render() {
         return (
             <App {...this.props}
-                replacePath={this.replacePath}
+                updatePath={this.updatePath}
             />
         )
     }
 }
 
 const mapStateToProps = ({
-    selectedSongIndex, selectedVerseIndex
+    selectedSongIndex, selectedVerseIndex, selectedAnnotationIndex
 }) => ({
-    selectedSongIndex, selectedVerseIndex
+    selectedSongIndex, selectedVerseIndex, selectedAnnotationIndex
 })
 
 // Bind Redux action creators to component props.
