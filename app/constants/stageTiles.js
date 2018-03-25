@@ -476,6 +476,20 @@ const
             [STAGE_COLOUR]
         ]
     },
+    BENNETT_BASEMENT_TILES = {
+        // Basement wall is 6', depth is 2.5'. Bed is 1'.
+        floorZIndices: [
+            [h, h, 5, 5, h, h, h, h, h, h, h, h],
+            [h, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, h],
+            [h, 0, 4, 4, 0, 0, 3, 3, 3, 3, 3, h],
+            [h, 0, 3, 3, 0, 0, 3, 3, 3, 3, 3, h],
+            [h, 0, 2, 2, 0, 0, 3, 3, 3, 3, 3, h],
+            [h, 0, 1, 1, 0, 0, 3, 3, 3, 3, 3, h]
+        ],
+        floorColours: [
+            [STAGE_COLOUR]
+        ]
+    },
     CATHOLIC_CHURCH_TILES = {
         floorZIndices: [
             [0],
@@ -514,18 +528,17 @@ const
             [STAGE_COLOUR]
         ]
     },
-    JACOB_APARTMENT_TILES = {
-        // Basement wall is 6', depth is 2.5'. Seats are 1'.
+    REHEARSAL_SPACE_TILES = {
         ceilingZIndices: [
             [h]
         ],
         floorZIndices: [
             [h, h, h, h, h, h, h, h, h, 5, 5, h],
-            [5],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 0],
-            [0, 0, 0, 2, 0, 2, 0, 0, 0, 3, 3, 0],
-            [0, 0, 2, 0, 0, 0, 0, 2, 0, 2, 2, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0]
+            [h, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, h],
+            [h, 0, 0, 0, 0, 0, 0, 0, 4, 4, 0, h],
+            [h, 0, 0, 2, 0, 2, 0, 0, 3, 3, 0, h],
+            [h, 0, 2, 0, 0, 0, 2, 0, 2, 2, 0, h],
+            [h, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, h]
         ],
         floorColours: [
             [STAGE_COLOUR]
@@ -1125,12 +1138,13 @@ module.exports = {
     BENNETT_APARTMENT_COURTYARD_TILES,
     BENNETT_APARTMENT_COUCH_TILES,
     BENNETT_APARTMENT_COUCH_THOUGHT_TILES,
+    BENNETT_BASEMENT_TILES,
     CATHOLIC_CHURCH_TILES,
     BERKELEY_CAMPUS_1_TILES,
     BERKELEY_CAMPUS_2_TILES,
     SHOW_STAGE_FRONT_TILES,
     SHOW_STAGE_FRONT_FAR_TILES,
-    JACOB_APARTMENT_TILES,
+    REHEARSAL_SPACE_TILES,
     MOVIE_THEATRE_1_TILES,
     MOVIE_THEATRE_2_TILES,
     SITA_APARTMENT_GATE_1_TILES,

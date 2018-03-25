@@ -11,7 +11,7 @@ import { VERSES,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { BENNETT_APARTMENT_COUCH_TILES,
          SHOW_STAGE_FRONT_TILES,
-         JACOB_APARTMENT_TILES,
+         REHEARSAL_SPACE_TILES,
          MOVIE_THEATRE_1_TILES,
          MOVIE_THEATRE_2_TILES } from '../constants/stageTiles'
 import { SKY_NO_TIME,
@@ -136,7 +136,7 @@ module.exports = {
                     description: 'sitting, eating fries, laughing'
                 }
             },
-            tiles: JACOB_APARTMENT_TILES,
+            tiles: REHEARSAL_SPACE_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_SUMMER

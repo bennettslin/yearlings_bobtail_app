@@ -15,7 +15,7 @@ import { VERSES,
          RESPONSE,
          BACKING,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { BENNETT_APARTMENT_BED_TILES,
+import { BENNETT_BASEMENT_TILES,
          SNOW_GLOBES_1_TILES,
          SNOW_GLOBES_2_TILES,
          SNOW_GLOBES_3_TILES } from '../constants/stageTiles'
@@ -38,7 +38,7 @@ module.exports = {
                     description: 'side, asleep'
                 }
             },
-            tiles: BENNETT_APARTMENT_BED_TILES,
+            tiles: BENNETT_BASEMENT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN
@@ -66,7 +66,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_APARTMENT_BED_TILES,
+            tiles: BENNETT_BASEMENT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN
@@ -218,7 +218,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_APARTMENT_BED_TILES,
+            tiles: BENNETT_BASEMENT_TILES,
             sky: {
                 time: SKY_NO_TIME,
                 season: SKY_AUTUMN
