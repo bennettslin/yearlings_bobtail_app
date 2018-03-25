@@ -778,7 +778,7 @@ module.exports = {
                     {
                         anchor: `cursed to be born,`,
                         annotation: {
-                            description: `I found it weird that the faithful should want unbelievers to be born at all, since it means trading the unborn child's certainty of going to heaven for their likelihood of going to hell.`,
+                            description: `It always confused me why the Catholic Church should extend its pro-life stance to the unborn of other faiths, since this means trading an aborted fetus's certainty of going to heaven for a living child's likelihood of going to hell.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }

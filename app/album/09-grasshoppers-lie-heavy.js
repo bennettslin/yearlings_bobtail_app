@@ -1322,13 +1322,14 @@ module.exports = {
                         anchor: `cheek unveiled.`,
                         annotation: [
                             {
-                                description: `Glancing up, I'm startled to find Sita hovering over me with a cheeky smile on her face. She had quietly snuck into the chair next to mine.`,
+                                description: `Glancing up, I'm startled to find Sita flashing a "cheeky" smile as she hovers over me. Having quietly unclasped her purse from my grip, she returns to the emergency room, only to inadvertently flash some "cheek" from beneath her revealing hospital gown.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [NARRATIVE]: true,
+                                    [PUN]: true
                                 }
                             },
                             {
-                                description: `In a traditional wedding, the father of the bride lifts her veil to kiss her on the cheek.`,
+                                description: `In a traditional wedding, the father of the bride lifts her "veil" to kiss her on the cheek.`,
                                 dotKeys: {
                                     [PUN]: true,
                                     [REFERENCE]: true

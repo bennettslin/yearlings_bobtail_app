@@ -173,6 +173,11 @@ module.exports = [
         neededHours: 1
     },
     {
+        taskName: `Miriam bikini top (American flag)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Chinese clothes patterns`,
         workedHours: 0,
         neededHours: 1

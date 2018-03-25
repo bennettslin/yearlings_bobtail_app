@@ -257,7 +257,7 @@ module.exports = {
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
-                        description: `I originally began writing this song after waking from a horrid nightmare, but abandoned it after all my attempts to describe the nightmare only elicited laughter. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
+                        description: `I originally began writing this song after waking from a horrid nightmare, but abandoned it after all my attempts to describe the nightmare to others only elicited laughter. I revived it here, thinking its gloomy chords and disjointed tempo changes would be perfect for conveying a lecture delivered by a nightmarish version of my parents.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -279,7 +279,7 @@ module.exports = {
                                     // बेटा
                                     italic: `beta`
                                 },
-                                `means "son." My parents have taken Sita's side so unequivocally that I now imagine them addressing me as an Indian parent would.`
+                                `means "son." Having unequivocally taken Sita's side, my parents address me in my nightmare as an Indian parent would.`
                             ],
                             dotKeys: {
                                 [NARRATIVE]: true,
@@ -843,7 +843,6 @@ module.exports = {
                     {
                         anchor: `fail your Sita`,
                         annotation: {
-                            // TODO: Mention that Yearling's Bobtail is also about failing Sita forever.
                             description: `Contemporary audiences may find it problematic that Rama's first action upon reuniting with Sita was to demand proof of her purity. The same self-serving chauvinism is what prompted my need to be the more sexually experienced partner, leading me to stray from Sita and shack up with other women.`,
                             dotKeys: {
                                 [OBSERVATION]: true,
@@ -851,7 +850,23 @@ module.exports = {
                             }
                         }
                     },
-                    `on repeat for evermore!`
+                    `on`,
+                    {
+                        anchor: `repeat forevermore!`,
+                        annotation: {
+                            description: [
+                                `As I was making this album, it occurred to me that I too was now doomed to endlessly forget and repeat my mistakes, as the story of how I betrayed my own Sita, much like the`,
+                                {
+                                    italic: `Ramayana,`
+                                },
+                                `would forever be retold.`
+                            ],
+                            dotKeys: {
+                                [OBSERVATION]: true,
+                                [SONGWRITING]: true
+                            }
+                        }
+                    }
                 ]
             },
             {
