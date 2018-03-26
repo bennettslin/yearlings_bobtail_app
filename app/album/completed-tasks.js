@@ -2712,4 +2712,14 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Scan and organise raw bodies and props.`,
+        workedHours: 5,
+        neededHours: 5
+    },
+    {
+        taskName: `Play in logues should go to first song.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

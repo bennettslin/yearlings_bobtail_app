@@ -30,6 +30,15 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
+            description: `Bennett's room, but seemingly no one is there.`,
+            tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
+            sky: {
+                time: SKY_NO_TIME,
+                season: SKY_WINTER
+            }
+        },
+        {
+            unitIndex: 2,
             description: `Bennett and Christopher are under his bunk bed. Christopher is injured, but happily playing. Bennett looks guilty. There is a drawing of the two as dogs.`,
             actors: {
                 preteenBennett: {

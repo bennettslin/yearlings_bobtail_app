@@ -323,11 +323,16 @@ class App extends Component {
         const { selectedSongIndex,
                 canPlayThroughs } = this.props
 
-        const songCanPlayThrough = getValueInBitNumber({
-            keysCount: getSongsNotLoguesCount(),
-            bitNumber: canPlayThroughs,
-            key: selectedSongIndex
-        })
+        const
+            isLogue = getSongIsLogue(this.props.selectedSongIndex),
+
+            songCanPlayThrough = getValueInBitNumber({
+                keysCount: getSongsNotLoguesCount(),
+                bitNumber: canPlayThroughs,
+
+                // If logue, select first song.
+                key: isLogue ? 1 : selectedSongIndex
+            })
 
         // Do not toggle play if player is not ready to play through.
         if (!songCanPlayThrough) {
@@ -335,7 +340,7 @@ class App extends Component {
         }
 
         // Select first song if play button in logue is toggled on.
-        if (getSongIsLogue(this.props.selectedSongIndex) && isPlaying) {
+        if (isLogue && isPlaying) {
             this.selectSong({
                 selectedSongIndex: 1
             })

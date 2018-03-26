@@ -27,6 +27,7 @@ const NotesSectionView = () => (
             <li>http://codepen.io/tmrDevelops/pen/NPXodB</li>
             <li>http://stackoverflow.com/questions/8866736/css-speech-bubble-with-box-shadow</li>
             <li>https://css-tricks.com/snippets/jquery/animate-heightwidth-to-auto/#comment-283996</li>
+            <li>https://css-tricks.com/the-backgound-clip-property-and-use-cases/</li>
         </ul>
     </div>
 )
