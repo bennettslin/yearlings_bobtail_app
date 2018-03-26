@@ -17,7 +17,7 @@ const _getIndexForPrefix = (string, prefix) => {
         finalStringIndex = rawStringIndex.replace(/\D/g, ''),
 
         // If string lengths are the same, then this is a valid index.
-        isValidNumber = rawStringIndex.length === finalStringIndex
+        isValidNumber = rawStringIndex.length === finalStringIndex.length
 
     // Only return a number if valid.
     return isValidNumber ? parseInt(finalStringIndex) : undefined
