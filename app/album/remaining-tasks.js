@@ -27,6 +27,12 @@ module.exports = [
         neededHours: 2
     },
 
+    {
+        taskName: `Selecting last carousel annotation in Odin, and then toggling lyric column, makes carousel needlessly scroll.`,
+        workedHours: 0,
+        neededHours: 2
+    }
+
     /**
      * Mobile bugs.
      */
