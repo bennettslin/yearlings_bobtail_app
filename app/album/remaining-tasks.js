@@ -1,4 +1,11 @@
 module.exports = [
+
+    {
+        taskName: `Add auto scroll to lyric column that toggles on with button, and toggles off with manual scroll.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
     {
         taskName: `Rethink tasks for panels, doors, and windows.`,
         workedHours: 0,
@@ -31,7 +38,13 @@ module.exports = [
         taskName: `Selecting last carousel annotation in Odin, and then toggling lyric column, makes carousel needlessly scroll.`,
         workedHours: 0,
         neededHours: 2
-    }
+    },
+
+    {
+        taskName: `Deal with ugliness when forced scrollbar is set.`,
+        workedHours: 0,
+        neededHours: 2
+    },
 
     /**
      * Mobile bugs.
@@ -140,6 +153,12 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
+
+    {
+        taskName: `Set up system to show images on stage based on scene and song.`,
+        workedHours: 0,
+        neededHours: 20
+    }
 
     // Low priority bugs.
     // {

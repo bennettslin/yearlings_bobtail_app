@@ -1,25 +1,58 @@
-/**
- * TODO: Yet to include app UI and rendering.
- */
-
 module.exports = [
+
     /**
-     * Head preparation.
+     * App UI.
      */
     {
-        taskName: `neck`,
+        taskName: `Bennett avatars`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `dot icons`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `button icons`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `accessibility icon`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `tip images`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `dot shapes`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `audio slider`,
         workedHours: 0,
         neededHours: 8
     },
     {
-        taskName: `Final ears on back view and extreme perspective heads`,
+        taskName: `annotation cards`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 8
     },
     {
-        taskName: `Corrective pass on back view and extreme perspective heads`,
+        taskName: `lyrics`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 8
+    },
+    {
+        taskName: `nav header`,
+        workedHours: 0,
+        neededHours: 8
     },
 
     /**
@@ -44,6 +77,25 @@ module.exports = [
         taskName: `Theatre rafters`,
         workedHours: 0,
         neededHours: 5
+    },
+
+    /**
+     * Head preparation.
+     */
+    {
+        taskName: `neck`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Final ears on back view and extreme perspective heads`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Corrective pass on back view and extreme perspective heads`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     /**
@@ -81,6 +133,20 @@ module.exports = [
     },
 
     /**
+     * Clothes.
+     */
+    {
+        taskName: `Bennett and Sita's clothes (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Sita and Khari's clothes (Vegan)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    /**
      * Fabrics.
      */
     {
@@ -104,11 +170,6 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Bennett and Sita's clothes (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Sita's blanket on couch (Kyon)`,
         workedHours: 0,
         neededHours: 1
@@ -125,11 +186,6 @@ module.exports = [
     },
     {
         taskName: `2 * Bennett's hospital blanket (Cremated, Dream)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Sita and Khari's clothes (Vegan)`,
         workedHours: 0,
         neededHours: 2
     },
@@ -440,6 +496,55 @@ module.exports = [
     },
 
     /**
+     * DTO doables.
+     */
+    {
+        taskName: `Bennett's record player and milk crates with records (Ash, M, Garryowen)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `4 * Guitar amp (M, Look Back, Garryowen)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `4 * Bass amp (M, Look Back, Garryowen)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Milk crate with Yearlings albums (M)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Evian bottles pack in car (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Howie's television (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Hospital drip (Cremated, Dream)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Record player (Cremated, Dream)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Demonstration banner (Vegan)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    /**
      * Furniture and touched props (lifelike)
      */
     {
@@ -467,26 +572,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Bennett's record player and milk crates with records (Ash, M, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `4 * Guitar amp (M, Look Back, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `4 * Bass amp (M, Look Back, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Milk crate with Yearlings albums (M)`,
-        workedHours: 0,
-        neededHours: 3
-    },
+
     {
         taskName: `Bennett's bed mattress (Grasshoppers, Uncanny)`,
         workedHours: 0,
@@ -513,16 +599,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Evian bottles pack in car (Constellations)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Howie's television (Constellations)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Howie's couch cushions (Constellations)`,
         workedHours: 0,
         neededHours: 3
@@ -533,22 +609,7 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Hospital drip (Cremated, Dream)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Record player (Cremated, Dream)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Hospital bed (Cremated, Dream)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Demonstration banner (Vegan)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -834,7 +895,7 @@ module.exports = [
         neededHours: 5
     },
         {
-        taskName: `Dogs (Pchelka)`,
+        taskName: `Mushka and Pchelka (Pchelka)`,
         workedHours: 0,
         neededHours: 5
     },

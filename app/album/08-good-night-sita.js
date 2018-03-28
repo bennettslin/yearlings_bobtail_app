@@ -547,7 +547,7 @@ module.exports = {
                                     {
                                         italic: `The Devil's Dictionary.`
                                     },
-                                    `My sense of humour at the time was an approximation of his brand of cynical wit.`
+                                    `My sense of humour at the time was a naive approximation of his brand of cynical wit.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -899,7 +899,8 @@ module.exports = {
                     {
                         anchor: `endless flowchart`,
                         annotation: {
-                            description: `I never actually drew out a diagram that shows the best choice to make for any given scenario that might crop up on a date, but it was nice to believe that such a thing could exist. Of course, if there are no good choices, and all of them lead back to starting over from the beginning, then there is the danger of getting trapped in an infinite loop.`,
+                            // TODO: Reword.
+                            description: `Intimidated by the spontaneous and unpredictable nature of a date conversation, I once indulged in the whimsical fantasy of preemptively mapping out a sprawling flowchart that could show the best possible response for any given scenario.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -909,7 +910,19 @@ module.exports = {
             },
             {
                 time: 99,
-                lyric: `with every given answer a no`
+                // TODO: Cycle of rejection becomes infinite loop.
+                lyric: [
+                    `with every given`,
+                    {
+                        anchor: `answer a no`,
+                        annotation: {
+                            description: `Of course, if there are no good choices, and all of them lead back to starting over from the beginning, then the cycle of rejection is doomed to be an infinite loop.`,
+                            dotKeys: {
+                                [OBSERVATION]: true
+                            }
+                        }
+                    }
+                ]
             },
             {
                 unitMap: true,

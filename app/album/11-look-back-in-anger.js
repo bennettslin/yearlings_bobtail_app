@@ -755,7 +755,7 @@ module.exports = {
                     {
                         anchor: `right to take what's theirs?`,
                         annotation: {
-                            description: `As opportunities for social advancement opened up for me, I began to understand why the bullies grabbed onto those given to them, and I could even sympathise. After all, in a world that simply roots for the strong, it makes no sense to question whatever means you've been afforded to avoid being weak.`,
+                            description: `As opportunities for social advancement opened up for me, I began to understand why the bullies grabbed onto those that had been handed to them, and I could even sympathise. After all, in a world that simply roots for the strong, it makes no sense to question whatever means you've been afforded to avoid being weak.`,
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [OBSERVATION]: true
