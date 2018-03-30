@@ -119,7 +119,7 @@ export const getTheatreCeilingHeight = ({
     return windowHeight - centreFieldHeight + stageTop - lyricColumnHeight
 }
 
-export const getTheatreSeatingHeight = ({
+export const getTheatreFloorHeight = ({
     deviceIndex,
     windowHeight,
     centreFieldHeight,
