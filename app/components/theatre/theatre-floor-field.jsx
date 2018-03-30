@@ -51,6 +51,8 @@ const TheatreFloorField = ({
             overlapRatio: 0.9 // More bunched up when closer to 1.
         })
 
+        console.error('row', seatingRowCoordinates.length)
+
     return (
         <div
             className={classnames(
@@ -103,6 +105,8 @@ const TheatreFloorField = ({
 
                         // Combine left and right side seating.
                         seatsArray = leftSeatsArray.concat(rightSeatsArray)
+
+                    console.error('seat', seatWidth, leftSeatsArray.length, rightSeatsArray.length)
 
                     return (
                         <g key={rowIndex}>
