@@ -17,7 +17,7 @@
     }
 
     .access-icons-block {
-        z-index: @lyric-column-fade-top-z-index;
+        z-index: @lyric-access-icons-z-index;
 
         &.up-down {
             right: @access-icons-block-margin;
@@ -137,20 +137,20 @@
 }
 
 // Fade top in mobile.
-.is-mobile {
-    &.lyric-collapsed {
-        .lyric-collapsed-fade-top {
-            position: absolute;
-            top: 0;
-            height: @lyric-block-top-padding;
-            width: 100%;
-            z-index: @lyric-column-fade-top-z-index;
+// .is-mobile {
+//     &.lyric-collapsed {
+//         .lyric-collapsed-fade-top {
+//             position: absolute;
+//             top: 0;
+//             height: @lyric-block-top-padding;
+//             width: 100%;
+//             z-index: @lyric-access-icons-z-index;
 
-            // TODO: Don't hard code.
-            background-image: linear-gradient(
-                rgba(200, 200, 200, 1),
-                rgba(200, 200, 200, 0)
-            );
-        }
-    }
-}
+//             // TODO: Don't hard code.
+//             background-image: linear-gradient(
+//                 rgba(200, 200, 200, 1),
+//                 rgba(200, 200, 200, 0)
+//             );
+//         }
+//     }
+// }

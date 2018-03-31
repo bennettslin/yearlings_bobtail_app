@@ -219,7 +219,7 @@ LyricColumnView = ({
                 )}
                 onTransitionEnd={handleAnimatableTransition}
             >
-                <div className="lyric-collapsed-fade-top" />
+                {/* <div className="lyric-collapsed-fade-top" /> */}
 
                 <VerseBar {...verseBarProps}
                     isAbove={true}
