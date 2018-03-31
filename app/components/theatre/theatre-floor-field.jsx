@@ -1,0 +1,134 @@
+// Section to show the stage illustrations.
+
+import React from 'react'
+import PropTypes from 'prop-types'
+import classnames from 'classnames'
+
+import TheatreSeat from './theatre-seat'
+
+import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
+
+import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../../constants/stage'
+
+const propTypes = {
+    floorFieldCoordinates: PropTypes.shape({
+        height: PropTypes.number.isRequired,
+        stageWidth: PropTypes.number.isRequired,
+        windowWidth: PropTypes.number.isRequired,
+        stageCentreFromLeft: PropTypes.number.isRequired
+    }),
+    pitStyle: PropTypes.shape({
+        width: PropTypes.string.isRequired,
+        height: PropTypes.string.isRequired,
+        left: PropTypes.string.isRequired
+    }).isRequired,
+}
+
+const TheatreFloorField = ({
+
+    floorFieldCoordinates,
+    pitStyle
+
+}) => {
+
+    const { height: floorHeight,
+            stageWidth,
+            windowWidth,
+            stageCentreFromLeft } = floorFieldCoordinates,
+
+        floorFieldStyle = {
+            height: `${floorHeight}px`
+        },
+
+        // Arbitrary values for now.
+        firstRowSeatWidth = stageWidth / 12,
+        firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
+
+        seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
+            minLength: floorHeight,
+            firstLength: firstRowSeatHeight,
+            multiplyFactor: 1.21, // Gets wider faster with larger value.
+            overlapRatio: 0.9 // More bunched up when closer to 1.
+        })
+
+    return (
+        <div
+            className={classnames(
+                'field',
+                'theatre-floor-field'
+            )}
+            style={floorFieldStyle}
+        >
+            <div
+                className="theatre-pit"
+                style={pitStyle}
+            />
+
+            <svg
+                className="theatre-seating"
+                viewBox={`0 0 ${windowWidth} ${floorHeight}`}
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                {seatingRowCoordinates.map((currentRowCoordinates, rowIndex) => {
+                    const { length: rowHeight,
+                            position: rowTop } = currentRowCoordinates,
+
+                        seatWidth = rowHeight / SEAT_HEIGHT_TO_WIDTH_RATIO,
+
+                        /**
+                         * If row is even, have centre seat by offsetting right
+                         * side with one more half seat, and left side with one
+                         * less.
+                         */
+                        isEven = rowIndex % 2 === 0,
+                        seatWidthOffset = isEven ? seatWidth / 2 : 0,
+                        maxSeats = 10, // Arbitrary for now.
+
+                        leftSeatsArray = getArrayOfCoordinatesForFactoredLengths({
+                            minLength: stageCentreFromLeft - seatWidthOffset,
+                            firstLength: seatWidth,
+                            maxCount: maxSeats,
+
+                            // Start from centre, and go towards left.
+                            reversePosition: true
+                        }),
+
+                        rightSeatsArray = getArrayOfCoordinatesForFactoredLengths({
+                            minLength: windowWidth - stageCentreFromLeft +
+                                seatWidthOffset,
+                            firstLength: seatWidth,
+                            maxCount: maxSeats + (isEven ? 1 : 0),
+                            positionOffset: stageCentreFromLeft - seatWidthOffset
+                        }),
+
+                        // Combine left and right side seating.
+                        seatsArray = leftSeatsArray.concat(rightSeatsArray)
+
+                    return (
+                        <g key={rowIndex}>
+                            {seatsArray.map((seat, seatIndex) => {
+
+                                const { length: seatWidth,
+                                        position: seatLeft } = seat
+
+                                return (
+                                    <TheatreSeat
+                                        key={seatIndex}
+                                        top={rowTop}
+                                        left={seatLeft}
+                                        width={seatWidth}
+                                        height={rowHeight}
+                                    />
+                                )
+                            })}
+                        </g>
+                    )
+                })}
+            </svg>
+        </div>
+    )
+}
+
+TheatreFloorField.propTypes = propTypes
+
+export default TheatreFloorField

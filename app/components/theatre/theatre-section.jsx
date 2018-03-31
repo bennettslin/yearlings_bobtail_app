@@ -6,11 +6,11 @@ import { connect } from 'react-redux'
 
 import TheatreBalconyField from './theatre-balcony-field'
 import TheatreCeilingField from './theatre-ceiling-field'
-import TheatreSeatingField from './theatre-seating-field'
+import TheatreFloorField from './theatre-floor-field'
 
 import { getCentreFieldHeight,
          getTheatreCeilingHeight,
-         getTheatreSeatingHeight } from '../../helpers/stage-helper'
+         getTheatreFloorHeight } from '../../helpers/stage-helper'
 
 const mapStateToProps = ({
     isHeightlessLyricColumn,
@@ -69,7 +69,7 @@ class TheatreSection extends Component {
                 isHeightlessLyricColumn
             }),
 
-            theatreSeatingHeight = getTheatreSeatingHeight({
+            theatreFloorHeight = getTheatreFloorHeight({
                 deviceIndex,
                 windowHeight,
                 centreFieldHeight,
@@ -78,7 +78,7 @@ class TheatreSection extends Component {
                 isHeightlessLyricColumn
             }),
 
-            theatreBalconyHeight = windowHeight - theatreCeilingHeight - theatreSeatingHeight,
+            theatreBalconyHeight = windowHeight - theatreCeilingHeight - theatreFloorHeight,
 
             ceilingFieldCoordinates = {
                 height: theatreCeilingHeight,
@@ -94,8 +94,8 @@ class TheatreSection extends Component {
                 rightWidth: windowWidth - stageLeft - stageWidth
             },
 
-            seatingFieldCoordinates = {
-                height: theatreSeatingHeight,
+            floorFieldCoordinates = {
+                height: theatreFloorHeight,
                 stageWidth,
                 windowWidth,
                 stageCentreFromLeft
@@ -124,9 +124,9 @@ class TheatreSection extends Component {
                     isRight
                     balconyFieldCoordinates={balconyFieldCoordinates}
                 />
-                <TheatreSeatingField
+                <TheatreFloorField
                     windowWidth={windowWidth}
-                    seatingFieldCoordinates={seatingFieldCoordinates}
+                    floorFieldCoordinates={floorFieldCoordinates}
                     pitStyle={pitStyle}
                 />
             </div>

@@ -1,12 +1,11 @@
 .theatre-section {
-    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     background-color: rgba(200, 250, 250, 0.2);
 
-    .field, .theatre-pit {
+    &, .field, .theatre-pit {
         position: absolute;
         box-sizing: border-box;
     }
@@ -20,12 +19,6 @@
     top: 0;
     background-color: rgba(150, 150, 250, 0.2); 
     border: 2px solid blue;    
-}
-
-.theatre-seating-field {
-    bottom: 0;
-    background-color: rgba(250, 150, 150, 0.2); 
-    border: 2px solid red;
 }
 
 .theatre-balcony-field {  
@@ -64,11 +57,6 @@
     }
 }
 
-.theatre-seating-row {
-    left: 0;
-    border: 1px solid rgba(150, 100, 100, 0.1);
-}
-
 .theatre-ceiling-row {
     left: 0;
     border: 1px solid rgba(100, 100, 150, 0.1);
@@ -78,19 +66,13 @@
     top: 0;
 }
 
-.theatre-pit {
-    top: 0;
-    background-color: #b88;
-}
-
-.seat, .rafter, .balcony {
-    position: absolute;
+.rafter, .balcony {
     box-sizing: border-box;
     border: 1px solid #88f;
     background-color: rgba(200, 200, 250, 0.75);
 }
 
-.seat, .rafter {
+.rafter {
     height: 100%;
     top: 0;
 }
@@ -98,4 +80,13 @@
 .balcony {
     width: 100%;
     left: 0;
+}
+
+/**
+ * SVG styling.
+ */
+
+.rafter, .balcony {
+    position: absolute;
+    height: 100%;
 }
