@@ -25,10 +25,10 @@
     "classnames": "^2.2.5",
     "date-fns": "^1.29.0",
     "debounce": "^1.0.2",
-    "prop-types": "^15.5.10",
-    "react": "^16.1.1",
+    "prop-types": "^15.6.1",
+    "react": "^16.3.0",
     "react-audio-player": "^0.6.2",
-    "react-dom": "^16.1.1",
+    "react-dom": "^16.3.0",
     "react-redux": "^5.0.5",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
@@ -71,6 +71,6 @@
     "webpack-bundle-analyzer": "^2.8.2",
     "webpack-dev-server": "^2.8.2",
     "webpack-merge": "^4.1.0",
-    "why-did-you-update": "0.1.0"
+    "why-did-you-update": "^0.1.1"
   }
 }
