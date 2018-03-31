@@ -25,15 +25,23 @@ const mapStateToProps = ({
 class StageSceneSection extends Component {
 
     static propTypes = {
+        // Through Redux.
         isHeavyRenderReady: PropTypes.bool.isRequired,
         renderReadySongIndex: PropTypes.number.isRequired,
-        currentSceneIndex: PropTypes.number.isRequired
+        currentSceneIndex: PropTypes.number.isRequired,
+
+        // From parent.
+        stageWidth: PropTypes.number.isRequired,
+        stageHeight: PropTypes.number.isRequired
     }
 
     render() {
         const { isHeavyRenderReady,
                 renderReadySongIndex,
-                currentSceneIndex } = this.props,
+                currentSceneIndex,
+
+                stageWidth,
+                stageHeight } = this.props,
 
             sceneObject = getSceneObject(renderReadySongIndex, currentSceneIndex),
 
@@ -53,7 +61,10 @@ class StageSceneSection extends Component {
             )}>
                 <StageSkyField
                     sky={sky}
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
                 />
+
                 {/* Ceiling tiles. */}
                 <StageTilesField
                     isFloor={false}
@@ -61,6 +72,7 @@ class StageSceneSection extends Component {
                     zIndices={ceilingZIndices}
                     colours={ceilingColours}
                 />
+
                 {/* Floor tiles. */}
                 <StageTilesField
                     isFloor={true}
@@ -68,6 +80,7 @@ class StageSceneSection extends Component {
                     zIndices={floorZIndices}
                     colours={floorColours}
                 />
+
                 <StageActionField
                     walls={walls}
                     fixtures={fixtures}

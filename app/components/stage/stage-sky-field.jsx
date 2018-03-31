@@ -4,6 +4,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import DynamicSvg from '../dynamic-svg/dynamic-svg'
+
 import { SKY_NO_TIME,
          SKY_MORNING,
          SKY_NOON,
@@ -28,17 +30,27 @@ const propTypes = {
     sky: PropTypes.shape({
         time: PropTypes.string.isRequired,
         season: PropTypes.string.isRequired
-    }).isRequired
+    }).isRequired,
+    stageWidth: PropTypes.number.isRequired,
+    stageHeight: PropTypes.number.isRequired
 }
 
 const StageSkyField = ({
-    sky
+
+    sky,
+    stageWidth,
+    stageHeight
+
 }) => {
     const { time, season } = sky
 
     return (
-        <div className="stage-sky-field">
-            <div
+        <DynamicSvg
+            className="stage-sky-field"
+            viewBoxWidth={stageWidth}
+            viewBoxHeight={stageHeight}
+        >
+            <rect
                 className={classnames(
                     'filter',
                     'season-filter',
@@ -48,8 +60,12 @@ const StageSkyField = ({
                     'autumn': season === SKY_AUTUMN,
                     'winter': season === SKY_WINTER }
                 )}
+                x={0}
+                y={0}
+                width={stageWidth}
+                height={stageHeight}
             />
-            <div
+            <rect
                 className={classnames(
                     'filter',
                     'time-filter',
@@ -60,8 +76,13 @@ const StageSkyField = ({
                     'evening': time === SKY_EVENING,
                     'night': time === SKY_NIGHT }
                 )}
+                x={0}
+                y={0}
+                width={stageWidth}
+                height={stageHeight}
             />
-        </div>
+            {/* TODO: Make filter for weather, like clouds and rain. */}
+        </DynamicSvg>
     )
 }
 

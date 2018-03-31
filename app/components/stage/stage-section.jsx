@@ -45,7 +45,10 @@ class StageSection extends Component {
                     className="aspect-ratio-container"
                     style={aspectRatioContainerStyle}
                 >
-                    <StageSceneSection />
+                    <StageSceneSection
+                        stageWidth={width}
+                        stageHeight={height}
+                    />
                     <StageProscenium />
                 </div>
             </div>

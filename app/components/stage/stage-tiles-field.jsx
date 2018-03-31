@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 import { getArrayOfLength } from '../../helpers/general-helper'
 
+// import DynamicSvg from '../dynamic-svg/dynamic-svg'
+
 import StageTile from './stage-tile'
 
 import { TILE_ROWS_LENGTH,
