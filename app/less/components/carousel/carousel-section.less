@@ -35,13 +35,41 @@
     }
 }
 
-/** This does not work in IE or Edge. Whatever. */
-@carousel-collapsed-gradient: linear-gradient(0deg, black, black 90%, transparent);
+/** Gradient mask does not work in IE or Edge. */
 
-.is-desktop {
+.monitor-width {
+    // Consider Golden Cord width.
+    @monitor-carousel-gradient:
+        linear-gradient(
+            to left,
+            black,
+            transparent @golden-cord-width * 0.4,
+            transparent @golden-cord-width * 0.6,
+            black @golden-cord-width,
+            black
+        );
     .desktop-carousel-gradient-mask {
-        -webkit-mask-image: @lyric-collapsed-gradient;
-        mask-image: @lyric-collapsed-gradient;
+        // Not taken care of by autoprefixer, unfortunately.
+        -webkit-mask-image: @monitor-carousel-gradient;
+        mask-image: @monitor-carousel-gradient;
+    }
+}
+
+.laptop-width {
+    // Consider Uncanny Valley width.
+    @laptop-carousel-gradient:
+        linear-gradient(
+            to left,
+            black,
+            transparent @uncanny-valley-width * 0.4,
+            transparent @uncanny-valley-width * 0.6,
+            black @uncanny-valley-width,
+            black
+        );
+    .desktop-carousel-gradient-mask {
+        // Not taken care of by autoprefixer, unfortunately.
+        -webkit-mask-image: @laptop-carousel-gradient;
+        mask-image: @laptop-carousel-gradient;
     }
 }
 

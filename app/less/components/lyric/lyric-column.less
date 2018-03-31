@@ -136,12 +136,13 @@
     }
 }
 
-/** This does not work in IE or Edge. Whatever. */
+/** Gradient mask does not work in IE or Edge. */
 @lyric-collapsed-gradient: linear-gradient(0deg, black, black 90%, transparent);
 
 .is-mobile {
     &.lyric-collapsed {
         .lyric-collapsed-gradient-mask {
+            // Not taken care of by autoprefixer, unfortunately.
             -webkit-mask-image: @lyric-collapsed-gradient;
             mask-image: @lyric-collapsed-gradient;
         }
