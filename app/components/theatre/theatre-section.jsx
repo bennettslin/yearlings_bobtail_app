@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import TheatreBalconyField from './theatre-balcony-field'
+import TheatreWallField from './theatre-wall-field'
 import TheatreCeilingField from './theatre-ceiling-field'
 import TheatreFloorField from './theatre-floor-field'
 
@@ -78,7 +78,7 @@ class TheatreSection extends Component {
                 isHeightlessLyricColumn
             }),
 
-            theatreBalconyHeight = windowHeight - theatreCeilingHeight - theatreFloorHeight,
+            theatreWallHeight = windowHeight - theatreCeilingHeight - theatreFloorHeight,
 
             ceilingFieldCoordinates = {
                 ceilingHeight: theatreCeilingHeight,
@@ -86,9 +86,9 @@ class TheatreSection extends Component {
                 stageCentreFromLeft
             },
 
-            balconyFieldCoordinates = {
+            wallFieldCoordinates = {
                 top: theatreCeilingHeight,
-                height: theatreBalconyHeight,
+                wallHeight: theatreWallHeight,
                 stageHeight,
                 leftWidth: stageLeft,
                 rightWidth: windowWidth - stageLeft - stageWidth
@@ -117,12 +117,12 @@ class TheatreSection extends Component {
                     windowWidth={windowWidth}
                     ceilingFieldCoordinates={ceilingFieldCoordinates}
                 />
-                <TheatreBalconyField
-                    balconyFieldCoordinates={balconyFieldCoordinates}
+                <TheatreWallField
+                    wallFieldCoordinates={wallFieldCoordinates}
                 />
-                <TheatreBalconyField
+                <TheatreWallField
                     isRight
-                    balconyFieldCoordinates={balconyFieldCoordinates}
+                    wallFieldCoordinates={wallFieldCoordinates}
                 />
                 <TheatreFloorField
                     windowWidth={windowWidth}

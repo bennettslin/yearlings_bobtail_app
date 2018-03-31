@@ -8,6 +8,8 @@ import TheatreRafter from './theatre-rafter'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
 
+import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../../constants/stage'
+
 const propTypes = {
     windowWidth: PropTypes.number.isRequired,
     ceilingFieldCoordinates: PropTypes.shape({
@@ -35,8 +37,7 @@ const TheatreCeilingField = ({
 
         // Arbitrary values for now.
         firstRowRafterWidth = stageWidth * 1.1,
-        rafterHeightToWidthRatio = 0.02, // How tall is the rafter.
-        firstRowRafterHeight = firstRowRafterWidth * rafterHeightToWidthRatio,
+        firstRowRafterHeight = firstRowRafterWidth * RAFTER_HEIGHT_TO_WIDTH_RATIO,
 
         raftersRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
             minLength: ceilingHeight,
@@ -58,34 +59,22 @@ const TheatreCeilingField = ({
                 viewBox={`0 0 ${windowWidth} ${ceilingHeight}`}
                 xmlns="http://www.w3.org/2000/svg"
             >
-                <g>
-                    {raftersRowCoordinates.map((currentCoordinates, index) => {
-                        const { length: rowHeight,
-                                position: rowBottom } = currentCoordinates,
+                {raftersRowCoordinates.map((currentCoordinates, index) => {
+                    const { length: rowHeight,
+                            position: rowBottom } = currentCoordinates,
 
-                            // ceilingRowStyle = {
-                            //     height: `${rowHeight}px`,
-                            //     bottom: `${rowBottom}px`
-                            // },
+                        rafterWidth = rowHeight / RAFTER_HEIGHT_TO_WIDTH_RATIO
 
-                            rafterWidth = rowHeight / rafterHeightToWidthRatio
-
-                            // rafterStyle = {
-                            //     width: rafterWidth,
-                            //     left: stageCentreFromLeft - rafterWidth / 2
-                            // }
-
-                        return (
-                            <TheatreRafter
-                                key={index}
-                                top={ceilingHeight - rowHeight - rowBottom}
-                                left={stageCentreFromLeft - rafterWidth / 2}
-                                width={rafterWidth}
-                                height={rowHeight}
-                            />
-                        )
-                    })}
-                </g>
+                    return (
+                        <TheatreRafter
+                            key={index}
+                            top={ceilingHeight - rowHeight - rowBottom}
+                            left={stageCentreFromLeft - rafterWidth / 2}
+                            width={rafterWidth}
+                            height={rowHeight}
+                        />
+                    )
+                })}
             </svg>
         </div>
     )

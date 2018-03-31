@@ -2726,5 +2726,10 @@ module.exports = [
         taskName: `Switch theatre seating to svgs.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Switch theatre rafters and balconies to svgs.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
