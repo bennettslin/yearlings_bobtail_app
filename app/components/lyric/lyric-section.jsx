@@ -128,7 +128,8 @@ LyricSectionView = ({
             className={classnames(
                 'section',
                 'lyric-section',
-                'lyrics-scroll'
+                'lyrics-scroll',
+                'lyric-collapsed-gradient-mask'
             )}
             tabIndex="-1"
             onScroll={handleScroll}

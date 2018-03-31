@@ -136,21 +136,14 @@
     }
 }
 
-// Fade top in mobile.
-// .is-mobile {
-//     &.lyric-collapsed {
-//         .lyric-collapsed-fade-top {
-//             position: absolute;
-//             top: 0;
-//             height: @lyric-block-top-padding;
-//             width: 100%;
-//             z-index: @lyric-access-icons-z-index;
+/** This does not work in IE or Edge. Whatever. */
+@lyric-collapsed-gradient: linear-gradient(0deg, black, black 90%, transparent);
 
-//             // TODO: Don't hard code.
-//             background-image: linear-gradient(
-//                 rgba(200, 200, 200, 1),
-//                 rgba(200, 200, 200, 0)
-//             );
-//         }
-//     }
-// }
+.is-mobile {
+    &.lyric-collapsed {
+        .lyric-collapsed-gradient-mask {
+            -webkit-mask-image: @lyric-collapsed-gradient;
+            mask-image: @lyric-collapsed-gradient;
+        }
+    }
+}
