@@ -55,8 +55,6 @@ const TheatreWallField = ({
             overlapRatio: 0.2 // Less bunched up when closer to 0.
         })
 
-    console.error('windowHeight', windowHeight, top);
-
     return (
         <div
             className={classnames(
