@@ -31,13 +31,13 @@ const TheatreFloorField = ({
 
 }) => {
 
-    const { height: stageHeight,
+    const { height: floorHeight,
             stageWidth,
             windowWidth,
             stageCentreFromLeft } = floorFieldCoordinates,
 
         floorFieldStyle = {
-            height: `${stageHeight}px`
+            height: `${floorHeight}px`
         },
 
         // Arbitrary values for now.
@@ -45,13 +45,11 @@ const TheatreFloorField = ({
         firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
 
         seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
-            minLength: stageHeight,
+            minLength: floorHeight,
             firstLength: firstRowSeatHeight,
             multiplyFactor: 1.21, // Gets wider faster with larger value.
             overlapRatio: 0.9 // More bunched up when closer to 1.
         })
-
-        console.error('row', seatingRowCoordinates.length)
 
     return (
         <div
@@ -68,7 +66,7 @@ const TheatreFloorField = ({
 
             <svg
                 className="theatre-seating"
-                viewBox={`0 0 ${stageWidth} ${stageHeight}`}
+                viewBox={`0 0 ${windowWidth} ${floorHeight}`}
                 xmlns="http://www.w3.org/2000/svg"
             >
                 {seatingRowCoordinates.map((currentRowCoordinates, rowIndex) => {
@@ -106,8 +104,6 @@ const TheatreFloorField = ({
                         // Combine left and right side seating.
                         seatsArray = leftSeatsArray.concat(rightSeatsArray)
 
-                    console.error('seat', seatWidth, leftSeatsArray.length, rightSeatsArray.length)
-
                     return (
                         <g key={rowIndex}>
                             {seatsArray.map((seat, seatIndex) => {
@@ -121,6 +117,7 @@ const TheatreFloorField = ({
                                         top={rowTop}
                                         left={seatLeft}
                                         width={seatWidth}
+                                        height={rowHeight}
                                     />
                                 )
                             })}
