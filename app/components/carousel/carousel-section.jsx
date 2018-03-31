@@ -104,6 +104,7 @@ class CarouselSection extends Component {
             <div
                 className={classnames(
                     'carousel',
+                    'desktop-carousel-gradient-mask',
                     isHeavyRenderReady ? 'render-ready' : 'render-unready',
                     { 'override-animate': shouldOverrideAnimate }
                 )}

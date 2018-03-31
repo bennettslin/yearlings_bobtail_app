@@ -35,6 +35,16 @@
     }
 }
 
+/** This does not work in IE or Edge. Whatever. */
+@carousel-collapsed-gradient: linear-gradient(0deg, black, black 90%, transparent);
+
+.is-desktop {
+    .desktop-carousel-gradient-mask {
+        -webkit-mask-image: @lyric-collapsed-gradient;
+        mask-image: @lyric-collapsed-gradient;
+    }
+}
+
 .is-mobile {
 
     .carousel {

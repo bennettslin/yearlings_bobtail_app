@@ -146,14 +146,15 @@ class DomManager extends Component {
                 className={classnames(
                     'dom-manager',
                     deviceClassName,
-                    selectedDotKeys,
+                    isDesktop ? 'is-desktop' : 'is-mobile',
                     selectedAdminIndex ? 'is-admin-view' : 'is-live-view',
+
+                    selectedDotKeys,
                     selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
                     selectedCarouselNavIndex ? 'carousel-expanded' : 'nav-expanded',
                     selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
 
                     isLogue ? 'is-logue' : 'is-song',
-                    isDesktop ? 'is-desktop' : 'is-mobile',
 
                     isPlaying ? 'is-playing' : 'is-paused',
                     isSliderMoving ? 'slider-moving' : 'slider-not-moving',
