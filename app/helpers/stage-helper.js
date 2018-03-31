@@ -186,5 +186,5 @@ export const _getDotsOverviewOverflow = (deviceIndex) => {
             break
     }
 
-    return (toggleButtonWidth + APP_THIN_MARGIN) * 0.5
+    return (toggleButtonWidth + APP_THIN_MARGIN)
 }

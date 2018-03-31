@@ -2731,5 +2731,10 @@ module.exports = [
         taskName: `Switch theatre rafters and balconies to svgs.`,
         workedHours: 4,
         neededHours: 4
-    }
+    },
+    {
+        taskName: `Apply gradient masks to desktop carousel and collapsed lyric.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

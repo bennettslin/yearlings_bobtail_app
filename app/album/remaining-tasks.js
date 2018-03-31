@@ -12,11 +12,6 @@ module.exports = [
         neededHours: 3
     },
     {
-        taskName: `Make tasks for app UI.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Keep admin stuff in dev, not in production.`,
         workedHours: 0,
         neededHours: 3

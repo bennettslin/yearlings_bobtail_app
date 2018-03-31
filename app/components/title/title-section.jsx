@@ -5,10 +5,10 @@ import React from 'react'
 const TitleSection = () => (
     <div className="section title-section">
         <p className="title-paragraph">
-            Album written and performed by Bennett Lin.
+            Album written, performed, and recorded by Bennett Lin.
         </p>
         <p className="title-paragraph">
-            Website developed and illustrated by Bennett Lin.
+            Website illustrated, designed, and coded by Bennett Lin.
         </p>
         <p className="title-paragraph">
             For Liz. In my sorry way, I loved you.
