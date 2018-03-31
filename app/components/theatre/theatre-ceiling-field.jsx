@@ -64,18 +64,21 @@ const TheatreCeilingField = ({
                 xmlns="http://www.w3.org/2000/svg"
             >
                 {raftersRowCoordinates.map((currentCoordinates, index) => {
-                    const { length: rowHeight,
-                            position: rowBottom } = currentCoordinates,
+                    const { length: rafterHeight,
+                            position: rafterBottom } = currentCoordinates,
 
-                        rafterWidth = rowHeight / RAFTER_HEIGHT_TO_WIDTH_RATIO
+                        rafterTop = ceilingHeight - rafterHeight - rafterBottom,
+                        rafterLeft = stageCentreFromLeft - rafterWidth / 2,
+                        rafterWidth = rafterHeight /
+                            RAFTER_HEIGHT_TO_WIDTH_RATIO
 
                     return (
                         <TheatreRafter
                             key={index}
-                            top={ceilingHeight - rowHeight - rowBottom}
-                            left={stageCentreFromLeft - rafterWidth / 2}
+                            top={rafterTop}
+                            left={rafterLeft}
                             width={rafterWidth}
-                            height={rowHeight}
+                            height={rafterHeight}
                         />
                     )
                 })}

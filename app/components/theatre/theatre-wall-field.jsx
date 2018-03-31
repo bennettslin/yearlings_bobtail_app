@@ -76,29 +76,22 @@ const TheatreWallField = ({
                 xmlns="http://www.w3.org/2000/svg"
             >
                 {balconyColumnCoordinates.map((currentCoordinates, index) => {
-                    const { length: columnWidth,
-                            position } = currentCoordinates,
+                    const { length: balconyWidth,
+                            position: xPosition } = currentCoordinates,
 
-                        // direction = isRight ? 'left' : 'right',
-
-                        // balconyColumnStyle = {
-                        //     width: `${columnWidth}px`,
-                        //     [direction]: `${position}px`
-                        // },
-
-                        balconyHeight = columnWidth / BALCONY_WIDTH_TO_HEIGHT_RATIO
-
-                        // balconyStyle = {
-                        //     height: balconyHeight,
-                        //     bottom:
-                        // }
+                        balconyHeight = balconyWidth /
+                            BALCONY_WIDTH_TO_HEIGHT_RATIO,
+                        balconyTop = ceilingHeight +
+                            (wallHeight - balconyHeight) / 2,
+                        balconyLeft = isRight ?
+                            xPosition : wallWidth - balconyWidth - xPosition
 
                     return (
                         <TheatreBalcony
                             key={index}
-                            top={ceilingHeight + (wallHeight - balconyHeight) / 2}
-                            left={position}
-                            width={columnWidth}
+                            top={balconyTop}
+                            left={balconyLeft}
+                            width={balconyWidth}
                             height={balconyHeight}
                         />
                     )
