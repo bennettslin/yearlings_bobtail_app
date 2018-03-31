@@ -2729,7 +2729,7 @@ module.exports = [
     },
     {
         taskName: `Switch theatre rafters and balconies to svgs.`,
-        workedHours: 2,
-        neededHours: 2
+        workedHours: 4,
+        neededHours: 4
     }
 ]

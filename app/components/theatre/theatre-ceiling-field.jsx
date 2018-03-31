@@ -67,10 +67,11 @@ const TheatreCeilingField = ({
                     const { length: rafterHeight,
                             position: rafterBottom } = currentCoordinates,
 
-                        rafterTop = ceilingHeight - rafterHeight - rafterBottom,
-                        rafterLeft = stageCentreFromLeft - rafterWidth / 2,
                         rafterWidth = rafterHeight /
-                            RAFTER_HEIGHT_TO_WIDTH_RATIO
+                            RAFTER_HEIGHT_TO_WIDTH_RATIO,
+
+                        rafterTop = ceilingHeight - rafterHeight - rafterBottom,
+                        rafterLeft = stageCentreFromLeft - rafterWidth / 2
 
                     return (
                         <TheatreRafter
