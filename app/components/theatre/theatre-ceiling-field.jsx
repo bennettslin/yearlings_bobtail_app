@@ -4,6 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import DynamicSvg from '../dynamic-svg/dynamic-svg'
 import TheatreRafter from './theatre-rafter'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
@@ -55,13 +56,13 @@ const TheatreCeilingField = ({
             )}
             style={ceilingFieldStyle}
         >
-            <svg
+            <DynamicSvg
                 className={classnames(
                     'theatre-subfield',
                     'theatre-rafters'
                 )}
-                viewBox={`0 0 ${windowWidth} ${ceilingHeight}`}
-                xmlns="http://www.w3.org/2000/svg"
+                viewBoxWidth={windowWidth}
+                viewBoxHeight={ceilingHeight}
             >
                 {raftersRowCoordinates.map((currentCoordinates, index) => {
                     const { length: rafterHeight,
@@ -83,7 +84,7 @@ const TheatreCeilingField = ({
                         />
                     )
                 })}
-            </svg>
+            </DynamicSvg>
         </div>
     )
 }

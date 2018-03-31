@@ -2737,4 +2737,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Add dynamic svg so that negative values are not passed.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

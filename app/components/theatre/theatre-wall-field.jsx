@@ -4,6 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import DynamicSvg from '../dynamic-svg/dynamic-svg'
 import TheatreBalcony from './theatre-balcony'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
@@ -65,13 +66,13 @@ const TheatreWallField = ({
             )}
             style={balconyFieldStyle}
         >
-            <svg
+            <DynamicSvg
                 className={classnames(
                     'theatre-subfield',
                     'theatre-balconies'
                 )}
-                viewBox={`0 0 ${wallWidth} ${windowHeight}`}
-                xmlns="http://www.w3.org/2000/svg"
+                viewBoxWidth={wallWidth}
+                viewBoxHeight={windowHeight}
             >
                 {balconyColumnCoordinates.map((currentCoordinates, index) => {
                     const { length: balconyWidth,
@@ -94,7 +95,7 @@ const TheatreWallField = ({
                         />
                     )
                 })}
-            </svg>
+            </DynamicSvg>
         </div>
     )
 }

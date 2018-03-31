@@ -4,6 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import DynamicSvg from '../dynamic-svg/dynamic-svg'
 import TheatreSeat from './theatre-seat'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
@@ -65,13 +66,13 @@ const TheatreFloorField = ({
                 style={pitStyle}
             />
 
-            <svg
+            <DynamicSvg
                 className={classnames(
                     'theatre-subfield',
                     'theatre-seating'
                 )}
-                viewBox={`0 0 ${windowWidth} ${floorHeight}`}
-                xmlns="http://www.w3.org/2000/svg"
+                viewBoxWidth={windowWidth}
+                viewBoxHeight={floorHeight}
             >
                 {seatingRowCoordinates.map((currentRowCoordinates, rowIndex) => {
                     const { length: rowHeight,
@@ -128,7 +129,7 @@ const TheatreFloorField = ({
                         </g>
                     )
                 })}
-            </svg>
+            </DynamicSvg>
         </div>
     )
 }
