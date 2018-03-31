@@ -4,11 +4,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import TheatreRafter from './theatre-rafter'
+
 import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
 
 const propTypes = {
+    windowWidth: PropTypes.number.isRequired,
     ceilingFieldCoordinates: PropTypes.shape({
-        height: PropTypes.number.isRequired,
+        ceilingHeight: PropTypes.number.isRequired,
         stageWidth: PropTypes.number.isRequired,
         stageCentreFromLeft: PropTypes.number.isRequired
     })
@@ -16,16 +19,18 @@ const propTypes = {
 
 const TheatreCeilingField = ({
 
+    windowWidth,
     ceilingFieldCoordinates
 
 }) => {
 
-    const { height,
+    const { ceilingHeight,
             stageWidth,
+
             stageCentreFromLeft } = ceilingFieldCoordinates,
 
         ceilingFieldStyle = {
-            height: `${height}px`
+            height: `${ceilingHeight}px`
         },
 
         // Arbitrary values for now.
@@ -33,8 +38,8 @@ const TheatreCeilingField = ({
         rafterHeightToWidthRatio = 0.02, // How tall is the rafter.
         firstRowRafterHeight = firstRowRafterWidth * rafterHeightToWidthRatio,
 
-        ceilingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
-            minLength: height,
+        raftersRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
+            minLength: ceilingHeight,
             firstLength: firstRowRafterHeight,
             multiplyFactor: 1.2, // Gets wider faster with larger value.
             overlapRatio: 0.3 // Less bunched up when closer to 0.
@@ -48,39 +53,40 @@ const TheatreCeilingField = ({
             )}
             style={ceilingFieldStyle}
         >
-            {ceilingRowCoordinates.map((currentCoordinates, index) => {
-                const { length: rowHeight,
-                        position: rowBottom } = currentCoordinates,
+            <svg
+                className="theatre-rafters"
+                viewBox={`0 0 ${windowWidth} ${ceilingHeight}`}
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g>
+                    {raftersRowCoordinates.map((currentCoordinates, index) => {
+                        const { length: rowHeight,
+                                position: rowBottom } = currentCoordinates,
 
-                    ceilingRowStyle = {
-                        height: `${rowHeight}px`,
-                        bottom: `${rowBottom}px`
-                    },
+                            // ceilingRowStyle = {
+                            //     height: `${rowHeight}px`,
+                            //     bottom: `${rowBottom}px`
+                            // },
 
-                    rafterWidth = rowHeight / rafterHeightToWidthRatio,
+                            rafterWidth = rowHeight / rafterHeightToWidthRatio
 
-                    rafterStyle = {
-                        width: rafterWidth,
-                        left: stageCentreFromLeft - rafterWidth / 2
-                    }
+                            // rafterStyle = {
+                            //     width: rafterWidth,
+                            //     left: stageCentreFromLeft - rafterWidth / 2
+                            // }
 
-                return (
-                    <div
-                        key={index}
-                        className={classnames(
-                            'theatre-repeated',
-                            'theatre-row',
-                            'theatre-ceiling-row'
-                        )}
-                        style={ceilingRowStyle}
-                    >
-                        <div
-                            className="rafter"
-                            style={rafterStyle}
-                        />
-                    </div>
-                )
-            })}
+                        return (
+                            <TheatreRafter
+                                key={index}
+                                top={ceilingHeight - rowHeight - rowBottom}
+                                left={stageCentreFromLeft - rafterWidth / 2}
+                                width={rafterWidth}
+                                height={rowHeight}
+                            />
+                        )
+                    })}
+                </g>
+            </svg>
         </div>
     )
 }

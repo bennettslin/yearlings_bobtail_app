@@ -212,7 +212,7 @@ LyricColumnView = ({
             ref={myRef}
             onTransitionEnd={handleTransition}
         >
-            <div className="lyric-column-gradient" />
+            {/* <div className="lyric-column-gradient" /> */}
             <div className={classnames(
                     'lyric-column-animatable',
                     { 'override-animate': shouldOverrideAnimate }

@@ -11,10 +11,10 @@ import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-h
 import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../../constants/stage'
 
 const propTypes = {
+    windowWidth: PropTypes.number.isRequired,
     floorFieldCoordinates: PropTypes.shape({
-        height: PropTypes.number.isRequired,
+        floorHeight: PropTypes.number.isRequired,
         stageWidth: PropTypes.number.isRequired,
-        windowWidth: PropTypes.number.isRequired,
         stageCentreFromLeft: PropTypes.number.isRequired
     }),
     pitStyle: PropTypes.shape({
@@ -26,14 +26,14 @@ const propTypes = {
 
 const TheatreFloorField = ({
 
+    windowWidth,
     floorFieldCoordinates,
     pitStyle
 
 }) => {
 
-    const { height: floorHeight,
+    const { floorHeight,
             stageWidth,
-            windowWidth,
             stageCentreFromLeft } = floorFieldCoordinates,
 
         floorFieldStyle = {

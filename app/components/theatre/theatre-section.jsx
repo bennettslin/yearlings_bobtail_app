@@ -81,7 +81,7 @@ class TheatreSection extends Component {
             theatreBalconyHeight = windowHeight - theatreCeilingHeight - theatreFloorHeight,
 
             ceilingFieldCoordinates = {
-                height: theatreCeilingHeight,
+                ceilingHeight: theatreCeilingHeight,
                 stageWidth,
                 stageCentreFromLeft
             },
@@ -95,9 +95,8 @@ class TheatreSection extends Component {
             },
 
             floorFieldCoordinates = {
-                height: theatreFloorHeight,
+                floorHeight: theatreFloorHeight,
                 stageWidth,
-                windowWidth,
                 stageCentreFromLeft
             },
 
@@ -115,6 +114,7 @@ class TheatreSection extends Component {
         return (
             <div className="section theatre-section">
                 <TheatreCeilingField
+                    windowWidth={windowWidth}
                     ceilingFieldCoordinates={ceilingFieldCoordinates}
                 />
                 <TheatreBalconyField
