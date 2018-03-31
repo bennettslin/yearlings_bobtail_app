@@ -87,7 +87,7 @@ class TheatreSection extends Component {
             },
 
             wallFieldCoordinates = {
-                top: theatreCeilingHeight,
+                ceilingHeight: theatreCeilingHeight,
                 wallHeight: theatreWallHeight,
                 stageHeight,
                 leftWidth: stageLeft,
@@ -118,10 +118,12 @@ class TheatreSection extends Component {
                     ceilingFieldCoordinates={ceilingFieldCoordinates}
                 />
                 <TheatreWallField
+                    windowHeight={windowHeight}
                     wallFieldCoordinates={wallFieldCoordinates}
                 />
                 <TheatreWallField
                     isRight
+                    windowHeight={windowHeight}
                     wallFieldCoordinates={wallFieldCoordinates}
                 />
                 <TheatreFloorField

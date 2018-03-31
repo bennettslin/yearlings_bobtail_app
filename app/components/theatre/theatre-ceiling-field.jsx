@@ -50,12 +50,16 @@ const TheatreCeilingField = ({
         <div
             className={classnames(
                 'field',
+                'theatre-field',
                 'theatre-ceiling-field'
             )}
             style={ceilingFieldStyle}
         >
             <svg
-                className="theatre-rafters"
+                className={classnames(
+                    'theatre-subfield',
+                    'theatre-rafters'
+                )}
                 viewBox={`0 0 ${windowWidth} ${ceilingHeight}`}
                 xmlns="http://www.w3.org/2000/svg"
             >

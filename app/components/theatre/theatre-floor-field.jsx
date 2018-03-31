@@ -55,6 +55,7 @@ const TheatreFloorField = ({
         <div
             className={classnames(
                 'field',
+                'theatre-field',
                 'theatre-floor-field'
             )}
             style={floorFieldStyle}
@@ -65,7 +66,10 @@ const TheatreFloorField = ({
             />
 
             <svg
-                className="theatre-seating"
+                className={classnames(
+                    'theatre-subfield',
+                    'theatre-seating'
+                )}
                 viewBox={`0 0 ${windowWidth} ${floorHeight}`}
                 xmlns="http://www.w3.org/2000/svg"
             >

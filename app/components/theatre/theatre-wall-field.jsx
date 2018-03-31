@@ -12,8 +12,9 @@ import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../../constants/stage'
 
 const propTypes = {
     isRight: PropTypes.bool,
+    windowHeight: PropTypes.number.isRequired,
     wallFieldCoordinates: PropTypes.shape({
-        top: PropTypes.number.isRequired,
+        ceilingHeight: PropTypes.number.isRequired,
         wallHeight: PropTypes.number.isRequired,
         stageHeight: PropTypes.number.isRequired,
         leftWidth: PropTypes.number.isRequired,
@@ -24,11 +25,12 @@ const propTypes = {
 const TheatreWallField = ({
 
     isRight,
+    windowHeight,
     wallFieldCoordinates
 
 }) => {
 
-    const { top,
+    const { ceilingHeight,
             wallHeight,
             stageHeight,
             leftWidth,
@@ -37,7 +39,6 @@ const TheatreWallField = ({
         wallWidth = isRight ? rightWidth : leftWidth,
 
         balconyFieldStyle = {
-            top: `${top}px`,
             width: `${wallWidth}px`,
             height: `${wallHeight}px`
         },
@@ -54,18 +55,24 @@ const TheatreWallField = ({
             overlapRatio: 0.2 // Less bunched up when closer to 0.
         })
 
+    console.error('windowHeight', windowHeight, top);
+
     return (
         <div
             className={classnames(
                 'field',
-                'theatre-balcony-field',
+                'theatre-field',
+                'theatre-wall-field',
                 isRight ? 'right' : 'left'
             )}
             style={balconyFieldStyle}
         >
             <svg
-                className="theatre-balconies"
-                viewBox={`0 0 ${wallWidth} ${stageHeight}`}
+                className={classnames(
+                    'theatre-subfield',
+                    'theatre-balconies'
+                )}
+                viewBox={`0 0 ${wallWidth} ${windowHeight}`}
                 xmlns="http://www.w3.org/2000/svg"
             >
                 {balconyColumnCoordinates.map((currentCoordinates, index) => {
@@ -89,7 +96,7 @@ const TheatreWallField = ({
                     return (
                         <TheatreBalcony
                             key={index}
-                            top={(wallHeight - balconyHeight) / 2}
+                            top={ceilingHeight + (wallHeight - balconyHeight) / 2}
                             left={position}
                             width={columnWidth}
                             height={balconyHeight}

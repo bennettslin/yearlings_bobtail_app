@@ -3,51 +3,17 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(200, 250, 250, 0.2);
-
-    &, .field, .theatre-pit {
-        position: absolute;
-        box-sizing: border-box;
-    }
-
-    .field {
-        left: 0;
-    }
 }
 
-.theatre-balcony-field {  
-
-    &.left {
-        background-color: rgba(150, 250, 150, 0.5); 
-        border: 2px solid green;  
-
-        .theatre-balcony-column {
-            border: 1px solid #484;
-        }
-    }
-
-    &.right {
-        left: auto;
-        right: 0;
-
-        background-color: rgba(250, 250, 150, 0.2); 
-        border: 2px solid orange;
-
-        .theatre-balcony-column {
-            border: 1px solid #884;
-        }
-    }
+.theatre-section, .theatre-field, .theatre-pit {
+    position: absolute;
+    box-sizing: border-box;
 }
 
-// .theatre-repeated {
-//     position: absolute;
+.theatre-field {
+    left: 0;
+}
 
-//     &.theatre-row {
-//         width: 100%;
-//     }
-
-//     &.theatre-column {
-//         height: 100%;
-//     }
-// }
-
+.theatre-subfield {
+    position: relative;
+}
