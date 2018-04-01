@@ -226,7 +226,7 @@ const _getXPercentage = (
         xCornerIndex * tilesWidthPercentage /
         tileColumnsLength
 
-    return roundPercentage(rawXPercentage)
+    return roundPercentage(100 - rawXPercentage)
 }
 
 const _getYPercentage = (
@@ -245,5 +245,5 @@ const _getYPercentage = (
             tileYPercentage + zIndex / 10 *
             (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
 
-    return roundPercentage(rawYPercentage)
+    return roundPercentage(100 - rawYPercentage)
 }
