@@ -39,9 +39,8 @@ const TheatreWallField = ({
 
         wallWidth = isRight ? rightWidth : leftWidth,
 
-        balconyFieldStyle = {
-            width: `${wallWidth}px`,
-            height: `${wallHeight}px`
+        wallFieldStyle = {
+            width: `${wallWidth}px`
         },
 
         // Arbitrary values for now.
@@ -64,7 +63,7 @@ const TheatreWallField = ({
                 'theatre-wall-field',
                 isRight ? 'right' : 'left'
             )}
-            style={balconyFieldStyle}
+            style={wallFieldStyle}
         >
             <DynamicSvg
                 className={classnames(

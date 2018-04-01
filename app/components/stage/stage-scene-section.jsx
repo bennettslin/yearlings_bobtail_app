@@ -71,6 +71,8 @@ class StageSceneSection extends Component {
                     slantDirection={slantDirection}
                     zIndices={ceilingZIndices}
                     colours={ceilingColours}
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
                 />
 
                 {/* Floor tiles. */}
@@ -79,6 +81,8 @@ class StageSceneSection extends Component {
                     slantDirection={slantDirection}
                     zIndices={floorZIndices}
                     colours={floorColours}
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
                 />
 
                 <StageActionField

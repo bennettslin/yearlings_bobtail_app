@@ -2,7 +2,6 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
 import { getTileCornersForXYAndZ } from '../../helpers/tiles-helper'
 
 class StageTile extends Component {
@@ -11,60 +10,51 @@ class StageTile extends Component {
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
         zIndex: PropTypes.number.isRequired,
+        isFloor: PropTypes.bool.isRequired,
+        isLeft: PropTypes.bool.isRequired,
         slantDirection: PropTypes.string.isRequired,
-        colour: PropTypes.string.isRequired
+        colour: PropTypes.string.isRequired,
+        stageWidth: PropTypes.number.isRequired,
+        stageHeight: PropTypes.number.isRequired
     }
-
-    shouldComponentUpdate(nextProps) {
-
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'xIndex',
-                    'yIndex',
-                    'zIndex',
-                    'slantDirection',
-                    'colour'
-                ]
-            })
-
-        return componentShouldUpdate
-    }
-
     render() {
+        /* eslint-disable no-unused-vars */
         const { colour,
+                isLeft,
+                isFloor,
                 slantDirection,
                 xIndex,
                 yIndex,
-                zIndex } = this.props,
+                zIndex,
+                stageWidth,
+                stageHeight
+            } = this.props,
 
             corners = getTileCornersForXYAndZ(
                 xIndex, yIndex, zIndex, slantDirection
             )
 
         return (
-            <div
-                className="stage-tile"
-            >
+            <g className="stage-tile">
                 {corners.map((corner, cornerIndex) => {
                     const { xPercentage,
-                            yPercentage } = corner
+                            yPercentage } = corner,
+
+                        xCoord = xPercentage * stageWidth * 0.01,
+                        yCoord = yPercentage * stageHeight * 0.01
 
                     return (
-                        <div
+                        <rect
                             key={cornerIndex}
-                            className="test-tile-corner-pixel"
-                            style={{
-                                left: xPercentage + '%',
-                                bottom: yPercentage + '%',
-                                backgroundColor: colour
-                            }}
+                            x={xCoord}
+                            y={yCoord}
+                            width={1}
+                            height={1}
+                            fill={colour}
                         />
                     )
                 })}
-            </div>
+            </g>
         )
 
     }
