@@ -275,3 +275,31 @@ export const get2DFractionsForWoodIndices = (
         xIndex, yIndex, zIndex, slantDirection
     )
 }
+
+export const getPolygonPointsForFrontCubeFace = ({
+    tileFractions,
+    woodFractions,
+    stageWidth,
+    stageHeight
+}) => {
+    console.error(tileFractions, woodFractions, stageWidth, stageHeight)
+}
+
+export const getPolygonPointsForTopCubeFace = ({
+    tileFractions,
+    woodFractions,
+    stageWidth,
+    stageHeight
+}) => {
+    console.error(tileFractions, woodFractions, stageWidth, stageHeight)
+
+}
+
+export const getPolygonPointsForSideCubeFace = ({
+    tileFractions,
+    woodFractions,
+    stageWidth,
+    stageHeight
+}) => {
+    console.error(tileFractions, woodFractions, stageWidth, stageHeight)
+}

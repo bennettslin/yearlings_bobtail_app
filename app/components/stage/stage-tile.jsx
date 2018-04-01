@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+
 import { get2DFractionsForIndices,
          get2DFractionsForWoodIndices } from '../../helpers/tiles-helper'
 
@@ -41,6 +42,7 @@ class StageTile extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.slantDirection !== this.props.slantDirection) {
+
             const { xIndex,
                     yIndex,
                     isFloor,
