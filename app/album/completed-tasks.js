@@ -2742,4 +2742,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Refactoring work of stage tiles and wood.`,
+        workedHours: 4,
+        neededHours: 4
+    },
 ]
