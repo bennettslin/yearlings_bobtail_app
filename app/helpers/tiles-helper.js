@@ -10,163 +10,208 @@ import {
     roundPercentage
 } from './general-helper'
 
-const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
-    SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
+// const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
+//     SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
 
 /*********
  * TILES *
  *********/
 
-export const getTileCornersForXYAndZ = (
-    xIndex,
-    yIndex,
-    zIndex = 0,
-    slantDirection
+// export const getTileCornersForXYAndZ = (
+//     xIndex,
+//     yIndex,
+//     zIndex = 0,
+//     slantDirection
+// ) => {
+//     if (slantDirection === 'left') {
+//         return _getSlantedLeftCoordinates(
+//             xIndex, yIndex, zIndex
+//         )
+//     } else if (slantDirection === 'right') {
+//         return _getSlantedRightCoordinates(
+//             xIndex, yIndex, zIndex
+//         )
+//     } else {
+//         return _getDefaultCoordinates(
+//             xIndex, yIndex, zIndex
+//         )
+//     }
+// }
+
+// const _getDefaultCoordinates = (
+//     xIndex, yIndex, zIndex
+// ) => {
+//     /**
+//      * Like CSS corners, order is:
+//      * top left, top right, bottom right, bottom left.
+//      */
+//     return [
+//         _getTileXYPercentage(
+//             xIndex, yIndex + 1, zIndex
+//         ),
+//         _getTileXYPercentage(
+//             xIndex + 1, yIndex + 1, zIndex
+//         ),
+//         _getTileXYPercentage(
+//             xIndex + 1, yIndex, zIndex
+//         ),
+//         _getTileXYPercentage(
+//             xIndex, yIndex, zIndex
+//         )
+//     ]
+// }
+
+// const _getSlantedLeftCoordinates = (
+//     xIndex, yIndex, zIndex
+// ) => {
+
+//     let xModulo,
+//         yModulo
+
+//     // If yIndex is 1, 2, or 3...
+//     if (yIndex >= 1 && yIndex <= 3) {
+//         // xModulo for even xIndex is 3 above that for previous odd xIndex.
+//         xModulo = xIndex % 2 ? -0.5 : 0
+
+//         // yModulo for even xIndex is 1 below that for previous odd xIndex.
+//         yModulo = xIndex % 2 ? 1 : 0
+
+//         // If yIndex is 0, 4, or 5...
+//     } else {
+//         // xModulo for even xIndex is 2 above that for previous odd xIndex.
+//         xModulo = xIndex % 2 ? 0.5 : 0
+
+//         // yModulo for even xIndex is 1 above that for previous odd xIndex.
+//         yModulo = xIndex % 2 ? 0 : 1
+//     }
+
+//     const
+//         xConstant = SLANTED_LEFT_X_CONSTANTS[yIndex],
+//         yConstant = yIndex * 2,
+
+//         // These are the coordinates for the top left corner.
+//         slantedLeftXIndex = xConstant + xIndex * 2.5 + xModulo,
+//         slantedLeftYIndex = yConstant + yModulo
+
+//     /**
+//      * When slanted, order is:
+//      * top, right, bottom, left.
+//      */
+//     return [
+//         _getTileXYPercentage(
+//             slantedLeftXIndex + 1, slantedLeftYIndex, zIndex, true
+//         ),
+//         _getTileXYPercentage(
+//             slantedLeftXIndex + 3, slantedLeftYIndex + 1, zIndex, true
+//         ),
+//         _getTileXYPercentage(
+//             slantedLeftXIndex + 2, slantedLeftYIndex + 3, zIndex, true
+//         ),
+//         _getTileXYPercentage(
+//             slantedLeftXIndex, slantedLeftYIndex + 2, zIndex, true
+//         )
+//     ]
+// }
+
+// const _getSlantedRightCoordinates = (
+//     xIndex, yIndex, zIndex
+// ) => {
+
+//     let xModulo,
+//         yModulo
+
+//     // If yIndex is 2, 3, or 4...
+//     if (yIndex >= 2 && yIndex <= 4) {
+//         // xModulo for even xIndex is 3 above that for previous odd xIndex.
+//         xModulo = xIndex % 2 ? -0.5 : 0
+
+//         // yModulo for even xIndex is 1 above that for previous odd xIndex.
+//         yModulo = xIndex % 2 ? 0 : 1
+
+//         // If yIndex is 0, 1, or 5...
+//     } else {
+//         // xModulo for even xIndex is 2 above that for previous odd xIndex.
+//         xModulo = xIndex % 2 ? 0.5 : 0
+
+//         // yModulo for even xIndex is 1 below that for previous odd xIndex.
+//         yModulo = xIndex % 2 ? 1 : 0
+//     }
+
+//     const
+//         xConstant = SLANTED_RIGHT_X_CONSTANTS[yIndex],
+//         yConstant = yIndex * 2,
+
+//         // These are the coordinates for the top left corner.
+//         slantedRightXIndex = xConstant + xIndex * 2.5 + xModulo,
+//         slantedRightYIndex = yConstant + yModulo
+
+//     /**
+//      * When slanted, order is:
+//      * top, right, bottom, left.
+//      */
+//     return [
+//         _getTileXYPercentage(
+//             slantedRightXIndex + 2, slantedRightYIndex, zIndex, true
+//         ),
+//         _getTileXYPercentage(
+//             slantedRightXIndex + 3, slantedRightYIndex + 2, zIndex, true
+//         ),
+//         _getTileXYPercentage(
+//             slantedRightXIndex + 1, slantedRightYIndex + 3, zIndex, true
+//         ),
+//         _getTileXYPercentage(
+//             slantedRightXIndex, slantedRightYIndex + 1, zIndex, true
+//         )
+//     ]
+// }
+
+const _getXFraction = (
+    xCornerIndex,
+    yCornerIndex,
+    isSlanted
 ) => {
-    if (slantDirection === 'left') {
-        return _getSlantedLeftCoordinates(
-            xIndex, yIndex, zIndex
-        )
-    } else if (slantDirection === 'right') {
-        return _getSlantedRightCoordinates(
-            xIndex, yIndex, zIndex
-        )
-    } else {
-        return _getDefaultCoordinates(
-            xIndex, yIndex, zIndex
-        )
-    }
-}
-
-const _getDefaultCoordinates = (
-    xIndex, yIndex, zIndex
-) => {
-    /**
-     * Like CSS corners, order is:
-     * top left, top right, bottom right, bottom left.
-     */
-    return [
-        _getTileXYPercentage(
-            xIndex, yIndex + 1, zIndex
-        ),
-        _getTileXYPercentage(
-            xIndex + 1, yIndex + 1, zIndex
-        ),
-        _getTileXYPercentage(
-            xIndex + 1, yIndex, zIndex
-        ),
-        _getTileXYPercentage(
-            xIndex, yIndex, zIndex
-        )
-    ]
-}
-
-const _getSlantedLeftCoordinates = (
-    xIndex, yIndex, zIndex
-) => {
-
-    let xModulo,
-        yModulo
-
-    // If yIndex is 1, 2, or 3...
-    if (yIndex >= 1 && yIndex <= 3) {
-        // xModulo for even xIndex is 3 above that for previous odd xIndex.
-        xModulo = xIndex % 2 ? -0.5 : 0
-
-        // yModulo for even xIndex is 1 below that for previous odd xIndex.
-        yModulo = xIndex % 2 ? 1 : 0
-
-        // If yIndex is 0, 4, or 5...
-    } else {
-        // xModulo for even xIndex is 2 above that for previous odd xIndex.
-        xModulo = xIndex % 2 ? 0.5 : 0
-
-        // yModulo for even xIndex is 1 above that for previous odd xIndex.
-        yModulo = xIndex % 2 ? 0 : 1
-    }
-
     const
-        xConstant = SLANTED_LEFT_X_CONSTANTS[yIndex],
-        yConstant = yIndex * 2,
+        // Use columns length value based on default or slanted arrangement.
+        tileColumnsLength = isSlanted ?
+            SLANTED_TILE_COLUMNS_LENGTH : TILE_COLUMNS_LENGTH,
 
-        // These are the coordinates for the top left corner.
-        slantedLeftXIndex = xConstant + xIndex * 2.5 + xModulo,
-        slantedLeftYIndex = yConstant + yModulo
+        // Get x-coordinate percentage at zIndex 0.
+        baseYPercentage = _getYFraction(
+            yCornerIndex, 0, isSlanted
+        ),
+        tilesWidthPercentage =
+        100 / VANISHING_POINT_Y_PERCENTAGE *
+        (VANISHING_POINT_Y_PERCENTAGE - baseYPercentage),
 
-    /**
-     * When slanted, order is:
-     * top, right, bottom, left.
-     */
-    return [
-        _getTileXYPercentage(
-            slantedLeftXIndex + 1, slantedLeftYIndex, zIndex, true
-        ),
-        _getTileXYPercentage(
-            slantedLeftXIndex + 3, slantedLeftYIndex + 1, zIndex, true
-        ),
-        _getTileXYPercentage(
-            slantedLeftXIndex + 2, slantedLeftYIndex + 3, zIndex, true
-        ),
-        _getTileXYPercentage(
-            slantedLeftXIndex, slantedLeftYIndex + 2, zIndex, true
-        )
-    ]
+        rawXPercentage = (100 - tilesWidthPercentage) / 2 +
+        xCornerIndex * tilesWidthPercentage /
+        tileColumnsLength
+
+    // FIXME: Optimise for fraction.
+    return roundPercentage(rawXPercentage) / 100
 }
 
-
-const _getSlantedRightCoordinates = (
-    xIndex, yIndex, zIndex
+const _getYFraction = (
+    yCornerIndex,
+    zIndex,
+    isSlanted
 ) => {
-
-    let xModulo,
-        yModulo
-
-    // If yIndex is 2, 3, or 4...
-    if (yIndex >= 2 && yIndex <= 4) {
-        // xModulo for even xIndex is 3 above that for previous odd xIndex.
-        xModulo = xIndex % 2 ? -0.5 : 0
-
-        // yModulo for even xIndex is 1 above that for previous odd xIndex.
-        yModulo = xIndex % 2 ? 0 : 1
-
-        // If yIndex is 0, 1, or 5...
-    } else {
-        // xModulo for even xIndex is 2 above that for previous odd xIndex.
-        xModulo = xIndex % 2 ? 0.5 : 0
-
-        // yModulo for even xIndex is 1 below that for previous odd xIndex.
-        yModulo = xIndex % 2 ? 1 : 0
-    }
-
     const
-        xConstant = SLANTED_RIGHT_X_CONSTANTS[yIndex],
-        yConstant = yIndex * 2,
+        // Use array based on default or slanted arrangement.
+        tileYPercentages = isSlanted ?
+            SLANTED_TILE_Y_PERCENTAGES : TILE_Y_PERCENTAGES,
 
-        // These are the coordinates for the top left corner.
-        slantedRightXIndex = xConstant + xIndex * 2.5 + xModulo,
-        slantedRightYIndex = yConstant + yModulo
+        tileYPercentage = tileYPercentages[yCornerIndex],
 
-    /**
-     * When slanted, order is:
-     * top, right, bottom, left.
-     */
-    return [
-        _getTileXYPercentage(
-            slantedRightXIndex + 2, slantedRightYIndex, zIndex, true
-        ),
-        _getTileXYPercentage(
-            slantedRightXIndex + 3, slantedRightYIndex + 2, zIndex, true
-        ),
-        _getTileXYPercentage(
-            slantedRightXIndex + 1, slantedRightYIndex + 3, zIndex, true
-        ),
-        _getTileXYPercentage(
-            slantedRightXIndex, slantedRightYIndex + 1, zIndex, true
-        )
-    ]
+        rawYPercentage =
+            tileYPercentage + zIndex / 10 *
+            (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
+
+    // FIXME: Optimise for fraction.
+    return roundPercentage(100 - rawYPercentage) / 100
 }
 
-const _getTileXYPercentage = (
+const _getXYFractions = (
 
     /**
      * When default, this is an interval from 0 to 12. There are twelve floor
@@ -191,12 +236,12 @@ const _getTileXYPercentage = (
 ) => {
 
     return {
-        xPercentage: _getXPercentage(
+        x: _getXFraction(
             xCornerIndex,
             yCornerIndex,
             isSlanted
         ),
-        yPercentage: _getYPercentage(
+        y: _getYFraction(
             yCornerIndex,
             zIndex,
             isSlanted
@@ -204,102 +249,72 @@ const _getTileXYPercentage = (
     }
 }
 
-const _getXPercentage = (
-    xCornerIndex,
-    yCornerIndex,
-    isSlanted
-) => {
-    const
-        // Use columns length value based on default or slanted arrangement.
-        tileColumnsLength = isSlanted ?
-            SLANTED_TILE_COLUMNS_LENGTH : TILE_COLUMNS_LENGTH,
+export const getStageCubeCornerFractions = ({
 
-        // Get x-coordinate percentage at zIndex 0.
-        baseYPercentage = _getYPercentage(
-            yCornerIndex, 0, isSlanted
-        ),
-        tilesWidthPercentage =
-        100 / VANISHING_POINT_Y_PERCENTAGE *
-        (VANISHING_POINT_Y_PERCENTAGE - baseYPercentage),
-
-        rawXPercentage = (100 - tilesWidthPercentage) / 2 +
-        xCornerIndex * tilesWidthPercentage /
-        tileColumnsLength
-
-    return roundPercentage(100 - rawXPercentage)
-}
-
-const _getYPercentage = (
-    yCornerIndex,
+    xIndex,
+    yIndex,
     zIndex,
-    isSlanted
-) => {
-    const
-        // Use array based on default or slanted arrangement.
-        tileYPercentages = isSlanted ?
-            SLANTED_TILE_Y_PERCENTAGES : TILE_Y_PERCENTAGES,
+    isFloor
 
-        tileYPercentage = tileYPercentages[yCornerIndex],
+}) => {
 
-        rawYPercentage =
-            tileYPercentage + zIndex / 10 *
-            (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
-
-    return roundPercentage(100 - rawYPercentage)
-}
-
-export const get2DFractionsForIndices = (
-    xIndex, yIndex, zIndex, slantDirection
-) => {
-    console.error(xIndex, yIndex, zIndex, slantDirection)
+    const woodZIndex = isFloor ? 0 : 20
 
     return {
-        x0: 0.5,
-        y0: 0.5,
-        x1: 0.6,
-        y1: 0.6
+        tile: {
+            left: {
+                front: _getXYFractions(xIndex, yIndex + 1, zIndex),
+                back: _getXYFractions(xIndex, yIndex, zIndex)
+            },
+            right: {
+                front: _getXYFractions(xIndex + 1, yIndex + 1, zIndex),
+                back: _getXYFractions(xIndex + 1, yIndex, zIndex)
+            }
+        },
+        wood: {
+            left: {
+                front: _getXYFractions(xIndex, yIndex + 1, woodZIndex),
+                back: _getXYFractions(xIndex, yIndex, woodZIndex)
+            },
+            right: {
+                front: _getXYFractions(xIndex + 1, yIndex + 1, woodZIndex),
+                back: _getXYFractions(xIndex + 1, yIndex, woodZIndex)
+            }
+        }
     }
 }
 
-export const get2DFractionsForWoodIndices = (
-    xIndex, yIndex, isFloor, slantDirection
-) => {
+const _getPolygonPoint = (coordinates, stageWidth, stageHeight) => {
+    const xPoint = coordinates.x * stageWidth,
+        yPoint = coordinates.y * stageHeight
 
-    /**
-     * For floor, wood index is the lowest possible. For ceiling, it is the
-     * highest possible.
-     */
-    const zIndex = isFloor ? 0 : 20
+    return `${xPoint},${yPoint}`
+}
 
-    return get2DFractionsForIndices(
-        xIndex, yIndex, zIndex, slantDirection
+export const getPolygonPointsForTileCube = ({
+    cubeCorners,
+    stageWidth,
+    stageHeight
+}) => {
+    const { tile } = cubeCorners
+
+    return (
+        `${_getPolygonPoint(tile.left.back, stageWidth, stageHeight)} ${_getPolygonPoint(tile.right.back, stageWidth, stageHeight)} ${_getPolygonPoint(tile.right.front, stageWidth, stageHeight)} ${_getPolygonPoint(tile.left.front, stageWidth, stageHeight)}`
     )
 }
 
-export const getPolygonPointsForFrontCubeFace = ({
-    tileFractions,
-    woodFractions,
+export const getPolygonPointsForTopCube = ({
+    cubeCorners,
     stageWidth,
     stageHeight
 }) => {
-    console.error(tileFractions, woodFractions, stageWidth, stageHeight)
+    console.error(cubeCorners, stageWidth, stageHeight)
 }
 
-export const getPolygonPointsForTopCubeFace = ({
-    tileFractions,
-    woodFractions,
+export const getPolygonPointsForSideCube = ({
+    cubeCorners,
     stageWidth,
     stageHeight
 }) => {
-    console.error(tileFractions, woodFractions, stageWidth, stageHeight)
-
-}
-
-export const getPolygonPointsForSideCubeFace = ({
-    tileFractions,
-    woodFractions,
-    stageWidth,
-    stageHeight
-}) => {
-    console.error(tileFractions, woodFractions, stageWidth, stageHeight)
+    console.error(cubeCorners, stageWidth, stageHeight)
 }
