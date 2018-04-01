@@ -2,7 +2,10 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { getTileCornersForXYAndZ } from '../../helpers/tiles-helper'
+import { get2DFractionsForIndices,
+         get2DFractionsForWoodIndices } from '../../helpers/tiles-helper'
+
+import StageTileCubeFace from './stage-tile-cube-face'
 
 class StageTile extends Component {
 
@@ -11,16 +14,48 @@ class StageTile extends Component {
         yIndex: PropTypes.number.isRequired,
         zIndex: PropTypes.number.isRequired,
         isFloor: PropTypes.bool.isRequired,
-        isLeft: PropTypes.bool.isRequired,
         slantDirection: PropTypes.string.isRequired,
         colour: PropTypes.string.isRequired,
         stageWidth: PropTypes.number.isRequired,
         stageHeight: PropTypes.number.isRequired
     }
+
+    constructor(props) {
+        super(props)
+
+        const { xIndex,
+                yIndex,
+                isFloor,
+                slantDirection } = props
+
+        /**
+         * Set the wood fractions in state here, because they will only change
+         * when slant direction is changed.
+         */
+        this.state = {
+            woodFractions: get2DFractionsForWoodIndices(
+                xIndex, yIndex, isFloor, slantDirection
+            )
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.slantDirection !== this.props.slantDirection) {
+            const { xIndex,
+                    yIndex,
+                    isFloor,
+                    slantDirection } = nextProps
+
+            this.setState({
+                woodFractions: get2DFractionsForWoodIndices(
+                    xIndex, yIndex, isFloor, slantDirection
+                )
+            })
+        }
+    }
+
     render() {
-        /* eslint-disable no-unused-vars */
         const { colour,
-                isLeft,
                 isFloor,
                 slantDirection,
                 xIndex,
@@ -30,30 +65,46 @@ class StageTile extends Component {
                 stageHeight
             } = this.props,
 
-            corners = getTileCornersForXYAndZ(
+            // Get the tile fractions.
+            tileFractions = get2DFractionsForIndices(
                 xIndex, yIndex, zIndex, slantDirection
-            )
+            ),
+
+            { woodFractions } = this.state
 
         return (
             <g className="stage-tile">
-                {corners.map((corner, cornerIndex) => {
-                    const { xPercentage,
-                            yPercentage } = corner,
 
-                        xCoord = xPercentage * stageWidth * 0.01,
-                        yCoord = yPercentage * stageHeight * 0.01
-
-                    return (
-                        <rect
-                            key={cornerIndex}
-                            x={xCoord}
-                            y={yCoord}
-                            width={1}
-                            height={1}
-                            fill={colour}
-                        />
-                    )
-                })}
+                <StageTileCubeFace
+                    className="front"
+                    colour={colour}
+                    isFloor={isFloor}
+                    slantDirection={slantDirection}
+                    woodFractions={woodFractions}
+                    tileFractions={tileFractions}
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
+                />
+                <StageTileCubeFace
+                    className="top"
+                    colour={colour}
+                    isFloor={isFloor}
+                    slantDirection={slantDirection}
+                    woodFractions={woodFractions}
+                    tileFractions={tileFractions}
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
+                />
+                <StageTileCubeFace
+                    className="side"
+                    colour={colour}
+                    isFloor={isFloor}
+                    slantDirection={slantDirection}
+                    woodFractions={woodFractions}
+                    tileFractions={tileFractions}
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
+                />
             </g>
         )
 

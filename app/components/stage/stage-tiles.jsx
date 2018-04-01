@@ -89,16 +89,12 @@ const StageTiles = ({
 
                         colour = coloursRowArray.length > xIndex ?
                             coloursRowArray[xIndex] :
-                            coloursRowArray[coloursRowArray.length - 1],
-
-                        // FIXME: No need to calculate if slanted.
-                        isLeft = xIndex < TILE_COLUMNS_LENGTH / 2
+                            coloursRowArray[coloursRowArray.length - 1]
 
                     return (
                         <StageTile
                             key={`${xIndex}_${yIndex}`}
                             isFloor={isFloor}
-                            isLeft={isLeft}
                             slantDirection={slantDirection}
                             xIndex={xIndex}
                             yIndex={yIndex}

@@ -247,3 +247,31 @@ const _getYPercentage = (
 
     return roundPercentage(100 - rawYPercentage)
 }
+
+export const get2DFractionsForIndices = (
+    xIndex, yIndex, zIndex, slantDirection
+) => {
+    console.error(xIndex, yIndex, zIndex, slantDirection)
+
+    return {
+        x0: 0.5,
+        y0: 0.5,
+        x1: 0.6,
+        y1: 0.6
+    }
+}
+
+export const get2DFractionsForWoodIndices = (
+    xIndex, yIndex, isFloor, slantDirection
+) => {
+
+    /**
+     * For floor, wood index is the lowest possible. For ceiling, it is the
+     * highest possible.
+     */
+    const zIndex = isFloor ? 0 : 20
+
+    return get2DFractionsForIndices(
+        xIndex, yIndex, zIndex, slantDirection
+    )
+}
