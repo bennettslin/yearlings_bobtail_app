@@ -1,27 +1,26 @@
-.stage-tiles-field, .stage-tiles-wood {
+.stage-tiles-field, .stage-wood {
     position: absolute;
     width: 100%;
-    height: 100%;
     left: 0;
-    bottom: 0;
+    
+    &.stage-tiles-field {
+        height: 100%;
+        bottom: 0;
+    }
 }
 
-.stage-ceiling-field, .stage-ceiling-wood {
-    top: 0;
+.stage-wood {
+    .floor & {
+        bottom: 0;
+        fill: #aba;
+    }
+
+    .ceiling & {
+        top: 0;
+        fill: #aab;
+    }
 }
 
-.stage-tiles-field, .stage-floor-wood {
-    bottom: 0;
-}
-
-.stage-ceiling-wood {
-    // Arbitrary value, for now.
-    height: 24%;
-    background-color: #bbb;
-}
-
-.stage-floor-wood {
-    // Arbitrary value, for now.
-    background-color: #aaa;
-    height: 24%;
+.stage-tiles {
+    position: relative;
 }

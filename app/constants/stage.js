@@ -2,7 +2,7 @@
 import { getExponentFactorialSum, getArrayOfIncreasingSums } from '../helpers/general-helper'
 
 const
-    getTileYPercentages = (base, stageYPercentage, exponent) => {
+    getTileYPercentages = (base, STAGE_Y_PERCENTAGE, exponent) => {
         const
             /**
              * yPercentageUnit =
@@ -15,7 +15,7 @@ const
              */
             yPercentageUnit = getExponentFactorialSum(base, exponent - 1),
 
-            unit = stageYPercentage / yPercentageUnit,
+            unit = STAGE_Y_PERCENTAGE / yPercentageUnit,
             /**
              * yHeight0 = unit * base * base * base * base * base,
              * yHeight1 = unit * base * base * base * base,
@@ -50,13 +50,13 @@ const
 const base = 1.069913193933663,
 
     // Assume that floor height is this percent of stage height.
-    stageYPercentage = 12,
+    STAGE_Y_PERCENTAGE = 12,
 
     TILE_Y_PERCENTAGES = getTileYPercentages(
-        base, stageYPercentage, 6
+        base, STAGE_Y_PERCENTAGE, 6
     ),
     SLANTED_TILE_Y_PERCENTAGES = getTileYPercentages(
-        base, stageYPercentage, 14
+        base, STAGE_Y_PERCENTAGE, 14
     )
 
 module.exports = {
@@ -66,6 +66,7 @@ module.exports = {
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE: 1.05,
 
     // Each stage floor increment is 0.5 feet.
+    STAGE_Y_PERCENTAGE,
     VANISHING_POINT_Y_PERCENTAGE: 50,
     TILE_Y_PERCENTAGES,
     TILE_ROWS_LENGTH: 6,
