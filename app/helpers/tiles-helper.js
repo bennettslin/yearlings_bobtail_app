@@ -165,7 +165,8 @@ import {
 //     ]
 // }
 
-const _getXFraction = (
+// FIXME: Optimise for fraction.
+const _getXPercentage = (
     xCornerIndex,
     yCornerIndex,
     isSlanted
@@ -176,7 +177,7 @@ const _getXFraction = (
             SLANTED_TILE_COLUMNS_LENGTH : TILE_COLUMNS_LENGTH,
 
         // Get x-coordinate percentage at zIndex 0.
-        baseYPercentage = _getYFraction(
+        baseYPercentage = _getYPercentage(
             yCornerIndex, 0, isSlanted
         ),
         tilesWidthPercentage =
@@ -187,11 +188,11 @@ const _getXFraction = (
         xCornerIndex * tilesWidthPercentage /
         tileColumnsLength
 
-    // FIXME: Optimise for fraction.
-    return roundPercentage(rawXPercentage) / 100
+    return roundPercentage(100 - rawXPercentage)
 }
 
-const _getYFraction = (
+// FIXME: Optimise for fraction.
+const _getYPercentage = (
     yCornerIndex,
     zIndex,
     isSlanted
@@ -207,11 +208,10 @@ const _getYFraction = (
             tileYPercentage + zIndex / 10 *
             (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
 
-    // FIXME: Optimise for fraction.
-    return roundPercentage(100 - rawYPercentage) / 100
+    return roundPercentage(100 - rawYPercentage)
 }
 
-const _getXYFractions = (
+const _getXYPercentages = (
 
     /**
      * When default, this is an interval from 0 to 12. There are twelve floor
@@ -236,12 +236,12 @@ const _getXYFractions = (
 ) => {
 
     return {
-        x: _getXFraction(
+        x: _getXPercentage(
             xCornerIndex,
             yCornerIndex,
             isSlanted
         ),
-        y: _getYFraction(
+        y: _getYPercentage(
             yCornerIndex,
             zIndex,
             isSlanted
@@ -263,30 +263,30 @@ export const getStageCubeCornerFractions = ({
     return {
         tile: {
             left: {
-                front: _getXYFractions(xIndex, yIndex + 1, zIndex),
-                back: _getXYFractions(xIndex, yIndex, zIndex)
+                back: _getXYPercentages(xIndex, yIndex + 1, zIndex),
+                front: _getXYPercentages(xIndex, yIndex, zIndex)
             },
             right: {
-                front: _getXYFractions(xIndex + 1, yIndex + 1, zIndex),
-                back: _getXYFractions(xIndex + 1, yIndex, zIndex)
+                back: _getXYPercentages(xIndex + 1, yIndex + 1, zIndex),
+                front: _getXYPercentages(xIndex + 1, yIndex, zIndex)
             }
         },
         wood: {
             left: {
-                front: _getXYFractions(xIndex, yIndex + 1, woodZIndex),
-                back: _getXYFractions(xIndex, yIndex, woodZIndex)
+                back: _getXYPercentages(xIndex, yIndex + 1, woodZIndex),
+                front: _getXYPercentages(xIndex, yIndex, woodZIndex)
             },
             right: {
-                front: _getXYFractions(xIndex + 1, yIndex + 1, woodZIndex),
-                back: _getXYFractions(xIndex + 1, yIndex, woodZIndex)
+                back: _getXYPercentages(xIndex + 1, yIndex + 1, woodZIndex),
+                front: _getXYPercentages(xIndex + 1, yIndex, woodZIndex)
             }
         }
     }
 }
 
 const _getPolygonPoint = (coordinates, stageWidth, stageHeight) => {
-    const xPoint = coordinates.x * stageWidth,
-        yPoint = coordinates.y * stageHeight
+    const xPoint = coordinates.x * stageWidth * 0.01,
+        yPoint = coordinates.y * stageHeight * 0.01
 
     return `${xPoint},${yPoint}`
 }
@@ -303,18 +303,30 @@ export const getPolygonPointsForTileCube = ({
     )
 }
 
-export const getPolygonPointsForTopCube = ({
+export const getPolygonPointsForFrontCube = ({
     cubeCorners,
     stageWidth,
     stageHeight
 }) => {
-    console.error(cubeCorners, stageWidth, stageHeight)
+    const { tile, wood } = cubeCorners
+
+    return (
+        `${_getPolygonPoint(tile.left.front, stageWidth, stageHeight)} ${_getPolygonPoint(tile.right.front, stageWidth, stageHeight)} ${_getPolygonPoint(wood.right.front, stageWidth, stageHeight)} ${_getPolygonPoint(wood.left.front, stageWidth, stageHeight)}`
+    )
 }
 
 export const getPolygonPointsForSideCube = ({
+    isLeft = true,
     cubeCorners,
     stageWidth,
     stageHeight
 }) => {
-    console.error(cubeCorners, stageWidth, stageHeight)
+    const { tile, wood } = cubeCorners,
+
+        // If cube is on left, then show right face, and vice versa.
+        xFace = isLeft ? 'right' : 'left'
+
+    return (
+        `${_getPolygonPoint(tile[xFace].back, stageWidth, stageHeight)} ${_getPolygonPoint(tile[xFace].front, stageWidth, stageHeight)} ${_getPolygonPoint(wood[xFace].front, stageWidth, stageHeight)} ${_getPolygonPoint(wood[xFace].back, stageWidth, stageHeight)}`
+    )
 }

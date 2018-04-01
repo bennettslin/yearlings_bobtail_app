@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import { getPolygonPointsForTileCube,
-         getPolygonPointsForTopCube,
+         getPolygonPointsForFrontCube,
          getPolygonPointsForSideCube } from '../../helpers/tiles-helper'
 
 const propTypes = {
     face: PropTypes.string.isRequired,
+    isLeft: PropTypes.bool,
     cubeCorners: PropTypes.object.isRequired,
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
@@ -17,6 +18,7 @@ const propTypes = {
 const StageCubeFace = ({
 
     face,
+    isLeft,
     cubeCorners,
     stageWidth,
     stageHeight
@@ -32,8 +34,8 @@ const StageCubeFace = ({
             stageHeight
         })
 
-    } else if (face === 'top') {
-        polygonPoints = getPolygonPointsForTopCube({
+    } else if (face === 'front') {
+        polygonPoints = getPolygonPointsForFrontCube({
             cubeCorners,
             stageWidth,
             stageHeight
@@ -41,6 +43,7 @@ const StageCubeFace = ({
 
     } else if (face === 'side') {
         polygonPoints = getPolygonPointsForSideCube({
+            isLeft,
             cubeCorners,
             stageWidth,
             stageHeight

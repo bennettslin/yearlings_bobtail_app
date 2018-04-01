@@ -3,9 +3,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import StageCubeFace from './stage-cube-face'
+
 import { getStageCubeCornerFractions } from '../../helpers/tiles-helper'
 
-import StageCubeFace from './stage-cube-face'
+import { TILE_COLUMNS_LENGTH } from '../../constants/stage'
 
 class StageCube extends Component {
 
@@ -20,41 +22,6 @@ class StageCube extends Component {
         stageHeight: PropTypes.number.isRequired
     }
 
-    // constructor(props) {
-    //     super(props)
-
-    //     const { xIndex,
-    //             yIndex,
-    //             isFloor,
-    //             slantDirection } = props
-
-    //     /**
-    //      * Set the wood fractions in state here, because they will only change
-    //      * when slant direction is changed.
-    //      */
-    //     this.state = {
-    //         woodFractions: get2DFractionsForWoodIndices(
-    //             xIndex, yIndex, isFloor, slantDirection
-    //         )
-    //     }
-    // }
-
-    // componentWillReceiveProps(nextProps) {
-    //     if (nextProps.slantDirection !== this.props.slantDirection) {
-
-    //         const { xIndex,
-    //                 yIndex,
-    //                 isFloor,
-    //                 slantDirection } = nextProps
-
-    //         this.setState({
-    //             woodFractions: get2DFractionsForWoodIndices(
-    //                 xIndex, yIndex, isFloor, slantDirection
-    //             )
-    //         })
-    //     }
-    // }
-
     render() {
         const { isFloor,
                 xIndex,
@@ -66,17 +33,28 @@ class StageCube extends Component {
 
             cubeCorners = getStageCubeCornerFractions({
                 xIndex, yIndex, zIndex, isFloor
-            })
+            }),
 
-        if (isFloor) {
-            console.error(xIndex, yIndex, zIndex, cubeCorners)
-        }
+            isLeft = xIndex < TILE_COLUMNS_LENGTH / 2;
 
         return (
             <g className="stage-cube">
 
                 <StageCubeFace
+                    face="side"
+                    isLeft={isLeft}
+                    cubeCorners={cubeCorners}
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
+                />
+                <StageCubeFace
                     face="tile"
+                    cubeCorners={cubeCorners}
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
+                />
+                <StageCubeFace
+                    face="front"
                     cubeCorners={cubeCorners}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
