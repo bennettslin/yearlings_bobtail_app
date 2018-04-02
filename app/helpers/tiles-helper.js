@@ -17,7 +17,6 @@ const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
  * TILES *
  *********/
 
-// FIXME: Optimise for fraction.
 const _getXPercentage = (
 
     xCornerIndex,
@@ -47,7 +46,6 @@ const _getXPercentage = (
     return roundPercentage(100 - rawXPercentage)
 }
 
-// FIXME: Optimise for fraction.
 const _getYPercentage = (
 
     yCornerIndex,

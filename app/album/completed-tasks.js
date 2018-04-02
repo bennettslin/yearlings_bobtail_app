@@ -2747,4 +2747,9 @@ module.exports = [
         workedHours: 4,
         neededHours: 4
     },
+    {
+        taskName: `Use polygons for tiles`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]
