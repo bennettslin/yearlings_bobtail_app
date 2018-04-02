@@ -29,8 +29,6 @@ const StageCubeFace = ({
 
     let polygonPoints;
 
-    console.error('slantDirection', slantDirection)
-
     if (face === 'tile') {
         polygonPoints = getPolygonPointsForTileCube({
             cubeCorners,
