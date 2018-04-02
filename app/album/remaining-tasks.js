@@ -1,5 +1,11 @@
 module.exports = [
 
+    {
+        taskName: `Hovering over access icons doesn't trigger animation.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Remaining tile work.
      */
