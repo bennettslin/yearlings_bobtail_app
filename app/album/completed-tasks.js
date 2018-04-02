@@ -2752,4 +2752,9 @@ module.exports = [
         workedHours: 8,
         neededHours: 8
     },
+    {
+        taskName: `Have tiles correctly overlap.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

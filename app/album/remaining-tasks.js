@@ -8,16 +8,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Have tiles helper use fractions, not percentages`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Have tiles correctly overlap, including extremely high, and slanted. Ceiling coordinates are also wrong.`,
-        workedHours: 0,
-        neededHours: 2
-    },
 
     {
         taskName: `Add auto scroll to lyric column that toggles on with button, and toggles off with manual scroll.`,

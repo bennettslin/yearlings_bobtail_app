@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import StageCubeFace from './stage-cube-face'
 
-import { getStageCubeCornerFractions } from '../../helpers/tiles-helper'
+import { getStageCubeCornerPercentages } from '../../helpers/tiles-helper'
 
 import { TILE_COLUMNS_LENGTH } from '../../constants/stage'
 
@@ -32,7 +32,7 @@ class StageCube extends Component {
                 stageHeight
             } = this.props,
 
-            cubeCorners = getStageCubeCornerFractions({
+            cubeCorners = getStageCubeCornerPercentages({
                 xIndex, yIndex, zIndex, isFloor, slantDirection
             }),
 
@@ -42,6 +42,14 @@ class StageCube extends Component {
             <g className="stage-cube">
 
                 <StageCubeFace
+                    face="tile"
+                    cubeCorners={cubeCorners}
+                    slantDirection={slantDirection}
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
+                />
+
+                <StageCubeFace
                     face="side"
                     isLeft={isLeft}
                     cubeCorners={cubeCorners}
@@ -49,13 +57,7 @@ class StageCube extends Component {
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />
-                <StageCubeFace
-                    face="tile"
-                    cubeCorners={cubeCorners}
-                    slantDirection={slantDirection}
-                    stageWidth={stageWidth}
-                    stageHeight={stageHeight}
-                />
+
                 <StageCubeFace
                     face="front"
                     cubeCorners={cubeCorners}

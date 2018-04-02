@@ -32,6 +32,13 @@ const rowIndicesArray = getArrayOfLength({
         length: TILE_ROWS_LENGTH
     }),
 
+    SLANTED_RIGHT_COLUMN_INDICES = getArrayOfLength({
+        length: TILE_COLUMNS_LENGTH
+    }),
+
+    SLANTED_LEFT_COLUMN_INDICES = SLANTED_RIGHT_COLUMN_INDICES
+        .slice().reverse(),
+
     /**
      * Returns array of indices that start from the ends and move towards the
      * centre, alternating between left and right. This allows the tiles that
@@ -39,12 +46,12 @@ const rowIndicesArray = getArrayOfLength({
      *
      * If length is 12, should return [0, 11, 1, 10, 2, 9, 3, 8, 4, 7, 5, 6].
      */
-    columnIndicesArray = getArrayOfLength({
-        length: TILE_COLUMNS_LENGTH
+    DEFAULT_COLUMN_INDICES = SLANTED_RIGHT_COLUMN_INDICES.map(columnIndex => {
 
-    }).map(columnIndex => {
         const ceilValue = Math.ceil(columnIndex / 2)
-        return columnIndex % 2 ? TILE_COLUMNS_LENGTH - ceilValue : ceilValue
+
+        return columnIndex % 2 ?
+            TILE_COLUMNS_LENGTH - ceilValue : ceilValue
     })
 
 const StageTiles = ({
@@ -78,6 +85,15 @@ const StageTiles = ({
              * shown in floor field.
              */
             const yIndex = TILE_ROWS_LENGTH - rawYIndex - 1
+
+            let columnIndicesArray = DEFAULT_COLUMN_INDICES
+
+            if (slantDirection === 'left') {
+                columnIndicesArray = SLANTED_LEFT_COLUMN_INDICES;
+
+            } else if (slantDirection === 'right') {
+                columnIndicesArray = SLANTED_RIGHT_COLUMN_INDICES
+            }
 
             return (
                 columnIndicesArray.map(xIndex => {
