@@ -1,27 +1,10 @@
-.selected-annotation {
+@selected-annotation-title-colour: @odd-verse-colour;
 
-    /**
-     * Not using mixin here so that text shadow applies only to annotation
-     * title and not to annotation card.
-     */
-    &.annotation-section {
-        @colour: @odd-verse-colour;
-        background-color: @colour;
+.annotation-title-block {
 
-        .annotation-title-block {
-            .text-anchor-block {
-                text-shadow:
-                -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
-                @text-shadow-offset -@text-shadow-offset @text-shadow-blur @colour,
-                -@text-shadow-offset @text-shadow-offset @text-shadow-blur @colour,
-                @text-shadow-offset @text-shadow-offset @text-shadow-blur @colour;
-            }
-        }
-    }
-}
+    /** Carousel. */
 
-.carousel {
-    .annotation-title-block {
+    .carousel & {
         text-align: center;
 
         transition: max-height @animation-default,
@@ -33,16 +16,31 @@
         // .text-shadow-mixin(transparent);
     }
 
-    &.override-animate {
-        .annotation-title-block {
-            transition: none;
-        }
+    .carousel.override-animate & {
+        transition: none;
     }
-}
 
-.popup-content-wrapper {
-    .annotation-title-block {
+    /** Popup. */
+
+    .popup-content-wrapper & {
         padding: @annotation-section-padding 0;
+    }
+
+    /**
+     * Not using mixin here so that text shadow applies only to annotation
+     * title and not to annotation card.
+     */
+    .selected-annotation & {
+
+        background-color: @selected-annotation-title-colour;
+
+        .text-anchor-block {
+            text-shadow:
+            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @selected-annotation-title-colour,
+            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @selected-annotation-title-colour,
+            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @selected-annotation-title-colour,
+            @text-shadow-offset @text-shadow-offset @text-shadow-blur @selected-annotation-title-colour;
+        }
     }
 }
 
