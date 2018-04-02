@@ -24,6 +24,7 @@ class StageCube extends Component {
 
     render() {
         const { isFloor,
+                slantDirection,
                 xIndex,
                 yIndex,
                 zIndex,
@@ -32,7 +33,7 @@ class StageCube extends Component {
             } = this.props,
 
             cubeCorners = getStageCubeCornerFractions({
-                xIndex, yIndex, zIndex, isFloor
+                xIndex, yIndex, zIndex, isFloor, slantDirection
             }),
 
             isLeft = xIndex < TILE_COLUMNS_LENGTH / 2;
@@ -44,18 +45,21 @@ class StageCube extends Component {
                     face="side"
                     isLeft={isLeft}
                     cubeCorners={cubeCorners}
+                    slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />
                 <StageCubeFace
                     face="tile"
                     cubeCorners={cubeCorners}
+                    slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />
                 <StageCubeFace
                     face="front"
                     cubeCorners={cubeCorners}
+                    slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />

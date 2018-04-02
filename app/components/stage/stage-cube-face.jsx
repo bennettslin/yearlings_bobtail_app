@@ -9,6 +9,7 @@ import { getPolygonPointsForTileCube,
 const propTypes = {
     face: PropTypes.string.isRequired,
     isLeft: PropTypes.bool,
+    slantDirection: PropTypes.string,
     cubeCorners: PropTypes.object.isRequired,
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
@@ -19,6 +20,7 @@ const StageCubeFace = ({
 
     face,
     isLeft,
+    slantDirection,
     cubeCorners,
     stageWidth,
     stageHeight
@@ -26,6 +28,8 @@ const StageCubeFace = ({
 }) => {
 
     let polygonPoints;
+
+    console.error('slantDirection', slantDirection)
 
     if (face === 'tile') {
         polygonPoints = getPolygonPointsForTileCube({
@@ -36,6 +40,7 @@ const StageCubeFace = ({
 
     } else if (face === 'front') {
         polygonPoints = getPolygonPointsForFrontCube({
+            slantDirection,
             cubeCorners,
             stageWidth,
             stageHeight
@@ -44,6 +49,7 @@ const StageCubeFace = ({
     } else if (face === 'side') {
         polygonPoints = getPolygonPointsForSideCube({
             isLeft,
+            slantDirection,
             cubeCorners,
             stageWidth,
             stageHeight
