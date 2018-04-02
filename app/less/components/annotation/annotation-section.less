@@ -1,10 +1,11 @@
-@selected-annotation-title-colour: @odd-verse-colour;
+@selected-annotation-title-background-colour: @odd-verse-colour;
 
 .annotation-title-block {
 
     /** Carousel. */
 
-    .carousel & {
+    .carousel
+    & {
         text-align: center;
 
         transition: max-height @animation-default,
@@ -16,13 +17,15 @@
         // .text-shadow-mixin(transparent);
     }
 
-    .carousel.override-animate & {
+    .carousel.override-animate
+    & {
         transition: none;
     }
 
     /** Popup. */
 
-    .popup-content-wrapper & {
+    .popup-content-wrapper
+    & {
         padding: @annotation-section-padding 0;
     }
 
@@ -30,16 +33,17 @@
      * Not using mixin here so that text shadow applies only to annotation
      * title and not to annotation card.
      */
-    .selected-annotation & {
+    .selected-annotation
+    & {
 
-        background-color: @selected-annotation-title-colour;
+        background-color: @selected-annotation-title-background-colour;
 
         .text-anchor-block {
             text-shadow:
-            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @selected-annotation-title-colour,
-            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @selected-annotation-title-colour,
-            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @selected-annotation-title-colour,
-            @text-shadow-offset @text-shadow-offset @text-shadow-blur @selected-annotation-title-colour;
+            -@text-shadow-offset -@text-shadow-offset @text-shadow-blur @selected-annotation-title-background-colour,
+            @text-shadow-offset -@text-shadow-offset @text-shadow-blur @selected-annotation-title-background-colour,
+            -@text-shadow-offset @text-shadow-offset @text-shadow-blur @selected-annotation-title-background-colour,
+            @text-shadow-offset @text-shadow-offset @text-shadow-blur @selected-annotation-title-background-colour;
         }
     }
 }
