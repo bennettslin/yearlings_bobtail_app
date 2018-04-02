@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
+import Icon from '../icon/icon'
+
 class Button extends Component {
 
     constructor(props) {
@@ -82,14 +84,12 @@ class Button extends Component {
                 onClick={handleClick && isEnabled ? this._handleClick : null}
                 onTouchStart={handleClick && isEnabled ? this._handleClick : null}
             >
-                <div className="icon-canvas-block">
-                    <div className={classnames(
-                        'icon-canvas',
-                        iconClass
-                    )}>
-                        {iconText}
-                    </div>
-                </div>
+
+                <Icon
+                    className={iconClass}
+                    text={iconText}
+                />
+
                 {accessKey &&
                     <div className={classnames(
                         'access-button-icon',

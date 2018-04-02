@@ -2,8 +2,9 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
 import { ALL_DOT_KEYS } from '../../constants/dots'
+
+import Icon from '../icon/icon'
 
 const dotBlockPropTypes = {
     // From parent.
@@ -24,15 +25,7 @@ DotBlock = ({
                     key={index}
                     className="dot"
                 >
-                    <div className={classnames(
-                        'icon-canvas-block',
-                        dotKey
-                    )}>
-                        <div className={classnames(
-                            'icon-canvas',
-                            dotKey
-                        )} />
-                    </div>
+                    <Icon dotKey={dotKey} />
                 </div>
             )
         })}
