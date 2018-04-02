@@ -1,13 +1,81 @@
 .icon-canvas-block {
 
+    width: 100%;
+    height: 100%;
+
+    // Dot stanzas and nav need to hide overflow, popup buttons need to show.
+    .button:not(.overflow-shown)
+    & {
+        overflow: hidden;
+    }
+
     // Necessary?
     .single-book-column
     & {
         transition: width @animation-default;
     }
+
+    .dots-toggle-block
+    &,
+    .verse-audio-button-block
+    & {        
+        // Override default.
+        overflow: visible;
+    }
+
+    /**
+     * All dot backgrounds in lyrics and annotation cards, except portal
+     * annotation cards.
+     */
+    .text-anchor-block
+    &,
+    .annotation-card:not(.portal)
+    & {
+        // Fade out first, then reduce width.
+        transition: opacity @animation-default,
+                    width @animation-default @animation-faster;
+        width: 0;
+        opacity: 0;
+    }
+
+    .button.enabled
+    & {
+        transition: background-color @animation-default,
+        transform @animation-instant;
+
+        // Animate container itself, because its overflow is hidden.
+        &:hover {
+            animation: bounceHover @animation-default;
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+    }
 }
 
 .icon-canvas {
+    border-radius: 50%;
+    background-color: @button-disabled-colour;
+    box-sizing: border-box;
+
+    .dot:not(.dot-stanza-button)
+    & {
+        &.portal { background-color: @portal-dot-colour; }
+        &.observation { background-color: @observation-dot-colour; }
+        &.backstory { background-color: @backstory-dot-colour; }
+        &.reference { background-color: @reference-dot-colour; }
+        &.pun { background-color: @pun-dot-colour; }
+        &.narrative { background-color: @narrative-dot-colour; }
+        &.songwriting { background-color: @songwriting-dot-colour; }
+        &.afterword { background-color: @afterword-dot-colour; }
+    }
+
+    .custom-shape
+    & {
+        border-radius: 0;
+    }
+
     .nav-button
     & {
         background-color: #dd8;
@@ -17,4 +85,76 @@
     & {
         background-color: orange;
     }
+
+    .anchor-block
+    & {
+        border: @dot-border solid @lyric-underline-enabled-colour;
+    }
+
+    .annotation-card
+    .dots-block
+    & {
+        width: @annotation-dot-diameter;
+        border: @dot-border solid @dot-border-colour;
+    }
+
+    .text-anchor-block
+    & {
+        width: @lyric-anchor-dot-diameter;
+    }
+}
+
+// Portals are not included here.
+.dom-manager.narrative .annotation-card .icon-canvas-block.narrative,
+.dom-manager.backstory .annotation-card .icon-canvas-block.backstory,
+.dom-manager.observation .annotation-card .icon-canvas-block.observation,
+.dom-manager.pun .annotation-card .icon-canvas-block.pun,
+.dom-manager.reference .annotation-card .icon-canvas-block.reference,
+.dom-manager.songwriting .annotation-card .icon-canvas-block.songwriting,
+.dom-manager.afterword .annotation-card .icon-canvas-block.afterword {
+    // Increase width first, then fade in.
+    transition: width @animation-default,
+                opacity @animation-default @animation-faster;
+    width: @annotation-dot-diameter;
+    opacity: 1;
+}
+
+// Default styling. Should not be visible when slider is not moving.
+.dom-manager.slider-not-moving.narrative .text-anchor-block .icon-canvas-block.narrative,
+.dom-manager.slider-not-moving.backstory .text-anchor-block .icon-canvas-block.backstory,
+.dom-manager.slider-not-moving.observation .text-anchor-block .icon-canvas-block.observation,
+.dom-manager.slider-not-moving.pun .text-anchor-block .icon-canvas-block.pun,
+.dom-manager.slider-not-moving.reference .text-anchor-block .icon-canvas-block.reference,
+.dom-manager.slider-not-moving.songwriting .text-anchor-block .icon-canvas-block.songwriting,
+.dom-manager.slider-not-moving.portal .text-anchor-block .icon-canvas-block.portal,
+.dom-manager.slider-not-moving.afterword .text-anchor-block .icon-canvas-block.afterword {
+    // Increase width first, then fade in.
+    transition: width @animation-default,
+                opacity @animation-default @animation-faster;
+    width: @lyric-anchor-dot-diameter;
+    opacity: 1;
+}
+
+// Hover styling.
+.dom-manager.narrative .text-anchor-block:hover .icon-canvas-block.narrative,
+.dom-manager.backstory .text-anchor-block:hover .icon-canvas-block.backstory,
+.dom-manager.observation .text-anchor-block:hover .icon-canvas-block.observation,
+.dom-manager.pun .text-anchor-block:hover .icon-canvas-block.pun,
+.dom-manager.reference .text-anchor-block:hover .icon-canvas-block.reference,
+.dom-manager.songwriting .text-anchor-block:hover .icon-canvas-block.songwriting,
+.dom-manager.portal .text-anchor-block:hover .icon-canvas-block.portal,
+.dom-manager.afterword .text-anchor-block:hover .icon-canvas-block.afterword {
+   animation: bounceHover @animation-slow;
+}
+
+// Active styling.
+.dom-manager.narrative .text-anchor-block:active .icon-canvas-block.narrative,
+.dom-manager.backstory .text-anchor-block:active .icon-canvas-block.backstory,
+.dom-manager.observation .text-anchor-block:active .icon-canvas-block.observation,
+.dom-manager.pun .text-anchor-block:active .icon-canvas-block.pun,
+.dom-manager.reference .text-anchor-block:active .icon-canvas-block.reference,
+.dom-manager.songwriting .text-anchor-block:active .icon-canvas-block.songwriting,
+.dom-manager.portal .text-anchor-block:active .icon-canvas-block.portal,
+.dom-manager.afterword .text-anchor-block:active .icon-canvas-block.afterword {
+   transform: scale(0.8);
 }

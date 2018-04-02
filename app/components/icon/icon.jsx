@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 const propTypes = {
-    className: PropTypes.string,
+    className: PropTypes.any,
     dotKey: PropTypes.string,
-    text: PropTypes.string
+    text: PropTypes.any
 }
 
 const Icon = ({

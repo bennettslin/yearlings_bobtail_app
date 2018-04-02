@@ -4,36 +4,6 @@
     height: 100%;
 }
 
-/**
- * All dot backgrounds in lyrics and annotation cards, except portal annotation
- * cards.
- */
-.text-anchor-block, .annotation-card:not(.portal) {
-
-    .icon-canvas-block {
-        // Fade out first, then reduce width.
-        transition: opacity @animation-default,
-                    width @animation-default @animation-faster;
-        width: 0;
-        opacity: 0;
-    }
-}
-
-// Portals are not included here.
-.dom-manager.narrative .annotation-card .icon-canvas-block.narrative,
-.dom-manager.backstory .annotation-card .icon-canvas-block.backstory,
-.dom-manager.observation .annotation-card .icon-canvas-block.observation,
-.dom-manager.pun .annotation-card .icon-canvas-block.pun,
-.dom-manager.reference .annotation-card .icon-canvas-block.reference,
-.dom-manager.songwriting .annotation-card .icon-canvas-block.songwriting,
-.dom-manager.afterword .annotation-card .icon-canvas-block.afterword {
-    // Increase width first, then fade in.
-    transition: width @animation-default,
-                opacity @animation-default @animation-faster;
-    width: @annotation-dot-diameter;
-    opacity: 1;
-}
-
 .annotation-card {
 
     // Only style dots that are not in portal.
@@ -43,28 +13,7 @@
                 height: @annotation-dot-diameter;
             }
         }
-
-        .icon-canvas {
-            width: @annotation-dot-diameter;
-            border: @dot-border solid @dot-border-colour;
-        }
     }
-}
-
-// Default styling. Should not be visible when slider is not moving.
-.dom-manager.slider-not-moving.narrative .text-anchor-block .icon-canvas-block.narrative,
-.dom-manager.slider-not-moving.backstory .text-anchor-block .icon-canvas-block.backstory,
-.dom-manager.slider-not-moving.observation .text-anchor-block .icon-canvas-block.observation,
-.dom-manager.slider-not-moving.pun .text-anchor-block .icon-canvas-block.pun,
-.dom-manager.slider-not-moving.reference .text-anchor-block .icon-canvas-block.reference,
-.dom-manager.slider-not-moving.songwriting .text-anchor-block .icon-canvas-block.songwriting,
-.dom-manager.slider-not-moving.portal .text-anchor-block .icon-canvas-block.portal,
-.dom-manager.slider-not-moving.afterword .text-anchor-block .icon-canvas-block.afterword {
-    // Increase width first, then fade in.
-    transition: width @animation-default,
-                opacity @animation-default @animation-faster;
-    width: @lyric-anchor-dot-diameter;
-    opacity: 1;
 }
 
 .text-anchor-block {
@@ -73,38 +22,4 @@
             height: @lyric-anchor-dot-diameter;
         }
     }
-
-    .icon-canvas {
-        width: @lyric-anchor-dot-diameter;
-    }
-}
-
-.anchor-block {
-    .icon-canvas {
-        border: @dot-border solid @lyric-underline-enabled-colour;
-    }
-}
-
-// Hover styling.
-.dom-manager.narrative .text-anchor-block:hover .icon-canvas-block.narrative,
-.dom-manager.backstory .text-anchor-block:hover .icon-canvas-block.backstory,
-.dom-manager.observation .text-anchor-block:hover .icon-canvas-block.observation,
-.dom-manager.pun .text-anchor-block:hover .icon-canvas-block.pun,
-.dom-manager.reference .text-anchor-block:hover .icon-canvas-block.reference,
-.dom-manager.songwriting .text-anchor-block:hover .icon-canvas-block.songwriting,
-.dom-manager.portal .text-anchor-block:hover .icon-canvas-block.portal,
-.dom-manager.afterword .text-anchor-block:hover .icon-canvas-block.afterword {
-   animation: bounceHover @animation-slow;
-}
-
-// Active styling.
-.dom-manager.narrative .text-anchor-block:active .icon-canvas-block.narrative,
-.dom-manager.backstory .text-anchor-block:active .icon-canvas-block.backstory,
-.dom-manager.observation .text-anchor-block:active .icon-canvas-block.observation,
-.dom-manager.pun .text-anchor-block:active .icon-canvas-block.pun,
-.dom-manager.reference .text-anchor-block:active .icon-canvas-block.reference,
-.dom-manager.songwriting .text-anchor-block:active .icon-canvas-block.songwriting,
-.dom-manager.portal .text-anchor-block:active .icon-canvas-block.portal,
-.dom-manager.afterword .text-anchor-block:active .icon-canvas-block.afterword {
-   transform: scale(0.8);
 }
