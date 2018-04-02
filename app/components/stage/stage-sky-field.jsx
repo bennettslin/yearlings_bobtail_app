@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import DynamicSvg from '../dynamic-svg/dynamic-svg'
 
@@ -51,7 +51,7 @@ const StageSkyField = ({
             viewBoxHeight={stageHeight}
         >
             <rect
-                className={classnames(
+                className={cx(
                     'filter',
                     'season-filter',
                     { 'none': season === SKY_NO_SEASON,
@@ -66,7 +66,7 @@ const StageSkyField = ({
                 height={stageHeight}
             />
             <rect
-                className={classnames(
+                className={cx(
                     'filter',
                     'time-filter',
                     { 'none': time === SKY_NO_TIME,

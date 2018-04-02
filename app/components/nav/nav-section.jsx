@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import { connect } from 'react-redux'
 import NavBooksColumn from './nav-books-column'
 
@@ -31,11 +31,11 @@ NavSection = ({
 ...other }) => {
 
     return isHiddenNav || isHeightlessLyricColumn ? null : (
-        <div className={classnames(
+        <div className={cx(
             'nav-custom-subfield'
         )}>
             <div
-                className={classnames(
+                className={cx(
                     'section',
                     'nav-section',
                     showSingleBookColumn ? 'single-book-column' : 'double-book-column'

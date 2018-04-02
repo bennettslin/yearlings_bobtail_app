@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import DotButton from './dot-button'
 
 class DotAnchor extends Component {
@@ -49,7 +49,7 @@ class DotAnchor extends Component {
                 ...other } = this.props
 
         return (
-            <div className={classnames(
+            <div className={cx(
                 'anchor-block',
                 'dot-anchor',
                 dotKeys,

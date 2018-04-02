@@ -6,7 +6,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
 import PlayersSection from './player/players-section'
@@ -143,7 +143,7 @@ class DomManager extends Component {
         return (
             <div
                 ref={domManagerRef}
-                className={classnames(
+                className={cx(
                     'dom-manager',
                     deviceClassName,
                     isDesktop ? 'is-desktop' : 'is-mobile',

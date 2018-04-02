@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 import debounce from 'debounce'
 
 import LyricUnit from './lyric-unit'
@@ -125,7 +125,7 @@ LyricSectionView = ({
     return (
         <div
             ref={lyricSectionRef}
-            className={classnames(
+            className={cx(
                 'section',
                 'lyric-section',
                 'lyrics-scroll',

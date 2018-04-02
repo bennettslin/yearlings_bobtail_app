@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import SliderSection from '../slider/slider-section'
 import AudioTimer from './audio-timer'
@@ -62,7 +62,7 @@ AudioBanner = ({
             }),
 
         audioBannerComponent = (
-            <div className={classnames(
+            <div className={cx(
                 'audio-block',
                 'audio-banner-block'
             )}>

@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 import AnnotationUnit from './annotation-unit'
 import DotAnchor from '../dot/dot-anchor'
 import { IS_DOT_STANZA } from '../../constants/lyrics'
@@ -123,7 +123,7 @@ AnnotationSectionView = ({
 
     return (
         <div
-            className={classnames(
+            className={cx(
                 'section',
                 'annotation-section',
                 { 'selected-annotation': showAsSelected,
@@ -144,7 +144,7 @@ AnnotationSectionView = ({
                         />
                     </div>
                 ) : (
-                    <a className={classnames(
+                    <a className={cx(
                             'anchor-block',
                             'text-anchor-block',
                             'annotation-title',

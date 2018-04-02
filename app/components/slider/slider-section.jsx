@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import SliderAccess from './slider-access'
 import SliderCursor from './slider-cursor'
@@ -61,7 +61,7 @@ SliderSectionView = ({
 
 }) => (
     <div
-        className={classnames(
+        className={cx(
             'audio-banner',
             'slider-block'
         )}
@@ -76,7 +76,7 @@ SliderSectionView = ({
 
         {/* Handle touch interactions. */}
         <div
-            className={classnames(
+            className={cx(
                 'slider-bar',
                 'slider-touch-bar'
             )}

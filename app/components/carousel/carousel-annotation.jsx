@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import AnnotationSection from '../annotation/annotation-section'
 import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 import { getAnnotationObject } from '../../helpers/data-helper'
@@ -130,7 +130,7 @@ CarouselAnnotationView = ({
 ...other }) => (
 
     <div
-        className={classnames(
+        className={cx(
             'carousel-annotation',
             `carousel-annotation-${annotationIndex}`,
             annotationColumn && `in-column-${annotationColumn}`,

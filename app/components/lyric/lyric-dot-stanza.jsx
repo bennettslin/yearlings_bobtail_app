@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 import DotAnchor from '../dot/dot-anchor'
 
 const mapStateToProps = ({
@@ -90,14 +90,14 @@ LyricDotStanzaView = ({
 
 ...other }) => (
 
-    <div className={classnames(
+    <div className={cx(
         'stanza-block',
         'dot-stanza',
 
         // Show and hide dot stanza block in and out based on dot keys.
         dotKeys
     )}>
-        <div className={classnames(
+        <div className={cx(
             'dot-stanza-anchor-block',
 
             // Scroll to dot stanza block upon annotation selection.

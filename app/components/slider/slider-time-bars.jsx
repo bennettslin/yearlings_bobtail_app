@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 import { getSongTotalTime } from '../../helpers/data-helper'
 import { getFormattedTime } from '../../helpers/format-helper'
 
@@ -58,7 +58,7 @@ SliderTimeBars = ({
         <div className="slider-time-bars">
 
             <div
-                className={classnames(
+                className={cx(
                     'slider-bar',
                     'time-bar',
                     'time-remain-bar'
@@ -66,7 +66,7 @@ SliderTimeBars = ({
             />
 
             {/* Spent time display below spent bar. */}
-            <div className={classnames(
+            <div className={cx(
                 'below',
                 'spent',
                 'time-display'
@@ -75,7 +75,7 @@ SliderTimeBars = ({
             </div>
 
             <div
-                className={classnames(
+                className={cx(
                     'slider-bar',
                     'time-bar',
                     'time-spent-bar'
@@ -83,7 +83,7 @@ SliderTimeBars = ({
                 style={spentStyle}
             >
                 {/* Spent time display above spent bar. */}
-                <div className={classnames(
+                <div className={cx(
                     'above',
                     'spent',
                     'time-display'
@@ -93,7 +93,7 @@ SliderTimeBars = ({
             </div>
 
             {/* Remaining time display below remain bar. */}
-            <div className={classnames(
+            <div className={cx(
                 'below',
                 'remain',
                 'time-display'
@@ -103,7 +103,7 @@ SliderTimeBars = ({
 
             {/* Remaining time display above remain bar. */}
             <div
-                className={classnames(
+                className={cx(
                     'above',
                     'remain',
                     'time-display'

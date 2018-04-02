@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 import LyricStanza from './lyric-stanza'
 import LyricDotStanza from './lyric-dot-stanza'
 import { TITLE } from '../../constants/lyrics'
@@ -199,7 +199,7 @@ LyricUnitView = ({
 
     return (
         <div
-            className={classnames(
+            className={cx(
                 'lyric-unit',
                 unitIndex && `unit-${unitIndex}`,
                 sceneIndex && `scene-${sceneIndex}`,
@@ -217,7 +217,7 @@ LyricUnitView = ({
             )}
         >
             {!isDotOnly &&
-                <div className={classnames(
+                <div className={cx(
                     'stanza-block',
                     'main'
                 )}>
@@ -235,7 +235,7 @@ LyricUnitView = ({
                 </div>
             }
             {hasSide &&
-                <div className={classnames(
+                <div className={cx(
                     'stanza-block',
                     'side',
                     { 'bottom-only': isBottomOnly }

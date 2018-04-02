@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import DynamicSvg from '../dynamic-svg/dynamic-svg'
 
@@ -47,7 +47,7 @@ const StageTilesField = (props) => {
             stageHeight } = props
 
     return (
-        <div className={classnames(
+        <div className={cx(
             'stage-tiles-field',
             isFloor ? 'floor' : 'ceiling'
         )}>

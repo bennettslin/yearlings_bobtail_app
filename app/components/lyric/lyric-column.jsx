@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 import LyricAccess from './lyric-access'
 import LyricToggle from './lyric-toggle'
 import LyricEarToggle from './lyric-ear-toggle'
@@ -204,7 +204,7 @@ LyricColumnView = ({
 
     return (
         <div
-            className={classnames(
+            className={cx(
                 'column',
                 'lyric-column',
                 isHeavyRenderReady ? 'render-ready' : 'render-unready'
@@ -212,7 +212,7 @@ LyricColumnView = ({
             ref={myRef}
             onTransitionEnd={handleTransition}
         >
-            <div className={classnames(
+            <div className={cx(
                     'lyric-column-animatable',
                     { 'override-animate': shouldOverrideAnimate }
                 )}

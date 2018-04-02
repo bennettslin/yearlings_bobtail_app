@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames';
+import cx from 'classnames';
 import TextBlock from '../text/text-block'
 import DotButton from '../dot/dot-button'
 import { PORTAL } from '../../constants/dots'
@@ -103,7 +103,7 @@ class AnnotationPortal extends Component {
 
         return (
             <div
-                className={classnames(
+                className={cx(
                     'portal-block',
                     'anchor-block',
                     'dot-anchor',

@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 const accessIconsBlockPropTypes = {
     // From parent.
@@ -18,7 +18,7 @@ AccessIconsBlock = ({
     className
 
 }) => (
-    <div className={classnames(
+    <div className={cx(
         'access-icons-block',
         { 'access-keys-shown': accessKeysShown },
         className

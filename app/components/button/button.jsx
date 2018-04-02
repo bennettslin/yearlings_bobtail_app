@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import Icon from '../icon/icon'
 
@@ -67,7 +67,7 @@ class Button extends Component {
 
         return (
             <a
-                className={classnames(
+                className={cx(
                     'button',
                     buttonClass,
                     buttonName && `${buttonName}-button`,
@@ -91,7 +91,7 @@ class Button extends Component {
                 />
 
                 {accessKey &&
-                    <div className={classnames(
+                    <div className={cx(
                         'access-button-icon',
                         { 'is-hidden': !isEnabled }
                     )}>

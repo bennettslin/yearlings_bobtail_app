@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import Button from '../button/button'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { DOT_DESCRIPTIONS } from '../../constants/dots'
@@ -135,7 +135,7 @@ DotToggleButtonView = ({
     }
 
     return (
-        <div className={classnames(
+        <div className={cx(
             'dot-container'
         )}>
             <a
@@ -143,7 +143,7 @@ DotToggleButtonView = ({
                 onClick={handleTextContainerClick}
                 onTouchStart={handleTextContainerClick}
             >
-                <span className={classnames(
+                <span className={cx(
                     'anchor-block',
                     'text-anchor-block',
                     'in-dots-section',
@@ -154,7 +154,7 @@ DotToggleButtonView = ({
                     <span className="text-span">{dotKey}</span>
                 </span>
             </a>
-            <div className={classnames(
+            <div className={cx(
                 'anchor-block',
                 'dot-anchor',
                 { 'access-highlighted': accessHighlighted }
@@ -167,7 +167,7 @@ DotToggleButtonView = ({
                     isOverflowShown={true}
                     handleClick={handleDotToggleClick}
                     extraChild={(
-                        <div className={classnames(
+                        <div className={cx(
                             'dot-description',
                             { 'interactivated': isInteractivated }
                         )}>

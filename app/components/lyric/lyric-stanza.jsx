@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import LyricVerse from './lyric-verse'
 
 /*************
@@ -124,7 +124,7 @@ LyricStanzaView = ({
     return (
         <div className="stanza-container">
             {showStanzaTypeAndIndex &&
-                <div className={classnames(
+                <div className={cx(
                     'stanza-tab',
                     typeClassName
                 )}>
@@ -132,7 +132,7 @@ LyricStanzaView = ({
                 </div>
             }
 
-            <div className={classnames(
+            <div className={cx(
                 'stanza',
                 typeClassName
             )}>

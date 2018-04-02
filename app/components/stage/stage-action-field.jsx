@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 const defaultProps = {
     walls: {},
@@ -52,7 +52,7 @@ const StageActionField = ({
 
     return (
         <div className="stage-action-field">
-            <div className={classnames(
+            <div className={cx(
                 'layer',
                 'walls-layer'
             )}>
@@ -60,7 +60,7 @@ const StageActionField = ({
                     return (
                         <div
                             key={`${wallKey}-${songIndex}-${sceneIndex}`}
-                            className={classnames(
+                            className={cx(
                                 'wall',
                                 'thing',
                                 wallKey
@@ -72,7 +72,7 @@ const StageActionField = ({
                 })}
             </div>
 
-            <div className={classnames(
+            <div className={cx(
                 'layer',
                 'fixtures-layer'
             )}>
@@ -80,7 +80,7 @@ const StageActionField = ({
                     return (
                         <div
                             key={`${fixtureKey}-${songIndex}-${sceneIndex}`}
-                            className={classnames(
+                            className={cx(
                                 'fixture',
                                 'thing',
                                 fixtureKey
@@ -92,7 +92,7 @@ const StageActionField = ({
                 })}
             </div>
 
-            <div className={classnames(
+            <div className={cx(
                 'layer',
                 'actors-layer'
             )}>
@@ -100,7 +100,7 @@ const StageActionField = ({
                     return (
                         <div
                             key={`${actorKey}-${songIndex}-${sceneIndex}`}
-                            className={classnames(
+                            className={cx(
                                 'actor',
                                 'thing',
                                 actorKey

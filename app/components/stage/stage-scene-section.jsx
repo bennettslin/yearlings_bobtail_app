@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import StageActionField from './stage-action-field'
 import StageTilesField from './stage-tiles-field'
@@ -54,7 +54,7 @@ class StageSceneSection extends Component {
               floorColours = DEFAULT_STAGE_TILES.floorColours } = tiles
 
         return (
-            <div className={classnames(
+            <div className={cx(
                 'section',
                 'stage-scene-section',
                 isHeavyRenderReady ? 'render-ready' : 'render-unready'

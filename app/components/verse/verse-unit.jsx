@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 import VerseLinesBlock from './verse-lines-block'
 import VerseAudioButton from './verse-audio-button'
 import VerseAudioIndicator from './verse-audio-indicator'
@@ -225,7 +225,7 @@ VerseUnitView = ({
     return (
         <div
             ref={myRef}
-            className={classnames(
+            className={cx(
                 'verse',
                 isInteractable && 'verse-' + verseIndex,
                 verseUnitClassName,

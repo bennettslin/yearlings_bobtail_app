@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 import { getSongVerseTimes,
          getSongTotalTime } from '../../helpers/data-helper'
 
@@ -45,7 +45,7 @@ SliderVerses = ({
                 return (
                     <div
                         key={verseIndex}
-                        className={classnames(
+                        className={cx(
                             'slider-bar',
                             'verse-slider-bar',
                             isEven ? 'even' : 'odd'

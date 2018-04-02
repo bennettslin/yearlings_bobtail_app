@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import { getSceneTimesArray,
          getSongTotalTime } from '../../helpers/data-helper'
@@ -41,7 +41,7 @@ SliderScenes = ({
                 return (
                     <div
                         key={sceneTimeIndex}
-                        className={classnames(
+                        className={cx(
                             'slider-bar',
                             'scene-slider-bar',
                             isEven ? 'even' : 'odd'

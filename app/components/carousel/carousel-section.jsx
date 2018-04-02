@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import CarouselAnnotation from './carousel-annotation'
 import Button from '../button/button'
@@ -102,7 +102,7 @@ class CarouselSection extends Component {
 
         return isHeightlessLyricColumn ? null : (
             <div
-                className={classnames(
+                className={cx(
                     'carousel',
                     'desktop-carousel-gradient-mask',
                     isHeavyRenderReady ? 'render-ready' : 'render-unready',

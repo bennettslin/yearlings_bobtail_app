@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import Button from '../button/button'
 import NavPanel from './nav-panel'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
@@ -158,7 +158,7 @@ NavButtonView = ({
 
     return (
         <div
-            className={classnames(
+            className={cx(
                 'nav-button-block',
                 { 'access-highlighted': accessHighlighted,
                   'access-keys-shown': showEnterAccessKey }

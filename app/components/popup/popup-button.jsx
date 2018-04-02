@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import Button from '../button/button'
 
 import { CLOSE_POPUP_BUTTON,
@@ -53,7 +53,7 @@ PopupButton = ({
 
     return (
         <div
-            className={classnames(
+            className={cx(
                 'popup-button-block',
                 `${buttonName}-position`
             )}

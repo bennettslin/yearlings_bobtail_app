@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import { getPolygonPointsForTileCube,
          getPolygonPointsForFrontCube,
@@ -56,7 +56,7 @@ const StageCubeFace = ({
 
     return (
         <polygon
-            className={classnames(
+            className={cx(
                 'stage-cube-face',
                 face
             )}

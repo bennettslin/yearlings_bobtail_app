@@ -1,7 +1,7 @@
 // Section to show the stage proscenium.
 
 import React from 'react'
-// import classnames from 'classnames'
+// import cx from 'classnames'
 
 const StageProscenium = () => {
 

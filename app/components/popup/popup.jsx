@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import PopupButton from './popup-button'
 
 import { CLOSE_POPUP_BUTTON,
@@ -98,7 +98,7 @@ class Popup extends Component {
 
         return (
             <span
-                className={classnames(
+                className={cx(
                     popupClassName,
                     'popup-transition-group',
                     isVisible ? 'visible' : 'not-visible',
@@ -153,19 +153,19 @@ PopupView = ({
     myChild
 
 }) => (
-    <div className={classnames(
+    <div className={cx(
         'popup-wrapper',
         popupClassName
     )}>
         {showClose &&
-            <div className={classnames(
+            <div className={cx(
                 'popup-button-block',
                 'close-position',
                 'shadow'
             )} />
         }
         {showArrows &&
-            <div className={classnames(
+            <div className={cx(
                 'popup-button-block',
                 'side-position',
                 'previous-position',
@@ -173,7 +173,7 @@ PopupView = ({
             )} />
         }
         {showArrows &&
-            <div className={classnames(
+            <div className={cx(
                 'popup-button-block',
                 'side-position',
                 'next-position',
@@ -181,7 +181,7 @@ PopupView = ({
             )} />
         }
         <div
-            className={classnames(
+            className={cx(
                 'popup-content-wrapper',
                 'access-keys-shown',
                 popupClassName

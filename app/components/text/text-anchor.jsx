@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import TextBlock from './text-block'
 import DotBlock from '../dot/dot-block'
 
@@ -96,7 +96,7 @@ class TextAnchor extends Component {
                     ' '
                 }
                 <a
-                    className={classnames(
+                    className={cx(
                         'anchor-block',
                         'text-anchor-block',
 

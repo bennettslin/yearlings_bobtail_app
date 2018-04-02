@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 const propTypes = {
     className: PropTypes.string,
@@ -16,11 +16,11 @@ const Icon = ({
 
 }) => {
     return (
-        <div className={classnames(
+        <div className={cx(
             'icon-canvas-block',
             dotKey
         )}>
-            <div className={classnames(
+            <div className={cx(
                 'icon-canvas',
                 dotKey,
                 className

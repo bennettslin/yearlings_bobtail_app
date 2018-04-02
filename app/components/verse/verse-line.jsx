@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 import TextBlock from '../text/text-block'
 import { TITLE } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
@@ -62,7 +62,7 @@ class VerseLine extends Component {
 
         return (
             <div
-                className={classnames(
+                className={cx(
                     'line',
                     { [columnKey]: columnKey !== TITLE }
                 )}

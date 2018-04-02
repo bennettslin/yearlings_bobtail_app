@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import classnames from 'classnames'
+import cx from 'classnames'
 import NavBook from './nav-book'
 import NavBookButton from './nav-book-button'
 import NavLogueButton from './nav-logue-button'
@@ -41,7 +41,7 @@ NavBooksColumn = ({
         shownBookColumnIndex === bookIndex
 
     return (
-        <div className={classnames(
+        <div className={cx(
             'books-column-block',
             `column-${bookIndex}`,
             isShownColumn ? 'column-shown' : 'column-hidden'

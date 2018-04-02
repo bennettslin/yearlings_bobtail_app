@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import DynamicSvg from '../dynamic-svg/dynamic-svg'
 import TheatreBalcony from './theatre-balcony'
@@ -57,7 +57,7 @@ const TheatreWallField = ({
 
     return (
         <div
-            className={classnames(
+            className={cx(
                 'field',
                 'theatre-field',
                 'theatre-wall-field',
@@ -66,7 +66,7 @@ const TheatreWallField = ({
             style={wallFieldStyle}
         >
             <DynamicSvg
-                className={classnames(
+                className={cx(
                     'theatre-subfield',
                     'theatre-balconies'
                 )}

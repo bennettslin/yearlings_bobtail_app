@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import DotBlock from '../dot/dot-block'
 import TextBlock from '../text/text-block'
 import AnnotationPortalsBlock from './annotation-portals-block'
@@ -122,7 +122,7 @@ AnnotationCardView = ({
     cardIndex
 
 }) => (
-    <div className={classnames(
+    <div className={cx(
         'annotation-card',
         cardDotKeys
     )}>

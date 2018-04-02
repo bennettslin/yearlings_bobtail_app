@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 import VerseUnit from '../verse/verse-unit'
 import { getVerseObject } from '../../helpers/data-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
@@ -65,7 +65,7 @@ class VerseBar extends Component {
         // Logue will not have verse object.
         return verseObject ? (
             <div
-                className={classnames(
+                className={cx(
                     'verse-bar-block',
                     isAbove ? 'above' : 'below'
                 )}

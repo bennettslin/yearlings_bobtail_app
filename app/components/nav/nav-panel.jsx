@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import cx from 'classnames'
 
 import { getSongTitle } from '../../helpers/data-helper'
 
@@ -32,7 +32,7 @@ NavPanel = ({
     }) : `show Book ${bookIndex === 0 ? 'I' : 'II'}`
 
     return (
-        <div className={classnames(
+        <div className={cx(
             'nav-panel-block',
             { 'leftmost': isLeftmost,
               'rightmost': isRightmost,
