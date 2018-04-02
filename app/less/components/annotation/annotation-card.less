@@ -9,37 +9,40 @@
                                      @carousel-annotation-padding * 2 +
                                      @annotation-section-padding * 2;
 
-.is-desktop {
-    .carousel {
-        .cards-block {
-            margin-bottom: @carousel-annotation-padding;
-        }
-    }
-}
+.cards-block, .annotation-title-block {
 
-.is-mobile {
-    .carousel {
-        .annotation-title-block {
-            margin-top: @carousel-annotation-padding;
-        }
-    }
-}
-
-.carousel {
-    .cards-block, .annotation-title-block {
+    .carousel
+    & {
         /**
-         * Needed in carousel for proper layout. Leave out of phone width, to
-         * prevent overflow.
-         */
-        width: @annotation-card-width +
-               @annotation-card-padding * 2;
+            * Needed in carousel for proper layout. Leave out of phone width, to
+            * prevent overflow.
+            */
+        width: @annotation-card-width + @annotation-card-padding * 2;
+    }
+
+    .mini-width
+    .carousel
+    & {
+        width: @annotation-card-mini-width +
+        @annotation-card-padding * 2;   
     }
 }
 
-.mini-width {
-    .cards-block, .annotation-title-block {
-        width: @annotation-card-mini-width +
-               @annotation-card-padding * 2;
+.cards-block {
+    
+    .is-desktop
+    .carousel
+    & {
+        margin-bottom: @carousel-annotation-padding;
+    }
+}
+
+.annotation-title-block {
+
+    .is-mobile
+    .carousel
+    & {
+        margin-top: @carousel-annotation-padding;
     }
 }
 
@@ -65,10 +68,9 @@
         position: absolute;
         height: @annotation-dot-diameter;
     }
-}
 
-.override-animate {
-    .annotation-card {
+    .override-animate
+    & {
         transition: none;
     }
 }
