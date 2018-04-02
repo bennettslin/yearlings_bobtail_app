@@ -42,7 +42,7 @@ const TheatreFloorField = ({
         },
 
         // Arbitrary values for now.
-        firstRowSeatWidth = stageWidth / 24,
+        firstRowSeatWidth = stageWidth / 12,
         firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
 
         seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({

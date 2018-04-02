@@ -16,32 +16,45 @@ const propTypes = {
     stageHeight: PropTypes.number.isRequired
 }
 
+const StageTilesWood = ({
+    stageWidth,
+    stageHeight
+}) => {
+
+    // Make wood stageHeight just slightly taller than tiles.
+    const woodHeight = stageHeight * (STAGE_Y_PERCENTAGE + 2) * 0.01
+
+    return (
+        <DynamicSvg
+            className="stage-wood"
+            viewBoxWidth={stageWidth}
+            viewBoxHeight={woodHeight}
+        >
+            <rect
+                x={0}
+                y={0}
+                width={stageWidth}
+                height={woodHeight}
+            />
+        </DynamicSvg>
+    )
+}
+
 const StageTilesField = (props) => {
 
     const { isFloor,
             stageWidth,
-            stageHeight } = props,
-
-        // Make wood height just slightly taller than tiles.
-        woodHeight = stageHeight * (STAGE_Y_PERCENTAGE + 2) * 0.01
+            stageHeight } = props
 
     return (
         <div className={classnames(
             'stage-tiles-field',
             isFloor ? 'floor' : 'ceiling'
         )}>
-            <DynamicSvg
-                className="stage-wood"
-                viewBoxWidth={stageWidth}
-                viewBoxHeight={woodHeight}
-            >
-                <rect
-                    x={0}
-                    y={0}
-                    width={stageWidth}
-                    height={woodHeight}
-                />
-            </DynamicSvg>
+            <StageTilesWood
+                stageWidth={stageWidth}
+                stageHeight={stageHeight}
+            />
 
             <StageTiles {...props} />
         </div>

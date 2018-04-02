@@ -6,7 +6,7 @@ import { getArrayOfLength } from '../../helpers/general-helper'
 
 import DynamicSvg from '../dynamic-svg/dynamic-svg'
 
-import StageTile from './stage-tile'
+import StageCube from './stage-cube'
 
 import { TILE_ROWS_LENGTH,
          TILE_COLUMNS_LENGTH } from '../../constants/stage'
@@ -49,10 +49,10 @@ const rowIndicesArray = getArrayOfLength({
 
 const StageTiles = ({
 
-    isFloor,
-    slantDirection,
     zIndices,
     colours,
+    isFloor,
+    slantDirection,
     stageWidth,
     stageHeight
 
@@ -89,21 +89,17 @@ const StageTiles = ({
 
                         colour = coloursRowArray.length > xIndex ?
                             coloursRowArray[xIndex] :
-                            coloursRowArray[coloursRowArray.length - 1],
-
-                        // FIXME: No need to calculate if slanted.
-                        isLeft = xIndex < TILE_COLUMNS_LENGTH / 2
+                            coloursRowArray[coloursRowArray.length - 1]
 
                     return (
-                        <StageTile
+                        <StageCube
                             key={`${xIndex}_${yIndex}`}
-                            isFloor={isFloor}
-                            isLeft={isLeft}
-                            slantDirection={slantDirection}
                             xIndex={xIndex}
                             yIndex={yIndex}
                             zIndex={zIndex}
                             colour={colour}
+                            isFloor={isFloor}
+                            slantDirection={slantDirection}
                             stageWidth={stageWidth}
                             stageHeight={stageHeight}
                         />
