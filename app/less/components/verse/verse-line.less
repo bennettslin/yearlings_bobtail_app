@@ -1,26 +1,4 @@
-.show-only-left .line.right,
-.show-only-right .line.left {
-    // Override max width set programmatically in verse line.
-    // max-width: 0 !important;
-    width: 0;
-    overflow: hidden;
-    padding: 0;
-    max-height: 0;
-
-    &.right:not(:first-child) {
-        margin: 0;
-    }
-}
-
 .line {
-    @centre-edge-margin: 15%;
-
-    // transition: padding @animation-default,
-    //             margin @animation-default,
-    //             width @animation-default,
-    //             max-width @animation-default,
-    //             max-height @animation-default;
-
     /**
      * Maintain distinction between regular lyric line and left line in
      * doublespeaker block, even though they're styled the same.
@@ -64,15 +42,24 @@
             flex-direction: row-reverse;
         }
     }
-}
 
-// Single right column should not have margin left.
-.show-only-right {
-    .line {
-        &.right {
-            &:not(:first-child) {
-                margin-left: 0;
-            }
+    .show-only-left
+    &.right,
+    .show-only-right
+    &.left {
+        width: 0;
+        overflow: hidden;
+        padding: 0;
+        max-height: 0;
+    
+        &.right:not(:first-child) {
+            margin: 0;
         }
+    }
+
+    // Single right column should not have margin left.
+    .show-only-right
+    &.right:not(:first-child) {
+        margin-left: 0;
     }
 }

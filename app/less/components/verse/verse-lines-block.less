@@ -1,3 +1,8 @@
+.double-lines-block {
+    display: flex;
+    justify-content: space-between;
+}
+
 .truncated-main {
     display: none;
 }
@@ -12,24 +17,17 @@
     }
 }
 
-.double-lines-block {
-    display: flex;
-    justify-content: space-between;
-}
-
-// Make font sizes smaller when showing both columns.
-.is-desktop, .tablet-width {
-    &.show-both-columns {
-
+.show-both-columns {
+    
+    &.is-desktop,
+    &.tablet-width {
+        // Make font sizes smaller when showing both columns.
         .double-lines-block, .has-side {
             font-size: 0.95em;
         }
     }
-}
 
-.mini-width {
-    &.show-both-columns {
-
+    &.mini-width {
         // In mini, only has side can still show both columns.
         .has-side {
             font-size: 0.96em * @mini-multiplier;

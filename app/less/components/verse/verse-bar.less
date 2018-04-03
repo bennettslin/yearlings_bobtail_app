@@ -23,12 +23,36 @@
     width: 100%;
 
     max-width: ~"calc(100% - @{verse-bar-desktop-margins})";
+
+    .tablet-width
+    & {
+        max-width: ~"calc(100% - @{verse-bar-tablet-margins})";
+    }
+
+    .mini-width
+    & {
+        max-width: ~"calc(100% - @{verse-bar-mini-margins})";
+    }
+
+    .phone-width
+    & {
+        max-width: ~"calc(100% - @{verse-bar-phone-margins})";
+    }
+
     z-index: @selected-verse-bar-z-index;
+
+    transform: translateX(-50%) scale(0);
 
     &.above {
         top: @verse-bar-hidden-offset;
         margin-top: @verse-bar-margin;
         transition: top @animation-fast, transform @animation-fast;
+
+        .verse-bar-above
+        & {
+            top: 0;
+            transform: translateX(-50%) scale(1);
+        }
 
         .verse-bar {
             box-shadow: @verse-bar-above-box-shadow;
@@ -40,50 +64,15 @@
         margin-bottom: @verse-bar-margin;
         transition: bottom @animation-fast, transform @animation-fast;
 
+        .verse-bar-below
+        & {
+            bottom: 0;
+            transform: translateX(-50%) scale(1);
+        }
+
         .verse-bar {
             box-shadow: @verse-bar-below-box-shadow;
         }
-    }
-
-    transform: translateX(-50%) scale(0);
-    // transform: scale(0);
-}
-
-.verse-bar-above {
-    .verse-bar-block {
-        &.above {
-            top: 0;
-            transform: translateX(-50%) scale(1);
-            // transform: scale(1);
-        }
-    }
-}
-
-.verse-bar-below {
-    .verse-bar-block {
-        &.below {
-            bottom: 0;
-            transform: translateX(-50%) scale(1);
-            // transform: scale(1);
-        }
-    }
-}
-
-.tablet-width {
-    .verse-bar-block {
-        max-width: ~"calc(100% - @{verse-bar-tablet-margins})";
-    }
-}
-
-.mini-width {
-    .verse-bar-block {
-        max-width: ~"calc(100% - @{verse-bar-mini-margins})";
-    }
-}
-
-.phone-width {
-    .verse-bar-block {
-        max-width: ~"calc(100% - @{verse-bar-phone-margins})";
     }
 }
 
@@ -95,14 +84,14 @@
     border-radius: 10px;
     cursor: pointer;
 
+    transition: background-color @animation-default;
+
     .text-span {
         z-index: @verse-bar-text-z-index;
     }
-}
 
-.slider-moving {
-
-    .verse-bar {
+    .slider-moving
+    & {
         background-color: @audio-neutral-colour;
     }
 }

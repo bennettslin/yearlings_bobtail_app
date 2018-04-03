@@ -7,61 +7,23 @@
 
 @verse-audio-button-block-width: @verse-height + @verse-audio-button-block-extra * 2;
 
-.lyric-block {
-    .verse {
-        &:first-child {
+.lyric-block .verse {
+    &:first-child {
+        &, .verse-audio-button-child, .verse-audio-indicator {
             padding-top: @verse-padding;
-
-            .verse-audio-button-block {
-                .verse-audio-button-child {
-                    padding-top: @verse-padding;
-                }
-            }
-
-            .verse-audio-indicator {
-                padding-top: @verse-padding;
-            }
         }
-        &:last-child {
+    }
+    &:last-child {
+        &, .verse-audio-button-child, .verse-audio-indicator {
             padding-bottom: @verse-padding;
-
-            .verse-audio-button-block {
-                .verse-audio-button-child {
-                    padding-bottom: @verse-padding;
-                }
-            }
-
-            .verse-audio-indicator {
-                padding-bottom: @verse-padding;
-            }
         }
+    }
 
-        &.interactable {
-            position: relative;
+    &.interactable {
+        position: relative;
 
-            // Make all this styling better, obviously.
-            &.interactivated {
-
-                .verse-audio-button-block {
-                    left: -@verse-audio-button-block-width * 0.5;
-
-                    z-index: @verse-audio-button-z-index;
-
-                    .icon-canvas {
-                        box-shadow: @verse-audio-box-shadow;
-                    }
-                }
-
-                .verse-audio-button {
-                    opacity: 1;
-                    // font-size: 1em;
-                    animation: fontSnapback 0.16s;
-                }
-            }
-
-            &.interactivated {
-                box-shadow: @interactivated-verse-box-shadow;
-            }
+        &.interactivated {
+            box-shadow: @interactivated-verse-box-shadow;
         }
     }
 }
@@ -77,27 +39,44 @@
 
     transition: left @animation-fast;
 
-    // Either button or icon.
-    .verse-audio-button-child {
-        box-sizing: border-box;
-        height: 100%;
-        width: 100%;
+    .interactivated
+    & {
+        left: -@verse-audio-button-block-width * 0.5;
+        z-index: @verse-audio-button-z-index;
+
+        .icon-canvas {
+            box-shadow: @verse-audio-box-shadow;
+        }
+    }
+}
+
+// Either button or icon.
+.verse-audio-button-child {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    // font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.verse-audio-button {
+    position: relative;
+    // font-size: 0.1em;
+    opacity: 0;
+    // z-index: @verse-audio-button-z-index;
+    transition: opacity @animation-default;
+
+    .interactivated
+    & {
+        opacity: 1;
         // font-size: 1em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        animation: fontSnapback 0.16s;
     }
 
-    .verse-audio-button {
-        position: relative;
-        // font-size: 0.1em;
-        opacity: 0;
-        // z-index: @verse-audio-button-z-index;
-        transition: opacity @animation-default;
-
-        &, .icon-canvas {
-            width: @verse-audio-button-block-width;
-            height: @verse-audio-button-block-width;
-        }
+    &, .icon-canvas {
+        width: @verse-audio-button-block-width;
+        height: @verse-audio-button-block-width;
     }
 }

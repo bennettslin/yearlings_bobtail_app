@@ -119,8 +119,7 @@ class VerseAudioButton extends Component {
                 <div className="verse-audio-button-child">
                     <Button
                         buttonName="verse-audio"
-                        isCustomSize={true}
-                        isOverflowShown={true}
+                        isOverflowShown
                         isEnabled={isEnabled}
                         iconClass={isSelected ? 'audio-play-toggle' : 'audio-nav'}
                         iconText={iconText}
