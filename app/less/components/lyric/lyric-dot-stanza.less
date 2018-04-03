@@ -21,18 +21,17 @@
         transition: background-color @animation-fast,
                     border @animation-fast;
     }
-}
 
-.override-animate {
-    .dot-stanza {
+    .override-animate
+    & {
         .button {
             transition: none;
         }
-    
+        
         &.stanza-block {
             transition: none;
         }
-    
+        
         .dot .icon-canvas {
             transition: none;
         }
