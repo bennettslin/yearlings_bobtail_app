@@ -7,29 +7,25 @@
                 width @animation-default,
                 background-color @animation-default,
                 box-shadow @animation-default;
-}
 
-// NOTE: The order of the following styling rules matters.
-.is-playing {
-    .audio-cursor {
+    // NOTE: The order of the following styling rules matters.
+    .is-playing
+    & {
         background-color: mix(@audio-play-colour, transparent, 50%);
     }
-}
 
-.is-paused {
-    .audio-cursor {
+    .is-paused
+    & {
         background-color: mix(@audio-pause-colour, transparent, 50%);
     }
-}
 
-.is-verse-interactivated {
-    .audio-cursor {
+    .is-verse-interactivated
+    & {
         background-color: @audio-highlight-colour;
     }
-}
 
-.slider-moving {
-    .audio-cursor {
+    .slider-moving
+    & {
         background-color: @audio-neutral-colour;
     }
 }

@@ -1,18 +1,13 @@
 .carousel-annotations-block {
     display: flex;
-}
 
-.is-desktop {
-    .carousel-annotations-block {
+    .is-desktop
+    & {
         margin-bottom: -@carousel-annotation-padding;
-
-        // TODO: Do I like this better or not?
-        // align-items: center;
     }
-}
 
-.is-mobile {
-    .carousel-annotations-block {
+    .is-mobile
+    & {
         margin-top: -@carousel-annotation-padding;
     }
 }
@@ -53,43 +48,40 @@
     &:first-child {
         padding-left: @carousel-toggle-laptop-length;
     }
-}
 
-.tablet-width {
-    .carousel-annotation {
-
+    .tablet-width
+    & {
         // Override to be consistent with desktop.
         &:first-child {
             padding-left: @overview-toggle-tablet-width;            
         }
     }
-}
 
-.mini-width {
-    .carousel-annotation {
-        
+    .mini-width
+    & {
         // Override to be consistent with desktop.
         &:first-child {
             padding-left: @overview-toggle-mini-width;            
         }
     }
-}
 
-.override-animate {
-    .carousel-annotation {
+    .override-animate
+    & {
         transition: none;
     }
-}
 
-/**
- * Override if hidden by single lyric column. Using specific selectors to
- * override styles for mini width as well.
- */
-.dom-manager.is-song.show-only-right .carousel-annotation.in-column-left,
-.dom-manager.is-song.show-only-left .carousel-annotation.in-column-right {
-    min-width: @carousel-annotation-hidden-padding;
+    /**
+     * Override if hidden by single lyric column. Using specific selectors to
+     * override styles for mini width as well.
+     */
+    .dom-manager.is-song.show-only-right
+    &.in-column-left,
+    .dom-manager.is-song.show-only-left
+    &.in-column-right {
+        min-width: @carousel-annotation-hidden-padding;
 
-    .annotation-title-block {
-        max-height: 0;
+        .annotation-title-block {
+            max-height: 0;
+        }
     }
 }

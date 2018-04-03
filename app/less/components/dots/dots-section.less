@@ -1,4 +1,9 @@
 .dots-section {
+    padding: 10px;
+
+    // TODO: Maybe consolidate all the text shadows that use this colour.
+    .text-shadow-mixin(@odd-verse-colour);
+
     // Dots section and dot stanzas.
     .dot .icon-canvas {
         transition: background-color @animation-fast;
@@ -9,11 +14,4 @@
     .dot .icon-canvas {
         border: @dot-border solid @dot-border-colour;
     }
-}
-
-.dots-section {
-    padding: 10px;
-
-    // TODO: Maybe consolidate all the text shadows that use this colour.
-    .text-shadow-mixin(@odd-verse-colour);
 }

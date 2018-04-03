@@ -1,16 +1,13 @@
-.is-desktop {
-
-    &.scores-tips-in-menu {
-
-        /**
-         * In desktop, when tip button is in menu, show tip popup closer to
-         * menu. When it's in main, show it in centre.
-         */
-        .tips.popup-wrapper {
-            position: absolute;
-            top: 5%;
-            right: 5%;
-        }
+.tips.popup-wrapper {
+    /**
+     * In desktop, when tip button is in menu, show tip popup closer to menu.
+     * When it's in main, show it in centre.
+     */
+    .is-desktop.scores-tips-in-menu
+    & {
+        position: absolute;
+        top: 5%;
+        right: 5%;
     }
 }
 

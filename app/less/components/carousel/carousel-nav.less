@@ -14,17 +14,28 @@
     .button:first-child {
         margin-right: @app-thin-margin;
     }
-}
 
-.monitor-width {
-    .carousel-nav-buttons-block {
+    .monitor-width
+    & {
         right: @golden-cord-width;
     }
-}
 
-.laptop-width {
-    .carousel-nav-buttons-block {
+    .laptop-width
+    & {
         right: @uncanny-valley-width;
+    }
+
+    .is-mobile
+    & {
+        top: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
+        bottom: auto;
+        
+        transition: top @animation-default;
+    }
+
+    .mini-width
+    & {
+        top: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
     }
 }
 
@@ -37,19 +48,6 @@
 }
 
 .is-mobile {
-    .carousel-nav-buttons-block {
-        top: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
-        bottom: auto;
-
-        transition: top @animation-default;
-    }
-
-    &.mini-width {
-        .carousel-nav-buttons-block {
-            top: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
-        }
-    }
-
     &.is-song {
         &.carousel-expanded {
             &.annotation-shown {

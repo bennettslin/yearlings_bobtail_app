@@ -19,10 +19,9 @@
     align-items: center;
 
     transition: margin @animation-default;
-}
 
-.overview-shown {
-    .dots-toggle-button-block {
+    .overview-shown
+    & {
         margin-left: -@overview-toggle-width;
     }
 }
