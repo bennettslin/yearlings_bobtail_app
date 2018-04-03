@@ -37,78 +37,60 @@
     & {
         top: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
     }
-}
 
-.is-song {
-    &.annotation-shown.carousel-expanded {
-        .carousel-nav-buttons-block {
-            bottom: 0;
-        }
+    .is-desktop.is-song.annotation-shown.carousel-expanded
+    & {
+        bottom: 0;
     }
-}
 
-.is-mobile {
-    &.is-song {
-        &.carousel-expanded {
-            &.annotation-shown {
-                .carousel-nav-buttons-block {
-                    bottom: auto;
-                    top: 0;
-                }
-            }
-        }
+    .is-mobile.is-song.annotation-shown.carousel-expanded
+    & {
+        top: 0;
     }
 }
 
 // Hide both carousel and nav in logues.
-&.is-song.overlay-hidden {
-    &.dots-section-hidden.lyric-collapsed.overview-hidden.tips-hidden {
+.carousel-nav-can-show {
 
-        &.nav-expanded.not-heightless-lyric {
-            // .column-shown {
-            //     .nav-panel {
-            //         transform: scale(1);
-            //     }
-            // }
+    &.nav-expanded.not-heightless-lyric {
 
-            // No need to make an exception for phone, since it isn't rendered.
-            &.is-mobile {
-                .books-column-block {
-                    top: 0;
-                }
-            }
-
-            &.is-desktop {
-                .books-column-block {
-                    bottom: 0;
-                }
+        // No need to make an exception for phone, since it isn't rendered.
+        &.is-mobile {
+            .books-column-block {
+                top: 0;
             }
         }
 
-        &.carousel-expanded {
+        &.is-desktop {
+            .books-column-block {
+                bottom: 0;
+            }
+        }
+    }
 
+    &.carousel-expanded {
+
+        .carousel {
+            &.render-ready {
+                opacity: 1;
+            }
+        }
+
+        &.is-desktop {
             .carousel {
-                &.render-ready {
-                    opacity: 1;
-                }
+                bottom: -@carousel-height-variable;
             }
+        }
 
-            &.is-desktop {
-                .carousel {
-                    bottom: -@carousel-height-variable;
-                }
+        &.tablet-width {
+            .carousel {
+                top: -@carousel-toggle-tablet-length;
             }
+        }
 
-            &.tablet-width {
-                .carousel {
-                    top: -@carousel-toggle-tablet-length;
-                }
-            }
-
-            &.mini-width {
-                .carousel {
-                    top: -@carousel-toggle-mini-length;
-                }
+        &.mini-width {
+            .carousel {
+                top: -@carousel-toggle-mini-length;
             }
         }
     }

@@ -138,7 +138,12 @@ class DomManager extends Component {
                 handlePlayerTimeChange,
                 handlePlayerNextSong,
                 handlePlayerTimeReset
-            }
+            },
+
+            overviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
+            tipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
+
+            carouselNavCanShow = !isLogue && !showOverlay && !selectedDotsIndex && !isLyricExpanded && !overviewShown && !tipsShown
 
         return (
             <div
@@ -162,8 +167,8 @@ class DomManager extends Component {
 
                     showOverlay ? 'overlay-shown' : 'overlay-hidden',
                     isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
-                    OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN ? 'overview-shown' : 'overview-hidden',
-                    TIPS_OPTIONS[selectedTipsIndex] === SHOWN ? 'tips-shown' : 'tips-hidden',
+                    overviewShown ? 'overview-shown' : 'overview-hidden',
+                    tipsShown ? 'tips-shown' : 'tips-hidden',
 
                     isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
                     showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
@@ -171,6 +176,7 @@ class DomManager extends Component {
                     singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
                     selectedAccessIndex ? 'accessed-on' : 'accessed-off',
                     isHeightlessLyricColumn ? 'heightless-lyric' : 'not-heightless-lyric',
+                    carouselNavCanShow ? 'carousel-nav-can-show' : 'carousel-nav-cannot-show',
 
                     { 'title-in-audio': isTitleInAudio,
                       'verse-bar-above': isVerseBarAbove,

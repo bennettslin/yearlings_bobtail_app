@@ -14,29 +14,23 @@
     z-index: @carousel-z-index + 1;
 
     width: @carousel-toggle-laptop-length;
-}
 
-.is-desktop {
-    .carousel-toggle-button-block {
+    .is-desktop
+    & {
         bottom: 0;
     }
-}
 
-.is-mobile {
-
-    .carousel-toggle-button-block {
+    .is-mobile
+    & {
         top: 0;
         bottom: auto;
         border-radius: 0 0 @nav-border-radius 0;
     }
-}
 
-.is-logue, .dots-section-shown, .lyric-expanded, .overlay-shown, .overview-shown, .tips-shown {
-    .carousel-toggle-button-block {
+    .carousel-nav-cannot-show
+    & {
         margin-left: -@carousel-toggle-laptop-length;
     }
-}
 
-.carousel-toggle-button-block {
     box-shadow: @popup-box-shadow;
 }
