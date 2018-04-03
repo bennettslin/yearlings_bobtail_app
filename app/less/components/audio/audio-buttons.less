@@ -30,28 +30,28 @@
     flex-grow: 3;
 }
 
-.enabled {
-    .audio-nav {
+.audio-nav {
+    .enabled
+    & {
         background-color: @audio-nav-colour;
     }
+}
 
-    .audio-neutral {
+.audio-neutral {
+    .enabled
+    & {
         background-color: @audio-neutral-colour;
     }
 }
 
-.is-playing {
-    .enabled {
-        .audio-play-toggle {
-            background-color: @audio-pause-colour;
-        }
+.audio-play-toggle {
+    .is-playing .enabled
+    & {
+        background-color: @audio-pause-colour;
     }
-}
 
-.is-paused {
-    .enabled {
-        .audio-play-toggle {
-            background-color: @audio-play-colour;
-        }
+    .is-paused .enabled
+    & {
+        background-color: @audio-play-colour;
     }
 }

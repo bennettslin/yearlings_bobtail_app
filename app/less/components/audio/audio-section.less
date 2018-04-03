@@ -7,42 +7,43 @@
     max-width: @audio-max-width;
 
     box-sizing: border-box;
+
+    .tablet-width
+    & {
+        min-width: @audio-banner-min-width + @audio-buttons-constant + @app-tablet-large-icon-diameter + @audio-block-padding * 3;
+    }
+
+    .mini-width
+    & {
+        min-width: @audio-banner-min-width + @audio-buttons-constant + @app-mini-large-icon-diameter + @audio-block-padding * 3;
+    }
+
+    .phone-width
+    & {
+        min-width: @audio-buttons-constant + @app-icon-diameter + @audio-block-padding * 3;
+    }
+}
+
+.audio-section {
+
+    .phone-width
+    & {
+        justify-content: center;
+    }
+
+    .audio-subfield
+    & {
+        height: 100%;
+    }
 }
 
 .audio-subfield {
     transition: margin-bottom @animation-default;
 
-    .audio-section {
-        height: 100%;
-    }
-}
-
-.overlay-shown {
-    .audio-subfield {
+    .overlay-shown
+    & {
         // TODO: I don't understand this number, but it doesn't push it up all the way.
         margin-bottom: @nav-height * 2;
-    }
-}
-
-.tablet-width {
-    .audio-subfield, .popup-wrapper.audio {
-        min-width: @audio-banner-min-width + @audio-buttons-constant + @app-tablet-large-icon-diameter + @audio-block-padding * 3;
-    }
-}
-
-.mini-width {
-    .audio-subfield, .popup-wrapper.audio {
-        min-width: @audio-banner-min-width + @audio-buttons-constant + @app-mini-large-icon-diameter + @audio-block-padding * 3;
-    }
-}
-
-.phone-width {
-    .audio-subfield, .popup-wrapper.audio {
-        min-width: @audio-buttons-constant + @app-icon-diameter + @audio-block-padding * 3;
-    }
-
-    .audio-section {
-        justify-content: center;
     }
 }
 
