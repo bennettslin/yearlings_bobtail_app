@@ -1,41 +1,58 @@
 .dots-toggle-block {
     flex-direction: column;
 
-    .dot-container {
-        display: flex;
-        flex-direction: column-reverse;
-        padding: @dot-container-padding;
+    .dot {
+        &, & .icon-canvas {
+            width: @dot-toggle-container-diameter;
+            height: @dot-toggle-container-diameter;
+        }
+    }
+
+    .phone-width
+    & { 
+        .dot {
+            &, & .icon-canvas {
+                width: @dot-toggle-container-phone-diameter;
+                height: @dot-toggle-container-phone-diameter;
+            }
+        }
+    }
+}
+
+.dot-toggle-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: @dot-toggle-container-padding;
+    
+    .dot-anchor {
+
+        &:hover {
+            .icon-canvas {
+                animation: bounceHover @animation-default;
+            }
+        }
+
+        &:active {
+            .icon-canvas {
+                transform: scale(0.9);
+            }
+        }
     }
 
     .dot {
-        &, & .icon-canvas {
-            width: @dot-container-diameter;
-            height: @dot-container-diameter;
+        &.deselected {
+            .icon-canvas {
+                background-color: @deselected-dot-colour;
+            }
         }
+    }
+
+    .phone-width
+    & {
+        padding: @dot-toggle-container-phone-padding;
     }
 }
 
 .dots-toggle-row {
     display: flex;
-}
-
-.phone-width {
-    .dots-toggle-block {
-
-        .dot-container {
-            padding: @dot-container-phone-padding;
-        }
-
-        .dot {
-            &, & .icon-canvas {
-                width: @dot-container-phone-diameter;
-                height: @dot-container-phone-diameter;
-            }
-        }
-
-        .dot-description {
-            width: @dot-container-phone-diameter;
-            height: @dot-container-phone-diameter;
-        }
-    }
 }

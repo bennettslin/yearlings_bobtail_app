@@ -136,7 +136,7 @@ DotToggleButtonView = ({
 
     return (
         <div className={cx(
-            'dot-container'
+            'dot-toggle-container'
         )}>
             <a
                 className="dot-section-anchor"

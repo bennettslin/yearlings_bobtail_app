@@ -11,10 +11,6 @@
 
     background-color: #dbd;
 
-    .audio-banner {
-        flex-grow: 1;
-    }
-
     @access-icons-block-margin: 3px;
 
     .access-icons-block {
@@ -28,6 +24,12 @@
             right: @access-icons-block-margin;
         }
     }
+
+    .title-in-audio
+    & {
+        min-width: 200px;
+        margin-right: @title-in-audio-block-padding;
+    }
 }
 
 .audio-banner {
@@ -35,6 +37,11 @@
     top: 0;
     left: 0;
     width: 100%;
+
+    .audio-banner-block
+    & {
+        flex-grow: 1;
+    }
 }
 
 .audio-display-block {
@@ -47,15 +54,11 @@
     background-color: #8b8;
 }
 
-.title-in-audio {
-
-    .audio-banner-block {
-        min-width: 200px;
-        margin-right: @title-in-audio-block-padding;
-    }
+.audio-banner-title {
 
     // Make text smaller when width is narrow.
-    .audio-banner-title {
+    .title-in-audio
+    & {
         font-size: 0.85em;
     }
 }

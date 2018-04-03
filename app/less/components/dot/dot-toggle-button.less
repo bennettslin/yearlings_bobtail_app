@@ -5,8 +5,8 @@
     top: 0;
     left: 0;
 
-    width: @dot-container-diameter;
-    height: @dot-container-diameter;
+    width: @dot-toggle-container-diameter;
+    height: @dot-toggle-container-diameter;
     border-radius: 50%;
 
     display: flex;
@@ -22,6 +22,12 @@
     &:hover, &.interactivated {
         opacity: 1;
     }
+
+    .phone-width
+    & {
+        width: @dot-toggle-container-phone-diameter;
+        height: @dot-toggle-container-phone-diameter;
+    }
 }
 
 .dot-section-anchor {
@@ -30,29 +36,4 @@
     font-size: 0.75em;
     transition: box-shadow @animation-default;
     cursor: pointer;
-}
-
-.dot-container {
-    .dot-anchor {
-
-        &:hover {
-            .icon-canvas {
-                animation: bounceHover @animation-default;
-            }
-        }
-
-        &:active {
-            .icon-canvas {
-                transform: scale(0.9);
-            }
-        }
-    }
-
-    .dot {
-        &.deselected {
-            .icon-canvas {
-                background-color: @deselected-dot-colour;
-            }
-        }
-    }
 }
