@@ -49,11 +49,32 @@
         padding-left: @carousel-toggle-laptop-length;
     }
 
+    .monitor-width
+    &:last-child {
+        padding-right:
+            @golden-cord-width + @carousel-nav-buttons-block-width;
+    }
+
+    .laptop-width
+    &:last-child {
+        padding-right:
+            @uncanny-valley-width + @carousel-nav-buttons-block-width;
+    }
+
+    .is-mobile
+    & {
+        flex-direction: column;
+    }
+
     .tablet-width
     & {
         // Override to be consistent with desktop.
         &:first-child {
             padding-left: @overview-toggle-tablet-width;            
+        }
+
+        &:last-child {
+            padding-right: @carousel-nav-buttons-block-tablet-width;
         }
     }
 
@@ -62,6 +83,10 @@
         // Override to be consistent with desktop.
         &:first-child {
             padding-left: @overview-toggle-mini-width;            
+        }
+
+        &:last-child {
+            padding-right: @carousel-nav-buttons-block-mini-width;
         }
     }
 

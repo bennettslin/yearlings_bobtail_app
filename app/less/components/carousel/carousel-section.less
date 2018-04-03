@@ -1,3 +1,15 @@
+.carousel-scroll {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-x: scroll;
+    height: 100%;
+
+    .is-mobile
+    & {
+        flex-direction: column;
+    }
+}
+
 .carousel {
     position: absolute;
     left: 0;
@@ -8,36 +20,29 @@
     transition: bottom @animation-slow,
                 opacity @animation-default;
     opacity: 0;
-}
 
-.carousel-scroll {
-    display: flex;
-    flex-direction: column-reverse;
-    overflow-x: scroll;
-    height: 100%;
-}
+    .is-mobile
+    & {
+        transition: top @animation-slow,
+        opacity @animation-default;
+    }
 
-.monitor-width {
+    .tablet-width
+    & {
+        bottom: auto;
+        top: calc(~"-100% - @{carousel-tablet-variable}");
+        height: calc(~"100% + @{carousel-toggle-tablet-length}");
+    }
 
-    .carousel-annotation {
-        &:last-child {
-            padding-right: @golden-cord-width + @carousel-nav-buttons-block-width;
-        }
+    .mini-width
+    & {
+        top: calc(~"-100% - @{carousel-mini-variable}");
+        height: calc(~"100% + @{carousel-toggle-mini-length}");
     }
 }
 
-.laptop-width {
-
-    .carousel-annotation {
-        &:last-child {
-            padding-right: @uncanny-valley-width + @carousel-nav-buttons-block-width;
-        }
-    }
-}
-
-/** Gradient mask does not work in IE or Edge. */
-
-.monitor-width {
+/** Gradient mask does not work in IE or Edge, though. */
+.desktop-carousel-gradient-mask {
     // Consider Golden Cord width.
     @monitor-carousel-gradient:
         linear-gradient(
@@ -48,14 +53,13 @@
             black @golden-cord-width,
             black
         );
-    .desktop-carousel-gradient-mask {
+    .monitor-width
+    & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: @monitor-carousel-gradient;
         mask-image: @monitor-carousel-gradient;
     }
-}
 
-.laptop-width {
     // Consider Uncanny Valley width.
     @laptop-carousel-gradient:
         linear-gradient(
@@ -66,81 +70,10 @@
             black @uncanny-valley-width,
             black
         );
-    .desktop-carousel-gradient-mask {
+    .laptop-width
+    & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: @laptop-carousel-gradient;
         mask-image: @laptop-carousel-gradient;
-    }
-}
-
-.is-mobile {
-
-    .carousel {
-        transition: top @animation-slow,
-        opacity @animation-default;
-    }
-
-    .carousel-scroll {
-        flex-direction: column;
-    }
-
-    &.lyric-expanded, &.heightless-lyric, &.is-logue {
-        .carousel-toggle-button-block {
-            left: -@overview-toggle-tablet-width;
-        }
-    }
-
-    .carousel-annotation {
-        flex-direction: column;
-
-        &:first-child {
-            padding-left: @carousel-toggle-tablet-length;
-        }
-
-        &:last-child {
-            padding-right: @carousel-nav-buttons-block-tablet-width;
-        }
-    }
-
-    &.tablet-width {
-        .carousel {
-            bottom: auto;
-            top: calc(~"-100% - @{carousel-tablet-variable}");
-            height: calc(~"100% + @{carousel-toggle-tablet-length}");
-        }
-    }
-
-    &.mini-width {
-
-        .carousel {
-            top: calc(~"-100% - @{carousel-mini-variable}");
-            height: calc(~"100% + @{carousel-toggle-mini-length}");
-        }
-
-        // &.is-song {
-        //     &.carousel-expanded.overview-hidden.tips-hidden {
-        //         .carousel {
-        //             top: -@carousel-toggle-mini-length;
-        //         }
-        //     }
-        // }
-
-        &.lyric-expanded, &.heightless-lyric, &.is-logue {
-            .carousel-toggle-button-block {
-                left: -@overview-toggle-mini-width;
-            }
-        }
-
-        .carousel-annotation {
-
-            &:first-child {
-                padding-left: @carousel-toggle-mini-length;
-            }
-
-            &:last-child {
-                padding-right: @carousel-nav-buttons-block-mini-width;
-            }
-        }
-
     }
 }
