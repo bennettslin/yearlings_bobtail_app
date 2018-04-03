@@ -1,5 +1,10 @@
 @audio-max-width: 640px; // Arbitrary
 
+.audio-section, .audio-block, .audio-subblock, .audio-display-block {
+    display: flex;
+    align-items: center;
+}
+
 // Parent container of both audio sections.
 .audio-subfield, .popup-wrapper.audio {
 
@@ -24,7 +29,30 @@
     }
 }
 
+.audio-subfield {
+    transition: margin-bottom @animation-default;
+
+    .overlay-shown
+    & {
+        // TODO: I don't understand this number, but it doesn't push it up all the way.
+        margin-bottom: @nav-height * 2;
+    }
+}
+
 .audio-section {
+
+    flex-grow: 1;
+
+    // Needed for audio banner in overlay.
+    position: relative;
+    padding: @audio-block-padding-y @audio-block-padding;
+
+    background-color: #dbb;
+
+    .title-in-audio
+    & {
+        padding: @audio-block-padding-y @title-in-audio-block-padding;
+    }
 
     .phone-width
     & {
@@ -37,40 +65,7 @@
     }
 }
 
-.audio-subfield {
-    transition: margin-bottom @animation-default;
-
-    .overlay-shown
-    & {
-        // TODO: I don't understand this number, but it doesn't push it up all the way.
-        margin-bottom: @nav-height * 2;
-    }
-}
-
-.audio-section, .audio-block, .audio-subblock, .audio-display-block {
-    display: flex;
-    align-items: center;
-}
-
-.audio-section {
-
-    flex-grow: 1;
-
-    // Needed for audio banner in overlay.
-    position: relative;
-    padding: @audio-block-padding-y @audio-block-padding;
-
-    background-color: #dbb;
-}
-
 .audio-block {
     box-sizing: border-box;
     flex-grow: 1;
-}
-
-.title-in-audio {
-
-    .audio-section {
-        padding: @audio-block-padding-y @title-in-audio-block-padding;
-    }
 }
