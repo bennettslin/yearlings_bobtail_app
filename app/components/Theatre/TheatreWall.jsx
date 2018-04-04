@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DynamicSvg from '../dynamic-svg/dynamic-svg'
-import TheatreBalcony from './theatre-balcony'
+import TheatreWallBalcony from './TheatreWallBalcony'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
 
@@ -58,17 +58,16 @@ const TheatreWallField = ({
     return (
         <div
             className={cx(
+                'TheatreWall',
+                'Theatre__field',
                 'field',
-                'theatre-field',
-                'theatre-wall-field',
                 isRight ? 'right' : 'left'
             )}
             style={wallFieldStyle}
         >
             <DynamicSvg
                 className={cx(
-                    'theatre-subfield',
-                    'theatre-balconies'
+                    'Theatre__subfield'
                 )}
                 viewBoxWidth={wallWidth}
                 viewBoxHeight={windowHeight}
@@ -85,7 +84,7 @@ const TheatreWallField = ({
                             xPosition : wallWidth - balconyWidth - xPosition
 
                     return (
-                        <TheatreBalcony
+                        <TheatreWallBalcony
                             key={index}
                             top={balconyTop}
                             left={balconyLeft}

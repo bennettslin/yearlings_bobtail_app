@@ -8,7 +8,7 @@ const propTypes = {
     height: PropTypes.number.isRequired
 }
 
-const TheatreRafter = ({
+const TheatreCeilingRafter = ({
 
     top,
     left,
@@ -19,7 +19,7 @@ const TheatreRafter = ({
 
     return (
         <rect
-            className="rafter"
+            className="TheatreCeilingRafter"
             x={left}
             y={top}
             width={width}
@@ -28,6 +28,6 @@ const TheatreRafter = ({
     )
 }
 
-TheatreRafter.propTypes = propTypes
+TheatreCeilingRafter.propTypes = propTypes
 
-export default TheatreRafter
+export default TheatreCeilingRafter

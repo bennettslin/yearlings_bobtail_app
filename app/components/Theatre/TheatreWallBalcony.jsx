@@ -8,7 +8,7 @@ const propTypes = {
     height: PropTypes.number.isRequired
 }
 
-const TheatreBalcony = ({
+const TheatreWallBalcony = ({
 
     top,
     left,
@@ -19,7 +19,7 @@ const TheatreBalcony = ({
 
     return (
         <rect
-            className="balcony"
+            className="TheatreWallBalcony"
             x={left}
             y={top}
             width={width}
@@ -28,6 +28,6 @@ const TheatreBalcony = ({
     )
 }
 
-TheatreBalcony.propTypes = propTypes
+TheatreWallBalcony.propTypes = propTypes
 
-export default TheatreBalcony
+export default TheatreWallBalcony

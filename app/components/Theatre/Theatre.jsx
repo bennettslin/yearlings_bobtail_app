@@ -2,11 +2,13 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import { connect } from 'react-redux'
 
-import TheatreWallField from './theatre-wall-field'
-import TheatreCeilingField from './theatre-ceiling-field'
-import TheatreFloorField from './theatre-floor-field'
+import TheatreWall from './TheatreWall'
+import TheatreCeiling from './TheatreCeiling'
+import TheatreFloor from './TheatreFloor'
 
 import { getCentreFieldHeight,
          getTheatreCeilingHeight,
@@ -26,7 +28,7 @@ const mapStateToProps = ({
     windowWidth
 })
 
-class TheatreSection extends Component {
+class Theatre extends Component {
 
     static propTypes = {
         stageCoordinates: PropTypes.shape({
@@ -112,21 +114,24 @@ class TheatreSection extends Component {
             }
 
         return (
-            <div className="section theatre-section">
-                <TheatreCeilingField
+            <div className={cx(
+                'Theatre',
+                'section'
+            )}>
+                <TheatreCeiling
                     windowWidth={windowWidth}
                     ceilingFieldCoordinates={ceilingFieldCoordinates}
                 />
-                <TheatreWallField
+                <TheatreWall
                     windowHeight={windowHeight}
                     wallFieldCoordinates={wallFieldCoordinates}
                 />
-                <TheatreWallField
+                <TheatreWall
                     isRight
                     windowHeight={windowHeight}
                     wallFieldCoordinates={wallFieldCoordinates}
                 />
-                <TheatreFloorField
+                <TheatreFloor
                     windowWidth={windowWidth}
                     floorFieldCoordinates={floorFieldCoordinates}
                     pitStyle={pitStyle}
@@ -136,4 +141,4 @@ class TheatreSection extends Component {
     }
 }
 
-export default connect(mapStateToProps)(TheatreSection)
+export default connect(mapStateToProps)(Theatre)

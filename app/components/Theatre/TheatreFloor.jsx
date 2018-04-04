@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DynamicSvg from '../dynamic-svg/dynamic-svg'
-import TheatreSeat from './theatre-seat'
+import TheatreFloorSeat from './TheatreFloorSeat'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
 
@@ -25,7 +25,7 @@ const propTypes = {
     }).isRequired,
 }
 
-const TheatreFloorField = ({
+const TheatreFloor = ({
 
     windowWidth,
     floorFieldCoordinates,
@@ -55,21 +55,20 @@ const TheatreFloorField = ({
     return (
         <div
             className={cx(
-                'field',
-                'theatre-field',
-                'theatre-floor-field'
+                'TheatreFloor',
+                'Theatre__field',
+                'field'
             )}
             style={floorFieldStyle}
         >
             <div
-                className="theatre-pit"
+                className="TheatreFloor__pit"
                 style={pitStyle}
             />
 
             <DynamicSvg
                 className={cx(
-                    'theatre-subfield',
-                    'theatre-seating'
+                    'Theatre__subfield'
                 )}
                 viewBoxWidth={windowWidth}
                 viewBoxHeight={floorHeight}
@@ -117,7 +116,7 @@ const TheatreFloorField = ({
                                         position: seatLeft } = seat
 
                                 return (
-                                    <TheatreSeat
+                                    <TheatreFloorSeat
                                         key={seatIndex}
                                         top={rowTop}
                                         left={seatLeft}
@@ -134,6 +133,6 @@ const TheatreFloorField = ({
     )
 }
 
-TheatreFloorField.propTypes = propTypes
+TheatreFloor.propTypes = propTypes
 
-export default TheatreFloorField
+export default TheatreFloor

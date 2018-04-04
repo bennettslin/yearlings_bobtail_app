@@ -8,7 +8,7 @@ const propTypes = {
     height: PropTypes.number.isRequired
 }
 
-const TheatreSeat = ({
+const TheatreFloorSeat = ({
 
     top,
     left,
@@ -19,7 +19,7 @@ const TheatreSeat = ({
 
     return (
         <rect
-            className="seat"
+            className="TheatreFloorSeat"
             x={left}
             y={top}
             width={width}
@@ -28,6 +28,6 @@ const TheatreSeat = ({
     )
 }
 
-TheatreSeat.propTypes = propTypes
+TheatreFloorSeat.propTypes = propTypes
 
-export default TheatreSeat
+export default TheatreFloorSeat

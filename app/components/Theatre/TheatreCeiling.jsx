@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DynamicSvg from '../dynamic-svg/dynamic-svg'
-import TheatreRafter from './theatre-rafter'
+import TheatreCeilingRafter from './TheatreCeilingRafter'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
 
@@ -20,7 +20,7 @@ const propTypes = {
     })
 }
 
-const TheatreCeilingField = ({
+const TheatreCeiling = ({
 
     windowWidth,
     ceilingFieldCoordinates
@@ -50,16 +50,15 @@ const TheatreCeilingField = ({
     return (
         <div
             className={cx(
-                'field',
-                'theatre-field',
-                'theatre-ceiling-field'
+                'TheatreCeiling',
+                'Theatre__field',
+                'field'
             )}
             style={ceilingFieldStyle}
         >
             <DynamicSvg
                 className={cx(
-                    'theatre-subfield',
-                    'theatre-rafters'
+                    'Theatre__subfield'
                 )}
                 viewBoxWidth={windowWidth}
                 viewBoxHeight={ceilingHeight}
@@ -75,7 +74,7 @@ const TheatreCeilingField = ({
                         rafterLeft = stageCentreFromLeft - rafterWidth / 2
 
                     return (
-                        <TheatreRafter
+                        <TheatreCeilingRafter
                             key={index}
                             top={rafterTop}
                             left={rafterLeft}
@@ -89,6 +88,6 @@ const TheatreCeilingField = ({
     )
 }
 
-TheatreCeilingField.propTypes = propTypes
+TheatreCeiling.propTypes = propTypes
 
-export default TheatreCeilingField
+export default TheatreCeiling
