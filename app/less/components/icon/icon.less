@@ -59,7 +59,8 @@
     background-color: @button-disabled-colour;
     box-sizing: border-box;
 
-    .dot:not(.dot-stanza-button)
+    // Don't add colour to dot toggle button that is deselected.
+    .dot:not(.dot-stanza-button):not(.deselected)
     & {
         &.portal { background-color: @portal-dot-colour; }
         &.observation { background-color: @observation-dot-colour; }
