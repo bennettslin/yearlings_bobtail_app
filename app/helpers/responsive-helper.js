@@ -65,6 +65,10 @@ export const getIsMonitor = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === MONITOR_WIDTH
 }
 
+export const getIsTabletOrMini = (deviceIndex) => {
+    return _getIsTablet(deviceIndex) || _getIsMini(deviceIndex)
+}
+
 export const getShowSingleBookColumn = ({ deviceIndex, windowWidth }) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex]
 

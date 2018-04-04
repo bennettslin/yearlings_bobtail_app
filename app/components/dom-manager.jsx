@@ -16,7 +16,7 @@ import { SHOWN,
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongIsLogue } from '../helpers/data-helper'
 import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logic-helper'
-import { getIsDesktop, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
+import { getIsDesktop, getIsTabletOrMini, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
 
 class DomManager extends Component {
 
@@ -112,6 +112,7 @@ class DomManager extends Component {
 
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             isDesktop = getIsDesktop(deviceIndex),
+            isTabletOrMini = getIsTabletOrMini(deviceIndex),
 
             isLogue = getSongIsLogue(selectedSongIndex),
 
@@ -152,6 +153,8 @@ class DomManager extends Component {
                     'dom-manager',
                     deviceClassName,
                     isDesktop ? 'is-desktop' : 'is-mobile',
+                    { 'is-tablet-or-mini': isTabletOrMini },
+
                     selectedAdminIndex ? 'is-admin-view' : 'is-live-view',
 
                     selectedDotKeys,
