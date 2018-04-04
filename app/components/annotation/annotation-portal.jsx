@@ -117,11 +117,11 @@ class AnnotationPortal extends Component {
                     />
                 </div>
                 <div className="portal-column text-portal-column">
-                    <div className="song-title">
+                    <div className="portal-song-title">
                         {portalPrefix} <strong>{songTitle}</strong>
                     </div>
 
-                    <div className="verse-text">
+                    <div className="portal-verse-text">
                         <span className="text-span">{'\u201c'}</span>
                         <TextBlock
                             inPortal={true}

@@ -73,8 +73,8 @@ const LyricAccess = ({
         showEnter = showLeftRight && interactivatedVerseIndex < 0
 
     return (
-        <div>
-            <div className="left-right-enter">
+        <div className="lyric-access-row">
+            <div className="access-icons-group">
                 <AccessIconsBlock
                     className="left-right"
                     accessIconKeys={[
@@ -93,17 +93,19 @@ const LyricAccess = ({
                 />
             </div>
 
-            <AccessIconsBlock
-                className="up-down"
-                accessIconKeys={[
-                    NAVIGATION_UP_KEY,
-                    NAVIGATION_DOWN_KEY
-                ]}
-                accessKeysShown={Boolean(
-                    !selectedDotsIndex &&
-                    !selectedAnnotationIndex
-                )}
-            />
+            <div className="access-icons-group">
+                <AccessIconsBlock
+                    className="up-down"
+                    accessIconKeys={[
+                        NAVIGATION_UP_KEY,
+                        NAVIGATION_DOWN_KEY
+                    ]}
+                    accessKeysShown={Boolean(
+                        !selectedDotsIndex &&
+                        !selectedAnnotationIndex
+                    )}
+                />
+            </div>
         </div>
     )
 }

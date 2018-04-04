@@ -4,34 +4,6 @@
     // Keeps elements inside window!
     overflow: hidden;
 
-    @access-icons-block-margin: 10px;
-
-    .left-right-enter, .access-icons-block.up-down {
-        position: absolute;
-        bottom: @access-icons-block-margin;
-    }
-
-    .left-right-enter {
-        left: @access-icons-block-margin;
-        display: flex;
-    }
-
-    .access-icons-block {
-        z-index: @lyric-access-icons-z-index;
-
-        &.up-down {
-            right: @access-icons-block-margin;
-        }
-
-        &.left-right, &.enter {
-            position: initial;
-        }
-
-        &.enter {
-            margin-left: @access-icons-block-margin;
-        }
-    }
-
     .is-song
     & {
         /**
@@ -40,34 +12,21 @@
          */
         z-index: @lyric-column-z-index;
     }
-}
 
-.is-mobile {
-
-    &.is-song {
-        &.lyric-expanded {
-            .lyric-column {
-                height: ~"calc(100% - @{menu-height})";
-            }
-        }
+    .is-mobile.is-song.lyric-expanded
+    & {
+        height: ~"calc(100% - @{menu-height})";
     }
 
-    &.heightless-lyric {
-        .lyric-column {
-            height: 0;
-        }
+    .is-mobile.heightless-lyric
+    & {
+        height: 0;
     }
 
     @phone-lyric-column-subtraction: @menu-phone-height + @audio-banner-custom-subfield-height + @audio-banner-custom-subfield-padding * 2;
 
-    &.phone-width {
-        &.is-song {
-            &.lyric-expanded {
-                .lyric-column {
-                    height: ~"calc(100% - @{phone-lyric-column-subtraction})";
-                }
-            }
-        }
+    .phone-width.is-song.lyric-expanded {
+        height: ~"calc(100% - @{phone-lyric-column-subtraction})";
     }
 }
 

@@ -4,20 +4,19 @@
     height: 100%;
 }
 
-.annotation-card {
-
+.dot {
+    
+    .annotation-card
     // Only style dots that are not in portal.
-    .dots-block {
-        .dot {
-            &, & .icon-canvas {
-                height: @annotation-dot-diameter;
-            }
+    .dots-block
+    & {
+        &, & .icon-canvas {
+            height: @annotation-dot-diameter;
         }
     }
-}
-
-.text-anchor-block {
-    .dot {
+    
+    .text-anchor-block
+    & {
         &, & .icon-canvas {
             height: @lyric-anchor-dot-diameter;
         }

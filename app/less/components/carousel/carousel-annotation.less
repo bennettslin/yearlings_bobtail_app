@@ -23,23 +23,6 @@
     transition: min-width @animation-default,
                 opacity @animation-default;
 
-    .annotation-section {
-        transition: background-color @animation-default;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        padding-bottom: @annotation-section-padding;
-
-        // margin: @carousel-annotation-small-padding
-        //         @annotation-section-padding;
-
-        padding: @carousel-annotation-small-padding
-                 @carousel-annotation-padding
-                 @carousel-annotation-padding;
-    }
-
     &:not(:last-child) {
         margin-right: @annotation-section-padding * 0.5 -
                       @carousel-annotation-padding * 2;
@@ -108,5 +91,25 @@
         .annotation-title-block {
             max-height: 0;
         }
+    }
+}
+
+.annotation-section {
+    .carousel-annotation
+    & {
+        transition: background-color @animation-default;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding-bottom: @annotation-section-padding;
+
+        // margin: @carousel-annotation-small-padding
+        //         @annotation-section-padding;
+
+        padding: @carousel-annotation-small-padding
+                 @carousel-annotation-padding
+                 @carousel-annotation-padding;
     }
 }

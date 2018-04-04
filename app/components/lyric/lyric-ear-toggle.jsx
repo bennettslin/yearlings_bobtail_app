@@ -2,6 +2,8 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import { connect } from 'react-redux'
 import Button from '../button/button'
 import { LYRIC_COLUMN_TOGGLE_KEY } from '../../constants/access'
@@ -33,7 +35,11 @@ LyricEarToggle = ({
 }) => {
 
     return showOneOfTwoLyricColumns && (
-        <div className="lyric-button-block ear-button-block access-keys-shown">
+        <div className={cx(
+            'lyric-button-block',
+            'ear-button-block',
+            'access-keys-shown'
+        )}>
             <Button
                 isLarge={true}
                 accessKey={LYRIC_COLUMN_TOGGLE_KEY}

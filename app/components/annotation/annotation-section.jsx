@@ -132,7 +132,10 @@ AnnotationSectionView = ({
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}
         >
-            <div className="annotation-title-block">
+            <div className={cx(
+                'annotation-title-block',
+                { 'in-carousel-width': inCarousel }
+            )}>
                 {annotationTitle === IS_DOT_STANZA ? (
                     <div className="annotation-title">
                         <DotAnchor
@@ -162,7 +165,10 @@ AnnotationSectionView = ({
                     </a>
                 )}
             </div>
-            <div className="cards-block">
+            <div className={cx(
+                'cards-block',
+                { 'in-carousel-width': inCarousel }
+            )}>
                 <AnnotationUnit {...other}
 
                     /**

@@ -1,40 +1,43 @@
 .portal-block {
     display: flex;
-    box-shadow: @annotation-portal-box-shadow;
     padding: 10px;
     margin: 5px;
+    box-shadow: @annotation-portal-box-shadow;
+    background-color: @portal-block-colour;
+}
 
-    .text-portal-column {
-        padding-left: 10px;
+// Accommodate foreign characters in Didi and Kyon.
+.portal-song-title {
+    margin-bottom: 0.25em;
+    font-size: 1em;
+    color: @lyric-text-invert-colour;
+
+    strong {
+        color: @lyric-text-colour;
+    }
+}
+
+.portal-verse-text {
+
+    // TODO: Doesn't have text outline.
+
+    text-indent: -@hanging-indent-width;
+    padding-left: @hanging-indent-width;
+
+    font-size: 0.9em;
+
+    .text-span {
+        color: @lyric-text-invert-colour;
     }
 
-    // Accommodate foreign characters in Didi and Kyon.
-    .song-title {
-        margin-bottom: 0.25em;
-        font-size: 1em;
-        color: @lyric-text-invert-colour;
-
-        strong {
+    .portal-anchor {
+        .text-span {
             color: @lyric-text-colour;
         }
     }
+}
 
-    .verse-text {
-        text-indent: -@hanging-indent-width;
-        padding-left: @hanging-indent-width;
-
-        font-size: 0.9em;
-
-        .text-span {
-            color: @lyric-text-invert-colour;
-        }
-
-        .portal-anchor {
-            .text-span {
-                color: @lyric-text-colour;
-            }
-        }
-    }
-
-    background-color: @portal-block-colour;
+.text-portal-column {
+    
+    padding-left: 10px;
 }

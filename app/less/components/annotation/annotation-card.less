@@ -9,25 +9,20 @@
                                      @carousel-annotation-padding * 2 +
                                      @annotation-section-padding * 2;
 
-.cards-block, .annotation-title-block {
-
-    .carousel
-    & {
-        /**
-            * Needed in carousel for proper layout. Leave out of phone width, to
-            * prevent overflow.
-            */
-        width: @annotation-card-width + @annotation-card-padding * 2;
-    }
+.in-carousel-width {
+    /**
+     * Needed in carousel for proper layout.
+     */
+    width: @annotation-card-width + @annotation-card-padding * 2;
 
     .mini-width
-    .carousel
     & {
         width: @annotation-card-mini-width +
         @annotation-card-padding * 2;   
     }
 }
 
+// FIXME: There should be a better way to handle carousel sizing and layout. Afterwards, the in-carousel-width class might no longer be necessary.
 .cards-block {
     
     .is-desktop
@@ -36,7 +31,6 @@
         margin-bottom: @carousel-annotation-padding;
     }
 }
-
 .annotation-title-block {
 
     .is-mobile
@@ -126,16 +120,18 @@
 }
 
 // Override if in carousel and hidden by single lyric column.
-.show-only-right .carousel-annotation.in-column-left,
-.show-only-left .carousel-annotation.in-column-right {
+.carousel-annotation {
 
-    & {
+    .show-only-right
+    &.in-column-left,
+    .show-only-left
+    &.in-column-right {
         opacity: 0;
-    }
-
-    .annotation-card {
-        margin: auto;
-        opacity: 0;
-        box-shadow: none;
+    
+        .annotation-card {
+            margin: auto;
+            opacity: 0;
+            box-shadow: none;
+        }
     }
 }

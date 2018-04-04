@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import DotToggleButton from './dot-toggle-button'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
@@ -32,7 +34,10 @@ DotToggleBlock = ({
         secondHalfArray = ALL_DOT_KEYS.slice(firstHalfEnd)
 
     return (
-        <span className="dots-block dots-toggle-block">
+        <span className={cx(
+            'dots-block',
+            'dots-toggle-block'
+        )}>
             <div className="dots-toggle-row">
                 {firstHalfArray.map((dotKey, firstHalfIndex) => {
 

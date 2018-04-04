@@ -1,0 +1,34 @@
+@access-icons-block-margin: 10px;
+
+.lyric-access-row {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: @access-icons-block-margin;
+    box-sizing: border-box;
+
+    display: flex;
+}
+
+.access-icons-group {
+    display: flex;
+}
+
+.access-icons-block {
+    .lyric-column
+    & {
+        z-index: @lyric-access-icons-z-index;
+
+        &.up-down {
+            right: @access-icons-block-margin;
+        }
+
+        &.left-right, &.enter {
+            position: initial;
+        }
+
+        &.enter {
+            margin-left: @access-icons-block-margin;
+        }
+    }
+}
