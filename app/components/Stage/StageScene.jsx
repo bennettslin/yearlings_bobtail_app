@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import StageActionField from './stage-action-field'
+import StageActionField from './StageSceneAction'
 import StageTilesField from './stage-tiles-field'
-import StageSkyField from './stage-sky-field'
+import StageSceneSky from './StageSceneSky'
 
 import { getSceneObject } from '../../helpers/data-helper'
 import { DEFAULT_STAGE_TILES } from '../../constants/stageTiles'
@@ -59,7 +59,7 @@ class StageSceneSection extends Component {
                 'section',
                 isHeavyRenderReady ? 'render-ready' : 'render-unready'
             )}>
-                <StageSkyField
+                <StageSceneSky
                     sky={sky}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}

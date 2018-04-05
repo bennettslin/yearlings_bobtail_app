@@ -8,7 +8,7 @@ const StageProscenium = () => {
     return (
         <div
             className={cx(
-                'stage-proscenium',
+                'StageProscenium',
                 'Stage__absoluteContainer'
             )}
         >

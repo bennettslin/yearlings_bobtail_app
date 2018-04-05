@@ -52,7 +52,7 @@ const StageActionField = ({
 
     return (
         <div className={cx(
-            'stage-action-field',
+            'StageSceneAction',
             'Stage__absoluteContainer'
         )}>
             <div className={cx(

@@ -35,7 +35,7 @@ const propTypes = {
     stageHeight: PropTypes.number.isRequired
 }
 
-const StageSkyField = ({
+const StageSceneSky = ({
 
     sky,
     stageWidth,
@@ -46,7 +46,7 @@ const StageSkyField = ({
 
     return (
         <DynamicSvg
-            className="stage-sky-field"
+            className="StageSceneSky"
             viewBoxWidth={stageWidth}
             viewBoxHeight={stageHeight}
         >
@@ -86,7 +86,7 @@ const StageSkyField = ({
     )
 }
 
-StageSkyField.defaultProps = defaultProps
-StageSkyField.propTypes = propTypes
+StageSceneSky.defaultProps = defaultProps
+StageSceneSky.propTypes = propTypes
 
-export default StageSkyField
+export default StageSceneSky

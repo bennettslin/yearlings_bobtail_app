@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import StageSceneSection from './StageScene'
-import StageProscenium from './stage-proscenium';
+import StageProscenium from './StageProscenium';
 
 const mapStateToProps = ({
     stageCoordinates
