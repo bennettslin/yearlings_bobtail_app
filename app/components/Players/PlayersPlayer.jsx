@@ -3,9 +3,10 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { setCanPlayThroughs } from '../../redux/actions/player'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
+
+import { setCanPlayThroughs } from '../../redux/actions/player'
 import { getSongsNotLoguesCount } from '../../helpers/data-helper'
 import { setNewValueInBitNumber } from '../../helpers/bit-helper'
 import { getComponentShouldUpdate } from '../../helpers/general-helper'
@@ -28,7 +29,7 @@ const mapStateToProps = ({
     canPlayThroughs
 })
 
-class Player extends Component {
+class PlayersPlayer extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -76,7 +77,7 @@ class Player extends Component {
                         staticProp: 'isSelected',
                         subUpdatingKey: 'updatedTimePlayed'
                     }
-                    // Player itself does not update on canPlayThroughs.
+                    // PlayersPlayer itself does not update on canPlayThroughs.
                 ]
             })
 
@@ -290,4 +291,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(Player)
+export default connect(mapStateToProps, bindDispatchToProps)(PlayersPlayer)

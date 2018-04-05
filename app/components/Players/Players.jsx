@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import Player from './player'
+import PlayersPlayer from './PlayersPlayer'
 import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from '../../helpers/data-helper'
 import { convertBitNumberToTrueFalseKeys } from '../../helpers/bit-helper'
 import { getNextPlayerToRender } from '../../helpers/logic-helper'
@@ -16,7 +16,7 @@ const mapStateToProps = ({
     canPlayThroughs
 })
 
-class PlayersSection extends Component {
+class Players extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -90,14 +90,16 @@ class PlayersSection extends Component {
             mp3s = getMp3s()
 
         return (
-            <div className="audio-players-section">
+            <div
+                style={{ display: 'none' }}
+            >
                 {mp3s.map((mp3, index) => {
                     const songIndex = index + 1,
                         isSelected = songIndex === selectedSongIndex,
                         totalTime = getSongTotalTime(songIndex)
 
                     return this._playerShouldRender(songIndex) ? (
-                        <Player {...other}
+                        <PlayersPlayer {...other}
                             key={index}
                             songIndex={songIndex}
                             mp3={mp3}
@@ -111,4 +113,4 @@ class PlayersSection extends Component {
     }
 }
 
-export default connect(mapStateToProps)(PlayersSection)
+export default connect(mapStateToProps)(Players)

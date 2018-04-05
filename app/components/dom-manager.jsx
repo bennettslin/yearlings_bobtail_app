@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import SwitchManager from './switch-manager'
 import AdminToggle from './admin/admin-toggle'
-import PlayersSection from './player/players-section'
+import Players from './Players/Players'
 import { SHOWN,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
@@ -201,7 +201,7 @@ class DomManager extends Component {
             >
                 <AdminToggle />
 
-                <PlayersSection {...audioPlayersProps} />
+                <Players {...audioPlayersProps} />
 
                 <div className="popup-overlay" />
 
