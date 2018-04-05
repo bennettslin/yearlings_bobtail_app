@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import App from './App'
+import AppManager from './AppManager'
 
 import { getSongVerseTimes } from '../helpers/dataHelper'
 import { getValidRoutingIndicesObject, getPathForIndices } from '../helpers/routingHelper'
@@ -99,7 +99,7 @@ class RoutingManager extends Component {
 
     render() {
         return (
-            <App {...this.props}
+            <AppManager {...this.props}
                 updatePath={this.updatePath}
             />
         )

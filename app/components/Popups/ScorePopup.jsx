@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import ScoreSection from '../Score/score-section'
+import Score from '../Score/Score'
 import Popup from '../Popup/Popup'
 
 const mapStateToProps = ({
@@ -36,7 +36,7 @@ ScorePopup = ({
 
     const isVisible = !!selectedScoreIndex,
         myChild = (
-            <ScoreSection {...other} />
+            <Score {...other} />
         )
 
     return (

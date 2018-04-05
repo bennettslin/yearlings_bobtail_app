@@ -2,6 +2,8 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { setIsScoreLoaded } from '../../redux/actions/player'
@@ -13,7 +15,7 @@ const mapStateToProps = ({
     renderReadySongIndex
 })
 
-class ScoreSection extends Component {
+class Score extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -40,7 +42,10 @@ class ScoreSection extends Component {
         return (
             <div
                 ref={this.props.scoreSectionRef}
-                className="section score-section"
+                className={cx(
+                    'Score',
+                    'section'
+                )}
                 onKeyDown={this.hi}
                 tabIndex="1"
             >
@@ -63,4 +68,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(ScoreSection)
+export default connect(mapStateToProps, bindDispatchToProps)(Score)
