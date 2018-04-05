@@ -2,13 +2,6 @@
     position: relative;
 }
 
-// Corrects access button icon position in popup buttons, for some reason.
-.popup-button-block {
-    .button {
-        position: initial;
-    }
-}
-
 /**
  * Button and animated background will have same width, so that animated
  * background container can animate to zero width.
@@ -43,7 +36,7 @@
     }
 }
 
-.button.large, .popup-button-block, .lyric-button-block {
+.button.large, .lyric-button-block {
     &, & .icon-canvas {
         width: @app-large-icon-diameter;
         height: @app-large-icon-diameter;
@@ -51,7 +44,7 @@
 }
 
 .tablet-width {
-    .button.large, .popup-button-block, .lyric-button-block {
+    .button.large, .lyric-button-block {
         &, & .icon-canvas {
             width: @app-tablet-large-icon-diameter;
             height: @app-tablet-large-icon-diameter;
@@ -60,7 +53,7 @@
 }
 
 .mini-width {
-    .button.large, .popup-button-block, .lyric-button-block {
+    .button.large, .lyric-button-block {
         &, & .icon-canvas {
             width: @app-mini-large-icon-diameter;
             height: @app-mini-large-icon-diameter;
@@ -69,7 +62,7 @@
 }
 
 .phone-width {
-    .button.large, .popup-button-block, .lyric-button-block {
+    .button.large, .lyric-button-block {
         &, & .icon-canvas {
             width: @app-icon-diameter;
             height: @app-icon-diameter;

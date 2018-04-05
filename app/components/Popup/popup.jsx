@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import PopupButton from './popup-button'
+import PopupButton from './PopupButton'
 
 import { CLOSE_POPUP_BUTTON,
          PREVIOUS_POPUP_BUTTON,
@@ -159,14 +159,14 @@ PopupView = ({
     )}>
         {showClose &&
             <div className={cx(
-                'popup-button-block',
+                'PopupButton',
                 'close-position',
                 'shadow'
             )} />
         }
         {showArrows &&
             <div className={cx(
-                'popup-button-block',
+                'PopupButton',
                 'side-position',
                 'previous-position',
                 'shadow'
@@ -174,7 +174,7 @@ PopupView = ({
         }
         {showArrows &&
             <div className={cx(
-                'popup-button-block',
+                'PopupButton',
                 'side-position',
                 'next-position',
                 'shadow'

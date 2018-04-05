@@ -203,7 +203,7 @@ class DomManager extends Component {
 
                 <Players {...audioPlayersProps} />
 
-                <div className="popup-overlay" />
+                <div className="PopupOverlay" />
 
                 <SwitchManager {...other} />
 

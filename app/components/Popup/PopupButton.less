@@ -1,0 +1,49 @@
+.PopupButton {
+    position: absolute;
+
+    &.close-position {
+        top: -@app-large-icon-diameter * @PopupButton-multiplier;
+        left: -@app-large-icon-diameter * @PopupButton-multiplier;
+        // border-radius: 50%;
+    }
+
+    &.side-position {
+        top: @app-large-icon-diameter * 0.2;
+    }
+
+    &.previous-position {
+        left: -@app-large-icon-diameter * @PopupButton-multiplier;
+    }
+
+    &.next-position {
+        right: -@app-large-icon-diameter * @PopupButton-multiplier;
+    }
+
+    &.shadow {
+        display: block;
+        overflow: hidden;
+        box-shadow: @popup-box-shadow;
+        border-radius: 50%;
+
+        &.close-position {
+            box-shadow: @popup-darker-box-shadow;
+        }
+    }
+
+    .overlaid-annotation
+    & {
+        &.side-position {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    
+        &.shadow {
+            box-shadow: @popup-darker-box-shadow;
+        }
+    }
+
+    // Corrects access icon position in popup buttons, for some reason.
+    .button {
+        position: initial;
+    }
+}

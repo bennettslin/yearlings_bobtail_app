@@ -54,11 +54,12 @@ PopupButton = ({
     return (
         <div
             className={cx(
-                'popup-button-block',
+                'PopupButton',
                 `${buttonName}-position`
             )}
         >
             <Button
+                isLarge
                 isOverflowShown={true}
                 accessKey={accessKey}
                 iconText={tempUnicodeSymbol}

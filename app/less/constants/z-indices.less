@@ -46,10 +46,10 @@
 @menu-subfield-z-index: @menu-field-z-index + 1;
 
 // Score, title, and wiki popups are higher.
-@popup-overlay-z-index: @menu-subfield-z-index + 1;
-@popup-overlay-content-z-index: @popup-overlay-z-index + 1;
+@PopupOverlay-z-index: @menu-subfield-z-index + 1;
+@PopupOverlay-content-z-index: @PopupOverlay-z-index + 1;
 
-@audio-in-overlay-z-index: @popup-overlay-content-z-index + 1;
+@audio-in-overlay-z-index: @PopupOverlay-content-z-index + 1;
 
 // The overlay preventing popup interaction should be the highest.
 @super-overlay-z-index: @audio-in-overlay-z-index + 1;

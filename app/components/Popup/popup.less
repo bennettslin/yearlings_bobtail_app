@@ -1,3 +1,7 @@
+@import "./PopupButton.less";
+@import "./PopupOverlay.less";
+@import "./popup-transition-group.less";
+
 .popup-field, .popup-field .subfield, .popup-transition-group {
     position: absolute;
     width: 100%;
@@ -32,7 +36,7 @@
 .popup-wrapper {
     position: relative;
 
-    z-index: @popup-overlay-content-z-index;
+    z-index: @PopupOverlay-content-z-index;
 
     &.wiki, &.score {
         width: ~"calc(100% - @{full-subfield-margin} * 2.5)";
@@ -102,12 +106,12 @@
 
     &.phone-width, &.side-annotation {
 
-        .popup-button-block {
+        .PopupButton {
             &.side-position {
                 // Override default styling.
                 transform: none;
                 top: auto;
-                bottom: -@app-icon-diameter * @popup-button-multiplier;
+                bottom: -@app-icon-diameter * @PopupButton-multiplier;
             }
 
             &.previous-position {
@@ -127,7 +131,7 @@
                 height: ~"calc(100% - @{app-icon-diameter})";
             }
 
-            .popup-button-block {
+            .PopupButton {
                 &.close-position {
                     display: none;
                 }
