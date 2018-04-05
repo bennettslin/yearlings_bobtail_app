@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import OverviewToggle from '../app/components/overview/overview-button.jsx'
+import OverviewToggle from '../app/components/Overview/overview-button.jsx'
 
 describe('OverviewToggle', () => {
     let overviewButton

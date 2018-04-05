@@ -7,7 +7,7 @@
 @scores-tips-mini-width: 2 * @app-mini-large-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
 @scores-tips-phone-width: 2 * @app-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
 
-.scores-tips-section {
+.ScoresTipsSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +23,7 @@
 }
 
 .centre-field {
-    .scores-tips-section {
+    .ScoresTipsSection {
         flex-direction: column;
         align-items: flex-start;
 
@@ -37,7 +37,7 @@
 
     min-width: @scores-tips-width;
 
-    .scores-tips-section {
+    .ScoresTipsSection {
         .button:first-child {
             margin-right: @scores-tips-margin;
         }
@@ -47,7 +47,7 @@
 .is-mobile {
 
     .centre-field {
-        .scores-tips-section {
+        .ScoresTipsSection {
             position: absolute;
             transition: right @animation-default;
             right: 0;
@@ -64,7 +64,7 @@
     &.mini-width {
         // Affects section in centre field only.
         &.lyric-expanded, &.overview-shown, &.tips-shown, &.annotation-shown.nav-expanded, &.dots-section-shown {
-            .scores-tips-section {
+            .ScoresTipsSection {
                 right: -@scores-tips-mini-width;
             }
         }
@@ -76,13 +76,13 @@
 
     &.phone-width {
         &.lyric-expanded, &.overview-shown, &.tips-shown, &.annotation-shown.nav-expanded, &.dots-section-shown {
-            .scores-tips-section {
+            .ScoresTipsSection {
                 right: -@scores-tips-phone-width;
             }
         }
 
         // In phone, section is always in centre field.
-        .scores-tips-section {
+        .ScoresTipsSection {
             bottom: auto;
         }
     }
@@ -90,7 +90,7 @@
 
 // I don't understand this.
 .is-logue, .is-song.overview-shown.scores-tips-in-main {
-    .scores-tips-section {
+    .ScoresTipsSection {
 
         .button {
             transform: scale(0);
@@ -100,7 +100,7 @@
 }
 
 .is-song {
-    .scores-tips-section {
+    .ScoresTipsSection {
         .button {
             transform: scale(1);
         }

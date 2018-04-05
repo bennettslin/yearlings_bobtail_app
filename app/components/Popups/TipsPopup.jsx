@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import TipsSection from '../Tips/tips-section'
+import Tips from '../Tips/Tips'
 import Popup from '../Popup/Popup'
 import { getSongIsLogue } from '../../helpers/dataHelper'
 
@@ -45,7 +45,7 @@ TipsPopup = ({
         isVisible = isHeavyRenderReady && !isLogue && !selectedTipsIndex && !selectedTitleIndex,
 
         myChild = (
-            <TipsSection {...other} />
+            <Tips {...other} />
         )
 
     return (

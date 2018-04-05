@@ -3,8 +3,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
 
-import TipsToggle from './tips-toggle'
+import TipsToggle from './TipsToggle'
 import TextBlock from '../text/text-block'
 import { getSongTip } from '../../helpers/dataHelper'
 import { SHOWN, TIPS_OPTIONS } from '../../constants/options'
@@ -19,7 +20,7 @@ const mapStateToProps = ({
     isScoresTipsInMain
 })
 
-class TipsSection extends Component {
+class Tips extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -56,10 +57,13 @@ class TipsSection extends Component {
             isEnabled = TIPS_OPTIONS[selectedTipsIndex] === SHOWN
 
         return (
-            <div className="section tips-section">
+            <div className={cx(
+                'Tips',
+                'section'
+            )}>
                 <div className="tips-text">
                     {isScoresTipsInMain && (
-                        <div className="tips-toggle-section">
+                        <div className="TipsToggle-section">
                             <TipsToggle
                                 isEnabled={isEnabled}
                                 handleTipsToggle={this._handleTipsToggle}
@@ -81,4 +85,4 @@ class TipsSection extends Component {
     }
 }
 
-export default connect(mapStateToProps)(TipsSection)
+export default connect(mapStateToProps)(Tips)

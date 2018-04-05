@@ -29,7 +29,7 @@ TipsToggle = ({
     handleTipsToggle
 
 }) => (
-    <div className="tips-toggle-button-container">
+    <div className="TipsToggle-button-container">
         <Button
             isLarge={true}
             isEnabled={isEnabled}

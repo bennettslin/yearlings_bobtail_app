@@ -5,8 +5,8 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import AudioSection from '../audio/audio-section'
-import ScoresTipsSection from './scores-tips-section'
+import AudioSection from '../Audio/audio-section'
+import ScoresTipsSection from './ScoresTipsSection'
 import TitleToggle from '../Title/TitleToggle'
 
 const menuFieldPropTypes = {

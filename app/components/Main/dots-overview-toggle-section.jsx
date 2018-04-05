@@ -3,8 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DotsToggle from '../dots/dots-toggle'
-import OverviewToggle from '../overview/overview-toggle'
-import ScoresTipsSection from './scores-tips-section'
+import OverviewToggle from '../Overview/overview-toggle'
+import ScoresTipsSection from './ScoresTipsSection'
 
 const dotsOverviewToggleSectionPropTypes = {
     // From parent.

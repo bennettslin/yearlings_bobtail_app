@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import MenuField from './menu-field'
 import NavSection from '../nav/nav-section'
 import AnnotationPopup from '../Popups/AnnotationPopup'
-import AudioBanner from '../audio/audio-banner'
+import AudioBanner from '../Audio/audio-banner'
 import CarouselToggle from '../carousel/carousel-toggle'
 import CarouselSection from '../carousel/carousel-section'
 import DotsSection from '../dots/dots-section'
@@ -17,7 +17,7 @@ import LyricToggle from '../lyric/lyric-toggle'
 import Stage from '../stage/Stage'
 import OverviewPopup from '../Popups/OverviewPopup'
 import TipsPopup from '../Popups/TipsPopup'
-import ScoresTipsSection from './scores-tips-section'
+import ScoresTipsSection from './ScoresTipsSection'
 
 const mainColumnPropTypes = {
     // From parent.

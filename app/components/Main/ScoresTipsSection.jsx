@@ -78,7 +78,7 @@ ScoresTipsSection = ({
         showScoreToggleButton = !getIsPhone(deviceIndex)
 
     return shouldRender && (
-        <div className="section scores-tips-section access-keys-shown">
+        <div className="section ScoresTipsSection access-keys-shown">
             {showScoreToggleButton &&
                 <Button
                     accessKey={SCORE_TOGGLE_KEY}
