@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import TitleSection from './title-section'
+import TitleSection from '../Title/title-section'
 import Popup from '../popup/popup'
 
 const mapStateToProps = ({

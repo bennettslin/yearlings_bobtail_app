@@ -7,7 +7,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import MenuField from './menu-field'
 import NavSection from '../nav/nav-section'
-import AnnotationPopup from '../annotation/annotation-popup'
+import AnnotationPopup from '../Popups/AnnotationPopup'
 import AudioBanner from '../audio/audio-banner'
 import CarouselToggle from '../carousel/carousel-toggle'
 import CarouselSection from '../carousel/carousel-section'
@@ -15,8 +15,8 @@ import DotsSection from '../dots/dots-section'
 import DotsOverviewToggleSection from './dots-overview-toggle-section'
 import LyricToggle from '../lyric/lyric-toggle'
 import Stage from '../stage/Stage'
-import OverviewPopup from '../overview/overview-popup'
-import TipsPopup from '../tips/tips-popup'
+import OverviewPopup from '../Popups/OverviewPopup'
+import TipsPopup from '../Popups/TipsPopup'
 import ScoresTipsSection from './scores-tips-section'
 
 const mainColumnPropTypes = {
@@ -74,7 +74,7 @@ MainColumn = ({
                     scoresTipsSectionHandlers={scoresTipsSectionHandlers}
                 />
 
-                <div className="overview-popup-container">
+                <div className="OverviewPopup-container">
                     <OverviewPopup {...overviewPopupHandlers}
                         inOverviewSubfield={true}
                     />

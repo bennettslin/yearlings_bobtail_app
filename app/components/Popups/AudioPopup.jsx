@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Popup from '../popup/popup'
-import AudioSection from './audio-section'
+import AudioSection from '../Audio/audio-section'
 import { getShowOverlay } from '../../helpers/logic-helper'
 
 const mapStateToProps = ({

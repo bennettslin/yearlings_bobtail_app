@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import OverviewSection from './overview-section'
+import OverviewSection from '../Overview/overview-section'
 import Popup from '../popup/popup'
 import { getSongIsLogue } from '../../helpers/data-helper'
 

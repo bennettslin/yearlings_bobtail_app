@@ -9,11 +9,11 @@ import Theatre from '../Theatre/Theatre'
 import MainColumn from './main-column'
 import OverviewLogueColumn from './overview-logue-column'
 import LyricColumn from '../lyric/lyric-column'
-import AudioPopup from '../audio/audio-popup'
-import AnnotationPopup from '../annotation/annotation-popup'
-import ScorePopup from '../score/score-popup'
-import TitlePopup from '../title/title-popup'
-import WikiPopup from '../wiki/wiki-popup'
+import AudioPopup from '../Popups/AudioPopup'
+import AnnotationPopup from '../Popups/AnnotationPopup'
+import ScorePopup from '../Popups/ScorePopup'
+import TitlePopup from '../Popups/TitlePopup'
+import WikiPopup from '../Popups/WikiPopup'
 
 class LiveManager extends Component {
 
@@ -232,7 +232,7 @@ class LiveManager extends Component {
                 <LyricColumn {...lyricColumnHandlers} />
 
                 <div className="overlay-popup-subfield">
-                    <div className="overlay-popup-block audio-popup-block">
+                    <div className="overlay-popup-block AudioPopup-block">
                         <AudioPopup {...audioSectionHandlers} />
                     </div>
                     <div className="overlay-popup-block main-popup-block">

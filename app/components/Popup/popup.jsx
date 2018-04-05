@@ -100,7 +100,7 @@ class Popup extends Component {
             <span
                 className={cx(
                     popupClassName,
-                    'popup-transition-group',
+                    'Popup',
                     isVisible ? 'visible' : 'not-visible',
                     { 'not-displayed': !isDisplayed }
                 )}

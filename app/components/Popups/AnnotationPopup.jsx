@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import AnnotationSection from './annotation-section'
+import AnnotationSection from '../Annotation/annotation-section'
 import Popup from '../popup/popup'
 import { getIsOverlayingAnnotation,
          getIsPhone } from '../../helpers/responsive-helper'

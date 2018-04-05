@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import ScoreSection from './score-section'
+import ScoreSection from '../Score/score-section'
 import Popup from '../popup/popup'
 
 const mapStateToProps = ({

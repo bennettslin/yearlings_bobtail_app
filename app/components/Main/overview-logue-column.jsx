@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import OverviewPopup from '../overview/overview-popup'
+import OverviewPopup from '../Popups/OverviewPopup'
 
 const mapStateToProps = ({
     stageCoordinates,
