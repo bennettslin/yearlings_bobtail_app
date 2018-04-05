@@ -1,0 +1,85 @@
+@overview-mobile-bottom-margin: 5px;
+
+.tablet-width, .mini-width {
+    .OverviewToggle-button-container,
+
+    // This applies only to overviews in songs, not logues.
+    .OverviewPopup-container .overview.popup-wrapper {
+
+        // Give some room to lyric section below.
+        margin-bottom: @overview-mobile-bottom-margin;
+    }
+}
+
+.tablet-width {
+    .OverviewToggle-button-container {
+        height: @OverviewToggle-tablet-height;
+    }
+
+    // Inside overview bubble.
+    &.is-logue.heightless-lyric {
+        .OverviewToggle-section {
+            width: @OverviewToggle-tablet-width;
+            height: @OverviewToggle-tablet-height;
+        }
+    }
+}
+
+.mini-width {
+    .DotsOverviewToggleSection, .carousel-toggle-button-block {
+        width: @OverviewToggle-mini-width;
+    }
+
+    .OverviewToggle-button-container {
+        height: @OverviewToggle-mini-height;
+    }
+
+    // Inside overview bubble.
+    &.is-logue.heightless-lyric {
+        .OverviewToggle-section {
+            width: @OverviewToggle-mini-width;
+            height: @OverviewToggle-mini-height;
+        }
+    }
+}
+
+.phone-width {
+
+    &.dots-section-shown {
+        .dots-subfield {
+            margin-left: @dots-subfield-phone-margin;
+        }
+    }
+
+    // In phone, also hidden to left when overview is shown.
+    &.overview-shown {
+        .DotsOverviewToggleSection {
+            opacity: 0;
+            margin-left: -@OverviewToggle-phone-width;
+        }
+    }
+
+    .DotsOverviewToggleSection {
+        width: @OverviewToggle-phone-width;
+    }
+
+    .OverviewToggle-button-container {
+        height: @OverviewToggle-phone-height;
+    }
+
+    // Inside overview bubble.
+    .OverviewToggle-section {
+        width: @OverviewToggle-phone-width;
+        height: @OverviewToggle-phone-height;
+    }
+}
+
+.is-logue.heightless-lyric, &.phone-width {
+
+    // Inside overview bubble.
+    .OverviewToggle-section {
+            position: relative;
+            margin-right: 10px;
+            float: left;
+    }
+}

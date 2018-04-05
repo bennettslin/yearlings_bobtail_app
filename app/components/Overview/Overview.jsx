@@ -3,8 +3,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import TextBlock from '../text/text-block'
-import OverviewToggle from './overview-toggle'
+import OverviewToggle from './OverviewToggle'
 import { getSongOverview, getSongIsLogue } from '../../helpers/dataHelper'
 import { getIsToggleInOverview } from '../../helpers/responsiveHelper'
 import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'
@@ -66,10 +68,13 @@ class OverviewSection extends Component {
                 !isLogue
 
         return (
-            <div className="section overview-section">
+            <div className={cx(
+                'Overview',
+                'section'
+            )}>
                 <div className="overview-text">
                     {isToggleInOverview &&
-                        <div className="overview-toggle-section">
+                        <div className="OverviewToggle-section">
                             <OverviewToggle
                                 isEnabled={isEnabled}
                                 handleOverviewToggle={this._handleOverviewToggle}

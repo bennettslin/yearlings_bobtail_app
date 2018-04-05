@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import OverviewSection from '../app/components/Overview/overview-section.jsx'
+import OverviewSection from '../app/components/Overview/Overview.jsx'
 
 describe('OverviewSection', () => {
     let overviewSection
