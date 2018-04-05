@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import StageActionField from './StageSceneAction'
-import StageTilesField from './stage-tiles-field'
+import StageSceneTiling from './StageSceneTiling'
 import StageSceneSky from './StageSceneSky'
 
 import { getSceneObject } from '../../helpers/data-helper'
@@ -66,7 +66,7 @@ class StageSceneSection extends Component {
                 />
 
                 {/* Ceiling tiles. */}
-                <StageTilesField
+                <StageSceneTiling
                     isFloor={false}
                     slantDirection={slantDirection}
                     zIndices={ceilingZIndices}
@@ -76,7 +76,7 @@ class StageSceneSection extends Component {
                 />
 
                 {/* Floor tiles. */}
-                <StageTilesField
+                <StageSceneTiling
                     isFloor={true}
                     slantDirection={slantDirection}
                     zIndices={floorZIndices}

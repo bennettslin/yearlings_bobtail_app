@@ -1,15 +1,16 @@
-.stage-tiles-field, .stage-wood {
+.StageSceneTiling,
+.Wood {
     position: absolute;
     width: 100%;
     left: 0;
-    
-    &.stage-tiles-field {
-        height: 100%;
-        bottom: 0;
-    }
 }
 
-.stage-wood {
+.StageSceneTiling {
+    height: 100%;
+    bottom: 0;
+}
+
+.Wood {
     .floor & {
         bottom: 0;
         fill: #aba;
@@ -19,8 +20,4 @@
         top: 0;
         fill: #aab;
     }
-}
-
-.stage-tiles {
-    position: relative;
 }

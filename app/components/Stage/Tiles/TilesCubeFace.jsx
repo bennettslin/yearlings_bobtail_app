@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { getPolygonPointsForTileCube,
          getPolygonPointsForFrontCube,
-         getPolygonPointsForSideCube } from '../../helpers/tiles-helper'
+         getPolygonPointsForSideCube } from '../../../helpers/tiles-helper'
 
 const propTypes = {
     face: PropTypes.string.isRequired,
@@ -16,7 +16,7 @@ const propTypes = {
 }
 
 /* eslint-disable no-unused-vars */
-const StageCubeFace = ({
+const TilesCubeFace = ({
 
     face,
     isLeft,
@@ -57,7 +57,7 @@ const StageCubeFace = ({
     return (
         <polygon
             className={cx(
-                'stage-cube-face',
+                'TilesCubeFace',
                 face
             )}
             points={polygonPoints}
@@ -65,6 +65,6 @@ const StageCubeFace = ({
     )
 }
 
-StageCubeFace.propTypes = propTypes
+TilesCubeFace.propTypes = propTypes
 
-export default StageCubeFace
+export default TilesCubeFace

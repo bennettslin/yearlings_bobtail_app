@@ -2,14 +2,14 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { getArrayOfLength } from '../../helpers/general-helper'
 
-import DynamicSvg from '../DynamicSvg/DynamicSvg'
+import DynamicSvg from '../../DynamicSvg/DynamicSvg'
+import TilesCube from './TilesCube'
 
-import StageCube from './stage-cube'
+import { getArrayOfLength } from '../../../helpers/general-helper'
 
 import { TILE_ROWS_LENGTH,
-         TILE_COLUMNS_LENGTH } from '../../constants/stage'
+         TILE_COLUMNS_LENGTH } from '../../../constants/stage'
 
 const propTypes = {
     isFloor: PropTypes.bool.isRequired,
@@ -54,7 +54,7 @@ const rowIndicesArray = getArrayOfLength({
             TILE_COLUMNS_LENGTH - ceilValue : ceilValue
     })
 
-const StageTiles = ({
+const Tiles = ({
 
     zIndices,
     colours,
@@ -65,7 +65,7 @@ const StageTiles = ({
 
 }) => (
     <DynamicSvg
-        className="stage-tiles"
+        className="Tiles"
         viewBoxWidth={stageWidth}
         viewBoxHeight={stageHeight}
     >
@@ -108,7 +108,7 @@ const StageTiles = ({
                             coloursRowArray[coloursRowArray.length - 1]
 
                     return (
-                        <StageCube
+                        <TilesCube
                             key={`${xIndex}_${yIndex}`}
                             xIndex={xIndex}
                             yIndex={yIndex}
@@ -125,6 +125,6 @@ const StageTiles = ({
         })}
     </DynamicSvg>
 )
-StageTiles.propTypes = propTypes
+Tiles.propTypes = propTypes
 
-export default StageTiles
+export default Tiles

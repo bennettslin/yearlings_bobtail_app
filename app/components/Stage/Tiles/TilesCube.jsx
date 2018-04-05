@@ -3,13 +3,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import StageCubeFace from './stage-cube-face'
+import TilesCubeFace from './TilesCubeFace'
 
-import { getStageCubeCornerPercentages } from '../../helpers/tiles-helper'
+import { getStageCubeCornerPercentages } from '../../../helpers/tiles-helper'
 
-import { TILE_COLUMNS_LENGTH } from '../../constants/stage'
+import { TILE_COLUMNS_LENGTH } from '../../../constants/stage'
 
-class StageCube extends Component {
+class TilesCube extends Component {
 
     static propTypes = {
         xIndex: PropTypes.number.isRequired,
@@ -39,9 +39,9 @@ class StageCube extends Component {
             isLeft = xIndex < TILE_COLUMNS_LENGTH / 2;
 
         return (
-            <g className="stage-cube">
+            <g className="TilesCube">
 
-                <StageCubeFace
+                <TilesCubeFace
                     face="tile"
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
@@ -49,7 +49,7 @@ class StageCube extends Component {
                     stageHeight={stageHeight}
                 />
 
-                <StageCubeFace
+                <TilesCubeFace
                     face="side"
                     isLeft={isLeft}
                     cubeCorners={cubeCorners}
@@ -58,7 +58,7 @@ class StageCube extends Component {
                     stageHeight={stageHeight}
                 />
 
-                <StageCubeFace
+                <TilesCubeFace
                     face="front"
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
@@ -70,4 +70,4 @@ class StageCube extends Component {
     }
 }
 
-export default StageCube
+export default TilesCube
