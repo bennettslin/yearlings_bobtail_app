@@ -8,7 +8,7 @@ import { getValidRoutingIndicesObject, getPathForIndices } from '../helpers/rout
 
 import { selectAnnotationIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 
-class RoutingContainer extends Component {
+class RoutingManager extends Component {
 
     constructor(props) {
         super(props)
@@ -119,4 +119,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(RoutingContainer)
+export default connect(mapStateToProps, bindDispatchToProps)(RoutingManager)

@@ -3,8 +3,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import AdminManager from './admin/admin-manager'
-import LiveManager from './Main/live-manager'
+import AdminManager from './admin/adminManager'
+import LiveManager from './Main/liveManager'
 
 const mapStateToProps = ({
     selectedAdminIndex

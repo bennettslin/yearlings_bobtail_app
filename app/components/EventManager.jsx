@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
-import AccessManager from './access-manager'
+import AccessManager from './AccessManager'
 import { REFERENCE } from '../constants/dots'
 import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
@@ -691,7 +691,7 @@ class EventManager extends Component {
         // In admin view.
         } else {
             focusElement = this.myDomManager ||
-                document.getElementsByClassName('dom-manager')[0]
+                document.getElementsByClassName('domManager')[0]
         }
 
         if (focusElement) {

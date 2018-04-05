@@ -219,7 +219,7 @@ class LiveManager extends Component {
             }
 
         return (
-            <div className="live-manager">
+            <div className="liveManager">
 
                 <Theatre />
 

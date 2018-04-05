@@ -7,7 +7,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import SwitchManager from './switch-manager'
+import SwitchManager from './switchManager'
 import AdminToggle from './admin/admin-toggle'
 import Players from './Players/Players'
 import { SHOWN,
@@ -150,7 +150,7 @@ class DomManager extends Component {
             <div
                 ref={domManagerRef}
                 className={cx(
-                    'dom-manager',
+                    'domManager',
                     deviceClassName,
                     isDesktop ? 'is-desktop' : 'is-mobile',
                     { 'is-tablet-or-mini': isTabletOrMini },

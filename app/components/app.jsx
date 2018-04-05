@@ -13,7 +13,7 @@ import { setIsHeightlessLyricColumn, setIsHiddenNav, setIsMobileWiki, setIsScore
 import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
-import EventManager from './event-manager'
+import EventManager from './eventManager'
 import { ALL_DOT_KEYS } from '../constants/dots'
 import { CONTINUE,
          PAUSE_AT_END,

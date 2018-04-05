@@ -11,7 +11,7 @@ import { Provider } from 'react-redux'
 import reducers from './redux/reducers'
 
 import './less/app.less'
-import RoutingContainer from './components/routing-container'
+import RoutingManager from './components/RoutingManager'
 
 // Why did you update?
 const turnOnWDYULogging = false
@@ -34,8 +34,8 @@ ReactDOM.render(
     <Provider store={store}>
         <Router>
             <Switch>
-                <Route exact path="/" component={RoutingContainer} />
-                <Route exact path="/:routingParamString/" component={RoutingContainer} />
+                <Route exact path="/" component={RoutingManager} />
+                <Route exact path="/:routingParamString/" component={RoutingManager} />
             </Switch>
         </Router>
     </Provider>,
