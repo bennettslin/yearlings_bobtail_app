@@ -3,7 +3,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import StageSceneSection from './stage-scene-section'
+import cx from 'classnames'
+
+import StageSceneSection from './StageScene'
 import StageProscenium from './stage-proscenium';
 
 const mapStateToProps = ({
@@ -12,7 +14,7 @@ const mapStateToProps = ({
     stageCoordinates
 })
 
-class StageSection extends Component {
+class Stage extends Component {
 
     static propTypes = {
         stageCoordinates: PropTypes.shape({
@@ -30,20 +32,25 @@ class StageSection extends Component {
             { top,
               left,
               width,
-              height } = stageCoordinates,
-
-            aspectRatioContainerStyle = {
-                top: `${top}px`,
-                left: `${left}px`,
-                width: `${width}px`,
-                height: `${height}px`
-            }
+              height } = stageCoordinates
 
         return (
-            <div className="section stage-section">
+            <div className={cx(
+                'Stage',
+                'Stage__absoluteContainer',
+                'section'
+            )}>
                 <div
-                    className="aspect-ratio-container"
-                    style={aspectRatioContainerStyle}
+                    className={cx(
+                        'Stage__aspectRatioContainer',
+                        'Stage__absoluteContainer'
+                    )}
+                    style={{
+                        top: `${top}px`,
+                        left: `${left}px`,
+                        width: `${width}px`,
+                        height: `${height}px`
+                    }}
                 >
                     <StageSceneSection
                         stageWidth={width}
@@ -56,4 +63,4 @@ class StageSection extends Component {
     }
 }
 
-export default connect(mapStateToProps)(StageSection)
+export default connect(mapStateToProps)(Stage)

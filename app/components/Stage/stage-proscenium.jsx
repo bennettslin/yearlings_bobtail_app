@@ -1,13 +1,16 @@
 // Section to show the stage proscenium.
 
 import React from 'react'
-// import cx from 'classnames'
+import cx from 'classnames'
 
 const StageProscenium = () => {
 
     return (
         <div
-            className="stage-proscenium"
+            className={cx(
+                'stage-proscenium',
+                'Stage__absoluteContainer'
+            )}
         >
             {/* Layout is all handled in css. */}
             <div className="proscenium-layer top" />

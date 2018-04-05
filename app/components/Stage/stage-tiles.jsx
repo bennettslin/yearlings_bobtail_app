@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { getArrayOfLength } from '../../helpers/general-helper'
 
-import DynamicSvg from '../dynamic-svg/dynamic-svg'
+import DynamicSvg from '../DynamicSvg/DynamicSvg'
 
 import StageCube from './stage-cube'
 

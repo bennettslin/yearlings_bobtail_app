@@ -51,7 +51,10 @@ const StageActionField = ({
 
 
     return (
-        <div className="stage-action-field">
+        <div className={cx(
+            'stage-action-field',
+            'Stage__absoluteContainer'
+        )}>
             <div className={cx(
                 'layer',
                 'walls-layer'

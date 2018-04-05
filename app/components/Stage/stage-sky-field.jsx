@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DynamicSvg from '../dynamic-svg/dynamic-svg'
+import DynamicSvg from '../DynamicSvg/DynamicSvg'
 
 import { SKY_NO_TIME,
          SKY_MORNING,
