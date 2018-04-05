@@ -45,7 +45,7 @@ TitleToggle = ({
             'section',
             'access-keys-shown'
         )}>
-            <div className="TitleToggle-button-container">
+            <div className="TitleToggle__button">
                 <Button
                     isCustomShape={true}
                     isCustomSize={true}
