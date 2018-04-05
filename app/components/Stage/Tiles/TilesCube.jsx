@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import TilesCubeFace from './TilesCubeFace'
 
-import { getStageCubeCornerPercentages } from '../../../helpers/tiles-helper'
+import { getStageCubeCornerPercentages } from '../../../helpers/tilesHelper'
 
 import { TILE_COLUMNS_LENGTH } from '../../../constants/stage'
 

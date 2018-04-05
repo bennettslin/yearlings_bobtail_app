@@ -7,8 +7,8 @@ import cx from 'classnames'
 import VerseLinesBlock from './verse-lines-block'
 import VerseAudioButton from './verse-audio-button'
 import VerseAudioIndicator from './verse-audio-indicator'
-import { getVerseUnitClassName, getSliderStatusClassName } from '../../helpers/format-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getVerseUnitClassName, getSliderStatusClassName } from '../../helpers/formatHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isSliderTouched,

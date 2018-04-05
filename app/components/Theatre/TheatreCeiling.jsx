@@ -7,7 +7,7 @@ import cx from 'classnames'
 import DynamicSvg from '../DynamicSvg/DynamicSvg'
 import TheatreCeilingRafter from './TheatreCeilingRafter'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
+import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/generalHelper'
 
 import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../../constants/stage'
 

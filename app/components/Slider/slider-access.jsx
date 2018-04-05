@@ -7,7 +7,7 @@ import { NAVIGATION_ENTER_KEY,
          AUDIO_REWIND_KEY,
          AUDIO_FAST_FORWARD_KEY } from '../../constants/access'
 
-import { getSongIsLogue } from '../../helpers/data-helper'
+import { getSongIsLogue } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     selectedSongIndex,

@@ -7,10 +7,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
-import { getSongsNotLoguesCount } from '../../helpers/data-helper'
-import { getVerseAudioIconText } from '../../helpers/format-helper'
-import { getValueInBitNumber } from '../../helpers/bit-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getSongsNotLoguesCount } from '../../helpers/dataHelper'
+import { getVerseAudioIconText } from '../../helpers/formatHelper'
+import { getValueInBitNumber } from '../../helpers/bitHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isPlaying,

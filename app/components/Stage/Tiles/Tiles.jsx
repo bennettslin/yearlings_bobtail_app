@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 import TilesCube from './TilesCube'
 
-import { getArrayOfLength } from '../../../helpers/general-helper'
+import { getArrayOfLength } from '../../../helpers/generalHelper'
 
 import { TILE_ROWS_LENGTH,
          TILE_COLUMNS_LENGTH } from '../../../constants/stage'

@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { getSongTotalTime, getVerseBeginAndEndTimes } from '../../helpers/data-helper'
+import { getSongTotalTime, getVerseBeginAndEndTimes } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     selectedSongIndex,

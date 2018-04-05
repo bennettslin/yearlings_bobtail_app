@@ -7,8 +7,8 @@ import cx from 'classnames'
 import Button from '../button/button'
 import NavPanel from './nav-panel'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
-import { getSongIsLogue } from '../../helpers/data-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getSongIsLogue } from '../../helpers/dataHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     interactivatedVerseIndex,

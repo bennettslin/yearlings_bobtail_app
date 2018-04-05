@@ -3,8 +3,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import App from './App'
 
-import { getSongVerseTimes } from '../helpers/data-helper'
-import { getValidRoutingIndicesObject, getPathForIndices } from '../helpers/routing-helper'
+import { getSongVerseTimes } from '../helpers/dataHelper'
+import { getValidRoutingIndicesObject, getPathForIndices } from '../helpers/routingHelper'
 
 import { selectAnnotationIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 

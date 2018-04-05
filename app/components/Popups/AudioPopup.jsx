@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Popup from '../popup/popup'
 import AudioSection from '../Audio/audio-section'
-import { getShowOverlay } from '../../helpers/logic-helper'
+import { getShowOverlay } from '../../helpers/logicHelper'
 
 const mapStateToProps = ({
     deviceIndex,

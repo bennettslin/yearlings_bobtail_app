@@ -4,7 +4,7 @@ import {
     getTwoToThePowerOfN,
     convertBitNumberToTrueFalseKeys,
     setNewValueInBitNumber
-} from './bit-helper'
+} from './bitHelper'
 import AlbumData from '../album-data'
 
 import {

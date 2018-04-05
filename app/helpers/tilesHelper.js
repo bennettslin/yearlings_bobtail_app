@@ -8,7 +8,7 @@ import {
 
 import {
     roundPercentage
-} from './general-helper'
+} from './generalHelper'
 
 const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
     SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]

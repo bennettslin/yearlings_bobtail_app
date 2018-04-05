@@ -9,7 +9,7 @@ import StageActionField from './StageSceneAction'
 import StageSceneTiling from './StageSceneTiling'
 import StageSceneSky from './StageSceneSky'
 
-import { getSceneObject } from '../../helpers/data-helper'
+import { getSceneObject } from '../../helpers/dataHelper'
 import { DEFAULT_STAGE_TILES } from '../../constants/stageTiles'
 
 const mapStateToProps = ({

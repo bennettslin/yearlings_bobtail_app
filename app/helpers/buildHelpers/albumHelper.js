@@ -1,11 +1,11 @@
 // Parse album data for build.
 
 import { LEFT, RIGHT, ANCHOR, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, PROPER_NOUN } from '../../constants/lyrics'
-import { registerCards, addDestinationPortalLinks, finalPrepareCard, addDestinationPortalIndices, addDestinationPortalFormats } from './annotations-helper'
-import { getSongIsLogue } from '../data-helper'
-import { adminGatherDrawings, adminFinaliseDrawings, adminRegisterDrawingTasks, finalRegisterScenes } from './drawings-helper'
-import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes } from './lyrics-helper'
-import { getFormattedAnnotationTitle } from '../format-helper'
+import { registerCards, addDestinationPortalLinks, finalPrepareCard, addDestinationPortalIndices, addDestinationPortalFormats } from './annotationsHelper'
+import { getSongIsLogue } from '../dataHelper'
+import { adminGatherDrawings, adminFinaliseDrawings, adminRegisterDrawingTasks, finalRegisterScenes } from './drawingsHelper'
+import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes } from './lyricsHelper'
+import { getFormattedAnnotationTitle } from '../formatHelper'
 
 export const parseAlbumData = (albumObject) => {
 

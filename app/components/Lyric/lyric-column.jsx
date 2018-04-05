@@ -9,7 +9,7 @@ import LyricToggle from './lyric-toggle'
 import LyricEarToggle from './lyric-ear-toggle'
 import LyricSection from './lyric-section'
 import VerseBar from '../verse/verse-bar'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isHeavyRenderReady,

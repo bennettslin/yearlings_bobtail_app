@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import DotToggleBlock from '../dot/dot-toggle-block'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     selectedDotKeys

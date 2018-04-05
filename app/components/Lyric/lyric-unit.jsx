@@ -7,8 +7,8 @@ import cx from 'classnames'
 import LyricStanza from './lyric-stanza'
 import LyricDotStanza from './lyric-dot-stanza'
 import { TITLE } from '../../constants/lyrics'
-import { getLyricUnitArray } from '../../helpers/data-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getLyricUnitArray } from '../../helpers/dataHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex,

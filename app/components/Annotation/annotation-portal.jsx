@@ -8,8 +8,8 @@ import TextBlock from '../text/text-block'
 import DotButton from '../dot/dot-button'
 import { PORTAL } from '../../constants/dots'
 import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
-import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from '../../helpers/data-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from '../../helpers/dataHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex,

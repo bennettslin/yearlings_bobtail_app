@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import OverviewSection from '../Overview/overview-section'
 import Popup from '../popup/popup'
-import { getSongIsLogue } from '../../helpers/data-helper'
+import { getSongIsLogue } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     selectedOverviewIndex,

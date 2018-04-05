@@ -4,10 +4,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import AnnotationSection from '../annotation/annotation-section'
+import AnnotationSection from '../Annotation/annotation-section'
 import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
-import { getAnnotationObject } from '../../helpers/data-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getAnnotationObject } from '../../helpers/dataHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex

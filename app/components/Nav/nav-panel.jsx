@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getSongTitle } from '../../helpers/data-helper'
+import { getSongTitle } from '../../helpers/dataHelper'
 
 const navPanelPropTypes = {
     // From parent.

@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import VerseUnit from '../verse/verse-unit'
-import { getVerseObject } from '../../helpers/data-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getVerseObject } from '../../helpers/dataHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex

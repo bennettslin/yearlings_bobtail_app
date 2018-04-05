@@ -1,6 +1,6 @@
 // Reducers for state persisted in user's local storage.
 import { SELECTED_ACCESS_INDEX, SELECTED_ADMIN_INDEX, SELECTED_ANNOTATION_INDEX, SELECTED_AUDIO_OPTION_INDEX, SELECTED_CAROUSEL_NAV_INDEX, SELECTED_DOT_KEYS, SELECTED_DOTS_INDEX, SELECTED_LYRIC_COLUMN_INDEX, SELECTED_OVERVIEW_INDEX, SELECTED_SCORE_INDEX, SELECTED_SONG_INDEX, SELECTED_TIME_PLAYED, SELECTED_TIPS_INDEX, SELECTED_TITLE_INDEX, SELECTED_VERSE_INDEX, SELECTED_WIKI_INDEX } from '../../constants/state'
-import StorageHelper from '../../helpers/storage-helper'
+import StorageHelper from '../../helpers/storageHelper'
 
 const { getFromStorage } = StorageHelper,
     storedAccessIndex = getFromStorage(SELECTED_ACCESS_INDEX),

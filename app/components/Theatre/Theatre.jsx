@@ -12,7 +12,7 @@ import TheatreFloor from './TheatreFloor'
 
 import { getCentreFieldHeight,
          getTheatreCeilingHeight,
-         getTheatreFloorHeight } from '../../helpers/stage-helper'
+         getTheatreFloorHeight } from '../../helpers/stageHelper'
 
 const mapStateToProps = ({
     isHeightlessLyricColumn,

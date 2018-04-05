@@ -7,7 +7,7 @@ import cx from 'classnames'
 import DynamicSvg from '../DynamicSvg/DynamicSvg'
 import TheatreWallBalcony from './TheatreWallBalcony'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/general-helper'
+import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/generalHelper'
 
 import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../../constants/stage'
 

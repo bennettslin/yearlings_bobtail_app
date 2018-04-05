@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import TipsToggle from './tips-toggle'
 import TextBlock from '../text/text-block'
-import { getSongTip } from '../../helpers/data-helper'
+import { getSongTip } from '../../helpers/dataHelper'
 import { SHOWN, TIPS_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({

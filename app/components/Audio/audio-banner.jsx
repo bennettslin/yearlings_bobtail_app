@@ -7,8 +7,8 @@ import cx from 'classnames'
 
 import SliderSection from '../slider/slider-section'
 import AudioTimer from './audio-timer'
-import { getSongTitle } from '../../helpers/data-helper'
-import { getIsPhone } from '../../helpers/responsive-helper'
+import { getSongTitle } from '../../helpers/dataHelper'
+import { getIsPhone } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceIndex,

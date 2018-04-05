@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { getFormattedLyricSpanText, getFormattedEndingVerseSpanText } from '../../helpers/format-helper'
+import { getFormattedLyricSpanText, getFormattedEndingVerseSpanText } from '../../helpers/formatHelper'
 
 const textSpanDefaultProps = {
     inTextAnchor: false,

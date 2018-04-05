@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NavItem from './nav-item'
-import { getSongsAndLoguesCount, getStartingIndexForBook } from '../../helpers/data-helper'
+import { getSongsAndLoguesCount, getStartingIndexForBook } from '../../helpers/dataHelper'
 
 const navBookPropTypes = {
     // From parent.

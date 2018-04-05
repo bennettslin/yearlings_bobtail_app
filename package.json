@@ -7,7 +7,7 @@
     "build": "webpack --env production",
     "start": "gh-pages -d build",
     "dev": "webpack-dev-server --env development",
-    "test": "mocha --compilers js:babel-core/register --require ./test/helpers/test-helper.js --recursive ./test",
+    "test": "mocha --compilers js:babel-core/register --require ./test/helpers/testHelper.js --recursive ./test",
     "test:lint": "eslint . --ext .js --ext .jsx --cache",
     "test:watch": "npm run test -- --watch"
   },

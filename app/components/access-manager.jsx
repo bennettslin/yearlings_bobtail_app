@@ -7,10 +7,10 @@ import { getSongsAndLoguesCount,
          getSongIsLogue,
          getBookColumnIndex,
          getPortalLink,
-         getAnnotationObject } from '../helpers/data-helper'
+         getAnnotationObject } from '../helpers/dataHelper'
 import { getAnnotationIndexForDirection,
          getAnnotationIndexForVerseIndex,
-         getAnnotationAnchorIndexForDirection } from '../helpers/logic-helper'
+         getAnnotationAnchorIndexForDirection } from '../helpers/logicHelper'
 import { ARROW_LEFT,
          ARROW_RIGHT,
          ARROW_UP,

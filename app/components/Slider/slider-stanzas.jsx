@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { getMaxStanzaTimesCount,
          getStanzaTimeObject,
-         getSongTotalTime } from '../../helpers/data-helper'
-import { getArrayOfLength } from '../../helpers/general-helper'
+         getSongTotalTime } from '../../helpers/dataHelper'
+import { getArrayOfLength } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     selectedSongIndex

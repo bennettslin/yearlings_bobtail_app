@@ -7,7 +7,7 @@ import AudioBanner from './audio-banner'
 import AudioButtons from './audio-buttons'
 import AudioTimer from './audio-timer'
 import TitleToggle from '../title/title-toggle'
-import { getIsTimerInAudio } from '../../helpers/logic-helper'
+import { getIsTimerInAudio } from '../../helpers/logicHelper'
 
 const mapStateToProps = ({
     deviceIndex,

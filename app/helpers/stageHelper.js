@@ -25,7 +25,7 @@ import { PHONE_WIDTH,
 
          NAV_BOOK_HEIGHT } from '../constants/responsive'
 
-import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenNav } from './responsive-helper'
+import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenNav } from './responsiveHelper'
 
 /*********
  * STAGE *

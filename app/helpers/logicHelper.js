@@ -9,9 +9,9 @@ import { getAnnotationObject,
          getVerseObject,
          getSongsNotLoguesCount,
          getAnnotationDotKeys,
-         getAnnotationsCount } from './data-helper'
-import { intersects } from './dot-helper'
-import { getIsPhone, getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsive-helper'
+         getAnnotationsCount } from './dataHelper'
+import { intersects } from './dotHelper'
+import { getIsPhone, getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsiveHelper'
 
 export const getNextPlayerToRender = (
     selectedSongIndex,

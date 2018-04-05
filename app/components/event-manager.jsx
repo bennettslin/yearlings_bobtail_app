@@ -7,9 +7,9 @@ import AccessManager from './access-manager'
 import { REFERENCE } from '../constants/dots'
 import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
-import { getSongIsLogue, getAnnotationObject } from '../helpers/data-helper'
-import { intersects } from '../helpers/dot-helper'
-import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsive-helper'
+import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
+import { intersects } from '../helpers/dotHelper'
+import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsiveHelper'
 
 const ANNOTATION_SCROLL = 'annotation',
     CAROUSEL_SCROLL = 'carousel-scroll',

@@ -7,9 +7,9 @@ import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
 
 import { setCanPlayThroughs } from '../../redux/actions/player'
-import { getSongsNotLoguesCount } from '../../helpers/data-helper'
-import { setNewValueInBitNumber } from '../../helpers/bit-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getSongsNotLoguesCount } from '../../helpers/dataHelper'
+import { setNewValueInBitNumber } from '../../helpers/bitHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 

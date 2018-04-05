@@ -14,9 +14,9 @@ import { SHOWN,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
 import { DEVICE_OBJECTS } from '../constants/responsive'
-import { getSongIsLogue } from '../helpers/data-helper'
-import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logic-helper'
-import { getIsDesktop, getIsTabletOrMini, getIsOverlayingAnnotation } from '../helpers/responsive-helper'
+import { getSongIsLogue } from '../helpers/dataHelper'
+import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logicHelper'
+import { getIsDesktop, getIsTabletOrMini, getIsOverlayingAnnotation } from '../helpers/responsiveHelper'
 
 class DomManager extends Component {
 

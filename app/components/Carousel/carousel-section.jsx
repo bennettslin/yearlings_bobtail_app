@@ -9,8 +9,8 @@ import CarouselAnnotation from './carousel-annotation'
 import Button from '../button/button'
 import { NAVIGATION_LEFT_KEY,
          NAVIGATION_RIGHT_KEY } from '../../constants/access'
-import { getAnnotationsCount } from '../../helpers/data-helper'
-import { getArrayOfLength } from '../../helpers/general-helper'
+import { getAnnotationsCount } from '../../helpers/dataHelper'
+import { getArrayOfLength } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isHeightlessLyricColumn,

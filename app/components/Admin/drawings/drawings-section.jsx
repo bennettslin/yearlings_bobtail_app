@@ -1,5 +1,5 @@
 import React from 'react'
-import { getDrawings } from '../../../helpers/data-helper'
+import { getDrawings } from '../../../helpers/dataHelper'
 
 /*************
  * sCONTAINER *

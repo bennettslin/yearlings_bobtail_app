@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import AnnotationUnit from '../app/components/annotation/annotation-unit.jsx'
+import AnnotationUnit from '../app/components/Annotation/annotation-unit.jsx'
 
 describe('AnnotationUnit', () => {
     let annotationUnit

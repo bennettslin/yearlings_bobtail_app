@@ -20,7 +20,7 @@ import { PHONE_WIDTH,
          HIDDEN_NAV_MIN,
          WIKI_SIDE_PADDING_TOTAL } from '../constants/responsive'
 
-import { getSongObject } from './data-helper'
+import { getSongObject } from './dataHelper'
 
 export const resizeWindow = (target = window) => {
 

@@ -4,8 +4,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import { getSongTotalTime } from '../../helpers/data-helper'
-import { getFormattedTime } from '../../helpers/format-helper'
+import { getSongTotalTime } from '../../helpers/dataHelper'
+import { getFormattedTime } from '../../helpers/formatHelper'
 
 const mapStateToProps = ({
     selectedSongIndex,

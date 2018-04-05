@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import TextBlock from '../text/text-block'
 import { TITLE } from '../../constants/lyrics'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex

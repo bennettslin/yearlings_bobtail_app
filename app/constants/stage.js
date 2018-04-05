@@ -1,5 +1,5 @@
 // Check out Peoria Symphony Orchestra.
-import { getExponentFactorialSum, getArrayOfIncreasingSums } from '../helpers/general-helper'
+import { getExponentFactorialSum, getArrayOfIncreasingSums } from '../helpers/generalHelper'
 
 const
     getTileYPercentages = (base, STAGE_Y_PERCENTAGE, exponent) => {

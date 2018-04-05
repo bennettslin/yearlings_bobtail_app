@@ -4,7 +4,7 @@ import {
     getSongObject,
     getVerseObject,
     getAnnotationObject
-} from './data-helper'
+} from './dataHelper'
 
 import { HYPHENATED_SONG_PATHS } from '../constants/paths'
 

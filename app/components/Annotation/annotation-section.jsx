@@ -4,11 +4,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import AnnotationUnit from './annotation-unit'
+import AnnotationUnit from './Annotation-unit'
 import DotAnchor from '../dot/dot-anchor'
 import { IS_DOT_STANZA } from '../../constants/lyrics'
-import { getCarouselOrPopupAnnotationObject } from '../../helpers/data-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex,

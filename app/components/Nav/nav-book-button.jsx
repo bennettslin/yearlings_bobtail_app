@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import NavButton from './nav-button'
-import { getBookColumnIndex } from '../../helpers/data-helper'
+import { getBookColumnIndex } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     selectedSongIndex

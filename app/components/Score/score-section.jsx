@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { setIsScoreLoaded } from '../../redux/actions/player'
-import { getSongScore } from '../../helpers/data-helper'
+import { getSongScore } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex

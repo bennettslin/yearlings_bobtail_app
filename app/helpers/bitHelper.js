@@ -1,5 +1,5 @@
 // Methods to switch between a bit number and a true false object.
-import { getArrayOfLength } from './general-helper'
+import { getArrayOfLength } from './generalHelper'
 
 export const getTwoToThePowerOfN = (exponent, number = 2) => {
     /**

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import { ALL_DOT_KEYS } from '../../constants/dots'
-import { convertTrueFalseKeysToBitNumber } from '../../helpers/bit-helper'
+import { convertTrueFalseKeysToBitNumber } from '../../helpers/bitHelper'
 
 import AccessIconsBlock from '../access/access-icons-block'
 import { NAVIGATION_ENTER_KEY,

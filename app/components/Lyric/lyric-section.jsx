@@ -7,8 +7,8 @@ import cx from 'classnames'
 import debounce from 'debounce'
 
 import LyricUnit from './lyric-unit'
-import { getLyricUnitsCount } from '../../helpers/data-helper'
-import { getArrayOfLength } from '../../helpers/general-helper'
+import { getLyricUnitsCount } from '../../helpers/dataHelper'
+import { getArrayOfLength } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     appMounted,

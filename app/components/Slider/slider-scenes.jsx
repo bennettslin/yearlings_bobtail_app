@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import { getSceneTimesArray,
-         getSongTotalTime } from '../../helpers/data-helper'
+         getSongTotalTime } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     selectedSongIndex

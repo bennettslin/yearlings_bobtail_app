@@ -4,9 +4,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import PlayersPlayer from './PlayersPlayer'
-import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from '../../helpers/data-helper'
-import { convertBitNumberToTrueFalseKeys } from '../../helpers/bit-helper'
-import { getNextPlayerToRender } from '../../helpers/logic-helper'
+import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from '../../helpers/dataHelper'
+import { convertBitNumberToTrueFalseKeys } from '../../helpers/bitHelper'
+import { getNextPlayerToRender } from '../../helpers/logicHelper'
 
 const mapStateToProps = ({
     selectedSongIndex,

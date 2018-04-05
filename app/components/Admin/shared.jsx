@@ -4,7 +4,7 @@ import Drawing from './Drawing'
 import NotesSection from './notes/notes-section'
 import StatsSection from './stats/stats-section'
 import TasksSection from './tasks/tasks-section'
-import { getSongObject, getSongTasks } from '../../helpers/data-helper'
+import { getSongObject, getSongTasks } from '../../helpers/dataHelper'
 
 /*************
  * CONTAINER *

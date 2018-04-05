@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import AnnotationCard from '../app/components/annotation/annotation-card.jsx'
+import AnnotationCard from '../app/components/Annotation/annotation-card.jsx'
 
 describe('AnnotationCard', () => {
     let annotationCard

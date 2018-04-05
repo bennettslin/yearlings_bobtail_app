@@ -6,10 +6,10 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import DotBlock from '../dot/dot-block'
 import TextBlock from '../text/text-block'
-import AnnotationPortalsBlock from './annotation-portals-block'
+import AnnotationPortalsBlock from './Annotation-portals-block'
 import { PORTAL } from '../../constants/dots'
-import { getCarouselOrPopupCardObject } from '../../helpers/data-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getCarouselOrPopupCardObject } from '../../helpers/dataHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex,

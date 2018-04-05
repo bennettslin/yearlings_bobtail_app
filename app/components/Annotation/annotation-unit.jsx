@@ -3,9 +3,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import AnnotationCard from './annotation-card'
-import { getCarouselOrPopupAnnotationObject } from '../../helpers/data-helper'
-import { getArrayOfLength } from '../../helpers/general-helper'
+import AnnotationCard from './Annotation-card'
+import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
+import { getArrayOfLength } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex,

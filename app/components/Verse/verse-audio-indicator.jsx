@@ -3,7 +3,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import { getVerseAudioIndicatorText } from '../../helpers/format-helper'
+import { getVerseAudioIndicatorText } from '../../helpers/formatHelper'
 
 const mapStateToProps = ({
     isPlaying

@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import AnnotationSection from '../Annotation/annotation-section'
 import Popup from '../popup/popup'
 import { getIsOverlayingAnnotation,
-         getIsPhone } from '../../helpers/responsive-helper'
+         getIsPhone } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceIndex,

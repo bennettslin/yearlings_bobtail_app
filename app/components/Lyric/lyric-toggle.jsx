@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Button from '../button/button'
 import { LYRIC_SECTION_EXPAND_KEY } from '../../constants/access'
-import { getIsLyricExpandable } from '../../helpers/responsive-helper'
+import { getIsLyricExpandable } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceIndex,

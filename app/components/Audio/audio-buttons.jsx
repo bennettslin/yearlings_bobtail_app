@@ -9,9 +9,9 @@ import { AUDIO_PLAY_KEY,
          AUDIO_PREVIOUS_SONG_KEY,
          AUDIO_NEXT_SONG_KEY } from '../../constants/access'
 import { AUDIO_OPTIONS } from '../../constants/options'
-import { getSongsAndLoguesCount, getSongsNotLoguesCount } from '../../helpers/data-helper'
-import { getValueInBitNumber } from '../../helpers/bit-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getSongsAndLoguesCount, getSongsNotLoguesCount } from '../../helpers/dataHelper'
+import { getValueInBitNumber } from '../../helpers/bitHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isPlaying,

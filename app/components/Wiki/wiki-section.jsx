@@ -4,8 +4,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
-import { getWikiUrl } from '../../helpers/logic-helper'
-import { getComponentShouldUpdate } from '../../helpers/general-helper'
+import { getWikiUrl } from '../../helpers/logicHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 // TODO: Show that active wiki anchor is disabled.
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/

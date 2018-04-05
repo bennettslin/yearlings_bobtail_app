@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { getPolygonPointsForTileCube,
          getPolygonPointsForFrontCube,
-         getPolygonPointsForSideCube } from '../../../helpers/tiles-helper'
+         getPolygonPointsForSideCube } from '../../../helpers/tilesHelper'
 
 const propTypes = {
     face: PropTypes.string.isRequired,

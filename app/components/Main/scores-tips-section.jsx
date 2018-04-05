@@ -7,7 +7,7 @@ import Button from '../button/button'
 import { SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY } from '../../constants/access'
 import { TIPS_OPTIONS } from '../../constants/options'
-import { getIsDesktop, getIsPhone } from '../../helpers/responsive-helper'
+import { getIsDesktop, getIsPhone } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceIndex,

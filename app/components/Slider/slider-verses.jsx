@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 import { getSongVerseTimes,
-         getSongTotalTime } from '../../helpers/data-helper'
+         getSongTotalTime } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     selectedSongIndex
