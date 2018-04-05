@@ -1,9 +1,13 @@
 // Section to show credits and anchor for band website.
 
 import React from 'react'
+import cx from 'classnames'
 
 const TitleSection = () => (
-    <div className="section title-section">
+    <div className={cx(
+        'Title',
+        'section'
+    )}>
         <p className="title-paragraph">
             Album written, performed, and recorded by Bennett Lin.
         </p>

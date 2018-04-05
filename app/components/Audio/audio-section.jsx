@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import AudioBanner from './audio-banner'
 import AudioButtons from './audio-buttons'
 import AudioTimer from './audio-timer'
-import TitleToggle from '../title/title-toggle'
+import TitleToggle from '../Title/TitleToggle'
 import { getIsTimerInAudio } from '../../helpers/logicHelper'
 
 const mapStateToProps = ({
