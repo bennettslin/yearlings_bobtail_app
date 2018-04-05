@@ -3,7 +3,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import Popup from '../popup/popup'
+import Popup from '../Popup/Popup'
 import AudioSection from '../Audio/audio-section'
 import { getShowOverlay } from '../../helpers/logicHelper'
 

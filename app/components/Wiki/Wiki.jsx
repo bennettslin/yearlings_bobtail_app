@@ -3,6 +3,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 import { getWikiUrl } from '../../helpers/logicHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
@@ -94,7 +96,10 @@ class WikiSection extends Component {
             selectedWikiUrl = getWikiUrl(this.props)
 
         return (
-            <div className="section wiki-section">
+            <div className={cx(
+                'Wiki',
+                'section'
+            )}>
                 {webviewLoading &&
                     <div className="spinner-container">
                         <img

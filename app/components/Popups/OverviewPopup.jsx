@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import OverviewSection from '../Overview/overview-section'
-import Popup from '../popup/popup'
+import Popup from '../Popup/Popup'
 import { getSongIsLogue } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
