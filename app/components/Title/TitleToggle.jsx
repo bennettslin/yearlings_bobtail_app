@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button from '../button/button'
+import Button from '../Button/Button'
 import { TITLE_TOGGLE_KEY } from '../../constants/access'
 
 const mapStateToProps = ({

@@ -1,4 +1,4 @@
-.button {
+.Button {
     position: relative;
 }
 
@@ -6,7 +6,7 @@
  * Button and animated background will have same width, so that animated
  * background container can animate to zero width.
  */
-.button {
+.Button {
     &, & .icon-canvas {
         width: @app-icon-diameter;
         height: @app-icon-diameter;
@@ -21,7 +21,7 @@
 }
 
 .custom-size {
-    &.button {
+    &.Button {
         &, & .icon-canvas {
             width: 100%;
             height: 100%;
@@ -29,14 +29,14 @@
     }
 }
 
-.button.small {
+.Button.small {
     &, & .icon-canvas {
         width: @app-small-icon-diameter;
         height: @app-small-icon-diameter;
     }
 }
 
-.button.large, .lyric-button-block {
+.Button.large, .lyric-button-block {
     &, & .icon-canvas {
         width: @app-large-icon-diameter;
         height: @app-large-icon-diameter;
@@ -44,7 +44,7 @@
 }
 
 .tablet-width {
-    .button.large, .lyric-button-block {
+    .Button.large, .lyric-button-block {
         &, & .icon-canvas {
             width: @app-tablet-large-icon-diameter;
             height: @app-tablet-large-icon-diameter;
@@ -53,7 +53,7 @@
 }
 
 .mini-width {
-    .button.large, .lyric-button-block {
+    .Button.large, .lyric-button-block {
         &, & .icon-canvas {
             width: @app-mini-large-icon-diameter;
             height: @app-mini-large-icon-diameter;
@@ -62,7 +62,7 @@
 }
 
 .phone-width {
-    .button.large, .lyric-button-block {
+    .Button.large, .lyric-button-block {
         &, & .icon-canvas {
             width: @app-icon-diameter;
             height: @app-icon-diameter;

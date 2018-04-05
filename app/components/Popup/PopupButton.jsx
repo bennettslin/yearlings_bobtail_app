@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Button from '../button/button'
+import Button from '../Button/Button'
 
 import { CLOSE_POPUP_BUTTON,
          PREVIOUS_POPUP_BUTTON,

@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Button from '../button/button'
+import Button from '../Button/Button'
 import { AUDIO_PLAY_KEY,
          AUDIO_OPTIONS_TOGGLE_KEY,
          AUDIO_PREVIOUS_SONG_KEY,

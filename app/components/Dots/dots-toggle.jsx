@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Button from '../button/button'
+import Button from '../Button/Button'
 import { DOTS_SECTION_EXPAND_KEY } from '../../constants/access'
 
 const mapStateToProps = ({

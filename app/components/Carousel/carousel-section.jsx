@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import CarouselAnnotation from './carousel-annotation'
-import Button from '../button/button'
+import Button from '../Button/Button'
 import { NAVIGATION_LEFT_KEY,
          NAVIGATION_RIGHT_KEY } from '../../constants/access'
 import { getAnnotationsCount } from '../../helpers/dataHelper'

@@ -68,7 +68,7 @@ class Button extends Component {
         return (
             <a
                 className={cx(
-                    'button',
+                    'Button',
                     buttonClass,
                     buttonName && `${buttonName}-button`,
                     { 'large': isLarge,

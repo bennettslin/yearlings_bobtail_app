@@ -15,7 +15,7 @@
 
     background-color: #efd;
 
-    .button {
+    .Button {
         // Ensure that these buttons are above the carousel.
         z-index: @centre-field-element-z-index;
         transition: transform @animation-default, opacity @animation-default;
@@ -27,7 +27,7 @@
         flex-direction: column;
         align-items: flex-start;
 
-        .button:first-child {
+        .Button:first-child {
             margin-bottom: @scores-tips-margin;
         }
     }
@@ -38,7 +38,7 @@
     min-width: @scores-tips-width;
 
     .ScoresTipsSection {
-        .button:first-child {
+        .Button:first-child {
             margin-right: @scores-tips-margin;
         }
     }
@@ -92,7 +92,7 @@
 .is-logue, .is-song.overview-shown.scores-tips-in-main {
     .ScoresTipsSection {
 
-        .button {
+        .Button {
             transform: scale(0);
             opacity: 0;
         }
@@ -101,7 +101,7 @@
 
 .is-song {
     .ScoresTipsSection {
-        .button {
+        .Button {
             transform: scale(1);
         }
     }
