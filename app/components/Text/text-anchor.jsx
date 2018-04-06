@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import TextBlock from './text-block'
-import DotBlock from '../dot/DotBlock'
+import DotBlock from '../Dot/DotBlock'
 
 class TextAnchor extends Component {
 

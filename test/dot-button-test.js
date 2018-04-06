@@ -6,7 +6,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import DotButton from '../app/components/dots/DotButton.jsx'
+import DotButton from '../app/components/Dots/DotButton.jsx'
 
 describe('DotButton', () => {
     let dotButton

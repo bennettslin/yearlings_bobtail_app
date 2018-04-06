@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import DomManager from './domManager'
+import DomManager from './DomManager'
 import { getSongsAndLoguesCount,
          getSongIsLogue,
          getBookColumnIndex,

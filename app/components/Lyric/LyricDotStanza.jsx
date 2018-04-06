@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import DotAnchor from '../dot/DotAnchor'
+import DotAnchor from '../Dot/DotAnchor'
 
 const mapStateToProps = ({
     accessedAnnotationIndex,

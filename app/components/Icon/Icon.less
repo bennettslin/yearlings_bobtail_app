@@ -151,13 +151,13 @@
 }
 
 // Portals are not included here.
-.domManager.narrative .AnnotationCard .icon-canvas-block.narrative,
-.domManager.backstory .AnnotationCard .icon-canvas-block.backstory,
-.domManager.observation .AnnotationCard .icon-canvas-block.observation,
-.domManager.pun .AnnotationCard .icon-canvas-block.pun,
-.domManager.reference .AnnotationCard .icon-canvas-block.reference,
-.domManager.songwriting .AnnotationCard .icon-canvas-block.songwriting,
-.domManager.afterword .AnnotationCard .icon-canvas-block.afterword {
+.DomManager.narrative .AnnotationCard .icon-canvas-block.narrative,
+.DomManager.backstory .AnnotationCard .icon-canvas-block.backstory,
+.DomManager.observation .AnnotationCard .icon-canvas-block.observation,
+.DomManager.pun .AnnotationCard .icon-canvas-block.pun,
+.DomManager.reference .AnnotationCard .icon-canvas-block.reference,
+.DomManager.songwriting .AnnotationCard .icon-canvas-block.songwriting,
+.DomManager.afterword .AnnotationCard .icon-canvas-block.afterword {
     // Increase width first, then fade in.
     transition: width @animation-default,
                 opacity @animation-default @animation-faster;
@@ -166,14 +166,14 @@
 }
 
 // Default styling. Should not be visible when slider is not moving.
-.domManager.slider-not-moving.narrative .text-anchor-block .icon-canvas-block.narrative,
-.domManager.slider-not-moving.backstory .text-anchor-block .icon-canvas-block.backstory,
-.domManager.slider-not-moving.observation .text-anchor-block .icon-canvas-block.observation,
-.domManager.slider-not-moving.pun .text-anchor-block .icon-canvas-block.pun,
-.domManager.slider-not-moving.reference .text-anchor-block .icon-canvas-block.reference,
-.domManager.slider-not-moving.songwriting .text-anchor-block .icon-canvas-block.songwriting,
-.domManager.slider-not-moving.portal .text-anchor-block .icon-canvas-block.portal,
-.domManager.slider-not-moving.afterword .text-anchor-block .icon-canvas-block.afterword {
+.DomManager.slider-not-moving.narrative .text-anchor-block .icon-canvas-block.narrative,
+.DomManager.slider-not-moving.backstory .text-anchor-block .icon-canvas-block.backstory,
+.DomManager.slider-not-moving.observation .text-anchor-block .icon-canvas-block.observation,
+.DomManager.slider-not-moving.pun .text-anchor-block .icon-canvas-block.pun,
+.DomManager.slider-not-moving.reference .text-anchor-block .icon-canvas-block.reference,
+.DomManager.slider-not-moving.songwriting .text-anchor-block .icon-canvas-block.songwriting,
+.DomManager.slider-not-moving.portal .text-anchor-block .icon-canvas-block.portal,
+.DomManager.slider-not-moving.afterword .text-anchor-block .icon-canvas-block.afterword {
     // Increase width first, then fade in.
     transition: width @animation-default,
                 opacity @animation-default @animation-faster;
@@ -182,25 +182,25 @@
 }
 
 // Hover styling.
-.domManager.narrative .text-anchor-block:hover .icon-canvas-block.narrative,
-.domManager.backstory .text-anchor-block:hover .icon-canvas-block.backstory,
-.domManager.observation .text-anchor-block:hover .icon-canvas-block.observation,
-.domManager.pun .text-anchor-block:hover .icon-canvas-block.pun,
-.domManager.reference .text-anchor-block:hover .icon-canvas-block.reference,
-.domManager.songwriting .text-anchor-block:hover .icon-canvas-block.songwriting,
-.domManager.portal .text-anchor-block:hover .icon-canvas-block.portal,
-.domManager.afterword .text-anchor-block:hover .icon-canvas-block.afterword {
+.DomManager.narrative .text-anchor-block:hover .icon-canvas-block.narrative,
+.DomManager.backstory .text-anchor-block:hover .icon-canvas-block.backstory,
+.DomManager.observation .text-anchor-block:hover .icon-canvas-block.observation,
+.DomManager.pun .text-anchor-block:hover .icon-canvas-block.pun,
+.DomManager.reference .text-anchor-block:hover .icon-canvas-block.reference,
+.DomManager.songwriting .text-anchor-block:hover .icon-canvas-block.songwriting,
+.DomManager.portal .text-anchor-block:hover .icon-canvas-block.portal,
+.DomManager.afterword .text-anchor-block:hover .icon-canvas-block.afterword {
    animation: bounceHover @animation-slow;
 }
 
 // Active styling.
-.domManager.narrative .text-anchor-block:active .icon-canvas-block.narrative,
-.domManager.backstory .text-anchor-block:active .icon-canvas-block.backstory,
-.domManager.observation .text-anchor-block:active .icon-canvas-block.observation,
-.domManager.pun .text-anchor-block:active .icon-canvas-block.pun,
-.domManager.reference .text-anchor-block:active .icon-canvas-block.reference,
-.domManager.songwriting .text-anchor-block:active .icon-canvas-block.songwriting,
-.domManager.portal .text-anchor-block:active .icon-canvas-block.portal,
-.domManager.afterword .text-anchor-block:active .icon-canvas-block.afterword {
+.DomManager.narrative .text-anchor-block:active .icon-canvas-block.narrative,
+.DomManager.backstory .text-anchor-block:active .icon-canvas-block.backstory,
+.DomManager.observation .text-anchor-block:active .icon-canvas-block.observation,
+.DomManager.pun .text-anchor-block:active .icon-canvas-block.pun,
+.DomManager.reference .text-anchor-block:active .icon-canvas-block.reference,
+.DomManager.songwriting .text-anchor-block:active .icon-canvas-block.songwriting,
+.DomManager.portal .text-anchor-block:active .icon-canvas-block.portal,
+.DomManager.afterword .text-anchor-block:active .icon-canvas-block.afterword {
    transform: scale(0.8);
 }

@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
-import Icon from '../icon/icon'
+import Icon from '../Icon/icon'
 
 const dotBlockPropTypes = {
     // From parent.

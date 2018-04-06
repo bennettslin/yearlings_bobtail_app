@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames';
 import TextBlock from '../text/text-block'
-import DotButton from '../dot/DotButton'
+import DotButton from '../Dot/DotButton'
 import { PORTAL } from '../../constants/dots'
 import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
 import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from '../../helpers/dataHelper'
