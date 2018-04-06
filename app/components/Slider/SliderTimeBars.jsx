@@ -55,7 +55,7 @@ SliderTimeBars = ({
         displayedRemainTime = getFormattedTime((1 - workingRatio) * totalTime) + '-'
 
     return (
-        <div className="slider-time-bars">
+        <div className="SliderTimeBars">
 
             <div
                 className={cx(

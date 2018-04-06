@@ -28,7 +28,7 @@ SliderVerses = ({
         totalTime = getSongTotalTime(selectedSongIndex)
 
     return (
-        <div className="slider-verses-block">
+        <div className="SliderVerses-block">
             {verseTimes.map((verseTime, verseIndex) => {
 
                 // Don't show title verse.

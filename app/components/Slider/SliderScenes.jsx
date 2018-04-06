@@ -29,7 +29,7 @@ SliderScenes = ({
         sceneTimesArray = getSceneTimesArray(selectedSongIndex)
 
     return (
-        <div className="slider-scenes-block">
+        <div className="SliderScenes-block">
             {sceneTimesArray && sceneTimesArray.map((sceneTime, sceneTimeIndex) => {
 
                 const sceneWidth = (totalTime - sceneTime) / totalTime * 100,

@@ -4,18 +4,18 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import SliderAccess from './slider-access'
-import SliderCursor from './slider-cursor'
-import SliderScenes from './slider-scenes'
-import SliderStanzas from './slider-stanzas'
-import SliderVerses from './slider-verses'
-import SliderTimeBars from './slider-time-bars'
+import SliderAccess from './SliderAccess'
+import SliderCursor from './SliderCursor'
+import SliderScenes from './SliderScenes'
+import SliderStanzas from './SliderStanzas'
+import SliderVerses from './SliderVerses'
+import SliderTimeBars from './SliderTimeBars'
 
 /*************
  * CONTAINER *
  *************/
 
-class SliderSection extends Component {
+class Slider extends Component {
 
     static propTypes = {
         // From parent.
@@ -49,7 +49,7 @@ class SliderSection extends Component {
  * PRESENTATION *
  ****************/
 
-const sliderSectionViewPropTypes = {
+const sliderViewPropTypes = {
 
     // From parent.
     handleTouchDown: PropTypes.func.isRequired
@@ -86,6 +86,6 @@ SliderSectionView = ({
     </div>
 )
 
-SliderSectionView.propTypes = sliderSectionViewPropTypes
+SliderSectionView.propTypes = sliderViewPropTypes
 
-export default SliderSection
+export default Slider

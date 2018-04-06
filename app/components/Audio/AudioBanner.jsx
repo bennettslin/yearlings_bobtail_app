@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import SliderSection from '../slider/slider-section'
+import Slider from '../slider/Slider'
 import AudioTimer from './AudioTimer'
 import { getSongTitle } from '../../helpers/dataHelper'
 import { getIsPhone } from '../../helpers/responsiveHelper'
@@ -66,7 +66,7 @@ AudioBanner = ({
                 'audio-block',
                 'AudioBanner-block'
             )}>
-                <SliderSection {...other} />
+                <Slider {...other} />
                 <div className="AudioBanner audio-display-block">
                     <div className="AudioBanner-title">
                         {songTitle}

@@ -38,7 +38,7 @@ const SliderStanzas = ({
         })
 
     return (
-        <div className="slider-stanzas-block">
+        <div className="SliderStanzas-block">
             {stanzaTimesIndices.map((nothing, stanzaTimeIndex) => {
 
                 const stanzaTimeObject = getStanzaTimeObject(selectedSongIndex, stanzaTimeIndex),
