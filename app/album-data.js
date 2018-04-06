@@ -1,4 +1,4 @@
-import RawData from './album/yearlings-bobtail'
+import RawData from './album/YearlingsBobtail'
 import { parseAlbumData } from './helpers/buildHelpers/albumHelper'
 
 // Restructure raw data to be usable by app.

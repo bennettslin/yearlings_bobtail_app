@@ -2756,5 +2756,10 @@ module.exports = [
         taskName: `Have tiles correctly overlap.`,
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: `Rename components to use camel case.`,
+        workedHours: 18,
+        neededHours: 18
+    },
 ]

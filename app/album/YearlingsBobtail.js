@@ -138,6 +138,6 @@ module.exports = {
         require(`./18-${HYPHENATED_SONG_PATHS[18]}`),
         require(`./19-${HYPHENATED_SONG_PATHS[19]}`),
     ],
-    remainingTasks: require('./remaining-tasks').concat(require('./remaining-drawing-tasks')),
-    completedTasks: require('./completed-tasks').concat(require('./completed-drawing-tasks'))
+    remainingTasks: require('./remainingTasks').concat(require('./remainingDrawingTasks')),
+    completedTasks: require('./completedTasks').concat(require('./completedDrawingTasks'))
 }
