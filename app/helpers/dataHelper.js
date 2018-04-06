@@ -4,7 +4,7 @@
  * created.
  */
 
-import AlbumData from '../album-data'
+import AlbumData from '../AlbumData'
 import { SOURCE_PORTAL_INDEX } from '../constants/lyrics'
 
 /*********

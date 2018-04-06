@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import AdminNavItem from './admin-nav-item'
+import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../progress/progress-footer'
 import ProgressHelper from '../../../helpers/progressHelper'
-import AlbumData from '../../../album-data'
+import AlbumData from '../../../AlbumData'
 const { songs } = AlbumData
 
 /*************

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Shared from './shared'
 // import DevSection from './dev/dev-section'
-import AdminNavSection from './admin-nav/admin-nav-section'
+import AdminNavSection from './AdminNav/AdminNav'
 import { getAllTaskObjects } from '../../helpers/dataHelper'
 
 /*************
