@@ -4,9 +4,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import NavBook from './nav-book'
-import NavBookButton from './nav-book-button'
-import NavLogueButton from './nav-logue-button'
+import NavBook from './NavBook'
+import NavBookButton from './NavBookButton'
+import NavLogueButton from './NavLogueButton'
 
 const mapStateToProps = ({
     showSingleBookColumn,

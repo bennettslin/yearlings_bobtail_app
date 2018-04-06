@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import NavItem from './nav-item'
+import NavItem from './NavItem'
 import { getSongsAndLoguesCount } from '../../helpers/dataHelper'
 
 const navLogueButtonPropTypes = {
@@ -19,7 +19,7 @@ NavLogueButton = ({
     const songIndex = bookIndex === 0 ? 0 : getSongsAndLoguesCount() - 1
 
     return (
-        <div className="nav-book logue">
+        <div className="NavBook logue">
             <NavItem {...other}
                 songIndex={songIndex}
             />

@@ -1,4 +1,4 @@
-.nav-button-wrapper {
+.NavButton-wrapper {
     position: absolute;
     top: 0;
     height: 100%;
@@ -8,15 +8,15 @@
     justify-content: center;
 }
 
-.nav-button-block, .icon-canvas-block {
+.NavButton-block, .icon-canvas-block {
     .column-hidden
-    .nav-book.songs
+    .NavBook.songs
     & {
         width: 0;
     }
 }
 
-.nav-button-block {
+.NavButton-block {
     .single-book-column
     & {
         transition: width @animation-default, margin @animation-default;
@@ -44,7 +44,7 @@
     }
 }
 
-.nav-toggle-block {
+.NavToggle-block {
     .shrink-nav-icon
     & {
         // Static margins after icons begin shrinking.

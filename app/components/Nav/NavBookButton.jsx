@@ -3,7 +3,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import NavButton from './nav-button'
+import cx from 'classnames'
+
+import NavButton from './NavButton'
 import { getBookColumnIndex } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
@@ -31,7 +33,10 @@ NavBookButton = ({
         bookIndex === getBookColumnIndex(selectedSongIndex)
 
     return (
-        <div className="nav-book toggle">
+        <div className={cx(
+            'NavBook',
+            'toggle'
+        )}>
             <NavButton {...other}
                 isSelected={hasSelectedSong}
                 bookIndex={bookIndex}

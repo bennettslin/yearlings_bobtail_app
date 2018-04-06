@@ -1,7 +1,7 @@
-.nav-book {
-    padding: 0 @nav-book-padding;
+.NavBook {
+    padding: 0 @NavBook-padding;
 
-    &.nav-book {
+    &.NavBook {
         min-width: @app-icon-diameter;
         border-radius: @nav-border-radius @nav-border-radius 0 0;
         background-color: #48d;
@@ -11,17 +11,17 @@
 .column-hidden {
 
     &.column-0 {
-        .nav-book.songs {
+        .NavBook.songs {
             left: 0;
         }
     }
 
     &.column-1 {
-        .nav-book.logue {
+        .NavBook.logue {
             right: 0;
         }
 
-        .nav-book.songs {
+        .NavBook.songs {
             right: 0;
         }
     }
@@ -32,7 +32,7 @@
         transition: left @animation-default;
     }
 
-    .nav-book {
+    .NavBook {
         &.songs {
             transition: left @animation-default;
         }
@@ -47,7 +47,7 @@
         transition: right @animation-default;
     }
 
-    .nav-book {
+    .NavBook {
         &.logue {
             right: 0;
         }

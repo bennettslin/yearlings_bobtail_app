@@ -3,7 +3,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import NavButton from './nav-button'
+import NavButton from './NavButton'
 
 const mapStateToProps = ({
     selectedSongIndex,

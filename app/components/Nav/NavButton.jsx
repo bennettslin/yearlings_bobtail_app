@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../Button/Button'
-import NavPanel from './nav-panel'
+import NavPanel from './NavPanel'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { getSongIsLogue } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
@@ -159,12 +159,12 @@ NavButtonView = ({
     return (
         <div
             className={cx(
-                'nav-button-block',
+                'NavButton-block',
                 { 'access-highlighted': accessHighlighted,
                   'access-keys-shown': showEnterAccessKey }
             )}
         >
-            <div className="nav-button-wrapper">
+            <div className="NavButton-wrapper">
                 <Button {...other}
                     buttonName="nav"
                     accessKey={accessKey}

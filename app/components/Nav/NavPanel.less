@@ -1,6 +1,6 @@
-@nav-panel-length: 100px;
+@NavPanel-length: 100px;
 
-.nav-panel-block {
+.NavPanel-block {
     position: absolute;
     left: 50%;
 
@@ -8,8 +8,8 @@
      * Arbitrary for now. However, make sure that it is never too wide that the
      * next to leftmost or rightmost goes outside the books block.
      */
-    width: @nav-panel-length;
-    height: @nav-panel-length;
+    width: @NavPanel-length;
+    height: @NavPanel-length;
     
     border: 1px solid purple;
     
@@ -39,14 +39,14 @@
 }
 
 .is-desktop {
-    .nav-panel-block {
+    .NavPanel-block {
         bottom: 100%;
         margin-bottom: @app-thin-margin;        
     }
 }
     
 .is-mobile {
-    .nav-panel-block {
+    .NavPanel-block {
         top: 100%;
         margin-top: @app-thin-margin;        
     }
@@ -58,16 +58,16 @@
     &.accessed-on .access-keys-shown.access-highlighted,
 
     // Show panel upon hover only when access is off.
-    &.accessed-off .nav-button:hover {
-        .nav-panel-block {
+    &.accessed-off .NavButton:hover {
+        .NavPanel-block {
             opacity: 1;
             z-index: @nav-custom-subfield-z-index;
         }
     }
 
     // Show panel when button is active, and give it the higher z-index.
-    .nav-button:active {
-        .nav-panel-block {
+    .NavButton:active {
+        .NavPanel-block {
             opacity: 1;
             z-index: @centre-field-element-z-index;
 
@@ -82,11 +82,11 @@
     }
 }
 
-.nav-panel {
+.NavPanel {
     white-space: nowrap;
 }
 
-.nav-panel-image {
+.NavPanel-image {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -95,7 +95,7 @@
     background-color: rgba(200, 200, 100, 0.5);
 }
 
-.nav-panel-title {
+.NavPanel-title {
     position: relative;
     width: 100%;
     text-align: center;

@@ -6,7 +6,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import MenuField from './menu-field'
-import NavSection from '../nav/nav-section'
+import Nav from '../nav/Nav'
 import AnnotationPopup from '../Popups/AnnotationPopup'
 import AudioBanner from '../Audio/AudioBanner'
 import CarouselToggle from '../Carousel/CarouselToggle'
@@ -104,7 +104,7 @@ MainColumn = ({
                 handleCarouselNavToggle={handleCarouselNavToggle}
             />
 
-            <NavSection {...navSectionHandlers} />
+            <Nav {...navSectionHandlers} />
         </div>
     </div>
 )

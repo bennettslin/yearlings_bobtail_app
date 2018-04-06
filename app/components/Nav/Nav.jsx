@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import NavBooksColumn from './nav-books-column'
+import NavBooksColumn from './NavBooksColumn'
 
 const mapStateToProps = ({
     isHeightlessLyricColumn,
@@ -16,13 +16,13 @@ const mapStateToProps = ({
     showSingleBookColumn
 })
 
-const navSectionPropTypes = {
+const navPropTypes = {
     // Through Redux.
     isHiddenNav: PropTypes.bool.isRequired,
     showSingleBookColumn: PropTypes.bool.isRequired
 },
 
-NavSection = ({
+Nav = ({
 
     isHeightlessLyricColumn,
     isHiddenNav,
@@ -37,14 +37,14 @@ NavSection = ({
             <div
                 className={cx(
                     'section',
-                    'nav-section',
+                    'Nav',
                     showSingleBookColumn ? 'single-book-column' : 'double-book-column'
                 )}
             >
                 <div className="live-nav-block">
 
                     {/* Placeholder, has no other purpose. */}
-                    <div className="nav-toggle-block" />
+                    <div className="NavToggle-block" />
 
                     <div className="books-block">
                         <NavBooksColumn {...other}
@@ -60,6 +60,6 @@ NavSection = ({
     )
 }
 
-NavSection.propTypes = navSectionPropTypes
+Nav.propTypes = navPropTypes
 
-export default connect(mapStateToProps)(NavSection)
+export default connect(mapStateToProps)(Nav)

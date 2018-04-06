@@ -1,3 +1,10 @@
+@import "./NavBook.less";
+@import "./NavBooksColumn.less";
+@import "./NavButton.less";
+@import "./NavPanel.less";
+@import "./NavResponsive.less";
+@import "./NavToggle.less";
+
 .nav-custom-subfield {
     position: relative;
     width: 100%;
@@ -20,7 +27,7 @@
 }
 
 .is-live-view {
-    .nav-section {
+    .Nav {
         position: absolute;
         width: 100%;
         overflow: visible;
@@ -28,7 +35,7 @@
 }
 
 // All containers.
-.live-nav-block, .nav-book {
+.live-nav-block, .NavBook {
     display: flex;
 }
 
@@ -67,7 +74,7 @@
         top: -@book-height;
     }
 
-    .nav-book {
+    .NavBook {
         border-radius: 0 0 @nav-border-radius @nav-border-radius;
     }
 }

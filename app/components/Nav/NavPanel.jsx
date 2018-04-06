@@ -33,16 +33,16 @@ NavPanel = ({
 
     return (
         <div className={cx(
-            'nav-panel-block',
+            'NavPanel-block',
             { 'leftmost': isLeftmost,
               'rightmost': isRightmost,
               'centred': !isLeftmost && !isRightmost }
             )}
         >
-            <div className="nav-panel">
-                <div className="nav-panel-image">
+            <div className="NavPanel">
+                <div className="NavPanel-image">
                 </div>
-                <div className="nav-panel-title">
+                <div className="NavPanel-title">
                     {panelTitle}
                 </div>
             </div>

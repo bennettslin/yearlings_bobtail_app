@@ -2,69 +2,69 @@
  * MONITOR STYLES *
  ******************/
 
-.nav-toggle-block {
-    min-width: @nav-toggle-width;
+.NavToggle-block {
+    min-width: @NavToggle-width;
 }
 
 .monitor-width {
 
     &.static-nav-icon {
         .double-book-column {
-            .nav-toggle-block {
+            .NavToggle-block {
                 margin-right: @monitor-large-unit;
             }
 
             .column-0 {
-                .nav-book {
+                .NavBook {
                     &.songs {
                         left: @monitor-book-offset;
                     }
                 }
 
-                .nav-button-block:not(:last-child) {
+                .NavButton-block:not(:last-child) {
                     margin-right: @monitor-small-unit;
                 }
             }
 
             .column-1 {
-                .nav-book {
+                .NavBook {
                     &.songs {
                         right: @monitor-book-offset;
                     }
                 }
 
-                .nav-button-block:not(:last-child) {
+                .NavButton-block:not(:last-child) {
                     margin-left: @monitor-small-unit;
                 }
             }
         }
 
         .single-book-column {
-            .nav-toggle-block {
+            .NavToggle-block {
                 margin-right: @monitor-single-large;
             }
 
             .column-shown {
                 &.column-0 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             left: @monitor-single-book-offset;
                         }
                     }
 
-                    .nav-button-block:not(:last-child) {
+                    .NavButton-block:not(:last-child) {
                         margin-right: @monitor-single-small;
                     }
                 }
 
                 &.column-1 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             right: @monitor-single-book-offset;
                         }
                     }
 
-                    .nav-button-block:not(:last-child) {
+                    .NavButton-block:not(:last-child) {
                         margin-left: @monitor-single-small;
                     }
                 }
@@ -74,12 +74,12 @@
 
     &.shrink-nav-icon {
         .double-book-column {
-            .nav-book {
+            .NavBook {
                 min-width: @monitor-shrink-icon;
             }
 
             .column-0 {
-                .nav-book {
+                .NavBook {
                     &.songs {
                         left: @monitor-shrink-book-offset;
                     }
@@ -87,17 +87,17 @@
             }
 
             .column-1 {
-                .nav-book {
+                .NavBook {
                     &.songs {
                         right: @monitor-shrink-book-offset;
                     }
                 }
             }
 
-            .nav-button-block {
+            .NavButton-block {
                 width: @monitor-shrink-icon;
             }
-            .nav-button-block .Button {
+            .NavButton-block .Button {
                 &, & .icon-canvas {
                     width: @monitor-shrink-icon;
                     height: @monitor-shrink-icon;
@@ -115,30 +115,30 @@
 
     &.static-nav-icon {
         .single-book-column {
-            .nav-toggle-block {
+            .NavToggle-block {
                 margin-right: @laptop-large;
             }
             .column-shown {
                 &.column-0 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             left: @laptop-book-offset;
                         }
                     }
 
-                    .nav-button-block:not(:last-child) {
+                    .NavButton-block:not(:last-child) {
                         margin-right: @laptop-small;
                     }
                 }
 
                 &.column-1 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             right: @laptop-book-offset;
                         }
                     }
 
-                    .nav-button-block:not(:last-child) {
+                    .NavButton-block:not(:last-child) {
                         margin-left: @laptop-small;
                     }
                 }
@@ -148,13 +148,13 @@
 
     &.shrink-nav-icon {
         .single-book-column {
-            .nav-book {
+            .NavBook {
                 min-width: @laptop-shrink-icon;
             }
 
             .column-shown {
                 &.column-0 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             left: @laptop-shrink-book-offset;
                         }
@@ -162,7 +162,7 @@
                 }
 
                 &.column-1 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             right: @laptop-shrink-book-offset;
                         }
@@ -174,13 +174,13 @@
              * Show song buttons in shown column, along with toggle button in
              * hidden column.
              */
-            .column-shown, .column-hidden .nav-book.toggle {
-                .nav-button-block {
+            .column-shown, .column-hidden .NavBook.toggle {
+                .NavButton-block {
                     width: @laptop-shrink-icon;
                 }
             }
 
-            .nav-button-block .Button {
+            .NavButton-block .Button {
                 &, & .icon-canvas {
                     width: @laptop-shrink-icon;
                     height: @laptop-shrink-icon;
@@ -196,67 +196,67 @@
 
 .tablet-width {
 
-    .nav-toggle-block {
-        min-width: @tablet-nav-toggle-width;
+    .NavToggle-block {
+        min-width: @tablet-NavToggle-width;
     }
 
     &.static-nav-icon {
         .double-book-column {
-            .nav-toggle-block {
+            .NavToggle-block {
                 margin-left: @tablet-large-unit;
             }
 
             .column-0 {
-                .nav-book {
+                .NavBook {
                     &.songs {
                         left: @tablet-book-offset;
                     }
                 }
 
-                .nav-button-block:not(:last-child) {
+                .NavButton-block:not(:last-child) {
                     margin-right: @tablet-small-unit;
                 }
             }
 
             .column-1 {
-                .nav-book {
+                .NavBook {
                     &.songs {
                         right: @tablet-book-offset;
                     }
                 }
 
-                .nav-button-block:not(:last-child) {
+                .NavButton-block:not(:last-child) {
                     margin-left: @tablet-small-unit;
                 }
             }
         }
 
         .single-book-column {
-            .nav-toggle-block {
+            .NavToggle-block {
                 margin-left: @tablet-single-large;
             }
 
             .column-shown {
                 &.column-0 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             left: @tablet-single-book-offset;
                         }
                     }
 
-                    .nav-button-block:not(:last-child) {
+                    .NavButton-block:not(:last-child) {
                         margin-right: @tablet-single-small;
                     }
                 }
 
                 &.column-1 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             right: @tablet-single-book-offset;
                         }
                     }
 
-                    .nav-button-block:not(:last-child) {
+                    .NavButton-block:not(:last-child) {
                         margin-left: @tablet-single-small;
                     }
                 }
@@ -266,12 +266,12 @@
 
     &.shrink-nav-icon {
         .double-book-column {
-            .nav-book {
+            .NavBook {
                 min-width: @tablet-shrink-icon;
             }
 
             .column-0 {
-                .nav-book {
+                .NavBook {
                     &.songs {
                         left: @tablet-shrink-book-offset;
                     }
@@ -279,18 +279,18 @@
             }
 
             .column-1 {
-                .nav-book {
+                .NavBook {
                     &.songs {
                         right: @tablet-shrink-book-offset;
                     }
                 }
             }
 
-            .nav-button-block {
+            .NavButton-block {
                 width: @tablet-shrink-icon;
             }
 
-            .nav-button-block .Button {
+            .NavButton-block .Button {
                 &, & .icon-canvas {
                     width: @tablet-shrink-icon;
                     height: @tablet-shrink-icon;
@@ -306,37 +306,37 @@
 
 .mini-width {
 
-    .nav-toggle-block {
-        min-width: @mini-nav-toggle-width;
+    .NavToggle-block {
+        min-width: @mini-NavToggle-width;
     }
 
     &.static-nav-icon {
         .single-book-column {
-            .nav-toggle-block {
+            .NavToggle-block {
                 margin-left: @mini-large;
             }
 
             .column-shown {
                 &.column-0 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             left: @mini-book-offset;
                         }
                     }
 
-                    .nav-button-block:not(:last-child) {
+                    .NavButton-block:not(:last-child) {
                         margin-right: @mini-small;
                     }
                 }
 
                 &.column-1 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             right: @mini-book-offset;
                         }
                     }
 
-                    .nav-button-block:not(:last-child) {
+                    .NavButton-block:not(:last-child) {
                         margin-left: @mini-small;
                     }
                 }
@@ -346,13 +346,13 @@
 
     &.shrink-nav-icon {
         .single-book-column {
-            .nav-book {
+            .NavBook {
                 min-width: @mini-shrink-icon;
             }
 
             .column-shown {
                 &.column-0 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             left: @mini-shrink-book-offset;
                         }
@@ -360,7 +360,7 @@
                 }
 
                 &.column-1 {
-                    .nav-book {
+                    .NavBook {
                         &.songs {
                             right: @mini-shrink-book-offset;
                         }
@@ -372,13 +372,13 @@
              * Show song buttons in shown column, along with toggle button in
              * hidden column.
              */
-            .column-shown, .column-hidden .nav-book.toggle {
-                .nav-button-block {
+            .column-shown, .column-hidden .NavBook.toggle {
+                .NavButton-block {
                     width: @mini-shrink-icon;
                 }
             }
 
-            .nav-button-block .Button {
+            .NavButton-block .Button {
                 &, & .icon-canvas {
                     width: @mini-shrink-icon;
                     height: @mini-shrink-icon;

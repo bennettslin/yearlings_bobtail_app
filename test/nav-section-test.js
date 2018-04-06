@@ -1,13 +1,13 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import NavSection from '../app/components/nav/nav-section.jsx'
+import Nav from '../app/components/nav/Nav.jsx'
 
-describe('NavSection', () => {
+describe('Nav', () => {
     let navSection
 
     beforeEach(() => {
-        navSection = shallow(<NavSection />)
+        navSection = shallow(<Nav />)
     })
 
     it('should exist', () => {

@@ -2,7 +2,9 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import NavItem from './nav-item'
+import cx from 'classnames'
+
+import NavItem from './NavItem'
 import { getSongsAndLoguesCount, getStartingIndexForBook } from '../../helpers/dataHelper'
 
 const navBookPropTypes = {
@@ -26,7 +28,10 @@ NavBook = ({
         endArrayIndex = isFirstColumn ? getStartingIndexForBook(bookIndex + 1) : songsCount - 1
 
     return (
-        <div className="nav-book songs">
+        <div className={cx(
+            'NavBook',
+            'songs'
+        )}>
             {Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
                 const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
                     return (
