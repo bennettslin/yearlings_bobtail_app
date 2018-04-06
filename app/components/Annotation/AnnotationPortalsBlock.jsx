@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import AnnotationPortal from './Annotation-portal'
+import AnnotationPortal from './AnnotationPortal'
 import { SOURCE_PORTAL_INDEX } from '../../constants/lyrics'
 import { getCarouselOrPopupCardPortalLinksArray } from '../../helpers/dataHelper'
 

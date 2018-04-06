@@ -1,24 +1,24 @@
 // This value *must* be the same in js.
-@carousel-annotation-min-width: @annotation-card-width +
-                                @annotation-card-padding * 2 +
+@carousel-annotation-min-width: @AnnotationCard-width +
+                                @AnnotationCard-padding * 2 +
                                 @carousel-annotation-padding * 2 +
-                                @annotation-section-padding * 2;
+                                @Annotation-padding * 2;
 
-@carousel-annotation-mini-min-width: @annotation-card-mini-width +
-                                     @annotation-card-padding * 2 +
+@carousel-annotation-mini-min-width: @AnnotationCard-mini-width +
+                                     @AnnotationCard-padding * 2 +
                                      @carousel-annotation-padding * 2 +
-                                     @annotation-section-padding * 2;
+                                     @Annotation-padding * 2;
 
 .in-carousel-width {
     /**
      * Needed in carousel for proper layout.
      */
-    width: @annotation-card-width + @annotation-card-padding * 2;
+    width: @AnnotationCard-width + @AnnotationCard-padding * 2;
 
     .mini-width
     & {
-        width: @annotation-card-mini-width +
-        @annotation-card-padding * 2;   
+        width: @AnnotationCard-mini-width +
+        @AnnotationCard-padding * 2;   
     }
 }
 
@@ -40,12 +40,12 @@
     }
 }
 
-.annotation-card {
+.AnnotationCard {
     position: relative;
 
     min-height: 0;
     max-height: 0;
-    padding: 0 @annotation-card-padding;
+    padding: 0 @AnnotationCard-padding;
     opacity: 0;
 
     transition: min-height @animation-default,
@@ -55,7 +55,7 @@
                 opacity @animation-default,
                 box-shadow @animation-default;
 
-    .text-shadow-mixin(@annotation-card-colour);
+    .text-shadow-mixin(@AnnotationCard-colour);
 
     // Select for annotation card dots, not portal dots.
     > .dots-block {
@@ -83,7 +83,7 @@
     .annotation-title-block {
         max-height: 2em; // Arbitrary value that's larger than its max height.
         min-height: @app-small-icon-diameter;
-        padding: @annotation-section-padding 0;
+        padding: @Annotation-padding 0;
     }
 }
 
@@ -99,23 +99,23 @@
     min-width: @carousel-annotation-mini-min-width;
 }
 
-.domManager.narrative .annotation-card.narrative,
-.domManager.backstory .annotation-card.backstory,
-.domManager.observation .annotation-card.observation,
-.domManager.pun .annotation-card.pun,
-.domManager.reference .annotation-card.reference,
-.domManager.songwriting .annotation-card.songwriting,
-.domManager.portal .annotation-card.portal,
-.domManager.afterword .annotation-card.afterword {
+.domManager.narrative .AnnotationCard.narrative,
+.domManager.backstory .AnnotationCard.backstory,
+.domManager.observation .AnnotationCard.observation,
+.domManager.pun .AnnotationCard.pun,
+.domManager.reference .AnnotationCard.reference,
+.domManager.songwriting .AnnotationCard.songwriting,
+.domManager.portal .AnnotationCard.portal,
+.domManager.afterword .AnnotationCard.afterword {
 
     min-height: @annotation-dot-diameter;
     max-height: 500px; // Arbitrary large number.
-    padding: @annotation-card-padding;
+    padding: @AnnotationCard-padding;
     opacity: 1;
-    box-shadow: @annotation-card-box-shadow;
+    box-shadow: @AnnotationCard-box-shadow;
 
     &:not(:last-child) {
-        margin-bottom: @annotation-section-padding;
+        margin-bottom: @Annotation-padding;
     }
 }
 
@@ -128,7 +128,7 @@
     &.in-column-right {
         opacity: 0;
     
-        .annotation-card {
+        .AnnotationCard {
             margin: auto;
             opacity: 0;
             box-shadow: none;

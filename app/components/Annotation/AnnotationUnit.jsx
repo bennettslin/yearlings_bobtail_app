@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import AnnotationCard from './Annotation-card'
+import AnnotationCard from './AnnotationCard'
 import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
@@ -43,7 +43,7 @@ AnnotationUnit = ({
         })
 
     return (
-        <div className="annotation-cards-block">
+        <div className="AnnotationUnit">
             {cardsIndices.map(cardIndex => (
                 <AnnotationCard {...other}
                     key={cardIndex}

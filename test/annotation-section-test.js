@@ -1,13 +1,13 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import AnnotationSection from '../app/components/Annotation/annotation-section.jsx'
+import Annotation from '../app/components/Annotation/Annotation.jsx'
 
-describe('AnnotationSection', () => {
+describe('Annotation', () => {
     let annotationSection
 
     beforeEach(() => {
-        annotationSection = shallow(<AnnotationSection />)
+        annotationSection = shallow(<Annotation />)
     })
 
     it('should exist', () => {

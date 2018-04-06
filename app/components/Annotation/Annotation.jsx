@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import AnnotationUnit from './Annotation-unit'
+import AnnotationUnit from './AnnotationUnit'
 import DotAnchor from '../dot/dot-anchor'
 import { IS_DOT_STANZA } from '../../constants/lyrics'
 import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
@@ -22,7 +22,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class AnnotationSection extends Component {
+class Annotation extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -124,8 +124,8 @@ AnnotationSectionView = ({
     return (
         <div
             className={cx(
+                'Annotation',
                 'section',
-                'annotation-section',
                 { 'selected-annotation': showAsSelected,
                 'accessed-annotation': isAccessedAnnotation }
             )}
@@ -184,4 +184,4 @@ AnnotationSectionView = ({
 
 AnnotationSectionView.propTypes = annotationSectionViewPropTypes
 
-export default connect(mapStateToProps)(AnnotationSection)
+export default connect(mapStateToProps)(Annotation)

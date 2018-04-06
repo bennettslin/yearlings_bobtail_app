@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Can't show carousel or nav when heightless lyric.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Hovering over access icons doesn't trigger animation.`,
         workedHours: 0,
         neededHours: 1

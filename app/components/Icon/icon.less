@@ -29,7 +29,7 @@
      */
     .text-anchor-block
     &,
-    .annotation-card:not(.portal)
+    .AnnotationCard:not(.portal)
     & {
         // Fade out first, then reduce width.
         transition: opacity @animation-default,
@@ -137,7 +137,7 @@
         border: @dot-border solid @lyric-underline-enabled-colour;
     }
 
-    .annotation-card
+    .AnnotationCard
     .dots-block
     & {
         width: @annotation-dot-diameter;
@@ -151,13 +151,13 @@
 }
 
 // Portals are not included here.
-.domManager.narrative .annotation-card .icon-canvas-block.narrative,
-.domManager.backstory .annotation-card .icon-canvas-block.backstory,
-.domManager.observation .annotation-card .icon-canvas-block.observation,
-.domManager.pun .annotation-card .icon-canvas-block.pun,
-.domManager.reference .annotation-card .icon-canvas-block.reference,
-.domManager.songwriting .annotation-card .icon-canvas-block.songwriting,
-.domManager.afterword .annotation-card .icon-canvas-block.afterword {
+.domManager.narrative .AnnotationCard .icon-canvas-block.narrative,
+.domManager.backstory .AnnotationCard .icon-canvas-block.backstory,
+.domManager.observation .AnnotationCard .icon-canvas-block.observation,
+.domManager.pun .AnnotationCard .icon-canvas-block.pun,
+.domManager.reference .AnnotationCard .icon-canvas-block.reference,
+.domManager.songwriting .AnnotationCard .icon-canvas-block.songwriting,
+.domManager.afterword .AnnotationCard .icon-canvas-block.afterword {
     // Increase width first, then fade in.
     transition: width @animation-default,
                 opacity @animation-default @animation-faster;

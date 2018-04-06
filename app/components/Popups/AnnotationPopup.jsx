@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import AnnotationSection from '../Annotation/annotation-section'
+import Annotation from '../Annotation/Annotation'
 import Popup from '../Popup/Popup'
 import { getIsOverlayingAnnotation,
          getIsPhone } from '../../helpers/responsiveHelper'
@@ -99,7 +99,7 @@ AnnotationPopup = ({
              * popup is fading out.
              */
             myChild = (
-                <AnnotationSection {...other} />
+                <Annotation {...other} />
             )
 
         return (
