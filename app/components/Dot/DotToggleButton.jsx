@@ -146,7 +146,7 @@ DotToggleButtonView = ({
                 <span className={cx(
                     'anchor-block',
                     'text-anchor-block',
-                    'in-dots-section',
+                    'in-Dots',
                     { 'selected': isInteractivated,
                       'access-highlighted': accessHighlighted }
                 )}>

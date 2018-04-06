@@ -7,7 +7,7 @@
     // Show access highlight of dots and text...
 
     // ... in dots section whenever...
-    .dots-section,
+    .Dots,
 
     // ... in carousel and annotation anchor when selected...
     .selected-annotation .AnnotationCard,
@@ -19,10 +19,10 @@
     &.is-not-verse-interactivated .carousel .accessed-annotation.selected-annotation .cards-block,
 
     // ... in lyrics only when...
-    &.is-not-verse-interactivated.dots-section-hidden.carousel-expanded .lyric-section,
+    &.is-not-verse-interactivated.Dots-hidden.carousel-expanded .lyric-section,
     
     // ... or...
-    &.is-not-verse-interactivated.dots-section-hidden.lyric-expanded .lyric-section {
+    &.is-not-verse-interactivated.Dots-hidden.lyric-expanded .lyric-section {
 
         .access-highlighted {
 
@@ -65,7 +65,7 @@
     }
 
     // Nav buttons in nav section.
-    &.nav-expanded.is-not-verse-interactivated.dots-section-hidden {
+    &.nav-expanded.is-not-verse-interactivated.Dots-hidden {
         .nav-section {
             .access-highlighted.access-keys-shown {
                 .icon-canvas {
@@ -75,7 +75,7 @@
         }
     }
 
-    &.is-not-verse-interactivated.annotation-hidden.dots-section-hidden {
+    &.is-not-verse-interactivated.annotation-hidden.Dots-hidden {
 
         // Lyrics annotation is accessed.
         .lyric-section {
@@ -93,8 +93,8 @@
     }
 
     // Dots section is accessed.
-    &.dots-section-shown {
-        .dots-section {
+    &.Dots-shown {
+        .Dots {
             // background-color: @temp-access-background;
 
             // Show dot description in dots section.

@@ -1,13 +1,13 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import DotsSection from '../app/components/dots/dot-section.jsx'
+import Dots from '../app/components/dots/dot-section.jsx'
 
-describe('DotsSection', () => {
+describe('Dots', () => {
     let dotsSection
 
     beforeEach(() => {
-        dotsSection = shallow(<DotsSection />)
+        dotsSection = shallow(<Dots />)
     })
 
     it('should exist', () => {

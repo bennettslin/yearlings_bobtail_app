@@ -36,9 +36,9 @@ DotToggleBlock = ({
     return (
         <span className={cx(
             'dots-block',
-            'dots-toggle-block'
+            'DotsToggle-block'
         )}>
-            <div className="dots-toggle-row">
+            <div className="DotsToggle-row">
                 {firstHalfArray.map((dotKey, firstHalfIndex) => {
 
                     const accessHighlighted = accessedDotIndex === firstHalfIndex
@@ -54,7 +54,7 @@ DotToggleBlock = ({
                     )
                 })}
             </div>
-            <div className="dots-toggle-row">
+            <div className="DotsToggle-row">
                 {secondHalfArray.map((dotKey, index) => {
 
                     const secondHalfIndex = index + firstHalfEnd,

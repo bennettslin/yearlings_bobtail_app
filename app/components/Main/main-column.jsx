@@ -11,7 +11,7 @@ import AnnotationPopup from '../Popups/AnnotationPopup'
 import AudioBanner from '../Audio/AudioBanner'
 import CarouselToggle from '../Carousel/CarouselToggle'
 import Carousel from '../Carousel/Carousel'
-import DotsSection from '../dots/dots-section'
+import Dots from '../dots/Dots'
 import DotsOverviewToggleSection from './DotsOverviewToggleSection'
 import LyricToggle from '../lyric/lyric-toggle'
 import Stage from '../stage/Stage'
@@ -86,7 +86,7 @@ MainColumn = ({
                 />
 
                 <div className="dots-subfield">
-                    <DotsSection {...dotsSectionHandlers} />
+                    <Dots {...dotsSectionHandlers} />
                 </div>
 
                 <ScoresTipsSection {...scoresTipsSectionHandlers}

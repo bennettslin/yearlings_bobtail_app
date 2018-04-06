@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import DotToggleBlock from '../dot/DotToggleBlock'
+import DotToggleBlock from '../Dot/DotToggleBlock'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -16,7 +16,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class DotsSection extends Component {
+class Dots extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -104,7 +104,7 @@ DotsSectionView = ({
 ...other }) => (
 
     <div
-        className="section dots-section access-keys-shown"
+        className="section Dots access-keys-shown"
         onClick={handleContainerClick}
         onTouchStart={handleContainerClick}
     >
@@ -114,4 +114,4 @@ DotsSectionView = ({
 
 DotsSectionView.propTypes = dotsSectionViewPropTypes
 
-export default connect(mapStateToProps)(DotsSection)
+export default connect(mapStateToProps)(Dots)

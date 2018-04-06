@@ -160,7 +160,7 @@ class DomManager extends Component {
                     selectedDotKeys,
                     selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
                     selectedCarouselNavIndex ? 'carousel-expanded' : 'nav-expanded',
-                    selectedDotsIndex ? 'dots-section-shown' : 'dots-section-hidden',
+                    selectedDotsIndex ? 'Dots-shown' : 'Dots-hidden',
 
                     isLogue ? 'is-logue' : 'is-song',
 
