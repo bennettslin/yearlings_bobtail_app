@@ -17,7 +17,7 @@
 @uncanny-valley-width: 570px;
 
 // This value *must* be the same in js.
-@collapsed-lyric-section-height: 32%;
+@collapsed-Lyric-height: 32%;
 
 @nav-height-padding: 6px;
 @nav-height: @app-large-icon-diameter + @nav-height-padding;
@@ -25,15 +25,15 @@
 @nav-mini-height: @app-mini-large-icon-diameter + @nav-height-padding;
 @book-height: @app-icon-diameter + @nav-height-padding;
 
-@lyric-verse-size: 1em;
+@LyricVerse-size: 1em;
 @lyric-title-size: 1.5em;
 
 @mini-multiplier: 0.9;
-@mini-verse-size: @lyric-verse-size * @mini-multiplier;
+@mini-verse-size: @LyricVerse-size * @mini-multiplier;
 @mini-title-size: 1.2em;
 
 @phone-multiplier: 0.8;
-@phone-verse-size: @lyric-verse-size * @phone-multiplier;
+@phone-verse-size: @LyricVerse-size * @phone-multiplier;
 @phone-title-size: 1em;
 
 @Annotation-padding: 5px;
@@ -104,7 +104,7 @@
         width: ~"calc(100% - @{golden-cord-width})";
     }
 
-    .lyric-column, .overview-logue-column {
+    .LyricColumn, .overview-logue-column {
         width: @golden-cord-width;
         right: 0;
     }
@@ -114,7 +114,7 @@
             width: ~"calc(100% - @{uncanny-valley-width})";
         }
 
-        .lyric-column, .overview-logue-column {
+        .LyricColumn, .overview-logue-column {
             width: @uncanny-valley-width;
         }
     }
@@ -132,16 +132,16 @@
 
     .main-column {
         width: 100%;
-        height: 100% - @collapsed-lyric-section-height;
+        height: 100% - @collapsed-Lyric-height;
     }
 
     .centre-field {
         flex-direction: column-reverse;
     }
 
-    .lyric-column, .overview-logue-column {
+    .LyricColumn, .overview-logue-column {
         position: absolute;
-        height: @collapsed-lyric-section-height;
+        height: @collapsed-Lyric-height;
         width: 100%;
         bottom: 0;
     }

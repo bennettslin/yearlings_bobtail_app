@@ -4,8 +4,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import LyricStanza from './lyric-stanza'
-import LyricDotStanza from './lyric-dot-stanza'
+import LyricStanza from './LyricStanza'
+import LyricDotStanza from './LyricDotStanza'
 import { TITLE } from '../../constants/lyrics'
 import { getLyricUnitArray } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
@@ -200,7 +200,7 @@ LyricUnitView = ({
     return (
         <div
             className={cx(
-                'lyric-unit',
+                'LyricUnit',
                 unitIndex && `unit-${unitIndex}`,
                 sceneIndex && `scene-${sceneIndex}`,
                 unitClassName,

@@ -1,7 +1,7 @@
-.lyric-unit {
+.LyricUnit {
     display: flex;
     justify-content: center;
-    font-size: @lyric-verse-size;
+    font-size: @LyricVerse-size;
 
     /**
      * Apply margin top to stanza block rather than lyrics unit, so that
@@ -9,13 +9,13 @@
      */
     &:not(:first-child):not(.subsequent) {
         .stanza-block:not(.dot-stanza) {
-            margin-top: @lyric-unit-margin;
+            margin-top: @LyricUnit-margin;
         }
     }
 
     &.subsequent {
         .stanza-block {
-            margin-top: @lyric-unit-margin - @stanza-type-tab-height - 2.5px;
+            margin-top: @LyricUnit-margin - @stanza-type-tab-height - 2.5px;
         }
     }
 
@@ -172,7 +172,7 @@
 
 // Make font size smaller in mini and phone.
 .mini-width {
-    .lyric-unit, .verse-bar-block, .AnnotationCard, .tips-text {
+    .LyricUnit, .verse-bar-block, .AnnotationCard, .tips-text {
         font-size: @mini-verse-size;
     }
 
@@ -182,7 +182,7 @@
 }
 
 .phone-width {
-    .lyric-unit, .verse-bar-block, .AnnotationCard, .tips-text {
+    .LyricUnit, .verse-bar-block, .AnnotationCard, .tips-text {
         font-size: @phone-verse-size;
     }
 

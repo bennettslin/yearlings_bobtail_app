@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import AccessIconsBlock from '../access/access-icons-block'
+import AccessIconsBlock from '../access/AccessIconsBlock'
 import { NAVIGATION_ENTER_KEY,
          AUDIO_REWIND_KEY,
          AUDIO_FAST_FORWARD_KEY } from '../../constants/access'

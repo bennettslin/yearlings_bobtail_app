@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import LyricVerse from './lyric-verse'
+import LyricVerse from './LyricVerse'
 
 /*************
  * CONTAINER *

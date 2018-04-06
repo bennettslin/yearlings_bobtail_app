@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import debounce from 'debounce'
 
-import LyricUnit from './lyric-unit'
+import LyricUnit from './LyricUnit'
 import { getLyricUnitsCount } from '../../helpers/dataHelper'
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
@@ -22,7 +22,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class LyricSection extends Component {
+class Lyric extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -127,7 +127,7 @@ LyricSectionView = ({
             ref={lyricSectionRef}
             className={cx(
                 'section',
-                'lyric-section',
+                'Lyric',
                 'lyrics-scroll',
                 'lyric-collapsed-gradient-mask'
             )}
@@ -151,4 +151,4 @@ LyricSectionView = ({
 
 LyricSectionView.propTypes = lyricSectionViewPropTypes
 
-export default connect(mapStateToProps)(LyricSection)
+export default connect(mapStateToProps)(Lyric)

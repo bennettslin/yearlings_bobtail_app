@@ -1,4 +1,4 @@
-.lyric-column {
+.LyricColumn {
     transition: height @animation-default, background-image @animation-default;
 
     // Keeps elements inside window!
@@ -10,7 +10,7 @@
          * This fixes the issue of being unable to scroll between stanzas. But
          * set only in song, otherwise lyric column in logue will cover nav.
          */
-        z-index: @lyric-column-z-index;
+        z-index: @LyricColumn-z-index;
     }
 
     .is-mobile.is-song.lyric-expanded
@@ -23,14 +23,14 @@
         height: 0;
     }
 
-    @phone-lyric-column-subtraction: @menu-phone-height + @AudioBanner-custom-subfield-height + @AudioBanner-custom-subfield-padding * 2;
+    @phone-LyricColumn-subtraction: @menu-phone-height + @AudioBanner-custom-subfield-height + @AudioBanner-custom-subfield-padding * 2;
 
     .phone-width.is-song.lyric-expanded {
-        height: ~"calc(100% - @{phone-lyric-column-subtraction})";
+        height: ~"calc(100% - @{phone-LyricColumn-subtraction})";
     }
 }
 
-.lyric-column-animatable {
+.LyricColumn-animatable {
     position: absolute;
     width: 100%;
     height: 100%;

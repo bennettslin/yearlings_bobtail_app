@@ -1,10 +1,10 @@
-@access-icons-block-margin: 10px;
+@AccessIconsBlock-margin: 10px;
 
-.lyric-access-row {
+.LyricAccess-row {
     position: absolute;
     width: 100%;
     bottom: 0;
-    padding: @access-icons-block-margin;
+    padding: @AccessIconsBlock-margin;
     box-sizing: border-box;
 
     display: flex;
@@ -14,13 +14,13 @@
     display: flex;
 }
 
-.access-icons-block {
-    .lyric-column
+.AccessIconsBlock {
+    .LyricColumn
     & {
-        z-index: @lyric-access-icons-z-index;
+        z-index: @LyricAccess-icons-z-index;
 
         &.up-down {
-            right: @access-icons-block-margin;
+            right: @AccessIconsBlock-margin;
         }
 
         &.left-right, &.enter {
@@ -28,7 +28,7 @@
         }
 
         &.enter {
-            margin-left: @access-icons-block-margin;
+            margin-left: @AccessIconsBlock-margin;
         }
     }
 }

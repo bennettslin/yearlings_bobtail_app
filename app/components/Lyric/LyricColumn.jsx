@@ -4,10 +4,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import LyricAccess from './lyric-access'
-import LyricToggle from './lyric-toggle'
-import LyricEarToggle from './lyric-ear-toggle'
-import LyricSection from './lyric-section'
+import LyricAccess from './LyricAccess'
+import LyricToggle from './LyricToggle'
+import LyricEarToggle from './LyricEarToggle'
+import Lyric from './Lyric'
 import VerseBar from '../verse/verse-bar'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
@@ -206,14 +206,14 @@ LyricColumnView = ({
         <div
             className={cx(
                 'column',
-                'lyric-column',
+                'LyricColumn',
                 isHeavyRenderReady ? 'render-ready' : 'render-unready'
             )}
             ref={myRef}
             onTransitionEnd={handleTransition}
         >
             <div className={cx(
-                    'lyric-column-animatable',
+                    'LyricColumn-animatable',
                     { 'override-animate': shouldOverrideAnimate }
                 )}
                 onTransitionEnd={handleAnimatableTransition}
@@ -231,7 +231,7 @@ LyricColumnView = ({
                     handleLyricSectionExpand={handleLyricSectionExpand}
                 />
 
-                <LyricSection {...other}
+                <Lyric {...other}
                     isTransitioningHeight={isTransitioningHeight}
                     completeHeightTransition={completeHeightTransition}
                 />

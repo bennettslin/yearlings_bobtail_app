@@ -686,7 +686,7 @@ class EventManager extends Component {
              * case, we'll find the elements through the document.
              */
             focusElement = this.myLyricSection ||
-                document.getElementsByClassName('lyric-section')[0]
+                document.getElementsByClassName('Lyric')[0]
 
         // In admin view.
         } else {

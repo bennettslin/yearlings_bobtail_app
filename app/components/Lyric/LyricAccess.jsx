@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 import { convertTrueFalseKeysToBitNumber } from '../../helpers/bitHelper'
 
-import AccessIconsBlock from '../access/access-icons-block'
+import AccessIconsBlock from '../access/AccessIconsBlock'
 import { NAVIGATION_ENTER_KEY,
          NAVIGATION_LEFT_KEY,
          NAVIGATION_RIGHT_KEY,
@@ -73,7 +73,7 @@ const LyricAccess = ({
         showEnter = showLeftRight && interactivatedVerseIndex < 0
 
     return (
-        <div className="lyric-access-row">
+        <div className="LyricAccess-row">
             <div className="access-icons-group">
                 <AccessIconsBlock
                     className="left-right"
