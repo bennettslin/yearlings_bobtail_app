@@ -5,13 +5,13 @@
 @menu-subfield-narrow-margin: 3px;
 @title-subfield-min-width: 72px;
 
-.menu-field, .menu-subfield {
+.MenuField, .menu-subfield {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.menu-field {
+.MenuField {
     position: relative;
     height: @menu-height;
     // background-color: rgba(225, 255, 225, 0.5);
@@ -21,7 +21,7 @@
     transition: top @animation-default;
 
     // Needs to be above nav when nav buttons are hidden.
-    z-index: @menu-field-z-index;
+    z-index: @MenuField-z-index;
 }
 
 .menu-subfield {
@@ -73,7 +73,7 @@
 }
 
 .phone-width {
-    .menu-field {
+    .MenuField {
         height: @menu-phone-height;
     }
 }

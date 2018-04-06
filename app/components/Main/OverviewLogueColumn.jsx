@@ -33,7 +33,7 @@ OverviewLogueColumn = ({
     overviewPopupHandlers
 
 }) => (
-    <div className="column overview-logue-column">
+    <div className="column OverviewLogueColumn">
         <OverviewPopup {...overviewPopupHandlers}
             inOverviewSubfield={false}
         />
