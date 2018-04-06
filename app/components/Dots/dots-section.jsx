@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import DotToggleBlock from '../dot/dot-toggle-block'
+import DotToggleBlock from '../dot/DotToggleBlock'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({

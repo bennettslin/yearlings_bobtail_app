@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DotToggleButton from './dot-toggle-button'
+import DotToggleButton from './DotToggleButton'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
 const mapStateToProps = ({

@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import DotButton from './dot-button'
+import DotButton from './DotButton'
 
 class DotAnchor extends Component {
 
@@ -51,7 +51,7 @@ class DotAnchor extends Component {
         return (
             <div className={cx(
                 'anchor-block',
-                'dot-anchor',
+                'DotAnchor',
                 dotKeys,
                 { 'selected': isSelected,
                   'access-highlighted': accessHighlighted && !isSelected }

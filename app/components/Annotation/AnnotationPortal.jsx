@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames';
 import TextBlock from '../text/text-block'
-import DotButton from '../dot/dot-button'
+import DotButton from '../dot/DotButton'
 import { PORTAL } from '../../constants/dots'
 import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
 import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from '../../helpers/dataHelper'
@@ -106,7 +106,7 @@ class AnnotationPortal extends Component {
                 className={cx(
                     'portal-block',
                     'anchor-block',
-                    'dot-anchor',
+                    'DotAnchor',
                     { 'access-highlighted': isAccessedPortal }
                 )}
             >

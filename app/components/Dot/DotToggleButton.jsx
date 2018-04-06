@@ -156,7 +156,7 @@ DotToggleButtonView = ({
             </a>
             <div className={cx(
                 'anchor-block',
-                'dot-anchor',
+                'DotAnchor',
                 { 'access-highlighted': accessHighlighted }
             )}>
                 <Button
