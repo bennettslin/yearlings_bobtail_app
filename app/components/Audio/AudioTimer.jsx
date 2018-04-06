@@ -41,7 +41,7 @@ AudioTimer = ({
     }
 
     return (
-        <div className="audio-banner-time">
+        <div className="AudioBanner-time">
 
             {displayBase && (
                 <span className="base">

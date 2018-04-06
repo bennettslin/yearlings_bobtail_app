@@ -1,6 +1,10 @@
+@import "./AudioBanner.less";
+@import "./AudioButtons.less";
+@import "./AudioTimer.less";
+
 @audio-max-width: 640px; // Arbitrary
 
-.audio-section, .audio-block, .audio-subblock, .audio-display-block {
+.Audio, .audio-block, .audio-subblock, .audio-display-block {
     display: flex;
     align-items: center;
 }
@@ -8,24 +12,24 @@
 // Parent container of both audio sections.
 .audio-subfield, .popup-wrapper.audio {
 
-    min-width: @audio-banner-min-width + @audio-buttons-constant + @app-large-icon-diameter + @audio-block-padding * 3;
+    min-width: @AudioBanner-min-width + @AudioButtons-constant + @app-large-icon-diameter + @audio-block-padding * 3;
     max-width: @audio-max-width;
 
     box-sizing: border-box;
 
     .tablet-width
     & {
-        min-width: @audio-banner-min-width + @audio-buttons-constant + @app-tablet-large-icon-diameter + @audio-block-padding * 3;
+        min-width: @AudioBanner-min-width + @AudioButtons-constant + @app-tablet-large-icon-diameter + @audio-block-padding * 3;
     }
 
     .mini-width
     & {
-        min-width: @audio-banner-min-width + @audio-buttons-constant + @app-mini-large-icon-diameter + @audio-block-padding * 3;
+        min-width: @AudioBanner-min-width + @AudioButtons-constant + @app-mini-large-icon-diameter + @audio-block-padding * 3;
     }
 
     .phone-width
     & {
-        min-width: @audio-buttons-constant + @app-icon-diameter + @audio-block-padding * 3;
+        min-width: @AudioButtons-constant + @app-icon-diameter + @audio-block-padding * 3;
     }
 }
 
@@ -39,7 +43,7 @@
     }
 }
 
-.audio-section {
+.Audio {
 
     flex-grow: 1;
 

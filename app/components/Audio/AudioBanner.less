@@ -1,12 +1,12 @@
-.audio-banner-block, .audio-timer-block {
+.AudioBanner-block, .AudioTimer-block {
     background-color: #8dd;
 }
 
-.audio-banner-block {
+.AudioBanner-block {
     height: 100%;
     position: relative;
     margin-right: @audio-block-padding;
-    min-width: @audio-banner-min-width;
+    min-width: @AudioBanner-min-width;
     line-height: 1em;
 
     background-color: #dbd;
@@ -32,13 +32,13 @@
     }
 }
 
-.audio-banner {
+.AudioBanner {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 
-    .audio-banner-block
+    .AudioBanner-block
     & {
         flex-grow: 1;
     }
@@ -48,13 +48,13 @@
     box-sizing: border-box;
     padding: 0 5px;
 
-    height: @audio-banner-height;
+    height: @AudioBanner-height;
     justify-content: space-between;
 
     background-color: #8b8;
 }
 
-.audio-banner-title {
+.AudioBanner-title {
 
     // Make text smaller when width is narrow.
     .title-in-audio

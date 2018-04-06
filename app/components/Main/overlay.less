@@ -27,7 +27,7 @@
         }
     }
 
-    .AudioPopup-block, .audio-section {
+    .AudioPopup-block, .Audio {
         height: @menu-height;
     }
 
@@ -83,31 +83,31 @@
 .phone-width {
     &.overlay-shown {
 
-        .audio-banner-custom-subfield {
-            top: -@menu-height - @audio-banner-custom-subfield-height - 2 * @audio-banner-custom-subfield-padding;
+        .AudioBanner-custom-subfield {
+            top: -@menu-height - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
         }
 
         .overlay-popup-subfield {
 
             @banner-margin: 5px;
 
-            .audio-section {
+            .Audio {
                 align-items: flex-start;
             }
 
-            .audio-section, .AudioPopup-block {
+            .Audio, .AudioPopup-block {
                 height: @app-icon-diameter * 2 + @banner-margin;
             }
 
-            .audio-buttons-block, .audio-timer-block, .audio-banner-block {
+            .AudioButtons-block, .AudioTimer-block, .AudioBanner-block {
                 height: @app-icon-diameter;
             }
 
-            .audio-buttons-block {
+            .AudioButtons-block {
                 max-width: 300px; // Also arbitrary.
             }
 
-            .audio-timer-block {
+            .AudioTimer-block {
                 flex-grow: 1;
                 display: flex;
                 justify-content: center;
@@ -115,7 +115,7 @@
                 margin-right: @audio-block-padding;
             }
 
-            .audio-banner-block {
+            .AudioBanner-block {
                 position: absolute;
                 bottom: 0;
                 width: 100%;
@@ -136,8 +136,8 @@
             top: -@menu-height;
         }
 
-        .audio-banner-custom-subfield {
-            top: -@menu-height - @audio-banner-custom-subfield-height - 2 * @audio-banner-custom-subfield-padding;
+        .AudioBanner-custom-subfield {
+            top: -@menu-height - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
         }
     }
 }

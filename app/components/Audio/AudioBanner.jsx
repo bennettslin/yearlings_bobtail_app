@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import SliderSection from '../slider/slider-section'
-import AudioTimer from './audio-timer'
+import AudioTimer from './AudioTimer'
 import { getSongTitle } from '../../helpers/dataHelper'
 import { getIsPhone } from '../../helpers/responsiveHelper'
 
@@ -64,11 +64,11 @@ AudioBanner = ({
         audioBannerComponent = (
             <div className={cx(
                 'audio-block',
-                'audio-banner-block'
+                'AudioBanner-block'
             )}>
                 <SliderSection {...other} />
-                <div className="audio-banner audio-display-block">
-                    <div className="audio-banner-title">
+                <div className="AudioBanner audio-display-block">
+                    <div className="AudioBanner-title">
                         {songTitle}
                     </div>
                     <AudioTimer />
@@ -80,7 +80,7 @@ AudioBanner = ({
 
         // If in custom subfield, wrap in parent element.
         return inCustomSubfield ? (
-            <div className="audio-banner-custom-subfield">
+            <div className="AudioBanner-custom-subfield">
                 {audioBannerComponent}
             </div>
         ) : audioBannerComponent

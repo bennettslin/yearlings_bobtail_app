@@ -3,9 +3,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import AudioBanner from './audio-banner'
-import AudioButtons from './audio-buttons'
-import AudioTimer from './audio-timer'
+import AudioBanner from './AudioBanner'
+import AudioButtons from './AudioButtons'
+import AudioTimer from './AudioTimer'
 import TitleToggle from '../Title/TitleToggle'
 import { getIsTimerInAudio } from '../../helpers/logicHelper'
 
@@ -47,7 +47,7 @@ audioSectionPropTypes = {
     titleToggleHandlers: PropTypes.object.isRequired
 },
 
-AudioSection = ({
+Audio = ({
 
     deviceIndex,
     isLyricExpanded,
@@ -74,10 +74,10 @@ AudioSection = ({
 
     return (
         <div
-            className="section audio-section"
+            className="section Audio"
         >
             {isTimerInAudio && (
-                <div className="audio-timer-block">
+                <div className="AudioTimer-block">
                     <AudioTimer />
                 </div>
             )}
@@ -97,7 +97,7 @@ AudioSection = ({
     )
 }
 
-AudioSection.defaultProps = audioSectionDefaultProps
-AudioSection.propTypes = audioSectionPropTypes
+Audio.defaultProps = audioSectionDefaultProps
+Audio.propTypes = audioSectionPropTypes
 
-export default connect(mapStateToProps)(AudioSection)
+export default connect(mapStateToProps)(Audio)

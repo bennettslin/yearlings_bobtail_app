@@ -4,7 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Popup from '../Popup/Popup'
-import AudioSection from '../Audio/audio-section'
+import Audio from '../Audio/Audio'
 import { getShowOverlay } from '../../helpers/logicHelper'
 
 const mapStateToProps = ({
@@ -62,7 +62,7 @@ AudioPopup = ({
         }),
 
         myChild = (
-            <AudioSection {...other}
+            <Audio {...other}
                 inOverlay={true}
             />
         )

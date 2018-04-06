@@ -5,7 +5,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import AudioSection from '../Audio/audio-section'
+import Audio from '../Audio/Audio'
 import ScoresTipsSection from './ScoresTipsSection'
 import TitleToggle from '../Title/TitleToggle'
 
@@ -32,7 +32,7 @@ MenuField = ({
                 />
             </div>
             <div className="menu-subfield audio-subfield">
-                <AudioSection {...audioSectionHandlers} />
+                <Audio {...audioSectionHandlers} />
             </div>
             <div className="menu-subfield scores-tips-menu-subfield">
                 <ScoresTipsSection {...scoresTipsSectionHandlers}

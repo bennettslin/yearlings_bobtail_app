@@ -1,0 +1,26 @@
+@jiffy-multiplier: 0.66;
+
+.AudioBanner-time {
+    @AudioBanner-time-font-size: 0.95em;
+
+    .base {
+        font-size: @AudioBanner-time-font-size;
+    }
+
+    .jiffy {
+        font-size: @AudioBanner-time-font-size * @jiffy-multiplier;
+    }
+
+    .AudioTimer-block
+    & {
+        @AudioTimer-block-font-size: 1.6em;
+        
+        .base {
+            font-size: @AudioTimer-block-font-size;
+        }
+        
+        .jiffy {
+            font-size: @AudioTimer-block-font-size * @jiffy-multiplier;
+        }
+    }
+}
