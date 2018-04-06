@@ -2,9 +2,9 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import TextAnchorBlock from './text-anchor-block'
-import TextBlock from './text-block'
-import TextSpan from './text-span'
+import TextAnchorBlock from './TextAnchorBlock'
+import TextBlock from './TextBlock'
+import TextSpan from './TextSpan'
 
 const textUnitPropTypes = {
     // From parent.

@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import TextUnit from '../app/components/text/text-unit.jsx'
+import TextUnit from '../app/components/Text/TextUnit.jsx'
 
 describe('TextUnit', () => {
     let textUnit

@@ -8,7 +8,7 @@ import LyricAccess from './LyricAccess'
 import LyricToggle from './LyricToggle'
 import LyricEarToggle from './LyricEarToggle'
 import Lyric from './Lyric'
-import VerseBar from '../verse/verse-bar'
+import VerseBar from '../verse/VerseBar'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({

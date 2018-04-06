@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import TextSpan from '../app/components/text/text-span.jsx'
+import TextSpan from '../app/components/Text/TextSpan.jsx'
 
 describe('TextSpan', () => {
     let textSpan

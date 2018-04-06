@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import TextAnchor from './text-anchor'
+import TextAnchor from './TextAnchor'
 import { WIKI_INDEX } from '../../constants/lyrics'
 
 const mapStateToProps = ({

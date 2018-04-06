@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import TextBlock from './text-block'
+import TextBlock from './TextBlock'
 import DotBlock from '../Dot/DotBlock'
 
 class TextAnchor extends Component {
@@ -98,7 +98,7 @@ class TextAnchor extends Component {
                 <a
                     className={cx(
                         'anchor-block',
-                        'text-anchor-block',
+                        'TextAnchorBlock',
 
                         /**
                          * isPortalAnchor is the actual portal anchor, inPortal

@@ -182,9 +182,9 @@ class DomManager extends Component {
                     carouselNavCanShow ? 'CarouselNav-can-show' : 'CarouselNav-cannot-show',
 
                     { 'title-in-audio': isTitleInAudio,
-                      'verse-bar-above': isVerseBarAbove,
-                      'verse-bar-below': isVerseBarBelow,
-                      'verse-bar-hidden': !isVerseBarAbove && !isVerseBarBelow,
+                      'VerseBar-above': isVerseBarAbove,
+                      'VerseBar-below': isVerseBarBelow,
+                      'VerseBar-hidden': !isVerseBarAbove && !isVerseBarBelow,
                       'show-both-columns': !singleShownLyricColumnKey,
                       'slider-touched': isSliderTouched }
                 )}

@@ -1,0 +1,97 @@
+@VerseBar-margin: 8px;
+@VerseBar-hidden-offset: -50px;
+
+@VerseBar-desktop-margins: @lyric-button-side-padding * 2 +
+                            @app-large-icon-diameter * 2 +
+                            @VerseBar-margin * 2;
+
+@VerseBar-tablet-margins: @lyric-button-side-padding * 2 +
+                           @app-tablet-large-icon-diameter * 2 +
+                           @VerseBar-margin * 2;
+
+@VerseBar-mini-margins: @lyric-button-side-padding * 2 +
+                         @app-mini-large-icon-diameter * 2 +
+                         @VerseBar-margin * 2;
+
+@VerseBar-phone-margins: @lyric-button-side-padding * 2 +
+                          @app-icon-diameter * 2 +
+                          @VerseBar-margin * 2;
+
+.VerseBar-block {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+
+    max-width: ~"calc(100% - @{VerseBar-desktop-margins})";
+
+    .tablet-width
+    & {
+        max-width: ~"calc(100% - @{VerseBar-tablet-margins})";
+    }
+
+    .mini-width
+    & {
+        max-width: ~"calc(100% - @{VerseBar-mini-margins})";
+    }
+
+    .phone-width
+    & {
+        max-width: ~"calc(100% - @{VerseBar-phone-margins})";
+    }
+
+    z-index: @selected-VerseBar-z-index;
+
+    transform: translateX(-50%) scale(0);
+
+    &.above {
+        top: @VerseBar-hidden-offset;
+        margin-top: @VerseBar-margin;
+        transition: top @animation-fast, transform @animation-fast;
+
+        .VerseBar-above
+        & {
+            top: 0;
+            transform: translateX(-50%) scale(1);
+        }
+
+        .VerseBar {
+            box-shadow: @VerseBar-above-box-shadow;
+        }
+    }
+
+    &.below {
+        bottom: @VerseBar-hidden-offset;
+        margin-bottom: @VerseBar-margin;
+        transition: bottom @animation-fast, transform @animation-fast;
+
+        .VerseBar-below
+        & {
+            bottom: 0;
+            transform: translateX(-50%) scale(1);
+        }
+
+        .VerseBar {
+            box-shadow: @VerseBar-below-box-shadow;
+        }
+    }
+}
+
+.VerseBar {
+    max-width: 100%;
+
+    margin: 0 5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: background-color @animation-default;
+
+    .TextSpan {
+        z-index: @VerseBar-text-z-index;
+    }
+
+    .slider-moving
+    & {
+        background-color: @audio-neutral-colour;
+    }
+}

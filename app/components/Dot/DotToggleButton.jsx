@@ -145,13 +145,13 @@ DotToggleButtonView = ({
             >
                 <span className={cx(
                     'anchor-block',
-                    'text-anchor-block',
+                    'TextAnchorBlock',
                     'in-Dots',
                     { 'selected': isInteractivated,
                       'access-highlighted': accessHighlighted }
                 )}>
                     <span className="underline-bar" />
-                    <span className="text-span">{dotKey}</span>
+                    <span className="TextSpan">{dotKey}</span>
                 </span>
             </a>
             <div className={cx(

@@ -115,8 +115,8 @@ class VerseAudioButton extends Component {
                 'x' : getVerseAudioIconText(this.props)
 
         return (
-            <div className="verse-audio-button-block">
-                <div className="verse-audio-button-child">
+            <div className="VerseAudioButton-block">
+                <div className="VerseAudioButton-child">
                     <Button
                         buttonName="verse-audio"
                         isOverflowShown

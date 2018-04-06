@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import TextBlock from '../text/text-block'
+import TextBlock from '../Text/TextBlock'
 import OverviewToggle from './OverviewToggle'
 import { getSongOverview, getSongIsLogue } from '../../helpers/dataHelper'
 import { getIsToggleInOverview } from '../../helpers/responsiveHelper'

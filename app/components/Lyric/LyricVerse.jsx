@@ -3,7 +3,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import VerseUnit from '../verse/verse-unit'
+import VerseUnit from '../verse/VerseUnit'
 
 const mapStateToProps = ({
     selectedVerseIndex,

@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import TextBlock from '../app/components/text/text-block.jsx'
+import TextBlock from '../app/components/Text/TextBlock.jsx'
 
 describe('TextBlock', () => {
     let textBlock

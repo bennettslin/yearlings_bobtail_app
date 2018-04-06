@@ -3,18 +3,18 @@
  * great, obviously. It would be better to know where the 26px comes from.
  */
 @verse-height: 26px;
-@verse-audio-button-block-extra: 3px;
+@VerseAudioButton-block-extra: 3px;
 
-@verse-audio-button-block-width: @verse-height + @verse-audio-button-block-extra * 2;
+@VerseAudioButton-block-width: @verse-height + @VerseAudioButton-block-extra * 2;
 
 .lyric-block .verse {
     &:first-child {
-        &, .verse-audio-button-child, .verse-audio-indicator {
+        &, .VerseAudioButton-child, .VerseAudioIndicator {
             padding-top: @verse-padding;
         }
     }
     &:last-child {
-        &, .verse-audio-button-child, .verse-audio-indicator {
+        &, .VerseAudioButton-child, .VerseAudioIndicator {
             padding-bottom: @verse-padding;
         }
     }
@@ -28,11 +28,11 @@
     }
 }
 
-.verse-audio-button-block {
+.VerseAudioButton-block {
     position: absolute;
     left: 0;
     height: 100%;
-    width: @verse-audio-button-block-width;
+    width: @VerseAudioButton-block-width;
 
     top: 50%;
     transform: translateY(-50%);
@@ -41,8 +41,8 @@
 
     .interactivated
     & {
-        left: -@verse-audio-button-block-width * 0.5;
-        z-index: @verse-audio-button-z-index;
+        left: -@VerseAudioButton-block-width * 0.5;
+        z-index: @VerseAudioButton-z-index;
 
         .icon-canvas {
             box-shadow: @verse-audio-box-shadow;
@@ -51,7 +51,7 @@
 }
 
 // Either button or icon.
-.verse-audio-button-child {
+.VerseAudioButton-child {
     box-sizing: border-box;
     height: 100%;
     width: 100%;
@@ -65,7 +65,7 @@
     position: relative;
     // font-size: 0.1em;
     opacity: 0;
-    // z-index: @verse-audio-button-z-index;
+    // z-index: @VerseAudioButton-z-index;
     transition: opacity @animation-default;
 
     .interactivated
@@ -76,7 +76,7 @@
     }
 
     &, .icon-canvas {
-        width: @verse-audio-button-block-width;
-        height: @verse-audio-button-block-width;
+        width: @VerseAudioButton-block-width;
+        height: @VerseAudioButton-block-width;
     }
 }

@@ -31,7 +31,7 @@ VerseAudioIndicator = ({
     })
 
     return (
-        <div className="verse-audio-indicator">
+        <div className="VerseAudioIndicator">
             {indicatorText}
         </div>
     )

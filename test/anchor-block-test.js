@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect } from 'chai'
 import { shallow } from 'enzyme'
-import AnchorBlock from '../app/components/text/anchor-block.jsx'
+import AnchorBlock from '../app/components/Textanchor-block.jsx'
 
 describe('AnchorBlock', () => {
     let anchorBlock

@@ -149,7 +149,7 @@ AnnotationSectionView = ({
                 ) : (
                     <a className={cx(
                             'anchor-block',
-                            'text-anchor-block',
+                            'TextAnchorBlock',
                             'annotation-title',
                             annotationDotKeys,
                             { 'selected': showAsSelected,
@@ -159,7 +159,7 @@ AnnotationSectionView = ({
                         onTouchStart={handleTitleClick}
                     >
                         <span className="underline-bar" />
-                        <span className="text-span">
+                        <span className="TextSpan">
                             {`\u201c${annotationTitle}\u201d`}
                         </span>
                     </a>

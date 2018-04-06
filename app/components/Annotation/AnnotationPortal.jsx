@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames';
-import TextBlock from '../text/text-block'
+import TextBlock from '../Text/TextBlock'
 import DotButton from '../Dot/DotButton'
 import { PORTAL } from '../../constants/dots'
 import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
@@ -122,13 +122,13 @@ class AnnotationPortal extends Component {
                     </div>
 
                     <div className="portal-verse-text">
-                        <span className="text-span">{'\u201c'}</span>
+                        <span className="TextSpan">{'\u201c'}</span>
                         <TextBlock
                             inPortal={true}
                             text={verseObject[LYRIC] || verseObject[CENTRE] || verseObject[columnKey]}
                             portalAnnotationIndex={annotationIndex}
                         />
-                        <span className="text-span">{'\u201d'}</span>
+                        <span className="TextSpan">{'\u201d'}</span>
                     </div>
                 </div>
             </div>

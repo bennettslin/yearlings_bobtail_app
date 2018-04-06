@@ -1,3 +1,11 @@
+@verse-padding: 10px;
+
+@import "./VerseAudioButton.less";
+@import "./VerseAudioIndicator.less";
+@import "./VerseBar.less";
+@import "./VerseLine.less";
+@import "./VerseLinesBlock.less";
+
 .verse {
 
     .lyric-block
@@ -26,7 +34,7 @@
         &.odd {
             .text-shadow-mixin(@odd-verse-colour);
 
-            .text-span {
+            .TextSpan {
                 color: #644;
             }
         }
@@ -35,7 +43,7 @@
         &.even {
             .text-shadow-mixin(@even-verse-colour);
 
-            .text-span {
+            .TextSpan {
                 color: #533;
             }
         }
@@ -44,7 +52,7 @@
         &.in-side {
             .text-shadow-mixin(@odd-verse-colour);
 
-            .text-span {
+            .TextSpan {
                 color: #644;
             }
         }
@@ -56,7 +64,7 @@
         &.in-side {
             .text-shadow-mixin(@side-slider-colour);
 
-            .text-span {
+            .TextSpan {
                 color: @side-slider-text-colour;
             }
         }
@@ -71,7 +79,7 @@
             &.odd {
                 .text-shadow-mixin(@odd-before-slider-colour);
 
-                .text-span {
+                .TextSpan {
                     color: @odd-before-slider-text-colour;
                 }
             }
@@ -79,7 +87,7 @@
             &.even {
                 .text-shadow-mixin(@even-before-slider-colour);
 
-                .text-span {
+                .TextSpan {
                     color: @even-before-slider-text-colour;
                 }
             }
@@ -90,7 +98,7 @@
             &.odd {
                 .text-shadow-mixin(@odd-after-slider-colour);
 
-                .text-span {
+                .TextSpan {
                     color: @odd-after-slider-text-colour;
                 }
             }
@@ -98,7 +106,7 @@
             &.even {
                 .text-shadow-mixin(@even-after-slider-colour);
 
-                .text-span {
+                .TextSpan {
                     color: @odd-after-slider-text-colour;
                 }
             }
@@ -113,25 +121,25 @@
 .slider-not-moving {
 
     &.is-playing {
-        &.verse-bar-hidden {
+        &.VerseBar-hidden {
             .verse.selected {
                 .text-shadow-mixin(@audio-play-colour);
             }
         }
 
-        .verse-bar {
+        .VerseBar {
             background-color: @audio-play-colour;
         }
     }
 
     &.is-paused {
-        &.verse-bar-hidden {
+        &.VerseBar-hidden {
             .verse.selected {
                 .text-shadow-mixin(@audio-pause-colour);
             }
         }
 
-        .verse-bar {
+        .VerseBar {
             background-color: @audio-pause-colour;
         }
     }

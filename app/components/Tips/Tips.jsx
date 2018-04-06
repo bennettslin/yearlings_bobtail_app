@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import TipsToggle from './TipsToggle'
-import TextBlock from '../text/text-block'
+import TextBlock from '../Text/TextBlock'
 import { getSongTip } from '../../helpers/dataHelper'
 import { SHOWN, TIPS_OPTIONS } from '../../constants/options'
 

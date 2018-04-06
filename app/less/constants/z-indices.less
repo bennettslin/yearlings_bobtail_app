@@ -17,28 +17,28 @@
 
 // Lyrics should be higher than anything in centre field.
 @LyricColumn-z-index: @custom-AudioBanner-z-index + 1;
-@verse-audio-button-z-index: @LyricColumn-z-index + 1;
+@VerseAudioButton-z-index: @LyricColumn-z-index + 1;
 
 // This is in lyrics and annotation.
-@text-span-z-index: @verse-audio-button-z-index + 1;
+@TextSpan-z-index: @VerseAudioButton-z-index + 1;
 
 // This needs to be above annotation text in carousel.
-@CarouselNav-button-z-index: @text-span-z-index + 1;
+@CarouselNav-button-z-index: @TextSpan-z-index + 1;
 
 // This is above text but below verse bar and buttons.
 @LyricAccess-icons-z-index: @CarouselNav-button-z-index + 1;
 
 // Selected verse should be above normal text span.
-@selected-verse-bar-z-index: @LyricAccess-icons-z-index + 1;
+@selected-VerseBar-z-index: @LyricAccess-icons-z-index + 1;
 
 // Verse bar text should be even more above.
-@verse-bar-text-z-index: @selected-verse-bar-z-index + 1;
+@VerseBar-text-z-index: @selected-VerseBar-z-index + 1;
 
 /**
  * Lyric buttons should be higher than everything else in lyric column,
  * including text span.
  */
-@LyricColumn-button-z-index: @verse-bar-text-z-index + 1;
+@LyricColumn-button-z-index: @VerseBar-text-z-index + 1;
 
 @MenuField-z-index: @LyricColumn-button-z-index + 1;
 

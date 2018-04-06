@@ -76,7 +76,7 @@ TextSpanView = ({
 
 }) => (
     <span
-        className="text-span"
+        className="TextSpan"
     >
         {(hasFirstSpace ? ' ' : '') + formattedText}
     </span>

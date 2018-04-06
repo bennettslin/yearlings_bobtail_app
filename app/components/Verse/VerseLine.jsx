@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import TextBlock from '../text/text-block'
+import TextBlock from '../Text/TextBlock'
 import { TITLE } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 

@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import VerseUnit from '../verse/verse-unit'
+import VerseUnit from '../verse/VerseUnit'
 import { getVerseObject } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
@@ -66,12 +66,12 @@ class VerseBar extends Component {
         return verseObject ? (
             <div
                 className={cx(
-                    'verse-bar-block',
+                    'VerseBar-block',
                     isAbove ? 'above' : 'below'
                 )}
                 onWheel={handleVerseBarWheel}
             >
-                <div className="verse-bar"
+                <div className="VerseBar"
                     onClick={handleVerseBarSelect}
                     onTouchStart={handleVerseBarSelect}
                 >

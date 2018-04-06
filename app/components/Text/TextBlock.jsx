@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import TextUnit from './text-unit'
+import TextUnit from './TextUnit'
 
 /*************
  * CONTAINER *
