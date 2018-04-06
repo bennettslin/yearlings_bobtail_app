@@ -40,7 +40,7 @@ export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {
     const isLogue = getSongIsLogue(songIndex)
 
     // Path is something like 9-grasshoppers-lie-heavy-v20-a22.
-    return `${songIndex}-${HYPHENATED_SONG_PATHS[songIndex]}${verseIndex && !isLogue ? '-v' + verseIndex : ''}${annotationIndex && !isLogue ? '-a' + annotationIndex : ''}`
+    return `${songIndex}_${HYPHENATED_SONG_PATHS[songIndex]}${verseIndex && !isLogue ? '-v' + verseIndex : ''}${annotationIndex && !isLogue ? '-a' + annotationIndex : ''}`
 }
 
 export const getValidRoutingIndicesObject = (routingParamString = '') => {
