@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import CarouselAnnotation from './carousel-annotation'
+import CarouselAnnotation from './CarouselAnnotation'
 import Button from '../Button/Button'
 import { NAVIGATION_LEFT_KEY,
          NAVIGATION_RIGHT_KEY } from '../../constants/access'
@@ -28,7 +28,7 @@ const mapStateToProps = ({
     accessedAnnotationIndex
 })
 
-class CarouselSection extends Component {
+class Carousel extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -112,7 +112,7 @@ class CarouselSection extends Component {
             >
                 <div className="carousel-scroll">
                     <div className="carousel-annotations-block">
-                        <div className="carousel-annotation carousel-annotation-0" />
+                        <div className="CarouselAnnotation CarouselAnnotation-0" />
                         {annotationsIndices.map(index => {
                             const annotationIndex = index + 1,
                                 isAccessedAnnotation = annotationIndex === accessedAnnotationIndex,
@@ -129,7 +129,7 @@ class CarouselSection extends Component {
                         })}
                     </div>
                 </div>
-                <div className="carousel-nav-buttons-block">
+                <div className="CarouselNav-buttons-block">
                     <Button
                         buttonName="previous-position"
                         accessKey={NAVIGATION_LEFT_KEY}
@@ -150,4 +150,4 @@ class CarouselSection extends Component {
     }
 }
 
-export default connect(mapStateToProps)(CarouselSection)
+export default connect(mapStateToProps)(Carousel)

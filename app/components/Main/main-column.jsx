@@ -9,8 +9,8 @@ import MenuField from './menu-field'
 import NavSection from '../nav/nav-section'
 import AnnotationPopup from '../Popups/AnnotationPopup'
 import AudioBanner from '../Audio/AudioBanner'
-import CarouselToggle from '../Carousel/carousel-toggle'
-import CarouselSection from '../Carousel/carousel-section'
+import CarouselToggle from '../Carousel/CarouselToggle'
+import Carousel from '../Carousel/Carousel'
 import DotsSection from '../dots/dots-section'
 import DotsOverviewToggleSection from './DotsOverviewToggleSection'
 import LyricToggle from '../lyric/lyric-toggle'
@@ -69,7 +69,7 @@ MainColumn = ({
             </div>
 
             <div className="subfield dots-overview-subfield access-keys-shown">
-                <CarouselSection {...carouselSectionHandlers} />
+                <Carousel {...carouselSectionHandlers} />
                 <DotsOverviewToggleSection {...dotsOverviewToggleSectionHandlers}
                     scoresTipsSectionHandlers={scoresTipsSectionHandlers}
                 />

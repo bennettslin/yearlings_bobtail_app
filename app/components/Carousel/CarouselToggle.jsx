@@ -31,10 +31,10 @@ CarouselToggle = ({
 
 }) => {
     return !isHiddenNav ? (
-        <div className="carousel-toggle-button-block access-keys-shown">
+        <div className="CarouselToggle-button-block access-keys-shown">
             <Button
                 accessKey={CAROUSEL_TOGGLE_KEY}
-                buttonName="carousel-toggle"
+                buttonName="CarouselToggle"
                 iconText={selectedCarouselNavIndex}
                 isLarge={true}
                 handleClick={handleCarouselNavToggle}

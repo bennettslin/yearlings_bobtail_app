@@ -13,7 +13,7 @@ import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsive
 
 const ANNOTATION_SCROLL = 'annotation',
     CAROUSEL_SCROLL = 'carousel-scroll',
-    CAROUSEL_ANNOTATION_SCROLL = 'carousel-annotation',
+    CAROUSEL_ANNOTATION_SCROLL = 'CarouselAnnotation',
     LYRICS_SCROLL = 'lyrics-scroll',
     VERSE_SCROLL = 'verse'
 

@@ -3,45 +3,45 @@
 
     .is-desktop
     & {
-        margin-bottom: -@carousel-annotation-padding;
+        margin-bottom: -@CarouselAnnotation-padding;
     }
 
     .is-mobile
     & {
-        margin-top: -@carousel-annotation-padding;
+        margin-top: -@CarouselAnnotation-padding;
     }
 }
 
-.carousel-annotation {
+.CarouselAnnotation {
     overflow-y: scroll;
     overflow-x: hidden;
 
     display: flex;
     flex-direction: column-reverse;
 
-    min-width: @carousel-annotation-hidden-padding;
+    min-width: @CarouselAnnotation-hidden-padding;
     transition: min-width @animation-default,
                 opacity @animation-default;
 
     &:not(:last-child) {
         margin-right: @Annotation-padding * 0.5 -
-                      @carousel-annotation-padding * 2;
+                      @CarouselAnnotation-padding * 2;
     }
 
     &:first-child {
-        padding-left: @carousel-toggle-laptop-length;
+        padding-left: @CarouselToggle-laptop-length;
     }
 
     .monitor-width
     &:last-child {
         padding-right:
-            @golden-cord-width + @carousel-nav-buttons-block-width;
+            @golden-cord-width + @CarouselNav-buttons-block-width;
     }
 
     .laptop-width
     &:last-child {
         padding-right:
-            @uncanny-valley-width + @carousel-nav-buttons-block-width;
+            @uncanny-valley-width + @CarouselNav-buttons-block-width;
     }
 
     .is-mobile
@@ -57,7 +57,7 @@
         }
 
         &:last-child {
-            padding-right: @carousel-nav-buttons-block-tablet-width;
+            padding-right: @CarouselNav-buttons-block-tablet-width;
         }
     }
 
@@ -69,7 +69,7 @@
         }
 
         &:last-child {
-            padding-right: @carousel-nav-buttons-block-mini-width;
+            padding-right: @CarouselNav-buttons-block-mini-width;
         }
     }
 
@@ -86,7 +86,7 @@
     &.in-column-left,
     .domManager.is-song.show-only-left
     &.in-column-right {
-        min-width: @carousel-annotation-hidden-padding;
+        min-width: @CarouselAnnotation-hidden-padding;
 
         .annotation-title-block {
             max-height: 0;
@@ -95,7 +95,7 @@
 }
 
 .Annotation {
-    .carousel-annotation
+    .CarouselAnnotation
     & {
         transition: background-color @animation-default;
 
@@ -105,11 +105,11 @@
 
         padding-bottom: @Annotation-padding;
 
-        // margin: @carousel-annotation-small-padding
+        // margin: @CarouselAnnotation-small-padding
         //         @Annotation-padding;
 
-        padding: @carousel-annotation-small-padding
-                 @carousel-annotation-padding
-                 @carousel-annotation-padding;
+        padding: @CarouselAnnotation-small-padding
+                 @CarouselAnnotation-padding
+                 @CarouselAnnotation-padding;
     }
 }

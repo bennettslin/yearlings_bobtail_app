@@ -31,7 +31,7 @@ const audioSectionDefaultProps = {
     inOverlay: false
 },
 
-audioSectionPropTypes = {
+audioPropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
@@ -98,6 +98,6 @@ Audio = ({
 }
 
 Audio.defaultProps = audioSectionDefaultProps
-Audio.propTypes = audioSectionPropTypes
+Audio.propTypes = audioPropTypes
 
 export default connect(mapStateToProps)(Audio)

@@ -1,3 +1,7 @@
+@import "./CarouselAnnotation.less";
+@import "./CarouselNav.less";
+@import "./CarouselToggle.less";
+
 .carousel-scroll {
     display: flex;
     flex-direction: column-reverse;
@@ -31,13 +35,13 @@
     & {
         bottom: auto;
         top: calc(~"-100% - @{carousel-tablet-variable}");
-        height: calc(~"100% + @{carousel-toggle-tablet-length}");
+        height: calc(~"100% + @{CarouselToggle-tablet-length}");
     }
 
     .mini-width
     & {
         top: calc(~"-100% - @{carousel-mini-variable}");
-        height: calc(~"100% + @{carousel-toggle-mini-length}");
+        height: calc(~"100% + @{CarouselToggle-mini-length}");
     }
 }
 

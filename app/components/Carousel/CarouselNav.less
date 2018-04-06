@@ -1,11 +1,11 @@
-.carousel-nav-buttons-block {
+.CarouselNav-buttons-block {
     position: absolute;
     bottom: -@app-large-icon-diameter - @app-thin-margin * 2;
     right: 0;
     display: flex;
     justify-content: space-between;
     padding: @app-thin-margin;
-    z-index: @carousel-nav-button-z-index;
+    z-index: @CarouselNav-button-z-index;
 
     transition: bottom @animation-default;
 
@@ -49,7 +49,7 @@
 }
 
 // Hide both carousel and nav in logues.
-.carousel-nav-can-show {
+.CarouselNav-can-show {
 
     &.nav-expanded.not-heightless-lyric {
 
@@ -83,13 +83,13 @@
 
         &.tablet-width {
             .carousel {
-                top: -@carousel-toggle-tablet-length;
+                top: -@CarouselToggle-tablet-length;
             }
         }
 
         &.mini-width {
             .carousel {
-                top: -@carousel-toggle-mini-length;
+                top: -@CarouselToggle-mini-length;
             }
         }
     }

@@ -1,12 +1,12 @@
 // This value *must* be the same in js.
-@carousel-annotation-min-width: @AnnotationCard-width +
+@CarouselAnnotation-min-width: @AnnotationCard-width +
                                 @AnnotationCard-padding * 2 +
-                                @carousel-annotation-padding * 2 +
+                                @CarouselAnnotation-padding * 2 +
                                 @Annotation-padding * 2;
 
-@carousel-annotation-mini-min-width: @AnnotationCard-mini-width +
+@CarouselAnnotation-mini-min-width: @AnnotationCard-mini-width +
                                      @AnnotationCard-padding * 2 +
-                                     @carousel-annotation-padding * 2 +
+                                     @CarouselAnnotation-padding * 2 +
                                      @Annotation-padding * 2;
 
 .in-carousel-width {
@@ -28,7 +28,7 @@
     .is-desktop
     .carousel
     & {
-        margin-bottom: @carousel-annotation-padding;
+        margin-bottom: @CarouselAnnotation-padding;
     }
 }
 .annotation-title-block {
@@ -36,7 +36,7 @@
     .is-mobile
     .carousel
     & {
-        margin-top: @carousel-annotation-padding;
+        margin-top: @CarouselAnnotation-padding;
     }
 }
 
@@ -69,16 +69,16 @@
     }
 }
 
-.domManager.narrative .carousel-annotation.narrative,
-.domManager.backstory .carousel-annotation.backstory,
-.domManager.observation .carousel-annotation.observation,
-.domManager.pun .carousel-annotation.pun,
-.domManager.reference .carousel-annotation.reference,
-.domManager.songwriting .carousel-annotation.songwriting,
-.domManager.portal .carousel-annotation.portal,
-.domManager.afterword .carousel-annotation.afterword {
+.domManager.narrative .CarouselAnnotation.narrative,
+.domManager.backstory .CarouselAnnotation.backstory,
+.domManager.observation .CarouselAnnotation.observation,
+.domManager.pun .CarouselAnnotation.pun,
+.domManager.reference .CarouselAnnotation.reference,
+.domManager.songwriting .CarouselAnnotation.songwriting,
+.domManager.portal .CarouselAnnotation.portal,
+.domManager.afterword .CarouselAnnotation.afterword {
 
-    min-width: @carousel-annotation-min-width;
+    min-width: @CarouselAnnotation-min-width;
 
     .annotation-title-block {
         max-height: 2em; // Arbitrary value that's larger than its max height.
@@ -87,16 +87,16 @@
     }
 }
 
-.domManager.mini-width.narrative .carousel-annotation.narrative,
-.domManager.mini-width.backstory .carousel-annotation.backstory,
-.domManager.mini-width.observation .carousel-annotation.observation,
-.domManager.mini-width.pun .carousel-annotation.pun,
-.domManager.mini-width.reference .carousel-annotation.reference,
-.domManager.mini-width.songwriting .carousel-annotation.songwriting,
-.domManager.mini-width.portal .carousel-annotation.portal,
-.domManager.mini-width.afterword .carousel-annotation.afterword {
+.domManager.mini-width.narrative .CarouselAnnotation.narrative,
+.domManager.mini-width.backstory .CarouselAnnotation.backstory,
+.domManager.mini-width.observation .CarouselAnnotation.observation,
+.domManager.mini-width.pun .CarouselAnnotation.pun,
+.domManager.mini-width.reference .CarouselAnnotation.reference,
+.domManager.mini-width.songwriting .CarouselAnnotation.songwriting,
+.domManager.mini-width.portal .CarouselAnnotation.portal,
+.domManager.mini-width.afterword .CarouselAnnotation.afterword {
 
-    min-width: @carousel-annotation-mini-min-width;
+    min-width: @CarouselAnnotation-mini-min-width;
 }
 
 .domManager.narrative .AnnotationCard.narrative,
@@ -120,7 +120,7 @@
 }
 
 // Override if in carousel and hidden by single lyric column.
-.carousel-annotation {
+.CarouselAnnotation {
 
     .show-only-right
     &.in-column-left,

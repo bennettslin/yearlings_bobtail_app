@@ -1,4 +1,4 @@
-.carousel-toggle-button-block {
+.CarouselToggle-button-block {
     position: absolute;
     left: 0;
     background-color: #edf;
@@ -13,7 +13,7 @@
     justify-content: center;
     z-index: @carousel-z-index + 1;
 
-    width: @carousel-toggle-laptop-length;
+    width: @CarouselToggle-laptop-length;
 
     .is-desktop
     & {
@@ -27,9 +27,9 @@
         border-radius: 0 0 @nav-border-radius 0;
     }
 
-    .carousel-nav-cannot-show
+    .CarouselNav-cannot-show
     & {
-        margin-left: -@carousel-toggle-laptop-length;
+        margin-left: -@CarouselToggle-laptop-length;
     }
 
     box-shadow: @popup-box-shadow;
@@ -38,7 +38,7 @@
 // TODO: These are probably unnecessary?
 // .mini-width {
 //     &.lyric-expanded, &.heightless-lyric, &.is-logue {
-//         .carousel-toggle-button-block {
+//         .CarouselToggle-button-block {
 //             left: -@OverviewToggle-mini-width;
 //         }
 //     }
@@ -47,7 +47,7 @@
 // .is-mobile {
 
 //     &.lyric-expanded, &.heightless-lyric, &.is-logue {
-//         .carousel-toggle-button-block {
+//         .CarouselToggle-button-block {
 //             left: -@OverviewToggle-tablet-width;
 //         }
 //     }

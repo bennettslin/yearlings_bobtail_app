@@ -131,8 +131,8 @@ CarouselAnnotationView = ({
 
     <div
         className={cx(
-            'carousel-annotation',
-            `carousel-annotation-${annotationIndex}`,
+            'CarouselAnnotation',
+            `CarouselAnnotation-${annotationIndex}`,
             annotationColumn && `in-column-${annotationColumn}`,
             annotationDotKeys
         )}

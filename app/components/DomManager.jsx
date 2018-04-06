@@ -179,7 +179,7 @@ class DomManager extends Component {
                     singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
                     selectedAccessIndex ? 'accessed-on' : 'accessed-off',
                     isHeightlessLyricColumn ? 'heightless-lyric' : 'not-heightless-lyric',
-                    carouselNavCanShow ? 'carousel-nav-can-show' : 'carousel-nav-cannot-show',
+                    carouselNavCanShow ? 'CarouselNav-can-show' : 'CarouselNav-cannot-show',
 
                     { 'title-in-audio': isTitleInAudio,
                       'verse-bar-above': isVerseBarAbove,

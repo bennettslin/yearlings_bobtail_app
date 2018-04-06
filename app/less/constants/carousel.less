@@ -4,27 +4,27 @@
  * the centre field.
  */
 
-@carousel-toggle-laptop-length: @OverviewToggle-laptop-width;
-@carousel-toggle-tablet-length: @OverviewToggle-tablet-width;
-@carousel-toggle-mini-length: @OverviewToggle-mini-width;
+@CarouselToggle-laptop-length: @OverviewToggle-laptop-width;
+@CarouselToggle-tablet-length: @OverviewToggle-tablet-width;
+@CarouselToggle-mini-length: @OverviewToggle-mini-width;
 
 // This isn't ideal, but I don't know where the extra 2 pixels are coming from.
 // This affects the carousel nav button positions.
-@carousel-toggle-tablet-length: @OverviewToggle-tablet-width - 2px;
-@carousel-toggle-mini-length: @OverviewToggle-mini-width - 2px;
+@CarouselToggle-tablet-length: @OverviewToggle-tablet-width - 2px;
+@CarouselToggle-mini-length: @OverviewToggle-mini-width - 2px;
 
 @carousel-height-variable: @nav-height;
 
 // NOTE: I'm not sure how this was calculated...
 @carousel-position-variable: @carousel-height-variable + @dots-overview-padding * 2 + @nav-height * 2;
 
-@carousel-tablet-variable: @carousel-toggle-tablet-length * 2;
-@carousel-mini-variable: @carousel-toggle-mini-length * 2;
+@carousel-tablet-variable: @CarouselToggle-tablet-length * 2;
+@carousel-mini-variable: @CarouselToggle-mini-length * 2;
 
-@carousel-nav-buttons-block-width: @app-large-icon-diameter * 2 + @app-thin-margin * 3;
-@carousel-nav-buttons-block-tablet-width: @app-tablet-large-icon-diameter * 2 + @app-thin-margin * 3;
-@carousel-nav-buttons-block-mini-width: @app-mini-large-icon-diameter * 2 + @app-thin-margin * 3;
+@CarouselNav-buttons-block-width: @app-large-icon-diameter * 2 + @app-thin-margin * 3;
+@CarouselNav-buttons-block-tablet-width: @app-tablet-large-icon-diameter * 2 + @app-thin-margin * 3;
+@CarouselNav-buttons-block-mini-width: @app-mini-large-icon-diameter * 2 + @app-thin-margin * 3;
 
-@carousel-annotation-small-padding: 10px;
-@carousel-annotation-padding: 16px;
-@carousel-annotation-hidden-padding: @carousel-annotation-padding * 2 - @Annotation-padding * 0.5;
+@CarouselAnnotation-small-padding: 10px;
+@CarouselAnnotation-padding: 16px;
+@CarouselAnnotation-hidden-padding: @CarouselAnnotation-padding * 2 - @Annotation-padding * 0.5;
