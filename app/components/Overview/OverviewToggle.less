@@ -1,13 +1,27 @@
-@overview-mobile-bottom-margin: 5px;
+@overviewMargin: 5px;
+
+.OverviewToggle-button-container {
+
+    ._desktop_
+    & {
+        // Give some room to menu above.
+        margin-top: @overviewMargin;
+    }
+
+    ._mobileNotPhone_
+    & {
+        // Give room to carousel horizontal scrollbar.
+        margin-bottom: @scrollbarWidth;
+    }
+}
 
 ._tablet_, ._mini_ {
-    .OverviewToggle-button-container,
 
     // This applies only to overviews in songs, not logues.
     .OverviewPopup-container .overview.popup-wrapper {
 
         // Give some room to lyric section below.
-        margin-bottom: @overview-mobile-bottom-margin;
+        margin-bottom: @overviewMargin;
     }
 }
 
