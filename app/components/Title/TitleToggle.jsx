@@ -45,15 +45,14 @@ TitleToggle = ({
             'section',
             'access-keys-shown'
         )}>
-            <div className="TitleToggle__button">
-                <Button
-                    isCustomShape={true}
-                    isCustomSize={true}
-                    accessKey={TITLE_TOGGLE_KEY}
-                    handleClick={handleTitleToggle}
-                    iconText={selectedTitleIndex}
-                />
-            </div>
+            <Button
+                isCustomShape
+                isCustomSize
+                buttonName="title"
+                accessKey={TITLE_TOGGLE_KEY}
+                handleClick={handleTitleToggle}
+                iconText={selectedTitleIndex}
+            />
         </div>
     )
 }

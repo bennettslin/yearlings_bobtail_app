@@ -3,7 +3,7 @@
 import React from 'react'
 import cx from 'classnames'
 
-const TitleSection = () => (
+const Title = () => (
     <div className={cx(
         'Title',
         'section'
@@ -20,4 +20,4 @@ const TitleSection = () => (
     </div>
 )
 
-export default TitleSection
+export default Title
