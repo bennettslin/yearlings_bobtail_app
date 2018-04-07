@@ -1,24 +1,17 @@
-@DotsToggle-padding: 24px;
+@padding__dotsToggle: 24px;
 
-.DotsToggle-button-container {
-    position: relative;
-
-    padding: @DotsToggle-padding 0;
-}
-
-.DotsToggle-button-block {
+.DotsToggle {
     width: 100%;
     display: flex;
-    margin-left: 0;
-    box-sizing: border-box;
-
-    // Ensure toggle button is above its popup container and the carousel.
-    z-index: @zIndex__centreFieldChild;
-
-    padding-left: @margin__thin;
     align-items: center;
 
+    padding: @padding__dotsToggle 0 @padding__dotsToggle @margin__thin;
+    
+    // Ensure toggle button is above its popup container and the carousel.
+    z-index: @zIndex__centreFieldChild;
+    
     transition: margin @animationDuration__default;
+    margin-left: 0;
 
     ._overviewShown_
     & {

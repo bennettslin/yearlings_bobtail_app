@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Refocus on lyric strategically.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Can't scroll over hidden verse bar.`,
         workedHours: 0,
         neededHours: 2

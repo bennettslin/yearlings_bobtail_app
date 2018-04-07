@@ -21,7 +21,7 @@ PopupButton = ({
     handlePopupButtonClick,
     buttonName,
 
-...rest }) => {
+...other }) => {
 
     let tempUnicodeSymbol,
         handleClick,
@@ -58,7 +58,7 @@ PopupButton = ({
                 `${buttonName}-position`
             )}
         >
-            <Button {...rest}
+            <Button {...other}
                 isLarge
                 isOverflowShown
                 accessKey={accessKey}

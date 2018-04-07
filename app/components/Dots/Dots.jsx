@@ -80,7 +80,7 @@ class Dots extends Component {
             { hasInteractivatedDotText } = this.state
 
         return (
-            <DotsSectionView {...other}
+            <DotsView {...other}
                 dotKeys={selectedDotKeys}
                 handleContainerClick={this._onContainerClick}
                 hasInteractivatedDotText={hasInteractivatedDotText}
@@ -94,12 +94,12 @@ class Dots extends Component {
  * PRESENTATION *
  ****************/
 
-const dotsSectionViewPropTypes = {
+const dotsViewPropTypes = {
     // From parent.
     handleContainerClick: PropTypes.func.isRequired
 },
 
-DotsSectionView = ({
+DotsView = ({
 
     handleContainerClick,
 
@@ -116,6 +116,6 @@ DotsSectionView = ({
     </div>
 )
 
-DotsSectionView.propTypes = dotsSectionViewPropTypes
+DotsView.propTypes = dotsViewPropTypes
 
 export default connect(mapStateToProps)(Dots)
