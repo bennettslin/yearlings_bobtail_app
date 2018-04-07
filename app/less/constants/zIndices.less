@@ -52,4 +52,16 @@
 @audio-in-overlay-z-index: @PopupOverlay-content-z-index + 1;
 
 // The overlay preventing popup interaction should be the highest.
-@super-overlay-z-index: @audio-in-overlay-z-index + 1;
+@TouchOverlay-z-index: @audio-in-overlay-z-index + 1;
+
+.TouchOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    // This prevents popup interaction when the slider is touched.
+    .slider-touched
+    & {
+        z-index: @TouchOverlay-z-index;
+    }
+}
