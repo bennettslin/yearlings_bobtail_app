@@ -8,13 +8,13 @@
  * width of On a Golden Cord in double columns. Menu and nav widths can be as
  * narrow as 656px. (1401 - 745.)
  */
-@golden-cord-width: 745px;
+@width__goldenCord: 745px;
 /**
  * This is the maximum lyric column width in laptop, as determined by the
  * width of Uncanny Valley and Vegan Proclamation. Menu and nav widths can be
  * as narrow as 531px. (1101 - 570.)
  */
-@uncanny-valley-width: 570px;
+@width__uncannyValley: 570px;
 
 // This value *must* be the same in js.
 @collapsed-Lyric-height: 32%;
@@ -82,21 +82,21 @@
     }
 
     .MainColumn {
-        width: ~"calc(100% - @{golden-cord-width})";
+        width: ~"calc(100% - @{width__goldenCord})";
     }
 
     .LyricColumn, .OverviewLogueColumn {
-        width: @golden-cord-width;
+        width: @width__goldenCord;
         right: 0;
     }
 
     &._laptop_ {
         .MainColumn {
-            width: ~"calc(100% - @{uncanny-valley-width})";
+            width: ~"calc(100% - @{width__uncannyValley})";
         }
 
         .LyricColumn, .OverviewLogueColumn {
-            width: @uncanny-valley-width;
+            width: @width__uncannyValley;
         }
     }
 

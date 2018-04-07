@@ -103,16 +103,21 @@ class Carousel extends Component {
         return isHeightlessLyricColumn ? null : (
             <div
                 className={cx(
-                    'carousel',
-                    'desktop-carousel-gradient-mask',
+                    'Carousel',
+                    'Carousel__desktopGradientMask',
                     isHeavyRenderReady ? 'render-ready' : 'render-unready',
                     { 'override-animate': shouldOverrideAnimate }
                 )}
                 onTransitionEnd={this._handleTransition}
             >
-                <div className="carousel-scroll">
-                    <div className="carousel-annotations-block">
-                        <div className="CarouselAnnotation CarouselAnnotation-0" />
+                <div className="Carousel__scrollContainer">
+                    <div className="Carousel__annotationsContainer">
+
+                        <div className={cx(
+                            'CarouselAnnotation',
+                            'CarouselAnnotation-0'
+                        )} />
+
                         {annotationsIndices.map(index => {
                             const annotationIndex = index + 1,
                                 isAccessedAnnotation = annotationIndex === accessedAnnotationIndex,
@@ -129,7 +134,7 @@ class Carousel extends Component {
                         })}
                     </div>
                 </div>
-                <div className="CarouselNav-buttons-block">
+                <div className="Carousel__selectButtons">
                     <Button
                         buttonName="carouselSelect"
                         accessKey={NAVIGATION_LEFT_KEY}

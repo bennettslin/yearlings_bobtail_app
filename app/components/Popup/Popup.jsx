@@ -183,7 +183,7 @@ PopupView = ({
         <div
             className={cx(
                 'popup-content-wrapper',
-                'access-keysShown',
+                'accessKeysShown',
                 popupClassName
             )}
             onClick={handleContainerClick}

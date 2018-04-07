@@ -1,6 +1,6 @@
-.CarouselNav-buttons-block {
+.Carousel__selectButtons {
     position: absolute;
-    bottom: -@app-large-icon-diameter - @app-thin-margin * 2;
+    bottom: -@app-large-icon-diameter - @app-thin-margin * 2 - @width__scrollbar;
     right: 0;
     display: flex;
     justify-content: space-between;
@@ -15,14 +15,19 @@
         margin-right: @app-thin-margin;
     }
 
+    ._desktop_
+    & {
+        margin-bottom: @width__scrollbar;
+    }
+
     ._monitor_
     & {
-        right: @golden-cord-width;
+        right: @width__goldenCord;
     }
 
     ._laptop_
     & {
-        right: @uncanny-valley-width;
+        right: @width__uncannyValley;
     }
 
     ._mobile_
@@ -69,26 +74,26 @@
 
     &._carouselExpanded_ {
 
-        .carousel {
+        .Carousel {
             &.render-ready {
                 opacity: 1;
             }
         }
 
         &._desktop_ {
-            .carousel {
+            .Carousel {
                 bottom: -@carousel-height-variable;
             }
         }
 
         &._tablet_ {
-            .carousel {
+            .Carousel {
                 top: -@CarouselToggle-tablet-length;
             }
         }
 
         &._mini_ {
-            .carousel {
+            .Carousel {
                 top: -@CarouselToggle-mini-length;
             }
         }

@@ -68,7 +68,7 @@ MainColumn = ({
                 </div>
             </div>
 
-            <div className="subfield dots-overview-subfield access-keysShown">
+            <div className="subfield dots-overview-subfield accessKeysShown">
                 <Carousel {...carouselSectionHandlers} />
                 <DotsOverviewToggleSection {...dotsOverviewToggleSectionHandlers}
                     scoresTipsSectionHandlers={scoresTipsSectionHandlers}

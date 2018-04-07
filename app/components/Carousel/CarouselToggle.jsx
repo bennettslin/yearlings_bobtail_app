@@ -32,10 +32,10 @@ CarouselToggle = ({
     handleCarouselNavToggle
 
 }) => {
-    return !isHiddenNav ? (
+    return !isHiddenNav && (
         <div className={cx(
-            'CarouselToggle-button-block',
-            'access-keysShown'
+            'CarouselToggle',
+            'accessKeysShown'
         )}>
             <Button
                 accessKey={CAROUSEL_TOGGLE_KEY}
@@ -45,7 +45,7 @@ CarouselToggle = ({
                 handleClick={handleCarouselNavToggle}
             />
         </div>
-    ) : null
+    )
 }
 
 CarouselToggle.propTypes = carouselTogglePropTypes

@@ -1,4 +1,4 @@
-.CarouselToggle-button-block {
+.CarouselToggle {
     position: absolute;
     left: 0;
     background-color: #edf;
@@ -6,6 +6,7 @@
     border-radius: 0 @nav-border-radius 0 0;
 
     transition: margin @animationDuration__default,
+                bottom @animationDuration__default,
                 border-radius @animationDuration__default,
                 box-shadow @animationDuration__default;
 
@@ -15,9 +16,12 @@
 
     width: @CarouselToggle-laptop-length;
 
-    ._desktop_
+    bottom: 0;
+
+    ._desktop_._carouselExpanded_
     & {
-        bottom: 0;
+        border-radius: 0 @nav-border-radius @nav-border-radius 0;
+        bottom: @width__scrollbar;
     }
 
     ._mobile_
@@ -38,7 +42,7 @@
 // TODO: These are probably unnecessary?
 // ._mini_ {
 //     &._lyricExpanded_, &._lyricHeightless_, &._logue_ {
-//         .CarouselToggle-button-block {
+//         .CarouselToggle {
 //             left: -@OverviewToggle-_mini_;
 //         }
 //     }
@@ -47,7 +51,7 @@
 // ._mobile_ {
 
 //     &._lyricExpanded_, &._lyricHeightless_, &._logue_ {
-//         .CarouselToggle-button-block {
+//         .CarouselToggle {
 //             left: -@OverviewToggle-_tablet_;
 //         }
 //     }

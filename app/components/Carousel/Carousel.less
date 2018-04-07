@@ -2,19 +2,7 @@
 @import "./CarouselNav.less";
 @import "./CarouselToggle.less";
 
-.carousel-scroll {
-    display: flex;
-    flex-direction: column-reverse;
-    overflow-x: scroll;
-    height: 100%;
-
-    ._mobile_
-    & {
-        flex-direction: column;
-    }
-}
-
-.carousel {
+.Carousel {
     position: absolute;
     left: 0;
     bottom: calc(~"-100% - @{carousel-position-variable}");
@@ -45,39 +33,51 @@
     }
 }
 
+.Carousel__scrollContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-x: scroll;
+    height: 100%;
+
+    ._mobile_
+    & {
+        flex-direction: column;
+    }
+}
+
 /** Gradient mask does not work in IE or Edge, though. */
-.desktop-carousel-gradient-mask {
+.Carousel__desktopGradientMask {
     // Consider Golden Cord width.
-    @monitor-carousel-gradient:
+    @gradient__monitor:
         linear-gradient(
             to left,
             black,
-            transparent @golden-cord-width * 0.4,
-            transparent @golden-cord-width * 0.6,
-            black @golden-cord-width,
+            transparent @width__goldenCord * 0.4,
+            transparent @width__goldenCord * 0.6,
+            black @width__goldenCord,
             black
         );
     ._monitor_
     & {
         // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: @monitor-carousel-gradient;
-        mask-image: @monitor-carousel-gradient;
+        -webkit-mask-image: @gradient__monitor;
+        mask-image: @gradient__monitor;
     }
 
     // Consider Uncanny Valley width.
-    @laptop-carousel-gradient:
+    @gradient__laptop:
         linear-gradient(
             to left,
             black,
-            transparent @uncanny-valley-width * 0.4,
-            transparent @uncanny-valley-width * 0.6,
-            black @uncanny-valley-width,
+            transparent @width__uncannyValley * 0.4,
+            transparent @width__uncannyValley * 0.6,
+            black @width__uncannyValley,
             black
         );
     ._laptop_
     & {
         // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: @laptop-carousel-gradient;
-        mask-image: @laptop-carousel-gradient;
+        -webkit-mask-image: @gradient__laptop;
+        mask-image: @gradient__laptop;
     }
 }

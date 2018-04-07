@@ -40,12 +40,12 @@
  * Total units: 26 units
  */
 
-@monitor-double-unit-constant: @golden-cord-width + @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin;
+@monitor-double-unit-constant: @width__goldenCord + @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin;
 
 @monitor-small-unit: ~"calc((@{full-vw} - @{monitor-double-unit-constant}) / @{double-units})";
 @monitor-large-unit: ~"calc((@{full-vw} - @{monitor-double-unit-constant}) * @{large-double-units})";
 
-@monitor-book-offset-constant: -@medium-double-units * (@golden-cord-width + @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @NavBook-padding;
+@monitor-book-offset-constant: -@medium-double-units * (@width__goldenCord + @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @NavBook-padding;
 
 @monitor-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{monitor-book-offset-constant})";
 
@@ -56,15 +56,15 @@
  * To be divided amongst 20 icons.
  */
 
-@monitor-shrink-icon-constant: @golden-cord-width + 10 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units * 1px;
+@monitor-shrink-icon-constant: @width__goldenCord + 10 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units * 1px;
 
 @monitor-shrink-icon: ~"calc((@{full-vw} - @{monitor-shrink-icon-constant}) / @{double-icons})";
 
-@monitor-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (@golden-cord-width + 10 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units) / @double-icons;
+@monitor-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (@width__goldenCord + 10 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units) / @double-icons;
 
 @monitor-shrink-book-offset: ~"calc(@{full-vw} / @{double-icons} + @{monitor-shrink-book-offset-constant})";
 
-@monitor-shrink-toggle-width-constant: @NavBook-padding * 2 - (@golden-cord-width + 10 * @NavBook-padding + @nav-last-title-margin + @double-units * 1px) / @double-icons;
+@monitor-shrink-toggle-width-constant: @NavBook-padding * 2 - (@width__goldenCord + 10 * @NavBook-padding + @nav-last-title-margin + @double-units * 1px) / @double-icons;
 
 @monitor-shrink-toggle-width: ~"calc(@{full-vw} / @{double-icons} + @{monitor-shrink-toggle-width-constant})";
 
@@ -85,12 +85,12 @@
  * Total units: 16 units
  */
 
-@monitor-single-unit-constant: @golden-cord-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @NavBook-padding + @nav-last-title-margin;
+@monitor-single-unit-constant: @width__goldenCord + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @NavBook-padding + @nav-last-title-margin;
 
 @monitor-single-small: ~"calc((@{full-vw} - @{monitor-single-unit-constant}) / @{single-units})";
 @monitor-single-large: ~"calc((@{full-vw} - @{monitor-single-unit-constant}) * @{large-single-units})";
 
-@monitor-single-book-offset-constant: -@medium-single-units * (@golden-cord-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @NavBook-padding;
+@monitor-single-book-offset-constant: -@medium-single-units * (@width__goldenCord + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @NavBook-padding;
 
 @monitor-single-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{monitor-single-book-offset-constant})";
 
@@ -106,12 +106,12 @@
  * Laptop follows same equations, with Uncanny Valley lyric column width.
  */
 
-@laptop-unit-constant: @uncanny-valley-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @NavBook-padding + @nav-last-title-margin;
+@laptop-unit-constant: @width__uncannyValley + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @NavBook-padding + @nav-last-title-margin;
 
 @laptop-small: ~"calc((@{full-vw} - @{laptop-unit-constant}) / @{single-units})";
 @laptop-large: ~"calc((@{full-vw} - @{laptop-unit-constant}) * @{large-single-units})";
 
-@laptop-book-offset-constant: -@medium-single-units * (@uncanny-valley-width + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @NavBook-padding;
+@laptop-book-offset-constant: -@medium-single-units * (@width__uncannyValley + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @NavBook-padding;
 
 @laptop-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{laptop-book-offset-constant})";
 
@@ -122,15 +122,15 @@
  * To be divided amongst 11 icons.
  */
 
-@laptop-shrink-icon-constant: @uncanny-valley-width + 8 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units * 1px;
+@laptop-shrink-icon-constant: @width__uncannyValley + 8 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units * 1px;
 
 @laptop-shrink-icon: ~"calc((@{full-vw} - @{laptop-shrink-icon-constant}) / @{single-icons})";
 
-@laptop-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (@uncanny-valley-width + 8 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units) / @single-icons;
+@laptop-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (@width__uncannyValley + 8 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units) / @single-icons;
 
 @laptop-shrink-book-offset: ~"calc(@{full-vw} / @{single-icons} + @{laptop-shrink-book-offset-constant})";
 
-@laptop-shrink-toggle-width-constant: @NavBook-padding * 2 - (@uncanny-valley-width + 8 * @NavBook-padding + @nav-last-title-margin + @single-units * 1px) / @single-icons;
+@laptop-shrink-toggle-width-constant: @NavBook-padding * 2 - (@width__uncannyValley + 8 * @NavBook-padding + @nav-last-title-margin + @single-units * 1px) / @single-icons;
 
 @laptop-shrink-toggle-width: ~"calc(@{full-vw} / @{single-icons} + @{laptop-shrink-toggle-width-constant})";
 

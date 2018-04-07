@@ -38,7 +38,7 @@ LyricToggleEar = ({
         <div className={cx(
             'lyric-button-block',
             'ear-button-block',
-            'access-keysShown'
+            'accessKeysShown'
         )}>
             <Button
                 isLarge

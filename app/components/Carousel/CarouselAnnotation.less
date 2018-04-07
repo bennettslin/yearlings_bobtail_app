@@ -1,4 +1,4 @@
-.carousel-annotations-block {
+.Carousel__annotationsContainer {
     display: flex;
 
     ._desktop_
@@ -35,13 +35,13 @@
     ._monitor_
     &:last-child {
         padding-right:
-            @golden-cord-width + @CarouselNav-buttons-block-width;
+            @width__goldenCord + @width__carouselSelectButtons;
     }
 
     ._laptop_
     &:last-child {
         padding-right:
-            @uncanny-valley-width + @CarouselNav-buttons-block-width;
+            @width__uncannyValley + @width__carouselSelectButtons;
     }
 
     ._mobile_
@@ -57,7 +57,7 @@
         }
 
         &:last-child {
-            padding-right: @CarouselNav-buttons-block-_tablet_;
+            padding-right: @Carousel__selectButtons-_tablet_;
         }
     }
 
@@ -69,7 +69,7 @@
         }
 
         &:last-child {
-            padding-right: @CarouselNav-buttons-block-_mini_;
+            padding-right: @Carousel__selectButtons-_mini_;
         }
     }
 
@@ -103,13 +103,11 @@
         flex-direction: column;
         align-items: center;
 
-        padding-bottom: @Annotation-padding;
-
         // margin: @CarouselAnnotation-small-padding
         //         @Annotation-padding;
 
         padding: @CarouselAnnotation-small-padding
                  @CarouselAnnotation-padding
-                 @CarouselAnnotation-padding;
+                 @width__scrollbar;
     }
 }

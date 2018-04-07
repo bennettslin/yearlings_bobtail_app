@@ -12,7 +12,7 @@ import { intersects } from '../helpers/dotHelper'
 import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsiveHelper'
 
 const ANNOTATION_SCROLL = 'annotation',
-    CAROUSEL_SCROLL = 'carousel-scroll',
+    CAROUSEL_SCROLL = 'Carousel__scrollContainer',
     CAROUSEL_ANNOTATION_SCROLL = 'CarouselAnnotation',
     LYRICS_SCROLL = 'lyrics-scroll',
     VERSE_SCROLL = 'verse'

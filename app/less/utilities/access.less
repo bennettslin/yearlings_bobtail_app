@@ -13,10 +13,10 @@
     .selected-annotation .AnnotationCard,
 
     // ... in carousel title only when...
-    &._verseInactive_ .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
+    &._verseInactive_ .Carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
 
     // ... in carousel cards only when...
-    &._verseInactive_ .carousel .accessed-annotation.selected-annotation .cards-block,
+    &._verseInactive_ .Carousel .accessed-annotation.selected-annotation .cards-block,
 
     // ... in lyrics only when...
     &._verseInactive_._dotsHidden_._carouselExpanded_ .Lyric,
@@ -67,7 +67,7 @@
     // Nav buttons in nav section.
     &._navExpanded_._verseInactive_._dotsHidden_ {
         .Nav {
-            .access-highlighted.access-keysShown {
+            .access-highlighted.accessKeysShown {
                 .icon-canvas {
                     background-color: @access-underline-colour;
                 }
@@ -106,7 +106,7 @@
         }
     }
 
-    .access-keysShown {
+    .accessKeysShown {
         // Keyboard letter shown on accessible button.
         .access-button-icon:not(.isHidden) {
             opacity: 1;

@@ -53,7 +53,7 @@ LyricToggleExpand = ({
         <div className={cx(
             'lyric-button-block',
             'expand-button-block',
-            'access-keysShown'
+            'accessKeysShown'
         )}>
             <Button
                 isLarge

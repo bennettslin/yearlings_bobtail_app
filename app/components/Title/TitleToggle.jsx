@@ -42,7 +42,7 @@ TitleToggle = ({
     return inMenu !== isTitleInAudio && (
         <div className={cx(
             'TitleToggle',
-            'access-keysShown'
+            'accessKeysShown'
         )}>
             <Button
                 isCustomShape
