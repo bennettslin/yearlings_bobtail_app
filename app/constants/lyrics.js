@@ -35,7 +35,7 @@ module.exports = {
     DESTINATION_PORTAL_INDEX: 'destinationPortalIndex',
     SOURCE_PORTAL_INDEX: 'sourcePortalIndex',
 
-    IS_DOT_STANZA: '***DOT_STANZA***',
+    IS_DOT_STANZA: 'isDotStanza',
     HAS_SIDE_STANZAS: 'hasSideStanzas',
     IS_DOUBLESPEAKER: 'isDoublespeaker',
     IS_VERSE_BEGINNING_SPAN: 'isVerseBeginningSpan',

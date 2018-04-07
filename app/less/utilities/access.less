@@ -114,14 +114,6 @@
     }
 }
 
-.Button {
-    .access-button-icon {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
-}
-
 .access-button-icon {
     @access-button-icon-edge: 20px;
 
@@ -139,4 +131,11 @@
     border-radius: 3px;
 
     background-color: #bfb;
+
+    .Button
+    & {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
