@@ -56,7 +56,7 @@ class StageSceneSection extends Component {
         return (
             <div className={cx(
                 'StageScene',
-                isHeavyRenderReady ? 'render-ready' : 'render-unready'
+                isHeavyRenderReady ? 'renderReady' : 'renderUnready'
             )}>
                 <StageSceneSky
                     sky={sky}

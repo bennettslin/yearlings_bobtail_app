@@ -207,14 +207,14 @@ LyricColumnView = ({
             className={cx(
                 'column',
                 'LyricColumn',
-                isHeavyRenderReady ? 'render-ready' : 'render-unready'
+                isHeavyRenderReady ? 'renderReady' : 'renderUnready'
             )}
             ref={myRef}
             onTransitionEnd={handleTransition}
         >
             <div className={cx(
                     'LyricColumn-animatable',
-                    { 'override-animate': shouldOverrideAnimate }
+                    { 'overrideAnimate': shouldOverrideAnimate }
                 )}
                 onTransitionEnd={handleAnimatableTransition}
             >

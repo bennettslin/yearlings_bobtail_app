@@ -1,5 +1,36 @@
+/**
+ * I'm not happy with how complicated this styling became, but it was needed
+ * to ensure that the carousel remains under all other interactable elements in
+ * the centre field.
+ */
+
+ @CarouselToggle-laptop-length: @OverviewToggle-_laptop_;
+ @CarouselToggle-tablet-length: @OverviewToggle-_tablet_;
+ @CarouselToggle-mini-length: @OverviewToggle-_mini_;
+ 
+ // This isn't ideal, but I don't know where the extra 2 pixels are coming from.
+ // This affects the carousel nav button positions.
+ @CarouselToggle-tablet-length: @OverviewToggle-_tablet_ - 2px;
+ @CarouselToggle-mini-length: @OverviewToggle-_mini_ - 2px;
+ 
+ @carousel-height-variable: @nav-height;
+ 
+ // NOTE: I'm not sure how this was calculated...
+ @carousel-position-variable: @carousel-height-variable + @dots-overview-padding * 2 + @nav-height * 2;
+ 
+ @carousel-tablet-variable: @CarouselToggle-tablet-length * 2;
+ @carousel-mini-variable: @CarouselToggle-mini-length * 2;
+ 
+ @width__carouselSelectButtons: @length__iconLarge * 2 + @margin__thin * 3;
+ @Carousel__selectButtons-_tablet_: @length__iconLarge__tablet * 2 + @margin__thin * 3;
+ @Carousel__selectButtons-_mini_: @length__iconLarge__mini * 2 + @margin__thin * 3;
+ 
+ @CarouselAnnotation-small-padding: 10px;
+ @CarouselAnnotation-padding: 16px;
+ @CarouselAnnotationHidden-padding: @CarouselAnnotation-padding * 2 - @Annotation-padding * 0.5; 
+
 @import "./CarouselAnnotation.less";
-@import "./CarouselNav.less";
+@import "./CarouselSelect.less";
 @import "./CarouselToggle.less";
 
 .Carousel {
@@ -30,6 +61,34 @@
     & {
         top: calc(~"-100% - @{carousel-mini-variable}");
         height: calc(~"100% + @{CarouselToggle-mini-length}");
+    }
+}
+
+// Hide both carousel and nav in logues.
+._carouselNavShowable_._carouselExpanded_ {
+
+    .Carousel {
+        &.renderReady {
+            opacity: 1;
+        }
+    }
+
+    &._desktop_ {
+        .Carousel {
+            bottom: -@carousel-height-variable;
+        }
+    }
+
+    &._tablet_ {
+        .Carousel {
+            top: -@CarouselToggle-tablet-length;
+        }
+    }
+
+    &._mini_ {
+        .Carousel {
+            top: -@CarouselToggle-mini-length;
+        }
     }
 }
 

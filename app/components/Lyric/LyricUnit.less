@@ -9,13 +9,13 @@
      */
     &:not(:first-child):not(.subsequent) {
         .stanza-block:not(.dot-stanza) {
-            margin-top: @LyricUnit-margin;
+            margin-top: @margin__lyricUnit;
         }
     }
 
     &.subsequent {
         .stanza-block {
-            margin-top: @LyricUnit-margin - @stanza-type-tab-height - 2.5px;
+            margin-top: @margin__lyricUnit - @height__stanzaTypeTab - 2.5px;
         }
     }
 

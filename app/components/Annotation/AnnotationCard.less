@@ -60,10 +60,10 @@
     // Select for annotation card dots, not portal dots.
     > .dots-block {
         position: absolute;
-        height: @annotation-dot-diameter;
+        height: @length__annotationDot;
     }
 
-    .override-animate
+    .overrideAnimate
     & {
         transition: none;
     }
@@ -82,7 +82,7 @@
 
     .annotation-title-block {
         max-height: 2em; // Arbitrary value that's larger than its max height.
-        min-height: @app-small-icon-diameter;
+        min-height: @length__iconSmall;
         padding: @Annotation-padding 0;
     }
 }
@@ -108,7 +108,7 @@
 .DomManager.portal .AnnotationCard.portal,
 .DomManager.afterword .AnnotationCard.afterword {
 
-    min-height: @annotation-dot-diameter;
+    min-height: @length__annotationDot;
     max-height: 500px; // Arbitrary large number.
     padding: @AnnotationCard-padding;
     opacity: 1;

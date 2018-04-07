@@ -12,24 +12,24 @@
 // Parent container of both audio sections.
 .audio-subfield, .popup-wrapper.audio {
 
-    min-width: @AudioBanner-min-width + @AudioButtons-constant + @app-large-icon-diameter + @audio-block-padding * 3;
+    min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge + @audio-block-padding * 3;
     max-width: @audio-max-width;
 
     box-sizing: border-box;
 
     ._tablet_
     & {
-        min-width: @AudioBanner-min-width + @AudioButtons-constant + @app-tablet-large-icon-diameter + @audio-block-padding * 3;
+        min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge__tablet + @audio-block-padding * 3;
     }
 
     ._mini_
     & {
-        min-width: @AudioBanner-min-width + @AudioButtons-constant + @app-mini-large-icon-diameter + @audio-block-padding * 3;
+        min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge__mini + @audio-block-padding * 3;
     }
 
     ._phone_
     & {
-        min-width: @AudioButtons-constant + @app-icon-diameter + @audio-block-padding * 3;
+        min-width: @AudioButtons-constant + @length__icon + @audio-block-padding * 3;
     }
 }
 

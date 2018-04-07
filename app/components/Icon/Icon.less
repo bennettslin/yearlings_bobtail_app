@@ -150,13 +150,13 @@
     .AnnotationCard
     .dots-block
     & {
-        width: @annotation-dot-diameter;
+        width: @length__annotationDot;
         border: @dot-border solid @dot-border-colour;
     }
 
     .TextAnchorBlock
     & {
-        width: @lyric-anchor-dot-diameter;
+        width: @length__lyricAnchorDot;
     }
 }
 
@@ -171,7 +171,7 @@
     // Increase width first, then fade in.
     transition: width @animationDuration__default,
                 opacity @animationDuration__default @animationDuration__faster;
-    width: @annotation-dot-diameter;
+    width: @length__annotationDot;
     opacity: 1;
 }
 
@@ -187,7 +187,7 @@
     // Increase width first, then fade in.
     transition: width @animationDuration__default,
                 opacity @animationDuration__default @animationDuration__faster;
-    width: @lyric-anchor-dot-diameter;
+    width: @length__lyricAnchorDot;
     opacity: 1;
 }
 

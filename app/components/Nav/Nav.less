@@ -77,3 +77,20 @@
         border-radius: 0 0 @nav-border-radius @nav-border-radius;
     }
 }
+
+// Hide both carousel and nav in logues.
+._carouselNavShowable._navExpanded_._lyricHeighted_ {
+
+    // No need to make an exception for phone, since it isn't rendered.
+    &._mobile_ {
+        .books-column-block {
+            top: 0;
+        }
+    }
+
+    &._desktop_ {
+        .books-column-block {
+            bottom: 0;
+        }
+    }
+}

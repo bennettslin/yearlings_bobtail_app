@@ -1,7 +1,7 @@
 @full-vw: 100vw;
 
 // These values *must* be the same in js.
-@NavBook-padding: @app-thin-margin; // Left and right padding for each book.
+@NavBook-padding: @margin__thin; // Left and right padding for each book.
 @nav-last-title-margin: 50px; // Margin to accommodate last title.
 
 @double-icons: 18 + 2;
@@ -25,8 +25,8 @@
 
 /**
  * Total width of wide desktop nav field is:
- * 20 * @app-icon-diameter +
- * 1 * @app-large-icon-diameter
+ * 20 * @length__icon +
+ * 1 * @length__iconLarge
  * 10 * @NavBook-padding +
  * 1 * @nav-last-title-margin
  *
@@ -40,12 +40,12 @@
  * Total units: 26 units
  */
 
-@monitor-double-unit-constant: @width__goldenCord + @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin;
+@monitor-double-unit-constant: @width__goldenCord + @double-icons * @length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin;
 
 @monitor-small-unit: ~"calc((@{full-vw} - @{monitor-double-unit-constant}) / @{double-units})";
 @monitor-large-unit: ~"calc((@{full-vw} - @{monitor-double-unit-constant}) * @{large-double-units})";
 
-@monitor-book-offset-constant: -@medium-double-units * (@width__goldenCord + @double-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @NavBook-padding;
+@monitor-book-offset-constant: -@medium-double-units * (@width__goldenCord + @double-icons * @length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin) + @length__icon + 2 * @NavBook-padding;
 
 @monitor-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{monitor-book-offset-constant})";
 
@@ -56,11 +56,11 @@
  * To be divided amongst 20 icons.
  */
 
-@monitor-shrink-icon-constant: @width__goldenCord + 10 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units * 1px;
+@monitor-shrink-icon-constant: @width__goldenCord + 10 * @NavBook-padding + @length__iconLarge + @nav-last-title-margin + @double-units * 1px;
 
 @monitor-shrink-icon: ~"calc((@{full-vw} - @{monitor-shrink-icon-constant}) / @{double-icons})";
 
-@monitor-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (@width__goldenCord + 10 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @double-units) / @double-icons;
+@monitor-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (@width__goldenCord + 10 * @NavBook-padding + @length__iconLarge + @nav-last-title-margin + @double-units) / @double-icons;
 
 @monitor-shrink-book-offset: ~"calc(@{full-vw} / @{double-icons} + @{monitor-shrink-book-offset-constant})";
 
@@ -72,8 +72,8 @@
  * Breakpoint to switch to single column is when icon width is 36px.
  *
  * Total width of single column desktop nav field is:
- * 11 * @app-icon-diameter +
- * 1 * @app-large-icon-diameter
+ * 11 * @length__icon +
+ * 1 * @length__iconLarge
  * 8 * @NavBook-padding +
  * 1 * @nav-last-title-margin
  *
@@ -85,12 +85,12 @@
  * Total units: 16 units
  */
 
-@monitor-single-unit-constant: @width__goldenCord + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @NavBook-padding + @nav-last-title-margin;
+@monitor-single-unit-constant: @width__goldenCord + @single-icons * @length__icon + @length__iconLarge + 8 * @NavBook-padding + @nav-last-title-margin;
 
 @monitor-single-small: ~"calc((@{full-vw} - @{monitor-single-unit-constant}) / @{single-units})";
 @monitor-single-large: ~"calc((@{full-vw} - @{monitor-single-unit-constant}) * @{large-single-units})";
 
-@monitor-single-book-offset-constant: -@medium-single-units * (@width__goldenCord + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @NavBook-padding;
+@monitor-single-book-offset-constant: -@medium-single-units * (@width__goldenCord + @single-icons * @length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin) + @length__icon + 2 * @NavBook-padding;
 
 @monitor-single-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{monitor-single-book-offset-constant})";
 
@@ -106,12 +106,12 @@
  * Laptop follows same equations, with Uncanny Valley lyric column width.
  */
 
-@laptop-unit-constant: @width__uncannyValley + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 8 * @NavBook-padding + @nav-last-title-margin;
+@laptop-unit-constant: @width__uncannyValley + @single-icons * @length__icon + @length__iconLarge + 8 * @NavBook-padding + @nav-last-title-margin;
 
 @laptop-small: ~"calc((@{full-vw} - @{laptop-unit-constant}) / @{single-units})";
 @laptop-large: ~"calc((@{full-vw} - @{laptop-unit-constant}) * @{large-single-units})";
 
-@laptop-book-offset-constant: -@medium-single-units * (@width__uncannyValley + @single-icons * @app-icon-diameter + @app-large-icon-diameter + 10 * @NavBook-padding + @nav-last-title-margin) + @app-icon-diameter + 2 * @NavBook-padding;
+@laptop-book-offset-constant: -@medium-single-units * (@width__uncannyValley + @single-icons * @length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin) + @length__icon + 2 * @NavBook-padding;
 
 @laptop-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{laptop-book-offset-constant})";
 
@@ -122,11 +122,11 @@
  * To be divided amongst 11 icons.
  */
 
-@laptop-shrink-icon-constant: @width__uncannyValley + 8 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units * 1px;
+@laptop-shrink-icon-constant: @width__uncannyValley + 8 * @NavBook-padding + @length__iconLarge + @nav-last-title-margin + @single-units * 1px;
 
 @laptop-shrink-icon: ~"calc((@{full-vw} - @{laptop-shrink-icon-constant}) / @{single-icons})";
 
-@laptop-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (@width__uncannyValley + 8 * @NavBook-padding + @app-large-icon-diameter + @nav-last-title-margin + @single-units) / @single-icons;
+@laptop-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (@width__uncannyValley + 8 * @NavBook-padding + @length__iconLarge + @nav-last-title-margin + @single-units) / @single-icons;
 
 @laptop-shrink-book-offset: ~"calc(@{full-vw} / @{single-icons} + @{laptop-shrink-book-offset-constant})";
 
@@ -143,12 +143,12 @@
  * without nav last title margin. Switch at 1100px.
  */
 
-@tablet-double-unit-constant: @double-icons * @app-icon-diameter + @app-tablet-large-icon-diameter + 10 * @NavBook-padding;
+@tablet-double-unit-constant: @double-icons * @length__icon + @length__iconLarge__tablet + 10 * @NavBook-padding;
 
 @tablet-small-unit: ~"calc((@{full-vw} - @{tablet-double-unit-constant}) / @{double-units})";
 @tablet-large-unit: ~"calc((@{full-vw} - @{tablet-double-unit-constant}) * @{large-double-units})";
 
-@tablet-book-offset-constant: -@medium-double-units * (@double-icons * @app-icon-diameter + @app-tablet-large-icon-diameter + 10 * @NavBook-padding) + @app-icon-diameter + 2 * @NavBook-padding;
+@tablet-book-offset-constant: -@medium-double-units * (@double-icons * @length__icon + @length__iconLarge__tablet + 10 * @NavBook-padding) + @length__icon + 2 * @NavBook-padding;
 
 @tablet-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{tablet-book-offset-constant})";
 
@@ -156,11 +156,11 @@
  * Breakpoint to start shrinking icon is when unit width is 1px.
  */
 
-@tablet-shrink-icon-constant: 10 * @NavBook-padding + @app-tablet-large-icon-diameter + @double-units * 1px;
+@tablet-shrink-icon-constant: 10 * @NavBook-padding + @length__iconLarge__tablet + @double-units * 1px;
 
 @tablet-shrink-icon: ~"calc((@{full-vw} - @{tablet-shrink-icon-constant}) / @{double-icons})";
 
-@tablet-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (10 * @NavBook-padding + @app-tablet-large-icon-diameter + @double-units) / @double-icons;
+@tablet-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (10 * @NavBook-padding + @length__iconLarge__tablet + @double-units) / @double-icons;
 
 @tablet-shrink-book-offset: ~"calc(@{full-vw} / @{double-icons} + @{tablet-shrink-book-offset-constant})";
 
@@ -168,12 +168,12 @@
  * Breakpoint to switch to single column is when icon width is 36px.
  */
 
-@tablet-single-unit-constant: @single-icons * @app-icon-diameter + @app-tablet-large-icon-diameter + 8 * @NavBook-padding;
+@tablet-single-unit-constant: @single-icons * @length__icon + @length__iconLarge__tablet + 8 * @NavBook-padding;
 
 @tablet-single-small: ~"calc((@{full-vw} - @{tablet-single-unit-constant}) / @{single-units})";
 @tablet-single-large: ~"calc((@{full-vw} - @{tablet-single-unit-constant}) * @{large-single-units})";
 
-@tablet-single-book-offset-constant: -@medium-single-units * (@single-icons * @app-icon-diameter + @app-tablet-large-icon-diameter + 10 * @NavBook-padding) + @app-icon-diameter + 2 * @NavBook-padding;
+@tablet-single-book-offset-constant: -@medium-single-units * (@single-icons * @length__icon + @length__iconLarge__tablet + 10 * @NavBook-padding) + @length__icon + 2 * @NavBook-padding;
 
 @tablet-single-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{tablet-single-book-offset-constant})";
 
@@ -181,12 +181,12 @@
  * MINI WIDTH: single, single shrink *
  *************************************/
 
-@mini-unit-constant: @single-icons * @app-icon-diameter + @app-mini-large-icon-diameter + 8 * @NavBook-padding;
+@mini-unit-constant: @single-icons * @length__icon + @length__iconLarge__mini + 8 * @NavBook-padding;
 
 @mini-small: ~"calc((@{full-vw} - @{mini-unit-constant}) / @{single-units})";
 @mini-large: ~"calc((@{full-vw} - @{mini-unit-constant}) * @{large-single-units})";
 
-@mini-book-offset-constant: -@medium-single-units * (@single-icons * @app-icon-diameter + @app-mini-large-icon-diameter + 10 * @NavBook-padding) + @app-icon-diameter + 2 * @NavBook-padding;
+@mini-book-offset-constant: -@medium-single-units * (@single-icons * @length__icon + @length__iconLarge__mini + 10 * @NavBook-padding) + @length__icon + 2 * @NavBook-padding;
 
 @mini-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{mini-book-offset-constant})";
 
@@ -194,14 +194,14 @@
  * Breakpoint to start shrinking icon is when unit width is 1px.
  */
 
-@mini-shrink-icon-constant: 8 * @NavBook-padding + @app-mini-large-icon-diameter + @single-units * 1px;
+@mini-shrink-icon-constant: 8 * @NavBook-padding + @length__iconLarge__mini + @single-units * 1px;
 
 @mini-shrink-icon: ~"calc((@{full-vw} - @{mini-shrink-icon-constant}) / @{single-icons})";
 
-@mini-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (8 * @NavBook-padding + @app-mini-large-icon-diameter + @single-units) / @single-icons;
+@mini-shrink-book-offset-constant: @medium-unit * 1px + @NavBook-padding * 2 - (8 * @NavBook-padding + @length__iconLarge__mini + @single-units) / @single-icons;
 
 @mini-shrink-book-offset: ~"calc(@{full-vw} / @{single-icons} + @{mini-shrink-book-offset-constant})";
 
-@NavToggle-width: @app-large-icon-diameter + @NavBook-padding * 2;
-@tablet-NavToggle-width: @app-tablet-large-icon-diameter + @NavBook-padding * 2;
-@mini-NavToggle-width: @app-mini-large-icon-diameter + @NavBook-padding * 2;
+@NavToggle-width: @length__iconLarge + @NavBook-padding * 2;
+@tablet-NavToggle-width: @length__iconLarge__tablet + @NavBook-padding * 2;
+@mini-NavToggle-width: @length__iconLarge__mini + @NavBook-padding * 2;

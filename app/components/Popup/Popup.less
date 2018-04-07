@@ -179,15 +179,15 @@
                 // Override default styling.
                 transform: none;
                 top: auto;
-                bottom: -@app-icon-diameter * @PopupButton-multiplier;
+                bottom: -@length__icon * @PopupButton-multiplier;
             }
 
             &.previous-position {
-                left: @app-icon-diameter * 0.2;
+                left: @length__icon * 0.2;
             }
 
             &.next-position {
-                right: @app-icon-diameter * 0.2;
+                right: @length__icon * 0.2;
             }
         }
     }
@@ -196,7 +196,7 @@
         .popup-wrapper {
             &.wiki, &.score {
                 width: ~"calc(100% - @{mini-full-subfield-margin} * 2)";
-                height: ~"calc(100% - @{app-icon-diameter})";
+                height: ~"calc(100% - @{length__icon})";
             }
 
             .PopupButton {
@@ -227,7 +227,7 @@
         &._lyricHeightless_ {
             .popup-wrapper {
                 &.wiki, &.score {
-                    width: ~"calc(100% - @{app-icon-diameter} * 2)";
+                    width: ~"calc(100% - @{length__icon} * 2)";
                     height: ~"calc(100% - @{mini-full-subfield-margin})";
                 }
             }

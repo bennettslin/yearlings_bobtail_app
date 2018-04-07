@@ -6,9 +6,8 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import CarouselAnnotation from './CarouselAnnotation'
-import Button from '../Button/Button'
-import { NAVIGATION_LEFT_KEY,
-         NAVIGATION_RIGHT_KEY } from '../../constants/access'
+import CarouselSelect from './CarouselSelect'
+
 import { getAnnotationsCount } from '../../helpers/dataHelper'
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
@@ -105,8 +104,8 @@ class Carousel extends Component {
                 className={cx(
                     'Carousel',
                     'Carousel__desktopGradientMask',
-                    isHeavyRenderReady ? 'render-ready' : 'render-unready',
-                    { 'override-animate': shouldOverrideAnimate }
+                    isHeavyRenderReady ? 'renderReady' : 'renderUnready',
+                    { 'overrideAnimate': shouldOverrideAnimate }
                 )}
                 onTransitionEnd={this._handleTransition}
             >
@@ -134,22 +133,11 @@ class Carousel extends Component {
                         })}
                     </div>
                 </div>
-                <div className="Carousel__selectButtons">
-                    <Button
-                        buttonName="carouselSelect"
-                        accessKey={NAVIGATION_LEFT_KEY}
-                        iconText={'\u276e'}
-                        isLarge
-                        handleClick={handleAnnotationPrevious}
-                    />
-                    <Button
-                        buttonName="carouselSelect"
-                        accessKey={NAVIGATION_RIGHT_KEY}
-                        iconText={'\u276f'}
-                        isLarge
-                        handleClick={handleAnnotationNext}
-                    />
-                </div>
+
+                <CarouselSelect
+                    handleAnnotationPrevious={handleAnnotationPrevious}
+                    handleAnnotationNext={handleAnnotationNext}
+                />
             </div>
         )
     }
