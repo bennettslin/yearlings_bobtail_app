@@ -1,6 +1,18 @@
 module.exports = [
 
     {
+        taskName: `Can't scroll over hidden verse bar.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Legitimate route should override stored state.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Can't show carousel or nav when heightless lyric.`,
         workedHours: 0,
         neededHours: 2
