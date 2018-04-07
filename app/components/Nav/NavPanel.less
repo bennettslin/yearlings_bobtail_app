@@ -22,7 +22,7 @@
                 transform @animation-fast;
 
     // Needed to prevent button hovering and selecting wonkiness.
-    z-index: @negative-z-index;
+    z-index: @zIndex__negative;
 
     &.centred {
         transform: translateX(-50%);
@@ -61,7 +61,7 @@
     &.accessed-off .NavButton:hover {
         .NavPanel-block {
             opacity: 1;
-            z-index: @nav-custom-subfield-z-index;
+            z-index: @zIndex__navCustomSubfield;
         }
     }
 
@@ -69,7 +69,7 @@
     .NavButton:active {
         .NavPanel-block {
             opacity: 1;
-            z-index: @centre-field-element-z-index;
+            z-index: @zIndex__centreFieldChild;
 
             &.centred {
                 transform: translateX(-50%) scale(1.1);

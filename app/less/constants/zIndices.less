@@ -1,58 +1,56 @@
-@negative-z-index: -1;
+@zIndex__negative: -1;
 
 // This should be the lowest shown element.
-@popup-container-z-index: 0;
+@zIndex__popupContainer: 0;
 
-@admin-toggle-z-index: @popup-container-z-index + 1;
+@zIndex__adminToggle: @zIndex__popupContainer + 1;
 
-@nav-custom-subfield-z-index: @admin-toggle-z-index + 1;
-@dots-overview-subfield-z-index: @nav-custom-subfield-z-index + 1;
-@carousel-z-index: @dots-overview-subfield-z-index + 1;
+@zIndex__navCustomSubfield: @zIndex__adminToggle + 1;
+@zIndex__dotsOverviewSubfield: @zIndex__navCustomSubfield + 1;
+@zIndex__carousel: @zIndex__dotsOverviewSubfield + 1;
 
-@dots-Overview-z-index: @carousel-z-index + 1;
-@centre-field-element-z-index: @dots-Overview-z-index + 1;
+@zIndex__dotsOverview: @zIndex__carousel + 1;
+@zIndex__centreFieldChild: @zIndex__dotsOverview + 1;
 
 // This should be over overview toggle button for animation purposes.
-@custom-AudioBanner-z-index: @centre-field-element-z-index + 1;
+@zIndex__customAudioBanner: @zIndex__centreFieldChild + 1;
 
 // Lyrics should be higher than anything in centre field.
-@LyricColumn-z-index: @custom-AudioBanner-z-index + 1;
-@VerseAudioButton-z-index: @LyricColumn-z-index + 1;
+@zIndex__lyricColumn: @zIndex__customAudioBanner + 1;
+@zIndex__verseAudioButton: @zIndex__lyricColumn + 1;
 
 // This is in lyrics and annotation.
-@TextSpan-z-index: @VerseAudioButton-z-index + 1;
+@zIndex__textSpan: @zIndex__verseAudioButton + 1;
 
 // This needs to be above annotation text in carousel.
-@CarouselNav-button-z-index: @TextSpan-z-index + 1;
+@zIndex__carouselNavButton: @zIndex__textSpan + 1;
 
 // This is above text but below verse bar and buttons.
-@LyricAccess-icons-z-index: @CarouselNav-button-z-index + 1;
+@zIndex__lyricAccessIcons: @zIndex__carouselNavButton + 1;
 
 // Selected verse should be above normal text span.
-@selected-VerseBar-z-index: @LyricAccess-icons-z-index + 1;
+@zIndex__selectedVerseBar: @zIndex__lyricAccessIcons + 1;
 
 // Verse bar text should be even more above.
-@VerseBar-text-z-index: @selected-VerseBar-z-index + 1;
+@zIndex__verseBarText: @zIndex__selectedVerseBar + 1;
 
 /**
  * Lyric buttons should be higher than everything else in lyric column,
  * including text span.
  */
-@LyricColumn-button-z-index: @VerseBar-text-z-index + 1;
+@zIndex__lyricColumnButton: @zIndex__verseBarText + 1;
 
-@MenuField-z-index: @LyricColumn-button-z-index + 1;
+@zIndex__menuField: @zIndex__lyricColumnButton + 1;
 
 // Menu should be higher than centre field and lyrics.
-@menu-subfield-z-index: @MenuField-z-index + 1;
+@zIndex__menuSubfield: @zIndex__menuField + 1;
 
 // Score, title, and wiki popups are higher.
-@PopupOverlay-z-index: @menu-subfield-z-index + 1;
-@PopupOverlay-content-z-index: @PopupOverlay-z-index + 1;
-
-@audio-in-overlay-z-index: @PopupOverlay-content-z-index + 1;
+@zIndex__popupOverlay: @zIndex__menuSubfield + 1;
+@zIndex__popupOverlayContent: @zIndex__popupOverlay + 1;
 
 // The overlay preventing popup interaction should be the highest.
-@TouchOverlay-z-index: @audio-in-overlay-z-index + 1;
+@zIndex__touchOverlay: @zIndex__popupOverlayContent + 1;
 
 .TouchOverlay {
     position: fixed;
@@ -62,6 +60,6 @@
     // This prevents popup interaction when the slider is touched.
     .slider-touched
     & {
-        z-index: @TouchOverlay-z-index;
+        z-index: @zIndex__touchOverlay;
     }
 }

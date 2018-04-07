@@ -51,7 +51,7 @@
 
     // Including annotation is possible because its height is auto, not 100%.
     &.annotation, &.audio, &.score, &.title, &.wiki {
-        z-index: @PopupOverlay-content-z-index;
+        z-index: @zIndex__popupOverlayContent;
     }
 
     &.not-visible {
@@ -65,7 +65,7 @@
     }
 
     &.not-displayed {
-        z-index: @popup-container-z-index;
+        z-index: @zIndex__popupContainer;
     }
 }
 
@@ -103,7 +103,7 @@
 .popup-wrapper {
     position: relative;
 
-    z-index: @PopupOverlay-content-z-index;
+    z-index: @zIndex__popupOverlayContent;
 
     &.wiki, &.score {
         width: ~"calc(100% - @{full-subfield-margin} * 2.5)";

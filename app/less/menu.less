@@ -21,14 +21,14 @@
     transition: top @animation-default;
 
     // Needs to be above nav when nav buttons are hidden.
-    z-index: @MenuField-z-index;
+    z-index: @zIndex__menuField;
 }
 
 .menu-subfield {
     overflow: hidden;
     border-radius: 15px;
 
-    z-index: @menu-subfield-z-index;
+    z-index: @zIndex__menuSubfield;
     flex-grow: 1;
 
     &.audio-subfield {

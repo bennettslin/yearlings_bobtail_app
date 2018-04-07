@@ -39,7 +39,7 @@
         max-width: ~"calc(100% - @{VerseBar-phone-margins})";
     }
 
-    z-index: @selected-VerseBar-z-index;
+    z-index: @zIndex__selectedVerseBar;
 
     transform: translateX(-50%) scale(0);
 
@@ -87,7 +87,7 @@
     transition: background-color @animation-default;
 
     .TextSpan {
-        z-index: @VerseBar-text-z-index;
+        z-index: @zIndex__verseBarText;
     }
 
     .slider-moving

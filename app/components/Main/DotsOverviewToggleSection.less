@@ -10,7 +10,7 @@
     display: flex;
 
     // Ensure this is below lyrics but above popup wrappers.
-    z-index: @dots-overview-subfield-z-index;
+    z-index: @zIndex__dotsOverviewSubfield;
 
     // Overview and dots toggle are at the bottom in tablet and mini.
     .is-tablet-or-mini
@@ -82,7 +82,7 @@
     height: @OverviewToggle-height;
 
     // Ensure toggle button is above its popup container and the carousel.
-    z-index: @centre-field-element-z-index;
+    z-index: @zIndex__centreFieldChild;
 
     .laptop-width
     & {
@@ -96,7 +96,7 @@
     opacity: 0;
     margin-left: -@dots-subfield-margin;
     margin-top: @dots-subfield-margin / 2;
-    z-index: @dots-Overview-z-index;
+    z-index: @zIndex__dotsOverview;
 
     // TODO: Ideal for dots section to fade to halfway left, then move all the way out to prevent user interaction.
     transition: opacity @animation-default,
