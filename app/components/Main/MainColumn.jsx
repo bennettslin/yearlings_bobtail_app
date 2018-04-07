@@ -7,7 +7,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import MenuField from './MenuField'
+import Menu from './Menu'
 import Nav from '../Nav/Nav'
 import AnnotationPopup from '../Popups/AnnotationPopup'
 import AudioBanner from '../Audio/AudioBanner'
@@ -60,7 +60,7 @@ MainColumn = ({
         'MainColumn',
         'column'
     )}>
-        <MenuField {...menuFieldHandlers} />
+        <Menu {...menuFieldHandlers} />
         <div className="field centre-field">
 
             <Stage />

@@ -10,7 +10,7 @@
 }
 
 // Parent container of both audio sections.
-.audio-subfield, .popup-wrapper.audio {
+.Menu__childAudio, .popup-wrapper.audio {
 
     min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge + @audio-block-padding * 3;
     max-width: @audio-max-width;
@@ -33,7 +33,7 @@
     }
 }
 
-.audio-subfield {
+.Menu__childAudio {
     transition: margin-bottom @animationDuration__default;
 
     ._overlayShown_
@@ -64,7 +64,7 @@
         justify-content: center;
     }
 
-    .audio-subfield
+    .Menu__childAudio
     & {
         height: 100%;
     }

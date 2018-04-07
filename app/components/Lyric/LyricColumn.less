@@ -15,7 +15,7 @@
 
     ._mobile_._song_._lyricExpanded_
     & {
-        height: ~"calc(100% - @{menu-height})";
+        height: ~"calc(100% - @{height__menu})";
     }
 
     ._mobile_._lyricHeightless_
@@ -23,7 +23,7 @@
         height: 0;
     }
 
-    @phone-LyricColumn-subtraction: @menu-phone-height + @AudioBanner-custom-subfield-height + @AudioBanner-custom-subfield-padding * 2;
+    @phone-LyricColumn-subtraction: @height__menu__phone + @AudioBanner-custom-subfield-height + @AudioBanner-custom-subfield-padding * 2;
 
     ._phone_._song_._lyricExpanded_ {
         height: ~"calc(100% - @{phone-LyricColumn-subtraction})";

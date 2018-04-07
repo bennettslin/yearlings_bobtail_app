@@ -1,116 +1,98 @@
 // These values *must* be the same in js.
-@menu-height: 72px;
-@menu-phone-height: @length__icon + 2 * @menu-subfield-narrow-margin;
-@menu-subfield-margin: 10px;
-@menu-subfield-narrow-margin: 3px;
-@title-subfield-min-width: 72px;
+@margin__menuChild: 10px;
+@margin__menuChild__narrow: 3px;
+@minWidth__childTitle: 72px;
 
-.MenuField, .menu-subfield {
+@height__menu: 72px;
+@height__menu__phone: @length__icon + 2 * @margin__menuChild__narrow;
+
+.Menu, .Menu__child {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.MenuField {
+.Menu {
     position: relative;
-    height: @menu-height;
-    // background-color: rgba(225, 255, 225, 0.5);
-    box-shadow: @menu-box-shadow;
+    height: @height__menu;
+    box-shadow: @boxShadow__menu;
     top: 0;
 
     transition: top @animationDuration__default;
 
     // Needs to be above nav when nav buttons are hidden.
     z-index: @zIndex__menuField;
+
+    ._phone_
+    & {
+        height: @height__menu__phone;
+    }
 }
 
-.menu-subfield {
+.Menu__child {
     overflow: hidden;
 
     z-index: @zIndex__menuSubfield;
     flex-grow: 1;
-
-    &.audio-subfield {
-        flex-grow: 2;
-
-        margin: 0 @menu-subfield-margin;
-    }
 }
 
-.scores-tips-menu-subfield {
-    justify-content: flex-start;
-}
-
-.title-menu-subfield {
-    min-width: @title-subfield-min-width;
+.Menu__childTitle {
+    min-width: @minWidth__childTitle;
     max-width: 200px; // Arbitrary.
 
     // Override.
     overflow: visible;
-    border-radius: 0;
-}
 
-.audio-subfield {
-    background-color: #8d8;
-}
-
-._laptop_, ._mini_ {
-
-    .menu-subfield {
-
-        &.audio-subfield {
-            margin: 0 @menu-subfield-narrow-margin;
-        }
+    ._titleInAudio_
+    & {
+        /**
+         * Don't bother to show if title in audio. Child component also will
+         * not be rendered.
+         */
+        display: none;
     }
 }
 
-._mobile_ {
+.Menu__childAudio {
+    flex-grow: 2;
 
-    .scores-tips-menu-subfield {
+    margin: 0 @margin__menuChild;
+    background-color: #8d8;
+
+    ._scoresTipsMain_
+    & {
+        // If scores tips is hidden, remove audio subfield's right margin.
+        margin-right: 0;
+    }
+
+    ._titleInAudio_
+    & {
+        // If title is hidden, remove audio subfield's left margin.
+        margin-left: 0;
+    }
+
+    ._laptop_
+    &,
+    ._mini_
+    & {
+        margin: 0 @margin__menuChild__narrow;
+    }
+
+    ._mobile_
+    & {
         justify-content: flex-end;
     }
 }
 
-._phone_ {
-    .MenuField {
-        height: @menu-phone-height;
-    }
-}
-
-._titleInAudio_ {
-
-    /**
-     * Don't bother to show if title in audio. Child component also will not be
-     * rendered.
-     */
-    .title-menu-subfield {
+.Menu__childScoresTips {
+    justify-content: flex-start;
+    
+    ._scoresTipsMain_
+    & {
+        /**
+         * Don't bother to show if scores tips in main. Child component also
+         * will not be rendered.
+         */
         display: none;
-    }
-
-    .menu-subfield {
-        border-radius: 0;
-
-        // If title is hidden, remove audio subfield's left margin.
-        &.audio-subfield {
-            margin-left: 0;
-        }
-    }
-}
-
-._scoresTipsMain_ {
-
-    /**
-     * Don't bother to show if scores tips in main. Child component also will
-     * not be rendered.
-     */
-    .scores-tips-menu-subfield {
-        display: none;
-    }
-
-    // If scores tips is hidden, remove audio subfield's right margin.
-    .menu-subfield {
-        &.audio-subfield {
-            margin-right: 0;
-        }
     }
 }

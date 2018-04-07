@@ -5,18 +5,20 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import Audio from '../Audio/Audio'
 import ScoresTipsSection from './ScoresTipsSection'
 import TitleToggle from '../Title/TitleToggle'
 
-const menuFieldPropTypes = {
+const menuPropTypes = {
     // From parent.
     audioSectionHandlers: PropTypes.object.isRequired,
     scoresTipsSectionHandlers: PropTypes.object.isRequired,
     titleToggleHandlers: PropTypes.object.isRequired
 },
 
-MenuField = ({
+Menu = ({
 
     audioSectionHandlers,
     scoresTipsSectionHandlers,
@@ -24,17 +26,28 @@ MenuField = ({
 
 }) => {
     return (
-        <div className="field MenuField">
+        <div className="Menu">
 
-            <div className="menu-subfield title-menu-subfield">
+            <div className={cx(
+                'Menu__childTitle',
+                'Menu__child'
+            )}>
                 <TitleToggle {...titleToggleHandlers}
                     inMenu
                 />
             </div>
-            <div className="menu-subfield audio-subfield">
+
+            <div className={cx(
+                'Menu__childAudio',
+                'Menu__child'
+            )}>
                 <Audio {...audioSectionHandlers} />
             </div>
-            <div className="menu-subfield scores-tips-menu-subfield">
+
+            <div className={cx(
+                'Menu__childScoresTips',
+                'Menu__child'
+            )}>
                 <ScoresTipsSection {...scoresTipsSectionHandlers}
                     inMenu
                 />
@@ -43,6 +56,6 @@ MenuField = ({
     )
 }
 
-MenuField.propTypes = menuFieldPropTypes
+Menu.propTypes = menuPropTypes
 
-export default MenuField
+export default Menu

@@ -23,7 +23,7 @@
     }
 
     .AudioPopup-block, .Audio {
-        height: @menu-height;
+        height: @height__menu;
     }
 
     .Popup {
@@ -79,7 +79,7 @@
     &._overlayShown_ {
 
         .AudioBanner-custom-subfield {
-            top: -@menu-height - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
+            top: -@height__menu - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
         }
 
         .popupOverlaid__container {
@@ -127,12 +127,12 @@
     &._overlayShown_ {
 
         // Only hide menu in desktop, because menu hides nav in mobile.
-        .MenuField {
-            top: -@menu-height;
+        .Menu {
+            top: -@height__menu;
         }
 
         .AudioBanner-custom-subfield {
-            top: -@menu-height - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
+            top: -@height__menu - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
         }
     }
 }
