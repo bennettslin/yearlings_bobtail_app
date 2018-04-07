@@ -1,10 +1,10 @@
 // This value *must* be the same in js.
-@CarouselAnnotation-min-width: @AnnotationCard-width +
+@CarouselAnnotation-min-width: @width__annotationCard +
                                 @AnnotationCard-padding * 2 +
                                 @CarouselAnnotation-padding * 2 +
                                 @Annotation-padding * 2;
 
-@CarouselAnnotation-mini-min-width: @AnnotationCard-_mini_ +
+@CarouselAnnotation-mini-min-width: @width__annotationCard__mini +
                                      @AnnotationCard-padding * 2 +
                                      @CarouselAnnotation-padding * 2 +
                                      @Annotation-padding * 2;
@@ -13,11 +13,11 @@
     /**
      * Needed in carousel for proper layout.
      */
-    width: @AnnotationCard-width + @AnnotationCard-padding * 2;
+    width: @width__annotationCard + @AnnotationCard-padding * 2;
 
     ._mini_
     & {
-        width: @AnnotationCard-_mini_ +
+        width: @width__annotationCard__mini +
         @AnnotationCard-padding * 2;   
     }
 }

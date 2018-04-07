@@ -2,6 +2,57 @@
 @import "./ScoresTipsSection.less";
 @import "./Menu.less";
 
+.testMenu__container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: @height__menu;
+    z-index: 500;
+
+    background-color: rgba(200, 250, 250, 0.5);
+
+}
+
+.testMenu__child {
+    background-color: rgba(250, 250, 200, 0.7);
+    height: @height__menu;
+}
+
+.MainColumn,
+.testMenu__child {
+    ._monitor_
+    & {
+        width: ~"calc(100% - @{width__goldenCord})";
+    }
+
+    ._laptop_
+    & {
+        width: ~"calc(100% - @{width__uncannyValley})";
+    }
+
+    ._mobile_
+    & {
+        width: 100%;
+    }
+}
+
+.MainColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    ._mobile_
+    & {
+        height: 100% - @height__lyricCollapsed;
+    }
+
+    ._lyricHeightless_
+    & {
+        height: 100%;
+    }
+}
+
 .AudioBanner-custom-subfield {
     position: relative;
     top: 0;
@@ -18,6 +69,16 @@
     }
 }
 
-.centre-field {
+.MainColumn__belowMenu {
     overflow: visible;
+    position: relative;
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: column;
+    
+    ._mobile_
+    & {
+        flex-direction: column-reverse;
+    }
 }

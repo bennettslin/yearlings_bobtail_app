@@ -17,7 +17,7 @@
 @width__uncannyValley: 570px;
 
 // This value *must* be the same in js.
-@collapsed-Lyric-height: 32%;
+@height__lyricCollapsed: 32%;
 
 @nav-height-padding: 6px;
 @nav-height: @length__iconLarge + @nav-height-padding;
@@ -39,14 +39,12 @@
 @Annotation-padding: 5px;
 @AnnotationCard-padding: @Annotation-padding;
 
-@AnnotationCard-width: 354px;
-@AnnotationCard-_mini_: @AnnotationCard-width * @mini-multiplier;
-@AnnotationCard-_phone_: @AnnotationCard-width * @phone-multiplier;
+@width__annotationCard: 354px;
+@width__annotationCard__mini: @width__annotationCard * @mini-multiplier;
+@width__annotationCard__phone: @width__annotationCard * @phone-multiplier;
 
 @OverviewToggle-width: 100px;
 @OverviewToggle-height: 150px;
-
-@hanging-indent-width: 1.5em;
 
 .Live {
     background-color: black;
@@ -56,22 +54,8 @@
     overflow: hidden;
 }
 
-.MainColumn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .subfield, .Menu__child {
     height: 100%;
-}
-
-.centre-field {
-    position: relative;
-    flex-grow: 1;
-
-    display: flex;
-    flex-direction: column;
 }
 
 ._desktop_ {
@@ -81,19 +65,12 @@
         height: 100%;
     }
 
-    .MainColumn {
-        width: ~"calc(100% - @{width__goldenCord})";
-    }
-
     .LyricColumn, .OverviewLogueColumn {
         width: @width__goldenCord;
         right: 0;
     }
 
     &._laptop_ {
-        .MainColumn {
-            width: ~"calc(100% - @{width__uncannyValley})";
-        }
 
         .LyricColumn, .OverviewLogueColumn {
             width: @width__uncannyValley;
@@ -111,25 +88,10 @@
 
 ._mobile_ {
 
-    .MainColumn {
-        width: 100%;
-        height: 100% - @collapsed-Lyric-height;
-    }
-
-    .centre-field {
-        flex-direction: column-reverse;
-    }
-
     .LyricColumn, .OverviewLogueColumn {
         position: absolute;
-        height: @collapsed-Lyric-height;
+        height: @height__lyricCollapsed;
         width: 100%;
         bottom: 0;
-    }
-
-    &._lyricHeightless_ {
-        .MainColumn {
-            height: 100%;
-        }
     }
 }

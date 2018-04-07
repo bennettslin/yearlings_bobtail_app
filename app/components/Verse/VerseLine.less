@@ -5,8 +5,8 @@
      */
     &.lyric,
     &.left {
-        text-indent:-@hanging-indent-width;
-        padding-left: @hanging-indent-width;
+        text-indent:-@width__hangingIndent;
+        padding-left: @width__hangingIndent;
     }
 
     &.centre {
@@ -27,8 +27,8 @@
          * last letter is a stupid hack to prevent rtl from switching the
          * order of the last letter.
          */
-        text-indent:-@hanging-indent-width;
-        padding-right: @hanging-indent-width;
+        text-indent:-@width__hangingIndent;
+        padding-right: @width__hangingIndent;
         direction: rtl;
         &:after {
             content: 'a';

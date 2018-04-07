@@ -29,12 +29,14 @@ const PopupOverlaid = ({
         'popupOverlaid__container',
         'absoluteFullContainer'
     )}>
+
         <div className={cx(
             'AudioPopup-block',
             'popupOverlaid__child'
         )}>
             <AudioPopup {...audioSectionHandlers} />
         </div>
+
         <div className={cx(
             'main-popup-block',
             'popupOverlaid__child'

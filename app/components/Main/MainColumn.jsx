@@ -61,11 +61,12 @@ MainColumn = ({
         'column'
     )}>
         <Menu {...menuFieldHandlers} />
-        <div className="field centre-field">
+
+        <div className="MainColumn__belowMenu">
 
             <Stage />
 
-            <div className="field popup-field">
+            <div className="popup-field">
                 <div className="subfield annotation-subfield">
                     <AnnotationPopup {...annotationPopupHandlers}
                         isOverlayAnnotation={false}

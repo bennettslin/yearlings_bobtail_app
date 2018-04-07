@@ -236,6 +236,11 @@ class Live extends Component {
                     scorePopupHandlers={scorePopupHandlers}
                     wikiPopupHandlers={wikiPopupHandlers}
                 />
+
+                <div className="testMenu__container">
+                    <div className="testMenu__child">
+                    </div>
+                </div>
             </div>
         )
     }

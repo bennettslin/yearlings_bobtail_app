@@ -8,20 +8,6 @@
     flex-direction: column;
     align-items: center;
 
-    .popupOverlaid__child {
-        position: relative;
-        width: 100%;
-
-        &.AudioPopup-block {
-            display: flex;
-            justify-content: center;
-        }
-
-        &.main-popup-block {
-            flex-grow: 1;
-        }
-    }
-
     .AudioPopup-block, .Audio {
         height: @height__menu;
     }
@@ -48,6 +34,20 @@
         &.score, &.wiki, &.title {
             box-shadow: @popup-darker-box-shadow;
         }
+    }
+}
+
+.popupOverlaid__child {
+    position: relative;
+    width: 100%;
+
+    &.AudioPopup-block {
+        display: flex;
+        justify-content: center;
+    }
+
+    &.main-popup-block {
+        flex-grow: 1;
     }
 }
 
