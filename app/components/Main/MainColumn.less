@@ -33,7 +33,6 @@
     z-index: 500;
 
     background-color: rgba(200, 250, 250, 0.5);
-
 }
 
 .testMenu__child {
@@ -55,35 +54,25 @@
     }
 }
 
-.MainColumn {
+.MainColumn, .popupOverlaid__child {
+    position: absolute;
+    top: @height__menu;
+    left: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     ._mobile_
     & {
-        height: 100% - @height__lyricCollapsed;
+        height: ~"calc(100% - @{height__lyricCollapsed} - @{height__menu})";
     }
 
+    ._desktop_
+    &,
     ._lyricHeightless_
     & {
-        height: 100%;
-    }
-}
-
-.AudioBanner-custom-subfield {
-    position: relative;
-    top: 0;
-    height: @AudioBanner-custom-subfield-height;
-    z-index: @zIndex__customAudioBanner;
-
-    transition: top @animationDuration__default;
-
-    // Arbitrary values;
-    padding: @AudioBanner-custom-subfield-padding 8px;
-
-    .AudioBanner-block {
-        width: 100%;
+        height: ~"calc(100% - @{height__menu})";
     }
 }
 

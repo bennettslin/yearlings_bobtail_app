@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AudioPopup from '../Popups/AudioPopup'
 import AnnotationPopup from '../Popups/AnnotationPopup'
 import ScorePopup from '../Popups/ScorePopup'
 import TitlePopup from '../Popups/TitlePopup'
@@ -18,7 +17,7 @@ const popupOverlaidPropTypes = {
 
 const PopupOverlaid = ({
 
-    audioSectionHandlers,
+    // audioSectionHandlers,
     annotationPopupHandlers,
     titlePopupHandlers,
     scorePopupHandlers,
@@ -31,13 +30,6 @@ const PopupOverlaid = ({
     )}>
 
         <div className={cx(
-            'AudioPopup-block',
-            'popupOverlaid__child'
-        )}>
-            <AudioPopup {...audioSectionHandlers} />
-        </div>
-
-        <div className={cx(
             'main-popup-block',
             'popupOverlaid__child'
         )}>
@@ -48,6 +40,7 @@ const PopupOverlaid = ({
             <ScorePopup {...scorePopupHandlers} />
             <WikiPopup {...wikiPopupHandlers} />
         </div>
+
     </div>
 )
 

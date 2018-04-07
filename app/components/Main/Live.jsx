@@ -8,6 +8,7 @@ import PropTypes from 'prop-types'
 
 import Theatre from '../Theatre/Theatre'
 import MainColumn from './MainColumn'
+import Menu from './Menu'
 import PopupOverlaid from './PopupOverlaid'
 
 import OverviewLogueColumn from './OverviewLogueColumn'
@@ -207,13 +208,13 @@ class Live extends Component {
                 navSectionHandlers: {
                     handleNavSongSelect,
                     handleNavBookSelect
-                },
-
-                menuFieldHandlers: {
-                    audioSectionHandlers,
-                    scoresTipsSectionHandlers,
-                    titleToggleHandlers
                 }
+            },
+
+            menuFieldHandlers = {
+                audioSectionHandlers,
+                scoresTipsSectionHandlers,
+                titleToggleHandlers
             }
 
         return (
@@ -239,6 +240,7 @@ class Live extends Component {
 
                 <div className="testMenu__container">
                     <div className="testMenu__child">
+                        <Menu {...menuFieldHandlers} />
                     </div>
                 </div>
             </div>

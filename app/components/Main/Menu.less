@@ -6,7 +6,8 @@
 @height__menu: 72px;
 @height__menu__phone: @length__icon + 2 * @margin__menuChild__narrow;
 
-.Menu, .Menu__child {
+.Menu,
+.Menu__child {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,7 +19,7 @@
     box-shadow: @boxShadow__menu;
     top: 0;
 
-    transition: top @animationDuration__default;
+    // transition: top @animationDuration__default;
 
     // Needs to be above nav when nav buttons are hidden.
     z-index: @zIndex__menuField;
@@ -27,8 +28,6 @@
     & {
         height: @height__menu__phone;
     }
-
-    border: 1px solid red;
 }
 
 .Menu__child {

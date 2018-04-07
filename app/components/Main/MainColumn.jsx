@@ -7,7 +7,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Menu from './Menu'
 import Nav from '../Nav/Nav'
 import AnnotationPopup from '../Popups/AnnotationPopup'
 import AudioBanner from '../Audio/AudioBanner'
@@ -31,7 +30,6 @@ const mainColumnPropTypes = {
     carouselSectionHandlers: PropTypes.object.isRequired,
     dotsOverviewToggleSectionHandlers: PropTypes.object.isRequired,
     dotsSectionHandlers: PropTypes.object.isRequired,
-    menuFieldHandlers: PropTypes.object.isRequired,
     navSectionHandlers: PropTypes.object.isRequired,
     overviewPopupHandlers: PropTypes.object.isRequired,
     tipsPopupHandlers: PropTypes.object.isRequired,
@@ -51,16 +49,13 @@ MainColumn = ({
     navSectionHandlers,
     overviewPopupHandlers,
     scoresTipsSectionHandlers,
-    tipsPopupHandlers,
-
-    menuFieldHandlers
+    tipsPopupHandlers
 
 }) => (
     <div className={cx(
         'MainColumn',
         'column'
     )}>
-        <Menu {...menuFieldHandlers} />
 
         <div className="MainColumn__belowMenu">
 
