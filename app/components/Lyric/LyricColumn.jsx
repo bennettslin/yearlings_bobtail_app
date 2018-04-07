@@ -219,7 +219,7 @@ LyricColumnView = ({
                 onTransitionEnd={handleAnimatableTransition}
             >
                 <VerseBar {...verseBarProps}
-                    isAbove={true}
+                    isAbove
                 />
                 <VerseBar {...verseBarProps} />
 

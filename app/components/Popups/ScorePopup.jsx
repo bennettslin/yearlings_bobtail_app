@@ -43,7 +43,7 @@ ScorePopup = ({
         <Popup
             isVisible={isVisible}
             popupClassName="score"
-            showClose={true}
+            showClose
             handleCloseClick={handleScoreToggle}
             myChild={myChild}
         />

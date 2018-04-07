@@ -138,7 +138,7 @@ AnnotationSectionView = ({
                 {annotationTitle === IS_DOT_STANZA ? (
                     <div className="annotation-title">
                         <DotAnchor
-                            isSmall={true}
+                            isSmall
                             isSelected={showAsSelected}
                             accessHighlighted={isAccessedAnnotation}
                             dotKeys={annotationDotKeys}

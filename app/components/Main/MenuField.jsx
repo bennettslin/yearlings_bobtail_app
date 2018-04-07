@@ -28,7 +28,7 @@ MenuField = ({
 
             <div className="menu-subfield title-menu-subfield">
                 <TitleToggle {...titleToggleHandlers}
-                    inMenu={true}
+                    inMenu
                 />
             </div>
             <div className="menu-subfield audio-subfield">
@@ -36,7 +36,7 @@ MenuField = ({
             </div>
             <div className="menu-subfield scores-tips-menu-subfield">
                 <ScoresTipsSection {...scoresTipsSectionHandlers}
-                    inMenu={true}
+                    inMenu
                 />
             </div>
         </div>

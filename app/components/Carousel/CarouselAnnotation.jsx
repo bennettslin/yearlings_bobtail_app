@@ -138,7 +138,7 @@ CarouselAnnotationView = ({
         )}
     >
         <Annotation {...other}
-            inCarousel={true}
+            inCarousel
             handleContainerClick={handleContainerClick}
         />
     </div>

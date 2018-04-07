@@ -39,7 +39,7 @@ const TasksBlockView = ({
                     {task.subtasks &&
                         <TasksBlock
                             tasks={task.subtasks}
-                            isSubtask={true}
+                            isSubtask
                             maxTotalNeededHours={maxTotalNeededHours}
                         />
                     }

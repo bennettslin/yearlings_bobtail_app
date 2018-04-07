@@ -92,7 +92,7 @@ Audio = ({
 
             {/* In phone, show banner in the overlaid audio section. */}
             <AudioBanner {...audioBannerHandlers}
-                inAudioSection={true}
+                inAudioSection
                 inOverlay={inOverlay}
             />
 

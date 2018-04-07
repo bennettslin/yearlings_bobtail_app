@@ -132,7 +132,7 @@ class TextAnchor extends Component {
                         inPortal={inPortal}
                         isVerseBeginningSpan={isVerseBeginningSpan}
                         isVerseEndingSpan={isVerseEndingSpan}
-                        inTextAnchor={true}
+                        inTextAnchor
                     />
                 </a>
             </span>

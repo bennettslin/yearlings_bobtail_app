@@ -76,7 +76,7 @@ class StageSceneSection extends Component {
 
                 {/* Floor tiles. */}
                 <StageSceneTiling
-                    isFloor={true}
+                    isFloor
                     slantDirection={slantDirection}
                     zIndices={floorZIndices}
                     colours={floorColours}

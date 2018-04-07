@@ -30,7 +30,7 @@ DotsOverviewToggleSection = ({
             handleDotsSectionToggle={handleDotsSectionToggle}
         />
         <ScoresTipsSection {...scoresTipsSectionHandlers}
-            inToggleSection={true}
+            inToggleSection
         />
     </div>
 )

@@ -37,7 +37,7 @@ TitlePopup = ({
         <Popup
             isVisible={isVisible}
             popupClassName="title"
-            showClose={true}
+            showClose
             handleCloseClick={handleTitleToggle}
             handlePopupContainerClick={handlePopupContainerClick}
             myChild={myChild}

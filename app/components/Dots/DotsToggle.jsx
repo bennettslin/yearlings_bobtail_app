@@ -32,7 +32,7 @@ DotsToggle = ({
                 accessKey={DOTS_SECTION_EXPAND_KEY}
                 buttonName="DotsToggle"
                 iconText={selectedDotsIndex}
-                isLarge={true}
+                isLarge
                 handleClick={handleDotsSectionToggle}
             />
         </div>

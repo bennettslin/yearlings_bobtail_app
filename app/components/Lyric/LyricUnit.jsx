@@ -224,13 +224,13 @@ LyricUnitView = ({
                     <LyricStanza {...other}
                         stanzaArray={unitArray}
                         truncatableMain={hasSide}
-                        inMain={true}
+                        inMain
                     />
                     <LyricStanza {...other}
                         stanzaArray={subStanza}
                         truncatableMain={hasSide}
-                        inMain={true}
-                        addSub={true}
+                        inMain
+                        addSub
                     />
                 </div>
             }
@@ -248,7 +248,7 @@ LyricUnitView = ({
                     />
                     <LyricStanza {...other}
                         stanzaArray={topSideSubStanza}
-                        addSub={true}
+                        addSub
                     />
                 </div>
             }

@@ -58,7 +58,7 @@ LyricStanza = ({
                 <div className="sub-block custom-sub-block right">
                     <LyricStanza {...other}
                         stanzaArray={stanzaArray}
-                        isSub={true}
+                        isSub
 
                         // Not ideal to repeat like this, but oh well.
                         stanzaType={stanzaType}

@@ -76,7 +76,7 @@ class VerseBar extends Component {
                     onTouchStart={handleVerseBarSelect}
                 >
                     <VerseUnit {...other}
-                        inVerseBar={true}
+                        inVerseBar
                         barVerseIndex={verseIndex}
                         verseObject={verseObject}
                     />

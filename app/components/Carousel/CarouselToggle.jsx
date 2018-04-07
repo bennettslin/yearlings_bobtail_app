@@ -41,7 +41,7 @@ CarouselToggle = ({
                 accessKey={CAROUSEL_TOGGLE_KEY}
                 buttonName="carouselNavToggle"
                 iconText={selectedCarouselNavIndex}
-                isLarge={true}
+                isLarge
                 handleClick={handleCarouselNavToggle}
             />
         </div>

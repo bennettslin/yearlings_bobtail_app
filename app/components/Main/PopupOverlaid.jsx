@@ -40,7 +40,7 @@ const PopupOverlaid = ({
             'popupOverlaid__child'
         )}>
             <AnnotationPopup {...annotationPopupHandlers}
-                isOverlayAnnotation={true}
+                isOverlayAnnotation
             />
             <TitlePopup {...titlePopupHandlers} />
             <ScorePopup {...scorePopupHandlers} />

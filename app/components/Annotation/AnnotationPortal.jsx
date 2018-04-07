@@ -124,7 +124,7 @@ class AnnotationPortal extends Component {
                     <div className="portal-verse-text">
                         <span className="TextSpan">{'\u201c'}</span>
                         <TextBlock
-                            inPortal={true}
+                            inPortal
                             text={verseObject[LYRIC] || verseObject[CENTRE] || verseObject[columnKey]}
                             portalAnnotationIndex={annotationIndex}
                         />

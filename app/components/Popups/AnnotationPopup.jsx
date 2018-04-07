@@ -106,7 +106,7 @@ AnnotationPopup = ({
             <Popup
                 isVisible={isVisible}
                 popupClassName="annotation"
-                showArrows={true}
+                showArrows
                 handlePreviousClick={handleAnnotationPrevious}
                 handleNextClick={handleAnnotationNext}
                 handlePopupContainerClick={handlePopupContainerClick}

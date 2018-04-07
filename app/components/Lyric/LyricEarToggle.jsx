@@ -41,7 +41,7 @@ LyricToggleEar = ({
             'access-keysShown'
         )}>
             <Button
-                isLarge={true}
+                isLarge
                 accessKey={LYRIC_COLUMN_TOGGLE_KEY}
                 iconText={LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]}
                 handleClick={handleLyricColumnSelect}

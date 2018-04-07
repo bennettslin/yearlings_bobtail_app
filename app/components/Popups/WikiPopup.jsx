@@ -36,7 +36,7 @@ WikiPopup = ({
         <Popup
             isVisible={isVisible}
             popupClassName="wiki"
-            showClose={true}
+            showClose
             handleCloseClick={handleWikiToggle}
             myChild={myChild}
         />

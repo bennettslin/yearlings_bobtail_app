@@ -63,7 +63,7 @@ AudioPopup = ({
 
         myChild = (
             <Audio {...other}
-                inOverlay={true}
+                inOverlay
             />
         )
 

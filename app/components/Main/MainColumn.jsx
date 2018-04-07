@@ -76,13 +76,13 @@ MainColumn = ({
 
                 <div className="OverviewPopup-container">
                     <OverviewPopup {...overviewPopupHandlers}
-                        inOverviewSubfield={true}
+                        inOverviewSubfield
                     />
                 </div>
 
                 <LyricToggleExpand
                     handleLyricSectionExpand={handleLyricSectionExpand}
-                    inMain={true}
+                    inMain
                 />
 
                 <div className="dots-subfield">
@@ -90,14 +90,14 @@ MainColumn = ({
                 </div>
 
                 <ScoresTipsSection {...scoresTipsSectionHandlers}
-                    inSubfield={true}
+                    inSubfield
                 />
 
                 <TipsPopup {...tipsPopupHandlers} />
             </div>
 
             <AudioBanner {...audioBannerHandlers}
-                inCustomSubfield={true}
+                inCustomSubfield
             />
 
             <CarouselToggle

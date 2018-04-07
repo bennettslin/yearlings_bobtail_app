@@ -60,7 +60,7 @@ PopupButton = ({
         >
             <Button
                 isLarge
-                isOverflowShown={true}
+                isOverflowShown
                 accessKey={accessKey}
                 iconText={tempUnicodeSymbol}
                 handleClick={handleClick}

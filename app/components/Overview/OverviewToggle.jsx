@@ -35,8 +35,8 @@ OverviewToggle = ({
 }) => (
     <div className="OverviewToggle-button-container">
         <Button
-            isCustomShape={true}
-            isCustomSize={true}
+            isCustomShape
+            isCustomSize
             isEnabled={isEnabled}
             accessKey={OVERVIEW_TOGGLE_KEY}
             iconText={OVERVIEW_OPTIONS[selectedOverviewIndex]}
