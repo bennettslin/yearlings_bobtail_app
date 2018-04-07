@@ -1,5 +1,5 @@
 // For annotations, only raise z-index if overlaid.
-.annotation-shown.overlaid-annotation {
+._annotationShown_._annotationOverlaid_ {
     .Popup {
         &.annotation {
             z-index: @zIndex__popupOverlayContent;
@@ -9,7 +9,7 @@
 
 .annotation.popup-wrapper {
 
-    .side-annotation
+    ._annotationSide_
     & {
         position: absolute;
         top: 0;
@@ -19,7 +19,7 @@
         margin-right: 15px;
     }
 
-    .is-mobile.side-annotation
+    ._mobile_._annotationSide_
     & {
         top: auto;
         bottom: 0;
@@ -29,7 +29,7 @@
         margin-bottom: 25px;
     }
 
-    .is-mobile.side-annotation.heightless-lyric
+    ._mobile_._annotationSide_._lyricHeightless_
     & {
         // Even wider margin bottom if no lyrics at bottom.
         margin-bottom: @app-large-icon-diameter;

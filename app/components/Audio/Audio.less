@@ -17,17 +17,17 @@
 
     box-sizing: border-box;
 
-    .tablet-width
+    ._tablet_
     & {
         min-width: @AudioBanner-min-width + @AudioButtons-constant + @app-tablet-large-icon-diameter + @audio-block-padding * 3;
     }
 
-    .mini-width
+    ._mini_
     & {
         min-width: @AudioBanner-min-width + @AudioButtons-constant + @app-mini-large-icon-diameter + @audio-block-padding * 3;
     }
 
-    .phone-width
+    ._phone_
     & {
         min-width: @AudioButtons-constant + @app-icon-diameter + @audio-block-padding * 3;
     }
@@ -36,7 +36,7 @@
 .audio-subfield {
     transition: margin-bottom @animationDuration__default;
 
-    .overlay-shown
+    ._overlayShown_
     & {
         // TODO: I don't understand this number, but it doesn't push it up all the way.
         margin-bottom: @nav-height * 2;
@@ -54,12 +54,12 @@
 
     background-color: #dbb;
 
-    .title-in-audio
+    ._titleInAudio_
     & {
-        padding: @audio-block-padding-y @title-in-audio-block-padding;
+        padding: @audio-block-padding-y @_titleInAudio_-block-padding;
     }
 
-    .phone-width
+    ._phone_
     & {
         justify-content: center;
     }

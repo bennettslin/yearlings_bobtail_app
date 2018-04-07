@@ -1,5 +1,5 @@
 @VerseBar-margin: 8px;
-@VerseBar-hidden-offset: -50px;
+@_verseBarHidden_-offset: -50px;
 
 @VerseBar-desktop-margins: @lyric-button-side-padding * 2 +
                             @app-large-icon-diameter * 2 +
@@ -24,17 +24,17 @@
 
     max-width: ~"calc(100% - @{VerseBar-desktop-margins})";
 
-    .tablet-width
+    ._tablet_
     & {
         max-width: ~"calc(100% - @{VerseBar-tablet-margins})";
     }
 
-    .mini-width
+    ._mini_
     & {
         max-width: ~"calc(100% - @{VerseBar-mini-margins})";
     }
 
-    .phone-width
+    ._phone_
     & {
         max-width: ~"calc(100% - @{VerseBar-phone-margins})";
     }
@@ -44,34 +44,34 @@
     transform: translateX(-50%) scale(0);
 
     &.above {
-        top: @VerseBar-hidden-offset;
+        top: @_verseBarHidden_-offset;
         margin-top: @VerseBar-margin;
         transition: top @animationDuration__fast, transform @animationDuration__fast;
 
-        .VerseBar-above
+        ._verseBarAbove_
         & {
             top: 0;
             transform: translateX(-50%) scale(1);
         }
 
         .VerseBar {
-            box-shadow: @VerseBar-above-box-shadow;
+            box-shadow: @_verseBarAbove_-box-shadow;
         }
     }
 
     &.below {
-        bottom: @VerseBar-hidden-offset;
+        bottom: @_verseBarHidden_-offset;
         margin-bottom: @VerseBar-margin;
         transition: bottom @animationDuration__fast, transform @animationDuration__fast;
 
-        .VerseBar-below
+        ._verseBarBelow_
         & {
             bottom: 0;
             transform: translateX(-50%) scale(1);
         }
 
         .VerseBar {
-            box-shadow: @VerseBar-below-box-shadow;
+            box-shadow: @_verseBarBelow_-box-shadow;
         }
     }
 }
@@ -90,7 +90,7 @@
         z-index: @zIndex__verseBarText;
     }
 
-    .slider-moving
+    ._sliderMoving_
     & {
         background-color: @audio-neutral-colour;
     }

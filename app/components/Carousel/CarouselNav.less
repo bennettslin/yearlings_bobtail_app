@@ -15,59 +15,59 @@
         margin-right: @app-thin-margin;
     }
 
-    .monitor-width
+    ._monitor_
     & {
         right: @golden-cord-width;
     }
 
-    .laptop-width
+    ._laptop_
     & {
         right: @uncanny-valley-width;
     }
 
-    .is-mobile
+    ._mobile_
     & {
         transition: top @animationDuration__default;
         top: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
         bottom: auto;
     }
 
-    .mini-width
+    ._mini_
     & {
         top: -@app-mini-large-icon-diameter - @app-thin-margin * 2;
     }
 
-    .is-desktop.is-song.annotation-shown.carousel-expanded
+    ._desktop_._song_._annotationShown_._carouselExpanded_
     & {
         bottom: 0;
     }
 
-    .is-mobile.is-song.annotation-shown.carousel-expanded
+    ._mobile_._song_._annotationShown_._carouselExpanded_
     & {
         top: 0;
     }
 }
 
 // Hide both carousel and nav in logues.
-.CarouselNav-can-show {
+._carouselNavShowable_ {
 
-    &.nav-expanded.not-heightless-lyric {
+    &._navExpanded_._lyricHeighted_ {
 
         // No need to make an exception for phone, since it isn't rendered.
-        &.is-mobile {
+        &._mobile_ {
             .books-column-block {
                 top: 0;
             }
         }
 
-        &.is-desktop {
+        &._desktop_ {
             .books-column-block {
                 bottom: 0;
             }
         }
     }
 
-    &.carousel-expanded {
+    &._carouselExpanded_ {
 
         .carousel {
             &.render-ready {
@@ -75,19 +75,19 @@
             }
         }
 
-        &.is-desktop {
+        &._desktop_ {
             .carousel {
                 bottom: -@carousel-height-variable;
             }
         }
 
-        &.tablet-width {
+        &._tablet_ {
             .carousel {
                 top: -@CarouselToggle-tablet-length;
             }
         }
 
-        &.mini-width {
+        &._mini_ {
             .carousel {
                 top: -@CarouselToggle-mini-length;
             }

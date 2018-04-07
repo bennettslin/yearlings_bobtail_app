@@ -108,7 +108,7 @@ DotsSectionView = ({
     <div
         className={cx(
             'Dots',
-            'access-keys-shown'
+            'access-keysShown'
         )}
         onClick={handleContainerClick}
         onTouchStart={handleContainerClick}

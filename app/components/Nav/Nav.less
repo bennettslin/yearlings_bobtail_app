@@ -14,13 +14,13 @@
     transition: top @animationDuration__default;
 }
 
-.tablet-width {
+._tablet_ {
     .nav-custom-subfield {
         height: @nav-tablet-height;
     }
 }
 
-.mini-width {
+._mini_ {
     .nav-custom-subfield {
         height: @nav-mini-height;
     }
@@ -50,7 +50,7 @@
     height: @nav-height * 3; // Just an arbitrary value that's large enough.
 }
 
-.is-desktop {
+._desktop_ {
 
     .books-block {
         bottom: @nav-height * 2;
@@ -62,7 +62,7 @@
 
 @nav-border-radius: @nav-height / 3;
 
-.tablet-width, .mini-width {
+._tablet_, ._mini_ {
 
     .books-block {
         top: 0;

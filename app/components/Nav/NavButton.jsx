@@ -161,7 +161,7 @@ NavButtonView = ({
             className={cx(
                 'NavButton-block',
                 { 'access-highlighted': accessHighlighted,
-                  'access-keys-shown': showEnterAccessKey }
+                  'access-keysShown': showEnterAccessKey }
             )}
         >
             <div className="NavButton-wrapper">

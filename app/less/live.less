@@ -40,8 +40,8 @@
 @AnnotationCard-padding: @Annotation-padding;
 
 @AnnotationCard-width: 354px;
-@AnnotationCard-mini-width: @AnnotationCard-width * @mini-multiplier;
-@AnnotationCard-phone-width: @AnnotationCard-width * @phone-multiplier;
+@AnnotationCard-_mini_: @AnnotationCard-width * @mini-multiplier;
+@AnnotationCard-_phone_: @AnnotationCard-width * @phone-multiplier;
 
 @OverviewToggle-width: 100px;
 @OverviewToggle-height: 150px;
@@ -74,7 +74,7 @@
     flex-direction: column;
 }
 
-.is-desktop {
+._desktop_ {
 
     .column {
         position: absolute;
@@ -90,7 +90,7 @@
         right: 0;
     }
 
-    &.laptop-width {
+    &._laptop_ {
         .MainColumn {
             width: ~"calc(100% - @{uncanny-valley-width})";
         }
@@ -109,7 +109,7 @@
     }
 }
 
-.is-mobile {
+._mobile_ {
 
     .MainColumn {
         width: 100%;
@@ -127,7 +127,7 @@
         bottom: 0;
     }
 
-    &.heightless-lyric {
+    &._lyricHeightless_ {
         .MainColumn {
             height: 100%;
         }

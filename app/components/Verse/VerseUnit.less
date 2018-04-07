@@ -28,7 +28,7 @@
         .text-shadow-mixin(@odd-verse-colour);
     }
 
-    .slider-not-moving
+    ._sliderNotMoving_
     & {
         // Default odd verse.
         &.odd {
@@ -58,7 +58,7 @@
         }
     }
 
-    .slider-moving
+    ._sliderMoving_
     & {
         // Slider side verse.
         &.in-side {
@@ -118,10 +118,10 @@
  * Selected verse colours.
  */
 
-.slider-not-moving {
+._sliderNotMoving_ {
 
-    &.is-playing {
-        &.VerseBar-hidden {
+    &._isPlaying_ {
+        &._verseBarHidden_ {
             .verse.selected {
                 .text-shadow-mixin(@audio-play-colour);
             }
@@ -132,8 +132,8 @@
         }
     }
 
-    &.is-paused {
-        &.VerseBar-hidden {
+    &._isPaused_ {
+        &._verseBarHidden_ {
             .verse.selected {
                 .text-shadow-mixin(@audio-pause-colour);
             }
@@ -148,8 +148,8 @@
      * Interactable verse has highlighted styling only when interactivated, or
      * when hovered, not selected, and with no other verse interactivated.
      */
-    &.is-not-verse-interactivated .Lyric .verse.interactable:not(.selected):hover,
-    &.is-verse-interactivated .Lyric .verse.interactivated {
+    &._verseInactive_ .Lyric .verse.interactable:not(.selected):hover,
+    &._verseActive_ .Lyric .verse.interactivated {
         .text-shadow-mixin(@audio-highlight-colour);
     }
 }

@@ -20,7 +20,7 @@ AccessIconsBlock = ({
 }) => (
     <div className={cx(
         'AccessIconsBlock',
-        { 'access-keys-shown': accessKeysShown },
+        { 'access-keysShown': accessKeysShown },
         className
     )}>
         {accessIconKeys.map(accessIconKey => {

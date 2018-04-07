@@ -15,19 +15,19 @@
 
     width: @CarouselToggle-laptop-length;
 
-    .is-desktop
+    ._desktop_
     & {
         bottom: 0;
     }
 
-    .is-mobile
+    ._mobile_
     & {
         top: 0;
         bottom: auto;
         border-radius: 0 0 @nav-border-radius 0;
     }
 
-    .CarouselNav-cannot-show
+    ._carouselNavUnshowable_
     & {
         margin-left: -@CarouselToggle-laptop-length;
     }
@@ -36,19 +36,19 @@
 }
 
 // TODO: These are probably unnecessary?
-// .mini-width {
-//     &.lyric-expanded, &.heightless-lyric, &.is-logue {
+// ._mini_ {
+//     &._lyricExpanded_, &._lyricHeightless_, &._logue_ {
 //         .CarouselToggle-button-block {
-//             left: -@OverviewToggle-mini-width;
+//             left: -@OverviewToggle-_mini_;
 //         }
 //     }
 // }
 
-// .is-mobile {
+// ._mobile_ {
 
-//     &.lyric-expanded, &.heightless-lyric, &.is-logue {
+//     &._lyricExpanded_, &._lyricHeightless_, &._logue_ {
 //         .CarouselToggle-button-block {
-//             left: -@OverviewToggle-tablet-width;
+//             left: -@OverviewToggle-_tablet_;
 //         }
 //     }
 // }

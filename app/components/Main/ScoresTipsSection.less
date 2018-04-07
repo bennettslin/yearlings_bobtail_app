@@ -3,9 +3,9 @@
 @scores-tips-margin: 10px;
 
 @scores-tips-width: 2 * @app-large-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
-@scores-tips-tablet-width: 2 * @app-tablet-large-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
-@scores-tips-mini-width: 2 * @app-mini-large-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
-@scores-tips-phone-width: 2 * @app-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
+@scores-tips-_tablet_: 2 * @app-tablet-large-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
+@scores-tips-_mini_: 2 * @app-mini-large-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
+@scores-tips-_phone_: 2 * @app-icon-diameter + 2 * @scores-tips-padding + @scores-tips-margin;
 
 .ScoresTipsSection {
     display: flex;
@@ -44,7 +44,7 @@
     }
 }
 
-.is-mobile {
+._mobile_ {
 
     .centre-field {
         .ScoresTipsSection {
@@ -55,29 +55,29 @@
         }
     }
 
-    &.tablet-width {
+    &._tablet_ {
         .scores-tips-menu-subfield {
-            min-width: @scores-tips-tablet-width;
+            min-width: @scores-tips-_tablet_;
         }
     }
 
-    &.mini-width {
+    &._mini_ {
         // Affects section in centre field only.
-        &.lyric-expanded, &.overview-shown, &.tips-shown, &.annotation-shown.nav-expanded, &.Dots-shown {
+        &._lyricExpanded_, &._overviewShown_, &._tipsShown_, &._annotationShown_._navExpanded_, &._dotsShown_ {
             .ScoresTipsSection {
-                right: -@scores-tips-mini-width;
+                right: -@scores-tips-_mini_;
             }
         }
 
         .scores-tips-menu-subfield {
-            min-width: @scores-tips-mini-width;
+            min-width: @scores-tips-_mini_;
         }
     }
 
-    &.phone-width {
-        &.lyric-expanded, &.overview-shown, &.tips-shown, &.annotation-shown.nav-expanded, &.Dots-shown {
+    &._phone_ {
+        &._lyricExpanded_, &._overviewShown_, &._tipsShown_, &._annotationShown_._navExpanded_, &._dotsShown_ {
             .ScoresTipsSection {
-                right: -@scores-tips-phone-width;
+                right: -@scores-tips-_phone_;
             }
         }
 
@@ -89,7 +89,7 @@
 }
 
 // I don't understand this.
-.is-logue, .is-song.overview-shown.scores-tips-in-main {
+._logue_, ._song_._overviewShown_._scoresTipsMain_ {
     .ScoresTipsSection {
 
         .Button {
@@ -99,7 +99,7 @@
     }
 }
 
-.is-song {
+._song_ {
     .ScoresTipsSection {
         .Button {
             transform: scale(1);

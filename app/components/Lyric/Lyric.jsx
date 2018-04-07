@@ -128,7 +128,7 @@ LyricView = ({
             className={cx(
                 'Lyric',
                 'lyrics-scroll',
-                'lyric-collapsed-gradient-mask'
+                '_lyricCollapsed_-gradient-mask'
             )}
             tabIndex="-1"
             onScroll={handleScroll}

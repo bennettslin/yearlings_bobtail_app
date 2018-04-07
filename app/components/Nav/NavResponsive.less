@@ -6,9 +6,9 @@
     min-width: @NavToggle-width;
 }
 
-.monitor-width {
+._monitor_ {
 
-    &.static-nav-icon {
+    &._navIconStatic_ {
         .double-book-column {
             .NavToggle-block {
                 margin-right: @monitor-large-unit;
@@ -44,7 +44,7 @@
                 margin-right: @monitor-single-large;
             }
 
-            .column-shown {
+            .columnShown {
                 &.column-0 {
                     .NavBook {
                         &.songs {
@@ -72,7 +72,7 @@
         }
     }
 
-    &.shrink-nav-icon {
+    &._navIconShrunk_ {
         .double-book-column {
             .NavBook {
                 min-width: @monitor-shrink-icon;
@@ -111,14 +111,14 @@
  * LAPTOP STYLES *
  *****************/
 
-.laptop-width {
+._laptop_ {
 
-    &.static-nav-icon {
+    &._navIconStatic_ {
         .single-book-column {
             .NavToggle-block {
                 margin-right: @laptop-large;
             }
-            .column-shown {
+            .columnShown {
                 &.column-0 {
                     .NavBook {
                         &.songs {
@@ -146,13 +146,13 @@
         }
     }
 
-    &.shrink-nav-icon {
+    &._navIconShrunk_ {
         .single-book-column {
             .NavBook {
                 min-width: @laptop-shrink-icon;
             }
 
-            .column-shown {
+            .columnShown {
                 &.column-0 {
                     .NavBook {
                         &.songs {
@@ -174,7 +174,7 @@
              * Show song buttons in shown column, along with toggle button in
              * hidden column.
              */
-            .column-shown, .column-hidden .NavBook.toggle {
+            .columnShown, .columnHidden .NavBook.toggle {
                 .NavButton-block {
                     width: @laptop-shrink-icon;
                 }
@@ -194,13 +194,13 @@
  * TABLET STYLES *
  *****************/
 
-.tablet-width {
+._tablet_ {
 
     .NavToggle-block {
         min-width: @tablet-NavToggle-width;
     }
 
-    &.static-nav-icon {
+    &._navIconStatic_ {
         .double-book-column {
             .NavToggle-block {
                 margin-left: @tablet-large-unit;
@@ -236,7 +236,7 @@
                 margin-left: @tablet-single-large;
             }
 
-            .column-shown {
+            .columnShown {
                 &.column-0 {
                     .NavBook {
                         &.songs {
@@ -264,7 +264,7 @@
         }
     }
 
-    &.shrink-nav-icon {
+    &._navIconShrunk_ {
         .double-book-column {
             .NavBook {
                 min-width: @tablet-shrink-icon;
@@ -304,19 +304,19 @@
  * MINI STYLES *
  ***************/
 
-.mini-width {
+._mini_ {
 
     .NavToggle-block {
         min-width: @mini-NavToggle-width;
     }
 
-    &.static-nav-icon {
+    &._navIconStatic_ {
         .single-book-column {
             .NavToggle-block {
                 margin-left: @mini-large;
             }
 
-            .column-shown {
+            .columnShown {
                 &.column-0 {
                     .NavBook {
                         &.songs {
@@ -344,13 +344,13 @@
         }
     }
 
-    &.shrink-nav-icon {
+    &._navIconShrunk_ {
         .single-book-column {
             .NavBook {
                 min-width: @mini-shrink-icon;
             }
 
-            .column-shown {
+            .columnShown {
                 &.column-0 {
                     .NavBook {
                         &.songs {
@@ -372,7 +372,7 @@
              * Show song buttons in shown column, along with toggle button in
              * hidden column.
              */
-            .column-shown, .column-hidden .NavBook.toggle {
+            .columnShown, .columnHidden .NavBook.toggle {
                 .NavButton-block {
                     width: @mini-shrink-icon;
                 }

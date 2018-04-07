@@ -1,12 +1,12 @@
 .carousel-annotations-block {
     display: flex;
 
-    .is-desktop
+    ._desktop_
     & {
         margin-bottom: -@CarouselAnnotation-padding;
     }
 
-    .is-mobile
+    ._mobile_
     & {
         margin-top: -@CarouselAnnotation-padding;
     }
@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column-reverse;
 
-    min-width: @CarouselAnnotation-hidden-padding;
+    min-width: @CarouselAnnotationHidden-padding;
     transition: min-width @animationDuration__default,
                 opacity @animationDuration__default;
 
@@ -32,44 +32,44 @@
         padding-left: @CarouselToggle-laptop-length;
     }
 
-    .monitor-width
+    ._monitor_
     &:last-child {
         padding-right:
             @golden-cord-width + @CarouselNav-buttons-block-width;
     }
 
-    .laptop-width
+    ._laptop_
     &:last-child {
         padding-right:
             @uncanny-valley-width + @CarouselNav-buttons-block-width;
     }
 
-    .is-mobile
+    ._mobile_
     & {
         flex-direction: column;
     }
 
-    .tablet-width
+    ._tablet_
     & {
         // Override to be consistent with desktop.
         &:first-child {
-            padding-left: @OverviewToggle-tablet-width;            
+            padding-left: @OverviewToggle-_tablet_;            
         }
 
         &:last-child {
-            padding-right: @CarouselNav-buttons-block-tablet-width;
+            padding-right: @CarouselNav-buttons-block-_tablet_;
         }
     }
 
-    .mini-width
+    ._mini_
     & {
         // Override to be consistent with desktop.
         &:first-child {
-            padding-left: @OverviewToggle-mini-width;            
+            padding-left: @OverviewToggle-_mini_;            
         }
 
         &:last-child {
-            padding-right: @CarouselNav-buttons-block-mini-width;
+            padding-right: @CarouselNav-buttons-block-_mini_;
         }
     }
 
@@ -82,11 +82,11 @@
      * Override if hidden by single lyric column. Using specific selectors to
      * override styles for mini width as well.
      */
-    .DomManager.is-song.show-only-right
+    .DomManager._song_._rightLyricColumnOnly_
     &.in-column-left,
-    .DomManager.is-song.show-only-left
+    .DomManager._song_._leftLyricColumnOnly_
     &.in-column-right {
-        min-width: @CarouselAnnotation-hidden-padding;
+        min-width: @CarouselAnnotationHidden-padding;
 
         .annotation-title-block {
             max-height: 0;

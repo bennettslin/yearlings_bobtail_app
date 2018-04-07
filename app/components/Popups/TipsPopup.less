@@ -3,7 +3,7 @@
      * In desktop, when tip button is in menu, show tip popup closer to menu.
      * When it's in main, show it in centre.
      */
-    .is-desktop.scores-tips-in-menu
+    ._desktop_._scoresTipsMenu_
     & {
         position: absolute;
         top: 5%;
@@ -11,9 +11,9 @@
     }
 }
 
-.tablet-width, .mini-width {
+._tablet_, ._mini_ {
 
-    &.scores-tips-in-main {
+    &._scoresTipsMain_ {
 
         /**
          * In tablet and mini, when tip button is in menu, show tip in centre.

@@ -9,22 +9,22 @@
                 box-shadow @animationDuration__default;
 
     // NOTE: The order of the following styling rules matters.
-    .is-playing
+    ._isPlaying_
     & {
         background-color: mix(@audio-play-colour, transparent, 50%);
     }
 
-    .is-paused
+    ._isPaused_
     & {
         background-color: mix(@audio-pause-colour, transparent, 50%);
     }
 
-    .is-verse-interactivated
+    ._verseActive_
     & {
         background-color: @audio-highlight-colour;
     }
 
-    .slider-moving
+    ._sliderMoving_
     & {
         background-color: @audio-neutral-colour;
     }

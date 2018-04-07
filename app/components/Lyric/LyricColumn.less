@@ -4,7 +4,7 @@
     // Keeps elements inside window!
     overflow: hidden;
 
-    .is-song
+    ._song_
     & {
         /**
          * This fixes the issue of being unable to scroll between stanzas. But
@@ -13,19 +13,19 @@
         z-index: @zIndex__lyricColumn;
     }
 
-    .is-mobile.is-song.lyric-expanded
+    ._mobile_._song_._lyricExpanded_
     & {
         height: ~"calc(100% - @{menu-height})";
     }
 
-    .is-mobile.heightless-lyric
+    ._mobile_._lyricHeightless_
     & {
         height: 0;
     }
 
     @phone-LyricColumn-subtraction: @menu-phone-height + @AudioBanner-custom-subfield-height + @AudioBanner-custom-subfield-padding * 2;
 
-    .phone-width.is-song.lyric-expanded {
+    ._phone_._song_._lyricExpanded_ {
         height: ~"calc(100% - @{phone-LyricColumn-subtraction})";
     }
 }
@@ -42,35 +42,35 @@
     transition: opacity @animationDuration__default,
                 transform @animationDuration__default;
 
-    .is-logue
+    ._logue_
     & {
         opacity: 0;
     }
 
-    .is-song .render-unready
+    ._song_ .render-unready
     & {
         opacity: 0;
     }
 
-    .is-song .render-ready
+    ._song_ .render-ready
     & {
         opacity: 1;
     }
 }
 
 /** Gradient mask does not work in IE or Edge. */
-@lyric-collapsed-gradient: linear-gradient(
+@_lyricCollapsed_-gradient: linear-gradient(
     0deg,
     black,
     black 90%,
     transparent
 );
 
-.lyric-collapsed-gradient-mask {
-    .is-mobile.lyric-collapsed
+._lyricCollapsed_-gradient-mask {
+    ._mobile_._lyricCollapsed_
     & {
         // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: @lyric-collapsed-gradient;
-        mask-image: @lyric-collapsed-gradient;
+        -webkit-mask-image: @_lyricCollapsed_-gradient;
+        mask-image: @_lyricCollapsed_-gradient;
     }
 }

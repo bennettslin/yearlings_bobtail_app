@@ -1,6 +1,6 @@
 @overview-mobile-bottom-margin: 5px;
 
-.tablet-width, .mini-width {
+._tablet_, ._mini_ {
     .OverviewToggle-button-container,
 
     // This applies only to overviews in songs, not logues.
@@ -11,23 +11,23 @@
     }
 }
 
-.tablet-width {
+._tablet_ {
     .OverviewToggle-button-container {
         height: @OverviewToggle-tablet-height;
     }
 
     // Inside overview bubble.
-    &.is-logue.heightless-lyric {
+    &._logue_._lyricHeightless_ {
         .OverviewToggle-section {
-            width: @OverviewToggle-tablet-width;
+            width: @OverviewToggle-_tablet_;
             height: @OverviewToggle-tablet-height;
         }
     }
 }
 
-.mini-width {
+._mini_ {
     .DotsOverviewToggleSection, .CarouselToggle-button-block {
-        width: @OverviewToggle-mini-width;
+        width: @OverviewToggle-_mini_;
     }
 
     .OverviewToggle-button-container {
@@ -35,32 +35,32 @@
     }
 
     // Inside overview bubble.
-    &.is-logue.heightless-lyric {
+    &._logue_._lyricHeightless_ {
         .OverviewToggle-section {
-            width: @OverviewToggle-mini-width;
+            width: @OverviewToggle-_mini_;
             height: @OverviewToggle-mini-height;
         }
     }
 }
 
-.phone-width {
+._phone_ {
 
-    &.Dots-shown {
+    &._dotsShown_ {
         .dots-subfield {
             margin-left: @dots-subfield-phone-margin;
         }
     }
 
     // In phone, also hidden to left when overview is shown.
-    &.overview-shown {
+    &._overviewShown_ {
         .DotsOverviewToggleSection {
             opacity: 0;
-            margin-left: -@OverviewToggle-phone-width;
+            margin-left: -@OverviewToggle-_phone_;
         }
     }
 
     .DotsOverviewToggleSection {
-        width: @OverviewToggle-phone-width;
+        width: @OverviewToggle-_phone_;
     }
 
     .OverviewToggle-button-container {
@@ -69,12 +69,12 @@
 
     // Inside overview bubble.
     .OverviewToggle-section {
-        width: @OverviewToggle-phone-width;
+        width: @OverviewToggle-_phone_;
         height: @OverviewToggle-phone-height;
     }
 }
 
-.is-logue.heightless-lyric, &.phone-width {
+._logue_._lyricHeightless_, &._phone_ {
 
     // Inside overview bubble.
     .OverviewToggle-section {

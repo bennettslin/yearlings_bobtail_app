@@ -38,27 +38,27 @@
     }
 }
 
-.is-desktop {
+._desktop_ {
     .NavPanel-block {
         bottom: 100%;
         margin-bottom: @app-thin-margin;        
     }
 }
     
-.is-mobile {
+._mobile_ {
     .NavPanel-block {
         top: 100%;
         margin-top: @app-thin-margin;        
     }
 }
 
-.is-song.nav-expanded.Dots-hidden.lyric-collapsed.overlay-hidden.overview-hidden.tips-hidden {
+._song_._navExpanded_._dotsHidden_._lyricCollapsed_._overlayHidden_._overviewHidden_._tipsHidden_ {
 
     // Show panel if access highlighted only when access is on.
-    &.accessed-on .access-keys-shown.access-highlighted,
+    &._accessOn_ .access-keysShown.access-highlighted,
 
     // Show panel upon hover only when access is off.
-    &.accessed-off .NavButton:hover {
+    &._accessOff_ .NavButton:hover {
         .NavPanel-block {
             opacity: 1;
             z-index: @zIndex__navCustomSubfield;

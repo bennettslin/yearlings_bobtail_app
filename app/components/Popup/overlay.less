@@ -56,7 +56,7 @@
     }
 }
 
-.is-desktop, .tablet-width {
+._desktop_, ._tablet_ {
     /**
      * In desktop and tablet, width of audio subfield in overlay is less than
      * width of screen.
@@ -69,7 +69,7 @@
     }
 }
 
-.overlaid-annotation {
+._annotationOverlaid_ {
     .overlay-popup-subfield {
         .popup-content-wrapper {
             &.annotation {
@@ -80,8 +80,8 @@
 }
 
 // Styling for overlaid audio in phone, which has timer in audio section.
-.phone-width {
-    &.overlay-shown {
+._phone_ {
+    &._overlayShown_ {
 
         .AudioBanner-custom-subfield {
             top: -@menu-height - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
@@ -128,8 +128,8 @@
     }
 }
 
-.is-desktop {
-    &.overlay-shown {
+._desktop_ {
+    &._overlayShown_ {
 
         // Only hide menu in desktop, because menu hides nav in mobile.
         .MenuField {

@@ -43,9 +43,9 @@
         }
     }
 
-    .show-only-left
+    ._leftLyricColumnOnly_
     &.right,
-    .show-only-right
+    ._rightLyricColumnOnly_
     &.left {
         width: 0;
         overflow: hidden;
@@ -58,7 +58,7 @@
     }
 
     // Single right column should not have margin left.
-    .show-only-right
+    ._rightLyricColumnOnly_
     &.right:not(:first-child) {
         margin-left: 0;
     }

@@ -8,7 +8,7 @@
     overflow-x: scroll;
     height: 100%;
 
-    .is-mobile
+    ._mobile_
     & {
         flex-direction: column;
     }
@@ -25,20 +25,20 @@
                 opacity @animationDuration__default;
     opacity: 0;
 
-    .is-mobile
+    ._mobile_
     & {
         transition: top @animationDuration__slow,
         opacity @animationDuration__default;
     }
 
-    .tablet-width
+    ._tablet_
     & {
         bottom: auto;
         top: calc(~"-100% - @{carousel-tablet-variable}");
         height: calc(~"100% + @{CarouselToggle-tablet-length}");
     }
 
-    .mini-width
+    ._mini_
     & {
         top: calc(~"-100% - @{carousel-mini-variable}");
         height: calc(~"100% + @{CarouselToggle-mini-length}");
@@ -57,7 +57,7 @@
             black @golden-cord-width,
             black
         );
-    .monitor-width
+    ._monitor_
     & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: @monitor-carousel-gradient;
@@ -74,7 +74,7 @@
             black @uncanny-valley-width,
             black
         );
-    .laptop-width
+    ._laptop_
     & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: @laptop-carousel-gradient;

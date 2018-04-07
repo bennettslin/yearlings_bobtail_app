@@ -82,7 +82,7 @@ ScoresTipsSection = ({
     return shouldRender && (
         <div className={cx(
             'ScoresTipsSection',
-            'access-keys-shown'
+            'access-keysShown'
         )}>
             {showScoreToggleButton &&
                 <Button

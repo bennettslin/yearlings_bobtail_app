@@ -2,7 +2,7 @@
  * ANCHORS *
  ***********/
 
-.DomManager.accessed-on {
+.DomManager._accessOn_ {
 
     // Show access highlight of dots and text...
 
@@ -13,16 +13,16 @@
     .selected-annotation .AnnotationCard,
 
     // ... in carousel title only when...
-    &.is-not-verse-interactivated .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
+    &._verseInactive_ .carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
 
     // ... in carousel cards only when...
-    &.is-not-verse-interactivated .carousel .accessed-annotation.selected-annotation .cards-block,
+    &._verseInactive_ .carousel .accessed-annotation.selected-annotation .cards-block,
 
     // ... in lyrics only when...
-    &.is-not-verse-interactivated.Dots-hidden.carousel-expanded .Lyric,
+    &._verseInactive_._dotsHidden_._carouselExpanded_ .Lyric,
     
     // ... or...
-    &.is-not-verse-interactivated.Dots-hidden.lyric-expanded .Lyric {
+    &._verseInactive_._dotsHidden_._lyricExpanded_ .Lyric {
 
         .access-highlighted {
 
@@ -65,9 +65,9 @@
     }
 
     // Nav buttons in nav section.
-    &.nav-expanded.is-not-verse-interactivated.Dots-hidden {
+    &._navExpanded_._verseInactive_._dotsHidden_ {
         .Nav {
-            .access-highlighted.access-keys-shown {
+            .access-highlighted.access-keysShown {
                 .icon-canvas {
                     background-color: @access-underline-colour;
                 }
@@ -75,7 +75,7 @@
         }
     }
 
-    &.is-not-verse-interactivated.annotation-hidden.Dots-hidden {
+    &._verseInactive_._annotationHidden_._dotsHidden_ {
 
         // Lyrics annotation is accessed.
         .Lyric {
@@ -84,7 +84,7 @@
     }
 
     // Interactivated verse is accessed.
-    &.is-verse-interactivated {
+    &._verseActive_ {
         .Lyric {
             .verse.interactivated {
                 background-color: @access-underline-colour;
@@ -93,7 +93,7 @@
     }
 
     // Dots section is accessed.
-    &.Dots-shown {
+    &._dotsShown_ {
         .Dots {
             // background-color: @temp-access-background;
 
@@ -106,9 +106,9 @@
         }
     }
 
-    .access-keys-shown {
+    .access-keysShown {
         // Keyboard letter shown on accessible button.
-        .access-button-icon:not(.is-hidden) {
+        .access-button-icon:not(.isHidden) {
             opacity: 1;
         }
     }

@@ -141,50 +141,62 @@ class DomManager extends Component {
                 handlePlayerTimeReset
             },
 
-            overviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
-            tipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
+            _overviewShown_ = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
+            _tipsShown_ = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
 
-            carouselNavCanShow = !isLogue && !showOverlay && !selectedDotsIndex && !isLyricExpanded && !overviewShown && !tipsShown
+            carouselNavCanShow = !isLogue && !showOverlay && !selectedDotsIndex && !isLyricExpanded && !_overviewShown_ && !_tipsShown_
 
         return (
             <div
                 ref={domManagerRef}
                 className={cx(
                     'DomManager',
+
                     deviceClassName,
-                    isDesktop ? 'is-desktop' : 'is-mobile',
-                    { 'is-tablet-or-mini': isTabletOrMini },
+                    isDesktop ?
+                        '_desktop_' : '_mobile_',
+                    { '_mobileNotPhone_': isTabletOrMini },
 
-                    selectedDotKeys,
-                    selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
-                    selectedCarouselNavIndex ? 'carousel-expanded' : 'nav-expanded',
-                    selectedDotsIndex ? 'Dots-shown' : 'Dots-hidden',
+                    selectedAccessIndex ? '_accessOn_' : '_accessOff_',
+                    showOverlay ? '_overlayShown_' : '_overlayHidden_',
 
-                    isLogue ? 'is-logue' : 'is-song',
+                    isLogue ? '_logue_' : '_song_',
+                    isPlaying ? '_isPlaying_' : '_isPaused_',
+                    isSliderMoving ? '_sliderMoving_' : '_sliderNotMoving_',
+                    { '_sliderTouched_': isSliderTouched },
+                    interactivatedVerseIndex < 0 ?
+                        '_verseInactive_' : '_verseActive_',
 
-                    isPlaying ? 'is-playing' : 'is-paused',
-                    isSliderMoving ? 'slider-moving' : 'slider-not-moving',
-                    interactivatedVerseIndex < 0 ? 'is-not-verse-interactivated' : 'is-verse-interactivated',
+                    selectedAnnotationIndex ?
+                    '_annotationShown_' : '_annotationHidden_',
+                    { '_carouselExpanded_': selectedCarouselNavIndex },
+                    selectedDotsIndex ? '_dotsShown_' : '_dotsHidden_',
+                    isLyricExpanded ? '_lyricExpanded_' : '_lyricCollapsed_',
+                    { '_navExpanded_': !selectedCarouselNavIndex },
+                    _overviewShown_ ? '_overviewShown_' : '_overviewHidden_',
+                    _tipsShown_ ? '_tipsShown_' : '_tipsHidden_',
 
-                    showOverlay ? 'overlay-shown' : 'overlay-hidden',
-                    isOverlayingAnnotation ? 'overlaid-annotation' : 'side-annotation',
-                    overviewShown ? 'overview-shown' : 'overview-hidden',
-                    tipsShown ? 'tips-shown' : 'tips-hidden',
+                    isOverlayingAnnotation ?
+                        '_annotationOverlaid_' : '_annotationSide_',
+                    showShrunkNavIcon ? '_navIconShrunk_' : '_navIconStatic_',
 
-                    isLyricExpanded ? 'lyric-expanded' : 'lyric-collapsed',
-                    showShrunkNavIcon ? 'shrink-nav-icon' : 'static-nav-icon',
-                    isScoresTipsInMain ? 'scores-tips-in-main' : 'scores-tips-in-menu',
-                    singleShownLyricColumnKey && `show-only-${singleShownLyricColumnKey}`,
-                    selectedAccessIndex ? 'accessed-on' : 'accessed-off',
-                    isHeightlessLyricColumn ? 'heightless-lyric' : 'not-heightless-lyric',
-                    carouselNavCanShow ? 'CarouselNav-can-show' : 'CarouselNav-cannot-show',
+                    carouselNavCanShow ?
+                        '_carouselNavShowable_' : '_carouselNavUnshowable_',
+                    isScoresTipsInMain ?
+                        '_scoresTipsMain_' : '_scoresTipsMenu_',
+                    { '_titleInAudio_': isTitleInAudio },
 
-                    { 'title-in-audio': isTitleInAudio,
-                      'VerseBar-above': isVerseBarAbove,
-                      'VerseBar-below': isVerseBarBelow,
-                      'VerseBar-hidden': !isVerseBarAbove && !isVerseBarBelow,
-                      'show-both-columns': !singleShownLyricColumnKey,
-                      'slider-touched': isSliderTouched }
+                    singleShownLyricColumnKey &&
+                        `_${singleShownLyricColumnKey}LyricColumnOnly_`,
+                    isHeightlessLyricColumn ?
+                        '_lyricHeightless_' : '_lyricHeighted_',
+
+                    { '_bothLyricColumnsShown_': !singleShownLyricColumnKey,
+                      '_verseBarHidden_': !isVerseBarAbove && !isVerseBarBelow,
+                      '_verseBarAbove_': isVerseBarAbove,
+                      '_verseBarBelow_': isVerseBarBelow },
+
+                      selectedDotKeys
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}
@@ -199,8 +211,6 @@ class DomManager extends Component {
             >
                 <AdminToggle />
 
-                <Players {...audioPlayersProps} />
-
                 <div className="PopupOverlay" />
 
                 <SwitchManager {...other} />
@@ -209,6 +219,8 @@ class DomManager extends Component {
                 {!selectedAdminIndex && (
                     <div className="TouchOverlay" />
                 )}
+
+                <Players {...audioPlayersProps} />
             </div>
         )
     }

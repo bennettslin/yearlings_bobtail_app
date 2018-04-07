@@ -4,7 +4,7 @@
                                 @CarouselAnnotation-padding * 2 +
                                 @Annotation-padding * 2;
 
-@CarouselAnnotation-mini-min-width: @AnnotationCard-mini-width +
+@CarouselAnnotation-mini-min-width: @AnnotationCard-_mini_ +
                                      @AnnotationCard-padding * 2 +
                                      @CarouselAnnotation-padding * 2 +
                                      @Annotation-padding * 2;
@@ -15,9 +15,9 @@
      */
     width: @AnnotationCard-width + @AnnotationCard-padding * 2;
 
-    .mini-width
+    ._mini_
     & {
-        width: @AnnotationCard-mini-width +
+        width: @AnnotationCard-_mini_ +
         @AnnotationCard-padding * 2;   
     }
 }
@@ -25,7 +25,7 @@
 // FIXME: There should be a better way to handle carousel sizing and layout. Afterwards, the in-carousel-width class might no longer be necessary.
 .cards-block {
     
-    .is-desktop
+    ._desktop_
     .carousel
     & {
         margin-bottom: @CarouselAnnotation-padding;
@@ -33,7 +33,7 @@
 }
 .annotation-title-block {
 
-    .is-mobile
+    ._mobile_
     .carousel
     & {
         margin-top: @CarouselAnnotation-padding;
@@ -87,14 +87,14 @@
     }
 }
 
-.DomManager.mini-width.narrative .CarouselAnnotation.narrative,
-.DomManager.mini-width.backstory .CarouselAnnotation.backstory,
-.DomManager.mini-width.observation .CarouselAnnotation.observation,
-.DomManager.mini-width.pun .CarouselAnnotation.pun,
-.DomManager.mini-width.reference .CarouselAnnotation.reference,
-.DomManager.mini-width.songwriting .CarouselAnnotation.songwriting,
-.DomManager.mini-width.portal .CarouselAnnotation.portal,
-.DomManager.mini-width.afterword .CarouselAnnotation.afterword {
+.DomManager._mini_.narrative .CarouselAnnotation.narrative,
+.DomManager._mini_.backstory .CarouselAnnotation.backstory,
+.DomManager._mini_.observation .CarouselAnnotation.observation,
+.DomManager._mini_.pun .CarouselAnnotation.pun,
+.DomManager._mini_.reference .CarouselAnnotation.reference,
+.DomManager._mini_.songwriting .CarouselAnnotation.songwriting,
+.DomManager._mini_.portal .CarouselAnnotation.portal,
+.DomManager._mini_.afterword .CarouselAnnotation.afterword {
 
     min-width: @CarouselAnnotation-mini-min-width;
 }
@@ -122,9 +122,9 @@
 // Override if in carousel and hidden by single lyric column.
 .CarouselAnnotation {
 
-    .show-only-right
+    ._rightLyricColumnOnly_
     &.in-column-left,
-    .show-only-left
+    ._leftLyricColumnOnly_
     &.in-column-right {
         opacity: 0;
     

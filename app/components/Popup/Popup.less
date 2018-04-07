@@ -89,7 +89,7 @@
     }
 }
 
-.is-mobile {
+._mobile_ {
     .popup-field {
         .subfield {
             &.annotation-subfield {
@@ -119,7 +119,7 @@
 }
 
 // Multiplier is .9, just like for lyric text in mini.
-.mini-width {
+._mini_ {
     .popup-wrapper {
         &.annotation, &.tips, &.title {
             // width: @mini-popup-annotation-width;
@@ -129,7 +129,7 @@
 }
 
 // Multiplier is .98, just like for lyric text in phone.
-.phone-width {
+._phone_ {
     .popup-wrapper {
         &.annotation, &.tips, &.title {
             // width: @phone-popup-annotation-width;
@@ -170,9 +170,9 @@
     }
 }
 
-.is-mobile {
+._mobile_ {
 
-    &.phone-width, &.side-annotation {
+    &._phone_, &._annotationSide_ {
 
         .PopupButton {
             &.side-position {
@@ -192,7 +192,7 @@
         }
     }
 
-    &:not(.tablet-width) {
+    &:not(._tablet_) {
         .popup-wrapper {
             &.wiki, &.score {
                 width: ~"calc(100% - @{mini-full-subfield-margin} * 2)";
@@ -206,7 +206,7 @@
             }
         }
 
-        &.phone-width {
+        &._phone_ {
             .popup-wrapper {
                 &.wiki, &.score, &.annotation, &.title {
                     // Make side margin in phone just that much thinner.
@@ -214,7 +214,7 @@
                 }
             }
 
-            &.heightless-lyric {
+            &._lyricHeightless_ {
                 .popup-wrapper {
                     &.wiki, &.score {
                         height: ~"calc(100% - @{mini-full-subfield-margin})";
@@ -224,7 +224,7 @@
         }
 
         // Reverse width and height when width is greater than height.
-        &.heightless-lyric {
+        &._lyricHeightless_ {
             .popup-wrapper {
                 &.wiki, &.score {
                     width: ~"calc(100% - @{app-icon-diameter} * 2)";

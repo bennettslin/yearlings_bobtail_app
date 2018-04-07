@@ -79,7 +79,7 @@ class Button extends Component {
                       'selected': isSelected,
                       'access-highlighted': accessHighlighted,
                       'deselected': isDeselected,
-                      'overflow-shown': isOverflowShown }
+                      'overflowShown': isOverflowShown }
                 )}
                 onClick={handleClick && isEnabled ? this._handleClick : null}
                 onTouchStart={handleClick && isEnabled ? this._handleClick : null}
@@ -93,7 +93,7 @@ class Button extends Component {
                 {accessKey &&
                     <div className={cx(
                         'access-button-icon',
-                        { 'is-hidden': !isEnabled }
+                        { 'isHidden': !isEnabled }
                     )}>
                         {accessKey}
                     </div>

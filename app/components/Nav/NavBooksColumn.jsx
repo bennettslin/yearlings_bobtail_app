@@ -44,7 +44,7 @@ NavBooksColumn = ({
         <div className={cx(
             'books-column-block',
             `column-${bookIndex}`,
-            isShownColumn ? 'column-shown' : 'column-hidden'
+            isShownColumn ? 'columnShown' : 'columnHidden'
         )}>
             <div className="books-column">
 

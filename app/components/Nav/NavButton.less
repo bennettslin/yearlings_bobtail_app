@@ -9,7 +9,7 @@
 }
 
 .NavButton-block, .icon-canvas-block {
-    .column-hidden
+    .columnHidden
     .NavBook.songs
     & {
         width: 0;
@@ -22,21 +22,21 @@
         transition: width @animationDuration__default, margin @animationDuration__default;
     }
 
-    .static-nav-icon
+    ._navIconStatic_
     & {
         width: @app-icon-diameter;
     }
 
-    .shrink-nav-icon
-    .column-shown.column-0
+    ._navIconShrunk_
+    .columnShown.column-0
     & {
         &:not(:last-child) {
             margin-right: 1px;
         }
     }
 
-    .shrink-nav-icon
-    .column-shown.column-1
+    ._navIconShrunk_
+    .columnShown.column-1
     & {
         &:not(:last-child) {
             margin-left: 1px;
@@ -45,7 +45,7 @@
 }
 
 .NavToggle-block {
-    .shrink-nav-icon
+    ._navIconShrunk_
     & {
         // Static margins after icons begin shrinking.
         margin-right: 3px;

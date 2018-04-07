@@ -13,7 +13,7 @@
     z-index: @zIndex__dotsOverviewSubfield;
 
     // Overview and dots toggle are at the bottom in tablet and mini.
-    .is-tablet-or-mini
+    ._mobileNotPhone_
     & {
         .overview.popup-wrapper {
             bottom: 0;
@@ -32,24 +32,24 @@
     opacity: 1;
     margin-left: 0;
 
-    .laptop-width
+    ._laptop_
     & {
-        width: @OverviewToggle-laptop-width;
+        width: @OverviewToggle-_laptop_;
     }
 
     // In mobile, also hidden to left when lyric expanded.
-    .is-mobile.lyric-expanded
+    ._mobile_._lyricExpanded_
     & {
         opacity: 0;
-        margin-left: -@OverviewToggle-tablet-width;
+        margin-left: -@OverviewToggle-_tablet_;
     }
 }
 
 // Hidden to left when is logue, or annotation shown and carousel hidden.
-.is-logue,
-.annotation-shown.nav-expanded,
-.Dots-shown,
-.tips-shown {
+._logue_,
+._annotationShown_._navExpanded_,
+._dotsShown_,
+._tipsShown_ {
     .DotsOverviewToggleSection {
         opacity: 0;
         margin-left: -@OverviewToggle-width;
@@ -58,9 +58,9 @@
 
 .DotsOverviewToggleSection,
 .CarouselToggle-button-block {
-    .is-mobile
+    ._mobile_
     & {
-        width: @OverviewToggle-tablet-width;
+        width: @OverviewToggle-_tablet_;
     }
 }
 
@@ -69,7 +69,7 @@
     display: flex;
     flex-direction: column;
 
-    .is-tablet-or-mini
+    ._mobileNotPhone_
     & {
         flex-direction: column-reverse;
     }
@@ -84,7 +84,7 @@
     // Ensure toggle button is above its popup container and the carousel.
     z-index: @zIndex__centreFieldChild;
 
-    .laptop-width
+    ._laptop_
     & {
         height: @OverviewToggle-laptop-height;
     }
@@ -108,14 +108,14 @@
     box-shadow: @dots-subfield-box-shadow;
     background-color: @odd-verse-colour;
 
-    .is-song.Dots-shown
+    ._song_._dotsShown_
     & {
         opacity: 1;
         margin-left: @dots-subfield-margin;
         transform: translateX(0);
     }
 
-    .is-mobile
+    ._mobile_
     & {
         top: auto;
         bottom: 0;
