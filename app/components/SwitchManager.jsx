@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AdminManager from './Admin/AdminManager'
-import LiveManager from './Main/LiveManager'
+import Live from './Main/Live'
 
 const mapStateToProps = ({
     selectedAdminIndex
@@ -28,7 +28,7 @@ class SwitchManager extends Component {
 
         return selectedAdminIndex ?
             <AdminManager {...other} /> :
-            <LiveManager {...other} />
+            <Live {...other} />
     }
 }
 

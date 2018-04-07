@@ -5,17 +5,15 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+
 import Theatre from '../Theatre/Theatre'
 import MainColumn from './MainColumn'
+import PopupOverlaid from './PopupOverlaid'
+
 import OverviewLogueColumn from './OverviewLogueColumn'
 import LyricColumn from '../Lyric/LyricColumn'
-import AudioPopup from '../Popups/AudioPopup'
-import AnnotationPopup from '../Popups/AnnotationPopup'
-import ScorePopup from '../Popups/ScorePopup'
-import TitlePopup from '../Popups/TitlePopup'
-import WikiPopup from '../Popups/WikiPopup'
 
-class LiveManager extends Component {
+class Live extends Component {
 
     static propTypes = {
         // From parent.
@@ -219,7 +217,7 @@ class LiveManager extends Component {
             }
 
         return (
-            <div className="LiveManager">
+            <div className="Live">
 
                 <Theatre />
 
@@ -231,22 +229,16 @@ class LiveManager extends Component {
 
                 <LyricColumn {...lyricColumnHandlers} />
 
-                <div className="overlay-popup-subfield">
-                    <div className="overlay-popup-block AudioPopup-block">
-                        <AudioPopup {...audioSectionHandlers} />
-                    </div>
-                    <div className="overlay-popup-block main-popup-block">
-                        <AnnotationPopup {...annotationPopupHandlers}
-                            isOverlayAnnotation={true}
-                        />
-                        <TitlePopup {...titlePopupHandlers} />
-                        <ScorePopup {...scorePopupHandlers} />
-                        <WikiPopup {...wikiPopupHandlers} />
-                    </div>
-                </div>
+                <PopupOverlaid
+                    audioSectionHandlers={audioSectionHandlers}
+                    annotationPopupHandlers={annotationPopupHandlers}
+                    titlePopupHandlers={titlePopupHandlers}
+                    scorePopupHandlers={scorePopupHandlers}
+                    wikiPopupHandlers={wikiPopupHandlers}
+                />
             </div>
         )
     }
 }
 
-export default LiveManager
+export default Live

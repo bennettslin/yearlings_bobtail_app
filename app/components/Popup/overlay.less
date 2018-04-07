@@ -1,9 +1,4 @@
-.overlay-popup-subfield {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.popupOverlaid__container {
 
     // Prevent lyric scrolling from pushing app offscreen.
     overflow: hidden;
@@ -13,7 +8,7 @@
     flex-direction: column;
     align-items: center;
 
-    .overlay-popup-block {
+    .popupOverlaid__child {
         position: relative;
         width: 100%;
 
@@ -61,7 +56,7 @@
      * In desktop and tablet, width of audio subfield in overlay is less than
      * width of screen.
      */
-    .overlay-popup-subfield {
+    .popupOverlaid__container {
         .popup-wrapper.audio {
             overflow: hidden;
             border-radius: 15px;
@@ -70,7 +65,7 @@
 }
 
 ._annotationOverlaid_ {
-    .overlay-popup-subfield {
+    .popupOverlaid__container {
         .popup-content-wrapper {
             &.annotation {
                 box-shadow: @popup-darker-box-shadow;
@@ -87,7 +82,7 @@
             top: -@menu-height - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
         }
 
-        .overlay-popup-subfield {
+        .popupOverlaid__container {
 
             @banner-margin: 5px;
 
