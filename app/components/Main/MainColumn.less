@@ -2,23 +2,6 @@
 @import "./ScoresTipsSection.less";
 @import "./Menu.less";
 
-.testMenu__container {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    height: @height__menu;
-    z-index: 500;
-
-    background-color: rgba(200, 250, 250, 0.5);
-
-}
-
-.testMenu__child {
-    background-color: rgba(250, 250, 200, 0.7);
-    height: @height__menu;
-}
-
 .MainColumn,
 .testMenu__child {
     ._monitor_
@@ -34,6 +17,41 @@
     ._mobile_
     & {
         width: 100%;
+    }
+}
+
+.testMenu__container,
+.testMenu__child {
+    position: absolute;
+    height: @height__menu;
+}
+
+.testMenu__container {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 500;
+
+    background-color: rgba(200, 250, 250, 0.5);
+
+}
+
+.testMenu__child {
+    left: 0;
+    background-color: rgba(250, 250, 200, 0.7);
+    
+    transition:
+    left @animationDuration__default,
+    transform @animationDuration__default,
+    width @animationDuration__default;
+    
+    ._overlayShown_
+    & {
+        width: 100%;
+        max-width: @maxWidth__mini;
+
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
