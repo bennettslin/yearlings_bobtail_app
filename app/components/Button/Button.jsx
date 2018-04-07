@@ -70,7 +70,7 @@ class Button extends Component {
                 className={cx(
                     'Button',
                     buttonClass,
-                    buttonName && `${buttonName}-button`,
+                    buttonName && `Button__${buttonName}`,
                     { 'large': isLarge,
                       'small': isSmall,
                       'custom-shape': isCustomShape,

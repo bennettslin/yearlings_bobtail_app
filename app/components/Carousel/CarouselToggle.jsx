@@ -34,7 +34,7 @@ CarouselToggle = ({
         <div className="CarouselToggle-button-block access-keys-shown">
             <Button
                 accessKey={CAROUSEL_TOGGLE_KEY}
-                buttonName="CarouselToggle"
+                buttonName="carouselNavToggle"
                 iconText={selectedCarouselNavIndex}
                 isLarge={true}
                 handleClick={handleCarouselNavToggle}

@@ -81,19 +81,19 @@ ScoresTipsSection = ({
         <div className="section ScoresTipsSection access-keys-shown">
             {showScoreToggleButton &&
                 <Button
+                    isLarge
                     accessKey={SCORE_TOGGLE_KEY}
                     buttonName="scores"
                     iconText={selectedScoreIndex}
-                    isLarge={true}
                     isEnabled={isScoreLoaded}
                     handleClick={handleScoreToggle}
                 />
             }
             <Button
+                isLarge
                 accessKey={TIPS_TOGGLE_KEY}
                 buttonName="tips"
                 iconText={TIPS_OPTIONS[selectedTipsIndex]}
-                isLarge={true}
                 handleClick={handleTipsToggle}
             />
         </div>

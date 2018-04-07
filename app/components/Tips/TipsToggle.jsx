@@ -30,7 +30,8 @@ TipsToggle = ({
 
 }) => (
     <Button
-        isLarge={true}
+        isLarge
+        buttonName="tips"
         isEnabled={isEnabled}
         accessKey={TIPS_TOGGLE_KEY}
         iconText={TIPS_OPTIONS[selectedTipsIndex]}

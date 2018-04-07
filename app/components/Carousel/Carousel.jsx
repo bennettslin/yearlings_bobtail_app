@@ -131,14 +131,14 @@ class Carousel extends Component {
                 </div>
                 <div className="CarouselNav-buttons-block">
                     <Button
-                        buttonName="previous-position"
+                        buttonName="carouselSelect"
                         accessKey={NAVIGATION_LEFT_KEY}
                         iconText={'\u276e'}
                         isLarge={true}
                         handleClick={handleAnnotationPrevious}
                     />
                     <Button
-                        buttonName="next-position"
+                        buttonName="carouselSelect"
                         accessKey={NAVIGATION_RIGHT_KEY}
                         iconText={'\u276f'}
                         isLarge={true}

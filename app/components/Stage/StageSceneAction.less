@@ -3,10 +3,13 @@
     border: 1px solid green;
 
     // For dev purposes only. Once stuff is to be positioned, remove.
-    &, .layer, .thing {
+    &,
+    .layer,
+    .thing {
         display: flex;
 
-        &.StageSceneAction, &.thing {
+        &.StageSceneAction,
+        &.thing {
             flex-direction: column;
         }
     }
