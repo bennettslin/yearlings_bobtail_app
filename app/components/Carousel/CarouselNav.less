@@ -7,7 +7,7 @@
     padding: @app-thin-margin;
     z-index: @zIndex__carouselNavButton;
 
-    transition: bottom @animation-default;
+    transition: bottom @animationDuration__default;
 
     background-color: orange;
 
@@ -27,7 +27,7 @@
 
     .is-mobile
     & {
-        transition: top @animation-default;
+        transition: top @animationDuration__default;
         top: -@app-tablet-large-icon-diameter - @app-thin-margin * 2;
         bottom: auto;
     }

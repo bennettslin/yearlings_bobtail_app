@@ -12,7 +12,7 @@
     // Necessary?
     .single-book-column
     & {
-        transition: width @animation-default;
+        transition: width @animationDuration__default;
     }
 
     .DotsToggle-block
@@ -32,20 +32,20 @@
     .AnnotationCard:not(.portal)
     & {
         // Fade out first, then reduce width.
-        transition: opacity @animation-default,
-                    width @animation-default @animation-faster;
+        transition: opacity @animationDuration__default,
+                    width @animationDuration__default @animationDuration__faster;
         width: 0;
         opacity: 0;
     }
 
     .Button.enabled
     & {
-        transition: background-color @animation-default,
-        transform @animation-instant;
+        transition: background-color @animationDuration__default,
+        transform @animationDuration__instant;
 
         // Animate container itself, because its overflow is hidden.
         &:hover {
-            animation: bounceHover @animation-default;
+            animation: bounceHover @animationDuration__default;
         }
 
         &:active {
@@ -169,8 +169,8 @@
 .DomManager.songwriting .AnnotationCard .icon-canvas-block.songwriting,
 .DomManager.afterword .AnnotationCard .icon-canvas-block.afterword {
     // Increase width first, then fade in.
-    transition: width @animation-default,
-                opacity @animation-default @animation-faster;
+    transition: width @animationDuration__default,
+                opacity @animationDuration__default @animationDuration__faster;
     width: @annotation-dot-diameter;
     opacity: 1;
 }
@@ -185,8 +185,8 @@
 .DomManager.slider-not-moving.portal .TextAnchorBlock .icon-canvas-block.portal,
 .DomManager.slider-not-moving.afterword .TextAnchorBlock .icon-canvas-block.afterword {
     // Increase width first, then fade in.
-    transition: width @animation-default,
-                opacity @animation-default @animation-faster;
+    transition: width @animationDuration__default,
+                opacity @animationDuration__default @animationDuration__faster;
     width: @lyric-anchor-dot-diameter;
     opacity: 1;
 }
@@ -200,7 +200,7 @@
 .DomManager.songwriting .TextAnchorBlock:hover .icon-canvas-block.songwriting,
 .DomManager.portal .TextAnchorBlock:hover .icon-canvas-block.portal,
 .DomManager.afterword .TextAnchorBlock:hover .icon-canvas-block.afterword {
-   animation: bounceHover @animation-slow;
+   animation: bounceHover @animationDuration__slow;
 }
 
 // Active styling.

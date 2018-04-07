@@ -21,14 +21,14 @@
     width: 100vw;
     height: calc(~"100% + @{carousel-height-variable}");
     z-index: @zIndex__carousel;
-    transition: bottom @animation-slow,
-                opacity @animation-default;
+    transition: bottom @animationDuration__slow,
+                opacity @animationDuration__default;
     opacity: 0;
 
     .is-mobile
     & {
-        transition: top @animation-slow,
-        opacity @animation-default;
+        transition: top @animationDuration__slow,
+        opacity @animationDuration__default;
     }
 
     .tablet-width

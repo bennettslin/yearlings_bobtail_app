@@ -18,7 +18,7 @@
     .Button {
         // Ensure that these buttons are above the carousel.
         z-index: @zIndex__centreFieldChild;
-        transition: transform @animation-default, opacity @animation-default;
+        transition: transform @animationDuration__default, opacity @animationDuration__default;
     }
 }
 
@@ -49,7 +49,7 @@
     .centre-field {
         .ScoresTipsSection {
             position: absolute;
-            transition: right @animation-default;
+            transition: right @animationDuration__default;
             right: 0;
             bottom: @dots-overview-padding;
         }

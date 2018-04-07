@@ -20,8 +20,8 @@
     flex-direction: column-reverse;
 
     min-width: @CarouselAnnotation-hidden-padding;
-    transition: min-width @animation-default,
-                opacity @animation-default;
+    transition: min-width @animationDuration__default,
+                opacity @animationDuration__default;
 
     &:not(:last-child) {
         margin-right: @Annotation-padding * 0.5 -
@@ -97,7 +97,7 @@
 .Annotation {
     .CarouselAnnotation
     & {
-        transition: background-color @animation-default;
+        transition: background-color @animationDuration__default;
 
         display: flex;
         flex-direction: column;

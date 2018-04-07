@@ -46,7 +46,7 @@
     &.above {
         top: @VerseBar-hidden-offset;
         margin-top: @VerseBar-margin;
-        transition: top @animation-fast, transform @animation-fast;
+        transition: top @animationDuration__fast, transform @animationDuration__fast;
 
         .VerseBar-above
         & {
@@ -62,7 +62,7 @@
     &.below {
         bottom: @VerseBar-hidden-offset;
         margin-bottom: @VerseBar-margin;
-        transition: bottom @animation-fast, transform @animation-fast;
+        transition: bottom @animationDuration__fast, transform @animationDuration__fast;
 
         .VerseBar-below
         & {
@@ -84,7 +84,7 @@
     border-radius: 10px;
     cursor: pointer;
 
-    transition: background-color @animation-default;
+    transition: background-color @animationDuration__default;
 
     .TextSpan {
         z-index: @zIndex__verseBarText;

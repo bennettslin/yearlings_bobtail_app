@@ -10,8 +10,8 @@
 
     .time-bar {
         // FIXME: Width animation is buggy if longer than 0.05s?
-        transition: width @animation-instant,
-                    background-color @animation-default;
+        transition: width @animationDuration__instant,
+                    background-color @animationDuration__default;
     }
 
     .time-spent-bar {
@@ -26,7 +26,7 @@
 .slider-moving {
 
     .time-bar {
-        transition: background-color @animation-default;
+        transition: background-color @animationDuration__default;
     }
 
     .time-spent-bar {
@@ -48,7 +48,7 @@
     opacity: 0;
     transform: translateY(50%);
     font-size: 0.8em;
-    transition: opacity @animation-default;
+    transition: opacity @animationDuration__default;
 
     &.spent {
         left: 0;
