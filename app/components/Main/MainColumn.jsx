@@ -5,6 +5,8 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import MenuField from './MenuField'
 import Nav from '../Nav/Nav'
 import AnnotationPopup from '../Popups/AnnotationPopup'
@@ -54,7 +56,10 @@ MainColumn = ({
     menuFieldHandlers
 
 }) => (
-    <div className="column MainColumn">
+    <div className={cx(
+        'MainColumn',
+        'column'
+    )}>
         <MenuField {...menuFieldHandlers} />
         <div className="field centre-field">
 
@@ -68,7 +73,7 @@ MainColumn = ({
                 </div>
             </div>
 
-            <div className="subfield dots-overview-subfield accessKeysShown">
+            <div className="subfield dots-overview-subfield">
                 <Carousel {...carouselSectionHandlers} />
                 <DotsOverviewToggleSection {...dotsOverviewToggleSectionHandlers}
                     scoresTipsSectionHandlers={scoresTipsSectionHandlers}

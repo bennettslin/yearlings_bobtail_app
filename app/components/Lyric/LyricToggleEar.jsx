@@ -37,11 +37,11 @@ LyricToggleEar = ({
     return showOneOfTwoLyricColumns && (
         <div className={cx(
             'lyric-button-block',
-            'ear-button-block',
-            'accessKeysShown'
+            'ear-button-block'
         )}>
             <Button
                 isLarge
+                accessKeysShown
                 accessKey={LYRIC_COLUMN_TOGGLE_KEY}
                 iconText={LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]}
                 handleClick={handleLyricColumnSelect}

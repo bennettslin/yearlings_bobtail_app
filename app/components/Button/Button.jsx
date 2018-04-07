@@ -1,4 +1,5 @@
 // General button component.
+/* eslint-disable object-shorthand */
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -21,6 +22,7 @@ class Button extends Component {
     static propTypes = {
         accessHighlighted: PropTypes.bool,
         accessKey: PropTypes.string,
+        accessKeysShown: PropTypes.bool,
         buttonClass: PropTypes.string,
         buttonName: PropTypes.string,
         iconClass: PropTypes.oneOfType([
@@ -55,7 +57,7 @@ class Button extends Component {
 
     render() {
 
-        const { accessHighlighted, accessKey,
+        const { accessHighlighted, accessKey, accessKeysShown,
                 buttonClass, buttonName,
                 iconClass, iconText,
                 isSmall, isLarge,
@@ -78,6 +80,7 @@ class Button extends Component {
                       'enabled': isEnabled,
                       'selected': isSelected,
                       'access-highlighted': accessHighlighted,
+                      'accessKeysShown': accessKeysShown,
                       'deselected': isDeselected,
                       'overflowShown': isOverflowShown }
                 )}

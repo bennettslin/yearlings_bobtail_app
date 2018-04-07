@@ -160,14 +160,14 @@ NavButtonView = ({
         <div
             className={cx(
                 'NavButton-block',
-                { 'access-highlighted': accessHighlighted,
-                  'accessKeysShown': showEnterAccessKey }
+                { 'access-highlighted': accessHighlighted }
             )}
         >
             <div className="NavButton-wrapper">
                 <Button {...other}
                     buttonName="nav"
                     accessKey={accessKey}
+                    accessKeysShown={showEnterAccessKey}
                     extraChild={
                         <NavPanel
                             isLeftmost={isLeftmost}

@@ -29,10 +29,11 @@ DotsToggle = ({
     <div className="DotsToggle-button-container">
         <div className="DotsToggle-button-block">
             <Button
-                accessKey={DOTS_SECTION_EXPAND_KEY}
-                buttonName="DotsToggle"
-                iconText={selectedDotsIndex}
                 isLarge
+                accessKeysShown
+                buttonName="DotsToggle"
+                accessKey={DOTS_SECTION_EXPAND_KEY}
+                iconText={selectedDotsIndex}
                 handleClick={handleDotsSectionToggle}
             />
         </div>

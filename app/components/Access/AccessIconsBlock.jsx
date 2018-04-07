@@ -20,6 +20,8 @@ AccessIconsBlock = ({
 }) => (
     <div className={cx(
         'AccessIconsBlock',
+
+        // eslint-disable-next-line object-shorthand
         { 'accessKeysShown': accessKeysShown },
         className
     )}>

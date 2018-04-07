@@ -34,14 +34,14 @@ CarouselToggle = ({
 }) => {
     return !isHiddenNav && (
         <div className={cx(
-            'CarouselToggle',
-            'accessKeysShown'
+            'CarouselToggle'
         )}>
             <Button
+                isLarge
+                accessKeysShown
                 accessKey={CAROUSEL_TOGGLE_KEY}
                 buttonName="carouselNavToggle"
                 iconText={selectedCarouselNavIndex}
-                isLarge
                 handleClick={handleCarouselNavToggle}
             />
         </div>

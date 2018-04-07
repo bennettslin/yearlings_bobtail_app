@@ -3,6 +3,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import Button from '../Button/Button'
 import { AUDIO_PLAY_KEY,
          AUDIO_OPTIONS_TOGGLE_KEY,
@@ -97,10 +99,14 @@ class AudioButtons extends Component {
         }
 
         return (
-            <div className="audio-block AudioButtons-block accessKeysShown">
+            <div className={cx(
+                'audio-block',
+                'AudioButtons-block'
+            )}>
                 <div className="audio-subblock player-subblock">
                     {/* Previous button. */}
                     <Button
+                        accessKeysShown
                         iconClass="audio-nav"
                         iconText={isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
                         accessKey={AUDIO_PREVIOUS_SONG_KEY}
@@ -110,6 +116,7 @@ class AudioButtons extends Component {
 
                     {/* Play button. */}
                     <Button
+                        accessKeysShown
                         iconClass="audio-play-toggle"
                         iconText={playButtonText}
                         accessKey={AUDIO_PLAY_KEY}
@@ -120,6 +127,7 @@ class AudioButtons extends Component {
 
                     {/* Next button. */}
                     <Button
+                        accessKeysShown
                         iconClass="audio-nav"
                         iconText={isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
                         accessKey={AUDIO_NEXT_SONG_KEY}
@@ -130,6 +138,7 @@ class AudioButtons extends Component {
 
                 <div className="audio-subblock option-subblock">
                     <Button
+                        accessKeysShown
                         iconClass="audio-neutral"
                         iconText={AUDIO_OPTIONS[selectedAudioOptionIndex]}
                         accessKey={AUDIO_OPTIONS_TOGGLE_KEY}

@@ -52,11 +52,11 @@ LyricToggleExpand = ({
     return isLyricExpandable && shouldRender && (
         <div className={cx(
             'lyric-button-block',
-            'expand-button-block',
-            'accessKeysShown'
+            'expand-button-block'
         )}>
             <Button
                 isLarge
+                accessKeysShown
                 accessKey={LYRIC_SECTION_EXPAND_KEY}
                 iconText={isLyricExpanded ? '-' : '+'}
                 handleClick={handleLyricSectionExpand}

@@ -81,14 +81,14 @@ ScoresTipsSection = ({
 
     return shouldRender && (
         <div className={cx(
-            'ScoresTipsSection',
-            'accessKeysShown'
+            'ScoresTipsSection'
         )}>
             {showScoreToggleButton &&
                 <Button
                     isLarge
-                    accessKey={SCORE_TOGGLE_KEY}
+                    accessKeysShown
                     buttonName="scores"
+                    accessKey={SCORE_TOGGLE_KEY}
                     iconText={selectedScoreIndex}
                     isEnabled={isScoreLoaded}
                     handleClick={handleScoreToggle}
@@ -96,8 +96,9 @@ ScoresTipsSection = ({
             }
             <Button
                 isLarge
-                accessKey={TIPS_TOGGLE_KEY}
+                accessKeysShown
                 buttonName="tips"
+                accessKey={TIPS_TOGGLE_KEY}
                 iconText={TIPS_OPTIONS[selectedTipsIndex]}
                 handleClick={handleTipsToggle}
             />

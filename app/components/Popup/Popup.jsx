@@ -183,7 +183,6 @@ PopupView = ({
         <div
             className={cx(
                 'popup-content-wrapper',
-                'accessKeysShown',
                 popupClassName
             )}
             onClick={handleContainerClick}
@@ -192,18 +191,21 @@ PopupView = ({
             {myChild}
             {showClose &&
                 <PopupButton
+                    accessKeysShown
                     handlePopupButtonClick={handleCloseClick}
                     buttonName={CLOSE_POPUP_BUTTON}
                 />
             }
             {showArrows &&
                 <PopupButton
+                    accessKeysShown
                     handlePopupButtonClick={handlePreviousClick}
                     buttonName={PREVIOUS_POPUP_BUTTON}
                 />
             }
             {showArrows &&
                 <PopupButton
+                    accessKeysShown
                     handlePopupButtonClick={handleNextClick}
                     buttonName={NEXT_POPUP_BUTTON}
                 />

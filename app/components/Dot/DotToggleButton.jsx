@@ -160,11 +160,12 @@ DotToggleButtonView = ({
                 { 'access-highlighted': accessHighlighted }
             )}>
                 <Button
-                    accessKey={accessKey}
+                    isOverflowShown
+                    accessKeysShown
                     buttonClass="dot"
+                    accessKey={accessKey}
                     iconClass={dotKey}
                     isDeselected={!isSelected}
-                    isOverflowShown
                     handleClick={handleDotToggleClick}
                     extraChild={(
                         <div className={cx(

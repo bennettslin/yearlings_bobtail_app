@@ -19,9 +19,9 @@ const popupButtonPropTypes = {
 PopupButton = ({
 
     handlePopupButtonClick,
-    buttonName
+    buttonName,
 
-}) => {
+...rest }) => {
 
     let tempUnicodeSymbol,
         handleClick,
@@ -58,7 +58,7 @@ PopupButton = ({
                 `${buttonName}-position`
             )}
         >
-            <Button
+            <Button {...rest}
                 isLarge
                 isOverflowShown
                 accessKey={accessKey}
