@@ -26,7 +26,7 @@ const lyricEarTogglePropTypes = {
     handleLyricColumnSelect: PropTypes.func.isRequired
 },
 
-LyricEarToggle = ({
+LyricToggleEar = ({
 
     showOneOfTwoLyricColumns,
     selectedLyricColumnIndex,
@@ -50,6 +50,6 @@ LyricEarToggle = ({
     )
 }
 
-LyricEarToggle.propTypes = lyricEarTogglePropTypes
+LyricToggleEar.propTypes = lyricEarTogglePropTypes
 
-export default connect(mapStateToProps)(LyricEarToggle)
+export default connect(mapStateToProps)(LyricToggleEar)

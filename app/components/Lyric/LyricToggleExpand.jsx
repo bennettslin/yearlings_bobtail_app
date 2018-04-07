@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import Button from '../Button/Button'
 import { LYRIC_SECTION_EXPAND_KEY } from '../../constants/access'
 import { getIsLyricExpandable } from '../../helpers/responsiveHelper'
@@ -17,11 +19,11 @@ const mapStateToProps = ({
     isLyricExpanded
 })
 
-const lyricToggleDefaultProps = {
+const lyricExpandToggleDefaultProps = {
     inMain: false
 },
 
-lyricTogglePropTypes = {
+lyricExpandTogglePropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     isHeightlessLyricColumn: PropTypes.bool.isRequired,
@@ -32,7 +34,7 @@ lyricTogglePropTypes = {
     handleLyricSectionExpand: PropTypes.func.isRequired
 },
 
-LyricToggle = ({
+LyricToggleExpand = ({
 
     deviceIndex,
     isHeightlessLyricColumn,
@@ -41,25 +43,29 @@ LyricToggle = ({
     handleLyricSectionExpand
 
 }) => {
-    /**
-     * Render button in main if lyric column is heightless
-     */
-    const shouldRender = inMain ? isHeightlessLyricColumn : true
 
-    // And, of course, it should even be expandable at all.
-    return getIsLyricExpandable(deviceIndex) && shouldRender && (
-        <div className="lyric-button-block expand-button-block access-keys-shown">
+    const isLyricExpandable = getIsLyricExpandable(deviceIndex),
+
+        // Render button in main if lyric column is heightless.
+        shouldRender = inMain ? isHeightlessLyricColumn : true
+
+    return isLyricExpandable && shouldRender && (
+        <div className={cx(
+            'lyric-button-block',
+            'expand-button-block',
+            'access-keys-shown'
+        )}>
             <Button
+                isLarge
                 accessKey={LYRIC_SECTION_EXPAND_KEY}
                 iconText={isLyricExpanded ? '-' : '+'}
-                isLarge={true}
                 handleClick={handleLyricSectionExpand}
             />
         </div>
     )
 }
 
-LyricToggle.defaultProps = lyricToggleDefaultProps
-LyricToggle.propTypes = lyricTogglePropTypes
+LyricToggleExpand.defaultProps = lyricExpandToggleDefaultProps
+LyricToggleExpand.propTypes = lyricExpandTogglePropTypes
 
-export default connect(mapStateToProps)(LyricToggle)
+export default connect(mapStateToProps)(LyricToggleExpand)

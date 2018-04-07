@@ -13,7 +13,7 @@ import CarouselToggle from '../Carousel/CarouselToggle'
 import Carousel from '../Carousel/Carousel'
 import Dots from '../Dots/Dots'
 import DotsOverviewToggleSection from './DotsOverviewToggleSection'
-import LyricToggle from '../Lyric/LyricToggle'
+import LyricToggleExpand from '../Lyric/LyricToggleExpand'
 import Stage from '../stage/Stage'
 import OverviewPopup from '../Popups/OverviewPopup'
 import TipsPopup from '../Popups/TipsPopup'
@@ -80,7 +80,7 @@ MainColumn = ({
                     />
                 </div>
 
-                <LyricToggle
+                <LyricToggleExpand
                     handleLyricSectionExpand={handleLyricSectionExpand}
                     inMain={true}
                 />

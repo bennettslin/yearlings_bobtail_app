@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 import LyricAccess from './LyricAccess'
-import LyricToggle from './LyricToggle'
-import LyricEarToggle from './LyricEarToggle'
+import LyricToggleExpand from './LyricToggleExpand'
+import LyricToggleEar from './LyricToggleEar'
 import Lyric from './Lyric'
 import VerseBar from '../verse/VerseBar'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
@@ -223,11 +223,11 @@ LyricColumnView = ({
                 />
                 <VerseBar {...verseBarProps} />
 
-                <LyricEarToggle
+                <LyricToggleEar
                     handleLyricColumnSelect={handleLyricColumnSelect}
                 />
 
-                <LyricToggle
+                <LyricToggleExpand
                     handleLyricSectionExpand={handleLyricSectionExpand}
                 />
 
