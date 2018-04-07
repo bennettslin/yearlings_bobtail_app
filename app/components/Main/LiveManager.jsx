@@ -20,8 +20,8 @@ class LiveManager extends Component {
     static propTypes = {
         // From parent.
         lyricRef: PropTypes.func.isRequired,
-        scoreSectionRef: PropTypes.func.isRequired,
-        wikiSectionRef: PropTypes.func.isRequired,
+        scoreRef: PropTypes.func.isRequired,
+        wikiRef: PropTypes.func.isRequired,
 
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired,
@@ -69,8 +69,8 @@ class LiveManager extends Component {
 
     render() {
         const { lyricRef,
-                scoreSectionRef,
-                wikiSectionRef,
+                scoreRef,
+                wikiRef,
 
                 handlePopupContainerClick,
                 handleScrollAfterLyricRerender,
@@ -160,7 +160,7 @@ class LiveManager extends Component {
             },
 
             scorePopupHandlers = {
-                scoreSectionRef,
+                scoreRef,
                 handleScoreToggle
             },
 
@@ -175,7 +175,7 @@ class LiveManager extends Component {
             },
 
             wikiPopupHandlers = {
-                wikiSectionRef,
+                wikiRef,
                 handleWikiToggle
             },
 

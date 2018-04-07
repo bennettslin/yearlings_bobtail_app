@@ -936,15 +936,15 @@ class EventManager extends Component {
 
         const domManagerRef = node => this.myDomManager = node,
             lyricRef = node => this.myLyricSection = node,
-            scoreSectionRef = node => this.myScoreSection = node,
-            wikiSectionRef = node => this.myWikiSection = node,
+            scoreRef = node => this.myScoreSection = node,
+            wikiRef = node => this.myWikiSection = node,
 
             eventHandlers = {
 
                 domManagerRef,
                 lyricRef,
-                scoreSectionRef,
-                wikiSectionRef,
+                scoreRef,
+                wikiRef,
 
                 focusBody: this.focusBody,
                 handleAnnotationAccess: this.handleAnnotationAccess,

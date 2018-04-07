@@ -37,12 +37,12 @@ class Stage extends Component {
         return (
             <div className={cx(
                 'Stage',
-                'Stage__absoluteContainer'
+                'absoluteFullContainer'
             )}>
                 <div
                     className={cx(
                         'Stage__aspectRatioContainer',
-                        'Stage__absoluteContainer'
+                        'absoluteFullContainer'
                     )}
                     style={{
                         top: `${top}px`,

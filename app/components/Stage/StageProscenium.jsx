@@ -9,7 +9,7 @@ const StageProscenium = () => {
         <div
             className={cx(
                 'StageProscenium',
-                'Stage__absoluteContainer'
+                'absoluteFullContainer'
             )}
         >
             {/* Layout is all handled in css. */}

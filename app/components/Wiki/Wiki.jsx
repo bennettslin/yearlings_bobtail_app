@@ -38,7 +38,7 @@ class WikiSection extends Component {
         isMobileWiki: PropTypes.bool.isRequired,
 
         // From parent.
-        wikiSectionRef: PropTypes.func.isRequired
+        wikiRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -97,19 +97,26 @@ class WikiSection extends Component {
 
         return (
             <div className={cx(
-                'Wiki'
+                'Wiki',
+                'webviewContainer'
             )}>
                 {webviewLoading &&
-                    <div className="spinner-container">
+                    <div className={cx(
+                        'webviewContainer__spinner',
+                        'absoluteFullContainer',
+                        'flexCentreContainer'
+                    )}>
                         <img
-                            className="spinner"
                             src={spinnerSvg}
                         />
                     </div>
                 }
                 <iframe
-                    ref={this.props.wikiSectionRef}
-                    className={`webview${webviewLoading ? ' loading' : ''}`}
+                    ref={this.props.wikiRef}
+                    className={cx(
+                        'webviewContainer__webview',
+                        { 'loading': webviewLoading }
+                    )}
                     src={selectedWikiUrl}
                     onLoad={this.onWebviewLoad}
                 />

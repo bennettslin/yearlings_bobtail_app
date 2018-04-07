@@ -22,7 +22,7 @@ class Score extends Component {
         renderReadySongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        scoreSectionRef: PropTypes.func.isRequired
+        scoreRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -41,16 +41,17 @@ class Score extends Component {
 
         return (
             <div
-                ref={this.props.scoreSectionRef}
+                ref={this.props.scoreRef}
                 className={cx(
-                    'Score'
+                    'Score',
+                    'webviewContainer'
                 )}
                 onKeyDown={this.hi}
                 tabIndex="1"
             >
                 <iframe
                     ref={(node) => (this.myWebview = node)}
-                    className={`webview`}
+                    className="webviewContainer__webview"
                     src={score}
                     onLoad={this.onWebviewLoad}
                     tabIndex="2"
