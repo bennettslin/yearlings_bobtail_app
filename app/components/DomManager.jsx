@@ -155,8 +155,6 @@ class DomManager extends Component {
                     isDesktop ? 'is-desktop' : 'is-mobile',
                     { 'is-tablet-or-mini': isTabletOrMini },
 
-                    selectedAdminIndex ? 'is-admin-view' : 'is-live-view',
-
                     selectedDotKeys,
                     selectedAnnotationIndex ? 'annotation-shown' : 'annotation-hidden',
                     selectedCarouselNavIndex ? 'carousel-expanded' : 'nav-expanded',

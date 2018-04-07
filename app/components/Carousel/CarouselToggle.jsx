@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import Button from '../Button/Button'
 import { CAROUSEL_TOGGLE_KEY } from '../../constants/access'
 
@@ -31,7 +33,10 @@ CarouselToggle = ({
 
 }) => {
     return !isHiddenNav ? (
-        <div className="CarouselToggle-button-block access-keys-shown">
+        <div className={cx(
+            'CarouselToggle-button-block',
+            'access-keys-shown'
+        )}>
             <Button
                 accessKey={CAROUSEL_TOGGLE_KEY}
                 buttonName="carouselNavToggle"
