@@ -97,8 +97,7 @@ class WikiSection extends Component {
 
         return (
             <div className={cx(
-                'Wiki',
-                'section'
+                'Wiki'
             )}>
                 {webviewLoading &&
                     <div className="spinner-container">

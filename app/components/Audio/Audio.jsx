@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import AudioBanner from './AudioBanner'
 import AudioButtons from './AudioButtons'
 import AudioTimer from './AudioTimer'
@@ -74,7 +76,9 @@ Audio = ({
 
     return (
         <div
-            className="section Audio"
+            className={cx(
+                'Audio'
+            )}
         >
             {isTimerInAudio && (
                 <div className="AudioTimer-block">

@@ -26,7 +26,7 @@ const StatsSectionView = ({
     adminPluralCardsCount
 
 }) => (
-    <div className="section stats-section">
+    <div className="stats-section">
         <h2>stats</h2>
         <div className="row">
             <LyricDotStanzasRow adminDotStanzas={adminDotStanzas} />

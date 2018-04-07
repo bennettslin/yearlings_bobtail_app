@@ -56,8 +56,7 @@ const TheatreFloor = ({
         <div
             className={cx(
                 'TheatreFloor',
-                'Theatre__field',
-                'field'
+                'Theatre__field'
             )}
             style={floorFieldStyle}
         >

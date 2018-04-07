@@ -83,7 +83,7 @@ class Lyric extends Component {
                 ...other } = this.props
 
         return (
-            <LyricSectionView {...other}
+            <LyricView {...other}
                 handleScroll={this._handleScroll}
             />
         )
@@ -94,20 +94,20 @@ class Lyric extends Component {
  * PRESENTATION *
  ****************/
 
-const lyricSectionViewPropTypes = {
+const lyricViewPropTypes = {
     // Through Redux.
     renderReadySongIndex: PropTypes.number.isRequired,
 
     // From parent.
-    lyricSectionRef: PropTypes.func.isRequired,
+    lyricRef: PropTypes.func.isRequired,
     handleScroll: PropTypes.func.isRequired
 },
 
-LyricSectionView = ({
+LyricView = ({
 
     renderReadySongIndex,
 
-    lyricSectionRef,
+    lyricRef,
     handleScroll,
 
 ...other }) => {
@@ -124,9 +124,8 @@ LyricSectionView = ({
 
     return (
         <div
-            ref={lyricSectionRef}
+            ref={lyricRef}
             className={cx(
-                'section',
                 'Lyric',
                 'lyrics-scroll',
                 'lyric-collapsed-gradient-mask'
@@ -149,6 +148,6 @@ LyricSectionView = ({
     )
 }
 
-LyricSectionView.propTypes = lyricSectionViewPropTypes
+LyricView.propTypes = lyricViewPropTypes
 
 export default connect(mapStateToProps)(Lyric)

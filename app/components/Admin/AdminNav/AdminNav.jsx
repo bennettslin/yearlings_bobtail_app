@@ -55,7 +55,7 @@ const AdminNavSectionView = ({
 
     return (
         <div
-            className="section Nav"
+            className="Nav"
         >
             <div className="row">
                 <div className="text-cell-wrapper">

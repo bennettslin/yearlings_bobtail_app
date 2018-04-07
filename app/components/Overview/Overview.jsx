@@ -69,8 +69,7 @@ class OverviewSection extends Component {
 
         return (
             <div className={cx(
-                'Overview',
-                'section'
+                'Overview'
             )}>
                 <div className="overview-text">
                     {isToggleInOverview &&

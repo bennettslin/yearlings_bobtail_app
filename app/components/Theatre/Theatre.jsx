@@ -115,8 +115,7 @@ class Theatre extends Component {
 
         return (
             <div className={cx(
-                'Theatre',
-                'section'
+                'Theatre'
             )}>
                 <TheatreCeiling
                     windowWidth={windowWidth}

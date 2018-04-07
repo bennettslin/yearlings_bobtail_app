@@ -51,8 +51,7 @@ const TheatreCeiling = ({
         <div
             className={cx(
                 'TheatreCeiling',
-                'Theatre__field',
-                'field'
+                'Theatre__field'
             )}
             style={ceilingFieldStyle}
         >

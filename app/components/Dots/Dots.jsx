@@ -3,6 +3,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import DotToggleBlock from '../Dot/DotToggleBlock'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
@@ -104,7 +106,10 @@ DotsSectionView = ({
 ...other }) => (
 
     <div
-        className="section Dots access-keys-shown"
+        className={cx(
+            'Dots',
+            'access-keys-shown'
+        )}
         onClick={handleContainerClick}
         onTouchStart={handleContainerClick}
     >

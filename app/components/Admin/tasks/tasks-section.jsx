@@ -37,7 +37,7 @@ const TasksSectionView = ({
 
 }) => (
 
-    <div className="section tasks-section">
+    <div className="tasks-section">
         <h2>tasks</h2>
         <TasksBlock
             tasks={tasks}

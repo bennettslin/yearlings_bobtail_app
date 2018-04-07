@@ -36,7 +36,6 @@ Nav = ({
         )}>
             <div
                 className={cx(
-                    'section',
                     'Nav',
                     showSingleBookColumn ? 'single-book-column' : 'double-book-column'
                 )}

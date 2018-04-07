@@ -26,7 +26,7 @@ const DevSectionView = ({
     // selectedScoreIndex
 
 }) => (
-    <div className="section dev-section">
+    <div className="dev-section">
         <h2>dev</h2>
         <div className="row">
             {/* selected song index: {selectedSongIndex} */}

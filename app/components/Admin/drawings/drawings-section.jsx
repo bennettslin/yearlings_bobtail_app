@@ -29,7 +29,7 @@ const DrawingsSectionView = ({
     // backdropsTotalCount
 
 }) => (
-    <div className="section drawings-section">
+    <div className="drawings-section">
         <h2>drawings</h2>
 
         {/* <h3>backdrops</h3>

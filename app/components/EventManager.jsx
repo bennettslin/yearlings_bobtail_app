@@ -935,14 +935,14 @@ class EventManager extends Component {
     render() {
 
         const domManagerRef = node => this.myDomManager = node,
-            lyricSectionRef = node => this.myLyricSection = node,
+            lyricRef = node => this.myLyricSection = node,
             scoreSectionRef = node => this.myScoreSection = node,
             wikiSectionRef = node => this.myWikiSection = node,
 
             eventHandlers = {
 
                 domManagerRef,
-                lyricSectionRef,
+                lyricRef,
                 scoreSectionRef,
                 wikiSectionRef,
 

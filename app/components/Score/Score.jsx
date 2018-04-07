@@ -43,8 +43,7 @@ class Score extends Component {
             <div
                 ref={this.props.scoreSectionRef}
                 className={cx(
-                    'Score',
-                    'section'
+                    'Score'
                 )}
                 onKeyDown={this.hi}
                 tabIndex="1"

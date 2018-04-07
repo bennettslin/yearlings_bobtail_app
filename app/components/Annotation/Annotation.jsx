@@ -125,7 +125,6 @@ AnnotationSectionView = ({
         <div
             className={cx(
                 'Annotation',
-                'section',
                 { 'selected-annotation': showAsSelected,
                 'accessed-annotation': isAccessedAnnotation }
             )}

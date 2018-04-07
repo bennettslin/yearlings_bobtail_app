@@ -37,8 +37,7 @@ class Stage extends Component {
         return (
             <div className={cx(
                 'Stage',
-                'Stage__absoluteContainer',
-                'section'
+                'Stage__absoluteContainer'
             )}>
                 <div
                     className={cx(

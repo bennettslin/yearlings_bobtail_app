@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import Button from '../Button/Button'
 import { SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY } from '../../constants/access'
@@ -78,7 +80,10 @@ ScoresTipsSection = ({
         showScoreToggleButton = !getIsPhone(deviceIndex)
 
     return shouldRender && (
-        <div className="section ScoresTipsSection access-keys-shown">
+        <div className={cx(
+            'ScoresTipsSection',
+            'access-keys-shown'
+        )}>
             {showScoreToggleButton &&
                 <Button
                     isLarge

@@ -19,7 +19,7 @@ class LiveManager extends Component {
 
     static propTypes = {
         // From parent.
-        lyricSectionRef: PropTypes.func.isRequired,
+        lyricRef: PropTypes.func.isRequired,
         scoreSectionRef: PropTypes.func.isRequired,
         wikiSectionRef: PropTypes.func.isRequired,
 
@@ -68,7 +68,7 @@ class LiveManager extends Component {
     }
 
     render() {
-        const { lyricSectionRef,
+        const { lyricRef,
                 scoreSectionRef,
                 wikiSectionRef,
 
@@ -134,7 +134,7 @@ class LiveManager extends Component {
             },
 
             lyricColumnHandlers = {
-                lyricSectionRef,
+                lyricRef,
                 handleLyricAnnotationSelect,
                 handleLyricColumnSelect,
                 handleLyricSectionExpand,

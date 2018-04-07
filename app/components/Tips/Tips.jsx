@@ -60,8 +60,7 @@ class Tips extends Component {
 
         return (
             <div className={cx(
-                'Tips',
-                'section'
+                'Tips'
             )}>
                 <div className="Tips__textContainer">
                     {isScoresTipsInMain && (
