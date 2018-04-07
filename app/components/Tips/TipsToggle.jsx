@@ -29,15 +29,13 @@ TipsToggle = ({
     handleTipsToggle
 
 }) => (
-    <div className="TipsToggle-button-container">
-        <Button
-            isLarge={true}
-            isEnabled={isEnabled}
-            accessKey={TIPS_TOGGLE_KEY}
-            iconText={TIPS_OPTIONS[selectedTipsIndex]}
-            handleClick={handleTipsToggle}
-        />
-    </div>
+    <Button
+        isLarge={true}
+        isEnabled={isEnabled}
+        accessKey={TIPS_TOGGLE_KEY}
+        iconText={TIPS_OPTIONS[selectedTipsIndex]}
+        handleClick={handleTipsToggle}
+    />
 )
 
 TipsToggle.propTypes = tipsTogglePropTypes

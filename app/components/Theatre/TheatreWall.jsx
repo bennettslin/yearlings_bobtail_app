@@ -61,7 +61,7 @@ const TheatreWallField = ({
                 'TheatreWall',
                 'Theatre__field',
                 'field',
-                isRight ? 'right' : 'left'
+                { 'right': isRight }
             )}
             style={wallFieldStyle}
         >

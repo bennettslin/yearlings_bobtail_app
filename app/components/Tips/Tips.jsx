@@ -7,6 +7,8 @@ import cx from 'classnames'
 
 import TipsToggle from './TipsToggle'
 import TextBlock from '../Text/TextBlock'
+// import DynamicSvg from '../DynamicSvg/DynamicSvg';
+
 import { getSongTip } from '../../helpers/dataHelper'
 import { SHOWN, TIPS_OPTIONS } from '../../constants/options'
 
@@ -61,9 +63,9 @@ class Tips extends Component {
                 'Tips',
                 'section'
             )}>
-                <div className="tips-text">
+                <div className="Tips__textContainer">
                     {isScoresTipsInMain && (
-                        <div className="TipsToggle-section">
+                        <div className="Tips__textFloatContainer">
                             <TipsToggle
                                 isEnabled={isEnabled}
                                 handleTipsToggle={this._handleTipsToggle}
@@ -77,8 +79,9 @@ class Tips extends Component {
                         />
                     )}
                 </div>
-                <div className="tips-image">
 
+                <div className="Tips__imageContainer">
+                    {/* TODO: Put a dynamic svg in here. */}
                 </div>
             </div>
         )

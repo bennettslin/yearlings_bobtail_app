@@ -16,7 +16,6 @@ const StageProscenium = () => {
             <div className="proscenium-layer top" />
             <div className="proscenium-layer side left" />
             <div className="proscenium-layer side right" />
-            {/* <div className="proscenium-layer bottom" /> */}
         </div>
     )
 }
