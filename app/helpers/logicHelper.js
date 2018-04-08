@@ -478,26 +478,6 @@ export const getShowOverlay = ({
            (!!selectedAnnotationIndex && isOverlayingAnnotation)
 }
 
-// export const getIsTimerInAudio = ({
-//     deviceIndex,
-//     isLyricExpanded,
-//     selectedAnnotationIndex,
-//     selectedScoreIndex,
-//     selectedTitleIndex,
-//     selectedWikiIndex
-// }) => {
-//     const showOverlay = getShowOverlay({
-//             deviceIndex,
-//             isLyricExpanded,
-//             selectedAnnotationIndex,
-//             selectedScoreIndex,
-//             selectedTitleIndex,
-//             selectedWikiIndex
-//         })
-
-//     return showOverlay && getIsPhone(deviceIndex)
-// }
-
 export const getIsSomethingBeingShown = ({
     props,
     calledByOverview = false,

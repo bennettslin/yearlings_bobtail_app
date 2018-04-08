@@ -69,11 +69,6 @@ Main = ({
             inMain
         />
 
-        {/* <div className="subfield dots-overview-subfield">
-            <div className="OverviewPopup-container">
-            </div>
-        </div> */}
-
         <LyricToggleExpand
             handleLyricSectionExpand={handleLyricSectionExpand}
             inMain
