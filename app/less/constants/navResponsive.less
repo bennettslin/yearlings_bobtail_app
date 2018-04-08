@@ -25,7 +25,7 @@
 
 /**
  * Total width of wide desktop nav field is:
- * 20 * @length__icon +
+ * 20 * @js__length__icon +
  * 1 * @length__iconLarge
  * 10 * @NavBook-padding +
  * 1 * @nav-last-title-margin
@@ -40,12 +40,12 @@
  * Total units: 26 units
  */
 
-@monitor-double-unit-constant: @width__goldenCord + @double-icons * @length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin;
+@monitor-double-unit-constant: @width__goldenCord + @double-icons * @js__length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin;
 
 @monitor-small-unit: ~"calc((@{full-vw} - @{monitor-double-unit-constant}) / @{double-units})";
 @monitor-large-unit: ~"calc((@{full-vw} - @{monitor-double-unit-constant}) * @{large-double-units})";
 
-@monitor-book-offset-constant: -@medium-double-units * (@width__goldenCord + @double-icons * @length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin) + @length__icon + 2 * @NavBook-padding;
+@monitor-book-offset-constant: -@medium-double-units * (@width__goldenCord + @double-icons * @js__length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin) + @js__length__icon + 2 * @NavBook-padding;
 
 @monitor-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{monitor-book-offset-constant})";
 
@@ -72,7 +72,7 @@
  * Breakpoint to switch to single column is when icon width is 36px.
  *
  * Total width of single column desktop nav field is:
- * 11 * @length__icon +
+ * 11 * @js__length__icon +
  * 1 * @length__iconLarge
  * 8 * @NavBook-padding +
  * 1 * @nav-last-title-margin
@@ -85,12 +85,12 @@
  * Total units: 16 units
  */
 
-@monitor-single-unit-constant: @width__goldenCord + @single-icons * @length__icon + @length__iconLarge + 8 * @NavBook-padding + @nav-last-title-margin;
+@monitor-single-unit-constant: @width__goldenCord + @single-icons * @js__length__icon + @length__iconLarge + 8 * @NavBook-padding + @nav-last-title-margin;
 
 @monitor-single-small: ~"calc((@{full-vw} - @{monitor-single-unit-constant}) / @{single-units})";
 @monitor-single-large: ~"calc((@{full-vw} - @{monitor-single-unit-constant}) * @{large-single-units})";
 
-@monitor-single-book-offset-constant: -@medium-single-units * (@width__goldenCord + @single-icons * @length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin) + @length__icon + 2 * @NavBook-padding;
+@monitor-single-book-offset-constant: -@medium-single-units * (@width__goldenCord + @single-icons * @js__length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin) + @js__length__icon + 2 * @NavBook-padding;
 
 @monitor-single-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{monitor-single-book-offset-constant})";
 
@@ -106,12 +106,12 @@
  * Laptop follows same equations, with Uncanny Valley lyric column width.
  */
 
-@laptop-unit-constant: @width__uncannyValley + @single-icons * @length__icon + @length__iconLarge + 8 * @NavBook-padding + @nav-last-title-margin;
+@laptop-unit-constant: @width__uncannyValley + @single-icons * @js__length__icon + @length__iconLarge + 8 * @NavBook-padding + @nav-last-title-margin;
 
 @laptop-small: ~"calc((@{full-vw} - @{laptop-unit-constant}) / @{single-units})";
 @laptop-large: ~"calc((@{full-vw} - @{laptop-unit-constant}) * @{large-single-units})";
 
-@laptop-book-offset-constant: -@medium-single-units * (@width__uncannyValley + @single-icons * @length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin) + @length__icon + 2 * @NavBook-padding;
+@laptop-book-offset-constant: -@medium-single-units * (@width__uncannyValley + @single-icons * @js__length__icon + @length__iconLarge + 10 * @NavBook-padding + @nav-last-title-margin) + @js__length__icon + 2 * @NavBook-padding;
 
 @laptop-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{laptop-book-offset-constant})";
 
@@ -143,12 +143,12 @@
  * without nav last title margin. Switch at 1100px.
  */
 
-@tablet-double-unit-constant: @double-icons * @length__icon + @length__iconLarge__tablet + 10 * @NavBook-padding;
+@tablet-double-unit-constant: @double-icons * @js__length__icon + @length__iconLarge__tablet + 10 * @NavBook-padding;
 
 @tablet-small-unit: ~"calc((@{full-vw} - @{tablet-double-unit-constant}) / @{double-units})";
 @tablet-large-unit: ~"calc((@{full-vw} - @{tablet-double-unit-constant}) * @{large-double-units})";
 
-@tablet-book-offset-constant: -@medium-double-units * (@double-icons * @length__icon + @length__iconLarge__tablet + 10 * @NavBook-padding) + @length__icon + 2 * @NavBook-padding;
+@tablet-book-offset-constant: -@medium-double-units * (@double-icons * @js__length__icon + @length__iconLarge__tablet + 10 * @NavBook-padding) + @js__length__icon + 2 * @NavBook-padding;
 
 @tablet-book-offset: ~"calc(@{medium-double-units} * @{full-vw} + @{tablet-book-offset-constant})";
 
@@ -168,12 +168,12 @@
  * Breakpoint to switch to single column is when icon width is 36px.
  */
 
-@tablet-single-unit-constant: @single-icons * @length__icon + @length__iconLarge__tablet + 8 * @NavBook-padding;
+@tablet-single-unit-constant: @single-icons * @js__length__icon + @length__iconLarge__tablet + 8 * @NavBook-padding;
 
 @tablet-single-small: ~"calc((@{full-vw} - @{tablet-single-unit-constant}) / @{single-units})";
 @tablet-single-large: ~"calc((@{full-vw} - @{tablet-single-unit-constant}) * @{large-single-units})";
 
-@tablet-single-book-offset-constant: -@medium-single-units * (@single-icons * @length__icon + @length__iconLarge__tablet + 10 * @NavBook-padding) + @length__icon + 2 * @NavBook-padding;
+@tablet-single-book-offset-constant: -@medium-single-units * (@single-icons * @js__length__icon + @length__iconLarge__tablet + 10 * @NavBook-padding) + @js__length__icon + 2 * @NavBook-padding;
 
 @tablet-single-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{tablet-single-book-offset-constant})";
 
@@ -181,12 +181,12 @@
  * MINI WIDTH: single, single shrink *
  *************************************/
 
-@mini-unit-constant: @single-icons * @length__icon + @length__iconLarge__mini + 8 * @NavBook-padding;
+@mini-unit-constant: @single-icons * @js__length__icon + @length__iconLarge__mini + 8 * @NavBook-padding;
 
 @mini-small: ~"calc((@{full-vw} - @{mini-unit-constant}) / @{single-units})";
 @mini-large: ~"calc((@{full-vw} - @{mini-unit-constant}) * @{large-single-units})";
 
-@mini-book-offset-constant: -@medium-single-units * (@single-icons * @length__icon + @length__iconLarge__mini + 10 * @NavBook-padding) + @length__icon + 2 * @NavBook-padding;
+@mini-book-offset-constant: -@medium-single-units * (@single-icons * @js__length__icon + @length__iconLarge__mini + 10 * @NavBook-padding) + @js__length__icon + 2 * @NavBook-padding;
 
 @mini-book-offset: ~"calc(@{medium-single-units} * @{full-vw} + @{mini-book-offset-constant})";
 

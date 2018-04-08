@@ -15,8 +15,10 @@ import { PHONE_WIDTH,
          COLLAPSED_LYRIC_SECTION_HEIGHT,
          HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
-         MENU_HEIGHT,
-         MENU_PLUS_CUSTOM_SUBFIELD_PHONE_HEIGHT,
+
+         LS_HEIGHT_MENU,
+         LS_HEIGHT_ABOVE_OVERLAY_PHONE,
+
          HIDDEN_NAV_MIN,
          WIKI_SIDE_PADDING_TOTAL } from '../constants/responsive'
 
@@ -188,34 +190,41 @@ export const getIsTitleInAudio = ({ deviceIndex, windowWidth }) => {
 }
 
 export const getLyricSectionRect = ({
+
     deviceIndex,
     windowHeight,
     isLyricExpanded
+
 }) => {
     const bottom = windowHeight
+    let top
 
     if (getIsDesktop(deviceIndex)) {
         /**
          * If monitor or laptop width, then lyric section rect is simply the
          * entire window height.
          */
-        return {
-            top: 0,
-            bottom
-        }
+        top = 0
+
+    } else if (!isLyricExpanded) {
+        /**
+         * If lyric is collapsed, top is always a fixed percentage of the
+         * window height.
+         */
+        top = windowHeight * (1 - COLLAPSED_LYRIC_SECTION_HEIGHT)
+
+    } else if (getIsPhone(deviceIndex)) {
+        // Lyric is expanded in phone.
+        top = LS_HEIGHT_ABOVE_OVERLAY_PHONE
 
     } else {
-        const isPhone = getIsPhone(deviceIndex),
-            menuHeight = isPhone ?
-                MENU_PLUS_CUSTOM_SUBFIELD_PHONE_HEIGHT : MENU_HEIGHT,
-            top = isLyricExpanded ?
-                menuHeight : windowHeight * (1 - COLLAPSED_LYRIC_SECTION_HEIGHT)
+        // Lyric is expanded in tablet or mini.
+        top = LS_HEIGHT_MENU
+    }
 
-        // TODO: Consider lyric hidden?
-        return {
-            top,
-            bottom
-        }
+    return {
+        top,
+        bottom
     }
 }
 

@@ -33,7 +33,7 @@
 }
 
 .height__mainColumn {
-    top: @height__menu;
+    top: @js__height__menu;
 
     display: flex;
     flex-direction: column;
@@ -41,14 +41,14 @@
 
     ._mobile_
     & {
-        height: ~"calc(100% - @{height__lyricCollapsed} - @{height__menu})";
+        height: ~"calc(100% - @{height__lyricCollapsed} - @{js__height__menu})";
     }
 
     ._desktop_
     &,
     ._lyricHeightless_
     & {
-        height: ~"calc(100% - @{height__menu})";
+        height: ~"calc(100% - @{js__height__menu})";
     }
 
     ._phone_

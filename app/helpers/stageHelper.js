@@ -11,7 +11,7 @@ import { PHONE_WIDTH,
          GOLDEN_CORD_WIDTH,
          UNCANNY_VALLEY_WIDTH,
 
-         APP_ICON_DIAMETER,
+         LS_LENGTH_ICON,
          APP_MINI_LARGE_ICON_DIAMETER,
          APP_TABLET_LARGE_ICON_DIAMETER,
          APP_LARGE_ICON_DIAMETER,
@@ -20,8 +20,8 @@ import { PHONE_WIDTH,
          AUDIO_BANNER_CUSTOM_SUBFIELD_PADDING,
 
          COLLAPSED_LYRIC_SECTION_HEIGHT,
-         MENU_HEIGHT,
-         MENU_PHONE_HEIGHT,
+         LS_HEIGHT_MENU,
+         LS_HEIGHT_MENU_TOP_ROW_PHONE,
 
          NAV_BOOK_HEIGHT } from '../constants/responsive'
 
@@ -162,7 +162,7 @@ export const getCentreFieldHeight = (
         ),
 
         menuHeight = getIsPhone(deviceIndex) ?
-            MENU_PHONE_HEIGHT : MENU_HEIGHT
+            LS_HEIGHT_MENU_TOP_ROW_PHONE : LS_HEIGHT_MENU
 
     return windowHeight - menuHeight - lyricColumnHeight
 }
@@ -182,7 +182,7 @@ export const _getDotsOverviewOverflow = (deviceIndex) => {
             toggleButtonWidth = APP_MINI_LARGE_ICON_DIAMETER
             break
         case PHONE_WIDTH:
-            toggleButtonWidth = APP_ICON_DIAMETER
+            toggleButtonWidth = LS_LENGTH_ICON
             break
     }
 

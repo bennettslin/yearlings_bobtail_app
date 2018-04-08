@@ -149,15 +149,15 @@
                 // Override default styling.
                 transform: none;
                 top: auto;
-                bottom: -@length__icon * @PopupButton-multiplier;
+                bottom: -@js__length__icon * @PopupButton-multiplier;
             }
 
             &.previous-position {
-                left: @length__icon * 0.2;
+                left: @js__length__icon * 0.2;
             }
 
             &.next-position {
-                right: @length__icon * 0.2;
+                right: @js__length__icon * 0.2;
             }
         }
     }
@@ -166,7 +166,7 @@
         .popup-wrapper {
             &.wiki, &.score {
                 width: ~"calc(100% - @{mini-full-subfield-margin} * 2)";
-                height: ~"calc(100% - @{length__icon})";
+                height: ~"calc(100% - @{js__length__icon})";
             }
 
             .PopupButton {
@@ -197,7 +197,7 @@
         &._lyricHeightless_ {
             .popup-wrapper {
                 &.wiki, &.score {
-                    width: ~"calc(100% - @{length__icon} * 2)";
+                    width: ~"calc(100% - @{js__length__icon} * 2)";
                     height: ~"calc(100% - @{mini-full-subfield-margin})";
                 }
             }
