@@ -18,79 +18,45 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-const audioBannerDefaultProps = {
-    inOverlay: false,
-    inAudioSection: false,
-    inCustomSubfield: false
-},
-
-audioBannerPropTypes = {
+const audioBannerPropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
-    inOverlay: PropTypes.bool.isRequired,
-    inAudioSection: PropTypes.bool.isRequired,
-    inCustomSubfield: PropTypes.bool.isRequired
+    isBelowMenu: PropTypes.bool
 },
 
 AudioBanner = ({
 
     deviceIndex,
     selectedSongIndex,
-
-    inOverlay,
-    inAudioSection,
-    inCustomSubfield,
+    isBelowMenu,
 
 ...other }) => {
 
     const isPhone = getIsPhone(deviceIndex),
 
-        // Render if...
-        shouldRender = isPhone ?
-
-            // ...in custom subfield or in overlay on phone.
-            inCustomSubfield || inOverlay :
-
-            // ...in menu or in overlay if not on phone.
-            inAudioSection,
-
         songTitle = getSongTitle({
                 songIndex: selectedSongIndex
-            }),
+            })
 
-        audioBannerComponent = (
-            <div className={cx(
-                'audio-block',
-                'AudioBanner-block'
-            )}>
-                <Slider {...other} />
-                <div className="AudioBanner audio-display-block">
-                    <div className="AudioBanner-title">
-                        {songTitle}
-                    </div>
-                    <AudioTimer />
+    return Boolean(isBelowMenu) === isPhone && (
+        <div className={cx(
+            'audio-block',
+            'AudioBanner-block'
+        )}>
+            <Slider {...other} />
+            <div className="AudioBanner audio-display-block">
+                <div className="AudioBanner-title">
+                    {songTitle}
                 </div>
+                <AudioTimer />
             </div>
-        )
-
-    if (shouldRender) {
-
-        // If in custom subfield, wrap in parent element.
-        return inCustomSubfield ? (
-            <div className="AudioBanner-custom-subfield">
-                {audioBannerComponent}
-            </div>
-        ) : audioBannerComponent
-
-    } else {
-        return null
-    }
+        </div>
+    )
 }
 
-AudioBanner.defaultProps = audioBannerDefaultProps
 AudioBanner.propTypes = audioBannerPropTypes
 
 export default connect(mapStateToProps)(AudioBanner)

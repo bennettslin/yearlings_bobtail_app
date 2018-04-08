@@ -7,7 +7,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import Theatre from '../Theatre/Theatre'
-import MainColumn from './MainColumn'
+import Main from './Main/Main'
 import Menu from './Menu'
 import PopupOverlaid from './PopupOverlaid'
 
@@ -121,7 +121,7 @@ class Live extends Component {
             audioBannerHandlers = {
                 handleSliderTouchBegin
             },
-            audioSectionHandlers = {
+            audioHandlers = {
                 handleAudioPlay,
                 handleAudioPreviousSong,
                 handleAudioNextSong,
@@ -183,7 +183,6 @@ class Live extends Component {
                 handleLyricSectionExpand,
 
                 annotationPopupHandlers,
-                audioBannerHandlers,
                 overviewPopupHandlers,
                 scoresTipsSectionHandlers,
                 tipsPopupHandlers,
@@ -212,9 +211,10 @@ class Live extends Component {
             },
 
             menuFieldHandlers = {
-                audioSectionHandlers,
+                titleToggleHandlers,
+                audioHandlers,
                 scoresTipsSectionHandlers,
-                titleToggleHandlers
+                audioBannerHandlers
             }
 
         return (
@@ -222,7 +222,7 @@ class Live extends Component {
 
                 <Theatre />
 
-                <MainColumn {...mainColumnHandlers} />
+                <Main {...mainColumnHandlers} />
 
                 <OverviewLogueColumn
                     overviewPopupHandlers={overviewPopupHandlers}
@@ -231,7 +231,7 @@ class Live extends Component {
                 <LyricColumn {...lyricColumnHandlers} />
 
                 <PopupOverlaid
-                    audioSectionHandlers={audioSectionHandlers}
+                    audioHandlers={audioHandlers}
                     annotationPopupHandlers={annotationPopupHandlers}
                     titlePopupHandlers={titlePopupHandlers}
                     scorePopupHandlers={scorePopupHandlers}

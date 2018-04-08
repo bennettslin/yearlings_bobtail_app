@@ -7,18 +7,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Nav from '../Nav/Nav'
-import AnnotationPopup from '../Popups/AnnotationPopup'
-import AudioBanner from '../Audio/AudioBanner'
-import CarouselToggle from '../Carousel/CarouselToggle'
-import Carousel from '../Carousel/Carousel'
-import Dots from '../Dots/Dots'
-import DotsOverviewToggleSection from './DotsOverviewToggleSection'
-import LyricToggleExpand from '../Lyric/LyricToggleExpand'
-import Stage from '../stage/Stage'
-import OverviewPopup from '../Popups/OverviewPopup'
-import TipsPopup from '../Popups/TipsPopup'
-import ScoresTips from './ScoresTips'
+import Nav from '../../Nav/Nav'
+import AnnotationPopup from '../../Popups/AnnotationPopup'
+import CarouselToggle from '../../Carousel/CarouselToggle'
+import Carousel from '../../Carousel/Carousel'
+import Dots from '../../Dots/Dots'
+import DotsOverviewToggleSection from '../DotsOverviewToggleSection'
+import LyricToggleExpand from '../../Lyric/LyricToggleExpand'
+import Stage from '../../stage/Stage'
+import OverviewPopup from '../../Popups/OverviewPopup'
+import TipsPopup from '../../Popups/TipsPopup'
+import ScoresTips from '../ScoresTips'
 
 const mainColumnPropTypes = {
     // From parent.
@@ -26,7 +25,6 @@ const mainColumnPropTypes = {
     handleLyricSectionExpand: PropTypes.func.isRequired,
 
     annotationPopupHandlers: PropTypes.object.isRequired,
-    audioBannerHandlers: PropTypes.object.isRequired,
     carouselSectionHandlers: PropTypes.object.isRequired,
     dotsOverviewToggleSectionHandlers: PropTypes.object.isRequired,
     dotsSectionHandlers: PropTypes.object.isRequired,
@@ -36,13 +34,12 @@ const mainColumnPropTypes = {
     scoresTipsSectionHandlers: PropTypes.object.isRequired
 },
 
-MainColumn = ({
+Main = ({
 
     handleCarouselNavToggle,
     handleLyricSectionExpand,
 
     annotationPopupHandlers,
-    audioBannerHandlers,
     carouselSectionHandlers,
     dotsOverviewToggleSectionHandlers,
     dotsSectionHandlers,
@@ -53,7 +50,7 @@ MainColumn = ({
 
 }) => (
     <div className={cx(
-        'MainColumn',
+        'Main',
         'width__mainColumn',
         'height__mainColumn'
     )}>
@@ -96,10 +93,6 @@ MainColumn = ({
             <TipsPopup {...tipsPopupHandlers} />
         </div>
 
-        <AudioBanner {...audioBannerHandlers}
-            inCustomSubfield
-        />
-
         <CarouselToggle
             handleCarouselNavToggle={handleCarouselNavToggle}
         />
@@ -108,6 +101,6 @@ MainColumn = ({
     </div>
 )
 
-MainColumn.propTypes = mainColumnPropTypes
+Main.propTypes = mainColumnPropTypes
 
-export default MainColumn
+export default Main

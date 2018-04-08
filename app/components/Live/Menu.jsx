@@ -7,22 +7,26 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import TitleToggle from '../Title/TitleToggle'
 import Audio from '../Audio/Audio'
 import ScoresTips from './ScoresTips'
-import TitleToggle from '../Title/TitleToggle'
+import AudioBanner from '../Audio/AudioBanner'
+
 
 const menuPropTypes = {
     // From parent.
-    audioSectionHandlers: PropTypes.object.isRequired,
+    titleToggleHandlers: PropTypes.object.isRequired,
+    audioHandlers: PropTypes.object.isRequired,
     scoresTipsSectionHandlers: PropTypes.object.isRequired,
-    titleToggleHandlers: PropTypes.object.isRequired
+    audioBannerHandlers: PropTypes.object.isRequired,
 },
 
 Menu = ({
 
-    audioSectionHandlers,
+    titleToggleHandlers,
+    audioHandlers,
     scoresTipsSectionHandlers,
-    titleToggleHandlers
+    audioBannerHandlers
 
 }) => {
     return (
@@ -31,7 +35,7 @@ Menu = ({
                 'Menu',
                 'width__mainColumn'
             )}>
-            <div className={cx(
+                <div className={cx(
                     'Menu__childTitle',
                     'Menu__child',
                     'Menu__child__hiddenInOverlay'
@@ -45,7 +49,7 @@ Menu = ({
                     'Menu__childAudio',
                     'Menu__child'
                 )}>
-                    <Audio {...audioSectionHandlers} />
+                    <Audio {...audioHandlers} />
                 </div>
 
                 <div className={cx(
@@ -58,6 +62,9 @@ Menu = ({
                     />
                 </div>
             </div>
+            <AudioBanner {...audioBannerHandlers}
+                isBelowMenu
+            />
         </div>
     )
 }

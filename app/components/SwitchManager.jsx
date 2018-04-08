@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AdminManager from './Admin/AdminManager'
-import Live from './Main/Live'
+import Live from './Live/Live'
 
 const mapStateToProps = ({
     selectedAdminIndex

@@ -29,11 +29,7 @@ const mapStateToProps = ({
     isTitleInAudio
 })
 
-const audioSectionDefaultProps = {
-    inOverlay: false
-},
-
-audioPropTypes = {
+const audioPropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
@@ -44,7 +40,6 @@ audioPropTypes = {
     isTitleInAudio: PropTypes.bool.isRequired,
 
     // From parent.
-    inOverlay: PropTypes.bool.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
     titleToggleHandlers: PropTypes.object.isRequired
 },
@@ -59,7 +54,6 @@ Audio = ({
     selectedWikiIndex,
     isTitleInAudio,
 
-    inOverlay,
     audioBannerHandlers,
     titleToggleHandlers,
 
@@ -90,18 +84,12 @@ Audio = ({
                 <TitleToggle {...titleToggleHandlers} />
             )}
 
-            {/* In phone, show banner in the overlaid audio section. */}
-            <AudioBanner {...audioBannerHandlers}
-                inAudioSection
-                inOverlay={inOverlay}
-            />
-
+            <AudioBanner {...audioBannerHandlers} />
             <AudioButtons {...other} />
         </div>
     )
 }
 
-Audio.defaultProps = audioSectionDefaultProps
 Audio.propTypes = audioPropTypes
 
 export default connect(mapStateToProps)(Audio)
