@@ -18,27 +18,25 @@
     left: 0;
 }
 
-.Menu,
-.Menu__child {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .Menu {
     background-color: #8dd;
     top: 0;
     left: 0;
+    
+    display: flex;
+    align-items: center;
 
     position: absolute;
     height: @height__menu;
+    overflow: hidden;
+
     box-shadow: @boxShadow__menu;
     z-index: @zIndex__menuField;
 
     transition:
         left @animationDuration__slow,
         transform @animationDuration__slow,
-        max-width @animationDuration__slow;
+        max-width @animationDuration__default;
 
     ._overlayShown_
     &.width__mainColumn {
@@ -56,10 +54,12 @@
 }
 
 .Menu__child {
-    // overflow: hidden;
-
-    // z-index: @zIndex__menuSubfield;
+    height: 100%;
     flex-grow: 1;
+
+    transition:
+        min-width @animationDuration__fast,
+        max-width @animationDuration__fast;
 }
 
 .Menu__childTitle {
@@ -85,6 +85,17 @@
     margin: 0 @margin__menuChild;
     background-color: #8d8;
 
+    max-width: @audio-max-width;
+
+    transition: margin @animationDuration__default;
+
+    ._laptop_
+    &,
+    ._mini_
+    & {
+        margin: 0 @margin__menuChild__narrow;
+    }
+
     ._scoresTipsMain_
     & {
         // If scores tips is hidden, remove audio subfield's right margin.
@@ -97,21 +108,40 @@
         margin-left: 0;
     }
 
-    ._laptop_
-    &,
-    ._mini_
+    ._overlayShown_
     & {
-        margin: 0 @margin__menuChild__narrow;
+        max-width: 100%;
+        margin: 0;
     }
 
     ._mobile_
     & {
         justify-content: flex-end;
     }
+
+    min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge + @audio-block-padding * 3;
+    
+    box-sizing: border-box;
+    
+    ._tablet_
+    & {
+        min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge__tablet + @audio-block-padding * 3;
+    }
+    
+    ._mini_
+    & {
+        min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge__mini + @audio-block-padding * 3;
+    }
+    
+    ._phone_
+    & {
+        min-width: @AudioButtons-constant + @length__icon + @audio-block-padding * 3;
+    }
 }
 
 .Menu__childScoresTips {
-    justify-content: flex-start;
+    display: flex;
+    align-items: center;
     
     ._scoresTipsMain_
     & {
@@ -120,5 +150,26 @@
          * will not be rendered.
          */
         display: none;
+    }
+
+    min-width: @scores-tips-width;
+
+    ._tablet_
+    & {
+        min-width: @scores-tips-_tablet_;
+    }
+
+    ._mini_
+    & {
+        min-width: @scores-tips-_mini_;
+    }
+}
+
+.Menu__child__hiddenInOverlay {
+    ._overlayShown_
+    & {
+        width: 0;
+        min-width: 0;
+        max-width: 0;
     }
 }

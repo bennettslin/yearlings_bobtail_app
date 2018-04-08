@@ -30,13 +30,9 @@
             margin-bottom: @scores-tips-margin;
         }
     }
-}
 
-.Menu__childScoresTips {
-
-    min-width: @scores-tips-width;
-
-    .ScoresTips {
+    .Menu
+    & {
         .Button:first-child {
             margin-right: @scores-tips-margin;
         }
@@ -54,22 +50,12 @@
         }
     }
 
-    &._tablet_ {
-        .Menu__childScoresTips {
-            min-width: @scores-tips-_tablet_;
-        }
-    }
-
     &._mini_ {
         // Affects section in centre field only.
         &._lyricExpanded_, &._overviewShown_, &._tipsShown_, &._annotationShown_._navExpanded_, &._dotsShown_ {
             .ScoresTips {
                 right: -@scores-tips-_mini_;
             }
-        }
-
-        .Menu__childScoresTips {
-            min-width: @scores-tips-_mini_;
         }
     }
 

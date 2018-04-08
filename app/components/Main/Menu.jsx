@@ -33,7 +33,8 @@ Menu = ({
             )}>
             <div className={cx(
                     'Menu__childTitle',
-                    'Menu__child'
+                    'Menu__child',
+                    'Menu__child__hiddenInOverlay'
                 )}>
                     <TitleToggle {...titleToggleHandlers}
                         inMenu
@@ -49,7 +50,8 @@ Menu = ({
 
                 <div className={cx(
                     'Menu__childScoresTips',
-                    'Menu__child'
+                    'Menu__child',
+                    'Menu__child__hiddenInOverlay'
                 )}>
                     <ScoresTips {...scoresTipsSectionHandlers}
                         inMenu
