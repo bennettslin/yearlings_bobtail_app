@@ -1,5 +1,45 @@
 @import "./DotsToggle.less";
 
+.Dots__container {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    margin-left: -@margin__dotsContainer;
+    margin-top: @margin__dotsContainer / 2;
+    z-index: @zIndex__dotsOverview;
+
+    // TODO: Ideal for dots section to fade to halfway left, then move all the way out to prevent user interaction.
+    transition: opacity @animationDuration__default,
+                margin-left @animationDuration__slow,
+                transform @animationDuration__slow;
+
+    transform: translateX(-100%);
+
+    box-shadow: @boxShadow__dotsContainer;
+    background-color: @odd-verse-colour;
+
+    ._song_._dotsShown_
+    & {
+        opacity: 1;
+        margin-left: @margin__dotsContainer;
+        transform: translateX(0);
+    }
+
+    ._mobileNotPhone_
+    & {
+        top: auto;
+        bottom: 0;
+
+        margin-top: 0;
+        margin-bottom: @margin__dotsContainer / 2;
+    }
+
+    ._phone_._dotsShown_
+    & {
+        margin-left: @margin__dotsContainer__phone;
+    }
+}
+
 .Dots {
     padding: 10px;
 

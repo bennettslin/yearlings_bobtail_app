@@ -88,38 +88,3 @@
         height: @OverviewToggle-laptop-height;
     }
 }
-
-.dots-subfield {
-    position: absolute;
-    left: 0;
-    opacity: 0;
-    margin-left: -@dots-subfield-margin;
-    margin-top: @dots-subfield-margin / 2;
-    z-index: @zIndex__dotsOverview;
-
-    // TODO: Ideal for dots section to fade to halfway left, then move all the way out to prevent user interaction.
-    transition: opacity @animationDuration__default,
-                margin-left @animationDuration__slow,
-                transform @animationDuration__slow;
-
-    transform: translateX(-100%);
-
-    box-shadow: @dots-subfield-box-shadow;
-    background-color: @odd-verse-colour;
-
-    ._song_._dotsShown_
-    & {
-        opacity: 1;
-        margin-left: @dots-subfield-margin;
-        transform: translateX(0);
-    }
-
-    ._mobile_
-    & {
-        top: auto;
-        bottom: 0;
-
-        margin-top: 0;
-        margin-bottom: @dots-subfield-margin / 2;
-    }
-}

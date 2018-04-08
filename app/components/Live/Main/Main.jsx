@@ -57,16 +57,13 @@ Main = ({
 
         <Stage />
 
-        <div className="popup-field">
-            <div className="subfield annotation-subfield">
-                <AnnotationPopup {...annotationPopupHandlers}
-                    isOverlayAnnotation={false}
-                />
-            </div>
-        </div>
+        <AnnotationPopup {...annotationPopupHandlers}
+            isOverlayAnnotation={false}
+        />
 
         <div className="subfield dots-overview-subfield">
             <Carousel {...carouselSectionHandlers} />
+
             <DotsOverview {...dotsOverviewToggleSectionHandlers}
                 scoresTipsHandlers={scoresTipsHandlers}
             />
@@ -82,9 +79,7 @@ Main = ({
                 inMain
             />
 
-            <div className="dots-subfield">
-                <Dots {...dotsSectionHandlers} />
-            </div>
+            <Dots {...dotsSectionHandlers} />
 
             <ScoresTips {...scoresTipsHandlers}
                 inSubfield

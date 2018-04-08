@@ -105,14 +105,16 @@ DotsView = ({
 
 ...other }) => (
 
-    <div
-        className={cx(
-            'Dots'
-        )}
-        onClick={handleContainerClick}
-        onTouchStart={handleContainerClick}
-    >
-        <DotToggleBlock {...other} />
+    <div className="Dots__container">
+        <div
+            className={cx(
+                'Dots'
+            )}
+            onClick={handleContainerClick}
+            onTouchStart={handleContainerClick}
+        >
+            <DotToggleBlock {...other} />
+        </div>
     </div>
 )
 
