@@ -39,8 +39,7 @@ OverviewLogue = ({
 }) => (
     <div className={cx(
         'OverviewLogue',
-        'width__lyricColumn',
-        'column'
+        'position__lyricColumn'
     )}>
         <OverviewPopup {...overviewPopupHandlers}
             inOverviewSubfield={false}

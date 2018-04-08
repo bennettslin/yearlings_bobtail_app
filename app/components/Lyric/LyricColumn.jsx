@@ -205,9 +205,8 @@ LyricColumnView = ({
     return (
         <div
             className={cx(
-                'column',
                 'LyricColumn',
-                'width__lyricColumn',
+                'position__lyricColumn',
                 isHeavyRenderReady ? 'renderReady' : 'renderUnready'
             )}
             ref={myRef}
