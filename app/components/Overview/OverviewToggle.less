@@ -1,11 +1,11 @@
-@overviewMargin: 5px;
+@margin__overview: 5px;
 
 .OverviewToggle-button-container {
 
     ._desktop_
     & {
         // Give some room to menu above.
-        margin-top: @overviewMargin;
+        margin-top: @margin__overview;
     }
 
     ._mobileNotPhone_
@@ -21,38 +21,38 @@
     .OverviewPopup-container .overview.popup-wrapper {
 
         // Give some room to lyric section below.
-        margin-bottom: @overviewMargin;
+        margin-bottom: @margin__overview;
     }
 }
 
 ._tablet_ {
     .OverviewToggle-button-container {
-        height: @OverviewToggle-tablet-height;
+        height: @height__overviewToggle__tablet;
     }
 
     // Inside overview bubble.
     &._logue_._lyricHeightless_ {
         .OverviewToggle-section {
-            width: @OverviewToggle-_tablet_;
-            height: @OverviewToggle-tablet-height;
+            width: @width__overviewToggle__tablet;
+            height: @height__overviewToggle__tablet;
         }
     }
 }
 
 ._mini_ {
     .DotsOverview, .CarouselToggle {
-        width: @OverviewToggle-_mini_;
+        width: @width__overviewToggle__mini;
     }
 
     .OverviewToggle-button-container {
-        height: @OverviewToggle-mini-height;
+        height: @height__overviewToggle__mini;
     }
 
     // Inside overview bubble.
     &._logue_._lyricHeightless_ {
         .OverviewToggle-section {
-            width: @OverviewToggle-_mini_;
-            height: @OverviewToggle-mini-height;
+            width: @width__overviewToggle__mini;
+            height: @height__overviewToggle__mini;
         }
     }
 }
@@ -63,22 +63,22 @@
     &._overviewShown_ {
         .DotsOverview {
             opacity: 0;
-            margin-left: -@OverviewToggle-_phone_;
+            margin-left: -@width___overviewToggle__phone;
         }
     }
 
     .DotsOverview {
-        width: @OverviewToggle-_phone_;
+        width: @width___overviewToggle__phone;
     }
 
     .OverviewToggle-button-container {
-        height: @OverviewToggle-phone-height;
+        height: @height___overviewToggle__phone;
     }
 
     // Inside overview bubble.
     .OverviewToggle-section {
-        width: @OverviewToggle-_phone_;
-        height: @OverviewToggle-phone-height;
+        width: @width___overviewToggle__phone;
+        height: @height___overviewToggle__phone;
     }
 }
 

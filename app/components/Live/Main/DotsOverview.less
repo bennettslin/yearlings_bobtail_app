@@ -24,24 +24,24 @@
 .DotsOverview {
     position: absolute;
     height: 100%;
-    width: @OverviewToggle-width;
+    width: @width__overviewToggle;
 
-    transition: opacity @toggle-animation-duration,
-                margin-left @toggle-animation-duration;
+    transition: opacity @animationDuration__default,
+                margin-left @animationDuration__default;
 
     opacity: 1;
     margin-left: 0;
 
     ._laptop_
     & {
-        width: @OverviewToggle-_laptop_;
+        width: @width__overviewToggle__laptop;
     }
 
     // In mobile, also hidden to left when lyric expanded.
     ._mobile_._lyricExpanded_
     & {
         opacity: 0;
-        margin-left: -@OverviewToggle-_tablet_;
+        margin-left: -@width__overviewToggle__tablet;
     }
 }
 
@@ -52,7 +52,7 @@
 ._tipsShown_ {
     .DotsOverview {
         opacity: 0;
-        margin-left: -@OverviewToggle-width;
+        margin-left: -@width__overviewToggle;
     }
 }
 
@@ -60,7 +60,7 @@
 .CarouselToggle {
     ._mobile_
     & {
-        width: @OverviewToggle-_tablet_;
+        width: @width__overviewToggle__tablet;
     }
 }
 
@@ -79,13 +79,13 @@
     position: relative;
 
     width: 100%;
-    height: @OverviewToggle-height;
+    height: @height__overviewToggle;
 
     // Ensure toggle button is above its popup container and the carousel.
     z-index: @zIndex__centreFieldChild;
 
     ._laptop_
     & {
-        height: @OverviewToggle-laptop-height;
+        height: @height__overviewToggle__laptop;
     }
 }
