@@ -2762,4 +2762,14 @@ module.exports = [
         workedHours: 18,
         neededHours: 18
     },
+    {
+        taskName: `General refactoring.`,
+        workedHours: 6,
+        neededHours: 6
+    },
+    {
+        taskName: `Begin work to have just one audio.`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]

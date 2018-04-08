@@ -15,7 +15,7 @@ const mapStateToProps = ({
     windowWidth
 })
 
-const OverviewLogueColumnPropTypes = {
+const overviewLoguePropTypes = {
 
     // TODO: Why exactly are these needed by this component?
 
@@ -42,11 +42,11 @@ OverviewLogue = ({
         'position__lyricColumn'
     )}>
         <OverviewPopup {...overviewPopupHandlers}
-            inOverviewSubfield={false}
+            inMain={false}
         />
     </div>
 )
 
-OverviewLogue.propTypes = OverviewLogueColumnPropTypes
+OverviewLogue.propTypes = overviewLoguePropTypes
 
 export default connect(mapStateToProps)(OverviewLogue)

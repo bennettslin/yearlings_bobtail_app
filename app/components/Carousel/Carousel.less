@@ -1,25 +1,7 @@
-/**
- * I'm not happy with how complicated this styling became, but it was needed
- * to ensure that the carousel remains under all other interactable elements in
- * the centre field.
- */
-
- @CarouselToggle-laptop-length: @OverviewToggle-_laptop_;
- @CarouselToggle-tablet-length: @OverviewToggle-_tablet_;
- @CarouselToggle-mini-length: @OverviewToggle-_mini_;
+@CarouselToggle-laptop-length: @OverviewToggle-_laptop_;
  
  // This isn't ideal, but I don't know where the extra 2 pixels are coming from.
- // This affects the carousel nav button positions.
- @CarouselToggle-tablet-length: @OverviewToggle-_tablet_ - 2px;
- @CarouselToggle-mini-length: @OverviewToggle-_mini_ - 2px;
- 
- @carousel-height-variable: @nav-height;
- 
- // NOTE: I'm not sure how this was calculated...
- @carousel-position-variable: @carousel-height-variable + @dots-overview-padding * 2 + @nav-height * 2;
- 
- @carousel-tablet-variable: @CarouselToggle-tablet-length * 2;
- @carousel-mini-variable: @CarouselToggle-mini-length * 2;
+ // This affects the carousel select button positions.
  
  @width__carouselSelectButtons: @length__iconLarge * 2 + @margin__thin * 3;
  @Carousel__selectButtons-_tablet_: @length__iconLarge__tablet * 2 + @margin__thin * 3;
@@ -36,31 +18,22 @@
 .Carousel {
     position: absolute;
     left: 0;
-    bottom: calc(~"-100% - @{carousel-position-variable}");
+    bottom: -100%;
     width: 100vw;
-    height: calc(~"100% + @{carousel-height-variable}");
+    height: 100%;
     z-index: @zIndex__carousel;
+
     transition: bottom @animationDuration__slow,
                 opacity @animationDuration__default;
     opacity: 0;
 
     ._mobile_
     & {
-        transition: top @animationDuration__slow,
-        opacity @animationDuration__default;
-    }
-
-    ._tablet_
-    & {
         bottom: auto;
-        top: calc(~"-100% - @{carousel-tablet-variable}");
-        height: calc(~"100% + @{CarouselToggle-tablet-length}");
-    }
+        transition: top @animationDuration__slow,
+                    opacity @animationDuration__default;
 
-    ._mini_
-    & {
-        top: calc(~"-100% - @{carousel-mini-variable}");
-        height: calc(~"100% + @{CarouselToggle-mini-length}");
+        top: -100%;
     }
 }
 
@@ -75,19 +48,13 @@
 
     &._desktop_ {
         .Carousel {
-            bottom: -@carousel-height-variable;
+            bottom: 0;
         }
     }
 
-    &._tablet_ {
+    &._mobileNotPhone_ {
         .Carousel {
-            top: -@CarouselToggle-tablet-length;
-        }
-    }
-
-    &._mini_ {
-        .Carousel {
-            top: -@CarouselToggle-mini-length;
+            top: 0;
         }
     }
 }

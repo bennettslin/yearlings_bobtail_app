@@ -61,32 +61,33 @@ Main = ({
             isOverlayAnnotation={false}
         />
 
+        <Carousel {...carouselSectionHandlers} />
+
+        <DotsOverview {...dotsOverviewToggleSectionHandlers}
+            scoresTipsHandlers={scoresTipsHandlers}
+        />
+
+        <OverviewPopup {...overviewPopupHandlers}
+            inMain
+        />
+
         <div className="subfield dots-overview-subfield">
-            <Carousel {...carouselSectionHandlers} />
-
-            <DotsOverview {...dotsOverviewToggleSectionHandlers}
-                scoresTipsHandlers={scoresTipsHandlers}
-            />
-
             <div className="OverviewPopup-container">
-                <OverviewPopup {...overviewPopupHandlers}
-                    inOverviewSubfield
-                />
             </div>
-
-            <LyricToggleExpand
-                handleLyricSectionExpand={handleLyricSectionExpand}
-                inMain
-            />
-
-            <Dots {...dotsSectionHandlers} />
-
-            <ScoresTips {...scoresTipsHandlers}
-                inSubfield
-            />
-
-            <TipsPopup {...tipsPopupHandlers} />
         </div>
+
+        <LyricToggleExpand
+            handleLyricSectionExpand={handleLyricSectionExpand}
+            inMain
+        />
+
+        <Dots {...dotsSectionHandlers} />
+
+        <ScoresTips {...scoresTipsHandlers}
+            inMain
+        />
+
+        <TipsPopup {...tipsPopupHandlers} />
 
         <CarouselToggle
             handleCarouselNavToggle={handleCarouselNavToggle}

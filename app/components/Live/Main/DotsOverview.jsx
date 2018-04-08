@@ -3,7 +3,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-
 import DotsToggle from '../../Dots/DotsToggle'
 import OverviewToggle from '../../Overview/OverviewToggle'
 import ScoresTips from '../ScoresTips'

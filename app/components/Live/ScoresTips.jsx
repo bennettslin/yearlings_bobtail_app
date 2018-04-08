@@ -27,7 +27,7 @@ const mapStateToProps = ({
 
 const scoresTipsDefaultProps = {
     inMenu: false,
-    inSubfield: false,
+    inMain: false,
     inToggleSection: false
 },
 
@@ -41,7 +41,7 @@ scoresTipsPropTypes = {
 
     // From parent.
     inMenu: PropTypes.bool.isRequired,
-    inSubfield: PropTypes.bool.isRequired,
+    inMain: PropTypes.bool.isRequired,
     inToggleSection: PropTypes.bool.isRequired,
     handleScoreToggle: PropTypes.func.isRequired,
     handleTipsToggle: PropTypes.func.isRequired
@@ -56,7 +56,7 @@ ScoresTips = ({
     selectedTipsIndex,
 
     inMenu,
-    inSubfield,
+    inMain,
     inToggleSection,
 
     handleScoreToggle,
@@ -68,8 +68,8 @@ ScoresTips = ({
         // Render if...
         shouldRender = isScoresTipsInMain ?
 
-            // ...in subfield on mobile.
-            (inSubfield && !isDesktop) ||
+            // ...in main on mobile.
+            (inMain && !isDesktop) ||
 
             // ...in toggle section on desktop.
             (inToggleSection && isDesktop) :

@@ -30,13 +30,13 @@ const overviewPopupPropTypes = {
     selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
-    inOverviewSubfield: PropTypes.bool.isRequired,
+    inMain: PropTypes.bool.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
 },
 
 OverviewPopup = ({
 
-    inOverviewSubfield,
+    inMain,
     selectedOverviewIndex,
     isHeavyRenderReady,
     selectedSongIndex,
@@ -56,9 +56,9 @@ OverviewPopup = ({
 
     // Switch between logue and song overview sections.
     if (isLogue) {
-        isVisible = !inOverviewSubfield
+        isVisible = !inMain
     } else {
-        isVisible = selectedOverviewIndex ? false : inOverviewSubfield
+        isVisible = selectedOverviewIndex ? false : inMain
     }
 
     /**
