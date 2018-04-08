@@ -1,3 +1,5 @@
+// Constants prefixed with js *must* be the same in JavaScript.
+
 @import "./Main/DotsOverview.less";
 @import "./OverviewLogue.less";
 @import "./PopupOverlaid.less";
@@ -5,26 +7,23 @@
 @import "./Menu.less";
 @import "./Main/Main.less";
 
-// These values *must* be the same in js.
-@maxWidth__mini: 720px;
-@maxWidth__laptop: 1400px;
+@js__width__mini: 720px;
+@js__width__laptop: 1400px;
 
-// These values *must* be the same in js.
 /**
  * This is the maximum lyric column width in monitor, as determined by the
  * width of On a Golden Cord in double columns. MenuTopRow and nav widths can be as
  * narrow as 656px. (1401 - 745.)
  */
-@width__goldenCord: 745px;
+@js__width__goldenCord: 745px;
 /**
  * This is the maximum lyric column width in laptop, as determined by the
  * width of Uncanny Valley and Vegan Proclamation. MenuTopRow and nav widths can be
  * as narrow as 531px. (1101 - 570.)
  */
-@width__uncannyValley: 570px;
+@js__width__uncannyValley: 570px;
 
-// This value *must* be the same in js.
-@height__lyricCollapsed: 32%;
+@js__height__lyricCollapsed: 32%;
 
 @nav-height-padding: 6px;
 @nav-height: @length__iconLarge + @nav-height-padding;
@@ -60,29 +59,29 @@
     overflow: hidden;
 }
 
-.subfield {
-    height: 100%;
-}
+// .subfield {
+//     height: 100%;
+// }
 
 .position__lyricColumn {
     
     ._desktop_
     & {
         position: absolute;
-        width: @width__goldenCord;
+        width: @js__width__goldenCord;
         height: 100%;
         right: 0;
     }
 
     ._laptop_
     & {
-        width: @width__uncannyValley;
+        width: @js__width__uncannyValley;
     }
 
     ._mobile_
     & {
         position: absolute;
-        height: @height__lyricCollapsed;
+        height: @js__height__lyricCollapsed;
         width: 100%;
         bottom: 0;
     }

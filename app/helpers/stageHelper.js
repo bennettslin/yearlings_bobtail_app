@@ -2,14 +2,14 @@ import { STAGE_ASPECT_RATIO,
          STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE } from '../constants/stage'
 
 import { PHONE_WIDTH,
-         MINI_WIDTH,
+         LS_WIDTH_MINI,
          TABLET_WIDTH,
-         LAPTOP_WIDTH,
+         LS_LAPTOP_WIDTH,
          MONITOR_WIDTH,
          DEVICE_OBJECTS,
 
-         GOLDEN_CORD_WIDTH,
-         UNCANNY_VALLEY_WIDTH,
+         LS_WIDTH_GOLDEN_CORD,
+         LS_WIDTH_UNCANNY_VALLEY,
 
          LS_LENGTH_ICON,
          APP_MINI_LARGE_ICON_DIAMETER,
@@ -17,7 +17,7 @@ import { PHONE_WIDTH,
          APP_LARGE_ICON_DIAMETER,
          APP_THIN_MARGIN,
 
-         COLLAPSED_LYRIC_SECTION_HEIGHT,
+         LS_HEIGHT_LYRIC_COLLAPSED,
          LS_HEIGHT_MENU,
          LS_HEIGHT_MENU_PHONE,
 
@@ -97,7 +97,7 @@ const _getLyricColumnHeight = (
 ) => {
     return (
         isHeightlessLyricColumn || getIsDesktop(deviceIndex)
-    ) ? 0 : windowHeight * COLLAPSED_LYRIC_SECTION_HEIGHT
+    ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
 }
 
 export const getTheatreCeilingHeight = ({
@@ -139,9 +139,9 @@ const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
         overflowPercentage = STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
 
         if (getIsMonitor(deviceIndex)) {
-            lyricWidth = GOLDEN_CORD_WIDTH
+            lyricWidth = LS_WIDTH_GOLDEN_CORD
         } else {
-            lyricWidth = UNCANNY_VALLEY_WIDTH
+            lyricWidth = LS_WIDTH_UNCANNY_VALLEY
         }
     }
 
@@ -168,13 +168,13 @@ export const _getDotsOverviewOverflow = (deviceIndex) => {
 
     switch (DEVICE_OBJECTS[deviceIndex].className) {
         case MONITOR_WIDTH:
-        case LAPTOP_WIDTH:
+        case LS_LAPTOP_WIDTH:
             toggleButtonWidth = APP_LARGE_ICON_DIAMETER
             break
         case TABLET_WIDTH:
             toggleButtonWidth = APP_TABLET_LARGE_ICON_DIAMETER
             break
-        case MINI_WIDTH:
+        case LS_WIDTH_MINI:
             toggleButtonWidth = APP_MINI_LARGE_ICON_DIAMETER
             break
         case PHONE_WIDTH:

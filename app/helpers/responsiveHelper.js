@@ -1,18 +1,18 @@
 import { HAS_SIDE_STANZAS, IS_DOUBLESPEAKER } from '../constants/lyrics'
 import { PHONE_WIDTH,
-         MINI_WIDTH,
+         LS_WIDTH_MINI,
          TABLET_WIDTH,
-         LAPTOP_WIDTH,
+         LS_LAPTOP_WIDTH,
          MONITOR_WIDTH,
 
          MINI_OBJECT,
          DEVICE_OBJECTS,
 
          CAROUSEL_ANNOTATION_MIN_WIDTH,
-         GOLDEN_CORD_WIDTH,
-         UNCANNY_VALLEY_WIDTH,
+         LS_WIDTH_GOLDEN_CORD,
+         LS_WIDTH_UNCANNY_VALLEY,
 
-         COLLAPSED_LYRIC_SECTION_HEIGHT,
+         LS_HEIGHT_LYRIC_COLLAPSED,
          HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
 
@@ -44,7 +44,7 @@ export const resizeWindow = (target = window) => {
 export const getIsDesktop = (deviceIndex) => {
     const deviceClassName = DEVICE_OBJECTS[deviceIndex].className
 
-    return deviceClassName === LAPTOP_WIDTH || deviceClassName === MONITOR_WIDTH
+    return deviceClassName === LS_LAPTOP_WIDTH || deviceClassName === MONITOR_WIDTH
 }
 
 export const getIsPhone = (deviceIndex) => {
@@ -52,7 +52,7 @@ export const getIsPhone = (deviceIndex) => {
 }
 
 const _getIsMini = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === MINI_WIDTH
+    return DEVICE_OBJECTS[deviceIndex].className === LS_WIDTH_MINI
 }
 
 const _getIsTablet = (deviceIndex) => {
@@ -60,7 +60,7 @@ const _getIsTablet = (deviceIndex) => {
 }
 
 const _getIsLaptop = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === LAPTOP_WIDTH
+    return DEVICE_OBJECTS[deviceIndex].className === LS_LAPTOP_WIDTH
 }
 
 export const getIsMonitor = (deviceIndex) => {
@@ -211,7 +211,7 @@ export const getLyricSectionRect = ({
          * If lyric is collapsed, top is always a fixed percentage of the
          * window height.
          */
-        top = windowHeight * (1 - COLLAPSED_LYRIC_SECTION_HEIGHT)
+        top = windowHeight * (1 - LS_HEIGHT_LYRIC_COLLAPSED)
 
     } else if (getIsPhone(deviceIndex)) {
         // Lyric is expanded in phone.
@@ -264,7 +264,7 @@ export const getCarouselLeftAlign = (deviceIndex, windowWidth, index) => {
 
     } else {
         const lyricColumnWidth = getIsMonitor(deviceIndex) ?
-                GOLDEN_CORD_WIDTH : UNCANNY_VALLEY_WIDTH,
+                LS_WIDTH_GOLDEN_CORD : LS_WIDTH_UNCANNY_VALLEY,
 
             centreFieldWidth = windowWidth - lyricColumnWidth,
 

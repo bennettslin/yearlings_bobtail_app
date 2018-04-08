@@ -18,12 +18,12 @@
 
     ._monitor_
     & {
-        max-width: ~"calc(100% - @{width__goldenCord})";
+        max-width: ~"calc(100% - @{js__width__goldenCord})";
     }
 
     ._laptop_
     & {
-        max-width: ~"calc(100% - @{width__uncannyValley})";
+        max-width: ~"calc(100% - @{js__width__uncannyValley})";
     }
 
     ._mobile_
@@ -41,7 +41,7 @@
 
     ._mobile_
     & {
-        height: ~"calc(100% - @{height__lyricCollapsed} - @{js__height__menu})";
+        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu})";
     }
 
     ._desktop_
@@ -54,7 +54,7 @@
     ._phone_
     & {
         top: @js__height__menu__phone;
-        height: ~"calc(100% - @{height__lyricCollapsed} - @{js__height__menu__phone})";
+        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu__phone})";
     }
 
     ._phone_._lyricHeightless_
