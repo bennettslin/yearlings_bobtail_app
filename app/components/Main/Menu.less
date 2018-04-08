@@ -26,26 +26,22 @@
 }
 
 .Menu {
+    background-color: #8dd;
     top: 0;
     left: 0;
 
     position: absolute;
     height: @height__menu;
     box-shadow: @boxShadow__menu;
-    
-    transition:
-        left @animationDuration__default,
-        transform @animationDuration__default,
-        width @animationDuration__default;
-
-    // transition: top @animationDuration__default;
-
-    // Needs to be above nav when nav buttons are hidden.
     z-index: @zIndex__menuField;
 
+    transition:
+        left @animationDuration__slow,
+        transform @animationDuration__slow,
+        max-width @animationDuration__slow;
+
     ._overlayShown_
-    & {
-        width: 100%;
+    &.width__mainColumn {
         max-width: @maxWidth__mini;
 
         left: 50%;
@@ -60,9 +56,9 @@
 }
 
 .Menu__child {
-    overflow: hidden;
+    // overflow: hidden;
 
-    z-index: @zIndex__menuSubfield;
+    // z-index: @zIndex__menuSubfield;
     flex-grow: 1;
 }
 

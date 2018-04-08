@@ -58,56 +58,53 @@ MainColumn = ({
         'height__mainColumn'
     )}>
 
-        {/* <div className="MainColumn__belowMenu"> */}
+        <Stage />
 
-            <Stage />
-
-            <div className="popup-field">
-                <div className="subfield annotation-subfield">
-                    <AnnotationPopup {...annotationPopupHandlers}
-                        isOverlayAnnotation={false}
-                    />
-                </div>
+        <div className="popup-field">
+            <div className="subfield annotation-subfield">
+                <AnnotationPopup {...annotationPopupHandlers}
+                    isOverlayAnnotation={false}
+                />
             </div>
+        </div>
 
-            <div className="subfield dots-overview-subfield">
-                <Carousel {...carouselSectionHandlers} />
-                <DotsOverviewToggleSection {...dotsOverviewToggleSectionHandlers}
-                    scoresTipsSectionHandlers={scoresTipsSectionHandlers}
-                />
-
-                <div className="OverviewPopup-container">
-                    <OverviewPopup {...overviewPopupHandlers}
-                        inOverviewSubfield
-                    />
-                </div>
-
-                <LyricToggleExpand
-                    handleLyricSectionExpand={handleLyricSectionExpand}
-                    inMain
-                />
-
-                <div className="dots-subfield">
-                    <Dots {...dotsSectionHandlers} />
-                </div>
-
-                <ScoresTips {...scoresTipsSectionHandlers}
-                    inSubfield
-                />
-
-                <TipsPopup {...tipsPopupHandlers} />
-            </div>
-
-            <AudioBanner {...audioBannerHandlers}
-                inCustomSubfield
+        <div className="subfield dots-overview-subfield">
+            <Carousel {...carouselSectionHandlers} />
+            <DotsOverviewToggleSection {...dotsOverviewToggleSectionHandlers}
+                scoresTipsSectionHandlers={scoresTipsSectionHandlers}
             />
 
-            <CarouselToggle
-                handleCarouselNavToggle={handleCarouselNavToggle}
+            <div className="OverviewPopup-container">
+                <OverviewPopup {...overviewPopupHandlers}
+                    inOverviewSubfield
+                />
+            </div>
+
+            <LyricToggleExpand
+                handleLyricSectionExpand={handleLyricSectionExpand}
+                inMain
             />
 
-            <Nav {...navSectionHandlers} />
-        {/* </div> */}
+            <div className="dots-subfield">
+                <Dots {...dotsSectionHandlers} />
+            </div>
+
+            <ScoresTips {...scoresTipsSectionHandlers}
+                inSubfield
+            />
+
+            <TipsPopup {...tipsPopupHandlers} />
+        </div>
+
+        <AudioBanner {...audioBannerHandlers}
+            inCustomSubfield
+        />
+
+        <CarouselToggle
+            handleCarouselNavToggle={handleCarouselNavToggle}
+        />
+
+        <Nav {...navSectionHandlers} />
     </div>
 )
 

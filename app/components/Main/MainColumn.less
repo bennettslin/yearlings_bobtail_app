@@ -19,19 +19,21 @@
 }
 
 .width__mainColumn {
+    width: 100%;
+
     ._monitor_
     & {
-        width: ~"calc(100% - @{width__goldenCord})";
+        max-width: ~"calc(100% - @{width__goldenCord})";
     }
 
     ._laptop_
     & {
-        width: ~"calc(100% - @{width__uncannyValley})";
+        max-width: ~"calc(100% - @{width__uncannyValley})";
     }
 
     ._mobile_
     & {
-        width: 100%;
+        max-width: 100%;
     }
 }
 

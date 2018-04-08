@@ -44,13 +44,11 @@
 @zIndex__popupOverlay: @zIndex__lyricColumnButton + 1;
 @zIndex__popupOverlayContent: @zIndex__popupOverlay + 1;
 
+// Menu should be higher than popup overlay.
 @zIndex__menuField: @zIndex__popupOverlayContent + 1;
 
-// Menu should be higher than centre field and lyrics.
-@zIndex__menuSubfield: @zIndex__menuField + 1;
-
 // The overlay preventing popup interaction should be the highest.
-@zIndex__touchOverlay: @zIndex__menuSubfield + 1;
+@zIndex__touchOverlay: @zIndex__menuField + 1;
 
 .TouchOverlay {
     position: fixed;

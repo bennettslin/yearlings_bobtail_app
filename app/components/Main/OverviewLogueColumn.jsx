@@ -15,6 +15,9 @@ const mapStateToProps = ({
 })
 
 const OverviewLogueColumnPropTypes = {
+
+    // TODO: Why exactly are these needed by this component?
+
     // From Redux.
     stageCoordinates: PropTypes.shape({
         top: PropTypes.number.isRequired,
