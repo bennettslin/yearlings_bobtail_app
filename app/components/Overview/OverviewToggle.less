@@ -3,6 +3,8 @@
 .OverviewToggle-button-container {
 
     ._desktop_
+    &,
+    ._phone_
     & {
         // Give some room to menu above.
         margin-top: @margin__overview;
@@ -15,15 +17,15 @@
     }
 }
 
-._tablet_, ._mini_ {
+// ._tablet_, ._mini_ {
 
-    // This applies only to overviews in songs, not logues.
-    .OverviewPopup-container .overview.popup-wrapper {
+//     // This applies only to overviews in songs, not logues.
+//     .OverviewPopup-container .overview.popup-wrapper {
 
-        // Give some room to lyric section below.
-        margin-bottom: @margin__overview;
-    }
-}
+//         // Give some room to lyric section below.
+//         margin-bottom: @margin__overview;
+//     }
+// }
 
 ._tablet_ {
     .OverviewToggle-button-container {

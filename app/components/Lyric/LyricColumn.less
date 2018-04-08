@@ -18,15 +18,14 @@
         height: ~"calc(100% - @{height__menu})";
     }
 
+    ._phone_._song_._lyricExpanded_
+    & {
+        height: ~"calc(100% - @{height__aboveOverlay__phone})";
+    }
+
     ._mobile_._lyricHeightless_
     & {
         height: 0;
-    }
-
-    @phone-LyricColumn-subtraction: @height__menu__phone + @AudioBanner-custom-subfield-height + @AudioBanner-custom-subfield-padding * 2;
-
-    ._phone_._song_._lyricExpanded_ {
-        height: ~"calc(100% - @{phone-LyricColumn-subtraction})";
     }
 }
 

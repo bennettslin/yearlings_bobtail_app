@@ -31,6 +31,12 @@ Menu = ({
 }) => {
     return (
         <div className="Menu__container">
+
+            {/* Positioned earlier in DOM to slide behind menu. */}
+            <AudioBanner {...audioBannerHandlers}
+                isBelowMenu
+            />
+
             <div className={cx(
                 'Menu',
                 'width__mainColumn'
@@ -62,9 +68,7 @@ Menu = ({
                     />
                 </div>
             </div>
-            <AudioBanner {...audioBannerHandlers}
-                isBelowMenu
-            />
+
         </div>
     )
 }

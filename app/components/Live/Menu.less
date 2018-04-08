@@ -4,34 +4,57 @@
 @minWidth__childTitle: 72px;
 
 @height__menu: 72px;
-@height__menu__phone: @length__icon + 2 * @margin__menuChild__narrow;
+
+// This works out to 50px;
+@height__menu__phone:
+    @length__icon +
+    2 * @margin__menuChild__narrow;
+
+// Arbitrary for now.
+@height__audioBanner__phone: @height__audio / 2;
+
+// Arbitrary for now.
+@height__audioSlider__phone: @height__audio / 2;
+
+@height__isBelowMenu__phone:
+    @height__audioBanner__phone +
+    @height__audioSlider__phone;
+
+// Includes menu and slider.
+@height__aboveOverlay__phone:
+    @height__menu__phone +
+    @height__audioSlider__phone;
+
+// Includes menu, banner, and slider.
+@height__menuContainer__phone:
+    @height__aboveOverlay__phone +
+    @height__audioSlider__phone;
+
+@maxWidth__childAudio: 640px; // Arbitrary.
 
 .Menu__container,
 .Menu {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: @height__menu;
 }
 
 .Menu__container {
-    position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
+    z-index: @zIndex__menuField;
+
+    ._phone_
+    & {
+        height: @height__menuContainer__phone;
+    }
 }
 
 .Menu {
-    background-color: #8dd;
-    top: 0;
-    left: 0;
-    
-    display: flex;
-    align-items: center;
-
-    position: absolute;
-    height: @height__menu;
     overflow: hidden;
-
+    
     box-shadow: @boxShadow__menu;
-    z-index: @zIndex__menuField;
+    background-color: #8dd;
 
     transition:
         left @animationDuration__slow,
@@ -50,7 +73,12 @@
     & {
         height: @height__menu__phone;
     }
+}
 
+.Menu,
+.Menu__childScoresTips {
+    display: flex;
+    align-items: center;
 }
 
 .Menu__child {
@@ -82,12 +110,12 @@
 .Menu__childAudio {
     flex-grow: 2;
 
-    margin: 0 @margin__menuChild;
-    background-color: #8d8;
-
-    max-width: @audio-max-width;
-
+    margin: 0 @margin__menuChild;    
+    max-width: @maxWidth__childAudio;
+    
     transition: margin @animationDuration__default;
+    
+    background-color: #8d8;
 
     ._laptop_
     &,
@@ -119,18 +147,18 @@
         justify-content: flex-end;
     }
 
-    min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge + @audio-block-padding * 3;
+    min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge + @audio-block-padding * 3;
     
     box-sizing: border-box;
     
     ._tablet_
     & {
-        min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge__tablet + @audio-block-padding * 3;
+        min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__tablet + @audio-block-padding * 3;
     }
     
     ._mini_
     & {
-        min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge__mini + @audio-block-padding * 3;
+        min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__mini + @audio-block-padding * 3;
     }
     
     ._phone_
@@ -140,8 +168,6 @@
 }
 
 .Menu__childScoresTips {
-    display: flex;
-    align-items: center;
     
     ._scoresTipsMain_
     & {
@@ -152,7 +178,7 @@
         display: none;
     }
 
-    min-width: @scores-tips-width;
+    min-width: @width__childScoresTips;
 
     ._tablet_
     & {

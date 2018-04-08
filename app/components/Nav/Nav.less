@@ -6,25 +6,31 @@
 @import "./NavToggle.less";
 
 .nav-custom-subfield {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: @nav-height;
     z-index: @zIndex__navCustomSubfield;
 
     transition: top @animationDuration__default;
-}
 
-._tablet_ {
-    .nav-custom-subfield {
+    ._mobileNotPhone_
+    & {
+        bottom: auto;
+        top: 0;
+    }
+
+    ._tablet_
+    & {
         height: @nav-tablet-height;
     }
-}
-
-._mini_ {
-    .nav-custom-subfield {
+    
+    ._mini_
+    & {
         height: @nav-mini-height;
     }
 }
+
 
 .Live {
     .Nav {
@@ -62,7 +68,7 @@
 
 @nav-border-radius: @nav-height / 3;
 
-._tablet_, ._mini_ {
+._mobileNotPhone_ {
 
     .books-block {
         top: 0;

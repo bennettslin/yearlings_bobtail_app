@@ -6,7 +6,7 @@
     height: 100%;
     position: relative;
     margin-right: @audio-block-padding;
-    min-width: @AudioBanner-min-width;
+    min-width: @minWidth__audioBanner;
     line-height: 1em;
 
     background-color: #dbd;
@@ -29,6 +29,23 @@
     & {
         min-width: 200px;
         margin-right: @_titleInAudio_-block-padding;
+    }
+
+    &.isBelowMenu {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: @height__isBelowMenu__phone;
+
+        transition: bottom @animationDuration__default;
+    }
+
+    ._overlayShown_
+    &.isBelowMenu,
+    ._song_._lyricExpanded_
+    &.isBelowMenu
+    {
+        bottom: @height__audioBanner__phone;
     }
 }
 

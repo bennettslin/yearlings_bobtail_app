@@ -1,4 +1,5 @@
 // Component to show played song title, time played, and slider interface.
+/* eslint-disable object-shorthand */
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -44,7 +45,8 @@ AudioBanner = ({
     return Boolean(isBelowMenu) === isPhone && (
         <div className={cx(
             'audio-block',
-            'AudioBanner-block'
+            'AudioBanner-block',
+            { 'isBelowMenu': isBelowMenu }
         )}>
             <Slider {...other} />
             <div className="AudioBanner audio-display-block">
