@@ -6,6 +6,18 @@
 @height__menu: 72px;
 @height__menu__phone: @length__icon + 2 * @margin__menuChild__narrow;
 
+.Menu__container,
+.Menu {
+    height: @height__menu;
+}
+
+.Menu__container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 .Menu,
 .Menu__child {
     display: flex;
@@ -14,20 +26,37 @@
 }
 
 .Menu {
-    position: relative;
+    top: 0;
+    left: 0;
+
+    position: absolute;
     height: @height__menu;
     box-shadow: @boxShadow__menu;
-    top: 0;
+    
+    transition:
+        left @animationDuration__default,
+        transform @animationDuration__default,
+        width @animationDuration__default;
 
     // transition: top @animationDuration__default;
 
     // Needs to be above nav when nav buttons are hidden.
     z-index: @zIndex__menuField;
 
+    ._overlayShown_
+    & {
+        width: 100%;
+        max-width: @maxWidth__mini;
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     ._phone_
     & {
         height: @height__menu__phone;
     }
+
 }
 
 .Menu__child {

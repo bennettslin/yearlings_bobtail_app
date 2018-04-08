@@ -1,9 +1,26 @@
 @import "./DotsOverviewToggleSection.less";
+@import "./PopupOverlaid.less";
 @import "./ScoresTipsSection.less";
 @import "./Menu.less";
 
-.MainColumn,
-.testMenu__child {
+.MainColumn {
+    position: absolute;
+    left: 0;
+
+    // overflow: visible;
+
+    flex-grow: 1;
+    
+    display: flex;
+    flex-direction: column;
+    
+    ._mobile_
+    & {
+        flex-direction: column-reverse;
+    }
+}
+
+.width__mainColumn {
     ._monitor_
     & {
         width: ~"calc(100% - @{width__goldenCord})";
@@ -20,44 +37,8 @@
     }
 }
 
-.testMenu__container,
-.testMenu__child {
-    position: absolute;
-    height: @height__menu;
-}
-
-.testMenu__container {
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 500;
-
-    background-color: rgba(200, 250, 250, 0.5);
-}
-
-.testMenu__child {
-    left: 0;
-    background-color: rgba(250, 250, 200, 0.7);
-    
-    transition:
-    left @animationDuration__default,
-    transform @animationDuration__default,
-    width @animationDuration__default;
-    
-    ._overlayShown_
-    & {
-        width: 100%;
-        max-width: @maxWidth__mini;
-
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-.MainColumn, .popupOverlaid__child {
-    position: absolute;
+.height__mainColumn {
     top: @height__menu;
-    left: 0;
 
     display: flex;
     flex-direction: column;
@@ -68,24 +49,12 @@
         height: ~"calc(100% - @{height__lyricCollapsed} - @{height__menu})";
     }
 
+    .PopupOverlaid
+    &,
     ._desktop_
     &,
     ._lyricHeightless_
     & {
         height: ~"calc(100% - @{height__menu})";
-    }
-}
-
-.MainColumn__belowMenu {
-    overflow: visible;
-    position: relative;
-    flex-grow: 1;
-    
-    display: flex;
-    flex-direction: column;
-    
-    ._mobile_
-    & {
-        flex-direction: column-reverse;
     }
 }

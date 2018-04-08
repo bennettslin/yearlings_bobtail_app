@@ -10,8 +10,7 @@
 }
 
 // Parent container of both audio sections.
-.Menu__childAudio,
-.popup-wrapper.audio {
+.Menu__childAudio {
     min-width: @AudioBanner-min-width + @AudioButtons-constant + @length__iconLarge + @audio-block-padding * 3;
     
     box-sizing: border-box;
@@ -38,12 +37,6 @@
 
 .Menu__childAudio {
     transition: margin-bottom @animationDuration__default;
-
-    ._overlayShown_
-    & {
-        // TODO: I don't understand this number, but it doesn't push it up all the way.
-        // margin-bottom: @nav-height * 2;
-    }
 }
 
 .Audio {

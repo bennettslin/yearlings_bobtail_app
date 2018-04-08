@@ -12,19 +12,19 @@
 .Popup {
 
     box-sizing: border-box;
-
+    
     &:not(.overview) {
         top: 0;
         left: 0;
-    }
-
-    &:not(.overview):not(.audio) {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    &.annotation, &.overview, &.tips, &.title {
+    &.annotation,
+    &.overview,
+    &.tips,
+    &.title {
         .popup-wrapper {
             animation: bounceOut @popup-transition-duration-out;
         }
@@ -36,7 +36,7 @@
         }
     }
 
-    &.wiki, &.audio {
+    &.wiki {
         .popup-wrapper {
             animation: shrinkOut @popup-transition-duration-out;
         }
@@ -49,7 +49,10 @@
     }
 
     // Including annotation is possible because its height is auto, not 100%.
-    &.annotation, &.audio, &.score, &.title, &.wiki {
+    &.annotation,
+    &.score,
+    &.title,
+    &.wiki {
         z-index: @zIndex__popupOverlayContent;
     }
 
@@ -115,21 +118,19 @@
         width: @popup-annotation-width;
         max-width: @popup-annotation-width;
     }
-}
 
-// Multiplier is .9, just like for lyric text in mini.
-._mini_ {
-    .popup-wrapper {
+    // Multiplier is .9, just like for lyric text in mini.
+    ._mini_
+    & {
         &.annotation, &.tips, &.title {
             // width: @mini-popup-annotation-width;
             max-width: @mini-popup-annotation-width;
         }
     }
-}
 
-// Multiplier is .98, just like for lyric text in phone.
-._phone_ {
-    .popup-wrapper {
+    // Multiplier is .98, just like for lyric text in phone.
+    ._phone_
+    & {
         &.annotation, &.tips, &.title {
             // width: @phone-popup-annotation-width;
             max-width: @phone-popup-annotation-width;
@@ -161,11 +162,6 @@
     &.tips {
         // Arbitrary for now.
         min-height: 150px;
-    }
-
-    &.title {
-        // Arbitrary for now.
-        // min-height: 150px;
     }
 }
 

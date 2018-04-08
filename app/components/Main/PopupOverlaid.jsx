@@ -25,13 +25,13 @@ const PopupOverlaid = ({
 
 }) => (
     <div className={cx(
-        'popupOverlaid__container',
+        'PopupOverlaid',
         'absoluteFullContainer'
     )}>
 
         <div className={cx(
-            'main-popup-block',
-            'popupOverlaid__child'
+            'PopupOverlaid__child',
+            'height__mainColumn'
         )}>
             <AnnotationPopup {...annotationPopupHandlers}
                 isOverlayAnnotation

@@ -26,31 +26,35 @@ Menu = ({
 
 }) => {
     return (
-        <div className="Menu">
-
+        <div className="Menu__container">
             <div className={cx(
-                'Menu__childTitle',
-                'Menu__child'
+                'Menu',
+                'width__mainColumn'
             )}>
-                <TitleToggle {...titleToggleHandlers}
-                    inMenu
-                />
-            </div>
-
             <div className={cx(
-                'Menu__childAudio',
-                'Menu__child'
-            )}>
-                <Audio {...audioSectionHandlers} />
-            </div>
+                    'Menu__childTitle',
+                    'Menu__child'
+                )}>
+                    <TitleToggle {...titleToggleHandlers}
+                        inMenu
+                    />
+                </div>
 
-            <div className={cx(
-                'Menu__childScoresTips',
-                'Menu__child'
-            )}>
-                <ScoresTipsSection {...scoresTipsSectionHandlers}
-                    inMenu
-                />
+                <div className={cx(
+                    'Menu__childAudio',
+                    'Menu__child'
+                )}>
+                    <Audio {...audioSectionHandlers} />
+                </div>
+
+                <div className={cx(
+                    'Menu__childScoresTips',
+                    'Menu__child'
+                )}>
+                    <ScoresTipsSection {...scoresTipsSectionHandlers}
+                        inMenu
+                    />
+                </div>
             </div>
         </div>
     )

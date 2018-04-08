@@ -54,10 +54,11 @@ MainColumn = ({
 }) => (
     <div className={cx(
         'MainColumn',
-        'column'
+        'width__mainColumn',
+        'height__mainColumn'
     )}>
 
-        <div className="MainColumn__belowMenu">
+        {/* <div className="MainColumn__belowMenu"> */}
 
             <Stage />
 
@@ -106,7 +107,7 @@ MainColumn = ({
             />
 
             <Nav {...navSectionHandlers} />
-        </div>
+        {/* </div> */}
     </div>
 )
 

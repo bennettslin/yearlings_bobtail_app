@@ -1,4 +1,4 @@
-.popupOverlaid__container {
+.PopupOverlaid {
 
     // Prevent lyric scrolling from pushing app offscreen.
     overflow: hidden;
@@ -8,21 +8,9 @@
     flex-direction: column;
     align-items: center;
 
-    .AudioPopup-block, .Audio {
-        height: @height__menu;
-    }
-
-    .Popup {
-        &.audio {
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-    .popup-wrapper.audio {
-        flex-grow: 1;
-        box-shadow: @popup-darker-box-shadow;
-    }
+    // .AudioPopup-block {
+    //     height: @height__menu;
+    // }
 
     .popup-content-wrapper {
         box-sizing: border-box;
@@ -37,35 +25,8 @@
     }
 }
 
-.popupOverlaid__child {
-    position: relative;
-    width: 100%;
-
-    &.AudioPopup-block {
-        display: flex;
-        justify-content: center;
-    }
-
-    &.main-popup-block {
-        flex-grow: 1;
-    }
-}
-
-._desktop_, ._tablet_ {
-    /**
-     * In desktop and tablet, width of audio subfield in overlay is less than
-     * width of screen.
-     */
-    .popupOverlaid__container {
-        .popup-wrapper.audio {
-            overflow: hidden;
-            border-radius: 15px;
-        }
-    }
-}
-
 ._annotationOverlaid_ {
-    .popupOverlaid__container {
+    .PopupOverlaid {
         .popup-content-wrapper {
             &.annotation {
                 box-shadow: @popup-darker-box-shadow;
@@ -75,64 +36,50 @@
 }
 
 // Styling for overlaid audio in phone, which has timer in audio section.
-._phone_ {
-    &._overlayShown_ {
-
-        // .AudioBanner-custom-subfield {
-        //     top: -@height__menu - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
-        // }
-
-        .popupOverlaid__container {
-
-            @banner-margin: 5px;
-
-            .Audio {
-                align-items: flex-start;
-            }
-
-            .Audio, .AudioPopup-block {
-                height: @length__icon * 2 + @banner-margin;
-            }
-
-            .AudioButtons-block, .AudioTimer-block, .AudioBanner-block {
-                height: @length__icon;
-            }
-
-            .AudioButtons-block {
-                max-width: 300px; // Also arbitrary.
-            }
-
-            .AudioTimer-block {
-                flex-grow: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: @audio-block-padding;
-            }
-
-            .AudioBanner-block {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-            }
-
-            .audio-display-block {
-                display: none;
-            }
-        }
-    }
-}
-
-// ._desktop_ {
+// ._phone_ {
 //     &._overlayShown_ {
 
-//         // Only hide menu in desktop, because menu hides nav in mobile.
-//         .Menu {
-//             top: -@height__menu;
-//         }
+//         // .AudioBanner-custom-subfield {
+//         //     top: -@height__menu - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
+//         // }
 
-//         .AudioBanner-custom-subfield {
-//             top: -@height__menu - @AudioBanner-custom-subfield-height - 2 * @AudioBanner-custom-subfield-padding;
+//         .PopupOverlaid {
+
+//             @banner-margin: 5px;
+
+//             .Audio {
+//                 align-items: flex-start;
+//             }
+
+//             .Audio, .AudioPopup-block {
+//                 height: @length__icon * 2 + @banner-margin;
+//             }
+
+//             .AudioButtons-block, .AudioTimer-block, .AudioBanner-block {
+//                 height: @length__icon;
+//             }
+
+//             .AudioButtons-block {
+//                 max-width: 300px; // Also arbitrary.
+//             }
+
+//             .AudioTimer-block {
+//                 flex-grow: 1;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 margin-right: @audio-block-padding;
+//             }
+
+//             .AudioBanner-block {
+//                 position: absolute;
+//                 bottom: 0;
+//                 width: 100%;
+//             }
+
+//             .audio-display-block {
+//                 display: none;
+//             }
 //         }
 //     }
 // }
