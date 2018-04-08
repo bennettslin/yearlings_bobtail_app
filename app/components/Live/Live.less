@@ -1,4 +1,5 @@
-@import "./DotsOverviewToggleSection.less";
+@import "./Main/DotsOverview.less";
+@import "./OverviewLogue.less";
 @import "./PopupOverlaid.less";
 @import "./ScoresTips.less";
 @import "./Menu.less";
@@ -70,31 +71,23 @@
         position: absolute;
         height: 100%;
     }
+}
 
-    .LyricColumn, .OverviewLogueColumn {
+.width__lyricColumn {
+
+    ._desktop_
+    & {
         width: @width__goldenCord;
         right: 0;
     }
 
-    &._laptop_ {
-
-        .LyricColumn, .OverviewLogueColumn {
-            width: @width__uncannyValley;
-        }
+    ._laptop_
+    & {
+        width: @width__uncannyValley;
     }
 
-    .OverviewLogueColumn {
-        
-        .Popup {
-            display: flex;
-            justify-content: center;
-        }
-    }
-}
-
-._mobile_ {
-
-    .LyricColumn, .OverviewLogueColumn {
+    ._mobile_
+    & {
         position: absolute;
         height: @height__lyricCollapsed;
         width: 100%;

@@ -21,7 +21,7 @@
 }
 
 // Toggle container.
-.DotsOverviewToggleSection {
+.DotsOverview {
     position: relative;
     width: @OverviewToggle-width;
 
@@ -49,13 +49,13 @@
 ._annotationShown_._navExpanded_,
 ._dotsShown_,
 ._tipsShown_ {
-    .DotsOverviewToggleSection {
+    .DotsOverview {
         opacity: 0;
         margin-left: -@OverviewToggle-width;
     }
 }
 
-.DotsOverviewToggleSection,
+.DotsOverview,
 .CarouselToggle {
     ._mobile_
     & {
@@ -63,7 +63,7 @@
     }
 }
 
-.DotsOverviewToggleSection,
+.DotsOverview,
 .DotsToggle-button-container {
     display: flex;
     flex-direction: column;

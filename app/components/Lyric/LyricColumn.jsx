@@ -207,6 +207,7 @@ LyricColumnView = ({
             className={cx(
                 'column',
                 'LyricColumn',
+                'width__lyricColumn',
                 isHeavyRenderReady ? 'renderReady' : 'renderUnready'
             )}
             ref={myRef}

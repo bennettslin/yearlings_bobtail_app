@@ -11,7 +11,7 @@ import Main from './Main/Main'
 import Menu from './Menu'
 import PopupOverlaid from './PopupOverlaid'
 
-import OverviewLogueColumn from './OverviewLogueColumn'
+import OverviewLogue from './OverviewLogue'
 import LyricColumn from '../Lyric/LyricColumn'
 
 class Live extends Component {
@@ -153,7 +153,7 @@ class Live extends Component {
                 handlePopupContainerClick
             },
 
-            scoresTipsSectionHandlers = {
+            scoresTipsHandlers = {
                 handleScoreToggle,
                 handleTipsToggle
             },
@@ -184,7 +184,7 @@ class Live extends Component {
 
                 annotationPopupHandlers,
                 overviewPopupHandlers,
-                scoresTipsSectionHandlers,
+                scoresTipsHandlers,
                 tipsPopupHandlers,
 
                 carouselSectionHandlers: {
@@ -213,7 +213,7 @@ class Live extends Component {
             menuFieldHandlers = {
                 titleToggleHandlers,
                 audioHandlers,
-                scoresTipsSectionHandlers,
+                scoresTipsHandlers,
                 audioBannerHandlers
             }
 
@@ -224,7 +224,7 @@ class Live extends Component {
 
                 <Main {...mainColumnHandlers} />
 
-                <OverviewLogueColumn
+                <OverviewLogue
                     overviewPopupHandlers={overviewPopupHandlers}
                 />
 

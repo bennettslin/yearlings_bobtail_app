@@ -17,7 +17,7 @@ const menuPropTypes = {
     // From parent.
     titleToggleHandlers: PropTypes.object.isRequired,
     audioHandlers: PropTypes.object.isRequired,
-    scoresTipsSectionHandlers: PropTypes.object.isRequired,
+    scoresTipsHandlers: PropTypes.object.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
 },
 
@@ -25,7 +25,7 @@ Menu = ({
 
     titleToggleHandlers,
     audioHandlers,
-    scoresTipsSectionHandlers,
+    scoresTipsHandlers,
     audioBannerHandlers
 
 }) => {
@@ -57,7 +57,7 @@ Menu = ({
                     'Menu__child',
                     'Menu__child__hiddenInOverlay'
                 )}>
-                    <ScoresTips {...scoresTipsSectionHandlers}
+                    <ScoresTips {...scoresTipsHandlers}
                         inMenu
                     />
                 </div>

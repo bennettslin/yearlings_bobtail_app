@@ -3,6 +3,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 import OverviewPopup from '../Popups/OverviewPopup'
 
@@ -31,18 +32,22 @@ const OverviewLogueColumnPropTypes = {
     overviewPopupHandlers: PropTypes.object.isRequired
 },
 
-OverviewLogueColumn = ({
+OverviewLogue = ({
 
     overviewPopupHandlers
 
 }) => (
-    <div className="column OverviewLogueColumn">
+    <div className={cx(
+        'OverviewLogue',
+        'width__lyricColumn',
+        'column'
+    )}>
         <OverviewPopup {...overviewPopupHandlers}
             inOverviewSubfield={false}
         />
     </div>
 )
 
-OverviewLogueColumn.propTypes = OverviewLogueColumnPropTypes
+OverviewLogue.propTypes = OverviewLogueColumnPropTypes
 
-export default connect(mapStateToProps)(OverviewLogueColumn)
+export default connect(mapStateToProps)(OverviewLogue)

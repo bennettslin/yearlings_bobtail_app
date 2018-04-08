@@ -12,7 +12,7 @@ import AnnotationPopup from '../../Popups/AnnotationPopup'
 import CarouselToggle from '../../Carousel/CarouselToggle'
 import Carousel from '../../Carousel/Carousel'
 import Dots from '../../Dots/Dots'
-import DotsOverviewToggleSection from '../DotsOverviewToggleSection'
+import DotsOverview from './DotsOverview'
 import LyricToggleExpand from '../../Lyric/LyricToggleExpand'
 import Stage from '../../stage/Stage'
 import OverviewPopup from '../../Popups/OverviewPopup'
@@ -31,7 +31,7 @@ const mainColumnPropTypes = {
     navSectionHandlers: PropTypes.object.isRequired,
     overviewPopupHandlers: PropTypes.object.isRequired,
     tipsPopupHandlers: PropTypes.object.isRequired,
-    scoresTipsSectionHandlers: PropTypes.object.isRequired
+    scoresTipsHandlers: PropTypes.object.isRequired
 },
 
 Main = ({
@@ -45,7 +45,7 @@ Main = ({
     dotsSectionHandlers,
     navSectionHandlers,
     overviewPopupHandlers,
-    scoresTipsSectionHandlers,
+    scoresTipsHandlers,
     tipsPopupHandlers
 
 }) => (
@@ -67,8 +67,8 @@ Main = ({
 
         <div className="subfield dots-overview-subfield">
             <Carousel {...carouselSectionHandlers} />
-            <DotsOverviewToggleSection {...dotsOverviewToggleSectionHandlers}
-                scoresTipsSectionHandlers={scoresTipsSectionHandlers}
+            <DotsOverview {...dotsOverviewToggleSectionHandlers}
+                scoresTipsHandlers={scoresTipsHandlers}
             />
 
             <div className="OverviewPopup-container">
@@ -86,7 +86,7 @@ Main = ({
                 <Dots {...dotsSectionHandlers} />
             </div>
 
-            <ScoresTips {...scoresTipsSectionHandlers}
+            <ScoresTips {...scoresTipsHandlers}
                 inSubfield
             />
 
