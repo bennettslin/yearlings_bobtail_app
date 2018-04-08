@@ -11,7 +11,7 @@
     @js__margin__menuChild__narrow * 2;
 
 // Arbitrary for now.
-@height__audioBanner__bottomRow: @js__height__audio / 2;
+@js__height__audioBanner__bottomRow: @js__height__audio / 2;
 
 // Arbitrary for now.
 @js__height__audioSlider__bottomRow: @js__height__audio / 2;
@@ -22,12 +22,12 @@
     @js__height__audioSlider__bottomRow;
 
 // Includes menu, banner, and slider.
-@height__menu__phone:
+@js__height__menu__phone:
     @js__height__aboveOverlay__phone +
-    @js__height__audioSlider__bottomRow;
+    @js__height__audioBanner__bottomRow;
 
 @height__bottomRow:
-    @height__audioBanner__bottomRow +
+    @js__height__audioBanner__bottomRow +
     @js__height__audioSlider__bottomRow;
 
 @maxWidth__childAudio: 640px; // Arbitrary.
@@ -46,7 +46,7 @@
 
     ._phone_
     & {
-        height: @height__menu__phone;
+        height: @js__height__menu__phone;
     }
 }
 
@@ -86,7 +86,7 @@
     &,
     ._song_._lyricExpanded_
     & {
-        bottom: @height__audioBanner__bottomRow;
+        bottom: @js__height__audioBanner__bottomRow;
     }
 }
 

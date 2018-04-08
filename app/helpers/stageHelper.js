@@ -16,12 +16,10 @@ import { PHONE_WIDTH,
          APP_TABLET_LARGE_ICON_DIAMETER,
          APP_LARGE_ICON_DIAMETER,
          APP_THIN_MARGIN,
-         AUDIO_BANNER_CUSTOM_SUBFIELD_HEIGHT,
-         AUDIO_BANNER_CUSTOM_SUBFIELD_PADDING,
 
          COLLAPSED_LYRIC_SECTION_HEIGHT,
          LS_HEIGHT_MENU,
-         LS_HEIGHT_MENU_TOP_ROW_PHONE,
+         LS_HEIGHT_MENU_PHONE,
 
          NAV_BOOK_HEIGHT } from '../constants/responsive'
 
@@ -47,13 +45,11 @@ export const getStageCoordinates = ({
 
         isPhone = getIsPhone(deviceIndex),
 
-        audioBannerOverflow = isPhone ? AUDIO_BANNER_CUSTOM_SUBFIELD_HEIGHT + AUDIO_BANNER_CUSTOM_SUBFIELD_PADDING * 2 : 0,
-
         isHiddenNav = getIsHiddenNav({ deviceIndex, windowHeight }),
 
         navHeight = isPhone || isHeightlessLyricColumn || isHiddenNav ? 0 : NAV_BOOK_HEIGHT,
 
-        centreFieldHeight = getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - audioBannerOverflow - navHeight,
+        centreFieldHeight = getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - navHeight,
 
         centreFieldRatio = centreFieldWidth / centreFieldHeight
 
@@ -80,7 +76,7 @@ export const getStageCoordinates = ({
 
     } else {
         // If stage height is adjustable, put closer to bottom in mobile.
-        top = audioBannerOverflow + navHeight + (centreFieldHeight - height) * 0.9
+        top = navHeight + (centreFieldHeight - height) * 0.9
 
         // Keep centred in mobile, even with dots overview.
         left = (dotsOverviewOverflow + centreFieldWidth - width) * 0.5
@@ -162,7 +158,7 @@ export const getCentreFieldHeight = (
         ),
 
         menuHeight = getIsPhone(deviceIndex) ?
-            LS_HEIGHT_MENU_TOP_ROW_PHONE : LS_HEIGHT_MENU
+            LS_HEIGHT_MENU_PHONE : LS_HEIGHT_MENU
 
     return windowHeight - menuHeight - lyricColumnHeight
 }

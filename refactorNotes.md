@@ -6,7 +6,6 @@ Folder/file structure organised
 
 Less constants
     All renamed, or accounted for elsewhere in a comment.
-    Underscored if private
     Prefixed with JS if needed, make sure consistent
 
 Class names optimised for clarity
@@ -29,7 +28,7 @@ Icon
 Live
     DotsOverview
     Main
-    Menu
+    Menu (/)
     OverviewLogue
     PopupOverlaid
     ScoresTips
