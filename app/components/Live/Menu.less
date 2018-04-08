@@ -6,51 +6,51 @@
 @height__menu: 72px;
 
 // This works out to 50px;
-@height__menu__phone:
+@height__menuTopRow__phone:
     @length__icon +
     2 * @margin__menuChild__narrow;
 
 // Arbitrary for now.
-@height__audioBanner__phone: @height__audio / 2;
+@height__audioBanner__bottomRow: @height__audio / 2;
 
 // Arbitrary for now.
-@height__audioSlider__phone: @height__audio / 2;
+@height__audioSlider__bottomRow: @height__audio / 2;
 
-@height__isBelowMenu__phone:
-    @height__audioBanner__phone +
-    @height__audioSlider__phone;
+@height__bottomRow:
+    @height__audioBanner__bottomRow +
+    @height__audioSlider__bottomRow;
 
 // Includes menu and slider.
 @height__aboveOverlay__phone:
-    @height__menu__phone +
-    @height__audioSlider__phone;
+    @height__menuTopRow__phone +
+    @height__audioSlider__bottomRow;
 
 // Includes menu, banner, and slider.
-@height__menuContainer__phone:
+@height__menu__phone:
     @height__aboveOverlay__phone +
-    @height__audioSlider__phone;
+    @height__audioSlider__bottomRow;
 
 @maxWidth__childAudio: 640px; // Arbitrary.
 
-.Menu__container,
-.Menu {
+.Menu,
+.MenuTopRow {
     position: absolute;
     top: 0;
     left: 0;
     height: @height__menu;
 }
 
-.Menu__container {
+.Menu {
     width: 100%;
     z-index: @zIndex__menuField;
 
     ._phone_
     & {
-        height: @height__menuContainer__phone;
+        height: @height__menu__phone;
     }
 }
 
-.Menu {
+.MenuTopRow {
     overflow: hidden;
     
     box-shadow: @boxShadow__menu;
@@ -71,17 +71,32 @@
 
     ._phone_
     & {
-        height: @height__menu__phone;
+        height: @height__menuTopRow__phone;
     }
 }
 
-.Menu,
-.Menu__childScoresTips {
+.MenuBottomRow {
+    position: absolute;
+    bottom: 0;
+    height: @height__bottomRow;
+
+    transition: bottom @animationDuration__default;
+
+    ._overlayShown_
+    &,
+    ._song_._lyricExpanded_
+    & {
+        bottom: @height__audioBanner__bottomRow;
+    }
+}
+
+.MenuTopRow,
+.MenuTopRow__childScoresTips {
     display: flex;
     align-items: center;
 }
 
-.Menu__child {
+.MenuTopRow__child {
     height: 100%;
     flex-grow: 1;
 
@@ -90,7 +105,7 @@
         max-width @animationDuration__fast;
 }
 
-.Menu__childTitle {
+.MenuTopRow__childTitle {
     min-width: @minWidth__childTitle;
     max-width: 200px; // Arbitrary.
 
@@ -107,7 +122,7 @@
     }
 }
 
-.Menu__childAudio {
+.MenuTopRow__childAudio {
     flex-grow: 2;
 
     margin: 0 @margin__menuChild;    
@@ -167,7 +182,7 @@
     }
 }
 
-.Menu__childScoresTips {
+.MenuTopRow__childScoresTips {
     
     ._scoresTipsMain_
     & {
@@ -191,7 +206,7 @@
     }
 }
 
-.Menu__child__hiddenInOverlay {
+.MenuTopRow__child__hiddenInOverlay {
     ._overlayShown_
     & {
         width: 0;

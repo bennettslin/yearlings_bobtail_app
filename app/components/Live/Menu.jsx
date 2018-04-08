@@ -30,21 +30,26 @@ Menu = ({
 
 }) => {
     return (
-        <div className="Menu__container">
+        <div className="Menu">
 
             {/* Positioned earlier in DOM to slide behind menu. */}
-            <AudioBanner {...audioBannerHandlers}
-                isBelowMenu
-            />
+            <div className={cx(
+                'MenuBottomRow',
+                'width__mainColumn'
+            )}>
+                <AudioBanner {...audioBannerHandlers}
+                    isBelowMenu
+                />
+            </div>
 
             <div className={cx(
-                'Menu',
+                'MenuTopRow',
                 'width__mainColumn'
             )}>
                 <div className={cx(
-                    'Menu__childTitle',
-                    'Menu__child',
-                    'Menu__child__hiddenInOverlay'
+                    'MenuTopRow__childTitle',
+                    'MenuTopRow__child',
+                    'MenuTopRow__child__hiddenInOverlay'
                 )}>
                     <TitleToggle {...titleToggleHandlers}
                         inMenu
@@ -52,16 +57,16 @@ Menu = ({
                 </div>
 
                 <div className={cx(
-                    'Menu__childAudio',
-                    'Menu__child'
+                    'MenuTopRow__childAudio',
+                    'MenuTopRow__child'
                 )}>
                     <Audio {...audioHandlers} />
                 </div>
 
                 <div className={cx(
-                    'Menu__childScoresTips',
-                    'Menu__child',
-                    'Menu__child__hiddenInOverlay'
+                    'MenuTopRow__childScoresTips',
+                    'MenuTopRow__child',
+                    'MenuTopRow__child__hiddenInOverlay'
                 )}>
                     <ScoresTips {...scoresTipsHandlers}
                         inMenu

@@ -28,6 +28,10 @@ const mapStateToProps = ({
     selectedWikiIndex
 })
 
+const annotationPopupDefaultProps = {
+    isOverlayAnnotation: false
+}
+
 const annotationPopupPropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
@@ -116,6 +120,7 @@ AnnotationPopup = ({
     }
 }
 
+AnnotationPopup.defaultProps = annotationPopupDefaultProps
 AnnotationPopup.propTypes = annotationPopupPropTypes
 
 export default connect(mapStateToProps)(AnnotationPopup)

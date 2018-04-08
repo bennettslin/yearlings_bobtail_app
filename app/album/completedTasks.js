@@ -2198,7 +2198,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Menu in logue upon load is stuck in Chrome? (Just needed to hide overflow in lyric column.)`,
+        taskName: `MenuTopRow in logue upon load is stuck in Chrome? (Just needed to hide overflow in lyric column.)`,
         workedHours: 1,
         neededHours: 1
     },

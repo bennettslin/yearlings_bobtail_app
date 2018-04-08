@@ -45,8 +45,7 @@ AudioBanner = ({
     return Boolean(isBelowMenu) === isPhone && (
         <div className={cx(
             'audio-block',
-            'AudioBanner-block',
-            { 'isBelowMenu': isBelowMenu }
+            'AudioBanner-block'
         )}>
             <Slider {...other} />
             <div className="AudioBanner audio-display-block">

@@ -57,9 +57,7 @@ Main = ({
 
         <Stage />
 
-        <AnnotationPopup {...annotationPopupHandlers}
-            isOverlayAnnotation={false}
-        />
+        <AnnotationPopup {...annotationPopupHandlers} />
 
         <Carousel {...carouselSectionHandlers} />
 
