@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 import DotsToggle from '../Dots/DotsToggle'
 import OverviewToggle from '../Overview/OverviewToggle'
-import ScoresTipsSection from './ScoresTipsSection'
+import ScoresTips from './ScoresTips'
 
 const dotsOverviewToggleSectionPropTypes = {
     // From parent.
@@ -29,7 +29,7 @@ DotsOverviewToggleSection = ({
         <DotsToggle
             handleDotsSectionToggle={handleDotsSectionToggle}
         />
-        <ScoresTipsSection {...scoresTipsSectionHandlers}
+        <ScoresTips {...scoresTipsSectionHandlers}
             inToggleSection
         />
     </div>

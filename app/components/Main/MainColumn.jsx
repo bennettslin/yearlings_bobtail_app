@@ -18,7 +18,7 @@ import LyricToggleExpand from '../Lyric/LyricToggleExpand'
 import Stage from '../stage/Stage'
 import OverviewPopup from '../Popups/OverviewPopup'
 import TipsPopup from '../Popups/TipsPopup'
-import ScoresTipsSection from './ScoresTipsSection'
+import ScoresTips from './ScoresTips'
 
 const mainColumnPropTypes = {
     // From parent.
@@ -91,7 +91,7 @@ MainColumn = ({
                     <Dots {...dotsSectionHandlers} />
                 </div>
 
-                <ScoresTipsSection {...scoresTipsSectionHandlers}
+                <ScoresTips {...scoresTipsSectionHandlers}
                     inSubfield
                 />
 

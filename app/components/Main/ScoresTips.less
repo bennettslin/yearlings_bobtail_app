@@ -7,7 +7,7 @@
 @scores-tips-_mini_: 2 * @length__iconLarge__mini + 2 * @scores-tips-padding + @scores-tips-margin;
 @scores-tips-_phone_: 2 * @length__icon + 2 * @scores-tips-padding + @scores-tips-margin;
 
-.ScoresTipsSection {
+.ScoresTips {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,7 @@
 
     min-width: @scores-tips-width;
 
-    .ScoresTipsSection {
+    .ScoresTips {
         .Button:first-child {
             margin-right: @scores-tips-margin;
         }
@@ -46,7 +46,7 @@
 ._mobile_ {
 
     .MainColumn {
-        .ScoresTipsSection {
+        .ScoresTips {
             position: absolute;
             transition: right @animationDuration__default;
             right: 0;
@@ -63,7 +63,7 @@
     &._mini_ {
         // Affects section in centre field only.
         &._lyricExpanded_, &._overviewShown_, &._tipsShown_, &._annotationShown_._navExpanded_, &._dotsShown_ {
-            .ScoresTipsSection {
+            .ScoresTips {
                 right: -@scores-tips-_mini_;
             }
         }
@@ -75,13 +75,13 @@
 
     &._phone_ {
         &._lyricExpanded_, &._overviewShown_, &._tipsShown_, &._annotationShown_._navExpanded_, &._dotsShown_ {
-            .ScoresTipsSection {
+            .ScoresTips {
                 right: -@scores-tips-_phone_;
             }
         }
 
         // In phone, section is always in centre field.
-        .ScoresTipsSection {
+        .ScoresTips {
             bottom: auto;
         }
     }
@@ -89,7 +89,7 @@
 
 // I don't understand this.
 ._logue_, ._song_._overviewShown_._scoresTipsMain_ {
-    .ScoresTipsSection {
+    .ScoresTips {
 
         .Button {
             transform: scale(0);
@@ -99,7 +99,7 @@
 }
 
 ._song_ {
-    .ScoresTipsSection {
+    .ScoresTips {
         .Button {
             transform: scale(1);
         }

@@ -25,13 +25,13 @@ const mapStateToProps = ({
     selectedTipsIndex
 })
 
-const scoresTipsSectionDefaultProps = {
+const scoresTipsDefaultProps = {
     inMenu: false,
     inSubfield: false,
     inToggleSection: false
 },
 
-scoresTipsSectionPropTypes = {
+scoresTipsPropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     isScoreLoaded: PropTypes.bool.isRequired,
@@ -47,7 +47,7 @@ scoresTipsSectionPropTypes = {
     handleTipsToggle: PropTypes.func.isRequired
 },
 
-ScoresTipsSection = ({
+ScoresTips = ({
 
     deviceIndex,
     isScoreLoaded,
@@ -81,7 +81,7 @@ ScoresTipsSection = ({
 
     return shouldRender && (
         <div className={cx(
-            'ScoresTipsSection'
+            'ScoresTips'
         )}>
             {showScoreToggleButton &&
                 <Button
@@ -106,7 +106,7 @@ ScoresTipsSection = ({
     )
 }
 
-ScoresTipsSection.defaultProps = scoresTipsSectionDefaultProps
-ScoresTipsSection.propTypes = scoresTipsSectionPropTypes
+ScoresTips.defaultProps = scoresTipsDefaultProps
+ScoresTips.propTypes = scoresTipsPropTypes
 
-export default connect(mapStateToProps)(ScoresTipsSection)
+export default connect(mapStateToProps)(ScoresTips)

@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Audio from '../Audio/Audio'
-import ScoresTipsSection from './ScoresTipsSection'
+import ScoresTips from './ScoresTips'
 import TitleToggle from '../Title/TitleToggle'
 
 const menuPropTypes = {
@@ -51,7 +51,7 @@ Menu = ({
                     'Menu__childScoresTips',
                     'Menu__child'
                 )}>
-                    <ScoresTipsSection {...scoresTipsSectionHandlers}
+                    <ScoresTips {...scoresTipsSectionHandlers}
                         inMenu
                     />
                 </div>
