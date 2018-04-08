@@ -5,15 +5,27 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import TitleToggle from '../Title/TitleToggle'
 import Audio from '../Audio/Audio'
 import ScoresTips from './ScoresTips'
 import AudioBanner from '../Audio/AudioBanner'
+import AudioTimer from '../Audio/AudioTimer'
 
+import { getIsPhone } from '../../helpers/responsiveHelper'
+
+const mapStateToProps = ({
+    deviceIndex
+}) => ({
+    deviceIndex
+})
 
 const menuPropTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+
     // From parent.
     titleToggleHandlers: PropTypes.object.isRequired,
     audioHandlers: PropTypes.object.isRequired,
@@ -23,12 +35,15 @@ const menuPropTypes = {
 
 Menu = ({
 
+    deviceIndex,
     titleToggleHandlers,
     audioHandlers,
     scoresTipsHandlers,
     audioBannerHandlers
 
 }) => {
+    const isPhone = getIsPhone(deviceIndex)
+
     return (
         <div className="Menu">
 
@@ -47,26 +62,39 @@ Menu = ({
                 'width__mainColumn'
             )}>
                 <div className={cx(
-                    'MenuTopRow__childTitle',
+                    'MenuTopRow__titleTimer',
                     'MenuTopRow__child',
-                    'MenuTopRow__child__hiddenInOverlay'
+                    { 'MenuTopRow____hiddenInOverlay': !isPhone }
                 )}>
-                    <TitleToggle {...titleToggleHandlers}
-                        inMenu
-                    />
+                    <div className={cx(
+                        'MenuTopRow__titleTimer__child',
+                        'absoluteFullContainer'
+                    )}>
+                        <TitleToggle {...titleToggleHandlers}
+                            inMenu
+                        />
+                    </div>
+                    {isPhone && (
+                        <div className={cx(
+                            'MenuTopRow__titleTimer__child',
+                            'absoluteFullContainer'
+                        )}>
+                            <AudioTimer />
+                        </div>
+                    )}
                 </div>
 
                 <div className={cx(
-                    'MenuTopRow__childAudio',
+                    'MenuTopRow__audio',
                     'MenuTopRow__child'
                 )}>
                     <Audio {...audioHandlers} />
                 </div>
 
                 <div className={cx(
-                    'MenuTopRow__childScoresTips',
+                    'MenuTopRow__scoresTips',
                     'MenuTopRow__child',
-                    'MenuTopRow__child__hiddenInOverlay'
+                    'MenuTopRow____hiddenInOverlay'
                 )}>
                     <ScoresTips {...scoresTipsHandlers}
                         inMenu
@@ -80,4 +108,4 @@ Menu = ({
 
 Menu.propTypes = menuPropTypes
 
-export default Menu
+export default connect(mapStateToProps)(Menu)

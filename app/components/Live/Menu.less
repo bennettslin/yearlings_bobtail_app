@@ -91,7 +91,7 @@
 }
 
 .MenuTopRow,
-.MenuTopRow__childScoresTips {
+.MenuTopRow__scoresTips {
     display: flex;
     align-items: center;
 }
@@ -105,12 +105,15 @@
         max-width @animationDuration__fast;
 }
 
-.MenuTopRow__childTitle {
+.MenuTopRow__titleTimer {
+    position: relative;
+
     min-width: @js__minWidth__childTitle;
     max-width: 200px; // Arbitrary.
 
-    // Override.
-    overflow: visible;
+    padding: 5px;
+
+    overflow: hidden;
 
     ._titleInAudio_
     & {
@@ -122,7 +125,37 @@
     }
 }
 
-.MenuTopRow__childAudio {
+.MenuTopRow__titleTimer__child {
+    
+    ._phone_
+    & {
+        transition: left @animationDuration__default;
+
+        &:first-child {
+            left: 0;
+        }
+    
+        &:last-child {
+            left: 100%;
+        }
+    }
+
+    ._phone_._overlayShown_
+    &,
+    ._phone_._song_._lyricExpanded_
+    & {
+
+        &:first-child {
+            left: -100%;
+        }
+
+        &:last-child {
+            left: 0;
+        }
+    }
+}
+
+.MenuTopRow__audio {
     flex-grow: 2;
 
     margin: 0 @js__margin__menuChild;    
@@ -154,7 +187,12 @@
     ._overlayShown_
     & {
         max-width: 100%;
-        margin: 0;
+        margin-right: 0;
+    }
+
+    ._overlayShown_:not(._phone_)
+    & {
+        margin-left: 0;
     }
 
     ._mobile_
@@ -182,7 +220,7 @@
     }
 }
 
-.MenuTopRow__childScoresTips {
+.MenuTopRow__scoresTips {
     
     ._scoresTipsMain_
     & {
@@ -206,7 +244,7 @@
     }
 }
 
-.MenuTopRow__child__hiddenInOverlay {
+.MenuTopRow____hiddenInOverlay {
     ._overlayShown_
     & {
         width: 0;

@@ -11,7 +11,7 @@ import { getAnnotationObject,
          getAnnotationDotKeys,
          getAnnotationsCount } from './dataHelper'
 import { intersects } from './dotHelper'
-import { getIsPhone, getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsiveHelper'
+import { getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsiveHelper'
 
 export const getNextPlayerToRender = (
     selectedSongIndex,
@@ -478,25 +478,25 @@ export const getShowOverlay = ({
            (!!selectedAnnotationIndex && isOverlayingAnnotation)
 }
 
-export const getIsTimerInAudio = ({
-    deviceIndex,
-    isLyricExpanded,
-    selectedAnnotationIndex,
-    selectedScoreIndex,
-    selectedTitleIndex,
-    selectedWikiIndex
-}) => {
-    const showOverlay = getShowOverlay({
-            deviceIndex,
-            isLyricExpanded,
-            selectedAnnotationIndex,
-            selectedScoreIndex,
-            selectedTitleIndex,
-            selectedWikiIndex
-        })
+// export const getIsTimerInAudio = ({
+//     deviceIndex,
+//     isLyricExpanded,
+//     selectedAnnotationIndex,
+//     selectedScoreIndex,
+//     selectedTitleIndex,
+//     selectedWikiIndex
+// }) => {
+//     const showOverlay = getShowOverlay({
+//             deviceIndex,
+//             isLyricExpanded,
+//             selectedAnnotationIndex,
+//             selectedScoreIndex,
+//             selectedTitleIndex,
+//             selectedWikiIndex
+//         })
 
-    return showOverlay && getIsPhone(deviceIndex)
-}
+//     return showOverlay && getIsPhone(deviceIndex)
+// }
 
 export const getIsSomethingBeingShown = ({
     props,
