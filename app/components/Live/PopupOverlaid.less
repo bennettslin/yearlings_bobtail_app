@@ -1,3 +1,26 @@
+.PopupOverlaid {
+
+    // Prevent lyric scrolling from pushing app offscreen.
+    overflow: hidden;
+
+    // Centre the audio section.
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .popup-content-wrapper {
+        box-sizing: border-box;
+
+        &.annotation {
+            box-shadow: @popup-box-shadow;
+        }
+
+        &.score, &.wiki, &.title {
+            box-shadow: @popup-darker-box-shadow;
+        }
+    }
+}
+
 .PopupOverlaid__child {
     position: relative;
     width: 100%;

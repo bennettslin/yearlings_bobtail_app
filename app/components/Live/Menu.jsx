@@ -64,7 +64,7 @@ Menu = ({
                 <div className={cx(
                     'MenuTopRow__titleTimer',
                     'MenuTopRow__child',
-                    { 'MenuTopRow____hiddenInOverlay': !isPhone }
+                    { 'widths__hiddenInOverlay': !isPhone }
                 )}>
                     <div className={cx(
                         'MenuTopRow__titleTimer__child',
@@ -94,7 +94,7 @@ Menu = ({
                 <div className={cx(
                     'MenuTopRow__scoresTips',
                     'MenuTopRow__child',
-                    'MenuTopRow____hiddenInOverlay'
+                    'widths__hiddenInOverlay'
                 )}>
                     <ScoresTips {...scoresTipsHandlers}
                         inMenu

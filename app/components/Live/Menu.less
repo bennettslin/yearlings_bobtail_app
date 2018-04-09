@@ -52,7 +52,7 @@
 
 .MenuTopRow {
     overflow: hidden;
-    
+
     box-shadow: @boxShadow__menu;
     background-color: #8dd;
 
@@ -109,7 +109,7 @@
 }
 
 .MenuTopRow__titleTimer__child {
-    
+
     ._phone_
     & {
         transition: left @animationDuration__default;
@@ -117,7 +117,7 @@
         &:first-child {
             left: 0;
         }
-    
+
         &:last-child {
             left: 100%;
         }
@@ -141,11 +141,11 @@
 .MenuTopRow__audio {
     flex-grow: 2;
 
-    margin: 0 @js__margin__menuChild;    
+    margin: 0 @js__margin__menuChild;
     max-width: @maxWidth__childAudio;
-    
+
     transition: margin @animationDuration__default;
-    
+
     background-color: #8d8;
 
     ._laptop_
@@ -184,19 +184,19 @@
     }
 
     min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge + @audio-block-padding * 3;
-    
+
     box-sizing: border-box;
-    
+
     ._tablet_
     & {
         min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__tablet + @audio-block-padding * 3;
     }
-    
+
     ._mini_
     & {
         min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__mini + @audio-block-padding * 3;
     }
-    
+
     ._phone_
     & {
         min-width: @AudioButtons-constant + @js__length__icon + @audio-block-padding * 3;
@@ -204,7 +204,7 @@
 }
 
 .MenuTopRow__scoresTips {
-    
+
     ._scoresTipsMain_
     & {
         /**
@@ -227,7 +227,7 @@
     }
 }
 
-.MenuTopRow____hiddenInOverlay {
+.widths__hiddenInOverlay {
     ._overlayShown_
     & {
         width: 0;

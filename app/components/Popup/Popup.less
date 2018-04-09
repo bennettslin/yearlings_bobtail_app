@@ -1,6 +1,3 @@
-@import "./overlay.less";
-@import "./webview.less";
-
 @import "./PopupButton.less";
 @import "./PopupOverlay.less";
 
@@ -12,7 +9,7 @@
 .Popup {
 
     box-sizing: border-box;
-    
+
     &:not(.overview) {
         top: 0;
         left: 0;
@@ -200,6 +197,16 @@
                     width: ~"calc(100% - @{js__length__icon} * 2)";
                     height: ~"calc(100% - @{mini-full-subfield-margin})";
                 }
+            }
+        }
+    }
+}
+
+._annotationOverlaid_ {
+    .PopupOverlaid {
+        .popup-content-wrapper {
+            &.annotation {
+                box-shadow: @popup-darker-box-shadow;
             }
         }
     }

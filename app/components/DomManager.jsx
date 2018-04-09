@@ -20,6 +20,49 @@ import { getIsDesktop, getIsTabletOrMini, getIsOverlayingAnnotation } from '../h
 
 class DomManager extends Component {
 
+    static propTypes = {
+        // Through Redux.
+        deviceIndex: PropTypes.number.isRequired,
+        isPlaying: PropTypes.bool.isRequired,
+        isSliderMoving: PropTypes.bool.isRequired,
+        isSliderTouched: PropTypes.bool.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired,
+        selectedAccessIndex: PropTypes.number.isRequired,
+        selectedAdminIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
+        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        selectedDotKeys: PropTypes.object.isRequired,
+        selectedDotsIndex: PropTypes.number.isRequired,
+        selectedLyricColumnIndex: PropTypes.number.isRequired,
+        selectedOverviewIndex: PropTypes.number.isRequired,
+        selectedTipsIndex: PropTypes.number.isRequired,
+        selectedScoreIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedTitleIndex: PropTypes.number.isRequired,
+        selectedWikiIndex: PropTypes.number.isRequired,
+
+        isLyricExpanded: PropTypes.bool.isRequired,
+        showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
+        isHeightlessLyricColumn: PropTypes.bool.isRequired,
+        showShrunkNavIcon: PropTypes.bool.isRequired,
+        isScoresTipsInMain: PropTypes.bool.isRequired,
+        isTitleInAudio: PropTypes.bool.isRequired,
+        isVerseBarAbove: PropTypes.bool.isRequired,
+        isVerseBarBelow: PropTypes.bool.isRequired,
+
+        // From parent.
+        handleKeyDownPress: PropTypes.func.isRequired,
+        eventHandlers: PropTypes.shape({
+            handleBodyClick: PropTypes.func.isRequired,
+            handleBodyTouchMove: PropTypes.func.isRequired,
+            handleBodyTouchEnd: PropTypes.func.isRequired,
+            handlePlayerTimeChange: PropTypes.func.isRequired,
+            handlePlayerNextSong: PropTypes.func.isRequired,
+            handlePlayerTimeReset: PropTypes.func.isRequired,
+            domManagerRef: PropTypes.func.isRequired
+        })
+    }
+
     constructor(props) {
         super(props)
 
@@ -224,49 +267,6 @@ class DomManager extends Component {
             </div>
         )
     }
-}
-
-DomManager.propTypes = {
-    // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-    isPlaying: PropTypes.bool.isRequired,
-    isSliderMoving: PropTypes.bool.isRequired,
-    isSliderTouched: PropTypes.bool.isRequired,
-    interactivatedVerseIndex: PropTypes.number.isRequired,
-    selectedAccessIndex: PropTypes.number.isRequired,
-    selectedAdminIndex: PropTypes.number.isRequired,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
-    selectedCarouselNavIndex: PropTypes.number.isRequired,
-    selectedDotKeys: PropTypes.object.isRequired,
-    selectedDotsIndex: PropTypes.number.isRequired,
-    selectedLyricColumnIndex: PropTypes.number.isRequired,
-    selectedOverviewIndex: PropTypes.number.isRequired,
-    selectedTipsIndex: PropTypes.number.isRequired,
-    selectedScoreIndex: PropTypes.number.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-    selectedTitleIndex: PropTypes.number.isRequired,
-    selectedWikiIndex: PropTypes.number.isRequired,
-
-    isLyricExpanded: PropTypes.bool.isRequired,
-    showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
-    isHeightlessLyricColumn: PropTypes.bool.isRequired,
-    showShrunkNavIcon: PropTypes.bool.isRequired,
-    isScoresTipsInMain: PropTypes.bool.isRequired,
-    isTitleInAudio: PropTypes.bool.isRequired,
-    isVerseBarAbove: PropTypes.bool.isRequired,
-    isVerseBarBelow: PropTypes.bool.isRequired,
-
-    // From parent.
-    handleKeyDownPress: PropTypes.func.isRequired,
-    eventHandlers: PropTypes.shape({
-        handleBodyClick: PropTypes.func.isRequired,
-        handleBodyTouchMove: PropTypes.func.isRequired,
-        handleBodyTouchEnd: PropTypes.func.isRequired,
-        handlePlayerTimeChange: PropTypes.func.isRequired,
-        handlePlayerNextSong: PropTypes.func.isRequired,
-        handlePlayerTimeReset: PropTypes.func.isRequired,
-        domManagerRef: PropTypes.func.isRequired
-    })
 }
 
 export default connect(({

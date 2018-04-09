@@ -57,6 +57,7 @@ class Popup extends Component {
     }
 
     _handleTransitionEnd(e) {
+        // FIXME: This is a brittle way to handle it.
         if (e.propertyName === 'opacity') {
 
             // Focus when popup opens.
@@ -101,8 +102,8 @@ class Popup extends Component {
         return (
             <span
                 className={cx(
-                    popupClassName,
                     'Popup',
+                    popupClassName,
                     isVisible ? 'visible' : 'not-visible',
                     { 'not-displayed': !isDisplayed },
                     className
