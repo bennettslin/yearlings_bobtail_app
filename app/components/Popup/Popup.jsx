@@ -14,6 +14,7 @@ import { CLOSE_POPUP_BUTTON,
 class Popup extends Component {
 
     static propTypes = {
+        className: PropTypes.any,
         popupClassName: PropTypes.string.isRequired,
         isVisible: PropTypes.bool.isRequired,
         showClose: PropTypes.bool,
@@ -80,7 +81,8 @@ class Popup extends Component {
     }
 
     render() {
-        const { popupClassName,
+        const { className,
+                popupClassName,
                 isVisible,
                 showClose,
                 showArrows,
@@ -102,7 +104,8 @@ class Popup extends Component {
                     popupClassName,
                     'Popup',
                     isVisible ? 'visible' : 'not-visible',
-                    { 'not-displayed': !isDisplayed }
+                    { 'not-displayed': !isDisplayed },
+                    className
                 )}
                 onTransitionEnd={this._handleTransitionEnd}
             >

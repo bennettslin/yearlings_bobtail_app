@@ -2,6 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 import DotsToggle from '../../Dots/DotsToggle'
 import OverviewToggle from '../../Overview/OverviewToggle'
@@ -9,6 +10,7 @@ import ScoresTips from '../ScoresTips'
 
 const dotsOverviewPropTypes = {
     // From parent.
+    className: PropTypes.any,
     handleDotsSectionToggle: PropTypes.func.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired,
     scoresTipsHandlers: PropTypes.object.isRequired
@@ -16,12 +18,16 @@ const dotsOverviewPropTypes = {
 
 DotsOverview = ({
 
+    className,
     handleDotsSectionToggle,
     handleOverviewToggle,
     scoresTipsHandlers
 
 }) => (
-    <div className="DotsOverview">
+    <div className={cx(
+        'DotsOverview',
+        className
+    )}>
         <OverviewToggle
             handleOverviewToggle={handleOverviewToggle}
         />

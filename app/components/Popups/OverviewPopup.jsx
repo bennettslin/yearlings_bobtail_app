@@ -3,6 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+
 import OverviewSection from '../Overview/Overview'
 import Popup from '../Popup/Popup'
 import { getSongIsLogue } from '../../helpers/dataHelper'
@@ -30,12 +31,14 @@ const overviewPopupPropTypes = {
     selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
+    className: PropTypes.any,
     inMain: PropTypes.bool.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
 },
 
 OverviewPopup = ({
 
+    className,
     inMain,
     selectedOverviewIndex,
     isHeavyRenderReady,
@@ -71,6 +74,7 @@ OverviewPopup = ({
 
     return (
         <Popup
+            className={className}
             isVisible={isVisible}
             popupClassName="overview"
             handlePopupContainerClick={handlePopupContainerClick}

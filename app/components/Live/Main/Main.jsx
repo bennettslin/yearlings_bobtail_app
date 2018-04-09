@@ -5,6 +5,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Nav from '../../Nav/Nav'
@@ -19,7 +20,12 @@ import OverviewPopup from '../../Popups/OverviewPopup'
 import TipsPopup from '../../Popups/TipsPopup'
 import ScoresTips from '../ScoresTips'
 
-const mainColumnPropTypes = {
+import { getIsPhone } from '../../../helpers/responsiveHelper'
+
+const mainPropTypes = {
+    // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
+
     // From parent.
     handleCarouselNavToggle: PropTypes.func.isRequired,
     handleLyricSectionExpand: PropTypes.func.isRequired,
@@ -32,9 +38,17 @@ const mainColumnPropTypes = {
     overviewPopupHandlers: PropTypes.object.isRequired,
     tipsPopupHandlers: PropTypes.object.isRequired,
     scoresTipsHandlers: PropTypes.object.isRequired
-},
+}
+
+const mapStateToProps = ({
+    deviceIndex
+}) => ({
+    deviceIndex
+}),
 
 Main = ({
+
+    deviceIndex,
 
     handleCarouselNavToggle,
     handleLyricSectionExpand,
@@ -48,53 +62,67 @@ Main = ({
     scoresTipsHandlers,
     tipsPopupHandlers
 
-}) => (
-    <div className={cx(
-        'Main',
-        'width__mainColumn',
-        'height__mainColumn'
-    )}>
+}) => {
 
-        <Stage />
+    /**
+     * In phone, flex container's children have absolute position.
+     */
+    const isPhone = getIsPhone(deviceIndex)
 
-        <AnnotationPopup {...annotationPopupHandlers} />
-
-        <Carousel {...carouselSectionHandlers} />
-
+    return (
         <div className={cx(
-            'Main__flexContainer',
-            'absoluteFullContainer'
+            'Main',
+            'width__mainColumn',
+            'height__mainColumn'
         )}>
-            <DotsOverview {...dotsOverviewToggleSectionHandlers}
-                scoresTipsHandlers={scoresTipsHandlers}
+
+            <Stage />
+
+            <AnnotationPopup {...annotationPopupHandlers} />
+
+            <Carousel {...carouselSectionHandlers} />
+
+            <div className={cx(
+                'Main__flexContainer',
+                'absoluteFullContainer'
+            )}>
+                <DotsOverview {...dotsOverviewToggleSectionHandlers}
+                    className={cx(
+                        { 'absoluteFullContainer': isPhone }
+                    )}
+                    scoresTipsHandlers={scoresTipsHandlers}
+                />
+
+                <OverviewPopup {...overviewPopupHandlers}
+                    className={cx(
+                        { 'absoluteFullContainer': isPhone }
+                    )}
+                    inMain
+                />
+            </div>
+
+            <LyricToggleExpand
+                inMain
+                handleLyricSectionExpand={handleLyricSectionExpand}
             />
 
-            <OverviewPopup {...overviewPopupHandlers}
+            <Dots {...dotsSectionHandlers} />
+
+            <ScoresTips {...scoresTipsHandlers}
                 inMain
             />
+
+            <TipsPopup {...tipsPopupHandlers} />
+
+            <CarouselToggle
+                handleCarouselNavToggle={handleCarouselNavToggle}
+            />
+
+            <Nav {...navSectionHandlers} />
         </div>
+    )
+}
 
-        <LyricToggleExpand
-            inMain
-            handleLyricSectionExpand={handleLyricSectionExpand}
-        />
+Main.propTypes = mainPropTypes
 
-        <Dots {...dotsSectionHandlers} />
-
-        <ScoresTips {...scoresTipsHandlers}
-            inMain
-        />
-
-        <TipsPopup {...tipsPopupHandlers} />
-
-        <CarouselToggle
-            handleCarouselNavToggle={handleCarouselNavToggle}
-        />
-
-        <Nav {...navSectionHandlers} />
-    </div>
-)
-
-Main.propTypes = mainColumnPropTypes
-
-export default Main
+export default connect(mapStateToProps)(Main)
