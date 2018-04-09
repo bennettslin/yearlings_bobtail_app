@@ -33,7 +33,7 @@ OverviewToggle = ({
     handleOverviewToggle
 
 }) => (
-    <div className="OverviewToggle-button-container">
+    <div className="OverviewToggle">
         <Button
             isCustomSize
             isCustomShape

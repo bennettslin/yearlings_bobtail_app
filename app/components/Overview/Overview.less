@@ -1,1 +1,26 @@
 @import "./OverviewToggle.less";
+
+.Overview__textFloatContainer {
+    
+    position: relative;
+    margin-right: 10px;
+    float: left;
+
+    ._tablet_
+    & {
+        width: @width__overviewToggle__tablet;
+        height: @height__overviewToggle__tablet;
+    }
+
+    ._mini_
+    & {
+        width: @width__overviewToggle__mini;
+        height: @height__overviewToggle__mini;
+    }
+
+    ._phone_
+    & {
+        width: @width___overviewToggle__phone;
+        height: @height___overviewToggle__phone;
+    }
+}

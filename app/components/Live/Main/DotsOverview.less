@@ -1,25 +1,3 @@
-// In main field.
-// .dots-overview-subfield {
-//     position: relative;
-
-//     // Override subfield height. Let flex-grow take care of height.
-//     height: 0;
-//     flex-grow: 1;
-
-//     display: flex;
-
-//     // Ensure this is below lyrics but above popup wrappers.
-//     z-index: @zIndex__dotsOverviewSubfield;
-
-//     // Overview and dots toggle are at the bottom in tablet and mini.
-//     ._mobileNotPhone_
-//     & {
-//         .overview.popup-wrapper {
-//             bottom: 0;
-//         }
-//     }
-// }
-
 // Toggle container.
 .DotsOverview {
     // position: absolute;
@@ -42,6 +20,29 @@
     & {
         opacity: 0;
         margin-left: -@width__overviewToggle__tablet;
+    }
+}
+
+._mini_ {
+
+    .DotsOverview, .CarouselToggle {
+        width: @width__overviewToggle__mini;
+    }
+
+}
+
+._phone_ {
+
+    // In phone, also hidden to left when overview is shown.
+    &._overviewShown_ {
+        .DotsOverview {
+            opacity: 0;
+            margin-left: -@width___overviewToggle__phone;
+        }
+    }
+
+    .DotsOverview {
+        width: @width___overviewToggle__phone;
     }
 }
 
@@ -72,20 +73,5 @@
     ._mobileNotPhone_
     & {
         flex-direction: column-reverse;
-    }
-}
-
-.OverviewToggle-button-container {
-    position: relative;
-
-    width: 100%;
-    height: @height__overviewToggle;
-
-    // Ensure toggle button is above its popup container and the carousel.
-    z-index: @zIndex__centreFieldChild;
-
-    ._laptop_
-    & {
-        height: @height__overviewToggle__laptop;
     }
 }

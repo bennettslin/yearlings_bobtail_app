@@ -1,6 +1,6 @@
 @margin__overview: 5px;
 
-.OverviewToggle-button-container {
+.OverviewToggle {
 
     ._desktop_
     &,
@@ -15,81 +15,34 @@
         // Give room to carousel horizontal scrollbar.
         margin-bottom: @margin__scrollbar;
     }
-}
 
-// ._tablet_, ._mini_ {
-
-//     // This applies only to overviews in songs, not logues.
-//     .OverviewPopup-container .overview.popup-wrapper {
-
-//         // Give some room to lyric section below.
-//         margin-bottom: @margin__overview;
-//     }
-// }
-
-._tablet_ {
-    .OverviewToggle-button-container {
+    ._tablet_
+    & {
         height: @height__overviewToggle__tablet;
     }
 
-    // Inside overview bubble.
-    &._logue_._lyricHeightless_ {
-        .OverviewToggle-section {
-            width: @width__overviewToggle__tablet;
-            height: @height__overviewToggle__tablet;
-        }
-    }
-}
-
-._mini_ {
-    .DotsOverview, .CarouselToggle {
-        width: @width__overviewToggle__mini;
-    }
-
-    .OverviewToggle-button-container {
+    ._mini_
+    & {
         height: @height__overviewToggle__mini;
     }
 
-    // Inside overview bubble.
-    &._logue_._lyricHeightless_ {
-        .OverviewToggle-section {
-            width: @width__overviewToggle__mini;
-            height: @height__overviewToggle__mini;
-        }
-    }
-}
-
-._phone_ {
-
-    // In phone, also hidden to left when overview is shown.
-    &._overviewShown_ {
-        .DotsOverview {
-            opacity: 0;
-            margin-left: -@width___overviewToggle__phone;
-        }
-    }
-
-    .DotsOverview {
-        width: @width___overviewToggle__phone;
-    }
-
-    .OverviewToggle-button-container {
-        height: @height___overviewToggle__phone;
-    }
-
-    // Inside overview bubble.
-    .OverviewToggle-section {
-        width: @width___overviewToggle__phone;
+    ._phone_
+    & {
         height: @height___overviewToggle__phone;
     }
 }
 
-._logue_._lyricHeightless_, &._phone_ {
+.OverviewToggle {
+    position: relative;
 
-    // Inside overview bubble.
-    .OverviewToggle-section {
-            position: relative;
-            margin-right: 10px;
-            float: left;
+    width: 100%;
+    height: @height__overviewToggle;
+
+    // Ensure toggle button is above its popup container and the carousel.
+    z-index: @zIndex__centreFieldChild;
+
+    ._laptop_
+    & {
+        height: @height__overviewToggle__laptop;
     }
 }

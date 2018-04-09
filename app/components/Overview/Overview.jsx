@@ -71,20 +71,18 @@ class OverviewSection extends Component {
             <div className={cx(
                 'Overview'
             )}>
-                <div className="overview-text">
-                    {isToggleInOverview &&
-                        <div className="OverviewToggle-section">
-                            <OverviewToggle
-                                isEnabled={isEnabled}
-                                handleOverviewToggle={this._handleOverviewToggle}
-                            />
-                        </div>
-                    }
-                    <TextBlock
-                        isLyric={false}
-                        text={overviewText}
-                    />
-                </div>
+                {isToggleInOverview &&
+                    <div className="Overview__textFloatContainer">
+                        <OverviewToggle
+                            isEnabled={isEnabled}
+                            handleOverviewToggle={this._handleOverviewToggle}
+                        />
+                    </div>
+                }
+                <TextBlock
+                    isLyric={false}
+                    text={overviewText}
+                />
             </div>
         )
     }
