@@ -83,6 +83,37 @@
     }
 }
 
+.PopupView__content {
+    // box-sizing: border-box;
+    background-color: @odd-verse-colour;
+    // position: relative;
+
+    // &:not(.overview) {
+    //     width: 100%;
+    //     height: 100%;
+    // }
+
+    .Popup__displaysNotInOverlay
+    & {
+        box-shadow: @popup-box-shadow;
+    }
+
+    .Popup__displaysInOverlay
+    & {
+        box-shadow: @popup-darker-box-shadow;
+    }
+}
+
+.PopupView__content__narrowPadding {
+    padding: @text-PopupView__content-padding;
+}
+
+.PopupView__content__widePadding {
+
+    // Wider padding to accommodate popup buttons.
+    padding: @js__paddingSide__popupContent;
+}
+
 @margin__popupView__mini: 10px;
 
 // TODO: Revisit mobile sizing.
@@ -119,40 +150,3 @@
 //         }
 //     }
 // }
-
-.PopupView__content {
-    box-sizing: border-box;
-    box-shadow: @popup-box-shadow;
-    background-color: @odd-verse-colour;
-    position: relative;
-
-    &:not(.overview) {
-        width: 100%;
-        height: 100%;
-    }
-
-    &.overview, &.tips {
-        // Standard narrow padding.
-        padding: @text-PopupView__content-padding;
-    }
-
-    &.annotation, &.title {
-        // Wider padding to accommodate popup buttons.
-        padding: @js__paddingSide__popupContent;
-    }
-
-    &.tips {
-        // Arbitrary for now.
-        min-height: 150px;
-    }
-}
-
-._annotationOverlaid_ {
-    .PopupOverlaid {
-        .PopupView__content {
-            &.annotation {
-                box-shadow: @popup-darker-box-shadow;
-            }
-        }
-    }
-}

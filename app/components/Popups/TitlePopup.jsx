@@ -39,6 +39,7 @@ TitlePopup = ({
             bounceAnimate
             displaysInOverlay
             isCardSize
+            hasWidePadding
             isVisible={isVisible}
             popupName="title"
             handleCloseClick={handleTitleToggle}

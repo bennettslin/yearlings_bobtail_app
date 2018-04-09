@@ -151,6 +151,8 @@ popupViewPropTypes = {
     shrinkAnimate: PropTypes.bool,
     isCardSize: PropTypes.bool,
     isFullSize: PropTypes.bool,
+    hasNarrowPadding: PropTypes.bool,
+    hasWidePadding: PropTypes.bool,
     showClose: PropTypes.bool.isRequired,
     showArrows: PropTypes.bool.isRequired,
     handleCloseClick: PropTypes.func,
@@ -167,6 +169,8 @@ PopupView = ({
     shrinkAnimate,
     isCardSize,
     isFullSize,
+    hasNarrowPadding,
+    hasWidePadding,
     showClose,
     showArrows,
     handleCloseClick,
@@ -205,7 +209,9 @@ PopupView = ({
         )}
         <div
             className={cx(
-                'PopupView__content'
+                'PopupView__content',
+                { 'PopupView__content__narrowPadding': hasNarrowPadding,
+                  'PopupView__content__widePadding': hasWidePadding }
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}

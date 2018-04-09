@@ -71,6 +71,7 @@ OverviewPopup = ({
     return (
         <Popup
             bounceAnimate
+            hasNarrowPadding
             popupName="overview"
             className={className}
             noFlexCentre={inMain}
