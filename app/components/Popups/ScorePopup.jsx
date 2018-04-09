@@ -41,9 +41,10 @@ ScorePopup = ({
 
     return (
         <Popup
-            isVisible={isVisible}
-            popupClassName="score"
             showClose
+            displaysInOverlay
+            popupName="score"
+            isVisible={isVisible}
             handleCloseClick={handleScoreToggle}
             myChild={myChild}
         />

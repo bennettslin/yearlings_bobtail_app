@@ -15,8 +15,12 @@ class Popup extends Component {
 
     static propTypes = {
         className: PropTypes.any,
-        popupClassName: PropTypes.string.isRequired,
+        popupName: PropTypes.string.isRequired,
         isVisible: PropTypes.bool.isRequired,
+        noFlexCentre: PropTypes.bool,
+        displaysInOverlay: PropTypes.bool,
+        bounceAnimate: PropTypes.bool,
+        shrinkAnimate: PropTypes.bool,
         showClose: PropTypes.bool,
         showArrows: PropTypes.bool,
         handleCloseClick: PropTypes.func,
@@ -83,8 +87,12 @@ class Popup extends Component {
 
     render() {
         const { className,
-                popupClassName,
+                popupName,
                 isVisible,
+                noFlexCentre,
+                bounceAnimate,
+                shrinkAnimate,
+                displaysInOverlay,
                 showClose,
                 showArrows,
                 handleCloseClick,
@@ -102,16 +110,23 @@ class Popup extends Component {
         return (
             <span
                 className={cx(
-                    'Popup',
-                    popupClassName,
-                    isVisible ? 'visible' : 'not-visible',
-                    { 'not-displayed': !isDisplayed },
+                    `Popup__${popupName}`,
+                    'absoluteFullContainer',
+
+                    isVisible ? 'Popup__visible' : 'Popup__invisible',
+                    isDisplayed ? 'Popup__displayed' : 'Popup__notDisplayed',
+
+                    { 'flexCentreContainer': !noFlexCentre,
+                      'Popup__bounceAnimate': bounceAnimate,
+                      'Popup__shrinkAnimate': shrinkAnimate,
+                      'Popup__displaysInOverlay': displaysInOverlay },
+
                     className
                 )}
                 onTransitionEnd={this._handleTransitionEnd}
             >
                 <PopupView
-                    popupClassName={popupClassName}
+                    popupName={popupName}
                     showClose={showClose}
                     showArrows={showArrows}
                     handleCloseClick={handleCloseClick}
@@ -135,7 +150,7 @@ const popupViewDefaultProps = {
 },
 
 popupViewPropTypes = {
-    popupClassName: PropTypes.string.isRequired,
+    popupName: PropTypes.string.isRequired,
     showClose: PropTypes.bool.isRequired,
     showArrows: PropTypes.bool.isRequired,
     handleCloseClick: PropTypes.func,
@@ -147,7 +162,7 @@ popupViewPropTypes = {
 
 PopupView = ({
 
-    popupClassName,
+    popupName,
     showClose,
     showArrows,
     handleCloseClick,
@@ -159,7 +174,7 @@ PopupView = ({
 }) => (
     <div className={cx(
         'popup-wrapper',
-        popupClassName
+        popupName
     )}>
         {showClose &&
             <div className={cx(
@@ -187,7 +202,7 @@ PopupView = ({
         <div
             className={cx(
                 'popup-content-wrapper',
-                popupClassName
+                popupName
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}

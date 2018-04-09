@@ -50,8 +50,9 @@ TipsPopup = ({
 
     return (
         <Popup
+            bounceAnimate
+            popupName="tips"
             isVisible={isVisible}
-            popupClassName="tips"
             handlePopupContainerClick={handlePopupContainerClick}
             myChild={myChild}
         />

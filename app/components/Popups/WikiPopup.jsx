@@ -34,9 +34,11 @@ WikiPopup = ({
 
     return (
         <Popup
-            isVisible={isVisible}
-            popupClassName="wiki"
             showClose
+            shrinkAnimate
+            displaysInOverlay
+            isVisible={isVisible}
+            popupName="wiki"
             handleCloseClick={handleWikiToggle}
             myChild={myChild}
         />

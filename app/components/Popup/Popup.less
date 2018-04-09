@@ -6,72 +6,46 @@
 @import "../Popups/ScorePopup.less";
 @import "../Popups/TipsPopup.less";
 
-.Popup {
+.Popup__visible {
+    transition: opacity @popup-transition-duration-in;
+    opacity: 1;
+}
 
-    box-sizing: border-box;
+.Popup__invisible {
+    transition: opacity @popup-transition-duration-out;
+    opacity: 0;
+}
 
-    &:not(.overview) {
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+.Popup__notDisplayed {
+    z-index: @zIndex__popupContainer;
+}
+
+.Popup__displayed.Popup__displaysInOverlay {
+    z-index: @zIndex__popupOverlayContent;
+}
+
+.Popup__bounceAnimate {
+    .popup-wrapper {
+        animation: bounceOut @popup-transition-duration-out;
     }
 
-    &.annotation,
-    &.overview,
-    &.tips,
-    &.title {
+    &.Popup__visible {
         .popup-wrapper {
-            animation: bounceOut @popup-transition-duration-out;
+            animation: bounceIn @popup-transition-duration-in;
         }
-
-        &.visible {
-            .popup-wrapper {
-                animation: bounceIn @popup-transition-duration-in;
-            }
-        }
-    }
-
-    &.wiki {
-        .popup-wrapper {
-            animation: shrinkOut @popup-transition-duration-out;
-        }
-
-        &.visible {
-            .popup-wrapper {
-                animation: shrinkIn @popup-transition-duration-in;
-            }
-        }
-    }
-
-    // Including annotation is possible because its height is auto, not 100%.
-    &.annotation,
-    &.score,
-    &.title,
-    &.wiki {
-        z-index: @zIndex__popupOverlayContent;
-    }
-
-    &.not-visible {
-        transition: opacity @popup-transition-duration-out;
-        opacity: 0;
-    }
-
-    &.visible {
-        transition: opacity @popup-transition-duration-in;
-        opacity: 1;
-    }
-
-    &.not-displayed {
-        z-index: @zIndex__popupContainer;
     }
 }
 
-.Popup {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.Popup__shrinkAnimate {
+    .popup-wrapper {
+        animation: shrinkOut @popup-transition-duration-out;
+    }
+
+    &.Popup__visible {
+        .popup-wrapper {
+            animation: shrinkIn @popup-transition-duration-in;
+        }
+    }
 }
 
 .popup-wrapper {

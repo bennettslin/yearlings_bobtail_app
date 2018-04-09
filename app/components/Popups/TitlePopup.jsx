@@ -35,9 +35,11 @@ TitlePopup = ({
 
     return (
         <Popup
-            isVisible={isVisible}
-            popupClassName="title"
             showClose
+            bounceAnimate
+            displaysInOverlay
+            isVisible={isVisible}
+            popupName="title"
             handleCloseClick={handleTitleToggle}
             handlePopupContainerClick={handlePopupContainerClick}
             myChild={myChild}

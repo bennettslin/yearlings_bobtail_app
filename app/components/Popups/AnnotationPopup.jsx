@@ -108,9 +108,11 @@ AnnotationPopup = ({
 
         return (
             <Popup
-                isVisible={isVisible}
-                popupClassName="annotation"
                 showArrows
+                bounceAnimate
+                popupName="annotation"
+                isVisible={isVisible}
+                displaysInOverlay={isOverlayingAnnotation}
                 handlePreviousClick={handleAnnotationPrevious}
                 handleNextClick={handleAnnotationNext}
                 handlePopupContainerClick={handlePopupContainerClick}

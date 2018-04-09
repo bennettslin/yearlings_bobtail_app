@@ -74,9 +74,11 @@ OverviewPopup = ({
 
     return (
         <Popup
+            bounceAnimate
+            popupName="overview"
             className={className}
+            noFlexCentre={inMain}
             isVisible={isVisible}
-            popupClassName="overview"
             handlePopupContainerClick={handlePopupContainerClick}
             myChild={myChild}
         />
