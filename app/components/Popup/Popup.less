@@ -21,7 +21,8 @@
     z-index: @zIndex__popupContainer;
 }
 
-.Popup__displayed.Popup__displaysInOverlay {
+.Popup__displayed {
+    // Allows the popup to prevent a click inside from closing it.
     z-index: @zIndex__popupOverlayContent;
 }
 
