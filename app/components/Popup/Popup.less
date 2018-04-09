@@ -11,7 +11,8 @@
     opacity: 1;
 }
 
-.Popup__invisible {
+.Popup__invisible,
+._overlayShown_ .Popup__displaysNotInOverlay {
     transition: opacity @popup-transition-duration-out;
     opacity: 0;
 }
@@ -24,31 +25,7 @@
     z-index: @zIndex__popupOverlayContent;
 }
 
-.Popup__bounceAnimate {
-    .popup-wrapper {
-        animation: bounceOut @popup-transition-duration-out;
-    }
-
-    &.Popup__visible {
-        .popup-wrapper {
-            animation: bounceIn @popup-transition-duration-in;
-        }
-    }
-}
-
-.Popup__shrinkAnimate {
-    .popup-wrapper {
-        animation: shrinkOut @popup-transition-duration-out;
-    }
-
-    &.Popup__visible {
-        .popup-wrapper {
-            animation: shrinkIn @popup-transition-duration-in;
-        }
-    }
-}
-
-.popup-wrapper {
+.PopupView {
     position: relative;
 
     z-index: @zIndex__popupOverlayContent;
@@ -81,6 +58,36 @@
             // width: @phone-popup-annotation-width;
             max-width: @phone-popup-annotation-width;
         }
+    }
+}
+
+.PopupView__bounceAnimate {
+
+    .Popup__visible
+    & {
+        animation: bounceIn @popup-transition-duration-in;
+    }
+
+    .Popup__invisible
+    &,
+    ._overlayShown_ .Popup__displaysNotInOverlay
+    & {
+        animation: bounceOut @popup-transition-duration-out;
+    }
+}
+
+.PopupView__shrinkAnimate {
+
+    .Popup__visible
+    & {
+        animation: shrinkIn @popup-transition-duration-in;
+    }
+
+    .Popup__invisible
+    &,
+    ._overlayShown_ .Popup__displaysNotInOverlay
+    & {
+        animation: shrinkOut @popup-transition-duration-out;
     }
 }
 
@@ -134,7 +141,7 @@
     }
 
     &:not(._tablet_) {
-        .popup-wrapper {
+        .PopupView {
             &.wiki, &.score {
                 width: ~"calc(100% - @{mini-full-subfield-margin} * 2)";
                 height: ~"calc(100% - @{js__length__icon})";
@@ -148,7 +155,7 @@
         }
 
         &._phone_ {
-            .popup-wrapper {
+            .PopupView {
                 &.wiki, &.score, &.annotation, &.title {
                     // Make side margin in phone just that much thinner.
                     width: ~"calc(100% - @{mini-full-subfield-margin})";
@@ -156,7 +163,7 @@
             }
 
             &._lyricHeightless_ {
-                .popup-wrapper {
+                .PopupView {
                     &.wiki, &.score {
                         height: ~"calc(100% - @{mini-full-subfield-margin})";
                     }
@@ -166,7 +173,7 @@
 
         // Reverse width and height when width is greater than height.
         &._lyricHeightless_ {
-            .popup-wrapper {
+            .PopupView {
                 &.wiki, &.score {
                     width: ~"calc(100% - @{js__length__icon} * 2)";
                     height: ~"calc(100% - @{mini-full-subfield-margin})";

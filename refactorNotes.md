@@ -3,6 +3,7 @@ First wave of components to refactor.
 (Delete when no longer needed.)
 
 Folder/file structure organised
+    Single word is top level class and component
 
 Less constants
     All renamed, or accounted for elsewhere in a comment.

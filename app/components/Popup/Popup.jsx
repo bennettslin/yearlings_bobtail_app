@@ -19,8 +19,6 @@ class Popup extends Component {
         isVisible: PropTypes.bool.isRequired,
         noFlexCentre: PropTypes.bool,
         displaysInOverlay: PropTypes.bool,
-        bounceAnimate: PropTypes.bool,
-        shrinkAnimate: PropTypes.bool,
         showClose: PropTypes.bool,
         showArrows: PropTypes.bool,
         handleCloseClick: PropTypes.func,
@@ -90,8 +88,6 @@ class Popup extends Component {
                 popupName,
                 isVisible,
                 noFlexCentre,
-                bounceAnimate,
-                shrinkAnimate,
                 displaysInOverlay,
                 showClose,
                 showArrows,
@@ -103,7 +99,8 @@ class Popup extends Component {
                 handlePopupContainerClick,
                 /* eslint-enable no-unused-vars */
 
-                myChild } = this.props,
+                myChild,
+                ...other } = this.props,
 
             { isDisplayed } = this.state
 
@@ -115,17 +112,16 @@ class Popup extends Component {
 
                     isVisible ? 'Popup__visible' : 'Popup__invisible',
                     isDisplayed ? 'Popup__displayed' : 'Popup__notDisplayed',
+                    displaysInOverlay ?
+                        'Popup__displaysInOverlay' : 'Popup__displaysNotInOverlay',
 
-                    { 'flexCentreContainer': !noFlexCentre,
-                      'Popup__bounceAnimate': bounceAnimate,
-                      'Popup__shrinkAnimate': shrinkAnimate,
-                      'Popup__displaysInOverlay': displaysInOverlay },
+                    { 'flexCentreContainer': !noFlexCentre },
 
                     className
                 )}
                 onTransitionEnd={this._handleTransitionEnd}
             >
-                <PopupView
+                <PopupView {...other}
                     popupName={popupName}
                     showClose={showClose}
                     showArrows={showArrows}
@@ -151,6 +147,8 @@ const popupViewDefaultProps = {
 
 popupViewPropTypes = {
     popupName: PropTypes.string.isRequired,
+    bounceAnimate: PropTypes.bool,
+    shrinkAnimate: PropTypes.bool,
     showClose: PropTypes.bool.isRequired,
     showArrows: PropTypes.bool.isRequired,
     handleCloseClick: PropTypes.func,
@@ -163,6 +161,8 @@ popupViewPropTypes = {
 PopupView = ({
 
     popupName,
+    bounceAnimate,
+    shrinkAnimate,
     showClose,
     showArrows,
     handleCloseClick,
@@ -173,8 +173,11 @@ PopupView = ({
 
 }) => (
     <div className={cx(
-        'popup-wrapper',
-        popupName
+        'PopupView',
+        popupName,
+
+        { 'PopupView__bounceAnimate': bounceAnimate,
+          'PopupView__shrinkAnimate': shrinkAnimate }
     )}>
         {showClose &&
             <div className={cx(

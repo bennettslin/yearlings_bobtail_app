@@ -11,12 +11,10 @@ const mapStateToProps = ({
     isHeavyRenderReady,
     renderReadySongIndex,
     selectedTipsIndex,
-    selectedTitleIndex
 }) => ({
     isHeavyRenderReady,
     renderReadySongIndex,
     selectedTipsIndex,
-    selectedTitleIndex
 })
 
 const tipsPopupPropTypes = {
@@ -24,7 +22,6 @@ const tipsPopupPropTypes = {
     isHeavyRenderReady: PropTypes.bool.isRequired,
     renderReadySongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
-    selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
     handlePopupContainerClick: PropTypes.func.isRequired
@@ -35,14 +32,13 @@ TipsPopup = ({
     isHeavyRenderReady,
     renderReadySongIndex,
     selectedTipsIndex,
-    selectedTitleIndex,
     handlePopupContainerClick,
 
 ...other }) => {
 
     const isLogue = getSongIsLogue(renderReadySongIndex),
 
-        isVisible = isHeavyRenderReady && !isLogue && !selectedTipsIndex && !selectedTitleIndex,
+        isVisible = isHeavyRenderReady && !isLogue && !selectedTipsIndex,
 
         myChild = (
             <Tips {...other} />

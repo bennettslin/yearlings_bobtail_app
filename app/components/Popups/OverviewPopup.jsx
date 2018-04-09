@@ -12,13 +12,11 @@ const mapStateToProps = ({
     selectedOverviewIndex,
     isHeavyRenderReady,
     selectedSongIndex,
-    selectedTitleIndex,
     selectedTipsIndex
 }) => ({
     selectedOverviewIndex,
     isHeavyRenderReady,
     selectedSongIndex,
-    selectedTitleIndex,
     selectedTipsIndex
 })
 
@@ -28,7 +26,6 @@ const overviewPopupPropTypes = {
     isHeavyRenderReady: PropTypes.bool.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
-    selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
     className: PropTypes.any,
@@ -44,7 +41,6 @@ OverviewPopup = ({
     isHeavyRenderReady,
     selectedSongIndex,
     selectedTipsIndex,
-    selectedTitleIndex,
     handlePopupContainerClick,
 
 ...other }) => {
@@ -68,7 +64,7 @@ OverviewPopup = ({
      * Always hide overview section when title is open, or when tip is shown
      * in song. Always hide before ready to render.
      */
-    if (!isHeavyRenderReady || selectedTitleIndex || (!isLogue && !selectedTipsIndex)) {
+    if (!isHeavyRenderReady || (!isLogue && !selectedTipsIndex)) {
         isVisible = false
     }
 
