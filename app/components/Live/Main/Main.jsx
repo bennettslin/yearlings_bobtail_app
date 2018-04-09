@@ -61,17 +61,22 @@ Main = ({
 
         <Carousel {...carouselSectionHandlers} />
 
-        <DotsOverview {...dotsOverviewToggleSectionHandlers}
-            scoresTipsHandlers={scoresTipsHandlers}
-        />
+        <div className={cx(
+            'Main__flexContainer',
+            'absoluteFullContainer'
+        )}>
+            <DotsOverview {...dotsOverviewToggleSectionHandlers}
+                scoresTipsHandlers={scoresTipsHandlers}
+            />
 
-        <OverviewPopup {...overviewPopupHandlers}
-            inMain
-        />
+            <OverviewPopup {...overviewPopupHandlers}
+                inMain
+            />
+        </div>
 
         <LyricToggleExpand
-            handleLyricSectionExpand={handleLyricSectionExpand}
             inMain
+            handleLyricSectionExpand={handleLyricSectionExpand}
         />
 
         <Dots {...dotsSectionHandlers} />

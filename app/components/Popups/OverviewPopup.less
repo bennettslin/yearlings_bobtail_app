@@ -22,6 +22,33 @@
 //     }
 // }
 
+.Popup.overview {
+
+    .Main
+    & {
+        position: static;
+        width: auto;
+        height: auto;
+
+        margin-top: @margin__overview;
+        margin-left: 12px; // Arbitrary.
+    }
+
+    ._mobileNotPhone_
+    .Main
+    & {
+        margin-top: 0;
+        margin-bottom: @margin__scrollbar;
+    }
+
+    ._phone_
+    .Main
+    & {
+        // TODO: This doesn't work because DotsOverview isn't shifting over correctly.
+        margin-left: 0;
+    }
+}
+
 .overview {
     &.popup-wrapper {
         max-width: 480px;

@@ -1,6 +1,6 @@
 .Carousel__selectButtons {
     position: absolute;
-    bottom: -@length__iconLarge - @margin__thin * 2 - @width__scrollbar;
+    bottom: -@length__iconLarge - @margin__thin * 2 - @margin__scrollbar;
     right: 0;
     display: flex;
     justify-content: space-between;
@@ -13,7 +13,7 @@
 
     ._desktop_
     & {
-        margin-bottom: @width__scrollbar;
+        margin-bottom: @margin__scrollbar;
     }
 
     ._desktop_._song_._annotationShown_._carouselExpanded_

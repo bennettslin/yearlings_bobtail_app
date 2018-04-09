@@ -3,13 +3,14 @@
     left: 0;
 
     flex-grow: 1;
-    
+}
+
+.Main__flexContainer {
     display: flex;
-    flex-direction: column;
-    
-    ._mobile_
+
+    ._mobileNotPhone_
     & {
-        flex-direction: column-reverse;
+        align-items: flex-end;
     }
 }
 
@@ -34,10 +35,6 @@
 
 .height__mainColumn {
     top: @js__height__menu;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 
     ._mobile_
     & {

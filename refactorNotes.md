@@ -27,7 +27,7 @@ DynamicSvg
 Icon
 Live
     DotsOverview
-    Main
+    Main (/)
     Menu (/)
     OverviewLogue
     PopupOverlaid

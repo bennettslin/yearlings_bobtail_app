@@ -2777,4 +2777,9 @@ module.exports = [
         workedHours: 6,
         neededHours: 6
     },
+    {
+        taskName: `Fix overview position.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
