@@ -110,6 +110,7 @@ AnnotationPopup = ({
             <Popup
                 showArrows
                 bounceAnimate
+                isCardSize
                 popupName="annotation"
                 isVisible={isVisible}
                 displaysInOverlay={isOverlayingAnnotation}

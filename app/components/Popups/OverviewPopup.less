@@ -25,12 +25,12 @@
     }
 }
 
-.overview {
-    &.PopupView {
-        max-width: 480px;
-    }
+.PopupView__overview {
+    max-width: 480px;
+}
 
-    &.popup-content-wrapper {
+.overview {
+    &.PopupView__content {
         border-radius: 25px;
         background-color: white;
     }
@@ -38,20 +38,15 @@
 
 ._mobile_ {
     &._mini_ {
-        .overview {
-            &.PopupView {
-                width: 80%;
-            }
+        .PopupView__overview {
+            width: 80%;
         }
     }
 
     &._lyricHeightless_, &._phone_ {
-
-        .overview {
-            &.PopupView {
-                width: auto;
-                margin: 0 5px;
-            }
+        .PopupView__overview {
+            width: auto;
+            margin: 0 5px;
         }
     }
 

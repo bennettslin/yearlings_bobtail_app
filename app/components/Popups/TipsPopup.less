@@ -1,4 +1,4 @@
-.tips.PopupView {
+.PopupView__tips {
     /**
      * When tip button is in menu, show tip popup closer to menu. When it's in
      * main in desktop, show it in centre.
@@ -9,20 +9,17 @@
         top: 5%;
         right: 5%;
     }
-}
 
-._mobileNotPhone_ {
-
-    &._scoresTipsMain_ {
+    ._mobileNotPhone_._scoresTipsMain_
+    & {
 
         /**
          * In tablet and mini, when tip button is in menu, show tip in centre.
          * When it's in main, show it closer to tip button.
          */
-         .tips.PopupView {
-             position: absolute;
-             bottom: 5%;
-             right: 5%;
-         }
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
     }
 }
+

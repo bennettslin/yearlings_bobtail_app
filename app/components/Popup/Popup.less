@@ -25,39 +25,31 @@
     z-index: @zIndex__popupOverlayContent;
 }
 
-.PopupView {
-    position: relative;
+// .PopupView {
+//     position: relative;
+//     z-index: @zIndex__popupOverlayContent;
+// }
 
-    z-index: @zIndex__popupOverlayContent;
+.PopupView__fullSize {
+    max-width: @js__width__laptop;
+    width: ~"calc(100% - @{full-subfield-margin} * 2.5)";
+    height: ~"calc(100% - @{full-subfield-margin})";
+}
 
-    &.wiki, &.score {
-        width: ~"calc(100% - @{full-subfield-margin} * 2.5)";
-        max-width: @js__width__laptop;
+.PopupView__cardSize {
+    width: @width__popupAnnotation;
+    max-width: @width__popupAnnotation;
 
-        height: ~"calc(100% - @{full-subfield-margin})";
-    }
-
-    &.annotation, &.tips, &.title {
-        width: @popup-annotation-width;
-        max-width: @popup-annotation-width;
-    }
-
-    // Multiplier is .9, just like for lyric text in mini.
     ._mini_
     & {
-        &.annotation, &.tips, &.title {
-            // width: @mini-popup-annotation-width;
-            max-width: @mini-popup-annotation-width;
-        }
+        // Multiplier is .9, just like for lyric text in mini.
+        max-width: @width__popupAnnotation__mini;
     }
 
-    // Multiplier is .98, just like for lyric text in phone.
     ._phone_
     & {
-        &.annotation, &.tips, &.title {
-            // width: @phone-popup-annotation-width;
-            max-width: @phone-popup-annotation-width;
-        }
+        // Multiplier is .98, just like for lyric text in phone.
+        max-width: @width__popupAnnotation__phone;
     }
 }
 
@@ -91,7 +83,44 @@
     }
 }
 
-.popup-content-wrapper {
+@margin__popupView__mini: 10px;
+
+// TODO: Revisit mobile sizing.
+
+// ._mobile_ {
+
+//     &:not(._tablet_) {
+//         .PopupView__fullSize {
+//             width: ~"calc(100% - @{margin__popupView__mini} * 2)";
+//             height: ~"calc(100% - @{js__length__icon})";
+//         }
+
+//         &._phone_ {
+//             .Popup__displaysInOverlay {
+//                 .PopupView {
+//                     // Make side margin in phone just that much thinner.
+//                     width: ~"calc(100% - @{margin__popupView__mini})";
+//                 }
+//             }
+
+//             &._lyricHeightless_ {
+//                 .PopupView__fullSize {
+//                     height: ~"calc(100% - @{margin__popupView__mini})";
+//                 }
+//             }
+//         }
+
+//         // Reverse width and height when width is greater than height.
+//         &._lyricHeightless_ {
+//             .PopupView__fullSize {
+//                 width: ~"calc(100% - @{js__length__icon} * 2)";
+//                 height: ~"calc(100% - @{margin__popupView__mini})";
+//             }
+//         }
+//     }
+// }
+
+.PopupView__content {
     box-sizing: border-box;
     box-shadow: @popup-box-shadow;
     background-color: @odd-verse-colour;
@@ -104,12 +133,12 @@
 
     &.overview, &.tips {
         // Standard narrow padding.
-        padding: @text-popup-content-wrapper-padding;
+        padding: @text-PopupView__content-padding;
     }
 
     &.annotation, &.title {
         // Wider padding to accommodate popup buttons.
-        padding: @popup-content-side-padding;
+        padding: @js__paddingSide__popupContent;
     }
 
     &.tips {
@@ -118,74 +147,9 @@
     }
 }
 
-._mobile_ {
-
-    &._phone_, &._annotationSide_ {
-
-        .PopupButton {
-            &.side-position {
-                // Override default styling.
-                transform: none;
-                top: auto;
-                bottom: -@js__length__icon * @PopupButton-multiplier;
-            }
-
-            &.previous-position {
-                left: @js__length__icon * 0.2;
-            }
-
-            &.next-position {
-                right: @js__length__icon * 0.2;
-            }
-        }
-    }
-
-    &:not(._tablet_) {
-        .PopupView {
-            &.wiki, &.score {
-                width: ~"calc(100% - @{mini-full-subfield-margin} * 2)";
-                height: ~"calc(100% - @{js__length__icon})";
-            }
-
-            .PopupButton {
-                &.close-position {
-                    display: none;
-                }
-            }
-        }
-
-        &._phone_ {
-            .PopupView {
-                &.wiki, &.score, &.annotation, &.title {
-                    // Make side margin in phone just that much thinner.
-                    width: ~"calc(100% - @{mini-full-subfield-margin})";
-                }
-            }
-
-            &._lyricHeightless_ {
-                .PopupView {
-                    &.wiki, &.score {
-                        height: ~"calc(100% - @{mini-full-subfield-margin})";
-                    }
-                }
-            }
-        }
-
-        // Reverse width and height when width is greater than height.
-        &._lyricHeightless_ {
-            .PopupView {
-                &.wiki, &.score {
-                    width: ~"calc(100% - @{js__length__icon} * 2)";
-                    height: ~"calc(100% - @{mini-full-subfield-margin})";
-                }
-            }
-        }
-    }
-}
-
 ._annotationOverlaid_ {
     .PopupOverlaid {
-        .popup-content-wrapper {
+        .PopupView__content {
             &.annotation {
                 box-shadow: @popup-darker-box-shadow;
             }

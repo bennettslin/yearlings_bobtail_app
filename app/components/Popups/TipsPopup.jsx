@@ -47,6 +47,7 @@ TipsPopup = ({
     return (
         <Popup
             bounceAnimate
+            isCardSize
             popupName="tips"
             isVisible={isVisible}
             handlePopupContainerClick={handlePopupContainerClick}

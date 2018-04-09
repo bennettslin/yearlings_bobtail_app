@@ -12,12 +12,14 @@ import { NAVIGATION_LEFT_KEY,
          NAVIGATION_ESCAPE_KEY } from '../../constants/access'
 
 const popupButtonPropTypes = {
+    isShadow: PropTypes.bool,
     buttonName: PropTypes.string.isRequired,
-    handlePopupButtonClick: PropTypes.func.isRequired
+    handlePopupButtonClick: PropTypes.func
 },
 
 PopupButton = ({
 
+    isShadow,
     handlePopupButtonClick,
     buttonName,
 
@@ -55,16 +57,19 @@ PopupButton = ({
         <div
             className={cx(
                 'PopupButton',
-                `${buttonName}-position`
+                `${buttonName}-position`,
+                { 'shadow': isShadow }
             )}
         >
-            <Button {...other}
-                isLarge
-                isOverflowShown
-                accessKey={accessKey}
-                iconText={tempUnicodeSymbol}
-                handleClick={handleClick}
-            />
+            {!isShadow && (
+                <Button {...other}
+                    isLarge
+                    isOverflowShown
+                    accessKey={accessKey}
+                    iconText={tempUnicodeSymbol}
+                    handleClick={handleClick}
+                />
+            )}
         </div>
     )
 }

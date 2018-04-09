@@ -42,6 +42,7 @@ ScorePopup = ({
     return (
         <Popup
             showClose
+            isFullSize
             displaysInOverlay
             popupName="score"
             isVisible={isVisible}

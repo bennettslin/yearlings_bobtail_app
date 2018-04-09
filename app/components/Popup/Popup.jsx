@@ -149,6 +149,8 @@ popupViewPropTypes = {
     popupName: PropTypes.string.isRequired,
     bounceAnimate: PropTypes.bool,
     shrinkAnimate: PropTypes.bool,
+    isCardSize: PropTypes.bool,
+    isFullSize: PropTypes.bool,
     showClose: PropTypes.bool.isRequired,
     showArrows: PropTypes.bool.isRequired,
     handleCloseClick: PropTypes.func,
@@ -163,6 +165,8 @@ PopupView = ({
     popupName,
     bounceAnimate,
     shrinkAnimate,
+    isCardSize,
+    isFullSize,
     showClose,
     showArrows,
     handleCloseClick,
@@ -173,39 +177,35 @@ PopupView = ({
 
 }) => (
     <div className={cx(
-        'PopupView',
-        popupName,
+        // 'PopupView',
+        `PopupView__${popupName}`,
 
         { 'PopupView__bounceAnimate': bounceAnimate,
-          'PopupView__shrinkAnimate': shrinkAnimate }
+          'PopupView__shrinkAnimate': shrinkAnimate,
+          'PopupView__cardSize': isCardSize,
+          'PopupView__fullSize': isFullSize }
     )}>
-        {showClose &&
-            <div className={cx(
-                'PopupButton',
-                'close-position',
-                'shadow'
-            )} />
-        }
-        {showArrows &&
-            <div className={cx(
-                'PopupButton',
-                'side-position',
-                'previous-position',
-                'shadow'
-            )} />
-        }
-        {showArrows &&
-            <div className={cx(
-                'PopupButton',
-                'side-position',
-                'next-position',
-                'shadow'
-            )} />
-        }
+        {showClose && (
+            <PopupButton
+                isShadow
+                buttonName={CLOSE_POPUP_BUTTON}
+            />
+        )}
+        {showClose && (
+            <PopupButton
+                isShadow
+                buttonName={PREVIOUS_POPUP_BUTTON}
+            />
+        )}
+        {showClose && (
+            <PopupButton
+                isShadow
+                buttonName={NEXT_POPUP_BUTTON}
+            />
+        )}
         <div
             className={cx(
-                'popup-content-wrapper',
-                popupName
+                'PopupView__content'
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}

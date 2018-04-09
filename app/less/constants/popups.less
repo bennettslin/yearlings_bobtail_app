@@ -1,16 +1,15 @@
 // This value *must* be the same in js.
-@popup-content-side-padding: 20px;
+@js__paddingSide__popupContent: 20px;
 
 @full-subfield-margin: @length__iconLarge;
-@mini-full-subfield-margin: 10px;
 
 @PopupButton-multiplier: 0.56;
 
-@popup-annotation-width: @width__annotationCard + @AnnotationCard-padding * 2 + @popup-content-side-padding * 2;
-@mini-popup-annotation-width: @width__annotationCard__mini + @AnnotationCard-padding * 2 + @popup-content-side-padding * 2;
-@phone-popup-annotation-width: @width__annotationCard__phone + @AnnotationCard-padding * 2 + @popup-content-side-padding * 2;
+@width__popupAnnotation: @width__annotationCard + @AnnotationCard-padding * 2 + @js__paddingSide__popupContent * 2;
+@width__popupAnnotation__mini: @width__annotationCard__mini + @AnnotationCard-padding * 2 + @js__paddingSide__popupContent * 2;
+@width__popupAnnotation__phone: @width__annotationCard__phone + @AnnotationCard-padding * 2 + @js__paddingSide__popupContent * 2;
 
 @popup-transition-duration-in: @animationDuration__slow;
 @popup-transition-duration-out: @animationDuration__fast;
 
-@text-popup-content-wrapper-padding: 15px;
+@text-PopupView__content-padding: 15px;

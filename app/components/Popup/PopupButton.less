@@ -46,3 +46,35 @@
         position: initial;
     }
 }
+
+
+._mobile_ {
+
+    &._phone_, &._annotationSide_ {
+
+        .PopupButton {
+            &.side-position {
+                // Override default styling.
+                transform: none;
+                top: auto;
+                bottom: -@js__length__icon * @PopupButton-multiplier;
+            }
+
+            &.previous-position {
+                left: @js__length__icon * 0.2;
+            }
+
+            &.next-position {
+                right: @js__length__icon * 0.2;
+            }
+        }
+    }
+
+    &:not(._tablet_) {
+        .PopupButton {
+            &.close-position {
+                display: none;
+            }
+        }
+    }
+}
