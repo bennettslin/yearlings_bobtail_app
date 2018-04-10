@@ -108,7 +108,7 @@ class TextAnchor extends Component {
                         !inPortal && annotationIndex && `annotation-${annotationIndex}`,
                         wikiIndex && `wiki-${wikiIndex}`,
                         { 'selected': isSelected,
-                          'access-highlighted': accessHighlighted && !isSelected,
+                          'accessHighlighted': accessHighlighted && !isSelected,
                           'portal-anchor': isPortalAnchor,
                           'reference': !!wikiIndex,
                           'todo': hasTodo }

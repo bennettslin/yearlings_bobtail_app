@@ -15,7 +15,7 @@ const mapStateToProps = ({
     showSingleBookColumn
 })
 
-const navItemPropTypes = {
+const navIndexedButton = {
     // Through Redux.
     accessedNavSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
@@ -25,7 +25,7 @@ const navItemPropTypes = {
     songIndex: PropTypes.number.isRequired
 },
 
-NavItem = ({
+NavIndexedButton = ({
 
     songIndex,
     selectedSongIndex,
@@ -45,6 +45,6 @@ NavItem = ({
     )
 }
 
-NavItem.propTypes = navItemPropTypes
+NavIndexedButton.propTypes = navIndexedButton
 
-export default connect(mapStateToProps)(NavItem)
+export default connect(mapStateToProps)(NavIndexedButton)

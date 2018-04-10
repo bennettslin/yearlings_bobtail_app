@@ -53,10 +53,10 @@
 ._carouselNavShowable_._navExpanded_ {
 
     // Show panel if access highlighted only when access is on.
-    &._accessOn_ .accessKeysShown.access-highlighted,
+    &._accessOn_ .accessHighlighted .accessKeysShown,
 
     // Show panel upon hover only when access is off.
-    &._accessOff_ .NavButton:hover {
+    &._accessOff_ .Button__nav:hover {
         .NavPanel-block {
             opacity: 1;
             z-index: @zIndex__navCustomSubfield;
@@ -64,7 +64,7 @@
     }
 
     // Show panel when button is active, and give it the higher z-index.
-    .NavButton:active {
+    .Button__nav:active {
         .NavPanel-block {
             opacity: 1;
             z-index: @zIndex__centreFieldChild;

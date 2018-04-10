@@ -107,7 +107,7 @@ class AnnotationPortal extends Component {
                     'portal-block',
                     'anchor-block',
                     'DotAnchor',
-                    { 'access-highlighted': isAccessedPortal }
+                    { 'accessHighlighted': isAccessedPortal }
                 )}
             >
                 <div className="portal-column button-portal-column">

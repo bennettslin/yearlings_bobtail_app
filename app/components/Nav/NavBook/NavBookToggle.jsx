@@ -14,7 +14,7 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-const navColumnTogglePropTypes = {
+const navBookTogglePropTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
 
@@ -45,6 +45,6 @@ NavBookToggle = ({
     )
 }
 
-NavBookToggle.propTypes = navColumnTogglePropTypes
+NavBookToggle.propTypes = navBookTogglePropTypes
 
 export default connect(mapStateToProps)(NavBookToggle)

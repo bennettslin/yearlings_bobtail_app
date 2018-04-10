@@ -54,7 +54,7 @@ class DotAnchor extends Component {
                 'DotAnchor',
                 dotKeys,
                 { 'selected': isSelected,
-                  'access-highlighted': accessHighlighted && !isSelected }
+                  'accessHighlighted': accessHighlighted && !isSelected }
             )}>
                 <span className="underline-bar" />
                 <DotButton {...other}

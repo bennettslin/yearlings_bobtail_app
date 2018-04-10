@@ -79,7 +79,7 @@ class Button extends Component {
                       'custom-size': isCustomSize,
                       'enabled': isEnabled,
                       'selected': isSelected,
-                      'access-highlighted': accessHighlighted,
+                      'accessHighlighted': accessHighlighted,
                       'accessKeysShown': accessKeysShown,
                       'deselected': isDeselected,
                       'overflowShown': isOverflowShown }

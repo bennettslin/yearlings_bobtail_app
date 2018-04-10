@@ -1,4 +1,5 @@
 // Button in dots section to select and deselect dot.
+/* eslint-disable object-shorthand */
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -148,7 +149,7 @@ DotToggleButtonView = ({
                     'TextAnchorBlock',
                     'in-Dots',
                     { 'selected': isInteractivated,
-                      'access-highlighted': accessHighlighted }
+                      'accessHighlighted': accessHighlighted }
                 )}>
                     <span className="underline-bar" />
                     <span className="TextSpan">{dotKey}</span>
@@ -157,7 +158,7 @@ DotToggleButtonView = ({
             <div className={cx(
                 'anchor-block',
                 'DotAnchor',
-                { 'access-highlighted': accessHighlighted }
+                { 'accessHighlighted': accessHighlighted }
             )}>
                 <Button
                     isOverflowShown

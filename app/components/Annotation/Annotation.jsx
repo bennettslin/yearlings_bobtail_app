@@ -152,7 +152,7 @@ AnnotationSectionView = ({
                             'annotation-title',
                             annotationDotKeys,
                             { 'selected': showAsSelected,
-                              'access-highlighted': isAccessedAnnotation }
+                              'accessHighlighted': isAccessedAnnotation }
                         )}
                         onClick={handleTitleClick}
                         onTouchStart={handleTitleClick}

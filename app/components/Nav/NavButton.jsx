@@ -1,4 +1,5 @@
 // Button to select book or song in nav section.
+/* eslint-disable object-shorthand */
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
@@ -159,25 +160,23 @@ NavButtonView = ({
     return (
         <div
             className={cx(
-                'NavButton-block',
-                { 'access-highlighted': accessHighlighted }
+                'NavButton',
+                { 'accessHighlighted': accessHighlighted }
             )}
         >
-            <div className="NavButton-wrapper">
-                <Button {...other}
-                    buttonName="nav"
-                    accessKey={accessKey}
-                    accessKeysShown={showEnterAccessKey}
-                    extraChild={
-                        <NavPanel
-                            isLeftmost={isLeftmost}
-                            isRightmost={isRightmost}
-                            bookIndex={bookIndex}
-                            songIndex={songIndex}
-                        />
-                    }
-                />
-            </div>
+            <Button {...other}
+                buttonName="nav"
+                accessKey={accessKey}
+                accessKeysShown={showEnterAccessKey}
+                extraChild={
+                    <NavPanel
+                        isLeftmost={isLeftmost}
+                        isRightmost={isRightmost}
+                        bookIndex={bookIndex}
+                        songIndex={songIndex}
+                    />
+                }
+            />
         </div>
     )
 }

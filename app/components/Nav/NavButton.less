@@ -1,22 +1,16 @@
-.NavButton-wrapper {
-    position: absolute;
-    top: 0;
-    height: 100%;
-
+.NavButton {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
 
-.NavButton-block, .icon-canvas-block {
+    overflow: hidden;
+
     .NavColumn__hidden
     .NavBookSongs
     & {
         width: 0;
     }
-}
 
-.NavButton-block {
     .Nav__showSingleBook
     & {
         transition: width @animationDuration__default, margin @animationDuration__default;
@@ -41,21 +35,5 @@
         &:not(:last-child) {
             margin-left: 1px;
         }
-    }
-}
-
-.CarouselNavToggle__placeholder {
-    position: relative;
-
-    ._navIconShrunk_
-    & {
-        // Static margins after icons begin shrinking.
-        margin-right: 3px;
-    }
-
-    ._mobileNotPhone_._navIconShrunk_
-    & {
-        margin-left: 3px;
-        margin-right: 0;
     }
 }
