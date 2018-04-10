@@ -26,11 +26,6 @@
     z-index: @zIndex__popupOverlayContent;
 }
 
-// .PopupView {
-//     position: relative;
-//     z-index: @zIndex__popupOverlayContent;
-// }
-
 .PopupView__fullSize {
     max-width: @js__width__laptop;
     width: ~"calc(100% - @{full-subfield-margin} * 2.5)";
@@ -85,23 +80,16 @@
 }
 
 .PopupView__content {
-    // box-sizing: border-box;
     background-color: @odd-verse-colour;
-    // position: relative;
-
-    // &:not(.overview) {
-    //     width: 100%;
-    //     height: 100%;
-    // }
 
     .Popup__displaysNotInOverlay
     & {
-        box-shadow: @popup-box-shadow;
+        box-shadow: @boxShadow__popup;
     }
 
     .Popup__displaysInOverlay
     & {
-        box-shadow: @popup-darker-box-shadow;
+        box-shadow: @boxShadow__popupDarker;
     }
 }
 

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import PopupButton from './PopupButton'
 
-import { CLOSE_POPUP_BUTTON,
-         PREVIOUS_POPUP_BUTTON,
-         NEXT_POPUP_BUTTON } from '../../constants/options'
+// import { CLOSE_POPUP_BUTTON,
+//          PREVIOUS_POPUP_BUTTON,
+//          NEXT_POPUP_BUTTON } from '../../constants/options'
 
 /*************
  * CONTAINER *
@@ -192,19 +192,19 @@ PopupView = ({
         {showClose && (
             <PopupButton
                 isShadow
-                buttonName={CLOSE_POPUP_BUTTON}
+                isCloseButton
             />
         )}
         {showClose && (
             <PopupButton
                 isShadow
-                buttonName={PREVIOUS_POPUP_BUTTON}
+                isPreviousButton
             />
         )}
         {showClose && (
             <PopupButton
                 isShadow
-                buttonName={NEXT_POPUP_BUTTON}
+                isNextButton
             />
         )}
         <div
@@ -220,22 +220,22 @@ PopupView = ({
             {showClose &&
                 <PopupButton
                     accessKeysShown
+                    isCloseButton
                     handlePopupButtonClick={handleCloseClick}
-                    buttonName={CLOSE_POPUP_BUTTON}
                 />
             }
             {showArrows &&
                 <PopupButton
                     accessKeysShown
+                    isPreviousButton
                     handlePopupButtonClick={handlePreviousClick}
-                    buttonName={PREVIOUS_POPUP_BUTTON}
                 />
             }
             {showArrows &&
                 <PopupButton
                     accessKeysShown
+                    isNextButton
                     handlePopupButtonClick={handleNextClick}
-                    buttonName={NEXT_POPUP_BUTTON}
                 />
             }
         </div>

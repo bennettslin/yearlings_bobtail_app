@@ -1,46 +1,17 @@
 // TODO: I don't know what this value is...
-@PopupButton-multiplier: 0.56;
+@PopupButton__multiplier: 0.56;
 
 .PopupButton {
     position: absolute;
 
-    &.close-position {
-        top: -@length__iconLarge * @PopupButton-multiplier;
-        left: -@length__iconLarge * @PopupButton-multiplier;
-    }
-
-    &.side-position {
-        top: @length__iconLarge * 0.2;
-    }
-
-    &.previous-position {
-        left: -@length__iconLarge * @PopupButton-multiplier;
-    }
-
-    &.next-position {
-        right: -@length__iconLarge * @PopupButton-multiplier;
-    }
-
-    &.shadow {
-        display: block;
-        overflow: hidden;
-        box-shadow: @popup-box-shadow;
-        border-radius: 50%;
-
-        &.close-position {
-            box-shadow: @popup-darker-box-shadow;
-        }
-    }
-
     ._annotationOverlaid_
     & {
         &.side-position {
-            top: 50%;
-            transform: translateY(-50%);
+
         }
 
         &.shadow {
-            box-shadow: @popup-darker-box-shadow;
+            box-shadow: @boxShadow__popupDarker;
         }
     }
 
@@ -50,34 +21,63 @@
     }
 }
 
+.PopupButton__shadow {
+    display: block;
+    overflow: hidden;
+    box-shadow: @boxShadow__popup;
+    border-radius: 50%;
+
+    &.PopupButton__close {
+        box-shadow: @boxShadow__popupDarker;
+    }
+}
+
+.PopupButton__close {
+    top: -@length__iconLarge * @PopupButton__multiplier;
+    left: -@length__iconLarge * @PopupButton__multiplier;
+}
+
+.PopupButton__side {
+    top: @length__iconLarge * 0.2;
+
+    ._annotationOverlaid_
+    & {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.PopupButton__previous {
+    left: -@length__iconLarge * @PopupButton__multiplier;
+}
+
+.PopupButton__next {
+    right: -@length__iconLarge * @PopupButton__multiplier;
+}
 
 ._mobile_ {
 
     &._phone_, &._annotationSide_ {
 
-        .PopupButton {
-            &.side-position {
-                // Override default styling.
-                transform: none;
-                top: auto;
-                bottom: -@js__length__icon * @PopupButton-multiplier;
-            }
+        &.PopupButton__side {
+            // Override default styling.
+            transform: none;
+            top: auto;
+            bottom: -@js__length__icon * @PopupButton__multiplier;
+        }
 
-            &.previous-position {
-                left: @js__length__icon * 0.2;
-            }
+        &.PopupButton__previous {
+            left: @js__length__icon * 0.2;
+        }
 
-            &.next-position {
-                right: @js__length__icon * 0.2;
-            }
+        &.PopupButton__next {
+            right: @js__length__icon * 0.2;
         }
     }
 
-    &:not(._tablet_) {
-        .PopupButton {
-            &.close-position {
-                display: none;
-            }
-        }
-    }
+    // &:not(._tablet_) {
+    //     &.PopupButton__close {
+    //         display: none;
+    //     }
+    // }
 }
