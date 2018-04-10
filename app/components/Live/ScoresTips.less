@@ -14,46 +14,44 @@
     justify-content: space-between;
     align-items: center;
     padding: @scores-tips-padding;
-
     background-color: #efd;
 
     .Button {
         // Ensure that these buttons are above the carousel.
         z-index: @zIndex__centreFieldChild;
-        transition: transform @animationDuration__default, opacity @animationDuration__default;
+
+        transition: transform @animationDuration__default,
+                    opacity @animationDuration__default;
+    }
+}
+
+.ScoresTips__inMenu {
+    .Button:first-child {
+        margin-right: @scores-tips-margin;
+    }
+}
+
+.ScoresTips__inMain {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .Button:first-child {
+        margin-bottom: @scores-tips-margin;
     }
 
-    .Main
+    ._mobile_
     & {
-        flex-direction: column;
-        align-items: flex-start;
-    
-        .Button:first-child {
-            margin-bottom: @scores-tips-margin;
-        }
-    }
-
-    .MenuTopRow
-    & {
-        .Button:first-child {
-            margin-right: @scores-tips-margin;
-        }
+        position: absolute;
+        transition: right @animationDuration__default;
+        right: 0;
+        bottom: @dots-overview-padding;
     }
 }
 
 ._mobile_ {
 
-    .Main {
-        .ScoresTips {
-            position: absolute;
-            transition: right @animationDuration__default;
-            right: 0;
-            bottom: @dots-overview-padding;
-        }
-    }
-
     &._mini_ {
-        // Affects section in centre field only.
+        // Affects section in main only.
         &._lyricExpanded_, &._overviewShown_, &._tipsShown_, &._annotationShown_._navExpanded_, &._dotsShown_ {
             .ScoresTips {
                 right: -@scores-tips-_mini_;
@@ -68,7 +66,7 @@
             }
         }
 
-        // In phone, section is always in centre field.
+        // In phone, section is always in main.
         .ScoresTips {
             bottom: auto;
         }
@@ -76,7 +74,8 @@
 }
 
 // I don't understand this.
-._logue_, ._song_._overviewShown_._scoresTipsMain_ {
+._logue_,
+._song_._overviewShown_._scoresTipsMain_ {
     .ScoresTips {
 
         .Button {

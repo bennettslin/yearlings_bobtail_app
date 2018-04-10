@@ -27,8 +27,8 @@ const mapStateToProps = ({
 
 const scoresTipsDefaultProps = {
     inMenu: false,
-    inMain: false,
-    inToggleSection: false
+    inMainRightSide: false,
+    inDotsOverview: false
 },
 
 scoresTipsPropTypes = {
@@ -41,8 +41,8 @@ scoresTipsPropTypes = {
 
     // From parent.
     inMenu: PropTypes.bool.isRequired,
-    inMain: PropTypes.bool.isRequired,
-    inToggleSection: PropTypes.bool.isRequired,
+    inMainRightSide: PropTypes.bool.isRequired,
+    inDotsOverview: PropTypes.bool.isRequired,
     handleScoreToggle: PropTypes.func.isRequired,
     handleTipsToggle: PropTypes.func.isRequired
 },
@@ -56,8 +56,8 @@ ScoresTips = ({
     selectedTipsIndex,
 
     inMenu,
-    inMain,
-    inToggleSection,
+    inMainRightSide,
+    inDotsOverview,
 
     handleScoreToggle,
     handleTipsToggle
@@ -68,11 +68,11 @@ ScoresTips = ({
         // Render if...
         shouldRender = isScoresTipsInMain ?
 
-            // ...in main on mobile.
-            (inMain && !isDesktop) ||
+            // ...in main on the right in mobile.
+            (inMainRightSide && !isDesktop) ||
 
-            // ...in toggle section on desktop.
-            (inToggleSection && isDesktop) :
+            // ...in main on the left in dots overview on desktop.
+            (inDotsOverview && isDesktop) :
 
             // ...in menu.
             inMenu,
@@ -81,7 +81,11 @@ ScoresTips = ({
 
     return shouldRender && (
         <div className={cx(
-            'ScoresTips'
+            'ScoresTips',
+            { 'ScoresTips__inMenu': inMenu,
+              'ScoresTips__inMain': inMainRightSide || inDotsOverview,
+              'ScoresTips__inMainRight': inMainRightSide,
+              'ScoresTips__inDotsOverview': inDotsOverview }
         )}>
             {showScoreToggleButton &&
                 <Button

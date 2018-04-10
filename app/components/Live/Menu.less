@@ -183,23 +183,26 @@
         justify-content: flex-end;
     }
 
-    min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge + @audio-block-padding * 3;
+    min-width: @minWidth__audioBanner +
+               @AudioButtons-constant +
+               @length__iconLarge +
+               @js__padding__audio * 3;
 
     box-sizing: border-box;
 
     ._tablet_
     & {
-        min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__tablet + @audio-block-padding * 3;
+        min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__tablet + @js__padding__audio * 3;
     }
 
     ._mini_
     & {
-        min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__mini + @audio-block-padding * 3;
+        min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__mini + @js__padding__audio * 3;
     }
 
     ._phone_
     & {
-        min-width: @AudioButtons-constant + @js__length__icon + @audio-block-padding * 3;
+        min-width: @AudioButtons-constant + @js__length__icon + @js__padding__audio * 3;
     }
 }
 
@@ -228,6 +231,7 @@
 }
 
 .widths__hiddenInOverlay {
+
     ._overlayShown_
     & {
         width: 0;

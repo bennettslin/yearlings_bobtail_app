@@ -109,7 +109,7 @@ Main = ({
             <Dots {...dotsSectionHandlers} />
 
             <ScoresTips {...scoresTipsHandlers}
-                inMain
+                inMainRightSide
             />
 
             <TipsPopup {...tipsPopupHandlers} />

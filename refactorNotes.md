@@ -37,7 +37,7 @@ Lyric
 Nav
 Overview
 Players
-Popup
+Popup (Waiting on popup rework to finalise.)
 Popups
 Score
 Slider
