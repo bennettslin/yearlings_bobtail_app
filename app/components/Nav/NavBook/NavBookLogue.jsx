@@ -4,15 +4,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import NavItem from './NavItem'
-import { getSongsAndLoguesCount } from '../../helpers/dataHelper'
+import NavItem from '../NavItem'
+import { getSongsAndLoguesCount } from '../../../helpers/dataHelper'
 
-const navLogueButtonPropTypes = {
+const navColumnLoguePropTypes = {
     // From parent.
     bookIndex: PropTypes.number.isRequired
 },
 
-NavLogueButton = ({
+NavBookLogue = ({
 
     bookIndex,
 
@@ -22,8 +22,8 @@ NavLogueButton = ({
 
     return (
         <div className={cx(
-            'NavBook__logue',
-            'NavColumn__child'
+            'NavBookLogue',
+            'NavBook'
         )}>
             <NavItem {...other}
                 songIndex={songIndex}
@@ -32,6 +32,6 @@ NavLogueButton = ({
     )
 }
 
-NavLogueButton.propTypes = navLogueButtonPropTypes
+NavBookLogue.propTypes = navColumnLoguePropTypes
 
-export default NavLogueButton
+export default NavBookLogue

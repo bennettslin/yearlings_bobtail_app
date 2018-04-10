@@ -4,9 +4,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import NavBook from './NavBook'
-import NavBookButton from './NavBookButton'
-import NavLogueButton from './NavLogueButton'
+import NavBookSongs from './NavBook/NavBookSongs'
+import NavBookToggle from './NavBook/NavBookToggle'
+import NavBookLogue from './NavBook/NavBookLogue'
 
 const mapStateToProps = ({
     showSingleBookColumn,
@@ -48,18 +48,18 @@ NavColumn = ({
                 'NavColumn__shown' : 'NavColumn__hidden'
         )}>
             {/* Nav book. */}
-            <NavBook
+            <NavBookSongs
                 bookIndex={bookIndex}
                 handleButtonClick={handleNavSongSelect}
             />
 
             {/* Logue or toggle. */}
             {isShownColumn ?
-                <NavLogueButton
+                <NavBookLogue
                     bookIndex={bookIndex}
                     handleButtonClick={handleNavSongSelect}
                 /> :
-                <NavBookButton
+                <NavBookToggle
                     bookIndex={bookIndex}
                     handleButtonClick={handleNavBookSelect}
                 />

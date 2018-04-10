@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import NavButton from './NavButton'
-import { getBookColumnIndex } from '../../helpers/dataHelper'
+import NavButton from '../NavButton'
+import { getBookColumnIndex } from '../../../helpers/dataHelper'
 
 const mapStateToProps = ({
     selectedSongIndex
@@ -14,7 +14,7 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-const navBookButtonPropTypes = {
+const navColumnTogglePropTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
 
@@ -22,7 +22,7 @@ const navBookButtonPropTypes = {
     bookIndex: PropTypes.number.isRequired
 },
 
-NavBookButton = ({
+NavBookToggle = ({
 
     selectedSongIndex,
     bookIndex,
@@ -34,8 +34,8 @@ NavBookButton = ({
 
     return (
         <div className={cx(
-            'NavBook__toggle',
-            'NavColumn__child'
+            'NavBookToggle',
+            'NavBook'
         )}>
             <NavButton {...other}
                 isSelected={hasSelectedSong}
@@ -45,6 +45,6 @@ NavBookButton = ({
     )
 }
 
-NavBookButton.propTypes = navBookButtonPropTypes
+NavBookToggle.propTypes = navColumnTogglePropTypes
 
-export default connect(mapStateToProps)(NavBookButton)
+export default connect(mapStateToProps)(NavBookToggle)

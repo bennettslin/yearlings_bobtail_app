@@ -15,7 +15,7 @@
             }
 
             .NavColumn__left {
-                .NavBook__songs {
+                .NavBookSongs {
                     left: @monitor-book-offset;
                 }
 
@@ -25,7 +25,7 @@
             }
 
             .NavColumn__right {
-                .NavBook__songs {
+                .NavBookSongs {
                     right: @monitor-book-offset;
                 }
 
@@ -42,7 +42,7 @@
 
             .NavColumn__shown {
                 &.NavColumn__left {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         left: @monitor-single-book-offset;
                     }
 
@@ -52,7 +52,7 @@
                 }
 
                 &.NavColumn__right {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         right: @monitor-single-book-offset;
                     }
 
@@ -66,18 +66,18 @@
 
     &._navIconShrunk_ {
         .Nav__showDoubleBook {
-            .NavColumn__child {
+            .NavBook {
                 min-width: @monitor-shrink-icon;
             }
 
             .NavColumn__left {
-                .NavBook__songs {
+                .NavBookSongs {
                     left: @monitor-shrink-book-offset;
                 }
             }
 
             .NavColumn__right {
-                .NavBook__songs {
+                .NavBookSongs {
                     right: @monitor-shrink-book-offset;
                 }
             }
@@ -108,7 +108,7 @@
             }
             .NavColumn__shown {
                 &.NavColumn__left {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         left: @laptop-book-offset;
                     }
 
@@ -118,7 +118,7 @@
                 }
 
                 &.NavColumn__right {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         right: @laptop-book-offset;
                     }
 
@@ -132,19 +132,19 @@
 
     &._navIconShrunk_ {
         .Nav__showSingleBook {
-            .NavColumn__child {
+            .NavBook {
                 min-width: @laptop-shrink-icon;
             }
 
             .NavColumn__shown {
                 &.NavColumn__left {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         left: @laptop-shrink-book-offset;
                     }
                 }
 
                 &.NavColumn__right {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         right: @laptop-shrink-book-offset;
                     }
                 }
@@ -155,7 +155,7 @@
              * hidden column.
              */
             .NavColumn__shown,
-            .NavColumn__hidden .NavBook__toggle {
+            .NavColumn__hidden .NavBookToggle {
                 .NavButton-block {
                     width: @laptop-shrink-icon;
                 }
@@ -188,7 +188,7 @@
             }
 
             .NavColumn__left {
-                .NavBook__songs {
+                .NavBookSongs {
                     left: @tablet-book-offset;
                 }
 
@@ -198,7 +198,7 @@
             }
 
             .NavColumn__right {
-                .NavBook__songs {
+                .NavBookSongs {
                     right: @tablet-book-offset;
                 }
 
@@ -215,7 +215,7 @@
 
             .NavColumn__shown {
                 &.NavColumn__left {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         left: @tablet-single-book-offset;
                     }
 
@@ -225,7 +225,7 @@
                 }
 
                 &.NavColumn__right {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         right: @tablet-single-book-offset;
                     }
 
@@ -239,18 +239,18 @@
 
     &._navIconShrunk_ {
         .Nav__showDoubleBook {
-            .NavColumn__child {
+            .NavBook {
                 min-width: @tablet-shrink-icon;
             }
 
             .NavColumn__left {
-                .NavBook__songs {
+                .NavBookSongs {
                     left: @tablet-shrink-book-offset;
                 }
             }
 
             .NavColumn__right {
-                .NavBook__songs {
+                .NavBookSongs {
                     right: @tablet-shrink-book-offset;
                 }
             }
@@ -287,7 +287,7 @@
 
             .NavColumn__shown {
                 &.NavColumn__left {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         left: @mini-book-offset;
                     }
 
@@ -297,7 +297,7 @@
                 }
 
                 &.NavColumn__right {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         right: @mini-book-offset;
                     }
 
@@ -311,19 +311,19 @@
 
     &._navIconShrunk_ {
         .Nav__showSingleBook {
-            .NavColumn__child {
+            .NavBook {
                 min-width: @mini-shrink-icon;
             }
 
             .NavColumn__shown {
                 &.NavColumn__left {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         left: @mini-shrink-book-offset;
                     }
                 }
 
                 &.NavColumn__right {
-                    .NavBook__songs {
+                    .NavBookSongs {
                         right: @mini-shrink-book-offset;
                     }
                 }
@@ -334,7 +334,7 @@
              * hidden column.
              */
             .NavColumn__shown,
-            .NavColumn__hidden .NavBook__toggle {
+            .NavColumn__hidden .NavBookToggle {
                 .NavButton-block {
                     width: @mini-shrink-icon;
                 }

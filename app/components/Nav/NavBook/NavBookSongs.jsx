@@ -4,15 +4,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import NavItem from './NavItem'
-import { getSongsAndLoguesCount, getStartingIndexForBook } from '../../helpers/dataHelper'
+import NavItem from '../NavItem'
+import { getSongsAndLoguesCount, getStartingIndexForBook } from '../../../helpers/dataHelper'
 
 const navBookPropTypes = {
     // From parent.
     bookIndex: PropTypes.number.isRequired
 },
 
-NavBook = ({
+NavBookSongs = ({
 
     // From props.
     bookIndex,
@@ -29,8 +29,8 @@ NavBook = ({
 
     return (
         <div className={cx(
-            'NavBook__songs',
-            'NavColumn__child'
+            'NavBookSongs',
+            'NavBook'
         )}>
             {Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
                 const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
@@ -45,6 +45,6 @@ NavBook = ({
     )
 }
 
-NavBook.propTypes = navBookPropTypes
+NavBookSongs.propTypes = navBookPropTypes
 
-export default NavBook
+export default NavBookSongs
