@@ -1,50 +1,10 @@
-// Constants prefixed with js *must* be the same in JavaScript.
-
+@import "./constants.less";
 @import "./Main/DotsOverview.less";
 @import "./OverviewLogue.less";
 @import "./PopupOverlaid.less";
 @import "./ScoresTips.less";
 @import "./Menu.less";
 @import "./Main/Main.less";
-
-@js__width__mini: 720px;
-@js__width__laptop: 1400px;
-
-/**
- * This is the maximum lyric column width in monitor, as determined by the
- * width of On a Golden Cord in double columns. MenuTopRow and nav widths can be as
- * narrow as 656px. (1401 - 745.)
- */
-@js__width__goldenCord: 745px;
-/**
- * This is the maximum lyric column width in laptop, as determined by the
- * width of Uncanny Valley and Vegan Proclamation. MenuTopRow and nav widths can be
- * as narrow as 531px. (1101 - 570.)
- */
-@js__width__uncannyValley: 570px;
-
-@js__height__lyricCollapsed: 32%;
-
-@LyricVerse-size: 1em;
-@lyric-title-size: 1.5em;
-
-@mini-multiplier: 0.9;
-@mini-verse-size: @LyricVerse-size * @mini-multiplier;
-@mini-title-size: 1.2em;
-
-@phone-multiplier: 0.8;
-@phone-verse-size: @LyricVerse-size * @phone-multiplier;
-@phone-title-size: 1em;
-
-@Annotation-padding: 5px;
-@AnnotationCard-padding: @Annotation-padding;
-
-@width__annotationCard: 354px;
-@width__annotationCard__mini: @width__annotationCard * @mini-multiplier;
-@width__annotationCard__phone: @width__annotationCard * @phone-multiplier;
-
-@width__overviewToggle: 100px;
-@height__overviewToggle: 150px;
 
 .Live {
     position: relative;
