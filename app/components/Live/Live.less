@@ -25,12 +25,6 @@
 
 @js__height__lyricCollapsed: 32%;
 
-@height__nav-padding: 6px;
-@height__nav: @length__iconLarge + @height__nav-padding;
-@nav-tablet-height: @length__iconLarge__tablet + @height__nav-padding;
-@nav-mini-height: @length__iconLarge__mini + @height__nav-padding;
-@book-height: @js__length__icon + @height__nav-padding;
-
 @LyricVerse-size: 1em;
 @lyric-title-size: 1.5em;
 
@@ -57,32 +51,4 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-}
-
-// .subfield {
-//     height: 100%;
-// }
-
-.position__lyricColumn {
-
-    ._desktop_
-    & {
-        position: absolute;
-        width: @js__width__goldenCord;
-        height: 100%;
-        right: 0;
-    }
-
-    ._laptop_
-    & {
-        width: @js__width__uncannyValley;
-    }
-
-    ._mobile_
-    & {
-        position: absolute;
-        height: @js__height__lyricCollapsed;
-        width: 100%;
-        bottom: 0;
-    }
 }

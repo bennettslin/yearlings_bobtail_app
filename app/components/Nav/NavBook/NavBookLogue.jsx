@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import NavIndexedButton from '../NavIndexedButton'
+import NavButtonIndexed from '../NavButtonIndexed'
 import { getSongsAndLoguesCount } from '../../../helpers/dataHelper'
 
 const navBookLoguePropTypes = {
@@ -25,7 +25,7 @@ NavBookLogue = ({
             'NavBookLogue',
             'NavBook'
         )}>
-            <NavIndexedButton {...other}
+            <NavButtonIndexed {...other}
                 songIndex={songIndex}
             />
         </div>

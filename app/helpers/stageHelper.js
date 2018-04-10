@@ -21,7 +21,7 @@ import { PHONE_WIDTH,
          LS_HEIGHT_MENU,
          LS_HEIGHT_MENU_PHONE,
 
-         NAV_BOOK_HEIGHT } from '../constants/responsive'
+         LS_HEIGHT_NAV } from '../constants/responsive'
 
 import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenNav } from './responsiveHelper'
 
@@ -47,7 +47,7 @@ export const getStageCoordinates = ({
 
         isHiddenNav = getIsHiddenNav({ deviceIndex, windowHeight }),
 
-        navHeight = isPhone || isHeightlessLyricColumn || isHiddenNav ? 0 : NAV_BOOK_HEIGHT,
+        navHeight = isPhone || isHeightlessLyricColumn || isHiddenNav ? 0 : LS_HEIGHT_NAV,
 
         centreFieldHeight = getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - navHeight,
 

@@ -73,3 +73,27 @@
         mask-image: @_lyricCollapsed_-gradient;
     }
 }
+
+.position__lyricColumn {
+
+    ._desktop_
+    & {
+        position: absolute;
+        width: @js__width__goldenCord;
+        height: 100%;
+        right: 0;
+    }
+
+    ._laptop_
+    & {
+        width: @js__width__uncannyValley;
+    }
+
+    ._mobile_
+    & {
+        position: absolute;
+        height: @js__height__lyricCollapsed;
+        width: 100%;
+        bottom: 0;
+    }
+}

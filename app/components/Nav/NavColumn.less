@@ -1,22 +1,21 @@
 .NavColumn,
 .NavBook {
     position: absolute;
-    height: 100%;
 }
 
 .NavColumn {
-    height: @book-height;
+    height: @js__height__nav;
 
     ._desktop_
     & {
         transition: bottom @animationDuration__default;
-        bottom: -@book-height;
+        bottom: -@js__height__nav;
     }
 
     ._mobileNotPhone_
     & {
         transition: top @animationDuration__default;
-        top: -@book-height;
+        top: -@js__height__nav;
     }
 }
 

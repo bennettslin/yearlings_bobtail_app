@@ -1,5 +1,3 @@
-@borderRadius__nav: @height__nav / 3;
-
 @import "./NavBook/NavBookLogue.less";
 @import "./NavBook/NavBookSongs.less";
 @import "./NavBook/NavBookToggle.less";
@@ -8,11 +6,19 @@
 @import "./NavPanel.less";
 @import "./NavResponsive.less";
 
+@paddingY__nav: 3px;
+
+@js__height__nav:
+    @js__length__icon +
+    @paddingY__nav * 2;
+
+@borderRadius__nav: @js__height__nav / 3;
+
 .Nav {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: @height__nav;
+    height: @js__height__nav;
     z-index: @zIndex__navCustomSubfield;
     display: flex;
 
@@ -23,16 +29,6 @@
         bottom: auto;
         top: 0;
     }
-
-    ._tablet_
-    & {
-        height: @nav-tablet-height;
-    }
-
-    ._mini_
-    & {
-        height: @nav-mini-height;
-    }
 }
 
 .NavColumns {
@@ -40,11 +36,11 @@
     width: 100%;
 
     // TODO: Consider adjusting this animatable height for tablet and mini?
-    height: @height__nav * 3; // Just an arbitrary value that's large enough.
+    height: @js__height__nav * 3; // Just an arbitrary value that's large enough.
 
     ._desktop_
     & {
-        bottom: @height__nav * 2;
+        bottom: @js__height__nav * 2;
 
         // Prevent lyric scrolling from pushing app offscreen.
         overflow: hidden;
