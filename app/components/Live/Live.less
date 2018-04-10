@@ -25,11 +25,11 @@
 
 @js__height__lyricCollapsed: 32%;
 
-@nav-height-padding: 6px;
-@nav-height: @length__iconLarge + @nav-height-padding;
-@nav-tablet-height: @length__iconLarge__tablet + @nav-height-padding;
-@nav-mini-height: @length__iconLarge__mini + @nav-height-padding;
-@book-height: @js__length__icon + @nav-height-padding;
+@height__nav-padding: 6px;
+@height__nav: @length__iconLarge + @height__nav-padding;
+@nav-tablet-height: @length__iconLarge__tablet + @height__nav-padding;
+@nav-mini-height: @length__iconLarge__mini + @height__nav-padding;
+@book-height: @js__length__icon + @height__nav-padding;
 
 @LyricVerse-size: 1em;
 @lyric-title-size: 1.5em;
@@ -64,7 +64,7 @@
 // }
 
 .position__lyricColumn {
-    
+
     ._desktop_
     & {
         position: absolute;

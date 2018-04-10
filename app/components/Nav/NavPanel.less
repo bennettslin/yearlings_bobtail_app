@@ -10,9 +10,9 @@
      */
     width: @NavPanel-length;
     height: @NavPanel-length;
-    
+
     border: 1px solid purple;
-    
+
     display: flex;
     flex-direction: column;
 
@@ -36,23 +36,21 @@
         left: auto;
         right: 0;
     }
-}
 
-._desktop_ {
-    .NavPanel-block {
+    ._desktop_
+    & {
         bottom: 100%;
-        margin-bottom: @margin__thin;        
+        margin-bottom: @margin__thin;
     }
-}
-    
-._mobile_ {
-    .NavPanel-block {
+
+    ._mobile_
+    & {
         top: 100%;
-        margin-top: @margin__thin;        
+        margin-top: @margin__thin;
     }
 }
 
-._song_._navExpanded_._dotsHidden_._lyricCollapsed_._overlayHidden_._overviewHidden_._tipsHidden_ {
+._carouselNavShowable_._navExpanded_ {
 
     // Show panel if access highlighted only when access is on.
     &._accessOn_ .accessKeysShown.access-highlighted,

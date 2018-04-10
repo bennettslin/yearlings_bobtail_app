@@ -3,29 +3,27 @@
 @song-hover-colour: #7b7;
 @song-active-colour: #aea;
 
-.admin-column {
-    .Nav {
+.AdminNav {
 
-        .progress-bar-mixin(@song-total-colour, @song-filled-colour);
+    .progress-bar-mixin(@song-total-colour, @song-filled-colour);
 
-        .selected {
-            .progress-bar-mixin(@played-total-colour, @played-filled-colour);
+    .selected {
+        .progress-bar-mixin(@played-total-colour, @played-filled-colour);
 
-            a.text-cell {
-                color: @song-link-colour;
+        a.text-cell {
+            color: @song-link-colour;
 
-                &:hover {
-                    color: @song-hover-colour;
-                }
+            &:hover {
+                color: @song-hover-colour;
+            }
 
-                &:active {
-                    color: @song-active-colour;
-                }
+            &:active {
+                color: @song-active-colour;
             }
         }
+    }
 
-        .primary-row {
-            line-height: 1em;
-        }
+    .primary-row {
+        line-height: 1em;
     }
 }

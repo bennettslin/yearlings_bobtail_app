@@ -29,8 +29,8 @@ NavBook = ({
 
     return (
         <div className={cx(
-            'NavBook',
-            'songs'
+            'NavBook__songs',
+            'NavColumn__child'
         )}>
             {Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
                 const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex

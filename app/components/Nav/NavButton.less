@@ -9,15 +9,15 @@
 }
 
 .NavButton-block, .icon-canvas-block {
-    .columnHidden
-    .NavBook.songs
+    .NavColumn__hidden
+    .NavBook__songs
     & {
         width: 0;
     }
 }
 
 .NavButton-block {
-    .single-book-column
+    .Nav__showSingleBook
     & {
         transition: width @animationDuration__default, margin @animationDuration__default;
     }
@@ -28,7 +28,7 @@
     }
 
     ._navIconShrunk_
-    .columnShown.column-0
+    .NavColumn__shown.NavColumn__left
     & {
         &:not(:last-child) {
             margin-right: 1px;
@@ -36,7 +36,7 @@
     }
 
     ._navIconShrunk_
-    .columnShown.column-1
+    .NavColumn__shown.NavColumn__right
     & {
         &:not(:last-child) {
             margin-left: 1px;
@@ -44,10 +44,18 @@
     }
 }
 
-.NavToggle-block {
+.CarouselNavToggle__placeholder {
+    position: relative;
+
     ._navIconShrunk_
     & {
         // Static margins after icons begin shrinking.
         margin-right: 3px;
+    }
+
+    ._mobileNotPhone_._navIconShrunk_
+    & {
+        margin-left: 3px;
+        margin-right: 0;
     }
 }

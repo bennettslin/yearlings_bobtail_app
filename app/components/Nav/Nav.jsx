@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import NavBooksColumn from './NavBooksColumn'
+import NavColumn from './NavColumn'
 
 const mapStateToProps = ({
     isHeightlessLyricColumn,
@@ -18,6 +18,7 @@ const mapStateToProps = ({
 
 const navPropTypes = {
     // Through Redux.
+    isHeightlessLyricColumn: PropTypes.bool.isRequired,
     isHiddenNav: PropTypes.bool.isRequired,
     showSingleBookColumn: PropTypes.bool.isRequired
 },
@@ -30,30 +31,25 @@ Nav = ({
 
 ...other }) => {
 
-    return isHiddenNav || isHeightlessLyricColumn ? null : (
-        <div className={cx(
-            'nav-custom-subfield'
-        )}>
-            <div
-                className={cx(
-                    'Nav',
-                    showSingleBookColumn ? 'single-book-column' : 'double-book-column'
-                )}
-            >
-                <div className="live-nav-block">
+    return !isHiddenNav && !isHeightlessLyricColumn && (
+        <div
+            className={cx(
+                'Nav',
+                showSingleBookColumn ?
+                    'Nav__showSingleBook' :
+                    'Nav__showDoubleBook'
+            )}
+        >
+            {/* Placeholder, has no other purpose. */}
+            <div className="CarouselNavToggle__placeholder" />
 
-                    {/* Placeholder, has no other purpose. */}
-                    <div className="NavToggle-block" />
-
-                    <div className="books-block">
-                        <NavBooksColumn {...other}
-                            bookIndex={0}
-                        />
-                        <NavBooksColumn {...other}
-                            bookIndex={1}
-                        />
-                    </div>
-                </div>
+            <div className="NavColumns">
+                <NavColumn {...other}
+                    bookIndex={0}
+                />
+                <NavColumn {...other}
+                    bookIndex={1}
+                />
             </div>
         </div>
     )

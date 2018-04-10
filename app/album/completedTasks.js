@@ -657,7 +657,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `last nav titles are being obscured by books-block overview hidden`,
+        taskName: `last nav titles are being obscured by NavColumns overview hidden`,
         workedHours: 1,
         neededHours: 1
     },

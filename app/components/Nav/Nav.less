@@ -1,16 +1,18 @@
+@borderRadius__nav: @height__nav / 3;
+
 @import "./NavBook.less";
-@import "./NavBooksColumn.less";
+@import "./NavColumn.less";
 @import "./NavButton.less";
 @import "./NavPanel.less";
 @import "./NavResponsive.less";
-@import "./NavToggle.less";
 
-.nav-custom-subfield {
+.Nav {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: @nav-height;
+    height: @height__nav;
     z-index: @zIndex__navCustomSubfield;
+    display: flex;
 
     transition: top @animationDuration__default;
 
@@ -24,62 +26,30 @@
     & {
         height: @nav-tablet-height;
     }
-    
+
     ._mini_
     & {
         height: @nav-mini-height;
     }
 }
 
-
-.Live {
-    .Nav {
-        position: absolute;
-        width: 100%;
-    }
-}
-
-// All containers.
-.live-nav-block, .NavBook {
-    display: flex;
-}
-
-.live-nav-block {
-    height: 100%;
-}
-
-.books-block {
+.NavColumns {
     position: relative;
     width: 100%;
 
     // TODO: Consider adjusting this animatable height for tablet and mini?
-    height: @nav-height * 3; // Just an arbitrary value that's large enough.
-}
+    height: @height__nav * 3; // Just an arbitrary value that's large enough.
 
-._desktop_ {
-
-    .books-block {
-        bottom: @nav-height * 2;
+    ._desktop_
+    & {
+        bottom: @height__nav * 2;
 
         // Prevent lyric scrolling from pushing app offscreen.
         overflow: hidden;
     }
-}
 
-@nav-border-radius: @nav-height / 3;
-
-._mobileNotPhone_ {
-
-    .books-block {
+    ._mobileNotPhone_
+    & {
         top: 0;
-    }
-
-    .books-column-block {
-        transition: top @animationDuration__default;
-        top: -@book-height;
-    }
-
-    .NavBook {
-        border-radius: 0 0 @nav-border-radius @nav-border-radius;
     }
 }

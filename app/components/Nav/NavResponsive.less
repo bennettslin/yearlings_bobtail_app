@@ -2,23 +2,21 @@
  * MONITOR STYLES *
  ******************/
 
-.NavToggle-block {
+.CarouselNavToggle__placeholder {
     min-width: @NavToggle-width;
 }
 
 ._monitor_ {
 
     &._navIconStatic_ {
-        .double-book-column {
-            .NavToggle-block {
+        .Nav__showDoubleBook {
+            .CarouselNavToggle__placeholder {
                 margin-right: @monitor-large-unit;
             }
 
-            .column-0 {
-                .NavBook {
-                    &.songs {
-                        left: @monitor-book-offset;
-                    }
+            .NavColumn__left {
+                .NavBook__songs {
+                    left: @monitor-book-offset;
                 }
 
                 .NavButton-block:not(:last-child) {
@@ -26,11 +24,9 @@
                 }
             }
 
-            .column-1 {
-                .NavBook {
-                    &.songs {
-                        right: @monitor-book-offset;
-                    }
+            .NavColumn__right {
+                .NavBook__songs {
+                    right: @monitor-book-offset;
                 }
 
                 .NavButton-block:not(:last-child) {
@@ -39,17 +35,15 @@
             }
         }
 
-        .single-book-column {
-            .NavToggle-block {
+        .Nav__showSingleBook {
+            .CarouselNavToggle__placeholder {
                 margin-right: @monitor-single-large;
             }
 
-            .columnShown {
-                &.column-0 {
-                    .NavBook {
-                        &.songs {
-                            left: @monitor-single-book-offset;
-                        }
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBook__songs {
+                        left: @monitor-single-book-offset;
                     }
 
                     .NavButton-block:not(:last-child) {
@@ -57,11 +51,9 @@
                     }
                 }
 
-                &.column-1 {
-                    .NavBook {
-                        &.songs {
-                            right: @monitor-single-book-offset;
-                        }
+                &.NavColumn__right {
+                    .NavBook__songs {
+                        right: @monitor-single-book-offset;
                     }
 
                     .NavButton-block:not(:last-child) {
@@ -73,24 +65,20 @@
     }
 
     &._navIconShrunk_ {
-        .double-book-column {
-            .NavBook {
+        .Nav__showDoubleBook {
+            .NavColumn__child {
                 min-width: @monitor-shrink-icon;
             }
 
-            .column-0 {
-                .NavBook {
-                    &.songs {
-                        left: @monitor-shrink-book-offset;
-                    }
+            .NavColumn__left {
+                .NavBook__songs {
+                    left: @monitor-shrink-book-offset;
                 }
             }
 
-            .column-1 {
-                .NavBook {
-                    &.songs {
-                        right: @monitor-shrink-book-offset;
-                    }
+            .NavColumn__right {
+                .NavBook__songs {
+                    right: @monitor-shrink-book-offset;
                 }
             }
 
@@ -114,16 +102,14 @@
 ._laptop_ {
 
     &._navIconStatic_ {
-        .single-book-column {
-            .NavToggle-block {
+        .Nav__showSingleBook {
+            .CarouselNavToggle__placeholder {
                 margin-right: @laptop-large;
             }
-            .columnShown {
-                &.column-0 {
-                    .NavBook {
-                        &.songs {
-                            left: @laptop-book-offset;
-                        }
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBook__songs {
+                        left: @laptop-book-offset;
                     }
 
                     .NavButton-block:not(:last-child) {
@@ -131,11 +117,9 @@
                     }
                 }
 
-                &.column-1 {
-                    .NavBook {
-                        &.songs {
-                            right: @laptop-book-offset;
-                        }
+                &.NavColumn__right {
+                    .NavBook__songs {
+                        right: @laptop-book-offset;
                     }
 
                     .NavButton-block:not(:last-child) {
@@ -147,25 +131,21 @@
     }
 
     &._navIconShrunk_ {
-        .single-book-column {
-            .NavBook {
+        .Nav__showSingleBook {
+            .NavColumn__child {
                 min-width: @laptop-shrink-icon;
             }
 
-            .columnShown {
-                &.column-0 {
-                    .NavBook {
-                        &.songs {
-                            left: @laptop-shrink-book-offset;
-                        }
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBook__songs {
+                        left: @laptop-shrink-book-offset;
                     }
                 }
 
-                &.column-1 {
-                    .NavBook {
-                        &.songs {
-                            right: @laptop-shrink-book-offset;
-                        }
+                &.NavColumn__right {
+                    .NavBook__songs {
+                        right: @laptop-shrink-book-offset;
                     }
                 }
             }
@@ -174,7 +154,8 @@
              * Show song buttons in shown column, along with toggle button in
              * hidden column.
              */
-            .columnShown, .columnHidden .NavBook.toggle {
+            .NavColumn__shown,
+            .NavColumn__hidden .NavBook__toggle {
                 .NavButton-block {
                     width: @laptop-shrink-icon;
                 }
@@ -196,21 +177,19 @@
 
 ._tablet_ {
 
-    .NavToggle-block {
+    .CarouselNavToggle__placeholder {
         min-width: @tablet-NavToggle-width;
     }
 
     &._navIconStatic_ {
-        .double-book-column {
-            .NavToggle-block {
+        .Nav__showDoubleBook {
+            .CarouselNavToggle__placeholder {
                 margin-left: @tablet-large-unit;
             }
 
-            .column-0 {
-                .NavBook {
-                    &.songs {
-                        left: @tablet-book-offset;
-                    }
+            .NavColumn__left {
+                .NavBook__songs {
+                    left: @tablet-book-offset;
                 }
 
                 .NavButton-block:not(:last-child) {
@@ -218,11 +197,9 @@
                 }
             }
 
-            .column-1 {
-                .NavBook {
-                    &.songs {
-                        right: @tablet-book-offset;
-                    }
+            .NavColumn__right {
+                .NavBook__songs {
+                    right: @tablet-book-offset;
                 }
 
                 .NavButton-block:not(:last-child) {
@@ -231,17 +208,15 @@
             }
         }
 
-        .single-book-column {
-            .NavToggle-block {
+        .Nav__showSingleBook {
+            .CarouselNavToggle__placeholder {
                 margin-left: @tablet-single-large;
             }
 
-            .columnShown {
-                &.column-0 {
-                    .NavBook {
-                        &.songs {
-                            left: @tablet-single-book-offset;
-                        }
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBook__songs {
+                        left: @tablet-single-book-offset;
                     }
 
                     .NavButton-block:not(:last-child) {
@@ -249,11 +224,9 @@
                     }
                 }
 
-                &.column-1 {
-                    .NavBook {
-                        &.songs {
-                            right: @tablet-single-book-offset;
-                        }
+                &.NavColumn__right {
+                    .NavBook__songs {
+                        right: @tablet-single-book-offset;
                     }
 
                     .NavButton-block:not(:last-child) {
@@ -265,24 +238,20 @@
     }
 
     &._navIconShrunk_ {
-        .double-book-column {
-            .NavBook {
+        .Nav__showDoubleBook {
+            .NavColumn__child {
                 min-width: @tablet-shrink-icon;
             }
 
-            .column-0 {
-                .NavBook {
-                    &.songs {
-                        left: @tablet-shrink-book-offset;
-                    }
+            .NavColumn__left {
+                .NavBook__songs {
+                    left: @tablet-shrink-book-offset;
                 }
             }
 
-            .column-1 {
-                .NavBook {
-                    &.songs {
-                        right: @tablet-shrink-book-offset;
-                    }
+            .NavColumn__right {
+                .NavBook__songs {
+                    right: @tablet-shrink-book-offset;
                 }
             }
 
@@ -306,22 +275,20 @@
 
 ._mini_ {
 
-    .NavToggle-block {
+    .CarouselNavToggle__placeholder {
         min-width: @mini-NavToggle-width;
     }
 
     &._navIconStatic_ {
-        .single-book-column {
-            .NavToggle-block {
+        .Nav__showSingleBook {
+            .CarouselNavToggle__placeholder {
                 margin-left: @mini-large;
             }
 
-            .columnShown {
-                &.column-0 {
-                    .NavBook {
-                        &.songs {
-                            left: @mini-book-offset;
-                        }
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBook__songs {
+                        left: @mini-book-offset;
                     }
 
                     .NavButton-block:not(:last-child) {
@@ -329,11 +296,9 @@
                     }
                 }
 
-                &.column-1 {
-                    .NavBook {
-                        &.songs {
-                            right: @mini-book-offset;
-                        }
+                &.NavColumn__right {
+                    .NavBook__songs {
+                        right: @mini-book-offset;
                     }
 
                     .NavButton-block:not(:last-child) {
@@ -345,25 +310,21 @@
     }
 
     &._navIconShrunk_ {
-        .single-book-column {
-            .NavBook {
+        .Nav__showSingleBook {
+            .NavColumn__child {
                 min-width: @mini-shrink-icon;
             }
 
-            .columnShown {
-                &.column-0 {
-                    .NavBook {
-                        &.songs {
-                            left: @mini-shrink-book-offset;
-                        }
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBook__songs {
+                        left: @mini-shrink-book-offset;
                     }
                 }
 
-                &.column-1 {
-                    .NavBook {
-                        &.songs {
-                            right: @mini-shrink-book-offset;
-                        }
+                &.NavColumn__right {
+                    .NavBook__songs {
+                        right: @mini-shrink-book-offset;
                     }
                 }
             }
@@ -372,7 +333,8 @@
              * Show song buttons in shown column, along with toggle button in
              * hidden column.
              */
-            .columnShown, .columnHidden .NavBook.toggle {
+            .NavColumn__shown,
+            .NavColumn__hidden .NavBook__toggle {
                 .NavButton-block {
                     width: @mini-shrink-icon;
                 }

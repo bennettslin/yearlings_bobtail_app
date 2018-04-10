@@ -16,7 +16,7 @@ const mapStateToProps = ({
     shownBookColumnIndex
 })
 
-const navBooksColumnPropTypes = {
+const navColumnPropTypes = {
     // Through Redux.
     showSingleBookColumn: PropTypes.bool.isRequired,
     shownBookColumnIndex: PropTypes.number.isRequired,
@@ -27,7 +27,7 @@ const navBooksColumnPropTypes = {
     handleNavSongSelect: PropTypes.func.isRequired
 },
 
-NavBooksColumn = ({
+NavColumn = ({
 
     showSingleBookColumn,
     shownBookColumnIndex,
@@ -42,34 +42,32 @@ NavBooksColumn = ({
 
     return (
         <div className={cx(
-            'books-column-block',
-            `column-${bookIndex}`,
-            isShownColumn ? 'columnShown' : 'columnHidden'
+            'NavColumn',
+            `NavColumn__${bookIndex ? 'right' : 'left'}`,
+            isShownColumn ?
+                'NavColumn__shown' : 'NavColumn__hidden'
         )}>
-            <div className="books-column">
+            {/* Nav book. */}
+            <NavBook
+                bookIndex={bookIndex}
+                handleButtonClick={handleNavSongSelect}
+            />
 
-                {/* Nav book. */}
-                <NavBook
+            {/* Logue or toggle. */}
+            {isShownColumn ?
+                <NavLogueButton
                     bookIndex={bookIndex}
                     handleButtonClick={handleNavSongSelect}
+                /> :
+                <NavBookButton
+                    bookIndex={bookIndex}
+                    handleButtonClick={handleNavBookSelect}
                 />
-
-                {/* Logue or toggle. */}
-                {isShownColumn ?
-                    <NavLogueButton
-                        bookIndex={bookIndex}
-                        handleButtonClick={handleNavSongSelect}
-                    /> :
-                    <NavBookButton
-                        bookIndex={bookIndex}
-                        handleButtonClick={handleNavBookSelect}
-                    />
-                }
-            </div>
+            }
         </div>
     )
 }
 
-NavBooksColumn.propTypes = navBooksColumnPropTypes
+NavColumn.propTypes = navColumnPropTypes
 
-export default connect(mapStateToProps)(NavBooksColumn)
+export default connect(mapStateToProps)(NavColumn)

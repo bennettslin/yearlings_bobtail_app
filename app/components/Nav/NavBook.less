@@ -1,64 +1,53 @@
-.NavBook {
-    padding: 0 @NavBook-padding;
+.NavColumn__child {
+    padding: 0 @js__padding__navColumnChild;
+    display: flex;
 
-    &.NavBook {
-        min-width: @js__length__icon;
-        border-radius: @nav-border-radius @nav-border-radius 0 0;
-        background-color: #48d;
+    min-width: @js__length__icon;
+    border-radius: @borderRadius__nav @borderRadius__nav 0 0;
+    background-color: #48d;
+
+    ._mobileNotPhone_
+    & {
+        border-radius: 0 0 @borderRadius__nav @borderRadius__nav;
     }
 }
 
-.columnHidden {
+.NavBook__logue {
 
-    &.column-0 {
-        .NavBook.songs {
-            left: 0;
-        }
-    }
-
-    &.column-1 {
-        .NavBook.logue {
-            right: 0;
-        }
-
-        .NavBook.songs {
-            right: 0;
-        }
+    .NavColumn__right
+    & {
+        right: 0;
     }
 }
 
-.column-0 {
-    .books-column {
+.NavBook__songs {
+
+    .NavColumn__left
+    & {
         transition: left @animationDuration__default;
     }
 
-    .NavBook {
-        &.songs {
-            transition: left @animationDuration__default;
-        }
+    .NavColumn__left.NavColumn__hidden
+    & {
+        left: 0;
+    }
+
+    .NavColumn__right
+    & {
+        transition: right @animationDuration__default;
+        flex-direction: row-reverse;
+    }
+
+    .NavColumn__right.NavColumn__hidden
+    & {
+        right: 0;
     }
 }
 
-.column-1 {
-    right: 0;
+.NavBook__toggle {
 
-    .books-column {
+    .NavColumn__right
+    & {
         right: 0;
-        transition: right @animationDuration__default;
-    }
-
-    .NavBook {
-        &.logue {
-            right: 0;
-        }
-
-        &.songs {
-            transition: right @animationDuration__default;
-            flex-direction: row-reverse;
-        }
-
-        &.toggle {
-            right: 0;
-        }
     }
 }

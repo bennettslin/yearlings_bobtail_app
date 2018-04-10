@@ -3,7 +3,7 @@
     left: 0;
     background-color: #edf;
     padding: @margin__thin 0;
-    border-radius: 0 @nav-border-radius 0 0;
+    border-radius: 0 @borderRadius__nav 0 0;
 
     transition: margin @animationDuration__default,
                 bottom @animationDuration__default,
@@ -20,7 +20,7 @@
 
     ._desktop_._carouselExpanded_
     & {
-        border-radius: 0 @nav-border-radius @nav-border-radius 0;
+        border-radius: 0 @borderRadius__nav @borderRadius__nav 0;
         bottom: @margin__scrollbar;
     }
 
@@ -28,7 +28,7 @@
     & {
         top: 0;
         bottom: auto;
-        border-radius: 0 0 @nav-border-radius 0;
+        border-radius: 0 0 @borderRadius__nav 0;
     }
 
     ._carouselNavUnshowable_

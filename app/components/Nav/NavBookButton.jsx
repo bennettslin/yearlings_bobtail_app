@@ -34,8 +34,8 @@ NavBookButton = ({
 
     return (
         <div className={cx(
-            'NavBook',
-            'toggle'
+            'NavBook__toggle',
+            'NavColumn__child'
         )}>
             <NavButton {...other}
                 isSelected={hasSelectedSong}

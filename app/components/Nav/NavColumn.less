@@ -1,0 +1,47 @@
+.NavColumn,
+.NavColumn__child {
+    position: absolute;
+    height: 100%;
+}
+
+.NavColumn {
+    height: @book-height;
+
+    ._desktop_
+    & {
+        transition: bottom @animationDuration__default;
+        bottom: -@book-height;
+    }
+
+    ._mobileNotPhone_
+    & {
+        transition: top @animationDuration__default;
+        top: -@book-height;
+    }
+}
+
+.NavColumn__right {
+    right: 0;
+    margin-right: @nav-last-title-margin;
+
+    ._mobileNotPhone_
+    & {
+        margin-right: 0;
+    }
+}
+
+// Hide both carousel and nav in logues.
+._carouselNavShowable_._navExpanded_._lyricHeighted_ {
+
+    &._mobileNotPhone_ {
+        .NavColumn {
+            top: 0;
+        }
+    }
+
+    &._desktop_ {
+        .NavColumn {
+            bottom: 0;
+        }
+    }
+}
