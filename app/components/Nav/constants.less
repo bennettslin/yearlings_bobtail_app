@@ -18,14 +18,15 @@
 @multiplier__gap__large: 3;
 
 // Number of gap units.
-@js__count__gaps__double: 26;
 @js__count__gaps__single: 16;
+@js__count__gaps__double: 26;
 
-@count__doubleUnits__medium: @multiplier__gap__medium / @js__count__gaps__double;
-@count__doubleUnits__large: @multiplier__gap__large / @js__count__gaps__double;
+@width__gap__singleMedium: @multiplier__gap__medium / @js__count__gaps__single;
+@width__gap__singleLarge: @multiplier__gap__large / @js__count__gaps__single;
 
-@medium-js__count__gaps__single: @multiplier__gap__medium / @js__count__gaps__single;
-@large-js__count__gaps__single: @multiplier__gap__large / @js__count__gaps__single;
+@width__gap__doubleMedium: @multiplier__gap__medium / @js__count__gaps__double;
+@width__gap__doubleLarge: @multiplier__gap__large / @js__count__gaps__double;
+
 
 @screenWidth__full: 100vw;
 
@@ -50,14 +51,19 @@
  * Total units: 26 units
  */
 
-@constant__doubleUnit__monitor: @js__width__goldenCord + @count__icons__double * @js__length__icon + @length__iconLarge + 10 * @js__padding__navColumnChild + @js__margin__navLastTitle;
+@constant__doubleUnit__monitor:
+    @js__width__goldenCord +
+    @js__length__icon * @count__icons__double +
+    @length__iconLarge +
+    @js__padding__navColumnChild * 10 +
+    @js__margin__navLastTitle;
 
 @monitor-small-unit: ~"calc((@{screenWidth__full} - @{constant__doubleUnit__monitor}) / @{js__count__gaps__double})";
-@monitor-multiplier__gap__large: ~"calc((@{screenWidth__full} - @{constant__doubleUnit__monitor}) * @{count__doubleUnits__large})";
+@monitor-multiplier__gap__large: ~"calc((@{screenWidth__full} - @{constant__doubleUnit__monitor}) * @{width__gap__doubleLarge})";
 
-@monitor-book-offset-constant: -@count__doubleUnits__medium * (@js__width__goldenCord + @count__icons__double * @js__length__icon + @length__iconLarge + 10 * @js__padding__navColumnChild + @js__margin__navLastTitle) + @js__length__icon + 2 * @js__padding__navColumnChild;
+@monitor-book-offset-constant: -@width__gap__doubleMedium * (@js__width__goldenCord + @count__icons__double * @js__length__icon + @length__iconLarge + 10 * @js__padding__navColumnChild + @js__margin__navLastTitle) + @js__length__icon + 2 * @js__padding__navColumnChild;
 
-@monitor-book-offset: ~"calc(@{count__doubleUnits__medium} * @{screenWidth__full} + @{monitor-book-offset-constant})";
+@monitor-book-offset: ~"calc(@{width__gap__doubleMedium} * @{screenWidth__full} + @{monitor-book-offset-constant})";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
@@ -95,14 +101,19 @@
  * Total units: 16 units
  */
 
-@constant__singleUnit__monitor: @js__width__goldenCord + @count__icons__single * @js__length__icon + @length__iconLarge + 8 * @js__padding__navColumnChild + @js__margin__navLastTitle;
+@constant__singleUnit__monitor:
+    @js__width__goldenCord +
+    @js__length__icon * @count__icons__single +
+    @length__iconLarge +
+    @js__padding__navColumnChild * 8 +
+    @js__margin__navLastTitle;
 
 @monitor-single-small: ~"calc((@{screenWidth__full} - @{constant__singleUnit__monitor}) / @{js__count__gaps__single})";
-@monitor-single-large: ~"calc((@{screenWidth__full} - @{constant__singleUnit__monitor}) * @{large-js__count__gaps__single})";
+@monitor-single-large: ~"calc((@{screenWidth__full} - @{constant__singleUnit__monitor}) * @{width__gap__singleLarge})";
 
-@monitor-single-book-offset-constant: -@medium-js__count__gaps__single * (@js__width__goldenCord + @count__icons__single * @js__length__icon + @length__iconLarge + 10 * @js__padding__navColumnChild + @js__margin__navLastTitle) + @js__length__icon + 2 * @js__padding__navColumnChild;
+@monitor-single-book-offset-constant: -@width__gap__singleMedium * (@js__width__goldenCord + @count__icons__single * @js__length__icon + @length__iconLarge + 10 * @js__padding__navColumnChild + @js__margin__navLastTitle) + @js__length__icon + 2 * @js__padding__navColumnChild;
 
-@monitor-single-book-offset: ~"calc(@{medium-js__count__gaps__single} * @{screenWidth__full} + @{monitor-single-book-offset-constant})";
+@monitor-single-book-offset: ~"calc(@{width__gap__singleMedium} * @{screenWidth__full} + @{monitor-single-book-offset-constant})";
 
 /***************************************
  * LAPTOP WIDTH: single, single shrink *
@@ -116,14 +127,19 @@
  * Laptop follows same equations, with Uncanny Valley lyric column width.
  */
 
-@laptop-unit-constant: @js__width__uncannyValley + @count__icons__single * @js__length__icon + @length__iconLarge + 8 * @js__padding__navColumnChild + @js__margin__navLastTitle;
+@laptop-unit-constant:
+    @js__width__uncannyValley +
+    @js__length__icon * @count__icons__single +
+    @length__iconLarge +
+    @js__padding__navColumnChild * 8 +
+    @js__margin__navLastTitle;
 
 @laptop-small: ~"calc((@{screenWidth__full} - @{laptop-unit-constant}) / @{js__count__gaps__single})";
-@laptop-large: ~"calc((@{screenWidth__full} - @{laptop-unit-constant}) * @{large-js__count__gaps__single})";
+@laptop-large: ~"calc((@{screenWidth__full} - @{laptop-unit-constant}) * @{width__gap__singleLarge})";
 
-@laptop-book-offset-constant: -@medium-js__count__gaps__single * (@js__width__uncannyValley + @count__icons__single * @js__length__icon + @length__iconLarge + 10 * @js__padding__navColumnChild + @js__margin__navLastTitle) + @js__length__icon + 2 * @js__padding__navColumnChild;
+@laptop-book-offset-constant: -@width__gap__singleMedium * (@js__width__uncannyValley + @count__icons__single * @js__length__icon + @length__iconLarge + 10 * @js__padding__navColumnChild + @js__margin__navLastTitle) + @js__length__icon + 2 * @js__padding__navColumnChild;
 
-@laptop-book-offset: ~"calc(@{medium-js__count__gaps__single} * @{screenWidth__full} + @{laptop-book-offset-constant})";
+@laptop-book-offset: ~"calc(@{width__gap__singleMedium} * @{screenWidth__full} + @{laptop-book-offset-constant})";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
@@ -132,7 +148,12 @@
  * To be divided amongst 11 icons.
  */
 
-@laptop-shrink-icon-constant: @js__width__uncannyValley + 8 * @js__padding__navColumnChild + @length__iconLarge + @js__margin__navLastTitle + @js__count__gaps__single * 1px;
+@laptop-shrink-icon-constant:
+    @js__width__uncannyValley +
+    @js__padding__navColumnChild * 8 +
+    @length__iconLarge +
+    @js__margin__navLastTitle +
+    @js__count__gaps__single * 1px;
 
 @laptop-shrink-icon: ~"calc((@{screenWidth__full} - @{laptop-shrink-icon-constant}) / @{count__icons__single})";
 
@@ -153,14 +174,17 @@
  * without nav last title margin. Switch at 1100px.
  */
 
-@tablet-double-unit-constant: @count__icons__double * @js__length__icon + @length__iconLarge__tablet + 10 * @js__padding__navColumnChild;
+@tablet-double-unit-constant:
+    @js__length__icon * @count__icons__double +
+    @length__iconLarge__tablet +
+    @js__padding__navColumnChild * 10;
 
 @tablet-small-unit: ~"calc((@{screenWidth__full} - @{tablet-double-unit-constant}) / @{js__count__gaps__double})";
-@tablet-multiplier__gap__large: ~"calc((@{screenWidth__full} - @{tablet-double-unit-constant}) * @{count__doubleUnits__large})";
+@tablet-multiplier__gap__large: ~"calc((@{screenWidth__full} - @{tablet-double-unit-constant}) * @{width__gap__doubleLarge})";
 
-@tablet-book-offset-constant: -@count__doubleUnits__medium * (@count__icons__double * @js__length__icon + @length__iconLarge__tablet + 10 * @js__padding__navColumnChild) + @js__length__icon + 2 * @js__padding__navColumnChild;
+@tablet-book-offset-constant: -@width__gap__doubleMedium * (@count__icons__double * @js__length__icon + @length__iconLarge__tablet + 10 * @js__padding__navColumnChild) + @js__length__icon + 2 * @js__padding__navColumnChild;
 
-@tablet-book-offset: ~"calc(@{count__doubleUnits__medium} * @{screenWidth__full} + @{tablet-book-offset-constant})";
+@tablet-book-offset: ~"calc(@{width__gap__doubleMedium} * @{screenWidth__full} + @{tablet-book-offset-constant})";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
@@ -178,33 +202,42 @@
  * Breakpoint to switch to single column is when icon width is 36px.
  */
 
-@tablet-single-unit-constant: @count__icons__single * @js__length__icon + @length__iconLarge__tablet + 8 * @js__padding__navColumnChild;
+@tablet-single-unit-constant:
+    @js__length__icon * @count__icons__single +
+    @length__iconLarge__tablet +
+    @js__padding__navColumnChild * 8;
 
 @tablet-single-small: ~"calc((@{screenWidth__full} - @{tablet-single-unit-constant}) / @{js__count__gaps__single})";
-@tablet-single-large: ~"calc((@{screenWidth__full} - @{tablet-single-unit-constant}) * @{large-js__count__gaps__single})";
+@tablet-single-large: ~"calc((@{screenWidth__full} - @{tablet-single-unit-constant}) * @{width__gap__singleLarge})";
 
-@tablet-single-book-offset-constant: -@medium-js__count__gaps__single * (@count__icons__single * @js__length__icon + @length__iconLarge__tablet + 10 * @js__padding__navColumnChild) + @js__length__icon + 2 * @js__padding__navColumnChild;
+@tablet-single-book-offset-constant: -@width__gap__singleMedium * (@count__icons__single * @js__length__icon + @length__iconLarge__tablet + 10 * @js__padding__navColumnChild) + @js__length__icon + 2 * @js__padding__navColumnChild;
 
-@tablet-single-book-offset: ~"calc(@{medium-js__count__gaps__single} * @{screenWidth__full} + @{tablet-single-book-offset-constant})";
+@tablet-single-book-offset: ~"calc(@{width__gap__singleMedium} * @{screenWidth__full} + @{tablet-single-book-offset-constant})";
 
 /*************************************
  * MINI WIDTH: single, single shrink *
  *************************************/
 
-@mini-unit-constant: @count__icons__single * @js__length__icon + @length__iconLarge__mini + 8 * @js__padding__navColumnChild;
+@mini-unit-constant:
+    @js__length__icon * @count__icons__single +
+    @length__iconLarge__mini +
+    @js__padding__navColumnChild * 8;
 
 @mini-small: ~"calc((@{screenWidth__full} - @{mini-unit-constant}) / @{js__count__gaps__single})";
-@mini-large: ~"calc((@{screenWidth__full} - @{mini-unit-constant}) * @{large-js__count__gaps__single})";
+@mini-large: ~"calc((@{screenWidth__full} - @{mini-unit-constant}) * @{width__gap__singleLarge})";
 
-@mini-book-offset-constant: -@medium-js__count__gaps__single * (@count__icons__single * @js__length__icon + @length__iconLarge__mini + 10 * @js__padding__navColumnChild) + @js__length__icon + 2 * @js__padding__navColumnChild;
+@mini-book-offset-constant: -@width__gap__singleMedium * (@count__icons__single * @js__length__icon + @length__iconLarge__mini + 10 * @js__padding__navColumnChild) + @js__length__icon + 2 * @js__padding__navColumnChild;
 
-@mini-book-offset: ~"calc(@{medium-js__count__gaps__single} * @{screenWidth__full} + @{mini-book-offset-constant})";
+@mini-book-offset: ~"calc(@{width__gap__singleMedium} * @{screenWidth__full} + @{mini-book-offset-constant})";
 
 /**
  * Breakpoint to start shrinking icon is when unit width is 1px.
  */
 
-@mini-shrink-icon-constant: 8 * @js__padding__navColumnChild + @length__iconLarge__mini + @js__count__gaps__single * 1px;
+@mini-shrink-icon-constant:
+    @js__padding__navColumnChild * 8 +
+    @length__iconLarge__mini +
+    @js__count__gaps__single * 1px;
 
 @mini-shrink-icon: ~"calc((@{screenWidth__full} - @{mini-shrink-icon-constant}) / @{count__icons__single})";
 
