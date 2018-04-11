@@ -1,29 +1,23 @@
-.Carousel__selectButtons {
+.CarouselSelect {
     position: absolute;
-    bottom: -@length__iconLarge - @margin__thin * 2 - @margin__scrollbar;
     right: 0;
     display: flex;
-    justify-content: space-between;
     padding: @margin__thin;
     z-index: @zIndex__carouselNavButton;
-
-    transition: bottom @animationDuration__default;
 
     background-color: orange;
 
     ._desktop_
     & {
+        transition: bottom @animationDuration__default;
+        bottom: -@length__iconLarge - @margin__thin * 2 - @margin__scrollbar;
         margin-bottom: @margin__scrollbar;
     }
 
-    ._desktop_._song_._annotationShown_._carouselExpanded_
+    ._mobileNotPhone_
     & {
-        bottom: 0;
-    }
-
-    ._mobile_._song_._annotationShown_._carouselExpanded_
-    & {
-        top: 0;
+        transition: top @animationDuration__default;
+        top: -@length__iconLarge__tablet - @margin__thin * 2;
     }
 
     ._monitor_
@@ -36,16 +30,14 @@
         right: @js__width__uncannyValley;
     }
 
-    ._mobile_
+    ._desktop_._song_._annotationShown_._carouselExpanded_
     & {
-        transition: top @animationDuration__default;
-        top: -@length__iconLarge__tablet - @margin__thin * 2;
-        bottom: auto;
+        bottom: 0;
     }
 
-    ._mini_
+    ._mobileNotPhone_._song_._annotationShown_._carouselExpanded_
     & {
-        top: -@length__iconLarge__mini - @margin__thin * 2;
+        top: 0;
     }
 
     :first-child {

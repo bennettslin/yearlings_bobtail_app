@@ -1,27 +1,26 @@
 .CarouselToggle {
     position: absolute;
+    width: @width__overviewToggle__laptop;
     left: 0;
+    bottom: 0;
     background-color: #edf;
     padding: @margin__thin 0;
     border-radius: 0 @borderRadius__nav 0 0;
+    box-shadow: @boxShadow__popup;
+
+    display: flex;
+    justify-content: center;
+    z-index: @zIndex__carousel + 1;
 
     transition: margin @animationDuration__default,
                 bottom @animationDuration__default,
                 border-radius @animationDuration__default,
                 box-shadow @animationDuration__default;
 
-    display: flex;
-    justify-content: center;
-    z-index: @zIndex__carousel + 1;
-
-    width: @CarouselToggle-laptop-length;
-
-    bottom: 0;
-
     ._desktop_._carouselExpanded_
     & {
-        border-radius: 0 @borderRadius__nav @borderRadius__nav 0;
         bottom: @margin__scrollbar;
+        border-radius: 0 @borderRadius__nav @borderRadius__nav 0;
     }
 
     ._mobile_
@@ -31,28 +30,18 @@
         border-radius: 0 0 @borderRadius__nav 0;
     }
 
-    ._carouselNavUnshowable_
+    ._tablet_
     & {
-        margin-left: -@CarouselToggle-laptop-length;
+        width: @width__overviewToggle__tablet;
     }
 
-    box-shadow: @boxShadow__popup;
+    ._mini_
+    & {
+        width: @width__overviewToggle__mini;
+    }
+
+    ._carouselNavUnshowable_
+    & {
+        margin-left: -@width__overviewToggle__laptop;
+    }
 }
-
-// TODO: These are probably unnecessary?
-// ._mini_ {
-//     &._lyricExpanded_, &._lyricHeightless_, &._logue_ {
-//         .CarouselToggle {
-//             left: -@width__overviewToggle__mini;
-//         }
-//     }
-// }
-
-// ._mobile_ {
-
-//     &._lyricExpanded_, &._lyricHeightless_, &._logue_ {
-//         .CarouselToggle {
-//             left: -@width__overviewToggle__tablet;
-//         }
-//     }
-// }

@@ -1,12 +1,12 @@
 // This value *must* be the same in js.
 @CarouselAnnotation-min-width: @width__annotationCard +
                                 @AnnotationCard-padding * 2 +
-                                @CarouselAnnotation-padding * 2 +
+                                @paddingX__carouselAnnotation * 2 +
                                 @Annotation-padding * 2;
 
 @CarouselAnnotation-mini-min-width: @width__annotationCard__mini +
                                      @AnnotationCard-padding * 2 +
-                                     @CarouselAnnotation-padding * 2 +
+                                     @paddingX__carouselAnnotation * 2 +
                                      @Annotation-padding * 2;
 
 .in-carousel-width {
@@ -18,17 +18,17 @@
     ._mini_
     & {
         width: @width__annotationCard__mini +
-        @AnnotationCard-padding * 2;   
+        @AnnotationCard-padding * 2;
     }
 }
 
 // FIXME: There should be a better way to handle carousel sizing and layout. Afterwards, the in-carousel-width class might no longer be necessary.
 .cards-block {
-    
+
     ._desktop_
     .Carousel
     & {
-        margin-bottom: @CarouselAnnotation-padding;
+        margin-bottom: @paddingX__carouselAnnotation;
     }
 }
 .annotation-title-block {
@@ -36,7 +36,7 @@
     ._mobile_
     .Carousel
     & {
-        margin-top: @CarouselAnnotation-padding;
+        margin-top: @paddingX__carouselAnnotation;
     }
 }
 
@@ -123,11 +123,11 @@
 .CarouselAnnotation {
 
     ._rightLyricColumnOnly_
-    &.in-column-left,
+    &.CarouselAnnotation__inLyricColumn__left,
     ._leftLyricColumnOnly_
-    &.in-column-right {
+    &.CarouselAnnotation__inLyricColumn__right {
         opacity: 0;
-    
+
         .AnnotationCard {
             margin: auto;
             opacity: 0;

@@ -34,7 +34,7 @@ Live
     PopupOverlaid
     ScoresTips
 Lyric
-Nav
+Nav (Need to consider last title margin, panels, and consolidate responsive)
 Overview
 Players
 Popup (Waiting on popup rework to finalise.)
@@ -46,7 +46,7 @@ Text
 Theatre
 Tips
 Title
-Verse
+Verse (Remember verse scroll, changed with underscore)
 Wiki
 
 AccessManager

@@ -17,7 +17,7 @@ const CarouselSelect = ({
     handleAnnotationNext
 
 }) => (
-    <div className="Carousel__selectButtons">
+    <div className="CarouselSelect">
         <Button
             buttonName="carouselSelect"
             accessKey={NAVIGATION_LEFT_KEY}

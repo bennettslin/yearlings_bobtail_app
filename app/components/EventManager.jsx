@@ -12,8 +12,8 @@ import { intersects } from '../helpers/dotHelper'
 import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsiveHelper'
 
 const ANNOTATION_SCROLL = 'annotation',
-    CAROUSEL_SCROLL = 'Carousel__scrollContainer',
-    CAROUSEL_ANNOTATION_SCROLL = 'CarouselAnnotation',
+    CAROUSEL_SCROLL = 'Carousel__scrollParent',
+    CAROUSEL_ANNOTATION_SCROLL = 'CarouselAnnotation__scrollChild',
     LYRICS_SCROLL = 'lyrics-scroll',
     VERSE_SCROLL = 'verse'
 
@@ -880,7 +880,7 @@ class EventManager extends Component {
     }
 
     _scrollElementIntoView(className, index, time = 350) {
-        const selector = `${className}-${index}`,
+        const selector = `${className}__${index}`,
             element = document.getElementsByClassName(selector)[0],
 
             isCarousel = className === CAROUSEL_ANNOTATION_SCROLL,

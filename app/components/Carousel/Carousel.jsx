@@ -99,39 +99,43 @@ class Carousel extends Component {
                 length: annotationsCount
             })
 
-        return isHeightlessLyricColumn ? null : (
+        return !isHeightlessLyricColumn && (
             <div
                 className={cx(
                     'Carousel',
+                    // 'Carousel__scrollParent',
                     'Carousel__desktopGradientMask',
                     isHeavyRenderReady ? 'renderReady' : 'renderUnready',
                     { 'overrideAnimate': shouldOverrideAnimate }
                 )}
                 onTransitionEnd={this._handleTransition}
             >
-                <div className="Carousel__scrollContainer">
-                    <div className="Carousel__annotationsContainer">
+                <div className="Carousel__scrollParent">
 
-                        <div className={cx(
-                            'CarouselAnnotation',
-                            'CarouselAnnotation-0'
-                        )} />
+                    {/* FIXME: Placeholder for margin purposes. Can probably be done more elegantly. */}
+                    <div className={cx(
+                        'CarouselAnnotation',
+                        'CarouselAnnotation__scrollChild__0'
+                    )} />
 
-                        {annotationsIndices.map(index => {
-                            const annotationIndex = index + 1,
-                                isAccessedAnnotation = annotationIndex === accessedAnnotationIndex,
-                                isSelectedAnnotation = annotationIndex === selectedAnnotationIndex
+                    {annotationsIndices.map(index => {
 
-                            return (
-                                <CarouselAnnotation {...other}
-                                    key={index}
-                                    annotationIndex={annotationIndex}
-                                    isAccessedAnnotation={isAccessedAnnotation}
-                                    isSelectedAnnotation={isSelectedAnnotation}
-                                />
-                            )
-                        })}
-                    </div>
+                        const annotationIndex = index + 1,
+                            isAccessedAnnotation =
+                                annotationIndex === accessedAnnotationIndex,
+                            isSelectedAnnotation =
+                                annotationIndex === selectedAnnotationIndex
+
+                        return (
+                            <CarouselAnnotation {...other}
+                                key={index}
+                                annotationIndex={annotationIndex}
+                                isAccessedAnnotation={isAccessedAnnotation}
+                                isSelectedAnnotation={isSelectedAnnotation}
+                            />
+                        )
+                    })}
+
                 </div>
 
                 <CarouselSelect
