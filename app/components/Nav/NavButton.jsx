@@ -168,15 +168,14 @@ NavButtonView = ({
                 buttonName="nav"
                 accessKey={accessKey}
                 accessKeysShown={showEnterAccessKey}
-                extraChild={
-                    <NavPanel
-                        isLeftmost={isLeftmost}
-                        isRightmost={isRightmost}
-                        bookIndex={bookIndex}
-                        songIndex={songIndex}
-                    />
-                }
-            />
+            >
+                <NavPanel
+                    isLeftmost={isLeftmost}
+                    isRightmost={isRightmost}
+                    bookIndex={bookIndex}
+                    songIndex={songIndex}
+                />
+            </Button>
         </div>
     )
 }

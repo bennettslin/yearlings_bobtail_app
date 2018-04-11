@@ -168,17 +168,16 @@ DotToggleButtonView = ({
                     iconClass={dotKey}
                     isDeselected={!isSelected}
                     handleClick={handleDotToggleClick}
-                    extraChild={(
-                        <div className={cx(
-                            'dot-description',
-                            { 'interactivated': isInteractivated }
-                        )}>
-                            <span>
-                                {DOT_DESCRIPTIONS[dotKey]}
-                            </span>
-                        </div>
-                    )}
-                />
+                >
+                    <div className={cx(
+                        'dot-description',
+                        { 'interactivated': isInteractivated }
+                    )}>
+                        <span>
+                            {DOT_DESCRIPTIONS[dotKey]}
+                        </span>
+                    </div>
+                </Button>
             </div>
         </div>
     )
