@@ -112,12 +112,6 @@ class Carousel extends Component {
             >
                 <div className="Carousel__scrollParent">
 
-                    {/* FIXME: Placeholder for margin purposes. Can probably be done more elegantly. */}
-                    <div className={cx(
-                        'CarouselAnnotation',
-                        'CarouselAnnotation__scrollChild__0'
-                    )} />
-
                     {annotationsIndices.map(index => {
 
                         const annotationIndex = index + 1,

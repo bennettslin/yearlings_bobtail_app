@@ -2,6 +2,23 @@
 @import "./CarouselSelect.less";
 @import "./CarouselToggle.less";
 
+/**
+ * These constants are used only to determine carousel right side margin. The
+ * carousel select itself does not use them.
+ */
+
+ @width__carouselSelect:
+ @length__iconLarge * 2
+ + @margin__thin * 3;
+
+@width__carouselSelect__tablet:
+ @length__iconLarge__tablet * 2
+ + @margin__thin * 3;
+
+@width__carouselSelect__mini:
+ @length__iconLarge__mini * 2
+ + @margin__thin * 3;
+
 .Carousel {
     position: absolute;
     left: 0;
@@ -43,6 +60,54 @@
     height: 100%;
     display: flex;
     overflow-x: scroll;
+
+    ._desktop_
+    & {
+        padding-left: @width__overviewToggle__laptop;
+    }
+
+    ._tablet_
+    & {
+        padding-left: @width__overviewToggle__tablet;
+    }
+
+    ._mini_
+    & {
+        padding-left: @width__overviewToggle__mini;
+    }
+
+    /**
+     * I'm baffled why padding-right can't just be applied to the scroll parent
+     * itself here, the way padding-left can. But whatever, this works.
+     */
+
+    &:after {
+        content: '';
+    }
+
+    ._monitor_
+    &:after {
+        padding-right:
+            @js__width__goldenCord
+            + @width__carouselSelect;
+    }
+
+    ._laptop_
+    &:after {
+        padding-right:
+            @js__width__uncannyValley
+            + @width__carouselSelect;
+    }
+
+    ._tablet_
+    &:after {
+        padding-right: @width__carouselSelect__tablet;
+    }
+
+    ._mini_
+    &:after {
+        padding-right: @width__carouselSelect__mini;
+    }
 }
 
 /** Gradient mask does not work in IE or Edge, though. */

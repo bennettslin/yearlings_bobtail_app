@@ -4,23 +4,6 @@
     @paddingX__carouselAnnotation * 2
     - @Annotation-padding * 0.5;
 
-/**
- * These constants are used only to determine carousel right side margin. The
- * carousel select itself does not use them.
- */
-
-@width__carouselSelect:
-    @length__iconLarge * 2
-    + @margin__thin * 3;
-
-@width__carouselSelect__tablet:
-    @length__iconLarge__tablet * 2
-    + @margin__thin * 3;
-
-@width__carouselSelect__mini:
-    @length__iconLarge__mini * 2
-    + @margin__thin * 3;
-
 .CarouselAnnotation {
     overflow-y: scroll;
     overflow-x: hidden;
@@ -44,48 +27,6 @@
             - @paddingX__carouselAnnotation * 2;
     }
 
-    &:first-child {
-        padding-left: @width__overviewToggle__laptop;
-    }
-
-    ._monitor_
-    &:last-child {
-        padding-right:
-            @js__width__goldenCord
-            + @width__carouselSelect;
-    }
-
-    ._laptop_
-    &:last-child {
-        padding-right:
-            @js__width__uncannyValley
-            + @width__carouselSelect;
-    }
-
-    ._tablet_
-    & {
-        // Override to be consistent with desktop.
-        &:first-child {
-            padding-left: @width__overviewToggle__tablet;
-        }
-
-        &:last-child {
-            padding-right: @width__carouselSelect__tablet;
-        }
-    }
-
-    ._mini_
-    & {
-        // Override to be consistent with desktop.
-        &:first-child {
-            padding-left: @width__overviewToggle__mini;
-        }
-
-        &:last-child {
-            padding-right: @width__carouselSelect__mini;
-        }
-    }
-
     .overrideAnimate
     & {
         transition: none;
@@ -99,6 +40,7 @@
     &.CarouselAnnotation__inLyricColumn__left,
     .DomManager._song_._leftLyricColumnOnly_
     &.CarouselAnnotation__inLyricColumn__right {
+
         min-width: @paddingX__carouselAnnotation__hidden;
 
         .annotation-title-block {

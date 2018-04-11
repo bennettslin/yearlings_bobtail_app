@@ -21,7 +21,7 @@ Admin
 Annotation
 Audio
 Button
-Carousel
+Carousel (Waiting on carousel rework to finalise.)
 Dot
 Dots
 DynamicSvg
@@ -33,7 +33,7 @@ Live
     OverviewLogue
     PopupOverlaid
     ScoresTips
-Lyric
+Lyric (Remember lyric scroll.)
 Nav (Need to consider last title margin, panels, and consolidate responsive)
 Overview
 Players
