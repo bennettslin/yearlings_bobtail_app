@@ -1,5 +1,7 @@
 .Popup__overview {
 
+    max-width: 480px;
+
     .Main
     & {
         position: static;
@@ -14,59 +16,31 @@
     .Main
     & {
         margin-top: 0;
+        margin-right: @margin__overview;
         margin-bottom: @margin__scrollbar;
     }
 
     ._phone_
     .Main
     & {
-        // TODO: This doesn't work because DotsOverview isn't shifting over correctly.
-        margin-left: 0;
+        margin: @margin__overview;
     }
-}
 
-.PopupView__overview {
-    max-width: 480px;
+    ._mini_
+    & {
+        width: 80%;
+    }
+
+    ._mini_._lyricHeightless_
+    &,
+    ._phone_
+    & {
+        .TextSpan {
+            font-size: 0.9em;
+        }
+    }
 
     .PopupView__content {
         border-radius: 25px;
-        // background-color: white;
     }
 }
-
-._mobile_ {
-    &._mini_ {
-        .PopupView__overview {
-            width: 80%;
-        }
-    }
-
-    &._lyricHeightless_, &._phone_ {
-        .PopupView__overview {
-            width: auto;
-            margin: 0 5px;
-        }
-    }
-
-    &._mini_._lyricHeightless_, &._phone_ {
-        .overview {
-            .TextSpan {
-                font-size: 0.9em;
-            }
-        }
-    }
-}
-
-// ._phone_ {
-
-//     .dots-overview-subfield {
-
-//         .OverviewPopup-container {
-//             position: absolute;
-//             width: 100%;
-//             height: 100%;
-//             top: 0;
-//             left: 0;
-//         }
-//     }
-// }
