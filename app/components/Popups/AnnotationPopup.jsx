@@ -96,16 +96,12 @@ AnnotationPopup = ({
 
                           !selectedScoreIndex &&
                           !selectedTitleIndex &&
-                          !selectedWikiIndex,
+                          !selectedWikiIndex
 
-            /**
-             * Pass annotation object from state so that it persists while
-             * popup is fading out.
-             */
-            myChild = (
-                <Annotation {...other} />
-            )
-
+        /**
+         * Pass annotation object from state so that it persists while popup is
+         * fading out.
+         */
         return (
             <Popup
                 showArrows
@@ -118,8 +114,9 @@ AnnotationPopup = ({
                 handlePreviousClick={handleAnnotationPrevious}
                 handleNextClick={handleAnnotationNext}
                 handlePopupContainerClick={handlePopupContainerClick}
-                myChild={myChild}
-            />
+            >
+                <Annotation {...other} />
+            </Popup>
         )
     }
 }

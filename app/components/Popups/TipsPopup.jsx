@@ -38,22 +38,19 @@ TipsPopup = ({
 
     const isLogue = getSongIsLogue(renderReadySongIndex),
 
-        isVisible = isHeavyRenderReady && !isLogue && !selectedTipsIndex,
+        isVisible = isHeavyRenderReady && !isLogue && !selectedTipsIndex
 
-        myChild = (
-            <Tips {...other} />
-        )
-
-    return (
-        <Popup
+        return (
+            <Popup
             isCardSize
             bounceAnimate
             hasNarrowPadding
             popupName="tips"
             isVisible={isVisible}
             handlePopupContainerClick={handlePopupContainerClick}
-            myChild={myChild}
-        />
+        >
+            <Tips {...other} />
+        </Popup>
     )
 }
 

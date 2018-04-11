@@ -34,10 +34,7 @@ ScorePopup = ({
 
 ...other }) => {
 
-    const isVisible = !!selectedScoreIndex,
-        myChild = (
-            <Score {...other} />
-        )
+    const isVisible = Boolean(selectedScoreIndex)
 
     return (
         <Popup
@@ -47,8 +44,9 @@ ScorePopup = ({
             popupName="score"
             isVisible={isVisible}
             handleCloseClick={handleScoreToggle}
-            myChild={myChild}
-        />
+        >
+            <Score {...other} />
+        </Popup>
     )
 }
 
