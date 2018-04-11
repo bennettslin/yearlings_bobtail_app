@@ -45,10 +45,7 @@ class Button extends Component {
             PropTypes.bool,
             PropTypes.func
         ]),
-        extraChild: PropTypes.oneOfType([
-            PropTypes.bool,
-            PropTypes.element
-        ])
+        children: PropTypes.element
     }
 
     _handleClick(e) {
@@ -65,7 +62,7 @@ class Button extends Component {
                 isDeselected, isEnabled, isSelected,
                 isOverflowShown,
                 handleClick,
-                extraChild } = this.props
+                children } = this.props
 
         return (
             <a
@@ -101,7 +98,7 @@ class Button extends Component {
                         {accessKey}
                     </div>
                 }
-                {extraChild}
+                {children}
             </a>
         )
     }

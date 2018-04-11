@@ -27,10 +27,7 @@ WikiPopup = ({
 
 ...other }) => {
 
-    const isVisible = !!selectedWikiIndex,
-        myChild = (
-            <WikiSection {...other} />
-        )
+    const isVisible = Boolean(selectedWikiIndex)
 
     return (
         <Popup
@@ -41,8 +38,9 @@ WikiPopup = ({
             isVisible={isVisible}
             popupName="wiki"
             handleCloseClick={handleWikiToggle}
-            myChild={myChild}
-        />
+        >
+            <WikiSection {...other} />
+        </Popup>
     )
 }
 

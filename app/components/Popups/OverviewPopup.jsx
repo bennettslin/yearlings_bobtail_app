@@ -45,11 +45,7 @@ OverviewPopup = ({
 
 ...other }) => {
 
-    const isLogue = getSongIsLogue(selectedSongIndex),
-
-        myChild = (
-            <OverviewSection {...other} />
-        )
+    const isLogue = getSongIsLogue(selectedSongIndex)
 
     let isVisible
 
@@ -77,8 +73,9 @@ OverviewPopup = ({
             noFlexCentre={inMain}
             isVisible={isVisible}
             handlePopupContainerClick={handlePopupContainerClick}
-            myChild={myChild}
-        />
+        >
+            <OverviewSection {...other} />
+        </Popup>
     )
 }
 

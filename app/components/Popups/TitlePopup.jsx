@@ -28,11 +28,7 @@ TitlePopup = ({
     handlePopupContainerClick
 
 }) => {
-    const isVisible = !!selectedTitleIndex,
-        myChild = (
-            <TitleSection />
-        )
-
+    const isVisible = Boolean(selectedTitleIndex)
     return (
         <Popup
             showClose
@@ -44,8 +40,9 @@ TitlePopup = ({
             popupName="title"
             handleCloseClick={handleTitleToggle}
             handlePopupContainerClick={handlePopupContainerClick}
-            myChild={myChild}
-        />
+        >
+            <TitleSection />
+        </Popup>
     )
 }
 

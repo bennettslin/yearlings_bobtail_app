@@ -24,8 +24,7 @@ class Popup extends Component {
         handleCloseClick: PropTypes.func,
         handlePreviousClick: PropTypes.func,
         handleNextClick: PropTypes.func,
-        handlePopupContainerClick: PropTypes.func,
-        myChild: PropTypes.element.isRequired
+        handlePopupContainerClick: PropTypes.func
     }
 
     constructor(props) {
@@ -99,7 +98,6 @@ class Popup extends Component {
                 handlePopupContainerClick,
                 /* eslint-enable no-unused-vars */
 
-                myChild,
                 ...other } = this.props,
 
             { isDisplayed } = this.state
@@ -129,7 +127,6 @@ class Popup extends Component {
                     handlePreviousClick={handlePreviousClick}
                     handleNextClick={handleNextClick}
                     handleContainerClick={this._handlePopupContainerClick}
-                    myChild={myChild}
                 />
             </span>
         )
@@ -159,7 +156,7 @@ popupViewPropTypes = {
     handlePreviousClick: PropTypes.func,
     handleNextClick: PropTypes.func,
     handleContainerClick: PropTypes.func.isRequired,
-    myChild: PropTypes.element.isRequired
+    children: PropTypes.element.isRequired
 },
 
 PopupView = ({
@@ -177,7 +174,7 @@ PopupView = ({
     handlePreviousClick,
     handleNextClick,
     handleContainerClick,
-    myChild
+    children
 
 }) => (
     <div className={cx(
@@ -216,7 +213,7 @@ PopupView = ({
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}
         >
-            {myChild}
+            {children}
             {showClose &&
                 <PopupButton
                     accessKeysShown
