@@ -11,43 +11,21 @@
     + @paddingX__carouselAnnotation * 2
     + @padding__annotation * 2;
 
-// .in-carousel-width {
-//     /**
-//      * Needed in carousel for proper layout.
-//      */
-//     width: @width__annotationCard + @paddingX__annotationCard * 2;
-
-//     ._mini_
-//     & {
-//         width: @width__annotationCard__mini +
-//         @paddingX__annotationCard * 2;
-//     }
-// }
-
-// FIXME: There should be a better way to handle carousel sizing and layout. Afterwards, the in-carousel-width class might no longer be necessary.
-// .cards-block {
-
-//     ._desktop_
-//     .Carousel
-//     & {
-//         margin-bottom: @paddingX__carouselAnnotation;
-//     }
-// }
-
 .AnnotationCard {
     position: relative;
+    padding: 0 @paddingX__annotationCard;
 
     min-height: 0;
     max-height: 0;
-    padding: 0 @paddingX__annotationCard;
     opacity: 0;
 
-    transition: min-height @animationDuration__default,
-                max-height @animationDuration__default,
-                margin @animationDuration__default,
-                padding @animationDuration__default,
-                opacity @animationDuration__default,
-                box-shadow @animationDuration__default;
+    transition:
+        min-height @animationDuration__default,
+        max-height @animationDuration__default,
+        margin @animationDuration__default,
+        padding @animationDuration__default,
+        opacity @animationDuration__default,
+        box-shadow @animationDuration__default;
 
     .text-shadow-mixin(@colour__annotationCard);
 
@@ -72,9 +50,9 @@
 .DomManager.portal .AnnotationCard.portal,
 .DomManager.afterword .AnnotationCard.afterword {
 
+    padding: @paddingX__annotationCard;
     min-height: @length__annotationDot;
     max-height: 500px; // Arbitrary large number.
-    padding: @paddingX__annotationCard;
     opacity: 1;
     box-shadow: @boxShadow__annotationCard;
 
@@ -99,3 +77,26 @@
         }
     }
 }
+
+// .in-carousel-width {
+//     /**
+//      * Needed in carousel for proper layout.
+//      */
+//     width: @width__annotationCard + @paddingX__annotationCard * 2;
+
+//     ._mini_
+//     & {
+//         width: @width__annotationCard__mini +
+//         @paddingX__annotationCard * 2;
+//     }
+// }
+
+// FIXME: There should be a better way to handle carousel sizing and layout. Afterwards, the in-carousel-width class might no longer be necessary.
+// .cards-block {
+
+//     ._desktop_
+//     .Carousel
+//     & {
+//         margin-bottom: @paddingX__carouselAnnotation;
+//     }
+// }

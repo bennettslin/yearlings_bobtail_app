@@ -10,13 +10,13 @@
     .Dots,
 
     // ... in carousel and annotation anchor when selected...
-    .selected-annotation .AnnotationCard,
+    .Annotation__selected .AnnotationCard,
 
     // ... in carousel title only when...
-    &._verseInactive_ .Carousel .accessed-annotation:not(.selected-annotation) .annotation-title-block,
+    &._verseInactive_ .Carousel .Annotation__accessed:not(.Annotation__selected) .AnnotationTitle,
 
     // ... in carousel cards only when...
-    &._verseInactive_ .Carousel .accessed-annotation.selected-annotation,
+    &._verseInactive_ .Carousel .accessed-annotationAnnotation__selected,
 
     // ... in lyrics only when...
     &._verseInactive_._dotsHidden_._carouselExpanded_ .Lyric,
@@ -57,7 +57,7 @@
                     }
                 }
 
-                .underline-bar {
+                .underlineBar {
                     background-color: @access-underline-colour;
                 }
             }

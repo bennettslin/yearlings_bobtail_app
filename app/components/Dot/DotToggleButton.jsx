@@ -151,7 +151,7 @@ DotToggleButtonView = ({
                     { 'selected': isInteractivated,
                       'accessHighlighted': accessHighlighted }
                 )}>
-                    <span className="underline-bar" />
+                    <span className="underlineBar" />
                     <span className="TextSpan">{dotKey}</span>
                 </span>
             </a>

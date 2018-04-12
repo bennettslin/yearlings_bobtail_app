@@ -1,15 +1,6 @@
-@selected-annotation-title-background-colour: @odd-verse-colour;
+@backgroundColour__selectedAnnotationTitle: @odd-verse-colour;
 
-.annotation-title-block {
-
-    ._mobile_
-    .Carousel
-    & {
-        margin-top: @paddingX__carouselAnnotation;
-    }
-}
-
-.annotation-title-block {
+.AnnotationTitle {
 
     /** .Carousel. */
 
@@ -24,6 +15,12 @@
 
         // FIXME: Make text shadow transparent?
         // .text-shadow-mixin(transparent);
+    }
+
+    ._mobile_
+    .Carousel
+    & {
+        margin-top: @paddingX__carouselAnnotation;
     }
 
     .Carousel.overrideAnimate
@@ -42,22 +39,22 @@
      * Not using mixin here so that text shadow applies only to annotation
      * title and not to annotation card.
      */
-    .selected-annotation
+    .Annotation__selected
     & {
 
-        background-color: @selected-annotation-title-background-colour;
+        background-color: @backgroundColour__selectedAnnotationTitle;
 
         .TextAnchorBlock {
             text-shadow:
-            -@textShadow__offset -@textShadow__offset @textShadow__blur @selected-annotation-title-background-colour,
-            @textShadow__offset -@textShadow__offset @textShadow__blur @selected-annotation-title-background-colour,
-            -@textShadow__offset @textShadow__offset @textShadow__blur @selected-annotation-title-background-colour,
-            @textShadow__offset @textShadow__offset @textShadow__blur @selected-annotation-title-background-colour;
+            -@textShadow__offset -@textShadow__offset @textShadow__blur @backgroundColour__selectedAnnotationTitle,
+            @textShadow__offset -@textShadow__offset @textShadow__blur @backgroundColour__selectedAnnotationTitle,
+            -@textShadow__offset @textShadow__offset @textShadow__blur @backgroundColour__selectedAnnotationTitle,
+            @textShadow__offset @textShadow__offset @textShadow__blur @backgroundColour__selectedAnnotationTitle;
         }
     }
 }
 
-.annotation-title {
+.AnnotationTitle {
     text-align: center;
     font-size: @mini-title-size;
 }

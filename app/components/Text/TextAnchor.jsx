@@ -117,7 +117,7 @@ class TextAnchor extends Component {
                     onTouchStart={this._handleAnchorClick}
                 >
                     {isLyric &&
-                        <span className="underline-bar" />
+                        <span className="underlineBar" />
                     }
                     {/* Don't show any dots in portal block. */}
                     {!wikiIndex && !inPortal &&

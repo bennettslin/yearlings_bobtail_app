@@ -27,24 +27,21 @@ AnnotationTitle = ({
 
 }) => (
     <div className={cx(
-        'annotation-title-block'
+        'AnnotationTitle'
         // { 'in-carousel-width': inCarousel }
     )}>
         {annotationTitle === IS_DOT_STANZA ? (
-            <div className="annotation-title">
-                <DotAnchor
-                    isSmall
-                    isSelected={showAsSelected}
-                    accessHighlighted={isAccessedAnnotation}
-                    dotKeys={annotationDotKeys}
-                    handleDotButtonClick={handleTitleClick}
-                />
-            </div>
+            <DotAnchor
+                isSmall
+                isSelected={showAsSelected}
+                accessHighlighted={isAccessedAnnotation}
+                dotKeys={annotationDotKeys}
+                handleDotButtonClick={handleTitleClick}
+            />
         ) : (
             <a className={cx(
                     'anchor-block',
                     'TextAnchorBlock',
-                    'annotation-title',
                     annotationDotKeys,
                     { 'selected': showAsSelected,
                       'accessHighlighted': isAccessedAnnotation }
@@ -52,7 +49,7 @@ AnnotationTitle = ({
                 onClick={handleTitleClick}
                 onTouchStart={handleTitleClick}
             >
-                <span className="underline-bar" />
+                <span className="underlineBar" />
                 <span className="TextSpan">
                     {`\u201c${annotationTitle}\u201d`}
                 </span>
