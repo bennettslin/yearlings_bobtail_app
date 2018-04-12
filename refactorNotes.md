@@ -14,6 +14,11 @@ Class names optimised for clarity
 
 Consolidate styles for child with parent selector nesting
 
+Toggles live with their sections
+Rename DotsOverview
+Distinguish DotSlider and Dots
+Distinguish AudioSlider
+
 ### Remaining
 
 Access
