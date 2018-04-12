@@ -2,7 +2,7 @@
 
 @paddingX__carouselAnnotation__hidden:
     @paddingX__carouselAnnotation * 2
-    - @Annotation-padding * 0.5;
+    - @padding__annotation * 0.5;
 
 .CarouselAnnotation {
     overflow-y: scroll;
@@ -23,7 +23,7 @@
 
     &:not(:last-child) {
         margin-right:
-            @Annotation-padding * 0.5
+            @padding__annotation * 0.5
             - @paddingX__carouselAnnotation * 2;
     }
 

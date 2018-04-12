@@ -230,8 +230,9 @@ export const getCarouselOrPopupAnnotationObject = ({
 }) => {
 
     // All conditional upon whether carousel annotation index exists.
-        const annotationSongIndex = renderReadySongIndex,
-            annotationIndex = carouselAnnotationIndex || renderReadyAnnotationIndex
+    const annotationSongIndex = renderReadySongIndex,
+        annotationIndex =
+            carouselAnnotationIndex || renderReadyAnnotationIndex
 
     return getAnnotationObject(annotationSongIndex, annotationIndex)
 }

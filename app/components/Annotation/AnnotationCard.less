@@ -2,12 +2,12 @@
 @CarouselAnnotation-min-width: @width__annotationCard +
                                 @AnnotationCard-padding * 2 +
                                 @paddingX__carouselAnnotation * 2 +
-                                @Annotation-padding * 2;
+                                @padding__annotation * 2;
 
 @CarouselAnnotation-mini-min-width: @width__annotationCard__mini +
                                      @AnnotationCard-padding * 2 +
                                      @paddingX__carouselAnnotation * 2 +
-                                     @Annotation-padding * 2;
+                                     @padding__annotation * 2;
 
 .in-carousel-width {
     /**
@@ -83,7 +83,7 @@
     .annotation-title-block {
         max-height: 2em; // Arbitrary value that's larger than its max height.
         min-height: @length__iconSmall;
-        padding: @Annotation-padding 0;
+        padding: @padding__annotation 0;
     }
 }
 
@@ -115,7 +115,7 @@
     box-shadow: @AnnotationCard-box-shadow;
 
     &:not(:last-child) {
-        margin-bottom: @Annotation-padding;
+        margin-bottom: @padding__annotation;
     }
 }
 

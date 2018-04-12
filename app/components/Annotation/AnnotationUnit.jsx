@@ -32,6 +32,7 @@ AnnotationUnit = ({
 ...other }) => {
 
     const { carouselAnnotationIndex } = other,
+
         annotationObject = getCarouselOrPopupAnnotationObject({
             renderReadySongIndex,
             carouselAnnotationIndex,
