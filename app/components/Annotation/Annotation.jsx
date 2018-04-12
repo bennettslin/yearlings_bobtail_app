@@ -4,9 +4,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
+
+import AnnotationTitle from './AnnotationTitle'
 import AnnotationUnit from './AnnotationUnit'
-import DotAnchor from '../Dot/DotAnchor'
-import { IS_DOT_STANZA } from '../../constants/lyrics'
+
 import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
@@ -131,39 +132,16 @@ AnnotationSectionView = ({
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}
         >
-            <div className={cx(
-                'annotation-title-block',
-                { 'in-carousel-width': inCarousel }
-            )}>
-                {annotationTitle === IS_DOT_STANZA ? (
-                    <div className="annotation-title">
-                        <DotAnchor
-                            isSmall
-                            isSelected={showAsSelected}
-                            accessHighlighted={isAccessedAnnotation}
-                            dotKeys={annotationDotKeys}
-                            handleDotButtonClick={handleTitleClick}
-                        />
-                    </div>
-                ) : (
-                    <a className={cx(
-                            'anchor-block',
-                            'TextAnchorBlock',
-                            'annotation-title',
-                            annotationDotKeys,
-                            { 'selected': showAsSelected,
-                              'accessHighlighted': isAccessedAnnotation }
-                        )}
-                        onClick={handleTitleClick}
-                        onTouchStart={handleTitleClick}
-                    >
-                        <span className="underline-bar" />
-                        <span className="TextSpan">
-                            {`\u201c${annotationTitle}\u201d`}
-                        </span>
-                    </a>
-                )}
-            </div>
+
+            <AnnotationTitle
+                inCarousel={inCarousel}
+                showAsSelected={showAsSelected}
+                accessHighlighted={isAccessedAnnotation}
+                annotationDotKeys={annotationDotKeys}
+                annotationTitle={annotationTitle}
+                handleTitleClick={handleTitleClick}
+            />
+
             <div className={cx(
                 'cards-block',
                 { 'in-carousel-width': inCarousel }

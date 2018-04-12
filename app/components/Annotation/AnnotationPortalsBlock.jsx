@@ -49,27 +49,25 @@ AnnotationPortalsBlock = ({
         })
 
     return portalLinksArray ? (
-        <div className="portals-block">
-            {portalLinksArray.map((portalObject, portalLinkIndex) => {
+        portalLinksArray.map((portalObject, portalLinkIndex) => {
 
-                /**
-                 * NOTE: portalLinkIndex and sourcePortalIndex are not the same
-                 * value! portalLinkIndex is solely for the portal component to
-                 * fetch the portal object from the data helper.
-                 */
-                const { [SOURCE_PORTAL_INDEX]: sourcePortalIndex } = portalObject,
-                    isAccessedPortal = inSelectedAnnotation &&
-                        accessedAnnotationAnchorIndex === sourcePortalIndex
+            /**
+             * NOTE: portalLinkIndex and sourcePortalIndex are not the same
+             * value! portalLinkIndex is solely for the portal component to
+             * fetch the portal object from the data helper.
+             */
+            const { [SOURCE_PORTAL_INDEX]: sourcePortalIndex } = portalObject,
+                isAccessedPortal = inSelectedAnnotation &&
+                    accessedAnnotationAnchorIndex === sourcePortalIndex
 
-                return (
-                    <AnnotationPortal {...other}
-                        key={portalLinkIndex}
-                        portalLinkIndex={portalLinkIndex}
-                        isAccessedPortal={isAccessedPortal}
-                    />
-                )
-            })}
-        </div>
+            return (
+                <AnnotationPortal {...other}
+                    key={portalLinkIndex}
+                    portalLinkIndex={portalLinkIndex}
+                    isAccessedPortal={isAccessedPortal}
+                />
+            )
+        })
     ) : null
 }
 

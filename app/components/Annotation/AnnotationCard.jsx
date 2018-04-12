@@ -131,6 +131,7 @@ AnnotationCardView = ({
                 dotKeys={cardDotKeys}
             />
         )}
+
         <TextBlock
             text={text}
             isLyric={false}
@@ -142,6 +143,7 @@ AnnotationCardView = ({
             carouselAnnotationIndex={carouselAnnotationIndex}
             handleAnchorClick={handleAnnotationWikiSelect}
         />
+
         <AnnotationPortalsBlock
             cardIndex={cardIndex}
             carouselAnnotationIndex={carouselAnnotationIndex}

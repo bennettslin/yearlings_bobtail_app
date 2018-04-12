@@ -43,16 +43,14 @@ AnnotationUnit = ({
             length: annotationObject.cards.length
         })
 
-    return (
-        <div className="AnnotationUnit">
-            {cardsIndices.map(cardIndex => (
-                <AnnotationCard {...other}
-                    key={cardIndex}
-                    cardIndex={cardIndex}
-                />
-            ))}
-        </div>
-    )
+    return cardsIndices.map(cardIndex => (
+
+        <AnnotationCard {...other}
+            key={cardIndex}
+            cardIndex={cardIndex}
+        />
+
+    ))
 }
 
 AnnotationUnit.propTypes = annotationUnitPropTypes
