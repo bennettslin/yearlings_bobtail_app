@@ -25,7 +25,7 @@
 
     ._titleInAudio_
     & {
-        padding: @paddingY__audio @padding__titleInAudio;
+        padding: @paddingY__audio @paddingX__titleInAudio;
     }
 
     ._phone_
@@ -37,4 +37,14 @@
 .audio-block {
     box-sizing: border-box;
     flex-grow: 1;
+}
+
+.Audio__menuChild {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &:not(:last-child) {
+        margin-right: @paddingX__titleInAudio;
+    }
 }

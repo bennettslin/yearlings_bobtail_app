@@ -17,7 +17,7 @@ const mapStateToProps = ({
 })
 
 const titleToggleDefaultProps = {
-    inMenu: false
+    isAudioChild: false
 },
 
 titleTogglePropTypes = {
@@ -26,7 +26,7 @@ titleTogglePropTypes = {
     selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
-    inMenu: PropTypes.bool.isRequired,
+    isAudioChild: PropTypes.bool.isRequired,
     handleTitleToggle: PropTypes.func.isRequired
 },
 
@@ -35,13 +35,14 @@ TitleToggle = ({
     isTitleInAudio,
     selectedTitleIndex,
 
-    inMenu,
+    isAudioChild,
     handleTitleToggle
 
 }) => {
-    return inMenu !== isTitleInAudio && (
+    return isAudioChild === isTitleInAudio && (
         <div className={cx(
-            'TitleToggle'
+            'TitleToggle',
+            { 'Audio__menuChild': isAudioChild }
         )}>
             <Button
                 isCustomSize

@@ -70,9 +70,7 @@ Menu = ({
                         'MenuTopRow__titleTimer__child',
                         'absoluteFullContainer'
                     )}>
-                        <TitleToggle {...titleToggleHandlers}
-                            inMenu
-                        />
+                        <TitleToggle {...titleToggleHandlers} />
                     </div>
                     {isPhone && (
                         <div className={cx(

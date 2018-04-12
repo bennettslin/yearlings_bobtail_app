@@ -101,7 +101,8 @@ class AudioButtons extends Component {
         return (
             <div className={cx(
                 'audio-block',
-                'AudioButtons-block'
+                'AudioButtons-block',
+                'Audio__menuChild'
             )}>
                 <div className="audio-subblock player-subblock">
                     {/* Previous button. */}

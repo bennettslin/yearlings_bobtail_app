@@ -39,10 +39,14 @@ Audio = ({
             )}
         >
             {isTitleInAudio && (
-                <TitleToggle {...titleToggleHandlers} />
+                <TitleToggle {...titleToggleHandlers}
+                    isAudioChild
+                />
             )}
 
-            <AudioBanner {...audioBannerHandlers} />
+            <AudioBanner {...audioBannerHandlers}
+                isAudioChild
+            />
             <AudioButtons {...other} />
         </div>
     )

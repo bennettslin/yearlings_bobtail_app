@@ -63,6 +63,7 @@ class Tips extends Component {
                 'Tips'
             )}>
                 <div className="Tips__textContainer">
+
                     {isScoresTipsInMain && (
                         <div className="Tips__textFloatContainer">
                             <TipsToggle
@@ -71,12 +72,14 @@ class Tips extends Component {
                             />
                         </div>
                     )}
+
                     {tipText && (
                         <TextBlock
                             isLyric={false}
                             text={tipText}
                         />
                     )}
+
                 </div>
 
                 <div className="Tips__imageContainer">

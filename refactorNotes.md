@@ -39,15 +39,15 @@ Overview
 Players
 Popup (Waiting on popup rework to finalise.)
 Popups
-Score
+Score (/)
 Slider
 Stage
 Text
 Theatre
-Tips
-Title
+Tips (/)
+Title (/)
 Verse (Remember verse scroll, changed with underscore)
-Wiki
+Wiki (/)
 
 AccessManager
 AppManager

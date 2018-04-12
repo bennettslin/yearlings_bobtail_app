@@ -25,6 +25,7 @@ const audioBannerPropTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
+    isAudioChild: PropTypes.bool,
     isBelowMenu: PropTypes.bool
 },
 
@@ -32,6 +33,7 @@ AudioBanner = ({
 
     deviceIndex,
     selectedSongIndex,
+    isAudioChild,
     isBelowMenu,
 
 ...other }) => {
@@ -45,10 +47,15 @@ AudioBanner = ({
     return Boolean(isBelowMenu) === isPhone && (
         <div className={cx(
             'audio-block',
-            'AudioBanner-block'
+            'AudioBanner-block',
+            { 'Audio__menuChild': isAudioChild }
         )}>
             <Slider {...other} />
-            <div className="AudioBanner audio-display-block">
+            <div className={cx(
+                'AudioBanner',
+                'audio-display-block',
+                'absoluteFullContainer'
+            )}>
                 <div className="AudioBanner-title">
                     {songTitle}
                 </div>
