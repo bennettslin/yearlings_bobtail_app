@@ -1,40 +1,31 @@
-/* TODO: Revisit Menu when doing refactor here. */
-
-.AudioBanner-block, .AudioTimer-block {
-    background-color: #8dd;
-}
-
-.AudioBanner-block {
+.AudioBanner {
     // height: 100%;
     // position: relative;
     margin-right: @js__padding__audio;
     min-width: @minWidth__audioBanner;
     line-height: 1em;
 
-    background-color: #dbd;
-
-    @AccessIconsBlock-margin: 3px;
+    @margin__audioBanner__accessIcons: 3px;
 
     .AccessIconsBlock {
-        bottom: @AccessIconsBlock-margin;
+        bottom: @margin__audioBanner__accessIcons;
 
         &.rewind-forward {
-            left: @AccessIconsBlock-margin;
+            left: @margin__audioBanner__accessIcons;
         }
 
         &.enter {
-            right: @AccessIconsBlock-margin;
+            right: @margin__audioBanner__accessIcons;
         }
     }
 
     ._titleInAudio_
     & {
         min-width: 200px;
-        // margin-right: @paddingX__titleInAudio;
     }
 }
 
-.audio-display-block {
+.AudioBanner__display {
     box-sizing: border-box;
     padding: 0 5px;
 
@@ -42,11 +33,7 @@
     justify-content: space-between;
 
     background-color: #8b8;
-}
 
-.AudioBanner-title {
-
-    // Make text smaller when width is narrow.
     ._titleInAudio_
     & {
         font-size: 0.85em;

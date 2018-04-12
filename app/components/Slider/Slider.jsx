@@ -62,7 +62,6 @@ SliderSectionView = ({
 }) => (
     <div
         className={cx(
-            'AudioBanner',
             'slider-block'
         )}
     >

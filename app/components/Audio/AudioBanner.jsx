@@ -46,19 +46,16 @@ AudioBanner = ({
 
     return Boolean(isBelowMenu) === isPhone && (
         <div className={cx(
-            'AudioBanner-block',
+            'AudioBanner',
             { 'Audio__menuChild': isAudioChild }
         )}>
             <Slider {...other} />
             <div className={cx(
-                'AudioBanner',
-                'audio-display-block',
+                'AudioBanner__display',
                 'absoluteFullContainer',
                 'flexAlignContainer'
             )}>
-                <div className="AudioBanner-title">
-                    {songTitle}
-                </div>
+                {songTitle}
                 <AudioTimer />
             </div>
         </div>

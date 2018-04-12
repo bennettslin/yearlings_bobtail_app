@@ -1,10 +1,10 @@
-@AccessIconsBlock-margin: 10px;
+@margin__accessIcons: 10px;
 
 .LyricAccess-row {
     position: absolute;
     width: 100%;
     bottom: 0;
-    padding: @AccessIconsBlock-margin;
+    padding: @margin__accessIcons;
     box-sizing: border-box;
 
     display: flex;
@@ -20,7 +20,7 @@
         z-index: @zIndex__lyricAccessIcons;
 
         &.up-down {
-            right: @AccessIconsBlock-margin;
+            right: @margin__accessIcons;
         }
 
         &.left-right, &.enter {
@@ -28,7 +28,7 @@
         }
 
         &.enter {
-            margin-left: @AccessIconsBlock-margin;
+            margin-left: @margin__accessIcons;
         }
     }
 }

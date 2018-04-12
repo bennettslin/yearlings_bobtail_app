@@ -32,19 +32,10 @@ AudioTimer = ({
     selectedTimePlayed
 
 }) => {
-    const isLogue = getSongIsLogue(selectedSongIndex)
+    const isLogue = getSongIsLogue(selectedSongIndex),
 
-    let displayBase,
-        displayJiffy
-
-    if (!isLogue) {
-
-        const { base,
-                jiffy } = getFormattedTime(selectedTimePlayed, true)
-
-        displayBase = base
-        displayJiffy = jiffy
-    }
+        { base,
+          jiffy } = getFormattedTime(selectedTimePlayed, true)
 
     return (
         <div className={cx(
@@ -52,15 +43,15 @@ AudioTimer = ({
             { 'AudioTimer__titleTimer': isTitleTimer }
         )}>
 
-            {displayBase && (
+            {!isLogue && (
                 <span className="AudioTimer__base">
-                    {displayBase}
+                    {base}
                 </span>
             )}
 
-            {displayJiffy && (
+            {!isLogue && (
                 <span className="AudioTimer__jiffy">
-                    {displayJiffy}
+                    {jiffy}
                 </span>
             )}
 
