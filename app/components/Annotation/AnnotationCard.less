@@ -1,51 +1,45 @@
 // This value *must* be the same in js.
-@CarouselAnnotation-min-width: @width__annotationCard +
-                                @AnnotationCard-padding * 2 +
-                                @paddingX__carouselAnnotation * 2 +
-                                @padding__annotation * 2;
+@minWidth__carouselAnnotation:
+    @width__annotationCard
+    + @paddingX__annotationCard * 2
+    + @paddingX__carouselAnnotation * 2
+    + @padding__annotation * 2;
 
-@CarouselAnnotation-mini-min-width: @width__annotationCard__mini +
-                                     @AnnotationCard-padding * 2 +
-                                     @paddingX__carouselAnnotation * 2 +
-                                     @padding__annotation * 2;
+@minWidth__carouselAnnotation__mini:
+    @width__annotationCard__mini
+    + @paddingX__annotationCard * 2
+    + @paddingX__carouselAnnotation * 2
+    + @padding__annotation * 2;
 
-.in-carousel-width {
-    /**
-     * Needed in carousel for proper layout.
-     */
-    width: @width__annotationCard + @AnnotationCard-padding * 2;
+// .in-carousel-width {
+//     /**
+//      * Needed in carousel for proper layout.
+//      */
+//     width: @width__annotationCard + @paddingX__annotationCard * 2;
 
-    ._mini_
-    & {
-        width: @width__annotationCard__mini +
-        @AnnotationCard-padding * 2;
-    }
-}
+//     ._mini_
+//     & {
+//         width: @width__annotationCard__mini +
+//         @paddingX__annotationCard * 2;
+//     }
+// }
 
 // FIXME: There should be a better way to handle carousel sizing and layout. Afterwards, the in-carousel-width class might no longer be necessary.
-.cards-block {
+// .cards-block {
 
-    ._desktop_
-    .Carousel
-    & {
-        margin-bottom: @paddingX__carouselAnnotation;
-    }
-}
-.annotation-title-block {
-
-    ._mobile_
-    .Carousel
-    & {
-        margin-top: @paddingX__carouselAnnotation;
-    }
-}
+//     ._desktop_
+//     .Carousel
+//     & {
+//         margin-bottom: @paddingX__carouselAnnotation;
+//     }
+// }
 
 .AnnotationCard {
     position: relative;
 
     min-height: 0;
     max-height: 0;
-    padding: 0 @AnnotationCard-padding;
+    padding: 0 @paddingX__annotationCard;
     opacity: 0;
 
     transition: min-height @animationDuration__default,
@@ -55,7 +49,7 @@
                 opacity @animationDuration__default,
                 box-shadow @animationDuration__default;
 
-    .text-shadow-mixin(@AnnotationCard-colour);
+    .text-shadow-mixin(@colour__annotationCard);
 
     // Select for annotation card dots, not portal dots.
     > .dots-block {
@@ -69,36 +63,6 @@
     }
 }
 
-.DomManager.narrative .CarouselAnnotation.narrative,
-.DomManager.backstory .CarouselAnnotation.backstory,
-.DomManager.observation .CarouselAnnotation.observation,
-.DomManager.pun .CarouselAnnotation.pun,
-.DomManager.reference .CarouselAnnotation.reference,
-.DomManager.songwriting .CarouselAnnotation.songwriting,
-.DomManager.portal .CarouselAnnotation.portal,
-.DomManager.afterword .CarouselAnnotation.afterword {
-
-    min-width: @CarouselAnnotation-min-width;
-
-    .annotation-title-block {
-        max-height: 2em; // Arbitrary value that's larger than its max height.
-        min-height: @length__iconSmall;
-        padding: @padding__annotation 0;
-    }
-}
-
-.DomManager._mini_.narrative .CarouselAnnotation.narrative,
-.DomManager._mini_.backstory .CarouselAnnotation.backstory,
-.DomManager._mini_.observation .CarouselAnnotation.observation,
-.DomManager._mini_.pun .CarouselAnnotation.pun,
-.DomManager._mini_.reference .CarouselAnnotation.reference,
-.DomManager._mini_.songwriting .CarouselAnnotation.songwriting,
-.DomManager._mini_.portal .CarouselAnnotation.portal,
-.DomManager._mini_.afterword .CarouselAnnotation.afterword {
-
-    min-width: @CarouselAnnotation-mini-min-width;
-}
-
 .DomManager.narrative .AnnotationCard.narrative,
 .DomManager.backstory .AnnotationCard.backstory,
 .DomManager.observation .AnnotationCard.observation,
@@ -110,9 +74,9 @@
 
     min-height: @length__annotationDot;
     max-height: 500px; // Arbitrary large number.
-    padding: @AnnotationCard-padding;
+    padding: @paddingX__annotationCard;
     opacity: 1;
-    box-shadow: @AnnotationCard-box-shadow;
+    box-shadow: @boxShadow__annotationCard;
 
     &:not(:last-child) {
         margin-bottom: @padding__annotation;

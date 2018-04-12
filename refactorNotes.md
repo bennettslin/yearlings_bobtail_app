@@ -21,7 +21,7 @@ Admin
 Annotation
 Audio
 Button
-Carousel (Waiting on carousel rework to finalise.)
+Carousel (Waiting on carousel rework to finalise. Revert dots when done.)
 Dot
 Dots
 DynamicSvg

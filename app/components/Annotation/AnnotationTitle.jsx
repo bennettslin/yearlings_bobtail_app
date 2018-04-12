@@ -8,7 +8,7 @@ import { IS_DOT_STANZA } from '../../constants/lyrics'
 
 const annotationTitlePropTypes = {
     // From parent.
-    inCarousel: PropTypes.bool,
+    // inCarousel: PropTypes.bool,
     isAccessedAnnotation: PropTypes.bool,
     showAsSelected: PropTypes.bool.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
@@ -18,7 +18,7 @@ const annotationTitlePropTypes = {
 
 AnnotationTitle = ({
 
-    inCarousel,
+    // inCarousel,
     showAsSelected,
     isAccessedAnnotation,
     annotationDotKeys,
@@ -27,8 +27,8 @@ AnnotationTitle = ({
 
 }) => (
     <div className={cx(
-        'annotation-title-block',
-        { 'in-carousel-width': inCarousel }
+        'annotation-title-block'
+        // { 'in-carousel-width': inCarousel }
     )}>
         {annotationTitle === IS_DOT_STANZA ? (
             <div className="annotation-title">

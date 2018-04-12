@@ -230,8 +230,7 @@ module.exports = {
         "one-var-declaration-per-line": "error",
         "operator-assignment": "off",
         "operator-linebreak": [
-            "error",
-            "after"
+            "off"
         ],
         "padded-blocks": "off",
         "prefer-arrow-callback": "error",

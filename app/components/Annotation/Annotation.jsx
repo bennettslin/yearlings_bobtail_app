@@ -134,7 +134,7 @@ AnnotationSectionView = ({
         >
 
             <AnnotationTitle
-                inCarousel={inCarousel}
+                // inCarousel={inCarousel}
                 showAsSelected={showAsSelected}
                 accessHighlighted={isAccessedAnnotation}
                 annotationDotKeys={annotationDotKeys}
@@ -142,19 +142,13 @@ AnnotationSectionView = ({
                 handleTitleClick={handleTitleClick}
             />
 
-            <div className={cx(
-                'cards-block',
-                { 'in-carousel-width': inCarousel }
-            )}>
-                <AnnotationUnit {...other}
-
-                    /**
-                     * Tell card it's in selected annotation so it knows
-                     * whether to care about accessed annotation anchor.
-                     */
-                    inSelectedAnnotation={showAsSelected}
-                />
-            </div>
+            <AnnotationUnit {...other}
+                /**
+                 * Tell card it's in selected annotation so it knows whether
+                 * to care about accessed annotation anchor.
+                 */
+                inSelectedAnnotation={showAsSelected}
+            />
         </div>
     )
 }

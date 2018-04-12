@@ -184,10 +184,16 @@ class DomManager extends Component {
                 handlePlayerTimeReset
             },
 
-            _overviewShown_ = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
-            _tipsShown_ = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
+            overviewShown = OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN,
+            tipsShown = TIPS_OPTIONS[selectedTipsIndex] === SHOWN,
 
-            carouselNavCanShow = !isLogue && !showOverlay && !selectedDotsIndex && !isLyricExpanded && !_overviewShown_ && !_tipsShown_
+            isCarouselNavShowable =
+                !isLogue
+                && !showOverlay
+                // && !selectedDotsIndex // Revert
+                && !isLyricExpanded
+                && !overviewShown
+                && !tipsShown
 
         return (
             <div
@@ -216,14 +222,14 @@ class DomManager extends Component {
                     selectedDotsIndex ? '_dotsShown_' : '_dotsHidden_',
                     isLyricExpanded ? '_lyricExpanded_' : '_lyricCollapsed_',
                     { '_navExpanded_': !selectedCarouselNavIndex },
-                    _overviewShown_ ? '_overviewShown_' : '_overviewHidden_',
-                    _tipsShown_ ? '_tipsShown_' : '_tipsHidden_',
+                    overviewShown ? '_overviewShown_' : '_overviewHidden_',
+                    tipsShown ? '_tipsShown_' : '_tipsHidden_',
 
                     isOverlayingAnnotation ?
                         '_annotationOverlaid_' : '_annotationSide_',
                     showShrunkNavIcon ? '_navIconShrunk_' : '_navIconStatic_',
 
-                    carouselNavCanShow ?
+                    isCarouselNavShowable ?
                         '_carouselNavShowable_' : '_carouselNavUnshowable_',
                     isScoresTipsInMain ?
                         '_scoresTipsMain_' : '_scoresTipsMenu_',

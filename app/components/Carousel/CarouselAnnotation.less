@@ -49,15 +49,32 @@
     }
 }
 
-.Annotation {
-    .CarouselAnnotation
-    & {
-        transition: background-color @animationDuration__default;
+.DomManager.narrative .CarouselAnnotation.narrative,
+.DomManager.backstory .CarouselAnnotation.backstory,
+.DomManager.observation .CarouselAnnotation.observation,
+.DomManager.pun .CarouselAnnotation.pun,
+.DomManager.reference .CarouselAnnotation.reference,
+.DomManager.songwriting .CarouselAnnotation.songwriting,
+.DomManager.portal .CarouselAnnotation.portal,
+.DomManager.afterword .CarouselAnnotation.afterword {
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    min-width: @minWidth__carouselAnnotation;
 
-        padding: 0 @paddingX__carouselAnnotation;
+    .annotation-title-block {
+        max-height: 2em; // Arbitrary value that's larger than its max height.
+        min-height: @length__iconSmall;
+        padding: @padding__annotation 0;
     }
+}
+
+.DomManager._mini_.narrative .CarouselAnnotation.narrative,
+.DomManager._mini_.backstory .CarouselAnnotation.backstory,
+.DomManager._mini_.observation .CarouselAnnotation.observation,
+.DomManager._mini_.pun .CarouselAnnotation.pun,
+.DomManager._mini_.reference .CarouselAnnotation.reference,
+.DomManager._mini_.songwriting .CarouselAnnotation.songwriting,
+.DomManager._mini_.portal .CarouselAnnotation.portal,
+.DomManager._mini_.afterword .CarouselAnnotation.afterword {
+
+    min-width: @minWidth__carouselAnnotation__mini;
 }
