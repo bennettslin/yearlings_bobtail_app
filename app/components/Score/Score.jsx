@@ -28,10 +28,10 @@ class Score extends Component {
     constructor(props) {
         super(props)
 
-        this.onWebviewLoad = this.onWebviewLoad.bind(this)
+        this.onIframeLoad = this.onIframeLoad.bind(this)
     }
 
-    onWebviewLoad() {
+    onIframeLoad() {
         this.props.setIsScoreLoaded(true)
     }
 
@@ -44,16 +44,15 @@ class Score extends Component {
                 ref={this.props.scoreRef}
                 className={cx(
                     'Score',
-                    'webviewContainer'
+                    'iframeContainer'
                 )}
-                onKeyDown={this.hi}
                 tabIndex="1"
             >
                 <iframe
-                    ref={(node) => (this.myWebview = node)}
-                    className="webviewContainer__webview"
+                    ref={(node) => (this.myIframe = node)}
+                    className="iframeContainer__iframe"
                     src={score}
-                    onLoad={this.onWebviewLoad}
+                    onLoad={this.onIframeLoad}
                     tabIndex="2"
                 />
             </div>

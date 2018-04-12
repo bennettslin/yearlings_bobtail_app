@@ -43,10 +43,10 @@ class WikiSection extends Component {
 
     constructor(props) {
         super(props)
-        this.onWebviewLoad = this.onWebviewLoad.bind(this)
+        this.onIframeLoad = this.onIframeLoad.bind(this)
 
         this.state = {
-            webviewLoading: true
+            iframeLoading: true
         }
     }
 
@@ -66,7 +66,7 @@ class WikiSection extends Component {
                 props: state,
                 nextProps: nextState,
                 updatingPropsArray: [
-                    'webviewLoading'
+                    'iframeLoading'
                 ]
             })
 
@@ -79,18 +79,18 @@ class WikiSection extends Component {
 
     _onWikiUrlReceived(selectedWikiUrl) {
         if (selectedWikiUrl && selectedWikiUrl !== this.props.selectedWikiUrl) {
-            this.setState({ webviewLoading: true })
+            this.setState({ iframeLoading: true })
         }
     }
 
-    onWebviewLoad() {
+    onIframeLoad() {
         this.setState({
-            webviewLoading: false
+            iframeLoading: false
         })
     }
 
     render() {
-        const { webviewLoading } = this.state,
+        const { iframeLoading } = this.state,
 
             // Use all props passed through Redux.
             selectedWikiUrl = getWikiUrl(this.props)
@@ -98,11 +98,11 @@ class WikiSection extends Component {
         return (
             <div className={cx(
                 'Wiki',
-                'webviewContainer'
+                'iframeContainer'
             )}>
-                {webviewLoading &&
+                {iframeLoading &&
                     <div className={cx(
-                        'webviewContainer__spinner',
+                        'iframeContainer__spinner',
                         'absoluteFullContainer',
                         'flexCentreContainer'
                     )}>
@@ -114,11 +114,13 @@ class WikiSection extends Component {
                 <iframe
                     ref={this.props.wikiRef}
                     className={cx(
-                        'webviewContainer__webview',
-                        { 'loading': webviewLoading }
+                        'iframeContainer__iframe',
+
+                        // eslint-disable-next-line object-shorthand
+                        { 'iframeLoading': iframeLoading }
                     )}
                     src={selectedWikiUrl}
-                    onLoad={this.onWebviewLoad}
+                    onLoad={this.onIframeLoad}
                 />
             </div>
         )
