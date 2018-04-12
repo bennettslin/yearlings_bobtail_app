@@ -29,7 +29,7 @@ const mapStateToProps = ({
     canPlayThroughs
 })
 
-class PlayersPlayer extends Component {
+class Player extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -77,7 +77,7 @@ class PlayersPlayer extends Component {
                         staticProp: 'isSelected',
                         subUpdatingKey: 'updatedTimePlayed'
                     }
-                    // PlayersPlayer itself does not update on canPlayThroughs.
+                    // Player itself does not update on canPlayThroughs.
                 ]
             })
 
@@ -291,4 +291,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(PlayersPlayer)
+export default connect(mapStateToProps, bindDispatchToProps)(Player)

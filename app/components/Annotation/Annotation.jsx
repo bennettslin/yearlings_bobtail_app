@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import AnnotationTitle from './AnnotationTitle'
-import AnnotationUnit from './AnnotationUnit'
+import AnnotationCards from './AnnotationCards'
 
 import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
@@ -142,7 +142,7 @@ AnnotationSectionView = ({
                 handleTitleClick={handleTitleClick}
             />
 
-            <AnnotationUnit {...other}
+            <AnnotationCards {...other}
                 /**
                  * Tell card it's in selected annotation so it knows whether
                  * to care about accessed annotation anchor.

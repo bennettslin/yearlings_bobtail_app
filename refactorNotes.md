@@ -27,7 +27,7 @@ Dots
 DynamicSvg
 Icon
 Live
-    DotsOverview
+    DotsOverview (do with overviewToggle, dotsToggle, and scoresTips)
     Main (/)
     Menu (/)
     OverviewLogue

@@ -17,7 +17,7 @@ const mapStateToProps = ({
     accessedAnnotationAnchorIndex
 })
 
-const annotationPortalsBlockPropTypes = {
+const annotationPortalsPropTypes = {
     // Through Redux.
     renderReadySongIndex: PropTypes.number.isRequired,
     renderReadyAnnotationIndex: PropTypes.number.isRequired,
@@ -29,7 +29,7 @@ const annotationPortalsBlockPropTypes = {
     inSelectedAnnotation: PropTypes.bool.isRequired
 },
 
-AnnotationPortalsBlock = ({
+AnnotationPortals = ({
 
     renderReadySongIndex,
     renderReadyAnnotationIndex,
@@ -71,6 +71,6 @@ AnnotationPortalsBlock = ({
     ) : null
 }
 
-AnnotationPortalsBlock.propTypes = annotationPortalsBlockPropTypes
+AnnotationPortals.propTypes = annotationPortalsPropTypes
 
-export default connect(mapStateToProps)(AnnotationPortalsBlock)
+export default connect(mapStateToProps)(AnnotationPortals)

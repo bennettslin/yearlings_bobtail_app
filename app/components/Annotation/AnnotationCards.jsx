@@ -15,7 +15,7 @@ const mapStateToProps = ({
     renderReadyAnnotationIndex
 })
 
-const annotationUnitPropTypes = {
+const annotationCardsPropTypes = {
     // Through Redux.
     renderReadySongIndex: PropTypes.number.isRequired,
     renderReadyAnnotationIndex: PropTypes.number.isRequired,
@@ -24,7 +24,7 @@ const annotationUnitPropTypes = {
     carouselAnnotationIndex: PropTypes.number
 },
 
-AnnotationUnit = ({
+AnnotationCards = ({
 
     renderReadySongIndex,
     renderReadyAnnotationIndex,
@@ -44,15 +44,13 @@ AnnotationUnit = ({
         })
 
     return cardsIndices.map(cardIndex => (
-
         <AnnotationCard {...other}
             key={cardIndex}
             cardIndex={cardIndex}
         />
-
     ))
 }
 
-AnnotationUnit.propTypes = annotationUnitPropTypes
+AnnotationCards.propTypes = annotationCardsPropTypes
 
-export default connect(mapStateToProps)(AnnotationUnit)
+export default connect(mapStateToProps)(AnnotationCards)

@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import DotBlock from '../Dot/DotBlock'
 import TextBlock from '../Text/TextBlock'
-import AnnotationPortalsBlock from './AnnotationPortalsBlock'
+import AnnotationPortals from './AnnotationPortals'
 import { PORTAL } from '../../constants/dots'
 import { getCarouselOrPopupCardObject } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
@@ -144,7 +144,7 @@ AnnotationCardView = ({
             handleAnchorClick={handleAnnotationWikiSelect}
         />
 
-        <AnnotationPortalsBlock
+        <AnnotationPortals
             cardIndex={cardIndex}
             carouselAnnotationIndex={carouselAnnotationIndex}
             inSelectedAnnotation={inSelectedAnnotation}

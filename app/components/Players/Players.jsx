@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import PlayersPlayer from './PlayersPlayer'
+import Player from './Player'
 import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from '../../helpers/dataHelper'
 import { convertBitNumberToTrueFalseKeys } from '../../helpers/bitHelper'
 import { getNextPlayerToRender } from '../../helpers/logicHelper'
@@ -97,7 +97,7 @@ class Players extends Component {
                         totalTime = getSongTotalTime(songIndex)
 
                     return this._playerShouldRender(songIndex) ? (
-                        <PlayersPlayer {...other}
+                        <Player {...other}
                             key={index}
                             songIndex={songIndex}
                             mp3={mp3}
