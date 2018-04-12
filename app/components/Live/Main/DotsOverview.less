@@ -1,8 +1,6 @@
 // Toggle container.
 .DotsOverview {
-    // position: absolute;
     height: 100%;
-    width: @width__overviewToggle;
 
     transition: opacity @animationDuration__default,
                 margin-left @animationDuration__default;
@@ -10,69 +8,61 @@
     opacity: 1;
     margin-left: 0;
 
-    ._laptop_
-    & {
-        width: @width__overviewToggle__laptop;
-    }
+    background-color: rgba(250, 200, 250, 0.5);
 
-    // In mobile, also hidden to left when lyric expanded.
-    ._mobile_._lyricExpanded_
-    & {
-        opacity: 0;
-        margin-left: -@width__overviewToggle__tablet;
-    }
-}
-
-._mini_ {
-
-    .DotsOverview, .CarouselToggle {
-        width: @width__overviewToggle__mini;
-    }
-
-}
-
-._phone_ {
-
-    // In phone, also hidden to left when overview is shown.
-    &._overviewShown_ {
-        .DotsOverview {
-            opacity: 0;
-            margin-left: -@width___overviewToggle__phone;
-        }
-    }
-
-    .DotsOverview {
-        width: @width___overviewToggle__phone;
-    }
-}
-
-// Hidden to left when is logue, or annotation shown and carousel hidden.
-._logue_,
-._annotationShown_._navExpanded_,
-._dotsShown_,
-._tipsShown_,
-._overlayShown_ {
-    .DotsOverview {
-        opacity: 0;
-        margin-left: -@width__overviewToggle;
-    }
-}
-
-.DotsOverview,
-.CarouselToggle {
-    ._mobile_
-    & {
-        width: @width__overviewToggle__tablet;
-    }
-}
-
-.DotsOverview,
-.DotsToggle-button-container {
     display: flex;
     flex-direction: column;
 
     ._mobileNotPhone_
     & {
         flex-direction: column-reverse;
+    }
+
+    // Widths for all other devices are set by "width__dotsOverview" class.
+    ._desktop_
+    & {
+        width: @width__overviewToggle;
+    }
+
+    // Hidden to left in these scenarios.
+    ._logue_
+    &,
+    ._dotsShown_
+    &,
+    ._tipsShown_
+    &,
+    ._overlayShown_
+    &,
+    ._annotationShown_._navExpanded_
+    &,
+    ._mobile_._lyricExpanded_
+    &,
+    ._phone_._overviewShown_
+    & {
+        opacity: 0;
+        margin-left: -@width__overviewToggle;
+    }
+}
+
+.width__dotsOverview {
+
+    ._laptop_
+    & {
+        width: @width__overviewToggle__laptop;
+    }
+
+    ._tablet_
+    & {
+        width: @width__overviewToggle__tablet;
+    }
+
+    ._mini_
+    & {
+        width: @width__overviewToggle__mini;
+    }
+
+    ._phone_
+    & {
+        width: @width___overviewToggle__phone;
     }
 }

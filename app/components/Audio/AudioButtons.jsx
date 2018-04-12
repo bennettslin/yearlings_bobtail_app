@@ -100,11 +100,15 @@ class AudioButtons extends Component {
 
         return (
             <div className={cx(
-                'audio-block',
-                'AudioButtons-block',
-                'Audio__menuChild'
+                'AudioButtons',
+                'Audio__menuChild',
+                'flexAlignContainer'
             )}>
-                <div className="audio-subblock player-subblock">
+                <div className={cx(
+                    'AudioButtons__childPlayer',
+                    'AudioButtons__child',
+                    'flexAlignContainer'
+                )}>
                     {/* Previous button. */}
                     <Button
                         accessKeysShown
@@ -137,7 +141,11 @@ class AudioButtons extends Component {
                     />
                 </div>
 
-                <div className="audio-subblock option-subblock">
+                <div className={cx(
+                    'AudioButtons__childOption',
+                    'AudioButtons__child',
+                    'flexAlignContainer'
+                )}>
                     <Button
                         accessKeysShown
                         iconClass="audio-neutral"

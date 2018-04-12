@@ -59,9 +59,8 @@ const AdminNavRowView = ({
             maxTotalNeededHours={maxTotalNeededHours}
         />
         <div className="text-cell-wrapper">
-            {/* TODO: Keep enabled for now, to allow user to reset the current song. In the future, consider disabling if *all* the default parameters are the same. */}
             <a
-                className="text-cell text enabled"
+                className="text-cell text"
                 onClick={onClick}
                 onTouchStart={onClick}
             >

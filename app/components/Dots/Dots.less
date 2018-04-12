@@ -1,6 +1,6 @@
 @import "./DotsToggle.less";
 
-.Dots__container {
+.Dots {
     position: absolute;
     top: 0;
     left: 0;
@@ -41,20 +41,9 @@
     }
 }
 
-.Dots {
+.Dots__slide {
     padding: 10px;
 
     // TODO: Maybe consolidate all the text shadows that use this colour.
     .text-shadow-mixin(@odd-verse-colour);
-
-    // Dots section and dot stanzas.
-    .dot .icon-canvas {
-        transition: background-color @animationDuration__fast;
-    }
-}
-
-.Dots, .AnnotationPortal {
-    .dot .icon-canvas {
-        border: @dot-border solid @dot-border-colour;
-    }
 }

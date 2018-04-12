@@ -3,15 +3,9 @@
 @import "./AudioTimer.less";
 
 @js__height__audio: 64px;
-
-.Audio, .audio-block, .audio-subblock, .audio-display-block {
-    display: flex;
-    align-items: center;
-}
+@paddingY__audio: (@js__height__menu - @js__height__audio) / 2;
 
 .Audio {
-    @paddingY__audio: (@js__height__menu - @js__height__audio) / 2;
-
     box-sizing: border-box;
     height: 100%;
 
@@ -32,11 +26,6 @@
     & {
         justify-content: center;
     }
-}
-
-.audio-block {
-    box-sizing: border-box;
-    flex-grow: 1;
 }
 
 .Audio__menuChild {

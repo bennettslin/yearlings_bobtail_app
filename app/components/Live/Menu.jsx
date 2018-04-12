@@ -77,7 +77,9 @@ Menu = ({
                             'MenuTopRow__titleTimer__child',
                             'absoluteFullContainer'
                         )}>
-                            <AudioTimer />
+                            <AudioTimer
+                                isTitleTimer
+                            />
                         </div>
                     )}
                 </div>

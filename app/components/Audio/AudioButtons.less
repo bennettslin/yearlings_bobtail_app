@@ -1,13 +1,12 @@
 // 232 px.
-@audio-button-margin: 3px;
-@audio-option-button-margin: 8px;
+@margin__audioButtons__child: 8px;
+@margin__audioButtons__playerButton: 3px;
 @AudioButtons-constant: @js__length__icon * 3 +
-                         @audio-button-margin * 2 +
-                         @audio-option-button-margin;
+                         @margin__audioButtons__playerButton * 2 +
+                         @margin__audioButtons__child;
 
-.AudioButtons-block {
+.AudioButtons {
     justify-content: space-between;
-    // height: 100%;
 
     // Give audio banner more room.
     max-width: 220px;
@@ -15,42 +14,45 @@
     background-color: #bbb;
 
     .Button:not(:last-child) {
-        margin-right: @audio-button-margin;
+        margin-right: @margin__audioButtons__playerButton;
     }
 }
 
-.player-subblock {
+.AudioButtons__child:not(:last-child) {
+    margin-right: @margin__audioButtons__child;
+}
+
+.AudioButtons__childPlayer {
     justify-content: space-between;
-    margin-right: @audio-option-button-margin;
     flex-grow: 4;
 }
 
-.option-subblock {
+.AudioButtons__childOption {
     justify-content: flex-end;
     flex-grow: 3;
 }
 
 .audio-nav {
-    .enabled
+    .Button__enabled
     & {
         background-color: @audio-nav-colour;
     }
 }
 
 .audio-neutral {
-    .enabled
+    .Button__enabled
     & {
         background-color: @audio-neutral-colour;
     }
 }
 
 .audio-play-toggle {
-    ._isPlaying_ .enabled
+    ._isPlaying_ .Button__enabled
     & {
         background-color: @audio-pause-colour;
     }
 
-    ._isPaused_ .enabled
+    ._isPaused_ .Button__enabled
     & {
         background-color: @audio-play-colour;
     }

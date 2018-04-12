@@ -34,7 +34,8 @@ CarouselToggle = ({
 }) => {
     return !isHiddenNav && (
         <div className={cx(
-            'CarouselToggle'
+            'CarouselToggle',
+            'width__dotsOverview'
         )}>
             <Button
                 isLarge

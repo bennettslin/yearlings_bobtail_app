@@ -38,7 +38,7 @@
         opacity: 0;
     }
 
-    .Button.enabled
+    .Button.Button__enabled
     & {
         transition: background-color @animationDuration__default,
         transform @animationDuration__instant;
@@ -112,7 +112,7 @@
         background-color: #d84;
     }
 
-    .Button__scores.enabled
+    .Button__scores.Button__enabled
     & {
         background-color: #bdb;
     }
@@ -213,4 +213,18 @@
 .DomManager.portal .TextAnchorBlock:active .icon-canvas-block.portal,
 .DomManager.afterword .TextAnchorBlock:active .icon-canvas-block.afterword {
    transform: scale(0.8);
+}
+
+.Dots,
+.AnnotationPortal {
+    .dot .icon-canvas {
+        border: @dot-border solid @dot-border-colour;
+    }
+}
+
+.Dots {
+    // Dots section and dot stanzas.
+    .dot .icon-canvas {
+        transition: background-color @animationDuration__fast;
+    }
 }

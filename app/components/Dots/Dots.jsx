@@ -105,10 +105,10 @@ DotsView = ({
 
 ...other }) => (
 
-    <div className="Dots__container">
+    <div className="Dots">
         <div
             className={cx(
-                'Dots'
+                'Dots__slide'
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}

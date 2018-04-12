@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import { getSongIsLogue } from '../../helpers/dataHelper'
 import { getFormattedTime } from '../../helpers/formatHelper'
 
@@ -17,11 +19,15 @@ const mapStateToProps = ({
 const audioTimerPropTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
-    selectedTimePlayed: PropTypes.number.isRequired
+    selectedTimePlayed: PropTypes.number.isRequired,
+
+    // From parent.
+    isTitleTimer: PropTypes.bool
 },
 
 AudioTimer = ({
 
+    isTitleTimer,
     selectedSongIndex,
     selectedTimePlayed
 
@@ -41,16 +47,19 @@ AudioTimer = ({
     }
 
     return (
-        <div className="AudioBanner-time">
+        <div className={cx(
+            'AudioTimer',
+            { 'AudioTimer__titleTimer': isTitleTimer }
+        )}>
 
             {displayBase && (
-                <span className="base">
+                <span className="AudioTimer__base">
                     {displayBase}
                 </span>
             )}
 
             {displayJiffy && (
-                <span className="jiffy">
+                <span className="AudioTimer__jiffy">
                     {displayJiffy}
                 </span>
             )}

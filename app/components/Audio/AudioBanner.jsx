@@ -46,7 +46,6 @@ AudioBanner = ({
 
     return Boolean(isBelowMenu) === isPhone && (
         <div className={cx(
-            'audio-block',
             'AudioBanner-block',
             { 'Audio__menuChild': isAudioChild }
         )}>
@@ -54,7 +53,8 @@ AudioBanner = ({
             <div className={cx(
                 'AudioBanner',
                 'audio-display-block',
-                'absoluteFullContainer'
+                'absoluteFullContainer',
+                'flexAlignContainer'
             )}>
                 <div className="AudioBanner-title">
                     {songTitle}

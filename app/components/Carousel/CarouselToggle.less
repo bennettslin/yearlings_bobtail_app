@@ -1,6 +1,5 @@
 .CarouselToggle {
     position: absolute;
-    width: @width__overviewToggle__laptop;
     left: 0;
     bottom: 0;
     background-color: #edf;
@@ -17,6 +16,12 @@
                 border-radius @animationDuration__default,
                 box-shadow @animationDuration__default;
 
+    // Widths for all other devices are set by "width__dotsOverview" class.
+    ._desktop_
+    & {
+        width: @width__overviewToggle__laptop;
+    }
+
     ._desktop_._carouselExpanded_
     & {
         bottom: @margin__scrollbar;
@@ -28,16 +33,6 @@
         top: 0;
         bottom: auto;
         border-radius: 0 0 @borderRadius__nav 0;
-    }
-
-    ._tablet_
-    & {
-        width: @width__overviewToggle__tablet;
-    }
-
-    ._mini_
-    & {
-        width: @width__overviewToggle__mini;
     }
 
     ._carouselNavUnshowable_

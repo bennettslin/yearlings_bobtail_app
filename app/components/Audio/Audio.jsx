@@ -35,7 +35,8 @@ Audio = ({
     return (
         <div
             className={cx(
-                'Audio'
+                'Audio',
+                'flexAlignContainer'
             )}
         >
             {isTitleInAudio && (

@@ -26,6 +26,7 @@ DotsOverview = ({
 }) => (
     <div className={cx(
         'DotsOverview',
+        'width__dotsOverview',
         className
     )}>
         <OverviewToggle

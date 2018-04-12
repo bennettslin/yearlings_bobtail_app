@@ -1,28 +1,29 @@
-@jiffy-multiplier: 0.66;
+@multiplier__audioTimer__jiffy: 0.66;
+@fontSize__audioTimer: 0.95em;
+@fontSize__audioTimer__titleTimer: 1.6em;
 
-.AudioBanner-time {
-    @AudioBanner-time-font-size: 0.95em;
+.AudioTimer__titleTimer {
+    background-color: yellow;
+}
 
-    .base {
-        font-size: @AudioBanner-time-font-size;
-    }
+.AudioTimer__base {
+    font-size: @fontSize__audioTimer;
 
-    .jiffy {
-        font-size: @AudioBanner-time-font-size * @jiffy-multiplier;
-    }
-
-    .MenuTopRow__titleTimer
+    AudioTimer__titleTimer
     & {
-        @AudioTimer-block-font-size: 1.6em;
+        font-size: @fontSize__audioTimer__titleTimer;
+    }
+}
 
-        background-color: yellow;
-        
-        .base {
-            font-size: @AudioTimer-block-font-size;
-        }
-        
-        .jiffy {
-            font-size: @AudioTimer-block-font-size * @jiffy-multiplier;
-        }
+.AudioTimer__jiffy {
+    font-size:
+        @fontSize__audioTimer
+        * @multiplier__audioTimer__jiffy;
+
+    AudioTimer__titleTimer
+    & {
+        font-size:
+            @fontSize__audioTimer__titleTimer
+            * @multiplier__audioTimer__jiffy;
     }
 }

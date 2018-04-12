@@ -1,17 +1,12 @@
-@padding__dotsToggle: 24px;
+// @padding__dotsToggle: 24px;
 
 .DotsToggle {
-    width: 100%;
-    display: flex;
-    align-items: center;
+    // padding: @padding__dotsToggle 0;
 
-    padding: @padding__dotsToggle 0 @padding__dotsToggle @margin__thin;
-    
     // Ensure toggle button is above its popup container and the carousel.
     z-index: @zIndex__centreFieldChild;
-    
+
     transition: margin @animationDuration__default;
-    margin-left: 0;
 
     ._overviewShown_
     & {

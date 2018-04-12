@@ -74,7 +74,7 @@ class Button extends Component {
                       'small': isSmall,
                       'custom-shape': isCustomShape,
                       'custom-size': isCustomSize,
-                      'enabled': isEnabled,
+                      'Button__enabled': isEnabled,
                       'selected': isSelected,
                       'accessHighlighted': accessHighlighted,
                       'accessKeysShown': accessKeysShown,
