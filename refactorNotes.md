@@ -19,6 +19,8 @@ Rename DotsOverview
 Distinguish DotSlider and Dots
 Distinguish AudioSlider
 
+Fix and simplify scrolling.
+
 ### Remaining
 
 Access
@@ -44,6 +46,12 @@ Overview (Waiting on overview in phone and heightless.)
 Players
 Popup (Waiting on popup rework to finalise.)
 Popups
+    AnnotationPopup
+    OverviewPopup
+    ScorePopup
+    TipsPopup
+    TitlePopup
+    WikiPopup
 Score (/)
 Slider
 Stage

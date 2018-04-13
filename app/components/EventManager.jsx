@@ -9,6 +9,7 @@ import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from '../helpers/dotHelper'
+import { getIsValidScrollingTargetCallback } from '../helpers/generalHelper'
 import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsiveHelper'
 
 const ANNOTATION_SCROLL = 'annotation',
@@ -885,30 +886,27 @@ class EventManager extends Component {
 
             isCarousel = className === CAROUSEL_ANNOTATION_SCROLL,
             scrollParentClass = isCarousel ?
-                CAROUSEL_SCROLL : LYRICS_SCROLL,
+                CAROUSEL_SCROLL : LYRICS_SCROLL
 
-            // Don't scroll any immovable parent containers.
-            validTarget = (parent) => {
-                const isValidTarget = parent !== window && (parent.className &&
-                    new RegExp("(\\s|^)" + scrollParentClass + "(\\s|$)").test(parent.className))
-
-                // console.error('parent isValidTarget', parent, isValidTarget);
-                return isValidTarget
-            }
+        console.error(className, index, selector)
 
         if (element) {
-            // console.warn(`Scrolling ${selector} into view.`);
+            console.warn(`Scrolling ${selector} into view.`);
 
             const align = isCarousel ?
                 getCarouselLeftAlign(this.props.deviceIndex, this.props.windowWidth, index) :
-                getCarouselTopAlign(this.props.deviceIndex, this.props.isLyricExpanded)
+                getCarouselTopAlign(this.props.deviceIndex, this.props.isLyricExpanded),
+
+                validTarget = getIsValidScrollingTargetCallback(
+                    scrollParentClass
+                )
 
             scrollIntoView(element, {
                 time,
                 align,
                 validTarget
-            // }, this._scrollElementCallback)
-            })
+            }, this._scrollElementCallback)
+            // })
         }
     }
 

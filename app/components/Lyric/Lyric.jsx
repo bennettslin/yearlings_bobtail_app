@@ -128,13 +128,13 @@ LyricView = ({
             className={cx(
                 'Lyric',
                 'lyrics-scroll',
-                '_lyricCollapsed_-gradient-mask'
+                'Lyric__gradientMask__collapsed'
             )}
             tabIndex="-1"
             onScroll={handleScroll}
         >
             {/* Upon song change, scroll to element with this class name. */}
-            <div className="lyrics-scroll-home" />
+            <div className="lyrics-scroll__home" />
             <div className="lyric-block">
                 {lyricUnitsIndices.map(unitIndex => (
                         <LyricUnit {...other}
