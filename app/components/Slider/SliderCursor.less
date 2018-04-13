@@ -11,21 +11,21 @@
     // NOTE: The order of the following styling rules matters.
     ._isPlaying_
     & {
-        background-color: mix(@audio-play-colour, transparent, 50%);
+        background-color: mix(@colour__audioPlay, transparent, 50%);
     }
 
     ._isPaused_
     & {
-        background-color: mix(@audio-pause-colour, transparent, 50%);
+        background-color: mix(@colour__audioPause, transparent, 50%);
     }
 
     ._verseActive_
     & {
-        background-color: @audio-highlight-colour;
+        background-color: @colour__audioHighlight;
     }
 
     ._sliderMoving_
     & {
-        background-color: @audio-neutral-colour;
+        background-color: @colour__audioNeutral;
     }
 }

@@ -1,3 +1,5 @@
+@dot-border: 1px;
+
 .icon-canvas-block {
 
     width: 100%;
@@ -56,20 +58,20 @@
 
 .icon-canvas {
     border-radius: 50%;
-    background-color: @button-disabled-colour;
+    background-color: @colour__audioDisabled;
     box-sizing: border-box;
 
     // Don't add colour to dot toggle button that is deselected.
     .dot:not(.Button__dot-stanza):not(.deselected)
     & {
-        &.portal { background-color: @portal-dot-colour; }
-        &.observation { background-color: @observation-dot-colour; }
-        &.backstory { background-color: @backstory-dot-colour; }
-        &.reference { background-color: @reference-dot-colour; }
-        &.pun { background-color: @pun-dot-colour; }
-        &.narrative { background-color: @narrative-dot-colour; }
-        &.songwriting { background-color: @songwriting-dot-colour; }
-        &.afterword { background-color: @afterword-dot-colour; }
+        &.portal { background-color: @colour__dot__portal; }
+        &.observation { background-color: @colour__dot__observation; }
+        &.backstory { background-color: @colour__dot__backstory; }
+        &.reference { background-color: @colour__dot__reference; }
+        &.pun { background-color: @colour__dot__pun; }
+        &.narrative { background-color: @colour__dot__narrative; }
+        &.songwriting { background-color: @colour__dot__songwriting; }
+        &.afterword { background-color: @colour__dot__afterword; }
     }
 
     .Button__carouselSelect

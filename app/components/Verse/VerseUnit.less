@@ -25,14 +25,14 @@
     }
 
     &.title {
-        .text-shadow-mixin(@odd-verse-colour);
+        .text-shadow-mixin(@colour__verse__odd);
     }
 
     ._sliderNotMoving_
     & {
         // Default odd verse.
         &.odd {
-            .text-shadow-mixin(@odd-verse-colour);
+            .text-shadow-mixin(@colour__verse__odd);
 
             .TextSpan {
                 color: #644;
@@ -41,7 +41,7 @@
 
         // Default even verse.
         &.even {
-            .text-shadow-mixin(@even-verse-colour);
+            .text-shadow-mixin(@colour__verse__even);
 
             .TextSpan {
                 color: #533;
@@ -50,7 +50,7 @@
 
         // Default side verse.
         &.in-side {
-            .text-shadow-mixin(@odd-verse-colour);
+            .text-shadow-mixin(@colour__verse__odd);
 
             .TextSpan {
                 color: #644;
@@ -71,7 +71,7 @@
 
         // Slider selected verse.
         &.on-slider {
-            .text-shadow-mixin(@audio-neutral-colour);
+            .text-shadow-mixin(@colour__audioNeutral);
         }
 
         // Before slider.
@@ -123,24 +123,24 @@
     &._isPlaying_ {
         &._verseBarHidden_ {
             .verse.selected {
-                .text-shadow-mixin(@audio-play-colour);
+                .text-shadow-mixin(@colour__audioPlay);
             }
         }
 
         .VerseBar {
-            background-color: @audio-play-colour;
+            background-color: @colour__audioPlay;
         }
     }
 
     &._isPaused_ {
         &._verseBarHidden_ {
             .verse.selected {
-                .text-shadow-mixin(@audio-pause-colour);
+                .text-shadow-mixin(@colour__audioPause);
             }
         }
 
         .VerseBar {
-            background-color: @audio-pause-colour;
+            background-color: @colour__audioPause;
         }
     }
 
@@ -150,6 +150,6 @@
      */
     &._verseInactive_ .Lyric .verse.interactable:not(.selected):hover,
     &._verseActive_ .Lyric .verse.interactivated {
-        .text-shadow-mixin(@audio-highlight-colour);
+        .text-shadow-mixin(@colour__audioHighlight);
     }
 }

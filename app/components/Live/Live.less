@@ -6,6 +6,33 @@
 @import "./Menu.less";
 @import "./Main/Main.less";
 
+.DomManager {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    min-height: 100vh;
+    font-family: PTSansNarrow, Arial;
+    font-size: 1.1em;
+
+    // Not sure why autoprefixer isn't working in this case.
+    -moz-user-select: none;
+    user-select: none;
+
+    background-color: #888;
+}
+
+.TouchOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    // This prevents popup interaction when the slider is touched.
+    ._sliderTouched_
+    & {
+        z-index: @zIndex__touchOverlay;
+    }
+}
+
 .Live {
     position: relative;
     width: 100%;

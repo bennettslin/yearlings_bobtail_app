@@ -2,10 +2,9 @@
 
 @import "./constants/boxShadow";
 @import "./constants/colours";
-@import "./constants/dots";
-@import "./constants/popups";
 @import "./constants/text";
 @import "./constants/zIndices";
+
 @import "./utilities/constants";
 @import "./utilities/animations";
 @import "./utilities/dotKeyAnimations";
@@ -35,18 +34,3 @@
 @import "../components/Icon/icon.less";
 
 @import "./utilities/access";
-
-.DomManager {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    min-height: 100vh;
-    font-family: PTSansNarrow, Arial;
-    font-size: 1.1em;
-
-    // Not sure why autoprefixer isn't working in this case.
-    -moz-user-select: none;
-    user-select: none;
-
-    background-color: #888;
-}

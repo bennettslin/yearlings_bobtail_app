@@ -1,3 +1,9 @@
+@dot-toggle-container-diameter: 64px;
+@dot-toggle-container-padding: @dot-toggle-container-diameter / 6;
+
+@dot-toggle-container-phone-diameter: @length__iconLarge * 0.95;
+@dot-toggle-container-phone-padding: @length__iconLarge / 7;
+
 .DotsToggle-block {
     flex-direction: column;
 
@@ -42,7 +48,7 @@
     .dot {
         &.deselected {
             .icon-canvas {
-                background-color: @deselected-dot-colour;
+                background-color: @colour__dot__deselected;
             }
         }
     }

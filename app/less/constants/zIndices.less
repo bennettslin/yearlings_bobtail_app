@@ -51,15 +51,3 @@
 
 // The overlay preventing popup interaction should be the highest.
 @zIndex__touchOverlay: @zIndex__menuField + 1;
-
-.TouchOverlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-
-    // This prevents popup interaction when the slider is touched.
-    ._sliderTouched_
-    & {
-        z-index: @zIndex__touchOverlay;
-    }
-}

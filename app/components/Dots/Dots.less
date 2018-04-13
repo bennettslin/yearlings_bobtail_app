@@ -1,5 +1,8 @@
 @import "./DotsToggle.less";
 
+@margin__dotsContainer: 16px;
+@margin__dotsContainer__phone: 8px;
+
 .Dots {
     position: absolute;
     top: 0;
@@ -17,7 +20,7 @@
     transform: translateX(-100%);
 
     box-shadow: @boxShadow__dotsContainer;
-    background-color: @odd-verse-colour;
+    background-color: @colour__verse__odd;
 
     ._song_._dotsShown_
     & {
@@ -45,5 +48,5 @@
     padding: 10px;
 
     // TODO: Maybe consolidate all the text shadows that use this colour.
-    .text-shadow-mixin(@odd-verse-colour);
+    .text-shadow-mixin(@colour__verse__odd);
 }
