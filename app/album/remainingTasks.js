@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Menu and lyric access row prevent hovering.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Refocus on lyric strategically.`,
         workedHours: 0,
         neededHours: 2
