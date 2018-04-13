@@ -1,6 +1,7 @@
+@height__audioBanner__display:
+    (@js__height__menu - @paddingY__audio * 2) / 2;
+
 .AudioBanner {
-    // height: 100%;
-    // position: relative;
     margin-right: @js__padding__audio;
     min-width: @minWidth__audioBanner;
     line-height: 1em;
@@ -29,7 +30,7 @@
     box-sizing: border-box;
     padding: 0 5px;
 
-    height: @AudioBanner-height;
+    height: @height__audioBanner__display;
     justify-content: space-between;
 
     background-color: #8b8;

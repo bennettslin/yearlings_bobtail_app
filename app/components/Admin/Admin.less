@@ -3,6 +3,11 @@
 @import "./tasks";
 @import "./drawings";
 
+@boxShadow__admin: 0 2px 2px 2px @colour__boxShadow;
+@boxShadow__adminActor: @boxShadow__admin;
+@boxShadow__adminCharacter: inset 0 2px 5px @colour__boxShadow;
+@boxShadow__adminProgress: 0 1px 1px 1px @colour__boxShadow;
+
 @section-colour: rgba(255, 255, 255, 0.5);
 
 @field-padding: 15px;
@@ -66,7 +71,7 @@
     padding: @field-padding;
     margin: @field-padding 0;
     background-color: @section-colour;
-    box-shadow: @admin-box-shadow;
+    box-shadow: @boxShadow__admin;
 }
 
 .admin-toggle {
