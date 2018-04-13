@@ -882,23 +882,12 @@ class EventManager extends Component {
     }
 
     _scrollElementIntoView(scrollClass, index, time = 350) {
-        console.error(scrollClass)
-
-        // TODO: Remove this check once this work has been completed.
-        if (!scrollClass || !SCROLL_CLASSES[scrollClass]) {
-            return
-        }
 
         const { childClass,
                 parentClass } = SCROLL_CLASSES[scrollClass],
-
             selector = isNaN(index) ? childClass : `${childClass}__${index}`,
-
             element = document.getElementsByClassName(selector)[0],
-
             isCarousel = scrollClass === CAROUSEL_SCROLL
-
-        console.error(parentClass, selector)
 
         if (element) {
             console.warn(`Scrolling ${selector} into view.`);
