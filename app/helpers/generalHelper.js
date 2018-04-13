@@ -1,4 +1,4 @@
-// Basic helpers that only know DOM elements and JavaScript objects.
+// Basic helpers that only know math and pure JavaScript.
 
 const getPower = (base, exponent) => {
     if (exponent === 0) {
@@ -40,36 +40,6 @@ export const getArrayOfIncreasingSums = (base, exponent, constant) => {
 
 export const roundPercentage = (rawPercentage) => {
     return Math.round(rawPercentage * 100) / 100
-}
-
-export const getIsValidScrollingTargetCallback = (scrollParentClass) => {
-
-    // Don't scroll any immovable parent containers.
-    return (parent) => {
-        const { className } = parent,
-            isValidTarget =
-                parent !== window
-                && (
-                    className
-                    && new RegExp(
-                            "(\\s|^)" + scrollParentClass + "(\\s|$)"
-                        ).test(className)
-                )
-
-        console.error('parent isValidTarget', parent, isValidTarget);
-        return isValidTarget
-    }
-}
-
-export const hasParentWithTagName = (child, parentTagName = '') => {
-    let node = child
-    while (node !== null) {
-        if (node.tagName && node.tagName.toLowerCase() === parentTagName) {
-            return true
-        }
-        node = node.parentNode
-    }
-    return false
 }
 
 export const getComponentShouldUpdate = ({

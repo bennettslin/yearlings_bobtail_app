@@ -9,11 +9,11 @@ import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
 import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from '../helpers/dotHelper'
-import { getIsValidScrollingTargetCallback } from '../helpers/generalHelper'
+import { getIsValidScrollingTargetCallback } from '../helpers/domHelper'
 import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsiveHelper'
 
 const ANNOTATION_SCROLL = 'annotation',
-    CAROUSEL_SCROLL = 'Carousel__scrollParent',
+    CAROUSEL_SCROLL_PARENT = 'Carousel__scrollParent',
     CAROUSEL_ANNOTATION_SCROLL = 'CarouselAnnotation__scrollChild',
     LYRICS_SCROLL = 'lyrics-scroll',
     VERSE_SCROLL = 'verse'
@@ -880,15 +880,17 @@ class EventManager extends Component {
         }
     }
 
-    _scrollElementIntoView(className, index, time = 350) {
-        const selector = `${className}__${index}`,
+    _scrollElementIntoView(scrollChildClass, index, time = 350) {
+        const selector = `${scrollChildClass}__${index}`,
             element = document.getElementsByClassName(selector)[0],
 
-            isCarousel = className === CAROUSEL_ANNOTATION_SCROLL,
-            scrollParentClass = isCarousel ?
-                CAROUSEL_SCROLL : LYRICS_SCROLL
+            isCarousel =
+                scrollChildClass === CAROUSEL_ANNOTATION_SCROLL,
 
-        console.error(className, index, selector)
+            scrollParentClass = isCarousel ?
+                CAROUSEL_SCROLL_PARENT : LYRICS_SCROLL
+
+        console.error(scrollParentClass, selector)
 
         if (element) {
             console.warn(`Scrolling ${selector} into view.`);
