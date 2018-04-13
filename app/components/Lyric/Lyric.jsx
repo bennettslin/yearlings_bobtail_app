@@ -127,15 +127,19 @@ LyricView = ({
             ref={lyricRef}
             className={cx(
                 'Lyric',
-                'lyrics-scroll',
+                'LyricAnnotation__scrollParent',
+                'Verse__scrollParent',
                 'Lyric__gradientMask__collapsed'
             )}
             tabIndex="-1"
             onScroll={handleScroll}
         >
-            {/* Upon song change, scroll to element with this class name. */}
-            <div className="lyrics-scroll__home" />
-            <div className="lyric-block">
+            {/* Upon song change, scroll to this heightless element. */}
+            <div className="Verse__scrollChild" />
+
+            <div className={cx(
+                'lyric-block'
+            )}>
                 {lyricUnitsIndices.map(unitIndex => (
                         <LyricUnit {...other}
                             key={unitIndex}

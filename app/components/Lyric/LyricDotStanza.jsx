@@ -101,7 +101,7 @@ LyricDotStanzaView = ({
             'dot-stanza-anchor-block',
 
             // Scroll to dot stanza block upon annotation selection.
-            annotationIndex && `annotation-${annotationIndex}`
+            annotationIndex && `LyricAnnotation__scrollChild__${annotationIndex}`
         )}>
             <DotAnchor {...other}
                 dotKeys={dotKeys}

@@ -227,7 +227,7 @@ VerseUnitView = ({
             ref={myRef}
             className={cx(
                 'verse',
-                isInteractable && 'verse-' + verseIndex,
+                isInteractable && 'Verse__scrollChild__' + verseIndex,
                 verseUnitClassName,
                 sliderStatusClassName,
                 { 'selected': isSelected,

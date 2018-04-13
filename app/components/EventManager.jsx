@@ -15,14 +15,9 @@ import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
 
 import { CAROUSEL_SCROLL,
-        //  LYRIC_SCROLL,
+         LYRIC_ANNOTATION_SCROLL,
+         VERSE_SCROLL,
          SCROLL_CLASSES } from '../constants/dom'
-
-const ANNOTATION_SCROLL = 'annotation',
-    // CAROUSEL_SCROLL_PARENT = 'Carousel__scrollParent',
-    // CAROUSEL_SCROLL = 'CarouselAnnotation__scrollChild',
-    LYRICS_SCROLL = 'lyrics-scroll',
-    VERSE_SCROLL = 'verse'
 
 class EventManager extends Component {
 
@@ -122,7 +117,7 @@ class EventManager extends Component {
     }) {
         const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
         if (annotationAccessed && doScroll) {
-            this._scrollElementIntoView(ANNOTATION_SCROLL, accessedAnnotationIndex)
+            this._scrollElementIntoView(LYRIC_ANNOTATION_SCROLL, accessedAnnotationIndex)
 
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView(CAROUSEL_SCROLL, accessedAnnotationIndex)
@@ -232,7 +227,7 @@ class EventManager extends Component {
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction
         })
-        this._scrollElementIntoView(ANNOTATION_SCROLL, selectedAnnotationIndex)
+        this._scrollElementIntoView(LYRIC_ANNOTATION_SCROLL, selectedAnnotationIndex)
         if (this.props.selectedCarouselNavIndex) {
             this._scrollElementIntoView(CAROUSEL_SCROLL, selectedAnnotationIndex)
         }
@@ -448,7 +443,7 @@ class EventManager extends Component {
 
         // Scroll lyric column only if selecting from carousel.
         if (fromCarousel) {
-            this._scrollElementIntoView(ANNOTATION_SCROLL, selectedAnnotationIndex)
+            this._scrollElementIntoView(LYRIC_ANNOTATION_SCROLL, selectedAnnotationIndex)
 
         // Scroll carousel only if not selecting from carousel.
         } else {
@@ -872,14 +867,14 @@ class EventManager extends Component {
 
         // If a portal was selected, there will be an annotation index.
         if (annotationIndex) {
-            this._scrollElementIntoView(ANNOTATION_SCROLL, annotationIndex)
+            this._scrollElementIntoView(LYRIC_ANNOTATION_SCROLL, annotationIndex)
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView(CAROUSEL_SCROLL, annotationIndex)
             }
 
             // Otherwise, scroll to top.
         } else {
-            this._scrollElementIntoView(LYRICS_SCROLL, 'home')
+            this._scrollElementIntoView(VERSE_SCROLL)
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView(CAROUSEL_SCROLL, 0)
             }
@@ -897,7 +892,8 @@ class EventManager extends Component {
         const { childClass,
                 parentClass } = SCROLL_CLASSES[scrollClass],
 
-            selector = `${childClass}__${index}`,
+            selector = isNaN(index) ? childClass : `${childClass}__${index}`,
+
             element = document.getElementsByClassName(selector)[0],
 
             isCarousel = scrollClass === CAROUSEL_SCROLL

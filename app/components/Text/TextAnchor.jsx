@@ -105,7 +105,7 @@ class TextAnchor extends Component {
                          * is any other anchor found in that same verse.
                          */
                         !isPortalAnchor && !inPortal && annotationDotKeys,
-                        !inPortal && annotationIndex && `annotation-${annotationIndex}`,
+                        !inPortal && annotationIndex && `LyricAnnotation__scrollChild__${annotationIndex}`,
                         wikiIndex && `wiki-${wikiIndex}`,
                         { 'selected': isSelected,
                           'accessHighlighted': accessHighlighted && !isSelected,
