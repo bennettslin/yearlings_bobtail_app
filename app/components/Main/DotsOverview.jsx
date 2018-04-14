@@ -4,9 +4,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotsToggle from '../../Dots/DotsToggle'
-import OverviewToggle from '../../Overview/OverviewToggle'
-import ScoresTips from '../ScoresTips'
+import DotsToggle from './DotsToggle'
+import OverviewToggle from './OverviewToggle'
+import ScoresTips from '../ScoresTips/ScoresTips'
 
 const dotsOverviewPropTypes = {
     // From parent.

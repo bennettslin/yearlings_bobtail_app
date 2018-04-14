@@ -10,7 +10,7 @@ import cx from 'classnames'
 
 import TitleToggle from '../Title/TitleToggle'
 import Audio from '../Audio/Audio'
-import ScoresTips from './ScoresTips'
+import ScoresTips from '../ScoresTips/ScoresTips'
 import AudioBanner from '../Audio/AudioBanner'
 import AudioTimer from '../Audio/AudioTimer'
 

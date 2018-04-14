@@ -7,7 +7,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import Theatre from '../Theatre/Theatre'
-import Main from './Main/Main'
+import Main from '../Main/Main'
 import Menu from './Menu'
 import PopupOverlaid from './PopupOverlaid'
 

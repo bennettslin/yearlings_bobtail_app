@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import TextBlock from '../Text/TextBlock'
-import OverviewToggle from './OverviewToggle'
+import OverviewToggle from '../Main/OverviewToggle'
 import { getSongOverview, getSongIsLogue } from '../../helpers/dataHelper'
 import { getIsToggleInOverview } from '../../helpers/responsiveHelper'
 import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'

@@ -14,12 +14,9 @@ Class names optimised for clarity
 
 Consolidate styles for child with parent selector nesting
 
-Toggles live with their sections
 Rename DotsOverview
 Distinguish DotSlider and Dots
 Distinguish AudioSlider
-
-Fix and simplify scrolling.
 
 ### Remaining
 
@@ -34,13 +31,15 @@ Dots
 DynamicSvg
 Icon
 Live
-    DotsOverview (do with overviewToggle, dotsToggle, and scoresTips)
-    Main (/)
+    Main
     Menu (/)
     OverviewLogue
     PopupOverlaid
-    ScoresTips
 Lyric (Remember lyric scroll.)
+Main
+    DotsOverview (do with overviewToggle, dotsToggle, and scoresTips)
+    DotsToggle
+    OverviewToggle
 Nav (Need to consider last title margin, panels, and consolidate responsive)
 Overview (Waiting on overview in phone and heightless.)
 Players
@@ -53,6 +52,7 @@ Popups
     TitlePopup
     WikiPopup
 Score (/)
+ScoresTips
 Slider
 Stage (Just rename some children)
 Text
