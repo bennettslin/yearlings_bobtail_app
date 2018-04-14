@@ -119,14 +119,12 @@ LyricStanzaView = ({
 
 ...other }) => {
 
-    const typeClassName = stanzaType && `stanza-type-${stanzaType}`
-
     return (
         <div className="stanza-container">
             {showStanzaTypeAndIndex &&
                 <div className={cx(
                     'stanza-tab',
-                    typeClassName
+                    `bgColour__stanza__${stanzaType}`
                 )}>
                     {stanzaType}{stanzaIndex !== -1 ? ` ${stanzaIndex}` : ''}
                 </div>
@@ -134,7 +132,7 @@ LyricStanzaView = ({
 
             <div className={cx(
                 'stanza',
-                typeClassName
+                `bgColour__stanza__${stanzaType}`
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
                     const { stanzaMap,

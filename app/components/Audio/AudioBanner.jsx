@@ -49,15 +49,17 @@ AudioBanner = ({
             'AudioBanner',
             { 'Audio__menuChild': isAudioChild }
         )}>
-            <Slider {...other} />
-            <div className={cx(
-                'AudioBanner__display',
-                'absoluteFullContainer',
-                'flexAlignContainer'
-            )}>
-                {songTitle}
-                <AudioTimer />
-            </div>
+            <Slider {...other}>
+                <div className={cx(
+                    'AudioBanner__display',
+                    'gradientMask__audioBanner',
+                    'absoluteFullContainer',
+                    'flexAlignContainer'
+                )}>
+                    {songTitle}
+                    <AudioTimer />
+                </div>
+            </Slider>
         </div>
     )
 }

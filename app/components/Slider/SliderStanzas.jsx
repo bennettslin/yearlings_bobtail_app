@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import { getMaxStanzaTimesCount,
          getStanzaTimeObject,
          getSongTotalTime } from '../../helpers/dataHelper'
@@ -38,7 +40,7 @@ const SliderStanzas = ({
         })
 
     return (
-        <div className="SliderStanzas-block">
+        <div className="SliderStanzas">
             {stanzaTimesIndices.map((nothing, stanzaTimeIndex) => {
 
                 const stanzaTimeObject = getStanzaTimeObject(selectedSongIndex, stanzaTimeIndex),
@@ -50,7 +52,11 @@ const SliderStanzas = ({
                 return (
                     <div
                         key={stanzaTimeIndex}
-                        className={`slider-bar stanza-slider-bar stanza-type-${stanzaTimeObject.type}`}
+                        className={cx(
+                            'SliderStanzaBar',
+                            'Slider__dynamicBar',
+                            `bgColour__stanza__${stanzaTimeObject.type}`
+                        )}
                         style={stanzaStyle}
                     />
                 )

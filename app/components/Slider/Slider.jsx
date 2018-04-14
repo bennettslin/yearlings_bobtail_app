@@ -52,17 +52,19 @@ class Slider extends Component {
 const sliderViewPropTypes = {
 
     // From parent.
+    children: PropTypes.element,
     handleTouchDown: PropTypes.func.isRequired
 },
 
 SliderSectionView = ({
 
+    children,
     handleTouchDown
 
 }) => (
     <div
         className={cx(
-            'slider-block'
+            'Slider'
         )}
     >
         <SliderStanzas />
@@ -70,14 +72,14 @@ SliderSectionView = ({
         <SliderScenes />
         <SliderTimeBars />
         <SliderCursor />
-
         <SliderAccess />
+        {children}
 
         {/* Handle touch interactions. */}
         <div
             className={cx(
-                'slider-bar',
-                'slider-touch-bar'
+                'SliderTouchBar',
+                'absoluteFullContainer'
             )}
             onMouseDown={handleTouchDown}
             onTouchStart={handleTouchDown}

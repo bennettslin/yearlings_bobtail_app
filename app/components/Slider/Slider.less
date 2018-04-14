@@ -4,25 +4,25 @@
 @import "./SliderTimeBars.less";
 @import "./SliderVerses.less";
 
-.slider-block {
+.Slider {
     height: 100%;
 }
 
-.verse-slider-bar {
-    transition: box-shadow @animationDuration__default, background-color @animationDuration__default;
-
-    &.hovered {
-        transition: box-shadow 0.1s, background-color 0.1s;
-        background-color: @colour__audioHighlight;
-        box-shadow: @hovered-slider-box-shadow;
-    }
-}
-
-.slider-touch-bar {
-    width: 100%;
+.SliderTouchBar {
 
     .RM__song
     & {
         cursor: pointer;
     }
+}
+
+.Slider__dynamicBar {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+
+    transition:
+        width @animationDuration__default,
+        background-color @animationDuration__default;
 }

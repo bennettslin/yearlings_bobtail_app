@@ -59,7 +59,7 @@ SliderTimeBars = ({
 
             <div
                 className={cx(
-                    'slider-bar',
+                    'absoluteFullContainer',
                     'time-bar',
                     'time-remain-bar'
                 )}
@@ -76,7 +76,7 @@ SliderTimeBars = ({
 
             <div
                 className={cx(
-                    'slider-bar',
+                    'absoluteFullContainer',
                     'time-bar',
                     'time-spent-bar'
                 )}

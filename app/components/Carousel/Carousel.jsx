@@ -103,7 +103,7 @@ class Carousel extends Component {
             <div
                 className={cx(
                     'Carousel',
-                    'Carousel__gradientMask__desktop',
+                    'gradientMask__carousel__desktop',
                     isHeavyRenderReady ? 'renderReady' : 'renderUnready',
                     { 'overrideAnimate': shouldOverrideAnimate }
                 )}

@@ -34,25 +34,26 @@ const SliderAccess = ({
     const isLogue = getSongIsLogue(selectedSongIndex),
         isVerseInteractivated = interactivatedVerseIndex >= 0
 
-    return (
-        <div>
-            <AccessIconsBlock
-                className="rewind-forward"
-                accessIconKeys={[
-                    AUDIO_REWIND_KEY,
-                    AUDIO_FAST_FORWARD_KEY
-                ]}
-                accessKeysShown={!isLogue}
-            />
-            <AccessIconsBlock
-                className="enter"
-                accessIconKeys={[
-                    NAVIGATION_ENTER_KEY
-                ]}
-                accessKeysShown={!isLogue && isVerseInteractivated}
-            />
-        </div>
-    )
+    return [(
+        <AccessIconsBlock
+            key="rewindForward"
+            className="rewind-forward"
+            accessIconKeys={[
+                AUDIO_REWIND_KEY,
+                AUDIO_FAST_FORWARD_KEY
+            ]}
+            accessKeysShown={!isLogue}
+        />
+    ), (
+        <AccessIconsBlock
+            key="enter"
+            className="enter"
+            accessIconKeys={[
+                NAVIGATION_ENTER_KEY
+            ]}
+            accessKeysShown={!isLogue && isVerseInteractivated}
+        />
+    )]
 }
 
 SliderAccess.propTypes = sliderAccessPropTypes

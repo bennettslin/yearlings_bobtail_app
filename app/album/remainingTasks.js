@@ -1,12 +1,6 @@
 module.exports = [
 
     {
-        taskName: `Lyric toggle buttons should be above mobile gradient.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Be smarter about switching gradients, scrolling over main, and carousel height.`,
         workedHours: 0,
         neededHours: 2
@@ -82,12 +76,6 @@ module.exports = [
 
     {
         taskName: `Selecting last carousel annotation in Odin, and then toggling lyric column, makes carousel needlessly scroll.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Deal with ugliness when forced scrollbar is set.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -243,5 +231,10 @@ module.exports = [
     //     taskName: `Hover over stage shows buttons to switch scenes.`,
     //     workedHours: 0,
     //     neededHours: 3
+    // },
+    // {
+    //     taskName: `Deal with ugliness when forced scrollbar is set.`,
+    //     workedHours: 0,
+    //     neededHours: 2
     // },
 ]

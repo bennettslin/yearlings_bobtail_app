@@ -28,7 +28,7 @@ SliderVerses = ({
         totalTime = getSongTotalTime(selectedSongIndex)
 
     return (
-        <div className="SliderVerses-block">
+        <div className="SliderVerses">
             {verseTimes.map((verseTime, verseIndex) => {
 
                 // Don't show title verse.
@@ -36,19 +36,24 @@ SliderVerses = ({
                     return null
                 }
 
-                const verseWidth = (totalTime - verseTime) / totalTime * 100,
+                const verseWidth =
+                        (totalTime - verseTime) / totalTime * 100,
+
                     verseStyle = {
                         width: `${verseWidth}%`
                     },
-                    isEven = verseIndex % 2 === 0
+
+                    isOdd = verseIndex % 2
 
                 return (
                     <div
                         key={verseIndex}
                         className={cx(
-                            'slider-bar',
-                            'verse-slider-bar',
-                            isEven ? 'even' : 'odd'
+                            'SliderVerseBar',
+                            'Slider__dynamicBar',
+                            isOdd ?
+                                'SliderVerseBar__odd' :
+                                'SliderVerseBar__even'
                         )}
                         style={verseStyle}
                     />

@@ -131,7 +131,7 @@ LyricView = ({
                 'Verse__scrollParent',
 
                 // This gradient does not obscure the lyric toggle buttons.
-                'LyricColumn__gradientMask__mobileCollapsed'
+                'gradientMask__lyricColumn__mobileCollapsed'
             )}
             tabIndex="-1"
             onScroll={handleScroll}

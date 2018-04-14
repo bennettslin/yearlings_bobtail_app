@@ -44,7 +44,9 @@ SliderCursor = ({
     }
 
     const { beginTime,
-            endTime } = getVerseBeginAndEndTimes(selectedSongIndex, cursorVerseIndex),
+            endTime } = getVerseBeginAndEndTimes(
+                selectedSongIndex, cursorVerseIndex
+            ),
 
         totalTime = getSongTotalTime(selectedSongIndex),
 
@@ -55,7 +57,7 @@ SliderCursor = ({
 
     return (
         <div
-            className="audio-cursor"
+            className="SliderCursor"
             style={cursorStyle}
         />
     )

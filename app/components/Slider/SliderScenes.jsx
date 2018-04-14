@@ -29,22 +29,24 @@ SliderScenes = ({
         sceneTimesArray = getSceneTimesArray(selectedSongIndex)
 
     return (
-        <div className="SliderScenes-block">
+        <div className="SliderScenes">
             {sceneTimesArray && sceneTimesArray.map((sceneTime, sceneTimeIndex) => {
 
                 const sceneWidth = (totalTime - sceneTime) / totalTime * 100,
                     sceneStyle = {
                         width: `${sceneWidth}%`
                     },
-                    isEven = sceneTimeIndex % 2 === 0
+                    isOdd = sceneTimeIndex % 2
 
                 return (
                     <div
                         key={sceneTimeIndex}
                         className={cx(
-                            'slider-bar',
-                            'scene-slider-bar',
-                            isEven ? 'even' : 'odd'
+                            'SliderSceneBar',
+                            'Slider__dynamicBar',
+                            isOdd ?
+                                'SliderSceneBar__even' :
+                                'SliderSceneBar__odd'
                         )}
                         style={sceneStyle}
                     />
