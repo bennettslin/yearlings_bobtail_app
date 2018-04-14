@@ -207,7 +207,6 @@ LyricColumnView = ({
             className={cx(
                 'LyricColumn',
                 'position__lyricColumn',
-                'LyricColumn__gradientMask__mobileCollapsed',
                 'LyricColumn__gradientMask__desktop',
                 isHeavyRenderReady ? 'renderReady' : 'renderUnready'
             )}

@@ -81,29 +81,13 @@
     }
 }
 
-.LyricColumn__gradientMask__mobileCollapsed {
-
-    /** Gradient mask does not work in IE or Edge. */
-    @gradient__lyric__mobileCollapsed: linear-gradient(
-        0deg,
-        black,
-        black 90%,
-        transparent
-    );
-    ._mobile_._lyricCollapsed_
-    & {
-        // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: @gradient__lyric__mobileCollapsed;
-        mask-image: @gradient__lyric__mobileCollapsed;
-    }
-}
-
 .LyricColumn__gradientMask__desktop {
 
     @gradient__lyric__desktop: linear-gradient(
         180deg,
         black,
         black 50%,
+        transparent 90%,
         transparent
     );
     ._desktop_._carouselNavShowable_._carouselExpanded_._annotationShown_

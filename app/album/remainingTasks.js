@@ -1,19 +1,19 @@
 module.exports = [
 
     {
-        taskName: `Menu and lyric access row prevent hovering.`,
+        taskName: `Lyric toggle buttons should be above mobile gradient.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Be smarter about switching gradients, scrolling over main, and carousel height.`,
         workedHours: 0,
         neededHours: 2
     },
 
     {
         taskName: `Refocus on lyric strategically.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Can't scroll over hidden verse bar.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -34,6 +34,12 @@ module.exports = [
         taskName: `Hovering over access icons doesn't trigger animation.`,
         workedHours: 0,
         neededHours: 1
+    },
+
+    {
+        taskName: `Lyric access row prevents hovering.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     /**

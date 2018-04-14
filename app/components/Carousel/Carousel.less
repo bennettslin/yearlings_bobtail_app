@@ -24,9 +24,9 @@
     left: 0;
     bottom: -100%;
     width: 100vw;
+    height: 100%;
 
     // Allows the lyric to scroll when carousel has higher z-index.
-    height: 50%;
     z-index: @zIndex__carousel;
 
     transition: bottom @animationDuration__slow,
@@ -60,9 +60,9 @@
 }
 
 .Carousel__scrollParent {
-    height: 100%;
     display: flex;
     overflow-x: scroll;
+    height: 100%;
 
     ._desktop_
     & {
@@ -92,14 +92,12 @@
     &:after {
         padding-right:
             @js__width__goldenCord;
-            // + @width__carouselSelect;
     }
 
     ._laptop_
     &:after {
         padding-right:
             @js__width__uncannyValley;
-            // + @width__carouselSelect;
     }
 
     ._tablet_
