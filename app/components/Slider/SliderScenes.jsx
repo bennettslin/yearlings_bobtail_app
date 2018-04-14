@@ -30,12 +30,16 @@ SliderScenes = ({
 
     return (
         <div className="SliderScenes">
-            {sceneTimesArray && sceneTimesArray.map((sceneTime, sceneTimeIndex) => {
+            {sceneTimesArray &&
+                sceneTimesArray.map((sceneTime, sceneTimeIndex) => {
 
-                const sceneWidth = (totalTime - sceneTime) / totalTime * 100,
+                const sceneWidth =
+                    (totalTime - sceneTime) / totalTime * 100,
+
                     sceneStyle = {
                         width: `${sceneWidth}%`
                     },
+
                     isOdd = sceneTimeIndex % 2
 
                 return (

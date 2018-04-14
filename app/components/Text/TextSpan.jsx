@@ -2,6 +2,8 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import { getFormattedLyricSpanText, getFormattedEndingVerseSpanText } from '../../helpers/formatHelper'
 
 const textSpanDefaultProps = {
@@ -75,9 +77,10 @@ TextSpanView = ({
     hasFirstSpace
 
 }) => (
-    <span
-        className="TextSpan"
-    >
+    <span className={cx(
+        'TextSpan',
+        'textShadow__text'
+    )}>
         {(hasFirstSpace ? ' ' : '') + formattedText}
     </span>
 )

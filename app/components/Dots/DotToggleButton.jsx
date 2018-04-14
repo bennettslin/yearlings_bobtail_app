@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+
 import Button from '../Button/Button'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { DOT_DESCRIPTIONS } from '../../constants/dots'
@@ -152,7 +153,10 @@ DotToggleButtonView = ({
                       'accessHighlighted': accessHighlighted }
                 )}>
                     <span className="underlineBar" />
-                    <span className="TextSpan">{dotKey}</span>
+                    <span className={cx(
+                        'TextSpan',
+                        'textShadow__text'
+                    )}>{dotKey}</span>
                 </span>
             </a>
             <div className={cx(

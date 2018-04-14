@@ -124,6 +124,7 @@ AnnotationCardView = ({
 }) => (
     <div className={cx(
         'AnnotationCard',
+        'textShadow__background',
         cardDotKeys
     )}>
         {!cardDotKeys.portal && (

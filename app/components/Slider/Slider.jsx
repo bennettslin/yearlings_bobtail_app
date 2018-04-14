@@ -4,12 +4,12 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import SliderAccess from './SliderAccess'
-import SliderCursor from './SliderCursor'
 import SliderScenes from './SliderScenes'
 import SliderStanzas from './SliderStanzas'
 import SliderVerses from './SliderVerses'
-import SliderTimeBars from './SliderTimeBars'
+import SliderTimes from './SliderTimes'
+
+import SliderAccess from './SliderAccess'
 
 /*************
  * CONTAINER *
@@ -70,9 +70,10 @@ SliderSectionView = ({
         <SliderStanzas />
         <SliderVerses />
         <SliderScenes />
-        <SliderTimeBars />
-        <SliderCursor />
+        <SliderTimes/>
+
         <SliderAccess />
+
         {children}
 
         {/* Handle touch interactions. */}

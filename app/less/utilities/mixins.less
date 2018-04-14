@@ -8,10 +8,17 @@
     }
 }
 
-.text-shadow-mixin(@colour) {
-    background-color: @colour;
+// Text shadow.
+@textShadow__offset: 1px;
+@textShadow__blur: 0.75px;
 
-    .TextSpan {
+.mixin__textShadow(@colour) {
+
+    &.textShadow__background {
+        background-color: @colour;
+    }
+
+    .textShadow__text {
         text-shadow:
         -@textShadow__offset -@textShadow__offset @textShadow__blur @colour,
         @textShadow__offset -@textShadow__offset @textShadow__blur @colour,

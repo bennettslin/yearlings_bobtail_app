@@ -227,6 +227,7 @@ VerseUnitView = ({
             ref={myRef}
             className={cx(
                 'verse',
+                'textShadow__background',
                 isInteractable && 'Verse__scrollChild__' + verseIndex,
                 verseUnitClassName,
                 sliderStatusClassName,

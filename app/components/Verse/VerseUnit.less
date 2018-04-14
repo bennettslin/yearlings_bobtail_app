@@ -25,14 +25,14 @@
     }
 
     &.title {
-        .text-shadow-mixin(@colour__verse__odd);
+        .mixin__textShadow(@colour__verse__odd);
     }
 
     .RM__sliderNotMoving
     & {
         // Default odd verse.
         &.odd {
-            .text-shadow-mixin(@colour__verse__odd);
+            .mixin__textShadow(@colour__verse__odd);
 
             .TextSpan {
                 color: #644;
@@ -41,7 +41,7 @@
 
         // Default even verse.
         &.even {
-            .text-shadow-mixin(@colour__verse__even);
+            .mixin__textShadow(@colour__verse__even);
 
             .TextSpan {
                 color: #533;
@@ -50,7 +50,7 @@
 
         // Default side verse.
         &.in-side {
-            .text-shadow-mixin(@colour__verse__odd);
+            .mixin__textShadow(@colour__verse__odd);
 
             .TextSpan {
                 color: #644;
@@ -62,7 +62,7 @@
     & {
         // Slider side verse.
         &.in-side {
-            .text-shadow-mixin(@side-slider-colour);
+            .mixin__textShadow(@side-slider-colour);
 
             .TextSpan {
                 color: @side-slider-text-colour;
@@ -71,13 +71,13 @@
 
         // Slider selected verse.
         &.on-slider {
-            .text-shadow-mixin(@colour__audioNeutral);
+            .mixin__textShadow(@colour__audioNeutral);
         }
 
         // Before slider.
         &.before-slider {
             &.odd {
-                .text-shadow-mixin(@odd-before-slider-colour);
+                .mixin__textShadow(@odd-before-slider-colour);
 
                 .TextSpan {
                     color: @odd-before-slider-text-colour;
@@ -85,7 +85,7 @@
             }
 
             &.even {
-                .text-shadow-mixin(@even-before-slider-colour);
+                .mixin__textShadow(@even-before-slider-colour);
 
                 .TextSpan {
                     color: @even-before-slider-text-colour;
@@ -96,7 +96,7 @@
         // After slider.
         &.after-slider {
             &.odd {
-                .text-shadow-mixin(@odd-after-slider-colour);
+                .mixin__textShadow(@odd-after-slider-colour);
 
                 .TextSpan {
                     color: @odd-after-slider-text-colour;
@@ -104,7 +104,7 @@
             }
 
             &.even {
-                .text-shadow-mixin(@even-after-slider-colour);
+                .mixin__textShadow(@even-after-slider-colour);
 
                 .TextSpan {
                     color: @odd-after-slider-text-colour;
@@ -123,7 +123,7 @@
     &.RM__isPlaying {
         &.RM__verseBarHidden {
             .verse.selected {
-                .text-shadow-mixin(@colour__audioPlay);
+                .mixin__textShadow(@colour__audioPlay);
             }
         }
 
@@ -135,7 +135,7 @@
     &.RM__isPaused {
         &.RM__verseBarHidden {
             .verse.selected {
-                .text-shadow-mixin(@colour__audioPause);
+                .mixin__textShadow(@colour__audioPause);
             }
         }
 
@@ -150,6 +150,6 @@
      */
     &.RM__verseInactive .Lyric .verse.interactable:not(.selected):hover,
     &.RM__verseActive .Lyric .verse.interactivated {
-        .text-shadow-mixin(@colour__audioHighlight);
+        .mixin__textShadow(@colour__audioHighlight);
     }
 }

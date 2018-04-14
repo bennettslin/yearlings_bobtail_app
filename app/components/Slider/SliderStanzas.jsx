@@ -43,8 +43,13 @@ const SliderStanzas = ({
         <div className="SliderStanzas">
             {stanzaTimesIndices.map((nothing, stanzaTimeIndex) => {
 
-                const stanzaTimeObject = getStanzaTimeObject(selectedSongIndex, stanzaTimeIndex),
-                    stanzaWidth = (totalTime - stanzaTimeObject.time) / totalTime * 100,
+                const stanzaTimeObject = getStanzaTimeObject(
+                        selectedSongIndex, stanzaTimeIndex
+                    ),
+
+                    stanzaWidth =
+                        (totalTime - stanzaTimeObject.time) / totalTime * 100,
+
                     stanzaStyle = {
                         width: `${stanzaWidth}%`
                     }

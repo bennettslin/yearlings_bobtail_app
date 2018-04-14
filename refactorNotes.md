@@ -14,9 +14,6 @@ Class names optimised for clarity
 
 Consolidate styles for child with parent selector nesting
 
-Distinguish DotSlider and Dots
-Distinguish AudioSlider
-
 ### Remaining
 
 Access
@@ -51,7 +48,7 @@ Popups
     WikiPopup
 Score (/)
 ScoresTips
-Slider
+Slider (Waiting on rework.)
 Stage (Just rename some children)
 Text
 Theatre (Just rename some children)
