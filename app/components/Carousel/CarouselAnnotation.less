@@ -16,7 +16,7 @@
     transition: min-width @animationDuration__default,
                 opacity @animationDuration__default;
 
-    ._desktop_
+    .dm__desktop
     & {
         padding-bottom: @margin__scrollbar;
     }
@@ -41,9 +41,9 @@
      * Override if hidden by single lyric column. Using specific selectors to
      * override styles for mini width as well.
      */
-    .DomManager._song_._rightLyricColumnOnly_
+    .DomManager.dm__song._rightLyricColumnOnly_
     &.CarouselAnnotation__inLyricColumn__left,
-    .DomManager._song_._leftLyricColumnOnly_
+    .DomManager.dm__song._leftLyricColumnOnly_
     &.CarouselAnnotation__inLyricColumn__right {
 
         min-width: @paddingX__carouselAnnotation__hidden;

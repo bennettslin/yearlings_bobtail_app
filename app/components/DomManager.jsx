@@ -203,18 +203,18 @@ class DomManager extends Component {
 
                     deviceClassName,
                     isDesktop ?
-                        '_desktop_' : '_mobile_',
+                        'dm__desktop' : 'dm__mobile',
                     { '_mobileNotPhone_': isTabletOrMini },
 
-                    selectedAccessIndex ? '_accessOn_' : '_accessOff_',
-                    showOverlay ? '_overlayShown_' : '_overlayHidden_',
+                    selectedAccessIndex ? 'dm__accessOn' : 'dm__accessOff',
+                    showOverlay ? 'dm__overlayShown' : 'dm__overlayHidden',
 
-                    isLogue ? '_logue_' : '_song_',
-                    isPlaying ? '_isPlaying_' : '_isPaused_',
-                    isSliderMoving ? '_sliderMoving_' : '_sliderNotMoving_',
-                    { '_sliderTouched_': isSliderTouched },
+                    isLogue ? 'dm__logue' : 'dm__song',
+                    isPlaying ? 'dm__isPlaying' : 'dm__isPaused',
+                    isSliderMoving ? 'dm__sliderMoving' : 'dm__sliderNotMoving',
+                    { 'dm__sliderTouched': isSliderTouched },
                     interactivatedVerseIndex < 0 ?
-                        '_verseInactive_' : '_verseActive_',
+                        'dm__verseInactive' : 'dm__verseActive',
 
                     selectedAnnotationIndex ?
                     '_annotationShown_' : '_annotationHidden_',

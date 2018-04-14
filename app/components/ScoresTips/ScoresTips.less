@@ -41,7 +41,7 @@
         margin-bottom: @scores-tips-margin;
     }
 
-    ._mobile_
+    .dm__mobile
     & {
         position: absolute;
         transition: right @animationDuration__default;
@@ -50,7 +50,7 @@
     }
 }
 
-._mobile_ {
+.dm__mobile {
 
     &._mini_ {
         // Affects section in main only.
@@ -76,8 +76,8 @@
 }
 
 // I don't understand this.
-._logue_,
-._song_._overviewShown_._scoresTipsMain_ {
+.dm__logue,
+.dm__song._overviewShown_._scoresTipsMain_ {
     .ScoresTips {
 
         .Button {
@@ -87,7 +87,7 @@
     }
 }
 
-._song_ {
+.dm__song {
     .ScoresTips {
         .Button {
             transform: scale(1);

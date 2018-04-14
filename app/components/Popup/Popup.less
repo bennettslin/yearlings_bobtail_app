@@ -25,7 +25,7 @@
 }
 
 .Popup__invisible,
-._overlayShown_ .Popup__displaysNotInOverlay {
+.dm__overlayShown .Popup__displaysNotInOverlay {
     transition: opacity @popup-transition-duration-out;
     opacity: 0;
 }
@@ -71,7 +71,7 @@
 
     .Popup__invisible
     &,
-    ._overlayShown_ .Popup__displaysNotInOverlay
+    .dm__overlayShown .Popup__displaysNotInOverlay
     & {
         animation: bounceOut @popup-transition-duration-out;
     }
@@ -86,7 +86,7 @@
 
     .Popup__invisible
     &,
-    ._overlayShown_ .Popup__displaysNotInOverlay
+    .dm__overlayShown .Popup__displaysNotInOverlay
     & {
         animation: shrinkOut @popup-transition-duration-out;
     }
@@ -120,7 +120,7 @@
 
 // TODO: Revisit mobile sizing.
 
-// ._mobile_ {
+// .dm__mobile {
 
 //     &:not(._tablet_) {
 //         .PopupView__fullSize {

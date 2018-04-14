@@ -64,7 +64,7 @@
         transform @animationDuration__slow,
         max-width @animationDuration__default;
 
-    ._overlayShown_
+    .dm__overlayShown
     &.width__mainColumn {
         max-width: @js__width__mini;
 
@@ -126,9 +126,9 @@
         }
     }
 
-    ._phone_._overlayShown_
+    ._phone_.dm__overlayShown
     &,
-    ._phone_._song_._lyricExpanded_
+    ._phone_.dm__song._lyricExpanded_
     & {
 
         &:first-child {
@@ -170,18 +170,18 @@
         margin-left: 0;
     }
 
-    ._overlayShown_
+    .dm__overlayShown
     & {
         max-width: 100%;
         margin-right: 0;
     }
 
-    ._overlayShown_:not(._phone_)
+    .dm__overlayShown:not(._phone_)
     & {
         margin-left: 0;
     }
 
-    ._mobile_
+    .dm__mobile
     & {
         justify-content: flex-end;
     }
@@ -235,7 +235,7 @@
 
 .widths__hiddenInOverlay {
 
-    ._overlayShown_
+    .dm__overlayShown
     & {
         width: 0;
         min-width: 0;
@@ -250,9 +250,9 @@
 
     transition: bottom @animationDuration__default;
 
-    ._overlayShown_
+    .dm__overlayShown
     &,
-    ._song_._lyricExpanded_
+    .dm__song._lyricExpanded_
     & {
         bottom: @js__height__audioBanner__bottomRow;
     }

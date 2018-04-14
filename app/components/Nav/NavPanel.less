@@ -37,13 +37,13 @@
         right: 0;
     }
 
-    ._desktop_
+    .dm__desktop
     & {
         bottom: 100%;
         margin-bottom: @margin__thin;
     }
 
-    ._mobile_
+    .dm__mobile
     & {
         top: 100%;
         margin-top: @margin__thin;
@@ -53,10 +53,10 @@
 ._carouselNavShowable_._navExpanded_ {
 
     // Show panel if access highlighted only when access is on.
-    &._accessOn_ .accessHighlighted .accessKeysShown,
+    &.dm__accessOn .accessHighlighted .accessKeysShown,
 
     // Show panel upon hover only when access is off.
-    &._accessOff_ .Button__nav:hover {
+    &.dm__accessOff .Button__nav:hover {
         .NavPanel-block {
             opacity: 1;
             z-index: @zIndex__navCustomSubfield;

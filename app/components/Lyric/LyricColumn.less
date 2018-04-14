@@ -4,7 +4,7 @@
     // Keeps elements inside window!
     overflow: hidden;
 
-    ._song_
+    .dm__song
     & {
         /**
          * This fixes the issue of being unable to scroll between stanzas. But
@@ -13,17 +13,17 @@
         z-index: @zIndex__lyricColumn;
     }
 
-    ._mobile_._song_._lyricExpanded_
+    .dm__mobile.dm__song._lyricExpanded_
     & {
         height: ~"calc(100% - @{js__height__menu})";
     }
 
-    ._phone_._song_._lyricExpanded_
+    ._phone_.dm__song._lyricExpanded_
     & {
         height: ~"calc(100% - @{js__height__aboveOverlay__phone})";
     }
 
-    ._mobile_._lyricHeightless_
+    .dm__mobile._lyricHeightless_
     & {
         height: 0;
     }
@@ -41,17 +41,17 @@
     transition: opacity @animationDuration__default,
                 transform @animationDuration__default;
 
-    ._logue_
+    .dm__logue
     & {
         opacity: 0;
     }
 
-    ._song_ .renderReady
+    .dm__song .renderReady
     & {
         opacity: 1;
     }
 
-    ._song_ .renderUnready
+    .dm__song .renderUnready
     & {
         opacity: 0;
     }
@@ -59,7 +59,7 @@
 
 .position__lyricColumn {
 
-    ._desktop_
+    .dm__desktop
     & {
         position: absolute;
         width: @js__width__goldenCord;
@@ -72,7 +72,7 @@
         width: @js__width__uncannyValley;
     }
 
-    ._mobile_
+    .dm__mobile
     & {
         position: absolute;
         height: @js__height__lyricCollapsed;
@@ -90,7 +90,7 @@
         transparent 90%,
         transparent
     );
-    ._desktop_._carouselNavShowable_._carouselExpanded_._annotationShown_
+    .dm__desktop._carouselNavShowable_._carouselExpanded_._annotationShown_
     & {
         // Not taken care of by autoprefixer, unfortunately.
         -webkit-mask-image: @gradient__lyric__desktop;

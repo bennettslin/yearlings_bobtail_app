@@ -2,7 +2,7 @@
  * ANCHORS *
  ***********/
 
-.DomManager._accessOn_ {
+.DomManager.dm__accessOn {
 
     // Show access highlight of dots and text...
 
@@ -13,16 +13,16 @@
     .Annotation__selected .AnnotationCard,
 
     // ... in carousel title only when...
-    &._verseInactive_ .Carousel .Annotation__accessed:not(.Annotation__selected) .AnnotationTitle,
+    &.dm__verseInactive .Carousel .Annotation__accessed:not(.Annotation__selected) .AnnotationTitle,
 
     // ... in carousel cards only when...
-    &._verseInactive_ .Carousel .accessed-annotationAnnotation__selected,
+    &.dm__verseInactive .Carousel .accessed-annotationAnnotation__selected,
 
     // ... in lyrics only when...
-    &._verseInactive_._dotsHidden_._carouselExpanded_ .Lyric,
+    &.dm__verseInactive._dotsHidden_._carouselExpanded_ .Lyric,
 
     // ... or...
-    &._verseInactive_._dotsHidden_._lyricExpanded_ .Lyric {
+    &.dm__verseInactive._dotsHidden_._lyricExpanded_ .Lyric {
 
         .accessHighlighted {
 
@@ -65,7 +65,7 @@
     }
 
     // Nav buttons in nav section.
-    &._navExpanded_._verseInactive_._dotsHidden_ {
+    &._navExpanded_.dm__verseInactive._dotsHidden_ {
         .Nav {
             .accessHighlighted.accessKeysShown {
                 .icon-canvas {
@@ -75,7 +75,7 @@
         }
     }
 
-    &._verseInactive_._annotationHidden_._dotsHidden_ {
+    &.dm__verseInactive._annotationHidden_._dotsHidden_ {
 
         // Lyrics annotation is accessed.
         .Lyric {
@@ -84,7 +84,7 @@
     }
 
     // Interactivated verse is accessed.
-    &._verseActive_ {
+    &.dm__verseActive {
         .Lyric {
             .verse.interactivated {
                 background-color: @colour__access__underline;
