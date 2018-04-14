@@ -16,7 +16,12 @@
     transition: min-width @animationDuration__default,
                 opacity @animationDuration__default;
 
-    ._mobile_
+    ._desktop_
+    & {
+        padding-bottom: @margin__scrollbar;
+    }
+
+    ._mobileNotPhone_
     & {
         flex-direction: column;
     }
