@@ -163,13 +163,13 @@
 }
 
 // Portals are not included here.
-.DomManager.narrative .AnnotationCard .icon-canvas-block.narrative,
-.DomManager.backstory .AnnotationCard .icon-canvas-block.backstory,
-.DomManager.observation .AnnotationCard .icon-canvas-block.observation,
-.DomManager.pun .AnnotationCard .icon-canvas-block.pun,
-.DomManager.reference .AnnotationCard .icon-canvas-block.reference,
-.DomManager.songwriting .AnnotationCard .icon-canvas-block.songwriting,
-.DomManager.afterword .AnnotationCard .icon-canvas-block.afterword {
+.RootManager.narrative .AnnotationCard .icon-canvas-block.narrative,
+.RootManager.backstory .AnnotationCard .icon-canvas-block.backstory,
+.RootManager.observation .AnnotationCard .icon-canvas-block.observation,
+.RootManager.pun .AnnotationCard .icon-canvas-block.pun,
+.RootManager.reference .AnnotationCard .icon-canvas-block.reference,
+.RootManager.songwriting .AnnotationCard .icon-canvas-block.songwriting,
+.RootManager.afterword .AnnotationCard .icon-canvas-block.afterword {
     // Increase width first, then fade in.
     transition: width @animationDuration__default,
                 opacity @animationDuration__default @animationDuration__faster;
@@ -178,14 +178,14 @@
 }
 
 // Default styling. Should not be visible when slider is not moving.
-.DomManager.dm__sliderNotMoving.narrative .TextAnchorBlock .icon-canvas-block.narrative,
-.DomManager.dm__sliderNotMoving.backstory .TextAnchorBlock .icon-canvas-block.backstory,
-.DomManager.dm__sliderNotMoving.observation .TextAnchorBlock .icon-canvas-block.observation,
-.DomManager.dm__sliderNotMoving.pun .TextAnchorBlock .icon-canvas-block.pun,
-.DomManager.dm__sliderNotMoving.reference .TextAnchorBlock .icon-canvas-block.reference,
-.DomManager.dm__sliderNotMoving.songwriting .TextAnchorBlock .icon-canvas-block.songwriting,
-.DomManager.dm__sliderNotMoving.portal .TextAnchorBlock .icon-canvas-block.portal,
-.DomManager.dm__sliderNotMoving.afterword .TextAnchorBlock .icon-canvas-block.afterword {
+.RootManager.dm__sliderNotMoving.narrative .TextAnchorBlock .icon-canvas-block.narrative,
+.RootManager.dm__sliderNotMoving.backstory .TextAnchorBlock .icon-canvas-block.backstory,
+.RootManager.dm__sliderNotMoving.observation .TextAnchorBlock .icon-canvas-block.observation,
+.RootManager.dm__sliderNotMoving.pun .TextAnchorBlock .icon-canvas-block.pun,
+.RootManager.dm__sliderNotMoving.reference .TextAnchorBlock .icon-canvas-block.reference,
+.RootManager.dm__sliderNotMoving.songwriting .TextAnchorBlock .icon-canvas-block.songwriting,
+.RootManager.dm__sliderNotMoving.portal .TextAnchorBlock .icon-canvas-block.portal,
+.RootManager.dm__sliderNotMoving.afterword .TextAnchorBlock .icon-canvas-block.afterword {
     // Increase width first, then fade in.
     transition: width @animationDuration__default,
                 opacity @animationDuration__default @animationDuration__faster;
@@ -194,26 +194,26 @@
 }
 
 // Hover styling.
-.DomManager.narrative .TextAnchorBlock:hover .icon-canvas-block.narrative,
-.DomManager.backstory .TextAnchorBlock:hover .icon-canvas-block.backstory,
-.DomManager.observation .TextAnchorBlock:hover .icon-canvas-block.observation,
-.DomManager.pun .TextAnchorBlock:hover .icon-canvas-block.pun,
-.DomManager.reference .TextAnchorBlock:hover .icon-canvas-block.reference,
-.DomManager.songwriting .TextAnchorBlock:hover .icon-canvas-block.songwriting,
-.DomManager.portal .TextAnchorBlock:hover .icon-canvas-block.portal,
-.DomManager.afterword .TextAnchorBlock:hover .icon-canvas-block.afterword {
+.RootManager.narrative .TextAnchorBlock:hover .icon-canvas-block.narrative,
+.RootManager.backstory .TextAnchorBlock:hover .icon-canvas-block.backstory,
+.RootManager.observation .TextAnchorBlock:hover .icon-canvas-block.observation,
+.RootManager.pun .TextAnchorBlock:hover .icon-canvas-block.pun,
+.RootManager.reference .TextAnchorBlock:hover .icon-canvas-block.reference,
+.RootManager.songwriting .TextAnchorBlock:hover .icon-canvas-block.songwriting,
+.RootManager.portal .TextAnchorBlock:hover .icon-canvas-block.portal,
+.RootManager.afterword .TextAnchorBlock:hover .icon-canvas-block.afterword {
    animation: bounceHover @animationDuration__slow;
 }
 
 // Active styling.
-.DomManager.narrative .TextAnchorBlock:active .icon-canvas-block.narrative,
-.DomManager.backstory .TextAnchorBlock:active .icon-canvas-block.backstory,
-.DomManager.observation .TextAnchorBlock:active .icon-canvas-block.observation,
-.DomManager.pun .TextAnchorBlock:active .icon-canvas-block.pun,
-.DomManager.reference .TextAnchorBlock:active .icon-canvas-block.reference,
-.DomManager.songwriting .TextAnchorBlock:active .icon-canvas-block.songwriting,
-.DomManager.portal .TextAnchorBlock:active .icon-canvas-block.portal,
-.DomManager.afterword .TextAnchorBlock:active .icon-canvas-block.afterword {
+.RootManager.narrative .TextAnchorBlock:active .icon-canvas-block.narrative,
+.RootManager.backstory .TextAnchorBlock:active .icon-canvas-block.backstory,
+.RootManager.observation .TextAnchorBlock:active .icon-canvas-block.observation,
+.RootManager.pun .TextAnchorBlock:active .icon-canvas-block.pun,
+.RootManager.reference .TextAnchorBlock:active .icon-canvas-block.reference,
+.RootManager.songwriting .TextAnchorBlock:active .icon-canvas-block.songwriting,
+.RootManager.portal .TextAnchorBlock:active .icon-canvas-block.portal,
+.RootManager.afterword .TextAnchorBlock:active .icon-canvas-block.afterword {
    transform: scale(0.8);
 }
 

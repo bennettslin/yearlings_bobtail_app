@@ -220,6 +220,8 @@ class Live extends Component {
         return (
             <div className="Live">
 
+                <div className="PopupOverlay" />
+
                 <Theatre />
 
                 <Main {...mainColumnHandlers} />
@@ -239,6 +241,9 @@ class Live extends Component {
                 />
 
                 <Menu {...menuFieldHandlers} />
+
+                {/* Prevent popup interaction when slider is touched. */}
+                <div className="TouchOverlay" />
 
             </div>
         )

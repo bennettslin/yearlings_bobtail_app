@@ -64,7 +64,7 @@ Wiki (/)
 
 AccessManager
 AppManager
-DomManager (Redo classes, rearrange so that SwitchManager is first?)
+RootManager (Redo classes, rearrange so that SwitchManager is first?)
 EventManager
 RoutingManager
 SwitchManager

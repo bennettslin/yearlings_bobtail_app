@@ -693,7 +693,7 @@ class EventManager extends Component {
         // In admin view.
         } else {
             focusElement = this.myDomManager ||
-                document.getElementsByClassName('DomManager')[0]
+                document.getElementsByClassName('RootManager')[0]
         }
 
         if (focusElement) {

@@ -18,7 +18,7 @@ import { getSongIsLogue } from '../helpers/dataHelper'
 import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logicHelper'
 import { getIsDesktop, getIsTabletOrMini, getIsOverlayingAnnotation } from '../helpers/responsiveHelper'
 
-class DomManager extends Component {
+class RootManager extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -28,7 +28,6 @@ class DomManager extends Component {
         isSliderTouched: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         selectedAccessIndex: PropTypes.number.isRequired,
-        selectedAdminIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
@@ -118,7 +117,6 @@ class DomManager extends Component {
         const { deviceIndex,
                 interactivatedVerseIndex,
                 selectedAccessIndex,
-                selectedAdminIndex,
                 selectedAnnotationIndex,
                 selectedCarouselNavIndex,
                 selectedDotKeys,
@@ -199,7 +197,7 @@ class DomManager extends Component {
             <div
                 ref={domManagerRef}
                 className={cx(
-                    'DomManager',
+                    'RootManager',
 
                     deviceClassName,
                     isDesktop ?
@@ -260,14 +258,7 @@ class DomManager extends Component {
             >
                 <AdminToggle />
 
-                <div className="PopupOverlay" />
-
                 <SwitchManager {...other} />
-
-                {/* Prevent popup interaction when slider is touched. */}
-                {!selectedAdminIndex && (
-                    <div className="TouchOverlay" />
-                )}
 
                 <Players {...audioPlayersProps} />
             </div>
@@ -276,7 +267,7 @@ class DomManager extends Component {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+    interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
-}))(DomManager)
+    interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTitleInAudio, isVerseBarAbove, isVerseBarBelow
+}))(RootManager)

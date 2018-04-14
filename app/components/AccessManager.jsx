@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import DomManager from './DomManager'
+import RootManager from './RootManager'
 import { getSongsAndLoguesCount,
          getSongIsLogue,
          getBookColumnIndex,
@@ -572,7 +572,7 @@ class AccessManager extends Component {
 
     render() {
         return (
-            <DomManager
+            <RootManager
                 eventHandlers={this.props.eventHandlers}
                 handleKeyDownPress={this.handleKeyDownPress}
             />

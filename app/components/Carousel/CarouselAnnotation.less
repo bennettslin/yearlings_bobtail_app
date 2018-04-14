@@ -41,9 +41,9 @@
      * Override if hidden by single lyric column. Using specific selectors to
      * override styles for mini width as well.
      */
-    .DomManager.dm__song._rightLyricColumnOnly_
+    .RootManager.dm__song._rightLyricColumnOnly_
     &.CarouselAnnotation__inLyricColumn__left,
-    .DomManager.dm__song._leftLyricColumnOnly_
+    .RootManager.dm__song._leftLyricColumnOnly_
     &.CarouselAnnotation__inLyricColumn__right {
 
         min-width: @paddingX__carouselAnnotation__hidden;
@@ -54,14 +54,14 @@
     }
 }
 
-.DomManager.narrative .CarouselAnnotation.narrative,
-.DomManager.backstory .CarouselAnnotation.backstory,
-.DomManager.observation .CarouselAnnotation.observation,
-.DomManager.pun .CarouselAnnotation.pun,
-.DomManager.reference .CarouselAnnotation.reference,
-.DomManager.songwriting .CarouselAnnotation.songwriting,
-.DomManager.portal .CarouselAnnotation.portal,
-.DomManager.afterword .CarouselAnnotation.afterword {
+.RootManager.narrative .CarouselAnnotation.narrative,
+.RootManager.backstory .CarouselAnnotation.backstory,
+.RootManager.observation .CarouselAnnotation.observation,
+.RootManager.pun .CarouselAnnotation.pun,
+.RootManager.reference .CarouselAnnotation.reference,
+.RootManager.songwriting .CarouselAnnotation.songwriting,
+.RootManager.portal .CarouselAnnotation.portal,
+.RootManager.afterword .CarouselAnnotation.afterword {
 
     min-width: @minWidth__carouselAnnotation;
 
@@ -72,14 +72,14 @@
     }
 }
 
-.DomManager._mini_.narrative .CarouselAnnotation.narrative,
-.DomManager._mini_.backstory .CarouselAnnotation.backstory,
-.DomManager._mini_.observation .CarouselAnnotation.observation,
-.DomManager._mini_.pun .CarouselAnnotation.pun,
-.DomManager._mini_.reference .CarouselAnnotation.reference,
-.DomManager._mini_.songwriting .CarouselAnnotation.songwriting,
-.DomManager._mini_.portal .CarouselAnnotation.portal,
-.DomManager._mini_.afterword .CarouselAnnotation.afterword {
+.RootManager._mini_.narrative .CarouselAnnotation.narrative,
+.RootManager._mini_.backstory .CarouselAnnotation.backstory,
+.RootManager._mini_.observation .CarouselAnnotation.observation,
+.RootManager._mini_.pun .CarouselAnnotation.pun,
+.RootManager._mini_.reference .CarouselAnnotation.reference,
+.RootManager._mini_.songwriting .CarouselAnnotation.songwriting,
+.RootManager._mini_.portal .CarouselAnnotation.portal,
+.RootManager._mini_.afterword .CarouselAnnotation.afterword {
 
     min-width: @minWidth__carouselAnnotation__mini;
 }
