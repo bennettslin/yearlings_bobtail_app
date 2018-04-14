@@ -24,7 +24,9 @@
     left: 0;
     bottom: -100%;
     width: 100vw;
-    height: 100%;
+
+    // Allows the lyric to scroll when carousel has higher z-index.
+    height: 50%;
     z-index: @zIndex__carousel;
 
     transition: bottom @animationDuration__slow,
@@ -38,6 +40,7 @@
                     opacity @animationDuration__default;
 
         top: -100%;
+        height: 100%;
     }
 
     ._carouselNavShowable_._carouselExpanded_
@@ -111,9 +114,10 @@
 }
 
 /** Gradient mask does not work in IE or Edge, though. */
-.Carousel__desktopGradientMask {
+.Carousel__gradientMask__desktop {
+
     // Consider Golden Cord width.
-    @gradient__monitor:
+    @gradient__carousel__monitor:
         linear-gradient(
             to left,
             black,
@@ -122,15 +126,15 @@
             black @js__width__goldenCord,
             black
         );
-    ._monitor_
+    ._monitor_._annotationHidden_
     & {
         // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: @gradient__monitor;
-        mask-image: @gradient__monitor;
+        -webkit-mask-image: @gradient__carousel__monitor;
+        mask-image: @gradient__carousel__monitor;
     }
 
     // Consider Uncanny Valley width.
-    @gradient__laptop:
+    @gradient__carousel__laptop:
         linear-gradient(
             to left,
             black,
@@ -139,10 +143,16 @@
             black @js__width__uncannyValley,
             black
         );
-    ._laptop_
+    ._laptop_._annotationHidden_
     & {
         // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: @gradient__laptop;
-        mask-image: @gradient__laptop;
+        -webkit-mask-image: @gradient__carousel__laptop;
+        mask-image: @gradient__carousel__laptop;
+    }
+
+    ._desktop_._carouselNavShowable_._carouselExpanded_._annotationShown_
+    & {
+        // When carousel annotation is selected, switch z-index with lyric.
+        z-index: @zIndex__lyricColumn;
     }
 }

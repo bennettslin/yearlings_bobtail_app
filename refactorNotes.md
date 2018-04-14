@@ -54,9 +54,9 @@ Popups
     WikiPopup
 Score (/)
 Slider
-Stage
+Stage (Just rename some children)
 Text
-Theatre
+Theatre (Just rename some children)
 Tips (/)
 Title (/)
 Verse (Remember verse scroll, changed with underscore)
@@ -64,7 +64,7 @@ Wiki (/)
 
 AccessManager
 AppManager
-DomManager
+DomManager (Redo classes, rearrange so that SwitchManager is first?)
 EventManager
 RoutingManager
 SwitchManager

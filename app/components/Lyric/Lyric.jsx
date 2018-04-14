@@ -128,8 +128,7 @@ LyricView = ({
             className={cx(
                 'Lyric',
                 'LyricAnnotation__scrollParent',
-                'Verse__scrollParent',
-                'Lyric__gradientMask__collapsed'
+                'Verse__scrollParent'
             )}
             tabIndex="-1"
             onScroll={handleScroll}

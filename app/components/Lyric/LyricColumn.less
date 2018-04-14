@@ -57,23 +57,6 @@
     }
 }
 
-/** Gradient mask does not work in IE or Edge. */
-@_lyricCollapsed_-gradient: linear-gradient(
-    0deg,
-    black,
-    black 90%,
-    transparent
-);
-
-.Lyric__gradientMask__collapsed {
-    ._mobile_._lyricCollapsed_
-    & {
-        // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: @_lyricCollapsed_-gradient;
-        mask-image: @_lyricCollapsed_-gradient;
-    }
-}
-
 .position__lyricColumn {
 
     ._desktop_
@@ -95,5 +78,41 @@
         height: @js__height__lyricCollapsed;
         width: 100%;
         bottom: 0;
+    }
+}
+
+.LyricColumn__gradientMask__mobileCollapsed {
+
+    /** Gradient mask does not work in IE or Edge. */
+    @gradient__lyric__mobileCollapsed: linear-gradient(
+        0deg,
+        black,
+        black 90%,
+        transparent
+    );
+    ._mobile_._lyricCollapsed_
+    & {
+        // Not taken care of by autoprefixer, unfortunately.
+        -webkit-mask-image: @gradient__lyric__mobileCollapsed;
+        mask-image: @gradient__lyric__mobileCollapsed;
+    }
+}
+
+.LyricColumn__gradientMask__desktop {
+
+    @gradient__lyric__desktop: linear-gradient(
+        180deg,
+        black,
+        black 50%,
+        transparent
+    );
+    ._desktop_._carouselNavShowable_._carouselExpanded_._annotationShown_
+    & {
+        // Not taken care of by autoprefixer, unfortunately.
+        -webkit-mask-image: @gradient__lyric__desktop;
+        mask-image: @gradient__lyric__desktop;
+
+        // When carousel annotation is selected, switch z-index with carousel.
+        z-index: @zIndex__carousel;
     }
 }

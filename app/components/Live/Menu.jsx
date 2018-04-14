@@ -49,6 +49,7 @@ Menu = ({
 
             {/* Positioned earlier in DOM to slide behind menu. */}
             <div className={cx(
+                'MenuRow',
                 'MenuBottomRow',
                 'width__mainColumn'
             )}>
@@ -58,6 +59,7 @@ Menu = ({
             </div>
 
             <div className={cx(
+                'MenuRow',
                 'MenuTopRow',
                 'width__mainColumn'
             )}>
