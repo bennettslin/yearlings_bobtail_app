@@ -14,7 +14,6 @@ Class names optimised for clarity
 
 Consolidate styles for child with parent selector nesting
 
-Rename LeftShelf
 Distinguish DotSlider and Dots
 Distinguish AudioSlider
 
@@ -41,7 +40,7 @@ Main
     OverviewToggle
 Nav (Need to consider last title margin, panels, and consolidate responsive)
 Overview (Waiting on overview in phone and heightless.)
-Players
+Players (/)
 Popup (Waiting on popup rework to finalise.)
 Popups
     AnnotationPopup
