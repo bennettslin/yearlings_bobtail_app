@@ -111,11 +111,11 @@ CAROUSEL_ANNOTATION_MIN_WIDTH = 406,
 LS_WIDTH_GOLDEN_CORD = 745,
 LS_WIDTH_UNCANNY_VALLEY = 570,
 
-PHONE_WIDTH = '_phone_',
-LS_WIDTH_MINI = '_mini_',
-TABLET_WIDTH = '_tablet_',
-LS_LAPTOP_WIDTH = '_laptop_',
-MONITOR_WIDTH = '_monitor_',
+PHONE_WIDTH = 'RM__phone',
+LS_WIDTH_MINI = 'RM__mini',
+TABLET_WIDTH = 'RM__tablet',
+LS_LAPTOP_WIDTH = 'RM__laptop',
+MONITOR_WIDTH = 'RM__monitor',
 
 // These max width values *must* be the same in less.
 PHONE_OBJECT = {

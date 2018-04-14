@@ -1,5 +1,5 @@
 @VerseBar-margin: 8px;
-@_verseBarHidden_-offset: -50px;
+@RM__verseBarHidden-offset: -50px;
 
 @VerseBar-desktop-margins: @margin__scrollbar * 2 +
                             @length__iconLarge * 2 +
@@ -24,17 +24,17 @@
 
     max-width: ~"calc(100% - @{VerseBar-desktop-margins})";
 
-    ._tablet_
+    .RM__tablet
     & {
         max-width: ~"calc(100% - @{VerseBar-tablet-margins})";
     }
 
-    ._mini_
+    .RM__mini
     & {
         max-width: ~"calc(100% - @{VerseBar-mini-margins})";
     }
 
-    ._phone_
+    .RM__phone
     & {
         max-width: ~"calc(100% - @{VerseBar-phone-margins})";
     }
@@ -44,11 +44,11 @@
     transform: translateX(-50%) scale(0);
 
     &.above {
-        top: @_verseBarHidden_-offset;
+        top: @RM__verseBarHidden-offset;
         margin-top: @VerseBar-margin;
         transition: top @animationDuration__fast, transform @animationDuration__fast;
 
-        ._verseBarAbove_
+        .RM__verseBarAbove
         & {
             top: 0;
             transform: translateX(-50%) scale(1);
@@ -60,11 +60,11 @@
     }
 
     &.below {
-        bottom: @_verseBarHidden_-offset;
+        bottom: @RM__verseBarHidden-offset;
         margin-bottom: @VerseBar-margin;
         transition: bottom @animationDuration__fast, transform @animationDuration__fast;
 
-        ._verseBarBelow_
+        .RM__verseBarBelow
         & {
             bottom: 0;
             transform: translateX(-50%) scale(1);
@@ -90,7 +90,7 @@
         z-index: @zIndex__verseBarText;
     }
 
-    .dm__sliderMoving
+    .RM__sliderMoving
     & {
         background-color: @colour__audioNeutral;
     }

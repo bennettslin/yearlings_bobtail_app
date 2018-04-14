@@ -37,26 +37,26 @@
         right: 0;
     }
 
-    .dm__desktop
+    .RM__desktop
     & {
         bottom: 100%;
         margin-bottom: @margin__thin;
     }
 
-    .dm__mobile
+    .RM__mobile
     & {
         top: 100%;
         margin-top: @margin__thin;
     }
 }
 
-._carouselNavShowable_._navExpanded_ {
+.RM__carouselNavShowable.RM__navExpanded {
 
     // Show panel if access highlighted only when access is on.
-    &.dm__accessOn .accessHighlighted .accessKeysShown,
+    &.RM__accessOn .accessHighlighted .accessKeysShown,
 
     // Show panel upon hover only when access is off.
-    &.dm__accessOff .Button__nav:hover {
+    &.RM__accessOff .Button__nav:hover {
         .NavPanel-block {
             opacity: 1;
             z-index: @zIndex__navCustomSubfield;

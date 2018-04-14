@@ -38,10 +38,10 @@ export const getStageCoordinates = ({
 
     const isDesktop = getIsDesktop(deviceIndex),
 
-        dotsOverviewOverflow =
-            _getDotsOverviewOverflow(deviceIndex),
+        leftShelfOverflow =
+            _getLeftShelfOverflow(deviceIndex),
 
-        centreFieldWidth = _getCentreFieldWidth(deviceIndex, windowWidth) - dotsOverviewOverflow,
+        centreFieldWidth = _getCentreFieldWidth(deviceIndex, windowWidth) - leftShelfOverflow,
 
         isPhone = getIsPhone(deviceIndex),
 
@@ -72,14 +72,14 @@ export const getStageCoordinates = ({
         top = (centreFieldHeight - height) * 0.1
 
         // Scoot left a bit to give room to dots overview.
-        left = dotsOverviewOverflow + (centreFieldWidth - width) * 0.5
+        left = leftShelfOverflow + (centreFieldWidth - width) * 0.5
 
     } else {
         // If stage height is adjustable, put closer to bottom in mobile.
         top = navHeight + (centreFieldHeight - height) * 0.9
 
         // Keep centred in mobile, even with dots overview.
-        left = (dotsOverviewOverflow + centreFieldWidth - width) * 0.5
+        left = (leftShelfOverflow + centreFieldWidth - width) * 0.5
     }
 
     return {
@@ -163,7 +163,7 @@ export const getCentreFieldHeight = (
     return windowHeight - menuHeight - lyricColumnHeight
 }
 
-export const _getDotsOverviewOverflow = (deviceIndex) => {
+export const _getLeftShelfOverflow = (deviceIndex) => {
     let toggleButtonWidth = 0
 
     switch (DEVICE_OBJECTS[deviceIndex].className) {

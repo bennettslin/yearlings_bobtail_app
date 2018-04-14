@@ -4,7 +4,7 @@
 .PopupButton {
     position: absolute;
 
-    ._annotationOverlaid_
+    .RM__annotationOverlaid
     & {
         &.side-position {
 
@@ -40,7 +40,7 @@
 .PopupButton__side {
     top: @length__iconLarge * 0.2;
 
-    ._annotationOverlaid_
+    .RM__annotationOverlaid
     & {
         top: 50%;
         transform: translateY(-50%);
@@ -55,9 +55,9 @@
     right: -@length__iconLarge * @PopupButton__multiplier;
 }
 
-.dm__mobile {
+.RM__mobile {
 
-    &._phone_, &._annotationSide_ {
+    &.RM__phone, &.RM__annotationSide {
 
         &.PopupButton__side {
             // Override default styling.
@@ -75,7 +75,7 @@
         }
     }
 
-    // &:not(._tablet_) {
+    // &:not(.RM__tablet) {
     //     &.PopupButton__close {
     //         display: none;
     //     }

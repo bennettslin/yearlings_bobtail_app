@@ -43,22 +43,22 @@
         }
     }
 
-    ._leftLyricColumnOnly_
+    .RM__leftLyricColumnOnly
     &.right,
-    ._rightLyricColumnOnly_
+    .RM__rightLyricColumnOnly
     &.left {
         width: 0;
         overflow: hidden;
         padding: 0;
         max-height: 0;
-    
+
         &.right:not(:first-child) {
             margin: 0;
         }
     }
 
     // Single right column should not have margin left.
-    ._rightLyricColumnOnly_
+    .RM__rightLyricColumnOnly
     &.right:not(:first-child) {
         margin-left: 0;
     }

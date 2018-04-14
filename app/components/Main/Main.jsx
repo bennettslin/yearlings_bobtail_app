@@ -13,7 +13,7 @@ import AnnotationPopup from '../Popups/AnnotationPopup'
 import CarouselToggle from '../Carousel/CarouselToggle'
 import Carousel from '../Carousel/Carousel'
 import Dots from '../Dots/Dots'
-import DotsOverview from './DotsOverview'
+import LeftShelf from './LeftShelf'
 import LyricToggleExpand from '../Lyric/LyricToggleExpand'
 import Stage from '../stage/Stage'
 import OverviewPopup from '../Popups/OverviewPopup'
@@ -32,7 +32,7 @@ const mainPropTypes = {
 
     annotationPopupHandlers: PropTypes.object.isRequired,
     carouselSectionHandlers: PropTypes.object.isRequired,
-    dotsOverviewToggleSectionHandlers: PropTypes.object.isRequired,
+    leftShelfToggleSectionHandlers: PropTypes.object.isRequired,
     dotsSectionHandlers: PropTypes.object.isRequired,
     navSectionHandlers: PropTypes.object.isRequired,
     overviewPopupHandlers: PropTypes.object.isRequired,
@@ -55,7 +55,7 @@ Main = ({
 
     annotationPopupHandlers,
     carouselSectionHandlers,
-    dotsOverviewToggleSectionHandlers,
+    leftShelfToggleSectionHandlers,
     dotsSectionHandlers,
     navSectionHandlers,
     overviewPopupHandlers,
@@ -86,7 +86,7 @@ Main = ({
                 'Main__flexContainer',
                 'absoluteFullContainer'
             )}>
-                <DotsOverview {...dotsOverviewToggleSectionHandlers}
+                <LeftShelf {...leftShelfToggleSectionHandlers}
                     className={cx(
                         { 'absoluteFullContainer': isPhone }
                     )}

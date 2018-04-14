@@ -16,7 +16,7 @@
     transition: min-width @animationDuration__default,
                 opacity @animationDuration__default;
 
-    .dm__desktop
+    .RM__desktop
     & {
         padding-bottom: @margin__scrollbar;
     }
@@ -41,9 +41,9 @@
      * Override if hidden by single lyric column. Using specific selectors to
      * override styles for mini width as well.
      */
-    .RootManager.dm__song._rightLyricColumnOnly_
+    .RootManager.RM__song.RM__rightLyricColumnOnly
     &.CarouselAnnotation__inLyricColumn__left,
-    .RootManager.dm__song._leftLyricColumnOnly_
+    .RootManager.RM__song.RM__leftLyricColumnOnly
     &.CarouselAnnotation__inLyricColumn__right {
 
         min-width: @paddingX__carouselAnnotation__hidden;
@@ -72,14 +72,14 @@
     }
 }
 
-.RootManager._mini_.narrative .CarouselAnnotation.narrative,
-.RootManager._mini_.backstory .CarouselAnnotation.backstory,
-.RootManager._mini_.observation .CarouselAnnotation.observation,
-.RootManager._mini_.pun .CarouselAnnotation.pun,
-.RootManager._mini_.reference .CarouselAnnotation.reference,
-.RootManager._mini_.songwriting .CarouselAnnotation.songwriting,
-.RootManager._mini_.portal .CarouselAnnotation.portal,
-.RootManager._mini_.afterword .CarouselAnnotation.afterword {
+.RootManager.RM__mini.narrative .CarouselAnnotation.narrative,
+.RootManager.RM__mini.backstory .CarouselAnnotation.backstory,
+.RootManager.RM__mini.observation .CarouselAnnotation.observation,
+.RootManager.RM__mini.pun .CarouselAnnotation.pun,
+.RootManager.RM__mini.reference .CarouselAnnotation.reference,
+.RootManager.RM__mini.songwriting .CarouselAnnotation.songwriting,
+.RootManager.RM__mini.portal .CarouselAnnotation.portal,
+.RootManager.RM__mini.afterword .CarouselAnnotation.afterword {
 
     min-width: @minWidth__carouselAnnotation__mini;
 }

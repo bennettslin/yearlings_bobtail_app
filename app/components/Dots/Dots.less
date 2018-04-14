@@ -11,7 +11,7 @@
     opacity: 0;
     margin-left: -@margin__dotsContainer;
     margin-top: @margin__dotsContainer / 2;
-    z-index: @zIndex__dotsOverview;
+    z-index: @zIndex__leftShelf;
 
     // TODO: Ideal for dots section to fade to halfway left, then move all the way out to prevent user interaction.
     transition: opacity @animationDuration__default,
@@ -23,7 +23,7 @@
     box-shadow: @boxShadow__dotsContainer;
     background-color: @colour__verse__odd;
 
-    .dm__song._dotsShown_
+    .RM__song.RM__dotsShown
     & {
         opacity: 1;
         margin-left: @margin__dotsContainer;
@@ -39,7 +39,7 @@
         margin-bottom: @margin__dotsContainer / 2;
     }
 
-    ._phone_._dotsShown_
+    .RM__phone.RM__dotsShown
     & {
         margin-left: @margin__dotsContainer__phone;
     }

@@ -7,9 +7,9 @@
 @scores-tips-margin: 10px;
 
 @width__childScoresTips: 2 * @length__iconLarge + 2 * @scores-tips-padding + @scores-tips-margin;
-@scores-tips-_tablet_: 2 * @length__iconLarge__tablet + 2 * @scores-tips-padding + @scores-tips-margin;
-@scores-tips-_mini_: 2 * @length__iconLarge__mini + 2 * @scores-tips-padding + @scores-tips-margin;
-@scores-tips-_phone_: 2 * @js__length__icon + 2 * @scores-tips-padding + @scores-tips-margin;
+@scores-tips-RM__tablet: 2 * @length__iconLarge__tablet + 2 * @scores-tips-padding + @scores-tips-margin;
+@scores-tips-RM__mini: 2 * @length__iconLarge__mini + 2 * @scores-tips-padding + @scores-tips-margin;
+@scores-tips-RM__phone: 2 * @js__length__icon + 2 * @scores-tips-padding + @scores-tips-margin;
 
 .ScoresTips {
     display: flex;
@@ -41,7 +41,7 @@
         margin-bottom: @scores-tips-margin;
     }
 
-    .dm__mobile
+    .RM__mobile
     & {
         position: absolute;
         transition: right @animationDuration__default;
@@ -50,21 +50,21 @@
     }
 }
 
-.dm__mobile {
+.RM__mobile {
 
-    &._mini_ {
+    &.RM__mini {
         // Affects section in main only.
-        &._lyricExpanded_, &._overviewShown_, &._tipsShown_, &._annotationShown_._navExpanded_, &._dotsShown_ {
+        &.RM__lyricExpanded, &.RM__overviewShown, &.RM__tipsShown, &.RM__annotationShown.RM__navExpanded, &.RM__dotsShown {
             .ScoresTips {
-                right: -@scores-tips-_mini_;
+                right: -@scores-tips-RM__mini;
             }
         }
     }
 
-    &._phone_ {
-        &._lyricExpanded_, &._overviewShown_, &._tipsShown_, &._annotationShown_._navExpanded_, &._dotsShown_ {
+    &.RM__phone {
+        &.RM__lyricExpanded, &.RM__overviewShown, &.RM__tipsShown, &.RM__annotationShown.RM__navExpanded, &.RM__dotsShown {
             .ScoresTips {
-                right: -@scores-tips-_phone_;
+                right: -@scores-tips-RM__phone;
             }
         }
 
@@ -76,8 +76,8 @@
 }
 
 // I don't understand this.
-.dm__logue,
-.dm__song._overviewShown_._scoresTipsMain_ {
+.RM__logue,
+.RM__song.RM__overviewShown.RM__scoresTipsMain {
     .ScoresTips {
 
         .Button {
@@ -87,7 +87,7 @@
     }
 }
 
-.dm__song {
+.RM__song {
     .ScoresTips {
         .Button {
             transform: scale(1);

@@ -16,26 +16,26 @@
                 border-radius @animationDuration__default,
                 box-shadow @animationDuration__default;
 
-    // Widths for all other devices are set by "width__dotsOverview" class.
-    .dm__desktop
+    // Widths for all other devices are set by "width__leftShelf" class.
+    .RM__desktop
     & {
         width: @width__overviewToggle__laptop;
     }
 
-    .dm__desktop._carouselExpanded_
+    .RM__desktop.RM__carouselExpanded
     & {
         bottom: @margin__scrollbar;
         border-radius: 0 @borderRadius__nav @borderRadius__nav 0;
     }
 
-    .dm__mobile
+    .RM__mobile
     & {
         top: 0;
         bottom: auto;
         border-radius: 0 0 @borderRadius__nav 0;
     }
 
-    ._carouselNavUnshowable_
+    .RM__carouselNavUnshowable
     & {
         margin-left: -@width__overviewToggle__laptop;
     }

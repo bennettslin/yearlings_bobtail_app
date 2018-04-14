@@ -195,7 +195,7 @@ class Live extends Component {
                     handleAnnotationPortalSelect,
                     handlePopupContainerClick
                 },
-                dotsOverviewToggleSectionHandlers: {
+                leftShelfToggleSectionHandlers: {
                     handleDotsSectionToggle,
                     handleOverviewToggle
                 },

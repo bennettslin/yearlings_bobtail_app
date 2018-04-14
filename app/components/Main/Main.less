@@ -1,4 +1,4 @@
-@import "./DotsOverview.less";
+@import "./LeftShelf.less";
 @import "./OverviewToggle.less";
 @import "./DotsToggle.less";
 
@@ -21,17 +21,17 @@
 .width__mainColumn {
     width: 100%;
 
-    ._monitor_
+    .RM__monitor
     & {
         max-width: ~"calc(100% - @{js__width__goldenCord})";
     }
 
-    ._laptop_
+    .RM__laptop
     & {
         max-width: ~"calc(100% - @{js__width__uncannyValley})";
     }
 
-    .dm__mobile
+    .RM__mobile
     & {
         max-width: 100%;
     }
@@ -40,25 +40,25 @@
 .height__mainColumn {
     top: @js__height__menu;
 
-    .dm__mobile
+    .RM__mobile
     & {
         height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu})";
     }
 
-    .dm__desktop
+    .RM__desktop
     &,
-    ._lyricHeightless_
+    .RM__lyricHeightless
     & {
         height: ~"calc(100% - @{js__height__menu})";
     }
 
-    ._phone_
+    .RM__phone
     & {
         top: @js__height__menu__phone;
         height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu__phone})";
     }
 
-    ._phone_._lyricHeightless_
+    .RM__phone.RM__lyricHeightless
     & {
         height: ~"calc(100% - @{js__height__menu__phone})";
     }

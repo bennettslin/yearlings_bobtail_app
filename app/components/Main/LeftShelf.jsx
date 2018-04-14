@@ -8,7 +8,7 @@ import DotsToggle from './DotsToggle'
 import OverviewToggle from './OverviewToggle'
 import ScoresTips from '../ScoresTips/ScoresTips'
 
-const dotsOverviewPropTypes = {
+const leftShelfPropTypes = {
     // From parent.
     className: PropTypes.any,
     handleDotsSectionToggle: PropTypes.func.isRequired,
@@ -16,7 +16,7 @@ const dotsOverviewPropTypes = {
     scoresTipsHandlers: PropTypes.object.isRequired
 },
 
-DotsOverview = ({
+LeftShelf = ({
 
     className,
     handleDotsSectionToggle,
@@ -25,8 +25,8 @@ DotsOverview = ({
 
 }) => (
     <div className={cx(
-        'DotsOverview',
-        'width__dotsOverview',
+        'LeftShelf',
+        'width__leftShelf',
         className
     )}>
         <OverviewToggle
@@ -36,11 +36,11 @@ DotsOverview = ({
             handleDotsSectionToggle={handleDotsSectionToggle}
         />
         <ScoresTips {...scoresTipsHandlers}
-            inDotsOverview
+            inLeftShelf
         />
     </div>
 )
 
-DotsOverview.propTypes = dotsOverviewPropTypes
+LeftShelf.propTypes = leftShelfPropTypes
 
-export default DotsOverview
+export default LeftShelf

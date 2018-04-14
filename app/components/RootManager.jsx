@@ -201,47 +201,50 @@ class RootManager extends Component {
 
                     deviceClassName,
                     isDesktop ?
-                        'dm__desktop' : 'dm__mobile',
+                        'RM__desktop' : 'RM__mobile',
                     { '_mobileNotPhone_': isTabletOrMini },
 
-                    selectedAccessIndex ? 'dm__accessOn' : 'dm__accessOff',
-                    showOverlay ? 'dm__overlayShown' : 'dm__overlayHidden',
+                    selectedAccessIndex ? 'RM__accessOn' : 'RM__accessOff',
+                    showOverlay ? 'RM__overlayShown' : 'RM__overlayHidden',
 
-                    isLogue ? 'dm__logue' : 'dm__song',
-                    isPlaying ? 'dm__isPlaying' : 'dm__isPaused',
-                    isSliderMoving ? 'dm__sliderMoving' : 'dm__sliderNotMoving',
-                    { 'dm__sliderTouched': isSliderTouched },
+                    isLogue ? 'RM__logue' : 'RM__song',
+                    isPlaying ? 'RM__isPlaying' : 'RM__isPaused',
+                    isSliderMoving ? 'RM__sliderMoving' : 'RM__sliderNotMoving',
+                    { 'RM__sliderTouched': isSliderTouched },
                     interactivatedVerseIndex < 0 ?
-                        'dm__verseInactive' : 'dm__verseActive',
+                        'RM__verseInactive' : 'RM__verseActive',
 
                     selectedAnnotationIndex ?
-                    '_annotationShown_' : '_annotationHidden_',
-                    { '_carouselExpanded_': selectedCarouselNavIndex },
-                    selectedDotsIndex ? '_dotsShown_' : '_dotsHidden_',
-                    isLyricExpanded ? '_lyricExpanded_' : '_lyricCollapsed_',
-                    { '_navExpanded_': !selectedCarouselNavIndex },
-                    overviewShown ? '_overviewShown_' : '_overviewHidden_',
-                    tipsShown ? '_tipsShown_' : '_tipsHidden_',
+                        'RM__annotationShown' : 'RM__annotationHidden',
+                    { 'RM__carouselExpanded': selectedCarouselNavIndex },
+                    selectedDotsIndex ? 'RM__dotsShown' : 'RM__dotsHidden',
+                    isLyricExpanded ?
+                        'RM__lyricExpanded' : 'RM__lyricCollapsed',
+                    { 'RM__navExpanded': !selectedCarouselNavIndex },
+                    overviewShown ? 'RM__overviewShown' : 'RM__overviewHidden',
+                    tipsShown ? 'RM__tipsShown' : 'RM__tipsHidden',
 
                     isOverlayingAnnotation ?
-                        '_annotationOverlaid_' : '_annotationSide_',
-                    showShrunkNavIcon ? '_navIconShrunk_' : '_navIconStatic_',
+                        'RM__annotationOverlaid' : 'RM__annotationSide',
+                    showShrunkNavIcon ?
+                        'RM__navIconShrunk' : 'RM__navIconStatic',
 
                     isCarouselNavShowable ?
-                        '_carouselNavShowable_' : '_carouselNavUnshowable_',
+                        'RM__carouselNavShowable' : 'RM__carouselNavUnshowable',
                     isScoresTipsInMain ?
-                        '_scoresTipsMain_' : '_scoresTipsMenu_',
-                    { '_titleInAudio_': isTitleInAudio },
+                        'RM__scoresTipsMain' : 'RM__scoresTipsMenu',
+                    { 'RM__titleInAudio': isTitleInAudio },
 
                     singleShownLyricColumnKey &&
-                        `_${singleShownLyricColumnKey}LyricColumnOnly_`,
+                        `RM__${singleShownLyricColumnKey}LyricColumnOnly`,
                     isHeightlessLyricColumn ?
-                        '_lyricHeightless_' : '_lyricHeighted_',
+                        'RM__lyricHeightless' : 'RM__lyricHeighted',
 
-                    { '_bothLyricColumnsShown_': !singleShownLyricColumnKey,
-                      '_verseBarHidden_': !isVerseBarAbove && !isVerseBarBelow,
-                      '_verseBarAbove_': isVerseBarAbove,
-                      '_verseBarBelow_': isVerseBarBelow },
+                    { 'RM__bothLyricColumnsShown': !singleShownLyricColumnKey,
+                      'RM__verseBarHidden':
+                          !isVerseBarAbove && !isVerseBarBelow,
+                      'RM__verseBarAbove': isVerseBarAbove,
+                      'RM__verseBarBelow': isVerseBarBelow },
 
                       selectedDotKeys
                 )}

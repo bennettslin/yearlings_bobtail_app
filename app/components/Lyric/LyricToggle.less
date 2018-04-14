@@ -41,11 +41,11 @@
         left: 50%;
         opacity: 1;
         transform: translateX(-50%) scale(1);
-        z-index: @zIndex__dotsOverview;
+        z-index: @zIndex__leftShelf;
     }
 }
 
-.dm__logue, ._lyricExpanded_, ._overviewShown_, ._tipsShown_, ._dotsShown_, ._annotationShown_._navExpanded_ {
+.RM__logue, .RM__lyricExpanded, .RM__overviewShown, .RM__tipsShown, .RM__dotsShown, .RM__annotationShown.RM__navExpanded {
     .Main {
         .expand-button-block {
             opacity: 0;
@@ -54,8 +54,8 @@
     }
 }
 
-._lyricHeightless_ {
-    &._lyricCollapsed_ {
+.RM__lyricHeightless {
+    &.RM__lyricCollapsed {
         .LyricColumn {
             .expand-button-block {
                 opacity: 0;

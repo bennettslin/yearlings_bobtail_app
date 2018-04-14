@@ -24,7 +24,7 @@
 }
 
 .Popup__invisible,
-.dm__overlayShown .Popup__displaysNotInOverlay {
+.RM__overlayShown .Popup__displaysNotInOverlay {
     transition: opacity @popup-transition-duration-out;
     opacity: 0;
 }
@@ -48,13 +48,13 @@
     width: @width__popupAnnotation;
     max-width: @width__popupAnnotation;
 
-    ._mini_
+    .RM__mini
     & {
         // Multiplier is .9, just like for lyric text in mini.
         max-width: @width__popupAnnotation__mini;
     }
 
-    ._phone_
+    .RM__phone
     & {
         // Multiplier is .98, just like for lyric text in phone.
         max-width: @width__popupAnnotation__phone;
@@ -70,7 +70,7 @@
 
     .Popup__invisible
     &,
-    .dm__overlayShown .Popup__displaysNotInOverlay
+    .RM__overlayShown .Popup__displaysNotInOverlay
     & {
         animation: bounceOut @popup-transition-duration-out;
     }
@@ -85,7 +85,7 @@
 
     .Popup__invisible
     &,
-    .dm__overlayShown .Popup__displaysNotInOverlay
+    .RM__overlayShown .Popup__displaysNotInOverlay
     & {
         animation: shrinkOut @popup-transition-duration-out;
     }
@@ -119,15 +119,15 @@
 
 // TODO: Revisit mobile sizing.
 
-// .dm__mobile {
+// .RM__mobile {
 
-//     &:not(._tablet_) {
+//     &:not(.RM__tablet) {
 //         .PopupView__fullSize {
 //             width: ~"calc(100% - @{margin__popupView__mini} * 2)";
 //             height: ~"calc(100% - @{js__length__icon})";
 //         }
 
-//         &._phone_ {
+//         &.RM__phone {
 //             .Popup__displaysInOverlay {
 //                 .PopupView {
 //                     // Make side margin in phone just that much thinner.
@@ -135,7 +135,7 @@
 //                 }
 //             }
 
-//             &._lyricHeightless_ {
+//             &.RM__lyricHeightless {
 //                 .PopupView__fullSize {
 //                     height: ~"calc(100% - @{margin__popupView__mini})";
 //                 }
@@ -143,7 +143,7 @@
 //         }
 
 //         // Reverse width and height when width is greater than height.
-//         &._lyricHeightless_ {
+//         &.RM__lyricHeightless {
 //             .PopupView__fullSize {
 //                 width: ~"calc(100% - @{js__length__icon} * 2)";
 //                 height: ~"calc(100% - @{margin__popupView__mini})";

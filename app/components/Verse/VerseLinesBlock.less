@@ -7,7 +7,7 @@
     display: none;
 }
 
-._rightLyricColumnOnly_ {
+.RM__rightLyricColumnOnly {
     .complete-main {
         display: none;
     }
@@ -17,17 +17,17 @@
     }
 }
 
-._bothLyricColumnsShown_ {
+.RM__bothLyricColumnsShown {
 
-    &.dm__desktop,
-    &._tablet_ {
+    &.RM__desktop,
+    &.RM__tablet {
         // Make font sizes smaller when showing both columns.
         .double-lines-block, .has-side {
             font-size: 0.95em;
         }
     }
 
-    &._mini_ {
+    &.RM__mini {
         // In mini, only has side can still show both columns.
         .has-side {
             font-size: 0.96em * @mini-multiplier;

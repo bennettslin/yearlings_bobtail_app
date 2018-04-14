@@ -43,7 +43,7 @@
 .Menu {
     width: 100%;
 
-    ._phone_
+    .RM__phone
     & {
         height: @js__height__menu__phone;
     }
@@ -64,7 +64,7 @@
         transform @animationDuration__slow,
         max-width @animationDuration__default;
 
-    .dm__overlayShown
+    .RM__overlayShown
     &.width__mainColumn {
         max-width: @js__width__mini;
 
@@ -72,7 +72,7 @@
         transform: translateX(-50%);
     }
 
-    ._phone_
+    .RM__phone
     & {
         height: @js__height__menuTopRow__phone;
     }
@@ -101,7 +101,7 @@
 
     overflow: hidden;
 
-    ._titleInAudio_
+    .RM__titleInAudio
     & {
         /**
          * Don't bother to show if title in audio. Child component also will
@@ -113,7 +113,7 @@
 
 .MenuTopRow__titleTimer__child {
 
-    ._phone_
+    .RM__phone
     & {
         transition: left @animationDuration__default;
 
@@ -126,9 +126,9 @@
         }
     }
 
-    ._phone_.dm__overlayShown
+    .RM__phone.RM__overlayShown
     &,
-    ._phone_.dm__song._lyricExpanded_
+    .RM__phone.RM__song.RM__lyricExpanded
     & {
 
         &:first-child {
@@ -151,37 +151,37 @@
 
     background-color: #8d8;
 
-    ._laptop_
+    .RM__laptop
     &,
-    ._mini_
+    .RM__mini
     & {
         margin: 0 @js__margin__menuChild__narrow;
     }
 
-    ._scoresTipsMain_
+    .RM__scoresTipsMain
     & {
         // If scores tips is hidden, remove audio subfield's right margin.
         margin-right: 0;
     }
 
-    ._titleInAudio_
+    .RM__titleInAudio
     & {
         // If title is hidden, remove audio subfield's left margin.
         margin-left: 0;
     }
 
-    .dm__overlayShown
+    .RM__overlayShown
     & {
         max-width: 100%;
         margin-right: 0;
     }
 
-    .dm__overlayShown:not(._phone_)
+    .RM__overlayShown:not(.RM__phone)
     & {
         margin-left: 0;
     }
 
-    .dm__mobile
+    .RM__mobile
     & {
         justify-content: flex-end;
     }
@@ -193,17 +193,17 @@
 
     box-sizing: border-box;
 
-    ._tablet_
+    .RM__tablet
     & {
         min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__tablet + @js__padding__audio * 3;
     }
 
-    ._mini_
+    .RM__mini
     & {
         min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__mini + @js__padding__audio * 3;
     }
 
-    ._phone_
+    .RM__phone
     & {
         min-width: @AudioButtons-constant + @js__length__icon + @js__padding__audio * 3;
     }
@@ -211,7 +211,7 @@
 
 .MenuTopRow__scoresTips {
 
-    ._scoresTipsMain_
+    .RM__scoresTipsMain
     & {
         /**
          * Don't bother to show if scores tips in main. Child component also
@@ -222,20 +222,20 @@
 
     min-width: @width__childScoresTips;
 
-    ._tablet_
+    .RM__tablet
     & {
-        min-width: @scores-tips-_tablet_;
+        min-width: @scores-tips-RM__tablet;
     }
 
-    ._mini_
+    .RM__mini
     & {
-        min-width: @scores-tips-_mini_;
+        min-width: @scores-tips-RM__mini;
     }
 }
 
 .widths__hiddenInOverlay {
 
-    .dm__overlayShown
+    .RM__overlayShown
     & {
         width: 0;
         min-width: 0;
@@ -250,9 +250,9 @@
 
     transition: bottom @animationDuration__default;
 
-    .dm__overlayShown
+    .RM__overlayShown
     &,
-    .dm__song._lyricExpanded_
+    .RM__song.RM__lyricExpanded
     & {
         bottom: @js__height__audioBanner__bottomRow;
     }

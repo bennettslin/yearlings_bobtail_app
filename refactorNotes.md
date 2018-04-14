@@ -14,7 +14,7 @@ Class names optimised for clarity
 
 Consolidate styles for child with parent selector nesting
 
-Rename DotsOverview
+Rename LeftShelf
 Distinguish DotSlider and Dots
 Distinguish AudioSlider
 
@@ -31,13 +31,12 @@ Dots
 DynamicSvg
 Icon
 Live
-    Main
     Menu (/)
     OverviewLogue
     PopupOverlaid
 Lyric (Remember lyric scroll.)
 Main
-    DotsOverview (do with overviewToggle, dotsToggle, and scoresTips)
+    LeftShelf (do with overviewToggle, dotsToggle, and scoresTips)
     DotsToggle
     OverviewToggle
 Nav (Need to consider last title margin, panels, and consolidate responsive)
@@ -59,7 +58,7 @@ Text
 Theatre (Just rename some children)
 Tips (/)
 Title (/)
-Verse (Remember verse scroll, changed with underscore)
+Verse
 Wiki (/)
 
 AccessManager

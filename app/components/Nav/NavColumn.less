@@ -6,7 +6,7 @@
 .NavColumn {
     height: @js__height__nav;
 
-    .dm__desktop
+    .RM__desktop
     & {
         transition: bottom @animationDuration__default;
         bottom: -@js__height__nav;
@@ -30,7 +30,7 @@
 }
 
 // Hide both carousel and nav in logues.
-._carouselNavShowable_._navExpanded_._lyricHeighted_ {
+.RM__carouselNavShowable.RM__navExpanded.RM__lyricHeighted {
 
     &._mobileNotPhone_ {
         .NavColumn {
@@ -38,7 +38,7 @@
         }
     }
 
-    &.dm__desktop {
+    &.RM__desktop {
         .NavColumn {
             bottom: 0;
         }
