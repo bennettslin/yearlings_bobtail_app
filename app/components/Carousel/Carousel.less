@@ -7,9 +7,9 @@
  * carousel select itself does not use them.
  */
 
- @width__carouselSelect:
- @length__iconLarge * 2
- + @margin__thin * 3;
+//  @width__carouselSelect:
+//  @length__iconLarge * 2
+//  + @margin__thin * 3;
 
 @width__carouselSelect__tablet:
  @length__iconLarge__tablet * 2
@@ -91,15 +91,15 @@
     ._monitor_
     &:after {
         padding-right:
-            @js__width__goldenCord
-            + @width__carouselSelect;
+            @js__width__goldenCord;
+            // + @width__carouselSelect;
     }
 
     ._laptop_
     &:after {
         padding-right:
-            @js__width__uncannyValley
-            + @width__carouselSelect;
+            @js__width__uncannyValley;
+            // + @width__carouselSelect;
     }
 
     ._tablet_

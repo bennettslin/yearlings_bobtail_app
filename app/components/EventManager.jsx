@@ -8,7 +8,7 @@ import AccessManager from './AccessManager'
 import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from '../helpers/dotHelper'
 import { getIsValidScrollingTargetCallback } from '../helpers/domHelper'
-import { getCarouselLeftAlign, getCarouselTopAlign } from '../helpers/responsiveHelper'
+import { getLyricTopAlign } from '../helpers/responsiveHelper'
 
 import { REFERENCE } from '../constants/dots'
 import { DISABLED,
@@ -893,8 +893,8 @@ class EventManager extends Component {
             console.warn(`Scrolling ${selector} into view.`);
 
             const align = isCarousel ?
-                getCarouselLeftAlign(this.props.deviceIndex, this.props.windowWidth, index) :
-                getCarouselTopAlign(this.props.deviceIndex, this.props.isLyricExpanded),
+                null :
+                getLyricTopAlign(this.props.deviceIndex, this.props.isLyricExpanded),
 
                 validTarget = getIsValidScrollingTargetCallback(
                     parentClass

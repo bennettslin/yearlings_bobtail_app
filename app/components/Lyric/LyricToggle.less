@@ -3,7 +3,9 @@
     padding: @margin__thin;
 
     background-color: gray;
-    transition: opacity @animationDuration__default, transform @animationDuration__default;
+    transition:
+        opacity @animationDuration__default,
+        transform @animationDuration__default;
 
     // Needed to position access icon properly.
     .Button {
@@ -17,21 +19,18 @@
     }
 }
 
-@lyric-button-side-padding: 17px;
-@lyric-button-top-padding: 8.5px;
-
 .LyricColumn {
     .lyric-button-block {
-        top: @lyric-button-top-padding;
+        top: @margin__scrollbar / 2;
     }
 
     .ear-button-block {
         // Needed to expand properly in Chrome.
-        right: @lyric-button-side-padding;
+        right: @margin__scrollbar;
     }
 
     .expand-button-block {
-        left: @lyric-button-side-padding;
+        left: @margin__scrollbar;
     }
 }
 

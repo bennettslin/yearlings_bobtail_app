@@ -10,24 +10,24 @@
     ._desktop_
     & {
         transition: bottom @animationDuration__default;
-        bottom: -@length__iconLarge - @margin__thin * 2 - @margin__scrollbar;
+        bottom:
+            -@length__iconLarge
+            - @margin__thin * 2
+            - @margin__scrollbar;
+
         margin-bottom: @margin__scrollbar;
+        margin-right: @margin__scrollbar;
     }
 
     ._mobileNotPhone_
     & {
         transition: top @animationDuration__default;
-        top: -@length__iconLarge__tablet - @margin__thin * 2;
-    }
+        top:
+            -@length__iconLarge__tablet
+            - @margin__thin * 2;
 
-    ._monitor_
-    & {
-        right: @js__width__goldenCord;
-    }
-
-    ._laptop_
-    & {
-        right: @js__width__uncannyValley;
+        margin-top: @margin__thin;
+        margin-right: @margin__thin;
     }
 
     ._desktop_._song_._annotationShown_._carouselExpanded_
