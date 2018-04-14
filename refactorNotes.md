@@ -48,7 +48,7 @@ Popups
     WikiPopup
 Score (/)
 ScoresTips
-Slider (Waiting on rework.)
+Slider (Now just waiting on rework.)
 Stage (Just rename some children)
 Text
 Theatre (Just rename some children)

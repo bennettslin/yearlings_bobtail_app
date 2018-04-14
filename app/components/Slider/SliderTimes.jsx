@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import SliderCursor from './SliderCursor'
+import SliderTimesMask from './SliderTimesMask'
 
 import { getSongTotalTime } from '../../helpers/dataHelper'
 import { getFormattedTime } from '../../helpers/formatHelper'
@@ -71,7 +71,7 @@ SliderTimes = ({
 
     return (
         <div className={cx(
-            'SliderTimes',
+            'SliderTimes__belowCursor',
             'absoluteFullContainer'
         )}>
 
@@ -84,18 +84,23 @@ SliderTimes = ({
                 time={remainTime}
             />
 
-            <SliderCursor>
-                <SliderTime
-                    isSpent
-                    isAboveCursor
-                    time={spentTime}
-                />
+            <SliderTimesMask>
 
-                <SliderTime
-                    isAboveCursor
-                    time={remainTime}
-                />
-            </SliderCursor>
+                <div className={cx(
+                    'SliderTimes__aboveCursor',
+                    'absoluteFullContainer'
+                )}>
+                    <SliderTime
+                        isSpent
+                        time={spentTime}
+                    />
+
+                    <SliderTime
+                        time={remainTime}
+                    />
+                </div>
+
+            </SliderTimesMask>
         </div>
     )
 }

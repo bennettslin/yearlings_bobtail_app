@@ -1,4 +1,7 @@
-// Cursor to show which verse is selected or interactivated.
+/**
+ * The highlighted verse bar behaves like a cursor. This mask allows the slider
+ * time displays to be readable when above the cursor.
+ */
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -19,7 +22,7 @@ const mapStateToProps = ({
     interactivatedVerseIndex
 })
 
-const sliderCursorPropTypes = {
+const sliderTimesMaskPropTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
     selectedVerseIndex: PropTypes.number.isRequired,
@@ -30,7 +33,7 @@ const sliderCursorPropTypes = {
     children: PropTypes.element
 },
 
-SliderCursor = ({
+SliderTimesMask = ({
 
     selectedSongIndex,
     selectedVerseIndex,
@@ -58,18 +61,16 @@ SliderCursor = ({
         totalTime = getSongTotalTime(selectedSongIndex),
 
         leftOffset = beginTime / totalTime * 100,
-        rightOffset = endTime / totalTime * 100,
+        rightOffset = 100 - endTime / totalTime * 100,
 
         cursorStyle = {
-            // left: `${leftOffset}%`,
-            // width: `${(endTime - beginTime) / totalTime * 100}%`,
-            clipPath: `inset(0, ${rightOffset}%, 0, ${leftOffset}%)`
+            clipPath: `inset(0 ${rightOffset}% 0 ${leftOffset}%)`
         }
 
     return (
         <div
             className={cx(
-                'SliderCursor',
+                'SliderTimesMask',
                 'absoluteFullContainer'
             )}
             style={cursorStyle}
@@ -79,6 +80,6 @@ SliderCursor = ({
     )
 }
 
-SliderCursor.propTypes = sliderCursorPropTypes
+SliderTimesMask.propTypes = sliderTimesMaskPropTypes
 
-export default connect(mapStateToProps)(SliderCursor)
+export default connect(mapStateToProps)(SliderTimesMask)
