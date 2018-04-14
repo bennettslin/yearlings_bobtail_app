@@ -428,8 +428,13 @@ export const getWikiUrl = ({
 }) => {
     if (selectedWikiIndex) {
         // Since annotation index is 1-based, it's invalid if 0.
-        const annotationIndex = carouselAnnotationIndex || selectedAnnotationIndex,
-            annotation = getAnnotationObject(selectedSongIndex, annotationIndex),
+        const annotationIndex =
+                carouselAnnotationIndex || selectedAnnotationIndex,
+
+            annotation = getAnnotationObject(
+                selectedSongIndex, annotationIndex
+            ),
+
             partialPath = annotation.annotationAnchors[selectedWikiIndex - 1]
 
         let fullPath
@@ -456,7 +461,9 @@ export const getSingleShownLyricColumnKey = ({
     showOneOfTwoLyricColumns,
     selectedLyricColumnIndex
 }) => {
-    return showOneOfTwoLyricColumns && selectedLyricColumnIndex >= 0 ? LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2] : ''
+    return showOneOfTwoLyricColumns
+        && selectedLyricColumnIndex >= 0 ?
+            LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2] : ''
 }
 
 export const getShowOverlay = ({
