@@ -66,13 +66,21 @@ class VerseBar extends Component {
         return verseObject ? (
             <div
                 className={cx(
-                    'VerseBar-block',
-                    'fontSize__verse',
-                    isAbove ? 'above' : 'below'
+                    'VerseBar',
+                    'flexCentreContainer',
+
+                    isAbove ? 'VerseBar__above' : 'VerseBar__below'
                 )}
                 onWheel={handleVerseBarWheel}
-            >
-                <div className="VerseBar"
+                >
+                <div className={cx(
+                    'VerseBar__child',
+                    'fontSize__verse',
+
+                    isAbove ?
+                        'VerseBar__child__above' :
+                        'VerseBar__child__below'
+                )}
                     onClick={handleVerseBarSelect}
                     onTouchStart={handleVerseBarSelect}
                 >

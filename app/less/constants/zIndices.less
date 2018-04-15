@@ -31,20 +31,17 @@
 // This is above text but below verse bar and buttons.
 @zIndex__lyricAccessIcons: @zIndex__carouselNavButton + 1;
 
-// Selected verse should be above normal text span.
-@zIndex__selectedVerseBar: @zIndex__lyricAccessIcons + 1;
+// Lyric toggle buttons should be higher than lyrics.
+@zIndex__lyricToggle: @zIndex__lyricAccessIcons + 1;
+
+// Selected verse bar should be above lyric column toggles.
+@zIndex__selectedVerseBar: @zIndex__lyricToggle + 1;
 
 // Verse bar text should be even more above.
 @zIndex__verseBarText: @zIndex__selectedVerseBar + 1;
 
-/**
- * Lyric buttons should be higher than everything else in lyric column,
- * including text span.
- */
-@zIndex__lyricColumnButton: @zIndex__verseBarText + 1;
-
 // Score, title, and wiki popups are higher.
-@zIndex__popupOverlay: @zIndex__lyricColumnButton + 1;
+@zIndex__popupOverlay: @zIndex__verseBarText + 1;
 @zIndex__popupOverlayContent: @zIndex__popupOverlay + 1;
 
 // MenuTopRow should be higher than popup overlay.

@@ -1,0 +1,98 @@
+@marginY__verseBar: 8px;
+@offsetY__verseBar__hidden: -50px;
+
+// These are to make room for the lyric toggle buttons.
+@offsetX__verseBar:
+    @margin__scrollbar
+    + @length__iconLarge;
+
+@offsetX__verseBar__tablet:
+    @margin__scrollbar
+    + @length__iconLarge__tablet;
+
+@offsetX__verseBar__mini:
+    @margin__scrollbar
+    + @length__iconLarge__mini;
+
+@offsetX__verseBar__phone:
+    @margin__scrollbar
+    + @js__length__icon;
+
+.VerseBar {
+    position: absolute;
+    width: 100%;
+
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+
+    z-index: @zIndex__selectedVerseBar;
+
+    max-width: ~"calc(100% - @{offsetX__verseBar} * 2)";
+
+    .RM__tablet
+    & {
+        max-width: ~"calc(100% - @{offsetX__verseBar__tablet} * 2)";
+    }
+
+    .RM__mini
+    & {
+        max-width: ~"calc(100% - @{offsetX__verseBar__mini} * 2)";
+    }
+
+    .RM__phone
+    & {
+        max-width: ~"calc(100% - @{offsetX__verseBar__phone} * 2)";
+    }
+}
+
+.VerseBar__above {
+    top: @offsetY__verseBar__hidden;
+    margin-top: @marginY__verseBar;
+    transition:
+        top @animationDuration__fast,
+        transform @animationDuration__fast;
+
+    .RM__verseBarAbove
+    & {
+        top: 0;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+.VerseBar__below {
+    bottom: @offsetY__verseBar__hidden;
+    margin-bottom: @marginY__verseBar;
+    transition:
+        bottom @animationDuration__fast,
+        transform @animationDuration__fast;
+
+    .RM__verseBarBelow
+    & {
+        bottom: 0;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+.VerseBar__child {
+    max-width: 100%;
+
+    margin: 0 5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    transition: background-color @animationDuration__default;
+
+    .RM__sliderMoving
+    & {
+        background-color: @colour__audioNeutral;
+    }
+}
+
+.VerseBar__child__above {
+    box-shadow: @boxShadow__verseBar__above;
+}
+
+.VerseBar__child__below {
+    box-shadow: @boxShadow__verseBar__below;
+}
