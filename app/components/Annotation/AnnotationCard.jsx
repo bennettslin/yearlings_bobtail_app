@@ -124,6 +124,7 @@ AnnotationCardView = ({
 }) => (
     <div className={cx(
         'AnnotationCard',
+        'fontSize__verse',
         'textShadow__background',
         cardDotKeys
     )}>

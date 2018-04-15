@@ -62,7 +62,10 @@ class Tips extends Component {
             <div className={cx(
                 'Tips'
             )}>
-                <div className="Tips__textContainer">
+                <div className={cx(
+                    'Tips__textContainer',
+                    'fontSize__verse'
+                )}>
 
                     {isScoresTipsInMain && (
                         <div className="Tips__textFloatContainer">

@@ -67,6 +67,7 @@ class VerseBar extends Component {
             <div
                 className={cx(
                     'VerseBar-block',
+                    'fontSize__verse',
                     isAbove ? 'above' : 'below'
                 )}
                 onWheel={handleVerseBarWheel}

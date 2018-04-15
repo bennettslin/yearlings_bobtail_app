@@ -1,4 +1,4 @@
-// Component to show individual stanza.
+// Component to show individual box of verses.
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -9,14 +9,14 @@ import LyricVerse from './LyricVerse'
  * CONTAINER *
  *************/
 
-const lyricStanzaDefaultProps = {
+const lyricStanzaCardDefaultProps = {
     inMain: false,
     subsequent: false,
     addSubStanza: false,
     isSub: false
 },
 
-lyricStanzaPropTypes = {
+lyricStanzaCardPropTypes = {
     // From parent.
     stanzaIndex: PropTypes.number,
     stanzaType: PropTypes.string,
@@ -83,7 +83,7 @@ LyricStanzaCard = ({
             }
 
             return (
-                <LyricStanzaView {...other}
+                <LyricStanzaCardView {...other}
                     stanzaArray={stanzaArray}
                     stanzaIndex={shownStanzaIndex}
                     stanzaType={itsStanzaType}
@@ -96,14 +96,14 @@ LyricStanzaCard = ({
     }
 }
 
-LyricStanzaCard.defaultProps = lyricStanzaDefaultProps
-LyricStanzaCard.propTypes = lyricStanzaPropTypes
+LyricStanzaCard.defaultProps = lyricStanzaCardDefaultProps
+LyricStanzaCard.propTypes = lyricStanzaCardPropTypes
 
 /****************
  * PRESENTATION *
  ****************/
 
-const lyricStanzaViewPropTypes = {
+const lyricStanzaCardViewPropTypes = {
     // From parent.
     stanzaIndex: PropTypes.number,
     stanzaArray: PropTypes.array.isRequired,
@@ -111,7 +111,7 @@ const lyricStanzaViewPropTypes = {
     showStanzaTypeAndIndex: PropTypes.bool.isRequired
 },
 
-LyricStanzaView = ({
+LyricStanzaCardView = ({
 
     showStanzaTypeAndIndex,
     stanzaArray,
@@ -153,6 +153,6 @@ LyricStanzaView = ({
     )
 }
 
-LyricStanzaView.propTypes = lyricStanzaViewPropTypes
+LyricStanzaCardView.propTypes = lyricStanzaCardViewPropTypes
 
 export default LyricStanzaCard

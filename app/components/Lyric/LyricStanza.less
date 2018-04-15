@@ -3,7 +3,6 @@
 .LyricStanza {
     display: flex;
     justify-content: center;
-    font-size: @LyricVerse-size;
 }
 
 .LyricStanza__column {
@@ -80,38 +79,6 @@
 
 .offset__stanza__right {
     padding-left: @paddingX__offsetStanza;
-}
-
-.LyricStanza__title {
-    font-size: @fontSize__title;
-}
-
-// Make font size smaller in mini and phone.
-.RM__mini {
-    .LyricStanza,
-    .VerseBar-block,
-    .AnnotationCard,
-    .Tips__textContainer {
-        font-size: @fontSize__verse__mini;
-    }
-
-    .LyricStanza__title {
-        font-size: @fontSize__title__mini;
-    }
-}
-
-.RM__phone {
-    .LyricStanza,
-    .VerseBar-block,
-    .AnnotationCard,
-    .Tips__textContainer {
-        font-size: @fontSize__verse__phone;
-    }
-
-    .LyricStanza__title,
-    .AnnotationTitle {
-        font-size: @fontSize__title__phone;
-    }
 }
 
 // These styles are just for dev purposes.

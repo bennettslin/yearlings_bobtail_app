@@ -212,6 +212,8 @@ LyricUnitView = ({
 
                 unitClassNames,
 
+                isTitleUnit ? 'fontSize__title' : 'fontSize__verse',
+
                 { 'LyricStanza__hasSide': hasSide,
                   'LyricStanza__title': isTitleUnit,
 

@@ -891,7 +891,7 @@ class EventManager extends Component {
             isCarousel = scrollClass === CAROUSEL_SCROLL
 
         if (element) {
-            console.warn(`Scrolling ${selector} into view.`);
+            // console.warn(`Scrolling ${selector} into view.`);
 
             const align = isCarousel ?
                 getCarouselLeftAlign(this.props.deviceIndex, this.props.windowWidth, index) :
@@ -901,14 +901,12 @@ class EventManager extends Component {
                     parentClass
                 )
 
-            console.error(align, isCarousel)
-
             scrollIntoView(element, {
                 time,
                 align,
                 validTarget
-            }, this._scrollElementCallback)
-            // })
+            // }, this._scrollElementCallback)
+            })
         }
     }
 

@@ -27,7 +27,8 @@ AnnotationTitle = ({
 
 }) => (
     <div className={cx(
-        'AnnotationTitle'
+        'AnnotationTitle',
+        'fontSize__title'
         // { 'in-carousel-width': inCarousel }
     )}>
         {annotationTitle === IS_DOT_STANZA ? (

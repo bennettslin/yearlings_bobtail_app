@@ -18,23 +18,33 @@
 
 @js__height__lyricCollapsed: 32%;
 
-@LyricVerse-size: 1em;
+@fontSize__verse: 1em;
 @fontSize__title: 1.5em;
 
-@mini-multiplier: 0.9;
-@fontSize__verse__mini: @LyricVerse-size * @mini-multiplier;
+@multiplier__fontSize__mini: 0.9;
+@fontSize__verse__mini:
+    @fontSize__verse
+    * @multiplier__fontSize__mini;
 @fontSize__title__mini: 1.2em;
 
-@phone-multiplier: 0.8;
-@fontSize__verse__phone: @LyricVerse-size * @phone-multiplier;
+@multiplier__fontSize__phone: 0.8;
+@fontSize__verse__phone:
+    @fontSize__verse
+    * @multiplier__fontSize__phone;
 @fontSize__title__phone: 1em;
 
 @padding__annotation: 5px;
 @paddingX__annotationCard: @padding__annotation;
 
 @width__annotationCard: 354px;
-@width__annotationCard__mini: @width__annotationCard * @mini-multiplier;
-@width__annotationCard__phone: @width__annotationCard * @phone-multiplier;
+
+@width__annotationCard__mini:
+    @width__annotationCard
+    * @multiplier__fontSize__mini;
+
+@width__annotationCard__phone:
+    @width__annotationCard
+    * @multiplier__fontSize__phone;
 
 @width__overviewToggle: 100px;
 @height__overviewToggle: 150px;
