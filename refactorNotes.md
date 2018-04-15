@@ -30,7 +30,8 @@ Live
     Menu (/)
     OverviewLogue
     PopupOverlaid
-Lyric (Remember lyric scroll.)
+Lyric
+LyricColumn
 Main
     LeftShelf (do with overviewToggle, dotsToggle, and scoresTips)
     DotsToggle

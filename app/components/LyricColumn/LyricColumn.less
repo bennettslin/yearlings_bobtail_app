@@ -1,5 +1,11 @@
+@import "./LyricColumn.less";
+@import "./LyricAccess.less";
+@import "./LyricToggle.less";
+
 .LyricColumn {
-    transition: height @animationDuration__default, background-image @animationDuration__default;
+    transition:
+        height @animationDuration__default,
+        background-image @animationDuration__default;
 
     // Keeps elements inside window!
     overflow: hidden;
@@ -29,10 +35,7 @@
     }
 }
 
-.LyricColumn-animatable {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.LyricColumn__animatable {
     overflow-y: hidden;
 
     display: flex;
@@ -58,10 +61,10 @@
 }
 
 .position__lyricColumn {
+    position: absolute;
 
     .RM__desktop
     & {
-        position: absolute;
         width: @js__width__goldenCord;
         height: 100%;
         right: 0;
@@ -74,7 +77,6 @@
 
     .RM__mobile
     & {
-        position: absolute;
         height: @js__height__lyricCollapsed;
         width: 100%;
         bottom: 0;

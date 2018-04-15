@@ -37,7 +37,7 @@ const SliderAccess = ({
     return [(
         <AccessIconsBlock
             key="rewindForward"
-            className="rewind-forward"
+            className="rewindForward"
             accessIconKeys={[
                 AUDIO_REWIND_KEY,
                 AUDIO_FAST_FORWARD_KEY

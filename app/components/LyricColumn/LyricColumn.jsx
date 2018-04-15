@@ -7,7 +7,7 @@ import cx from 'classnames'
 import LyricAccess from './LyricAccess'
 import LyricToggleExpand from './LyricToggleExpand'
 import LyricToggleEar from './LyricToggleEar'
-import Lyric from './Lyric'
+import Lyric from '../Lyric/Lyric'
 import VerseBar from '../verse/VerseBar'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
@@ -214,7 +214,8 @@ LyricColumnView = ({
             onTransitionEnd={handleTransition}
         >
             <div className={cx(
-                    'LyricColumn-animatable',
+                    'LyricColumn__animatable',
+                    'absoluteFullContainer',
                     { 'overrideAnimate': shouldOverrideAnimate }
                 )}
                 onTransitionEnd={handleAnimatableTransition}

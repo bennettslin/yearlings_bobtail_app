@@ -12,7 +12,7 @@ import Menu from './Menu'
 import PopupOverlaid from './PopupOverlaid'
 
 import OverviewLogue from './OverviewLogue'
-import LyricColumn from '../Lyric/LyricColumn'
+import LyricColumn from '../LyricColumn/LyricColumn'
 
 class Live extends Component {
 

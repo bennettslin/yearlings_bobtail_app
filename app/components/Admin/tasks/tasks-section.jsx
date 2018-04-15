@@ -1,6 +1,6 @@
 import React from 'react'
 import TasksBlock from './tasks-block'
-import ProgressFooter from '../progress/progress-footer'
+import ProgressFooter from '../progress/ProgressFooter'
 import ProgressHelper from '../../../helpers/progressHelper'
 
 /*************

@@ -1,4 +1,6 @@
 import React from 'react'
+import cx from 'classnames'
+
 import ProgressHelper from '../../../helpers/progressHelper'
 
 /*************
@@ -44,7 +46,10 @@ const ProgressFooterView = ({
     nextCheckInDate
 
 }) => (
-    <div className="text-cell-wrapper">
+    <div className={cx(
+        'ProgressFooter',
+        'text-cell-wrapper'
+    )}>
         {neededHours &&
             <div className="text-cell footer">
                 {/* <div>{parseInt(neededHours)} - {parseInt(workedHours)} = {parseInt(remainingHours)}h</div> */}

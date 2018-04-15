@@ -7,7 +7,7 @@ module.exports = [
     },
 
     {
-        taskName: `Access annotation title in carousel too`,
+        taskName: `Access annotation title in carousel too.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -55,12 +55,6 @@ module.exports = [
         taskName: `Investigate and then animate tile svgs.`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: `Add auto scroll to lyric column that toggles on with button, and toggles off with manual scroll.`,
-        workedHours: 0,
-        neededHours: 5
     },
 
     {
@@ -248,5 +242,10 @@ module.exports = [
     //     taskName: `Deal with ugliness when forced scrollbar is set.`,
     //     workedHours: 0,
     //     neededHours: 2
+    // },
+    // {
+    //     taskName: `Add auto scroll to lyric column that toggles on with button, and toggles off with manual scroll.`,
+    //     workedHours: 0,
+    //     neededHours: 5
     // },
 ]

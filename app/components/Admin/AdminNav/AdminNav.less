@@ -5,10 +5,10 @@
 
 .AdminNav {
 
-    .progress-bar-mixin(@song-total-colour, @song-filled-colour);
+    .mixin__progressBar(@song-total-colour, @song-filled-colour);
 
     .selected {
-        .progress-bar-mixin(@played-total-colour, @played-filled-colour);
+        .mixin__progressBar(@played-total-colour, @played-filled-colour);
 
         a.text-cell {
             color: @song-link-colour;
