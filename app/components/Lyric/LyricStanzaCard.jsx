@@ -91,6 +91,7 @@ LyricStanzaCard.propTypes = lyricStanzaCardPropTypes
 
 const lyricStanzaCardViewPropTypes = {
     // From parent.
+    addSubstanza: PropTypes.bool.isRequired,
     stanzaIndex: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.number
@@ -117,7 +118,7 @@ LyricStanzaCardView = ({
 
             {stanzaIndex &&
                 <div className={cx(
-                    'stanza-tab',
+                    'LyricStanzaCard__tab',
                     `bgColour__stanza__${stanzaType}`
                 )}>
                     {`${stanzaType}${
@@ -127,7 +128,7 @@ LyricStanzaCardView = ({
             }
 
             <div className={cx(
-                'stanza',
+                'LyricStanzaCard__sheet',
                 `bgColour__stanza__${stanzaType}`
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
