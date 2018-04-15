@@ -18,6 +18,21 @@ export const getIsValidScrollingTargetCallback = (scrollParentClass) => {
     }
 }
 
+export const getPrefixPrependedClassNames = (classNames) => {
+
+    if (!classNames) {
+        return false;
+    }
+
+    const classNamesArray =
+        Array.isArray(classNames) ?
+        classNames : classNames.split(' ')
+
+    return classNamesArray.map(name => (
+        `offset__stanza__${name}`
+    ))
+}
+
 // Not used.
 // export const hasParentWithTagName = (child, parentTagName = '') => {
 //     let node = child

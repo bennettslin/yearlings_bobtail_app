@@ -9,7 +9,7 @@ const LYRIC = 'lyric',
       DOT_STANZA = 'dotStanza',
       TOP_SIDE_STANZA = 'topSideStanza',
       BOTTOM_SIDE_STANZA = 'bottomSideStanza',
-      SUB_STANZA = 'subStanza'
+      SUB_STANZA = 'substanza'
 
 module.exports = {
 

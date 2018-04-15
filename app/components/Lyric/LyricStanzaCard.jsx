@@ -12,8 +12,8 @@ import LyricVerse from './LyricVerse'
 const lyricStanzaCardDefaultProps = {
     inMain: false,
     subsequent: false,
-    addSubStanza: false,
-    isSub: false
+    addSubstanza: false,
+    isSubstanza: false
 },
 
 lyricStanzaCardPropTypes = {
@@ -27,8 +27,8 @@ lyricStanzaCardPropTypes = {
 
     stanzaArray: PropTypes.array,
     inMain: PropTypes.bool.isRequired,
-    addSubStanza: PropTypes.bool.isRequired,
-    isSub: PropTypes.bool.isRequired
+    isSubstanza: PropTypes.bool.isRequired,
+    addSubstanza: PropTypes.bool.isRequired
 },
 
 LyricStanzaCard = ({
@@ -43,54 +43,40 @@ LyricStanzaCard = ({
 
     // From controller.
     stanzaArray,
-    addSubStanza,
+    addSubstanza,
 
     // Passed recursively.
-    isSub,
+    isSubstanza,
 
 ...other }) => {
 
     const { inMain } = other
 
-    // TODO: When does custom-sub-block ever get called?
     if (stanzaArray) {
-        if (addSubStanza) {
-            return (
-                <div className="sub-block offset__stanza__right">
-                    <LyricStanzaCard {...other}
-                        stanzaArray={stanzaArray}
-                        isSub
 
-                        // Not ideal to repeat like this, but oh well.
-                        stanzaType={stanzaType}
-                        substanzaType={substanzaType}
-                        sideStanzaType={sideStanzaType}
-                        sideSubstanzaType={sideSubstanzaType}
-                    />
-                </div>
-            )
+        const shownStanzaIndex =
+            inMain
+            && !subsequent
+            && !isSubstanza
+            && !addSubstanza
+            && stanzaIndex
+
+        let stanzaTypeLabel
+
+        if (inMain) {
+            stanzaTypeLabel = isSubstanza ? substanzaType : stanzaType
         } else {
-            const shownStanzaIndex = inMain && !isSub ?
-                    stanzaIndex : undefined,
-                showStanzaTypeAndIndex = !subsequent && !!shownStanzaIndex
-
-            let itsStanzaType
-
-            if (inMain) {
-                itsStanzaType = isSub ? substanzaType : stanzaType
-            } else {
-                itsStanzaType = isSub ? sideSubstanzaType : sideStanzaType
-            }
-
-            return (
-                <LyricStanzaCardView {...other}
-                    stanzaArray={stanzaArray}
-                    stanzaIndex={shownStanzaIndex}
-                    stanzaType={itsStanzaType}
-                    showStanzaTypeAndIndex={showStanzaTypeAndIndex}
-                />
-            )
+            stanzaTypeLabel = isSubstanza ? sideSubstanzaType : sideStanzaType
         }
+
+        return (
+            <LyricStanzaCardView {...other}
+                addSubstanza={addSubstanza}
+                stanzaArray={stanzaArray}
+                stanzaIndex={shownStanzaIndex}
+                stanzaType={stanzaTypeLabel}
+            />
+        )
     } else {
         return null
     }
@@ -105,15 +91,17 @@ LyricStanzaCard.propTypes = lyricStanzaCardPropTypes
 
 const lyricStanzaCardViewPropTypes = {
     // From parent.
-    stanzaIndex: PropTypes.number,
+    stanzaIndex: PropTypes.oneOfType([
+        PropTypes.bool,
+        PropTypes.number
+    ]),
     stanzaArray: PropTypes.array.isRequired,
-    stanzaType: PropTypes.string.isRequired,
-    showStanzaTypeAndIndex: PropTypes.bool.isRequired
+    stanzaType: PropTypes.string.isRequired
 },
 
 LyricStanzaCardView = ({
 
-    showStanzaTypeAndIndex,
+    addSubstanza,
     stanzaArray,
     stanzaIndex,
     stanzaType,
@@ -121,14 +109,20 @@ LyricStanzaCardView = ({
 ...other }) => {
 
     return (
-        <div className="LyricStanzaCard">
+        <div className={cx(
+            'LyricStanzaCard',
+            addSubstanza && 'offset__stanza__overlap',
+            addSubstanza && 'offset__stanza__right'
+        )}>
 
-            {showStanzaTypeAndIndex &&
+            {stanzaIndex &&
                 <div className={cx(
                     'stanza-tab',
                     `bgColour__stanza__${stanzaType}`
                 )}>
-                    {stanzaType}{stanzaIndex !== -1 ? ` ${stanzaIndex}` : ''}
+                    {`${stanzaType}${
+                        stanzaIndex !== -1 ? ` ${stanzaIndex}` : ''
+                    }`}
                 </div>
             }
 

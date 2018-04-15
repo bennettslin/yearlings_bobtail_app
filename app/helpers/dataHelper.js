@@ -398,9 +398,9 @@ const _parseLyrics = (lyricEntity, selectedVerseIndex) => {
                 return childSelectedLyric || _parseLyrics(childLyric, selectedVerseIndex)
             }, null)
 
-            // Object with verseIndex key not found, so dig into subStanza.
-        } else if (lyricEntity.subStanza) {
-            return _parseLyrics(lyricEntity.subStanza, selectedVerseIndex)
+            // Object with verseIndex key not found, so dig into substanza.
+        } else if (lyricEntity.substanza) {
+            return _parseLyrics(lyricEntity.substanza, selectedVerseIndex)
         }
     }
 }

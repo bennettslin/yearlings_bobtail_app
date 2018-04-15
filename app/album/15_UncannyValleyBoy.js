@@ -603,7 +603,7 @@ module.exports = {
                         lyric: `the houses you've betrayed.`
                     }
                 ],
-                subStanza: [
+                substanza: [
                     {
                         time: 70,
                         lyric: {
@@ -701,7 +701,7 @@ module.exports = {
                         lyric: `over suburbia…`
                     }
                 ],
-                subStanza: [
+                substanza: [
                     {
                         time: 82,
                         lyric: {
@@ -1082,7 +1082,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                subStanza: [
+                substanza: [
                     {
                         time: 150,
                         lyric: {
@@ -1144,7 +1144,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                subStanza: [
+                substanza: [
                     {
                         time: 157,
                         lyric: {
@@ -1249,7 +1249,7 @@ module.exports = {
                         ]
                     }
                 ],
-                subStanza: [
+                substanza: [
                     {
                         time: 168,
                         lyric: {
@@ -1320,7 +1320,7 @@ module.exports = {
                         }
                     }
                 ],
-                subStanza: [
+                substanza: [
                     {
                         time: 181,
                         lyric: {
@@ -1426,7 +1426,7 @@ module.exports = {
                     },
                     {
                         stanzaMap: true,
-                        subStanza: [
+                        substanza: [
                             {
                                 lyric: {
                                     anchor: `…Maranatha!`,

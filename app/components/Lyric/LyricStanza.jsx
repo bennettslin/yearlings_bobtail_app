@@ -8,6 +8,7 @@ import LyricStanzaCard from './LyricStanzaCard'
 import LyricStanzaDot from './LyricStanzaDot'
 import { TITLE } from '../../constants/lyrics'
 import { getLyricUnitArray } from '../../helpers/dataHelper'
+import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -81,13 +82,13 @@ class LyricStanza extends Component {
 
               subsequent,
               dotStanza,
-              subStanza,
+              substanza,
               topSideStanza,
               bottomSideStanza } = unitMapObject,
 
             // This exists solely for "Maranatha."
-            topSideSubStanza = topSideStanza ?
-                topSideStanza[topSideStanza.length - 1].subStanza : null,
+            topSideSubstanza = topSideStanza ?
+                topSideStanza[topSideStanza.length - 1].substanza : null,
 
             isTitleUnit = unitIndex === 0,
 
@@ -120,10 +121,10 @@ class LyricStanza extends Component {
                 sideSubstanzaType={sideSubstanzaType}
                 subsequent={subsequent}
                 dotStanza={dotStanza}
-                subStanza={subStanza}
+                substanza={substanza}
                 topSideStanza={topSideStanza}
                 bottomSideStanza={bottomSideStanza}
-                topSideSubStanza={topSideSubStanza}
+                topSideSubstanza={topSideSubstanza}
                 hasSide={hasSide}
                 isDotOnly={isDotOnly}
                 isSideBottomOnly={isSideBottomOnly}
@@ -151,10 +152,10 @@ lyricUnitViewPropTypes = {
     // sceneIndex: PropTypes.number,
 
     dotStanza: PropTypes.object,
-    subStanza: PropTypes.array,
+    substanza: PropTypes.array,
     topSideStanza: PropTypes.array,
     bottomSideStanza: PropTypes.array,
-    topSideSubStanza: PropTypes.array,
+    topSideSubstanza: PropTypes.array,
     subsequent: PropTypes.bool.isRequired,
 
     hasSide: PropTypes.bool.isRequired,
@@ -179,10 +180,10 @@ LyricUnitView = ({
     // sceneIndex,
 
     dotStanza,
-    subStanza,
+    substanza,
     topSideStanza,
     bottomSideStanza,
-    topSideSubStanza,
+    topSideSubstanza,
 
     hasSide,
     isDotOnly,
@@ -198,10 +199,7 @@ LyricUnitView = ({
             handleLyricAnnotationSelect } = other,
 
         // Left, right, or overlap, or a combination.
-        unitClassNames = unitClassName &&
-            unitClassName.split(' ').map(name => (
-                `offset__stanza__${name}`
-            ))
+        unitClassNames = getPrefixPrependedClassNames(unitClassName)
 
     return (
         <div
@@ -240,8 +238,8 @@ LyricUnitView = ({
                     />
                     <LyricStanzaCard {...other}
                         inMain
-                        addSubStanza
-                        stanzaArray={subStanza}
+                        addSubstanza
+                        stanzaArray={substanza}
                         truncatableMain={hasSide}
                     />
                 </div>
@@ -260,8 +258,8 @@ LyricUnitView = ({
                         stanzaArray={bottomSideStanza}
                     />
                     <LyricStanzaCard {...other}
-                        addSubStanza
-                        stanzaArray={topSideSubStanza}
+                        addSubstanza
+                        stanzaArray={topSideSubstanza}
                     />
                 </div>
             }

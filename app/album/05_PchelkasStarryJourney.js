@@ -401,7 +401,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                subStanza: [
+                substanza: [
                     {
                         time: 34,
                         lyric: {

@@ -1512,7 +1512,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                subStanza: [
+                substanza: [
                     {
                         time: 128,
                         lyric: {
@@ -1612,7 +1612,7 @@ module.exports = {
             {
                 unitMap: true,
                 unitClassName: OVERLAP,
-                subStanza: [
+                substanza: [
                     {
                         time: 135,
                         lyric: {

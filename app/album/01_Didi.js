@@ -433,7 +433,7 @@ module.exports = {
                 unitMap: true,
                 stanzaType: PRECHORUS,
                 substanzaType: RESPONSE,
-                subStanza: [
+                substanza: [
                     {
                         time: 97,
                         lyric: {

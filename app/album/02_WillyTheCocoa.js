@@ -381,7 +381,7 @@ module.exports = {
                 stanzaType: VERSES,
                 substanzaType: RHYME,
                 subsequent: true,
-                subStanza: [
+                substanza: [
                     {
                         time: 30,
                         lyric: {
@@ -840,7 +840,7 @@ module.exports = {
                 stanzaType: VERSES,
                 substanzaType: RHYME,
                 subsequent: true,
-                subStanza: [
+                substanza: [
                     {
                         time: 126,
                         lyric: {
