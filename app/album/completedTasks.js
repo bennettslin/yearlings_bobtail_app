@@ -2792,4 +2792,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Bring back lyric scroll helper for offsetting carousel scrolling.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

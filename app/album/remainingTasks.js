@@ -1,12 +1,6 @@
 module.exports = [
 
     {
-        taskName: `Bring back lyric scroll helper for offsetting carousel scrolling.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Access annotation title in carousel too.`,
         workedHours: 0,
         neededHours: 1
