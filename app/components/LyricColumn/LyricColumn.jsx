@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import LyricAccess from './LyricAccess'
+import LyricColumnAccess from './LyricColumnAccess'
 import LyricToggleExpand from './LyricToggleExpand'
 import LyricToggleEar from './LyricToggleEar'
 import Lyric from '../Lyric/Lyric'
@@ -221,7 +221,7 @@ LyricColumnView = ({
                 completeHeightTransition={completeHeightTransition}
             />
 
-            <LyricAccess />
+            <LyricColumnAccess />
         </div>
     )
 }

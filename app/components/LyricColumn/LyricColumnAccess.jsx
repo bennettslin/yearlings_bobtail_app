@@ -38,7 +38,7 @@ const lyricAccessPropTypes = {
     interactivatedVerseIndex: PropTypes.number.isRequired
 }
 
-const LyricAccess = ({
+const LyricColumnAccess = ({
 
     isLyricExpanded,
     selectedAnnotationIndex,
@@ -73,7 +73,7 @@ const LyricAccess = ({
         showEnter = showLeftRight && interactivatedVerseIndex < 0
 
     return (
-        <div className="LyricAccess-row">
+        <div className="LyricColumnAccess-row">
             <div className="access-icons-group">
                 <AccessIconsBlock
                     className="left-right"
@@ -110,6 +110,6 @@ const LyricAccess = ({
     )
 }
 
-LyricAccess.propTypes = lyricAccessPropTypes
+LyricColumnAccess.propTypes = lyricAccessPropTypes
 
-export default connect(mapStateToProps)(LyricAccess)
+export default connect(mapStateToProps)(LyricColumnAccess)
