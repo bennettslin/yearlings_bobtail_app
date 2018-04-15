@@ -37,14 +37,11 @@
 
 .LyricColumn__animatable {
     overflow-y: hidden;
-
-    display: flex;
-    justify-content: center;
-
-    transition: opacity @animationDuration__default,
-                transform @animationDuration__default;
+    transition: opacity @animationDuration__default;
 
     .RM__logue
+    &,
+    .RM__song .renderUnready
     & {
         opacity: 0;
     }
@@ -52,11 +49,6 @@
     .RM__song .renderReady
     & {
         opacity: 1;
-    }
-
-    .RM__song .renderUnready
-    & {
-        opacity: 0;
     }
 }
 
