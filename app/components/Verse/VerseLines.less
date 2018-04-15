@@ -1,19 +1,22 @@
-.double-lines-block {
+.VerseLines__double {
     display: flex;
     justify-content: space-between;
 }
 
-.truncated-main {
+.VerseLine__truncated {
     display: none;
+
+    .RM__rightLyricColumnOnly
+    & {
+        display: inline;
+    }
 }
 
-.RM__rightLyricColumnOnly {
-    .complete-main {
-        display: none;
-    }
+.VerseLine__truncatable {
 
-    .truncated-main {
-        display: inline;
+    .RM__rightLyricColumnOnly
+    & {
+        display: none;
     }
 }
 
@@ -22,7 +25,7 @@
     &.RM__desktop,
     &.RM__tablet {
         // Make font sizes smaller when showing both columns.
-        .double-lines-block, .LyricStanza__hasSide {
+        .VerseLines__double, .LyricStanza__hasSide {
             font-size: 0.95em;
         }
     }

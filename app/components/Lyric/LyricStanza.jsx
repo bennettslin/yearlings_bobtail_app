@@ -234,13 +234,13 @@ LyricUnitView = ({
                     <LyricStanzaCard {...other}
                         inMain
                         stanzaArray={unitArray}
-                        truncatableMain={hasSide}
+                        isTruncatable={hasSide}
                     />
                     <LyricStanzaCard {...other}
                         inMain
                         addSubstanza
                         stanzaArray={substanza}
-                        truncatableMain={hasSide}
+                        isTruncatable={hasSide}
                     />
                 </div>
             }

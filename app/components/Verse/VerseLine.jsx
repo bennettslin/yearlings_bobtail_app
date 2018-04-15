@@ -17,7 +17,8 @@ const mapStateToProps = ({
 class VerseLine extends Component {
 
     static defaultProps = {
-        inVerseBar: false
+        inVerseBar: false,
+        isTruncatable: false
     }
 
     static propTypes = {
@@ -31,6 +32,7 @@ class VerseLine extends Component {
             PropTypes.object
         ]).isRequired,
 
+        isTruncatable: PropTypes.bool.isRequired,
         inVerseBar: PropTypes.bool.isRequired,
         columnKey: PropTypes.string.isRequired
     }
@@ -58,13 +60,15 @@ class VerseLine extends Component {
 
     render() {
         const { columnKey,
+                isTruncatable,
                 ...other } = this.props
 
         return (
             <div
                 className={cx(
                     'VerseLine',
-                    { [columnKey]: columnKey !== TITLE }
+                    { [columnKey]: columnKey !== TITLE,
+                      'VerseLine__truncatable': isTruncatable }
                 )}
             >
                 <TextBlock {...other}

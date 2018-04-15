@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import VerseLinesBlock from './VerseLinesBlock'
+import VerseLines from './VerseLines'
 import VerseAudioButton from './VerseAudioButton'
 import VerseAudioIndicator from './VerseAudioIndicator'
 import { getVerseUnitClassName, getSliderStatusClassName } from '../../helpers/formatHelper'
@@ -265,7 +265,7 @@ VerseUnitView = ({
                 />
             )}
 
-            <VerseLinesBlock {...other} />
+            <VerseLines {...other} />
         </div>
     )
 }
