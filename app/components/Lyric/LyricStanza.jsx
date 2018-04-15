@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import LyricStanzaText from './LyricStanzaText'
+import LyricStanzaCard from './LyricStanzaCard'
 import LyricStanzaDot from './LyricStanzaDot'
 import { TITLE } from '../../constants/lyrics'
 import { getLyricUnitArray } from '../../helpers/dataHelper'
@@ -68,7 +68,7 @@ class LyricStanza extends Component {
              * special formatting for custom sub blocks.
              */
             { unitClassName,
-              sceneIndex,
+            //   sceneIndex,
 
               stanzaIndex,
               stanzaType,
@@ -93,7 +93,7 @@ class LyricStanza extends Component {
 
             hasSide = !!(topSideStanza || bottomSideStanza),
             isDotOnly = !!dotStanza && unitArray.length === 1,
-            isBottomOnly = !topSideStanza && !!bottomSideStanza,
+            isSideBottomOnly = !topSideStanza && Boolean(bottomSideStanza),
 
             /**
              * If slider touched, compare unit to slider verse. Otherwise,
@@ -110,7 +110,7 @@ class LyricStanza extends Component {
             <LyricUnitView {...other}
                 isTitleUnit={isTitleUnit}
                 unitClassName={unitClassName}
-                sceneIndex={sceneIndex}
+                // sceneIndex={sceneIndex}
                 unitIndex={unitIndex}
                 stanzaIndex={stanzaIndex}
                 unitArray={unitArray}
@@ -126,7 +126,7 @@ class LyricStanza extends Component {
                 topSideSubStanza={topSideSubStanza}
                 hasSide={hasSide}
                 isDotOnly={isDotOnly}
-                isBottomOnly={isBottomOnly}
+                isSideBottomOnly={isSideBottomOnly}
                 verseAfterUnit={verseAfterUnit}
                 verseBeforeUnit={verseBeforeUnit}
                 verseInUnit={verseInUnit}
@@ -148,7 +148,7 @@ lyricUnitViewPropTypes = {
     unitArray: PropTypes.array.isRequired,
     isTitleUnit: PropTypes.bool.isRequired,
     unitClassName: PropTypes.string,
-    sceneIndex: PropTypes.number,
+    // sceneIndex: PropTypes.number,
 
     dotStanza: PropTypes.object,
     subStanza: PropTypes.array,
@@ -159,7 +159,7 @@ lyricUnitViewPropTypes = {
 
     hasSide: PropTypes.bool.isRequired,
     isDotOnly: PropTypes.bool.isRequired,
-    isBottomOnly: PropTypes.bool.isRequired,
+    isSideBottomOnly: PropTypes.bool.isRequired,
     verseBeforeUnit: PropTypes.bool.isRequired,
     verseAfterUnit: PropTypes.bool.isRequired,
     verseInUnit: PropTypes.bool.isRequired,
@@ -176,7 +176,7 @@ LyricUnitView = ({
     isTitleUnit,
     unitClassName,
     unitIndex,
-    sceneIndex,
+    // sceneIndex,
 
     dotStanza,
     subStanza,
@@ -186,7 +186,7 @@ LyricUnitView = ({
 
     hasSide,
     isDotOnly,
-    isBottomOnly,
+    isSideBottomOnly,
 
     verseBeforeUnit,
     verseAfterUnit,
@@ -195,60 +195,71 @@ LyricUnitView = ({
 ...other }) => {
 
     const { subsequent,
-            handleLyricAnnotationSelect } = other
+            handleLyricAnnotationSelect } = other,
+
+        // Left, right, or overlap, or a combination.
+        unitClassNames = unitClassName &&
+            unitClassName.split(' ').map(name => (
+                `offset__stanza__${name}`
+            ))
 
     return (
         <div
             className={cx(
                 'LyricStanza',
-                unitIndex && `unit-${unitIndex}`,
-                sceneIndex && `scene-${sceneIndex}`,
-                unitClassName,
-                { 'has-side': hasSide,
-                  'custom-sub-block': unitClassName,
-                  'title-unit': isTitleUnit,
+                unitIndex && `stanza__${unitIndex}`,
+                // sceneIndex && `scene-${sceneIndex}`,
+
+                unitClassNames,
+
+                { 'LyricStanza__hasSide': hasSide,
+                  'LyricStanza__title': isTitleUnit,
 
                   // It's only ever one of these three.
-                  'verse-before-unit': verseBeforeUnit,
-                  'verse-after-unit': verseAfterUnit,
-                  'verse-in-unit': verseInUnit,
+                  'LyricStanza__verseBefore': verseBeforeUnit,
+                  'LyricStanza__verseAfter': verseAfterUnit,
+                  'LyricStanza__verseIn': verseInUnit },
 
-                  subsequent }
+                subsequent ?
+                    'LyricStanza__subsequent' :
+                    'LyricStanza__notSubsequent'
             )}
         >
             {!isDotOnly &&
                 <div className={cx(
-                    'stanza-block',
-                    'main'
+                    'LyricStanza__column__text',
+                    'LyricStanza__column',
+                    'LyricStanza__column__main'
                 )}>
-                    <LyricStanzaText {...other}
+                    <LyricStanzaCard {...other}
+                        inMain
                         stanzaArray={unitArray}
                         truncatableMain={hasSide}
-                        inMain
                     />
-                    <LyricStanzaText {...other}
+                    <LyricStanzaCard {...other}
+                        inMain
+                        addSubStanza
                         stanzaArray={subStanza}
                         truncatableMain={hasSide}
-                        inMain
-                        addSub
                     />
                 </div>
             }
             {hasSide &&
                 <div className={cx(
-                    'stanza-block',
-                    'side',
-                    { 'bottom-only': isBottomOnly }
+                    'LyricStanza__column__text',
+                    'LyricStanza__column',
+                    'LyricStanza__column__side',
+                    { 'LyricStanza__column__sideBottomOnly': isSideBottomOnly }
                 )}>
-                    <LyricStanzaText {...other}
+                    <LyricStanzaCard {...other}
                         stanzaArray={topSideStanza}
                     />
-                    <LyricStanzaText {...other}
+                    <LyricStanzaCard {...other}
                         stanzaArray={bottomSideStanza}
                     />
-                    <LyricStanzaText {...other}
+                    <LyricStanzaCard {...other}
+                        addSubStanza
                         stanzaArray={topSideSubStanza}
-                        addSub
                     />
                 </div>
             }

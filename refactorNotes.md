@@ -31,7 +31,7 @@ Live
     OverviewLogue
     PopupOverlaid
 Lyric
-LyricColumn
+LyricColumn (Waiting on access.)
 Main
     LeftShelf (do with overviewToggle, dotsToggle, and scoresTips)
     DotsToggle

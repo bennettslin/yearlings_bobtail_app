@@ -1,5 +1,5 @@
 @import "./LyricStanzaDot.less";
-@import "./LyricStanzaText.less";
+@import "./LyricStanzaCard.less";
 @import "./LyricStanza.less";
 
 @paddingY__lyrics: 20px;
@@ -7,7 +7,6 @@
 .Lyric {
     width: 100%;
     overflow-y: scroll;
-    padding: 0 5px;
 
     &:focus {
         outline: none;
@@ -17,10 +16,6 @@
 .Lyric__lyrics {
     padding: @paddingY__lyrics 0;
     line-height: 150%;
-
-    a {
-        font-weight: normal;
-    }
 }
 
 .gradientMask__lyricColumn__mobileCollapsed {

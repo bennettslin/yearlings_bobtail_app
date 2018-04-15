@@ -12,7 +12,7 @@ import LyricVerse from './LyricVerse'
 const lyricStanzaDefaultProps = {
     inMain: false,
     subsequent: false,
-    addSub: false,
+    addSubStanza: false,
     isSub: false
 },
 
@@ -27,11 +27,11 @@ lyricStanzaPropTypes = {
 
     stanzaArray: PropTypes.array,
     inMain: PropTypes.bool.isRequired,
-    addSub: PropTypes.bool.isRequired,
+    addSubStanza: PropTypes.bool.isRequired,
     isSub: PropTypes.bool.isRequired
 },
 
-LyricStanzaText = ({
+LyricStanzaCard = ({
 
     // From props.
     stanzaIndex,
@@ -43,7 +43,7 @@ LyricStanzaText = ({
 
     // From controller.
     stanzaArray,
-    addSub,
+    addSubStanza,
 
     // Passed recursively.
     isSub,
@@ -52,11 +52,12 @@ LyricStanzaText = ({
 
     const { inMain } = other
 
+    // TODO: When does custom-sub-block ever get called?
     if (stanzaArray) {
-        if (addSub) {
+        if (addSubStanza) {
             return (
-                <div className="sub-block custom-sub-block right">
-                    <LyricStanzaText {...other}
+                <div className="sub-block offset__stanza__right">
+                    <LyricStanzaCard {...other}
                         stanzaArray={stanzaArray}
                         isSub
 
@@ -95,8 +96,8 @@ LyricStanzaText = ({
     }
 }
 
-LyricStanzaText.defaultProps = lyricStanzaDefaultProps
-LyricStanzaText.propTypes = lyricStanzaPropTypes
+LyricStanzaCard.defaultProps = lyricStanzaDefaultProps
+LyricStanzaCard.propTypes = lyricStanzaPropTypes
 
 /****************
  * PRESENTATION *
@@ -120,7 +121,8 @@ LyricStanzaView = ({
 ...other }) => {
 
     return (
-        <div className="LyricStanzaText">
+        <div className="LyricStanzaCard">
+
             {showStanzaTypeAndIndex &&
                 <div className={cx(
                     'stanza-tab',
@@ -153,4 +155,4 @@ LyricStanzaView = ({
 
 LyricStanzaView.propTypes = lyricStanzaViewPropTypes
 
-export default LyricStanzaText
+export default LyricStanzaCard

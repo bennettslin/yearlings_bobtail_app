@@ -6,20 +6,24 @@
     }
 
     .Button {
-        transition: width @animationDuration__default,
-                    height @animationDuration__default;
+        transition:
+            width @animationDuration__default,
+            height @animationDuration__default;
+
         height: 0;
         width: 0;
     }
 
-    &.stanza-block {
-        transition: margin-top @animationDuration__default,
-                    margin-left @animationDuration__default;
+    &.LyricStanza__column {
+        transition:
+            margin-top @animationDuration__default,
+            margin-left @animationDuration__default;
     }
 
     .dot .icon-canvas {
-        transition: background-color @animationDuration__fast,
-                    border @animationDuration__fast;
+        transition:
+            background-color @animationDuration__fast,
+            border @animationDuration__fast;
     }
 
     .overrideAnimate
@@ -28,7 +32,7 @@
             transition: none;
         }
 
-        &.stanza-block {
+        &.LyricStanza__column {
             transition: none;
         }
 

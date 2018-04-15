@@ -1,106 +1,12 @@
-@stanza-block-margin: 10px;
+@marginX__stanzaChildColumn: 10px;
 
 .LyricStanza {
     display: flex;
     justify-content: center;
     font-size: @LyricVerse-size;
-
-    /**
-     * Apply margin top to stanza block rather than lyrics unit, so that
-     * bottom dot stanza can override it when faded out.
-     */
-    &:not(:first-child):not(.subsequent) {
-        .stanza-block:not(.LyricStanzaDot) {
-            margin-top: @margin__lyricUnit;
-        }
-    }
-
-    &.subsequent {
-        .stanza-block {
-            margin-top: @margin__lyricUnit - @height__stanzaTypeTab - 2.5px;
-        }
-    }
-
-    // These styles are just for dev purposes.
-    // &.verse-before-unit {
-    //     background-color: rgba(240, 200, 200, 0.5);
-    // }
-    //
-    // &.verse-after-unit {
-    //     background-color: rgba(240, 240, 200, 0.5);
-    // }
-    //
-    // &.verse-in-unit {
-    //     background-color: rgba(200, 200, 240, 0.5);
-    // }
-
-    &.scene-1 {
-        background-color: rgba(240, 200, 200, 0.5);
-    }
-
-    &.scene-2 {
-        background-color: rgba(200, 240, 200, 0.5);
-    }
-
-    &.scene-3 {
-        background-color: rgba(200, 200, 240, 0.5);
-    }
-
-    &.scene-4 {
-        background-color: rgba(240, 240, 200, 0.5);
-    }
-
-    &.scene-5 {
-        background-color: rgba(200, 240, 240, 0.5);
-    }
-
-    &.scene-6 {
-        background-color: rgba(240, 200, 240, 0.5);
-    }
-
-    &.scene-7 {
-        background-color: rgba(240, 240, 160, 0.5);
-    }
-
-    &.scene-8 {
-        background-color: rgba(160, 240, 240, 0.5);
-    }
-
-    &.scene-9 {
-        background-color: rgba(240, 160, 240, 0.5);
-    }
-
-    &.scene-10 {
-        background-color: rgba(240, 200, 160, 0.5);
-    }
-
-    &.scene-11 {
-        background-color: rgba(160, 240, 200, 0.5);
-    }
-
-    &.scene-12 {
-        background-color: rgba(200, 160, 240, 0.5);
-    }
 }
 
-.title-unit {
-    font-size: @lyric-title-size;
-
-    .stanza {
-
-        @title-verse-padding: 15px;
-
-        .verse {
-            padding: @title-verse-padding;
-
-            .VerseAudioButton-block {
-                margin-top: -@title-verse-padding;
-            }
-        }
-    }
-}
-
-.stanza-block {
+.LyricStanza__column {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -113,82 +19,110 @@
      */
     max-width: 640px;
 
+    .LyricStanza__subsequent
+    & {
+        margin-top:
+            @margin__lyricUnit
+            - @height__stanzaTypeTab
+            - 2.5px;
+    }
+}
+
+.LyricStanza__column__text {
+
     // Dots stanza will have this style only if not hidden.
-    &:not(.LyricStanzaDot):not(:first-child) {
-        margin-left: @stanza-block-margin;
+    &:not(:first-child) {
+        margin-left: @marginX__stanzaChildColumn;
     }
 
-    &.main {
-        // Account for verse audio button and its box shadow.
-        padding-left: @verse-padding + 5px;
-    }
-
-    &.side {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        &.bottom-only {
-            justify-content: flex-end;
-        }
-    }
-
-    .sub-block {
-        margin-top: -@stanza-overlap-margin;
-        display: flex;
+    /**
+     * Apply margin top to stanza block rather than lyrics unit, so that
+     * bottom dot stanza can override it when faded out.
+     */
+    .LyricStanza__notSubsequent:not(:first-child)
+    & {
+        margin-top: @margin__lyricUnit;
     }
 }
 
-// TODO: Can these be animated?
-// Rules to show or hide stanzas when only one lyric column is shown.
-.RM__leftLyricColumnOnly {
+.LyricStanza__column__main {
+    // Account for verse audio button and its box shadow.
+    padding-left: @verse-padding + 5px;
+}
 
-    .stanza-block {
+.LyricStanza__column__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    // Rules to show or hide stanzas when only one lyric column is shown.
+    .RM__leftLyricColumnOnly
+    & {
         // Hide side stanzas when only left lyric column is shown.
-        &.side {
-            display: none;
-        }
+        display: none;
     }
 }
 
-@custom-sub-block-side-padding: 15%;
-@stanza-overlap-margin: 6.5px;
-
-.custom-sub-block {
-    &.left {
-        padding-right: @custom-sub-block-side-padding;
-    }
-    &.overlap {
-        margin-top: -@stanza-overlap-margin;
-    }
+.LyricStanza__column__sideBottomOnly {
+    justify-content: flex-end;
 }
 
-.stanza-block:not(.side) {
-    .custom-sub-block {
-        &.right {
-            padding-left: @custom-sub-block-side-padding;
-        }
-    }
+@paddingX__offsetStanza: 17%;
+@marginY__offsetStanza__overlap: 6.5px;
+
+.offset__stanza__left {
+    padding-right: @paddingX__offsetStanza;
+}
+
+.offset__stanza__overlap {
+    margin-top: -@marginY__offsetStanza__overlap;
+}
+
+.offset__stanza__right {
+    padding-left: @paddingX__offsetStanza;
+}
+
+.LyricStanza__title {
+    font-size: @fontSize__title;
 }
 
 // Make font size smaller in mini and phone.
 .RM__mini {
-    .LyricStanza, .VerseBar-block, .AnnotationCard, .tips-text {
-        font-size: @mini-verse-size;
+    .LyricStanza,
+    .VerseBar-block,
+    .AnnotationCard,
+    .Tips__textContainer {
+        font-size: @fontSize__verse__mini;
     }
 
-    .title-unit {
-        font-size: @mini-title-size;
+    .LyricStanza__title {
+        font-size: @fontSize__title__mini;
     }
 }
 
 .RM__phone {
-    .LyricStanza, .VerseBar-block, .AnnotationCard, .tips-text {
-        font-size: @phone-verse-size;
+    .LyricStanza,
+    .VerseBar-block,
+    .AnnotationCard,
+    .Tips__textContainer {
+        font-size: @fontSize__verse__phone;
     }
 
-    .title-unit, .AnnotationTitle {
-        font-size: @phone-title-size;
+    .LyricStanza__title,
+    .AnnotationTitle {
+        font-size: @fontSize__title__phone;
     }
+}
+
+// These styles are just for dev purposes.
+.LyricStanza__verseBefore {
+    background-color: rgba(240, 200, 200, 0.5);
+}
+
+.LyricStanza__verseAfter {
+    background-color: rgba(240, 240, 200, 0.5);
+}
+
+.LyricStanza__verseIn {
+    background-color: rgba(200, 200, 240, 0.5);
 }

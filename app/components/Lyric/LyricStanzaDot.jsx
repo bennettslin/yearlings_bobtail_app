@@ -92,7 +92,7 @@ LyricDotStanzaView = ({
 
     <div className={cx(
         'LyricStanzaDot',
-        'stanza-block',
+        'LyricStanza__column',
 
         // Show and hide dot stanza block in and out based on dot keys.
         dotKeys
