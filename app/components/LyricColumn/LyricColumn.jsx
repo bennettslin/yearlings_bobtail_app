@@ -216,7 +216,6 @@ LyricColumnView = ({
             <div className={cx(
                     'LyricColumn__animatable',
                     'absoluteFullContainer',
-                    'flexCentreContainer',
                     { 'overrideAnimate': shouldOverrideAnimate }
                 )}
                 onTransitionEnd={handleAnimatableTransition}
