@@ -1,37 +1,194 @@
-.stanza-container {
-    position: relative;
+@stanza-block-margin: 10px;
+
+.LyricStanza {
+    display: flex;
+    justify-content: center;
+    font-size: @LyricVerse-size;
+
+    /**
+     * Apply margin top to stanza block rather than lyrics unit, so that
+     * bottom dot stanza can override it when faded out.
+     */
+    &:not(:first-child):not(.subsequent) {
+        .stanza-block:not(.LyricStanzaDot) {
+            margin-top: @margin__lyricUnit;
+        }
+    }
+
+    &.subsequent {
+        .stanza-block {
+            margin-top: @margin__lyricUnit - @height__stanzaTypeTab - 2.5px;
+        }
+    }
+
+    // These styles are just for dev purposes.
+    // &.verse-before-unit {
+    //     background-color: rgba(240, 200, 200, 0.5);
+    // }
+    //
+    // &.verse-after-unit {
+    //     background-color: rgba(240, 240, 200, 0.5);
+    // }
+    //
+    // &.verse-in-unit {
+    //     background-color: rgba(200, 200, 240, 0.5);
+    // }
+
+    &.scene-1 {
+        background-color: rgba(240, 200, 200, 0.5);
+    }
+
+    &.scene-2 {
+        background-color: rgba(200, 240, 200, 0.5);
+    }
+
+    &.scene-3 {
+        background-color: rgba(200, 200, 240, 0.5);
+    }
+
+    &.scene-4 {
+        background-color: rgba(240, 240, 200, 0.5);
+    }
+
+    &.scene-5 {
+        background-color: rgba(200, 240, 240, 0.5);
+    }
+
+    &.scene-6 {
+        background-color: rgba(240, 200, 240, 0.5);
+    }
+
+    &.scene-7 {
+        background-color: rgba(240, 240, 160, 0.5);
+    }
+
+    &.scene-8 {
+        background-color: rgba(160, 240, 240, 0.5);
+    }
+
+    &.scene-9 {
+        background-color: rgba(240, 160, 240, 0.5);
+    }
+
+    &.scene-10 {
+        background-color: rgba(240, 200, 160, 0.5);
+    }
+
+    &.scene-11 {
+        background-color: rgba(160, 240, 200, 0.5);
+    }
+
+    &.scene-12 {
+        background-color: rgba(200, 160, 240, 0.5);
+    }
 }
 
-.stanza {
-    padding: 2px;
+.title-unit {
+    font-size: @lyric-title-size;
+
+    .stanza {
+
+        @title-verse-padding: 15px;
+
+        .verse {
+            padding: @title-verse-padding;
+
+            .VerseAudioButton-block {
+                margin-top: -@title-verse-padding;
+            }
+        }
+    }
 }
 
-.stanza-tab {
-    position: absolute;
-    height: @height__stanzaTypeTab;
-    top: -@height__stanzaTypeTab;
-    left: 0;
-    border-radius: 7.5px 7.5px 0 0;
+.stanza-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 
-    padding: 0 5px;
-    color: white;
+    /**
+     * Limit width of stanzas when lyric column is full width of screen.
+     * This is necessary for Vegan Proclamation. This value doesn't affect
+     * the layout anywhere else.
+     */
+    max-width: 640px;
 
-    text-transform: uppercase;
-    white-space: nowrap;
-    font-size: 0.6em;
+    // Dots stanza will have this style only if not hidden.
+    &:not(.LyricStanzaDot):not(:first-child) {
+        margin-left: @stanza-block-margin;
+    }
+
+    &.main {
+        // Account for verse audio button and its box shadow.
+        padding-left: @verse-padding + 5px;
+    }
+
+    &.side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &.bottom-only {
+            justify-content: flex-end;
+        }
+    }
+
+    .sub-block {
+        margin-top: -@stanza-overlap-margin;
+        display: flex;
+    }
 }
 
-.bgColour__stanza__title { background-color: @colour__stanza__title; }
-.bgColour__stanza__refrain { background-color: @colour__stanza__refrain; }
-.bgColour__stanza__verse { background-color: @colour__stanza__verse; }
-.bgColour__stanza__prechorus { background-color: @colour__stanza__prechorus; }
-.bgColour__stanza__chorus { background-color: @colour__stanza__chorus; }
-.bgColour__stanza__postchorus { background-color: @colour__stanza__postchorus; }
-.bgColour__stanza__bridge { background-color: @colour__stanza__bridge; }
-.bgColour__stanza__coda { background-color: @colour__stanza__coda; }
-.bgColour__stanza__intro { background-color: @colour__stanza__instrumental; }
-.bgColour__stanza__solo { background-color: @colour__stanza__instrumental; }
-.bgColour__stanza__outro { background-color: @colour__stanza__instrumental; }
-.bgColour__stanza__rhyme { background-color: @colour__stanza__rhyme; }
-.bgColour__stanza__backing { background-color: @colour__stanza__backing; }
-.bgColour__stanza__response { background-color: @colour__stanza__response; }
+// TODO: Can these be animated?
+// Rules to show or hide stanzas when only one lyric column is shown.
+.RM__leftLyricColumnOnly {
+
+    .stanza-block {
+
+        // Hide side stanzas when only left lyric column is shown.
+        &.side {
+            display: none;
+        }
+    }
+}
+
+@custom-sub-block-side-padding: 15%;
+@stanza-overlap-margin: 6.5px;
+
+.custom-sub-block {
+    &.left {
+        padding-right: @custom-sub-block-side-padding;
+    }
+    &.overlap {
+        margin-top: -@stanza-overlap-margin;
+    }
+}
+
+.stanza-block:not(.side) {
+    .custom-sub-block {
+        &.right {
+            padding-left: @custom-sub-block-side-padding;
+        }
+    }
+}
+
+// Make font size smaller in mini and phone.
+.RM__mini {
+    .LyricStanza, .VerseBar-block, .AnnotationCard, .tips-text {
+        font-size: @mini-verse-size;
+    }
+
+    .title-unit {
+        font-size: @mini-title-size;
+    }
+}
+
+.RM__phone {
+    .LyricStanza, .VerseBar-block, .AnnotationCard, .tips-text {
+        font-size: @phone-verse-size;
+    }
+
+    .title-unit, .AnnotationTitle {
+        font-size: @phone-title-size;
+    }
+}

@@ -1,10 +1,8 @@
-@import "./LyricDotStanza.less";
+@import "./LyricStanzaDot.less";
+@import "./LyricStanzaText.less";
 @import "./LyricStanza.less";
-@import "./LyricUnit.less";
 
-@lyric-block-top-padding: 20px;
-
-@stanza-block-margin: 10px;
+@paddingY__lyrics: 20px;
 
 .Lyric {
     width: 100%;
@@ -16,8 +14,8 @@
     }
 }
 
-.lyric-block {
-    padding: @lyric-block-top-padding 0;
+.Lyric__lyrics {
+    padding: @paddingY__lyrics 0;
     line-height: 150%;
 
     a {

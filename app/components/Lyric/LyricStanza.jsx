@@ -1,156 +1,268 @@
-// Component to show individual stanza.
+// Component to show main stanza, side stanza, and dot stanza for stanza.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import cx from 'classnames'
-import LyricVerse from './LyricVerse'
+import LyricStanzaText from './LyricStanzaText'
+import LyricStanzaDot from './LyricStanzaDot'
+import { TITLE } from '../../constants/lyrics'
+import { getLyricUnitArray } from '../../helpers/dataHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+
+const mapStateToProps = ({
+    renderReadySongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex
+}) => ({
+    renderReadySongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex
+})
 
 /*************
  * CONTAINER *
  *************/
 
-const lyricStanzaDefaultProps = {
-    inMain: false,
-    subsequent: false,
-    addSub: false,
-    isSub: false
-},
+class LyricStanza extends Component {
 
-lyricStanzaPropTypes = {
-    // From parent.
-    stanzaIndex: PropTypes.number,
-    stanzaType: PropTypes.string,
-    substanzaType: PropTypes.string,
-    sideStanzaType: PropTypes.string,
-    sideSubstanzaType: PropTypes.string,
-    subsequent: PropTypes.bool.isRequired,
+    static propTypes = {
+        // Through Redux.
+        renderReadySongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
+        sliderVerseIndex: PropTypes.number.isRequired,
 
-    stanzaArray: PropTypes.array,
-    inMain: PropTypes.bool.isRequired,
-    addSub: PropTypes.bool.isRequired,
-    isSub: PropTypes.bool.isRequired
-},
+        // From parent.
+        unitIndex: PropTypes.number.isRequired
+    }
 
-LyricStanza = ({
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'unitIndex',
+                    'renderReadySongIndex',
+                    'selectedVerseIndex',
+                    'sliderVerseIndex'
+                ]
+            })
 
-    // From props.
-    stanzaIndex,
-    stanzaType,
-    substanzaType,
-    sideStanzaType,
-    sideSubstanzaType,
-    subsequent,
+        return componentShouldUpdate
+    }
 
-    // From controller.
-    stanzaArray,
-    addSub,
+    render() {
+        const { renderReadySongIndex,
+                selectedVerseIndex,
+                sliderVerseIndex,
+                unitIndex,
+                ...other } = this.props,
 
-    // Passed recursively.
-    isSub,
+            unitArray = getLyricUnitArray(renderReadySongIndex, unitIndex),
 
-...other }) => {
+            unitMapObject = unitArray[unitArray.length - 1],
 
-    const { inMain } = other
+            /**
+             * Provided by Willy the Cocoa, Odin, and Constellations. Provide
+             * special formatting for custom sub blocks.
+             */
+            { unitClassName,
+              sceneIndex,
 
-    if (stanzaArray) {
-        if (addSub) {
-            return (
-                <div className="sub-block custom-sub-block right">
-                    <LyricStanza {...other}
-                        stanzaArray={stanzaArray}
-                        isSub
+              stanzaIndex,
+              stanzaType,
+              substanzaType,
+              sideStanzaType,
+              sideSubstanzaType,
 
-                        // Not ideal to repeat like this, but oh well.
-                        stanzaType={stanzaType}
-                        substanzaType={substanzaType}
-                        sideStanzaType={sideStanzaType}
-                        sideSubstanzaType={sideSubstanzaType}
-                    />
-                </div>
-            )
-        } else {
-            const shownStanzaIndex = inMain && !isSub ?
-                    stanzaIndex : undefined,
-                showStanzaTypeAndIndex = !subsequent && !!shownStanzaIndex
+              firstVerseIndex,
+              lastVerseIndex,
 
-            let itsStanzaType
+              subsequent,
+              dotStanza,
+              subStanza,
+              topSideStanza,
+              bottomSideStanza } = unitMapObject,
 
-            if (inMain) {
-                itsStanzaType = isSub ? substanzaType : stanzaType
-            } else {
-                itsStanzaType = isSub ? sideSubstanzaType : sideStanzaType
-            }
+            // This exists solely for "Maranatha."
+            topSideSubStanza = topSideStanza ?
+                topSideStanza[topSideStanza.length - 1].subStanza : null,
 
-            return (
-                <LyricStanzaView {...other}
-                    stanzaArray={stanzaArray}
-                    stanzaIndex={shownStanzaIndex}
-                    stanzaType={itsStanzaType}
-                    showStanzaTypeAndIndex={showStanzaTypeAndIndex}
-                />
-            )
-        }
-    } else {
-        return null
+            isTitleUnit = unitIndex === 0,
+
+            hasSide = !!(topSideStanza || bottomSideStanza),
+            isDotOnly = !!dotStanza && unitArray.length === 1,
+            isBottomOnly = !topSideStanza && !!bottomSideStanza,
+
+            /**
+             * If slider touched, compare unit to slider verse. Otherwise,
+             * compare to selected verse.
+             */
+            unitVerseIndex = sliderVerseIndex > -1 ?
+                sliderVerseIndex : selectedVerseIndex,
+            verseAfterUnit = lastVerseIndex < unitVerseIndex,
+            verseBeforeUnit = firstVerseIndex > unitVerseIndex,
+            verseInUnit = firstVerseIndex <= unitVerseIndex &&
+                lastVerseIndex >= unitVerseIndex
+
+        return (
+            <LyricUnitView {...other}
+                isTitleUnit={isTitleUnit}
+                unitClassName={unitClassName}
+                sceneIndex={sceneIndex}
+                unitIndex={unitIndex}
+                stanzaIndex={stanzaIndex}
+                unitArray={unitArray}
+                stanzaType={isTitleUnit ? TITLE : stanzaType}
+                substanzaType={substanzaType}
+                sideStanzaType={sideStanzaType}
+                sideSubstanzaType={sideSubstanzaType}
+                subsequent={subsequent}
+                dotStanza={dotStanza}
+                subStanza={subStanza}
+                topSideStanza={topSideStanza}
+                bottomSideStanza={bottomSideStanza}
+                topSideSubStanza={topSideSubStanza}
+                hasSide={hasSide}
+                isDotOnly={isDotOnly}
+                isBottomOnly={isBottomOnly}
+                verseAfterUnit={verseAfterUnit}
+                verseBeforeUnit={verseBeforeUnit}
+                verseInUnit={verseInUnit}
+            />
+        )
     }
 }
-
-LyricStanza.defaultProps = lyricStanzaDefaultProps
-LyricStanza.propTypes = lyricStanzaPropTypes
 
 /****************
  * PRESENTATION *
  ****************/
 
-const lyricStanzaViewPropTypes = {
-    // From parent.
-    stanzaIndex: PropTypes.number,
-    stanzaArray: PropTypes.array.isRequired,
-    stanzaType: PropTypes.string.isRequired,
-    showStanzaTypeAndIndex: PropTypes.bool.isRequired
+const lyricUnitViewDefaultProps = {
+    subsequent: false
 },
 
-LyricStanzaView = ({
+lyricUnitViewPropTypes = {
+    // From parent.
+    unitArray: PropTypes.array.isRequired,
+    isTitleUnit: PropTypes.bool.isRequired,
+    unitClassName: PropTypes.string,
+    sceneIndex: PropTypes.number,
 
-    showStanzaTypeAndIndex,
-    stanzaArray,
-    stanzaIndex,
-    stanzaType,
+    dotStanza: PropTypes.object,
+    subStanza: PropTypes.array,
+    topSideStanza: PropTypes.array,
+    bottomSideStanza: PropTypes.array,
+    topSideSubStanza: PropTypes.array,
+    subsequent: PropTypes.bool.isRequired,
+
+    hasSide: PropTypes.bool.isRequired,
+    isDotOnly: PropTypes.bool.isRequired,
+    isBottomOnly: PropTypes.bool.isRequired,
+    verseBeforeUnit: PropTypes.bool.isRequired,
+    verseAfterUnit: PropTypes.bool.isRequired,
+    verseInUnit: PropTypes.bool.isRequired,
+
+    handleLyricAnnotationSelect: PropTypes.func.isRequired
+},
+
+LyricUnitView = ({
+
+    // From props.
+    unitArray,
+
+    // From controller.
+    isTitleUnit,
+    unitClassName,
+    unitIndex,
+    sceneIndex,
+
+    dotStanza,
+    subStanza,
+    topSideStanza,
+    bottomSideStanza,
+    topSideSubStanza,
+
+    hasSide,
+    isDotOnly,
+    isBottomOnly,
+
+    verseBeforeUnit,
+    verseAfterUnit,
+    verseInUnit,
 
 ...other }) => {
 
+    const { subsequent,
+            handleLyricAnnotationSelect } = other
+
     return (
-        <div className="stanza-container">
-            {showStanzaTypeAndIndex &&
+        <div
+            className={cx(
+                'LyricStanza',
+                unitIndex && `unit-${unitIndex}`,
+                sceneIndex && `scene-${sceneIndex}`,
+                unitClassName,
+                { 'has-side': hasSide,
+                  'custom-sub-block': unitClassName,
+                  'title-unit': isTitleUnit,
+
+                  // It's only ever one of these three.
+                  'verse-before-unit': verseBeforeUnit,
+                  'verse-after-unit': verseAfterUnit,
+                  'verse-in-unit': verseInUnit,
+
+                  subsequent }
+            )}
+        >
+            {!isDotOnly &&
                 <div className={cx(
-                    'stanza-tab',
-                    `bgColour__stanza__${stanzaType}`
+                    'stanza-block',
+                    'main'
                 )}>
-                    {stanzaType}{stanzaIndex !== -1 ? ` ${stanzaIndex}` : ''}
+                    <LyricStanzaText {...other}
+                        stanzaArray={unitArray}
+                        truncatableMain={hasSide}
+                        inMain
+                    />
+                    <LyricStanzaText {...other}
+                        stanzaArray={subStanza}
+                        truncatableMain={hasSide}
+                        inMain
+                        addSub
+                    />
                 </div>
             }
-
-            <div className={cx(
-                'stanza',
-                `bgColour__stanza__${stanzaType}`
-            )}>
-                {stanzaArray.map((verseObject, stanzaVerseIndex) => {
-                    const { stanzaMap,
-                            unitMap } = verseObject
-
-                    return !stanzaMap && !unitMap && (
-                            <LyricVerse {...other}
-                                key={stanzaVerseIndex}
-                                verseObject={verseObject}
-                            />
-                        )
-                    }
-                )}
-            </div>
+            {hasSide &&
+                <div className={cx(
+                    'stanza-block',
+                    'side',
+                    { 'bottom-only': isBottomOnly }
+                )}>
+                    <LyricStanzaText {...other}
+                        stanzaArray={topSideStanza}
+                    />
+                    <LyricStanzaText {...other}
+                        stanzaArray={bottomSideStanza}
+                    />
+                    <LyricStanzaText {...other}
+                        stanzaArray={topSideSubStanza}
+                        addSub
+                    />
+                </div>
+            }
+            {dotStanza &&
+                <LyricStanzaDot
+                    dotStanzaObject={dotStanza}
+                    handleLyricAnnotationSelect={handleLyricAnnotationSelect}
+                />
+            }
         </div>
     )
 }
 
-LyricStanzaView.propTypes = lyricStanzaViewPropTypes
+LyricUnitView.defaultProps = lyricUnitViewDefaultProps
+LyricUnitView.propTypes = lyricUnitViewPropTypes
 
-export default LyricStanza
+export default connect(mapStateToProps)(LyricStanza)

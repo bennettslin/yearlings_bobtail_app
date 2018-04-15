@@ -24,7 +24,7 @@ DotButton = ({
 }) => (
     <Button
         buttonClass="dot"
-        buttonName={dotKeys ? 'dot-stanza' : undefined}
+        buttonName={dotKeys ? 'LyricStanzaDot' : undefined}
         iconClass={dotKey || dotKeys}
         isSmall={isSmall}
         isEnabled={!isSelected}

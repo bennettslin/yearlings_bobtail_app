@@ -7,7 +7,7 @@ import cx from 'classnames'
 import omit from 'lodash.omit'
 import debounce from 'debounce'
 
-import LyricUnit from './LyricUnit'
+import LyricStanza from './LyricStanza'
 import { getLyricUnitsCount } from '../../helpers/dataHelper'
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
@@ -138,10 +138,10 @@ LyricView = ({
             <div className="Verse__scrollChild" />
 
             <div className={cx(
-                'lyric-block'
+                'Lyric__lyrics'
             )}>
                 {lyricUnitsIndices.map(unitIndex => (
-                        <LyricUnit {...other}
+                        <LyricStanza {...other}
                             key={unitIndex}
                             unitIndex={unitIndex}
                         />

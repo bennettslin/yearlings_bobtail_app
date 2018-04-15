@@ -18,7 +18,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class LyricDotStanza extends Component {
+class LyricStanzaDot extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -91,14 +91,14 @@ LyricDotStanzaView = ({
 ...other }) => (
 
     <div className={cx(
+        'LyricStanzaDot',
         'stanza-block',
-        'dot-stanza',
 
         // Show and hide dot stanza block in and out based on dot keys.
         dotKeys
     )}>
         <div className={cx(
-            'dot-stanza-anchor-block',
+            'LyricStanzaDot-anchor-block',
 
             // Scroll to dot stanza block upon annotation selection.
             annotationIndex && `LyricAnnotation__scrollChild__${annotationIndex}`
@@ -112,4 +112,4 @@ LyricDotStanzaView = ({
 
 LyricDotStanzaView.propTypes = lyricDotStanzaViewPropTypes
 
-export default connect(mapStateToProps)(LyricDotStanza)
+export default connect(mapStateToProps)(LyricStanzaDot)
