@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
+
 import DotAnchor from '../Dot/DotAnchor'
 
 const mapStateToProps = ({
@@ -48,11 +49,7 @@ class LyricStanzaDot extends Component {
         // FIXME: Ideal to get dotStanza object from indices.
         const { dotStanzaObject,
                 accessedAnnotationIndex,
-                selectedAnnotationIndex,
-
-                /* eslint-disable no-unused-vars */
-                handleLyricAnnotationSelect } = this.props,
-                /* eslint-enable no-unused-vars */
+                selectedAnnotationIndex } = this.props,
 
             { annotationIndex,
               dotKeys } = dotStanzaObject,
@@ -94,19 +91,16 @@ LyricDotStanzaView = ({
         'LyricStanzaDot',
         'LyricStanza__column',
 
+        // Scroll to dot stanza block upon annotation selection.
+        annotationIndex &&
+            `LyricAnnotation__scrollChild__${annotationIndex}`,
+
         // Show and hide dot stanza block in and out based on dot keys.
         dotKeys
     )}>
-        <div className={cx(
-            'LyricStanzaDot-anchor-block',
-
-            // Scroll to dot stanza block upon annotation selection.
-            annotationIndex && `LyricAnnotation__scrollChild__${annotationIndex}`
-        )}>
-            <DotAnchor {...other}
-                dotKeys={dotKeys}
-            />
-        </div>
+        <DotAnchor {...other}
+            dotKeys={dotKeys}
+        />
     </div>
 )
 

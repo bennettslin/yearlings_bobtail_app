@@ -19,6 +19,18 @@
     }
 }
 
+.Button {
+    .LyricStanzaDot
+    & {
+        transition:
+            width @animationDuration__default,
+            height @animationDuration__default;
+
+        height: 0;
+        width: 0;
+    }
+}
+
 .custom-shape {
     // Only absolute positioning shows the access icon. I'm not sure why.
     position: absolute;

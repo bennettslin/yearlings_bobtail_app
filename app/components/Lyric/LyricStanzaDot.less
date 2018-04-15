@@ -5,39 +5,7 @@
         margin-left: 0;
     }
 
-    .Button {
-        transition:
-            width @animationDuration__default,
-            height @animationDuration__default;
-
-        height: 0;
-        width: 0;
-    }
-
-    &.LyricStanza__column {
-        transition:
-            margin-top @animationDuration__default,
-            margin-left @animationDuration__default;
-    }
-
-    .dot .icon-canvas {
-        transition:
-            background-color @animationDuration__fast,
-            border @animationDuration__fast;
-    }
-
-    .overrideAnimate
-    & {
-        .Button {
-            transition: none;
-        }
-
-        &.LyricStanza__column {
-            transition: none;
-        }
-
-        .dot .icon-canvas {
-            transition: none;
-        }
-    }
+    transition:
+        margin-top @animationDuration__default,
+        margin-left @animationDuration__default;
 }

@@ -30,7 +30,7 @@ Live
     Menu (/)
     OverviewLogue
     PopupOverlaid
-Lyric
+Lyric (/)
 LyricColumn (Waiting on access.)
 Main
     LeftShelf (do with overviewToggle, dotsToggle, and scoresTips)
