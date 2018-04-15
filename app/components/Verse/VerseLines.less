@@ -1,39 +1,24 @@
-.VerseLines__double {
+.VerseLines {
     display: flex;
     justify-content: space-between;
 }
 
-.VerseLine__truncated {
-    display: none;
+.fontSize__lyricMultipleColumns {
 
-    .RM__rightLyricColumnOnly
+    @fontSize__bothColumnsShown: 0.95em;
+
+    // Make font sizes smaller when showing both columns.
+    .RM__bothLyricColumnsShown.RM__desktop
+    &,
+    .RM__bothLyricColumnsShown.RM__tablet
     & {
-        display: inline;
+        font-size: @fontSize__bothColumnsShown;
     }
-}
 
-.VerseLine__truncatable {
-
-    .RM__rightLyricColumnOnly
+    .RM__bothLyricColumnsShown.RM__mini
     & {
-        display: none;
-    }
-}
-
-.RM__bothLyricColumnsShown {
-
-    &.RM__desktop,
-    &.RM__tablet {
-        // Make font sizes smaller when showing both columns.
-        .VerseLines__double, .LyricStanza__hasSide {
-            font-size: 0.95em;
-        }
-    }
-
-    &.RM__mini {
-        // In mini, only has side can still show both columns.
-        .LyricStanza__hasSide {
-            font-size: 0.96em * @multiplier__fontSize__mini;
-        }
+        font-size:
+            @fontSize__bothColumnsShown
+            * @multiplier__fontSize__mini;
     }
 }

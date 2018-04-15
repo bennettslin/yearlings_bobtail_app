@@ -218,7 +218,8 @@ LyricUnitView = ({
                   // It's only ever one of these three.
                   'LyricStanza__verseBefore': verseBeforeUnit,
                   'LyricStanza__verseAfter': verseAfterUnit,
-                  'LyricStanza__verseIn': verseInUnit },
+                  'LyricStanza__verseIn': verseInUnit,
+                  'fontSize__lyricMultipleColumns': hasSide },
 
                 subsequent ?
                     'LyricStanza__subsequent' :

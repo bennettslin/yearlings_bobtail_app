@@ -1,22 +1,18 @@
-// Component to show all lines in a single verse.
+/**
+ * This component separates a doublespeaker line into two separate lines, if
+ * needed.
+ */
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import VerseLine from './VerseLine'
 import { LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC } from '../../constants/lyrics'
 
-const verseLinesDefaultProps = {
-    isTruncatable: false,
-    isDoubleSpeaker: false
-},
-
-verseLinesPropTypes = {
+const verseLinesPropTypes = {
     // From parent.
-    verseObject: PropTypes.object.isRequired,
-    isTruncatable: PropTypes.bool.isRequired,
-    isDoubleSpeaker: PropTypes.bool.isRequired,
-    doublespeakerKey: PropTypes.string,
-    isTitle: PropTypes.bool
+    isDoubleSpeaker: PropTypes.bool
 },
 
 VerseLines = ({
@@ -26,38 +22,43 @@ VerseLines = ({
 ...other }) => {
 
     return isDoubleSpeaker ? (
-        <VerseLinesDouble {...other} />
+
+        // Only wrap in this parent container if it's a doublespeaker line.
+        <div className={cx(
+            'VerseLines',
+            'fontSize__lyricMultipleColumns'
+        )}>
+            {LYRIC_COLUMN_KEYS.map((doublespeakerKey, index) => (
+                <VerseLinesChild {...other}
+                    key={index}
+                    doublespeakerKey={doublespeakerKey}
+                />
+            ))}
+        </div>
 
     ) : (
-        <VerseLinesSingle {...other} />
+        <VerseLinesChild {...other} />
     )
 },
 
-VerseLinesDouble = (props) => (
-    <div className="VerseLines__double">
-        {LYRIC_COLUMN_KEYS.map((doublespeakerKey, index) => (
-            <VerseLinesSingle {...props}
-                key={index}
-                doublespeakerKey={doublespeakerKey}
-            />
-        ))}
-    </div>
-),
+verseLinesChildPropTypes = {
+    // From parent.
+    verseObject: PropTypes.object.isRequired,
+    doublespeakerKey: PropTypes.string,
+    isTitle: PropTypes.bool
+},
 
-VerseLinesSingle = ({
-
-    isTruncatable,
-
-...other }) => {
+VerseLinesChild = (props) => {
 
     const { verseObject,
             doublespeakerKey,
-            isTitle } = other,
+            isTitle } = props,
 
         lyricsLineProps = {
-            text: doublespeakerKey ?
-                verseObject[doublespeakerKey] :
-                (verseObject[LYRIC] || verseObject[CENTRE]),
+            text:
+                verseObject[doublespeakerKey]
+                || verseObject[LYRIC]
+                || verseObject[CENTRE],
 
             isVerseBeginningSpan: verseObject.isVerseBeginningSpan,
             isVerseEndingSpan: verseObject.isVerseEndingSpan
@@ -77,28 +78,13 @@ VerseLinesSingle = ({
 
     lyricsLineProps.columnKey = columnKey
 
-    /**
-     * If it's truncatable, we will only ever show either the complete or the
-     * truncated text. Applies to Golden Cord and Uncanny Valley.
-     */
-    return isTruncatable ? ([(
-        <VerseLine {...other} {...lyricsLineProps}
-            key="truncatable"
-            isTruncatable
-        />
-    ), (
-        <span
-            key="truncated"
-            className="VerseLine__truncated"
-        >
-            {'\u2026'}
-        </span>
-    )]) : (
-        <VerseLine {...other} {...lyricsLineProps} />
+    return (
+        <VerseLine {...props} {...lyricsLineProps} />
     )
 }
 
-VerseLines.defaultProps = verseLinesDefaultProps
 VerseLines.propTypes = verseLinesPropTypes
+
+VerseLinesChild.propTypes = verseLinesChildPropTypes
 
 export default VerseLines

@@ -63,8 +63,13 @@ class VerseLine extends Component {
                 isTruncatable,
                 ...other } = this.props
 
-        return (
+        /**
+         * If it's truncatable, we will only ever show either the complete or
+         * the truncated text. Applies to Golden Cord and Uncanny Valley.
+         */
+        return [(
             <div
+                key="truncatable"
                 className={cx(
                     'VerseLine',
                     { [columnKey]: columnKey !== TITLE,
@@ -75,7 +80,18 @@ class VerseLine extends Component {
                     isLyric
                 />
             </div>
-        )
+
+        ), (
+            // Only render if this is a truncatable verse.
+            isTruncatable ? (
+                <span
+                    key="truncated"
+                    className="VerseLine__truncated"
+                >
+                    {'\u2026'}
+                </span>
+            ) : null
+        )]
     }
 }
 
