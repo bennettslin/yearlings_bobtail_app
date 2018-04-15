@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Dragging on slider initially drags times text?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Access annotation title in carousel too.`,
         workedHours: 0,
         neededHours: 1
