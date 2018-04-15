@@ -1,5 +1,11 @@
 .Button {
     position: relative;
+
+    // Needed to position access icon properly. I'm not exactly sure why.
+    .position__buttonInherit
+    & {
+        position: inherit;
+    }
 }
 
 /**
@@ -36,7 +42,7 @@
     }
 }
 
-.Button.large, .lyric-button-block {
+.length__buttonLarge {
     &, & .icon-canvas {
         width: @length__iconLarge;
         height: @length__iconLarge;
@@ -44,7 +50,7 @@
 }
 
 .RM__tablet {
-    .Button.large, .lyric-button-block {
+    .length__buttonLarge {
         &, & .icon-canvas {
             width: @length__iconLarge__tablet;
             height: @length__iconLarge__tablet;
@@ -53,7 +59,7 @@
 }
 
 .RM__mini {
-    .Button.large, .lyric-button-block {
+    .length__buttonLarge {
         &, & .icon-canvas {
             width: @length__iconLarge__mini;
             height: @length__iconLarge__mini;
@@ -62,7 +68,7 @@
 }
 
 .RM__phone {
-    .Button.large, .lyric-button-block {
+    .length__buttonLarge {
         &, & .icon-canvas {
             width: @js__length__icon;
             height: @js__length__icon;

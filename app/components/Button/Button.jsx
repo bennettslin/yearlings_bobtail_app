@@ -71,6 +71,7 @@ class Button extends Component {
                     buttonClass,
                     buttonName && `Button__${buttonName}`,
                     { 'large': isLarge,
+                      'length__buttonLarge': isLarge,
                       'small': isSmall,
                       'custom-shape': isCustomShape,
                       'custom-size': isCustomSize,

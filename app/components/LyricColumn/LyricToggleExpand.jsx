@@ -51,8 +51,14 @@ LyricToggleExpand = ({
 
     return isLyricExpandable && shouldRender && (
         <div className={cx(
-            'lyric-button-block',
-            'expand-button-block'
+            'LyricToggleExpand',
+            'LyricToggle',
+            inMain ?
+                'LyricToggle__inMain' :
+                'LyricToggle__inLyric',
+            { 'LyricToggleExpand__inLyric': !inMain },
+            'length__buttonLarge',
+            'position__buttonInherit'
         )}>
             <Button
                 isLarge

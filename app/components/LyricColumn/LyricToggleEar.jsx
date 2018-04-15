@@ -36,8 +36,11 @@ LyricToggleEar = ({
 
     return showOneOfTwoLyricColumns && (
         <div className={cx(
-            'lyric-button-block',
-            'ear-button-block'
+            'LyricToggleEar',
+            'LyricToggle__inLyric',
+            'LyricToggle',
+            'length__buttonLarge',
+            'position__buttonInherit'
         )}>
             <Button
                 isLarge

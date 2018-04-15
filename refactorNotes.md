@@ -16,7 +16,7 @@ Consolidate styles for child with parent selector nesting
 
 ### Remaining
 
-Access
+Access (take in array, handle not last child, refactor all clients as well.)
 Admin
 Annotation (Still largely undone.)
 Audio (Waiting on button icons.)

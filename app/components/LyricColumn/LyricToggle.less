@@ -1,4 +1,4 @@
-.lyric-button-block {
+.LyricToggle {
     position: absolute;
     padding: @margin__thin;
 
@@ -6,61 +6,34 @@
     transition:
         opacity @animationDuration__default,
         transform @animationDuration__default;
-
-    // Needed to position access icon properly.
-    .Button {
-        position: inherit;
-    }
 }
 
-.LyricColumn {
-    .lyric-button-block {
-        z-index: @zIndex__lyricColumnButton;
-    }
+.LyricToggle__inLyric {
+    z-index: @zIndex__lyricColumnButton;
+    top: @margin__scrollbar / 2;
 }
 
-.LyricColumn {
-    .lyric-button-block {
-        top: @margin__scrollbar / 2;
-    }
-
-    .ear-button-block {
-        // Needed to expand properly in Chrome.
-        right: @margin__scrollbar;
-    }
-
-    .expand-button-block {
-        left: @margin__scrollbar;
-    }
+.LyricToggleEar {
+    // Needed to expand properly in Chrome.
+    right: @margin__scrollbar;
 }
 
-.expand-button-block {
-    .Main
+.LyricToggleExpand__inLyric {
+    left: @margin__scrollbar;
+}
+
+.LyricToggle__inMain {
+    bottom: 0;
+    left: 50%;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+    z-index: @zIndex__leftShelf;
+
+    .RM__carouselNavUnshowable
+    &,
+    .RM__annotationShown.RM__navExpanded
     & {
-        bottom: 0;
-        left: 50%;
-        opacity: 1;
-        transform: translateX(-50%) scale(1);
-        z-index: @zIndex__leftShelf;
-    }
-}
-
-.RM__logue, .RM__lyricExpanded, .RM__overviewShown, .RM__tipsShown, .RM__dotsShown, .RM__annotationShown.RM__navExpanded {
-    .Main {
-        .expand-button-block {
-            opacity: 0;
-            transform: translateX(-50%) scale(0);
-        }
-    }
-}
-
-.RM__lyricHeightless {
-    &.RM__lyricCollapsed {
-        .LyricColumn {
-            .expand-button-block {
-                opacity: 0;
-                transform: scale(0);
-            }
-        }
+        opacity: 0;
+        transform: translateX(-50%) scale(0);
     }
 }
