@@ -64,6 +64,10 @@ class VerseLine extends Component {
                 ...other } = this.props
 
         /**
+         * TODO: Can this truncatable functionality be done without having to
+         * render an array?
+         */
+        /**
          * If it's truncatable, we will only ever show either the complete or
          * the truncated text. Applies to Golden Cord and Uncanny Valley.
          */
@@ -72,7 +76,10 @@ class VerseLine extends Component {
                 key="truncatable"
                 className={cx(
                     'VerseLine',
-                    { [columnKey]: columnKey !== TITLE,
+
+                    // Lyric, left, centre, right.
+                    { [`VerseLine__${columnKey}`]: columnKey !== TITLE,
+
                       'VerseLine__truncatable': isTruncatable }
                 )}
             >

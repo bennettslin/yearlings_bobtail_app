@@ -1,67 +1,49 @@
-.VerseLine {
+.VerseLine__lyric,
+.VerseLine__left {
+    text-indent:-@width__hangingIndent;
+    padding-left: @width__hangingIndent;
+}
+
+.VerseLine__centre {
+    width: 100%;
+    text-indent: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+.VerseLine__right {
+
     /**
-     * Maintain distinction between regular lyric line and left line in
-     * doublespeaker block, even though they're styled the same.
-     */
-    &.lyric,
-    &.left {
-        text-indent:-@width__hangingIndent;
-        padding-left: @width__hangingIndent;
+    * Styling for hanging indent with right-aligned text. The hidden
+    * last letter is a stupid hack to prevent rtl from switching the
+    * order of the last letter.
+    */
+    text-indent:-@width__hangingIndent;
+    padding-right: @width__hangingIndent;
+    direction: rtl;
+
+    &:after {
+        content: 'a';
+        opacity: 0;
+        font-size: 0;
+        line-height: 0;
     }
 
-    &.centre {
-        width: 100%;
-        text-indent: 0;
-        padding-left: 0;
-        text-align: center;
+    // If both columns show, have a single gutter between them.
+    .RM__bothLyricColumnsShown
+    &:not(:first-child) {
+        margin-left: @field-padding;
     }
+}
 
-    &.right {
-        // If both columns show, have a single gutter between them.
-        &:not(:first-child) {
-            margin-left: @field-padding;
-        }
-
-        /**
-         * Styling for hanging indent with right-aligned text. The hidden
-         * last letter is a stupid hack to prevent rtl from switching the
-         * order of the last letter.
-         */
-        text-indent:-@width__hangingIndent;
-        padding-right: @width__hangingIndent;
-        direction: rtl;
-        &:after {
-            content: 'a';
-            opacity: 0;
-            font-size: 0;
-            line-height: 0;
-        }
-
-        // Undo reverse dot order caused by right column's rtl direction.
-        .dots-block {
-            flex-direction: row-reverse;
-        }
-    }
-
-    .RM__leftLyricColumnOnly
-    &.right,
-    .RM__rightLyricColumnOnly
-    &.left {
-        width: 0;
-        overflow: hidden;
-        padding: 0;
-        max-height: 0;
-
-        &.right:not(:first-child) {
-            margin: 0;
-        }
-    }
-
-    // Single right column should not have margin left.
-    .RM__rightLyricColumnOnly
-    &.right:not(:first-child) {
-        margin-left: 0;
-    }
+.RM__leftLyricColumnOnly
+.VerseLine__right,
+.RM__rightLyricColumnOnly
+.VerseLine__left {
+    width: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
 }
 
 .VerseLine__truncated {
