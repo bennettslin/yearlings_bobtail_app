@@ -71,7 +71,6 @@ SliderSectionView = ({
         <SliderVerses />
         <SliderScenes />
         <SliderTimes/>
-
         <SliderAccess />
 
         {children}
