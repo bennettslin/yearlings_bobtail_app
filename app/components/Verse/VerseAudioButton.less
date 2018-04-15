@@ -7,27 +7,6 @@
 
 @VerseAudioButton-block-width: @verse-height + @VerseAudioButton-block-extra * 2;
 
-.Lyric__lyrics .verse {
-    &:first-child {
-        &, .VerseAudioButton-child, .VerseAudioIndicator {
-            padding-top: @verse-padding;
-        }
-    }
-    &:last-child {
-        &, .VerseAudioButton-child, .VerseAudioIndicator {
-            padding-bottom: @verse-padding;
-        }
-    }
-
-    &.interactable {
-        position: relative;
-
-        &.interactivated {
-            box-shadow: @boxShadow__activeVerse;
-        }
-    }
-}
-
 .VerseAudioButton-block {
     position: absolute;
     left: 0;
@@ -39,7 +18,7 @@
 
     transition: left @animationDuration__fast;
 
-    .interactivated
+    .Verse__interactivated
     & {
         left: -@VerseAudioButton-block-width * 0.5;
         z-index: @zIndex__verseAudioButton;
@@ -68,7 +47,7 @@
     // z-index: @zIndex__verseAudioButton;
     transition: opacity @animationDuration__default;
 
-    .interactivated
+    .Verse__interactivated
     & {
         opacity: 1;
         // font-size: 1em;
@@ -78,5 +57,23 @@
     &, .icon-canvas {
         width: @VerseAudioButton-block-width;
         height: @VerseAudioButton-block-width;
+    }
+}
+
+// TODO: Revisit.
+.Verse__inLyric {
+    &:first-child {
+        &,
+        .VerseAudioButton-child,
+        .VerseAudioIndicator {
+            padding-top: @paddingX__verse;
+        }
+    }
+    &:last-child {
+        &,
+        .VerseAudioButton-child,
+        .VerseAudioIndicator {
+            padding-bottom: @paddingX__verse;
+        }
     }
 }

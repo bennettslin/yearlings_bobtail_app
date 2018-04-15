@@ -83,9 +83,19 @@
 
     transition: background-color @animationDuration__default;
 
+    .RM__sliderNotMoving.RM__isPlaying
+    & {
+        background-color: @bgColour__audioPlay;
+    }
+
+    .RM__sliderNotMoving.RM__isPaused
+    & {
+        background-color: @bgColour__audioPause;
+    }
+
     .RM__sliderMoving
     & {
-        background-color: @colour__audioNeutral;
+        background-color: @bgColour__audioNeutral;
     }
 }
 

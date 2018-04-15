@@ -22,7 +22,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class VerseUnit extends Component {
+class Verse extends Component {
 
     static defaultProps = {
         isSelected: false,
@@ -39,6 +39,7 @@ class VerseUnit extends Component {
         renderReadySongIndex: PropTypes.number.isRequired,
 
         // From parent.
+        barVerseIndex: PropTypes.number,
         verseObject: PropTypes.object.isRequired,
         isSelected: PropTypes.bool.isRequired,
         isAfterSelected: PropTypes.bool.isRequired,
@@ -189,6 +190,7 @@ const verseUnitViewDefaultProps = {
 
 verseUnitViewPropTypes = {
     // From parent.
+    inVerseBar: PropTypes.bool.isRequired,
     verseIndex: PropTypes.number,
     isInteractable: PropTypes.bool.isRequired,
     isInteractivated: PropTypes.bool.isRequired,
@@ -207,6 +209,7 @@ VerseUnitView = ({
 
     // From controller.
     myRef,
+    inVerseBar,
     verseIndex,
     verseUnitClassName,
     sliderStatusClassName,
@@ -226,14 +229,22 @@ VerseUnitView = ({
         <div
             ref={myRef}
             className={cx(
-                'verse',
+                'Verse',
                 'textShadow__background',
-                isInteractable && 'Verse__scrollChild__' + verseIndex,
-                verseUnitClassName,
-                sliderStatusClassName,
-                { 'selected': isSelected,
-                  'interactable': isInteractable,
-                  'interactivated': isInteractivated }
+                isInteractable &&
+                    `Verse__scrollChild__${verseIndex}`,
+
+                // title, even, odd, inSide.
+                verseUnitClassName && `Verse__${verseUnitClassName}`,
+
+                // onSlider, beforeSlider, or afterSlider.
+                sliderStatusClassName && `Verse__${sliderStatusClassName}`,
+
+                inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
+
+                { 'Verse__selected': isSelected,
+                  'Verse__interactable': isInteractable,
+                  'Verse__interactivated': isInteractivated }
             )}
             onClick={handleInteractivatableClick}
             onTouchStart={handleInteractivatableClick}
@@ -262,4 +273,4 @@ VerseUnitView = ({
 VerseUnitView.defaultProps = verseUnitViewDefaultProps
 VerseUnitView.propTypes = verseUnitViewPropTypes
 
-export default connect(mapStateToProps)(VerseUnit)
+export default connect(mapStateToProps)(Verse)

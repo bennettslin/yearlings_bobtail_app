@@ -59,8 +59,8 @@ VerseLinesBlock = ({
         lyricsLineProps.columnKey = columnKey
 
         /**
-         * If it's truncatable, we will only ever show either the complete or the
-         * truncated text. Applies to Golden Cord and Uncanny Valley.
+         * If it's truncatable, we will only ever show either the complete or
+         * the truncated text. Applies to Golden Cord and Uncanny Valley.
          */
         return truncatableMain ? (
             <span>

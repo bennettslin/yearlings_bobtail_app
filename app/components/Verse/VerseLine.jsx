@@ -63,7 +63,7 @@ class VerseLine extends Component {
         return (
             <div
                 className={cx(
-                    'line',
+                    'VerseLine',
                     { [columnKey]: columnKey !== TITLE }
                 )}
             >

@@ -3,7 +3,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import VerseUnit from '../verse/VerseUnit'
+import Verse from '../Verse/Verse'
 
 const mapStateToProps = ({
     selectedVerseIndex,
@@ -44,7 +44,7 @@ LyricVerse = ({
         isInteractivated = verseIndex === interactivatedVerseIndex
 
     return (
-        <VerseUnit {...other}
+        <Verse {...other}
             isSelected={isSelected}
             isAfterSelected={isAfterSelected}
             isSliderSelected={isSliderSelected}

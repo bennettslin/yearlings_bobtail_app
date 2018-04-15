@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import VerseUnit from '../verse/VerseUnit'
+import Verse from '../Verse/Verse'
 import { getVerseObject } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
@@ -84,7 +84,7 @@ class VerseBar extends Component {
                     onClick={handleVerseBarSelect}
                     onTouchStart={handleVerseBarSelect}
                 >
-                    <VerseUnit {...other}
+                    <Verse {...other}
                         inVerseBar
                         barVerseIndex={verseIndex}
                         verseObject={verseObject}

@@ -216,7 +216,7 @@ export const getVerseUnitClassName = ({
         } else if (inMain) {
             return isEven ? 'even' : 'odd'
         } else {
-            return 'in-side'
+            return 'inSide'
         }
     }
 
@@ -233,13 +233,13 @@ export const getSliderStatusClassName = ({
 
     if (isSliderTouched && inMain && !isTitle) {
         if (isSliderSelected) {
-            return 'on-slider'
+            return 'onSlider'
 
         } else if (isAfterSliderSelected) {
-            return 'after-slider'
+            return 'afterSlider'
 
         } else {
-            return 'before-slider'
+            return 'beforeSlider'
         }
     }
 

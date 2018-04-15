@@ -1,0 +1,155 @@
+@paddingX__verse: 10px;
+
+@import "./VerseAudioButton.less";
+@import "./VerseAudioIndicator.less";
+@import "./VerseLine.less";
+@import "./VerseLinesBlock.less";
+
+.Verse__inLyric {
+    padding: 0 @paddingX__verse;
+    transition:
+        color @animationDuration__fast,
+        background-color @animationDuration__fast;
+
+    .overrideAnimate
+    & {
+        transition: none;
+    }
+}
+
+.Verse__title {
+    .mixin__textShadow(@bgColour__verse__odd);
+
+    @paddingX__title: 15px;
+    padding: 0 @paddingX__title;
+}
+
+.Verse__interactable {
+    position: relative;
+    padding-left: @paddingX__verse * 2;
+
+    /**
+     * Interactable verse has highlighted styling only when interactivated, or
+     * when hovered, not selected, and with no other verse interactivated.
+     */
+    .RM__sliderNotMoving.RM__verseInactive
+    &:not(.Verse__selected):hover,
+    .RM__sliderNotMoving.RM__verseActive
+    &.Verse__interactivated {
+
+        .mixin__textShadow(@bgColour__audioHighlight);
+    }
+}
+
+.Verse__interactivated {
+    box-shadow: @boxShadow__activeVerse;
+}
+
+.Verse__selected {
+
+    .RM__sliderNotMoving.RM__verseBarHidden.RM__isPlaying
+    & {
+        .mixin__textShadow(@bgColour__audioPlay);
+    }
+
+    .RM__sliderNotMoving.RM__verseBarHidden.RM__isPaused
+    & {
+        .mixin__textShadow(@bgColour__audioPause);
+    }
+}
+
+.Verse__odd {
+
+    .RM__sliderNotMoving
+    & {
+        // Default odd verse.
+        .mixin__textShadow(@bgColour__verse__odd);
+
+        .TextSpan {
+            color: #644;
+        }
+    }
+
+    .RM__sliderMoving
+    & {
+        &.Verse__beforeSlider {
+            .mixin__textShadow(@bgColour__beforeSlider__odd);
+
+            .TextSpan {
+                color: @colour__beforeSlider__odd;
+            }
+        }
+
+        &.Verse__afterSlider {
+            .mixin__textShadow(@bgColour__afterSlider__odd);
+
+            .TextSpan {
+                color: @colour__afterSlider__odd;
+            }
+        }
+    }
+}
+
+.Verse__even {
+
+    .RM__sliderNotMoving
+    & {
+        // Default even verse.
+        .mixin__textShadow(@bgColour__verse__even);
+
+        .TextSpan {
+            color: #533;
+        }
+    }
+
+    .RM__sliderMoving
+    & {
+        &.Verse__beforeSlider {
+            .mixin__textShadow(@bgColour__beforeSlider__even);
+
+            .TextSpan {
+                color: @colour__beforeSlider__even;
+            }
+        }
+
+        &.Verse__afterSlider {
+            .mixin__textShadow(@bgColour__afterSlider__even);
+
+            .TextSpan {
+                color: @colour__afterSlider__odd;
+            }
+        }
+    }
+}
+
+.Verse__onSlider {
+
+    .RM__sliderMoving
+    & {
+        // Slider selected verse.
+        .mixin__textShadow(@bgColour__audioNeutral);
+    }
+}
+
+.Verse__inSide {
+
+    .RM__sliderNotMoving
+    & {
+        // Default side verse.
+        .mixin__textShadow(@bgColour__verse__odd);
+
+        .TextSpan {
+            color: #644;
+        }
+    }
+
+    .RM__sliderMoving
+    & {
+        // Slider side verse.
+        .mixin__textShadow(@bgColour__sideSlider);
+
+        .TextSpan {
+            color: @colour__sideSlider;
+        }
+    }
+}
