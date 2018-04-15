@@ -5,10 +5,13 @@
 .LyricColumn {
     transition:
         height @animationDuration__default,
-        background-image @animationDuration__default;
+        opacity @animationDuration__default;
 
     // Keeps elements inside window!
     overflow: hidden;
+
+    display: flex;
+    justify-content: center;
 
     .RM__song
     & {
@@ -33,23 +36,16 @@
     & {
         height: 0;
     }
-}
-
-.LyricColumn__animatable {
-
-
-    overflow-y: hidden;
-    transition: opacity @animationDuration__default;
 
     .RM__logue
     &,
-    .RM__song .renderUnready
-    & {
+    .RM__song
+    &.renderUnready {
         opacity: 0;
     }
 
-    .RM__song .renderReady
-    & {
+    .RM__song
+    &.renderReady {
         opacity: 1;
     }
 }

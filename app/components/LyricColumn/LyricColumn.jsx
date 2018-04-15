@@ -39,7 +39,6 @@ class LyricColumn extends Component {
 
         this._handleScrollAfterLyricRerender = this._handleScrollAfterLyricRerender.bind(this)
         this._handleTransition = this._handleTransition.bind(this)
-        this._handleAnimatableTransition = this._handleAnimatableTransition.bind(this)
         this.completeHeightTransition = this.completeHeightTransition.bind(this)
 
         this.state = {
@@ -103,15 +102,7 @@ class LyricColumn extends Component {
     }
 
     _handleTransition(e) {
-        if (e.propertyName === 'height') {
-            this.setState({
-                isTransitioningHeight: true
-            })
-        }
-    }
-
-    _handleAnimatableTransition(e) {
-        if (e.propertyName === 'opacity') {
+        if (e.propertyName === 'height' || e.propertyName === 'opacity') {
             this.setState({
                 isTransitioningHeight: true
             })
@@ -140,7 +131,6 @@ class LyricColumn extends Component {
                 shouldOverrideAnimate={this.state.shouldOverrideAnimate}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
-                handleAnimatableTransition={this._handleAnimatableTransition}
                 completeHeightTransition={this.completeHeightTransition}
             />
         )
@@ -162,7 +152,6 @@ const lyricColumnViewPropTypes = {
     shouldOverrideAnimate: PropTypes.bool.isRequired,
     isTransitioningHeight: PropTypes.bool.isRequired,
     handleTransition: PropTypes.func.isRequired,
-    handleAnimatableTransition: PropTypes.func.isRequired,
     completeHeightTransition: PropTypes.func.isRequired,
 
     handleLyricColumnSelect: PropTypes.func.isRequired,
@@ -188,7 +177,7 @@ LyricColumnView = ({
     shouldOverrideAnimate,
     isTransitioningHeight,
     handleTransition,
-    handleAnimatableTransition,
+    // handleAnimatableTransition,
     completeHeightTransition,
 
 ...other }) => {
@@ -208,38 +197,31 @@ LyricColumnView = ({
                 'LyricColumn',
                 'position__lyricColumn',
                 'gradientMask__lyricColumn__desktop',
-                isHeavyRenderReady ? 'renderReady' : 'renderUnready'
+                isHeavyRenderReady ? 'renderReady' : 'renderUnready',
+                { 'overrideAnimate': shouldOverrideAnimate }
             )}
             ref={myRef}
             onTransitionEnd={handleTransition}
         >
-            <div className={cx(
-                    'LyricColumn__animatable',
-                    'absoluteFullContainer',
-                    { 'overrideAnimate': shouldOverrideAnimate }
-                )}
-                onTransitionEnd={handleAnimatableTransition}
-            >
-                <VerseBar {...verseBarProps}
-                    isAbove
-                />
-                <VerseBar {...verseBarProps} />
+            <VerseBar {...verseBarProps}
+                isAbove
+            />
+            <VerseBar {...verseBarProps} />
 
-                <LyricToggleEar
-                    handleLyricColumnSelect={handleLyricColumnSelect}
-                />
+            <LyricToggleEar
+                handleLyricColumnSelect={handleLyricColumnSelect}
+            />
 
-                <LyricToggleExpand
-                    handleLyricSectionExpand={handleLyricSectionExpand}
-                />
+            <LyricToggleExpand
+                handleLyricSectionExpand={handleLyricSectionExpand}
+            />
 
-                <Lyric {...other}
-                    isTransitioningHeight={isTransitioningHeight}
-                    completeHeightTransition={completeHeightTransition}
-                />
+            <Lyric {...other}
+                isTransitioningHeight={isTransitioningHeight}
+                completeHeightTransition={completeHeightTransition}
+            />
 
-                <LyricAccess />
-            </div>
+            <LyricAccess />
         </div>
     )
 }
