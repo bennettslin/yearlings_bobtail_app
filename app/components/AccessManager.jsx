@@ -71,7 +71,7 @@ class AccessManager extends Component {
         const { eventHandlers } = this.props
 
         let { key: keyName,
-            keyCode } = e
+              keyCode } = e
 
         // Workaround for Safari, which doesn't recognise key on event.
         if (keyName === 'Unidentified') {

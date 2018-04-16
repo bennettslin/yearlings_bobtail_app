@@ -1,6 +1,18 @@
 module.exports = [
 
     {
+        taskName: `Willy the Cocoa substanza is not right colour?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Anchor styling in verse bar?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Dragging on slider initially drags times text?`,
         workedHours: 0,
         neededHours: 1

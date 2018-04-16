@@ -2797,4 +2797,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `General refactoring of Slider, Lyric, and Verse.`,
+        workedHours: 15,
+        neededHours: 15
+    },
 ]
