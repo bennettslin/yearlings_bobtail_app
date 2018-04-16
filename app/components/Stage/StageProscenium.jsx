@@ -13,9 +13,20 @@ const StageProscenium = () => {
             )}
         >
             {/* Layout is all handled in css. */}
-            <div className="proscenium-layer top" />
-            <div className="proscenium-layer side left" />
-            <div className="proscenium-layer side right" />
+            <div className={cx(
+                'StageProscenium__top',
+                'StageProscenium__child'
+            )} />
+            <div className={cx(
+                'StageProscenium__left',
+                'StageProscenium__side',
+                'StageProscenium__child'
+            )} />
+            <div className={cx(
+                'StageProscenium__right',
+                'StageProscenium__side',
+                'StageProscenium__child'
+            )} />
         </div>
     )
 }

@@ -62,15 +62,19 @@ TextUnit = ({
             )
 
         } else if (textEntity.anchor) {
-            return (other.inVerseBar ?
+
+            return other.inVerseBar ? (
                 <TextBlock {...other}
                     text={textEntity.anchor}
-                /> :
+                />
+
+            ) : (
                 <TextAnchorBlock {...other}
                     text={textEntity}
                     isVerseBeginningSpan={textEntity.isVerseBeginningSpan}
                     isVerseEndingSpan={textEntity.isVerseEndingSpan}
                 />
+
             )
         }
     }
