@@ -209,7 +209,6 @@ VerseUnitView = ({
 
     // From controller.
     myRef,
-    inVerseBar,
     verseIndex,
     verseUnitClassName,
     sliderStatusClassName,
@@ -224,6 +223,8 @@ VerseUnitView = ({
     handleLyricVerseSelect,
 
 ...other }) => {
+
+    const { inVerseBar } = other
 
     return (
         <div
