@@ -1,7 +1,7 @@
 module.exports = [
 
     {
-        taskName: `Willy the Cocoa substanza is not right colour?`,
+        taskName: `Willy the Cocoa substanza is not right colour? This is because isSubstanza is no longer passed recursively.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -46,12 +46,6 @@ module.exports = [
         taskName: `Hovering over access icons doesn't trigger animation.`,
         workedHours: 0,
         neededHours: 1
-    },
-
-    {
-        taskName: `Lyric access row prevents hovering.`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     /**

@@ -108,7 +108,7 @@ class LyricStanza extends Component {
                 lastVerseIndex >= unitVerseIndex
 
         return (
-            <LyricUnitView {...other}
+            <LyricStanzaView {...other}
                 isTitleUnit={isTitleUnit}
                 unitClassName={unitClassName}
                 // sceneIndex={sceneIndex}
@@ -140,11 +140,11 @@ class LyricStanza extends Component {
  * PRESENTATION *
  ****************/
 
-const lyricUnitViewDefaultProps = {
+const lyricStanzaViewDefaultProps = {
     subsequent: false
 },
 
-lyricUnitViewPropTypes = {
+lyricStanzaViewPropTypes = {
     // From parent.
     unitArray: PropTypes.array.isRequired,
     isTitleUnit: PropTypes.bool.isRequired,
@@ -168,7 +168,7 @@ lyricUnitViewPropTypes = {
     handleLyricAnnotationSelect: PropTypes.func.isRequired
 },
 
-LyricUnitView = ({
+LyricStanzaView = ({
 
     // From props.
     unitArray,
@@ -274,7 +274,7 @@ LyricUnitView = ({
     )
 }
 
-LyricUnitView.defaultProps = lyricUnitViewDefaultProps
-LyricUnitView.propTypes = lyricUnitViewPropTypes
+LyricStanzaView.defaultProps = lyricStanzaViewDefaultProps
+LyricStanzaView.propTypes = lyricStanzaViewPropTypes
 
 export default connect(mapStateToProps)(LyricStanza)

@@ -65,14 +65,15 @@ LyricStanzaCard = ({
 
         if (inMain) {
             stanzaTypeLabel = isSubstanza ? substanzaType : stanzaType
+
         } else {
             stanzaTypeLabel = isSubstanza ? sideSubstanzaType : sideStanzaType
         }
 
         return (
             <LyricStanzaCardView {...other}
-                addSubstanza={addSubstanza}
                 stanzaArray={stanzaArray}
+                addSubstanza={addSubstanza}
                 stanzaIndex={shownStanzaIndex}
                 stanzaType={stanzaTypeLabel}
             />
