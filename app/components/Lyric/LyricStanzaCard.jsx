@@ -12,7 +12,6 @@ import LyricVerse from './LyricVerse'
 const lyricStanzaCardDefaultProps = {
     inMain: false,
     subsequent: false,
-    addSubstanza: false,
     isSubstanza: false
 },
 
@@ -27,8 +26,7 @@ lyricStanzaCardPropTypes = {
 
     stanzaArray: PropTypes.array,
     inMain: PropTypes.bool.isRequired,
-    isSubstanza: PropTypes.bool.isRequired,
-    addSubstanza: PropTypes.bool.isRequired
+    isSubstanza: PropTypes.bool.isRequired
 },
 
 LyricStanzaCard = ({
@@ -43,9 +41,6 @@ LyricStanzaCard = ({
 
     // From controller.
     stanzaArray,
-    addSubstanza,
-
-    // Passed recursively.
     isSubstanza,
 
 ...other }) => {
@@ -58,7 +53,7 @@ LyricStanzaCard = ({
             inMain
             && !subsequent
             && !isSubstanza
-            && !addSubstanza
+            && !isSubstanza
             && stanzaIndex
 
         let stanzaTypeLabel
@@ -73,7 +68,7 @@ LyricStanzaCard = ({
         return (
             <LyricStanzaCardView {...other}
                 stanzaArray={stanzaArray}
-                addSubstanza={addSubstanza}
+                isSubstanza={isSubstanza}
                 stanzaIndex={shownStanzaIndex}
                 stanzaType={stanzaTypeLabel}
             />
@@ -92,7 +87,7 @@ LyricStanzaCard.propTypes = lyricStanzaCardPropTypes
 
 const lyricStanzaCardViewPropTypes = {
     // From parent.
-    addSubstanza: PropTypes.bool.isRequired,
+    isSubstanza: PropTypes.bool.isRequired,
     stanzaIndex: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.number
@@ -103,7 +98,7 @@ const lyricStanzaCardViewPropTypes = {
 
 LyricStanzaCardView = ({
 
-    addSubstanza,
+    isSubstanza,
     stanzaArray,
     stanzaIndex,
     stanzaType,
@@ -113,8 +108,8 @@ LyricStanzaCardView = ({
     return (
         <div className={cx(
             'LyricStanzaCard',
-            addSubstanza && 'offset__stanza__overlap',
-            addSubstanza && 'offset__stanza__right'
+            isSubstanza && 'offset__stanza__overlap',
+            isSubstanza && 'offset__stanza__right'
         )}>
 
             {stanzaIndex &&

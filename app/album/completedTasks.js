@@ -2802,4 +2802,9 @@ module.exports = [
         workedHours: 15,
         neededHours: 15
     },
+    {
+        taskName: `Willy the Cocoa substanza is not right colour? This is because isSubstanza is no longer passed recursively.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

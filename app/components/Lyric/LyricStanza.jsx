@@ -239,7 +239,7 @@ LyricStanzaView = ({
                     />
                     <LyricStanzaCard {...other}
                         inMain
-                        addSubstanza
+                        isSubstanza
                         stanzaArray={substanza}
                         isTruncatable={hasSide}
                     />
@@ -259,7 +259,7 @@ LyricStanzaView = ({
                         stanzaArray={bottomSideStanza}
                     />
                     <LyricStanzaCard {...other}
-                        addSubstanza
+                        isSubstanza
                         stanzaArray={topSideSubstanza}
                     />
                 </div>

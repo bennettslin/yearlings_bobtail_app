@@ -1,12 +1,6 @@
 module.exports = [
 
     {
-        taskName: `Willy the Cocoa substanza is not right colour? This is because isSubstanza is no longer passed recursively.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Dragging on slider initially drags times text?`,
         workedHours: 0,
         neededHours: 1
