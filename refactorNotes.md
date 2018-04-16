@@ -55,7 +55,7 @@ Text
 Theatre (Just rename some children)
 Tips (/)
 Title (/)
-Verse
+Verse (Consolidate VerseAudio into single component.)
 Wiki (/)
 
 AccessManager

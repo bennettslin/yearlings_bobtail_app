@@ -20,7 +20,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class DotToggleButton extends Component {
+class DotsSlideToggle extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -189,4 +189,4 @@ DotToggleButtonView = ({
 
 DotToggleButtonView.propTypes = dotToggleButtonViewPropTypes
 
-export default connect(mapStateToProps)(DotToggleButton)
+export default connect(mapStateToProps)(DotsSlideToggle)

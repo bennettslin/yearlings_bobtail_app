@@ -12,7 +12,7 @@ import Nav from '../Nav/Nav'
 import AnnotationPopup from '../Popups/AnnotationPopup'
 import CarouselToggle from '../Carousel/CarouselToggle'
 import Carousel from '../Carousel/Carousel'
-import Dots from '../Dots/Dots'
+import DotsSlide from '../DotsSlide/DotsSlide'
 import LeftShelf from './LeftShelf'
 import LyricToggleExpand from '../LyricColumn/LyricToggleExpand'
 import Stage from '../stage/Stage'
@@ -106,7 +106,7 @@ Main = ({
                 handleLyricSectionExpand={handleLyricSectionExpand}
             />
 
-            <Dots {...dotsSectionHandlers} />
+            <DotsSlide {...dotsSectionHandlers} />
 
             <ScoresTips {...scoresTipsHandlers}
                 inMainRightSide

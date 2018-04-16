@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DotToggleButton from './DotToggleButton'
+import DotsSlideToggle from './DotsSlideToggle'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
 const mapStateToProps = ({
@@ -14,7 +14,7 @@ const mapStateToProps = ({
     accessedDotIndex
 })
 
-const dotToggleBlockPropTypes = {
+const dotsSlideTogglesPropTypes = {
     // Through Redux.
     accessedDotIndex: PropTypes.number,
 
@@ -22,7 +22,7 @@ const dotToggleBlockPropTypes = {
     dotKeys: PropTypes.object.isRequired
 },
 
-DotToggleBlock = ({
+DotsSlideToggles = ({
 
     dotKeys,
     accessedDotIndex,
@@ -44,7 +44,7 @@ DotToggleBlock = ({
                     const accessHighlighted = accessedDotIndex === firstHalfIndex
 
                     return (
-                        <DotToggleButton {...other}
+                        <DotsSlideToggle {...other}
                             key={firstHalfIndex}
                             dotIndex={firstHalfIndex}
                             dotKey={dotKey}
@@ -61,7 +61,7 @@ DotToggleBlock = ({
                         accessHighlighted = accessedDotIndex === secondHalfIndex
 
                     return (
-                        <DotToggleButton {...other}
+                        <DotsSlideToggle {...other}
                             key={index}
                             dotIndex={secondHalfIndex}
                             dotKey={dotKey}
@@ -75,6 +75,6 @@ DotToggleBlock = ({
     )
 }
 
-DotToggleBlock.propTypes = dotToggleBlockPropTypes
+DotsSlideToggles.propTypes = dotsSlideTogglesPropTypes
 
-export default connect(mapStateToProps)(DotToggleBlock)
+export default connect(mapStateToProps)(DotsSlideToggles)
