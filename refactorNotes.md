@@ -50,9 +50,9 @@ Popups
 Score (/)
 ScoresTips
 Slider (Now just waiting on rework.)
-Stage (Just rename some children)
+Stage (/) (Just rename stuff when picking back up again.)
 Text
-Theatre (Just rename some children)
+Theatre (/) (Just rename stuff when picking back up again.)
 Tips (/)
 Title (/)
 Verse (Consolidate VerseAudio into single component.)

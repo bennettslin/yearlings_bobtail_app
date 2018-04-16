@@ -45,7 +45,7 @@ DotsSlideSelects = ({
         >
             {/* TODO: Can this not be duplicated? */}
             <div
-                className="DotsSlideToggles__row"
+                className="DotsSlideSelects__row"
             >
                 {firstHalfArray.map((dotKey, firstHalfIndex) => {
                     const accessHighlighted = accessedDotIndex === firstHalfIndex
@@ -62,7 +62,7 @@ DotsSlideSelects = ({
                 })}
             </div>
             <div
-                className="DotsSlideToggles__row"
+                className="DotsSlideSelects__row"
             >
                 {secondHalfArray.map((dotKey, index) => {
                     const secondHalfIndex = index + firstHalfEnd,
