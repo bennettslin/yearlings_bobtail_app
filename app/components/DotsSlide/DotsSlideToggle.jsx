@@ -138,7 +138,7 @@ DotToggleButtonView = ({
 
     return (
         <div className={cx(
-            'dot-toggle-container'
+            'DotsSlideToggle'
         )}>
             <a
                 className="dot-section-anchor"
@@ -174,12 +174,11 @@ DotToggleButtonView = ({
                     handleClick={handleDotToggleClick}
                 >
                     <div className={cx(
-                        'dot-description',
-                        { 'interactivated': isInteractivated }
+                        'DotsSlideToggle__description',
+                        { 'DotsSlideToggle__interactivated': isInteractivated },
+                        'flexCentreContainer'
                     )}>
-                        <span>
-                            {DOT_DESCRIPTIONS[dotKey]}
-                        </span>
+                        {DOT_DESCRIPTIONS[dotKey]}
                     </div>
                 </Button>
             </div>

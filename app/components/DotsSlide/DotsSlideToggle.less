@@ -1,17 +1,47 @@
-.dot-description {
+.DotsSlideToggle {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: @padding__dotsSlideToggle;
+
+    .DotAnchor {
+
+        &:hover {
+            .icon-canvas {
+                animation: bounceHover @animationDuration__default;
+            }
+        }
+
+        &:active {
+            .icon-canvas {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+    .dot {
+        &.deselected {
+            .icon-canvas {
+                background-color: @bgColour__dot__deselected;
+            }
+        }
+    }
+
+    .RM__phone
+    & {
+        padding: @padding__dotsSlideToggle__phone;
+    }
+}
+
+.DotsSlideToggle__description {
     position: absolute;
 
     // Specify for Safari.
     top: 0;
     left: 0;
 
-    width: @dot-toggle-container-diameter;
-    height: @dot-toggle-container-diameter;
+    width: @length__dotsSlideToggle;
+    height: @length__dotsSlideToggle;
     border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     text-align: center;
     font-size: .6em;
@@ -19,14 +49,14 @@
     opacity: 0;
     transition: opacity @animationDuration__default;
 
-    &:hover, &.interactivated {
+    &:hover, &.DotsSlideToggle__interactivated {
         opacity: 1;
     }
 
     .RM__phone
     & {
-        width: @dot-toggle-container-phone-diameter;
-        height: @dot-toggle-container-phone-diameter;
+        width: @length__dotsSlideToggle__phone;
+        height: @length__dotsSlideToggle__phone;
     }
 }
 

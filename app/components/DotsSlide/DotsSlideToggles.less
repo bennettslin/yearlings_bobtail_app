@@ -1,16 +1,23 @@
-@dot-toggle-container-diameter: 64px;
-@dot-toggle-container-padding: @dot-toggle-container-diameter / 6;
+@length__dotsSlideToggle: 64px;
+@length__dotsSlideToggle__phone: @length__iconLarge * 0.95;
 
-@dot-toggle-container-phone-diameter: @length__iconLarge * 0.95;
-@dot-toggle-container-phone-padding: @length__iconLarge / 7;
+@padding__dotsSlideToggle: @length__dotsSlideToggle / 6;
+@padding__dotsSlideToggle__phone: @length__iconLarge / 7;
 
-.DotsToggle-block {
+.DotsSlideToggles {
+
+    display: flex;
     flex-direction: column;
+
+    padding: 10px;
+
+    // TODO: Maybe consolidate all the text shadows that use this colour.
+    .mixin__textShadow(@bgColour__verse__odd);
 
     .dot {
         &, & .icon-canvas {
-            width: @dot-toggle-container-diameter;
-            height: @dot-toggle-container-diameter;
+            width: @length__dotsSlideToggle;
+            height: @length__dotsSlideToggle;
         }
     }
 
@@ -18,47 +25,13 @@
     & {
         .dot {
             &, & .icon-canvas {
-                width: @dot-toggle-container-phone-diameter;
-                height: @dot-toggle-container-phone-diameter;
+                width: @length__dotsSlideToggle__phone;
+                height: @length__dotsSlideToggle__phone;
             }
         }
     }
 }
 
-.dot-toggle-container {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: @dot-toggle-container-padding;
-
-    .DotAnchor {
-
-        &:hover {
-            .icon-canvas {
-                animation: bounceHover @animationDuration__default;
-            }
-        }
-
-        &:active {
-            .icon-canvas {
-                transform: scale(0.9);
-            }
-        }
-    }
-
-    .dot {
-        &.deselected {
-            .icon-canvas {
-                background-color: @bgColour__dot__deselected;
-            }
-        }
-    }
-
-    .RM__phone
-    & {
-        padding: @dot-toggle-container-phone-padding;
-    }
-}
-
-.DotsToggle-row {
+.DotsSlideToggles__row {
     display: flex;
 }

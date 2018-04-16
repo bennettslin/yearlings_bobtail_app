@@ -3,7 +3,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import cx from 'classnames'
 
 import DotsSlideToggles from './DotsSlideToggles'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
@@ -13,10 +12,6 @@ const mapStateToProps = ({
 }) => ({
     selectedDotKeys
 })
-
-/*************
- * CONTAINER *
- *************/
 
 class DotsSlide extends Component {
 
@@ -80,44 +75,16 @@ class DotsSlide extends Component {
             { hasInteractivatedDotText } = this.state
 
         return (
-            <DotsSlideView {...other}
-                dotKeys={selectedDotKeys}
-                handleContainerClick={this._onContainerClick}
-                hasInteractivatedDotText={hasInteractivatedDotText}
-                setHasInteractivatedDotText={this._setHasInteractivatedDotText}
-            />
+            <div className="DotsSlide">
+                <DotsSlideToggles {...other}
+                    dotKeys={selectedDotKeys}
+                    handleContainerClick={this._onContainerClick}
+                    hasInteractivatedDotText={hasInteractivatedDotText}
+                    setHasInteractivatedDotText={this._setHasInteractivatedDotText}
+                />
+            </div>
         )
     }
 }
-
-/****************
- * PRESENTATION *
- ****************/
-
-const dotsSlideViewPropTypes = {
-    // From parent.
-    handleContainerClick: PropTypes.func.isRequired
-},
-
-DotsSlideView = ({
-
-    handleContainerClick,
-
-...other }) => (
-
-    <div className="DotsSlide">
-        <div
-            className={cx(
-                'Dots__slide'
-            )}
-            onClick={handleContainerClick}
-            onTouchStart={handleContainerClick}
-        >
-            <DotsSlideToggles {...other} />
-        </div>
-    </div>
-)
-
-DotsSlideView.propTypes = dotsSlideViewPropTypes
 
 export default connect(mapStateToProps)(DotsSlide)

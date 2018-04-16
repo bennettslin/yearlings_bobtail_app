@@ -19,13 +19,15 @@ const dotsSlideTogglesPropTypes = {
     accessedDotIndex: PropTypes.number,
 
     // From parent.
-    dotKeys: PropTypes.object.isRequired
+    dotKeys: PropTypes.object.isRequired,
+    handleContainerClick: PropTypes.func.isRequired
 },
 
 DotsSlideToggles = ({
 
-    dotKeys,
     accessedDotIndex,
+    dotKeys,
+    handleContainerClick,
 
 ...other }) => {
 
@@ -34,13 +36,18 @@ DotsSlideToggles = ({
         secondHalfArray = ALL_DOT_KEYS.slice(firstHalfEnd)
 
     return (
-        <span className={cx(
-            'dots-block',
-            'DotsToggle-block'
-        )}>
-            <div className="DotsToggle-row">
+        <div
+            className={cx(
+                'DotsSlideToggles'
+            )}
+            onClick={handleContainerClick}
+            onTouchStart={handleContainerClick}
+        >
+            <div
+                key="first"
+                className="DotsSlideToggles__row"
+            >
                 {firstHalfArray.map((dotKey, firstHalfIndex) => {
-
                     const accessHighlighted = accessedDotIndex === firstHalfIndex
 
                     return (
@@ -54,9 +61,11 @@ DotsSlideToggles = ({
                     )
                 })}
             </div>
-            <div className="DotsToggle-row">
+            <div
+                key="second"
+                className="DotsSlideToggles__row"
+            >
                 {secondHalfArray.map((dotKey, index) => {
-
                     const secondHalfIndex = index + firstHalfEnd,
                         accessHighlighted = accessedDotIndex === secondHalfIndex
 
@@ -71,10 +80,9 @@ DotsSlideToggles = ({
                     )
                 })}
             </div>
-        </span>
+        </div>
     )
 }
 
 DotsSlideToggles.propTypes = dotsSlideTogglesPropTypes
-
 export default connect(mapStateToProps)(DotsSlideToggles)

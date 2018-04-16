@@ -23,13 +23,6 @@
     box-shadow: @boxShadow__dotsContainer;
     background-color: @bgColour__verse__odd;
 
-    .RM__song.RM__dotsShown
-    & {
-        opacity: 1;
-        margin-left: @margin__dotsContainer;
-        transform: translateX(0);
-    }
-
     ._mobileNotPhone_
     & {
         top: auto;
@@ -39,15 +32,15 @@
         margin-bottom: @margin__dotsContainer / 2;
     }
 
+    .RM__song.RM__dotsShown
+    & {
+        opacity: 1;
+        margin-left: @margin__dotsContainer;
+        transform: translateX(0);
+    }
+
     .RM__phone.RM__dotsShown
     & {
         margin-left: @margin__dotsContainer__phone;
     }
-}
-
-.Dots__slide {
-    padding: 10px;
-
-    // TODO: Maybe consolidate all the text shadows that use this colour.
-    .mixin__textShadow(@bgColour__verse__odd);
 }
