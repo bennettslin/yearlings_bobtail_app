@@ -313,7 +313,7 @@ class AccessManager extends Component {
                     }
                     break
                 case ENTER:
-                    return eventHandlers.handleDotToggle(e, accessedDotIndex)
+                    return eventHandlers.handleDotSelect(e, accessedDotIndex)
                 default:
                     return false
             }

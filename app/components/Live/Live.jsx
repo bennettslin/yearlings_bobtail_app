@@ -32,7 +32,7 @@ class Live extends Component {
         handleAudioOptionsToggle: PropTypes.func.isRequired,
         handleSliderTouchBegin: PropTypes.func.isRequired,
         handleCarouselNavToggle: PropTypes.func.isRequired,
-        handleDotToggle: PropTypes.func.isRequired,
+        handleDotSelect: PropTypes.func.isRequired,
         handleDotsSectionToggle: PropTypes.func.isRequired,
         handleNavSongSelect: PropTypes.func.isRequired,
         handleNavBookSelect: PropTypes.func.isRequired,
@@ -84,7 +84,7 @@ class Live extends Component {
                 handleAudioOptionsToggle,
                 handleSliderTouchBegin,
                 handleCarouselNavToggle,
-                handleDotToggle,
+                handleDotSelect,
                 handleDotsSectionToggle,
                 handleNavSongSelect,
                 handleNavBookSelect,
@@ -201,7 +201,7 @@ class Live extends Component {
                 },
                 dotsSectionHandlers: {
                     handlePopupContainerClick,
-                    handleDotToggle,
+                    handleDotSelect,
                     stopPropagation
                 },
                 navSectionHandlers: {

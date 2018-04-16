@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DotsSlideToggle from './DotsSlideToggle'
+import DotsSlideSelect from './DotsSlideSelect'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
 const mapStateToProps = ({
@@ -14,7 +14,7 @@ const mapStateToProps = ({
     accessedDotIndex
 })
 
-const dotsSlideTogglesPropTypes = {
+const dotsSlideSelectsPropTypes = {
     // Through Redux.
     accessedDotIndex: PropTypes.number,
 
@@ -23,7 +23,7 @@ const dotsSlideTogglesPropTypes = {
     handleContainerClick: PropTypes.func.isRequired
 },
 
-DotsSlideToggles = ({
+DotsSlideSelects = ({
 
     accessedDotIndex,
     dotKeys,
@@ -38,7 +38,7 @@ DotsSlideToggles = ({
     return (
         <div
             className={cx(
-                'DotsSlideToggles'
+                'DotsSlideSelects'
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}
@@ -51,7 +51,7 @@ DotsSlideToggles = ({
                     const accessHighlighted = accessedDotIndex === firstHalfIndex
 
                     return (
-                        <DotsSlideToggle {...other}
+                        <DotsSlideSelect {...other}
                             key={firstHalfIndex}
                             dotIndex={firstHalfIndex}
                             dotKey={dotKey}
@@ -69,7 +69,7 @@ DotsSlideToggles = ({
                         accessHighlighted = accessedDotIndex === secondHalfIndex
 
                     return (
-                        <DotsSlideToggle {...other}
+                        <DotsSlideSelect {...other}
                             key={index}
                             dotIndex={secondHalfIndex}
                             dotKey={dotKey}
@@ -83,5 +83,5 @@ DotsSlideToggles = ({
     )
 }
 
-DotsSlideToggles.propTypes = dotsSlideTogglesPropTypes
-export default connect(mapStateToProps)(DotsSlideToggles)
+DotsSlideSelects.propTypes = dotsSlideSelectsPropTypes
+export default connect(mapStateToProps)(DotsSlideSelects)

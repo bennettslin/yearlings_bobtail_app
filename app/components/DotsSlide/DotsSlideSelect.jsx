@@ -20,7 +20,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class DotsSlideToggle extends Component {
+class DotsSlideSelect extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -31,7 +31,7 @@ class DotsSlideToggle extends Component {
         hasInteractivatedDotText: PropTypes.number.isRequired,
         setHasInteractivatedDotText: PropTypes.func.isRequired,
         stopPropagation: PropTypes.func.isRequired,
-        handleDotToggle: PropTypes.func.isRequired
+        handleDotSelect: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -61,7 +61,7 @@ class DotsSlideToggle extends Component {
     }
 
     _handleDotToggleClick(e) {
-        this.props.handleDotToggle(e, this.props.dotIndex)
+        this.props.handleDotSelect(e, this.props.dotIndex)
     }
 
     _handleTextContainerClick(e) {
@@ -85,7 +85,7 @@ class DotsSlideToggle extends Component {
         /* eslint-disable no-unused-vars */
         const { dotIndex,
                 selectedDotsIndex,
-                handleDotToggle,
+                handleDotSelect,
                 hasInteractivatedDotText,
                 setHasInteractivatedDotText,
                 stopPropagation,
@@ -93,9 +93,9 @@ class DotsSlideToggle extends Component {
         /* eslint-enable no-unused-vars */
 
         return (
-            <DotToggleButtonView {...other}
+            <DotsSlideSelectView {...other}
                 isInteractivated={this.state.isInteractivated}
-                handleDotToggleClick={this._handleDotToggleClick}
+                handleDotSelectClick={this._handleDotToggleClick}
                 handleTextContainerClick={this._handleTextContainerClick}
             />
         )
@@ -106,17 +106,17 @@ class DotsSlideToggle extends Component {
  * PRESENTATION *
  ****************/
 
-const dotToggleButtonViewPropTypes = {
+const dotsSlideSelectViewPropTypes = {
     // From parent.
     dotKey: PropTypes.string.isRequired,
     accessHighlighted: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isInteractivated: PropTypes.bool.isRequired,
-    handleDotToggleClick: PropTypes.func.isRequired,
+    handleDotSelectClick: PropTypes.func.isRequired,
     handleTextContainerClick: PropTypes.func.isRequired
 },
 
-DotToggleButtonView = ({
+DotsSlideSelectView = ({
 
     // From props.
     dotKey,
@@ -125,7 +125,7 @@ DotToggleButtonView = ({
 
     // From controller.
     isInteractivated,
-    handleDotToggleClick,
+    handleDotSelectClick,
     handleTextContainerClick
 
 }) => {
@@ -138,7 +138,7 @@ DotToggleButtonView = ({
 
     return (
         <div className={cx(
-            'DotsSlideToggle'
+            'DotsSlideSelect'
         )}>
             <a
                 className="dot-section-anchor"
@@ -171,11 +171,11 @@ DotToggleButtonView = ({
                     accessKey={accessKey}
                     iconClass={dotKey}
                     isDeselected={!isSelected}
-                    handleClick={handleDotToggleClick}
+                    handleClick={handleDotSelectClick}
                 >
                     <div className={cx(
-                        'DotsSlideToggle__description',
-                        { 'DotsSlideToggle__interactivated': isInteractivated },
+                        'DotsSlideSelect__description',
+                        { 'DotsSlideSelect__interactivated': isInteractivated },
                         'flexCentreContainer'
                     )}>
                         {DOT_DESCRIPTIONS[dotKey]}
@@ -186,6 +186,6 @@ DotToggleButtonView = ({
     )
 }
 
-DotToggleButtonView.propTypes = dotToggleButtonViewPropTypes
+DotsSlideSelectView.propTypes = dotsSlideSelectViewPropTypes
 
-export default connect(mapStateToProps)(DotsSlideToggle)
+export default connect(mapStateToProps)(DotsSlideSelect)

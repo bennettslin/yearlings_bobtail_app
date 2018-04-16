@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import DotsSlideToggles from './DotsSlideToggles'
+import DotsSlideSelects from './DotsSlideSelects'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -76,7 +76,7 @@ class DotsSlide extends Component {
 
         return (
             <div className="DotsSlide">
-                <DotsSlideToggles {...other}
+                <DotsSlideSelects {...other}
                     dotKeys={selectedDotKeys}
                     handleContainerClick={this._onContainerClick}
                     hasInteractivatedDotText={hasInteractivatedDotText}

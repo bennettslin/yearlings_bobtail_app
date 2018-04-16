@@ -1,4 +1,4 @@
-.DotsSlideToggle {
+.DotsSlideSelect {
     display: flex;
     flex-direction: column-reverse;
     padding: @padding__dotsSlideToggle;
@@ -32,7 +32,7 @@
     }
 }
 
-.DotsSlideToggle__description {
+.DotsSlideSelect__description {
     position: absolute;
 
     // Specify for Safari.
@@ -49,7 +49,7 @@
     opacity: 0;
     transition: opacity @animationDuration__default;
 
-    &:hover, &.DotsSlideToggle__interactivated {
+    &:hover, &.DotsSlideSelect__interactivated {
         opacity: 1;
     }
 
