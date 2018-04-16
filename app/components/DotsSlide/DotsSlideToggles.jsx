@@ -43,8 +43,8 @@ DotsSlideToggles = ({
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}
         >
+            {/* TODO: Can this not be duplicated? */}
             <div
-                key="first"
                 className="DotsSlideToggles__row"
             >
                 {firstHalfArray.map((dotKey, firstHalfIndex) => {
@@ -62,7 +62,6 @@ DotsSlideToggles = ({
                 })}
             </div>
             <div
-                key="second"
                 className="DotsSlideToggles__row"
             >
                 {secondHalfArray.map((dotKey, index) => {
