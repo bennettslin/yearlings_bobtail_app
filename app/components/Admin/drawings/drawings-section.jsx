@@ -1,4 +1,6 @@
 import React from 'react'
+import keys from 'lodash.keys'
+
 import { getDrawings } from '../../../helpers/dataHelper'
 
 /*************
@@ -68,7 +70,7 @@ const DrawingsSectionView = ({
                                 {actor}
                             </div>
                             <div className="actor-info-row">
-                                {Object.keys(characters).map((characterName, characterIndex) => {
+                                {keys(characters).map((characterName, characterIndex) => {
                                     return (
                                         <div
                                             key={characterIndex}

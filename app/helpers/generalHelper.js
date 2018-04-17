@@ -1,4 +1,5 @@
 // Basic helpers that only know math and pure JavaScript.
+import keys from 'lodash.keys'
 
 const getPower = (base, exponent) => {
     if (exponent === 0) {
@@ -109,7 +110,7 @@ export const getSetsAreSame = (smallerSet, largerSet) => {
         return smallerSet === largerSet
     }
 
-    return Object.keys(smallerSet).reduce((allSame, key) => {
+    return keys(smallerSet).reduce((allSame, key) => {
         const valueIsSame = smallerSet[key] === largerSet[key] ||
 
             // Functions are exempt, as they constantly change through binding.

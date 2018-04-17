@@ -1,4 +1,6 @@
 // Methods to switch between a bit number and a true false object.
+import keys from 'lodash.keys'
+
 import { getArrayOfLength } from './generalHelper'
 
 export const getTwoToThePowerOfN = (exponent, number = 2) => {
@@ -24,7 +26,7 @@ export const convertTrueFalseKeysToBitNumber = ({
 
     // If no keys array is given, assume 1-based indices.
     keysArray = keysArray || getArrayOfLength({
-        length: Object.keys(trueFalseObject).length,
+        length: keys(trueFalseObject).length,
         indexBase: 1
     })
 

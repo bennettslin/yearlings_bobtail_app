@@ -1,4 +1,7 @@
 // Parse drawing data for build.
+
+import keys from 'lodash.keys'
+
 /**
  * FIXME: These are a mess. They are named admin methods, but some of them are
  * doing work that will stay in production.
@@ -50,7 +53,7 @@ export const adminGatherDrawings = (album, songObject, songIndex) => {
                      */
                     const characterEntity = scene[drawingType][key],
                         entityIsObject = typeof characterEntity === 'object' && !characterEntity.description,
-                        character = entityIsObject ? Object.keys(characterEntity)[0] : key,
+                        character = entityIsObject ? keys(characterEntity)[0] : key,
                         descriptionEntity = entityIsObject ? characterEntity[character] : characterEntity
 
                     // This is for props logged in epilogue.
@@ -79,7 +82,7 @@ export const adminFinaliseDrawings = (album) => {
     let actorsTotalCount = 0,
         actorsTodoCount = 0
 
-    Object.keys(_drawings.actors).forEach(actor => {
+    keys(_drawings.actors).forEach(actor => {
         const roles = _drawings.actors[actor],
             rolesTotalCount = roles.length,
             characters = {}

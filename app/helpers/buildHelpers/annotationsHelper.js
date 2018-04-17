@@ -1,5 +1,7 @@
 // Parse annotation data for build.
 
+import keys from 'lodash.keys'
+
 import { LYRIC, ANCHOR, WIKI, ITALIC, WIKI_INDEX, PORTAL_SEARCH_KEYS, DESTINATION_PORTAL_INDEX, SOURCE_PORTAL_INDEX, IS_VERSE_BEGINNING_SPAN, IS_VERSE_ENDING_SPAN } from '../../constants/lyrics'
 import { PORTAL, REFERENCE } from '../../constants/dots'
 import { getAnnotationObject } from '../dataHelper'
@@ -77,7 +79,7 @@ const _getHasWiki = (descriptionEntity) => {
         }, false)
 
     } else {
-        return Object.keys(descriptionEntity).reduce((keyFound, currentKey) => {
+        return keys(descriptionEntity).reduce((keyFound, currentKey) => {
             const hasWiki = !!descriptionEntity[WIKI]
 
             return keyFound || hasWiki || _getHasWiki(descriptionEntity[currentKey])
@@ -88,7 +90,7 @@ const _getHasWiki = (descriptionEntity) => {
 const _addAllDotKeysToAnnotation = (cardObject, annotationDotKeys) => {
     // Add dot keys to both song and annotation card.
     if (cardObject.dotKeys) {
-        Object.keys(cardObject.dotKeys).forEach(dotKey => {
+        keys(cardObject.dotKeys).forEach(dotKey => {
             annotationDotKeys[dotKey] = true
         })
     }
@@ -243,7 +245,7 @@ const _finalParseWiki = (annotationObject, entity) => {
         }, false)
 
     } else {
-        return Object.keys(entity).reduce((keyFound, currentKey) => {
+        return keys(entity).reduce((keyFound, currentKey) => {
             const hasWiki = !!entity[WIKI]
 
             if (!entity[WIKI_INDEX] && typeof entity[WIKI] === 'string') {

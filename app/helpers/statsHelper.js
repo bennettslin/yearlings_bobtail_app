@@ -1,15 +1,17 @@
 // For dev purposes. Calculate words in lyrics and annotations.
 
+import keys from 'lodash.keys'
+
 import { STAT_TEXT_KEYS } from '../constants/lyrics'
 
 export default {
 
     getCount(textObject = {}) {
-        return Object.keys(textObject).length
+        return keys(textObject).length
     },
 
     getTodoCount(textObject = {}) {
-        const objectKeys = Object.keys(textObject)
+        const objectKeys = keys(textObject)
 
         return objectKeys.reduce((todoCount, objectKey) => {
             return todoCount + !!textObject[objectKey].todo

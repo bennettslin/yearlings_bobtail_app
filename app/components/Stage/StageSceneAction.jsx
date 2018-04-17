@@ -3,6 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import keys from 'lodash.keys'
 
 const defaultProps = {
     walls: {},
@@ -45,9 +46,9 @@ const StageActionField = ({
     // console.error('walls, fixtures, actors', walls, fixtures, actors);
 
     // Actors always change from scene to scene.
-    const actorsArray = Object.keys(actors),
-        fixturesArray = Object.keys(fixtures),
-        wallsArray = Object.keys(walls)
+    const actorsArray = keys(actors),
+        fixturesArray = keys(fixtures),
+        wallsArray = keys(walls)
 
 
     return (
