@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import TextBlock from './TextBlock'
-import DotBlock from '../Dot/DotBlock'
+import DotSequence from '../Dot/DotSequence'
 
 class TextAnchor extends Component {
 
@@ -121,7 +121,7 @@ class TextAnchor extends Component {
                     }
                     {/* Don't show any dots in portal block. */}
                     {!wikiIndex && !inPortal &&
-                        <DotBlock
+                        <DotSequence
                             dotKeys={annotationDotKeys}
                         />
                     }

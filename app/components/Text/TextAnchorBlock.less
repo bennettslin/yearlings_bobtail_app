@@ -12,12 +12,6 @@
         line-height: 0;
     }
 
-    .dots-block {
-        position: absolute;
-        left: -@length__lyricAnchorDot * 0.32;
-        top: -@length__lyricAnchorDot * 0.35;
-    }
-
     // For dev purposes.
     // &.todo {
     //     color: #c00;
@@ -39,4 +33,13 @@
 
 .Lyric .TextAnchorBlock, .dot-section-anchor {
     white-space: nowrap;
+}
+
+.dot {
+    .TextAnchorBlock
+    &,
+    .TextAnchorBlock
+    & .icon-canvas {
+        height: @length__lyricAnchorDot;
+    }
 }

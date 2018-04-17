@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import DotBlock from '../Dot/DotBlock'
+import DotSequence from '../Dot/DotSequence'
 import TextBlock from '../Text/TextBlock'
 import AnnotationPortals from './AnnotationPortals'
 import { PORTAL } from '../../constants/dots'
@@ -129,7 +129,8 @@ AnnotationCardView = ({
         cardDotKeys
     )}>
         {!cardDotKeys.portal && (
-            <DotBlock
+            <DotSequence
+                inAnnotationCard
                 dotKeys={cardDotKeys}
             />
         )}

@@ -2,21 +2,31 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
+
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
-import Icon from '../Icon/icon'
+import Icon from '../Icon/Icon'
 
 const dotBlockPropTypes = {
+
     // From parent.
+    inAnnotationCard: PropTypes.bool,
     dotKeys: PropTypes.object.isRequired
 },
 
-DotBlock = ({
+DotSequence = ({
 
+    inAnnotationCard,
     dotKeys
 
 }) => (
-    <span className="dots-block">
+    <span className={cx(
+        'DotSequence',
+        inAnnotationCard ?
+            'DotSequence__inAnnotationCard' :
+            'DotSequence__inTextAnchor'
+    )}>
         {ALL_DOT_KEYS.map((dotKey, index) => {
 
             // Go through all dot keys in array to ensure correct order.
@@ -32,6 +42,6 @@ DotBlock = ({
     </span>
 )
 
-DotBlock.propTypes = dotBlockPropTypes
+DotSequence.propTypes = dotBlockPropTypes
 
-export default DotBlock
+export default DotSequence
