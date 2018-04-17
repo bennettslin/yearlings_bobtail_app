@@ -2807,4 +2807,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Hovering over access icons doesn't trigger animation.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

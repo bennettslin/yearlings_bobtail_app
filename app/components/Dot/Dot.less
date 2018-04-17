@@ -4,7 +4,6 @@
 .Dot {
     width: 0;
     height: 0;
-
     opacity: 0;
 
     // Increase width first, then fade in.
@@ -19,6 +18,16 @@
 
 .Dot__textAnchor {
     height: @length__lyricAnchorDot;
+
+    .TextAnchorBlock:hover
+    & {
+        animation: bounceHover @animationDuration__slow;
+    }
+
+    .TextAnchorBlock:active
+    & {
+        transform: scale(0.8);
+    }
 }
 
 .bgColour__portal {
@@ -46,15 +55,28 @@
     background-color: @Dot__afterword;
 }
 
-.RM__narrative .Dot__narrative,
-.RM__backstory .Dot__backstory,
-.RM__observation .Dot__observation,
-.RM__pun .Dot__pun,
-.RM__reference .Dot__reference,
-.RM__songwriting .Dot__songwriting,
-.RM__afterword .Dot__afterword {
+.RM__narrative
+    .Dot__narrative,
+.RM__backstory
+    .Dot__backstory,
+.RM__observation
+    .Dot__observation,
+.RM__pun
+    .Dot__pun,
+.RM__reference
+    .Dot__reference,
+.RM__songwriting
+    .Dot__songwriting,
+.RM__afterword
+    .Dot__afterword {
 
     opacity: 1;
+
+    // FIXME: This animation is janky, for some reason.
+    // Fade out first, then reduce width.
+    // transition:
+    //     width @animationDuration__default @animationDuration__fast,
+    //     opacity @animationDuration__default;
 
     &.Dot__annotationCard__sequence {
         width: @length__annotationDot;

@@ -27,34 +27,21 @@
         overflow: visible;
     }
 
-    /**
-     * All dot backgrounds in lyrics and annotation cards, except portal
-     * annotation cards.
-     */
-    .TextAnchorBlock
-    &,
-    .AnnotationCard:not(.portal)
-    & {
-        // Fade out first, then reduce width.
-        transition: opacity @animationDuration__default,
-                    width @animationDuration__default @animationDuration__faster;
-        width: 0;
-        opacity: 0;
-    }
-
     .Button.Button__enabled
     & {
         transition: background-color @animationDuration__default,
         transform @animationDuration__instant;
+    }
 
+    .Button.Button__enabled:hover
+    & {
         // Animate container itself, because its overflow is hidden.
-        &:hover {
-            animation: bounceHover @animationDuration__default;
-        }
+        animation: bounceHover @animationDuration__default;
+    }
 
-        &:active {
-            transform: scale(0.9);
-        }
+    .Button.Button__enabled:active
+    & {
+        transform: scale(0.9);
     }
 }
 
@@ -137,11 +124,6 @@
     & {
         border: @border__dot solid @lyric-underline-enabled-colour;
     }
-
-    .TextAnchorBlock
-    & {
-        width: @length__lyricAnchorDot;
-    }
 }
 
 .icon-canvas {
@@ -152,30 +134,6 @@
             background-color @animationDuration__fast,
             border @animationDuration__fast;
     }
-}
-
-// Hover styling.
-.RM__narrative .TextAnchorBlock:hover .icon-canvas-block.narrative,
-.RM__backstory .TextAnchorBlock:hover .icon-canvas-block.backstory,
-.RM__observation .TextAnchorBlock:hover .icon-canvas-block.observation,
-.RM__pun .TextAnchorBlock:hover .icon-canvas-block.pun,
-.RM__reference .TextAnchorBlock:hover .icon-canvas-block.reference,
-.RM__songwriting .TextAnchorBlock:hover .icon-canvas-block.songwriting,
-.RM__portal .TextAnchorBlock:hover .icon-canvas-block.portal,
-.RM__afterword .TextAnchorBlock:hover .icon-canvas-block.afterword {
-   animation: bounceHover @animationDuration__slow;
-}
-
-// Active styling.
-.RM__narrative .TextAnchorBlock:active .icon-canvas-block.narrative,
-.RM__backstory .TextAnchorBlock:active .icon-canvas-block.backstory,
-.RM__observation .TextAnchorBlock:active .icon-canvas-block.observation,
-.RM__pun .TextAnchorBlock:active .icon-canvas-block.pun,
-.RM__reference .TextAnchorBlock:active .icon-canvas-block.reference,
-.RM__songwriting .TextAnchorBlock:active .icon-canvas-block.songwriting,
-.RM__portal .TextAnchorBlock:active .icon-canvas-block.portal,
-.RM__afterword .TextAnchorBlock:active .icon-canvas-block.afterword {
-   transform: scale(0.8);
 }
 
 .DotsSlide,
