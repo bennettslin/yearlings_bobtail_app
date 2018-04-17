@@ -2784,8 +2784,8 @@ module.exports = [
     },
     {
         taskName: `More refactoring.`,
-        workedHours: 15,
-        neededHours: 15
+        workedHours: 20,
+        neededHours: 20
     },
     {
         taskName: `Fix scrolling issue.`,
@@ -2799,8 +2799,8 @@ module.exports = [
     },
     {
         taskName: `General refactoring of Slider, Lyric, and Verse.`,
-        workedHours: 15,
-        neededHours: 15
+        workedHours: 16,
+        neededHours: 16
     },
     {
         taskName: `Willy the Cocoa substanza is not right colour? This is because isSubstanza is no longer passed recursively.`,
