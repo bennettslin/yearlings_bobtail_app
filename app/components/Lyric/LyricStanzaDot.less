@@ -5,6 +5,8 @@
         margin-left: 0;
     }
 
+    overflow: hidden;
+
     transition:
         margin-top @animationDuration__default,
         margin-left @animationDuration__default;
@@ -22,12 +24,12 @@
     max-width: 720px;
     margin-top: @margin__lyricUnit;
 
-    .Button {
-        width: @js__length__icon;
-        height: @js__length__icon;
-    }
-
     &:not(:first-child) {
         margin-left: @marginX__stanzaChildColumn;
+    }
+
+    .Dot {
+        width: @js__length__icon;
+        height: @js__length__icon;
     }
 }

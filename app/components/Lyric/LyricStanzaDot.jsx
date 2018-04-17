@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DotAnchor from '../Dot/DotAnchor'
+import DotAnchor from '../Anchor/DotAnchor'
 
 const mapStateToProps = ({
     accessedAnnotationIndex,
@@ -61,9 +61,9 @@ class LyricStanzaDot extends Component {
             <LyricDotStanzaView
                 dotKeys={dotKeys}
                 isSelected={isSelected}
-                accessHighlighted={accessHighlighted}
+                isAccessed={accessHighlighted}
                 annotationIndex={annotationIndex}
-                handleDotButtonClick={this._handleDotButtonClick}
+                handleAnchorClick={this._handleDotButtonClick}
             />
         )
     }

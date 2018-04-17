@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Anchor from '../Anchor/Anchor'
-import DotAnchor from '../Dot/DotAnchor'
+import DotAnchor from '../Anchor/DotAnchor'
+import TextAnchor from '../Anchor/TextAnchor'
 
 import { IS_DOT_STANZA } from '../../constants/lyrics'
 
@@ -32,34 +32,17 @@ AnnotationTitle = ({
     )}>
         {annotationTitle === IS_DOT_STANZA ? (
             <DotAnchor
-                isSmall
-                isSelected={showAsSelected}
-                accessHighlighted={isAccessedAnnotation}
-                dotKeys={annotationDotKeys}
-                handleDotButtonClick={handleTitleClick}
-            />
-        ) : (
-            // <a className={cx(
-            //         'AnchorBlock',
-            //         'TextAnchorBlock',
-            //         annotationDotKeys,
-            //         { 'selected': showAsSelected,
-            //           'accessHighlighted': isAccessedAnnotation }
-            //     )}
-            //     onClick={handleTitleClick}
-            //     onTouchStart={handleTitleClick}
-            // >
-            //     <span className="underlineBar" />
-            //     <span className="TextSpan">
-            //         {`\u201c${annotationTitle}\u201d`}
-            //     </span>
-            // </a>
-            <Anchor
                 isSelected={showAsSelected}
                 isAccessed={isAccessedAnnotation}
-                // dotKeys={annotationDotKeys}
+                dotKeys={annotationDotKeys}
+                handleAnchorClick={handleTitleClick}
+            />
+        ) : (
+            <TextAnchor
+                isSelected={showAsSelected}
+                isAccessed={isAccessedAnnotation}
                 text={`\u201c${annotationTitle}\u201d`}
-                handleClick={handleTitleClick}
+                handleAnchorClick={handleTitleClick}
             />
         )}
     </div>

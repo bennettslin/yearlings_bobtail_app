@@ -1,4 +1,9 @@
-.Anchor, .Anchor__text {
+@import "./DotAnchor.less";
+@import "./TextAnchor.less";
+
+.Anchor,
+.TextAnchor,
+.DotAnchor {
     position: relative;
 }
 
@@ -25,6 +30,11 @@
     }
 }
 
+.Anchor__underline__underDot {
+    height: 25%;
+    bottom: -10%;
+}
+
 .Anchor__underline__selectable {
     background-color: @lyric-underline-enabled-colour;
 
@@ -42,48 +52,3 @@
 .Anchor__underline__selected {
     background-color: @selected-annotation-underline-colour;
 }
-
-.Anchor__text__selectable {
-    color: @lyric-link-colour;
-
-    .Anchor__selectable:hover
-    & {
-        color: @lyric-hover-colour;
-    }
-
-    .Anchor__selectable:active
-    & {
-        color: @lyric-active-colour;
-    }
-}
-
-.Anchor__text__selected {
-    color: @selected-annotation-text-colour;
-}
-
-.Anchor__selected {
-    // .icon-canvas {
-    //     border: @border__dot solid @selected-annotation-underline-colour;
-    //     background-color: @Dot__deselected;
-    // }
-}
-
-
-// .RM__sliderNotMoving.RM__narrative
-//     .Anchor__narrative,
-// .RM__sliderNotMoving.RM__backstory
-//     .Anchor__backstory,
-// .RM__sliderNotMoving.RM__observation
-//     .Anchor__observation,
-// .RM__sliderNotMoving.RM__pun
-//     .Anchor__pun,
-// .RM__sliderNotMoving.RM__reference
-//     .Anchor__reference,
-// .RM__sliderNotMoving.RM__songwriting
-//     .Anchor__songwriting,
-// .RM__sliderNotMoving.RM__portal
-//     .Anchor__portal,
-// .RM__sliderNotMoving.RM__afterword
-//     .Anchor__afterword,
-
-// .DotsSlideAnchor__inDots {

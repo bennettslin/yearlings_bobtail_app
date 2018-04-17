@@ -146,7 +146,7 @@ DotsSlideSelectView = ({
                 onTouchStart={handleTextContainerClick}
             >
                 <span className={cx(
-                    'AnchorBlock',
+                    'Anchor',
                     'TextAnchorBlock',
                     'DotsSlideAnchor__inDots',
                     { 'selected': isInteractivated,

@@ -32,6 +32,7 @@ Dot = ({
 }) => (
     <Icon2
         className={cx(
+            'Dot',
             'SequenceDot',
             `Dot__${dotKey}`,
             `bgColour__${dotKey}`,
