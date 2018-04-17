@@ -141,14 +141,14 @@ DotsSlideSelectView = ({
             'DotsSlideSelect'
         )}>
             <a
-                className="dot-section-anchor"
+                className="DotsSlideAnchor"
                 onClick={handleTextContainerClick}
                 onTouchStart={handleTextContainerClick}
             >
                 <span className={cx(
-                    'anchor-block',
+                    'AnchorBlock',
                     'TextAnchorBlock',
-                    'in-Dots',
+                    'DotsSlideAnchor__inDots',
                     { 'selected': isInteractivated,
                       'accessHighlighted': accessHighlighted }
                 )}>
@@ -160,7 +160,7 @@ DotsSlideSelectView = ({
                 </span>
             </a>
             <div className={cx(
-                'anchor-block',
+                'AnchorBlock',
                 'DotAnchor',
                 { 'accessHighlighted': accessHighlighted }
             )}>

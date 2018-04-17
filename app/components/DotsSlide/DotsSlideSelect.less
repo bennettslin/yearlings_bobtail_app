@@ -60,10 +60,78 @@
     }
 }
 
-.dot-section-anchor {
+.DotsSlideAnchor {
     padding-top: 5px;
     text-align: center;
     font-size: 0.75em;
     transition: box-shadow @animationDuration__default;
     cursor: pointer;
+}
+
+/*****************
+ * ANCHOR BLOCKS *
+ *****************/
+
+.RM__sliderNotMoving.RM__narrative .AnchorBlock.narrative,
+.RM__sliderNotMoving.RM__backstory .AnchorBlock.backstory,
+.RM__sliderNotMoving.RM__observation .AnchorBlock.observation,
+.RM__sliderNotMoving.RM__pun .AnchorBlock.pun,
+.RM__sliderNotMoving.RM__reference .AnchorBlock.reference,
+.RM__sliderNotMoving.RM__songwriting .AnchorBlock.songwriting,
+.RM__sliderNotMoving.RM__portal .AnchorBlock.portal,
+.RM__sliderNotMoving.RM__afterword .AnchorBlock.afterword,
+ 
+.DotsSlideAnchor__inDots {
+
+    // Default colour.
+    .underlineBar {
+        background-color: @lyric-underline-disabled-colour;
+    }
+
+    &.AnchorBlock:not(.selected) {
+        cursor: pointer;
+
+        .TextSpan {
+            color: @lyric-link-colour;
+        }
+
+        &:hover {
+            .TextSpan {
+                color: @lyric-hover-colour;
+            }
+
+            .underlineBar {
+                animation: bounceHover @animationDuration__default;
+            }
+        }
+
+        &:active {
+            .TextSpan {
+                color: @lyric-active-colour;
+            }
+
+            .underlineBar {
+                transform: scale(0.9);
+            }
+        }
+
+        .underlineBar {
+            background-color: @lyric-underline-enabled-colour;
+        }
+    }
+
+    &.selected {
+        .TextSpan {
+            color: @selected-annotation-text-colour;
+        }
+
+        .underlineBar {
+            background-color: @selected-annotation-underline-colour;
+        }
+
+        .icon-canvas {
+            border: @border__dot solid @selected-annotation-underline-colour;
+            background-color: @Dot__deselected;
+        }
+    }
 }

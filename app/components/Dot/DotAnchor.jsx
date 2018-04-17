@@ -50,7 +50,7 @@ class DotAnchor extends Component {
 
         return (
             <div className={cx(
-                'anchor-block',
+                'AnchorBlock',
                 'DotAnchor',
                 dotKeys,
                 { 'selected': isSelected,

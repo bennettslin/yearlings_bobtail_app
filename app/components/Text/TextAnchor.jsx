@@ -97,7 +97,7 @@ class TextAnchor extends Component {
                 }
                 <a
                     className={cx(
-                        'anchor-block',
+                        'AnchorBlock',
                         'TextAnchorBlock',
 
                         /**

@@ -9,3 +9,25 @@
         margin-top @animationDuration__default,
         margin-left @animationDuration__default;
 }
+
+.RM__narrative .LyricStanzaDot.narrative,
+.RM__backstory .LyricStanzaDot.backstory,
+.RM__observation .LyricStanzaDot.observation,
+.RM__pun .LyricStanzaDot.pun,
+.RM__reference .LyricStanzaDot.reference,
+.RM__songwriting .LyricStanzaDot.songwriting,
+.RM__portal .LyricStanzaDot.portal,
+.RM__afterword .LyricStanzaDot.afterword {
+
+    max-width: 720px;
+    margin-top: @margin__lyricUnit;
+
+    .Button {
+        width: @js__length__icon;
+        height: @js__length__icon;
+    }
+
+    &:not(:first-child) {
+        margin-left: @marginX__stanzaChildColumn;
+    }
+}

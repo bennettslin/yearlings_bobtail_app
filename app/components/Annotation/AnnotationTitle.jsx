@@ -41,7 +41,7 @@ AnnotationTitle = ({
             />
         ) : (
             <a className={cx(
-                    'anchor-block',
+                    'AnchorBlock',
                     'TextAnchorBlock',
                     annotationDotKeys,
                     { 'selected': showAsSelected,

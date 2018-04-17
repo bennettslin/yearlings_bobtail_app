@@ -105,7 +105,7 @@ class AnnotationPortal extends Component {
             <div
                 className={cx(
                     'AnnotationPortal',
-                    'anchor-block',
+                    'AnchorBlock',
                     'DotAnchor',
                     { 'accessHighlighted': isAccessedPortal }
                 )}
