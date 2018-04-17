@@ -1,4 +1,7 @@
-// Container to show a single dot.
+/**
+ * Component for a single dot in a sequence. Animates in and out based on
+ * whether its dot key is selected.
+ */
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -29,11 +32,11 @@ Dot = ({
 }) => (
     <Icon2
         className={cx(
-            'Dot',
+            'SequenceDot',
             `Dot__${dotKey}`,
             `bgColour__${dotKey}`,
-            inTextAnchor && 'Dot__textAnchor',
-            inAnnotationCardSequence && 'Dot__annotationCard__sequence'
+            inTextAnchor && 'SequenceDot__textAnchor',
+            inAnnotationCardSequence && 'SequenceDot__annotationCard'
         )}
     />
 )
