@@ -25,7 +25,6 @@ DotSequence = ({
 }) => (
     <span className={cx(
         'DotSequence',
-        inAnnotationCard && 'DotSequence__inAnnotationCard',
         inTextAnchor && 'DotSequence__inTextAnchor'
     )}>
         {ALL_DOT_KEYS.map(dotKey => {

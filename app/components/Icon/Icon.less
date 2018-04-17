@@ -1,3 +1,5 @@
+@import "./Icon2.less";
+
 @border__dot: 1px;
 
 .icon-canvas-block {
@@ -60,19 +62,6 @@
     border-radius: 50%;
     background-color: @bgColour__audioDisabled;
     box-sizing: border-box;
-
-    // // Don't add colour to dot toggle button that is deselected.
-    // .dot:not(.Button__dot-stanza):not(.deselected)
-    // & {
-    //     &.portal { background-color: @bgColour__dot__portal; }
-    //     &.observation { background-color: @bgColour__dot__observation; }
-    //     &.backstory { background-color: @bgColour__dot__backstory; }
-    //     &.reference { background-color: @bgColour__dot__reference; }
-    //     &.pun { background-color: @bgColour__dot__pun; }
-    //     &.narrative { background-color: @bgColour__dot__narrative; }
-    //     &.songwriting { background-color: @bgColour__dot__songwriting; }
-    //     &.afterword { background-color: @bgColour__dot__afterword; }
-    // }
 
     .Button__carouselSelect
     & {
@@ -149,12 +138,6 @@
         border: @border__dot solid @lyric-underline-enabled-colour;
     }
 
-    .DotSequence__inAnnotationCard
-    & {
-        width: @length__annotationDot;
-        border: @border__dot solid @border__dot-colour;
-    }
-
     .TextAnchorBlock
     & {
         width: @length__lyricAnchorDot;
@@ -171,58 +154,27 @@
     }
 }
 
-// Portals are not included here.
-.RootManager.narrative .AnnotationCard .icon-canvas-block.narrative,
-.RootManager.backstory .AnnotationCard .icon-canvas-block.backstory,
-.RootManager.observation .AnnotationCard .icon-canvas-block.observation,
-.RootManager.pun .AnnotationCard .icon-canvas-block.pun,
-.RootManager.reference .AnnotationCard .icon-canvas-block.reference,
-.RootManager.songwriting .AnnotationCard .icon-canvas-block.songwriting,
-.RootManager.afterword .AnnotationCard .icon-canvas-block.afterword {
-    // Increase width first, then fade in.
-    transition: width @animationDuration__default,
-                opacity @animationDuration__default @animationDuration__faster;
-    width: @length__annotationDot;
-    opacity: 1;
-}
-
-// Default styling. Should not be visible when slider is not moving.
-.RootManager.RM__sliderNotMoving.narrative .TextAnchorBlock .icon-canvas-block.narrative,
-.RootManager.RM__sliderNotMoving.backstory .TextAnchorBlock .icon-canvas-block.backstory,
-.RootManager.RM__sliderNotMoving.observation .TextAnchorBlock .icon-canvas-block.observation,
-.RootManager.RM__sliderNotMoving.pun .TextAnchorBlock .icon-canvas-block.pun,
-.RootManager.RM__sliderNotMoving.reference .TextAnchorBlock .icon-canvas-block.reference,
-.RootManager.RM__sliderNotMoving.songwriting .TextAnchorBlock .icon-canvas-block.songwriting,
-.RootManager.RM__sliderNotMoving.portal .TextAnchorBlock .icon-canvas-block.portal,
-.RootManager.RM__sliderNotMoving.afterword .TextAnchorBlock .icon-canvas-block.afterword {
-    // Increase width first, then fade in.
-    transition: width @animationDuration__default,
-                opacity @animationDuration__default @animationDuration__faster;
-    width: @length__lyricAnchorDot;
-    opacity: 1;
-}
-
 // Hover styling.
-.RootManager.narrative .TextAnchorBlock:hover .icon-canvas-block.narrative,
-.RootManager.backstory .TextAnchorBlock:hover .icon-canvas-block.backstory,
-.RootManager.observation .TextAnchorBlock:hover .icon-canvas-block.observation,
-.RootManager.pun .TextAnchorBlock:hover .icon-canvas-block.pun,
-.RootManager.reference .TextAnchorBlock:hover .icon-canvas-block.reference,
-.RootManager.songwriting .TextAnchorBlock:hover .icon-canvas-block.songwriting,
-.RootManager.portal .TextAnchorBlock:hover .icon-canvas-block.portal,
-.RootManager.afterword .TextAnchorBlock:hover .icon-canvas-block.afterword {
+.RM__narrative .TextAnchorBlock:hover .icon-canvas-block.narrative,
+.RM__backstory .TextAnchorBlock:hover .icon-canvas-block.backstory,
+.RM__observation .TextAnchorBlock:hover .icon-canvas-block.observation,
+.RM__pun .TextAnchorBlock:hover .icon-canvas-block.pun,
+.RM__reference .TextAnchorBlock:hover .icon-canvas-block.reference,
+.RM__songwriting .TextAnchorBlock:hover .icon-canvas-block.songwriting,
+.RM__portal .TextAnchorBlock:hover .icon-canvas-block.portal,
+.RM__afterword .TextAnchorBlock:hover .icon-canvas-block.afterword {
    animation: bounceHover @animationDuration__slow;
 }
 
 // Active styling.
-.RootManager.narrative .TextAnchorBlock:active .icon-canvas-block.narrative,
-.RootManager.backstory .TextAnchorBlock:active .icon-canvas-block.backstory,
-.RootManager.observation .TextAnchorBlock:active .icon-canvas-block.observation,
-.RootManager.pun .TextAnchorBlock:active .icon-canvas-block.pun,
-.RootManager.reference .TextAnchorBlock:active .icon-canvas-block.reference,
-.RootManager.songwriting .TextAnchorBlock:active .icon-canvas-block.songwriting,
-.RootManager.portal .TextAnchorBlock:active .icon-canvas-block.portal,
-.RootManager.afterword .TextAnchorBlock:active .icon-canvas-block.afterword {
+.RM__narrative .TextAnchorBlock:active .icon-canvas-block.narrative,
+.RM__backstory .TextAnchorBlock:active .icon-canvas-block.backstory,
+.RM__observation .TextAnchorBlock:active .icon-canvas-block.observation,
+.RM__pun .TextAnchorBlock:active .icon-canvas-block.pun,
+.RM__reference .TextAnchorBlock:active .icon-canvas-block.reference,
+.RM__songwriting .TextAnchorBlock:active .icon-canvas-block.songwriting,
+.RM__portal .TextAnchorBlock:active .icon-canvas-block.portal,
+.RM__afterword .TextAnchorBlock:active .icon-canvas-block.afterword {
    transform: scale(0.8);
 }
 

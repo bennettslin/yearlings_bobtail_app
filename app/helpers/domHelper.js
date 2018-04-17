@@ -18,7 +18,7 @@ export const getIsValidScrollingTargetCallback = (scrollParentClass) => {
     }
 }
 
-export const getPrefixPrependedClassNames = (classNames) => {
+export const getPrefixPrependedClassNames = (classNames, prefix) => {
 
     if (!classNames) {
         return false;
@@ -29,7 +29,7 @@ export const getPrefixPrependedClassNames = (classNames) => {
         classNames : classNames.split(' ')
 
     return classNamesArray.map(name => (
-        `offset__stanza__${name}`
+        `${prefix}__${name}`
     ))
 }
 

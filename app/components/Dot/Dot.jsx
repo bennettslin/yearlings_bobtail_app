@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Icon from '../Icon/Icon'
+import Icon2 from '../Icon/Icon2'
 
 const dotPropTypes = {
 
@@ -27,14 +27,15 @@ Dot = ({
     inTextAnchor
 
 }) => (
-    <div className={cx(
-        'Dot',
-        `bgColour__dot__${dotKey}`,
-        inTextAnchor && 'Dot__textAnchor',
-        inAnnotationCardSequence && 'Dot__annotationCard__sequence'
-    )}>
-        <Icon dotKey={dotKey} />
-    </div>
+    <Icon2
+        className={cx(
+            'Dot',
+            `Dot__${dotKey}`,
+            `bgColour__${dotKey}`,
+            inTextAnchor && 'Dot__textAnchor',
+            inAnnotationCardSequence && 'Dot__annotationCard__sequence'
+        )}
+    />
 )
 
 Dot.propTypes = dotPropTypes

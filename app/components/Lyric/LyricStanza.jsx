@@ -199,7 +199,9 @@ LyricStanzaView = ({
             handleLyricAnnotationSelect } = other,
 
         // Left, right, or overlap, or a combination.
-        unitClassNames = getPrefixPrependedClassNames(unitClassName)
+        unitClassNames = getPrefixPrependedClassNames(
+            unitClassName, 'offset__stanza'
+        )
 
     return (
         <div

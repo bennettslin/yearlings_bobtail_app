@@ -7,6 +7,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import keys from 'lodash.keys'
+import pickBy from 'lodash.pickby'
+
 import SwitchManager from './SwitchManager'
 import AdminToggle from './admin/admin-toggle'
 import Players from './Players/Players'
@@ -15,6 +18,7 @@ import { SHOWN,
          TIPS_OPTIONS } from '../constants/options'
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongIsLogue } from '../helpers/dataHelper'
+import { getPrefixPrependedClassNames } from '../helpers/domHelper'
 import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logicHelper'
 import { getIsDesktop, getIsTabletOrMini, getIsOverlayingAnnotation } from '../helpers/responsiveHelper'
 
@@ -246,7 +250,12 @@ class RootManager extends Component {
                       'RM__verseBarAbove': isVerseBarAbove,
                       'RM__verseBarBelow': isVerseBarBelow },
 
-                      selectedDotKeys
+                    // TODO: Eventually remove this one.
+                    selectedDotKeys,
+
+                    getPrefixPrependedClassNames(
+                        keys(pickBy(selectedDotKeys)), 'RM'
+                    )
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}

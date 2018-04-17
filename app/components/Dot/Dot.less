@@ -1,57 +1,66 @@
 @import "./DotAnchor.less";
 @import "./DotSequence.less";
 
-// TODO: Eventually change this styling to put on icon canvas directly.
+.Dot {
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+
+    // Increase width first, then fade in.
+    transition:
+        width @animationDuration__default,
+        opacity @animationDuration__default @animationDuration__fast;
+}
 
 .Dot__annotationCard__sequence {
-    &, & .icon-canvas {
-        height: @length__annotationDot;
-    }
+    height: @length__annotationDot;
 }
 
 .Dot__textAnchor {
-    &, & .icon-canvas {
-        height: @length__lyricAnchorDot;
-    }
+    height: @length__lyricAnchorDot;
 }
 
-.bgColour__dot__portal {
-    .icon-canvas {
-        background-color: @bgColour__dot__portal;
-    }
+.bgColour__portal {
+    background-color: @Dot__portal;
 }
-.bgColour__dot__observation {
-    .icon-canvas {
-        background-color: @bgColour__dot__observation;
-    }
+.bgColour__observation {
+    background-color: @Dot__observation;
 }
-.bgColour__dot__backstory {
-    .icon-canvas {
-        background-color: @bgColour__dot__backstory;
-    }
+.bgColour__backstory {
+    background-color: @Dot__backstory;
 }
-.bgColour__dot__reference {
-    .icon-canvas {
-        background-color: @bgColour__dot__reference;
-    }
+.bgColour__reference {
+    background-color: @Dot__reference;
 }
-.bgColour__dot__pun {
-    .icon-canvas {
-        background-color: @bgColour__dot__pun;
-    }
+.bgColour__pun {
+    background-color: @Dot__pun;
 }
-.bgColour__dot__narrative {
-    .icon-canvas {
-        background-color: @bgColour__dot__narrative;
-    }
+.bgColour__narrative {
+    background-color: @Dot__narrative;
 }
-.bgColour__dot__songwriting {
-    .icon-canvas {
-        background-color: @bgColour__dot__songwriting;
-    }
+.bgColour__songwriting {
+    background-color: @Dot__songwriting;
 }
-.bgColour__dot__afterword {
-    .icon-canvas {
-        background-color: @bgColour__dot__afterword;
+.bgColour__afterword {
+    background-color: @Dot__afterword;
+}
+
+.RM__narrative .Dot__narrative,
+.RM__backstory .Dot__backstory,
+.RM__observation .Dot__observation,
+.RM__pun .Dot__pun,
+.RM__reference .Dot__reference,
+.RM__songwriting .Dot__songwriting,
+.RM__afterword .Dot__afterword {
+
+    opacity: 1;
+
+    &.Dot__annotationCard__sequence {
+        width: @length__annotationDot;
+    }
+
+    &.Dot__textAnchor {
+        width: @length__lyricAnchorDot;
     }
 }
