@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Anchor from '../Anchor/Anchor'
 import DotAnchor from '../Dot/DotAnchor'
 
 import { IS_DOT_STANZA } from '../../constants/lyrics'
 
 const annotationTitlePropTypes = {
     // From parent.
-    // inCarousel: PropTypes.bool,
     isAccessedAnnotation: PropTypes.bool,
     showAsSelected: PropTypes.bool.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
@@ -29,7 +29,6 @@ AnnotationTitle = ({
     <div className={cx(
         'AnnotationTitle',
         'fontSize__title'
-        // { 'in-carousel-width': inCarousel }
     )}>
         {annotationTitle === IS_DOT_STANZA ? (
             <DotAnchor
@@ -40,21 +39,28 @@ AnnotationTitle = ({
                 handleDotButtonClick={handleTitleClick}
             />
         ) : (
-            <a className={cx(
-                    'AnchorBlock',
-                    'TextAnchorBlock',
-                    annotationDotKeys,
-                    { 'selected': showAsSelected,
-                      'accessHighlighted': isAccessedAnnotation }
-                )}
-                onClick={handleTitleClick}
-                onTouchStart={handleTitleClick}
-            >
-                <span className="underlineBar" />
-                <span className="TextSpan">
-                    {`\u201c${annotationTitle}\u201d`}
-                </span>
-            </a>
+            // <a className={cx(
+            //         'AnchorBlock',
+            //         'TextAnchorBlock',
+            //         annotationDotKeys,
+            //         { 'selected': showAsSelected,
+            //           'accessHighlighted': isAccessedAnnotation }
+            //     )}
+            //     onClick={handleTitleClick}
+            //     onTouchStart={handleTitleClick}
+            // >
+            //     <span className="underlineBar" />
+            //     <span className="TextSpan">
+            //         {`\u201c${annotationTitle}\u201d`}
+            //     </span>
+            // </a>
+            <Anchor
+                isSelected={showAsSelected}
+                isAccessed={isAccessedAnnotation}
+                // dotKeys={annotationDotKeys}
+                text={`\u201c${annotationTitle}\u201d`}
+                handleClick={handleTitleClick}
+            />
         )}
     </div>
 )

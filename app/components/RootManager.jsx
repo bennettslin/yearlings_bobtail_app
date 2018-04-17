@@ -7,8 +7,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import keys from 'lodash.keys'
-import pickBy from 'lodash.pickby'
 
 import SwitchManager from './SwitchManager'
 import AdminToggle from './admin/admin-toggle'
@@ -253,9 +251,7 @@ class RootManager extends Component {
                     // TODO: Eventually remove this one.
                     selectedDotKeys,
 
-                    getPrefixPrependedClassNames(
-                        keys(pickBy(selectedDotKeys)), 'RM'
-                    )
+                    getPrefixPrependedClassNames(selectedDotKeys, 'RM')
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}

@@ -2,39 +2,6 @@
 
 .AnnotationTitle {
 
-    /** .Carousel. */
-
-    .Carousel
-    & {
-        text-align: center;
-
-        transition: max-height @animationDuration__default,
-                    padding @animationDuration__default;
-        overflow: hidden;
-        max-height: 0;
-
-        // FIXME: Make text shadow transparent?
-        // .mixin__textShadow(transparent);
-    }
-
-    .RM__mobile
-    .Carousel
-    & {
-        margin-top: @paddingX__carouselAnnotation;
-    }
-
-    .Carousel.overrideAnimate
-    & {
-        transition: none;
-    }
-
-    /** Popup. */
-
-    .PopupView__content
-    & {
-        padding: @padding__annotation 0;
-    }
-
     /**
      * Not using mixin here so that text shadow applies only to annotation
      * title and not to annotation card.

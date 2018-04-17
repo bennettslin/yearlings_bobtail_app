@@ -120,7 +120,17 @@ AnnotationSectionView = ({
 ...other }) => {
 
     // Show as selected if it's selected in carousel, or if it's in popup.
-    const showAsSelected = isSelectedAnnotation || !inCarousel
+    const showAsSelected = isSelectedAnnotation || !inCarousel,
+
+        AnnotationTitleChild = (
+            <AnnotationTitle
+                showAsSelected={showAsSelected}
+                isAccessedAnnotation={isAccessedAnnotation}
+                annotationDotKeys={annotationDotKeys}
+                annotationTitle={annotationTitle}
+                handleTitleClick={handleTitleClick}
+            />
+        )
 
     return (
         <div
@@ -133,14 +143,17 @@ AnnotationSectionView = ({
             onTouchStart={handleContainerClick}
         >
 
-            <AnnotationTitle
-                // inCarousel={inCarousel}
-                showAsSelected={showAsSelected}
-                accessHighlighted={isAccessedAnnotation}
-                annotationDotKeys={annotationDotKeys}
-                annotationTitle={annotationTitle}
-                handleTitleClick={handleTitleClick}
-            />
+            {/* In Carousel, annotation title needs to be hideable. */}
+            {inCarousel ? (
+                <div className={cx(
+                    'Annotation__title__inCarousel'
+                )}>
+                    {AnnotationTitleChild}
+                </div>
+
+            ) : (
+                AnnotationTitleChild
+            )}
 
             <AnnotationCards {...other}
                 /**

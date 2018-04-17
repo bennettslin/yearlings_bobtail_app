@@ -1,4 +1,6 @@
 // Helpers for DOM stuff.
+import keys from 'lodash.keys'
+import pickBy from 'lodash.pickby'
 
 export const getIsValidScrollingTargetCallback = (scrollParentClass) => {
 
@@ -25,8 +27,8 @@ export const getPrefixPrependedClassNames = (classNames, prefix) => {
     }
 
     const classNamesArray =
-        Array.isArray(classNames) ?
-        classNames : classNames.split(' ')
+        typeof classNames === 'object' ?
+            keys(pickBy(classNames)) : classNames.split(' ')
 
     return classNamesArray.map(name => (
         `${prefix}__${name}`

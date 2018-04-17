@@ -37,49 +37,63 @@
         transition: none;
     }
 
-    /**
-     * Override if hidden by single lyric column. Using specific selectors to
-     * override styles for mini width as well.
-     */
-    .RootManager.RM__song.RM__rightLyricColumnOnly
-    &.CarouselAnnotation__inLyricColumn__left,
-    .RootManager.RM__song.RM__leftLyricColumnOnly
-    &.CarouselAnnotation__inLyricColumn__right {
 
-        min-width: @paddingX__carouselAnnotation__hidden;
+}
 
-        .AnnotationTitle {
-            max-height: 0;
-        }
+.Annotation__title__inCarousel {
+    transition: max-height @animationDuration__default,
+    padding @animationDuration__default;
+    overflow: hidden;
+    max-height: 0;
+
+    .Carousel.overrideAnimate
+    & {
+        transition: none;
     }
 }
 
-.RootManager.narrative .CarouselAnnotation.narrative,
-.RootManager.backstory .CarouselAnnotation.backstory,
-.RootManager.observation .CarouselAnnotation.observation,
-.RootManager.pun .CarouselAnnotation.pun,
-.RootManager.reference .CarouselAnnotation.reference,
-.RootManager.songwriting .CarouselAnnotation.songwriting,
-.RootManager.portal .CarouselAnnotation.portal,
-.RootManager.afterword .CarouselAnnotation.afterword {
+/**
+ * Override if hidden by single lyric column. Using specific selectors to
+ * override styles for mini width as well.
+ */
+.RootManager.RM__song.RM__rightLyricColumnOnly
+&.CarouselAnnotation__inLyricColumn__left,
+.RootManager.RM__song.RM__leftLyricColumnOnly
+&.CarouselAnnotation__inLyricColumn__right {
+
+    min-width: @paddingX__carouselAnnotation__hidden;
+
+    .Annotation__title__inCarousel {
+        max-height: 0;
+    }
+}
+
+.RM__narrative .CarouselAnnotation.narrative,
+.RM__backstory .CarouselAnnotation.backstory,
+.RM__observation .CarouselAnnotation.observation,
+.RM__pun .CarouselAnnotation.pun,
+.RM__reference .CarouselAnnotation.reference,
+.RM__songwriting .CarouselAnnotation.songwriting,
+.RM__portal .CarouselAnnotation.portal,
+.RM__afterword .CarouselAnnotation.afterword {
 
     min-width: @minWidth__carouselAnnotation;
 
-    .AnnotationTitle {
+    .Annotation__title__inCarousel {
         max-height: 2em; // Arbitrary value that's larger than its max height.
         min-height: @length__iconSmall;
         padding: @padding__annotation 0;
     }
 }
 
-.RootManager.RM__mini.narrative .CarouselAnnotation.narrative,
-.RootManager.RM__mini.backstory .CarouselAnnotation.backstory,
-.RootManager.RM__mini.observation .CarouselAnnotation.observation,
-.RootManager.RM__mini.pun .CarouselAnnotation.pun,
-.RootManager.RM__mini.reference .CarouselAnnotation.reference,
-.RootManager.RM__mini.songwriting .CarouselAnnotation.songwriting,
-.RootManager.RM__mini.portal .CarouselAnnotation.portal,
-.RootManager.RM__mini.afterword .CarouselAnnotation.afterword {
+.RM__mini.RM__narrative .CarouselAnnotation.narrative,
+.RM__mini.RM__backstory .CarouselAnnotation.backstory,
+.RM__mini.RM__observation .CarouselAnnotation.observation,
+.RM__mini.RM__pun .CarouselAnnotation.pun,
+.RM__mini.RM__reference .CarouselAnnotation.reference,
+.RM__mini.RM__songwriting .CarouselAnnotation.songwriting,
+.RM__mini.RM__portal .CarouselAnnotation.portal,
+.RM__mini.RM__afterword .CarouselAnnotation.afterword {
 
     min-width: @minWidth__carouselAnnotation__mini;
 }
