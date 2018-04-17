@@ -6,37 +6,38 @@ import cx from 'classnames'
 
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
-import Icon from '../Icon/Icon'
+import Dot from './Dot'
 
 const dotBlockPropTypes = {
 
     // From parent.
     inAnnotationCard: PropTypes.bool,
+    inTextAnchor: PropTypes.bool,
     dotKeys: PropTypes.object.isRequired
 },
 
 DotSequence = ({
 
     inAnnotationCard,
+    inTextAnchor,
     dotKeys
 
 }) => (
     <span className={cx(
         'DotSequence',
-        inAnnotationCard ?
-            'DotSequence__inAnnotationCard' :
-            'DotSequence__inTextAnchor'
+        inAnnotationCard && 'DotSequence__inAnnotationCard',
+        inTextAnchor && 'DotSequence__inTextAnchor'
     )}>
-        {ALL_DOT_KEYS.map((dotKey, index) => {
+        {ALL_DOT_KEYS.map(dotKey => {
 
             // Go through all dot keys in array to ensure correct order.
             return dotKeys[dotKey] && (
-                <div
-                    key={index}
-                    className="dot"
-                >
-                    <Icon dotKey={dotKey} />
-                </div>
+                <Dot
+                    key={dotKey}
+                    inTextAnchor={inTextAnchor}
+                    inAnnotationCardSequence={inAnnotationCard}
+                    dotKey={dotKey}
+                />
             )
         })}
     </span>

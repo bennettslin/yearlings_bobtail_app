@@ -1,10 +1,7 @@
-@import "./DotAnchor.less";
-
 .DotSequence {
     position: absolute;
     display: flex;
     width: auto;
-    height: 100%;
 }
 
 .DotSequence__inAnnotationCard {
@@ -12,6 +9,7 @@
 }
 
 .DotSequence__inTextAnchor {
+    height: 100%;
     left: -@length__lyricAnchorDot * 0.32;
     top: -@length__lyricAnchorDot * 0.35;
 
@@ -19,14 +17,5 @@
     & {
         // Undo reverse dot order caused by right column's rtl direction.
         flex-direction: row-reverse;
-    }
-}
-
-.dot {
-    .DotSequence__inAnnotationCard
-    &,
-    .DotSequence__inAnnotationCard
-    & .icon-canvas {
-        height: @length__annotationDot;
     }
 }
