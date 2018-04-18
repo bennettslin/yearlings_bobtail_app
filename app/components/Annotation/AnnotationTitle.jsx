@@ -32,6 +32,7 @@ AnnotationTitle = ({
     )}>
         {annotationTitle === IS_DOT_STANZA ? (
             <DotAnchor
+                inAnnotation
                 isSelected={showAsSelected}
                 isAccessed={isAccessedAnnotation}
                 dotKeys={annotationDotKeys}

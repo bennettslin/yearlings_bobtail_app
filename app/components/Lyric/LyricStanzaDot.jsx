@@ -107,6 +107,7 @@ LyricDotStanzaView = ({
         getPrefixPrependedClassNames(dotKeys, 'LyricStanzaDot')
     )}>
         <DotAnchor {...other}
+            inStanza
             dotKeys={dotKeys}
         />
     </div>
