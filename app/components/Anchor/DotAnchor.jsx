@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Anchor from './Anchor';
+import Dot from '../Dot/Dot';
 
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
 
@@ -30,8 +31,7 @@ TextAnchor = ({
         <Anchor {...other}
             isDotAnchor
         >
-            <div className={cx(
-                'Dot',
+            <Dot className={cx(
                 'DotAnchor',
 
                 isAccessed && 'DotAnchor__accessed',

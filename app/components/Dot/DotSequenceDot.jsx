@@ -7,7 +7,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Icon2 from '../Icon/Icon2'
+import Dot from '../Dot/Dot'
 
 const dotPropTypes = {
 
@@ -17,7 +17,7 @@ const dotPropTypes = {
     inTextAnchor: PropTypes.bool
 },
 
-Dot = ({
+DotSequenceDot = ({
 
     dotKey,
 
@@ -30,9 +30,8 @@ Dot = ({
     inTextAnchor
 
 }) => (
-    <Icon2
+    <Dot
         className={cx(
-            'Dot',
             'SequenceDot',
             `Dot__${dotKey}`,
             inTextAnchor && 'SequenceDot__textAnchor',
@@ -41,6 +40,6 @@ Dot = ({
     />
 )
 
-Dot.propTypes = dotPropTypes
+DotSequenceDot.propTypes = dotPropTypes
 
-export default Dot
+export default DotSequenceDot
