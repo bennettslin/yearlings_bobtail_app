@@ -92,13 +92,7 @@ class TextLyricAnchor extends Component {
                 accessedAnnotationIndex === annotationIndex ||
                 accessedAnnotationAnchorIndex === wikiIndex,
 
-            isSelected = annotationIndex === selectedAnnotationIndex,
-
-            textChild = (
-                <Texts
-                    text={text}
-                />
-            )
+            isSelected = annotationIndex === selectedAnnotationIndex
 
         // This space will not display if it starts the verse line.
         return [(
@@ -114,7 +108,11 @@ class TextLyricAnchor extends Component {
 
                         wikiIndex && `wiki__${wikiIndex}`,
                     )}
-                    text={textChild}
+                    text={(
+                        <Texts
+                            text={text}
+                        />
+                    )}
                     isAccessed={isAccessed}
                     isSelected={isSelected}
                     wikiIndex={wikiIndex}
