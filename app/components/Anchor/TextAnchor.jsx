@@ -6,6 +6,7 @@ import Anchor from './Anchor';
 
 const textAnchorPropTypes = {
     // From parent.
+    isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     text: PropTypes.string.isRequired,
     children: PropTypes.element
@@ -15,22 +16,27 @@ TextAnchor = ({
 
     text,
 
-...other }) => (
+...other }) => {
 
-    <Anchor {...other}>
+    const { isAccessed,
+            isSelected } = other
 
-        <span className={cx(
-            'TextAnchor',
+    return (
+        <Anchor {...other}>
+            <span className={cx(
+                'TextAnchor',
 
-            other.isSelected ?
-                'TextAnchor__selected' :
-                'TextAnchor__selectable'
-        )}>
-            {text}
-        </span>
+                isAccessed && 'TextAnchor__accessed',
 
-    </Anchor>
-)
+                isSelected ?
+                    'TextAnchor__selected' :
+                    'TextAnchor__selectable'
+            )}>
+                {text}
+            </span>
+        </Anchor>
+    )
+}
 
 TextAnchor.propTypes = textAnchorPropTypes
 

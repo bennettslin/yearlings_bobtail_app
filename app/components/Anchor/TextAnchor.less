@@ -15,3 +15,20 @@
 .TextAnchor__selected {
     color: @selected-annotation-text-colour;
 }
+
+.TextAnchor__accessed {
+    .RM__accessOn
+    & {
+        color: @colour__access__link;
+    }
+
+    .RM__accessOn .Anchor__selectable:hover
+    & {
+        color: @colour__access__hover;
+    }
+
+    .RM__accessOn .Anchor__selectable:active
+    & {
+        color: @colour__access__active;
+    }
+}

@@ -8,6 +8,7 @@ import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
 
 const textAnchorPropTypes = {
     // From parent.
+    isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     inAnnotation: PropTypes.bool,
     inStanza: PropTypes.bool,
@@ -20,28 +21,35 @@ TextAnchor = ({
     inAnnotation,
     inStanza,
 
-...other }) => (
+...other }) => {
 
-    <Anchor {...other}
-        isDotAnchor
-    >
+    const { isAccessed,
+            isSelected } = other
 
-        <div className={cx(
-            'Dot',
-            'DotAnchor',
+    return (
+        <Anchor {...other}
+            isDotAnchor
+        >
+            <div className={cx(
+                'Dot',
+                'DotAnchor',
 
-            other.isSelected ?
-                'DotAnchor__selected' :
-                'DotAnchor__selectable',
+                isAccessed && 'DotAnchor__accessed',
 
-            inAnnotation && 'DotAnchor__inAnnotation',
-            inStanza && 'DotAnchor__inStanza',
+                isSelected ?
+                    'DotAnchor__selected' :
+                    'DotAnchor__selectable',
 
-            getPrefixPrependedClassNames(dotKeys, 'DotAnchor')
-        )} />
+                inAnnotation && 'DotAnchor__inAnnotation',
+                inStanza && 'DotAnchor__inStanza',
 
-    </Anchor>
-)
+                // Only colour dot anchor by its key when selectable.
+                !other.isSelected &&
+                    getPrefixPrependedClassNames(dotKeys, 'DotAnchor')
+            )} />
+        </Anchor>
+    )
+}
 
 TextAnchor.propTypes = textAnchorPropTypes
 

@@ -58,13 +58,13 @@ class LyricStanzaDot extends Component {
               dotKeys } = dotStanzaObject,
 
             isSelected = annotationIndex === selectedAnnotationIndex,
-            accessHighlighted = annotationIndex === accessedAnnotationIndex
+            isAccessed = annotationIndex === accessedAnnotationIndex
 
         return (
             <LyricDotStanzaView
                 dotKeys={dotKeys}
                 isSelected={isSelected}
-                isAccessed={accessHighlighted}
+                isAccessed={isAccessed}
                 isLastStanza={isLastStanza}
                 annotationIndex={annotationIndex}
                 handleAnchorClick={this._handleDotButtonClick}

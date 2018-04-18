@@ -9,8 +9,8 @@ import { IS_DOT_STANZA } from '../../constants/lyrics'
 
 const annotationTitlePropTypes = {
     // From parent.
-    isAccessedAnnotation: PropTypes.bool,
-    showAsSelected: PropTypes.bool.isRequired,
+    isAccessed: PropTypes.bool,
+    isSelected: PropTypes.bool.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
     annotationTitle: PropTypes.string.isRequired,
     handleTitleClick: PropTypes.func
@@ -19,8 +19,8 @@ const annotationTitlePropTypes = {
 AnnotationTitle = ({
 
     // inCarousel,
-    showAsSelected,
-    isAccessedAnnotation,
+    isSelected,
+    isAccessed,
     annotationDotKeys,
     annotationTitle,
     handleTitleClick
@@ -33,15 +33,15 @@ AnnotationTitle = ({
         {annotationTitle === IS_DOT_STANZA ? (
             <DotAnchor
                 inAnnotation
-                isSelected={showAsSelected}
-                isAccessed={isAccessedAnnotation}
+                isSelected={isSelected}
+                isAccessed={isAccessed}
                 dotKeys={annotationDotKeys}
                 handleAnchorClick={handleTitleClick}
             />
         ) : (
             <TextAnchor
-                isSelected={showAsSelected}
-                isAccessed={isAccessedAnnotation}
+                isSelected={isSelected}
+                isAccessed={isAccessed}
                 text={`\u201c${annotationTitle}\u201d`}
                 handleAnchorClick={handleTitleClick}
             />

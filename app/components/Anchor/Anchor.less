@@ -11,7 +11,7 @@
     cursor: pointer;
 }
 
-.Anchor__underline {
+.AnchorUnderline {
     position: absolute;
     width: 100%;
     height: 35%;
@@ -30,12 +30,12 @@
     }
 }
 
-.Anchor__underline__underDot {
+.AnchorUnderline__underDot {
     height: 25%;
     bottom: -10%;
 }
 
-.Anchor__underline__selectable {
+.AnchorUnderline__selectable {
     background-color: @lyric-underline-enabled-colour;
 
     .Anchor__selectable:hover
@@ -49,6 +49,13 @@
     }
 }
 
-.Anchor__underline__selected {
+.AnchorUnderline__selected {
     background-color: @selected-annotation-underline-colour;
+}
+
+.AnchorUnderline__accessed {
+    .RM__accessOn
+    & {
+        background-color: @colour__access__underline;
+    }
 }

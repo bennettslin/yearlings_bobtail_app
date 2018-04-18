@@ -124,8 +124,8 @@ AnnotationSectionView = ({
 
         AnnotationTitleChild = (
             <AnnotationTitle
-                showAsSelected={showAsSelected}
-                isAccessedAnnotation={isAccessedAnnotation}
+                isSelected={showAsSelected}
+                isAccessed={isAccessedAnnotation}
                 annotationDotKeys={annotationDotKeys}
                 annotationTitle={annotationTitle}
                 handleTitleClick={handleTitleClick}

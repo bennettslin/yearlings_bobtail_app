@@ -24,18 +24,18 @@ Anchor = ({
 }) => (
     <a className={cx(
             'Anchor',
-            isSelected ? 'Anchor__selected' : 'Anchor__selectable',
-            { 'Anchor__highlighted': isAccessed }
+            isSelected ? 'Anchor__selected' : 'Anchor__selectable'
         )}
         onClick={handleAnchorClick}
         onTouchStart={handleAnchorClick}
     >
         <span className={cx(
-            'Anchor__underline',
-            { 'Anchor__underline__underDot': isDotAnchor },
+            'AnchorUnderline',
+            { 'AnchorUnderline__underDot': isDotAnchor },
+            isAccessed && 'AnchorUnderline__accessed',
             isSelected ?
-                'Anchor__underline__selected' :
-                'Anchor__underline__selectable'
+                'AnchorUnderline__selected' :
+                'AnchorUnderline__selectable'
         )} />
 
         {children}
