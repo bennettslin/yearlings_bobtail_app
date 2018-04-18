@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import DotSequence from '../Dot/DotSequence'
 import TextAnchor from '../Anchor/TextAnchor'
-import TextBlock from './TextBlock'
+import Texts from './Texts'
 
 const mapStateToProps = ({
     selectedAnnotationIndex,
@@ -95,7 +95,7 @@ class LyricTextAnchor extends Component {
             isSelected = annotationIndex === selectedAnnotationIndex,
 
             textChild = (
-                <TextBlock
+                <Texts
                     text={text}
                 />
             )

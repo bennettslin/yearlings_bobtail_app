@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import LyricTextAnchor from './LyricTextAnchor'
-import TextBlock from './TextBlock'
+import Texts from './Texts'
 import TextSpan from './TextSpan'
 
 const textUnitPropTypes = {
@@ -41,7 +41,7 @@ TextUnit = ({
         if (italic) {
             return (
                 <i>
-                    <TextBlock {...other}
+                    <Texts {...other}
                         text={italic}
                     />
                 </i>
@@ -50,7 +50,7 @@ TextUnit = ({
         } else if (emphasis) {
             return (
                 <em>
-                    <TextBlock {...other}
+                    <Texts {...other}
                         text={emphasis}
                     />
                 </em>
@@ -78,7 +78,7 @@ TextUnit = ({
                     inPortal && annotationIndex === portalAnnotationIndex
 
                 return (
-                    <TextBlock {...other}
+                    <Texts {...other}
                         text={text}
                         isPortalAnchorInPortal={isPortalAnchorInPortal}
                         isVerseEndingSpan={isVerseEndingSpan}

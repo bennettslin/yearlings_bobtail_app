@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import TipsToggle from './TipsToggle'
-import TextBlock from '../Text/TextBlock'
+import Texts from '../Text/Texts'
 // import DynamicSvg from '../DynamicSvg/DynamicSvg';
 
 import { getSongTip } from '../../helpers/dataHelper'
@@ -77,7 +77,7 @@ class Tips extends Component {
                     )}
 
                     {tipText && (
-                        <TextBlock
+                        <Texts
                             isLyric={false}
                             text={tipText}
                         />

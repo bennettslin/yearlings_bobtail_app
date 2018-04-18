@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import DotSequence from '../Dot/DotSequence'
-import TextBlock from '../Text/TextBlock'
+import Texts from '../Text/Texts'
 import AnnotationPortals from './AnnotationPortals'
 import { PORTAL } from '../../constants/dots'
 import { getCarouselOrPopupCardObject } from '../../helpers/dataHelper'
@@ -135,7 +135,7 @@ AnnotationCardView = ({
             />
         )}
 
-        <TextBlock
+        <Texts
             text={text}
             isLyric={false}
 

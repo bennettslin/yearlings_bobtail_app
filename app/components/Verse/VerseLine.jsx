@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import TextBlock from '../Text/TextBlock'
+import Texts from '../Text/Texts'
 import { TITLE } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
@@ -83,7 +83,7 @@ class VerseLine extends Component {
                       'VerseLine__truncatable': isTruncatable }
                 )}
             >
-                <TextBlock {...other}
+                <Texts {...other}
                     isLyric
                 />
             </div>

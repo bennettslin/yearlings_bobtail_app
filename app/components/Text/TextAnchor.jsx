@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import TextBlock from './TextBlock'
+import Texts from './Texts'
 import DotSequence from '../Dot/DotSequence'
 
 class TextAnchor extends Component {
@@ -127,7 +127,7 @@ class TextAnchor extends Component {
                         />
                     }
                     {/* Only the first text span inside the anchor will forego space. */}
-                    <TextBlock
+                    <Texts
                         isLyric={isLyric}
                         text={anchorText}
                         inPortal={inPortal}
