@@ -2,13 +2,16 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import TextAnchorBlock from './TextAnchorBlock'
+import LyricTextAnchor from './LyricTextAnchor'
 import TextBlock from './TextBlock'
 import TextSpan from './TextSpan'
+
+import { WIKI_INDEX } from '../../constants/lyrics'
 
 const textUnitPropTypes = {
     // From parent.
     inVerseBar: PropTypes.bool,
+
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.object
@@ -69,8 +72,11 @@ TextUnit = ({
                 />
 
             ) : (
-                <TextAnchorBlock {...other}
-                    text={textEntity}
+                <LyricTextAnchor {...other}
+                    text={textEntity.anchor}
+                    dotKeys={textEntity.dotKeys}
+                    annotationIndex={textEntity.annotationIndex}
+                    wikiIndex={textEntity[WIKI_INDEX]}
                     isVerseBeginningSpan={textEntity.isVerseBeginningSpan}
                     isVerseEndingSpan={textEntity.isVerseEndingSpan}
                 />

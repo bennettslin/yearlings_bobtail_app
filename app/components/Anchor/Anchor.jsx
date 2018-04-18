@@ -4,17 +4,20 @@ import cx from 'classnames'
 
 const anchorPropTypes = {
     // From parent.
+    className: PropTypes.any,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isDotAnchor: PropTypes.bool,
     handleAnchorClick: PropTypes.func,
-
-    // TODO: Pass DotSequence in this manner, if needed. If not, remove.
-    children: PropTypes.element
+    children: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.element
+    ])
 },
 
 Anchor = ({
 
+    className,
     isAccessed,
     isSelected,
     isDotAnchor,
@@ -24,7 +27,8 @@ Anchor = ({
 }) => (
     <a className={cx(
             'Anchor',
-            isSelected ? 'Anchor__selected' : 'Anchor__selectable'
+            isSelected ? 'Anchor__selected' : 'Anchor__selectable',
+            className
         )}
         onClick={handleAnchorClick}
         onTouchStart={handleAnchorClick}

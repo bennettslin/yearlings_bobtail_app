@@ -8,13 +8,20 @@ const textAnchorPropTypes = {
     // From parent.
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
-    text: PropTypes.string.isRequired,
-    children: PropTypes.element
+    text: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element
+    ]).isRequired,
+    children: PropTypes.oneOfType([
+        PropTypes.array,
+        PropTypes.element
+    ])
 },
 
 TextAnchor = ({
 
     text,
+    children,
 
 ...other }) => {
 
@@ -34,6 +41,8 @@ TextAnchor = ({
             )}>
                 {text}
             </span>
+
+            {children}
         </Anchor>
     )
 }
