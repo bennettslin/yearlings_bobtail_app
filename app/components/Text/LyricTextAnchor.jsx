@@ -32,6 +32,7 @@ class LyricTextAnchor extends Component {
         portalAnnotationIndex: PropTypes.number,
 
         // From parent.
+        isSpacePrefixed: PropTypes.bool.isRequired,
         text: PropTypes.oneOfType([
             PropTypes.string,
 
@@ -42,7 +43,6 @@ class LyricTextAnchor extends Component {
             PropTypes.object
 
         ]).isRequired,
-
         dotKeys: PropTypes.object
     }
 
@@ -54,8 +54,7 @@ class LyricTextAnchor extends Component {
 
     _handleAnchorClick(e) {
 
-        const { inPortal,
-                wikiIndex,
+        const { wikiIndex,
                 annotationIndex,
                 selectedAnnotationIndex,
                 carouselAnnotationIndex } = this.props,
@@ -69,7 +68,7 @@ class LyricTextAnchor extends Component {
              */
             anchorIndex = annotationIndex || wikiIndex
 
-        if (!isSelected && !inPortal) {
+        if (!isSelected) {
             this.props.handleAnchorClick(
                 e, anchorIndex, carouselAnnotationIndex
             )
@@ -83,15 +82,14 @@ class LyricTextAnchor extends Component {
                 selectedAnnotationIndex,
                 accessedAnnotationIndex,
                 accessedAnnotationAnchorIndex,
-                portalAnnotationIndex,
+                // portalAnnotationIndex,
                 wikiIndex,
                 text,
                 dotKeys,
 
-                isLyric,
-                inPortal,
-                isVerseBeginningSpan,
-                isVerseEndingSpan,
+                // isLyric,
+                // inPortal,
+                isSpacePrefixed,
 
             ...other } = this.props,
 
@@ -101,50 +99,46 @@ class LyricTextAnchor extends Component {
 
             isSelected = annotationIndex === selectedAnnotationIndex,
 
-            /**
-             * A verse line with a portal anchor may contain other anchors. Make
-             * sure that we know this is the portal anchor.
-             */
-            // eslint-disable-next-line
-            isPortalAnchor =
-                Boolean(portalAnnotationIndex) &&
-                    annotationIndex === portalAnnotationIndex,
-
-            // Only the first text span inside the anchor will forego space.
             textChild = (
                 <TextBlock
-                    inTextAnchor
+                    // inTextAnchor
                     text={text}
-                    isLyric={isLyric}
-                    isPortalAnchor={isPortalAnchor}
-                    isVerseBeginningSpan={isVerseBeginningSpan}
-                    isVerseEndingSpan={isVerseEndingSpan}
+                    // isLyric={isLyric}
+                    // isPortalAnchor={isPortalAnchor}
+                    // isVerseBeginningSpan={isVerseBeginningSpan}
+                    // isVerseEndingSpan={isVerseEndingSpan}
                 />
             )
 
-        return (
-            <TextAnchor {...other}
-                className={cx(
-                    annotationIndex &&
-                        `LyricAnnotation__scrollChild__${annotationIndex}`,
+        return [isSpacePrefixed && (
+                <span key="space">
+                    {' '}
+                </span>
+            ), (
+                <TextAnchor {...other}
+                    key="anchor"
+                    className={cx(
+                        annotationIndex &&
+                            `LyricAnnotation__scrollChild__${annotationIndex}`,
 
-                    wikiIndex && `wiki__${wikiIndex}`,
-                )}
-                text={textChild}
-                isAccessed={isAccessed}
-                isSelected={isSelected}
-                wikiIndex={wikiIndex}
-                annotationIndex={annotationIndex}
-                handleAnchorClick={this._handleAnchorClick}
-            >
-                {dotKeys && !inPortal ? (
-                    <DotSequence
-                        inTextAnchor
-                        dotKeys={dotKeys}
-                    />
-                ) : null}
-            </TextAnchor>
-        )
+                        wikiIndex && `wiki__${wikiIndex}`,
+                    )}
+                    text={textChild}
+                    isSpacePrefixed={isSpacePrefixed}
+                    isAccessed={isAccessed}
+                    isSelected={isSelected}
+                    wikiIndex={wikiIndex}
+                    annotationIndex={annotationIndex}
+                    handleAnchorClick={this._handleAnchorClick}
+                >
+                    {dotKeys ? (
+                        <DotSequence
+                            inTextAnchor
+                            dotKeys={dotKeys}
+                        />
+                    ) : null}
+                </TextAnchor>
+            )]
     }
 }
 

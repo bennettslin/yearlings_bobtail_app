@@ -15,19 +15,17 @@ textSpanPropTypes = {
     // From parent.
     text: PropTypes.string.isRequired,
     isLyric: PropTypes.bool.isRequired,
-    inTextAnchor: PropTypes.bool.isRequired,
-    inPortal: PropTypes.bool,
+    // inTextAnchor: PropTypes.bool.isRequired,
     isVerseBeginningSpan: PropTypes.bool,
-    isVerseEndingSpan: PropTypes.bool
+    // isVerseEndingSpan: PropTypes.bool
 },
 
 TextSpan = ({
 
     text,
     isLyric,
-    inTextAnchor,
-    inPortal,
-    isVerseBeginningSpan,
+    // inTextAnchor,
+    // isVerseBeginningSpan,
     isVerseEndingSpan
 
 }) => {
@@ -36,7 +34,7 @@ TextSpan = ({
      * it's in an anchor, it begins with "'s," or it's the beginning verse span
      * in a portal.
      */
-    const hasFirstSpace = !isVerseBeginningSpan && !inTextAnchor && (text.indexOf('\'s') !== 0)
+    const hasFirstSpace = (text.indexOf('\'s') !== 0)
 
     let formattedText = text
 
@@ -45,7 +43,7 @@ TextSpan = ({
         formattedText = getFormattedLyricSpanText(formattedText)
     }
 
-    if (inPortal && isVerseEndingSpan) {
+    if (isVerseEndingSpan) {
         // Last verse span in portal will always end in an ellipsis.
         formattedText = getFormattedEndingVerseSpanText(formattedText)
     }

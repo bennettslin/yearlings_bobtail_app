@@ -6,8 +6,6 @@ import LyricTextAnchor from './LyricTextAnchor'
 import TextBlock from './TextBlock'
 import TextSpan from './TextSpan'
 
-import { WIKI_INDEX } from '../../constants/lyrics'
-
 const textUnitPropTypes = {
     // From parent.
     inVerseBar: PropTypes.bool,
@@ -21,6 +19,8 @@ const textUnitPropTypes = {
 TextUnit = ({
 
     text: textEntity,
+    inPortal,
+    inVerseBar,
 
 ...other }) => {
 
@@ -33,55 +33,77 @@ TextUnit = ({
         )
 
     } else if (typeof textEntity === 'object') {
+        const {
+            italic,
+            emphasis
+        } = textEntity
 
-        // Needed for first and last verse object in portal.
-        if (textEntity.lyric) {
-            return (
-                <span>
-                    <TextBlock {...other}
-                        text={textEntity.lyric}
-                        isVerseBeginningSpan={textEntity.isVerseBeginningSpan}
-                        isVerseEndingSpan={textEntity.isVerseEndingSpan}
-                    />
-                </span>
-            )
-
-        } else if (textEntity.italic) {
+        if (italic) {
             return (
                 <i>
                     <TextBlock {...other}
-                        text={textEntity.italic}
+                        text={italic}
                     />
                 </i>
             )
 
-        } else if (textEntity.emphasis) {
+        } else if (emphasis) {
             return (
                 <em>
                     <TextBlock {...other}
-                        text={textEntity.emphasis}
+                        text={emphasis}
                     />
                 </em>
             )
 
-        } else if (textEntity.anchor) {
+        } else {
+            const { lyric,
+                    anchor,
+                    // isVerseBeginningSpan,
+                    annotationIndex } = textEntity,
 
-            return other.inVerseBar ? (
-                <TextBlock {...other}
-                    text={textEntity.anchor}
-                />
+                showAsPlainText = lyric || inPortal || inVerseBar,
 
-            ) : (
-                <LyricTextAnchor {...other}
-                    text={textEntity.anchor}
-                    dotKeys={textEntity.dotKeys}
-                    annotationIndex={textEntity.annotationIndex}
-                    wikiIndex={textEntity[WIKI_INDEX]}
-                    isVerseBeginningSpan={textEntity.isVerseBeginningSpan}
-                    isVerseEndingSpan={textEntity.isVerseEndingSpan}
-                />
+                text = lyric || anchor
 
-            )
+            if (showAsPlainText) {
+                const { portalAnnotationIndex,
+                        isVerseEndingSpan } = textEntity
+
+                // TODO: Use this to style.
+                /**
+                 * A verse line with a portal anchor may contain other anchors.
+                 * Make sure that we know this is the portal anchor.
+                 */
+                const isPortalAnchorInPortal =
+                    inPortal && annotationIndex === portalAnnotationIndex
+
+                return (
+                    <TextBlock {...other}
+                        text={text}
+                        isPortalAnchorInPortal={isPortalAnchorInPortal}
+                        // isVerseBeginningSpan={isVerseBeginningSpan}
+                        isVerseEndingSpan={isVerseEndingSpan}
+                    />
+                )
+            } else {
+                const {
+                    dotKeys,
+                    wikiIndex,
+                    // isVerseBeginningSpan
+                } = textEntity
+
+                return (
+                    <LyricTextAnchor {...other}
+                        text={text}
+                        dotKeys={dotKeys}
+                        annotationIndex={annotationIndex}
+                        wikiIndex={wikiIndex}
+                        // isSpacePrefixed={!isVerseBeginningSpan}
+                        isSpacePrefixed
+                    />
+                )
+            }
         }
     }
 
