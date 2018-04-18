@@ -7,6 +7,8 @@ import cx from 'classnames'
 
 import DotAnchor from '../Anchor/DotAnchor'
 
+import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
+
 const mapStateToProps = ({
     accessedAnnotationIndex,
     selectedAnnotationIndex
@@ -47,7 +49,8 @@ class LyricStanzaDot extends Component {
     render() {
 
         // FIXME: Ideal to get dotStanza object from indices.
-        const { dotStanzaObject,
+        const { isLastStanza,
+                dotStanzaObject,
                 accessedAnnotationIndex,
                 selectedAnnotationIndex } = this.props,
 
@@ -62,6 +65,7 @@ class LyricStanzaDot extends Component {
                 dotKeys={dotKeys}
                 isSelected={isSelected}
                 isAccessed={accessHighlighted}
+                isLastStanza={isLastStanza}
                 annotationIndex={annotationIndex}
                 handleAnchorClick={this._handleDotButtonClick}
             />
@@ -75,6 +79,7 @@ class LyricStanzaDot extends Component {
 
 const lyricDotStanzaViewPropTypes = {
     // From parent.
+    isLastStanza: PropTypes.bool.isRequired,
     dotKeys: PropTypes.object.isRequired,
     annotationIndex: PropTypes.number.isRequired
 },
@@ -84,6 +89,7 @@ LyricDotStanzaView = ({
     // From controller.
     dotKeys,
     annotationIndex,
+    isLastStanza,
 
 ...other }) => (
 
@@ -91,12 +97,14 @@ LyricDotStanzaView = ({
         'LyricStanzaDot',
         'LyricStanza__column',
 
+        isLastStanza && 'LyricStanzaDot__lastStanza',
+
         // Scroll to dot stanza block upon annotation selection.
         annotationIndex &&
             `LyricAnnotation__scrollChild__${annotationIndex}`,
 
         // Show and hide dot stanza block in and out based on dot keys.
-        dotKeys
+        getPrefixPrependedClassNames(dotKeys, 'LyricStanzaDot')
     )}>
         <DotAnchor {...other}
             dotKeys={dotKeys}

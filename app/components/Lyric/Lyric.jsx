@@ -144,6 +144,7 @@ LyricView = ({
                         <LyricStanza {...other}
                             key={unitIndex}
                             unitIndex={unitIndex}
+                            isLastStanza={unitIndex === lyricUnitsCount - 1}
                         />
                     )
                 )}

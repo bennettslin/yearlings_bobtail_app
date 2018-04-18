@@ -149,6 +149,7 @@ lyricStanzaViewPropTypes = {
     unitArray: PropTypes.array.isRequired,
     isTitleUnit: PropTypes.bool.isRequired,
     unitClassName: PropTypes.string,
+    isLastStanza: PropTypes.bool.isRequired,
     // sceneIndex: PropTypes.number,
 
     dotStanza: PropTypes.object,
@@ -177,6 +178,7 @@ LyricStanzaView = ({
     isTitleUnit,
     unitClassName,
     unitIndex,
+    isLastStanza,
     // sceneIndex,
 
     dotStanza,
@@ -268,6 +270,7 @@ LyricStanzaView = ({
             }
             {dotStanza &&
                 <LyricStanzaDot
+                    isLastStanza={isDotOnly && isLastStanza}
                     dotStanzaObject={dotStanza}
                     handleLyricAnnotationSelect={handleLyricAnnotationSelect}
                 />

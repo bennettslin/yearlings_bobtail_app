@@ -3,20 +3,12 @@
 .LyricStanza {
     display: flex;
     justify-content: center;
+    // align-items: center;
 }
 
 .LyricStanza__column {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
-
-    /**
-     * Limit width of stanzas when lyric column is full width of screen.
-     * This is necessary for Vegan Proclamation. This value doesn't affect
-     * the layout anywhere else.
-     */
-    max-width: 640px;
 
     .LyricStanza__subsequent
     & {
@@ -28,6 +20,8 @@
 }
 
 .LyricStanza__column__text {
+    flex-direction: column;
+    justify-content: flex-end;
 
     // Dots stanza will have this style only if not hidden.
     &:not(:first-child) {
@@ -42,6 +36,13 @@
     & {
         margin-top: @margin__lyricUnit;
     }
+
+    /**
+     * Limit width of stanzas when lyric column is full width of screen.
+     * This is necessary for Vegan Proclamation. This value doesn't affect
+     * the layout anywhere else.
+     */
+    max-width: 640px;
 }
 
 .LyricStanza__column__main {
