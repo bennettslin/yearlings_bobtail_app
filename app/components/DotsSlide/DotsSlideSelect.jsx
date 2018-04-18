@@ -5,8 +5,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import omit from 'lodash.omit'
 
 import Button from '../Button/Button'
+import TextAnchor from '../Anchor/TextAnchor'
+
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { DOT_DESCRIPTIONS } from '../../constants/dots'
 
@@ -81,16 +84,14 @@ class DotsSlideSelect extends Component {
 
     render() {
 
-        // Don't pass these props.
-        /* eslint-disable no-unused-vars */
-        const { dotIndex,
-                selectedDotsIndex,
-                handleDotSelect,
-                hasInteractivatedDotText,
-                setHasInteractivatedDotText,
-                stopPropagation,
-                ...other } = this.props
-        /* eslint-enable no-unused-vars */
+        const other = omit(this.props, [
+            'dotIndex',
+            'selectedDotsIndex',
+            'handleDotSelect',
+            'hasInteractivatedDotText',
+            'setHasInteractivatedDotText',
+            'stopPropagation'
+        ])
 
         return (
             <DotsSlideSelectView {...other}
@@ -140,34 +141,24 @@ DotsSlideSelectView = ({
         <div className={cx(
             'DotsSlideSelect'
         )}>
-            <a
-                className="DotsSlideAnchor"
-                onClick={handleTextContainerClick}
-                onTouchStart={handleTextContainerClick}
-            >
-                <span className={cx(
-                    'Anchor',
-                    'TextAnchorBlock',
-                    'DotsSlideAnchor__inDots',
-                    { 'selected': isInteractivated,
-                      'accessHighlighted': accessHighlighted }
-                )}>
-                    <span className="underlineBar" />
-                    <span className={cx(
-                        'TextSpan',
-                        'textShadow__text'
-                    )}>{dotKey}</span>
-                </span>
-            </a>
-            <div className={cx(
-                'AnchorBlock',
-                'DotAnchor',
-                { 'accessHighlighted': accessHighlighted }
-            )}>
+            <div className="DotsSlideSelect__textAnchor">
+                <TextAnchor
+                    isSelected={isInteractivated}
+                    isAccessed={accessHighlighted}
+                    text={dotKey}
+                    handleAnchorClick={handleTextContainerClick}
+                >
+                </TextAnchor>
+            </div>
+            <div className="DotsSlideSelect__dotButton">
+
+                {/* TODO: Revisit with Button rework. */}
+
                 <Button
                     isOverflowShown
                     accessKeysShown
-                    buttonClass="dot"
+                    buttonClass={isSelected ? `bgColour__${dotKey}` : ''}
+                    buttonName="dotsSlideSelect"
                     accessKey={accessKey}
                     iconClass={dotKey}
                     isDeselected={!isSelected}

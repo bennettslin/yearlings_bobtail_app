@@ -60,14 +60,32 @@
     }
 }
 
-.DotsSlideAnchor {
+.DotsSlideSelect__textAnchor {
     padding-top: 5px;
     text-align: center;
     font-size: 0.75em;
-    transition: box-shadow @animationDuration__default;
-    cursor: pointer;
 }
 
-/*****************
- * ANCHOR BLOCKS *
- *****************/
+// TODO: These selectors shouldn't be so selective.
+.Button.Button__dotsSlideSelect {
+
+    // TODO: Use flex container class.
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &, & .icon-canvas {
+        width: @length__dotsSlideToggle;
+        height: @length__dotsSlideToggle;
+    }
+}
+
+.RM__phone
+& {
+    .Button.Button__dotsSlideSelect {
+        &, & .icon-canvas {
+            width: @length__dotsSlideToggle__phone;
+            height: @length__dotsSlideToggle__phone;
+        }
+    }
+}

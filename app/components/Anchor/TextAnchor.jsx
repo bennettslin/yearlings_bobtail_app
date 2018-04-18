@@ -7,7 +7,8 @@ import Anchor from './Anchor';
 const textAnchorPropTypes = {
     // From parent.
     isSelected: PropTypes.bool,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    children: PropTypes.element
 },
 
 TextAnchor = ({
