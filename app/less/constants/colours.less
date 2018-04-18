@@ -38,22 +38,30 @@
 
 // Lyric text and anchor colours.
 @selected-annotation-colour: gold;
-@selected-annotation-text-colour: #b59905;
-@selected-annotation-underline-colour: mix(@selected-annotation-colour, white, 25%);
-@selected-CarouselAnnotation-colour: mix(@selected-annotation-colour, white, 25%);
+@colour__textAnchor__selected: #b59905;
+@bgColour__underline__selected: mix(
+    @selected-annotation-colour, white, 25%
+);
+@selected-CarouselAnnotation-colour: mix(
+    @selected-annotation-colour, white, 25%
+);
 
-@colour__access__link: #484;
-@colour__access__hover: #7b7;
-@colour__access__active: #aea;
-@colour__access__underline: mix(@colour__access__link, white, 25%);
+@colour__textAnchor__accessedLink: #484;
+@colour__textAnchor__accessedHover: #7b7;
+@colour__textAnchor__accessedActive: #aea;
+@bgColour__underline__accessed: mix(
+    @colour__textAnchor__accessedLink, white, 25%
+);
 
-@lyric-text-colour: #000;
-@lyric-link-colour: #844;
-@lyric-hover-colour: #b77;
-@lyric-active-colour: #eaa;
+@colour__text: #444;
+@colour__textAnchor__link: #844;
+@colour__textAnchor__hover: #b77;
+@colour__textAnchor__active: #eaa;
 @border__dot-colour: #aaa;
-@lyric-underline-disabled-colour: #aaa;
-@lyric-underline-enabled-colour: mix(@lyric-link-colour, white, 25%);
+@bgColour__underline__disabled: #aaa;
+@bgColour__underline__selectable: mix(
+    @colour__textAnchor__link, white, 25%
+);
 
 // Slider text and anchor colours.
 @lyric-text-invert-colour: #bbb;
@@ -62,7 +70,9 @@
 @lyric-active-invert-colour: #255;
 @border__dot-invert-colour: #555;
 @lyric-underline-disabled-invert-colour: #555;
-@lyric-underline-enabled-invert-colour: mix(@lyric-link-invert-colour, white, 25%);
+@lyric-underline-enabled-invert-colour: mix(
+    @lyric-link-invert-colour, white, 25%
+);
 
 // Dot colours.
 @bgColour__dot__narrative: #fbb;

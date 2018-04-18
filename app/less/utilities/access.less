@@ -27,7 +27,7 @@
         .accessHighlighted {
 
             &.AnchorBlock .icon-canvas {
-                border: @border__dot solid @colour__access__underline;
+                border: @border__dot solid @bgColour__underline__accessed;
             }
 
             /**
@@ -41,24 +41,24 @@
 
                 &.TextAnchorBlock {
                     .TextSpan {
-                        color: @colour__access__link;
+                        color: @colour__textAnchor__accessedLink;
                     }
 
                     &:hover {
                         .TextSpan {
-                            color: @colour__access__hover;
+                            color: @colour__textAnchor__accessedHover;
                         }
                     }
 
                     &:active {
                         .TextSpan {
-                            color: @colour__access__active;
+                            color: @colour__textAnchor__accessedActive;
                         }
                     }
                 }
 
                 .underlineBar {
-                    background-color: @colour__access__underline;
+                    background-color: @bgColour__underline__accessed;
                 }
             }
         }
@@ -69,7 +69,7 @@
         .Nav {
             .accessHighlighted.accessKeysShown {
                 .icon-canvas {
-                    background-color: @colour__access__underline;
+                    background-color: @bgColour__underline__accessed;
                 }
             }
         }
@@ -87,7 +87,7 @@
     &.RM__verseActive {
         .Lyric {
             .Verse__interactivated {
-                background-color: @colour__access__underline;
+                background-color: @bgColour__underline__accessed;
             }
         }
     }

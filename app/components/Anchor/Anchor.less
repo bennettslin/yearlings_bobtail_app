@@ -18,7 +18,7 @@
     bottom: 0;
     left: 0;
 
-    background-color: @lyric-underline-disabled-colour;
+    background-color: @bgColour__underline__disabled;
 
     transition:
         background-color @animationDuration__fast,
@@ -36,7 +36,7 @@
 }
 
 .AnchorUnderline__selectable {
-    background-color: @lyric-underline-enabled-colour;
+    background-color: @bgColour__underline__selectable;
 
     .Anchor__selectable:hover
     & {
@@ -50,12 +50,12 @@
 }
 
 .AnchorUnderline__selected {
-    background-color: @selected-annotation-underline-colour;
+    background-color: @bgColour__underline__selected;
 }
 
 .AnchorUnderline__accessed {
     .RM__accessOn
     & {
-        background-color: @colour__access__underline;
+        background-color: @bgColour__underline__accessed;
     }
 }

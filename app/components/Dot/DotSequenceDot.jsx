@@ -35,7 +35,6 @@ Dot = ({
             'Dot',
             'SequenceDot',
             `Dot__${dotKey}`,
-            `bgColour__${dotKey}`,
             inTextAnchor && 'SequenceDot__textAnchor',
             inAnnotationCardSequence && 'SequenceDot__annotationCard'
         )}

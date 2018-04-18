@@ -1,34 +1,34 @@
 .TextAnchor__selectable {
-    color: @lyric-link-colour;
+    color: @colour__textAnchor__link;
 
     .Anchor__selectable:hover
     & {
-        color: @lyric-hover-colour;
+        color: @colour__textAnchor__hover;
     }
 
     .Anchor__selectable:active
     & {
-        color: @lyric-active-colour;
+        color: @colour__textAnchor__active;
     }
 }
 
 .TextAnchor__selected {
-    color: @selected-annotation-text-colour;
+    color: @colour__textAnchor__selected;
 }
 
 .TextAnchor__accessed {
     .RM__accessOn
     & {
-        color: @colour__access__link;
+        color: @colour__textAnchor__accessedLink;
     }
 
     .RM__accessOn .Anchor__selectable:hover
     & {
-        color: @colour__access__hover;
+        color: @colour__textAnchor__accessedHover;
     }
 
     .RM__accessOn .Anchor__selectable:active
     & {
-        color: @colour__access__active;
+        color: @colour__textAnchor__accessedActive;
     }
 }
