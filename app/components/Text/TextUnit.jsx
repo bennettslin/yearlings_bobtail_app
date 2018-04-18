@@ -59,7 +59,6 @@ TextUnit = ({
         } else {
             const { lyric,
                     anchor,
-                    // isVerseBeginningSpan,
                     annotationIndex } = textEntity,
 
                 showAsPlainText = lyric || inPortal || inVerseBar,
@@ -82,15 +81,13 @@ TextUnit = ({
                     <TextBlock {...other}
                         text={text}
                         isPortalAnchorInPortal={isPortalAnchorInPortal}
-                        // isVerseBeginningSpan={isVerseBeginningSpan}
                         isVerseEndingSpan={isVerseEndingSpan}
                     />
                 )
             } else {
                 const {
                     dotKeys,
-                    wikiIndex,
-                    // isVerseBeginningSpan
+                    wikiIndex
                 } = textEntity
 
                 return (
@@ -99,7 +96,6 @@ TextUnit = ({
                         dotKeys={dotKeys}
                         annotationIndex={annotationIndex}
                         wikiIndex={wikiIndex}
-                        // isSpacePrefixed={!isVerseBeginningSpan}
                         isSpacePrefixed
                     />
                 )

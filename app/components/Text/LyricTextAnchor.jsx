@@ -82,14 +82,9 @@ class LyricTextAnchor extends Component {
                 selectedAnnotationIndex,
                 accessedAnnotationIndex,
                 accessedAnnotationAnchorIndex,
-                // portalAnnotationIndex,
                 wikiIndex,
                 text,
                 dotKeys,
-
-                // isLyric,
-                // inPortal,
-                isSpacePrefixed,
 
             ...other } = this.props,
 
@@ -101,16 +96,12 @@ class LyricTextAnchor extends Component {
 
             textChild = (
                 <TextBlock
-                    // inTextAnchor
                     text={text}
-                    // isLyric={isLyric}
-                    // isPortalAnchor={isPortalAnchor}
-                    // isVerseBeginningSpan={isVerseBeginningSpan}
-                    // isVerseEndingSpan={isVerseEndingSpan}
                 />
             )
 
-        return [isSpacePrefixed && (
+        // This space will not display if it starts the verse line.
+        return [(
                 <span key="space">
                     {' '}
                 </span>
@@ -124,7 +115,6 @@ class LyricTextAnchor extends Component {
                         wikiIndex && `wiki__${wikiIndex}`,
                     )}
                     text={textChild}
-                    isSpacePrefixed={isSpacePrefixed}
                     isAccessed={isAccessed}
                     isSelected={isSelected}
                     wikiIndex={wikiIndex}

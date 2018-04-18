@@ -15,24 +15,19 @@ textSpanPropTypes = {
     // From parent.
     text: PropTypes.string.isRequired,
     isLyric: PropTypes.bool.isRequired,
-    // inTextAnchor: PropTypes.bool.isRequired,
-    isVerseBeginningSpan: PropTypes.bool,
-    // isVerseEndingSpan: PropTypes.bool
+    isVerseEndingSpan: PropTypes.bool
 },
 
 TextSpan = ({
 
     text,
     isLyric,
-    // inTextAnchor,
-    // isVerseBeginningSpan,
     isVerseEndingSpan
 
 }) => {
     /**
-     * Subsequent spans of text on a line will begin with a space, unless
-     * it's in an anchor, it begins with "'s," or it's the beginning verse span
-     * in a portal.
+     * Subsequent spans of text on a line will begin with a space, unless it
+     * begins with "'s," or it's the beginning verse span in a portal.
      */
     const hasFirstSpace = (text.indexOf('\'s') !== 0)
 

@@ -58,17 +58,13 @@ TextBlockView = ({
     inTextAnchor,
 
 ...other }) => (
-
-    <span>
-        {textArray.map((textElement, index) => (
-                <TextBlock {...other}
-                    key={index}
-                    text={textElement}
-                    inTextAnchor={inTextAnchor && index === 0}
-                />
-            )
-        )}
-    </span>
+    textArray.map((textElement, index) => (
+        <TextBlock {...other}
+            key={index}
+            text={textElement}
+            inTextAnchor={inTextAnchor && index === 0}
+        />
+    ))
 )
 
 TextBlockView.propTypes = textBlockViewPropTypes
