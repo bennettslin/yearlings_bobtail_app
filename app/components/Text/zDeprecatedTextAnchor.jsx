@@ -98,7 +98,7 @@ class TextAnchor extends Component {
                 <a
                     className={cx(
                         'AnchorBlock',
-                        'LyricTextAnchor',
+                        'TextLyricAnchor',
 
                         /**
                          * isPortalAnchor is the actual portal anchor, inPortal

@@ -19,7 +19,7 @@ const mapStateToProps = ({
     accessedAnnotationAnchorIndex
 })
 
-class LyricTextAnchor extends Component {
+class TextLyricAnchor extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -132,4 +132,4 @@ class LyricTextAnchor extends Component {
     }
 }
 
-export default connect(mapStateToProps)(LyricTextAnchor)
+export default connect(mapStateToProps)(TextLyricAnchor)

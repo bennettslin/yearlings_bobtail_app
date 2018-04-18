@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import TextUnit from './TextUnit'
+import Text from './Text'
 
 /*************
  * CONTAINER *
@@ -31,7 +31,7 @@ Texts = ({
             />
         ))
     ) : (
-        <TextUnit {...other}
+        <Text {...other}
             text={textEntity}
         />
     )

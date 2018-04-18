@@ -2,11 +2,11 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import LyricTextAnchor from './LyricTextAnchor'
+import TextLyricAnchor from './TextLyricAnchor'
 import Texts from './Texts'
 import TextSpan from './TextSpan'
 
-const textUnitPropTypes = {
+const textPropTypes = {
     // From parent.
     inVerseBar: PropTypes.bool,
 
@@ -16,7 +16,7 @@ const textUnitPropTypes = {
     ])
 },
 
-TextUnit = ({
+Text = ({
 
     text: textEntity,
     inPortal,
@@ -91,7 +91,7 @@ TextUnit = ({
                 } = textEntity
 
                 return (
-                    <LyricTextAnchor {...other}
+                    <TextLyricAnchor {...other}
                         text={text}
                         dotKeys={dotKeys}
                         annotationIndex={annotationIndex}
@@ -107,6 +107,6 @@ TextUnit = ({
     return null
 }
 
-TextUnit.propTypes = textUnitPropTypes
+Text.propTypes = textPropTypes
 
-export default TextUnit
+export default Text
