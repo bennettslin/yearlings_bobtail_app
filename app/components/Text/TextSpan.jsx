@@ -15,14 +15,20 @@ textSpanPropTypes = {
     // From parent.
     text: PropTypes.string.isRequired,
     isLyric: PropTypes.bool.isRequired,
-    isVerseEndingSpan: PropTypes.bool
+    isEmphasis: PropTypes.bool,
+    isItalic: PropTypes.bool,
+    isVerseEndingSpan: PropTypes.bool,
+    isPortalAnchorInPortal: PropTypes.bool
 },
 
 TextSpan = ({
 
     text,
     isLyric,
-    isVerseEndingSpan
+    isEmphasis,
+    isItalic,
+    isVerseEndingSpan,
+    isPortalAnchorInPortal
 
 }) => {
     /**
@@ -31,7 +37,15 @@ TextSpan = ({
      */
     const hasFirstSpace = (text.indexOf('\'s') !== 0)
 
-    let formattedText = text
+    let formattedText = text,
+        Tag = 'span'
+
+    if (isEmphasis) {
+        Tag = 'em'
+
+    } else if (isItalic) {
+        Tag = 'i'
+    }
 
     if (isLyric) {
         // And nonbreaking space between last two words.
@@ -44,40 +58,17 @@ TextSpan = ({
     }
 
     return (
-        <TextSpanView
-            formattedText={formattedText}
-            hasFirstSpace={hasFirstSpace}
-        />
+        <Tag className={cx(
+            'TextSpan',
+            'textShadow__text',
+            isPortalAnchorInPortal && 'textSpan__portalInPortal'
+        )}>
+            {(hasFirstSpace ? ' ' : '') + formattedText}
+        </Tag>
     )
 }
 
 TextSpan.defaultProps = textSpanDefaultProps
 TextSpan.propTypes = textSpanPropTypes
-
-/****************
- * PRESENTATION *
- ****************/
-
-const textSpanViewPropTypes = {
-    // From parent.
-    formattedText: PropTypes.string.isRequired,
-    hasFirstSpace: PropTypes.bool.isRequired
-},
-
-TextSpanView = ({
-
-    formattedText,
-    hasFirstSpace
-
-}) => (
-    <span className={cx(
-        'TextSpan',
-        'textShadow__text'
-    )}>
-        {(hasFirstSpace ? ' ' : '') + formattedText}
-    </span>
-)
-
-TextSpanView.propTypes = textSpanViewPropTypes
 
 export default TextSpan

@@ -29,7 +29,7 @@ class TextLyricAnchor extends Component {
 
         wikiIndex: PropTypes.number,
         annotationIndex: PropTypes.number,
-        portalAnnotationIndex: PropTypes.number,
+        // portalAnnotationIndex: PropTypes.number,
 
         // From parent.
         isSpacePrefixed: PropTypes.bool.isRequired,
@@ -100,7 +100,7 @@ class TextLyricAnchor extends Component {
                     {' '}
                 </span>
             ), (
-                <TextAnchor {...other}
+                <TextAnchor
                     key="anchor"
                     className={cx(
                         annotationIndex &&
@@ -109,7 +109,7 @@ class TextLyricAnchor extends Component {
                         wikiIndex && `wiki__${wikiIndex}`,
                     )}
                     text={(
-                        <Texts
+                        <Texts {...other}
                             text={text}
                         />
                     )}

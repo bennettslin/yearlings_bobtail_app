@@ -30,6 +30,7 @@ Texts = ({
                 text={textElement}
             />
         ))
+
     ) : (
         <Text {...other}
             text={textEntity}

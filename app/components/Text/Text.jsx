@@ -19,10 +19,12 @@ const textPropTypes = {
 Text = ({
 
     text: textEntity,
-    inPortal,
-    inVerseBar,
 
-...other }) => {
+...props }) => {
+
+    const { inPortal,
+            inVerseBar,
+            ...other } = props
 
     // It's a text span.
     if (typeof textEntity === 'string') {
@@ -38,22 +40,25 @@ Text = ({
             emphasis
         } = textEntity
 
+        /**
+         * If recursing, keep knowledge of text being in portal or verse bar,
+         * which is needed by anchor.
+         */
+
         if (italic) {
             return (
-                <i>
-                    <Texts {...other}
-                        text={italic}
-                    />
-                </i>
+                <Texts {...props}
+                    isItalic
+                    text={italic}
+                />
             )
 
         } else if (emphasis) {
             return (
-                <em>
-                    <Texts {...other}
-                        text={emphasis}
-                    />
-                </em>
+                <Texts {...props}
+                    isEmphasis
+                    text={emphasis}
+                />
             )
 
         } else {
@@ -66,36 +71,38 @@ Text = ({
                 text = lyric || anchor
 
             if (showAsPlainText) {
-                const { portalAnnotationIndex,
-                        isVerseEndingSpan } = textEntity
+                const { isVerseEndingSpan } = textEntity,
 
-                // TODO: Use this to style.
-                /**
-                 * A verse line with a portal anchor may contain other anchors.
-                 * Make sure that we know this is the portal anchor.
-                 */
-                const isPortalAnchorInPortal =
-                    inPortal && annotationIndex === portalAnnotationIndex
+                    { portalAnnotationIndex } = props,
+
+                    /**
+                     * A verse line with a portal anchor may contain other
+                     * anchors. Make sure that we know this is the portal
+                     * anchor.
+                     */
+                    isPortalAnchorInPortal =
+                        inPortal && annotationIndex === portalAnnotationIndex
 
                 return (
                     <Texts {...other}
                         text={text}
-                        isPortalAnchorInPortal={isPortalAnchorInPortal}
                         isVerseEndingSpan={isVerseEndingSpan}
+                        isPortalAnchorInPortal={isPortalAnchorInPortal}
                     />
                 )
+
             } else {
                 const {
-                    dotKeys,
-                    wikiIndex
-                } = textEntity
+                        dotKeys,
+                        wikiIndex
+                    } = textEntity
 
                 return (
                     <TextLyricAnchor {...other}
                         text={text}
                         dotKeys={dotKeys}
-                        annotationIndex={annotationIndex}
                         wikiIndex={wikiIndex}
+                        annotationIndex={annotationIndex}
                         isSpacePrefixed
                     />
                 )
