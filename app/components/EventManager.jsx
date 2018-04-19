@@ -876,7 +876,7 @@ class EventManager extends Component {
         } else {
             this._scrollElementIntoView(VERSE_SCROLL)
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView(CAROUSEL_SCROLL, 0)
+                this._scrollElementIntoView(CAROUSEL_SCROLL, 1)
             }
         }
     }
