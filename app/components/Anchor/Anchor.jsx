@@ -36,7 +36,7 @@ Anchor = ({
         <span className={cx(
             'AnchorUnderline',
             { 'AnchorUnderline__underDot': isDotAnchor },
-            isAccessed && 'AnchorUnderline__accessed',
+            isAccessed && !isSelected && 'AnchorUnderline__accessed',
             isSelected ?
                 'AnchorUnderline__selected' :
                 'AnchorUnderline__selectable'

@@ -94,7 +94,8 @@ Text = ({
             } else {
                 const {
                         dotKeys,
-                        wikiIndex
+                        wikiIndex,
+                        wikiAnnotationIndex
                     } = textEntity
 
                 return (
@@ -102,8 +103,8 @@ Text = ({
                         text={text}
                         dotKeys={dotKeys}
                         wikiIndex={wikiIndex}
+                        wikiAnnotationIndex={wikiAnnotationIndex}
                         annotationIndex={annotationIndex}
-                        isSpacePrefixed
                     />
                 )
             }

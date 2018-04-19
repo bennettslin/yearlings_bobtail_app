@@ -28,11 +28,10 @@ class TextLyricAnchor extends Component {
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
         wikiIndex: PropTypes.number,
+        wikiAnnotationIndex: PropTypes.number,
         annotationIndex: PropTypes.number,
-        // portalAnnotationIndex: PropTypes.number,
 
         // From parent.
-        isSpacePrefixed: PropTypes.bool.isRequired,
         text: PropTypes.oneOfType([
             PropTypes.string,
 
@@ -83,16 +82,27 @@ class TextLyricAnchor extends Component {
                 accessedAnnotationIndex,
                 accessedAnnotationAnchorIndex,
                 wikiIndex,
+                wikiAnnotationIndex,
                 text,
                 dotKeys,
 
             ...other } = this.props,
 
-            isAccessed =
-                accessedAnnotationIndex === annotationIndex ||
-                accessedAnnotationAnchorIndex === wikiIndex,
-
             isSelected = annotationIndex === selectedAnnotationIndex
+
+        let isAccessed
+
+        if (selectedAnnotationIndex) {
+            isAccessed =
+                // Check that we're in the annotation that's selected.
+                selectedAnnotationIndex === wikiAnnotationIndex &&
+
+                accessedAnnotationAnchorIndex === wikiIndex
+
+        } else {
+            isAccessed =
+                accessedAnnotationIndex === annotationIndex
+        }
 
         // This space will not display if it starts the verse line.
         return [(

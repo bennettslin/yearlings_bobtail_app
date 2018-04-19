@@ -33,7 +33,7 @@ TextAnchor = ({
             <span className={cx(
                 'TextAnchor',
 
-                isAccessed && 'TextAnchor__accessed',
+                isAccessed && !isSelected && 'TextAnchor__accessed',
 
                 isSelected ?
                     'TextAnchor__selected' :

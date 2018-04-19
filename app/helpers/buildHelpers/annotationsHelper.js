@@ -250,6 +250,9 @@ const _finalParseWiki = (annotationObject, entity) => {
 
             if (!entity[WIKI_INDEX] && typeof entity[WIKI] === 'string') {
 
+                // Let annotation anchor know its annotation.
+                entity.wikiAnnotationIndex = annotationObject.annotationIndex
+
                 // Popup anchor index is either for portal or wiki.
                 entity[WIKI_INDEX] = annotationObject.tempAnnotationAnchorIndex
                 annotationObject.tempAnnotationAnchorIndex++

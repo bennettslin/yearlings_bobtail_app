@@ -52,7 +52,7 @@ Score (/)
 ScoresTips
 Slider (Now just waiting on rework.)
 Stage (/) (Just rename stuff when picking back up again.)
-Text
+Text (Right column anchor bug.)
 Theatre (/) (Just rename stuff when picking back up again.)
 Tips (/)
 Title (/)

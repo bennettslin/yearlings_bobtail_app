@@ -34,7 +34,7 @@ TextAnchor = ({
             <Dot className={cx(
                 'DotAnchor',
 
-                isAccessed && 'DotAnchor__accessed',
+                isAccessed && !isSelected && 'DotAnchor__accessed',
 
                 isSelected ?
                     'DotAnchor__selected' :
