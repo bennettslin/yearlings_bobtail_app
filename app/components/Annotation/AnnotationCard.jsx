@@ -8,7 +8,9 @@ import DotSequence from '../Dot/DotSequence'
 import Texts from '../Text/Texts'
 import AnnotationPortals from './AnnotationPortals'
 import { PORTAL } from '../../constants/dots'
+
 import { getCarouselOrPopupCardObject } from '../../helpers/dataHelper'
+import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -117,38 +119,47 @@ AnnotationCardView = ({
     cardDotKeys,
     cardIndex
 
-}) => (
-    <div className={cx(
-        'AnnotationCard',
-        'fontSize__verse',
-        'textShadow__background',
-        cardDotKeys
-    )}>
-        {!cardDotKeys.portal && (
-            <DotSequence
-                inAnnotationCard
-                dotKeys={cardDotKeys}
-            />
-        )}
+}) => {
 
-        <Texts
-            text={text}
+    const isTextCard = Boolean(text)
 
-            /**
-             * Allow for clicking on anchor in unselected annotation in
-             * carousel.
-             */
-            carouselAnnotationIndex={carouselAnnotationIndex}
-            handleAnchorClick={handleAnnotationWikiSelect}
-        />
+    return (
+        <div className={cx(
+            'AnnotationCard',
+            isTextCard && 'AnnotationCard__isText',
+            'fontSize__verse',
+            'textShadow__background',
+            getPrefixPrependedClassNames(cardDotKeys, 'AnnotationCard')
+        )}>
+            {!cardDotKeys.portal && (
+                <DotSequence
+                    inAnnotationCard
+                    dotKeys={cardDotKeys}
+                />
+            )}
 
-        <AnnotationPortals
-            cardIndex={cardIndex}
-            carouselAnnotationIndex={carouselAnnotationIndex}
-            handleAnnotationPortalSelect={handleAnnotationPortalSelect}
-        />
-    </div>
-)
+            {isTextCard ? (
+                <Texts
+                    text={text}
+
+                    /**
+                     * Allow for clicking on anchor in unselected annotation in
+                     * carousel.
+                     */
+                    carouselAnnotationIndex={carouselAnnotationIndex}
+                    handleAnchorClick={handleAnnotationWikiSelect}
+                />
+            ) : (
+                <AnnotationPortals
+                    cardIndex={cardIndex}
+                    carouselAnnotationIndex={carouselAnnotationIndex}
+                    handleAnnotationPortalSelect={handleAnnotationPortalSelect}
+                />
+            )}
+
+        </div>
+    )
+}
 
 AnnotationCardView.propTypes = annotationCardViewProptypes
 

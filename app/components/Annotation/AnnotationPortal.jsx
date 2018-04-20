@@ -31,7 +31,7 @@ class AnnotationPortal extends Component {
         carouselAnnotationIndex: PropTypes.number,
         cardIndex: PropTypes.number.isRequired,
         portalLinkIndex: PropTypes.number.isRequired,
-        isAccessedPortal: PropTypes.bool.isRequired,
+        isAccessed: PropTypes.bool.isRequired,
         handleAnnotationPortalSelect: PropTypes.func.isRequired
     }
 
@@ -48,7 +48,7 @@ class AnnotationPortal extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'renderReadySongIndex',
-                    'isAccessedPortal',
+                    'isAccessed',
                     {
                         staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
@@ -80,7 +80,7 @@ class AnnotationPortal extends Component {
                 carouselAnnotationIndex,
                 cardIndex,
                 portalLinkIndex,
-                isAccessedPortal } = this.props,
+                isAccessed } = this.props,
 
             portalObject = getCarouselOrPopupCardPortalObject({
                 renderReadySongIndex,
@@ -100,36 +100,38 @@ class AnnotationPortal extends Component {
 
               songTitle = getSongTitle({ songIndex }),
               verseObject = getVerseObject(songIndex, verseIndex),
-              columnKey = LYRIC_COLUMN_KEYS[columnIndex]
+              columnKey = LYRIC_COLUMN_KEYS[columnIndex],
+
+            text =
+                verseObject[LYRIC] ||
+                verseObject[CENTRE] ||
+                verseObject[columnKey]
 
         return (
             <div
                 className={cx(
                     'AnnotationPortal',
-                    'AnchorBlock',
-                    'DotAnchor',
-                    { 'accessHighlighted': isAccessedPortal }
+                    { 'AnnotationPortal__isAccessed': isAccessed }
                 )}
             >
-                <div className="portal-column button-portal-column">
-                    <DotButton
-                        dotKey={PORTAL}
-                        handleDotButtonClick={this._handlePortalClick}
-                    />
-                </div>
-                <div className="portal-column text-portal-column">
-                    <div className="portal-song-title">
+                <DotButton
+                    dotKey={PORTAL}
+                    handleDotButtonClick={this._handlePortalClick}
+                />
+
+                <div className="AnnotationPortal__text">
+                    <div className="AnnotationPortal__title">
                         {portalPrefix} <strong>{songTitle}</strong>
                     </div>
 
-                    <div className="portal-verse-text">
-                        <span className="TextSpan">{'\u201c'}</span>
+                    <div className="AnnotationPortal__verse">
+                        <span>{'\u201c'}</span>
                         <Texts
                             inPortal
-                            text={verseObject[LYRIC] || verseObject[CENTRE] || verseObject[columnKey]}
+                            text={text}
                             portalAnnotationIndex={annotationIndex}
                         />
-                        <span className="TextSpan">{'\u201d'}</span>
+                        <span>{'\u201d'}</span>
                     </div>
                 </div>
             </div>

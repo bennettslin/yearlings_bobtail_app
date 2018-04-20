@@ -391,8 +391,7 @@ module.exports = {
                             },
                             {
                                 portal: {
-                                    portalKey: `safeway_paper_bag`,
-                                    portalPrefix: 'wheeee'
+                                    portalKey: `safeway_paper_bag`
                                 }
                             }
                         ]

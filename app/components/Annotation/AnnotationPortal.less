@@ -1,13 +1,17 @@
 .AnnotationPortal {
     display: flex;
     padding: 10px;
-    margin: 5px;
+
     box-shadow: @boxShadow__annotationPortal;
     background-color: @bgColour__annotationPortal;
 }
 
+.AnnotationPortal__text {
+    padding-left: 10px;
+}
+
 // Accommodate foreign characters in Didi and Kyon.
-.portal-song-title {
+.AnnotationPortal__title {
     margin-bottom: 0.25em;
     font-size: 1em;
     color: @lyric-text-invert-colour;
@@ -17,27 +21,10 @@
     }
 }
 
-.portal-verse-text {
-
-    // TODO: Doesn't have text outline.
-
+.AnnotationPortal__verse {
     text-indent: -@width__hangingIndent;
     padding-left: @width__hangingIndent;
-
     font-size: 0.9em;
 
-    .TextSpan {
-        color: @lyric-text-invert-colour;
-    }
-
-    .portal-anchor {
-        .TextSpan {
-            color: @colour__text;
-        }
-    }
-}
-
-.text-portal-column {
-
-    padding-left: 10px;
+    color: green;
 }

@@ -27,22 +27,36 @@
         opacity @animationDuration__default,
         box-shadow @animationDuration__default;
 
-    .mixin__textShadow(@bgColour__annotationCard);
-
     .overrideAnimate
     & {
         transition: none;
     }
 }
 
-.RM__narrative .AnnotationCard.narrative,
-.RM__backstory .AnnotationCard.backstory,
-.RM__observation .AnnotationCard.observation,
-.RM__pun .AnnotationCard.pun,
-.RM__reference .AnnotationCard.reference,
-.RM__songwriting .AnnotationCard.songwriting,
-.RM__portal .AnnotationCard.portal,
-.RM__afterword .AnnotationCard.afterword {
+.AnnotationCard__isText {
+    .mixin__textShadow(@bgColour__annotationCard);
+}
+
+.AnnotationCard__portal {
+    background-color: @bgColour__annotationCard;
+}
+
+.RM__narrative
+    .AnnotationCard__narrative,
+.RM__backstory
+    .AnnotationCard__backstory,
+.RM__observation
+    .AnnotationCard__observation,
+.RM__pun
+    .AnnotationCard__pun,
+.RM__reference
+    .AnnotationCard__reference,
+.RM__songwriting
+    .AnnotationCard__songwriting,
+.RM__portal
+    .AnnotationCard__portal,
+.RM__afterword
+    .AnnotationCard__afterword {
 
     padding: @paddingX__annotationCard;
     min-height: @length__annotationDot;

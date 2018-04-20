@@ -7,6 +7,7 @@ import cx from 'classnames'
 import Annotation from '../Annotation/Annotation'
 import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 import { getAnnotationObject } from '../../helpers/dataHelper'
+import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -135,7 +136,9 @@ CarouselAnnotationView = ({
             `Carousel__scrollChild__${annotationIndex}`,
             annotationColumn &&
                 `CarouselAnnotation__inLyricColumn__${annotationColumn}`,
-            annotationDotKeys
+            getPrefixPrependedClassNames(
+                annotationDotKeys, 'CarouselAnnotation'
+            )
         )}
     >
         <Annotation {...other}

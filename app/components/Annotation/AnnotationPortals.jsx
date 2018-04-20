@@ -50,18 +50,19 @@ AnnotationPortals = ({
         portalLinksArray.map((portalObject, portalLinkIndex) => {
 
             /**
-             * NOTE: portalLinkIndex and sourcePortalIndex are not the same
-             * value! portalLinkIndex is solely for the portal component to
-             * fetch the portal object from the data helper.
+             * portalLinkIndex is solely to fetch the portal object from
+             * the data helper when there are two portals in the same
+             * annotation. This happens only once, with the "shiv" one.
              */
             const { [SOURCE_PORTAL_INDEX]: sourcePortalIndex } = portalObject,
-                isAccessedPortal = accessedAnnotationAnchorIndex === sourcePortalIndex
+                isAccessed =
+                    accessedAnnotationAnchorIndex === sourcePortalIndex
 
             return (
                 <AnnotationPortal {...other}
                     key={portalLinkIndex}
                     portalLinkIndex={portalLinkIndex}
-                    isAccessedPortal={isAccessedPortal}
+                    isAccessed={isAccessed}
                 />
             )
         })
