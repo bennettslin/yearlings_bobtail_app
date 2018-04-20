@@ -1,4 +1,5 @@
 // Component to show text anchor with underline bar.
+// TODO: Delete after portal refactor.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'

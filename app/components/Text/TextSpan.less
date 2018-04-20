@@ -2,7 +2,6 @@
 
 .TextSpan {
     position: relative;
-    color: @colour__text;
 
     transition: color @animationDuration__default,
                 text-shadow @animationDuration__default;
@@ -12,18 +11,18 @@
         transition: none;
     }
 
-    .VerseBar
-    & {
-        z-index: @zIndex__verseBarText;
-    }
+    // .VerseBar
+    // & {
+    //     z-index: @zIndex__verseBarText;
+    // }
 }
 
-.Annotation,
-.Lyric {
+// .Annotation,
+// .Lyric {
 
-    // Text span and portals should be in front of dots block.
-    .TextSpan,
-    .AnnotationPortal {
-        z-index: @zIndex__textSpan;
-    }
-}
+//     // Text span and portals should be in front of dots block.
+//     .TextSpan,
+//     .AnnotationPortal {
+//         z-index: @zIndex__textSpan;
+//     }
+// }

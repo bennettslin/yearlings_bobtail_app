@@ -84,7 +84,7 @@ class VerseLine extends Component {
                 )}
             >
                 <Texts {...other}
-                    isLyric
+                    isVerseLyric
                 />
             </div>
 

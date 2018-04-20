@@ -71,7 +71,8 @@ Text = ({
                 text = lyric || anchor
 
             if (showAsPlainText) {
-                const { isVerseEndingSpan } = textEntity,
+                const { isVerseBeginningSpan,
+                        isVerseEndingSpan } = textEntity,
 
                     { portalAnnotationIndex } = props,
 
@@ -86,6 +87,7 @@ Text = ({
                 return (
                     <Texts {...other}
                         text={text}
+                        isVerseBeginningSpan={isVerseBeginningSpan}
                         isVerseEndingSpan={isVerseEndingSpan}
                         isPortalAnchorInPortal={isPortalAnchorInPortal}
                     />

@@ -105,7 +105,10 @@ class TextLyricAnchor extends Component {
 
         // This space will not display if it starts the verse line.
         return [(
-                <span key="space">
+                <span
+                    key="space"
+                    className="anchorSpace"
+                >
                     {' '}
                 </span>
             ), (

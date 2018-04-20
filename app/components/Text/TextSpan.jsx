@@ -7,16 +7,16 @@ import cx from 'classnames'
 import { getFormattedLyricSpanText, getFormattedEndingVerseSpanText } from '../../helpers/formatHelper'
 
 const textSpanDefaultProps = {
-    inTextAnchor: false,
-    isLyric: false
+    isVerseLyric: false
 },
 
 textSpanPropTypes = {
     // From parent.
     text: PropTypes.string.isRequired,
-    isLyric: PropTypes.bool.isRequired,
+    isVerseLyric: PropTypes.bool,
     isEmphasis: PropTypes.bool,
     isItalic: PropTypes.bool,
+    isVerseBeginningSpan: PropTypes.bool,
     isVerseEndingSpan: PropTypes.bool,
     isPortalAnchorInPortal: PropTypes.bool
 },
@@ -24,9 +24,10 @@ textSpanPropTypes = {
 TextSpan = ({
 
     text,
-    isLyric,
+    isVerseLyric,
     isEmphasis,
     isItalic,
+    isVerseBeginningSpan,
     isVerseEndingSpan,
     isPortalAnchorInPortal
 
@@ -35,7 +36,9 @@ TextSpan = ({
      * Subsequent spans of text on a line will begin with a space, unless it
      * begins with "'s," or it's the beginning verse span in a portal.
      */
-    const hasFirstSpace = (text.indexOf('\'s') !== 0)
+    const isSpacePrefixed =
+        (text.indexOf('\'s') !== 0) &&
+        !isVerseBeginningSpan
 
     let formattedText = text,
         Tag = 'span'
@@ -47,7 +50,7 @@ TextSpan = ({
         Tag = 'i'
     }
 
-    if (isLyric) {
+    if (isVerseLyric) {
         // And nonbreaking space between last two words.
         formattedText = getFormattedLyricSpanText(formattedText)
     }
@@ -63,7 +66,15 @@ TextSpan = ({
             'textShadow__text',
             isPortalAnchorInPortal && 'textSpan__portalInPortal'
         )}>
-            {(hasFirstSpace ? ' ' : '') + formattedText}
+            {isSpacePrefixed && (
+                <span
+                    key="space"
+                    className="textSpace"
+                >
+                    {' '}
+                </span>
+            )}
+            {formattedText}
         </Tag>
     )
 }
