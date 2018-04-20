@@ -32,8 +32,7 @@ class AnnotationCard extends Component {
 
         // From parent.
         carouselAnnotationIndex: PropTypes.number,
-        cardIndex: PropTypes.number.isRequired,
-        inSelectedAnnotation: PropTypes.bool.isRequired
+        cardIndex: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -44,7 +43,6 @@ class AnnotationCard extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'renderReadySongIndex',
-                    'inSelectedAnnotation',
                     {
                         staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
@@ -103,7 +101,6 @@ const annotationCardViewProptypes = {
     carouselAnnotationIndex: PropTypes.number,
     cardDotKeys: PropTypes.object.isRequired,
     cardIndex: PropTypes.number.isRequired,
-    inSelectedAnnotation: PropTypes.bool.isRequired,
     handleAnnotationWikiSelect: PropTypes.func.isRequired,
     handleAnnotationPortalSelect: PropTypes.func.isRequired
 },
@@ -112,7 +109,6 @@ AnnotationCardView = ({
 
     // From props.
     carouselAnnotationIndex,
-    inSelectedAnnotation,
     handleAnnotationWikiSelect,
     handleAnnotationPortalSelect,
 
@@ -149,7 +145,6 @@ AnnotationCardView = ({
         <AnnotationPortals
             cardIndex={cardIndex}
             carouselAnnotationIndex={carouselAnnotationIndex}
-            inSelectedAnnotation={inSelectedAnnotation}
             handleAnnotationPortalSelect={handleAnnotationPortalSelect}
         />
     </div>

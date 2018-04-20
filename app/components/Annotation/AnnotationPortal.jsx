@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames';
+
 import Texts from '../Text/Texts'
 import DotButton from '../Dot/DotButton'
 import { PORTAL } from '../../constants/dots'

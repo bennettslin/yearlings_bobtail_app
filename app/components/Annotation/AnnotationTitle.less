@@ -1,29 +1,8 @@
-@bgColour__selectedAnnotationTitle: @bgColour__verse__odd;
-
 .AnnotationTitle {
-
     text-align: center;
 
     // Unlike lyric title, annotation title maxes out at mini font size.
     &.fontSize__title {
         font-size: @fontSize__title__mini;
-    }
-
-    /**
-     * Not using mixin here so that text shadow applies only to annotation
-     * title and not to annotation card.
-     */
-    .Annotation__selected
-    & {
-
-        background-color: @bgColour__selectedAnnotationTitle;
-
-        .TextLyricAnchor {
-            text-shadow:
-            -@textShadow__offset -@textShadow__offset @textShadow__blur @bgColour__selectedAnnotationTitle,
-            @textShadow__offset -@textShadow__offset @textShadow__blur @bgColour__selectedAnnotationTitle,
-            -@textShadow__offset @textShadow__offset @textShadow__blur @bgColour__selectedAnnotationTitle,
-            @textShadow__offset @textShadow__offset @textShadow__blur @bgColour__selectedAnnotationTitle;
-        }
     }
 }

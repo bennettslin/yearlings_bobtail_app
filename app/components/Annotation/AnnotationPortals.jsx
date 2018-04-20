@@ -25,8 +25,7 @@ const annotationPortalsPropTypes = {
 
     // From parent.
     carouselAnnotationIndex: PropTypes.number,
-    cardIndex: PropTypes.number.isRequired,
-    inSelectedAnnotation: PropTypes.bool.isRequired
+    cardIndex: PropTypes.number.isRequired
 },
 
 AnnotationPortals = ({
@@ -34,7 +33,6 @@ AnnotationPortals = ({
     renderReadySongIndex,
     renderReadyAnnotationIndex,
     accessedAnnotationAnchorIndex,
-    inSelectedAnnotation,
 
 ...other }) => {
 
@@ -57,8 +55,7 @@ AnnotationPortals = ({
              * fetch the portal object from the data helper.
              */
             const { [SOURCE_PORTAL_INDEX]: sourcePortalIndex } = portalObject,
-                isAccessedPortal = inSelectedAnnotation &&
-                    accessedAnnotationAnchorIndex === sourcePortalIndex
+                isAccessedPortal = accessedAnnotationAnchorIndex === sourcePortalIndex
 
             return (
                 <AnnotationPortal {...other}

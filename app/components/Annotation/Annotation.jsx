@@ -152,13 +152,7 @@ AnnotationSectionView = ({
                 AnnotationTitleChild
             )}
 
-            <AnnotationCards {...other}
-                /**
-                 * Tell card it's in selected annotation so it knows whether
-                 * to care about accessed annotation anchor.
-                 */
-                inSelectedAnnotation={isSelected}
-            />
+            <AnnotationCards {...other} />
         </div>
     )
 }
