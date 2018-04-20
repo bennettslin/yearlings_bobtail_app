@@ -50,9 +50,9 @@ AnnotationPortals = ({
         portalLinksArray.map((portalObject, portalLinkIndex) => {
 
             /**
-             * portalLinkIndex is solely to fetch the portal object from
-             * the data helper when there are two portals in the same
-             * annotation. This happens only once, with the "shiv" one.
+             * portalLinkIndex is solely to fetch the portal object from the
+             * data helper when there are two portals in the same annotation.
+             * This happens only once, with the "shiv" one.
              */
             const { [SOURCE_PORTAL_INDEX]: sourcePortalIndex } = portalObject,
                 isAccessed =
