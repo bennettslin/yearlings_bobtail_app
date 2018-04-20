@@ -61,7 +61,7 @@ Wiki (/)
 
 AccessManager
 AppManager
-RootManager (Redo classes, rearrange so that SwitchManager is first?)
+RootManager
 EventManager
 RoutingManager
 SwitchManager
