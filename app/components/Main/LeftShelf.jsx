@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotsToggle from './DotsToggle'
+import DotsSlideToggle from './DotsSlideToggle'
 import OverviewToggle from './OverviewToggle'
 import ScoresTips from '../ScoresTips/ScoresTips'
 
@@ -32,7 +32,7 @@ LeftShelf = ({
         <OverviewToggle
             handleOverviewToggle={handleOverviewToggle}
         />
-        <DotsToggle
+        <DotsSlideToggle
             handleDotsSectionToggle={handleDotsSectionToggle}
         />
         <ScoresTips {...scoresTipsHandlers}

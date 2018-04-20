@@ -35,7 +35,7 @@ Lyric (Just waiting on taking care of dots for LyricStanzaDot.)
 LyricColumn (Waiting on access.)
 Main
     LeftShelf (do with overviewToggle, dotsToggle, and scoresTips)
-    DotsToggle
+    DotsSlideToggle
     OverviewToggle
 Nav (Need to consider last title margin, panels, and consolidate responsive)
 Overview (Waiting on overview in phone and heightless.)

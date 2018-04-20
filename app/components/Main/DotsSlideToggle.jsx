@@ -20,17 +20,17 @@ const dotsTogglePropTypes = {
     handleDotsSectionToggle: PropTypes.func.isRequired
 },
 
-DotsToggle = ({
+DotsSlideToggle = ({
 
     selectedDotsIndex,
     handleDotsSectionToggle
 
 }) => (
-    <div className="DotsToggle">
+    <div className="DotsSlideToggle">
         <Button
             isLarge
             accessKeysShown
-            buttonName="DotsToggle"
+            buttonName="DotsSlideToggle"
             accessKey={DOTS_SECTION_EXPAND_KEY}
             iconText={selectedDotsIndex}
             handleClick={handleDotsSectionToggle}
@@ -38,6 +38,6 @@ DotsToggle = ({
     </div>
 )
 
-DotsToggle.propTypes = dotsTogglePropTypes
+DotsSlideToggle.propTypes = dotsTogglePropTypes
 
-export default connect(mapStateToProps)(DotsToggle)
+export default connect(mapStateToProps)(DotsSlideToggle)
