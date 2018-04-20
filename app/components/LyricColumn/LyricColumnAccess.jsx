@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 import { convertTrueFalseKeysToBitNumber } from '../../helpers/bitHelper'
 
-import AccessIconsBlock from '../access/AccessIconsBlock'
+import AccessIcons from '../access/AccessIcons'
 import { NAVIGATION_ENTER_KEY,
          NAVIGATION_LEFT_KEY,
          NAVIGATION_RIGHT_KEY,
@@ -75,7 +75,7 @@ const LyricColumnAccess = ({
     return (
         <div className="LyricColumnAccess-row">
             <div className="access-icons-group">
-                <AccessIconsBlock
+                <AccessIcons
                     className="left-right"
                     accessIconKeys={[
                         NAVIGATION_LEFT_KEY,
@@ -84,7 +84,7 @@ const LyricColumnAccess = ({
                     accessKeysShown={showLeftRight}
                 />
 
-                <AccessIconsBlock
+                <AccessIcons
                     className="enter"
                     accessIconKeys={[
                         NAVIGATION_ENTER_KEY
@@ -94,7 +94,7 @@ const LyricColumnAccess = ({
             </div>
 
             <div className="access-icons-group">
-                <AccessIconsBlock
+                <AccessIcons
                     className="up-down"
                     accessIconKeys={[
                         NAVIGATION_UP_KEY,

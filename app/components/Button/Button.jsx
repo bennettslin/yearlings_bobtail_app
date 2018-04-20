@@ -93,7 +93,7 @@ class Button extends Component {
 
                 {accessKey &&
                     <div className={cx(
-                        'access-button-icon',
+                        'AccessIcon',
                         { 'isHidden': !isEnabled }
                     )}>
                         {accessKey}

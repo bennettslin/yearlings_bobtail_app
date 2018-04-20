@@ -1,0 +1,40 @@
+.AccessIcons {
+    position: absolute;
+    display: flex;
+
+    &:not(:last-child) {
+        margin-right: @margin__accessIcons;
+    }
+}
+
+.AccessIcon {
+    @AccessIcon-edge: 20px;
+
+    width: @AccessIcon-edge;
+    height: @AccessIcon-edge;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity @animationDuration__default;
+    opacity: 0;
+
+    border: 2px solid green;
+    border-radius: 3px;
+
+    background-color: #bfb;
+
+    .Button
+    & {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .RM__accessOn
+    .accessKeysShown
+    &:not(.isHidden) {
+        opacity: 1;
+    }
+}

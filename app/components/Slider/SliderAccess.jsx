@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import AccessIconsBlock from '../access/AccessIconsBlock'
+import AccessIcons from '../access/AccessIcons'
 import { NAVIGATION_ENTER_KEY,
          AUDIO_REWIND_KEY,
          AUDIO_FAST_FORWARD_KEY } from '../../constants/access'
@@ -35,7 +35,7 @@ const SliderAccess = ({
         isVerseInteractivated = interactivatedVerseIndex >= 0
 
     return [(
-        <AccessIconsBlock
+        <AccessIcons
             key="rewindForward"
             className="rewindForward"
             accessIconKeys={[
@@ -45,7 +45,7 @@ const SliderAccess = ({
             accessKeysShown={!isLogue}
         />
     ), (
-        <AccessIconsBlock
+        <AccessIcons
             key="enter"
             className="enter"
             accessIconKeys={[

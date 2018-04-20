@@ -1,6 +1,7 @@
 @import "./TextLyricAnchor.less";
 
 .TextSpan {
+    // Position above absolute elements.
     position: relative;
 
     transition: color @animationDuration__default,
@@ -10,19 +11,9 @@
     & {
         transition: none;
     }
-
-    // .VerseBar
-    // & {
-    //     z-index: @zIndex__verseBarText;
-    // }
 }
 
-// .Annotation,
-// .Lyric {
-
-//     // Text span and portals should be in front of dots block.
-//     .TextSpan,
-//     .AnnotationPortal {
-//         z-index: @zIndex__textSpan;
-//     }
-// }
+.textSpan__portalInPortal {
+    // TODO: Make better, obviously.
+    color: purple;
+}

@@ -32,13 +32,6 @@ TextSpan = ({
     isPortalAnchorInPortal
 
 }) => {
-    /**
-     * Subsequent spans of text on a line will begin with a space, unless it
-     * begins with "'s," or it's the beginning verse span in a portal.
-     */
-    const isSpacePrefixed =
-        (text.indexOf('\'s') !== 0) &&
-        !isVerseBeginningSpan
 
     let formattedText = text,
         Tag = 'span'
@@ -50,14 +43,22 @@ TextSpan = ({
         Tag = 'i'
     }
 
+    // And nonbreaking space between last two words.
     if (isVerseLyric) {
-        // And nonbreaking space between last two words.
         formattedText = getFormattedLyricSpanText(formattedText)
     }
 
+    // Last verse span in portal will always end in an ellipsis.
     if (isVerseEndingSpan) {
-        // Last verse span in portal will always end in an ellipsis.
         formattedText = getFormattedEndingVerseSpanText(formattedText)
+    }
+
+    /**
+     * Subsequent spans of text on a line will begin with a space, unless it
+     * begins with "'s," or it's the beginning verse span in a portal.
+     */
+    if (!isVerseBeginningSpan && text.indexOf('\'s') !== 0) {
+        formattedText = ` ${formattedText}`
     }
 
     return (
@@ -66,14 +67,6 @@ TextSpan = ({
             'textShadow__text',
             isPortalAnchorInPortal && 'textSpan__portalInPortal'
         )}>
-            {isSpacePrefixed && (
-                <span
-                    key="space"
-                    className="textSpace"
-                >
-                    {' '}
-                </span>
-            )}
             {formattedText}
         </Tag>
     )

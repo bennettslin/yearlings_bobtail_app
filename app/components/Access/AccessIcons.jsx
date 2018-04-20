@@ -11,7 +11,7 @@ const accessIconsBlockPropTypes = {
     className: PropTypes.string
 },
 
-AccessIconsBlock = ({
+AccessIcons = ({
 
     accessIconKeys,
     accessKeysShown,
@@ -19,7 +19,7 @@ AccessIconsBlock = ({
 
 }) => (
     <div className={cx(
-        'AccessIconsBlock',
+        'AccessIcons',
 
         // eslint-disable-next-line object-shorthand
         { 'accessKeysShown': accessKeysShown },
@@ -30,7 +30,7 @@ AccessIconsBlock = ({
             return (
                 <div
                     key={accessIconKey}
-                    className="access-button-icon"
+                    className="AccessIcon"
                 >
                     {accessIconKey}
                 </div>
@@ -39,6 +39,6 @@ AccessIconsBlock = ({
     </div>
 )
 
-AccessIconsBlock.propTypes = accessIconsBlockPropTypes
+AccessIcons.propTypes = accessIconsBlockPropTypes
 
-export default AccessIconsBlock
+export default AccessIcons
