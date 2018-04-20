@@ -51,8 +51,8 @@ class Annotation extends Component {
                     },
 
                     // Presentation props.
-                    'isAccessedAnnotation',
-                    'isSelectedAnnotation'
+                    'isAccessed',
+                    'isSelected'
                 ]
             })
 
@@ -94,8 +94,8 @@ class Annotation extends Component {
 const annotationSectionViewPropTypes = {
     // From parent.
     inCarousel: PropTypes.bool,
-    isAccessedAnnotation: PropTypes.bool,
-    isSelectedAnnotation: PropTypes.bool,
+    isAccessed: PropTypes.bool,
+    isSelected: PropTypes.bool,
     annotationTitle: PropTypes.string.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
 
@@ -108,8 +108,8 @@ AnnotationSectionView = ({
 
     // From props.
     inCarousel,
-    isAccessedAnnotation,
-    isSelectedAnnotation,
+    isAccessed,
+    isSelected,
     handleTitleClick,
     handleContainerClick,
 
@@ -119,25 +119,22 @@ AnnotationSectionView = ({
 
 ...other }) => {
 
-    // Show as selected if it's selected in carousel, or if it's in popup.
-    const showAsSelected = isSelectedAnnotation || !inCarousel,
-
-        AnnotationTitleChild = (
-            <AnnotationTitle
-                isSelected={showAsSelected}
-                isAccessed={isAccessedAnnotation}
-                annotationDotKeys={annotationDotKeys}
-                annotationTitle={annotationTitle}
-                handleTitleClick={handleTitleClick}
-            />
-        )
+    const AnnotationTitleChild = (
+        <AnnotationTitle
+            isSelected={isSelected}
+            isAccessed={isAccessed}
+            annotationDotKeys={annotationDotKeys}
+            annotationTitle={annotationTitle}
+            handleTitleClick={handleTitleClick}
+        />
+    )
 
     return (
         <div
             className={cx(
                 'Annotation',
-                { 'Annotation__selected': showAsSelected,
-                  'Annotation__accessed': isAccessedAnnotation }
+                { 'Annotation__selected': isSelected,
+                  'Annotation__accessed': isAccessed }
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}
@@ -160,7 +157,7 @@ AnnotationSectionView = ({
                  * Tell card it's in selected annotation so it knows whether
                  * to care about accessed annotation anchor.
                  */
-                inSelectedAnnotation={showAsSelected}
+                inSelectedAnnotation={isSelected}
             />
         </div>
     )

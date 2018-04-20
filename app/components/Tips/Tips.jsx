@@ -78,7 +78,6 @@ class Tips extends Component {
 
                     {tipText && (
                         <Texts
-                            isLyric={false}
                             text={tipText}
                         />
                     )}

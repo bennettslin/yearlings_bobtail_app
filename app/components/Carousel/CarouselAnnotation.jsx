@@ -27,8 +27,8 @@ class CarouselAnnotation extends Component {
 
         // From parent.
         annotationIndex: PropTypes.number.isRequired,
-        isAccessedAnnotation: PropTypes.bool.isRequired,
-        isSelectedAnnotation: PropTypes.bool.isRequired,
+        isAccessed: PropTypes.bool.isRequired,
+        isSelected: PropTypes.bool.isRequired,
         handleLyricAnnotationSelect: PropTypes.func.isRequired
     }
 
@@ -47,8 +47,8 @@ class CarouselAnnotation extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'renderReadySongIndex',
-                    'isAccessedAnnotation',
-                    'isSelectedAnnotation'
+                    'isAccessed',
+                    'isSelected'
                 ]
             })
 
@@ -56,7 +56,7 @@ class CarouselAnnotation extends Component {
     }
 
     _handleAnnotationTitleClick(e) {
-        if (!this.props.isSelectedAnnotation) {
+        if (!this.props.isSelected) {
             const { annotationIndex,
                     handleLyricAnnotationSelect } = this.props
 
@@ -74,7 +74,7 @@ class CarouselAnnotation extends Component {
          * FIXME: Not perfect because annotations overlap, so it's still
          * possible to deselect the annotation by clicking it on the far right.
          */
-        if (this.props.isSelectedAnnotation) {
+        if (this.props.isSelected) {
             this.props.handlePopupContainerClick(e, true)
         }
     }

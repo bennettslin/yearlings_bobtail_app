@@ -114,17 +114,17 @@ class Carousel extends Component {
                     {annotationsIndices.map(index => {
 
                         const annotationIndex = index + 1,
-                            isAccessedAnnotation =
+                            isAccessed =
                                 annotationIndex === accessedAnnotationIndex,
-                            isSelectedAnnotation =
+                            isSelected =
                                 annotationIndex === selectedAnnotationIndex
 
                         return (
                             <CarouselAnnotation {...other}
                                 key={index}
                                 annotationIndex={annotationIndex}
-                                isAccessedAnnotation={isAccessedAnnotation}
-                                isSelectedAnnotation={isSelectedAnnotation}
+                                isAccessed={isAccessed}
+                                isSelected={isSelected}
                             />
                         )
                     })}

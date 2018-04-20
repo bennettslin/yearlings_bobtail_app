@@ -137,7 +137,6 @@ AnnotationCardView = ({
 
         <Texts
             text={text}
-            isLyric={false}
 
             /**
              * Allow for clicking on anchor in unselected annotation in

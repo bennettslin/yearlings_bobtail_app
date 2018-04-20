@@ -80,7 +80,6 @@ class OverviewSection extends Component {
                     </div>
                 }
                 <Texts
-                    isLyric={false}
                     text={overviewText}
                 />
             </div>

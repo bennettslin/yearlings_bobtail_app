@@ -115,7 +115,9 @@ AnnotationPopup = ({
                 handleNextClick={handleAnnotationNext}
                 handlePopupContainerClick={handlePopupContainerClick}
             >
-                <Annotation {...other} />
+                <Annotation {...other}
+                    isSelected
+                />
             </Popup>
         )
     }

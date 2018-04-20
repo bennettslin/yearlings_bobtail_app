@@ -129,7 +129,6 @@ class TextAnchor extends Component {
                     }
                     {/* Only the first text span inside the anchor will forego space. */}
                     <Texts
-                        isLyric={isLyric}
                         text={anchorText}
                         inPortal={inPortal}
                         isVerseBeginningSpan={isVerseBeginningSpan}
