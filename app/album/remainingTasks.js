@@ -1,6 +1,18 @@
 module.exports = [
 
     {
+        taskName: `Revisit PureComponent`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Annotation anchors don't have underlines, make links better in general`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Lyric text anchor in right column really wonky.`,
         workedHours: 0,
         neededHours: 2
@@ -13,7 +25,7 @@ module.exports = [
     },
 
     {
-        taskName: `Be smarter about switching gradients, scrolling over main, and carousel height.`,
+        taskName: `Be smarter about switching gradients, scrolling over main, and carousel height. Carousel needs max height as well, just like lyric column does.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -31,7 +43,13 @@ module.exports = [
     },
 
     {
-        taskName: `Can't show carousel or nav when heightless lyric.`,
+        taskName: `Can't show carousel or nav when heightless lyric. Be strategic about this.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Allow carousel or nav to show with dots, and just switch access.`,
         workedHours: 0,
         neededHours: 2
     },
