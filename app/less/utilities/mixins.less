@@ -12,17 +12,17 @@
 @textShadow__offset: 1px;
 @textShadow__blur: 0.75px;
 
-.mixin__textShadow(@colour) {
+.mixin__textShadow(@bgColour) {
 
     &.textShadow__background {
-        background-color: @colour;
+        background-color: @bgColour;
     }
 
     .textShadow__text {
         text-shadow:
-        -@textShadow__offset -@textShadow__offset @textShadow__blur @colour,
-        @textShadow__offset -@textShadow__offset @textShadow__blur @colour,
-        -@textShadow__offset @textShadow__offset @textShadow__blur @colour,
-        @textShadow__offset @textShadow__offset @textShadow__blur @colour;
+        -@textShadow__offset -@textShadow__offset @textShadow__blur @bgColour,
+        @textShadow__offset -@textShadow__offset @textShadow__blur @bgColour,
+        -@textShadow__offset @textShadow__offset @textShadow__blur @bgColour,
+        @textShadow__offset @textShadow__offset @textShadow__blur @bgColour;
     }
 }
