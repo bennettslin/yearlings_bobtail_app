@@ -19,9 +19,6 @@
     bottom: 0;
     left: 0;
 
-    // Default colour.
-    background-color: @bgColour__underline__disabled;
-
     transition:
         opacity @animationDuration__default,
         background-color @animationDuration__default,
@@ -31,6 +28,16 @@
     & {
         transition: none;
     }
+
+    .RM__sliderMoving
+    & {
+        background-color: @bgColour__underline__disabled;
+    }
+}
+
+// Initial style is not visible.
+.AnchorUnderline__styleOnlyWithSequenceDot {
+    opacity: 0;
 }
 
 .AnchorUnderline__underDot {
@@ -38,7 +45,6 @@
     bottom: -10%;
 }
 
-.RM__sliderNotMoving
 .AnchorUnderline__selectable {
     background-color: @bgColour__underline__selectable;
 
@@ -53,20 +59,16 @@
     }
 }
 
-.RM__sliderNotMoving
 .AnchorUnderline__selected {
-    background-color: @bgColour__underline__selected;
+    .RM__sliderNotMoving
+    & {
+        background-color: @bgColour__underline__selected;
+    }
 }
-
 
 .AnchorUnderline__accessed {
     .RM__sliderNotMoving.RM__accessOn
     & {
         background-color: @bgColour__underline__accessed;
     }
-}
-
-// Initial style is not visible.
-.AnchorUnderline__styleOnlyWithSequenceDot {
-    opacity: 0;
 }

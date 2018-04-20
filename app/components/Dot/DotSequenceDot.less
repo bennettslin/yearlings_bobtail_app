@@ -19,18 +19,21 @@
 
     // TODO: Eventually put this in Anchor styling.
 
-    .TextLyricAnchor:hover
+    .Anchor__selectable:hover
     & {
         animation: bounceHover @animationDuration__slow;
     }
 
-    .TextLyricAnchor:active
+    .Anchor__selectable:active
     & {
         transform: scale(0.8);
     }
 }
 
-// Styling if at least one sequence dot is selected.
+/**
+ * Styling if at least one sequence dot is selected. Nesting under parent for
+ * clarity.
+ */
 .RM__narrative
     .styleIf__sequenceDot__narrative,
 .RM__backstory

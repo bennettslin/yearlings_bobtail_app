@@ -1,13 +1,28 @@
 @import "./DotSequence.less";
 @import "./DotSequenceDot.less";
 
-.RM__sliderMoving {
-    .bgColour__dot {
+.bgColour__dot {
+    .RM__sliderMoving
+    & {
         background-color: @bgColour__dot__deselected;
+    }
+
+    .RM__sliderNotMoving
+    .Anchor__selected
+    & {
+        background-color: @bgColour__underline__selected;
+    }
+
+    .RM__sliderNotMoving.RM__accessOn
+    .Anchor__accessed
+    & {
+        background-color: @bgColour__underline__accessed;
     }
 }
 
+// Nesting under parent for clarity.
 .RM__sliderNotMoving {
+
     .bgColour__dot__portal {
         background-color: @bgColour__dot__portal;
     }

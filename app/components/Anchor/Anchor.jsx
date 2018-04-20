@@ -36,6 +36,8 @@ Anchor = ({
 }) => (
     <a className={cx(
             'Anchor',
+
+            isAccessed && !isSelected && 'Anchor__accessed',
             isSelected ? 'Anchor__selected' : 'Anchor__selectable',
 
             isWikiAnchor && 'styleIf__sequenceDot__reference',
@@ -53,6 +55,7 @@ Anchor = ({
     >
         <span className={cx(
             'AnchorUnderline',
+
             { 'AnchorUnderline__underDot': isDotAnchor },
 
             isAccessed && !isSelected && 'AnchorUnderline__accessed',
