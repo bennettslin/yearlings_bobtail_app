@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DotSequence from '../Dot/DotSequence'
 import TextAnchor from '../Anchor/TextAnchor'
 import Texts from './Texts'
 
@@ -116,26 +115,19 @@ class TextLyricAnchor extends Component {
                         annotationIndex &&
                             `LyricAnnotation__scrollChild__${annotationIndex}`,
 
-                        wikiIndex && `wiki__${wikiIndex}`,
+                        wikiIndex && `wiki__${wikiIndex}`
                     )}
                     text={(
                         <Texts {...other}
                             text={text}
                         />
                     )}
+                    sequenceDotKeys={dotKeys}
+                    isWikiAnchor={Boolean(wikiIndex)}
                     isAccessed={isAccessed}
                     isSelected={isSelected}
-                    wikiIndex={wikiIndex}
-                    annotationIndex={annotationIndex}
                     handleAnchorClick={this._handleAnchorClick}
-                >
-                    {dotKeys ? (
-                        <DotSequence
-                            inTextAnchor
-                            dotKeys={dotKeys}
-                        />
-                    ) : null}
-                </TextAnchor>
+                />
             )]
     }
 }

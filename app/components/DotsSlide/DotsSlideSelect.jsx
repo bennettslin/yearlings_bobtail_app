@@ -157,7 +157,8 @@ DotsSlideSelectView = ({
                 <Button
                     isOverflowShown
                     accessKeysShown
-                    buttonClass={isSelected ? `Dot__${dotKey}` : ''}
+                    // FIXME: This is dumb.
+                    buttonClass={isSelected ? `bgColour__dot bgColour__dot__${dotKey}` : ''}
                     buttonName="dotsSlideSelect"
                     accessKey={accessKey}
                     iconClass={dotKey}

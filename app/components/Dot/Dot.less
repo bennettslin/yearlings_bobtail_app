@@ -1,31 +1,35 @@
 @import "./DotSequence.less";
 @import "./DotSequenceDot.less";
 
-.Dot {
-    transition: background-color @animationDuration__default;
+.RM__sliderMoving {
+    .bgColour__dot {
+        background-color: @bgColour__dot__deselected;
+    }
 }
 
-.Dot__portal {
-    background-color: @bgColour__dot__portal;
-}
-.Dot__observation {
-    background-color: @bgColour__dot__observation;
-}
-.Dot__backstory {
-    background-color: @bgColour__dot__backstory;
-}
-.Dot__reference {
-    background-color: @bgColour__dot__reference;
-}
-.Dot__pun {
-    background-color: @bgColour__dot__pun;
-}
-.Dot__narrative {
-    background-color: @bgColour__dot__narrative;
-}
-.Dot__songwriting {
-    background-color: @bgColour__dot__songwriting;
-}
-.Dot__afterword {
-    background-color: @bgColour__dot__afterword;
+.RM__sliderNotMoving {
+    .bgColour__dot__portal {
+        background-color: @bgColour__dot__portal;
+    }
+    .bgColour__dot__observation {
+        background-color: @bgColour__dot__observation;
+    }
+    .bgColour__dot__backstory {
+        background-color: @bgColour__dot__backstory;
+    }
+    .bgColour__dot__reference {
+        background-color: @bgColour__dot__reference;
+    }
+    .bgColour__dot__pun {
+        background-color: @bgColour__dot__pun;
+    }
+    .bgColour__dot__narrative {
+        background-color: @bgColour__dot__narrative;
+    }
+    .bgColour__dot__songwriting {
+        background-color: @bgColour__dot__songwriting;
+    }
+    .bgColour__dot__afterword {
+        background-color: @bgColour__dot__afterword;
+    }
 }

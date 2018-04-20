@@ -6,6 +6,7 @@
     // Increase width first, then fade in.
     transition:
         width @animationDuration__default,
+        background-color @animationDuration__default,
         opacity @animationDuration__default @animationDuration__fast;
 }
 
@@ -29,38 +30,40 @@
     }
 }
 
-// TODO: Disable colouring when selected.
-
+// Styling if at least one sequence dot is selected.
 .RM__narrative
-    .Dot__narrative,
+    .styleIf__sequenceDot__narrative,
 .RM__backstory
-    .Dot__backstory,
+    .styleIf__sequenceDot__backstory,
 .RM__observation
-    .Dot__observation,
+    .styleIf__sequenceDot__observation,
 .RM__pun
-    .Dot__pun,
+    .styleIf__sequenceDot__pun,
 .RM__reference
-    .Dot__reference,
+    .styleIf__sequenceDot__reference,
 .RM__portal
-    .Dot__portal,
+    .styleIf__sequenceDot__portal,
 .RM__songwriting
-    .Dot__songwriting,
+    .styleIf__sequenceDot__songwriting,
 .RM__afterword
-    .Dot__afterword {
+    .styleIf__sequenceDot__afterword {
 
-    opacity: 1;
-
-    // FIXME: This animation is janky, for some reason.
-    // Fade out first, then reduce width.
-    // transition:
-    //     width @animationDuration__default @animationDuration__fast,
-    //     opacity @animationDuration__default;
-
+    // Sequence dots show at all.
+    &.SequenceDot {
+        opacity: 1;
+    }
     &.SequenceDot__annotationCard {
         width: @length__annotationDot;
     }
-
     &.SequenceDot__textAnchor {
         width: @length__lyricAnchorDot;
+    }
+
+    // Anchors show as more than text.
+    &.Anchor__selectable.Anchor__styleOnlyWithSequenceDot {
+        cursor: pointer;
+    }
+    .AnchorUnderline__styleOnlyWithSequenceDot {
+        opacity: 1;
     }
 }

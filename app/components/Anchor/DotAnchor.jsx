@@ -13,12 +13,12 @@ const textAnchorPropTypes = {
     isSelected: PropTypes.bool,
     inAnnotation: PropTypes.bool,
     inStanza: PropTypes.bool,
-    dotKeys: PropTypes.object.isRequired
+    stanzaDotKeys: PropTypes.object.isRequired
 },
 
 TextAnchor = ({
 
-    dotKeys,
+    stanzaDotKeys,
     inAnnotation,
     inStanza,
 
@@ -45,7 +45,7 @@ TextAnchor = ({
 
                 // Only colour dot anchor by its key when selectable.
                 !other.isSelected &&
-                    getPrefixPrependedClassNames(dotKeys, 'DotAnchor')
+                    getPrefixPrependedClassNames(stanzaDotKeys, 'DotAnchor')
             )} />
         </Anchor>
     )

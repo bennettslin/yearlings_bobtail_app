@@ -12,16 +12,11 @@ const textAnchorPropTypes = {
         PropTypes.string,
         PropTypes.element
     ]).isRequired,
-    children: PropTypes.oneOfType([
-        PropTypes.array,
-        PropTypes.element
-    ])
 },
 
 TextAnchor = ({
 
     text,
-    children,
 
 ...other }) => {
 
@@ -41,8 +36,6 @@ TextAnchor = ({
             )}>
                 {text}
             </span>
-
-            {children}
         </Anchor>
     )
 }

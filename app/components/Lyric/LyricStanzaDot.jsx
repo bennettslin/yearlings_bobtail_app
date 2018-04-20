@@ -108,7 +108,7 @@ LyricDotStanzaView = ({
     )}>
         <DotAnchor {...other}
             inStanza
-            dotKeys={dotKeys}
+            stanzaDotKeys={dotKeys}
         />
     </div>
 )

@@ -35,7 +35,7 @@ AnnotationTitle = ({
                 inAnnotation
                 isSelected={isSelected}
                 isAccessed={isAccessed}
-                dotKeys={annotationDotKeys}
+                stanzaDotKeys={annotationDotKeys}
                 handleAnchorClick={handleTitleClick}
             />
         ) : (
