@@ -18,13 +18,13 @@ Consolidate styles for child with parent selector nesting
 
 Access (take in array, handle not last child, refactor all clients as well.)
 Admin
-Anchor
+Anchor (/)
 Annotation (Still largely undone.)
 Audio (Waiting on button icons.)
 Button
 Carousel (Waiting on carousel rework to finalise. Revert dots when done.)
-Dot
-Dots
+Dot (Waiting on button.)
+Dots (Revisit with Button.)
 DynamicSvg
 Icon
 Live
@@ -49,14 +49,14 @@ Popups
     TitlePopup
     WikiPopup
 Score (/)
-ScoresTips
+ScoresTips (Move to Main.)
 Slider (Now just waiting on rework.)
 Stage (/) (Just rename stuff when picking back up again.)
 Text (Fix bugs.)
 Theatre (/) (Just rename stuff when picking back up again.)
 Tips (/)
 Title (/)
-Verse (Consolidate VerseAudio into single component.)
+Verse (Consolidate VerseAudio into single component, revisit with Button.)
 Wiki (/)
 
 AccessManager

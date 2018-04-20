@@ -7,19 +7,6 @@ module.exports = [
     },
 
     {
-        taskName: `Underline should disappear if no dot keys in lyric text anchor.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Underline should disappear if no dot keys in lyric text anchor.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-
-    {
         taskName: `Dragging on slider initially drags times text?`,
         workedHours: 0,
         neededHours: 1

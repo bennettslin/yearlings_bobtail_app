@@ -204,7 +204,7 @@ class RootManager extends Component {
                     deviceClassName,
                     isDesktop ?
                         'RM__desktop' : 'RM__mobile',
-                    { '_mobileNotPhone_': isTabletOrMini },
+                    { 'RM__mobileNotPhone': isTabletOrMini },
 
                     selectedAccessIndex ? 'RM__accessOn' : 'RM__accessOff',
                     showOverlay ? 'RM__overlayShown' : 'RM__overlayHidden',
@@ -247,9 +247,6 @@ class RootManager extends Component {
                           !isVerseBarAbove && !isVerseBarBelow,
                       'RM__verseBarAbove': isVerseBarAbove,
                       'RM__verseBarBelow': isVerseBarBelow },
-
-                    // TODO: Eventually remove this one.
-                    selectedDotKeys,
 
                     getPrefixPrependedClassNames(selectedDotKeys, 'RM')
                 )}
