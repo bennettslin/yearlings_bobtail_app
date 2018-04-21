@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Button from '../Button/Button'
+import Button2 from '../Button/Button2'
 import { DOTS_SECTION_EXPAND_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
@@ -27,13 +27,12 @@ DotsSlideToggle = ({
 
 }) => (
     <div className="DotsSlideToggle">
-        <Button
-            isLarge
-            accessKeysShown
-            buttonName="DotsSlideToggle"
+        <Button2
+            isLargeSize
+            buttonName="dotsSlide"
+            temporaryText={selectedDotsIndex}
             accessKey={DOTS_SECTION_EXPAND_KEY}
-            iconText={selectedDotsIndex}
-            handleClick={handleDotsSectionToggle}
+            handleButtonClick={handleDotsSectionToggle}
         />
     </div>
 )

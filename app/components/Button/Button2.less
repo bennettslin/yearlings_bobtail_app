@@ -1,10 +1,19 @@
 .Button2 {
     position: relative;
+
+    transition:
+    background-color @animationDuration__default,
+    transform @animationDuration__instant;
 }
 
 .Button2__defaultSize {
     width: @js__length__icon;
     height: @js__length__icon;
+}
+
+.Button2__smallSize {
+    width: @length__iconSmall;
+    height: @length__iconSmall;
 }
 
 .Button2__largeSize {
@@ -33,10 +42,6 @@
 .Button2__enabled {
     cursor: pointer;
 
-    transition:
-        background-color @animationDuration__default,
-        transform @animationDuration__instant;
-
     &:hover {
         animation: bounceHover @animationDuration__default;
     }
@@ -44,10 +49,4 @@
     &:active {
         transform: scale(0.9);
     }
-}
-
-.AccessIcon__inButton {
-    position: absolute;
-    bottom: 0;
-    right: 0;
 }

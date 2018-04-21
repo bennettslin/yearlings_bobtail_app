@@ -11,7 +11,7 @@ const propTypes = {
     // From parent.
     showDisabled: PropTypes.bool,
     temporaryName: PropTypes.string,
-    temporaryText: PropTypes.string
+    temporaryText: PropTypes.any
 }
 
 const ButtonIcon = ({

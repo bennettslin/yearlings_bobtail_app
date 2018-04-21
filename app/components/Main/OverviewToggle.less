@@ -1,6 +1,6 @@
 @margin__overview: 5px;
 
-.OverviewToggle {
+.Button2__overviewSize {
 
     // .RM__desktop
     // &,
@@ -15,6 +15,14 @@
     //     // Give room to carousel horizontal scrollbar.
     //     margin-bottom: @margin__scrollbar;
     // }
+
+    width: 100%;
+    height: @height__overviewToggle;
+
+    .RM__laptop
+    & {
+        height: @height__overviewToggle__laptop;
+    }
 
     .RM__tablet
     & {
@@ -35,14 +43,9 @@
 .OverviewToggle {
     position: relative;
 
-    width: 100%;
-    height: @height__overviewToggle;
+    // width: 100%;
+    // height: @height__overviewToggle;
 
     // Ensure toggle button is above its popup container and the carousel.
     z-index: @zIndex__centreFieldChild;
-
-    .RM__laptop
-    & {
-        height: @height__overviewToggle__laptop;
-    }
 }

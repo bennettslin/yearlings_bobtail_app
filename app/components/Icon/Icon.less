@@ -21,62 +21,12 @@
     & {
         transition: width @animationDuration__default;
     }
-
-    .DotsSlideSelects
-    &,
-    .VerseAudioButton-block
-    & {
-        // Override default.
-        overflow: visible;
-    }
-
-    .Button.Button__enabled
-    & {
-        transition: background-color @animationDuration__default,
-        transform @animationDuration__instant;
-    }
-
-    .Button.Button__enabled:hover
-    & {
-        // Animate container itself, because its overflow is hidden.
-        animation: bounceHover @animationDuration__default;
-    }
-
-    .Button.Button__enabled:active
-    & {
-        transform: scale(0.9);
-    }
 }
 
 .icon-canvas {
     border-radius: 50%;
     background-color: @bgColour__audioDisabled;
     box-sizing: border-box;
-
-    .Button__carouselSelect
-    & {
-        background-color: #d84;
-    }
-
-    .Button__carouselNavToggle
-    & {
-        background-color: #dfe;
-    }
-
-    .custom-shape
-    & {
-        border-radius: 0;
-    }
-
-    .DotsSlideToggle
-    & {
-        background-color: purple;
-    }
-
-    .LyricToggle
-    & {
-        background-color: orange;
-    }
 
     .Button__nav
     & {
@@ -86,16 +36,6 @@
     .Button__nav.selected
     & {
         background-color: orange;
-    }
-
-    .OverviewToggle
-    & {
-        background-color: #d84;
-    }
-
-    .Button__title
-    & {
-        background-color: #d88;
     }
 
     .PopupButton
@@ -111,11 +51,6 @@
     .PopupButton__side
     & {
         background-color: #dfd;
-    }
-
-    .AnchorBlock
-    & {
-        border: @border__dot solid @bgColour__underline__selectable;
     }
 }
 

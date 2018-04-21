@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button from '../Button/Button'
+import Button2 from '../Button/Button2'
 import { TITLE_TOGGLE_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
@@ -40,20 +40,17 @@ TitleToggle = ({
 
 }) => {
     return isAudioChild === isTitleInAudio && (
-        <div className={cx(
-            'TitleToggle',
-            { 'Audio__menuChild': isAudioChild }
-        )}>
-            <Button
-                isCustomSize
-                isCustomShape
-                accessKeysShown
-                buttonName="title"
-                accessKey={TITLE_TOGGLE_KEY}
-                handleClick={handleTitleToggle}
-                iconText={selectedTitleIndex}
-            />
-        </div>
+        <Button2
+            buttonName="title"
+            className={cx(
+                'TitleToggle',
+                { 'Audio__menuChild': isAudioChild }
+            )}
+            isCustomSize
+            accessKey={TITLE_TOGGLE_KEY}
+            temporaryText={selectedTitleIndex}
+            handleButtonClick={handleTitleToggle}
+        />
     )
 }
 

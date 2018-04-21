@@ -7,9 +7,6 @@ import cx from 'classnames'
 
 import Button2 from '../Button/Button2'
 
-// TODO: Inherit from this class.
-import ButtonIcon from '../Button/ButtonIcon'
-
 import { SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY } from '../../constants/access'
 import { TIPS_OPTIONS } from '../../constants/options'
@@ -96,28 +93,19 @@ ScoresTips = ({
                 <Button2
                     isLargeSize
                     buttonName="scores"
+                    temporaryText={selectedScoreIndex}
                     accessKey={SCORE_TOGGLE_KEY}
                     isDisabled={isScoreDisabled}
                     handleButtonClick={handleScoreToggle}
-                >
-                    <ButtonIcon
-                        showDisabled={isScoreDisabled}
-                        temporaryName="scores"
-                        temporaryText={selectedScoreIndex}
-                    />
-                </Button2>
+                />
             }
             <Button2
                 isLargeSize
                 buttonName="tips"
+                temporaryText={TIPS_OPTIONS[selectedTipsIndex]}
                 accessKey={TIPS_TOGGLE_KEY}
                 handleButtonClick={handleTipsToggle}
-            >
-                <ButtonIcon
-                    temporaryName="tips"
-                    temporaryText={TIPS_OPTIONS[selectedTipsIndex]}
-                />
-            </Button2>
+           />
         </div>
     )
 }

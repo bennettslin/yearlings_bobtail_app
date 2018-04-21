@@ -1,24 +1,31 @@
 // General button component.
-/* eslint-disable */
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+// TODO: Inherit from this class.
+import ButtonIcon from '../Button/ButtonIcon'
+import AccessIcon from '../AccessIcon/AccessIcon'
+
 class Button2 extends Component {
 
     static defaultProps = {
-        showAccessKeyIfAccessed: true
+        showAccessIconIfAccessed: true
     }
 
     static propTypes = {
         buttonName: PropTypes.string.isRequired,
+        className: PropTypes.any,
+        isCustomSize: PropTypes.bool,
+        isSmallSize: PropTypes.bool,
         isLargeSize: PropTypes.bool,
         isDisabled: PropTypes.bool,
-        showAccessKeyIfAccessed: PropTypes.bool.isRequired,
+        showAccessIconIfAccessed: PropTypes.bool.isRequired,
         accessKey: PropTypes.string,
-        children: PropTypes.any,
-        handleButtonClick: PropTypes.func.isRequired
+        temporaryText: PropTypes.any,
+        handleButtonClick: PropTypes.func.isRequired,
+        children: PropTypes.any
     }
 
     constructor(props) {
@@ -38,13 +45,19 @@ class Button2 extends Component {
     render() {
 
         const { buttonName,
-                isDisabled,
+                className,
+                isCustomSize,
+                isSmallSize,
                 isLargeSize,
-                showAccessKeyIfAccessed,
+                isDisabled,
+                showAccessIconIfAccessed,
+                temporaryText,
                 accessKey,
                 children } = this.props,
 
-            isDefaultSize = !isLargeSize
+            isDefaultSize = !isLargeSize && !isSmallSize && !isCustomSize,
+
+            showIfAccessed = showAccessIconIfAccessed && !isDisabled
 
         return (
             <div
@@ -52,25 +65,33 @@ class Button2 extends Component {
                     'Button2',
                     `Button2__${buttonName}`,
 
+                    isCustomSize && `Button2__${buttonName}Size`,
+
                     { 'Button2__enabled': !isDisabled,
                       'Button2__defaultSize': isDefaultSize,
-                      'Button2__largeSize': isLargeSize }
+                      'Button2__smallSize': isSmallSize,
+                      'Button2__largeSize': isLargeSize },
+
+                    className
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}
             >
 
+                <ButtonIcon
+                    temporaryName={buttonName}
+                    temporaryText={temporaryText}
+                    showDisabled={isDisabled}
+                />
+
                 {children}
 
                 {accessKey && (
-                    <div className={cx(
-                        'AccessIcon',
-                        'AccessIcon__inButton',
-                        showAccessKeyIfAccessed && !isDisabled &&
-                            'AccessIcon__showIfAccessed'
-                    )}>
-                        {accessKey}
-                    </div>
+                    <AccessIcon
+                        inButton
+                        showIfAccessed={showIfAccessed}
+                        accessKey={accessKey}
+                    />
                 )}
 
             </div>

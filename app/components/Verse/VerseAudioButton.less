@@ -5,13 +5,13 @@
 @verse-height: 26px;
 @VerseAudioButton-block-extra: 3px;
 
-@VerseAudioButton-block-width: @verse-height + @VerseAudioButton-block-extra * 2;
+@length__iconSmall: @verse-height + @VerseAudioButton-block-extra * 2;
 
 .VerseAudioButton-block {
     position: absolute;
     left: 0;
     height: 100%;
-    width: @VerseAudioButton-block-width;
+    width: @length__iconSmall;
 
     top: 50%;
     transform: translateY(-50%);
@@ -20,7 +20,7 @@
 
     .Verse__interactivated
     & {
-        left: -@VerseAudioButton-block-width * 0.5;
+        left: -@length__iconSmall * 0.5;
         z-index: @zIndex__verseAudioButton;
 
         .icon-canvas {
@@ -38,25 +38,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.Button__verseAudio {
-    position: relative;
-    // font-size: 0.1em;
-    opacity: 0;
-    // z-index: @zIndex__verseAudioButton;
-    transition: opacity @animationDuration__default;
+    .Button2 {
+        position: relative;
+        // font-size: 0.1em;
+        opacity: 0;
+        // z-index: @zIndex__verseAudioButton;
+        transition: opacity @animationDuration__default;
 
-    .Verse__interactivated
-    & {
-        opacity: 1;
-        // font-size: 1em;
-        animation: fontSnapback 0.16s;
-    }
+        .Verse__interactivated
+        & {
+            opacity: 1;
+            // font-size: 1em;
+            animation: fontSnapback 0.16s;
+        }
 
-    &, .icon-canvas {
-        width: @VerseAudioButton-block-width;
-        height: @VerseAudioButton-block-width;
+        &, .icon-canvas {
+            width: @length__iconSmall;
+            height: @length__iconSmall;
+        }
     }
 }
 

@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-const accessIconsBlockPropTypes = {
+const accessIconsPropTypes = {
     // From parent.
     accessIconKeys: PropTypes.array.isRequired,
     accessKeysShown: PropTypes.bool,
@@ -39,6 +39,6 @@ AccessIcons = ({
     </div>
 )
 
-AccessIcons.propTypes = accessIconsBlockPropTypes
+AccessIcons.propTypes = accessIconsPropTypes
 
 export default AccessIcons

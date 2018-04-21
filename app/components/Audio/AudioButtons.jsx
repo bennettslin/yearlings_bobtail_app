@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button from '../Button/Button'
+import Button2 from '../Button/Button2'
+
 import { AUDIO_PLAY_KEY,
          AUDIO_OPTIONS_TOGGLE_KEY,
          AUDIO_PREVIOUS_SONG_KEY,
@@ -110,34 +111,35 @@ class AudioButtons extends Component {
                     'flexAlignContainer'
                 )}>
                     {/* Previous button. */}
-                    <Button
-                        accessKeysShown
-                        iconClass="audio-nav"
-                        iconText={isPrologue || isFirstSong ? '\u2302' : '\u21E4'}
+                    <Button2
+                        buttonName="audioSelect"
+                        temporaryText={
+                            isPrologue || isFirstSong ? '\u2302' : '\u21E4'
+                        }
                         accessKey={AUDIO_PREVIOUS_SONG_KEY}
-                        isEnabled={!isPrologue}
-                        handleClick={handleAudioPreviousSong}
+                        isDisabled={isPrologue}
+                        handleButtonClick={handleAudioPreviousSong}
                     />
 
                     {/* Play button. */}
-                    <Button
-                        accessKeysShown
-                        iconClass="audio-play-toggle"
-                        iconText={playButtonText}
+                    <Button2
+                        buttonName="audioPlay"
+                        isLargeSize={!isTitleInAudio}
+                        temporaryText={playButtonText}
                         accessKey={AUDIO_PLAY_KEY}
-                        isLarge={!isTitleInAudio}
-                        isEnabled={songCanPlayThrough}
-                        handleClick={handleAudioPlay}
+                        isDisabled={!songCanPlayThrough}
+                        handleButtonClick={handleAudioPlay}
                     />
 
                     {/* Next button. */}
-                    <Button
-                        accessKeysShown
-                        iconClass="audio-nav"
-                        iconText={isEpilogue || isLastSong ? '\u2302' : '\u21E5'}
+                    <Button2
+                        buttonName="audioSelect"
+                        temporaryText={
+                            isEpilogue || isLastSong ? '\u2302' : '\u21E5'
+                        }
                         accessKey={AUDIO_NEXT_SONG_KEY}
-                        isEnabled={!isEpilogue}
-                        handleClick={handleAudioNextSong}
+                        isDisabled={isEpilogue}
+                        handleButtonClick={handleAudioNextSong}
                     />
                 </div>
 
@@ -146,12 +148,11 @@ class AudioButtons extends Component {
                     'AudioButtons__child',
                     'flexAlignContainer'
                 )}>
-                    <Button
-                        accessKeysShown
-                        iconClass="audio-neutral"
-                        iconText={AUDIO_OPTIONS[selectedAudioOptionIndex]}
+                    <Button2
+                        buttonName="audioOptions"
+                        temporaryText={AUDIO_OPTIONS[selectedAudioOptionIndex]}
                         accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
-                        handleClick={handleAudioOptionsToggle}
+                        handleButtonClick={handleAudioOptionsToggle}
                     />
                 </div>
             </div>

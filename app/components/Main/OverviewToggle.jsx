@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Button from '../Button/Button'
+import Button2 from '../Button/Button2'
 import { OVERVIEW_TOGGLE_KEY } from '../../constants/access'
 import { OVERVIEW_OPTIONS } from '../../constants/options'
 
@@ -34,14 +34,13 @@ OverviewToggle = ({
 
 }) => (
     <div className="OverviewToggle">
-        <Button
+        <Button2
             isCustomSize
-            isCustomShape
-            accessKeysShown
-            isEnabled={isEnabled}
+            buttonName="overview"
+            isDisabled={!isEnabled}
             accessKey={OVERVIEW_TOGGLE_KEY}
-            iconText={OVERVIEW_OPTIONS[selectedOverviewIndex]}
-            handleClick={handleOverviewToggle}
+            temporaryText={OVERVIEW_OPTIONS[selectedOverviewIndex]}
+            handleButtonClick={handleOverviewToggle}
         />
     </div>
 )

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-import Button from '../Button/Button'
+import Button2 from '../Button/Button2'
 import { NAVIGATION_LEFT_KEY,
          NAVIGATION_RIGHT_KEY } from '../../constants/access'
 
@@ -18,19 +18,19 @@ const CarouselSelect = ({
 
 }) => (
     <div className="CarouselSelect">
-        <Button
+        <Button2
             buttonName="carouselSelect"
+            isLargeSize
+            temporaryText={'\u276e'}
             accessKey={NAVIGATION_LEFT_KEY}
-            iconText={'\u276e'}
-            isLarge
-            handleClick={handleAnnotationPrevious}
+            handleButtonClick={handleAnnotationPrevious}
         />
-        <Button
+        <Button2
             buttonName="carouselSelect"
+            isLargeSize
+            temporaryText={'\u276f'}
             accessKey={NAVIGATION_RIGHT_KEY}
-            iconText={'\u276f'}
-            isLarge
-            handleClick={handleAnnotationNext}
+            handleButtonClick={handleAnnotationNext}
         />
     </div>
 )

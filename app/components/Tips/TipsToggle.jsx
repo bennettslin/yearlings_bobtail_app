@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Button from '../Button/Button'
+import Button2 from '../Button/Button2'
 import { TIPS_TOGGLE_KEY } from '../../constants/access'
 import { TIPS_OPTIONS } from '../../constants/options'
 
@@ -30,13 +30,13 @@ TipsToggle = ({
 
 }) => (
     <div className="TipsToggle__floatClear">
-        <Button
-            isLarge
+        <Button2
+            isLargeSize
             buttonName="tips"
-            isEnabled={isEnabled}
+            isDisabled={!isEnabled}
+            temporaryText={TIPS_OPTIONS[selectedTipsIndex]}
             accessKey={TIPS_TOGGLE_KEY}
-            iconText={TIPS_OPTIONS[selectedTipsIndex]}
-            handleClick={handleTipsToggle}
+            handleButtonClick={handleTipsToggle}
         />
     </div>
 )

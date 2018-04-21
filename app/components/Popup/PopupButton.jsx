@@ -1,11 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Button from '../Button/Button'
-
-// import { CLOSE_POPUP_BUTTON,
-//          PREVIOUS_POPUP_BUTTON,
-//          NEXT_POPUP_BUTTON } from '../../constants/options'
+import Button2 from '../Button/Button2'
 
 import { NAVIGATION_LEFT_KEY,
          NAVIGATION_RIGHT_KEY,
@@ -16,7 +12,6 @@ const popupButtonPropTypes = {
     isCloseButton: PropTypes.bool,
     isPreviousButton: PropTypes.bool,
     isNextButton: PropTypes.bool,
-    // buttonName: PropTypes.string.isRequired,
     handlePopupButtonClick: PropTypes.func
 },
 
@@ -27,7 +22,6 @@ PopupButton = ({
     isPreviousButton,
     isNextButton,
     handlePopupButtonClick,
-    // buttonName,
 
 ...other }) => {
 
@@ -69,12 +63,12 @@ PopupButton = ({
             )}
         >
             {!isShadow && (
-                <Button {...other}
-                    isLarge
-                    isOverflowShown
+                <Button2 {...other}
+                    isLargeSize
+                    buttonName="popup"
                     accessKey={accessKey}
-                    iconText={tempUnicodeSymbol}
-                    handleClick={handleClick}
+                    temporaryText={tempUnicodeSymbol}
+                    handleButtonClick={handleClick}
                 />
             )}
         </div>

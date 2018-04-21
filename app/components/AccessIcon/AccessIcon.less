@@ -3,30 +3,20 @@
 .AccessIcon {
     @length__accessIcon: 20px;
 
+    position: absolute;
+
     width: @length__accessIcon;
     height: @length__accessIcon;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    transition:
+        opacity @animationDuration__default;
 
-    transition: opacity @animationDuration__default;
     opacity: 0;
 
+    // TODO: Temporary styling for now.
     border: 2px solid green;
     border-radius: 3px;
-
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
     background-color: #bfb;
-
-    .RM__accessOn
-    .accessKeysShown
-    &:not(.isHidden) {
-        opacity: 1;
-    }
 }
 
 .AccessIcon__showIfAccessed {
@@ -34,4 +24,9 @@
     & {
         opacity: 1;
     }
+}
+
+.AccessIcon__inButton {
+    bottom: 0;
+    right: 0;
 }

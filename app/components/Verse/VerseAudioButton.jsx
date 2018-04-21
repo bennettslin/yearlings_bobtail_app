@@ -6,7 +6,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Button from '../Button/Button'
+
+import Button2 from '../Button/Button2'
+
 import { getSongsNotLoguesCount } from '../../helpers/dataHelper'
 import { getVerseAudioIconText } from '../../helpers/formatHelper'
 import { getValueInBitNumber } from '../../helpers/bitHelper'
@@ -117,13 +119,12 @@ class VerseAudioButton extends Component {
         return (
             <div className="VerseAudioButton-block">
                 <div className="VerseAudioButton-child">
-                    <Button
-                        buttonName="verseAudio"
-                        isOverflowShown
-                        isEnabled={isEnabled}
-                        iconClass={isSelected ? 'audio-play-toggle' : 'audio-nav'}
-                        iconText={iconText}
-                        handleClick={this._handleAudioButtonClick}
+                    <Button2
+                        isSmallSize
+                        buttonName={isSelected ? 'audioPlay' : 'audioSelect'}
+                        isDisabled={!isEnabled}
+                        temporaryText={iconText}
+                        handleButtonClick={this._handleAudioButtonClick}
                     />
                 </div>
             </div>
