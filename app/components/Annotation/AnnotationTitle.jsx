@@ -28,7 +28,8 @@ AnnotationTitle = ({
 }) => (
     <div className={cx(
         'AnnotationTitle',
-        'fontSize__title'
+        'fontSize__title',
+        'flexCentreContainer'
     )}>
         {annotationTitle === IS_DOT_STANZA ? (
             <DotAnchor

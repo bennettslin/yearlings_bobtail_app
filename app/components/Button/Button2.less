@@ -1,0 +1,47 @@
+.Button2 {
+    position: relative;
+}
+
+.Button2__defaultSize {
+    width: @js__length__icon;
+    height: @js__length__icon;
+}
+
+.Button2__largeSize {
+    width: @length__iconLarge;
+    height: @length__iconLarge;
+
+    .RM__tablet
+    & {
+        width: @length__iconLarge__tablet;
+        height: @length__iconLarge__tablet;
+    }
+
+    .RM__mini
+    & {
+        width: @length__iconLarge__mini;
+        height: @length__iconLarge__mini;
+    }
+
+    .RM__phone
+    & {
+        width: @js__length__icon;
+        height: @js__length__icon;
+    }
+}
+
+.Button2__enabled {
+    cursor: pointer;
+
+    transition:
+        background-color @animationDuration__default,
+        transform @animationDuration__instant;
+
+    &:hover {
+        animation: bounceHover @animationDuration__default;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+}

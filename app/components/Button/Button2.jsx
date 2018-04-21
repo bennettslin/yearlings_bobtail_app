@@ -5,51 +5,70 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Icon2 from '../Icon/Icon2'
-
 class Button2 extends Component {
 
+    static defaultProps = {
+        showAccessKeyIfAccessed: true
+    }
+
     static propTypes = {
+        buttonName: PropTypes.string.isRequired,
+        isLargeSize: PropTypes.bool,
         isDisabled: PropTypes.bool,
-        backgroundKey: PropTypes.string,
-        foregroundKey: PropTypes.string,
+        showAccessKeyIfAccessed: PropTypes.bool.isRequired,
         accessKey: PropTypes.string,
-        handleClick: PropTypes.func.isRequired
+        children: PropTypes.any,
+        handleButtonClick: PropTypes.func.isRequired
+    }
+
+    constructor(props) {
+        super(props)
+
+        this._handleClick = this._handleClick.bind(this)
     }
 
     _handleClick(e) {
         const { isDisabled } = this.props
 
         if (!isDisabled) {
-            this.props.handleClick(e)
+            this.props.handleButtonClick(e)
         }
     }
 
     render() {
 
-        const { backgroundKey,
-                foregroundKey,
-                accessKey } = this.props
+        const { buttonName,
+                isDisabled,
+                isLargeSize,
+                accessKey,
+                children } = this.props,
+
+            isDefaultSize = !isLargeSize
 
         return (
             <div
                 className={cx(
-                    'Button2'
+                    'Button2',
+                    `Button2__${buttonName}`,
+
+                    { 'Button2__enabled': !isDisabled,
+                      'Button2__defaultSize': isDefaultSize,
+                      'Button2__largeSize': isLargeSize }
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}
             >
-            {backgroundKey && (
-                <Icon2 />
-            )}
 
-            {foregroundKey && (
-                <Icon2 />
-            )}
+                {children}
 
-            {accessKey && (
-                <Icon2 />
-            )}
+                {accessKey && (
+                    <div className={cx(
+                        'AccessIcon',
+                        { 'isHidden': isDisabled }
+                    )}>
+                        {accessKey}
+                    </div>
+                )}
 
             </div>
         )

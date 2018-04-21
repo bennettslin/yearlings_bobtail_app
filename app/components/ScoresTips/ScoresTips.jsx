@@ -5,7 +5,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button from '../Button/Button'
+import Button2 from '../Button/Button2'
+
+// TODO: Inherit from this class.
+import ButtonIcon from '../Button/ButtonIcon'
+
 import { SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY } from '../../constants/access'
 import { TIPS_OPTIONS } from '../../constants/options'
@@ -77,7 +81,8 @@ ScoresTips = ({
             // ...in menu.
             inMenu,
 
-        showScoreToggleButton = !getIsPhone(deviceIndex)
+        showScoreToggleButton = !getIsPhone(deviceIndex),
+        isScoreDisabled = !isScoreLoaded
 
     return shouldRender && (
         <div className={cx(
@@ -88,24 +93,31 @@ ScoresTips = ({
               'ScoresTips__inLeftShelf': inLeftShelf }
         )}>
             {showScoreToggleButton &&
-                <Button
-                    isLarge
-                    accessKeysShown
+                <Button2
+                    isLargeSize
                     buttonName="scores"
                     accessKey={SCORE_TOGGLE_KEY}
-                    iconText={selectedScoreIndex}
-                    isEnabled={isScoreLoaded}
-                    handleClick={handleScoreToggle}
-                />
+                    isDisabled={isScoreDisabled}
+                    handleButtonClick={handleScoreToggle}
+                >
+                    <ButtonIcon
+                        showDisabled={isScoreDisabled}
+                        temporaryName="scores"
+                        temporaryText={selectedScoreIndex}
+                    />
+                </Button2>
             }
-            <Button
-                isLarge
-                accessKeysShown
+            <Button2
+                isLargeSize
                 buttonName="tips"
                 accessKey={TIPS_TOGGLE_KEY}
-                iconText={TIPS_OPTIONS[selectedTipsIndex]}
-                handleClick={handleTipsToggle}
-            />
+                handleButtonClick={handleTipsToggle}
+            >
+                <ButtonIcon
+                    temporaryName="tips"
+                    temporaryText={TIPS_OPTIONS[selectedTipsIndex]}
+                />
+            </Button2>
         </div>
     )
 }

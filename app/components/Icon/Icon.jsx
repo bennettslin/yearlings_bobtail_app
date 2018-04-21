@@ -17,6 +17,8 @@ const Icon = ({
 }) => {
     return (
         <div className={cx(
+            'Icon',
+            'absoluteFullContainer',
             'icon-canvas-block',
             dotKey
         )}>
