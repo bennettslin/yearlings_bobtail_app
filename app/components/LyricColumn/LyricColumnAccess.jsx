@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 import { convertTrueFalseKeysToBitNumber } from '../../helpers/bitHelper'
 
-import AccessIcons from '../access/AccessIcons'
+import AccessIcons from '../AccessIcon/AccessIcons'
 import { NAVIGATION_ENTER_KEY,
          NAVIGATION_LEFT_KEY,
          NAVIGATION_RIGHT_KEY,

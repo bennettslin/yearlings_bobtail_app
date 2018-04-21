@@ -40,6 +40,7 @@ class Button2 extends Component {
         const { buttonName,
                 isDisabled,
                 isLargeSize,
+                showAccessKeyIfAccessed,
                 accessKey,
                 children } = this.props,
 
@@ -64,7 +65,9 @@ class Button2 extends Component {
                 {accessKey && (
                     <div className={cx(
                         'AccessIcon',
-                        { 'isHidden': isDisabled }
+                        'AccessIcon__inButton',
+                        showAccessKeyIfAccessed && !isDisabled &&
+                            'AccessIcon__showIfAccessed'
                     )}>
                         {accessKey}
                     </div>

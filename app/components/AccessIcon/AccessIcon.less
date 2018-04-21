@@ -1,0 +1,37 @@
+@import "./AccessIcons.less";
+
+.AccessIcon {
+    @length__accessIcon: 20px;
+
+    width: @length__accessIcon;
+    height: @length__accessIcon;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: opacity @animationDuration__default;
+    opacity: 0;
+
+    border: 2px solid green;
+    border-radius: 3px;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    background-color: #bfb;
+
+    .RM__accessOn
+    .accessKeysShown
+    &:not(.isHidden) {
+        opacity: 1;
+    }
+}
+
+.AccessIcon__showIfAccessed {
+    .RM__accessOn
+    & {
+        opacity: 1;
+    }
+}
