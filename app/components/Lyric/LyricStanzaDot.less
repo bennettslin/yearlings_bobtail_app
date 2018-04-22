@@ -1,5 +1,4 @@
 .LyricStanzaDot {
-
     flex-direction: column-reverse;
 
     padding-bottom: 5px;
@@ -11,10 +10,6 @@
         margin-left: 0;
     }
 
-    &.LyricStanzaDot__lastStanza {
-        max-height: 0;
-    }
-
     opacity: 0;
     overflow: hidden;
 
@@ -24,6 +19,10 @@
         max-height @animationDuration__default,
         margin-top @animationDuration__default,
         margin-left @animationDuration__default;
+}
+
+.LyricStanzaDot__lastStanza {
+    max-height: 0;
 }
 
 .RM__narrative

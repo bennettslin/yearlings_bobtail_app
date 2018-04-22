@@ -99,7 +99,7 @@ const annotationSectionViewPropTypes = {
     annotationTitle: PropTypes.string.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
 
-    // (Absent in popup annotation.)
+    // Absent in popup annotation.
     handleTitleClick: PropTypes.func,
     handleContainerClick: PropTypes.func
 },

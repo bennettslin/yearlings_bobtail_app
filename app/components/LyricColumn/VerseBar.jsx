@@ -69,10 +69,12 @@ class VerseBar extends Component {
                     'VerseBar',
                     'flexCentreContainer',
 
-                    isAbove ? 'VerseBar__above' : 'VerseBar__below'
+                    isAbove ?
+                        'VerseBar__above' :
+                        'VerseBar__below'
                 )}
                 onWheel={handleVerseBarWheel}
-                >
+            >
                 <div className={cx(
                     'VerseBar__child',
                     'fontSize__verse',
