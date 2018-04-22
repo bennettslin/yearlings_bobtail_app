@@ -1,6 +1,6 @@
 /**
  * TODO: Placeholder for icon that will eventually be an actual svg. For now,
- * only styling is width, height, and background colour.
+ * only styling is background colour.
  */
 
 import React from 'react'

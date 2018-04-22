@@ -21,17 +21,7 @@ Admin
 Anchor (/)
 Annotation (Waiting on carousel rework.)
 Audio (Waiting on button icons.)
-Button
-
-    Client handles how it's positioned in parent container
-
-    handles its own hover and active animation
-    Has default size that can be overridden by props
-    Child icons inherit default size of parent
-    Handles positioning of its child icons (get rid of position: inherit weirdness)
-    Renders access icon by taking in keyChar as string
-    Background and foreground icons are passed in directly as children components.
-
+Button (/)
 Carousel (Waiting on carousel rework to finalise. Revert dots when done.)
 Dot (Waiting on button.)
 Dots (Revisit with Button.)
