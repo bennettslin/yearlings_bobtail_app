@@ -47,7 +47,7 @@ Main
     LeftShelf (do with overviewToggle, dotsToggle, and scoresTips)
     DotsSlideToggle
     OverviewToggle
-Nav (Need to consider last title margin, panels, and consolidate responsive)
+Nav (Need to consider last title margin, panels, and consolidate responsive, nav button sizing and panels.)
 Overview (Waiting on overview in phone and heightless.)
 Players (/)
 Popup (Waiting on popup rework to finalise.)
