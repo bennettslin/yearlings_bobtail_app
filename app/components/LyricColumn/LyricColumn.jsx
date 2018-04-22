@@ -203,6 +203,11 @@ LyricColumnView = ({
             ref={myRef}
             onTransitionEnd={handleTransition}
         >
+            <Lyric {...other}
+                isTransitioningHeight={isTransitioningHeight}
+                completeHeightTransition={completeHeightTransition}
+            />
+
             <VerseBar {...verseBarProps}
                 isAbove
             />
@@ -214,11 +219,6 @@ LyricColumnView = ({
 
             <LyricToggleExpand
                 handleLyricSectionExpand={handleLyricSectionExpand}
-            />
-
-            <Lyric {...other}
-                isTransitioningHeight={isTransitioningHeight}
-                completeHeightTransition={completeHeightTransition}
             />
 
             <LyricColumnAccess />

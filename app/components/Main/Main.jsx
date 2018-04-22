@@ -114,11 +114,11 @@ Main = ({
 
             <TipsPopup {...tipsPopupHandlers} />
 
+            <Nav {...navSectionHandlers} />
+
             <CarouselToggle
                 handleCarouselNavToggle={handleCarouselNavToggle}
             />
-
-            <Nav {...navSectionHandlers} />
         </div>
     )
 }
