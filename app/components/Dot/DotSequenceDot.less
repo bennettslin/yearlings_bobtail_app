@@ -3,11 +3,14 @@
     height: 0;
     opacity: 0;
 
-    // Increase width first, then fade in.
-    transition:
-        width @animationDuration__default,
-        background-color @animationDuration__default,
-        opacity @animationDuration__default @animationDuration__fast;
+    // Specify to override simple background colour transition.
+    &.bgColour__dot {
+        // Increase width first, then fade in.
+        transition:
+            width @animationDuration__default,
+            background-color @animationDuration__default,
+            opacity @animationDuration__default @animationDuration__fast;
+    }
 }
 
 .SequenceDot__annotationCard {
@@ -17,7 +20,7 @@
 .SequenceDot__textAnchor {
     height: @length__lyricAnchorDot;
 
-    // TODO: Eventually put this in Anchor styling.
+    // TODO: Eventually put this in Anchor styling?
 
     .Anchor__selectable:hover
     & {
