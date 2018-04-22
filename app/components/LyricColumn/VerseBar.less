@@ -20,12 +20,19 @@
 
 .VerseBar {
     position: absolute;
-    width: 100%;
-
     left: 50%;
+
     transform: translateX(-50%) scale(0);
 
     max-width: ~"calc(100% - @{offsetX__verseBar} * 2)";
+
+    margin: 0 5px;
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: background-color @animationDuration__default;
 
     .RM__tablet
     & {
@@ -41,45 +48,6 @@
     & {
         max-width: ~"calc(100% - @{offsetX__verseBar__phone} * 2)";
     }
-}
-
-.VerseBar__above {
-    top: @offsetY__verseBar__hidden;
-    margin-top: @marginY__verseBar;
-    transition:
-        top @animationDuration__fast,
-        transform @animationDuration__fast;
-
-    .RM__verseBarAbove
-    & {
-        top: 0;
-        transform: translateX(-50%) scale(1);
-    }
-}
-
-.VerseBar__below {
-    bottom: @offsetY__verseBar__hidden;
-    margin-bottom: @marginY__verseBar;
-    transition:
-        bottom @animationDuration__fast,
-        transform @animationDuration__fast;
-
-    .RM__verseBarBelow
-    & {
-        bottom: 0;
-        transform: translateX(-50%) scale(1);
-    }
-}
-
-.VerseBar__child {
-    max-width: 100%;
-
-    margin: 0 5px;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-
-    transition: background-color @animationDuration__default;
 
     .RM__sliderNotMoving.RM__isPlaying
     & {
@@ -97,10 +65,36 @@
     }
 }
 
-.VerseBar__child__above {
+.VerseBar__above {
+    top: @offsetY__verseBar__hidden;
+    margin-top: @marginY__verseBar;
     box-shadow: @boxShadow__verseBar__above;
+
+    transition:
+        top @animationDuration__fast,
+        transform @animationDuration__fast,
+        background-color @animationDuration__default;
+
+    .RM__verseBarAbove
+    & {
+        top: 0;
+        transform: translateX(-50%) scale(1);
+    }
 }
 
-.VerseBar__child__below {
+.VerseBar__below {
+    bottom: @offsetY__verseBar__hidden;
+    margin-bottom: @marginY__verseBar;
     box-shadow: @boxShadow__verseBar__below;
+
+    transition:
+        bottom @animationDuration__fast,
+        transform @animationDuration__fast,
+        background-color @animationDuration__default;
+
+    .RM__verseBarBelow
+    & {
+        bottom: 0;
+        transform: translateX(-50%) scale(1);
+    }
 }

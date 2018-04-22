@@ -33,8 +33,8 @@ Live
     Menu (/)
     OverviewLogue
     PopupOverlaid
-Lyric (Just waiting on taking care of dots for LyricStanzaDot.)
-LyricColumn (Waiting on access.)
+Lyric (/)
+LyricColumn (/)
 Main
     LeftShelf (do with overviewToggle, dotsToggle, and scoresTips)
     DotsSlideToggle
