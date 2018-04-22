@@ -4,36 +4,49 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import AccessIcon from './AccessIcon';
+
 const accessIconsPropTypes = {
     // From parent.
-    accessIconKeys: PropTypes.array.isRequired,
-    accessKeysShown: PropTypes.bool,
-    className: PropTypes.string
+    accessIconsName: PropTypes.string,
+    inLyric: PropTypes.bool,
+    inSlider: PropTypes.bool,
+    accessKeys: PropTypes.arrayOf(
+        PropTypes.shape({
+            accessKey: PropTypes.string.isRequired,
+            showIfAccessed: PropTypes.bool.isRequired,
+            beginsCluster: PropTypes.bool
+        })
+    ).isRequired
 },
 
 AccessIcons = ({
 
-    accessIconKeys,
-    accessKeysShown,
-    className
+    accessIconsName,
+    inLyric,
+    inSlider,
+    accessKeys
 
 }) => (
     <div className={cx(
         'AccessIcons',
-
-        // eslint-disable-next-line object-shorthand
-        { 'accessKeysShown': accessKeysShown },
-        className
+        inLyric && 'AccessIcons__inLyric',
+        inSlider && 'AccessIcons__inSlider',
+        accessIconsName && `AccessIcons__${accessIconsName}`
     )}>
-        {accessIconKeys.map(accessIconKey => {
+        {accessKeys.map(accessKeyObject => {
+
+            const { accessKey,
+                    showIfAccessed,
+                    beginsCluster } = accessKeyObject
 
             return (
-                <div
-                    key={accessIconKey}
-                    className="AccessIcon"
-                >
-                    {accessIconKey}
-                </div>
+                <AccessIcon
+                    key={accessKey}
+                    accessKey={accessKey}
+                    showIfAccessed={showIfAccessed}
+                    beginsCluster={beginsCluster}
+                />
             )
         })}
     </div>

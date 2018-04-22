@@ -1,18 +1,13 @@
-// TODO: Redo with access icons refactor.
+@margin__audioBanner__accessIcons: 3px;
 
-.Slider {
+.AccessIcons__inSlider {
+    bottom: @margin__audioBanner__accessIcons;
+}
 
-    @margin__audioBanner__accessIcons: 3px;
+.AccessIcons__sliderRewindForward {
+    left: @margin__audioBanner__accessIcons;
+}
 
-    .AccessIcons {
-        bottom: @margin__audioBanner__accessIcons;
-
-        &.rewindForward {
-            left: @margin__audioBanner__accessIcons;
-        }
-
-        &.enter {
-            right: @margin__audioBanner__accessIcons;
-        }
-    }
+.AccessIcons__sliderEnter {
+    right: @margin__audioBanner__accessIcons;
 }

@@ -70,44 +70,51 @@ const LyricColumnAccess = ({
         ),
 
         // Must not have interactivated verse.
-        showEnter = showLeftRight && interactivatedVerseIndex < 0
+        showEnter = showLeftRight && interactivatedVerseIndex < 0,
 
-    return (
-        <div className="LyricColumnAccess-row">
-            <div className="access-icons-group">
-                <AccessIcons
-                    className="left-right"
-                    accessIconKeys={[
-                        NAVIGATION_LEFT_KEY,
-                        NAVIGATION_RIGHT_KEY
-                    ]}
-                    accessKeysShown={showLeftRight}
-                />
+        showUpDown = Boolean(
+            !selectedDotsIndex &&
+            !selectedAnnotationIndex
+        )
 
-                <AccessIcons
-                    className="enter"
-                    accessIconKeys={[
-                        NAVIGATION_ENTER_KEY
-                    ]}
-                    accessKeysShown={showEnter}
-                />
-            </div>
-
-            <div className="access-icons-group">
-                <AccessIcons
-                    className="up-down"
-                    accessIconKeys={[
-                        NAVIGATION_UP_KEY,
-                        NAVIGATION_DOWN_KEY
-                    ]}
-                    accessKeysShown={Boolean(
-                        !selectedDotsIndex &&
-                        !selectedAnnotationIndex
-                    )}
-                />
-            </div>
-        </div>
-    )
+    return [(
+        <AccessIcons
+            key="leftRightEnter"
+            accessIconsName="lyricLeftRightEnter"
+            inLyric
+            accessKeys={[
+                {
+                    accessKey: NAVIGATION_LEFT_KEY,
+                    showIfAccessed: showLeftRight
+                },
+                {
+                    accessKey: NAVIGATION_RIGHT_KEY,
+                    showIfAccessed: showLeftRight
+                },
+                {
+                    accessKey: NAVIGATION_ENTER_KEY,
+                    showIfAccessed: showEnter,
+                    beginsCluster: true
+                }
+            ]}
+        />
+    ), (
+        <AccessIcons
+            key="upDown"
+            accessIconsName="lyricUpDown"
+            inLyric
+            accessKeys={[
+                {
+                    accessKey: NAVIGATION_UP_KEY,
+                    showIfAccessed: showUpDown
+                },
+                {
+                    accessKey: NAVIGATION_DOWN_KEY,
+                    showIfAccessed: showUpDown
+                }
+            ]}
+        />
+    )]
 }
 
 LyricColumnAccess.propTypes = lyricAccessPropTypes

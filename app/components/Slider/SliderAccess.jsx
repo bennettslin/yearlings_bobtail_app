@@ -37,21 +37,30 @@ const SliderAccess = ({
     return [(
         <AccessIcons
             key="rewindForward"
-            className="rewindForward"
-            accessIconKeys={[
-                AUDIO_REWIND_KEY,
-                AUDIO_FAST_FORWARD_KEY
+            accessIconsName="sliderRewindForward"
+            inSlider
+            accessKeys={[
+                {
+                    accessKey: AUDIO_REWIND_KEY,
+                    showIfAccessed: !isLogue
+                },
+                {
+                    accessKey: AUDIO_FAST_FORWARD_KEY,
+                    showIfAccessed: !isLogue
+                }
             ]}
-            accessKeysShown={!isLogue}
         />
     ), (
         <AccessIcons
             key="enter"
-            className="enter"
-            accessIconKeys={[
-                NAVIGATION_ENTER_KEY
+            accessIconsName="sliderEnter"
+            inSlider
+            accessKeys={[
+                {
+                    accessKey: NAVIGATION_ENTER_KEY,
+                    showIfAccessed: !isLogue && isVerseInteractivated
+                }
             ]}
-            accessKeysShown={!isLogue && isVerseInteractivated}
         />
     )]
 }

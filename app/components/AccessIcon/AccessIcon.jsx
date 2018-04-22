@@ -8,6 +8,7 @@ const accessIconPropTypes = {
     // From parent.
     inButton: PropTypes.bool,
     showIfAccessed: PropTypes.bool,
+    beginsCluster: PropTypes.bool,
     accessKey: PropTypes.string
 },
 
@@ -15,6 +16,7 @@ AccessIcon = ({
 
     inButton,
     showIfAccessed,
+    beginsCluster,
     accessKey
 
 }) => (
@@ -22,6 +24,7 @@ AccessIcon = ({
         'AccessIcon',
         inButton && 'AccessIcon__inButton',
         showIfAccessed && 'AccessIcon__showIfAccessed',
+        beginsCluster && 'AccessIcon__beginsCluster',
         'flexCentreContainer'
     )}>
         {accessKey}

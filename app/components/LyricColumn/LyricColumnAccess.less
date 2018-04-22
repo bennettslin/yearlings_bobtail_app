@@ -1,34 +1,13 @@
-@margin__accessIcons: 10px;
+@margin__lyricColumn__accessIcons: 10px;
 
-.LyricColumnAccess-row {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    padding: @margin__accessIcons;
-    box-sizing: border-box;
-
-    display: flex;
+.AccessIcons__inLyric {
+    bottom: @margin__lyricColumn__accessIcons;
 }
 
-.access-icons-group {
-    display: flex;
+.AccessIcons__lyricLeftRightEnter {
+    left: @margin__lyricColumn__accessIcons;
 }
 
-.AccessIcons {
-    .LyricColumn
-    & {
-        z-index: @zIndex__lyricAccessIcons;
-
-        &.up-down {
-            right: @margin__accessIcons;
-        }
-
-        &.left-right, &.enter {
-            position: initial;
-        }
-
-        &.enter {
-            margin-left: @margin__accessIcons;
-        }
-    }
+.AccessIcons__lyricUpDown {
+    right: @margin__lyricColumn__accessIcons;
 }

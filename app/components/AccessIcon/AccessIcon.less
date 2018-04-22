@@ -1,8 +1,6 @@
 @import "./AccessIcons.less";
 
 .AccessIcon {
-    position: absolute;
-
     width: @length__iconAccess;
     height: @length__iconAccess;
 
@@ -25,6 +23,11 @@
 }
 
 .AccessIcon__inButton {
+    position: absolute;
     bottom: 0;
     right: 0;
+}
+
+.AccessIcon__beginsCluster:not(:first-child) {
+    margin-left: @margin__lyricColumn__accessIcons;
 }

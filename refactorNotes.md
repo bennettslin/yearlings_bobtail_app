@@ -16,7 +16,7 @@ Consolidate styles for child with parent selector nesting
 
 ### Remaining
 
-AccessIcons (take in array, handle not last child, refactor all clients as well.)
+AccessIcons (/)
 Admin
 Anchor (/)
 Annotation (Waiting on carousel rework.)
