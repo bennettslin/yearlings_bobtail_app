@@ -34,7 +34,7 @@ DotSequence = ({
                 <DotSequenceDot
                     key={dotKey}
                     inTextAnchor={inTextAnchor}
-                    inAnnotationCardSequence={inAnnotationCard}
+                    inAnnotationCard={inAnnotationCard}
                     dotKey={dotKey}
                 />
             )

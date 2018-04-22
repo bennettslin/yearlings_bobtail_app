@@ -13,20 +13,14 @@ const dotPropTypes = {
 
     // From parent.
     dotKey: PropTypes.string.isRequired,
-    inAnnotationCardSequence: PropTypes.bool,
+    inAnnotationCard: PropTypes.bool,
     inTextAnchor: PropTypes.bool
 },
 
 DotSequenceDot = ({
 
     dotKey,
-
-    /**
-     * Specify it's in a dot sequence to distinguish from portal, which is
-     * technically in an annotation card as well.
-     */
-    inAnnotationCardSequence,
-
+    inAnnotationCard,
     inTextAnchor
 
 }) => (
@@ -36,7 +30,7 @@ DotSequenceDot = ({
         `bgColour__dot__${dotKey}`,
         `styleIf__sequenceDot__${dotKey}`,
         inTextAnchor && 'SequenceDot__textAnchor',
-        inAnnotationCardSequence && 'SequenceDot__annotationCard'
+        inAnnotationCard && 'SequenceDot__annotationCard'
     )} />
 )
 

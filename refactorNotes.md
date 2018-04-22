@@ -23,7 +23,7 @@ Annotation (Waiting on carousel rework.)
 Audio (Waiting on button icons.)
 Button (/)
 Carousel (Waiting on carousel rework to finalise. Revert dots when done.)
-Dot (Waiting on button.)
+Dot (/)
 Dots (Revisit with Button.)
 DynamicSvg
 Icon
