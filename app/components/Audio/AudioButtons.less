@@ -12,10 +12,6 @@
     max-width: 220px;
 
     background-color: #bbb;
-
-    .Button:not(:last-child) {
-        margin-right: @margin__audioButtons__playerButton;
-    }
 }
 
 .AudioButtons__child:not(:last-child) {
@@ -30,4 +26,8 @@
 .AudioButtons__childOption {
     justify-content: flex-end;
     flex-grow: 3;
+}
+
+.AudioButton:not(:last-child) {
+    margin-right: @margin__audioButtons__playerButton;
 }
