@@ -5,6 +5,7 @@
 
     // Specify to override simple background colour transition.
     &.bgColour__dot {
+
         // Increase width first, then fade in.
         transition:
             width @animationDuration__default,
@@ -21,7 +22,6 @@
     height: @length__lyricAnchorDot;
 
     // TODO: Eventually put this in Anchor styling?
-
     .Anchor__selectable:hover
     & {
         animation: bounceHover @animationDuration__slow;

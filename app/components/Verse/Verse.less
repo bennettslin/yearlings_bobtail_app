@@ -1,7 +1,6 @@
 @paddingX__verse: 10px;
 
-@import "./VerseAudioButton.less";
-@import "./VerseAudioIndicator.less";
+@import "./VerseAudio/VerseAudio.less";
 @import "./VerseLine.less";
 @import "./VerseLines.less";
 
@@ -135,5 +134,20 @@
         .mixin__textShadow(@bgColour__sideSlider);
 
         color: @colour__sideSlider;
+    }
+}
+
+.Verse__inLyric {
+    &:first-child {
+        &,
+        .padding__verseInLyric {
+            padding-top: @paddingX__verse;
+        }
+    }
+    &:last-child {
+        &,
+        .padding__verseInLyric {
+            padding-bottom: @paddingX__verse;
+        }
     }
 }

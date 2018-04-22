@@ -56,7 +56,7 @@ Text (Fix bugs.)
 Theatre (/) (Just rename stuff when picking back up again.)
 Tips (/)
 Title (/)
-Verse (Consolidate VerseAudio into single component, revisit with Button.)
+Verse (/)
 Wiki (/)
 
 AccessManager

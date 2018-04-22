@@ -6,13 +6,14 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
 
-import Button from '../Button/Button'
+import Button from '../../Button/Button'
 
-import { getSongsNotLoguesCount } from '../../helpers/dataHelper'
-import { getVerseAudioIconText } from '../../helpers/formatHelper'
-import { getValueInBitNumber } from '../../helpers/bitHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getSongsNotLoguesCount } from '../../../helpers/dataHelper'
+import { getVerseAudioIconText } from '../../../helpers/formatHelper'
+import { getValueInBitNumber } from '../../../helpers/bitHelper'
+import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isPlaying,
@@ -117,16 +118,19 @@ class VerseAudioButton extends Component {
                 'x' : getVerseAudioIconText(this.props)
 
         return (
-            <div className="VerseAudioButton-block">
-                <div className="VerseAudioButton-child">
-                    <Button
-                        isSmallSize
-                        buttonName={isSelected ? 'audioPlay' : 'audioSelect'}
-                        isDisabled={!isEnabled}
-                        temporaryText={iconText}
-                        handleButtonClick={this._handleAudioButtonClick}
-                    />
-                </div>
+            <div className={cx(
+                'VerseAudioButton',
+                isInteractivated && 'VerseAudioButton__interactivated',
+                'padding__verseInLyric',
+                'flexCentreContainer'
+            )}>
+                <Button
+                    isSmallSize
+                    buttonName={isSelected ? 'audioPlay' : 'audioSelect'}
+                    isDisabled={!isEnabled}
+                    temporaryText={iconText}
+                    handleButtonClick={this._handleAudioButtonClick}
+                />
             </div>
         )
     }

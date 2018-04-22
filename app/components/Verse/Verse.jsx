@@ -4,9 +4,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
+
 import VerseLines from './VerseLines'
-import VerseAudioButton from './VerseAudioButton'
-import VerseAudioIndicator from './VerseAudioIndicator'
+import VerseAudio from './VerseAudio/VerseAudio'
+
 import { getVerseUnitClassName, getSliderStatusClassName } from '../../helpers/formatHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
@@ -250,19 +251,15 @@ VerseUnitView = ({
             onClick={handleInteractivatableClick}
             onTouchStart={handleInteractivatableClick}
         >
+
             {isInteractable && (
-                <VerseAudioButton
-                    isInteractivated={isInteractivated}
+                <VerseAudio
                     verseIndex={verseIndex}
+                    isInteractivated={isInteractivated}
                     isSelected={isSelected}
                     isAfterSelected={isAfterSelected}
                     handleLyricPlay={handleLyricPlay}
                     handleLyricVerseSelect={handleLyricVerseSelect}
-                />
-            )}
-            {isInteractable && (
-                <VerseAudioIndicator
-                    isSelected={isSelected}
                 />
             )}
 

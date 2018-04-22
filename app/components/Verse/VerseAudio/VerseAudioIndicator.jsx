@@ -2,8 +2,10 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import PropTypes from 'prop-types'
-import { getVerseAudioIndicatorText } from '../../helpers/formatHelper'
+import { getVerseAudioIndicatorText } from '../../../helpers/formatHelper'
 
 const mapStateToProps = ({
     isPlaying
@@ -16,12 +18,14 @@ const verseAudioIndicatorPropTypes = {
     isPlaying: PropTypes.bool.isRequired,
 
     // From parent.
-    isSelected: PropTypes.bool.isRequired
+    isSelected: PropTypes.bool.isRequired,
+    isInteractivated: PropTypes.bool
 },
 
 VerseAudioIndicator = ({
     isPlaying,
-    isSelected
+    isSelected,
+    isInteractivated
 }) => {
 
     // FIXME: Change this, of course.
@@ -31,7 +35,11 @@ VerseAudioIndicator = ({
     })
 
     return (
-        <div className="VerseAudioIndicator">
+        <div className={cx(
+            'VerseAudioIndicator',
+            'padding__verseInLyric',
+            isInteractivated && 'VerseAudioIndicator__interactivated'
+        )}>
             {indicatorText}
         </div>
     )
