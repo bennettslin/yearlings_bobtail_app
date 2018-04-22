@@ -37,24 +37,17 @@ AudioTimer = ({
         { base,
           jiffy } = getFormattedTime(selectedTimePlayed, true)
 
-    return (
+    return !isLogue && (
         <div className={cx(
             'AudioTimer',
             { 'AudioTimer__titleTimer': isTitleTimer }
         )}>
-
-            {!isLogue && (
-                <span className="AudioTimer__base">
-                    {base}
-                </span>
-            )}
-
-            {!isLogue && (
-                <span className="AudioTimer__jiffy">
-                    {jiffy}
-                </span>
-            )}
-
+            <span className="AudioTimer__base">
+                {base}
+            </span>
+            <span className="AudioTimer__jiffy">
+                {jiffy}
+            </span>
         </div>
     )
 }

@@ -1,10 +1,3 @@
-// 232 px.
-@margin__audioButtons__child: 8px;
-@margin__audioButtons__playerButton: 3px;
-@AudioButtons-constant: @js__length__icon * 3 +
-                         @margin__audioButtons__playerButton * 2 +
-                         @margin__audioButtons__child;
-
 .AudioButtons {
     justify-content: space-between;
 
@@ -15,7 +8,7 @@
 }
 
 .AudioButtons__child:not(:last-child) {
-    margin-right: @margin__audioButtons__child;
+    margin-right: @js__margin__audioButtons__child;
 }
 
 .AudioButtons__childPlayer {
@@ -29,5 +22,5 @@
 }
 
 .AudioButton:not(:last-child) {
-    margin-right: @margin__audioButtons__playerButton;
+    margin-right: @js__margin__audioButtons__playerButton;
 }

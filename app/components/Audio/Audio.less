@@ -4,14 +4,19 @@
 
 // These values *must* be the same in js.
 @js__padding__audio: 12px;
-@minWidth__audioBanner: 220px;
-@js__height__audio: 64px;
+@js__margin__audioButtons__playerButton: 3px;
+@js__margin__audioButtons__child: 8px;
+@js__minWidth__audioBanner: 220px;
 
-// These values *must* be the same in js.
-@paddingY__audio: 4px;
+// 232 px.
+@minWidth__audioButtons__minusPlayer:
+    @js__length__icon * 3
+    + @js__margin__audioButtons__playerButton * 2
+    + @js__margin__audioButtons__child;
+
 @paddingX__titleInAudio: 6px;
-
-@paddingY__audio: (@js__height__menu - @js__height__audio) / 2;
+@paddingY__audio:
+    (@js__height__menu - @js__height__audio) / 2;
 
 .Audio {
     box-sizing: border-box;

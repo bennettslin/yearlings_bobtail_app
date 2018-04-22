@@ -12,7 +12,7 @@ import { PHONE_WIDTH,
          HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
 
-         CAROUSEL_ANNOTATION_MIN_WIDTH,
+         CAROUSEL_ANNOTATION_MINWIDTH,
          LS_WIDTH_GOLDEN_CORD,
          LS_WIDTH_UNCANNY_VALLEY,
 
@@ -281,7 +281,7 @@ export const getCarouselLeftAlign = (deviceIndex, windowWidth, index) => {
              * value for the carousel annotation min width isn't exactly right.
              */
             leftOffset = index <= 1 ?
-                0 : -CAROUSEL_ANNOTATION_MIN_WIDTH * (0.5 - left)
+                0 : -CAROUSEL_ANNOTATION_MINWIDTH * (0.5 - left)
 
         return {
             left,

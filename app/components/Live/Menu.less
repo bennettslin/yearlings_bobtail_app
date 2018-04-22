@@ -1,5 +1,4 @@
 // Constants prefixed with js *must* be the same in JavaScript.
-
 @js__margin__menuChild: 10px;
 @js__margin__menuChild__narrow: 3px;
 @js__height__menu: 72px;
@@ -11,9 +10,8 @@
     @js__margin__menuChild__narrow * 2;
 
 // Arbitrary for now.
+@js__height__audio: 64px;
 @js__height__audioBanner__bottomRow: @js__height__audio / 2;
-
-// Arbitrary for now.
 @js__height__audioSlider__bottomRow: @js__height__audio / 2;
 
 // Includes menu and slider.
@@ -186,26 +184,38 @@
         justify-content: flex-end;
     }
 
-    min-width: @minWidth__audioBanner +
-               @AudioButtons-constant +
-               @length__iconLarge +
-               @js__padding__audio * 3;
+    min-width:
+        @js__minWidth__audioBanner
+        + @minWidth__audioButtons__minusPlayer
+        + @js__length__iconLarge
+        + @js__padding__audio * 3;
 
     box-sizing: border-box;
 
     .RM__tablet
     & {
-        min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__tablet + @js__padding__audio * 3;
+        min-width:
+        @js__minWidth__audioBanner
+        + @minWidth__audioButtons__minusPlayer
+        + @js__length__iconLarge__tablet
+        + @js__padding__audio * 3;
     }
 
     .RM__mini
     & {
-        min-width: @minWidth__audioBanner + @AudioButtons-constant + @length__iconLarge__mini + @js__padding__audio * 3;
+        min-width:
+        @js__minWidth__audioBanner
+        + @minWidth__audioButtons__minusPlayer
+        + @js__length__iconLarge__mini
+        + @js__padding__audio * 3;
     }
 
     .RM__phone
     & {
-        min-width: @AudioButtons-constant + @js__length__icon + @js__padding__audio * 3;
+        min-width:
+        @minWidth__audioButtons__minusPlayer
+        + @js__length__icon
+        + @js__padding__audio * 3;
     }
 }
 

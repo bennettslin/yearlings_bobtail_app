@@ -14,13 +14,15 @@ Class names optimised for clarity
 
 Consolidate styles for child with parent selector nesting
 
+Revisit overrideAnimate weirdness
+
 ### Remaining
 
 AccessIcons (/)
 Admin
 Anchor (/)
 Annotation (Waiting on carousel rework.)
-Audio (Waiting on button icons.)
+Audio (/)
 Button (/)
 Carousel (Waiting on carousel rework to finalise. Revert dots when done.)
 Dot (/)
@@ -66,4 +68,12 @@ EventManager
 RoutingManager
 SwitchManager
 
-### Done
+# Whole day work
+
+Carousel/annotation
+Popup buttons and nav
+Live, LeftShelf
+
+# Rework projects
+Carousel/annotation
+Popup positioning on devices

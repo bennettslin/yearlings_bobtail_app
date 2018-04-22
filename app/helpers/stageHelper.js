@@ -12,10 +12,10 @@ import { PHONE_WIDTH,
          LS_WIDTH_UNCANNY_VALLEY,
 
          LS_LENGTH_ICON,
-         APP_MINI_LARGE_ICON_DIAMETER,
-         APP_TABLET_LARGE_ICON_DIAMETER,
-         APP_LARGE_ICON_DIAMETER,
-         APP_THIN_MARGIN,
+         LS_LENGTH_ICON_LARGE_MINI,
+         LS_LENGTH_ICON_LARGE_TABLET,
+         LS_LENGTH_ICON_LARGE,
+         LS_MARGIN_THIN,
 
          LS_HEIGHT_LYRIC_COLLAPSED,
          LS_HEIGHT_MENU,
@@ -169,18 +169,18 @@ export const _getLeftShelfOverflow = (deviceIndex) => {
     switch (DEVICE_OBJECTS[deviceIndex].className) {
         case MONITOR_WIDTH:
         case LS_LAPTOP_WIDTH:
-            toggleButtonWidth = APP_LARGE_ICON_DIAMETER
+            toggleButtonWidth = LS_LENGTH_ICON_LARGE
             break
         case TABLET_WIDTH:
-            toggleButtonWidth = APP_TABLET_LARGE_ICON_DIAMETER
+            toggleButtonWidth = LS_LENGTH_ICON_LARGE_TABLET
             break
         case LS_WIDTH_MINI:
-            toggleButtonWidth = APP_MINI_LARGE_ICON_DIAMETER
+            toggleButtonWidth = LS_LENGTH_ICON_LARGE_MINI
             break
         case PHONE_WIDTH:
             toggleButtonWidth = LS_LENGTH_ICON
             break
     }
 
-    return (toggleButtonWidth + APP_THIN_MARGIN)
+    return (toggleButtonWidth + LS_MARGIN_THIN)
 }
