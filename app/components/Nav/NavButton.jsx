@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 import NavPanel from './NavPanel'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { getSongIsLogue } from '../../helpers/dataHelper'
@@ -120,7 +120,7 @@ class NavButton extends Component {
                     { 'NavButton__accessed': isAccessed } // TODO
                 )}
             >
-                <Button2 {...other}
+                <Button {...other}
                     buttonName={isSelected ? 'navSelected' : 'nav'}
                     showAccessIconIfAccessOn={isAccessed && isNavigable}
                     accessKey={isToggle ? '' : NAVIGATION_ENTER_KEY}
@@ -133,7 +133,7 @@ class NavButton extends Component {
                         bookIndex={bookIndex}
                         songIndex={songIndex}
                     />
-                </Button2>
+                </Button>
             </div>
         )
     }

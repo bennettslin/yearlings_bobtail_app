@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 import { TITLE_TOGGLE_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
@@ -40,7 +40,7 @@ TitleToggle = ({
 
 }) => {
     return isAudioChild === isTitleInAudio && (
-        <Button2
+        <Button
             buttonName="title"
             className={cx(
                 'TitleToggle',

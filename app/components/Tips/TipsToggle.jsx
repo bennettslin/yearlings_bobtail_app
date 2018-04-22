@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 import { TIPS_TOGGLE_KEY } from '../../constants/access'
 import { TIPS_OPTIONS } from '../../constants/options'
 
@@ -29,7 +29,7 @@ TipsToggle = ({
     handleTipsToggle
 
 }) => (
-    <Button2
+    <Button
         isLargeSize
         buttonName="tips"
         isDisabled={!isEnabled}

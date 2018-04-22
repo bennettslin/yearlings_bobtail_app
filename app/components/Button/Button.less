@@ -1,7 +1,7 @@
-@import "./Button2.less";
+@import "./Button.less";
 @import "./ButtonIcon.less";
 
-.Button2 {
+.Button {
     position: relative;
 
     transition:
@@ -9,17 +9,17 @@
     transform @animationDuration__instant;
 }
 
-.Button2__defaultSize {
+.Button__defaultSize {
     width: @js__length__icon;
     height: @js__length__icon;
 }
 
-.Button2__smallSize {
+.Button__smallSize {
     width: @length__iconSmall;
     height: @length__iconSmall;
 }
 
-.Button2__largeSize {
+.Button__largeSize {
     width: @length__iconLarge;
     height: @length__iconLarge;
 
@@ -42,7 +42,7 @@
     }
 }
 
-.Button2__enabled {
+.Button__enabled {
     cursor: pointer;
 
     &:hover {

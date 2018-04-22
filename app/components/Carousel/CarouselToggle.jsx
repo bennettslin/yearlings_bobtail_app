@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 import { CAROUSEL_TOGGLE_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
@@ -37,7 +37,7 @@ CarouselToggle = ({
             'CarouselToggle',
             'width__leftShelf'
         )}>
-            <Button2
+            <Button
                 isLargeSize
                 buttonName="carouselNav"
                 temporaryText={selectedCarouselNavIndex}

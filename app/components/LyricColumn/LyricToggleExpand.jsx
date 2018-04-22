@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 import { LYRIC_SECTION_EXPAND_KEY } from '../../constants/access'
 import { getIsLyricExpandable } from '../../helpers/responsiveHelper'
 
@@ -59,7 +59,7 @@ LyricToggleExpand = ({
             { 'LyricToggleExpand__inLyric': !inMain },
             'length__buttonLarge'
         )}>
-            <Button2
+            <Button
                 isLargeSize
                 buttonName="lyricExpand"
                 temporaryText={isLyricExpanded ? '-' : '+'}

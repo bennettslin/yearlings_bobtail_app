@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import omit from 'lodash.omit'
 
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 import Dot from '../Dot/Dot'
 import TextAnchor from '../Anchor/TextAnchor'
 
@@ -134,7 +134,7 @@ DotsSlideSelectView = ({
 
     return (
         <div className="DotsSlideSelect">
-            <Button2
+            <Button
                 buttonName="slideSelect"
                 isCustomSize
                 showAccessIconIfAccessOn={isAccessed}
@@ -159,7 +159,7 @@ DotsSlideSelectView = ({
                 )}>
                     {DOT_DESCRIPTIONS[dotKey]}
                 </div>
-            </Button2>
+            </Button>
 
             <TextAnchor
                 className="DotsSlideSelect__textAnchor"

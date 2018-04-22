@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 
 import { AUDIO_PLAY_KEY,
          AUDIO_OPTIONS_TOGGLE_KEY,
@@ -111,7 +111,7 @@ class AudioButtons extends Component {
                     'flexAlignContainer'
                 )}>
                     {/* Previous button. */}
-                    <Button2
+                    <Button
                         buttonName="audioSelect"
                         className={cx(
                             'AudioButton'
@@ -125,7 +125,7 @@ class AudioButtons extends Component {
                     />
 
                     {/* Play button. */}
-                    <Button2
+                    <Button
                         buttonName="audioPlay"
                         className={cx(
                             'AudioButton'
@@ -138,7 +138,7 @@ class AudioButtons extends Component {
                     />
 
                     {/* Next button. */}
-                    <Button2
+                    <Button
                         buttonName="audioSelect"
                         className={cx(
                             'AudioButton'
@@ -157,7 +157,7 @@ class AudioButtons extends Component {
                     'AudioButtons__child',
                     'flexAlignContainer'
                 )}>
-                    <Button2
+                    <Button
                         buttonName="audioOptions"
                         className={cx(
                             'AudioButton'

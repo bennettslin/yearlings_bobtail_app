@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 
 import { SCORE_TOGGLE_KEY,
          TIPS_TOGGLE_KEY } from '../../constants/access'
@@ -90,7 +90,7 @@ ScoresTips = ({
               'ScoresTips__inLeftShelf': inLeftShelf }
         )}>
             {showScoreToggleButton &&
-                <Button2
+                <Button
                     isLargeSize
                     buttonName="scores"
                     temporaryText={selectedScoreIndex}
@@ -99,7 +99,7 @@ ScoresTips = ({
                     handleButtonClick={handleScoreToggle}
                 />
             }
-            <Button2
+            <Button
                 isLargeSize
                 buttonName="tips"
                 temporaryText={TIPS_OPTIONS[selectedTipsIndex]}

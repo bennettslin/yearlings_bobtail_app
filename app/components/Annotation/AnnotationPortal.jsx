@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames';
 
 import Texts from '../Text/Texts'
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 import { PORTAL } from '../../constants/dots'
 import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
 import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from '../../helpers/dataHelper'
@@ -115,7 +115,7 @@ class AnnotationPortal extends Component {
                 )}
             >
 
-                <Button2
+                <Button
                     buttonName={PORTAL}
                     handleButtonClick={this._handlePortalClick}
                 />

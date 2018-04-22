@@ -8,7 +8,7 @@ import cx from 'classnames'
 import ButtonIcon from '../Button/ButtonIcon'
 import AccessIcon from '../AccessIcon/AccessIcon'
 
-class Button2 extends Component {
+class Button extends Component {
 
     static defaultProps = {
         showAccessIconIfAccessOn: true
@@ -62,15 +62,15 @@ class Button2 extends Component {
         return (
             <div
                 className={cx(
-                    'Button2',
-                    `Button2__${buttonName}`,
+                    'Button',
+                    `Button__${buttonName}`,
 
-                    isCustomSize && `Button2__${buttonName}Size`,
+                    isCustomSize && `Button__${buttonName}Size`,
 
-                    { 'Button2__enabled': !isDisabled,
-                      'Button2__defaultSize': isDefaultSize,
-                      'Button2__smallSize': isSmallSize,
-                      'Button2__largeSize': isLargeSize },
+                    { 'Button__enabled': !isDisabled,
+                      'Button__defaultSize': isDefaultSize,
+                      'Button__smallSize': isSmallSize,
+                      'Button__largeSize': isLargeSize },
 
                     className
                 )}
@@ -99,4 +99,4 @@ class Button2 extends Component {
     }
 }
 
-export default Button2
+export default Button

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import { connect } from 'react-redux'
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 import { LYRIC_COLUMN_TOGGLE_KEY } from '../../constants/access'
 import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 
@@ -41,7 +41,7 @@ LyricToggleEar = ({
             'LyricToggle__inLyric',
             'length__buttonLarge'
         )}>
-            <Button2
+            <Button
                 isLargeSize
                 buttonName="lyricEar"
                 temporaryText={LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]}

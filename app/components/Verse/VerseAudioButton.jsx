@@ -7,7 +7,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 
 import { getSongsNotLoguesCount } from '../../helpers/dataHelper'
 import { getVerseAudioIconText } from '../../helpers/formatHelper'
@@ -119,7 +119,7 @@ class VerseAudioButton extends Component {
         return (
             <div className="VerseAudioButton-block">
                 <div className="VerseAudioButton-child">
-                    <Button2
+                    <Button
                         isSmallSize
                         buttonName={isSelected ? 'audioPlay' : 'audioSelect'}
                         isDisabled={!isEnabled}

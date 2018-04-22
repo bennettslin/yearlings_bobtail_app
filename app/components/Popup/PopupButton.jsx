@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Button2 from '../Button/Button2'
+import Button from '../Button/Button'
 
 import { NAVIGATION_LEFT_KEY,
          NAVIGATION_RIGHT_KEY,
@@ -63,7 +63,7 @@ PopupButton = ({
             )}
         >
             {!isShadow && (
-                <Button2 {...other}
+                <Button {...other}
                     isLargeSize
                     buttonName="popup"
                     accessKey={accessKey}
