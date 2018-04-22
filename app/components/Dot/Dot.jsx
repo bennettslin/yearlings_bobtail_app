@@ -4,14 +4,12 @@ import cx from 'classnames'
 
 const dotPropTypes = {
     // From parent.
-    className: PropTypes.any,
-    children: PropTypes.element
+    className: PropTypes.any
 },
 
 Dot = ({
 
     className,
-    children,
 
 ...other }) => (
 
@@ -20,9 +18,7 @@ Dot = ({
             'Dot',
             className
         )}
-    >
-        {children}
-    </div>
+    />
 )
 
 Dot.propTypes = dotPropTypes

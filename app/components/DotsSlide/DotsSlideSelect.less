@@ -1,47 +1,24 @@
 .DotsSlideSelect {
     display: flex;
-    flex-direction: column-reverse;
-    padding: @padding__dotsSlideToggle;
+    flex-direction: column;
+    align-items: center;
 
-    .DotAnchor {
+    padding: @padding__dotsSlideSelect;
+}
 
-        &:hover {
-            .icon-canvas {
-                animation: bounceHover @animationDuration__default;
-            }
-        }
+.Button2__slideSelectSize {
 
-        &:active {
-            .icon-canvas {
-                transform: scale(0.9);
-            }
-        }
-    }
-
-    .dot {
-        &.deselected {
-            .icon-canvas {
-                background-color: @bgColour__dot__deselected;
-            }
-        }
-    }
+    width: @length__dotsSlideSelect;
+    height: @length__dotsSlideSelect;
 
     .RM__phone
     & {
-        padding: @padding__dotsSlideToggle__phone;
+        width: @length__dotsSlideSelect__phone;
+        height: @length__dotsSlideSelect__phone;
     }
 }
 
-.DotsSlideSelect__description {
-    position: absolute;
-
-    // Specify for Safari.
-    top: 0;
-    left: 0;
-
-    width: @length__dotsSlideToggle;
-    height: @length__dotsSlideToggle;
-    border-radius: 50%;
+.SlideSelectDescription {
 
     text-align: center;
     font-size: .6em;
@@ -49,43 +26,14 @@
     opacity: 0;
     transition: opacity @animationDuration__default;
 
-    &:hover, &.DotsSlideSelect__interactivated {
+    .DotsSlideSelect:hover
+    &,
+    &.SlideSelectDescription__interactivated {
         opacity: 1;
-    }
-
-    .RM__phone
-    & {
-        width: @length__dotsSlideToggle__phone;
-        height: @length__dotsSlideToggle__phone;
     }
 }
 
 .DotsSlideSelect__textAnchor {
     padding-top: 5px;
-    text-align: center;
     font-size: 0.75em;
-}
-
-// TODO: These selectors shouldn't be so selective.
-.Button.Button__dotsSlideSelect {
-
-    // TODO: Use flex container class.
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &, & .icon-canvas {
-        width: @length__dotsSlideToggle;
-        height: @length__dotsSlideToggle;
-    }
-}
-
-.RM__phone
-& {
-    .Button.Button__dotsSlideSelect {
-        &, & .icon-canvas {
-            width: @length__dotsSlideToggle__phone;
-            height: @length__dotsSlideToggle__phone;
-        }
-    }
 }

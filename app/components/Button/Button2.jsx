@@ -11,7 +11,7 @@ import AccessIcon from '../AccessIcon/AccessIcon'
 class Button2 extends Component {
 
     static defaultProps = {
-        showAccessIconIfAccessed: true
+        showAccessIconIfAccessOn: true
     }
 
     static propTypes = {
@@ -21,7 +21,7 @@ class Button2 extends Component {
         isSmallSize: PropTypes.bool,
         isLargeSize: PropTypes.bool,
         isDisabled: PropTypes.bool,
-        showAccessIconIfAccessed: PropTypes.bool.isRequired,
+        showAccessIconIfAccessOn: PropTypes.bool.isRequired,
         accessKey: PropTypes.string,
         temporaryText: PropTypes.any,
         handleButtonClick: PropTypes.func.isRequired,
@@ -50,14 +50,14 @@ class Button2 extends Component {
                 isSmallSize,
                 isLargeSize,
                 isDisabled,
-                showAccessIconIfAccessed,
+                showAccessIconIfAccessOn,
                 temporaryText,
                 accessKey,
                 children } = this.props,
 
             isDefaultSize = !isLargeSize && !isSmallSize && !isCustomSize,
 
-            showIfAccessed = showAccessIconIfAccessed && !isDisabled
+            showIfAccessed = showAccessIconIfAccessOn && !isDisabled
 
         return (
             <div

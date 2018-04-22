@@ -2,10 +2,7 @@
 @import "./DotSequenceDot.less";
 
 .bgColour__dot {
-    .RM__sliderMoving
-    & {
-        background-color: @bgColour__dot__deselected;
-    }
+    background-color: @bgColour__dot__deselected;
 
     .RM__sliderNotMoving
     .Anchor__selected
@@ -22,7 +19,6 @@
 
 // Nesting under parent for clarity.
 .RM__sliderNotMoving {
-
     .bgColour__dot__portal {
         background-color: @bgColour__dot__portal;
     }

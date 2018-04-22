@@ -38,6 +38,7 @@ NavBookToggle = ({
             'NavBook'
         )}>
             <NavButton {...other}
+                isToggle
                 isSelected={hasSelectedSong}
                 bookIndex={bookIndex}
             />

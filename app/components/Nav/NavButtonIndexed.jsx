@@ -34,13 +34,13 @@ NavButtonIndexed = ({
 ...other }) => {
 
     const isSelected = selectedSongIndex === songIndex,
-        accessHighlighted = accessedNavSongIndex === songIndex
+        isAccessed = accessedNavSongIndex === songIndex
 
     return (
         <NavButton {...other}
             songIndex={songIndex}
             isSelected={isSelected}
-            accessHighlighted={accessHighlighted}
+            isAccessed={isAccessed}
         />
     )
 }

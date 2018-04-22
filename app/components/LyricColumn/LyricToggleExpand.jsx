@@ -57,8 +57,7 @@ LyricToggleExpand = ({
                 'LyricToggle__inMain' :
                 'LyricToggle__inLyric',
             { 'LyricToggleExpand__inLyric': !inMain },
-            'length__buttonLarge',
-            'position__buttonInherit'
+            'length__buttonLarge'
         )}>
             <Button2
                 isLargeSize

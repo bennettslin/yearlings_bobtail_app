@@ -5,7 +5,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Button from '../Button/Button'
+
+import Button2 from '../Button/Button2'
 import NavPanel from './NavPanel'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { getSongIsLogue } from '../../helpers/dataHelper'
@@ -26,12 +27,13 @@ const mapStateToProps = ({
 class NavButton extends Component {
 
     static propTypes = {
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        isToggle: PropTypes.bool,
+        isAccessed: PropTypes.bool,
+        isSelected: PropTypes.bool.isRequired,
 
         bookIndex: PropTypes.number,
         songIndex: PropTypes.number,
-        accessHighlighted: PropTypes.bool,
-        isSelected: PropTypes.bool.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired,
         handleButtonClick: PropTypes.func.isRequired
     }
 
@@ -47,8 +49,8 @@ class NavButton extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
+                    'isAccessed',
                     'isSelected',
-                    'accessHighlighted',
                     'interactivatedVerseIndex',
                     'selectedAnnotationIndex'
                 ]
@@ -76,6 +78,9 @@ class NavButton extends Component {
         const { handleButtonClick,
         /* eslint-enable no-unused-vars */
 
+            isAccessed,
+            isSelected,
+            isToggle,
             interactivatedVerseIndex,
             selectedAnnotationIndex,
 
@@ -88,98 +93,50 @@ class NavButton extends Component {
             isLeftmost = bookIndex === 0 || songIndex === 0,
             isRightmost = bookIndex === 1 || songIndex === 19,
 
-            showEnterAccessKey =
-                interactivatedVerseIndex < 0 &&
-                !selectedAnnotationIndex
+            isNavigable =
+                !isToggle
+                && interactivatedVerseIndex < 0
+                && !selectedAnnotationIndex
 
-        let iconText
+        let temporaryText
 
         if (isNaN(bookIndex)) {
 
             if (isLogue) {
-                iconText = songIndex === 0 ? 'p' : 'e'
+                temporaryText = songIndex === 0 ? 'p' : 'e'
 
             } else {
-                iconText = `${songIndex}`
+                temporaryText = `${songIndex}`
             }
 
         } else {
-            iconText = bookIndex === 0 ? 'I' : 'II'
+            temporaryText = bookIndex === 0 ? 'I' : 'II'
         }
 
         return (
-            <NavButtonView {...other}
-                isLeftmost={isLeftmost}
-                isRightmost={isRightmost}
-                showEnterAccessKey={showEnterAccessKey}
-                iconText={iconText}
-                handleClick={this._handleButtonClick}
-            />
+            <div
+                className={cx(
+                    'NavButton',
+                    { 'NavButton__accessed': isAccessed } // TODO
+                )}
+            >
+                <Button2 {...other}
+                    buttonName={isSelected ? 'navSelected' : 'nav'}
+                    showAccessIconIfAccessOn={isAccessed && isNavigable}
+                    accessKey={isToggle ? '' : NAVIGATION_ENTER_KEY}
+                    temporaryText={temporaryText}
+                    handleButtonClick={this._handleButtonClick}
+                >
+                    <NavPanel
+                        isLeftmost={isLeftmost}
+                        isRightmost={isRightmost}
+                        bookIndex={bookIndex}
+                        songIndex={songIndex}
+                    />
+                </Button2>
+            </div>
         )
     }
 }
-
-/****************
- * PRESENTATION *
- ****************/
-
-const navButtonViewPropTypes = {
-
-    // From parent.
-    isSelected: PropTypes.bool.isRequired,
-    accessHighlighted: PropTypes.bool,
-    iconText: PropTypes.string.isRequired,
-    bookIndex: PropTypes.number,
-    songIndex: PropTypes.number,
-    isLeftmost: PropTypes.bool.isRequired,
-    isRightmost: PropTypes.bool.isRequired,
-    showEnterAccessKey: PropTypes.bool.isRequired,
-    handleClick: PropTypes.func.isRequired
-},
-
-NavButtonView = ({
-
-    // From props.
-    bookIndex,
-    songIndex,
-    accessHighlighted,
-
-    // From controller.
-    isLeftmost,
-    isRightmost,
-    showEnterAccessKey,
-
-...other }) => {
-
-    let accessKey
-
-    if (accessHighlighted) {
-        accessKey = NAVIGATION_ENTER_KEY
-    }
-
-    return (
-        <div
-            className={cx(
-                'NavButton',
-                { 'accessHighlighted': accessHighlighted }
-            )}
-        >
-            <Button {...other}
-                buttonName="nav"
-                accessKey={accessKey}
-                accessKeysShown={showEnterAccessKey}
-            >
-                <NavPanel
-                    isLeftmost={isLeftmost}
-                    isRightmost={isRightmost}
-                    bookIndex={bookIndex}
-                    songIndex={songIndex}
-                />
-            </Button>
-        </div>
-    )
-}
-
-NavButtonView.propTypes = navButtonViewPropTypes
 
 export default connect(mapStateToProps)(NavButton)

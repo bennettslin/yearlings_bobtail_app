@@ -7,7 +7,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import omit from 'lodash.omit'
 
-import Button from '../Button/Button'
+import Button2 from '../Button/Button2'
+import Dot from '../Dot/Dot'
 import TextAnchor from '../Anchor/TextAnchor'
 
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
@@ -110,7 +111,7 @@ class DotsSlideSelect extends Component {
 const dotsSlideSelectViewPropTypes = {
     // From parent.
     dotKey: PropTypes.string.isRequired,
-    accessHighlighted: PropTypes.bool.isRequired,
+    isAccessed: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isInteractivated: PropTypes.bool.isRequired,
     handleDotSelectClick: PropTypes.func.isRequired,
@@ -121,7 +122,7 @@ DotsSlideSelectView = ({
 
     // From props.
     dotKey,
-    accessHighlighted,
+    isAccessed,
     isSelected,
 
     // From controller.
@@ -131,49 +132,42 @@ DotsSlideSelectView = ({
 
 }) => {
 
-    let accessKey
-
-    if (accessHighlighted) {
-        accessKey = NAVIGATION_ENTER_KEY
-    }
-
     return (
-        <div className={cx(
-            'DotsSlideSelect'
-        )}>
-            <div className="DotsSlideSelect__textAnchor">
-                <TextAnchor
-                    isSelected={isInteractivated}
-                    isAccessed={accessHighlighted}
-                    text={dotKey}
-                    handleAnchorClick={handleTextContainerClick}
-                >
-                </TextAnchor>
-            </div>
-            <div className="DotsSlideSelect__dotButton">
+        <div className="DotsSlideSelect">
+            <Button2
+                buttonName="slideSelect"
+                isCustomSize
+                showAccessIconIfAccessOn={isAccessed}
+                accessKey={NAVIGATION_ENTER_KEY}
+                handleButtonClick={handleDotSelectClick}
+            >
+                <Dot className={cx(
+                    'SlideSelectDot',
 
-                {/* TODO: Revisit with Button rework. */}
+                    'bgColour__dot',
+                    isSelected && `bgColour__dot__${dotKey}`,
 
-                <Button
-                    isOverflowShown
-                    accessKeysShown
-                    // FIXME: This is dumb.
-                    buttonClass={isSelected ? `bgColour__dot bgColour__dot__${dotKey}` : ''}
-                    buttonName="dotsSlideSelect"
-                    accessKey={accessKey}
-                    iconClass={dotKey}
-                    isDeselected={!isSelected}
-                    handleClick={handleDotSelectClick}
-                >
-                    <div className={cx(
-                        'DotsSlideSelect__description',
-                        { 'DotsSlideSelect__interactivated': isInteractivated },
-                        'flexCentreContainer'
-                    )}>
-                        {DOT_DESCRIPTIONS[dotKey]}
-                    </div>
-                </Button>
-            </div>
+                    'absoluteFullContainer'
+                )} />
+
+                <div className={cx(
+                    'SlideSelectDescription',
+                    { 'SlideSelectDescription__interactivated': isInteractivated },
+
+                    'absoluteFullContainer',
+                    'flexCentreContainer'
+                )}>
+                    {DOT_DESCRIPTIONS[dotKey]}
+                </div>
+            </Button2>
+
+            <TextAnchor
+                className="DotsSlideSelect__textAnchor"
+                isSelected={isInteractivated}
+                isAccessed={isAccessed}
+                text={dotKey}
+                handleAnchorClick={handleTextContainerClick}
+            />
         </div>
     )
 }

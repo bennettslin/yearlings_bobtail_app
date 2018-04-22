@@ -48,7 +48,7 @@ DotsSlideSelects = ({
                 className="DotsSlideSelects__row"
             >
                 {firstHalfArray.map((dotKey, firstHalfIndex) => {
-                    const accessHighlighted = accessedDotIndex === firstHalfIndex
+                    const isAccessed = accessedDotIndex === firstHalfIndex
 
                     return (
                         <DotsSlideSelect {...other}
@@ -56,7 +56,7 @@ DotsSlideSelects = ({
                             dotIndex={firstHalfIndex}
                             dotKey={dotKey}
                             isSelected={dotKeys[dotKey]}
-                            accessHighlighted={accessHighlighted}
+                            isAccessed={isAccessed}
                         />
                     )
                 })}
@@ -66,7 +66,7 @@ DotsSlideSelects = ({
             >
                 {secondHalfArray.map((dotKey, index) => {
                     const secondHalfIndex = index + firstHalfEnd,
-                        accessHighlighted = accessedDotIndex === secondHalfIndex
+                        isAccessed = accessedDotIndex === secondHalfIndex
 
                     return (
                         <DotsSlideSelect {...other}
@@ -74,7 +74,7 @@ DotsSlideSelects = ({
                             dotIndex={secondHalfIndex}
                             dotKey={dotKey}
                             isSelected={dotKeys[dotKey]}
-                            accessHighlighted={accessHighlighted}
+                            isAccessed={isAccessed}
                         />
                     )
                 })}
