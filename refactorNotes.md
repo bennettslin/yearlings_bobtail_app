@@ -24,7 +24,7 @@ Audio (Waiting on button icons.)
 Button (/)
 Carousel (Waiting on carousel rework to finalise. Revert dots when done.)
 Dot (/)
-Dots (Revisit with Button.)
+Dots (/)
 DynamicSvg
 Icon
 Live

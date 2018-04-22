@@ -1,9 +1,25 @@
+@length__dotsSlideSelect: 64px;
+
+@length__dotsSlideSelect__phone:
+    @length__iconLarge * 0.95;
+
+@padding__dotsSlideSelect:
+    @length__dotsSlideSelect / 6;
+
+@padding__dotsSlideSelect__phone:
+    @length__iconLarge / 7;
+
 .DotsSlideSelect {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     padding: @padding__dotsSlideSelect;
+
+    .RM__phone
+    & {
+        padding: @padding__dotsSlideSelect__phone;
+    }
 }
 
 .Button__slideSelectSize {
