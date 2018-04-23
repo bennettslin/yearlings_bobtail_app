@@ -88,17 +88,13 @@ Main = ({
                 'absoluteFullContainer'
             )}>
                 <LeftShelf {...leftShelfToggleSectionHandlers}
-                    className={cx(
-                        { 'absoluteFullContainer': isPhone }
-                    )}
+                    isPhone={isPhone}
                     scoresTipsHandlers={scoresTipsHandlers}
                 />
 
                 <OverviewPopup {...overviewPopupHandlers}
-                    className={cx(
-                        { 'absoluteFullContainer': isPhone }
-                    )}
                     inMain
+                    isPhone={isPhone}
                 />
             </div>
 

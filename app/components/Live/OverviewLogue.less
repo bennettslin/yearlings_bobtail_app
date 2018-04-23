@@ -1,14 +1,16 @@
 .OverviewLogue {
-
-    .Popup__overview {
-        background-color: rgba(250, 150, 200, 0.5);
-    }
+    display: flex;
+    align-items: center;
 
     .RM__mobile
     & {
-        .Popup__overview {
-            flex-direction: column-reverse;
-            padding-bottom: 25px;
-        }
+        flex-direction: column-reverse;
+        padding-bottom: @js__margin__thick;
+    }
+
+    // Override collapsed height of lyric column in mobile.
+    .RM__mobile
+    &.position__lyricColumn {
+        height: 100%;
     }
 }

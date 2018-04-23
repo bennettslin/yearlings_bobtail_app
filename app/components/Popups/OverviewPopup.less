@@ -1,30 +1,5 @@
 .Popup__overview {
-
     max-width: 480px;
-
-    .Main
-    & {
-        position: static;
-        width: auto;
-        height: auto;
-
-        margin-top: @js__margin__thin;
-        margin-left: @js__margin__thick;
-    }
-
-    .RM__mobileNotPhone
-    .Main
-    & {
-        margin-top: 0;
-        margin-right: @js__margin__thin;
-        margin-bottom: @margin__scrollbar;
-    }
-
-    .RM__phone
-    .Main
-    & {
-        margin: @js__margin__thin;
-    }
 
     .RM__mini
     & {
@@ -40,5 +15,25 @@
 
     .PopupView__content {
         border-radius: 25px;
+    }
+}
+
+.OverviewPopup__inMain {
+
+    margin-top: @js__margin__thin;
+    margin-left: @js__margin__thick;
+
+    .RM__mobileNotPhone
+    & {
+        margin-top: 0;
+        margin-right: @js__margin__thin;
+        margin-bottom: @margin__scrollbar;
+    }
+
+    .RM__phone
+    & {
+        padding: @js__margin__thin;
+        margin: 0;
+        box-sizing: border-box;
     }
 }

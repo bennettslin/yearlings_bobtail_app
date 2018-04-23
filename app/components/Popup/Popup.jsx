@@ -18,6 +18,7 @@ class Popup extends Component {
         popupName: PropTypes.string.isRequired,
         isVisible: PropTypes.bool.isRequired,
         noFlexCentre: PropTypes.bool,
+        noAbsoluteFull: PropTypes.bool,
         displaysInOverlay: PropTypes.bool,
         showClose: PropTypes.bool,
         showArrows: PropTypes.bool,
@@ -87,6 +88,7 @@ class Popup extends Component {
                 popupName,
                 isVisible,
                 noFlexCentre,
+                noAbsoluteFull,
                 displaysInOverlay,
                 showClose,
                 showArrows,
@@ -106,14 +108,14 @@ class Popup extends Component {
             <span
                 className={cx(
                     `Popup__${popupName}`,
-                    'absoluteFullContainer',
 
                     isVisible ? 'Popup__visible' : 'Popup__invisible',
                     isDisplayed ? 'Popup__displayed' : 'Popup__notDisplayed',
                     displaysInOverlay ?
                         'Popup__displaysInOverlay' : 'Popup__displaysNotInOverlay',
 
-                    { 'flexCentreContainer': !noFlexCentre },
+                    { 'flexCentreContainer': !noFlexCentre,
+                      'absoluteFullContainer': !noAbsoluteFull },
 
                     className
                 )}

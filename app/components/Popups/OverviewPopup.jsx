@@ -29,15 +29,15 @@ const overviewPopupPropTypes = {
     selectedTipsIndex: PropTypes.number.isRequired,
 
     // From parent.
-    className: PropTypes.any,
     inMain: PropTypes.bool,
+    isPhone: PropTypes.bool,
     handlePopupContainerClick: PropTypes.func.isRequired
 },
 
 OverviewPopup = ({
 
-    className,
     inMain,
+    isPhone,
     selectedOverviewIndex,
     isHeavyRenderReady,
     selectedSongIndex,
@@ -46,7 +46,10 @@ OverviewPopup = ({
 
 ...other }) => {
 
-    const isLogue = getSongIsLogue(selectedSongIndex)
+    const isLogue = getSongIsLogue(selectedSongIndex),
+
+        // Only position absolute when in main and is phone.
+        noAbsoluteFull = isLogue || !isPhone
 
     let isVisible
 
@@ -54,7 +57,7 @@ OverviewPopup = ({
     if (isLogue) {
         isVisible = !inMain
     } else {
-        isVisible = selectedOverviewIndex ? false : inMain
+        isVisible = selectedOverviewIndex ? false : Boolean(inMain)
     }
 
     /**
@@ -71,11 +74,11 @@ OverviewPopup = ({
             hasNarrowPadding
             popupName="overview"
             className={cx(
-                inMain ? 'OverviewPopup__inMain' : 'OverviewPopup__inLogue',
-                className
+                inMain && 'OverviewPopup__inMain'
             )}
-            noFlexCentre={inMain}
             isVisible={isVisible}
+            noFlexCentre={inMain}
+            noAbsoluteFull={noAbsoluteFull}
             handlePopupContainerClick={handlePopupContainerClick}
         >
             <OverviewSection {...other} />

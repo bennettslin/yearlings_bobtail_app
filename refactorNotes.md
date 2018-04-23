@@ -28,10 +28,7 @@ Carousel (Waiting on carousel rework to finalise. Revert dots when done.)
 Dot (/)
 Dots (/)
 DynamicSvg
-Live
-    Menu (/)
-    OverviewLogue
-    PopupOverlaid
+Live (/)
 Lyric (/)
 LyricColumn (/)
 Main (/)

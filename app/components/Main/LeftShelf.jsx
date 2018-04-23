@@ -11,6 +11,7 @@ import ScoresTips from '../ScoresTips/ScoresTips'
 const leftShelfPropTypes = {
     // From parent.
     className: PropTypes.any,
+    isPhone: PropTypes.bool,
     handleDotsSectionToggle: PropTypes.func.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired,
     scoresTipsHandlers: PropTypes.object.isRequired
@@ -19,6 +20,7 @@ const leftShelfPropTypes = {
 LeftShelf = ({
 
     className,
+    isPhone,
     handleDotsSectionToggle,
     handleOverviewToggle,
     scoresTipsHandlers
@@ -27,6 +29,7 @@ LeftShelf = ({
     <div className={cx(
         'LeftShelf',
         'width__leftShelf',
+        isPhone && 'absoluteFullContainer',
         className
     )}>
         <OverviewToggle
