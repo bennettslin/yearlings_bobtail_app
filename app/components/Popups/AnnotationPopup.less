@@ -1,6 +1,6 @@
 .PopupView__annotation {
 
-    .RM__annotationSide
+    .RM__overlayHidden
     & {
         position: absolute;
         top: 0;
@@ -10,7 +10,7 @@
         margin-right: 15px;
     }
 
-    .RM__mobile.RM__annotationSide
+    .RM__mobile.RM__overlayHidden
     & {
         top: auto;
         bottom: 0;
@@ -20,7 +20,7 @@
         margin-bottom: 25px;
     }
 
-    .RM__mobile.RM__annotationSide.RM__lyricHeightless
+    .RM__mobile.RM__overlayHidden.RM__lyricHeightless
     & {
         // Even wider margin bottom if no lyrics at bottom.
         margin-bottom: @js__length__iconLarge;

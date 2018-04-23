@@ -1,4 +1,4 @@
-@offset__popupButton: 0.56;
+@offset__popupButton: 0.54;
 
 .PopupViewButton {
     position: absolute;
@@ -14,10 +14,12 @@
 }
 
 // Apply box shadow to button itself, so that it animates as well.
-.Button {
-    .PopupViewButton__notShadow
+.Button__popup {
+    box-shadow: @boxShadow__popupButton;
+
+    .RM__overlayShown
     & {
-        box-shadow: @boxShadow__popupButton;
+        box-shadow: @boxShadow__popup;
     }
 }
 
@@ -45,7 +47,7 @@
 }
 
 .RM__phone,
-.RM__mobile.RM__annotationSide {
+.RM__mobile.RM__overlayHidden {
 
     .PopupViewButton__side {
         // Override default styling.

@@ -18,7 +18,7 @@ import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongIsLogue } from '../helpers/dataHelper'
 import { getPrefixPrependedClassNames } from '../helpers/domHelper'
 import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logicHelper'
-import { getIsDesktop, getIsTabletOrMini, getIsOverlayingAnnotation } from '../helpers/responsiveHelper'
+import { getIsDesktop, getIsTabletOrMini } from '../helpers/responsiveHelper'
 
 class RootManager extends Component {
 
@@ -159,11 +159,6 @@ class RootManager extends Component {
 
             isLogue = getSongIsLogue(selectedSongIndex),
 
-            isOverlayingAnnotation = getIsOverlayingAnnotation({
-                    deviceIndex,
-                    isLyricExpanded
-                }),
-
             singleShownLyricColumnKey = getSingleShownLyricColumnKey({
                 showOneOfTwoLyricColumns,
                 selectedLyricColumnIndex
@@ -226,8 +221,6 @@ class RootManager extends Component {
                     overviewShown ? 'RM__overviewShown' : 'RM__overviewHidden',
                     tipsShown ? 'RM__tipsShown' : 'RM__tipsHidden',
 
-                    isOverlayingAnnotation ?
-                        'RM__annotationOverlaid' : 'RM__annotationSide',
                     showShrunkNavIcon ?
                         'RM__navIconShrunk' : 'RM__navIconStatic',
 

@@ -60,19 +60,20 @@ PopupViewButton = ({
             className={cx(
                 'PopupViewButton',
                 { 'PopupViewButton__close': isCloseButton,
-                  'PopupViewButton__side': isPreviousButton || isNextButton,
                   'PopupViewButton__previous': isPreviousButton,
                   'PopupViewButton__next': isNextButton,
+                  'PopupViewButton__side': isPreviousButton || isNextButton,
                   'PopupViewButton__shadow': isShadow },
 
-                isShadow ?
-                    'PopupViewButton__shadow' :
-                    'PopupViewButton__notShadow'
+                isShadow && 'PopupViewButton__shadow'
             )}
         >
             <Button {...other}
                 isLargeSize
                 buttonName={buttonName}
+                className={cx(
+                    'Button__popup'
+                )}
                 temporaryText={temporaryText}
                 accessKey={accessKey}
                 handleButtonClick={handleClick}
