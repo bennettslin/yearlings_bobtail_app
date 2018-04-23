@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import Button from '../Button/Button'
 import { OVERVIEW_TOGGLE_KEY } from '../../constants/access'
 import { OVERVIEW_OPTIONS } from '../../constants/options'
@@ -22,18 +24,23 @@ overviewTogglePropTypes = {
     selectedOverviewIndex: PropTypes.number.isRequired,
 
     // From props.
+    inLeftShelf: PropTypes.bool,
     isEnabled: PropTypes.bool.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired
 },
 
 OverviewToggle = ({
 
+    inLeftShelf,
     selectedOverviewIndex,
     isEnabled,
     handleOverviewToggle
 
 }) => (
-    <div className="OverviewToggle">
+    <div className={cx(
+        'OverviewToggle',
+        inLeftShelf && 'LeftShelf__child'
+    )}>
         <Button
             isCustomSize
             buttonName="overview"

@@ -30,6 +30,7 @@ LeftShelf = ({
         className
     )}>
         <OverviewToggle
+            inLeftShelf
             handleOverviewToggle={handleOverviewToggle}
         />
         <DotsSlideToggle

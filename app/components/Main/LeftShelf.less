@@ -33,8 +33,11 @@
     transition: opacity @animationDuration__default,
                 margin-left @animationDuration__default;
 
-    opacity: 1;
     margin-left: 0;
+    margin-bottom: @margin__scrollbar;
+
+    // Align with scores tips on other side.
+    padding: @js__margin__thin 0 @js__margin__thin @js__margin__thin;
 
     background-color: rgba(250, 200, 250, 0.5);
 
@@ -69,6 +72,19 @@
     & {
         opacity: 0;
         margin-left: -@width__overviewToggle;
+    }
+}
+
+.LeftShelf__child {
+
+    &:not(:last-child) {
+        margin-bottom: @js__margin__thick;
+    }
+
+    .RM__mobileNotPhone
+    &:not(:last-child) {
+        margin-top: @js__margin__thick;
+        margin-bottom: 0;
     }
 }
 

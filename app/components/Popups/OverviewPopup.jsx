@@ -29,7 +29,7 @@ const overviewPopupPropTypes = {
 
     // From parent.
     className: PropTypes.any,
-    inMain: PropTypes.bool.isRequired,
+    inMain: PropTypes.bool,
     handlePopupContainerClick: PropTypes.func.isRequired
 },
 

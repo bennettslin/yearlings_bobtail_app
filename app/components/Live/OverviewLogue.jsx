@@ -39,10 +39,10 @@ OverviewLogue = ({
 }) => (
     <div className={cx(
         'OverviewLogue',
-        'position__lyricColumn'
+        'position__lyricColumn',
+        'flexCentreContainer'
     )}>
         <OverviewPopup {...overviewPopupHandlers}
-            inMain={false}
         />
     </div>
 )

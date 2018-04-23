@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import Button from '../Button/Button'
 import { DOTS_SECTION_EXPAND_KEY } from '../../constants/access'
 
@@ -26,7 +28,10 @@ DotsSlideToggle = ({
     handleDotsSectionToggle
 
 }) => (
-    <div className="DotsSlideToggle">
+    <div className={cx(
+        'DotsSlideToggle',
+        'LeftShelf__child'
+    )}>
         <Button
             isLargeSize
             buttonName="dotsSlide"
