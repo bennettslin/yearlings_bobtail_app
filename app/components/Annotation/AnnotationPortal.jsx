@@ -115,10 +115,13 @@ class AnnotationPortal extends Component {
                 )}
             >
 
-                <Button
-                    buttonName={PORTAL}
-                    handleButtonClick={this._handlePortalClick}
-                />
+                {/* Wrap button so it won't get squished if text wraps. */}
+                <div className="AnnotationPortal__button">
+                    <Button
+                        buttonName={PORTAL}
+                        handleButtonClick={this._handlePortalClick}
+                    />
+                </div>
 
                 <div className="AnnotationPortal__text">
                     <div className="AnnotationPortal__title">

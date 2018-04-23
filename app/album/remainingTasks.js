@@ -1,12 +1,6 @@
 module.exports = [
 
     {
-        taskName: `Portal button width is squished when text wraps new line.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Revisit PureComponent`,
         workedHours: 0,
         neededHours: 3
