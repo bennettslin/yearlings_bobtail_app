@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Centre right verse line in verse bar`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Safari bugs: Menu animation wonky, nav book has width when hidden.`,
         workedHours: 0,
         neededHours: 2

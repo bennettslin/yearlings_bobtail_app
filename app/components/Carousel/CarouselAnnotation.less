@@ -1,3 +1,16 @@
+// This value *must* be the same in js.
+@minWidth__carouselAnnotation:
+    @width__annotationCard
+    + @paddingX__annotationCard * 2
+    + @paddingX__carouselAnnotation * 2
+    + @padding__annotation * 2;
+
+@minWidth__carouselAnnotation__mini:
+    @width__annotationCard__mini
+    + @paddingX__annotationCard * 2
+    + @paddingX__carouselAnnotation * 2
+    + @padding__annotation * 2;
+
 @paddingX__carouselAnnotation: 16px;
 
 @paddingX__carouselAnnotation__hidden:
@@ -37,8 +50,6 @@
         transition: none;
     }
 }
-
-// TODO: Revisit these.
 
 .Annotation__title__inCarousel {
     transition: max-height @animationDuration__default,

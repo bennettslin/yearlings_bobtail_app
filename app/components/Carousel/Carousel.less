@@ -2,23 +2,6 @@
 @import "./CarouselSelect.less";
 @import "./CarouselToggle.less";
 
-/**
- * These constants are used only to determine carousel right side margin. The
- * carousel select itself does not use them.
- */
-
-//  @width__carouselSelect:
-//  @js__length__iconLarge * 2
-//  + @js__margin__thin * 3;
-
-@width__carouselSelect__tablet:
-    @js__length__iconLarge__tablet * 2
-    + @js__margin__thin * 3;
-
-@width__carouselSelect__mini:
-    @js__length__iconLarge__mini * 2
-    + @js__margin__thin * 3;
-
 .Carousel {
     position: absolute;
     left: 0;
@@ -99,6 +82,18 @@
         padding-right:
             @js__width__uncannyValley;
     }
+
+    /**
+    * These constants are used only to determine carousel right side margin in
+    * mobile. The carousel select itself does not use them.
+    */
+    @width__carouselSelect__tablet:
+        @js__length__iconLarge__tablet * 2
+        + @js__margin__thin * 3;
+
+    @width__carouselSelect__mini:
+        @js__length__iconLarge__mini * 2
+        + @js__margin__thin * 3;
 
     .RM__tablet
     &:after {
