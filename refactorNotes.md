@@ -28,7 +28,6 @@ Carousel (Waiting on carousel rework to finalise. Revert dots when done.)
 Dot (/)
 Dots (/)
 DynamicSvg
-Icon
 Live
     Menu (/)
     OverviewLogue
@@ -68,7 +67,6 @@ SwitchManager
 # Whole day work
 
 Popup buttons and nav
-Live, LeftShelf
 
 # Rework projects
 Carousel/annotation
