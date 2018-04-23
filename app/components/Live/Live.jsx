@@ -233,7 +233,6 @@ class Live extends Component {
                 <LyricColumn {...lyricColumnHandlers} />
 
                 <PopupOverlaid
-                    audioHandlers={audioHandlers}
                     annotationPopupHandlers={annotationPopupHandlers}
                     titlePopupHandlers={titlePopupHandlers}
                     scorePopupHandlers={scorePopupHandlers}

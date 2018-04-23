@@ -8,7 +8,6 @@ import TitlePopup from '../Popups/TitlePopup'
 import WikiPopup from '../Popups/WikiPopup'
 
 const popupOverlaidPropTypes = {
-    audioHandlers: PropTypes.object.isRequired,
     annotationPopupHandlers: PropTypes.object.isRequired,
     titlePopupHandlers: PropTypes.object.isRequired,
     scorePopupHandlers: PropTypes.object.isRequired,
@@ -17,7 +16,6 @@ const popupOverlaidPropTypes = {
 
 const PopupOverlaid = ({
 
-    // audioHandlers,
     annotationPopupHandlers,
     titlePopupHandlers,
     scorePopupHandlers,
