@@ -19,12 +19,6 @@ module.exports = [
     },
 
     {
-        taskName: `Lyric text anchor in right column really wonky.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Dragging on slider initially drags times text?`,
         workedHours: 0,
         neededHours: 1

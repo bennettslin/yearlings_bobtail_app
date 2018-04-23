@@ -2822,4 +2822,9 @@ module.exports = [
         workedHours: 16,
         neededHours: 16
     },
+    {
+        taskName: `Lyric text anchor in right column really wonky.`,
+        workedHours: 1,
+        neededHours: 1
+    }
 ]
