@@ -7,25 +7,33 @@
 // This value *must* be the same in js.
 @js__paddingSide__popupContent: 20px;
 
-@full-subfield-margin: @js__length__iconLarge;
+@margin__popup__fullSize: @js__length__iconLarge;
 
-@width__popupAnnotation: @width__annotationCard + @paddingX__annotationCard * 2 + @js__paddingSide__popupContent * 2;
-@width__popupAnnotation__mini: @width__annotationCard__mini + @paddingX__annotationCard * 2 + @js__paddingSide__popupContent * 2;
-@width__popupAnnotation__phone: @width__annotationCard__phone + @paddingX__annotationCard * 2 + @js__paddingSide__popupContent * 2;
+@width__popupAnnotation:
+    @width__annotationCard
+    + @paddingX__annotationCard * 2
+    + @js__paddingSide__popupContent * 2;
 
-@popup-transition-duration-in: @animationDuration__slow;
-@popup-transition-duration-out: @animationDuration__fast;
+@width__popupAnnotation__mini:
+    @width__annotationCard__mini
+    + @paddingX__annotationCard * 2
+    + @js__paddingSide__popupContent * 2;
+
+@width__popupAnnotation__phone:
+    @width__annotationCard__phone
+    + @paddingX__annotationCard * 2
+    + @js__paddingSide__popupContent * 2;
 
 @text-PopupView__content-padding: 15px;
 
 .Popup__visible {
-    transition: opacity @popup-transition-duration-in;
+    transition: opacity @animationDuration__slow;
     opacity: 1;
 }
 
 .Popup__invisible,
 .RM__overlayShown .Popup__displaysNotInOverlay {
-    transition: opacity @popup-transition-duration-out;
+    transition: opacity @animationDuration__fast;
     opacity: 0;
 }
 
@@ -40,8 +48,8 @@
 
 .PopupView__fullSize {
     max-width: @js__width__laptop;
-    width: ~"calc(100% - @{full-subfield-margin} * 2.5)";
-    height: ~"calc(100% - @{full-subfield-margin})";
+    width: ~"calc(100% - @{margin__popup__fullSize} * 2.5)";
+    height: ~"calc(100% - @{margin__popup__fullSize})";
 }
 
 .PopupView__cardSize {
@@ -65,14 +73,14 @@
 
     .Popup__visible
     & {
-        animation: bounceIn @popup-transition-duration-in;
+        animation: bounceIn @animationDuration__slow;
     }
 
     .Popup__invisible
     &,
     .RM__overlayShown .Popup__displaysNotInOverlay
     & {
-        animation: bounceOut @popup-transition-duration-out;
+        animation: bounceOut @animationDuration__fast;
     }
 }
 
@@ -80,14 +88,14 @@
 
     .Popup__visible
     & {
-        animation: shrinkIn @popup-transition-duration-in;
+        animation: shrinkIn @animationDuration__slow;
     }
 
     .Popup__invisible
     &,
     .RM__overlayShown .Popup__displaysNotInOverlay
     & {
-        animation: shrinkOut @popup-transition-duration-out;
+        animation: shrinkOut @animationDuration__fast;
     }
 }
 
