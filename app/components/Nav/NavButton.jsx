@@ -120,7 +120,8 @@ class NavButton extends Component {
                 )}
             >
                 <Button {...other}
-                    buttonName={isSelected ? 'navSelected' : 'nav'}
+                    buttonName="nav"
+                    isIndexSelected={isSelected}
                     showAccessIconIfAccessOn={isAccessed && isNavigable}
                     accessKey={isToggle ? '' : NAVIGATION_ENTER_KEY}
                     temporaryText={temporaryText}

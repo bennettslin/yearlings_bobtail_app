@@ -20,6 +20,10 @@ class Button extends Component {
         isCustomSize: PropTypes.bool,
         isSmallSize: PropTypes.bool,
         isLargeSize: PropTypes.bool,
+
+        // Passed by nav button.
+        isIndexSelected: PropTypes.bool,
+
         isDisabled: PropTypes.bool,
         showAccessIconIfAccessOn: PropTypes.bool.isRequired,
         accessKey: PropTypes.string,
@@ -46,6 +50,7 @@ class Button extends Component {
 
         const { buttonName,
                 className,
+                isIndexSelected,
                 isCustomSize,
                 isSmallSize,
                 isLargeSize,
@@ -64,9 +69,9 @@ class Button extends Component {
                 className={cx(
                     'Button',
                     `Button__${buttonName}`,
-                    isCustomSize && `Button__${buttonName}Size`,
 
-                    { 'Button__enabled': !isDisabled,
+                    { 'Button__indexSelected': isIndexSelected,
+                      'Button__enabled': !isDisabled,
                       'Button__defaultSize': isDefaultSize,
                       'Button__smallSize': isSmallSize,
                       'Button__largeSize': isLargeSize },
