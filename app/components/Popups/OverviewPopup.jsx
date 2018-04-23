@@ -3,6 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
 
 import OverviewSection from '../Overview/Overview'
 import Popup from '../Popup/Popup'
@@ -69,7 +70,10 @@ OverviewPopup = ({
             bounceAnimate
             hasNarrowPadding
             popupName="overview"
-            className={className}
+            className={cx(
+                inMain ? 'OverviewPopup__inMain' : 'OverviewPopup__inLogue',
+                className
+            )}
             noFlexCentre={inMain}
             isVisible={isVisible}
             handlePopupContainerClick={handlePopupContainerClick}

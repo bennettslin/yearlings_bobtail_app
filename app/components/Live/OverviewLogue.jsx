@@ -42,8 +42,7 @@ OverviewLogue = ({
         'position__lyricColumn',
         'flexCentreContainer'
     )}>
-        <OverviewPopup {...overviewPopupHandlers}
-        />
+        <OverviewPopup {...overviewPopupHandlers} />
     </div>
 )
 
