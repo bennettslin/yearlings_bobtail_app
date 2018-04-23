@@ -1,96 +1,77 @@
-/* TODO: Revisit Menu when doing refactor here. */
+@js__margin__scoresTipsButton: 10px;
 
-@dots-overview-padding: 8px;
+// These values are used to determine the min-width of the menu.
+@width__childScoresTips:
+    @js__length__iconLarge * 2
+    + @js__margin__thin * 2
+    + @js__margin__scoresTipsButton;
 
-// These values *must* be the same in js.
-@scores-tips-padding: @js__margin__thin;
-@scores-tips-margin: 10px;
+@width__childScoresTips__tablet:
+    @js__length__iconLarge__tablet * 2
+    + @js__margin__thin * 2
+    + @js__margin__scoresTipsButton;
 
-@width__childScoresTips: 2 * @js__length__iconLarge + 2 * @scores-tips-padding + @scores-tips-margin;
-@scores-tips-RM__tablet: 2 * @js__length__iconLarge__tablet + 2 * @scores-tips-padding + @scores-tips-margin;
-@scores-tips-RM__mini: 2 * @js__length__iconLarge__mini + 2 * @scores-tips-padding + @scores-tips-margin;
-@scores-tips-RM__phone: 2 * @js__length__icon + 2 * @scores-tips-padding + @scores-tips-margin;
+@width__childScoresTips__mini:
+    @js__length__iconLarge__mini * 2
+    + @js__margin__thin * 2
+    + @js__margin__scoresTipsButton;
 
 .ScoresTips {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: @scores-tips-padding;
+    padding: @js__margin__thin;
     background-color: #efd;
-
-    .Button {
-        // Ensure that these buttons are above the carousel.
-        z-index: @zIndex__centreFieldChild;
-
-        transition: transform @animationDuration__default,
-                    opacity @animationDuration__default;
-    }
-}
-
-.ScoresTips__inMenu {
-    .Button:first-child {
-        margin-right: @scores-tips-margin;
-    }
 }
 
 .ScoresTips__inMain {
     flex-direction: column;
     align-items: flex-start;
 
-    .Button:first-child {
-        margin-bottom: @scores-tips-margin;
-    }
-
     .RM__mobile
     & {
         position: absolute;
-        transition: right @animationDuration__default;
+        right:
+            -@js__length__iconLarge__tablet
+            - @js__margin__thin * 2;
+        transition:
+            right @animationDuration__default;
+    }
+
+    .RM__mobileNotPhone
+    & {
+        bottom: @margin__scrollbar;
+    }
+
+    .RM__mobile.RM__carouselNavShowable.RM__dotsHidden
+    & {
         right: 0;
-        bottom: @dots-overview-padding;
     }
 }
 
-.RM__mobile {
+.ScoresTipsButton {
+    // Ensure that these buttons are above the carousel.
+    z-index: @zIndex__centreFieldChild;
 
-    &.RM__mini {
-        // Affects section in main only.
-        &.RM__lyricExpanded, &.RM__overviewShown, &.RM__tipsShown, &.RM__annotationShown.RM__navExpanded, &.RM__dotsShown {
-            .ScoresTips {
-                right: -@scores-tips-RM__mini;
-            }
-        }
+    transition:
+        transform @animationDuration__default,
+        opacity @animationDuration__default;
+
+    .ScoresTips__inMenu
+    &:not(:last-child) {
+        margin-right: @js__margin__scoresTipsButton;
     }
 
-    &.RM__phone {
-        &.RM__lyricExpanded, &.RM__overviewShown, &.RM__tipsShown, &.RM__annotationShown.RM__navExpanded, &.RM__dotsShown {
-            .ScoresTips {
-                right: -@scores-tips-RM__phone;
-            }
-        }
-
-        // In phone, section is always in main.
-        .ScoresTips {
-            bottom: auto;
-        }
+    .ScoresTips__inMain
+    &:not(:last-child) {
+        margin-bottom: @js__margin__scoresTipsButton;
     }
-}
 
-// I don't understand this.
-.RM__logue,
-.RM__song.RM__overviewShown.RM__scoresTipsMain {
-    .ScoresTips {
-
-        .Button {
-            transform: scale(0);
-            opacity: 0;
-        }
-    }
-}
-
-.RM__song {
-    .ScoresTips {
-        .Button {
-            transform: scale(1);
-        }
+    .RM__logue
+    &,
+    .RM__song.RM__overviewShown.RM__scoresTipsMain
+    & {
+        transform: scale(0);
+        opacity: 0;
     }
 }

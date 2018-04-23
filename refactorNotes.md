@@ -51,7 +51,7 @@ Popups
     TitlePopup
     WikiPopup
 Score (/)
-ScoresTips (Move to Main.)
+ScoresTips (/)
 Slider (Now just waiting on rework.)
 Stage (/) (Just rename stuff when picking back up again.)
 Text (Fix bugs.)
@@ -70,7 +70,6 @@ SwitchManager
 
 # Whole day work
 
-Carousel/annotation
 Popup buttons and nav
 Live, LeftShelf
 

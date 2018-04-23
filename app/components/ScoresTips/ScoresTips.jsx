@@ -93,6 +93,7 @@ ScoresTips = ({
                 <Button
                     isLargeSize
                     buttonName="scores"
+                    className="ScoresTipsButton"
                     temporaryText={selectedScoreIndex}
                     accessKey={SCORE_TOGGLE_KEY}
                     isDisabled={isScoreDisabled}
@@ -102,6 +103,7 @@ ScoresTips = ({
             <Button
                 isLargeSize
                 buttonName="tips"
+                className="ScoresTipsButton"
                 temporaryText={TIPS_OPTIONS[selectedTipsIndex]}
                 accessKey={TIPS_TOGGLE_KEY}
                 handleButtonClick={handleTipsToggle}
