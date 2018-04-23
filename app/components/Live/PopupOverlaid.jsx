@@ -28,19 +28,10 @@ const PopupOverlaid = ({
         'PopupOverlaid',
         'absoluteFullContainer'
     )}>
-
-        <div className={cx(
-            'PopupOverlaid__child',
-            'height__mainColumn'
-        )}>
-            <AnnotationPopup {...annotationPopupHandlers}
-                isOverlayAnnotation
-            />
-            <TitlePopup {...titlePopupHandlers} />
-            <ScorePopup {...scorePopupHandlers} />
-            <WikiPopup {...wikiPopupHandlers} />
-        </div>
-
+        <AnnotationPopup {...annotationPopupHandlers} />
+        <TitlePopup {...titlePopupHandlers} />
+        <ScorePopup {...scorePopupHandlers} />
+        <WikiPopup {...wikiPopupHandlers} />
     </div>
 )
 

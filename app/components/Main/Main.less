@@ -4,9 +4,33 @@
 
 .Main {
     position: absolute;
+    top: @js__height__menu;
     left: 0;
 
     flex-grow: 1;
+
+    .RM__mobile
+    & {
+        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu})";
+    }
+
+    .RM__desktop
+    &,
+    .RM__lyricHeightless
+    & {
+        height: ~"calc(100% - @{js__height__menu})";
+    }
+
+    .RM__phone
+    & {
+        top: @js__height__menu__phone;
+        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu__phone})";
+    }
+
+    .RM__phone.RM__lyricHeightless
+    & {
+        height: ~"calc(100% - @{js__height__menu__phone})";
+    }
 }
 
 .Main__flexContainer {
@@ -34,32 +58,5 @@
     .RM__mobile
     & {
         max-width: 100%;
-    }
-}
-
-.height__mainColumn {
-    top: @js__height__menu;
-
-    .RM__mobile
-    & {
-        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu})";
-    }
-
-    .RM__desktop
-    &,
-    .RM__lyricHeightless
-    & {
-        height: ~"calc(100% - @{js__height__menu})";
-    }
-
-    .RM__phone
-    & {
-        top: @js__height__menu__phone;
-        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu__phone})";
-    }
-
-    .RM__phone.RM__lyricHeightless
-    & {
-        height: ~"calc(100% - @{js__height__menu__phone})";
     }
 }

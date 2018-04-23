@@ -72,13 +72,14 @@ Main = ({
     return (
         <div className={cx(
             'Main',
-            'width__mainColumn',
-            'height__mainColumn'
+            'width__mainColumn'
         )}>
 
             <Stage />
 
-            <AnnotationPopup {...annotationPopupHandlers} />
+            <AnnotationPopup {...annotationPopupHandlers}
+                inMain
+            />
 
             <Carousel {...carouselSectionHandlers} />
 

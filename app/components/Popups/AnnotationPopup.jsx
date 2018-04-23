@@ -28,10 +28,6 @@ const mapStateToProps = ({
     selectedWikiIndex
 })
 
-const annotationPopupDefaultProps = {
-    isOverlayAnnotation: false
-}
-
 const annotationPopupPropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
@@ -45,7 +41,7 @@ const annotationPopupPropTypes = {
     selectedWikiIndex: PropTypes.number.isRequired,
 
     // From parent.
-    isOverlayAnnotation: PropTypes.bool.isRequired,
+    inMain: PropTypes.bool,
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired
@@ -56,7 +52,7 @@ AnnotationPopup = ({
     deviceIndex,
     isLyricExpanded,
     isHeavyRenderReady,
-    isOverlayAnnotation,
+    inMain,
 
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
@@ -81,22 +77,23 @@ AnnotationPopup = ({
      * Annotation popup is told whether it is in overlay. It then checks
      * data helper to decide whether to render itself.
      */
-    if (isOverlayAnnotation !== isOverlayingAnnotation) {
+    if (Boolean(inMain) === isOverlayingAnnotation) {
         return null
 
     } else {
-        const isVisible = isHeavyRenderReady &&
-                          !!selectedAnnotationIndex &&
+        const isVisible =
+                isHeavyRenderReady &&
+                !!selectedAnnotationIndex &&
 
-                          /**
-                           * If an annotation is selected, always show in popup
-                           * if it's a phone or lyric is expanded.
-                           */
-                          (!selectedCarouselNavIndex || isPhone || isLyricExpanded) &&
+                /**
+                 * If an annotation is selected, always show in popupif it's a
+                 * phone or lyric is expanded.
+                 */
+                (!selectedCarouselNavIndex || isPhone || isLyricExpanded) &&
 
-                          !selectedScoreIndex &&
-                          !selectedTitleIndex &&
-                          !selectedWikiIndex
+                !selectedScoreIndex &&
+                !selectedTitleIndex &&
+                !selectedWikiIndex
 
         /**
          * Pass annotation object from state so that it persists while popup is
@@ -111,8 +108,8 @@ AnnotationPopup = ({
                 popupName="annotation"
                 isVisible={isVisible}
                 displaysInOverlay={isOverlayingAnnotation}
-                handlePreviousClick={handleAnnotationPrevious}
                 handleNextClick={handleAnnotationNext}
+                handlePreviousClick={handleAnnotationPrevious}
                 handlePopupContainerClick={handlePopupContainerClick}
             >
                 <Annotation {...other}
@@ -123,7 +120,6 @@ AnnotationPopup = ({
     }
 }
 
-AnnotationPopup.defaultProps = annotationPopupDefaultProps
 AnnotationPopup.propTypes = annotationPopupPropTypes
 
 export default connect(mapStateToProps)(AnnotationPopup)

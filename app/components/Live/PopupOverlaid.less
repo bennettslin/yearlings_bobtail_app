@@ -1,12 +1,21 @@
 .PopupOverlaid {
 
     // Prevent lyric scrolling from pushing app offscreen.
-    overflow: hidden;
+    // overflow: hidden;
 
     // Centre the audio section.
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    top: @js__height__menu;
+
+    height: ~"calc(100% - @{js__height__menu})";
+
+    .RM__phone
+    & {
+        height: ~"calc(100% - @{js__height__menu__phone})";
+    }
 
     .PopupView__content {
         box-sizing: border-box;
@@ -19,10 +28,4 @@
             box-shadow: @boxShadow__popupDarker;
         }
     }
-}
-
-.PopupOverlaid__child {
-    position: relative;
-    width: 100%;
-    flex-grow: 1;
 }
