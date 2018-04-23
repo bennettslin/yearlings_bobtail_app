@@ -70,6 +70,8 @@ class Button extends Component {
                     'Button',
                     `Button__${buttonName}`,
 
+                    isCustomSize && `Button__${buttonName}Size`,
+
                     { 'Button__indexSelected': isIndexSelected,
                       'Button__enabled': !isDisabled,
                       'Button__defaultSize': isDefaultSize,
