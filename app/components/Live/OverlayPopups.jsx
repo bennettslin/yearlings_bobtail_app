@@ -14,7 +14,7 @@ const popupOverlaidPropTypes = {
     wikiPopupHandlers: PropTypes.object.isRequired
 }
 
-const PopupOverlaid = ({
+const OverlayPopups = ({
 
     annotationPopupHandlers,
     titlePopupHandlers,
@@ -23,7 +23,7 @@ const PopupOverlaid = ({
 
 }) => (
     <div className={cx(
-        'PopupOverlaid',
+        'OverlayPopups',
         'absoluteFullContainer'
     )}>
         <AnnotationPopup {...annotationPopupHandlers} />
@@ -33,6 +33,6 @@ const PopupOverlaid = ({
     </div>
 )
 
-PopupOverlaid.propTypes = popupOverlaidPropTypes
+OverlayPopups.propTypes = popupOverlaidPropTypes
 
-export default PopupOverlaid
+export default OverlayPopups

@@ -1,30 +1,9 @@
-@import "./PopupButton.less";
+@import "./PopupViewButton.less";
+@import "./PopupView.less";
 
 @import "../Popups/AnnotationPopup.less";
 @import "../Popups/OverviewPopup.less";
 @import "../Popups/TipsPopup.less";
-
-// This value *must* be the same in js.
-@js__paddingSide__popupContent: 20px;
-
-@margin__popup__fullSize: @js__length__iconLarge;
-
-@width__popupAnnotation:
-    @width__annotationCard
-    + @paddingX__annotationCard * 2
-    + @js__paddingSide__popupContent * 2;
-
-@width__popupAnnotation__mini:
-    @width__annotationCard__mini
-    + @paddingX__annotationCard * 2
-    + @js__paddingSide__popupContent * 2;
-
-@width__popupAnnotation__phone:
-    @width__annotationCard__phone
-    + @paddingX__annotationCard * 2
-    + @js__paddingSide__popupContent * 2;
-
-@text-PopupView__content-padding: 15px;
 
 .Popup__visible {
     transition: opacity @animationDuration__slow;
@@ -32,7 +11,9 @@
 }
 
 .Popup__invisible,
-.RM__overlayShown .Popup__displaysNotInOverlay {
+
+.RM__overlayShown
+.Popup__displaysNotInOverlay {
     transition: opacity @animationDuration__fast;
     opacity: 0;
 }
@@ -45,117 +26,3 @@
     // Allows the popup to prevent a click inside from closing it.
     z-index: @zIndex__popupOverlayContent;
 }
-
-.PopupView__fullSize {
-    max-width: @js__width__laptop;
-    width: ~"calc(100% - @{margin__popup__fullSize} * 2.5)";
-    height: ~"calc(100% - @{margin__popup__fullSize})";
-}
-
-.PopupView__cardSize {
-    width: @width__popupAnnotation;
-    max-width: @width__popupAnnotation;
-
-    .RM__mini
-    & {
-        // Multiplier is .9, just like for lyric text in mini.
-        max-width: @width__popupAnnotation__mini;
-    }
-
-    .RM__phone
-    & {
-        // Multiplier is .98, just like for lyric text in phone.
-        max-width: @width__popupAnnotation__phone;
-    }
-}
-
-.PopupView__bounceAnimate {
-
-    .Popup__visible
-    & {
-        animation: bounceIn @animationDuration__slow;
-    }
-
-    .Popup__invisible
-    &,
-    .RM__overlayShown .Popup__displaysNotInOverlay
-    & {
-        animation: bounceOut @animationDuration__fast;
-    }
-}
-
-.PopupView__shrinkAnimate {
-
-    .Popup__visible
-    & {
-        animation: shrinkIn @animationDuration__slow;
-    }
-
-    .Popup__invisible
-    &,
-    .RM__overlayShown .Popup__displaysNotInOverlay
-    & {
-        animation: shrinkOut @animationDuration__fast;
-    }
-}
-
-.PopupView__content {
-    background-color: @bgColour__verse__odd;
-
-    .Popup__displaysNotInOverlay
-    & {
-        box-shadow: @boxShadow__popup;
-    }
-
-    .Popup__displaysInOverlay
-    & {
-        box-shadow: @boxShadow__popupDarker;
-    }
-}
-
-.PopupView__content__narrowPadding {
-    padding: @text-PopupView__content-padding;
-}
-
-.PopupView__content__widePadding {
-
-    // Wider padding to accommodate popup buttons.
-    padding: @js__paddingSide__popupContent;
-}
-
-@margin__popupView__mini: 10px;
-
-// TODO: Revisit mobile sizing.
-
-// .RM__mobile {
-
-//     &:not(.RM__tablet) {
-//         .PopupView__fullSize {
-//             width: ~"calc(100% - @{margin__popupView__mini} * 2)";
-//             height: ~"calc(100% - @{js__length__icon})";
-//         }
-
-//         &.RM__phone {
-//             .Popup__displaysInOverlay {
-//                 .PopupView {
-//                     // Make side margin in phone just that much thinner.
-//                     width: ~"calc(100% - @{margin__popupView__mini})";
-//                 }
-//             }
-
-//             &.RM__lyricHeightless {
-//                 .PopupView__fullSize {
-//                     height: ~"calc(100% - @{margin__popupView__mini})";
-//                 }
-//             }
-//         }
-
-//         // Reverse width and height when width is greater than height.
-//         &.RM__lyricHeightless {
-//             .PopupView__fullSize {
-//                 width: ~"calc(100% - @{js__length__icon} * 2)";
-//                 height: ~"calc(100% - @{margin__popupView__mini})";
-//             }
-//         }
-//     }
-// }

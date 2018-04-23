@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import PopupButton from './PopupButton'
 
-// import { CLOSE_POPUP_BUTTON,
-//          PREVIOUS_POPUP_BUTTON,
-//          NEXT_POPUP_BUTTON } from '../../constants/options'
+import PopupView from './PopupView'
 
 /*************
  * CONTAINER *
@@ -105,12 +102,13 @@ class Popup extends Component {
             { isDisplayed } = this.state
 
         return (
-            <span
+            <div
                 className={cx(
                     `Popup__${popupName}`,
 
                     isVisible ? 'Popup__visible' : 'Popup__invisible',
                     isDisplayed ? 'Popup__displayed' : 'Popup__notDisplayed',
+
                     displaysInOverlay ?
                         'Popup__displaysInOverlay' : 'Popup__displaysNotInOverlay',
 
@@ -130,118 +128,9 @@ class Popup extends Component {
                     handleNextClick={handleNextClick}
                     handleContainerClick={this._handlePopupContainerClick}
                 />
-            </span>
+            </div>
         )
     }
 }
-
-/****************
- * PRESENTATION *
- ****************/
-
-const popupViewDefaultProps = {
-    showClose: false,
-    showArrows: false
-},
-
-popupViewPropTypes = {
-    popupName: PropTypes.string.isRequired,
-    bounceAnimate: PropTypes.bool,
-    shrinkAnimate: PropTypes.bool,
-    isCardSize: PropTypes.bool,
-    isFullSize: PropTypes.bool,
-    hasNarrowPadding: PropTypes.bool,
-    hasWidePadding: PropTypes.bool,
-    showClose: PropTypes.bool.isRequired,
-    showArrows: PropTypes.bool.isRequired,
-    handleCloseClick: PropTypes.func,
-    handlePreviousClick: PropTypes.func,
-    handleNextClick: PropTypes.func,
-    handleContainerClick: PropTypes.func.isRequired,
-    children: PropTypes.element.isRequired
-},
-
-PopupView = ({
-
-    popupName,
-    bounceAnimate,
-    shrinkAnimate,
-    isCardSize,
-    isFullSize,
-    hasNarrowPadding,
-    hasWidePadding,
-    showClose,
-    showArrows,
-    handleCloseClick,
-    handlePreviousClick,
-    handleNextClick,
-    handleContainerClick,
-    children
-
-}) => (
-    <div className={cx(
-        // 'PopupView',
-        `PopupView__${popupName}`,
-
-        { 'PopupView__bounceAnimate': bounceAnimate,
-          'PopupView__shrinkAnimate': shrinkAnimate,
-          'PopupView__cardSize': isCardSize,
-          'PopupView__fullSize': isFullSize }
-    )}>
-        {showClose && (
-            <PopupButton
-                isShadow
-                isCloseButton
-            />
-        )}
-        {showClose && (
-            <PopupButton
-                isShadow
-                isPreviousButton
-            />
-        )}
-        {showClose && (
-            <PopupButton
-                isShadow
-                isNextButton
-            />
-        )}
-        <div
-            className={cx(
-                'PopupView__content',
-                { 'PopupView__content__narrowPadding': hasNarrowPadding,
-                  'PopupView__content__widePadding': hasWidePadding }
-            )}
-            onClick={handleContainerClick}
-            onTouchStart={handleContainerClick}
-        >
-            {children}
-            {showClose &&
-                <PopupButton
-                    accessKeysShown
-                    isCloseButton
-                    handlePopupButtonClick={handleCloseClick}
-                />
-            }
-            {showArrows &&
-                <PopupButton
-                    accessKeysShown
-                    isPreviousButton
-                    handlePopupButtonClick={handlePreviousClick}
-                />
-            }
-            {showArrows &&
-                <PopupButton
-                    accessKeysShown
-                    isNextButton
-                    handlePopupButtonClick={handleNextClick}
-                />
-            }
-        </div>
-    </div>
-)
-
-PopupView.defaultProps = popupViewDefaultProps
-PopupView.propTypes = popupViewPropTypes
 
 export default Popup

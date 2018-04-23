@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import Theatre from '../Theatre/Theatre'
 import Main from '../Main/Main'
 import Menu from './Menu'
-import PopupOverlaid from './PopupOverlaid'
+import OverlayPopups from './OverlayPopups'
 
 import OverviewLogue from './OverviewLogue'
 import LyricColumn from '../LyricColumn/LyricColumn'
@@ -232,7 +232,7 @@ class Live extends Component {
 
                 <LyricColumn {...lyricColumnHandlers} />
 
-                <PopupOverlaid
+                <OverlayPopups
                     annotationPopupHandlers={annotationPopupHandlers}
                     titlePopupHandlers={titlePopupHandlers}
                     scorePopupHandlers={scorePopupHandlers}

@@ -1,0 +1,64 @@
+@offset__popupButton: 0.56;
+
+.PopupViewButton {
+    position: absolute;
+}
+
+.PopupViewButton__shadow {
+    box-shadow: @boxShadow__popup;
+
+    .RM__overlayShown
+    & {
+        box-shadow: @boxShadow__popupDarker;
+    }
+}
+
+// Apply box shadow to button itself, so that it animates as well.
+.Button {
+    .PopupViewButton__notShadow
+    & {
+        box-shadow: @boxShadow__popupButton;
+    }
+}
+
+.PopupViewButton__close {
+    top: -@js__length__iconLarge * @offset__popupButton;
+    left: -@js__length__iconLarge * @offset__popupButton;
+}
+
+.PopupViewButton__side {
+    top: @js__length__iconLarge * 0.2;
+
+    .RM__overlayShown
+    & {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.PopupViewButton__previous {
+    left: -@js__length__iconLarge * @offset__popupButton;
+}
+
+.PopupViewButton__next {
+    right: -@js__length__iconLarge * @offset__popupButton;
+}
+
+.RM__phone,
+.RM__mobile.RM__annotationSide {
+
+    .PopupViewButton__side {
+        // Override default styling.
+        transform: none;
+        top: auto;
+        bottom: -@js__length__icon * @offset__popupButton;
+    }
+
+    .PopupViewButton__previous {
+        left: @js__length__icon * 0.2;
+    }
+
+    .PopupViewButton__next {
+        right: @js__length__icon * 0.2;
+    }
+}
