@@ -64,7 +64,6 @@ class Button extends Component {
                 className={cx(
                     'Button',
                     `Button__${buttonName}`,
-
                     isCustomSize && `Button__${buttonName}Size`,
 
                     { 'Button__enabled': !isDisabled,

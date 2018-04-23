@@ -1,8 +1,7 @@
 @NavPanel-length: 100px;
 
-.NavPanel-block {
+.NavPanel {
     position: absolute;
-    left: 50%;
 
     /**
      * Arbitrary for now. However, make sure that it is never too wide that the
@@ -18,24 +17,13 @@
 
     opacity: 0;
 
+    white-space: nowrap;
+
     transition: opacity @animationDuration__fast,
                 transform @animationDuration__fast;
 
     // Needed to prevent button hovering and selecting wonkiness.
     z-index: @zIndex__negative;
-
-    &.centred {
-        transform: translateX(-50%);
-    }
-
-    &.leftmost {
-        left: 0;
-    }
-
-    &.rightmost {
-        left: auto;
-        right: 0;
-    }
 
     .RM__desktop
     & {
@@ -50,6 +38,19 @@
     }
 }
 
+.NavPanel__default {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.NavPanel__leftmost {
+    left: 0;
+}
+
+.NavPanel__rightmost {
+    right: 0;
+}
+
 .RM__carouselNavShowable.RM__navExpanded {
 
     // Show panel if access highlighted only when access is on.
@@ -57,7 +58,7 @@
 
     // Show panel upon hover only when access is off.
     &.RM__accessOff .Button__nav:hover {
-        .NavPanel-block {
+        .NavPanel {
             opacity: 1;
             z-index: @zIndex__navCustomSubfield;
         }
@@ -65,7 +66,7 @@
 
     // Show panel when button is active, and give it the higher z-index.
     .Button__nav:active {
-        .NavPanel-block {
+        .NavPanel {
             opacity: 1;
             z-index: @zIndex__centreFieldChild;
 
@@ -80,15 +81,11 @@
     }
 }
 
-.NavPanel {
-    white-space: nowrap;
-}
-
-.NavPanel-image {
+.NavPanelImage {
     background-color: rgba(200, 200, 100, 0.5);
 }
 
-.NavPanel-title {
+.NavPanelTitle {
     position: relative;
     width: 100%;
     text-align: center;

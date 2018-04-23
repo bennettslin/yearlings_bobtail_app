@@ -33,21 +33,19 @@ NavPanel = ({
 
     return (
         <div className={cx(
-            'NavPanel-block',
-            { 'leftmost': isLeftmost,
-              'rightmost': isRightmost,
-              'centred': !isLeftmost && !isRightmost }
+            'NavPanel',
+            { 'NavPanel__leftmost': isLeftmost,
+              'NavPanel__rightmost': isRightmost,
+              'NavPanel__default': !isLeftmost && !isRightmost }
             )}
         >
-            <div className="NavPanel">
-                <div className={cx(
-                    'NavPanel-image',
-                    'absoluteFullContainer'
-                )}>
-                </div>
-                <div className="NavPanel-title">
-                    {panelTitle}
-                </div>
+            <div className={cx(
+                'NavPanelImage',
+                'absoluteFullContainer'
+            )}>
+            </div>
+            <div className="NavPanelTitle">
+                {panelTitle}
             </div>
         </div>
     )
