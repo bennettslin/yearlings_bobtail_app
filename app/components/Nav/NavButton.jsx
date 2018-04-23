@@ -128,6 +128,7 @@ class NavButton extends Component {
                     handleButtonClick={this._handleButtonClick}
                 >
                     <NavPanel
+                        isAccessed={isAccessed && isNavigable}
                         isLeftmost={isLeftmost}
                         isRightmost={isRightmost}
                         bookIndex={bookIndex}

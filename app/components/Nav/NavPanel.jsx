@@ -8,6 +8,7 @@ import { getSongTitle } from '../../helpers/dataHelper'
 
 const navPanelPropTypes = {
     // From parent.
+    isAccessed: PropTypes.bool,
     isLeftmost: PropTypes.bool,
     isRightmost: PropTypes.bool,
     bookIndex: PropTypes.number,
@@ -17,6 +18,7 @@ const navPanelPropTypes = {
 NavPanel = ({
 
     // From props.
+    isAccessed,
     isLeftmost,
     isRightmost,
     bookIndex,
@@ -34,11 +36,11 @@ NavPanel = ({
     return (
         <div className={cx(
             'NavPanel',
-            { 'NavPanel__leftmost': isLeftmost,
+            { 'NavPanel__isAccessed': isAccessed,
+              'NavPanel__leftmost': isLeftmost,
               'NavPanel__rightmost': isRightmost,
               'NavPanel__default': !isLeftmost && !isRightmost }
-            )}
-        >
+        )}>
             <div className={cx(
                 'NavPanelImage',
                 'absoluteFullContainer'

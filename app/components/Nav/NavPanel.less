@@ -10,10 +10,10 @@
     width: @NavPanel-length;
     height: @NavPanel-length;
 
-    border: 1px solid purple;
-
     display: flex;
     flex-direction: column;
+
+    border: 1px solid purple;
 
     opacity: 0;
 
@@ -36,6 +36,15 @@
         top: 100%;
         margin-top: @js__margin__thin;
     }
+
+    .RM__accessOn.RM__carouselNavShowable.RM__navExpanded
+    &.NavPanel__isAccessed,
+    .RM__accessOff.RM__carouselNavShowable.RM__navExpanded
+    .Button__nav:hover
+    & {
+        opacity: 1;
+        z-index: @zIndex__navCustomSubfield;
+    }
 }
 
 .NavPanel__default {
@@ -49,36 +58,6 @@
 
 .NavPanel__rightmost {
     right: 0;
-}
-
-.RM__carouselNavShowable.RM__navExpanded {
-
-    // Show panel if access highlighted only when access is on.
-    &.RM__accessOn .accessHighlighted .accessKeysShown,
-
-    // Show panel upon hover only when access is off.
-    &.RM__accessOff .Button__nav:hover {
-        .NavPanel {
-            opacity: 1;
-            z-index: @zIndex__navCustomSubfield;
-        }
-    }
-
-    // Show panel when button is active, and give it the higher z-index.
-    .Button__nav:active {
-        .NavPanel {
-            opacity: 1;
-            z-index: @zIndex__centreFieldChild;
-
-            &.centred {
-                transform: translateX(-50%) scale(1.1);
-            }
-
-            &.leftmost, &.rightmost {
-                transform: scale(1.1);
-            }
-        }
-    }
 }
 
 .NavPanelImage {

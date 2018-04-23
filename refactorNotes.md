@@ -32,7 +32,7 @@ Live (/)
 Lyric (/)
 LyricColumn (/)
 Main (/)
-Nav (Need to consider panels and consolidate responsive.)
+Nav (/)
 Overview (Waiting on overview in phone and heightless.)
 Players (/)
 Popup (Waiting on popup rework to finalise.)
@@ -67,3 +67,6 @@ Popup buttons
 # Rework projects
 Carousel/annotation
 Popup positioning on devices
+
+# Low priority
+Nav (reorganise responsive styling.)
