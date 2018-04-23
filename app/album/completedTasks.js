@@ -2817,4 +2817,9 @@ module.exports = [
         workedHours: 20,
         neededHours: 20
     },
+    {
+        taskName: `Another weekend of refactoring.`,
+        workedHours: 16,
+        neededHours: 16
+    },
 ]

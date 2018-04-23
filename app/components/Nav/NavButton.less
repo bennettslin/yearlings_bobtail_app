@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
 
-    overflow: hidden;
+    // overflow: hidden;
 
     .NavColumn__hidden
     .NavBookSongs
@@ -13,7 +13,9 @@
 
     .Nav__showSingleBook
     & {
-        transition: width @animationDuration__default, margin @animationDuration__default;
+        transition:
+            width @animationDuration__default,
+            margin @animationDuration__default;
     }
 
     .RM__navIconStatic

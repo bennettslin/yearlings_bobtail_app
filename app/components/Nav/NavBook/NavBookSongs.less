@@ -2,7 +2,9 @@
 
     .NavColumn__left
     & {
-        transition: left @animationDuration__default;
+        transition:
+            opacity @animationDuration__default,
+            left @animationDuration__default;
     }
 
     .NavColumn__left.NavColumn__hidden
@@ -12,12 +14,21 @@
 
     .NavColumn__right
     & {
-        transition: right @animationDuration__default;
+        transition:
+            opacity @animationDuration__default,
+            right @animationDuration__default;
+
         flex-direction: row-reverse;
     }
 
     .NavColumn__right.NavColumn__hidden
     & {
         right: 0;
+    }
+
+    .NavColumn__hidden
+    & {
+        padding: 0;
+        opacity: 0.5;
     }
 }

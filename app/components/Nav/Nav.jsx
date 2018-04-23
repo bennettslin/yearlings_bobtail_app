@@ -37,7 +37,8 @@ Nav = ({
                 'Nav',
                 showSingleBookColumn ?
                     'Nav__showSingleBook' :
-                    'Nav__showDoubleBook'
+                    'Nav__showDoubleBook',
+                'absoluteFullContainer'
             )}
         >
             {/* Placeholder, has no other purpose. */}

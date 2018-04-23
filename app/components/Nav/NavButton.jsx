@@ -116,8 +116,7 @@ class NavButton extends Component {
         return (
             <div
                 className={cx(
-                    'NavButton',
-                    { 'NavButton__accessed': isAccessed } // TODO
+                    'NavButton'
                 )}
             >
                 <Button {...other}

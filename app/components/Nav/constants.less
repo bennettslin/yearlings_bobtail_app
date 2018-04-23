@@ -3,8 +3,8 @@
 // Left and right padding for each book.
 @js__padding__navColumnChild: @js__margin__thin;
 
-// Margin to accommodate last title.
-@js__margin__navLastTitle: 50px;
+// Margin to accommodate last title. Keep for now.
+@js__margin__navLastTitle: 0;
 
 // Number of icons.
 @count__icons__single: 9 + 2;
@@ -67,7 +67,8 @@
 @monitor-book-offset: ~"calc(@{width__gap__doubleMedium} * @{screenWidth__full} + @{monitor-book-offset-constant})";
 
 /**
- * Breakpoint to start shrinking icon is when unit width is 1px.
+ * Breakpoint to start shrinking icon is when unit width is 1px. Note that
+ * without the last title width, this will never happen now.
  *
  * Each unit is a pixel. There are 26 units, so 26 pixels.
  * To be divided amongst 20 icons.

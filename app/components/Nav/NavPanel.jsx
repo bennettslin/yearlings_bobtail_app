@@ -40,7 +40,10 @@ NavPanel = ({
             )}
         >
             <div className="NavPanel">
-                <div className="NavPanel-image">
+                <div className={cx(
+                    'NavPanel-image',
+                    'absoluteFullContainer'
+                )}>
                 </div>
                 <div className="NavPanel-title">
                     {panelTitle}

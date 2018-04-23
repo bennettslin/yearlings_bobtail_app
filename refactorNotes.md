@@ -32,7 +32,7 @@ Live (/)
 Lyric (/)
 LyricColumn (/)
 Main (/)
-Nav (Need to consider last title margin, panels, and consolidate responsive, nav button sizing and panels.)
+Nav (Need to consider panels and consolidate responsive.)
 Overview (Waiting on overview in phone and heightless.)
 Players (/)
 Popup (Waiting on popup rework to finalise.)
@@ -62,8 +62,7 @@ RoutingManager
 SwitchManager
 
 # Whole day work
-
-Popup buttons and nav
+Popup buttons
 
 # Rework projects
 Carousel/annotation

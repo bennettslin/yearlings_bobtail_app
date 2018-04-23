@@ -7,19 +7,14 @@
 @import "./NavPanel.less";
 @import "./NavResponsive.less";
 
-@paddingY__nav: 3px;
-
+// This is needed by JavaScript to calculate stage coordinates.
 @js__height__nav:
-    @js__length__icon +
-    @paddingY__nav * 2;
+    @js__length__icon
+     + @js__margin__thin * 2;
 
 @borderRadius__nav: @js__height__nav / 3;
 
 .Nav {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: @js__height__nav;
     z-index: @zIndex__navCustomSubfield;
     display: flex;
 
@@ -35,14 +30,10 @@
 .NavColumns {
     position: relative;
     width: 100%;
-
-    // TODO: Consider adjusting this animatable height for tablet and mini?
-    height: @js__height__nav * 3; // Just an arbitrary value that's large enough.
+    height: 100%;
 
     .RM__desktop
     & {
-        bottom: @js__height__nav * 2;
-
         // Prevent lyric scrolling from pushing app offscreen.
         overflow: hidden;
     }
