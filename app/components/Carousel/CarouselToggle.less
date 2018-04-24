@@ -4,7 +4,7 @@
     bottom: 0;
     background-color: #edf;
     padding: @js__margin__thin 0;
-    border-radius: 0 @borderRadius__nav 0 0;
+    // border-radius: 0 @borderRadius__nav 0 0;
     box-shadow: @boxShadow__popup;
 
     display: flex;
@@ -13,7 +13,7 @@
 
     transition: margin @animationDuration__default,
                 bottom @animationDuration__default,
-                border-radius @animationDuration__default,
+                // border-radius @animationDuration__default,
                 box-shadow @animationDuration__default;
 
     // Widths for all other devices are set by "width__leftShelf" class.
@@ -25,14 +25,14 @@
     .RM__desktop.RM__carouselExpanded
     & {
         bottom: @margin__scrollbar;
-        border-radius: 0 @borderRadius__nav @borderRadius__nav 0;
+        // border-radius: 0 @borderRadius__nav @borderRadius__nav 0;
     }
 
     .RM__mobile
     & {
         top: 0;
         bottom: auto;
-        border-radius: 0 0 @borderRadius__nav 0;
+        // border-radius: 0 0 @borderRadius__nav 0;
     }
 
     .RM__carouselNavUnshowable

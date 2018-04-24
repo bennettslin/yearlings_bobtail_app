@@ -1,8 +1,13 @@
 .NavBookSongs {
 
+    max-width: 1000px; // Arbitrary large number.
+
+    // transition: max-width @animationDuration__default;
+
     .NavColumn__left
     & {
         transition:
+            max-width @animationDuration__default,
             opacity @animationDuration__default,
             left @animationDuration__default;
     }
@@ -15,6 +20,7 @@
     .NavColumn__right
     & {
         transition:
+            max-width @animationDuration__default,
             opacity @animationDuration__default,
             right @animationDuration__default;
 
@@ -28,7 +34,8 @@
 
     .NavColumn__hidden
     & {
-        padding: 0;
+        max-width: @js__length__icon;
         opacity: 0.5;
+        padding-right: 0;
     }
 }

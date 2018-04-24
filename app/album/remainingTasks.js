@@ -19,12 +19,6 @@ module.exports = [
     },
 
     {
-        taskName: `Safari bug: nav book has width when hidden.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Revisit PureComponent`,
         workedHours: 0,
         neededHours: 3

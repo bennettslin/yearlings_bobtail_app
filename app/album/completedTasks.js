@@ -2837,4 +2837,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Safari bug: nav book has width when hidden.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
