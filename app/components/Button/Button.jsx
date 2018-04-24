@@ -83,7 +83,6 @@ class Button extends Component {
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}
             >
-
                 <ButtonIcon
                     temporaryName={buttonName}
                     temporaryText={temporaryText}
@@ -99,7 +98,6 @@ class Button extends Component {
                         accessKey={accessKey}
                     />
                 )}
-
             </div>
         )
     }

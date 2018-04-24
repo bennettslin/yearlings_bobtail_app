@@ -12,7 +12,6 @@ import { PHONE_WIDTH,
          HEIGHTLESS_LYRIC_MIN,
          HEIGHTLESS_LYRIC_MAX,
 
-         CAROUSEL_ANNOTATION_MINWIDTH,
          LS_WIDTH_GOLDEN_CORD,
          LS_WIDTH_UNCANNY_VALLEY,
 
@@ -256,7 +255,10 @@ export const getLyricTopAlign = (deviceIndex, isLyricExpanded) => {
     }
 }
 
-export const getCarouselLeftAlign = (deviceIndex, windowWidth, index) => {
+export const getCarouselLeftAlign = (
+    deviceIndex,
+    windowWidth
+) => {
 
     // If mobile, then set halfway, which is the default.
     if (!getIsDesktop(deviceIndex)) {
@@ -269,23 +271,15 @@ export const getCarouselLeftAlign = (deviceIndex, windowWidth, index) => {
             centreFieldWidth = windowWidth - lyricColumnWidth,
 
             // Percentage. It would be 0.5 if not for the lyric column.
-            left = (centreFieldWidth * 0.5) / windowWidth,
+            left = (centreFieldWidth * 0.5) / windowWidth
 
-            /**
-             * The first annotation card is really just the buffer margin. The
-             * next one is the first real annotation. There won't be any offset
-             * in either case.
-             */
-            /**
-             * NOTE: This isn't perfectly centred. I think it's because the
-             * value for the carousel annotation min width isn't exactly right.
-             */
-            leftOffset = index <= 1 ?
-                0 : -CAROUSEL_ANNOTATION_MINWIDTH * (0.5 - left)
-
+        /**
+         * Not sure why this doesn't exactly centre the annotation, but
+         * whatever.
+         */
         return {
-            left,
-            leftOffset
+            left
+            // leftOffset
         }
     }
 }

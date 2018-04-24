@@ -13,18 +13,6 @@ module.exports = [
     },
 
     {
-        taskName: `Button interactable is not the same as animatable.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Responsive helper scrolls to carousel annotation based on stage coordinates, not carousel annotation width. Then delete constant in both js and less.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Centre right verse line in verse bar`,
         workedHours: 0,
         neededHours: 1

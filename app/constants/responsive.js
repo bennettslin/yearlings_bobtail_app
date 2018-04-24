@@ -114,14 +114,6 @@ WIKI_SIDE_PADDING_TOTAL =
     LS_PADDING_SIDE_POPUP_CONTENT * 2
     + LS_LENGTH_ICON_LARGE * 2,
 
-/*******************
- * CAROUSEL VALUES *
- *******************/
-
-// This value *must* be the same in less.
-// FIXME: Not great that this value is hard-coded.
-CAROUSEL_ANNOTATION_MINWIDTH = 380,
-
 /************************
  * DEVICE WIDTH OBJECTS *
  ************************/
@@ -243,7 +235,6 @@ module.exports = {
 
     STAGE_ASPECT_RATIO: 1.2,
 
-    CAROUSEL_ANNOTATION_MINWIDTH,
     LS_WIDTH_GOLDEN_CORD,
     LS_WIDTH_UNCANNY_VALLEY
 }
