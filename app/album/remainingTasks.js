@@ -1,15 +1,15 @@
 module.exports = [
 
     {
-        taskName: `Make carousel annotation titles the same height.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Finalise UI of selected carousel annotations.`,
         workedHours: 0,
         neededHours: 3
+    },
+
+    {
+        taskName: `Annotation anchors don't have underlines, make links better in general`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     {
@@ -28,18 +28,6 @@ module.exports = [
         taskName: `Revisit PureComponent`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: `Annotation anchors don't have underlines, make links better in general`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Dragging on slider initially drags times text?`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     {

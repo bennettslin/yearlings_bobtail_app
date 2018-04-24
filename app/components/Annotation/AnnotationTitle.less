@@ -8,11 +8,19 @@
 }
 
 .AnnotationTitleAnimatable {
-    max-height: 0;
+
+    /**
+     * In carousel, annotation titles are given a height so that the top cards
+     * are aligned.
+     */
+    display: flex;
+    flex-direction: column-reverse;
+
+    height: 0;
     opacity: 0;
 
     transition:
-        max-height @animationDuration__default,
+        height @animationDuration__default,
         opacity @animationDuration__default;
 
     .overrideAnimate
