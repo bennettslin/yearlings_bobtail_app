@@ -123,17 +123,18 @@ AnnotationCardView = ({
 
     const isTextCard = Boolean(text),
         inCarousel = Boolean(carouselAnnotationIndex),
+        isPortalCard = cardDotKeys.portal,
 
         annotationCardChild = (
-
             <div className={cx(
                 'AnnotationCard',
+                !inCarousel && 'AnnotationCard__inPopup',
                 isTextCard && 'AnnotationCard__isText',
+                isPortalCard && 'AnnotationCard__portal',
                 'fontSize__verse',
-                'textShadow__background',
-                getPrefixPrependedClassNames(cardDotKeys, 'AnnotationCard')
+                'textShadow__background'
             )}>
-                {!cardDotKeys.portal && (
+                {!isPortalCard && (
                     <DotSequence
                         inAnnotationCard
                         dotKeys={cardDotKeys}
@@ -158,12 +159,16 @@ AnnotationCardView = ({
                         handleAnnotationPortalSelect={handleAnnotationPortalSelect}
                     />
                 )}
-
             </div>
         )
 
         return inCarousel ? (
-            <div className="Annotation__card__inCarousel">
+            <div className={cx(
+                'AnnotationCardAnimatable',
+                getPrefixPrependedClassNames(
+                    cardDotKeys, 'AnnotationCardAnimatable'
+                )
+            )}>
                 {annotationCardChild}
             </div>
 

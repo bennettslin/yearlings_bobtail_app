@@ -142,7 +142,7 @@ AnnotationSectionView = ({
 
             {/* In Carousel, annotation title needs to be hideable. */}
             {inCarousel ? (
-                <div className="Annotation__title__inCarousel">
+                <div className="AnnotationTitleAnimatable">
                     {annotationTitleChild}
                 </div>
 

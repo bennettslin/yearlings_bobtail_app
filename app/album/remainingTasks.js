@@ -1,6 +1,30 @@
 module.exports = [
 
     {
+        taskName: `Make carousel annotation titles the same height.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Finalise UI of selected carousel annotations.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Button interactable is not the same as animatable.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Responsive helper scrolls to carousel annotation based on stage coordinates, not carousel annotation width. Then delete constant in both js and less.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Centre right verse line in verse bar`,
         workedHours: 0,
         neededHours: 1

@@ -120,7 +120,7 @@ WIKI_SIDE_PADDING_TOTAL =
 
 // This value *must* be the same in less.
 // FIXME: Not great that this value is hard-coded.
-CAROUSEL_ANNOTATION_MINWIDTH = 406,
+CAROUSEL_ANNOTATION_MINWIDTH = 380,
 
 /************************
  * DEVICE WIDTH OBJECTS *

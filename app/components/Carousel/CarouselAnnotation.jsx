@@ -137,7 +137,7 @@ CarouselAnnotationView = ({
             annotationColumn &&
                 `CarouselAnnotation__inLyricColumn__${annotationColumn}`,
             getPrefixPrependedClassNames(
-                annotationDotKeys, 'CarouselAnnotation'
+                annotationDotKeys, 'CarouselAnnotationAnimatable'
             )
         )}
     >

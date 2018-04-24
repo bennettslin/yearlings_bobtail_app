@@ -21,10 +21,10 @@ Revisit overrideAnimate weirdness
 AccessIcons (/)
 Admin
 Anchor (/)
-Annotation (Waiting on carousel rework.)
+Annotation (/)
 Audio (/)
 Button (/)
-Carousel (Waiting on carousel rework to finalise. Revert dots when done.)
+Carousel (/)
 Dot (/)
 Dots (/)
 DynamicSvg
@@ -37,7 +37,7 @@ Overview (Waiting on overview in phone and heightless.)
 Players (/)
 Popup (Waiting on popup rework to finalise.)
 Popups
-    AnnotationPopup
+    AnnotationPopup (/)
     OverviewPopup
     ScorePopup
     TipsPopup

@@ -7,7 +7,10 @@ import cx from 'classnames';
 
 import Texts from '../Text/Texts'
 import Button from '../Button/Button'
+
+import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { PORTAL } from '../../constants/dots'
+
 import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
 import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
@@ -110,8 +113,7 @@ class AnnotationPortal extends Component {
         return (
             <div
                 className={cx(
-                    'AnnotationPortal',
-                    { 'AnnotationPortal__isAccessed': isAccessed }
+                    'AnnotationPortal'
                 )}
             >
 
@@ -119,6 +121,8 @@ class AnnotationPortal extends Component {
                 <div className="AnnotationPortal__button">
                     <Button
                         buttonName={PORTAL}
+                        showAccessIconIfAccessOn={isAccessed}
+                        accessKey={NAVIGATION_ENTER_KEY}
                         handleButtonClick={this._handlePortalClick}
                     />
                 </div>

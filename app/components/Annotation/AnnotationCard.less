@@ -1,23 +1,61 @@
-.AnnotationCard {
-    position: relative;
-    padding: 0 @paddingX__annotationCard;
+@padding__annotationCard: 5px;
 
-    min-height: 0;
+@width__annotationCard: 364px;
+
+@width__annotationCard__mini:
+    @width__annotationCard
+    * @multiplier__fontSize__mini;
+
+@width__annotationCard__phone:
+    @width__annotationCard
+    * @multiplier__fontSize__phone;
+
+.AnnotationCardAnimatable {
     max-height: 0;
     opacity: 0;
 
     transition:
-        min-height @animationDuration__default,
         max-height @animationDuration__default,
-        margin @animationDuration__default,
-        padding @animationDuration__default,
-        opacity @animationDuration__default,
-        box-shadow @animationDuration__default;
+        opacity @animationDuration__default;
 
     .overrideAnimate
     & {
         transition: none;
     }
+}
+
+.RM__narrative
+    .AnnotationCardAnimatable__narrative,
+.RM__backstory
+    .AnnotationCardAnimatable__backstory,
+.RM__observation
+    .AnnotationCardAnimatable__observation,
+.RM__pun
+    .AnnotationCardAnimatable__pun,
+.RM__reference
+    .AnnotationCardAnimatable__reference,
+.RM__songwriting
+    .AnnotationCardAnimatable__songwriting,
+.RM__portal
+    .AnnotationCardAnimatable__portal,
+.RM__afterword
+    .AnnotationCardAnimatable__afterword,
+
+.AnnotationCard__inPopup {
+    max-height: 500px; // Arbitrary large number.
+
+    margin-top: @padding__annotationCard;
+
+    opacity: 1;
+    box-shadow: @boxShadow__annotationCard;
+}
+
+.AnnotationCard {
+    position: relative;
+    box-sizing: border-box;
+
+    padding: @padding__annotationCard;
+    min-height: @length__annotationDot;
 
     width: @width__annotationCard;
     max-width: @width__annotationCard;
@@ -44,71 +82,3 @@
 .AnnotationCard__portal {
     background-color: @bgColour__annotationCard;
 }
-
-.RM__narrative
-    .AnnotationCard__narrative,
-.RM__backstory
-    .AnnotationCard__backstory,
-.RM__observation
-    .AnnotationCard__observation,
-.RM__pun
-    .AnnotationCard__pun,
-.RM__reference
-    .AnnotationCard__reference,
-.RM__songwriting
-    .AnnotationCard__songwriting,
-.RM__portal
-    .AnnotationCard__portal,
-.RM__afterword
-    .AnnotationCard__afterword {
-
-    padding: @paddingX__annotationCard;
-    min-height: @length__annotationDot;
-    max-height: 500px; // Arbitrary large number.
-    opacity: 1;
-    box-shadow: @boxShadow__annotationCard;
-
-    &:not(:last-child) {
-        margin-bottom: @padding__annotation;
-    }
-}
-
-// Override if in carousel and hidden by single lyric column.
-.CarouselAnnotation {
-
-    .RM__rightLyricColumnOnly
-    &.CarouselAnnotation__inLyricColumn__left,
-    .RM__leftLyricColumnOnly
-    &.CarouselAnnotation__inLyricColumn__right {
-        opacity: 0;
-
-        .AnnotationCard {
-            margin: auto;
-            opacity: 0;
-            box-shadow: none;
-        }
-    }
-}
-
-// .in-carousel-width {
-//     /**
-//      * Needed in carousel for proper layout.
-//      */
-//     width: @width__annotationCard + @paddingX__annotationCard * 2;
-
-//     .RM__mini
-//     & {
-//         width: @width__annotationCard__mini +
-//         @paddingX__annotationCard * 2;
-//     }
-// }
-
-// FIXME: There should be a better way to handle carousel sizing and layout. Afterwards, the in-carousel-width class might no longer be necessary.
-// .cards-block {
-
-//     .RM__desktop
-//     .Carousel
-//     & {
-//         margin-bottom: @paddingX__carouselAnnotation;
-//     }
-// }

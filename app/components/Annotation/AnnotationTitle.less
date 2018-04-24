@@ -6,3 +6,17 @@
         font-size: @fontSize__title__mini;
     }
 }
+
+.AnnotationTitleAnimatable {
+    max-height: 0;
+    opacity: 0;
+
+    transition:
+        max-height @animationDuration__default,
+        opacity @animationDuration__default;
+
+    .overrideAnimate
+    & {
+        transition: none;
+    }
+}

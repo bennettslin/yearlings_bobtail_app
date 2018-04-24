@@ -1,21 +1,4 @@
-// This value *must* be the same in js.
-@minWidth__carouselAnnotation:
-    @width__annotationCard
-    + @paddingX__annotationCard * 2
-    + @paddingX__carouselAnnotation * 2
-    + @padding__annotation * 2;
-
-@minWidth__carouselAnnotation__mini:
-    @width__annotationCard__mini
-    + @paddingX__annotationCard * 2
-    + @paddingX__carouselAnnotation * 2
-    + @padding__annotation * 2;
-
-@paddingX__carouselAnnotation: 16px;
-
-@paddingX__carouselAnnotation__hidden:
-    @paddingX__carouselAnnotation * 2
-    - @padding__annotation * 0.5;
+@paddingX__carouselAnnotation: 8px;
 
 .CarouselAnnotation {
     overflow-y: scroll;
@@ -24,25 +7,14 @@
     display: flex;
     flex-direction: column-reverse;
 
-    min-width: @paddingX__carouselAnnotation__hidden;
+    min-width: 0;
 
     transition: min-width @animationDuration__default,
                 opacity @animationDuration__default;
 
-    .RM__desktop
-    & {
-        padding-bottom: @margin__scrollbar;
-    }
-
     .RM__mobileNotPhone
     & {
         flex-direction: column;
-    }
-
-    &:not(:last-child) {
-        margin-right:
-            @padding__annotation * 0.5
-            - @paddingX__carouselAnnotation * 2;
     }
 
     .overrideAnimate
@@ -51,60 +23,75 @@
     }
 }
 
-.Annotation__title__inCarousel {
-    transition: max-height @animationDuration__default,
-    padding @animationDuration__default;
-    overflow: hidden;
-    max-height: 0;
+.RM__narrative
+    .CarouselAnnotationAnimatable__narrative,
+.RM__backstory
+    .CarouselAnnotationAnimatable__backstory,
+.RM__observation
+    .CarouselAnnotationAnimatable__observation,
+.RM__pun
+    .CarouselAnnotationAnimatable__pun,
+.RM__reference
+    .CarouselAnnotationAnimatable__reference,
+.RM__songwriting
+    .CarouselAnnotationAnimatable__songwriting,
+.RM__portal
+    .CarouselAnnotationAnimatable__portal,
+.RM__afterword
+    .CarouselAnnotationAnimatable__afterword {
 
-    .Carousel.overrideAnimate
-    & {
-        transition: none;
+    min-width: @width__annotationCard;
+
+    margin-left: @paddingX__carouselAnnotation;
+    margin-right: @paddingX__carouselAnnotation;
+
+    .AnnotationTitleAnimatable {
+        max-height: 500px; // Arbitrary large number.
+        opacity: 1;
     }
+}
+
+.RM__mini.RM__narrative
+    .CarouselAnnotationAnimatable__narrative,
+.RM__mini.RM__backstory
+    .CarouselAnnotationAnimatable__backstory,
+.RM__mini.RM__observation
+    .CarouselAnnotationAnimatable__observation,
+.RM__mini.RM__pun
+    .CarouselAnnotationAnimatable__pun,
+.RM__mini.RM__reference
+    .CarouselAnnotationAnimatable__reference,
+.RM__mini.RM__songwriting
+    .CarouselAnnotationAnimatable__songwriting,
+.RM__mini.RM__portal
+    .CarouselAnnotationAnimatable__portal,
+.RM__mini.RM__afterword
+    .CarouselAnnotationAnimatable__afterword {
+
+    min-width: @width__annotationCard__mini;
 }
 
 /**
  * Override if hidden by single lyric column. Using specific selectors to
  * override styles for mini width as well.
  */
-.RootManager.RM__song.RM__rightLyricColumnOnly
-&.CarouselAnnotation__inLyricColumn__left,
-.RootManager.RM__song.RM__leftLyricColumnOnly
-&.CarouselAnnotation__inLyricColumn__right {
+.RootManager.RM__rightLyricColumnOnly
+.CarouselAnnotation__inLyricColumn__left,
+.RootManager.RM__leftLyricColumnOnly
+.CarouselAnnotation__inLyricColumn__right {
 
-    min-width: @paddingX__carouselAnnotation__hidden;
+    min-width: 0;
+    opacity: 0;
 
-    .Annotation__title__inCarousel {
+    margin: 0;
+
+    .AnnotationCardAnimatable {
         max-height: 0;
+        opacity: 0;
     }
-}
 
-.RM__narrative .CarouselAnnotation__narrative,
-.RM__backstory .CarouselAnnotation__backstory,
-.RM__observation .CarouselAnnotation__observation,
-.RM__pun .CarouselAnnotation__pun,
-.RM__reference .CarouselAnnotation__reference,
-.RM__songwriting .CarouselAnnotation__songwriting,
-.RM__portal .CarouselAnnotation__portal,
-.RM__afterword .CarouselAnnotation__afterword {
-
-    min-width: @minWidth__carouselAnnotation;
-
-    .Annotation__title__inCarousel {
-        max-height: 2em; // Arbitrary value that's larger than its max height.
-        min-height: @length__iconSmall;
-        padding: @padding__annotation 0;
+    .AnnotationTitleAnimatable {
+        max-height: 0;
+        opacity: 0;
     }
-}
-
-.RM__mini.RM__narrative .CarouselAnnotation__narrative,
-.RM__mini.RM__backstory .CarouselAnnotation__backstory,
-.RM__mini.RM__observation .CarouselAnnotation__observation,
-.RM__mini.RM__pun .CarouselAnnotation__pun,
-.RM__mini.RM__reference .CarouselAnnotation__reference,
-.RM__mini.RM__songwriting .CarouselAnnotation__songwriting,
-.RM__mini.RM__portal .CarouselAnnotation__portal,
-.RM__mini.RM__afterword .CarouselAnnotation__afterword {
-
-    min-width: @minWidth__carouselAnnotation__mini;
 }

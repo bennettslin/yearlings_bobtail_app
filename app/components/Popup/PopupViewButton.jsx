@@ -70,6 +70,7 @@ PopupViewButton = ({
         >
             <Button {...other}
                 isLargeSize
+                isDisabled={isShadow}
                 buttonName={buttonName}
                 className={cx(
                     'Button__popup'
