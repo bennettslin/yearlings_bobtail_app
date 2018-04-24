@@ -1,9 +1,9 @@
 import { HAS_SIDE_STANZAS, IS_DOUBLESPEAKER } from '../constants/lyrics'
-import { PHONE_WIDTH,
-         LS_WIDTH_MINI,
-         TABLET_WIDTH,
-         LS_LAPTOP_WIDTH,
-         MONITOR_WIDTH,
+import { PHONE_CLASS,
+         LS_MINI_CLASS,
+         TABLET_CLASS,
+         LS_LAPTOP_CLASS,
+         MONITOR_CLASS,
 
          MINI_OBJECT,
          DEVICE_OBJECTS,
@@ -43,27 +43,27 @@ export const resizeWindow = (target = window) => {
 export const getIsDesktop = (deviceIndex) => {
     const deviceClassName = DEVICE_OBJECTS[deviceIndex].className
 
-    return deviceClassName === LS_LAPTOP_WIDTH || deviceClassName === MONITOR_WIDTH
+    return deviceClassName === LS_LAPTOP_CLASS || deviceClassName === MONITOR_CLASS
 }
 
 export const getIsPhone = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === PHONE_WIDTH
+    return DEVICE_OBJECTS[deviceIndex].className === PHONE_CLASS
 }
 
 const _getIsMini = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === LS_WIDTH_MINI
+    return DEVICE_OBJECTS[deviceIndex].className === LS_MINI_CLASS
 }
 
 const _getIsTablet = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === TABLET_WIDTH
+    return DEVICE_OBJECTS[deviceIndex].className === TABLET_CLASS
 }
 
 const _getIsLaptop = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === LS_LAPTOP_WIDTH
+    return DEVICE_OBJECTS[deviceIndex].className === LS_LAPTOP_CLASS
 }
 
 export const getIsMonitor = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === MONITOR_WIDTH
+    return DEVICE_OBJECTS[deviceIndex].className === MONITOR_CLASS
 }
 
 export const getIsTabletOrMini = (deviceIndex) => {
@@ -282,4 +282,11 @@ export const getCarouselLeftAlign = (
             // leftOffset
         }
     }
+}
+
+export const getMenuMarginInOverlay = (windowWidth) => {
+    const margin = (windowWidth - MINI_OBJECT.maxWidth) / 2
+
+    // Don't return a negative margin.
+    return margin < 0 ? 0 : margin
 }

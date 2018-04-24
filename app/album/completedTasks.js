@@ -2832,4 +2832,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Safari bug: menu animation is janky.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

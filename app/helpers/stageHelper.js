@@ -1,11 +1,11 @@
 import { STAGE_ASPECT_RATIO,
          STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE } from '../constants/stage'
 
-import { PHONE_WIDTH,
-         LS_WIDTH_MINI,
-         TABLET_WIDTH,
-         LS_LAPTOP_WIDTH,
-         MONITOR_WIDTH,
+import { PHONE_CLASS,
+         LS_MINI_CLASS,
+         TABLET_CLASS,
+         LS_LAPTOP_CLASS,
+         MONITOR_CLASS,
          DEVICE_OBJECTS,
 
          LS_WIDTH_GOLDEN_CORD,
@@ -167,17 +167,17 @@ export const _getLeftShelfOverflow = (deviceIndex) => {
     let toggleButtonWidth = 0
 
     switch (DEVICE_OBJECTS[deviceIndex].className) {
-        case MONITOR_WIDTH:
-        case LS_LAPTOP_WIDTH:
+        case MONITOR_CLASS:
+        case LS_LAPTOP_CLASS:
             toggleButtonWidth = LS_LENGTH_ICON_LARGE
             break
-        case TABLET_WIDTH:
+        case TABLET_CLASS:
             toggleButtonWidth = LS_LENGTH_ICON_LARGE_TABLET
             break
-        case LS_WIDTH_MINI:
+        case LS_MINI_CLASS:
             toggleButtonWidth = LS_LENGTH_ICON_LARGE_MINI
             break
-        case PHONE_WIDTH:
+        case PHONE_CLASS:
             toggleButtonWidth = LS_LENGTH_ICON
             break
     }

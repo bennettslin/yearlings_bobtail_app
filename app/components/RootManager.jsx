@@ -196,7 +196,7 @@ class RootManager extends Component {
                 className={cx(
                     'RootManager',
 
-                    deviceClassName,
+                    `RM__${deviceClassName}`,
                     isDesktop ?
                         'RM__desktop' : 'RM__mobile',
                     { 'RM__mobileNotPhone': isTabletOrMini },

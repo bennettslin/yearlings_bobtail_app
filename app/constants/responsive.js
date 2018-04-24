@@ -121,19 +121,19 @@ WIKI_SIDE_PADDING_TOTAL =
 LS_WIDTH_GOLDEN_CORD = 745,
 LS_WIDTH_UNCANNY_VALLEY = 570,
 
-PHONE_WIDTH = 'RM__phone',
-LS_WIDTH_MINI = 'RM__mini',
-TABLET_WIDTH = 'RM__tablet',
-LS_LAPTOP_WIDTH = 'RM__laptop',
-MONITOR_WIDTH = 'RM__monitor',
+PHONE_CLASS = 'phone',
+LS_MINI_CLASS = 'mini',
+TABLET_CLASS = 'tablet',
+LS_LAPTOP_CLASS = 'laptop',
+MONITOR_CLASS = 'monitor',
 
 // These max width values *must* be the same in less.
 PHONE_OBJECT = {
-    className: PHONE_WIDTH,
+    className: PHONE_CLASS,
     maxWidth: 475
 },
 MINI_OBJECT = {
-    className: LS_WIDTH_MINI,
+    className: LS_MINI_CLASS,
     maxWidth: 720,
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
@@ -145,7 +145,7 @@ MINI_OBJECT = {
     isTitleInAudioBreakpoint: TITLE_IN_AUDIO_BREAKPOINT
 },
 TABLET_OBJECT = {
-    className: TABLET_WIDTH,
+    className: TABLET_CLASS,
     maxWidth: 1100,
     doubleColumnStaticBreakpoint:
         DOUBLE_COLUMN_STATIC_BREAKPOINT
@@ -158,7 +158,7 @@ TABLET_OBJECT = {
         + LS_LENGTH_ICON_LARGE_TABLET
 },
 LAPTOP_OBJECT = {
-    className: LS_LAPTOP_WIDTH,
+    className: LS_LAPTOP_CLASS,
     maxWidth: 1400,
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
@@ -169,7 +169,7 @@ LAPTOP_OBJECT = {
     // isScoresTipsInMainBreakpoint: SCORES_TIPS_IN_MAIN_CONSTANT + 2 * LS_MARGIN_MENU_CHILD_NARROW + LS_WIDTH_UNCANNY_VALLEY + 3 * LS_LENGTH_ICON_LARGE
 },
 MONITOR_OBJECT = {
-    className: MONITOR_WIDTH,
+    className: MONITOR_CLASS,
     doubleColumnStaticBreakpoint:
         DOUBLE_COLUMN_STATIC_BREAKPOINT
         + LS_MARGIN_NAV_LAST_TITLE
@@ -193,11 +193,11 @@ MONITOR_OBJECT = {
 }
 
 module.exports = {
-    PHONE_WIDTH,
-    LS_WIDTH_MINI,
-    TABLET_WIDTH,
-    LS_LAPTOP_WIDTH,
-    MONITOR_WIDTH,
+    PHONE_CLASS,
+    LS_MINI_CLASS,
+    TABLET_CLASS,
+    LS_LAPTOP_CLASS,
+    MONITOR_CLASS,
 
     PHONE_OBJECT,
     MINI_OBJECT,

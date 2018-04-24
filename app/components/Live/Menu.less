@@ -30,16 +30,12 @@
 
 @maxWidth__childAudio: 640px; // Arbitrary.
 
-.Menu,
-.MenuTopRow {
+.Menu {
     position: absolute;
     top: 0;
     left: 0;
-    height: @js__height__menu;
-}
-
-.Menu {
     width: 100%;
+    height: @js__height__menu;
 
     .RM__phone
     & {
@@ -52,22 +48,33 @@
 }
 
 .MenuTopRow {
+    position: relative;
+    height: 100%;
+
     overflow: hidden;
 
     box-shadow: @boxShadow__menu;
     background-color: #8dd;
 
+    transform: translateX(0);
+
     transition:
-        left @animationDuration__slow,
-        transform @animationDuration__slow,
-        max-width @animationDuration__default;
+        margin @animationDuration__slow,
+        max-width @animationDuration__slow;
+
+    .RM__overlayHidden
+    & {
+        /**
+         * When overlay is hidden, override the dynamic margins calculated by
+         * JavaScript. Not happy about doing this, but I wasn't able to keep
+         * the animation smooth in Safari any other way.
+         */
+        margin: 0 !important;
+    }
 
     .RM__overlayShown
     &.width__mainColumn {
         max-width: @js__width__mini;
-
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .RM__phone

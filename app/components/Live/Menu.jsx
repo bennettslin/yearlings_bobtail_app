@@ -14,17 +14,20 @@ import ScoresTips from '../ScoresTips/ScoresTips'
 import AudioBanner from '../Audio/AudioBanner'
 import AudioTimer from '../Audio/AudioTimer'
 
-import { getIsPhone } from '../../helpers/responsiveHelper'
+import { getIsPhone, getMenuMarginInOverlay } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    deviceIndex
+    deviceIndex,
+    windowWidth
 }) => ({
-    deviceIndex
+    deviceIndex,
+    windowWidth
 })
 
 const menuPropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
+    windowWidth: PropTypes.number.isRequired,
 
     // From parent.
     titleToggleHandlers: PropTypes.object.isRequired,
@@ -36,13 +39,19 @@ const menuPropTypes = {
 Menu = ({
 
     deviceIndex,
+    windowWidth,
     titleToggleHandlers,
     audioHandlers,
     scoresTipsHandlers,
     audioBannerHandlers
 
 }) => {
-    const isPhone = getIsPhone(deviceIndex)
+    const isPhone = getIsPhone(deviceIndex),
+
+        /**
+         * This is necessary because transform animation in Safari is janky.
+         */
+        menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
 
     return (
         <div className="Menu">
@@ -58,11 +67,17 @@ Menu = ({
                 />
             </div>
 
-            <div className={cx(
-                'MenuRow',
-                'MenuTopRow',
-                'width__mainColumn'
-            )}>
+            <div
+                className={cx(
+                    'MenuRow',
+                    'MenuTopRow',
+                    'width__mainColumn'
+                )}
+                style={{
+                    marginLeft: menuMarginInOverlay,
+                    marginRight: menuMarginInOverlay
+                }}
+            >
                 <div className={cx(
                     'MenuTopRow__titleTimer',
                     'MenuTopRow__child',
