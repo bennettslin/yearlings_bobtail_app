@@ -55,12 +55,6 @@ module.exports = [
     },
 
     {
-        taskName: `Be smarter about switching gradients, scrolling over main, and carousel height. Carousel needs max height as well, just like lyric column does.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Refocus on lyric strategically.`,
         workedHours: 0,
         neededHours: 2

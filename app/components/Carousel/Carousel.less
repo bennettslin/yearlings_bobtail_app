@@ -7,7 +7,7 @@
     left: 0;
     bottom: -100%;
     width: 100vw;
-    height: 100%;
+    height: height__chivalry;
 
     // Allows the lyric to scroll when carousel has higher z-index.
     z-index: @zIndex__carousel;
@@ -71,7 +71,6 @@
      * I'm baffled why padding-right can't just be applied to the scroll parent
      * itself here, the way padding-left can. But whatever, this works.
      */
-
     &:after {
         content: '';
     }
@@ -118,10 +117,10 @@
     @gradient__carousel__monitor:
         linear-gradient(
             to left,
-            black,
+            rgba(0, 0, 0, 0.5),
             transparent @js__width__goldenCord * 0.3,
-            transparent @js__width__goldenCord * 0.7,
-            black @js__width__goldenCord,
+            transparent @js__width__goldenCord * 0.8,
+            black @js__width__goldenCord * 1.1,
             black
         );
     .RM__monitor.RM__annotationHidden
@@ -136,8 +135,8 @@
         linear-gradient(
             to left,
             black,
-            transparent @js__width__uncannyValley * 0.3,
-            transparent @js__width__uncannyValley * 0.7,
+            transparent @js__width__uncannyValley * 0.2,
+            transparent @js__width__uncannyValley * 0.8,
             black @js__width__uncannyValley,
             black
         );
