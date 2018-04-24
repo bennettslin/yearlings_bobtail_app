@@ -121,44 +121,55 @@ AnnotationCardView = ({
 
 }) => {
 
-    const isTextCard = Boolean(text)
+    const isTextCard = Boolean(text),
+        inCarousel = Boolean(carouselAnnotationIndex),
 
-    return (
-        <div className={cx(
-            'AnnotationCard',
-            isTextCard && 'AnnotationCard__isText',
-            'fontSize__verse',
-            'textShadow__background',
-            getPrefixPrependedClassNames(cardDotKeys, 'AnnotationCard')
-        )}>
-            {!cardDotKeys.portal && (
-                <DotSequence
-                    inAnnotationCard
-                    dotKeys={cardDotKeys}
-                />
-            )}
+        annotationCardChild = (
 
-            {isTextCard ? (
-                <Texts
-                    text={text}
+            <div className={cx(
+                'AnnotationCard',
+                isTextCard && 'AnnotationCard__isText',
+                'fontSize__verse',
+                'textShadow__background',
+                getPrefixPrependedClassNames(cardDotKeys, 'AnnotationCard')
+            )}>
+                {!cardDotKeys.portal && (
+                    <DotSequence
+                        inAnnotationCard
+                        dotKeys={cardDotKeys}
+                    />
+                )}
 
-                    /**
-                     * Allow for clicking on anchor in unselected annotation in
-                     * carousel.
-                     */
-                    carouselAnnotationIndex={carouselAnnotationIndex}
-                    handleAnchorClick={handleAnnotationWikiSelect}
-                />
-            ) : (
-                <AnnotationPortals
-                    cardIndex={cardIndex}
-                    carouselAnnotationIndex={carouselAnnotationIndex}
-                    handleAnnotationPortalSelect={handleAnnotationPortalSelect}
-                />
-            )}
+                {isTextCard ? (
+                    <Texts
+                        text={text}
 
-        </div>
-    )
+                        /**
+                         * Allow for clicking on anchor in unselected annotation in
+                         * carousel.
+                         */
+                        carouselAnnotationIndex={carouselAnnotationIndex}
+                        handleAnchorClick={handleAnnotationWikiSelect}
+                    />
+                ) : (
+                    <AnnotationPortals
+                        cardIndex={cardIndex}
+                        carouselAnnotationIndex={carouselAnnotationIndex}
+                        handleAnnotationPortalSelect={handleAnnotationPortalSelect}
+                    />
+                )}
+
+            </div>
+        )
+
+        return inCarousel ? (
+            <div className="Annotation__card__inCarousel">
+                {annotationCardChild}
+            </div>
+
+        ) : (
+            annotationCardChild
+        )
 }
 
 AnnotationCardView.propTypes = annotationCardViewProptypes

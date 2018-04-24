@@ -18,6 +18,23 @@
     & {
         transition: none;
     }
+
+    width: @width__annotationCard;
+    max-width: @width__annotationCard;
+
+    .RM__mini
+    & {
+        // Multiplier is .9, just like for lyric text in mini.
+        width: @width__annotationCard__mini;
+        max-width: @width__annotationCard__mini;
+    }
+
+    .RM__phone
+    & {
+        // Multiplier is .98, just like for lyric text in phone.
+        width: @width__annotationCard__phone;
+        max-width: @width__annotationCard__phone;
+    }
 }
 
 .AnnotationCard__isText {

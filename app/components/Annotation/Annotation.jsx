@@ -119,7 +119,7 @@ AnnotationSectionView = ({
 
 ...other }) => {
 
-    const AnnotationTitleChild = (
+    const annotationTitleChild = (
         <AnnotationTitle
             isSelected={isSelected}
             isAccessed={isAccessed}
@@ -142,14 +142,12 @@ AnnotationSectionView = ({
 
             {/* In Carousel, annotation title needs to be hideable. */}
             {inCarousel ? (
-                <div className={cx(
-                    'Annotation__title__inCarousel'
-                )}>
-                    {AnnotationTitleChild}
+                <div className="Annotation__title__inCarousel">
+                    {annotationTitleChild}
                 </div>
 
             ) : (
-                AnnotationTitleChild
+                annotationTitleChild
             )}
 
             <AnnotationCards {...other} />

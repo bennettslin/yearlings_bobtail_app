@@ -103,9 +103,8 @@ AnnotationPopup = ({
             <Popup
                 showArrows
                 bounceAnimate
-                isCardSize
                 hasWidePadding
-                popupName="annotation"
+                popupName={inMain ? 'annotationSide' : 'annotationOverlay'}
                 isVisible={isVisible}
                 displaysInOverlay={isOverlayingAnnotation}
                 handleNextClick={handleAnnotationNext}
