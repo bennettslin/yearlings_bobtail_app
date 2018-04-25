@@ -4,6 +4,8 @@
 @import "./VerseBar.less";
 
 .LyricColumn {
+    position: absolute;
+
     transition:
         height @animationDuration__default,
         opacity @animationDuration__default;
@@ -51,8 +53,8 @@
     }
 }
 
-.position__lyricColumn {
-    position: absolute;
+// Used by LyricColumn and OverviewLogue.
+.position__lyricColumn__desktop {
 
     .RM__desktop
     & {
@@ -65,9 +67,14 @@
     & {
         width: @js__width__uncannyValley;
     }
+}
+
+// Used by LyricColumn only.
+.position__lyricColumn__mobile {
 
     .RM__mobile
     & {
+
         height: @js__height__lyricCollapsed;
         width: 100%;
         bottom: 0;

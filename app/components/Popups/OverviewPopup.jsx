@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import OverviewSection from '../Overview/Overview'
+import Overview from '../Overview/Overview'
 import Popup from '../Popup/Popup'
 import { getSongIsLogue } from '../../helpers/dataHelper'
 
@@ -81,7 +81,7 @@ OverviewPopup = ({
             noAbsoluteFull={noAbsoluteFull}
             handlePopupContainerClick={handlePopupContainerClick}
         >
-            <OverviewSection {...other} />
+            <Overview {...other} />
         </Popup>
     )
 }

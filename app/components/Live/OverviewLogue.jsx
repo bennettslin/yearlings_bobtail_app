@@ -18,7 +18,8 @@ OverviewLogue = ({
 }) => (
     <div className={cx(
         'OverviewLogue',
-        'position__lyricColumn'
+        'position__lyricColumn__desktop',
+        'position__overlayPopups__mobile'
     )}>
         <OverviewPopup {...overviewPopupHandlers} />
     </div>

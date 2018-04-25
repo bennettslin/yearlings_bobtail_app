@@ -69,10 +69,11 @@ class OverviewSection extends Component {
 
         return (
             <div className={cx(
-                'Overview'
+                'Overview',
+                'fontSize__verse'
             )}>
                 {isToggleInOverview &&
-                    <div className="Overview__textFloatContainer">
+                    <div className="Overview__toggleFloatContainer">
                         <OverviewToggle
                             isEnabled={isEnabled}
                             handleOverviewToggle={this._handleOverviewToggle}

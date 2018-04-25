@@ -195,7 +195,8 @@ LyricColumnView = ({
         <div
             className={cx(
                 'LyricColumn',
-                'position__lyricColumn',
+                'position__lyricColumn__desktop',
+                'position__lyricColumn__mobile',
                 'gradientMask__lyricColumn__desktop',
                 isHeavyRenderReady ? 'renderReady' : 'renderUnready',
                 { 'overrideAnimate': shouldOverrideAnimate }

@@ -38,9 +38,9 @@ Players (/)
 Popup (Waiting on popup rework to finalise.)
 Popups
     AnnotationPopup (/)
-    OverviewPopup
+    OverviewPopup (in logue still left to do.)
     ScorePopup
-    TipsPopup
+    TipsPopup (/)
     TitlePopup
     WikiPopup
 Score (/)

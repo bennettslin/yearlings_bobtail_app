@@ -1,16 +1,23 @@
 .OverviewLogue {
+    position: absolute;
+    width: 100%;
+
     display: flex;
     align-items: center;
+    box-sizing: border-box;
 
     .RM__mobile
     & {
-        flex-direction: column-reverse;
-        padding-bottom: @js__margin__thick;
+        padding: @js__margin__thick;
     }
 
-    // Override collapsed height of lyric column in mobile.
-    .RM__mobile
-    &.position__lyricColumn {
-        height: 100%;
+    .RM__mobile.RM__lyricHeighted
+    & {
+        flex-direction: column-reverse;
+    }
+
+    .RM__mobile.RM__lyricHeightless
+    & {
+        flex-direction: column;
     }
 }

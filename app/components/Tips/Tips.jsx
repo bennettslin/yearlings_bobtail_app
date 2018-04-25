@@ -68,7 +68,7 @@ class Tips extends Component {
                 )}>
 
                     {isScoresTipsInMain && (
-                        <div className="Tips__textFloatContainer">
+                        <div className="Tips__toggleFloatContainer">
                             <TipsToggle
                                 isEnabled={isEnabled}
                                 handleTipsToggle={this._handleTipsToggle}

@@ -6,9 +6,6 @@
 @padding__dotsSlideSelect:
     @length__dotsSlideSelect / 6;
 
-@padding__dotsSlideSelect__phone:
-    @js__length__iconLarge / 7;
-
 .DotsSlideSelect {
     display: flex;
     flex-direction: column;
@@ -18,7 +15,7 @@
 
     .RM__phone
     & {
-        padding: @padding__dotsSlideSelect__phone;
+        padding: @js__margin__thin;
     }
 }
 
@@ -52,4 +49,9 @@
 .DotsSlideSelect__textAnchor {
     padding-top: 5px;
     font-size: 0.75em;
+
+    .RM__phone
+    & {
+        padding-top: 0;
+    }
 }

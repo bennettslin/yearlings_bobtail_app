@@ -1,15 +1,34 @@
-@import "./TipsToggle.less";
+.Tips {
+    display: flex;
+}
 
-.Tips__textFloatContainer {
+.Tips__toggleFloatContainer {
     position: relative;
-    margin-right: 10px;
     float: left;
+    margin-right: 10px;
+}
+
+.Tips__textContainer {
+    overflow: auto;
 }
 
 .Tips__imageContainer {
+    min-width: 200px;
+    height: 250px;
+    margin-left: 10px;
+
     // TODO: Improve these styles, obviously.
-    width: 100%;
-    height: 150px;
-    margin-top: 10px;
     background-color: #b6b;
+
+    .RM__mini
+    & {
+        min-width: 160px;
+        height: 200px;
+    }
+
+    .RM__phone
+    & {
+        min-width: 120px;
+        height: 150px;
+    }
 }
