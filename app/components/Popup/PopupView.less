@@ -31,35 +31,36 @@
     width: ~"calc(100% - @{js__length__iconLarge} * 2 - @{js__padding__popupContent__wide} * 2)";
     height: ~"calc(100% - @{js__length__iconLarge} * 1.25)";
 
-    .RM__mini
+    .RM__mobile:not(.RM__tablet)
     & {
         width: 100%;
+    }
+
+    .RM__mini
+    & {
         height: ~"calc(100% - @{js__length__iconLarge__mini})";
     }
 
     .RM__phone
     & {
-        width: 100%;
         height: ~"calc(100% - @{js__length__icon})";
     }
 }
 
 .PopupView__cardSize {
     max-width: @width__popupCard;
-    width: @width__popupCard;
 
     .RM__mini
     & {
         // Multiplier is .9, just like for lyric text in mini.
         max-width: @width__popupCard__mini;
-        width: @width__popupCard__mini;
     }
 
     .RM__phone
     & {
         // Multiplier is .98, just like for lyric text in phone.
         max-width: @width__popupCard__phone;
-        width: @width__popupCard__phone;
+        padding: @js__margin__thin;
     }
 }
 

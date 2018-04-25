@@ -31,7 +31,6 @@ WikiPopup = ({
 
     return (
         <Popup
-            showClose
             shrinkAnimate
             displaysInOverlay
             isFullSize

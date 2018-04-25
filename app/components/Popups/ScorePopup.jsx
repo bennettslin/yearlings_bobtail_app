@@ -38,7 +38,7 @@ ScorePopup = ({
 
     return (
         <Popup
-            showClose
+            showArrows
             isFullSize
             displaysInOverlay
             popupName="Score"

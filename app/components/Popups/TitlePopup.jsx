@@ -31,7 +31,6 @@ TitlePopup = ({
     const isVisible = Boolean(selectedTitleIndex)
     return (
         <Popup
-            showClose
             bounceAnimate
             displaysInOverlay
             isCardSize

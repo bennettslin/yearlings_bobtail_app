@@ -4,9 +4,60 @@
     position: absolute;
 }
 
+.PopupViewButton__inFullSize {
+    position: absolute;
+}
+
 .PopupViewButton__close {
-    top: -@js__length__iconLarge * @offset__popupButton;
-    left: -@js__length__iconLarge * @offset__popupButton;
+
+    .RM__desktop
+    & {
+        // Top left corner.
+        top: -@js__length__iconLarge * @offset__popupButton;
+        left: -@js__length__iconLarge * @offset__popupButton;
+    }
+    .RM__tablet
+    & {
+        // Top left corner.
+        top: -@js__length__iconLarge__tablet * @offset__popupButton;
+        left: -@js__length__iconLarge__tablet * @offset__popupButton;
+    }
+
+    .RM__mini
+    & {
+
+        // Top left corner.
+        top: -@js__length__iconLarge__mini * @offset__popupButton;
+        left: -@js__length__iconLarge__mini * @offset__popupButton;
+
+        &.PopupViewButton__inFullSize {
+            // On top, to the left.
+            top: -@js__length__iconLarge__mini + @js__margin__thin;
+        }
+    }
+
+    .RM__phone
+    & {
+
+        &.PopupViewButton__inCardSize {
+            // If card size, don't show close button at all in phone.
+            display: none;
+        }
+
+        &.PopupViewButton__inFullSize {
+            // On top, to the left.
+            top: -@js__length__icon + @js__margin__thin;
+        }
+    }
+
+    .RM__mini
+    &,
+    .RM__phone
+    & {
+        &.PopupViewButton__inFullSize {
+            left: 10%;
+        }
+    }
 }
 
 .PopupViewButton__side {
@@ -16,6 +67,17 @@
     & {
         top: 50%;
         transform: translateY(-50%);
+    }
+}
+
+.PopupViewButton {
+
+    .RM__mini
+    &.PopupViewButton__inFullSize,
+    .RM__phone
+    & {
+        // Align left from centre of button.
+        transform: translateX(-50%);
     }
 }
 

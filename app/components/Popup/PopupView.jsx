@@ -5,7 +5,6 @@ import cx from 'classnames'
 import PopupViewButton from './PopupViewButton'
 
 const popupViewDefaultProps = {
-    showClose: false,
     showArrows: false
 },
 
@@ -17,7 +16,6 @@ popupViewPropTypes = {
     isFullSize: PropTypes.bool,
     hasNarrowPadding: PropTypes.bool,
     hasWidePadding: PropTypes.bool,
-    showClose: PropTypes.bool.isRequired,
     showArrows: PropTypes.bool.isRequired,
     handleCloseClick: PropTypes.func,
     handlePreviousClick: PropTypes.func,
@@ -35,7 +33,6 @@ PopupView = ({
     isFullSize,
     hasNarrowPadding,
     hasWidePadding,
-    showClose,
     showArrows,
     handleCloseClick,
     handlePreviousClick,
@@ -43,73 +40,90 @@ PopupView = ({
     handleContainerClick,
     children
 
-}) => (
-    <div className={cx(
-        'PopupView',
-        `${popupName}PopupView`,
+}) => {
 
-        { 'PopupView__bounceAnimate': bounceAnimate,
-          'PopupView__shrinkAnimate': shrinkAnimate,
-          'PopupView__cardSize': isCardSize,
-          'PopupView__fullSize': isFullSize }
-    )}>
-        {showClose && (
-            <PopupViewButton
-                isShadow
-                isCloseButton
-            />
-        )}
-        {showArrows && (
-            <PopupViewButton
-                isShadow
-                isPreviousButton
-            />
-        )}
-        {showArrows && (
-            <PopupViewButton
-                isShadow
-                isNextButton
-            />
-        )}
-        <div
-            className={cx(
-                'PopupViewContent',
-                `${popupName}PopupViewContent`,
-                { 'PopupViewContent__narrowPadding': hasNarrowPadding,
-                  'PopupViewContent__widePadding': hasWidePadding },
+    const showClose = Boolean(handleCloseClick)
 
-                !isFullSize && 'PopupViewContent__scrollIfFull',
+    return (
+        <div className={cx(
+            'PopupView',
+            `${popupName}PopupView`,
 
-                'boxShadow__popup'
+            { 'PopupView__bounceAnimate': bounceAnimate,
+              'PopupView__shrinkAnimate': shrinkAnimate,
+              'PopupView__cardSize': isCardSize,
+              'PopupView__fullSize': isFullSize }
+        )}>
+            {showClose && (
+                <PopupViewButton
+                    isShadow
+                    isCloseButton
+                    inFullSize={isFullSize}
+                    inCardSize={isCardSize}
+                />
             )}
-            onClick={handleContainerClick}
-            onTouchStart={handleContainerClick}
-        >
-            {children}
+            {showArrows && (
+                <PopupViewButton
+                    isShadow
+                    isPreviousButton
+                    inFullSize={isFullSize}
+                    inCardSize={isCardSize}
+                />
+            )}
+            {showArrows && (
+                <PopupViewButton
+                    isShadow
+                    isNextButton
+                    inFullSize={isFullSize}
+                    inCardSize={isCardSize}
+                />
+            )}
+            <div
+                className={cx(
+                    'PopupViewContent',
+                    `${popupName}PopupViewContent`,
+                    { 'PopupViewContent__narrowPadding': hasNarrowPadding,
+                      'PopupViewContent__widePadding': hasWidePadding },
+
+                    !isFullSize && 'PopupViewContent__scrollIfFull',
+
+                    'boxShadow__popup'
+                )}
+                onClick={handleContainerClick}
+                onTouchStart={handleContainerClick}
+            >
+                {children}
+            </div>
+            {showClose &&
+                <PopupViewButton
+                    accessKeysShown
+                    isCloseButton
+                    inFullSize={isFullSize}
+                    inCardSize={isCardSize}
+                    handlePopupButtonClick={handleCloseClick}
+                />
+            }
+            {showArrows &&
+                <PopupViewButton
+                    accessKeysShown
+                    isPreviousButton
+                    inFullSize={isFullSize}
+                    inCardSize={isCardSize}
+                    handlePopupButtonClick={handlePreviousClick}
+                />
+            }
+            {showArrows &&
+                <PopupViewButton
+                    accessKeysShown
+                    isNextButton
+                    inFullSize={isFullSize}
+                    inCardSize={isCardSize}
+                    handlePopupButtonClick={handleNextClick}
+                />
+            }
         </div>
-        {showClose &&
-            <PopupViewButton
-                accessKeysShown
-                isCloseButton
-                handlePopupButtonClick={handleCloseClick}
-            />
-        }
-        {showArrows &&
-            <PopupViewButton
-                accessKeysShown
-                isPreviousButton
-                handlePopupButtonClick={handlePreviousClick}
-            />
-        }
-        {showArrows &&
-            <PopupViewButton
-                accessKeysShown
-                isNextButton
-                handlePopupButtonClick={handleNextClick}
-            />
-        }
-    </div>
-)
+    )
+}
 
 PopupView.defaultProps = popupViewDefaultProps
 PopupView.propTypes = popupViewPropTypes
