@@ -99,6 +99,8 @@ class Popup extends Component {
 
                 ...other } = this.props,
 
+            { isFullSize } = other,
+
             { isDisplayed } = this.state
 
         return (
@@ -109,6 +111,7 @@ class Popup extends Component {
 
                     isVisible ? 'Popup__visible' : 'Popup__invisible',
                     isDisplayed ? 'Popup__displayed' : 'Popup__notDisplayed',
+                    isFullSize && 'Popup__fullSize',
 
                     displaysInOverlay ?
                         'Popup__displaysInOverlay' : 'Popup__displaysNotInOverlay',

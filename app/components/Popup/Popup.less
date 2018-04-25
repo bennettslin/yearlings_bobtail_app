@@ -6,9 +6,19 @@
 @import "../Popups/TipsPopup.less";
 
 // Styles for showing popup or not.
-
 .Popup {
     flex-direction: column-reverse;
+}
+
+.Popup__fullSize {
+    .RM__mobile:not(.RM__tablet)
+    & {
+        /**
+         * In mini and phone, anchor full size popups to bottom to make room
+         * for popup buttons.
+         */
+        justify-content: start;
+    }
 }
 
 .Popup__visible {

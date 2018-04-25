@@ -469,15 +469,17 @@ export const getSingleShownLyricColumnKey = ({
 export const getShowOverlay = ({
     deviceIndex,
     isLyricExpanded,
+    isHeightlessLyricColumn,
     selectedAnnotationIndex,
     selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex
 }) => {
     const isOverlayingAnnotation = getIsOverlayingAnnotation({
-            deviceIndex,
-            isLyricExpanded
-        })
+        deviceIndex,
+        isLyricExpanded,
+        isHeightlessLyricColumn
+    })
 
     return !!selectedTitleIndex ||
            !!selectedScoreIndex ||

@@ -165,9 +165,11 @@ export const getIsHeightlessLyricColumn = ({
 
 export const getIsOverlayingAnnotation = ({
     deviceIndex,
-    isLyricExpanded
+    isLyricExpanded,
+    isHeightlessLyricColumn
 }) => {
-    return !getIsDesktop(deviceIndex) && (isLyricExpanded || getIsPhone(deviceIndex))
+    return !getIsDesktop(deviceIndex) &&
+        (isHeightlessLyricColumn || isLyricExpanded || getIsPhone(deviceIndex))
 }
 
 export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {

@@ -13,6 +13,7 @@ import { getIsOverlayingAnnotation,
 const mapStateToProps = ({
     deviceIndex,
     isLyricExpanded,
+    isHeightlessLyricColumn,
     isHeavyRenderReady,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
@@ -22,6 +23,7 @@ const mapStateToProps = ({
 }) => ({
     deviceIndex,
     isLyricExpanded,
+    isHeightlessLyricColumn,
     isHeavyRenderReady,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
@@ -34,6 +36,7 @@ const annotationPopupPropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
+    isHeightlessLyricColumn: PropTypes.bool.isRequired,
 
     isHeavyRenderReady: PropTypes.bool.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -53,6 +56,7 @@ AnnotationPopup = ({
 
     deviceIndex,
     isLyricExpanded,
+    isHeightlessLyricColumn,
     isHeavyRenderReady,
     inMain,
 
@@ -71,15 +75,17 @@ AnnotationPopup = ({
     const isOverlayingAnnotation = getIsOverlayingAnnotation({
             deviceIndex,
             isLyricExpanded,
+            isHeightlessLyricColumn,
             selectedCarouselNavIndex
         }),
         isPhone = getIsPhone(deviceIndex)
 
     /**
-     * Annotation popup is told whether it is in overlay. It then checks
-     * data helper to decide whether to render itself.
+     * Annotation popup is in main, unless lyric column is expanded or
+     * heightless.
      */
     if (Boolean(inMain) === isOverlayingAnnotation) {
+
         return null
 
     } else {
@@ -88,7 +94,7 @@ AnnotationPopup = ({
                 !!selectedAnnotationIndex &&
 
                 /**
-                 * If an annotation is selected, always show in popupif it's a
+                 * If an annotation is selected, always show in popup if it's a
                  * phone or lyric is expanded.
                  */
                 (!selectedCarouselNavIndex || isPhone || isLyricExpanded) &&

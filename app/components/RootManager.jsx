@@ -167,6 +167,7 @@ class RootManager extends Component {
             showOverlay = getShowOverlay({
                 deviceIndex,
                 isLyricExpanded,
+                isHeightlessLyricColumn,
                 selectedAnnotationIndex,
                 selectedScoreIndex,
                 selectedTitleIndex,

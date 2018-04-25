@@ -133,8 +133,7 @@ AnnotationSectionView = ({
         <div
             className={cx(
                 'Annotation',
-                { 'Annotation__selected': isSelected,
-                  'Annotation__accessed': isAccessed }
+                { 'Annotation__selectedInCarousel': isSelected && inCarousel }
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}

@@ -78,35 +78,36 @@ PopupView = ({
                 { 'PopupViewContent__narrowPadding': hasNarrowPadding,
                   'PopupViewContent__widePadding': hasWidePadding },
 
+                !isFullSize && 'PopupViewContent__scrollIfFull',
+
                 'boxShadow__popup'
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}
         >
             {children}
-
-            {showClose &&
-                <PopupViewButton
-                    accessKeysShown
-                    isCloseButton
-                    handlePopupButtonClick={handleCloseClick}
-                />
-            }
-            {showArrows &&
-                <PopupViewButton
-                    accessKeysShown
-                    isPreviousButton
-                    handlePopupButtonClick={handlePreviousClick}
-                />
-            }
-            {showArrows &&
-                <PopupViewButton
-                    accessKeysShown
-                    isNextButton
-                    handlePopupButtonClick={handleNextClick}
-                />
-            }
         </div>
+        {showClose &&
+            <PopupViewButton
+                accessKeysShown
+                isCloseButton
+                handlePopupButtonClick={handleCloseClick}
+            />
+        }
+        {showArrows &&
+            <PopupViewButton
+                accessKeysShown
+                isPreviousButton
+                handlePopupButtonClick={handlePreviousClick}
+            />
+        }
+        {showArrows &&
+            <PopupViewButton
+                accessKeysShown
+                isNextButton
+                handlePopupButtonClick={handleNextClick}
+            />
+        }
     </div>
 )
 
