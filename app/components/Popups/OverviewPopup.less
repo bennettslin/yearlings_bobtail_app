@@ -1,10 +1,7 @@
-.Popup__overview {
-    max-width: 480px;
-
-    .PopupViewContent {
-        border-radius: 25px;
-    }
-}
+/**
+ * Overview popup styling is somewhat different from the others, because it is
+ * not positioned absolute.
+ */
 
 .OverviewPopup__inMain {
 
@@ -21,7 +18,19 @@
     .RM__phone
     & {
         margin: 0;
-        padding: @js__margin__thin;
-        box-sizing: border-box;
     }
+}
+
+.OverviewPopupView {
+    max-width: 480px;
+
+    .RM__phone
+    & {
+        box-sizing: border-box;
+        padding: @js__margin__thin;
+    }
+}
+
+.OverviewPopupViewContent {
+    border-radius: 25px;
 }

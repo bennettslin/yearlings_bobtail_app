@@ -46,7 +46,7 @@ PopupView = ({
 }) => (
     <div className={cx(
         'PopupView',
-        `PopupView__${popupName}`,
+        `${popupName}PopupView`,
 
         { 'PopupView__bounceAnimate': bounceAnimate,
           'PopupView__shrinkAnimate': shrinkAnimate,
@@ -74,6 +74,7 @@ PopupView = ({
         <div
             className={cx(
                 'PopupViewContent',
+                `${popupName}PopupViewContent`,
                 { 'PopupViewContent__narrowPadding': hasNarrowPadding,
                   'PopupViewContent__widePadding': hasWidePadding }
             )}

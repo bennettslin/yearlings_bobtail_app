@@ -36,7 +36,7 @@ WikiPopup = ({
             displaysInOverlay
             isFullSize
             isVisible={isVisible}
-            popupName="wiki"
+            popupName="Wiki"
             handleCloseClick={handleWikiToggle}
         >
             <WikiSection {...other} />

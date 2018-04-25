@@ -72,7 +72,7 @@ OverviewPopup = ({
         <Popup
             bounceAnimate
             hasNarrowPadding
-            popupName="overview"
+            popupName="Overview"
             className={cx(
                 inMain && 'OverviewPopup__inMain'
             )}

@@ -1,11 +1,14 @@
-.PopupView__tips {
+// TipsPopup is positioned absolute full.
+
+.TipsPopupView {
+    position: absolute;
+
     /**
      * When tip button is in menu, show tip popup closer to menu. When it's in
      * main in desktop, show it in centre.
      */
     .RM__scoresTipsMenu
     & {
-        position: absolute;
         top: 5%;
         right: 5%;
     }
@@ -20,5 +23,10 @@
         position: absolute;
         bottom: 5%;
         right: 5%;
+    }
+
+    .RM__phone
+    & {
+        padding: @js__margin__thin;
     }
 }

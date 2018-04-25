@@ -41,7 +41,7 @@ ScorePopup = ({
             showClose
             isFullSize
             displaysInOverlay
-            popupName="score"
+            popupName="Score"
             isVisible={isVisible}
             handleCloseClick={handleScoreToggle}
         >

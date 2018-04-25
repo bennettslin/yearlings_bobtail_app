@@ -37,7 +37,7 @@ TitlePopup = ({
             isCardSize
             hasWidePadding
             isVisible={isVisible}
-            popupName="title"
+            popupName="Title"
             handleCloseClick={handleTitleToggle}
             handlePopupContainerClick={handlePopupContainerClick}
         >

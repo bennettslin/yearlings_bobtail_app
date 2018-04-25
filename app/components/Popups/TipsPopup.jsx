@@ -40,12 +40,12 @@ TipsPopup = ({
 
         isVisible = isHeavyRenderReady && !isLogue && !selectedTipsIndex
 
-        return (
-            <Popup
+    return (
+        <Popup
             isCardSize
             bounceAnimate
             hasNarrowPadding
-            popupName="tips"
+            popupName="Tips"
             isVisible={isVisible}
             handlePopupContainerClick={handlePopupContainerClick}
         >

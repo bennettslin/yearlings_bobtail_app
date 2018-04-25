@@ -3,6 +3,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import Annotation from '../Annotation/Annotation'
 import Popup from '../Popup/Popup'
 import { getIsOverlayingAnnotation,
@@ -104,9 +106,13 @@ AnnotationPopup = ({
                 showArrows
                 bounceAnimate
                 hasWidePadding
-                popupName={inMain ? 'annotationSide' : 'annotationOverlay'}
+                popupName="Annotation"
+                className={cx(
+                    inMain && 'AnnotationPopup__inMain'
+                )}
                 isVisible={isVisible}
                 displaysInOverlay={isOverlayingAnnotation}
+                noAbsoluteFull={inMain}
                 handleNextClick={handleAnnotationNext}
                 handlePreviousClick={handleAnnotationPrevious}
                 handlePopupContainerClick={handlePopupContainerClick}
