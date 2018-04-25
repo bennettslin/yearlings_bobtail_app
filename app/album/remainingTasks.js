@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Shouldn't be able to hover on NavPanel.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Finalise UI of selected carousel annotations.`,
         workedHours: 0,
         neededHours: 3

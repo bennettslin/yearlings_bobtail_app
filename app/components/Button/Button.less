@@ -44,12 +44,27 @@
 
 .Button__enabled {
     cursor: pointer;
+}
 
-    &:hover {
+.ButtonAnimatable {
+
+    .Button__enabled:hover
+    & {
         animation: bounceHover @animationDuration__default;
     }
 
-    &:active {
+    .Button__enabled:active
+    & {
         transform: scale(0.9);
+    }
+}
+
+// Apply box shadow to button itself, so that it animates as well.
+.ButtonAnimatable__popup {
+    box-shadow: @boxShadow__popupButton;
+
+    .RM__overlayShown
+    & {
+        box-shadow: @boxShadow__popupButtonDarker;
     }
 }

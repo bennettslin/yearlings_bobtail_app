@@ -13,16 +13,6 @@
     }
 }
 
-// Apply box shadow to button itself, so that it animates as well.
-.Button__popup {
-    box-shadow: @boxShadow__popupButton;
-
-    .RM__overlayShown
-    & {
-        box-shadow: @boxShadow__popupButtonDarker;
-    }
-}
-
 .PopupViewButton__close {
     top: -@js__length__iconLarge * @offset__popupButton;
     left: -@js__length__iconLarge * @offset__popupButton;

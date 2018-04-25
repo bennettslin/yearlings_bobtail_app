@@ -25,6 +25,7 @@ class Button extends Component {
         isIndexSelected: PropTypes.bool,
 
         isDisabled: PropTypes.bool,
+        isPopupButton: PropTypes.bool,
         showAccessIconIfAccessOn: PropTypes.bool.isRequired,
         accessKey: PropTypes.string,
         temporaryText: PropTypes.any,
@@ -55,6 +56,7 @@ class Button extends Component {
                 isSmallSize,
                 isLargeSize,
                 isDisabled,
+                isPopupButton,
                 showAccessIconIfAccessOn,
                 temporaryText,
                 accessKey,
@@ -83,21 +85,27 @@ class Button extends Component {
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}
             >
-                <ButtonIcon
-                    temporaryName={buttonName}
-                    temporaryText={temporaryText}
-                    showDisabled={isDisabled}
-                />
-
-                {children}
-
-                {accessKey && (
-                    <AccessIcon
-                        inButton
-                        showIfAccessed={showIfAccessed}
-                        accessKey={accessKey}
+                <div className={cx(
+                    'ButtonAnimatable',
+                    isPopupButton && 'ButtonAnimatable__popup',
+                    'absoluteFullContainer'
+                )}>
+                    <ButtonIcon
+                        temporaryName={buttonName}
+                        temporaryText={temporaryText}
+                        showDisabled={isDisabled}
                     />
-                )}
+
+                    {children}
+
+                    {accessKey && (
+                        <AccessIcon
+                            inButton
+                            showIfAccessed={showIfAccessed}
+                            accessKey={accessKey}
+                        />
+                    )}
+                </div>
             </div>
         )
     }
