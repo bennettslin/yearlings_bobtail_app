@@ -17,7 +17,6 @@ class Popup extends Component {
         noFlexCentre: PropTypes.bool,
         noAbsoluteFull: PropTypes.bool,
         displaysInOverlay: PropTypes.bool,
-        showArrows: PropTypes.bool,
         handleCloseClick: PropTypes.func,
         handlePreviousClick: PropTypes.func,
         handleNextClick: PropTypes.func,
@@ -86,7 +85,6 @@ class Popup extends Component {
                 noFlexCentre,
                 noAbsoluteFull,
                 displaysInOverlay,
-                showArrows,
                 handlePreviousClick,
                 handleNextClick,
 
@@ -122,7 +120,6 @@ class Popup extends Component {
             >
                 <PopupView {...other}
                     popupName={popupName}
-                    showArrows={showArrows}
                     handlePreviousClick={handlePreviousClick}
                     handleNextClick={handleNextClick}
                     handleContainerClick={this._handlePopupContainerClick}

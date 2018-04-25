@@ -16,7 +16,6 @@ popupViewPropTypes = {
     isFullSize: PropTypes.bool,
     hasNarrowPadding: PropTypes.bool,
     hasWidePadding: PropTypes.bool,
-    showArrows: PropTypes.bool.isRequired,
     handleCloseClick: PropTypes.func,
     handlePreviousClick: PropTypes.func,
     handleNextClick: PropTypes.func,
@@ -33,7 +32,6 @@ PopupView = ({
     isFullSize,
     hasNarrowPadding,
     hasWidePadding,
-    showArrows,
     handleCloseClick,
     handlePreviousClick,
     handleNextClick,
@@ -42,7 +40,10 @@ PopupView = ({
 
 }) => {
 
-    const showClose = Boolean(handleCloseClick)
+    const
+        showClose = Boolean(handleCloseClick),
+        showPrevious = Boolean(handlePreviousClick),
+        showNext = Boolean(handleNextClick)
 
     return (
         <div className={cx(
@@ -62,7 +63,7 @@ PopupView = ({
                     inCardSize={isCardSize}
                 />
             )}
-            {showArrows && (
+            {showPrevious && (
                 <PopupViewButton
                     isShadow
                     isPreviousButton
@@ -70,7 +71,7 @@ PopupView = ({
                     inCardSize={isCardSize}
                 />
             )}
-            {showArrows && (
+            {showNext && (
                 <PopupViewButton
                     isShadow
                     isNextButton
@@ -103,7 +104,7 @@ PopupView = ({
                     handlePopupButtonClick={handleCloseClick}
                 />
             }
-            {showArrows &&
+            {showPrevious &&
                 <PopupViewButton
                     accessKeysShown
                     isPreviousButton
@@ -112,7 +113,7 @@ PopupView = ({
                     handlePopupButtonClick={handlePreviousClick}
                 />
             }
-            {showArrows &&
+            {showNext &&
                 <PopupViewButton
                     accessKeysShown
                     isNextButton

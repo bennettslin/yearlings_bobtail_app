@@ -34,7 +34,6 @@ WikiPopup = ({
             shrinkAnimate
             displaysInOverlay
             isFullSize
-            showArrows
             isVisible={isVisible}
             popupName="Wiki"
             handleCloseClick={handleWikiToggle}

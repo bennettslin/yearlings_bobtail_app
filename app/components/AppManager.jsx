@@ -1182,8 +1182,6 @@ class App extends Component {
             })
         }
 
-        console.error('window', windowWidth, windowHeight)
-
         this.setState({ deviceIndex })
         this.props.setDeviceIndex(deviceIndex)
         this.props.setWindowHeight(windowHeight)
