@@ -71,7 +71,8 @@ Menu = ({
                 className={cx(
                     'MenuRow',
                     'MenuTopRow',
-                    'width__mainColumn'
+                    'width__mainColumn',
+                    'boxShadow__popup'
                 )}
                 style={{
                     marginLeft: menuMarginInOverlay,
@@ -79,19 +80,19 @@ Menu = ({
                 }}
             >
                 <div className={cx(
-                    'MenuTopRow__titleTimer',
-                    'MenuTopRow__child',
+                    'MenuRowChild__titleTimer',
+                    'MenuRowChild',
                     { 'widths__hiddenInOverlay': !isPhone }
                 )}>
                     <div className={cx(
-                        'MenuTopRow__titleTimer__child',
+                        'MenuRowChild__titleTimer__child',
                         'absoluteFullContainer'
                     )}>
                         <TitleToggle {...titleToggleHandlers} />
                     </div>
                     {isPhone && (
                         <div className={cx(
-                            'MenuTopRow__titleTimer__child',
+                            'MenuRowChild__titleTimer__child',
                             'absoluteFullContainer'
                         )}>
                             <AudioTimer
@@ -102,15 +103,15 @@ Menu = ({
                 </div>
 
                 <div className={cx(
-                    'MenuTopRow__audio',
-                    'MenuTopRow__child'
+                    'MenuRowChild__audio',
+                    'MenuRowChild'
                 )}>
                     <Audio {...audioHandlers} />
                 </div>
 
                 <div className={cx(
-                    'MenuTopRow__scoresTips',
-                    'MenuTopRow__child',
+                    'MenuRowChild__scoresTips',
+                    'MenuRowChild',
                     'widths__hiddenInOverlay'
                 )}>
                     <ScoresTips {...scoresTipsHandlers}

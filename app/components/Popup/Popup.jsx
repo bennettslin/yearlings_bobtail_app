@@ -104,6 +104,7 @@ class Popup extends Component {
         return (
             <div
                 className={cx(
+                    'Popup',
                     `${popupName}Popup`,
 
                     isVisible ? 'Popup__visible' : 'Popup__invisible',

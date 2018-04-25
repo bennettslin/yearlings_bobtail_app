@@ -10,7 +10,7 @@
     @js__margin__menuChild__narrow * 2;
 
 // Arbitrary for now.
-@js__height__audio: 64px;
+@js__height__audio: 66px;
 @js__height__audioBanner__bottomRow: @js__height__audio / 2;
 @js__height__audioSlider__bottomRow: @js__height__audio / 2;
 
@@ -53,7 +53,6 @@
 
     overflow: hidden;
 
-    box-shadow: @boxShadow__menu;
     background-color: #8dd;
 
     transform: translateX(0);
@@ -84,12 +83,12 @@
 }
 
 .MenuTopRow,
-.MenuTopRow__scoresTips {
+.MenuRowChild__scoresTips {
     display: flex;
     align-items: center;
 }
 
-.MenuTopRow__child {
+.MenuRowChild {
     height: 100%;
     flex-grow: 1;
 
@@ -98,7 +97,7 @@
         max-width @animationDuration__fast;
 }
 
-.MenuTopRow__titleTimer {
+.MenuRowChild__titleTimer {
     position: relative;
 
     min-width: @js__minWidth__childTitle;
@@ -116,7 +115,7 @@
     }
 }
 
-.MenuTopRow__titleTimer__child {
+.MenuRowChild__titleTimer__child {
 
     .RM__phone
     & {
@@ -146,7 +145,7 @@
     }
 }
 
-.MenuTopRow__audio {
+.MenuRowChild__audio {
     flex-grow: 2;
 
     margin: 0 @js__margin__menuChild;
@@ -226,7 +225,7 @@
     }
 }
 
-.MenuTopRow__scoresTips {
+.MenuRowChild__scoresTips {
 
     .RM__scoresTipsMain
     & {

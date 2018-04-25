@@ -63,9 +63,7 @@ PopupViewButton = ({
                   'PopupViewButton__previous': isPreviousButton,
                   'PopupViewButton__next': isNextButton,
                   'PopupViewButton__side': isPreviousButton || isNextButton,
-                  'PopupViewButton__shadow': isShadow },
-
-                isShadow && 'PopupViewButton__shadow'
+                  'boxShadow__popup': isShadow },
             )}
         >
             <Button {...other}

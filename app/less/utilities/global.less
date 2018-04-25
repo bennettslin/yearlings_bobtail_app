@@ -25,6 +25,15 @@
     align-items: center;
 }
 
+.boxShadow__popup {
+    box-shadow: @boxShadow__popup;
+
+    .RM__overlayShown
+    & {
+        box-shadow: @boxShadow__popupDarker;
+    }
+}
+
 /********
  * TEXT *
  ********/

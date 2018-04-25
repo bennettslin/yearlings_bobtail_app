@@ -76,7 +76,9 @@ PopupView = ({
                 'PopupViewContent',
                 `${popupName}PopupViewContent`,
                 { 'PopupViewContent__narrowPadding': hasNarrowPadding,
-                  'PopupViewContent__widePadding': hasWidePadding }
+                  'PopupViewContent__widePadding': hasWidePadding },
+
+                'boxShadow__popup'
             )}
             onClick={handleContainerClick}
             onTouchStart={handleContainerClick}
