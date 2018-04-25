@@ -40,17 +40,18 @@ TitleToggle = ({
 
 }) => {
     return isAudioChild === isTitleInAudio && (
-        <Button
-            buttonName="title"
-            className={cx(
-                'TitleToggle',
-                { 'Audio__menuChild': isAudioChild }
-            )}
-            isCustomSize
-            accessKey={TITLE_TOGGLE_KEY}
-            temporaryText={selectedTitleIndex}
-            handleButtonClick={handleTitleToggle}
-        />
+        <div className={cx(
+            'TitleToggle',
+            { 'Audio__menuChild': isAudioChild }
+        )}>
+            <Button
+                buttonName="title"
+                isCustomSize
+                accessKey={TITLE_TOGGLE_KEY}
+                temporaryText={selectedTitleIndex}
+                handleButtonClick={handleTitleToggle}
+            />
+        </div>
     )
 }
 

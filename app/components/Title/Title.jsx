@@ -5,7 +5,8 @@ import cx from 'classnames'
 
 const Title = () => (
     <div className={cx(
-        'Title'
+        'Title',
+        'fontSize__verse'
     )}>
         <p className="title-paragraph">
             Album written, performed, and recorded by Bennett Lin.

@@ -228,7 +228,8 @@ class RootManager extends Component {
                         'RM__carouselNavShowable' : 'RM__carouselNavUnshowable',
                     isScoresTipsInMain ?
                         'RM__scoresTipsMain' : 'RM__scoresTipsMenu',
-                    { 'RM__titleInAudio': isTitleInAudio },
+                    isTitleInAudio ?
+                        'RM__titleInAudio' : 'RM__notTitleInAudio',
 
                     singleShownLyricColumnKey &&
                         `RM__${singleShownLyricColumnKey}LyricColumnOnly`,
