@@ -7,21 +7,21 @@
     .RM__desktop
     & {
         top: 0;
-        margin-top: 20px;
+
+        // Wider margin top to make room for buttons.
+        margin-top:
+            @js__length__iconLarge * 0.5
+            + @js__margin__thin;
     }
 
     .RM__mobile
     & {
         bottom: 0;
-        margin-right: 15px;
+        margin-right: @js__margin__thick;
 
-        // Wider margin bottom to make room for lyrics at bottom.
-        margin-bottom: 25px;
-    }
-
-    .RM__mobile.RM__lyricHeightless
-    & {
-        // Even wider margin bottom if no lyrics at bottom.
-        margin-bottom: @js__length__icon;
+        // Wider margin bottom to make room for buttons.
+        margin-bottom:
+            @js__length__iconLarge__tablet * 0.5
+            + @js__margin__thin;
     }
 }
