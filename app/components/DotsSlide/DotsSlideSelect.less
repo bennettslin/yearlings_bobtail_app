@@ -1,17 +1,19 @@
 @length__dotsSlideSelect: 64px;
 
-@length__dotsSlideSelect__phone:
+@length__dotsSlideSelect__tablet:
     @js__length__iconLarge * 0.95;
-
-@padding__dotsSlideSelect:
-    @length__dotsSlideSelect / 6;
 
 .DotsSlideSelect {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    padding: @padding__dotsSlideSelect;
+    padding: 10px;
+
+    .RM__mini
+    & {
+        padding: @js__margin__thin * 2;
+    }
 
     .RM__phone
     & {
@@ -26,8 +28,8 @@
 
     .RM__phone
     & {
-        width: @length__dotsSlideSelect__phone;
-        height: @length__dotsSlideSelect__phone;
+        width: @length__dotsSlideSelect__tablet;
+        height: @length__dotsSlideSelect__tablet;
     }
 }
 

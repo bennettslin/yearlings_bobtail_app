@@ -7,10 +7,12 @@ import NavButton from './NavButton'
 
 const mapStateToProps = ({
     selectedSongIndex,
+    selectedDotsIndex,
     accessedNavSongIndex,
     showSingleBookColumn
 }) => ({
     selectedSongIndex,
+    selectedDotsIndex,
     accessedNavSongIndex,
     showSingleBookColumn
 })
@@ -19,6 +21,7 @@ const navButtonIndexedPropTypes = {
     // Through Redux.
     accessedNavSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
+    selectedDotsIndex: PropTypes.bool.isRequired,
     showSingleBookColumn: PropTypes.bool.isRequired,
 
     // From parent.
@@ -29,12 +32,15 @@ NavButtonIndexed = ({
 
     songIndex,
     selectedSongIndex,
+    selectedDotsIndex,
     accessedNavSongIndex,
 
 ...other }) => {
 
     const isSelected = selectedSongIndex === songIndex,
-        isAccessed = accessedNavSongIndex === songIndex
+
+        // Don't show access icon if dots slide is open.
+        isAccessed = !selectedDotsIndex && accessedNavSongIndex === songIndex
 
     return (
         <NavButton {...other}
