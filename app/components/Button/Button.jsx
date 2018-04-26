@@ -49,7 +49,8 @@ class Button extends Component {
                     'isIndexSelected',
                     'isDisabled',
                     'temporaryText',
-                    'showAccessIconIfAccessOn'
+                    'showAccessIconIfAccessOn',
+                    'children'
                 ]
             })
 

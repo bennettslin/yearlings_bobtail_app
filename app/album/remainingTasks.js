@@ -44,12 +44,6 @@ module.exports = [
         neededHours: 5
     },
 
-    {
-        taskName: `Override transition doesn't work when skipping several songs at a time. Investigate in general.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     /**
      * Mobile bugs.
      */

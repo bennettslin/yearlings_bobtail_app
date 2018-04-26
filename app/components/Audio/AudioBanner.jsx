@@ -1,6 +1,4 @@
 // Component to show played song title, time played, and slider interface.
-/* eslint-disable object-shorthand */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'

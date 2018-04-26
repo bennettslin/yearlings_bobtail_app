@@ -1,6 +1,4 @@
 // Button to select book or song in nav section.
-/* eslint-disable object-shorthand */
-
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'

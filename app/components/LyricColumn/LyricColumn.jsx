@@ -48,7 +48,7 @@ class LyricColumn extends Component {
              * When a dot is deselected, don't animate elements that get hidden
              * when transitioning between songs.
              */
-            shouldOverrideAnimate: false,
+            overrideTransitions: false,
 
             scrollTimeoutId: null
         }
@@ -78,7 +78,7 @@ class LyricColumn extends Component {
     componentWillReceiveProps(nextProps) {
         if (this.props.isHeavyRenderReady && !nextProps.isHeavyRenderReady) {
             this.setState({
-                shouldOverrideAnimate: true
+                overrideTransitions: true
             })
         }
     }
@@ -112,7 +112,7 @@ class LyricColumn extends Component {
     completeHeightTransition() {
         this.setState({
             isTransitioningHeight: false,
-            shouldOverrideAnimate: false
+            overrideTransitions: false
         })
     }
 
@@ -128,7 +128,7 @@ class LyricColumn extends Component {
         return (
             <LyricColumnView {...other}
                 myRef={(node) => (this.myLyricColumn = node)}
-                shouldOverrideAnimate={this.state.shouldOverrideAnimate}
+                overrideTransitions={this.state.overrideTransitions}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
                 completeHeightTransition={this.completeHeightTransition}
@@ -149,7 +149,7 @@ const lyricColumnViewPropTypes = {
 
     // From parent.
     myRef: PropTypes.func.isRequired,
-    shouldOverrideAnimate: PropTypes.bool.isRequired,
+    overrideTransitions: PropTypes.bool.isRequired,
     isTransitioningHeight: PropTypes.bool.isRequired,
     handleTransition: PropTypes.func.isRequired,
     completeHeightTransition: PropTypes.func.isRequired,
@@ -174,7 +174,7 @@ LyricColumnView = ({
 
     // From controller.
     myRef,
-    shouldOverrideAnimate,
+    overrideTransitions,
     isTransitioningHeight,
     handleTransition,
     // handleAnimatableTransition,
@@ -199,7 +199,7 @@ LyricColumnView = ({
                 'position__lyricColumn__mobile',
                 'gradientMask__lyricColumn__desktop',
                 isHeavyRenderReady ? 'renderReady' : 'renderUnready',
-                { 'overrideAnimate': shouldOverrideAnimate }
+                { 'overrideTransitions': overrideTransitions }
             )}
             ref={myRef}
             onTransitionEnd={handleTransition}

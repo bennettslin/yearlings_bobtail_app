@@ -1,6 +1,4 @@
 // Button in dots section to select and deselect dot.
-/* eslint-disable object-shorthand */
-
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
@@ -152,7 +150,8 @@ DotsSlideSelectView = ({
 
                 <div className={cx(
                     'SlideSelectDescription',
-                    { 'SlideSelectDescription__interactivated': isInteractivated },
+                    { 'SlideSelectDescription__interactivated': isInteractivated,
+                      'SlideSelectDescription__accessed': isAccessed },
 
                     'absoluteFullContainer',
                     'flexCentreContainer'

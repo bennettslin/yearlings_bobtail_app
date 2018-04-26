@@ -115,8 +115,6 @@ class WikiSection extends Component {
                     ref={this.props.wikiRef}
                     className={cx(
                         'iframeContainer__iframe',
-
-                        // eslint-disable-next-line object-shorthand
                         { 'iframeLoading': iframeLoading }
                     )}
                     src={selectedWikiUrl}

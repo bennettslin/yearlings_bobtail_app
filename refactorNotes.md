@@ -14,8 +14,6 @@ Class names optimised for clarity
 
 Consolidate styles for child with parent selector nesting
 
-Revisit overrideAnimate weirdness
-
 ### Remaining
 
 AccessIcons (/)

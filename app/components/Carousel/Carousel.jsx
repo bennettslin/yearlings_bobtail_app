@@ -48,7 +48,7 @@ class Carousel extends Component {
              * When a dot is deselected, don't animate elements that get hidden
              * when transitioning between songs.
              */
-            shouldOverrideAnimate: false
+            overrideTransitions: false
         }
 
         this._handleTransition = this._handleTransition.bind(this)
@@ -75,7 +75,7 @@ class Carousel extends Component {
     componentWillReceiveProps(nextProps) {
         if (this.props.isHeavyRenderReady && !nextProps.isHeavyRenderReady) {
             this.setState({
-                shouldOverrideAnimate: true
+                overrideTransitions: true
             })
         }
     }
@@ -83,7 +83,7 @@ class Carousel extends Component {
     _handleTransition(e) {
         if (e.propertyName === 'opacity') {
             this.setState({
-                shouldOverrideAnimate: false
+                overrideTransitions: false
             })
         }
     }
@@ -98,7 +98,7 @@ class Carousel extends Component {
                 handleAnnotationNext,
                 ...other } = this.props,
 
-            { shouldOverrideAnimate } = this.state
+            { overrideTransitions } = this.state
 
         if (isHiddenCarouselNav) {
             return null
@@ -120,7 +120,7 @@ class Carousel extends Component {
                     'Carousel',
                     'gradientMask__carousel__desktop',
                     isHeavyRenderReady ? 'renderReady' : 'renderUnready',
-                    { 'overrideAnimate': shouldOverrideAnimate }
+                    { 'overrideTransitions': overrideTransitions }
                 )}
                 onTransitionEnd={this._handleTransition}
             >
