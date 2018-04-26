@@ -8,6 +8,8 @@ import cx from 'classnames'
 import ButtonIcon from '../Button/ButtonIcon'
 import AccessIcon from '../AccessIcon/AccessIcon'
 
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+
 class Button extends Component {
 
     static defaultProps = {
@@ -20,15 +22,12 @@ class Button extends Component {
         isCustomSize: PropTypes.bool,
         isSmallSize: PropTypes.bool,
         isLargeSize: PropTypes.bool,
-
-        // Passed by nav button.
-        isIndexSelected: PropTypes.bool,
-
+        isIndexSelected: PropTypes.bool, // Passed by nav button.
         isDisabled: PropTypes.bool,
         isPopupButton: PropTypes.bool,
-        showAccessIconIfAccessOn: PropTypes.bool.isRequired,
-        accessKey: PropTypes.string,
         temporaryText: PropTypes.any,
+        accessKey: PropTypes.string,
+        showAccessIconIfAccessOn: PropTypes.bool.isRequired,
         handleButtonClick: PropTypes.func.isRequired,
         children: PropTypes.any
     }
@@ -37,6 +36,24 @@ class Button extends Component {
         super(props)
 
         this._handleClick = this._handleClick.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    // Verse audio buttons actively change button names.
+                    'buttonName',
+                    'isIndexSelected',
+                    'isDisabled',
+                    'temporaryText',
+                    'showAccessIconIfAccessOn'
+                ]
+            })
+
+        return componentShouldUpdate
     }
 
     _handleClick(e) {

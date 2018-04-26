@@ -7,7 +7,9 @@ import cx from 'classnames'
 
 import Texts from '../Text/Texts'
 import OverviewToggle from '../Main/OverviewToggle'
+
 import { getSongOverview, getSongIsLogue } from '../../helpers/dataHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 import { getIsToggleInOverview } from '../../helpers/responsiveHelper'
 import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'
 
@@ -21,7 +23,7 @@ const mapStateToProps = ({
     renderReadySongIndex
 })
 
-class OverviewSection extends Component {
+class Overview extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -37,6 +39,21 @@ class OverviewSection extends Component {
         super(props)
 
         this._handleOverviewToggle = this._handleOverviewToggle.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'deviceIndex',
+                    'selectedOverviewIndex',
+                    'renderReadySongIndex'
+                ]
+            })
+
+        return componentShouldUpdate
     }
 
     _handleOverviewToggle(e) {
@@ -88,4 +105,4 @@ class OverviewSection extends Component {
     }
 }
 
-export default connect(mapStateToProps)(OverviewSection)
+export default connect(mapStateToProps)(Overview)

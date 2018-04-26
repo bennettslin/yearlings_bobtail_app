@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 
 import TilesCubeFace from './TilesCubeFace'
 
+import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../../../helpers/tilesHelper'
 
 import { TILE_COLUMNS_LENGTH } from '../../../constants/stage'
@@ -20,6 +21,26 @@ class TilesCube extends Component {
         slantDirection: PropTypes.string.isRequired,
         stageWidth: PropTypes.number.isRequired,
         stageHeight: PropTypes.number.isRequired
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'xIndex',
+                    'yIndex',
+                    'zIndex',
+                    'colour',
+                    'isFloor',
+                    'slantDirection',
+                    'stageWidth',
+                    'stageHeight'
+                ]
+            })
+
+        return componentShouldUpdate
     }
 
     render() {
