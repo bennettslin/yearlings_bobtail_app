@@ -227,7 +227,7 @@ module.exports = {
                                 {
                                     italic: `Ulysses,`
                                 },
-                                `which Catherine was reading at the time. In hindsight, that night was probably the beginning of the end, as Catherine surmised that a boyfriend who doesn't read would be the death of her.`
+                                `which Catherine was reading at the time. In hindsight, that night was probably the beginning of the end, as Catherine surmised that a boyfriend who didn't read for pleasure would be the death of her.`
                             ],
                             dotKeys: {
                                 [BACKSTORY]: true,
