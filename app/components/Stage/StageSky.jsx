@@ -7,17 +7,7 @@ import cx from 'classnames'
 import DynamicSvg from '../DynamicSvg/DynamicSvg'
 
 import { SKY_NO_TIME,
-         SKY_MORNING,
-         SKY_NOON,
-         SKY_AFTERNOON,
-         SKY_EVENING,
-         SKY_NIGHT,
-
-         SKY_NO_SEASON,
-         SKY_SPRING,
-         SKY_SUMMER,
-         SKY_AUTUMN,
-         SKY_WINTER } from '../../constants/stageValues'
+        SKY_NO_SEASON } from '../../constants/stageValues'
 
 const defaultProps = {
     sky: {
@@ -35,7 +25,7 @@ const propTypes = {
     stageHeight: PropTypes.number.isRequired
 }
 
-const StageSceneSky = ({
+const StageSky = ({
 
     sky,
     stageWidth,
@@ -46,19 +36,15 @@ const StageSceneSky = ({
 
     return (
         <DynamicSvg
-            className="StageSceneSky"
+            className="StageSky"
             viewBoxWidth={stageWidth}
             viewBoxHeight={stageHeight}
         >
             <rect
                 className={cx(
-                    'filter',
-                    'season-filter',
-                    { 'none': season === SKY_NO_SEASON,
-                    'spring': season === SKY_SPRING,
-                    'summer': season === SKY_SUMMER,
-                    'autumn': season === SKY_AUTUMN,
-                    'winter': season === SKY_WINTER }
+                    'StageSkyFilter',
+                    'StageSkyFilter__season',
+                    `StageSkyFilter__season__${season}`
                 )}
                 x={0}
                 y={0}
@@ -67,14 +53,9 @@ const StageSceneSky = ({
             />
             <rect
                 className={cx(
-                    'filter',
-                    'time-filter',
-                    { 'none': time === SKY_NO_TIME,
-                    'morning': time === SKY_MORNING,
-                    'noon': time === SKY_NOON,
-                    'afternoon': time === SKY_AFTERNOON,
-                    'evening': time === SKY_EVENING,
-                    'night': time === SKY_NIGHT }
+                    'StageSkyFilter',
+                    'StageSkyFilter__time',
+                    `StageSkyFilter__time__${time}`
                 )}
                 x={0}
                 y={0}
@@ -86,7 +67,7 @@ const StageSceneSky = ({
     )
 }
 
-StageSceneSky.defaultProps = defaultProps
-StageSceneSky.propTypes = propTypes
+StageSky.defaultProps = defaultProps
+StageSky.propTypes = propTypes
 
-export default StageSceneSky
+export default StageSky

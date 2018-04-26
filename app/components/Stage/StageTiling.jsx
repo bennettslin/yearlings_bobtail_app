@@ -8,12 +8,12 @@ import Wood from './Wood/Wood'
 import Tiles from './Tiles/Tiles'
 
 const propTypes = {
-    isFloor: PropTypes.bool.isRequired,
+    isFloor: PropTypes.bool,
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
 }
 
-const StageSceneTiling = (props) => {
+const StageTiling = (props) => {
 
     const { isFloor,
             stageWidth,
@@ -21,10 +21,10 @@ const StageSceneTiling = (props) => {
 
     return (
         <div className={cx(
-            'StageSceneTiling',
-            isFloor ? 'floor' : 'ceiling'
+            'StageTiling'
         )}>
             <Wood
+                isFloor={isFloor}
                 stageWidth={stageWidth}
                 stageHeight={stageHeight}
             />
@@ -34,6 +34,6 @@ const StageSceneTiling = (props) => {
     )
 }
 
-StageSceneTiling.propTypes = propTypes
+StageTiling.propTypes = propTypes
 
-export default StageSceneTiling
+export default StageTiling

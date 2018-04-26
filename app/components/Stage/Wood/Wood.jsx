@@ -1,17 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import cx from 'classnames'
+import cx from 'classnames'
 
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 import { STAGE_Y_PERCENTAGE } from '../../../constants/stage'
 
 const propTypes = {
+    isFloor: PropTypes.bool.isRequired,
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
 }
 
 const Wood = ({
 
+    isFloor,
     stageWidth,
     stageHeight
 
@@ -22,7 +24,10 @@ const Wood = ({
 
     return (
         <DynamicSvg
-            className="Wood"
+            className={cx(
+                'Wood',
+                isFloor ? 'Wood__floor' : 'Wood__ceiling'
+            )}
             viewBoxWidth={stageWidth}
             viewBoxHeight={woodHeight}
         >

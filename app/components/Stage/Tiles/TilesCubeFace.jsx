@@ -58,7 +58,7 @@ const TilesCubeFace = ({
         <polygon
             className={cx(
                 'TilesCubeFace',
-                face
+                `TilesCubeFace__${face}`
             )}
             points={polygonPoints}
         />

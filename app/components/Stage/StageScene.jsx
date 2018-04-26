@@ -6,18 +6,16 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import StageActionField from './StageSceneAction'
-import StageSceneTiling from './StageSceneTiling'
-import StageSceneSky from './StageSceneSky'
+import StageTiling from './StageTiling'
+import StageSky from './StageSky'
 
 import { getSceneObject } from '../../helpers/dataHelper'
 import { DEFAULT_STAGE_TILES } from '../../constants/stageTiles'
 
 const mapStateToProps = ({
-    isHeavyRenderReady,
     renderReadySongIndex,
     currentSceneIndex
 }) => ({
-    isHeavyRenderReady,
     renderReadySongIndex,
     currentSceneIndex
 })
@@ -26,7 +24,6 @@ class StageSceneSection extends Component {
 
     static propTypes = {
         // Through Redux.
-        isHeavyRenderReady: PropTypes.bool.isRequired,
         renderReadySongIndex: PropTypes.number.isRequired,
         currentSceneIndex: PropTypes.number.isRequired,
 
@@ -36,14 +33,15 @@ class StageSceneSection extends Component {
     }
 
     render() {
-        const { isHeavyRenderReady,
-                renderReadySongIndex,
+        const { renderReadySongIndex,
                 currentSceneIndex,
 
                 stageWidth,
                 stageHeight } = this.props,
 
-            sceneObject = getSceneObject(renderReadySongIndex, currentSceneIndex),
+            sceneObject = getSceneObject(
+                renderReadySongIndex, currentSceneIndex
+            ),
 
             { actors, fixtures, walls, sky, tiles } = sceneObject,
 
@@ -55,18 +53,16 @@ class StageSceneSection extends Component {
 
         return (
             <div className={cx(
-                'StageScene',
-                isHeavyRenderReady ? 'renderReady' : 'renderUnready'
+                'StageScene'
             )}>
-                <StageSceneSky
+                <StageSky
                     sky={sky}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />
 
                 {/* Ceiling tiles. */}
-                <StageSceneTiling
-                    isFloor={false}
+                <StageTiling
                     slantDirection={slantDirection}
                     zIndices={ceilingZIndices}
                     colours={ceilingColours}
@@ -75,7 +71,7 @@ class StageSceneSection extends Component {
                 />
 
                 {/* Floor tiles. */}
-                <StageSceneTiling
+                <StageTiling
                     isFloor
                     slantDirection={slantDirection}
                     zIndices={floorZIndices}
