@@ -9,7 +9,7 @@ import CarouselAnnotation from './CarouselAnnotation'
 import CarouselSelect from './CarouselSelect'
 
 import { getAnnotationsCount } from '../../helpers/dataHelper'
-import { getArrayOfLength } from '../../helpers/generalHelper'
+import { getArrayOfLength, getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isHiddenCarouselNav,
@@ -53,6 +53,24 @@ class Carousel extends Component {
 
         this._handleTransition = this._handleTransition.bind(this)
     }
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'isHiddenCarouselNav',
+                    'isHeavyRenderReady',
+                    'renderReadySongIndex',
+                    'accessedAnnotationIndex',
+                    'selectedAnnotationIndex'
+                ]
+            })
+
+        return componentShouldUpdate
+    }
+
 
     componentWillReceiveProps(nextProps) {
         if (this.props.isHeavyRenderReady && !nextProps.isHeavyRenderReady) {
