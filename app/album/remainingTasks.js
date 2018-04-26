@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Don't scroll carousel or lyrics when selecting new song or moving between portals.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Finalise UI of selected carousel annotations.`,
         workedHours: 0,
         neededHours: 3
