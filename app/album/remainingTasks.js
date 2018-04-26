@@ -1,12 +1,6 @@
 module.exports = [
 
     {
-        taskName: `Shouldn't be able to hover on NavPanel.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Finalise UI of selected carousel annotations.`,
         workedHours: 0,
         neededHours: 3
@@ -31,25 +25,7 @@ module.exports = [
     },
 
     {
-        taskName: `Refocus on lyric strategically.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Legitimate route should override stored state.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Can't show carousel or nav when heightless lyric. Be strategic about this.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Allow carousel or nav to show with dots, and just switch access.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -172,16 +148,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Show left/right/enter access keys in general area on nav.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Show up/down/left/right/enter access keys in general area on dots section.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Further in the future.
     {
@@ -193,11 +159,6 @@ module.exports = [
         taskName: `Allow borders to use svgs.`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `Show pdfs properly in all browsers.`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     {

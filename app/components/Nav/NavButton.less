@@ -37,3 +37,15 @@
         }
     }
 }
+
+// Prevent pointer cursor from showing when hovered over hidden buttons.
+.Button__enabled {
+    .NavColumn__hidden
+    .NavBookSongs
+    &,
+    .NavColumn__hidden
+    .NavBooksLogue
+    & {
+        cursor: default;
+    }
+}

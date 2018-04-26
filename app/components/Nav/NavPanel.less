@@ -39,7 +39,10 @@
 
     .RM__accessOn.RM__carouselNavShowable.RM__navExpanded
     &.NavPanel__isAccessed,
+
     .RM__accessOff.RM__carouselNavShowable.RM__navExpanded
+    // Prevent panel from showing when hovering over hidden column elements.
+    .NavColumn__shown
     .Button__nav:hover
     & {
         opacity: 1;

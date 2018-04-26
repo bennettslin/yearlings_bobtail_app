@@ -2842,4 +2842,14 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Finalise refactor`,
+        workedHours: 24,
+        neededHours: 24
+    },
+    {
+        taskName: `Shouldn't be able to hover on NavPanel.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

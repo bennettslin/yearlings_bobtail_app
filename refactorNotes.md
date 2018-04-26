@@ -33,16 +33,16 @@ Lyric (/)
 LyricColumn (/)
 Main (/)
 Nav (/)
-Overview (Waiting on overview in phone and heightless.)
+Overview (/)
 Players (/)
 Popup (Waiting on popup rework to finalise.)
-Popups (Figure out if noAbsoluteFull and noFlexCentre are still necessary for some of these popups.)
+Popups (/)
     AnnotationPopup (/)
-    OverviewPopup (in logue still left to do.)
-    ScorePopup
+    OverviewPopup (/)
+    ScorePopup (/)
     TipsPopup (/)
-    TitlePopup
-    WikiPopup
+    TitlePopup (/)
+    WikiPopup (/)
 Score (/)
 ScoresTips (/)
 Slider (Now just waiting on rework.)
@@ -60,13 +60,6 @@ RootManager
 EventManager
 RoutingManager
 SwitchManager
-
-# Whole day work
-Popup buttons
-
-# Rework projects
-Carousel/annotation
-Popup positioning on devices
 
 # Low priority
 Nav (reorganise responsive styling.)
