@@ -140,13 +140,13 @@ export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
     }
 }
 
-export const getIsHiddenNav = ({
+export const getIsHiddenCarouselNav = ({
     deviceIndex,
     windowHeight,
     windowWidth
  }) => {
     // Hide nav if it's a phone...
-    const isHiddenNav = getIsPhone(deviceIndex) ||
+    const isHiddenCarouselNav = getIsPhone(deviceIndex) ||
 
     // If the height is below a minimum...
     windowHeight < HIDDEN_NAV_MIN ||
@@ -158,7 +158,7 @@ export const getIsHiddenNav = ({
         windowWidth
     }))
 
-    return isHiddenNav
+    return isHiddenCarouselNav
 }
 
 export const getIsHeightlessLyricColumn = ({

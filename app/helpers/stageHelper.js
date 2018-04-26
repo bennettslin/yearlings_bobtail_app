@@ -23,7 +23,7 @@ import { PHONE_CLASS,
 
          LS_HEIGHT_NAV } from '../constants/responsive'
 
-import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenNav } from './responsiveHelper'
+import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenCarouselNav } from './responsiveHelper'
 
 /*********
  * STAGE *
@@ -45,11 +45,11 @@ export const getStageCoordinates = ({
 
         isPhone = getIsPhone(deviceIndex),
 
-        isHiddenNav = getIsHiddenNav({
+        isHiddenCarouselNav = getIsHiddenCarouselNav({
             deviceIndex, windowHeight, windowWidth
         }),
 
-        navHeight = isPhone || isHeightlessLyricColumn || isHiddenNav ? 0 : LS_HEIGHT_NAV,
+        navHeight = isPhone || isHeightlessLyricColumn || isHiddenCarouselNav ? 0 : LS_HEIGHT_NAV,
 
         centreFieldHeight = getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - navHeight,
 

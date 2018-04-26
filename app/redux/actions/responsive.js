@@ -13,9 +13,9 @@ export const setIsHeightlessLyricColumn = (isHeightlessLyricColumn = false) => (
       payload: isHeightlessLyricColumn }
 )
 
-export const setIsHiddenNav = (isHiddenNav = false) => (
+export const setIsHiddenCarouselNav = (isHiddenCarouselNav = false) => (
     { type: IS_HIDDEN_NAV,
-      payload: isHiddenNav }
+      payload: isHiddenCarouselNav }
 )
 
 export const setIsMobileWiki = (isMobileWiki = false) => (

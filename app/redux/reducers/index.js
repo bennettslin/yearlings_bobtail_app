@@ -3,7 +3,7 @@ import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, A
 import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer, StageCoordinatesReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
-import { IsHeightlessLyricColumnReducer, IsHiddenNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
+import { IsHeightlessLyricColumnReducer, IsHiddenCarouselNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, IsTitleInAudioReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AppMountedReducer, IsHeavyRenderReadyReducer, RenderReadySongIndexReducer, RenderReadyAnnotationIndexReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, CurrentSceneIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer } from './session'
 import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseElementReducer, SliderVerseIndexReducer } from './slider'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
@@ -27,7 +27,7 @@ const rootReducer = combineReducers({
     isScoreLoaded: IsScoreLoadedReducer,
 
     isHeightlessLyricColumn: IsHeightlessLyricColumnReducer,
-    isHiddenNav: IsHiddenNavReducer,
+    isHiddenCarouselNav: IsHiddenCarouselNavReducer,
     isMobileWiki: IsMobileWikiReducer,
     isScoresTipsInMain: IsScoresTipsInMainReducer,
     isTitleInAudio: IsTitleInAudioReducer,

@@ -17,7 +17,7 @@ export const IsHeightlessLyricColumnReducer = (state = false, action) => {
     }
 }
 
-export const IsHiddenNavReducer = (state = false, action) => {
+export const IsHiddenCarouselNavReducer = (state = false, action) => {
     switch (action.type) {
         case IS_HIDDEN_NAV:
             return action.payload

@@ -9,16 +9,16 @@ import Button from '../Button/Button'
 import { CAROUSEL_TOGGLE_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
-    isHiddenNav,
+    isHiddenCarouselNav,
     selectedCarouselNavIndex
 }) => ({
-    isHiddenNav,
+    isHiddenCarouselNav,
     selectedCarouselNavIndex
 })
 
 const carouselTogglePropTypes = {
     // Through Redux.
-    isHiddenNav: PropTypes.bool.isRequired,
+    isHiddenCarouselNav: PropTypes.bool.isRequired,
     selectedCarouselNavIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -27,12 +27,12 @@ const carouselTogglePropTypes = {
 
 CarouselToggle = ({
 
-    isHiddenNav,
+    isHiddenCarouselNav,
     selectedCarouselNavIndex,
     handleCarouselNavToggle
 
 }) => {
-    return !isHiddenNav && (
+    return !isHiddenCarouselNav && (
         <div className={cx(
             'CarouselToggle',
             'width__leftShelf'

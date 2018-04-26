@@ -12,13 +12,13 @@ import { getAnnotationsCount } from '../../helpers/dataHelper'
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    isHiddenNav,
+    isHiddenCarouselNav,
     isHeavyRenderReady,
     renderReadySongIndex,
     selectedAnnotationIndex,
     accessedAnnotationIndex
 }) => ({
-    isHiddenNav,
+    isHiddenCarouselNav,
     isHeavyRenderReady,
     renderReadySongIndex,
     selectedAnnotationIndex,
@@ -29,7 +29,7 @@ class Carousel extends Component {
 
     static propTypes = {
         // Through Redux.
-        isHiddenNav: PropTypes.bool.isRequired,
+        isHiddenCarouselNav: PropTypes.bool.isRequired,
         isHeavyRenderReady: PropTypes.bool.isRequired,
         renderReadySongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
@@ -71,7 +71,7 @@ class Carousel extends Component {
     }
 
     render() {
-        const { isHiddenNav,
+        const { isHiddenCarouselNav,
                 isHeavyRenderReady,
                 renderReadySongIndex,
                 accessedAnnotationIndex,
@@ -82,7 +82,7 @@ class Carousel extends Component {
 
             { shouldOverrideAnimate } = this.state
 
-        if (isHiddenNav) {
+        if (isHiddenCarouselNav) {
             return null
         }
 

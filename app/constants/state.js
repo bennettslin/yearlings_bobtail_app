@@ -29,7 +29,7 @@ module.exports = {
 
     // Responsive.
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',
-    IS_HIDDEN_NAV: 'isHiddenNav',
+    IS_HIDDEN_NAV: 'isHiddenCarouselNav',
     IS_MOBILE_WIKI: 'isMobileWiki',
     IS_SCORES_TIPS_IN_MAIN: 'isScoresTipsInMain',
     IS_TITLE_IN_AUDIO: 'isTitleInAudio',
