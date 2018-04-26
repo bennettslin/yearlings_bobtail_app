@@ -186,7 +186,6 @@ class RootManager extends Component {
             isCarouselNavShowable =
                 !isLogue
                 && !showOverlay
-                // && !selectedDotsIndex // Revert
                 && !isLyricExpanded
                 && !overviewShown
                 && !tipsShown

@@ -393,18 +393,18 @@ class App extends Component {
             selectedCarouselNavValue = selectedCarouselNavValue ? 1 : 0
         }
 
-        /**
-         * If it has heightless lyrics, carousel is always collapsed.
-         */
-        if (this.props.isHeightlessLyricColumn) {
+        // /**
+        //  * If it has heightless lyrics, carousel is always collapsed.
+        //  */
+        // if (this.props.isHeightlessLyricColumn) {
 
-            if (!this.props.selectedCarouselNavIndex) {
-                return false
+        //     if (!this.props.selectedCarouselNavIndex) {
+        //         return false
 
-            } else {
-                selectedCarouselNavValue = 0
-            }
-        }
+        //     } else {
+        //         selectedCarouselNavValue = 0
+        //     }
+        // }
 
         this.props.selectCarouselNavIndex(selectedCarouselNavValue)
 
@@ -1196,19 +1196,14 @@ class App extends Component {
         this.props.setIsHeightlessLyricColumn(isHeightlessLyricColumn)
         this.props.setShowOneOfTwoLyricColumns(showOneOfTwoLyricColumns)
 
-        this.props.setIsHiddenNav(getIsHiddenNav({ deviceIndex, windowHeight }))
+        this.props.setIsHiddenNav(getIsHiddenNav({
+            deviceIndex, windowHeight, windowWidth
+        }))
         this.props.setIsMobileWiki(getIsMobileWiki({ deviceIndex, windowWidth }))
         this.props.setIsScoresTipsInMain(getIsScoresTipsInMain({ deviceIndex, windowWidth }))
         this.props.setIsTitleInAudio(getIsTitleInAudio({ deviceIndex, windowWidth }))
         this.props.setShowSingleBookColumn(getShowSingleBookColumn({ deviceIndex, windowWidth }))
         this.props.setShowShrunkNavIcon(getShowShrunkNavIcon({ deviceIndex, windowWidth }))
-
-        /**
-         * Force collapse of carousel if heightless lyric.
-         */
-        if (isHeightlessLyricColumn) {
-            this.selectCarouselNav(false)
-        }
 
         /**
          * Force collapse of lyric in state if not expandable, or if heightless

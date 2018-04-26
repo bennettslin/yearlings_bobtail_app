@@ -21,7 +21,7 @@ const navButtonIndexedPropTypes = {
     // Through Redux.
     accessedNavSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
-    selectedDotsIndex: PropTypes.bool.isRequired,
+    selectedDotsIndex: PropTypes.number.isRequired,
     showSingleBookColumn: PropTypes.bool.isRequired,
 
     // From parent.

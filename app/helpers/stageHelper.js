@@ -45,7 +45,9 @@ export const getStageCoordinates = ({
 
         isPhone = getIsPhone(deviceIndex),
 
-        isHiddenNav = getIsHiddenNav({ deviceIndex, windowHeight }),
+        isHiddenNav = getIsHiddenNav({
+            deviceIndex, windowHeight, windowWidth
+        }),
 
         navHeight = isPhone || isHeightlessLyricColumn || isHiddenNav ? 0 : LS_HEIGHT_NAV,
 

@@ -7,31 +7,27 @@ import { connect } from 'react-redux'
 import NavColumn from './NavColumn'
 
 const mapStateToProps = ({
-    isHeightlessLyricColumn,
     isHiddenNav,
     showSingleBookColumn
 }) => ({
-    isHeightlessLyricColumn,
     isHiddenNav,
     showSingleBookColumn
 })
 
 const navPropTypes = {
     // Through Redux.
-    isHeightlessLyricColumn: PropTypes.bool.isRequired,
     isHiddenNav: PropTypes.bool.isRequired,
     showSingleBookColumn: PropTypes.bool.isRequired
 },
 
 Nav = ({
 
-    isHeightlessLyricColumn,
     isHiddenNav,
     showSingleBookColumn,
 
 ...other }) => {
 
-    return !isHiddenNav && !isHeightlessLyricColumn && (
+    return !isHiddenNav && (
         <div
             className={cx(
                 'Nav',
