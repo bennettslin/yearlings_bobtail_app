@@ -61,7 +61,7 @@ const TheatreFloor = ({
             style={floorFieldStyle}
         >
             <div
-                className="TheatreFloor__pit"
+                className="TheatreFloorPit"
                 style={pitStyle}
             />
 

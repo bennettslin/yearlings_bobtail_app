@@ -60,7 +60,7 @@ const TheatreWallField = ({
             className={cx(
                 'TheatreWall',
                 'Theatre__field',
-                { 'right': isRight }
+                { 'TheatreWall__right': isRight }
             )}
             style={wallFieldStyle}
         >
