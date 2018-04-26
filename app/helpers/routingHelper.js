@@ -8,16 +8,24 @@ import {
 
 import { HYPHENATED_SONG_PATHS } from '../constants/paths'
 
-const _getIndexForPrefix = (string, prefix) => {
-    // For example, if prefix is 'a' and string is 'a5', rawStringIndex is '5.'
+const _getIndexForPrefix = (string, prefix = '') => {
+    // For example, if prefix is 'a' and string is 'a5', scrubbedString is '5.'
 
-    const rawStringIndex = string.replace(prefix, ''),
+
+    const underscoreIndex = string.indexOf('_'),
+
+        // Remove anything after underscore in song index.
+        rawString = underscoreIndex > -1 ?
+            string.substring(0, underscoreIndex) : string,
+
+        // Remove given prefix.
+        scrubbedString = rawString.replace(prefix, ''),
 
         // Remove all non-numeric characters.
-        finalStringIndex = rawStringIndex.replace(/\D/g, ''),
+        finalStringIndex = scrubbedString.replace(/\D/g, ''),
 
         // If string lengths are the same, then this is a valid index.
-        isValidNumber = rawStringIndex.length === finalStringIndex.length
+        isValidNumber = scrubbedString.length === finalStringIndex.length
 
     // Only return a number if valid.
     return isValidNumber ? parseInt(finalStringIndex) : undefined
@@ -52,7 +60,7 @@ export const getValidRoutingIndicesObject = (routingParamString = '') => {
         routingIndices = routingParamString.split('-')
 
         routingIndices.forEach(param => {
-            const rawSongIndex = _getIndexForPrefix(param, ''),
+            const rawSongIndex = _getIndexForPrefix(param),
                 rawVerseIndex = _getIndexForPrefix(param, 'v'),
                 rawAnnotationIndex = _getIndexForPrefix(param, 'a')
 

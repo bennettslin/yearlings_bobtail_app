@@ -2852,4 +2852,10 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+
+    {
+        taskName: `Legitimate route should override stored state.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

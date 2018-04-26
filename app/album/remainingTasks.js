@@ -24,12 +24,6 @@ module.exports = [
         neededHours: 3
     },
 
-    {
-        taskName: `Legitimate route should override stored state.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     /**
      * Remaining tile work.
      */
@@ -57,7 +51,7 @@ module.exports = [
     },
 
     {
-        taskName: `Override transition doesn't work when skipping several songs at a time.`,
+        taskName: `Override transition doesn't work when skipping several songs at a time. Investigate in general.`,
         workedHours: 0,
         neededHours: 2
     },
@@ -156,7 +150,7 @@ module.exports = [
         neededHours: 8
     },
     {
-        taskName: `Allow borders to use svgs.`,
+        taskName: `Allow annotation and lyric borders to use svgs.`,
         workedHours: 0,
         neededHours: 8
     },
