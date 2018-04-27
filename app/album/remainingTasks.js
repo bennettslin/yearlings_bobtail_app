@@ -19,12 +19,6 @@ module.exports = [
     },
 
     {
-        taskName: `Annotation anchors don't have underlines, make links better in general`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Centre right verse line in verse bar`,
         workedHours: 0,
         neededHours: 1

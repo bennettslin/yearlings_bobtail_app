@@ -44,6 +44,7 @@ AnnotationTitle = ({
                 isSelected={isSelected}
                 isAccessed={isAccessed}
                 text={`\u201c${annotationTitle}\u201d`}
+                sequenceDotKeys={annotationDotKeys}
                 handleAnchorClick={handleTitleClick}
             />
         )}

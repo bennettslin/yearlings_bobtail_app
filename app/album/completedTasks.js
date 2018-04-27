@@ -2864,4 +2864,10 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+
+    {
+        taskName: `Annotation anchors don't have underlines.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

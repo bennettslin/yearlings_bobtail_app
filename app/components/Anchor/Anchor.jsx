@@ -44,6 +44,7 @@ Anchor = ({
                 isAccessed && !isSelected && 'Anchor__accessed',
                 isSelected ? 'Anchor__selected' : 'Anchor__selectable',
 
+                !isWikiAnchor && 'Anchor__noWrap',
                 isWikiAnchor && 'styleIf__reference',
 
                 sequenceDotKeys &&
