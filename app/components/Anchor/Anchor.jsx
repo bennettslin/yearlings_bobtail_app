@@ -33,52 +33,55 @@ Anchor = ({
     handleAnchorClick,
     children
 
-}) => (
-    <a className={cx(
-            'Anchor',
+}) => {
 
-            isAccessed && !isSelected && 'Anchor__accessed',
-            isSelected ? 'Anchor__selected' : 'Anchor__selectable',
+    const styleWithDot = sequenceDotKeys || isWikiAnchor
 
-            isWikiAnchor && 'styleIf__sequenceDot__reference',
-            sequenceDotKeys && getPrefixPrependedClassNames(
-                sequenceDotKeys, 'styleIf__sequenceDot'
-            ),
-            sequenceDotKeys || isWikiAnchor ?
-                'Anchor__styleOnlyWithSequenceDot' :
-                'Anchor__styleAlways',
+    return (
+        <a className={cx(
+                'Anchor',
 
-            className
-        )}
-        onClick={handleAnchorClick}
-        onTouchStart={handleAnchorClick}
-    >
-        <span className={cx(
-            'AnchorUnderline',
+                isAccessed && !isSelected && 'Anchor__accessed',
+                isSelected ? 'Anchor__selected' : 'Anchor__selectable',
 
-            { 'AnchorUnderline__underDot': isDotAnchor },
+                isWikiAnchor && 'styleIf__reference',
 
-            isAccessed && !isSelected && 'AnchorUnderline__accessed',
+                sequenceDotKeys &&
+                    getPrefixPrependedClassNames(
+                        sequenceDotKeys, 'styleIf'
+                    ),
 
-            isSelected ?
-                'AnchorUnderline__selected' :
-                'AnchorUnderline__selectable',
+                !isSelected && !styleWithDot &&
+                    'styleIf__always',
 
-            sequenceDotKeys || isWikiAnchor ?
-                'AnchorUnderline__styleOnlyWithSequenceDot' :
-                'AnchorUnderline__styleAlways'
-        )} />
+                className
+            )}
+            onClick={handleAnchorClick}
+            onTouchStart={handleAnchorClick}
+        >
+            <span className={cx(
+                'AnchorUnderline',
 
-        {sequenceDotKeys && (
-            <DotSequence
-                inTextAnchor
-                dotKeys={sequenceDotKeys}
-            />
-        )}
+                { 'AnchorUnderline__underDot': isDotAnchor },
 
-        {children}
-    </a>
-)
+                isAccessed && !isSelected && 'AnchorUnderline__accessed',
+
+                isSelected ?
+                    'AnchorUnderline__selected' :
+                    'AnchorUnderline__selectable'
+            )} />
+
+            {sequenceDotKeys && (
+                <DotSequence
+                    inTextAnchor
+                    dotKeys={sequenceDotKeys}
+                />
+            )}
+
+            {children}
+        </a>
+    )
+}
 
 Anchor.propTypes = anchorPropTypes
 

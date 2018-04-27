@@ -28,7 +28,7 @@ DotSequenceDot = ({
         'SequenceDot',
         'bgColour__dot',
         `bgColour__dot__${dotKey}`,
-        `styleIf__sequenceDot__${dotKey}`,
+        `styleIf__${dotKey}`,
         inTextAnchor && 'SequenceDot__textAnchor',
         inAnnotationCard && 'SequenceDot__annotationCard'
     )} />

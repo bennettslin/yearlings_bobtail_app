@@ -11,7 +11,7 @@ const textAnchorPropTypes = {
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.element
-    ]).isRequired,
+    ]).isRequired
 },
 
 TextAnchor = ({

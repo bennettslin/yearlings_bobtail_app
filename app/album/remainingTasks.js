@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Box shadow around verse audio button container. Figure out box shadow of elements in general.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
         taskName: `Don't scroll carousel or lyrics when selecting new song or moving between portals.`,
         workedHours: 0,
         neededHours: 2

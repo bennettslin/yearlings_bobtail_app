@@ -37,22 +37,15 @@
  * Styling if at least one sequence dot is selected. Nesting under parent for
  * clarity.
  */
-.RM__narrative
-    .styleIf__sequenceDot__narrative,
-.RM__backstory
-    .styleIf__sequenceDot__backstory,
-.RM__observation
-    .styleIf__sequenceDot__observation,
-.RM__pun
-    .styleIf__sequenceDot__pun,
-.RM__reference
-    .styleIf__sequenceDot__reference,
-.RM__portal
-    .styleIf__sequenceDot__portal,
-.RM__songwriting
-    .styleIf__sequenceDot__songwriting,
-.RM__afterword
-    .styleIf__sequenceDot__afterword {
+.RM__narrative .styleIf__narrative,
+.RM__backstory .styleIf__backstory,
+.RM__observation .styleIf__observation,
+.RM__pun .styleIf__pun,
+.RM__reference .styleIf__reference,
+.RM__portal .styleIf__portal,
+.RM__songwriting .styleIf__songwriting,
+.RM__afterword .styleIf__afterword,
+.styleIf__always {
 
     // Sequence dots show at all.
     &.SequenceDot {
@@ -66,10 +59,46 @@
     }
 
     // Anchors show as more than text.
-    &.Anchor__selectable.Anchor__styleOnlyWithSequenceDot {
+    &.Anchor__selectable {
         cursor: pointer;
     }
-    .AnchorUnderline__styleOnlyWithSequenceDot {
+    .AnchorUnderline {
         opacity: 1;
     }
+
+    .TextAnchor__selectable {
+        color: @colour__textAnchor__link;
+
+        .Anchor__selectable:hover
+        & {
+            color: @colour__textAnchor__hover;
+        }
+
+        .Anchor__selectable:active
+        & {
+            color: @colour__textAnchor__active;
+        }
+    }
+
+    .TextAnchor__selected {
+        color: @colour__textAnchor__selected;
+    }
+
+    .TextAnchor__accessed {
+        .RM__accessOn
+        & {
+            color: @colour__textAnchor__accessedLink;
+        }
+
+        .RM__accessOn .Anchor__selectable:hover
+        & {
+            color: @colour__textAnchor__accessedHover;
+        }
+
+        .RM__accessOn .Anchor__selectable:active
+        & {
+            color: @colour__textAnchor__accessedActive;
+        }
+    }
+
 }

@@ -2858,4 +2858,10 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+
+    {
+        taskName: `Text anchor should not have hover styling if dot is deselected.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]
