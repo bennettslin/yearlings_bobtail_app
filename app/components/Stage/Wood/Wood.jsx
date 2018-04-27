@@ -6,7 +6,7 @@ import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 import { STAGE_Y_PERCENTAGE } from '../../../constants/stage'
 
 const propTypes = {
-    isFloor: PropTypes.bool.isRequired,
+    isFloor: PropTypes.bool,
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
 }

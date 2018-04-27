@@ -12,7 +12,7 @@ import { TILE_ROWS_LENGTH,
          TILE_COLUMNS_LENGTH } from '../../../constants/stage'
 
 const propTypes = {
-    isFloor: PropTypes.bool.isRequired,
+    isFloor: PropTypes.bool,
     slantDirection: PropTypes.string.isRequired,
     zIndices: PropTypes.arrayOf(
         PropTypes.arrayOf(

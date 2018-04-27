@@ -97,7 +97,9 @@ class EventManager extends Component {
             if (selectedCarouselNavIndex && scrollToAnnotationIndex) {
                 // Animation is slightly less janky with setTimeout.
                 setTimeout(() => {
-                    this._scrollElementIntoView(CAROUSEL_SCROLL, scrollToAnnotationIndex)
+                    this._scrollElementIntoView(
+                        CAROUSEL_SCROLL, scrollToAnnotationIndex
+                    )
                 }, 0)
             }
         }
@@ -867,16 +869,21 @@ class EventManager extends Component {
 
         // If a portal was selected, there will be an annotation index.
         if (annotationIndex) {
-            this._scrollElementIntoView(LYRIC_ANNOTATION_SCROLL, annotationIndex)
+            this._scrollElementIntoView(
+                LYRIC_ANNOTATION_SCROLL, annotationIndex, 0
+            )
+
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView(CAROUSEL_SCROLL, annotationIndex)
+                this._scrollElementIntoView(
+                    CAROUSEL_SCROLL, annotationIndex, 0
+                )
             }
 
             // Otherwise, scroll to top.
         } else {
             this._scrollElementIntoView(VERSE_SCROLL)
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView(CAROUSEL_SCROLL, 1)
+                this._scrollElementIntoView(CAROUSEL_SCROLL, 1, 0)
             }
         }
     }

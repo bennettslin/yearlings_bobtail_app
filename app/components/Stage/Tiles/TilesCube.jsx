@@ -17,7 +17,7 @@ class TilesCube extends Component {
         yIndex: PropTypes.number.isRequired,
         zIndex: PropTypes.number.isRequired,
         colour: PropTypes.string.isRequired,
-        isFloor: PropTypes.bool.isRequired,
+        isFloor: PropTypes.bool,
         slantDirection: PropTypes.string.isRequired,
         stageWidth: PropTypes.number.isRequired,
         stageHeight: PropTypes.number.isRequired
