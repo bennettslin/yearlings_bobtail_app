@@ -1,13 +1,13 @@
-// Section to show the stage illustrations.
+// Stage elements that change based on the scene.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import StageActionField from './StageSceneAction'
-import StageTiling from './StageTiling'
-import StageSky from './StageSky'
+import StageActionField from './SceneAction'
+import SceneTiling from './SceneTiling'
+import SceneSky from './SceneSky'
 
 import { getSceneObject } from '../../helpers/dataHelper'
 import { DEFAULT_STAGE_TILES } from '../../constants/stageTiles'
@@ -20,7 +20,7 @@ const mapStateToProps = ({
     currentSceneIndex
 })
 
-class StageSceneSection extends Component {
+class Scene extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -53,16 +53,16 @@ class StageSceneSection extends Component {
 
         return (
             <div className={cx(
-                'StageScene'
+                'Scene'
             )}>
-                <StageSky
+                <SceneSky
                     sky={sky}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />
 
                 {/* Ceiling tiles. */}
-                <StageTiling
+                <SceneTiling
                     slantDirection={slantDirection}
                     zIndices={ceilingZIndices}
                     colours={ceilingColours}
@@ -71,7 +71,7 @@ class StageSceneSection extends Component {
                 />
 
                 {/* Floor tiles. */}
-                <StageTiling
+                <SceneTiling
                     isFloor
                     slantDirection={slantDirection}
                     zIndices={floorZIndices}
@@ -92,4 +92,4 @@ class StageSceneSection extends Component {
     }
 }
 
-export default connect(mapStateToProps)(StageSceneSection)
+export default connect(mapStateToProps)(Scene)

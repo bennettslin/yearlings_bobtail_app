@@ -28,7 +28,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: ``,
-            walls: {
+            cutouts: {
                 freewayBackdrop: {}
             },
             fixtures: {
@@ -44,7 +44,7 @@ module.exports = {
         {
             unitIndex: 2,
             description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`,
-            walls: {
+            cutouts: {
                 freewayBackdrop: {}
             },
             fixtures: {

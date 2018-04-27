@@ -159,5 +159,19 @@ Jacob shirt (unicorn)
 Tomer shirt (Escher)
 Shane shirt (Lookout)
 Chinese clothes patterns
-Willy shirt 
+Willy shirt
 Indian clothes patterns
+
+/**
+ * TODO: Desired animation behaviour.
+ * Maybe do this last, after images are more or less in place?
+ *
+ * When showing scene for first time:
+ * Things that should be there should animate in.
+ *
+ * When changing from one scene to the next:
+ * Things that are no longer there should animate out.
+ * Wait for floor panels to change.
+ * Things that aren't already there should animate in.
+ * Things that are already there should not change in any way.
+ */

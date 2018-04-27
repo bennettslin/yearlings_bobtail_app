@@ -25,7 +25,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
-            walls: {
+            cutouts: {
                 northHollywoodBackdrop: {
 
                 }
@@ -44,7 +44,7 @@ module.exports = {
         {
             unitIndex: 3,
             description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
-            walls: {
+            cutouts: {
                 northHollywoodBackdrop: {}
             },
             fixtures: {
@@ -76,7 +76,7 @@ module.exports = {
         {
             unitIndex: 6,
             description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells the playground about this. Anita overhears and looks upset.`,
-            walls: {
+            cutouts: {
                 playgroundBackdrop: {},
                 nurseOfficePanel: {}
             },
@@ -109,7 +109,7 @@ module.exports = {
         {
             unitIndex: 8,
             description: `Bennett is soaking in a bathtub at home, looking downcast. A window shows that it is midday outside.`,
-            walls: {
+            cutouts: {
                 bathroomWall: {}
             },
             fixtures: {
@@ -131,7 +131,7 @@ module.exports = {
         {
             unitIndex: 12,
             description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
-            walls: {
+            cutouts: {
                 bathroomWall: {}
             },
             fixtures: {

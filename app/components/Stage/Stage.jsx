@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import StageSceneSection from './StageScene'
+import Scene from '../Scene/Scene'
 import StageProscenium from './StageProscenium';
 
 const mapStateToProps = ({
@@ -51,11 +51,13 @@ class Stage extends Component {
                         height: `${height}px`
                     }}
                 >
-                    <StageSceneSection
+                    <Scene
                         stageWidth={width}
                         stageHeight={height}
                     />
                     <StageProscenium />
+
+
                 </div>
             </div>
         )
