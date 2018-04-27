@@ -59,25 +59,27 @@
     }
 
     // Anchors show as more than text.
+    .TextAnchor__selectable {
+        color: @colour__textAnchor__link;
+    }
+
     &.Anchor__selectable {
         cursor: pointer;
+
+        &:hover {
+            .TextAnchor__selectable {
+                color: @colour__textAnchor__hover;
+            }
+        }
+
+        &:active {
+            .TextAnchor__selectable {
+                color: @colour__textAnchor__active;
+            }
+        }
     }
     .AnchorUnderline {
         opacity: 1;
-    }
-
-    .TextAnchor__selectable {
-        color: @colour__textAnchor__link;
-
-        .Anchor__selectable:hover
-        & {
-            color: @colour__textAnchor__hover;
-        }
-
-        .Anchor__selectable:active
-        & {
-            color: @colour__textAnchor__active;
-        }
     }
 
     .TextAnchor__selected {

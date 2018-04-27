@@ -59,17 +59,19 @@ Anchor = ({
             onClick={handleAnchorClick}
             onTouchStart={handleAnchorClick}
         >
-            <span className={cx(
-                'AnchorUnderline',
+            {!isWikiAnchor && (
+                <span className={cx(
+                    'AnchorUnderline',
 
-                { 'AnchorUnderline__underDot': isDotAnchor },
+                    { 'AnchorUnderline__underDot': isDotAnchor },
 
-                isAccessed && !isSelected && 'AnchorUnderline__accessed',
+                    isAccessed && !isSelected && 'AnchorUnderline__accessed',
 
-                isSelected ?
-                    'AnchorUnderline__selected' :
-                    'AnchorUnderline__selectable'
-            )} />
+                    isSelected ?
+                        'AnchorUnderline__selected' :
+                        'AnchorUnderline__selectable'
+                )} />
+            )}
 
             {sequenceDotKeys && (
                 <DotSequence
