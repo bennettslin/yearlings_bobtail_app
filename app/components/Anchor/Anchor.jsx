@@ -35,6 +35,10 @@ Anchor = ({
 
 }) => {
 
+    /**
+     * If sequence dot keys are provided, or if it's a wiki anchor, only apply
+     * certain styling if at least one dot in the dot sequence is selected.
+     */
     const styleWithDot = sequenceDotKeys || isWikiAnchor
 
     return (
@@ -52,8 +56,14 @@ Anchor = ({
                         sequenceDotKeys, 'styleIf'
                     ),
 
-                !isSelected && !styleWithDot &&
-                    'styleIf__always',
+                /**
+                 * Always apply dot sequence styling for dot anchors, which
+                 * are completely hidden if none of its dots are selected. This
+                 * styling is taken care of by its parent, not the dot anchor
+                 * itself.
+                 */
+                { 'styleIf__always':
+                    (!isSelected && !styleWithDot) || isDotAnchor },
 
                 className
             )}
