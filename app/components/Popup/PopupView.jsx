@@ -88,7 +88,7 @@ PopupView = ({
 
                     !isFullSize && 'PopupViewContent__scrollIfFull',
 
-                    'boxShadow__popup'
+                    'boxShadow__popupView'
                 )}
                 onClick={handleContainerClick}
                 onTouchStart={handleContainerClick}

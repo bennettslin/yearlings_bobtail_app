@@ -28,9 +28,15 @@ module.exports = [
      * Remaining tile work.
      */
     {
-        taskName: `Investigate and then animate tile svgs.`,
+        taskName: `Animate tiles.`,
         workedHours: 0,
         neededHours: 3
+    },
+
+    {
+        taskName: `Use svg in slider.`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     {
@@ -42,12 +48,6 @@ module.exports = [
         taskName: `Keep admin stuff in dev, not in production.`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: `Use svg in slider.`,
-        workedHours: 0,
-        neededHours: 5
     },
 
     /**

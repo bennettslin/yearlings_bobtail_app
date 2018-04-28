@@ -68,7 +68,7 @@ PopupViewButton = ({
                   'PopupViewButton__next': isNextButton,
                   'PopupViewButton__side': isPreviousButton || isNextButton,
                   'PopupViewButton__inCardSize': inCardSize,
-                  'boxShadow__popup': isShadow },
+                  'boxShadow__popupView': isShadow },
 
                 inFullSize ?
                     'PopupViewButton__inFullSize' :

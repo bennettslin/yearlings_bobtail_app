@@ -72,7 +72,7 @@ Menu = ({
                     'MenuRow',
                     'MenuTopRow',
                     'width__mainColumn',
-                    'boxShadow__popup'
+                    'boxShadow__popupView'
                 )}
                 style={{
                     marginLeft: menuMarginInOverlay,
