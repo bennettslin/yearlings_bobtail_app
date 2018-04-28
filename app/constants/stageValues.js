@@ -21,5 +21,9 @@ module.exports = {
     SKY_SPRING: 'spring',
     SKY_SUMMER: 'summer',
     SKY_AUTUMN: 'autumn',
-    SKY_WINTER: 'winter'
+    SKY_WINTER: 'winter',
+
+    CUTOUT: 'cutout',
+    FIXTURE: 'fixture',
+    ACTOR: 'actor'
 }

@@ -8,7 +8,7 @@ import keys from 'lodash.keys'
  */
 
 export const adminGatherDrawings = (album, songObject, songIndex) => {
-    const drawingTypes = ['actors', 'backdrops', 'stageProps'],
+    const drawingTypes = ['actors'],
         { scenes } = songObject
 
     album._drawings = album._drawings || {}

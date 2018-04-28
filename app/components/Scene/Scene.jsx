@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import StageActionField from './SceneAction'
+import Action from '../Action/Action'
 import SceneTiling from './SceneTiling'
 import SceneSky from './SceneSky'
 
@@ -43,7 +43,7 @@ class Scene extends Component {
                 renderReadySongIndex, currentSceneIndex
             ),
 
-            { actors, fixtures, walls, sky, tiles } = sceneObject,
+            { action, sky, tiles } = sceneObject,
 
             { slantDirection = '',
               ceilingZIndices = DEFAULT_STAGE_TILES.ceilingZIndices,
@@ -80,12 +80,10 @@ class Scene extends Component {
                     stageHeight={stageHeight}
                 />
 
-                <StageActionField
-                    walls={walls}
-                    fixtures={fixtures}
-                    actors={actors}
-                    sceneIndex={currentSceneIndex}
-                    songIndex={renderReadySongIndex}
+                <Action
+                    action={action}
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
                 />
             </div>
         )

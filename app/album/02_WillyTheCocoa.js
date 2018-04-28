@@ -28,13 +28,6 @@ module.exports = {
         {
             unitIndex: 1,
             description: ``,
-            cutouts: {
-                freewayBackdrop: {}
-            },
-            fixtures: {
-                freewaySign: {},
-                shoppingCart: {}
-            },
             tiles: FREEWAY_TILES,
             sky: {
                 time: SKY_NO_TIME,
@@ -44,27 +37,12 @@ module.exports = {
         {
             unitIndex: 2,
             description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`,
-            cutouts: {
-                freewayBackdrop: {}
-            },
-            fixtures: {
-                freewaySign: {},
-                shoppingCart: {}
-            },
             actors: {
                 willy: {
                     todo: true,
                     workedHours: 2.5,
                     description: 'side angle, holding up a bottle, squinting'
                 }
-            },
-            backdrops: {
-                foreground: 'front description',
-                background: 'back description 1',
-                floor: 'floor description 1'
-            },
-            stageProps: {
-                couch: 1
             },
             tiles: FREEWAY_TILES,
             sky: {
