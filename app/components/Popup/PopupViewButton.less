@@ -1,3 +1,5 @@
+// TODO: This is getting unwieldy...
+
 @offset__popupButton: 0.5;
 
 .PopupViewButton {
@@ -6,16 +8,6 @@
 
 .Button__popupNotShadow {
     z-index: @zIndex__popupButton;
-}
-
-// Apply box shadow to button itself, so that it animates as well.
-.ButtonAnimatable__popup {
-    box-shadow: @boxShadow__button;
-
-    .RM__overlayShown
-    & {
-        box-shadow: @boxShadow__button__inOverlay;
-    }
 }
 
 .PopupViewButton__close {
@@ -69,14 +61,14 @@
         top: -@js__length__iconLarge * @offset__popupButton;
     }
 
-    .RM__tablet.RM__overlayHidden
-    & {
+    .RM__tablet
+    &.PopupViewButton__displaysNotInOverlay {
         // Buttons on bottom so they don't shift regardless of content height.
         bottom: -@js__length__iconLarge__tablet * @offset__popupButton;
     }
 
-    .RM__mini.RM__overlayHidden
-    & {
+    .RM__mini
+    &.PopupViewButton__displaysNotInOverlay {
         bottom: -@js__length__iconLarge__mini * @offset__popupButton;
     }
 
@@ -94,13 +86,13 @@
     .RM__tablet
     &.PopupViewButton__inFullSize,
 
-    .RM__overlayShown.RM__tablet
-    &.PopupViewButton__notInFullSize {
+    .RM__tablet
+    &.PopupViewButton__displaysInOverlay.PopupViewButton__notInFullSize {
         top: ~"calc(50% - @{js__length__iconLarge__tablet} * 0.5)";
     }
 
-    .RM__overlayShown.RM__mini
-    &.PopupViewButton__notInFullSize {
+    .RM__mini
+    &.PopupViewButton__displaysInOverlay.PopupViewButton__notInFullSize {
         top: ~"calc(50% - @{js__length__iconLarge__mini} * 0.5)";
     }
 }
@@ -126,8 +118,8 @@
     &.PopupViewButton__notInFullSize,
     .RM__phone
     &,
-    .RM__mobile.RM__overlayHidden
-    & {
+    .RM__mobile
+    &.PopupViewButton__displaysNotInOverlay {
         left: 10%;
     }
 
@@ -163,8 +155,8 @@
     &.PopupViewButton__notInFullSize,
     .RM__phone
     &,
-    .RM__mobile.RM__overlayHidden
-    & {
+    .RM__mobile
+    &.PopupViewButton__displaysNotInOverlay {
         right: 10%;
     }
 

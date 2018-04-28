@@ -13,6 +13,7 @@ const popupViewButtonPropTypes = {
     isNextButton: PropTypes.bool,
     inFullSize: PropTypes.bool,
     inCardSize: PropTypes.bool,
+    displaysInOverlay: PropTypes.bool,
     handlePopupButtonClick: PropTypes.func
 },
 
@@ -23,6 +24,7 @@ PopupViewButton = ({
     isNextButton,
     inFullSize,
     inCardSize,
+    displaysInOverlay,
     handlePopupButtonClick,
 
 ...other }) => {
@@ -51,11 +53,9 @@ PopupViewButton = ({
         direction = 1
     }
 
-    // if (direction) {
-        handleClick = e => handlePopupButtonClick(e, { direction })
-    // } else {
-    //     handleClick = e => handlePopupButtonClick(e { direction })
-    // }
+    handleClick = e => handlePopupButtonClick(
+        e, direction && { direction }
+    )
 
     return (
         <div
@@ -70,6 +70,10 @@ PopupViewButton = ({
                 inFullSize ?
                     'PopupViewButton__inFullSize' :
                     'PopupViewButton__notInFullSize',
+
+                displaysInOverlay ?
+                    'PopupViewButton__displaysInOverlay' :
+                    'PopupViewButton__displaysNotInOverlay',
 
                 /**
                  * Because popup button has absolute position, it must have a

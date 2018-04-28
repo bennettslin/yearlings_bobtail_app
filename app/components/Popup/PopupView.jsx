@@ -4,12 +4,9 @@ import cx from 'classnames'
 
 import PopupViewButton from './PopupViewButton'
 
-const popupViewDefaultProps = {
-    showArrows: false
-},
-
-popupViewPropTypes = {
+const popupViewPropTypes = {
     popupName: PropTypes.string.isRequired,
+    displaysInOverlay: PropTypes.bool,
     bounceAnimate: PropTypes.bool,
     shrinkAnimate: PropTypes.bool,
     isCardSize: PropTypes.bool,
@@ -26,6 +23,7 @@ popupViewPropTypes = {
 PopupView = ({
 
     popupName,
+    displaysInOverlay,
     bounceAnimate,
     shrinkAnimate,
     isCardSize,
@@ -55,27 +53,36 @@ PopupView = ({
               'PopupView__cardSize': isCardSize,
               'PopupView__fullSize': isFullSize }
         )}>
-            {showClose && (
+            {showClose &&
                 <PopupViewButton
+                    accessKeysShown
                     isCloseButton
                     inFullSize={isFullSize}
                     inCardSize={isCardSize}
+                    displaysInOverlay={displaysInOverlay}
+                    handlePopupButtonClick={handleCloseClick}
                 />
-            )}
-            {showPrevious && (
+            }
+            {showPrevious &&
                 <PopupViewButton
+                    accessKeysShown
                     isPreviousButton
                     inFullSize={isFullSize}
                     inCardSize={isCardSize}
+                    displaysInOverlay={displaysInOverlay}
+                    handlePopupButtonClick={handlePreviousClick}
                 />
-            )}
-            {showNext && (
+            }
+            {showNext &&
                 <PopupViewButton
+                    accessKeysShown
                     isNextButton
                     inFullSize={isFullSize}
                     inCardSize={isCardSize}
+                    displaysInOverlay={displaysInOverlay}
+                    handlePopupButtonClick={handleNextClick}
                 />
-            )}
+            }
             <div
                 className={cx(
                     'PopupViewContent',
@@ -96,7 +103,6 @@ PopupView = ({
     )
 }
 
-PopupView.defaultProps = popupViewDefaultProps
 PopupView.propTypes = popupViewPropTypes
 
 export default PopupView

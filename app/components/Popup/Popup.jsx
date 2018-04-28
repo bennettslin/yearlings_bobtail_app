@@ -14,6 +14,7 @@ class Popup extends Component {
         className: PropTypes.any,
         popupName: PropTypes.string.isRequired,
         isVisible: PropTypes.bool.isRequired,
+        isFullSize: PropTypes.bool,
         noFlexCentre: PropTypes.bool,
         noAbsoluteFull: PropTypes.bool,
         displaysInOverlay: PropTypes.bool,
@@ -108,10 +109,10 @@ class Popup extends Component {
                     isDisplayed ? 'Popup__displayed' : 'Popup__notDisplayed',
                     isFullSize && 'Popup__fullSize',
 
-                    displaysInOverlay ?
-                        'Popup__displaysInOverlay' : 'Popup__displaysNotInOverlay',
+                    // For animation styling.
+                    { 'Popup__displaysNotInOverlay': !displaysInOverlay,
 
-                    { 'flexCentreContainer': !noFlexCentre,
+                      'flexCentreContainer': !noFlexCentre,
                       'absoluteFullContainer': !noAbsoluteFull },
 
                     className
@@ -120,6 +121,7 @@ class Popup extends Component {
             >
                 <PopupView {...other}
                     popupName={popupName}
+                    displaysInOverlay={displaysInOverlay || isFullSize}
                     handlePreviousClick={handlePreviousClick}
                     handleNextClick={handleNextClick}
                     handleContainerClick={this._handlePopupContainerClick}
