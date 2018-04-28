@@ -2877,13 +2877,11 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `Title in audio even in phone, fix animation of title/timer.`,
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `Box shadow around verse audio button container. Figure out box shadow of buttons in general.`,
         workedHours: 3,
