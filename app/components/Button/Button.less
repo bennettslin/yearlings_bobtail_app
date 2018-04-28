@@ -9,6 +9,12 @@
     transform @animationDuration__instant;
 }
 
+.Button__popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .Button__defaultSize {
     width: @js__length__icon;
     height: @js__length__icon;
@@ -58,15 +64,5 @@
     .Button__enabled:active
     & {
         transform: scale(0.9);
-    }
-}
-
-// Apply box shadow to button itself, so that it animates as well.
-.ButtonAnimatable__popup {
-    box-shadow: @boxShadow__button;
-
-    .RM__overlayShown
-    & {
-        box-shadow: @boxShadow__button__inOverlay;
     }
 }

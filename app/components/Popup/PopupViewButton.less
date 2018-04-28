@@ -4,6 +4,20 @@
     position: absolute;
 }
 
+.Button__popupNotShadow {
+    z-index: @zIndex__popupButton;
+}
+
+// Apply box shadow to button itself, so that it animates as well.
+.ButtonAnimatable__popup {
+    box-shadow: @boxShadow__button;
+
+    .RM__overlayShown
+    & {
+        box-shadow: @boxShadow__button__inOverlay;
+    }
+}
+
 .PopupViewButton__close {
 
     .RM__desktop
@@ -71,28 +85,23 @@
         bottom: -@js__length__icon * @offset__popupButton;
     }
 
+    // Using calc here because transform messes with z-indices.
     .RM__desktop
-    &.PopupViewButton__inFullSize,
+    &.PopupViewButton__inFullSize {
+        top: ~"calc(50% - @{js__length__iconLarge} * 0.5)";
+    }
 
     .RM__tablet
     &.PopupViewButton__inFullSize,
 
-    .RM__overlayShown:not(.RM__phone)
+    .RM__overlayShown.RM__tablet
     &.PopupViewButton__notInFullSize {
-
-        // Middle sides.
-        top: 50%;
-        transform: translateY(-50%);
+        top: ~"calc(50% - @{js__length__iconLarge__tablet} * 0.5)";
     }
-}
 
-.PopupViewButton {
-
-    .RM__mobile:not(.RM__tablet)
-    &.PopupViewButton__inFullSize {
-
-        // Align left from centre of button.
-        transform: translateX(-50%);
+    .RM__overlayShown.RM__mini
+    &.PopupViewButton__notInFullSize {
+        top: ~"calc(50% - @{js__length__iconLarge__mini} * 0.5)";
     }
 }
 
@@ -127,7 +136,8 @@
     .RM__phone
     & {
         &.PopupViewButton__inFullSize {
-            left: 75%;
+            left: auto;
+            right: 22.5%;
         }
     }
 }
@@ -158,13 +168,16 @@
         right: 10%;
     }
 
+    /**
+     * Keeping this as a separate style. They are currently the same, but this
+     * might change.
+     */
     .RM__mini
     &,
     .RM__phone
     & {
         &.PopupViewButton__inFullSize {
-            right: auto;
-            left: 90%;
+            right: 10%;
         }
     }
 }

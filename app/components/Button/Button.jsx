@@ -89,6 +89,7 @@ class Button extends Component {
                 className={cx(
                     'Button',
                     `Button__${buttonName}`,
+                    isPopupButton && 'Button__popup',
 
                     isCustomSize && `Button__${buttonName}Size`,
 

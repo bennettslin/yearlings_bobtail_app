@@ -8,7 +8,6 @@ import { NAVIGATION_LEFT_KEY,
          NAVIGATION_ESCAPE_KEY } from '../../constants/access'
 
 const popupViewButtonPropTypes = {
-    isShadow: PropTypes.bool,
     isCloseButton: PropTypes.bool,
     isPreviousButton: PropTypes.bool,
     isNextButton: PropTypes.bool,
@@ -19,7 +18,6 @@ const popupViewButtonPropTypes = {
 
 PopupViewButton = ({
 
-    isShadow,
     isCloseButton,
     isPreviousButton,
     isNextButton,
@@ -53,11 +51,11 @@ PopupViewButton = ({
         direction = 1
     }
 
-    if (direction) {
+    // if (direction) {
         handleClick = e => handlePopupButtonClick(e, { direction })
-    } else {
-        handleClick = e => handlePopupButtonClick(e)
-    }
+    // } else {
+    //     handleClick = e => handlePopupButtonClick(e { direction })
+    // }
 
     return (
         <div
@@ -67,21 +65,34 @@ PopupViewButton = ({
                   'PopupViewButton__previous': isPreviousButton,
                   'PopupViewButton__next': isNextButton,
                   'PopupViewButton__side': isPreviousButton || isNextButton,
-                  'PopupViewButton__inCardSize': inCardSize,
-                  'boxShadow__popupView': isShadow },
+                  'PopupViewButton__inCardSize': inCardSize },
 
                 inFullSize ?
                     'PopupViewButton__inFullSize' :
-                    'PopupViewButton__notInFullSize'
+                    'PopupViewButton__notInFullSize',
+
+                /**
+                 * Because popup button has absolute position, it must have a
+                 * width and height as well.
+                 */
+                'Button__largeSize'
             )}
         >
+            {/* Placeholder for popup box shadow. */}
+            <div
+                className={cx(
+                    'Button__largeSize',
+                    'Button__popup',
+                    'boxShadow__popupView'
+                )}
+            />
             <Button {...other}
                 isLargeSize
                 isPopupButton
-                isDisabled={isShadow}
                 buttonName={buttonName}
                 className={cx(
-                    'Button__popup'
+                    'Button__popup',
+                    'Button__popupNotShadow'
                 )}
                 temporaryText={temporaryText}
                 accessKey={accessKey}

@@ -57,7 +57,6 @@ PopupView = ({
         )}>
             {showClose && (
                 <PopupViewButton
-                    isShadow
                     isCloseButton
                     inFullSize={isFullSize}
                     inCardSize={isCardSize}
@@ -65,7 +64,6 @@ PopupView = ({
             )}
             {showPrevious && (
                 <PopupViewButton
-                    isShadow
                     isPreviousButton
                     inFullSize={isFullSize}
                     inCardSize={isCardSize}
@@ -73,7 +71,6 @@ PopupView = ({
             )}
             {showNext && (
                 <PopupViewButton
-                    isShadow
                     isNextButton
                     inFullSize={isFullSize}
                     inCardSize={isCardSize}
@@ -95,33 +92,6 @@ PopupView = ({
             >
                 {children}
             </div>
-            {showClose &&
-                <PopupViewButton
-                    accessKeysShown
-                    isCloseButton
-                    inFullSize={isFullSize}
-                    inCardSize={isCardSize}
-                    handlePopupButtonClick={handleCloseClick}
-                />
-            }
-            {showPrevious &&
-                <PopupViewButton
-                    accessKeysShown
-                    isPreviousButton
-                    inFullSize={isFullSize}
-                    inCardSize={isCardSize}
-                    handlePopupButtonClick={handlePreviousClick}
-                />
-            }
-            {showNext &&
-                <PopupViewButton
-                    accessKeysShown
-                    isNextButton
-                    inFullSize={isFullSize}
-                    inCardSize={isCardSize}
-                    handlePopupButtonClick={handleNextClick}
-                />
-            }
         </div>
     )
 }
