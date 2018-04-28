@@ -208,13 +208,13 @@ export const finalRegisterScenes = (songObject) => {
     const {
             lyrics,
             tempSceneRawIndices,
+            scenes,
             verseTimes
         } = songObject,
 
-        sceneTimes = [],
         sceneFirstVerseIndices = []
 
-    tempSceneRawIndices.forEach((rawIndexObject) => {
+    tempSceneRawIndices.forEach((rawIndexObject, index) => {
 
         const { isUnitIndex, rawIndex } = rawIndexObject
 
@@ -225,17 +225,16 @@ export const finalRegisterScenes = (songObject) => {
                 unitFirstVerseIndex = unitMapObject.firstVerseIndex,
                 unitFirstVerseTime = unitArray[0].time
 
-            sceneTimes.push(unitFirstVerseTime)
+            scenes[index].time = unitFirstVerseTime
             sceneFirstVerseIndices.push(unitFirstVerseIndex)
 
         // ... or else scene is identified by a verse index.
         } else {
-            sceneTimes.push(verseTimes[rawIndex])
+            scenes[index].time = verseTimes[rawIndex]
             sceneFirstVerseIndices.push(rawIndex)
         }
     })
 
-    songObject.sceneTimes = sceneTimes
     songObject.sceneFirstVerseIndices = sceneFirstVerseIndices
 
     // Not needed after song scenes are registered.

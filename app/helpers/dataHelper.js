@@ -351,11 +351,11 @@ export const getSceneObject = (songIndex, sceneIndex = 0) => {
     return sceneObject[sceneIndex] || { tiles: {} }
 }
 
-export const getSceneTimesArray = (songIndex) => {
+export const getScenesArray = (songIndex) => {
     const songObject = getSongObject(songIndex),
-        { sceneTimes: sceneTimesArray } = songObject
+        { scenes: scenesArray } = songObject
 
-    return sceneTimesArray
+    return scenesArray || []
 }
 
 /*********

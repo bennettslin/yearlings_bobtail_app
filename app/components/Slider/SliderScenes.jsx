@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getSceneTimesArray,
+import { getScenesArray,
          getSongTotalTime } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
@@ -26,25 +26,26 @@ SliderScenes = ({
 }) => {
 
     const totalTime = getSongTotalTime(selectedSongIndex),
-        sceneTimesArray = getSceneTimesArray(selectedSongIndex)
+        scenesArray = getScenesArray(selectedSongIndex)
 
     return (
         <div className="SliderScenes">
-            {sceneTimesArray &&
-                sceneTimesArray.map((sceneTime, sceneTimeIndex) => {
+            {scenesArray.map((scene, sceneIndex) => {
 
-                const sceneWidth =
+                const { time: sceneTime } = scene,
+
+                    sceneWidth =
                     (totalTime - sceneTime) / totalTime * 100,
 
                     sceneStyle = {
                         width: `${sceneWidth}%`
                     },
 
-                    isOdd = sceneTimeIndex % 2
+                    isOdd = sceneIndex % 2
 
                 return (
                     <div
-                        key={sceneTimeIndex}
+                        key={sceneIndex}
                         className={cx(
                             'SliderSceneBar',
                             'Slider__dynamicBar',

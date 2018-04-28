@@ -132,7 +132,7 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
                 verseObject.lastVerseIndex = lastVerseIndex;
             }
 
-            // Tell song. its dot stanza count, for admin purposes.
+            // Tell song its dot stanza count, for admin purposes.
             registerAdminDotStanzas(songObject, verseObject)
         })
     })
