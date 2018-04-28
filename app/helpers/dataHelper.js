@@ -309,26 +309,32 @@ export const getVerseIndexForNextScene = (
         return -1
     }
 
-    const firstVerseIndices = getSongObject(songIndex).sceneFirstVerseIndices,
-        currentSceneIndex = getSceneIndexForVerseIndex(songIndex, verseIndex),
-        scenesCount = firstVerseIndices.length,
-        nextSceneIndex =
-            (currentSceneIndex + direction + scenesCount) % scenesCount
+    const scenesArray = getScenesArray(songIndex),
 
-    return firstVerseIndices[nextSceneIndex]
+        currentSceneIndex = getSceneIndexForVerseIndex(songIndex, verseIndex),
+
+        scenesCount = scenesArray.length,
+
+        nextSceneIndex = (
+            currentSceneIndex
+            + direction
+            + scenesCount
+        ) % scenesCount
+
+    return scenesArray[nextSceneIndex].firstVerseIndex
 }
 
 export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
-    const song = getSongObject(songIndex),
-        { sceneFirstVerseIndices } = song
 
-    if (sceneFirstVerseIndices) {
+    const scenesArray = getScenesArray(songIndex)
+
+    if (scenesArray.length) {
 
         let counter = 0,
             sceneIndex = 0
 
-        while (counter < sceneFirstVerseIndices.length) {
-            const currentVerseIndex = sceneFirstVerseIndices[counter]
+        while (counter < scenesArray.length) {
+            const currentVerseIndex = scenesArray[counter].firstVerseIndex
 
             if (verseIndex < currentVerseIndex) {
                 break
