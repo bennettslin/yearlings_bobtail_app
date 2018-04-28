@@ -18,6 +18,8 @@ import { PHONE_CLASS,
          LS_HEIGHT_MENU,
          LS_HEIGHT_ABOVE_OVERLAY_PHONE,
 
+         TITLE_IN_AUDIO_BREAKPOINT,
+
          HIDDEN_NAV_MIN,
          WIKI_SIDE_PADDING_TOTAL } from '../constants/responsive'
 
@@ -203,8 +205,8 @@ export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
     }
 }
 
-export const getIsTitleInAudio = ({ deviceIndex, windowWidth }) => {
-    return _getIsMini(deviceIndex) && windowWidth < MINI_OBJECT.isTitleInAudioBreakpoint
+export const getIsTitleInAudio = ({ windowWidth }) => {
+    return windowWidth < TITLE_IN_AUDIO_BREAKPOINT
 }
 
 export const getLyricSectionRect = ({

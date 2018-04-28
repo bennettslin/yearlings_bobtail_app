@@ -57,6 +57,7 @@ PopupViewButton = ({
         e, direction && { direction }
     )
 
+    console.error('popup button', other)
     return (
         <div
             className={cx(

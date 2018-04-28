@@ -97,13 +97,11 @@
         max-width @animationDuration__fast;
 }
 
-.MenuRowChild__titleTimer {
+.MenuRowChild__title {
     position: relative;
 
     min-width: @js__minWidth__childTitle;
     max-width: 200px; // Arbitrary.
-
-    // overflow: hidden;
 
     .RM__titleInAudio
     & {
@@ -115,35 +113,35 @@
     }
 }
 
-.MenuRowChild__titleTimer__child {
+// .MenuRowChild__title__child {
 
-    .RM__phone
-    & {
-        transition: left @animationDuration__default;
+//     .RM__phone
+//     & {
+//         transition: left @animationDuration__default;
 
-        &:first-child {
-            left: 0;
-        }
+//         &:first-child {
+//             left: 0;
+//         }
 
-        &:last-child {
-            left: 100%;
-        }
-    }
+//         &:last-child {
+//             left: 100%;
+//         }
+//     }
 
-    .RM__phone.RM__overlayShown
-    &,
-    .RM__phone.RM__song.RM__lyricExpanded
-    & {
+//     .RM__phone.RM__overlayShown
+//     &,
+//     .RM__phone.RM__song.RM__lyricExpanded
+//     & {
 
-        &:first-child {
-            left: -100%;
-        }
+//         &:first-child {
+//             left: -100%;
+//         }
 
-        &:last-child {
-            left: 0;
-        }
-    }
-}
+//         &:last-child {
+//             left: 0;
+//         }
+//     }
+// }
 
 .MenuRowChild__audio {
     flex-grow: 2;

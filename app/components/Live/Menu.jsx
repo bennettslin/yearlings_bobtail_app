@@ -12,21 +12,17 @@ import TitleToggle from '../Title/TitleToggle'
 import Audio from '../Audio/Audio'
 import ScoresTips from '../ScoresTips/ScoresTips'
 import AudioBanner from '../Audio/AudioBanner'
-import AudioTimer from '../Audio/AudioTimer'
 
-import { getIsPhone, getMenuMarginInOverlay } from '../../helpers/responsiveHelper'
+import { getMenuMarginInOverlay } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    deviceIndex,
     windowWidth
 }) => ({
-    deviceIndex,
     windowWidth
 })
 
 const menuPropTypes = {
     // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
     windowWidth: PropTypes.number.isRequired,
 
     // From parent.
@@ -38,7 +34,6 @@ const menuPropTypes = {
 
 Menu = ({
 
-    deviceIndex,
     windowWidth,
     titleToggleHandlers,
     audioHandlers,
@@ -46,12 +41,11 @@ Menu = ({
     audioBannerHandlers
 
 }) => {
-    const isPhone = getIsPhone(deviceIndex),
 
-        /**
-         * This is necessary because transform animation in Safari is janky.
-         */
-        menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
+    /**
+     * This is necessary because transform animation in Safari is janky.
+     */
+    const menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
 
     return (
         <div className="Menu">
@@ -80,26 +74,16 @@ Menu = ({
                 }}
             >
                 <div className={cx(
-                    'MenuRowChild__titleTimer',
+                    'MenuRowChild__title',
                     'MenuRowChild',
-                    { 'widths__hiddenInOverlay': !isPhone }
+                    'widths__hiddenInOverlay'
                 )}>
                     <div className={cx(
-                        'MenuRowChild__titleTimer__child',
+                        'MenuRowChild__title__child',
                         'absoluteFullContainer'
                     )}>
                         <TitleToggle {...titleToggleHandlers} />
                     </div>
-                    {isPhone && (
-                        <div className={cx(
-                            'MenuRowChild__titleTimer__child',
-                            'absoluteFullContainer'
-                        )}>
-                            <AudioTimer
-                                isTitleTimer
-                            />
-                        </div>
-                    )}
                 </div>
 
                 <div className={cx(
