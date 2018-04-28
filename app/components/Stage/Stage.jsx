@@ -56,8 +56,6 @@ class Stage extends Component {
                         stageHeight={height}
                     />
                     <StageProscenium />
-
-
                 </div>
             </div>
         )

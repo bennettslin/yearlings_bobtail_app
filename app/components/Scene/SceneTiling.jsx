@@ -4,7 +4,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-// import Wood from './Wood/Wood'
+import Wood from './Wood/Wood'
 import Tiles from './Tiles/Tiles'
 
 const propTypes = {
@@ -15,19 +15,19 @@ const propTypes = {
 
 const SceneTiling = (props) => {
 
-    // const { isFloor,
-    //         stageWidth,
-    //         stageHeight } = props
+    const { isFloor,
+            stageWidth,
+            stageHeight } = props
 
     return (
         <div className={cx(
             'SceneTiling'
         )}>
-            {/* <Wood
+            <Wood
                 isFloor={isFloor}
                 stageWidth={stageWidth}
                 stageHeight={stageHeight}
-            /> */}
+            />
 
             <Tiles {...props} />
         </div>
