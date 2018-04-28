@@ -146,7 +146,7 @@ export const registerAdminDotStanzas = (songObject, verseObject) => {
 
     // For admin purposes.
     if (verseObject[DOT_STANZA]) {
-        songObject.adminDotStanzas++
+        songObject.adminDotStanzasCount++
     }
 }
 

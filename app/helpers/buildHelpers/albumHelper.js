@@ -86,8 +86,13 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
     const { lyrics } = songObject
 
     // Initialise song.
-    songObject.adminDotStanzas = 0
+
+    // This tells me how many dot stanzas this song has.
+    songObject.adminDotStanzasCount = 0
+
+    // This tells me how many annotations have multiple cards.
     songObject.adminPluralCardsCount = 0
+
     songObject.annotations = []
     songObject.tempVerseIndexCounter = 0
     songObject.verseTimes = []

@@ -20,7 +20,7 @@ const StatsSection = (props) => (
 const StatsSectionView = ({
 
     // From props.
-    adminDotStanzas,
+    adminDotStanzasCount,
     lyrics,
     annotations,
     adminPluralCardsCount
@@ -29,7 +29,7 @@ const StatsSectionView = ({
     <div className="stats-section">
         <h2>stats</h2>
         <div className="row">
-            <LyricDotStanzasRow adminDotStanzas={adminDotStanzas} />
+            <LyricDotStanzasRow adminDotStanzasCount={adminDotStanzasCount} />
             <LyricsWordCountRow lyrics={lyrics} />
             <AnnotationsCountRow annotations={annotations} />
             <WordsPerAnnotationRow annotations={annotations} />
