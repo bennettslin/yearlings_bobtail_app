@@ -40,10 +40,15 @@ class LyricStanzaDot extends Component {
     }
 
     _handleDotButtonClick(e) {
-        const { dotStanzaObject } = this.props,
-            { annotationIndex } = dotStanzaObject
+        const { dotStanzaObject,
+                selectedAnnotationIndex } = this.props,
+            { annotationIndex } = dotStanzaObject,
 
-        this.props.handleLyricAnnotationSelect(e, annotationIndex)
+            isSelected = annotationIndex === selectedAnnotationIndex
+
+        if (!isSelected) {
+            this.props.handleLyricAnnotationSelect(e, annotationIndex)
+        }
     }
 
     render() {

@@ -2852,28 +2852,29 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `Legitimate route should override stored state.`,
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `Text anchor should not have hover styling if dot is deselected.`,
         workedHours: 2,
         neededHours: 2
     },
-
     {
         taskName: `Annotation anchors don't have underlines.`,
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `Final refactoring.`,
         workedHours: 24,
         neededHours: 24
-    }
+    },
+    {
+        taskName: `Behaviour of clicking selected text anchor vs. dot anchor not consistent.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

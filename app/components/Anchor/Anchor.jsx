@@ -63,7 +63,7 @@ Anchor = ({
                  * itself.
                  */
                 { 'styleIf__always':
-                    (!isSelected && !styleWithDot) || isDotAnchor },
+                    (!styleWithDot) || isDotAnchor },
 
                 className
             )}
