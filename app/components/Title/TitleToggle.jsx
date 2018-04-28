@@ -5,13 +5,19 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import { getIsPhone } from '../../helpers/responsiveHelper'
+
+import AudioTimer from '../Audio/AudioTimer'
 import Button from '../Button/Button'
+
 import { TITLE_TOGGLE_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
+    deviceIndex,
     isTitleInAudio,
     selectedTitleIndex
 }) => ({
+    deviceIndex,
     isTitleInAudio,
     selectedTitleIndex
 })
@@ -22,6 +28,7 @@ const titleToggleDefaultProps = {
 
 titleTogglePropTypes = {
     // Through Redux.
+    deviceIndex: PropTypes.number.isRequired,
     isTitleInAudio: PropTypes.bool.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
 
@@ -32,6 +39,7 @@ titleTogglePropTypes = {
 
 TitleToggle = ({
 
+    deviceIndex,
     isTitleInAudio,
     selectedTitleIndex,
 
@@ -39,18 +47,43 @@ TitleToggle = ({
     handleTitleToggle
 
 }) => {
-    return isAudioChild === isTitleInAudio && (
-        <div className={cx(
-            'TitleToggle',
-            { 'Audio__menuChild': isAudioChild }
-        )}>
+
+    const isPhone = getIsPhone(deviceIndex),
+
+        titleButtonChild = (
             <Button
                 buttonName="title"
+                className={cx(
+                    { 'Button__title__timerInTitle': isPhone }
+                )}
                 isCustomSize
                 accessKey={TITLE_TOGGLE_KEY}
                 temporaryText={selectedTitleIndex}
                 handleButtonClick={handleTitleToggle}
             />
+        )
+
+    return isAudioChild === isTitleInAudio && (
+        <div className={cx(
+            'TitleToggle',
+            { 'Audio__menuChild': isAudioChild }
+        )}>
+            {isPhone && (
+                <AudioTimer
+                    isTitleTimer
+                />
+            )}
+
+            {isPhone ? (
+                <div className={cx(
+                    'TitleToggleButton__animatable',
+                    'absoluteFullContainer'
+                )}>
+                    {titleButtonChild}
+                </div>
+            ) : (
+                titleButtonChild
+            )}
         </div>
     )
 }

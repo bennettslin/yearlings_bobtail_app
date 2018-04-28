@@ -40,14 +40,18 @@ AudioTimer = ({
     return !isLogue && (
         <div className={cx(
             'AudioTimer',
-            { 'AudioTimer__titleTimer': isTitleTimer }
+            { 'AudioTimer__titleTimer': isTitleTimer,
+              'absoluteFullContainer': isTitleTimer },
+            'flexCentreContainer'
         )}>
-            <span className="AudioTimer__base">
-                {base}
-            </span>
-            <span className="AudioTimer__jiffy">
-                {jiffy}
-            </span>
+            <div className="AudioTimer__child">
+                <span className="AudioTimer__base">
+                    {base}
+                </span>
+                <span className="AudioTimer__jiffy">
+                    {jiffy}
+                </span>
+            </div>
         </div>
     )
 }
