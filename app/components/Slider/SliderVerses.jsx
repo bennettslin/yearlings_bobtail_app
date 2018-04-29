@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import SliderVerse from './SliderVerse'
+// import SliderVerse from './SliderVerse'
+import VerseController from '../Verse/VerseController'
 
 import { getSongVerseTimes,
          getSongTotalTime } from '../../helpers/dataHelper'
@@ -35,7 +36,7 @@ SliderVerses = ({
             'SliderVerses'
         )}>
             {verseTimes.map((verseTimeObject, verseIndex) => (
-                <SliderVerse
+                <VerseController
                     key={verseIndex}
                     totalTime={totalTime}
                     verseIndex={verseIndex}

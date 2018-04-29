@@ -11,9 +11,11 @@ const sliderVersePropTypes = {
 },
 
 SliderVerse = ({
+
     totalTime,
     verseIndex,
     verseTimeObject
+
 }) => {
 
     const { time: verseTime,

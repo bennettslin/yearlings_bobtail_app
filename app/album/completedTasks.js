@@ -2887,4 +2887,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Begin Slider refactor work.`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]

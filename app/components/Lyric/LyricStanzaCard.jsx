@@ -155,11 +155,10 @@ LyricStanzaCardView = ({
                     const { stanzaMap,
                             unitMap } = verseObject
 
-                    console.error('render')
-
                     return !stanzaMap && !unitMap && (
                             <VerseController {...other}
                                 key={stanzaVerseIndex}
+                                isLyricVerse
                                 verseObject={verseObject}
                             />
                         )
