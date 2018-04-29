@@ -231,6 +231,10 @@ const _finalPrepareAlbum = (albumObject) => {
             // Initialise song.
             songObject.tempFinalAnnotationIndex = 0
 
+            /**
+             * If stanza is the only one of its kind, don't show its index. For
+             * example, Bridge instead of Bridge 1.
+             */
             finalRegisterStanzaTypes(songObject)
 
             /**

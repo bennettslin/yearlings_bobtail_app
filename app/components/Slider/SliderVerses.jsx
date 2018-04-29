@@ -29,7 +29,9 @@ SliderVerses = ({
 
     return (
         <div className="SliderVerses">
-            {verseTimes.map((verseTime, verseIndex) => {
+            {verseTimes.map((verseTimeObject, verseIndex) => {
+
+                const { time: verseTime } = verseTimeObject
 
                 // Don't show title verse.
                 if (verseTime < 0) {

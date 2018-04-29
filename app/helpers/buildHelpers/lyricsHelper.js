@@ -211,7 +211,9 @@ export const recurseToFindAnchors = ({
         lyricEntity.lastAnnotationIndex = songObject.annotations.length
 
         // Add verse time to song times.
-        songObject.verseTimes.push(lyricEntity.time)
+        songObject.verseTimes.push({
+            time: lyricEntity.time
+        })
 
         songObject.tempVerseIndexCounter++
     }

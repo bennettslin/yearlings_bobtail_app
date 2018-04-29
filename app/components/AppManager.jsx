@@ -968,7 +968,7 @@ class App extends Component {
 
                 // We will start at the beginning of the selected verse.
                 songVerseTimes = getSongVerseTimes(props.selectedSongIndex),
-                selectedTimePlayed = songVerseTimes[selectedVerseIndex]
+                selectedTimePlayed = songVerseTimes[selectedVerseIndex].time
 
             this.selectTime(selectedTimePlayed)
 
@@ -1064,7 +1064,7 @@ class App extends Component {
         selectedSongIndex = this.props.selectedSongIndex
     }) {
         const songVerseTimes = getSongVerseTimes(selectedSongIndex),
-            selectedTimePlayed = songVerseTimes[selectedVerseIndex],
+            selectedTimePlayed = songVerseTimes[selectedVerseIndex].time,
 
             /**
              * If selecting or changing verse in same song, change index to be
