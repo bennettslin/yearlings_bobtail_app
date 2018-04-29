@@ -71,7 +71,6 @@ class Carousel extends Component {
         return componentShouldUpdate
     }
 
-
     componentWillReceiveProps(nextProps) {
         if (this.props.isHeavyRenderReady && !nextProps.isHeavyRenderReady) {
             this.setState({

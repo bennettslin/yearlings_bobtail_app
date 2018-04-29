@@ -1,85 +1,109 @@
 // Component to show individual box of verses.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import LyricVerse from './LyricVerse'
+
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 /*************
  * CONTAINER *
  *************/
 
-const lyricStanzaCardDefaultProps = {
-    inMain: false,
-    subsequent: false,
-    isSubstanza: false
-},
+class LyricStanzaCard extends Component {
 
-lyricStanzaCardPropTypes = {
-    // From parent.
-    stanzaIndex: PropTypes.number,
-    stanzaType: PropTypes.string,
-    substanzaType: PropTypes.string,
-    sideStanzaType: PropTypes.string,
-    sideSubstanzaType: PropTypes.string,
-    subsequent: PropTypes.bool.isRequired,
+    static defaultProps = {
+        inMain: false,
+        subsequent: false,
+        isSubstanza: false
+    }
 
-    stanzaArray: PropTypes.array,
-    inMain: PropTypes.bool.isRequired,
-    isSubstanza: PropTypes.bool.isRequired
-},
+    static propTypes = {
+        // From parent.
+        stanzaIndex: PropTypes.number,
+        stanzaType: PropTypes.string,
+        substanzaType: PropTypes.string,
+        sideStanzaType: PropTypes.string,
+        sideSubstanzaType: PropTypes.string,
+        subsequent: PropTypes.bool.isRequired,
 
-LyricStanzaCard = ({
+        stanzaArray: PropTypes.array,
+        inMain: PropTypes.bool.isRequired,
+        isSubstanza: PropTypes.bool.isRequired
+    }
 
-    // From props.
-    stanzaIndex,
-    stanzaType,
-    substanzaType,
-    sideStanzaType,
-    sideSubstanzaType,
-    subsequent,
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'stanzaIndex',
+                    'stanzaType',
+                    'substanzaType',
+                    'sideStanzaType',
+                    'sideSubstanzaType',
+                    'subsequent',
+                    'stanzaArray',
+                    'inMain',
+                    'isSubstanza',
+                ]
+            })
 
-    // From controller.
-    stanzaArray,
-    isSubstanza,
+        return componentShouldUpdate
+    }
 
-...other }) => {
+    render() {
 
-    const { inMain } = other
+        const {
+                // From props.
+                stanzaIndex,
+                stanzaType,
+                substanzaType,
+                sideStanzaType,
+                sideSubstanzaType,
+                subsequent,
 
-    if (stanzaArray) {
+                // From controller.
+                stanzaArray,
+                isSubstanza,
 
-        const shownStanzaIndex =
-            inMain
-            && !subsequent
-            && !isSubstanza
-            && !isSubstanza
-            && stanzaIndex
+            ...other } = this.props,
 
-        let stanzaTypeLabel
+            { inMain } = other
 
-        if (inMain) {
-            stanzaTypeLabel = isSubstanza ? substanzaType : stanzaType
+        if (stanzaArray) {
 
+            const shownStanzaIndex =
+                inMain
+                && !subsequent
+                && !isSubstanza
+                && !isSubstanza
+                && stanzaIndex
+
+            let stanzaTypeLabel
+
+            if (inMain) {
+                stanzaTypeLabel = isSubstanza ? substanzaType : stanzaType
+
+            } else {
+                stanzaTypeLabel = isSubstanza ? sideSubstanzaType : sideStanzaType
+            }
+
+            return (
+                <LyricStanzaCardView {...other}
+                    stanzaArray={stanzaArray}
+                    isSubstanza={isSubstanza}
+                    stanzaIndex={shownStanzaIndex}
+                    stanzaType={stanzaTypeLabel}
+                />
+            )
         } else {
-            stanzaTypeLabel = isSubstanza ? sideSubstanzaType : sideStanzaType
+            return null
         }
-
-        return (
-            <LyricStanzaCardView {...other}
-                stanzaArray={stanzaArray}
-                isSubstanza={isSubstanza}
-                stanzaIndex={shownStanzaIndex}
-                stanzaType={stanzaTypeLabel}
-            />
-        )
-    } else {
-        return null
     }
 }
-
-LyricStanzaCard.defaultProps = lyricStanzaCardDefaultProps
-LyricStanzaCard.propTypes = lyricStanzaCardPropTypes
 
 /****************
  * PRESENTATION *
