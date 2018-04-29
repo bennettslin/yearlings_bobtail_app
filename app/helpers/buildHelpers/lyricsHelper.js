@@ -66,7 +66,9 @@ export const registerHasSideStanzas = (songObject) => {
     lyrics.forEach(unit => {
 
         const unitHasSideStanzas = unit.reduce((hasSideStanzas, verse) => {
-                return hasSideStanzas || !!verse[TOP_SIDE_STANZA] || !!verse[BOTTOM_SIDE_STANZA]
+                return hasSideStanzas ||
+                Boolean(verse[TOP_SIDE_STANZA]) ||
+                Boolean(verse[BOTTOM_SIDE_STANZA])
             }, false)
 
         if (unitHasSideStanzas) {
@@ -117,7 +119,9 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
                     type: stanzaType
                 })
 
-                tempStanzaTypeCounters[stanzaType] = (tempStanzaTypeCounters[stanzaType] || 0) + 1
+                tempStanzaTypeCounters[stanzaType] = (
+                    tempStanzaTypeCounters[stanzaType] || 0
+                ) + 1
             }
 
             // Tell unit its stanza index.
@@ -191,7 +195,8 @@ export const recurseToFindAnchors = ({
     verseObject,
     lyricEntity = verseObject,
     textKey,
-    callbackFunction
+    callbackFunction,
+    stanzaTimesIndex = 0
 
 }) => {
 
@@ -202,6 +207,10 @@ export const recurseToFindAnchors = ({
     if (registerVerseTimes && !isNaN(lyricEntity.time)) {
         // All recursed lyrics will know they're nested in verse with time.
 
+        // Add verse time.
+        const { stanzaTimes } = songObject,
+            verseTimeObject = { time: lyricEntity.time }
+
         inVerseWithTimeIndex = songObject.tempVerseIndexCounter
 
         // Add index to verse object.
@@ -210,10 +219,16 @@ export const recurseToFindAnchors = ({
         // Add most recent annotation index.
         lyricEntity.lastAnnotationIndex = songObject.annotations.length
 
-        // Add verse time to song times.
-        songObject.verseTimes.push({
-            time: lyricEntity.time
-        })
+        // Add stanza type.
+        while (
+            stanzaTimesIndex < stanzaTimes.length - 1 &&
+            lyricEntity.time >= stanzaTimes[stanzaTimesIndex + 1].time
+        ) {
+            stanzaTimesIndex++
+        }
+        verseTimeObject.stanzaType = stanzaTimes[stanzaTimesIndex].type
+
+        songObject.verseTimes.push(verseTimeObject)
 
         songObject.tempVerseIndexCounter++
     }
@@ -230,7 +245,8 @@ export const recurseToFindAnchors = ({
                 verseObject,
                 lyricEntity: childEntity,
                 textKey,
-                callbackFunction
+                callbackFunction,
+                stanzaTimesIndex
             })
         })
 
@@ -264,7 +280,8 @@ export const recurseToFindAnchors = ({
                         verseObject,
                         lyricEntity: lyricEntity[childKey],
                         textKey: (textKey || sideStanzaTextKey || childKey),
-                        callbackFunction
+                        callbackFunction,
+                        stanzaTimesIndex
                     })
                 }
             })

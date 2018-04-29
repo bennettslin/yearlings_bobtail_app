@@ -28,10 +28,13 @@ SliderVerses = ({
         totalTime = getSongTotalTime(selectedSongIndex)
 
     return (
-        <div className="SliderVerses">
+        <div className={cx(
+            'SliderVerses'
+        )}>
             {verseTimes.map((verseTimeObject, verseIndex) => {
 
-                const { time: verseTime } = verseTimeObject
+                const { time: verseTime,
+                        stanzaType } = verseTimeObject
 
                 // Don't show title verse.
                 if (verseTime < 0) {
@@ -53,9 +56,12 @@ SliderVerses = ({
                         className={cx(
                             'SliderVerseBar',
                             'Slider__dynamicBar',
+
                             isOdd ?
                                 'SliderVerseBar__odd' :
-                                'SliderVerseBar__even'
+                                'SliderVerseBar__even',
+
+                            `bgColour__stanza__${stanzaType}`
                         )}
                         style={verseStyle}
                     />
