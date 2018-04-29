@@ -14,7 +14,7 @@ import './less/app.less'
 import RoutingManager from './components/RoutingManager'
 
 // Why did you update?
-const turnOnWDYULogging = true
+const turnOnWDYULogging = false
 if (process.env.NODE_ENV !== 'production' && turnOnWDYULogging) {
     const { whyDidYouUpdate } = require('why-did-you-update')
     whyDidYouUpdate(React)

@@ -3,7 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import LyricVerse from './LyricVerse'
+import VerseController from '../Verse/VerseController'
 
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
@@ -158,7 +158,7 @@ LyricStanzaCardView = ({
                     console.error('render')
 
                     return !stanzaMap && !unitMap && (
-                            <LyricVerse {...other}
+                            <VerseController {...other}
                                 key={stanzaVerseIndex}
                                 verseObject={verseObject}
                             />

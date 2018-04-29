@@ -4,6 +4,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
+
+import SliderVerse from './SliderVerse'
+
 import { getSongVerseTimes,
          getSongTotalTime } from '../../helpers/dataHelper'
 
@@ -31,42 +34,14 @@ SliderVerses = ({
         <div className={cx(
             'SliderVerses'
         )}>
-            {verseTimes.map((verseTimeObject, verseIndex) => {
-
-                const { time: verseTime,
-                        stanzaType } = verseTimeObject
-
-                // Don't show title verse.
-                if (verseTime < 0) {
-                    return null
-                }
-
-                const verseWidth =
-                        (totalTime - verseTime) / totalTime * 100,
-
-                    verseStyle = {
-                        width: `${verseWidth}%`
-                    },
-
-                    isOdd = verseIndex % 2
-
-                return (
-                    <div
-                        key={verseIndex}
-                        className={cx(
-                            'SliderVerseBar',
-                            'Slider__dynamicBar',
-
-                            isOdd ?
-                                'SliderVerseBar__odd' :
-                                'SliderVerseBar__even',
-
-                            `bgColour__stanza__${stanzaType}`
-                        )}
-                        style={verseStyle}
-                    />
-                )
-            })}
+            {verseTimes.map((verseTimeObject, verseIndex) => (
+                <SliderVerse
+                    key={verseIndex}
+                    totalTime={totalTime}
+                    verseIndex={verseIndex}
+                    verseTimeObject={verseTimeObject}
+                />
+            ))}
         </div>
     )
 }

@@ -149,7 +149,7 @@ class Verse extends Component {
 
             // If not an interactable verse, we'll count it as odd.
             isEven = isInteractable && verseIndex % 2 === 0,
-            verseUnitClassName = getVerseUnitClassName({
+            verseClassName = getVerseUnitClassName({
                 isEven,
                 inVerseBar,
                 inMain,
@@ -164,10 +164,10 @@ class Verse extends Component {
             })
 
         return (
-            <VerseUnitView {...other}
+            <VerseView {...other}
                 myRef={(node) => (this.myVerse = node)}
                 verseIndex={verseIndex}
-                verseUnitClassName={verseUnitClassName}
+                verseClassName={verseClassName}
                 sliderStatusClassName={sliderStatusClassName}
                 isTitle={isTitle}
                 isDoubleSpeaker={!lyric && !centre}
@@ -185,11 +185,11 @@ class Verse extends Component {
  * PRESENTATION *
  ****************/
 
-const verseUnitViewDefaultProps = {
+const verseViewDefaultProps = {
     isInteractivated: false
 },
 
-verseUnitViewPropTypes = {
+verseViewPropTypes = {
     // From parent.
     inVerseBar: PropTypes.bool.isRequired,
     verseIndex: PropTypes.number,
@@ -197,7 +197,7 @@ verseUnitViewPropTypes = {
     isInteractivated: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired,
-    verseUnitClassName: PropTypes.string.isRequired,
+    verseClassName: PropTypes.string.isRequired,
     sliderStatusClassName: PropTypes.string.isRequired,
     myRef: PropTypes.func.isRequired,
 
@@ -206,12 +206,12 @@ verseUnitViewPropTypes = {
     handleLyricVerseSelect: PropTypes.func
 },
 
-VerseUnitView = ({
+VerseView = ({
 
     // From controller.
     myRef,
     verseIndex,
-    verseUnitClassName,
+    verseClassName,
     sliderStatusClassName,
     isInteractivated,
 
@@ -237,7 +237,7 @@ VerseUnitView = ({
                     `Verse__scrollChild__${verseIndex}`,
 
                 // title, even, odd, inSide.
-                verseUnitClassName && `Verse__${verseUnitClassName}`,
+                verseClassName && `Verse__${verseClassName}`,
 
                 // onSlider, beforeSlider, or afterSlider.
                 sliderStatusClassName && `Verse__${sliderStatusClassName}`,
@@ -268,7 +268,7 @@ VerseUnitView = ({
     )
 }
 
-VerseUnitView.defaultProps = verseUnitViewDefaultProps
-VerseUnitView.propTypes = verseUnitViewPropTypes
+VerseView.defaultProps = verseViewDefaultProps
+VerseView.propTypes = verseViewPropTypes
 
 export default connect(mapStateToProps)(Verse)
