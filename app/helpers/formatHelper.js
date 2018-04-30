@@ -224,14 +224,12 @@ export const getVerseUnitClassName = ({
 }
 
 export const getSliderStatusClassName = ({
-    inMain,
-    isTitle,
     isSliderTouched,
     isSliderSelected,
     isAfterSliderSelected
 }) => {
 
-    if (isSliderTouched && inMain && !isTitle) {
+    if (isSliderTouched) {
         if (isSliderSelected) {
             return 'onSlider'
 

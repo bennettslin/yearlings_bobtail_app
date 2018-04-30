@@ -9,7 +9,6 @@
         * Decide whether remain or spent should be dark or light.
 
 # New notes
-* Have LyricStanzaCard and SliderVerses pass their respective child components into VerseController.
 
 * Have VerseController pass necessary flags to child, so that child will then render class names.
 

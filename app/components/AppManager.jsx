@@ -1064,7 +1064,11 @@ class App extends Component {
         selectedSongIndex = this.props.selectedSongIndex
     }) {
         const songVerseTimes = getSongVerseTimes(selectedSongIndex),
-            selectedTimePlayed = songVerseTimes[selectedVerseIndex].time,
+
+            // TODO: This safety check is unfortunate.
+            selectedTimePlayed =
+                songVerseTimes && songVerseTimes[0] ?
+                    songVerseTimes[selectedVerseIndex].time : 0,
 
             /**
              * If selecting or changing verse in same song, change index to be

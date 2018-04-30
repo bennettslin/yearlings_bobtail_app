@@ -1,0 +1,86 @@
+/**
+ * These styles are shared by SliderVerse and Verse.
+ */
+
+.verse__selected {
+
+    .RM__sliderNotMoving.RM__verseBarHidden.RM__isPlaying
+    & {
+        background-color: @bgColour__audioPlay;
+        .mixin__textShadow(@bgColour__audioPlay);
+    }
+
+    .RM__sliderNotMoving.RM__verseBarHidden.RM__isPaused
+    & {
+        background-color: @bgColour__audioPause;
+        .mixin__textShadow(@bgColour__audioPause);
+    }
+}
+
+.verse__odd {
+
+    .RM__sliderNotMoving
+    & {
+        // Default odd verse.
+        background-color: @bgColour__verse__odd;
+        .mixin__textShadow(@bgColour__verse__odd);
+
+        color: #644;
+    }
+
+    .RM__sliderMoving
+    & {
+        &.verse__beforeSlider {
+            background-color: @bgColour__beforeSlider__odd;
+            .mixin__textShadow(@bgColour__beforeSlider__odd);
+
+            color: @colour__beforeSlider__odd;
+        }
+
+        &.verse__afterSlider {
+            background-color: @bgColour__afterSlider__odd;
+            .mixin__textShadow(@bgColour__afterSlider__odd);
+
+            color: @colour__afterSlider__odd;
+        }
+    }
+}
+
+.verse__even {
+
+    .RM__sliderNotMoving
+    & {
+        // Default even verse.
+        background-color: @bgColour__verse__even;
+        .mixin__textShadow(@bgColour__verse__even);
+
+        color: #533;
+    }
+
+    .RM__sliderMoving
+    & {
+        &.verse__beforeSlider {
+            background-color: @bgColour__beforeSlider__even;
+            .mixin__textShadow(@bgColour__beforeSlider__even);
+
+            color: @colour__beforeSlider__even;
+        }
+
+        &.verse__afterSlider {
+            background-color: @bgColour__afterSlider__even;
+            .mixin__textShadow(@bgColour__afterSlider__even);
+
+            color: @colour__afterSlider__even;
+        }
+    }
+}
+
+.verse__onSlider {
+
+    .RM__sliderMoving
+    & {
+        // Slider selected verse.
+        background-color: @bgColour__audioNeutral;
+        .mixin__textShadow(@bgColour__audioNeutral);
+    }
+}

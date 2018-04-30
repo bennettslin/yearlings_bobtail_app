@@ -27,8 +27,11 @@ const verseControllerPropTypes = {
     interactivatedVerseIndex: PropTypes.number.isRequired,
 
     // From parent.
-    isLyricVerse: PropTypes.bool,
+
+    // Passed by SliderVerses.
     verseIndex: PropTypes.number,
+
+    // Passed by LyricStanzaCard.
     verseObject: PropTypes.object
 },
 
@@ -37,7 +40,6 @@ VerseController = ({
     selectedVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex,
-    isLyricVerse,
 
 ...other }) => {
 
@@ -53,7 +55,7 @@ VerseController = ({
         isAfterSliderSelected = controllerVerseIndex > sliderVerseIndex,
         isInteractivated = controllerVerseIndex === interactivatedVerseIndex,
 
-        VerseComponent = isLyricVerse ? Verse : SliderVerse
+        VerseComponent = verseObject ? Verse : SliderVerse
 
     return (
         <VerseComponent {...other}

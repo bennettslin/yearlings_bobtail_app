@@ -155,13 +155,12 @@ class Verse extends Component {
                 inMain,
                 isTitle
             }),
-            sliderStatusClassName = getSliderStatusClassName({
-                inMain,
-                isTitle,
-                isSliderTouched,
-                isSliderSelected,
-                isAfterSliderSelected
-            })
+            sliderStatusClassName =
+                inMain && !isTitle ? getSliderStatusClassName({
+                    isSliderTouched,
+                    isSliderSelected,
+                    isAfterSliderSelected
+                }) : ''
 
         return (
             <VerseView {...other}
@@ -232,21 +231,25 @@ VerseView = ({
             ref={myRef}
             className={cx(
                 'Verse',
-                'textShadow__background',
+                // 'textShadow__background',
                 isInteractable &&
                     `Verse__scrollChild__${verseIndex}`,
 
                 // title, even, odd, inSide.
-                verseClassName && `Verse__${verseClassName}`,
+                verseClassName && `verse__${verseClassName}`,
 
                 // onSlider, beforeSlider, or afterSlider.
-                sliderStatusClassName && `Verse__${sliderStatusClassName}`,
+                sliderStatusClassName && `verse__${sliderStatusClassName}`,
 
                 inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
-                { 'Verse__selected': isSelected,
+                { 'verse__selected': isSelected,
                   'Verse__interactable': isInteractable,
-                  'Verse__interactivated': isInteractivated }
+
+                  // Shared styling with SliderVerse.
+                  'verse__interactable': isInteractable,
+
+                  'verse__interactivated': isInteractivated }
             )}
             onClick={handleInteractivatableClick}
             onTouchStart={handleInteractivatableClick}

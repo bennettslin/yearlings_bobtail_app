@@ -132,7 +132,7 @@ AnnotationCardView = ({
                 isTextCard && 'AnnotationCard__isText',
                 isPortalCard && 'AnnotationCard__portal',
                 'fontSize__verse',
-                'textShadow__background'
+                // 'textShadow__background'
             )}>
                 {!isPortalCard && (
                     <DotSequence

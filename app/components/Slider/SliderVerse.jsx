@@ -1,58 +1,125 @@
 // Static field that shows the song scenes in the slider. Probably admin only.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import cx from 'classnames'
 
-const sliderVersePropTypes = {
-    totalTime: PropTypes.number.isRequired,
-    verseIndex: PropTypes.number.isRequired,
-    verseTimeObject: PropTypes.object.isRequired
-},
+import { getSliderStatusClassName } from '../../helpers/formatHelper'
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
-SliderVerse = ({
+const mapStateToProps = ({
+    isSliderTouched,
+    renderReadySongIndex
+}) => ({
+    isSliderTouched,
+    renderReadySongIndex
+})
 
-    totalTime,
-    verseIndex,
-    verseTimeObject
+class SliderVerse extends Component {
 
-}) => {
+    static propTypes = {
 
-    const { time: verseTime,
-        stanzaType } = verseTimeObject
+        // From VerseController.
+        isSelected: PropTypes.bool.isRequired,
+        isAfterSelected: PropTypes.bool.isRequired,
+        isSliderSelected: PropTypes.bool.isRequired,
+        isAfterSliderSelected: PropTypes.bool.isRequired,
+        isInteractivated: PropTypes.bool.isRequired,
 
-    // Don't show title verse.
-    if (verseTime < 0) {
-        return null
+        totalTime: PropTypes.number.isRequired,
+        verseIndex: PropTypes.number.isRequired,
+        verseTimeObject: PropTypes.object.isRequired
     }
 
-    const verseWidth =
-            (totalTime - verseTime) / totalTime * 100,
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'isSliderTouched',
 
-        verseStyle = {
-            width: `${verseWidth}%`
-        },
+                    // TODO: Possible to update without selected song index?
+                    'renderReadySongIndex',
 
-        isOdd = verseIndex % 2
+                    'isSelected',
+                    'isAfterSelected',
+                    'isSliderSelected',
+                    'isAfterSliderSelected',
+                    'isInteractivated',
+                    'totalTime',
+                    'verseIndex',
+                    'verseTimeObject'
+                ]
+            })
 
-    return (
-        <div
-            key={verseIndex}
-            className={cx(
-                'SliderVerseBar',
-                'Slider__dynamicBar',
+        return componentShouldUpdate
+    }
 
-                isOdd ?
-                    'SliderVerseBar__odd' :
-                    'SliderVerseBar__even',
+    render() {
 
-                `bgColour__stanza__${stanzaType}`
-            )}
-            style={verseStyle}
-        />
-    )
+        const { isSliderTouched,
+                isSelected,
+                isSliderSelected,
+                isAfterSliderSelected,
+                isInteractivated,
+                totalTime,
+                verseIndex,
+                verseTimeObject } = this.props,
+
+            { time: verseTime,
+              stanzaType } = verseTimeObject
+
+        // Don't show title verse.
+        if (verseTime < 0) {
+            return null
+        }
+
+        const verseWidth =
+                (totalTime - verseTime) / totalTime * 100,
+
+            verseStyle = {
+                width: `${verseWidth}%`
+            },
+
+            isOdd = verseIndex % 2,
+
+            sliderStatusClassName =
+                getSliderStatusClassName({
+                    isSliderTouched,
+                    isSliderSelected,
+                    isAfterSliderSelected
+                })
+
+        return (
+            <div
+                key={verseIndex}
+                className={cx(
+                    'SliderVerseBar',
+                    'Slider__dynamicBar',
+
+                    isOdd ?
+                        'verse__odd' :
+                        'verse__even',
+
+                    // Unlike Verse, SliderVerse is always interactable.
+                    'verse__interactable',
+
+                    { 'verse__selected': isSelected,
+                      'verse__interactivated': isInteractivated },
+
+                    // onSlider, beforeSlider, or afterSlider.
+                    sliderStatusClassName &&
+                        `verse__${sliderStatusClassName}`,
+
+                    // Bogus class name for now.
+                    `SliderVerseBar__stanza__${stanzaType}`
+                )}
+                style={verseStyle}
+            />
+        )
+    }
 }
 
-SliderVerse.propTypes = sliderVersePropTypes
-
-export default SliderVerse
+export default connect(mapStateToProps)(SliderVerse)

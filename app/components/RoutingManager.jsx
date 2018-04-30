@@ -31,7 +31,11 @@ class RoutingManager extends Component {
         if (!isNaN(routingSongIndex)) {
 
             const songVerseTimes = getSongVerseTimes(routingSongIndex),
-                routingTimePlayed = songVerseTimes[routingVerseIndex].time
+
+                // TODO: This safety check is unfortunate.
+                routingTimePlayed =
+                    songVerseTimes && songVerseTimes[0] ?
+                        songVerseTimes[routingVerseIndex] : 0
 
             selectedSongIndex = routingSongIndex
             selectedVerseIndex = routingVerseIndex

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-// import SliderVerse from './SliderVerse'
 import VerseController from '../Verse/VerseController'
 
 import { getSongVerseTimes,
