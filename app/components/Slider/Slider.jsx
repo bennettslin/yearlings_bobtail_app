@@ -7,7 +7,7 @@ import cx from 'classnames'
 import SliderScenes from './SliderScenes'
 import SliderStanzas from './SliderStanzas'
 import SliderVerses from './SliderVerses'
-import SliderTimes from './SliderTimes'
+import SliderTimes from './Times/SliderTimes'
 
 import SliderAccess from './SliderAccess'
 

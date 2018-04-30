@@ -5,10 +5,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import SliderTime from './SliderTime'
 import SliderTimesMask from './SliderTimesMask'
 
-import { getSongTotalTime } from '../../helpers/dataHelper'
-import { getFormattedTime } from '../../helpers/formatHelper'
+import { getSongTotalTime } from '../../../helpers/dataHelper'
+import { getFormattedTime } from '../../../helpers/formatHelper'
 
 const mapStateToProps = ({
     selectedSongIndex,
@@ -29,25 +30,6 @@ const sliderTimeBarsPropTypes = {
     isSliderTouched: PropTypes.bool.isRequired,
     sliderRatio: PropTypes.number.isRequired
 },
-
-SliderTime = ({
-
-    isSpent,
-    isAboveCursor,
-    time
-
-}) => (
-    <div className={cx(
-        'SliderTime',
-        'textShadow__text',
-        isSpent ?
-            'SliderTime__spent' : 'SliderTime__remain',
-        isAboveCursor ?
-            'SliderTime__above' : 'SliderTime__below'
-    )}>
-        {time}
-    </div>
-),
 
 SliderTimes = ({
 
