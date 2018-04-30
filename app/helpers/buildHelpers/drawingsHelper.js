@@ -229,7 +229,7 @@ export const finalRegisterScenes = (songObject) => {
         // ... or else scene is identified by a verse index.
         } else {
             scenes[index].firstVerseIndex = rawIndex
-            scenes[index].time = verseTimes[rawIndex].time
+            scenes[index].time = verseTimes[rawIndex]
         }
     })
 

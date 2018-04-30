@@ -208,8 +208,8 @@ export const recurseToFindAnchors = ({
         // All recursed lyrics will know they're nested in verse with time.
 
         // Add verse time.
-        const { stanzaTimes } = songObject,
-            verseTimeObject = { time: lyricEntity.time }
+        // const { stanzaTimes } = songObject
+        //     verseTimeObject = { time: lyricEntity.time }
 
         inVerseWithTimeIndex = songObject.tempVerseIndexCounter
 
@@ -220,15 +220,16 @@ export const recurseToFindAnchors = ({
         lyricEntity.lastAnnotationIndex = songObject.annotations.length
 
         // Add stanza type.
-        while (
-            stanzaTimesIndex < stanzaTimes.length - 1 &&
-            lyricEntity.time >= stanzaTimes[stanzaTimesIndex + 1].time
-        ) {
-            stanzaTimesIndex++
-        }
-        verseTimeObject.stanzaType = stanzaTimes[stanzaTimesIndex].type
+        // while (
+        //     stanzaTimesIndex < stanzaTimes.length - 1 &&
+        //     lyricEntity.time >= stanzaTimes[stanzaTimesIndex + 1].time
+        // ) {
+        //     stanzaTimesIndex++
+        // }
+        // verseTimeObject.stanzaType = stanzaTimes[stanzaTimesIndex].type
+        // songObject.verseTimes.push(verseTimeObject)
 
-        songObject.verseTimes.push(verseTimeObject)
+        songObject.verseTimes.push(lyricEntity.time)
 
         songObject.tempVerseIndexCounter++
     }

@@ -3,15 +3,13 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 const sliderTimePropTypes = {
-    isSpent: PropTypes.bool.isRequired,
-    isAboveCursor: PropTypes.bool.isRequired,
-    time: PropTypes.number.isRequired
+    isSpent: PropTypes.bool,
+    time: PropTypes.string.isRequired
 },
 
 SliderTime = ({
 
     isSpent,
-    isAboveCursor,
     time
 
 }) => (
@@ -19,9 +17,7 @@ SliderTime = ({
         'SliderTime',
         'textShadow__text',
         isSpent ?
-            'SliderTime__spent' : 'SliderTime__remain',
-        isAboveCursor ?
-            'SliderTime__above' : 'SliderTime__below'
+            'SliderTime__spent' : 'SliderTime__remain'
     )}>
         {time}
     </div>

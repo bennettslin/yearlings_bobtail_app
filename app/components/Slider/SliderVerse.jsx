@@ -29,7 +29,7 @@ class SliderVerse extends Component {
 
         totalTime: PropTypes.number.isRequired,
         verseIndex: PropTypes.number.isRequired,
-        verseTimeObject: PropTypes.object.isRequired
+        verseTime: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -50,7 +50,7 @@ class SliderVerse extends Component {
                     'isInteractivated',
                     'totalTime',
                     'verseIndex',
-                    'verseTimeObject'
+                    'verseTime'
                 ]
             })
 
@@ -66,10 +66,7 @@ class SliderVerse extends Component {
                 isInteractivated,
                 totalTime,
                 verseIndex,
-                verseTimeObject } = this.props,
-
-            { time: verseTime,
-              stanzaType } = verseTimeObject
+                verseTime } = this.props
 
         // Don't show title verse.
         if (verseTime < 0) {
@@ -111,10 +108,10 @@ class SliderVerse extends Component {
 
                     // onSlider, beforeSlider, or afterSlider.
                     sliderStatusClassName &&
-                        `verse__${sliderStatusClassName}`,
+                        `verse__${sliderStatusClassName}`
 
                     // Bogus class name for now.
-                    `SliderVerseBar__stanza__${stanzaType}`
+                    // `SliderVerseBar__stanza__${stanzaType}`
                 )}
                 style={verseStyle}
             />

@@ -34,12 +34,12 @@ SliderVerses = ({
         <div className={cx(
             'SliderVerses'
         )}>
-            {verseTimes.map((verseTimeObject, verseIndex) => (
+            {verseTimes.map((verseTime, verseIndex) => (
                 <VerseController
                     key={verseIndex}
                     totalTime={totalTime}
                     verseIndex={verseIndex}
-                    verseTimeObject={verseTimeObject}
+                    verseTime={verseTime}
                 />
             ))}
         </div>
