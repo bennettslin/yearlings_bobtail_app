@@ -2,7 +2,15 @@
 @js__margin__menuChild: 10px;
 @js__margin__menuChild__narrow: 3px;
 @js__height__menu: 72px;
+
+/**
+ * This is actually no longer needed by JavaScript, now that scores tips in
+ * main breakpoint is dependent on maxWidth, not minWidth, of title toggle.
+ */
 @js__minWidth__childTitle: 72px;
+
+// Now needed by JavaScript.
+@js__maxWidth__childTitle: 200px;
 
 // This works out to 50px;
 @js__height__menuTopRow__phone:
@@ -101,7 +109,7 @@
     position: relative;
 
     min-width: @js__minWidth__childTitle;
-    max-width: 200px; // Arbitrary.
+    max-width: @js__maxWidth__childTitle; // Arbitrary.
 
     .RM__titleInAudio
     & {

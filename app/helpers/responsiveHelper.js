@@ -94,12 +94,6 @@ const _getShowShrunkNavIconForDeviceObject = (windowWidth, deviceObject) => {
         (doubleColumnStaticBreakpoint && windowWidth < doubleColumnStaticBreakpoint))
 }
 
-const _getIsScoresTipsInMainForDeviceObject = (windowWidth, deviceObject) => {
-    const { isScoresTipsInMainBreakpoint } = deviceObject
-    return windowWidth < isScoresTipsInMainBreakpoint
-}
-
-
 export const getShowShrunkNavIcon = ({ deviceIndex, windowWidth }) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex],
         isPhoneOrMini = getIsPhone(deviceIndex) || _getIsMini(deviceIndex)
@@ -189,6 +183,11 @@ export const getIsOverlayingAnnotation = ({
 }) => {
     return !getIsDesktop(deviceIndex) &&
         (isHeightlessLyricColumn || isLyricExpanded || getIsPhone(deviceIndex))
+}
+
+const _getIsScoresTipsInMainForDeviceObject = (windowWidth, deviceObject) => {
+    const { isScoresTipsInMainBreakpoint } = deviceObject
+    return windowWidth < isScoresTipsInMainBreakpoint
 }
 
 export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {

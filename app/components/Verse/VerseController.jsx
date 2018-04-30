@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import Verse from '../Verse/Verse'
-import SliderVerse from '../Slider/SliderVerse'
+import SliderVerse from '../Slider/Verses/SliderVerse'
 
 const mapStateToProps = ({
     selectedVerseIndex,
@@ -43,7 +43,8 @@ VerseController = ({
 
 ...other }) => {
 
-    const { verseIndex, verseObject } = other,
+    const { verseIndex,
+            verseObject } = other,
 
         // Lyric verse will have verse object, slider verse won't.
         controllerVerseIndex =
@@ -55,6 +56,7 @@ VerseController = ({
         isAfterSliderSelected = controllerVerseIndex > sliderVerseIndex,
         isInteractivated = controllerVerseIndex === interactivatedVerseIndex,
 
+        // Verse needs verseObject, SliderVerse needs verseIndex.
         VerseComponent = verseObject ? Verse : SliderVerse
 
     return (

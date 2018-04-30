@@ -10,16 +10,17 @@
 
 # New notes
 
-* Have VerseController pass necessary flags to child, so that child will then render class names.
-
-* Can VerseController just take care of class names itself?
-
-* Have surplus verses, in the same way that there are currently surplus stanzas.
-
 * Calculate to accommodate outer borders for SliderStanzas.
-
-* Get rid of extra stuff added to verse times. Should only need to have a time value.
 
 * Refactor directories.
 
 * Reconsider ways to allow audio slider to be longer.
+
+* Allow slider verse to highlight upon hover?
+    * Interactivated verse needs to change z-index based on access on.
+    * Times needs to change z-index based on slider touch.
+    * Touch bar needs to be changed somehow.
+
+* Have slider also render only after renderReady.
+
+* Allow Verse and sliderVerse to not care about sliderTouched.

@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getSliderStatusClassName } from '../../helpers/formatHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getSliderStatusClassName } from '../../../helpers/formatHelper'
+import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isSliderTouched,
