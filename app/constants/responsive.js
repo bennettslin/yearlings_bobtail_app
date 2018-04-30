@@ -47,15 +47,14 @@ SINGLE_COLUMN_STATIC_BREAKPOINT =
  ***************/
 
 LS_HEIGHT_MENU = 72,
-LS_MARGIN_MENU_CHILD = 10,
 LS_MARGIN_MENU_CHILD_NARROW = 3,
 
 LS_HEIGHT_MENU_TOP_ROW_PHONE =
     LS_LENGTH_ICON +
     LS_MARGIN_MENU_CHILD_NARROW * 2,
 
-// LS_MINWIDTH_CHILD_TITLE = 72,
 LS_MAXWIDTH_CHILD_TITLE = 200,
+LS_MAXWIDTH_CHILD_AUDIO = 640,
 
 LS_HEIGHT_AUDIO = 64,
 LS_HEIGHT_AUDIO_BANNER_BOTTOM_ROW =
@@ -99,10 +98,24 @@ SCORES_TIPS_CONSTANT =
     LS_MARGIN_THIN * 2
     + LS_MARGIN_SCORES_TIPS_BUTTON,
 
-SCORES_TIPS_IN_MAIN_CONSTANT =
+// FIXME: This now applies only for desktop.
+WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT =
+
+    // Menu.
     LS_MAXWIDTH_CHILD_TITLE
-    + MINWIDTH_AUDIO_MINUS_PLAYER_TOTAL
-    + SCORES_TIPS_CONSTANT,
+    + LS_MAXWIDTH_CHILD_AUDIO
+    + LS_MARGIN_THICK * 2
+
+    // Scores tips.
+    + LS_LENGTH_ICON_LARGE * 2
+    + LS_MARGIN_THIN * 2
+    + LS_MARGIN_THICK
+
+    /**
+     * I don't understand why this is necessary, but without it, there is an
+     * additional right margin before the breakpoint that is unnecessary.
+     */
+    - LS_MARGIN_THIN,
 
 TITLE_IN_AUDIO_BREAKPOINT =
     MINWIDTH_AUDIO_MINUS_PLAYER_TOTAL
@@ -142,7 +155,8 @@ MINI_OBJECT = {
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + LS_LENGTH_ICON_LARGE_MINI,
     isScoresTipsInMainBreakpoint:
-        SCORES_TIPS_IN_MAIN_CONSTANT
+        // FIXME: This needs to be based on mobile widths, should be in tablet object rather than mini object now.
+        WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT
         + LS_MARGIN_MENU_CHILD_NARROW * 2
         + LS_LENGTH_ICON_LARGE_MINI * 3
 },
@@ -167,8 +181,13 @@ LAPTOP_OBJECT = {
         + LS_MARGIN_NAV_LAST_TITLE
         + LS_WIDTH_UNCANNY_VALLEY
         + LS_LENGTH_ICON_LARGE
-    // NOTE: Laptop always has scores tips section in main column.
-    // isScoresTipsInMainBreakpoint: SCORES_TIPS_IN_MAIN_CONSTANT + 2 * LS_MARGIN_MENU_CHILD_NARROW + LS_WIDTH_UNCANNY_VALLEY + 3 * LS_LENGTH_ICON_LARGE
+    /**
+     * NOTE: Laptop always has scores tips section in main column, so this
+     * breakpoint is unnecessary.
+     */
+    // isScoresTipsInMainBreakpoint:
+    // WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT
+    // + LS_WIDTH_UNCANNY_VALLEY
 },
 MONITOR_OBJECT = {
     className: MONITOR_CLASS,
@@ -188,10 +207,8 @@ MONITOR_OBJECT = {
         + LS_WIDTH_GOLDEN_CORD
         + LS_LENGTH_ICON_LARGE,
     isScoresTipsInMainBreakpoint:
-        SCORES_TIPS_IN_MAIN_CONSTANT
-        + LS_MARGIN_MENU_CHILD * 2
+        WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT
         + LS_WIDTH_GOLDEN_CORD
-        + LS_LENGTH_ICON_LARGE * 3
 }
 
 module.exports = {

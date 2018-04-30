@@ -4,13 +4,13 @@
 @js__height__menu: 72px;
 
 /**
- * This is actually no longer needed by JavaScript, now that scores tips in
- * main breakpoint is dependent on maxWidth, not minWidth, of title toggle.
+ * Needed by JavaScript, now that scores tips in main breakpoint is dependent
+ * on maxWidth, not minWidth, of these menu children.
  */
-@js__minWidth__childTitle: 72px;
+@js__maxWidth__childAudio: 640px; // Arbitrary.
+@js__maxWidth__childTitle: 200px; // Arbitrary.
 
-// Now needed by JavaScript.
-@js__maxWidth__childTitle: 200px;
+@minWidth__childTitle: 72px;
 
 // This works out to 50px;
 @js__height__menuTopRow__phone:
@@ -35,8 +35,6 @@
 @height__bottomRow:
     @js__height__audioBanner__bottomRow +
     @js__height__audioSlider__bottomRow;
-
-@maxWidth__childAudio: 640px; // Arbitrary.
 
 .Menu {
     position: absolute;
@@ -108,8 +106,9 @@
 .MenuRowChild__title {
     position: relative;
 
-    min-width: @js__minWidth__childTitle;
-    max-width: @js__maxWidth__childTitle; // Arbitrary.
+    // Until scoresTips is in main, keep title toggle at max width.
+    min-width: @js__maxWidth__childTitle;
+    max-width: @js__maxWidth__childTitle;
 
     .RM__titleInAudio
     & {
@@ -119,43 +118,21 @@
          */
         display: none;
     }
+
+    .RM__scoresTipsMain
+    & {
+        min-width: @minWidth__childTitle;
+    }
 }
 
-// .MenuRowChild__title__child {
-
-//     .RM__phone
-//     & {
-//         transition: left @animationDuration__default;
-
-//         &:first-child {
-//             left: 0;
-//         }
-
-//         &:last-child {
-//             left: 100%;
-//         }
-//     }
-
-//     .RM__phone.RM__overlayShown
-//     &,
-//     .RM__phone.RM__song.RM__lyricExpanded
-//     & {
-
-//         &:first-child {
-//             left: -100%;
-//         }
-
-//         &:last-child {
-//             left: 0;
-//         }
-//     }
-// }
-
 .MenuRowChild__audio {
-    flex-grow: 2;
+    // Audio should shrink at a slower rate than title.
+    flex-grow: 10;
 
     margin: 0 @js__margin__menuChild;
-    max-width: @maxWidth__childAudio;
+
+    min-width: @js__maxWidth__childAudio;
+    max-width: @js__maxWidth__childAudio;
 
     transition: margin @animationDuration__default;
 
@@ -172,6 +149,12 @@
     & {
         // If scores tips is hidden, remove audio subfield's right margin.
         margin-right: 0;
+
+        min-width:
+            @js__minWidth__audioBanner
+            + @minWidth__audioButtons__minusPlayer
+            + @js__length__iconLarge
+            + @js__padding__audio * 3;
     }
 
     .RM__titleInAudio
@@ -180,29 +163,12 @@
         margin-left: 0;
     }
 
-    .RM__overlayShown
-    & {
-        max-width: 100%;
-        margin-right: 0;
-    }
-
-    .RM__overlayShown:not(.RM__phone)
-    & {
-        margin-left: 0;
-    }
-
     .RM__mobile
     & {
         justify-content: flex-end;
     }
 
-    min-width:
-        @js__minWidth__audioBanner
-        + @minWidth__audioButtons__minusPlayer
-        + @js__length__iconLarge
-        + @js__padding__audio * 3;
-
-    box-sizing: border-box;
+    // box-sizing: border-box;
 
     .RM__tablet
     & {
@@ -228,6 +194,17 @@
         @minWidth__audioButtons__minusPlayer
         + @js__length__icon
         + @js__padding__audio * 3;
+    }
+
+    .RM__overlayShown
+    & {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .RM__overlayShown:not(.RM__phone)
+    & {
+        margin-left: 0;
     }
 }
 

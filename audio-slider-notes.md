@@ -15,6 +15,7 @@
 * Refactor directories.
 
 * Reconsider ways to allow audio slider to be longer.
+    * Keep title at max width until scores tips is in main.
 
 * Allow slider verse to highlight upon hover?
     * Interactivated verse needs to change z-index based on access on.
