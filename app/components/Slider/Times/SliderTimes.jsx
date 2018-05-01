@@ -53,6 +53,7 @@ SliderTimes = ({
 
     return (
         <div className={cx(
+            'SliderTimes',
             'SliderTimes__belowCursor',
             'absoluteFullContainer'
         )}>

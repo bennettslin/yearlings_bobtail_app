@@ -72,8 +72,8 @@ SliderView = ({
         onMouseDown={handleTouchDown}
         onTouchStart={handleTouchDown}
     >
-        <SliderTimes/>
         <SliderStanzas />
+        <SliderTimes/>
         <SliderVerses />
         <SliderScenes />
         <SliderAccess />

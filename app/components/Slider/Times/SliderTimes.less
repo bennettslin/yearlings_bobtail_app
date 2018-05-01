@@ -1,5 +1,13 @@
 @import "./SliderTime.less";
 
+.SliderTimes {
+    .RM__sliderMoving
+    & {
+        // When slider is moving, it's above stanzas.
+        z-index: @zIndex__touchOverlay;
+    }
+}
+
 .SliderTimes__belowCursor {
     // TODO: Rework these colours, obviously.
     color: #444;

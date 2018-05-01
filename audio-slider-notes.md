@@ -33,7 +33,7 @@
 
 * Verse bar handler is broken.
 
-* Times mask doesn't always work?
+* Times mask doesn't always work? (/) Still confirm.
 
 * Have slider also render only after renderReady.
 
