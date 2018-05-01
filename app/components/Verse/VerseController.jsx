@@ -50,10 +50,11 @@ VerseController = ({
         controllerVerseIndex =
             verseObject ? verseObject.verseIndex : verseIndex,
 
-        isSelected = controllerVerseIndex === selectedVerseIndex,
-        isAfterSelected = controllerVerseIndex > selectedVerseIndex,
-        isSliderSelected = controllerVerseIndex === sliderVerseIndex,
-        isAfterSliderSelected = controllerVerseIndex > sliderVerseIndex,
+        useSliderIndex = sliderVerseIndex > -1,
+        cursorIndex = useSliderIndex ? sliderVerseIndex : selectedVerseIndex,
+
+        isOnCursor = controllerVerseIndex === cursorIndex,
+        isAfterCursor = controllerVerseIndex > cursorIndex,
         isInteractivated = controllerVerseIndex === interactivatedVerseIndex,
 
         // Verse needs verseObject, SliderVerse needs verseIndex.
@@ -61,10 +62,8 @@ VerseController = ({
 
     return (
         <VerseComponent {...other}
-            isSelected={isSelected}
-            isAfterSelected={isAfterSelected}
-            isSliderSelected={isSliderSelected}
-            isAfterSliderSelected={isAfterSliderSelected}
+            isOnCursor={isOnCursor}
+            isAfterCursor={isAfterCursor}
             isInteractivated={isInteractivated}
         />
     )

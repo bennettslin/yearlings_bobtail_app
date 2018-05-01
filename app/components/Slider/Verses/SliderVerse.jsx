@@ -5,26 +5,24 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getSliderStatusClassName } from '../../../helpers/formatHelper'
+import { getCursorStatusClassName } from '../../../helpers/formatHelper'
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    isSliderTouched,
     renderReadySongIndex
 }) => ({
-    isSliderTouched,
     renderReadySongIndex
 })
 
 class SliderVerse extends Component {
 
     static propTypes = {
+        // From Redux.
+        renderReadySongIndex: PropTypes.number.isRequired,
 
         // From VerseController.
-        isSelected: PropTypes.bool.isRequired,
-        isAfterSelected: PropTypes.bool.isRequired,
-        isSliderSelected: PropTypes.bool.isRequired,
-        isAfterSliderSelected: PropTypes.bool.isRequired,
+        isOnCursor: PropTypes.bool.isRequired,
+        isAfterCursor: PropTypes.bool.isRequired,
         isInteractivated: PropTypes.bool.isRequired,
 
         totalTime: PropTypes.number.isRequired,
@@ -38,16 +36,13 @@ class SliderVerse extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'isSliderTouched',
-
                     // TODO: Possible to update without selected song index?
                     'renderReadySongIndex',
 
-                    'isSelected',
-                    'isAfterSelected',
-                    'isSliderSelected',
-                    'isAfterSliderSelected',
+                    'isOnCursor',
+                    'isAfterCursor',
                     'isInteractivated',
+
                     'totalTime',
                     'verseIndex',
                     'verseTime'
@@ -59,10 +54,8 @@ class SliderVerse extends Component {
 
     render() {
 
-        const { isSliderTouched,
-                isSelected,
-                isSliderSelected,
-                isAfterSliderSelected,
+        const { isOnCursor,
+                isAfterCursor,
                 isInteractivated,
                 totalTime,
                 verseIndex,
@@ -82,11 +75,10 @@ class SliderVerse extends Component {
 
             isOdd = verseIndex % 2,
 
-            sliderStatusClassName =
-                getSliderStatusClassName({
-                    isSliderTouched,
-                    isSliderSelected,
-                    isAfterSliderSelected
+            cursorStatusClassName =
+                getCursorStatusClassName({
+                    isOnCursor,
+                    isAfterCursor
                 })
 
         return (
@@ -100,18 +92,16 @@ class SliderVerse extends Component {
                         'verse__odd' :
                         'verse__even',
 
-                    // Unlike Verse, SliderVerse is always interactable.
+                    /**
+                     * Unlike Verse, SliderVerse is always interactable, so we
+                     * will manually add this class.
+                     */
                     'verse__interactable',
 
-                    { 'verse__selected': isSelected,
-                      'verse__interactivated': isInteractivated },
+                    // onCursor, beforeCursor, or afterCursor.
+                    `verse__${cursorStatusClassName}`,
 
-                    // onSlider, beforeSlider, or afterSlider.
-                    sliderStatusClassName &&
-                        `verse__${sliderStatusClassName}`
-
-                    // Bogus class name for now.
-                    // `SliderVerseBar__stanza__${stanzaType}`
+                    { 'verse__interactivated': isInteractivated }
                 )}
                 style={verseStyle}
             />

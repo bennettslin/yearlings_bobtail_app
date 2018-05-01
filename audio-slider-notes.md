@@ -17,9 +17,10 @@
 * Reconsider ways to allow audio slider to be longer. (/)
     * Allow title to go to min width before shrinking audio. (/)
 
-* Calculate to accommodate outer borders for SliderStanzas.
+* Allow Verse and sliderVerse to not care about sliderTouched. (/)
+    * Just distinguish between beforeCursor, onCursor, and afterCursor. (/)
 
-* Allow Verse and sliderVerse to not care about sliderTouched.
+* Calculate to accommodate outer borders for SliderStanzas.
 
 * Allow slider verse to highlight upon hover?
     * Interactivated verse needs to change z-index based on access on.

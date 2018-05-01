@@ -5,6 +5,18 @@
 @import "./VerseLine.less";
 @import "./VerseLines.less";
 
+.Verse {
+
+    &.verse__interactable {
+        position: relative;
+        padding-left: @paddingX__verse * 2;
+    }
+
+    &.verse__interactivated {
+        box-shadow: @boxShadow__activeVerse;
+    }
+}
+
 .Verse__inLyric {
     padding: 0 @paddingX__verse;
     transition:
@@ -15,31 +27,6 @@
     & {
         transition: none;
     }
-}
-
-.Verse__interactable {
-    position: relative;
-    padding-left: @paddingX__verse * 2;
-}
-
-.verse__interactable {
-
-    /**
-     * Interactable verse has highlighted styling only when interactivated, or
-     * when hovered, not selected, and with no other verse interactivated.
-     */
-    .RM__sliderNotMoving.RM__verseInactive
-    &:not(.verse__selected):hover,
-    .RM__sliderNotMoving.RM__verseActive
-    &.verse__interactivated {
-
-        background-color: @bgColour__audioHighlight;
-        .mixin__textShadow(@bgColour__audioHighlight);
-    }
-}
-
-.Verse__interactivated {
-    box-shadow: @boxShadow__activeVerse;
 }
 
 .Verse__inLyric {

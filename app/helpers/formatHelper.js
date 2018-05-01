@@ -223,23 +223,18 @@ export const getVerseUnitClassName = ({
     return ''
 }
 
-export const getSliderStatusClassName = ({
-    isSliderTouched,
-    isSliderSelected,
-    isAfterSliderSelected
+export const getCursorStatusClassName = ({
+    isOnCursor,
+    isAfterCursor
 }) => {
 
-    if (isSliderTouched) {
-        if (isSliderSelected) {
-            return 'onSlider'
+    if (isOnCursor) {
+        return 'onCursor'
 
-        } else if (isAfterSliderSelected) {
-            return 'afterSlider'
+    } else if (isAfterCursor) {
+        return 'afterCursor'
 
-        } else {
-            return 'beforeSlider'
-        }
+    } else {
+        return 'beforeCursor'
     }
-
-    return ''
 }

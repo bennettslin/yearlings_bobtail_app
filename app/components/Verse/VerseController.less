@@ -2,7 +2,7 @@
  * These styles are shared by SliderVerse and Verse.
  */
 
-.verse__selected {
+.verse__onCursor {
 
     .RM__sliderNotMoving.RM__isPlaying
     & {
@@ -14,6 +14,13 @@
     & {
         background-color: @bgColour__audioPause;
         .mixin__textShadow(@bgColour__audioPause);
+    }
+
+    .RM__sliderMoving
+    & {
+        // Slider selected verse.
+        background-color: @bgColour__audioNeutral;
+        .mixin__textShadow(@bgColour__audioNeutral);
     }
 }
 
@@ -30,14 +37,14 @@
 
     .RM__sliderMoving
     & {
-        &.verse__beforeSlider {
+        &.verse__beforeCursor {
             background-color: @bgColour__beforeSlider__odd;
             .mixin__textShadow(@bgColour__beforeSlider__odd);
 
             color: @colour__beforeSlider__odd;
         }
 
-        &.verse__afterSlider {
+        &.verse__afterCursor {
             background-color: @bgColour__afterSlider__odd;
             .mixin__textShadow(@bgColour__afterSlider__odd);
 
@@ -59,14 +66,14 @@
 
     .RM__sliderMoving
     & {
-        &.verse__beforeSlider {
+        &.verse__beforeCursor {
             background-color: @bgColour__beforeSlider__even;
             .mixin__textShadow(@bgColour__beforeSlider__even);
 
             color: @colour__beforeSlider__even;
         }
 
-        &.verse__afterSlider {
+        &.verse__afterCursor {
             background-color: @bgColour__afterSlider__even;
             .mixin__textShadow(@bgColour__afterSlider__even);
 
@@ -75,12 +82,18 @@
     }
 }
 
-.verse__onSlider {
+.verse__interactable {
 
-    .RM__sliderMoving
-    & {
-        // Slider selected verse.
-        background-color: @bgColour__audioNeutral;
-        .mixin__textShadow(@bgColour__audioNeutral);
+    /**
+     * Interactable verse has highlighted styling only when interactivated, or
+     * when hovered, not selected, and with no other verse interactivated.
+     */
+    .RM__sliderNotMoving.RM__verseInactive
+    &:not(.verse__onCursor):hover,
+    .RM__sliderNotMoving.RM__verseActive
+    &.verse__interactivated {
+
+        background-color: @bgColour__audioHighlight;
+        .mixin__textShadow(@bgColour__audioHighlight);
     }
 }
