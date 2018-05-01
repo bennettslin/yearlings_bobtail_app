@@ -67,6 +67,8 @@ SliderTimesMask = ({
             clipPath: `inset(0 ${rightOffset}% 0 ${leftOffset}%)`
         }
 
+    console.error(leftOffset, rightOffset)
+
     return (
         <div
             className={cx(

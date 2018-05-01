@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import omit from 'lodash.omit'
 
 import SliderScenes from './SliderScenes'
 import SliderStanzas from './SliderStanzas'
@@ -29,17 +30,15 @@ class Slider extends Component {
     }
 
     _handleTouchDown(e) {
-        this.props.handleSliderTouchBegin(e)
+        this.props.handleSliderTouchBegin(e, this.mySlider)
     }
 
     render() {
-        /* eslint-disable no-unused-vars */
-        const { handleSliderTouchBegin,
-            ...other } = this.props
-        /* eslint-enable no-unused-vars */
+        const other = omit(this.props, 'handleSliderTouchBegin')
 
         return (
             <SliderView {...other}
+                myRef={(node) => (this.mySlider = node)}
                 handleTouchDown={this._handleTouchDown}
             />
         )
@@ -53,12 +52,14 @@ class Slider extends Component {
 const sliderViewPropTypes = {
 
     // From parent.
+    myRef: PropTypes.func.isRequired,
     children: PropTypes.element,
     handleTouchDown: PropTypes.func.isRequired
 },
 
 SliderView = ({
 
+    myRef,
     children,
     handleTouchDown
 
@@ -67,6 +68,7 @@ SliderView = ({
         className={cx(
             'Slider'
         )}
+        ref={myRef}
         onMouseDown={handleTouchDown}
         onTouchStart={handleTouchDown}
     >

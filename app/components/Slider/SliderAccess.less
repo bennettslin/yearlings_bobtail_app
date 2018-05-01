@@ -2,6 +2,13 @@
 
 .AccessIcons__inSlider {
     bottom: @margin__audioBanner__accessIcons;
+
+    z-index: @zIndex__negative;
+
+    .RM__accessOn
+    & {
+        z-index: @zIndex__menuField;
+    }
 }
 
 .AccessIcons__sliderRewindForward {

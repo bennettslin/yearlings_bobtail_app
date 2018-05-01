@@ -35,14 +35,11 @@ export const getPrefixPrependedClassNames = (classNames, prefix) => {
     ))
 }
 
-// Not used.
-// export const hasParentWithTagName = (child, parentTagName = '') => {
-//     let node = child
-//     while (node !== null) {
-//         if (node.tagName && node.tagName.toLowerCase() === parentTagName) {
-//             return true
-//         }
-//         node = node.parentNode
-//     }
-//     return false
-// }
+export const getClientX = (e) => {
+    const { nativeEvent } = e,
+        { touches,
+          clientX } = nativeEvent
+
+    // If mouse, clientX is in native event. If touch, it's in first touch.
+    return touches ? touches[0].clientX : clientX
+}

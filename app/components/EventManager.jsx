@@ -7,7 +7,7 @@ import AccessManager from './AccessManager'
 
 import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from '../helpers/dotHelper'
-import { getIsValidScrollingTargetCallback } from '../helpers/domHelper'
+import { getClientX, getIsValidScrollingTargetCallback } from '../helpers/domHelper'
 import { getLyricTopAlign, getCarouselLeftAlign } from '../helpers/responsiveHelper'
 
 import { REFERENCE } from '../constants/dots'
@@ -612,18 +612,15 @@ class EventManager extends Component {
      * TOUCH *
      *********/
 
-    handleSliderTouchBegin(e) {
+    handleSliderTouchBegin(e, sliderElement) {
 
         // Can't be handled in logue.
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return
         }
 
-        const { target } = e,
-            clientX = this._getClientX(e),
-            clientRect = target.getBoundingClientRect()
-
-        console.error(e, target);
+        const clientX = getClientX(e),
+            clientRect = sliderElement.getBoundingClientRect()
 
         if (!isNaN(clientX)) {
             this.stopPropagation(e)
@@ -634,21 +631,12 @@ class EventManager extends Component {
     }
 
     handleBodyTouchMove(e) {
-        const clientX = this._getClientX(e)
+        const clientX = getClientX(e)
 
         if (!isNaN(clientX)) {
             this.stopPropagation(e)
             this.props.touchBodyMove(clientX)
         }
-    }
-
-    _getClientX(e) {
-        const { nativeEvent } = e,
-            { touches,
-              clientX } = nativeEvent
-
-        // If mouse, clientX is in native event. If touch, it's in first touch.
-        return touches ? touches[0].clientX : clientX
     }
 
     handleBodyTouchEnd(e) {

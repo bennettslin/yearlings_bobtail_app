@@ -122,12 +122,11 @@ class LyricColumn extends Component {
         const { handleScrollAfterLyricRerender,
         /* eslint-enable no-unused-vars */
 
-
                 ...other } = this.props
 
         return (
             <LyricColumnView {...other}
-                myRef={(node) => (this.myLyricColumn = node)}
+                // myRef={(node) => (this.myLyricColumn = node)}
                 overrideTransitions={this.state.overrideTransitions}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
@@ -148,7 +147,7 @@ const lyricColumnViewPropTypes = {
     sliderVerseIndex: PropTypes.number.isRequired,
 
     // From parent.
-    myRef: PropTypes.func.isRequired,
+    // myRef: PropTypes.func.isRequired,
     overrideTransitions: PropTypes.bool.isRequired,
     isTransitioningHeight: PropTypes.bool.isRequired,
     handleTransition: PropTypes.func.isRequired,
@@ -173,7 +172,7 @@ LyricColumnView = ({
     handleVerseBarWheel,
 
     // From controller.
-    myRef,
+    // myRef,
     overrideTransitions,
     isTransitioningHeight,
     handleTransition,
@@ -201,7 +200,7 @@ LyricColumnView = ({
                 isHeavyRenderReady ? 'renderReady' : 'renderUnready',
                 { 'overrideTransitions': overrideTransitions }
             )}
-            ref={myRef}
+            // ref={myRef}
             onTransitionEnd={handleTransition}
         >
             <Lyric {...other}

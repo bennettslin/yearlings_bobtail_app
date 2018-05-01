@@ -20,16 +20,18 @@
 * Allow Verse and sliderVerse to not care about sliderTouched. (/)
     * Just distinguish between beforeCursor, onCursor, and afterCursor. (/)
 
-* Calculate slider rect based on ref, not e.target.
 
 * Render slider verses in slider stanzas.
 
 * Calculate to accommodate outer borders for SliderStanzas.
 
 * Allow slider verse to highlight upon hover?
-    * Interactivated verse needs to change z-index based on access on.
-    * Times needs to change z-index based on slider touch.
-    * Touch bar needs to be changed somehow.
+    * Interactivated verse needs to change z-index based on access on. (/)
+    * Times needs to change z-index based on slider touch. (/)
+    * Touch bar needs to be changed somehow. (/)
+    * Calculate slider rect based on ref, not e.target. (/)
+
+* Verse bar handler is broken.
 
 * Times mask doesn't always work?
 
