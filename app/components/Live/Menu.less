@@ -4,13 +4,12 @@
 @js__height__menu: 72px;
 
 /**
- * Needed by JavaScript, now that scores tips in main breakpoint is dependent
- * on maxWidth, not minWidth, of these menu children.
+ * Needed by JavaScript to calculate scores tips in main breakpoints.
  */
 @js__maxWidth__childAudio: 640px; // Arbitrary.
-@js__maxWidth__childTitle: 200px; // Arbitrary.
+@js__minWidth__childTitle: 72px; // Arbitrary.
 
-@minWidth__childTitle: 72px;
+@maxWidth__childTitle: 200px; // Arbitrary.
 
 // This works out to 50px;
 @js__height__menuTopRow__phone:
@@ -86,6 +85,11 @@
     & {
         height: @js__height__menuTopRow__phone;
     }
+
+    .RM__scoresTipsMain
+    & {
+        justify-content: space-between;
+    }
 }
 
 .MenuTopRow,
@@ -96,7 +100,6 @@
 
 .MenuRowChild {
     height: 100%;
-    flex-grow: 1;
 
     transition:
         min-width @animationDuration__fast,
@@ -106,9 +109,10 @@
 .MenuRowChild__title {
     position: relative;
 
-    // Until scoresTips is in main, keep title toggle at max width.
-    min-width: @js__maxWidth__childTitle;
-    max-width: @js__maxWidth__childTitle;
+    flex-grow: 1;
+
+    min-width: @js__minWidth__childTitle;
+    max-width: @maxWidth__childTitle;
 
     .RM__titleInAudio
     & {
@@ -118,18 +122,11 @@
          */
         display: none;
     }
-
-    .RM__scoresTipsMain
-    & {
-        min-width: @minWidth__childTitle;
-    }
 }
 
 .MenuRowChild__audio {
     // Audio should shrink at a slower rate than title.
     flex-grow: 10;
-
-    margin: 0 @js__margin__menuChild;
 
     min-width: @js__maxWidth__childAudio;
     max-width: @js__maxWidth__childAudio;
@@ -137,6 +134,9 @@
     transition: margin @animationDuration__default;
 
     background-color: #8d8;
+
+    // Applies to monitor and tablet.
+    margin: 0 @js__margin__menuChild;
 
     .RM__laptop
     &,
@@ -170,7 +170,7 @@
 
     // box-sizing: border-box;
 
-    .RM__tablet
+    .RM__tablet.RM__scoresTipsMain
     & {
         min-width:
         @js__minWidth__audioBanner

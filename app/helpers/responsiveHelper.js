@@ -60,9 +60,9 @@ const _getIsTablet = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === TABLET_CLASS
 }
 
-const _getIsLaptop = (deviceIndex) => {
-    return DEVICE_OBJECTS[deviceIndex].className === LS_LAPTOP_CLASS
-}
+// const _getIsLaptop = (deviceIndex) => {
+//     return DEVICE_OBJECTS[deviceIndex].className === LS_LAPTOP_CLASS
+// }
 
 export const getIsMonitor = (deviceIndex) => {
     return DEVICE_OBJECTS[deviceIndex].className === MONITOR_CLASS
@@ -193,14 +193,10 @@ const _getIsScoresTipsInMainForDeviceObject = (windowWidth, deviceObject) => {
 export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
     const deviceObject = DEVICE_OBJECTS[deviceIndex]
 
-    if (getIsPhone(deviceIndex) || _getIsLaptop(deviceIndex)) {
-        return true
-
-    } else if (_getIsTablet(deviceIndex)) {
-        return false
-
-    } else {
+    if (getIsMonitor(deviceIndex) || _getIsTablet(deviceIndex)) {
         return _getIsScoresTipsInMainForDeviceObject(windowWidth, deviceObject)
+    } else {
+        return true
     }
 }
 

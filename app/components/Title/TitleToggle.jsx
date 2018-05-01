@@ -66,7 +66,8 @@ TitleToggle = ({
     return isAudioChild === isTitleInAudio && (
         <div className={cx(
             'TitleToggle',
-            { 'Audio__menuChild': isAudioChild }
+            { 'Audio__menuChild': isAudioChild,
+              'TitleToggle__inAudio': isAudioChild }
         )}>
             {isPhone && (
                 <AudioTimer

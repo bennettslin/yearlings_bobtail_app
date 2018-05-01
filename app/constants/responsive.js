@@ -53,7 +53,7 @@ LS_HEIGHT_MENU_TOP_ROW_PHONE =
     LS_LENGTH_ICON +
     LS_MARGIN_MENU_CHILD_NARROW * 2,
 
-LS_MAXWIDTH_CHILD_TITLE = 200,
+LS_MINWIDTH_CHILD_TITLE = 72,
 LS_MAXWIDTH_CHILD_AUDIO = 640,
 
 LS_HEIGHT_AUDIO = 64,
@@ -98,16 +98,37 @@ SCORES_TIPS_CONSTANT =
     LS_MARGIN_THIN * 2
     + LS_MARGIN_SCORES_TIPS_BUTTON,
 
-// FIXME: This now applies only for desktop.
+// TODO: Consider consolidating these two calculations.
+
+// Scores tips in main when 1604px or below.
 WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT =
 
     // Menu.
-    LS_MAXWIDTH_CHILD_TITLE
-    + LS_MAXWIDTH_CHILD_AUDIO
+    LS_MAXWIDTH_CHILD_AUDIO
+    + LS_MINWIDTH_CHILD_TITLE
     + LS_MARGIN_THICK * 2
 
     // Scores tips.
     + LS_LENGTH_ICON_LARGE * 2
+    + LS_MARGIN_THIN * 2
+    + LS_MARGIN_THICK
+
+    /**
+     * I don't understand why this is necessary, but without it, there is an
+     * additional right margin before the breakpoint that is unnecessary.
+     */
+    - LS_MARGIN_THIN,
+
+// Scores tips in main when 851px or below.
+WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET =
+
+    // Menu.
+    LS_MAXWIDTH_CHILD_AUDIO
+    + LS_MINWIDTH_CHILD_TITLE
+    + LS_MARGIN_THICK * 2
+
+    // Scores tips.
+    + LS_LENGTH_ICON_LARGE_TABLET * 2
     + LS_MARGIN_THIN * 2
     + LS_MARGIN_THICK
 
@@ -153,12 +174,15 @@ MINI_OBJECT = {
     maxWidth: 720,
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
-        + LS_LENGTH_ICON_LARGE_MINI,
-    isScoresTipsInMainBreakpoint:
-        // FIXME: This needs to be based on mobile widths, should be in tablet object rather than mini object now.
-        WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT
-        + LS_MARGIN_MENU_CHILD_NARROW * 2
-        + LS_LENGTH_ICON_LARGE_MINI * 3
+        + LS_LENGTH_ICON_LARGE_MINI
+    /**
+     * NOTE: Mini always has scores tips section in main column, so this
+     * breakpoint is unnecessary.
+     */
+    // isScoresTipsInMainBreakpoint:
+    //     WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT
+    //     + LS_MARGIN_MENU_CHILD_NARROW * 2
+    //     + LS_LENGTH_ICON_LARGE_MINI * 3
 },
 TABLET_OBJECT = {
     className: TABLET_CLASS,
@@ -171,7 +195,9 @@ TABLET_OBJECT = {
         + LS_LENGTH_ICON_LARGE_TABLET,
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
-        + LS_LENGTH_ICON_LARGE_TABLET
+        + LS_LENGTH_ICON_LARGE_TABLET,
+    isScoresTipsInMainBreakpoint:
+        WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET
 },
 LAPTOP_OBJECT = {
     className: LS_LAPTOP_CLASS,
