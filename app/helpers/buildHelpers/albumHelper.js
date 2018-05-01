@@ -83,7 +83,8 @@ const _initialPrepareAlbum = (albumObject) => {
 
 const _initialPrepareLyrics = (albumObject, songObject) => {
 
-    const { lyrics } = songObject
+    const { lyrics } = songObject,
+        verseTimesCounter = { counter: 0 }
 
     // Initialise song.
 
@@ -113,7 +114,10 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
              * register each verse with time.
              */
             recurseToFindAnchors({
-                registerVerseTimes: true,
+
+                // Pass this to register each verse time.
+                verseTimesCounter,
+
                 albumObject,
                 songObject,
                 verseObject,

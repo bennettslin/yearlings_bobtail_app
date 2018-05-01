@@ -189,14 +189,14 @@ export const finalRegisterStanzaTypes = (songObject) => {
 export const recurseToFindAnchors = ({
 
     inVerseWithTimeIndex = -1,
-    registerVerseTimes = false,
     albumObject,
     songObject,
     verseObject,
     lyricEntity = verseObject,
     textKey,
     callbackFunction,
-    stanzaTimesIndex = 0
+    stanzaTimesIndex = 0,
+    verseTimesCounter
 
 }) => {
 
@@ -204,13 +204,12 @@ export const recurseToFindAnchors = ({
      * Only register lyric objects associated with a song time. This is
      * typically the verse object itself, but sometimes it's a sub stanza.
      */
-    if (registerVerseTimes && !isNaN(lyricEntity.time)) {
-        // All recursed lyrics will know they're nested in verse with time.
+    if (verseTimesCounter && !isNaN(lyricEntity.time)) {
 
         // Add verse time.
-        // const { stanzaTimes } = songObject
-        //     verseTimeObject = { time: lyricEntity.time }
+        const { stanzaTimes } = songObject
 
+        // All recursed lyrics will know they're nested in verse with time.
         inVerseWithTimeIndex = songObject.tempVerseIndexCounter
 
         // Add index to verse object.
@@ -219,16 +218,29 @@ export const recurseToFindAnchors = ({
         // Add most recent annotation index.
         lyricEntity.lastAnnotationIndex = songObject.annotations.length
 
-        // Add stanza type.
-        // while (
-        //     stanzaTimesIndex < stanzaTimes.length - 1 &&
-        //     lyricEntity.time >= stanzaTimes[stanzaTimesIndex + 1].time
-        // ) {
-        //     stanzaTimesIndex++
-        // }
-        // verseTimeObject.stanzaType = stanzaTimes[stanzaTimesIndex].type
-        // songObject.verseTimes.push(verseTimeObject)
+        // Get stanza for this verse.
+        while (
+            stanzaTimesIndex < stanzaTimes.length - 1 &&
+            lyricEntity.time >= stanzaTimes[stanzaTimesIndex + 1].time
+        ) {
+            stanzaTimesIndex++
+        }
 
+        verseTimesCounter.counter++
+
+        // Add verse to stanza's array of verse times.
+        if (!stanzaTimes[stanzaTimesIndex].times) {
+            stanzaTimes[stanzaTimesIndex].times = []
+        }
+        stanzaTimes[stanzaTimesIndex].times.push(lyricEntity.time)
+
+        // Tell stanza that its first verse is odd or even.
+        if (!stanzaTimes[stanzaTimesIndex].firstVerseParity) {
+            stanzaTimes[stanzaTimesIndex].firstVerseParity =
+                verseTimesCounter.counter % 2 ? 'odd' : 'even'
+        }
+
+        // An array of verse times is needed
         songObject.verseTimes.push(lyricEntity.time)
 
         songObject.tempVerseIndexCounter++
@@ -240,14 +252,14 @@ export const recurseToFindAnchors = ({
         lyricEntity.forEach(childEntity => {
             recurseToFindAnchors({
                 inVerseWithTimeIndex,
-                registerVerseTimes,
                 albumObject,
                 songObject,
                 verseObject,
                 lyricEntity: childEntity,
                 textKey,
                 callbackFunction,
-                stanzaTimesIndex
+                stanzaTimesIndex,
+                verseTimesCounter
             })
         })
 
@@ -275,14 +287,14 @@ export const recurseToFindAnchors = ({
 
                     recurseToFindAnchors({
                         inVerseWithTimeIndex,
-                        registerVerseTimes,
                         albumObject,
                         songObject,
                         verseObject,
                         lyricEntity: lyricEntity[childKey],
                         textKey: (textKey || sideStanzaTextKey || childKey),
                         callbackFunction,
-                        stanzaTimesIndex
+                        stanzaTimesIndex,
+                        verseTimesCounter
                     })
                 }
             })
