@@ -11,9 +11,12 @@
 
     opacity: 0;
 
+    z-index: @zIndex__negative;
+
     .RM__sliderMoving
     & {
         opacity: 1;
+        z-index: @zIndex__touchOverlay;
     }
 }
 

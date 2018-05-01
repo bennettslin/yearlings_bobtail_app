@@ -39,7 +39,7 @@ class Slider extends Component {
         /* eslint-enable no-unused-vars */
 
         return (
-            <SliderSectionView {...other}
+            <SliderView {...other}
                 handleTouchDown={this._handleTouchDown}
             />
         )
@@ -57,7 +57,7 @@ const sliderViewPropTypes = {
     handleTouchDown: PropTypes.func.isRequired
 },
 
-SliderSectionView = ({
+SliderView = ({
 
     children,
     handleTouchDown
@@ -67,27 +67,19 @@ SliderSectionView = ({
         className={cx(
             'Slider'
         )}
+        onMouseDown={handleTouchDown}
+        onTouchStart={handleTouchDown}
     >
+        <SliderTimes/>
         <SliderStanzas />
         <SliderVerses />
         <SliderScenes />
-        <SliderTimes/>
         <SliderAccess />
 
         {children}
-
-        {/* Handle touch interactions. */}
-        <div
-            className={cx(
-                'SliderTouchBar',
-                'absoluteFullContainer'
-            )}
-            onMouseDown={handleTouchDown}
-            onTouchStart={handleTouchDown}
-        />
     </div>
 )
 
-SliderSectionView.propTypes = sliderViewPropTypes
+SliderView.propTypes = sliderViewPropTypes
 
 export default Slider

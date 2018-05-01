@@ -41,7 +41,10 @@ const SliderStanzas = ({
         })
 
     return (
-        <div className="SliderStanzas">
+        <div className={cx(
+            'SliderStanzas',
+            'absoluteFullContainer'
+        )}>
             {stanzaIndices.map((nothing, stanzaTimeIndex) => {
 
                 const stanzaDataObject = getSliderStanzaData(

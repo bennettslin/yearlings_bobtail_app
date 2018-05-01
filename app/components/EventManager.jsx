@@ -623,6 +623,8 @@ class EventManager extends Component {
             clientX = this._getClientX(e),
             clientRect = target.getBoundingClientRect()
 
+        console.error(e, target);
+
         if (!isNaN(clientX)) {
             this.stopPropagation(e)
             this.props.touchSliderBegin(clientRect, clientX)
