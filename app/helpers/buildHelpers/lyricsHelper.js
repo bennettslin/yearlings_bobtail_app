@@ -95,7 +95,7 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
 
     const { lyrics } = songObject,
         tempStanzaTypeCounters = {},
-        stanzaTimes = []
+        sliderStanzasArray = []
 
     lyrics.forEach(unitArray => {
 
@@ -114,8 +114,10 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
                  * This will let audio slider know the relative width of
                  * each unit, based on its time length.
                  */
-                stanzaTimes.push({
-                    time: unitFirstVerseTime,
+                sliderStanzasArray.push({
+                    times: [
+                        unitFirstVerseTime
+                    ],
                     type: stanzaType
                 })
 
@@ -130,11 +132,11 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
     })
 
     // Establish which song on the album has the most stanzas.
-    if (stanzaTimes.length > albumObject.maxStanzaTimesCount) {
-        albumObject.maxStanzaTimesCount = stanzaTimes.length
+    if (sliderStanzasArray.length > albumObject.maxStanzasCount) {
+        albumObject.maxStanzasCount = sliderStanzasArray.length
     }
 
-    songObject.stanzaTimes = stanzaTimes
+    songObject.sliderStanzasArray = sliderStanzasArray
     songObject.tempStanzaTypeCounters = tempStanzaTypeCounters
 }
 
@@ -195,7 +197,7 @@ export const recurseToFindAnchors = ({
     lyricEntity = verseObject,
     textKey,
     callbackFunction,
-    stanzaTimesIndex = 0,
+    stanzaIndex = 0,
     verseTimesCounter
 
 }) => {
@@ -207,7 +209,7 @@ export const recurseToFindAnchors = ({
     if (verseTimesCounter && !isNaN(lyricEntity.time)) {
 
         // Add verse time.
-        const { stanzaTimes } = songObject
+        const { sliderStanzasArray } = songObject
 
         // All recursed lyrics will know they're nested in verse with time.
         inVerseWithTimeIndex = songObject.tempVerseIndexCounter
@@ -220,23 +222,22 @@ export const recurseToFindAnchors = ({
 
         // Get stanza for this verse.
         while (
-            stanzaTimesIndex < stanzaTimes.length - 1 &&
-            lyricEntity.time >= stanzaTimes[stanzaTimesIndex + 1].time
+            stanzaIndex < sliderStanzasArray.length - 1 &&
+            lyricEntity.time >= sliderStanzasArray[stanzaIndex + 1].times[0]
         ) {
-            stanzaTimesIndex++
+            stanzaIndex++
         }
 
         verseTimesCounter.counter++
 
-        // Add verse to stanza's array of verse times.
-        if (!stanzaTimes[stanzaTimesIndex].times) {
-            stanzaTimes[stanzaTimesIndex].times = []
+        // Add subsequent verse times to stanza's array of verse times.
+        if (sliderStanzasArray[stanzaIndex].times[0] !== lyricEntity.time) {
+            sliderStanzasArray[stanzaIndex].times.push(lyricEntity.time)
         }
-        stanzaTimes[stanzaTimesIndex].times.push(lyricEntity.time)
 
         // Tell stanza that its first verse is odd or even.
-        if (!stanzaTimes[stanzaTimesIndex].firstVerseParity) {
-            stanzaTimes[stanzaTimesIndex].firstVerseParity =
+        if (!sliderStanzasArray[stanzaIndex].firstVerseParity) {
+            sliderStanzasArray[stanzaIndex].firstVerseParity =
                 verseTimesCounter.counter % 2 ? 'odd' : 'even'
         }
 
@@ -258,7 +259,7 @@ export const recurseToFindAnchors = ({
                 lyricEntity: childEntity,
                 textKey,
                 callbackFunction,
-                stanzaTimesIndex,
+                stanzaIndex,
                 verseTimesCounter
             })
         })
@@ -293,7 +294,7 @@ export const recurseToFindAnchors = ({
                         lyricEntity: lyricEntity[childKey],
                         textKey: (textKey || sideStanzaTextKey || childKey),
                         callbackFunction,
-                        stanzaTimesIndex,
+                        stanzaIndex,
                         verseTimesCounter
                     })
                 }

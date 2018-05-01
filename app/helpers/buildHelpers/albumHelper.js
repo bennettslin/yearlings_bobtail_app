@@ -48,7 +48,7 @@ const _mergeAlbumTasks = (albumObject) => {
 const _initialPrepareAlbum = (albumObject) => {
 
     // Initialise.
-    albumObject.maxStanzaTimesCount = 0
+    albumObject.maxStanzasCount = 0
 
     albumObject.songs.forEach((songObject, songIndex) => {
 

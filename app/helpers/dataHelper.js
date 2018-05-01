@@ -28,10 +28,6 @@ export const getBookColumnIndex = (songIndex) => {
     return songIndex < bookStartingIndices[1] ? 0 : 1
 }
 
-export const getMaxStanzaTimesCount = () => {
-    return AlbumData.maxStanzaTimesCount
-}
-
 /*********
  * SONGS *
  *********/
@@ -111,24 +107,6 @@ export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
     return {
         beginTime,
         endTime
-    }
-}
-
-export const getStanzaTimeObject = (songIndex, stanzaTimeIndex) => {
-    const songObject = getSongObject(songIndex),
-        { stanzaTimes: stanzaTimesArray } = songObject
-
-    // Logues do not have this array.
-    if (stanzaTimesArray && stanzaTimeIndex < stanzaTimesArray.length) {
-
-        // Return stanza time object.
-        return stanzaTimesArray[stanzaTimeIndex]
-
-    } else {
-
-        // Return placeholder object.
-        return { type: 'placeholder',
-                 time: songObject.totalTime }
     }
 }
 
@@ -293,6 +271,38 @@ export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
 
         return foundCardObject
     }, null)
+}
+
+/**********
+ * SLIDER *
+ **********/
+
+export const getMaxStanzasCount = () => {
+    return AlbumData.maxStanzasCount
+}
+
+export const getSliderStanzaData = (songIndex, stanzaTimeIndex) => {
+
+    const songObject = getSongObject(songIndex),
+        { sliderStanzasArray } = songObject
+
+    // Logues do not have this array.
+    if (
+        sliderStanzasArray &&
+        stanzaTimeIndex < sliderStanzasArray.length
+    ) {
+
+        // Return stanza time object.
+        return sliderStanzasArray[stanzaTimeIndex]
+
+    } else {
+
+        // Return placeholder object.
+        return { type: 'placeholder',
+                 times: [
+                    songObject.totalTime
+                 ] }
+    }
 }
 
 /**********

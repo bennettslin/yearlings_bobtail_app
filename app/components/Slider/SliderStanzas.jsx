@@ -5,9 +5,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getMaxStanzaTimesCount,
-         getStanzaTimeObject,
+import { getMaxStanzasCount,
+         getSliderStanzaData,
          getSongTotalTime } from '../../helpers/dataHelper'
+
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -21,7 +22,7 @@ const sliderStanzasPropTypes = {
     selectedSongIndex: PropTypes.number.isRequired
 }
 
-const maxStanzaTimesCount = getMaxStanzaTimesCount()
+const maxStanzasCount = getMaxStanzasCount()
 
 const SliderStanzas = ({
 
@@ -35,20 +36,20 @@ const SliderStanzas = ({
          * Dynamically create array of just indices. Audio slider will fetch
          * stanza times object directly from data helper.
          */
-        stanzaTimesIndices = getArrayOfLength({
-            length: maxStanzaTimesCount
+        stanzaIndices = getArrayOfLength({
+            length: maxStanzasCount
         })
 
     return (
         <div className="SliderStanzas">
-            {stanzaTimesIndices.map((nothing, stanzaTimeIndex) => {
+            {stanzaIndices.map((nothing, stanzaTimeIndex) => {
 
-                const stanzaTimeObject = getStanzaTimeObject(
+                const stanzaDataObject = getSliderStanzaData(
                         selectedSongIndex, stanzaTimeIndex
                     ),
 
                     stanzaWidth =
-                        (totalTime - stanzaTimeObject.time) / totalTime * 100,
+                        (totalTime - stanzaDataObject.times[0]) / totalTime * 100,
 
                     stanzaStyle = {
                         width: `${stanzaWidth}%`
@@ -60,7 +61,7 @@ const SliderStanzas = ({
                         className={cx(
                             'SliderStanzaBar',
                             'Slider__dynamicBar',
-                            `bgColour__stanza__${stanzaTimeObject.type}`
+                            `bgColour__stanza__${stanzaDataObject.type}`
                         )}
                         style={stanzaStyle}
                     />

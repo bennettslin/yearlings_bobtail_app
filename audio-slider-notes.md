@@ -14,8 +14,10 @@
 
 * Refactor directories. (/)
 
+* Rename sliderStanzas to indicate that only slider uses it. (/)
+
 * Reconsider ways to allow audio slider to be longer. (/)
-    * Allow title to go to min width before shrinking audio.
+    * Allow title to go to min width before shrinking audio. (/)
 
 * Allow Verse and sliderVerse to not care about sliderTouched.
 
@@ -29,5 +31,3 @@
 * Times mask doesn't always work?
 
 * Have audio banner in main treatment be the same as title in audio.
-
-* Rename stanzaTimes to indicate that only slider uses it.
