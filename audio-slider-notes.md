@@ -12,10 +12,12 @@
 
 * Calculate to accommodate outer borders for SliderStanzas.
 
-* Refactor directories.
+* Refactor directories. (/)
 
-* Reconsider ways to allow audio slider to be longer.
-    * Keep title at max width until scores tips is in main.
+* Reconsider ways to allow audio slider to be longer. (/)
+    * Allow title to go to min width before shrinking audio.
+
+* Allow Verse and sliderVerse to not care about sliderTouched.
 
 * Allow slider verse to highlight upon hover?
     * Interactivated verse needs to change z-index based on access on.
@@ -24,4 +26,4 @@
 
 * Have slider also render only after renderReady.
 
-* Allow Verse and sliderVerse to not care about sliderTouched.
+* Times mask doesn't always work?
