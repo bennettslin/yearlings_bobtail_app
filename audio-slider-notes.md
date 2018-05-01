@@ -10,14 +10,14 @@
 
 # New notes
 
-* Calculate to accommodate outer borders for SliderStanzas.
-
 * Refactor directories. (/)
 
 * Rename sliderStanzas to indicate that only slider uses it. (/)
 
 * Reconsider ways to allow audio slider to be longer. (/)
     * Allow title to go to min width before shrinking audio. (/)
+
+* Calculate to accommodate outer borders for SliderStanzas.
 
 * Allow Verse and sliderVerse to not care about sliderTouched.
 
