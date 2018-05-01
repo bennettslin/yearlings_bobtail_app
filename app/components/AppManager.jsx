@@ -1016,8 +1016,9 @@ class App extends Component {
         return interactivatedVerseIndex
     }
 
-    selectVerseElement(selectedVerseElement) {
-        if (selectedVerseElement !== this.props.selectedVerseElement) {
+    selectOrSlideVerseElement(verseElement) {
+
+        if (verseElement !== this.props.verseElement) {
 
             // Determine if new selected verse element shows or hides verse bar.
             const { isVerseBarAbove,
@@ -1026,34 +1027,21 @@ class App extends Component {
                         windowHeight: this.props.windowHeight,
                         isLyricExpanded: this.props.isLyricExpanded,
                         isHeightlessLyricColumn: this.props.isHeightlessLyricColumn,
-                        verseElement: selectedVerseElement
+                        verseElement: verseElement
                     })
 
-            // App has a reference to the selected verse.
-            this.props.setSelectedVerseElement(selectedVerseElement)
+            if (this.props.isSliderMoving) {
+                /**
+                 * Slider verse element overrides selected verse element, as
+                 * long as the slider is touched.
+                 */
+                this.props.setSliderVerseElement(verseElement)
 
-            this.props.setIsVerseBarAbove(isVerseBarAbove)
-            this.props.setIsVerseBarBelow(isVerseBarBelow)
-        }
-    }
+            } else {
+                // App has a reference to the selected verse.
+                this.props.setSelectedVerseElement(verseElement)
+            }
 
-    slideVerseElement(sliderVerseElement) {
-        if (sliderVerseElement !== this.props.sliderVerseElement) {
-
-            const { isVerseBarAbove,
-                    isVerseBarBelow } = getVerseBarStatus({
-                        deviceIndex: this.props.deviceIndex,
-                        windowHeight: this.props.windowHeight,
-                        isLyricExpanded: this.props.isLyricExpanded,
-                        isHeightlessLyricColumn: this.props.isHeightlessLyricColumn,
-                        verseElement: sliderVerseElement
-                    })
-
-            /**
-             * Slider verse element overrides selected verse element, as long
-             * as the slider is touched.
-             */
-            this.props.setSliderVerseElement(sliderVerseElement)
             this.props.setIsVerseBarAbove(isVerseBarAbove)
             this.props.setIsVerseBarBelow(isVerseBarBelow)
         }
@@ -1250,8 +1238,7 @@ class App extends Component {
         this.selectTips = this.selectTips.bind(this)
         this.selectTitle = this.selectTitle.bind(this)
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
-        this.selectVerseElement = this.selectVerseElement.bind(this)
-        this.slideVerseElement = this.slideVerseElement.bind(this)
+        this.selectOrSlideVerseElement = this.selectOrSlideVerseElement.bind(this)
         this.scrollLyricSection = this.scrollLyricSection.bind(this)
         this._windowResize = this._windowResize.bind(this)
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
@@ -1303,8 +1290,7 @@ class App extends Component {
                 toggleAccess={this.toggleAccess}
                 toggleAdmin={this.toggleAdmin}
                 togglePlay={this.togglePlay}
-                selectVerseElement={this.selectVerseElement}
-                slideVerseElement={this.slideVerseElement}
+                selectOrSlideVerseElement={this.selectOrSlideVerseElement}
 
                 advanceToNextSong={this.advanceToNextSong}
                 resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}

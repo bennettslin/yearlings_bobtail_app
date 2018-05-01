@@ -43,19 +43,18 @@ class Verse extends Component {
         inMain: PropTypes.bool.isRequired,
         inVerseBar: PropTypes.bool.isRequired,
         handleLyricAnnotationSelect: PropTypes.func,
-        handleVerseInteractivate: PropTypes.func
+        handleVerseInteractivate: PropTypes.func,
+        handleVerseElementSelectOrSlide: PropTypes.func
     }
 
     constructor(props) {
         super(props)
 
-        this._checkIsSelectedVerse = this._checkIsSelectedVerse.bind(this)
-        this._checkIsSliderSelectedVerse = this._checkIsSliderSelectedVerse.bind(this)
         this._handleInteractivatableClick = this._handleInteractivatableClick.bind(this)
     }
 
     componentDidMount() {
-        this._checkIsSelectedVerse(this.props)
+        this._handleVerseElementSelectOrSlide()
     }
 
     shouldComponentUpdate(nextProps) {
@@ -80,24 +79,14 @@ class Verse extends Component {
         return componentShouldUpdate
     }
 
-    componentDidUpdate(prevProps) {
-        const { props } = this
-
-        this._checkIsSelectedVerse(props)
-
-        if (props.isSliderSelected && !prevProps.isSliderSelected) {
-            this._checkIsSliderSelectedVerse(props)
-        }
+    componentDidUpdate() {
+        this._handleVerseElementSelectOrSlide()
     }
 
-    _checkIsSelectedVerse(props) {
-        if (props.isSelected) {
-            props.handleVerseElementSelect(this.myVerse)
+    _handleVerseElementSelectOrSlide() {
+        if (this.props.isOnCursor) {
+            this.props.handleVerseElementSelectOrSlide(this.myVerse)
         }
-    }
-
-    _checkIsSliderSelectedVerse(props) {
-        props.handleVerseElementSlide(this.myVerse)
     }
 
     _handleInteractivatableClick(e) {
