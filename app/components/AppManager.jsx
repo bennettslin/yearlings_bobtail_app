@@ -978,8 +978,18 @@ class App extends Component {
             this.props.setSliderLeft(0)
             this.props.setSliderRatio(0)
             this.props.setSliderWidth(0)
-            this.props.setSliderVerseElement(null)
             this.props.setSliderVerseIndex(-1)
+
+            this.selectOrSlideVerseElement(
+                /**
+                 * If slider was moved, there will be a slider verse element.
+                 * If it was just tapped, there won't be, so fall back to the
+                 * selected verse element.
+                 */
+                this.props.sliderVerseElement ||
+                    this.props.selectedVerseElement,
+                true
+            )
         }
     }
 
@@ -1016,9 +1026,18 @@ class App extends Component {
         return interactivatedVerseIndex
     }
 
-    selectOrSlideVerseElement(verseElement) {
+    selectOrSlideVerseElement(
+        verseElement,
+        isTouchBodyEnd
+    ) {
 
-        if (verseElement !== this.props.verseElement) {
+        const doSetSlider = this.props.isSliderMoving && !isTouchBodyEnd,
+
+            propsVerseElement =
+                doSetSlider ?
+                this.props.sliderVerseElement : this.props.selectedVerseElement
+
+        if (verseElement !== propsVerseElement) {
 
             // Determine if new selected verse element shows or hides verse bar.
             const { isVerseBarAbove,
@@ -1030,7 +1049,7 @@ class App extends Component {
                         verseElement: verseElement
                     })
 
-            if (this.props.isSliderMoving) {
+            if (doSetSlider) {
                 /**
                  * Slider verse element overrides selected verse element, as
                  * long as the slider is touched.
@@ -1044,6 +1063,10 @@ class App extends Component {
 
             this.props.setIsVerseBarAbove(isVerseBarAbove)
             this.props.setIsVerseBarBelow(isVerseBarBelow)
+
+            if (isTouchBodyEnd) {
+                this.props.setSliderVerseElement(null)
+            }
         }
     }
 

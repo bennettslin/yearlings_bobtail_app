@@ -31,7 +31,7 @@
     * Touch bar needs to be changed somehow. (/)
     * Calculate slider rect based on ref, not e.target. (/)
 
-* Verse bar handler is broken. Slightly fixed, isVerseBarAbove or Below is still screwy.
+* Verse bar handler is broken. (/)
 
 * Times mask doesn't always work? (/) Still confirm.
 
