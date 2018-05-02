@@ -115,7 +115,7 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
                  * each unit, based on its time length.
                  */
                 sliderStanzasArray.push({
-                    times: [
+                    verseTimes: [
                         unitFirstVerseTime
                     ],
                     type: stanzaType
@@ -223,7 +223,8 @@ export const recurseToFindAnchors = ({
         // Get stanza for this verse.
         while (
             stanzaIndex < sliderStanzasArray.length - 1 &&
-            lyricEntity.time >= sliderStanzasArray[stanzaIndex + 1].times[0]
+            lyricEntity.time >=
+                sliderStanzasArray[stanzaIndex + 1].verseTimes[0]
         ) {
             stanzaIndex++
         }
@@ -231,14 +232,31 @@ export const recurseToFindAnchors = ({
         verseTimesCounter.counter++
 
         // Add subsequent verse times to stanza's array of verse times.
-        if (sliderStanzasArray[stanzaIndex].times[0] !== lyricEntity.time) {
-            sliderStanzasArray[stanzaIndex].times.push(lyricEntity.time)
+        if (
+            sliderStanzasArray[stanzaIndex].verseTimes[0] !== lyricEntity.time
+        ) {
+            sliderStanzasArray[stanzaIndex].verseTimes.push(lyricEntity.time)
         }
 
-        // Tell stanza that its first verse is odd or even.
-        if (!sliderStanzasArray[stanzaIndex].firstVerseParity) {
-            sliderStanzasArray[stanzaIndex].firstVerseParity =
-                verseTimesCounter.counter % 2 ? 'odd' : 'even'
+        // Tell stanza its first verse index.
+        if (!sliderStanzasArray[stanzaIndex].firstVerseIndex) {
+            sliderStanzasArray[stanzaIndex].firstVerseIndex =
+                lyricEntity.verseIndex
+
+            /**
+             * Since this is the first verse of the next stanza, tell the
+             * previous stanza its end time.
+             */
+            if (stanzaIndex) {
+                sliderStanzasArray[stanzaIndex - 1].endTime = lyricEntity.time
+            }
+        }
+
+        if (
+            stanzaIndex === sliderStanzasArray.length - 1 &&
+            !sliderStanzasArray[stanzaIndex].endTime
+        ) {
+            sliderStanzasArray[stanzaIndex].endTime = songObject.totalTime
         }
 
         // An array of verse times is needed

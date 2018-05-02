@@ -9,7 +9,7 @@ import SliderScenes from './SliderScenes'
 import SliderStanzas from './SliderStanzas'
 
 import SliderTimes from './Times/SliderTimes'
-import SliderVerses from './Verses/SliderVerses'
+// import SliderVerses from './Verses/SliderVerses'
 
 import SliderAccess from './SliderAccess'
 
@@ -74,7 +74,7 @@ SliderView = ({
     >
         <SliderStanzas />
         <SliderTimes/>
-        <SliderVerses />
+        {/* <SliderVerses /> */}
         <SliderScenes />
         <SliderAccess />
 

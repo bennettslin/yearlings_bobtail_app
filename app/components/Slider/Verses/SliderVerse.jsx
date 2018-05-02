@@ -85,7 +85,7 @@ class SliderVerse extends Component {
             <div
                 key={verseIndex}
                 className={cx(
-                    'SliderVerseBar',
+                    'SliderVerse',
                     'Slider__dynamicBar',
 
                     isOdd ?

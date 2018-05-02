@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import SliderStanza from './SliderStanza'
+
 import { getMaxStanzasCount,
          getSliderStanzaData,
          getSongTotalTime } from '../../helpers/dataHelper'
@@ -33,8 +35,7 @@ const SliderStanzas = ({
     const totalTime = getSongTotalTime(selectedSongIndex),
 
         /**
-         * Dynamically create array of just indices. Audio slider will fetch
-         * stanza times object directly from data helper.
+         * Dynamically create array of just indices.
          */
         stanzaIndices = getArrayOfLength({
             length: maxStanzasCount
@@ -45,28 +46,16 @@ const SliderStanzas = ({
             'SliderStanzas',
             'absoluteFullContainer'
         )}>
-            {stanzaIndices.map((nothing, stanzaTimeIndex) => {
+            {stanzaIndices.map((nothing, stanzaIndex) => {
 
                 const stanzaDataObject = getSliderStanzaData(
-                        selectedSongIndex, stanzaTimeIndex
-                    ),
-
-                    stanzaWidth =
-                        (totalTime - stanzaDataObject.times[0]) / totalTime * 100,
-
-                    stanzaStyle = {
-                        width: `${stanzaWidth}%`
-                    }
+                    selectedSongIndex, stanzaIndex
+                )
 
                 return (
-                    <div
-                        key={stanzaTimeIndex}
-                        className={cx(
-                            'SliderStanzaBar',
-                            'Slider__dynamicBar',
-                            `bgColour__stanza__${stanzaDataObject.type}`
-                        )}
-                        style={stanzaStyle}
+                    <SliderStanza {...stanzaDataObject}
+                        key={stanzaIndex}
+                        totalTime={totalTime}
                     />
                 )
             })}

@@ -299,9 +299,11 @@ export const getSliderStanzaData = (songIndex, stanzaTimeIndex) => {
 
         // Return placeholder object.
         return { type: 'placeholder',
-                 times: [
+                 verseTimes: [
                     songObject.totalTime
-                 ] }
+                 ],
+                 firstVerseIndex: 0,
+                 endTime: songObject.totalTime }
     }
 }
 
