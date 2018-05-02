@@ -42,7 +42,7 @@ AudioBanner = ({
     return Boolean(isMenuBottomRow) === isTwoRowMenu && (
         <div className={cx(
             'AudioBanner',
-            { 'Audio__menuChild': isAudioChild }
+            { 'Audio__child': isAudioChild }
         )}>
             <Slider {...other}>
                 <div className={cx(

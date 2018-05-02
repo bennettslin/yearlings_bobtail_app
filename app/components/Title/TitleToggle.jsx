@@ -5,19 +5,15 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getIsPhone } from '../../helpers/responsiveHelper'
-
 import AudioTimer from '../Audio/AudioTimer'
 import Button from '../Button/Button'
 
 import { TITLE_TOGGLE_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
-    deviceIndex,
     isTwoRowMenu,
     selectedTitleIndex
 }) => ({
-    deviceIndex,
     isTwoRowMenu,
     selectedTitleIndex
 })
@@ -28,7 +24,6 @@ const titleToggleDefaultProps = {
 
 titleTogglePropTypes = {
     // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
     isTwoRowMenu: PropTypes.bool.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
 
@@ -39,7 +34,6 @@ titleTogglePropTypes = {
 
 TitleToggle = ({
 
-    deviceIndex,
     isTwoRowMenu,
     selectedTitleIndex,
 
@@ -48,13 +42,11 @@ TitleToggle = ({
 
 }) => {
 
-    const isPhone = getIsPhone(deviceIndex),
-
-        titleButtonChild = (
+    const titleButtonChild = (
             <Button
                 buttonName="title"
                 className={cx(
-                    { 'Button__title__timerInTitle': isPhone }
+                    { 'Button__title__timerInTitle': isTwoRowMenu }
                 )}
                 isCustomSize
                 accessKey={TITLE_TOGGLE_KEY}
@@ -66,16 +58,16 @@ TitleToggle = ({
     return isAudioChild === isTwoRowMenu && (
         <div className={cx(
             'TitleToggle',
-            { 'Audio__menuChild': isAudioChild,
+            { 'Audio__child': isAudioChild,
               'TitleToggle__inAudio': isAudioChild }
         )}>
-            {isPhone && (
+            {isTwoRowMenu && (
                 <AudioTimer
                     isTitleTimer
                 />
             )}
 
-            {isPhone ? (
+            {isTwoRowMenu ? (
                 <div className={cx(
                     'TitleToggleButton__animatable',
                     'absoluteFullContainer'

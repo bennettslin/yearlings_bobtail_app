@@ -22,8 +22,6 @@
     box-sizing: border-box;
     height: 100%;
 
-    // flex-grow: 1;
-
     // Needed for audio banner in overlay.
     position: relative;
     padding: @paddingY__audio @js__padding__audio;
@@ -32,21 +30,20 @@
 
     .RM__twoRowMenu
     & {
-        padding: @paddingY__audio @paddingX__twoRowMenu;
-    }
+        padding:
+            @paddingY__audio
+            @js__margin__thick;
 
-    .RM__phone
-    & {
-        justify-content: center;
+        justify-content: space-evenly;
     }
 }
 
-.Audio__menuChild {
+.Audio__child {
     position: relative;
     height: 100%;
     width: 100%;
 
     &:not(:last-child) {
-        margin-right: @paddingX__twoRowMenu;
+        margin-right: @js__margin__thick + @js__margin__thin;
     }
 }

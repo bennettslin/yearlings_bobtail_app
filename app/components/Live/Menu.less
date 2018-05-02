@@ -1,49 +1,51 @@
 // Constants prefixed with js *must* be the same in JavaScript.
 @js__margin__menuChild: 10px;
-@js__margin__menuChild__narrow: 3px;
 @js__height__menu: 72px;
 
 /**
  * Needed by JavaScript to calculate scores tips in main breakpoints.
  */
-@js__maxWidth__childAudio: 640px; // Arbitrary.
+@js__maxWidth__childAudio: 720px; // Arbitrary.
 @js__minWidth__childTitle: 72px; // Arbitrary.
 
 @maxWidth__childTitle: 200px; // Arbitrary.
 
-// This works out to 50px;
+// This works out to 52px;
 @js__height__menuTopRow__phone:
-    @js__length__icon +
-    @js__margin__menuChild__narrow * 2;
+    @js__length__icon
+    + @js__margin__thin * 2;
 
 // Arbitrary for now.
-@js__height__audio: 66px;
+@js__height__audio:
+    @js__height__menu
+    - @js__margin__thin * 2;
+
 @js__height__audioBanner__bottomRow: @js__height__audio / 2;
 @js__height__audioSlider__bottomRow: @js__height__audio / 2;
 
 // Two row menu in mini. Includes menu and slider.
 @js__height__aboveOverlay__twoRowMenu:
-    @js__height__menu +
-    @js__height__audioSlider__bottomRow;
+    @js__height__menu
+    + @js__height__audioSlider__bottomRow;
 
 // Two row menu in mini. Includes menu, banner, and slider.
 @js__height__menu__twoRowMenu:
-    @js__height__aboveOverlay__twoRowMenu +
-    @js__height__audioBanner__bottomRow;
+    @js__height__aboveOverlay__twoRowMenu
+    + @js__height__audioBanner__bottomRow;
 
 // Phone always has two rows in menu. Includes menu and slider.
 @js__height__aboveOverlay__phone:
-    @js__height__menuTopRow__phone +
-    @js__height__audioSlider__bottomRow;
+    @js__height__menuTopRow__phone
+    + @js__height__audioSlider__bottomRow;
 
 // Phone always has two rows in menu. Includes menu, banner, and slider.
 @js__height__menu__phone:
-    @js__height__aboveOverlay__phone +
-    @js__height__audioBanner__bottomRow;
+    @js__height__aboveOverlay__phone
+    + @js__height__audioBanner__bottomRow;
 
 @height__bottomRow:
-    @js__height__audioBanner__bottomRow +
-    @js__height__audioSlider__bottomRow;
+    @js__height__audioBanner__bottomRow
+    + @js__height__audioSlider__bottomRow;
 
 .Menu {
     position: absolute;
@@ -162,7 +164,7 @@
     &,
     .RM__mini
     & {
-        margin: 0 @js__margin__menuChild__narrow;
+        margin: 0 @js__margin__thin;
     }
 
     .RM__scoresTipsMain
@@ -188,8 +190,6 @@
         justify-content: flex-end;
     }
 
-    // box-sizing: border-box;
-
     .RM__tablet.RM__scoresTipsMain
     & {
         min-width:
@@ -199,16 +199,7 @@
         + @js__padding__audio * 3;
     }
 
-    .RM__mini.RM__twoRowMenu
-    & {
-        min-width:
-        @js__minWidth__audioBanner
-        + @minWidth__audioButtons__minusPlayer
-        + @js__length__iconLarge__mini
-        + @js__padding__audio * 3;
-    }
-
-    .RM__mini.RM__oneRowMenu
+    .RM__mini
     & {
         min-width:
         @minWidth__audioButtons__minusPlayer
@@ -216,12 +207,10 @@
         + @js__padding__audio * 3;
     }
 
-    .RM__phone
+    .RM__twoRowMenu
     & {
-        min-width:
-        @minWidth__audioButtons__minusPlayer
-        + @js__length__icon
-        + @js__padding__audio * 3;
+        // Once title is in audio, minWidth doesn't matter.
+        min-width: 0;
     }
 
     .RM__overlayShown

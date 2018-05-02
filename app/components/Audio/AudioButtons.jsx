@@ -97,7 +97,7 @@ class AudioButtons extends Component {
         return (
             <div className={cx(
                 'AudioButtons',
-                'Audio__menuChild',
+                'Audio__child',
                 'flexAlignContainer'
             )}>
                 <div className={cx(
