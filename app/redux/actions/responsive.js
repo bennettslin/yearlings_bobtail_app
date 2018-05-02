@@ -3,7 +3,7 @@ import { IS_HEIGHTLESS_LYRIC_COLUMN,
          IS_HIDDEN_NAV,
          IS_MOBILE_WIKI,
          IS_SCORES_TIPS_IN_MAIN,
-         IS_TITLE_IN_AUDIO,
+         IS_TWO_ROW_MENU,
          SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
          SHOW_SHRUNK_NAV_ICON,
          SHOW_SINGLE_BOOK_COLUMN } from '../../constants/state'
@@ -28,9 +28,9 @@ export const setIsScoresTipsInMain = (isScoresTipsInMain = false) => (
       payload: isScoresTipsInMain }
 )
 
-export const setIsTitleInAudio = (isTitleInAudio = false) => (
-    { type: IS_TITLE_IN_AUDIO,
-      payload: isTitleInAudio }
+export const setIsTwoRowMenu = (isTwoRowMenu = false) => (
+    { type: IS_TWO_ROW_MENU,
+      payload: isTwoRowMenu }
 )
 
 export const setShowOneOfTwoLyricColumns = (showOneOfTwoLyricColumns = false) => (

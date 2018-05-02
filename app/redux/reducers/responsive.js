@@ -3,7 +3,7 @@ import { IS_HEIGHTLESS_LYRIC_COLUMN,
          IS_HIDDEN_NAV,
          IS_MOBILE_WIKI,
          IS_SCORES_TIPS_IN_MAIN,
-         IS_TITLE_IN_AUDIO,
+         IS_TWO_ROW_MENU,
          SHOW_ONE_OF_TWO_LYRIC_COLUMNS,
          SHOW_SHRUNK_NAV_ICON,
          SHOW_SINGLE_BOOK_COLUMN } from '../../constants/state'
@@ -44,9 +44,9 @@ export const IsScoresTipsInMainReducer = (state = false, action) => {
     }
 }
 
-export const IsTitleInAudioReducer = (state = false, action) => {
+export const isTwoRowMenuReducer = (state = false, action) => {
     switch (action.type) {
-        case IS_TITLE_IN_AUDIO:
+        case IS_TWO_ROW_MENU:
             return action.payload
         default:
             return state

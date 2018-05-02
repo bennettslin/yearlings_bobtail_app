@@ -37,3 +37,5 @@
 * Have slider also render only after renderReady.
 
 * Have audio banner in main treatment be the same as title in audio.
+    * Rename to two-row menu.
+    *

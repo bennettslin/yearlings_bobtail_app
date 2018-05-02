@@ -18,13 +18,13 @@ import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isPlaying,
-    isTitleInAudio,
+    isTwoRowMenu,
     canPlayThroughs,
     selectedAudioOptionIndex,
     selectedSongIndex
 }) => ({
     isPlaying,
-    isTitleInAudio,
+    isTwoRowMenu,
     canPlayThroughs,
     selectedAudioOptionIndex,
     selectedSongIndex
@@ -35,7 +35,7 @@ class AudioButtons extends Component {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
-        isTitleInAudio: PropTypes.bool.isRequired,
+        isTwoRowMenu: PropTypes.bool.isRequired,
         canPlayThroughs: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
@@ -54,7 +54,7 @@ class AudioButtons extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'isPlaying',
-                    'isTitleInAudio',
+                    'isTwoRowMenu',
                     'selectedSongIndex',
                     'selectedAudioOptionIndex',
                     'canPlayThroughs'
@@ -69,7 +69,7 @@ class AudioButtons extends Component {
                 canPlayThroughs,
 
                 isPlaying,
-                isTitleInAudio,
+                isTwoRowMenu,
                 selectedAudioOptionIndex,
 
                 handleAudioPlay,
@@ -130,7 +130,7 @@ class AudioButtons extends Component {
                         className={cx(
                             'AudioButton'
                         )}
-                        isLargeSize={!isTitleInAudio}
+                        isLargeSize={!isTwoRowMenu}
                         temporaryText={playButtonText}
                         accessKey={AUDIO_PLAY_KEY}
                         isDisabled={!songCanPlayThrough}

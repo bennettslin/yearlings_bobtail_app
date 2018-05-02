@@ -14,7 +14,7 @@
     + @js__margin__audioButtons__playerButton * 2
     + @js__margin__audioButtons__child;
 
-@paddingX__titleInAudio: 6px;
+@paddingX__twoRowMenu: 6px;
 @paddingY__audio:
     (@js__height__menu - @js__height__audio) / 2;
 
@@ -30,9 +30,9 @@
 
     background-color: #dbb;
 
-    .RM__titleInAudio
+    .RM__twoRowMenu
     & {
-        padding: @paddingY__audio @paddingX__titleInAudio;
+        padding: @paddingY__audio @paddingX__twoRowMenu;
     }
 
     .RM__phone
@@ -47,6 +47,6 @@
     width: 100%;
 
     &:not(:last-child) {
-        margin-right: @paddingX__titleInAudio;
+        margin-right: @paddingX__twoRowMenu;
     }
 }

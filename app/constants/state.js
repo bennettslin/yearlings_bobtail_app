@@ -32,7 +32,7 @@ module.exports = {
     IS_HIDDEN_NAV: 'isHiddenCarouselNav',
     IS_MOBILE_WIKI: 'isMobileWiki',
     IS_SCORES_TIPS_IN_MAIN: 'isScoresTipsInMain',
-    IS_TITLE_IN_AUDIO: 'isTitleInAudio',
+    IS_TWO_ROW_MENU: 'isTwoRowMenu',
     SHOW_ONE_OF_TWO_LYRIC_COLUMNS: 'showOneOfTwoLyricColumns',
     SHOW_SHRUNK_NAV_ICON: 'showShrunkNavIcon',
     SHOW_SINGLE_BOOK_COLUMN: 'showSingleBookColumn',

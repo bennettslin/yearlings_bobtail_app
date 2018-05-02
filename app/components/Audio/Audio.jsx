@@ -10,14 +10,14 @@ import AudioButtons from './AudioButtons'
 import TitleToggle from '../Title/TitleToggle'
 
 const mapStateToProps = ({
-    isTitleInAudio
+    isTwoRowMenu
 }) => ({
-    isTitleInAudio
+    isTwoRowMenu
 })
 
 const audioPropTypes = {
     // Through Redux.
-    isTitleInAudio: PropTypes.bool.isRequired,
+    isTwoRowMenu: PropTypes.bool.isRequired,
 
     // From parent.
     audioBannerHandlers: PropTypes.object.isRequired,
@@ -25,7 +25,7 @@ const audioPropTypes = {
 },
 
 Audio = ({
-    isTitleInAudio,
+    isTwoRowMenu,
 
     audioBannerHandlers,
     titleToggleHandlers,
@@ -39,7 +39,7 @@ Audio = ({
                 'flexAlignContainer'
             )}
         >
-            {isTitleInAudio && (
+            {isTwoRowMenu && (
                 <TitleToggle {...titleToggleHandlers}
                     isAudioChild
                 />

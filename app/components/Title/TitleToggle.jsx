@@ -14,11 +14,11 @@ import { TITLE_TOGGLE_KEY } from '../../constants/access'
 
 const mapStateToProps = ({
     deviceIndex,
-    isTitleInAudio,
+    isTwoRowMenu,
     selectedTitleIndex
 }) => ({
     deviceIndex,
-    isTitleInAudio,
+    isTwoRowMenu,
     selectedTitleIndex
 })
 
@@ -29,7 +29,7 @@ const titleToggleDefaultProps = {
 titleTogglePropTypes = {
     // Through Redux.
     deviceIndex: PropTypes.number.isRequired,
-    isTitleInAudio: PropTypes.bool.isRequired,
+    isTwoRowMenu: PropTypes.bool.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -40,7 +40,7 @@ titleTogglePropTypes = {
 TitleToggle = ({
 
     deviceIndex,
-    isTitleInAudio,
+    isTwoRowMenu,
     selectedTitleIndex,
 
     isAudioChild,
@@ -63,7 +63,7 @@ TitleToggle = ({
             />
         )
 
-    return isAudioChild === isTitleInAudio && (
+    return isAudioChild === isTwoRowMenu && (
         <div className={cx(
             'TitleToggle',
             { 'Audio__menuChild': isAudioChild,
