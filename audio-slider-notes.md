@@ -28,7 +28,7 @@
 
 * Verse bar handler is broken. (/)
 
-* Render slider verses in slider stanzas.
+* Render slider verses in slider stanzas. (/)
 
 * Calculate to accommodate outer borders for SliderStanzas.
 

@@ -9,9 +9,9 @@ import SliderStanza from './SliderStanza'
 
 import { getMaxStanzasCount,
          getSliderStanzaData,
-         getSongTotalTime } from '../../helpers/dataHelper'
+         getSongTotalTime } from '../../../helpers/dataHelper'
 
-import { getArrayOfLength } from '../../helpers/generalHelper'
+import { getArrayOfLength } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     selectedSongIndex

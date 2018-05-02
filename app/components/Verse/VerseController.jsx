@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import Verse from '../Verse/Verse'
-import SliderVerse from '../Slider/Verses/SliderVerse'
+import SliderVerse from '../Slider/Stanzas/SliderVerse'
 
 const mapStateToProps = ({
     selectedVerseIndex,

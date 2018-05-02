@@ -6,7 +6,7 @@ import cx from 'classnames'
 import omit from 'lodash.omit'
 
 import SliderScenes from './SliderScenes'
-import SliderStanzas from './SliderStanzas'
+import SliderStanzas from './Stanzas/SliderStanzas'
 
 import SliderTimes from './Times/SliderTimes'
 // import SliderVerses from './Verses/SliderVerses'
@@ -72,8 +72,8 @@ SliderView = ({
         onMouseDown={handleTouchDown}
         onTouchStart={handleTouchDown}
     >
-        <SliderStanzas />
         <SliderTimes/>
+        <SliderStanzas />
         {/* <SliderVerses /> */}
         <SliderScenes />
         <SliderAccess />

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseController from '../Verse/VerseController'
+import VerseController from '../../Verse/VerseController'
 
 const sliderStanzaPropTypes = {
     firstVerseIndex: PropTypes.number.isRequired,
@@ -40,14 +40,21 @@ const SliderStanza = ({
             )}
             style={stanzaStyle}
         >
-            {verseTimes.map((verseTime, index) => (
-                <VerseController
-                    key={index}
-                    totalTime={endTime - verseTimes[0]}
-                    verseIndex={firstVerseIndex + index}
-                    verseTime={verseTime}
-                />
-            ))}
+            {verseTimes.map((verseTime, index) => {
+
+                // Slider verses only know time relative to stanza.
+                const relativeTotalTime = endTime - verseTimes[0],
+                    relativeVerseTime = verseTime - verseTimes[0]
+
+                return (
+                    <VerseController
+                        key={index}
+                        verseTime={relativeVerseTime}
+                        totalTime={relativeTotalTime}
+                        verseIndex={firstVerseIndex + index}
+                    />
+                )
+            })}
         </div>
     )
 }
