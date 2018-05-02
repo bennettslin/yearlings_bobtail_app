@@ -57,7 +57,7 @@ Menu = ({
                 'width__mainColumn'
             )}>
                 <AudioBanner {...audioBannerHandlers}
-                    isBelowMenu
+                    isMenuBottomRow
                 />
             </div>
 

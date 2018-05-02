@@ -1,15 +1,23 @@
 // Used by OverlayPopups only.
-.position__overlayPopups__desktop {
+.topHeight__mainColumn__desktop {
+
     top: @js__height__menu;
     height: ~"calc(100% - @{js__height__menu})";
 }
 
 // Used by both OverlayPopups and OverviewLogue.
-.position__overlayPopups__mobile {
+.topHeight__mainColumn__mobile {
+
     .RM__mobile
     & {
         top: @js__height__menu;
         height: ~"calc(100% - @{js__height__menu})";
+    }
+
+    .RM__twoRowMenu
+    & {
+        top: @js__height__aboveOverlay__twoRowMenu;
+        height: ~"calc(100% - @{js__height__aboveOverlay__twoRowMenu})";
     }
 
     .RM__phone

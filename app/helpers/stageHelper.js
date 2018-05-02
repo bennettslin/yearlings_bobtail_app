@@ -19,11 +19,12 @@ import { PHONE_CLASS,
 
          LS_HEIGHT_LYRIC_COLLAPSED,
          LS_HEIGHT_MENU,
+         LS_HEIGHT_MENU_TWO_ROW_MENU,
          LS_HEIGHT_MENU_PHONE,
 
          LS_HEIGHT_NAV } from '../constants/responsive'
 
-import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenCarouselNav } from './responsiveHelper'
+import { getIsDesktop, getIsPhone, getIsMonitor, getIsHiddenCarouselNav, getIsTwoRowMenu } from './responsiveHelper'
 
 /*********
  * STAGE *
@@ -51,7 +52,12 @@ export const getStageCoordinates = ({
 
         navHeight = isPhone || isHeightlessLyricColumn || isHiddenCarouselNav ? 0 : LS_HEIGHT_NAV,
 
-        centreFieldHeight = getCentreFieldHeight(deviceIndex, windowHeight, isHeightlessLyricColumn) - navHeight,
+        centreFieldHeight = getCentreFieldHeight({
+            deviceIndex,
+            windowWidth,
+            windowHeight,
+            isHeightlessLyricColumn
+        }) - navHeight,
 
         centreFieldRatio = centreFieldWidth / centreFieldHeight
 
@@ -150,17 +156,27 @@ const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
     return windowWidth * overflowPercentage - lyricWidth
 }
 
-export const getCentreFieldHeight = (
+export const getCentreFieldHeight = ({
     deviceIndex,
+    windowWidth,
     windowHeight,
     isHeightlessLyricColumn
-) => {
+}) => {
     const lyricColumnHeight = _getLyricColumnHeight(
             deviceIndex, isHeightlessLyricColumn, windowHeight
-        ),
+        )
 
-        menuHeight = getIsPhone(deviceIndex) ?
-            LS_HEIGHT_MENU_PHONE : LS_HEIGHT_MENU
+    let menuHeight = LS_HEIGHT_MENU
+
+    if (getIsTwoRowMenu({ windowWidth })) {
+
+        if (getIsPhone(deviceIndex)) {
+            menuHeight = LS_HEIGHT_MENU_PHONE
+
+        } else {
+            menuHeight = LS_HEIGHT_MENU_TWO_ROW_MENU
+        }
+    }
 
     return windowHeight - menuHeight - lyricColumnHeight
 }

@@ -55,11 +55,12 @@ class Theatre extends Component {
               width: stageWidth,
               height: stageHeight } = stageCoordinates,
 
-            centreFieldHeight = getCentreFieldHeight(
+            centreFieldHeight = getCentreFieldHeight({
                 deviceIndex,
+                windowWidth,
                 windowHeight,
                 isHeightlessLyricColumn
-            ),
+            }),
 
             stageCentreFromLeft = stageLeft + (stageWidth / 2),
 

@@ -7,42 +7,39 @@ import cx from 'classnames'
 import Slider from '../slider/Slider'
 import AudioTimer from './AudioTimer'
 import { getSongTitle } from '../../helpers/dataHelper'
-import { getIsPhone } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    deviceIndex,
+    isTwoRowMenu,
     selectedSongIndex
 }) => ({
-    deviceIndex,
+    isTwoRowMenu,
     selectedSongIndex
 })
 
 const audioBannerPropTypes = {
     // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
+    isTwoRowMenu: PropTypes.bool.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
     isAudioChild: PropTypes.bool,
-    isBelowMenu: PropTypes.bool
+    isMenuBottomRow: PropTypes.bool
 },
 
 AudioBanner = ({
 
-    deviceIndex,
+    isTwoRowMenu,
     selectedSongIndex,
     isAudioChild,
-    isBelowMenu,
+    isMenuBottomRow,
 
 ...other }) => {
 
-    const isPhone = getIsPhone(deviceIndex),
+    const songTitle = getSongTitle({
+        songIndex: selectedSongIndex
+    })
 
-        songTitle = getSongTitle({
-                songIndex: selectedSongIndex
-            })
-
-    return Boolean(isBelowMenu) === isPhone && (
+    return Boolean(isMenuBottomRow) === isTwoRowMenu && (
         <div className={cx(
             'AudioBanner',
             { 'Audio__menuChild': isAudioChild }

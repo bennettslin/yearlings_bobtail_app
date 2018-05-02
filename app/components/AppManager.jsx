@@ -525,6 +525,7 @@ class App extends Component {
         const { isVerseBarAbove,
                 isVerseBarBelow } = getVerseBarStatus({
                     deviceIndex: this.props.deviceIndex,
+                    windowWidth: this.props.windowWidth,
                     windowHeight: this.props.windowHeight,
                     isLyricExpanded: this.props.isLyricExpanded,
                     isHeightlessLyricColumn: this.props.isHeightlessLyricColumn,
@@ -1043,6 +1044,7 @@ class App extends Component {
             const { isVerseBarAbove,
                     isVerseBarBelow } = getVerseBarStatus({
                         deviceIndex: this.props.deviceIndex,
+                        windowWidth: this.props.windowWidth,
                         windowHeight: this.props.windowHeight,
                         isLyricExpanded: this.props.isLyricExpanded,
                         isHeightlessLyricColumn: this.props.isHeightlessLyricColumn,

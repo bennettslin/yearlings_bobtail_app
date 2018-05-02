@@ -323,6 +323,7 @@ export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
 
 export const getVerseBarStatus = ({
     deviceIndex,
+    windowWidth,
     windowHeight,
     isLyricExpanded,
     isHeightlessLyricColumn,
@@ -339,6 +340,7 @@ export const getVerseBarStatus = ({
 
     const lyricSectionRect = getLyricSectionRect({
             deviceIndex,
+            windowWidth,
             windowHeight,
             isLyricExpanded
         }),

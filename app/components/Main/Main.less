@@ -21,6 +21,12 @@
         height: ~"calc(100% - @{js__height__menu})";
     }
 
+    .RM__mini.RM__twoRowMenu
+    & {
+        top: @js__height__menu__twoRowMenu;
+        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu__twoRowMenu})";
+    }
+
     .RM__phone
     & {
         top: @js__height__menu__phone;

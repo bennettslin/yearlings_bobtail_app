@@ -24,8 +24,8 @@ const OverlayPopups = ({
 }) => (
     <div className={cx(
         'OverlayPopups',
-        'position__overlayPopups__desktop',
-        'position__overlayPopups__mobile',
+        'topHeight__mainColumn__desktop',
+        'topHeight__mainColumn__mobile',
         'absoluteFullContainer'
     )}>
         <AnnotationPopup {...annotationPopupHandlers} />

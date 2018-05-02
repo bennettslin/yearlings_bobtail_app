@@ -17,6 +17,7 @@ import { PHONE_CLASS,
 
          LS_HEIGHT_MENU,
          LS_HEIGHT_ABOVE_OVERLAY_PHONE,
+         LS_HEIGHT_ABOVE_OVERLAY_TWO_ROW_MENU,
 
          TWO_ROW_MENU_BREAKPOINT,
 
@@ -207,6 +208,7 @@ export const getIsTwoRowMenu = ({ windowWidth }) => {
 export const getLyricSectionRect = ({
 
     deviceIndex,
+    windowWidth,
     windowHeight,
     isLyricExpanded
 
@@ -228,9 +230,14 @@ export const getLyricSectionRect = ({
          */
         top = windowHeight * (1 - LS_HEIGHT_LYRIC_COLLAPSED)
 
-    } else if (getIsPhone(deviceIndex)) {
-        // Lyric is expanded in phone.
-        top = LS_HEIGHT_ABOVE_OVERLAY_PHONE
+    } else if (getIsTwoRowMenu({ windowWidth })) {
+
+        if (_getIsMini(deviceIndex)) {
+            top = LS_HEIGHT_ABOVE_OVERLAY_TWO_ROW_MENU
+
+        } else {
+            top = LS_HEIGHT_ABOVE_OVERLAY_PHONE
+        }
 
     } else {
         // Lyric is expanded in tablet or mini.

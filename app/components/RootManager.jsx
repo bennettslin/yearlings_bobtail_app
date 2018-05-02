@@ -229,7 +229,7 @@ class RootManager extends Component {
                     isScoresTipsInMain ?
                         'RM__scoresTipsMain' : 'RM__scoresTipsMenu',
                     isTwoRowMenu ?
-                        'RM__twoRowMenu' : 'RM__notTwoRowMenu',
+                        'RM__twoRowMenu' : 'RM__oneRowMenu',
 
                     singleShownLyricColumnKey &&
                         `RM__${singleShownLyricColumnKey}LyricColumnOnly`,

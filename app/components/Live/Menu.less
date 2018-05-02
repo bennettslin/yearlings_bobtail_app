@@ -21,12 +21,22 @@
 @js__height__audioBanner__bottomRow: @js__height__audio / 2;
 @js__height__audioSlider__bottomRow: @js__height__audio / 2;
 
-// Includes menu and slider.
+// Two row menu in mini. Includes menu and slider.
+@js__height__aboveOverlay__twoRowMenu:
+    @js__height__menu +
+    @js__height__audioSlider__bottomRow;
+
+// Two row menu in mini. Includes menu, banner, and slider.
+@js__height__menu__twoRowMenu:
+    @js__height__aboveOverlay__twoRowMenu +
+    @js__height__audioBanner__bottomRow;
+
+// Phone always has two rows in menu. Includes menu and slider.
 @js__height__aboveOverlay__phone:
     @js__height__menuTopRow__phone +
     @js__height__audioSlider__bottomRow;
 
-// Includes menu, banner, and slider.
+// Phone always has two rows in menu. Includes menu, banner, and slider.
 @js__height__menu__phone:
     @js__height__aboveOverlay__phone +
     @js__height__audioBanner__bottomRow;
@@ -41,6 +51,11 @@
     left: 0;
     width: 100%;
     height: @js__height__menu;
+
+    .RM__twoRowMenu
+    & {
+        height: @js__height__menu__twoRowMenu;
+    }
 
     .RM__phone
     & {
@@ -79,6 +94,11 @@
     .RM__overlayShown
     &.width__mainColumn {
         max-width: @js__width__mini;
+    }
+
+    .RM__twoRowMenu
+    & {
+        height: @js__height__menu;
     }
 
     .RM__phone
@@ -179,11 +199,19 @@
         + @js__padding__audio * 3;
     }
 
-    .RM__mini
+    .RM__mini.RM__twoRowMenu
     & {
         min-width:
         @js__minWidth__audioBanner
         + @minWidth__audioButtons__minusPlayer
+        + @js__length__iconLarge__mini
+        + @js__padding__audio * 3;
+    }
+
+    .RM__mini.RM__oneRowMenu
+    & {
+        min-width:
+        @minWidth__audioButtons__minusPlayer
         + @js__length__iconLarge__mini
         + @js__padding__audio * 3;
     }
