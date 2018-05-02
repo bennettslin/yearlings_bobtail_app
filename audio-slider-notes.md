@@ -43,3 +43,4 @@
     * Overall styling
 
 * Calibrate touch to be in sync with hover.
+    * This may need to get touch start from verse, then touch move from slider.
