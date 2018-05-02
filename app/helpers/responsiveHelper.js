@@ -19,7 +19,7 @@ import { PHONE_CLASS,
          LS_HEIGHT_ABOVE_OVERLAY_PHONE,
          LS_HEIGHT_ABOVE_OVERLAY_TWO_ROW_MENU,
 
-         TWO_ROW_MENU_BREAKPOINT,
+         TWO_ROW_MENU_BREAKPOINT_MINI,
 
          HIDDEN_NAV_MIN,
          WIKI_SIDE_PADDING_TOTAL } from '../constants/responsive'
@@ -202,7 +202,8 @@ export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
 }
 
 export const getIsTwoRowMenu = ({ windowWidth }) => {
-    return windowWidth < TWO_ROW_MENU_BREAKPOINT
+    console.error('two row menu breakpoint mini', windowWidth, TWO_ROW_MENU_BREAKPOINT_MINI)
+    return windowWidth < TWO_ROW_MENU_BREAKPOINT_MINI
 }
 
 export const getLyricSectionRect = ({

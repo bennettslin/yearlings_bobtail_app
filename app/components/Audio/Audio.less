@@ -2,18 +2,6 @@
 @import "./AudioButtons.less";
 @import "./AudioTimer.less";
 
-// These values *must* be the same in js.
-@js__padding__audio: 12px;
-@js__margin__audioButtons__playerButton: 3px;
-@js__margin__audioButtons__child: 8px;
-@js__minWidth__audioBanner: 220px;
-
-// 232 px.
-@minWidth__audioButtons__minusPlayer:
-    @js__length__icon * 3
-    + @js__margin__audioButtons__playerButton * 2
-    + @js__margin__audioButtons__child;
-
 @paddingX__twoRowMenu: 6px;
 @paddingY__audio:
     (@js__height__menu - @js__height__audio) / 2;
@@ -24,7 +12,9 @@
 
     // Needed for audio banner in overlay.
     position: relative;
-    padding: @paddingY__audio @js__padding__audio;
+
+    // PaddingX at edge is thick margin.
+    padding: @paddingY__audio @js__margin__thick;
 
     background-color: #dbb;
 
@@ -44,6 +34,8 @@
     width: 100%;
 
     &:not(:last-child) {
+
+        // PaddingX between children is thick plus thin margin.
         margin-right: @js__margin__thick + @js__margin__thin;
     }
 }

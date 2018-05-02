@@ -5,19 +5,19 @@ import { DEVICE_OBJECTS } from '../../constants/responsive'
 const AdminToggle = ({
 
     // From props.
-    isHeavyRenderReady,
-    renderReadySongIndex,
-    currentSceneIndex,
-    isPlaying,
-    selectedTimePlayed,
-    updatedTimePlayed,
+    // isHeavyRenderReady,
+    // renderReadySongIndex,
+    // currentSceneIndex,
+    // isPlaying,
+    // selectedTimePlayed,
+    // updatedTimePlayed,
     deviceIndex,
     windowWidth,
     windowHeight
 
-}) => null && (
+}) => (
     <div className="admin-toggle">
-        <div>
+        {/* <div>
             isHeavyRenderReady: {isHeavyRenderReady ? 'true' : 'false'}
         </div>
         <div>
@@ -34,7 +34,7 @@ const AdminToggle = ({
         </div>
         <div>
             updated time: {updatedTimePlayed}
-        </div>
+        </div> */}
         <div>
             {DEVICE_OBJECTS[deviceIndex].className}
         </div>

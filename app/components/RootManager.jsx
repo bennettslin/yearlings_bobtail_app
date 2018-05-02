@@ -255,9 +255,10 @@ class RootManager extends Component {
                 onKeyDown={handleKeyDownPress}
                 tabIndex="-1"
             >
-                <AdminToggle />
 
                 <SwitchManager {...other} />
+
+                <AdminToggle />
 
                 <Players {...audioPlayersProps} />
             </div>

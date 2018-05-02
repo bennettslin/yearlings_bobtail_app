@@ -1,10 +1,12 @@
+// These values *must* be the same in js.
+@js__minWidth__audioBanner: 220px;
+
 @height__audioBanner__display:
     (@js__height__menu - @paddingY__audio * 2) / 2;
 
 .AudioBanner {
     flex-grow: 10;
 
-    margin-right: @js__padding__audio;
     min-width: @js__minWidth__audioBanner;
     line-height: 1em;
 

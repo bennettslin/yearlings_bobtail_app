@@ -1,3 +1,12 @@
+/**
+ * Three regular buttons, plus two thin margins between player buttons, plus
+ * one thick margin between player buttons and option button. Should be 232px.
+ */
+ @js__minWidth__audioButtons__minusPlayer:
+    @js__length__icon * 3
+    + @js__margin__thin * 2
+    + @js__margin__thick;
+
 .AudioButtons {
     flex-grow: 1;
     justify-content: space-between;
@@ -23,5 +32,5 @@
 }
 
 .AudioButton:not(:last-child) {
-    margin-right: @js__margin__audioButtons__playerButton;
+    margin-right: @js__margin__thin;
 }

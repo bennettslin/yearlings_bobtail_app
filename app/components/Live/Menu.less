@@ -171,12 +171,17 @@
     & {
         // If scores tips is hidden, remove audio subfield's right margin.
         margin-right: 0;
-
         min-width:
             @js__minWidth__audioBanner
-            + @minWidth__audioButtons__minusPlayer
+            + @js__minWidth__audioButtons__minusPlayer
             + @js__length__iconLarge
-            + @js__padding__audio * 3;
+
+            /**
+             * Total padding is two thick margins at each end, and thick plus
+             * thin margin between children.
+             */
+            + @js__margin__thick * 3
+            + @js__margin__thin;
     }
 
     .RM__twoRowMenu
@@ -194,17 +199,19 @@
     & {
         min-width:
         @js__minWidth__audioBanner
-        + @minWidth__audioButtons__minusPlayer
+        + @js__minWidth__audioButtons__minusPlayer
         + @js__length__iconLarge__tablet
-        + @js__padding__audio * 3;
+        + @js__margin__thick * 3
+        + @js__margin__thin;
     }
 
     .RM__mini
     & {
         min-width:
-        @minWidth__audioButtons__minusPlayer
+        @js__minWidth__audioButtons__minusPlayer
         + @js__length__iconLarge__mini
-        + @js__padding__audio * 3;
+        + @js__margin__thick * 3
+        + @js__margin__thin;
     }
 
     .RM__twoRowMenu

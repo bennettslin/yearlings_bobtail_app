@@ -83,33 +83,26 @@ LS_HEIGHT_MENU_PHONE =
  * AUDIO VALUES *
  ****************/
 
-LS_PADDING_AUDIO = 12,
-LS_MARGIN_AUDIO_BUTTONS_PLAYER_BUTTON = 3,
-
 // Minimum laptop width prevents this from being wider.
 LS_MINWIDTH_AUDIO_BANNER = 220,
 
+LS_MINWIDTH_AUDIO_BUTTONS_MINUS_PLAYER =
+    LS_LENGTH_ICON * 3
+    + LS_MARGIN_THIN * 2
+    + LS_MARGIN_THICK,
+
 MINWIDTH_AUDIO_MINUS_PLAYER_TOTAL =
     LS_MINWIDTH_AUDIO_BANNER
-    + LS_PADDING_AUDIO * 3
-    + LS_LENGTH_ICON * 3
-    + LS_MARGIN_AUDIO_BUTTONS_PLAYER_BUTTON * 2
-    + LS_MARGIN_THICK,
+    + LS_MINWIDTH_AUDIO_BUTTONS_MINUS_PLAYER
+    + LS_LENGTH_ICON_LARGE
+    + LS_MARGIN_THICK * 3
+    + LS_MARGIN_THIN,
 
 /**********************
  * SCORES TIPS VALUES *
  **********************/
 
-// These values *must* be the same in less.
-LS_MARGIN_SCORES_TIPS_BUTTON = 10,
-
-SCORES_TIPS_CONSTANT =
-    LS_MARGIN_THIN * 2
-    + LS_MARGIN_SCORES_TIPS_BUTTON,
-
-// TODO: Consider consolidating these two calculations.
-
-// Scores tips in main when 1604px or below.
+// Scores tips in main when 1688px or below.
 WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT =
 
     // Menu.
@@ -120,15 +113,9 @@ WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT =
     // Scores tips.
     + LS_LENGTH_ICON_LARGE * 2
     + LS_MARGIN_THIN * 2
-    + LS_MARGIN_THICK
+    + LS_MARGIN_THICK,
 
-    /**
-     * I don't understand why this is necessary, but without it, there is an
-     * additional right margin before the breakpoint that is unnecessary.
-     */
-    - LS_MARGIN_THIN,
-
-// Scores tips in main when 851px or below.
+// Scores tips in main when 935px or below.
 WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET =
 
     // Menu.
@@ -139,19 +126,13 @@ WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET =
     // Scores tips.
     + LS_LENGTH_ICON_LARGE_TABLET * 2
     + LS_MARGIN_THIN * 2
-    + LS_MARGIN_THICK
+    + LS_MARGIN_THICK,
 
-    /**
-     * I don't understand why this is necessary, but without it, there is an
-     * additional right margin before the breakpoint that is unnecessary.
-     */
-    - LS_MARGIN_THIN,
-
-TWO_ROW_MENU_BREAKPOINT =
+TWO_ROW_MENU_BREAKPOINT_MINI =
     MINWIDTH_AUDIO_MINUS_PLAYER_TOTAL
-    + SCORES_TIPS_CONSTANT
+    + LS_MINWIDTH_CHILD_TITLE
     + LS_MARGIN_THIN * 2
-    + LS_LENGTH_ICON_LARGE_MINI * 3,
+    + LS_LENGTH_ICON_LARGE_MINI,
 
 LS_HEIGHT_LYRIC_COLLAPSED = 0.32,
 LS_PADDING_SIDE_POPUP_CONTENT = 20,
@@ -185,13 +166,9 @@ MINI_OBJECT = {
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + LS_LENGTH_ICON_LARGE_MINI
     /**
-     * NOTE: Mini always has scores tips section in main column, so this
+     * NOTE: Mini always has scores tips section in main column, so scores tips
      * breakpoint is unnecessary.
      */
-    // isScoresTipsInMainBreakpoint:
-    //     WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT
-    //     + LS_MARGIN_THIN * 2
-    //     + LS_LENGTH_ICON_LARGE_MINI * 3
 },
 TABLET_OBJECT = {
     className: TABLET_CLASS,
@@ -217,12 +194,9 @@ LAPTOP_OBJECT = {
         + LS_WIDTH_UNCANNY_VALLEY
         + LS_LENGTH_ICON_LARGE
     /**
-     * NOTE: Laptop always has scores tips section in main column, so this
-     * breakpoint is unnecessary.
+     * NOTE: Laptop always has scores tips section in main column, so scores
+     * tips breakpoint is unnecessary.
      */
-    // isScoresTipsInMainBreakpoint:
-    // WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT
-    // + LS_WIDTH_UNCANNY_VALLEY
 },
 MONITOR_OBJECT = {
     className: MONITOR_CLASS,
@@ -296,5 +270,5 @@ module.exports = {
     LS_WIDTH_GOLDEN_CORD,
     LS_WIDTH_UNCANNY_VALLEY,
 
-    TWO_ROW_MENU_BREAKPOINT
+    TWO_ROW_MENU_BREAKPOINT_MINI
 }
