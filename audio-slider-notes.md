@@ -37,5 +37,9 @@
 * Have slider also render only after renderReady.
 
 * Have audio banner in main treatment be the same as title in audio.
-    * Rename to two-row menu.
-    *
+    * Rename to two-row menu. (/)
+    * Do for mini. (/)
+    * Do for laptop.
+    * Overall styling
+
+* Calibrate touch to be in sync with hover.
