@@ -30,9 +30,12 @@
 
 * Render slider verses in slider stanzas. (/)
 
+* Times mask doesn't always work? (/) Still confirm.
+
 * Calculate to accommodate outer borders for SliderStanzas.
 
-* Times mask doesn't always work? (/) Still confirm.
+* Calibrate touch to be in sync with hover.
+    * This may need to get touch start from verse, then touch move from slider.
 
 * Have slider also render only after renderReady.
 
@@ -41,6 +44,3 @@
     * Do for mini. (/)
     * Do for laptop.
     * Overall styling
-
-* Calibrate touch to be in sync with hover.
-    * This may need to get touch start from verse, then touch move from slider.

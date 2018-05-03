@@ -281,31 +281,38 @@ export const getMaxStanzasCount = () => {
     return AlbumData.maxStanzasCount
 }
 
-export const getSliderStanzaData = (songIndex, stanzaTimeIndex) => {
-
+export const getSliderStanzasArray = (songIndex) => {
     const songObject = getSongObject(songIndex),
         { sliderStanzasArray } = songObject
 
-    // Logues do not have this array.
-    if (
-        sliderStanzasArray &&
-        stanzaTimeIndex < sliderStanzasArray.length
-    ) {
-
-        // Return stanza time object.
-        return sliderStanzasArray[stanzaTimeIndex]
-
-    } else {
-
-        // Return placeholder object.
-        return { type: 'placeholder',
-                 verseTimes: [
-                    songObject.totalTime
-                 ],
-                 firstVerseIndex: 0,
-                 endTime: songObject.totalTime }
-    }
+    return sliderStanzasArray || []
 }
+
+// export const getSliderStanzaData = (songIndex, stanzaTimeIndex) => {
+
+//     const songObject = getSongObject(songIndex),
+//         { sliderStanzasArray } = songObject
+
+//     // Logues do not have this array.
+//     if (
+//         sliderStanzasArray &&
+//         stanzaTimeIndex < sliderStanzasArray.length
+//     ) {
+
+//         // Return stanza time object.
+//         return sliderStanzasArray[stanzaTimeIndex]
+
+//     } else {
+
+//         // Return placeholder object.
+//         return { type: 'placeholder',
+//                  verseTimes: [
+//                     songObject.totalTime
+//                  ],
+//                  firstVerseIndex: 0,
+//                  endTime: songObject.totalTime }
+//     }
+// }
 
 /**********
  * SCENES *

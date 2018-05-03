@@ -22,6 +22,12 @@ const SliderStanza = ({
 
 }) => {
 
+    /**
+     * Width of stanza is exactly proportionate to its duration within the
+     * song. However, each stanza then adds a margin of fixed width. As such,
+     * its verse widths remain proportionate to their duration within the
+     * stanza, but *not* within the song.
+     */
     const stanzaWidth = (endTime - verseTimes[0]) / totalTime * 100,
 
         stanzaRight = (totalTime - endTime) / totalTime * 100,
@@ -36,25 +42,28 @@ const SliderStanza = ({
             className={cx(
                 'SliderStanza',
                 'Slider__dynamicBar',
-                `bgColour__stanza__${type}`
+                `bgColour__stanza__${type}`,
+                'flexCentreContainer'
             )}
             style={stanzaStyle}
         >
-            {verseTimes.map((verseTime, index) => {
+            <div className="SliderStanzaVerses">
+                {verseTimes.map((verseTime, index) => {
 
-                // Slider verses only know time relative to stanza.
-                const relativeTotalTime = endTime - verseTimes[0],
-                    relativeVerseTime = verseTime - verseTimes[0]
+                    // Slider verses only know time relative to stanza.
+                    const relativeTotalTime = endTime - verseTimes[0],
+                        relativeVerseTime = verseTime - verseTimes[0]
 
-                return (
-                    <VerseController
-                        key={index}
-                        verseTime={relativeVerseTime}
-                        totalTime={relativeTotalTime}
-                        verseIndex={firstVerseIndex + index}
-                    />
-                )
-            })}
+                    return (
+                        <VerseController
+                            key={index}
+                            verseTime={relativeVerseTime}
+                            totalTime={relativeTotalTime}
+                            verseIndex={firstVerseIndex + index}
+                        />
+                    )
+                })}
+            </div>
         </div>
     )
 }

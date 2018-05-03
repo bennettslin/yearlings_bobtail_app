@@ -7,11 +7,8 @@ import cx from 'classnames'
 
 import SliderStanza from './SliderStanza'
 
-import { getMaxStanzasCount,
-         getSliderStanzaData,
+import { getSliderStanzasArray,
          getSongTotalTime } from '../../../helpers/dataHelper'
-
-import { getArrayOfLength } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     selectedSongIndex
@@ -20,11 +17,10 @@ const mapStateToProps = ({
 })
 
 const sliderStanzasPropTypes = {
+
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired
 }
-
-const maxStanzasCount = getMaxStanzasCount()
 
 const SliderStanzas = ({
 
@@ -33,24 +29,14 @@ const SliderStanzas = ({
 }) => {
 
     const totalTime = getSongTotalTime(selectedSongIndex),
-
-        /**
-         * Dynamically create array of just indices.
-         */
-        stanzaIndices = getArrayOfLength({
-            length: maxStanzasCount
-        })
+        sliderStanzasArray = getSliderStanzasArray(selectedSongIndex)
 
     return (
         <div className={cx(
             'SliderStanzas',
             'absoluteFullContainer'
         )}>
-            {stanzaIndices.map((nothing, stanzaIndex) => {
-
-                const stanzaDataObject = getSliderStanzaData(
-                    selectedSongIndex, stanzaIndex
-                )
+            {sliderStanzasArray.map((stanzaDataObject, stanzaIndex) => {
 
                 return (
                     <SliderStanza {...stanzaDataObject}

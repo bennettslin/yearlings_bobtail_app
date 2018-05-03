@@ -5,12 +5,9 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import omit from 'lodash.omit'
 
-import SliderScenes from './SliderScenes'
+// import SliderScenes from './SliderScenes'
 import SliderStanzas from './Stanzas/SliderStanzas'
-
 import SliderTimes from './Times/SliderTimes'
-// import SliderVerses from './Verses/SliderVerses'
-
 import SliderAccess from './SliderAccess'
 
 /*************
@@ -74,8 +71,7 @@ SliderView = ({
     >
         <SliderTimes/>
         <SliderStanzas />
-        {/* <SliderVerses /> */}
-        <SliderScenes />
+        {/* <SliderScenes /> */}
         <SliderAccess />
 
         {children}

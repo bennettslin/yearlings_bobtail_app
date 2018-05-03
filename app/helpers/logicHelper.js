@@ -321,6 +321,10 @@ export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
     }
 }
 
+// export const getVerseIndexforRatio = (ratio) => {
+
+// }
+
 export const getVerseBarStatus = ({
     deviceIndex,
     windowWidth,
