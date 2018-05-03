@@ -349,6 +349,8 @@ export const getVerseIndexforRatio = (
             const { verseTimes,
                     endTime } = stanzaObject,
 
+                // TODO: Since this is returning the first index for which return is true, we can assume it's before the end ratio. So just check that it's after the start ratio.
+
                 stanzaStartRatio = verseTimes[0] / totalTime,
                 stanzaEndRatio = endTime / totalTime,
                 stanzaWidthRatio = stanzaEndRatio - stanzaStartRatio,
@@ -388,11 +390,16 @@ export const getVerseIndexforRatio = (
         // Now figure out which verse the touch is in.
         verseTimesIndex = findIndex(
             sliderStanzasArray[stanzaIndex].verseTimes, (verseTime, index) => {
-                // const
-                //     verseStartRatio = 0
+
+                // TODO: Do this after refactoring the above to not use the end ratio. That will make figuring this out simpler as well.
+                // Get verse start ratio.
+                // Check that touch in verses ratio is after verse start ratio.
+
                 return false
             }
         )
+
+    console.error(stanzaIndex)
 }
 
 export const getVerseBarStatus = ({

@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Figure out discrepancy between browser width and window width.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Don't scroll carousel or lyrics when selecting new song or moving between portals.`,
         workedHours: 0,
         neededHours: 2
