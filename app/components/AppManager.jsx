@@ -26,7 +26,7 @@ import { CONTINUE,
          TIPS_OPTIONS } from '../constants/options'
 import { getSongObject, getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex, getVerseIndexForNextScene } from '../helpers/dataHelper'
 import { getValueInBitNumber } from '../helpers/bitHelper'
-import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseBarStatus, shouldShowAnnotationForColumn, getIsSomethingBeingShown } from '../helpers/logicHelper'
+import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseIndexforRatio, getVerseBarStatus, shouldShowAnnotationForColumn, getIsSomethingBeingShown } from '../helpers/logicHelper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsPhone, getIsHeightlessLyricColumn, getIsHiddenCarouselNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTwoRowMenu } from '../helpers/responsiveHelper'
 import { getStageCoordinates } from '../helpers/stageHelper'
 import LogHelper from '../helpers/logHelper'
@@ -926,8 +926,11 @@ class App extends Component {
             sliderWidth = clientRect.width,
             sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
-            sliderTime = sliderRatio * getSongObject(this.props.selectedSongIndex).totalTime,
-            sliderVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, sliderTime)
+            sliderVerseIndex = getVerseIndexforRatio(
+                this.props.selectedSongIndex,
+                sliderRatio,
+                sliderWidth
+            )
 
         this.props.setIsSliderTouched(true)
         this.props.setSliderLeft(sliderLeft)
@@ -952,8 +955,11 @@ class App extends Component {
                     sliderWidth } = this.props,
                 sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
 
-                sliderTime = sliderRatio * getSongObject(this.props.selectedSongIndex).totalTime,
-                sliderVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, sliderTime)
+                sliderVerseIndex = getVerseIndexforRatio(
+                    this.props.selectedSongIndex,
+                    sliderRatio,
+                    sliderWidth
+                )
 
             this.props.setSliderRatio(sliderRatio)
             this.props.setSliderVerseIndex(sliderVerseIndex)

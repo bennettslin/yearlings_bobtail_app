@@ -98,6 +98,8 @@ MINWIDTH_AUDIO_MINUS_PLAYER_TOTAL =
     + LS_MARGIN_THICK * 3
     + LS_MARGIN_THIN,
 
+LS_MARGIN_SLIDER_THIN = 3,
+
 /**********************
  * SCORES TIPS VALUES *
  **********************/
@@ -251,6 +253,8 @@ module.exports = {
     LS_HEIGHT_LYRIC_COLLAPSED,
     HEIGHTLESS_LYRIC_MIN: 540,
     HEIGHTLESS_LYRIC_MAX: 720,
+
+    LS_MARGIN_SLIDER_THIN,
 
     LS_HEIGHT_MENU,
 

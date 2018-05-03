@@ -1,17 +1,25 @@
 // General file for calculating stuff.
 // TODO: Break into smaller files.
 
+/* eslint-disable */
+import findIndex from 'lodash.findindex'
+
 import { PORTAL,
          REFERENCE } from '../constants/dots'
 import { LYRIC_COLUMN_KEYS, COLUMN_INDEX } from '../constants/lyrics'
+import { LS_MARGIN_SLIDER_THIN } from '../constants/responsive'
+
 import { getAnnotationObject,
          getSongIsLogue,
          getVerseObject,
          getSongsNotLoguesCount,
+         getSongTotalTime,
+         getSliderStanzasArray,
          getAnnotationDotKeys,
          getAnnotationsCount } from './dataHelper'
 import { intersects } from './dotHelper'
 import { getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsiveHelper'
+import { Certificate, createVerify } from 'crypto';
 
 export const getNextPlayerToRender = (
     selectedSongIndex,
@@ -321,9 +329,71 @@ export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
     }
 }
 
-// export const getVerseIndexforRatio = (ratio) => {
+export const getVerseIndexforRatio = (
 
-// }
+    songIndex,
+    touchInSliderRatio,
+    sliderWidth
+
+) => {
+
+    let touchInStanzaRatio = 0,
+        stanzaWidthRatio = 0
+
+    const sliderStanzasArray = getSliderStanzasArray(songIndex),
+        totalTime = getSongTotalTime(songIndex),
+        lastStanzaIndex = sliderStanzasArray.length - 1,
+
+        // Figure out which stanza the touch is in.
+        stanzaIndex = findIndex(sliderStanzasArray, stanzaObject => {
+            const { verseTimes,
+                    endTime } = stanzaObject,
+
+                stanzaStartRatio = verseTimes[0] / totalTime,
+                stanzaEndRatio = endTime / totalTime,
+                stanzaWidthRatio = stanzaEndRatio - stanzaStartRatio,
+
+                // Get ratio of touch in stanza.
+                touchInStanzaRatio =
+                    (touchInSliderRatio - stanzaStartRatio) / stanzaWidthRatio,
+
+                // Touch should be between stanza start and end.
+                sliderRatioIsInStanza =
+                    touchInStanzaRatio <= 1
+
+            return sliderRatioIsInStanza
+
+        // Stanza index should always be found, but force a number if not.
+        }) || 0,
+
+        /**
+         * Get touch in verses ratio. Verses width is stanza width minus its
+         * margins.
+         */
+        stanzaWidth = stanzaWidthRatio * sliderWidth,
+        touchInStanzaWidth = touchInStanzaRatio * stanzaWidth,
+
+        /**
+         * All stanzas have a left margin. Only the last stanza has a right
+         * margin.
+         */
+        startMarginWidth = LS_MARGIN_SLIDER_THIN,
+        endMarginWidth = stanzaIndex === lastStanzaIndex ?
+            LS_MARGIN_SLIDER_THIN : 0,
+
+        versesWidth = stanzaWidth - startMarginWidth - endMarginWidth,
+        touchInVersesWidth = touchInStanzaWidth - startMarginWidth,
+        touchInVersesRatio = touchInVersesWidth / versesWidth,
+
+        // Now figure out which verse the touch is in.
+        verseTimesIndex = findIndex(
+            sliderStanzasArray[stanzaIndex].verseTimes, (verseTime, index) => {
+                // const
+                //     verseStartRatio = 0
+                return false
+            }
+        )
+}
 
 export const getVerseBarStatus = ({
     deviceIndex,
