@@ -31,14 +31,10 @@
 * Render slider verses in slider stanzas. (/)
 
 * Calculate to accommodate outer borders for SliderStanzas. (/)
+    * Have stanzas overlap.
 
-* Calibrate touch to be in sync with hover. (tolerable for now.)
-    * This may need to get touch start from verse, then touch move from slider.
-
-* Allow verse to be the times mask. (won't do for now.)
-    * Make verse element length just wide enough.
-
-* Have slider also render only after renderReady.
+* Show played time within onCursor for both slider and lyric stanzas.
+    * Choose temporary colours for before and after cursor when slider is not moving.
 
 * Have audio banner in main treatment be the same as title in audio.
     * Rename to two-row menu. (/)
@@ -46,4 +42,15 @@
     * Do for laptop.
     * Overall styling
 
+* Have slider also render only after renderReady.
+
 * Revisit stanzas that are too short to be their own stanzas.
+
+* Rendering performance
+
+# Won't do for now
+
+* Calibrate touch to be in sync with hover. (tolerable for now.)
+    * This may need to get touch start from verse, then touch move from slider.
+
+* Allow verse to be the times mask. (won't do for now.)
