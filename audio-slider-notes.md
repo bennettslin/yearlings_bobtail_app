@@ -35,7 +35,7 @@
 * Calibrate touch to be in sync with hover. (tolerable for now.)
     * This may need to get touch start from verse, then touch move from slider.
 
-* Allow verse to be the times mask.
+* Allow verse to be the times mask. (won't do for now.)
     * Make verse element length just wide enough.
 
 * Have slider also render only after renderReady.

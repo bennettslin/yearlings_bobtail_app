@@ -5,8 +5,40 @@
 
     padding: @js__margin__slider__thin;
 
-    &:not(:last-child) {
-        padding-right: 0;
+    // &:not(:last-child) {
+    //     padding-right: 0;
+    // }
+
+    // Nest to override dynamic bar styling.
+    &.SliderStanza__refrain {
+        height: 50%;
+    }
+    &.SliderStanza__verse {
+        height: 55%;
+    }
+    &.SliderStanza__prechorus {
+        height: 58%;
+    }
+    &.SliderStanza__chorus {
+        height: 60%;
+    }
+    &.SliderStanza__postchorus {
+        height: 50%;
+    }
+    &.SliderStanza__bridge {
+        height: 52%;
+    }
+    &.SliderStanza__coda {
+        height: 45%;
+    }
+    &.SliderStanza__intro {
+        height: 48%;
+    }
+    &.SliderStanza__solo {
+        height: 65%;
+    }
+    &.SliderStanza__outro {
+        height: 40%;
     }
 }
 

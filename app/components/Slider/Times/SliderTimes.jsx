@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import SliderTime from './SliderTime'
-import SliderTimesMask from './SliderTimesMask'
+// import SliderTimesMask from './SliderTimesMask'
 
 import { getSongTotalTime } from '../../../helpers/dataHelper'
 import { getFormattedTime } from '../../../helpers/formatHelper'
@@ -54,7 +54,7 @@ SliderTimes = ({
     return (
         <div className={cx(
             'SliderTimes',
-            'SliderTimes__belowCursor',
+            // 'SliderTimes__belowCursor',
             'absoluteFullContainer'
         )}>
 
@@ -67,7 +67,7 @@ SliderTimes = ({
                 time={remainTime}
             />
 
-            <SliderTimesMask>
+            {/* <SliderTimesMask>
 
                 <div className={cx(
                     'SliderTimes__aboveCursor',
@@ -83,7 +83,7 @@ SliderTimes = ({
                     />
                 </div>
 
-            </SliderTimesMask>
+            </SliderTimesMask> */}
         </div>
     )
 }

@@ -42,19 +42,22 @@ AudioBanner = ({
     return Boolean(isMenuBottomRow) === isTwoRowMenu && (
         <div className={cx(
             'AudioBanner',
+            'absoluteFullContainer',
             { 'Audio__child': isAudioChild }
         )}>
-            <Slider {...other}>
-                <div className={cx(
-                    'AudioBanner__display',
-                    'gradientMask__audioBanner',
-                    'absoluteFullContainer',
-                    'flexAlignContainer'
-                )}>
-                    {songTitle}
-                    <AudioTimer />
-                </div>
-            </Slider>
+
+            <div className={cx(
+                'AudioBanner__display',
+                // 'gradientMask__audioBanner',
+                'absoluteFullContainer',
+                'flexAlignContainer'
+            )}>
+                {songTitle}
+                <AudioTimer />
+            </div>
+
+            <Slider {...other} />
+
         </div>
     )
 }

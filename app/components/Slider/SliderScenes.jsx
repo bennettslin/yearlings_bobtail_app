@@ -38,7 +38,6 @@ SliderScenes = ({
                     (totalTime - sceneTime) / totalTime * 100,
 
                     sceneStyle = {
-                        right: '0',
                         width: `${sceneWidth}%`
                     },
 

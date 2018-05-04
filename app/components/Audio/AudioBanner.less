@@ -10,6 +10,8 @@
     min-width: @js__minWidth__audioBanner;
     line-height: 1em;
 
+    background-color: #8b8;
+
     .RM__twoRowMenu
     & {
         min-width: 200px;
@@ -23,25 +25,23 @@
     height: @height__audioBanner__display;
     justify-content: space-between;
 
-    background-color: #8b8;
-
     .RM__twoRowMenu
     & {
         font-size: 0.85em;
     }
 }
 
-.gradientMask__audioBanner {
+// .gradientMask__audioBanner {
 
-    /** Gradient mask does not work in IE or Edge. */
-    @gradient__audioBanner: linear-gradient(
-        180deg,
-        black,
-        black 90%,
-        transparent
-    );
+//     /** Gradient mask does not work in IE or Edge. */
+//     @gradient__audioBanner: linear-gradient(
+//         180deg,
+//         black,
+//         black 90%,
+//         transparent
+//     );
 
-    // Not taken care of by autoprefixer, unfortunately.
-    -webkit-mask-image: @gradient__audioBanner;
-    mask-image: @gradient__audioBanner;
-}
+//     // Not taken care of by autoprefixer, unfortunately.
+//     -webkit-mask-image: @gradient__audioBanner;
+//     mask-image: @gradient__audioBanner;
+// }

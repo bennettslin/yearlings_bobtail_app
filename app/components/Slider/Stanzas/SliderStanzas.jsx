@@ -41,6 +41,9 @@ const SliderStanzas = ({
                 return (
                     <SliderStanza {...stanzaDataObject}
                         key={stanzaIndex}
+                        isLastStanza={
+                            stanzaIndex === sliderStanzasArray.length - 1
+                        }
                         totalTime={totalTime}
                     />
                 )

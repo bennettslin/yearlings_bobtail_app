@@ -50,14 +50,12 @@ const sliderViewPropTypes = {
 
     // From parent.
     myRef: PropTypes.func.isRequired,
-    children: PropTypes.element,
     handleTouchDown: PropTypes.func.isRequired
 },
 
 SliderView = ({
 
     myRef,
-    children,
     handleTouchDown
 
 }) => (
@@ -73,8 +71,6 @@ SliderView = ({
         <SliderStanzas />
         <SliderScenes />
         <SliderAccess />
-
-        {children}
     </div>
 )
 

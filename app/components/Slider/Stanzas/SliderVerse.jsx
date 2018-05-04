@@ -27,7 +27,6 @@ class SliderVerse extends Component {
 
         verseIndex: PropTypes.number.isRequired,
         startTime: PropTypes.number.isRequired,
-        endTime: PropTypes.number.isRequired,
         totalTime: PropTypes.number.isRequired
     }
 
@@ -46,7 +45,6 @@ class SliderVerse extends Component {
 
                     'verseIndex',
                     'startTime',
-                    'endTime',
                     'totalTime'
                 ]
             })
@@ -61,16 +59,12 @@ class SliderVerse extends Component {
                 isInteractivated,
                 verseIndex,
                 startTime,
-                endTime,
-                totalTime } = this.props,
+                totalTime } = this.props
 
-            verseRight =
-                (totalTime - endTime) / totalTime * 100,
-            verseWidth =
-                (endTime - startTime) / totalTime * 100,
+        const verseWidth =
+                (totalTime - startTime) / totalTime * 100,
 
             verseStyle = {
-                right: `${verseRight}%`,
                 width: `${verseWidth}%`
             },
 
