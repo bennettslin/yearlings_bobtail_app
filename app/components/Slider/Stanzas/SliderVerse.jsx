@@ -25,9 +25,10 @@ class SliderVerse extends Component {
         isAfterCursor: PropTypes.bool.isRequired,
         isInteractivated: PropTypes.bool.isRequired,
 
-        totalTime: PropTypes.number.isRequired,
         verseIndex: PropTypes.number.isRequired,
-        verseTime: PropTypes.number.isRequired
+        startTime: PropTypes.number.isRequired,
+        endTime: PropTypes.number.isRequired,
+        totalTime: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -43,9 +44,10 @@ class SliderVerse extends Component {
                     'isAfterCursor',
                     'isInteractivated',
 
-                    'totalTime',
                     'verseIndex',
-                    'verseTime'
+                    'startTime',
+                    'endTime',
+                    'totalTime'
                 ]
             })
 
@@ -57,19 +59,18 @@ class SliderVerse extends Component {
         const { isOnCursor,
                 isAfterCursor,
                 isInteractivated,
-                totalTime,
                 verseIndex,
-                verseTime } = this.props
+                startTime,
+                endTime,
+                totalTime } = this.props,
 
-        // Don't show title verse.
-        if (verseTime < 0) {
-            return null
-        }
-
-        const verseWidth =
-                (totalTime - verseTime) / totalTime * 100,
+            verseRight =
+                (totalTime - endTime) / totalTime * 100,
+            verseWidth =
+                (endTime - startTime) / totalTime * 100,
 
             verseStyle = {
+                right: `${verseRight}%`,
                 width: `${verseWidth}%`
             },
 

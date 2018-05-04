@@ -202,7 +202,6 @@ export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
 }
 
 export const getIsTwoRowMenu = ({ windowWidth }) => {
-    console.error('two row menu breakpoint mini', windowWidth, TWO_ROW_MENU_BREAKPOINT_MINI)
     return windowWidth < TWO_ROW_MENU_BREAKPOINT_MINI
 }
 

@@ -28,14 +28,16 @@ const SliderStanza = ({
      * its verse widths remain proportionate to their duration within the
      * stanza, but *not* within the song.
      */
-    const stanzaWidth = (endTime - verseTimes[0]) / totalTime * 100,
-
-        stanzaRight = (totalTime - endTime) / totalTime * 100,
+    const stanzaRight = (totalTime - endTime) / totalTime * 100,
+        stanzaWidth = (endTime - verseTimes[0]) / totalTime * 100,
 
         stanzaStyle = {
             right: `${stanzaRight}%`,
             width: `${stanzaWidth}%`
-        }
+        },
+
+        // Slider verses only know time relative to stanza.
+        relativeTotalTime = endTime - verseTimes[0]
 
     return (
         <div
@@ -50,14 +52,19 @@ const SliderStanza = ({
             <div className="SliderStanzaVerses">
                 {verseTimes.map((verseTime, index) => {
 
-                    // Slider verses only know time relative to stanza.
-                    const relativeTotalTime = endTime - verseTimes[0],
-                        relativeVerseTime = verseTime - verseTimes[0]
+                    const relativeStartTime = verseTime - verseTimes[0],
+
+                        // Tell verse its relative end time.
+                        verseEndTime =
+                            index === verseTimes.length - 1 ?
+                                endTime : verseTimes[index + 1],
+                        relativeEndTime = verseEndTime - verseTimes[0]
 
                     return (
                         <VerseController
                             key={index}
-                            verseTime={relativeVerseTime}
+                            startTime={relativeStartTime}
+                            endTime={relativeEndTime}
                             totalTime={relativeTotalTime}
                             verseIndex={firstVerseIndex + index}
                         />
