@@ -24,7 +24,7 @@ import { CONTINUE,
          DISABLED,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
-import { getSongObject, getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex, getVerseIndexForNextScene } from '../helpers/dataHelper'
+import { getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex, getVerseIndexForNextScene } from '../helpers/dataHelper'
 import { getValueInBitNumber } from '../helpers/bitHelper'
 import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseIndexforRatio, getVerseBarStatus, shouldShowAnnotationForColumn, getIsSomethingBeingShown } from '../helpers/logicHelper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsPhone, getIsHeightlessLyricColumn, getIsHiddenCarouselNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTwoRowMenu } from '../helpers/responsiveHelper'
@@ -969,12 +969,13 @@ class App extends Component {
 
     touchBodyEnd() {
         if (this.props.isSliderTouched) {
-            const { props } = this,
-                selectedTime = this.props.sliderRatio * getSongObject(props.selectedSongIndex).totalTime,
-                selectedVerseIndex = getVerseIndexForTime(props.selectedSongIndex, selectedTime),
+
+            // Selected verse is wherever touch ended on slider.
+            const selectedVerseIndex = this.props.sliderVerseIndex,
 
                 // We will start at the beginning of the selected verse.
-                songVerseTimes = getSongVerseTimes(props.selectedSongIndex),
+                songVerseTimes =
+                    getSongVerseTimes(this.props.selectedSongIndex),
                 selectedTimePlayed = songVerseTimes[selectedVerseIndex]
 
             this.selectTime(selectedTimePlayed)

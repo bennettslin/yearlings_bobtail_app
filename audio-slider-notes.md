@@ -30,9 +30,10 @@
 
 * Render slider verses in slider stanzas. (/)
 
-* Times mask doesn't always work? (/) Still confirm.
+* Calculate to accommodate outer borders for SliderStanzas. (/)
 
-* Calculate to accommodate outer borders for SliderStanzas.
+* Allow verse to be the times mask.
+    * Make verse element length just wide enough.
 
 * Calibrate touch to be in sync with hover.
     * This may need to get touch start from verse, then touch move from slider.
@@ -44,3 +45,5 @@
     * Do for mini. (/)
     * Do for laptop.
     * Overall styling
+
+* Revisit stanzas that are too short to be their own stanzas.

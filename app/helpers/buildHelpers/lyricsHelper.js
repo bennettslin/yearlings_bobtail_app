@@ -239,7 +239,7 @@ export const recurseToFindAnchors = ({
         }
 
         // Tell stanza its first verse index.
-        if (!sliderStanzasArray[stanzaIndex].firstVerseIndex) {
+        if (isNaN(sliderStanzasArray[stanzaIndex].firstVerseIndex)) {
             sliderStanzasArray[stanzaIndex].firstVerseIndex =
                 lyricEntity.verseIndex
 

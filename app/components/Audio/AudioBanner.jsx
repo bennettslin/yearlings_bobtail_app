@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Slider from '../slider/Slider'
-// import AudioTimer from './AudioTimer'
-// import { getSongTitle } from '../../helpers/dataHelper'
+import AudioTimer from './AudioTimer'
+import { getSongTitle } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     isTwoRowMenu,
@@ -29,15 +29,15 @@ const audioBannerPropTypes = {
 AudioBanner = ({
 
     isTwoRowMenu,
-    // selectedSongIndex,
+    selectedSongIndex,
     isAudioChild,
     isMenuBottomRow,
 
 ...other }) => {
 
-    // const songTitle = getSongTitle({
-    //     songIndex: selectedSongIndex
-    // })
+    const songTitle = getSongTitle({
+        songIndex: selectedSongIndex
+    })
 
     return Boolean(isMenuBottomRow) === isTwoRowMenu && (
         <div className={cx(
@@ -45,7 +45,7 @@ AudioBanner = ({
             { 'Audio__child': isAudioChild }
         )}>
             <Slider {...other}>
-                {/* <div className={cx(
+                <div className={cx(
                     'AudioBanner__display',
                     'gradientMask__audioBanner',
                     'absoluteFullContainer',
@@ -53,7 +53,7 @@ AudioBanner = ({
                 )}>
                     {songTitle}
                     <AudioTimer />
-                </div> */}
+                </div>
             </Slider>
         </div>
     )

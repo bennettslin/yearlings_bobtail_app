@@ -1,7 +1,6 @@
 // General file for calculating stuff.
 // TODO: Break into smaller files.
 
-/* eslint-disable */
 import findIndex from 'lodash.findindex'
 
 import { PORTAL,
@@ -19,7 +18,6 @@ import { getAnnotationObject,
          getAnnotationsCount } from './dataHelper'
 import { intersects } from './dotHelper'
 import { getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsiveHelper'
-import { Certificate, createVerify } from 'crypto';
 
 export const getNextPlayerToRender = (
     selectedSongIndex,
@@ -337,36 +335,45 @@ export const getVerseIndexforRatio = (
 
 ) => {
 
-    let touchInStanzaRatio = 0,
-        stanzaWidthRatio = 0
-
     const sliderStanzasArray = getSliderStanzasArray(songIndex),
         totalTime = getSongTotalTime(songIndex),
         lastStanzaIndex = sliderStanzasArray.length - 1,
 
         // Figure out which stanza the touch is in.
-        stanzaIndex = findIndex(sliderStanzasArray, stanzaObject => {
-            const { verseTimes,
-                    endTime } = stanzaObject,
+        stanzaIndex = findIndex(sliderStanzasArray, (stanzaObject, index) => {
 
-                // TODO: Since this is returning the first index for which return is true, we can assume it's before the end ratio. So just check that it's after the start ratio.
+            // If it's the last stanza, just return true.
+            if (index === lastStanzaIndex) {
+                return true
+            }
 
-                stanzaStartRatio = verseTimes[0] / totalTime,
-                stanzaEndRatio = endTime / totalTime,
-                stanzaWidthRatio = stanzaEndRatio - stanzaStartRatio,
+            const stanzaEndRatio = stanzaObject.endTime / totalTime,
 
-                // Get ratio of touch in stanza.
-                touchInStanzaRatio =
-                    (touchInSliderRatio - stanzaStartRatio) / stanzaWidthRatio,
+                // Stanza's end ratio should be greater than touch ratio.
+                isTouchInStanza = stanzaEndRatio > touchInSliderRatio
 
-                // Touch should be between stanza start and end.
-                sliderRatioIsInStanza =
-                    touchInStanzaRatio <= 1
+            return isTouchInStanza
+        }),
 
-            return sliderRatioIsInStanza
+        // Get needed values for stanza.
+        { verseTimes,
+          endTime,
+          firstVerseIndex } = sliderStanzasArray[stanzaIndex]
 
-        // Stanza index should always be found, but force a number if not.
-        }) || 0,
+    // If verse times length is 1, just return the first verse.
+    if (verseTimes.length === 1) {
+        return firstVerseIndex
+    }
+
+    const stanzaStartRatio = verseTimes[0] / totalTime,
+        stanzaEndRatio = endTime / totalTime,
+
+        // Width of stanza relative to slider.
+        stanzaWidthRatio = stanzaEndRatio - stanzaStartRatio,
+
+        // Get ratio of touch in stanza.
+        touchInStanzaRatio =
+            (touchInSliderRatio - stanzaStartRatio) / stanzaWidthRatio,
 
         /**
          * Get touch in verses ratio. Verses width is stanza width minus its
@@ -385,21 +392,36 @@ export const getVerseIndexforRatio = (
 
         versesWidth = stanzaWidth - startMarginWidth - endMarginWidth,
         touchInVersesWidth = touchInStanzaWidth - startMarginWidth,
+
+        /**
+         * This is the ratio that will accurately tell us the verse that the
+         * touch is in.
+         */
         touchInVersesRatio = touchInVersesWidth / versesWidth,
+        totalStanzaTime = endTime - verseTimes[0],
 
         // Now figure out which verse the touch is in.
-        verseTimesIndex = findIndex(
-            sliderStanzasArray[stanzaIndex].verseTimes, (verseTime, index) => {
+        verseTimesIndex = findIndex(verseTimes, (verseTime, index) => {
 
-                // TODO: Do this after refactoring the above to not use the end ratio. That will make figuring this out simpler as well.
-                // Get verse start ratio.
-                // Check that touch in verses ratio is after verse start ratio.
+                // If it's the last verse, just return true.
+                if (index === verseTimes.length - 1) {
+                    return true
+                }
 
-                return false
+                const verseEndRatio =
+                    (verseTimes[index + 1] - verseTimes[0]) / totalStanzaTime,
+
+                    // Verse's end ratio should be greater than touch ratio.
+                    isTouchInVerse = verseEndRatio > touchInVersesRatio
+
+                return isTouchInVerse
             }
-        )
+        ),
 
-    console.error(stanzaIndex)
+        // Add stanza's first verse index with the returned verse times index.
+        verseIndex = firstVerseIndex + verseTimesIndex
+
+    return verseIndex
 }
 
 export const getVerseBarStatus = ({
