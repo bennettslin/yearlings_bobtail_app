@@ -28,11 +28,21 @@
 
     .RM__sliderNotMoving
     & {
-        // Default odd verse.
-        background-color: @bgColour__verse__odd;
-        .mixin__textShadow(@bgColour__verse__odd);
+        &.verse__beforeCursor {
+            // Default odd verse.
+            background-color: @bgColour__beforeSelected__odd;
+            .mixin__textShadow(@bgColour__beforeSelected__odd);
 
-        color: #644;
+            color: @colour__beforeSelected__odd;
+        }
+
+        &.verse__afterCursor {
+            // Default odd verse.
+            background-color: @bgColour__afterSelected__odd;
+            .mixin__textShadow(@bgColour__afterSelected__odd);
+
+            color: @colour__afterSelected__odd;
+        }
     }
 
     .RM__sliderMoving
@@ -57,11 +67,21 @@
 
     .RM__sliderNotMoving
     & {
-        // Default even verse.
-        background-color: @bgColour__verse__even;
-        .mixin__textShadow(@bgColour__verse__even);
+        &.verse__beforeCursor {
+            // Default even verse.
+            background-color: @bgColour__beforeSelected__even;
+            .mixin__textShadow(@bgColour__beforeSelected__even);
 
-        color: #533;
+            color: @colour__beforeSelected__even;
+        }
+
+        &.verse__afterCursor {
+            // Default even verse.
+            background-color: @bgColour__afterSelected__even;
+            .mixin__textShadow(@bgColour__afterSelected__even);
+
+            color: @colour__afterSelected__even;
+        }
     }
 
     .RM__sliderMoving

@@ -39,6 +39,7 @@
     * Verse always has a cursor.
     * Cursor animation always starts at 0 and ends at 1.
     * Verse bar does not animate from 1 back to 0.
+    * Slider verse does not animate when clicking.
     * Choose temporary colours for before and after cursor when slider is not moving.
 
 * Have audio banner in main treatment be the same as title in audio.
