@@ -28,6 +28,7 @@ const verseControllerPropTypes = {
     interactivatedVerseIndex: PropTypes.number.isRequired,
 
     // From parent.
+    inVerseBar: PropTypes.bool,
 
     // Passed by SliderStanza.
     verseIndex: PropTypes.number,
@@ -55,23 +56,31 @@ VerseController = ({
 
 ...other }) => {
 
-    const { verseIndex,
+    const { inVerseBar,
+            verseIndex,
             verseObject } = other,
 
-        // Lyric verse will have verse object, slider verse won't.
-        controllerVerseIndex =
-            verseObject ? verseObject.verseIndex : verseIndex,
+        interactableProps = {}
 
-        useSliderIndex = sliderVerseIndex > -1,
-        cursorIndex = useSliderIndex ?
-            sliderVerseIndex : selectedVerseIndex,
+        if (!inVerseBar) {
+            // Lyric verse will have verse object, slider verse won't.
+            const controllerVerseIndex =
+                verseObject ? verseObject.verseIndex : verseIndex,
 
-        isOnCursor = controllerVerseIndex === cursorIndex,
-        isAfterCursor = controllerVerseIndex > cursorIndex,
-        isInteractivated = controllerVerseIndex === interactivatedVerseIndex,
+            useSliderIndex = sliderVerseIndex > -1,
+            cursorIndex = useSliderIndex ?
+                sliderVerseIndex : selectedVerseIndex
+
+            interactableProps.isOnCursor =
+                controllerVerseIndex === cursorIndex
+            interactableProps.isAfterCursor =
+                controllerVerseIndex > cursorIndex
+            interactableProps.isInteractivated =
+                controllerVerseIndex === interactivatedVerseIndex
+        }
 
         // Verse needs verseObject, SliderVerse needs verseIndex.
-        VerseComponent = verseObject ? Verse : SliderVerse,
+        const VerseComponent = verseObject ? Verse : SliderVerse,
 
         // Let verse cursor know the verse's start and end times.
         startTime = verseObject ?
@@ -80,12 +89,8 @@ VerseController = ({
             verseObject.endTime : absoluteEndTime
 
     return (
-        <VerseComponent {...other}
-            isOnCursor={isOnCursor}
-            isAfterCursor={isAfterCursor}
-            isInteractivated={isInteractivated}
-        >
-            {isOnCursor && (
+        <VerseComponent {...other} {...interactableProps}>
+            {(inVerseBar || interactableProps.isOnCursor) && (
                 <VerseCursor
                     startTime={startTime}
                     endTime={endTime}

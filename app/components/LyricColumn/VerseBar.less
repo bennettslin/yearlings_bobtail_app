@@ -26,9 +26,8 @@
 
     max-width: ~"calc(100% - @{offsetX__verseBar} * 2)";
 
-    margin: 0 5px;
-    padding: 10px 15px;
-    border-radius: 10px;
+    margin: 0 @js__margin__thin;
+    // border-radius: 10px;
 
     cursor: pointer;
 
@@ -97,4 +96,8 @@
         bottom: 0;
         transform: translateX(-50%) scale(1);
     }
+}
+
+.Verse__inBar {
+    padding: @js__margin__thick;
 }
