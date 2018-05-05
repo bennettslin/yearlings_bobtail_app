@@ -1,45 +1,53 @@
 @js__margin__slider__thin: 3px;
 
 .SliderStanza {
-    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
 
+    transition:
+        width @animationDuration__default,
+        height @animationDuration__default,
+        background-color @animationDuration__default;
+
+    box-sizing: border-box;
     padding: @js__margin__slider__thin;
 
-    // &:not(:last-child) {
-    //     padding-right: 0;
-    // }
+    // Make slider stanzas all the same height when lyric is expanded.
+    .RM__lyricExpanded
+    & {
+        height: @js__height__audioSlider__bottomRow;
+    }
+}
 
-    // Nest to override dynamic bar styling.
-    &.SliderStanza__refrain {
-        height: 50%;
-    }
-    &.SliderStanza__verse {
-        height: 55%;
-    }
-    &.SliderStanza__prechorus {
-        height: 58%;
-    }
-    &.SliderStanza__chorus {
-        height: 60%;
-    }
-    &.SliderStanza__postchorus {
-        height: 50%;
-    }
-    &.SliderStanza__bridge {
-        height: 52%;
-    }
-    &.SliderStanza__coda {
-        height: 45%;
-    }
-    &.SliderStanza__intro {
-        height: 48%;
-    }
-    &.SliderStanza__solo {
-        height: 65%;
-    }
-    &.SliderStanza__outro {
-        height: 40%;
-    }
+.SliderStanza__refrain {
+    height: 50%;
+}
+.SliderStanza__verse {
+    height: 55%;
+}
+.SliderStanza__prechorus {
+    height: 58%;
+}
+.SliderStanza__chorus {
+    height: 60%;
+}
+.SliderStanza__postchorus {
+    height: 50%;
+}
+.SliderStanza__bridge {
+    height: 52%;
+}
+.SliderStanza__coda {
+    height: 45%;
+}
+.SliderStanza__intro {
+    height: 48%;
+}
+.SliderStanza__solo {
+    height: 65%;
+}
+.SliderStanza__outro {
+    height: 40%;
 }
 
 .SliderStanzaVerses {

@@ -31,7 +31,9 @@
 * Render slider verses in slider stanzas. (/)
 
 * Calculate to accommodate outer borders for SliderStanzas. (/)
-    * Have stanzas overlap.
+    * Have stanzas overlap. (/)
+
+* When two row menu, flatten slider stanzas when lyric is expanded. (/)
 
 * Show played time within onCursor for both slider and lyric stanzas.
     * Choose temporary colours for before and after cursor when slider is not moving.

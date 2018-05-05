@@ -61,7 +61,6 @@ const SliderStanza = ({
         <div
             className={cx(
                 'SliderStanza',
-                'Slider__dynamicBar',
                 `SliderStanza__${type}`,
                 `bgColour__stanza__${type}`,
                 'flexCentreContainer'

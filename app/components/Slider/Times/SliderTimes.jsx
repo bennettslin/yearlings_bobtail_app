@@ -1,4 +1,4 @@
-// Bars to indicate time spent and remaining.
+// Text displays to indicate time spent and remaining.
 
 import React from 'react'
 import PropTypes from 'prop-types'
@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import SliderTime from './SliderTime'
-// import SliderTimesMask from './SliderTimesMask'
 
 import { getSongTotalTime } from '../../../helpers/dataHelper'
 import { getFormattedTime } from '../../../helpers/formatHelper'
@@ -54,7 +53,6 @@ SliderTimes = ({
     return (
         <div className={cx(
             'SliderTimes',
-            // 'SliderTimes__belowCursor',
             'absoluteFullContainer'
         )}>
 
@@ -66,24 +64,6 @@ SliderTimes = ({
             <SliderTime
                 time={remainTime}
             />
-
-            {/* <SliderTimesMask>
-
-                <div className={cx(
-                    'SliderTimes__aboveCursor',
-                    'absoluteFullContainer'
-                )}>
-                    <SliderTime
-                        isSpent
-                        time={spentTime}
-                    />
-
-                    <SliderTime
-                        time={remainTime}
-                    />
-                </div>
-
-            </SliderTimesMask> */}
         </div>
     )
 }
