@@ -60,16 +60,31 @@ VerseController = ({
             verseIndex,
             verseObject } = other,
 
+        // Verse needs verseObject, SliderVerse needs verseIndex.
+        VerseComponent = verseObject ? Verse : SliderVerse,
+
+        isTitle = verseObject && verseObject.isTitle,
+
+        // Let verse cursor know the verse's start and end times.
+        startTime = verseObject ?
+            verseObject.time : absoluteStartTime,
+        endTime = verseObject ?
+            verseObject.endTime : absoluteEndTime,
+
         interactableProps = {}
 
+        /**
+         * Tell verse where it is relative to cursor, and if it's
+         * interactivated.
+         */
         if (!inVerseBar) {
             // Lyric verse will have verse object, slider verse won't.
             const controllerVerseIndex =
                 verseObject ? verseObject.verseIndex : verseIndex,
 
-            useSliderIndex = sliderVerseIndex > -1,
-            cursorIndex = useSliderIndex ?
-                sliderVerseIndex : selectedVerseIndex
+                useSliderIndex = sliderVerseIndex > -1,
+                cursorIndex = useSliderIndex ?
+                    sliderVerseIndex : selectedVerseIndex
 
             interactableProps.isOnCursor =
                 controllerVerseIndex === cursorIndex
@@ -79,19 +94,11 @@ VerseController = ({
                 controllerVerseIndex === interactivatedVerseIndex
         }
 
-        // Verse needs verseObject, SliderVerse needs verseIndex.
-        const VerseComponent = verseObject ? Verse : SliderVerse,
-
-        // Let verse cursor know the verse's start and end times.
-        startTime = verseObject ?
-            verseObject.time : absoluteStartTime,
-        endTime = verseObject ?
-            verseObject.endTime : absoluteEndTime
-
     return (
         <VerseComponent {...other} {...interactableProps}>
-            {(inVerseBar || interactableProps.isOnCursor) && (
+            {!isTitle && (
                 <VerseCursor
+                    showPlayTime={inVerseBar || interactableProps.isOnCursor}
                     startTime={startTime}
                     endTime={endTime}
                     fullCursorRatio={fullCursorRatio}

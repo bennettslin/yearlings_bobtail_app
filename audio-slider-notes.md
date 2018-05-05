@@ -36,7 +36,7 @@
 * When two row menu, flatten slider stanzas when lyric is expanded. (/)
 
 * Show played time within onCursor for both slider and lyric verses. (/)
-    * Verse always has a cursor.
+    * Verse always has a cursor. (/)
     * Cursor animation always starts at 0 and ends at 1.
     * Verse bar does not animate from 1 back to 0.
     * Slider verse does not animate when clicking.

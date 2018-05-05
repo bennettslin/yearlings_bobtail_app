@@ -22,8 +22,7 @@ verseCursorPropTypes = {
     selectedTimePlayed: PropTypes.number.isRequired,
 
     // From parent.
-
-    // TODO: Require these.
+    showPlayTime: PropTypes.bool.isRequired,
     startTime: PropTypes.number.isRequired,
     endTime: PropTypes.number.isRequired,
     fullCursorRatio: PropTypes.number.isRequired
@@ -32,29 +31,33 @@ verseCursorPropTypes = {
 VerseCursor = ({
 
     selectedTimePlayed,
+
+    showPlayTime,
     startTime,
     endTime,
     fullCursorRatio
 
 }) => {
 
-    const relativeTotalTime = endTime - startTime
+    const cursorStyle = {}
 
-    let relativeTimePlayed = selectedTimePlayed - startTime
+    if (showPlayTime) {
+        const relativeTotalTime = endTime - startTime
 
-    if (relativeTimePlayed < 0) {
-        relativeTimePlayed = 0
+        let relativeTimePlayed = selectedTimePlayed - startTime
 
-    } else if (relativeTimePlayed > relativeTotalTime) {
-        relativeTimePlayed = relativeTotalTime
-    }
+        if (relativeTimePlayed < 0) {
+            relativeTimePlayed = 0
 
-    const cursorWidthPercentage =
-            (relativeTimePlayed / relativeTotalTime) * 100,
-
-        cursorStyle = {
-            width: `${cursorWidthPercentage * fullCursorRatio}%`
+        } else if (relativeTimePlayed > relativeTotalTime) {
+            relativeTimePlayed = relativeTotalTime
         }
+
+        const cursorWidthPercentage =
+                (relativeTimePlayed / relativeTotalTime) * 100
+
+        cursorStyle.width = `${cursorWidthPercentage * fullCursorRatio}%`
+    }
 
     return (
         <div
