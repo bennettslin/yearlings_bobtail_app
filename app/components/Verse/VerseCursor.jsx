@@ -69,6 +69,14 @@ VerseCursor = ({
                 (relativeTimePlayed / relativeTotalTime) * 100
 
         cursorStyle.width = `${cursorWidthPercentage * fullCursorRatio}%`
+
+        /**
+         * This ensures that when a verse before cursor is selected, the cursor
+         * does not animate from far right to far left.
+         */
+        if (!cursorWidthPercentage) {
+            cursorStyle.maxWidth = cursorStyle.width
+        }
     }
 
     return (
