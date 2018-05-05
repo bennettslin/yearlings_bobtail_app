@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import { getCursorStatusClassName } from '../../helpers/formatHelper'
+
 const mapStateToProps = ({
     selectedTimePlayed
 }) => ({
@@ -22,7 +24,8 @@ verseCursorPropTypes = {
     selectedTimePlayed: PropTypes.number.isRequired,
 
     // From parent.
-    showPlayTime: PropTypes.bool.isRequired,
+    verseOnCursor: PropTypes.bool.isRequired,
+    verseAfterCursor: PropTypes.bool.isRequired,
     startTime: PropTypes.number.isRequired,
     endTime: PropTypes.number.isRequired,
     fullCursorRatio: PropTypes.number.isRequired
@@ -32,16 +35,22 @@ VerseCursor = ({
 
     selectedTimePlayed,
 
-    showPlayTime,
+    verseOnCursor,
+    verseAfterCursor,
     startTime,
     endTime,
     fullCursorRatio
 
 }) => {
 
-    const cursorStyle = {}
+    const cursorStatusClassName = getCursorStatusClassName({
+            isOnCursor: verseOnCursor,
+            isAfterCursor: verseAfterCursor
+        }),
 
-    if (showPlayTime) {
+        cursorStyle = {}
+
+    if (verseOnCursor) {
         const relativeTotalTime = endTime - startTime
 
         let relativeTimePlayed = selectedTimePlayed - startTime
@@ -63,6 +72,7 @@ VerseCursor = ({
         <div
             className={cx(
                 'VerseCursor',
+                `VerseCursor__${cursorStatusClassName}`,
                 'absoluteFullContainer'
             )}
             style={cursorStyle}

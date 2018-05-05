@@ -1,8 +1,19 @@
 .VerseCursor {
-    background-color: purple;
+    background-color: rgba(200, 150, 250, 0.4);
+}
 
-    transition: width @animationDuration__default;
+.VerseCursor__onCursor {
 
-    // Default width when not selected or slid.
+    .RM__sliderNotMoving
+    & {
+        transition: width @animationDuration__default;
+    }
+}
+
+.VerseCursor__beforeCursor {
+    width: 100%;
+}
+
+.VerseCursor__afterCursor {
     width: 0;
 }

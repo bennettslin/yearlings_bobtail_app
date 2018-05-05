@@ -63,7 +63,11 @@ VerseController = ({
         // Verse needs verseObject, SliderVerse needs verseIndex.
         VerseComponent = verseObject ? Verse : SliderVerse,
 
-        isTitle = verseObject && verseObject.isTitle,
+        /**
+         * If verse is in lyric, only show cursor if it has a time value. If
+         * it's in slider, always show cursor.
+         */
+        doRenderCursor = !isNaN(verseIndex) || !isNaN(verseObject.time),
 
         // Let verse cursor know the verse's start and end times.
         startTime = verseObject ?
@@ -71,18 +75,19 @@ VerseController = ({
         endTime = verseObject ?
             verseObject.endTime : absoluteEndTime,
 
-        interactableProps = {}
+        interactableProps = {},
+        verseBarCursorProps = {},
+
+        // Lyric verse will have verse object, slider verse won't.
+        controllerVerseIndex =
+            verseObject ? verseObject.verseIndex : verseIndex
 
         /**
          * Tell verse where it is relative to cursor, and if it's
          * interactivated.
          */
         if (!inVerseBar) {
-            // Lyric verse will have verse object, slider verse won't.
-            const controllerVerseIndex =
-                verseObject ? verseObject.verseIndex : verseIndex,
-
-                useSliderIndex = sliderVerseIndex > -1,
+            const useSliderIndex = sliderVerseIndex > -1,
                 cursorIndex = useSliderIndex ?
                     sliderVerseIndex : selectedVerseIndex
 
@@ -92,13 +97,22 @@ VerseController = ({
                 controllerVerseIndex > cursorIndex
             interactableProps.isInteractivated =
                 controllerVerseIndex === interactivatedVerseIndex
+
+        /**
+         * Give each verse in the verse bar a unique key to render a new verse
+         * each time. This ensures that the cursor  will not animate from the
+         * far right for the previous verse to the far left for the next verse.
+         */
+        } else {
+            verseBarCursorProps.key = controllerVerseIndex
         }
 
     return (
         <VerseComponent {...other} {...interactableProps}>
-            {!isTitle && (
-                <VerseCursor
-                    showPlayTime={inVerseBar || interactableProps.isOnCursor}
+            {doRenderCursor && (
+                <VerseCursor {...verseBarCursorProps}
+                    verseOnCursor={inVerseBar || interactableProps.isOnCursor}
+                    verseAfterCursor={interactableProps.isAfterCursor}
                     startTime={startTime}
                     endTime={endTime}
                     fullCursorRatio={fullCursorRatio}

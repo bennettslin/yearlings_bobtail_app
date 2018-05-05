@@ -37,9 +37,9 @@
 
 * Show played time within onCursor for both slider and lyric verses. (/)
     * Verse always has a cursor. (/)
-    * Cursor animation always starts at 0 and ends at 1.
-    * Verse bar does not animate from 1 back to 0.
-    * Slider verse does not animate when clicking.
+    * Cursor animation always starts at 0 and ends at 1. (/)
+    * Verse bar does not animate from 1 back to 0. (/)
+    * Make cursor edge a gradient rather than a line?
     * Choose temporary colours for before and after cursor when slider is not moving.
 
 * Have audio banner in main treatment be the same as title in audio.
@@ -53,8 +53,14 @@
 * Revisit stanzas that are too short to be their own stanzas.
 
 * Rendering performance
+    * Verse shouldn't have to care if child changes.
 
-# Won't do for now
+# Save for final styling
+
+* Make cursor edge a gradient?
+* Figure out colouring for interactivated, before cursor, after cursor, on cursor, selected vs. slider, odd vs. even.
+
+# Won't do
 
 * Calibrate touch to be in sync with hover. (tolerable for now.)
     * This may need to get touch start from verse, then touch move from slider.
