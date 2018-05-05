@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import Verse from '../Verse/Verse'
+import VerseCursor from './VerseCursor'
 import SliderVerse from '../Slider/Stanzas/SliderVerse'
 
 const mapStateToProps = ({
@@ -28,11 +29,19 @@ const verseControllerPropTypes = {
 
     // From parent.
 
-    // Passed by SliderVerses.
+    // Passed by SliderStanza.
     verseIndex: PropTypes.number,
 
     // Passed by LyricStanzaCard.
-    verseObject: PropTypes.object
+    verseObject: PropTypes.object,
+
+    /**
+     * For verses in slider. Verses in lyric will get these values from verse
+     * object.
+     */
+    absoluteStartTime: PropTypes.number,
+    absoluteEndTime: PropTypes.number,
+    fullCursorRatio: PropTypes.number
 },
 
 VerseController = ({
@@ -40,6 +49,9 @@ VerseController = ({
     selectedVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex,
+    absoluteStartTime,
+    absoluteEndTime,
+    fullCursorRatio,
 
 ...other }) => {
 
@@ -51,21 +63,36 @@ VerseController = ({
             verseObject ? verseObject.verseIndex : verseIndex,
 
         useSliderIndex = sliderVerseIndex > -1,
-        cursorIndex = useSliderIndex ? sliderVerseIndex : selectedVerseIndex,
+        cursorIndex = useSliderIndex ?
+            sliderVerseIndex : selectedVerseIndex,
 
         isOnCursor = controllerVerseIndex === cursorIndex,
         isAfterCursor = controllerVerseIndex > cursorIndex,
         isInteractivated = controllerVerseIndex === interactivatedVerseIndex,
 
         // Verse needs verseObject, SliderVerse needs verseIndex.
-        VerseComponent = verseObject ? Verse : SliderVerse
+        VerseComponent = verseObject ? Verse : SliderVerse,
+
+        // Let verse cursor know the verse's start and end times.
+        startTime = verseObject ?
+            verseObject.time : absoluteStartTime,
+        endTime = verseObject ?
+            verseObject.endTime : absoluteEndTime
 
     return (
         <VerseComponent {...other}
             isOnCursor={isOnCursor}
             isAfterCursor={isAfterCursor}
             isInteractivated={isInteractivated}
-        />
+        >
+            {isOnCursor && (
+                <VerseCursor
+                    startTime={startTime}
+                    endTime={endTime}
+                    fullCursorRatio={fullCursorRatio}
+                />
+            )}
+        </VerseComponent>
     )
 }
 

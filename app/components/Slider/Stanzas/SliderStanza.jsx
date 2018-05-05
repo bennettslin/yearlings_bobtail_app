@@ -70,14 +70,32 @@ const SliderStanza = ({
             <div className="SliderStanzaVerses">
                 {verseTimes.map((verseTime, index) => {
 
-                    const relativeStartTime = verseTime - verseTimes[0]
+                    // Pass relative times for slider verses.
+                    const relativeStartTime = verseTime - verseTimes[0],
+
+                        // Pass absolute times for slider cursor.
+                        absoluteEndTime = index === verseTimes.length - 1 ?
+                            endTime : verseTimes[index + 1],
+
+                        /**
+                         * Let cursor know what percentage of the width bar it
+                         * should take up when it's full.
+                         */
+                        fullCursorRatio =
+                            (absoluteEndTime - verseTime)
+                            / (endTime - verseTime)
 
                     return (
                         <VerseController
                             key={index}
-                            startTime={relativeStartTime}
-                            totalTime={relativeTotalTime}
                             verseIndex={firstVerseIndex + index}
+
+                            relativeStartTime={relativeStartTime}
+                            relativeTotalTime={relativeTotalTime}
+
+                            absoluteStartTime={verseTime}
+                            absoluteEndTime={absoluteEndTime}
+                            fullCursorRatio={fullCursorRatio}
                         />
                     )
                 })}

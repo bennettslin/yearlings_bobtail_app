@@ -171,7 +171,9 @@ verseViewPropTypes = {
     myRef: PropTypes.func.isRequired,
     handleInteractivatableClick: PropTypes.func,
     handleLyricPlay: PropTypes.func,
-    handleLyricVerseSelect: PropTypes.func
+    handleLyricVerseSelect: PropTypes.func,
+
+    children: PropTypes.any
 },
 
 VerseView = ({
@@ -190,6 +192,8 @@ VerseView = ({
     handleInteractivatableClick,
     handleLyricPlay,
     handleLyricVerseSelect,
+
+    children,
 
 ...other }) => {
 
@@ -224,7 +228,7 @@ VerseView = ({
             onClick={handleInteractivatableClick}
             onTouchStart={handleInteractivatableClick}
         >
-
+            {children}
             {isInteractable && (
                 <VerseAudio
                     verseIndex={verseIndex}
