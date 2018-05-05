@@ -1,12 +1,17 @@
-// Used by OverlayPopups only.
-.topHeight__mainColumn__desktop {
+/**
+ * Used by OverlayPopups only. For desktop, OverviewLogue shares styling with
+ * LyricColumn.
+ */
+.topHeight__overlayPopups__desktop {
 
     top: @js__height__menu;
     height: ~"calc(100% - @{js__height__menu})";
 }
 
-// Used by both OverlayPopups and OverviewLogue.
-.topHeight__mainColumn__mobile {
+/**
+ * Used by both OverlayPopups and OverviewLogue.
+ */
+.topHeight__overlayPopups__mobile {
 
     .RM__mobile
     & {
@@ -14,15 +19,18 @@
         height: ~"calc(100% - @{js__height__menu})";
     }
 
-    .RM__twoRowMenu
-    & {
-        top: @js__height__aboveOverlay__twoRowMenu;
-        height: ~"calc(100% - @{js__height__aboveOverlay__twoRowMenu})";
-    }
-
     .RM__phone
     & {
         top: @js__height__aboveOverlay__phone;
         height: ~"calc(100% - @{js__height__aboveOverlay__phone})";
+    }
+}
+
+.topHeight__overlayPopups {
+
+    .RM__twoRowMenu
+    & {
+        top: @js__height__aboveOverlay__twoRowMenu;
+        height: ~"calc(100% - @{js__height__aboveOverlay__twoRowMenu})";
     }
 }

@@ -19,6 +19,7 @@ import { PHONE_CLASS,
          LS_HEIGHT_ABOVE_OVERLAY_PHONE,
          LS_HEIGHT_ABOVE_OVERLAY_TWO_ROW_MENU,
 
+         TWO_ROW_MENU_BREAKPOINT_LAPTOP,
          TWO_ROW_MENU_BREAKPOINT_MINI,
 
          HIDDEN_NAV_MIN,
@@ -201,8 +202,13 @@ export const getIsScoresTipsInMain = ({ deviceIndex, windowWidth }) => {
     }
 }
 
-export const getIsTwoRowMenu = ({ windowWidth }) => {
-    return windowWidth < TWO_ROW_MENU_BREAKPOINT_MINI
+export const getIsTwoRowMenu = ({ deviceIndex, windowWidth }) => {
+
+    const isDesktop = getIsDesktop(deviceIndex),
+        twoRowMenuBreakpoint = isDesktop ?
+            TWO_ROW_MENU_BREAKPOINT_LAPTOP : TWO_ROW_MENU_BREAKPOINT_MINI
+
+    return windowWidth < twoRowMenuBreakpoint
 }
 
 export const getLyricSectionRect = ({
@@ -230,7 +236,7 @@ export const getLyricSectionRect = ({
          */
         top = windowHeight * (1 - LS_HEIGHT_LYRIC_COLLAPSED)
 
-    } else if (getIsTwoRowMenu({ windowWidth })) {
+    } else if (getIsTwoRowMenu({ deviceIndex, windowWidth })) {
 
         if (_getIsMini(deviceIndex)) {
             top = LS_HEIGHT_ABOVE_OVERLAY_TWO_ROW_MENU

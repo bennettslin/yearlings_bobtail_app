@@ -40,11 +40,12 @@
     * Cursor animation always starts at 0 and ends at 1. (/)
     * Verse bar does not animate from 1 back to 0. (/)
     * Choose temporary colours for before and after cursor when slider is not moving. (/)
+    * Clicking on a previous verse does not animate the cursor.
 
 * Have audio banner in main treatment be the same as title in audio.
     * Rename to two-row menu. (/)
     * Do for mini. (/)
-    * Do for laptop.
+    * Do for laptop. (/)
     * Overall styling
 
 * Have slider also render only after renderReady.

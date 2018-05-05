@@ -13,7 +13,9 @@
     padding: @js__margin__slider__thin;
 
     // Make slider stanzas all the same height when lyric is expanded.
-    .RM__lyricExpanded
+    .RM__twoRowMenu.RM__overlayShown
+    &,
+    .RM__twoRowMenu.RM__lyricExpanded
     & {
         height: @js__height__audioSlider__bottomRow;
     }

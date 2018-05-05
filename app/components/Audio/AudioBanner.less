@@ -1,5 +1,5 @@
 // These values *must* be the same in js.
-@js__minWidth__audioBanner: 220px;
+@js__minWidth__audioBanner: 320px;
 
 @height__audioBanner__display:
     (@js__height__menu - @paddingY__audio * 2) / 2;
@@ -30,18 +30,3 @@
         font-size: 0.85em;
     }
 }
-
-// .gradientMask__audioBanner {
-
-//     /** Gradient mask does not work in IE or Edge. */
-//     @gradient__audioBanner: linear-gradient(
-//         180deg,
-//         black,
-//         black 90%,
-//         transparent
-//     );
-
-//     // Not taken care of by autoprefixer, unfortunately.
-//     -webkit-mask-image: @gradient__audioBanner;
-//     mask-image: @gradient__audioBanner;
-// }

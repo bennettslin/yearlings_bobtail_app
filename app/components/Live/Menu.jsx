@@ -50,60 +50,65 @@ Menu = ({
     return (
         <div className="Menu">
 
-            {/* Positioned earlier in DOM to slide behind menu. */}
-            <div className={cx(
-                'MenuRow',
-                'MenuBottomRow',
-                'width__mainColumn'
-            )}>
-                <AudioBanner {...audioBannerHandlers}
-                    isMenuBottomRow
-                />
-            </div>
-
             <div
                 className={cx(
-                    'MenuRow',
-                    'MenuTopRow',
+                    'MenuRows',
                     'width__mainColumn',
-                    'boxShadow__popupView'
+                    'absoluteFullContainer'
                 )}
                 style={{
                     marginLeft: menuMarginInOverlay,
                     marginRight: menuMarginInOverlay
                 }}
             >
+                {/* Positioned earlier in DOM to slide behind menu. */}
                 <div className={cx(
-                    'MenuRowChild__title',
-                    'MenuRowChild',
-                    'widths__hiddenInOverlay'
+                    'MenuRow',
+                    'MenuBottomRow'
                 )}>
-                    <div className={cx(
-                        'MenuRowChild__title__child',
-                        'absoluteFullContainer'
-                    )}>
-                        <TitleToggle {...titleToggleHandlers} />
-                    </div>
-                </div>
-
-                <div className={cx(
-                    'MenuRowChild__audio',
-                    'MenuRowChild'
-                )}>
-                    <Audio {...audioHandlers} />
-                </div>
-
-                <div className={cx(
-                    'MenuRowChild__scoresTips',
-                    'MenuRowChild',
-                    'widths__hiddenInOverlay'
-                )}>
-                    <ScoresTips {...scoresTipsHandlers}
-                        inMenu
+                    <AudioBanner {...audioBannerHandlers}
+                        isMenuBottomRow
                     />
                 </div>
-            </div>
 
+                <div
+                    className={cx(
+                        'MenuRow',
+                        'MenuTopRow',
+                        'boxShadow__popupView'
+                    )}
+                >
+                    <div className={cx(
+                        'MenuRowChild__title',
+                        'MenuRowChild',
+                        'widths__hiddenInOverlay'
+                    )}>
+                        <div className={cx(
+                            'MenuRowChild__title__child',
+                            'absoluteFullContainer'
+                        )}>
+                            <TitleToggle {...titleToggleHandlers} />
+                        </div>
+                    </div>
+
+                    <div className={cx(
+                        'MenuRowChild__audio',
+                        'MenuRowChild'
+                    )}>
+                        <Audio {...audioHandlers} />
+                    </div>
+
+                    <div className={cx(
+                        'MenuRowChild__scoresTips',
+                        'MenuRowChild',
+                        'widths__hiddenInOverlay'
+                    )}>
+                        <ScoresTips {...scoresTipsHandlers}
+                            inMenu
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

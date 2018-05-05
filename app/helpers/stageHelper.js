@@ -168,7 +168,7 @@ export const getCentreFieldHeight = ({
 
     let menuHeight = LS_HEIGHT_MENU
 
-    if (getIsTwoRowMenu({ windowWidth })) {
+    if (getIsTwoRowMenu({ deviceIndex, windowWidth })) {
 
         if (getIsPhone(deviceIndex)) {
             menuHeight = LS_HEIGHT_MENU_PHONE

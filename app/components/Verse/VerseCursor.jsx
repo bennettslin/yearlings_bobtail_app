@@ -25,7 +25,10 @@ verseCursorPropTypes = {
 
     // From parent.
     verseOnCursor: PropTypes.bool.isRequired,
-    verseAfterCursor: PropTypes.bool.isRequired,
+
+    // Not passed by verse bar.
+    verseAfterCursor: PropTypes.bool,
+
     startTime: PropTypes.number.isRequired,
     endTime: PropTypes.number.isRequired,
     fullCursorRatio: PropTypes.number.isRequired

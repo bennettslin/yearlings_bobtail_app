@@ -6,7 +6,7 @@
  * Needed by JavaScript to calculate scores tips in main breakpoints.
  */
 @js__maxWidth__childAudio: 720px; // Arbitrary.
-@js__minWidth__childTitle: 72px; // Arbitrary.
+@js__minWidth__childTitle: 80px; // Arbitrary.
 
 @maxWidth__childTitle: 200px; // Arbitrary.
 
@@ -65,19 +65,7 @@
     }
 }
 
-.MenuRow {
-    z-index: @zIndex__menuField;
-}
-
-.MenuTopRow {
-    position: relative;
-    height: 100%;
-
-    overflow: hidden;
-
-    background-color: #8dd;
-
-    transform: translateX(0);
+.MenuRows {
 
     transition:
         margin @animationDuration__slow,
@@ -97,6 +85,22 @@
     &.width__mainColumn {
         max-width: @js__width__mini;
     }
+}
+
+.MenuRow {
+    z-index: @zIndex__menuField;
+    width: 100%;
+}
+
+.MenuTopRow {
+    position: relative;
+    height: 100%;
+
+    overflow: hidden;
+
+    background-color: #8dd;
+
+    transform: translateX(0);
 
     .RM__twoRowMenu
     & {
@@ -171,23 +175,17 @@
     & {
         // If scores tips is hidden, remove audio subfield's right margin.
         margin-right: 0;
+
+        /**
+         * Total padding is two thick margins at each end, and thick plus
+         * thin margin between children.
+         */
         min-width:
             @js__minWidth__audioBanner
             + @js__minWidth__audioButtons__minusPlayer
             + @js__length__iconLarge
-
-            /**
-             * Total padding is two thick margins at each end, and thick plus
-             * thin margin between children.
-             */
             + @js__margin__thick * 3
             + @js__margin__thin;
-    }
-
-    .RM__twoRowMenu
-    & {
-        // If title is hidden, remove audio subfield's left margin.
-        margin-left: 0;
     }
 
     .RM__mobile
@@ -216,6 +214,9 @@
 
     .RM__twoRowMenu
     & {
+        // If title is hidden, remove audio subfield's left margin.
+        margin-left: 0;
+
         // Once title is in audio, minWidth doesn't matter.
         min-width: 0;
     }
