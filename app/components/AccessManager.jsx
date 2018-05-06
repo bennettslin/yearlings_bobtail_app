@@ -140,13 +140,15 @@ class AccessManager extends Component {
 
                 eventHandlers } = this.props,
 
-            isLogue = getSongIsLogue(selectedSongIndex)
+            isLogue = getSongIsLogue(selectedSongIndex),
+
+            isVerseInteractivated = interactivatedVerseIndex > -1
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
         if (!isLogue && !selectedScoreIndex && !selectedWikiIndex) {
-            if (interactivatedVerseIndex > -1 && keyName === ENTER) {
+            if (isVerseInteractivated && keyName === ENTER) {
 
                 // Interactivated verse is already selected, so toggle play.
                 if (interactivatedVerseIndex === selectedVerseIndex) {
@@ -170,7 +172,7 @@ class AccessManager extends Component {
 
                 // We're in nav section.
             } else if (!this.props.selectedCarouselNavIndex &&
-                       !isHeightlessLyricColumn && !isLyricExpanded) {
+                       !isHeightlessLyricColumn && !isLyricExpanded && !isVerseInteractivated) {
 
                 ({ annotationIndexWasAccessed,
                     keyWasRegistered } = this._handleNavNavigation(e, keyName))
@@ -351,8 +353,8 @@ class AccessManager extends Component {
                 case ENTER:
                     keyWasRegistered = eventHandlers.handleNavSongSelect(e, accessedNavSongIndex)
                     /**
-                     * If song was successfully selected, then annotation index was
-                     * also accessed.
+                     * If song was successfully selected, then annotation index
+                     * was also accessed.
                      */
                     annotationIndexWasAccessed = keyWasRegistered
                     break

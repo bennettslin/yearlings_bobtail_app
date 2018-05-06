@@ -152,7 +152,12 @@ class EventManager extends Component {
             this.props.interactivateVerseDirection(direction)
 
         this._closeSections({
-            exemptCarousel: true,
+            /**
+             * Once verse has been interactivated through access, close nav and
+             * force carousel so that access navigation keys do not conflict.
+             */
+            forceCarousel: true,
+
             exemptDots: true,
             exemptOverview: true,
             exemptTips: true,
@@ -311,7 +316,6 @@ class EventManager extends Component {
 
         this._closeSections({
             exemptAnnotation: true,
-            exemptCarousel: true,
             exemptDots: true,
             exemptInteractivatedVerse: true,
             exemptOverview: true,
@@ -345,7 +349,6 @@ class EventManager extends Component {
         if (dotsToggled) {
             this.stopPropagation(e)
             this._closeSections({
-                exemptCarousel: true,
                 exemptDots: true,
                 continuePastClosingPopups: true
             })
@@ -363,7 +366,6 @@ class EventManager extends Component {
             this.stopPropagation(e)
             this._closeSections({
                 exemptAnnotation: true,
-                exemptCarousel: true,
                 exemptLyric: true,
                 continuePastClosingPopups: true
             })
@@ -435,7 +437,6 @@ class EventManager extends Component {
         this.stopPropagation(e)
         this._closeSections({
             exemptAnnotation: true,
-            exemptCarousel: true,
             exemptLyric: true
         })
         this.props.selectAnnotation({
@@ -490,7 +491,6 @@ class EventManager extends Component {
         if (overviewToggled) {
             this.stopPropagation(e)
             this._closeSections({
-                exemptCarousel: true,
                 exemptOverview: true,
                 continuePastClosingPopups: true
             })
@@ -579,7 +579,6 @@ class EventManager extends Component {
         if (tipsToggled) {
             this.stopPropagation(e)
             this._closeSections({
-                exemptCarousel: true,
                 exemptOverview: true,
                 exemptTips: true,
                 continuePastClosingPopups: true
@@ -651,7 +650,6 @@ class EventManager extends Component {
         const exemptOverview = !this.props.selectedTipsIndex;
 
         this._closeSections({
-            exemptCarousel: true,
             exemptLyric: true,
             exemptOverview
         })
@@ -718,7 +716,6 @@ class EventManager extends Component {
             this.stopPropagation(e)
             this._closeSections({
                 exemptDots: true,
-                exemptCarousel: true,
                 exemptInteractivatedVerse: true,
                 exemptLyric: true,
                 exemptOverview: true,
@@ -754,7 +751,7 @@ class EventManager extends Component {
     _closeSections({
 
         exemptAnnotation,
-        exemptCarousel,
+        forceCarousel,
         exemptDots,
         exemptLyric,
         exemptOverview,
@@ -802,8 +799,8 @@ class EventManager extends Component {
             this.props.selectAnnotation({})
         }
 
-        if (!exemptCarousel) {
-            this.props.selectCarouselNav(false)
+        if (forceCarousel) {
+            this.props.selectCarouselNav(true)
         }
 
         if (!exemptDots) {
