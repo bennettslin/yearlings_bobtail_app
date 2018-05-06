@@ -2892,4 +2892,9 @@ module.exports = [
         workedHours: 8,
         neededHours: 8
     },
+    {
+        taskName: `Finish this round of Slider and twoRowMenu work.`,
+        workedHours: 28,
+        neededHours: 28
+    },
 ]

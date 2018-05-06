@@ -49,7 +49,7 @@
 
 * Have slider also render only after renderReady. (/)
 
-* Revisit stanzas that are too short to be their own stanzas.
+* Revisit stanzas that are too short to be their own stanzas. (/)
 
 # Save for later.
 

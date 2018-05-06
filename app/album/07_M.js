@@ -6,7 +6,7 @@ import { BACKSTORY,
 import { VERSES,
          CHORUS,
          INTRO,
-         REFRAIN,
+         RESPONSE,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { BENNETT_APARTMENT_COUCH_TILES,
@@ -250,36 +250,33 @@ module.exports = {
                         }
                     }
                 },
-                stanzaType: INTRO
-            }
-        ],
-        [
-            {
-                time: 33,
-                centre: {
-                    anchor: `Maravijaya…`,
-                    properNoun: true,
-                    annotation: {
-                        description: [
-                            {
-                                italic: `Maravijaya,`
-                            },
-                            `which translates to "victory over Mara" in Sanskrit, is the seated posture of the Buddha as he fended off temptations from`,
-                            {
-                                anchor: `Mara,`,
-                                wiki: `Mara_(demon)`
-                            },
-                            `the demon who personifies fear and death in Buddhism. In the same way, I had to summon otherworldly reserves of self-denial to get through band practise after Jacob and Mara started dating.`
-                        ],
-                        dotKeys: {
-                            [OBSERVATION]: true
+                substanza: [
+                    {
+                        time: 33,
+                        centre: {
+                            anchor: `Maravijaya…`,
+                            properNoun: true,
+                            annotation: {
+                                description: [
+                                    {
+                                        italic: `Maravijaya,`
+                                    },
+                                    `which translates to "victory over Mara" in Sanskrit, is the seated posture of the Buddha as he fended off temptations from`,
+                                    {
+                                        anchor: `Mara,`,
+                                        wiki: `Mara_(demon)`
+                                    },
+                                    `the demon who personifies fear and death in Buddhism. In the same way, I had to summon otherworldly reserves of self-denial to get through band practise after Jacob and Mara started dating.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            }
                         }
                     }
-                }
-            },
-            {
-                unitMap: true,
-                stanzaType: REFRAIN
+                ],
+                stanzaType: INTRO,
+                substanzaType: RESPONSE
             }
         ],
         [
