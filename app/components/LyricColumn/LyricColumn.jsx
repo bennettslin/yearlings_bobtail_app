@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
+import omit from 'lodash.omit'
+
 import LyricColumnAccess from './LyricColumnAccess'
 import LyricToggleExpand from './LyricToggleExpand'
 import LyricToggleEar from './LyricToggleEar'
@@ -117,16 +119,10 @@ class LyricColumn extends Component {
     }
 
     render() {
-
-        /* eslint-disable no-unused-vars */
-        const { handleScrollAfterLyricRerender,
-        /* eslint-enable no-unused-vars */
-
-                ...other } = this.props
+        const other = omit(this.props, 'handleScrollAfterLyricRerender')
 
         return (
             <LyricColumnView {...other}
-                // myRef={(node) => (this.myLyricColumn = node)}
                 overrideTransitions={this.state.overrideTransitions}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
@@ -172,11 +168,9 @@ LyricColumnView = ({
     handleVerseBarWheel,
 
     // From controller.
-    // myRef,
     overrideTransitions,
     isTransitioningHeight,
     handleTransition,
-    // handleAnimatableTransition,
     completeHeightTransition,
 
 ...other }) => {
@@ -200,7 +194,6 @@ LyricColumnView = ({
                 isHeavyRenderReady ? 'renderReady' : 'renderUnready',
                 { 'overrideTransitions': overrideTransitions }
             )}
-            // ref={myRef}
             onTransitionEnd={handleTransition}
         >
             <Lyric {...other}

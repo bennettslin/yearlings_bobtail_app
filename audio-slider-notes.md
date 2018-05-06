@@ -52,15 +52,16 @@
 * Revisit stanzas that are too short to be their own stanzas.
 
 * Rendering performance
-    * Verse shouldn't have to care if child changes.
+    * Once entire stanza is before or after cursor, it should take care of this knowledge. Its individual verses shouldn't have to care.
 
 # Save for final styling
 
+* Make them SVGs!
 * Make cursor edge a gradient?
 * Figure out colouring for interactivated, before cursor, after cursor, on cursor, selected vs. slider, odd vs. even.
 * Padding and margins for two-row menu.
 
-# Won't do
+# Won't do for now.
 
 * Calibrate touch to be in sync with hover. (tolerable for now.)
     * This may need to get touch start from verse, then touch move from slider.
