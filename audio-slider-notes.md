@@ -47,19 +47,18 @@
     * Do for mini. (/)
     * Do for laptop. (/)
 
-* Have slider also render only after renderReady.
+* Have slider also render only after renderReady. (/)
 
 * Revisit stanzas that are too short to be their own stanzas.
 
-* Rendering performance
-    * Once entire stanza is before or after cursor, it should take care of this knowledge. Its individual verses shouldn't have to care.
-
-# Save for final styling
+# Save for later.
 
 * Make them SVGs!
 * Make cursor edge a gradient?
 * Figure out colouring for interactivated, before cursor, after cursor, on cursor, selected vs. slider, odd vs. even.
 * Padding and margins for two-row menu.
+* Rendering performance
+    * Once entire stanza is before or after cursor, it should take care of this knowledge. Its individual verses shouldn't have to care.
 
 # Won't do for now.
 

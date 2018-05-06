@@ -5,10 +5,17 @@
 
 .Slider {
     height: 100%;
+    opacity: 0;
+
+    transition: opacity @animationDuration__default;
 
     .RM__song
     & {
         cursor: pointer;
+    }
+
+    &.renderReady {
+        opacity: 1;
     }
 }
 
@@ -22,4 +29,9 @@
     transition:
         width @animationDuration__default,
         background-color @animationDuration__default;
+
+    .overrideTransitions
+    & {
+        transition: none;
+    }
 }

@@ -2,13 +2,21 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import cx from 'classnames'
-import omit from 'lodash.omit'
 
 import SliderScenes from './SliderScenes'
 import SliderStanzas from './Stanzas/SliderStanzas'
 import SliderTimes from './Times/SliderTimes'
 import SliderAccess from './SliderAccess'
+
+import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+
+const mapStateToProps = ({
+    isHeavyRenderReady
+}) => ({
+    isHeavyRenderReady
+})
 
 /*************
  * CONTAINER *
@@ -23,7 +31,42 @@ class Slider extends Component {
 
     constructor(props) {
         super(props)
+
+        this.state = {
+            overrideTransitions: false
+        }
+
         this._handleTouchDown = this._handleTouchDown.bind(this)
+        this._handleTransition = this._handleTransition.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const { props } = this,
+            componentShouldUpdate = getComponentShouldUpdate({
+                props,
+                nextProps,
+                updatingPropsArray: [
+                    'isHeavyRenderReady'
+                ]
+            })
+
+        return componentShouldUpdate
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.isHeavyRenderReady && !nextProps.isHeavyRenderReady) {
+            this.setState({
+                overrideTransitions: true
+            })
+        }
+    }
+
+    _handleTransition(e) {
+        if (e.propertyName === 'opacity') {
+            this.setState({
+                overrideTransitions: false
+            })
+        }
     }
 
     _handleTouchDown(e) {
@@ -31,49 +74,28 @@ class Slider extends Component {
     }
 
     render() {
-        const other = omit(this.props, 'handleSliderTouchBegin')
+        const { isHeavyRenderReady } = this.props,
+            { overrideTransitions } = this.state
 
         return (
-            <SliderView {...other}
-                myRef={(node) => (this.mySlider = node)}
-                handleTouchDown={this._handleTouchDown}
-            />
+            <div
+                className={cx(
+                    'Slider',
+                    isHeavyRenderReady ? 'renderReady' : 'renderUnready',
+                    { 'overrideTransitions': overrideTransitions }
+                )}
+                ref={(node) => (this.mySlider = node)}
+                onMouseDown={this._handleTouchDown}
+                onTouchStart={this._handleTouchDown}
+                onTransitionEnd={this._handleTransition}
+            >
+                <SliderTimes/>
+                <SliderStanzas />
+                <SliderScenes />
+                <SliderAccess />
+            </div>
         )
     }
 }
 
-/****************
- * PRESENTATION *
- ****************/
-
-const sliderViewPropTypes = {
-
-    // From parent.
-    myRef: PropTypes.func.isRequired,
-    handleTouchDown: PropTypes.func.isRequired
-},
-
-SliderView = ({
-
-    myRef,
-    handleTouchDown
-
-}) => (
-    <div
-        className={cx(
-            'Slider'
-        )}
-        ref={myRef}
-        onMouseDown={handleTouchDown}
-        onTouchStart={handleTouchDown}
-    >
-        <SliderTimes/>
-        <SliderStanzas />
-        <SliderScenes />
-        <SliderAccess />
-    </div>
-)
-
-SliderView.propTypes = sliderViewPropTypes
-
-export default Slider
+export default connect(mapStateToProps)(Slider)
