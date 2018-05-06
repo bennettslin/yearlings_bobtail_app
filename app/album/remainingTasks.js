@@ -1,6 +1,18 @@
 module.exports = [
 
     {
+        taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Allow user to enable and disable auto scroll.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
         taskName: `Don't scroll carousel or lyrics when selecting new song or moving between portals.`,
         workedHours: 0,
         neededHours: 2
@@ -71,27 +83,18 @@ module.exports = [
      * Text colours.
      */
     {
-        taskName: `Establish initial colours. (But keep playing with indefinitely.)`,
+        taskName: `Establish colours.`,
         workedHours: 0,
-        neededHours: 3
-    },
-
-    /**
-     * Audio and slider stuff.
-     */
-    {
-        taskName: `Slider in verse styling, determine slider selected verse.`,
-        workedHours: 0,
-        neededHours: 2
+        neededHours: 5
     },
 
     /**
      * Player stuff.
      */
      {
-         taskName: `When song finishes playing, proceed to next more smoothly.`,
+         taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
          workedHours: 0,
-         neededHours: 1
+         neededHours: 5
      },
 
     /**
@@ -120,13 +123,6 @@ module.exports = [
 
     // Full day tasks.
     {
-        taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    // Further in the future.
-    {
         taskName: `Set up buttons to use svgs, including loading icons.`,
         workedHours: 0,
         neededHours: 8
@@ -136,9 +132,8 @@ module.exports = [
         workedHours: 0,
         neededHours: 8
     },
-
     {
-        taskName: `Set up system to show images on stage based on scene and song.`,
+        taskName: `Placeholder images in place for songs, with animations.`,
         workedHours: 0,
         neededHours: 20
     }
