@@ -14,13 +14,9 @@ import VerseBar from './VerseBar'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    isHeavyRenderReady,
-    selectedVerseIndex,
-    sliderVerseIndex
+    isHeavyRenderReady
 }) => ({
-    isHeavyRenderReady,
-    selectedVerseIndex,
-    sliderVerseIndex
+    isHeavyRenderReady
 })
 
 /*************
@@ -31,6 +27,7 @@ class LyricColumn extends Component {
 
     static propTypes = {
         // Through Redux.
+        isHeavyRenderReady: PropTypes.bool.isRequired,
 
         // From parent.
         handleScrollAfterLyricRerender: PropTypes.func.isRequired
@@ -62,9 +59,7 @@ class LyricColumn extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'isHeavyRenderReady',
-                    'selectedVerseIndex',
-                    'sliderVerseIndex'
+                    'isHeavyRenderReady'
                 ]
             }) || getComponentShouldUpdate({
                 props: state,
@@ -139,8 +134,6 @@ class LyricColumn extends Component {
 const lyricColumnViewPropTypes = {
     // Through Redux.
     isHeavyRenderReady: PropTypes.bool.isRequired,
-    selectedVerseIndex: PropTypes.number.isRequired,
-    sliderVerseIndex: PropTypes.number.isRequired,
 
     // From parent.
     // myRef: PropTypes.func.isRequired,
@@ -159,8 +152,6 @@ LyricColumnView = ({
 
     // From props.
     isHeavyRenderReady,
-    selectedVerseIndex,
-    sliderVerseIndex,
 
     handleLyricColumnSelect,
     handleLyricSectionExpand,
@@ -175,14 +166,10 @@ LyricColumnView = ({
 
 ...other }) => {
 
-    // If there is a slider verse, override selected verse.
-    const verseIndex = sliderVerseIndex > -1 ?
-            sliderVerseIndex : selectedVerseIndex,
-        verseBarProps = {
-            verseIndex,
-            handleVerseBarSelect,
-            handleVerseBarWheel
-        }
+    const verseBarProps = {
+        handleVerseBarSelect,
+        handleVerseBarWheel
+    }
 
     return (
         <div

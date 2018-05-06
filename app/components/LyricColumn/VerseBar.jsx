@@ -9,9 +9,13 @@ import { getVerseObject } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex
+    renderReadySongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex
 }) => ({
-    renderReadySongIndex
+    renderReadySongIndex,
+    selectedVerseIndex,
+    sliderVerseIndex
 })
 
 class VerseBar extends Component {
@@ -23,10 +27,11 @@ class VerseBar extends Component {
     static propTypes = {
         // Through Redux.
         renderReadySongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
+        sliderVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
         isAbove: PropTypes.bool,
-        verseIndex: PropTypes.number,
         handleVerseBarSelect: PropTypes.func.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired
     }
@@ -38,11 +43,12 @@ class VerseBar extends Component {
                 nextProps,
                 updatingPropsArray: [
                     /**
-                     * These are passed strictly to tell verse bar when to
+                     * This is passed strictly to tell verse bar when to
                      * update.
                      */
                     'renderReadySongIndex',
-                    'verseIndex'
+                    'selectedVerseIndex',
+                    'sliderVerseIndex'
                 ]
             })
 
@@ -54,11 +60,15 @@ class VerseBar extends Component {
         const { isAbove,
 
                 renderReadySongIndex,
-                verseIndex,
+                selectedVerseIndex,
+                sliderVerseIndex,
 
                 handleVerseBarSelect,
                 handleVerseBarWheel,
                 ...other } = this.props,
+
+            verseIndex = sliderVerseIndex > -1 ?
+                sliderVerseIndex : selectedVerseIndex,
 
             verseObject = getVerseObject(renderReadySongIndex, verseIndex)
 
