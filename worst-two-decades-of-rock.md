@@ -1,3 +1,5 @@
+The process - you have to enjoy the process, most genres are agnostic to the process.
+
 The Worst Two Decades of Rock
 
 This might seem like a moot point, because what other two decades could it be? I might as well have said that this is the worst century of classical music.
