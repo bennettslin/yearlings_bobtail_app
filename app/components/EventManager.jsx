@@ -395,16 +395,13 @@ class EventManager extends Component {
     }
 
     handleLyricWheel() {
-        this.props.determineVerseBars()
         this.props.selectManualScroll(true)
+        this.props.determineVerseBars()
     }
 
     handleLyricAutoScroll() {
-        /**
-         * This handles the button click, which sets it to false. Scrolling
-         * sets it back to true.
-         */
         this.props.selectManualScroll(false)
+        this.handleVerseBarSelect()
     }
 
     handleLyricColumnSelect(e) {
