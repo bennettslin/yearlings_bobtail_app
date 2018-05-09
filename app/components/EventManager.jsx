@@ -62,6 +62,7 @@ class EventManager extends Component {
         this.handleLyricPlay = this.handleLyricPlay.bind(this)
         this.handleLyricVerseSelect = this.handleLyricVerseSelect.bind(this)
         this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
+        this._scrollLyricSection = this._scrollLyricSection.bind(this)
         this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
         this.handleNavBookSelect = this.handleNavBookSelect.bind(this)
         this.handleOverviewToggle = this.handleOverviewToggle.bind(this)
@@ -97,9 +98,10 @@ class EventManager extends Component {
             if (selectedCarouselNavIndex && scrollToAnnotationIndex) {
                 // Animation is slightly less janky with setTimeout.
                 setTimeout(() => {
-                    this._scrollElementIntoView(
-                        CAROUSEL_SCROLL, scrollToAnnotationIndex
-                    )
+                    this._scrollElementIntoView({
+                        scrollClass: CAROUSEL_SCROLL,
+                        index: scrollToAnnotationIndex
+                    })
                 }, 0)
             }
         }
@@ -119,10 +121,16 @@ class EventManager extends Component {
     }) {
         const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
         if (annotationAccessed && doScroll) {
-            this._scrollElementIntoView(LYRIC_ANNOTATION_SCROLL, accessedAnnotationIndex)
+            this._scrollElementIntoView({
+                scrollClass: LYRIC_ANNOTATION_SCROLL,
+                index: accessedAnnotationIndex
+            })
 
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView(CAROUSEL_SCROLL, accessedAnnotationIndex)
+                this._scrollElementIntoView({
+                    scrollClass: CAROUSEL_SCROLL,
+                    index: accessedAnnotationIndex
+                })
             }
         }
     }
@@ -166,7 +174,10 @@ class EventManager extends Component {
             exemptLyric: true,
             leaveOpenPopups: true
         })
-        this._scrollElementIntoView(VERSE_SCROLL, interactivatedVerseIndex)
+        this._scrollElementIntoView({
+            scrollClass: VERSE_SCROLL,
+            index: interactivatedVerseIndex
+        })
         return true
     }
 
@@ -234,9 +245,15 @@ class EventManager extends Component {
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction
         })
-        this._scrollElementIntoView(LYRIC_ANNOTATION_SCROLL, selectedAnnotationIndex)
+        this._scrollElementIntoView({
+            scrollClass: LYRIC_ANNOTATION_SCROLL,
+            index: selectedAnnotationIndex
+        })
         if (this.props.selectedCarouselNavIndex) {
-            this._scrollElementIntoView(CAROUSEL_SCROLL, selectedAnnotationIndex)
+            this._scrollElementIntoView({
+                scrollClass: CAROUSEL_SCROLL,
+                index: selectedAnnotationIndex
+            })
         }
     }
 
@@ -312,7 +329,10 @@ class EventManager extends Component {
         if (carouselSelected && !presentCarouselIndex) {
             const { selectedAnnotationIndex } = this.props,
                 annotationIndex = selectedAnnotationIndex ? selectedAnnotationIndex : this.props.accessedAnnotationIndex
-            this._scrollElementIntoView(CAROUSEL_SCROLL, annotationIndex)
+            this._scrollElementIntoView({
+                scrollClass: CAROUSEL_SCROLL,
+                index: annotationIndex
+            })
         }
 
         this._closeSections({
@@ -454,12 +474,18 @@ class EventManager extends Component {
 
         // Scroll lyric column only if selecting from carousel.
         if (fromCarousel) {
-            this._scrollElementIntoView(LYRIC_ANNOTATION_SCROLL, selectedAnnotationIndex)
+            this._scrollElementIntoView({
+                scrollClass: LYRIC_ANNOTATION_SCROLL,
+                index: selectedAnnotationIndex
+            })
 
         // Scroll carousel only if not selecting from carousel.
         } else {
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView(CAROUSEL_SCROLL, selectedAnnotationIndex)
+                this._scrollElementIntoView({
+                    scrollClass: CAROUSEL_SCROLL,
+                    index: selectedAnnotationIndex
+                })
             }
         }
 
@@ -706,7 +732,17 @@ class EventManager extends Component {
     handleVerseBarSelect() {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props
-        this._scrollElementIntoView(VERSE_SCROLL, selectedVerseIndex)
+
+        this._scrollElementIntoView({
+            scrollClass: VERSE_SCROLL,
+            index: selectedVerseIndex,
+            callback: this._scrollLyricSection
+        })
+    }
+
+    _scrollLyricSection() {
+        // Allow this to be called without event as the argument.
+        this.props.scrollLyricSection()
     }
 
     handleVerseBarWheel(e) {
@@ -860,26 +896,41 @@ class EventManager extends Component {
 
         // If a portal was selected, there will be an annotation index.
         if (annotationIndex) {
-            this._scrollElementIntoView(
-                LYRIC_ANNOTATION_SCROLL, annotationIndex, 0
-            )
+            this._scrollElementIntoView({
+                scrollClass: LYRIC_ANNOTATION_SCROLL,
+                index: annotationIndex,
+                time: 0
+            })
 
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView(
-                    CAROUSEL_SCROLL, annotationIndex, 0
-                )
+                this._scrollElementIntoView({
+                    scrollClass: CAROUSEL_SCROLL,
+                    index: annotationIndex,
+                    time: 0
+                })
             }
 
             // Otherwise, scroll to top.
         } else {
-            this._scrollElementIntoView(VERSE_SCROLL)
+            this._scrollElementIntoView({
+                scrollClass: VERSE_SCROLL
+            })
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView(CAROUSEL_SCROLL, 1, 0)
+                this._scrollElementIntoView({
+                    scrollClass: CAROUSEL_SCROLL,
+                    index: 1,
+                    time: 0
+                })
             }
         }
     }
 
-    _scrollElementIntoView(scrollClass, index, time = 350) {
+    _scrollElementIntoView({
+        scrollClass,
+        index,
+        time = 350,
+        callback
+    }) {
 
         const { childClass,
                 parentClass } = SCROLL_CLASSES[scrollClass],
@@ -903,8 +954,7 @@ class EventManager extends Component {
                 time,
                 align,
                 validTarget
-            // }, this._scrollElementCallback)
-            })
+            }, callback)
         }
     }
 

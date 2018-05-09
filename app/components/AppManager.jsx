@@ -532,8 +532,6 @@ class App extends Component {
                     verseElement
                 })
 
-        console.error('scroll lyric section')
-
         this.props.setIsVerseBarAbove(isVerseBarAbove)
         this.props.setIsVerseBarBelow(isVerseBarBelow)
         this.props.setIsManualScroll(true)

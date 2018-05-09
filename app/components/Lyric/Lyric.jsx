@@ -132,7 +132,7 @@ LyricView = ({
                 'gradientMask__lyricColumn__mobileCollapsed'
             )}
             tabIndex="-1"
-            onScroll={handleScroll}
+            onWheel={handleScroll}
         >
             {/* Upon song change, scroll to this heightless element. */}
             <div className="Verse__scrollChild" />
