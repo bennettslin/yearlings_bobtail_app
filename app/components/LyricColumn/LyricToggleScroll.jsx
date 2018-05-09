@@ -19,13 +19,13 @@ const lyricScrollTogglePropTypes = {
     isManualScroll: PropTypes.bool.isRequired,
 
     // From parent.
-    handleLyricManualScroll: PropTypes.func.isRequired
+    handleLyricAutoScroll: PropTypes.func.isRequired
 },
 
 LyricToggleScroll = ({
 
     isManualScroll,
-    handleLyricManualScroll
+    handleLyricAutoScroll
 
 }) => {
 
@@ -40,7 +40,7 @@ LyricToggleScroll = ({
                 buttonName="lyricScroll"
                 temporaryText="auto"
                 accessKey={LYRIC_SCROLL_TOGGLE_KEY}
-                handleButtonClick={handleLyricManualScroll}
+                handleButtonClick={handleLyricAutoScroll}
             />
         </div>
     )

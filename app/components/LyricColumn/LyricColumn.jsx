@@ -145,7 +145,7 @@ const lyricColumnViewPropTypes = {
 
     handleLyricColumnSelect: PropTypes.func.isRequired,
     handleLyricSectionExpand: PropTypes.func.isRequired,
-    handleLyricManualScroll: PropTypes.func.isRequired,
+    handleLyricAutoScroll: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired
 },
@@ -157,7 +157,7 @@ LyricColumnView = ({
 
     handleLyricColumnSelect,
     handleLyricSectionExpand,
-    handleLyricManualScroll,
+    handleLyricAutoScroll,
     handleVerseBarSelect,
     handleVerseBarWheel,
 
@@ -205,7 +205,7 @@ LyricColumnView = ({
             />
 
             <LyricToggleScroll
-                handleLyricManualScroll={handleLyricManualScroll}
+                handleLyricAutoScroll={handleLyricAutoScroll}
             />
 
             <LyricColumnAccess />

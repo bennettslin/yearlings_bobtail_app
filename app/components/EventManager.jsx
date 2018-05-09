@@ -56,13 +56,13 @@ class EventManager extends Component {
         this.handleDotSelect = this.handleDotSelect.bind(this)
         this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
         this.handleLyricSectionExpand = this.handleLyricSectionExpand.bind(this)
-        this.handleLyricManualScroll = this.handleLyricManualScroll.bind(this)
+        this.handleLyricAutoScroll = this.handleLyricAutoScroll.bind(this)
         this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
         this.handleLyricAnnotationSelect = this.handleLyricAnnotationSelect.bind(this)
         this.handleLyricPlay = this.handleLyricPlay.bind(this)
         this.handleLyricVerseSelect = this.handleLyricVerseSelect.bind(this)
-        this.handleLyricSectionScroll = this.handleLyricSectionScroll.bind(this)
-        this._scrollLyricSection = this._scrollLyricSection.bind(this)
+        this.handleLyricWheel = this.handleLyricWheel.bind(this)
+        this._determineVerseBars = this._determineVerseBars.bind(this)
         this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
         this.handleNavBookSelect = this.handleNavBookSelect.bind(this)
         this.handleOverviewToggle = this.handleOverviewToggle.bind(this)
@@ -394,11 +394,12 @@ class EventManager extends Component {
         return lyricsToggled
     }
 
-    handleLyricSectionScroll() {
-        this.props.scrollLyricSection()
+    handleLyricWheel() {
+        this.props.determineVerseBars()
+        this.props.selectManualScroll(true)
     }
 
-    handleLyricManualScroll() {
+    handleLyricAutoScroll() {
         /**
          * This handles the button click, which sets it to false. Scrolling
          * sets it back to true.
@@ -736,13 +737,13 @@ class EventManager extends Component {
         this._scrollElementIntoView({
             scrollClass: VERSE_SCROLL,
             index: selectedVerseIndex,
-            callback: this._scrollLyricSection
+            callback: this._determineVerseBars
         })
     }
 
-    _scrollLyricSection() {
+    _determineVerseBars() {
         // Allow this to be called without event as the argument.
-        this.props.scrollLyricSection()
+        this.props.determineVerseBars()
     }
 
     handleVerseBarWheel(e) {
@@ -1026,8 +1027,8 @@ class EventManager extends Component {
                 handleLyricPlay: this.handleLyricPlay,
                 handleLyricVerseSelect: this.handleLyricVerseSelect,
                 handleLyricAnnotationSelect: this.handleLyricAnnotationSelect,
-                handleLyricSectionScroll: this.handleLyricSectionScroll,
-                handleLyricManualScroll: this.handleLyricManualScroll,
+                handleLyricWheel: this.handleLyricWheel,
+                handleLyricAutoScroll: this.handleLyricAutoScroll,
                 handleNavSongSelect: this.handleNavSongSelect,
                 handleNavBookSelect: this.handleNavBookSelect,
                 handleOverviewToggle: this.handleOverviewToggle,

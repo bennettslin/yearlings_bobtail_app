@@ -32,7 +32,7 @@ class Lyric extends Component {
         // From parent.
         isTransitioningHeight: PropTypes.bool.isRequired,
         completeHeightTransition: PropTypes.func.isRequired,
-        handleLyricSectionScroll: PropTypes.func.isRequired
+        handleLyricWheel: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -69,7 +69,7 @@ class Lyric extends Component {
     }
 
     _handleDebouncedScroll() {
-        this.props.handleLyricSectionScroll()
+        this.props.handleLyricWheel()
     }
 
     render() {
@@ -77,7 +77,7 @@ class Lyric extends Component {
             'appMounted',
             'isTransitioningHeight',
             'completeHeightTransition',
-            'handleLyricSectionScroll'
+            'handleLyricWheel'
         ])
 
         return (

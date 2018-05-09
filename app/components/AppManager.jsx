@@ -515,7 +515,7 @@ class App extends Component {
         return true
     }
 
-    scrollLyricSection(verseElement = this.props.selectedVerseElement) {
+    determineVerseBars(verseElement = this.props.selectedVerseElement) {
 
         // Prevent verse bar from showing upon initial load.
         if (!this.props.appMounted || !verseElement) {
@@ -534,11 +534,10 @@ class App extends Component {
 
         this.props.setIsVerseBarAbove(isVerseBarAbove)
         this.props.setIsVerseBarBelow(isVerseBarBelow)
-        this.props.setIsManualScroll(true)
     }
 
-    selectManualScroll() {
-        this.props.setIsManualScroll(false);
+    selectManualScroll(isManualScroll = false) {
+        this.props.setIsManualScroll(isManualScroll);
     }
 
     selectLyricColumn({
@@ -1276,7 +1275,7 @@ class App extends Component {
         this.selectTitle = this.selectTitle.bind(this)
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
         this.selectOrSlideVerseElement = this.selectOrSlideVerseElement.bind(this)
-        this.scrollLyricSection = this.scrollLyricSection.bind(this)
+        this.determineVerseBars = this.determineVerseBars.bind(this)
         this.selectManualScroll = this.selectManualScroll.bind(this)
         this._windowResize = this._windowResize.bind(this)
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
@@ -1312,7 +1311,7 @@ class App extends Component {
                 selectDotsExpand={this.selectDotsExpand}
                 selectLyricColumn={this.selectLyricColumn}
                 selectLyricExpand={this.selectLyricExpand}
-                scrollLyricSection={this.scrollLyricSection}
+                determineVerseBars={this.determineVerseBars}
                 selectManualScroll={this.selectManualScroll}
                 selectOverview={this.selectOverview}
                 selectCarouselNav={this.selectCarouselNav}
