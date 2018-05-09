@@ -48,6 +48,7 @@ module.exports = {
     IS_LYRIC_EXPANDED: 'isLyricExpanded',
     IS_VERSE_BAR_ABOVE: 'isVerseBarAbove',
     IS_VERSE_BAR_BELOW: 'isVerseBarBelow',
+    IS_MANUAL_SCROLL: 'isManualScroll',
     SELECTED_VERSE_ELEMENT: 'selectedVerseElement',
     SHOWN_BOOK_COLUMN_INDEX: 'shownBookColumnIndex',
 

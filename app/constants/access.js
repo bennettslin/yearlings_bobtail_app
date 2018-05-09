@@ -21,6 +21,7 @@ module.exports = {
     CAROUSEL_TOGGLE_KEY: 'c',
     DOTS_SECTION_EXPAND_KEY: 'd',
     LYRIC_COLUMN_TOGGLE_KEY: 'e',
+    LYRIC_SCROLL_TOGGLE_KEY: 'v',
     LYRIC_SECTION_EXPAND_KEY: 'l',
     SCENE_REWIND_KEY: 'n',
     SCENE_FORWARD_KEY: 'm',

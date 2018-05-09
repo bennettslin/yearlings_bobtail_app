@@ -190,6 +190,7 @@ module.exports = {
         "no-ternary": "off",
         "no-throw-literal": "error",
         "no-trailing-spaces": "error",
+        "no-undef": "error",
         "no-undef-init": "error",
         "no-undefined": "off",
         "no-underscore-dangle": "off",

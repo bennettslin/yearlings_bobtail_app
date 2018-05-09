@@ -7,8 +7,9 @@ import cx from 'classnames'
 import omit from 'lodash.omit'
 
 import LyricColumnAccess from './LyricColumnAccess'
-import LyricToggleExpand from './LyricToggleExpand'
 import LyricToggleEar from './LyricToggleEar'
+import LyricToggleExpand from './LyricToggleExpand'
+import LyricToggleScroll from './LyricToggleScroll'
 import Lyric from '../Lyric/Lyric'
 import VerseBar from './VerseBar'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
@@ -144,6 +145,7 @@ const lyricColumnViewPropTypes = {
 
     handleLyricColumnSelect: PropTypes.func.isRequired,
     handleLyricSectionExpand: PropTypes.func.isRequired,
+    handleLyricManualScroll: PropTypes.func.isRequired,
     handleVerseBarSelect: PropTypes.func.isRequired,
     handleVerseBarWheel: PropTypes.func.isRequired
 },
@@ -155,6 +157,7 @@ LyricColumnView = ({
 
     handleLyricColumnSelect,
     handleLyricSectionExpand,
+    handleLyricManualScroll,
     handleVerseBarSelect,
     handleVerseBarWheel,
 
@@ -199,6 +202,10 @@ LyricColumnView = ({
 
             <LyricToggleExpand
                 handleLyricSectionExpand={handleLyricSectionExpand}
+            />
+
+            <LyricToggleScroll
+                handleLyricManualScroll={handleLyricManualScroll}
             />
 
             <LyricColumnAccess />

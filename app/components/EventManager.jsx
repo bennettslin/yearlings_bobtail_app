@@ -56,6 +56,7 @@ class EventManager extends Component {
         this.handleDotSelect = this.handleDotSelect.bind(this)
         this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
         this.handleLyricSectionExpand = this.handleLyricSectionExpand.bind(this)
+        this.handleLyricManualScroll = this.handleLyricManualScroll.bind(this)
         this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
         this.handleLyricAnnotationSelect = this.handleLyricAnnotationSelect.bind(this)
         this.handleLyricPlay = this.handleLyricPlay.bind(this)
@@ -375,6 +376,14 @@ class EventManager extends Component {
 
     handleLyricSectionScroll() {
         this.props.scrollLyricSection()
+    }
+
+    handleLyricManualScroll() {
+        /**
+         * This handles the button click, which sets it to false. Scrolling
+         * sets it back to true.
+         */
+        this.props.selectManualScroll(false)
     }
 
     handleLyricColumnSelect(e) {
@@ -968,6 +977,7 @@ class EventManager extends Component {
                 handleLyricVerseSelect: this.handleLyricVerseSelect,
                 handleLyricAnnotationSelect: this.handleLyricAnnotationSelect,
                 handleLyricSectionScroll: this.handleLyricSectionScroll,
+                handleLyricManualScroll: this.handleLyricManualScroll,
                 handleNavSongSelect: this.handleNavSongSelect,
                 handleNavBookSelect: this.handleNavBookSelect,
                 handleOverviewToggle: this.handleOverviewToggle,

@@ -9,6 +9,7 @@ import { APP_MOUNTED,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
+         IS_MANUAL_SCROLL,
          SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
@@ -60,6 +61,11 @@ export const setIsVerseBarAbove = (isVerseBarAbove = false) => (
 export const setIsVerseBarBelow = (isVerseBarBelow = false) => (
     { type: IS_VERSE_BAR_BELOW,
       payload: isVerseBarBelow }
+)
+
+export const setIsManualScroll = (isManualScroll = false) => (
+    { type: IS_MANUAL_SCROLL,
+      payload: isManualScroll }
 )
 
 export const setSelectedVerseElement = (selectedVerseElement = null) => (
