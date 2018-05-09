@@ -47,6 +47,52 @@
     & {
         max-width: ~"calc(100% - @{offsetX__verseBar__phone} * 2)";
     }
+}
+
+.VerseBar__above {
+    top: @offsetY__verseBar__hidden;
+    margin-top: @marginY__verseBar;
+
+    transition:
+        top @animationDuration__fast,
+        transform @animationDuration__fast;
+
+    .RM__verseBarAbove
+    & {
+        top: 0;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+.VerseBar__below {
+    bottom: @offsetY__verseBar__hidden;
+    margin-bottom: @marginY__verseBar;
+
+    transition:
+        bottom @animationDuration__fast,
+        transform @animationDuration__fast;
+
+    .RM__verseBarBelow
+    & {
+        bottom: 0;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+.Verse__inBar {
+    padding: @js__margin__thick;
+}
+
+.VerseBar__animatable {
+    transition: background-color @animationDuration__default;
+
+    &:hover {
+        animation: bounceHover @animationDuration__default;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
 
     .RM__sliderNotMoving.RM__isPlaying
     & {
@@ -64,40 +110,10 @@
     }
 }
 
-.VerseBar__above {
-    top: @offsetY__verseBar__hidden;
-    margin-top: @marginY__verseBar;
+.VerseBar__animatable__above {
     box-shadow: @boxShadow__verseBar__above;
-
-    transition:
-        top @animationDuration__fast,
-        transform @animationDuration__fast,
-        background-color @animationDuration__default;
-
-    .RM__verseBarAbove
-    & {
-        top: 0;
-        transform: translateX(-50%) scale(1);
-    }
 }
 
-.VerseBar__below {
-    bottom: @offsetY__verseBar__hidden;
-    margin-bottom: @marginY__verseBar;
+.VerseBar__animatable__below {
     box-shadow: @boxShadow__verseBar__below;
-
-    transition:
-        bottom @animationDuration__fast,
-        transform @animationDuration__fast,
-        background-color @animationDuration__default;
-
-    .RM__verseBarBelow
-    & {
-        bottom: 0;
-        transform: translateX(-50%) scale(1);
-    }
-}
-
-.Verse__inBar {
-    padding: @js__margin__thick;
 }

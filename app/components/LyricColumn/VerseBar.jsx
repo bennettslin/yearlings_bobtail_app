@@ -87,11 +87,18 @@ class VerseBar extends Component {
                 onClick={handleVerseBarSelect}
                 onTouchStart={handleVerseBarSelect}
             >
-                <VerseController {...other}
-                    inVerseBar
-                    barVerseIndex={verseIndex}
-                    verseObject={verseObject}
-                />
+                <div className={cx(
+                    'VerseBar__animatable',
+                    isAbove ?
+                        'VerseBar__animatable__above' :
+                        'VerseBar__animatable__below'
+                )}>
+                    <VerseController {...other}
+                        inVerseBar
+                        barVerseIndex={verseIndex}
+                        verseObject={verseObject}
+                    />
+                </div>
             </div>
         ) : null
     }
