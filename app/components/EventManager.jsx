@@ -62,7 +62,7 @@ class EventManager extends Component {
         this.handleLyricPlay = this.handleLyricPlay.bind(this)
         this.handleLyricVerseSelect = this.handleLyricVerseSelect.bind(this)
         this.handleLyricWheel = this.handleLyricWheel.bind(this)
-        this._determineVerseBars = this._determineVerseBars.bind(this)
+        this._determineVerseBarsCallback = this._determineVerseBarsCallback.bind(this)
         this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
         this.handleNavBookSelect = this.handleNavBookSelect.bind(this)
         this.handleOverviewToggle = this.handleOverviewToggle.bind(this)
@@ -734,11 +734,11 @@ class EventManager extends Component {
         this._scrollElementIntoView({
             scrollClass: VERSE_SCROLL,
             index: selectedVerseIndex,
-            callback: this._determineVerseBars
+            callback: this._determineVerseBarsCallback
         })
     }
 
-    _determineVerseBars() {
+    _determineVerseBarsCallback() {
         // Allow this to be called without event as the argument.
         this.props.determineVerseBars()
     }
