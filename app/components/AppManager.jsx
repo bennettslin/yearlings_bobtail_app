@@ -538,7 +538,7 @@ class App extends Component {
     }
 
     selectManualScroll(isManualScroll = false) {
-        // console.error('select manual scroll', isManualScroll)
+        console.error('select manual scroll', isManualScroll)
         this.props.setIsManualScroll(isManualScroll);
     }
 

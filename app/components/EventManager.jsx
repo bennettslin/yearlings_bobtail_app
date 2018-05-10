@@ -404,9 +404,12 @@ class EventManager extends Component {
         return lyricsToggled
     }
 
-    handleLyricWheel() {
-        // console.error('handle lyric wheel')
-        this.props.selectManualScroll(true)
+    handleLyricWheel(isManualScroll = true) {
+        console.error('handle lyric wheel')
+
+        if (isManualScroll) {
+            this.props.selectManualScroll(true)
+        }
         this.props.determineVerseBars()
     }
 

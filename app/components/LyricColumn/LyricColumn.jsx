@@ -100,7 +100,7 @@ class LyricColumn extends Component {
     }
 
     _handleTransition(e) {
-        if (e.propertyName === 'height' || e.propertyName === 'opacity') {
+        if (e.propertyName === 'height') {
             this.setState({
                 isTransitioningHeight: true
             })
