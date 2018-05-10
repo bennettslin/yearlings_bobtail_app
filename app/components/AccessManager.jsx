@@ -34,6 +34,7 @@ import { ARROW_LEFT,
          DOTS_SECTION_EXPAND_KEY,
          LYRIC_COLUMN_TOGGLE_KEY,
          LYRIC_SECTION_EXPAND_KEY,
+         LYRIC_SCROLL_TOGGLE_KEY,
          OVERVIEW_TOGGLE_KEY,
          SCORE_TOGGLE_KEY,
          SCENE_REWIND_KEY,
@@ -89,7 +90,7 @@ class AccessManager extends Component {
          */
         eventHandlers.handleAccessToggle(true)
 
-        // Do not handle any further if it's an exempt key.
+        // Do not allow the event to propagate if it's an exempt key.
         if (keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE || keyName === PAGE_UP || keyName === PAGE_DOWN) {
             return
         }
@@ -125,6 +126,13 @@ class AccessManager extends Component {
             // Prevent default for registered key.
             if (keyWasRegistered) {
                 e.preventDefault()
+
+            /**
+             * At this point, up and down arrows are used to scroll lyric, so
+             * turn off autoScroll and determine verse bars.
+             */
+            } else if (keyName === ARROW_DOWN || keyName === ARROW_UP) {
+                eventHandlers.handleLyricWheel()
             }
         }
     }
@@ -481,6 +489,9 @@ class AccessManager extends Component {
                 break
             case LYRIC_SECTION_EXPAND_KEY:
                 keyWasRegistered = eventHandlers.handleLyricSectionExpand(e)
+                break
+            case LYRIC_SCROLL_TOGGLE_KEY:
+                keyWasRegistered = eventHandlers.handleLyricAutoScroll(e)
                 break
             case OVERVIEW_TOGGLE_KEY:
                 keyWasRegistered = eventHandlers.handleOverviewToggle(e)

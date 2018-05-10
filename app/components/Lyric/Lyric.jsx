@@ -53,7 +53,7 @@ class Lyric extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.isTransitioningHeight && !this.props.isTransitioningHeight) {
-            console.error('is transitioning height')
+            // console.error('is transitioning height')
             this._handleScroll()
             this.props.completeHeightTransition()
         }

@@ -405,7 +405,7 @@ class EventManager extends Component {
     }
 
     handleLyricWheel() {
-        console.error('handle lyric wheel')
+        // console.error('handle lyric wheel')
         this.props.selectManualScroll(true)
         this.props.determineVerseBars()
     }
