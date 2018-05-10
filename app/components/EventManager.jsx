@@ -74,6 +74,7 @@ class EventManager extends Component {
         this.handleTitleToggle = this.handleTitleToggle.bind(this)
         this.handleVerseBarSelect = this.handleVerseBarSelect.bind(this)
         this.handleVerseBarWheel = this.handleVerseBarWheel.bind(this)
+        this._autoScrollCallback = this._autoScrollCallback.bind(this)
         this.handleVerseInteractivate = this.handleVerseInteractivate.bind(this)
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
         this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
@@ -304,7 +305,16 @@ class EventManager extends Component {
      ****************/
 
     handlePlayerTimeChange(time) {
-        this.props.selectTime(time, true)
+
+        // App manager will determine whether to autoScroll.
+        this.props.selectTime(time, true, this._autoScrollCallback)
+    }
+
+    _autoScrollCallback(verseIndex) {
+        this._scrollElementIntoView({
+            scrollClass: VERSE_SCROLL,
+            index: verseIndex
+        })
     }
 
     handlePlayerNextSong(e) {
@@ -395,12 +405,17 @@ class EventManager extends Component {
     }
 
     handleLyricWheel() {
+        console.error('handle lyric wheel')
         this.props.selectManualScroll(true)
         this.props.determineVerseBars()
     }
 
     handleLyricAutoScroll() {
+
+        // Change back to autoScroll.
         this.props.selectManualScroll(false)
+
+        // Scroll lyric as if verse bar was selected.
         this.handleVerseBarSelect()
     }
 

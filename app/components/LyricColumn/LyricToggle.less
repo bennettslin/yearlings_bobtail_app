@@ -17,14 +17,48 @@
     right: @margin__scrollbar;
 }
 
-.LyricToggleExpand__inLyric {
+.LyricToggleExpand__inLyric,
+.LyricToggleScroll {
     left: @margin__scrollbar;
 }
 
-// TODO: Do this styling.
 .LyricToggleScroll {
-    top: 200px;
-    left: @margin__scrollbar;
+    opacity: 0;
+
+    transition: opacity @animationDuration__default;
+
+    // When in mobile, expand toggle will *always* be present.
+    .RM__tablet
+    & {
+        top:
+            @margin__scrollbar / 2
+            + @js__margin__thin * 2
+            + @js__length__iconLarge__tablet
+            + @js__margin__thick;
+    }
+
+    .RM__mini
+    & {
+        top:
+            @margin__scrollbar / 2
+            + @js__margin__thin * 2
+            + @js__length__iconLarge__mini
+            + @js__margin__thick;
+    }
+
+    .RM__phone
+    & {
+        top:
+            @margin__scrollbar / 2
+            + @js__margin__thin * 2
+            + @js__length__icon
+            + @js__margin__thick;
+    }
+
+    .RM__manualScroll
+    & {
+        opacity: 1;
+    }
 }
 
 .LyricToggle__inMain {

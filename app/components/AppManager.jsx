@@ -358,7 +358,7 @@ class App extends Component {
         return true
     }
 
-    selectTime(selectedTimePlayed = 0, isPlayerAdvancing) {
+    selectTime(selectedTimePlayed = 0, isPlayerAdvancing, autoScrollCallback) {
         const selectedVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, selectedTimePlayed)
 
         if (selectedVerseIndex !== null) {
@@ -368,7 +368,8 @@ class App extends Component {
 
                 // When time is being selected, always render verse immediately.
                 renderVerseImmediately: true,
-                isPlayerAdvancing
+                isPlayerAdvancing,
+                autoScrollCallback
             })
         }
     }
@@ -537,6 +538,7 @@ class App extends Component {
     }
 
     selectManualScroll(isManualScroll = false) {
+        console.error('select manual scroll', isManualScroll)
         this.props.setIsManualScroll(isManualScroll);
     }
 
@@ -1123,7 +1125,8 @@ class App extends Component {
         selectedSongIndex = this.props.selectedSongIndex,
         selectedVerseIndex,
         renderVerseImmediately,
-        isPlayerAdvancing
+        isPlayerAdvancing,
+        autoScrollCallback
     }) {
 
         const { props } = this
@@ -1144,6 +1147,14 @@ class App extends Component {
 
         props.selectVerseIndex(selectedVerseIndex)
         props.selectTimePlayed(selectedTimePlayed)
+
+        /**
+         * If called by player, and autoScroll is on, then scroll to selected
+         * verse.
+         */
+        if (!this.props.isManualScroll && autoScrollCallback) {
+            autoScrollCallback(selectedVerseIndex)
+        }
 
         /**
          * If time was not changed by the audio element advancing, tell player

@@ -16,7 +16,14 @@
         top: @js__height__menu__twoRowMenu;
     }
 
+    .RM__mini.RM__twoRowMenu
+    & {
+        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu__twoRowMenu})";
+    }
+
     .RM__laptop.RM__twoRowMenu
+    &,
+    .RM__lyricHeightless.RM__twoRowMenu
     & {
         height: ~"calc(100% - @{js__height__menu__twoRowMenu})";
     }
@@ -24,11 +31,6 @@
     .RM__mobile.RM__lyricHeighted
     & {
         height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu})";
-    }
-
-    .RM__mini.RM__twoRowMenu
-    & {
-        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu__twoRowMenu})";
     }
 
     .RM__phone
