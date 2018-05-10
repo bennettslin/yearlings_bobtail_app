@@ -8,8 +8,8 @@ module.exports = [
 
     {
         taskName: `Allow user to enable and disable auto scroll.`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 5,
+        neededHours: 8
     },
 
     {
