@@ -751,9 +751,10 @@ class EventManager extends Component {
 
         this._scrollElementIntoView({
             scrollClass: VERSE_SCROLL,
-            index: selectedVerseIndex,
-            callback: this._determineVerseBarsCallback
+            index: selectedVerseIndex
         })
+
+        this.props.resetVerseBars()
     }
 
     handleVerseBarWheel(e) {

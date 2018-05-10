@@ -529,12 +529,18 @@ class App extends Component {
                     windowWidth: this.props.windowWidth,
                     windowHeight: this.props.windowHeight,
                     isLyricExpanded: this.props.isLyricExpanded,
-                    isHeightlessLyricColumn: this.props.isHeightlessLyricColumn,
+                    isHeightlessLyricColumn:
+                        this.props.isHeightlessLyricColumn,
                     verseElement
                 })
 
         this.props.setIsVerseBarAbove(isVerseBarAbove)
         this.props.setIsVerseBarBelow(isVerseBarBelow)
+    }
+
+    resetVerseBars() {
+        this.props.setIsVerseBarAbove(false)
+        this.props.setIsVerseBarBelow(false)
     }
 
     selectManualScroll(isManualScroll = false) {
@@ -1060,16 +1066,7 @@ class App extends Component {
 
         if (verseElement !== propsVerseElement) {
 
-            // Determine if new selected verse element shows or hides verse bar.
-            const { isVerseBarAbove,
-                    isVerseBarBelow } = getVerseBarStatus({
-                        deviceIndex: this.props.deviceIndex,
-                        windowWidth: this.props.windowWidth,
-                        windowHeight: this.props.windowHeight,
-                        isLyricExpanded: this.props.isLyricExpanded,
-                        isHeightlessLyricColumn: this.props.isHeightlessLyricColumn,
-                        verseElement: verseElement
-                    })
+            this.determineVerseBars(verseElement)
 
             if (doSetSlider) {
                 /**
@@ -1082,9 +1079,6 @@ class App extends Component {
                 // App has a reference to the selected verse.
                 this.props.setSelectedVerseElement(verseElement)
             }
-
-            this.props.setIsVerseBarAbove(isVerseBarAbove)
-            this.props.setIsVerseBarBelow(isVerseBarBelow)
 
             if (isTouchBodyEnd) {
                 this.props.setSliderVerseElement(null)
@@ -1295,6 +1289,7 @@ class App extends Component {
         this.setVerseElement = this.setVerseElement.bind(this)
         this.selectOrSlideVerseElement = this.selectOrSlideVerseElement.bind(this)
         this.determineVerseBars = this.determineVerseBars.bind(this)
+        this.resetVerseBars = this.resetVerseBars.bind(this)
         this.selectManualScroll = this.selectManualScroll.bind(this)
         this._windowResize = this._windowResize.bind(this)
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
@@ -1331,6 +1326,7 @@ class App extends Component {
                 selectLyricColumn={this.selectLyricColumn}
                 selectLyricExpand={this.selectLyricExpand}
                 determineVerseBars={this.determineVerseBars}
+                resetVerseBars={this.resetVerseBars}
                 selectManualScroll={this.selectManualScroll}
                 selectOverview={this.selectOverview}
                 selectCarouselNav={this.selectCarouselNav}
