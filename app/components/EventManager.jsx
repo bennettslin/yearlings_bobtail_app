@@ -405,7 +405,6 @@ class EventManager extends Component {
     }
 
     handleLyricWheel(isManualScroll = true) {
-        console.error('handle lyric wheel')
 
         if (isManualScroll) {
             this.props.selectManualScroll(true)
@@ -756,11 +755,6 @@ class EventManager extends Component {
         })
     }
 
-    _determineVerseBarsCallback() {
-        // Allow this to be called without event as the argument.
-        this.props.determineVerseBars()
-    }
-
     handleVerseBarWheel(e) {
         const { deltaY } = e.nativeEvent
         this.myLyricSection.scrollTop += deltaY
@@ -915,27 +909,26 @@ class EventManager extends Component {
             this._scrollElementIntoView({
                 scrollClass: LYRIC_ANNOTATION_SCROLL,
                 index: annotationIndex,
-                time: 0
+                callback: this._determineVerseBarsCallback
             })
 
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
-                    index: annotationIndex,
-                    time: 0
+                    index: annotationIndex
                 })
             }
 
             // Otherwise, scroll to top.
         } else {
             this._scrollElementIntoView({
-                scrollClass: VERSE_SCROLL
+                scrollClass: VERSE_SCROLL,
+                callback: this._determineVerseBarsCallback
             })
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
-                    index: 1,
-                    time: 0
+                    index: 1
                 })
             }
         }
@@ -972,6 +965,11 @@ class EventManager extends Component {
                 validTarget
             }, callback)
         }
+    }
+
+    _determineVerseBarsCallback() {
+        // Allow this to be called without event as the argument.
+        this.props.determineVerseBars()
     }
 
     _scrollElementCallback(status) {

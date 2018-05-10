@@ -538,7 +538,6 @@ class App extends Component {
     }
 
     selectManualScroll(isManualScroll = false) {
-        console.error('select manual scroll', isManualScroll)
         this.props.setIsManualScroll(isManualScroll);
     }
 
@@ -710,6 +709,10 @@ class App extends Component {
             props.setIsHeavyRenderReady(false)
             props.setIsScoreLoaded(false)
         }
+
+        // Reset verse bars.
+        this.props.setIsVerseBarAbove(false)
+        this.props.setIsVerseBarBelow(false)
 
         return true
     }

@@ -53,24 +53,24 @@ class Lyric extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.isTransitioningHeight && !this.props.isTransitioningHeight) {
-            console.error('is transitioning height')
-            this._handleScroll()
+
+            this._handleScroll(false)
             this.props.completeHeightTransition()
         }
     }
 
     componentDidUpdate(prevProps) {
         if (!prevProps.appMounted && this.props.appMounted) {
-            this._handleScroll()
+            this._handleScroll(false)
         }
     }
 
-    _handleScroll() {
-        this._handleDebouncedScroll()
+    _handleScroll(isManualScroll) {
+        this._handleDebouncedScroll(isManualScroll)
     }
 
-    _handleDebouncedScroll() {
-        this.props.handleLyricWheel(false)
+    _handleDebouncedScroll(isManualScroll) {
+        this.props.handleLyricWheel(isManualScroll)
     }
 
     render() {
