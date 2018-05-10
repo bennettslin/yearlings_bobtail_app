@@ -12,10 +12,8 @@ import { getLyricUnitsCount } from '../../helpers/dataHelper'
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    appMounted,
     renderReadySongIndex
 }) => ({
-    appMounted,
     renderReadySongIndex
 })
 
@@ -26,9 +24,6 @@ const mapStateToProps = ({
 class Lyric extends Component {
 
     static propTypes = {
-        // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
-
         // From parent.
         isTransitioningHeight: PropTypes.bool.isRequired,
         completeHeightTransition: PropTypes.func.isRequired,
@@ -56,12 +51,6 @@ class Lyric extends Component {
 
             this._handleScroll(false)
             this.props.completeHeightTransition()
-        }
-    }
-
-    componentDidUpdate(prevProps) {
-        if (!prevProps.appMounted && this.props.appMounted) {
-            this._handleScroll(false)
         }
     }
 

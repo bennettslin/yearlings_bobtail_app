@@ -44,6 +44,7 @@ class Verse extends Component {
         inVerseBar: PropTypes.bool.isRequired,
         handleLyricAnnotationSelect: PropTypes.func,
         handleVerseInteractivate: PropTypes.func,
+        handleVerseElementSelect: PropTypes.func,
         handleVerseElementSelectOrSlide: PropTypes.func
     }
 
@@ -54,7 +55,9 @@ class Verse extends Component {
     }
 
     componentDidMount() {
-        this._handleVerseElementSelectOrSlide()
+        if (this.props.isOnCursor) {
+            this.props.handleVerseElementSelect(this.myVerse)
+        }
     }
 
     shouldComponentUpdate(nextProps) {
@@ -79,12 +82,14 @@ class Verse extends Component {
         return componentShouldUpdate
     }
 
-    componentDidUpdate() {
-        this._handleVerseElementSelectOrSlide()
+    componentWillReceiveProps(nextProps) {
+        if (!this.props.isOnCursor) {
+            this._handleVerseElementSelectOrSlide(nextProps)
+        }
     }
 
-    _handleVerseElementSelectOrSlide() {
-        if (this.props.isOnCursor) {
+    _handleVerseElementSelectOrSlide(props = this.props) {
+        if (props.isOnCursor) {
             this.props.handleVerseElementSelectOrSlide(this.myVerse)
         }
     }

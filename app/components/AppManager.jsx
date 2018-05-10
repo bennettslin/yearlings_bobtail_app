@@ -1043,6 +1043,10 @@ class App extends Component {
         return interactivatedVerseIndex
     }
 
+    setVerseElement(verseElement) {
+        this.props.setSelectedVerseElement(verseElement)
+    }
+
     selectOrSlideVerseElement(
         verseElement,
         isTouchBodyEnd
@@ -1288,6 +1292,7 @@ class App extends Component {
         this.selectTips = this.selectTips.bind(this)
         this.selectTitle = this.selectTitle.bind(this)
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
+        this.setVerseElement = this.setVerseElement.bind(this)
         this.selectOrSlideVerseElement = this.selectOrSlideVerseElement.bind(this)
         this.determineVerseBars = this.determineVerseBars.bind(this)
         this.selectManualScroll = this.selectManualScroll.bind(this)
@@ -1342,6 +1347,7 @@ class App extends Component {
                 toggleAccess={this.toggleAccess}
                 toggleAdmin={this.toggleAdmin}
                 togglePlay={this.togglePlay}
+                setVerseElement={this.setVerseElement}
                 selectOrSlideVerseElement={this.selectOrSlideVerseElement}
 
                 advanceToNextSong={this.advanceToNextSong}

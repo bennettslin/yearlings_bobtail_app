@@ -36,6 +36,7 @@ class EventManager extends Component {
         this.handleBodyTouchMove = this.handleBodyTouchMove.bind(this)
         this.handleBodyTouchEnd = this.handleBodyTouchEnd.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
+        this.handleVerseElementSelect = this.handleVerseElementSelect.bind(this)
         this.handleVerseElementSelectOrSlide = this.handleVerseElementSelectOrSlide.bind(this)
         this.handleAccessToggle = this.handleAccessToggle.bind(this)
         this.handleAdminToggle = this.handleAdminToggle.bind(this)
@@ -780,6 +781,10 @@ class EventManager extends Component {
         }
     }
 
+    handleVerseElementSelect(verseElement) {
+        this.props.setVerseElement(verseElement)
+    }
+
     handleVerseElementSelectOrSlide(verseElement) {
         this.props.selectOrSlideVerseElement(verseElement)
     }
@@ -902,29 +907,33 @@ class EventManager extends Component {
             return
         }
 
-        const annotationIndex = this.props.selectedAnnotationIndex
+        const { selectedAnnotationIndex } = this.props
 
         // If a portal was selected, there will be an annotation index.
-        if (annotationIndex) {
+        if (selectedAnnotationIndex) {
             this._scrollElementIntoView({
                 scrollClass: LYRIC_ANNOTATION_SCROLL,
-                index: annotationIndex,
+                index: selectedAnnotationIndex,
                 callback: this._determineVerseBarsCallback
             })
 
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
-                    index: annotationIndex
+                    index: selectedAnnotationIndex
                 })
             }
 
-            // Otherwise, scroll to top.
+            // Otherwise, scroll to given verse index.
         } else {
+            const { selectedVerseIndex } = this.props
+
             this._scrollElementIntoView({
                 scrollClass: VERSE_SCROLL,
+                index: selectedVerseIndex,
                 callback: this._determineVerseBarsCallback
             })
+
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
@@ -1017,6 +1026,7 @@ class EventManager extends Component {
                 handleBodyTouchMove: this.handleBodyTouchMove,
                 handleBodyTouchEnd: this.handleBodyTouchEnd,
                 handlePopupContainerClick: this.handlePopupContainerClick,
+                handleVerseElementSelect: this.handleVerseElementSelect,
                 handleVerseElementSelectOrSlide: this.handleVerseElementSelectOrSlide,
                 handleVerseElementSlide: this.handleVerseElementSlide,
                 handleAccessToggle: this.handleAccessToggle,

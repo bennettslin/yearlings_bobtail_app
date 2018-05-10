@@ -15,8 +15,10 @@ import VerseBar from './VerseBar'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    appMounted,
     isHeavyRenderReady
 }) => ({
+    appMounted,
     isHeavyRenderReady
 })
 
@@ -28,6 +30,7 @@ class LyricColumn extends Component {
 
     static propTypes = {
         // Through Redux.
+        appMounted: PropTypes.bool.isRequired,
         isHeavyRenderReady: PropTypes.bool.isRequired,
 
         // From parent.
@@ -78,6 +81,10 @@ class LyricColumn extends Component {
             this.setState({
                 overrideTransitions: true
             })
+        }
+
+        if (!this.props.appMounted && nextProps.appMounted) {
+            this.props.handleScrollAfterLyricRerender()
         }
     }
 
