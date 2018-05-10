@@ -15,10 +15,14 @@
 // Lyrics should be higher than anything in centre field.
 @zIndex__lyricColumn: @zIndex__centreFieldChild + 1;
 
-@zIndex__verseAudioButton: @zIndex__lyricColumn + 1;
+/**
+ * For verse audio button to stay on top of next verse, and text span to stay
+ * on top of next dot sequence.
+ */
+@zIndex__verseChild__topMost: @zIndex__lyricColumn + 1;
 
 // This needs to be above annotation text in carousel.
-@zIndex__carouselNavButton: @zIndex__verseAudioButton + 1;
+@zIndex__carouselNavButton: @zIndex__verseChild__topMost + 1;
 
 // This is above text but below verse bar and buttons.
 @zIndex__lyricAccessIcons: @zIndex__carouselNavButton + 1;
