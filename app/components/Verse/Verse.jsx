@@ -55,6 +55,8 @@ class Verse extends Component {
     }
 
     componentDidMount() {
+
+        // TODO: Make this a more general case where this is called when song is selected.
         if (this.props.isOnCursor) {
             this.props.handleVerseElementSelect(this.myVerse)
         }
@@ -90,6 +92,7 @@ class Verse extends Component {
 
     _handleVerseElementSelectOrSlide(props = this.props) {
         if (props.isOnCursor) {
+            console.error('isOnCursor')
             this.props.handleVerseElementSelectOrSlide(this.myVerse)
         }
     }

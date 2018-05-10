@@ -33,11 +33,11 @@ class Lyric extends Component {
     constructor(props) {
         super(props)
 
-        this._handleScroll = this._handleScroll.bind(this)
+        this._handleWheel = this._handleWheel.bind(this)
 
         // Handle only once every 10ms at most.
-        this._handleDebouncedScroll = debounce(
-            this._handleDebouncedScroll, 10
+        this._handleDebouncedWheel = debounce(
+            this._handleDebouncedWheel, 10
         )
     }
 
@@ -49,16 +49,20 @@ class Lyric extends Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.isTransitioningHeight && !this.props.isTransitioningHeight) {
 
-            this._handleScroll(false)
+            /**
+             * We are calling this because collapsing and expanding the lyric
+             * section may change the verse bar status.
+             */
+            this._handleWheel(false)
             this.props.completeHeightTransition()
         }
     }
 
-    _handleScroll(isManualScroll) {
-        this._handleDebouncedScroll(isManualScroll)
+    _handleWheel(isManualScroll) {
+        this._handleDebouncedWheel(isManualScroll)
     }
 
-    _handleDebouncedScroll(isManualScroll) {
+    _handleDebouncedWheel(isManualScroll) {
         this.props.handleLyricWheel(isManualScroll)
     }
 
@@ -72,7 +76,7 @@ class Lyric extends Component {
 
         return (
             <LyricView {...other}
-                handleScroll={this._handleScroll}
+                handleScroll={this._handleWheel}
             />
         )
     }
