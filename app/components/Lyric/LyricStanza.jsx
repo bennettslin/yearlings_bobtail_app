@@ -13,11 +13,11 @@ import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex,
-    selectedVerseIndex,
+    renderReadyVerseIndex,
     sliderVerseIndex
 }) => ({
     renderReadySongIndex,
-    selectedVerseIndex,
+    renderReadyVerseIndex,
     sliderVerseIndex
 })
 
@@ -30,7 +30,7 @@ class LyricStanza extends Component {
     static propTypes = {
         // Through Redux.
         renderReadySongIndex: PropTypes.number.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
+        renderReadyVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -45,7 +45,7 @@ class LyricStanza extends Component {
                 updatingPropsArray: [
                     'unitIndex',
                     'renderReadySongIndex',
-                    'selectedVerseIndex',
+                    'renderReadyVerseIndex',
                     'sliderVerseIndex'
                 ]
             })
@@ -55,7 +55,7 @@ class LyricStanza extends Component {
 
     render() {
         const { renderReadySongIndex,
-                selectedVerseIndex,
+                renderReadyVerseIndex,
                 sliderVerseIndex,
                 unitIndex,
                 ...other } = this.props,
@@ -101,7 +101,7 @@ class LyricStanza extends Component {
              * compare to selected verse.
              */
             unitVerseIndex = sliderVerseIndex > -1 ?
-                sliderVerseIndex : selectedVerseIndex,
+                sliderVerseIndex : renderReadyVerseIndex,
             verseAfterUnit = lastVerseIndex < unitVerseIndex,
             verseBeforeUnit = firstVerseIndex > unitVerseIndex,
             verseInUnit = firstVerseIndex <= unitVerseIndex &&
