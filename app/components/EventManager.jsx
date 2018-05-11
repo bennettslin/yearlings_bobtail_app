@@ -2,13 +2,13 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import scrollIntoView from 'scroll-into-view'
+import assign from 'lodash.assign'
+
 import AccessManager from './AccessManager'
 
 import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from '../helpers/dotHelper'
-import { getClientX, getIsValidScrollingTargetCallback } from '../helpers/domHelper'
-import { getLyricTopAlign, getCarouselLeftAlign } from '../helpers/responsiveHelper'
+import { getClientX, scrollElementIntoView } from '../helpers/domHelper'
 
 import { REFERENCE } from '../constants/dots'
 import { DISABLED,
@@ -16,8 +16,7 @@ import { DISABLED,
 
 import { CAROUSEL_SCROLL,
          LYRIC_ANNOTATION_SCROLL,
-         VERSE_SCROLL,
-         SCROLL_CLASSES } from '../constants/dom'
+         VERSE_SCROLL } from '../constants/dom'
 
 class EventManager extends Component {
 
@@ -942,46 +941,20 @@ class EventManager extends Component {
         }
     }
 
-    _scrollElementIntoView({
-        scrollClass,
-        index,
-        time = 350,
-        callback
-    }) {
+    _scrollElementIntoView(props) {
 
-        const { childClass,
-                parentClass } = SCROLL_CLASSES[scrollClass],
-            selector = isNaN(index) ? childClass : `${childClass}__${index}`,
-            element = document.getElementsByClassName(selector)[0],
-
-            isCarousel = scrollClass === CAROUSEL_SCROLL
-
-        if (element) {
-            // console.warn(`Scrolling ${selector} into view.`);
-
-            const align = isCarousel ?
-                getCarouselLeftAlign(this.props.deviceIndex, this.props.windowWidth) :
-                getLyricTopAlign(this.props.deviceIndex, this.props.isLyricExpanded),
-
-                validTarget = getIsValidScrollingTargetCallback(
-                    parentClass
-                )
-
-            scrollIntoView(element, {
-                time,
-                align,
-                validTarget
-            }, callback)
-        }
+        scrollElementIntoView(
+            assign(props, {
+                deviceIndex: this.props.deviceIndex,
+                windowWidth: this.props.windowWidth,
+                isLyricExpanded: this.props.isLyricExpanded
+            })
+        )
     }
 
     _determineVerseBarsCallback() {
         // Allow this to be called without event as the argument.
         this.props.determineVerseBars()
-    }
-
-    _scrollElementCallback(status) {
-        console.warn('scroll status:', status);
     }
 
     _closeDotsIfOverviewWillShow() {
