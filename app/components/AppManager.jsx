@@ -298,8 +298,7 @@ class App extends Component {
          * If selecting or changing annotation in same song, change index to
          * be rendered right away.
          */
-        if (selectedAnnotationIndex &&
-            selectedSongIndex === props.selectedSongIndex) {
+        if (selectedSongIndex === props.selectedSongIndex) {
             props.setRenderReadyAnnotationIndex(selectedAnnotationIndex)
         }
 
@@ -1167,6 +1166,14 @@ class App extends Component {
 
         props.selectVerseIndex(selectedVerseIndex)
         props.selectTimePlayed(selectedTimePlayed)
+
+        /**
+         * If selecting or changing verse in same song, change index to be
+         * rendered right away.
+         */
+        if (selectedSongIndex === props.selectedSongIndex) {
+            props.setRenderReadyVerseIndex(selectedVerseIndex)
+        }
 
         /**
          * If called by player, and autoScroll is on, then scroll to selected

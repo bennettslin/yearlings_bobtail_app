@@ -6,7 +6,7 @@ import AppManager from './AppManager'
 import { getSongVerseTimes } from '../helpers/dataHelper'
 import { getValidRoutingIndicesObject, getPathForIndices } from '../helpers/routingHelper'
 
-import { selectAnnotationIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
+import { selectSongIndex, selectAnnotationIndex, selectVerseIndex, selectWikiIndex, selectTimePlayed } from '../redux/actions/storage'
 
 class RoutingManager extends Component {
 
@@ -115,7 +115,7 @@ const mapStateToProps = ({
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAnnotationIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, selectWikiIndex
+        selectAnnotationIndex, selectSongIndex, selectVerseIndex, selectWikiIndex, selectTimePlayed
     }, dispatch)
 )
 
