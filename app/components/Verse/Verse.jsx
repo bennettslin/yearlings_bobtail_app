@@ -33,7 +33,6 @@ class Verse extends Component {
         renderReadySongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        barVerseIndex: PropTypes.number,
         verseObject: PropTypes.object.isRequired,
 
         isOnCursor: PropTypes.bool,
@@ -68,11 +67,7 @@ class Verse extends Component {
 
                     'isOnCursor',
                     'isAfterCursor',
-                    'isInteractivated',
-                    {
-                        staticProp: 'inVerseBar',
-                        subUpdatingKey: 'barVerseIndex'
-                    }
+                    'isInteractivated'
                 ]
             })
 

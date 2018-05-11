@@ -95,7 +95,6 @@ class VerseBar extends Component {
                 )}>
                     <VerseController {...other}
                         inVerseBar
-                        barVerseIndex={verseIndex}
                         verseObject={verseObject}
                     />
                 </div>

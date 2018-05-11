@@ -24,7 +24,6 @@ class Slider extends Component {
         super(props)
 
         this._handleTouchDown = this._handleTouchDown.bind(this)
-        this._handleTransition = this._handleTransition.bind(this)
     }
 
     shouldComponentUpdate() {
@@ -45,7 +44,6 @@ class Slider extends Component {
                 ref={(node) => (this.mySlider = node)}
                 onMouseDown={this._handleTouchDown}
                 onTouchStart={this._handleTouchDown}
-                onTransitionEnd={this._handleTransition}
             >
                 <SliderTimes/>
                 <SliderStanzas />
