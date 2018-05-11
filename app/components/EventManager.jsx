@@ -912,12 +912,14 @@ class EventManager extends Component {
             this._scrollElementIntoView({
                 scrollClass: LYRIC_ANNOTATION_SCROLL,
                 index: selectedAnnotationIndex,
+                time: 0,
                 callback: this._determineVerseBarsCallback
             })
 
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
+                    time: 0,
                     index: selectedAnnotationIndex
                 })
             }
@@ -929,12 +931,14 @@ class EventManager extends Component {
             this._scrollElementIntoView({
                 scrollClass: VERSE_SCROLL,
                 index: selectedVerseIndex,
+                time: 0,
                 callback: this._determineVerseBarsCallback
             })
 
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
+                    time: 0,
                     index: 1
                 })
             }
