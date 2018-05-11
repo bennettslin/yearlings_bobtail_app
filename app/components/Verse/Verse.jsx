@@ -44,7 +44,6 @@ class Verse extends Component {
         inVerseBar: PropTypes.bool.isRequired,
         handleLyricAnnotationSelect: PropTypes.func,
         handleVerseInteractivate: PropTypes.func,
-        handleVerseElementSelect: PropTypes.func,
         handleVerseElementSelectOrSlide: PropTypes.func
     }
 
@@ -55,13 +54,7 @@ class Verse extends Component {
     }
 
     componentDidMount() {
-
-        // TODO: Make this a more general case where this is called when song is selected.
-        // if (this.props.isOnCursor) {
-        //     this.props.handleVerseElementSelect(this.myVerse)
-        // }
-
-        this._handleVerseElementSelectOrSlide(this.props)
+        this._handleVerseElementSelectOrSlide(this.props, true)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -92,9 +85,9 @@ class Verse extends Component {
         }
     }
 
-    _handleVerseElementSelectOrSlide(props = this.props) {
+    _handleVerseElementSelectOrSlide(props = this.props, uponMount) {
         if (props.isOnCursor) {
-            this.props.handleVerseElementSelectOrSlide(this.myVerse)
+            this.props.handleVerseElementSelectOrSlide(this.myVerse, uponMount)
         }
     }
 

@@ -1003,16 +1003,17 @@ class App extends Component {
             this.props.setSliderWidth(0)
             this.props.setSliderVerseIndex(-1)
 
-            this.selectOrSlideVerseElement(
+            this.selectOrSlideVerseElement({
                 /**
                  * If slider was moved, there will be a slider verse element.
                  * If it was just tapped, there won't be, so fall back to the
                  * selected verse element.
                  */
-                this.props.sliderVerseElement ||
+                verseElement: this.props.sliderVerseElement ||
                     this.props.selectedVerseElement,
-                true
-            )
+
+                isTouchBodyEnd: true
+            })
         }
     }
 
@@ -1053,10 +1054,11 @@ class App extends Component {
         this.props.setSelectedVerseElement(verseElement)
     }
 
-    selectOrSlideVerseElement(
+    selectOrSlideVerseElement({
         verseElement,
-        isTouchBodyEnd
-    ) {
+        isTouchBodyEnd,
+        isInitialMount
+    }) {
 
         const doSetSlider = this.props.isSliderMoving && !isTouchBodyEnd,
 
@@ -1066,7 +1068,10 @@ class App extends Component {
 
         if (verseElement !== propsVerseElement) {
 
-            this.determineVerseBars(verseElement)
+            // Determine verse bars only if this is not the initial mount.
+            if (!isInitialMount) {
+                this.determineVerseBars(verseElement)
+            }
 
             if (doSetSlider) {
                 /**
