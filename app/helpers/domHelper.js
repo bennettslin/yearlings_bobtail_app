@@ -51,15 +51,15 @@ const _getIsValidScrollingTargetCallback = (scrollParentClass) => {
     }
 }
 
-const _scrollElementCallback = () => {
-    // console.warn('scroll status:', status);
+const _scrollElementCallback = (status) => {
+    console.warn('scroll status:', status);
 }
 
 export const scrollElementIntoView = ({
 
     scrollClass,
     index,
-    time = 350,
+    time = 500,
     callback = _scrollElementCallback,
 
     deviceIndex,

@@ -358,7 +358,7 @@ class App extends Component {
         return true
     }
 
-    selectTime(selectedTimePlayed = 0, isPlayerAdvancing, autoScrollCallback) {
+    selectTime(selectedTimePlayed = 0, isPlayerAdvancing) {
         const selectedVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, selectedTimePlayed)
 
         if (selectedVerseIndex !== null) {
@@ -368,8 +368,7 @@ class App extends Component {
 
                 // When time is being selected, always render verse immediately.
                 renderVerseImmediately: true,
-                isPlayerAdvancing,
-                autoScrollCallback
+                isPlayerAdvancing
             })
         }
     }
@@ -1144,8 +1143,7 @@ class App extends Component {
         selectedSongIndex = this.props.selectedSongIndex,
         selectedVerseIndex,
         renderVerseImmediately,
-        isPlayerAdvancing,
-        autoScrollCallback
+        isPlayerAdvancing
     }) {
 
         const { props } = this
@@ -1177,10 +1175,19 @@ class App extends Component {
 
         /**
          * If called by player, and autoScroll is on, then scroll to selected
-         * verse.
+         * verse if needed.
          */
-        if (!this.props.isManualScroll && autoScrollCallback) {
-            autoScrollCallback(selectedVerseIndex)
+        if (
+            !this.props.isManualScroll &&
+            selectedVerseIndex !== props.selectedVerseIndex
+        ) {
+            scrollElementIntoView({
+                scrollClass: VERSE_SCROLL,
+                index: selectedVerseIndex,
+                deviceIndex: this.props.deviceIndex,
+                windowWidth: this.props.windowWidth,
+                isLyricExpanded: this.props.isLyricExpanded
+            })
         }
 
         /**

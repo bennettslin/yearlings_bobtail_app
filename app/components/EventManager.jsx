@@ -73,7 +73,6 @@ class EventManager extends Component {
         this.handleTitleToggle = this.handleTitleToggle.bind(this)
         this.handleVerseBarSelect = this.handleVerseBarSelect.bind(this)
         this.handleVerseBarWheel = this.handleVerseBarWheel.bind(this)
-        this._autoScrollCallback = this._autoScrollCallback.bind(this)
         this.handleVerseInteractivate = this.handleVerseInteractivate.bind(this)
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
         this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
@@ -304,16 +303,7 @@ class EventManager extends Component {
      ****************/
 
     handlePlayerTimeChange(time) {
-
-        // App manager will determine whether to autoScroll.
-        this.props.selectTime(time, true, this._autoScrollCallback)
-    }
-
-    _autoScrollCallback(verseIndex) {
-        this._scrollElementIntoView({
-            scrollClass: VERSE_SCROLL,
-            index: verseIndex
-        })
+        this.props.selectTime(time, true)
     }
 
     handlePlayerNextSong(e) {
@@ -404,13 +394,12 @@ class EventManager extends Component {
     }
 
     handleLyricWheel(e) {
+        let hasRoomToScroll = false
 
-        // Determine whether a scroll is possible.
+        // Determine whether there is room to scroll.
         if (e) {
             const { deltaY = 0 } = e,
                 { scrollTop } = this.myLyricSection
-
-            let hasRoomToScroll = false
 
             if (deltaY > 0) {
                 const { scrollHeight, clientHeight } = this.myLyricSection
@@ -426,16 +415,23 @@ class EventManager extends Component {
             }
 
             if (hasRoomToScroll) {
+
+                // Select manual scroll only if wheel moved far enough.
                 if (deltaY > 1 || deltaY < -1) {
                     this.props.selectManualScroll(true)
                 }
 
             } else {
+
+                // If no room to scroll, don't bother to send event.
                 e.preventDefault()
             }
         }
 
-        this.props.determineVerseBars()
+        // Determine verse bars if scrolled, or if triggered manually.
+        if (hasRoomToScroll || !e) {
+            this.props.determineVerseBars()
+        }
     }
 
     handleLyricAutoScroll() {
@@ -773,7 +769,6 @@ class EventManager extends Component {
     handleVerseBarSelect() {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props
-
         this._scrollElementIntoView({
             scrollClass: VERSE_SCROLL,
             index: selectedVerseIndex
