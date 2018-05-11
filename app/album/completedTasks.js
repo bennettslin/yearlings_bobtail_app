@@ -2902,4 +2902,9 @@ module.exports = [
         workedHours: 10,
         neededHours: 10
     },
+    {
+        taskName: `Be smarter about render ready, override transitions.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

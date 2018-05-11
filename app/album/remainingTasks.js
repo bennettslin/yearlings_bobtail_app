@@ -7,12 +7,6 @@ module.exports = [
     },
 
     {
-        taskName: `Be smarter about render ready, override transitions.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    {
         taskName: `Finalise UI of selected carousel annotations.`,
         workedHours: 0,
         neededHours: 3

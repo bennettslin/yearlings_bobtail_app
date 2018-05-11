@@ -46,13 +46,6 @@ class LyricColumn extends Component {
 
         this.state = {
             isTransitioningHeight: false,
-
-            /**
-             * When a dot is deselected, don't animate elements that get hidden
-             * when transitioning between songs.
-             */
-            overrideTransitions: false,
-
             scrollTimeoutId: null
         }
     }
@@ -77,12 +70,6 @@ class LyricColumn extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (this.props.isHeavyRenderReady && !nextProps.isHeavyRenderReady) {
-            this.setState({
-                overrideTransitions: true
-            })
-        }
-
         if (!this.props.appMounted && nextProps.appMounted) {
             this.props.handleScrollAfterLyricRerender()
         }
@@ -116,8 +103,7 @@ class LyricColumn extends Component {
 
     completeHeightTransition() {
         this.setState({
-            isTransitioningHeight: false,
-            overrideTransitions: false
+            isTransitioningHeight: false
         })
     }
 
@@ -126,7 +112,6 @@ class LyricColumn extends Component {
 
         return (
             <LyricColumnView {...other}
-                overrideTransitions={this.state.overrideTransitions}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
                 completeHeightTransition={this.completeHeightTransition}
@@ -140,12 +125,7 @@ class LyricColumn extends Component {
  ****************/
 
 const lyricColumnViewPropTypes = {
-    // Through Redux.
-    isHeavyRenderReady: PropTypes.bool.isRequired,
-
     // From parent.
-    // myRef: PropTypes.func.isRequired,
-    overrideTransitions: PropTypes.bool.isRequired,
     isTransitioningHeight: PropTypes.bool.isRequired,
     handleTransition: PropTypes.func.isRequired,
     completeHeightTransition: PropTypes.func.isRequired,
@@ -160,8 +140,6 @@ const lyricColumnViewPropTypes = {
 LyricColumnView = ({
 
     // From props.
-    isHeavyRenderReady,
-
     handleLyricColumnSelect,
     handleLyricSectionExpand,
     handleLyricAutoScroll,
@@ -169,7 +147,6 @@ LyricColumnView = ({
     handleVerseBarWheel,
 
     // From controller.
-    overrideTransitions,
     isTransitioningHeight,
     handleTransition,
     completeHeightTransition,
@@ -187,9 +164,7 @@ LyricColumnView = ({
                 'LyricColumn',
                 'position__lyricColumn__desktop',
                 'position__lyricColumn__mobile',
-                'gradientMask__lyricColumn__desktop',
-                isHeavyRenderReady && 'renderReady',
-                { 'overrideTransitions': overrideTransitions }
+                'gradientMask__lyricColumn__desktop'
             )}
             onTransitionEnd={handleTransition}
         >
