@@ -118,7 +118,7 @@ class Carousel extends Component {
                 className={cx(
                     'Carousel',
                     'gradientMask__carousel__desktop',
-                    isHeavyRenderReady ? 'renderReady' : 'renderUnready',
+                    isHeavyRenderReady && 'renderReady',
                     { 'overrideTransitions': overrideTransitions }
                 )}
                 onTransitionEnd={this._handleTransition}

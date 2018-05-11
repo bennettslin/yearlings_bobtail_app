@@ -51,6 +51,7 @@ class RootManager extends Component {
         isVerseBarAbove: PropTypes.bool.isRequired,
         isVerseBarBelow: PropTypes.bool.isRequired,
         isManualScroll: PropTypes.bool.isRequired,
+        isHeavyRenderReady: PropTypes.bool.isRequired,
 
         // From parent.
         handleKeyDownPress: PropTypes.func.isRequired,
@@ -144,6 +145,7 @@ class RootManager extends Component {
                 isVerseBarAbove,
                 isVerseBarBelow,
                 isManualScroll,
+                isHeavyRenderReady,
 
                 // Passed directly from access manaager.
                 handleKeyDownPress } = this.props,
@@ -237,6 +239,8 @@ class RootManager extends Component {
                         `RM__${singleShownLyricColumnKey}LyricColumnOnly`,
                     isHeightlessLyricColumn ?
                         'RM__lyricHeightless' : 'RM__lyricHeighted',
+                    isHeavyRenderReady ?
+                        'RM__renderReady' : 'RM__renderUnready',
 
                     { 'RM__bothLyricColumnsShown': !singleShownLyricColumnKey,
                       'RM__verseBarHidden':
@@ -270,7 +274,7 @@ class RootManager extends Component {
 }
 
 export default connect(({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll
+    interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isHeavyRenderReady
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll
+    interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isHeavyRenderReady
 }))(RootManager)

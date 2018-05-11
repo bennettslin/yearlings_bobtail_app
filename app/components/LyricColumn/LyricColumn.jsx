@@ -188,7 +188,7 @@ LyricColumnView = ({
                 'position__lyricColumn__desktop',
                 'position__lyricColumn__mobile',
                 'gradientMask__lyricColumn__desktop',
-                isHeavyRenderReady ? 'renderReady' : 'renderUnready',
+                isHeavyRenderReady && 'renderReady',
                 { 'overrideTransitions': overrideTransitions }
             )}
             onTransitionEnd={handleTransition}

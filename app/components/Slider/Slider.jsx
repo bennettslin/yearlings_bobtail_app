@@ -81,7 +81,7 @@ class Slider extends Component {
             <div
                 className={cx(
                     'Slider',
-                    isHeavyRenderReady ? 'renderReady' : 'renderUnready',
+                    isHeavyRenderReady && 'renderReady',
                     { 'overrideTransitions': overrideTransitions }
                 )}
                 ref={(node) => (this.mySlider = node)}
