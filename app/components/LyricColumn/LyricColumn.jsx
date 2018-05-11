@@ -91,7 +91,7 @@ class LyricColumn extends Component {
     componentDidUpdate(prevProps) {
         if (!prevProps.isHeavyRenderReady && this.props.isHeavyRenderReady) {
             const scrollTimeoutId = setTimeout(
-                this._handleScrollAfterLyricRerender, 200
+                this._handleScrollAfterLyricRerender, 0
             )
 
             clearTimeout(this.state.scrollTimeoutId)
