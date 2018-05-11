@@ -7,15 +7,9 @@ module.exports = [
     },
 
     {
-        taskName: `Allow user to enable and disable auto scroll.`,
-        workedHours: 5,
-        neededHours: 8
-    },
-
-    {
-        taskName: `Don't scroll carousel or lyrics when selecting new song or moving between portals.`,
+        taskName: `Be smarter about render ready, override transitions.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 5
     },
 
     {
