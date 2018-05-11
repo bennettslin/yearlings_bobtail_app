@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import SwitchManager from './SwitchManager'
-import AdminToggle from './admin/admin-toggle'
+import AdminToggle from './admin/AdminToggle'
 import Players from './Players/Players'
 import { SHOWN,
          OVERVIEW_OPTIONS,
