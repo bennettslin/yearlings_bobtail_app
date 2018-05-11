@@ -10,7 +10,7 @@ import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates } from '../redux/actions/device'
 import { setIsScoreLoaded } from '../redux/actions/player'
 import { setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
-import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
+import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './eventManager'
@@ -702,6 +702,10 @@ class App extends Component {
             selectedAnnotationIndex
         )
 
+        this.props.setRenderReadyVerseIndex(
+            selectedVerseIndex
+        )
+
         if (this.props.appMounted) {
 
             /**
@@ -1376,7 +1380,7 @@ const passReduxStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
     }, dispatch)
 )
 

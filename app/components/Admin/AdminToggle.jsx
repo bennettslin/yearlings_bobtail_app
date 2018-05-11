@@ -12,7 +12,9 @@ const AdminToggle = ({
     selectedSongIndex,
     renderReadySongIndex,
     selectedAnnotationIndex,
-    renderReadyAnnotationIndex
+    renderReadyAnnotationIndex,
+    selectedVerseIndex,
+    renderReadyVerseIndex
 
 }) => (
     <div className="AdminToggle">
@@ -23,7 +25,7 @@ const AdminToggle = ({
             {windowWidth} x {windowHeight}
         </div>
         <div>
-            isHeavyRenderReady: {isHeavyRenderReady}
+            isHeavyRenderReady: {isHeavyRenderReady ? 'true' : 'false'}
         </div>
         <div>
             selectedSongIndex: {selectedSongIndex}
@@ -37,6 +39,12 @@ const AdminToggle = ({
         <div>
             renderReadyAnnotationIndex: {renderReadyAnnotationIndex}
         </div>
+        <div>
+            selectedVerseIndex: {selectedVerseIndex}
+        </div>
+        <div>
+            renderReadyVerseIndex: {renderReadyVerseIndex}
+        </div>
     </div>
 )
 
@@ -48,7 +56,9 @@ export default connect(({
     selectedSongIndex,
     renderReadySongIndex,
     selectedAnnotationIndex,
-    renderReadyAnnotationIndex
+    renderReadyAnnotationIndex,
+    selectedVerseIndex,
+    renderReadyVerseIndex
 }) => ({
     deviceIndex,
     windowWidth,
@@ -57,5 +67,7 @@ export default connect(({
     selectedSongIndex,
     renderReadySongIndex,
     selectedAnnotationIndex,
-    renderReadyAnnotationIndex
+    renderReadyAnnotationIndex,
+    selectedVerseIndex,
+    renderReadyVerseIndex
 }))(AdminToggle)
