@@ -95,7 +95,7 @@ class App extends Component {
         window.onresize = debounce(this._windowResize, 50)
 
         // Upon page load, should render immediately.
-        this._setIsHeavyRenderReady()
+        this._handleRenderReady()
     }
 
     componentDidMount() {
@@ -141,30 +141,29 @@ class App extends Component {
         }
     }
 
-    componentDidUpdate(prevProps) {
-        this._songIndexDidChange(this.props, prevProps)
+    componentWillReceiveProps(nextProps) {
+
+        if (nextProps.selectedSongIndex !== this.props.selectedSongIndex) {
+            this._songIndexDidChange()
+        }
     }
 
-    _songIndexDidChange(nextProps, prevProps) {
-        const { selectedSongIndex } = nextProps
+    _songIndexDidChange() {
 
-        if (!prevProps || selectedSongIndex !== prevProps.selectedSongIndex) {
+        // Clear previous timeout.
+        clearTimeout(this.state.songChangeTimeoutId)
 
-            /**
-             * Render is synchronous, so wait a bit after selecting new song
-             * before rendering the most performance intensive components.
-             */
-            const songChangeTimeoutId = setTimeout(
-                this._setIsHeavyRenderReady, 200
-            )
+        /**
+         * Render is synchronous, so wait a bit after selecting new song before
+         * rendering the most performance intensive components.
+         */
+        const songChangeTimeoutId = setTimeout(
+            this._handleRenderReady, 200
+        )
 
-            // Clear previous timeout.
-            clearTimeout(this.state.songChangeTimeoutId)
-
-            this.setState({
-                songChangeTimeoutId
-            })
-        }
+        this.setState({
+            songChangeTimeoutId
+        })
     }
 
     /*******************
@@ -395,19 +394,6 @@ class App extends Component {
         if (typeof selectedCarouselNavValue === 'boolean') {
             selectedCarouselNavValue = selectedCarouselNavValue ? 1 : 0
         }
-
-        // /**
-        //  * If it has heightless lyrics, carousel is always collapsed.
-        //  */
-        // if (this.props.isHeightlessLyricColumn) {
-
-        //     if (!this.props.selectedCarouselNavIndex) {
-        //         return false
-
-        //     } else {
-        //         selectedCarouselNavValue = 0
-        //     }
-        // }
 
         this.props.selectCarouselNavIndex(selectedCarouselNavValue)
 
@@ -681,7 +667,7 @@ class App extends Component {
 
         // If not selecting a new song, no need to render again.
         if (selectedSongIndex === this.props.selectedSongIndex) {
-            this._setIsHeavyRenderReady(
+            this._handleRenderReady(
                 selectedSongIndex,
                 selectedAnnotationIndex
             )
@@ -698,7 +684,7 @@ class App extends Component {
         return true
     }
 
-    _setIsHeavyRenderReady(
+    _handleRenderReady(
         selectedSongIndex = this.props.selectedSongIndex,
         selectedAnnotationIndex = this.props.selectedAnnotationIndex,
         selectedVerseIndex = this.props.selectedVerseIndex
@@ -718,16 +704,24 @@ class App extends Component {
 
         if (this.props.appMounted) {
 
-            // Handle doublespeaker columns only when lyrics are ready to render.
+            /**
+             * Determine doublespeaker columns only when lyrics are ready to
+             * render.
+             */
             this.props.setShowOneOfTwoLyricColumns(
-                getShowOneOfTwoLyricColumns(selectedSongIndex, this.props.deviceIndex)
+                getShowOneOfTwoLyricColumns(
+                    selectedSongIndex,
+                    this.props.deviceIndex
+                )
             )
         }
 
-        this.props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
-            selectedSongIndex,
-            selectedVerseIndex
-        ))
+        this.props.setCurrentSceneIndex(
+            getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
+        )
     }
 
     /************
@@ -1277,8 +1271,7 @@ class App extends Component {
     }
 
     _bindEventHandlers() {
-        this._songIndexDidChange = this._songIndexDidChange.bind(this)
-        this._setIsHeavyRenderReady = this._setIsHeavyRenderReady.bind(this)
+        this._handleRenderReady = this._handleRenderReady.bind(this)
         this.accessAnnotation = this.accessAnnotation.bind(this)
         this.accessDot = this.accessDot.bind(this)
         this.accessAnnotationAnchor = this.accessAnnotationAnchor.bind(this)
