@@ -403,11 +403,38 @@ class EventManager extends Component {
         return lyricsToggled
     }
 
-    handleLyricWheel(isManualScroll = true) {
+    handleLyricWheel(e) {
 
-        if (isManualScroll) {
-            this.props.selectManualScroll(true)
+        // Determine whether a scroll is possible.
+        if (e) {
+            const { deltaY = 0 } = e,
+                { scrollTop } = this.myLyricSection
+
+            let hasRoomToScroll = false
+
+            if (deltaY > 0) {
+                const { scrollHeight, clientHeight } = this.myLyricSection
+
+                if (scrollTop < scrollHeight - clientHeight) {
+                    hasRoomToScroll = true
+                }
+
+            } else if (deltaY < 0) {
+                if (scrollTop) {
+                    hasRoomToScroll = true
+                }
+            }
+
+            if (hasRoomToScroll) {
+                if (deltaY > 1 || deltaY < -1) {
+                    this.props.selectManualScroll(true)
+                }
+
+            } else {
+                e.preventDefault()
+            }
         }
+
         this.props.determineVerseBars()
     }
 
@@ -730,7 +757,7 @@ class EventManager extends Component {
 
         // In admin view.
         } else {
-            focusElement = this.myDomManager ||
+            focusElement = this.myRootManager ||
                 document.getElementsByClassName('RootManager')[0]
         }
 
@@ -979,14 +1006,14 @@ class EventManager extends Component {
 
     render() {
 
-        const domManagerRef = node => this.myDomManager = node,
+        const rootManagerRef = node => this.myRootManager = node,
             lyricRef = node => this.myLyricSection = node,
             scoreRef = node => this.myScoreSection = node,
             wikiRef = node => this.myWikiSection = node,
 
             eventHandlers = {
 
-                domManagerRef,
+                rootManagerRef,
                 lyricRef,
                 scoreRef,
                 wikiRef,

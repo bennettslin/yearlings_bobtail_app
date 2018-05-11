@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react'
 import { connect } from 'react-redux'
 import { DEVICE_OBJECTS } from '../../constants/responsive'
@@ -24,7 +26,7 @@ const AdminToggle = ({
         <div>
             {windowWidth} x {windowHeight}
         </div>
-        <div>
+        {/* <div>
             isHeavyRenderReady: {isHeavyRenderReady ? 'true' : 'false'}
         </div>
         <div>
@@ -44,7 +46,7 @@ const AdminToggle = ({
         </div>
         <div>
             renderReadyVerseIndex: {renderReadyVerseIndex}
-        </div>
+        </div> */}
     </div>
 )
 

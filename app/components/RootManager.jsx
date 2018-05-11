@@ -61,7 +61,7 @@ class RootManager extends Component {
             handlePlayerTimeChange: PropTypes.func.isRequired,
             handlePlayerNextSong: PropTypes.func.isRequired,
             handlePlayerTimeReset: PropTypes.func.isRequired,
-            domManagerRef: PropTypes.func.isRequired
+            rootManagerRef: PropTypes.func.isRequired
         })
     }
 
@@ -152,7 +152,7 @@ class RootManager extends Component {
               handlePlayerTimeChange,
               handlePlayerNextSong,
               handlePlayerTimeReset,
-              domManagerRef,
+              rootManagerRef,
               ...other } = this.props.eventHandlers,
 
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
@@ -194,7 +194,7 @@ class RootManager extends Component {
 
         return (
             <div
-                ref={domManagerRef}
+                ref={rootManagerRef}
                 className={cx(
                     'RootManager',
 

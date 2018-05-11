@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 import omit from 'lodash.omit'
-import debounce from 'debounce'
+// import debounce from 'debounce'
 
 import LyricStanza from './LyricStanza'
 import { getLyricUnitsCount } from '../../helpers/dataHelper'
@@ -36,9 +36,9 @@ class Lyric extends Component {
         this._handleWheel = this._handleWheel.bind(this)
 
         // Handle only once every 10ms at most.
-        this._handleDebouncedWheel = debounce(
-            this._handleDebouncedWheel, 10
-        )
+        // this._handleDebouncedWheel = debounce(
+        //     this._handleDebouncedWheel, 10
+        // )
     }
 
     /**
@@ -53,17 +53,18 @@ class Lyric extends Component {
              * We are calling this because collapsing and expanding the lyric
              * section may change the verse bar status.
              */
-            this._handleWheel(false)
+            this._handleWheel()
             this.props.completeHeightTransition()
         }
     }
 
-    _handleWheel(isManualScroll) {
-        this._handleDebouncedWheel(isManualScroll)
+    _handleWheel(e) {
+        this._handleDebouncedWheel(e)
     }
 
-    _handleDebouncedWheel(isManualScroll) {
-        this.props.handleLyricWheel(isManualScroll)
+    // NOTE: No longer using debounce. We'll keep as it is for now, though.
+    _handleDebouncedWheel(e) {
+        this.props.handleLyricWheel(e)
     }
 
     render() {
@@ -76,7 +77,7 @@ class Lyric extends Component {
 
         return (
             <LyricView {...other}
-                handleScroll={this._handleWheel}
+                handleWheel={this._handleWheel}
             />
         )
     }
@@ -92,7 +93,7 @@ const lyricViewPropTypes = {
 
     // From parent.
     lyricRef: PropTypes.func.isRequired,
-    handleScroll: PropTypes.func.isRequired
+    handleWheel: PropTypes.func.isRequired
 },
 
 LyricView = ({
@@ -100,7 +101,7 @@ LyricView = ({
     renderReadySongIndex,
 
     lyricRef,
-    handleScroll,
+    handleWheel,
 
 ...other }) => {
 
@@ -126,7 +127,7 @@ LyricView = ({
                 'gradientMask__lyricColumn__mobileCollapsed'
             )}
             tabIndex="-1"
-            onWheel={handleScroll}
+            onWheel={handleWheel}
         >
             {/* Upon song change, scroll to this heightless element. */}
             <div className="Verse__scrollChild" />
