@@ -14,6 +14,7 @@ import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRende
 import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 import EventManager from './eventManager'
+import { VERSE_SCROLL } from '../constants/dom'
 import { ALL_DOT_KEYS } from '../constants/dots'
 import { CONTINUE,
          PAUSE_AT_END,
@@ -26,6 +27,7 @@ import { CONTINUE,
          TIPS_OPTIONS } from '../constants/options'
 import { getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex, getVerseIndexForNextScene } from '../helpers/dataHelper'
 import { getValueInBitNumber } from '../helpers/bitHelper'
+import { scrollElementIntoView } from '../helpers/domHelper'
 import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseIndexforRatio, getVerseBarStatus, shouldShowAnnotationForColumn, getIsSomethingBeingShown } from '../helpers/logicHelper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsPhone, getIsHeightlessLyricColumn, getIsHiddenCarouselNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTwoRowMenu } from '../helpers/responsiveHelper'
 import { getStageCoordinates } from '../helpers/stageHelper'
@@ -516,33 +518,6 @@ class App extends Component {
         return true
     }
 
-    determineVerseBars(verseElement = this.props.selectedVerseElement) {
-
-        // Prevent verse bar from showing upon initial load.
-        if (!this.props.appMounted || !verseElement) {
-            return false
-        }
-
-        const { isVerseBarAbove,
-                isVerseBarBelow } = getVerseBarStatus({
-                    deviceIndex: this.props.deviceIndex,
-                    windowWidth: this.props.windowWidth,
-                    windowHeight: this.props.windowHeight,
-                    isLyricExpanded: this.props.isLyricExpanded,
-                    isHeightlessLyricColumn:
-                        this.props.isHeightlessLyricColumn,
-                    verseElement
-                })
-
-        this.props.setIsVerseBarAbove(isVerseBarAbove)
-        this.props.setIsVerseBarBelow(isVerseBarBelow)
-    }
-
-    resetVerseBars() {
-        this.props.setIsVerseBarAbove(false)
-        this.props.setIsVerseBarBelow(false)
-    }
-
     selectManualScroll(isManualScroll = false) {
         this.props.setIsManualScroll(isManualScroll);
     }
@@ -1014,6 +989,16 @@ class App extends Component {
 
                 isTouchBodyEnd: true
             })
+
+            // Scroll to verse index, then reset verse bars.
+            scrollElementIntoView({
+                scrollClass: VERSE_SCROLL,
+                index: selectedVerseIndex,
+                deviceIndex: this.props.deviceIndex,
+                windowWidth: this.props.windowWidth,
+                isLyricExpanded: this.props.isLyricExpanded
+            })
+            this.resetVerseBars()
         }
     }
 
@@ -1111,6 +1096,37 @@ class App extends Component {
             selectedVerseIndex,
             renderVerseImmediately
         })
+    }
+
+    /*************
+     * VERSE BAR *
+     *************/
+
+    determineVerseBars(verseElement = this.props.selectedVerseElement) {
+
+        // Prevent verse bar from showing upon initial load.
+        if (!this.props.appMounted || !verseElement) {
+            return false
+        }
+
+        const { isVerseBarAbove,
+                isVerseBarBelow } = getVerseBarStatus({
+                    deviceIndex: this.props.deviceIndex,
+                    windowWidth: this.props.windowWidth,
+                    windowHeight: this.props.windowHeight,
+                    isLyricExpanded: this.props.isLyricExpanded,
+                    isHeightlessLyricColumn:
+                        this.props.isHeightlessLyricColumn,
+                    verseElement
+                })
+
+        this.props.setIsVerseBarAbove(isVerseBarAbove)
+        this.props.setIsVerseBarBelow(isVerseBarBelow)
+    }
+
+    resetVerseBars() {
+        this.props.setIsVerseBarAbove(false)
+        this.props.setIsVerseBarBelow(false)
     }
 
     /********
