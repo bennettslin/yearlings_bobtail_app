@@ -1,21 +1,38 @@
 Multibrand
 
-So on the frontend, each team across the brands took ownership of one or more Node projects attached to some particular feature. HotPads maintained the overall infrastructure (node-config houses Webpack configuration), Trulia took rent payments, and on the Zillow side, Rentals Consumer took applications for both renter and landlord side, and Rentals Revenue took screening and application payments. ZRM team, of course, handled rental-manager-web as they always have. And every team had a hand in contributing to multibrand-ui.
+(All the Node apps, with arrows.)
+Swim lanes
+
+So on the frontend, each team across the brands took ownership of one or more Node projects attached to some particular feature. HotPads owned the overall infrastructure (node-config houses Webpack configuration), Trulia took rent payments, and on the Zillow side, Rentals Consumer took applications for both renter and landlord, and Rentals Revenue took screening and application payments. These feature apps are imported as npm libraries by the web apps, renter-hub-web, maintained by HotPads, and rental-manager-web, maintained as always by the ZRM team. And every team had a hand in contributing to multibrand-ui.
 
 Because the underlying pages are the same, and they simply show a different skin for each page, we needed a way to build and style these various page components by quickly swapping the various brand skins. And so that's how and why we developed multibrand-ui.
 
-Multibrand is a library of React components, where knowledge of brand is passed through React context. In production, only the assets for one particular brand are fetched by the client, including fonts, icons, and stylesheets. But in development, we were able to use the storybook package to build a component and then style it for all three brands simultaneously.
+(Multibrand bulleted list)
+No more than two bullets.
+storybook link here.
 
-So the development of multibrand more or less happened in three general stages. Not official stages, it's just how it played out. The first stage began with the ZRM team building basic stateless components for buttons, inputs, and so forth, or in some cases moving over components that were already in use by rental-manager-web. And for each component, they created three stylesheets, one for each brand, and styled the component according to the styleguides given to them by each brand.
+Multibrand-ui is a library of React components, where knowledge of brand is passed through React context. In production, only the assets for one particular brand are fetched by the client, including fonts, icons, and stylesheets. But in development, we were able to use the storybook package to build a component and then style it for all three brands simultaneously.
 
-The next stage is where collaboration between the developers and designers began in full swing, so here are our designers.
+(Basic components, Button, Input, Link)
 
-In this stage, while the ZRM team continued to build out basic components, developers from the other brands contributed on an ad hoc basis based on the needs of their features. For example, on the Zillow side, our contributions included the datepicker and the table accordion.
+So the development of multibrand happened in three unofficial stages, meaning that's just kind of how it played out. The first stage began with the ZRM team building basic stateless components for buttons, inputs, and so forth, or in some cases moving over components that were already in use by rental-manager-web. And for each component, they created three stylesheets, one for each brand, and styled the component according to the styleguides that we gave them for each brand.
 
-At the same time, the designers for all three brands coordinated to come up with consistent page arrangements and layouts that would work across all brands. Then, each team's designers created brand-specific specs for each component, while at the same time designing the pages for their team's features. During this process, we would discover the need for a new component, such as these financial cells in the credit report, so then a ticket would get filed to create that component.
+(Designers.)
 
-This is also the stage where the designers 
+The next stage is where collaboration between the developers and designers began in full swing, and here are our Zillow rentals designers.
 
-During this stage
+(Datepicker.)
 
-quickly swap these various skins as we build and styled these various components.
+In this stage, while the ZRM team continued to build out basic components, developers from all the other brands contributed on an ad hoc basis based on the needs of their features. For example, on the Zillow side, our contributions included the datepicker, which we ported from react-zsg. And naturally, there was ongoing discussion between the developers on the various teams, because of our different needs. Trulia needed to show a date range for their rent payments form, while we needed to validate date of birth for our id verification form.
+
+(Typography.)
+
+Meanwhile, the designers for all three brands coordinated to come up with consistent page arrangements and layouts that would work across all brands. Then, each team's designers created brand-specific specs for each component, essentially to create a new multibrand styleguide. On the Zillow side, our designers hewed to the Zillow styleguide as close as possible, but we had to make some exceptions and compromises to make it work across brands, like with typography. For example, our Zillow h0 is 75px, but in multibrand, it's 50px. And Zillow proper doesn't have an h6, but we needed to come up with a font size and weight for one in multibrand. And HotPads and Trulia dealt with similar issues.
+
+(Storybook with URL, show Kevin.)
+
+In the final stage, Kevin McBriarty, who is a frontend developer for HotPads, was assigned as the owner of multibrand, and worked with the designers for several QA sessions to make sure that each component was styled according to spec. We used storybook, an npm package, to create a designer-friendly UI for each component. The styles for each brand could be compared side by side, and they could use these knobs down here to pass in the desired props.
+
+(Credit report with FinanceBox.)
+
+All the while, the designers continued to design the specs for their team's respective features. Which, in the case of Zillow, was the applications and screening pages. And during this process, we would discover the need for new shared components, such as this thing called an expandable Table in the credit report, so then the designers would add a Trello card to design a spec for that component, and the developers would log a ticket to build it. So there was a constant back-and-forth, not just the usual dialogue between developers and designers, but also between the developers across all brands, and the designers across all brands.
