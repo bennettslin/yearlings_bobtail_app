@@ -33,7 +33,6 @@ class Verse extends Component {
         renderReadySongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        barVerseIndex: PropTypes.number,
         verseObject: PropTypes.object.isRequired,
 
         isOnCursor: PropTypes.bool,
@@ -54,7 +53,7 @@ class Verse extends Component {
     }
 
     componentDidMount() {
-        this._handleVerseElementSelectOrSlide()
+        this._handleVerseElementSelectOrSlide(this.props, true)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -68,24 +67,22 @@ class Verse extends Component {
 
                     'isOnCursor',
                     'isAfterCursor',
-                    'isInteractivated',
-                    {
-                        staticProp: 'inVerseBar',
-                        subUpdatingKey: 'barVerseIndex'
-                    }
+                    'isInteractivated'
                 ]
             })
 
         return componentShouldUpdate
     }
 
-    componentDidUpdate() {
-        this._handleVerseElementSelectOrSlide()
+    componentWillReceiveProps(nextProps) {
+        if (!this.props.isOnCursor) {
+            this._handleVerseElementSelectOrSlide(nextProps)
+        }
     }
 
-    _handleVerseElementSelectOrSlide() {
-        if (this.props.isOnCursor) {
-            this.props.handleVerseElementSelectOrSlide(this.myVerse)
+    _handleVerseElementSelectOrSlide(props = this.props, uponMount) {
+        if (props.isOnCursor) {
+            this.props.handleVerseElementSelectOrSlide(this.myVerse, uponMount)
         }
     }
 

@@ -2,13 +2,13 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import scrollIntoView from 'scroll-into-view'
+import assign from 'lodash.assign'
+
 import AccessManager from './AccessManager'
 
 import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from '../helpers/dotHelper'
-import { getClientX, getIsValidScrollingTargetCallback } from '../helpers/domHelper'
-import { getLyricTopAlign, getCarouselLeftAlign } from '../helpers/responsiveHelper'
+import { getClientX, scrollElementIntoView } from '../helpers/domHelper'
 
 import { REFERENCE } from '../constants/dots'
 import { DISABLED,
@@ -16,8 +16,7 @@ import { DISABLED,
 
 import { CAROUSEL_SCROLL,
          LYRIC_ANNOTATION_SCROLL,
-         VERSE_SCROLL,
-         SCROLL_CLASSES } from '../constants/dom'
+         VERSE_SCROLL } from '../constants/dom'
 
 class EventManager extends Component {
 
@@ -74,7 +73,6 @@ class EventManager extends Component {
         this.handleTitleToggle = this.handleTitleToggle.bind(this)
         this.handleVerseBarSelect = this.handleVerseBarSelect.bind(this)
         this.handleVerseBarWheel = this.handleVerseBarWheel.bind(this)
-        this._autoScrollCallback = this._autoScrollCallback.bind(this)
         this.handleVerseInteractivate = this.handleVerseInteractivate.bind(this)
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
         this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
@@ -305,16 +303,7 @@ class EventManager extends Component {
      ****************/
 
     handlePlayerTimeChange(time) {
-
-        // App manager will determine whether to autoScroll.
-        this.props.selectTime(time, true, this._autoScrollCallback)
-    }
-
-    _autoScrollCallback(verseIndex) {
-        this._scrollElementIntoView({
-            scrollClass: VERSE_SCROLL,
-            index: verseIndex
-        })
+        this.props.selectTime(time, true)
     }
 
     handlePlayerNextSong(e) {
@@ -404,10 +393,45 @@ class EventManager extends Component {
         return lyricsToggled
     }
 
-    handleLyricWheel() {
-        // console.error('handle lyric wheel')
-        this.props.selectManualScroll(true)
-        this.props.determineVerseBars()
+    handleLyricWheel(e) {
+        let hasRoomToScroll = false
+
+        // Determine whether there is room to scroll.
+        if (e) {
+            const { deltaY = 0 } = e,
+                { scrollTop } = this.myLyricSection
+
+            if (deltaY > 0) {
+                const { scrollHeight, clientHeight } = this.myLyricSection
+
+                if (scrollTop < scrollHeight - clientHeight) {
+                    hasRoomToScroll = true
+                }
+
+            } else if (deltaY < 0) {
+                if (scrollTop) {
+                    hasRoomToScroll = true
+                }
+            }
+
+            if (hasRoomToScroll) {
+
+                // Select manual scroll only if wheel moved far enough.
+                if (deltaY > 1 || deltaY < -1) {
+                    this.props.selectManualScroll(true)
+                }
+
+            } else {
+
+                // If no room to scroll, don't bother to send event.
+                e.preventDefault()
+            }
+        }
+
+        // Determine verse bars if scrolled, or if triggered manually.
+        if (hasRoomToScroll || !e) {
+            this.props.determineVerseBars()
+        }
     }
 
     handleLyricAutoScroll() {
@@ -729,7 +753,7 @@ class EventManager extends Component {
 
         // In admin view.
         } else {
-            focusElement = this.myDomManager ||
+            focusElement = this.myRootManager ||
                 document.getElementsByClassName('RootManager')[0]
         }
 
@@ -745,17 +769,12 @@ class EventManager extends Component {
     handleVerseBarSelect() {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props
-
         this._scrollElementIntoView({
             scrollClass: VERSE_SCROLL,
-            index: selectedVerseIndex,
-            callback: this._determineVerseBarsCallback
+            index: selectedVerseIndex
         })
-    }
 
-    _determineVerseBarsCallback() {
-        // Allow this to be called without event as the argument.
-        this.props.determineVerseBars()
+        this.props.resetVerseBars()
     }
 
     handleVerseBarWheel(e) {
@@ -783,8 +802,11 @@ class EventManager extends Component {
         }
     }
 
-    handleVerseElementSelectOrSlide(verseElement) {
-        this.props.selectOrSlideVerseElement(verseElement)
+    handleVerseElementSelectOrSlide(verseElement, isInitialMount) {
+        this.props.selectOrSlideVerseElement({
+            verseElement,
+            isInitialMount
+        })
     }
 
     /********
@@ -905,74 +927,60 @@ class EventManager extends Component {
             return
         }
 
-        const annotationIndex = this.props.selectedAnnotationIndex
+        const { selectedAnnotationIndex } = this.props
 
         // If a portal was selected, there will be an annotation index.
-        if (annotationIndex) {
+        if (selectedAnnotationIndex) {
             this._scrollElementIntoView({
                 scrollClass: LYRIC_ANNOTATION_SCROLL,
-                index: annotationIndex,
-                time: 0
+                index: selectedAnnotationIndex,
+                time: 0,
+                callback: this._determineVerseBarsCallback
             })
 
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
-                    index: annotationIndex,
-                    time: 0
+                    time: 0,
+                    index: selectedAnnotationIndex
                 })
             }
 
-            // Otherwise, scroll to top.
+            // Otherwise, scroll to given verse index.
         } else {
+            const { selectedVerseIndex } = this.props
+
             this._scrollElementIntoView({
-                scrollClass: VERSE_SCROLL
+                scrollClass: VERSE_SCROLL,
+                index: selectedVerseIndex,
+                time: 0,
+                callback: this._determineVerseBarsCallback
             })
+
             if (this.props.selectedCarouselNavIndex) {
                 this._scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
-                    index: 1,
-                    time: 0
+                    time: 0,
+                    index: 1
                 })
             }
         }
     }
 
-    _scrollElementIntoView({
-        scrollClass,
-        index,
-        time = 350,
-        callback
-    }) {
+    _scrollElementIntoView(props) {
 
-        const { childClass,
-                parentClass } = SCROLL_CLASSES[scrollClass],
-            selector = isNaN(index) ? childClass : `${childClass}__${index}`,
-            element = document.getElementsByClassName(selector)[0],
-
-            isCarousel = scrollClass === CAROUSEL_SCROLL
-
-        if (element) {
-            // console.warn(`Scrolling ${selector} into view.`);
-
-            const align = isCarousel ?
-                getCarouselLeftAlign(this.props.deviceIndex, this.props.windowWidth) :
-                getLyricTopAlign(this.props.deviceIndex, this.props.isLyricExpanded),
-
-                validTarget = getIsValidScrollingTargetCallback(
-                    parentClass
-                )
-
-            scrollIntoView(element, {
-                time,
-                align,
-                validTarget
-            }, callback)
-        }
+        scrollElementIntoView(
+            assign(props, {
+                deviceIndex: this.props.deviceIndex,
+                windowWidth: this.props.windowWidth,
+                isLyricExpanded: this.props.isLyricExpanded
+            })
+        )
     }
 
-    _scrollElementCallback(status) {
-        console.warn('scroll status:', status);
+    _determineVerseBarsCallback() {
+        // Allow this to be called without event as the argument.
+        this.props.determineVerseBars()
     }
 
     _closeDotsIfOverviewWillShow() {
@@ -993,14 +1001,14 @@ class EventManager extends Component {
 
     render() {
 
-        const domManagerRef = node => this.myDomManager = node,
+        const rootManagerRef = node => this.myRootManager = node,
             lyricRef = node => this.myLyricSection = node,
             scoreRef = node => this.myScoreSection = node,
             wikiRef = node => this.myWikiSection = node,
 
             eventHandlers = {
 
-                domManagerRef,
+                rootManagerRef,
                 lyricRef,
                 scoreRef,
                 wikiRef,
@@ -1017,7 +1025,6 @@ class EventManager extends Component {
                 handleBodyTouchEnd: this.handleBodyTouchEnd,
                 handlePopupContainerClick: this.handlePopupContainerClick,
                 handleVerseElementSelectOrSlide: this.handleVerseElementSelectOrSlide,
-                handleVerseElementSlide: this.handleVerseElementSlide,
                 handleAccessToggle: this.handleAccessToggle,
                 handleAdminToggle: this.handleAdminToggle,
                 handleAnnotationWikiSelect: this.handleAnnotationWikiSelect,

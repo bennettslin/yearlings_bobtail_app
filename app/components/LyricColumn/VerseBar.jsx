@@ -10,11 +10,11 @@ import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     renderReadySongIndex,
-    selectedVerseIndex,
+    renderReadyVerseIndex,
     sliderVerseIndex
 }) => ({
     renderReadySongIndex,
-    selectedVerseIndex,
+    renderReadyVerseIndex,
     sliderVerseIndex
 })
 
@@ -27,7 +27,7 @@ class VerseBar extends Component {
     static propTypes = {
         // Through Redux.
         renderReadySongIndex: PropTypes.number.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
+        renderReadyVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -47,7 +47,7 @@ class VerseBar extends Component {
                      * update.
                      */
                     'renderReadySongIndex',
-                    'selectedVerseIndex',
+                    'renderReadyVerseIndex',
                     'sliderVerseIndex'
                 ]
             })
@@ -60,7 +60,7 @@ class VerseBar extends Component {
         const { isAbove,
 
                 renderReadySongIndex,
-                selectedVerseIndex,
+                renderReadyVerseIndex,
                 sliderVerseIndex,
 
                 handleVerseBarSelect,
@@ -68,7 +68,7 @@ class VerseBar extends Component {
                 ...other } = this.props,
 
             verseIndex = sliderVerseIndex > -1 ?
-                sliderVerseIndex : selectedVerseIndex,
+                sliderVerseIndex : renderReadyVerseIndex,
 
             verseObject = getVerseObject(renderReadySongIndex, verseIndex)
 
@@ -95,7 +95,6 @@ class VerseBar extends Component {
                 )}>
                     <VerseController {...other}
                         inVerseBar
-                        barVerseIndex={verseIndex}
                         verseObject={verseObject}
                     />
                 </div>

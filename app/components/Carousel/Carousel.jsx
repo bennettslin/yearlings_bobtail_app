@@ -13,15 +13,13 @@ import { getArrayOfLength, getComponentShouldUpdate } from '../../helpers/genera
 
 const mapStateToProps = ({
     isHiddenCarouselNav,
-    isHeavyRenderReady,
     renderReadySongIndex,
-    selectedAnnotationIndex,
+    renderReadyAnnotationIndex,
     accessedAnnotationIndex
 }) => ({
     isHiddenCarouselNav,
-    isHeavyRenderReady,
     renderReadySongIndex,
-    selectedAnnotationIndex,
+    renderReadyAnnotationIndex,
     accessedAnnotationIndex
 })
 
@@ -30,28 +28,13 @@ class Carousel extends Component {
     static propTypes = {
         // Through Redux.
         isHiddenCarouselNav: PropTypes.bool.isRequired,
-        isHeavyRenderReady: PropTypes.bool.isRequired,
         renderReadySongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
+        renderReadyAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired
-    }
-
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            /**
-             * When a dot is deselected, don't animate elements that get hidden
-             * when transitioning between songs.
-             */
-            overrideTransitions: false
-        }
-
-        this._handleTransition = this._handleTransition.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -61,43 +44,23 @@ class Carousel extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'isHiddenCarouselNav',
-                    'isHeavyRenderReady',
                     'renderReadySongIndex',
                     'accessedAnnotationIndex',
-                    'selectedAnnotationIndex'
+                    'renderReadyAnnotationIndex'
                 ]
             })
 
         return componentShouldUpdate
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (this.props.isHeavyRenderReady && !nextProps.isHeavyRenderReady) {
-            this.setState({
-                overrideTransitions: true
-            })
-        }
-    }
-
-    _handleTransition(e) {
-        if (e.propertyName === 'opacity') {
-            this.setState({
-                overrideTransitions: false
-            })
-        }
-    }
-
     render() {
         const { isHiddenCarouselNav,
-                isHeavyRenderReady,
                 renderReadySongIndex,
                 accessedAnnotationIndex,
-                selectedAnnotationIndex,
+                renderReadyAnnotationIndex,
                 handleAnnotationPrevious,
                 handleAnnotationNext,
-                ...other } = this.props,
-
-            { overrideTransitions } = this.state
+                ...other } = this.props
 
         if (isHiddenCarouselNav) {
             return null
@@ -117,9 +80,7 @@ class Carousel extends Component {
             <div
                 className={cx(
                     'Carousel',
-                    'gradientMask__carousel__desktop',
-                    isHeavyRenderReady ? 'renderReady' : 'renderUnready',
-                    { 'overrideTransitions': overrideTransitions }
+                    'gradientMask__carousel__desktop'
                 )}
                 onTransitionEnd={this._handleTransition}
             >
@@ -131,7 +92,7 @@ class Carousel extends Component {
                             isAccessed =
                                 annotationIndex === accessedAnnotationIndex,
                             isSelected =
-                                annotationIndex === selectedAnnotationIndex
+                                annotationIndex === renderReadyAnnotationIndex
 
                         return (
                             <CarouselAnnotation {...other}

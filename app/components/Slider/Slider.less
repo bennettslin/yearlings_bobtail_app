@@ -14,7 +14,8 @@
         cursor: pointer;
     }
 
-    &.renderReady {
+    .RM__renderReady
+    & {
         opacity: 1;
     }
 }
@@ -30,7 +31,7 @@
         width @animationDuration__default,
         background-color @animationDuration__default;
 
-    .overrideTransitions
+    .RM__renderUnready
     & {
         transition: none;
     }

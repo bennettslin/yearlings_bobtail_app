@@ -102,7 +102,6 @@ class Live extends Component {
                 handleVerseBarSelect,
                 handleVerseBarWheel,
                 handleVerseElementSelectOrSlide,
-                handleVerseElementSlide,
                 handleVerseInteractivate,
                 handleWikiToggle,
                 stopPropagation } = this.props,
@@ -146,7 +145,6 @@ class Live extends Component {
                 handleVerseBarWheel,
                 handleVerseInteractivate,
                 handleVerseElementSelectOrSlide,
-                handleVerseElementSlide,
                 handleScrollAfterLyricRerender
             },
 

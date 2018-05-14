@@ -3,6 +3,7 @@ import { APP_MOUNTED,
          IS_HEAVY_RENDER_READY,
          RENDER_READY_SONG_INDEX,
          RENDER_READY_ANNOTATION_INDEX,
+         RENDER_READY_VERSE_INDEX,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
          CURRENT_SCENE_INDEX,
@@ -43,6 +44,15 @@ export const RenderReadySongIndexReducer = (state = -1, action) => {
 export const RenderReadyAnnotationIndexReducer = (state = 0, action) => {
     switch (action.type) {
         case RENDER_READY_ANNOTATION_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const RenderReadyVerseIndexReducer = (state = 0, action) => {
+    switch (action.type) {
+        case RENDER_READY_VERSE_INDEX:
             return action.payload
         default:
             return state

@@ -259,6 +259,18 @@ export const recurseToFindAnchors = ({
             sliderStanzasArray[stanzaIndex].endTime = songObject.totalTime
         }
 
+        if (
+            lyricEntity.time <=
+                songObject.verseTimes[songObject.verseTimes.length - 1]
+        ) {
+            /**
+             * Throw an exception if next time is not later than previous time.
+             * This should, of course, never happen.
+             */
+            // eslint-disable-next-line no-throw-literal
+            throw 'Verse time can never be earlier or same as previous one!'
+        }
+
         // An array of verse times is needed.
         songObject.verseTimes.push(lyricEntity.time)
 

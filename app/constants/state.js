@@ -42,6 +42,7 @@ module.exports = {
     IS_HEAVY_RENDER_READY: 'isHeavyRenderReady',
     RENDER_READY_SONG_INDEX: 'renderReadySongIndex',
     RENDER_READY_ANNOTATION_INDEX: 'renderReadyAnnotationIndex',
+    RENDER_READY_VERSE_INDEX: 'renderReadyVerseIndex',
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
     INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',
     CURRENT_SCENE_INDEX: 'currentSceneIndex',

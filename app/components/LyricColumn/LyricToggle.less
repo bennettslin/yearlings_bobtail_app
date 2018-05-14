@@ -26,6 +26,7 @@
 
 .LyricToggleScroll {
     opacity: 0;
+    z-index: @zIndex__negative;
 
     transition: opacity @animationDuration__default;
 
@@ -60,6 +61,7 @@
     .RM__manualScroll
     & {
         opacity: 1;
+        z-index: @zIndex__lyricChild__topMost;
     }
 }
 

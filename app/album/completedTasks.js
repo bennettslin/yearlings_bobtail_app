@@ -2897,4 +2897,14 @@ module.exports = [
         workedHours: 28,
         neededHours: 28
     },
+    {
+        taskName: `Allow user to enable and disable auto scroll.`,
+        workedHours: 10,
+        neededHours: 10
+    },
+    {
+        taskName: `Be smarter about render ready, override transitions.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

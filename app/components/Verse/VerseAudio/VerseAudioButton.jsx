@@ -57,9 +57,9 @@ class VerseAudioButton extends Component {
                     'isSelected',
                     'isAfterSelected',
                     /**
-                     * Don't need to update on renderReadySongIndex, as it's only
-                     * needed to calculate whether song can play through when
-                     * canPlayThroughs is changed.
+                     * Don't need to update on renderReadySongIndex, as it's
+                     * only needed to calculate whether song can play through
+                     * when canPlayThroughs is changed.
                      */
                     {
                         staticProp: 'isSelected',
