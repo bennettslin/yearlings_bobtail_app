@@ -1,0 +1,21 @@
+Multibrand
+
+So on the frontend, each team across the brands took ownership of one or more Node projects attached to some particular feature. HotPads maintained the overall infrastructure (node-config houses Webpack configuration), Trulia took rent payments, and on the Zillow side, Rentals Consumer took applications for both renter and landlord side, and Rentals Revenue took screening and application payments. ZRM team, of course, handled rental-manager-web as they always have. And every team had a hand in contributing to multibrand-ui.
+
+Because the underlying pages are the same, and they simply show a different skin for each page, we needed a way to build and style these various page components by quickly swapping the various brand skins. And so that's how and why we developed multibrand-ui.
+
+Multibrand is a library of React components, where knowledge of brand is passed through React context. In production, only the assets for one particular brand are fetched by the client, including fonts, icons, and stylesheets. But in development, we were able to use the storybook package to build a component and then style it for all three brands simultaneously.
+
+So the development of multibrand more or less happened in three general stages. Not official stages, it's just how it played out. The first stage began with the ZRM team building basic stateless components for buttons, inputs, and so forth, or in some cases moving over components that were already in use by rental-manager-web. And for each component, they created three stylesheets, one for each brand, and styled the component according to the styleguides given to them by each brand.
+
+The next stage is where collaboration between the developers and designers began in full swing, so here are our designers.
+
+In this stage, while the ZRM team continued to build out basic components, developers from the other brands contributed on an ad hoc basis based on the needs of their features. For example, on the Zillow side, our contributions included the datepicker and the table accordion.
+
+At the same time, the designers for all three brands coordinated to come up with consistent page arrangements and layouts that would work across all brands. Then, each team's designers created brand-specific specs for each component, while at the same time designing the pages for their team's features. During this process, we would discover the need for a new component, such as these financial cells in the credit report, so then a ticket would get filed to create that component.
+
+This is also the stage where the designers 
+
+During this stage
+
+quickly swap these various skins as we build and styled these various components.
