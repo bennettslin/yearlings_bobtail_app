@@ -2907,4 +2907,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Illustrator tutorial`,
+        workedHours: 40,
+        neededHours: 40
+    },
 ]

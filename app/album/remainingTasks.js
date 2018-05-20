@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `Allow images to go between tiles.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
         workedHours: 0,
         neededHours: 2

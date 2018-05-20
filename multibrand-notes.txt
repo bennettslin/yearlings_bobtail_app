@@ -3,13 +3,11 @@ Multibrand
 (All the Node apps, with arrows.)
 Swim lanes
 
-So on the frontend, each team across the brands took ownership of one or more Node projects attached to some particular feature. HotPads owned the overall infrastructure (node-config houses Webpack configuration), Trulia took rent payments, and on the Zillow side, Rentals Consumer took applications for both renter and landlord, and Rentals Revenue took screening and application payments. These feature apps are imported as npm libraries by the web apps, renter-hub-web, maintained by HotPads, and rental-manager-web, maintained as always by the ZRM team. And every team had a hand in contributing to multibrand-ui.
+So on the frontend, each team across the brands took ownership of one or more Node projects attached to some particular feature. HotPads owned node-config, which houses the Webpack configuration for all the other projects, Trulia took rent payments, and on the Zillow side, Rentals Consumer took applications for both renter and landlord, and Rentals Revenue took screening and application payments. These feature apps are then imported as npm libraries by the web apps, renter-hub-web, maintained mostly by HotPads, and rental-manager-web, maintained as always by the ZRM team. And every team had a hand in contributing to multibrand-ui.
 
-Because the underlying pages are the same, and they simply show a different skin for each page, we needed a way to build and style these various page components by quickly swapping the various brand skins. And so that's how and why we developed multibrand-ui.
+Because the underlying pages and their components are the same, and they simply show a different skin for each page, we needed a way to build and style these various page components by quickly swapping the various brand skins. And so that's how and why we developed multibrand-ui.
 
 (Multibrand bulleted list)
-No more than two bullets.
-storybook link here.
 
 Multibrand-ui is a library of React components, where knowledge of brand is passed through React context. In production, only the assets for one particular brand are fetched by the client, including fonts, icons, and stylesheets. But in development, we were able to use the storybook package to build a component and then style it for all three brands simultaneously.
 
@@ -27,7 +25,7 @@ In this stage, while the ZRM team continued to build out basic components, devel
 
 (Typography.)
 
-Meanwhile, the designers for all three brands coordinated to come up with consistent page arrangements and layouts that would work across all brands. Then, each team's designers created brand-specific specs for each component, essentially to create a new multibrand styleguide. On the Zillow side, our designers hewed to the Zillow styleguide as close as possible, but we had to make some exceptions and compromises to make it work across brands, like with typography. For example, our Zillow h0 is 75px, but in multibrand, it's 50px. And Zillow proper doesn't have an h6, but we needed to come up with a font size and weight for one in multibrand. And HotPads and Trulia dealt with similar issues.
+Meanwhile, the designers for all three brands coordinated to come up with consistent page arrangements and layouts that would work across all brands. Then, each team's designers created brand-specific specs for each component, essentially to create a new multibrand styleguide. On the Zillow side, our designers hewed to the Zillow styleguide as close as possible, but we had to make some exceptions and compromises to make it work across brands, like with typography. For example, our Zillow h0 is 75px, but in multibrand we needed to bring it down to 50px. And Zillow proper doesn't have an h6, so we needed to come up with a font size and weight for one in multibrand. And HotPads and Trulia dealt with similar issues.
 
 (Storybook with URL, show Kevin.)
 
