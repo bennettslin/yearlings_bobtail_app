@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `Bug: Verse bar doesn't update.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Allow images to go between tiles.`,
         workedHours: 0,
         neededHours: 5

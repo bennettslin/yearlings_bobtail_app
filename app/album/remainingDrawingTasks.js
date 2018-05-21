@@ -1,104 +1,6 @@
 module.exports = [
 
     /**
-     * App UI.
-     */
-    {
-        taskName: `Bennett avatars`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `dot icons`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `button icons`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `accessibility icon`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `tip images`,
-        workedHours: 0,
-        neededHours: 8
-    },
-
-    {
-        taskName: `dot shapes`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `audio slider`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `annotation cards`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `lyrics`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `nav header`,
-        workedHours: 0,
-        neededHours: 8
-    },
-
-    /**
-     * Stage
-     */
-    {
-        taskName: `Theatre seat`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Theater balcony`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Theatre proscenium`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Theatre rafters`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    /**
-     * Head preparation.
-     */
-    {
-        taskName: `neck`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `Final ears on back view and extreme perspective heads`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Corrective pass on back view and extreme perspective heads`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    /**
      * Window scenes.
      */
     {
@@ -144,104 +46,6 @@ module.exports = [
         taskName: `Sita and Khari's clothes (Vegan)`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    /**
-     * Fabrics.
-     */
-    {
-        taskName: `Barber cloth (Willy)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Bennett's blanket (Odin)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Bennett's blanket (Pchelka)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Sita's blanket and pillows (Grasshoppers, Look Back)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Sita's blanket on couch (Kyon)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `4 * tentacle`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Bennett's blanket and pillows (Grasshoppers, Uncanny)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `2 * Bennett's hospital blanket (Cremated, Dream)`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    /**
-     * Clothing patterns
-     */
-    {
-        taskName: `Christopher shirt (stegosaurus)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Tristan patches`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Jacob shirt (unicorn?)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Tomer shirt (Escher)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Shane shirt (Lookout)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Stephanie shirt (80s)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Catherine shirt (college)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Miriam bikini top (American flag)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Chinese clothes patterns`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Indian clothes patterns`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     /**
@@ -1077,5 +881,201 @@ module.exports = [
         taskName: `Pampas and graveyard full panorama (Dream)`,
         workedHours: 0,
         neededHours: 5
+    },
+
+        /**
+     * App UI.
+     */
+    {
+        taskName: `Bennett avatars`,
+        workedHours: 0,
+        neededHours: 9
+    },
+    {
+        taskName: `dot icons`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `button icons`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `accessibility icon`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `tip images`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `dot shapes`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `audio slider`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `annotation cards`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `lyrics`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `nav header`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    /**
+     * Stage
+     */
+    {
+        taskName: `Theatre seat`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Theater balcony`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Theatre proscenium`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Theatre rafters`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    /**
+     * Head preparation.
+     */
+    {
+        taskName: `neck`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Final ears on back view and extreme perspective heads`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Corrective pass on back view and extreme perspective heads`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+        /**
+     * Fabrics.
+     */
+    {
+        taskName: `Barber cloth (Willy)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Bennett's blanket (Odin)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Bennett's blanket (Pchelka)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Sita's blanket and pillows (Grasshoppers, Look Back)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Sita's blanket on couch (Kyon)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `4 * tentacle`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Bennett's blanket and pillows (Grasshoppers, Uncanny)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `2 * Bennett's hospital blanket (Cremated, Dream)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    /**
+     * Clothing patterns
+     */
+    {
+        taskName: `Christopher shirt (stegosaurus)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Tristan patches`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Jacob shirt (unicorn?)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Tomer shirt (Escher)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Shane shirt (Lookout)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Stephanie shirt (80s)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Catherine shirt (college)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Miriam bikini top (American flag)`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Chinese clothes patterns`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Indian clothes patterns`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

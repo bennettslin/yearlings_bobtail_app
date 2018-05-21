@@ -393,6 +393,7 @@ module.exports = {
                 lyric: [
                     `and now I know why the`,
                     {
+                        // TODO: Maya Angelou.
                         anchor: `battered kitten purrs…`,
                         annotation: {
                             description: `Of course, Sita, in turn, was my first pet. It blew my mind how I was able to live with myself while hurting her for as long as I did. But in hindsight, it's because I accepted at face value the facade of sanity she had constructed as a way to cope. I had allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
