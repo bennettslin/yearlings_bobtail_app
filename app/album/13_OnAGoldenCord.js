@@ -644,7 +644,7 @@ module.exports = {
                     {
                         anchor: `pups with their hateful fangs`,
                         annotation: {
-                            description: `Baby predators instinctively understand their claws and fangs to be weapons, and will thus contain themselves during rough play. Given how much more vicious the bullies could have been, I realised that they actively held back their blows in the same way, believing their cruelty to be in good fun.`,
+                            description: `Baby predators instinctively understand their claws and fangs to be weapons, and will thus hold them back during rough play. And given how much more vicious the bullies could have been, I realised that they held back their blows in the same way, believing their cruelty to be in good fun.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [REFERENCE]: true
@@ -664,7 +664,7 @@ module.exports = {
                     {
                         anchor: `dove chafing in his cage,`,
                         annotation: {
-                            description: `A stressed dove, on the other hand, will peck its cagemate to death, unaware of the deadly nature of its beak. Similarly, seeing myself only as the perennial victim, I had caused Sita far greater emotional trauma than I myself had ever received at the hands of the bullies.`,
+                            description: `A stressed dove, on the other hand, will peck its cagemate to death, oblivious to the deadly nature of its beak. And similarly, seeing myself only as the perennial victim, I inflicted upon Sita far greater emotional trauma than I myself had ever received at the hands of the bullies.`,
                             dotKeys: {
                                 [NARRATIVE]: true,
                                 [REFERENCE]: true
