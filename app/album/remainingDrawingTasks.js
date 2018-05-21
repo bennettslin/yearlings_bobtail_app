@@ -468,13 +468,13 @@ module.exports = [
     },
     {
         taskName: `Trash can (Pchelka)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Bushes (Pchelka)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Lamppost (Ash)`,
