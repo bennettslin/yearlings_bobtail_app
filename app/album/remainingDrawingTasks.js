@@ -483,13 +483,13 @@ module.exports = [
     },
     {
         taskName: `2 * Newspaper dispensers (Ash, Dream)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Campus direction sign (Ash)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `2 * Stage monitors (M, Look Back, Garryowen)`,

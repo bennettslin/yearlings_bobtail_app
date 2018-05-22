@@ -65,7 +65,7 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'front, introducing miriam'
                 },
                 nestor: {
