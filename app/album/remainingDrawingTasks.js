@@ -216,6 +216,11 @@ module.exports = [
         neededHours: 2
     },
     {
+        taskName: `Dishroom sink and other stuff (Grasshoppers)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Pharmacy aisle (Constellations)`,
         workedHours: 0,
         neededHours: 3
@@ -477,9 +482,9 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Lamppost (Ash)`,
-        workedHours: 0,
-        neededHours: 3
+        taskName: `Streetlamp, twin streetlamp (Ash, Golden Cord)`,
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `2 * Newspaper dispensers (Ash, Dream)`,
@@ -498,13 +503,8 @@ module.exports = [
     },
     {
         taskName: `Traffic light (Good Night)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Dishroom sink and other stuff (Grasshoppers)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Howie's station wagon (Constellations)`,
@@ -514,17 +514,12 @@ module.exports = [
     {
         taskName: `Crowd shadows (Look Back, Vegan)`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 1
     },
     {
         taskName: `VW bug (Garryowen)`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Twin streetlamp (Golden Cord)`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Miriam's convertible (Cremated)`,
