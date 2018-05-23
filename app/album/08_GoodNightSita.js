@@ -899,8 +899,8 @@ module.exports = {
                     {
                         anchor: `endless flowchart`,
                         annotation: {
-                            // TODO: Reword.
-                            description: `Intimidated by the spontaneous and unpredictable nature of a date conversation, I once indulged in the whimsical fantasy of preemptively mapping out a sprawling flowchart that could show the best possible response for any given scenario.`,
+                            // TODO: Still work on.
+                            description: `One fantasy of mine was to preemptively map out and memorise all the unexpected ways a dinner conversation might unfold. Then, by always going with the most charming response available upon my turn to speak, I could nudge the course of the evening towards the most desirable outcome.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -916,7 +916,7 @@ module.exports = {
                     {
                         anchor: `answer a no`,
                         annotation: {
-                            description: `Of course, if there are no good choices, and all of them lead back to starting over from the beginning, then the cycle of rejection is doomed to be an infinite loop.`,
+                            description: `Of course, if there are no good choices, and all of them lead back to starting over from the beginning, then I was doomed to spend the night cycling through an infinite loop of polite rejection.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
