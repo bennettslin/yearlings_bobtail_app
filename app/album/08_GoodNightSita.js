@@ -897,9 +897,10 @@ module.exports = {
                 lyric: [
                     `as we wind an`,
                     {
+                        // TODO: Keep working on this!
                         anchor: `endless flowchart`,
                         annotation: {
-                            description: `One fantasy of mine was to preemptively map out and memorise all the possible ways a dinner conversation might unfold. Then, by always going with the most charming quip available upon my turn to speak, I could nudge the course of the evening towards my desired outcome.`,
+                            description: `One fantasy of mine was to preemptively map out and memorise all the possible ways a dinner conversation might unfold. Then, by always choosing the most charming quip available upon my turn to speak, I could nudge the course of the evening towards my desired outcome.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
