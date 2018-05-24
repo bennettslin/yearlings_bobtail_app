@@ -433,8 +433,8 @@ module.exports = [
     },
     {
         taskName: `Fire hydrant (Didi, Willy)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Freeway overpass sign (Willy)`,
@@ -498,8 +498,8 @@ module.exports = [
     },
     {
         taskName: `2 * Stage monitors (M, Look Back, Garryowen)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Traffic light (Good Night)`,
