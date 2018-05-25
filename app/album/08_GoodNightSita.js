@@ -897,10 +897,9 @@ module.exports = {
                 lyric: [
                     `as we wind an`,
                     {
-                        // TODO: Keep working on this!
                         anchor: `endless flowchart`,
                         annotation: {
-                            description: `One fantasy of mine was to preemptively map out and memorise all the possible ways a dinner conversation might unfold. Then, by always choosing the most charming quip available upon my turn to speak, I could nudge the course of the evening towards my desired outcome.`,
+                            description: `One fantasy of mine was to preemptively map out and memorise all the possible ways a dinner conversation might unfold. By picking the optimal thing to say for each turn, I could then nudge the course of the evening towards my desired outcome.`,
                             dotKeys: {
                                 [OBSERVATION]: true
                             }
@@ -916,7 +915,7 @@ module.exports = {
                     {
                         anchor: `answer a no`,
                         annotation: {
-                            description: `Of course, a mental flowchart is no guarantee if a desired outcome is even possible. If my date's responses
+                            description: `Of course, if my datea mental flowchart is no guarantee if a desired outcome is even possible. If my date's responses
                             , and all of them lead back to starting over from the beginning, then I'll be doomed to spend the evening circling through an infinite loop of polite rejection.`,
                             dotKeys: {
                                 [OBSERVATION]: true
