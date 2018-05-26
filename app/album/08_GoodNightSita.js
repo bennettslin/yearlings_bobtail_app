@@ -915,7 +915,9 @@ module.exports = {
                     {
                         anchor: `answer a no`,
                         annotation: {
-                            description: `Of course, if my datea mental flowchart is no guarantee if a desired outcome is even possible. If my date's responses
+                            description: `Of course, if my date is just as determined to end the evening on a purely friendly note,
+
+                            . If my date's responses
                             , and all of them lead back to starting over from the beginning, then I'll be doomed to spend the evening circling through an infinite loop of polite rejection.`,
                             dotKeys: {
                                 [OBSERVATION]: true

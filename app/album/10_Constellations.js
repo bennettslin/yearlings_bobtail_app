@@ -47,7 +47,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side, walking'
                 }
             },
@@ -78,7 +78,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side angle, feigning superiority'
                 }
             },
@@ -109,7 +109,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side angle, play fighting'
                 }
             },
@@ -140,7 +140,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side angle, squatting, pouring water on grave'
                 }
             },
@@ -171,7 +171,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'back angle, sleeping in car'
                 }
             },

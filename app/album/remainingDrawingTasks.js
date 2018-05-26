@@ -428,8 +428,8 @@ module.exports = [
      */
     {
         taskName: `Bathtub facade (Didi)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Fire hydrant (Didi, Willy)`,
@@ -468,8 +468,8 @@ module.exports = [
     },
     {
         taskName: `2 * Locker bank (inside and outside) (Pchelka)`,
-        workedHours: 0,
-        neededHours: 4
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Trash can (Pchelka)`,
@@ -528,13 +528,13 @@ module.exports = [
     },
     {
         taskName: `Park bench (Vegan)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Dumpster (Vegan)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
 
     /**
@@ -636,6 +636,11 @@ module.exports = [
     },
     {
         taskName: `Puppet show set (Saskia)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Locker stickers`,
         workedHours: 0,
         neededHours: 3
     },
