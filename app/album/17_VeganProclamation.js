@@ -39,7 +39,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side, protective, judgmental'
                 }
             },
@@ -121,13 +121,13 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'lying in bed, caressing Sita'
                 },
                 khariReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 2.75,
                         description: 'reflection'
                     }
                 },

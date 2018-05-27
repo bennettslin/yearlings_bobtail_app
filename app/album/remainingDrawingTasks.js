@@ -438,18 +438,18 @@ module.exports = [
     },
     {
         taskName: `Freeway overpass sign (Willy)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Troll shadows (Willy)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Campfire (Willy)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Bus facade (Saskia)`,
