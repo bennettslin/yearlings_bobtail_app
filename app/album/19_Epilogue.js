@@ -59,7 +59,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },

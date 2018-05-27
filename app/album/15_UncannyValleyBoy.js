@@ -55,7 +55,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side, accusatory'
                 },
                 esther: {
@@ -83,7 +83,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side angle, gesturing to scene below'
                 },
                 preteenBennett: {
@@ -119,7 +119,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'front angle, gesturing with blame'
                 },
                 miriam: {
@@ -164,7 +164,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'front angle, arms crossed, righteous'
                 },
                 liz: {
@@ -207,7 +207,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side angle, knocked over'
                 },
                 esther: {
