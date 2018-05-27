@@ -83,6 +83,14 @@ VerseController = ({
             verseObject ? verseObject.verseIndex : verseIndex
 
         /**
+         * Having verseIndex as a top-level prop allows a verse in the verseBar
+         * to know when to update.
+         */
+        if (verseObject) {
+            other.verseIndexForVerseBar = verseObject.verseIndex
+        }
+
+        /**
          * Tell verse where it is relative to cursor, and if it's
          * interactivated.
          */

@@ -2917,4 +2917,9 @@ module.exports = [
         workedHours: 8,
         neededHours: 8
     },
+    {
+        taskName: `Bug: Verse bar doesn't update.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -35,6 +35,9 @@ class Verse extends Component {
         // From parent.
         verseObject: PropTypes.object.isRequired,
 
+        // This is solely for the verse in verseBar to know to update.
+        verseIndexForVerseBar: PropTypes.number,
+
         isOnCursor: PropTypes.bool,
         isAfterCursor: PropTypes.bool,
         isInteractivated: PropTypes.bool,
@@ -64,6 +67,7 @@ class Verse extends Component {
                 updatingPropsArray: [
                     // TODO: Possible to update without selected song index?
                     'renderReadySongIndex',
+                    'verseIndexForVerseBar',
 
                     'isOnCursor',
                     'isAfterCursor',
@@ -103,6 +107,7 @@ class Verse extends Component {
 
         /* eslint-disable no-unused-vars */
         const { renderReadySongIndex,
+                verseIndexForVerseBar,
         /* eslint-enable no-unused-vars */
 
                 inMain,
