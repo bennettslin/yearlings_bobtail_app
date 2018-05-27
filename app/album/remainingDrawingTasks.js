@@ -458,13 +458,13 @@ module.exports = [
     },
     {
         taskName: `Barbecue grill (Odin)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Buoy waves (Odin)`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `2 * Locker bank (inside and outside) (Pchelka)`,
