@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Wood from './Wood/Wood'
-import Tiles from './Tiles/Tiles'
+import SceneAction from './SceneAction'
 
 const propTypes = {
     isFloor: PropTypes.bool,
@@ -21,7 +21,10 @@ const SceneTiling = (props) => {
 
     return (
         <div className={cx(
-            'SceneTiling'
+            'SceneTiling',
+
+            // This is just for HTML visualisation purposes.
+            isFloor ? 'SceneTiling__floor' : 'SceneTiling__ceiling'
         )}>
             <Wood
                 isFloor={isFloor}
@@ -29,7 +32,7 @@ const SceneTiling = (props) => {
                 stageHeight={stageHeight}
             />
 
-            <Tiles {...props} />
+            <SceneAction {...props} />
         </div>
     )
 }

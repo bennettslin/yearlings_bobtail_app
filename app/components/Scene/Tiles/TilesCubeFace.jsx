@@ -15,7 +15,6 @@ const propTypes = {
     stageHeight: PropTypes.number.isRequired
 }
 
-/* eslint-disable no-unused-vars */
 const TilesCubeFace = ({
 
     face,
