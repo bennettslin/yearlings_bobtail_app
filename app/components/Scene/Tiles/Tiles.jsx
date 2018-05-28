@@ -13,6 +13,10 @@ import { DEFAULT_COLUMN_INDICES,
 
 import { TILE_ROWS_LENGTH } from '../../../constants/stage'
 
+const defaultProps = {
+    slantDirection: ''
+}
+
 const propTypes = {
     rawYIndex: PropTypes.number.isRequired,
     isFloor: PropTypes.bool,
@@ -31,7 +35,7 @@ const propTypes = {
     stageHeight: PropTypes.number.isRequired
 }
 
-const TilesRow = ({
+const Tiles = ({
 
     rawYIndex,
     zIndices,
@@ -70,7 +74,8 @@ const TilesRow = ({
     return (
         <DynamicSvg
             className={cx(
-                'TilesRow',
+                'Tiles',
+                `Tiles__row__${rawYIndex}`,
                 'absoluteFullContainer'
             )}
             viewBoxWidth={stageWidth}
@@ -105,6 +110,7 @@ const TilesRow = ({
     )
 }
 
-TilesRow.propTypes = propTypes
+Tiles.defaultProps = defaultProps
+Tiles.propTypes = propTypes
 
-export default TilesRow
+export default Tiles

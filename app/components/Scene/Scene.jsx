@@ -5,8 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Action from '../Action/Action'
-import SceneTiling from './SceneTiling'
+import ScenePlane from './ScenePlane'
 import SceneSky from './SceneSky'
 
 import { getSceneObject } from '../../helpers/dataHelper'
@@ -43,10 +42,10 @@ class Scene extends Component {
                 renderReadySongIndex, currentSceneIndex
             ),
 
-            { action, sky, tiles } = sceneObject,
+            { actions, sky, tiles } = sceneObject,
 
-            { slantDirection = '',
-              ceilingZIndices = DEFAULT_STAGE_TILES.ceilingZIndices,
+            // Separate ceiling and floor config values.
+            { ceilingZIndices = DEFAULT_STAGE_TILES.ceilingZIndices,
               ceilingColours = DEFAULT_STAGE_TILES.ceilingColours,
               floorZIndices = DEFAULT_STAGE_TILES.floorZIndices,
               floorColours = DEFAULT_STAGE_TILES.floorColours } = tiles
@@ -62,8 +61,7 @@ class Scene extends Component {
                 />
 
                 {/* Ceiling tiles. */}
-                <SceneTiling
-                    slantDirection={slantDirection}
+                <ScenePlane
                     zIndices={ceilingZIndices}
                     colours={ceilingColours}
                     stageWidth={stageWidth}
@@ -71,17 +69,11 @@ class Scene extends Component {
                 />
 
                 {/* Floor tiles. */}
-                <SceneTiling
+                <ScenePlane
                     isFloor
-                    slantDirection={slantDirection}
+                    actions={actions}
                     zIndices={floorZIndices}
                     colours={floorColours}
-                    stageWidth={stageWidth}
-                    stageHeight={stageHeight}
-                />
-
-                <Action
-                    action={action}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />

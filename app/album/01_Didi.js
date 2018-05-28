@@ -28,32 +28,34 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
-            action: [
-                {
-                    name: 'sample cutout 1',
-                    type: CUTOUT,
-                    x: 25,
-                    y: 80,
-                    width: 10,
-                    height: 10
-                },
-                {
-                    name: 'sample fixture 1',
-                    type: FIXTURE,
-                    x: 50,
-                    y: 50,
-                    width: 10,
-                    height: 10
-                },
-                {
-                    name: 'sample actor 1',
-                    type: ACTOR,
-                    x: 70,
-                    y: 20,
-                    width: 10,
-                    height: 10
-                },
-            ],
+            actions: {
+                actionsRow1: [
+                    {
+                        name: 'sample cutout 1',
+                        type: CUTOUT,
+                        x: 25,
+                        y: 80,
+                        width: 10,
+                        height: 10
+                    },
+                    {
+                        name: 'sample fixture 1',
+                        type: FIXTURE,
+                        x: 50,
+                        y: 50,
+                        width: 10,
+                        height: 10
+                    },
+                    {
+                        name: 'sample actor 1',
+                        type: ACTOR,
+                        x: 70,
+                        y: 20,
+                        width: 10,
+                        height: 10
+                    },
+                ]
+            },
             tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
             sky: {
                 time: SKY_NO_TIME,

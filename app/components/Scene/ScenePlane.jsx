@@ -1,11 +1,11 @@
-// Section to show the stage illustrations.
+// Section to show the stage floor or ceiling.
 
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Wood from './Wood/Wood'
-import SceneAction from './SceneAction'
+import SceneRow from './SceneRow'
 
 const propTypes = {
     isFloor: PropTypes.bool,
@@ -13,7 +13,7 @@ const propTypes = {
     stageHeight: PropTypes.number.isRequired
 }
 
-const SceneTiling = (props) => {
+const ScenePlane = (props) => {
 
     const { isFloor,
             stageWidth,
@@ -21,10 +21,11 @@ const SceneTiling = (props) => {
 
     return (
         <div className={cx(
-            'SceneTiling',
+            'ScenePlane',
+            'absoluteFullContainer',
 
             // This is just for HTML visualisation purposes.
-            isFloor ? 'SceneTiling__floor' : 'SceneTiling__ceiling'
+            isFloor ? 'ScenePlane__floor' : 'ScenePlane__ceiling'
         )}>
             <Wood
                 isFloor={isFloor}
@@ -32,11 +33,11 @@ const SceneTiling = (props) => {
                 stageHeight={stageHeight}
             />
 
-            <SceneAction {...props} />
+            <SceneRow {...props} />
         </div>
     )
 }
 
-SceneTiling.propTypes = propTypes
+ScenePlane.propTypes = propTypes
 
-export default SceneTiling
+export default ScenePlane

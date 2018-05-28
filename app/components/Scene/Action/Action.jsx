@@ -4,13 +4,14 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DynamicSvg from '../DynamicSvg/DynamicSvg'
+import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 
 const defaultProps = {
     action: []
 }
 
 const actionPropTypes = {
+    className: PropTypes.string.isRequired,
     action: PropTypes.array.isRequired,
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
@@ -20,7 +21,8 @@ class Action extends Component {
 
     render() {
 
-        const { action,
+        const { className,
+                action,
                 stageWidth,
                 stageHeight } = this.props
 
@@ -28,6 +30,7 @@ class Action extends Component {
             <DynamicSvg
                 className={cx(
                     'Action',
+                    className,
                     'absoluteFullContainer'
                 )}
                 viewBoxWidth={stageWidth}
