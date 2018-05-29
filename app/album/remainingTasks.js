@@ -1,10 +1,10 @@
 module.exports = [
-
     {
-        taskName: `Allow images to go between tiles.`,
+        taskName: `Initially position actions based on x and y tile coordinates.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 3
     },
+
     {
         taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
         workedHours: 0,

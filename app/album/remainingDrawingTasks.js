@@ -888,7 +888,7 @@ module.exports = [
      */
     {
         taskName: `Bennett avatars`,
-        workedHours: 0,
+        workedHours: 4,
         neededHours: 9
     },
     {
