@@ -408,12 +408,22 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Station wagon interior (Constellations)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Howie's couch cushions (Constellations)`,
         workedHours: 0,
         neededHours: 3
     },
     {
         taskName: `Sita's couch cushions (Garryowen, Golden Cord, Kyon, Uncanny)`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Convertible interior (Cremated)`,
         workedHours: 0,
         neededHours: 3
     },
@@ -452,7 +462,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Bus facade (Saskia)`,
+        taskName: `Bus exterior (Saskia)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -507,9 +517,9 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Howie's station wagon (Constellations)`,
-        workedHours: 0,
-        neededHours: 5
+        taskName: `Howie's station wagon exterior (Constellations)`,
+        workedHours: 2,
+        neededHours: 3
     },
     {
         taskName: `Crowd shadows (Look Back, Vegan)`,
@@ -518,11 +528,11 @@ module.exports = [
     },
     {
         taskName: `VW bug (Garryowen)`,
-        workedHours: 0,
-        neededHours: 5
+        workedHours: 1,
+        neededHours: 2
     },
     {
-        taskName: `Miriam's convertible (Cremated)`,
+        taskName: `Miriam's convertible exterior (Cremated)`,
         workedHours: 0,
         neededHours: 5
     },
