@@ -463,8 +463,8 @@ module.exports = [
     },
     {
         taskName: `Bus exterior (Saskia)`,
-        workedHours: 0,
-        neededHours: 5
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Barbecue grill (Odin)`,
