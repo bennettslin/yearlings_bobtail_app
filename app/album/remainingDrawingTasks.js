@@ -532,8 +532,8 @@ module.exports = [
     },
     {
         taskName: `Miriam's convertible exterior (Cremated)`,
-        workedHours: 0,
-        neededHours: 5
+        workedHours: 2,
+        neededHours: 3
     },
     {
         taskName: `Park bench (Vegan)`,

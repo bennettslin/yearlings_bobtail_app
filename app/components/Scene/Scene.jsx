@@ -48,7 +48,8 @@ class Scene extends Component {
             { ceilingZIndices = DEFAULT_STAGE_TILES.ceilingZIndices,
               ceilingColours = DEFAULT_STAGE_TILES.ceilingColours,
               floorZIndices = DEFAULT_STAGE_TILES.floorZIndices,
-              floorColours = DEFAULT_STAGE_TILES.floorColours } = tiles
+              floorColours = DEFAULT_STAGE_TILES.floorColours,
+              slantDirection } = tiles
 
         return (
             <div className={cx(
@@ -64,6 +65,7 @@ class Scene extends Component {
                 <ScenePlane
                     zIndices={ceilingZIndices}
                     colours={ceilingColours}
+                    slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />
@@ -74,6 +76,7 @@ class Scene extends Component {
                     actions={actions}
                     zIndices={floorZIndices}
                     colours={floorColours}
+                    slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />
