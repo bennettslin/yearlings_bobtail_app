@@ -130,7 +130,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 2.75,
                         description: 'making out with Miriam'
                     }
                 }
@@ -153,7 +153,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 2.75,
                         description: 'back, squatting, recording, dejected'
                     }
                 },

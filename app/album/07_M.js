@@ -62,7 +62,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 2.75,
                         description: 'sitting on floor, back turned, playing keyboard'
                     }
                 }

@@ -87,7 +87,7 @@ module.exports = {
                 stephanie: {
                     actor: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 2.75,
                         description: 'side, rushing'
                     }
                 }
