@@ -381,7 +381,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-
     {
         taskName: `Bennett's bed mattress (Grasshoppers, Uncanny)`,
         workedHours: 0,

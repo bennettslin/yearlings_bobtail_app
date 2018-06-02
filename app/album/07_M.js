@@ -24,7 +24,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'looking at Leonard Cohen poster'
                 }
             },
@@ -40,7 +40,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'sitting on couch, figuring out Rubiks Cube'
                 }
             },
@@ -56,7 +56,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'sitting on couch, reading a book'
                 },
                 stephanie: {
@@ -79,7 +79,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'chatting with hipster, paying attention to Mara'
                 },
                 jacob: {
@@ -117,7 +117,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'sitting, silently eating burger, uncomfortable'
                 },
                 jacob: {
@@ -148,7 +148,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side, walking, sulking with head down'
                 },
                 miriam: {
@@ -171,7 +171,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side, looking back at baby'
                 },
                 miriam: {
@@ -201,7 +201,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.75,
                     description: 'side, inspired by sudden thought'
                 },
                 howie: {
