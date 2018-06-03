@@ -972,25 +972,6 @@ module.exports = [
     },
 
     /**
-     * Head preparation.
-     */
-    {
-        taskName: `neck`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `Final ears on back view and extreme perspective heads`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Corrective pass on back view and extreme perspective heads`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-        /**
      * Fabrics.
      */
     {
