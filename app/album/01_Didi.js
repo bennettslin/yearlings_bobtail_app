@@ -36,7 +36,9 @@ module.exports = {
                         x: 25,
                         y: 80,
                         width: 10,
-                        height: 10
+                        height: 10,
+                        row: 2,
+                        column: 3
                     },
                     {
                         name: 'sample fixture 1',
@@ -44,7 +46,9 @@ module.exports = {
                         x: 50,
                         y: 50,
                         width: 10,
-                        height: 10
+                        height: 10,
+                        row: 5,
+                        column: 8
                     },
                     {
                         name: 'sample actor 1',
@@ -52,7 +56,9 @@ module.exports = {
                         x: 70,
                         y: 20,
                         width: 10,
-                        height: 10
+                        height: 10,
+                        row: 8,
+                        column: 11
                     },
                 ]
             },
@@ -241,7 +247,7 @@ module.exports = {
                         anchor: `tie his shoes?`,
                         annotation: [
                             {
-                                description: `Being left-handed as a child, I struggled to learn the manner of tying shoelaces where one bunny goes around the tree. So I came up with my own version that looked like the real thing, but was always coming undone.`,
+                                description: `Being left-handed, I struggled as a child to learn the proper way to tie shoelaces, where one bunny goes around the tree. So I came up with my own version that looked like the real thing, but was always coming undone.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

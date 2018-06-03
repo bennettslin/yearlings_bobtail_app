@@ -391,7 +391,7 @@ module.exports = {
                     {
                         anchor: `she's claimed…`,
                         annotation: {
-                            description: `Throughout our budding friendship, Sita neglected to mention the extent of her past sexual intimacy with other men, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only added to my deepening resentment at the time.`,
+                            description: `Throughout our budding friendship, Sita neglected to mention the extent of her sexual intimacy with past partners, even if always shy of intercourse. She tried to console me by pointing out that she never went all the way precisely because she didn't love them. She loved me, and so I had won. But it still stung like crazy to find out so late, and only added to my deepening resentment at the time.`,
                             dotKeys: {
                                 [BACKSTORY]: true
                             }

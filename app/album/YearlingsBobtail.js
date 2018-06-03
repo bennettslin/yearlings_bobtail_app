@@ -121,6 +121,13 @@ module.exports = {
         require(`./18_${HYPHENATED_SONG_PATHS[18]}`),
         require(`./19_${HYPHENATED_SONG_PATHS[19]}`),
     ],
-    remainingTasks: require('./remainingTasks').concat(require('./remainingDrawingTasks')),
-    completedTasks: require('./completedTasks').concat(require('./completedDrawingTasks'))
+    remainingTasks: require('./remainingTasks')
+        .concat(require('./detailedDrawingTasks'))
+        .concat(require('./illustratorDrawingTasks'))
+        .concat(require('./remainingDrawingTasks'))
+        .concat(require('./realisticDrawingTasks'))
+        .concat(require('./svgDrawingTasks')),
+
+    completedTasks: require('./completedTasks')
+        .concat(require('./completedDrawingTasks'))
 }

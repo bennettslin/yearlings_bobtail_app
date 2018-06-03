@@ -335,3 +335,14 @@ export const getPolygonPointsForSideCube = ({
         )
     }
 }
+
+// export const getXAndYFromRowAndColumn = ({
+
+//     row,
+//     height,
+//     stageWidth,
+//     stageHeight
+
+// }) => {
+
+// }
