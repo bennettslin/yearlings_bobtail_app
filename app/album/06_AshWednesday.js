@@ -13,9 +13,9 @@ import { BENNETT_APARTMENT_COURTYARD_TILES,
          BENNETT_APARTMENT_COUCH_THOUGHT_TILES,
          CATHOLIC_CHURCH_TILES,
          BERKELEY_CAMPUS_1_TILES,
-         BERKELEY_CAMPUS_2_TILES } from '../constants/stageTiles'
+         BERKELEY_CAMPUS_2_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
-         SKY_SPRING } from '../constants/stageValues'
+         SKY_SPRING } from '../constants/scene'
 module.exports = {
     scenes: [
         {

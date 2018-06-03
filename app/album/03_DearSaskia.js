@@ -12,9 +12,9 @@ import { VERSES,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { TAIWAN_PUPPET_SHOW_TILES,
          SCHOOLBUS_TILES,
-         TETHERBALL_SCENE_TILES } from '../constants/stageTiles'
+         TETHERBALL_SCENE_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
-         SKY_SUMMER } from '../constants/stageValues'
+         SKY_SUMMER } from '../constants/scene'
 module.exports = {
     scenes: [
         {

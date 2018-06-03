@@ -13,9 +13,9 @@ import { BENNETT_APARTMENT_COUCH_TILES,
          SHOW_STAGE_FRONT_TILES,
          REHEARSAL_SPACE_TILES,
          MOVIE_THEATRE_1_TILES,
-         MOVIE_THEATRE_2_TILES } from '../constants/stageTiles'
+         MOVIE_THEATRE_2_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
-         SKY_SUMMER } from '../constants/stageValues'
+         SKY_SUMMER } from '../constants/scene'
 module.exports = {
     scenes: [
         {

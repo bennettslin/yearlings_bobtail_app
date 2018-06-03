@@ -18,10 +18,10 @@ import { DISHROOM_TILES,
          BENNETT_APARTMENT_GATE_TILES,
          BENNETT_APARTMENT_BED_TILES,
          WAITING_ROOM_TILES,
-         SITA_APARTMENT_BED_TILES } from '../constants/stageTiles'
+         SITA_APARTMENT_BED_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
          SKY_AUTUMN,
-         SKY_WINTER } from '../constants/stageValues'
+         SKY_WINTER } from '../constants/scene'
 module.exports = {
     /**
      * All of these scenes repeat twice.

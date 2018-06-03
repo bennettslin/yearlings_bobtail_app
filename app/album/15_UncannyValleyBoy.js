@@ -18,9 +18,9 @@ import { VERSES,
 import { BENNETT_BASEMENT_TILES,
          SNOW_GLOBES_1_TILES,
          SNOW_GLOBES_2_TILES,
-         SNOW_GLOBES_3_TILES } from '../constants/stageTiles'
+         SNOW_GLOBES_3_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
-         SKY_AUTUMN } from '../constants/stageValues'
+         SKY_AUTUMN } from '../constants/scene'
 module.exports = {
     scenes: [
         {

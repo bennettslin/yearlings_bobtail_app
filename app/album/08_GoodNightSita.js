@@ -12,9 +12,9 @@ import { SITA_APARTMENT_GATE_1_TILES,
          SITA_APARTMENT_GATE_2_TILES,
          MUSEUM_TILES,
          BACKSTAGE_TILES,
-         GO_KART_TILES } from '../constants/stageTiles'
+         GO_KART_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
-         SKY_AUTUMN } from '../constants/stageValues'
+         SKY_AUTUMN } from '../constants/scene'
 module.exports = {
     scenes: [
         {

@@ -21,9 +21,9 @@ import { UCLA_CAMPUS_TILES,
          STEAM_TUNNEL_TILES,
          CEMETERY_TILES,
          STATION_WAGON_TILES,
-         HOWIE_ATTIC_TILES } from '../constants/stageTiles'
+         HOWIE_ATTIC_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
-         SKY_SPRING } from '../constants/stageValues'
+         SKY_SPRING } from '../constants/scene'
 module.exports = {
     scenes: [
         {

@@ -7,7 +7,7 @@ import cx from 'classnames'
 import DynamicSvg from '../DynamicSvg/DynamicSvg'
 
 import { SKY_NO_TIME,
-        SKY_NO_SEASON } from '../../constants/stageValues'
+        SKY_NO_SEASON } from '../../constants/scene'
 
 const defaultProps = {
     sky: {

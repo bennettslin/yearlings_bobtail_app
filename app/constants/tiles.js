@@ -8,7 +8,7 @@ import {
     STREET_COLOUR,
     SIDEWALK_COLOUR,
     FURNITURE_COLOUR
-} from './stageValues'
+} from './scene'
 
 const
     a = 10,

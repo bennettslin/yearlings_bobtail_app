@@ -1,6 +1,6 @@
-import { LOGUE_TILES } from '../constants/stageTiles'
+import { LOGUE_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/stageValues'
+         SKY_NO_SEASON } from '../constants/scene'
 module.exports = {
     logue: true,
     title: 'prologue',

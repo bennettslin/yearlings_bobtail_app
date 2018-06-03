@@ -16,9 +16,9 @@ import { OAKLAND_STREET_SIDE_TILES,
          SITA_APARTMENT_COUCH_THOUGHT_TILES,
          OAKLAND_STREET_FRONT_1_TILES,
          OAKLAND_STREET_FRONT_2_TILES,
-         OAKLAND_STREET_FRONT_3_TILES } from '../constants/stageTiles'
+         OAKLAND_STREET_FRONT_3_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
-         SKY_AUTUMN } from '../constants/stageValues'
+         SKY_AUTUMN } from '../constants/scene'
 module.exports = {
     scenes: [
         {

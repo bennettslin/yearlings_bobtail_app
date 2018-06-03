@@ -16,12 +16,12 @@ import { VERSES,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { CHILDHOOD_NEIGHBOURHOOD_TILES,
          PLAYGROUND_TILES,
-         CHILDHOOD_BATHROOM_TILES } from '../constants/stageTiles'
+         CHILDHOOD_BATHROOM_TILES } from '../constants/tiles'
 import { CUTOUT,
          FIXTURE,
          ACTOR,
          SKY_NO_TIME,
-         SKY_SPRING } from '../constants/stageValues'
+         SKY_SPRING } from '../constants/scene'
 
 module.exports = {
     scenes: [

@@ -19,9 +19,9 @@ import { FREEWAY_TILES,
          PORCH_TILES,
          PRETEEN_BENNETT_ROOM_TILES,
          CHILDHOOD_NEIGHBOURHOOD_TILES,
-         CHANGELING_CAVE_TILES } from '../constants/stageTiles'
+         CHANGELING_CAVE_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
-         SKY_SUMMER } from '../constants/stageValues'
+         SKY_SUMMER } from '../constants/scene'
 
 module.exports = {
     scenes: [

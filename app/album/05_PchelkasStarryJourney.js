@@ -19,9 +19,9 @@ import { PRETEEN_BENNETT_ROOM_TILES,
          PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES,
          JUNIOR_HIGH_LOCKERS_TILES,
          JUNIOR_HIGH_QUAD_TILES,
-         JUNIOR_HIGH_HALLWAY_TILES } from '../constants/stageTiles'
+         JUNIOR_HIGH_HALLWAY_TILES } from '../constants/tiles'
 import { SKY_NO_TIME,
-         SKY_WINTER } from '../constants/stageValues'
+         SKY_WINTER } from '../constants/scene'
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
  * song list order on the album.
