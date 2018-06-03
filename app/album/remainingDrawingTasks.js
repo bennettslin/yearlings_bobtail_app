@@ -255,11 +255,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Demonstration banner (Vegan)`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     /**
      * Large sceneries (Mimic painting)

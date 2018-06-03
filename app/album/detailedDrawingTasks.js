@@ -185,5 +185,10 @@ module.exports = [
         taskName: `Pinky promise portrait (Uncanny)`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Peta demonstration posters`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]
