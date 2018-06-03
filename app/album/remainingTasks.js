@@ -1,11 +1,5 @@
 module.exports = [
     {
-        taskName: `Initially position actions based on x and y tile coordinates.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: `Have system to show tile pixels.`,
         workedHours: 0,
         neededHours: 8

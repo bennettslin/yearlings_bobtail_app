@@ -2927,4 +2927,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Initially position actions based on x and y tile coordinates.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

@@ -13,6 +13,22 @@ import {
 const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
     SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
 
+export const getValueInCompactMatrix = (matrix, xIndex, yIndex) => {
+
+    const
+        // Use last row array if no row array for this y-index.
+        rowArray = matrix.length > yIndex ?
+            matrix[yIndex] :
+            matrix[matrix.length - 1],
+
+        // Use previous entry if no entry for this x-index.
+        value = rowArray.length > xIndex ?
+            rowArray[xIndex] :
+            rowArray[rowArray.length - 1]
+
+    return value
+}
+
 /*********
  * TILES *
  *********/
@@ -237,6 +253,19 @@ const _getHorizontalPlaneFractionsForSlantedRight = (
     }
 }
 
+const _getHorizontalPlaneFractionsFunction = (slantDirection) => {
+
+    if (slantDirection === 'left') {
+        return _getHorizontalPlaneFractionsForSlantedLeft
+
+    } else if (slantDirection === 'right') {
+        return _getHorizontalPlaneFractionsForSlantedRight
+
+    } else {
+        return _getHorizontalPlaneFractionsForDefault
+    }
+}
+
 export const getStageCubeCornerPercentages = ({
 
     xIndex,
@@ -249,21 +278,42 @@ export const getStageCubeCornerPercentages = ({
 
     const woodZIndex = isFloor ? 0 : 20
 
-    let getHorizontalPlaneFractions =
-        _getHorizontalPlaneFractionsForDefault
-
-    if (slantDirection === 'left') {
-        getHorizontalPlaneFractions =
-            _getHorizontalPlaneFractionsForSlantedLeft
-
-    } else if (slantDirection === 'right') {
-        getHorizontalPlaneFractions =
-            _getHorizontalPlaneFractionsForSlantedRight
-    }
+    const getHorizontalPlaneFractions = _getHorizontalPlaneFractionsFunction(
+        slantDirection
+    )
 
     return {
         tile: getHorizontalPlaneFractions(xIndex, yIndex, zIndex),
         wood: getHorizontalPlaneFractions(xIndex, yIndex, woodZIndex)
+    }
+}
+
+export const getTileCentreForAction = ({
+
+    xIndex,
+    yIndex,
+    zIndices,
+    slantDirection
+
+}) => {
+
+    const getHorizontalPlaneFractions = _getHorizontalPlaneFractionsFunction(
+            slantDirection
+        ),
+
+        zIndex = getValueInCompactMatrix(zIndices, xIndex, yIndex),
+
+        tilePercentages = getHorizontalPlaneFractions(xIndex, yIndex, zIndex),
+
+        { left, right } = tilePercentages,
+
+        // Get centre percentage by finding midpoint of one of the diagonals.
+        centreXPercentage = left.back.x + (right.front.x - left.back.x) / 2,
+        centreYPercentage = left.back.y + (right.front.y - left.back.y) / 2
+
+    return {
+        x: centreXPercentage,
+        y: centreYPercentage
     }
 }
 
@@ -335,14 +385,3 @@ export const getPolygonPointsForSideCube = ({
         )
     }
 }
-
-// export const getXAndYFromRowAndColumn = ({
-
-//     row,
-//     height,
-//     stageWidth,
-//     stageHeight
-
-// }) => {
-
-// }

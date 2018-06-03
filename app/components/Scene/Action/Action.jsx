@@ -6,13 +6,23 @@ import cx from 'classnames'
 
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 
+import { getTileCentreForAction } from '../../../helpers/tilesHelper'
+
+import { TILE_ROWS_LENGTH } from '../../../constants/stage'
+
 const defaultProps = {
     action: []
 }
 
 const actionPropTypes = {
-    className: PropTypes.string.isRequired,
+    yIndex: PropTypes.number.isRequired,
     action: PropTypes.array.isRequired,
+    zIndices: PropTypes.arrayOf(
+        PropTypes.arrayOf(
+            PropTypes.number
+        ).isRequired
+    ).isRequired,
+    slantDirection: PropTypes.string.isRequired,
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
 }
@@ -21,8 +31,10 @@ class Action extends Component {
 
     render() {
 
-        const { className,
+        const { yIndex,
                 action,
+                zIndices,
+                slantDirection,
                 stageWidth,
                 stageHeight } = this.props
 
@@ -30,7 +42,7 @@ class Action extends Component {
             <DynamicSvg
                 className={cx(
                     'Action',
-                    className,
+                    `Action__row__${yIndex}`,
                     'absoluteFullContainer'
                 )}
                 viewBoxWidth={stageWidth}
@@ -40,10 +52,30 @@ class Action extends Component {
 
                     const { name,
                             type,
-                            x,
-                            y,
+                            xIndex,
                             width,
-                            height } = actionEntry
+                            height } = actionEntry,
+
+                        invertedYIndex = TILE_ROWS_LENGTH - yIndex - 1,
+
+                        /**
+                         * Either indices or raw coordinates are given. If it's
+                         * indices, then only xIndex is provided, since action
+                         * already knows its yIndex.
+                         */
+                        coordinates = isNaN(xIndex) ?
+                            actionEntry : getTileCentreForAction({
+                                xIndex,
+                                yIndex: invertedYIndex,
+                                zIndices,
+                                slantDirection
+                            }),
+
+                        // These are percentages in both cases.
+                        { x, y } = coordinates,
+
+                        adjustedX = x - width / 2,
+                        adjustedY = y - height
 
                     return (
                         <g
@@ -56,15 +88,15 @@ class Action extends Component {
                                 className={cx(
                                     `ActionEntry__${type}`
                                 )}
-                                x={`${x}%`}
-                                y={`${y}%`}
+                                x={`${adjustedX}%`}
+                                y={`${adjustedY}%`}
                                 width={`${width}%`}
                                 height={`${height}%`}
                             />
                             <text
                                 className="ActionTemporaryText"
-                                x={`${x}%`}
-                                y={`${y}%`}
+                                x={`${adjustedX}%`}
+                                y={`${adjustedY}%`}
                             >
                                 {name}
                             </text>

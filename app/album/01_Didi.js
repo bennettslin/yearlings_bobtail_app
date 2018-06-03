@@ -29,26 +29,20 @@ module.exports = {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
             actions: {
-                actionsRow1: [
+                yIndex1: [
                     {
                         name: 'sample cutout 1',
                         type: CUTOUT,
-                        x: 25,
-                        y: 80,
+                        xIndex: 2,
                         width: 10,
-                        height: 10,
-                        row: 2,
-                        column: 3
+                        height: 10
                     },
                     {
                         name: 'sample fixture 1',
                         type: FIXTURE,
-                        x: 50,
-                        y: 50,
+                        xIndex: 6,
                         width: 10,
-                        height: 10,
-                        row: 5,
-                        column: 8
+                        height: 10
                     },
                     {
                         name: 'sample actor 1',
@@ -56,9 +50,7 @@ module.exports = {
                         x: 70,
                         y: 20,
                         width: 10,
-                        height: 10,
-                        row: 8,
-                        column: 11
+                        height: 10
                     },
                 ]
             },

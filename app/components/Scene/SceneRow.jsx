@@ -9,8 +9,18 @@ import Tiles from './Tiles/Tiles'
 
 import { ROW_INDICES_ARRAY } from './constants'
 
+const defaultProps = {
+    slantDirection: ''
+}
+
 const propTypes = {
     actions: PropTypes.object,
+    zIndices: PropTypes.arrayOf(
+        PropTypes.arrayOf(
+            PropTypes.number
+        ).isRequired
+    ).isRequired,
+    slantDirection: PropTypes.string.isRequired,
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
 }
@@ -18,6 +28,8 @@ const propTypes = {
 const SceneRow = ({
 
     actions,
+    zIndices,
+    slantDirection,
     stageWidth,
     stageHeight,
 
@@ -31,12 +43,14 @@ const SceneRow = ({
     >
         {ROW_INDICES_ARRAY.map(yIndex => {
 
-            const action = actions && actions[`actionsRow${yIndex}`]
+            const action = actions && actions[`yIndex${yIndex}`]
 
             return [(
                 <Tiles {...other}
                     key={`tiles_${yIndex}`}
-                    rawYIndex={yIndex}
+                    yIndex={yIndex}
+                    zIndices={zIndices}
+                    slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />
@@ -44,8 +58,10 @@ const SceneRow = ({
             ), action && (
                 <Action
                     key={`action_${yIndex}`}
-                    className={`Action__row__${yIndex}`}
+                    yIndex={yIndex}
                     action={action}
+                    zIndices={zIndices}
+                    slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />
@@ -53,6 +69,7 @@ const SceneRow = ({
         })}
     </div>
 )
+SceneRow.defaultProps = defaultProps
 SceneRow.propTypes = propTypes
 
 export default SceneRow

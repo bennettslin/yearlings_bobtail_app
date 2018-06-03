@@ -13,14 +13,11 @@ import { DEFAULT_COLUMN_INDICES,
 
 import { TILE_ROWS_LENGTH } from '../../../constants/stage'
 
-const defaultProps = {
-    slantDirection: ''
-}
+import { getValueInCompactMatrix } from '../../../helpers/tilesHelper'
 
 const propTypes = {
-    rawYIndex: PropTypes.number.isRequired,
+    yIndex: PropTypes.number.isRequired,
     isFloor: PropTypes.bool,
-    slantDirection: PropTypes.string.isRequired,
     zIndices: PropTypes.arrayOf(
         PropTypes.arrayOf(
             PropTypes.number
@@ -31,13 +28,14 @@ const propTypes = {
             PropTypes.string
         ).isRequired
     ).isRequired,
+    slantDirection: PropTypes.string.isRequired,
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
 }
 
 const Tiles = ({
 
-    rawYIndex,
+    yIndex,
     zIndices,
     colours,
     isFloor,
@@ -47,20 +45,11 @@ const Tiles = ({
 
 }) => {
 
-    // Use last row array if no row array for this y-index.
-    const zIndicesRowArray = zIndices.length > rawYIndex ?
-            zIndices[rawYIndex] :
-            zIndices[zIndices.length - 1],
-
-        coloursRowArray = colours.length > rawYIndex ?
-            colours[rawYIndex] :
-            colours[colours.length - 1]
-
     /**
      * Invert the rows, since top row in array should be top row
      * shown in floor field.
      */
-    const yIndex = TILE_ROWS_LENGTH - rawYIndex - 1
+    const invertedYIndex = TILE_ROWS_LENGTH - yIndex - 1
 
     let columnIndicesArray = DEFAULT_COLUMN_INDICES
 
@@ -75,7 +64,7 @@ const Tiles = ({
         <DynamicSvg
             className={cx(
                 'Tiles',
-                `Tiles__row__${rawYIndex}`,
+                `Tiles__row__${yIndex}`,
                 'absoluteFullContainer'
             )}
             viewBoxWidth={stageWidth}
@@ -83,20 +72,20 @@ const Tiles = ({
         >
             {columnIndicesArray.map(xIndex => {
 
-                // Use previous entry if no entry for this x-index.
-                const zIndex = zIndicesRowArray.length > xIndex ?
-                        zIndicesRowArray[xIndex] :
-                        zIndicesRowArray[zIndicesRowArray.length - 1],
+                const
+                    zIndex = getValueInCompactMatrix(
+                        zIndices, xIndex, yIndex
+                    ),
 
-                    colour = coloursRowArray.length > xIndex ?
-                        coloursRowArray[xIndex] :
-                        coloursRowArray[coloursRowArray.length - 1]
+                    colour = getValueInCompactMatrix(
+                        colours, xIndex, yIndex
+                    )
 
                 return (
                     <TilesCube
                         key={`${xIndex}_${yIndex}`}
                         xIndex={xIndex}
-                        yIndex={yIndex}
+                        yIndex={invertedYIndex}
                         zIndex={zIndex}
                         colour={colour}
                         isFloor={isFloor}
@@ -110,7 +99,6 @@ const Tiles = ({
     )
 }
 
-Tiles.defaultProps = defaultProps
 Tiles.propTypes = propTypes
 
 export default Tiles
