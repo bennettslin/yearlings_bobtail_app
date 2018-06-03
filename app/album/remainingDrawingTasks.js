@@ -246,11 +246,6 @@ module.exports = [
      * Untouched fixtures, painted foam panels.
      */
     {
-        taskName: `Howie's television (Constellations)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Hospital drip (Cremated, Dream)`,
         workedHours: 0,
         neededHours: 3

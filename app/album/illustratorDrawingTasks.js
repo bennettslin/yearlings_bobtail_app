@@ -89,6 +89,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Howie's television (Constellations)`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Crowd shadows (Look Back, Vegan)`,
         workedHours: 0,
         neededHours: 1
