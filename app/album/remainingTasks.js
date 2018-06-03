@@ -1,6 +1,23 @@
 module.exports = [
     {
+        taskName: `highlighting annotation title doesn't have transition?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Have system to show tile pixels.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `Have system to animate actions based on whether they are people, panels, or props.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `Allow for ceiling tiles to go up all the way for strings.`,
         workedHours: 0,
         neededHours: 8
     },
