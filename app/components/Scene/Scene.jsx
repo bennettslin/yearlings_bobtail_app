@@ -45,11 +45,22 @@ class Scene extends Component {
             { actions, sky, tiles } = sceneObject,
 
             // Separate ceiling and floor config values.
-            { ceilingZIndices = DEFAULT_STAGE_TILES.ceilingZIndices,
-              ceilingColours = DEFAULT_STAGE_TILES.ceilingColours,
-              floorZIndices = DEFAULT_STAGE_TILES.floorZIndices,
-              floorColours = DEFAULT_STAGE_TILES.floorColours,
-              slantDirection } = tiles
+
+            /**
+             * FIXME: These safety checks should no longer be needed once all
+             * tiles and faces for all scenes are established.
+             */
+            { ceiling = DEFAULT_STAGE_TILES.ceiling,
+              floor = DEFAULT_STAGE_TILES.floor,
+              slantDirection } = tiles,
+
+            ceilingZIndices = ceiling.zIndices || DEFAULT_STAGE_TILES.ceiling.zIndices,
+
+            ceilingFaces = ceiling.faces || DEFAULT_STAGE_TILES.ceiling.faces,
+
+            floorZIndices = floor.zIndices || DEFAULT_STAGE_TILES.floor.zIndices,
+
+            floorFaces = floor.faces || DEFAULT_STAGE_TILES.floor.faces
 
         return (
             <div className={cx(
@@ -64,7 +75,7 @@ class Scene extends Component {
                 {/* Ceiling tiles. */}
                 <ScenePlane
                     zIndices={ceilingZIndices}
-                    colours={ceilingColours}
+                    colours={ceilingFaces}
                     slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
@@ -75,7 +86,7 @@ class Scene extends Component {
                     isFloor
                     actions={actions}
                     zIndices={floorZIndices}
-                    colours={floorColours}
+                    colours={floorFaces}
                     slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
