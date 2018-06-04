@@ -1,6 +1,7 @@
 module.exports = {
 
     // Floor panel colours.
+    // TODO: Eventually delete.
     BATHROOM_COLOUR: 'purple',
     CAMPUS_COLOUR: 'gray',
     LAWN_COLOUR: 'green',
