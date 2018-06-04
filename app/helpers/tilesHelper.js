@@ -13,10 +13,10 @@ import {
 const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
     SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
 
-export const getValueInCompactMatrix = (matrix, xIndex, yIndex) => {
+export const getValueInAbridgedMatrix = (matrix, xIndex, yIndex) => {
 
     const
-        // Use last row array if no row array for this y-index.
+        // Use previous row array if no row array for this y-index.
         rowArray = matrix.length > yIndex ?
             matrix[yIndex] :
             matrix[matrix.length - 1],
@@ -301,7 +301,7 @@ export const getTileCentreForAction = ({
             slantDirection
         ),
 
-        zIndex = getValueInCompactMatrix(zIndices, xIndex, yIndex),
+        zIndex = getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
 
         tilePercentages = getHorizontalPlaneFractions(xIndex, yIndex, zIndex),
 

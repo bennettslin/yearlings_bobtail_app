@@ -13,7 +13,7 @@ import { DEFAULT_COLUMN_INDICES,
 
 import { TILE_ROWS_LENGTH } from '../../../constants/stage'
 
-import { getValueInCompactMatrix } from '../../../helpers/tilesHelper'
+import { getValueInAbridgedMatrix } from '../../../helpers/tilesHelper'
 
 const propTypes = {
     yIndex: PropTypes.number.isRequired,
@@ -73,11 +73,11 @@ const Tiles = ({
             {columnIndicesArray.map(xIndex => {
 
                 const
-                    zIndex = getValueInCompactMatrix(
+                    zIndex = getValueInAbridgedMatrix(
                         zIndices, xIndex, yIndex
                     ),
 
-                    colour = getValueInCompactMatrix(
+                    colour = getValueInAbridgedMatrix(
                         colours, xIndex, yIndex
                     )
 
