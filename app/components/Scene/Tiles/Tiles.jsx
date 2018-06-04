@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
-import TilesCube from './TilesCube'
+import TileCube from './TileCube'
 
 import { DEFAULT_COLUMN_INDICES,
          SLANTED_LEFT_COLUMN_INDICES,
@@ -82,7 +82,7 @@ const Tiles = ({
                     )
 
                 return (
-                    <TilesCube
+                    <TileCube
                         key={`${xIndex}_${yIndex}`}
                         xIndex={xIndex}
                         yIndex={invertedYIndex}

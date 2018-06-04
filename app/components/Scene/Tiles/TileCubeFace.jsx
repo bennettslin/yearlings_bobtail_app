@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { getPolygonPointsForTileCube,
          getPolygonPointsForFrontCube,
-         getPolygonPointsForSideCube } from '../../../helpers/tilesHelper'
+         getPolygonPointsForSideCube } from '../../../helpers/tileFacesHelper'
 
 const propTypes = {
     face: PropTypes.string.isRequired,
@@ -15,7 +15,7 @@ const propTypes = {
     stageHeight: PropTypes.number.isRequired
 }
 
-const TilesCubeFace = ({
+const TileCubeFace = ({
 
     face,
     isLeft,
@@ -54,16 +54,22 @@ const TilesCubeFace = ({
     }
 
     return (
-        <polygon
+        <g
             className={cx(
-                'TilesCubeFace',
-                `TilesCubeFace__${face}`
+                'TileCubeFace'
             )}
-            points={polygonPoints}
-        />
+        >
+            <polygon
+                className={cx(
+                    'TileCubeFace__stroke',
+                    `TileCubeFace__${face}`
+                )}
+                points={polygonPoints}
+            />
+        </g>
     )
 }
 
-TilesCubeFace.propTypes = propTypes
+TileCubeFace.propTypes = propTypes
 
-export default TilesCubeFace
+export default TileCubeFace
