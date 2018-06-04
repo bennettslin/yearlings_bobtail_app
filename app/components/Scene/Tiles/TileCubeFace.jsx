@@ -10,7 +10,52 @@ const propTypes = {
     face: PropTypes.string.isRequired,
     isLeft: PropTypes.bool,
     slantDirection: PropTypes.string,
-    cubeCorners: PropTypes.object.isRequired,
+    cubeCorners: PropTypes.shape({
+        tile: PropTypes.shape({
+            left: PropTypes.shape({
+                front: PropTypes.shape({
+                    x: PropTypes.number.isRequired,
+                    y: PropTypes.number.isRequired
+                }),
+                back: PropTypes.shape({
+                    x: PropTypes.number.isRequired,
+                    y: PropTypes.number.isRequired
+                })
+            }).isRequired,
+            right: PropTypes.shape({
+                front: PropTypes.shape({
+                    x: PropTypes.number.isRequired,
+                    y: PropTypes.number.isRequired
+                }),
+                back: PropTypes.shape({
+                    x: PropTypes.number.isRequired,
+                    y: PropTypes.number.isRequired
+                })
+            }).isRequired
+        }),
+        wood: PropTypes.shape({
+            left: PropTypes.shape({
+                front: PropTypes.shape({
+                    x: PropTypes.number.isRequired,
+                    y: PropTypes.number.isRequired
+                }),
+                back: PropTypes.shape({
+                    x: PropTypes.number.isRequired,
+                    y: PropTypes.number.isRequired
+                })
+            }).isRequired,
+            right: PropTypes.shape({
+                front: PropTypes.shape({
+                    x: PropTypes.number.isRequired,
+                    y: PropTypes.number.isRequired
+                }),
+                back: PropTypes.shape({
+                    x: PropTypes.number.isRequired,
+                    y: PropTypes.number.isRequired
+                })
+            }).isRequired
+        })
+    }),
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
 }
