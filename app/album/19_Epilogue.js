@@ -11,7 +11,7 @@ module.exports = {
             actors: {
                 oldBennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
@@ -35,7 +35,7 @@ module.exports = {
                 },
                 willy: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'3"`,
                     description: 'standing'
                 },
@@ -59,7 +59,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing'
                 },
@@ -71,7 +71,7 @@ module.exports = {
                 },
                 tomer: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'6"`,
                     description: 'standing'
                 },
@@ -95,13 +95,13 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'8"`,
                     description: 'standing'
                 },
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing',
                     subtasks: [
@@ -119,13 +119,13 @@ module.exports = {
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `4'11"`,
                     description: 'standing'
                 },
                 wade: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'10"`,
                     description: 'standing'
                 },
@@ -137,7 +137,7 @@ module.exports = {
                 },
                 stephanie: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'4"`,
                     description: 'standing',
                     subtasks: [
@@ -151,7 +151,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'11"`,
                     description: 'standing'
                 },
@@ -181,13 +181,13 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'9"`,
                     description: 'standing'
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     realHeight: `5'7"`,
                     description: 'standing'
                 }

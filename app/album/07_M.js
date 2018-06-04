@@ -24,7 +24,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'looking at Leonard Cohen poster'
                 }
             },
@@ -40,7 +40,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'sitting on couch, figuring out Rubiks Cube'
                 }
             },
@@ -56,13 +56,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'sitting on couch, reading a book'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'sitting on floor, back turned, playing keyboard'
                     }
                 }
@@ -79,12 +79,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'chatting with hipster, paying attention to Mara'
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'wiping sweat, chatting with Mara, laughing'
                 },
                 mara: {
@@ -100,7 +100,7 @@ module.exports = {
                 tomer: {
                     shane: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'chatting with Bennett, gushing about music'
                     }
                 }
@@ -117,12 +117,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'sitting, silently eating burger, uncomfortable'
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'sitting, eating burger, holding Mara\'s hand'
                 },
                 mara: {
@@ -148,7 +148,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, walking, sulking with head down'
                 },
                 miriam: {
@@ -171,7 +171,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, looking back at baby'
                 },
                 miriam: {
@@ -201,7 +201,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, inspired by sudden thought'
                 },
                 howie: {

@@ -27,7 +27,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, cradling bracelet, blank'
                 }
             },
@@ -43,7 +43,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, disingenuously consoling'
                 },
                 liz: {
@@ -66,13 +66,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'back, cradling bracelet, blank'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'back, shaking fist at sky'
                     }
                 },
@@ -89,13 +89,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, playful, waving'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'back, playful'
                     }
                 },
@@ -119,13 +119,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'back, consoling'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'back, head in hands, holding bracelet'
                     }
                 },
@@ -153,7 +153,7 @@ module.exports = {
                 willy: {
                     crossingGuard: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'front, holding up stop sign'
                     }
                 }

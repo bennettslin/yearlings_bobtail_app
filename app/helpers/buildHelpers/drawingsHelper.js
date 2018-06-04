@@ -107,11 +107,11 @@ export const adminFinaliseDrawings = (album) => {
 
                 /**
                  * FIXME: Keep modifying this conditional so that it reflects
-                 * the latest task. Currently it's hair, assumed to take 15
-                 * minutes.
+                 * the latest task. Currently it's hair, assumed to take 30
+                 * minutes...
                  */
                 if (roleObject.todo) {
-                    if (descriptionEntity.workedHours < 2.75) {
+                    if (descriptionEntity.workedHours < 3) {
                         rolesTodoCount++
 
                     } else {
@@ -153,8 +153,8 @@ export const adminFinaliseDrawings = (album) => {
                 album.songs[songIndex].actorsTodoCount++
                 album.songs[songIndex].actorsWorkedHours += (descriptionEntity.workedHours || 0)
 
-                // Assume 4.75 hours per drawing.
-                album.songs[songIndex].actorsNeededHours += (descriptionEntity.neededHours || 4.75)
+                // Assume 5 hours per drawing.
+                album.songs[songIndex].actorsNeededHours += (descriptionEntity.neededHours || 5)
 
             }
             album.songs[songIndex].actorsTotalCount++

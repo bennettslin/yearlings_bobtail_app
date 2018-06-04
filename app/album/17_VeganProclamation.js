@@ -27,7 +27,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, slumped over, despondent'
                 },
                 liz: {
@@ -39,7 +39,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, protective, judgmental'
                 }
             },
@@ -55,7 +55,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'back, looking to side, annoyed'
                 },
                 miriam: {
@@ -65,12 +65,12 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front, introducing miriam'
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, eager'
                 }
             },
@@ -86,7 +86,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'walking through alley'
                 }
             },
@@ -102,7 +102,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, on phone, hunched over, sobbing'
                 },
                 liz: {
@@ -121,13 +121,13 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'lying in bed, caressing Sita'
                 },
                 khariReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'reflection'
                     }
                 },
@@ -144,7 +144,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, desperately hopeful'
                 },
                 amy: {
@@ -157,14 +157,14 @@ module.exports = {
                 stephanie: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'standing, demonstrating'
                     }
                 },
                 wade: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'standing, demonstrating'
                     }
                 }

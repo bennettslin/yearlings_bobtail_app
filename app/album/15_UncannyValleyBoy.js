@@ -29,7 +29,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'lying sitting up, arm around Miriam, scared, guilty'
                 },
                 miriam: {
@@ -55,7 +55,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, accusatory'
                 },
                 esther: {
@@ -78,12 +78,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front angle, wincing'
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, gesturing to scene below'
                 },
                 preteenBennett: {
@@ -109,7 +109,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front, dismissive, not feeling bad'
                 },
                 mother: {
@@ -119,7 +119,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front angle, gesturing with blame'
                 },
                 miriam: {
@@ -130,7 +130,7 @@ module.exports = {
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'making out with Miriam'
                     }
                 }
@@ -147,13 +147,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'concerned'
                 },
                 stephanie: {
                     bennett: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'back, squatting, recording, dejected'
                     }
                 },
@@ -164,7 +164,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front angle, arms crossed, righteous'
                 },
                 liz: {
@@ -176,7 +176,7 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, cheerful, making a point'
                 }
             },
@@ -192,7 +192,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, seeking protection'
                 },
                 miriam: {
@@ -207,7 +207,7 @@ module.exports = {
                 },
                 father: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, knocked over'
                 },
                 esther: {

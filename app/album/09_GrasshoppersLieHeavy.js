@@ -33,7 +33,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'back, reading book, pulling tray from belt.'
                 }
             },
@@ -49,7 +49,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, handing lancet pen, exuberant'
                 },
                 liz: {
@@ -90,13 +90,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, walking, mopey'
                 },
                 nestor: {
                     jogger: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'side, jogging, spry'
                     }
                 }
@@ -113,7 +113,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'back, punching code, surprised'
                 },
                 liz: {
@@ -136,7 +136,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front, opening gate, silent, attentive'
                 },
                 liz: {
@@ -159,7 +159,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front, turning on light, smiling'
                 },
                 liz: {
@@ -182,7 +182,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'sitting, eyes closed, falling asleep'
                 }
             },
@@ -198,7 +198,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'sitting, abruptly woken'
                 },
                 liz: {
@@ -221,13 +221,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, standing beside bed, unsure'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'reflection'
                     }
                 },
@@ -258,13 +258,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, about to stick it in'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'reflection'
                     }
                 },
@@ -295,13 +295,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'lying down, warm, content, slightly worried'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'reflection'
                     }
                 },

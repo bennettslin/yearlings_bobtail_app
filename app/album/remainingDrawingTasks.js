@@ -243,15 +243,6 @@ module.exports = [
     },
 
     /**
-     * Untouched fixtures, painted foam panels.
-     */
-    {
-        taskName: `Hospital drip (Cremated, Dream)`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    /**
      * Large sceneries (Mimic painting)
      */
     {

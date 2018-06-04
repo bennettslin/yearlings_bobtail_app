@@ -26,7 +26,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front, putting on jacket, cold, distant'
                 },
                 liz: {
@@ -49,12 +49,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front, tripping as meats fall out of pockets'
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, eagerly aggressive, about to punch car'
                 },
                 ana: {
@@ -64,7 +64,7 @@ module.exports = {
                 },
                 nestor: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front, clutching at fist, laughing through pain'
                 }
             },
@@ -80,7 +80,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'on couch, ignoring Sita, drunk'
                 },
                 liz: {
@@ -103,7 +103,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, sweaty, giddy'
                 },
                 miriam: {
@@ -113,7 +113,7 @@ module.exports = {
                 },
                 tristan: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front, playfully giving Miriam a noogie'
                 },
                 ana: {
@@ -134,7 +134,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'standing, cold, looking away'
                 },
                 liz: {

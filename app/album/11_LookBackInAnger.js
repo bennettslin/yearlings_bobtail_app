@@ -26,7 +26,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, playing guitar, singing'
                 },
                 ana: {
@@ -37,13 +37,13 @@ module.exports = {
                 tomer: {
                     shane: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'side angle, holding beer, turning to make room'
                     }
                 },
                 wade: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, drinking beer'
                 },
                 amy: {
@@ -53,7 +53,7 @@ module.exports = {
                 },
                 stephanie: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, squeezing through, awkward'
                 }
             },
@@ -69,7 +69,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, charmed'
                 },
                 amy: {
@@ -79,7 +79,7 @@ module.exports = {
                 },
                 jacob: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, walking, carrying drums, smiling at Mara'
                 },
                 mara: {
@@ -100,7 +100,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, carrying gear, looking back, hesitant'
                 },
                 ana: {
@@ -120,12 +120,12 @@ module.exports = {
                 },
                 stephanie: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, talking to Wade'
                 },
                 wade: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front, talking to Stephanie'
                 }
             },
@@ -141,13 +141,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, sitting on edge of bed, discontented'
                 },
                 bennettReflection: {
                     reflection: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'reflection'
                     }
                 },

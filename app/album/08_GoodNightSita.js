@@ -23,7 +23,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, awkward, wanting to make a move'
                 },
                 liz: {
@@ -46,7 +46,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'front, leaning towards Sita'
                 },
                 liz: {
@@ -69,7 +69,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, jealous'
                 },
                 liz: {
@@ -81,13 +81,13 @@ module.exports = {
                 },
                 khari: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, friendly'
                 },
                 stephanie: {
                     actor: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'side, rushing'
                     }
                 }
@@ -104,7 +104,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, in go-kart, leaning forward'
                 },
                 liz: {
@@ -127,7 +127,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, walking away dejected, slumped over'
                 },
                 liz: {

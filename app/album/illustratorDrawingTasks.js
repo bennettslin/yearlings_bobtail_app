@@ -109,6 +109,11 @@ module.exports = [
         neededHours: 3
     },
     {
+        taskName: `Hospital drip (Cremated, Dream)`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: `Park bench (Vegan)`,
         workedHours: 1,
         neededHours: 2

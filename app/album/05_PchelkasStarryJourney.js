@@ -187,7 +187,7 @@ module.exports = {
                 tristan: {
                     principal: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'side, confused, defensive, apologetic'
                     }
                 }

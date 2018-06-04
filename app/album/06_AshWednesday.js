@@ -24,12 +24,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'standing forward, disappointed, defeated'
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'walking away, in a bad mood'
                 }
             },
@@ -45,12 +45,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'sitting slouched, showing lyrics to Catherine'
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'sitting upright, droll smile'
                 }
             },
@@ -66,7 +66,7 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'standing, back forward, hands in pocket'
                 }
             },
@@ -82,13 +82,13 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side angle, noticing Catholic'
                 },
                 wade: {
                     catholic: {
                         todo: true,
-                        workedHours: 2.75,
+                        workedHours: 3,
                         description: 'side angle, walking, looking pious'
                     }
                 },
@@ -112,12 +112,12 @@ module.exports = {
             actors: {
                 bennett: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'side, walking, looking pious'
                 },
                 catherine: {
                     todo: true,
-                    workedHours: 2.75,
+                    workedHours: 3,
                     description: 'walking forward, confused and curious at Bennett'
                 }
             },
