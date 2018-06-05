@@ -50,7 +50,7 @@ module.exports = {
             actors: {
                 mother: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'front, consoling Sita'
                 },
                 father: {
@@ -114,7 +114,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side angle, gesturing with empathy'
                 },
                 father: {
@@ -159,7 +159,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'front angle, wanting to console Bennett'
                 },
                 father: {
@@ -202,7 +202,7 @@ module.exports = {
                 },
                 mother: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side angle, protecting Sita'
                 },
                 father: {
