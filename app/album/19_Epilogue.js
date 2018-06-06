@@ -163,7 +163,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     realHeight: `5'8"`,
                     description: 'standing'
                 },

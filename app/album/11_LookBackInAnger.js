@@ -31,7 +31,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side angle, playing bass, looking cool'
                 },
                 tomer: {
@@ -105,7 +105,7 @@ module.exports = {
                 },
                 ana: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'front, leaning against wall, waiting for Jacob'
                 },
                 mara: {
