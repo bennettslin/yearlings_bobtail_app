@@ -83,7 +83,7 @@ module.exports = {
                 },
                 brad: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     realHeight: `4'6"`,
                     description: 'standing'
                 },
