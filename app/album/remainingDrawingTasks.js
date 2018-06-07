@@ -4,11 +4,6 @@ module.exports = [
      * Large painted panels (Do first)
      */
     {
-        taskName: `Bathroom with sink, mirror, towel rack (Didi)`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
         taskName: `Family house facade (Willy)`,
         workedHours: 0,
         neededHours: 4

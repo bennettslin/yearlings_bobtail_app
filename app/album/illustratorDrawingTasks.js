@@ -1,6 +1,15 @@
 module.exports = [
 
     /**
+     * Large painted panels
+     */
+    {
+        taskName: `Bathroom with sink, mirror, towel rack (Didi)`,
+        workedHours: 1,
+        neededHours: 2
+    },
+
+    /**
      * Untouched fixtures, painted foam panels.
      */
     {
