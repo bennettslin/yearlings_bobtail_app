@@ -43,7 +43,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side seated, pretending to read, panicked'
                 },
                 sasha: {
@@ -71,7 +71,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'tied up, greeting Sasha with nervous laughter'
                 },
                 sasha: {

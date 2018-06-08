@@ -53,7 +53,7 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     realHeight: `4'2"`,
                     description: 'standing'
                 },

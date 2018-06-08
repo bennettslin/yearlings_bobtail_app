@@ -43,7 +43,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'lying on stomach, drawing, guilty'
                 },
                 christopher: {
@@ -64,7 +64,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side, sitting up in bed, feigning sick'
                 }
             },
@@ -80,7 +80,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'in bed, asleep, turned away'
                 }
             },
@@ -96,7 +96,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side, sitting, shaken, scared'
                 }
             },
@@ -112,7 +112,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side, stoic'
                 },
                 brad: {
@@ -138,7 +138,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side, wistful'
                 },
                 brad: {
@@ -171,7 +171,7 @@ module.exports = {
             actors: {
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'front, sitting, sheepish'
                 },
                 christopher: {

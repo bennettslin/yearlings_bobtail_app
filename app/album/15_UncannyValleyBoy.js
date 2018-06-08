@@ -88,7 +88,7 @@ module.exports = {
                 },
                 preteenBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'sitting, hurt, lashing out in anger'
                 },
                 sasha: {
