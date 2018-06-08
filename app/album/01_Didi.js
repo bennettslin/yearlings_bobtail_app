@@ -79,7 +79,7 @@ module.exports = {
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side, running, panicked'
                 }
             },
@@ -103,7 +103,7 @@ module.exports = {
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'sitting, flustered'
                 },
                 esther: {
@@ -127,7 +127,7 @@ module.exports = {
             actors: {
                 youngBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side, in bathtub, downcast'
                 }
             },
@@ -151,7 +151,7 @@ module.exports = {
                 },
                 youngBennett: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side, facing front, singing, smiling'
                 }
             },
