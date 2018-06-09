@@ -37,12 +37,12 @@ const _getXPercentage = (
         ),
 
         tilesWidthPercentage =
-            100 / VANISHING_POINT_Y_PERCENTAGE *
-            (VANISHING_POINT_Y_PERCENTAGE - baseYPercentage),
+            100 / VANISHING_POINT_Y_PERCENTAGE
+            * (VANISHING_POINT_Y_PERCENTAGE - baseYPercentage),
 
-        rawXPercentage = (100 - tilesWidthPercentage) / 2 +
-            xCornerIndex * tilesWidthPercentage /
-            tileColumnsLength
+        rawXPercentage =
+            (100 - tilesWidthPercentage) / 2
+            + xCornerIndex * tilesWidthPercentage / tileColumnsLength
 
     return roundPercentage(100 - rawXPercentage)
 }
@@ -63,8 +63,8 @@ const _getYPercentage = (
         tileYPercentage = tileYPercentages[yCornerIndex],
 
         rawYPercentage =
-            tileYPercentage + zIndex / 10 *
-            (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
+            tileYPercentage + zIndex / 10
+            * (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
 
     return roundPercentage(100 - rawYPercentage)
 }
