@@ -48,7 +48,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'w-sitting, blissful'
                 }
             },
@@ -176,7 +176,7 @@ module.exports = {
                 },
                 christopher: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'front, sitting, staring'
                 },
                 mother: {
