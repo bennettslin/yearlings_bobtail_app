@@ -36,30 +36,30 @@ export const getPolygonPointsForFrontFace = ({
     stageWidth,
     stageHeight
 }) => {
-    const { tile, wood } = cubeCorners
+    const { tile, base } = cubeCorners
 
     if (slantDirection === 'left') {
         return [
             _getPolygonPoint(tile.left.back, stageWidth, stageHeight),
             _getPolygonPoint(tile.right.back, stageWidth, stageHeight),
-            _getPolygonPoint(wood.right.back, stageWidth, stageHeight),
-            _getPolygonPoint(wood.left.back, stageWidth, stageHeight)
+            _getPolygonPoint(base.right.back, stageWidth, stageHeight),
+            _getPolygonPoint(base.left.back, stageWidth, stageHeight)
         ]
 
     } else if (slantDirection === 'right') {
         return [
             _getPolygonPoint(tile.left.back, stageWidth, stageHeight),
             _getPolygonPoint(tile.left.front, stageWidth, stageHeight),
-            _getPolygonPoint(wood.left.front, stageWidth, stageHeight),
-            _getPolygonPoint(wood.left.back, stageWidth, stageHeight)
+            _getPolygonPoint(base.left.front, stageWidth, stageHeight),
+            _getPolygonPoint(base.left.back, stageWidth, stageHeight)
         ]
 
     } else {
         return [
             _getPolygonPoint(tile.left.front, stageWidth, stageHeight),
             _getPolygonPoint(tile.right.front, stageWidth, stageHeight),
-            _getPolygonPoint(wood.right.front, stageWidth, stageHeight),
-            _getPolygonPoint(wood.left.front, stageWidth, stageHeight)
+            _getPolygonPoint(base.right.front, stageWidth, stageHeight),
+            _getPolygonPoint(base.left.front, stageWidth, stageHeight)
         ]
     }
 }
@@ -71,22 +71,22 @@ export const getPolygonPointsForSideFace = ({
     stageWidth,
     stageHeight
 }) => {
-    const { tile, wood } = cubeCorners
+    const { tile, base } = cubeCorners
 
     if (slantDirection === 'left') {
         return [
             _getPolygonPoint(tile.left.back, stageWidth, stageHeight),
             _getPolygonPoint(tile.left.front, stageWidth, stageHeight),
-            _getPolygonPoint(wood.left.front, stageWidth, stageHeight),
-            _getPolygonPoint(wood.left.back, stageWidth, stageHeight)
+            _getPolygonPoint(base.left.front, stageWidth, stageHeight),
+            _getPolygonPoint(base.left.back, stageWidth, stageHeight)
         ]
 
     } else if (slantDirection === 'right') {
         return [
             _getPolygonPoint(tile.left.back, stageWidth, stageHeight),
             _getPolygonPoint(tile.right.back, stageWidth, stageHeight),
-            _getPolygonPoint(wood.right.back, stageWidth, stageHeight),
-            _getPolygonPoint(wood.left.back, stageWidth, stageHeight)
+            _getPolygonPoint(base.right.back, stageWidth, stageHeight),
+            _getPolygonPoint(base.left.back, stageWidth, stageHeight)
         ]
 
     } else {
@@ -96,8 +96,8 @@ export const getPolygonPointsForSideFace = ({
         return [
             _getPolygonPoint(tile[xFace].back, stageWidth, stageHeight),
             _getPolygonPoint(tile[xFace].front, stageWidth, stageHeight),
-            _getPolygonPoint(wood[xFace].front, stageWidth, stageHeight),
-            _getPolygonPoint(wood[xFace].back, stageWidth, stageHeight)
+            _getPolygonPoint(base[xFace].front, stageWidth, stageHeight),
+            _getPolygonPoint(base[xFace].back, stageWidth, stageHeight)
         ]
     }
 }

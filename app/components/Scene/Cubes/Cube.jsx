@@ -8,9 +8,9 @@ import CubeFace from './CubeFace'
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../planesHelper'
 
-import { TILE_COLUMNS_LENGTH } from '../../../constants/stage'
+import { CUBE_COLUMNS_LENGTH } from '../../../constants/stage'
 
-class TileCube extends Component {
+class Cube extends Component {
 
     static propTypes = {
         isFloor: PropTypes.bool,
@@ -56,10 +56,10 @@ class TileCube extends Component {
                 xIndex, yIndex, zIndex, isFloor, slantDirection
             }),
 
-            isLeft = xIndex < TILE_COLUMNS_LENGTH / 2;
+            isLeft = xIndex < CUBE_COLUMNS_LENGTH / 2;
 
         return (
-            <g className="TileCube">
+            <g className="Cube">
 
                 <CubeFace {...other}
                     face="tile"
@@ -85,4 +85,4 @@ class TileCube extends Component {
     }
 }
 
-export default TileCube
+export default Cube

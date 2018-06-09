@@ -8,7 +8,7 @@ import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 
 import { getTileCentreForAction } from '../planesHelper'
 
-import { TILE_ROWS_LENGTH } from '../../../constants/stage'
+import { CUBE_ROWS_LENGTH } from '../../../constants/stage'
 
 const defaultProps = {
     action: []
@@ -56,7 +56,7 @@ class Action extends Component {
                             width,
                             height } = actionEntry,
 
-                        invertedYIndex = TILE_ROWS_LENGTH - yIndex - 1,
+                        invertedYIndex = CUBE_ROWS_LENGTH - yIndex - 1,
 
                         /**
                          * Either indices or raw coordinates are given. If it's

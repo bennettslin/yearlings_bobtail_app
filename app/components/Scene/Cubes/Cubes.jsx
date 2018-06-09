@@ -5,13 +5,13 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
-import TileCube from './TileCube'
+import Cube from './Cube'
 
 import { DEFAULT_COLUMN_INDICES,
          SLANTED_LEFT_COLUMN_INDICES,
          SLANTED_RIGHT_COLUMN_INDICES } from '../constants'
 
-import { TILE_ROWS_LENGTH } from '../../../constants/stage'
+import { CUBE_ROWS_LENGTH } from '../../../constants/stage'
 
 import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
 
@@ -33,7 +33,7 @@ const propTypes = {
     stageHeight: PropTypes.number.isRequired
 }
 
-const Tiles = ({
+const Cubes = ({
 
     yIndex,
     zIndices,
@@ -49,7 +49,7 @@ const Tiles = ({
      * Invert the rows, since top row in array should be top row
      * shown in floor field.
      */
-    const invertedYIndex = TILE_ROWS_LENGTH - yIndex - 1
+    const invertedYIndex = CUBE_ROWS_LENGTH - yIndex - 1
 
     let columnIndicesArray = DEFAULT_COLUMN_INDICES
 
@@ -63,8 +63,8 @@ const Tiles = ({
     return (
         <DynamicSvg
             className={cx(
-                'Tiles',
-                `Tiles__row__${yIndex}`,
+                'Cubes',
+                `Cubes__row__${yIndex}`,
                 'absoluteFullContainer'
             )}
             viewBoxWidth={stageWidth}
@@ -82,7 +82,7 @@ const Tiles = ({
                     )
 
                 return (
-                    <TileCube
+                    <Cube
                         key={`${xIndex}_${yIndex}`}
                         xIndex={xIndex}
                         yIndex={invertedYIndex}
@@ -99,6 +99,6 @@ const Tiles = ({
     )
 }
 
-Tiles.propTypes = propTypes
+Cubes.propTypes = propTypes
 
-export default Tiles
+export default Cubes

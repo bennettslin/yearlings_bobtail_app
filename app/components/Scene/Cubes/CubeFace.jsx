@@ -40,7 +40,7 @@ const propTypes = {
                 })
             }).isRequired
         }),
-        wood: PropTypes.shape({
+        base: PropTypes.shape({
             left: PropTypes.shape({
                 front: PropTypes.shape({
                     x: PropTypes.number.isRequired,

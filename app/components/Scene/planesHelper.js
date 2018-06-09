@@ -1,7 +1,7 @@
 import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
-    TILE_COLUMNS_LENGTH,
+    CUBE_COLUMNS_LENGTH,
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_COLUMNS_LENGTH
 } from '../../constants/stage'
@@ -29,7 +29,7 @@ const _getXPercentage = (
     const
         // Use columns length value based on default or slanted arrangement.
         tileColumnsLength = isSlanted ?
-            SLANTED_TILE_COLUMNS_LENGTH : TILE_COLUMNS_LENGTH,
+            SLANTED_TILE_COLUMNS_LENGTH : CUBE_COLUMNS_LENGTH,
 
         // Get x-coordinate percentage at zIndex 0.
         baseYPercentage = _getYPercentage(
@@ -276,8 +276,11 @@ export const getStageCubeCornerPercentages = ({
     )
 
     return {
+        // This is the top face if floor, bottom face if ceiling.
         tile: getHorizontalPlaneFractions(xIndex, yIndex, zIndex),
-        wood: getHorizontalPlaneFractions(xIndex, yIndex, woodZIndex)
+
+        // This is the face that is attached to the surface.
+        base: getHorizontalPlaneFractions(xIndex, yIndex, woodZIndex)
     }
 }
 

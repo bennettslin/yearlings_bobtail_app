@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Action from './Action/Action';
-import Tiles from './Tiles/Tiles'
+import Cubes from './Cubes/Cubes'
 
 import { ROW_INDICES_ARRAY } from './constants'
 
@@ -46,8 +46,8 @@ const SceneRow = ({
             const action = actions && actions[`yIndex${yIndex}`]
 
             return [(
-                <Tiles {...other}
-                    key={`tiles_${yIndex}`}
+                <Cubes {...other}
+                    key={`cubes_${yIndex}`}
                     yIndex={yIndex}
                     zIndices={zIndices}
                     slantDirection={slantDirection}
