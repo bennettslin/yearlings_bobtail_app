@@ -16,7 +16,7 @@ class TileCube extends Component {
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
         zIndex: PropTypes.number.isRequired,
-        colour: PropTypes.string.isRequired,
+        bitmap: PropTypes.string.isRequired,
         isFloor: PropTypes.bool,
         slantDirection: PropTypes.string.isRequired,
         stageWidth: PropTypes.number.isRequired,
@@ -32,7 +32,7 @@ class TileCube extends Component {
                     'xIndex',
                     'yIndex',
                     'zIndex',
-                    'colour',
+                    'bitmap',
                     'isFloor',
                     'slantDirection',
                     'stageWidth',
@@ -49,6 +49,7 @@ class TileCube extends Component {
                 xIndex,
                 yIndex,
                 zIndex,
+                bitmap,
                 stageWidth,
                 stageHeight
             } = this.props,
@@ -58,6 +59,8 @@ class TileCube extends Component {
             }),
 
             isLeft = xIndex < TILE_COLUMNS_LENGTH / 2;
+
+        console.error('bitmap', bitmap);
 
         return (
             <g className="TileCube">

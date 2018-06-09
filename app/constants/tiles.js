@@ -30,7 +30,7 @@ const
             zIndices: [
                 [k]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         },
@@ -38,7 +38,7 @@ const
             zIndices: [
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -53,7 +53,7 @@ const
                 [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -68,7 +68,7 @@ const
                 [1],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [LAWN_COLOUR],
                 [LAWN_COLOUR],
                 [LAWN_COLOUR],
@@ -89,7 +89,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [CAMPUS_COLOUR],
                 [CAMPUS_COLOUR],
                 [CAMPUS_COLOUR],
@@ -105,6 +105,9 @@ const
             zIndices: [
                 [k, g, g, g, g, g, g, g, g, g, g, k]
             ],
+            bitmaps: [
+                [STAGE_COLOUR]
+            ]
         },
         floor: {
             zIndices: [
@@ -114,7 +117,7 @@ const
                 [0, g, 1, 2, 2, 2, 2, 1, 1, 1, g, 0],
                 [0, g, 1, 1, 1, 1, 1, 1, 1, 1, g, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR],
                 [STAGE_COLOUR],
                 [STAGE_COLOUR],
@@ -135,7 +138,7 @@ const
                 [0],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -149,7 +152,7 @@ const
                 [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -159,7 +162,7 @@ const
             zIndices: [
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -170,7 +173,7 @@ const
             zIndices: [
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -188,7 +191,7 @@ const
                 [0, i, 3, 3, 3, 3, 3, 3, i, i, 9, 0],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -198,7 +201,7 @@ const
             zIndices: [
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -214,7 +217,7 @@ const
                 [5],
                 [5]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -229,7 +232,7 @@ const
                 [k, 5, 5, 4, 3, 2, 1, 0],
                 [k, 5, 5]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -245,7 +248,7 @@ const
                 [1, 1, d, 1, 1, 1, 0],
                 [1, 1, 1, 1, 1, 1, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -257,7 +260,7 @@ const
             zIndices: [
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -269,7 +272,7 @@ const
             zIndices: [
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -286,7 +289,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -298,7 +301,7 @@ const
             zIndices: [
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -310,7 +313,7 @@ const
             zIndices: [
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -328,6 +331,9 @@ const
         // Captain bed height is 3.5'.
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
+            bitmaps: [
+                [STAGE_COLOUR]
+            ]
         },
         /**
          * --.-----------
@@ -351,7 +357,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, g]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -360,6 +366,9 @@ const
         slantDirection: LEFT,
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
+            bitmaps: [
+                [STAGE_COLOUR]
+            ]
         },
         floor: {
             zIndices: [
@@ -370,7 +379,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -379,6 +388,9 @@ const
         slantDirection: LEFT,
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
+            bitmaps: [
+                [STAGE_COLOUR]
+            ]
         },
         floor: {
             zIndices: [
@@ -389,7 +401,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 8, 8, 8, g, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, g]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -398,6 +410,9 @@ const
         slantDirection: LEFT,
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
+            bitmaps: [
+                [STAGE_COLOUR]
+            ]
         },
         floor: {
             zIndices: [
@@ -407,7 +422,7 @@ const
                 [g, g, 5, 5, 1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -419,6 +434,9 @@ const
                 [k],
                 [k],
                 [k, k, j, j, j, j, j, j, j, j, k]
+            ],
+            bitmaps: [
+                [STAGE_COLOUR]
             ]
         },
         floor: {
@@ -429,7 +447,7 @@ const
                 [1, 1, 2, f, f, f, f, 2, 2, 2, 1],
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -442,6 +460,9 @@ const
                 [k, k, j, j, j, j, j, j, j, j, k],
                 [k, k, j, j, j, j, j, j, j, j, k],
                 [k]
+            ],
+            bitmaps: [
+                [STAGE_COLOUR]
             ]
         },
         floor: {
@@ -452,7 +473,7 @@ const
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -462,6 +483,9 @@ const
         ceiling: {
             zIndices: [
                 [k, g, g, g, g, g, g, g, g, g, g, k]
+            ],
+            bitmaps: [
+                [STAGE_COLOUR]
             ]
         },
         floor: {
@@ -473,7 +497,7 @@ const
                 [0, 1, 1, 1, 1, 1, 4, 4, 4, 1, 1, 0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -489,7 +513,7 @@ const
                 [g, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, g],
                 [g, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, g]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -503,7 +527,7 @@ const
                 [1, h, 7, 7, 7, 7, h, 1, 1, 1, h],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -513,6 +537,9 @@ const
         ceiling: {
             zIndices: [
                 [g]
+            ],
+            bitmaps: [
+                [STAGE_COLOUR]
             ]
         },
         floor: {
@@ -523,7 +550,7 @@ const
                 [g, 1, 1, 3, 3, 3, 3, 3, 1, 1, 1, g],
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -538,7 +565,7 @@ const
                 [0, 1, 4, 3, 3, 3, 3, 3, 1, 1, 1, 0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -553,7 +580,7 @@ const
                 [1],
                 [0],
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -569,7 +596,7 @@ const
                 [h, 0, 2, 2, 0, 0, 3, 3, 3, 3, 3, h],
                 [h, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, h]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -584,7 +611,7 @@ const
                 [1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -599,7 +626,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -613,7 +640,7 @@ const
                 [1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -622,6 +649,9 @@ const
         ceiling: {
             zIndices: [
                 [h]
+            ],
+            bitmaps: [
+                [STAGE_COLOUR]
             ]
         },
         floor: {
@@ -633,7 +663,7 @@ const
                 [h, 0, 2, 0, 0, 0, 2, 0, 2, 2, 0, h],
                 [h, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, h]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -649,7 +679,7 @@ const
                 [1],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -664,7 +694,7 @@ const
                 [1],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -680,7 +710,7 @@ const
                 [0, 0, 1, 1, 1, 1, 1, 3, 3, 1, 0],
                 [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -690,7 +720,7 @@ const
             zIndices: [
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -704,7 +734,7 @@ const
                 [0, 0, 2, 2, 2, 0, 0, 2, 2, 2, 0],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -720,7 +750,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, g, 2],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -735,7 +765,7 @@ const
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, g, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -745,7 +775,7 @@ const
             zIndices: [
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -755,7 +785,7 @@ const
             zIndices: [
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -767,7 +797,7 @@ const
                 [5],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -779,7 +809,7 @@ const
             zIndices: [
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -794,7 +824,7 @@ const
                 [0, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 0],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -809,7 +839,7 @@ const
                 [9, 9, 9, 9, 9, 9, 9, f, 4, 4, 1],
                 [9, 9, c, c, 9, 9, 9, f, 3, 3, 2, 1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -826,7 +856,7 @@ const
                 [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -836,6 +866,9 @@ const
         ceiling: {
             zIndices: [
                 [j]
+            ],
+            bitmaps: [
+                [STAGE_COLOUR]
             ]
         },
         floor: {
@@ -844,7 +877,7 @@ const
                 [1, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -854,6 +887,9 @@ const
         ceiling: {
             zIndices: [
                 [j]
+            ],
+            bitmaps: [
+                [STAGE_COLOUR]
             ]
         },
         floor: {
@@ -865,7 +901,7 @@ const
                 [6, 6, 6, 1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -874,6 +910,9 @@ const
         ceiling: {
             zIndices: [
                 [j]
+            ],
+            bitmaps: [
+                [STAGE_COLOUR]
             ]
         },
         floor: {
@@ -885,7 +924,7 @@ const
                 [j, 6, 6, 6, 6, 6, 6, 6, 6, 6, 1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -901,7 +940,7 @@ const
                 [1, 1, 1, 1, 1, 1, 7, 1],
                 [1, 1, 1, 1, 1, 1, 7, 1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -917,7 +956,7 @@ const
                 [1, 7, 7, a, 9, 9, 9, 9, 7, 7, 7, 1],
                 [1, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -933,7 +972,7 @@ const
                 [g, 7, 3, 3, 1],
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -945,7 +984,7 @@ const
                 [1],
                 [1, 7, 3, 3, 1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -961,7 +1000,7 @@ const
                 [1],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -976,7 +1015,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -993,7 +1032,7 @@ const
                 [1],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1008,7 +1047,7 @@ const
                 [0],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1020,7 +1059,7 @@ const
                 [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1],
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1030,7 +1069,7 @@ const
             zIndices: [
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1040,7 +1079,7 @@ const
             zIndices: [
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1054,7 +1093,7 @@ const
                 [0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 0],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1069,7 +1108,7 @@ const
                 [k, 3, 3, 3, 3, 2, 4, 4, 4, 4, 4, 2],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1084,7 +1123,7 @@ const
                 [k, 8, 4, 4, 2, 2, 5, 5, 5, 5, 5, 0],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1108,7 +1147,7 @@ const
             zIndices: [
                 [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1124,7 +1163,7 @@ const
                 [4, 4, 4, 6, 8, 6, 6, 4, 4, 4, 0],
                 [4, 4, 4, 4, 4, 6, 6, 4, 4, 4, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1140,7 +1179,7 @@ const
                 [g, 1, 1, 7, 7, 7, 1, 0],
                 [g, 1, 1, 1, 1, 7, 1, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1156,7 +1195,7 @@ const
                 [g, 1, 1, 7, 7, 7, 1, 0, 0, 1, 0],
                 [g, 1, 1, 1, 1, 7, 1, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1166,7 +1205,7 @@ const
             zIndices: [
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1178,7 +1217,7 @@ const
                 [h],
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1188,7 +1227,7 @@ const
             zIndices: [
                 [1]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1204,7 +1243,7 @@ const
                 [1],
                 [0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1217,7 +1256,7 @@ const
             zIndices: [
                 [4]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1230,7 +1269,7 @@ const
             zIndices: [
                 [4]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1259,7 +1298,7 @@ const
                 [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
                 [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
@@ -1288,7 +1327,7 @@ const
                 [g, 1, 1, 7, 7, 7, 1, 0, 0, 4, 0, 0],
                 [g, 1, 1, 1, 1, 7, 1, 0, 0, 0, 0, 0]
             ],
-            faces: [
+            bitmaps: [
                 [STAGE_COLOUR]
             ]
         }
