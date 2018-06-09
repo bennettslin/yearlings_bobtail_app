@@ -54,13 +54,17 @@ class Scene extends Component {
               floor = DEFAULT_STAGE_TILES.floor,
               slantDirection } = tiles,
 
-            ceilingZIndices = ceiling.zIndices || DEFAULT_STAGE_TILES.ceiling.zIndices,
+            ceilingZIndices = ceiling.zIndices ||
+                DEFAULT_STAGE_TILES.ceiling.zIndices,
 
-            ceilingBitmaps = ceiling.bitmaps || DEFAULT_STAGE_TILES.ceiling.bitmaps,
+            ceilingBitmaps = ceiling.bitmaps ||
+                DEFAULT_STAGE_TILES.ceiling.bitmaps,
 
-            floorZIndices = floor.zIndices || DEFAULT_STAGE_TILES.floor.zIndices,
+            floorZIndices = floor.zIndices ||
+                DEFAULT_STAGE_TILES.floor.zIndices,
 
-            floorBitmaps = floor.bitmaps || DEFAULT_STAGE_TILES.floor.bitmaps
+            floorBitmaps = floor.bitmaps ||
+                DEFAULT_STAGE_TILES.floor.bitmaps
 
         return (
             <div className={cx(

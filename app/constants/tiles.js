@@ -1,14 +1,8 @@
 // Check out Peoria Symphony Orchestra.
 
 import {
-    BATHROOM_COLOUR,
-    CAMPUS_COLOUR,
-    LAWN_COLOUR,
-    STAGE_COLOUR,
-    STREET_COLOUR,
-    SIDEWALK_COLOUR,
-    FURNITURE_COLOUR
-} from './scene'
+    STAGE_PLATFORM_BITMAP
+} from './bitmaps'
 
 const
     a = 10,
@@ -31,7 +25,7 @@ const
                 [k]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -39,7 +33,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -54,7 +48,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -69,12 +63,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [LAWN_COLOUR],
-                [LAWN_COLOUR],
-                [LAWN_COLOUR],
-                [SIDEWALK_COLOUR],
-                [SIDEWALK_COLOUR],
-                [STREET_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -90,12 +79,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [CAMPUS_COLOUR],
-                [CAMPUS_COLOUR],
-                [CAMPUS_COLOUR],
-                [CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, FURNITURE_COLOUR, CAMPUS_COLOUR],
-                [CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, CAMPUS_COLOUR, FURNITURE_COLOUR, CAMPUS_COLOUR],
-                [CAMPUS_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -106,7 +90,7 @@ const
                 [k, g, g, g, g, g, g, g, g, g, g, k]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+
             ]
         },
         floor: {
@@ -118,12 +102,7 @@ const
                 [0, g, 1, 1, 1, 1, 1, 1, 1, 1, g, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR],
-                [STAGE_COLOUR],
-                [STAGE_COLOUR],
-                [BATHROOM_COLOUR],
-                [BATHROOM_COLOUR, BATHROOM_COLOUR, BATHROOM_COLOUR, BATHROOM_COLOUR, FURNITURE_COLOUR, FURNITURE_COLOUR, FURNITURE_COLOUR, BATHROOM_COLOUR],
-                [BATHROOM_COLOUR]
+
             ]
         }
     },
@@ -139,7 +118,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -153,7 +132,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -163,7 +142,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -174,7 +153,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -192,7 +171,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -202,7 +181,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -218,7 +197,7 @@ const
                 [5]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -233,7 +212,7 @@ const
                 [k, 5, 5]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -249,7 +228,7 @@ const
                 [1, 1, 1, 1, 1, 1, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -261,7 +240,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -273,7 +252,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -290,7 +269,7 @@ const
                 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -302,7 +281,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -314,7 +293,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -332,7 +311,7 @@ const
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         /**
@@ -358,7 +337,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, g]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -367,7 +346,7 @@ const
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -380,7 +359,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -389,7 +368,7 @@ const
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -402,7 +381,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 8, 1, 1, g]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -411,7 +390,7 @@ const
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -423,7 +402,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -436,7 +415,7 @@ const
                 [k, k, j, j, j, j, j, j, j, j, k]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -448,7 +427,7 @@ const
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -462,7 +441,7 @@ const
                 [k]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -474,7 +453,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -485,7 +464,7 @@ const
                 [k, g, g, g, g, g, g, g, g, g, g, k]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -498,7 +477,7 @@ const
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -514,7 +493,7 @@ const
                 [g, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, g]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -528,7 +507,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -539,7 +518,7 @@ const
                 [g]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -551,7 +530,7 @@ const
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -566,7 +545,7 @@ const
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -581,7 +560,7 @@ const
                 [0],
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -597,7 +576,7 @@ const
                 [h, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, h]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -612,7 +591,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -627,7 +606,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -641,7 +620,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -651,7 +630,7 @@ const
                 [h]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -664,7 +643,7 @@ const
                 [h, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, h]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -680,7 +659,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -695,7 +674,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -711,7 +690,7 @@ const
                 [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -721,7 +700,7 @@ const
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -735,7 +714,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -751,7 +730,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -766,7 +745,7 @@ const
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, g, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -776,7 +755,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -786,7 +765,7 @@ const
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -798,7 +777,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -810,7 +789,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -825,7 +804,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -840,7 +819,7 @@ const
                 [9, 9, c, c, 9, 9, 9, f, 3, 3, 2, 1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -857,7 +836,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -868,7 +847,7 @@ const
                 [j]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -878,7 +857,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -889,7 +868,7 @@ const
                 [j]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -902,7 +881,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -912,7 +891,7 @@ const
                 [j]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         },
         floor: {
@@ -925,7 +904,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -941,7 +920,7 @@ const
                 [1, 1, 1, 1, 1, 1, 7, 1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -957,7 +936,7 @@ const
                 [1, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -973,7 +952,7 @@ const
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -985,7 +964,7 @@ const
                 [1, 7, 3, 3, 1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1001,7 +980,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1016,7 +995,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1033,7 +1012,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1048,7 +1027,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1060,7 +1039,7 @@ const
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1070,7 +1049,7 @@ const
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1080,7 +1059,7 @@ const
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1094,7 +1073,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1109,7 +1088,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1124,7 +1103,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1148,7 +1127,7 @@ const
                 [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1164,7 +1143,7 @@ const
                 [4, 4, 4, 4, 4, 6, 6, 4, 4, 4, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1180,7 +1159,7 @@ const
                 [g, 1, 1, 1, 1, 7, 1, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1196,7 +1175,7 @@ const
                 [g, 1, 1, 1, 1, 7, 1, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1206,7 +1185,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1218,7 +1197,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1228,7 +1207,7 @@ const
                 [1]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1244,7 +1223,7 @@ const
                 [0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1257,7 +1236,7 @@ const
                 [4]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1270,7 +1249,7 @@ const
                 [4]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1299,7 +1278,7 @@ const
                 [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     },
@@ -1328,7 +1307,7 @@ const
                 [g, 1, 1, 1, 1, 7, 1, 0, 0, 0, 0, 0]
             ],
             bitmaps: [
-                [STAGE_COLOUR]
+                [STAGE_PLATFORM_BITMAP]
             ]
         }
     }

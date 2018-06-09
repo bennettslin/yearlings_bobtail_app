@@ -20,12 +20,12 @@ const propTypes = {
     isFloor: PropTypes.bool,
     zIndices: PropTypes.arrayOf(
         PropTypes.arrayOf(
-            PropTypes.number
+            PropTypes.number.isRequired
         ).isRequired
     ).isRequired,
     bitmaps: PropTypes.arrayOf(
         PropTypes.arrayOf(
-            PropTypes.string
+            PropTypes.array.isRequired
         ).isRequired
     ).isRequired,
     slantDirection: PropTypes.string.isRequired,

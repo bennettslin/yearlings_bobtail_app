@@ -1,15 +1,5 @@
 module.exports = {
 
-    // Floor panel colours.
-    // TODO: Eventually delete.
-    BATHROOM_COLOUR: 'purple',
-    CAMPUS_COLOUR: 'gray',
-    LAWN_COLOUR: 'green',
-    STAGE_COLOUR: 'brown',
-    STREET_COLOUR: 'black',
-    SIDEWALK_COLOUR: 'blue',
-    FURNITURE_COLOUR: 'brown',
-
     // Sky times and seasons.
     SKY_NO_TIME: 'noTime',
     SKY_MORNING: 'morning',
