@@ -199,3 +199,20 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
 
     return arrayOfLengths
 }
+
+export const getValueInAbridgedMatrix = (matrix, xIndex, yIndex) => {
+    // Assume that matrix is an array of arrays.
+
+    const
+        // Use previous row array if no row array for this y-index.
+        rowArray = matrix.length > yIndex ?
+            matrix[yIndex] :
+            matrix[matrix.length - 1],
+
+        // Use previous entry if no entry for this x-index.
+        value = rowArray.length > xIndex ?
+            rowArray[xIndex] :
+            rowArray[rowArray.length - 1]
+
+    return value
+}

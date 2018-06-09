@@ -4,34 +4,19 @@ import {
     TILE_COLUMNS_LENGTH,
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_COLUMNS_LENGTH
-} from '../constants/stage'
+} from '../../constants/stage'
 
 import {
-    roundPercentage
-} from './generalHelper'
+    roundPercentage,
+    getValueInAbridgedMatrix
+} from '../../helpers/generalHelper'
 
 const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
     SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
 
-export const getValueInAbridgedMatrix = (matrix, xIndex, yIndex) => {
-
-    const
-        // Use previous row array if no row array for this y-index.
-        rowArray = matrix.length > yIndex ?
-            matrix[yIndex] :
-            matrix[matrix.length - 1],
-
-        // Use previous entry if no entry for this x-index.
-        value = rowArray.length > xIndex ?
-            rowArray[xIndex] :
-            rowArray[rowArray.length - 1]
-
-    return value
-}
-
-/*********
- * TILES *
- *********/
+/***************
+ * COORDINATES *
+ ***************/
 
 const _getXPercentage = (
 
@@ -121,6 +106,10 @@ const _getXYPercentages = (
         )
     }
 }
+
+/**********
+ * PLANES *
+ **********/
 
 const _getHorizontalPlaneFractionsForDefault = (
     xIndex, yIndex, zIndex
@@ -265,6 +254,10 @@ const _getHorizontalPlaneFractionsFunction = (slantDirection) => {
         return _getHorizontalPlaneFractionsForDefault
     }
 }
+
+/************
+ * EXPORTED *
+ ************/
 
 export const getStageCubeCornerPercentages = ({
 

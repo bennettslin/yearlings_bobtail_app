@@ -6,7 +6,7 @@ import cx from 'classnames'
 
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 
-import { getTileCentreForAction } from '../../../helpers/tilesHelper'
+import { getTileCentreForAction } from '../planesHelper'
 
 import { TILE_ROWS_LENGTH } from '../../../constants/stage'
 

@@ -3,10 +3,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import TileCubeFace from './TileCubeFace'
+import TileFace from './TileFace'
 
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
-import { getStageCubeCornerPercentages } from '../../../helpers/tilesHelper'
+import { getStageCubeCornerPercentages } from '../planesHelper'
 
 import { TILE_COLUMNS_LENGTH } from '../../../constants/stage'
 
@@ -61,20 +61,20 @@ class TileCube extends Component {
         return (
             <g className="TileCube">
 
-                <TileCubeFace {...other}
+                <TileFace {...other}
                     face="tile"
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
                 />
 
-                <TileCubeFace {...other}
+                <TileFace {...other}
                     face="side"
                     isLeft={isLeft}
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
                 />
 
-                <TileCubeFace {...other}
+                <TileFace {...other}
                     face="front"
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}

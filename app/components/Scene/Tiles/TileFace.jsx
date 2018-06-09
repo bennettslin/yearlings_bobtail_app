@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { getPolygonPointsForTileCube,
          getPolygonPointsForFrontCube,
-         getPolygonPointsForSideCube } from '../../../helpers/tileFacesHelper'
+         getPolygonPointsForSideCube } from './facesHelper'
 
 import { BITMAPS } from '../../../constants/bitmaps'
 
@@ -63,7 +63,7 @@ const propTypes = {
     stageHeight: PropTypes.number.isRequired
 }
 
-const TileCubeFace = ({
+const TileFace = ({
 
     face,
     isLeft,
@@ -75,11 +75,13 @@ const TileCubeFace = ({
 
 }) => {
 
+    const bitmap = BITMAPS[bitmapKey]
+
     let polygonPoints;
 
     // TODO: Eventually get rid of this, of course.
     if (bitmapKey && !bitmapKey) {
-        console.error(BITMAPS[bitmapKey])
+        console.error(bitmap)
     }
 
     if (face === 'tile') {
@@ -110,7 +112,7 @@ const TileCubeFace = ({
     return (
         <g
             className={cx(
-                'TileCubeFace'
+                'TileFace'
             )}
         >
             <polygon
@@ -124,6 +126,6 @@ const TileCubeFace = ({
     )
 }
 
-TileCubeFace.propTypes = propTypes
+TileFace.propTypes = propTypes
 
-export default TileCubeFace
+export default TileFace

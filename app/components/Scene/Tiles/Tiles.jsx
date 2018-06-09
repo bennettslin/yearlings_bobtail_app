@@ -13,7 +13,7 @@ import { DEFAULT_COLUMN_INDICES,
 
 import { TILE_ROWS_LENGTH } from '../../../constants/stage'
 
-import { getValueInAbridgedMatrix } from '../../../helpers/tilesHelper'
+import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
 
 const propTypes = {
     yIndex: PropTypes.number.isRequired,
