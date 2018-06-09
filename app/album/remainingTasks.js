@@ -1,12 +1,17 @@
 module.exports = [
     {
+        taskName: `Refactor and optimise shouldComponentUpdate method.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `highlighting annotation title doesn't have transition?`,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: `Have system to show tile pixels.`,
-        workedHours: 0,
+        workedHours: 2,
         neededHours: 8
     },
 
