@@ -8,18 +8,16 @@ import TileCubeFace from './TileCubeFace'
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../../../helpers/tilesHelper'
 
-import { BITMAPS } from '../../../constants/bitmaps'
-
 import { TILE_COLUMNS_LENGTH } from '../../../constants/stage'
 
 class TileCube extends Component {
 
     static propTypes = {
+        isFloor: PropTypes.bool,
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
         zIndex: PropTypes.number.isRequired,
         bitmapKey: PropTypes.string.isRequired,
-        isFloor: PropTypes.bool,
         slantDirection: PropTypes.string.isRequired,
         stageWidth: PropTypes.number.isRequired,
         stageHeight: PropTypes.number.isRequired
@@ -31,10 +29,10 @@ class TileCube extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
+                    'isFloor',
                     'xIndex',
                     'yIndex',
                     'zIndex',
-                    'isFloor',
                     'bitmapKey',
                     'slantDirection',
                     'stageWidth',
@@ -52,11 +50,7 @@ class TileCube extends Component {
                 yIndex,
                 zIndex,
 
-                bitmapKey,
-
-                stageWidth,
-                stageHeight
-            } = this.props,
+                ...other } = this.props,
 
             cubeCorners = getStageCubeCornerPercentages({
                 xIndex, yIndex, zIndex, isFloor, slantDirection
@@ -64,37 +58,26 @@ class TileCube extends Component {
 
             isLeft = xIndex < TILE_COLUMNS_LENGTH / 2;
 
-        // TODO: Eventually get rid of this, of course.
-        if (bitmapKey && !bitmapKey) {
-            console.error(BITMAPS[bitmapKey])
-        }
-
         return (
             <g className="TileCube">
 
-                <TileCubeFace
+                <TileCubeFace {...other}
                     face="tile"
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
-                    stageWidth={stageWidth}
-                    stageHeight={stageHeight}
                 />
 
-                <TileCubeFace
+                <TileCubeFace {...other}
                     face="side"
                     isLeft={isLeft}
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
-                    stageWidth={stageWidth}
-                    stageHeight={stageHeight}
                 />
 
-                <TileCubeFace
+                <TileCubeFace {...other}
                     face="front"
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
-                    stageWidth={stageWidth}
-                    stageHeight={stageHeight}
                 />
 
             </g>

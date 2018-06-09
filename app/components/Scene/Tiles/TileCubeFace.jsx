@@ -6,9 +6,12 @@ import { getPolygonPointsForTileCube,
          getPolygonPointsForFrontCube,
          getPolygonPointsForSideCube } from '../../../helpers/tileFacesHelper'
 
+import { BITMAPS } from '../../../constants/bitmaps'
+
 const propTypes = {
-    face: PropTypes.string.isRequired,
     isLeft: PropTypes.bool,
+    face: PropTypes.string.isRequired,
+    bitmapKey: PropTypes.string.isRequired,
     slantDirection: PropTypes.string,
     cubeCorners: PropTypes.shape({
         tile: PropTypes.shape({
@@ -64,6 +67,7 @@ const TileCubeFace = ({
 
     face,
     isLeft,
+    bitmapKey,
     slantDirection,
     cubeCorners,
     stageWidth,
@@ -72,6 +76,11 @@ const TileCubeFace = ({
 }) => {
 
     let polygonPoints;
+
+    // TODO: Eventually get rid of this, of course.
+    if (bitmapKey && !bitmapKey) {
+        console.error(BITMAPS[bitmapKey])
+    }
 
     if (face === 'tile') {
         polygonPoints = getPolygonPointsForTileCube({
