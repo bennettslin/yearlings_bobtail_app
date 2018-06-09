@@ -8,6 +8,8 @@ import TileCubeFace from './TileCubeFace'
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../../../helpers/tilesHelper'
 
+import { BITMAPS } from '../../../constants/bitmaps'
+
 import { TILE_COLUMNS_LENGTH } from '../../../constants/stage'
 
 class TileCube extends Component {
@@ -16,11 +18,7 @@ class TileCube extends Component {
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
         zIndex: PropTypes.number.isRequired,
-        bitmap: PropTypes.arrayOf(
-            PropTypes.arrayOf(
-                PropTypes.string.isRequired
-            ).isRequired
-        ).isRequired,
+        bitmapKey: PropTypes.string.isRequired,
         isFloor: PropTypes.bool,
         slantDirection: PropTypes.string.isRequired,
         stageWidth: PropTypes.number.isRequired,
@@ -37,8 +35,7 @@ class TileCube extends Component {
                     'yIndex',
                     'zIndex',
                     'isFloor',
-                    // FIXME: Make bitmapKey.
-                    'bitmap',
+                    'bitmapKey',
                     'slantDirection',
                     'stageWidth',
                     'stageHeight'
@@ -55,9 +52,7 @@ class TileCube extends Component {
                 yIndex,
                 zIndex,
 
-                // FIXME: Make bitmapKey.
-                // eslint-disable-next-line no-unused-vars
-                bitmap,
+                bitmapKey,
 
                 stageWidth,
                 stageHeight
@@ -68,6 +63,11 @@ class TileCube extends Component {
             }),
 
             isLeft = xIndex < TILE_COLUMNS_LENGTH / 2;
+
+        // TODO: Eventually get rid of this, of course.
+        if (bitmapKey && !bitmapKey) {
+            console.error(BITMAPS[bitmapKey])
+        }
 
         return (
             <g className="TileCube">

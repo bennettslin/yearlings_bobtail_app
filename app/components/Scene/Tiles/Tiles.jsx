@@ -23,9 +23,9 @@ const propTypes = {
             PropTypes.number.isRequired
         ).isRequired
     ).isRequired,
-    bitmaps: PropTypes.arrayOf(
+    bitmapKeys: PropTypes.arrayOf(
         PropTypes.arrayOf(
-            PropTypes.array.isRequired
+            PropTypes.string.isRequired
         ).isRequired
     ).isRequired,
     slantDirection: PropTypes.string.isRequired,
@@ -37,7 +37,7 @@ const Tiles = ({
 
     yIndex,
     zIndices,
-    bitmaps,
+    bitmapKeys,
     isFloor,
     slantDirection,
     stageWidth,
@@ -77,8 +77,8 @@ const Tiles = ({
                         zIndices, xIndex, yIndex
                     ),
 
-                    bitmap = getValueInAbridgedMatrix(
-                        bitmaps, xIndex, yIndex
+                    bitmapKey = getValueInAbridgedMatrix(
+                        bitmapKeys, xIndex, yIndex
                     )
 
                 return (
@@ -87,7 +87,7 @@ const Tiles = ({
                         xIndex={xIndex}
                         yIndex={invertedYIndex}
                         zIndex={zIndex}
-                        bitmap={bitmap}
+                        bitmapKey={bitmapKey}
                         isFloor={isFloor}
                         slantDirection={slantDirection}
                         stageWidth={stageWidth}

@@ -48,7 +48,7 @@ class Scene extends Component {
 
             /**
              * FIXME: These safety checks should no longer be needed once all
-             * tiles and bitmaps for all scenes are established.
+             * tiles and bitmapKeys for all scenes are established.
              */
             { ceiling = DEFAULT_STAGE_TILES.ceiling,
               floor = DEFAULT_STAGE_TILES.floor,
@@ -57,14 +57,14 @@ class Scene extends Component {
             ceilingZIndices = ceiling.zIndices ||
                 DEFAULT_STAGE_TILES.ceiling.zIndices,
 
-            ceilingBitmaps = ceiling.bitmaps ||
-                DEFAULT_STAGE_TILES.ceiling.bitmaps,
+            ceilingBitmapKeys = ceiling.bitmapKeys ||
+                DEFAULT_STAGE_TILES.ceiling.bitmapKeys,
 
             floorZIndices = floor.zIndices ||
                 DEFAULT_STAGE_TILES.floor.zIndices,
 
-            floorBitmaps = floor.bitmaps ||
-                DEFAULT_STAGE_TILES.floor.bitmaps
+            floorBitmapKeys = floor.bitmapKeys ||
+                DEFAULT_STAGE_TILES.floor.bitmapKeys
 
         return (
             <div className={cx(
@@ -79,7 +79,7 @@ class Scene extends Component {
                 {/* Ceiling tiles. */}
                 <ScenePlane
                     zIndices={ceilingZIndices}
-                    bitmaps={ceilingBitmaps}
+                    bitmapKeys={ceilingBitmapKeys}
                     slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
@@ -90,7 +90,7 @@ class Scene extends Component {
                     isFloor
                     actions={actions}
                     zIndices={floorZIndices}
-                    bitmaps={floorBitmaps}
+                    bitmapKeys={floorBitmapKeys}
                     slantDirection={slantDirection}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
