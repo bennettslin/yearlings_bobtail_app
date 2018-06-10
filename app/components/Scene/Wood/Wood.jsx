@@ -6,14 +6,12 @@ import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 import { STAGE_Y_PERCENTAGE } from '../../../constants/stage'
 
 const propTypes = {
-    isFloor: PropTypes.bool,
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
 }
 
 const Wood = ({
 
-    isFloor,
     stageWidth,
     stageHeight
 
@@ -25,8 +23,7 @@ const Wood = ({
     return (
         <DynamicSvg
             className={cx(
-                'Wood',
-                isFloor ? 'Wood__floor' : 'Wood__ceiling'
+                'Wood'
             )}
             viewBoxWidth={stageWidth}
             viewBoxHeight={woodHeight}

@@ -27,11 +27,13 @@ const ScenePlane = (props) => {
             // This is just for HTML visualisation purposes.
             isFloor ? 'ScenePlane__floor' : 'ScenePlane__ceiling'
         )}>
-            <Wood
-                isFloor={isFloor}
-                stageWidth={stageWidth}
-                stageHeight={stageHeight}
-            />
+            {/* Rendering stage wood here to be in front of sky. */}
+            {isFloor && (
+                <Wood
+                    stageWidth={stageWidth}
+                    stageHeight={stageHeight}
+                />
+            )}
 
             <SceneRow {...props} />
         </div>
