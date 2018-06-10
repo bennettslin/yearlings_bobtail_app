@@ -2932,4 +2932,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Have system to show cube tile pixels.`,
+        workedHours: 10,
+        neededHours: 10
+    }
 ]

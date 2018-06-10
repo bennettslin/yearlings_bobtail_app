@@ -10,8 +10,8 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Have system to show tile pixels.`,
-        workedHours: 2,
+        taskName: `Have system to show front and side pixels.`,
+        workedHours: 0,
         neededHours: 8
     },
 
@@ -22,9 +22,9 @@ module.exports = [
     },
 
     {
-        taskName: `Allow for ceiling tiles to go up all the way for strings.`,
+        taskName: `Show persistent shading on cube faces.`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 2
     },
 
     {

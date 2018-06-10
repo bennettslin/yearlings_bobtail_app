@@ -108,7 +108,7 @@ export const getPolygonPointsForTileFace = ({
     ]
 }
 
-export const getBitmapMatrixForTileFace = (
+const _getBitmapMatrixForFace = (
     bitmap,
     polygonPoints
 ) => {
@@ -183,16 +183,22 @@ export const getBitmapMatrixForTileFace = (
     })
 }
 
+export const getBitmapMatrixForTileFace = (
+    bitmap,
+    polygonPoints
+) => {
+    return _getBitmapMatrixForFace(
+        bitmap,
+        polygonPoints
+    )
+}
+
 export const getBitmapMatrixForFrontFace = (
     bitmap,
     polygonPoints
 ) => {
-    return bitmap.map(bitmapRow => {
-        return bitmapRow.map(fill => {
-            return {
-                fill,
-                polygonPoints
-            }
-        })
-    })
+    return _getBitmapMatrixForFace(
+        bitmap,
+        polygonPoints
+    )
 }

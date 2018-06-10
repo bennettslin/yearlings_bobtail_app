@@ -16,6 +16,7 @@ const
     i = 18,
     j = 19,
     k = 20,
+    n = 40,
     LEFT = 'left',
     RIGHT = 'right',
 
@@ -38,6 +39,14 @@ const
         }
     },
     LOGUE_TILES = {
+        ceiling: {
+            zIndices: [
+                [n]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        },
         floor: {
             zIndices: [
                 [0],
