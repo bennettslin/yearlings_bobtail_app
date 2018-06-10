@@ -1,7 +1,7 @@
 import { getArrayOfLength } from '../../../helpers/generalHelper'
 
 const MATRIX_LENGTH = 8,
-    // MATRIX_INDICES_ARRAY = getArrayOfLength(MATRIX_LENGTH),
+    MATRIX_INDICES_ARRAY = getArrayOfLength({ length: MATRIX_LENGTH }),
     COORDINATES_ARRAY = getArrayOfLength({ length: MATRIX_LENGTH + 1 })
 
 /************
@@ -108,41 +108,62 @@ export const getPolygonPointsForTileFace = ({
     ]
 }
 
-const _getBitmapMatrixForFace = (
+const _getBitmapMatrixForFace = ({
     bitmap,
-    polygonPoints
-) => {
+    polygonPoints,
+    zHeight
+}) => {
 
     const
 
         // This serves as the origin reference point.
         topLeft = polygonPoints[0],
 
-        // Name other corners for clarity.
+        // Name other corners as well for clarity.
         topRight = polygonPoints[1],
         bottomRight = polygonPoints[2],
         bottomLeft = polygonPoints[3],
 
+        isStaticHeight = isNaN(zHeight),
+
+        /**
+         * Determine the number of pixels that make up the height. If it's a
+         * tile face, this value is constant. If it's a front or side face,
+         * then this value is determined by the zHeight.
+         */
+        matrixHeightLength = isStaticHeight ?
+            MATRIX_LENGTH :
+
+            /**
+             * When zHeight is 3, face is close enough to a square. It's not
+             * exact, but this is fine for now.
+             */
+            MATRIX_LENGTH * (zHeight / 3),
+
         // Establish values to increment side points.
-        leftmostXIncrement = (bottomLeft.x - topLeft.x) / MATRIX_LENGTH,
-        leftmostYIncrement = (bottomLeft.y - topLeft.y) / MATRIX_LENGTH,
-        rightmostXIncrement = (bottomRight.x - topRight.x) / MATRIX_LENGTH,
-        rightmostYIncrement = (bottomRight.y - topRight.y) / MATRIX_LENGTH,
+        leftmostXIncrement = (bottomLeft.x - topLeft.x) / matrixHeightLength,
+        leftmostYIncrement = (bottomLeft.y - topLeft.y) / matrixHeightLength,
+        rightmostXIncrement = (bottomRight.x - topRight.x) / matrixHeightLength,
+        rightmostYIncrement = (bottomRight.y - topRight.y) / matrixHeightLength,
+
+        coordinatesHeightArray = isStaticHeight ?
+            COORDINATES_ARRAY :
+            getArrayOfLength({ length: matrixHeightLength + 1 }),
 
         // Establish side points.
-        leftmostPoints = COORDINATES_ARRAY.map(index => ({
-            x: topLeft.x + index * leftmostXIncrement,
-            y: topLeft.y + index * leftmostYIncrement
+        leftmostPoints = coordinatesHeightArray.map(yIndex => ({
+            x: topLeft.x + yIndex * leftmostXIncrement,
+            y: topLeft.y + yIndex * leftmostYIncrement
         })),
-        rightmostPoints = COORDINATES_ARRAY.map(index => ({
-            x: topRight.x + index * rightmostXIncrement,
-            y: topRight.y + index * rightmostYIncrement
+        rightmostPoints = coordinatesHeightArray.map(yIndex => ({
+            x: topRight.x + yIndex * rightmostXIncrement,
+            y: topRight.y + yIndex * rightmostYIncrement
         })),
 
         // Create matrix of all points.
-        coordinatesMatrix = COORDINATES_ARRAY.map(yIndex => {
+        coordinatesMatrix = coordinatesHeightArray.map(yIndex => {
 
-            // Name left point and right point.
+            // Name left point and right points for clarity.
             const
                 leftPoint = leftmostPoints[yIndex],
                 rightPoint = rightmostPoints[yIndex],
@@ -158,22 +179,24 @@ const _getBitmapMatrixForFace = (
                 x: leftPoint.x + xIndex * xIncrement,
                 y: leftPoint.y + xIndex * yIncrement
             }))
-        })
+        }),
 
-    /**
-     * We want to return a matrix that has the same dimensions as the bitmap.
-     * So we will just map over the bitmap.
-     */
-    return bitmap.map((bitmapRow, yIndex) => {
+        bitmapHeightArray = isStaticHeight ?
+            MATRIX_INDICES_ARRAY :
+            getArrayOfLength({ length: matrixHeightLength })
 
-        return bitmapRow.map((fill, xIndex) => {
+    return bitmapHeightArray.map(yIndex => {
 
-            const polygonPoints = [
-                coordinatesMatrix[yIndex][xIndex],
-                coordinatesMatrix[yIndex][xIndex + 1],
-                coordinatesMatrix[yIndex + 1][xIndex + 1],
-                coordinatesMatrix[yIndex + 1][xIndex]
-            ]
+        return MATRIX_INDICES_ARRAY.map(xIndex => {
+
+            const fill = bitmap[yIndex % MATRIX_LENGTH][xIndex],
+
+                polygonPoints = [
+                    coordinatesMatrix[yIndex][xIndex],
+                    coordinatesMatrix[yIndex][xIndex + 1],
+                    coordinatesMatrix[yIndex + 1][xIndex + 1],
+                    coordinatesMatrix[yIndex + 1][xIndex]
+                ]
 
             return {
                 fill,
@@ -183,22 +206,24 @@ const _getBitmapMatrixForFace = (
     })
 }
 
-export const getBitmapMatrixForTileFace = (
+export const getBitmapMatrixForTileFace = ({
     bitmap,
     polygonPoints
-) => {
-    return _getBitmapMatrixForFace(
+}) => {
+    return _getBitmapMatrixForFace({
         bitmap,
         polygonPoints
-    )
+    })
 }
 
-export const getBitmapMatrixForFrontFace = (
+export const getBitmapMatrixForDynamicFace = ({
     bitmap,
-    polygonPoints
-) => {
-    return _getBitmapMatrixForFace(
+    polygonPoints,
+    zHeight
+}) => {
+    return _getBitmapMatrixForFace({
         bitmap,
-        polygonPoints
-    )
+        polygonPoints,
+        zHeight
+    })
 }

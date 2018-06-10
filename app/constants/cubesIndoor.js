@@ -336,6 +336,18 @@ const
             ]
         }
     },
+    WALGREENS_TILES = {
+        floor: {
+            zIndices: [
+                [h],
+                [5],
+                [0]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        }
+    },
     STEAM_TUNNEL_TILES = {
         floor: {
             zIndices: [
@@ -513,6 +525,7 @@ module.exports = {
     BENNETT_APARTMENT_BED_TILES,
     WAITING_ROOM_TILES,
     SITA_APARTMENT_BED_TILES,
+    WALGREENS_TILES,
     STEAM_TUNNEL_TILES,
     HOWIE_ATTIC_TILES,
     SHOW_STAGE_SIDE_1_TILES,

@@ -8,7 +8,7 @@ import { getPolygonPointsForTileFace,
          getPolygonPointsString,
 
          getBitmapMatrixForTileFace,
-         getBitmapMatrixForFrontFace } from './facesHelper'
+         getBitmapMatrixForDynamicFace } from './facesHelper'
 
 import { BITMAPS } from '../../../constants/bitmaps'
 
@@ -18,6 +18,10 @@ const propTypes = {
     face: PropTypes.string.isRequired,
     bitmapKey: PropTypes.string.isRequired,
     slantDirection: PropTypes.string,
+
+    // Needed to render faces of dynamic height.
+    zIndex: PropTypes.number,
+
     cubeCorners: PropTypes.shape({
         tile: PropTypes.shape({
             left: PropTypes.shape({
@@ -75,47 +79,52 @@ const CubeFace = ({
     face,
     bitmapKey,
     slantDirection,
+    zIndex,
     cubeCorners,
     stageWidth,
     stageHeight
 
 }) => {
 
-    const bitmap = BITMAPS[bitmapKey]
+    const bitmap = BITMAPS[bitmapKey],
+
+        // Determine height of dynamic faces.
+        zHeight = isFloor ? zIndex : (20 - zIndex)
 
     let faceString = face,
-        facePolygonPoints,
+        polygonPoints,
         bitmapMatrix
 
     if (face === 'tile') {
         faceString = isFloor ? 'floorTile' : 'ceilingTile'
 
-        facePolygonPoints = getPolygonPointsForTileFace({
+        polygonPoints = getPolygonPointsForTileFace({
             cubeCorners,
             stageWidth,
             stageHeight
         })
 
-        bitmapMatrix = getBitmapMatrixForTileFace(
+        bitmapMatrix = getBitmapMatrixForTileFace({
             bitmap,
-            facePolygonPoints
-        )
+            polygonPoints
+        })
 
     } else if (face === 'front') {
-        facePolygonPoints = getPolygonPointsForFrontFace({
+        polygonPoints = getPolygonPointsForFrontFace({
             slantDirection,
             cubeCorners,
             stageWidth,
             stageHeight
         })
 
-        bitmapMatrix = getBitmapMatrixForFrontFace(
+        bitmapMatrix = getBitmapMatrixForDynamicFace({
             bitmap,
-            facePolygonPoints
-        )
+            polygonPoints,
+            zHeight
+        })
 
     } else if (face === 'side') {
-        facePolygonPoints = getPolygonPointsForSideFace({
+        polygonPoints = getPolygonPointsForSideFace({
             isLeft,
             slantDirection,
             cubeCorners,
@@ -123,10 +132,11 @@ const CubeFace = ({
             stageHeight
         })
 
-        bitmapMatrix = getBitmapMatrixForFrontFace(
+        bitmapMatrix = getBitmapMatrixForDynamicFace({
             bitmap,
-            facePolygonPoints
-        )
+            polygonPoints,
+            zHeight
+        })
     }
 
     return (
@@ -136,11 +146,12 @@ const CubeFace = ({
         )}>
             {/* Side will not render bitmap, at least for now. */}
             {bitmapMatrix.map((matrixRow, yIndex) => {
+
                 return matrixRow.map((matrixObject, xIndex) => {
 
                     const uniqueId = `x${xIndex}y${yIndex}`,
                         { fill,
-                            polygonPoints } = matrixObject,
+                          polygonPoints: pixelPolygonPoints } = matrixObject,
 
                         fillString = `#${fill}`
 
@@ -152,16 +163,19 @@ const CubeFace = ({
                                 `Pixel__${uniqueId}`
                             )}
                             fill={fillString}
-                            points={getPolygonPointsString(polygonPoints)}
+                            points={getPolygonPointsString(
+                                pixelPolygonPoints
+                            )}
                         />
                     )
                 })
             })}
+
             <polygon
                 className={cx(
                     'CubeFace__stroke'
                 )}
-                points={getPolygonPointsString(facePolygonPoints)}
+                points={getPolygonPointsString(polygonPoints)}
             />
         </g>
     )
