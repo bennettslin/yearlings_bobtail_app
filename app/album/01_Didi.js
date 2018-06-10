@@ -28,7 +28,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
-            actions: {
+            presences: {
                 yIndex1: [
                     {
                         name: 'sample cutout 1',

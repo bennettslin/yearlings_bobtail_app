@@ -2,15 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DynamicSvg from '../../DynamicSvg/DynamicSvg'
-import { STAGE_Y_PERCENTAGE } from '../../../constants/stage'
+import DynamicSvg from '../DynamicSvg/DynamicSvg'
+import { STAGE_Y_PERCENTAGE } from '../../constants/stage'
 
 const propTypes = {
     stageWidth: PropTypes.number.isRequired,
     stageHeight: PropTypes.number.isRequired
 }
 
-const Wood = ({
+const SceneWood = ({
 
     stageWidth,
     stageHeight
@@ -23,7 +23,7 @@ const Wood = ({
     return (
         <DynamicSvg
             className={cx(
-                'Wood'
+                'SceneWood'
             )}
             viewBoxWidth={stageWidth}
             viewBoxHeight={woodHeight}
@@ -38,6 +38,6 @@ const Wood = ({
     )
 }
 
-Wood.propTypes = propTypes
+SceneWood.propTypes = propTypes
 
-export default Wood
+export default SceneWood

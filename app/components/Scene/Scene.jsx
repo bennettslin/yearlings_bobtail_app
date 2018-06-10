@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import ScenePlane from './ScenePlane'
+import SceneAction from './SceneAction'
 import SceneSky from './SceneSky'
+import SceneWood from './SceneWood'
 
 import { getSceneObject } from '../../helpers/dataHelper'
-import { DEFAULT_STAGE_TILES } from '../../constants/cubesOther'
 
 const mapStateToProps = ({
     renderReadySongIndex,
@@ -42,29 +42,7 @@ class Scene extends Component {
                 renderReadySongIndex, currentSceneIndex
             ),
 
-            { actions, sky, tiles } = sceneObject,
-
-            // Separate ceiling and floor config values.
-
-            /**
-             * FIXME: These safety checks should no longer be needed once all
-             * tiles and bitmapKeys for all scenes are established.
-             */
-            { ceiling = DEFAULT_STAGE_TILES.ceiling,
-              floor = DEFAULT_STAGE_TILES.floor,
-              slantDirection } = tiles,
-
-            ceilingZIndices = ceiling.zIndices ||
-                DEFAULT_STAGE_TILES.ceiling.zIndices,
-
-            ceilingBitmapKeys = ceiling.bitmapKeys ||
-                DEFAULT_STAGE_TILES.ceiling.bitmapKeys,
-
-            floorZIndices = floor.zIndices ||
-                DEFAULT_STAGE_TILES.floor.zIndices,
-
-            floorBitmapKeys = floor.bitmapKeys ||
-                DEFAULT_STAGE_TILES.floor.bitmapKeys
+            { presences, sky, tiles } = sceneObject
 
         return (
             <div className={cx(
@@ -76,22 +54,15 @@ class Scene extends Component {
                     stageHeight={stageHeight}
                 />
 
-                {/* Ceiling tiles. */}
-                <ScenePlane
-                    zIndices={ceilingZIndices}
-                    bitmapKeys={ceilingBitmapKeys}
-                    slantDirection={slantDirection}
+                {/* Wood is in front of sky, but behind presences and cubes. */}
+                <SceneWood
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />
 
-                {/* Floor tiles. */}
-                <ScenePlane
-                    isFloor
-                    actions={actions}
-                    zIndices={floorZIndices}
-                    bitmapKeys={floorBitmapKeys}
-                    slantDirection={slantDirection}
+                <SceneAction
+                    presences={presences}
+                    tiles={tiles}
                     stageWidth={stageWidth}
                     stageHeight={stageHeight}
                 />

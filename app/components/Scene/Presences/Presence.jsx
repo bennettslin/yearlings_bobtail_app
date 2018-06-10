@@ -6,17 +6,17 @@ import cx from 'classnames'
 
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 
-import { getTileCentreForAction } from '../planesHelper'
+import { getTileCentreForAction } from '../sceneHelper'
 
 import { CUBE_ROWS_LENGTH } from '../../../constants/stage'
 
 const defaultProps = {
-    action: []
+    presence: []
 }
 
-const actionPropTypes = {
+const propTypes = {
     yIndex: PropTypes.number.isRequired,
-    action: PropTypes.array.isRequired,
+    presence: PropTypes.array.isRequired,
     zIndices: PropTypes.arrayOf(
         PropTypes.arrayOf(
             PropTypes.number
@@ -27,12 +27,12 @@ const actionPropTypes = {
     stageHeight: PropTypes.number.isRequired
 }
 
-class Action extends Component {
+class Presence extends Component {
 
     render() {
 
         const { yIndex,
-                action,
+                presence,
                 zIndices,
                 slantDirection,
                 stageWidth,
@@ -41,30 +41,30 @@ class Action extends Component {
         return (
             <DynamicSvg
                 className={cx(
-                    'Action',
-                    `Action__row__${yIndex}`,
+                    'Presence',
+                    `Presence__row__${yIndex}`,
                     'absoluteFullContainer'
                 )}
                 viewBoxWidth={stageWidth}
                 viewBoxHeight={stageHeight}
             >
-                {action.map((actionEntry, index) => {
+                {presence.map((presenceEntry, index) => {
 
                     const { name,
                             type,
                             xIndex,
                             width,
-                            height } = actionEntry,
+                            height } = presenceEntry,
 
                         invertedYIndex = CUBE_ROWS_LENGTH - yIndex - 1,
 
                         /**
                          * Either indices or raw coordinates are given. If it's
-                         * indices, then only xIndex is provided, since action
-                         * already knows its yIndex.
+                         * indices, then only the xIndex is provided, since
+                         * presence already knows its yIndex.
                          */
                         coordinates = isNaN(xIndex) ?
-                            actionEntry : getTileCentreForAction({
+                            presenceEntry : getTileCentreForAction({
                                 xIndex,
                                 yIndex: invertedYIndex,
                                 zIndices,
@@ -86,7 +86,7 @@ class Action extends Component {
                         >
                             <rect
                                 className={cx(
-                                    `ActionEntry__${type}`
+                                    `PresenceEntry__${type}`
                                 )}
                                 x={`${adjustedX}%`}
                                 y={`${adjustedY}%`}
@@ -94,7 +94,7 @@ class Action extends Component {
                                 height={`${height}%`}
                             />
                             <text
-                                className="ActionTemporaryText"
+                                className="PresenceTemporaryText"
                                 x={`${adjustedX}%`}
                                 y={`${adjustedY}%`}
                             >
@@ -108,7 +108,7 @@ class Action extends Component {
     }
 }
 
-Action.defaultProps = defaultProps
-Action.propTypes = actionPropTypes
+Presence.defaultProps = defaultProps
+Presence.propTypes = propTypes
 
-export default Action
+export default Presence

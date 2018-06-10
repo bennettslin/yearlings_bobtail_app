@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import CubeFace from './CubeFace'
 
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
-import { getStageCubeCornerPercentages } from '../planesHelper'
+import { getStageCubeCornerPercentages } from '../sceneHelper'
 
 import { CUBE_COLUMNS_LENGTH } from '../../../constants/stage'
 
