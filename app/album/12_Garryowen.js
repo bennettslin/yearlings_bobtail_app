@@ -13,9 +13,9 @@ import { REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { SITA_APARTMENT_COUCH_TILES,
-         VOLKSWAGEN_TILES,
          BENNETT_BASEMENT_TILES,
-         SHOW_STAGE_FRONT_TILES } from '../constants/tiles'
+         SHOW_STAGE_FRONT_TILES } from '../constants/cubesIndoor'
+import { VOLKSWAGEN_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {

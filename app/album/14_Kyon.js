@@ -11,7 +11,7 @@ import { VERSES,
          REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { SITA_APARTMENT_COUCH_TILES } from '../constants/tiles'
+import { SITA_APARTMENT_COUCH_TILES } from '../constants/cubesIndoor'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {

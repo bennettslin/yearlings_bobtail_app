@@ -17,9 +17,9 @@ import { PRETEEN_BENNETT_ROOM_TILES,
          PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
          PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES,
          PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES,
-         JUNIOR_HIGH_LOCKERS_TILES,
-         JUNIOR_HIGH_QUAD_TILES,
-         JUNIOR_HIGH_HALLWAY_TILES } from '../constants/tiles'
+         JUNIOR_HIGH_HALLWAY_TILES } from '../constants/cubesIndoor'
+import { JUNIOR_HIGH_LOCKERS_TILES,
+         JUNIOR_HIGH_QUAD_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_WINTER } from '../constants/scene'
 /**

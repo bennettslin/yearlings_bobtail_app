@@ -12,11 +12,11 @@ import { VERSES,
          SOLO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { SHOW_STAGE_FRONT_FAR_TILES,
+         SITA_APARTMENT_BED_TILES } from '../constants/cubesIndoor'
 import { PARK_TILES,
-         SHOW_STAGE_FRONT_FAR_TILES,
          ALLEY_TILES,
-         SITA_APARTMENT_BED_TILES,
-         DEMONSTRATION_TILES } from '../constants/tiles'
+         DEMONSTRATION_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_WINTER } from '../constants/scene'
 module.exports = {

@@ -8,11 +8,11 @@ import { VERSES,
          CHORUS,
          POSTCHORUS,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { MUSEUM_TILES,
+         BACKSTAGE_TILES } from '../constants/cubesIndoor'
 import { SITA_APARTMENT_GATE_1_TILES,
          SITA_APARTMENT_GATE_2_TILES,
-         MUSEUM_TILES,
-         BACKSTAGE_TILES,
-         GO_KART_TILES } from '../constants/tiles'
+         GO_KART_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {

@@ -15,11 +15,11 @@ import { LEFT,
          SOLO,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { PRETEEN_BENNETT_ROOM_TILES } from '../constants/cubesIndoor'
 import { FREEWAY_TILES,
          PORCH_TILES,
-         PRETEEN_BENNETT_ROOM_TILES,
          CHILDHOOD_NEIGHBOURHOOD_TILES,
-         CHANGELING_CAVE_TILES } from '../constants/tiles'
+         CHANGELING_CAVE_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_SUMMER } from '../constants/scene'
 

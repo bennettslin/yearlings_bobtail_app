@@ -9,11 +9,11 @@ import { VERSES,
          CHORUS,
          BRIDGE,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { BENNETT_APARTMENT_COUCH_THOUGHT_TILES } from '../constants/cubesIndoor'
 import { BENNETT_APARTMENT_COURTYARD_TILES,
-         BENNETT_APARTMENT_COUCH_THOUGHT_TILES,
          CATHOLIC_CHURCH_TILES,
          BERKELEY_CAMPUS_1_TILES,
-         BERKELEY_CAMPUS_2_TILES } from '../constants/tiles'
+         BERKELEY_CAMPUS_2_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {

@@ -15,10 +15,10 @@ import { VERSES,
          RESPONSE,
          BACKING,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { BENNETT_BASEMENT_TILES,
-         SNOW_GLOBES_1_TILES,
+import { BENNETT_BASEMENT_TILES } from '../constants/cubesIndoor'
+import { SNOW_GLOBES_1_TILES,
          SNOW_GLOBES_2_TILES,
-         SNOW_GLOBES_3_TILES } from '../constants/tiles'
+         SNOW_GLOBES_3_TILES } from '../constants/cubesOther'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {

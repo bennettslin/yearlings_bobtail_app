@@ -14,9 +14,9 @@ import { VERSES,
          REFRAIN,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { CHILDHOOD_BATHROOM_TILES } from '../constants/cubesIndoor'
 import { CHILDHOOD_NEIGHBOURHOOD_TILES,
-         PLAYGROUND_TILES,
-         CHILDHOOD_BATHROOM_TILES } from '../constants/tiles'
+         PLAYGROUND_TILES } from '../constants/cubesOutdoor'
 import { CUTOUT,
          FIXTURE,
          ACTOR,

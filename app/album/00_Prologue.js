@@ -1,4 +1,4 @@
-import { LOGUE_TILES } from '../constants/tiles'
+import { LOGUE_TILES } from '../constants/cubesOther'
 import { SKY_NO_TIME,
          SKY_NO_SEASON } from '../constants/scene'
 module.exports = {

@@ -13,12 +13,12 @@ import { REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { DISHROOM_TILES,
-         SITA_APARTMENT_GATE_1_TILES,
-         SITA_APARTMENT_GATE_2_TILES,
-         BENNETT_APARTMENT_GATE_TILES,
          BENNETT_APARTMENT_BED_TILES,
          WAITING_ROOM_TILES,
-         SITA_APARTMENT_BED_TILES } from '../constants/tiles'
+         SITA_APARTMENT_BED_TILES } from '../constants/cubesIndoor'
+import { SITA_APARTMENT_GATE_1_TILES,
+         SITA_APARTMENT_GATE_2_TILES,
+         BENNETT_APARTMENT_GATE_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_AUTUMN,
          SKY_WINTER } from '../constants/scene'

@@ -9,7 +9,7 @@ import ScenePlane from './ScenePlane'
 import SceneSky from './SceneSky'
 
 import { getSceneObject } from '../../helpers/dataHelper'
-import { DEFAULT_STAGE_TILES } from '../../constants/tiles'
+import { DEFAULT_STAGE_TILES } from '../../constants/cubesOther'
 
 const mapStateToProps = ({
     renderReadySongIndex,

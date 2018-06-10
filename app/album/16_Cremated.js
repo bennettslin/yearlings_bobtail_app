@@ -12,7 +12,7 @@ import { VERSES,
 import { CREMATED_CLIFF_TILES,
          CREMATED_CLIFF_CONVERTIBLE_TILES,
          CREMATED_DEATHBED_TILES,
-         CREMATED_DEATHBED_TENNIS_TILES } from '../constants/tiles'
+         CREMATED_DEATHBED_TENNIS_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {

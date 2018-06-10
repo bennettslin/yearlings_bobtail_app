@@ -14,8 +14,8 @@ import { VERSES,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { SHOW_STAGE_SIDE_1_TILES,
          SHOW_STAGE_SIDE_2_TILES,
-         SHOW_UNLOADING_TILES,
-         SITA_APARTMENT_BED_TILES } from '../constants/tiles'
+         SITA_APARTMENT_BED_TILES } from '../constants/cubesIndoor'
+import { SHOW_UNLOADING_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {

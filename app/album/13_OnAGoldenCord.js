@@ -12,11 +12,11 @@ import { VERSES,
          INTRO,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
+import { SITA_APARTMENT_COUCH_THOUGHT_TILES } from '../constants/cubesIndoor'
 import { OAKLAND_STREET_SIDE_TILES,
-         SITA_APARTMENT_COUCH_THOUGHT_TILES,
          OAKLAND_STREET_FRONT_1_TILES,
          OAKLAND_STREET_FRONT_2_TILES,
-         OAKLAND_STREET_FRONT_3_TILES } from '../constants/tiles'
+         OAKLAND_STREET_FRONT_3_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {

@@ -16,12 +16,12 @@ import { OVERLAP,
          RESPONSE,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { UCLA_CAMPUS_TILES,
-         WALGREENS_TILES,
+import { WALGREENS_TILES,
          STEAM_TUNNEL_TILES,
+         HOWIE_ATTIC_TILES } from '../constants/cubesIndoor'
+import { UCLA_CAMPUS_TILES,
          CEMETERY_TILES,
-         STATION_WAGON_TILES,
-         HOWIE_ATTIC_TILES } from '../constants/tiles'
+         STATION_WAGON_TILES } from '../constants/cubesOutdoor'
 import { SKY_NO_TIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {
