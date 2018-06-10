@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 import CubeFace from './CubeFace'
 
@@ -59,7 +60,11 @@ class Cube extends Component {
             isLeft = xIndex < CUBE_X_AXIS_LENGTH / 2;
 
         return (
-            <g className="Cube">
+            <g
+                className={cx(
+                    `Cube__x${xIndex}`
+                )}
+            >
 
                 <CubeFace {...other}
                     face="tile"

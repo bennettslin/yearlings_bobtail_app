@@ -135,10 +135,10 @@ const CubeFace = ({
             `CubeFace__${faceString}`
         )}>
             {/* Side will not render bitmap, at least for now. */}
-            {bitmapMatrix.map((matrixRow, rowIndex) => {
-                return matrixRow.map((matrixObject, objectIndex) => {
+            {bitmapMatrix.map((matrixRow, yIndex) => {
+                return matrixRow.map((matrixObject, xIndex) => {
 
-                    const uniqueId = `${rowIndex}_${objectIndex}`,
+                    const uniqueId = `x${xIndex}y${yIndex}`,
                         { fill,
                             polygonPoints } = matrixObject,
 
@@ -148,8 +148,8 @@ const CubeFace = ({
                         <polygon
                             key={uniqueId}
                             className={cx(
-                                'CubePixel',
-                                `CubePixel__${uniqueId}`
+                                'Pixel',
+                                `Pixel__${uniqueId}`
                             )}
                             fill={fillString}
                             points={getPolygonPointsString(polygonPoints)}

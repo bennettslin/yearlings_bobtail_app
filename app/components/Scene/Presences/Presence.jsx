@@ -41,8 +41,7 @@ class Presence extends Component {
         return (
             <DynamicSvg
                 className={cx(
-                    'Presence',
-                    `Presence__row__${yIndex}`,
+                    `Presence__y${yIndex}`,
                     'absoluteFullContainer'
                 )}
                 viewBoxWidth={stageWidth}
