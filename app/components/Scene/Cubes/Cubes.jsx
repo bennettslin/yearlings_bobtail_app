@@ -7,11 +7,11 @@ import cx from 'classnames'
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 import Cube from './Cube'
 
-import { DEFAULT_COLUMN_INDICES,
-         SLANTED_LEFT_COLUMN_INDICES,
-         SLANTED_RIGHT_COLUMN_INDICES } from '../constants'
+import { DEFAULT_X_AXIS_INDICES,
+         SLANTED_LEFT_X_AXIS_INDICES,
+         SLANTED_RIGHT_X_AXIS_INDICES } from '../constants'
 
-import { CUBE_ROWS_LENGTH } from '../../../constants/stage'
+import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
 import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
 
@@ -49,22 +49,22 @@ const Cubes = ({
      * Invert the rows, since top row in array should be top row
      * shown in floor field.
      */
-    const invertedYIndex = CUBE_ROWS_LENGTH - yIndex - 1
+    const invertedYIndex = CUBE_Y_AXIS_LENGTH - yIndex - 1
 
-    let columnIndicesArray = DEFAULT_COLUMN_INDICES
+    let columnIndicesArray = DEFAULT_X_AXIS_INDICES
 
     if (slantDirection === 'left') {
-        columnIndicesArray = SLANTED_LEFT_COLUMN_INDICES;
+        columnIndicesArray = SLANTED_LEFT_X_AXIS_INDICES;
 
     } else if (slantDirection === 'right') {
-        columnIndicesArray = SLANTED_RIGHT_COLUMN_INDICES
+        columnIndicesArray = SLANTED_RIGHT_X_AXIS_INDICES
     }
 
     return (
         <DynamicSvg
             className={cx(
                 isFloor ? 'FloorCubes' : 'CeilingCubes',
-                `Cubes__row__${yIndex}`,
+                `Cubes__row${yIndex}`,
                 'absoluteFullContainer'
             )}
             viewBoxWidth={stageWidth}

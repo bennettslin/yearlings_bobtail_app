@@ -8,7 +8,7 @@ import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 
 import { getTileCentreForAction } from '../sceneHelper'
 
-import { CUBE_ROWS_LENGTH } from '../../../constants/stage'
+import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
 const defaultProps = {
     presence: []
@@ -56,7 +56,7 @@ class Presence extends Component {
                             width,
                             height } = presenceEntry,
 
-                        invertedYIndex = CUBE_ROWS_LENGTH - yIndex - 1,
+                        invertedYIndex = CUBE_Y_AXIS_LENGTH - yIndex - 1,
 
                         /**
                          * Either indices or raw coordinates are given. If it's

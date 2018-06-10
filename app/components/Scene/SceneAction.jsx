@@ -9,7 +9,7 @@ import Presence from './Presences/Presence';
 
 import { DEFAULT_STAGE_TILES } from '../../constants/cubesOther'
 
-import { ROW_INDICES_ARRAY } from './constants'
+import { Y_INDICES_ARRAY } from './constants'
 
 const propTypes = {
     presences: PropTypes.object,
@@ -62,7 +62,7 @@ const SceneAction = ({
                 'absoluteFullContainer'
             )}
         >
-            {ROW_INDICES_ARRAY.map(yIndex => {
+            {Y_INDICES_ARRAY.map(yIndex => {
 
                 const presence = presences && presences[`yIndex${yIndex}`]
 

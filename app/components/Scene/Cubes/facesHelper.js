@@ -140,23 +140,23 @@ const _getBitmapMatrixForFace = (
         })),
 
         // Create matrix of all points.
-        coordinatesMatrix = COORDINATES_ARRAY.map(rowIndex => {
+        coordinatesMatrix = COORDINATES_ARRAY.map(yIndex => {
 
             // Name left point and right point.
             const
-                leftPoint = leftmostPoints[rowIndex],
-                rightPoint = rightmostPoints[rowIndex],
+                leftPoint = leftmostPoints[yIndex],
+                rightPoint = rightmostPoints[yIndex],
 
                 xIncrement = (rightPoint.x - leftPoint.x) / MATRIX_LENGTH,
                 yIncrement = (rightPoint.y - leftPoint.y) / MATRIX_LENGTH
 
-            return COORDINATES_ARRAY.map(columnIndex => ({
+            return COORDINATES_ARRAY.map(xIndex => ({
                 /**
                  * Since these values are relative to the origin, we'll add the
                  * origin back here.
                  */
-                x: leftPoint.x + columnIndex * xIncrement,
-                y: leftPoint.y + columnIndex * yIncrement
+                x: leftPoint.x + xIndex * xIncrement,
+                y: leftPoint.y + xIndex * yIncrement
             }))
         })
 
@@ -164,15 +164,15 @@ const _getBitmapMatrixForFace = (
      * We want to return a matrix that has the same dimensions as the bitmap.
      * So we will just map over the bitmap.
      */
-    return bitmap.map((bitmapRow, rowIndex) => {
+    return bitmap.map((bitmapRow, yIndex) => {
 
-        return bitmapRow.map((fill, columnIndex) => {
+        return bitmapRow.map((fill, xIndex) => {
 
             const polygonPoints = [
-                coordinatesMatrix[rowIndex][columnIndex],
-                coordinatesMatrix[rowIndex][columnIndex + 1],
-                coordinatesMatrix[rowIndex + 1][columnIndex + 1],
-                coordinatesMatrix[rowIndex + 1][columnIndex]
+                coordinatesMatrix[yIndex][xIndex],
+                coordinatesMatrix[yIndex][xIndex + 1],
+                coordinatesMatrix[yIndex + 1][xIndex + 1],
+                coordinatesMatrix[yIndex + 1][xIndex]
             ]
 
             return {

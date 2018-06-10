@@ -8,7 +8,7 @@ import CubeFace from './CubeFace'
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../sceneHelper'
 
-import { CUBE_COLUMNS_LENGTH } from '../../../constants/stage'
+import { CUBE_X_AXIS_LENGTH } from '../../../constants/stage'
 
 class Cube extends Component {
 
@@ -56,7 +56,7 @@ class Cube extends Component {
                 xIndex, yIndex, zIndex, isFloor, slantDirection
             }),
 
-            isLeft = xIndex < CUBE_COLUMNS_LENGTH / 2;
+            isLeft = xIndex < CUBE_X_AXIS_LENGTH / 2;
 
         return (
             <g className="Cube">

@@ -1,17 +1,17 @@
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
-import { CUBE_ROWS_LENGTH,
-         CUBE_COLUMNS_LENGTH } from '../../constants/stage'
+import { CUBE_Y_AXIS_LENGTH,
+         CUBE_X_AXIS_LENGTH } from '../../constants/stage'
 
-const ROW_INDICES_ARRAY = getArrayOfLength({
-    length: CUBE_ROWS_LENGTH
+const Y_INDICES_ARRAY = getArrayOfLength({
+    length: CUBE_Y_AXIS_LENGTH
 }),
 
-SLANTED_RIGHT_COLUMN_INDICES = getArrayOfLength({
-    length: CUBE_COLUMNS_LENGTH
+SLANTED_RIGHT_X_AXIS_INDICES = getArrayOfLength({
+    length: CUBE_X_AXIS_LENGTH
 }),
 
-SLANTED_LEFT_COLUMN_INDICES = SLANTED_RIGHT_COLUMN_INDICES
+SLANTED_LEFT_X_AXIS_INDICES = SLANTED_RIGHT_X_AXIS_INDICES
     .slice().reverse(),
 
 /**
@@ -21,17 +21,17 @@ SLANTED_LEFT_COLUMN_INDICES = SLANTED_RIGHT_COLUMN_INDICES
  *
  * If length is 12, should return [0, 11, 1, 10, 2, 9, 3, 8, 4, 7, 5, 6].
  */
-DEFAULT_COLUMN_INDICES = SLANTED_RIGHT_COLUMN_INDICES.map(columnIndex => {
+DEFAULT_X_AXIS_INDICES = SLANTED_RIGHT_X_AXIS_INDICES.map(columnIndex => {
 
     const ceilValue = Math.ceil(columnIndex / 2)
 
     return columnIndex % 2 ?
-        CUBE_COLUMNS_LENGTH - ceilValue : ceilValue
+        CUBE_X_AXIS_LENGTH - ceilValue : ceilValue
 })
 
 module.exports = {
-    ROW_INDICES_ARRAY,
-    SLANTED_LEFT_COLUMN_INDICES,
-    SLANTED_RIGHT_COLUMN_INDICES,
-    DEFAULT_COLUMN_INDICES
+    Y_INDICES_ARRAY,
+    SLANTED_LEFT_X_AXIS_INDICES,
+    SLANTED_RIGHT_X_AXIS_INDICES,
+    DEFAULT_X_AXIS_INDICES
 }

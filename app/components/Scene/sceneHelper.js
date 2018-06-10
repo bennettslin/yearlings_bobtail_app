@@ -1,9 +1,9 @@
 import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
-    CUBE_COLUMNS_LENGTH,
+    CUBE_X_AXIS_LENGTH,
     SLANTED_TILE_Y_PERCENTAGES,
-    SLANTED_TILE_COLUMNS_LENGTH
+    SLANTED_TILE_X_UNITS_LENGTH
 } from '../../constants/stage'
 
 import {
@@ -27,9 +27,9 @@ const _getXPercentage = (
 ) => {
 
     const
-        // Use columns length value based on default or slanted arrangement.
-        tileColumnsLength = isSlanted ?
-            SLANTED_TILE_COLUMNS_LENGTH : CUBE_COLUMNS_LENGTH,
+        // Use x-axis length value based on default or slanted arrangement.
+        xAxisLength = isSlanted ?
+            SLANTED_TILE_X_UNITS_LENGTH : CUBE_X_AXIS_LENGTH,
 
         // Get x-coordinate percentage at zIndex 0.
         baseYPercentage = _getYPercentage(
@@ -42,7 +42,7 @@ const _getXPercentage = (
 
         rawXPercentage =
             (100 - tilesWidthPercentage) / 2
-            + xCornerIndex * tilesWidthPercentage / tileColumnsLength
+            + xCornerIndex * tilesWidthPercentage / xAxisLength
 
     return roundPercentage(100 - rawXPercentage)
 }
