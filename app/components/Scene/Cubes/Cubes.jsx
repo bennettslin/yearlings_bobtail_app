@@ -63,7 +63,7 @@ const Cubes = ({
     return (
         <DynamicSvg
             className={cx(
-                'Cubes',
+                isFloor ? 'FloorCubes' : 'CeilingCubes',
                 `Cubes__row__${yIndex}`,
                 'absoluteFullContainer'
             )}
@@ -71,6 +71,7 @@ const Cubes = ({
             viewBoxHeight={stageHeight}
         >
             {columnIndicesArray.map(xIndex => {
+
                 const
                     zIndex = getValueInAbridgedMatrix(
                         zIndices, xIndex, yIndex

@@ -115,6 +115,10 @@ const CubeFace = ({
             stageWidth,
             stageHeight
         })
+        bitmapMatrix = getBitmapMatrixForFrontFace(
+            bitmap,
+            facePolygonPoints
+        )
     }
 
     return (
@@ -123,30 +127,28 @@ const CubeFace = ({
             `CubeFace__${face}`
         )}>
             {/* Side will not render bitmap, at least for now. */}
-            {face !== 'side' && (
-                bitmapMatrix.map((matrixRow, rowIndex) => {
-                    return matrixRow.map((matrixObject, objectIndex) => {
+            {bitmapMatrix.map((matrixRow, rowIndex) => {
+                return matrixRow.map((matrixObject, objectIndex) => {
 
-                        const uniqueId = `${rowIndex}_${objectIndex}`,
-                            { fill,
-                              polygonPoints } = matrixObject,
+                    const uniqueId = `${rowIndex}_${objectIndex}`,
+                        { fill,
+                            polygonPoints } = matrixObject,
 
-                            fillString = `#${fill}`
+                        fillString = `#${fill}`
 
-                        return (
-                            <polygon
-                                key={uniqueId}
-                                className={cx(
-                                    'CubePixel',
-                                    `CubePixel__${uniqueId}`
-                                )}
-                                fill={fillString}
-                                points={getPolygonPointsString(polygonPoints)}
-                            />
-                        )
-                    })
+                    return (
+                        <polygon
+                            key={uniqueId}
+                            className={cx(
+                                'CubePixel',
+                                `CubePixel__${uniqueId}`
+                            )}
+                            fill={fillString}
+                            points={getPolygonPointsString(polygonPoints)}
+                        />
+                    )
                 })
-            )}
+            })}
             <polygon
                 className={cx(
                     'CubeFace__stroke'
