@@ -91,10 +91,10 @@ export const getStageCoordinates = ({
     }
 
     return {
-        top,
-        left,
-        width,
-        height
+        top: Number(top.toFixed(2)),
+        left: Number(left.toFixed(2)),
+        width: Number(width.toFixed(2)),
+        height: Number(height.toFixed(2))
     }
 }
 

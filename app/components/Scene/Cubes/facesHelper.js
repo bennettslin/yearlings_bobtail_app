@@ -10,7 +10,7 @@ const MATRIX_LENGTH = 8,
 
 export const getPolygonPointsString = (polygonPointsArray) => {
     return polygonPointsArray.map(({ x, y }) => {
-        return `${x},${y}`
+        return `${x.toFixed(2)},${y.toFixed(2)}`
     }).join(' ')
 }
 
@@ -108,7 +108,7 @@ export const getPolygonPointsForTileFace = ({
     ]
 }
 
-const _getBitmapMatrixForFace = ({
+export const getBitmapMatrixForFace = ({
     bitmap,
     polygonPoints,
     zHeight
@@ -203,27 +203,5 @@ const _getBitmapMatrixForFace = ({
                 polygonPoints
             }
         })
-    })
-}
-
-export const getBitmapMatrixForTileFace = ({
-    bitmap,
-    polygonPoints
-}) => {
-    return _getBitmapMatrixForFace({
-        bitmap,
-        polygonPoints
-    })
-}
-
-export const getBitmapMatrixForDynamicFace = ({
-    bitmap,
-    polygonPoints,
-    zHeight
-}) => {
-    return _getBitmapMatrixForFace({
-        bitmap,
-        polygonPoints,
-        zHeight
     })
 }

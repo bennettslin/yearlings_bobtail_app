@@ -7,8 +7,7 @@ import { getPolygonPointsForTileFace,
          getPolygonPointsForSideFace,
          getPolygonPointsString,
 
-         getBitmapMatrixForTileFace,
-         getBitmapMatrixForDynamicFace } from './facesHelper'
+         getBitmapMatrixForFace } from './facesHelper'
 
 import { BITMAPS } from '../../../constants/bitmaps'
 
@@ -88,7 +87,7 @@ const CubeFace = ({
 
     const bitmap = BITMAPS[bitmapKey],
 
-        // Determine height of dynamic faces.
+        // Determine dynamic height of front and side faces.
         zHeight = isFloor ? zIndex : (20 - zIndex)
 
     let faceString = face,
@@ -104,7 +103,7 @@ const CubeFace = ({
             stageHeight
         })
 
-        bitmapMatrix = getBitmapMatrixForTileFace({
+        bitmapMatrix = getBitmapMatrixForFace({
             bitmap,
             polygonPoints
         })
@@ -117,7 +116,7 @@ const CubeFace = ({
             stageHeight
         })
 
-        bitmapMatrix = getBitmapMatrixForDynamicFace({
+        bitmapMatrix = getBitmapMatrixForFace({
             bitmap,
             polygonPoints,
             zHeight
@@ -132,7 +131,7 @@ const CubeFace = ({
             stageHeight
         })
 
-        bitmapMatrix = getBitmapMatrixForDynamicFace({
+        bitmapMatrix = getBitmapMatrixForFace({
             bitmap,
             polygonPoints,
             zHeight
