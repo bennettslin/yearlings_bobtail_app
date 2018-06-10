@@ -13,6 +13,7 @@ import { getPolygonPointsForTileFace,
 import { BITMAPS } from '../../../constants/bitmaps'
 
 const propTypes = {
+    isFloor: PropTypes.bool,
     isLeft: PropTypes.bool,
     face: PropTypes.string.isRequired,
     bitmapKey: PropTypes.string.isRequired,
@@ -69,8 +70,9 @@ const propTypes = {
 
 const CubeFace = ({
 
-    face,
+    isFloor,
     isLeft,
+    face,
     bitmapKey,
     slantDirection,
     cubeCorners,
@@ -81,15 +83,19 @@ const CubeFace = ({
 
     const bitmap = BITMAPS[bitmapKey]
 
-    let facePolygonPoints,
+    let faceString = face,
+        facePolygonPoints,
         bitmapMatrix
 
     if (face === 'tile') {
+        faceString = isFloor ? 'floorTile' : 'ceilingTile'
+
         facePolygonPoints = getPolygonPointsForTileFace({
             cubeCorners,
             stageWidth,
             stageHeight
         })
+
         bitmapMatrix = getBitmapMatrixForTileFace(
             bitmap,
             facePolygonPoints
@@ -102,6 +108,7 @@ const CubeFace = ({
             stageWidth,
             stageHeight
         })
+
         bitmapMatrix = getBitmapMatrixForFrontFace(
             bitmap,
             facePolygonPoints
@@ -115,6 +122,7 @@ const CubeFace = ({
             stageWidth,
             stageHeight
         })
+
         bitmapMatrix = getBitmapMatrixForFrontFace(
             bitmap,
             facePolygonPoints
@@ -124,7 +132,7 @@ const CubeFace = ({
     return (
         <g className={cx(
             'CubeFace',
-            `CubeFace__${face}`
+            `CubeFace__${faceString}`
         )}>
             {/* Side will not render bitmap, at least for now. */}
             {bitmapMatrix.map((matrixRow, rowIndex) => {

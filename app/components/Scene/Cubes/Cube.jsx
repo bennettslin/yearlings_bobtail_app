@@ -63,6 +63,7 @@ class Cube extends Component {
 
                 <CubeFace {...other}
                     face="tile"
+                    isFloor={isFloor}
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
                 />

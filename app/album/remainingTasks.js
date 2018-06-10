@@ -14,19 +14,17 @@ module.exports = [
         workedHours: 0,
         neededHours: 8
     },
+    {
+        taskName: `Optimise rendering of pixels.`,
+        workedHours: 0,
+        neededHours: 8
+    },
 
     {
         taskName: `Have system to animate actions based on whether they are people, panels, or props.`,
         workedHours: 0,
         neededHours: 8
     },
-
-    {
-        taskName: `Show persistent shading on cube faces.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     {
         taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
         workedHours: 0,

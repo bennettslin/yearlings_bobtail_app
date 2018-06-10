@@ -2936,5 +2936,10 @@ module.exports = [
         taskName: `Have system to show cube tile pixels.`,
         workedHours: 10,
         neededHours: 10
+    },
+    {
+        taskName: `Show persistent shading on cube faces.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

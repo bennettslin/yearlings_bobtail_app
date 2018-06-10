@@ -1,13 +1,21 @@
-.CubeFace__tile {
+/**
+ * In order from brightest to darkest.
+ */
+
+.CubeFace__floorTile {
     fill: none;
 }
 
-.CubeFace__front {
-    fill: rgba(200, 0, 0, 0.5);
+.CubeFace__side {
+    fill: rgba(0, 0, 25, 0.15);
 }
 
-.CubeFace__side {
-    fill: rgba(0, 0, 200, 0.25);
+.CubeFace__front {
+    fill: rgba(0, 0, 25, 0.3);
+}
+
+.CubeFace__ceilingTile {
+    fill: rgba(0, 0, 25, 0.45);
 }
 
 .CubeFace__stroke {
@@ -15,5 +23,5 @@
 }
 
 .CubePixel {
-    fill-opacity: 0.8;
+    fill-opacity: 1;
 }
