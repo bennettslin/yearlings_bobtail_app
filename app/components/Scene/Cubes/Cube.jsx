@@ -62,7 +62,8 @@ class Cube extends Component {
         return (
             <g
                 className={cx(
-                    `Cube__x${xIndex}`
+                    `Cube__x${xIndex}`,
+                    `Cube__z${parseInt(zIndex)}`
                 )}
             >
 

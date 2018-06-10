@@ -15,7 +15,7 @@ import { EL_TORITO_TILES,
          OUTDOOR_WEDDING_TILES,
          DREAM_CLIFF_TILES,
          DREAM_DEATHBED_TILES } from '../constants/cubesOther'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -38,7 +38,7 @@ module.exports = {
             },
             tiles: EL_TORITO_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -82,7 +82,7 @@ module.exports = {
             },
             tiles: PAMPAS_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -105,7 +105,7 @@ module.exports = {
             },
             tiles: OUTDOOR_WEDDING_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -128,7 +128,7 @@ module.exports = {
             },
             tiles: DREAM_CLIFF_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -158,7 +158,7 @@ module.exports = {
             },
             tiles: DREAM_DEATHBED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         }

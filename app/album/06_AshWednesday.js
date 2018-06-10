@@ -14,7 +14,7 @@ import { BENNETT_APARTMENT_COURTYARD_TILES,
          CATHOLIC_CHURCH_TILES,
          BERKELEY_CAMPUS_1_TILES,
          BERKELEY_CAMPUS_2_TILES } from '../constants/cubesOutdoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -35,7 +35,7 @@ module.exports = {
             },
             tiles: BENNETT_APARTMENT_COURTYARD_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -56,7 +56,7 @@ module.exports = {
             },
             tiles: BENNETT_APARTMENT_COUCH_THOUGHT_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -72,7 +72,7 @@ module.exports = {
             },
             tiles: CATHOLIC_CHURCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -102,7 +102,7 @@ module.exports = {
             },
             tiles: BERKELEY_CAMPUS_1_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -123,7 +123,7 @@ module.exports = {
             },
             tiles: BERKELEY_CAMPUS_2_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         }

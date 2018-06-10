@@ -13,7 +13,7 @@ import { MUSEUM_TILES,
 import { SITA_APARTMENT_GATE_1_TILES,
          SITA_APARTMENT_GATE_2_TILES,
          GO_KART_TILES } from '../constants/cubesOutdoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -36,7 +36,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_GATE_1_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -59,7 +59,7 @@ module.exports = {
             },
             tiles: MUSEUM_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -94,7 +94,7 @@ module.exports = {
             },
             tiles: BACKSTAGE_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -117,7 +117,7 @@ module.exports = {
             },
             tiles: GO_KART_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -140,7 +140,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_GATE_2_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         }

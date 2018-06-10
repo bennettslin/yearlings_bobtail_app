@@ -2939,7 +2939,7 @@ module.exports = [
     },
     {
         taskName: `Show persistent shading on cube faces.`,
-        workedHours: 2,
-        neededHours: 2
+        workedHours: 4,
+        neededHours: 4
     }
 ]

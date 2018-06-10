@@ -26,7 +26,7 @@ import { ODIN_SCENE_1_TILES,
          ODIN_SCENE_7_TILES,
          ODIN_SCENE_8_TILES } from '../constants/cubesOther'
 
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -42,7 +42,7 @@ module.exports = {
             },
             tiles: ODIN_SCENE_1_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -58,7 +58,7 @@ module.exports = {
             },
             tiles: ODIN_SCENE_2_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -74,7 +74,7 @@ module.exports = {
             },
             tiles: ODIN_SCENE_3_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -90,7 +90,7 @@ module.exports = {
             },
             tiles: ODIN_SCENE_4_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -106,7 +106,7 @@ module.exports = {
             },
             tiles: ODIN_SCENE_5_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -122,7 +122,7 @@ module.exports = {
             },
             tiles: ODIN_SCENE_6_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -143,7 +143,7 @@ module.exports = {
             },
             tiles: ODIN_SCENE_7_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -159,7 +159,7 @@ module.exports = {
             },
             tiles: ODIN_SCENE_8_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         }

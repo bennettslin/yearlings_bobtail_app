@@ -19,7 +19,7 @@ import { DISHROOM_TILES,
 import { SITA_APARTMENT_GATE_1_TILES,
          SITA_APARTMENT_GATE_2_TILES,
          BENNETT_APARTMENT_GATE_TILES } from '../constants/cubesOutdoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_AUTUMN,
          SKY_WINTER } from '../constants/scene'
 module.exports = {
@@ -39,7 +39,7 @@ module.exports = {
             },
             tiles: DISHROOM_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -62,7 +62,7 @@ module.exports = {
             },
             tiles: DISHROOM_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -71,7 +71,7 @@ module.exports = {
             description: 'Grasshoppers scene 1',
             tiles: SITA_APARTMENT_GATE_1_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -80,7 +80,7 @@ module.exports = {
             description: 'Grasshoppers scene 5',
             tiles: SITA_APARTMENT_GATE_2_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -103,7 +103,7 @@ module.exports = {
             },
             tiles: BENNETT_APARTMENT_GATE_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -126,7 +126,7 @@ module.exports = {
             },
             tiles: BENNETT_APARTMENT_GATE_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -149,7 +149,7 @@ module.exports = {
             },
             tiles: BENNETT_APARTMENT_BED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -172,7 +172,7 @@ module.exports = {
             },
             tiles: BENNETT_APARTMENT_BED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -188,7 +188,7 @@ module.exports = {
             },
             tiles: WAITING_ROOM_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -211,7 +211,7 @@ module.exports = {
             },
             tiles: WAITING_ROOM_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -248,7 +248,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_BED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -285,7 +285,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_BED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -322,7 +322,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_BED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         }

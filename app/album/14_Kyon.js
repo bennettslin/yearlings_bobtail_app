@@ -12,7 +12,7 @@ import { VERSES,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { SITA_APARTMENT_COUCH_TILES } from '../constants/cubesIndoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -30,7 +30,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -48,7 +48,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -66,7 +66,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -89,7 +89,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -112,7 +112,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -135,7 +135,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -153,7 +153,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -162,7 +162,7 @@ module.exports = {
             description: `Same scene. Peacocks.`,
             tiles: SITA_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         }

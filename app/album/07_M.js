@@ -14,7 +14,7 @@ import { BENNETT_APARTMENT_COUCH_TILES,
          REHEARSAL_SPACE_TILES } from '../constants/cubesIndoor'
 import { MOVIE_THEATRE_1_TILES,
          MOVIE_THEATRE_2_TILES } from '../constants/cubesOutdoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -30,7 +30,7 @@ module.exports = {
             },
             tiles: BENNETT_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -46,7 +46,7 @@ module.exports = {
             },
             tiles: BENNETT_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -69,7 +69,7 @@ module.exports = {
             },
             tiles: BENNETT_APARTMENT_COUCH_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -107,7 +107,7 @@ module.exports = {
             },
             tiles: SHOW_STAGE_FRONT_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -138,7 +138,7 @@ module.exports = {
             },
             tiles: REHEARSAL_SPACE_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -161,7 +161,7 @@ module.exports = {
             },
             tiles: MOVIE_THEATRE_1_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -191,7 +191,7 @@ module.exports = {
             },
             tiles: MOVIE_THEATRE_1_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -214,7 +214,7 @@ module.exports = {
             },
             tiles: MOVIE_THEATRE_2_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         }

@@ -16,7 +16,7 @@ import { SHOW_STAGE_SIDE_1_TILES,
          SHOW_STAGE_SIDE_2_TILES,
          SITA_APARTMENT_BED_TILES } from '../constants/cubesIndoor'
 import { SHOW_UNLOADING_TILES } from '../constants/cubesOutdoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -59,7 +59,7 @@ module.exports = {
             },
             tiles: SHOW_STAGE_SIDE_1_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -90,7 +90,7 @@ module.exports = {
             },
             tiles: SHOW_STAGE_SIDE_2_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -131,7 +131,7 @@ module.exports = {
             },
             tiles: SHOW_UNLOADING_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -168,7 +168,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_BED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         }

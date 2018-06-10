@@ -19,7 +19,7 @@ import { BENNETT_BASEMENT_TILES } from '../constants/cubesIndoor'
 import { SNOW_GLOBES_1_TILES,
          SNOW_GLOBES_2_TILES,
          SNOW_GLOBES_3_TILES } from '../constants/cubesOther'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -40,7 +40,7 @@ module.exports = {
             },
             tiles: BENNETT_BASEMENT_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -68,7 +68,7 @@ module.exports = {
             },
             tiles: BENNETT_BASEMENT_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -99,7 +99,7 @@ module.exports = {
             },
             tiles: SNOW_GLOBES_1_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -137,7 +137,7 @@ module.exports = {
             },
             tiles: SNOW_GLOBES_2_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -182,7 +182,7 @@ module.exports = {
             },
             tiles: SNOW_GLOBES_3_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -220,7 +220,7 @@ module.exports = {
             },
             tiles: BENNETT_BASEMENT_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         }

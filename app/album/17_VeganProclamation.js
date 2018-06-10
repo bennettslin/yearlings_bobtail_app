@@ -17,7 +17,7 @@ import { SHOW_STAGE_FRONT_FAR_TILES,
 import { PARK_TILES,
          ALLEY_TILES,
          DEMONSTRATION_TILES } from '../constants/cubesOutdoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_WINTER } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -45,7 +45,7 @@ module.exports = {
             },
             tiles: PARK_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -76,7 +76,7 @@ module.exports = {
             },
             tiles: SHOW_STAGE_FRONT_FAR_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -92,7 +92,7 @@ module.exports = {
             },
             tiles: ALLEY_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -134,7 +134,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_BED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -171,7 +171,7 @@ module.exports = {
             },
             tiles: DEMONSTRATION_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         }

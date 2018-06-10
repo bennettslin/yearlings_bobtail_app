@@ -20,7 +20,7 @@ import { PRETEEN_BENNETT_ROOM_TILES,
          JUNIOR_HIGH_HALLWAY_TILES } from '../constants/cubesIndoor'
 import { JUNIOR_HIGH_LOCKERS_TILES,
          JUNIOR_HIGH_QUAD_TILES } from '../constants/cubesOutdoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_WINTER } from '../constants/scene'
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -33,7 +33,7 @@ module.exports = {
             description: `Bennett's room, but seemingly no one is there.`,
             tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -54,7 +54,7 @@ module.exports = {
             },
             tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -70,7 +70,7 @@ module.exports = {
             },
             tiles: PRETEEN_BENNETT_ROOM_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -86,7 +86,7 @@ module.exports = {
             },
             tiles: PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -102,7 +102,7 @@ module.exports = {
             },
             tiles: PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -128,7 +128,7 @@ module.exports = {
             },
             tiles: JUNIOR_HIGH_LOCKERS_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -161,7 +161,7 @@ module.exports = {
             },
             tiles: JUNIOR_HIGH_QUAD_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         },
@@ -194,7 +194,7 @@ module.exports = {
             },
             tiles: JUNIOR_HIGH_HALLWAY_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_WINTER
             }
         }

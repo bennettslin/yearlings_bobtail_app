@@ -49,8 +49,7 @@ const Cubes = ({
      * Invert the rows, since top row in array should be top row
      * shown in floor field.
      */
-    const invertedYIndex = CUBE_Y_AXIS_LENGTH - yIndex - 1,
-        cubesName = isFloor ? 'Floor' : 'Ceiling'
+    const invertedYIndex = CUBE_Y_AXIS_LENGTH - yIndex - 1
 
     let columnIndicesArray = DEFAULT_X_AXIS_INDICES
 
@@ -64,9 +63,8 @@ const Cubes = ({
     return (
         <DynamicSvg
             className={cx(
-                `${cubesName}__y${yIndex}`,
-                yIndex === 0 && `${cubesName}__back`,
-                yIndex === CUBE_Y_AXIS_LENGTH - 1 && `${cubesName}__front`,
+                `Cubes__${isFloor ? 'floor' : 'ceiling'}`,
+                `Cubes__y${yIndex}${yIndex === 0 ? '__back' : ''}${yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''}`,
                 'absoluteFullContainer'
             )}
             viewBoxWidth={stageWidth}

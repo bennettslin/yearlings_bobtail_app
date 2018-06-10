@@ -1,6 +1,6 @@
 import { LOGUE_TILES } from '../constants/cubesOther'
-import { SKY_NO_TIME,
-         SKY_NO_SEASON } from '../constants/scene'
+import { SKY_ANYTIME,
+         SKY_INDOOR } from '../constants/scene'
 module.exports = {
     logue: true,
     title: 'epilogue',
@@ -194,8 +194,8 @@ module.exports = {
             },
             tiles: LOGUE_TILES,
             sky: {
-                time: SKY_NO_TIME,
-                season: SKY_NO_SEASON
+                time: SKY_ANYTIME,
+                season: SKY_INDOOR
             }
         }
     ],

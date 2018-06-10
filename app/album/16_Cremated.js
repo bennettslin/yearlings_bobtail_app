@@ -13,7 +13,7 @@ import { CREMATED_CLIFF_TILES,
          CREMATED_CLIFF_CONVERTIBLE_TILES,
          CREMATED_DEATHBED_TILES,
          CREMATED_DEATHBED_TENNIS_TILES } from '../constants/cubesOutdoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -34,7 +34,7 @@ module.exports = {
             },
             tiles: CREMATED_CLIFF_CONVERTIBLE_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -55,7 +55,7 @@ module.exports = {
             },
             tiles: CREMATED_CLIFF_CONVERTIBLE_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -76,7 +76,7 @@ module.exports = {
             },
             tiles: CREMATED_CLIFF_CONVERTIBLE_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -92,7 +92,7 @@ module.exports = {
             },
             tiles: CREMATED_DEATHBED_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -108,7 +108,7 @@ module.exports = {
             },
             tiles: CREMATED_DEATHBED_TENNIS_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -129,7 +129,7 @@ module.exports = {
             },
             tiles: CREMATED_CLIFF_CONVERTIBLE_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -138,7 +138,7 @@ module.exports = {
             description: `The car is in the background.`,
             tiles: CREMATED_CLIFF_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         }

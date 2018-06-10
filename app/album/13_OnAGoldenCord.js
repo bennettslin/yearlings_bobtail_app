@@ -17,7 +17,7 @@ import { OAKLAND_STREET_SIDE_TILES,
          OAKLAND_STREET_FRONT_1_TILES,
          OAKLAND_STREET_FRONT_2_TILES,
          OAKLAND_STREET_FRONT_3_TILES } from '../constants/cubesOutdoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -33,7 +33,7 @@ module.exports = {
             },
             tiles: OAKLAND_STREET_SIDE_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -56,7 +56,7 @@ module.exports = {
             },
             tiles: SITA_APARTMENT_COUCH_THOUGHT_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -79,7 +79,7 @@ module.exports = {
             },
             tiles: OAKLAND_STREET_FRONT_1_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -109,7 +109,7 @@ module.exports = {
             },
             tiles: OAKLAND_STREET_FRONT_2_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         },
@@ -160,7 +160,7 @@ module.exports = {
             },
             tiles: OAKLAND_STREET_FRONT_3_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_AUTUMN
             }
         }

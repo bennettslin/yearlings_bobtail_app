@@ -13,7 +13,7 @@ import { VERSES,
 import { TAIWAN_PUPPET_SHOW_TILES,
          SCHOOLBUS_TILES,
          TETHERBALL_SCENE_TILES } from '../constants/cubesOther'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -22,7 +22,7 @@ module.exports = {
             description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
             tiles: TAIWAN_PUPPET_SHOW_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -33,7 +33,7 @@ module.exports = {
             },
             tiles: TAIWAN_PUPPET_SHOW_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -61,7 +61,7 @@ module.exports = {
             },
             tiles: SCHOOLBUS_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -92,7 +92,7 @@ module.exports = {
             },
             tiles: TETHERBALL_SCENE_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         },
@@ -102,7 +102,7 @@ module.exports = {
             actors: {},
             tiles: TAIWAN_PUPPET_SHOW_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SUMMER
             }
         }

@@ -22,7 +22,7 @@ import { WALGREENS_TILES,
 import { UCLA_CAMPUS_TILES,
          CEMETERY_TILES,
          STATION_WAGON_TILES } from '../constants/cubesOutdoor'
-import { SKY_NO_TIME,
+import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {
     scenes: [
@@ -53,7 +53,7 @@ module.exports = {
             },
             tiles: UCLA_CAMPUS_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -84,7 +84,7 @@ module.exports = {
             },
             tiles: WALGREENS_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -115,7 +115,7 @@ module.exports = {
             },
             tiles: STEAM_TUNNEL_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -146,7 +146,7 @@ module.exports = {
             },
             tiles: CEMETERY_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -177,7 +177,7 @@ module.exports = {
             },
             tiles: STATION_WAGON_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -198,7 +198,7 @@ module.exports = {
             },
             tiles: HOWIE_ATTIC_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         }

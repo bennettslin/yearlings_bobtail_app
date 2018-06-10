@@ -20,7 +20,7 @@ import { CHILDHOOD_NEIGHBOURHOOD_TILES,
 import { CUTOUT,
          FIXTURE,
          ACTOR,
-         SKY_NO_TIME,
+         SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 
 module.exports = {
@@ -56,7 +56,7 @@ module.exports = {
             },
             tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -85,7 +85,7 @@ module.exports = {
             },
             tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -114,7 +114,7 @@ module.exports = {
             },
             tiles: PLAYGROUND_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -133,7 +133,7 @@ module.exports = {
             },
             tiles: CHILDHOOD_BATHROOM_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         },
@@ -157,7 +157,7 @@ module.exports = {
             },
             tiles: CHILDHOOD_BATHROOM_TILES,
             sky: {
-                time: SKY_NO_TIME,
+                time: SKY_ANYTIME,
                 season: SKY_SPRING
             }
         }
