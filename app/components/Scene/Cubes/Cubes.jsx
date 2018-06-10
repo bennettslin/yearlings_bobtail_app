@@ -71,7 +71,6 @@ const Cubes = ({
             viewBoxHeight={stageHeight}
         >
             {columnIndicesArray.map(xIndex => {
-
                 const
                     zIndex = getValueInAbridgedMatrix(
                         zIndices, xIndex, yIndex

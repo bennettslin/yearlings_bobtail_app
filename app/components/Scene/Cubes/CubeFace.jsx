@@ -118,14 +118,10 @@ const CubeFace = ({
     }
 
     return (
-        <g className="CubeFace">
-            <polygon
-                className={cx(
-                    'CubeFace__stroke',
-                    `CubeFace__${face}`
-                )}
-                points={getPolygonPointsString(facePolygonPoints)}
-            />
+        <g className={cx(
+            'CubeFace',
+            `CubeFace__${face}`
+        )}>
             {/* Side will not render bitmap, at least for now. */}
             {face !== 'side' && (
                 bitmapMatrix.map((matrixRow, rowIndex) => {
@@ -140,7 +136,10 @@ const CubeFace = ({
                         return (
                             <polygon
                                 key={uniqueId}
-                                className="CubeFace__pixel"
+                                className={cx(
+                                    'CubePixel',
+                                    `CubePixel__${uniqueId}`
+                                )}
                                 fill={fillString}
                                 points={getPolygonPointsString(polygonPoints)}
                             />
@@ -148,6 +147,12 @@ const CubeFace = ({
                     })
                 })
             )}
+            <polygon
+                className={cx(
+                    'CubeFace__stroke'
+                )}
+                points={getPolygonPointsString(facePolygonPoints)}
+            />
         </g>
     )
 }

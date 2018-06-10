@@ -90,7 +90,7 @@ const
                 [k, g, g, g, g, g, g, g, g, g, g, k]
             ],
             bitmapKeys: [
-
+                [TEST_PATTERN_BITMAP]
             ]
         },
         floor: {
@@ -102,7 +102,7 @@ const
                 [0, g, 1, 1, 1, 1, 1, 1, 1, 1, g, 0]
             ],
             bitmapKeys: [
-
+                [TEST_PATTERN_BITMAP]
             ]
         }
     },
