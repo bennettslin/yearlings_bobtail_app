@@ -10,9 +10,9 @@ import { VERSES,
          CHORUS,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { TAIWAN_PUPPET_SHOW_TILES } from '../constants/cubesOther'
-import { SCHOOLBUS_TILES,
-         TETHERBALL_SCENE_TILES } from '../constants/cubesOutdoor'
+import { TAIWAN_PUPPET_SHOW_TILES,
+         SCHOOLBUS_TILES,
+         TETHERBALL_SCENE_TILES } from '../constants/cubesOther'
 import { SKY_NO_TIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {

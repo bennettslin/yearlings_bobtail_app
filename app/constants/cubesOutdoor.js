@@ -91,34 +91,6 @@ const
             ]
         }
     },
-    SCHOOLBUS_TILES = {
-        // Assume height of 9'.
-        /** https://www.the-blueprints.com/blueprints/buses/international-buses/56427/view/international_school_bus_%281992%29/
-         */
-        floor: {
-            zIndices: [
-                [0],
-                [0, i, 9, 9, 9, 9, 9, 9, i, i, 9, 0],
-                [0, i, 6, 6, 3, 6, 6, 3, i, i, 9, 0],
-                [0, i, 6, 6, 3, 6, 6, 3, i, i, 9, 0],
-                [0, i, 3, 3, 3, 3, 3, 3, i, i, 9, 0],
-                [0]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
-            ]
-        }
-    },
-    TETHERBALL_SCENE_TILES = {
-        floor: {
-            zIndices: [
-                [1]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
-            ]
-        }
-    },
     JUNIOR_HIGH_LOCKERS_TILES = {
         // Overall height of lockers is 6.5'.
         ceiling: {
@@ -541,106 +513,6 @@ const
                 [TEST_PATTERN_BITMAP]
             ]
         }
-    },
-    EL_TORITO_TILES = {
-        // Outdoor wall is 8'.
-        floor: {
-            zIndices: [
-                [h, h, h, h, 1, 1, 1, 1, h],
-                [1],
-                [1, h, 1, 1, 1, 1, 1, 1, 1, 1, h, 1],
-                [1],
-                [1],
-                [0]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
-            ]
-        }
-    },
-    PAMPAS_TILES = {
-        // TODO: Make more natural.
-        // Grass.
-        slantDirection: RIGHT,
-        floor: {
-            zIndices: [
-                [4]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
-            ]
-        }
-    },
-    OUTDOOR_WEDDING_TILES = {
-        // TODO: Make more natural.
-        // Grass.
-        slantDirection: RIGHT,
-        floor: {
-            zIndices: [
-                [4]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
-            ]
-        }
-    },
-    DREAM_CLIFF_TILES = {
-        slantDirection: RIGHT,
-        /**
-         * -----------.--
-         * ---------....-
-         * -------@.....-
-         * -----@@@@.....
-         * ---@@@@@@.....
-         * -@@@@@@@@@...-
-         * @@@@@@@@@@.---
-         * -@@@@@@@@-----
-         * -@@@@@@-------
-         * --@@@---------
-         * --@-----------
-         */
-        floor: {
-            zIndices: [
-                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
-                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
-                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
-                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
-                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
-                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
-            ]
-        }
-    },
-    DREAM_DEATHBED_TILES = {
-        slantDirection: RIGHT,
-        /**
-         * -----------.--
-         * ---------..@@-
-         * -------...@@@-
-         * -----.....@@@.
-         * ---######.@@..
-         * -.#xxxxxo....-
-         * ..#xxxxxo..---
-         * -.#xxxxxo-----
-         * -.#oooo-------
-         * --#oo---------
-         * --#-----------
-         */
-        floor: {
-            zIndices: [
-                [0, 0, g, g, g, 0, 0, 0, 0, 0, 0, 0],
-                [0, g, 7, 7, g, g, 0, 0, 0, 4, 4, 4],
-                [0, g, 7, 7, 7, 7, g, g, 0, 4, 4, 4],
-                [0, g, 7, 7, 7, 7, 7, 1, 0, 4, 4, 4],
-                [g, 1, 1, 7, 7, 7, 1, 0, 0, 4, 0, 0],
-                [g, 1, 1, 1, 1, 7, 1, 0, 0, 0, 0, 0]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
-            ]
-        }
     }
 
 module.exports = {
@@ -649,8 +521,6 @@ module.exports = {
     FREEWAY_TILES,
     PORCH_TILES,
     CHANGELING_CAVE_TILES,
-    SCHOOLBUS_TILES,
-    TETHERBALL_SCENE_TILES,
     JUNIOR_HIGH_LOCKERS_TILES,
     JUNIOR_HIGH_QUAD_TILES,
     BENNETT_APARTMENT_COURTYARD_TILES,
@@ -678,10 +548,5 @@ module.exports = {
     CREMATED_DEATHBED_TENNIS_TILES,
     PARK_TILES,
     ALLEY_TILES,
-    DEMONSTRATION_TILES,
-    EL_TORITO_TILES,
-    PAMPAS_TILES,
-    OUTDOOR_WEDDING_TILES,
-    DREAM_CLIFF_TILES,
-    DREAM_DEATHBED_TILES
+    DEMONSTRATION_TILES
 }

@@ -11,12 +11,14 @@ const
     d = 13,
     // e = 14,
     // f = 15,
-    // g = 16,
-    // h = 17,
-    // i = 18,
+    g = 16,
+    h = 17,
+    i = 18,
     // j = 19,
     k = 20,
     n = 40,
+    // LEFT = 'left',
+    RIGHT = 'right',
 
     DEFAULT_STAGE_TILES = {
         ceiling: {
@@ -61,6 +63,34 @@ const
     },
     TAIWAN_PUPPET_SHOW_TILES = {
         // Just panels.
+        floor: {
+            zIndices: [
+                [1]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        }
+    },
+    SCHOOLBUS_TILES = {
+        // Assume height of 9'.
+        /** https://www.the-blueprints.com/blueprints/buses/international-buses/56427/view/international_school_bus_%281992%29/
+         */
+        floor: {
+            zIndices: [
+                [0],
+                [0, i, 9, 9, 9, 9, 9, 9, i, i, 9, 0],
+                [0, i, 6, 6, 3, 6, 6, 3, i, i, 9, 0],
+                [0, i, 6, 6, 3, 6, 6, 3, i, i, 9, 0],
+                [0, i, 3, 3, 3, 3, 3, 3, i, i, 9, 0],
+                [0]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        }
+    },
+    TETHERBALL_SCENE_TILES = {
         floor: {
             zIndices: [
                 [1]
@@ -225,12 +255,114 @@ const
                 [TEST_PATTERN_BITMAP]
             ]
         }
+    },
+    EL_TORITO_TILES = {
+        // Outdoor wall is 8'.
+        floor: {
+            zIndices: [
+                [h, h, h, h, 1, 1, 1, 1, h],
+                [1],
+                [1, h, 1, 1, 1, 1, 1, 1, 1, 1, h, 1],
+                [1],
+                [1],
+                [0]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        }
+    },
+    PAMPAS_TILES = {
+        // TODO: Make more natural.
+        // Grass.
+        slantDirection: RIGHT,
+        floor: {
+            zIndices: [
+                [4]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        }
+    },
+    OUTDOOR_WEDDING_TILES = {
+        // TODO: Make more natural.
+        // Grass.
+        slantDirection: RIGHT,
+        floor: {
+            zIndices: [
+                [4]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        }
+    },
+    DREAM_CLIFF_TILES = {
+        slantDirection: RIGHT,
+        /**
+         * -----------.--
+         * ---------....-
+         * -------@.....-
+         * -----@@@@.....
+         * ---@@@@@@.....
+         * -@@@@@@@@@...-
+         * @@@@@@@@@@.---
+         * -@@@@@@@@-----
+         * -@@@@@@-------
+         * --@@@---------
+         * --@-----------
+         */
+        floor: {
+            zIndices: [
+                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
+                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
+                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
+                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
+                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0],
+                [4, 4, 4, 4, 4, 4, 4, 4, 0, 0, 0, 0]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        }
+    },
+    DREAM_DEATHBED_TILES = {
+        slantDirection: RIGHT,
+        /**
+         * -----------.--
+         * ---------..@@-
+         * -------...@@@-
+         * -----.....@@@.
+         * ---######.@@..
+         * -.#xxxxxo....-
+         * ..#xxxxxo..---
+         * -.#xxxxxo-----
+         * -.#oooo-------
+         * --#oo---------
+         * --#-----------
+         */
+        floor: {
+            zIndices: [
+                [0, 0, g, g, g, 0, 0, 0, 0, 0, 0, 0],
+                [0, g, 7, 7, g, g, 0, 0, 0, 4, 4, 4],
+                [0, g, 7, 7, 7, 7, g, g, 0, 4, 4, 4],
+                [0, g, 7, 7, 7, 7, 7, 1, 0, 4, 4, 4],
+                [g, 1, 1, 7, 7, 7, 1, 0, 0, 4, 0, 0],
+                [g, 1, 1, 1, 1, 7, 1, 0, 0, 0, 0, 0]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        }
     }
 
 module.exports = {
     DEFAULT_STAGE_TILES,
     LOGUE_TILES,
     TAIWAN_PUPPET_SHOW_TILES,
+    SCHOOLBUS_TILES,
+    TETHERBALL_SCENE_TILES,
     ODIN_SCENE_1_TILES,
     ODIN_SCENE_2_TILES,
     ODIN_SCENE_3_TILES,
@@ -241,5 +373,10 @@ module.exports = {
     ODIN_SCENE_8_TILES,
     SNOW_GLOBES_1_TILES,
     SNOW_GLOBES_2_TILES,
-    SNOW_GLOBES_3_TILES
+    SNOW_GLOBES_3_TILES,
+    EL_TORITO_TILES,
+    PAMPAS_TILES,
+    OUTDOOR_WEDDING_TILES,
+    DREAM_CLIFF_TILES,
+    DREAM_DEATHBED_TILES
 }

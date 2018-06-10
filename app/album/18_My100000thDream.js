@@ -14,7 +14,7 @@ import { EL_TORITO_TILES,
          PAMPAS_TILES,
          OUTDOOR_WEDDING_TILES,
          DREAM_CLIFF_TILES,
-         DREAM_DEATHBED_TILES } from '../constants/cubesOutdoor'
+         DREAM_DEATHBED_TILES } from '../constants/cubesOther'
 import { SKY_NO_TIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {
