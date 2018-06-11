@@ -33,8 +33,8 @@ export const getPolygonPointsForFrontFace = ({
 
     } else if (slantDirection === 'right') {
         cornerOrder = isFloor ?
-            [bs.left.back, bs.left.front, tl.left.front, tl.left.back] :
-            [tl.left.back, tl.left.front, bs.left.front, bs.left.back]
+            [tl.left.front, tl.left.back, bs.left.back, bs.left.front] :
+            [bs.left.front, bs.left.back, tl.left.back, tl.left.front]
 
     } else {
         cornerOrder = isFloor ?
@@ -62,8 +62,8 @@ export const getPolygonPointsForSideFace = ({
 
     if (slantDirection === 'left') {
         cornerOrder = isFloor ?
-            [tl.left.back, tl.left.front, bs.left.front, bs.left.back] :
-            [bs.left.back, bs.left.front, tl.left.front, tl.left.back]
+            [tl.left.front, tl.left.back, bs.left.back, bs.left.front] :
+            [bs.left.front, bs.left.back, tl.left.back, tl.left.front]
 
     } else if (slantDirection === 'right') {
         cornerOrder = isFloor ?
@@ -105,13 +105,13 @@ export const getPolygonPointsForTileFace = ({
 
     if (slantDirection === 'left') {
         cornerOrder = isFloor ?
-            [tl.left.back, tl.right.back, tl.right.front, tl.left.front] :
+            [tl.left.front, tl.right.front, tl.right.back, tl.left.back] :
             [tl.left.back, tl.right.back, tl.right.front, tl.left.front]
 
     } else if (slantDirection === 'right') {
         cornerOrder = isFloor ?
-            [tl.left.back, tl.right.back, tl.right.front, tl.left.front] :
-            [tl.left.back, tl.right.back, tl.right.front, tl.left.front]
+            [tl.right.front, tl.right.back, tl.left.back, tl.left.front] :
+            [tl.left.front, tl.left.back, tl.right.back, tl.right.front]
 
     } else {
         cornerOrder = isFloor ?
