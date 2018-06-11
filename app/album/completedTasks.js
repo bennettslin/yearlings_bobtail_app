@@ -2941,5 +2941,10 @@ module.exports = [
         taskName: `Show persistent shading on cube faces.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Have system to show front and side pixels.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]

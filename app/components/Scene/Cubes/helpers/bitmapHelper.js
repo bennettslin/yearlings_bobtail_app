@@ -56,19 +56,30 @@ export const getBitmapMatrixForFace = ({
             // Allow pixels in the last row to be incomplete squares.
             if (yIndex === coordinatesHeightArray.length - 1) {
                 return {
-                    leftmost: bottomLeft,
-                    rightmost: bottomRight
+
+                    /**
+                     * Floor cubes go from top to bottom, ceiling cubes go from
+                     * bottom to top.
+                     */
+                    leftmost: isFloor ? bottomLeft : topLeft,
+                    rightmost: isFloor ? bottomRight : topRight
                 }
 
             } else {
+
+                // Again, floor and ceiling cubes go in reverse directions.
+                const startLeftPoint = isFloor ? topLeft : bottomLeft,
+                    startRightPoint = isFloor ? topRight : bottomRight,
+                    multiplier = isFloor ? yIndex : -yIndex
+
                 return {
                     leftmost: {
-                        x: topLeft.x + yIndex * leftmostXIncrement,
-                        y: topLeft.y + yIndex * leftmostYIncrement
+                        x: startLeftPoint.x + multiplier * leftmostXIncrement,
+                        y: startLeftPoint.y + multiplier * leftmostYIncrement
                     },
                     rightmost: {
-                        x: topRight.x + yIndex * rightmostXIncrement,
-                        y: topRight.y + yIndex * rightmostYIncrement
+                        x: startRightPoint.x + multiplier * rightmostXIncrement,
+                        y: startRightPoint.y + multiplier * rightmostYIncrement
                     }
                 }
             }
@@ -102,7 +113,12 @@ export const getBitmapMatrixForFace = ({
     return bitmapHeightArray.map(yIndex => (
         MATRIX_INDICES_ARRAY.map(xIndex => {
 
-            const fill = bitmap[yIndex % MATRIX_LENGTH][xIndex],
+            // Ceilings will fill pixels from bottom up.
+            const moduloYIndex = isFloor ?
+                    yIndex % MATRIX_LENGTH :
+                    MATRIX_LENGTH - yIndex % MATRIX_LENGTH - 1,
+
+                fill = bitmap[moduloYIndex][xIndex],
 
                 polygonPoints = [
                     coordinatesMatrix[yIndex][xIndex],

@@ -5,14 +5,15 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Have system to show front and side pixels.`,
+        taskName: `Optimise rendering of pixels, including allowing some faces, and rendering only after lyrics.`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 15
     },
+
     {
-        taskName: `Optimise rendering of pixels.`,
+        taskName: `System for showing sun and moon for each scene.`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 3
     },
 
     {
@@ -20,6 +21,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 8
     },
+
     {
         taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
         workedHours: 0,
@@ -139,10 +141,5 @@ module.exports = [
         taskName: `Allow annotation and lyric borders to use svgs.`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `Placeholder images in place for songs, with animations.`,
-        workedHours: 0,
-        neededHours: 20
     }
 ]
