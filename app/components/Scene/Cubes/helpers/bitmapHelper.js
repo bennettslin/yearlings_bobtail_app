@@ -43,17 +43,36 @@ export const getBitmapMatrixForFace = ({
 
         coordinatesHeightArray = isStaticHeight ?
             COORDINATES_ARRAY :
-            getArrayOfLength({ length: matrixHeightLength + 1 }),
+            getArrayOfLength({ length: Math.ceil(matrixHeightLength) + 1 }),
 
         // Establish side points.
-        leftmostPoints = coordinatesHeightArray.map(yIndex => ({
-            x: topLeft.x + yIndex * leftmostXIncrement,
-            y: topLeft.y + yIndex * leftmostYIncrement
-        })),
-        rightmostPoints = coordinatesHeightArray.map(yIndex => ({
-            x: topRight.x + yIndex * rightmostXIncrement,
-            y: topRight.y + yIndex * rightmostYIncrement
-        })),
+        // TODO: These can be consolidated into a single map function.
+        leftmostPoints = coordinatesHeightArray.map(yIndex => {
+
+            // Allow pixels in the last row to be incomplete squares.
+            if (yIndex === coordinatesHeightArray.length - 1) {
+                return bottomLeft
+
+            } else {
+                return {
+                    x: topLeft.x + yIndex * leftmostXIncrement,
+                    y: topLeft.y + yIndex * leftmostYIncrement
+                }
+            }
+        }),
+        rightmostPoints = coordinatesHeightArray.map(yIndex => {
+
+            // Allow pixels in the last row to be incomplete squares.
+            if (yIndex === coordinatesHeightArray.length - 1) {
+                return bottomRight
+
+            } else {
+                return {
+                    x: topRight.x + yIndex * rightmostXIncrement,
+                    y: topRight.y + yIndex * rightmostYIncrement
+                }
+            }
+        }),
 
         // Create matrix of all points.
         coordinatesMatrix = coordinatesHeightArray.map(yIndex => {
@@ -78,7 +97,7 @@ export const getBitmapMatrixForFace = ({
 
         bitmapHeightArray = isStaticHeight ?
             MATRIX_INDICES_ARRAY :
-            getArrayOfLength({ length: matrixHeightLength })
+            getArrayOfLength({ length: Math.ceil(matrixHeightLength) })
 
     return bitmapHeightArray.map(yIndex => {
 
