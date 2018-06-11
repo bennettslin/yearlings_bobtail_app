@@ -5,7 +5,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Optimise rendering of pixels, including allowing some faces, and rendering only after lyrics.`,
+        taskName: `Optimise rendering of pixels, including allowing only some faces, and rendering only after lyrics, and a system to smartly show pixels of varying size.`,
         workedHours: 0,
         neededHours: 15
     },

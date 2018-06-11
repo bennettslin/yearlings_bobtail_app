@@ -242,14 +242,22 @@ const
     },
     BENNETT_BASEMENT_TILES = {
         // Basement wall is 6', depth is 2.5'. Bed is 1'.
+        ceiling: {
+            zIndices: [
+                [g]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        },
         floor: {
             zIndices: [
-                [h, h, 5, 5, h, h, h, h, h, h, h, h],
-                [h, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, h],
-                [h, 0, 4, 4, 0, 0, 3, 3, 3, 3, 3, h],
-                [h, 0, 3, 3, 0, 0, 3, 3, 3, 3, 3, h],
-                [h, 0, 2, 2, 0, 0, 3, 3, 3, 3, 3, h],
-                [h, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, h]
+                [g, 5, 5, g, g, g, g, g, g, g, g, g],
+                [g, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, g],
+                [g, 4, 4, 0, 0, 0, 3, 3, 3, 3, 3, g],
+                [g, 3, 3, 0, 0, 0, 3, 3, 3, 3, 3, g],
+                [g, 2, 2, 0, 0, 0, 3, 3, 3, 3, 3, g],
+                [g, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, g]
             ],
             bitmapKeys: [
                 [TEST_PATTERN_BITMAP]
@@ -259,7 +267,7 @@ const
     REHEARSAL_SPACE_TILES = {
         ceiling: {
             zIndices: [
-                [h]
+                [g]
             ],
             bitmapKeys: [
                 [TEST_PATTERN_BITMAP]
@@ -267,12 +275,12 @@ const
         },
         floor: {
             zIndices: [
-                [h, h, h, h, h, h, h, h, h, 5, 5, h],
-                [h, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, h],
-                [h, 0, 0, 0, 0, 0, 0, 0, 4, 4, 0, h],
-                [h, 0, 0, 2, 0, 2, 0, 0, 3, 3, 0, h],
-                [h, 0, 2, 0, 0, 0, 2, 0, 2, 2, 0, h],
-                [h, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, h]
+                [g, 5, 5, g, g, g, g, g, g, g, g, g],
+                [g, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, g],
+                [g, 4, 4, 0, 0, 0, 0, 0, 0, 0, 0, g],
+                [g, 3, 3, 0, 0, 2, 0, 0, 2, 0, 0, g],
+                [g, 2, 2, 0, 2, 0, 0, 0, 0, 0, 0, g],
+                [g, 1, 1, 0, 0, 0, 0, 0, 0, 2, 0, g]
             ],
             bitmapKeys: [
                 [TEST_PATTERN_BITMAP]
