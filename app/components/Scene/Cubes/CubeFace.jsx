@@ -5,9 +5,9 @@ import cx from 'classnames'
 import { getPolygonPointsForTileFace,
          getPolygonPointsForFrontFace,
          getPolygonPointsForSideFace,
-         getPolygonPointsString,
+         getPolygonPointsString } from './helpers/polygonHelper'
 
-         getBitmapMatrixForFace } from './facesHelper'
+import { getBitmapMatrixForFace } from './helpers/bitmapHelper'
 
 import { BITMAPS } from '../../../constants/bitmaps'
 
@@ -98,9 +98,11 @@ const CubeFace = ({
         faceString = isFloor ? 'floorTile' : 'ceilingTile'
 
         polygonPoints = getPolygonPointsForTileFace({
+            slantDirection,
             cubeCorners,
             stageWidth,
-            stageHeight
+            stageHeight,
+            isFloor
         })
 
         bitmapMatrix = getBitmapMatrixForFace({
@@ -113,7 +115,8 @@ const CubeFace = ({
             slantDirection,
             cubeCorners,
             stageWidth,
-            stageHeight
+            stageHeight,
+            isFloor
         })
 
         bitmapMatrix = getBitmapMatrixForFace({
@@ -128,7 +131,8 @@ const CubeFace = ({
             slantDirection,
             cubeCorners,
             stageWidth,
-            stageHeight
+            stageHeight,
+            isFloor
         })
 
         bitmapMatrix = getBitmapMatrixForFace({

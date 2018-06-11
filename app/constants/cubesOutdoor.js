@@ -436,6 +436,14 @@ const
     },
     CREMATED_CLIFF_CONVERTIBLE_TILES = {
         slantDirection: RIGHT,
+        ceiling: {
+            zIndices: [
+                [g, k, k, k, k, k, k, k, k, k, k, g]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        },
         floor: {
             zIndices: [
                 [4, 4, 4, 8, 8, 4, 4, 4, 4, 4, 0],

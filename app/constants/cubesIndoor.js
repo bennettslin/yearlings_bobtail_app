@@ -478,6 +478,14 @@ const
     },
     SITA_APARTMENT_COUCH_TILES = {
         // Indoor wall is 7.5'.
+        ceiling: {
+            zIndices: [
+                [g, k, k, k, k, k, k, k, k, k, k, g]
+            ],
+            bitmapKeys: [
+                [TEST_PATTERN_BITMAP]
+            ]
+        },
         floor: {
             zIndices: [
                 [1],
