@@ -5,9 +5,12 @@ const MATRIX_LENGTH = 8,
     COORDINATES_ARRAY = getArrayOfLength({ length: MATRIX_LENGTH + 1 })
 
 export const getBitmapMatrixForFace = ({
+
     bitmap,
     polygonPoints,
-    zHeight
+    zIndex,
+    isFloor
+
 }) => {
     const
 
@@ -19,6 +22,8 @@ export const getBitmapMatrixForFace = ({
         bottomRight = polygonPoints[2],
         bottomLeft = polygonPoints[3],
 
+        // Determine dynamic height of front and side faces.
+        zHeight = isFloor ? zIndex : (20 - zIndex),
         isStaticHeight = isNaN(zHeight),
 
         /**
@@ -46,30 +51,25 @@ export const getBitmapMatrixForFace = ({
             getArrayOfLength({ length: Math.ceil(matrixHeightLength) + 1 }),
 
         // Establish side points.
-        // TODO: These can be consolidated into a single map function.
-        leftmostPoints = coordinatesHeightArray.map(yIndex => {
+        outermostPoints = coordinatesHeightArray.map(yIndex => {
 
             // Allow pixels in the last row to be incomplete squares.
             if (yIndex === coordinatesHeightArray.length - 1) {
-                return bottomLeft
-
-            } else {
                 return {
-                    x: topLeft.x + yIndex * leftmostXIncrement,
-                    y: topLeft.y + yIndex * leftmostYIncrement
+                    leftmost: bottomLeft,
+                    rightmost: bottomRight
                 }
-            }
-        }),
-        rightmostPoints = coordinatesHeightArray.map(yIndex => {
-
-            // Allow pixels in the last row to be incomplete squares.
-            if (yIndex === coordinatesHeightArray.length - 1) {
-                return bottomRight
 
             } else {
                 return {
-                    x: topRight.x + yIndex * rightmostXIncrement,
-                    y: topRight.y + yIndex * rightmostYIncrement
+                    leftmost: {
+                        x: topLeft.x + yIndex * leftmostXIncrement,
+                        y: topLeft.y + yIndex * leftmostYIncrement
+                    },
+                    rightmost: {
+                        x: topRight.x + yIndex * rightmostXIncrement,
+                        y: topRight.y + yIndex * rightmostYIncrement
+                    }
                 }
             }
         }),
@@ -79,8 +79,8 @@ export const getBitmapMatrixForFace = ({
 
             // Name left point and right points for clarity.
             const
-                leftPoint = leftmostPoints[yIndex],
-                rightPoint = rightmostPoints[yIndex],
+                leftPoint = outermostPoints[yIndex].leftmost,
+                rightPoint = outermostPoints[yIndex].rightmost,
 
                 xIncrement = (rightPoint.x - leftPoint.x) / MATRIX_LENGTH,
                 yIncrement = (rightPoint.y - leftPoint.y) / MATRIX_LENGTH
@@ -99,9 +99,8 @@ export const getBitmapMatrixForFace = ({
             MATRIX_INDICES_ARRAY :
             getArrayOfLength({ length: Math.ceil(matrixHeightLength) })
 
-    return bitmapHeightArray.map(yIndex => {
-
-        return MATRIX_INDICES_ARRAY.map(xIndex => {
+    return bitmapHeightArray.map(yIndex => (
+        MATRIX_INDICES_ARRAY.map(xIndex => {
 
             const fill = bitmap[yIndex % MATRIX_LENGTH][xIndex],
 
@@ -117,5 +116,5 @@ export const getBitmapMatrixForFace = ({
                 polygonPoints
             }
         })
-    })
+    ))
 }

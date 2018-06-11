@@ -11,65 +11,38 @@ import { getBitmapMatrixForFace } from './helpers/bitmapHelper'
 
 import { BITMAPS } from '../../../constants/bitmaps'
 
-const propTypes = {
-    isFloor: PropTypes.bool,
-    isLeft: PropTypes.bool,
-    face: PropTypes.string.isRequired,
-    bitmapKey: PropTypes.string.isRequired,
-    slantDirection: PropTypes.string,
+const pointPropType = PropTypes.shape({
+        x: PropTypes.number.isRequired,
+        y: PropTypes.number.isRequired
+    }).isRequired,
 
-    // Needed to render faces of dynamic height.
-    zIndex: PropTypes.number,
+    edgePropType = PropTypes.shape({
+        front: pointPropType,
+        back: pointPropType
+    }).isRequired,
 
-    cubeCorners: PropTypes.shape({
-        tile: PropTypes.shape({
-            left: PropTypes.shape({
-                front: PropTypes.shape({
-                    x: PropTypes.number.isRequired,
-                    y: PropTypes.number.isRequired
-                }),
-                back: PropTypes.shape({
-                    x: PropTypes.number.isRequired,
-                    y: PropTypes.number.isRequired
-                })
-            }).isRequired,
-            right: PropTypes.shape({
-                front: PropTypes.shape({
-                    x: PropTypes.number.isRequired,
-                    y: PropTypes.number.isRequired
-                }),
-                back: PropTypes.shape({
-                    x: PropTypes.number.isRequired,
-                    y: PropTypes.number.isRequired
-                })
-            }).isRequired
-        }),
-        base: PropTypes.shape({
-            left: PropTypes.shape({
-                front: PropTypes.shape({
-                    x: PropTypes.number.isRequired,
-                    y: PropTypes.number.isRequired
-                }),
-                back: PropTypes.shape({
-                    x: PropTypes.number.isRequired,
-                    y: PropTypes.number.isRequired
-                })
-            }).isRequired,
-            right: PropTypes.shape({
-                front: PropTypes.shape({
-                    x: PropTypes.number.isRequired,
-                    y: PropTypes.number.isRequired
-                }),
-                back: PropTypes.shape({
-                    x: PropTypes.number.isRequired,
-                    y: PropTypes.number.isRequired
-                })
-            }).isRequired
-        })
-    }),
-    stageWidth: PropTypes.number.isRequired,
-    stageHeight: PropTypes.number.isRequired
-}
+    facePropType = PropTypes.shape({
+        left: edgePropType,
+        right: edgePropType
+    }).isRequired,
+
+    propTypes = {
+        isFloor: PropTypes.bool,
+        isLeft: PropTypes.bool,
+        face: PropTypes.string.isRequired,
+        bitmapKey: PropTypes.string.isRequired,
+        slantDirection: PropTypes.string,
+
+        // Needed to render faces of dynamic height.
+        zIndex: PropTypes.number,
+
+        cubeCorners: PropTypes.shape({
+            tile: facePropType,
+            base: facePropType
+        }).isRequired,
+        stageWidth: PropTypes.number.isRequired,
+        stageHeight: PropTypes.number.isRequired
+    }
 
 const CubeFace = ({
 
@@ -85,10 +58,7 @@ const CubeFace = ({
 
 }) => {
 
-    const bitmap = BITMAPS[bitmapKey],
-
-        // Determine dynamic height of front and side faces.
-        zHeight = isFloor ? zIndex : (20 - zIndex)
+    const bitmap = BITMAPS[bitmapKey]
 
     let faceString = face,
         polygonPoints,
@@ -122,7 +92,8 @@ const CubeFace = ({
         bitmapMatrix = getBitmapMatrixForFace({
             bitmap,
             polygonPoints,
-            zHeight
+            zIndex,
+            isFloor
         })
 
     } else if (face === 'side') {
@@ -138,7 +109,8 @@ const CubeFace = ({
         bitmapMatrix = getBitmapMatrixForFace({
             bitmap,
             polygonPoints,
-            zHeight
+            zIndex,
+            isFloor
         })
     }
 
