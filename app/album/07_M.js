@@ -184,7 +184,7 @@ module.exports = {
                 howie: {
                     maskedUsher: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'checking watch'
                     }
                 }
@@ -207,7 +207,7 @@ module.exports = {
                 howie: {
                     maskedUsher: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'looking at Bennett'
                     }
                 }

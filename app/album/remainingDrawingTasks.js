@@ -247,8 +247,8 @@ module.exports = [
     },
     {
         taskName: `Playground (Didi)`,
-        workedHours: 0,
-        neededHours: 5
+        workedHours: 2,
+        neededHours: 3
     },
     {
         taskName: `Valley overlooking freeway (Willy)`,

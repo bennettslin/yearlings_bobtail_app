@@ -119,14 +119,14 @@ module.exports = {
                 howie: {
                     gangbanger: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'side angle, pointing at shoe, pushing Willy'
                     }
                 },
                 tomer: {
                     gangbanger: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'pulling bottle from cart, about to strike, threatening'
                     }
                 }
