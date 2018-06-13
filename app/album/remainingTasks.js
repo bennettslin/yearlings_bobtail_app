@@ -9,6 +9,7 @@ module.exports = [
         workedHours: 0,
         neededHours: 15
     },
+
     {
         taskName: `System for showing sun and moon for each scene.`,
         workedHours: 0,
