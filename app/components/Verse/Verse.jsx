@@ -78,7 +78,7 @@ class Verse extends Component {
         return componentShouldUpdate
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (!this.props.isOnCursor) {
             this._handleVerseElementSelectOrSlide(nextProps)
         }

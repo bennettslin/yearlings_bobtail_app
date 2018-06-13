@@ -52,7 +52,7 @@ class DotsSlideSelect extends Component {
      * upon which to update are a subset of those in dots section.
      */
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         // Also deinteractivate if dots section has been hidden.
         if (!nextProps.selectedDotsIndex ||
             (!nextProps.hasInteractivatedDotText && this.props.hasInteractivatedDotText)) {

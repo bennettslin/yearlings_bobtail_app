@@ -69,7 +69,7 @@ class LyricColumn extends Component {
         return componentShouldUpdate
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (!this.props.appMounted && nextProps.appMounted) {
             this.props.handleScrollAfterLyricRerender()
         }

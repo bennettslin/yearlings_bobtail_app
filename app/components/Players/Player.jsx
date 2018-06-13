@@ -109,7 +109,7 @@ class Player extends Component {
         )
     }
 
-    componentWillUpdate(nextProps) {
+    UNSAFE_componentWillUpdate(nextProps) {
         const { props } = this,
             selectedChanged = nextProps.isSelected !== props.isSelected,
             isPlayingChanged = nextProps.isPlaying !== props.isPlaying

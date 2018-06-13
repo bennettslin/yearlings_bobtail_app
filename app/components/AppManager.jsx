@@ -84,7 +84,7 @@ class App extends Component {
         }
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         // For dev purposes.
         this._assignLogFunctions()
 
@@ -141,7 +141,7 @@ class App extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
 
         if (nextProps.selectedSongIndex !== this.props.selectedSongIndex) {
             this._songIndexDidChange()

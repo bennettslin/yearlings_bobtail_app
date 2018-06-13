@@ -1,5 +1,10 @@
 module.exports = [
     {
+        taskName: `Fix UNSAFE lifecycle methods.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `highlighting annotation title doesn't have transition?`,
         workedHours: 0,
         neededHours: 1

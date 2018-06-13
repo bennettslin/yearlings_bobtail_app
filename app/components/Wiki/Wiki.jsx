@@ -73,7 +73,7 @@ class WikiSection extends Component {
         return componentShouldUpdate
     }
 
-    componentWillReceiveProps({ selectedWikiUrl }) {
+    UNSAFE_componentWillReceiveProps({ selectedWikiUrl }) {
         this._onWikiUrlReceived(selectedWikiUrl)
     }
 

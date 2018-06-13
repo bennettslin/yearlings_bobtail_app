@@ -84,7 +84,7 @@ class EventManager extends Component {
         this.focusBody()
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
 
         // If annotation is selected or accessed in carousel, scroll to it.
         if (nextProps.appMounted && !this.props.appMounted) {

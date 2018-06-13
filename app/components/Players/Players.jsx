@@ -40,11 +40,11 @@ class Players extends Component {
         }
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         this._updateCanPlayThroughsObject(this.props)
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         /**
          * If the bit number has changed, convert it and store the updated
          * object that keeps track of each player's canPlayThrough status, then

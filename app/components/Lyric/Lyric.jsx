@@ -46,7 +46,7 @@ class Lyric extends Component {
      * upon which to update are a subset of those in lyric column.
      */
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         if (nextProps.isTransitioningHeight && !this.props.isTransitioningHeight) {
 
             /**

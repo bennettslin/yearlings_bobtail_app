@@ -78,7 +78,7 @@ class RootManager extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         // If slider touch ended, then tell dom manager.
         if (!nextProps.isSliderTouched && this.props.isSliderTouched) {
 

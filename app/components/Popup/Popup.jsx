@@ -35,7 +35,7 @@ class Popup extends Component {
         }
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         /**
          * If now visible, it should now also be displayed, but if now
          * invisible, don't change to undisplayed just yet.
