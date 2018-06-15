@@ -242,8 +242,8 @@ module.exports = [
      */
     {
         taskName: `North Hollywood houses (Didi, Willy)`,
-        workedHours: 0,
-        neededHours: 5
+        workedHours: 3,
+        neededHours: 4
     },
     {
         taskName: `Playground (Didi)`,

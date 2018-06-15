@@ -157,7 +157,7 @@ module.exports = {
                 },
                 mara: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     realHeight: `5'0"`,
                     description: 'standing'
                 },

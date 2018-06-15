@@ -68,7 +68,7 @@ module.exports = {
                 mara: {
                     gopi: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'dancing'
                     }
                 },
@@ -151,7 +151,7 @@ module.exports = {
                 amy: {
                     doctor: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'pulling sheet over Bennett'
                     }
                 }
