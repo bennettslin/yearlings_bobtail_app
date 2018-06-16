@@ -6,6 +6,7 @@ import Pixel from './Pixel/Pixel'
 
 import { getMaxFaceHeight,
          doRenderFace,
+         getIsSideFace,
          getIsTileFace } from './helpers/faceHelper'
 
 import { getPolygonPoints,
@@ -13,7 +14,9 @@ import { getPolygonPoints,
 
 import { getBitmapMatrix } from './helpers/bitmapHelper'
 
+
 import { BITMAPS } from '../../../../constants/bitmaps'
+import { CUBE_X_AXIS_LENGTH } from '../../../../constants/stage'
 
 const pointPropType = PropTypes.shape({
         x: PropTypes.number.isRequired,
@@ -31,14 +34,16 @@ const pointPropType = PropTypes.shape({
     }).isRequired,
 
     propTypes = {
-        isFloor: PropTypes.bool,
-        isLeft: PropTypes.bool,
         face: PropTypes.string.isRequired,
         bitmapKey: PropTypes.string.isRequired,
+
+        isFloor: PropTypes.bool,
         slantDirection: PropTypes.string,
 
+        xIndex: PropTypes.number.isRequired,
+
         // Needed to render faces of dynamic height.
-        zIndex: PropTypes.number,
+        zIndex: PropTypes.number.isRequired,
 
         cubeCorners: PropTypes.shape({
             tile: facePropType,
@@ -50,11 +55,11 @@ const pointPropType = PropTypes.shape({
 
 const Face = ({
 
-    isFloor,
-    isLeft,
     face,
     bitmapKey,
+    isFloor,
     slantDirection,
+    xIndex,
     zIndex,
     cubeCorners,
     stageWidth,
@@ -67,9 +72,19 @@ const Face = ({
         zIndex
     })
 
+    let sideDirection = ''
+
+    // If not slanted, tell side face which side of the stage it's on.
+    if (!slantDirection && getIsSideFace(face)) {
+        sideDirection = xIndex < CUBE_X_AXIS_LENGTH / 2 ?
+            'left' : 'right'
+    }
+
     // Determine whether we need to render this face at all.
     if (!doRenderFace({
         face,
+        xIndex,
+        sideDirection,
         maxFaceHeight
     })) {
         return null
@@ -79,7 +94,7 @@ const Face = ({
         polygonPoints = getPolygonPoints({
             face,
             isFloor,
-            isLeft,
+            sideDirection,
             slantDirection,
             cubeCorners,
             stageWidth,

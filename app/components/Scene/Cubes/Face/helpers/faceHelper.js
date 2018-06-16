@@ -1,4 +1,8 @@
-import { CUBE_Z_AXIS_LENGTH } from '../../../../../constants/stage'
+import { CUBE_X_AXIS_LENGTH,
+         CUBE_Z_AXIS_LENGTH } from '../../../../../constants/stage'
+
+const midXIndex = CUBE_X_AXIS_LENGTH / 2,
+    midZIndex = CUBE_Z_AXIS_LENGTH / 2
 
 export const getIsTileFace = (face) => {
     return face === 'tile'
@@ -28,12 +32,26 @@ export const getMaxFaceHeight = ({
 
 export const doRenderFace = ({
     face,
+    xIndex,
+    sideDirection,
     maxFaceHeight
 }) => {
-    /**
-     * Only render if it's a tile face below the halfway zIndex, or a face with height.
-     */
-    return getIsTileFace(face) ?
-        maxFaceHeight < (CUBE_Z_AXIS_LENGTH / 2) :
-        maxFaceHeight
+
+    // If it's a tile face, render if it's below the halfway zIndex.
+    if (getIsTileFace(face)) {
+        return maxFaceHeight < midZIndex
+    }
+
+    // If it's a side face in a middle cube, don't render.
+    if (sideDirection) {
+        if (
+            (sideDirection === 'left' && xIndex === midXIndex - 1) ||
+            (sideDirection === 'right' && xIndex === midXIndex)
+        ) {
+            return false
+        }
+    }
+
+    // Otherwise, render if it has any height at all.
+    return Boolean(maxFaceHeight)
 }

@@ -9,8 +9,6 @@ import Face from './Face/Face'
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../sceneHelper'
 
-import { CUBE_X_AXIS_LENGTH } from '../../../constants/stage'
-
 class Cube extends Component {
 
     static propTypes = {
@@ -45,20 +43,18 @@ class Cube extends Component {
     }
 
     render() {
-        const { slantDirection,
-                xIndex,
-                yIndex,
+        const { yIndex,
 
                 ...other } = this.props,
 
             { isFloor,
-              zIndex } = other,
+              xIndex,
+              zIndex,
+              slantDirection } = other,
 
             cubeCorners = getStageCubeCornerPercentages({
                 xIndex, yIndex, zIndex, isFloor, slantDirection
-            }),
-
-            isLeft = xIndex < CUBE_X_AXIS_LENGTH / 2;
+            })
 
         return (
             <g
@@ -71,20 +67,16 @@ class Cube extends Component {
                 <Face {...other}
                     face="tile"
                     cubeCorners={cubeCorners}
-                    slantDirection={slantDirection}
                 />
 
                 <Face {...other}
                     face="side"
-                    isLeft={isLeft}
                     cubeCorners={cubeCorners}
-                    slantDirection={slantDirection}
                 />
 
                 <Face {...other}
                     face="front"
                     cubeCorners={cubeCorners}
-                    slantDirection={slantDirection}
                 />
 
             </g>

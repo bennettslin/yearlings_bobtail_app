@@ -53,7 +53,7 @@ export const getPolygonPointsForFrontFace = ({
 
 export const getPolygonPointsForSideFace = ({
 
-    isLeft = true,
+    sideDirection,
     slantDirection,
     cubeCorners,
     stageWidth,
@@ -75,9 +75,11 @@ export const getPolygonPointsForSideFace = ({
             [bs.left.back, bs.right.back, tl.right.back, tl.left.back]
 
     } else {
-        const side = isLeft ? 'right' : 'left'
+        // Render right face if cube is on left side of stage, and vice versa.
+        const side = sideDirection === 'left' ?
+            'right' : 'left'
 
-        if (isLeft) {
+        if (side === 'right') {
             cornerOrder = isFloor ?
                 [tl[side].front, tl[side].back, bs[side].back, bs[side].front] :
                 [bs[side].front, bs[side].back, tl[side].back, tl[side].front]
@@ -131,7 +133,7 @@ export const getPolygonPointsForTileFace = ({
 export const getPolygonPoints = ({
     face,
     isFloor,
-    isLeft,
+    sideDirection,
     slantDirection,
     cubeCorners,
     stageWidth,
@@ -162,7 +164,7 @@ export const getPolygonPoints = ({
 
         return getPolygonPointsForSideFace({
             isFloor,
-            isLeft,
+            sideDirection,
             slantDirection,
             cubeCorners,
             stageWidth,
