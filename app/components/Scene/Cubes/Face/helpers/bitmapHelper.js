@@ -8,7 +8,7 @@ const MATRIX_LENGTH = 8,
 
 export const getBitmapMatrix = ({
 
-    bitmap,
+    pixels,
     face,
     polygonPoints,
     maxFaceHeight,
@@ -120,7 +120,7 @@ export const getBitmapMatrix = ({
                     yIndex % MATRIX_LENGTH :
                     MATRIX_LENGTH - yIndex % MATRIX_LENGTH - 1,
 
-                fill = bitmap.pixels[moduloYIndex][xIndex]
+                fill = pixels[moduloYIndex][xIndex]
 
             if (fill === null) {
                 // This pixel location will just show the base colour.

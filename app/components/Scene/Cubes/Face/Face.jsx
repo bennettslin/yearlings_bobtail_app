@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Pixel from './Pixel/Pixel'
+
 import { getMaxFaceHeight,
          doRenderFace,
          getIsTileFace } from './helpers/faceHelper'
@@ -84,10 +86,12 @@ const Face = ({
             stageHeight
         }),
 
-        bitmap = BITMAPS[bitmapKey],
+        // Get base colour and pixel map.
+        { base, pixels } = BITMAPS[bitmapKey],
+
         bitmapMatrix = getBitmapMatrix({
             face,
-            bitmap,
+            pixels,
             polygonPoints,
             maxFaceHeight,
             isFloor
@@ -109,13 +113,10 @@ const Face = ({
             `Face__${faceString}`
         )}>
             {/* Single polygon for the base colour. */}
-            <polygon
-                className={cx(
-                    'Face__baseColour',
-                    'Pixel'
-                )}
-                fill={`#${bitmap.base}`}
-                points={polygonPointsString}
+            <Pixel
+                uniqueId="base"
+                fill={base}
+                polygonPointsString={polygonPointsString}
             />
 
             {bitmapMatrix.map((matrixRow, yIndex) => {
@@ -127,23 +128,12 @@ const Face = ({
                         return null
                     }
 
-                    const uniqueId = `x${xIndex}y${yIndex}`,
-                        { fill,
-                          polygonPoints: pixelPolygonPoints } = matrixObject,
-
-                        fillString = `#${fill}`
+                    const uniqueId = `y${yIndex}x${xIndex}`
 
                     return (
-                        <polygon
+                        <Pixel {...matrixObject}
                             key={uniqueId}
-                            className={cx(
-                                'Pixel',
-                                `Pixel__${uniqueId}`
-                            )}
-                            fill={fillString}
-                            points={getPolygonPointsString(
-                                pixelPolygonPoints
-                            )}
+                            uniqueId={uniqueId}
                         />
                     )
                 })
