@@ -9,6 +9,15 @@ import Face from './Face/Face'
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../sceneHelper'
 
+import { getMaxFaceHeight,
+         getSideDirection,
+         doRenderFrontOrSideFace,
+         doRenderTileFace } from './Face/helpers/faceHelper'
+
+import { FRONT,
+         SIDE,
+         TILE } from '../constants'
+
 class Cube extends Component {
 
     static propTypes = {
@@ -33,6 +42,7 @@ class Cube extends Component {
                     'xIndex',
                     'yIndex',
                     'zIndex',
+                    'tilesMeet',
                     'bitmapKey',
                     'slantDirection',
                     'stageWidth',
@@ -53,9 +63,44 @@ class Cube extends Component {
               zIndex,
               slantDirection } = other,
 
+            maxFaceHeight = getMaxFaceHeight({
+                isFloor,
+                zIndex
+            }),
+
+            sideDirection = getSideDirection({
+                xIndex,
+                slantDirection
+            }),
+
+            doRenderFront = doRenderFrontOrSideFace({
+                maxFaceHeight
+            }),
+
+            doRenderSide = doRenderFrontOrSideFace({
+                xIndex,
+                sideDirection,
+                maxFaceHeight
+            }),
+
+            // Also don't render tiles if ceiling and floor tiles meet.
+            doRenderTile = !tilesMeet && doRenderTileFace({
+                maxFaceHeight
+            })
+
+        if (!doRenderTile && !doRenderFront && !doRenderSide) {
+            return null
+        }
+
+        const
             cubeCorners = getStageCubeCornerPercentages({
                 xIndex, yIndex, zIndex, isFloor, slantDirection
-            })
+            }),
+
+            faceProps = {
+                maxFaceHeight,
+                cubeCorners
+            }
 
         return (
             <g
@@ -64,25 +109,24 @@ class Cube extends Component {
                     `Cube__z${parseInt(zIndex)}`
                 )}
             >
-
-                {/* Don't render tiles if ceiling and floor tiles meet. */}
-                {!tilesMeet && (
-                    <Face {...other}
-                        face="tile"
-                        cubeCorners={cubeCorners}
+                {doRenderTile && (
+                    <Face {...other} {...faceProps}
+                        face={TILE}
                     />
                 )}
 
-                <Face {...other}
-                    face="side"
-                    cubeCorners={cubeCorners}
-                />
+                {doRenderSide && (
+                    <Face {...other} {...faceProps}
+                        face={SIDE}
+                        sideDirection={sideDirection}
+                    />
+                )}
 
-                <Face {...other}
-                    face="front"
-                    cubeCorners={cubeCorners}
-                />
-
+                {doRenderFront && (
+                    <Face {...other} {...faceProps}
+                        face={FRONT}
+                    />
+                )}
             </g>
         )
     }

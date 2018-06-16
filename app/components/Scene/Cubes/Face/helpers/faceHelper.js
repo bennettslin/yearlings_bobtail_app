@@ -30,17 +30,26 @@ export const getMaxFaceHeight = ({
     )
 }
 
-export const doRenderFace = ({
-    face,
+export const getSideDirection = ({
+    xIndex,
+    slantDirection
+}) => {
+
+    // If slanted, then not applicable.
+    if (slantDirection) {
+        return ''
+
+    } else {
+        return xIndex < midXIndex ?
+            'left' : 'right'
+    }
+}
+
+export const doRenderFrontOrSideFace = ({
     xIndex,
     sideDirection,
     maxFaceHeight
 }) => {
-
-    // If it's a tile face, render if it's below the halfway zIndex.
-    if (getIsTileFace(face)) {
-        return maxFaceHeight < midZIndex
-    }
 
     // If it's a side face in a middle cube, don't render.
     if (sideDirection) {
@@ -52,6 +61,13 @@ export const doRenderFace = ({
         }
     }
 
-    // Otherwise, render if it has any height at all.
+    // Otherwise, if front or side, render if it has any height at all.
     return Boolean(maxFaceHeight)
+}
+
+export const doRenderTileFace = ({
+    maxFaceHeight
+}) => {
+    // Render if it's below the halfway zIndex.
+    return maxFaceHeight < midZIndex
 }

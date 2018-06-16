@@ -4,10 +4,7 @@ import cx from 'classnames'
 
 import Pixel from './Pixel/Pixel'
 
-import { getMaxFaceHeight,
-         doRenderFace,
-         getIsSideFace,
-         getIsTileFace } from './helpers/faceHelper'
+import { getIsTileFace } from './helpers/faceHelper'
 
 import { getPolygonPoints,
          getPolygonPointsString } from './helpers/polygonHelper'
@@ -16,7 +13,6 @@ import { getBitmapMatrix } from './helpers/bitmapHelper'
 
 
 import { BITMAPS } from '../../../../constants/bitmaps'
-import { CUBE_X_AXIS_LENGTH } from '../../../../constants/stage'
 
 const pointPropType = PropTypes.shape({
         x: PropTypes.number.isRequired,
@@ -39,16 +35,14 @@ const pointPropType = PropTypes.shape({
 
         isFloor: PropTypes.bool,
         slantDirection: PropTypes.string,
-
-        xIndex: PropTypes.number.isRequired,
-
-        // Needed to render faces of dynamic height.
-        zIndex: PropTypes.number.isRequired,
+        sideDirection: PropTypes.string,
+        maxFaceHeight: PropTypes.number.isRequired,
 
         cubeCorners: PropTypes.shape({
             tile: facePropType,
             base: facePropType
         }).isRequired,
+
         stageWidth: PropTypes.number.isRequired,
         stageHeight: PropTypes.number.isRequired
     }
@@ -59,36 +53,13 @@ const Face = ({
     bitmapKey,
     isFloor,
     slantDirection,
-    xIndex,
-    zIndex,
+    sideDirection,
+    maxFaceHeight,
     cubeCorners,
     stageWidth,
     stageHeight
 
 }) => {
-
-    const maxFaceHeight = getMaxFaceHeight({
-        isFloor,
-        zIndex
-    })
-
-    let sideDirection = ''
-
-    // If not slanted, tell side face which side of the stage it's on.
-    if (!slantDirection && getIsSideFace(face)) {
-        sideDirection = xIndex < CUBE_X_AXIS_LENGTH / 2 ?
-            'left' : 'right'
-    }
-
-    // Determine whether we need to render this face at all.
-    if (!doRenderFace({
-        face,
-        xIndex,
-        sideDirection,
-        maxFaceHeight
-    })) {
-        return null
-    }
 
     const
         polygonPoints = getPolygonPoints({
