@@ -1,3 +1,7 @@
+import { getIsFrontFace,
+         getIsSideFace,
+         getIsTileFace } from './faceHelper'
+
 export const getPolygonPointsString = (polygonPointsArray) => {
     return polygonPointsArray.map(({ x, y }) => {
         return `${x.toFixed(2)},${y.toFixed(2)}`
@@ -122,4 +126,47 @@ export const getPolygonPointsForTileFace = ({
     return cornerOrder.map(corner => (
         _getPolygonPoint(corner, stageWidth, stageHeight)
     ))
+}
+
+export const getPolygonPoints = ({
+    face,
+    isFloor,
+    isLeft,
+    slantDirection,
+    cubeCorners,
+    stageWidth,
+    stageHeight
+}) => {
+
+    if (getIsTileFace(face)) {
+
+        return getPolygonPointsForTileFace({
+            isFloor,
+            slantDirection,
+            cubeCorners,
+            stageWidth,
+            stageHeight
+        })
+
+    } else if (getIsFrontFace(face)) {
+
+        return getPolygonPointsForFrontFace({
+            isFloor,
+            slantDirection,
+            cubeCorners,
+            stageWidth,
+            stageHeight
+        })
+
+    } else if (getIsSideFace(face)) {
+
+        return getPolygonPointsForSideFace({
+            isFloor,
+            isLeft,
+            slantDirection,
+            cubeCorners,
+            stageWidth,
+            stageHeight
+        })
+    }
 }

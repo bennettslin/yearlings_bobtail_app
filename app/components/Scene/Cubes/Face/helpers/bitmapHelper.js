@@ -1,12 +1,15 @@
-import { getArrayOfLength } from '../../../../helpers/generalHelper'
+import { getIsTileFace } from './faceHelper'
+
+import { getArrayOfLength } from '../../../../../helpers/generalHelper'
 
 const MATRIX_LENGTH = 8,
     MATRIX_INDICES_ARRAY = getArrayOfLength({ length: MATRIX_LENGTH }),
     COORDINATES_ARRAY = getArrayOfLength({ length: MATRIX_LENGTH + 1 })
 
-export const getBitmapMatrixForFace = ({
+export const getBitmapMatrix = ({
 
     bitmap,
+    face,
     polygonPoints,
     maxFaceHeight,
     isFloor
@@ -23,14 +26,14 @@ export const getBitmapMatrixForFace = ({
         bottomLeft = polygonPoints[3],
 
         // Determine dynamic height of front and side faces.
-        isStaticHeight = isNaN(maxFaceHeight),
+        isTileFace = getIsTileFace(face),
 
         /**
          * Determine the number of pixels that make up the height. If it's a
          * tile face, this value is constant. If it's a front or side face,
          * then this value is determined by the maximum face height.
          */
-        matrixHeightLength = isStaticHeight ?
+        matrixHeightLength = isTileFace ?
             MATRIX_LENGTH :
 
             /**
@@ -45,7 +48,7 @@ export const getBitmapMatrixForFace = ({
         rightmostXIncrement = (bottomRight.x - topRight.x) / matrixHeightLength,
         rightmostYIncrement = (bottomRight.y - topRight.y) / matrixHeightLength,
 
-        coordinatesHeightArray = isStaticHeight ?
+        coordinatesHeightArray = isTileFace ?
             COORDINATES_ARRAY :
             getArrayOfLength({ length: Math.ceil(matrixHeightLength) + 1 }),
 
@@ -105,7 +108,7 @@ export const getBitmapMatrixForFace = ({
             }))
         }),
 
-        bitmapHeightArray = isStaticHeight ?
+        bitmapHeightArray = isTileFace ?
             MATRIX_INDICES_ARRAY :
             getArrayOfLength({ length: Math.ceil(matrixHeightLength) })
 

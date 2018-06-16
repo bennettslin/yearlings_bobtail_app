@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import CubeFace from './CubeFace'
+import Face from './Face/Face'
 
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../sceneHelper'
@@ -68,20 +68,20 @@ class Cube extends Component {
                 )}
             >
 
-                <CubeFace {...other}
+                <Face {...other}
                     face="tile"
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
                 />
 
-                <CubeFace {...other}
+                <Face {...other}
                     face="side"
                     isLeft={isLeft}
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
                 />
 
-                <CubeFace {...other}
+                <Face {...other}
                     face="front"
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
