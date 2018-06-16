@@ -66,8 +66,12 @@ export const doRenderFrontOrSideFace = ({
 }
 
 export const doRenderTileFace = ({
-    maxFaceHeight
+    maxFaceHeight,
+    tilesMeet
 }) => {
-    // Render if it's below the halfway zIndex.
-    return maxFaceHeight < midZIndex
+    // Render if ceiling and floor tiles do not meet and...
+    return !tilesMeet &&
+
+        // ... if tile is below the halfway zIndex.
+        maxFaceHeight < midZIndex
 }

@@ -83,8 +83,8 @@ class Cube extends Component {
                 maxFaceHeight
             }),
 
-            // Also don't render tiles if ceiling and floor tiles meet.
-            doRenderTile = !tilesMeet && doRenderTileFace({
+            doRenderTile = doRenderTileFace({
+                tilesMeet,
                 maxFaceHeight
             })
 
