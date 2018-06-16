@@ -16,6 +16,7 @@ class Cube extends Component {
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
         zIndex: PropTypes.number.isRequired,
+        tilesMeet: PropTypes.bool.isRequired,
         bitmapKey: PropTypes.string.isRequired,
         slantDirection: PropTypes.string.isRequired,
         stageWidth: PropTypes.number.isRequired,
@@ -44,7 +45,7 @@ class Cube extends Component {
 
     render() {
         const { yIndex,
-
+                tilesMeet,
                 ...other } = this.props,
 
             { isFloor,
@@ -64,10 +65,13 @@ class Cube extends Component {
                 )}
             >
 
-                <Face {...other}
-                    face="tile"
-                    cubeCorners={cubeCorners}
-                />
+                {/* Don't render tiles if ceiling and floor tiles meet. */}
+                {!tilesMeet && (
+                    <Face {...other}
+                        face="tile"
+                        cubeCorners={cubeCorners}
+                    />
+                )}
 
                 <Face {...other}
                     face="side"

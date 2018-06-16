@@ -15,28 +15,32 @@ import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
 import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
 
-const propTypes = {
-    yIndex: PropTypes.number.isRequired,
-    isFloor: PropTypes.bool,
-    zIndices: PropTypes.arrayOf(
+const zIndicesPropTypes = PropTypes.arrayOf(
         PropTypes.arrayOf(
             PropTypes.number.isRequired
         ).isRequired
     ).isRequired,
-    bitmapKeys: PropTypes.arrayOf(
-        PropTypes.arrayOf(
-            PropTypes.string.isRequired
-        ).isRequired
-    ).isRequired,
-    slantDirection: PropTypes.string.isRequired,
-    stageWidth: PropTypes.number.isRequired,
-    stageHeight: PropTypes.number.isRequired
-}
+
+    propTypes = {
+        yIndex: PropTypes.number.isRequired,
+        isFloor: PropTypes.bool,
+        zIndices: zIndicesPropTypes,
+        oppositeZIndices: zIndicesPropTypes,
+        bitmapKeys: PropTypes.arrayOf(
+            PropTypes.arrayOf(
+                PropTypes.string.isRequired
+            ).isRequired
+        ).isRequired,
+        slantDirection: PropTypes.string.isRequired,
+        stageWidth: PropTypes.number.isRequired,
+        stageHeight: PropTypes.number.isRequired
+    }
 
 const Cubes = ({
 
     yIndex,
     zIndices,
+    oppositeZIndices,
     bitmapKeys,
     isFloor,
     slantDirection,
@@ -77,6 +81,13 @@ const Cubes = ({
                         zIndices, xIndex, yIndex
                     ),
 
+                    oppositeZIndex = getValueInAbridgedMatrix(
+                        oppositeZIndices, xIndex, yIndex
+                    ),
+
+                    // Ceiling and floor tiles meet.
+                    tilesMeet = zIndex === oppositeZIndex,
+
                     bitmapKey = getValueInAbridgedMatrix(
                         bitmapKeys, xIndex, yIndex
                     )
@@ -87,6 +98,7 @@ const Cubes = ({
                         xIndex={xIndex}
                         yIndex={invertedYIndex}
                         zIndex={zIndex}
+                        tilesMeet={tilesMeet}
                         bitmapKey={bitmapKey}
                         isFloor={isFloor}
                         slantDirection={slantDirection}

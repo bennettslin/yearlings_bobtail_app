@@ -72,6 +72,7 @@ const SceneAction = ({
                         yIndex={yIndex}
                         bitmapKeys={ceilingBitmapKeys}
                         zIndices={ceilingZIndices}
+                        oppositeZIndices={floorZIndices}
                         slantDirection={slantDirection}
                     />
                 ), (
@@ -81,6 +82,7 @@ const SceneAction = ({
                         yIndex={yIndex}
                         bitmapKeys={floorBitmapKeys}
                         zIndices={floorZIndices}
+                        oppositeZIndices={ceilingZIndices}
                         slantDirection={slantDirection}
                     />
                 ), presence && (
