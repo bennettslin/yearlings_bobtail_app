@@ -10,6 +10,7 @@ import { getPolygonPointsForTileFace,
 import { getBitmapMatrixForFace } from './helpers/bitmapHelper'
 
 import { BITMAPS } from '../../../constants/bitmaps'
+import { CUBE_Z_AXIS_LENGTH } from '../../../constants/stage'
 
 const pointPropType = PropTypes.shape({
         x: PropTypes.number.isRequired,
@@ -58,13 +59,37 @@ const CubeFace = ({
 
 }) => {
 
+    const
+
+        /**
+         * Get the maximum height of the face, based on the cube's zIndex. If
+         * negative, make it zero.
+         */
+        maxFaceHeight = Math.max(
+            isFloor ? zIndex : (CUBE_Z_AXIS_LENGTH - zIndex),
+            0
+        ),
+
+        isTile = face === 'tile',
+
+        /**
+         * Only render if it's a tile face below the halfway zIndex, or a face with height.
+         */
+        doRender = isTile ?
+            maxFaceHeight < (CUBE_Z_AXIS_LENGTH / 2) :
+            maxFaceHeight
+
+    if (!doRender) {
+        return null
+    }
+
     const bitmap = BITMAPS[bitmapKey]
 
     let faceString = face,
         polygonPoints,
         bitmapMatrix
 
-    if (face === 'tile') {
+    if (isTile) {
         faceString = isFloor ? 'floorTile' : 'ceilingTile'
 
         polygonPoints = getPolygonPointsForTileFace({
@@ -92,7 +117,7 @@ const CubeFace = ({
         bitmapMatrix = getBitmapMatrixForFace({
             bitmap,
             polygonPoints,
-            zIndex,
+            maxFaceHeight,
             isFloor
         })
 
@@ -109,20 +134,38 @@ const CubeFace = ({
         bitmapMatrix = getBitmapMatrixForFace({
             bitmap,
             polygonPoints,
-            zIndex,
+            maxFaceHeight,
             isFloor
         })
     }
 
+    const polygonPointsString = getPolygonPointsString(polygonPoints)
+
     return (
         <g className={cx(
             'CubeFace',
+
+            // This is just used to make it easier to find in the DOM.
             `CubeFace__${faceString}`
         )}>
-            {/* Side will not render bitmap, at least for now. */}
+            {/* Single polygon for the base colour. */}
+            <polygon
+                className={cx(
+                    'CubeFace__baseColour',
+                    'Pixel'
+                )}
+                fill={`#${bitmap.base}`}
+                points={polygonPointsString}
+            />
+
             {bitmapMatrix.map((matrixRow, yIndex) => {
 
                 return matrixRow.map((matrixObject, xIndex) => {
+
+                    if (matrixObject === null) {
+                        // This pixel location will just show the base colour.
+                        return null
+                    }
 
                     const uniqueId = `x${xIndex}y${yIndex}`,
                         { fill,
@@ -146,11 +189,13 @@ const CubeFace = ({
                 })
             })}
 
+            {/* Single polygon for the overlying shade. */}
             <polygon
                 className={cx(
-                    'CubeFace__stroke'
+                    'CubeFace__shade',
+                    `CubeFace__shade__${faceString}`
                 )}
-                points={getPolygonPointsString(polygonPoints)}
+                points={polygonPointsString}
             />
         </g>
     )

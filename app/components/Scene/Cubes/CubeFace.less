@@ -1,8 +1,17 @@
+// .Pixel {
+//     fill-opacity: 0.5;
+// }
+
+.CubeFace__shade {
+    // For now, we'll have a stroke on the shade face.
+    stroke: rgba(225, 225, 175, 0.5);
+}
+
 /**
  * In order from brightest to darkest.
  */
 
-.CubeFace__floorTile {
+.CubeFace__shade__floorTile {
 
     .Cube__z9
     &,
@@ -40,7 +49,7 @@
     }
 }
 
-.CubeFace__side {
+.CubeFace__shade__side {
 
     .Cube__x5
     &,
@@ -85,7 +94,7 @@
     }
 }
 
-.CubeFace__front {
+.CubeFace__shade__front {
 
     .Cubes__y0__back
     & {
@@ -118,14 +127,6 @@
     }
 }
 
-.CubeFace__ceilingTile {
+.CubeFace__shade__ceilingTile {
     fill: rgba(25, 25, 25, 0.45);
-}
-
-.CubeFace__stroke {
-    stroke: rgba(225, 225, 175, 0.5);
-}
-
-.Pixel {
-    fill-opacity: 0.9;
 }

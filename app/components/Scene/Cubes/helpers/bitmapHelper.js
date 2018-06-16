@@ -8,7 +8,7 @@ export const getBitmapMatrixForFace = ({
 
     bitmap,
     polygonPoints,
-    zIndex,
+    maxFaceHeight,
     isFloor
 
 }) => {
@@ -23,22 +23,21 @@ export const getBitmapMatrixForFace = ({
         bottomLeft = polygonPoints[3],
 
         // Determine dynamic height of front and side faces.
-        zHeight = isFloor ? zIndex : (20 - zIndex),
-        isStaticHeight = isNaN(zHeight),
+        isStaticHeight = isNaN(maxFaceHeight),
 
         /**
          * Determine the number of pixels that make up the height. If it's a
          * tile face, this value is constant. If it's a front or side face,
-         * then this value is determined by the zHeight.
+         * then this value is determined by the maximum face height.
          */
         matrixHeightLength = isStaticHeight ?
             MATRIX_LENGTH :
 
             /**
-             * When zHeight is 3, face is close enough to a square. It's not
-             * exact, but this is fine for now.
+             * When maximum face height is 3, face is close enough to a square.
+             * It's not exact, but this is fine for now.
              */
-            MATRIX_LENGTH * (zHeight / 3),
+            MATRIX_LENGTH * (maxFaceHeight / 3),
 
         // Establish values to increment side points.
         leftmostXIncrement = (bottomLeft.x - topLeft.x) / matrixHeightLength,
@@ -118,14 +117,19 @@ export const getBitmapMatrixForFace = ({
                     yIndex % MATRIX_LENGTH :
                     MATRIX_LENGTH - yIndex % MATRIX_LENGTH - 1,
 
-                fill = bitmap[moduloYIndex][xIndex],
+                fill = bitmap.pixels[moduloYIndex][xIndex]
 
-                polygonPoints = [
-                    coordinatesMatrix[yIndex][xIndex],
-                    coordinatesMatrix[yIndex][xIndex + 1],
-                    coordinatesMatrix[yIndex + 1][xIndex + 1],
-                    coordinatesMatrix[yIndex + 1][xIndex]
-                ]
+            if (fill === null) {
+                // This pixel location will just show the base colour.
+                return null
+            }
+
+            const polygonPoints = [
+                coordinatesMatrix[yIndex][xIndex],
+                coordinatesMatrix[yIndex][xIndex + 1],
+                coordinatesMatrix[yIndex + 1][xIndex + 1],
+                coordinatesMatrix[yIndex + 1][xIndex]
+            ]
 
             return {
                 fill,

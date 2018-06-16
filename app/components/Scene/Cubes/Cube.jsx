@@ -48,11 +48,11 @@ class Cube extends Component {
         const { slantDirection,
                 xIndex,
                 yIndex,
-                zIndex,
 
                 ...other } = this.props,
 
-            { isFloor } = other,
+            { isFloor,
+              zIndex } = other,
 
             cubeCorners = getStageCubeCornerPercentages({
                 xIndex, yIndex, zIndex, isFloor, slantDirection
@@ -77,14 +77,12 @@ class Cube extends Component {
                 <CubeFace {...other}
                     face="side"
                     isLeft={isLeft}
-                    zIndex={zIndex}
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
                 />
 
                 <CubeFace {...other}
                     face="front"
-                    zIndex={zIndex}
                     cubeCorners={cubeCorners}
                     slantDirection={slantDirection}
                 />
