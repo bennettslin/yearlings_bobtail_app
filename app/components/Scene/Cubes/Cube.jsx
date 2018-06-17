@@ -6,6 +6,7 @@ import cx from 'classnames'
 
 import Face from './Face/Face'
 
+import { getCharStringForNumber } from '../../../helpers/formatHelper'
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../sceneHelper'
 
@@ -128,8 +129,10 @@ class Cube extends Component {
         return (
             <g
                 className={cx(
-                    `Cube__x${xIndex}`,
-                    `Cube__z${parseInt(zIndex)}`
+                    `Cube__x${getCharStringForNumber(xIndex)}`,
+
+                    // Determines shading of floor tile.
+                    `Cube__z${getCharStringForNumber(parseInt(zIndex))}`
                 )}
             >
                 {doRenderTile && (

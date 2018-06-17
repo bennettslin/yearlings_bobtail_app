@@ -69,8 +69,8 @@ const Cubes = ({
     return (
         <DynamicSvg
             className={cx(
-                `Cubes__${isFloor ? 'floor' : 'ceiling'}`,
                 `Cubes__y${yIndex}${yIndex === 0 ? '__back' : ''}${yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''}`,
+                `Cubes__${isFloor ? 'floor' : 'ceiling'}`,
                 'absoluteFullContainer'
             )}
             viewBoxWidth={stageWidth}

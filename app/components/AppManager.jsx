@@ -25,6 +25,8 @@ import { CONTINUE,
          DISABLED,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
+
+import { CUBE_Y_AXIS_LENGTH } from '../constants/stage'
 import { getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex, getVerseIndexForNextScene } from '../helpers/dataHelper'
 import { getValueInBitNumber } from '../helpers/bitHelper'
 import { scrollElementIntoView } from '../helpers/domHelper'
@@ -1337,6 +1339,13 @@ class App extends Component {
         window.s = LogHelper.logSong.bind(LogHelper, this)
         window.v = LogHelper.logVerse.bind(LogHelper, this)
         window.t = LogHelper.logStorage.bind(LogHelper)
+
+        // Quick and easy way to get a particular cube.
+        window.getCube = (yIndex, xIndex, isFloor = true) => {
+            return document.querySelector(
+                `.Cubes__y${yIndex}${yIndex === 0 ? '__back' : ''}${yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''}.Cubes__${isFloor ? 'floor' : 'ceiling'} .Cube__x${xIndex}`
+            )
+        }
     }
 
     render() {
