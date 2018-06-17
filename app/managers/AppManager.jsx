@@ -27,6 +27,8 @@ import RenderManager from './RenderManager'
 import ScoreManager from './ScoreManager'
 import SceneManager from './SceneManager'
 import SliderManager from './SliderManager'
+import SongManager from './SongManager'
+import TimeManager from './TimeManager'
 import TipsManager from './TipsManager'
 import TitleManager from './TitleManager'
 import VerseManager from './VerseManager'
@@ -201,17 +203,6 @@ class App extends Component {
         return this.accessManager.accessNavSong(payload)
     }
 
-    /*********
-     * ADMIN *
-     *********/
-
-    toggleAdmin(selectedAdminIndex = (this.props.selectedAdminIndex + 1) % 2) {
-        // If no argument passed, then just toggle between on and off.
-
-        this.props.selectAdminIndex(selectedAdminIndex)
-        return selectedAdminIndex
-    }
-
     /**************
      * ANNOTATION *
      **************/
@@ -242,6 +233,14 @@ class App extends Component {
 
     selectCarouselNav(payload) {
         return this.carouselManager.selectCarouselNav(payload)
+    }
+
+    /*********
+     * DEBUG *
+     *********/
+
+    toggleAdmin(payload) {
+        this.debugManager.toggleAdmin(payload)
     }
 
     /********
@@ -878,7 +877,9 @@ class App extends Component {
                     accessNavSong={this.accessNavSong}
                     selectBookColumn={this.selectBookColumn}
                 />
-                <DebugManager />
+                <DebugManager
+                    getRef={node => (this.debugManager = node)}
+                />
                 <DotsManager
                     getRef={node => (this.dotsManager = node)}
                     accessDot={this.accessDot}
@@ -907,6 +908,12 @@ class App extends Component {
                     selectOrSlideVerseElement={this.selectOrSlideVerseElement}
                     selectTime={this.selectTime}
                     resetVerseBars={this.resetVerseBars}
+                />
+                <SongManager
+                    getRef={node => (this.songManager = node)}
+                />
+                <TimeManager
+                    getRef={node => (this.timeManager = node)}
                 />
                 <TipsManager
                     getRef={node => (this.tipsManager = node)}

@@ -1,6 +1,9 @@
 import { Component } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
+import { selectAdminIndex } from '../redux/actions/storage'
 
 import { CUBE_Y_AXIS_LENGTH } from '../constants/stage'
 import { getCharStringForNumber } from '../helpers/formatHelper'
@@ -9,10 +12,17 @@ import LogHelper from '../helpers/logHelper'
 class DebugManager extends Component {
 
     static propTypes = {
+        // Through Redux.
+        selectedAdminIndex: PropTypes.number.isRequired,
+        selectAdminIndex: PropTypes.func.isRequired,
 
+        // From parent.
+        getRef: PropTypes.func.isRequired
     }
 
     componentDidMount() {
+        this.props.getRef(this)
+
         this.assignDebugLogFunctions()
     }
 
@@ -33,11 +43,30 @@ class DebugManager extends Component {
         }
     }
 
+    toggleAdmin(
+        selectedAdminIndex = (this.props.selectedAdminIndex + 1) % 2
+    ) {
+        // If no argument passed, then just toggle between on and off.
+
+        this.props.selectAdminIndex(selectedAdminIndex)
+        return selectedAdminIndex
+    }
+
     render() {
         return null
     }
 }
 
-const mapStateToProps = (state) => (state)
+const mapStateToProps = ({
+    selectedAdminIndex
+}) => ({
+    selectedAdminIndex
+})
 
-export default connect(mapStateToProps)(DebugManager)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        selectAdminIndex
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(DebugManager)
