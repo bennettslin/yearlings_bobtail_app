@@ -68,7 +68,6 @@ class WindowManager extends Component {
         setIsMobileWiki: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired,
         deselectAnnotation: PropTypes.func.isRequired,
         selectLyricExpand: PropTypes.func.isRequired,
         selectScore: PropTypes.func.isRequired
@@ -81,8 +80,6 @@ class WindowManager extends Component {
     }
 
     componentDidMount() {
-        this.props.getRef(this)
-
         /**
          * Set initial responsive UI, then modify state based on device index.
          */

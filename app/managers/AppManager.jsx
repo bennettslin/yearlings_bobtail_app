@@ -18,9 +18,12 @@ import AccessManager from './AccessManager'
 import AnnotationManager from './AnnotationManager'
 import AudioManager from './AudioManager'
 import CarouselManager from './CarouselManager'
+import DebugManager from './DebugManager'
 import DotsManager from './DotsManager'
 import LyricManager from './LyricManager'
+import NavManager from './NavManager'
 import OverviewManager from './OverviewManager'
+import RenderManager from './RenderManager'
 import ScoreManager from './ScoreManager'
 import SceneManager from './SceneManager'
 import SliderManager from './SliderManager'
@@ -38,13 +41,10 @@ import { CONTINUE,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
 
-import { CUBE_Y_AXIS_LENGTH } from '../constants/stage'
 import { getSongsAndLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
 import { scrollElementIntoView } from '../helpers/domHelper'
-import { getCharStringForNumber } from '../helpers/formatHelper'
 import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseBarStatus } from '../helpers/logicHelper'
 import { getShowOneOfTwoLyricColumns, getIsLyricExpandable } from '../helpers/responsiveHelper'
-import LogHelper from '../helpers/logHelper'
 
 /*************
  * CONTAINER *
@@ -95,8 +95,6 @@ class App extends Component {
     }
 
     UNSAFE_componentWillMount() {
-        // For dev purposes.
-        this._assignLogFunctions()
 
         // Upon page load, should render immediately.
         this._handleRenderReady()
@@ -839,23 +837,6 @@ class App extends Component {
         this.touchBodyEnd = this.touchBodyEnd.bind(this)
     }
 
-    _assignLogFunctions() {
-        window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
-        window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
-        window.d = LogHelper.logDrawings.bind(LogHelper, this)
-        window.p = LogHelper.logPortalLinks.bind(LogHelper, this.props)
-        window.s = LogHelper.logSong.bind(LogHelper, this)
-        window.v = LogHelper.logVerse.bind(LogHelper, this)
-        window.t = LogHelper.logStorage.bind(LogHelper)
-
-        // Quick and easy way to get a particular cube.
-        window.getCube = (yIndex, xIndex, isFloor = true) => {
-            return document.querySelector(
-                `.Cubes__y${yIndex}${yIndex === 0 ? '__back' : ''}${yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''}.Cubes__${isFloor ? 'floor' : 'ceiling'} .Cube__x${getCharStringForNumber(xIndex)}`
-            )
-        }
-    }
-
     render() {
         const { updatePath } = this.props
 
@@ -917,6 +898,7 @@ class App extends Component {
                     accessNavSong={this.accessNavSong}
                     selectBookColumn={this.selectBookColumn}
                 />
+                <DebugManager />
                 <DotsManager
                     getRef={node => (this.dotsManager = node)}
                     accessDot={this.accessDot}
@@ -924,8 +906,14 @@ class App extends Component {
                 <LyricManager
                     getRef={node => (this.lyricManager = node)}
                 />
+                <NavManager
+                    getRef={node => (this.navManager = node)}
+                />
                 <OverviewManager
                     getRef={node => (this.overviewManager = node)}
+                />
+                <RenderManager
+                    getRef={node => (this.renderManager = node)}
                 />
                 <ScoreManager
                     getRef={node => (this.scoreManager = node)}
@@ -953,7 +941,6 @@ class App extends Component {
                     getRef={node => (this.wikiManager = node)}
                 />
                 <WindowManager
-                    getRef={node => (this.windowManager = node)}
                     deselectAnnotation={this.deselectAnnotation}
                     selectLyricExpand={this.selectLyricExpand}
                     selectScore={this.selectScore}
