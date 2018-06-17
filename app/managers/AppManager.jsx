@@ -11,7 +11,7 @@ import { setIsScoreLoaded } from '../redux/actions/player'
 import { setShowOneOfTwoLyricColumns } from '../redux/actions/responsive'
 import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setSliderVerseElement } from '../redux/actions/slider'
-import { selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
+import { selectAccessIndex, selectAdminIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
 
 import EventManager from './EventManager'
 import AccessManager from './AccessManager'
@@ -39,8 +39,7 @@ import { CONTINUE,
          TIPS_OPTIONS } from '../constants/options'
 
 import { CUBE_Y_AXIS_LENGTH } from '../constants/stage'
-import { getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
-import { getValueInBitNumber } from '../helpers/bitHelper'
+import { getSongsAndLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
 import { scrollElementIntoView } from '../helpers/domHelper'
 import { getCharStringForNumber } from '../helpers/formatHelper'
 import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseBarStatus } from '../helpers/logicHelper'
@@ -224,66 +223,19 @@ class App extends Component {
     }
 
     deselectAnnotation(payload) {
-        this.annotationManager.deselectAnnotation(payload)
+        return this.annotationManager.deselectAnnotation(payload)
     }
 
     /*********
      * AUDIO *
      *********/
 
-    togglePlay(isPlaying = !this.props.isPlaying) {
-
-        const { selectedSongIndex,
-                canPlayThroughs } = this.props
-
-        const
-            isLogue = getSongIsLogue(this.props.selectedSongIndex),
-
-            songCanPlayThrough = getValueInBitNumber({
-                keysCount: getSongsNotLoguesCount(),
-                bitNumber: canPlayThroughs,
-
-                // If logue, select first song.
-                key: isLogue ? 1 : selectedSongIndex
-            })
-
-        // Do not toggle play if player is not ready to play through.
-        if (!songCanPlayThrough) {
-            return false
-        }
-
-        // Select first song if play button in logue is toggled on.
-        if (isLogue && isPlaying) {
-            this.selectSong({
-                selectedSongIndex: 1
-            })
-        }
-
-        this.props.setIsPlaying(isPlaying)
-        return true
+    togglePlay(payload) {
+        return this.audioManager.togglePlay(payload)
     }
 
-    selectAudioOption(selectedAudioOptionIndex =
-        (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length) {
-        // If no argument passed, then just toggle amongst audio options.
-
-        this.props.selectAudioOptionIndex(selectedAudioOptionIndex)
-        return true
-    }
-
-    selectTime(selectedTimePlayed = 0, isPlayerAdvancing) {
-        const selectedVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, selectedTimePlayed)
-
-        if (selectedVerseIndex !== null) {
-            this.selectTimeAndVerse({
-                selectedTimePlayed,
-                selectedVerseIndex,
-
-                // When time is being selected, always render verse immediately.
-                renderVerseImmediately: true,
-                isPlayerAdvancing
-            })
-        }
+    selectAudioOption(payload) {
+        return this.audioManager.selectAudioOption(payload)
     }
 
     /************
@@ -603,6 +555,95 @@ class App extends Component {
     }
 
     /********
+     * TIME *
+     ********/
+
+    selectTime(selectedTimePlayed = 0, isPlayerAdvancing) {
+        const selectedVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, selectedTimePlayed)
+
+        if (selectedVerseIndex !== null) {
+            this.selectTimeAndVerse({
+                selectedTimePlayed,
+                selectedVerseIndex,
+
+                // When time is being selected, always render verse immediately.
+                renderVerseImmediately: true,
+                isPlayerAdvancing
+            })
+        }
+    }
+
+    selectTimeAndVerse({
+        selectedTimePlayed,
+        selectedSongIndex = this.props.selectedSongIndex,
+        selectedVerseIndex,
+        renderVerseImmediately,
+        isPlayerAdvancing
+    }) {
+
+        const { props } = this
+
+        /** This is the only place where app will change the router path based
+         * on a new song or verse index.
+         */
+        props.updatePath({
+            props,
+            selectedSongIndex,
+            selectedVerseIndex
+        })
+
+        /**
+         * Since time and verse are in sync, this helper method can be called
+         * by either one.
+         */
+
+        props.selectVerseIndex(selectedVerseIndex)
+        props.selectTimePlayed(selectedTimePlayed)
+
+        /**
+         * If selecting or changing verse in same song, change index to be
+         * rendered right away.
+         */
+        if (selectedSongIndex === props.selectedSongIndex) {
+            props.setRenderReadyVerseIndex(selectedVerseIndex)
+        }
+
+        /**
+         * If called by player, and autoScroll is on, then scroll to selected
+         * verse if needed.
+         */
+        if (
+            !this.props.isManualScroll &&
+            selectedVerseIndex !== props.selectedVerseIndex
+        ) {
+            scrollElementIntoView({
+                scrollClass: VERSE_SCROLL,
+                index: selectedVerseIndex,
+                deviceIndex: this.props.deviceIndex,
+                windowWidth: this.props.windowWidth,
+                isLyricExpanded: this.props.isLyricExpanded
+            })
+        }
+
+        /**
+         * If time was not changed by the audio element advancing, tell player
+         * to update audio element's time.
+         */
+        if (!isPlayerAdvancing) {
+            props.setUpdatedTimePlayed(selectedTimePlayed)
+        }
+
+        // Render verse and scene immediately.
+        if (renderVerseImmediately) {
+
+            props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
+                props.selectedSongIndex,
+                selectedVerseIndex
+            ))
+        }
+    }
+
+    /********
      * TIPS *
      ********/
 
@@ -757,76 +798,6 @@ class App extends Component {
      * HELPERS *
      ***********/
 
-    selectTimeAndVerse({
-        selectedTimePlayed,
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedVerseIndex,
-        renderVerseImmediately,
-        isPlayerAdvancing
-    }) {
-
-        const { props } = this
-
-        /** This is the only place where app will change the router path based
-         * on a new song or verse index.
-         */
-        props.updatePath({
-            props,
-            selectedSongIndex,
-            selectedVerseIndex
-        })
-
-        /**
-         * Since time and verse are in sync, this helper method can be called
-         * by either one.
-         */
-
-        props.selectVerseIndex(selectedVerseIndex)
-        props.selectTimePlayed(selectedTimePlayed)
-
-        /**
-         * If selecting or changing verse in same song, change index to be
-         * rendered right away.
-         */
-        if (selectedSongIndex === props.selectedSongIndex) {
-            props.setRenderReadyVerseIndex(selectedVerseIndex)
-        }
-
-        /**
-         * If called by player, and autoScroll is on, then scroll to selected
-         * verse if needed.
-         */
-        if (
-            !this.props.isManualScroll &&
-            selectedVerseIndex !== props.selectedVerseIndex
-        ) {
-            scrollElementIntoView({
-                scrollClass: VERSE_SCROLL,
-                index: selectedVerseIndex,
-                deviceIndex: this.props.deviceIndex,
-                windowWidth: this.props.windowWidth,
-                isLyricExpanded: this.props.isLyricExpanded
-            })
-        }
-
-        /**
-         * If time was not changed by the audio element advancing, tell player
-         * to update audio element's time.
-         */
-        if (!isPlayerAdvancing) {
-            props.setUpdatedTimePlayed(selectedTimePlayed)
-        }
-
-        // Render verse and scene immediately.
-        if (renderVerseImmediately) {
-
-            props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
-                props.selectedSongIndex,
-                selectedVerseIndex
-            ))
-        }
-    }
-
     _bindEventHandlers() {
         this._handleRenderReady = this._handleRenderReady.bind(this)
         this.accessAnnotation = this.accessAnnotation.bind(this)
@@ -939,6 +910,7 @@ class App extends Component {
                 />
                 <AudioManager
                     getRef={node => (this.audioManager = node)}
+                    selectSong={this.selectSong}
                 />
                 <CarouselManager
                     getRef={node => (this.carouselManager = node)}
@@ -1000,7 +972,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setShowOneOfTwoLyricColumns, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setSliderVerseElement
+        selectAccessIndex, selectAdminIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setShowOneOfTwoLyricColumns, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setSliderVerseElement
     }, dispatch)
 )
 
