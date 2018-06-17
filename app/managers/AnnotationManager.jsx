@@ -12,7 +12,8 @@ import { selectAnnotationIndex } from '../redux/actions/storage'
 
 import {
     getAnnotationIndexForDirection,
-    getAnnotationAnchorIndexForDirection
+    getAnnotationAnchorIndexForDirection,
+    shouldShowAnnotationForColumn
 } from '../helpers/logicHelper'
 
 class AnnotationManager extends Component {
@@ -101,6 +102,26 @@ class AnnotationManager extends Component {
         })
 
         return selectedAnnotationIndex
+    }
+
+    deselectAnnotation({
+        selectedSongIndex = this.props.selectedSongIndex,
+        selectedLyricColumnIndex = this.props.selectedLyricColumnIndex,
+        annotationIndex = this.props.selectedAnnotationIndex,
+        deviceIndex = this.props.deviceIndex
+    }) {
+        if (annotationIndex) {
+            const showAnnotationForColumn = shouldShowAnnotationForColumn({
+                    selectedSongIndex,
+                    selectedLyricColumnIndex,
+                    annotationIndex,
+                    deviceIndex
+                })
+
+            if (!showAnnotationForColumn) {
+                this.selectAnnotation({})
+            }
+        }
     }
 
     render() {

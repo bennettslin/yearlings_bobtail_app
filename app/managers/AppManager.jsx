@@ -43,7 +43,7 @@ import { getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBook
 import { getValueInBitNumber } from '../helpers/bitHelper'
 import { scrollElementIntoView } from '../helpers/domHelper'
 import { getCharStringForNumber } from '../helpers/formatHelper'
-import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logicHelper'
+import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseBarStatus } from '../helpers/logicHelper'
 import { getShowOneOfTwoLyricColumns, getIsLyricExpandable } from '../helpers/responsiveHelper'
 import LogHelper from '../helpers/logHelper'
 
@@ -119,7 +119,6 @@ class App extends Component {
     }
 
     componentDidUpdate(prevProps) {
-
         if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
             this._songIndexDidChange()
         }
@@ -222,6 +221,10 @@ class App extends Component {
 
     selectAnnotation(payload) {
         return this.annotationManager.selectAnnotation(payload)
+    }
+
+    deselectAnnotation(payload) {
+        this.annotationManager.deselectAnnotation(payload)
     }
 
     /*********
@@ -821,26 +824,6 @@ class App extends Component {
                 props.selectedSongIndex,
                 selectedVerseIndex
             ))
-        }
-    }
-
-    deselectAnnotation({
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedLyricColumnIndex = this.props.selectedLyricColumnIndex,
-        annotationIndex = this.props.selectedAnnotationIndex,
-        deviceIndex = this.props.deviceIndex
-    }) {
-        if (annotationIndex) {
-            const showAnnotationForColumn = shouldShowAnnotationForColumn({
-                    selectedSongIndex,
-                    selectedLyricColumnIndex,
-                    annotationIndex,
-                    deviceIndex
-                })
-
-            if (!showAnnotationForColumn) {
-                this.selectAnnotation({})
-            }
         }
     }
 
