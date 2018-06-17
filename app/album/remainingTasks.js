@@ -7,8 +7,8 @@ module.exports = [
 
     {
         taskName: `Separate out managers.`,
-        workedHours: 6,
-        neededHours: 12
+        workedHours: 8,
+        neededHours: 14
     },
 
     {

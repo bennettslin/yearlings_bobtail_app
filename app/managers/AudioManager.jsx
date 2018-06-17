@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setIsPlaying } from '../redux/actions/audio'
+import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { selectAudioOptionIndex } from '../redux/actions/storage'
 
 import { getValueInBitNumber } from '../helpers/bitHelper'
@@ -25,6 +25,7 @@ class AudioManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         setIsPlaying: PropTypes.func.isRequired,
         selectAudioOptionIndex: PropTypes.func.isRequired,
+        setUpdatedTimePlayed: PropTypes.func.isRequired,
 
         // From parent.
         getRef: PropTypes.func.isRequired,
@@ -67,6 +68,10 @@ class AudioManager extends Component {
         return true
     }
 
+    resetUpdatedTimePlayed() {
+        this.props.setUpdatedTimePlayed(null)
+    }
+
     selectAudioOption(
         selectedAudioOptionIndex =
             (this.props.selectedAudioOptionIndex + 1) % AUDIO_OPTIONS.length
@@ -97,7 +102,8 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setIsPlaying,
-        selectAudioOptionIndex
+        selectAudioOptionIndex,
+        setUpdatedTimePlayed
     }, dispatch)
 )
 

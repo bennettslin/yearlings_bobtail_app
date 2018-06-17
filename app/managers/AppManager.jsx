@@ -123,62 +123,6 @@ class App extends Component {
         }
     }
 
-    _songIndexDidChange() {
-
-        // Clear previous timeout.
-        clearTimeout(this.state.songChangeTimeoutId)
-
-        /**
-         * Render is synchronous, so wait a bit after selecting new song before
-         * rendering the most performance intensive components.
-         */
-        const songChangeTimeoutId = setTimeout(
-            this._handleRenderReady, 200
-        )
-
-        this.setState({
-            songChangeTimeoutId
-        })
-    }
-
-    /*******************
-     * EVENT LISTENERS *
-     *******************/
-
-    advanceToNextSong() {
-        /**
-         * When selecting next song through audio player, reset annotation and
-         * verse, and scroll element into view, but do not access nav section.
-         */
-        const { selectedSongIndex,
-                selectedAudioOptionIndex } = this.props,
-
-            selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex]
-
-        // If option is to pause at end, stop play.
-        if (selectedAudioOption === PAUSE_AT_END) {
-            this.togglePlay()
-
-        } else {
-
-            /**
-             * If option is to continue, advance to next song. Otherwise, stay
-             * on same song, and start at beginning. (True evaluates to 1, false 0.)
-             */
-            const nextSongIndex = selectedSongIndex +
-                (selectedAudioOption === CONTINUE)
-
-            this.selectSong({
-                selectedSongIndex: nextSongIndex,
-                selectedVerseIndex: 0
-            })
-        }
-    }
-
-    resetUpdatedTimePlayed() {
-        this.props.setUpdatedTimePlayed(null)
-    }
-
     /**********
      * ACCESS *
      **********/
@@ -223,6 +167,10 @@ class App extends Component {
         return this.audioManager.togglePlay(payload)
     }
 
+    resetUpdatedTimePlayed() {
+        return this.audioManager.resetUpdatedTimePlayed()
+    }
+
     selectAudioOption(payload) {
         return this.audioManager.selectAudioOption(payload)
     }
@@ -240,7 +188,7 @@ class App extends Component {
      *********/
 
     toggleAdmin(payload) {
-        this.debugManager.toggleAdmin(payload)
+        return this.debugManager.toggleAdmin(payload)
     }
 
     /********
@@ -335,6 +283,128 @@ class App extends Component {
 
     selectBookColumn(payload) {
         return this.navManager.selectBookColumn(payload)
+    }
+
+    /************
+     * OVERVIEW *
+     ************/
+
+    selectOverview(payload) {
+        return this.overviewManager.selectOverview(payload)
+    }
+
+    /**********
+     * RENDER *
+     **********/
+
+    _handleRenderReady(
+        selectedSongIndex = this.props.selectedSongIndex,
+        selectedAnnotationIndex = this.props.selectedAnnotationIndex,
+        selectedVerseIndex = this.props.selectedVerseIndex
+    ) {
+
+        this.props.setIsHeavyRenderReady(
+            true
+        )
+
+        this.props.setRenderReadySongIndex(
+            selectedSongIndex
+        )
+
+        this.props.setRenderReadyAnnotationIndex(
+            selectedAnnotationIndex
+        )
+
+        this.props.setRenderReadyVerseIndex(
+            selectedVerseIndex
+        )
+
+        if (this.props.appMounted) {
+
+            /**
+             * Determine doublespeaker columns only when lyrics are ready to
+             * render.
+             */
+            this.props.setShowOneOfTwoLyricColumns(
+                getShowOneOfTwoLyricColumns(
+                    selectedSongIndex,
+                    this.props.deviceIndex
+                )
+            )
+        }
+
+        this.props.setCurrentSceneIndex(
+            getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
+        )
+    }
+
+    /*********
+     * SCENE *
+     *********/
+
+    selectScene(payload) {
+        return this.sceneManager.selectScene(payload)
+    }
+
+    /*********
+     * SCORE *
+     *********/
+
+    selectScore(payload) {
+        return this.scoreManager.selectScore(payload)
+    }
+
+    /**********
+     * SLIDER *
+     **********/
+
+    touchSliderBegin(payload) {
+        return this.sliderManager.touchSliderBegin(payload)
+    }
+
+    touchBodyMove(payload) {
+        return this.sliderManager.touchBodyMove(payload)
+    }
+
+    touchBodyEnd() {
+        return this.sliderManager.touchBodyEnd()
+    }
+
+    /********
+     * SONG *
+     ********/
+
+    advanceToNextSong() {
+        /**
+         * When selecting next song through audio player, reset annotation and
+         * verse, and scroll element into view, but do not access nav section.
+         */
+        const { selectedSongIndex,
+                selectedAudioOptionIndex } = this.props,
+
+            selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex]
+
+        // If option is to pause at end, stop play.
+        if (selectedAudioOption === PAUSE_AT_END) {
+            this.togglePlay()
+
+        } else {
+
+            /**
+             * If option is to continue, advance to next song. Otherwise, stay
+             * on same song, and start at beginning. (True evaluates to 1, false 0.)
+             */
+            const nextSongIndex = selectedSongIndex +
+                (selectedAudioOption === CONTINUE)
+
+            this.selectSong({
+                selectedSongIndex: nextSongIndex,
+                selectedVerseIndex: 0
+            })
+        }
     }
 
     selectSong({
@@ -447,88 +517,22 @@ class App extends Component {
         return true
     }
 
-    _handleRenderReady(
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedAnnotationIndex = this.props.selectedAnnotationIndex,
-        selectedVerseIndex = this.props.selectedVerseIndex
-    ) {
+    _songIndexDidChange() {
 
-        this.props.setIsHeavyRenderReady(
-            true
+        // Clear previous timeout.
+        clearTimeout(this.state.songChangeTimeoutId)
+
+        /**
+         * Render is synchronous, so wait a bit after selecting new song before
+         * rendering the most performance intensive components.
+         */
+        const songChangeTimeoutId = setTimeout(
+            this._handleRenderReady, 200
         )
 
-        this.props.setRenderReadySongIndex(
-            selectedSongIndex
-        )
-
-        this.props.setRenderReadyAnnotationIndex(
-            selectedAnnotationIndex
-        )
-
-        this.props.setRenderReadyVerseIndex(
-            selectedVerseIndex
-        )
-
-        if (this.props.appMounted) {
-
-            /**
-             * Determine doublespeaker columns only when lyrics are ready to
-             * render.
-             */
-            this.props.setShowOneOfTwoLyricColumns(
-                getShowOneOfTwoLyricColumns(
-                    selectedSongIndex,
-                    this.props.deviceIndex
-                )
-            )
-        }
-
-        this.props.setCurrentSceneIndex(
-            getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
-        )
-    }
-
-    /************
-     * OVERVIEW *
-     ************/
-
-    selectOverview(payload) {
-        return this.overviewManager.selectOverview(payload)
-    }
-
-    /*********
-     * SCENE *
-     *********/
-
-    selectScene(payload) {
-        return this.sceneManager.selectScene(payload)
-    }
-
-    /*********
-     * SCORE *
-     *********/
-
-    selectScore(payload) {
-        return this.scoreManager.selectScore(payload)
-    }
-
-    /**********
-     * SLIDER *
-     **********/
-
-    touchSliderBegin(payload) {
-        return this.sliderManager.touchSliderBegin(payload)
-    }
-
-    touchBodyMove(payload) {
-        return this.sliderManager.touchBodyMove(payload)
-    }
-
-    touchBodyEnd() {
-        return this.sliderManager.touchBodyEnd()
+        this.setState({
+            songChangeTimeoutId
+        })
     }
 
     /********
@@ -857,7 +861,6 @@ class App extends Component {
                     togglePlay={this.togglePlay}
                     setVerseElement={this.setVerseElement}
                     selectOrSlideVerseElement={this.selectOrSlideVerseElement}
-
                     advanceToNextSong={this.advanceToNextSong}
                     resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
                 />
