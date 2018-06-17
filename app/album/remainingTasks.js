@@ -1,12 +1,24 @@
 module.exports = [
     {
-        taskName: `Fix UNSAFE lifecycle methods.`,
+        taskName: `Figure out steps for doing each scene.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
 
     {
-        taskName: `Get indexed elements by ref`,
+        taskName: `Separate out managers.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `Fix UNSAFE lifecycle methods.`,
+        workedHours: 2,
+        neededHours: 5
+    },
+
+    {
+        taskName: `Get scrolling indexed elements by ref`,
         workedHours: 0,
         neededHours: 3
     },
