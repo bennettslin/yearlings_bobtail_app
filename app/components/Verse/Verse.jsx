@@ -56,6 +56,7 @@ class Verse extends Component {
     }
 
     componentDidMount() {
+        // This is called to establish the verse element.
         this._handleVerseElementSelectOrSlide(this.props, true)
     }
 
@@ -78,15 +79,19 @@ class Verse extends Component {
         return componentShouldUpdate
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (!this.props.isOnCursor) {
-            this._handleVerseElementSelectOrSlide(nextProps)
+    componentDidUpdate(prevProps) {
+        if (!prevProps.isOnCursor) {
+            this._handleVerseElementSelectOrSlide(this.props)
         }
     }
 
     _handleVerseElementSelectOrSlide(props = this.props, uponMount) {
         if (props.isOnCursor) {
-            this.props.handleVerseElementSelectOrSlide(this.myVerse, uponMount)
+            this.props.handleVerseElementSelectOrSlide(
+
+                // Establish verse bars only if this is not the initial mount.
+                this.myVerse, uponMount
+            )
         }
     }
 
