@@ -1399,7 +1399,7 @@ class App extends Component {
  * STORE *
  *********/
 
-const passReduxStateToProps = (state) => (state)
+const mapStateToProps = (state) => (state)
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
@@ -1408,4 +1408,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(passReduxStateToProps, bindDispatchToProps)(App)
+export default connect(mapStateToProps, bindDispatchToProps)(App)

@@ -28,10 +28,17 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
+
+    {
+        taskName: `Annotation popup buttons collapse upon being hidden.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     {
         taskName: `Optimise pixels by rendering only after lyrics.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 15
     },
 
     {
