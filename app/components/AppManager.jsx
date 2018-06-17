@@ -17,6 +17,7 @@ import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudio
 import EventManager from './EventManager'
 import OverviewManager from './OverviewManager'
 import ScoreManager from './ScoreManager'
+import SceneManager from './SceneManager'
 import TipsManager from './TipsManager'
 import TitleManager from './TitleManager'
 
@@ -30,7 +31,7 @@ import { CONTINUE,
          TIPS_OPTIONS } from '../constants/options'
 
 import { CUBE_Y_AXIS_LENGTH } from '../constants/stage'
-import { getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex, getVerseIndexForNextScene } from '../helpers/dataHelper'
+import { getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
 import { getValueInBitNumber } from '../helpers/bitHelper'
 import { scrollElementIntoView } from '../helpers/domHelper'
 import { getCharStringForNumber } from '../helpers/formatHelper'
@@ -744,18 +745,8 @@ class App extends Component {
      * SCENE *
      *********/
 
-    selectScene(direction) {
-        const { selectedSongIndex, selectedVerseIndex } = this.props
-
-        const nextVerseIndex = getVerseIndexForNextScene(
-            selectedSongIndex, selectedVerseIndex, direction
-        )
-
-        if (nextVerseIndex > -1) {
-            this.selectVerse({
-                selectedVerseIndex: nextVerseIndex
-            })
-        }
+    selectScene(payload) {
+        return this.sceneManager.selectScene(payload)
     }
 
     /*********
@@ -1273,6 +1264,10 @@ class App extends Component {
                 />
                 <ScoreManager
                     getRef={node => (this.scoreManager = node)}
+                />
+                <SceneManager
+                    getRef={node => (this.sceneManager = node)}
+                    selectVerse={this.selectVerse}
                 />
                 <TipsManager
                     getRef={node => (this.tipsManager = node)}

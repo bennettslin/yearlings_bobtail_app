@@ -1,32 +1,37 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectTitleIndex } from '../redux/actions/storage'
+import { getVerseIndexForNextScene } from '../helpers/dataHelper'
 
 class SceneManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedTitleIndex: PropTypes.number.isRequired,
-        selectTitleIndex: PropTypes.func.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired
-    }
-
-    static propTypes = {
-        getRef: PropTypes.func.isRequired
-    }
-
-    // eslint-disable-next-line
-    constructor(props) {
-        super(props)
+        getRef: PropTypes.func.isRequired,
+        selectVerse: PropTypes.func.isRequired
     }
 
     componentDidMount() {
         this.props.getRef(this)
+    }
+
+    selectScene(direction) {
+        const { selectedSongIndex, selectedVerseIndex } = this.props
+
+        const nextVerseIndex = getVerseIndexForNextScene(
+            selectedSongIndex, selectedVerseIndex, direction
+        )
+
+        if (nextVerseIndex > -1) {
+            this.props.selectVerse({
+                selectedVerseIndex: nextVerseIndex
+            })
+        }
     }
 
     render() {
@@ -35,15 +40,11 @@ class SceneManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedTitleIndex
+    selectedSongIndex,
+    selectedVerseIndex
 }) => ({
-    selectedTitleIndex
+    selectedSongIndex,
+    selectedVerseIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        selectTitleIndex
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(SceneManager)
+export default connect(mapStateToProps)(SceneManager)
