@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Shared from './shared'
-// import DevSection from './dev/dev-section'
+
 import AdminNavSection from './AdminNav/AdminNav'
 import { getAllTaskObjects } from '../../helpers/dataHelper'
 
@@ -8,7 +8,7 @@ import { getAllTaskObjects } from '../../helpers/dataHelper'
  * CONTAINER *
  *************/
 
-class AdminManager extends Component {
+class Admin extends Component {
 
     componentDidMount() {
         this.props.focusBody()
@@ -36,4 +36,4 @@ class AdminManager extends Component {
     }
 }
 
-export default AdminManager
+export default Admin

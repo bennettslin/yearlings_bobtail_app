@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import AccessManager from '../managers/AccessManager'
-import AdminManager from './Admin/AdminManager'
+import Admin from './Admin/Admin'
 import Live from './Live/Live'
 import AdminToggle from './admin/AdminToggle'
 import Players from './Players/Players'
@@ -278,7 +278,7 @@ class Root extends Component {
                 />
 
                 {selectedAdminIndex ? (
-                    <AdminManager {...other} />
+                    <Admin {...other} />
                 ) : (
                     <Live {...other} />
                 )}
