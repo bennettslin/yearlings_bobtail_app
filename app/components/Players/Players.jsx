@@ -33,33 +33,41 @@ class Players extends Component {
              * Redux. We will store it so that we don't have to convert it
              * every single time.
              */
-            canPlayThroughsObject: null,
+            canPlayThroughsObject: this._getCanPlayThroughsObject(
+                props.canPlayThroughs
+            ),
 
             // At any given time, only one player is being newly rendered.
             nextPlayerToRender: null
         }
     }
 
-    UNSAFE_componentWillMount() {
+    componentDidMount() {
         this._updateCanPlayThroughsObject(this.props)
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(prevProps) {
         /**
          * If the bit number has changed, convert it and store the updated
          * object that keeps track of each player's canPlayThrough status, then
          * calculate which player is next in line to be newly rendered.
          */
-        if (nextProps.canPlayThroughs !== this.props.canPlayThroughs) {
-            this._updateCanPlayThroughsObject(nextProps)
+        if (this.props.canPlayThroughs !== prevProps.canPlayThroughs) {
+            this._updateCanPlayThroughsObject(this.props)
         }
     }
 
-    _updateCanPlayThroughsObject(props) {
-        const canPlayThroughsObject = convertBitNumberToTrueFalseKeys({
+    _getCanPlayThroughsObject(canPlayThroughs) {
+        return convertBitNumberToTrueFalseKeys({
             keysCount: getSongsNotLoguesCount(),
-            bitNumber: props.canPlayThroughs
+            bitNumber: canPlayThroughs
         })
+    }
+
+    _updateCanPlayThroughsObject(props) {
+        const canPlayThroughsObject = this._getCanPlayThroughsObject(
+            props.canPlayThroughs
+        )
 
         this.setState({
             canPlayThroughsObject,
