@@ -73,12 +73,16 @@ class WikiSection extends Component {
         return componentShouldUpdate
     }
 
-    UNSAFE_componentWillReceiveProps({ selectedWikiUrl }) {
-        this._onWikiUrlReceived(selectedWikiUrl)
+    componentDidUpdate(prevProps) {
+        const { selectedWikiUrl } = this.props
+
+        if (selectedWikiUrl !== prevProps.selectedWikiUrl) {
+            this._onWikiUrlReceived(selectedWikiUrl)
+        }
     }
 
     _onWikiUrlReceived(selectedWikiUrl) {
-        if (selectedWikiUrl && selectedWikiUrl !== this.props.selectedWikiUrl) {
+        if (selectedWikiUrl) {
             this.setState({ iframeLoading: true })
         }
     }

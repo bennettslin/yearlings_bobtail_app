@@ -2946,5 +2946,11 @@ module.exports = [
         taskName: `Have system to show front and side pixels.`,
         workedHours: 8,
         neededHours: 8
-    }
+    },
+
+    {
+        taskName: `Only render exposed areas of faces, if any.`,
+        workedHours: 10,
+        neededHours: 10
+    },
 ]

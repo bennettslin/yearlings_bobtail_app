@@ -35,15 +35,19 @@ class Popup extends Component {
         }
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        /**
-         * If now visible, it should now also be displayed, but if now
-         * invisible, don't change to undisplayed just yet.
-         */
-        if (nextProps.isVisible && !this.props.isVisible) {
-            this.setState({
-                isDisplayed: true
-            })
+    componentDidUpdate(prevProps) {
+
+        // Prevent infinite loop.
+        if (!this.state.isDisplayed) {
+            /**
+             * If now visible, it should now also be displayed, but if now
+             * invisible, don't change to undisplayed just yet.
+             */
+            if (this.props.isVisible && !prevProps.isVisible) {
+                this.setState({
+                    isDisplayed: true
+                })
+            }
         }
     }
 

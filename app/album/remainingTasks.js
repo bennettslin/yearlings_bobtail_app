@@ -10,15 +10,33 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Optimise rendering of pixels, including allowing only some faces, and rendering only after lyrics, and a system to smartly show pixels of varying size, logic to determine which face to render, and how much dynamic face to render, based on matrix alone.`,
+        taskName: `Optimise pixels by rendering only after lyrics.`,
         workedHours: 0,
-        neededHours: 15
+        neededHours: 5
+    },
+
+    {
+        taskName: `Have system to show pixels of varying sizes.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
+        taskName: `Determine relative zIndices for slanted directions.`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     {
         taskName: `System for showing sun and moon for each scene.`,
         workedHours: 0,
         neededHours: 3
+    },
+
+    {
+        taskName: `Have system to show theatre seats in different perspectives.`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     {

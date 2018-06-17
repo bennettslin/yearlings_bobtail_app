@@ -52,13 +52,19 @@ class DotsSlideSelect extends Component {
      * upon which to update are a subset of those in dots section.
      */
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        // Also deinteractivate if dots section has been hidden.
-        if (!nextProps.selectedDotsIndex ||
-            (!nextProps.hasInteractivatedDotText && this.props.hasInteractivatedDotText)) {
-            this.setState({
-                isInteractivated: false
-            })
+    componentDidUpdate(prevProps) {
+
+        // Prevent infinite loop.
+        if (this.state.isInteractivated) {
+
+            // Also deinteractivate if dots section has been hidden.
+            if (!this.props.selectedDotsIndex ||
+                (!this.props.hasInteractivatedDotText && prevProps.hasInteractivatedDotText)) {
+
+                this.setState({
+                    isInteractivated: false
+                })
+            }
         }
     }
 
