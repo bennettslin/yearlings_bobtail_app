@@ -10,9 +10,9 @@ import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates } from '../redux/actions/device'
 import { setIsScoreLoaded } from '../redux/actions/player'
 import { setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
-import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
+import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setSliderVerseElement } from '../redux/actions/slider'
-import { selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
+import { selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
 
 import EventManager from './EventManager'
 import AccessManager from './AccessManager'
@@ -31,7 +31,6 @@ import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 
 import { VERSE_SCROLL } from '../constants/dom'
-import { ALL_DOT_KEYS } from '../constants/dots'
 import { CONTINUE,
          PAUSE_AT_END,
          AUDIO_OPTIONS,
@@ -45,7 +44,7 @@ import { getValueInBitNumber } from '../helpers/bitHelper'
 import { scrollElementIntoView } from '../helpers/domHelper'
 import { getCharStringForNumber } from '../helpers/formatHelper'
 import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logicHelper'
-import { resizeWindow, getShowOneOfTwoLyricColumns, getIsPhone, getIsHeightlessLyricColumn, getIsHiddenCarouselNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTwoRowMenu } from '../helpers/responsiveHelper'
+import { resizeWindow, getShowOneOfTwoLyricColumns, getIsHeightlessLyricColumn, getIsHiddenCarouselNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTwoRowMenu } from '../helpers/responsiveHelper'
 import { getStageCoordinates } from '../helpers/stageHelper'
 import LogHelper from '../helpers/logHelper'
 
@@ -326,100 +325,20 @@ class App extends Component {
      * CAROUSEL *
      ************/
 
-    selectCarouselNav(selectedCarouselNavValue =
-        (this.props.selectedCarouselNavIndex + 1) % 2) {
-        // If no argument passed, then just toggle between on and off.
-
-        // We shouldn't be able to toggle carousel under these conditions.
-        if (getSongIsLogue(this.props.selectedSongIndex) ||
-            getIsPhone(this.props.deviceIndex) ||
-            this.props.isHiddenCarouselNav) {
-
-            return false
-        }
-
-        if (typeof selectedCarouselNavValue === 'boolean') {
-            selectedCarouselNavValue = selectedCarouselNavValue ? 1 : 0
-        }
-
-        this.props.selectCarouselNavIndex(selectedCarouselNavValue)
-
-        /**
-         * New behaviour is that nav is expanded when carousel is hidden, and
-         * vice versa.
-         */
-        this._selectCarouselToggle(selectedCarouselNavValue)
-        this._selectNavExpand(selectedCarouselNavValue)
-
-        return true
-    }
-
-    _selectCarouselToggle(selectedCarouselNavIndex) {
-        if (!selectedCarouselNavIndex) {
-            this.props.setCarouselAnnotationIndex(0)
-        }
-    }
-
-    _selectNavExpand(selectedCarouselNavIndex) {
-        // Reset accessed song index and book column upon nav expand.
-        if (!selectedCarouselNavIndex) {
-            this.accessNavSong(this.props.selectedSongIndex)
-
-            this.selectBookColumn({
-                resetToDefault: true
-            })
-        }
-    }
-
-    /*******
-     * DOT *
-     *******/
-
-    toggleDot(selectedDotIndex) {
-        const selectedDotKey = ALL_DOT_KEYS[selectedDotIndex],
-            isSelected = !this.props.selectedDotKeys[selectedDotKey]
-
-        this.props.selectDotKey(selectedDotKey, isSelected)
-
-        // Make most recently toggled dot the accessed dot.
-        this.accessDot(selectedDotIndex)
+    selectCarouselNav(payload) {
+        return this.carouselManager.selectCarouselNav(payload)
     }
 
     /********
      * DOTS *
      ********/
 
-    selectDotsExpand(selectedDotsValue =
-        (this.props.selectedDotsIndex + 1) % 2) {
-        // If no argument passed, then just toggle between on and off.
+    toggleDot(payload) {
+        return this.dotsManager.toggleDot(payload)
+    }
 
-        // Dots section cannot be changed in logue.
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return false
-        }
-
-        if (typeof selectedDotsValue === 'boolean') {
-            selectedDotsValue = selectedDotsValue ? 1 : 0
-        }
-
-        /**
-         * If closing dots section, get accessed annotation index because it
-         * might have changed.
-         */
-        if (!selectedDotsValue) {
-            this.props.accessAnnotationIndex(
-                getAnnotationIndexForVerseIndex({
-                    deviceIndex: this.props.deviceIndex,
-                    verseIndex: this.props.selectedVerseIndex,
-                    selectedSongIndex: this.props.selectedSongIndex,
-                    selectedDotKeys: this.props.selectedDotKeys,
-                    lyricColumnIndex: this.props.selectedLyricColumnIndex
-                })
-            )
-        }
-
-        this.props.selectDotsIndex(selectedDotsValue)
-        return true
+    selectDotsExpand(payload) {
+        return this.dotsManager.selectDotsExpand(payload)
     }
 
     /*********
@@ -1135,9 +1054,12 @@ class App extends Component {
                 />
                 <CarouselManager
                     getRef={node => (this.carouselManager = node)}
+                    accessNavSong={this.accessNavSong}
+                    selectBookColumn={this.selectBookColumn}
                 />
                 <DotsManager
                     getRef={node => (this.dotsManager = node)}
+                    accessDot={this.accessDot}
                 />
                 <LyricManager
                     getRef={node => (this.lyricManager = node)}
@@ -1184,7 +1106,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setSliderVerseElement
+        selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setSliderVerseElement
     }, dispatch)
 )
 

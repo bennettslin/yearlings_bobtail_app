@@ -3,21 +3,83 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectTitleIndex } from '../redux/actions/storage'
+import { accessAnnotationIndex } from '../redux/actions/access'
+import {
+    selectDotKey,
+    selectDotsIndex
+} from '../redux/actions/storage'
+
+import { getSongIsLogue } from '../helpers/dataHelper'
+import { getAnnotationIndexForVerseIndex } from '../helpers/logicHelper'
+
+import { ALL_DOT_KEYS } from '../constants/dots'
 
 class DotsManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedTitleIndex: PropTypes.number.isRequired,
-        selectTitleIndex: PropTypes.func.isRequired,
+        deviceIndex: PropTypes.number.isRequired,
+        selectedDotsIndex: PropTypes.number.isRequired,
+        selectedDotKeys: PropTypes.object.isRequired,
+        selectedLyricColumnIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
+
+        accessAnnotationIndex: PropTypes.func.isRequired,
+        selectDotKey: PropTypes.func.isRequired,
+        selectDotsIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired
+        getRef: PropTypes.func.isRequired,
+        accessDot: PropTypes.func.isRequired
     }
 
     componentDidMount() {
         this.props.getRef(this)
+    }
+
+    toggleDot(selectedDotIndex) {
+        const selectedDotKey = ALL_DOT_KEYS[selectedDotIndex],
+            isSelected = !this.props.selectedDotKeys[selectedDotKey]
+
+        this.props.selectDotKey(selectedDotKey, isSelected)
+
+        // Make most recently toggled dot the accessed dot.
+        this.props.accessDot(selectedDotIndex)
+    }
+
+    selectDotsExpand(
+        selectedDotsValue = (this.props.selectedDotsIndex + 1) % 2
+    ) {
+        // If no argument passed, then just toggle between on and off.
+
+        // Dots section cannot be changed in logue.
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
+            return false
+        }
+
+        if (typeof selectedDotsValue === 'boolean') {
+            selectedDotsValue = selectedDotsValue ? 1 : 0
+        }
+
+        /**
+         * If closing dots section, get accessed annotation index because it
+         * might have changed.
+         */
+        if (!selectedDotsValue) {
+            this.props.accessAnnotationIndex(
+                getAnnotationIndexForVerseIndex({
+                    deviceIndex: this.props.deviceIndex,
+                    verseIndex: this.props.selectedVerseIndex,
+                    selectedSongIndex: this.props.selectedSongIndex,
+                    selectedDotKeys: this.props.selectedDotKeys,
+                    lyricColumnIndex: this.props.selectedLyricColumnIndex
+                })
+            )
+        }
+
+        this.props.selectDotsIndex(selectedDotsValue)
+        return true
     }
 
     render() {
@@ -26,14 +88,26 @@ class DotsManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedTitleIndex
+    deviceIndex,
+    selectedDotsIndex,
+    selectedDotKeys,
+    selectedLyricColumnIndex,
+    selectedSongIndex,
+    selectedVerseIndex
 }) => ({
-    selectedTitleIndex
+    deviceIndex,
+    selectedDotsIndex,
+    selectedDotKeys,
+    selectedLyricColumnIndex,
+    selectedSongIndex,
+    selectedVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectTitleIndex
+        accessAnnotationIndex,
+        selectDotKey,
+        selectDotsIndex
     }, dispatch)
 )
 
