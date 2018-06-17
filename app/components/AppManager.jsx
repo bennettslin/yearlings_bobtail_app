@@ -12,19 +12,18 @@ import { setIsScoreLoaded } from '../redux/actions/player'
 import { setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
 import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
-import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
+import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 
 import EventManager from './EventManager'
+import OverviewManager from './OverviewManager'
 import ScoreManager from './ScoreManager'
+import TipsManager from './TipsManager'
 
 import { VERSE_SCROLL } from '../constants/dom'
 import { ALL_DOT_KEYS } from '../constants/dots'
 import { CONTINUE,
          PAUSE_AT_END,
          AUDIO_OPTIONS,
-
-         SHOWN,
-         HIDDEN,
          DISABLED,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
@@ -34,7 +33,7 @@ import { getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBook
 import { getValueInBitNumber } from '../helpers/bitHelper'
 import { scrollElementIntoView } from '../helpers/domHelper'
 import { getCharStringForNumber } from '../helpers/formatHelper'
-import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseIndexforRatio, getVerseBarStatus, shouldShowAnnotationForColumn, getIsSomethingBeingShown } from '../helpers/logicHelper'
+import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseIndexforRatio, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logicHelper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsPhone, getIsHeightlessLyricColumn, getIsHiddenCarouselNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTwoRowMenu } from '../helpers/responsiveHelper'
 import { getStageCoordinates } from '../helpers/stageHelper'
 import LogHelper from '../helpers/logHelper'
@@ -736,54 +735,8 @@ class App extends Component {
      * OVERVIEW *
      ************/
 
-    selectOverview({
-        clickToggle,
-        justHideIfShown,
-        justShowIfHidden
-    }) {
-
-        // We shouldn't be able to change overview it's a logue.
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return false
-        }
-
-        let selectedOverviewIndex = this.props.selectedOverviewIndex
-
-        // If called from body click, hide if shown.
-        if (justHideIfShown) {
-            if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
-                selectedOverviewIndex = 2 // Hidden.
-            }
-
-        // If called from song select, show if hidden.
-        } else if (justShowIfHidden) {
-            if (OVERVIEW_OPTIONS[selectedOverviewIndex] === HIDDEN) {
-                selectedOverviewIndex = 0 // Shown.
-            }
-
-        } else {
-            // If called when something else is shown, show right away.
-            if (getIsSomethingBeingShown({
-                props: this.props,
-                calledByOverview: true
-            })) {
-                selectedOverviewIndex = 0
-
-            } else {
-                do {
-                    // If it's a keydown event, cycle through all three options.
-                    selectedOverviewIndex = (selectedOverviewIndex + 1) % OVERVIEW_OPTIONS.length
-
-                    // If it's a click event, skip hidden.
-                } while (clickToggle && OVERVIEW_OPTIONS[selectedOverviewIndex] === HIDDEN)
-            }
-        }
-
-        // Overview options are shown, disabled, hidden.
-        if (selectedOverviewIndex !== this.props.selectedOverviewIndex) {
-            this.props.selectOverviewIndex(selectedOverviewIndex)
-        }
-        return true
+    selectOverview(payload) {
+        return this.overviewManager.selectOverview(payload)
     }
 
     /*********
@@ -808,63 +761,16 @@ class App extends Component {
      * SCORE *
      *********/
 
-    selectScore(selectedScoreValue) {
-        this.scoreManager.selectScore(selectedScoreValue)
+    selectScore(payload) {
+        return this.scoreManager.selectScore(payload)
     }
 
     /********
      * TIPS *
      ********/
 
-    selectTips({
-        clickToggle,
-        justHideIfShown,
-        justShowIfHidden
-    }) {
-        // Duplicated from selectOverview.
-
-        // We shouldn't be able to change overview it's a logue.
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return false
-        }
-
-        let selectedTipsIndex = this.props.selectedTipsIndex
-
-        // If called from body click, hide if shown.
-        if (justHideIfShown) {
-            if (TIPS_OPTIONS[selectedTipsIndex] === SHOWN) {
-                selectedTipsIndex = 2 // Hidden.
-            }
-
-        // If called from song select, show if hidden.
-        } else if (justShowIfHidden) {
-            if (TIPS_OPTIONS[selectedTipsIndex] === HIDDEN) {
-                selectedTipsIndex = 0 // Shown.
-            }
-
-        } else {
-            // If called when something else is shown, show right away.
-            if (getIsSomethingBeingShown({
-                props: this.props,
-                calledByTips: true
-            })) {
-                selectedTipsIndex = 0
-
-            } else {
-                do {
-                    // If it's a keydown event, cycle through all three options.
-                    selectedTipsIndex = (selectedTipsIndex + 1) % TIPS_OPTIONS.length
-
-                    // If it's a click event, skip hidden.
-                } while (clickToggle && TIPS_OPTIONS[selectedTipsIndex] === HIDDEN)
-            }
-        }
-
-        // Overview options are shown, disabled, hidden.
-        if (selectedTipsIndex !== this.props.selectedTipsIndex) {
-            this.props.selectTipsIndex(selectedTipsIndex)
-        }
-        return true
+    selectTips(payload) {
+        return this.tipsManager.selectTips(payload)
     }
 
     /*********
@@ -1369,7 +1275,15 @@ class App extends Component {
                     advanceToNextSong={this.advanceToNextSong}
                     resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
                 />
-                <ScoreManager getRef={node => (this.scoreManager = node)} />
+                <OverviewManager
+                    getRef={node => (this.overviewManager = node)}
+                />
+                <ScoreManager
+                    getRef={node => (this.scoreManager = node)}
+                />
+                <TipsManager
+                    getRef={node => (this.tipsManager = node)}
+                />
             </Fragment>
         )
     }
@@ -1384,7 +1298,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
     }, dispatch)
 )
 

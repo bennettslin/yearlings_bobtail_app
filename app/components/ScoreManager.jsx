@@ -11,6 +11,13 @@ import { getIsScoreExpandable } from '../helpers/responsiveHelper'
 class ScoreManager extends Component {
 
     static propTypes = {
+        // Through Redux.
+        deviceIndex: PropTypes.number.isRequired,
+        selectedScoreIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectScoreIndex: PropTypes.func.isRequired,
+
+        // From parent.
         getRef: PropTypes.func.isRequired
     }
 

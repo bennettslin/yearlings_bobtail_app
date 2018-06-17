@@ -592,22 +592,36 @@ export const getShowOverlay = ({
            (!!selectedAnnotationIndex && isOverlayingAnnotation)
 }
 
-export const getIsSomethingBeingShown = ({
-    props,
+export const getShouldSkipHidden = ({
+
+    isLyricExpanded,
+    selectedAnnotationIndex,
+    selectedCarouselNavIndex,
+    selectedDotsIndex,
+    selectedOverviewIndex,
+    selectedScoreIndex,
+    selectedTipsIndex,
+    selectedTitleIndex,
+    selectedWikiIndex,
+
     calledByOverview = false,
     calledByTips = false
-}) => {
-    return props.isLyricExpanded ||
-           props.selectedDotsIndex ||
-           props.selectedScoreIndex ||
-           props.selectedTitleIndex ||
-           props.selectedWikiIndex ||
-           (!props.selectedCarouselNavIndex && props.selectedAnnotationIndex) ||
-           (calledByOverview && !props.selectedTipsIndex) ||
 
-           /**
-            * Since overview can technically still be shown while tips is
-            * actually being shown, check that tips is not shown.
-            */
-           (calledByTips && !props.selectedOverviewIndex && props.selectedTipsIndex)
-}
+}) => (
+
+    isLyricExpanded ||
+    selectedDotsIndex ||
+    selectedScoreIndex ||
+    selectedTitleIndex ||
+    selectedWikiIndex ||
+
+    (!selectedCarouselNavIndex && selectedAnnotationIndex) ||
+
+    (calledByOverview && !selectedTipsIndex) ||
+
+    /**
+     * Since overview can technically still be shown while tips is actually
+     * being shown, check that tips is not shown.
+     */
+    (calledByTips && !selectedOverviewIndex && selectedTipsIndex)
+)

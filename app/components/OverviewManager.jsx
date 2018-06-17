@@ -4,16 +4,16 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import assign from 'lodash.assign'
 
-import { selectTipsIndex } from '../redux/actions/storage'
+import { selectOverviewIndex } from '../redux/actions/storage'
 
 import { getSongIsLogue } from '../helpers/dataHelper'
 import { getShouldSkipHidden } from '../helpers/logicHelper'
 
 import { SHOWN,
          HIDDEN,
-         TIPS_OPTIONS } from '../constants/options'
+         OVERVIEW_OPTIONS } from '../constants/options'
 
-class TipsManager extends Component {
+class OverviewManager extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -27,7 +27,7 @@ class TipsManager extends Component {
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedTitleIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
-        selectTipsIndex: PropTypes.func.isRequired,
+        selectOverviewIndex: PropTypes.func.isRequired,
 
         // From parent.
         getRef: PropTypes.func.isRequired
@@ -37,28 +37,29 @@ class TipsManager extends Component {
         this.props.getRef(this)
     }
 
-    selectTips({
+    selectOverview({
         clickToggle,
         justHideIfShown,
         justShowIfHidden
     }) {
+
         // We shouldn't be able to change overview it's a logue.
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }
 
-        let selectedTipsIndex = this.props.selectedTipsIndex
+        let selectedOverviewIndex = this.props.selectedOverviewIndex
 
         // If called from body click, hide if shown.
         if (justHideIfShown) {
-            if (TIPS_OPTIONS[selectedTipsIndex] === SHOWN) {
-                selectedTipsIndex = 2 // Hidden.
+            if (OVERVIEW_OPTIONS[selectedOverviewIndex] === SHOWN) {
+                selectedOverviewIndex = 2 // Hidden.
             }
 
         // If called from song select, show if hidden.
         } else if (justShowIfHidden) {
-            if (TIPS_OPTIONS[selectedTipsIndex] === HIDDEN) {
-                selectedTipsIndex = 0 // Shown.
+            if (OVERVIEW_OPTIONS[selectedOverviewIndex] === HIDDEN) {
+                selectedOverviewIndex = 0 // Shown.
             }
 
         } else {
@@ -70,21 +71,21 @@ class TipsManager extends Component {
                 this.props,
                 { calledByTips: true }
             ))) {
-                selectedTipsIndex = 0
+                selectedOverviewIndex = 0
 
             } else {
                 do {
                     // If it's a keydown event, cycle through all three options.
-                    selectedTipsIndex = (selectedTipsIndex + 1) % TIPS_OPTIONS.length
+                    selectedOverviewIndex = (selectedOverviewIndex + 1) % OVERVIEW_OPTIONS.length
 
                     // If it's a click event, skip hidden.
-                } while (clickToggle && TIPS_OPTIONS[selectedTipsIndex] === HIDDEN)
+                } while (clickToggle && OVERVIEW_OPTIONS[selectedOverviewIndex] === HIDDEN)
             }
         }
 
         // Overview options are shown, disabled, hidden.
-        if (selectedTipsIndex !== this.props.selectedTipsIndex) {
-            this.props.selectTipsIndex(selectedTipsIndex)
+        if (selectedOverviewIndex !== this.props.selectedOverviewIndex) {
+            this.props.selectOverviewIndex(selectedOverviewIndex)
         }
         return true
     }
@@ -120,8 +121,8 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectTipsIndex
+        selectOverviewIndex
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(TipsManager)
+export default connect(mapStateToProps, bindDispatchToProps)(OverviewManager)
