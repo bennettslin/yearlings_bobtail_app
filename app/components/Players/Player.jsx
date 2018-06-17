@@ -109,24 +109,24 @@ class Player extends Component {
         )
     }
 
-    UNSAFE_componentWillUpdate(nextProps) {
+    componentDidUpdate(prevProps) {
         const { props } = this,
-            selectedChanged = nextProps.isSelected !== props.isSelected,
-            isPlayingChanged = nextProps.isPlaying !== props.isPlaying
+            selectedChanged = props.isSelected !== prevProps.isSelected,
+            isPlayingChanged = props.isPlaying !== prevProps.isPlaying
 
         // Update playing status.
         if (selectedChanged || isPlayingChanged) {
-            this._updateAudioElementIsPlaying(nextProps)
+            this._updateAudioElementIsPlaying(props)
         }
 
         // Reset audio element if no longer selected.
-        if (!nextProps.isSelected && props.isSelected) {
+        if (!props.isSelected && prevProps.isSelected) {
             this.myPlayer.currentTime = 0
         }
 
         // Handle user selected time.
-        if (nextProps.updatedTimePlayed !== null) {
-            this._updateAudioElementTime(nextProps)
+        if (props.updatedTimePlayed !== null) {
+            this._updateAudioElementTime(props)
         }
     }
 
