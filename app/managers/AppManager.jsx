@@ -13,7 +13,7 @@ import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRende
 import { setSliderVerseElement } from '../redux/actions/slider'
 import { selectAccessIndex, selectAdminIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
 
-import EventManager from './EventManager'
+import EventManager from '../handlers/EventManager'
 import AccessManager from './AccessManager'
 import AnnotationManager from './AnnotationManager'
 import AudioManager from './AudioManager'

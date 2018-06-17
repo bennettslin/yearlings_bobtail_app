@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import KeyManager from '../managers/KeyManager'
+import KeyManager from '../handlers/KeyManager'
 import Admin from './Admin/Admin'
 import Live from './Live/Live'
 import AdminToggle from './admin/AdminToggle'
