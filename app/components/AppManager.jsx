@@ -144,9 +144,9 @@ class App extends Component {
         }
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(prevProps) {
 
-        if (nextProps.selectedSongIndex !== this.props.selectedSongIndex) {
+        if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
             this._songIndexDidChange()
         }
     }
