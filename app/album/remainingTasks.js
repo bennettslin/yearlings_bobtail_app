@@ -4,6 +4,13 @@ module.exports = [
         workedHours: 0,
         neededHours: 2
     },
+
+    {
+        taskName: `Get indexed elements by ref`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     {
         taskName: `highlighting annotation title doesn't have transition?`,
         workedHours: 0,
