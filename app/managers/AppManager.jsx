@@ -334,28 +334,8 @@ class App extends Component {
      * NAV *
      *******/
 
-    selectBookColumn({
-        shownBookColumnIndex = (this.props.shownBookColumnIndex + 1) % 2,
-        resetToDefault,
-        selectedCarouselNavIndex = this.props.selectedCarouselNavIndex,
-        selectedSongIndex = this.props.selectedSongIndex
-    }) {
-        // Either toggle or reset. Book column index is 1-based.
-
-        /**
-         * We shouldn't be able to select book column if it's not a single
-         * column, or if nav is collapsed, unless we are resetting to default.
-         */
-        if (!resetToDefault && !(this.props.showSingleBookColumn && !selectedCarouselNavIndex)) {
-            return false
-        }
-
-        // Reset to default upon song change or nav expand.
-        if (resetToDefault) {
-            shownBookColumnIndex = getBookColumnIndex(selectedSongIndex)
-        }
-
-        this.props.setShownBookColumnIndex(shownBookColumnIndex)
+    selectBookColumn(payload) {
+        return this.navManager.selectBookColumn(payload)
     }
 
     selectSong({
