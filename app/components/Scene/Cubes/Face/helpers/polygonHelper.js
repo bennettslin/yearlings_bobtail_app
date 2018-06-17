@@ -1,6 +1,6 @@
-import { getIsFrontFace,
-         getIsSideFace,
-         getIsTileFace } from './faceHelper'
+import { FRONT,
+         SIDE,
+         TILE } from '../../../constants'
 
 export const getPolygonPointsString = (polygonPointsArray) => {
     return polygonPointsArray.map(({ x, y }) => {
@@ -140,7 +140,7 @@ export const getPolygonPoints = ({
     stageHeight
 }) => {
 
-    if (getIsTileFace(face)) {
+    if (face === TILE) {
 
         return getPolygonPointsForTileFace({
             isFloor,
@@ -150,7 +150,7 @@ export const getPolygonPoints = ({
             stageHeight
         })
 
-    } else if (getIsFrontFace(face)) {
+    } else if (face === FRONT) {
 
         return getPolygonPointsForFrontFace({
             isFloor,
@@ -160,7 +160,7 @@ export const getPolygonPoints = ({
             stageHeight
         })
 
-    } else if (getIsSideFace(face)) {
+    } else if (face === SIDE) {
 
         return getPolygonPointsForSideFace({
             isFloor,

@@ -9,7 +9,7 @@ import Face from './Face/Face'
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../sceneHelper'
 
-import { getMaxFaceHeight,
+import { getRelativeZHeight,
          getSideDirection,
          doRenderFrontOrSideFace,
          doRenderTileFace } from './cubeHelper'
@@ -25,7 +25,11 @@ class Cube extends Component {
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
         zIndex: PropTypes.number.isRequired,
-        tilesMeet: PropTypes.bool.isRequired,
+
+        frontCubeZIndex: PropTypes.number.isRequired,
+        sideCubeZIndex: PropTypes.number.isRequired,
+        oppositeTilesMeet: PropTypes.bool.isRequired,
+
         bitmapKey: PropTypes.string.isRequired,
         slantDirection: PropTypes.string.isRequired,
         stageWidth: PropTypes.number.isRequired,
@@ -42,7 +46,9 @@ class Cube extends Component {
                     'xIndex',
                     'yIndex',
                     'zIndex',
-                    'tilesMeet',
+                    'frontCubeZIndex',
+                    'sideCubeZIndex',
+                    'oppositeTilesMeet',
                     'bitmapKey',
                     'slantDirection',
                     'stageWidth',
@@ -54,19 +60,16 @@ class Cube extends Component {
     }
 
     render() {
-        const { yIndex,
-                tilesMeet,
+        const { xIndex,
+                yIndex,
+                frontCubeZIndex,
+                sideCubeZIndex,
+                oppositeTilesMeet,
                 ...other } = this.props,
 
             { isFloor,
-              xIndex,
               zIndex,
               slantDirection } = other,
-
-            maxFaceHeight = getMaxFaceHeight({
-                isFloor,
-                zIndex
-            }),
 
             sideDirection = getSideDirection({
                 xIndex,
@@ -74,38 +77,53 @@ class Cube extends Component {
             }),
 
             /**
-             * Putting logic to render face here, because if none of the faces
-             * are rendered, then we won't render the cube at all.
+             * TODO: For now, we are putting logic to render face here, because,
+             * if none of the faces are rendered, then we won't render the cube
+             * at all. I may revisit this decision, as it might make the
+             * animation ugly.
              */
 
+            frontRelativeZHeight = getRelativeZHeight({
+                isFloor,
+                zIndex,
+                subtractedZIndex: frontCubeZIndex,
+                doLog: isFloor && xIndex === 0 && yIndex === 1
+            }),
+
             doRenderFront = doRenderFrontOrSideFace({
-                maxFaceHeight
+                relativeZHeight: frontRelativeZHeight
+            }),
+
+            sideRelativeZHeight = getRelativeZHeight({
+                isFloor,
+                zIndex,
+                subtractedZIndex: sideCubeZIndex,
+                doLog: isFloor && xIndex === 0 && yIndex === 1
             }),
 
             doRenderSide = doRenderFrontOrSideFace({
                 xIndex,
                 sideDirection,
-                maxFaceHeight
+                relativeZHeight: sideRelativeZHeight
             }),
 
             doRenderTile = doRenderTileFace({
-                tilesMeet,
-                maxFaceHeight
+                isFloor,
+                zIndex,
+                oppositeTilesMeet
             })
 
         if (!doRenderTile && !doRenderFront && !doRenderSide) {
             return null
         }
 
-        const
-            cubeCorners = getStageCubeCornerPercentages({
-                xIndex, yIndex, zIndex, isFloor, slantDirection
-            }),
-
-            faceProps = {
-                maxFaceHeight,
-                cubeCorners
-            }
+        const cubeCorners = getStageCubeCornerPercentages({
+            xIndex,
+            yIndex,
+            zIndex,
+            isFloor,
+            slantDirection
+        })
 
         return (
             <g
@@ -115,21 +133,26 @@ class Cube extends Component {
                 )}
             >
                 {doRenderTile && (
-                    <Face {...other} {...faceProps}
+                    <Face {...other}
                         face={TILE}
+                        cubeCorners={cubeCorners}
                     />
                 )}
 
                 {doRenderSide && (
-                    <Face {...other} {...faceProps}
+                    <Face {...other}
                         face={SIDE}
                         sideDirection={sideDirection}
+                        relativeZHeight={sideRelativeZHeight}
+                        cubeCorners={cubeCorners}
                     />
                 )}
 
                 {doRenderFront && (
-                    <Face {...other} {...faceProps}
+                    <Face {...other}
                         face={FRONT}
+                        relativeZHeight={frontRelativeZHeight}
+                        cubeCorners={cubeCorners}
                     />
                 )}
             </g>

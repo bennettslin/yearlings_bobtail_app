@@ -1,6 +1,6 @@
-import { getIsTileFace } from './faceHelper'
-
 import { getArrayOfLength } from '../../../../../helpers/generalHelper'
+
+import { CUBE_Z_AXIS_LENGTH } from '../../../../../constants/stage'
 
 const MATRIX_LENGTH = 8,
     MATRIX_INDICES_ARRAY = getArrayOfLength({ length: MATRIX_LENGTH }),
@@ -9,9 +9,9 @@ const MATRIX_LENGTH = 8,
 export const getBitmapMatrix = ({
 
     pixels,
-    face,
     polygonPoints,
-    maxFaceHeight,
+    relativeZHeight,
+    zIndex,
     isFloor
 
 }) => {
@@ -25,8 +25,21 @@ export const getBitmapMatrix = ({
         bottomRight = polygonPoints[2],
         bottomLeft = polygonPoints[3],
 
-        // Determine dynamic height of front and side faces.
-        isTileFace = getIsTileFace(face),
+        /**
+         * Face tiles do not pass a relative zIndex, since their height is
+         * always static, not dynamic.
+         */
+        isTileFace = isNaN(relativeZHeight),
+
+        // Base the side point increments on the actual height.
+        actualZHeightIndex = isFloor ?
+            zIndex : CUBE_Z_AXIS_LENGTH - zIndex,
+        actualZHeight = isTileFace ?
+            MATRIX_LENGTH : MATRIX_LENGTH * (actualZHeightIndex / 3),
+        leftmostXIncrement = (bottomLeft.x - topLeft.x) / actualZHeight,
+        leftmostYIncrement = (bottomLeft.y - topLeft.y) / actualZHeight,
+        rightmostXIncrement = (bottomRight.x - topRight.x) / actualZHeight,
+        rightmostYIncrement = (bottomRight.y - topRight.y) / actualZHeight,
 
         /**
          * Determine the number of pixels that make up the height. If it's a
@@ -37,16 +50,10 @@ export const getBitmapMatrix = ({
             MATRIX_LENGTH :
 
             /**
-             * When maximum face height is 3, face is close enough to a square.
+             * When relative zIndex is 3, the face is close enough to a square.
              * It's not exact, but this is fine for now.
              */
-            MATRIX_LENGTH * (maxFaceHeight / 3),
-
-        // Establish values to increment side points.
-        leftmostXIncrement = (bottomLeft.x - topLeft.x) / matrixHeightLength,
-        leftmostYIncrement = (bottomLeft.y - topLeft.y) / matrixHeightLength,
-        rightmostXIncrement = (bottomRight.x - topRight.x) / matrixHeightLength,
-        rightmostYIncrement = (bottomRight.y - topRight.y) / matrixHeightLength,
+            MATRIX_LENGTH * (relativeZHeight / 3),
 
         coordinatesHeightArray = isTileFace ?
             COORDINATES_ARRAY :

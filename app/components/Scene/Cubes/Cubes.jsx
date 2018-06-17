@@ -14,6 +14,8 @@ import { DEFAULT_X_AXIS_INDICES,
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
 import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
+import { getFrontCubeZIndex,
+         getSideCubeZIndex } from './cubeHelper'
 
 const zIndicesPropTypes = PropTypes.arrayOf(
         PropTypes.arrayOf(
@@ -81,12 +83,29 @@ const Cubes = ({
                         zIndices, xIndex, yIndex
                     ),
 
-                    oppositeZIndex = getValueInAbridgedMatrix(
+                    // Determine if ceiling and floor tiles meet.
+                    oppositeCubeZIndex = getValueInAbridgedMatrix(
                         oppositeZIndices, xIndex, yIndex
                     ),
+                    oppositeTilesMeet = zIndex === oppositeCubeZIndex,
 
-                    // Ceiling and floor tiles meet.
-                    tilesMeet = zIndex === oppositeZIndex,
+                    // Allow cube to determine max height of front face.
+                    frontCubeZIndex = getFrontCubeZIndex({
+                        isFloor,
+                        zIndices,
+                        slantDirection,
+                        xIndex,
+                        yIndex
+                    }),
+
+                    // Allow cube to determine max height of side face.
+                    sideCubeZIndex = getSideCubeZIndex({
+                        isFloor,
+                        zIndices,
+                        slantDirection,
+                        xIndex,
+                        yIndex
+                    }),
 
                     bitmapKey = getValueInAbridgedMatrix(
                         bitmapKeys, xIndex, yIndex
@@ -98,7 +117,9 @@ const Cubes = ({
                         xIndex={xIndex}
                         yIndex={invertedYIndex}
                         zIndex={zIndex}
-                        tilesMeet={tilesMeet}
+                        frontCubeZIndex={frontCubeZIndex}
+                        sideCubeZIndex={sideCubeZIndex}
+                        oppositeTilesMeet={oppositeTilesMeet}
                         bitmapKey={bitmapKey}
                         isFloor={isFloor}
                         slantDirection={slantDirection}

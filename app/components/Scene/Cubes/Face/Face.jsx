@@ -4,13 +4,12 @@ import cx from 'classnames'
 
 import Pixel from './Pixel/Pixel'
 
-import { getIsTileFace } from './helpers/faceHelper'
-
 import { getPolygonPoints,
          getPolygonPointsString } from './helpers/polygonHelper'
 
 import { getBitmapMatrix } from './helpers/bitmapHelper'
 
+import { TILE } from '../../constants'
 
 import { BITMAPS } from '../../../../constants/bitmaps'
 
@@ -36,7 +35,9 @@ const pointPropType = PropTypes.shape({
         isFloor: PropTypes.bool,
         slantDirection: PropTypes.string,
         sideDirection: PropTypes.string,
-        maxFaceHeight: PropTypes.number.isRequired,
+
+        relativeZHeight: PropTypes.number,
+        zIndex: PropTypes.number,
 
         cubeCorners: PropTypes.shape({
             tile: facePropType,
@@ -54,7 +55,8 @@ const Face = ({
     isFloor,
     slantDirection,
     sideDirection,
-    maxFaceHeight,
+    relativeZHeight,
+    zIndex,
     cubeCorners,
     stageWidth,
     stageHeight
@@ -76,16 +78,16 @@ const Face = ({
         { base, pixels } = BITMAPS[bitmapKey],
 
         bitmapMatrix = getBitmapMatrix({
-            face,
             pixels,
             polygonPoints,
-            maxFaceHeight,
+            relativeZHeight,
+            zIndex,
             isFloor
         })
 
     let faceString = face
 
-    if (getIsTileFace(face)) {
+    if (face === TILE) {
         faceString = isFloor ? 'floorTile' : 'ceilingTile'
     }
 

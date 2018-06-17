@@ -269,7 +269,7 @@ export const getStageCubeCornerPercentages = ({
 
 }) => {
 
-    const woodZIndex = isFloor ? 0 : 20
+    const baseZIndex = isFloor ? 0 : 20
 
     const getHorizontalPlaneFractions = _getHorizontalPlaneFractionsFunction(
         slantDirection
@@ -280,7 +280,7 @@ export const getStageCubeCornerPercentages = ({
         tile: getHorizontalPlaneFractions(xIndex, yIndex, zIndex),
 
         // This is the face that is attached to the surface.
-        base: getHorizontalPlaneFractions(xIndex, yIndex, woodZIndex)
+        base: getHorizontalPlaneFractions(xIndex, yIndex, baseZIndex)
     }
 }
 
