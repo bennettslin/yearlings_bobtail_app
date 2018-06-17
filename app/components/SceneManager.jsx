@@ -3,9 +3,17 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
+import { selectTitleIndex } from '../redux/actions/storage'
+
 class SceneManager extends Component {
 
-    static defaultProps = {
+    static propTypes = {
+        // Through Redux.
+        selectedTitleIndex: PropTypes.number.isRequired,
+        selectTitleIndex: PropTypes.func.isRequired,
+
+        // From parent.
+        getRef: PropTypes.func.isRequired
     }
 
     static propTypes = {
@@ -26,11 +34,15 @@ class SceneManager extends Component {
     }
 }
 
-const mapStateToProps = (state) => (state)
+const mapStateToProps = ({
+    selectedTitleIndex
+}) => ({
+    selectedTitleIndex
+})
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-
+        selectTitleIndex
     }, dispatch)
 )
 
