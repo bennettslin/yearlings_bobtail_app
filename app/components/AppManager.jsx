@@ -15,11 +15,18 @@ import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, s
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
 
 import EventManager from './EventManager'
+import AnnotationManager from './AnnotationManager'
+import AudioManager from './AudioManager'
+import CarouselManager from './CarouselManager'
+import DotsManager from './DotsManager'
+import LyricManager from './LyricManager'
 import OverviewManager from './OverviewManager'
 import ScoreManager from './ScoreManager'
 import SceneManager from './SceneManager'
 import TipsManager from './TipsManager'
 import TitleManager from './TitleManager'
+import TouchManager from './TouchManager'
+import VerseManager from './VerseManager'
 
 import { VERSE_SCROLL } from '../constants/dom'
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -1259,6 +1266,21 @@ class App extends Component {
                     advanceToNextSong={this.advanceToNextSong}
                     resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
                 />
+                <AnnotationManager
+                    getRef={node => (this.annotationManager = node)}
+                />
+                <AudioManager
+                    getRef={node => (this.audioManager = node)}
+                />
+                <CarouselManager
+                    getRef={node => (this.carouselManager = node)}
+                />
+                <DotsManager
+                    getRef={node => (this.dotsManager = node)}
+                />
+                <LyricManager
+                    getRef={node => (this.lyricManager = node)}
+                />
                 <OverviewManager
                     getRef={node => (this.overviewManager = node)}
                 />
@@ -1274,6 +1296,12 @@ class App extends Component {
                 />
                 <TitleManager
                     getRef={node => (this.titleManager = node)}
+                />
+                <TouchManager
+                    getRef={node => (this.touchManager = node)}
+                />
+                <VerseManager
+                    getRef={node => (this.verseManager = node)}
                 />
             </Fragment>
         )
