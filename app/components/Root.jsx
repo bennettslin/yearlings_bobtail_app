@@ -8,8 +8,9 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AccessManager from './AccessManager'
-import SwitchManager from './SwitchManager'
+import AccessManager from '../managers/AccessManager'
+import AdminManager from './Admin/AdminManager'
+import Live from './Live/Live'
 import AdminToggle from './admin/AdminToggle'
 import Players from './Players/Players'
 
@@ -19,13 +20,16 @@ import { SHOWN,
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongIsLogue } from '../helpers/dataHelper'
 import { getPrefixPrependedClassNames } from '../helpers/domHelper'
-import { getShowOverlay, getSingleShownLyricColumnKey } from '../helpers/logicHelper'
+import { getShowOverlay,
+         getSingleShownLyricColumnKey } from '../helpers/logicHelper'
 import { getIsDesktop, getIsTabletOrMini } from '../helpers/responsiveHelper'
 
-class RootManager extends Component {
+class Root extends Component {
 
     static propTypes = {
         // Through Redux.
+        selectedAdminIndex: PropTypes.number.isRequired,
+
         deviceIndex: PropTypes.number.isRequired,
         isPlaying: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
@@ -124,7 +128,9 @@ class RootManager extends Component {
     }
 
     render() {
-        const { deviceIndex,
+        const { selectedAdminIndex,
+
+                deviceIndex,
                 interactivatedVerseIndex,
                 selectedAccessIndex,
                 selectedAnnotationIndex,
@@ -201,7 +207,7 @@ class RootManager extends Component {
             <div
                 ref={rootManagerRef}
                 className={cx(
-                    'RootManager',
+                    'Root',
 
                     `RM__${deviceClassName}`,
                     isDesktop ?
@@ -271,7 +277,11 @@ class RootManager extends Component {
                     getRef={node => (this.accessManager = node)}
                 />
 
-                <SwitchManager {...other} />
+                {selectedAdminIndex ? (
+                    <AdminManager {...other} />
+                ) : (
+                    <Live {...other} />
+                )}
 
                 <AdminToggle />
 
@@ -282,9 +292,9 @@ class RootManager extends Component {
 }
 
 const mapStateToProps = ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isHeavyRenderReady
+    selectedAdminIndex, interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isHeavyRenderReady
 }) => ({
-    interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isHeavyRenderReady
+    selectedAdminIndex, interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isHeavyRenderReady
 })
 
-export default connect(mapStateToProps)(RootManager)
+export default connect(mapStateToProps)(Root)

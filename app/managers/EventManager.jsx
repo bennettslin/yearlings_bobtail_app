@@ -4,8 +4,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import assign from 'lodash.assign'
 
-// import AccessManager from './AccessManager'
-import RootManager from './RootManager'
+import Root from '../components/Root'
 
 import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from '../helpers/dotHelper'
@@ -755,7 +754,7 @@ class EventManager extends Component {
         // In admin view.
         } else {
             focusElement = this.myRootManager ||
-                document.getElementsByClassName('RootManager')[0]
+                document.getElementsByClassName('Root')[0]
         }
 
         if (focusElement) {
@@ -1066,9 +1065,7 @@ class EventManager extends Component {
             }
 
         return (
-            <RootManager
-                eventHandlers={eventHandlers}
-            />
+            <Root eventHandlers={eventHandlers} />
         )
     }
 }

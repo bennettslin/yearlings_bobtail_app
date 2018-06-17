@@ -54,7 +54,7 @@ Wiki (/)
 
 AccessManager
 AppManager
-RootManager
+Root
 EventManager
 RoutingManager
 SwitchManager

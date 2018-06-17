@@ -11,7 +11,7 @@ import { Provider } from 'react-redux'
 import reducers from './redux/reducers'
 
 import './less/app.less'
-import RoutingManager from './components/RoutingManager'
+import RoutingManager from './managers/RoutingManager'
 
 // Why did you update?
 const turnOnWDYULogging = false
