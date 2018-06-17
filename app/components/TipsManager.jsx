@@ -9,11 +9,11 @@ class TipsManager extends Component {
     }
 
     static propTypes = {
-        getTipsManagerRef: PropTypes.func.isRequired
+        getRef: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getTipsManagerRef(this)
+        this.props.getRef(this)
     }
 
     render() {

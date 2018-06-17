@@ -1,8 +1,9 @@
 // Component that handles all user events from keyboard.
 
-import React, { Component } from 'react'
+import { Component } from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import RootManager from './RootManager'
+
 import { getSongsAndLoguesCount,
          getSongIsLogue,
          getBookColumnIndex,
@@ -49,6 +50,14 @@ import { SHOWN,
 
 class AccessManager extends Component {
 
+    static propTypes = {
+
+        // TODO: Specify which events are used.
+        eventHandlers: PropTypes.object.isRequired,
+
+        getRef: PropTypes.func.isRequired
+    }
+
     constructor(props) {
         super(props)
 
@@ -61,6 +70,10 @@ class AccessManager extends Component {
         this._handleLyricNavigation = this._handleLyricNavigation.bind(this)
         this._handleLetterKey = this._handleLetterKey.bind(this)
         this._handleEscape = this._handleEscape.bind(this)
+    }
+
+    componentDidMount() {
+        this.props.getRef(this)
     }
 
     shouldComponentUpdate() {
@@ -584,12 +597,7 @@ class AccessManager extends Component {
     }
 
     render() {
-        return (
-            <RootManager
-                eventHandlers={this.props.eventHandlers}
-                handleKeyDownPress={this.handleKeyDownPress}
-            />
-        )
+        return null
     }
 }
 

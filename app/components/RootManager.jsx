@@ -8,9 +8,11 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import AccessManager from './AccessManager'
 import SwitchManager from './SwitchManager'
 import AdminToggle from './admin/AdminToggle'
 import Players from './Players/Players'
+
 import { SHOWN,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
@@ -54,7 +56,6 @@ class RootManager extends Component {
         isHeavyRenderReady: PropTypes.bool.isRequired,
 
         // From parent.
-        handleKeyDownPress: PropTypes.func.isRequired,
         eventHandlers: PropTypes.shape({
             handleBodyClick: PropTypes.func.isRequired,
             handleBodyTouchMove: PropTypes.func.isRequired,
@@ -69,13 +70,14 @@ class RootManager extends Component {
     constructor(props) {
         super(props)
 
-        this._handleClick = this._handleClick.bind(this)
-        this._handleMouseUp = this._handleMouseUp.bind(this)
-        this._resetSliderMousedUp = this._resetSliderMousedUp.bind(this)
-
         this.state = {
             sliderMousedUp: false
         }
+
+        this._handleClick = this._handleClick.bind(this)
+        this._handleMouseUp = this._handleMouseUp.bind(this)
+        this._resetSliderMousedUp = this._resetSliderMousedUp.bind(this)
+        this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
     }
 
     componentDidUpdate(prevProps) {
@@ -117,6 +119,10 @@ class RootManager extends Component {
         }
     }
 
+    handleKeyDownPress(e) {
+        this.accessManager.handleKeyDownPress(e)
+    }
+
     render() {
         const { deviceIndex,
                 interactivatedVerseIndex,
@@ -145,10 +151,7 @@ class RootManager extends Component {
                 isVerseBarAbove,
                 isVerseBarBelow,
                 isManualScroll,
-                isHeavyRenderReady,
-
-                // Passed directly from access manaager.
-                handleKeyDownPress } = this.props,
+                isHeavyRenderReady } = this.props,
 
             { handleBodyTouchMove,
               handlePlayerTimeChange,
@@ -259,9 +262,14 @@ class RootManager extends Component {
                 onMouseLeave={this._handleMouseUp}
                 onTouchEnd={this._handleMouseUp}
                 onTouchCancel={this._handleMouseUp}
-                onKeyDown={handleKeyDownPress}
+                onKeyDown={this.handleKeyDownPress}
                 tabIndex="-1"
             >
+                {/* TODO: Only pass the events used by AccessManager. */}
+                <AccessManager
+                    eventHandlers={this.props.eventHandlers}
+                    getRef={node => (this.accessManager = node)}
+                />
 
                 <SwitchManager {...other} />
 

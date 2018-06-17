@@ -9,11 +9,11 @@ class NavManager extends Component {
     }
 
     static propTypes = {
-        getNavManagerRef: PropTypes.func.isRequired
+        getRef: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getNavManagerRef(this)
+        this.props.getRef(this)
     }
 
     render() {

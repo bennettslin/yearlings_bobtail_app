@@ -4,7 +4,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import assign from 'lodash.assign'
 
-import AccessManager from './AccessManager'
+// import AccessManager from './AccessManager'
+import RootManager from './RootManager'
 
 import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from '../helpers/dotHelper'
@@ -1065,7 +1066,7 @@ class EventManager extends Component {
             }
 
         return (
-            <AccessManager
+            <RootManager
                 eventHandlers={eventHandlers}
             />
         )
