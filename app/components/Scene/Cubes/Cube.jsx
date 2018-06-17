@@ -12,7 +12,7 @@ import { getStageCubeCornerPercentages } from '../sceneHelper'
 import { getMaxFaceHeight,
          getSideDirection,
          doRenderFrontOrSideFace,
-         doRenderTileFace } from './Face/helpers/faceHelper'
+         doRenderTileFace } from './cubeHelper'
 
 import { FRONT,
          SIDE,
@@ -72,6 +72,11 @@ class Cube extends Component {
                 xIndex,
                 slantDirection
             }),
+
+            /**
+             * Putting logic to render face here, because if none of the faces
+             * are rendered, then we won't render the cube at all.
+             */
 
             doRenderFront = doRenderFrontOrSideFace({
                 maxFaceHeight
