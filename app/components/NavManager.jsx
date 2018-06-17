@@ -12,6 +12,11 @@ class NavManager extends Component {
         getRef: PropTypes.func.isRequired
     }
 
+    // eslint-disable-next-line
+    constructor(props) {
+        super(props)
+    }
+
     componentDidMount() {
         this.props.getRef(this)
     }

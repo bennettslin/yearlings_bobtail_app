@@ -1,6 +1,6 @@
 // Root component that sets all app state.
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
@@ -12,8 +12,11 @@ import { setIsScoreLoaded } from '../redux/actions/player'
 import { setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
 import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
-import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
-import EventManager from './eventManager'
+import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
+
+import EventManager from './EventManager'
+import ScoreManager from './ScoreManager'
+
 import { VERSE_SCROLL } from '../constants/dom'
 import { ALL_DOT_KEYS } from '../constants/dots'
 import { CONTINUE,
@@ -805,34 +808,8 @@ class App extends Component {
      * SCORE *
      *********/
 
-    selectScore(selectedScoreValue =
-        (this.props.selectedScoreIndex + 1) % 2) {
-        // If no argument passed, then just toggle between on and off.
-
-        // We shouldn't be able to toggle score while in logue.
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return false
-        }
-
-        if (typeof selectedScoreValue === 'boolean') {
-            selectedScoreValue = selectedScoreValue ? 1 : 0
-        }
-
-        /**
-         * We shouldn't be able to expand score if it's phone width. So return
-         * false if it's already collapsed, or collapse it if not.
-         */
-        if (!getIsScoreExpandable(this.props.deviceIndex)) {
-            if (!this.props.selectedScoreIndex) {
-                return false
-
-            } else {
-                selectedScoreValue = 0
-            }
-        }
-
-        this.props.selectScoreIndex(selectedScoreValue)
-        return true
+    selectScore(selectedScoreValue) {
+        this.scoreManager.selectScore(selectedScoreValue)
     }
 
     /********
@@ -1351,46 +1328,49 @@ class App extends Component {
 
     render() {
         return (
-            <EventManager
-                // Event manager props.
-                accessAnnotation={this.accessAnnotation}
-                accessAnnotationAnchor={this.accessAnnotationAnchor}
-                accessDot={this.accessDot}
-                accessNavSong={this.accessNavSong}
-                touchSliderBegin={this.touchSliderBegin}
-                touchBodyMove={this.touchBodyMove}
-                touchBodyEnd={this.touchBodyEnd}
-                selectAnnotation={this.selectAnnotation}
-                selectAudioOption={this.selectAudioOption}
-                selectBookColumn={this.selectBookColumn}
-                toggleDot={this.toggleDot}
-                selectDotsExpand={this.selectDotsExpand}
-                selectLyricColumn={this.selectLyricColumn}
-                selectLyricExpand={this.selectLyricExpand}
-                determineVerseBars={this.determineVerseBars}
-                resetVerseBars={this.resetVerseBars}
-                selectManualScroll={this.selectManualScroll}
-                selectOverview={this.selectOverview}
-                selectCarouselNav={this.selectCarouselNav}
-                selectScore={this.selectScore}
-                selectScene={this.selectScene}
-                selectSong={this.selectSong}
-                selectTime={this.selectTime}
-                selectTitle={this.selectTitle}
-                selectTips={this.selectTips}
-                selectVerse={this.selectVerse}
-                interactivateVerse={this.interactivateVerse}
-                interactivateVerseDirection={this.interactivateVerseDirection}
-                selectWiki={this.selectWiki}
-                toggleAccess={this.toggleAccess}
-                toggleAdmin={this.toggleAdmin}
-                togglePlay={this.togglePlay}
-                setVerseElement={this.setVerseElement}
-                selectOrSlideVerseElement={this.selectOrSlideVerseElement}
+            <Fragment>
+                <EventManager
+                    // Event manager props.
+                    accessAnnotation={this.accessAnnotation}
+                    accessAnnotationAnchor={this.accessAnnotationAnchor}
+                    accessDot={this.accessDot}
+                    accessNavSong={this.accessNavSong}
+                    touchSliderBegin={this.touchSliderBegin}
+                    touchBodyMove={this.touchBodyMove}
+                    touchBodyEnd={this.touchBodyEnd}
+                    selectAnnotation={this.selectAnnotation}
+                    selectAudioOption={this.selectAudioOption}
+                    selectBookColumn={this.selectBookColumn}
+                    toggleDot={this.toggleDot}
+                    selectDotsExpand={this.selectDotsExpand}
+                    selectLyricColumn={this.selectLyricColumn}
+                    selectLyricExpand={this.selectLyricExpand}
+                    determineVerseBars={this.determineVerseBars}
+                    resetVerseBars={this.resetVerseBars}
+                    selectManualScroll={this.selectManualScroll}
+                    selectOverview={this.selectOverview}
+                    selectCarouselNav={this.selectCarouselNav}
+                    selectScore={this.selectScore}
+                    selectScene={this.selectScene}
+                    selectSong={this.selectSong}
+                    selectTime={this.selectTime}
+                    selectTitle={this.selectTitle}
+                    selectTips={this.selectTips}
+                    selectVerse={this.selectVerse}
+                    interactivateVerse={this.interactivateVerse}
+                    interactivateVerseDirection={this.interactivateVerseDirection}
+                    selectWiki={this.selectWiki}
+                    toggleAccess={this.toggleAccess}
+                    toggleAdmin={this.toggleAdmin}
+                    togglePlay={this.togglePlay}
+                    setVerseElement={this.setVerseElement}
+                    selectOrSlideVerseElement={this.selectOrSlideVerseElement}
 
-                advanceToNextSong={this.advanceToNextSong}
-                resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
-            />
+                    advanceToNextSong={this.advanceToNextSong}
+                    resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
+                />
+                <ScoreManager getRef={node => (this.scoreManager = node)} />
+            </Fragment>
         )
     }
 }
@@ -1404,7 +1384,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectScoreIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectOverviewIndex, selectSongIndex, selectTimePlayed, selectTipsIndex, selectTitleIndex, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
     }, dispatch)
 )
 

@@ -6,6 +6,12 @@ module.exports = [
     },
 
     {
+        taskName: `Popup button hover gets obscured by access icon.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Separate out managers.`,
         workedHours: 0,
         neededHours: 8
