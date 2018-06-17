@@ -78,9 +78,9 @@ class RootManager extends Component {
         }
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(prevProps) {
         // If slider touch ended, then tell dom manager.
-        if (!nextProps.isSliderTouched && this.props.isSliderTouched) {
+        if (!this.props.isSliderTouched && prevProps.isSliderTouched) {
 
             // Let click handler get called first, then reset state.
             setTimeout(this._resetSliderMousedUp, 0)
