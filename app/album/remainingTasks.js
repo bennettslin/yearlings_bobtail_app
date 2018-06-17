@@ -6,15 +6,9 @@ module.exports = [
     },
 
     {
-        taskName: `Popup button hover gets obscured by access icon.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Separate out managers.`,
-        workedHours: 0,
-        neededHours: 8
+        workedHours: 4,
+        neededHours: 12
     },
 
     {
@@ -37,6 +31,12 @@ module.exports = [
 
     {
         taskName: `Annotation popup buttons collapse upon being hidden.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Popup button hover gets obscured by access icon.`,
         workedHours: 0,
         neededHours: 1
     },

@@ -3,20 +3,17 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectTitleIndex } from '../redux/actions/storage'
+import { selectWikiIndex } from '../redux/actions/storage'
+import { setCarouselAnnotationIndex } from '../redux/actions/session'
 
 class WikiManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedTitleIndex: PropTypes.number.isRequired,
-        selectTitleIndex: PropTypes.func.isRequired,
+        selectWikiIndex: PropTypes.func.isRequired,
+        setCarouselAnnotationIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired
-    }
-
-    static propTypes = {
         getRef: PropTypes.func.isRequired
     }
 
@@ -24,20 +21,25 @@ class WikiManager extends Component {
         this.props.getRef(this)
     }
 
+    selectWiki({
+        selectedWikiIndex = 0,
+        carouselAnnotationIndex = 0
+    }) {
+        this.props.selectWikiIndex(selectedWikiIndex)
+        this.props.setCarouselAnnotationIndex(carouselAnnotationIndex)
+    }
+
     render() {
         return null
     }
 }
 
-const mapStateToProps = ({
-    selectedTitleIndex
-}) => ({
-    selectedTitleIndex
-})
+const mapStateToProps = () => ({})
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectTitleIndex
+        selectWikiIndex,
+        setCarouselAnnotationIndex
     }, dispatch)
 )
 

@@ -12,7 +12,7 @@ import { setIsScoreLoaded } from '../redux/actions/player'
 import { setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
 import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
-import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, selectWikiIndex } from '../redux/actions/storage'
+import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
 
 import EventManager from './EventManager'
 import AnnotationManager from './AnnotationManager'
@@ -27,6 +27,7 @@ import TipsManager from './TipsManager'
 import TitleManager from './TitleManager'
 import TouchManager from './TouchManager'
 import VerseManager from './VerseManager'
+import WikiManager from './WikiManager'
 
 import { VERSE_SCROLL } from '../constants/dom'
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -643,7 +644,7 @@ class App extends Component {
         })
 
         // TODO: This prevents app from breaking when wiki is selected and song is changed. But this might be handled more strategically.
-        this.selectWiki(selectedWikiIndex)
+        this.selectWiki({ selectedWikiIndex })
 
         this.interactivateVerse()
 
@@ -1006,9 +1007,8 @@ class App extends Component {
      * WIKI *
      ********/
 
-    selectWiki(selectedWikiIndex = 0, carouselAnnotationIndex = 0) {
-        this.props.selectWikiIndex(selectedWikiIndex)
-        this.props.setCarouselAnnotationIndex(carouselAnnotationIndex)
+    selectWiki(payload) {
+        return this.wikiManager.selectWiki(payload)
     }
 
     /***********
@@ -1303,6 +1303,9 @@ class App extends Component {
                 <VerseManager
                     getRef={node => (this.verseManager = node)}
                 />
+                <WikiManager
+                    getRef={node => (this.wikiManager = node)}
+                />
             </Fragment>
         )
     }
@@ -1317,7 +1320,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, selectWikiIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
     }, dispatch)
 )
 

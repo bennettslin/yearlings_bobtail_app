@@ -203,7 +203,10 @@ class EventManager extends Component {
         }
 
         this.stopPropagation(e)
-        this.props.selectWiki(selectedWikiIndex, carouselAnnotationIndex)
+        this.props.selectWiki({
+            selectedWikiIndex,
+            carouselAnnotationIndex
+        })
         return true
     }
 
@@ -821,7 +824,7 @@ class EventManager extends Component {
                 justClosePopups: true
             })
         }
-        this.props.selectWiki(selectedWikiIndex)
+        this.props.selectWiki({ selectedWikiIndex })
     }
 
     /***********
@@ -852,7 +855,7 @@ class EventManager extends Component {
 
             // If popup is open, close it and do nothing else.
             if (selectedWikiIndex) {
-                this.props.selectWiki()
+                this.props.selectWiki({})
                 if (!continuePastClosingPopups) {
                     return
                 }
