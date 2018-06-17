@@ -1072,8 +1072,10 @@ class EventManager extends Component {
     }
 }
 
-export default connect(({
+const mapStateToProps = ({
     appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
 }) => ({
     appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
-}))(EventManager)
+})
+
+export default connect(mapStateToProps)(EventManager)
