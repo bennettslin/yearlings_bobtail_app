@@ -4,12 +4,11 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import debounce from 'debounce'
 import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex } from '../redux/actions/access'
 import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates } from '../redux/actions/device'
 import { setIsScoreLoaded } from '../redux/actions/player'
-import { setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
+import { setShowOneOfTwoLyricColumns } from '../redux/actions/responsive'
 import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setSliderVerseElement } from '../redux/actions/slider'
 import { selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
@@ -29,6 +28,7 @@ import TipsManager from './TipsManager'
 import TitleManager from './TitleManager'
 import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
+import WindowManager from './WindowManager'
 
 import { VERSE_SCROLL } from '../constants/dom'
 import { CONTINUE,
@@ -44,8 +44,7 @@ import { getValueInBitNumber } from '../helpers/bitHelper'
 import { scrollElementIntoView } from '../helpers/domHelper'
 import { getCharStringForNumber } from '../helpers/formatHelper'
 import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logicHelper'
-import { resizeWindow, getShowOneOfTwoLyricColumns, getIsHeightlessLyricColumn, getIsHiddenCarouselNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTwoRowMenu } from '../helpers/responsiveHelper'
-import { getStageCoordinates } from '../helpers/stageHelper'
+import { getShowOneOfTwoLyricColumns, getIsLyricExpandable } from '../helpers/responsiveHelper'
 import LogHelper from '../helpers/logHelper'
 
 /*************
@@ -92,10 +91,7 @@ class App extends Component {
         this._bindEventHandlers()
 
         this.state = {
-            songChangeTimeoutId: null,
-
-            // Device index is needed in state only upon mount.
-            deviceIndex: -1
+            songChangeTimeoutId: null
         }
     }
 
@@ -103,46 +99,12 @@ class App extends Component {
         // For dev purposes.
         this._assignLogFunctions()
 
-        // This method sets initial responsive state.
-        this._windowResize()
-
-        // Then watch for any subsequent window resize.
-        window.onresize = debounce(this._windowResize, 50)
-
         // Upon page load, should render immediately.
         this._handleRenderReady()
     }
 
     componentDidMount() {
-        const { selectedAnnotationIndex,
-                selectedDotKeys,
-                selectedLyricColumnIndex,
-                selectedSongIndex,
-                selectedVerseIndex } = this.props,
-
-            // At this point, deviceIndex still hasn't come through in props.
-            { deviceIndex } = this.state
-
         this.props.setAppMounted(true)
-
-        this.props.accessAnnotationIndex(
-            // Based on either selected annotation or selected verse.
-            selectedAnnotationIndex ?
-                getAnnotationIndexForDirection({
-                    deviceIndex,
-                    currentAnnotationIndex: selectedAnnotationIndex,
-                    selectedSongIndex,
-                    selectedDotKeys,
-                    lyricColumnIndex: selectedLyricColumnIndex
-                }) :
-                getAnnotationIndexForVerseIndex({
-                    deviceIndex,
-                    verseIndex: selectedVerseIndex,
-                    selectedSongIndex,
-                    selectedDotKeys,
-                    lyricColumnIndex: selectedLyricColumnIndex
-                })
-        )
 
         // As long as annotation is not selected, show overview and/or tips.
         if (!this.props.selectedAnnotationIndex) {
@@ -390,8 +352,11 @@ class App extends Component {
             return false
         }
 
-        // Deselect selected annotation if not in new selected column.
-        this._deselectAnnotationIfSelected({
+        /**
+         * If selected, deselect selected annotation if not in new selected
+         * column.
+         */
+        this.deselectAnnotation({
             selectedSongIndex,
             annotationIndex,
             selectedLyricColumnIndex
@@ -859,7 +824,7 @@ class App extends Component {
         }
     }
 
-    _deselectAnnotationIfSelected({
+    deselectAnnotation({
         selectedSongIndex = this.props.selectedSongIndex,
         selectedLyricColumnIndex = this.props.selectedLyricColumnIndex,
         annotationIndex = this.props.selectedAnnotationIndex,
@@ -879,66 +844,6 @@ class App extends Component {
         }
     }
 
-    _windowResize(e) {
-        const { selectedSongIndex } = this.props,
-            { deviceIndex,
-              windowHeight,
-              windowWidth } = resizeWindow(e ? e.target : undefined),
-
-            isLyricExpandable = getIsLyricExpandable(deviceIndex),
-            isHeightlessLyricColumn = getIsHeightlessLyricColumn({ deviceIndex, windowHeight, windowWidth }),
-            showOneOfTwoLyricColumns = getShowOneOfTwoLyricColumns(
-                selectedSongIndex,
-                deviceIndex
-            )
-
-        /**
-         * Deselect selected annotation if not in new shown column. Do it here,
-         * before we tell Redux to update the prop.
-         */
-        if (showOneOfTwoLyricColumns && !this.props.showOneOfTwoLyricColumns) {
-            this._deselectAnnotationIfSelected({
-                deviceIndex
-            })
-        }
-
-        this.setState({ deviceIndex })
-        this.props.setDeviceIndex(deviceIndex)
-        this.props.setWindowHeight(windowHeight)
-        this.props.setWindowWidth(windowWidth)
-        this.props.setStageCoordinates(getStageCoordinates({
-            deviceIndex,
-            windowWidth,
-            windowHeight,
-            isHeightlessLyricColumn
-        }))
-
-        this.props.setIsHeightlessLyricColumn(isHeightlessLyricColumn)
-        this.props.setShowOneOfTwoLyricColumns(showOneOfTwoLyricColumns)
-
-        this.props.setIsHiddenCarouselNav(getIsHiddenCarouselNav({
-            deviceIndex, windowHeight, windowWidth
-        }))
-        this.props.setIsMobileWiki(getIsMobileWiki({ deviceIndex, windowWidth }))
-        this.props.setIsScoresTipsInMain(getIsScoresTipsInMain({ deviceIndex, windowWidth }))
-        this.props.setIsTwoRowMenu(getIsTwoRowMenu({ deviceIndex, windowWidth }))
-        this.props.setShowSingleBookColumn(getShowSingleBookColumn({ deviceIndex, windowWidth }))
-        this.props.setShowShrunkNavIcon(getShowShrunkNavIcon({ deviceIndex, windowWidth }))
-
-        /**
-         * Force collapse of lyric in state if not expandable, or if heightless
-         * lyric.
-         */
-         if (!isLyricExpandable || isHeightlessLyricColumn) {
-             this.selectLyricExpand(false)
-         }
-
-        // Force collapse of score in state if not expandable.
-        if (!getIsScoreExpandable(deviceIndex)) {
-            this.selectScore(false)
-        }
-    }
-
     _bindEventHandlers() {
         this._handleRenderReady = this._handleRenderReady.bind(this)
         this.accessAnnotation = this.accessAnnotation.bind(this)
@@ -953,6 +858,7 @@ class App extends Component {
         this.selectOverview = this.selectOverview.bind(this)
         this.selectAudioOption = this.selectAudioOption.bind(this)
         this.selectAnnotation = this.selectAnnotation.bind(this)
+        this.deselectAnnotation = this.deselectAnnotation.bind(this)
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
         this.resetUpdatedTimePlayed = this.resetUpdatedTimePlayed.bind(this)
@@ -974,7 +880,6 @@ class App extends Component {
         this.determineVerseBars = this.determineVerseBars.bind(this)
         this.resetVerseBars = this.resetVerseBars.bind(this)
         this.selectManualScroll = this.selectManualScroll.bind(this)
-        this._windowResize = this._windowResize.bind(this)
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
         this.touchBodyMove = this.touchBodyMove.bind(this)
         this.touchBodyEnd = this.touchBodyEnd.bind(this)
@@ -1092,6 +997,12 @@ class App extends Component {
                 <WikiManager
                     getRef={node => (this.wikiManager = node)}
                 />
+                <WindowManager
+                    getRef={node => (this.windowManager = node)}
+                    deselectAnnotation={this.deselectAnnotation}
+                    selectLyricExpand={this.selectLyricExpand}
+                    selectScore={this.selectScore}
+                />
             </Fragment>
         )
     }
@@ -1106,7 +1017,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setSliderVerseElement
+        selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setShowOneOfTwoLyricColumns, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setSliderVerseElement
     }, dispatch)
 )
 
