@@ -697,7 +697,7 @@ class EventManager extends Component {
 
         if (!isNaN(clientX)) {
             this.stopPropagation(e)
-            this.props.touchSliderBegin(clientRect, clientX)
+            this.props.touchSliderBegin({ clientRect, clientX })
         }
 
         this.props.interactivateVerse()

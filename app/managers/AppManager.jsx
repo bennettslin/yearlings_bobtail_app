@@ -11,8 +11,8 @@ import { setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates } 
 import { setIsScoreLoaded } from '../redux/actions/player'
 import { setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn } from '../redux/actions/responsive'
 import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
-import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex } from '../redux/actions/slider'
-import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
+import { setSliderVerseElement } from '../redux/actions/slider'
+import { selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
 
 import EventManager from './EventManager'
 import AccessManager from './AccessManager'
@@ -24,9 +24,9 @@ import LyricManager from './LyricManager'
 import OverviewManager from './OverviewManager'
 import ScoreManager from './ScoreManager'
 import SceneManager from './SceneManager'
+import SliderManager from './SliderManager'
 import TipsManager from './TipsManager'
 import TitleManager from './TitleManager'
-import TouchManager from './TouchManager'
 import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 
@@ -44,7 +44,7 @@ import { getSongsAndLoguesCount, getSongsNotLoguesCount, getSongIsLogue, getBook
 import { getValueInBitNumber } from '../helpers/bitHelper'
 import { scrollElementIntoView } from '../helpers/domHelper'
 import { getCharStringForNumber } from '../helpers/formatHelper'
-import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getSliderRatioForClientX, getVerseIndexforRatio, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logicHelper'
+import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseBarStatus, shouldShowAnnotationForColumn } from '../helpers/logicHelper'
 import { resizeWindow, getShowOneOfTwoLyricColumns, getIsPhone, getIsHeightlessLyricColumn, getIsHiddenCarouselNav, getIsLyricExpandable, getIsMobileWiki, getIsScoreExpandable, getShowSingleBookColumn, getShowShrunkNavIcon, getIsScoresTipsInMain, getIsTwoRowMenu } from '../helpers/responsiveHelper'
 import { getStageCoordinates } from '../helpers/stageHelper'
 import LogHelper from '../helpers/logHelper'
@@ -311,7 +311,7 @@ class App extends Component {
         const selectedVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, selectedTimePlayed)
 
         if (selectedVerseIndex !== null) {
-            this._selectTimeAndVerse({
+            this.selectTimeAndVerse({
                 selectedTimePlayed,
                 selectedVerseIndex,
 
@@ -699,6 +699,22 @@ class App extends Component {
         return this.scoreManager.selectScore(payload)
     }
 
+    /**********
+     * SLIDER *
+     **********/
+
+    touchSliderBegin(payload) {
+        return this.sliderManager.touchSliderBegin(payload)
+    }
+
+    touchBodyMove(payload) {
+        return this.sliderManager.touchBodyMove(payload)
+    }
+
+    touchBodyEnd() {
+        return this.sliderManager.touchBodyEnd()
+    }
+
     /********
      * TIPS *
      ********/
@@ -713,101 +729,6 @@ class App extends Component {
 
     selectTitle(payload) {
         return this.titleManager.selectTitle(payload)
-    }
-
-    /*********
-     * TOUCH *
-     *********/
-
-    touchSliderBegin(clientRect, clientX) {
-        const sliderLeft = clientRect.left,
-            sliderWidth = clientRect.width,
-            sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
-
-            sliderVerseIndex = getVerseIndexforRatio(
-                this.props.selectedSongIndex,
-                sliderRatio,
-                sliderWidth
-            )
-
-        this.props.setIsSliderTouched(true)
-        this.props.setSliderLeft(sliderLeft)
-        this.props.setSliderRatio(sliderRatio)
-        this.props.setSliderWidth(sliderWidth)
-        this.props.setSliderVerseIndex(sliderVerseIndex)
-
-        /**
-         * If the move doesn't happen for a while, we recognise that it is
-         * moving anyway for styling purposes.
-         */
-        setTimeout(() => {
-            if (this.props.isSliderTouched && !this.props.isSliderMoving) {
-                this.props.setIsSliderMoving(true)
-            }
-        }, 125)
-    }
-
-    touchBodyMove(clientX) {
-        if (this.props.isSliderTouched) {
-            const { sliderLeft,
-                    sliderWidth } = this.props,
-                sliderRatio = getSliderRatioForClientX(clientX, sliderLeft, sliderWidth),
-
-                sliderVerseIndex = getVerseIndexforRatio(
-                    this.props.selectedSongIndex,
-                    sliderRatio,
-                    sliderWidth
-                )
-
-            this.props.setSliderRatio(sliderRatio)
-            this.props.setSliderVerseIndex(sliderVerseIndex)
-            this.props.setIsSliderMoving(true)
-        }
-    }
-
-    touchBodyEnd() {
-        if (this.props.isSliderTouched) {
-
-            // Selected verse is wherever touch ended on slider.
-            const selectedVerseIndex = this.props.sliderVerseIndex,
-
-                // We will start at the beginning of the selected verse.
-                songVerseTimes =
-                    getSongVerseTimes(this.props.selectedSongIndex),
-                selectedTimePlayed = songVerseTimes[selectedVerseIndex]
-
-            this.selectTime(selectedTimePlayed)
-
-            // Reset slider state.
-            this.props.setIsSliderMoving(false)
-            this.props.setIsSliderTouched(false)
-            this.props.setSliderLeft(0)
-            this.props.setSliderRatio(0)
-            this.props.setSliderWidth(0)
-            this.props.setSliderVerseIndex(-1)
-
-            this.selectOrSlideVerseElement({
-                /**
-                 * If slider was moved, there will be a slider verse element.
-                 * If it was just tapped, there won't be, so fall back to the
-                 * selected verse element.
-                 */
-                verseElement: this.props.sliderVerseElement ||
-                    this.props.selectedVerseElement,
-
-                isTouchBodyEnd: true
-            })
-
-            // Scroll to verse index, then reset verse bars.
-            scrollElementIntoView({
-                scrollClass: VERSE_SCROLL,
-                index: selectedVerseIndex,
-                deviceIndex: this.props.deviceIndex,
-                windowWidth: this.props.windowWidth,
-                isLyricExpanded: this.props.isLyricExpanded
-            })
-            this.resetVerseBars()
-        }
     }
 
     /*********
@@ -898,7 +819,7 @@ class App extends Component {
             renderVerseImmediately =
                 selectedSongIndex === this.props.selectedSongIndex
 
-        this._selectTimeAndVerse({
+        this.selectTimeAndVerse({
             selectedTimePlayed,
             selectedSongIndex,
             selectedVerseIndex,
@@ -949,7 +870,7 @@ class App extends Component {
      * HELPERS *
      ***********/
 
-    _selectTimeAndVerse({
+    selectTimeAndVerse({
         selectedTimePlayed,
         selectedSongIndex = this.props.selectedSongIndex,
         selectedVerseIndex,
@@ -1231,14 +1152,17 @@ class App extends Component {
                     getRef={node => (this.sceneManager = node)}
                     selectVerse={this.selectVerse}
                 />
+                <SliderManager
+                    getRef={node => (this.sliderManager = node)}
+                    selectOrSlideVerseElement={this.selectOrSlideVerseElement}
+                    selectTime={this.selectTime}
+                    resetVerseBars={this.resetVerseBars}
+                />
                 <TipsManager
                     getRef={node => (this.tipsManager = node)}
                 />
                 <TitleManager
                     getRef={node => (this.titleManager = node)}
-                />
-                <TouchManager
-                    getRef={node => (this.touchManager = node)}
                 />
                 <VerseManager
                     getRef={node => (this.verseManager = node)}
@@ -1260,7 +1184,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+        selectAccessIndex, selectAdminIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setSliderVerseElement
     }, dispatch)
 )
 
