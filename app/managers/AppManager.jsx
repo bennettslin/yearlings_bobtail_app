@@ -15,6 +15,7 @@ import { setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, s
 import { selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
 
 import EventManager from './EventManager'
+import AccessManager from './AccessManager'
 import AnnotationManager from './AnnotationManager'
 import AudioManager from './AudioManager'
 import CarouselManager from './CarouselManager'
@@ -223,31 +224,24 @@ class App extends Component {
      * ACCESS *
      **********/
 
-    toggleAccess(selectedAccessValue = (this.props.selectedAccessIndex + 1) % 2) {
-        // If no argument passed, then just toggle between on and off.
-
-        if (typeof selectedAccessValue === 'boolean') {
-            selectedAccessValue = selectedAccessValue ? 1 : 0
-        }
-
-        this.props.selectAccessIndex(selectedAccessValue)
+    toggleAccess(payload) {
+        return this.accessManager.toggleAccess(payload)
     }
 
-    accessAnnotation(accessedAnnotationIndex) {
-        this.props.accessAnnotationIndex(accessedAnnotationIndex)
-        return true
+    accessAnnotation(payload) {
+        return this.accessManager.accessAnnotation(payload)
     }
 
-    accessDot(accessedDotIndex) {
-        this.props.accessDotIndex(accessedDotIndex)
+    accessAnnotationAnchor(payload) {
+        return this.accessManager.accessAnnotationAnchor(payload)
     }
 
-    accessAnnotationAnchor(accessedAnnotationAnchorIndex) {
-        this.props.accessAnnotationAnchorIndex(accessedAnnotationAnchorIndex)
+    accessDot(payload) {
+        return this.accessManager.accessDot(payload)
     }
 
-    accessNavSong(accessedNavSongIndex) {
-        this.props.accessNavSongIndex(accessedNavSongIndex)
+    accessNavSong(payload) {
+        return this.accessManager.accessNavSong(payload)
     }
 
     /*********
@@ -1265,6 +1259,9 @@ class App extends Component {
 
                     advanceToNextSong={this.advanceToNextSong}
                     resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
+                />
+                <AccessManager
+                    getRef={node => (this.accessManager = node)}
                 />
                 <AnnotationManager
                     getRef={node => (this.annotationManager = node)}

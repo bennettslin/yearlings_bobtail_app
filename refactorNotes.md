@@ -52,7 +52,7 @@ Title (/)
 Verse (/)
 Wiki (/)
 
-AccessManager
+KeyManager
 AppManager
 Root
 EventManager

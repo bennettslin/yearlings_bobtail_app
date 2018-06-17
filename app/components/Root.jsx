@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import AccessManager from '../managers/AccessManager'
+import KeyManager from '../managers/KeyManager'
 import Admin from './Admin/Admin'
 import Live from './Live/Live'
 import AdminToggle from './admin/AdminToggle'
@@ -271,8 +271,8 @@ class Root extends Component {
                 onKeyDown={this.handleKeyDownPress}
                 tabIndex="-1"
             >
-                {/* TODO: Only pass the events used by AccessManager. */}
-                <AccessManager
+                {/* TODO: Only pass the events used by KeyManager. */}
+                <KeyManager
                     eventHandlers={this.props.eventHandlers}
                     getRef={node => (this.accessManager = node)}
                 />

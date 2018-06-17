@@ -16,10 +16,6 @@ class AudioManager extends Component {
         getRef: PropTypes.func.isRequired
     }
 
-    static propTypes = {
-        getRef: PropTypes.func.isRequired
-    }
-
     componentDidMount() {
         this.props.getRef(this)
     }
