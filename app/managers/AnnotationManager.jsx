@@ -3,21 +3,104 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { selectTitleIndex } from '../redux/actions/storage'
+import {
+    accessAnnotationIndex,
+    accessAnnotationAnchorIndex
+} from '../redux/actions/access'
+import { setRenderReadyAnnotationIndex } from '../redux/actions/session'
+import { selectAnnotationIndex } from '../redux/actions/storage'
+
+import {
+    getAnnotationIndexForDirection,
+    getAnnotationAnchorIndexForDirection
+} from '../helpers/logicHelper'
 
 class AnnotationManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedTitleIndex: PropTypes.number.isRequired,
-        selectTitleIndex: PropTypes.func.isRequired,
+        deviceIndex: PropTypes.number.isRequired,
+        selectedDotKeys: PropTypes.object.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
+        selectedLyricColumnIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+
+        accessAnnotationIndex: PropTypes.func.isRequired,
+        accessAnnotationAnchorIndex: PropTypes.func.isRequired,
+        selectAnnotationIndex: PropTypes.func.isRequired,
+        setRenderReadyAnnotationIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired
+        getRef: PropTypes.func.isRequired,
+        updatePath: PropTypes.func.isRequired
     }
 
     componentDidMount() {
         this.props.getRef(this)
+    }
+
+    selectAnnotation({
+        selectedAnnotationIndex = 0,
+        selectedSongIndex = this.props.selectedSongIndex,
+        initialAnnotationAnchorIndex = 1,
+        direction
+    }) {
+        const { props } = this
+
+        // Called from arrow buttons in popup.
+        if (direction) {
+            selectedAnnotationIndex = getAnnotationIndexForDirection({
+                deviceIndex: props.deviceIndex,
+                selectedSongIndex,
+                selectedDotKeys: props.selectedDotKeys,
+                currentAnnotationIndex: props.selectedAnnotationIndex,
+                lyricColumnIndex: props.selectedLyricColumnIndex,
+                direction
+            })
+        }
+
+        // Keep accessed index, even if annotation is deselected.
+        if (selectedAnnotationIndex) {
+            const { selectedDotKeys } = props
+
+            props.accessAnnotationIndex(selectedAnnotationIndex)
+
+            // App does not know new index, so pass it directly.
+            props.accessAnnotationAnchorIndex(
+                getAnnotationAnchorIndexForDirection({
+                    selectedSongIndex,
+                    selectedAnnotationIndex,
+                    selectedDotKeys,
+                    initialAnnotationAnchorIndex
+                })
+            )
+        }
+
+        props.selectAnnotationIndex(selectedAnnotationIndex)
+
+        /**
+         * There should always be a popup annotation, so that popup is not
+         * suddenly empty when popup fades out.
+         */
+
+        /**
+         * If selecting or changing annotation in same song, change index to
+         * be rendered right away.
+         */
+        if (selectedSongIndex === props.selectedSongIndex) {
+            props.setRenderReadyAnnotationIndex(selectedAnnotationIndex)
+        }
+
+        /** This is the only place where app will change the router path based
+         * on a new annotation index.
+         */
+        props.updatePath({
+            props,
+            selectedSongIndex,
+            selectedAnnotationIndex
+        })
+
+        return selectedAnnotationIndex
     }
 
     render() {
@@ -26,14 +109,27 @@ class AnnotationManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedTitleIndex
+    deviceIndex,
+    selectedDotKeys,
+    selectedAnnotationIndex,
+    selectedLyricColumnIndex,
+    selectedSongIndex,
+
 }) => ({
-    selectedTitleIndex
+    deviceIndex,
+    selectedDotKeys,
+    selectedAnnotationIndex,
+    selectedLyricColumnIndex,
+    selectedSongIndex,
+
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectTitleIndex
+        accessAnnotationIndex,
+        accessAnnotationAnchorIndex,
+        selectAnnotationIndex,
+        setRenderReadyAnnotationIndex
     }, dispatch)
 )
 

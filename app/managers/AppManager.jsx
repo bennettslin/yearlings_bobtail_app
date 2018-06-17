@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import debounce from 'debounce'
-import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex } from '../redux/actions/access'
+import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex } from '../redux/actions/access'
 import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates } from '../redux/actions/device'
 import { setIsScoreLoaded } from '../redux/actions/player'
@@ -259,68 +259,8 @@ class App extends Component {
      * ANNOTATION *
      **************/
 
-    selectAnnotation({
-        selectedAnnotationIndex = 0,
-        selectedSongIndex = this.props.selectedSongIndex,
-        initialAnnotationAnchorIndex = 1,
-        direction
-    }) {
-        const { props } = this
-
-        // Called from arrow buttons in popup.
-        if (direction) {
-            selectedAnnotationIndex = getAnnotationIndexForDirection({
-                deviceIndex: props.deviceIndex,
-                selectedSongIndex,
-                selectedDotKeys: props.selectedDotKeys,
-                currentAnnotationIndex: props.selectedAnnotationIndex,
-                lyricColumnIndex: props.selectedLyricColumnIndex,
-                direction
-            })
-        }
-
-        // Keep accessed index, even if annotation is deselected.
-        if (selectedAnnotationIndex) {
-            const { selectedDotKeys } = props
-
-            props.accessAnnotationIndex(selectedAnnotationIndex)
-
-            // App does not know new index, so pass it directly.
-            props.accessAnnotationAnchorIndex(
-                getAnnotationAnchorIndexForDirection({
-                    selectedSongIndex,
-                    selectedAnnotationIndex,
-                    selectedDotKeys,
-                    initialAnnotationAnchorIndex
-                })
-            )
-        }
-
-        props.selectAnnotationIndex(selectedAnnotationIndex)
-
-        /**
-         * There should always be a popup annotation, so that popup is not
-         * suddenly empty when popup fades out.
-         */
-
-        /**
-         * If selecting or changing annotation in same song, change index to
-         * be rendered right away.
-         */
-        if (selectedSongIndex === props.selectedSongIndex) {
-            props.setRenderReadyAnnotationIndex(selectedAnnotationIndex)
-        }
-
-        /** This is the only place where app will change the router path based
-         * on a new annotation index.
-         */
-        props.updatePath({
-            props,
-            selectedSongIndex,
-            selectedAnnotationIndex
-        })
-
-        return selectedAnnotationIndex
+    selectAnnotation(payload) {
+        return this.annotationManager.selectAnnotation(payload)
     }
 
     /*********
@@ -1218,6 +1158,8 @@ class App extends Component {
     }
 
     render() {
+        const { updatePath } = this.props
+
         return (
             <Fragment>
                 <EventManager
@@ -1265,6 +1207,7 @@ class App extends Component {
                 />
                 <AnnotationManager
                     getRef={node => (this.annotationManager = node)}
+                    updatePath={updatePath}
                 />
                 <AudioManager
                     getRef={node => (this.audioManager = node)}
@@ -1317,7 +1260,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessDotIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
+        selectAccessIndex, selectAdminIndex, selectAnnotationIndex, selectAudioOptionIndex, selectCarouselNavIndex, selectDotKey, selectDotsIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setIsHeightlessLyricColumn, setIsHiddenCarouselNav, setIsMobileWiki, setIsScoresTipsInMain, setIsTwoRowMenu, setShowOneOfTwoLyricColumns, setShowShrunkNavIcon, setShowSingleBookColumn, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCarouselAnnotationIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setIsSliderMoving, setIsSliderTouched, setSliderLeft, setSliderRatio, setSliderWidth, setSliderVerseElement, setSliderVerseIndex
     }, dispatch)
 )
 
