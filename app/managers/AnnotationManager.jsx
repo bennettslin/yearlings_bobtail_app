@@ -36,6 +36,23 @@ class AnnotationManager extends Component {
         updatePath: PropTypes.func.isRequired
     }
 
+    constructor(props) {
+        super(props)
+
+        const { selectedSongIndex,
+                selectedAnnotationIndex,
+                selectedDotKeys } = props
+
+        // Set initial access state.
+        props.accessAnnotationAnchorIndex(
+            getAnnotationAnchorIndexForDirection({
+                selectedSongIndex,
+                selectedAnnotationIndex,
+                selectedDotKeys
+            })
+        )
+    }
+
     componentDidMount() {
         this.props.getRef(this)
     }

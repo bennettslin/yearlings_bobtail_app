@@ -1,11 +1,10 @@
-// Root component that sets all app state.
+// State manager.
 
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { accessAnnotationAnchorIndex } from '../redux/actions/access'
-import { setShowOneOfTwoLyricColumns } from '../redux/actions/responsive'
+
 import { setAppMounted } from '../redux/actions/session'
 
 import EventManager from '../handlers/EventManager'
@@ -30,13 +29,7 @@ import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
-import { getAnnotationAnchorIndexForDirection } from '../helpers/logicHelper'
-
-/*************
- * CONTAINER *
- *************/
-
-class App extends Component {
+class StateManager extends Component {
 
     static propTypes = {
         updatePath: PropTypes.func.isRequired
@@ -44,19 +37,6 @@ class App extends Component {
 
     constructor(props) {
         super(props)
-
-        const { selectedSongIndex,
-                selectedAnnotationIndex } = props
-
-        // Set initial access state.
-        props.accessAnnotationAnchorIndex(
-            getAnnotationAnchorIndexForDirection({
-                selectedSongIndex,
-                selectedAnnotationIndex,
-                selectedDotKeys: props.selectedDotKeys,
-                initialAnnotationAnchorIndex: 1
-            })
-        )
 
         this._bindEventHandlers()
     }
@@ -295,10 +275,6 @@ class App extends Component {
         return this.wikiManager.selectWiki(payload)
     }
 
-    /***********
-     * HELPERS *
-     ***********/
-
     _bindEventHandlers() {
         this.handleRenderReady = this.handleRenderReady.bind(this)
         this.accessAnnotation = this.accessAnnotation.bind(this)
@@ -475,19 +451,13 @@ class App extends Component {
     }
 }
 
-/*********
- * STORE *
- *********/
-
-const mapStateToProps = (state) => (state)
+const mapStateToProps = () => ({})
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        accessAnnotationAnchorIndex,
-        setShowOneOfTwoLyricColumns,
         setAppMounted
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(App)
+export default connect(mapStateToProps, bindDispatchToProps)(StateManager)

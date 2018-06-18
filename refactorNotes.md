@@ -53,7 +53,7 @@ Verse (/)
 Wiki (/)
 
 KeyManager
-AppManager
+StateManager
 Root
 EventManager
 RoutingManager
