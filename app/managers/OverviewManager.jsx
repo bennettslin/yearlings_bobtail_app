@@ -35,6 +35,13 @@ class OverviewManager extends Component {
 
     componentDidMount() {
         this.props.getRef(this)
+
+        // As long as annotation is not selected, show overview and/or tips.
+        if (!this.props.selectedAnnotationIndex) {
+            this.selectOverview({
+                justShowIfHidden: true
+            })
+        }
     }
 
     selectOverview({

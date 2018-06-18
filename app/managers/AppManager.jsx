@@ -62,19 +62,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-
         this.props.setAppMounted(true)
-
-        // As long as annotation is not selected, show overview and/or tips.
-        if (!this.props.selectedAnnotationIndex) {
-            this.selectOverview({
-                justShowIfHidden: true
-            })
-
-            this.selectTips({
-                justShowIfHidden: true
-            })
-        }
     }
 
     /**********
