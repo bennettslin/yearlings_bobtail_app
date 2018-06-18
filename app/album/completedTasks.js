@@ -2953,4 +2953,10 @@ module.exports = [
         workedHours: 10,
         neededHours: 10
     },
+
+    {
+        taskName: `Fix UNSAFE lifecycle methods.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

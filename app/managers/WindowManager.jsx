@@ -76,7 +76,7 @@ class WindowManager extends Component {
     constructor(props) {
         super(props)
 
-        this.windowResize = this.windowResize.bind(this)
+        this._windowResize = this._windowResize.bind(this)
     }
 
     componentDidMount() {
@@ -84,11 +84,15 @@ class WindowManager extends Component {
          * Set initial responsive UI, then modify state based on device index.
          */
         this._updateStateAfterMount(
-            this.windowResize()
+            this._windowResize()
         )
 
         // Then watch for any subsequent window resize.
-        window.onresize = debounce(this.windowResize, 50)
+        window.onresize = debounce(this._windowResize, 50)
+    }
+
+    componentWillUnmount() {
+        window.onresize = null
     }
 
     _updateStateAfterMount(deviceIndex) {
@@ -123,11 +127,7 @@ class WindowManager extends Component {
         )
     }
 
-    componentWillUnmount() {
-        window.onresize = null
-    }
-
-    windowResize(e) {
+    _windowResize(e) {
         const { selectedSongIndex } = this.props,
             { deviceIndex,
               windowHeight,

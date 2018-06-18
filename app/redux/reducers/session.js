@@ -12,7 +12,17 @@ import { APP_MOUNTED,
          IS_VERSE_BAR_BELOW,
          IS_MANUAL_SCROLL,
          SELECTED_VERSE_ELEMENT,
-         SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
+         SHOWN_BOOK_COLUMN_INDEX,
+         SELECTED_ANNOTATION_INDEX,
+         SELECTED_SONG_INDEX,
+         SELECTED_VERSE_INDEX } from '../../constants/state'
+
+import StorageHelper from '../storageHelper'
+
+const { getFromStorage } = StorageHelper,
+    storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
+    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
+    storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX)
 
 export const AppMountedReducer = (state = false, action) => {
     switch (action.type) {
@@ -32,7 +42,7 @@ export const IsHeavyRenderReadyReducer = (state = false, action) => {
     }
 }
 
-export const RenderReadySongIndexReducer = (state = -1, action) => {
+export const RenderReadySongIndexReducer = (state = storedSongIndex, action) => {
     switch (action.type) {
         case RENDER_READY_SONG_INDEX:
             return action.payload
@@ -41,7 +51,7 @@ export const RenderReadySongIndexReducer = (state = -1, action) => {
     }
 }
 
-export const RenderReadyAnnotationIndexReducer = (state = 0, action) => {
+export const RenderReadyAnnotationIndexReducer = (state = storedAnnotationIndex, action) => {
     switch (action.type) {
         case RENDER_READY_ANNOTATION_INDEX:
             return action.payload
@@ -50,7 +60,7 @@ export const RenderReadyAnnotationIndexReducer = (state = 0, action) => {
     }
 }
 
-export const RenderReadyVerseIndexReducer = (state = 0, action) => {
+export const RenderReadyVerseIndexReducer = (state = storedVerseIndex, action) => {
     switch (action.type) {
         case RENDER_READY_VERSE_INDEX:
             return action.payload

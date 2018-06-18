@@ -23,10 +23,10 @@ class DebugManager extends Component {
     componentDidMount() {
         this.props.getRef(this)
 
-        this.assignDebugLogFunctions()
+        this._assignDebugLogFunctions()
     }
 
-    assignDebugLogFunctions() {
+    _assignDebugLogFunctions() {
         window.a = LogHelper.logAnchorAnnotation.bind(LogHelper, this)
         window.c = LogHelper.logAccessedAnnotation.bind(LogHelper, this)
         window.d = LogHelper.logDrawings.bind(LogHelper, this)

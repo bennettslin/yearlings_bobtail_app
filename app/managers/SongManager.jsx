@@ -47,7 +47,7 @@ class VerseManager extends Component {
 
         // From parent.
         getRef: PropTypes.func.isRequired,
-        handleRenderReady: PropTypes.func.isRequired,
+        // handleRenderReady: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
         accessNavSong: PropTypes.func.isRequired,
         interactivateVerse: PropTypes.func.isRequired,
@@ -189,10 +189,18 @@ class VerseManager extends Component {
 
         // If not selecting a new song, no need to render again.
         if (selectedSongIndex === props.selectedSongIndex) {
-            props.handleRenderReady(
-                selectedSongIndex,
-                selectedAnnotationIndex
-            )
+
+            /**
+             * FIXME: I'm not sure that it's necessary to handle render ready
+             * here. The only place that reaches this code is the "shivaree"
+             * portal in Odin. Commenting out for now. Delete once confident
+             * about doing so. HandleRenderReady can then be a fully private
+             * method of RenderManager.
+             */
+            // props.handleRenderReady({
+            //     selectedSongIndex,
+            //     selectedAnnotationIndex
+            // })
 
         } else {
             props.setIsHeavyRenderReady(false)

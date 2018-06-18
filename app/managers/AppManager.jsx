@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex } from '../redux/actions/access'
 import { setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setShowOneOfTwoLyricColumns } from '../redux/actions/responsive'
-import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCurrentSceneIndex, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
+import { setAppMounted, setCurrentSceneIndex, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setSliderVerseElement } from '../redux/actions/slider'
 
 import EventManager from '../handlers/EventManager'
@@ -34,7 +34,6 @@ import WindowManager from './WindowManager'
 
 import { getBookColumnIndex, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
 import { getAnnotationAnchorIndexForDirection } from '../helpers/logicHelper'
-import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'
 
 /*************
  * CONTAINER *
@@ -76,18 +75,7 @@ class App extends Component {
 
         props.setShownBookColumnIndex(getBookColumnIndex(selectedSongIndex))
 
-        // Bind this to event handlers.
         this._bindEventHandlers()
-
-        this.state = {
-            songChangeTimeoutId: null
-        }
-    }
-
-    UNSAFE_componentWillMount() {
-
-        // Upon page load, should render immediately.
-        this.handleRenderReady()
     }
 
     componentDidMount() {
@@ -103,13 +91,6 @@ class App extends Component {
             this.selectTips({
                 justShowIfHidden: true
             })
-        }
-    }
-
-    componentDidUpdate(prevProps) {
-
-        if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
-            this._songIndexDidChange()
         }
     }
 
@@ -229,66 +210,8 @@ class App extends Component {
      * RENDER *
      **********/
 
-    handleRenderReady(
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedAnnotationIndex = this.props.selectedAnnotationIndex,
-        selectedVerseIndex = this.props.selectedVerseIndex
-    ) {
-
-        this.props.setIsHeavyRenderReady(
-            true
-        )
-
-        this.props.setRenderReadySongIndex(
-            selectedSongIndex
-        )
-
-        this.props.setRenderReadyAnnotationIndex(
-            selectedAnnotationIndex
-        )
-
-        this.props.setRenderReadyVerseIndex(
-            selectedVerseIndex
-        )
-
-        if (this.props.appMounted) {
-
-            /**
-             * Determine doublespeaker columns only when lyrics are ready to
-             * render.
-             */
-            this.props.setShowOneOfTwoLyricColumns(
-                getShowOneOfTwoLyricColumns(
-                    selectedSongIndex,
-                    this.props.deviceIndex
-                )
-            )
-        }
-
-        this.props.setCurrentSceneIndex(
-            getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
-        )
-    }
-
-    _songIndexDidChange() {
-
-        // Clear previous timeout.
-        clearTimeout(this.state.songChangeTimeoutId)
-
-        /**
-         * Render is synchronous, so wait a bit after selecting new song before
-         * rendering the most performance intensive components.
-         */
-        const songChangeTimeoutId = setTimeout(
-            this.handleRenderReady, 200
-        )
-
-        this.setState({
-            songChangeTimeoutId
-        })
+    handleRenderReady(payload) {
+        return this.renderManager.handleRenderReady(payload)
     }
 
     /*********
@@ -328,6 +251,7 @@ class App extends Component {
     }
 
     selectOrSlideVerseElement(payload) {
+
         // FIXME: Avoid this conditional.
         return this.sliderVerseManager && this.sliderVerseManager.selectOrSlideVerseElement(payload)
     }
@@ -540,7 +464,7 @@ class App extends Component {
                 />
                 <SongManager
                     getRef={node => (this.songManager = node)}
-                    handleRenderReady={this.handleRenderReady}
+                    // handleRenderReady={this.handleRenderReady}
                     togglePlay={this.togglePlay}
                     accessNavSong={this.accessNavSong}
                     interactivateVerse={this.interactivateVerse}
@@ -589,7 +513,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setShowOneOfTwoLyricColumns, setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCurrentSceneIndex, setSelectedVerseElement, setShownBookColumnIndex, setUpdatedTimePlayed, setSliderVerseElement
+        accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setShowOneOfTwoLyricColumns, setAppMounted, setCurrentSceneIndex, setSelectedVerseElement, setShownBookColumnIndex, setUpdatedTimePlayed, setSliderVerseElement
     }, dispatch)
 )
 

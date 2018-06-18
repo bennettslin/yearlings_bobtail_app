@@ -25,7 +25,7 @@ class VerseManager extends Component {
         interactivatedVerseIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        selectedVerseElement: PropTypes.number.isRequired,
+        selectedVerseElement: PropTypes.object,
         setInteractivatedVerseIndex: PropTypes.func.isRequired,
         setIsVerseBarAbove: PropTypes.func.isRequired,
         setIsVerseBarBelow: PropTypes.func.isRequired,

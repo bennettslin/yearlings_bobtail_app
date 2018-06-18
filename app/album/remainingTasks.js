@@ -12,12 +12,6 @@ module.exports = [
     },
 
     {
-        taskName: `Fix UNSAFE lifecycle methods.`,
-        workedHours: 2,
-        neededHours: 5
-    },
-
-    {
         taskName: `Get scrolling indexed elements by ref`,
         workedHours: 0,
         neededHours: 3
