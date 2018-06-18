@@ -17,6 +17,11 @@ import { APP_MOUNTED,
          SELECTED_SONG_INDEX,
          SELECTED_VERSE_INDEX } from '../../constants/state'
 
+import {
+    getBookColumnIndex,
+    getSceneIndexForVerseIndex
+} from '../../helpers/dataHelper'
+
 import StorageHelper from '../storageHelper'
 
 const { getFromStorage } = StorageHelper,
@@ -87,7 +92,13 @@ export const InteractivatedVerseIndexReducer = (state = -1, action) => {
     }
 }
 
-export const CurrentSceneIndexReducer = (state = -1, action) => {
+export const CurrentSceneIndexReducer = (
+    state = getSceneIndexForVerseIndex(
+        storedSongIndex,
+        storedVerseIndex
+    ),
+    action
+) => {
     switch (action.type) {
         case CURRENT_SCENE_INDEX:
             return action.payload
@@ -141,7 +152,10 @@ export const SelectedVerseElementReducer = (state = null, action) => {
     }
 }
 
-export const ShownBookColumnIndexReducer = (state = -1, action) => {
+export const ShownBookColumnIndexReducer = (
+    state = getBookColumnIndex(storedSongIndex),
+    action
+) => {
     switch (action.type) {
         case SHOWN_BOOK_COLUMN_INDEX:
             return action.payload

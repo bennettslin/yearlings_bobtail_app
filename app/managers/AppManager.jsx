@@ -4,11 +4,9 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex } from '../redux/actions/access'
-import { setUpdatedTimePlayed } from '../redux/actions/audio'
+import { accessAnnotationAnchorIndex } from '../redux/actions/access'
 import { setShowOneOfTwoLyricColumns } from '../redux/actions/responsive'
-import { setAppMounted, setCurrentSceneIndex, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
-import { setSliderVerseElement } from '../redux/actions/slider'
+import { setAppMounted } from '../redux/actions/session'
 
 import EventManager from '../handlers/EventManager'
 import AccessManager from './AccessManager'
@@ -32,7 +30,6 @@ import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
-import { getBookColumnIndex, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
 import { getAnnotationAnchorIndexForDirection } from '../helpers/logicHelper'
 
 /*************
@@ -49,8 +46,7 @@ class App extends Component {
         super(props)
 
         const { selectedSongIndex,
-                selectedAnnotationIndex,
-                selectedVerseIndex } = props
+                selectedAnnotationIndex } = props
 
         // Set initial access state.
         props.accessAnnotationAnchorIndex(
@@ -61,19 +57,6 @@ class App extends Component {
                 initialAnnotationAnchorIndex: 1
             })
         )
-        props.accessNavSongIndex(selectedSongIndex)
-
-        // Set initial audio state.
-        // Start at persisted time.
-        props.setUpdatedTimePlayed(props.selectedTimePlayed)
-
-        // Set initial session state.
-        props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
-            selectedSongIndex,
-            selectedVerseIndex
-        ))
-
-        props.setShownBookColumnIndex(getBookColumnIndex(selectedSongIndex))
 
         this._bindEventHandlers()
     }
@@ -513,7 +496,9 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setShowOneOfTwoLyricColumns, setAppMounted, setCurrentSceneIndex, setSelectedVerseElement, setShownBookColumnIndex, setUpdatedTimePlayed, setSliderVerseElement
+        accessAnnotationAnchorIndex,
+        setShowOneOfTwoLyricColumns,
+        setAppMounted
     }, dispatch)
 )
 
