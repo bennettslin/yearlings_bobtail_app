@@ -9,9 +9,9 @@ import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates } from '../redux/actions/device'
 import { setIsScoreLoaded } from '../redux/actions/player'
 import { setShowOneOfTwoLyricColumns } from '../redux/actions/responsive'
-import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
+import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsVerseBarAbove, setIsVerseBarBelow, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setSliderVerseElement } from '../redux/actions/slider'
-import { selectAccessIndex, selectAdminIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
+import { selectAccessIndex, selectAdminIndex, selectSongIndex, selectTimePlayed, selectVerseIndex } from '../redux/actions/storage'
 
 import EventManager from '../handlers/EventManager'
 import AccessManager from './AccessManager'
@@ -45,8 +45,8 @@ import { CONTINUE,
 
 import { getSongsAndLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
 import { scrollElementIntoView } from '../helpers/domHelper'
-import { getAnnotationIndexForDirection, getAnnotationIndexForVerseIndex, getAnnotationAnchorIndexForDirection, getVerseBarStatus } from '../helpers/logicHelper'
-import { getShowOneOfTwoLyricColumns, getIsLyricExpandable } from '../helpers/responsiveHelper'
+import { getAnnotationIndexForDirection, getAnnotationAnchorIndexForDirection, getVerseBarStatus } from '../helpers/logicHelper'
+import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'
 
 /*************
  * CONTAINER *
@@ -207,74 +207,16 @@ class App extends Component {
      * LYRIC *
      *********/
 
-    selectLyricExpand(isLyricExpanded = !this.props.isLyricExpanded) {
-
-        // We shouldn't be able to expand or collapse lyric while in logue.
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return false
-        }
-
-        /**
-         * We shouldn't be able to expand lyric if it's not expandable. So
-         * return false if it's already collapsed, or collapse it if not.
-         */
-        if (!getIsLyricExpandable(this.props.deviceIndex)) {
-
-            if (!this.props.isLyricExpanded) {
-                return false
-
-            } else {
-                isLyricExpanded = false
-            }
-        }
-
-        this.props.setIsLyricExpanded(isLyricExpanded)
-        return true
+    selectLyricExpand(payload) {
+        return this.lyricManager.selectLyricExpand(payload)
     }
 
-    selectManualScroll(isManualScroll = false) {
-        this.props.setIsManualScroll(isManualScroll);
+    selectLyricColumn(payload) {
+        return this.lyricManager.selectLyricColumn(payload)
     }
 
-    selectLyricColumn({
-        selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2,
-        selectedSongIndex = this.props.selectedSongIndex,
-        annotationIndex = this.props.selectedAnnotationIndex
-    }) {
-        const { props } = this
-
-        /**
-         * We shouldn't be able to select lyric column if not in a song that
-         * has double columns, or if in a logue. Check for new song if called
-         * from portal.
-         */
-        if (!(getShowOneOfTwoLyricColumns(selectedSongIndex, props.deviceIndex)) || getSongIsLogue(selectedSongIndex)) {
-            return false
-        }
-
-        /**
-         * If selected, deselect selected annotation if not in new selected
-         * column.
-         */
-        this.deselectAnnotation({
-            selectedSongIndex,
-            annotationIndex,
-            selectedLyricColumnIndex
-        })
-
-        props.selectLyricColumnIndex(selectedLyricColumnIndex)
-
-        // Switching lyric column might change accessed annotation index.
-        this.props.accessAnnotationIndex(
-            getAnnotationIndexForVerseIndex({
-                deviceIndex: props.deviceIndex,
-                verseIndex: props.selectedVerseIndex,
-                selectedSongIndex,
-                selectedDotKeys: props.selectedDotKeys,
-                lyricColumnIndex: selectedLyricColumnIndex
-            })
-        )
-        return true
+    selectManualScroll(payload) {
+        return this.lyricManager.selectManualScroll(payload)
     }
 
     /*******
@@ -889,6 +831,7 @@ class App extends Component {
                 />
                 <LyricManager
                     getRef={node => (this.lyricManager = node)}
+                    deselectAnnotation={this.deselectAnnotation}
                 />
                 <NavManager
                     getRef={node => (this.navManager = node)}
@@ -949,7 +892,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAccessIndex, selectAdminIndex, selectLyricColumnIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setShowOneOfTwoLyricColumns, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsLyricExpanded, setIsVerseBarAbove, setIsVerseBarBelow, setIsManualScroll, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setSliderVerseElement
+        selectAccessIndex, selectAdminIndex, selectSongIndex, selectTimePlayed, selectVerseIndex, accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setShowOneOfTwoLyricColumns, setAppMounted, setIsScoreLoaded, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsVerseBarAbove, setIsVerseBarBelow, setSelectedVerseElement, setShownBookColumnIndex, setDeviceIndex, setWindowHeight, setWindowWidth, setStageCoordinates, setIsPlaying, setUpdatedTimePlayed, setSliderVerseElement
     }, dispatch)
 )
 

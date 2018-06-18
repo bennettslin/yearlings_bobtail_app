@@ -3,7 +3,10 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setIsPlaying, setUpdatedTimePlayed } from '../redux/actions/audio'
+import {
+    setIsPlaying,
+    setUpdatedTimePlayed
+} from '../redux/actions/audio'
 import { selectAudioOptionIndex } from '../redux/actions/storage'
 
 import { getValueInBitNumber } from '../helpers/bitHelper'
