@@ -2959,4 +2959,10 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+
+    {
+        taskName: `Separate out managers.`,
+        workedHours: 12,
+        neededHours: 12
+    },
 ]

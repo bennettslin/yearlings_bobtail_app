@@ -141,6 +141,15 @@ class AnnotationManager extends Component {
         }
     }
 
+    accessAnnotation(accessedAnnotationIndex) {
+        this.props.accessAnnotationIndex(accessedAnnotationIndex)
+        return true
+    }
+
+    accessAnnotationAnchor(accessedAnnotationAnchorIndex) {
+        this.props.accessAnnotationAnchorIndex(accessedAnnotationAnchorIndex)
+    }
+
     render() {
         return null
     }

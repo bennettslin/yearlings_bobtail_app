@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setShownBookColumnIndex } from '../redux/actions/session'
+import { accessNavSongIndex } from '../redux/actions/access'
 
+import { setShownBookColumnIndex } from '../redux/actions/session'
 import { getBookColumnIndex } from '../helpers/dataHelper'
 
 class NavManager extends Component {
@@ -15,6 +16,8 @@ class NavManager extends Component {
         shownBookColumnIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+
+        accessNavSongIndex: PropTypes.func.isRequired,
         setShownBookColumnIndex: PropTypes.func.isRequired,
 
         // From parent.
@@ -49,6 +52,10 @@ class NavManager extends Component {
         this.props.setShownBookColumnIndex(shownBookColumnIndex)
     }
 
+    accessNavSong(accessedNavSongIndex) {
+        this.props.accessNavSongIndex(accessedNavSongIndex)
+    }
+
     render() {
         return null
     }
@@ -68,6 +75,7 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        accessNavSongIndex,
         setShownBookColumnIndex
     }, dispatch)
 )

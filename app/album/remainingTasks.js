@@ -6,12 +6,6 @@ module.exports = [
     },
 
     {
-        taskName: `Separate out managers.`,
-        workedHours: 8,
-        neededHours: 14
-    },
-
-    {
         taskName: `Get scrolling indexed elements by ref`,
         workedHours: 0,
         neededHours: 3
@@ -48,7 +42,7 @@ module.exports = [
     },
 
     {
-        taskName: `Determine relative zIndices for slanted directions.`,
+        taskName: `Determine relative zIndices for slanted directions. (Do on plane?)`,
         workedHours: 0,
         neededHours: 5
     },

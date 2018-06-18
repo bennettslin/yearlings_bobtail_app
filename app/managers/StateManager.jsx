@@ -53,22 +53,6 @@ class StateManager extends Component {
         return this.accessManager.toggleAccess(payload)
     }
 
-    accessAnnotation(payload) {
-        return this.accessManager.accessAnnotation(payload)
-    }
-
-    accessAnnotationAnchor(payload) {
-        return this.accessManager.accessAnnotationAnchor(payload)
-    }
-
-    accessDot(payload) {
-        return this.accessManager.accessDot(payload)
-    }
-
-    accessNavSong(payload) {
-        return this.accessManager.accessNavSong(payload)
-    }
-
     /**************
      * ANNOTATION *
      **************/
@@ -79,6 +63,14 @@ class StateManager extends Component {
 
     deselectAnnotation(payload) {
         return this.annotationManager.deselectAnnotation(payload)
+    }
+
+    accessAnnotation(payload) {
+        return this.annotationManager.accessAnnotation(payload)
+    }
+
+    accessAnnotationAnchor(payload) {
+        return this.annotationManager.accessAnnotationAnchor(payload)
     }
 
     /*********
@@ -125,6 +117,10 @@ class StateManager extends Component {
         return this.dotsManager.selectDotsExpand(payload)
     }
 
+    accessDot(payload) {
+        return this.dotsManager.accessDot(payload)
+    }
+
     /*********
      * LYRIC *
      *********/
@@ -147,6 +143,10 @@ class StateManager extends Component {
 
     selectBookColumn(payload) {
         return this.navManager.selectBookColumn(payload)
+    }
+
+    accessNavSong(payload) {
+        return this.navManager.accessNavSong(payload)
     }
 
     /************
@@ -202,7 +202,6 @@ class StateManager extends Component {
     }
 
     selectOrSlideVerseElement(payload) {
-
         // FIXME: Avoid this conditional.
         return this.sliderVerseManager && this.sliderVerseManager.selectOrSlideVerseElement(payload)
     }
@@ -381,7 +380,6 @@ class StateManager extends Component {
                 />
                 <DotsManager
                     getRef={node => (this.dotsManager = node)}
-                    accessDot={this.accessDot}
                 />
                 <LyricManager
                     getRef={node => (this.lyricManager = node)}

@@ -3,7 +3,11 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { accessAnnotationIndex } from '../redux/actions/access'
+import {
+    accessAnnotationIndex,
+    accessDotIndex
+} from '../redux/actions/access'
+
 import {
     selectDotKey,
     selectDotsIndex
@@ -26,12 +30,12 @@ class DotsManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         accessAnnotationIndex: PropTypes.func.isRequired,
+        accessDotIndex: PropTypes.func.isRequired,
         selectDotKey: PropTypes.func.isRequired,
         selectDotsIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired,
-        accessDot: PropTypes.func.isRequired
+        getRef: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -45,7 +49,7 @@ class DotsManager extends Component {
         this.props.selectDotKey(selectedDotKey, isSelected)
 
         // Make most recently toggled dot the accessed dot.
-        this.props.accessDot(selectedDotIndex)
+        this.accessDot(selectedDotIndex)
     }
 
     selectDotsExpand(
@@ -82,6 +86,10 @@ class DotsManager extends Component {
         return true
     }
 
+    accessDot(accessedDotIndex) {
+        this.props.accessDotIndex(accessedDotIndex)
+    }
+
     render() {
         return null
     }
@@ -106,6 +114,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         accessAnnotationIndex,
+        accessDotIndex,
         selectDotKey,
         selectDotsIndex
     }, dispatch)
