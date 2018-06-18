@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex } from '../redux/actions/access'
 import { setUpdatedTimePlayed } from '../redux/actions/audio'
 import { setShowOneOfTwoLyricColumns } from '../redux/actions/responsive'
-import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsVerseBarAbove, setIsVerseBarBelow, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
+import { setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCurrentSceneIndex, setSelectedVerseElement, setShownBookColumnIndex } from '../redux/actions/session'
 import { setSliderVerseElement } from '../redux/actions/slider'
 
 import EventManager from '../handlers/EventManager'
@@ -32,8 +32,8 @@ import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
-import { getBookColumnIndex, getSongVerseTimes, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
-import { getAnnotationAnchorIndexForDirection, getVerseBarStatus } from '../helpers/logicHelper'
+import { getBookColumnIndex, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
+import { getAnnotationAnchorIndexForDirection } from '../helpers/logicHelper'
 import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'
 
 /*************
@@ -376,60 +376,20 @@ class App extends Component {
      * VERSE *
      *********/
 
-    interactivateVerse(interactivatedVerseIndex = -1) {
-        this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)
+    interactivateVerse(payload) {
+        return this.verseManager.interactivateVerse(payload)
     }
 
-    interactivateVerseDirection(direction) {
-        const { selectedSongIndex } = this.props,
-            songVerseTimes = getSongVerseTimes(selectedSongIndex),
-            songVerseTimesCount = songVerseTimes.length
-
-        let { interactivatedVerseIndex } = this.props
-
-        // Ensure modulo.
-        if (direction === -1) {
-            direction = songVerseTimesCount - 1
-        }
-
-        // We are turning on interactivation, so start from selected verse.
-        if (interactivatedVerseIndex === -1) {
-            interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % songVerseTimesCount
-
-        // We already have an interactivated verse.
-        } else {
-            interactivatedVerseIndex = (interactivatedVerseIndex + direction) % songVerseTimesCount
-        }
-
-        this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)
-        return interactivatedVerseIndex
+    interactivateVerseDirection(payload) {
+        return this.verseManager.interactivateVerseDirection(payload)
     }
 
-    determineVerseBars(verseElement = this.props.selectedVerseElement) {
-
-        // Prevent verse bar from showing upon initial load.
-        if (!this.props.appMounted || !verseElement) {
-            return false
-        }
-
-        const { isVerseBarAbove,
-                isVerseBarBelow } = getVerseBarStatus({
-                    deviceIndex: this.props.deviceIndex,
-                    windowWidth: this.props.windowWidth,
-                    windowHeight: this.props.windowHeight,
-                    isLyricExpanded: this.props.isLyricExpanded,
-                    isHeightlessLyricColumn:
-                        this.props.isHeightlessLyricColumn,
-                    verseElement
-                })
-
-        this.props.setIsVerseBarAbove(isVerseBarAbove)
-        this.props.setIsVerseBarBelow(isVerseBarBelow)
+    determineVerseBars(payload) {
+        return this.verseManager.determineVerseBars(payload)
     }
 
     resetVerseBars() {
-        this.props.setIsVerseBarAbove(false)
-        this.props.setIsVerseBarBelow(false)
+        return this.verseManager.resetVerseBars()
     }
 
     /********
@@ -629,7 +589,7 @@ const mapStateToProps = (state) => (state)
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setShowOneOfTwoLyricColumns, setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setInteractivatedVerseIndex, setCurrentSceneIndex, setIsVerseBarAbove, setIsVerseBarBelow, setSelectedVerseElement, setShownBookColumnIndex, setUpdatedTimePlayed, setSliderVerseElement
+        accessAnnotationIndex, accessAnnotationAnchorIndex, accessNavSongIndex, setShowOneOfTwoLyricColumns, setAppMounted, setIsHeavyRenderReady, setRenderReadySongIndex, setRenderReadyAnnotationIndex, setRenderReadyVerseIndex, setCurrentSceneIndex, setSelectedVerseElement, setShownBookColumnIndex, setUpdatedTimePlayed, setSliderVerseElement
     }, dispatch)
 )
 
