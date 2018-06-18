@@ -35,15 +35,8 @@ import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
-import { CONTINUE,
-         PAUSE_AT_END,
-         AUDIO_OPTIONS,
-         DISABLED,
-         OVERVIEW_OPTIONS,
-         TIPS_OPTIONS } from '../constants/options'
-
-import { getSongsAndLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
-import { getAnnotationIndexForDirection, getAnnotationAnchorIndexForDirection, getVerseBarStatus } from '../helpers/logicHelper'
+import { getBookColumnIndex, getSongVerseTimes, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
+import { getAnnotationAnchorIndexForDirection, getVerseBarStatus } from '../helpers/logicHelper'
 import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'
 
 /*************
@@ -97,7 +90,7 @@ class App extends Component {
     UNSAFE_componentWillMount() {
 
         // Upon page load, should render immediately.
-        this._handleRenderReady()
+        this.handleRenderReady()
     }
 
     componentDidMount() {
@@ -237,7 +230,7 @@ class App extends Component {
      * RENDER *
      **********/
 
-    _handleRenderReady(
+    handleRenderReady(
         selectedSongIndex = this.props.selectedSongIndex,
         selectedAnnotationIndex = this.props.selectedAnnotationIndex,
         selectedVerseIndex = this.props.selectedVerseIndex
@@ -281,6 +274,24 @@ class App extends Component {
         )
     }
 
+    _songIndexDidChange() {
+
+        // Clear previous timeout.
+        clearTimeout(this.state.songChangeTimeoutId)
+
+        /**
+         * Render is synchronous, so wait a bit after selecting new song before
+         * rendering the most performance intensive components.
+         */
+        const songChangeTimeoutId = setTimeout(
+            this.handleRenderReady, 200
+        )
+
+        this.setState({
+            songChangeTimeoutId
+        })
+    }
+
     /*********
      * SCENE *
      *********/
@@ -318,161 +329,11 @@ class App extends Component {
      ********/
 
     advanceToNextSong() {
-        /**
-         * When selecting next song through audio player, reset annotation and
-         * verse, and scroll element into view, but do not access nav section.
-         */
-        const { selectedSongIndex,
-                selectedAudioOptionIndex } = this.props,
-
-            selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex]
-
-        // If option is to pause at end, stop play.
-        if (selectedAudioOption === PAUSE_AT_END) {
-            this.togglePlay()
-
-        } else {
-
-            /**
-             * If option is to continue, advance to next song. Otherwise, stay
-             * on same song, and start at beginning. (True evaluates to 1, false 0.)
-             */
-            const nextSongIndex = selectedSongIndex +
-                (selectedAudioOption === CONTINUE)
-
-            this.selectSong({
-                selectedSongIndex: nextSongIndex,
-                selectedVerseIndex: 0
-            })
-        }
+        return this.songManager.advanceToNextSong()
     }
 
-    selectSong({
-        selectedSongIndex = 0,
-        direction,
-        selectedAnnotationIndex = 0,
-        selectedVerseIndex = 0,
-        selectedWikiIndex = 0,
-        destinationPortalIndex
-    }) {
-
-        const { props } = this
-
-        // Called from audio section's previous or next buttons.
-        if (direction) {
-            selectedSongIndex = props.selectedSongIndex + direction
-
-            if (selectedSongIndex < 0 || selectedSongIndex >= getSongsAndLoguesCount()) {
-                return false
-            }
-        }
-
-        const isLogue = getSongIsLogue(selectedSongIndex)
-
-        // If not selected from portal, show overview if hidden.
-        if (!selectedAnnotationIndex) {
-            this.selectOverview({
-                justShowIfHidden: true
-            })
-
-            this.selectTips({
-                justShowIfHidden: true
-            })
-
-            /**
-             * If overview or tips are being shown, collapse lyric column and
-             * hide dots section.
-             */
-            if (OVERVIEW_OPTIONS[this.props.selectedOverviewIndex] !== DISABLED ||
-                TIPS_OPTIONS[this.props.selectedTipsIndex] !== DISABLED) {
-                this.selectDotsExpand(false)
-                this.selectLyricExpand(false)
-            }
-        }
-
-        this.selectAnnotation({
-            selectedAnnotationIndex,
-            selectedSongIndex,
-
-            // If from portal, access destination portal index.
-            initialAnnotationAnchorIndex: destinationPortalIndex
-        })
-
-        this.selectVerse({
-            selectedVerseIndex,
-            selectedSongIndex
-        })
-
-        // TODO: This prevents app from breaking when wiki is selected and song is changed. But this might be handled more strategically.
-        this.selectWiki({ selectedWikiIndex })
-
-        this.interactivateVerse()
-
-        if (isLogue) {
-            this.props.setIsPlaying(false)
-            this.selectScore(false)
-        }
-
-        // Nav will update book column right away.
-        this.selectBookColumn({
-            resetToDefault: true,
-            selectedSongIndex
-        })
-
-        /**
-         * Get new accessed annotation index by starting from first and going
-         * forward. If not called from portal, it should always be the title
-         * annotation unless deselected by dots.
-         */
-        this.props.accessAnnotationIndex(
-            selectedAnnotationIndex ||
-            getAnnotationIndexForDirection({
-                deviceIndex: this.props.deviceIndex,
-                currentAnnotationIndex: 1,
-                selectedSongIndex,
-                selectedDotKeys: props.selectedDotKeys,
-                lyricColumnIndex: props.selectedLyricColumnIndex
-            })
-        )
-
-        this.accessNavSong(selectedSongIndex)
-        props.selectSongIndex(selectedSongIndex)
-
-        // If not selecting a new song, no need to render again.
-        if (selectedSongIndex === this.props.selectedSongIndex) {
-            this._handleRenderReady(
-                selectedSongIndex,
-                selectedAnnotationIndex
-            )
-
-        } else {
-            props.setIsHeavyRenderReady(false)
-            props.setIsScoreLoaded(false)
-        }
-
-        // Reset verse bars.
-        this.props.setIsVerseBarAbove(false)
-        this.props.setIsVerseBarBelow(false)
-
-        return true
-    }
-
-    _songIndexDidChange() {
-
-        // Clear previous timeout.
-        clearTimeout(this.state.songChangeTimeoutId)
-
-        /**
-         * Render is synchronous, so wait a bit after selecting new song before
-         * rendering the most performance intensive components.
-         */
-        const songChangeTimeoutId = setTimeout(
-            this._handleRenderReady, 200
-        )
-
-        this.setState({
-            songChangeTimeoutId
-        })
+    selectSong(payload) {
+        return this.songManager.selectSong(payload)
     }
 
     /********
@@ -621,7 +482,7 @@ class App extends Component {
      ***********/
 
     _bindEventHandlers() {
-        this._handleRenderReady = this._handleRenderReady.bind(this)
+        this.handleRenderReady = this.handleRenderReady.bind(this)
         this.accessAnnotation = this.accessAnnotation.bind(this)
         this.accessDot = this.accessDot.bind(this)
         this.accessAnnotationAnchor = this.accessAnnotationAnchor.bind(this)
@@ -756,6 +617,19 @@ class App extends Component {
                 />
                 <SongManager
                     getRef={node => (this.songManager = node)}
+                    handleRenderReady={this.handleRenderReady}
+                    togglePlay={this.togglePlay}
+                    accessNavSong={this.accessNavSong}
+                    interactivateVerse={this.interactivateVerse}
+                    selectAnnotation={this.selectAnnotation}
+                    selectBookColumn={this.selectBookColumn}
+                    selectDotsExpand={this.selectDotsExpand}
+                    selectLyricExpand={this.selectLyricExpand}
+                    selectOverview={this.selectOverview}
+                    selectScore={this.selectScore}
+                    selectTips={this.selectTips}
+                    selectVerse={this.selectVerse}
+                    selectWiki={this.selectWiki}
                 />
                 <TimeVerseManager
                     getRef={node => (this.timeManager = node)}
