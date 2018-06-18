@@ -23,7 +23,7 @@ import OverviewManager from './OverviewManager'
 import RenderManager from './RenderManager'
 import ScoreManager from './ScoreManager'
 import SceneManager from './SceneManager'
-import SliderManager from './SliderManager'
+import SliderVerseManager from './SliderVerseManager'
 import SongManager from './SongManager'
 import TimeVerseManager from './TimeVerseManager'
 import TipsManager from './TipsManager'
@@ -91,6 +91,7 @@ class App extends Component {
     }
 
     componentDidMount() {
+
         this.props.setAppMounted(true)
 
         // As long as annotation is not selected, show overview and/or tips.
@@ -106,6 +107,7 @@ class App extends Component {
     }
 
     componentDidUpdate(prevProps) {
+
         if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
             this._songIndexDidChange()
         }
@@ -305,20 +307,29 @@ class App extends Component {
         return this.scoreManager.selectScore(payload)
     }
 
-    /**********
-     * SLIDER *
-     **********/
+    /****************
+     * SLIDER/VERSE *
+     ****************/
 
     touchSliderBegin(payload) {
-        return this.sliderManager.touchSliderBegin(payload)
+        return this.sliderVerseManager.touchSliderBegin(payload)
     }
 
     touchBodyMove(payload) {
-        return this.sliderManager.touchBodyMove(payload)
+        return this.sliderVerseManager.touchBodyMove(payload)
     }
 
     touchBodyEnd() {
-        return this.sliderManager.touchBodyEnd()
+        return this.sliderVerseManager.touchBodyEnd()
+    }
+
+    setVerseElement(payload) {
+        return this.sliderVerseManager.setVerseElement(payload)
+    }
+
+    selectOrSlideVerseElement(payload) {
+        // FIXME: Avoid this conditional.
+        return this.sliderVerseManager && this.sliderVerseManager.selectOrSlideVerseElement(payload)
     }
 
     /********
@@ -333,16 +344,16 @@ class App extends Component {
         return this.songManager.selectSong(payload)
     }
 
-    /********
-     * TIME *
-     ********/
+    /**************
+     * TIME/VERSE *
+     **************/
 
     selectTime(payload) {
-        return this.timeManager.selectTime(payload)
+        return this.timeVerseManager.selectTime(payload)
     }
 
     selectVerse(payload) {
-        return this.timeManager.selectVerse(payload)
+        return this.timeVerseManager.selectVerse(payload)
     }
 
     /********
@@ -393,51 +404,6 @@ class App extends Component {
         this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)
         return interactivatedVerseIndex
     }
-
-    setVerseElement(verseElement) {
-        this.props.setSelectedVerseElement(verseElement)
-    }
-
-    selectOrSlideVerseElement({
-        verseElement,
-        isTouchBodyEnd,
-        isInitialMount
-    }) {
-
-        const doSetSlider = this.props.isSliderMoving && !isTouchBodyEnd,
-
-            propsVerseElement =
-                doSetSlider ?
-                this.props.sliderVerseElement : this.props.selectedVerseElement
-
-        if (verseElement !== propsVerseElement) {
-
-            // Determine verse bars only if this is not the initial mount.
-            if (!isInitialMount) {
-                this.determineVerseBars(verseElement)
-            }
-
-            if (doSetSlider) {
-                /**
-                 * Slider verse element overrides selected verse element, as
-                 * long as the slider is touched.
-                 */
-                this.props.setSliderVerseElement(verseElement)
-
-            } else {
-                // App has a reference to the selected verse.
-                this.props.setSelectedVerseElement(verseElement)
-            }
-
-            if (isTouchBodyEnd) {
-                this.props.setSliderVerseElement(null)
-            }
-        }
-    }
-
-    /*************
-     * VERSE BAR *
-     *************/
 
     determineVerseBars(verseElement = this.props.selectedVerseElement) {
 
@@ -606,10 +572,10 @@ class App extends Component {
                     getRef={node => (this.sceneManager = node)}
                     selectVerse={this.selectVerse}
                 />
-                <SliderManager
-                    getRef={node => (this.sliderManager = node)}
-                    selectOrSlideVerseElement={this.selectOrSlideVerseElement}
+                <SliderVerseManager
+                    getRef={node => (this.sliderVerseManager = node)}
                     selectTime={this.selectTime}
+                    determineVerseBars={this.determineVerseBars}
                     resetVerseBars={this.resetVerseBars}
                 />
                 <SongManager
@@ -629,7 +595,7 @@ class App extends Component {
                     selectWiki={this.selectWiki}
                 />
                 <TimeVerseManager
-                    getRef={node => (this.timeManager = node)}
+                    getRef={node => (this.timeVerseManager = node)}
                     updatePath={updatePath}
                 />
                 <TipsManager
