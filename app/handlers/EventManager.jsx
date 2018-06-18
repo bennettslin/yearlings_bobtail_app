@@ -306,7 +306,10 @@ class EventManager extends Component {
      ****************/
 
     handlePlayerTimeChange(time) {
-        this.props.selectTime(time, true)
+        this.props.selectTime({
+            selectedTimePlayed: time,
+            isPlayerAdvancing: true
+        })
     }
 
     handlePlayerNextSong(e) {

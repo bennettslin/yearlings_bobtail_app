@@ -114,7 +114,7 @@ class SliderManager extends Component {
                     getSongVerseTimes(this.props.selectedSongIndex),
                 selectedTimePlayed = songVerseTimes[selectedVerseIndex]
 
-            this.props.selectTime(selectedTimePlayed)
+            this.props.selectTime({ selectedTimePlayed })
 
             // Reset slider state.
             this.props.setIsSliderMoving(false)

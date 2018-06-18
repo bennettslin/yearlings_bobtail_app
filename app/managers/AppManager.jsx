@@ -28,14 +28,13 @@ import ScoreManager from './ScoreManager'
 import SceneManager from './SceneManager'
 import SliderManager from './SliderManager'
 import SongManager from './SongManager'
-import TimeManager from './TimeManager'
+import TimeVerseManager from './TimeVerseManager'
 import TipsManager from './TipsManager'
 import TitleManager from './TitleManager'
 import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
-import { VERSE_SCROLL } from '../constants/dom'
 import { CONTINUE,
          PAUSE_AT_END,
          AUDIO_OPTIONS,
@@ -43,8 +42,7 @@ import { CONTINUE,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
 
-import { getSongsAndLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getVerseIndexForTime, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
-import { scrollElementIntoView } from '../helpers/domHelper'
+import { getSongsAndLoguesCount, getSongIsLogue, getBookColumnIndex, getSongVerseTimes, getSceneIndexForVerseIndex } from '../helpers/dataHelper'
 import { getAnnotationIndexForDirection, getAnnotationAnchorIndexForDirection, getVerseBarStatus } from '../helpers/logicHelper'
 import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'
 
@@ -481,89 +479,12 @@ class App extends Component {
      * TIME *
      ********/
 
-    selectTime(selectedTimePlayed = 0, isPlayerAdvancing) {
-        const selectedVerseIndex = getVerseIndexForTime(this.props.selectedSongIndex, selectedTimePlayed)
-
-        if (selectedVerseIndex !== null) {
-            this.selectTimeAndVerse({
-                selectedTimePlayed,
-                selectedVerseIndex,
-
-                // When time is being selected, always render verse immediately.
-                renderVerseImmediately: true,
-                isPlayerAdvancing
-            })
-        }
+    selectTime(payload) {
+        return this.timeManager.selectTime(payload)
     }
 
-    selectTimeAndVerse({
-        selectedTimePlayed,
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedVerseIndex,
-        renderVerseImmediately,
-        isPlayerAdvancing
-    }) {
-
-        const { props } = this
-
-        /** This is the only place where app will change the router path based
-         * on a new song or verse index.
-         */
-        props.updatePath({
-            props,
-            selectedSongIndex,
-            selectedVerseIndex
-        })
-
-        /**
-         * Since time and verse are in sync, this helper method can be called
-         * by either one.
-         */
-
-        props.selectVerseIndex(selectedVerseIndex)
-        props.selectTimePlayed(selectedTimePlayed)
-
-        /**
-         * If selecting or changing verse in same song, change index to be
-         * rendered right away.
-         */
-        if (selectedSongIndex === props.selectedSongIndex) {
-            props.setRenderReadyVerseIndex(selectedVerseIndex)
-        }
-
-        /**
-         * If called by player, and autoScroll is on, then scroll to selected
-         * verse if needed.
-         */
-        if (
-            !this.props.isManualScroll &&
-            selectedVerseIndex !== props.selectedVerseIndex
-        ) {
-            scrollElementIntoView({
-                scrollClass: VERSE_SCROLL,
-                index: selectedVerseIndex,
-                deviceIndex: this.props.deviceIndex,
-                windowWidth: this.props.windowWidth,
-                isLyricExpanded: this.props.isLyricExpanded
-            })
-        }
-
-        /**
-         * If time was not changed by the audio element advancing, tell player
-         * to update audio element's time.
-         */
-        if (!isPlayerAdvancing) {
-            props.setUpdatedTimePlayed(selectedTimePlayed)
-        }
-
-        // Render verse and scene immediately.
-        if (renderVerseImmediately) {
-
-            props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
-                props.selectedSongIndex,
-                selectedVerseIndex
-            ))
-        }
+    selectVerse(payload) {
+        return this.timeManager.selectVerse(payload)
     }
 
     /********
@@ -654,28 +575,6 @@ class App extends Component {
                 this.props.setSliderVerseElement(null)
             }
         }
-    }
-
-    selectVerse({
-        selectedVerseIndex = 0,
-        selectedSongIndex = this.props.selectedSongIndex
-    }) {
-        const songVerseTimes = getSongVerseTimes(selectedSongIndex),
-            selectedTimePlayed = songVerseTimes[selectedVerseIndex],
-
-            /**
-             * If selecting or changing verse in same song, change index to be
-             * rendered right away.
-             */
-            renderVerseImmediately =
-                selectedSongIndex === this.props.selectedSongIndex
-
-        this.selectTimeAndVerse({
-            selectedTimePlayed,
-            selectedSongIndex,
-            selectedVerseIndex,
-            renderVerseImmediately
-        })
     }
 
     /*************
@@ -858,8 +757,9 @@ class App extends Component {
                 <SongManager
                     getRef={node => (this.songManager = node)}
                 />
-                <TimeManager
+                <TimeVerseManager
                     getRef={node => (this.timeManager = node)}
+                    updatePath={updatePath}
                 />
                 <TipsManager
                     getRef={node => (this.tipsManager = node)}
