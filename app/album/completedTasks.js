@@ -2955,12 +2955,6 @@ module.exports = [
     },
 
     {
-        taskName: `Fix UNSAFE lifecycle methods.`,
-        workedHours: 2,
-        neededHours: 2
-    },
-
-    {
         taskName: `Separate out managers.`,
         workedHours: 12,
         neededHours: 12

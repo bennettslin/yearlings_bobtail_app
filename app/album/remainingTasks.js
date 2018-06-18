@@ -6,9 +6,27 @@ module.exports = [
     },
 
     {
+        taskName: `Fix UNSAFE lifecycle methods.`,
+        workedHours: 2,
+        neededHours: 5
+    },
+
+    {
         taskName: `Get scrolling indexed elements by ref`,
         workedHours: 0,
         neededHours: 3
+    },
+
+    {
+        taskName: `Get selected or slider verse element upon mount.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Separate out event handlers into helper components in the same way.`,
+        workedHours: 0,
+        neededHours: 12
     },
 
     {
