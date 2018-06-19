@@ -2959,4 +2959,10 @@ module.exports = [
         workedHours: 12,
         neededHours: 12
     },
+
+    {
+        taskName: `Figure out steps for reviewing each scene.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

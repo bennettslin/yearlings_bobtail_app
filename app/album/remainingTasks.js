@@ -1,9 +1,4 @@
 module.exports = [
-    {
-        taskName: `Figure out steps for doing each scene.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     {
         taskName: `Fix UNSAFE lifecycle methods.`,
