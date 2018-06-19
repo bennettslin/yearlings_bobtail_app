@@ -29,7 +29,7 @@ module.exports = {
                 },
                 esther: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     realHeight: `3'10"`,
                     description: 'standing'
                 },

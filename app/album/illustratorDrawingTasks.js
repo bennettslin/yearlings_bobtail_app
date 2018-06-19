@@ -8,6 +8,21 @@ module.exports = [
         workedHours: 1,
         neededHours: 2
     },
+    {
+        taskName: `North Hollywood houses (Didi, Willy)`,
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: `Playground (Didi)`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: `Bay Area streets (Garryowen, Golden Cord)`,
+        workedHours: 4,
+        neededHours: 5
+    },
 
     /**
      * Untouched fixtures, painted foam panels.

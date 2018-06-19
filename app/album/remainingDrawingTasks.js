@@ -241,16 +241,6 @@ module.exports = [
      * Large sceneries (Mimic painting)
      */
     {
-        taskName: `North Hollywood houses (Didi, Willy)`,
-        workedHours: 3,
-        neededHours: 4
-    },
-    {
-        taskName: `Playground (Didi)`,
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
         taskName: `Valley overlooking freeway (Willy)`,
         workedHours: 0,
         neededHours: 5
@@ -332,11 +322,6 @@ module.exports = [
     },
     {
         taskName: `LA streets (Constellations)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Bay Area streets (Garryowen, Golden Cord)`,
         workedHours: 0,
         neededHours: 5
     },
