@@ -2965,4 +2965,10 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+
+    {
+        taskName: `highlighting annotation title doesn't have transition? It's because it was not wrapped in TextSpan.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

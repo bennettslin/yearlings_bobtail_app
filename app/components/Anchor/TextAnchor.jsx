@@ -21,7 +21,9 @@ TextAnchor = ({
 ...other }) => {
 
     const { isAccessed,
-            isSelected } = other
+            isSelected } = other,
+
+        isStringText = typeof text === 'string'
 
     return (
         <Anchor {...other}>
@@ -29,6 +31,8 @@ TextAnchor = ({
                 'TextAnchor',
 
                 isAccessed && !isSelected && 'TextAnchor__accessed',
+
+                isStringText && 'TextAnchor__transition',
 
                 isSelected ?
                     'TextAnchor__selected' :

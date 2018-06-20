@@ -25,12 +25,6 @@ module.exports = [
     },
 
     {
-        taskName: `highlighting annotation title doesn't have transition?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Annotation popup buttons collapse upon being hidden.`,
         workedHours: 0,
         neededHours: 1
