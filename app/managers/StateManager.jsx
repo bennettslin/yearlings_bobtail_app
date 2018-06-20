@@ -198,12 +198,8 @@ class StateManager extends Component {
     }
 
     setVerseElement(payload) {
-        return this.sliderVerseManager.setVerseElement(payload)
-    }
-
-    selectOrSlideVerseElement(payload) {
         // FIXME: Avoid this conditional.
-        return this.sliderVerseManager && this.sliderVerseManager.selectOrSlideVerseElement(payload)
+        return this.sliderVerseManager && this.sliderVerseManager.setVerseElement(payload)
     }
 
     /********
@@ -306,7 +302,6 @@ class StateManager extends Component {
         this.selectTitle = this.selectTitle.bind(this)
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
         this.setVerseElement = this.setVerseElement.bind(this)
-        this.selectOrSlideVerseElement = this.selectOrSlideVerseElement.bind(this)
         this.determineVerseBars = this.determineVerseBars.bind(this)
         this.resetVerseBars = this.resetVerseBars.bind(this)
         this.selectManualScroll = this.selectManualScroll.bind(this)
@@ -355,7 +350,6 @@ class StateManager extends Component {
                     toggleAdmin={this.toggleAdmin}
                     togglePlay={this.togglePlay}
                     setVerseElement={this.setVerseElement}
-                    selectOrSlideVerseElement={this.selectOrSlideVerseElement}
                     advanceToNextSong={this.advanceToNextSong}
                     resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
                 />

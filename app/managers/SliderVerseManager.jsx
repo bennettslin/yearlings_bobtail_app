@@ -127,7 +127,7 @@ class SliderVerseManager extends Component {
             this.props.setSliderWidth(0)
             this.props.setSliderVerseIndex(-1)
 
-            this.selectOrSlideVerseElement({
+            this.setVerseElement({
                 /**
                  * If slider was moved, there will be a slider verse element.
                  * If it was just tapped, there won't be, so fall back to the
@@ -151,11 +151,7 @@ class SliderVerseManager extends Component {
         }
     }
 
-    setVerseElement(verseElement) {
-        this.props.setSelectedVerseElement(verseElement)
-    }
-
-    selectOrSlideVerseElement({
+    setVerseElement({
         verseElement,
         isTouchBodyEnd,
         isInitialMount

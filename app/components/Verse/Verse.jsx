@@ -46,7 +46,7 @@ class Verse extends Component {
         inVerseBar: PropTypes.bool.isRequired,
         handleLyricAnnotationSelect: PropTypes.func,
         handleVerseInteractivate: PropTypes.func,
-        handleVerseElementSelectOrSlide: PropTypes.func
+        handleSetVerseElement: PropTypes.func
     }
 
     constructor(props) {
@@ -57,7 +57,7 @@ class Verse extends Component {
 
     componentDidMount() {
         // This is called to establish the verse element.
-        this._handleVerseElementSelectOrSlide(this.props, true)
+        // this._handleSetVerseElement(this.props, true)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -81,13 +81,13 @@ class Verse extends Component {
 
     componentDidUpdate(prevProps) {
         if (!prevProps.isOnCursor) {
-            this._handleVerseElementSelectOrSlide(this.props)
+            this._handleSetVerseElement(this.props)
         }
     }
 
-    _handleVerseElementSelectOrSlide(props = this.props, uponMount) {
+    _handleSetVerseElement(props = this.props, uponMount) {
         if (props.isOnCursor) {
-            this.props.handleVerseElementSelectOrSlide(
+            this.props.handleSetVerseElement(
 
                 // Establish verse bars only if this is not the initial mount.
                 this.myVerse, uponMount

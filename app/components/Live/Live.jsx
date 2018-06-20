@@ -51,7 +51,7 @@ class Live extends Component {
         handleTitleToggle: PropTypes.func.isRequired,
         handleVerseBarSelect: PropTypes.func.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired,
-        handleVerseElementSelectOrSlide: PropTypes.func.isRequired,
+        handleSetVerseElement: PropTypes.func.isRequired,
         handleVerseInteractivate: PropTypes.func.isRequired,
         handleWikiToggle: PropTypes.func.isRequired,
         stopPropagation: PropTypes.func.isRequired
@@ -101,7 +101,7 @@ class Live extends Component {
                 handleTitleToggle,
                 handleVerseBarSelect,
                 handleVerseBarWheel,
-                handleVerseElementSelectOrSlide,
+                handleSetVerseElement,
                 handleVerseInteractivate,
                 handleWikiToggle,
                 stopPropagation } = this.props,
@@ -144,7 +144,7 @@ class Live extends Component {
                 handleVerseBarSelect,
                 handleVerseBarWheel,
                 handleVerseInteractivate,
-                handleVerseElementSelectOrSlide,
+                handleSetVerseElement,
                 handleScrollAfterLyricRerender
             },
 

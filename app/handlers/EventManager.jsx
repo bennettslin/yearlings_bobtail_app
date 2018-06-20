@@ -35,7 +35,7 @@ class EventManager extends Component {
         this.handleBodyTouchMove = this.handleBodyTouchMove.bind(this)
         this.handleBodyTouchEnd = this.handleBodyTouchEnd.bind(this)
         this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
-        this.handleVerseElementSelectOrSlide = this.handleVerseElementSelectOrSlide.bind(this)
+        this.handleSetVerseElement = this.handleSetVerseElement.bind(this)
         this.handleAccessToggle = this.handleAccessToggle.bind(this)
         this.handleAdminToggle = this.handleAdminToggle.bind(this)
         this.handleAnnotationPrevious = this.handleAnnotationPrevious.bind(this)
@@ -809,8 +809,8 @@ class EventManager extends Component {
         }
     }
 
-    handleVerseElementSelectOrSlide(verseElement, isInitialMount) {
-        this.props.selectOrSlideVerseElement({
+    handleSetVerseElement(verseElement, isInitialMount) {
+        this.props.setVerseElement({
             verseElement,
             isInitialMount
         })
@@ -1031,7 +1031,7 @@ class EventManager extends Component {
                 handleBodyTouchMove: this.handleBodyTouchMove,
                 handleBodyTouchEnd: this.handleBodyTouchEnd,
                 handlePopupContainerClick: this.handlePopupContainerClick,
-                handleVerseElementSelectOrSlide: this.handleVerseElementSelectOrSlide,
+                handleSetVerseElement: this.handleSetVerseElement,
                 handleAccessToggle: this.handleAccessToggle,
                 handleAdminToggle: this.handleAdminToggle,
                 handleAnnotationWikiSelect: this.handleAnnotationWikiSelect,
