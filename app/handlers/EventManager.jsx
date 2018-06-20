@@ -809,10 +809,9 @@ class EventManager extends Component {
         }
     }
 
-    handleSetVerseElement(verseElement, isInitialMount) {
+    handleSetVerseElement(verseElement) {
         this.props.setVerseElement({
-            verseElement,
-            isInitialMount
+            verseElement
         })
     }
 

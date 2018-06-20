@@ -153,22 +153,19 @@ class SliderVerseManager extends Component {
 
     setVerseElement({
         verseElement,
-        isTouchBodyEnd,
-        isInitialMount
+        isTouchBodyEnd
     }) {
 
         const doSetSlider = this.props.isSliderMoving && !isTouchBodyEnd,
 
-            propsVerseElement =
-                doSetSlider ?
-                this.props.sliderVerseElement : this.props.selectedVerseElement
+            propsVerseElement = doSetSlider ?
+                this.props.sliderVerseElement :
+                this.props.selectedVerseElement
 
         if (verseElement !== propsVerseElement) {
 
-            // Determine verse bars only if this is not the initial mount.
-            if (!isInitialMount) {
-                this.props.determineVerseBars(verseElement)
-            }
+            // Determine verse bars.
+            this.props.determineVerseBars(verseElement)
 
             if (doSetSlider) {
                 /**

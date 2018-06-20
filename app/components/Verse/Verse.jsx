@@ -55,11 +55,6 @@ class Verse extends Component {
         this._handleInteractivatableClick = this._handleInteractivatableClick.bind(this)
     }
 
-    componentDidMount() {
-        // This is called to establish the verse element.
-        // this._handleSetVerseElement(this.props, true)
-    }
-
     shouldComponentUpdate(nextProps) {
         const { props } = this,
             componentShouldUpdate = getComponentShouldUpdate({
@@ -85,12 +80,12 @@ class Verse extends Component {
         }
     }
 
-    _handleSetVerseElement(props = this.props, uponMount) {
+    _handleSetVerseElement(props = this.props) {
         if (props.isOnCursor) {
             this.props.handleSetVerseElement(
 
                 // Establish verse bars only if this is not the initial mount.
-                this.myVerse, uponMount
+                this.myVerse
             )
         }
     }
