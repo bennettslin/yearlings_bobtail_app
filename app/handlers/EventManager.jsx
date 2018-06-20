@@ -84,15 +84,16 @@ class EventManager extends Component {
         this.focusBody()
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
+    componentDidUpdate(prevProps) {
 
         // If annotation is selected or accessed in carousel, scroll to it.
-        if (nextProps.appMounted && !this.props.appMounted) {
+        if (this.props.appMounted && !prevProps.appMounted) {
             const { selectedCarouselNavIndex,
                     selectedAnnotationIndex,
-                    accessedAnnotationIndex } = nextProps,
+                    accessedAnnotationIndex } = this.props,
 
-                scrollToAnnotationIndex = selectedAnnotationIndex || accessedAnnotationIndex
+                scrollToAnnotationIndex =
+                    selectedAnnotationIndex || accessedAnnotationIndex
 
             if (selectedCarouselNavIndex && scrollToAnnotationIndex) {
                 // Animation is slightly less janky with setTimeout.

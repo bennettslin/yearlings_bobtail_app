@@ -69,13 +69,12 @@ class LyricColumn extends Component {
         return componentShouldUpdate
     }
 
-    UNSAFE_componentWillReceiveProps(nextProps) {
-        if (!this.props.appMounted && nextProps.appMounted) {
+    componentDidUpdate(prevProps) {
+        // Previously under componentWillReceiveProps.
+        if (!prevProps.appMounted && this.props.appMounted) {
             this.props.handleScrollAfterLyricRerender()
         }
-    }
 
-    componentDidUpdate(prevProps) {
         if (!prevProps.isHeavyRenderReady && this.props.isHeavyRenderReady) {
             const scrollTimeoutId = setTimeout(
                 this._handleScrollAfterLyricRerender, 0

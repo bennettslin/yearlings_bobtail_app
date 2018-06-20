@@ -1,9 +1,9 @@
 module.exports = [
 
     {
-        taskName: `Fix UNSAFE lifecycle methods.`,
-        workedHours: 2,
-        neededHours: 5
+        taskName: `When opening url with annotation in incognito, annotation and tips are shown simultaneously.`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     {
@@ -26,12 +26,6 @@ module.exports = [
 
     {
         taskName: `Annotation popup buttons collapse upon being hidden.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Popup button hover gets obscured by access icon.`,
         workedHours: 0,
         neededHours: 1
     },
