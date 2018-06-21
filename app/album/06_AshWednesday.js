@@ -741,7 +741,7 @@ module.exports = {
                                             anchor: `Henry IV`,
                                             wiki: `Henry_IV_of_France`
                                         },
-                                        `was born a Protestant but converted to Catholicism to gain the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be decided by earthly wants. Similarly, I would have happily become Catholic if that could get Catherine to stay.`
+                                        `was born a Protestant but converted to Catholicism to gain the French royal crown. He is reputed to have remarked, "Paris est vaut bien une messe," meaning "Paris is well worth a Mass," implying that spiritual allegiances can be dictated by earthly wants. Similarly, I would have happily become Catholic if that could get Catherine to stay.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true

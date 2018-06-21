@@ -22,9 +22,10 @@ Text = ({
 
 ...props }) => {
 
-    const { inPortal,
-            inVerseBar,
-            ...other } = props
+    const { inVerseBar,
+            ...other } = props,
+
+        { inPortal } = other
 
     // It's a text span.
     if (typeof textEntity === 'string') {

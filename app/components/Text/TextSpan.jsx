@@ -18,6 +18,7 @@ textSpanPropTypes = {
     isItalic: PropTypes.bool,
     isVerseBeginningSpan: PropTypes.bool,
     isVerseEndingSpan: PropTypes.bool,
+    inPortal: PropTypes.bool,
     isPortalAnchorInPortal: PropTypes.bool
 },
 
@@ -29,6 +30,7 @@ TextSpan = ({
     isItalic,
     isVerseBeginningSpan,
     isVerseEndingSpan,
+    inPortal,
     isPortalAnchorInPortal
 
 }) => {
@@ -49,7 +51,7 @@ TextSpan = ({
     }
 
     // Last verse span in portal will always end in an ellipsis.
-    if (isVerseEndingSpan) {
+    if (inPortal && isVerseEndingSpan) {
         formattedText = getFormattedEndingVerseSpanText(formattedText)
     }
 

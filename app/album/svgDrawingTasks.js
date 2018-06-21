@@ -58,7 +58,7 @@ module.exports = [
      * Stage
      */
     {
-        taskName: `Theatre seat`,
+        taskName: `Theatre seat, including advancing seats based on circular row.`,
         workedHours: 0,
         neededHours: 4
     },

@@ -87,22 +87,24 @@ const TheatreFloor = ({
                         seatWidthOffset = isEven ? seatWidth / 2 : 0,
                         maxSeats = 10, // Arbitrary for now.
 
-                        leftSeatsArray = getArrayOfCoordinatesForFactoredLengths({
-                            minLength: stageCentreFromLeft - seatWidthOffset,
-                            firstLength: seatWidth,
-                            maxCount: maxSeats,
+                        leftSeatsArray =
+                            getArrayOfCoordinatesForFactoredLengths({
+                                minLength: stageCentreFromLeft - seatWidthOffset,
+                                firstLength: seatWidth,
+                                maxCount: maxSeats,
 
-                            // Start from centre, and go towards left.
-                            reversePosition: true
-                        }),
+                                // Start from centre, and go towards left.
+                                reversePosition: true
+                            }),
 
-                        rightSeatsArray = getArrayOfCoordinatesForFactoredLengths({
-                            minLength: windowWidth - stageCentreFromLeft +
-                                seatWidthOffset,
-                            firstLength: seatWidth,
-                            maxCount: maxSeats + (isEven ? 1 : 0),
-                            positionOffset: stageCentreFromLeft - seatWidthOffset
-                        }),
+                        rightSeatsArray =
+                            getArrayOfCoordinatesForFactoredLengths({
+                                minLength: windowWidth - stageCentreFromLeft +
+                                    seatWidthOffset,
+                                firstLength: seatWidth,
+                                maxCount: maxSeats + (isEven ? 1 : 0),
+                                positionOffset: stageCentreFromLeft - seatWidthOffset
+                            }),
 
                         // Combine left and right side seating.
                         seatsArray = leftSeatsArray.concat(rightSeatsArray),
