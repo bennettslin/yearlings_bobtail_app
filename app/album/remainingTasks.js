@@ -13,12 +13,6 @@ module.exports = [
     },
 
     {
-        taskName: `Get selected or slider verse element upon mount.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: `Separate out event handlers into helper components in the same way.`,
         workedHours: 0,
         neededHours: 12

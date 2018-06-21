@@ -2983,4 +2983,10 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+
+    {
+        taskName: `Get selected or slider verse element upon mount. This doesn't seem necessary, as far as I can tell. Just logged work to clean up code a bit.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
