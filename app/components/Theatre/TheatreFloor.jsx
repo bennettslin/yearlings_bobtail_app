@@ -105,18 +105,30 @@ const TheatreFloor = ({
                         }),
 
                         // Combine left and right side seating.
-                        seatsArray = leftSeatsArray.concat(rightSeatsArray)
+                        seatsArray = leftSeatsArray.concat(rightSeatsArray),
+
+                        centreSeatIndex =
+                            leftSeatsArray.length - (isEven ? 0 : 0.5)
 
                     return (
-                        <g key={rowIndex}>
+                        <g
+                            key={rowIndex}
+                            className={`TheatreFloorSeats__${rowIndex}`}
+                        >
                             {seatsArray.map((seat, seatIndex) => {
 
                                 const { length: seatWidth,
-                                        position: seatLeft } = seat
+                                        position: seatLeft } = seat,
+
+                                    chairIndex =
+                                        seatIndex - centreSeatIndex
+
 
                                 return (
                                     <TheatreFloorSeat
-                                        key={seatIndex}
+                                        key={chairIndex}
+                                        chairIndex={chairIndex}
+                                        rowIndex={rowIndex}
                                         top={rowTop}
                                         left={seatLeft}
                                         width={seatWidth}

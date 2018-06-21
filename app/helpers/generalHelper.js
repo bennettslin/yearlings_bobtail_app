@@ -197,7 +197,7 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
         })
     }
 
-    return arrayOfLengths
+    return reversePosition ? arrayOfLengths.reverse() : arrayOfLengths
 }
 
 export const getValueInAbridgedMatrix = (matrix, xIndex, yIndex) => {

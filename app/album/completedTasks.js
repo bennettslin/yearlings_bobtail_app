@@ -2977,4 +2977,10 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+
+    {
+        taskName: `Have system to show theatre seats in different perspectives. Good enough for now. Will be able to refine once seat svgs are finalised. Log that under theatre seat drawing.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

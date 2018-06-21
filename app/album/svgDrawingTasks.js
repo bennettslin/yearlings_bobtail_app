@@ -60,7 +60,7 @@ module.exports = [
     {
         taskName: `Theatre seat`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 4
     },
     {
         taskName: `Theater balcony`,
