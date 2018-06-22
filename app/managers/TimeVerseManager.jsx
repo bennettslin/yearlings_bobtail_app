@@ -100,15 +100,6 @@ class TimeVerseManager extends Component {
 
         const { props } = this
 
-        /** This is the only place where app will change the router path based
-         * on a new song or verse index.
-         */
-        props.updatePath({
-            props,
-            selectedSongIndex,
-            selectedVerseIndex
-        })
-
         /**
          * Since time and verse are in sync, this helper method can be called
          * by either one.
@@ -157,6 +148,17 @@ class TimeVerseManager extends Component {
                 props.selectedSongIndex,
                 selectedVerseIndex
             ))
+        }
+
+        /**
+         * This is the only place where router path will change based on a new
+         * verse index for the same song.
+         */
+        if (selectedSongIndex === this.props.selectedSongIndex) {
+            props.updatePath({
+                selectedSongIndex,
+                selectedVerseIndex
+            })
         }
     }
 

@@ -7,12 +7,6 @@ module.exports = [
     },
 
     {
-        taskName: `Verse and annotation cancel each other out in path.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Get scrolling indexed elements by ref`,
         workedHours: 0,
         neededHours: 3

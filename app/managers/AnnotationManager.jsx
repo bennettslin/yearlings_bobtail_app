@@ -109,14 +109,16 @@ class AnnotationManager extends Component {
             props.setRenderReadyAnnotationIndex(selectedAnnotationIndex)
         }
 
-        /** This is the only place where app will change the router path based
-         * on a new annotation index.
+        /**
+         * This is the only place where router path will change based on a new
+         * annotation index for the same song.
          */
-        props.updatePath({
-            props,
-            selectedSongIndex,
-            selectedAnnotationIndex
-        })
+        if (selectedSongIndex === this.props.selectedSongIndex) {
+            props.updatePath({
+                selectedSongIndex,
+                selectedAnnotationIndex
+            })
+        }
 
         return selectedAnnotationIndex
     }

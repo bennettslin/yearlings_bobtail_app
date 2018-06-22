@@ -45,10 +45,13 @@ const _isValidAnnotationIndexForSongIndex = (songIndex, annotationIndex) => {
 
 export const getPathForIndices = (songIndex, verseIndex, annotationIndex) => {
 
-    const isLogue = getSongIsLogue(songIndex)
+    const isLogue = getSongIsLogue(songIndex),
 
-    // Path is something like 9-grasshoppers-lie-heavy-v20-a22.
-    return `${songIndex}_${HYPHENATED_SONG_PATHS[songIndex]}${verseIndex && !isLogue ? '-v' + verseIndex : ''}${annotationIndex && !isLogue ? '-a' + annotationIndex : ''}`
+        // Path is something like "9-grasshoppers-lie-heavy-v20-a22.""
+        newPath =
+            `${songIndex}_${HYPHENATED_SONG_PATHS[songIndex]}${verseIndex && !isLogue ? '-v' + verseIndex : ''}${annotationIndex && !isLogue ? '-a' + annotationIndex : ''}`
+
+    return newPath
 }
 
 export const getValidRoutingIndicesObject = (routingParamString = '') => {

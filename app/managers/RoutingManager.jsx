@@ -78,16 +78,15 @@ class RoutingManager extends Component {
     }
 
     updatePath({
-        props,
-        selectedSongIndex,
-        selectedVerseIndex = props.selectedVerseIndex,
-        selectedAnnotationIndex = props.selectedAnnotationIndex
+        selectedSongIndex = this.props.selectedSongIndex,
+        selectedVerseIndex = this.props.selectedVerseIndex,
+        selectedAnnotationIndex = this.props.selectedAnnotationIndex
     }) {
         // Only update path if it has changed.
         if (
-            props.selectedSongIndex !== selectedSongIndex ||
-            props.selectedVerseIndex !== selectedVerseIndex ||
-            props.selectedAnnotationIndex !== selectedAnnotationIndex
+            this.props.selectedSongIndex !== selectedSongIndex ||
+            this.props.selectedVerseIndex !== selectedVerseIndex ||
+            this.props.selectedAnnotationIndex !== selectedAnnotationIndex
         ) {
             this.replacePath(
                 selectedSongIndex,

@@ -416,6 +416,7 @@ class StateManager extends Component {
                     selectTips={this.selectTips}
                     selectVerse={this.selectVerse}
                     selectWiki={this.selectWiki}
+                    updatePath={updatePath}
                 />
                 <TimeVerseManager
                     getRef={node => (this.timeVerseManager = node)}

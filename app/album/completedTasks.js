@@ -2989,4 +2989,10 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+
+    {
+        taskName: `Verse and annotation cancel each other out in path.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -59,7 +59,8 @@ class VerseManager extends Component {
         selectScore: PropTypes.func.isRequired,
         selectTips: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
-        selectWiki: PropTypes.func.isRequired
+        selectWiki: PropTypes.func.isRequired,
+        updatePath: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -210,6 +211,18 @@ class VerseManager extends Component {
         // Reset verse bars.
         props.setIsVerseBarAbove(false)
         props.setIsVerseBarBelow(false)
+
+        /**
+         * This is the only place where router path will change based on a new
+         * song.
+         */
+        if (selectedSongIndex !== this.props.selectedSongIndex) {
+            props.updatePath({
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex
+            })
+        }
 
         return true
     }
