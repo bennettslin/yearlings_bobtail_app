@@ -49,7 +49,7 @@ class TipsManager extends Component {
         justHideIfShown,
         justShowIfHidden
     }) {
-        // We shouldn't be able to change overview it's a logue.
+        // We shouldn't be able to change overview if it's a logue.
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
         }

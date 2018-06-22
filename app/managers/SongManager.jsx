@@ -97,27 +97,12 @@ class VerseManager extends Component {
         }
     }
 
-    selectSong({
-        selectedSongIndex = 0,
-        direction,
-        selectedAnnotationIndex = 0,
-        selectedVerseIndex = 0,
-        selectedWikiIndex = 0,
-        destinationPortalIndex
-    }) {
-
+    /**
+     * TODO: Handle this more efficiently, so that this same logic can be
+     * applied to both mounting and selecting a new song.
+     */
+    prepareSongWithPossibleAnnotation(selectedAnnotationIndex) {
         const { props } = this
-
-        // Called from audio section's previous or next buttons.
-        if (direction) {
-            selectedSongIndex = props.selectedSongIndex + direction
-
-            if (selectedSongIndex < 0 || selectedSongIndex >= getSongsAndLoguesCount()) {
-                return false
-            }
-        }
-
-        const isLogue = getSongIsLogue(selectedSongIndex)
 
         // If not selected from portal, show overview if hidden.
         if (!selectedAnnotationIndex) {
@@ -139,6 +124,30 @@ class VerseManager extends Component {
                 props.selectLyricExpand(false)
             }
         }
+    }
+
+    selectSong({
+        selectedSongIndex = 0,
+        direction,
+        selectedAnnotationIndex = 0,
+        selectedVerseIndex = 0,
+        selectedWikiIndex = 0,
+        destinationPortalIndex
+    }) {
+        const { props } = this
+
+        // Called from audio section's previous or next buttons.
+        if (direction) {
+            selectedSongIndex = props.selectedSongIndex + direction
+
+            if (selectedSongIndex < 0 || selectedSongIndex >= getSongsAndLoguesCount()) {
+                return false
+            }
+        }
+
+        const isLogue = getSongIsLogue(selectedSongIndex)
+
+        this.prepareSongWithPossibleAnnotation(selectedAnnotationIndex)
 
         props.selectAnnotation({
             selectedAnnotationIndex,

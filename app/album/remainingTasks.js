@@ -1,13 +1,13 @@
 module.exports = [
 
     {
-        taskName: `When opening url with annotation in incognito, annotation and tips are shown simultaneously.`,
+        taskName: `When opening url with annotation in incognito, annotation and tips are shown simultaneously. Have system to flush out store.`,
         workedHours: 0,
         neededHours: 1
     },
 
     {
-        taskName: `Get scrolling indexed elements by ref`,
+        taskName: `Get scrolling indexed elements by ref. Scrolling in carousel is broken when navigating through portal?`,
         workedHours: 0,
         neededHours: 3
     },
