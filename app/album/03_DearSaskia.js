@@ -48,7 +48,7 @@ module.exports = {
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'side seated, laughing, braids trailing'
                 },
                 brad: {
@@ -76,7 +76,7 @@ module.exports = {
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'indignant, yelling at bullies'
                 },
                 andrew: {

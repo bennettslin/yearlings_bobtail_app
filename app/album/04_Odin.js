@@ -137,7 +137,7 @@ module.exports = {
                 },
                 sasha: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3,
                     description: 'mermaid'
                 }
             },
