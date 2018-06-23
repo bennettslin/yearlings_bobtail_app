@@ -20,7 +20,6 @@ import {
     getVerseIndexForTime,
     getSceneIndexForVerseIndex
 } from '../helpers/dataHelper'
-import { scrollElementIntoView } from '../helpers/domHelper'
 
 class TimeVerseManager extends Component {
 
@@ -41,6 +40,7 @@ class TimeVerseManager extends Component {
 
         // From parent.
         getRef: PropTypes.func.isRequired,
+        scrollElementIntoView: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
     }
 
@@ -124,7 +124,7 @@ class TimeVerseManager extends Component {
             !this.props.isManualScroll &&
             selectedVerseIndex !== props.selectedVerseIndex
         ) {
-            scrollElementIntoView({
+            this.props.scrollElementIntoView({
                 scrollClass: VERSE_SCROLL,
                 index: selectedVerseIndex,
                 deviceIndex: this.props.deviceIndex,

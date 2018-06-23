@@ -37,9 +37,7 @@ class Verse extends Component {
 
         // From parent.
         verseObject: PropTypes.object.isRequired,
-
-        // This is solely for the verse in verseBar to know to update.
-        verseIndexForVerseBar: PropTypes.number,
+        verseIndex: PropTypes.number,
 
         isOnCursor: PropTypes.bool,
         isAfterCursor: PropTypes.bool,
@@ -49,13 +47,16 @@ class Verse extends Component {
         inVerseBar: PropTypes.bool.isRequired,
         handleLyricAnnotationSelect: PropTypes.func,
         handleVerseInteractivate: PropTypes.func,
-        handleSetVerseElement: PropTypes.func
+        handleSetVerseElement: PropTypes.func,
+
+        getVerseRef: PropTypes.func
     }
 
     constructor(props) {
         super(props)
 
         this._handleInteractivatableClick = this._handleInteractivatableClick.bind(this)
+        this.getVerseRef = this.getVerseRef.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -67,7 +68,7 @@ class Verse extends Component {
                     // TODO: Possible to update without selected song index?
                     'appMounted',
                     'renderReadySongIndex',
-                    'verseIndexForVerseBar',
+                    'verseIndex',
 
                     'isOnCursor',
                     'isAfterCursor',
@@ -91,8 +92,6 @@ class Verse extends Component {
     _handleSetVerseElement(props = this.props) {
         if (props.isOnCursor) {
             this.props.handleSetVerseElement(
-
-                // Establish verse bars only if this is not the initial mount.
                 this.myVerse
             )
         }
@@ -100,14 +99,28 @@ class Verse extends Component {
 
     _handleInteractivatableClick(e) {
         // Allow clicks on interactable verses.
-        const { verseObject,
+        const { verseIndex,
                 inVerseBar,
-                handleVerseInteractivate } = this.props,
-
-            { verseIndex } = verseObject
+                handleVerseInteractivate } = this.props
 
         if (!isNaN(verseIndex) && !inVerseBar) {
             handleVerseInteractivate(e, verseIndex)
+        }
+    }
+
+    getIsInteractable() {
+        const {
+            inVerseBar,
+            verseIndex
+        } = this.props
+
+        return !isNaN(verseIndex) && !inVerseBar
+    }
+
+    getVerseRef(node) {
+        if (this.getIsInteractable()) {
+            this.myVerse = node
+            this.props.getVerseRef(node, this.props.verseIndex)
         }
     }
 
@@ -115,7 +128,6 @@ class Verse extends Component {
 
         /* eslint-disable no-unused-vars */
         const { renderReadySongIndex,
-                verseIndexForVerseBar,
         /* eslint-enable no-unused-vars */
 
                 inMain,
@@ -123,14 +135,14 @@ class Verse extends Component {
                 ...other } = this.props,
 
             { inVerseBar,
+              verseIndex,
               verseObject } = other,
 
             { lyric,
               centre,
-              isTitle,
-              verseIndex } = verseObject,
+              isTitle } = verseObject,
 
-            isInteractable = !isNaN(verseIndex) && !inVerseBar,
+            isInteractable = this.getIsInteractable(),
 
             // If not an interactable verse, we'll count it as odd.
             isEven = isInteractable && verseIndex % 2 === 0,
@@ -144,8 +156,7 @@ class Verse extends Component {
 
         return (
             <VerseView {...other}
-                myRef={(node) => (this.myVerse = node)}
-                verseIndex={verseIndex}
+                getRef={this.getVerseRef}
                 isTitle={isTitle}
                 isDoubleSpeaker={!lyric && !centre}
                 isInteractable={isInteractable}
@@ -178,10 +189,10 @@ verseViewPropTypes = {
     isAfterCursor: PropTypes.bool,
     isInteractivated: PropTypes.bool,
 
-    myRef: PropTypes.func.isRequired,
     handleInteractivatableClick: PropTypes.func,
     handleLyricPlay: PropTypes.func,
     handleLyricVerseSelect: PropTypes.func,
+    getRef: PropTypes.func,
 
     children: PropTypes.any
 },
@@ -189,7 +200,6 @@ verseViewPropTypes = {
 VerseView = ({
 
     // From controller.
-    myRef,
     verseIndex,
     verseClassName,
     isInteractable,
@@ -202,6 +212,7 @@ VerseView = ({
     handleInteractivatableClick,
     handleLyricPlay,
     handleLyricVerseSelect,
+    getRef,
 
     children,
 
@@ -216,7 +227,7 @@ VerseView = ({
 
     return (
         <div
-            ref={myRef}
+            ref={getRef}
             className={cx(
                 'Verse',
                 // 'textShadow__background',

@@ -17,7 +17,7 @@ import {
 
 import { VERSE_SCROLL } from '../constants/dom'
 import { getSongVerseTimes } from '../helpers/dataHelper'
-import { scrollElementIntoView } from '../helpers/domHelper'
+
 import {
     getSliderRatioForClientX,
     getVerseIndexforRatio
@@ -50,7 +50,8 @@ class SliderVerseManager extends Component {
         getRef: PropTypes.func.isRequired,
         selectTime: PropTypes.func.isRequired,
         determineVerseBars: PropTypes.func.isRequired,
-        resetVerseBars: PropTypes.func.isRequired
+        resetVerseBars: PropTypes.func.isRequired,
+        scrollElementIntoView: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -140,7 +141,7 @@ class SliderVerseManager extends Component {
             })
 
             // Scroll to verse index, then reset verse bars.
-            scrollElementIntoView({
+            this.props.scrollElementIntoView({
                 scrollClass: VERSE_SCROLL,
                 index: selectedVerseIndex,
                 deviceIndex: this.props.deviceIndex,

@@ -87,7 +87,7 @@ VerseController = ({
          * to know when to update.
          */
         if (verseObject) {
-            other.verseIndexForVerseBar = verseObject.verseIndex
+            other.verseIndex = verseObject.verseIndex
         }
 
         /**

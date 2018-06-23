@@ -1,24 +1,30 @@
 // Component that handles all user events.
 
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import assign from 'lodash.assign'
 
 import Root from '../components/Root'
 
 import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from '../helpers/dotHelper'
-import { getClientX, scrollElementIntoView } from '../helpers/domHelper'
+import { getClientX } from '../helpers/domHelper'
 
 import { REFERENCE } from '../constants/dots'
 import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
 
-import { CAROUSEL_SCROLL,
-         LYRIC_ANNOTATION_SCROLL,
-         VERSE_SCROLL } from '../constants/dom'
+import {
+    CAROUSEL_SCROLL,
+    LYRIC_ANNOTATION_SCROLL,
+    // VERSE_SCROLL
+} from '../constants/dom'
 
 class EventManager extends Component {
+
+    static propTypes = {
+        scrollElementIntoView: PropTypes.func.isRequired
+    }
 
     constructor(props) {
         super(props)
@@ -77,6 +83,8 @@ class EventManager extends Component {
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
         this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
         this.stopPropagation = this.stopPropagation.bind(this)
+
+        this.getVerseRef = this.getVerseRef.bind(this)
     }
 
     componentDidMount() {
@@ -98,7 +106,7 @@ class EventManager extends Component {
             if (selectedCarouselNavIndex && scrollToAnnotationIndex) {
                 // Animation is slightly less janky with setTimeout.
                 setTimeout(() => {
-                    this._scrollElementIntoView({
+                    this.props.scrollElementIntoView({
                         scrollClass: CAROUSEL_SCROLL,
                         index: scrollToAnnotationIndex
                     })
@@ -121,13 +129,13 @@ class EventManager extends Component {
     }) {
         const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
         if (annotationAccessed && doScroll) {
-            this._scrollElementIntoView({
+            this.props.scrollElementIntoView({
                 scrollClass: LYRIC_ANNOTATION_SCROLL,
                 index: accessedAnnotationIndex
             })
 
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView({
+                this.props.scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
                     index: accessedAnnotationIndex
                 })
@@ -174,9 +182,10 @@ class EventManager extends Component {
             exemptLyric: true,
             leaveOpenPopups: true
         })
-        this._scrollElementIntoView({
-            scrollClass: VERSE_SCROLL,
-            index: interactivatedVerseIndex
+        this.props.scrollElementIntoView({
+            // scrollClass: VERSE_SCROLL,
+            // index: interactivatedVerseIndex
+            scrollElement: this.verseElement[interactivatedVerseIndex]
         })
         return true
     }
@@ -248,12 +257,12 @@ class EventManager extends Component {
         const selectedAnnotationIndex = this.props.selectAnnotation({
             direction
         })
-        this._scrollElementIntoView({
+        this.props.scrollElementIntoView({
             scrollClass: LYRIC_ANNOTATION_SCROLL,
             index: selectedAnnotationIndex
         })
         if (this.props.selectedCarouselNavIndex) {
-            this._scrollElementIntoView({
+            this.props.scrollElementIntoView({
                 scrollClass: CAROUSEL_SCROLL,
                 index: selectedAnnotationIndex
             })
@@ -335,7 +344,7 @@ class EventManager extends Component {
         if (carouselSelected && !presentCarouselIndex) {
             const { selectedAnnotationIndex } = this.props,
                 annotationIndex = selectedAnnotationIndex ? selectedAnnotationIndex : this.props.accessedAnnotationIndex
-            this._scrollElementIntoView({
+            this.props.scrollElementIntoView({
                 scrollClass: CAROUSEL_SCROLL,
                 index: annotationIndex
             })
@@ -518,7 +527,7 @@ class EventManager extends Component {
 
         // Scroll lyric column only if selecting from carousel.
         if (fromCarousel) {
-            this._scrollElementIntoView({
+            this.props.scrollElementIntoView({
                 scrollClass: LYRIC_ANNOTATION_SCROLL,
                 index: selectedAnnotationIndex
             })
@@ -526,7 +535,7 @@ class EventManager extends Component {
         // Scroll carousel only if not selecting from carousel.
         } else {
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView({
+                this.props.scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
                     index: selectedAnnotationIndex
                 })
@@ -776,9 +785,10 @@ class EventManager extends Component {
     handleVerseBarSelect() {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props
-        this._scrollElementIntoView({
-            scrollClass: VERSE_SCROLL,
-            index: selectedVerseIndex
+        this.props.scrollElementIntoView({
+            // scrollClass: VERSE_SCROLL,
+            // index: selectedVerseIndex,
+            scrollElement: this.verseElement[selectedVerseIndex]
         })
 
         this.props.resetVerseBars()
@@ -937,7 +947,7 @@ class EventManager extends Component {
 
         // If a portal was selected, there will be an annotation index.
         if (selectedAnnotationIndex) {
-            this._scrollElementIntoView({
+            this.props.scrollElementIntoView({
                 scrollClass: LYRIC_ANNOTATION_SCROLL,
                 index: selectedAnnotationIndex,
                 time: 0,
@@ -945,7 +955,7 @@ class EventManager extends Component {
             })
 
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView({
+                this.props.scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
                     time: 0,
                     index: selectedAnnotationIndex
@@ -956,32 +966,22 @@ class EventManager extends Component {
         } else {
             const { selectedVerseIndex } = this.props
 
-            this._scrollElementIntoView({
-                scrollClass: VERSE_SCROLL,
-                index: selectedVerseIndex,
+            this.props.scrollElementIntoView({
+                // scrollClass: VERSE_SCROLL,
+                // index: selectedVerseIndex,
                 time: 0,
+                scrollElement: this.verseElement[selectedVerseIndex],
                 callback: this._determineVerseBarsCallback
             })
 
             if (this.props.selectedCarouselNavIndex) {
-                this._scrollElementIntoView({
+                this.props.scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
                     time: 0,
                     index: 1
                 })
             }
         }
-    }
-
-    _scrollElementIntoView(props) {
-
-        scrollElementIntoView(
-            assign(props, {
-                deviceIndex: this.props.deviceIndex,
-                windowWidth: this.props.windowWidth,
-                isLyricExpanded: this.props.isLyricExpanded
-            })
-        )
     }
 
     _determineVerseBarsCallback() {
@@ -1002,6 +1002,23 @@ class EventManager extends Component {
             if (selectedOverviewOption !== DISABLED) {
                 this.props.selectDotsExpand()
             }
+        }
+    }
+
+    getVerseRef (node, index) {
+        if (!this.verseElement) {
+            this.verseElement = {}
+        }
+
+        if (node) {
+            this.verseElement[index] = node
+        } else {
+            delete this.verseElement[index]
+        }
+
+        // FIXME: Delete this.
+        window.getVerse = () => {
+            console.error(this.verseElement)
         }
     }
 
@@ -1067,7 +1084,9 @@ class EventManager extends Component {
                 handleVerseInteractivate: this.handleVerseInteractivate,
                 handleWikiToggle: this.handleWikiToggle,
                 handleScrollAfterLyricRerender: this.handleScrollAfterLyricRerender,
-                stopPropagation: this.stopPropagation
+                stopPropagation: this.stopPropagation,
+
+                getVerseRef: this.getVerseRef
             }
 
         return (
@@ -1077,9 +1096,9 @@ class EventManager extends Component {
 }
 
 const mapStateToProps = ({
-    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
+    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow
 }) => ({
-    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow, deviceIndex, windowWidth
+    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow
 })
 
 export default connect(mapStateToProps)(EventManager)

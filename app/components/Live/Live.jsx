@@ -22,6 +22,7 @@ class Live extends Component {
         lyricRef: PropTypes.func.isRequired,
         scoreRef: PropTypes.func.isRequired,
         wikiRef: PropTypes.func.isRequired,
+        getVerseRef: PropTypes.func.isRequired,
 
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired,
@@ -71,6 +72,7 @@ class Live extends Component {
         const { lyricRef,
                 scoreRef,
                 wikiRef,
+                getVerseRef,
 
                 handlePopupContainerClick,
                 handleScrollAfterLyricRerender,
@@ -135,6 +137,7 @@ class Live extends Component {
 
             lyricColumnHandlers = {
                 lyricRef,
+                getVerseRef,
                 handleLyricAnnotationSelect,
                 handleLyricColumnSelect,
                 handleLyricSectionExpand,

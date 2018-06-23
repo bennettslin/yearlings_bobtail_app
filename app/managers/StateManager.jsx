@@ -20,6 +20,7 @@ import OverviewManager from './OverviewManager'
 import RenderManager from './RenderManager'
 import ScoreManager from './ScoreManager'
 import SceneManager from './SceneManager'
+import ScrollManager from './ScrollManager'
 import SliderVerseManager from './SliderVerseManager'
 import SongManager from './SongManager'
 import TimeVerseManager from './TimeVerseManager'
@@ -181,6 +182,14 @@ class StateManager extends Component {
         return this.scoreManager.selectScore(payload)
     }
 
+    /**********
+     * SCROLL *
+     **********/
+
+    scrollElementIntoView(payload) {
+        return this.scrollManager.scrollElementIntoView(payload)
+    }
+
     /****************
      * SLIDER/VERSE *
      ****************/
@@ -308,6 +317,7 @@ class StateManager extends Component {
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
         this.touchBodyMove = this.touchBodyMove.bind(this)
         this.touchBodyEnd = this.touchBodyEnd.bind(this)
+        this.scrollElementIntoView = this.scrollElementIntoView.bind(this)
     }
 
     render() {
@@ -324,6 +334,7 @@ class StateManager extends Component {
                     touchSliderBegin={this.touchSliderBegin}
                     touchBodyMove={this.touchBodyMove}
                     touchBodyEnd={this.touchBodyEnd}
+                    scrollElementIntoView={this.scrollElementIntoView}
                     selectAnnotation={this.selectAnnotation}
                     selectAudioOption={this.selectAudioOption}
                     selectBookColumn={this.selectBookColumn}
@@ -390,18 +401,22 @@ class StateManager extends Component {
                 <RenderManager
                     getRef={node => (this.renderManager = node)}
                 />
-                <ScoreManager
-                    getRef={node => (this.scoreManager = node)}
-                />
                 <SceneManager
                     getRef={node => (this.sceneManager = node)}
                     selectVerse={this.selectVerse}
+                />
+                <ScoreManager
+                    getRef={node => (this.scoreManager = node)}
+                />
+                <ScrollManager
+                    getRef={node => (this.scrollManager = node)}
                 />
                 <SliderVerseManager
                     getRef={node => (this.sliderVerseManager = node)}
                     selectTime={this.selectTime}
                     determineVerseBars={this.determineVerseBars}
                     resetVerseBars={this.resetVerseBars}
+                    scrollElementIntoView={this.scrollElementIntoView}
                 />
                 <SongManager
                     getRef={node => (this.songManager = node)}
@@ -412,6 +427,7 @@ class StateManager extends Component {
                 />
                 <TimeVerseManager
                     getRef={node => (this.timeVerseManager = node)}
+                    scrollElementIntoView={this.scrollElementIntoView}
                     updatePath={updatePath}
                 />
                 <TipsManager
