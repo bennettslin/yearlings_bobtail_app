@@ -104,17 +104,6 @@ class Theatre extends Component {
                 floorHeight: theatreFloorHeight,
                 stageWidth,
                 stageCentreFromLeft
-            },
-
-            pitSideWidth = stageWidth * 0.05, // Arbitrary value for now,
-            pitBottomHeight = stageHeight * 0.05,
-            pitWidth = stageWidth + pitSideWidth * 2,
-            pitPositionLeft = stageCentreFromLeft - pitWidth / 2,
-
-            pitStyle = {
-                width: `${pitWidth}px`,
-                height: `${pitBottomHeight}px`,
-                left: `${pitPositionLeft}px`
             }
 
         return (
@@ -141,7 +130,6 @@ class Theatre extends Component {
                 <TheatreFloor
                     windowWidth={windowWidth}
                     floorFieldCoordinates={floorFieldCoordinates}
-                    pitStyle={pitStyle}
                 />
             </div>
         )

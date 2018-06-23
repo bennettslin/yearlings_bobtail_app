@@ -18,21 +18,20 @@
     @overlap__proscenium__side
     - @width__proscenium__side;
 
-.StageProscenium__child {
+.Proscenium__child {
     position: absolute;
     top: @offset__proscenium__top;
 }
 
-.StageProscenium__top {
+.Proscenium__horizontal {
     left: @offset__proscenium__side;
     width:
         100%
         - @offset__proscenium__side * 2;
     height: @height__proscenium__top;
-    background-color: rgba(250, 250, 200, 0.5);
 }
 
-.StageProscenium__side {
+.Proscenium__vertical {
     height:
         100%
         - @offset__proscenium__top
@@ -41,10 +40,21 @@
     background-color: rgba(200, 250, 200, 0.5);
 }
 
-.StageProscenium__left {
+.Proscenium__top {
+    background-color: rgba(250, 250, 200, 0.5);
+}
+
+.Proscenium__pit {
+    top: auto;
+    bottom: @offset__proscenium__top;
+    background-color: #b88;
+}
+
+
+.Proscenium__left {
     left: @offset__proscenium__side;
 }
 
-.StageProscenium__right {
+.Proscenium__right {
     right: @offset__proscenium__side;
 }

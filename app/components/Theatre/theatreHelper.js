@@ -28,5 +28,7 @@ export const getTheatreFloorHeight = ({
         deviceIndex, isHeightlessLyricColumn, windowHeight
     )
 
-    return centreFieldHeight - stageTop - stageHeight + lyricColumnHeight
+    return centreFieldHeight
+    - stageTop - stageHeight
+    + lyricColumnHeight
 }

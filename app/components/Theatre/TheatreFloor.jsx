@@ -17,19 +17,13 @@ const propTypes = {
         floorHeight: PropTypes.number.isRequired,
         stageWidth: PropTypes.number.isRequired,
         stageCentreFromLeft: PropTypes.number.isRequired
-    }),
-    pitStyle: PropTypes.shape({
-        width: PropTypes.string.isRequired,
-        height: PropTypes.string.isRequired,
-        left: PropTypes.string.isRequired
-    }).isRequired,
+    })
 }
 
 const TheatreFloor = ({
 
     windowWidth,
-    floorFieldCoordinates,
-    pitStyle
+    floorFieldCoordinates
 
 }) => {
 
@@ -60,11 +54,6 @@ const TheatreFloor = ({
             )}
             style={floorFieldStyle}
         >
-            <div
-                className="TheatreFloorPit"
-                style={pitStyle}
-            />
-
             <DynamicSvg
                 className={cx(
                     'Theatre__subfield'

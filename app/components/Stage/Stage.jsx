@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Scene from '../Scene/Scene'
-import StageProscenium from './StageProscenium';
+import Proscenium from './Proscenium/Proscenium';
 
 const mapStateToProps = ({
     stageCoordinates
@@ -40,8 +40,8 @@ class Stage extends Component {
 
                 /**
                  * Not the most elegant solution. Moving stage from Main to
-                 * Live means it is no longer positioned relative to the menu.
-                 * This positions it as if it were still a child of Main.
+                 * Live means it is no longer positioned to accommodate the
+                 * menu. This positions it as if it were still a child of Main.
                  */
                 'position__mainColumn'
             )}>
@@ -61,7 +61,7 @@ class Stage extends Component {
                         stageWidth={width}
                         stageHeight={height}
                     />
-                    <StageProscenium />
+                    <Proscenium />
                 </div>
             </div>
         )
