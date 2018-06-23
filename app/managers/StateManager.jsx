@@ -405,7 +405,6 @@ class StateManager extends Component {
                 />
                 <SongManager
                     getRef={node => (this.songManager = node)}
-                    // handleRenderReady={this.handleRenderReady}
                     togglePlay={this.togglePlay}
                     selectAnnotation={this.selectAnnotation}
                     selectScore={this.selectScore}

@@ -5,10 +5,6 @@ import { connect } from 'react-redux'
 
 import { accessAnnotationIndex } from '../redux/actions/access'
 import { setIsPlaying } from '../redux/actions/audio'
-import { setIsScoreLoaded } from '../redux/actions/player'
-import {
-    setIsHeavyRenderReady
-} from '../redux/actions/session'
 import { selectSongIndex } from '../redux/actions/storage'
 
 import { CONTINUE,
@@ -32,15 +28,12 @@ class SongManager extends Component {
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
 
-        setIsHeavyRenderReady: PropTypes.func.isRequired,
-        setIsScoreLoaded: PropTypes.func.isRequired,
         setIsPlaying: PropTypes.func.isRequired,
         accessAnnotationIndex: PropTypes.func.isRequired,
         selectSongIndex: PropTypes.func.isRequired,
 
         // From parent.
         getRef: PropTypes.func.isRequired,
-        // handleRenderReady: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
         selectAnnotation: PropTypes.func.isRequired,
         selectScore: PropTypes.func.isRequired,
@@ -138,26 +131,6 @@ class SongManager extends Component {
 
         props.selectSongIndex(selectedSongIndex)
 
-        // If not selecting a new song, no need to render again.
-        if (selectedSongIndex === props.selectedSongIndex) {
-
-            /**
-             * FIXME: I'm not sure that it's necessary to handle render ready
-             * here. The only place that reaches this code is the "shivaree"
-             * portal in Odin. Commenting out for now. Delete once confident
-             * about doing so. HandleRenderReady can then be a fully private
-             * method of RenderManager.
-             */
-            // props.handleRenderReady({
-            //     selectedSongIndex,
-            //     selectedAnnotationIndex
-            // })
-
-        } else {
-            props.setIsHeavyRenderReady(false)
-            props.setIsScoreLoaded(false)
-        }
-
         /**
          * This is the only place where router path will change based on a new
          * song.
@@ -196,8 +169,6 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setIsHeavyRenderReady,
-        setIsScoreLoaded,
         setIsPlaying,
         accessAnnotationIndex,
         selectSongIndex

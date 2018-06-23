@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
+import { setIsScoreLoaded } from '../redux/actions/player'
 import { selectScoreIndex } from '../redux/actions/storage'
 
 import { getSongIsLogue } from '../helpers/dataHelper'
@@ -16,6 +17,7 @@ class ScoreManager extends Component {
         selectedScoreIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectScoreIndex: PropTypes.func.isRequired,
+        setIsScoreLoaded: PropTypes.func.isRequired,
 
         // From parent.
         getRef: PropTypes.func.isRequired
@@ -23,6 +25,12 @@ class ScoreManager extends Component {
 
     componentDidMount() {
         this.props.getRef(this)
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
+            this.props.setIsScoreLoaded(false)
+        }
     }
 
     selectScore(
@@ -73,7 +81,8 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectScoreIndex
+        selectScoreIndex,
+        setIsScoreLoaded
     }, dispatch)
 )
 

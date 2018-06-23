@@ -53,9 +53,9 @@ class RenderManager extends Component {
     }
 
     componentDidUpdate(prevProps) {
-
         if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
             this._songIndexDidChange()
+            this.props.setIsHeavyRenderReady(false)
         }
     }
 
