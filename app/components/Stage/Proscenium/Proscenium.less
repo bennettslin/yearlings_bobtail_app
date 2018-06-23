@@ -1,42 +1,35 @@
-@height__proscenium__top: 5%;
-@height__proscenium__bottom: 0%;
-@width__proscenium__side: 5%;
+@height__proscenium__horizontal: 7.5%;
+@width__proscenium__vertical: 5%;
 
-@overlap__proscenium__top: 3%;
-@overlap__proscenium__bottom: 0%;
-@overlap__proscenium__side: 3%;
+@overlap__proscenium__horizontal: 1%;
+@overlap__proscenium__vertical: 1%;
 
-@offset__proscenium__top:
-    @overlap__proscenium__top
-    - @height__proscenium__top;
+@offset__proscenium__horizontal:
+    @overlap__proscenium__horizontal
+    - @height__proscenium__horizontal;
 
-@offset__proscenium__bottom:
-    @overlap__proscenium__bottom
-    - @height__proscenium__bottom;
-
-@offset__proscenium__side:
-    @overlap__proscenium__side
-    - @width__proscenium__side;
+@offset__proscenium__vertical:
+    @overlap__proscenium__vertical
+    - @width__proscenium__vertical;
 
 .Proscenium__child {
     position: absolute;
-    top: @offset__proscenium__top;
+    top: @offset__proscenium__horizontal;
 }
 
 .Proscenium__horizontal {
-    left: @offset__proscenium__side;
+    left: @offset__proscenium__vertical;
     width:
         100%
-        - @offset__proscenium__side * 2;
-    height: @height__proscenium__top;
+        - @offset__proscenium__vertical * 2;
+    height: @height__proscenium__horizontal;
 }
 
 .Proscenium__vertical {
     height:
         100%
-        - @offset__proscenium__top
-        - @offset__proscenium__bottom;
-    width: @width__proscenium__side;
+        - @offset__proscenium__horizontal;
+    width: @width__proscenium__vertical;
     background-color: rgba(200, 250, 200, 0.5);
 }
 
@@ -46,15 +39,15 @@
 
 .Proscenium__pit {
     top: auto;
-    bottom: @offset__proscenium__top;
-    background-color: #b88;
+    bottom: -@height__proscenium__horizontal;
+    background-color: rgba(150, 100, 100, 0.5);
 }
 
 
 .Proscenium__left {
-    left: @offset__proscenium__side;
+    left: @offset__proscenium__vertical;
 }
 
 .Proscenium__right {
-    right: @offset__proscenium__side;
+    right: @offset__proscenium__vertical;
 }

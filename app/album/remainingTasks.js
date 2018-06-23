@@ -36,7 +36,7 @@ module.exports = [
     },
 
     {
-        taskName: `Have system to animate actions based on whether they are people, panels, or props.`,
+        taskName: `Have system to animate actions based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
         workedHours: 0,
         neededHours: 8
     },

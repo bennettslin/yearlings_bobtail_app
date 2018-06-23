@@ -18,7 +18,7 @@ const SceneWood = ({
 }) => {
 
     // Make wood stageHeight just slightly taller than tiles.
-    const woodHeight = stageHeight * (STAGE_Y_PERCENTAGE + 2) * 0.01
+    const woodHeight = stageHeight * (STAGE_Y_PERCENTAGE + 2) * 0.009
 
     return (
         <DynamicSvg
