@@ -36,6 +36,12 @@ module.exports = [
         neededHours: 1
     },
 
+    {
+        taskName: `Separate out event handlers into helper components in the same way. Pausing this for now, as this is a lot of work, and the event handlers are so tightly coupled, that I'm not sure of the benefit.`,
+        workedHours: 0,
+        neededHours: 12
+    },
+
         // Low priority bugs.
     // {
     //     taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,

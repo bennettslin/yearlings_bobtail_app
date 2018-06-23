@@ -1,12 +1,6 @@
 module.exports = [
 
     {
-        taskName: `Separate out event handlers into helper components in the same way.`,
-        workedHours: 0,
-        neededHours: 12
-    },
-
-    {
         taskName: `Optimise pixels by rendering only after lyrics. This should also take care of annotation popup buttons collapsing upon being hidden.`,
         workedHours: 4,
         neededHours: 15
