@@ -30,6 +30,12 @@ import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
+import {
+    // CAROUSEL_SCROLL,
+    // LYRIC_ANNOTATION_SCROLL,
+    VERSE_SCROLL
+} from '../constants/dom'
+
 class StateManager extends Component {
 
     static propTypes = {
@@ -38,6 +44,10 @@ class StateManager extends Component {
 
     constructor(props) {
         super(props)
+
+        this.myCarouselAnnotationElements = {}
+        this.myLyricAnnotationElements = {}
+        this.myVerseElements = {}
 
         this._bindEventHandlers()
     }
@@ -186,7 +196,40 @@ class StateManager extends Component {
      * SCROLL *
      **********/
 
+    getCarouselAnnotationRef(node, index) {
+        if (node) {
+            this.myCarouselAnnotationElements[index] = node
+        } else {
+            delete this.myCarouselAnnotationElements[index]
+        }
+    }
+
+    getLyricAnnotationRef(node, index) {
+        if (node) {
+            this.myLyricAnnotationElements[index] = node
+        } else {
+            delete this.myLyricAnnotationElements[index]
+        }
+    }
+
+    getVerseRef(node, index) {
+        if (node) {
+            this.myVerseElements[index] = node
+        } else {
+            delete this.myVerseElements[index]
+        }
+    }
+
     scrollElementIntoView(payload) {
+        const {
+            scrollClass,
+            index
+        } = payload
+
+        if (scrollClass === VERSE_SCROLL) {
+            payload.scrollElement = this.myVerseElements[index]
+        }
+
         return this.scrollManager.scrollElementIntoView(payload)
     }
 
@@ -317,6 +360,9 @@ class StateManager extends Component {
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
         this.touchBodyMove = this.touchBodyMove.bind(this)
         this.touchBodyEnd = this.touchBodyEnd.bind(this)
+        this.getCarouselAnnotationRef = this.getCarouselAnnotationRef.bind(this)
+        this.getLyricAnnotationRef = this.getLyricAnnotationRef.bind(this)
+        this.getVerseRef = this.getVerseRef.bind(this)
         this.scrollElementIntoView = this.scrollElementIntoView.bind(this)
     }
 
@@ -334,6 +380,9 @@ class StateManager extends Component {
                     touchSliderBegin={this.touchSliderBegin}
                     touchBodyMove={this.touchBodyMove}
                     touchBodyEnd={this.touchBodyEnd}
+                    getCarouselAnnotationRef={this.getCarouselAnnotationRef}
+                    getLyricAnnotationRef={this.getLyricAnnotationRef}
+                    getVerseRef={this.getVerseRef}
                     scrollElementIntoView={this.scrollElementIntoView}
                     selectAnnotation={this.selectAnnotation}
                     selectAudioOption={this.selectAudioOption}

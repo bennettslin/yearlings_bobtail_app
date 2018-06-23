@@ -58,14 +58,11 @@ class ScrollManager extends Component {
         index,
         time = 500,
         callback = this._scrollElementCallback
+
     }) {
         const isCarousel = scrollClass === CAROUSEL_SCROLL
 
         let element = scrollElement
-
-        if (scrollElement) {
-            console.error('scrolling an element!')
-        }
 
         if (!element) {
             const { childClass } = SCROLL_CLASSES[scrollClass],

@@ -17,7 +17,7 @@ import { DISABLED,
 import {
     CAROUSEL_SCROLL,
     LYRIC_ANNOTATION_SCROLL,
-    // VERSE_SCROLL
+    VERSE_SCROLL
 } from '../constants/dom'
 
 class EventManager extends Component {
@@ -83,8 +83,6 @@ class EventManager extends Component {
         this.handleWikiToggle = this.handleWikiToggle.bind(this)
         this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
         this.stopPropagation = this.stopPropagation.bind(this)
-
-        this.getVerseRef = this.getVerseRef.bind(this)
     }
 
     componentDidMount() {
@@ -183,9 +181,8 @@ class EventManager extends Component {
             leaveOpenPopups: true
         })
         this.props.scrollElementIntoView({
-            // scrollClass: VERSE_SCROLL,
-            // index: interactivatedVerseIndex
-            scrollElement: this.verseElement[interactivatedVerseIndex]
+            scrollClass: VERSE_SCROLL,
+            index: interactivatedVerseIndex
         })
         return true
     }
@@ -786,9 +783,8 @@ class EventManager extends Component {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props
         this.props.scrollElementIntoView({
-            // scrollClass: VERSE_SCROLL,
-            // index: selectedVerseIndex,
-            scrollElement: this.verseElement[selectedVerseIndex]
+            scrollClass: VERSE_SCROLL,
+            index: selectedVerseIndex
         })
 
         this.props.resetVerseBars()
@@ -967,10 +963,9 @@ class EventManager extends Component {
             const { selectedVerseIndex } = this.props
 
             this.props.scrollElementIntoView({
-                // scrollClass: VERSE_SCROLL,
-                // index: selectedVerseIndex,
+                scrollClass: VERSE_SCROLL,
+                index: selectedVerseIndex,
                 time: 0,
-                scrollElement: this.verseElement[selectedVerseIndex],
                 callback: this._determineVerseBarsCallback
             })
 
@@ -1005,29 +1000,18 @@ class EventManager extends Component {
         }
     }
 
-    getVerseRef (node, index) {
-        if (!this.verseElement) {
-            this.verseElement = {}
-        }
-
-        if (node) {
-            this.verseElement[index] = node
-        } else {
-            delete this.verseElement[index]
-        }
-
-        // FIXME: Delete this.
-        window.getVerse = () => {
-            console.error(this.verseElement)
-        }
-    }
-
     render() {
 
         const rootManagerRef = node => this.myRootManager = node,
             lyricRef = node => this.myLyricSection = node,
             scoreRef = node => this.myScoreSection = node,
             wikiRef = node => this.myWikiSection = node,
+
+            {
+                getCarouselAnnotationRef,
+                getLyricAnnotationRef,
+                getVerseRef
+            } = this.props,
 
             eventHandlers = {
 
@@ -1086,11 +1070,15 @@ class EventManager extends Component {
                 handleScrollAfterLyricRerender: this.handleScrollAfterLyricRerender,
                 stopPropagation: this.stopPropagation,
 
-                getVerseRef: this.getVerseRef
+                getCarouselAnnotationRef: getCarouselAnnotationRef,
+                getLyricAnnotationRef: getLyricAnnotationRef,
+                getVerseRef: getVerseRef
             }
 
         return (
-            <Root eventHandlers={eventHandlers} />
+            <Root
+                eventHandlers={eventHandlers}
+            />
         )
     }
 }

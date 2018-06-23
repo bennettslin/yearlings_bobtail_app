@@ -81,18 +81,18 @@ class Verse extends Component {
 
     componentDidUpdate(prevProps) {
         if (!prevProps.isOnCursor) {
-            this._handleSetVerseElement(this.props)
+            this._handleSetVerseElement()
         }
 
         if (this.props.appMounted && !prevProps.appMounted) {
-            this._handleSetVerseElement(this.props)
+            this._handleSetVerseElement()
         }
     }
 
-    _handleSetVerseElement(props = this.props) {
-        if (props.isOnCursor) {
+    _handleSetVerseElement() {
+        if (this.props.isOnCursor) {
             this.props.handleSetVerseElement(
-                this.myVerse
+                this.myVerseElement
             )
         }
     }
@@ -119,7 +119,8 @@ class Verse extends Component {
 
     getVerseRef(node) {
         if (this.getIsInteractable()) {
-            this.myVerse = node
+            this.myVerseElement = node
+            this._handleSetVerseElement()
             this.props.getVerseRef(node, this.props.verseIndex)
         }
     }
