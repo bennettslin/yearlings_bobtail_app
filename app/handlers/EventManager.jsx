@@ -549,7 +549,7 @@ class EventManager extends Component {
 
     handleNavBookSelect(e) {
         this.stopPropagation(e)
-        this.props.selectBookColumn({})
+        this.props.selectBookColumn()
     }
 
     /************

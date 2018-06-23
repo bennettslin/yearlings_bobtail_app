@@ -33,6 +33,12 @@ class NavManager extends Component {
 
         if (selectedSongIndex !== prevProps.selectedSongIndex) {
             this.accessNavSong(selectedSongIndex)
+
+            // Nav will update book column right away.
+            this.selectBookColumn({
+                resetToDefault: true,
+                selectedSongIndex
+            })
         }
     }
 
@@ -41,7 +47,7 @@ class NavManager extends Component {
         resetToDefault,
         selectedCarouselNavIndex = this.props.selectedCarouselNavIndex,
         selectedSongIndex = this.props.selectedSongIndex
-    }) {
+    } = {}) {
         // Either toggle or reset. Book column index is 1-based.
 
         /**

@@ -408,7 +408,6 @@ class StateManager extends Component {
                     // handleRenderReady={this.handleRenderReady}
                     togglePlay={this.togglePlay}
                     selectAnnotation={this.selectAnnotation}
-                    selectBookColumn={this.selectBookColumn}
                     selectScore={this.selectScore}
                     selectVerse={this.selectVerse}
                     updatePath={updatePath}

@@ -43,7 +43,6 @@ class SongManager extends Component {
         // handleRenderReady: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
         selectAnnotation: PropTypes.func.isRequired,
-        selectBookColumn: PropTypes.func.isRequired,
         selectScore: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
@@ -88,7 +87,6 @@ class SongManager extends Component {
         direction,
         selectedAnnotationIndex = 0,
         selectedVerseIndex = 0,
-        // selectedWikiIndex = 0,
         destinationPortalIndex
     }) {
         const { props } = this
@@ -121,12 +119,6 @@ class SongManager extends Component {
             props.setIsPlaying(false)
             props.selectScore(false)
         }
-
-        // Nav will update book column right away.
-        props.selectBookColumn({
-            resetToDefault: true,
-            selectedSongIndex
-        })
 
         /**
          * Get new accessed annotation index by starting from first and going
