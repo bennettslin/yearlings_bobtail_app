@@ -98,47 +98,6 @@ export const getStageCoordinates = ({
     }
 }
 
-const _getLyricColumnHeight = (
-    deviceIndex,
-    isHeightlessLyricColumn,
-    windowHeight
-) => {
-    return (
-        isHeightlessLyricColumn || getIsDesktop(deviceIndex)
-    ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
-}
-
-export const getTheatreCeilingHeight = ({
-    deviceIndex,
-    windowHeight,
-    centreFieldHeight,
-    stageTop,
-    isHeightlessLyricColumn
-}) => {
-
-    const lyricColumnHeight = _getLyricColumnHeight(
-        deviceIndex, isHeightlessLyricColumn, windowHeight
-    )
-
-    return windowHeight - centreFieldHeight + stageTop - lyricColumnHeight
-}
-
-export const getTheatreFloorHeight = ({
-    deviceIndex,
-    windowHeight,
-    centreFieldHeight,
-    stageHeight,
-    stageTop,
-    isHeightlessLyricColumn
-}) => {
-
-    const lyricColumnHeight = _getLyricColumnHeight(
-        deviceIndex, isHeightlessLyricColumn, windowHeight
-    )
-
-    return centreFieldHeight - stageTop - stageHeight + lyricColumnHeight
-}
-
 const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
     let lyricWidth = 0,
         overflowPercentage = 1
@@ -156,13 +115,23 @@ const _getCentreFieldWidth = (deviceIndex, windowWidth) => {
     return windowWidth * overflowPercentage - lyricWidth
 }
 
+export const getLyricColumnHeight = (
+    deviceIndex,
+    isHeightlessLyricColumn,
+    windowHeight
+) => {
+    return (
+        isHeightlessLyricColumn || getIsDesktop(deviceIndex)
+    ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
+}
+
 export const getCentreFieldHeight = ({
     deviceIndex,
     windowWidth,
     windowHeight,
     isHeightlessLyricColumn
 }) => {
-    const lyricColumnHeight = _getLyricColumnHeight(
+    const lyricColumnHeight = getLyricColumnHeight(
             deviceIndex, isHeightlessLyricColumn, windowHeight
         )
 
