@@ -46,8 +46,6 @@ class SongManager extends Component {
         getRef: PropTypes.func.isRequired,
         // handleRenderReady: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
-        accessNavSong: PropTypes.func.isRequired,
-        interactivateVerse: PropTypes.func.isRequired,
         selectAnnotation: PropTypes.func.isRequired,
         selectBookColumn: PropTypes.func.isRequired,
         selectScore: PropTypes.func.isRequired,
@@ -127,8 +125,6 @@ class SongManager extends Component {
         // TODO: This prevents app from breaking when wiki is selected and song is changed. But this might be handled more strategically.
         props.selectWiki({ selectedWikiIndex })
 
-        props.interactivateVerse()
-
         if (isLogue) {
             props.setIsPlaying(false)
             props.selectScore(false)
@@ -156,7 +152,6 @@ class SongManager extends Component {
             })
         )
 
-        props.accessNavSong(selectedSongIndex)
         props.selectSongIndex(selectedSongIndex)
 
         // If not selecting a new song, no need to render again.

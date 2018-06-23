@@ -38,6 +38,11 @@ class VerseManager extends Component {
         this.props.getRef(this)
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
+            this.interactivateVerse()
+        }
+    }
 
     interactivateVerse(interactivatedVerseIndex = -1) {
         this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)

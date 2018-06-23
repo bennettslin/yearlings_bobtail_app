@@ -1,3 +1,11 @@
+Indie rock, by its nature, must believe in natural talent. That's the only way it makes sense to celebrate the reality it forces upon its artists, to have to sacrifice time that would otherwise be spent on artistic tasks to do administrative tasks.
+
+Must renounce Radiohead. It is needlessly risky for minorities to participate in a subculture founded by whites, in which the rules are both arbitrary/absurd and inconsistently enforced. Unlike say, sports.
+
+Less privileged members of the most privileged group see interdependence as a path accessible only to the privileged, while the only path accessible to them is independence. And they assume everyone below them feels the same. But members of the less privileged groups see the opposite. Society wasn't meant for them to do things on their own.
+
+Cult of personality - are bands good because they're indie, or indie because they're good? No answer, because we're just doing what the founders did.
+
 The process - you have to enjoy the process, most genres are agnostic to the process.
 
 The Worst Two Decades of Rock

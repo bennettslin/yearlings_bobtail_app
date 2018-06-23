@@ -28,6 +28,14 @@ class NavManager extends Component {
         this.props.getRef(this)
     }
 
+    componentDidUpdate(prevProps) {
+        const { selectedSongIndex } = this.props
+
+        if (selectedSongIndex !== prevProps.selectedSongIndex) {
+            this.accessNavSong(selectedSongIndex)
+        }
+    }
+
     selectBookColumn({
         shownBookColumnIndex = (this.props.shownBookColumnIndex + 1) % 2,
         resetToDefault,
