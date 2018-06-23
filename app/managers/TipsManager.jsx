@@ -11,6 +11,7 @@ import { getShouldSkipHidden } from '../helpers/logicHelper'
 
 import { SHOWN,
          HIDDEN,
+         DISABLED,
          TIPS_OPTIONS } from '../constants/options'
 
 class TipsManager extends Component {
@@ -27,6 +28,8 @@ class TipsManager extends Component {
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedTitleIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
+        selectDotsExpand: PropTypes.func.isRequired,
+        selectLyricExpand: PropTypes.func.isRequired,
         selectTipsIndex: PropTypes.func.isRequired,
 
         // From parent.
@@ -77,6 +80,15 @@ class TipsManager extends Component {
         } else if (justShowIfHidden) {
             if (TIPS_OPTIONS[selectedTipsIndex] === HIDDEN) {
                 selectedTipsIndex = 0 // Shown.
+            }
+
+            /**
+             * If tip is being shown, collapse lyric column and hide dots
+             * section.
+             */
+            if (TIPS_OPTIONS[selectedTipsIndex] !== DISABLED) {
+                this.props.selectDotsExpand(false)
+                this.props.selectLyricExpand(false)
             }
 
         } else {

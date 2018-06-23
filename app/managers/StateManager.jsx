@@ -384,6 +384,8 @@ class StateManager extends Component {
                 />
                 <OverviewManager
                     getRef={node => (this.overviewManager = node)}
+                    selectDotsExpand={this.selectDotsExpand}
+                    selectLyricExpand={this.selectLyricExpand}
                 />
                 <RenderManager
                     getRef={node => (this.renderManager = node)}
@@ -409,11 +411,7 @@ class StateManager extends Component {
                     interactivateVerse={this.interactivateVerse}
                     selectAnnotation={this.selectAnnotation}
                     selectBookColumn={this.selectBookColumn}
-                    selectDotsExpand={this.selectDotsExpand}
-                    selectLyricExpand={this.selectLyricExpand}
-                    selectOverview={this.selectOverview}
                     selectScore={this.selectScore}
-                    selectTips={this.selectTips}
                     selectVerse={this.selectVerse}
                     selectWiki={this.selectWiki}
                     updatePath={updatePath}
@@ -424,6 +422,8 @@ class StateManager extends Component {
                 />
                 <TipsManager
                     getRef={node => (this.tipsManager = node)}
+                    selectDotsExpand={this.selectDotsExpand}
+                    selectLyricExpand={this.selectLyricExpand}
                 />
                 <TitleManager
                     getRef={node => (this.titleManager = node)}

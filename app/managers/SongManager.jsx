@@ -15,10 +15,7 @@ import { selectSongIndex } from '../redux/actions/storage'
 
 import { CONTINUE,
          PAUSE_AT_END,
-         AUDIO_OPTIONS,
-         DISABLED,
-         OVERVIEW_OPTIONS,
-         TIPS_OPTIONS } from '../constants/options'
+         AUDIO_OPTIONS } from '../constants/options'
 
 import {
     getSongsAndLoguesCount,
@@ -26,7 +23,7 @@ import {
 } from '../helpers/dataHelper'
 import { getAnnotationIndexForDirection } from '../helpers/logicHelper'
 
-class VerseManager extends Component {
+class SongManager extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -53,11 +50,7 @@ class VerseManager extends Component {
         interactivateVerse: PropTypes.func.isRequired,
         selectAnnotation: PropTypes.func.isRequired,
         selectBookColumn: PropTypes.func.isRequired,
-        selectDotsExpand: PropTypes.func.isRequired,
-        selectLyricExpand: PropTypes.func.isRequired,
-        selectOverview: PropTypes.func.isRequired,
         selectScore: PropTypes.func.isRequired,
-        selectTips: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
         selectWiki: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
@@ -97,27 +90,6 @@ class VerseManager extends Component {
         }
     }
 
-    /**
-     * TODO: Handle this more efficiently, so that this same logic can be
-     * applied to both mounting and selecting a new song.
-     */
-    prepareSongWithPossibleAnnotation(selectedAnnotationIndex) {
-        const { props } = this
-
-        if (!selectedAnnotationIndex) {
-
-            /**
-             * If overview or tips are being shown, collapse lyric column and
-             * hide dots section.
-             */
-            if (OVERVIEW_OPTIONS[props.selectedOverviewIndex] !== DISABLED ||
-                TIPS_OPTIONS[props.selectedTipsIndex] !== DISABLED) {
-                props.selectDotsExpand(false)
-                props.selectLyricExpand(false)
-            }
-        }
-    }
-
     selectSong({
         selectedSongIndex = 0,
         direction,
@@ -138,8 +110,6 @@ class VerseManager extends Component {
         }
 
         const isLogue = getSongIsLogue(selectedSongIndex)
-
-        this.prepareSongWithPossibleAnnotation(selectedAnnotationIndex)
 
         props.selectAnnotation({
             selectedAnnotationIndex,
@@ -261,4 +231,4 @@ const bindDispatchToProps = (dispatch) => (
     }, dispatch)
 )
 
-export default connect(mapStateToProps, bindDispatchToProps)(VerseManager)
+export default connect(mapStateToProps, bindDispatchToProps)(SongManager)
