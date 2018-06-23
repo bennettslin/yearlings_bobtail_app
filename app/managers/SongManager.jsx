@@ -104,15 +104,7 @@ class VerseManager extends Component {
     prepareSongWithPossibleAnnotation(selectedAnnotationIndex) {
         const { props } = this
 
-        // If not selected from portal, show overview if hidden.
         if (!selectedAnnotationIndex) {
-            props.selectOverview({
-                justShowIfHidden: true
-            })
-
-            props.selectTips({
-                justShowIfHidden: true
-            })
 
             /**
              * If overview or tips are being shown, collapse lyric column and

@@ -36,12 +36,23 @@ class TipsManager extends Component {
     componentDidMount() {
         this.props.getRef(this)
 
-        // As long as annotation is not selected, show overview and/or tips.
-        if (!this.props.selectedAnnotationIndex) {
-            this.selectTips({
-                justShowIfHidden: true
-            })
+        this._showOrHideForNewSong()
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
+            this._showOrHideForNewSong()
         }
+    }
+
+    _showOrHideForNewSong() {
+        const { selectedAnnotationIndex } = this.props
+
+        // Show if hidden. But if there's a selected annotation, hide if shown.
+        this.selectTips({
+            justShowIfHidden: !selectedAnnotationIndex,
+            justHideIfShown: selectedAnnotationIndex
+        })
     }
 
     selectTips({
