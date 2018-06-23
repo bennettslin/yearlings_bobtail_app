@@ -10,6 +10,7 @@ class WikiManager extends Component {
 
     static propTypes = {
         // Through Redux.
+        selectedSongIndex: PropTypes.number.isRequired,
         selectWikiIndex: PropTypes.func.isRequired,
         setCarouselAnnotationIndex: PropTypes.func.isRequired,
 
@@ -21,10 +22,16 @@ class WikiManager extends Component {
         this.props.getRef(this)
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
+            this.selectWiki()
+        }
+    }
+
     selectWiki({
         selectedWikiIndex = 0,
         carouselAnnotationIndex = 0
-    }) {
+    } = {}) {
         this.props.selectWikiIndex(selectedWikiIndex)
         this.props.setCarouselAnnotationIndex(carouselAnnotationIndex)
     }
@@ -34,7 +41,11 @@ class WikiManager extends Component {
     }
 }
 
-const mapStateToProps = () => ({})
+const mapStateToProps = ({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+})
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({

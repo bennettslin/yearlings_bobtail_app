@@ -411,7 +411,6 @@ class StateManager extends Component {
                     selectBookColumn={this.selectBookColumn}
                     selectScore={this.selectScore}
                     selectVerse={this.selectVerse}
-                    selectWiki={this.selectWiki}
                     updatePath={updatePath}
                 />
                 <TimeVerseManager

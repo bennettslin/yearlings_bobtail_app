@@ -46,7 +46,6 @@ class SongManager extends Component {
         selectBookColumn: PropTypes.func.isRequired,
         selectScore: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
-        selectWiki: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
     }
 
@@ -89,7 +88,7 @@ class SongManager extends Component {
         direction,
         selectedAnnotationIndex = 0,
         selectedVerseIndex = 0,
-        selectedWikiIndex = 0,
+        // selectedWikiIndex = 0,
         destinationPortalIndex
     }) {
         const { props } = this
@@ -117,9 +116,6 @@ class SongManager extends Component {
             selectedVerseIndex,
             selectedSongIndex
         })
-
-        // TODO: This prevents app from breaking when wiki is selected and song is changed. But this might be handled more strategically.
-        props.selectWiki({ selectedWikiIndex })
 
         if (isLogue) {
             props.setIsPlaying(false)
