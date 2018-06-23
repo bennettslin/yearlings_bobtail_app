@@ -12,8 +12,10 @@ import { getVerseUnitClassName, getCursorStatusClassName } from '../../helpers/f
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    appMounted,
     renderReadySongIndex
 }) => ({
+    appMounted,
     renderReadySongIndex
 })
 
@@ -30,6 +32,7 @@ class Verse extends Component {
 
     static propTypes = {
         // Through Redux.
+        appMounted: PropTypes.bool.isRequired,
         renderReadySongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -62,6 +65,7 @@ class Verse extends Component {
                 nextProps,
                 updatingPropsArray: [
                     // TODO: Possible to update without selected song index?
+                    'appMounted',
                     'renderReadySongIndex',
                     'verseIndexForVerseBar',
 
@@ -76,6 +80,10 @@ class Verse extends Component {
 
     componentDidUpdate(prevProps) {
         if (!prevProps.isOnCursor) {
+            this._handleSetVerseElement(this.props)
+        }
+
+        if (this.props.appMounted && !prevProps.appMounted) {
             this._handleSetVerseElement(this.props)
         }
     }

@@ -40,7 +40,12 @@ class VerseManager extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
+            // Reset interactivated verse.
             this.interactivateVerse()
+
+            // Reset verse bars.
+            this.props.setIsVerseBarAbove(false)
+            this.props.setIsVerseBarBelow(false)
         }
     }
 

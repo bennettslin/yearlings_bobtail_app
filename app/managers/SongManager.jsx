@@ -7,9 +7,7 @@ import { accessAnnotationIndex } from '../redux/actions/access'
 import { setIsPlaying } from '../redux/actions/audio'
 import { setIsScoreLoaded } from '../redux/actions/player'
 import {
-    setIsHeavyRenderReady,
-    setIsVerseBarAbove,
-    setIsVerseBarBelow
+    setIsHeavyRenderReady
 } from '../redux/actions/session'
 import { selectSongIndex } from '../redux/actions/storage'
 
@@ -37,8 +35,6 @@ class SongManager extends Component {
         setIsHeavyRenderReady: PropTypes.func.isRequired,
         setIsScoreLoaded: PropTypes.func.isRequired,
         setIsPlaying: PropTypes.func.isRequired,
-        setIsVerseBarAbove: PropTypes.func.isRequired,
-        setIsVerseBarBelow: PropTypes.func.isRequired,
         accessAnnotationIndex: PropTypes.func.isRequired,
         selectSongIndex: PropTypes.func.isRequired,
 
@@ -174,10 +170,6 @@ class SongManager extends Component {
             props.setIsScoreLoaded(false)
         }
 
-        // Reset verse bars.
-        props.setIsVerseBarAbove(false)
-        props.setIsVerseBarBelow(false)
-
         /**
          * This is the only place where router path will change based on a new
          * song.
@@ -219,8 +211,6 @@ const bindDispatchToProps = (dispatch) => (
         setIsHeavyRenderReady,
         setIsScoreLoaded,
         setIsPlaying,
-        setIsVerseBarAbove,
-        setIsVerseBarBelow,
         accessAnnotationIndex,
         selectSongIndex
     }, dispatch)
