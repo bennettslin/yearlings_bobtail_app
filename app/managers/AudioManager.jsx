@@ -48,6 +48,17 @@ class AudioManager extends Component {
         this.props.getRef(this)
     }
 
+    componentDidUpdate(prevProps) {
+        const { selectedSongIndex } = this.props
+
+        // If selecting a logue, pause play.
+        if (selectedSongIndex !== prevProps.selectedSongIndex) {
+            if (getSongIsLogue(selectedSongIndex)) {
+                this.props.setIsPlaying(false)
+            }
+        }
+    }
+
     togglePlay(isPlaying = !this.props.isPlaying) {
 
         const { selectedSongIndex,
@@ -71,7 +82,7 @@ class AudioManager extends Component {
 
         // Select first song if play button in logue is toggled on.
         if (isLogue && isPlaying) {
-            this.selectSong({
+            this.props.selectSong({
                 selectedSongIndex: 1
             })
         }

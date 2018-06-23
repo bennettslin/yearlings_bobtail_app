@@ -57,6 +57,37 @@ class AnnotationManager extends Component {
         this.props.getRef(this)
     }
 
+    componentDidUpdate(prevProps) {
+        const {
+            deviceIndex,
+            selectedDotKeys,
+            selectedLyricColumnIndex,
+            selectedAnnotationIndex,
+            selectedSongIndex
+        } = this.props
+
+        if (selectedSongIndex !== prevProps.selectedSongIndex) {
+            /**
+             * Get new accessed annotation index by starting from first and
+             * going forward. If not called from portal, it should always be
+             * the title annotation unless deselected by dots.
+             */
+
+            const accessedAnnotationIndex = selectedAnnotationIndex ||
+                getAnnotationIndexForDirection({
+                    deviceIndex: deviceIndex,
+                    currentAnnotationIndex: 1,
+                    selectedSongIndex,
+                    selectedDotKeys: selectedDotKeys,
+                    lyricColumnIndex: selectedLyricColumnIndex
+                })
+
+            this.props.accessAnnotationIndex(
+                accessedAnnotationIndex
+            )
+        }
+    }
+
     selectAnnotation({
         selectedAnnotationIndex = 0,
         selectedSongIndex = this.props.selectedSongIndex,

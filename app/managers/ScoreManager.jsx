@@ -28,8 +28,15 @@ class ScoreManager extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
+        const { selectedSongIndex } = this.props
+
+        if (selectedSongIndex !== prevProps.selectedSongIndex) {
             this.props.setIsScoreLoaded(false)
+
+            // If selecting a logue, toggle off score.
+            if (getSongIsLogue(selectedSongIndex)) {
+                this.selectScore(false)
+            }
         }
     }
 
@@ -38,9 +45,16 @@ class ScoreManager extends Component {
     ) {
         // If no argument passed, then just toggle between on and off.
 
-        // We shouldn't be able to toggle score while in logue.
         if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return false
+            /**
+             * We shouldn't be able to toggle score on or off in logue. So if
+             * it's still on, force it to toggle off. Otherwise, we will just
+             * return without registering this event.
+             */
+
+            if (!this.props.selectedScoreIndex) {
+                return false
+            }
         }
 
         if (typeof selectedScoreValue === 'boolean') {

@@ -7,8 +7,8 @@ module.exports = [
     },
 
     {
-        taskName: `Optimise pixels by rendering only after lyrics. Include cleaning out selectSong before starting this work. This should also take care of annotation popup buttons collapsing upon being hidden.`,
-        workedHours: 2,
+        taskName: `Optimise pixels by rendering only after lyrics. This should also take care of annotation popup buttons collapsing upon being hidden.`,
+        workedHours: 4,
         neededHours: 15
     },
     {

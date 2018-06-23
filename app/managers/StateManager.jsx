@@ -407,7 +407,6 @@ class StateManager extends Component {
                     getRef={node => (this.songManager = node)}
                     togglePlay={this.togglePlay}
                     selectAnnotation={this.selectAnnotation}
-                    selectScore={this.selectScore}
                     selectVerse={this.selectVerse}
                     updatePath={updatePath}
                 />

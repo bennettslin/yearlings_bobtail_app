@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { accessAnnotationIndex } from '../redux/actions/access'
-import { setIsPlaying } from '../redux/actions/audio'
 import { selectSongIndex } from '../redux/actions/storage'
 
 import { CONTINUE,
@@ -12,31 +10,21 @@ import { CONTINUE,
          AUDIO_OPTIONS } from '../constants/options'
 
 import {
-    getSongsAndLoguesCount,
-    getSongIsLogue
+    getSongsAndLoguesCount
 } from '../helpers/dataHelper'
-import { getAnnotationIndexForDirection } from '../helpers/logicHelper'
 
 class SongManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
-        selectedLyricColumnIndex: PropTypes.number.isRequired,
+        selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedOverviewIndex: PropTypes.number.isRequired,
-        selectedTipsIndex: PropTypes.number.isRequired,
-
-        setIsPlaying: PropTypes.func.isRequired,
-        accessAnnotationIndex: PropTypes.func.isRequired,
         selectSongIndex: PropTypes.func.isRequired,
 
         // From parent.
         getRef: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
         selectAnnotation: PropTypes.func.isRequired,
-        selectScore: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
     }
@@ -65,8 +53,8 @@ class SongManager extends Component {
              * If option is to continue, advance to next song. Otherwise, stay
              * on same song, and start at beginning. (True evaluates to 1, false 0.)
              */
-            const nextSongIndex = selectedSongIndex +
-                (selectedAudioOption === CONTINUE)
+            const nextSongIndex = selectedSongIndex
+                + (selectedAudioOption === CONTINUE)
 
             this.selectSong({
                 selectedSongIndex: nextSongIndex,
@@ -88,12 +76,13 @@ class SongManager extends Component {
         if (direction) {
             selectedSongIndex = props.selectedSongIndex + direction
 
-            if (selectedSongIndex < 0 || selectedSongIndex >= getSongsAndLoguesCount()) {
+            if (
+                selectedSongIndex < 0 ||
+                selectedSongIndex >= getSongsAndLoguesCount()
+            ) {
                 return false
             }
         }
-
-        const isLogue = getSongIsLogue(selectedSongIndex)
 
         props.selectAnnotation({
             selectedAnnotationIndex,
@@ -107,27 +96,6 @@ class SongManager extends Component {
             selectedVerseIndex,
             selectedSongIndex
         })
-
-        if (isLogue) {
-            props.setIsPlaying(false)
-            props.selectScore(false)
-        }
-
-        /**
-         * Get new accessed annotation index by starting from first and going
-         * forward. If not called from portal, it should always be the title
-         * annotation unless deselected by dots.
-         */
-        props.accessAnnotationIndex(
-            selectedAnnotationIndex ||
-            getAnnotationIndexForDirection({
-                deviceIndex: props.deviceIndex,
-                currentAnnotationIndex: 1,
-                selectedSongIndex,
-                selectedDotKeys: props.selectedDotKeys,
-                lyricColumnIndex: props.selectedLyricColumnIndex
-            })
-        )
 
         props.selectSongIndex(selectedSongIndex)
 
@@ -152,25 +120,15 @@ class SongManager extends Component {
 }
 
 const mapStateToProps = ({
-    deviceIndex,
-    selectedDotKeys,
-    selectedLyricColumnIndex,
-    selectedSongIndex,
-    selectedOverviewIndex,
-    selectedTipsIndex
+    selectedAudioOptionIndex,
+    selectedSongIndex
 }) => ({
-    deviceIndex,
-    selectedDotKeys,
-    selectedLyricColumnIndex,
-    selectedSongIndex,
-    selectedOverviewIndex,
-    selectedTipsIndex
+    selectedAudioOptionIndex,
+    selectedSongIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setIsPlaying,
-        accessAnnotationIndex,
         selectSongIndex
     }, dispatch)
 )
