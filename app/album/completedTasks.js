@@ -2995,4 +2995,10 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+
+    {
+        taskName: `When opening url with annotation in incognito, annotation and tips are shown simultaneously. Have system to flush out store.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

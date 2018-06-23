@@ -1,33 +1,20 @@
 module.exports = [
 
     {
-        taskName: `When opening url with annotation in incognito, annotation and tips are shown simultaneously. Have system to flush out store.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Get scrolling indexed elements by ref. Scrolling in carousel is broken when navigating through portal?`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: `Separate out event handlers into helper components in the same way.`,
         workedHours: 0,
         neededHours: 12
     },
 
     {
-        taskName: `Annotation popup buttons collapse upon being hidden.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Optimise pixels by rendering only after lyrics.`,
+        taskName: `Optimise pixels by rendering only after lyrics. Include cleaning out selectSong before starting this work. This should also take care of annotation popup buttons collapsing upon being hidden.`,
         workedHours: 0,
         neededHours: 15
+    },
+    {
+        taskName: `Get scrolling indexed elements by ref. Scrolling in carousel is broken when navigating through portal?`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     {

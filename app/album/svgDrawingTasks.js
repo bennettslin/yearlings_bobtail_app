@@ -1,5 +1,5 @@
 module.exports = [
-        /**
+    /**
      * App UI.
      */
     {
@@ -58,7 +58,7 @@ module.exports = [
      * Stage
      */
     {
-        taskName: `Theatre seat, including advancing seats based on circular row.`,
+        taskName: `Theatre seat, including advancing seats based on circular row, and overlapping more of the stage. Change getTheatreFloorHeight, and render theatre seats above stage.`,
         workedHours: 0,
         neededHours: 4
     },
