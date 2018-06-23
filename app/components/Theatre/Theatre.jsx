@@ -6,6 +6,8 @@ import cx from 'classnames'
 
 import { connect } from 'react-redux'
 
+import Stage from '../Stage/Stage'
+
 import TheatreWall from './TheatreWall'
 import TheatreCeiling from './TheatreCeiling'
 import TheatreFloor from './TheatreFloor'
@@ -117,7 +119,8 @@ class Theatre extends Component {
 
         return (
             <div className={cx(
-                'Theatre'
+                'Theatre',
+                'absoluteFullContainer'
             )}>
                 <TheatreCeiling
                     windowWidth={windowWidth}
@@ -132,6 +135,9 @@ class Theatre extends Component {
                     windowHeight={windowHeight}
                     wallFieldCoordinates={wallFieldCoordinates}
                 />
+
+                <Stage />
+
                 <TheatreFloor
                     windowWidth={windowWidth}
                     floorFieldCoordinates={floorFieldCoordinates}

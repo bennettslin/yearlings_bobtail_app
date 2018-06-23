@@ -3001,4 +3001,10 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+
+    {
+        taskName: `Nest Stage under Live, not Main.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -37,7 +37,13 @@ class Stage extends Component {
         return (
             <div className={cx(
                 'Stage',
-                'absoluteFullContainer'
+
+                /**
+                 * Not the most elegant solution. Moving stage from Main to
+                 * Live means it is no longer positioned relative to the menu.
+                 * This positions it as if it were still a child of Main.
+                 */
+                'position__mainColumn'
             )}>
                 <div
                     className={cx(

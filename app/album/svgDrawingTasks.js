@@ -59,7 +59,7 @@ module.exports = [
      */
     {
         taskName: `Theatre seat, including advancing seats based on circular row, and overlapping more of the stage. Change getTheatreFloorHeight, and render theatre seats above stage.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 4
     },
     {

@@ -15,7 +15,6 @@ import Carousel from '../Carousel/Carousel'
 import DotsSlide from '../DotsSlide/DotsSlide'
 import LeftShelf from './LeftShelf'
 import LyricToggleExpand from '../LyricColumn/LyricToggleExpand'
-import Stage from '../stage/Stage'
 import OverviewPopup from '../Popups/OverviewPopup'
 import TipsPopup from '../Popups/TipsPopup'
 import ScoresTips from '../ScoresTips/ScoresTips'
@@ -72,10 +71,9 @@ Main = ({
     return (
         <div className={cx(
             'Main',
+            'position__mainColumn',
             'width__mainColumn'
         )}>
-
-            <Stage />
 
             <AnnotationPopup {...annotationPopupHandlers}
                 inMain

@@ -150,7 +150,7 @@ export const getCentreFieldHeight = ({
     return windowHeight - menuHeight - lyricColumnHeight
 }
 
-export const _getLeftShelfOverflow = (deviceIndex) => {
+const _getLeftShelfOverflow = (deviceIndex) => {
     let toggleButtonWidth = 0
 
     switch (DEVICE_OBJECTS[deviceIndex].className) {

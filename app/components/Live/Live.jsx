@@ -3,10 +3,11 @@
  * should not update.
  */
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import Theatre from '../Theatre/Theatre'
+
 import Main from '../Main/Main'
 import Menu from './Menu'
 import OverlayPopups from './OverlayPopups'
@@ -218,7 +219,7 @@ class Live extends Component {
             }
 
         return (
-            <div className="Live">
+            <Fragment>
 
                 <div className="PopupOverlay" />
 
@@ -244,7 +245,7 @@ class Live extends Component {
                 {/* Prevent popup interaction when slider is touched. */}
                 <div className="TouchOverlay" />
 
-            </div>
+            </Fragment>
         )
     }
 }

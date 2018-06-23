@@ -3,13 +3,24 @@
 @import "./DotsSlideToggle.less";
 
 .Main {
+    flex-grow: 1;
+}
+
+.Main__flexContainer {
+    display: flex;
+
+    .RM__mobileNotPhone
+    & {
+        align-items: flex-end;
+    }
+}
+
+.position__mainColumn {
     position: absolute;
     top: @js__height__menu;
     height: ~"calc(100% - @{js__height__menu})";
 
     left: 0;
-
-    flex-grow: 1;
 
     .RM__twoRowMenu
     & {
@@ -42,15 +53,6 @@
     .RM__phone.RM__lyricHeightless
     & {
         height: ~"calc(100% - @{js__height__menu__phone})";
-    }
-}
-
-.Main__flexContainer {
-    display: flex;
-
-    .RM__mobileNotPhone
-    & {
-        align-items: flex-end;
     }
 }
 
