@@ -38,7 +38,6 @@ class SliderVerse extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    // TODO: Possible to update without selected song index?
                     'renderableSongIndex',
 
                     'isOnCursor',

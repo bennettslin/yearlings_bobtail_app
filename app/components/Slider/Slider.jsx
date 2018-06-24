@@ -40,7 +40,8 @@ class Slider extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canSliderRender && !this.props.canSliderRender
+        console.error('nextProps', nextProps.canSliderRender)
+        return nextProps.canSliderRender !== this.props.canSliderRender
     }
 
     _handleTouchDown(e) {
@@ -50,6 +51,8 @@ class Slider extends Component {
     render() {
 
         const { canSliderRender } = this.props
+
+        console.error('canSliderRender', canSliderRender)
 
         return canSliderRender ? (
             <div

@@ -11,12 +11,12 @@ import { getSongTotalTime } from '../../../helpers/dataHelper'
 import { getFormattedTime } from '../../../helpers/formatHelper'
 
 const mapStateToProps = ({
-    selectedSongIndex,
+    renderableSongIndex,
     selectedTimePlayed,
     isSliderTouched,
     sliderRatio
 }) => ({
-    selectedSongIndex,
+    renderableSongIndex,
     selectedTimePlayed,
     isSliderTouched,
     sliderRatio
@@ -24,7 +24,7 @@ const mapStateToProps = ({
 
 const sliderTimeBarsPropTypes = {
     // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
+    renderableSongIndex: PropTypes.number.isRequired,
     selectedTimePlayed: PropTypes.number.isRequired,
     isSliderTouched: PropTypes.bool.isRequired,
     sliderRatio: PropTypes.number.isRequired
@@ -32,14 +32,14 @@ const sliderTimeBarsPropTypes = {
 
 SliderTimes = ({
 
-    selectedSongIndex,
+    renderableSongIndex,
     selectedTimePlayed,
     isSliderTouched,
     sliderRatio
 
 }) => {
 
-    const totalTime = getSongTotalTime(selectedSongIndex),
+    const totalTime = getSongTotalTime(renderableSongIndex),
 
         workingRatio = isSliderTouched ?
             sliderRatio : (selectedTimePlayed / totalTime),

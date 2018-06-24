@@ -9,24 +9,24 @@ import { getScenesArray,
          getSongTotalTime } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
-    selectedSongIndex
+    renderableSongIndex
 }) => ({
-    selectedSongIndex
+    renderableSongIndex
 })
 
 const sliderScenesPropTypes = {
     // Through Redux.
-    selectedSongIndex: PropTypes.number.isRequired
+    renderableSongIndex: PropTypes.number.isRequired
 },
 
 SliderScenes = ({
 
-    selectedSongIndex
+    renderableSongIndex
 
 }) => {
 
-    const totalTime = getSongTotalTime(selectedSongIndex),
-        scenesArray = getScenesArray(selectedSongIndex)
+    const totalTime = getSongTotalTime(renderableSongIndex),
+        scenesArray = getScenesArray(renderableSongIndex)
 
     return (
         <div className="SliderScenes">

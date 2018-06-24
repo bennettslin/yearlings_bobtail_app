@@ -10,28 +10,28 @@ import { NAVIGATION_ENTER_KEY,
 import { getSongIsLogue } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
-    selectedSongIndex,
+    renderableSongIndex,
     interactivatedVerseIndex
 }) => ({
-    selectedSongIndex,
+    renderableSongIndex,
     interactivatedVerseIndex
 })
 
 const sliderAccessPropTypes = {
 
     // From Redux.
-    selectedSongIndex: PropTypes.number.isRequired,
+    renderableSongIndex: PropTypes.number.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired
 }
 
 const SliderAccess = ({
 
-    selectedSongIndex,
+    renderableSongIndex,
     interactivatedVerseIndex
 
 }) => {
 
-    const isLogue = getSongIsLogue(selectedSongIndex),
+    const isLogue = getSongIsLogue(renderableSongIndex),
         isVerseInteractivated = interactivatedVerseIndex >= 0
 
     return [(

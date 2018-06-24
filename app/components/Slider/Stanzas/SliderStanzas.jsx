@@ -19,7 +19,6 @@ const mapStateToProps = ({
 class SliderStanzas extends Component {
 
     static propTypes = {
-
         // Through Redux.
         renderableSongIndex: PropTypes.number.isRequired
     }
