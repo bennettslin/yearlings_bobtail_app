@@ -27,6 +27,18 @@ module.exports = {
     CAN_PLAY_THROUGHS: 'canPlayThroughs',
     IS_SCORE_LOADED: 'scoreLoaded',
 
+    // Render.
+    IS_RENDERABLE: 'isRenderable',
+    RENDER_READY_SONG_INDEX: 'renderableSongIndex',
+    RENDER_READY_ANNOTATION_INDEX: 'renderableAnnotationIndex',
+    RENDER_READY_VERSE_INDEX: 'renderableVerseIndex',
+    CAN_THEATRE_RENDER: 'canTheatreRender',
+    CAN_MAIN_RENDER: 'canMainRender',
+    CAN_SLIDER_RENDER: 'canSliderRender',
+    CAN_LYRIC_RENDER: 'canLyricRender',
+    CAN_CAROUSEL_RENDER: 'canCarouselRender',
+    CAN_SCENE_RENDER: 'canSceneRender',
+
     // Responsive.
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',
     IS_HIDDEN_NAV: 'isHiddenCarouselNav',
@@ -39,10 +51,6 @@ module.exports = {
 
     // Session.
     APP_MOUNTED: 'appMounted',
-    IS_RENDERABLE: 'isRenderable',
-    RENDER_READY_SONG_INDEX: 'renderableSongIndex',
-    RENDER_READY_ANNOTATION_INDEX: 'renderableAnnotationIndex',
-    RENDER_READY_VERSE_INDEX: 'renderableVerseIndex',
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
     INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',
     CURRENT_SCENE_INDEX: 'currentSceneIndex',

@@ -1,9 +1,5 @@
 // Reducers for state of this user session.
 import { APP_MOUNTED,
-         IS_RENDERABLE,
-         RENDER_READY_SONG_INDEX,
-         RENDER_READY_ANNOTATION_INDEX,
-         RENDER_READY_VERSE_INDEX,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
          CURRENT_SCENE_INDEX,
@@ -13,7 +9,6 @@ import { APP_MOUNTED,
          IS_MANUAL_SCROLL,
          SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX,
-         SELECTED_ANNOTATION_INDEX,
          SELECTED_SONG_INDEX,
          SELECTED_VERSE_INDEX } from '../../constants/state'
 
@@ -25,49 +20,12 @@ import {
 import StorageHelper from '../storageHelper'
 
 const { getFromStorage } = StorageHelper,
-    storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
     storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
     storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX)
 
 export const AppMountedReducer = (state = false, action) => {
     switch (action.type) {
         case APP_MOUNTED:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const IsRenderableReducer = (state = false, action) => {
-    switch (action.type) {
-        case IS_RENDERABLE:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const RenderReadySongIndexReducer = (state = storedSongIndex, action) => {
-    switch (action.type) {
-        case RENDER_READY_SONG_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const RenderReadyAnnotationIndexReducer = (state = storedAnnotationIndex, action) => {
-    switch (action.type) {
-        case RENDER_READY_ANNOTATION_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const RenderReadyVerseIndexReducer = (state = storedVerseIndex, action) => {
-    switch (action.type) {
-        case RENDER_READY_VERSE_INDEX:
             return action.payload
         default:
             return state

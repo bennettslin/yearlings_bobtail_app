@@ -22,9 +22,11 @@ import ScoresTips from '../ScoresTips/ScoresTips'
 import { getIsPhone } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    deviceIndex
+    deviceIndex,
+    canMainRender
 }) => ({
-    deviceIndex
+    deviceIndex,
+    canMainRender
 })
 
 class Main extends Component {
@@ -32,6 +34,7 @@ class Main extends Component {
     static propTypes = {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
+        canMainRender: PropTypes.bool.isRequired,
 
         // From parent.
         handleCarouselNavToggle: PropTypes.func.isRequired,
@@ -46,9 +49,7 @@ class Main extends Component {
         tipsPopupHandlers: PropTypes.object.isRequired,
         scoresTipsHandlers: PropTypes.object.isRequired,
 
-        canMainRender: PropTypes.bool.isRequired,
         mainDidRender: PropTypes.func.isRequired,
-        canCarouselRender: PropTypes.bool.isRequired,
         carouselDidRender: PropTypes.func.isRequired
     }
 

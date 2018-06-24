@@ -8,9 +8,10 @@ import {
     setIsRenderable,
     setRenderableSongIndex,
     setRenderableAnnotationIndex,
-    setRenderableVerseIndex,
-    setCurrentSceneIndex
-} from '../redux/actions/session'
+    setRenderableVerseIndex
+} from '../redux/actions/render'
+
+import { setCurrentSceneIndex } from '../redux/actions/session'
 
 import { getSceneIndexForVerseIndex } from '../helpers/dataHelper'
 import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'

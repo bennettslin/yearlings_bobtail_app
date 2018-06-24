@@ -24,6 +24,9 @@ const mapStateToProps = ({
 class Lyric extends Component {
 
     static propTypes = {
+        // Through Redux.
+        renderableSongIndex: PropTypes.number.isRequired,
+
         // From parent.
         isTransitioningHeight: PropTypes.bool.isRequired,
         completeHeightTransition: PropTypes.func.isRequired,

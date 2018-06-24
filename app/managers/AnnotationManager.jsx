@@ -7,7 +7,7 @@ import {
     accessAnnotationIndex,
     accessAnnotationAnchorIndex
 } from '../redux/actions/access'
-import { setRenderableAnnotationIndex } from '../redux/actions/session'
+import { setRenderableAnnotationIndex } from '../redux/actions/render'
 import { selectAnnotationIndex } from '../redux/actions/storage'
 
 import {

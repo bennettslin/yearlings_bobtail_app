@@ -18,12 +18,14 @@ import { getTheatreCeilingHeight,
          getTheatreFloorHeight } from './theatreHelper'
 
 const mapStateToProps = ({
+    canTheatreRender,
     isHeightlessLyricColumn,
     deviceIndex,
     stageCoordinates,
     windowHeight,
     windowWidth
 }) => ({
+    canTheatreRender,
     isHeightlessLyricColumn,
     deviceIndex,
     stageCoordinates,
@@ -34,6 +36,8 @@ const mapStateToProps = ({
 class Theatre extends Component {
 
     static propTypes = {
+        // Through Redux.
+        canTheatreRender: PropTypes.bool.isRequired,
         stageCoordinates: PropTypes.shape({
             top: PropTypes.number.isRequired,
             left: PropTypes.number.isRequired,
@@ -46,7 +50,6 @@ class Theatre extends Component {
         windowWidth: PropTypes.number.isRequired,
 
         // From parent.
-        canTheatreRender: PropTypes.bool.isRequired,
         theatreDidRender: PropTypes.func.isRequired
     }
 

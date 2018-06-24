@@ -5,7 +5,17 @@
 
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
+
+import {
+    setCanRenderTheatre,
+    setCanRenderMain,
+    setCanRenderSlider,
+    setCanRenderLyric,
+    setCanRenderCarousel,
+    setCanRenderScene
+} from '../../redux/actions/render'
 
 import Theatre from '../Theatre/Theatre'
 
@@ -17,14 +27,6 @@ import OverviewLogue from './OverviewLogue'
 import LyricColumn from '../LyricColumn/LyricColumn'
 
 import {
-    getNextStateForRenderedLive,
-    getNextStateForRenderedTheatre,
-    getNextStateForRenderedMain,
-    getNextStateForRenderedSlider,
-    getNextStateForRenderedLyric,
-    getNextStateForRenderedCarousel,
-    getNewStateForRenderable,
-    getNewStateForUnrenderable,
     getOrganisedHandlersFromProps
 } from './liveHelper'
 
@@ -39,15 +41,6 @@ class Live extends Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            canTheatreRender: false,
-            canMainRender: false,
-            canSliderRender: false,
-            canLyricRender: false,
-            canCarouselRender: false,
-            canSceneRender: false
-        }
-
         this.theatreDidRender = this.theatreDidRender.bind(this)
         this.mainDidRender = this.mainDidRender.bind(this)
         this.sliderDidRender = this.sliderDidRender.bind(this)
@@ -57,8 +50,7 @@ class Live extends Component {
     }
 
     componentDidMount() {
-        this.setState(getNextStateForRenderedLive())
-
+        this.props.setCanRenderTheatre(true)
         this.unrenderedTime = Date.now()
     }
 
@@ -66,41 +58,44 @@ class Live extends Component {
 
         // Is unrenderable after song change.
         if (!this.props.isRenderable && prevProps.isRenderable) {
-            console.warn('Live unrenderable.')
-            this.setState(getNewStateForUnrenderable())
-
             this.unrenderedTime = Date.now()
+
+            console.warn('Live unrenderable.')
+            this.props.setCanRenderMain(false)
+            this.props.setCanRenderSlider(false)
+            this.props.setCanRenderLyric(false)
+            this.props.setCanRenderCarousel(false)
+            this.props.setCanRenderScene(false)
         }
 
         // Is renderable after timeout.
         if (this.props.isRenderable && !prevProps.isRenderable) {
-            // TODO: Get rid of this eventually.
-            const renderDuration = (
-                (Date.now() - this.unrenderedTime) / 1000
-            ).toFixed(2)
-            console.warn(`Live renderable after ${renderDuration} seconds.`)
-            this.setState(getNewStateForRenderable())
+            console.warn(`Live renderable after ${
+                ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
+            } seconds.`)
+
+            this.props.setCanRenderMain(true)
         }
     }
 
     theatreDidRender() {
-        this.setState(getNextStateForRenderedTheatre())
+        this.props.setCanRenderMain(true)
     }
 
     mainDidRender() {
-        this.setState(getNextStateForRenderedMain())
+        this.props.setCanRenderSlider(true)
     }
 
     sliderDidRender() {
-        this.setState(getNextStateForRenderedSlider())
+        this.props.setCanRenderLyric(true)
     }
 
     lyricDidRender() {
-        this.setState(getNextStateForRenderedLyric())
+        this.props.setCanRenderCarousel(true)
     }
 
     carouselDidRender() {
-        this.setState(getNextStateForRenderedCarousel())
+        this.props.setCanRenderScene(true)
     }
 
     sceneDidRender() {
@@ -125,15 +120,11 @@ class Live extends Component {
                 <div className="PopupOverlay" />
 
                 <Theatre {...theatreHandlers}
-                    canTheatreRender={this.state.canTheatreRender}
-                    canSceneRender={this.state.canSceneRender}
                     theatreDidRender={this.theatreDidRender}
                     sceneDidRender={this.sceneDidRender}
                 />
 
                 <Main {...mainColumnHandlers}
-                    canMainRender={this.state.canMainRender}
-                    canCarouselRender={this.state.canCarouselRender}
                     mainDidRender={this.mainDidRender}
                     carouselDidRender={this.carouselDidRender}
                 />
@@ -143,7 +134,6 @@ class Live extends Component {
                 />
 
                 <LyricColumn {...lyricColumnHandlers}
-                    canLyricRender={this.state.canLyricRender}
                     lyricDidRender={this.lyricDidRender}
                 />
 
@@ -155,7 +145,6 @@ class Live extends Component {
                 />
 
                 <Menu {...menuFieldHandlers}
-                    canSliderRender={this.state.canSliderRender}
                     sliderDidRender={this.sliderDidRender}
                 />
 
@@ -170,6 +159,12 @@ class Live extends Component {
 Live.propTypes = {
     // Through Redux.
     isRenderable: PropTypes.bool.isRequired,
+    setCanRenderTheatre: PropTypes.func.isRequired,
+    setCanRenderMain: PropTypes.func.isRequired,
+    setCanRenderSlider: PropTypes.func.isRequired,
+    setCanRenderLyric: PropTypes.func.isRequired,
+    setCanRenderCarousel: PropTypes.func.isRequired,
+    setCanRenderScene: PropTypes.func.isRequired,
 
     // From parent.
     focusElementForAccess: PropTypes.func.isRequired,
@@ -214,4 +209,15 @@ Live.propTypes = {
     stopPropagation: PropTypes.func.isRequired
 }
 
-export default connect(mapStateToProps)(Live)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        setCanRenderTheatre,
+        setCanRenderMain,
+        setCanRenderSlider,
+        setCanRenderLyric,
+        setCanRenderCarousel,
+        setCanRenderScene
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(Live)

@@ -12,11 +12,13 @@ import { getAnnotationsCount } from '../../helpers/dataHelper'
 import { getArrayOfLength, getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canCarouselRender,
     isHiddenCarouselNav,
     renderableSongIndex,
     renderableAnnotationIndex,
     accessedAnnotationIndex
 }) => ({
+    canCarouselRender,
     isHiddenCarouselNav,
     renderableSongIndex,
     renderableAnnotationIndex,
@@ -27,6 +29,7 @@ class Carousel extends Component {
 
     static propTypes = {
         // Through Redux.
+        canCarouselRender: PropTypes.bool.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
@@ -36,7 +39,6 @@ class Carousel extends Component {
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired,
 
-        canCarouselRender: PropTypes.bool.isRequired,
         carouselDidRender: PropTypes.func.isRequired
     }
 

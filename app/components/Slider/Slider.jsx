@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import SliderScenes from './SliderScenes'
@@ -9,17 +10,20 @@ import SliderStanzas from './Stanzas/SliderStanzas'
 import SliderTimes from './Times/SliderTimes'
 import SliderAccess from './SliderAccess'
 
-/*************
- * CONTAINER *
- *************/
+const mapStateToProps = ({
+    canSliderRender
+}) => ({
+    canSliderRender
+})
 
 class Slider extends Component {
 
     static propTypes = {
+        // Through Redux.
+        canSliderRender: PropTypes.bool.isRequired,
+
         // From parent.
         handleSliderTouchBegin: PropTypes.func.isRequired,
-
-        canSliderRender: PropTypes.bool.isRequired,
         sliderDidRender: PropTypes.func.isRequired
     }
 
@@ -40,7 +44,6 @@ class Slider extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        console.error('nextProps', nextProps.canSliderRender)
         return nextProps.canSliderRender !== this.props.canSliderRender
     }
 
@@ -51,8 +54,6 @@ class Slider extends Component {
     render() {
 
         const { canSliderRender } = this.props
-
-        console.error('canSliderRender', canSliderRender)
 
         return canSliderRender ? (
             <div
@@ -72,4 +73,4 @@ class Slider extends Component {
     }
 }
 
-export default Slider
+export default connect(mapStateToProps)(Slider)

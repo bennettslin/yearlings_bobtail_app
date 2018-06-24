@@ -4,10 +4,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { setUpdatedTimePlayed } from '../redux/actions/audio'
-import {
-    setRenderableVerseIndex,
-    setCurrentSceneIndex
-} from '../redux/actions/session'
+import { setRenderableVerseIndex } from '../redux/actions/render'
+import { setCurrentSceneIndex } from '../redux/actions/session'
 import {
     selectTimePlayed,
     selectVerseIndex

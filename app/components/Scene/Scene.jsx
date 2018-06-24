@@ -12,9 +12,11 @@ import SceneWood from './SceneWood'
 import { getSceneObject } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
+    canSceneRender,
     renderableSongIndex,
     currentSceneIndex
 }) => ({
+    canSceneRender,
     renderableSongIndex,
     currentSceneIndex
 })
@@ -23,6 +25,7 @@ class Scene extends Component {
 
     static propTypes = {
         // Through Redux.
+        canSceneRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         currentSceneIndex: PropTypes.number.isRequired,
 
@@ -30,7 +33,6 @@ class Scene extends Component {
         stageWidth: PropTypes.number.isRequired,
         stageHeight: PropTypes.number.isRequired,
 
-        canSceneRender: PropTypes.bool.isRequired,
         sceneDidRender: PropTypes.func.isRequired
     }
 

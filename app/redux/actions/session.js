@@ -1,9 +1,5 @@
 // Actions for state of this user session.
 import { APP_MOUNTED,
-         IS_RENDERABLE,
-         RENDER_READY_SONG_INDEX,
-         RENDER_READY_ANNOTATION_INDEX,
-         RENDER_READY_VERSE_INDEX,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
          CURRENT_SCENE_INDEX,
@@ -17,26 +13,6 @@ import { APP_MOUNTED,
 export const setAppMounted = (appMounted = false) => (
     { type: APP_MOUNTED,
       payload: appMounted }
-)
-
-export const setIsRenderable = (isRenderable = false) => (
-    { type: IS_RENDERABLE,
-      payload: isRenderable }
-)
-
-export const setRenderableSongIndex = (renderableSongIndex = -1) => (
-    { type: RENDER_READY_SONG_INDEX,
-      payload: renderableSongIndex }
-)
-
-export const setRenderableAnnotationIndex = (renderableAnnotationIndex = 0) => (
-    { type: RENDER_READY_ANNOTATION_INDEX,
-      payload: renderableAnnotationIndex }
-)
-
-export const setRenderableVerseIndex = (renderableVerseIndex = 0) => (
-    { type: RENDER_READY_VERSE_INDEX,
-      payload: renderableVerseIndex }
 )
 
 export const setCarouselAnnotationIndex = (carouselAnnotationIndex = 0) => (
