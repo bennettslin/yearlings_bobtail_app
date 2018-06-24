@@ -23,6 +23,8 @@ import {
     getNextStateForRenderedSlider,
     getNextStateForRenderedLyric,
     getNextStateForRenderedCarousel,
+    getNewStateForRenderable,
+    getNewStateForUnrenderable,
     getOrganisedHandlersFromProps
 } from './liveHelper'
 
@@ -63,21 +65,13 @@ class Live extends Component {
         // Is unrenderable after song change.
         if (!this.props.isRenderable && prevProps.isRenderable) {
             console.warn('Live registering unrenderable.')
-            this.setState({
-                canMainRender: false,
-                canSliderRender: false,
-                canLyricRender: false,
-                canCarouselRender: false,
-                canSceneRender: false
-            })
+            this.setState(getNewStateForUnrenderable())
         }
 
         // Is renderable after timeout.
         if (this.props.isRenderable && !prevProps.isRenderable) {
             console.warn('Live registering renderable.')
-            this.setState({
-                canMainRender: true
-            })
+            this.setState(getNewStateForRenderable())
         }
     }
 

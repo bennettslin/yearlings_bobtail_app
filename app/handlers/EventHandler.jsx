@@ -10,6 +10,11 @@ import { getSongIsLogue, getAnnotationObject } from '../helpers/dataHelper'
 import { intersects } from '../helpers/dotHelper'
 import { getClientX } from '../helpers/domHelper'
 
+import {
+    bindHandlers,
+    getHandlers
+} from './eventHelper'
+
 import { REFERENCE } from '../constants/dots'
 import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
@@ -28,61 +33,7 @@ class EventHandler extends Component {
 
     constructor(props) {
         super(props)
-
-        this.focusElementForAccess = this.focusElementForAccess.bind(this)
-
-        this.handleAnnotationAccess = this.handleAnnotationAccess.bind(this)
-        this.handleDotAccess = this.handleDotAccess.bind(this)
-        this.handleAnnotationAnchorAccess = this.handleAnnotationAnchorAccess.bind(this)
-        this.handleSongAccess = this.handleSongAccess.bind(this)
-        this.handleVerseDirectionAccess = this.handleVerseDirectionAccess.bind(this)
-
-        this.handleBodyClick = this.handleBodyClick.bind(this)
-        this.handleBodyTouchMove = this.handleBodyTouchMove.bind(this)
-        this.handleBodyTouchEnd = this.handleBodyTouchEnd.bind(this)
-        this.handlePopupContainerClick = this.handlePopupContainerClick.bind(this)
-        this.handleSetVerseElement = this.handleSetVerseElement.bind(this)
-        this.handleAccessToggle = this.handleAccessToggle.bind(this)
-        this.handleAdminToggle = this.handleAdminToggle.bind(this)
-        this.handleAnnotationPrevious = this.handleAnnotationPrevious.bind(this)
-        this.handleAnnotationNext = this.handleAnnotationNext.bind(this)
-        this.handleAnnotationWikiSelect = this.handleAnnotationWikiSelect.bind(this)
-        this.handleAnnotationPortalSelect = this.handleAnnotationPortalSelect.bind(this)
-        this.handleAudioPlay = this.handleAudioPlay.bind(this)
-        this.handleAudioPreviousSong = this.handleAudioPreviousSong.bind(this)
-        this.handleAudioNextSong = this.handleAudioNextSong.bind(this)
-        this.handleAudioOptionsToggle = this.handleAudioOptionsToggle.bind(this)
-        this.handleSliderTouchBegin = this.handleSliderTouchBegin.bind(this)
-
-        this.handlePlayerTimeChange = this.handlePlayerTimeChange.bind(this)
-        this.handlePlayerNextSong = this.handlePlayerNextSong.bind(this)
-        this.handlePlayerTimeReset = this.handlePlayerTimeReset.bind(this)
-
-        this.handleDotSelect = this.handleDotSelect.bind(this)
-        this.handleDotsSectionToggle = this.handleDotsSectionToggle.bind(this)
-        this.handleLyricSectionExpand = this.handleLyricSectionExpand.bind(this)
-        this.handleLyricAutoScroll = this.handleLyricAutoScroll.bind(this)
-        this.handleLyricColumnSelect = this.handleLyricColumnSelect.bind(this)
-        this.handleLyricAnnotationSelect = this.handleLyricAnnotationSelect.bind(this)
-        this.handleLyricPlay = this.handleLyricPlay.bind(this)
-        this.handleLyricVerseSelect = this.handleLyricVerseSelect.bind(this)
-        this.handleLyricWheel = this.handleLyricWheel.bind(this)
-        this._determineVerseBarsCallback = this._determineVerseBarsCallback.bind(this)
-        this.handleNavSongSelect = this.handleNavSongSelect.bind(this)
-        this.handleNavBookSelect = this.handleNavBookSelect.bind(this)
-        this.handleOverviewToggle = this.handleOverviewToggle.bind(this)
-        this.handlePopupFocus = this.handlePopupFocus.bind(this)
-        this.handleCarouselNavToggle = this.handleCarouselNavToggle.bind(this)
-        this.handleSceneDirection = this.handleSceneDirection.bind(this)
-        this.handleScoreToggle = this.handleScoreToggle.bind(this)
-        this.handleTipsToggle = this.handleTipsToggle.bind(this)
-        this.handleTitleToggle = this.handleTitleToggle.bind(this)
-        this.handleVerseBarSelect = this.handleVerseBarSelect.bind(this)
-        this.handleVerseBarWheel = this.handleVerseBarWheel.bind(this)
-        this.handleVerseInteractivate = this.handleVerseInteractivate.bind(this)
-        this.handleWikiToggle = this.handleWikiToggle.bind(this)
-        this.handleScrollAfterLyricRerender = this.handleScrollAfterLyricRerender.bind(this)
-        this.stopPropagation = this.stopPropagation.bind(this)
+        bindHandlers(this)
     }
 
     componentDidMount() {
@@ -110,6 +61,16 @@ class EventHandler extends Component {
                     })
                 }, 0)
             }
+        }
+
+        if (
+            this.props.isHeightlessLyricColumn !==
+                prevProps.isHeightlessLyricColumn ||
+            this.props.isLyricExpanded !==
+                prevProps.isLyricExpanded
+        ) {
+            // Determine whether to add or remove focus from lyric element.
+            this.focusElementForAccess()
         }
     }
 
@@ -744,37 +705,6 @@ class EventHandler extends Component {
         this.focusElementForAccess()
     }
 
-
-    focusElementForAccess() {
-
-        const { isHeightlessLyricColumn,
-                isLyricExpanded } = this.props,
-
-            focusLyricSectionFirst =
-                !isHeightlessLyricColumn || isLyricExpanded
-
-        let focusElement
-
-        // In live view.
-        if (focusLyricSectionFirst) {
-            /**
-             * Not sure why the refs sometimes don't work, but if that's the
-             * case, we'll find the elements through the document.
-             */
-            focusElement = this.myLyricElement ||
-                document.getElementsByClassName('Lyric')[0]
-
-        // In admin view.
-        } else {
-            focusElement = this.myRootElement ||
-                document.getElementsByClassName('Root')[0]
-        }
-
-        if (focusElement) {
-            focusElement.focus()
-        }
-    }
-
     /*********
      * VERSE *
      *********/
@@ -1000,86 +930,35 @@ class EventHandler extends Component {
         }
     }
 
+    focusElementForAccess() {
+
+        const { isHeightlessLyricColumn,
+                isLyricExpanded } = this.props,
+
+            doFocusLyricElement =
+                this.myLyricElement &&
+                (!isHeightlessLyricColumn || isLyricExpanded)
+
+        let focusedElement = doFocusLyricElement ?
+            this.myLyricElement :
+            this.myRootElement
+
+        if (focusedElement) {
+            console.warn(`Focus: ${doFocusLyricElement ? 'Lyric' : 'Root'}`)
+            focusedElement.focus()
+        }
+    }
+
+    getLyricRef(node) {
+        this.myLyricElement = node
+
+        // Add or remove focus.
+        this.focusElementForAccess()
+    }
+
     render() {
-
-        const
-            getRootRef = node => this.myRootElement = node,
-            getLyricRef = node => this.myLyricElement = node,
-            getScoreRef = node => this.myScoreElement = node,
-            getWikiRef = node => this.myWikiElement = node,
-
-            {
-                getCarouselAnnotationRef,
-                getLyricAnnotationRef,
-                getVerseRef
-            } = this.props,
-
-            eventHandlers = {
-
-                getRootRef,
-                getLyricRef,
-                getScoreRef,
-                getWikiRef,
-
-                focusElementForAccess: this.focusElementForAccess,
-                handleAnnotationAccess: this.handleAnnotationAccess,
-                handleDotAccess: this.handleDotAccess,
-                handleAnnotationAnchorAccess: this.handleAnnotationAnchorAccess,
-                handleSongAccess: this.handleSongAccess,
-                handleVerseDirectionAccess: this.handleVerseDirectionAccess,
-                handlePopupFocus: this.handlePopupFocus,
-                handleBodyClick: this.handleBodyClick,
-                handleBodyTouchMove: this.handleBodyTouchMove,
-                handleBodyTouchEnd: this.handleBodyTouchEnd,
-                handlePopupContainerClick: this.handlePopupContainerClick,
-                handleSetVerseElement: this.handleSetVerseElement,
-                handleAccessToggle: this.handleAccessToggle,
-                handleAdminToggle: this.handleAdminToggle,
-                handleAnnotationWikiSelect: this.handleAnnotationWikiSelect,
-                handleAnnotationPortalSelect: this.handleAnnotationPortalSelect,
-                handleAnnotationPrevious: this.handleAnnotationPrevious,
-                handleAnnotationNext: this.handleAnnotationNext,
-                handleAudioPlay: this.handleAudioPlay,
-                handleAudioPreviousSong: this.handleAudioPreviousSong,
-                handleAudioNextSong: this.handleAudioNextSong,
-                handleAudioOptionsToggle: this.handleAudioOptionsToggle,
-                handleSliderTouchBegin: this.handleSliderTouchBegin,
-                handlePlayerTimeChange: this.handlePlayerTimeChange,
-                handlePlayerNextSong: this.handlePlayerNextSong,
-                handlePlayerTimeReset: this.handlePlayerTimeReset,
-                handleDotSelect: this.handleDotSelect,
-                handleDotsSectionToggle: this.handleDotsSectionToggle,
-                handleLyricSectionExpand: this.handleLyricSectionExpand,
-                handleLyricColumnSelect: this.handleLyricColumnSelect,
-                handleLyricPlay: this.handleLyricPlay,
-                handleLyricVerseSelect: this.handleLyricVerseSelect,
-                handleLyricAnnotationSelect: this.handleLyricAnnotationSelect,
-                handleLyricWheel: this.handleLyricWheel,
-                handleLyricAutoScroll: this.handleLyricAutoScroll,
-                handleNavSongSelect: this.handleNavSongSelect,
-                handleNavBookSelect: this.handleNavBookSelect,
-                handleOverviewToggle: this.handleOverviewToggle,
-                handleCarouselNavToggle: this.handleCarouselNavToggle,
-                handleSceneDirection: this.handleSceneDirection,
-                handleScoreToggle: this.handleScoreToggle,
-                handleTipsToggle: this.handleTipsToggle,
-                handleTitleToggle: this.handleTitleToggle,
-                handleVerseBarSelect: this.handleVerseBarSelect,
-                handleVerseBarWheel: this.handleVerseBarWheel,
-                handleVerseInteractivate: this.handleVerseInteractivate,
-                handleWikiToggle: this.handleWikiToggle,
-                handleScrollAfterLyricRerender: this.handleScrollAfterLyricRerender,
-                stopPropagation: this.stopPropagation,
-
-                getCarouselAnnotationRef: getCarouselAnnotationRef,
-                getLyricAnnotationRef: getLyricAnnotationRef,
-                getVerseRef: getVerseRef
-            }
-
         return (
-            <Root
-                eventHandlers={eventHandlers}
-            />
+            <Root eventHandlers={getHandlers(this)} />
         )
     }
 }

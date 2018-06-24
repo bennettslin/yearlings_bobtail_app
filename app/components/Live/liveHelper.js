@@ -24,6 +24,22 @@ export const getNextStateForRenderedCarousel = () => {
     return { canSceneRender: true }
 }
 
+export const getNewStateForUnrenderable = () => {
+    return {
+        canMainRender: false,
+        canSliderRender: false,
+        canLyricRender: false,
+        canCarouselRender: false,
+        canSceneRender: false
+    }
+}
+
+export const getNewStateForRenderable = () => {
+    return {
+        canMainRender: true
+    }
+}
+
 export const getOrganisedHandlersFromProps = (props) => {
     const {
         getLyricRef,
