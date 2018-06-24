@@ -9,9 +9,9 @@ import { TITLE } from '../../constants/lyrics'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex
+    renderableSongIndex
 }) => ({
-    renderReadySongIndex
+    renderableSongIndex
 })
 
 class VerseLine extends Component {
@@ -23,7 +23,7 @@ class VerseLine extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderReadySongIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         text: PropTypes.oneOfType([
@@ -47,7 +47,7 @@ class VerseLine extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'renderReadySongIndex',
+                    'renderableSongIndex',
                     {
                         staticProp: 'inVerseBar',
                         subUpdatingKey: 'text'

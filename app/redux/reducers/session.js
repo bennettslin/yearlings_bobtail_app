@@ -1,6 +1,6 @@
 // Reducers for state of this user session.
 import { APP_MOUNTED,
-         IS_HEAVY_RENDER_READY,
+         IS_RENDERABLE,
          RENDER_READY_SONG_INDEX,
          RENDER_READY_ANNOTATION_INDEX,
          RENDER_READY_VERSE_INDEX,
@@ -38,9 +38,9 @@ export const AppMountedReducer = (state = false, action) => {
     }
 }
 
-export const IsHeavyRenderReadyReducer = (state = false, action) => {
+export const IsRenderableReducer = (state = false, action) => {
     switch (action.type) {
-        case IS_HEAVY_RENDER_READY:
+        case IS_RENDERABLE:
             return action.payload
         default:
             return state

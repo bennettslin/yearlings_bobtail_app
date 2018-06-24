@@ -57,7 +57,7 @@ class Root extends Component {
         isVerseBarAbove: PropTypes.bool.isRequired,
         isVerseBarBelow: PropTypes.bool.isRequired,
         isManualScroll: PropTypes.bool.isRequired,
-        isHeavyRenderReady: PropTypes.bool.isRequired,
+        isRenderable: PropTypes.bool.isRequired,
 
         // From parent.
         eventHandlers: PropTypes.shape({
@@ -157,7 +157,7 @@ class Root extends Component {
                 isVerseBarAbove,
                 isVerseBarBelow,
                 isManualScroll,
-                isHeavyRenderReady } = this.props,
+                isRenderable } = this.props,
 
             { handleBodyTouchMove,
               handlePlayerTimeChange,
@@ -248,8 +248,8 @@ class Root extends Component {
                         `RM__${singleShownLyricColumnKey}LyricColumnOnly`,
                     isHeightlessLyricColumn ?
                         'RM__lyricHeightless' : 'RM__lyricHeighted',
-                    isHeavyRenderReady ?
-                        'RM__renderReady' : 'RM__renderUnready',
+                    isRenderable ?
+                        'RM__renderable' : 'RM__unrenderable',
 
                     { 'RM__bothLyricColumnsShown': !singleShownLyricColumnKey,
                       'RM__verseBarHidden':
@@ -292,9 +292,9 @@ class Root extends Component {
 }
 
 const mapStateToProps = ({
-    selectedAdminIndex, interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isHeavyRenderReady
+    selectedAdminIndex, interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isRenderable
 }) => ({
-    selectedAdminIndex, interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isHeavyRenderReady
+    selectedAdminIndex, interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isRenderable
 })
 
 export default connect(mapStateToProps)(Root)

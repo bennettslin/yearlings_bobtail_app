@@ -10,16 +10,16 @@ import { setIsScoreLoaded } from '../../redux/actions/player'
 import { getSongScore } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex
+    renderableSongIndex
 }) => ({
-    renderReadySongIndex
+    renderableSongIndex
 })
 
 class Score extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderReadySongIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         scoreRef: PropTypes.func.isRequired
@@ -36,8 +36,8 @@ class Score extends Component {
     }
 
     render() {
-        const { renderReadySongIndex } = this.props,
-            score = getSongScore(renderReadySongIndex)
+        const { renderableSongIndex } = this.props,
+            score = getSongScore(renderableSongIndex)
 
         return (
             <div

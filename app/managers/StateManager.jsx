@@ -178,14 +178,6 @@ class StateManager extends Component {
         return this.overviewManager.selectOverview(payload)
     }
 
-    /**********
-     * RENDER *
-     **********/
-
-    handleRenderReady(payload) {
-        return this.renderManager.handleRenderReady(payload)
-    }
-
     /*********
      * SCENE *
      *********/
@@ -354,7 +346,6 @@ class StateManager extends Component {
     }
 
     _bindEventHandlers() {
-        this.handleRenderReady = this.handleRenderReady.bind(this)
         this.accessAnnotation = this.accessAnnotation.bind(this)
         this.accessDot = this.accessDot.bind(this)
         this.accessAnnotationAnchor = this.accessAnnotationAnchor.bind(this)

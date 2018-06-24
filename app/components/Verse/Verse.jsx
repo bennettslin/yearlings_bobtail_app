@@ -13,10 +13,10 @@ import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     appMounted,
-    renderReadySongIndex
+    renderableSongIndex
 }) => ({
     appMounted,
-    renderReadySongIndex
+    renderableSongIndex
 })
 
 /*************
@@ -33,7 +33,7 @@ class Verse extends Component {
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        renderReadySongIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         verseObject: PropTypes.object.isRequired,
@@ -67,7 +67,7 @@ class Verse extends Component {
                 updatingPropsArray: [
                     // TODO: Possible to update without selected song index?
                     'appMounted',
-                    'renderReadySongIndex',
+                    'renderableSongIndex',
                     'verseIndex',
 
                     'isOnCursor',
@@ -123,7 +123,7 @@ class Verse extends Component {
             this._handleSetVerseElement()
             this.props.getVerseRef(
                 node,
-                this.props.renderReadySongIndex,
+                this.props.renderableSongIndex,
                 this.props.verseIndex
             )
         }
@@ -132,7 +132,7 @@ class Verse extends Component {
     render() {
 
         /* eslint-disable no-unused-vars */
-        const { renderReadySongIndex,
+        const { renderableSongIndex,
         /* eslint-enable no-unused-vars */
 
                 inMain,

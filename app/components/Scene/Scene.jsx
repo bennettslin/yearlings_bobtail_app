@@ -12,10 +12,10 @@ import SceneWood from './SceneWood'
 import { getSceneObject } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex,
+    renderableSongIndex,
     currentSceneIndex
 }) => ({
-    renderReadySongIndex,
+    renderableSongIndex,
     currentSceneIndex
 })
 
@@ -23,7 +23,7 @@ class Scene extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderReadySongIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
         currentSceneIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -46,7 +46,7 @@ class Scene extends Component {
 
     render() {
         const {
-                renderReadySongIndex,
+                renderableSongIndex,
                 currentSceneIndex,
 
                 stageWidth,
@@ -56,7 +56,7 @@ class Scene extends Component {
             } = this.props,
 
             sceneObject = getSceneObject(
-                renderReadySongIndex, currentSceneIndex
+                renderableSongIndex, currentSceneIndex
             ),
 
             { presences, sky, tiles } = sceneObject

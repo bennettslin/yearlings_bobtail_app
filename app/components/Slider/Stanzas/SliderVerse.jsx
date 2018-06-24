@@ -9,16 +9,16 @@ import { getCursorStatusClassName } from '../../../helpers/formatHelper'
 import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex
+    renderableSongIndex
 }) => ({
-    renderReadySongIndex
+    renderableSongIndex
 })
 
 class SliderVerse extends Component {
 
     static propTypes = {
         // From Redux.
-        renderReadySongIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
 
         // From VerseController.
         isOnCursor: PropTypes.bool.isRequired,
@@ -39,7 +39,7 @@ class SliderVerse extends Component {
                 nextProps,
                 updatingPropsArray: [
                     // TODO: Possible to update without selected song index?
-                    'renderReadySongIndex',
+                    'renderableSongIndex',
 
                     'isOnCursor',
                     'isAfterCursor',

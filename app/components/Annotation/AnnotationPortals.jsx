@@ -8,19 +8,19 @@ import { SOURCE_PORTAL_INDEX } from '../../constants/lyrics'
 import { getCarouselOrPopupCardPortalLinksArray } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex,
-    renderReadyAnnotationIndex,
+    renderableSongIndex,
+    renderableAnnotationIndex,
     accessedAnnotationAnchorIndex
 }) => ({
-    renderReadySongIndex,
-    renderReadyAnnotationIndex,
+    renderableSongIndex,
+    renderableAnnotationIndex,
     accessedAnnotationAnchorIndex
 })
 
 const annotationPortalsPropTypes = {
     // Through Redux.
-    renderReadySongIndex: PropTypes.number.isRequired,
-    renderReadyAnnotationIndex: PropTypes.number.isRequired,
+    renderableSongIndex: PropTypes.number.isRequired,
+    renderableAnnotationIndex: PropTypes.number.isRequired,
     accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -30,8 +30,8 @@ const annotationPortalsPropTypes = {
 
 AnnotationPortals = ({
 
-    renderReadySongIndex,
-    renderReadyAnnotationIndex,
+    renderableSongIndex,
+    renderableAnnotationIndex,
     accessedAnnotationAnchorIndex,
 
 ...other }) => {
@@ -41,8 +41,8 @@ AnnotationPortals = ({
 
         portalLinksArray = getCarouselOrPopupCardPortalLinksArray({
             carouselAnnotationIndex,
-            renderReadySongIndex,
-            renderReadyAnnotationIndex,
+            renderableSongIndex,
+            renderableAnnotationIndex,
             cardIndex
         })
 

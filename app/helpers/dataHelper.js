@@ -203,15 +203,15 @@ export const getAnnotationObject = (songIndex, annotationIndex, songs) => {
 }
 
 export const getCarouselOrPopupAnnotationObject = ({
-    renderReadySongIndex,
-    renderReadyAnnotationIndex,
+    renderableSongIndex,
+    renderableAnnotationIndex,
     carouselAnnotationIndex
 }) => {
 
     // All conditional upon whether carousel annotation index exists.
-    const annotationSongIndex = renderReadySongIndex,
+    const annotationSongIndex = renderableSongIndex,
         annotationIndex =
-            carouselAnnotationIndex || renderReadyAnnotationIndex
+            carouselAnnotationIndex || renderableAnnotationIndex
 
     return getAnnotationObject(annotationSongIndex, annotationIndex)
 }

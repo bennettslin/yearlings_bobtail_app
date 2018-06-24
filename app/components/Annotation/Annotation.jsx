@@ -12,11 +12,11 @@ import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex,
-    renderReadyAnnotationIndex
+    renderableSongIndex,
+    renderableAnnotationIndex
 }) => ({
-    renderReadySongIndex,
-    renderReadyAnnotationIndex
+    renderableSongIndex,
+    renderableAnnotationIndex
 })
 
 /*************
@@ -27,8 +27,8 @@ class Annotation extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderReadySongIndex: PropTypes.number.isRequired,
-        renderReadyAnnotationIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
+        renderableAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
         carouselAnnotationIndex: PropTypes.number
@@ -43,11 +43,11 @@ class Annotation extends Component {
                 updatingPropsArray: [
 
                     // Container props.
-                    'renderReadySongIndex',
+                    'renderableSongIndex',
                     {
                         staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
-                        subUpdatingKey: 'renderReadyAnnotationIndex'
+                        subUpdatingKey: 'renderableAnnotationIndex'
                     },
 
                     // Presentation props.
@@ -60,8 +60,8 @@ class Annotation extends Component {
     }
 
     render() {
-        const { renderReadySongIndex,
-                renderReadyAnnotationIndex,
+        const { renderableSongIndex,
+                renderableAnnotationIndex,
                 ...other } = this.props,
 
             { carouselAnnotationIndex } = other,
@@ -72,9 +72,9 @@ class Annotation extends Component {
              * helper.
              */
             annotationObject = getCarouselOrPopupAnnotationObject({
-                renderReadySongIndex,
+                renderableSongIndex,
                 carouselAnnotationIndex,
-                renderReadyAnnotationIndex
+                renderableAnnotationIndex
             })
 
         // If it's in popup, annotation object won't always exist.

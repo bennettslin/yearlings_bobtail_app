@@ -15,10 +15,10 @@ import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     appMounted,
-    isHeavyRenderReady
+    isRenderable
 }) => ({
     appMounted,
-    isHeavyRenderReady
+    isRenderable
 })
 
 /*************
@@ -30,7 +30,7 @@ class LyricColumn extends Component {
     static propTypes = {
         // Through Redux.
         appMounted: PropTypes.bool.isRequired,
-        isHeavyRenderReady: PropTypes.bool.isRequired,
+        isRenderable: PropTypes.bool.isRequired,
 
         // From parent.
         handleScrollAfterLyricRerender: PropTypes.func.isRequired,
@@ -58,7 +58,7 @@ class LyricColumn extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'isHeavyRenderReady',
+                    'isRenderable',
                     'canLyricRender'
                 ]
             }) || getComponentShouldUpdate({
@@ -86,7 +86,7 @@ class LyricColumn extends Component {
             )
         }
 
-        if (!prevProps.isHeavyRenderReady && this.props.isHeavyRenderReady) {
+        if (!prevProps.isRenderable && this.props.isRenderable) {
             const scrollTimeoutId = setTimeout(
                 this._handleScrollAfterLyricRerender, 0
             )

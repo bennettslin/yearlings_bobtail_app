@@ -7,7 +7,7 @@ import {
     accessAnnotationIndex,
     accessAnnotationAnchorIndex
 } from '../redux/actions/access'
-import { setRenderReadyAnnotationIndex } from '../redux/actions/session'
+import { setRenderableAnnotationIndex } from '../redux/actions/session'
 import { selectAnnotationIndex } from '../redux/actions/storage'
 
 import {
@@ -29,7 +29,7 @@ class AnnotationManager extends Component {
         accessAnnotationIndex: PropTypes.func.isRequired,
         accessAnnotationAnchorIndex: PropTypes.func.isRequired,
         selectAnnotationIndex: PropTypes.func.isRequired,
-        setRenderReadyAnnotationIndex: PropTypes.func.isRequired,
+        setRenderableAnnotationIndex: PropTypes.func.isRequired,
 
         // From parent.
         getRef: PropTypes.func.isRequired,
@@ -137,7 +137,7 @@ class AnnotationManager extends Component {
          * be rendered right away.
          */
         if (selectedSongIndex === props.selectedSongIndex) {
-            props.setRenderReadyAnnotationIndex(selectedAnnotationIndex)
+            props.setRenderableAnnotationIndex(selectedAnnotationIndex)
         }
 
         /**
@@ -209,7 +209,7 @@ const bindDispatchToProps = (dispatch) => (
         accessAnnotationIndex,
         accessAnnotationAnchorIndex,
         selectAnnotationIndex,
-        setRenderReadyAnnotationIndex
+        setRenderableAnnotationIndex
     }, dispatch)
 )
 

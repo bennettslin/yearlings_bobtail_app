@@ -14,7 +14,7 @@ const mapStateToProps = ({
     deviceIndex,
     isLyricExpanded,
     isHeightlessLyricColumn,
-    isHeavyRenderReady,
+    isRenderable,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedScoreIndex,
@@ -24,7 +24,7 @@ const mapStateToProps = ({
     deviceIndex,
     isLyricExpanded,
     isHeightlessLyricColumn,
-    isHeavyRenderReady,
+    isRenderable,
     selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedScoreIndex,
@@ -38,7 +38,7 @@ const annotationPopupPropTypes = {
     isLyricExpanded: PropTypes.bool.isRequired,
     isHeightlessLyricColumn: PropTypes.bool.isRequired,
 
-    isHeavyRenderReady: PropTypes.bool.isRequired,
+    isRenderable: PropTypes.bool.isRequired,
     selectedAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselNavIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
@@ -57,7 +57,7 @@ AnnotationPopup = ({
     deviceIndex,
     isLyricExpanded,
     isHeightlessLyricColumn,
-    isHeavyRenderReady,
+    isRenderable,
     inMain,
 
     selectedAnnotationIndex,
@@ -90,7 +90,7 @@ AnnotationPopup = ({
 
     } else {
         const isVisible =
-                isHeavyRenderReady &&
+                isRenderable &&
                 !!selectedAnnotationIndex &&
 
                 /**

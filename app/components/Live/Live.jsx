@@ -91,6 +91,7 @@ class Live extends Component {
     shouldComponentUpdate(prevProps, prevState) {
         // Not sure why clicking on dot or anchor calls this?
         return (
+            // TODO: Can this use lodash's isEqual?
             this.state.isLiveRendered !== prevState.isLiveRendered ||
             this.state.isTheatreRendered !== prevState.isTheatreRendered ||
             this.state.isMainRendered !== prevState.isMainRendered ||

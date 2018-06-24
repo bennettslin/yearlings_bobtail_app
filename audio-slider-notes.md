@@ -47,7 +47,7 @@
     * Do for mini. (/)
     * Do for laptop. (/)
 
-* Have slider also render only after renderReady. (/)
+* Have slider also render only after renderable. (/)
 
 * Revisit stanzas that are too short to be their own stanzas. (/)
 

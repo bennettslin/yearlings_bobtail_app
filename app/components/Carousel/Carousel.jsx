@@ -13,13 +13,13 @@ import { getArrayOfLength, getComponentShouldUpdate } from '../../helpers/genera
 
 const mapStateToProps = ({
     isHiddenCarouselNav,
-    renderReadySongIndex,
-    renderReadyAnnotationIndex,
+    renderableSongIndex,
+    renderableAnnotationIndex,
     accessedAnnotationIndex
 }) => ({
     isHiddenCarouselNav,
-    renderReadySongIndex,
-    renderReadyAnnotationIndex,
+    renderableSongIndex,
+    renderableAnnotationIndex,
     accessedAnnotationIndex
 })
 
@@ -28,9 +28,9 @@ class Carousel extends Component {
     static propTypes = {
         // Through Redux.
         isHiddenCarouselNav: PropTypes.bool.isRequired,
-        renderReadySongIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
-        renderReadyAnnotationIndex: PropTypes.number.isRequired,
+        renderableAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
         handleAnnotationPrevious: PropTypes.func.isRequired,
@@ -47,9 +47,9 @@ class Carousel extends Component {
                 nextProps,
                 updatingPropsArray: [
                     'isHiddenCarouselNav',
-                    'renderReadySongIndex',
+                    'renderableSongIndex',
                     'accessedAnnotationIndex',
-                    'renderReadyAnnotationIndex',
+                    'renderableAnnotationIndex',
                     'canCarouselRender'
                 ]
             })
@@ -69,9 +69,9 @@ class Carousel extends Component {
 
     render() {
         const { isHiddenCarouselNav,
-                renderReadySongIndex,
+                renderableSongIndex,
                 accessedAnnotationIndex,
-                renderReadyAnnotationIndex,
+                renderableAnnotationIndex,
                 handleAnnotationPrevious,
                 handleAnnotationNext,
 
@@ -83,7 +83,7 @@ class Carousel extends Component {
             return null
         }
 
-        const annotationsCount = getAnnotationsCount(renderReadySongIndex),
+        const annotationsCount = getAnnotationsCount(renderableSongIndex),
 
             /**
              * Dynamically create array of just indices. Carousel annotation
@@ -109,7 +109,7 @@ class Carousel extends Component {
                             isAccessed =
                                 annotationIndex === accessedAnnotationIndex,
                             isSelected =
-                                annotationIndex === renderReadyAnnotationIndex
+                                annotationIndex === renderableAnnotationIndex
 
                         return (
                             <CarouselAnnotation {...other}

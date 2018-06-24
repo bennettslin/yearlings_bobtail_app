@@ -14,11 +14,11 @@ import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex,
-    renderReadyAnnotationIndex
+    renderableSongIndex,
+    renderableAnnotationIndex
 }) => ({
-    renderReadySongIndex,
-    renderReadyAnnotationIndex
+    renderableSongIndex,
+    renderableAnnotationIndex
 })
 
 /*************
@@ -29,8 +29,8 @@ class AnnotationCard extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderReadySongIndex: PropTypes.number.isRequired,
-        renderReadyAnnotationIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
+        renderableAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
         carouselAnnotationIndex: PropTypes.number,
@@ -44,11 +44,11 @@ class AnnotationCard extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'renderReadySongIndex',
+                    'renderableSongIndex',
                     {
                         staticProp: 'carouselAnnotationIndex',
                         conditionalShouldBe: false,
-                        subUpdatingKey: 'renderReadyAnnotationIndex'
+                        subUpdatingKey: 'renderableAnnotationIndex'
                     }
                 ]
             })
@@ -57,8 +57,8 @@ class AnnotationCard extends Component {
     }
 
     render() {
-        const { renderReadySongIndex,
-                renderReadyAnnotationIndex,
+        const { renderableSongIndex,
+                renderableAnnotationIndex,
                 cardIndex,
                 ...other } = this.props,
 
@@ -66,8 +66,8 @@ class AnnotationCard extends Component {
 
             cardObject = getCarouselOrPopupCardObject({
                 carouselAnnotationIndex,
-                renderReadySongIndex,
-                renderReadyAnnotationIndex,
+                renderableSongIndex,
+                renderableAnnotationIndex,
                 cardIndex
             }),
 

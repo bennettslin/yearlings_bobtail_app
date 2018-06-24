@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { setUpdatedTimePlayed } from '../redux/actions/audio'
 import {
-    setRenderReadyVerseIndex,
+    setRenderableVerseIndex,
     setCurrentSceneIndex
 } from '../redux/actions/session'
 import {
@@ -33,7 +33,7 @@ class TimeVerseManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         setCurrentSceneIndex: PropTypes.func.isRequired,
-        setRenderReadyVerseIndex: PropTypes.func.isRequired,
+        setRenderableVerseIndex: PropTypes.func.isRequired,
         setUpdatedTimePlayed: PropTypes.func.isRequired,
         selectTimePlayed: PropTypes.func.isRequired,
         selectVerseIndex: PropTypes.func.isRequired,
@@ -113,7 +113,7 @@ class TimeVerseManager extends Component {
          * rendered right away.
          */
         if (selectedSongIndex === props.selectedSongIndex) {
-            props.setRenderReadyVerseIndex(selectedVerseIndex)
+            props.setRenderableVerseIndex(selectedVerseIndex)
         }
 
         /**
@@ -186,7 +186,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setCurrentSceneIndex,
-        setRenderReadyVerseIndex,
+        setRenderableVerseIndex,
         setUpdatedTimePlayed,
         selectTimePlayed,
         selectVerseIndex

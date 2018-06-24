@@ -12,18 +12,18 @@ import VerseCursor from './VerseCursor'
 import SliderVerse from '../Slider/Stanzas/SliderVerse'
 
 const mapStateToProps = ({
-    renderReadyVerseIndex,
+    renderableVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex
 }) => ({
-    renderReadyVerseIndex,
+    renderableVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex
 })
 
 const verseControllerPropTypes = {
     // Through Redux.
-    renderReadyVerseIndex: PropTypes.number.isRequired,
+    renderableVerseIndex: PropTypes.number.isRequired,
     sliderVerseIndex: PropTypes.number.isRequired,
     interactivatedVerseIndex: PropTypes.number.isRequired,
 
@@ -47,7 +47,7 @@ const verseControllerPropTypes = {
 
 VerseController = ({
 
-    renderReadyVerseIndex,
+    renderableVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex,
     absoluteStartTime,
@@ -97,7 +97,7 @@ VerseController = ({
         if (!inVerseBar) {
             const useSliderIndex = sliderVerseIndex > -1,
                 cursorIndex = useSliderIndex ?
-                    sliderVerseIndex : renderReadyVerseIndex
+                    sliderVerseIndex : renderableVerseIndex
 
             interactableProps.isOnCursor =
                 controllerVerseIndex === cursorIndex

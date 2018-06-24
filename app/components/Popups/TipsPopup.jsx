@@ -8,19 +8,19 @@ import Popup from '../Popup/Popup'
 import { getSongIsLogue } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
-    isHeavyRenderReady,
-    renderReadySongIndex,
+    isRenderable,
+    renderableSongIndex,
     selectedTipsIndex,
 }) => ({
-    isHeavyRenderReady,
-    renderReadySongIndex,
+    isRenderable,
+    renderableSongIndex,
     selectedTipsIndex,
 })
 
 const tipsPopupPropTypes = {
     // Through Redux.
-    isHeavyRenderReady: PropTypes.bool.isRequired,
-    renderReadySongIndex: PropTypes.number.isRequired,
+    isRenderable: PropTypes.bool.isRequired,
+    renderableSongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -29,16 +29,16 @@ const tipsPopupPropTypes = {
 
 TipsPopup = ({
 
-    isHeavyRenderReady,
-    renderReadySongIndex,
+    isRenderable,
+    renderableSongIndex,
     selectedTipsIndex,
     handlePopupContainerClick,
 
 ...other }) => {
 
-    const isLogue = getSongIsLogue(renderReadySongIndex),
+    const isLogue = getSongIsLogue(renderableSongIndex),
 
-        isVisible = isHeavyRenderReady && !isLogue && !selectedTipsIndex
+        isVisible = isRenderable && !isLogue && !selectedTipsIndex
 
     return (
         <Popup

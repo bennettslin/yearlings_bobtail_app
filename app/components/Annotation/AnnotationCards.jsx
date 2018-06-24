@@ -8,17 +8,17 @@ import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex,
-    renderReadyAnnotationIndex
+    renderableSongIndex,
+    renderableAnnotationIndex
 }) => ({
-    renderReadySongIndex,
-    renderReadyAnnotationIndex
+    renderableSongIndex,
+    renderableAnnotationIndex
 })
 
 const annotationCardsPropTypes = {
     // Through Redux.
-    renderReadySongIndex: PropTypes.number.isRequired,
-    renderReadyAnnotationIndex: PropTypes.number.isRequired,
+    renderableSongIndex: PropTypes.number.isRequired,
+    renderableAnnotationIndex: PropTypes.number.isRequired,
 
     // From parent.
     carouselAnnotationIndex: PropTypes.number
@@ -26,17 +26,17 @@ const annotationCardsPropTypes = {
 
 AnnotationCards = ({
 
-    renderReadySongIndex,
-    renderReadyAnnotationIndex,
+    renderableSongIndex,
+    renderableAnnotationIndex,
 
 ...other }) => {
 
     const { carouselAnnotationIndex } = other,
 
         annotationObject = getCarouselOrPopupAnnotationObject({
-            renderReadySongIndex,
+            renderableSongIndex,
             carouselAnnotationIndex,
-            renderReadyAnnotationIndex
+            renderableAnnotationIndex
         }),
 
         cardsIndices = getArrayOfLength({

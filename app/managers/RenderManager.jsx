@@ -5,10 +5,10 @@ import { connect } from 'react-redux'
 
 import { setShowOneOfTwoLyricColumns } from '../redux/actions/responsive'
 import {
-    setIsHeavyRenderReady,
-    setRenderReadySongIndex,
-    setRenderReadyAnnotationIndex,
-    setRenderReadyVerseIndex,
+    setIsRenderable,
+    setRenderableSongIndex,
+    setRenderableAnnotationIndex,
+    setRenderableVerseIndex,
     setCurrentSceneIndex
 } from '../redux/actions/session'
 
@@ -25,12 +25,12 @@ class RenderManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
 
-        setIsHeavyRenderReady: PropTypes.func.isRequired,
+        setIsRenderable: PropTypes.func.isRequired,
         setCurrentSceneIndex: PropTypes.func.isRequired,
         setShowOneOfTwoLyricColumns: PropTypes.func.isRequired,
-        setRenderReadyAnnotationIndex: PropTypes.func.isRequired,
-        setRenderReadySongIndex: PropTypes.func.isRequired,
-        setRenderReadyVerseIndex: PropTypes.func.isRequired,
+        setRenderableAnnotationIndex: PropTypes.func.isRequired,
+        setRenderableSongIndex: PropTypes.func.isRequired,
+        setRenderableVerseIndex: PropTypes.func.isRequired,
 
         // From parent.
         getRef: PropTypes.func.isRequired
@@ -40,60 +40,61 @@ class RenderManager extends Component {
         super(props)
 
         this.state = {
-            songChangeTimeoutId: null
+            songChangeTimeoutId: ''
         }
 
-        this.handleRenderReady = this.handleRenderReady.bind(this)
+        this._prepareForRender = this._prepareForRender.bind(this)
     }
 
     componentDidMount() {
         this.props.getRef(this)
-
-        this.handleRenderReady()
     }
 
     componentDidUpdate(prevProps) {
+
+        if (this.props.appMounted && !prevProps.appMounted) {
+            this._prepareForRender()
+        }
+
         if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
-            this._songIndexDidChange()
-            this.props.setIsHeavyRenderReady(false)
+            this._prepareForUnrender()
         }
     }
 
-    handleRenderReady(props = this.props) {
+    _prepareForRender(props = this.props) {
+
         const {
             selectedSongIndex = this.props.selectedSongIndex,
             selectedAnnotationIndex = this.props.selectedAnnotationIndex,
             selectedVerseIndex = this.props.selectedVerseIndex
         } = props
 
-        this.props.setIsHeavyRenderReady(
+        this.props.setIsRenderable(
             true
         )
 
-        this.props.setRenderReadySongIndex(
+        this.props.setRenderableSongIndex(
             selectedSongIndex
         )
 
-        this.props.setRenderReadyAnnotationIndex(
+        this.props.setRenderableAnnotationIndex(
             selectedAnnotationIndex
         )
 
-        this.props.setRenderReadyVerseIndex(
+        this.props.setRenderableVerseIndex(
             selectedVerseIndex
         )
 
-        if (this.props.appMounted) {
-            /**
-             * Determine doublespeaker columns only when lyrics are ready to
-             * render.
-             */
-            this.props.setShowOneOfTwoLyricColumns(
-                getShowOneOfTwoLyricColumns(
-                    selectedSongIndex,
-                    this.props.deviceIndex
-                )
+        /**
+         * Determine doublespeaker columns only when lyrics are ready to
+         * render.
+         */
+        this.props.setShowOneOfTwoLyricColumns(
+            getShowOneOfTwoLyricColumns(
+                selectedSongIndex,
+                this.props.deviceIndex
             )
-        }
+        )
 
         this.props.setCurrentSceneIndex(
             getSceneIndexForVerseIndex(
@@ -103,7 +104,9 @@ class RenderManager extends Component {
         )
     }
 
-    _songIndexDidChange() {
+    _prepareForUnrender() {
+
+        this.props.setIsRenderable(false)
 
         // Clear previous timeout.
         clearTimeout(this.state.songChangeTimeoutId)
@@ -113,7 +116,7 @@ class RenderManager extends Component {
          * rendering the most performance intensive components.
          */
         const songChangeTimeoutId = setTimeout(
-            this.handleRenderReady, 200
+            this._prepareForRender, 200
         )
 
         this.setState({
@@ -142,12 +145,12 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setIsHeavyRenderReady,
+        setIsRenderable,
         setCurrentSceneIndex,
         setShowOneOfTwoLyricColumns,
-        setRenderReadyAnnotationIndex,
-        setRenderReadySongIndex,
-        setRenderReadyVerseIndex
+        setRenderableAnnotationIndex,
+        setRenderableSongIndex,
+        setRenderableVerseIndex
     }, dispatch)
 )
 

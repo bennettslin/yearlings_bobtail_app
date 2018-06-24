@@ -12,9 +12,9 @@ import { getLyricUnitsCount } from '../../helpers/dataHelper'
 import { getArrayOfLength } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex
+    renderableSongIndex
 }) => ({
-    renderReadySongIndex
+    renderableSongIndex
 })
 
 /*************
@@ -92,7 +92,7 @@ class Lyric extends Component {
 
 const lyricViewPropTypes = {
     // Through Redux.
-    renderReadySongIndex: PropTypes.number.isRequired,
+    renderableSongIndex: PropTypes.number.isRequired,
 
     // From parent.
     lyricRef: PropTypes.func.isRequired,
@@ -101,14 +101,14 @@ const lyricViewPropTypes = {
 
 LyricView = ({
 
-    renderReadySongIndex,
+    renderableSongIndex,
 
     lyricRef,
     handleWheel,
 
 ...other }) => {
 
-    const lyricUnitsCount = getLyricUnitsCount(renderReadySongIndex),
+    const lyricUnitsCount = getLyricUnitsCount(renderableSongIndex),
 
         /**
          * Dynamically create array of just indices. Lyric unit will fetch

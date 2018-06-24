@@ -1,6 +1,6 @@
 // Actions for state of this user session.
 import { APP_MOUNTED,
-         IS_HEAVY_RENDER_READY,
+         IS_RENDERABLE,
          RENDER_READY_SONG_INDEX,
          RENDER_READY_ANNOTATION_INDEX,
          RENDER_READY_VERSE_INDEX,
@@ -19,24 +19,24 @@ export const setAppMounted = (appMounted = false) => (
       payload: appMounted }
 )
 
-export const setIsHeavyRenderReady = (isHeavyRenderReady = false) => (
-    { type: IS_HEAVY_RENDER_READY,
-      payload: isHeavyRenderReady }
+export const setIsRenderable = (isRenderable = false) => (
+    { type: IS_RENDERABLE,
+      payload: isRenderable }
 )
 
-export const setRenderReadySongIndex = (renderReadySongIndex = -1) => (
+export const setRenderableSongIndex = (renderableSongIndex = -1) => (
     { type: RENDER_READY_SONG_INDEX,
-      payload: renderReadySongIndex }
+      payload: renderableSongIndex }
 )
 
-export const setRenderReadyAnnotationIndex = (renderReadyAnnotationIndex = 0) => (
+export const setRenderableAnnotationIndex = (renderableAnnotationIndex = 0) => (
     { type: RENDER_READY_ANNOTATION_INDEX,
-      payload: renderReadyAnnotationIndex }
+      payload: renderableAnnotationIndex }
 )
 
-export const setRenderReadyVerseIndex = (renderReadyVerseIndex = 0) => (
+export const setRenderableVerseIndex = (renderableVerseIndex = 0) => (
     { type: RENDER_READY_VERSE_INDEX,
-      payload: renderReadyVerseIndex }
+      payload: renderableVerseIndex }
 )
 
 export const setCarouselAnnotationIndex = (carouselAnnotationIndex = 0) => (

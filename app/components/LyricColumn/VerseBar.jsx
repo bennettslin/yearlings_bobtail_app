@@ -9,12 +9,12 @@ import { getVerseObject } from '../../helpers/dataHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex,
-    renderReadyVerseIndex,
+    renderableSongIndex,
+    renderableVerseIndex,
     sliderVerseIndex
 }) => ({
-    renderReadySongIndex,
-    renderReadyVerseIndex,
+    renderableSongIndex,
+    renderableVerseIndex,
     sliderVerseIndex
 })
 
@@ -26,8 +26,8 @@ class VerseBar extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderReadySongIndex: PropTypes.number.isRequired,
-        renderReadyVerseIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
+        renderableVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -46,8 +46,8 @@ class VerseBar extends Component {
                      * This is passed strictly to tell verse bar when to
                      * update.
                      */
-                    'renderReadySongIndex',
-                    'renderReadyVerseIndex',
+                    'renderableSongIndex',
+                    'renderableVerseIndex',
                     'sliderVerseIndex'
                 ]
             })
@@ -59,8 +59,8 @@ class VerseBar extends Component {
 
         const { isAbove,
 
-                renderReadySongIndex,
-                renderReadyVerseIndex,
+                renderableSongIndex,
+                renderableVerseIndex,
                 sliderVerseIndex,
 
                 handleVerseBarSelect,
@@ -68,9 +68,9 @@ class VerseBar extends Component {
                 ...other } = this.props,
 
             verseIndex = sliderVerseIndex > -1 ?
-                sliderVerseIndex : renderReadyVerseIndex,
+                sliderVerseIndex : renderableVerseIndex,
 
-            verseObject = getVerseObject(renderReadySongIndex, verseIndex)
+            verseObject = getVerseObject(renderableSongIndex, verseIndex)
 
         // Logue will not have verse object.
         return verseObject ? (

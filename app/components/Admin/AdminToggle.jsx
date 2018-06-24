@@ -10,13 +10,13 @@ const AdminToggle = ({
     deviceIndex,
     windowWidth,
     windowHeight,
-    isHeavyRenderReady,
+    isRenderable,
     selectedSongIndex,
-    renderReadySongIndex,
+    renderableSongIndex,
     selectedAnnotationIndex,
-    renderReadyAnnotationIndex,
+    renderableAnnotationIndex,
     selectedVerseIndex,
-    renderReadyVerseIndex
+    renderableVerseIndex
 
 }) => (
     <div className="AdminToggle">
@@ -27,25 +27,25 @@ const AdminToggle = ({
             {windowWidth} x {windowHeight}
         </div>
         {/* <div>
-            isHeavyRenderReady: {isHeavyRenderReady ? 'true' : 'false'}
+            isRenderable: {isRenderable ? 'true' : 'false'}
         </div>
         <div>
             selectedSongIndex: {selectedSongIndex}
         </div>
         <div>
-            renderReadySongIndex: {renderReadySongIndex}
+            renderableSongIndex: {renderableSongIndex}
         </div>
         <div>
             selectedAnnotationIndex: {selectedAnnotationIndex}
         </div>
         <div>
-            renderReadyAnnotationIndex: {renderReadyAnnotationIndex}
+            renderableAnnotationIndex: {renderableAnnotationIndex}
         </div>
         <div>
             selectedVerseIndex: {selectedVerseIndex}
         </div>
         <div>
-            renderReadyVerseIndex: {renderReadyVerseIndex}
+            renderableVerseIndex: {renderableVerseIndex}
         </div> */}
     </div>
 )
@@ -54,22 +54,22 @@ export default connect(({
     deviceIndex,
     windowWidth,
     windowHeight,
-    isHeavyRenderReady,
+    isRenderable,
     selectedSongIndex,
-    renderReadySongIndex,
+    renderableSongIndex,
     selectedAnnotationIndex,
-    renderReadyAnnotationIndex,
+    renderableAnnotationIndex,
     selectedVerseIndex,
-    renderReadyVerseIndex
+    renderableVerseIndex
 }) => ({
     deviceIndex,
     windowWidth,
     windowHeight,
-    isHeavyRenderReady,
+    isRenderable,
     selectedSongIndex,
-    renderReadySongIndex,
+    renderableSongIndex,
     selectedAnnotationIndex,
-    renderReadyAnnotationIndex,
+    renderableAnnotationIndex,
     selectedVerseIndex,
-    renderReadyVerseIndex
+    renderableVerseIndex
 }))(AdminToggle)

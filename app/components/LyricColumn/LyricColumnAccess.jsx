@@ -14,14 +14,14 @@ import { NAVIGATION_ENTER_KEY,
 
 const mapStateToProps = ({
     isLyricExpanded,
-    renderReadyAnnotationIndex,
+    renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedDotKeys,
     interactivatedVerseIndex
 }) => ({
     isLyricExpanded,
-    renderReadyAnnotationIndex,
+    renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedDotKeys,
@@ -31,7 +31,7 @@ const mapStateToProps = ({
 const lyricAccessPropTypes = {
 
     // From Redux.
-    renderReadyAnnotationIndex: PropTypes.number.isRequired,
+    renderableAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselNavIndex: PropTypes.number.isRequired,
     selectedDotsIndex: PropTypes.number.isRequired,
     selectedDotKeys: PropTypes.object.isRequired,
@@ -41,7 +41,7 @@ const lyricAccessPropTypes = {
 const LyricColumnAccess = ({
 
     isLyricExpanded,
-    renderReadyAnnotationIndex,
+    renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     selectedDotKeys,
@@ -57,7 +57,7 @@ const LyricColumnAccess = ({
         showLeftRight = Boolean(
 
             // Must have at least one selected dot, and no selected annotation.
-            hasSelectedDots && !renderReadyAnnotationIndex && (
+            hasSelectedDots && !renderableAnnotationIndex && (
                 (
                     // Must show carousel and not have dots section open...
                     selectedCarouselNavIndex &&
@@ -74,7 +74,7 @@ const LyricColumnAccess = ({
 
         showUpDown = Boolean(
             !selectedDotsIndex &&
-            !renderReadyAnnotationIndex
+            !renderableAnnotationIndex
         )
 
     return [(

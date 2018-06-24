@@ -11,10 +11,10 @@ import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
 
 const mapStateToProps = ({
     accessedAnnotationIndex,
-    renderReadyAnnotationIndex
+    renderableAnnotationIndex
 }) => ({
     accessedAnnotationIndex,
-    renderReadyAnnotationIndex
+    renderableAnnotationIndex
 })
 
 /*************
@@ -26,7 +26,7 @@ class LyricStanzaDot extends Component {
     static propTypes = {
         // Through Redux.
         accessedAnnotationIndex: PropTypes.number.isRequired,
-        renderReadyAnnotationIndex: PropTypes.number.isRequired,
+        renderableAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
@@ -41,10 +41,10 @@ class LyricStanzaDot extends Component {
 
     _handleDotButtonClick(e) {
         const { dotStanzaObject,
-                renderReadyAnnotationIndex } = this.props,
+                renderableAnnotationIndex } = this.props,
             { annotationIndex } = dotStanzaObject,
 
-            isSelected = annotationIndex === renderReadyAnnotationIndex
+            isSelected = annotationIndex === renderableAnnotationIndex
 
         if (!isSelected) {
             this.props.handleLyricAnnotationSelect(e, annotationIndex)
@@ -57,12 +57,12 @@ class LyricStanzaDot extends Component {
         const { isLastStanza,
                 dotStanzaObject,
                 accessedAnnotationIndex,
-                renderReadyAnnotationIndex } = this.props,
+                renderableAnnotationIndex } = this.props,
 
             { annotationIndex,
               dotKeys } = dotStanzaObject,
 
-            isSelected = annotationIndex === renderReadyAnnotationIndex,
+            isSelected = annotationIndex === renderableAnnotationIndex,
             isAccessed = annotationIndex === accessedAnnotationIndex
 
         return (

@@ -11,9 +11,9 @@ import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
 import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    renderReadySongIndex
+    renderableSongIndex
 }) => ({
-    renderReadySongIndex
+    renderableSongIndex
 })
 
 /*************
@@ -24,7 +24,7 @@ class CarouselAnnotation extends Component {
 
     static propTypes = {
         // Through Redux.
-        renderReadySongIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         annotationIndex: PropTypes.number.isRequired,
@@ -49,7 +49,7 @@ class CarouselAnnotation extends Component {
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'renderReadySongIndex',
+                    'renderableSongIndex',
                     'isAccessed',
                     'isSelected'
                 ]
@@ -83,17 +83,17 @@ class CarouselAnnotation extends Component {
     }
 
     getCarouselAnnotationRef(node) {
-        const { renderReadySongIndex } = this.props
+        const { renderableSongIndex } = this.props
         this.props.getCarouselAnnotationRef(
             node,
-            renderReadySongIndex,
+            renderableSongIndex,
             this.props.annotationIndex
         )
     }
 
     render() {
 
-        const { renderReadySongIndex,
+        const { renderableSongIndex,
 
                 /* eslint-disable no-unused-vars */
                 handlePopupContainerClick,
@@ -104,7 +104,7 @@ class CarouselAnnotation extends Component {
             { annotationIndex } = other,
 
             annotationObject = getAnnotationObject(
-                renderReadySongIndex,
+                renderableSongIndex,
                 annotationIndex
             ),
 

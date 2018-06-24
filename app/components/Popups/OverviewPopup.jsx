@@ -11,12 +11,12 @@ import { getSongIsLogue } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     selectedOverviewIndex,
-    isHeavyRenderReady,
+    isRenderable,
     selectedSongIndex,
     selectedTipsIndex
 }) => ({
     selectedOverviewIndex,
-    isHeavyRenderReady,
+    isRenderable,
     selectedSongIndex,
     selectedTipsIndex
 })
@@ -24,7 +24,7 @@ const mapStateToProps = ({
 const overviewPopupPropTypes = {
     // Through Redux.
     selectedOverviewIndex: PropTypes.number.isRequired,
-    isHeavyRenderReady: PropTypes.bool.isRequired,
+    isRenderable: PropTypes.bool.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
 
@@ -39,7 +39,7 @@ OverviewPopup = ({
     inMain,
     isPhone,
     selectedOverviewIndex,
-    isHeavyRenderReady,
+    isRenderable,
     selectedSongIndex,
     selectedTipsIndex,
     handlePopupContainerClick,
@@ -64,7 +64,7 @@ OverviewPopup = ({
      * Always hide overview section when title is open, or when tip is shown
      * in song. Always hide before ready to render.
      */
-    if (!isHeavyRenderReady || (!isLogue && !selectedTipsIndex)) {
+    if (!isRenderable || (!isLogue && !selectedTipsIndex)) {
         isVisible = false
     }
 
