@@ -59,7 +59,7 @@ class Carousel extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.canCarouselRender && !prevProps.canCarouselRender) {
-            console.warn('Carousel mounted.')
+            console.warn('Carousel rendered.')
 
             setTimeout(
                 this.props.carouselDidRender, 0

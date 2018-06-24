@@ -79,7 +79,7 @@ class LyricColumn extends Component {
         }
 
         if (this.props.canLyricRender && !prevProps.canLyricRender) {
-            console.warn('Lyric mounted.')
+            console.warn('Lyric rendered.')
 
             setTimeout(
                 this.props.lyricDidRender, 0

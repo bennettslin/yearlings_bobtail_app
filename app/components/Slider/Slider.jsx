@@ -31,7 +31,7 @@ class Slider extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.canSliderRender && !prevProps.canSliderRender) {
-            console.warn('Slider mounted.')
+            console.warn('Slider rendered.')
 
             setTimeout(
                 this.props.sliderDidRender, 0
@@ -60,7 +60,7 @@ class Slider extends Component {
                 onMouseDown={this._handleTouchDown}
                 onTouchStart={this._handleTouchDown}
             >
-                <SliderTimes/>
+                <SliderTimes />
                 <SliderStanzas />
                 <SliderScenes />
                 <SliderAccess />

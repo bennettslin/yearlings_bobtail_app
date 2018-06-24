@@ -36,7 +36,7 @@ class Scene extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.canSceneRender && !prevProps.canSceneRender) {
-            console.warn('Scene mounted.')
+            console.warn('Scene rendered.')
 
             setTimeout(
                 this.props.sceneDidRender, 0

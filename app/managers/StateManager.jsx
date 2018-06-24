@@ -58,7 +58,7 @@ class StateManager extends Component {
     }
 
     componentDidMount() {
-        console.warn('State manager mounted.')
+        console.warn('State manager rendered.')
         this.props.setAppMounted(true)
 
         // window.elements = () => {

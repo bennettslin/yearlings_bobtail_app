@@ -52,7 +52,7 @@ class Theatre extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-            console.warn('Theatre mounted.')
+            console.warn('Theatre rendered.')
 
             setTimeout(
                 this.props.theatreDidRender, 0
