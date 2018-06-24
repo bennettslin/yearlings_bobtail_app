@@ -31,29 +31,38 @@ import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
 import {
-    // CAROUSEL_SCROLL,
-    // LYRIC_ANNOTATION_SCROLL,
+    getObjectOfSongIndices
+} from '../helpers/logicHelper'
+
+import {
+    CAROUSEL_SCROLL,
+    LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
 } from '../constants/dom'
 
 class StateManager extends Component {
 
     static propTypes = {
+        selectedSongIndex: PropTypes.number.isRequired,
         updatePath: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
 
-        this.myCarouselAnnotationElements = {}
-        this.myLyricAnnotationElements = {}
-        this.myVerseElements = {}
+        this.myCarouselAnnotationElements = getObjectOfSongIndices()
+        this.myLyricAnnotationElements = getObjectOfSongIndices()
+        this.myVerseElements = getObjectOfSongIndices()
 
         this._bindEventHandlers()
     }
 
     componentDidMount() {
         this.props.setAppMounted(true)
+
+        // window.elements = () => {
+        //     console.error(this.myCarouselAnnotationElements, this.myLyricAnnotationElements, this.myVerseElements)
+        // }
     }
 
     /**********
@@ -196,11 +205,17 @@ class StateManager extends Component {
      * SCROLL *
      **********/
 
-    getCarouselAnnotationRef(node, index) {
+    /**
+     * FIXME: These refs aren't always being set correctly, possibly because
+     * of the discrepancy between selected song index and rendered song index
+     * at the time that the refs are set and passed.
+     */
+
+    getCarouselAnnotationRef(node, songIndex, annotationIndex) {
         if (node) {
-            this.myCarouselAnnotationElements[index] = node
+            this.myCarouselAnnotationElements[songIndex][annotationIndex] = node
         } else {
-            delete this.myCarouselAnnotationElements[index]
+            delete this.myCarouselAnnotationElements[songIndex][annotationIndex]
         }
     }
 
@@ -212,23 +227,38 @@ class StateManager extends Component {
         }
     }
 
-    getVerseRef(node, index) {
+    getVerseRef(node, songIndex, verseIndex) {
         if (node) {
-            this.myVerseElements[index] = node
+            this.myVerseElements[songIndex][verseIndex] = node
         } else {
-            delete this.myVerseElements[index]
+            delete this.myVerseElements[songIndex][verseIndex]
         }
     }
 
     scrollElementIntoView(payload) {
         const {
-            scrollClass,
-            index
-        } = payload
+                selectedSongIndex
+            } = this.props,
+            {
+                scrollClass,
+                index
+            } = payload
 
-        if (scrollClass === VERSE_SCROLL) {
-            payload.scrollElement = this.myVerseElements[index]
+        let elementsArray
+
+        switch (scrollClass) {
+            case CAROUSEL_SCROLL:
+                elementsArray = this.myCarouselAnnotationElements
+                break
+            case LYRIC_ANNOTATION_SCROLL:
+                elementsArray = this.myLyricAnnotationElements
+                break
+            case VERSE_SCROLL:
+                elementsArray = this.myVerseElements
+                break
         }
+
+        payload.scrollElement = elementsArray[selectedSongIndex][index]
 
         return this.scrollManager.scrollElementIntoView(payload)
     }
@@ -503,7 +533,11 @@ class StateManager extends Component {
     }
 }
 
-const mapStateToProps = () => ({})
+const mapStateToProps = ({
+    selectedSongIndex
+}) => ({
+    selectedSongIndex
+})
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (

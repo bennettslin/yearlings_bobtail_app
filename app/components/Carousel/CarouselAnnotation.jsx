@@ -30,7 +30,8 @@ class CarouselAnnotation extends Component {
         annotationIndex: PropTypes.number.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        handleLyricAnnotationSelect: PropTypes.func.isRequired
+        handleLyricAnnotationSelect: PropTypes.func.isRequired,
+        getCarouselAnnotationRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -38,6 +39,7 @@ class CarouselAnnotation extends Component {
 
         this._handleAnnotationContainerClick = this._handleAnnotationContainerClick.bind(this)
         this._handleAnnotationTitleClick = this._handleAnnotationTitleClick.bind(this)
+        this.getCarouselAnnotationRef = this.getCarouselAnnotationRef.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -80,6 +82,15 @@ class CarouselAnnotation extends Component {
         }
     }
 
+    getCarouselAnnotationRef(node) {
+        const { renderReadySongIndex } = this.props
+        this.props.getCarouselAnnotationRef(
+            node,
+            renderReadySongIndex,
+            this.props.annotationIndex
+        )
+    }
+
     render() {
 
         const { renderReadySongIndex,
@@ -89,8 +100,13 @@ class CarouselAnnotation extends Component {
                 /* eslint-enable no-unused-vars */
 
                 ...other } = this.props,
+
             { annotationIndex } = other,
-            annotationObject = getAnnotationObject(renderReadySongIndex, annotationIndex),
+
+            annotationObject = getAnnotationObject(
+                renderReadySongIndex,
+                annotationIndex
+            ),
 
             { columnIndex,
               dotKeys } = annotationObject,
@@ -99,6 +115,7 @@ class CarouselAnnotation extends Component {
 
         return (
             <CarouselAnnotationView {...other}
+                getRef={this.getCarouselAnnotationRef}
                 carouselAnnotationIndex={annotationIndex}
                 annotationColumn={columnKey}
                 annotationDotKeys={dotKeys}
@@ -118,7 +135,8 @@ const carouselAnnotationViewPropTypes = {
     annotationIndex: PropTypes.number.isRequired,
     annotationColumn: PropTypes.string.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
-    handleContainerClick: PropTypes.func.isRequired
+    handleContainerClick: PropTypes.func.isRequired,
+    getRef: PropTypes.func.isRequired
 },
 
 CarouselAnnotationView = ({
@@ -127,13 +145,17 @@ CarouselAnnotationView = ({
     annotationColumn,
     annotationDotKeys,
     handleContainerClick,
+    getRef,
 
 ...other }) => (
 
     <div
+        ref={getRef}
         className={cx(
             'CarouselAnnotation',
+
             `Carousel__scrollChild__${annotationIndex}`,
+
             annotationColumn &&
                 `CarouselAnnotation__inLyricColumn__${annotationColumn}`,
             getPrefixPrependedClassNames(

@@ -132,9 +132,6 @@ LyricView = ({
             tabIndex="-1"
             onWheel={handleWheel}
         >
-            {/* Upon song change, scroll to this heightless element. */}
-            <div className="Verse__scrollChild" />
-
             <div className={cx(
                 'Lyric__lyrics'
             )}>

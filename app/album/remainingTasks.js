@@ -7,8 +7,8 @@ module.exports = [
     },
     {
         taskName: `Get scrolling indexed elements by ref. Scrolling in carousel is broken when navigating through portal?`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 5,
+        neededHours: 8
     },
 
     {

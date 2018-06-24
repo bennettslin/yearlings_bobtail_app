@@ -121,7 +121,11 @@ class Verse extends Component {
         if (this.getIsInteractable()) {
             this.myVerseElement = node
             this._handleSetVerseElement()
-            this.props.getVerseRef(node, this.props.verseIndex)
+            this.props.getVerseRef(
+                node,
+                this.props.renderReadySongIndex,
+                this.props.verseIndex
+            )
         }
     }
 
@@ -231,11 +235,9 @@ VerseView = ({
             ref={getRef}
             className={cx(
                 'Verse',
-                // 'textShadow__background',
-                isInteractable &&
-                    `Verse__scrollChild__${verseIndex}`,
-
                 inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
+
+                !isNaN(verseIndex) && `Verse__scrollChild__${verseIndex}`,
 
                 // title, even, odd, inSide.
                 verseClassName && `verse__${verseClassName}`,

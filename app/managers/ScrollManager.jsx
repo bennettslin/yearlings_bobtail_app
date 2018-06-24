@@ -64,10 +64,15 @@ class ScrollManager extends Component {
 
         let element = scrollElement
 
-        if (!element) {
+        if (element) {
+            console.warn('Scrolling element from ref:', element)
+
+        } else {
             const { childClass } = SCROLL_CLASSES[scrollClass],
             selector = isNaN(index) ? childClass : `${childClass}__${index}`
             element = document.getElementsByClassName(selector)[0]
+
+            console.error('Scrolling element from selector:', element)
         }
 
         if (element) {

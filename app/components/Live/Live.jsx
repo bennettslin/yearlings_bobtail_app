@@ -72,6 +72,7 @@ class Live extends Component {
         const { lyricRef,
                 scoreRef,
                 wikiRef,
+                getCarouselAnnotationRef,
                 getVerseRef,
 
                 handlePopupContainerClick,
@@ -197,7 +198,8 @@ class Live extends Component {
                     handleAnnotationNext,
                     handleAnnotationWikiSelect,
                     handleAnnotationPortalSelect,
-                    handlePopupContainerClick
+                    handlePopupContainerClick,
+                    getCarouselAnnotationRef
                 },
                 leftShelfToggleSectionHandlers: {
                     handleDotsSectionToggle,

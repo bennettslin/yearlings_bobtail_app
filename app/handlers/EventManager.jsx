@@ -972,8 +972,8 @@ class EventManager extends Component {
             if (this.props.selectedCarouselNavIndex) {
                 this.props.scrollElementIntoView({
                     scrollClass: CAROUSEL_SCROLL,
-                    time: 0,
-                    index: 1
+                    index: 1,
+                    time: 0
                 })
             }
         }
