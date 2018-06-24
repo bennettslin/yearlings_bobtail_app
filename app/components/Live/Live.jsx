@@ -17,12 +17,12 @@ import OverviewLogue from './OverviewLogue'
 import LyricColumn from '../LyricColumn/LyricColumn'
 
 import {
-    canTheatreRender,
-    canMainRender,
-    canSliderRender,
-    canLyricRender,
-    canCarouselRender,
-    canSceneRender,
+    getNextStateForRenderedLive,
+    getNextStateForRenderedTheatre,
+    getNextStateForRenderedMain,
+    getNextStateForRenderedSlider,
+    getNextStateForRenderedLyric,
+    getNextStateForRenderedCarousel,
     getOrganisedHandlersFromProps
 } from './liveHelper'
 
@@ -38,13 +38,12 @@ class Live extends Component {
         super(props)
 
         this.state = {
-            isLiveRendered: false,
-            isTheatreRendered: false,
-            isMainRendered: false,
-            isSliderRendered: false,
-            isLyricRendered: false,
-            isCarouselRendered: false,
-            isSceneRendered: false
+            canTheatreRender: false,
+            canMainRender: false,
+            canSliderRender: false,
+            canLyricRender: false,
+            canCarouselRender: false,
+            canSceneRender: false
         }
 
         this.theatreDidRender = this.theatreDidRender.bind(this)
@@ -57,89 +56,83 @@ class Live extends Component {
 
     componentDidMount() {
         this.props.focusBody()
-
-        this.setState({
-            isLiveRendered: true
-        })
+        this.setState(getNextStateForRenderedLive())
     }
 
     componentDidUpdate(prevProps) {
 
         // Is unrenderable after song change.
         if (!this.props.isRenderable && prevProps.isRenderable) {
+            console.warn('Live registering unrenderable.')
             this.setState({
-                isMainRendered: false,
-                isSliderRendered: false,
-                isLyricRendered: false,
-                isCarouselRendered: false,
-                isSceneRendered: false
+                canMainRender: false,
+                canSliderRender: false,
+                canLyricRender: false,
+                canCarouselRender: false,
+                canSceneRender: false
             })
         }
 
         // Is renderable after timeout.
         if (this.props.isRenderable && !prevProps.isRenderable) {
+            console.warn('Live registering renderable.')
             this.setState({
-                // isMainRendered: false,
-                // isSliderRendered: false,
-                // isLyricRendered: false,
-                // isCarouselRendered: false,
-                // isSceneRendered: false
+                canMainRender: true
             })
         }
     }
 
     theatreDidRender() {
-        this.setState({ isTheatreRendered: true })
+        this.setState(getNextStateForRenderedTheatre())
     }
 
     mainDidRender() {
-        this.setState({ isMainRendered: true })
+        this.setState(getNextStateForRenderedMain())
     }
 
     sliderDidRender() {
-        this.setState({ isSliderRendered: true })
+        this.setState(getNextStateForRenderedSlider())
     }
 
     lyricDidRender() {
-        this.setState({ isLyricRendered: true })
+        this.setState(getNextStateForRenderedLyric())
     }
 
     carouselDidRender() {
-        this.setState({ isCarouselRendered: true })
+        this.setState(getNextStateForRenderedCarousel())
     }
 
     sceneDidRender() {
-        this.setState({ isSceneRendered: true })
+        console.warn('Sequenced rendering complete.')
     }
 
     render() {
-        const { state } = this,
-            {
-                annotationPopupHandlers,
-                lyricColumnHandlers,
-                mainColumnHandlers,
-                menuFieldHandlers,
-                overviewPopupHandlers,
-                scorePopupHandlers,
-                theatreHandlers,
-                titlePopupHandlers,
-                wikiPopupHandlers
-            } = getOrganisedHandlersFromProps(this.props)
+        const {
+            annotationPopupHandlers,
+            lyricColumnHandlers,
+            mainColumnHandlers,
+            menuFieldHandlers,
+            overviewPopupHandlers,
+            scorePopupHandlers,
+            theatreHandlers,
+            titlePopupHandlers,
+            wikiPopupHandlers
+        } = getOrganisedHandlersFromProps(this.props)
 
         return (
             <Fragment>
                 <div className="PopupOverlay" />
 
                 <Theatre {...theatreHandlers}
-                    canTheatreRender={canTheatreRender(state)}
-                    canSceneRender={canSceneRender(state)}
+                    canTheatreRender={this.state.canTheatreRender}
+                    canSceneRender={this.state.canSceneRender}
                     theatreDidRender={this.theatreDidRender}
                     sceneDidRender={this.sceneDidRender}
                 />
 
                 <Main {...mainColumnHandlers}
-                    canMainRender={canMainRender(state)}
-                    canCarouselRender={canCarouselRender(state)}
+                    canMainRender={this.state.canMainRender}
+                    canCarouselRender={this.state.canCarouselRender}
                     mainDidRender={this.mainDidRender}
                     carouselDidRender={this.carouselDidRender}
                 />
@@ -149,7 +142,7 @@ class Live extends Component {
                 />
 
                 <LyricColumn {...lyricColumnHandlers}
-                    canLyricRender={canLyricRender(state)}
+                    canLyricRender={this.state.canLyricRender}
                     lyricDidRender={this.lyricDidRender}
                 />
 
@@ -161,7 +154,7 @@ class Live extends Component {
                 />
 
                 <Menu {...menuFieldHandlers}
-                    canSliderRender={canSliderRender(state)}
+                    canSliderRender={this.state.canSliderRender}
                     sliderDidRender={this.sliderDidRender}
                 />
 

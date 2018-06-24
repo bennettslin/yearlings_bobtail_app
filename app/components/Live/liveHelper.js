@@ -1,27 +1,27 @@
 // One source of truth for sequence of rendering.
 
-export const canTheatreRender = (state) => {
-    return state.isLiveRendered
+export const getNextStateForRenderedLive = () => {
+    return { canTheatreRender: true }
 }
 
-export const canMainRender = (state) => {
-    return state.isTheatreRendered
+export const getNextStateForRenderedTheatre = () => {
+    return { canMainRender: true }
 }
 
-export const canSliderRender = (state) => {
-    return state.isMainRendered
+export const getNextStateForRenderedMain = () => {
+    return { canSliderRender: true }
 }
 
-export const canLyricRender = (state) => {
-    return state.isSliderRendered
+export const getNextStateForRenderedSlider = () => {
+    return { canLyricRender: true }
 }
 
-export const canCarouselRender = (state) => {
-    return state.isLyricRendered
+export const getNextStateForRenderedLyric = () => {
+    return { canCarouselRender: true }
 }
 
-export const canSceneRender = (state) => {
-    return state.isCarouselRendered
+export const getNextStateForRenderedCarousel = () => {
+    return { canSceneRender: true }
 }
 
 export const getOrganisedHandlersFromProps = (props) => {
