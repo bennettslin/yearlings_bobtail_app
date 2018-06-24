@@ -20,7 +20,14 @@ When selecting a song:
     * scene
     * score
 
-When selecting a new scene:
+TODO:
+
+* Include score
+* Animations
+* Changing scenes
+* Rest of players
+* Immediate scrolling
+* Persist cube's base coordinates, as they will always be the same
 
 ### Old notes
 

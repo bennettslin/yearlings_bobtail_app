@@ -58,19 +58,27 @@ class Live extends Component {
 
     componentDidMount() {
         this.setState(getNextStateForRenderedLive())
+
+        this.unrenderedTime = Date.now()
     }
 
     componentDidUpdate(prevProps) {
 
         // Is unrenderable after song change.
         if (!this.props.isRenderable && prevProps.isRenderable) {
-            console.warn('Live registering unrenderable.')
+            console.warn('Live unrenderable.')
             this.setState(getNewStateForUnrenderable())
+
+            this.unrenderedTime = Date.now()
         }
 
         // Is renderable after timeout.
         if (this.props.isRenderable && !prevProps.isRenderable) {
-            console.warn('Live registering renderable.')
+            // TODO: Get rid of this eventually.
+            const renderDuration = (
+                (Date.now() - this.unrenderedTime) / 1000
+            ).toFixed(2)
+            console.warn(`Live renderable after ${renderDuration} seconds.`)
             this.setState(getNewStateForRenderable())
         }
     }
