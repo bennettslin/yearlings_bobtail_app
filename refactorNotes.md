@@ -52,10 +52,10 @@ Title (/)
 Verse (/)
 Wiki (/)
 
-KeyManager
+KeyHandler
 StateManager
 Root
-EventManager
+EventHandler
 RoutingManager
 SwitchManager
 

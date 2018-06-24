@@ -11,7 +11,7 @@ import { getAllTaskObjects } from '../../helpers/dataHelper'
 class Admin extends Component {
 
     componentDidMount() {
-        this.props.focusBody()
+        this.props.focusElementForAccess()
     }
 
     render() {

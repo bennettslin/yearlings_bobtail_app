@@ -26,9 +26,9 @@ export const getNextStateForRenderedCarousel = () => {
 
 export const getOrganisedHandlersFromProps = (props) => {
     const {
-        lyricRef,
-        scoreRef,
-        wikiRef,
+        getLyricRef,
+        getScoreRef,
+        getWikiRef,
         getCarouselAnnotationRef,
         getVerseRef,
 
@@ -95,7 +95,7 @@ export const getOrganisedHandlersFromProps = (props) => {
     },
 
     lyricColumnHandlers = {
-        lyricRef,
+        getLyricRef,
         getVerseRef,
         handleLyricAnnotationSelect,
         handleLyricColumnSelect,
@@ -122,7 +122,7 @@ export const getOrganisedHandlersFromProps = (props) => {
     },
 
     scorePopupHandlers = {
-        scoreRef,
+        getScoreRef,
         handleScoreToggle
     },
 
@@ -137,7 +137,7 @@ export const getOrganisedHandlersFromProps = (props) => {
     },
 
     wikiPopupHandlers = {
-        wikiRef,
+        getWikiRef,
         handleWikiToggle
     },
 

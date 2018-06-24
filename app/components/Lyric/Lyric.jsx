@@ -95,7 +95,7 @@ const lyricViewPropTypes = {
     renderableSongIndex: PropTypes.number.isRequired,
 
     // From parent.
-    lyricRef: PropTypes.func.isRequired,
+    getLyricRef: PropTypes.func.isRequired,
     handleWheel: PropTypes.func.isRequired
 },
 
@@ -103,7 +103,7 @@ LyricView = ({
 
     renderableSongIndex,
 
-    lyricRef,
+    getLyricRef,
     handleWheel,
 
 ...other }) => {
@@ -120,7 +120,7 @@ LyricView = ({
 
     return (
         <div
-            ref={lyricRef}
+            ref={getLyricRef}
             className={cx(
                 'Lyric',
                 'LyricAnnotation__scrollParent',

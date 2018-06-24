@@ -48,7 +48,7 @@ import { SHOWN,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
 
-class KeyManager extends Component {
+class KeyHandler extends Component {
 
     static propTypes = {
 
@@ -605,4 +605,4 @@ export default connect(({
     isHeightlessLyricColumn, isLyricExpanded, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }) => ({
     isHeightlessLyricColumn, isLyricExpanded, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
-}))(KeyManager)
+}))(KeyHandler)

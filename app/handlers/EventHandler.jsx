@@ -20,7 +20,7 @@ import {
     VERSE_SCROLL
 } from '../constants/dom'
 
-class EventManager extends Component {
+class EventHandler extends Component {
 
     static propTypes = {
         scrollElementIntoView: PropTypes.func.isRequired
@@ -29,7 +29,7 @@ class EventManager extends Component {
     constructor(props) {
         super(props)
 
-        this.focusBody = this.focusBody.bind(this)
+        this.focusElementForAccess = this.focusElementForAccess.bind(this)
 
         this.handleAnnotationAccess = this.handleAnnotationAccess.bind(this)
         this.handleDotAccess = this.handleDotAccess.bind(this)
@@ -87,7 +87,7 @@ class EventManager extends Component {
 
     componentDidMount() {
         // Focus lyric section when app is mounted.
-        this.focusBody()
+        this.focusElementForAccess()
     }
 
     componentDidUpdate(prevProps) {
@@ -412,10 +412,10 @@ class EventManager extends Component {
         // Determine whether there is room to scroll.
         if (e) {
             const { deltaY = 0 } = e,
-                { scrollTop } = this.myLyricSection
+                { scrollTop } = this.myLyricElement
 
             if (deltaY > 0) {
-                const { scrollHeight, clientHeight } = this.myLyricSection
+                const { scrollHeight, clientHeight } = this.myLyricElement
 
                 if (scrollTop < scrollHeight - clientHeight) {
                     hasRoomToScroll = true
@@ -608,10 +608,10 @@ class EventManager extends Component {
                 selectedWikiIndex } = this.props
 
         if (selectedScoreIndex) {
-            this.myScoreSection && this.myScoreSection.focus()
+            this.myScoreElement && this.myScoreElement.focus()
 
         } else if (selectedWikiIndex) {
-            this.myWikiSection && this.myWikiSection.focus()
+            this.myWikiElement && this.myWikiElement.focus()
         }
     }
 
@@ -741,11 +741,11 @@ class EventManager extends Component {
 
         // Return focus to lyric section so it can have scroll access.
         // FIXME: Blind users will use tab to change focus. Will they find this annoying?
-        this.focusBody()
+        this.focusElementForAccess()
     }
 
 
-    focusBody() {
+    focusElementForAccess() {
 
         const { isHeightlessLyricColumn,
                 isLyricExpanded } = this.props,
@@ -761,12 +761,12 @@ class EventManager extends Component {
              * Not sure why the refs sometimes don't work, but if that's the
              * case, we'll find the elements through the document.
              */
-            focusElement = this.myLyricSection ||
+            focusElement = this.myLyricElement ||
                 document.getElementsByClassName('Lyric')[0]
 
         // In admin view.
         } else {
-            focusElement = this.myRootManager ||
+            focusElement = this.myRootElement ||
                 document.getElementsByClassName('Root')[0]
         }
 
@@ -792,7 +792,7 @@ class EventManager extends Component {
 
     handleVerseBarWheel(e) {
         const { deltaY } = e.nativeEvent
-        this.myLyricSection.scrollTop += deltaY
+        this.myLyricElement.scrollTop += deltaY
     }
 
     handleVerseInteractivate(e, verseIndex) {
@@ -1002,10 +1002,11 @@ class EventManager extends Component {
 
     render() {
 
-        const rootManagerRef = node => this.myRootManager = node,
-            lyricRef = node => this.myLyricSection = node,
-            scoreRef = node => this.myScoreSection = node,
-            wikiRef = node => this.myWikiSection = node,
+        const
+            getRootRef = node => this.myRootElement = node,
+            getLyricRef = node => this.myLyricElement = node,
+            getScoreRef = node => this.myScoreElement = node,
+            getWikiRef = node => this.myWikiElement = node,
 
             {
                 getCarouselAnnotationRef,
@@ -1015,12 +1016,12 @@ class EventManager extends Component {
 
             eventHandlers = {
 
-                rootManagerRef,
-                lyricRef,
-                scoreRef,
-                wikiRef,
+                getRootRef,
+                getLyricRef,
+                getScoreRef,
+                getWikiRef,
 
-                focusBody: this.focusBody,
+                focusElementForAccess: this.focusElementForAccess,
                 handleAnnotationAccess: this.handleAnnotationAccess,
                 handleDotAccess: this.handleDotAccess,
                 handleAnnotationAnchorAccess: this.handleAnnotationAnchorAccess,
@@ -1089,4 +1090,4 @@ const mapStateToProps = ({
     appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow
 })
 
-export default connect(mapStateToProps)(EventManager)
+export default connect(mapStateToProps)(EventHandler)

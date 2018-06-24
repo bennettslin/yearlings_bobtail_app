@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 import { setAppMounted } from '../redux/actions/session'
 
-import EventManager from '../handlers/EventManager'
+import EventHandler from '../handlers/EventHandler'
 import AccessManager from './AccessManager'
 import AnnotationManager from './AnnotationManager'
 import AudioManager from './AudioManager'
@@ -393,7 +393,7 @@ class StateManager extends Component {
 
         return (
             <Fragment>
-                <EventManager
+                <EventHandler
                     // Event manager props.
                     accessAnnotation={this.accessAnnotation}
                     accessAnnotationAnchor={this.accessAnnotationAnchor}

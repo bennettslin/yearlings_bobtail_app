@@ -55,7 +55,6 @@ class Live extends Component {
     }
 
     componentDidMount() {
-        this.props.focusBody()
         this.setState(getNextStateForRenderedLive())
     }
 
@@ -171,9 +170,11 @@ Live.propTypes = {
     isRenderable: PropTypes.bool.isRequired,
 
     // From parent.
-    lyricRef: PropTypes.func.isRequired,
-    scoreRef: PropTypes.func.isRequired,
-    wikiRef: PropTypes.func.isRequired,
+    focusElementForAccess: PropTypes.func.isRequired,
+
+    getLyricRef: PropTypes.func.isRequired,
+    getScoreRef: PropTypes.func.isRequired,
+    getWikiRef: PropTypes.func.isRequired,
     getVerseRef: PropTypes.func.isRequired,
 
     handleAnnotationPrevious: PropTypes.func.isRequired,

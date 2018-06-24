@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import KeyManager from '../handlers/KeyManager'
+import KeyHandler from '../handlers/KeyHandler'
 import Admin from './Admin/Admin'
 import Live from './Live/Live'
 import AdminToggle from './admin/AdminToggle'
@@ -67,7 +67,7 @@ class Root extends Component {
             handlePlayerTimeChange: PropTypes.func.isRequired,
             handlePlayerNextSong: PropTypes.func.isRequired,
             handlePlayerTimeReset: PropTypes.func.isRequired,
-            rootManagerRef: PropTypes.func.isRequired
+            getRootRef: PropTypes.func.isRequired
         })
     }
 
@@ -163,7 +163,7 @@ class Root extends Component {
               handlePlayerTimeChange,
               handlePlayerNextSong,
               handlePlayerTimeReset,
-              rootManagerRef,
+              getRootRef,
               ...other } = this.props.eventHandlers,
 
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
@@ -205,7 +205,7 @@ class Root extends Component {
 
         return (
             <div
-                ref={rootManagerRef}
+                ref={getRootRef}
                 className={cx(
                     'Root',
 
@@ -271,8 +271,8 @@ class Root extends Component {
                 onKeyDown={this.handleKeyDownPress}
                 tabIndex="-1"
             >
-                {/* TODO: Only pass the events used by KeyManager. */}
-                <KeyManager
+                {/* TODO: Only pass the events used by KeyHandler. */}
+                <KeyHandler
                     eventHandlers={this.props.eventHandlers}
                     getRef={node => (this.accessManager = node)}
                 />

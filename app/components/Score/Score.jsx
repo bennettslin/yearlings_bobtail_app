@@ -22,7 +22,7 @@ class Score extends Component {
         renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        scoreRef: PropTypes.func.isRequired
+        getScoreRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -41,7 +41,7 @@ class Score extends Component {
 
         return (
             <div
-                ref={this.props.scoreRef}
+                ref={this.props.getScoreRef}
                 className={cx(
                     'Score',
                     'iframeContainer'

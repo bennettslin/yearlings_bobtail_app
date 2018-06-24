@@ -38,7 +38,7 @@ class WikiSection extends Component {
         isMobileWiki: PropTypes.bool.isRequired,
 
         // From parent.
-        wikiRef: PropTypes.func.isRequired
+        getWikiRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -116,7 +116,7 @@ class WikiSection extends Component {
                     </div>
                 }
                 <iframe
-                    ref={this.props.wikiRef}
+                    ref={this.props.getWikiRef}
                     className={cx(
                         'iframeContainer__iframe',
                         { 'iframeLoading': iframeLoading }
