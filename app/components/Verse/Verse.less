@@ -20,17 +20,7 @@
 
 .Verse__inLyric {
     padding: 0 @paddingX__verse;
-    transition:
-        color @animationDuration__fast,
-        background-color @animationDuration__fast;
 
-    .RM__unrenderable
-    & {
-        transition: none;
-    }
-}
-
-.Verse__inLyric {
     &:first-child {
         &,
         .padding__verseInLyric {
@@ -42,6 +32,17 @@
         .padding__verseInLyric {
             padding-bottom: @paddingX__verse;
         }
+    }
+}
+
+.verse__interactable {
+    transition:
+        color @animationDuration__fast,
+        background-color @animationDuration__fast;
+
+    .RM__unrenderable
+    & {
+        transition: none;
     }
 }
 
