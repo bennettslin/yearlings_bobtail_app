@@ -21,7 +21,9 @@ const audioPropTypes = {
 
     // From parent.
     audioBannerHandlers: PropTypes.object.isRequired,
-    titleToggleHandlers: PropTypes.object.isRequired
+    titleToggleHandlers: PropTypes.object.isRequired,
+
+    canSliderRender: PropTypes.bool.isRequired
 },
 
 Audio = ({
@@ -29,6 +31,8 @@ Audio = ({
 
     audioBannerHandlers,
     titleToggleHandlers,
+
+    canSliderRender,
 
 ...other }) => {
 
@@ -47,6 +51,7 @@ Audio = ({
 
             <AudioBanner {...audioBannerHandlers}
                 isAudioChild
+                canSliderRender={canSliderRender}
             />
             <AudioButtons {...other} />
         </div>

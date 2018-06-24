@@ -4,33 +4,23 @@
 
 When loading page:
 
-* First priority is:
+* Order of priorities
     * theatre
-
-* Second priority is:
     * main elements
-
-* Third priority is:
-    * song
+    * all the song stuff
 
 When selecting a song:
 
-* First priority is:
+* Order of priorities
     * slider
     * overview if to be shown
     * tips if to be shown
-
-* Second priority is:
-    * lyrics
-
-* Third priority is:
-    * carousel, if shown
-
-* Fourth priority is:
+    * lyrics, don't scroll
+    * carousel, if shown, don't scroll
     * scene
+    * score
 
-When resizing app:
-*
+When selecting a new scene:
 
 ### Old notes
 

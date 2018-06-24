@@ -17,7 +17,10 @@ class Slider extends Component {
 
     static propTypes = {
         // From parent.
-        handleSliderTouchBegin: PropTypes.func.isRequired
+        handleSliderTouchBegin: PropTypes.func.isRequired,
+
+        canSliderRender: PropTypes.bool.isRequired,
+        sliderDidRender: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -26,8 +29,18 @@ class Slider extends Component {
         this._handleTouchDown = this._handleTouchDown.bind(this)
     }
 
-    shouldComponentUpdate() {
-        return false
+    componentDidUpdate(prevProps) {
+        if (this.props.canSliderRender && !prevProps.canSliderRender) {
+            console.warn('Slider mounted.')
+
+            setTimeout(
+                this.props.sliderDidRender, 0
+            )
+        }
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canSliderRender && !this.props.canSliderRender
     }
 
     _handleTouchDown(e) {
@@ -36,7 +49,9 @@ class Slider extends Component {
 
     render() {
 
-        return (
+        const { canSliderRender } = this.props
+
+        return canSliderRender ? (
             <div
                 className={cx(
                     'Slider'
@@ -50,7 +65,7 @@ class Slider extends Component {
                 <SliderScenes />
                 <SliderAccess />
             </div>
-        )
+        ) : null
     }
 }
 

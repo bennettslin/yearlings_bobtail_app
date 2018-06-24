@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import omit from 'lodash.omit'
 
 import LyricColumnAccess from './LyricColumnAccess'
 import LyricToggleEar from './LyricToggleEar'
@@ -34,7 +33,10 @@ class LyricColumn extends Component {
         isHeavyRenderReady: PropTypes.bool.isRequired,
 
         // From parent.
-        handleScrollAfterLyricRerender: PropTypes.func.isRequired
+        handleScrollAfterLyricRerender: PropTypes.func.isRequired,
+
+        canLyricRender: PropTypes.bool.isRequired,
+        lyricDidRender: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -50,17 +52,14 @@ class LyricColumn extends Component {
         }
     }
 
-    componentDidMount() {
-        console.warn('Lyric column mounted.')
-    }
-
     shouldComponentUpdate(nextProps, nextState) {
         const { props, state } = this,
             componentShouldUpdate = getComponentShouldUpdate({
                 props,
                 nextProps,
                 updatingPropsArray: [
-                    'isHeavyRenderReady'
+                    'isHeavyRenderReady',
+                    'canLyricRender'
                 ]
             }) || getComponentShouldUpdate({
                 props: state,
@@ -77,6 +76,14 @@ class LyricColumn extends Component {
         // Previously under componentWillReceiveProps.
         if (!prevProps.appMounted && this.props.appMounted) {
             this.props.handleScrollAfterLyricRerender()
+        }
+
+        if (this.props.canLyricRender && !prevProps.canLyricRender) {
+            console.warn('Lyric mounted.')
+
+            setTimeout(
+                this.props.lyricDidRender, 0
+            )
         }
 
         if (!prevProps.isHeavyRenderReady && this.props.isHeavyRenderReady) {
@@ -111,15 +118,21 @@ class LyricColumn extends Component {
     }
 
     render() {
-        const other = omit(this.props, 'handleScrollAfterLyricRerender')
 
-        return (
+        const {
+            // eslint-disable-next-line no-unused-vars
+            handleScrollAfterLyricRerender,
+            canLyricRender,
+            ...other
+        } = this.props
+
+        return canLyricRender ? (
             <LyricColumnView {...other}
                 isTransitioningHeight={this.state.isTransitioningHeight}
                 handleTransition={this._handleTransition}
                 completeHeightTransition={this.completeHeightTransition}
             />
-        )
+        ) : null
     }
 }
 

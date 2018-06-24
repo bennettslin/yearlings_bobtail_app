@@ -46,15 +46,18 @@ class Theatre extends Component {
         windowWidth: PropTypes.number.isRequired,
 
         // From parent.
-        theatreDidMount: PropTypes.func.isRequired
+        canTheatreRender: PropTypes.bool.isRequired,
+        theatreDidRender: PropTypes.func.isRequired
     }
 
-    componentDidMount() {
-        console.warn('Theatre mounted.')
+    componentDidUpdate(prevProps) {
+        if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+            console.warn('Theatre mounted.')
 
-        setTimeout(
-            this.props.theatreDidMount, 0
-        )
+            setTimeout(
+                this.props.theatreDidRender, 0
+            )
+        }
     }
 
     render() {
@@ -62,7 +65,10 @@ class Theatre extends Component {
                 deviceIndex,
                 stageCoordinates,
                 windowWidth,
-                windowHeight } = this.props,
+                windowHeight,
+                canTheatreRender,
+                ...other
+             } = this.props,
 
             { top: stageTop,
               left: stageLeft,
@@ -117,7 +123,7 @@ class Theatre extends Component {
                 stageCentreFromLeft
             }
 
-        return (
+        return canTheatreRender ? (
             <div className={cx(
                 'Theatre',
                 'absoluteFullContainer'
@@ -136,14 +142,14 @@ class Theatre extends Component {
                     wallFieldCoordinates={wallFieldCoordinates}
                 />
 
-                <Stage />
+                <Stage {...other} />
 
                 <TheatreFloor
                     windowWidth={windowWidth}
                     floorFieldCoordinates={floorFieldCoordinates}
                 />
             </div>
-        )
+        ) : null
     }
 }
 

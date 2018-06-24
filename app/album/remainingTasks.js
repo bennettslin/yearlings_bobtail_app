@@ -1,8 +1,14 @@
 module.exports = [
 
     {
+        taskName: `Have intervals on displays and animated bars rather than setting from state.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
         taskName: `Optimise pixels by rendering only after lyrics. This should also take care of annotation popup buttons collapsing upon being hidden.`,
-        workedHours: 4,
+        workedHours: 10,
         neededHours: 15
     },
     {

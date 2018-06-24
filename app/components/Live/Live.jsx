@@ -63,26 +63,77 @@ class Live extends Component {
         super(props)
 
         this.state = {
-            isTheatreMounted: false
+            isLiveRendered: false,
+            isTheatreRendered: false,
+            isMainRendered: false,
+            isSliderRendered: false,
+            isLyricRendered: false,
+            isCarouselRendered: false,
+            isSceneRendered: false
         }
 
-        this.theatreDidMount = this.theatreDidMount.bind(this)
+        this.theatreDidRender = this.theatreDidRender.bind(this)
+        this.mainDidRender = this.mainDidRender.bind(this)
+        this.sliderDidRender = this.sliderDidRender.bind(this)
+        this.lyricDidRender = this.lyricDidRender.bind(this)
+        this.carouselDidRender = this.carouselDidRender.bind(this)
+        this.sceneDidRender = this.sceneDidRender.bind(this)
     }
 
     componentDidMount() {
         this.props.focusBody()
 
-        console.warn('Live mounted.')
+        this.setState({
+            isLiveRendered: true
+        })
     }
 
     shouldComponentUpdate(prevProps, prevState) {
         // Not sure why clicking on dot or anchor calls this?
-        return this.state.isTheatreMounted !== prevState.isTheatreMounted
+        return (
+            this.state.isLiveRendered !== prevState.isLiveRendered ||
+            this.state.isTheatreRendered !== prevState.isTheatreRendered ||
+            this.state.isMainRendered !== prevState.isMainRendered ||
+            this.state.isSliderRendered !== prevState.isSliderRendered ||
+            this.state.isLyricRendered !== prevState.isLyricRendered ||
+            this.state.isCarouselRendered !== prevState.isCarouselRendered ||
+            this.state.isSceneRendered !== prevState.isSceneRendered
+        )
     }
 
-    theatreDidMount() {
+    theatreDidRender() {
         this.setState({
-            isTheatreMounted: true
+            isTheatreRendered: true
+        })
+    }
+
+    mainDidRender() {
+        this.setState({
+            isMainRendered: true
+        })
+    }
+
+    sliderDidRender() {
+        this.setState({
+            isSliderRendered: true
+        })
+    }
+
+    lyricDidRender() {
+        this.setState({
+            isLyricRendered: true
+        })
+    }
+
+    carouselDidRender() {
+        this.setState({
+            isCarouselRendered: true
+        })
+    }
+
+    sceneDidRender() {
+        this.setState({
+            isSceneRendered: true
         })
     }
 
@@ -141,7 +192,8 @@ class Live extends Component {
             },
 
             audioBannerHandlers = {
-                handleSliderTouchBegin
+                handleSliderTouchBegin,
+                sliderDidRender: this.sliderDidRender
             },
             audioHandlers = {
                 handleAudioPlay,
@@ -168,7 +220,8 @@ class Live extends Component {
                 handleVerseBarWheel,
                 handleVerseInteractivate,
                 handleSetVerseElement,
-                handleScrollAfterLyricRerender
+                handleScrollAfterLyricRerender,
+                lyricDidRender: this.lyricDidRender
             },
 
             overviewPopupHandlers = {
@@ -217,7 +270,8 @@ class Live extends Component {
                     handleAnnotationWikiSelect,
                     handleAnnotationPortalSelect,
                     handlePopupContainerClick,
-                    getCarouselAnnotationRef
+                    getCarouselAnnotationRef,
+                    carouselDidRender: this.carouselDidRender
                 },
                 leftShelfToggleSectionHandlers: {
                     handleDotsSectionToggle,
@@ -231,7 +285,9 @@ class Live extends Component {
                 navSectionHandlers: {
                     handleNavSongSelect,
                     handleNavBookSelect
-                }
+                },
+
+                mainDidRender: this.mainDidRender
             },
 
             menuFieldHandlers = {
@@ -241,37 +297,53 @@ class Live extends Component {
                 audioBannerHandlers
             },
 
-            { isTheatreMounted } = this.state
+            theatreHandlers = {
+                sceneDidRender: this.sceneDidRender,
+                theatreDidRender: this.theatreDidRender
+            },
+
+            {
+                isLiveRendered,
+                isTheatreRendered,
+                isMainRendered,
+                isSliderRendered,
+                isLyricRendered,
+                isCarouselRendered
+            } = this.state
 
         return (
             <Fragment>
 
                 <div className="PopupOverlay" />
 
-                <Theatre
-                    theatreDidMount={this.theatreDidMount}
+                <Theatre {...theatreHandlers}
+                    canTheatreRender={isLiveRendered}
+                    canSceneRender={isCarouselRendered}
                 />
 
-                {isTheatreMounted && (
-                    <Fragment>
-                        <Main {...mainColumnHandlers} />
+                <Main {...mainColumnHandlers}
+                    canMainRender={isTheatreRendered}
+                    canCarouselRender={isLyricRendered}
+                />
 
-                        <OverviewLogue
-                            overviewPopupHandlers={overviewPopupHandlers}
-                        />
+                <OverviewLogue
+                    overviewPopupHandlers={overviewPopupHandlers}
+                />
 
-                        <LyricColumn {...lyricColumnHandlers} />
+                <LyricColumn {...lyricColumnHandlers}
+                    canLyricRender={isSliderRendered}
+                />
 
-                        <OverlayPopups
-                            annotationPopupHandlers={annotationPopupHandlers}
-                            titlePopupHandlers={titlePopupHandlers}
-                            scorePopupHandlers={scorePopupHandlers}
-                            wikiPopupHandlers={wikiPopupHandlers}
-                        />
+                <OverlayPopups
+                    annotationPopupHandlers={annotationPopupHandlers}
+                    titlePopupHandlers={titlePopupHandlers}
+                    scorePopupHandlers={scorePopupHandlers}
+                    wikiPopupHandlers={wikiPopupHandlers}
+                />
 
-                        <Menu {...menuFieldHandlers} />
-                    </Fragment>
-                )}
+                <Menu {...menuFieldHandlers}
+                    canSliderRender={isMainRendered}
+                />
 
                 {/* Prevent popup interaction when slider is touched. */}
                 <div className="TouchOverlay" />

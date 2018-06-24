@@ -34,7 +34,10 @@ class Carousel extends Component {
 
         // From parent.
         handleAnnotationPrevious: PropTypes.func.isRequired,
-        handleAnnotationNext: PropTypes.func.isRequired
+        handleAnnotationNext: PropTypes.func.isRequired,
+
+        canCarouselRender: PropTypes.bool.isRequired,
+        carouselDidRender: PropTypes.func.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -46,11 +49,22 @@ class Carousel extends Component {
                     'isHiddenCarouselNav',
                     'renderReadySongIndex',
                     'accessedAnnotationIndex',
-                    'renderReadyAnnotationIndex'
+                    'renderReadyAnnotationIndex',
+                    'canCarouselRender'
                 ]
             })
 
         return componentShouldUpdate
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.canCarouselRender && !prevProps.canCarouselRender) {
+            console.warn('Carousel mounted.')
+
+            setTimeout(
+                this.props.carouselDidRender, 0
+            )
+        }
     }
 
     render() {
@@ -60,6 +74,9 @@ class Carousel extends Component {
                 renderReadyAnnotationIndex,
                 handleAnnotationPrevious,
                 handleAnnotationNext,
+
+                canCarouselRender,
+
                 ...other } = this.props
 
         if (isHiddenCarouselNav) {
@@ -76,7 +93,7 @@ class Carousel extends Component {
                 length: annotationsCount
             })
 
-        return (
+        return canCarouselRender ? (
             <div
                 className={cx(
                     'Carousel',
@@ -111,7 +128,7 @@ class Carousel extends Component {
                     handleAnnotationNext={handleAnnotationNext}
                 />
             </div>
-        )
+        ) : null
     }
 }
 

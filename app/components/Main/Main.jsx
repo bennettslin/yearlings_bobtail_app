@@ -3,7 +3,7 @@
  * should not update.
  */
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -21,103 +21,123 @@ import ScoresTips from '../ScoresTips/ScoresTips'
 
 import { getIsPhone } from '../../helpers/responsiveHelper'
 
-const mainPropTypes = {
-    // Through Redux.
-    deviceIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    handleCarouselNavToggle: PropTypes.func.isRequired,
-    handleLyricSectionExpand: PropTypes.func.isRequired,
-
-    annotationPopupHandlers: PropTypes.object.isRequired,
-    carouselSectionHandlers: PropTypes.object.isRequired,
-    leftShelfToggleSectionHandlers: PropTypes.object.isRequired,
-    dotsSectionHandlers: PropTypes.object.isRequired,
-    navSectionHandlers: PropTypes.object.isRequired,
-    overviewPopupHandlers: PropTypes.object.isRequired,
-    tipsPopupHandlers: PropTypes.object.isRequired,
-    scoresTipsHandlers: PropTypes.object.isRequired
-}
-
 const mapStateToProps = ({
     deviceIndex
 }) => ({
     deviceIndex
-}),
+})
 
-Main = ({
+class Main extends Component {
 
-    deviceIndex,
+    static propTypes = {
+        // Through Redux.
+        deviceIndex: PropTypes.number.isRequired,
 
-    handleCarouselNavToggle,
-    handleLyricSectionExpand,
+        // From parent.
+        handleCarouselNavToggle: PropTypes.func.isRequired,
+        handleLyricSectionExpand: PropTypes.func.isRequired,
 
-    annotationPopupHandlers,
-    carouselSectionHandlers,
-    leftShelfToggleSectionHandlers,
-    dotsSectionHandlers,
-    navSectionHandlers,
-    overviewPopupHandlers,
-    scoresTipsHandlers,
-    tipsPopupHandlers
+        annotationPopupHandlers: PropTypes.object.isRequired,
+        carouselSectionHandlers: PropTypes.object.isRequired,
+        leftShelfToggleSectionHandlers: PropTypes.object.isRequired,
+        dotsSectionHandlers: PropTypes.object.isRequired,
+        navSectionHandlers: PropTypes.object.isRequired,
+        overviewPopupHandlers: PropTypes.object.isRequired,
+        tipsPopupHandlers: PropTypes.object.isRequired,
+        scoresTipsHandlers: PropTypes.object.isRequired,
 
-}) => {
+        canMainRender: PropTypes.bool.isRequired,
+        canCarouselRender: PropTypes.bool.isRequired,
+        mainDidRender: PropTypes.func.isRequired
+    }
 
-    /**
-     * In phone, flex container's children have absolute position.
-     */
-    const isPhone = getIsPhone(deviceIndex)
+    componentDidUpdate(prevProps) {
+        if (this.props.canMainRender && !prevProps.canMainRender) {
+            console.warn('Main mounted.')
 
-    return (
-        <div className={cx(
-            'Main',
-            'position__mainColumn',
-            'width__mainColumn'
-        )}>
+            setTimeout(
+                this.props.mainDidRender, 0
+            )
+        }
+    }
 
-            <AnnotationPopup {...annotationPopupHandlers}
-                inMain
-            />
+    render() {
+        const {
+                deviceIndex,
 
-            <Carousel {...carouselSectionHandlers} />
+                handleCarouselNavToggle,
+                handleLyricSectionExpand,
 
+                annotationPopupHandlers,
+                carouselSectionHandlers,
+                leftShelfToggleSectionHandlers,
+                dotsSectionHandlers,
+                navSectionHandlers,
+                overviewPopupHandlers,
+                scoresTipsHandlers,
+                tipsPopupHandlers,
+
+                canMainRender,
+                canCarouselRender
+
+            } = this.props,
+
+            /**
+             * In phone, flex container's children have absolute position.
+             */
+            isPhone = getIsPhone(deviceIndex)
+
+        return canMainRender ? (
             <div className={cx(
-                'Main__flexContainer',
-                'absoluteFullContainer'
+                'Main',
+                'position__mainColumn',
+                'width__mainColumn'
             )}>
-                <LeftShelf {...leftShelfToggleSectionHandlers}
-                    isPhone={isPhone}
-                    scoresTipsHandlers={scoresTipsHandlers}
+
+                <AnnotationPopup {...annotationPopupHandlers}
+                    inMain
                 />
 
-                <OverviewPopup {...overviewPopupHandlers}
+                <Carousel {...carouselSectionHandlers}
+                    canCarouselRender={canCarouselRender}
+                />
+
+                <div className={cx(
+                    'Main__flexContainer',
+                    'absoluteFullContainer'
+                )}>
+                    <LeftShelf {...leftShelfToggleSectionHandlers}
+                        isPhone={isPhone}
+                        scoresTipsHandlers={scoresTipsHandlers}
+                    />
+
+                    <OverviewPopup {...overviewPopupHandlers}
+                        inMain
+                        isPhone={isPhone}
+                    />
+                </div>
+
+                <LyricToggleExpand
                     inMain
-                    isPhone={isPhone}
+                    handleLyricSectionExpand={handleLyricSectionExpand}
+                />
+
+                <DotsSlide {...dotsSectionHandlers} />
+
+                <ScoresTips {...scoresTipsHandlers}
+                    inMainRightSide
+                />
+
+                <TipsPopup {...tipsPopupHandlers} />
+
+                <Nav {...navSectionHandlers} />
+
+                <CarouselToggle
+                    handleCarouselNavToggle={handleCarouselNavToggle}
                 />
             </div>
-
-            <LyricToggleExpand
-                inMain
-                handleLyricSectionExpand={handleLyricSectionExpand}
-            />
-
-            <DotsSlide {...dotsSectionHandlers} />
-
-            <ScoresTips {...scoresTipsHandlers}
-                inMainRightSide
-            />
-
-            <TipsPopup {...tipsPopupHandlers} />
-
-            <Nav {...navSectionHandlers} />
-
-            <CarouselToggle
-                handleCarouselNavToggle={handleCarouselNavToggle}
-            />
-        </div>
-    )
+        ) : null
+    }
 }
-
-Main.propTypes = mainPropTypes
 
 export default connect(mapStateToProps)(Main)

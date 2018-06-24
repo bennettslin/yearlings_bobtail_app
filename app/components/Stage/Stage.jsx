@@ -17,6 +17,7 @@ const mapStateToProps = ({
 class Stage extends Component {
 
     static propTypes = {
+        // Through Redux.
         stageCoordinates: PropTypes.shape({
             top: PropTypes.number.isRequired,
             left: PropTypes.number.isRequired,
@@ -27,7 +28,10 @@ class Stage extends Component {
 
     render() {
 
-        const { stageCoordinates } = this.props,
+        const {
+            stageCoordinates,
+            ...other
+        } = this.props,
 
             { top,
               left,
@@ -57,7 +61,7 @@ class Stage extends Component {
                         height: `${height}px`
                     }}
                 >
-                    <Scene
+                    <Scene {...other}
                         stageWidth={width}
                         stageHeight={height}
                     />

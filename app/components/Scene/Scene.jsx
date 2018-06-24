@@ -28,15 +28,32 @@ class Scene extends Component {
 
         // From parent.
         stageWidth: PropTypes.number.isRequired,
-        stageHeight: PropTypes.number.isRequired
+        stageHeight: PropTypes.number.isRequired,
+
+        canSceneRender: PropTypes.bool.isRequired,
+        sceneDidRender: PropTypes.func.isRequired
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.canSceneRender && !prevProps.canSceneRender) {
+            console.warn('Scene mounted.')
+
+            setTimeout(
+                this.props.sceneDidRender, 0
+            )
+        }
     }
 
     render() {
-        const { renderReadySongIndex,
+        const {
+                renderReadySongIndex,
                 currentSceneIndex,
 
                 stageWidth,
-                stageHeight } = this.props,
+                stageHeight,
+
+                canSceneRender
+            } = this.props,
 
             sceneObject = getSceneObject(
                 renderReadySongIndex, currentSceneIndex
@@ -60,12 +77,14 @@ class Scene extends Component {
                     stageHeight={stageHeight}
                 />
 
-                <SceneAction
-                    presences={presences}
-                    tiles={tiles}
-                    stageWidth={stageWidth}
-                    stageHeight={stageHeight}
-                />
+                {canSceneRender && (
+                    <SceneAction
+                        presences={presences}
+                        tiles={tiles}
+                        stageWidth={stageWidth}
+                        stageHeight={stageHeight}
+                    />
+                )}
             </div>
         )
     }
