@@ -43,7 +43,18 @@ class Theatre extends Component {
         deviceIndex: PropTypes.number.isRequired,
         isHeightlessLyricColumn: PropTypes.bool.isRequired,
         windowHeight: PropTypes.number.isRequired,
-        windowWidth: PropTypes.number.isRequired
+        windowWidth: PropTypes.number.isRequired,
+
+        // From parent.
+        theatreDidMount: PropTypes.func.isRequired
+    }
+
+    componentDidMount() {
+        console.warn('Theatre mounted.')
+
+        setTimeout(
+            this.props.theatreDidMount, 0
+        )
     }
 
     render() {

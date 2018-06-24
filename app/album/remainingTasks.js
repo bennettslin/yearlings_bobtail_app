@@ -6,7 +6,7 @@ module.exports = [
         neededHours: 15
     },
     {
-        taskName: `Get scrolling indexed elements by ref. Scrolling in carousel is broken when navigating through portal?`,
+        taskName: `Get scrolling indexed elements by ref. Scrolling in carousel is broken when navigating through portal? Still need to do lyric annotation ones. Have refs for parent containers as well. And handle discrepancy with render ready and selected song indices.`,
         workedHours: 5,
         neededHours: 8
     },

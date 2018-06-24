@@ -50,6 +50,10 @@ class LyricColumn extends Component {
         }
     }
 
+    componentDidMount() {
+        console.warn('Lyric column mounted.')
+    }
+
     shouldComponentUpdate(nextProps, nextState) {
         const { props, state } = this,
             componentShouldUpdate = getComponentShouldUpdate({

@@ -83,7 +83,6 @@ class RenderManager extends Component {
         )
 
         if (this.props.appMounted) {
-
             /**
              * Determine doublespeaker columns only when lyrics are ready to
              * render.

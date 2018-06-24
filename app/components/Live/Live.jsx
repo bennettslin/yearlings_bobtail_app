@@ -59,13 +59,31 @@ class Live extends Component {
         stopPropagation: PropTypes.func.isRequired
     }
 
-    componentDidMount() {
-        this.props.focusBody()
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isTheatreMounted: false
+        }
+
+        this.theatreDidMount = this.theatreDidMount.bind(this)
     }
 
-    shouldComponentUpdate() {
+    componentDidMount() {
+        this.props.focusBody()
+
+        console.warn('Live mounted.')
+    }
+
+    shouldComponentUpdate(prevProps, prevState) {
         // Not sure why clicking on dot or anchor calls this?
-        return false
+        return this.state.isTheatreMounted !== prevState.isTheatreMounted
+    }
+
+    theatreDidMount() {
+        this.setState({
+            isTheatreMounted: true
+        })
     }
 
     render() {
@@ -221,31 +239,39 @@ class Live extends Component {
                 audioHandlers,
                 scoresTipsHandlers,
                 audioBannerHandlers
-            }
+            },
+
+            { isTheatreMounted } = this.state
 
         return (
             <Fragment>
 
                 <div className="PopupOverlay" />
 
-                <Theatre />
-
-                <Main {...mainColumnHandlers} />
-
-                <OverviewLogue
-                    overviewPopupHandlers={overviewPopupHandlers}
+                <Theatre
+                    theatreDidMount={this.theatreDidMount}
                 />
 
-                <LyricColumn {...lyricColumnHandlers} />
+                {isTheatreMounted && (
+                    <Fragment>
+                        <Main {...mainColumnHandlers} />
 
-                <OverlayPopups
-                    annotationPopupHandlers={annotationPopupHandlers}
-                    titlePopupHandlers={titlePopupHandlers}
-                    scorePopupHandlers={scorePopupHandlers}
-                    wikiPopupHandlers={wikiPopupHandlers}
-                />
+                        <OverviewLogue
+                            overviewPopupHandlers={overviewPopupHandlers}
+                        />
 
-                <Menu {...menuFieldHandlers} />
+                        <LyricColumn {...lyricColumnHandlers} />
+
+                        <OverlayPopups
+                            annotationPopupHandlers={annotationPopupHandlers}
+                            titlePopupHandlers={titlePopupHandlers}
+                            scorePopupHandlers={scorePopupHandlers}
+                            wikiPopupHandlers={wikiPopupHandlers}
+                        />
+
+                        <Menu {...menuFieldHandlers} />
+                    </Fragment>
+                )}
 
                 {/* Prevent popup interaction when slider is touched. */}
                 <div className="TouchOverlay" />
