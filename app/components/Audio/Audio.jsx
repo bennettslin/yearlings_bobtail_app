@@ -33,6 +33,7 @@ Audio = ({
     titleToggleHandlers,
 
     canSliderRender,
+    sliderDidRender,
 
 ...other }) => {
 
@@ -52,6 +53,7 @@ Audio = ({
             <AudioBanner {...audioBannerHandlers}
                 isAudioChild
                 canSliderRender={canSliderRender}
+                sliderDidRender={sliderDidRender}
             />
             <AudioButtons {...other} />
         </div>

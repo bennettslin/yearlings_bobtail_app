@@ -47,8 +47,9 @@ class Main extends Component {
         scoresTipsHandlers: PropTypes.object.isRequired,
 
         canMainRender: PropTypes.bool.isRequired,
+        mainDidRender: PropTypes.func.isRequired,
         canCarouselRender: PropTypes.bool.isRequired,
-        mainDidRender: PropTypes.func.isRequired
+        carouselDidRender: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -78,7 +79,8 @@ class Main extends Component {
                 tipsPopupHandlers,
 
                 canMainRender,
-                canCarouselRender
+                canCarouselRender,
+                carouselDidRender
 
             } = this.props,
 
@@ -100,6 +102,7 @@ class Main extends Component {
 
                 <Carousel {...carouselSectionHandlers}
                     canCarouselRender={canCarouselRender}
+                    carouselDidRender={carouselDidRender}
                 />
 
                 <div className={cx(

@@ -31,7 +31,8 @@ const menuPropTypes = {
     scoresTipsHandlers: PropTypes.object.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
 
-    canSliderRender: PropTypes.bool.isRequired
+    canSliderRender: PropTypes.bool.isRequired,
+    sliderDidRender: PropTypes.func.isRequired
 },
 
 Menu = ({
@@ -41,7 +42,8 @@ Menu = ({
     audioHandlers,
     scoresTipsHandlers,
     audioBannerHandlers,
-    canSliderRender
+    canSliderRender,
+    sliderDidRender
 
 }) => {
 
@@ -72,6 +74,7 @@ Menu = ({
                     <AudioBanner {...audioBannerHandlers}
                         isMenuBottomRow
                         canSliderRender={canSliderRender}
+                        sliderDidRender={sliderDidRender}
                     />
                 </div>
 
@@ -101,6 +104,7 @@ Menu = ({
                     )}>
                         <Audio {...audioHandlers}
                             canSliderRender={canSliderRender}
+                            sliderDidRender={sliderDidRender}
                         />
                     </div>
 
