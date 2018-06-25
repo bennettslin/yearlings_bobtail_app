@@ -179,4 +179,10 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
+
+    {
+        taskName: `Finalise loading page. Use image of Mara.`,
+        workedHours: 0,
+        neededHours: 5
+    },
 ]
