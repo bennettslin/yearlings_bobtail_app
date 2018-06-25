@@ -1,6 +1,6 @@
 // Text displays to indicate time spent and remaining.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -11,63 +11,75 @@ import { getSongTotalTime } from '../../../helpers/dataHelper'
 import { getFormattedTime } from '../../../helpers/formatHelper'
 
 const mapStateToProps = ({
+    canSliderRender,
     renderableSongIndex,
     selectedTimePlayed,
     isSliderTouched,
     sliderRatio
 }) => ({
+    canSliderRender,
     renderableSongIndex,
     selectedTimePlayed,
     isSliderTouched,
     sliderRatio
 })
 
-const sliderTimeBarsPropTypes = {
-    // Through Redux.
-    renderableSongIndex: PropTypes.number.isRequired,
-    selectedTimePlayed: PropTypes.number.isRequired,
-    isSliderTouched: PropTypes.bool.isRequired,
-    sliderRatio: PropTypes.number.isRequired
-},
+class SliderTimes extends Component {
 
-SliderTimes = ({
+    static propTypes = {
+        // Through Redux.
+        canSliderRender: PropTypes.bool.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
+        selectedTimePlayed: PropTypes.number.isRequired,
+        isSliderTouched: PropTypes.bool.isRequired,
+        sliderRatio: PropTypes.number.isRequired
+    }
 
-    renderableSongIndex,
-    selectedTimePlayed,
-    isSliderTouched,
-    sliderRatio
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canSliderRender
+    }
 
-}) => {
+    componentDidUpdate() {
+        console.warn('SliderTimes rendered.')
+    }
 
-    const totalTime = getSongTotalTime(renderableSongIndex),
+    render() {
 
-        workingRatio = isSliderTouched ?
-            sliderRatio : (selectedTimePlayed / totalTime),
+        const {
+                renderableSongIndex,
+                selectedTimePlayed,
+                isSliderTouched,
+                sliderRatio
+            } = this.props,
 
-        spentTime =
-            getFormattedTime(workingRatio * totalTime),
+            totalTime = getSongTotalTime(renderableSongIndex),
 
-        remainTime =
-        `\u2013${getFormattedTime((1 - workingRatio) * totalTime)}`
+            workingRatio = isSliderTouched ?
+                sliderRatio : (selectedTimePlayed / totalTime),
 
-    return (
-        <div className={cx(
-            'SliderTimes',
-            'absoluteFullContainer'
-        )}>
+            spentTime =
+                getFormattedTime(workingRatio * totalTime),
 
-            <SliderTime
-                isSpent
-                time={spentTime}
-            />
+            remainTime =
+            `\u2013${getFormattedTime((1 - workingRatio) * totalTime)}`
 
-            <SliderTime
-                time={remainTime}
-            />
-        </div>
-    )
+        return (
+            <div className={cx(
+                'SliderTimes',
+                'absoluteFullContainer'
+            )}>
+
+                <SliderTime
+                    isSpent
+                    time={spentTime}
+                />
+
+                <SliderTime
+                    time={remainTime}
+                />
+            </div>
+        )
+    }
 }
-
-SliderTimes.propTypes = sliderTimeBarsPropTypes
 
 export default connect(mapStateToProps)(SliderTimes)

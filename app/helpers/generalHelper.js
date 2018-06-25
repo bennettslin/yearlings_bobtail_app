@@ -43,6 +43,18 @@ export const roundPercentage = (rawPercentage) => {
     return Math.round(rawPercentage * 100) / 100
 }
 
+export const getPropsAreShallowEqual = (propsA, propsB) => {
+    for (const key in propsA) {
+        const type = typeof propsA[key]
+        if (type !== 'function' && type !== 'object') {
+            if (propsA[key] !== propsB[key]) {
+                return false
+            }
+        }
+    }
+    return true
+}
+
 export const getComponentShouldUpdate = ({
 
     props,

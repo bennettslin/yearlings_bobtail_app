@@ -22,6 +22,13 @@ When selecting a song:
 
 TODO:
 
+* theatre
+* main
+* slider
+* lyric
+* carousel
+* scene
+
 * Include score
 * Animations
 * Changing scenes

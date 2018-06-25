@@ -33,6 +33,10 @@ class Slider extends Component {
         this._handleTouchDown = this._handleTouchDown.bind(this)
     }
 
+    shouldComponentUpdate(nextProps) {
+        return this.props.canSliderRender !== nextProps.canSliderRender
+    }
+
     componentDidUpdate(prevProps) {
         if (this.props.canSliderRender && !prevProps.canSliderRender) {
             console.warn('Slider rendered.')
@@ -43,10 +47,6 @@ class Slider extends Component {
         }
     }
 
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canSliderRender !== this.props.canSliderRender
-    }
-
     _handleTouchDown(e) {
         this.props.handleSliderTouchBegin(e, this.mySlider)
     }
@@ -55,10 +55,11 @@ class Slider extends Component {
 
         const { canSliderRender } = this.props
 
-        return canSliderRender ? (
+        return (
             <div
                 className={cx(
-                    'Slider'
+                    'Slider',
+                    canSliderRender && 'Slider__canRender'
                 )}
                 ref={(node) => (this.mySlider = node)}
                 onMouseDown={this._handleTouchDown}
@@ -69,7 +70,7 @@ class Slider extends Component {
                 <SliderScenes />
                 <SliderAccess />
             </div>
-        ) : null
+        )
     }
 }
 

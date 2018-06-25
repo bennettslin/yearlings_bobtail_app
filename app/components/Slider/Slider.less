@@ -13,11 +13,10 @@
     & {
         cursor: pointer;
     }
+}
 
-    .RM__renderable
-    & {
-        opacity: 1;
-    }
+.Slider__canRender {
+    opacity: 1;
 }
 
 // TODO: Maybe get rid of this class, since the only permanent component that uses it is the slider verse.
@@ -28,13 +27,4 @@
     // Anchor to bottom and right!
     bottom: 0;
     right: 0;
-
-    // transition:
-        // width @animationDuration__default,
-        // background-color @animationDuration__default;
-
-    // .RM__unrenderable
-    // & {
-    //     transition: none;
-    // }
 }

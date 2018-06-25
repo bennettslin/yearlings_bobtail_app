@@ -11,8 +11,10 @@ import { getSliderStanzasArray,
          getSongTotalTime } from '../../../helpers/dataHelper'
 
 const mapStateToProps = ({
+    canSliderRender,
     renderableSongIndex
 }) => ({
+    canSliderRender,
     renderableSongIndex
 })
 
@@ -20,7 +22,16 @@ class SliderStanzas extends Component {
 
     static propTypes = {
         // Through Redux.
+        canSliderRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canSliderRender
+    }
+
+    componentDidUpdate() {
+        console.warn('SliderStanzas rendered.')
     }
 
     render() {

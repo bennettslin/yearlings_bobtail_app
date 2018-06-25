@@ -6,19 +6,19 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import { getCursorStatusClassName } from '../../../helpers/formatHelper'
-import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    renderableSongIndex
+    canSliderRender
 }) => ({
-    renderableSongIndex
+    canSliderRender
 })
 
 class SliderVerse extends Component {
 
     static propTypes = {
         // From Redux.
-        renderableSongIndex: PropTypes.number.isRequired,
+        canSliderRender: PropTypes.bool.isRequired,
 
         // From VerseController.
         isOnCursor: PropTypes.bool.isRequired,
@@ -33,24 +33,14 @@ class SliderVerse extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'renderableSongIndex',
+        if (!nextProps.canSliderRender) {
+            return false
+        }
+        return !getPropsAreShallowEqual(this.props, nextProps)
+    }
 
-                    'isOnCursor',
-                    'isAfterCursor',
-                    'isInteractivated',
-
-                    'verseIndex',
-                    'relativeStartTime',
-                    'relativeTotalTime'
-                ]
-            })
-
-        return componentShouldUpdate
+    componentDidUpdate() {
+        console.warn('SliderVerse rendered.')
     }
 
     render() {

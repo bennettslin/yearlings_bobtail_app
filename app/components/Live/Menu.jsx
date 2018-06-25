@@ -16,13 +16,16 @@ import AudioBanner from '../Audio/AudioBanner'
 import { getMenuMarginInOverlay } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
+    appMounted,
     windowWidth
 }) => ({
+    appMounted,
     windowWidth
 })
 
 const menuPropTypes = {
     // Through Redux.
+    appMounted: PropTypes.bool.isRequired,
     windowWidth: PropTypes.number.isRequired,
 
     // From parent.
@@ -36,7 +39,9 @@ const menuPropTypes = {
 
 Menu = ({
 
+    appMounted,
     windowWidth,
+
     titleToggleHandlers,
     audioHandlers,
     scoresTipsHandlers,
@@ -51,7 +56,7 @@ Menu = ({
      */
     const menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
 
-    return (
+    return appMounted && (
         <div className="Menu">
 
             <div
