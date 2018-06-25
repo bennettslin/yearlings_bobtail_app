@@ -186,7 +186,7 @@ const
             ]
         }
     },
-    BERKELEY_CAMPUS_1_TILES = {
+    SPROUL_PLAZA_TILES = {
         // Outdoor wall is 8'. Platform is 1'.
         floor: {
             zIndices: [
@@ -201,7 +201,7 @@ const
             ]
         }
     },
-    BERKELEY_CAMPUS_2_TILES = {
+    BERKELEY_WALKWAY_TILES = {
         floor: {
             zIndices: [
                 [j, j, j, 3, 9, 1],
@@ -490,31 +490,11 @@ const
             ]
         }
     },
-    PARK_TILES = {
-        floor: {
-            zIndices: [
-                [1]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
-            ]
-        }
-    },
     ALLEY_TILES = {
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
                 [h],
-                [1]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
-            ]
-        }
-    },
-    DEMONSTRATION_TILES = {
-        floor: {
-            zIndices: [
                 [1]
             ],
             bitmapKeys: [
@@ -533,8 +513,8 @@ module.exports = {
     JUNIOR_HIGH_QUAD_TILES,
     BENNETT_APARTMENT_COURTYARD_TILES,
     CATHOLIC_CHURCH_TILES,
-    BERKELEY_CAMPUS_1_TILES,
-    BERKELEY_CAMPUS_2_TILES,
+    SPROUL_PLAZA_TILES,
+    BERKELEY_WALKWAY_TILES,
     MOVIE_THEATRE_1_TILES,
     MOVIE_THEATRE_2_TILES,
     SITA_APARTMENT_GATE_1_TILES,
@@ -554,7 +534,5 @@ module.exports = {
     CREMATED_CLIFF_CONVERTIBLE_TILES,
     CREMATED_DEATHBED_TILES,
     CREMATED_DEATHBED_TENNIS_TILES,
-    PARK_TILES,
-    ALLEY_TILES,
-    DEMONSTRATION_TILES
+    ALLEY_TILES
 }

@@ -361,17 +361,7 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Park scene (Vegan)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Alley scene (Vegan)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Demonstration scene (Vegan)`,
         workedHours: 0,
         neededHours: 5
     },

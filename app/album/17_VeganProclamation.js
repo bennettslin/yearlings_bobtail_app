@@ -14,9 +14,9 @@ import { VERSES,
          IS_DOT_STANZA } from '../constants/lyrics'
 import { SHOW_STAGE_FRONT_FAR_TILES,
          SITA_APARTMENT_BED_TILES } from '../constants/cubesIndoor'
-import { PARK_TILES,
-         ALLEY_TILES,
-         DEMONSTRATION_TILES } from '../constants/cubesOutdoor'
+import { ALLEY_TILES,
+         SPROUL_PLAZA_TILES,
+         BERKELEY_WALKWAY_TILES } from '../constants/cubesOutdoor'
 import { SKY_ANYTIME,
          SKY_WINTER } from '../constants/scene'
 module.exports = {
@@ -43,7 +43,7 @@ module.exports = {
                     description: 'side, protective, judgmental'
                 }
             },
-            tiles: PARK_TILES,
+            tiles: BERKELEY_WALKWAY_TILES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -169,7 +169,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: DEMONSTRATION_TILES,
+            tiles: SPROUL_PLAZA_TILES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER

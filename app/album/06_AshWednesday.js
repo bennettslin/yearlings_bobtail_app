@@ -12,8 +12,8 @@ import { VERSES,
 import { BENNETT_APARTMENT_COUCH_THOUGHT_TILES } from '../constants/cubesIndoor'
 import { BENNETT_APARTMENT_COURTYARD_TILES,
          CATHOLIC_CHURCH_TILES,
-         BERKELEY_CAMPUS_1_TILES,
-         BERKELEY_CAMPUS_2_TILES } from '../constants/cubesOutdoor'
+         SPROUL_PLAZA_TILES,
+         BERKELEY_WALKWAY_TILES } from '../constants/cubesOutdoor'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {
@@ -100,7 +100,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BERKELEY_CAMPUS_1_TILES,
+            tiles: SPROUL_PLAZA_TILES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -121,7 +121,7 @@ module.exports = {
                     description: 'walking forward, confused and curious at Bennett'
                 }
             },
-            tiles: BERKELEY_CAMPUS_2_TILES,
+            tiles: BERKELEY_WALKWAY_TILES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
