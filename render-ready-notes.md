@@ -21,20 +21,19 @@ When selecting a song:
     * score
 
 TODO:
-
 * theatre
-* main
-* slider
 * lyric
 * carousel
 * scene
+* score
 
-* Include score
-* Animations
 * Changing scenes
 * Rest of players
 * Immediate scrolling
 * Persist cube's base coordinates, as they will always be the same
+* Resizing in theatre
+* Mounting different from updating
+* Move relevant actions and reducers
 
 ### Old notes
 

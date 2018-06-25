@@ -78,8 +78,7 @@ ScoresTips = ({
             // ...in menu.
             inMenu,
 
-        showScoreToggleButton = !getIsPhone(deviceIndex),
-        isScoreDisabled = !isScoreLoaded
+        showScoreToggleButton = !getIsPhone(deviceIndex)
 
     return shouldRender && (
         <div className={cx(
@@ -97,10 +96,11 @@ ScoresTips = ({
                     className="ScoresTipsButton"
                     temporaryText={selectedScoreIndex}
                     accessKey={SCORE_TOGGLE_KEY}
-                    isDisabled={isScoreDisabled}
+                    isDisabled={!isScoreLoaded}
                     handleButtonClick={handleScoreToggle}
                 />
             }
+            {/* TODO: Shouldn't this use the tips toggle button? */}
             <Button
                 isLargeSize
                 buttonName="tips"

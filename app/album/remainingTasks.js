@@ -7,10 +7,23 @@ module.exports = [
     },
 
     {
-        taskName: `Optimise pixels by rendering only after lyrics. This should also take care of annotation popup buttons collapsing upon being hidden.`,
-        workedHours: 10,
-        neededHours: 15
+        taskName: `Improve sequential rendering.`,
+        workedHours: 18,
+        neededHours: 25
     },
+
+    {
+        taskName: `Optimise rendering of scenes. Render cube outlines earlier, pixels later. Include persisting the cube base.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `Take care of annotation popup buttons collapsing upon being closed.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     {
         taskName: `Get scrolling indexed elements by ref. Scrolling in carousel is broken when navigating through portal? Still need to do lyric annotation ones. Have refs for parent containers as well. And handle discrepancy with render ready and selected song indices.`,
         workedHours: 5,
@@ -30,7 +43,7 @@ module.exports = [
     },
 
     {
-        taskName: `System for showing sun and moon for each scene.`,
+        taskName: `System for showing asun and moon for each scene.`,
         workedHours: 0,
         neededHours: 3
     },

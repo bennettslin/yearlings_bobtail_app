@@ -10,22 +10,22 @@ import Popup from '../Popup/Popup'
 import { getSongIsLogue } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
+    canMainRender,
     selectedOverviewIndex,
-    isRenderable,
-    selectedSongIndex,
+    renderableSongIndex,
     selectedTipsIndex
 }) => ({
+    canMainRender,
     selectedOverviewIndex,
-    isRenderable,
-    selectedSongIndex,
+    renderableSongIndex,
     selectedTipsIndex
 })
 
 const overviewPopupPropTypes = {
     // Through Redux.
+    canMainRender: PropTypes.bool.isRequired,
     selectedOverviewIndex: PropTypes.number.isRequired,
-    isRenderable: PropTypes.bool.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
+    renderableSongIndex: PropTypes.number.isRequired,
     selectedTipsIndex: PropTypes.number.isRequired,
 
     // From parent.
@@ -38,15 +38,15 @@ OverviewPopup = ({
 
     inMain,
     isPhone,
+    canMainRender,
     selectedOverviewIndex,
-    isRenderable,
-    selectedSongIndex,
+    renderableSongIndex,
     selectedTipsIndex,
     handlePopupContainerClick,
 
 ...other }) => {
 
-    const isLogue = getSongIsLogue(selectedSongIndex),
+    const isLogue = getSongIsLogue(renderableSongIndex),
 
         // Only position absolute when in main and is phone.
         noAbsoluteFull = isLogue || !isPhone
@@ -64,7 +64,7 @@ OverviewPopup = ({
      * Always hide overview section when title is open, or when tip is shown
      * in song. Always hide before ready to render.
      */
-    if (!isRenderable || (!isLogue && !selectedTipsIndex)) {
+    if (!canMainRender || (!isLogue && !selectedTipsIndex)) {
         isVisible = false
     }
 

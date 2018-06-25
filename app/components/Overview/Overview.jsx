@@ -9,15 +9,17 @@ import Texts from '../Text/Texts'
 import OverviewToggle from '../Main/OverviewToggle'
 
 import { getSongOverview, getSongIsLogue } from '../../helpers/dataHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import { getIsToggleInOverview } from '../../helpers/responsiveHelper'
 import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({
+    canMainRender,
     deviceIndex,
     selectedOverviewIndex,
     renderableSongIndex
 }) => ({
+    canMainRender,
     deviceIndex,
     selectedOverviewIndex,
     renderableSongIndex
@@ -27,6 +29,7 @@ class Overview extends Component {
 
     static propTypes = {
         // Through Redux.
+        canMainRender: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         selectedOverviewIndex: PropTypes.number.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
@@ -42,18 +45,16 @@ class Overview extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'deviceIndex',
-                    'selectedOverviewIndex',
-                    'renderableSongIndex'
-                ]
-            })
+        if (!nextProps.canMainRender) {
+            return false
+        }
+        return !getPropsAreShallowEqual(this.props, nextProps)
+    }
 
-        return componentShouldUpdate
+    componentDidUpdate(prevProps) {
+        if (this.props.canMainRender && !prevProps.canMainRender) {
+            console.warn('Overview rendered.')
+        }
     }
 
     _handleOverviewToggle(e) {

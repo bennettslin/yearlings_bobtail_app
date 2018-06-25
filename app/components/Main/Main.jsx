@@ -19,6 +19,7 @@ import OverviewPopup from '../Popups/OverviewPopup'
 import TipsPopup from '../Popups/TipsPopup'
 import ScoresTips from '../ScoresTips/ScoresTips'
 
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import { getIsPhone } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
@@ -53,6 +54,13 @@ class Main extends Component {
         carouselDidRender: PropTypes.func.isRequired
     }
 
+    shouldComponentUpdate(nextProps) {
+        if (!nextProps.canMainRender) {
+            return false
+        }
+        return !getPropsAreShallowEqual(this.props, nextProps)
+    }
+
     componentDidUpdate(prevProps) {
         if (this.props.canMainRender && !prevProps.canMainRender) {
             console.warn('Main rendered.')
@@ -79,8 +87,6 @@ class Main extends Component {
                 scoresTipsHandlers,
                 tipsPopupHandlers,
 
-                canMainRender,
-                canCarouselRender,
                 carouselDidRender
 
             } = this.props,
@@ -90,7 +96,7 @@ class Main extends Component {
              */
             isPhone = getIsPhone(deviceIndex)
 
-        return canMainRender ? (
+        return (
             <div className={cx(
                 'Main',
                 'position__mainColumn',
@@ -102,7 +108,6 @@ class Main extends Component {
                 />
 
                 <Carousel {...carouselSectionHandlers}
-                    canCarouselRender={canCarouselRender}
                     carouselDidRender={carouselDidRender}
                 />
 
@@ -140,7 +145,7 @@ class Main extends Component {
                     handleCarouselNavToggle={handleCarouselNavToggle}
                 />
             </div>
-        ) : null
+        )
     }
 }
 

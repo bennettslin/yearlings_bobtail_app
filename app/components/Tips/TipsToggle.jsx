@@ -28,16 +28,18 @@ TipsToggle = ({
     isEnabled,
     handleTipsToggle
 
-}) => (
-    <Button
-        isLargeSize
-        buttonName="tips"
-        isDisabled={!isEnabled}
-        temporaryText={TIPS_OPTIONS[selectedTipsIndex]}
-        accessKey={TIPS_TOGGLE_KEY}
-        handleButtonClick={handleTipsToggle}
-    />
-)
+}) => {
+    return (
+        <Button
+            isLargeSize
+            buttonName="tips"
+            isDisabled={!isEnabled}
+            temporaryText={TIPS_OPTIONS[selectedTipsIndex]}
+            accessKey={TIPS_TOGGLE_KEY}
+            handleButtonClick={handleTipsToggle}
+        />
+    )
+}
 
 TipsToggle.propTypes = tipsTogglePropTypes
 

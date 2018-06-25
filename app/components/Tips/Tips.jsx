@@ -10,13 +10,16 @@ import Texts from '../Text/Texts'
 // import DynamicSvg from '../DynamicSvg/DynamicSvg';
 
 import { getSongTip } from '../../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import { SHOWN, TIPS_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({
+    canMainRender,
     renderableSongIndex,
     selectedTipsIndex,
     isScoresTipsInMain
 }) => ({
+    canMainRender,
     renderableSongIndex,
     selectedTipsIndex,
     isScoresTipsInMain
@@ -26,6 +29,7 @@ class Tips extends Component {
 
     static propTypes = {
         // Through Redux.
+        canMainRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
@@ -38,6 +42,19 @@ class Tips extends Component {
         super(props)
 
         this._handleTipsToggle = this._handleTipsToggle.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        if (!nextProps.canMainRender) {
+            return false
+        }
+        return !getPropsAreShallowEqual(this.props, nextProps)
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.canMainRender && !prevProps.canMainRender) {
+            console.warn('Tips rendered.')
+        }
     }
 
     _handleTipsToggle(e) {
