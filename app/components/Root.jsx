@@ -28,6 +28,8 @@ class Root extends Component {
 
     static propTypes = {
         // Through Redux.
+        appMounted: PropTypes.bool.isRequired,
+        isRenderable: PropTypes.bool.isRequired,
         selectedAdminIndex: PropTypes.number.isRequired,
 
         deviceIndex: PropTypes.number.isRequired,
@@ -57,7 +59,6 @@ class Root extends Component {
         isVerseBarAbove: PropTypes.bool.isRequired,
         isVerseBarBelow: PropTypes.bool.isRequired,
         isManualScroll: PropTypes.bool.isRequired,
-        isRenderable: PropTypes.bool.isRequired,
 
         // From parent.
         eventHandlers: PropTypes.shape({
@@ -128,36 +129,37 @@ class Root extends Component {
     }
 
     render() {
-        const { selectedAdminIndex,
-
-                deviceIndex,
-                interactivatedVerseIndex,
-                selectedAccessIndex,
-                selectedAnnotationIndex,
-                selectedCarouselNavIndex,
-                selectedDotKeys,
-                selectedDotsIndex,
-                selectedLyricColumnIndex,
-                selectedOverviewIndex,
-                selectedScoreIndex,
-                selectedSongIndex,
-                selectedTipsIndex,
-                selectedTitleIndex,
-                selectedWikiIndex,
-                isPlaying,
-                isSliderTouched,
-                isSliderMoving,
-
-                isLyricExpanded,
-                showOneOfTwoLyricColumns,
-                isHeightlessLyricColumn,
-                showShrunkNavIcon,
-                isScoresTipsInMain,
-                isTwoRowMenu,
-                isVerseBarAbove,
-                isVerseBarBelow,
-                isManualScroll,
-                isRenderable } = this.props,
+        const {
+            appMounted,
+            isRenderable,
+            selectedAdminIndex,
+            deviceIndex,
+            interactivatedVerseIndex,
+            selectedAccessIndex,
+            selectedAnnotationIndex,
+            selectedCarouselNavIndex,
+            selectedDotKeys,
+            selectedDotsIndex,
+            selectedLyricColumnIndex,
+            selectedOverviewIndex,
+            selectedScoreIndex,
+            selectedSongIndex,
+            selectedTipsIndex,
+            selectedTitleIndex,
+            selectedWikiIndex,
+            isPlaying,
+            isSliderTouched,
+            isSliderMoving,
+            isLyricExpanded,
+            showOneOfTwoLyricColumns,
+            isHeightlessLyricColumn,
+            showShrunkNavIcon,
+            isScoresTipsInMain,
+            isTwoRowMenu,
+            isVerseBarAbove,
+            isVerseBarBelow,
+            isManualScroll
+            } = this.props,
 
             { handleBodyTouchMove,
               handlePlayerTimeChange,
@@ -203,7 +205,7 @@ class Root extends Component {
                 && !overviewShown
                 && !tipsShown
 
-        return (
+        return appMounted && (
             <div
                 ref={getRootRef}
                 className={cx(
@@ -292,9 +294,9 @@ class Root extends Component {
 }
 
 const mapStateToProps = ({
-    selectedAdminIndex, interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isRenderable
+    appMounted, isRenderable, selectedAdminIndex, interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll
 }) => ({
-    selectedAdminIndex, interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll, isRenderable
+    appMounted, isRenderable, selectedAdminIndex, interactivatedVerseIndex, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedDotsIndex, selectedLyricColumnIndex, selectedOverviewIndex, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedWikiIndex, isLyricExpanded, showOneOfTwoLyricColumns, deviceIndex, isPlaying, isSliderTouched, isSliderMoving, isHeightlessLyricColumn, showShrunkNavIcon, isScoresTipsInMain, isTwoRowMenu, isVerseBarAbove, isVerseBarBelow, isManualScroll
 })
 
 export default connect(mapStateToProps)(Root)

@@ -15,11 +15,9 @@ import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
-    appMounted,
     isRenderable
 }) => ({
     canLyricRender,
-    appMounted,
     isRenderable
 })
 
@@ -31,7 +29,6 @@ class LyricColumn extends Component {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         canLyricRender: PropTypes.bool.isRequired,
         isRenderable: PropTypes.bool.isRequired,
 
@@ -74,12 +71,12 @@ class LyricColumn extends Component {
         return componentShouldUpdate
     }
 
-    componentDidUpdate(prevProps) {
-        // Previously under componentWillReceiveProps.
-        if (!prevProps.appMounted && this.props.appMounted) {
-            this.props.handleScrollAfterLyricRerender()
-        }
+    componentDidMount() {
+        // Previously done on appMounted check.
+        this.props.handleScrollAfterLyricRerender()
+    }
 
+    componentDidUpdate(prevProps) {
         if (this.props.canLyricRender && !prevProps.canLyricRender) {
             console.warn('Lyric rendered.')
 

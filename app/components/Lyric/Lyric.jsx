@@ -75,7 +75,6 @@ class Lyric extends Component {
 
     render() {
         const other = omit(this.props, [
-            'appMounted',
             'isTransitioningHeight',
             'completeHeightTransition',
             'handleLyricWheel'

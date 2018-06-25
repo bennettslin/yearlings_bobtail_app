@@ -29,7 +29,7 @@ TODO:
 
 * Changing scenes
 * Rest of players
-* Immediate scrolling
+* Immediate scrolling (Lyric scrolling upon mount is currently broken)
 * Persist cube's base coordinates, as they will always be the same
 * Resizing in theatre
 * Mounting different from updating

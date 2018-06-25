@@ -23,11 +23,9 @@ import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import { getIsPhone } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    appMounted,
     deviceIndex,
     canMainRender
 }) => ({
-    appMounted,
     deviceIndex,
     canMainRender
 })
@@ -36,7 +34,6 @@ class Main extends Component {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         canMainRender: PropTypes.bool.isRequired,
 
@@ -76,7 +73,6 @@ class Main extends Component {
 
     render() {
         const {
-                appMounted,
                 deviceIndex,
 
                 handleCarouselNavToggle,
@@ -100,7 +96,7 @@ class Main extends Component {
              */
             isPhone = getIsPhone(deviceIndex)
 
-        return appMounted && (
+        return (
             <div className={cx(
                 'Main',
                 'position__mainColumn',
