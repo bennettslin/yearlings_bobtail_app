@@ -34,24 +34,25 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `audio slider`,
+        taskName: `audio slider. Mimic lyric stanza borders.`,
         workedHours: 0,
         neededHours: 8
     },
-    {
-        taskName: `annotation cards`,
-        workedHours: 0,
-        neededHours: 8
-    },
+
     {
         taskName: `lyrics`,
         workedHours: 0,
         neededHours: 8
     },
     {
-        taskName: `nav header`,
+        taskName: `nav books`,
         workedHours: 0,
         neededHours: 8
+    },
+    {
+        taskName: `nav images (just take from existing heads and bodies.)`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     /**

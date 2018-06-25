@@ -1,9 +1,9 @@
 module.exports = [
 
     {
-        taskName: `Have intervals on displays and animated bars rather than setting from state.`,
+        taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 8
     },
 
     {
@@ -31,39 +31,9 @@ module.exports = [
     },
 
     {
-        taskName: `Have system to show pixels of varying sizes.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    {
-        taskName: `Determine relative zIndices for slanted directions. (Do on plane?)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    {
-        taskName: `System for showing asun and moon for each scene.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: `Have system to animate actions based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-
-    {
         taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    {
-        taskName: `Finalise UI of selected carousel annotations.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     {
@@ -73,16 +43,30 @@ module.exports = [
     },
 
     /**
-     * Remaining tile work.
+     * Remaining scene work.
      */
     {
         taskName: `Animate tiles.`,
         workedHours: 0,
         neededHours: 3
     },
-
     {
-        taskName: `Use svg in slider.`,
+        taskName: `System for showing sun and moon for each scene.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Have system to animate actions based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Have system to show pixels of varying sizes.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Determine relative zIndices for slanted directions. (Do on plane?)`,
         workedHours: 0,
         neededHours: 5
     },
@@ -118,14 +102,10 @@ module.exports = [
     },
 
     /**
-     * Medium bugs and tasks.
-     */
-
-    /**
      * Text colours.
      */
     {
-        taskName: `Establish colours.`,
+        taskName: `Establish stanza, dot, and selected, interactivated, accessed, disabled, and before, after, and on cursor colours.`,
         workedHours: 0,
         neededHours: 5
     },
@@ -133,11 +113,11 @@ module.exports = [
     /**
      * Player stuff.
      */
-     {
-         taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
-         workedHours: 0,
-         neededHours: 5
-     },
+    {
+        taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
+        workedHours: 0,
+        neededHours: 5
+    },
 
     /**
      * Content.
@@ -169,9 +149,34 @@ module.exports = [
         workedHours: 0,
         neededHours: 8
     },
+
     {
-        taskName: `Allow annotation and lyric borders to use svgs.`,
+        taskName: `Finalise UI of carousel annotations. Make the navigation pictures a similar style.`,
         workedHours: 0,
         neededHours: 8
-    }
+    },
+
+    {
+        taskName: `Finalise slider and cursor UI.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `Finalise menu UI.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
+        taskName: `Colour lyric stanza borders.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `Finalise text styling of different dot annotations.`,
+        workedHours: 0,
+        neededHours: 5
+    },
 ]

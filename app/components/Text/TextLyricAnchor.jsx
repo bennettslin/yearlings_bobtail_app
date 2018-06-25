@@ -9,11 +9,11 @@ import TextAnchor from '../Anchor/TextAnchor'
 import Texts from './Texts'
 
 const mapStateToProps = ({
-    selectedAnnotationIndex,
+    renderableAnnotationIndex,
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex
 }) => ({
-    selectedAnnotationIndex,
+    renderableAnnotationIndex,
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex
 })
@@ -22,7 +22,7 @@ class TextLyricAnchor extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedAnnotationIndex: PropTypes.number.isRequired,
+        renderableAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
@@ -54,10 +54,10 @@ class TextLyricAnchor extends Component {
 
         const { wikiIndex,
                 annotationIndex,
-                selectedAnnotationIndex,
+                renderableAnnotationIndex,
                 carouselAnnotationIndex } = this.props,
 
-            isSelected = annotationIndex === selectedAnnotationIndex,
+            isSelected = annotationIndex === renderableAnnotationIndex,
 
             /**
              * If it's an annotation, then the argument passed to the
@@ -77,7 +77,7 @@ class TextLyricAnchor extends Component {
 
         const {
                 annotationIndex,
-                selectedAnnotationIndex,
+                renderableAnnotationIndex,
                 accessedAnnotationIndex,
                 accessedAnnotationAnchorIndex,
                 wikiIndex,
@@ -87,14 +87,14 @@ class TextLyricAnchor extends Component {
 
             ...other } = this.props,
 
-            isSelected = annotationIndex === selectedAnnotationIndex
+            isSelected = annotationIndex === renderableAnnotationIndex
 
         let isAccessed
 
-        if (selectedAnnotationIndex) {
+        if (renderableAnnotationIndex) {
             isAccessed =
                 // Check that we're in the annotation that's selected.
-                selectedAnnotationIndex === wikiAnnotationIndex &&
+                renderableAnnotationIndex === wikiAnnotationIndex &&
 
                 accessedAnnotationAnchorIndex === wikiIndex
 

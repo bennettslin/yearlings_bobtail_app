@@ -34,6 +34,7 @@ TODO:
 * Resizing in theatre
 * Mounting different from updating
 * Move relevant actions and reducers
+* Prioritise order of carousel and lyrics if not shown
 
 ### Old notes
 
