@@ -34,8 +34,8 @@ class Main extends Component {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
         canMainRender: PropTypes.bool.isRequired,
+        deviceIndex: PropTypes.number.isRequired,
 
         // From parent.
         handleCarouselNavToggle: PropTypes.func.isRequired,
