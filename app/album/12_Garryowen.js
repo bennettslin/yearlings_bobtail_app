@@ -32,7 +32,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'side, shivering, pleading'
                     }
                 }
@@ -86,7 +86,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'side, naked, making Bennett touch her breast'
                     }
                 }
@@ -140,7 +140,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'crumbled on floor, begging, sobbing'
                     }
                 }

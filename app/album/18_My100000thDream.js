@@ -31,7 +31,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'side angle, opening a door, pleasantly surprised'
                     }
                 }
@@ -54,7 +54,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'resting on Bennett, content'
                     }
                 },
@@ -98,7 +98,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'front, urging'
                     }
                 }
@@ -121,7 +121,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'front angle, gesturing to grave'
                     }
                 }
@@ -144,7 +144,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'comforting'
                     }
                 },

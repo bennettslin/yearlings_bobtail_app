@@ -61,7 +61,7 @@ module.exports = {
                 esther: {
                     youngSita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'side angle, sobbing'
                     }
                 }
@@ -170,7 +170,7 @@ module.exports = {
                 liz: {
                     sita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'side, amused by conversation'
                     }
                 },
@@ -213,7 +213,7 @@ module.exports = {
                 esther: {
                     youngSita: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3,
                         description: 'side angle, sobbing uncontrollably'
                     }
                 }

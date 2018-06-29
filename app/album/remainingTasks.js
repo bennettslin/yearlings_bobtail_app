@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Finalise how Liz's hair drapes over face.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of.`,
         workedHours: 0,
         neededHours: 8
