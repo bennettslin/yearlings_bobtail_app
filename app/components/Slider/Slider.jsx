@@ -52,14 +52,10 @@ class Slider extends Component {
     }
 
     render() {
-
-        const { canSliderRender } = this.props
-
         return (
             <div
                 className={cx(
-                    'Slider',
-                    canSliderRender && 'Slider__canRender'
+                    'Slider'
                 )}
                 ref={(node) => (this.mySlider = node)}
                 onMouseDown={this._handleTouchDown}

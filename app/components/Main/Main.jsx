@@ -55,10 +55,10 @@ class Main extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        if (!nextProps.canMainRender) {
-            return false
-        }
-        return !getPropsAreShallowEqual(this.props, nextProps)
+        return nextProps.canMainRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     componentDidUpdate(prevProps) {

@@ -8,11 +8,13 @@ import Annotation from '../Annotation/Annotation'
 import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canCarouselRender,
     renderableSongIndex
 }) => ({
+    canCarouselRender,
     renderableSongIndex
 })
 
@@ -24,6 +26,7 @@ class CarouselAnnotation extends Component {
 
     static propTypes = {
         // Through Redux.
+        canCarouselRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -43,19 +46,16 @@ class CarouselAnnotation extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
+        return nextProps.canCarouselRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'renderableSongIndex',
-                    'isAccessed',
-                    'isSelected'
-                ]
-            })
-
-        return componentShouldUpdate
+    componentDidUpdate() {
+        if (this.props.annotationIndex === 1) {
+            console.warn('CarouselAnnotation rendered.')
+        }
     }
 
     _handleAnnotationTitleClick(e) {

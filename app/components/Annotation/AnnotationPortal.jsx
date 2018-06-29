@@ -13,12 +13,14 @@ import { PORTAL } from '../../constants/dots'
 
 import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
 import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from '../../helpers/dataHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canCarouselRender,
     renderableSongIndex,
     renderableAnnotationIndex
 }) => ({
+    canCarouselRender,
     renderableSongIndex,
     renderableAnnotationIndex
 })
@@ -27,6 +29,7 @@ class AnnotationPortal extends Component {
 
     static propTypes = {
         // Through Redux.
+        canCarouselRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         renderableAnnotationIndex: PropTypes.number.isRequired,
 
@@ -45,22 +48,26 @@ class AnnotationPortal extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
+        const shouldComponentUpdate =
+            nextProps.canCarouselRender && !getPropsAreShallowEqual({
+                props: this.props,
                 nextProps,
-                updatingPropsArray: [
-                    'renderableSongIndex',
-                    'isAccessed',
-                    {
-                        staticProp: 'carouselAnnotationIndex',
-                        conditionalShouldBe: false,
-                        subUpdatingKey: 'renderableAnnotationIndex'
-                    }
-                ]
+                checkIsShallowEqual: 'renderableAnnotationIndex',
+                onlyIfSameValueAs: 'carouselAnnotationIndex'
             })
 
-        return componentShouldUpdate
+        return shouldComponentUpdate
+    }
+
+    componentDidUpdate() {
+        const {
+            carouselAnnotationIndex,
+            renderableAnnotationIndex
+        } = this.props
+
+        if (carouselAnnotationIndex === renderableAnnotationIndex) {
+            console.warn('AnnotationPortal rendered.')
+        }
     }
 
     _handlePortalClick(e) {

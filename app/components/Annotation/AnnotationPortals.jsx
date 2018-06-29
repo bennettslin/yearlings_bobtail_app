@@ -1,74 +1,97 @@
 // Component to show all portals for each annotation.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationPortal from './AnnotationPortal'
 import { SOURCE_PORTAL_INDEX } from '../../constants/lyrics'
-import { getCarouselOrPopupCardPortalLinksArray } from '../../helpers/dataHelper'
+import {
+    getCarouselOrPopupCardPortalLinksArray
+} from '../../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canCarouselRender,
     renderableSongIndex,
     renderableAnnotationIndex,
     accessedAnnotationAnchorIndex
 }) => ({
+    canCarouselRender,
     renderableSongIndex,
     renderableAnnotationIndex,
     accessedAnnotationAnchorIndex
 })
 
-const annotationPortalsPropTypes = {
-    // Through Redux.
-    renderableSongIndex: PropTypes.number.isRequired,
-    renderableAnnotationIndex: PropTypes.number.isRequired,
-    accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+class AnnotationPortals extends Component {
 
-    // From parent.
-    carouselAnnotationIndex: PropTypes.number,
-    cardIndex: PropTypes.number.isRequired
-},
+    static propTypes = {
+        // Through Redux.
+        renderableSongIndex: PropTypes.number.isRequired,
+        renderableAnnotationIndex: PropTypes.number.isRequired,
+        accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
-AnnotationPortals = ({
+        // From parent.
+        carouselAnnotationIndex: PropTypes.number,
+        cardIndex: PropTypes.number.isRequired
+    }
 
-    renderableSongIndex,
-    renderableAnnotationIndex,
-    accessedAnnotationAnchorIndex,
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canCarouselRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-...other }) => {
-
-    const { carouselAnnotationIndex,
-            cardIndex } = other,
-
-        portalLinksArray = getCarouselOrPopupCardPortalLinksArray({
+    componentDidUpdate() {
+        const {
             carouselAnnotationIndex,
-            renderableSongIndex,
-            renderableAnnotationIndex,
-            cardIndex
-        })
+            renderableAnnotationIndex
+        } = this.props
 
-    return portalLinksArray ? (
-        portalLinksArray.map((portalObject, portalLinkIndex) => {
+        if (carouselAnnotationIndex === renderableAnnotationIndex) {
+            console.warn('AnnotationPortals rendered.')
+        }
+    }
 
-            /**
-             * portalLinkIndex is solely to fetch the portal object from the
-             * data helper when there are two portals in the same annotation.
-             * This happens only once, with the "shiv" one.
-             */
-            const { [SOURCE_PORTAL_INDEX]: sourcePortalIndex } = portalObject,
-                isAccessed =
-                    accessedAnnotationAnchorIndex === sourcePortalIndex
+    render() {
+        const {
+                renderableSongIndex,
+                renderableAnnotationIndex,
+                accessedAnnotationAnchorIndex,
+            ...other } = this.props,
 
-            return (
-                <AnnotationPortal {...other}
-                    key={portalLinkIndex}
-                    portalLinkIndex={portalLinkIndex}
-                    isAccessed={isAccessed}
-                />
-            )
-        })
-    ) : null
+            { carouselAnnotationIndex,
+                cardIndex } = other,
+
+            portalLinksArray = getCarouselOrPopupCardPortalLinksArray({
+                carouselAnnotationIndex,
+                renderableSongIndex,
+                renderableAnnotationIndex,
+                cardIndex
+            })
+
+        return portalLinksArray ? (
+            portalLinksArray.map((portalObject, portalLinkIndex) => {
+
+                /**
+                 * portalLinkIndex is solely to fetch the portal object from the
+                 * data helper when there are two portals in the same annotation.
+                 * This happens only once, with the "shiv" one.
+                 */
+                const { [SOURCE_PORTAL_INDEX]: sourcePortalIndex } = portalObject,
+                    isAccessed =
+                        accessedAnnotationAnchorIndex === sourcePortalIndex
+
+                return (
+                    <AnnotationPortal {...other}
+                        key={portalLinkIndex}
+                        portalLinkIndex={portalLinkIndex}
+                        isAccessed={isAccessed}
+                    />
+                )
+            })
+        ) : null
+    }
 }
-
-AnnotationPortals.propTypes = annotationPortalsPropTypes
 
 export default connect(mapStateToProps)(AnnotationPortals)

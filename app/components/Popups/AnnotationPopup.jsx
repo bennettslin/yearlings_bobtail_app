@@ -11,21 +11,21 @@ import { getIsOverlayingAnnotation,
          getIsPhone } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
+    canCarouselRender,
     deviceIndex,
     isLyricExpanded,
     isHeightlessLyricColumn,
-    isRenderable,
-    selectedAnnotationIndex,
+    renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
     selectedWikiIndex
 }) => ({
+    canCarouselRender,
     deviceIndex,
     isLyricExpanded,
     isHeightlessLyricColumn,
-    isRenderable,
-    selectedAnnotationIndex,
+    renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
@@ -34,12 +34,12 @@ const mapStateToProps = ({
 
 const annotationPopupPropTypes = {
     // Through Redux.
+    canCarouselRender: PropTypes.bool.isRequired,
     deviceIndex: PropTypes.number.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
     isHeightlessLyricColumn: PropTypes.bool.isRequired,
 
-    isRenderable: PropTypes.bool.isRequired,
-    selectedAnnotationIndex: PropTypes.number.isRequired,
+    renderableAnnotationIndex: PropTypes.number.isRequired,
     selectedCarouselNavIndex: PropTypes.number.isRequired,
     selectedScoreIndex: PropTypes.number.isRequired,
     selectedTitleIndex: PropTypes.number.isRequired,
@@ -54,13 +54,13 @@ const annotationPopupPropTypes = {
 
 AnnotationPopup = ({
 
+    canCarouselRender,
     deviceIndex,
     isLyricExpanded,
     isHeightlessLyricColumn,
-    isRenderable,
     inMain,
 
-    selectedAnnotationIndex,
+    renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedScoreIndex,
     selectedTitleIndex,
@@ -90,8 +90,8 @@ AnnotationPopup = ({
 
     } else {
         const isVisible =
-                isRenderable &&
-                !!selectedAnnotationIndex &&
+                canCarouselRender &&
+                !!renderableAnnotationIndex &&
 
                 /**
                  * If an annotation is selected, always show in popup if it's a

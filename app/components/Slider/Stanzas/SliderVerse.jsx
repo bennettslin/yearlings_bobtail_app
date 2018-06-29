@@ -33,14 +33,16 @@ class SliderVerse extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        if (!nextProps.canSliderRender) {
-            return false
-        }
-        return !getPropsAreShallowEqual(this.props, nextProps)
+        return nextProps.canSliderRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     componentDidUpdate() {
-        console.warn('SliderVerse rendered.')
+        if (this.props.verseIndex === 1) {
+            console.warn('SliderVerse rendered.')
+        }
     }
 
     render() {

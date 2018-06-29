@@ -43,11 +43,33 @@ export const roundPercentage = (rawPercentage) => {
     return Math.round(rawPercentage * 100) / 100
 }
 
-export const getPropsAreShallowEqual = (propsA, propsB) => {
-    for (const key in propsA) {
-        const type = typeof propsA[key]
-        if (type !== 'function' && type !== 'object') {
-            if (propsA[key] !== propsB[key]) {
+export const getPropsAreShallowEqual = ({
+    props = {},
+    nextProps = {},
+
+    // This is a variable index.
+    checkIsShallowEqual,
+
+    // This is a static index.
+    onlyIfSameValueAs
+}) => {
+    for (const key in props) {
+        const doCheck =
+            // Do check if there is no conditional.
+            !checkIsShallowEqual ||
+
+            // Or if this isn't the key that needs to meet the conditional.
+            key !== checkIsShallowEqual ||
+
+            // Or else if the conditional is met.
+            (
+                key === checkIsShallowEqual &&
+                nextProps[key] === nextProps[onlyIfSameValueAs]
+            )
+
+        const type = typeof props[key]
+        if (doCheck && type !== 'function' && type !== 'object') {
+            if (props[key] !== nextProps[key]) {
                 return false
             }
         }

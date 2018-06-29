@@ -9,12 +9,14 @@ import AnnotationTitle from './AnnotationTitle'
 import AnnotationCards from './AnnotationCards'
 
 import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canCarouselRender,
     renderableSongIndex,
     renderableAnnotationIndex
 }) => ({
+    canCarouselRender,
     renderableSongIndex,
     renderableAnnotationIndex
 })
@@ -27,6 +29,7 @@ class Annotation extends Component {
 
     static propTypes = {
         // Through Redux.
+        canCarouselRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         renderableAnnotationIndex: PropTypes.number.isRequired,
 
@@ -35,28 +38,26 @@ class Annotation extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
+        const shouldComponentUpdate =
+            nextProps.canCarouselRender && !getPropsAreShallowEqual({
+                props: this.props,
                 nextProps,
-                updatingPropsArray: [
-
-                    // Container props.
-                    'renderableSongIndex',
-                    {
-                        staticProp: 'carouselAnnotationIndex',
-                        conditionalShouldBe: false,
-                        subUpdatingKey: 'renderableAnnotationIndex'
-                    },
-
-                    // Presentation props.
-                    'isAccessed',
-                    'isSelected'
-                ]
+                checkIsShallowEqual: 'renderableAnnotationIndex',
+                onlyIfSameValueAs: 'carouselAnnotationIndex'
             })
 
-        return componentShouldUpdate
+        return shouldComponentUpdate
+    }
+
+    componentDidUpdate() {
+        const {
+            carouselAnnotationIndex,
+            renderableAnnotationIndex
+        } = this.props
+
+        if (carouselAnnotationIndex === renderableAnnotationIndex) {
+            console.warn('Annotation rendered.')
+        }
     }
 
     render() {

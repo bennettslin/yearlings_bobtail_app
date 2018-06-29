@@ -11,12 +11,14 @@ import { PORTAL } from '../../constants/dots'
 
 import { getCarouselOrPopupCardObject } from '../../helpers/dataHelper'
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canCarouselRender,
     renderableSongIndex,
     renderableAnnotationIndex
 }) => ({
+    canCarouselRender,
     renderableSongIndex,
     renderableAnnotationIndex
 })
@@ -29,6 +31,7 @@ class AnnotationCard extends Component {
 
     static propTypes = {
         // Through Redux.
+        canCarouselRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         renderableAnnotationIndex: PropTypes.number.isRequired,
 
@@ -38,22 +41,26 @@ class AnnotationCard extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
+        const shouldComponentUpdate =
+            nextProps.canCarouselRender && !getPropsAreShallowEqual({
+                props: this.props,
                 nextProps,
-                updatingPropsArray: [
-                    'renderableSongIndex',
-                    {
-                        staticProp: 'carouselAnnotationIndex',
-                        conditionalShouldBe: false,
-                        subUpdatingKey: 'renderableAnnotationIndex'
-                    }
-                ]
+                checkIsShallowEqual: 'renderableAnnotationIndex',
+                onlyIfSameValueAs: 'carouselAnnotationIndex'
             })
 
-        return componentShouldUpdate
+        return shouldComponentUpdate
+    }
+
+    componentDidUpdate() {
+        const {
+            carouselAnnotationIndex,
+            renderableAnnotationIndex
+        } = this.props
+
+        if (carouselAnnotationIndex === renderableAnnotationIndex) {
+            console.warn('AnnotationCard rendered.')
+        }
     }
 
     render() {

@@ -27,6 +27,13 @@ TODO:
 * scene
 * score
 
+* Have transitions dependent on isRendered class that is dependent on canRender in Redux state and parent hasRendered in component state
+    * Parent transitions
+    * Child transitions
+
+* Carousel annotation ref in logue bug.
+* Get rid of Live classes.
+
 * Changing scenes
 * Rest of players
 * Immediate scrolling (Lyric scrolling upon mount is currently broken)

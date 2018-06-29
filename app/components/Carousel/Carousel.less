@@ -5,30 +5,36 @@
 .Carousel {
     position: absolute;
     left: 0;
-    bottom: -100%;
     width: 100vw;
-    height: height__chivalry;
 
     // Allows the lyric to scroll when carousel has higher z-index.
     z-index: @zIndex__carousel;
 
-    transition: bottom @animationDuration__slow,
-                opacity @animationDuration__default;
     opacity: 0;
+
+    .RM__desktop
+    & {
+        bottom: -100%;
+
+        /**
+         * FIXME: Not sure why this was needed, but there is no bottom margin
+         * when it is used.
+         */
+        // height: @height__chivalry;
+
+        transition:
+            bottom @animationDuration__default,
+            opacity @animationDuration__fast;
+    }
 
     .RM__mobileNotPhone
     & {
-        bottom: auto;
-        transition: top @animationDuration__slow,
-                    opacity @animationDuration__default;
-
         top: -100%;
         height: 100%;
-    }
 
-    .RM__carouselNavShowable.RM__carouselExpanded.RM__renderable
-    & {
-        opacity: 1;
+        transition:
+            top @animationDuration__default,
+            opacity @animationDuration__fast;
     }
 
     .RM__desktop.RM__carouselNavShowable.RM__carouselExpanded
@@ -39,6 +45,11 @@
     .RM__mobileNotPhone.RM__carouselNavShowable.RM__carouselExpanded
     & {
         top: 0;
+    }
+
+    .LM__carouselCanRender
+    & {
+        opacity: 1;
     }
 }
 

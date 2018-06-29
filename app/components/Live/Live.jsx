@@ -3,8 +3,9 @@
  * should not update.
  */
 
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
@@ -31,12 +32,26 @@ import {
 } from './liveHelper'
 
 const mapStateToProps = ({
-    isRenderable
+    isRenderable,
+    canTheatreRender,
+    canMainRender,
+    canSliderRender,
+    canLyricRender,
+    canCarouselRender,
+    canSceneRender
 }) => ({
-    isRenderable
+    isRenderable,
+    canTheatreRender,
+    canMainRender,
+    canSliderRender,
+    canLyricRender,
+    canCarouselRender,
+    canSceneRender
 })
 
 class Live extends Component {
+
+    // Prop types are on the bottom because the list is too long.
 
     constructor(props) {
         super(props)
@@ -104,19 +119,38 @@ class Live extends Component {
 
     render() {
         const {
-            annotationPopupHandlers,
-            lyricColumnHandlers,
-            mainColumnHandlers,
-            menuFieldHandlers,
-            overviewPopupHandlers,
-            scorePopupHandlers,
-            theatreHandlers,
-            titlePopupHandlers,
-            wikiPopupHandlers
-        } = getOrganisedHandlersFromProps(this.props)
+                canTheatreRender,
+                canMainRender,
+                canSliderRender,
+                canLyricRender,
+                canCarouselRender,
+                canSceneRender
+            } = this.props,
+
+            {
+                annotationPopupHandlers,
+                lyricColumnHandlers,
+                mainColumnHandlers,
+                menuFieldHandlers,
+                overviewPopupHandlers,
+                scorePopupHandlers,
+                theatreHandlers,
+                titlePopupHandlers,
+                wikiPopupHandlers
+            } = getOrganisedHandlersFromProps(this.props)
 
         return (
-            <Fragment>
+            <div
+                className={cx(
+                    'Live',
+                    canTheatreRender && 'LM__theatreCanRender',
+                    canMainRender && 'LM__mainCanRender',
+                    canSliderRender && 'LM__sliderCanRender',
+                    canLyricRender && 'LM__lyricCanRender',
+                    canCarouselRender && 'LM__carouselCanRender',
+                    canSceneRender && 'LM__sceneCanRender'
+                )}
+            >
                 <div className="PopupOverlay" />
 
                 <Theatre {...theatreHandlers}
@@ -150,15 +184,21 @@ class Live extends Component {
 
                 {/* Prevent popup interaction when slider is touched. */}
                 <div className="TouchOverlay" />
-            </Fragment>
+            </div>
         )
     }
 }
 
-// I'd rather have this at the bottom since it's so long.
 Live.propTypes = {
     // Through Redux.
     isRenderable: PropTypes.bool.isRequired,
+    canTheatreRender: PropTypes.bool.isRequired,
+    canMainRender: PropTypes.bool.isRequired,
+    canSliderRender: PropTypes.bool.isRequired,
+    canLyricRender: PropTypes.bool.isRequired,
+    canCarouselRender: PropTypes.bool.isRequired,
+    canSceneRender: PropTypes.bool.isRequired,
+
     setCanRenderTheatre: PropTypes.func.isRequired,
     setCanRenderMain: PropTypes.func.isRequired,
     setCanRenderSlider: PropTypes.func.isRequired,

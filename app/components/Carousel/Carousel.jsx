@@ -9,7 +9,10 @@ import CarouselAnnotation from './CarouselAnnotation'
 import CarouselSelect from './CarouselSelect'
 
 import { getAnnotationsCount } from '../../helpers/dataHelper'
-import { getArrayOfLength, getComponentShouldUpdate } from '../../helpers/generalHelper'
+import {
+    getArrayOfLength,
+    getPropsAreShallowEqual
+} from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
@@ -43,21 +46,12 @@ class Carousel extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'isHiddenCarouselNav',
-                    'renderableSongIndex',
-                    'accessedAnnotationIndex',
-                    'renderableAnnotationIndex',
-                    'canCarouselRender'
-                ]
-            })
-
-        return componentShouldUpdate
+        return nextProps.canCarouselRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
+
 
     componentDidUpdate(prevProps) {
         if (this.props.canCarouselRender && !prevProps.canCarouselRender) {
@@ -77,7 +71,10 @@ class Carousel extends Component {
                 handleAnnotationPrevious,
                 handleAnnotationNext,
 
+                /* eslint-disable no-unused-vars */
                 canCarouselRender,
+                carouselDidRender,
+                /* eslint-enable no-unused-vars */
 
                 ...other } = this.props
 
@@ -95,7 +92,7 @@ class Carousel extends Component {
                 length: annotationsCount
             })
 
-        return canCarouselRender ? (
+        return (
             <div
                 className={cx(
                     'Carousel',
@@ -130,7 +127,7 @@ class Carousel extends Component {
                     handleAnnotationNext={handleAnnotationNext}
                 />
             </div>
-        ) : null
+        )
     }
 }
 
