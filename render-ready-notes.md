@@ -27,12 +27,14 @@ TODO:
 * scene
 * score
 
-* Have transitions dependent on isRendered class that is dependent on canRender in Redux state and parent hasRendered in component state
+* Have transitions dependent on isRendered class that is dependent on canRender in Redux state and parent hasRendered in component state. Doesn't seem to work during initial attempt with Slider.
+
     * Parent transitions
     * Child transitions
+    * Get rid of RM__unrenderable
 
 * Carousel annotation ref in logue bug.
-* Get rid of Live classes.
+* Deal with weirdness related to having two Sliders.
 
 * Changing scenes
 * Rest of players

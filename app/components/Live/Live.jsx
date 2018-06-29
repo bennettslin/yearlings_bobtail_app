@@ -3,9 +3,8 @@
  * should not update.
  */
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
@@ -32,21 +31,9 @@ import {
 } from './liveHelper'
 
 const mapStateToProps = ({
-    isRenderable,
-    canTheatreRender,
-    canMainRender,
-    canSliderRender,
-    canLyricRender,
-    canCarouselRender,
-    canSceneRender
+    isRenderable
 }) => ({
-    isRenderable,
-    canTheatreRender,
-    canMainRender,
-    canSliderRender,
-    canLyricRender,
-    canCarouselRender,
-    canSceneRender
+    isRenderable
 })
 
 class Live extends Component {
@@ -119,38 +106,19 @@ class Live extends Component {
 
     render() {
         const {
-                canTheatreRender,
-                canMainRender,
-                canSliderRender,
-                canLyricRender,
-                canCarouselRender,
-                canSceneRender
-            } = this.props,
-
-            {
-                annotationPopupHandlers,
-                lyricColumnHandlers,
-                mainColumnHandlers,
-                menuFieldHandlers,
-                overviewPopupHandlers,
-                scorePopupHandlers,
-                theatreHandlers,
-                titlePopupHandlers,
-                wikiPopupHandlers
-            } = getOrganisedHandlersFromProps(this.props)
+            annotationPopupHandlers,
+            lyricColumnHandlers,
+            mainColumnHandlers,
+            menuFieldHandlers,
+            overviewPopupHandlers,
+            scorePopupHandlers,
+            theatreHandlers,
+            titlePopupHandlers,
+            wikiPopupHandlers
+        } = getOrganisedHandlersFromProps(this.props)
 
         return (
-            <div
-                className={cx(
-                    'Live',
-                    canTheatreRender && 'LM__theatreCanRender',
-                    canMainRender && 'LM__mainCanRender',
-                    canSliderRender && 'LM__sliderCanRender',
-                    canLyricRender && 'LM__lyricCanRender',
-                    canCarouselRender && 'LM__carouselCanRender',
-                    canSceneRender && 'LM__sceneCanRender'
-                )}
-            >
+            <Fragment>
                 <div className="PopupOverlay" />
 
                 <Theatre {...theatreHandlers}
@@ -184,7 +152,7 @@ class Live extends Component {
 
                 {/* Prevent popup interaction when slider is touched. */}
                 <div className="TouchOverlay" />
-            </div>
+            </Fragment>
         )
     }
 }
@@ -192,12 +160,6 @@ class Live extends Component {
 Live.propTypes = {
     // Through Redux.
     isRenderable: PropTypes.bool.isRequired,
-    canTheatreRender: PropTypes.bool.isRequired,
-    canMainRender: PropTypes.bool.isRequired,
-    canSliderRender: PropTypes.bool.isRequired,
-    canLyricRender: PropTypes.bool.isRequired,
-    canCarouselRender: PropTypes.bool.isRequired,
-    canSceneRender: PropTypes.bool.isRequired,
 
     setCanRenderTheatre: PropTypes.func.isRequired,
     setCanRenderMain: PropTypes.func.isRequired,

@@ -48,7 +48,6 @@ AudioBanner = ({
 
             <div className={cx(
                 'AudioBanner__display',
-                // 'gradientMask__audioBanner',
                 'absoluteFullContainer',
                 'flexAlignContainer'
             )}>

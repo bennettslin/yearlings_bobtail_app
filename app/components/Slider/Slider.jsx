@@ -10,6 +10,8 @@ import SliderStanzas from './Stanzas/SliderStanzas'
 import SliderTimes from './Times/SliderTimes'
 import SliderAccess from './SliderAccess'
 
+// import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+
 const mapStateToProps = ({
     canSliderRender
 }) => ({
@@ -30,20 +32,49 @@ class Slider extends Component {
     constructor(props) {
         super(props)
 
+        this.state = {
+            // This prevents unnecessary transitions before slider is shown.
+            isSliderShown: false
+        }
+
         this._handleTouchDown = this._handleTouchDown.bind(this)
     }
 
-    shouldComponentUpdate(nextProps) {
-        return this.props.canSliderRender !== nextProps.canSliderRender
-    }
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     return (
+    //         nextProps.canSliderRender && !(
+    //             getPropsAreShallowEqual({
+    //                 props: this.props,
+    //                 nextProps
+    //             }) &&
+    //             getPropsAreShallowEqual({
+    //                 props: this.state,
+    //                 nextProps: nextState
+    //             })
+    //         )
+    //     )
+    // }
 
     componentDidUpdate(prevProps) {
-        if (this.props.canSliderRender && !prevProps.canSliderRender) {
+        const { canSliderRender } = this.props,
+            { canSliderRender: couldSliderRender } = prevProps
+
+        if (canSliderRender && !couldSliderRender) {
             console.warn('Slider rendered.')
 
             setTimeout(
                 this.props.sliderDidRender, 0
             )
+
+            this.setState({
+                isSliderShown: true
+            })
+
+        } else if (couldSliderRender && !canSliderRender) {
+
+            this.setState({
+                isSliderShown: false
+            })
         }
     }
 
@@ -52,10 +83,16 @@ class Slider extends Component {
     }
 
     render() {
+        const { canSliderRender } = this.props,
+            { isSliderShown } = this.state
+
         return (
             <div
                 className={cx(
-                    'Slider'
+                    'Slider',
+                    {
+                        'Slider__isShown': canSliderRender && isSliderShown
+                    }
                 )}
                 ref={(node) => (this.mySlider = node)}
                 onMouseDown={this._handleTouchDown}
