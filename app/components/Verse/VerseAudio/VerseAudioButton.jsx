@@ -66,10 +66,6 @@ class VerseAudioButton extends Component {
         })
     }
 
-    componentDidUpdate() {
-        console.warn('VerseAudioButton rendered.')
-    }
-
     _handleAudioButtonClick(e) {
 
         if (this.props.isInteractivated) {

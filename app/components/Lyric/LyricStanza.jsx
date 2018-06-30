@@ -50,10 +50,6 @@ class LyricStanza extends Component {
         })
     }
 
-    componentDidUpdate() {
-        console.warn('LyricStanza rendered.')
-    }
-
     render() {
         const {
                 /* eslint-disable no-unused-vars */

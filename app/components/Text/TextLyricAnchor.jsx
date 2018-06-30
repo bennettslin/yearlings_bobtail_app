@@ -57,10 +57,6 @@ class TextLyricAnchor extends Component {
         return nextProps.canLyricRender
     }
 
-    componentDidUpdate() {
-        console.warn('TextLyricAnchor rendered.')
-    }
-
     _handleAnchorClick(e) {
 
         const { wikiIndex,

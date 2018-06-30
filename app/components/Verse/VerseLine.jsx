@@ -63,10 +63,6 @@ class VerseLine extends Component {
         })
     }
 
-    componentDidUpdate() {
-        console.warn('VerseLine rendered.')
-    }
-
     /**
      * NOTE: There is still some lingering weirdness with calculating width,
      * but only in Chrome and Safari, it seems.

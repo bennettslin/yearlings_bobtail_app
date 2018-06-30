@@ -46,11 +46,6 @@ class LyricStanzaDot extends Component {
         return nextProps.canLyricRender
     }
 
-    componentDidUpdate() {
-        console.warn('LyricStanzaDot rendered.')
-    }
-
-
     _handleDotButtonClick(e) {
         const { dotStanzaObject,
                 renderableAnnotationIndex } = this.props,

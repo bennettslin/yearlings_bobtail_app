@@ -81,8 +81,6 @@ class Verse extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        console.warn('Verse rendered.')
-
         if (!prevProps.isOnCursor) {
             this._handleSetVerseElement()
         }
