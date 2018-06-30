@@ -5,16 +5,23 @@
 
 .NavColumn {
     height: @js__height__nav;
+    opacity: 0;
 
     .RM__desktop
     & {
-        transition: bottom @animationDuration__default;
+        transition:
+            bottom @animationDuration__default,
+            opacity @animationDuration__default;
+
         bottom: -@js__height__nav;
     }
 
     .RM__mobileNotPhone
     & {
-        transition: top @animationDuration__default;
+        transition:
+            top @animationDuration__default,
+            opacity @animationDuration__default;
+
         top: -@js__height__nav;
     }
 
@@ -36,6 +43,10 @@
 
 // Hide both carousel and nav in logues.
 .RM__carouselNavShowable.RM__navExpanded {
+
+    .NavColumn {
+        opacity: 1;
+    }
 
     &.RM__mobileNotPhone {
         .NavColumn {

@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Selected verse is not highlighted when verse bar is up. Check Vegan as good example.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Use spread instead of assign, uninstall assign. https://stackoverflow.com/questions/32925460/object-spread-vs-object-assign`,
         workedHours: 0,
         neededHours: 1

@@ -11,7 +11,7 @@ import cx from 'classnames'
 import TitleToggle from '../Title/TitleToggle'
 import Audio from '../Audio/Audio'
 import ScoresTips from '../ScoresTips/ScoresTips'
-import AudioBanner from '../Audio/AudioBanner'
+// import AudioBanner from '../Audio/AudioBanner'
 
 import { getMenuMarginInOverlay } from '../../helpers/responsiveHelper'
 
@@ -29,7 +29,7 @@ const menuPropTypes = {
     titleToggleHandlers: PropTypes.object.isRequired,
     audioHandlers: PropTypes.object.isRequired,
     scoresTipsHandlers: PropTypes.object.isRequired,
-    audioBannerHandlers: PropTypes.object.isRequired,
+    // audioBannerHandlers: PropTypes.object.isRequired,
 
     sliderDidRender: PropTypes.func.isRequired
 },
@@ -39,7 +39,7 @@ Menu = ({
     titleToggleHandlers,
     audioHandlers,
     scoresTipsHandlers,
-    audioBannerHandlers,
+    // audioBannerHandlers,
     sliderDidRender
 }) => {
 
@@ -63,7 +63,7 @@ Menu = ({
                 }}
             >
                 {/* Positioned earlier in DOM to slide behind menu. */}
-                <div className={cx(
+                {/* <div className={cx(
                     'MenuRow',
                     'MenuBottomRow'
                 )}>
@@ -71,7 +71,7 @@ Menu = ({
                         isMenuBottomRow
                         sliderDidRender={sliderDidRender}
                     />
-                </div>
+                </div> */}
 
                 <div
                     className={cx(

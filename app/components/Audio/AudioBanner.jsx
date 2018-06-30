@@ -22,16 +22,16 @@ const audioBannerPropTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
-    isAudioChild: PropTypes.bool,
-    isMenuBottomRow: PropTypes.bool
+    // isAudioChild: PropTypes.bool,
+    // isMenuBottomRow: PropTypes.bool
 },
 
 AudioBanner = ({
 
     isTwoRowMenu,
     selectedSongIndex,
-    isAudioChild,
-    isMenuBottomRow,
+    // isAudioChild,
+    // isMenuBottomRow,
 
 ...other }) => {
 
@@ -39,11 +39,15 @@ AudioBanner = ({
         songIndex: selectedSongIndex
     })
 
-    return Boolean(isMenuBottomRow) === isTwoRowMenu && (
+    return (
         <div className={cx(
             'AudioBanner',
             'absoluteFullContainer',
-            { 'Audio__child': isAudioChild }
+            {
+                'MenuRow': isTwoRowMenu,
+                'MenuBottomRow': isTwoRowMenu,
+                'Audio__child': !isTwoRowMenu
+            }
         )}>
 
             <div className={cx(

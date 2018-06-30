@@ -8,9 +8,14 @@
 
     z-index: @zIndex__carouselNavButton;
 
+    opacity: 0;
+
     .RM__desktop
     & {
-        transition: bottom @animationDuration__default;
+        transition:
+            bottom @animationDuration__default,
+            opacity @animationDuration__default;
+
         bottom:
             -@js__length__iconLarge
             - @js__margin__thin * 2
@@ -22,10 +27,18 @@
 
     .RM__mobileNotPhone
     & {
-        transition: top @animationDuration__default;
+        transition:
+            top @animationDuration__default,
+            opacity @animationDuration__default;
+
         top:
             -@js__length__iconLarge__tablet
             - @js__margin__thin * 2;
+    }
+
+    .RM__song.RM__annotationShown.RM__carouselExpanded
+    & {
+        opacity: 1;
     }
 
     .RM__desktop.RM__song.RM__annotationShown.RM__carouselExpanded
