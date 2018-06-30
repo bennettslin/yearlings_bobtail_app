@@ -43,6 +43,7 @@ class LyricColumn extends Component {
             isTransitioningHeight: false,
             scrollTimeoutId: null,
             isShown: false,
+            waitForShowTimeoutId: '',
             didRenderTimeoutId: ''
         }
 
@@ -64,17 +65,21 @@ class LyricColumn extends Component {
         if (canLyricRender && !couldRender) {
             console.warn('LyricColumn rendered.')
 
-            // Set timeout to prevent children transitions before render.
-            setTimeout(this._waitForShowBeforeRender, 50)
-
+            clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)
 
-            // Wait for parent to transition before continuing render sequence.
-            const didRenderTimeoutId = setTimeout(
-                this.props.lyricDidRender, 100
-            )
+            const
+                // Set timeout to prevent children transitions before render.
+                waitForShowTimeoutId = setTimeout(
+                    this._waitForShowBeforeRender, 50
+                ),
+                // Wait for parent transition before continuing render sequence.
+                didRenderTimeoutId = setTimeout(
+                    this.props.lyricDidRender, 100
+                )
 
             this.setState({
+                waitForShowTimeoutId,
                 didRenderTimeoutId
             })
 

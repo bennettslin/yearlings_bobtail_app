@@ -32,6 +32,7 @@ class Slider extends Component {
 
         this.state = {
             isShown: false,
+            waitForShowTimeoutId: '',
             didRenderTimeoutId: ''
         }
 
@@ -46,17 +47,21 @@ class Slider extends Component {
         if (canSliderRender && !couldRender) {
             console.warn('Slider rendered.')
 
-            // Set timeout to prevent children transitions before render.
-            setTimeout(this._waitForShowBeforeRender, 50)
-
+            clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)
 
-            // Wait for parent to transition before continuing render sequence.
-            const didRenderTimeoutId = setTimeout(
-                this.props.sliderDidRender, 100
-            )
+            const
+                // Set timeout to prevent children transitions before render.
+                waitForShowTimeoutId = setTimeout(
+                    this._waitForShowBeforeRender, 50
+                ),
+                // Wait for parent transition before continuing render sequence.
+                didRenderTimeoutId = setTimeout(
+                    this.props.sliderDidRender, 100
+                )
 
             this.setState({
+                waitForShowTimeoutId,
                 didRenderTimeoutId
             })
 

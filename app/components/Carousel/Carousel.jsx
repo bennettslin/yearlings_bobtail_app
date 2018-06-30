@@ -47,6 +47,7 @@ class Carousel extends Component {
 
         this.state = {
             isShown: false,
+            waitForShowTimeoutId: '',
             didRenderTimeoutId: ''
         }
 
@@ -62,17 +63,21 @@ class Carousel extends Component {
         if (canCarouselRender && !couldRender) {
             console.warn('Carousel rendered.')
 
-            // Set timeout to prevent children transitions before render.
-            setTimeout(this._waitForShowBeforeRender, 50)
-
+            clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)
 
-            // Wait for parent to transition before continuing render sequence.
-            const didRenderTimeoutId = setTimeout(
-                this.props.carouselDidRender, 100
-            )
+            const
+                // Set timeout to prevent children transitions before render.
+                waitForShowTimeoutId = setTimeout(
+                    this._waitForShowBeforeRender, 50
+                ),
+                // Wait for parent transition before continuing render sequence.
+                didRenderTimeoutId = setTimeout(
+                    this.props.carouselDidRender, 100
+                )
 
             this.setState({
+                waitForShowTimeoutId,
                 didRenderTimeoutId
             })
 
