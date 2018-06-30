@@ -47,28 +47,26 @@ export const getPropsAreShallowEqual = ({
     props = {},
     nextProps = {},
 
-    // This is a variable index.
-    checkIsShallowEqual,
+    // This is an object of keys to be checked...
+    checkIsShallowEqual = {},
 
-    // This is a static index.
-    onlyIfSameValueAs
+    // ... only if this conditional is true.
+    onlyOnCondition
 }) => {
     for (const key in props) {
+
         const doCheck =
-            // Do check if there is no conditional.
-            !checkIsShallowEqual ||
+            // Do check if this isn't a key affected by the conditional...
+            !checkIsShallowEqual[key] ||
 
-            // Or if this isn't the key that needs to meet the conditional.
-            key !== checkIsShallowEqual ||
+            // ... or if it is and the conditional has been met.
+            (checkIsShallowEqual[key] && onlyOnCondition),
 
-            // Or else if the conditional is met.
-            (
-                key === checkIsShallowEqual &&
-                nextProps[key] === nextProps[onlyIfSameValueAs]
-            )
+            type = typeof props[key]
 
-        const type = typeof props[key]
         if (doCheck && type !== 'function' && type !== 'object') {
+
+            // If there is a single mismatch, return false.
             if (props[key] !== nextProps[key]) {
                 return false
             }

@@ -59,7 +59,7 @@ class VerseAudioButton extends Component {
     }
 
     componentDidUpdate() {
-        console.warn('VerseAudioButton rendered.', this.props.verseIndex)
+        // console.warn('VerseAudioButton rendered.', this.props.verseIndex)
     }
 
     // shouldComponentUpdate(nextProps) {
