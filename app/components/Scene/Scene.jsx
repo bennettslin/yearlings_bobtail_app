@@ -36,6 +36,10 @@ class Scene extends Component {
         sceneDidRender: PropTypes.func.isRequired
     }
 
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canSceneRender
+    }
+
     componentDidUpdate(prevProps) {
         if (this.props.canSceneRender && !prevProps.canSceneRender) {
             console.warn('Scene rendered.')

@@ -1,6 +1,6 @@
 // Section to show a single slice of the scene.
 
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -66,34 +66,33 @@ const SceneAction = ({
 
                 const presence = presences && presences[`yIndex${yIndex}`]
 
-                return [(
-                    <Cubes {...other}
-                        key={`ceiling_${yIndex}`}
-                        yIndex={yIndex}
-                        bitmapKeys={ceilingBitmapKeys}
-                        zIndices={ceilingZIndices}
-                        oppositeZIndices={floorZIndices}
-                        slantDirection={slantDirection}
-                    />
-                ), (
-                    <Cubes {...other}
-                        key={`floor_${yIndex}`}
-                        isFloor
-                        yIndex={yIndex}
-                        bitmapKeys={floorBitmapKeys}
-                        zIndices={floorZIndices}
-                        oppositeZIndices={ceilingZIndices}
-                        slantDirection={slantDirection}
-                    />
-                ), presence && (
-                    <Presence {...other}
-                        key={`action_${yIndex}`}
-                        yIndex={yIndex}
-                        presence={presence}
-                        zIndices={floorZIndices}
-                        slantDirection={slantDirection}
-                    />
-                )]
+                return (
+                    <Fragment key={yIndex}>
+                        <Cubes {...other}
+                            yIndex={yIndex}
+                            bitmapKeys={ceilingBitmapKeys}
+                            zIndices={ceilingZIndices}
+                            oppositeZIndices={floorZIndices}
+                            slantDirection={slantDirection}
+                        />
+                        <Cubes {...other}
+                            isFloor
+                            yIndex={yIndex}
+                            bitmapKeys={floorBitmapKeys}
+                            zIndices={floorZIndices}
+                            oppositeZIndices={ceilingZIndices}
+                            slantDirection={slantDirection}
+                        />
+                        {presence && (
+                            <Presence {...other}
+                                yIndex={yIndex}
+                                presence={presence}
+                                zIndices={floorZIndices}
+                                slantDirection={slantDirection}
+                            />
+                        )}
+                    </Fragment>
+                )
             })}
         </div>
     )

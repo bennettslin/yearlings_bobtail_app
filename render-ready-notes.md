@@ -18,6 +18,10 @@ When selecting a song:
     * lyrics, don't scroll
     * carousel, if shown, don't scroll
     * scene
+        * sky
+        * cubes by row
+            * row by column?
+        * actions
     * score
 
 TODO:
@@ -29,13 +33,13 @@ TODO:
     * Parent transitions
     * Child transitions
 
-TODO now:
+TODO later:
 * Changing scenes
 * Rest of players
 * Immediate scrolling (Lyric scrolling upon mount is currently broken)
 * Persist cube's base coordinates, as they will always be the same
-* Window resizing
-* Resizing in theatre
+* Window resizing in theatre
 * Mounting different from updating
 * Move relevant actions and reducers
-* Prioritise order of carousel and lyrics if not shown
+
+* Reprioritise order of carousel and lyrics if not shown
