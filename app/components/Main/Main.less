@@ -24,7 +24,7 @@
 
     .RM__twoRowMenu
     & {
-        top: @js__height__menu__twoRowMenu;
+        top: @js__topOffset__twoRowMenu;
     }
 
     .RM__mobile.RM__lyricHeighted
@@ -34,25 +34,25 @@
 
     .RM__mini.RM__twoRowMenu
     & {
-        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu__twoRowMenu})";
+        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__topOffset__twoRowMenu})";
     }
 
     .RM__laptop.RM__twoRowMenu
     &,
     .RM__lyricHeightless.RM__twoRowMenu
     & {
-        height: ~"calc(100% - @{js__height__menu__twoRowMenu})";
+        height: ~"calc(100% - @{js__topOffset__twoRowMenu})";
     }
 
     .RM__phone
     & {
-        top: @js__height__menu__phone;
-        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__height__menu__phone})";
+        top: @js__topOffset__twoRowMenu__phone;
+        height: ~"calc(100% - @{js__height__lyricCollapsed} - @{js__topOffset__twoRowMenu__phone})";
     }
 
     .RM__phone.RM__lyricHeightless
     & {
-        height: ~"calc(100% - @{js__height__menu__phone})";
+        height: ~"calc(100% - @{js__topOffset__twoRowMenu__phone})";
     }
 }
 

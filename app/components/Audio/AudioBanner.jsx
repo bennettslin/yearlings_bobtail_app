@@ -37,11 +37,11 @@ AudioBanner = ({
         <div className={cx(
             'AudioBanner',
             'absoluteFullContainer',
-            isTwoRowMenu ? 'MenuBottomRow' : 'Audio__child'
+            isTwoRowMenu ? 'AudioBanner__belowMenu' : 'Audio__child'
         )}>
 
             <div className={cx(
-                'AudioBanner__display',
+                'AudioBannerDisplay',
                 'absoluteFullContainer',
                 'flexAlignContainer'
             )}>

@@ -19,8 +19,8 @@ import { PHONE_CLASS,
 
          LS_HEIGHT_LYRIC_COLLAPSED,
          LS_HEIGHT_MENU,
-         LS_HEIGHT_MENU_TWO_ROW_MENU,
-         LS_HEIGHT_MENU_PHONE,
+         LS_TOP_OFFSET_TWO_ROW_MENU,
+         LS_TOP_OFFSET_TWO_ROW_MENU_PHONE,
 
          LS_HEIGHT_NAV } from '../constants/responsive'
 
@@ -140,10 +140,10 @@ export const getCentreFieldHeight = ({
     if (getIsTwoRowMenu({ deviceIndex, windowWidth })) {
 
         if (getIsPhone(deviceIndex)) {
-            menuHeight = LS_HEIGHT_MENU_PHONE
+            menuHeight = LS_TOP_OFFSET_TWO_ROW_MENU_PHONE
 
         } else {
-            menuHeight = LS_HEIGHT_MENU_TWO_ROW_MENU
+            menuHeight = LS_TOP_OFFSET_TWO_ROW_MENU
         }
     }
 

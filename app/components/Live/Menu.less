@@ -1,76 +1,74 @@
 // Constants prefixed with js *must* be the same in JavaScript.
-@js__margin__menuChild: 10px;
 @js__height__menu: 72px;
 
 // This works out to 52px;
-@js__height__menuTopRow__phone:
+@js__height__menu__phone:
     @js__length__icon
     + @js__margin__thin * 2;
-
-/**
- * Needed by JavaScript to calculate scores tips in main breakpoints.
- */
-@js__maxWidth__childAudio: 720px; // Arbitrary.
-@js__minWidth__childTitle: 80px; // Arbitrary.
-
-@maxWidth__childTitle: 200px; // Arbitrary.
 
 // Arbitrary for now.
 @js__height__audio:
     @js__height__menu
     - @js__margin__thin * 2;
 
-@js__height__audioBanner__bottomRow: @js__height__audio / 2;
-@js__height__audioSlider__bottomRow: @js__height__audio / 2;
+// Arbitrary for now.
+@js__height__banner__twoRowMenu: @js__height__audio;
 
-// Two row menu in mini. Includes menu and slider.
-@js__height__aboveOverlay__twoRowMenu:
-    @js__height__menu
-    + @js__height__audioSlider__bottomRow;
+// Arbitrary for now.
+@js__height__banner__twoRowMenu__truncated: @js__height__banner__twoRowMenu / 2;
 
 // Two row menu in mini. Includes menu, banner, and slider.
-@js__height__menu__twoRowMenu:
-    @js__height__aboveOverlay__twoRowMenu
-    + @js__height__audioBanner__bottomRow;
+@js__topOffset__twoRowMenu:
+    @js__height__menu
+    + @js__height__banner__twoRowMenu;
 
-// Phone always has two rows in menu. Includes menu and slider.
-@js__height__aboveOverlay__phone:
-    @js__height__menuTopRow__phone
-    + @js__height__audioSlider__bottomRow;
+// Two row menu in mini. Includes menu and slider.
+@js__topOffsetTruncated__twoRowMenu:
+    @js__height__menu
+    + @js__height__banner__twoRowMenu__truncated;
 
 // Phone always has two rows in menu. Includes menu, banner, and slider.
-@js__height__menu__phone:
-    @js__height__aboveOverlay__phone
-    + @js__height__audioBanner__bottomRow;
+@js__topOffset__twoRowMenu__phone:
+    @js__height__menu__phone
+    + @js__height__banner__twoRowMenu;
 
-@height__bottomRow:
-    @js__height__audioBanner__bottomRow
-    + @js__height__audioSlider__bottomRow;
+// Phone always has two rows in menu. Includes menu and slider.
+@js__topOffsetTruncated__twoRowMenu__phone:
+    @js__height__menu__phone
+    + @js__height__banner__twoRowMenu__truncated;
+
+/**
+ * Needed by JavaScript to calculate scores tips in main breakpoints.
+ */
+ @js__maxWidth__childAudio: 720px; // Arbitrary.
+ @js__minWidth__childTitle: 80px; // Arbitrary.
+
+ @maxWidth__childTitle: 200px; // Arbitrary.
 
 .Menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: @js__height__menu;
 
     .RM__phone
     & {
-        height: @js__height__menuTopRow__phone;
+        height: @js__height__menu__phone;
     }
-
-    // .RM__twoRowMenu
-    // & {
-    //     height: @js__height__menu__twoRowMenu;
-    // }
-
-    // .RM__phone
-    // & {
-    //     height: @js__height__menu__phone;
-    // }
 }
 
-.MenuRows {
+.Menu__responsive {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: @zIndex__menuField;
+
+    background-color: #8dd;
+
+    transform: translateX(0);
+
+    .RM__scoresTipsMain
+    & {
+        justify-content: space-between;
+    }
 
     transition:
         margin @animationDuration__slow,
@@ -92,41 +90,13 @@
     }
 }
 
-.MenuTopRow {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: @zIndex__menuField;
-
-    // overflow-x: hidden;
-
-    background-color: #8dd;
-
-    transform: translateX(0);
-
-    .RM__twoRowMenu
-    & {
-        // height: @js__height__menu;
-    }
-
-    .RM__phone
-    & {
-        // height: @js__height__menuTopRow__phone;
-    }
-
-    .RM__scoresTipsMain
-    & {
-        justify-content: space-between;
-    }
-}
-
-.MenuTopRow,
-.MenuRowChild__scoresTips {
+.Menu__responsive,
+.MenuChild__scoresTips {
     display: flex;
     align-items: center;
 }
 
-.MenuRowChild {
+.MenuChild {
     height: 100%;
 
     transition:
@@ -135,7 +105,7 @@
         max-width @animationDuration__fast;
 }
 
-.MenuRowChild__title {
+.MenuChild__title {
     position: relative;
 
     flex-grow: 1;
@@ -153,7 +123,9 @@
     }
 }
 
-.MenuRowChild__audio {
+.MenuChild__audio {
+    @margin__menuChild: 10px;
+
     // Audio should shrink at a slower rate than title.
     flex-grow: 10;
 
@@ -165,7 +137,7 @@
     background-color: #8d8;
 
     // Applies to monitor and tablet.
-    margin: 0 @js__margin__menuChild;
+    margin: 0 @margin__menuChild;
 
     .RM__laptop
     &,
@@ -236,7 +208,7 @@
     }
 }
 
-.MenuRowChild__scoresTips {
+.MenuChild__scoresTips {
 
     .RM__scoresTipsMain
     & {
@@ -271,23 +243,23 @@
     }
 }
 
-.MenuBottomRow {
+.AudioBanner__belowMenu {
     position: absolute;
     top: @js__height__menu;
-    height: @height__bottomRow;
+    height: @js__height__banner__twoRowMenu;
 
     transition:
         height @animationDuration__default;
 
     .RM__phone
     & {
-        top: @js__height__menuTopRow__phone;
+        top: @js__height__menu__phone;
     }
 
     .RM__overlayShown
     &,
     .RM__song.RM__lyricExpanded
     & {
-        height: @js__height__audioSlider__bottomRow;
+        height: @js__height__banner__twoRowMenu__truncated;
     }
 }

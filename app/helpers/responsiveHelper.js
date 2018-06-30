@@ -16,8 +16,8 @@ import { PHONE_CLASS,
          LS_WIDTH_UNCANNY_VALLEY,
 
          LS_HEIGHT_MENU,
-         LS_HEIGHT_ABOVE_OVERLAY_PHONE,
-         LS_HEIGHT_ABOVE_OVERLAY_TWO_ROW_MENU,
+         LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE,
+         LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU,
 
          TWO_ROW_MENU_BREAKPOINT_LAPTOP,
          TWO_ROW_MENU_BREAKPOINT_MINI,
@@ -239,10 +239,10 @@ export const getLyricSectionRect = ({
     } else if (getIsTwoRowMenu({ deviceIndex, windowWidth })) {
 
         if (_getIsMini(deviceIndex)) {
-            top = LS_HEIGHT_ABOVE_OVERLAY_TWO_ROW_MENU
+            top = LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU
 
         } else {
-            top = LS_HEIGHT_ABOVE_OVERLAY_PHONE
+            top = LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE
         }
 
     } else {

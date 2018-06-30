@@ -47,56 +47,54 @@ Menu = ({
     const menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
 
     return (
-        <div className="Menu">
-
+        <div
+            className={cx(
+                'Menu',
+                'absoluteFullContainer'
+            )}
+        >
             <div
                 className={cx(
-                    'MenuRows',
+                    'Menu__responsive',
                     'width__mainColumn',
-                    'absoluteFullContainer'
+                    'absoluteFullContainer',
+                    'boxShadow__popupView'
                 )}
                 style={{
                     marginLeft: menuMarginInOverlay,
                     marginRight: menuMarginInOverlay
                 }}
             >
-                <div
-                    className={cx(
-                        'MenuTopRow',
-                        'boxShadow__popupView'
-                    )}
-                >
+                <div className={cx(
+                    'MenuChild__title',
+                    'MenuChild',
+                    'widths__hiddenInOverlay'
+                )}>
                     <div className={cx(
-                        'MenuRowChild__title',
-                        'MenuRowChild',
-                        'widths__hiddenInOverlay'
+                        'MenuChild__title__child',
+                        'absoluteFullContainer'
                     )}>
-                        <div className={cx(
-                            'MenuRowChild__title__child',
-                            'absoluteFullContainer'
-                        )}>
-                            <TitleToggle {...titleToggleHandlers} />
-                        </div>
+                        <TitleToggle {...titleToggleHandlers} />
                     </div>
+                </div>
 
-                    <div className={cx(
-                        'MenuRowChild__audio',
-                        'MenuRowChild'
-                    )}>
-                        <Audio {...audioHandlers}
-                            sliderDidRender={sliderDidRender}
-                        />
-                    </div>
+                <div className={cx(
+                    'MenuChild__audio',
+                    'MenuChild'
+                )}>
+                    <Audio {...audioHandlers}
+                        sliderDidRender={sliderDidRender}
+                    />
+                </div>
 
-                    <div className={cx(
-                        'MenuRowChild__scoresTips',
-                        'MenuRowChild',
-                        'widths__hiddenInOverlay'
-                    )}>
-                        <ScoresTips {...scoresTipsHandlers}
-                            inMenu
-                        />
-                    </div>
+                <div className={cx(
+                    'MenuChild__scoresTips',
+                    'MenuChild',
+                    'widths__hiddenInOverlay'
+                )}>
+                    <ScoresTips {...scoresTipsHandlers}
+                        inMenu
+                    />
                 </div>
             </div>
         </div>
