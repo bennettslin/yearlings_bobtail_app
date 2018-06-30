@@ -8,11 +8,14 @@ import cx from 'classnames'
 import DotAnchor from '../Anchor/DotAnchor'
 
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canLyricRender,
     accessedAnnotationIndex,
     renderableAnnotationIndex
 }) => ({
+    canLyricRender,
     accessedAnnotationIndex,
     renderableAnnotationIndex
 })
@@ -25,6 +28,7 @@ class LyricStanzaDot extends Component {
 
     static propTypes = {
         // Through Redux.
+        canLyricRender: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         renderableAnnotationIndex: PropTypes.number.isRequired,
 
@@ -38,6 +42,18 @@ class LyricStanzaDot extends Component {
 
         this._handleDotButtonClick = this._handleDotButtonClick.bind(this)
     }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
+
+    componentDidUpdate() {
+        console.warn('LyricStanzaDot rendered.')
+    }
+
 
     _handleDotButtonClick(e) {
         const { dotStanzaObject,

@@ -21,19 +21,17 @@
 
     opacity: 0;
 
-    transition:
-        opacity @animationDuration__default,
-        background-color @animationDuration__default,
-        transform @animationDuration__fast;
-
-    .RM__unrenderable
-    & {
-        transition: none;
-    }
-
     .RM__sliderMoving
     & {
         background-color: @bgColour__underline__disabled;
+    }
+
+    .parentIsShown
+    & {
+        transition:
+        opacity @animationDuration__default,
+        background-color @animationDuration__default,
+        transform @animationDuration__fast;
     }
 }
 

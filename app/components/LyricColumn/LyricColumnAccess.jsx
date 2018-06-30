@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import { ALL_DOT_KEYS } from '../../constants/dots'
 import { convertTrueFalseKeysToBitNumber } from '../../helpers/bitHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 import AccessIcons from '../AccessIcon/AccessIcons'
 import { NAVIGATION_ENTER_KEY,
@@ -14,6 +15,7 @@ import { NAVIGATION_ENTER_KEY,
 
 const mapStateToProps = ({
     isLyricExpanded,
+    canLyricRender,
     renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
@@ -21,6 +23,7 @@ const mapStateToProps = ({
     interactivatedVerseIndex
 }) => ({
     isLyricExpanded,
+    canLyricRender,
     renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
@@ -28,95 +31,106 @@ const mapStateToProps = ({
     interactivatedVerseIndex
 })
 
-const lyricAccessPropTypes = {
+class LyricColumnAccess extends Component {
 
-    // From Redux.
-    renderableAnnotationIndex: PropTypes.number.isRequired,
-    selectedCarouselNavIndex: PropTypes.number.isRequired,
-    selectedDotsIndex: PropTypes.number.isRequired,
-    selectedDotKeys: PropTypes.object.isRequired,
-    interactivatedVerseIndex: PropTypes.number.isRequired
-}
+    static propTypes = {
 
-const LyricColumnAccess = ({
+        // From Redux.
+        canLyricRender: PropTypes.bool.isRequired,
+        renderableAnnotationIndex: PropTypes.number.isRequired,
+        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        selectedDotsIndex: PropTypes.number.isRequired,
+        selectedDotKeys: PropTypes.object.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired
+    }
 
-    isLyricExpanded,
-    renderableAnnotationIndex,
-    selectedCarouselNavIndex,
-    selectedDotsIndex,
-    selectedDotKeys,
-    interactivatedVerseIndex
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-}) => {
+    componentDidUpdate() {
+        console.warn('LyricColumnAccess rendered.')
+    }
 
-    const hasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
-            keysArray: ALL_DOT_KEYS,
-            trueFalseObject: selectedDotKeys
-        })),
+    render() {
 
-        showLeftRight = Boolean(
+        const {
+                isLyricExpanded,
+                renderableAnnotationIndex,
+                selectedCarouselNavIndex,
+                selectedDotsIndex,
+                selectedDotKeys,
+                interactivatedVerseIndex
+            } = this.props,
 
-            // Must have at least one selected dot, and no selected annotation.
-            hasSelectedDots && !renderableAnnotationIndex && (
-                (
-                    // Must show carousel and not have dots section open...
-                    selectedCarouselNavIndex &&
-                    !selectedDotsIndex
-                ) || (
-                    // ... or else have lyric section open.
-                    isLyricExpanded
+            hasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
+                keysArray: ALL_DOT_KEYS,
+                trueFalseObject: selectedDotKeys
+            })),
+
+            showLeftRight = Boolean(
+                // Must have at least one selected dot, and no selected annotation.
+                hasSelectedDots && !renderableAnnotationIndex && (
+                    (
+                        // Must show carousel and not have dots section open...
+                        selectedCarouselNavIndex &&
+                        !selectedDotsIndex
+                    ) || (
+                        // ... or else have lyric section open.
+                        isLyricExpanded
+                    )
                 )
+            ),
+
+            // Must not have interactivated verse.
+            showEnter = showLeftRight && interactivatedVerseIndex < 0,
+
+            showUpDown = Boolean(
+                !selectedDotsIndex &&
+                !renderableAnnotationIndex
             )
-        ),
 
-        // Must not have interactivated verse.
-        showEnter = showLeftRight && interactivatedVerseIndex < 0,
-
-        showUpDown = Boolean(
-            !selectedDotsIndex &&
-            !renderableAnnotationIndex
+        return (
+            <Fragment>
+                <AccessIcons
+                    accessIconsName="lyricLeftRightEnter"
+                    inLyric
+                    accessKeys={[
+                        {
+                            accessKey: NAVIGATION_LEFT_KEY,
+                            showIfAccessed: showLeftRight
+                        },
+                        {
+                            accessKey: NAVIGATION_RIGHT_KEY,
+                            showIfAccessed: showLeftRight
+                        },
+                        {
+                            accessKey: NAVIGATION_ENTER_KEY,
+                            showIfAccessed: showEnter,
+                            beginsCluster: true
+                        }
+                    ]}
+                />
+                <AccessIcons
+                    accessIconsName="lyricUpDown"
+                    inLyric
+                    accessKeys={[
+                        {
+                            accessKey: NAVIGATION_UP_KEY,
+                            showIfAccessed: showUpDown
+                        },
+                        {
+                            accessKey: NAVIGATION_DOWN_KEY,
+                            showIfAccessed: showUpDown
+                        }
+                    ]}
+                />
+            </Fragment>
         )
-
-    return [(
-        <AccessIcons
-            key="leftRightEnter"
-            accessIconsName="lyricLeftRightEnter"
-            inLyric
-            accessKeys={[
-                {
-                    accessKey: NAVIGATION_LEFT_KEY,
-                    showIfAccessed: showLeftRight
-                },
-                {
-                    accessKey: NAVIGATION_RIGHT_KEY,
-                    showIfAccessed: showLeftRight
-                },
-                {
-                    accessKey: NAVIGATION_ENTER_KEY,
-                    showIfAccessed: showEnter,
-                    beginsCluster: true
-                }
-            ]}
-        />
-    ), (
-        <AccessIcons
-            key="upDown"
-            accessIconsName="lyricUpDown"
-            inLyric
-            accessKeys={[
-                {
-                    accessKey: NAVIGATION_UP_KEY,
-                    showIfAccessed: showUpDown
-                },
-                {
-                    accessKey: NAVIGATION_DOWN_KEY,
-                    showIfAccessed: showUpDown
-                }
-            ]}
-        />
-    )]
+    }
 }
-
-LyricColumnAccess.propTypes = lyricAccessPropTypes
 
 export default connect(mapStateToProps)(LyricColumnAccess)

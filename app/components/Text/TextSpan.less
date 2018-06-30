@@ -6,12 +6,10 @@
 
     z-index: @zIndex__verseChild__topMost;
 
-    transition: color @animationDuration__default,
-                text-shadow @animationDuration__default;
-
-    .RM__unrenderable
+    .parentIsShown
     & {
-        transition: none;
+        transition: color @animationDuration__default,
+        text-shadow @animationDuration__default;
     }
 }
 

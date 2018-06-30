@@ -6,11 +6,13 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import Texts from '../Text/Texts'
 import { TITLE } from '../../constants/lyrics'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canLyricRender,
     renderableSongIndex
 }) => ({
+    canLyricRender,
     renderableSongIndex
 })
 
@@ -23,6 +25,7 @@ class VerseLine extends Component {
 
     static propTypes = {
         // Through Redux.
+        canLyricRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -37,26 +40,37 @@ class VerseLine extends Component {
         columnKey: PropTypes.string.isRequired
     }
 
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
+
+    componentDidUpdate() {
+        console.warn('VerseLine rendered.')
+    }
+
     /**
      * NOTE: There is still some lingering weirdness with calculating width,
      * but only in Chrome and Safari, it seems.
      */
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'renderableSongIndex',
-                    {
-                        staticProp: 'inVerseBar',
-                        subUpdatingKey: 'text'
-                    }
-                ]
-            })
+    // shouldComponentUpdate(nextProps) {
+    //     const { props } = this,
+    //         componentShouldUpdate = getComponentShouldUpdate({
+    //             props,
+    //             nextProps,
+    //             updatingPropsArray: [
+    //                 'renderableSongIndex',
+    //                 {
+    //                     staticProp: 'inVerseBar',
+    //                     subUpdatingKey: 'text'
+    //                 }
+    //             ]
+    //         })
 
-        return componentShouldUpdate
-    }
+    //     return componentShouldUpdate
+    // }
 
     render() {
         const { columnKey,

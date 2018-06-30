@@ -9,11 +9,16 @@ import omit from 'lodash.omit'
 
 import LyricStanza from './LyricStanza'
 import { getLyricUnitsCount } from '../../helpers/dataHelper'
-import { getArrayOfLength } from '../../helpers/generalHelper'
+import {
+    getArrayOfLength,
+    getPropsAreShallowEqual
+} from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canLyricRender,
     renderableSongIndex
 }) => ({
+    canLyricRender,
     renderableSongIndex
 })
 
@@ -25,6 +30,7 @@ class Lyric extends Component {
 
     static propTypes = {
         // Through Redux.
+        canLyricRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -44,12 +50,21 @@ class Lyric extends Component {
         // )
     }
 
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
+
     /**
      * Not necessary to check shouldComponentUpdate, since the changed props
      * upon which to update are a subset of those in lyric column.
      */
 
     componentDidUpdate(prevProps) {
+        console.warn('Lyric rendered.')
+
         if (
             this.props.isTransitioningHeight &&
             !prevProps.isTransitioningHeight

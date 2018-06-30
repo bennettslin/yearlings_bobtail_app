@@ -36,13 +36,12 @@
 }
 
 .verse__interactable {
-    transition:
+
+    .parentIsShown
+    & {
+        transition:
         color @animationDuration__fast,
         background-color @animationDuration__fast;
-
-    .RM__unrenderable
-    & {
-        transition: none;
     }
 }
 

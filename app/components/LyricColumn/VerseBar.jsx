@@ -6,13 +6,15 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import VerseController from '../Verse/VerseController'
 import { getVerseObject } from '../../helpers/dataHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canLyricRender,
     renderableSongIndex,
     renderableVerseIndex,
     sliderVerseIndex
 }) => ({
+    canLyricRender,
     renderableSongIndex,
     renderableVerseIndex,
     sliderVerseIndex
@@ -26,6 +28,7 @@ class VerseBar extends Component {
 
     static propTypes = {
         // Through Redux.
+        canLyricRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         renderableVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
@@ -37,22 +40,14 @@ class VerseBar extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    /**
-                     * This is passed strictly to tell verse bar when to
-                     * update.
-                     */
-                    'renderableSongIndex',
-                    'renderableVerseIndex',
-                    'sliderVerseIndex'
-                ]
-            })
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-        return componentShouldUpdate
+    componentDidUpdate() {
+        console.warn('VerseBar rendered.')
     }
 
     render() {

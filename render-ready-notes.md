@@ -31,12 +31,16 @@ TODO:
 
     * Parent transitions
     * Child transitions
-    * Get rid of RM__unrenderable
-    * Have generic parentIsShown class?
-    * Clear out old setTimeouts
 
-* Carousel annotation ref in logue bug.
+* Carousel annotation ref in logue bug. Also verse ref.
+* Bug when loading with selected carousel annotation, then clicking body.
 * Deal with weirdness related to having two Sliders.
+* Are the onTransitionEnd things still needed?
+* Still problem with carousel children showing animations before parent is shown. (switch between Grasshoppers and Constellations) ? (Extending timeout of waitForShowBeforeRender seems to help.)
+* Need to clear timeouts for waitForShowBeforeRender as well?
+
+* Fix updating with VerseAudioButton, VerseLine
+* Carousel children updating may be wrong
 
 * Changing scenes
 * Rest of players

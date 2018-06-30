@@ -61,7 +61,7 @@ class Carousel extends Component {
             console.warn('Carousel rendered.')
 
             // Set timeout to prevent children transitions before render.
-            setTimeout(this._waitForShowBeforeRender, 0)
+            setTimeout(this._waitForShowBeforeRender, 50)
 
             clearTimeout(this.state.didRenderTimeoutId)
 
@@ -126,7 +126,6 @@ class Carousel extends Component {
                     'gradientMask__carousel__desktop',
                     { 'parentIsShown': canCarouselRender && isShown }
                 )}
-                onTransitionEnd={this._handleTransition}
             >
                 <div className="Carousel__scrollParent">
 

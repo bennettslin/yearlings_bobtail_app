@@ -3,7 +3,7 @@
  * indices.
  */
 
-import React from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
@@ -12,124 +12,132 @@ import VerseCursor from './VerseCursor'
 import SliderVerse from '../Slider/Stanzas/SliderVerse'
 
 const mapStateToProps = ({
+    canLyricRender,
     renderableVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex
 }) => ({
+    canLyricRender,
     renderableVerseIndex,
     sliderVerseIndex,
     interactivatedVerseIndex
 })
 
-const verseControllerPropTypes = {
-    // Through Redux.
-    renderableVerseIndex: PropTypes.number.isRequired,
-    sliderVerseIndex: PropTypes.number.isRequired,
-    interactivatedVerseIndex: PropTypes.number.isRequired,
+class VerseController extends Component {
 
-    // From parent.
-    inVerseBar: PropTypes.bool,
+    static propTypes = {
+        // Through Redux.
+        canLyricRender: PropTypes.bool.isRequired,
+        renderableVerseIndex: PropTypes.number.isRequired,
+        sliderVerseIndex: PropTypes.number.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired,
 
-    // Passed by SliderStanza.
-    verseIndex: PropTypes.number,
+        // From parent.
+        inVerseBar: PropTypes.bool,
 
-    // Passed by LyricStanzaCard.
-    verseObject: PropTypes.object,
+        // Passed by SliderStanza.
+        verseIndex: PropTypes.number,
 
-    /**
-     * For verses in slider. Verses in lyric will get these values from verse
-     * object.
-     */
-    absoluteStartTime: PropTypes.number,
-    absoluteEndTime: PropTypes.number,
-    fullCursorRatio: PropTypes.number
-},
-
-VerseController = ({
-
-    renderableVerseIndex,
-    sliderVerseIndex,
-    interactivatedVerseIndex,
-    absoluteStartTime,
-    absoluteEndTime,
-    fullCursorRatio,
-
-...other }) => {
-
-    const { inVerseBar,
-            verseIndex,
-            verseObject } = other,
-
-        // Verse needs verseObject, SliderVerse needs verseIndex.
-        VerseComponent = verseObject ? Verse : SliderVerse,
+        // Passed by LyricStanzaCard.
+        verseObject: PropTypes.object,
 
         /**
-         * If verse is in lyric, only show cursor if it has a time value. If
-         * it's in slider, always show cursor.
+         * For verses in slider. Verses in lyric will get these values from verse
+         * object.
          */
-        doRenderCursor = !isNaN(verseIndex) || !isNaN(verseObject.time),
+        absoluteStartTime: PropTypes.number,
+        absoluteEndTime: PropTypes.number,
+        fullCursorRatio: PropTypes.number
+    }
 
-        // Let verse cursor know the verse's start and end times.
-        startTime = verseObject ?
-            verseObject.time : absoluteStartTime,
-        endTime = verseObject ?
-            verseObject.endTime : absoluteEndTime,
+    render() {
 
-        interactableProps = {},
-        verseBarCursorProps = {},
+        const {
 
-        // Lyric verse will have verse object, slider verse won't.
-        controllerVerseIndex =
-            verseObject ? verseObject.verseIndex : verseIndex
+                renderableVerseIndex,
+                sliderVerseIndex,
+                interactivatedVerseIndex,
+                absoluteStartTime,
+                absoluteEndTime,
+                fullCursorRatio,
 
-        /**
-         * Having verseIndex as a top-level prop allows a verse in the verseBar
-         * to know when to update.
-         */
-        if (verseObject) {
-            other.verseIndex = verseObject.verseIndex
-        }
+            ...other } = this.props,
 
-        /**
-         * Tell verse where it is relative to cursor, and if it's
-         * interactivated.
-         */
-        if (!inVerseBar) {
-            const useSliderIndex = sliderVerseIndex > -1,
-                cursorIndex = useSliderIndex ?
-                    sliderVerseIndex : renderableVerseIndex
+            {
+                inVerseBar,
+                verseIndex,
+                verseObject
+            } = other,
 
-            interactableProps.isOnCursor =
-                controllerVerseIndex === cursorIndex
-            interactableProps.isAfterCursor =
-                controllerVerseIndex > cursorIndex
-            interactableProps.isInteractivated =
-                controllerVerseIndex === interactivatedVerseIndex
+            // Verse needs verseObject, SliderVerse needs verseIndex.
+            VerseComponent = verseObject ? Verse : SliderVerse,
 
-        /**
-         * Give each verse in the verse bar a unique key to render a new verse
-         * each time. This ensures that the cursor  will not animate from the
-         * far right for the previous verse to the far left for the next verse.
-         */
-        } else {
-            verseBarCursorProps.key = controllerVerseIndex
-        }
+            /**
+             * If verse is in lyric, only show cursor if it has a time value. If
+             * it's in slider, always show cursor.
+             */
+            doRenderCursor = !isNaN(verseIndex) || !isNaN(verseObject.time),
 
-    return (
-        <VerseComponent {...other} {...interactableProps}>
-            {doRenderCursor && (
-                <VerseCursor {...verseBarCursorProps}
-                    verseOnCursor={inVerseBar || interactableProps.isOnCursor}
-                    verseAfterCursor={interactableProps.isAfterCursor}
-                    startTime={startTime}
-                    endTime={endTime}
-                    fullCursorRatio={fullCursorRatio}
-                />
-            )}
-        </VerseComponent>
-    )
+            // Let verse cursor know the verse's start and end times.
+            startTime = verseObject ?
+                verseObject.time : absoluteStartTime,
+            endTime = verseObject ?
+                verseObject.endTime : absoluteEndTime,
+
+            interactableProps = {},
+            verseBarCursorProps = {},
+
+            // Lyric verse will have verse object, slider verse won't.
+            controllerVerseIndex =
+                verseObject ? verseObject.verseIndex : verseIndex
+
+            /**
+             * Having verseIndex as a top-level prop allows a verse in the verseBar
+             * to know when to update.
+             */
+            if (verseObject) {
+                other.verseIndex = verseObject.verseIndex
+            }
+
+            /**
+             * Tell verse where it is relative to cursor, and if it's
+             * interactivated.
+             */
+            if (!inVerseBar) {
+                const useSliderIndex = sliderVerseIndex > -1,
+                    cursorIndex = useSliderIndex ?
+                        sliderVerseIndex : renderableVerseIndex
+
+                interactableProps.isOnCursor =
+                    controllerVerseIndex === cursorIndex
+                interactableProps.isAfterCursor =
+                    controllerVerseIndex > cursorIndex
+                interactableProps.isInteractivated =
+                    controllerVerseIndex === interactivatedVerseIndex
+
+            /**
+             * Give each verse in the verse bar a unique key to render a new verse
+             * each time. This ensures that the cursor  will not animate from the
+             * far right for the previous verse to the far left for the next verse.
+             */
+            } else {
+                verseBarCursorProps.key = controllerVerseIndex
+            }
+
+        return (
+            <VerseComponent {...other} {...interactableProps}>
+                {doRenderCursor && (
+                    <VerseCursor {...verseBarCursorProps}
+                        verseOnCursor={inVerseBar || interactableProps.isOnCursor}
+                        verseAfterCursor={interactableProps.isAfterCursor}
+                        startTime={startTime}
+                        endTime={endTime}
+                        fullCursorRatio={fullCursorRatio}
+                    />
+                )}
+            </VerseComponent>
+        )
+    }
 }
-
-VerseController.propTypes = verseControllerPropTypes
 
 export default connect(mapStateToProps)(VerseController)

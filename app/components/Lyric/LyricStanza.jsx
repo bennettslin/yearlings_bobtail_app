@@ -9,13 +9,15 @@ import LyricStanzaDot from './LyricStanzaDot'
 import { TITLE } from '../../constants/lyrics'
 import { getLyricUnitArray } from '../../helpers/dataHelper'
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canLyricRender,
     renderableSongIndex,
     renderableVerseIndex,
     sliderVerseIndex
 }) => ({
+    canLyricRender,
     renderableSongIndex,
     renderableVerseIndex,
     sliderVerseIndex
@@ -29,6 +31,7 @@ class LyricStanza extends Component {
 
     static propTypes = {
         // Through Redux.
+        canLyricRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         renderableVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
@@ -38,19 +41,14 @@ class LyricStanza extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'unitIndex',
-                    'renderableSongIndex',
-                    'renderableVerseIndex',
-                    'sliderVerseIndex'
-                ]
-            })
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-        return componentShouldUpdate
+    componentDidUpdate() {
+        console.warn('LyricStanza rendered.')
     }
 
     render() {

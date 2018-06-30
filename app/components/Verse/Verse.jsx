@@ -8,12 +8,18 @@ import cx from 'classnames'
 import VerseLines from './VerseLines'
 import VerseAudio from './VerseAudio/VerseAudio'
 
-import { getVerseUnitClassName, getCursorStatusClassName } from '../../helpers/formatHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import {
+    getVerseUnitClassName,
+    getCursorStatusClassName
+} from '../../helpers/formatHelper'
+
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
+    canLyricRender,
     renderableSongIndex
 }) => ({
+    canLyricRender,
     renderableSongIndex
 })
 
@@ -30,6 +36,7 @@ class Verse extends Component {
 
     static propTypes = {
         // Through Redux.
+        canLyricRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -56,31 +63,21 @@ class Verse extends Component {
         this.getVerseRef = this.getVerseRef.bind(this)
     }
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    // TODO: Possible to update without selected song index?
-                    'renderableSongIndex',
-                    'verseIndex',
-
-                    'isOnCursor',
-                    'isAfterCursor',
-                    'isInteractivated'
-                ]
-            })
-
-        return componentShouldUpdate
-    }
-
     componentDidMount() {
         // Previously done on appMounted check.
         this._handleSetVerseElement()
     }
 
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
+
     componentDidUpdate(prevProps) {
+        console.warn('Verse rendered.')
+
         if (!prevProps.isOnCursor) {
             this._handleSetVerseElement()
         }

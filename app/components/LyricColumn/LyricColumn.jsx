@@ -11,7 +11,6 @@ import LyricToggleExpand from './LyricToggleExpand'
 import LyricToggleScroll from './LyricToggleScroll'
 import Lyric from '../Lyric/Lyric'
 import VerseBar from './VerseBar'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
@@ -34,41 +33,23 @@ class LyricColumn extends Component {
 
         // From parent.
         handleScrollAfterLyricRerender: PropTypes.func.isRequired,
-
         lyricDidRender: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
 
+        this.state = {
+            isTransitioningHeight: false,
+            scrollTimeoutId: null,
+            isShown: false,
+            didRenderTimeoutId: ''
+        }
+
         this._handleScrollAfterLyricRerender = this._handleScrollAfterLyricRerender.bind(this)
         this._handleTransition = this._handleTransition.bind(this)
         this.completeHeightTransition = this.completeHeightTransition.bind(this)
-
-        this.state = {
-            isTransitioningHeight: false,
-            scrollTimeoutId: null
-        }
-    }
-
-    shouldComponentUpdate(nextProps, nextState) {
-        const { props, state } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'isRenderable',
-                    'canLyricRender'
-                ]
-            }) || getComponentShouldUpdate({
-                props: state,
-                nextProps: nextState,
-                updatingPropsArray: [
-                    'isTransitioningHeight'
-                ]
-            })
-
-        return componentShouldUpdate
+        this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
     }
 
     componentDidMount() {
@@ -77,25 +58,50 @@ class LyricColumn extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.canLyricRender && !prevProps.canLyricRender) {
-            console.warn('Lyric rendered.')
+        const { canLyricRender } = this.props,
+            { canLyricRender: couldRender } = prevProps
 
-            setTimeout(
-                this.props.lyricDidRender, 0
+        if (canLyricRender && !couldRender) {
+            console.warn('LyricColumn rendered.')
+
+            // Set timeout to prevent children transitions before render.
+            setTimeout(this._waitForShowBeforeRender, 50)
+
+            clearTimeout(this.state.didRenderTimeoutId)
+
+            // Wait for parent to transition before continuing render sequence.
+            const didRenderTimeoutId = setTimeout(
+                this.props.lyricDidRender, 100
             )
+
+            this.setState({
+                didRenderTimeoutId
+            })
+
+        } else if (couldRender && !canLyricRender) {
+
+            this.setState({
+                isShown: false
+            })
         }
 
         if (!prevProps.isRenderable && this.props.isRenderable) {
+            clearTimeout(this.state.scrollTimeoutId)
+
             const scrollTimeoutId = setTimeout(
                 this._handleScrollAfterLyricRerender, 0
             )
-
-            clearTimeout(this.state.scrollTimeoutId)
 
             this.setState({
                 scrollTimeoutId
             })
         }
+    }
+
+    _waitForShowBeforeRender() {
+        this.setState({
+            isShown: true
+        })
     }
 
     _handleScrollAfterLyricRerender() {
@@ -119,19 +125,24 @@ class LyricColumn extends Component {
     render() {
 
         const {
-            // eslint-disable-next-line no-unused-vars
-            handleScrollAfterLyricRerender,
-            canLyricRender,
-            ...other
-        } = this.props
+                // eslint-disable-next-line no-unused-vars
+                handleScrollAfterLyricRerender,
+                canLyricRender,
+                ...other
+            } = this.props,
 
-        return canLyricRender ? (
+            { isShown } = this.state,
+
+            parentIsShown = canLyricRender && isShown
+
+        return (
             <LyricColumnView {...other}
-                isTransitioningHeight={this.state.isTransitioningHeight}
+                parentIsShown={parentIsShown}
                 handleTransition={this._handleTransition}
+                isTransitioningHeight={this.state.isTransitioningHeight}
                 completeHeightTransition={this.completeHeightTransition}
             />
-        ) : null
+        )
     }
 }
 
@@ -141,9 +152,8 @@ class LyricColumn extends Component {
 
 const lyricColumnViewPropTypes = {
     // From parent.
-    isTransitioningHeight: PropTypes.bool.isRequired,
+    parentIsShown: PropTypes.bool.isRequired,
     handleTransition: PropTypes.func.isRequired,
-    completeHeightTransition: PropTypes.func.isRequired,
 
     handleLyricColumnSelect: PropTypes.func.isRequired,
     handleLyricSectionExpand: PropTypes.func.isRequired,
@@ -162,9 +172,8 @@ LyricColumnView = ({
     handleVerseBarWheel,
 
     // From controller.
-    isTransitioningHeight,
+    parentIsShown,
     handleTransition,
-    completeHeightTransition,
 
 ...other }) => {
 
@@ -179,14 +188,13 @@ LyricColumnView = ({
                 'LyricColumn',
                 'position__lyricColumn__desktop',
                 'position__lyricColumn__mobile',
-                'gradientMask__lyricColumn__desktop'
+                'gradientMask__lyricColumn__desktop',
+
+                { 'parentIsShown': parentIsShown }
             )}
             onTransitionEnd={handleTransition}
         >
-            <Lyric {...other}
-                isTransitioningHeight={isTransitioningHeight}
-                completeHeightTransition={completeHeightTransition}
-            />
+            <Lyric {...other} />
 
             <VerseBar {...verseBarProps}
                 isAbove

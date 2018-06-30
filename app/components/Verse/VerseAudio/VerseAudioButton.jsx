@@ -13,14 +13,16 @@ import Button from '../../Button/Button'
 import { getSongsNotLoguesCount } from '../../../helpers/dataHelper'
 import { getVerseAudioIconText } from '../../../helpers/formatHelper'
 import { getValueInBitNumber } from '../../../helpers/bitHelper'
-import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isPlaying,
+    canLyricRender,
     renderableSongIndex,
     canPlayThroughs
 }) => ({
     isPlaying,
+    canLyricRender,
     renderableSongIndex,
     canPlayThroughs
 })
@@ -30,6 +32,9 @@ class VerseAudioButton extends Component {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
+        canLyricRender: PropTypes.bool.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
+        canPlayThroughs: PropTypes.number.isRequired,
 
         // From parent.
         verseIndex: PropTypes.number.isRequired,
@@ -47,33 +52,44 @@ class VerseAudioButton extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'verseIndex',
-                    'isInteractivated',
-                    'isSelected',
-                    'isAfterSelected',
-                    /**
-                     * Don't need to update on renderableSongIndex, as it's
-                     * only needed to calculate whether song can play through
-                     * when canPlayThroughs is changed.
-                     */
-                    {
-                        staticProp: 'isSelected',
-                        subUpdatingKey: 'isPlaying'
-                    },
-                    {
-                        staticProp: 'isSelected',
-                        subUpdatingKey: 'canPlayThroughs'
-                    }
-                ]
-            })
-
-        return componentShouldUpdate
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
+
+    componentDidUpdate() {
+        console.warn('VerseAudioButton rendered.', this.props.verseIndex)
+    }
+
+    // shouldComponentUpdate(nextProps) {
+    //     const { props } = this,
+    //         componentShouldUpdate = getComponentShouldUpdate({
+    //             props,
+    //             nextProps,
+    //             updatingPropsArray: [
+    //                 'verseIndex',
+    //                 'isInteractivated',
+    //                 'isSelected',
+    //                 'isAfterSelected',
+    //                 /**
+    //                  * Don't need to update on renderableSongIndex, as it's
+    //                  * only needed to calculate whether song can play through
+    //                  * when canPlayThroughs is changed.
+    //                  */
+    //                 {
+    //                     staticProp: 'isSelected',
+    //                     subUpdatingKey: 'isPlaying'
+    //                 },
+    //                 {
+    //                     staticProp: 'isSelected',
+    //                     subUpdatingKey: 'canPlayThroughs'
+    //                 }
+    //             ]
+    //         })
+
+    //     return componentShouldUpdate
+    // }
 
     _handleAudioButtonClick(e) {
 

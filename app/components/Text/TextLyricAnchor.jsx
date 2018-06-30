@@ -8,11 +8,15 @@ import cx from 'classnames'
 import TextAnchor from '../Anchor/TextAnchor'
 import Texts from './Texts'
 
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+
 const mapStateToProps = ({
+    canLyricRender,
     renderableAnnotationIndex,
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex
 }) => ({
+    canLyricRender,
     renderableAnnotationIndex,
     accessedAnnotationIndex,
     accessedAnnotationAnchorIndex
@@ -22,6 +26,7 @@ class TextLyricAnchor extends Component {
 
     static propTypes = {
         // Through Redux.
+        canLyricRender: PropTypes.bool.isRequired,
         renderableAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
@@ -48,6 +53,17 @@ class TextLyricAnchor extends Component {
         super(props)
 
         this._handleAnchorClick = this._handleAnchorClick.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
+
+    componentDidUpdate() {
+        console.warn('TextLyricAnchor rendered.')
     }
 
     _handleAnchorClick(e) {
