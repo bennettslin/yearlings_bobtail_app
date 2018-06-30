@@ -15,13 +15,11 @@
     opacity: 0;
     overflow: hidden;
 
-    transition:
+    .parentIsShown
+    & {
+        transition:
         max-height @animationDuration__default,
         opacity @animationDuration__default;
-
-    .RM__unrenderable
-    & {
-        transition: none;
     }
 }
 

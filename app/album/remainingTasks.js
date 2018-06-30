@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Use spread instead of assign, uninstall assign. https://stackoverflow.com/questions/32925460/object-spread-vs-object-assign`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Finalise how Liz's hair drapes over face.`,
         workedHours: 0,
         neededHours: 2

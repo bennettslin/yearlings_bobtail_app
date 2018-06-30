@@ -91,7 +91,7 @@ class Slider extends Component {
                 className={cx(
                     'Slider',
                     {
-                        'Slider__isShown': canSliderRender && isSliderShown
+                        'parentIsShown': canSliderRender && isSliderShown
                     }
                 )}
                 ref={(node) => (this.mySlider = node)}

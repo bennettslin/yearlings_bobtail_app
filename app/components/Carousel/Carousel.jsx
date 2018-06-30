@@ -9,10 +9,7 @@ import CarouselAnnotation from './CarouselAnnotation'
 import CarouselSelect from './CarouselSelect'
 
 import { getAnnotationsCount } from '../../helpers/dataHelper'
-import {
-    getArrayOfLength,
-    getPropsAreShallowEqual
-} from '../../helpers/generalHelper'
+import { getArrayOfLength } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
@@ -45,22 +42,50 @@ class Carousel extends Component {
         carouselDidRender: PropTypes.func.isRequired
     }
 
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canCarouselRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isShown: false,
+            didRenderTimeoutId: ''
+        }
+
+        this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
     }
 
-
     componentDidUpdate(prevProps) {
-        if (this.props.canCarouselRender && !prevProps.canCarouselRender) {
+        const { canCarouselRender } = this.props,
+            { canCarouselRender: couldRender } = prevProps
+
+        if (canCarouselRender && !couldRender) {
             console.warn('Carousel rendered.')
 
-            setTimeout(
-                this.props.carouselDidRender, 0
+            // Set timeout to prevent children transitions before render.
+            setTimeout(this._waitForShowBeforeRender, 0)
+
+            clearTimeout(this.state.didRenderTimeoutId)
+
+            // Wait for parent to transition before continuing render sequence.
+            const didRenderTimeoutId = setTimeout(
+                this.props.carouselDidRender, 100
             )
+
+            this.setState({
+                didRenderTimeoutId
+            })
+
+        } else if (couldRender && !canCarouselRender) {
+
+            this.setState({
+                isShown: false
+            })
         }
+    }
+
+    _waitForShowBeforeRender() {
+        this.setState({
+            isShown: true
+        })
     }
 
     render() {
@@ -76,7 +101,9 @@ class Carousel extends Component {
                 carouselDidRender,
                 /* eslint-enable no-unused-vars */
 
-                ...other } = this.props
+                ...other } = this.props,
+
+            { isShown } = this.state
 
         if (isHiddenCarouselNav) {
             return null
@@ -96,7 +123,8 @@ class Carousel extends Component {
             <div
                 className={cx(
                     'Carousel',
-                    'gradientMask__carousel__desktop'
+                    'gradientMask__carousel__desktop',
+                    { 'parentIsShown': canCarouselRender && isShown }
                 )}
                 onTransitionEnd={this._handleTransition}
             >

@@ -32,6 +32,8 @@ TODO:
     * Parent transitions
     * Child transitions
     * Get rid of RM__unrenderable
+    * Have generic parentIsShown class?
+    * Clear out old setTimeouts
 
 * Carousel annotation ref in logue bug.
 * Deal with weirdness related to having two Sliders.
@@ -40,6 +42,7 @@ TODO:
 * Rest of players
 * Immediate scrolling (Lyric scrolling upon mount is currently broken)
 * Persist cube's base coordinates, as they will always be the same
+* Window resizing
 * Resizing in theatre
 * Mounting different from updating
 * Move relevant actions and reducers

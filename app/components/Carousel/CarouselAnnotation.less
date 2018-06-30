@@ -8,17 +8,15 @@
 
     min-width: 0;
 
-    transition: min-width @animationDuration__default,
-                opacity @animationDuration__default;
-
     .RM__mobileNotPhone
     & {
         flex-direction: column;
     }
 
-    .RM__unrenderable
+    .parentIsShown
     & {
-        transition: none;
+        transition: min-width @animationDuration__default,
+        opacity @animationDuration__default;
     }
 }
 
