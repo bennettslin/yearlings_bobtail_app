@@ -98,7 +98,7 @@ class Players extends Component {
             mp3s = getMp3s()
 
         return (
-            <div className="hiddenContainer">
+            <div className="Players">
                 {mp3s.map((mp3, index) => {
                     const songIndex = index + 1,
                         isSelected = songIndex === selectedSongIndex,

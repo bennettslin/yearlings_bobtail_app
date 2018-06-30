@@ -41,6 +41,7 @@ TODO now:
 * Are the onTransitionEnd things still needed?
 * Still problem with carousel children showing animations before parent is shown. (switch between Grasshoppers and Constellations) ? (Extending timeout of waitForShowBeforeRender seems to help.)
 * Need to clear timeouts for waitForShowBeforeRender as well?
+* Slider stanza heights should not be transitioning between songs!
 
 * Changing scenes
 * Rest of players

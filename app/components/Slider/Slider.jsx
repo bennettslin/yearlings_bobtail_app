@@ -31,34 +31,47 @@ class Slider extends Component {
         super(props)
 
         this.state = {
-            // This prevents unnecessary transitions before slider is shown.
-            isSliderShown: false
+            isShown: false,
+            didRenderTimeoutId: ''
         }
 
         this._handleTouchDown = this._handleTouchDown.bind(this)
+        this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
     }
 
     componentDidUpdate(prevProps) {
         const { canSliderRender } = this.props,
-            { canSliderRender: couldSliderRender } = prevProps
+            { canSliderRender: couldRender } = prevProps
 
-        if (canSliderRender && !couldSliderRender) {
+        if (canSliderRender && !couldRender) {
             console.warn('Slider rendered.')
 
-            setTimeout(
-                this.props.sliderDidRender, 0
+            // Set timeout to prevent children transitions before render.
+            setTimeout(this._waitForShowBeforeRender, 50)
+
+            clearTimeout(this.state.didRenderTimeoutId)
+
+            // Wait for parent to transition before continuing render sequence.
+            const didRenderTimeoutId = setTimeout(
+                this.props.sliderDidRender, 100
             )
 
             this.setState({
-                isSliderShown: true
+                didRenderTimeoutId
             })
 
-        } else if (couldSliderRender && !canSliderRender) {
+        } else if (couldRender && !canSliderRender) {
 
             this.setState({
-                isSliderShown: false
+                isShown: false
             })
         }
+    }
+
+    _waitForShowBeforeRender() {
+        this.setState({
+            isShown: true
+        })
     }
 
     _handleTouchDown(e) {
@@ -67,14 +80,14 @@ class Slider extends Component {
 
     render() {
         const { canSliderRender } = this.props,
-            { isSliderShown } = this.state
+            { isShown } = this.state
 
         return (
             <div
                 className={cx(
                     'Slider',
                     {
-                        'parentIsShown': canSliderRender && isSliderShown
+                        'parentIsShown': canSliderRender && isShown
                     }
                 )}
                 ref={(node) => (this.mySlider = node)}
