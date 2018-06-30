@@ -53,6 +53,8 @@ class Carousel extends Component {
         this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
     }
 
+    // No shouldComponentUpdate necessary.
+
     componentDidUpdate(prevProps) {
         const { canCarouselRender } = this.props,
             { canCarouselRender: couldRender } = prevProps

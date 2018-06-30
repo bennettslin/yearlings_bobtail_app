@@ -35,7 +35,10 @@ class AnnotationCards extends Component {
     shouldComponentUpdate(nextProps) {
         return nextProps.canCarouselRender && !getPropsAreShallowEqual({
             props: this.props,
-            nextProps
+            nextProps,
+            alwaysBypassCheck: {
+                carouselAnnotationIndex: true
+            }
         })
     }
 

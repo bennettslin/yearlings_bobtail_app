@@ -52,6 +52,11 @@ class AnnotationPortal extends Component {
             nextProps.canCarouselRender && !getPropsAreShallowEqual({
                 props: this.props,
                 nextProps,
+                alwaysBypassCheck: {
+                    cardIndex: true,
+                    carouselAnnotationIndex: true,
+                    portalLinkIndex: true
+                },
                 checkIsShallowEqual: {
                     renderableAnnotationIndex: true
                 },

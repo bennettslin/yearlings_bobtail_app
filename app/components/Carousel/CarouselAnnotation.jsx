@@ -48,7 +48,10 @@ class CarouselAnnotation extends Component {
     shouldComponentUpdate(nextProps) {
         return nextProps.canCarouselRender && !getPropsAreShallowEqual({
             props: this.props,
-            nextProps
+            nextProps,
+            alwaysBypassCheck: {
+                annotationIndex: true
+            }
         })
     }
 

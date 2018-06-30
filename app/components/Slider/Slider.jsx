@@ -10,8 +10,6 @@ import SliderStanzas from './Stanzas/SliderStanzas'
 import SliderTimes from './Times/SliderTimes'
 import SliderAccess from './SliderAccess'
 
-// import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
-
 const mapStateToProps = ({
     canSliderRender
 }) => ({
@@ -39,21 +37,6 @@ class Slider extends Component {
 
         this._handleTouchDown = this._handleTouchDown.bind(this)
     }
-
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     return (
-    //         nextProps.canSliderRender && !(
-    //             getPropsAreShallowEqual({
-    //                 props: this.props,
-    //                 nextProps
-    //             }) &&
-    //             getPropsAreShallowEqual({
-    //                 props: this.state,
-    //                 nextProps: nextState
-    //             })
-    //         )
-    //     )
-    // }
 
     componentDidUpdate(prevProps) {
         const { canSliderRender } = this.props,
