@@ -31,7 +31,7 @@ class VerseBar extends Component {
         sliderVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
-        isAbove: PropTypes.bool,
+        isAbove: PropTypes.bool.isRequired,
         handleVerseBarSelect: PropTypes.func.isRequired,
         handleVerseBarWheel: PropTypes.func.isRequired
     }

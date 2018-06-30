@@ -6,11 +6,11 @@ import cx from 'classnames'
 
 import { getFormattedLyricSpanText, getFormattedEndingVerseSpanText } from '../../helpers/formatHelper'
 
-const textSpanDefaultProps = {
+const defaultProps = {
     isVerseLyric: false
 },
 
-textSpanPropTypes = {
+propTypes = {
     // From parent.
     text: PropTypes.string.isRequired,
     isVerseLyric: PropTypes.bool,
@@ -74,7 +74,7 @@ TextSpan = ({
     )
 }
 
-TextSpan.defaultProps = textSpanDefaultProps
-TextSpan.propTypes = textSpanPropTypes
+TextSpan.defaultProps = defaultProps
+TextSpan.propTypes = propTypes
 
 export default TextSpan

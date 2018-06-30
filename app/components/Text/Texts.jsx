@@ -8,7 +8,7 @@ import Text from './Text'
  * CONTAINER *
  *************/
 
-const textsPropTypes = {
+const propTypes = {
     // From parent.
     text: PropTypes.oneOfType([
         PropTypes.string,
@@ -38,6 +38,6 @@ Texts = ({
     )
 }
 
-Texts.propTypes = textsPropTypes
+Texts.propTypes = propTypes
 
 export default Texts
