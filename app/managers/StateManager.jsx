@@ -31,6 +31,10 @@ import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
 import {
+    getSongIsLogue
+} from '../helpers/dataHelper'
+
+import {
     getObjectOfSongIndices
 } from '../helpers/logicHelper'
 
@@ -205,6 +209,10 @@ class StateManager extends Component {
      */
 
     getCarouselAnnotationRef(node, songIndex, annotationIndex) {
+        if (getSongIsLogue(songIndex)) {
+            return
+        }
+
         if (node) {
             this.myCarouselAnnotationElements[songIndex][annotationIndex] = node
         } else {
@@ -221,6 +229,10 @@ class StateManager extends Component {
     }
 
     getVerseRef(node, songIndex, verseIndex) {
+        if (getSongIsLogue(songIndex)) {
+            return
+        }
+
         if (node) {
             this.myVerseElements[songIndex][verseIndex] = node
         } else {
@@ -230,12 +242,17 @@ class StateManager extends Component {
 
     scrollElementIntoView(payload) {
         const {
-                selectedSongIndex
-            } = this.props,
-            {
-                scrollClass,
-                index
-            } = payload
+            selectedSongIndex
+        } = this.props
+
+        if (getSongIsLogue(selectedSongIndex)) {
+            return
+        }
+
+        const {
+            scrollClass,
+            index
+        } = payload
 
         let elementsArray
 

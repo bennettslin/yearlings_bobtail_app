@@ -22,25 +22,16 @@ When selecting a song:
 
 TODO:
 * theatre
-* lyric
-* carousel
 * scene
 * score
 
-* Have transitions dependent on isRendered class that is dependent on canRender in Redux state and parent hasRendered in component state. Doesn't seem to work during initial attempt with Slider, maybe because there are two sliders?
-
+* Have transitions dependent on isRendered class that is dependent on canRender in Redux state and parent hasRendered in component state.
     * Parent transitions
     * Child transitions
 
 TODO now:
-* Carousel annotation ref in logue bug. Also verse ref.
-* Bug when loading with selected carousel annotation, then clicking body.
-
 * Deal with weirdness related to having two Sliders.
-* Are the onTransitionEnd things still needed?
-* Still problem with carousel children showing animations before parent is shown. (switch between Grasshoppers and Constellations) ? (Extending timeout of waitForShowBeforeRender seems to help.)
 * Need to clear timeouts for waitForShowBeforeRender as well?
-* Slider stanza heights should not be transitioning between songs!
 
 * Changing scenes
 * Rest of players
