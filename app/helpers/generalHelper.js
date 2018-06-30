@@ -47,6 +47,9 @@ export const getPropsAreShallowEqual = ({
     props = {},
     nextProps = {},
 
+    // This is an object of keys to never check.
+    alwaysBypassCheck = {},
+
     // This is an object of keys to be checked...
     checkIsShallowEqual = {},
 
@@ -55,12 +58,18 @@ export const getPropsAreShallowEqual = ({
 }) => {
     for (const key in props) {
 
+        // Do check if...
         const doCheck =
-            // Do check if this isn't a key affected by the conditional...
-            !checkIsShallowEqual[key] ||
 
-            // ... or if it is and the conditional has been met.
-            (checkIsShallowEqual[key] && onlyOnCondition),
+            // ... it's not being bypassed, and...
+            !alwaysBypassCheck[key] && (
+
+                // ... if this isn't a key affected by the conditional, or...
+                !checkIsShallowEqual[key] ||
+
+                // ... if it is, and the conditional has been met.
+                (checkIsShallowEqual[key] && onlyOnCondition)
+            ),
 
             type = typeof props[key]
 

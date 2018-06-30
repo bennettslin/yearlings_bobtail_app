@@ -35,7 +35,6 @@ TODO:
 TODO now:
 * Carousel annotation ref in logue bug. Also verse ref.
 * Bug when loading with selected carousel annotation, then clicking body.
-* Fix updating with VerseAudioButton, VerseLine
 * Make sure to bypass keys intended to be bypassed
 
 * Deal with weirdness related to having two Sliders.

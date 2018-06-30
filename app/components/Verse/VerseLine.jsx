@@ -43,7 +43,11 @@ class VerseLine extends Component {
     shouldComponentUpdate(nextProps) {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
-            nextProps
+            nextProps,
+            checkIsShallowEqual: {
+                text: true,
+            },
+            onlyOnCondition: nextProps.inVerseBar
         })
     }
 
@@ -55,22 +59,6 @@ class VerseLine extends Component {
      * NOTE: There is still some lingering weirdness with calculating width,
      * but only in Chrome and Safari, it seems.
      */
-    // shouldComponentUpdate(nextProps) {
-    //     const { props } = this,
-    //         componentShouldUpdate = getComponentShouldUpdate({
-    //             props,
-    //             nextProps,
-    //             updatingPropsArray: [
-    //                 'renderableSongIndex',
-    //                 {
-    //                     staticProp: 'inVerseBar',
-    //                     subUpdatingKey: 'text'
-    //                 }
-    //             ]
-    //         })
-
-    //     return componentShouldUpdate
-    // }
 
     render() {
         const { columnKey,

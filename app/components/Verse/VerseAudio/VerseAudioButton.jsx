@@ -54,42 +54,21 @@ class VerseAudioButton extends Component {
     shouldComponentUpdate(nextProps) {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
-            nextProps
+            nextProps,
+            alwaysBypassCheck: {
+                renderableSongIndex: true
+            },
+            checkIsShallowEqual: {
+                isPlaying: true,
+                canPlayThroughs: true
+            },
+            onlyOnCondition: nextProps.isSelected
         })
     }
 
     componentDidUpdate() {
-        // console.warn('VerseAudioButton rendered.', this.props.verseIndex)
+        console.warn('VerseAudioButton rendered.')
     }
-
-    // shouldComponentUpdate(nextProps) {
-    //     const { props } = this,
-    //         componentShouldUpdate = getComponentShouldUpdate({
-    //             props,
-    //             nextProps,
-    //             updatingPropsArray: [
-    //                 'verseIndex',
-    //                 'isInteractivated',
-    //                 'isSelected',
-    //                 'isAfterSelected',
-    //                 /**
-    //                  * Don't need to update on renderableSongIndex, as it's
-    //                  * only needed to calculate whether song can play through
-    //                  * when canPlayThroughs is changed.
-    //                  */
-    //                 {
-    //                     staticProp: 'isSelected',
-    //                     subUpdatingKey: 'isPlaying'
-    //                 },
-    //                 {
-    //                     staticProp: 'isSelected',
-    //                     subUpdatingKey: 'canPlayThroughs'
-    //                 }
-    //             ]
-    //         })
-
-    //     return componentShouldUpdate
-    // }
 
     _handleAudioButtonClick(e) {
 
