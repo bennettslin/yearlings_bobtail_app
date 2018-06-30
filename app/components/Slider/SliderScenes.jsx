@@ -28,10 +28,6 @@ class SliderScenes extends Component {
         return nextProps.canSliderRender
     }
 
-    componentDidUpdate() {
-        console.warn('SliderScenes rendered.')
-    }
-
     render() {
         const { renderableSongIndex } = this.props,
             totalTime = getSongTotalTime(renderableSongIndex),

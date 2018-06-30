@@ -39,10 +39,6 @@ class SliderTimes extends Component {
         return nextProps.canSliderRender
     }
 
-    componentDidUpdate() {
-        console.warn('SliderTimes rendered.')
-    }
-
     render() {
 
         const {

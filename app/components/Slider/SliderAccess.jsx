@@ -32,10 +32,6 @@ class SliderAccess extends Component {
         return nextProps.canSliderRender
     }
 
-    componentDidUpdate() {
-        console.warn('SliderAccess rendered.')
-    }
-
     render() {
         const {
                 renderableSongIndex,

@@ -39,12 +39,6 @@ class SliderVerse extends Component {
         })
     }
 
-    componentDidUpdate() {
-        if (this.props.verseIndex === 1) {
-            console.warn('SliderVerse rendered.')
-        }
-    }
-
     render() {
 
         const { isOnCursor,
