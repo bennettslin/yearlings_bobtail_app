@@ -42,7 +42,10 @@ class VerseBar extends Component {
     shouldComponentUpdate(nextProps) {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
-            nextProps
+            nextProps,
+            alwaysBypassCheck: {
+                isAbove: true
+            }
         })
     }
 

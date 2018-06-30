@@ -71,7 +71,12 @@ class Verse extends Component {
     shouldComponentUpdate(nextProps) {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
-            nextProps
+            nextProps,
+            alwaysBypassCheck: {
+                inMain: true,
+                isTruncatable: true,
+                inVerseBar: true
+            }
         })
     }
 
@@ -199,7 +204,6 @@ verseViewPropTypes = {
 VerseView = ({
 
     // From controller.
-    verseIndex,
     verseClassName,
     isInteractable,
 
@@ -217,7 +221,10 @@ VerseView = ({
 
 ...other }) => {
 
-    const { inVerseBar } = other,
+    const {
+        inVerseBar,
+        verseIndex
+    } = other,
 
         cursorStatusClassName = hasCursorStyling && getCursorStatusClassName({
             isOnCursor,

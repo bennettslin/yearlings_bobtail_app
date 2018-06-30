@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 import { ALL_DOT_KEYS } from '../../constants/dots'
 import { convertTrueFalseKeysToBitNumber } from '../../helpers/bitHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 import AccessIcons from '../AccessIcon/AccessIcons'
 import { NAVIGATION_ENTER_KEY,
@@ -45,10 +44,7 @@ class LyricColumnAccess extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
+        return nextProps.canLyricRender
     }
 
     componentDidUpdate() {

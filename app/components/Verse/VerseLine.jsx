@@ -35,6 +35,9 @@ class VerseLine extends Component {
             PropTypes.object
         ]).isRequired,
 
+        // This is passed for verse bar to know when to update.
+        verseIndex: PropTypes.number,
+
         isTruncatable: PropTypes.bool.isRequired,
         inVerseBar: PropTypes.bool.isRequired,
         columnKey: PropTypes.string.isRequired
@@ -44,8 +47,17 @@ class VerseLine extends Component {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
             nextProps,
+            alwaysBypassCheck: {
+                isTruncatable: true,
+                inVerseBar: true,
+                isTitle: true,
+                isVerseBeginningSpan: true,
+                isVerseEndingSpan: true,
+                columnKey: true,
+                text: true
+            },
             checkIsShallowEqual: {
-                text: true,
+                verseIndex: true
             },
             onlyOnCondition: nextProps.inVerseBar
         })
@@ -61,9 +73,14 @@ class VerseLine extends Component {
      */
 
     render() {
-        const { columnKey,
-                isTruncatable,
-                ...other } = this.props
+        const {
+            // eslint-disable-next-line no-unused-vars
+            verseIndex,
+
+            columnKey,
+            isTruncatable,
+            ...other
+        } = this.props
 
         /**
          * TODO: Can this truncatable functionality be done without having to

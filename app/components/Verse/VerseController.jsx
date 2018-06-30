@@ -42,8 +42,8 @@ class VerseController extends Component {
         verseObject: PropTypes.object,
 
         /**
-         * For verses in slider. Verses in lyric will get these values from verse
-         * object.
+         * For verses in slider. Verses in lyric will get these values from
+         * verse object.
          */
         absoluteStartTime: PropTypes.number,
         absoluteEndTime: PropTypes.number,
@@ -51,7 +51,6 @@ class VerseController extends Component {
     }
 
     render() {
-
         const {
 
                 renderableVerseIndex,

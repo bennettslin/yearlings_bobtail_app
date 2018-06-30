@@ -8,7 +8,6 @@ import cx from 'classnames'
 import DotAnchor from '../Anchor/DotAnchor'
 
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
@@ -44,10 +43,7 @@ class LyricStanzaDot extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
+        return nextProps.canLyricRender
     }
 
     componentDidUpdate() {

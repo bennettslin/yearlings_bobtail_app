@@ -20,7 +20,7 @@ module.exports = [
 
     {
         taskName: `Improve sequential rendering.`,
-        workedHours: 20,
+        workedHours: 22,
         neededHours: 25
     },
 

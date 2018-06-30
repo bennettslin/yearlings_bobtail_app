@@ -125,9 +125,14 @@ class LyricColumn extends Component {
     render() {
 
         const {
-                // eslint-disable-next-line no-unused-vars
+                /* eslint-disable no-unused-vars */
                 handleScrollAfterLyricRerender,
+                isRenderable,
+                lyricDidRender,
+                /* eslint-enable no-unused-vars */
+
                 canLyricRender,
+
                 ...other
             } = this.props,
 

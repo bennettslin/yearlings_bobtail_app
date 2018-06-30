@@ -43,7 +43,10 @@ class LyricStanza extends Component {
     shouldComponentUpdate(nextProps) {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
-            nextProps
+            nextProps,
+            alwaysBypassCheck: {
+                isLastStanza: true
+            }
         })
     }
 
@@ -52,11 +55,17 @@ class LyricStanza extends Component {
     }
 
     render() {
-        const { renderableSongIndex,
+        const {
+                /* eslint-disable no-unused-vars */
+                canLyricRender,
+                /* eslint-enable no-unused-vars */
+
+                renderableSongIndex,
                 renderableVerseIndex,
                 sliderVerseIndex,
                 unitIndex,
-                ...other } = this.props,
+                ...other
+            } = this.props,
 
             unitArray = getLyricUnitArray(renderableSongIndex, unitIndex),
 

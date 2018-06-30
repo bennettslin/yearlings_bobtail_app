@@ -1,14 +1,12 @@
 // Container for text anchor.
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import TextAnchor from '../Anchor/TextAnchor'
 import Texts from './Texts'
-
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
@@ -56,10 +54,7 @@ class TextLyricAnchor extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
+        return nextProps.canLyricRender
     }
 
     componentDidUpdate() {
@@ -120,16 +115,14 @@ class TextLyricAnchor extends Component {
         }
 
         // This space will not display if it starts the verse line.
-        return [(
+        return (
+            <Fragment>
                 <span
-                    key="space"
                     className="anchorSpace"
                 >
                     {' '}
                 </span>
-            ), (
                 <TextAnchor
-                    key="anchor"
                     className={cx(
                         annotationIndex &&
                             `LyricAnnotation__scrollChild__${annotationIndex}`,
@@ -147,7 +140,8 @@ class TextLyricAnchor extends Component {
                     isSelected={isSelected}
                     handleAnchorClick={this._handleAnchorClick}
                 />
-            )]
+            </Fragment>
+        )
     }
 }
 

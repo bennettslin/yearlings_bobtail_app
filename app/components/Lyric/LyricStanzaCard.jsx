@@ -6,8 +6,6 @@ import cx from 'classnames'
 
 import VerseController from '../Verse/VerseController'
 
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
-
 /*************
  * CONTAINER *
  *************/
@@ -34,26 +32,7 @@ class LyricStanzaCard extends Component {
         isSubstanza: PropTypes.bool.isRequired
     }
 
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'stanzaIndex',
-                    'stanzaType',
-                    'substanzaType',
-                    'sideStanzaType',
-                    'sideSubstanzaType',
-                    'subsequent',
-                    'stanzaArray',
-                    'inMain',
-                    'isSubstanza',
-                ]
-            })
-
-        return componentShouldUpdate
-    }
+    // No shouldComponentUpdate necessary.
 
     render() {
 
