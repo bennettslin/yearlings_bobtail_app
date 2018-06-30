@@ -19,19 +19,13 @@ const mapStateToProps = ({
 const audioBannerPropTypes = {
     // Through Redux.
     isTwoRowMenu: PropTypes.bool.isRequired,
-    selectedSongIndex: PropTypes.number.isRequired,
-
-    // From parent.
-    // isAudioChild: PropTypes.bool,
-    // isMenuBottomRow: PropTypes.bool
+    selectedSongIndex: PropTypes.number.isRequired
 },
 
 AudioBanner = ({
 
     isTwoRowMenu,
     selectedSongIndex,
-    // isAudioChild,
-    // isMenuBottomRow,
 
 ...other }) => {
 
@@ -43,11 +37,7 @@ AudioBanner = ({
         <div className={cx(
             'AudioBanner',
             'absoluteFullContainer',
-            {
-                'MenuRow': isTwoRowMenu,
-                'MenuBottomRow': isTwoRowMenu,
-                'Audio__child': !isTwoRowMenu
-            }
+            isTwoRowMenu ? 'MenuBottomRow' : 'Audio__child'
         )}>
 
             <div className={cx(

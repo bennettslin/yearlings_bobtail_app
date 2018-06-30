@@ -30,8 +30,6 @@ TODO:
     * Child transitions
 
 TODO now:
-* Deal with weirdness related to having two Sliders.
-
 * Changing scenes
 * Rest of players
 * Immediate scrolling (Lyric scrolling upon mount is currently broken)

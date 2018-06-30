@@ -42,10 +42,6 @@ export const getOrganisedHandlersFromProps = (props) => {
         stopPropagation
     } = props,
 
-    titleToggleHandlers = {
-        handleTitleToggle
-    },
-
     annotationPopupHandlers = {
         handleAnnotationPrevious,
         handleAnnotationNext,
@@ -56,6 +52,9 @@ export const getOrganisedHandlersFromProps = (props) => {
 
     audioBannerHandlers = {
         handleSliderTouchBegin
+    },
+    titleToggleHandlers = {
+        handleTitleToggle
     },
     audioHandlers = {
         handleAudioPlay,
@@ -151,8 +150,7 @@ export const getOrganisedHandlersFromProps = (props) => {
     menuFieldHandlers = {
         titleToggleHandlers,
         audioHandlers,
-        scoresTipsHandlers,
-        audioBannerHandlers
+        scoresTipsHandlers
     }
 
     return {

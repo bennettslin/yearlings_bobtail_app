@@ -2,6 +2,11 @@
 @js__margin__menuChild: 10px;
 @js__height__menu: 72px;
 
+// This works out to 52px;
+@js__height__menuTopRow__phone:
+    @js__length__icon
+    + @js__margin__thin * 2;
+
 /**
  * Needed by JavaScript to calculate scores tips in main breakpoints.
  */
@@ -9,11 +14,6 @@
 @js__minWidth__childTitle: 80px; // Arbitrary.
 
 @maxWidth__childTitle: 200px; // Arbitrary.
-
-// This works out to 52px;
-@js__height__menuTopRow__phone:
-    @js__length__icon
-    + @js__margin__thin * 2;
 
 // Arbitrary for now.
 @js__height__audio:
@@ -54,15 +54,20 @@
     width: 100%;
     height: @js__height__menu;
 
-    .RM__twoRowMenu
-    & {
-        height: @js__height__menu__twoRowMenu;
-    }
-
     .RM__phone
     & {
-        height: @js__height__menu__phone;
+        height: @js__height__menuTopRow__phone;
     }
+
+    // .RM__twoRowMenu
+    // & {
+    //     height: @js__height__menu__twoRowMenu;
+    // }
+
+    // .RM__phone
+    // & {
+    //     height: @js__height__menu__phone;
+    // }
 }
 
 .MenuRows {
@@ -87,16 +92,13 @@
     }
 }
 
-.MenuRow {
-    z-index: @zIndex__menuField;
-    width: 100%;
-}
-
 .MenuTopRow {
     position: relative;
+    width: 100%;
     height: 100%;
+    z-index: @zIndex__menuField;
 
-    overflow: hidden;
+    // overflow-x: hidden;
 
     background-color: #8dd;
 
@@ -104,12 +106,12 @@
 
     .RM__twoRowMenu
     & {
-        height: @js__height__menu;
+        // height: @js__height__menu;
     }
 
     .RM__phone
     & {
-        height: @js__height__menuTopRow__phone;
+        // height: @js__height__menuTopRow__phone;
     }
 
     .RM__scoresTipsMain
@@ -128,6 +130,7 @@
     height: 100%;
 
     transition:
+        opacity @animationDuration__fast,
         min-width @animationDuration__fast,
         max-width @animationDuration__fast;
 }
@@ -264,20 +267,27 @@
         width: 0;
         min-width: 0;
         max-width: 0;
+        opacity: 0;
     }
 }
 
 .MenuBottomRow {
     position: absolute;
-    bottom: 0;
+    top: @js__height__menu;
     height: @height__bottomRow;
 
-    transition: bottom @animationDuration__default;
+    transition:
+        height @animationDuration__default;
+
+    .RM__phone
+    & {
+        top: @js__height__menuTopRow__phone;
+    }
 
     .RM__overlayShown
     &,
     .RM__song.RM__lyricExpanded
     & {
-        bottom: @js__height__audioBanner__bottomRow;
+        height: @js__height__audioSlider__bottomRow;
     }
 }

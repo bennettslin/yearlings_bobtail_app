@@ -48,7 +48,6 @@ Audio = ({
             )}
 
             <AudioBanner {...audioBannerHandlers}
-                // isAudioChild
                 sliderDidRender={sliderDidRender}
             />
             <AudioButtons {...other} />

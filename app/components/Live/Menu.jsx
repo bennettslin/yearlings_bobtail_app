@@ -29,7 +29,6 @@ const menuPropTypes = {
     titleToggleHandlers: PropTypes.object.isRequired,
     audioHandlers: PropTypes.object.isRequired,
     scoresTipsHandlers: PropTypes.object.isRequired,
-    // audioBannerHandlers: PropTypes.object.isRequired,
 
     sliderDidRender: PropTypes.func.isRequired
 },
@@ -39,7 +38,6 @@ Menu = ({
     titleToggleHandlers,
     audioHandlers,
     scoresTipsHandlers,
-    // audioBannerHandlers,
     sliderDidRender
 }) => {
 
@@ -62,20 +60,8 @@ Menu = ({
                     marginRight: menuMarginInOverlay
                 }}
             >
-                {/* Positioned earlier in DOM to slide behind menu. */}
-                {/* <div className={cx(
-                    'MenuRow',
-                    'MenuBottomRow'
-                )}>
-                    <AudioBanner {...audioBannerHandlers}
-                        isMenuBottomRow
-                        sliderDidRender={sliderDidRender}
-                    />
-                </div> */}
-
                 <div
                     className={cx(
-                        'MenuRow',
                         'MenuTopRow',
                         'boxShadow__popupView'
                     )}
