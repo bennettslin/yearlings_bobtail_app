@@ -83,7 +83,7 @@ class LyricStanzaDot extends Component {
 
         return (
             <LyricDotStanzaView
-                getRef={this.setLyricAnnotationRef}
+                setRef={this.setLyricAnnotationRef}
                 dotKeys={dotKeys}
                 isSelected={isSelected}
                 isAccessed={isAccessed}
@@ -104,7 +104,7 @@ const lyricDotStanzaViewPropTypes = {
     isLastStanza: PropTypes.bool.isRequired,
     dotKeys: PropTypes.object.isRequired,
     annotationIndex: PropTypes.number.isRequired,
-    getRef: PropTypes.func.isRequired
+    setRef: PropTypes.func.isRequired
 },
 
 LyricDotStanzaView = ({
@@ -113,13 +113,13 @@ LyricDotStanzaView = ({
     dotKeys,
     annotationIndex,
     isLastStanza,
-    getRef,
+    setRef,
 
 ...other }) => (
 
     <div
         key={annotationIndex}
-        ref={getRef}
+        ref={setRef}
         className={cx(
             'LyricStanzaDot',
             'LyricStanza__column',

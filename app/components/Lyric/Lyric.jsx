@@ -36,13 +36,15 @@ class Lyric extends Component {
         // From parent.
         isTransitioningHeight: PropTypes.bool.isRequired,
         completeHeightTransition: PropTypes.func.isRequired,
-        handleLyricWheel: PropTypes.func.isRequired
+        handleLyricWheel: PropTypes.func.isRequired,
+        setLyricRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
 
         this._handleWheel = this._handleWheel.bind(this)
+        this.setLyricRef = this.setLyricRef.bind(this)
 
         // Handle only once every 10ms at most.
         // this._handleDebouncedWheel = debounce(
@@ -88,6 +90,10 @@ class Lyric extends Component {
         this.props.handleLyricWheel(e)
     }
 
+    setLyricRef(node) {
+        this.props.setLyricRef(node)
+    }
+
     render() {
         const other = omit(this.props, [
             'isTransitioningHeight',
@@ -98,6 +104,7 @@ class Lyric extends Component {
         return (
             <LyricView {...other}
                 handleWheel={this._handleWheel}
+                setRef={this.setLyricRef}
             />
         )
     }
@@ -112,7 +119,7 @@ const lyricViewPropTypes = {
     renderableSongIndex: PropTypes.number.isRequired,
 
     // From parent.
-    getLyricRef: PropTypes.func.isRequired,
+    setRef: PropTypes.func.isRequired,
     handleWheel: PropTypes.func.isRequired
 },
 
@@ -120,7 +127,7 @@ LyricView = ({
 
     renderableSongIndex,
 
-    getLyricRef,
+    setRef,
     handleWheel,
 
 ...other }) => {
@@ -137,7 +144,7 @@ LyricView = ({
 
     return (
         <div
-            ref={getLyricRef}
+            ref={setRef}
             className={cx(
                 'Lyric',
                 'LyricAnnotation__scrollParent',

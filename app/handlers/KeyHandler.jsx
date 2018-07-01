@@ -55,7 +55,7 @@ class KeyHandler extends Component {
         // TODO: Specify which events are used.
         eventHandlers: PropTypes.object.isRequired,
 
-        getRef: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -73,7 +73,7 @@ class KeyHandler extends Component {
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
     }
 
     shouldComponentUpdate() {

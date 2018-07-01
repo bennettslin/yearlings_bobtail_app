@@ -55,16 +55,16 @@ class Annotation extends Component {
         return shouldComponentUpdate
     }
 
-    componentDidUpdate() {
-        const {
-            carouselAnnotationIndex,
-            renderableAnnotationIndex
-        } = this.props
+    // componentDidUpdate() {
+    //     const {
+    //         carouselAnnotationIndex,
+    //         renderableAnnotationIndex
+    //     } = this.props
 
-        if (carouselAnnotationIndex === renderableAnnotationIndex) {
-            console.warn('Annotation rendered.')
-        }
-    }
+    //     if (carouselAnnotationIndex === renderableAnnotationIndex) {
+    //         console.warn('Annotation rendered.')
+    //     }
+    // }
 
     render() {
         const { renderableSongIndex,

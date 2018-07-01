@@ -56,7 +56,7 @@ export const bindHandlers = (me) => {
         me.handleScrollUponCarouselRender.bind(me)
     me.stopPropagation = me.stopPropagation.bind(me)
 
-    me.getLyricRef = me.getLyricRef.bind(me)
+    me.setLyricRef = me.setLyricRef.bind(me)
 }
 
 export const getHandlers = (me) => {
@@ -123,7 +123,7 @@ export const getHandlers = (me) => {
         handleScrollUponCarouselRender: me.handleScrollUponCarouselRender,
         stopPropagation: me.stopPropagation,
 
-        getLyricRef: me.getLyricRef,
+        setLyricRef: me.setLyricRef,
 
         getRootRef,
         getScoreRef,

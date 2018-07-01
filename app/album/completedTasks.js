@@ -3018,4 +3018,10 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+
+    {
+        taskName: `Get scrolling child elements by ref.`,
+        workedHours: 8,
+        neededHours: 8
+    },
 ]

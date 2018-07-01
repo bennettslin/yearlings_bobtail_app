@@ -158,7 +158,7 @@ class Verse extends Component {
 
         return (
             <VerseView {...other}
-                getRef={this.setVerseRef}
+                setRef={this.setVerseRef}
                 isTitle={isTitle}
                 isDoubleSpeaker={!lyric && !centre}
                 isInteractable={isInteractable}
@@ -194,7 +194,7 @@ verseViewPropTypes = {
     handleInteractivatableClick: PropTypes.func,
     handleLyricPlay: PropTypes.func,
     handleLyricVerseSelect: PropTypes.func,
-    getRef: PropTypes.func,
+    setRef: PropTypes.func,
 
     children: PropTypes.any
 },
@@ -213,7 +213,7 @@ VerseView = ({
     handleInteractivatableClick,
     handleLyricPlay,
     handleLyricVerseSelect,
-    getRef,
+    setRef,
 
     children,
 
@@ -232,7 +232,7 @@ VerseView = ({
     return (
         <div
             key={isInteractable ? verseIndex : undefined}
-            ref={getRef}
+            ref={setRef}
             className={cx(
                 'Verse',
                 inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',

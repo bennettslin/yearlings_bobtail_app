@@ -55,11 +55,11 @@ class CarouselAnnotation extends Component {
         })
     }
 
-    componentDidUpdate() {
-        if (this.props.annotationIndex === 1) {
-            console.warn('CarouselAnnotation rendered.')
-        }
-    }
+    // componentDidUpdate() {
+    //     if (this.props.annotationIndex === 1) {
+    //         console.warn('CarouselAnnotation rendered.')
+    //     }
+    // }
 
     _handleAnnotationTitleClick(e) {
         if (!this.props.isSelected) {
@@ -116,7 +116,7 @@ class CarouselAnnotation extends Component {
 
         return (
             <CarouselAnnotationView {...other}
-                getRef={this.setCarouselAnnotationRef}
+                setRef={this.setCarouselAnnotationRef}
                 carouselAnnotationIndex={annotationIndex}
                 annotationColumn={columnKey}
                 annotationDotKeys={dotKeys}
@@ -137,7 +137,7 @@ const carouselAnnotationViewPropTypes = {
     annotationColumn: PropTypes.string.isRequired,
     annotationDotKeys: PropTypes.object.isRequired,
     handleContainerClick: PropTypes.func.isRequired,
-    getRef: PropTypes.func.isRequired
+    setRef: PropTypes.func.isRequired
 },
 
 CarouselAnnotationView = ({
@@ -146,13 +146,13 @@ CarouselAnnotationView = ({
     annotationColumn,
     annotationDotKeys,
     handleContainerClick,
-    getRef,
+    setRef,
 
 ...other }) => (
 
     <div
         key={annotationIndex}
-        ref={getRef}
+        ref={setRef}
         className={cx(
             'CarouselAnnotation',
 

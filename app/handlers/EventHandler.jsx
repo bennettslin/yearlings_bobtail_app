@@ -946,7 +946,7 @@ class EventHandler extends Component {
         }
     }
 
-    getLyricRef(node) {
+    setLyricRef(node) {
         this.myLyricElement = node
 
         // Add or remove focus.

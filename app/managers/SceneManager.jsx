@@ -12,12 +12,12 @@ class SceneManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired,
+        setRef: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
     }
 
     selectScene(direction) {

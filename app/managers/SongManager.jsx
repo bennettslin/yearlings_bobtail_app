@@ -22,7 +22,7 @@ class SongManager extends Component {
         selectSongIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired,
+        setRef: PropTypes.func.isRequired,
         togglePlay: PropTypes.func.isRequired,
         selectAnnotation: PropTypes.func.isRequired,
         selectVerse: PropTypes.func.isRequired,
@@ -30,7 +30,7 @@ class SongManager extends Component {
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
     }
 
     advanceToNextSong() {

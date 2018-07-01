@@ -33,7 +33,7 @@ class AudioManager extends Component {
         setUpdatedTimePlayed: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired,
+        setRef: PropTypes.func.isRequired,
         selectSong: PropTypes.func.isRequired
     }
 
@@ -45,7 +45,7 @@ class AudioManager extends Component {
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
     }
 
     componentDidUpdate(prevProps) {

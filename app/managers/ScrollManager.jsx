@@ -29,7 +29,7 @@ class ScrollManager extends Component {
         windowWidth: PropTypes.number.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -41,7 +41,7 @@ class ScrollManager extends Component {
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
 
         window.elements = () => {
             console.error(
@@ -112,7 +112,7 @@ class ScrollManager extends Component {
         callback
 
     }) {
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
+        if (getSongIsLogue(this.props.selectedSongIndex) || index < 0) {
             return
         }
 
@@ -170,14 +170,11 @@ class ScrollManager extends Component {
         return (parent) => {
             const { className } = parent,
                 isValidTarget =
-                    parent !== window
-                    && (
-                        className
-                        && new RegExp(
-                                "(\\s|^)" + scrollParentClass + "(\\s|$)"
-                            ).test(className)
-                    )
-
+                    parent !== window &&
+                    Boolean(className) &&
+                    new RegExp(
+                        "(\\s|^)" + scrollParentClass + "(\\s|$)"
+                    ).test(className)
             return isValidTarget
         }
     }

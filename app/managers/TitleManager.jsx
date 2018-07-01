@@ -13,11 +13,11 @@ class TitleManager extends Component {
         selectTitleIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
     }
 
     selectTitle(

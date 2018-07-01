@@ -1,6 +1,6 @@
 export const getOrganisedHandlersFromProps = (props) => {
     const {
-        getLyricRef,
+        setLyricRef,
         getScoreRef,
         getWikiRef,
         setCarouselAnnotationRef,
@@ -70,7 +70,7 @@ export const getOrganisedHandlersFromProps = (props) => {
     },
 
     lyricColumnHandlers = {
-        getLyricRef,
+        setLyricRef,
         setLyricAnnotationRef,
         setVerseRef,
         handleLyricAnnotationSelect,

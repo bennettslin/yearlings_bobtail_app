@@ -21,13 +21,13 @@ class CarouselManager extends Component {
         selectCarouselNavIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired,
+        setRef: PropTypes.func.isRequired,
         accessNavSong: PropTypes.func.isRequired,
         selectBookColumn: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
     }
 
     selectCarouselNav(

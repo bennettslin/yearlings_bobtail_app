@@ -33,11 +33,11 @@ class OverviewManager extends Component {
         selectOverviewIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
 
         this._showOrHideForNewSong()
     }

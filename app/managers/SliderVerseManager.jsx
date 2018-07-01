@@ -47,7 +47,7 @@ class SliderVerseManager extends Component {
         setSliderVerseIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired,
+        setRef: PropTypes.func.isRequired,
         selectTime: PropTypes.func.isRequired,
         determineVerseBars: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired,
@@ -55,7 +55,7 @@ class SliderVerseManager extends Component {
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
     }
 
     touchSliderBegin({ clientRect, clientX }) {

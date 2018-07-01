@@ -49,9 +49,9 @@ class VerseBar extends Component {
         })
     }
 
-    componentDidUpdate() {
-        console.warn('VerseBar rendered.')
-    }
+    // componentDidUpdate() {
+    //     console.warn('VerseBar rendered.')
+    // }
 
     render() {
 

@@ -11,7 +11,7 @@ module.exports = [
     },
 
     {
-        taskName: `Fix scrolling. Instead of persisting verse elements, store index for ref, and make sure scrolling is only ever by element, not classes.`,
+        taskName: `Instead of persisting verse elements, store index and then find by ref.`,
         workedHours: 0,
         neededHours: 5
     },
@@ -23,9 +23,9 @@ module.exports = [
     },
 
     {
-        taskName: `Get scrolling indexed elements by ref. Still need to do lyric annotation ones. Have refs for parent containers as well. And handle discrepancy with render ready and selected song indices.`,
-        workedHours: 5,
-        neededHours: 8
+        taskName: `Have refs for scrolling parent elements as well.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     {

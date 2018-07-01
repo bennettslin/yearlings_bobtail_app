@@ -274,7 +274,7 @@ class Root extends Component {
                 {/* TODO: Only pass the events used by KeyHandler. */}
                 <KeyHandler
                     eventHandlers={this.props.eventHandlers}
-                    getRef={node => (this.accessManager = node)}
+                    setRef={node => (this.accessManager = node)}
                 />
 
                 <Live {...other} />

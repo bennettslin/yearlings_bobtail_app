@@ -37,13 +37,13 @@ class TimeVerseManager extends Component {
         selectVerseIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired,
+        setRef: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
     }
 
     selectTime({

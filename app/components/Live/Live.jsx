@@ -190,7 +190,7 @@ Live.propTypes = {
     setCanRenderScene: PropTypes.func.isRequired,
 
     // From parent.
-    getLyricRef: PropTypes.func.isRequired,
+    setLyricRef: PropTypes.func.isRequired,
     getScoreRef: PropTypes.func.isRequired,
     getWikiRef: PropTypes.func.isRequired,
     setCarouselAnnotationRef: PropTypes.func.isRequired,

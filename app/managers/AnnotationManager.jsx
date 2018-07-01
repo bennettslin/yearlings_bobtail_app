@@ -32,7 +32,7 @@ class AnnotationManager extends Component {
         setRenderableAnnotationIndex: PropTypes.func.isRequired,
 
         // From parent.
-        getRef: PropTypes.func.isRequired,
+        setRef: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
     }
 
@@ -54,7 +54,7 @@ class AnnotationManager extends Component {
     }
 
     componentDidMount() {
-        this.props.getRef(this)
+        this.props.setRef(this)
     }
 
     componentDidUpdate(prevProps) {

@@ -375,84 +375,84 @@ class StateManager extends Component {
                     resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
                 />
                 <AccessManager
-                    getRef={node => (this.accessManager = node)}
+                    setRef={node => (this.accessManager = node)}
                 />
                 <AnnotationManager
-                    getRef={node => (this.annotationManager = node)}
+                    setRef={node => (this.annotationManager = node)}
                     updatePath={updatePath}
                 />
                 <AudioManager
-                    getRef={node => (this.audioManager = node)}
+                    setRef={node => (this.audioManager = node)}
                     selectSong={this.selectSong}
                 />
                 <CarouselManager
-                    getRef={node => (this.carouselManager = node)}
+                    setRef={node => (this.carouselManager = node)}
                     accessNavSong={this.accessNavSong}
                     selectBookColumn={this.selectBookColumn}
                 />
                 <DebugManager
-                    getRef={node => (this.debugManager = node)}
+                    setRef={node => (this.debugManager = node)}
                 />
                 <DotsManager
-                    getRef={node => (this.dotsManager = node)}
+                    setRef={node => (this.dotsManager = node)}
                 />
                 <LyricManager
-                    getRef={node => (this.lyricManager = node)}
+                    setRef={node => (this.lyricManager = node)}
                     deselectAnnotation={this.deselectAnnotation}
                 />
                 <NavManager
-                    getRef={node => (this.navManager = node)}
+                    setRef={node => (this.navManager = node)}
                 />
                 <OverviewManager
-                    getRef={node => (this.overviewManager = node)}
+                    setRef={node => (this.overviewManager = node)}
                     selectDotsExpand={this.selectDotsExpand}
                     selectLyricExpand={this.selectLyricExpand}
                 />
                 <RenderManager
-                    getRef={node => (this.renderManager = node)}
+                    setRef={node => (this.renderManager = node)}
                 />
                 <SceneManager
-                    getRef={node => (this.sceneManager = node)}
+                    setRef={node => (this.sceneManager = node)}
                     selectVerse={this.selectVerse}
                 />
                 <ScoreManager
-                    getRef={node => (this.scoreManager = node)}
+                    setRef={node => (this.scoreManager = node)}
                 />
                 <ScrollManager
-                    getRef={node => (this.scrollManager = node)}
+                    setRef={node => (this.scrollManager = node)}
                 />
                 <SliderVerseManager
-                    getRef={node => (this.sliderVerseManager = node)}
+                    setRef={node => (this.sliderVerseManager = node)}
                     selectTime={this.selectTime}
                     determineVerseBars={this.determineVerseBars}
                     resetVerseBars={this.resetVerseBars}
                     scrollElementIntoView={this.scrollElementIntoView}
                 />
                 <SongManager
-                    getRef={node => (this.songManager = node)}
+                    setRef={node => (this.songManager = node)}
                     togglePlay={this.togglePlay}
                     selectAnnotation={this.selectAnnotation}
                     selectVerse={this.selectVerse}
                     updatePath={updatePath}
                 />
                 <TimeVerseManager
-                    getRef={node => (this.timeVerseManager = node)}
+                    setRef={node => (this.timeVerseManager = node)}
                     scrollElementIntoView={this.scrollElementIntoView}
                     updatePath={updatePath}
                 />
                 <TipsManager
-                    getRef={node => (this.tipsManager = node)}
+                    setRef={node => (this.tipsManager = node)}
                     selectDotsExpand={this.selectDotsExpand}
                     selectLyricExpand={this.selectLyricExpand}
                 />
                 <TitleManager
-                    getRef={node => (this.titleManager = node)}
+                    setRef={node => (this.titleManager = node)}
                 />
                 <VerseManager
-                    getRef={node => (this.verseManager = node)}
+                    setRef={node => (this.verseManager = node)}
                 />
                 <WikiManager
-                    getRef={node => (this.wikiManager = node)}
+                    setRef={node => (this.wikiManager = node)}
                 />
                 <WindowManager
                     deselectAnnotation={this.deselectAnnotation}
