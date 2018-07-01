@@ -74,7 +74,6 @@ class ScrollManager extends Component {
         this.carouselParentElement = node
     }
 
-
     _setRef(
         scrollClass,
         { node, index }
@@ -115,6 +114,10 @@ class ScrollManager extends Component {
         return scrollClass === CAROUSEL_SCROLL ?
             this.carouselParentElement :
             this.lyricVerseParentElement
+    }
+
+    getVerseElement(verseIndex) {
+        return this.myVerseElements[verseIndex]
     }
 
     scrollElementIntoView({

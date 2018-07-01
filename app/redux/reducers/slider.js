@@ -4,7 +4,6 @@ import { IS_SLIDER_MOVING,
          SLIDER_LEFT,
          SLIDER_RATIO,
          SLIDER_WIDTH,
-         SLIDER_VERSE_ELEMENT,
          SLIDER_VERSE_INDEX } from '../../constants/state'
 
 export const IsSliderMovingReducer = (state = false, action) => {
@@ -46,15 +45,6 @@ export const SliderRatioReducer = (state = 0, action) => {
 export const SliderWidthReducer = (state = 0, action) => {
     switch (action.type) {
         case SLIDER_WIDTH:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const SliderVerseElementReducer = (state = null, action) => {
-    switch (action.type) {
-        case SLIDER_VERSE_ELEMENT:
             return action.payload
         default:
             return state

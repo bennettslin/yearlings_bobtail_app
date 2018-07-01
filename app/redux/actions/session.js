@@ -7,7 +7,6 @@ import { APP_MOUNTED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
          IS_MANUAL_SCROLL,
-         SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX } from '../../constants/state'
 
 export const setAppMounted = (appMounted = false) => (
@@ -48,11 +47,6 @@ export const setIsVerseBarBelow = (isVerseBarBelow = false) => (
 export const setIsManualScroll = (isManualScroll = false) => (
     { type: IS_MANUAL_SCROLL,
       payload: isManualScroll }
-)
-
-export const setSelectedVerseElement = (selectedVerseElement = null) => (
-    { type: SELECTED_VERSE_ELEMENT,
-      payload: selectedVerseElement }
 )
 
 export const setShownBookColumnIndex = (shownBookColumnIndex = -1) => (

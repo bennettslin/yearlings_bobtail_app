@@ -59,7 +59,6 @@ module.exports = {
     IS_VERSE_BAR_ABOVE: 'isVerseBarAbove',
     IS_VERSE_BAR_BELOW: 'isVerseBarBelow',
     IS_MANUAL_SCROLL: 'isManualScroll',
-    SELECTED_VERSE_ELEMENT: 'selectedVerseElement',
     SHOWN_BOOK_COLUMN_INDEX: 'shownBookColumnIndex',
 
     // Slider.
@@ -68,7 +67,6 @@ module.exports = {
     SLIDER_LEFT: 'sliderLeft',
     SLIDER_RATIO: 'sliderRatio',
     SLIDER_WIDTH: 'sliderWidth',
-    SLIDER_VERSE_ELEMENT: 'sliderVerseElement',
     SLIDER_VERSE_INDEX: 'sliderVerseIndex',
 
     // Storage.

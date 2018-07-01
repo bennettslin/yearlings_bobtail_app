@@ -3,15 +3,12 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setSelectedVerseElement } from '../redux/actions/session'
-
 import {
     setIsSliderMoving,
     setIsSliderTouched,
     setSliderLeft,
     setSliderRatio,
     setSliderWidth,
-    setSliderVerseElement,
     setSliderVerseIndex
 } from '../redux/actions/slider'
 
@@ -36,8 +33,6 @@ class SliderVerseManager extends Component {
         sliderWidth: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
-        selectedVerseElement: PropTypes.object,
-        sliderVerseElement: PropTypes.object,
 
         setIsSliderMoving: PropTypes.func.isRequired,
         setIsSliderTouched: PropTypes.func.isRequired,
@@ -49,7 +44,6 @@ class SliderVerseManager extends Component {
         // From parent.
         setRef: PropTypes.func.isRequired,
         selectTime: PropTypes.func.isRequired,
-        determineVerseBars: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired
     }
@@ -128,18 +122,6 @@ class SliderVerseManager extends Component {
             this.props.setSliderWidth(0)
             this.props.setSliderVerseIndex(-1)
 
-            this.setVerseElement({
-                /**
-                 * If slider was moved, there will be a slider verse element.
-                 * If it was just tapped, there won't be, so fall back to the
-                 * selected verse element.
-                 */
-                verseElement: this.props.sliderVerseElement ||
-                    this.props.selectedVerseElement,
-
-                isTouchBodyEnd: true
-            })
-
             // Scroll to verse index, then reset verse bars.
             this.props.scrollElementIntoView({
                 log: 'Slider touch body end.',
@@ -150,40 +132,6 @@ class SliderVerseManager extends Component {
                 isLyricExpanded: this.props.isLyricExpanded
             })
             this.props.resetVerseBars()
-        }
-    }
-
-    setVerseElement({
-        verseElement,
-        isTouchBodyEnd
-    }) {
-
-        const doSetSlider = this.props.isSliderMoving && !isTouchBodyEnd,
-
-            propsVerseElement = doSetSlider ?
-                this.props.sliderVerseElement :
-                this.props.selectedVerseElement
-
-        if (verseElement !== propsVerseElement) {
-
-            // Determine verse bars.
-            this.props.determineVerseBars(verseElement)
-
-            if (doSetSlider) {
-                /**
-                 * Slider verse element overrides selected verse element, as
-                 * long as the slider is touched.
-                 */
-                this.props.setSliderVerseElement(verseElement)
-
-            } else {
-                // App has a reference to the selected verse.
-                this.props.setSelectedVerseElement(verseElement)
-            }
-
-            if (isTouchBodyEnd) {
-                this.props.setSliderVerseElement(null)
-            }
         }
     }
 
@@ -201,9 +149,7 @@ const mapStateToProps = ({
     sliderLeft,
     sliderWidth,
     selectedSongIndex,
-    sliderVerseIndex,
-    selectedVerseElement,
-    sliderVerseElement
+    sliderVerseIndex
 }) => ({
     deviceIndex,
     windowWidth,
@@ -213,9 +159,7 @@ const mapStateToProps = ({
     sliderLeft,
     sliderWidth,
     selectedSongIndex,
-    sliderVerseIndex,
-    selectedVerseElement,
-    sliderVerseElement
+    sliderVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
@@ -225,9 +169,7 @@ const bindDispatchToProps = (dispatch) => (
         setSliderLeft,
         setSliderRatio,
         setSliderWidth,
-        setSliderVerseIndex,
-        setSelectedVerseElement,
-        setSliderVerseElement
+        setSliderVerseIndex
     }, dispatch)
 )
 

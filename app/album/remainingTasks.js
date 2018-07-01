@@ -5,12 +5,6 @@ module.exports = [
      */
 
     {
-        taskName: `Instead of persisting verse elements, store index and then find by ref.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    {
         taskName: `Make sure verse bars are being determined after song change. Select verse low on lyric, then change song. Selected verse element hasn't changed.`,
         workedHours: 0,
         neededHours: 2

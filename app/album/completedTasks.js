@@ -2947,61 +2947,51 @@ module.exports = [
         workedHours: 8,
         neededHours: 8
     },
-
     {
         taskName: `Only render exposed areas of faces, if any.`,
         workedHours: 10,
         neededHours: 10
     },
-
     {
         taskName: `Separate out managers.`,
         workedHours: 12,
         neededHours: 12
     },
-
     {
         taskName: `Figure out steps for reviewing each scene.`,
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `highlighting annotation title doesn't have transition? It's because it was not wrapped in TextSpan.`,
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `Fix UNSAFE lifecycle methods.`,
         workedHours: 3,
         neededHours: 3
     },
-
     {
         taskName: `Have system to show theatre seats in different perspectives. Good enough for now. Will be able to refine once seat svgs are finalised. Log that under theatre seat drawing.`,
         workedHours: 2,
         neededHours: 2
     },
-
     {
         taskName: `Get selected or slider verse element upon mount. This doesn't seem necessary, as far as I can tell. Just logged work to clean up code a bit.`,
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `Verse and annotation cancel each other out in path.`,
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `When opening url with annotation in incognito, annotation and tips are shown simultaneously. Have system to flush out store.`,
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `Nest Stage under Live, not Main.`,
         workedHours: 2,
@@ -3012,22 +3002,24 @@ module.exports = [
         workedHours: 30,
         neededHours: 30
     },
-
     {
         taskName: `Fix rendering after admin.`,
         workedHours: 1,
         neededHours: 1
     },
-
     {
         taskName: `Get scrolling child elements by ref.`,
         workedHours: 8,
         neededHours: 8
     },
-
     {
         taskName: `Have refs for scrolling parent elements as well.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Instead of persisting verse elements, store index and then find by ref.`,
+        workedHours: 2,
+        neededHours: 2
     },
 ]

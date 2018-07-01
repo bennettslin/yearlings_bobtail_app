@@ -203,6 +203,10 @@ class StateManager extends Component {
         return this.scrollManager.scrollElementIntoView(payload)
     }
 
+    getVerseElement(payload) {
+        return this.scrollManager.getVerseElement(payload)
+    }
+
     /****************
      * SLIDER/VERSE *
      ****************/
@@ -217,11 +221,6 @@ class StateManager extends Component {
 
     touchBodyEnd() {
         return this.sliderVerseManager.touchBodyEnd()
-    }
-
-    setVerseElement(payload) {
-        // FIXME: Avoid this conditional.
-        return this.sliderVerseManager && this.sliderVerseManager.setVerseElement(payload)
     }
 
     /********
@@ -322,7 +321,7 @@ class StateManager extends Component {
         this.selectTips = this.selectTips.bind(this)
         this.selectTitle = this.selectTitle.bind(this)
         this.advanceToNextSong = this.advanceToNextSong.bind(this)
-        this.setVerseElement = this.setVerseElement.bind(this)
+        this.getVerseElement = this.getVerseElement.bind(this)
         this.determineVerseBars = this.determineVerseBars.bind(this)
         this.resetVerseBars = this.resetVerseBars.bind(this)
         this.selectManualScroll = this.selectManualScroll.bind(this)
@@ -382,7 +381,6 @@ class StateManager extends Component {
                     toggleAccess={this.toggleAccess}
                     toggleAdmin={this.toggleAdmin}
                     togglePlay={this.togglePlay}
-                    setVerseElement={this.setVerseElement}
                     advanceToNextSong={this.advanceToNextSong}
                     resetUpdatedTimePlayed={this.resetUpdatedTimePlayed}
                 />
@@ -462,6 +460,7 @@ class StateManager extends Component {
                 />
                 <VerseManager
                     setRef={node => (this.verseManager = node)}
+                    getVerseElement={this.getVerseElement}
                 />
                 <WikiManager
                     setRef={node => (this.wikiManager = node)}

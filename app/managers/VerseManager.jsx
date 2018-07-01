@@ -16,7 +16,6 @@ class VerseManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        appMounted: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         windowWidth: PropTypes.number.isRequired,
         windowHeight: PropTypes.number.isRequired,
@@ -25,13 +24,14 @@ class VerseManager extends Component {
         interactivatedVerseIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        selectedVerseElement: PropTypes.object,
+        sliderVerseIndex: PropTypes.number.isRequired,
         setInteractivatedVerseIndex: PropTypes.func.isRequired,
         setIsVerseBarAbove: PropTypes.func.isRequired,
         setIsVerseBarBelow: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired,
+        getVerseElement: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -39,13 +39,26 @@ class VerseManager extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
+        const {
+            selectedSongIndex,
+            sliderVerseIndex
+        } = this.props
+
+
+        if (selectedSongIndex !== prevProps.selectedSongIndex) {
             // Reset interactivated verse.
             this.interactivateVerse()
 
             // Reset verse bars.
-            this.props.setIsVerseBarAbove(false)
-            this.props.setIsVerseBarBelow(false)
+            this.resetVerseBars()
+        }
+
+        // Determine verse bars here while we are sliding.
+        if (
+            sliderVerseIndex !== prevProps.sliderVerseIndex &&
+            sliderVerseIndex > 0
+        ) {
+            this.determineVerseBars()
         }
     }
 
@@ -78,22 +91,23 @@ class VerseManager extends Component {
         return interactivatedVerseIndex
     }
 
-    determineVerseBars(verseElement = this.props.selectedVerseElement) {
-        // Prevent verse bar from showing upon initial load.
-        if (!this.props.appMounted || !verseElement) {
-            return false
-        }
-
-        const { isVerseBarAbove,
-                isVerseBarBelow } = getVerseBarStatus({
-                    deviceIndex: this.props.deviceIndex,
-                    windowWidth: this.props.windowWidth,
-                    windowHeight: this.props.windowHeight,
-                    isLyricExpanded: this.props.isLyricExpanded,
-                    isHeightlessLyricColumn:
-                        this.props.isHeightlessLyricColumn,
-                    verseElement
-                })
+    determineVerseBars() {
+        const verseIndex = this.props.sliderVerseIndex > 0 ?
+            this.props.sliderVerseIndex : this.props.selectedVerseIndex,
+            verseElement = this.props.getVerseElement(verseIndex),
+            verseBarStatusObject = getVerseBarStatus({
+                deviceIndex: this.props.deviceIndex,
+                windowWidth: this.props.windowWidth,
+                windowHeight: this.props.windowHeight,
+                isLyricExpanded: this.props.isLyricExpanded,
+                isHeightlessLyricColumn:
+                    this.props.isHeightlessLyricColumn,
+                verseElement
+            }),
+            {
+                isVerseBarAbove,
+                isVerseBarBelow
+            } = verseBarStatusObject
 
         this.props.setIsVerseBarAbove(isVerseBarAbove)
         this.props.setIsVerseBarBelow(isVerseBarBelow)
@@ -110,7 +124,6 @@ class VerseManager extends Component {
 }
 
 const mapStateToProps = ({
-    appMounted,
     deviceIndex,
     windowWidth,
     windowHeight,
@@ -119,9 +132,8 @@ const mapStateToProps = ({
     interactivatedVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
-    selectedVerseElement
+    sliderVerseIndex
 }) => ({
-    appMounted,
     deviceIndex,
     windowWidth,
     windowHeight,
@@ -130,7 +142,7 @@ const mapStateToProps = ({
     interactivatedVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
-    selectedVerseElement
+    sliderVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

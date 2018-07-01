@@ -735,11 +735,11 @@ class EventHandler extends Component {
         }
     }
 
-    handleSetVerseElement(verseElement) {
-        this.props.setVerseElement({
-            verseElement
-        })
-    }
+    // handleSetVerseElement(verseElement) {
+        // this.props.setVerseElement({
+        //     verseElement
+        // })
+    // }
 
     /********
      * WIKI *

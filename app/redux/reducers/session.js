@@ -7,7 +7,6 @@ import { APP_MOUNTED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
          IS_MANUAL_SCROLL,
-         SELECTED_VERSE_ELEMENT,
          SHOWN_BOOK_COLUMN_INDEX,
          SELECTED_SONG_INDEX,
          SELECTED_VERSE_INDEX } from '../../constants/state'
@@ -95,15 +94,6 @@ export const IsVerseBarBelowReducer = (state = false, action) => {
 export const IsManualScrollReducer = (state = false, action) => {
     switch (action.type) {
         case IS_MANUAL_SCROLL:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const SelectedVerseElementReducer = (state = null, action) => {
-    switch (action.type) {
-        case SELECTED_VERSE_ELEMENT:
             return action.payload
         default:
             return state

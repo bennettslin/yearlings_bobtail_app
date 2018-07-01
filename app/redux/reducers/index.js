@@ -5,8 +5,8 @@ import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer, StageCoord
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
 import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, RenderableSongIndexReducer, RenderableAnnotationIndexReducer, RenderableVerseIndexReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanSceneRenderReducer } from './render'
 import { IsHeightlessLyricColumnReducer, IsHiddenCarouselNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, isTwoRowMenuReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
-import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, CurrentSceneIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
-import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseElementReducer, SliderVerseIndexReducer } from './slider'
+import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, CurrentSceneIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
+import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseIndexReducer } from './slider'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
 
 const rootReducer = combineReducers({
@@ -56,7 +56,6 @@ const rootReducer = combineReducers({
     isVerseBarAbove: IsVerseBarAboveReducer,
     isVerseBarBelow: IsVerseBarBelowReducer,
     isManualScroll: IsManualScrollReducer,
-    selectedVerseElement: SelectedVerseElementReducer,
     shownBookColumnIndex: ShownBookColumnIndexReducer,
 
     isSliderMoving: IsSliderMovingReducer,
@@ -64,7 +63,6 @@ const rootReducer = combineReducers({
     sliderLeft: SliderLeftReducer,
     sliderRatio: SliderRatioReducer,
     sliderWidth: SliderWidthReducer,
-    sliderVerseElement: SliderVerseElementReducer,
     sliderVerseIndex: SliderVerseIndexReducer,
 
     selectedAccessIndex: AccessIndexReducer,

@@ -4,7 +4,6 @@ import { IS_SLIDER_MOVING,
          SLIDER_LEFT,
          SLIDER_RATIO,
          SLIDER_WIDTH,
-         SLIDER_VERSE_ELEMENT,
          SLIDER_VERSE_INDEX } from '../../constants/state'
 
 export const setIsSliderMoving = (isSliderMoving = false) => (
@@ -30,11 +29,6 @@ export const setSliderRatio = (sliderRatio = 0) => (
 export const setSliderWidth = (sliderWidth = 0) => (
     { type: SLIDER_WIDTH,
       payload: sliderWidth }
-)
-
-export const setSliderVerseElement = (sliderVerseElement = null) => (
-    { type: SLIDER_VERSE_ELEMENT,
-      payload: sliderVerseElement }
 )
 
 export const setSliderVerseIndex = (sliderVerseIndex = -1) => (
