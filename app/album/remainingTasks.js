@@ -25,9 +25,9 @@ module.exports = [
     },
 
     {
-        taskName: `Improve sequential rendering.`,
-        workedHours: 22,
-        neededHours: 25
+        taskName: `Fix scrolling.`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     {

@@ -7,7 +7,8 @@ export const getOrganisedHandlersFromProps = (props) => {
         getVerseRef,
 
         handlePopupContainerClick,
-        handleScrollAfterLyricRerender,
+        handleScrollUponLyricRender,
+        handleScrollUponCarouselRender,
 
         handleAnnotationPrevious,
         handleAnnotationNext,
@@ -81,7 +82,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         handleVerseBarWheel,
         handleVerseInteractivate,
         handleSetVerseElement,
-        handleScrollAfterLyricRerender
+        handleScrollUponLyricRender
     },
 
     overviewPopupHandlers = {
@@ -124,13 +125,14 @@ export const getOrganisedHandlersFromProps = (props) => {
         tipsPopupHandlers,
 
         carouselSectionHandlers: {
+            getCarouselAnnotationRef,
             handleLyricAnnotationSelect,
             handleAnnotationPrevious,
             handleAnnotationNext,
             handleAnnotationWikiSelect,
             handleAnnotationPortalSelect,
             handlePopupContainerClick,
-            getCarouselAnnotationRef
+            handleScrollUponCarouselRender
         },
         leftShelfToggleSectionHandlers: {
             handleDotsSectionToggle,

@@ -43,26 +43,6 @@ class EventHandler extends Component {
 
     componentDidUpdate(prevProps) {
 
-        // If annotation is selected or accessed in carousel, scroll to it.
-        if (this.props.appMounted && !prevProps.appMounted) {
-            const { selectedCarouselNavIndex,
-                    selectedAnnotationIndex,
-                    accessedAnnotationIndex } = this.props,
-
-                scrollToAnnotationIndex =
-                    selectedAnnotationIndex || accessedAnnotationIndex
-
-            if (selectedCarouselNavIndex && scrollToAnnotationIndex) {
-                // Animation is slightly less janky with setTimeout.
-                setTimeout(() => {
-                    this.props.scrollElementIntoView({
-                        scrollClass: CAROUSEL_SCROLL,
-                        index: scrollToAnnotationIndex
-                    })
-                }, 0)
-            }
-        }
-
         if (
             this.props.isHeightlessLyricColumn !==
                 prevProps.isHeightlessLyricColumn ||
@@ -89,12 +69,14 @@ class EventHandler extends Component {
         const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
         if (annotationAccessed && doScroll) {
             this.props.scrollElementIntoView({
+                log: 'Access lyric annotation.',
                 scrollClass: LYRIC_ANNOTATION_SCROLL,
                 index: accessedAnnotationIndex
             })
 
             if (this.props.selectedCarouselNavIndex) {
                 this.props.scrollElementIntoView({
+                    log: 'Access carousel annotation.',
                     scrollClass: CAROUSEL_SCROLL,
                     index: accessedAnnotationIndex
                 })
@@ -142,6 +124,7 @@ class EventHandler extends Component {
             leaveOpenPopups: true
         })
         this.props.scrollElementIntoView({
+            log: 'Access verse direction.',
             scrollClass: VERSE_SCROLL,
             index: interactivatedVerseIndex
         })
@@ -216,11 +199,13 @@ class EventHandler extends Component {
             direction
         })
         this.props.scrollElementIntoView({
+            log: 'Select accessed lyric annotation.',
             scrollClass: LYRIC_ANNOTATION_SCROLL,
             index: selectedAnnotationIndex
         })
         if (this.props.selectedCarouselNavIndex) {
             this.props.scrollElementIntoView({
+                log: 'Select accessed carousel annotation.',
                 scrollClass: CAROUSEL_SCROLL,
                 index: selectedAnnotationIndex
             })
@@ -303,6 +288,7 @@ class EventHandler extends Component {
             const { selectedAnnotationIndex } = this.props,
                 annotationIndex = selectedAnnotationIndex ? selectedAnnotationIndex : this.props.accessedAnnotationIndex
             this.props.scrollElementIntoView({
+                log: 'Nav toggled carousel annotation.',
                 scrollClass: CAROUSEL_SCROLL,
                 index: annotationIndex
             })
@@ -486,6 +472,7 @@ class EventHandler extends Component {
         // Scroll lyric column only if selecting from carousel.
         if (fromCarousel) {
             this.props.scrollElementIntoView({
+                log: 'Carousel selected lyric annotation.',
                 scrollClass: LYRIC_ANNOTATION_SCROLL,
                 index: selectedAnnotationIndex
             })
@@ -494,6 +481,7 @@ class EventHandler extends Component {
         } else {
             if (this.props.selectedCarouselNavIndex) {
                 this.props.scrollElementIntoView({
+                    log: 'Lyric selected carousel annotation.',
                     scrollClass: CAROUSEL_SCROLL,
                     index: selectedAnnotationIndex
                 })
@@ -709,10 +697,12 @@ class EventHandler extends Component {
      * VERSE *
      *********/
 
+    // This is also triggered by toggling on auto scroll.
     handleVerseBarSelect() {
         // No need to know event, since we are just scrolling.
         const { selectedVerseIndex } = this.props
         this.props.scrollElementIntoView({
+            log: 'Verse bar selected verse.',
             scrollClass: VERSE_SCROLL,
             index: selectedVerseIndex
         })
@@ -863,7 +853,7 @@ class EventHandler extends Component {
         }
     }
 
-    handleScrollAfterLyricRerender() {
+    handleScrollUponLyricRender() {
 
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return
@@ -873,39 +863,46 @@ class EventHandler extends Component {
 
         // If a portal was selected, there will be an annotation index.
         if (selectedAnnotationIndex) {
+
             this.props.scrollElementIntoView({
+                log: 'Rerender selected lyric annotation.',
                 scrollClass: LYRIC_ANNOTATION_SCROLL,
                 index: selectedAnnotationIndex,
                 time: 0,
                 callback: this._determineVerseBarsCallback
             })
 
-            if (this.props.selectedCarouselNavIndex) {
-                this.props.scrollElementIntoView({
-                    scrollClass: CAROUSEL_SCROLL,
-                    time: 0,
-                    index: selectedAnnotationIndex
-                })
-            }
-
-            // Otherwise, scroll to given verse index.
+        // Otherwise, scroll to given verse index.
         } else {
             const { selectedVerseIndex } = this.props
 
             this.props.scrollElementIntoView({
+                log: 'Rerender selected verse.',
                 scrollClass: VERSE_SCROLL,
                 index: selectedVerseIndex,
                 time: 0,
                 callback: this._determineVerseBarsCallback
             })
+        }
+    }
 
-            if (this.props.selectedCarouselNavIndex) {
-                this.props.scrollElementIntoView({
-                    scrollClass: CAROUSEL_SCROLL,
-                    index: 1,
-                    time: 0
-                })
-            }
+    handleScrollUponCarouselRender() {
+
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
+            return
+        }
+
+        const { selectedAnnotationIndex } = this.props
+
+        // Scroll to carousel annotation if toggled on.
+        if (this.props.selectedCarouselNavIndex) {
+
+            this.props.scrollElementIntoView({
+                log: 'Rerender selected carousel annotation.',
+                scrollClass: CAROUSEL_SCROLL,
+                index: selectedAnnotationIndex || 1,
+                time: 0
+            })
         }
     }
 
@@ -964,9 +961,9 @@ class EventHandler extends Component {
 }
 
 const mapStateToProps = ({
-    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow
+    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow
 }) => ({
-    appMounted, selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow
+    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow
 })
 
 export default connect(mapStateToProps)(EventHandler)

@@ -36,6 +36,7 @@ class Carousel extends Component {
         renderableAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
+        handleScrollUponCarouselRender: PropTypes.func.isRequired,
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired,
 
@@ -80,6 +81,8 @@ class Carousel extends Component {
                 waitForShowTimeoutId,
                 didRenderTimeoutId
             })
+
+            this.props.handleScrollUponCarouselRender()
 
         } else if (couldRender && !canCarouselRender) {
 

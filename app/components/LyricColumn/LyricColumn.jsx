@@ -29,7 +29,7 @@ class LyricColumn extends Component {
         canLyricRender: PropTypes.bool.isRequired,
 
         // From parent.
-        handleScrollAfterLyricRerender: PropTypes.func.isRequired,
+        handleScrollUponLyricRender: PropTypes.func.isRequired,
         lyricDidRender: PropTypes.func.isRequired
     }
 
@@ -38,13 +38,13 @@ class LyricColumn extends Component {
 
         this.state = {
             isTransitioningHeight: false,
-            scrollTimeoutId: null,
+            // scrollTimeoutId: null,
             isShown: false,
             waitForShowTimeoutId: '',
             didRenderTimeoutId: ''
         }
 
-        this._handleScrollAfterLyricRerender = this._handleScrollAfterLyricRerender.bind(this)
+        // this._handleScrollAfterLyricRerender = this._handleScrollAfterLyricRerender.bind(this)
         this._handleTransition = this._handleTransition.bind(this)
         this.completeHeightTransition = this.completeHeightTransition.bind(this)
         this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
@@ -52,7 +52,7 @@ class LyricColumn extends Component {
 
     componentDidMount() {
         // Previously done on appMounted check.
-        this.props.handleScrollAfterLyricRerender()
+        // this.props.handleScrollUponLyricRender()
     }
 
     componentDidUpdate(prevProps) {
@@ -80,18 +80,21 @@ class LyricColumn extends Component {
                 didRenderTimeoutId
             })
 
+            this.props.handleScrollUponLyricRender()
+
             /**
-             * TODO: How does this scrolling work, exactly?
+             * TODO: Confirm that there definitely doesn't need to be a
+             * timeout set for scrolling after lyric rerender before deleting.
              */
-            clearTimeout(this.state.scrollTimeoutId)
+            // clearTimeout(this.state.scrollTimeoutId)
 
-            const scrollTimeoutId = setTimeout(
-                this._handleScrollAfterLyricRerender, 0
-            )
+            // const scrollTimeoutId = setTimeout(
+            //     this._handleScrollAfterLyricRerender, 0
+            // )
 
-            this.setState({
-                scrollTimeoutId
-            })
+            // this.setState({
+            //     scrollTimeoutId
+            // })
 
         } else if (couldRender && !canLyricRender) {
 
@@ -107,9 +110,9 @@ class LyricColumn extends Component {
         })
     }
 
-    _handleScrollAfterLyricRerender() {
-        this.props.handleScrollAfterLyricRerender()
-    }
+    // _handleScrollAfterLyricRerender() {
+    //     this.props.handleScrollUponLyricRender()
+    // }
 
     _handleTransition(e) {
         if (e.propertyName === 'height') {
@@ -129,7 +132,7 @@ class LyricColumn extends Component {
 
         const {
                 /* eslint-disable no-unused-vars */
-                handleScrollAfterLyricRerender,
+                handleScrollUponLyricRender,
                 lyricDidRender,
                 /* eslint-enable no-unused-vars */
 

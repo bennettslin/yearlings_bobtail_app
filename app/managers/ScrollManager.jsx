@@ -52,12 +52,13 @@ class ScrollManager extends Component {
     }
 
     scrollElementIntoView({
-
+        log = '',
         scrollElement,
         scrollClass,
         index,
         time = 500,
-        callback = this._scrollElementCallback
+        // callback = this._scrollElementCallback
+        callback
 
     }) {
         const isCarousel = scrollClass === CAROUSEL_SCROLL
@@ -65,14 +66,14 @@ class ScrollManager extends Component {
         let element = scrollElement
 
         if (element) {
-            console.warn('Scrolling ref element:', element)
+            console.info(log, 'Scroll ref:', scrollClass, index)
 
         } else {
             const { childClass } = SCROLL_CLASSES[scrollClass],
             selector = isNaN(index) ? childClass : `${childClass}__${index}`
             element = document.getElementsByClassName(selector)[0]
 
-            console.error('Scrolling selector:', selector, 'element:', element)
+            console.error(log, 'Scroll selector:', scrollClass, index)
         }
 
         if (element) {

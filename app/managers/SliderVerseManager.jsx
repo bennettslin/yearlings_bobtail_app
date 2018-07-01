@@ -142,6 +142,7 @@ class SliderVerseManager extends Component {
 
             // Scroll to verse index, then reset verse bars.
             this.props.scrollElementIntoView({
+                log: 'Slider touch body end.',
                 scrollClass: VERSE_SCROLL,
                 index: selectedVerseIndex,
                 deviceIndex: this.props.deviceIndex,

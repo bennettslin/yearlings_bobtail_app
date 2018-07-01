@@ -51,7 +51,9 @@ export const bindHandlers = (me) => {
     me.handleVerseBarWheel = me.handleVerseBarWheel.bind(me)
     me.handleVerseInteractivate = me.handleVerseInteractivate.bind(me)
     me.handleWikiToggle = me.handleWikiToggle.bind(me)
-    me.handleScrollAfterLyricRerender = me.handleScrollAfterLyricRerender.bind(me)
+    me.handleScrollUponLyricRender = me.handleScrollUponLyricRender.bind(me)
+    me.handleScrollUponCarouselRender =
+        me.handleScrollUponCarouselRender.bind(me)
     me.stopPropagation = me.stopPropagation.bind(me)
 
     me.getLyricRef = me.getLyricRef.bind(me)
@@ -117,7 +119,8 @@ export const getHandlers = (me) => {
         handleVerseBarWheel: me.handleVerseBarWheel,
         handleVerseInteractivate: me.handleVerseInteractivate,
         handleWikiToggle: me.handleWikiToggle,
-        handleScrollAfterLyricRerender: me.handleScrollAfterLyricRerender,
+        handleScrollUponLyricRender: me.handleScrollUponLyricRender,
+        handleScrollUponCarouselRender: me.handleScrollUponCarouselRender,
         stopPropagation: me.stopPropagation,
 
         getLyricRef: me.getLyricRef,

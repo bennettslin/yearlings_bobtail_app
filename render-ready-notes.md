@@ -31,7 +31,6 @@ When selecting a song:
 TODO later:
 * Changing scenes
 * Rest of players
-* Immediate scrolling (Lyric scrolling upon mount is currently broken)
 * Persist cube's base coordinates, as they will always be the same
 * Mounting different from updating
 

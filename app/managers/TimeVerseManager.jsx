@@ -123,6 +123,7 @@ class TimeVerseManager extends Component {
             selectedVerseIndex !== props.selectedVerseIndex
         ) {
             this.props.scrollElementIntoView({
+                log: 'Player autoscroll.',
                 scrollClass: VERSE_SCROLL,
                 index: selectedVerseIndex,
                 deviceIndex: this.props.deviceIndex,
