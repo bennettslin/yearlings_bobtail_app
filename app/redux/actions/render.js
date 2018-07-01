@@ -1,6 +1,7 @@
 // Actions for state of this user session.
 import {
-    IS_RENDERABLE,
+    IS_SONG_CHANGE_RENDERABLE,
+    IS_WINDOW_RESIZE_RENDERABLE,
     RENDER_READY_SONG_INDEX,
     RENDER_READY_ANNOTATION_INDEX,
     RENDER_READY_VERSE_INDEX,
@@ -12,11 +13,18 @@ import {
     CAN_SCENE_RENDER
 } from '../../constants/state'
 
-export const setIsRenderable = (
-    isRenderable = false
+export const setIsSongChangeRenderable = (
+    isSongChangeRenderable = false
 ) => ({
-    type: IS_RENDERABLE,
-    payload: isRenderable
+    type: IS_SONG_CHANGE_RENDERABLE,
+    payload: isSongChangeRenderable
+})
+
+export const setIsWindowResizeRenderable = (
+    isWindowResizeRenderable = false
+) => ({
+    type: IS_WINDOW_RESIZE_RENDERABLE,
+    payload: isWindowResizeRenderable
 })
 
 export const setRenderableSongIndex = (

@@ -28,7 +28,8 @@ module.exports = {
     IS_SCORE_LOADED: 'scoreLoaded',
 
     // Render.
-    IS_RENDERABLE: 'isRenderable',
+    IS_WINDOW_RESIZE_RENDERABLE: 'isWindowResizeRenderable',
+    IS_SONG_CHANGE_RENDERABLE: 'isSongChangeRenderable',
     RENDER_READY_SONG_INDEX: 'renderableSongIndex',
     RENDER_READY_ANNOTATION_INDEX: 'renderableAnnotationIndex',
     RENDER_READY_VERSE_INDEX: 'renderableVerseIndex',

@@ -1,6 +1,7 @@
 // Reducers for state of this user session.
 import {
-    IS_RENDERABLE,
+    IS_SONG_CHANGE_RENDERABLE,
+    IS_WINDOW_RESIZE_RENDERABLE,
     RENDER_READY_SONG_INDEX,
     RENDER_READY_ANNOTATION_INDEX,
     RENDER_READY_VERSE_INDEX,
@@ -22,12 +23,24 @@ const { getFromStorage } = StorageHelper,
     storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
     storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX)
 
-export const IsRenderableReducer = (
+export const isWindowResizeRenderableReducer = (
     state = false,
     action
 ) => {
     switch (action.type) {
-        case IS_RENDERABLE:
+        case IS_WINDOW_RESIZE_RENDERABLE:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const isSongChangeRenderableReducer = (
+    state = false,
+    action
+) => {
+    switch (action.type) {
+        case IS_SONG_CHANGE_RENDERABLE:
             return action.payload
         default:
             return state

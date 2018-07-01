@@ -1,8 +1,9 @@
 // Section to show the stage illustrations.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
 
 import DynamicSvg from '../DynamicSvg/DynamicSvg'
 import TheatreCeilingRafter from './TheatreCeilingRafter'
@@ -11,82 +12,97 @@ import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/generalHe
 
 import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../../constants/stage'
 
-const propTypes = {
-    windowWidth: PropTypes.number.isRequired,
-    ceilingFieldCoordinates: PropTypes.shape({
-        ceilingHeight: PropTypes.number.isRequired,
-        stageWidth: PropTypes.number.isRequired,
-        stageCentreFromLeft: PropTypes.number.isRequired
-    })
-}
+const mapStateToProps = ({
+    canTheatreRender,
+    windowWidth
+}) => ({
+    canTheatreRender,
+    windowWidth
+})
 
-const TheatreCeiling = ({
+class TheatreCeiling extends Component {
 
-    windowWidth,
-    ceilingFieldCoordinates
+    static propTypes = {
+        canTheatreRender: PropTypes.bool.isRequired,
+        windowWidth: PropTypes.number.isRequired,
 
-}) => {
-
-    const { ceilingHeight,
-            stageWidth,
-
-            stageCentreFromLeft } = ceilingFieldCoordinates,
-
-        ceilingFieldStyle = {
-            height: `${ceilingHeight}px`
-        },
-
-        // Arbitrary values for now.
-        firstRowRafterWidth = stageWidth * 1.1,
-        firstRowRafterHeight = firstRowRafterWidth * RAFTER_HEIGHT_TO_WIDTH_RATIO,
-
-        raftersRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
-            minLength: ceilingHeight,
-            firstLength: firstRowRafterHeight,
-            multiplyFactor: 1.2, // Gets wider faster with larger value.
-            overlapRatio: 0.3 // Less bunched up when closer to 0.
+        ceilingFieldCoordinates: PropTypes.shape({
+            ceilingHeight: PropTypes.number.isRequired,
+            stageWidth: PropTypes.number.isRequired,
+            stageCentreFromLeft: PropTypes.number.isRequired
         })
+    }
 
-    return (
-        <div
-            className={cx(
-                'TheatreCeiling',
-                'Theatre__field'
-            )}
-            style={ceilingFieldStyle}
-        >
-            <DynamicSvg
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canTheatreRender
+    }
+
+    render() {
+        const {
+                windowWidth,
+                ceilingFieldCoordinates
+            } = this.props,
+
+            {
+                ceilingHeight,
+                stageWidth,
+                stageCentreFromLeft
+            } = ceilingFieldCoordinates,
+
+            ceilingFieldStyle = {
+                height: `${ceilingHeight}px`
+            },
+
+            // Arbitrary values for now.
+            firstRowRafterWidth = stageWidth * 1.1,
+            firstRowRafterHeight = firstRowRafterWidth * RAFTER_HEIGHT_TO_WIDTH_RATIO,
+
+            raftersRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
+                minLength: ceilingHeight,
+                firstLength: firstRowRafterHeight,
+                multiplyFactor: 1.2, // Gets wider faster with larger value.
+                overlapRatio: 0.3 // Less bunched up when closer to 0.
+            })
+
+        return (
+            <div
                 className={cx(
-                    'Theatre__subfield'
+                    'TheatreCeiling',
+                    'Theatre__field'
                 )}
-                viewBoxWidth={windowWidth}
-                viewBoxHeight={ceilingHeight}
+                style={ceilingFieldStyle}
             >
-                {raftersRowCoordinates.map((currentCoordinates, index) => {
-                    const { length: rafterHeight,
-                            position: rafterBottom } = currentCoordinates,
+                <DynamicSvg
+                    className={cx(
+                        'Theatre__subfield'
+                    )}
+                    viewBoxWidth={windowWidth}
+                    viewBoxHeight={ceilingHeight}
+                >
+                    {raftersRowCoordinates.map((currentCoordinates, index) => {
+                        const { length: rafterHeight,
+                                position: rafterBottom } = currentCoordinates,
 
-                        rafterWidth = rafterHeight /
-                            RAFTER_HEIGHT_TO_WIDTH_RATIO,
+                            rafterWidth = rafterHeight /
+                                RAFTER_HEIGHT_TO_WIDTH_RATIO,
 
-                        rafterTop = ceilingHeight - rafterHeight - rafterBottom,
-                        rafterLeft = stageCentreFromLeft - rafterWidth / 2
+                            rafterTop = ceilingHeight - rafterHeight - rafterBottom,
+                            rafterLeft = stageCentreFromLeft - rafterWidth / 2
 
-                    return (
-                        <TheatreCeilingRafter
-                            key={index}
-                            top={rafterTop}
-                            left={rafterLeft}
-                            width={rafterWidth}
-                            height={rafterHeight}
-                        />
-                    )
-                })}
-            </DynamicSvg>
-        </div>
-    )
+                        return (
+                            <TheatreCeilingRafter
+                                key={index}
+                                top={rafterTop}
+                                left={rafterLeft}
+                                width={rafterWidth}
+                                height={rafterHeight}
+                            />
+                        )
+                    })}
+                </DynamicSvg>
+            </div>
+        )
+    }
 }
 
-TheatreCeiling.propTypes = propTypes
-
-export default TheatreCeiling
+export default connect(mapStateToProps)(TheatreCeiling)

@@ -31,9 +31,11 @@ import {
 } from './liveHelper'
 
 const mapStateToProps = ({
-    isRenderable
+    isWindowResizeRenderable,
+    isSongChangeRenderable
 }) => ({
-    isRenderable
+    isWindowResizeRenderable,
+    isSongChangeRenderable
 })
 
 class Live extends Component {
@@ -59,7 +61,7 @@ class Live extends Component {
     componentDidUpdate(prevProps) {
 
         // Is unrenderable after song change.
-        if (!this.props.isRenderable && prevProps.isRenderable) {
+        if (!this.props.isSongChangeRenderable && prevProps.isSongChangeRenderable) {
             this.unrenderedTime = Date.now()
 
             console.warn('Live unrenderable.')
@@ -70,13 +72,30 @@ class Live extends Component {
             this.props.setCanRenderScene(false)
         }
 
-        // Is renderable after timeout.
-        if (this.props.isRenderable && !prevProps.isRenderable) {
+        // Is renderable after song change timeout.
+        if (this.props.isSongChangeRenderable && !prevProps.isSongChangeRenderable) {
             console.warn(`Live renderable after ${
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
             } seconds.`)
 
             this.props.setCanRenderMain(true)
+        }
+
+        // Is unrenderable after window resize.
+        if (!this.props.isWindowResizeRenderable && prevProps.isWindowResizeRenderable) {
+            this.unrenderedTime = Date.now()
+
+            console.warn('Live unrenderable.')
+            this.props.setCanRenderTheatre(false)
+        }
+
+        // Is renderable after window resize timeout.
+        if (this.props.isWindowResizeRenderable && !prevProps.isWindowResizeRenderable) {
+            console.warn(`Live renderable after ${
+                ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
+            } seconds.`)
+
+            this.props.setCanRenderTheatre(true)
         }
     }
 
@@ -159,7 +178,8 @@ class Live extends Component {
 
 Live.propTypes = {
     // Through Redux.
-    isRenderable: PropTypes.bool.isRequired,
+    isWindowResizeRenderable: PropTypes.bool.isRequired,
+    isSongChangeRenderable: PropTypes.bool.isRequired,
 
     setCanRenderTheatre: PropTypes.func.isRequired,
     setCanRenderMain: PropTypes.func.isRequired,

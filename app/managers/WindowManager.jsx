@@ -4,6 +4,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import debounce from 'debounce'
 
+import { setIsWindowResizeRenderable } from '../redux/actions/render'
+
 import { accessAnnotationIndex } from '../redux/actions/access'
 import {
     setDeviceIndex,
@@ -76,19 +78,26 @@ class WindowManager extends Component {
     constructor(props) {
         super(props)
 
+        this.state = {
+            windowResizeTimeoutId: ''
+        }
+
         this._windowResize = this._windowResize.bind(this)
+        this._prepareForWindowResizeRender =
+            this._prepareForWindowResizeRender.bind(this)
     }
 
     componentDidMount() {
-        /**
-         * Set initial responsive UI, then modify state based on device index.
-         */
-        this._updateStateAfterMount(
-            this._windowResize()
-        )
 
         // Then watch for any subsequent window resize.
-        window.onresize = debounce(this._windowResize, 50)
+        window.onresize = debounce(this._windowResize, 25)
+    }
+
+    componentDidUpdate(prevProps) {
+
+        if (this.props.appMounted && !prevProps.appMounted) {
+            this._windowResize()
+        }
     }
 
     componentWillUnmount() {
@@ -143,6 +152,10 @@ class WindowManager extends Component {
                 selectedSongIndex,
                 deviceIndex
             )
+
+        if (e) {
+            this._prepareForWindowResizeUnrender()
+        }
 
         /**
          * Deselect selected annotation if not in new shown column. Do it here,
@@ -211,29 +224,55 @@ class WindowManager extends Component {
         return deviceIndex
     }
 
+    _prepareForWindowResizeRender() {
+        this.props.setIsWindowResizeRenderable(true)
+    }
+
+    _prepareForWindowResizeUnrender() {
+        this.props.setIsWindowResizeRenderable(false)
+
+        // Clear previous timeout.
+        clearTimeout(this.state.windowResizeTimeoutId)
+
+        /**
+         * Render is synchronous, so wait a bit after resizing window before
+         * rendering the most performance intensive components.
+         */
+        const windowResizeTimeoutId = setTimeout(
+            this._prepareForWindowResizeRender, 200
+        )
+
+        this.setState({
+            windowResizeTimeoutId
+        })
+    }
+
     render() {
         return null
     }
 }
 
 const mapStateToProps = ({
-        selectedAnnotationIndex,
-        selectedDotKeys,
-        selectedLyricColumnIndex,
-        selectedSongIndex,
-        selectedVerseIndex,
-        showOneOfTwoLyricColumns
+    appMounted,
+    selectedAnnotationIndex,
+    selectedDotKeys,
+    selectedLyricColumnIndex,
+    selectedSongIndex,
+    selectedVerseIndex,
+    showOneOfTwoLyricColumns
 }) => ({
-        selectedAnnotationIndex,
-        selectedDotKeys,
-        selectedLyricColumnIndex,
-        selectedSongIndex,
-        selectedVerseIndex,
-        showOneOfTwoLyricColumns
+    appMounted,
+    selectedAnnotationIndex,
+    selectedDotKeys,
+    selectedLyricColumnIndex,
+    selectedSongIndex,
+    selectedVerseIndex,
+    showOneOfTwoLyricColumns
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        setIsWindowResizeRenderable,
         accessAnnotationIndex,
         setDeviceIndex,
         setWindowHeight,

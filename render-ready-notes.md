@@ -40,6 +40,5 @@ TODO later:
 * Persist cube's base coordinates, as they will always be the same
 * Window resizing in theatre
 * Mounting different from updating
-* Move relevant actions and reducers
 
 * Reprioritise order of carousel and lyrics if not shown

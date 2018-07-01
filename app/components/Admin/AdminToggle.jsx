@@ -5,19 +5,11 @@ import { connect } from 'react-redux'
 import { DEVICE_OBJECTS } from '../../constants/responsive'
 
 const AdminToggle = ({
-
     // From props.
+    isWindowResizeRenderable,
     deviceIndex,
     windowWidth,
-    windowHeight,
-    isRenderable,
-    selectedSongIndex,
-    renderableSongIndex,
-    selectedAnnotationIndex,
-    renderableAnnotationIndex,
-    selectedVerseIndex,
-    renderableVerseIndex
-
+    windowHeight
 }) => (
     <div className="AdminToggle">
         <div>
@@ -26,50 +18,20 @@ const AdminToggle = ({
         <div>
             {windowWidth} x {windowHeight}
         </div>
-        {/* <div>
-            isRenderable: {isRenderable ? 'true' : 'false'}
-        </div>
         <div>
-            selectedSongIndex: {selectedSongIndex}
+            {`window resizable: ${isWindowResizeRenderable ? 'true' : 'false'}`}
         </div>
-        <div>
-            renderableSongIndex: {renderableSongIndex}
-        </div>
-        <div>
-            selectedAnnotationIndex: {selectedAnnotationIndex}
-        </div>
-        <div>
-            renderableAnnotationIndex: {renderableAnnotationIndex}
-        </div>
-        <div>
-            selectedVerseIndex: {selectedVerseIndex}
-        </div>
-        <div>
-            renderableVerseIndex: {renderableVerseIndex}
-        </div> */}
     </div>
 )
 
 export default connect(({
+    isWindowResizeRenderable,
     deviceIndex,
     windowWidth,
-    windowHeight,
-    isRenderable,
-    selectedSongIndex,
-    renderableSongIndex,
-    selectedAnnotationIndex,
-    renderableAnnotationIndex,
-    selectedVerseIndex,
-    renderableVerseIndex
+    windowHeight
 }) => ({
+    isWindowResizeRenderable,
     deviceIndex,
     windowWidth,
-    windowHeight,
-    isRenderable,
-    selectedSongIndex,
-    renderableSongIndex,
-    selectedAnnotationIndex,
-    renderableAnnotationIndex,
-    selectedVerseIndex,
-    renderableVerseIndex
+    windowHeight
 }))(AdminToggle)

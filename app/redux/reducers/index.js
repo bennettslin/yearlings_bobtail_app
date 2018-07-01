@@ -3,7 +3,7 @@ import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, A
 import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer, StageCoordinatesReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
-import { IsRenderableReducer, RenderableSongIndexReducer, RenderableAnnotationIndexReducer, RenderableVerseIndexReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanSceneRenderReducer } from './render'
+import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, RenderableSongIndexReducer, RenderableAnnotationIndexReducer, RenderableVerseIndexReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanSceneRenderReducer } from './render'
 import { IsHeightlessLyricColumnReducer, IsHiddenCarouselNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, isTwoRowMenuReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, CurrentSceneIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, SelectedVerseElementReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
 import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseElementReducer, SliderVerseIndexReducer } from './slider'
@@ -37,7 +37,8 @@ const rootReducer = combineReducers({
     showSingleBookColumn: ShowSingleBookColumnReducer,
 
     appMounted: AppMountedReducer,
-    isRenderable: IsRenderableReducer,
+    isWindowResizeRenderable: isWindowResizeRenderableReducer,
+    isSongChangeRenderable: isSongChangeRenderableReducer,
     renderableSongIndex: RenderableSongIndexReducer,
     renderableAnnotationIndex: RenderableAnnotationIndexReducer,
     renderableVerseIndex: RenderableVerseIndexReducer,

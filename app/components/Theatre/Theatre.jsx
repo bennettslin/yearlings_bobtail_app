@@ -53,25 +53,71 @@ class Theatre extends Component {
         theatreDidRender: PropTypes.func.isRequired
     }
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            isShown: false,
+            waitForShowTimeoutId: '',
+            didRenderTimeoutId: ''
+        }
+
+        this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
+    }
+
+    // No shouldComponentUpdate necessary.
+
     componentDidUpdate(prevProps) {
-        if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+        const { canTheatreRender } = this.props,
+            { canTheatreRender: couldRender } = prevProps
+
+        if (canTheatreRender && !couldRender) {
             console.warn('Theatre rendered.')
 
-            setTimeout(
-                this.props.theatreDidRender, 0
-            )
+            clearTimeout(this.state.waitForShowTimeoutId)
+            clearTimeout(this.state.didRenderTimeoutId)
+
+            const
+                // Set timeout to prevent children transitions before render.
+                waitForShowTimeoutId = setTimeout(
+                    this._waitForShowBeforeRender, 50
+                ),
+                // Wait for parent transition before continuing render sequence.
+                didRenderTimeoutId = setTimeout(
+                    this.props.carouselDidRender, 100
+                )
+
+            this.setState({
+                waitForShowTimeoutId,
+                didRenderTimeoutId
+            })
+
+        } else if (couldRender && !canTheatreRender) {
+
+            this.setState({
+                isShown: false
+            })
         }
     }
 
+    _waitForShowBeforeRender() {
+        this.setState({
+            isShown: true
+        })
+    }
+
     render() {
-        const { isHeightlessLyricColumn,
+        const {
+                isHeightlessLyricColumn,
                 deviceIndex,
                 stageCoordinates,
                 windowWidth,
                 windowHeight,
                 canTheatreRender,
                 ...other
-             } = this.props,
+            } = this.props,
+
+            { isShown } = this.state,
 
             { top: stageTop,
               left: stageLeft,
@@ -129,26 +175,23 @@ class Theatre extends Component {
         return canTheatreRender ? (
             <div className={cx(
                 'Theatre',
-                'absoluteFullContainer'
+                'absoluteFullContainer',
+                { 'parentIsShown': canTheatreRender && isShown }
             )}>
                 <TheatreCeiling
-                    windowWidth={windowWidth}
                     ceilingFieldCoordinates={ceilingFieldCoordinates}
                 />
                 <TheatreWall
-                    windowHeight={windowHeight}
                     wallFieldCoordinates={wallFieldCoordinates}
                 />
                 <TheatreWall
                     isRight
-                    windowHeight={windowHeight}
                     wallFieldCoordinates={wallFieldCoordinates}
                 />
 
                 <Stage {...other} />
 
                 <TheatreFloor
-                    windowWidth={windowWidth}
                     floorFieldCoordinates={floorFieldCoordinates}
                 />
             </div>

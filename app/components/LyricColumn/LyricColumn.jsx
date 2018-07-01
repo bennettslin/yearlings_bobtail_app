@@ -13,11 +13,9 @@ import Lyric from '../Lyric/Lyric'
 import VerseBar from './VerseBar'
 
 const mapStateToProps = ({
-    canLyricRender,
-    isRenderable
+    canLyricRender
 }) => ({
-    canLyricRender,
-    isRenderable
+    canLyricRender
 })
 
 /*************
@@ -29,7 +27,6 @@ class LyricColumn extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        isRenderable: PropTypes.bool.isRequired,
 
         // From parent.
         handleScrollAfterLyricRerender: PropTypes.func.isRequired,
@@ -83,14 +80,9 @@ class LyricColumn extends Component {
                 didRenderTimeoutId
             })
 
-        } else if (couldRender && !canLyricRender) {
-
-            this.setState({
-                isShown: false
-            })
-        }
-
-        if (!prevProps.isRenderable && this.props.isRenderable) {
+            /**
+             * TODO: How does this scrolling work, exactly?
+             */
             clearTimeout(this.state.scrollTimeoutId)
 
             const scrollTimeoutId = setTimeout(
@@ -99,6 +91,12 @@ class LyricColumn extends Component {
 
             this.setState({
                 scrollTimeoutId
+            })
+
+        } else if (couldRender && !canLyricRender) {
+
+            this.setState({
+                isShown: false
             })
         }
     }
@@ -132,7 +130,6 @@ class LyricColumn extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 handleScrollAfterLyricRerender,
-                isRenderable,
                 lyricDidRender,
                 /* eslint-enable no-unused-vars */
 
