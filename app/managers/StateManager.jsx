@@ -30,33 +30,14 @@ import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
-import {
-    getSongIsLogue
-} from '../helpers/dataHelper'
-
-// import {
-//     getObjectOfSongIndices
-// } from '../helpers/logicHelper'
-
-import {
-    CAROUSEL_SCROLL,
-    LYRIC_ANNOTATION_SCROLL,
-    VERSE_SCROLL
-} from '../constants/dom'
-
 class StateManager extends Component {
 
     static propTypes = {
-        selectedSongIndex: PropTypes.number.isRequired,
         updatePath: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
-
-        this.myCarouselAnnotationElements = {}
-        this.myLyricAnnotationElements = {}
-        this.myVerseElements = {}
 
         this._bindEventHandlers()
     }
@@ -64,17 +45,6 @@ class StateManager extends Component {
     componentDidMount() {
         console.warn('State manager rendered.')
         this.props.setAppMounted(true)
-
-        window.elements = () => {
-            console.error(
-                'Carousel annotation elements:',
-                this.myCarouselAnnotationElements,
-                '\nLyric annotation elements:',
-                this.myLyricAnnotationElements,
-                '\nVerse elements',
-                this.myVerseElements
-            )
-        }
     }
 
     /**********
@@ -209,80 +179,19 @@ class StateManager extends Component {
      * SCROLL *
      **********/
 
-    /**
-     * FIXME: These refs aren't always being set correctly, possibly because
-     * of the discrepancy between selected song index and rendered song index
-     * at the time that the refs are set and passed.
-     */
-
-    getCarouselAnnotationRef(node, annotationIndex) {
-        // console.error(node, annotationIndex)
-
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return
-        }
-
-        if (node) {
-            this.myCarouselAnnotationElements[annotationIndex] = node
-        } else {
-            delete this.myCarouselAnnotationElements[annotationIndex]
-        }
+    setCarouselAnnotationRef(payload) {
+        return this.scrollManager.setCarouselAnnotationRef(payload)
     }
 
-    getLyricAnnotationRef(node, annotationIndex) {
-        // console.error(node, annotationIndex)
-
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return
-        }
-
-        if (node) {
-            this.myLyricAnnotationElements[annotationIndex] = node
-        } else {
-            delete this.myLyricAnnotationElements[annotationIndex]
-        }
+    setLyricAnnotationRef(payload) {
+        return this.scrollManager.setLyricAnnotationRef(payload)
     }
 
-    getVerseRef(node, verseIndex) {
-        // console.error(node, verseIndex)
-
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return
-        }
-
-        if (node) {
-            this.myVerseElements[verseIndex] = node
-        } else {
-            delete this.myVerseElements[verseIndex]
-        }
+    setVerseRef(payload) {
+        return this.scrollManager.setVerseRef(payload)
     }
 
     scrollElementIntoView(payload) {
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return
-        }
-
-        const {
-            scrollClass,
-            index
-        } = payload
-
-        let elementsArray
-
-        switch (scrollClass) {
-            case CAROUSEL_SCROLL:
-                elementsArray = this.myCarouselAnnotationElements
-                break
-            case LYRIC_ANNOTATION_SCROLL:
-                elementsArray = this.myLyricAnnotationElements
-                break
-            case VERSE_SCROLL:
-                elementsArray = this.myVerseElements
-                break
-        }
-
-        payload.scrollElement = elementsArray[index]
-
         return this.scrollManager.scrollElementIntoView(payload)
     }
 
@@ -412,9 +321,9 @@ class StateManager extends Component {
         this.touchSliderBegin = this.touchSliderBegin.bind(this)
         this.touchBodyMove = this.touchBodyMove.bind(this)
         this.touchBodyEnd = this.touchBodyEnd.bind(this)
-        this.getCarouselAnnotationRef = this.getCarouselAnnotationRef.bind(this)
-        this.getLyricAnnotationRef = this.getLyricAnnotationRef.bind(this)
-        this.getVerseRef = this.getVerseRef.bind(this)
+        this.setCarouselAnnotationRef = this.setCarouselAnnotationRef.bind(this)
+        this.setLyricAnnotationRef = this.setLyricAnnotationRef.bind(this)
+        this.setVerseRef = this.setVerseRef.bind(this)
         this.scrollElementIntoView = this.scrollElementIntoView.bind(this)
     }
 
@@ -432,9 +341,9 @@ class StateManager extends Component {
                     touchSliderBegin={this.touchSliderBegin}
                     touchBodyMove={this.touchBodyMove}
                     touchBodyEnd={this.touchBodyEnd}
-                    getCarouselAnnotationRef={this.getCarouselAnnotationRef}
-                    getLyricAnnotationRef={this.getLyricAnnotationRef}
-                    getVerseRef={this.getVerseRef}
+                    setCarouselAnnotationRef={this.setCarouselAnnotationRef}
+                    setLyricAnnotationRef={this.setLyricAnnotationRef}
+                    setVerseRef={this.setVerseRef}
                     scrollElementIntoView={this.scrollElementIntoView}
                     selectAnnotation={this.selectAnnotation}
                     selectAudioOption={this.selectAudioOption}
@@ -555,11 +464,7 @@ class StateManager extends Component {
     }
 }
 
-const mapStateToProps = ({
-    selectedSongIndex
-}) => ({
-    selectedSongIndex
-})
+const mapStateToProps = () => ({})
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (

@@ -34,14 +34,14 @@ class LyricStanzaDot extends Component {
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
         handleLyricAnnotationSelect: PropTypes.func.isRequired,
-        getLyricAnnotationRef: PropTypes.func.isRequired
+        setLyricAnnotationRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
 
         this._handleDotButtonClick = this._handleDotButtonClick.bind(this)
-        this.getLyricAnnotationRef = this.getLyricAnnotationRef.bind(this)
+        this.setLyricAnnotationRef = this.setLyricAnnotationRef.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -60,11 +60,11 @@ class LyricStanzaDot extends Component {
         }
     }
 
-    getLyricAnnotationRef(node) {
-        this.props.getLyricAnnotationRef(
+    setLyricAnnotationRef(node) {
+        this.props.setLyricAnnotationRef({
             node,
-            this.props.annotationIndex
-        )
+            index: this.props.dotStanzaObject.annotationIndex
+        })
     }
 
     render() {
@@ -83,7 +83,7 @@ class LyricStanzaDot extends Component {
 
         return (
             <LyricDotStanzaView
-                getRef={this.getLyricAnnotationRef}
+                getRef={this.setLyricAnnotationRef}
                 dotKeys={dotKeys}
                 isSelected={isSelected}
                 isAccessed={isAccessed}

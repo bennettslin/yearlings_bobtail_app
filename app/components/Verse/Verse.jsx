@@ -53,14 +53,14 @@ class Verse extends Component {
         handleVerseInteractivate: PropTypes.func,
         handleSetVerseElement: PropTypes.func,
 
-        getVerseRef: PropTypes.func
+        setVerseRef: PropTypes.func
     }
 
     constructor(props) {
         super(props)
 
         this._handleInteractivatableClick = this._handleInteractivatableClick.bind(this)
-        this.getVerseRef = this.getVerseRef.bind(this)
+        this.setVerseRef = this.setVerseRef.bind(this)
     }
 
     componentDidMount() {
@@ -114,15 +114,15 @@ class Verse extends Component {
         return !isNaN(verseIndex) && !inVerseBar
     }
 
-    getVerseRef(node) {
+    setVerseRef(node) {
         if (this.getIsInteractable()) {
             this.myVerseElement = node
             this._handleSetVerseElement()
 
-            this.props.getVerseRef(
+            this.props.setVerseRef({
                 node,
-                this.props.verseIndex
-            )
+                index: this.props.verseIndex
+            })
         }
     }
 
@@ -158,7 +158,7 @@ class Verse extends Component {
 
         return (
             <VerseView {...other}
-                getRef={this.getVerseRef}
+                getRef={this.setVerseRef}
                 isTitle={isTitle}
                 isDoubleSpeaker={!lyric && !centre}
                 isInteractable={isInteractable}

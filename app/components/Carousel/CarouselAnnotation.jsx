@@ -34,7 +34,7 @@ class CarouselAnnotation extends Component {
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
         handleLyricAnnotationSelect: PropTypes.func.isRequired,
-        getCarouselAnnotationRef: PropTypes.func.isRequired
+        setCarouselAnnotationRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -42,7 +42,7 @@ class CarouselAnnotation extends Component {
 
         this._handleAnnotationContainerClick = this._handleAnnotationContainerClick.bind(this)
         this._handleAnnotationTitleClick = this._handleAnnotationTitleClick.bind(this)
-        this.getCarouselAnnotationRef = this.getCarouselAnnotationRef.bind(this)
+        this.setCarouselAnnotationRef = this.setCarouselAnnotationRef.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -85,11 +85,11 @@ class CarouselAnnotation extends Component {
         }
     }
 
-    getCarouselAnnotationRef(node) {
-        this.props.getCarouselAnnotationRef(
+    setCarouselAnnotationRef(node) {
+        this.props.setCarouselAnnotationRef({
             node,
-            this.props.annotationIndex
-        )
+            index: this.props.annotationIndex
+        })
     }
 
     render() {
@@ -116,7 +116,7 @@ class CarouselAnnotation extends Component {
 
         return (
             <CarouselAnnotationView {...other}
-                getRef={this.getCarouselAnnotationRef}
+                getRef={this.setCarouselAnnotationRef}
                 carouselAnnotationIndex={annotationIndex}
                 annotationColumn={columnKey}
                 annotationDotKeys={dotKeys}

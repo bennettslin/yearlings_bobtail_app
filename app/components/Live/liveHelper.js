@@ -3,9 +3,9 @@ export const getOrganisedHandlersFromProps = (props) => {
         getLyricRef,
         getScoreRef,
         getWikiRef,
-        getCarouselAnnotationRef,
-        getLyricAnnotationRef,
-        getVerseRef,
+        setCarouselAnnotationRef,
+        setLyricAnnotationRef,
+        setVerseRef,
 
         handlePopupContainerClick,
         handleScrollUponLyricRender,
@@ -71,8 +71,8 @@ export const getOrganisedHandlersFromProps = (props) => {
 
     lyricColumnHandlers = {
         getLyricRef,
-        getLyricAnnotationRef,
-        getVerseRef,
+        setLyricAnnotationRef,
+        setVerseRef,
         handleLyricAnnotationSelect,
         handleLyricColumnSelect,
         handleLyricSectionExpand,
@@ -127,7 +127,7 @@ export const getOrganisedHandlersFromProps = (props) => {
         tipsPopupHandlers,
 
         carouselSectionHandlers: {
-            getCarouselAnnotationRef,
+            setCarouselAnnotationRef,
             handleLyricAnnotationSelect,
             handleAnnotationPrevious,
             handleAnnotationNext,

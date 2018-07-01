@@ -193,9 +193,9 @@ Live.propTypes = {
     getLyricRef: PropTypes.func.isRequired,
     getScoreRef: PropTypes.func.isRequired,
     getWikiRef: PropTypes.func.isRequired,
-    getCarouselAnnotationRef: PropTypes.func.isRequired,
-    getLyricAnnotationRef: PropTypes.func.isRequired,
-    getVerseRef: PropTypes.func.isRequired,
+    setCarouselAnnotationRef: PropTypes.func.isRequired,
+    setLyricAnnotationRef: PropTypes.func.isRequired,
+    setVerseRef: PropTypes.func.isRequired,
 
     focusElementForAccess: PropTypes.func.isRequired,
 

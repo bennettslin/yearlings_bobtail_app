@@ -45,14 +45,14 @@ class TextLyricAnchor extends Component {
 
         ]).isRequired,
         dotKeys: PropTypes.object,
-        getLyricAnnotationRef: PropTypes.func
+        setLyricAnnotationRef: PropTypes.func
     }
 
     constructor(props) {
         super(props)
 
         this._handleAnchorClick = this._handleAnchorClick.bind(this)
-        this.getLyricAnnotationRef = this.getLyricAnnotationRef.bind(this)
+        this.setLyricAnnotationRef = this.setLyricAnnotationRef.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -82,14 +82,14 @@ class TextLyricAnchor extends Component {
         }
     }
 
-    getLyricAnnotationRef(node) {
+    setLyricAnnotationRef(node) {
 
         // This method is only passed down by stanza, not carousel annotation.
-        if (this.props.getLyricAnnotationRef) {
-            this.props.getLyricAnnotationRef(
+        if (this.props.setLyricAnnotationRef) {
+            this.props.setLyricAnnotationRef({
                 node,
-                this.props.annotationIndex
-            )
+                index: this.props.annotationIndex
+            })
         }
     }
 
@@ -133,7 +133,7 @@ class TextLyricAnchor extends Component {
                 </span>
                 <span
                     key={annotationIndex}
-                    ref={this.getLyricAnnotationRef}
+                    ref={this.setLyricAnnotationRef}
                     className={cx(
                         annotationIndex &&
                             `LyricAnnotation__scrollChild__${annotationIndex}`,

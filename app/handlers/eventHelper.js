@@ -66,9 +66,9 @@ export const getHandlers = (me) => {
         getWikiRef = node => me.myWikiElement = node,
 
         {
-            getCarouselAnnotationRef,
-            getLyricAnnotationRef,
-            getVerseRef
+            setCarouselAnnotationRef,
+            setLyricAnnotationRef,
+            setVerseRef
         } = me.props
 
     return {
@@ -129,8 +129,8 @@ export const getHandlers = (me) => {
         getScoreRef,
         getWikiRef,
 
-        getCarouselAnnotationRef,
-        getLyricAnnotationRef,
-        getVerseRef
+        setCarouselAnnotationRef,
+        setLyricAnnotationRef,
+        setVerseRef
     }
 }
