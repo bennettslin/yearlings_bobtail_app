@@ -5,12 +5,6 @@ module.exports = [
      */
 
     {
-        taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-
-    {
         taskName: `Instead of persisting verse elements, store index and then find by ref.`,
         workedHours: 0,
         neededHours: 5
@@ -23,15 +17,15 @@ module.exports = [
     },
 
     {
-        taskName: `Have refs for scrolling parent elements as well.`,
+        taskName: `Selected verse is not highlighted when verse bar is up. Check Vegan as good example.`,
         workedHours: 0,
         neededHours: 2
     },
 
     {
-        taskName: `Selected verse is not highlighted when verse bar is up. Check Vegan as good example.`,
+        taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 8
     },
 
     {

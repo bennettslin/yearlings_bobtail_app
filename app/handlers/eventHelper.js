@@ -68,7 +68,9 @@ export const getHandlers = (me) => {
         {
             setCarouselAnnotationRef,
             setLyricAnnotationRef,
-            setVerseRef
+            setVerseRef,
+            setLyricVerseParentRef,
+            setCarouselParentRef
         } = me.props
 
     return {
@@ -131,6 +133,8 @@ export const getHandlers = (me) => {
 
         setCarouselAnnotationRef,
         setLyricAnnotationRef,
-        setVerseRef
+        setVerseRef,
+        setLyricVerseParentRef,
+        setCarouselParentRef
     }
 }

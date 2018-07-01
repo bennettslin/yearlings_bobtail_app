@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Annotation from '../Annotation/Annotation'
+import { CAROUSEL_SCROLL } from '../../constants/dom'
 import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
@@ -156,7 +157,7 @@ CarouselAnnotationView = ({
         className={cx(
             'CarouselAnnotation',
 
-            `Carousel__scrollChild__${annotationIndex}`,
+            `${CAROUSEL_SCROLL}__${annotationIndex}`,
 
             annotationColumn &&
                 `CarouselAnnotation__inLyricColumn__${annotationColumn}`,

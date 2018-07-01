@@ -196,6 +196,8 @@ Live.propTypes = {
     setCarouselAnnotationRef: PropTypes.func.isRequired,
     setLyricAnnotationRef: PropTypes.func.isRequired,
     setVerseRef: PropTypes.func.isRequired,
+    setLyricVerseParentRef: PropTypes.func.isRequired,
+    setCarouselParentRef: PropTypes.func.isRequired,
 
     focusElementForAccess: PropTypes.func.isRequired,
 

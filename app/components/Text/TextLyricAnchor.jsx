@@ -8,6 +8,8 @@ import cx from 'classnames'
 import TextAnchor from '../Anchor/TextAnchor'
 import Texts from './Texts'
 
+import { LYRIC_ANNOTATION_SCROLL } from '../../constants/dom'
+
 const mapStateToProps = ({
     canLyricRender,
     renderableAnnotationIndex,
@@ -136,7 +138,7 @@ class TextLyricAnchor extends Component {
                     ref={this.setLyricAnnotationRef}
                     className={cx(
                         annotationIndex &&
-                            `LyricAnnotation__scrollChild__${annotationIndex}`,
+                            `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
                         wikiIndex && `wiki__${wikiIndex}`
                     )}

@@ -15,6 +15,8 @@ import {
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
+import { VERSE_SCROLL } from '../../constants/dom'
+
 const mapStateToProps = ({
     canLyricRender,
     renderableSongIndex
@@ -237,7 +239,8 @@ VerseView = ({
                 'Verse',
                 inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
-                !isNaN(verseIndex) && `Verse__scrollChild__${verseIndex}`,
+                !isNaN(verseIndex) &&
+                    `${VERSE_SCROLL}__${verseIndex}`,
 
                 // title, even, odd, inSide.
                 verseClassName && `verse__${verseClassName}`,

@@ -15,8 +15,7 @@ import {
 import {
     CAROUSEL_SCROLL,
     LYRIC_ANNOTATION_SCROLL,
-    VERSE_SCROLL,
-    SCROLL_CLASSES
+    VERSE_SCROLL
 } from '../constants/dom'
 
 class ScrollManager extends Component {
@@ -67,6 +66,15 @@ class ScrollManager extends Component {
         this._setRef(VERSE_SCROLL, payload)
     }
 
+    setLyricVerseParentRef(node) {
+        this.lyricVerseParentElement = node
+    }
+
+    setCarouselParentRef(node) {
+        this.carouselParentElement = node
+    }
+
+
     _setRef(
         scrollClass,
         { node, index }
@@ -103,6 +111,12 @@ class ScrollManager extends Component {
         return elementsArray
     }
 
+    _getScrollParent(scrollClass) {
+        return scrollClass === CAROUSEL_SCROLL ?
+            this.carouselParentElement :
+            this.lyricVerseParentElement
+    }
+
     scrollElementIntoView({
         log = '',
         scrollClass,
@@ -123,19 +137,22 @@ class ScrollManager extends Component {
 
         let element = scrollElement
 
-        if (element) {
-            console.info(log, '\nScroll by ref:', scrollClass, index)
-
-        // This is a fallback. It should never get called.
-        } else {
-            const { childClass } = SCROLL_CLASSES[scrollClass],
-            selector = isNaN(index) ? childClass : `${childClass}__${index}`
+        /**
+         * TODO: This is a fallback that should never get called. Delete once
+         * confident that it doesn't.
+         */
+        if (!element) {
+            const selector =
+                isNaN(index) ?
+                scrollClass : `${scrollClass}__${index}`
             element = document.getElementsByClassName(selector)[0]
 
             console.error(log, '\nScroll by selector:', scrollClass, index)
         }
 
         if (element) {
+            console.info(log, '\nScroll by ref:', scrollClass, index)
+
             const {
                     deviceIndex,
                     windowWidth,
@@ -144,17 +161,11 @@ class ScrollManager extends Component {
 
                 align = isCarousel ?
                     getCarouselLeftAlign(deviceIndex, windowWidth) :
-                    getLyricTopAlign(deviceIndex, isLyricExpanded)
-
-            let validTarget
-
-            if (SCROLL_CLASSES[scrollClass]) {
-                const { parentClass } = SCROLL_CLASSES[scrollClass]
+                    getLyricTopAlign(deviceIndex, isLyricExpanded),
 
                 validTarget = this._getIsValidScrollingTargetCallback(
-                    parentClass
+                    scrollClass
                 )
-            }
 
             scrollIntoView(element, {
                 time,
@@ -164,18 +175,17 @@ class ScrollManager extends Component {
         }
     }
 
-    _getIsValidScrollingTargetCallback(scrollParentClass) {
+    _getIsValidScrollingTargetCallback(scrollClass) {
+        const parentElement = this._getScrollParent(scrollClass)
 
-        // Don't scroll any immovable parent containers.
-        return (parent) => {
-            const { className } = parent,
-                isValidTarget =
-                    parent !== window &&
-                    Boolean(className) &&
-                    new RegExp(
-                        "(\\s|^)" + scrollParentClass + "(\\s|$)"
-                    ).test(className)
-            return isValidTarget
+        return (element) => {
+            const isParent = element === parentElement
+
+            if (isParent) {
+                console.info('Scroll parent:', element)
+            }
+
+            return isParent
         }
     }
 

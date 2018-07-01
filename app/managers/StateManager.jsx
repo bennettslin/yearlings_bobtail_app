@@ -191,6 +191,14 @@ class StateManager extends Component {
         return this.scrollManager.setVerseRef(payload)
     }
 
+    setLyricVerseParentRef(payload) {
+        return this.scrollManager.setLyricVerseParentRef(payload)
+    }
+
+    setCarouselParentRef(payload) {
+        return this.scrollManager.setCarouselParentRef(payload)
+    }
+
     scrollElementIntoView(payload) {
         return this.scrollManager.scrollElementIntoView(payload)
     }
@@ -324,6 +332,8 @@ class StateManager extends Component {
         this.setCarouselAnnotationRef = this.setCarouselAnnotationRef.bind(this)
         this.setLyricAnnotationRef = this.setLyricAnnotationRef.bind(this)
         this.setVerseRef = this.setVerseRef.bind(this)
+        this.setLyricVerseParentRef = this.setLyricVerseParentRef.bind(this)
+        this.setCarouselParentRef = this.setCarouselParentRef.bind(this)
         this.scrollElementIntoView = this.scrollElementIntoView.bind(this)
     }
 
@@ -344,6 +354,8 @@ class StateManager extends Component {
                     setCarouselAnnotationRef={this.setCarouselAnnotationRef}
                     setLyricAnnotationRef={this.setLyricAnnotationRef}
                     setVerseRef={this.setVerseRef}
+                    setLyricVerseParentRef={this.setLyricVerseParentRef}
+                    setCarouselParentRef={this.setCarouselParentRef}
                     scrollElementIntoView={this.scrollElementIntoView}
                     selectAnnotation={this.selectAnnotation}
                     selectAudioOption={this.selectAudioOption}

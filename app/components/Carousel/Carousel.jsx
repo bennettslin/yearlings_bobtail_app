@@ -40,7 +40,8 @@ class Carousel extends Component {
         handleAnnotationPrevious: PropTypes.func.isRequired,
         handleAnnotationNext: PropTypes.func.isRequired,
 
-        carouselDidRender: PropTypes.func.isRequired
+        carouselDidRender: PropTypes.func.isRequired,
+        setCarouselParentRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -105,6 +106,7 @@ class Carousel extends Component {
                 renderableAnnotationIndex,
                 handleAnnotationPrevious,
                 handleAnnotationNext,
+                setCarouselParentRef,
 
                 /* eslint-disable no-unused-vars */
                 canCarouselRender,
@@ -137,7 +139,10 @@ class Carousel extends Component {
                     { 'parentIsShown': canCarouselRender && isShown }
                 )}
             >
-                <div className="Carousel__scrollParent">
+                <div
+                    ref={setCarouselParentRef}
+                    className="Carousel__scroll"
+                >
 
                     {annotationsIndices.map(index => {
 

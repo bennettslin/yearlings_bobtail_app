@@ -9,6 +9,8 @@ import DotAnchor from '../Anchor/DotAnchor'
 
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
 
+import { LYRIC_ANNOTATION_SCROLL } from '../../constants/dom'
+
 const mapStateToProps = ({
     canLyricRender,
     accessedAnnotationIndex,
@@ -128,7 +130,7 @@ LyricDotStanzaView = ({
 
             // Scroll to dot stanza block upon annotation selection.
             annotationIndex &&
-                `LyricAnnotation__scrollChild__${annotationIndex}`,
+                `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
             // Show and hide dot stanza block in and out based on dot keys.
             getPrefixPrependedClassNames(dotKeys, 'LyricStanzaDot')

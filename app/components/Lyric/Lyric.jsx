@@ -37,7 +37,8 @@ class Lyric extends Component {
         isTransitioningHeight: PropTypes.bool.isRequired,
         completeHeightTransition: PropTypes.func.isRequired,
         handleLyricWheel: PropTypes.func.isRequired,
-        setLyricRef: PropTypes.func.isRequired
+        setLyricRef: PropTypes.func.isRequired,
+        setLyricVerseParentRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -91,7 +92,11 @@ class Lyric extends Component {
     }
 
     setLyricRef(node) {
+        // For keyboard events.
         this.props.setLyricRef(node)
+
+        // For scrolling.
+        this.props.setLyricVerseParentRef(node)
     }
 
     render() {
@@ -147,8 +152,6 @@ LyricView = ({
             ref={setRef}
             className={cx(
                 'Lyric',
-                'LyricAnnotation__scrollParent',
-                'Verse__scrollParent',
 
                 // This gradient does not obscure the lyric toggle buttons.
                 'gradientMask__lyricColumn__mobileCollapsed'
