@@ -118,9 +118,9 @@ class Verse extends Component {
         if (this.getIsInteractable()) {
             this.myVerseElement = node
             this._handleSetVerseElement()
+
             this.props.getVerseRef(
                 node,
-                this.props.renderableSongIndex,
                 this.props.verseIndex
             )
         }
@@ -231,6 +231,7 @@ VerseView = ({
 
     return (
         <div
+            key={isInteractable ? verseIndex : undefined}
             ref={getRef}
             className={cx(
                 'Verse',

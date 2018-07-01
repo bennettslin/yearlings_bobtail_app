@@ -86,10 +86,8 @@ class CarouselAnnotation extends Component {
     }
 
     getCarouselAnnotationRef(node) {
-        const { renderableSongIndex } = this.props
         this.props.getCarouselAnnotationRef(
             node,
-            renderableSongIndex,
             this.props.annotationIndex
         )
     }
@@ -153,6 +151,7 @@ CarouselAnnotationView = ({
 ...other }) => (
 
     <div
+        key={annotationIndex}
         ref={getRef}
         className={cx(
             'CarouselAnnotation',

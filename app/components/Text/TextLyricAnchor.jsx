@@ -44,13 +44,15 @@ class TextLyricAnchor extends Component {
             PropTypes.object
 
         ]).isRequired,
-        dotKeys: PropTypes.object
+        dotKeys: PropTypes.object,
+        getLyricAnnotationRef: PropTypes.func
     }
 
     constructor(props) {
         super(props)
 
         this._handleAnchorClick = this._handleAnchorClick.bind(this)
+        this.getLyricAnnotationRef = this.getLyricAnnotationRef.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -76,6 +78,17 @@ class TextLyricAnchor extends Component {
         if (!isSelected) {
             this.props.handleAnchorClick(
                 e, anchorIndex, carouselAnnotationIndex
+            )
+        }
+    }
+
+    getLyricAnnotationRef(node) {
+
+        // This method is only passed down by stanza, not carousel annotation.
+        if (this.props.getLyricAnnotationRef) {
+            this.props.getLyricAnnotationRef(
+                node,
+                this.props.annotationIndex
             )
         }
     }
@@ -118,24 +131,29 @@ class TextLyricAnchor extends Component {
                 >
                     {' '}
                 </span>
-                <TextAnchor
+                <span
+                    key={annotationIndex}
+                    ref={this.getLyricAnnotationRef}
                     className={cx(
                         annotationIndex &&
                             `LyricAnnotation__scrollChild__${annotationIndex}`,
 
                         wikiIndex && `wiki__${wikiIndex}`
                     )}
-                    text={(
-                        <Texts {...other}
-                            text={text}
-                        />
-                    )}
-                    sequenceDotKeys={dotKeys}
-                    isWikiAnchor={Boolean(wikiIndex)}
-                    isAccessed={isAccessed}
-                    isSelected={isSelected}
-                    handleAnchorClick={this._handleAnchorClick}
-                />
+                >
+                    <TextAnchor
+                        text={(
+                            <Texts {...other}
+                                text={text}
+                            />
+                        )}
+                        sequenceDotKeys={dotKeys}
+                        isWikiAnchor={Boolean(wikiIndex)}
+                        isAccessed={isAccessed}
+                        isSelected={isSelected}
+                        handleAnchorClick={this._handleAnchorClick}
+                    />
+                </span>
             </Fragment>
         )
     }

@@ -33,13 +33,15 @@ class LyricStanzaDot extends Component {
 
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
-        handleLyricAnnotationSelect: PropTypes.func.isRequired
+        handleLyricAnnotationSelect: PropTypes.func.isRequired,
+        getLyricAnnotationRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
 
         this._handleDotButtonClick = this._handleDotButtonClick.bind(this)
+        this.getLyricAnnotationRef = this.getLyricAnnotationRef.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -58,6 +60,13 @@ class LyricStanzaDot extends Component {
         }
     }
 
+    getLyricAnnotationRef(node) {
+        this.props.getLyricAnnotationRef(
+            node,
+            this.props.annotationIndex
+        )
+    }
+
     render() {
 
         // FIXME: Ideal to get dotStanza object from indices.
@@ -74,6 +83,7 @@ class LyricStanzaDot extends Component {
 
         return (
             <LyricDotStanzaView
+                getRef={this.getLyricAnnotationRef}
                 dotKeys={dotKeys}
                 isSelected={isSelected}
                 isAccessed={isAccessed}
@@ -93,7 +103,8 @@ const lyricDotStanzaViewPropTypes = {
     // From parent.
     isLastStanza: PropTypes.bool.isRequired,
     dotKeys: PropTypes.object.isRequired,
-    annotationIndex: PropTypes.number.isRequired
+    annotationIndex: PropTypes.number.isRequired,
+    getRef: PropTypes.func.isRequired
 },
 
 LyricDotStanzaView = ({
@@ -102,22 +113,27 @@ LyricDotStanzaView = ({
     dotKeys,
     annotationIndex,
     isLastStanza,
+    getRef,
 
 ...other }) => (
 
-    <div className={cx(
-        'LyricStanzaDot',
-        'LyricStanza__column',
+    <div
+        key={annotationIndex}
+        ref={getRef}
+        className={cx(
+            'LyricStanzaDot',
+            'LyricStanza__column',
 
-        isLastStanza && 'LyricStanzaDot__lastStanza',
+            isLastStanza && 'LyricStanzaDot__lastStanza',
 
-        // Scroll to dot stanza block upon annotation selection.
-        annotationIndex &&
-            `LyricAnnotation__scrollChild__${annotationIndex}`,
+            // Scroll to dot stanza block upon annotation selection.
+            annotationIndex &&
+                `LyricAnnotation__scrollChild__${annotationIndex}`,
 
-        // Show and hide dot stanza block in and out based on dot keys.
-        getPrefixPrependedClassNames(dotKeys, 'LyricStanzaDot')
-    )}>
+            // Show and hide dot stanza block in and out based on dot keys.
+            getPrefixPrependedClassNames(dotKeys, 'LyricStanzaDot')
+        )}
+    >
         <DotAnchor {...other}
             inStanza
             stanzaDotKeys={dotKeys}

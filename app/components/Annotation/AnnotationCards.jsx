@@ -42,16 +42,16 @@ class AnnotationCards extends Component {
         })
     }
 
-    componentDidUpdate() {
-        const {
-            carouselAnnotationIndex,
-            renderableAnnotationIndex
-        } = this.props
+    // componentDidUpdate() {
+    //     const {
+    //         carouselAnnotationIndex,
+    //         renderableAnnotationIndex
+    //     } = this.props
 
-        if (carouselAnnotationIndex === renderableAnnotationIndex) {
-            console.warn('AnnotationCards rendered.')
-        }
-    }
+    //     if (carouselAnnotationIndex === renderableAnnotationIndex) {
+    //         console.warn('AnnotationCards rendered.')
+    //     }
+    // }
 
     render() {
         const {

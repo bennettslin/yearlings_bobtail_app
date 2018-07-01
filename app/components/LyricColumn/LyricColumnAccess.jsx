@@ -47,9 +47,9 @@ class LyricColumnAccess extends Component {
         return nextProps.canLyricRender
     }
 
-    componentDidUpdate() {
-        console.warn('LyricColumnAccess rendered.')
-    }
+    // componentDidUpdate() {
+    //     console.warn('LyricColumnAccess rendered.')
+    // }
 
     render() {
 

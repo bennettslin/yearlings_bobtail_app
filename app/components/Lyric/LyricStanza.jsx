@@ -169,7 +169,8 @@ lyricStanzaViewPropTypes = {
     verseAfterUnit: PropTypes.bool.isRequired,
     verseInUnit: PropTypes.bool.isRequired,
 
-    handleLyricAnnotationSelect: PropTypes.func.isRequired
+    handleLyricAnnotationSelect: PropTypes.func.isRequired,
+    getLyricAnnotationRef: PropTypes.func.isRequired
 },
 
 LyricStanzaView = ({
@@ -273,6 +274,7 @@ LyricStanzaView = ({
             }
             {dotStanza &&
                 <LyricStanzaDot
+                    getLyricAnnotationRef={other.getLyricAnnotationRef}
                     isLastStanza={isDotOnly && isLastStanza}
                     dotStanzaObject={dotStanza}
                     handleLyricAnnotationSelect={handleLyricAnnotationSelect}

@@ -34,9 +34,9 @@ import {
     getSongIsLogue
 } from '../helpers/dataHelper'
 
-import {
-    getObjectOfSongIndices
-} from '../helpers/logicHelper'
+// import {
+//     getObjectOfSongIndices
+// } from '../helpers/logicHelper'
 
 import {
     CAROUSEL_SCROLL,
@@ -54,9 +54,9 @@ class StateManager extends Component {
     constructor(props) {
         super(props)
 
-        this.myCarouselAnnotationElements = getObjectOfSongIndices()
-        this.myLyricAnnotationElements = getObjectOfSongIndices()
-        this.myVerseElements = getObjectOfSongIndices()
+        this.myCarouselAnnotationElements = {}
+        this.myLyricAnnotationElements = {}
+        this.myVerseElements = {}
 
         this._bindEventHandlers()
     }
@@ -67,7 +67,11 @@ class StateManager extends Component {
 
         window.elements = () => {
             console.error(
-                this.myCarouselAnnotationElements, this.myLyricAnnotationElements,
+                'Carousel annotation elements:',
+                this.myCarouselAnnotationElements,
+                '\nLyric annotation elements:',
+                this.myLyricAnnotationElements,
+                '\nVerse elements',
                 this.myVerseElements
             )
         }
@@ -211,44 +215,50 @@ class StateManager extends Component {
      * at the time that the refs are set and passed.
      */
 
-    getCarouselAnnotationRef(node, songIndex, annotationIndex) {
-        if (getSongIsLogue(songIndex)) {
+    getCarouselAnnotationRef(node, annotationIndex) {
+        // console.error(node, annotationIndex)
+
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return
         }
 
         if (node) {
-            this.myCarouselAnnotationElements[songIndex][annotationIndex] = node
+            this.myCarouselAnnotationElements[annotationIndex] = node
         } else {
-            delete this.myCarouselAnnotationElements[songIndex][annotationIndex]
+            delete this.myCarouselAnnotationElements[annotationIndex]
         }
     }
 
-    getLyricAnnotationRef(node, index) {
-        if (node) {
-            this.myLyricAnnotationElements[index] = node
-        } else {
-            delete this.myLyricAnnotationElements[index]
-        }
-    }
+    getLyricAnnotationRef(node, annotationIndex) {
+        // console.error(node, annotationIndex)
 
-    getVerseRef(node, songIndex, verseIndex) {
-        if (getSongIsLogue(songIndex)) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return
         }
 
         if (node) {
-            this.myVerseElements[songIndex][verseIndex] = node
+            this.myLyricAnnotationElements[annotationIndex] = node
         } else {
-            delete this.myVerseElements[songIndex][verseIndex]
+            delete this.myLyricAnnotationElements[annotationIndex]
+        }
+    }
+
+    getVerseRef(node, verseIndex) {
+        // console.error(node, verseIndex)
+
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
+            return
+        }
+
+        if (node) {
+            this.myVerseElements[verseIndex] = node
+        } else {
+            delete this.myVerseElements[verseIndex]
         }
     }
 
     scrollElementIntoView(payload) {
-        const {
-            selectedSongIndex
-        } = this.props
-
-        if (getSongIsLogue(selectedSongIndex)) {
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
             return
         }
 
@@ -271,7 +281,7 @@ class StateManager extends Component {
                 break
         }
 
-        payload.scrollElement = elementsArray[selectedSongIndex][index]
+        payload.scrollElement = elementsArray[index]
 
         return this.scrollManager.scrollElementIntoView(payload)
     }

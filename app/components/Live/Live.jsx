@@ -190,12 +190,14 @@ Live.propTypes = {
     setCanRenderScene: PropTypes.func.isRequired,
 
     // From parent.
-    focusElementForAccess: PropTypes.func.isRequired,
-
     getLyricRef: PropTypes.func.isRequired,
     getScoreRef: PropTypes.func.isRequired,
     getWikiRef: PropTypes.func.isRequired,
+    getCarouselAnnotationRef: PropTypes.func.isRequired,
+    getLyricAnnotationRef: PropTypes.func.isRequired,
     getVerseRef: PropTypes.func.isRequired,
+
+    focusElementForAccess: PropTypes.func.isRequired,
 
     handleAnnotationPrevious: PropTypes.func.isRequired,
     handleAnnotationNext: PropTypes.func.isRequired,

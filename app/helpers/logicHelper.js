@@ -17,22 +17,22 @@ import { getAnnotationObject,
          getAnnotationDotKeys,
          getAnnotationsCount } from './dataHelper'
 import { intersects } from './dotHelper'
-import { getArrayOfLength } from './generalHelper'
+// import { getArrayOfLength } from './generalHelper'
 import { getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsiveHelper'
 
-export const getObjectOfSongIndices = () => {
-    const objectOfSongIndices = {},
-        arrayOfSongIndices = getArrayOfLength({
-            length: getSongsNotLoguesCount(),
-            indexBase: 1
-        })
+// export const getObjectOfSongIndices = () => {
+//     const objectOfSongIndices = {},
+//         arrayOfSongIndices = getArrayOfLength({
+//             length: getSongsNotLoguesCount(),
+//             indexBase: 1
+//         })
 
-    arrayOfSongIndices.forEach(songIndex => {
-        objectOfSongIndices[songIndex] = {}
-    })
+//     arrayOfSongIndices.forEach(songIndex => {
+//         objectOfSongIndices[songIndex] = {}
+//     })
 
-    return objectOfSongIndices
-}
+//     return objectOfSongIndices
+// }
 
 export const getNextPlayerToRender = (
     selectedSongIndex,
