@@ -24,11 +24,6 @@ When selecting a song:
         * actions
     * score
 
-TODO:
-* theatre
-* scene
-* score
-
 * Have transitions dependent on isRendered class that is dependent on canRender in Redux state and parent hasRendered in component state.
     * Parent transitions
     * Child transitions
@@ -38,7 +33,6 @@ TODO later:
 * Rest of players
 * Immediate scrolling (Lyric scrolling upon mount is currently broken)
 * Persist cube's base coordinates, as they will always be the same
-* Window resizing in theatre
 * Mounting different from updating
 
 * Reprioritise order of carousel and lyrics if not shown

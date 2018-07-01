@@ -9,8 +9,10 @@ import Scene from '../Scene/Scene'
 import Proscenium from './Proscenium/Proscenium';
 
 const mapStateToProps = ({
+    canTheatreRender,
     stageCoordinates
 }) => ({
+    canTheatreRender,
     stageCoordinates
 })
 
@@ -18,12 +20,24 @@ class Stage extends Component {
 
     static propTypes = {
         // Through Redux.
+        canTheatreRender: PropTypes.bool.isRequired,
         stageCoordinates: PropTypes.shape({
             top: PropTypes.number.isRequired,
             left: PropTypes.number.isRequired,
             width: PropTypes.number.isRequired,
             height: PropTypes.number.isRequired
         })
+    }
+
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canTheatreRender
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+            console.warn('Stage rendered.')
+        }
     }
 
     render() {

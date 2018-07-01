@@ -49,42 +49,42 @@ export const setRenderableVerseIndex = (
 })
 
 export const setCanRenderTheatre = (
-    canRenderTheatre = 0
+    canRenderTheatre = false
 ) => ({
     type: CAN_THEATRE_RENDER,
     payload: canRenderTheatre
 })
 
 export const setCanRenderMain = (
-    canRenderMain = 0
+    canRenderMain = false
 ) => ({
     type: CAN_MAIN_RENDER,
     payload: canRenderMain
 })
 
 export const setCanRenderSlider = (
-    canRenderSlider = 0
+    canRenderSlider = false
 ) => ({
     type: CAN_SLIDER_RENDER,
     payload: canRenderSlider
 })
 
 export const setCanRenderLyric = (
-    canRenderLyric = 0
+    canRenderLyric = false
 ) => ({
     type: CAN_LYRIC_RENDER,
     payload: canRenderLyric
 })
 
 export const setCanRenderCarousel = (
-    canRenderCarousel = 0
+    canRenderCarousel = false
 ) => ({
     type: CAN_CAROUSEL_RENDER,
     payload: canRenderCarousel
 })
 
 export const setCanRenderScene = (
-    canRenderScene = 0
+    canRenderScene = false
 ) => ({
     type: CAN_SCENE_RENDER,
     payload: canRenderScene

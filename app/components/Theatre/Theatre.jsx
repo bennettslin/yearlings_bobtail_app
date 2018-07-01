@@ -84,7 +84,7 @@ class Theatre extends Component {
                 ),
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
-                    this.props.carouselDidRender, 100
+                    this.props.theatreDidRender, 100
                 )
 
             this.setState({
@@ -172,7 +172,7 @@ class Theatre extends Component {
                 stageCentreFromLeft
             }
 
-        return canTheatreRender ? (
+        return (
             <div className={cx(
                 'Theatre',
                 'absoluteFullContainer',
@@ -195,7 +195,7 @@ class Theatre extends Component {
                     floorFieldCoordinates={floorFieldCoordinates}
                 />
             </div>
-        ) : null
+        )
     }
 }
 

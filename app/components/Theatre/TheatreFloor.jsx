@@ -35,6 +35,12 @@ class TheatreFloor extends Component {
         return nextProps.canTheatreRender
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+            console.warn('TheatreFloor rendered.')
+        }
+    }
+
     render() {
         const {
                 windowWidth,

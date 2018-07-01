@@ -38,6 +38,12 @@ class TheatreWall extends Component {
         return nextProps.canTheatreRender
     }
 
+    componentDidUpdate(prevProps) {
+        if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+            console.warn('TheatreWall rendered.')
+        }
+    }
+
     render() {
 
         const {

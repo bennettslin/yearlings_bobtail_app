@@ -83,6 +83,7 @@ class WindowManager extends Component {
         }
 
         this._windowResize = this._windowResize.bind(this)
+
         this._prepareForWindowResizeRender =
             this._prepareForWindowResizeRender.bind(this)
     }
@@ -155,6 +156,10 @@ class WindowManager extends Component {
 
         if (e) {
             this._prepareForWindowResizeUnrender()
+
+        // Set to true the first time this is called, when app is mounted.
+        } else {
+            this._prepareForWindowResizeRender()
         }
 
         /**
