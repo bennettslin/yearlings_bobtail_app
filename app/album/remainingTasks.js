@@ -1,22 +1,8 @@
 module.exports = [
 
-    {
-        taskName: `Selected verse is not highlighted when verse bar is up. Check Vegan as good example.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Use spread instead of assign, uninstall assign. https://stackoverflow.com/questions/32925460/object-spread-vs-object-assign`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Finalise how Liz's hair drapes over face.`,
-        workedHours: 0,
-        neededHours: 2
-    },
+    /**
+     * Begin expected DTO tasks.
+     */
 
     {
         taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of.`,
@@ -25,9 +11,33 @@ module.exports = [
     },
 
     {
-        taskName: `Fix scrolling.`,
+        taskName: `Fix rendering after admin.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Fix scrolling. Instead of persisting verse elements, store index for ref, and make sure scrolling is only ever by element, not classes.`,
         workedHours: 0,
         neededHours: 5
+    },
+
+    {
+        taskName: `Make sure verse bars are being determined after song change. Select verse low on lyric, then change song. Selected verse element hasn't changed.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Get scrolling indexed elements by ref. Still need to do lyric annotation ones. Have refs for parent containers as well. And handle discrepancy with render ready and selected song indices.`,
+        workedHours: 5,
+        neededHours: 8
+    },
+
+    {
+        taskName: `Selected verse is not highlighted when verse bar is up. Check Vegan as good example.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     {
@@ -43,9 +53,25 @@ module.exports = [
     },
 
     {
-        taskName: `Get scrolling indexed elements by ref. Scrolling in carousel is broken when navigating through portal? Still need to do lyric annotation ones. Have refs for parent containers as well. And handle discrepancy with render ready and selected song indices.`,
-        workedHours: 5,
+        taskName: `Determine relative zIndices for slanted directions. (Do on plane?)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
+        taskName: `Have system to animate actions based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
+        workedHours: 0,
         neededHours: 8
+    },
+
+    /**
+     * End expected DTO tasks.
+     */
+
+    {
+        taskName: `Finalise how Liz's hair drapes over face.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     {
@@ -73,18 +99,9 @@ module.exports = [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Have system to animate actions based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
-        workedHours: 0,
-        neededHours: 8
-    },
+
     {
         taskName: `Have system to show pixels of varying sizes.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Determine relative zIndices for slanted directions. (Do on plane?)`,
         workedHours: 0,
         neededHours: 5
     },

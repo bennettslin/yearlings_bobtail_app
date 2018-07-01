@@ -65,9 +65,12 @@ class StateManager extends Component {
         console.warn('State manager rendered.')
         this.props.setAppMounted(true)
 
-        // window.elements = () => {
-        //     console.error(this.myCarouselAnnotationElements, this.myLyricAnnotationElements, this.myVerseElements)
-        // }
+        window.elements = () => {
+            console.error(
+                this.myCarouselAnnotationElements, this.myLyricAnnotationElements,
+                this.myVerseElements
+            )
+        }
     }
 
     /**********

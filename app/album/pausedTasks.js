@@ -42,6 +42,12 @@ module.exports = [
         neededHours: 12
     },
 
+    {
+        taskName: `Use spread instead of assign, uninstall assign. https://stackoverflow.com/questions/32925460/object-spread-vs-object-assign`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
         // Low priority bugs.
     // {
     //     taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,
