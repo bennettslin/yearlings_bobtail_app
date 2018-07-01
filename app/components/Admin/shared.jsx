@@ -47,8 +47,8 @@ const SharedView = ({
     adminPluralCardsCount,
 
 ...other }) => (
-    <div className="admin-column">
-        <div className="admin-field shared-admin-field">
+    <div className="Admin__column">
+        <div className="Admin__field shared">
             <StatsSection
                 adminDotStanzasCount={adminDotStanzasCount}
                 lyrics={lyrics}

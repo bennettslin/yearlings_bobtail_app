@@ -3012,4 +3012,10 @@ module.exports = [
         workedHours: 30,
         neededHours: 30
     },
+
+    {
+        taskName: `Fix rendering after admin.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

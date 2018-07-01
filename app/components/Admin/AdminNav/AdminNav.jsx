@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
+
 import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../progress/ProgressFooter'
 import ProgressHelper from '../../../helpers/progressHelper'
@@ -55,7 +57,10 @@ const AdminNavSectionView = ({
 
     return (
         <div
-            className="AdminNav"
+            className={cx(
+                'AdminNav',
+                'Admin__column'
+            )}
         >
             <div className="row">
                 <div className="text-cell-wrapper">

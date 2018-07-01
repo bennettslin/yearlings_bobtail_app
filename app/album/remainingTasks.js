@@ -11,12 +11,6 @@ module.exports = [
     },
 
     {
-        taskName: `Fix rendering after admin.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Fix scrolling. Instead of persisting verse elements, store index for ref, and make sure scrolling is only ever by element, not classes.`,
         workedHours: 0,
         neededHours: 5

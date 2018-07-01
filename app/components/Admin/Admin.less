@@ -32,15 +32,26 @@
  * FIELDS *
  **********/
 
-.admin-column {
-    display: flex;
-    box-sizing: border-box;
+.Admin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 
-    // Needed by Safari.
-    height: 100%;
+    z-index: 100;
+    background-color: #888;
+
+    display: flex;
+    justify-content: center;
 }
 
-.admin-field {
+.Admin__column {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.Admin__field {
     width: @field-width;
     min-width: @field-width;
     padding: 0 (@field-padding * 0.5);
@@ -49,16 +60,16 @@
     overflow-y: scroll;
 }
 
-.album-admin-field {
+.album.Admin__field {
     padding-left: @field-padding;
     background-color: @album-field-colour;
 }
 
-.shared-admin-field {
+.shared.Admin__field {
     background-color: @shared-field-colour;
 }
 
-.drawing-admin-field {
+.drawing.Admin__field {
     padding-right: @field-padding;
     background-color: @drawing-field-colour;
 }
@@ -67,7 +78,7 @@
  * SECTIONS *m
  ************/
 
-.admin-field > * {
+.Admin__field > * {
     padding: @field-padding;
     margin: @field-padding 0;
     background-color: @section-colour;

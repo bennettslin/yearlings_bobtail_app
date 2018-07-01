@@ -14,8 +14,8 @@ const Drawing = (props) => (
  ****************/
 
 const DrawingView = () => (
-    <div className="admin-column">
-        <div className="admin-field drawing-admin-field">
+    <div className="Admin__column">
+        <div className="Admin__field drawing">
             <DrawingsSection />
         </div>
     </div>

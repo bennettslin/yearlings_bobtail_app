@@ -269,21 +269,22 @@ class Root extends Component {
                 onKeyDown={this.handleKeyDownPress}
                 tabIndex="-1"
             >
+                <Players {...audioPlayersProps} />
+
                 {/* TODO: Only pass the events used by KeyHandler. */}
                 <KeyHandler
                     eventHandlers={this.props.eventHandlers}
                     getRef={node => (this.accessManager = node)}
                 />
 
-                {selectedAdminIndex ? (
-                    <Admin {...other} />
-                ) : (
-                    <Live {...other} />
-                )}
+                <Live {...other} />
 
                 <AdminToggle />
 
-                <Players {...audioPlayersProps} />
+                { selectedAdminIndex && (
+                    <Admin {...other} />
+                )}
+
             </div>
         )
     }

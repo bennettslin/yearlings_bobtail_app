@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import cx from 'classnames'
+
 import Shared from './shared'
 
 import AdminNavSection from './AdminNav/AdminNav'
@@ -22,15 +24,20 @@ class Admin extends Component {
             allTasks = getAllTaskObjects()
 
         return (
-            <div className="admin-column">
-                <div className="admin-field album-admin-field">
-                    {/* <DevSection /> */}
-                    <AdminNavSection
-                        allTasks={allTasks}
-                        handleNavSongSelect={handleNavSongSelect}
-                    />
+            <div
+                className={cx(
+                    'Admin'
+                )}
+            >
+                <div className="Admin__column">
+                    <div className="Admin__field album">
+                        <AdminNavSection
+                            allTasks={allTasks}
+                            handleNavSongSelect={handleNavSongSelect}
+                        />
+                    </div>
+                    <Shared {...other} />
                 </div>
-                <Shared {...other} />
             </div>
         )
     }
