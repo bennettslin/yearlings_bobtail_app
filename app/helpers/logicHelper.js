@@ -20,20 +20,6 @@ import { intersects } from './dotHelper'
 // import { getArrayOfLength } from './generalHelper'
 import { getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsiveHelper'
 
-// export const getObjectOfSongIndices = () => {
-//     const objectOfSongIndices = {},
-//         arrayOfSongIndices = getArrayOfLength({
-//             length: getSongsNotLoguesCount(),
-//             indexBase: 1
-//         })
-
-//     arrayOfSongIndices.forEach(songIndex => {
-//         objectOfSongIndices[songIndex] = {}
-//     })
-
-//     return objectOfSongIndices
-// }
-
 export const getNextPlayerToRender = (
     selectedSongIndex,
     canPlayThroughsObject
@@ -464,10 +450,9 @@ export const getVerseBarStatus = ({
         }),
 
         selectedVerseRect = verseElement.getBoundingClientRect(),
-        selectedVerseMidHeight = (selectedVerseRect.top + selectedVerseRect.bottom) / 2,
 
-        isVerseBarAbove = selectedVerseMidHeight < lyricSectionRect.top,
-        isVerseBarBelow = selectedVerseMidHeight > lyricSectionRect.bottom
+        isVerseBarAbove = selectedVerseRect.top < lyricSectionRect.top,
+        isVerseBarBelow = selectedVerseRect.bottom > lyricSectionRect.bottom
 
         return {
             isVerseBarAbove,

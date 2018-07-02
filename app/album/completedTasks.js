@@ -3032,4 +3032,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Make sure verse bars are being determined after song change. Select verse low on lyric, then change song. Selected verse element hasn't changed.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

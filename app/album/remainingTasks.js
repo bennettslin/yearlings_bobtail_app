@@ -5,9 +5,9 @@ module.exports = [
      */
 
     {
-        taskName: `Make sure verse bars are being determined after song change. Select verse low on lyric, then change song. Selected verse element hasn't changed.`,
+        taskName: `Make verse bar greater width. Okay if it covers up buttons.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
 
     {
@@ -29,9 +29,21 @@ module.exports = [
     },
 
     {
+        taskName: `System for showing sun and moon for each scene.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
         taskName: `Have system to animate actions based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
         workedHours: 0,
         neededHours: 8
+    },
+
+    {
+        taskName: `Sometimes overview in logue prevents lyric scrolling?`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     /**
@@ -61,11 +73,6 @@ module.exports = [
      */
     {
         taskName: `Animate tiles.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `System for showing sun and moon for each scene.`,
         workedHours: 0,
         neededHours: 3
     },

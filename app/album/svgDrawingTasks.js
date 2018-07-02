@@ -77,5 +77,10 @@ module.exports = [
         taskName: `Theatre rafters`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Ceiling mirror.`,
+        workedHours: 0,
+        neededHours: 8
     }
 ]

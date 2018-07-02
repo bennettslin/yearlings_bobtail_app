@@ -41,6 +41,7 @@ class VerseManager extends Component {
     componentDidUpdate(prevProps) {
         const {
             selectedSongIndex,
+            selectedVerseIndex,
             sliderVerseIndex
         } = this.props
 
@@ -53,10 +54,17 @@ class VerseManager extends Component {
             this.resetVerseBars()
         }
 
-        // Determine verse bars here while we are sliding.
         if (
-            sliderVerseIndex !== prevProps.sliderVerseIndex &&
-            sliderVerseIndex > 0
+            (
+                // Determine verse bars here while we are sliding.
+                sliderVerseIndex > -1 &&
+                sliderVerseIndex !== prevProps.sliderVerseIndex
+            )
+            || (
+                // Determine verse bars if selecting interactivated verse.
+                sliderVerseIndex < 0 && prevProps.sliderVerseIndex < 0 &&
+                selectedVerseIndex !== prevProps.selectedVerseIndex
+            )
         ) {
             this.determineVerseBars()
         }
@@ -92,9 +100,13 @@ class VerseManager extends Component {
     }
 
     determineVerseBars() {
-        const verseIndex = this.props.sliderVerseIndex > 0 ?
-            this.props.sliderVerseIndex : this.props.selectedVerseIndex,
+        const
+            verseIndex = this.props.sliderVerseIndex > 0 ?
+                this.props.sliderVerseIndex :
+                this.props.selectedVerseIndex,
+
             verseElement = this.props.getVerseElement(verseIndex),
+
             verseBarStatusObject = getVerseBarStatus({
                 deviceIndex: this.props.deviceIndex,
                 windowWidth: this.props.windowWidth,

@@ -44,15 +44,9 @@ class LyricColumn extends Component {
             didRenderTimeoutId: ''
         }
 
-        // this._handleScrollAfterLyricRerender = this._handleScrollAfterLyricRerender.bind(this)
         this._handleTransition = this._handleTransition.bind(this)
         this.completeHeightTransition = this.completeHeightTransition.bind(this)
         this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
-    }
-
-    componentDidMount() {
-        // Previously done on appMounted check.
-        // this.props.handleScrollUponLyricRender()
     }
 
     componentDidUpdate(prevProps) {
@@ -82,20 +76,6 @@ class LyricColumn extends Component {
 
             this.props.handleScrollUponLyricRender()
 
-            /**
-             * TODO: Confirm that there definitely doesn't need to be a
-             * timeout set for scrolling after lyric rerender before deleting.
-             */
-            // clearTimeout(this.state.scrollTimeoutId)
-
-            // const scrollTimeoutId = setTimeout(
-            //     this._handleScrollAfterLyricRerender, 0
-            // )
-
-            // this.setState({
-            //     scrollTimeoutId
-            // })
-
         } else if (couldRender && !canLyricRender) {
 
             this.setState({
@@ -109,10 +89,6 @@ class LyricColumn extends Component {
             isShown: true
         })
     }
-
-    // _handleScrollAfterLyricRerender() {
-    //     this.props.handleScrollUponLyricRender()
-    // }
 
     _handleTransition(e) {
         if (e.propertyName === 'height') {
