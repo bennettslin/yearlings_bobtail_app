@@ -5,6 +5,42 @@ module.exports = [
      */
 
     {
+        taskName: `In heightless lyric, expanding lyric column pushes screen up.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Desktop menu animating to overlay is a little janky?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Cubes don't render upon window resize?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Sometimes overview in logue prevents lyric scrolling?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `System for showing sun and moon for each scene.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Determine relative zIndices for slanted directions. (Do on plane?)`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
         taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of.`,
         workedHours: 0,
         neededHours: 8
@@ -17,27 +53,9 @@ module.exports = [
     },
 
     {
-        taskName: `Determine relative zIndices for slanted directions. (Do on plane?)`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    {
-        taskName: `System for showing sun and moon for each scene.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: `Have system to animate actions based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
         workedHours: 0,
         neededHours: 8
-    },
-
-    {
-        taskName: `Sometimes overview in logue prevents lyric scrolling?`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     /**

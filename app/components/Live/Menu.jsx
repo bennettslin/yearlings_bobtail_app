@@ -57,8 +57,8 @@ Menu = ({
                 className={cx(
                     'Menu__responsive',
                     'width__mainColumn',
-                    'absoluteFullContainer',
-                    'boxShadow__popupView'
+                    'absoluteFullContainer'
+                    // 'boxShadow__popupView'
                 )}
                 style={{
                     marginLeft: menuMarginInOverlay,
