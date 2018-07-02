@@ -1,3 +1,4 @@
+
 // Popup container for individual annotation section.
 
 import React from 'react'

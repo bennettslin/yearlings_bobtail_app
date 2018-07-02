@@ -8,13 +8,13 @@ const Title = () => (
         'Title',
         'fontSize__verse'
     )}>
-        <p className="title-paragraph">
+        <p className="Title__paragraph">
             Album written, performed, and recorded by Bennett Lin.
         </p>
-        <p className="title-paragraph">
-            Website illustrated, designed, and coded by Bennett Lin.
+        <p className="Title__paragraph">
+            Website designed, illustrated, and coded by Bennett Lin.
         </p>
-        <p className="title-paragraph">
+        <p className="Title__paragraph">
             For Liz. In my sorry way, I loved you.
         </p>
     </div>

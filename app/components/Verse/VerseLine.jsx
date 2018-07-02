@@ -1,6 +1,6 @@
 // Component for a single line in a verse.
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -80,40 +80,39 @@ class VerseLine extends Component {
 
         /**
          * TODO: Can this truncatable functionality be done without having to
-         * render an array?
+         * render fragments?
          */
         /**
          * If it's truncatable, we will only ever show either the complete or
          * the truncated text. Applies to Golden Cord and Uncanny Valley.
          */
-        return [(
-            <div
-                key="truncatable"
-                className={cx(
-                    'VerseLine',
+        return (
+            <Fragment>
+                <div
+                    className={cx(
+                        'VerseLine',
 
-                    // Lyric, left, centre, right.
-                    { [`VerseLine__${columnKey}`]: columnKey !== TITLE,
+                        // Lyric, left, centre, right.
+                        { [`VerseLine__${columnKey}`]: columnKey !== TITLE,
 
-                      'VerseLine__truncatable': isTruncatable }
-                )}
-            >
-                <Texts {...other}
-                    isVerseLyric
-                />
-            </div>
-
-        ), (
-            // Only render if this is a truncatable verse.
-            isTruncatable ? (
-                <span
-                    key="truncated"
-                    className="VerseLine__truncated"
+                        'VerseLine__truncatable': isTruncatable }
+                    )}
                 >
-                    {'\u2026'}
-                </span>
-            ) : null
-        )]
+                    <Texts {...other}
+                        isVerseLyric
+                    />
+                </div>
+
+                {/* Only render if this is a truncatable verse. */}
+                {isTruncatable && (
+                    <span
+                        className="VerseLine__truncated"
+                    >
+                        {'\u2026'}
+                    </span>
+                )}
+            </Fragment>
+        )
     }
 }
 
