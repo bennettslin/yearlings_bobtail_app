@@ -90,7 +90,6 @@
 }
 
 .VerseBar__animatable {
-    transition: background-color @animationDuration__default;
 
     &:hover {
         animation: bounceHover @animationDuration__default;
@@ -98,21 +97,6 @@
 
     &:active {
         transform: scale(0.9);
-    }
-
-    .RM__sliderNotMoving.RM__isPlaying
-    & {
-        background-color: @bgColour__audioPlay;
-    }
-
-    .RM__sliderNotMoving.RM__isPaused
-    & {
-        background-color: @bgColour__audioPause;
-    }
-
-    .RM__sliderMoving
-    & {
-        background-color: @bgColour__audioNeutral;
     }
 }
 

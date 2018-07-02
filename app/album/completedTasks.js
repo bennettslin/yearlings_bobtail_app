@@ -3022,4 +3022,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Selected verse is not highlighted when verse bar is up. Check Vegan as good example.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -11,9 +11,9 @@ module.exports = [
     },
 
     {
-        taskName: `Selected verse is not highlighted when verse bar is up. Check Vegan as good example.`,
+        taskName: `Take care of annotation popup buttons collapsing upon being closed.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
 
     {
@@ -26,12 +26,6 @@ module.exports = [
         taskName: `Optimise rendering of scenes. Render cube outlines earlier, pixels later. Include persisting the cube base.`,
         workedHours: 0,
         neededHours: 8
-    },
-
-    {
-        taskName: `Take care of annotation popup buttons collapsing upon being closed.`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     {

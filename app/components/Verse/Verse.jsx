@@ -53,7 +53,6 @@ class Verse extends Component {
         inVerseBar: PropTypes.bool.isRequired,
         handleLyricAnnotationSelect: PropTypes.func,
         handleVerseInteractivate: PropTypes.func,
-        // handleSetVerseElement: PropTypes.func,
 
         setVerseRef: PropTypes.func
     }
@@ -64,11 +63,6 @@ class Verse extends Component {
         this._handleInteractivatableClick = this._handleInteractivatableClick.bind(this)
         this.setVerseRef = this.setVerseRef.bind(this)
     }
-
-    // componentDidMount() {
-    //     // Previously done on appMounted check.
-    //     this._handleSetVerseElement()
-    // }
 
     shouldComponentUpdate(nextProps) {
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
@@ -81,20 +75,6 @@ class Verse extends Component {
             }
         })
     }
-
-    // componentDidUpdate(prevProps) {
-    //     if (!prevProps.isOnCursor) {
-    //         this._handleSetVerseElement()
-    //     }
-    // }
-
-    // _handleSetVerseElement() {
-    //     if (this.props.isOnCursor) {
-    //         this.props.handleSetVerseElement(
-    //             this.myVerseElement
-    //         )
-    //     }
-    // }
 
     _handleInteractivatableClick(e) {
         // Allow clicks on interactable verses.
@@ -118,9 +98,6 @@ class Verse extends Component {
 
     setVerseRef(node) {
         if (this.getIsInteractable()) {
-            // this.myVerseElement = node
-            // this._handleSetVerseElement()
-
             this.props.setVerseRef({
                 node,
                 index: this.props.verseIndex

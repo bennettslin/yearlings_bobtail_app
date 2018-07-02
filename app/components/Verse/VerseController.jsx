@@ -115,11 +115,13 @@ class VerseController extends Component {
                     controllerVerseIndex === interactivatedVerseIndex
 
             /**
-             * Give each verse in the verse bar a unique key to render a new verse
-             * each time. This ensures that the cursor  will not animate from the
-             * far right for the previous verse to the far left for the next verse.
+             * Give each verse in the verse bar a unique key to render a new
+             * verse each time. This ensures that the cursor  will not animate
+             * from the far right for the previous verse to the far left for
+             * the next verse.
              */
             } else {
+                interactableProps.isOnCursor = true
                 verseBarCursorProps.key = controllerVerseIndex
             }
 

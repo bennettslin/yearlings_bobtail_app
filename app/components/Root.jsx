@@ -249,12 +249,15 @@ class Root extends Component {
                     isHeightlessLyricColumn ?
                         'RM__lyricHeightless' : 'RM__lyricHeighted',
 
-                    { 'RM__bothLyricColumnsShown': !singleShownLyricColumnKey,
-                      'RM__verseBarHidden':
-                          !isVerseBarAbove && !isVerseBarBelow,
-                      'RM__verseBarAbove': isVerseBarAbove,
-                      'RM__verseBarBelow': isVerseBarBelow,
-                      'RM__manualScroll': isManualScroll },
+                    !isVerseBarAbove && !isVerseBarBelow ?
+                        'RM__verseBarHidden' : 'RM__verseBarShown',
+
+                    {
+                        'RM__verseBarAbove': isVerseBarAbove,
+                        'RM__verseBarBelow': isVerseBarBelow,
+                        'RM__manualScroll': isManualScroll,
+                        'RM__bothLyricColumnsShown': !singleShownLyricColumnKey
+                    },
 
                     getPrefixPrependedClassNames(selectedDotKeys, 'RM')
                 )}
