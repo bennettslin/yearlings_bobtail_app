@@ -182,11 +182,6 @@ LyricColumnView = ({
         >
             <Lyric {...other} />
 
-            <VerseBar {...verseBarProps}
-                isAbove
-            />
-            <VerseBar {...verseBarProps} />
-
             <LyricToggleEar
                 handleLyricColumnSelect={handleLyricColumnSelect}
             />
@@ -200,6 +195,11 @@ LyricColumnView = ({
             />
 
             <LyricColumnAccess />
+
+            <VerseBar {...verseBarProps}
+                isAbove
+            />
+            <VerseBar {...verseBarProps} />
         </div>
     )
 }

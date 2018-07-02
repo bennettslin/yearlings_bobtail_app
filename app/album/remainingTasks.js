@@ -5,12 +5,6 @@ module.exports = [
      */
 
     {
-        taskName: `Make verse bar greater width. Okay if it covers up buttons.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of.`,
         workedHours: 0,
         neededHours: 8
@@ -60,12 +54,6 @@ module.exports = [
         taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    {
-        taskName: `Centre right verse line in verse bar`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     /**

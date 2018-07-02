@@ -26,29 +26,30 @@
 
     transform: translateX(-50%) scale(0);
 
-    max-width: ~"calc(100% - @{offsetX__verseBar} * 2)";
+    @js__margin__thick__double: @js__margin__thick * 2;
+    width: ~"calc(100% - @{js__margin__thick__double})";
 
-    margin: 0 @js__margin__thin;
-    // border-radius: 10px;
+   // FIXME: Get rid of these eventually.
+    // max-width: ~"calc(100% - @{offsetX__verseBar} * 2)";
 
     cursor: pointer;
 
     z-index: @zIndex__lyricChild__topMost;
 
-    .RM__tablet
-    & {
-        max-width: ~"calc(100% - @{offsetX__verseBar__tablet} * 2)";
-    }
+    // .RM__tablet
+    // & {
+    //     max-width: ~"calc(100% - @{offsetX__verseBar__tablet} * 2)";
+    // }
 
-    .RM__mini
-    & {
-        max-width: ~"calc(100% - @{offsetX__verseBar__mini} * 2)";
-    }
+    // .RM__mini
+    // & {
+    //     max-width: ~"calc(100% - @{offsetX__verseBar__mini} * 2)";
+    // }
 
-    .RM__phone
-    & {
-        max-width: ~"calc(100% - @{offsetX__verseBar__phone} * 2)";
-    }
+    // .RM__phone
+    // & {
+    //     max-width: ~"calc(100% - @{offsetX__verseBar__phone} * 2)";
+    // }
 }
 
 .VerseBar__above {

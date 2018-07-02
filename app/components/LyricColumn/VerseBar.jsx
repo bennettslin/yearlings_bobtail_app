@@ -76,6 +76,7 @@ class VerseBar extends Component {
                 className={cx(
                     'VerseBar',
                     'fontSize__verse',
+                    'flexCentreContainer',
 
                     isAbove ?
                         'VerseBar__above' :

@@ -3037,4 +3037,14 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Make verse bar greater width. Okay if it covers up buttons.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Centre right verse line in verse bar. I think this was fixed with the verse bar width adjustment?`,
+        workedHours: 0,
+        neededHours: 0
+    },
 ]
