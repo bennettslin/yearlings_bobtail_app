@@ -3027,4 +3027,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Take care of annotation popup buttons collapsing upon being closed.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

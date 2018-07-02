@@ -12,7 +12,7 @@ import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { PORTAL } from '../../constants/dots'
 
 import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
-import { getSongTitle, getVerseObject, getCarouselOrPopupCardPortalObject } from '../../helpers/dataHelper'
+import { getSongTitle, getVerseObject, getAnnotationCardPortalObject } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -35,6 +35,7 @@ class AnnotationPortal extends Component {
 
         // From parent.
         carouselAnnotationIndex: PropTypes.number,
+        popupAnnotationIndex: PropTypes.number,
         cardIndex: PropTypes.number.isRequired,
         portalLinkIndex: PropTypes.number.isRequired,
         isAccessed: PropTypes.bool.isRequired,
@@ -79,7 +80,7 @@ class AnnotationPortal extends Component {
 
     _handlePortalClick(e) {
 
-        const portalObject = getCarouselOrPopupCardPortalObject(this.props),
+        const portalObject = this._getPortalObject(),
 
             { songIndex,
               annotationIndex,
@@ -90,22 +91,32 @@ class AnnotationPortal extends Component {
         this.props.handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex, destinationPortalIndex)
     }
 
+    _getPortalObject() {
+        const {
+            renderableSongIndex,
+            renderableAnnotationIndex,
+            carouselAnnotationIndex,
+            popupAnnotationIndex,
+            cardIndex,
+            portalLinkIndex
+        } = this.props
+
+        return getAnnotationCardPortalObject({
+            songIndex: renderableSongIndex,
+            annotationIndex:
+                carouselAnnotationIndex ||
+                renderableAnnotationIndex ||
+                popupAnnotationIndex,
+            cardIndex,
+            portalLinkIndex
+        })
+    }
+
     render() {
 
-        const { renderableSongIndex,
-                renderableAnnotationIndex,
-                carouselAnnotationIndex,
-                cardIndex,
-                portalLinkIndex,
-                isAccessed } = this.props,
+        const { isAccessed } = this.props,
 
-            portalObject = getCarouselOrPopupCardPortalObject({
-                renderableSongIndex,
-                carouselAnnotationIndex,
-                renderableAnnotationIndex,
-                cardIndex,
-                portalLinkIndex
-            }),
+            portalObject = this._getPortalObject(),
 
             { songIndex,
               annotationIndex,

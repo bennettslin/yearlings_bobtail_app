@@ -2,74 +2,29 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import AnnotationCard from './AnnotationCard'
-import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
-import {
-    getArrayOfLength,
-    getPropsAreShallowEqual
-} from '../../helpers/generalHelper'
 
-const mapStateToProps = ({
-    canCarouselRender,
-    renderableSongIndex,
-    renderableAnnotationIndex
-}) => ({
-    canCarouselRender,
-    renderableSongIndex,
-    renderableAnnotationIndex
-})
+import { getArrayOfLength } from '../../helpers/generalHelper'
 
 class AnnotationCards extends Component {
 
     static propTypes = {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
-        renderableAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
-        carouselAnnotationIndex: PropTypes.number
+        cardsLength: PropTypes.number.isRequired
     }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canCarouselRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps,
-            alwaysBypassCheck: {
-                carouselAnnotationIndex: true
-            }
-        })
-    }
-
-    // componentDidUpdate() {
-    //     const {
-    //         carouselAnnotationIndex,
-    //         renderableAnnotationIndex
-    //     } = this.props
-
-    //     if (carouselAnnotationIndex === renderableAnnotationIndex) {
-    //         console.warn('AnnotationCards rendered.')
-    //     }
-    // }
 
     render() {
         const {
-                renderableSongIndex,
-                renderableAnnotationIndex,
-            ...other } = this.props,
+                cardsLength,
+                ...other
+            } = this.props,
 
-            { carouselAnnotationIndex } = other,
-
-        annotationObject = getCarouselOrPopupAnnotationObject({
-            renderableSongIndex,
-            carouselAnnotationIndex,
-            renderableAnnotationIndex
-        }),
-
-        cardsIndices = getArrayOfLength({
-            length: annotationObject.cards.length
-        })
+            cardsIndices = getArrayOfLength({
+                length: cardsLength
+            })
 
         return cardsIndices.map(cardIndex => (
             <AnnotationCard {...other}
@@ -80,4 +35,4 @@ class AnnotationCards extends Component {
     }
 }
 
-export default connect(mapStateToProps)(AnnotationCards)
+export default AnnotationCards

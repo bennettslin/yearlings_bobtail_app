@@ -11,12 +11,6 @@ module.exports = [
     },
 
     {
-        taskName: `Take care of annotation popup buttons collapsing upon being closed.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of.`,
         workedHours: 0,
         neededHours: 8

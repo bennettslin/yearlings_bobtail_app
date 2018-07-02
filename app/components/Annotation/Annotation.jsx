@@ -8,7 +8,7 @@ import cx from 'classnames'
 import AnnotationTitle from './AnnotationTitle'
 import AnnotationCards from './AnnotationCards'
 
-import { getCarouselOrPopupAnnotationObject } from '../../helpers/dataHelper'
+import { getAnnotationObject } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -34,7 +34,8 @@ class Annotation extends Component {
         renderableAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
-        carouselAnnotationIndex: PropTypes.number
+        carouselAnnotationIndex: PropTypes.number,
+        popupAnnotationIndex: PropTypes.number
     }
 
     shouldComponentUpdate(nextProps) {
@@ -55,40 +56,33 @@ class Annotation extends Component {
         return shouldComponentUpdate
     }
 
-    // componentDidUpdate() {
-    //     const {
-    //         carouselAnnotationIndex,
-    //         renderableAnnotationIndex
-    //     } = this.props
-
-    //     if (carouselAnnotationIndex === renderableAnnotationIndex) {
-    //         console.warn('Annotation rendered.')
-    //     }
-    // }
-
     render() {
-        const { renderableSongIndex,
+        const {
+                renderableSongIndex,
                 renderableAnnotationIndex,
-                ...other } = this.props,
-
-            { carouselAnnotationIndex } = other,
+                ...other
+            } = this.props,
+            {
+                carouselAnnotationIndex,
+                popupAnnotationIndex,
+            } = other,
 
             /**
              * If in carousel, get annotation index from parent. Otherwise,
              * fetch popup annotation indices from store and get it from data
              * helper.
              */
-            annotationObject = getCarouselOrPopupAnnotationObject({
+            annotationObject = getAnnotationObject(
                 renderableSongIndex,
-                carouselAnnotationIndex,
-                renderableAnnotationIndex
-            })
+                carouselAnnotationIndex ||
+                renderableAnnotationIndex ||
+                popupAnnotationIndex
+            )
 
         // If it's in popup, annotation object won't always exist.
         return annotationObject ? (
             <AnnotationSectionView {...other}
-                annotationTitle={annotationObject.title}
-                annotationDotKeys={annotationObject.dotKeys}
+                annotationObject={annotationObject}
             />
         ) : null
     }
@@ -103,8 +97,7 @@ const annotationSectionViewPropTypes = {
     inCarousel: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
-    annotationTitle: PropTypes.string.isRequired,
-    annotationDotKeys: PropTypes.object.isRequired,
+    annotationObject: PropTypes.object.isRequired,
 
     // Absent in popup annotation.
     handleTitleClick: PropTypes.func,
@@ -119,10 +112,7 @@ AnnotationSectionView = ({
     isSelected,
     handleTitleClick,
     handleContainerClick,
-
-    // From controller.
-    annotationTitle,
-    annotationDotKeys,
+    annotationObject,
 
 ...other }) => {
 
@@ -130,8 +120,8 @@ AnnotationSectionView = ({
         <AnnotationTitle
             isSelected={isSelected}
             isAccessed={isAccessed}
-            annotationDotKeys={annotationDotKeys}
-            annotationTitle={annotationTitle}
+            annotationDotKeys={annotationObject.dotKeys}
+            annotationTitle={annotationObject.title}
             handleTitleClick={handleTitleClick}
         />
     )
@@ -156,7 +146,10 @@ AnnotationSectionView = ({
                 annotationTitleChild
             )}
 
-            <AnnotationCards {...other} />
+            <AnnotationCards
+                {...other}
+                cardsLength={annotationObject.cards.length}
+            />
         </div>
     )
 }

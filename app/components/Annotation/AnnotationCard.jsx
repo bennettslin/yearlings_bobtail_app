@@ -9,7 +9,7 @@ import Texts from '../Text/Texts'
 import AnnotationPortals from './AnnotationPortals'
 import { PORTAL } from '../../constants/dots'
 
-import { getCarouselOrPopupCardObject } from '../../helpers/dataHelper'
+import { getAnnotationCardObject } from '../../helpers/dataHelper'
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
@@ -37,6 +37,7 @@ class AnnotationCard extends Component {
 
         // From parent.
         carouselAnnotationIndex: PropTypes.number,
+        popupAnnotationIndex: PropTypes.number,
         cardIndex: PropTypes.number.isRequired
     }
 
@@ -70,17 +71,24 @@ class AnnotationCard extends Component {
     }
 
     render() {
-        const { renderableSongIndex,
-                renderableAnnotationIndex,
-                cardIndex,
-                ...other } = this.props,
-
-            { carouselAnnotationIndex } = other,
-
-            cardObject = getCarouselOrPopupCardObject({
-                carouselAnnotationIndex,
+        const {
                 renderableSongIndex,
                 renderableAnnotationIndex,
+                cardIndex,
+                ...other
+            } = this.props,
+
+            {
+                carouselAnnotationIndex,
+                popupAnnotationIndex,
+            } = other,
+
+            cardObject = getAnnotationCardObject({
+                songIndex: renderableSongIndex,
+                annotationIndex:
+                    carouselAnnotationIndex ||
+                    renderableAnnotationIndex ||
+                    popupAnnotationIndex,
                 cardIndex
             }),
 

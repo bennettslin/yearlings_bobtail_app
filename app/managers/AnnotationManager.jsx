@@ -128,11 +128,6 @@ class AnnotationManager extends Component {
         props.selectAnnotationIndex(selectedAnnotationIndex)
 
         /**
-         * There should always be a popup annotation, so that popup is not
-         * suddenly empty when popup fades out.
-         */
-
-        /**
          * If selecting or changing annotation in same song, change index to
          * be rendered right away.
          */

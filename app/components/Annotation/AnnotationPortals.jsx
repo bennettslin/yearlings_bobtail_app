@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import AnnotationPortal from './AnnotationPortal'
 import { SOURCE_PORTAL_INDEX } from '../../constants/lyrics'
 import {
-    getCarouselOrPopupCardPortalLinksArray
+    getAnnotationCardPortalLinksArray
 } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
@@ -32,6 +32,7 @@ class AnnotationPortals extends Component {
 
         // From parent.
         carouselAnnotationIndex: PropTypes.number,
+        popupAnnotationIndex: PropTypes.number,
         cardIndex: PropTypes.number.isRequired
     }
 
@@ -64,13 +65,18 @@ class AnnotationPortals extends Component {
                 accessedAnnotationAnchorIndex,
             ...other } = this.props,
 
-            { carouselAnnotationIndex,
-                cardIndex } = other,
-
-            portalLinksArray = getCarouselOrPopupCardPortalLinksArray({
+            {
                 carouselAnnotationIndex,
-                renderableSongIndex,
-                renderableAnnotationIndex,
+                popupAnnotationIndex,
+                cardIndex
+            } = other,
+
+            portalLinksArray = getAnnotationCardPortalLinksArray({
+                songIndex: renderableSongIndex,
+                annotationIndex:
+                    carouselAnnotationIndex ||
+                    renderableAnnotationIndex ||
+                    popupAnnotationIndex,
                 cardIndex
             })
 
@@ -78,11 +84,14 @@ class AnnotationPortals extends Component {
             portalLinksArray.map((portalObject, portalLinkIndex) => {
 
                 /**
-                 * portalLinkIndex is solely to fetch the portal object from the
-                 * data helper when there are two portals in the same annotation.
-                 * This happens only once, with the "shiv" one.
+                 * The portalLinkIndex is solely to fetch the portal object
+                 * from the data helper when there are two portals in the same
+                 * annotation. This happens only once, with the "shiv" one.
                  */
-                const { [SOURCE_PORTAL_INDEX]: sourcePortalIndex } = portalObject,
+                const {
+                        [SOURCE_PORTAL_INDEX]: sourcePortalIndex
+                    } = portalObject,
+
                     isAccessed =
                         accessedAnnotationAnchorIndex === sourcePortalIndex
 

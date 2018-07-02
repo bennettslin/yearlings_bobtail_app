@@ -1,7 +1,6 @@
-
 // Popup container for individual annotation section.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -33,105 +32,160 @@ const mapStateToProps = ({
     selectedWikiIndex
 })
 
-const annotationPopupPropTypes = {
-    // Through Redux.
-    canCarouselRender: PropTypes.bool.isRequired,
-    deviceIndex: PropTypes.number.isRequired,
-    isLyricExpanded: PropTypes.bool.isRequired,
-    isHeightlessLyricColumn: PropTypes.bool.isRequired,
+class AnnotationPopup extends Component {
 
-    renderableAnnotationIndex: PropTypes.number.isRequired,
-    selectedCarouselNavIndex: PropTypes.number.isRequired,
-    selectedScoreIndex: PropTypes.number.isRequired,
-    selectedTitleIndex: PropTypes.number.isRequired,
-    selectedWikiIndex: PropTypes.number.isRequired,
+    static propTypes = {
+        // Through Redux.
+        canCarouselRender: PropTypes.bool.isRequired,
+        deviceIndex: PropTypes.number.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
+        isHeightlessLyricColumn: PropTypes.bool.isRequired,
 
-    // From parent.
-    inMain: PropTypes.bool,
-    handleAnnotationPrevious: PropTypes.func.isRequired,
-    handleAnnotationNext: PropTypes.func.isRequired,
-    handlePopupContainerClick: PropTypes.func.isRequired
-},
+        renderableAnnotationIndex: PropTypes.number.isRequired,
+        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        selectedScoreIndex: PropTypes.number.isRequired,
+        selectedTitleIndex: PropTypes.number.isRequired,
+        selectedWikiIndex: PropTypes.number.isRequired,
 
-AnnotationPopup = ({
+        // From parent.
+        inMain: PropTypes.bool,
+        handleAnnotationPrevious: PropTypes.func.isRequired,
+        handleAnnotationNext: PropTypes.func.isRequired,
+        handlePopupContainerClick: PropTypes.func.isRequired
+    }
 
-    canCarouselRender,
-    deviceIndex,
-    isLyricExpanded,
-    isHeightlessLyricColumn,
-    inMain,
+    constructor(props) {
+        super(props)
 
-    renderableAnnotationIndex,
-    selectedCarouselNavIndex,
-    selectedScoreIndex,
-    selectedTitleIndex,
-    selectedWikiIndex,
+        this.state = {
+            // Ensures that annotation index persists as popup is closing.
+            popupAnnotationIndex: props.renderableAnnotationIndex
+        }
+    }
 
-    handleAnnotationPrevious,
-    handleAnnotationNext,
-    handlePopupContainerClick,
+    componentDidUpdate(prevProps) {
+        const {
+            renderableAnnotationIndex,
+            selectedCarouselNavIndex
+        } = this.props
 
-...other }) => {
+        if (
+            // If there is a selected annotation...
+            renderableAnnotationIndex &&
+            (
+                // ... and annotation index has changed...
+                renderableAnnotationIndex !==
+                prevProps.renderableAnnotationIndex
+            ) || (
+                // ... or toggling from carousel to popup...
+                !selectedCarouselNavIndex &&
+                prevProps.selectedCarouselNavIndex
+            )
+        ) {
+            // ... then persist the popup annotation index.
+            this.setState({
+                popupAnnotationIndex: renderableAnnotationIndex
+            })
+        }
 
-    const isOverlayingAnnotation = getIsOverlayingAnnotation({
+        if (
+            // If toggling from popup to carousel...
+            selectedCarouselNavIndex &&
+            !prevProps.selectedCarouselNavIndex
+        ) {
+            // ... then reset the popup annotation index.
+            this.setState({
+                popupAnnotationIndex: 0
+            })
+        }
+    }
+
+    render() {
+        const {
+
+            canCarouselRender,
             deviceIndex,
             isLyricExpanded,
             isHeightlessLyricColumn,
-            selectedCarouselNavIndex
-        }),
-        isPhone = getIsPhone(deviceIndex)
+            inMain,
 
-    /**
-     * Annotation popup is in main, unless lyric column is expanded or
-     * heightless.
-     */
-    if (Boolean(inMain) === isOverlayingAnnotation) {
+            renderableAnnotationIndex,
+            selectedCarouselNavIndex,
+            selectedScoreIndex,
+            selectedTitleIndex,
+            selectedWikiIndex,
 
-        return null
+            handleAnnotationPrevious,
+            handleAnnotationNext,
+            handlePopupContainerClick,
 
-    } else {
-        const isVisible =
-                canCarouselRender &&
-                !!renderableAnnotationIndex &&
+        ...other } = this.props,
 
-                /**
-                 * If an annotation is selected, always show in popup if it's a
-                 * phone or lyric is expanded.
-                 */
-                (!selectedCarouselNavIndex || isPhone || isLyricExpanded) &&
-
-                !selectedScoreIndex &&
-                !selectedTitleIndex &&
-                !selectedWikiIndex
+            isOverlayingAnnotation = getIsOverlayingAnnotation({
+                deviceIndex,
+                isLyricExpanded,
+                isHeightlessLyricColumn,
+                selectedCarouselNavIndex
+            }),
+            isPhone = getIsPhone(deviceIndex)
 
         /**
-         * Pass annotation object from state so that it persists while popup is
-         * fading out.
+         * Annotation popup is in main, unless lyric column is expanded or
+         * heightless.
          */
-        return (
-            <Popup
-                showArrows
-                bounceAnimate
-                hasWidePadding
-                popupName="Annotation"
-                className={cx(
-                    inMain && 'AnnotationPopup__inMain'
-                )}
-                isVisible={isVisible}
-                displaysInOverlay={isOverlayingAnnotation}
-                noAbsoluteFull={inMain}
-                handleNextClick={handleAnnotationNext}
-                handlePreviousClick={handleAnnotationPrevious}
-                handlePopupContainerClick={handlePopupContainerClick}
-            >
-                <Annotation {...other}
-                    isSelected
-                />
-            </Popup>
-        )
+        if (Boolean(inMain) === isOverlayingAnnotation) {
+
+            return null
+
+        } else {
+            const isVisible =
+                    canCarouselRender &&
+                    Boolean(renderableAnnotationIndex) &&
+
+                    /**
+                     * If an annotation is selected, always show in popup if it's a
+                     * phone or lyric is expanded.
+                     */
+                    (
+                        !selectedCarouselNavIndex ||
+                        isPhone ||
+                        isLyricExpanded
+                    ) &&
+
+                    !selectedScoreIndex &&
+                    !selectedTitleIndex &&
+                    !selectedWikiIndex,
+
+                { popupAnnotationIndex } = this.state
+
+            /**
+             * Pass annotation object from state so that it persists while popup is
+             * fading out.
+             */
+            return (
+                <Popup
+                    showArrows
+                    bounceAnimate
+                    hasWidePadding
+                    popupName="Annotation"
+                    className={cx(
+                        inMain && 'AnnotationPopup__inMain'
+                    )}
+                    isVisible={isVisible}
+                    displaysInOverlay={isOverlayingAnnotation}
+                    noAbsoluteFull={inMain}
+                    handleNextClick={handleAnnotationNext}
+                    handlePreviousClick={handleAnnotationPrevious}
+                    handlePopupContainerClick={handlePopupContainerClick}
+                >
+                    <Annotation {...other}
+                        isSelected
+                        popupAnnotationIndex={popupAnnotationIndex}
+                    />
+                </Popup>
+            )
+        }
     }
 }
-
-AnnotationPopup.propTypes = annotationPopupPropTypes
 
 export default connect(mapStateToProps)(AnnotationPopup)
