@@ -4,8 +4,7 @@
 
     background-color: gray;
     transition:
-        opacity @animationDuration__default,
-        transform @animationDuration__default;
+        opacity @animationDuration__default;
 
     z-index: @zIndex__lyricChild__topMost;
 }
@@ -25,11 +24,6 @@
 }
 
 .LyricToggleScroll {
-    opacity: 0;
-    z-index: @zIndex__negative;
-
-    transition: opacity @animationDuration__default;
-
     // When in mobile, expand toggle will *always* be present.
     .RM__tablet
     & {
@@ -57,6 +51,11 @@
             + @js__length__icon
             + @js__margin__thick;
     }
+}
+
+.LyricToggleScroll {
+    opacity: 0;
+    z-index: @zIndex__negative;
 
     .RM__manualScroll
     & {
@@ -71,6 +70,10 @@
     opacity: 1;
     transform: translateX(-50%) scale(1);
     z-index: @zIndex__leftShelf;
+
+    transition:
+        opacity @animationDuration__default,
+        transform @animationDuration__default;
 
     /**
      * TODO: Ideally, this would be a single selector for when the toggle is
