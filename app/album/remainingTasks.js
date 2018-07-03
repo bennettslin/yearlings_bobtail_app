@@ -4,12 +4,6 @@ module.exports = [
      * Begin expected DTO tasks.
      */
     {
-        taskName: `Pressing up or down in lyrics should turn off auto scroll.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Desktop menu animating to overlay is a little janky?`,
         workedHours: 0,
         neededHours: 1

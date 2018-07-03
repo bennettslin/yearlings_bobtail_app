@@ -356,6 +356,11 @@ class EventHandler extends Component {
     handleLyricWheel(e) {
         let hasRoomToScroll = false
 
+        if (!e) {
+            // If triggered manually by keyboard, set to true.
+            this.props.selectManualScroll(true)
+        }
+
         // Determine whether there is room to scroll.
         if (e) {
             const { deltaY = 0 } = e,

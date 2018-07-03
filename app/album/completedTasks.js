@@ -3057,4 +3057,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Pressing up or down in lyrics should turn off auto scroll.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
