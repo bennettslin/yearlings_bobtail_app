@@ -7,6 +7,9 @@
     opacity: 0;
     transition: opacity @animationDuration__default;
 
+    // This prevents heightless lyric column from pushing theatre offscreen.
+    overflow: hidden;
+
     &.parentIsShown {
         opacity: 1;
     }

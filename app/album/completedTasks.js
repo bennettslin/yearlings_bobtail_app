@@ -852,7 +852,7 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Weird bug where clicking side button in annotation scrolls entire screen up?! `,
+        taskName: `Weird bug where clicking side button in annotation scrolls entire screen up?! (The actual fix is to add overflow: hidden to sibling containers.)`,
         commit: `https://github.com/bennettslin/yearlings_bobtail_app/commit/b6a2c191edfa30cc61ec7139e65fbc42d65082dc`,
         workedHours: 1,
         neededHours: 1
@@ -3051,5 +3051,10 @@ module.exports = [
         taskName: `Switch ear and auto scroll toggles. And why doesn't auto scroll button reset? Because verse bar is blocking it... Scrolling over verse bar should also determine verse bars.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `In heightless lyric, expanding lyric column pushes screen up.`,
+        workedHours: 1,
+        neededHours: 1
     },
 ]

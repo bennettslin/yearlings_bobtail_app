@@ -3,9 +3,8 @@ module.exports = [
     /**
      * Begin expected DTO tasks.
      */
-
     {
-        taskName: `In heightless lyric, expanding lyric column pushes screen up.`,
+        taskName: `Pressing up or down in lyrics should turn off auto scroll.`,
         workedHours: 0,
         neededHours: 1
     },
