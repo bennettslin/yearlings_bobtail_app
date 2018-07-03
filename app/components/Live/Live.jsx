@@ -31,9 +31,11 @@ import {
 } from './liveHelper'
 
 const mapStateToProps = ({
+    canMainRender,
     isWindowResizeRenderable,
     isSongChangeRenderable
 }) => ({
+    canMainRender,
     isWindowResizeRenderable,
     isSongChangeRenderable
 })
@@ -101,7 +103,13 @@ class Live extends Component {
     }
 
     theatreDidRender() {
-        this.props.setCanRenderMain(true)
+        /**
+         * This isn't the most elegant way to tell whether we're rendering
+         * after song change or after window resize. But it will do for now.
+         */
+        this.props.canMainRender ?
+            this.props.setCanRenderScene(true) :
+            this.props.setCanRenderMain(true)
     }
 
     mainDidRender() {
@@ -179,6 +187,7 @@ class Live extends Component {
 
 Live.propTypes = {
     // Through Redux.
+    canMainRender: PropTypes.bool.isRequired,
     isWindowResizeRenderable: PropTypes.bool.isRequired,
     isSongChangeRenderable: PropTypes.bool.isRequired,
 

@@ -10,12 +10,6 @@ module.exports = [
     },
 
     {
-        taskName: `Cubes don't render upon window resize?`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Sometimes overview in logue prevents lyric scrolling?`,
         workedHours: 0,
         neededHours: 2

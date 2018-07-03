@@ -3062,4 +3062,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Scene doesn't render upon window resize?`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
