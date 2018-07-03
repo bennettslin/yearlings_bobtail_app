@@ -99,7 +99,7 @@ class PopupViewButton extends Component {
 
                     displaysInOverlay ?
                         'PopupViewButton__displaysInOverlay' :
-                        'PopupViewButton__displaysNotInOverlay',
+                        'PopupViewButton__notInOverlay',
 
                     /**
                      * Because popup button has absolute position, it must have a

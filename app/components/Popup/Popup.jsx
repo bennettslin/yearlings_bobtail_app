@@ -28,7 +28,7 @@ class Popup extends Component {
         super(props)
 
         this._handlePopupContainerClick = this._handlePopupContainerClick.bind(this)
-        this._handleTransitionEnd = this._handleTransitionEnd.bind(this)
+        // this._handleTransitionEnd = this._handleTransitionEnd.bind(this)
 
         this.state = {
             isDisplayed: this.props.isVisible
@@ -58,24 +58,25 @@ class Popup extends Component {
         }
     }
 
-    _handleTransitionEnd(e) {
-        // FIXME: This is a brittle way to handle it.
-        if (e.propertyName === 'opacity') {
+    // TODO: This no longer seems necessary, now that there is sequenced rendering. Delete once confident that it's not needed.
+    // _handleTransitionEnd(e) {
+    //     // FIXME: This is a brittle way to handle it.
+    //     if (e.propertyName === 'opacity') {
 
-            // Focus when popup opens.
-            if (this.props.isVisible) {
-                if (this.props.handlePopupFocus) {
-                    this.props.handlePopupFocus()
-                }
+    //         // Focus when popup opens.
+    //         if (this.props.isVisible) {
+    //             if (this.props.handlePopupFocus) {
+    //                 this.props.handlePopupFocus()
+    //             }
 
-            // Set display to none when popup closes.
-            } else {
-                this.setState({
-                    isDisplayed: false
-                })
-            }
-        }
-    }
+    //         // Set display to none when popup closes.
+    //         } else {
+    //             this.setState({
+    //                 isDisplayed: false
+    //             })
+    //         }
+    //     }
+    // }
 
     _handlePopupContainerClick(e) {
         if (this.state.isDisplayed) {
@@ -99,9 +100,9 @@ class Popup extends Component {
 
                 ...other } = this.props,
 
-            { isFullSize } = other,
+            { isFullSize } = other
 
-            { isDisplayed } = this.state
+            // { isDisplayed } = this.state
 
         return (
             <div
@@ -110,18 +111,18 @@ class Popup extends Component {
                     `${popupName}Popup`,
 
                     isVisible ? 'Popup__visible' : 'Popup__invisible',
-                    isDisplayed ? 'Popup__displayed' : 'Popup__notDisplayed',
+                    // isDisplayed ? 'Popup__displayed' : 'Popup__notDisplayed',
                     isFullSize && 'Popup__fullSize',
 
                     // For animation styling.
-                    { 'Popup__displaysNotInOverlay': !displaysInOverlay,
+                    { 'Popup__notInOverlay': !displaysInOverlay,
 
                       'flexCentreContainer': !noFlexCentre,
                       'absoluteFullContainer': !noAbsoluteFull },
 
                     className
                 )}
-                onTransitionEnd={this._handleTransitionEnd}
+                // onTransitionEnd={this._handleTransitionEnd}
             >
                 <PopupView {...other}
                     popupName={popupName}

@@ -8,11 +8,10 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-
     {
-        taskName: `Sometimes overview in logue prevents lyric scrolling?`,
+        taskName: `Popup zIndex turns out to be useful...`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
 
     {

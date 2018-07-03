@@ -29,16 +29,16 @@
 .Popup__invisible,
 
 .RM__overlayShown
-.Popup__displaysNotInOverlay {
+.Popup__notInOverlay {
     transition: opacity @animationDuration__fast;
     opacity: 0;
 }
 
-.Popup__notDisplayed {
-    z-index: @zIndex__popupContainer;
-}
+// .Popup__notDisplayed {
+//     z-index: @zIndex__popupContainer;
+// }
 
-.Popup__displayed {
-    // Allows the popup to prevent a click inside from closing it.
-    z-index: @zIndex__popupOverlayContent;
-}
+// .Popup__displayed {
+//     // Allows the popup to prevent a click inside from closing it.
+//     z-index: @zIndex__popupOverlayContent;
+// }
