@@ -152,6 +152,7 @@ LyricView = ({
             ref={setRef}
             className={cx(
                 'Lyric',
+                'absoluteFullContainer',
 
                 // This gradient does not obscure the lyric toggle buttons.
                 'gradientMask__lyricColumn__mobileCollapsed'

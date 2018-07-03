@@ -196,6 +196,8 @@ LyricColumnView = ({
 
             <LyricColumnAccess />
 
+            {/* These are the only two flex children. */}
+
             <VerseBar {...verseBarProps}
                 isAbove
             />

@@ -5,7 +5,7 @@ module.exports = [
      */
 
     {
-        taskName: `Switch ear and auto scroll toggles. And why doesn't auto scroll button reset? Because verse bar is blocking it...`,
+        taskName: `Switch ear and auto scroll toggles. And why doesn't auto scroll button reset? Because verse bar is blocking it... Scrolling over verse bar should also determine verse bars.`,
         workedHours: 0,
         neededHours: 2
     },

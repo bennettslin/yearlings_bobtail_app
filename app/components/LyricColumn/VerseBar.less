@@ -1,102 +1,26 @@
 @marginY__verseBar: 8px;
 @offsetY__verseBar__hidden: -50px;
 
-// These are to make room for the lyric toggle buttons.
-@offsetX__verseBar:
-    @margin__scrollbar
-    + @js__length__iconLarge;
-
-@offsetX__verseBar__tablet:
-    @margin__scrollbar
-    + @js__length__iconLarge__tablet;
-
-@offsetX__verseBar__mini:
-    @margin__scrollbar
-    + @js__length__iconLarge__mini;
-
-@offsetX__verseBar__phone:
-    @margin__scrollbar
-    + @js__length__icon;
-
 .VerseBar {
-    position: absolute;
-    left: 50%;
-
     opacity: 0;
-
-    transform: translateX(-50%) scale(0);
+    transform: scale(0.5);
 
     @js__margin__thick__double: @js__margin__thick * 2;
-    width: ~"calc(100% - @{js__margin__thick__double})";
-
-   // FIXME: Get rid of these eventually.
-    // max-width: ~"calc(100% - @{offsetX__verseBar} * 2)";
-
-    cursor: pointer;
+    max-width: ~"calc(100% - @{js__margin__thick__double})";
 
     z-index: @zIndex__lyricChild__topMost;
-
-    // .RM__tablet
-    // & {
-    //     max-width: ~"calc(100% - @{offsetX__verseBar__tablet} * 2)";
-    // }
-
-    // .RM__mini
-    // & {
-    //     max-width: ~"calc(100% - @{offsetX__verseBar__mini} * 2)";
-    // }
-
-    // .RM__phone
-    // & {
-    //     max-width: ~"calc(100% - @{offsetX__verseBar__phone} * 2)";
-    // }
-}
-
-.VerseBar__above {
-    top: @offsetY__verseBar__hidden;
-    margin-top: @marginY__verseBar;
-
-    transition:
-        top @animationDuration__fast,
-        transform @animationDuration__fast,
-        opacity @animationDuration__fast;
-
-    .RM__verseBarAbove
-    & {
-        top: 0;
-        transform: translateX(-50%) scale(1);
-        opacity: 1;
-    }
-}
-
-.VerseBar__below {
-    bottom: @offsetY__verseBar__hidden;
-    margin-bottom: @marginY__verseBar;
-
-    transition:
-        bottom @animationDuration__fast,
-        transform @animationDuration__fast,
-        opacity @animationDuration__fast;
-
-    .RM__verseBarBelow
-    & {
-        bottom: 0;
-        transform: translateX(-50%) scale(1);
-        opacity: 1;
-    }
-}
-
-.Verse__inBar {
-    padding: @js__margin__thick;
+    cursor: pointer;
 }
 
 .VerseBar__animatable {
 
-    &:hover {
+    .VerseBar:hover
+    & {
         animation: bounceHover @animationDuration__default;
     }
 
-    &:active {
+    .VerseBar:active
+    & {
         transform: scale(0.9);
     }
 }
@@ -107,4 +31,38 @@
 
 .VerseBar__animatable__below {
     box-shadow: @boxShadow__verseBar__below;
+}
+
+.VerseBar__above {
+
+    transition:
+        top @animationDuration__fast,
+        transform @animationDuration__fast,
+        opacity @animationDuration__fast;
+
+    .RM__verseBarAbove
+    & {
+        top: 0;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.VerseBar__below {
+
+    transition:
+        bottom @animationDuration__fast,
+        transform @animationDuration__fast,
+        opacity @animationDuration__fast;
+
+    .RM__verseBarBelow
+    & {
+        bottom: 0;
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.Verse__inBar {
+    padding: @js__margin__thick;
 }

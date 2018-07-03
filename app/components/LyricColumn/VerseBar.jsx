@@ -76,7 +76,6 @@ class VerseBar extends Component {
                 className={cx(
                     'VerseBar',
                     'fontSize__verse',
-                    'flexCentreContainer',
 
                     isAbove ?
                         'VerseBar__above' :
@@ -86,12 +85,14 @@ class VerseBar extends Component {
                 onClick={handleVerseBarSelect}
                 onTouchStart={handleVerseBarSelect}
             >
-                <div className={cx(
-                    'VerseBar__animatable',
-                    isAbove ?
-                        'VerseBar__animatable__above' :
-                        'VerseBar__animatable__below'
-                )}>
+                <div
+                    className={cx(
+                        'VerseBar__animatable',
+                        isAbove ?
+                            'VerseBar__animatable__above' :
+                            'VerseBar__animatable__below'
+                    )}
+                >
                     <VerseController {...other}
                         inVerseBar
                         verseObject={verseObject}
