@@ -101,3 +101,37 @@ h1, h2, h3 {
         font-size: @fontSize__verse__phone;
     }
 }
+
+.fontSize__lyricMultipleColumns {
+
+    @fontSize__bothColumnsShown: 0.95em;
+
+    // Make font sizes smaller when showing both columns.
+    .RM__bothLyricColumnsShown.RM__desktop
+    &,
+    .RM__bothLyricColumnsShown.RM__tablet
+    & {
+        font-size: @fontSize__bothColumnsShown;
+    }
+
+    .RM__bothLyricColumnsShown.RM__mini
+    & {
+        font-size:
+            @fontSize__bothColumnsShown
+            * @multiplier__fontSize__mini;
+    }
+}
+
+i, em {
+    font-size: @fontSize__verse * 0.9;
+
+    .RM__mini
+    & {
+        font-size: @fontSize__verse__mini * 0.9;
+    }
+
+    .RM__phone
+    & {
+        font-size: @fontSize__verse__phone * 0.9;
+    }
+}
