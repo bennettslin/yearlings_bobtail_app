@@ -1,6 +1,3 @@
-@marginY__verseBar: 8px;
-@offsetY__verseBar__hidden: -50px;
-
 .VerseBar {
     opacity: 0;
     transform: scale(0.5);
@@ -34,6 +31,7 @@
 }
 
 .VerseBar__above {
+    margin-top: @js__margin__thin;
 
     transition:
         top @animationDuration__fast,
@@ -49,6 +47,7 @@
 }
 
 .VerseBar__below {
+    margin-bottom: @js__margin__thin;
 
     transition:
         bottom @animationDuration__fast,

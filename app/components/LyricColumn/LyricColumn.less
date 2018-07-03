@@ -5,6 +5,7 @@
 
 .LyricColumn {
     position: absolute;
+    box-sizing: border-box;
 
     transition:
         height @animationDuration__default,
@@ -18,7 +19,12 @@
     justify-content: space-between;
     align-items: center;
 
-    padding: @js__margin__thin @js__margin__thick;
+    /**
+     * Let verse bars own the top and bottom margins, and lyric column own the
+     * the side padding. This allows the lyric column to collapse down to zero
+     * height when lyric is heightless.
+     */
+    padding: 0 @js__margin__thick;
 
     .RM__song
     & {

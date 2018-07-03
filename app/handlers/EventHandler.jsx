@@ -713,6 +713,8 @@ class EventHandler extends Component {
     handleVerseBarWheel(e) {
         const { deltaY } = e.nativeEvent
         this.myLyricElement.scrollTop += deltaY
+
+        this.props.determineVerseBars()
     }
 
     handleVerseInteractivate(e, verseIndex) {
