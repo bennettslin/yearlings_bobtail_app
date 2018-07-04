@@ -96,7 +96,10 @@ export const getFrontCubeZIndex = ({
     const defaultZIndex = isFloor ? 0 : CUBE_Z_AXIS_LENGTH
 
     // TODO: It's different if there is a slantDirection.
-    if (slantDirection) {
+    if (slantDirection === 'left') {
+        return defaultZIndex
+
+    } else if (slantDirection === 'right') {
         return defaultZIndex
 
     } else {
@@ -124,7 +127,10 @@ export const getSideCubeZIndex = ({
     const defaultZIndex = isFloor ? 0 : CUBE_Z_AXIS_LENGTH
 
     // TODO: It's different if there is a slantDirection.
-    if (slantDirection) {
+    if (slantDirection === 'left') {
+        return defaultZIndex
+
+    } else if (slantDirection === 'right') {
         return defaultZIndex
 
     } else {

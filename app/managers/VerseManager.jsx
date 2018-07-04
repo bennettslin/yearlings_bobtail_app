@@ -100,29 +100,34 @@ class VerseManager extends Component {
     }
 
     determineVerseBars() {
+
         const
             verseIndex = this.props.sliderVerseIndex > 0 ?
                 this.props.sliderVerseIndex :
                 this.props.selectedVerseIndex,
 
-            verseElement = this.props.getVerseElement(verseIndex),
+            verseElement = this.props.getVerseElement(verseIndex)
 
-            verseBarStatusObject = getVerseBarStatus({
-                deviceIndex: this.props.deviceIndex,
-                windowWidth: this.props.windowWidth,
-                windowHeight: this.props.windowHeight,
-                isLyricExpanded: this.props.isLyricExpanded,
-                isHeightlessLyricColumn:
-                    this.props.isHeightlessLyricColumn,
-                verseElement
-            }),
-            {
-                isVerseBarAbove,
-                isVerseBarBelow
-            } = verseBarStatusObject
+        // Check for verse element in case we are loading from a logue.
+        if (verseElement) {
 
-        this.props.setIsVerseBarAbove(isVerseBarAbove)
-        this.props.setIsVerseBarBelow(isVerseBarBelow)
+            const verseBarStatusObject = getVerseBarStatus({
+                    deviceIndex: this.props.deviceIndex,
+                    windowWidth: this.props.windowWidth,
+                    windowHeight: this.props.windowHeight,
+                    isLyricExpanded: this.props.isLyricExpanded,
+                    isHeightlessLyricColumn:
+                        this.props.isHeightlessLyricColumn,
+                    verseElement
+                }),
+                {
+                    isVerseBarAbove,
+                    isVerseBarBelow
+                } = verseBarStatusObject
+
+            this.props.setIsVerseBarAbove(isVerseBarAbove)
+            this.props.setIsVerseBarBelow(isVerseBarBelow)
+        }
     }
 
     resetVerseBars() {

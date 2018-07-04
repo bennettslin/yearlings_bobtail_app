@@ -22,6 +22,8 @@ When selecting a song:
         * cubes by row
             * row by column?
         * actions
+        * faces by row
+            * faces by column?
     * score
 
 * Have transitions dependent on isRendered class that is dependent on canRender in Redux state and parent hasRendered in component state.

@@ -1,16 +1,15 @@
 // Section to show a single slice of the scene.
 
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import Cubes from './Cubes/Cubes'
-import Presence from './Presences/Presence';
+import Layer from './Layer'
 
-import { DEFAULT_STAGE_TILES } from '../../constants/cubesOther'
+import { DEFAULT_STAGE_TILES } from '../../../constants/cubesOther'
 
-import { Y_INDICES_ARRAY } from './constants'
+import { Y_INDICES_ARRAY } from '../constants'
 
 const mapStateToProps = ({
     canSceneRender
@@ -18,12 +17,12 @@ const mapStateToProps = ({
     canSceneRender
 })
 
-class SceneAction extends Component {
+class Layers extends Component {
 
     static propTypes = {
         canSceneRender: PropTypes.bool.isRequired,
 
-        presences: PropTypes.object,
+        presence: PropTypes.object,
         tiles: PropTypes.shape({
             ceiling: PropTypes.shape({
                 zIndices: PropTypes.array.isRequired,
@@ -34,11 +33,8 @@ class SceneAction extends Component {
                 bitmapKeys: PropTypes.array.isRequired
             }),
             slantDirection: PropTypes.string
-        }).isRequired,
-        stageWidth: PropTypes.number.isRequired,
-        stageHeight: PropTypes.number.isRequired
+        }).isRequired
     }
-
 
     shouldComponentUpdate(nextProps) {
         return nextProps.canSceneRender
@@ -46,7 +42,7 @@ class SceneAction extends Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.canSceneRender && !prevProps.canSceneRender) {
-            console.warn('SceneAction rendered.')
+            console.warn('Layers rendered.')
         }
     }
 
@@ -83,7 +79,7 @@ class SceneAction extends Component {
         return (
             <div
                 className={cx(
-                    'SceneAction',
+                    'Layers',
                     'absoluteFullContainer'
                 )}
             >
@@ -92,31 +88,18 @@ class SceneAction extends Component {
                     const presence = presences && presences[`yIndex${yIndex}`]
 
                     return (
-                        <Fragment key={yIndex}>
-                            <Cubes {...other}
-                                yIndex={yIndex}
-                                bitmapKeys={ceilingBitmapKeys}
-                                zIndices={ceilingZIndices}
-                                oppositeZIndices={floorZIndices}
-                                slantDirection={slantDirection}
-                            />
-                            <Cubes {...other}
-                                isFloor
-                                yIndex={yIndex}
-                                bitmapKeys={floorBitmapKeys}
-                                zIndices={floorZIndices}
-                                oppositeZIndices={ceilingZIndices}
-                                slantDirection={slantDirection}
-                            />
-                            {presence && (
-                                <Presence {...other}
-                                    yIndex={yIndex}
-                                    presence={presence}
-                                    zIndices={floorZIndices}
-                                    slantDirection={slantDirection}
-                                />
-                            )}
-                        </Fragment>
+                        <Layer {...other}
+                            key={yIndex}
+                            {...{
+                                yIndex,
+                                slantDirection,
+                                presence,
+                                ceilingZIndices,
+                                ceilingBitmapKeys,
+                                floorZIndices,
+                                floorBitmapKeys
+                            }}
+                        />
                     )
                 })}
             </div>
@@ -124,4 +107,4 @@ class SceneAction extends Component {
     }
 }
 
-export default connect(mapStateToProps)(SceneAction)
+export default connect(mapStateToProps)(Layers)

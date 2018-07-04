@@ -16,14 +16,14 @@ const
     i = 18,
     // j = 19,
     k = 20,
-    n = 40,
+    n = 24,
     // LEFT = 'left',
     RIGHT = 'right',
 
     DEFAULT_STAGE_TILES = {
         ceiling: {
             zIndices: [
-                [k]
+                [n]
             ],
             bitmapKeys: [
                 [TEST_PATTERN_BITMAP]

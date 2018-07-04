@@ -434,6 +434,10 @@ export const getVerseBarStatus = ({
     verseElement
 }) => {
 
+    if (!verseElement) {
+        return null
+    }
+
     // If lyric is collapsed and heightless, verse bars should never show.
     if (isHeightlessLyricColumn && !isLyricExpanded) {
         return {

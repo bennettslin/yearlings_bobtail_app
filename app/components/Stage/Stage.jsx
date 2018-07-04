@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Scene from '../Scene/Scene'
-import Proscenium from './Proscenium/Proscenium';
+// import Proscenium from './Proscenium/Proscenium';
 
 const mapStateToProps = ({
     canTheatreRender,
@@ -79,7 +79,7 @@ class Stage extends Component {
                         stageWidth={width}
                         stageHeight={height}
                     />
-                    <Proscenium />
+                    {/* <Proscenium /> */}
                 </div>
             </div>
         )

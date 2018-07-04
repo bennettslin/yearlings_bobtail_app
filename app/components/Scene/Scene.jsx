@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import SceneAction from './SceneAction'
+import Layers from './Layers/Layers'
 import SceneSky from './SceneSky'
 import SceneWood from './SceneWood'
 
@@ -125,7 +125,7 @@ class Scene extends Component {
                     stageHeight={stageHeight}
                 />
 
-                <SceneAction
+                <Layers
                     presences={presences}
                     tiles={tiles}
                     stageWidth={stageWidth}

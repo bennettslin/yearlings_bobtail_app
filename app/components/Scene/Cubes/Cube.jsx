@@ -114,9 +114,9 @@ class Cube extends Component {
                 oppositeTilesMeet
             })
 
-        if (!doRenderTile && !doRenderFront && !doRenderSide) {
-            return null
-        }
+        // if (!doRenderTile && !doRenderFront && !doRenderSide) {
+        //     return null
+        // }
 
         const cubeCorners = getStageCubeCornerPercentages({
             xIndex,
@@ -135,14 +135,14 @@ class Cube extends Component {
                     `Cube__z${getCharStringForNumber(parseInt(zIndex))}`
                 )}
             >
-                {doRenderTile && (
+                {(true || doRenderTile) && (
                     <Face {...other}
                         face={TILE}
                         cubeCorners={cubeCorners}
                     />
                 )}
 
-                {doRenderSide && (
+                {(true || doRenderSide) && (
                     <Face {...other}
                         face={SIDE}
                         sideDirection={sideDirection}
@@ -151,7 +151,7 @@ class Cube extends Component {
                     />
                 )}
 
-                {doRenderFront && (
+                {(true || doRenderFront) && (
                     <Face {...other}
                         face={FRONT}
                         relativeZHeight={frontRelativeZHeight}
