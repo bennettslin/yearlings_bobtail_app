@@ -179,20 +179,20 @@ class Theatre extends Component {
                 { 'parentIsShown': canTheatreRender && isShown }
             )}>
                 <TheatreCeiling
-                    ceilingFieldCoordinates={ceilingFieldCoordinates}
+                    {...{ ceilingFieldCoordinates }}
                 />
                 <TheatreWall
-                    wallFieldCoordinates={wallFieldCoordinates}
+                    {...{ wallFieldCoordinates }}
                 />
                 <TheatreWall
                     isRight
-                    wallFieldCoordinates={wallFieldCoordinates}
+                    {...{ wallFieldCoordinates }}
                 />
 
                 <Stage {...other} />
 
                 <TheatreFloor
-                    floorFieldCoordinates={floorFieldCoordinates}
+                    {...{ floorFieldCoordinates }}
                 />
             </div>
         )

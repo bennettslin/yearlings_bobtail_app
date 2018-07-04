@@ -25,16 +25,20 @@ const VerseAudio = ({
 }) => (
     <Fragment>
         <VerseAudioButton
-            isInteractivated={isInteractivated}
-            verseIndex={verseIndex}
-            isSelected={isSelected}
-            isAfterSelected={isAfterSelected}
-            handleLyricPlay={handleLyricPlay}
-            handleLyricVerseSelect={handleLyricVerseSelect}
+            {...{
+                verseIndex,
+                isInteractivated,
+                isSelected,
+                isAfterSelected,
+                handleLyricPlay,
+                handleLyricVerseSelect
+            }}
         />
         <VerseAudioIndicator
-            isInteractivated={isInteractivated}
-            isSelected={isSelected}
+            {...{
+                isInteractivated,
+                isSelected
+            }}
         />
     </Fragment>
 )
