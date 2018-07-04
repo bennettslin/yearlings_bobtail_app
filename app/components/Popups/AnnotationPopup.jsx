@@ -167,6 +167,7 @@ class AnnotationPopup extends Component {
                     showArrows
                     bounceAnimate
                     hasWidePadding
+                    staticZIndex
                     popupName="Annotation"
                     className={cx(
                         inMain && 'AnnotationPopup__inMain'

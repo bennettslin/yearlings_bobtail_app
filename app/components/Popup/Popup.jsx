@@ -17,6 +17,7 @@ class Popup extends Component {
         isFullSize: PropTypes.bool,
         noFlexCentre: PropTypes.bool,
         noAbsoluteFull: PropTypes.bool,
+        staticZIndex: PropTypes.bool,
         displaysInOverlay: PropTypes.bool,
         handleCloseClick: PropTypes.func,
         handlePreviousClick: PropTypes.func,
@@ -27,12 +28,13 @@ class Popup extends Component {
     constructor(props) {
         super(props)
 
-        this._handlePopupContainerClick = this._handlePopupContainerClick.bind(this)
-        // this._handleTransitionEnd = this._handleTransitionEnd.bind(this)
-
         this.state = {
             isDisplayed: this.props.isVisible
         }
+
+        this._handlePopupContainerClick =
+            this._handlePopupContainerClick.bind(this)
+        this._handleTransitionEnd = this._handleTransitionEnd.bind(this)
     }
 
     componentDidUpdate(prevProps) {
@@ -58,25 +60,24 @@ class Popup extends Component {
         }
     }
 
-    // TODO: This no longer seems necessary, now that there is sequenced rendering. Delete once confident that it's not needed.
-    // _handleTransitionEnd(e) {
-    //     // FIXME: This is a brittle way to handle it.
-    //     if (e.propertyName === 'opacity') {
+    _handleTransitionEnd(e) {
+        // FIXME: This is a brittle way to handle it.
+        if (e.propertyName === 'opacity') {
 
-    //         // Focus when popup opens.
-    //         if (this.props.isVisible) {
-    //             if (this.props.handlePopupFocus) {
-    //                 this.props.handlePopupFocus()
-    //             }
+            // Focus when popup opens.
+            if (this.props.isVisible) {
+                if (this.props.handlePopupFocus) {
+                    this.props.handlePopupFocus()
+                }
 
-    //         // Set display to none when popup closes.
-    //         } else {
-    //             this.setState({
-    //                 isDisplayed: false
-    //             })
-    //         }
-    //     }
-    // }
+            // Set display to none when popup closes.
+            } else {
+                this.setState({
+                    isDisplayed: false
+                })
+            }
+        }
+    }
 
     _handlePopupContainerClick(e) {
         if (this.state.isDisplayed) {
@@ -91,6 +92,7 @@ class Popup extends Component {
                 noFlexCentre,
                 noAbsoluteFull,
                 displaysInOverlay,
+                staticZIndex,
                 handlePreviousClick,
                 handleNextClick,
 
@@ -100,9 +102,9 @@ class Popup extends Component {
 
                 ...other } = this.props,
 
-            { isFullSize } = other
+            { isFullSize } = other,
 
-            // { isDisplayed } = this.state
+            { isDisplayed } = this.state
 
         return (
             <div
@@ -111,7 +113,16 @@ class Popup extends Component {
                     `${popupName}Popup`,
 
                     isVisible ? 'Popup__visible' : 'Popup__invisible',
-                    // isDisplayed ? 'Popup__displayed' : 'Popup__notDisplayed',
+
+                    /**
+                     * These classes are only to change z-index, so neither is
+                     * necessary if this popup has a static z-index.
+                     */
+                    !staticZIndex && (
+                        isDisplayed ?
+                            'Popup__displayedZIndex' :
+                            'Popup__undisplayedZIndex'
+                    ),
                     isFullSize && 'Popup__fullSize',
 
                     // For animation styling.
@@ -122,7 +133,7 @@ class Popup extends Component {
 
                     className
                 )}
-                // onTransitionEnd={this._handleTransitionEnd}
+                onTransitionEnd={this._handleTransitionEnd}
             >
                 <PopupView {...other}
                     popupName={popupName}

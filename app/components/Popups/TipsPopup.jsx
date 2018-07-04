@@ -45,6 +45,8 @@ TipsPopup = ({
             isCardSize
             bounceAnimate
             hasNarrowPadding
+            noZIndexChange
+            staticZIndex
             popupName="Tips"
             isVisible={isVisible}
             handlePopupContainerClick={handlePopupContainerClick}

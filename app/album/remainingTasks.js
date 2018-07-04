@@ -8,11 +8,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: `Popup zIndex turns out to be useful...`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     {
         taskName: `System for showing sun and moon for each scene.`,
