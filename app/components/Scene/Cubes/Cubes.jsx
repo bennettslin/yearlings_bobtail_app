@@ -68,7 +68,6 @@ class Cubes extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        // TODO: Maybe this logic should live further up?
         return this.state.hasMounted ?
             nextProps.canSceneRender :
             nextProps.canTheatreRender

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import Pixels from './Pixel/Pixels'
 import Pixel from './Pixel/Pixel'
 
 import { getPolygonPoints,
@@ -35,9 +36,11 @@ const
 
 const mapStateToProps = ({
     canSceneRender,
+    canTheatreRender,
     stageCoordinates
 }) => ({
     canSceneRender,
+    canTheatreRender,
     stageCoordinates
 })
 
@@ -46,6 +49,7 @@ class Face extends Component {
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
+        canTheatreRender: PropTypes.bool.isRequired,
 
         // From parent.
         face: PropTypes.string.isRequired,
@@ -69,13 +73,39 @@ class Face extends Component {
         }).isRequired
     }
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            hasMounted: false
+        }
+    }
+
     shouldComponentUpdate(nextProps) {
-        return nextProps.canSceneRender
+        return this.state.hasMounted ?
+            nextProps.canSceneRender :
+            nextProps.canTheatreRender
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.canSceneRender && !prevProps.canSceneRender) {
-            console.warn('Face rendered.')
+        // if (this.state.hasMounted) {
+        //     if (this.props.canSceneRender && !prevProps.canSceneRender) {
+        //         console.warn('Face subsequently rendered.')
+        //     }
+
+        // } else {
+        //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+        //         console.warn('Face initially rendered.')
+        //     }
+        // }
+
+        if (!this.state.hasMounted) {
+            if (this.props.canSceneRender && !prevProps.canSceneRender) {
+                // Allow to subsequently render with Scene, not Theatre.
+                this.setState({
+                    hasMounted: true
+                })
+            }
         }
     }
 
@@ -115,15 +145,15 @@ class Face extends Component {
                 relativeZHeight,
                 zIndex,
                 isFloor
-            })
+            }),
+
+            polygonPointsString = getPolygonPointsString(polygonPoints)
 
         let faceString = face
 
         if (face === TILE) {
             faceString = isFloor ? 'floorTile' : 'ceilingTile'
         }
-
-        const polygonPointsString = getPolygonPointsString(polygonPoints)
 
         return (
             <g className={cx(
@@ -132,32 +162,21 @@ class Face extends Component {
                 // This is just used to make it easier to find in the DOM.
                 `Face__${faceString}`
             )}>
-                {/* Single polygon for the base colour. */}
+
+                {/* Faces without pixels are white by default. */}
                 <Pixel
-                    uniqueId="base"
-                    fill={base}
+                    uniqueId="undercoat"
+                    fill="fff"
                     polygonPointsString={polygonPointsString}
                 />
 
-                {bitmapMatrix.map((matrixRow, yIndex) => {
-
-                    return matrixRow.map((matrixObject, xIndex) => {
-
-                        if (matrixObject === null) {
-                            // This pixel location will just show the base colour.
-                            return null
-                        }
-
-                        const uniqueId = `y${yIndex}x${xIndex}`
-
-                        return (
-                            <Pixel {...matrixObject}
-                                key={uniqueId}
-                                uniqueId={uniqueId}
-                            />
-                        )
-                    })
-                })}
+                <Pixels
+                    {...{
+                        base,
+                        bitmapMatrix,
+                        polygonPointsString
+                    }}
+                />
 
                 {/* Single polygon for the overlying shade. */}
                 <polygon

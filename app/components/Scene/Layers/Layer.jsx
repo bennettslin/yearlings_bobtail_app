@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import CubesLayer from '../Cubes/CubesLayer'
+import Cubes from '../Cubes/Cubes'
 import Presence from '../Presences/Presence'
 
 const mapStateToProps = () => ({})
@@ -32,13 +32,16 @@ class Layers extends Component {
 
         return (
             <Fragment>
-                <CubesLayer {...other}
-                    {...{
-                        ceilingZIndices,
-                        ceilingBitmapKeys,
-                        floorZIndices,
-                        floorBitmapKeys
-                    }}
+                <Cubes {...other}
+                    bitmapKeys={ceilingBitmapKeys}
+                    zIndices={ceilingZIndices}
+                    oppositeZIndices={floorZIndices}
+                />
+                <Cubes {...other}
+                    isFloor
+                    bitmapKeys={floorBitmapKeys}
+                    zIndices={floorZIndices}
+                    oppositeZIndices={ceilingZIndices}
                 />
                 <Presence {...other}
                     {...{

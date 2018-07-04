@@ -11,12 +11,15 @@ import {
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
     CAN_SCENE_RENDER,
+    CAN_CUBES_RENDER,
+    CAN_PIXELS_RENDER,
     SELECTED_ANNOTATION_INDEX,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX
 } from '../../constants/state'
 
 import StorageHelper from '../storageHelper'
+import { getSceneRenderObject } from '../renderHelper'
 
 const { getFromStorage } = StorageHelper,
     storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
@@ -144,6 +147,28 @@ export const CanSceneRenderReducer = (
 ) => {
     switch (action.type) {
         case CAN_SCENE_RENDER:
+            return action.payload
+        default:
+            return state
+    }
+}
+export const CanCubesRenderReducer = (
+    state = getSceneRenderObject(),
+    action
+) => {
+    switch (action.type) {
+        case CAN_CUBES_RENDER:
+            return action.payload
+        default:
+            return state
+    }
+}
+export const CanPixelsRenderReducer = (
+    state = getSceneRenderObject(),
+    action
+) => {
+    switch (action.type) {
+        case CAN_PIXELS_RENDER:
             return action.payload
         default:
             return state
