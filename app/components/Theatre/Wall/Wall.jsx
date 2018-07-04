@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import DynamicSvg from '../DynamicSvg/DynamicSvg'
-import TheatreWallBalcony from './TheatreWallBalcony'
+import DynamicSvg from '../../DynamicSvg/DynamicSvg'
+import WallBalcony from './WallBalcony'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/generalHelper'
+import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
 
-import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../../constants/stage'
+import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../../../constants/stage'
 
 const mapStateToProps = ({
     canTheatreRender,
@@ -18,7 +18,7 @@ const mapStateToProps = ({
     windowHeight
 })
 
-class TheatreWall extends Component {
+class Wall extends Component {
 
     static propTypes = {
         canTheatreRender: PropTypes.bool.isRequired,
@@ -40,7 +40,7 @@ class TheatreWall extends Component {
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-    //         console.warn('TheatreWall rendered.')
+    //         console.warn('Wall rendered.')
     //     }
     // }
 
@@ -80,9 +80,9 @@ class TheatreWall extends Component {
         return (
             <div
                 className={cx(
-                    'TheatreWall',
+                    'Wall',
                     'Theatre__field',
-                    { 'TheatreWall__right': isRight }
+                    { 'Wall__right': isRight }
                 )}
                 style={wallFieldStyle}
             >
@@ -105,7 +105,7 @@ class TheatreWall extends Component {
                                 xPosition : wallWidth - balconyWidth - xPosition
 
                         return (
-                            <TheatreWallBalcony
+                            <WallBalcony
                                 key={index}
                                 top={balconyTop}
                                 left={balconyLeft}
@@ -120,4 +120,4 @@ class TheatreWall extends Component {
     }
 }
 
-export default connect(mapStateToProps)(TheatreWall)
+export default connect(mapStateToProps)(Wall)

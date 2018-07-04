@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import Layers from './Layers/Layers'
 import SceneSky from './SceneSky'
-import SceneWood from './SceneWood'
+import Wood from '../Stage/Wood'
 
 import { getSceneObject } from '../../helpers/dataHelper'
 
@@ -30,9 +30,6 @@ class Scene extends Component {
         currentSceneIndex: PropTypes.number.isRequired,
 
         // From parent.
-        stageWidth: PropTypes.number.isRequired,
-        stageHeight: PropTypes.number.isRequired,
-
         sceneDidRender: PropTypes.func.isRequired
     }
 
@@ -92,9 +89,6 @@ class Scene extends Component {
                 renderableSongIndex,
                 currentSceneIndex,
 
-                stageWidth,
-                stageHeight,
-
                 canSceneRender
             } = this.props,
 
@@ -115,21 +109,14 @@ class Scene extends Component {
             )}>
                 <SceneSky
                     sky={sky}
-                    stageWidth={stageWidth}
-                    stageHeight={stageHeight}
                 />
 
                 {/* Wood is in front of sky, but behind presences and cubes. */}
-                <SceneWood
-                    stageWidth={stageWidth}
-                    stageHeight={stageHeight}
-                />
+                <Wood />
 
                 <Layers
                     presences={presences}
                     tiles={tiles}
-                    stageWidth={stageWidth}
-                    stageHeight={stageHeight}
                 />
             </div>
         )

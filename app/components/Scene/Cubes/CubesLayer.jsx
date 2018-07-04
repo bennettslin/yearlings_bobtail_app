@@ -7,11 +7,7 @@ import { connect } from 'react-redux'
 import Cubes from '../Cubes/Cubes'
 
 // TODO
-const mapStateToProps = ({
-    canSceneRender
-}) => ({
-    canSceneRender
-})
+const mapStateToProps = () => ({})
 
 class CubesLayer extends Component {
 

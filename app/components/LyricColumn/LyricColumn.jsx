@@ -38,7 +38,6 @@ class LyricColumn extends Component {
 
         this.state = {
             isTransitioningHeight: false,
-            // scrollTimeoutId: null,
             isShown: false,
             waitForShowTimeoutId: '',
             didRenderTimeoutId: ''

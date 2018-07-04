@@ -5,12 +5,12 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import DynamicSvg from '../DynamicSvg/DynamicSvg'
-import TheatreCeilingRafter from './TheatreCeilingRafter'
+import DynamicSvg from '../../DynamicSvg/DynamicSvg'
+import CeilingRafter from './CeilingRafter'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/generalHelper'
+import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
 
-import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../../constants/stage'
+import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../../../constants/stage'
 
 const mapStateToProps = ({
     canTheatreRender,
@@ -20,7 +20,7 @@ const mapStateToProps = ({
     windowWidth
 })
 
-class TheatreCeiling extends Component {
+class Ceiling extends Component {
 
     static propTypes = {
         canTheatreRender: PropTypes.bool.isRequired,
@@ -39,7 +39,7 @@ class TheatreCeiling extends Component {
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-    //         console.warn('TheatreCeiling rendered.')
+    //         console.warn('Ceiling rendered.')
     //     }
     // }
 
@@ -73,7 +73,7 @@ class TheatreCeiling extends Component {
         return (
             <div
                 className={cx(
-                    'TheatreCeiling',
+                    'Ceiling',
                     'Theatre__field'
                 )}
                 style={ceilingFieldStyle}
@@ -96,7 +96,7 @@ class TheatreCeiling extends Component {
                             rafterLeft = stageCentreFromLeft - rafterWidth / 2
 
                         return (
-                            <TheatreCeilingRafter
+                            <CeilingRafter
                                 key={index}
                                 top={rafterTop}
                                 left={rafterLeft}
@@ -111,4 +111,4 @@ class TheatreCeiling extends Component {
     }
 }
 
-export default connect(mapStateToProps)(TheatreCeiling)
+export default connect(mapStateToProps)(Ceiling)

@@ -22,7 +22,7 @@ const propTypes = {
     height: PropTypes.number.isRequired
 }
 
-const TheatreFloorSeat = ({
+const FloorSeat = ({
 
     chairIndex,
     rowIndex,
@@ -44,25 +44,25 @@ const TheatreFloorSeat = ({
 
     return (
         <g className={cx(
-            'TheatreFloorSeat',
+            'FloorSeat',
             chairIndexString
         )}>
             <ellipse
-                className="TheatreFloorSeat__lit"
+                className="FloorSeat__lit"
                 cx={ellipseCx}
                 cy={ellipseCy}
                 rx={ellipseRx}
                 ry={ellipseRy}
             />
             <ellipse
-                className="TheatreFloorSeat__base"
+                className="FloorSeat__base"
                 cx={ellipseCx + chairIndex * 0.3}
                 cy={ellipseCy + rowIndex * 0.2}
                 rx={ellipseRx}
                 ry={ellipseRy}
             />
             <ellipse
-                className="TheatreFloorSeat__shaded"
+                className="FloorSeat__shaded"
                 cx={ellipseCx + chairIndex}
                 cy={ellipseCy + rowIndex}
                 rx={ellipseRx}
@@ -72,6 +72,6 @@ const TheatreFloorSeat = ({
     )
 }
 
-TheatreFloorSeat.propTypes = propTypes
+FloorSeat.propTypes = propTypes
 
-export default TheatreFloorSeat
+export default FloorSeat

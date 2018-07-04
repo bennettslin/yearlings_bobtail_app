@@ -1,6 +1,6 @@
 import { getLyricColumnHeight } from '../../helpers/stageHelper'
 
-export const getTheatreCeilingHeight = ({
+export const getCeilingHeight = ({
     deviceIndex,
     windowHeight,
     centreFieldHeight,
@@ -15,7 +15,7 @@ export const getTheatreCeilingHeight = ({
     return windowHeight - centreFieldHeight + stageTop - lyricColumnHeight
 }
 
-export const getTheatreFloorHeight = ({
+export const getFloorHeight = ({
     deviceIndex,
     windowHeight,
     centreFieldHeight,

@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
@@ -23,20 +24,33 @@ const propTypes = {
         ).isRequired
     ).isRequired,
     slantDirection: PropTypes.string.isRequired,
-    stageWidth: PropTypes.number.isRequired,
-    stageHeight: PropTypes.number.isRequired
+    stageCoordinates: PropTypes.shape({
+        width: PropTypes.number.isRequired,
+        height: PropTypes.number.isRequired
+    }).isRequired
 }
+
+const mapStateToProps = ({
+    stageCoordinates
+}) => ({
+    stageCoordinates
+})
 
 class Presence extends Component {
 
     render() {
 
-        const { yIndex,
+        const {
+                yIndex,
                 presence,
                 zIndices,
                 slantDirection,
-                stageWidth,
-                stageHeight } = this.props
+                stageCoordinates
+            } = this.props,
+            {
+                width: stageWidth,
+                height: stageHeight
+            } = stageCoordinates
 
         return (
             <DynamicSvg
@@ -110,4 +124,4 @@ class Presence extends Component {
 Presence.defaultProps = defaultProps
 Presence.propTypes = propTypes
 
-export default Presence
+export default connect(mapStateToProps)(Presence)

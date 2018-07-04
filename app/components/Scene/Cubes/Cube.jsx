@@ -7,7 +7,6 @@ import cx from 'classnames'
 import Face from './Face/Face'
 
 import { getCharStringForNumber } from '../../../helpers/formatHelper'
-import { getComponentShouldUpdate } from '../../../helpers/generalHelper'
 import { getStageCubeCornerPercentages } from '../sceneHelper'
 
 import { getRelativeZHeight,
@@ -32,41 +31,18 @@ class Cube extends Component {
         oppositeTilesMeet: PropTypes.bool.isRequired,
 
         bitmapKey: PropTypes.string.isRequired,
-        slantDirection: PropTypes.string.isRequired,
-        stageWidth: PropTypes.number.isRequired,
-        stageHeight: PropTypes.number.isRequired
-    }
-
-    shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'isFloor',
-                    'xIndex',
-                    'yIndex',
-                    'zIndex',
-                    'frontCubeZIndex',
-                    'sideCubeZIndex',
-                    'oppositeTilesMeet',
-                    'bitmapKey',
-                    'slantDirection',
-                    'stageWidth',
-                    'stageHeight'
-                ]
-            })
-
-        return componentShouldUpdate
+        slantDirection: PropTypes.string.isRequired
     }
 
     render() {
-        const { xIndex,
+        const {
+                xIndex,
                 yIndex,
                 frontCubeZIndex,
                 sideCubeZIndex,
                 oppositeTilesMeet,
-                ...other } = this.props,
+                ...other
+            } = this.props,
 
             { isFloor,
               zIndex,

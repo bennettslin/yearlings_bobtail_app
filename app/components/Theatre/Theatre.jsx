@@ -8,14 +8,14 @@ import { connect } from 'react-redux'
 
 import Stage from '../Stage/Stage'
 
-import TheatreWall from './TheatreWall'
-import TheatreCeiling from './TheatreCeiling'
-import TheatreFloor from './TheatreFloor'
+import Wall from './Wall/Wall'
+import Ceiling from './Ceiling/Ceiling'
+import Floor from './Floor/Floor'
 
 import { getCentreFieldHeight } from '../../helpers/stageHelper'
 
-import { getTheatreCeilingHeight,
-         getTheatreFloorHeight } from './theatreHelper'
+import { getCeilingHeight,
+         getFloorHeight } from './theatreHelper'
 
 const mapStateToProps = ({
     canTheatreRender,
@@ -43,7 +43,7 @@ class Theatre extends Component {
             left: PropTypes.number.isRequired,
             width: PropTypes.number.isRequired,
             height: PropTypes.number.isRequired
-        }),
+        }).isRequired,
         deviceIndex: PropTypes.number.isRequired,
         isHeightlessLyricColumn: PropTypes.bool.isRequired,
         windowHeight: PropTypes.number.isRequired,
@@ -133,7 +133,7 @@ class Theatre extends Component {
 
             stageCentreFromLeft = stageLeft + (stageWidth / 2),
 
-            theatreCeilingHeight = getTheatreCeilingHeight({
+            ceilingHeight = getCeilingHeight({
                 deviceIndex,
                 windowHeight,
                 centreFieldHeight,
@@ -141,7 +141,7 @@ class Theatre extends Component {
                 isHeightlessLyricColumn
             }),
 
-            theatreFloorHeight = getTheatreFloorHeight({
+            floorHeight = getFloorHeight({
                 deviceIndex,
                 windowHeight,
                 centreFieldHeight,
@@ -150,24 +150,24 @@ class Theatre extends Component {
                 isHeightlessLyricColumn
             }),
 
-            theatreWallHeight = windowHeight - theatreCeilingHeight - theatreFloorHeight,
+            wallHeight = windowHeight - ceilingHeight - floorHeight,
 
             ceilingFieldCoordinates = {
-                ceilingHeight: theatreCeilingHeight,
+                ceilingHeight,
                 stageWidth,
                 stageCentreFromLeft
             },
 
             wallFieldCoordinates = {
-                ceilingHeight: theatreCeilingHeight,
-                wallHeight: theatreWallHeight,
+                ceilingHeight,
+                wallHeight,
                 stageHeight,
                 leftWidth: stageLeft,
                 rightWidth: windowWidth - stageLeft - stageWidth
             },
 
             floorFieldCoordinates = {
-                floorHeight: theatreFloorHeight,
+                floorHeight,
                 stageWidth,
                 stageCentreFromLeft
             }
@@ -178,20 +178,20 @@ class Theatre extends Component {
                 'absoluteFullContainer',
                 { 'parentIsShown': canTheatreRender && isShown }
             )}>
-                <TheatreCeiling
+                <Ceiling
                     {...{ ceilingFieldCoordinates }}
                 />
-                <TheatreWall
+                <Wall
                     {...{ wallFieldCoordinates }}
                 />
-                <TheatreWall
+                <Wall
                     isRight
                     {...{ wallFieldCoordinates }}
                 />
 
                 <Stage {...other} />
 
-                <TheatreFloor
+                <Floor
                     {...{ floorFieldCoordinates }}
                 />
             </div>

@@ -40,3 +40,4 @@ TODO later:
 
 Today's notes:
 * Adjust proscenium
+* Make slanted cubes take up width of stage

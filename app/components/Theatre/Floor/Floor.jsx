@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import DynamicSvg from '../DynamicSvg/DynamicSvg'
-import TheatreFloorSeat from './TheatreFloorSeat'
+import DynamicSvg from '../../DynamicSvg/DynamicSvg'
+import FloorSeat from './FloorSeat'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../../helpers/generalHelper'
+import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
 
-import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../../constants/stage'
+import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../../../constants/stage'
 
 const mapStateToProps = ({
     canTheatreRender,
@@ -18,7 +18,7 @@ const mapStateToProps = ({
     windowWidth
 })
 
-class TheatreFloor extends Component {
+class Floor extends Component {
 
     static propTypes = {
         canTheatreRender: PropTypes.bool.isRequired,
@@ -37,7 +37,7 @@ class TheatreFloor extends Component {
 
     // componentDidUpdate(prevProps) {
     //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-    //         console.warn('TheatreFloor rendered.')
+    //         console.warn('Floor rendered.')
     //     }
     // }
 
@@ -71,7 +71,7 @@ class TheatreFloor extends Component {
         return (
             <div
                 className={cx(
-                    'TheatreFloor',
+                    'Floor',
                     'Theatre__field'
                 )}
                 style={floorFieldStyle}
@@ -126,7 +126,7 @@ class TheatreFloor extends Component {
                         return (
                             <g
                                 key={rowIndex}
-                                className={`TheatreFloorSeats__${rowIndex}`}
+                                className={`FloorSeats__${rowIndex}`}
                             >
                                 {seatsArray.map((seat, seatIndex) => {
 
@@ -137,7 +137,7 @@ class TheatreFloor extends Component {
                                             seatIndex - centreSeatIndex
 
                                     return (
-                                        <TheatreFloorSeat
+                                        <FloorSeat
                                             key={chairIndex}
                                             chairIndex={chairIndex}
                                             rowIndex={rowIndex}
@@ -157,4 +157,4 @@ class TheatreFloor extends Component {
     }
 }
 
-export default connect(mapStateToProps)(TheatreFloor)
+export default connect(mapStateToProps)(Floor)
