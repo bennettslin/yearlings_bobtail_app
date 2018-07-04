@@ -51,11 +51,11 @@ class Tips extends Component {
         })
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.canMainRender && !prevProps.canMainRender) {
-            console.warn('Tips rendered.')
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.canMainRender && !prevProps.canMainRender) {
+    //         console.warn('Tips rendered.')
+    //     }
+    // }
 
     _handleTipsToggle(e) {
         // Prevent toggle from firing when not shown.

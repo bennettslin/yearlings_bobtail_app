@@ -55,7 +55,9 @@ class RenderManager extends Component {
     componentDidUpdate(prevProps) {
 
         if (this.props.appMounted && !prevProps.appMounted) {
-            this._prepareForSongChangeRender()
+            this._prepareForSongChangeRender({
+                fromAppMounted: true
+            })
         }
 
         if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
@@ -63,7 +65,10 @@ class RenderManager extends Component {
         }
     }
 
-    _prepareForSongChangeRender(props = this.props) {
+    _prepareForSongChangeRender({
+        props = this.props,
+        fromAppMounted
+    } = {}) {
 
         const {
             selectedSongIndex = this.props.selectedSongIndex,
@@ -71,7 +76,9 @@ class RenderManager extends Component {
             selectedVerseIndex = this.props.selectedVerseIndex
         } = props
 
-        this.props.setIsSongChangeRenderable(true)
+        if (!fromAppMounted) {
+            this.props.setIsSongChangeRenderable(true)
+        }
 
         this.props.setRenderableSongIndex(
             selectedSongIndex

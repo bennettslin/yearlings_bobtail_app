@@ -7,18 +7,31 @@ import DynamicSvg from '../DynamicSvg/DynamicSvg'
 import { STAGE_Y_PERCENTAGE } from '../../constants/stage'
 
 const mapStateToProps = ({
+    canTheatreRender,
     stageCoordinates
 }) => ({
+    canTheatreRender,
     stageCoordinates
 })
 
 class SceneWood extends Component {
 
     static propTypes = {
+        canTheatreRender: PropTypes.bool.isRequired,
         stageCoordinates: PropTypes.shape({
             width: PropTypes.number.isRequired,
             height: PropTypes.number.isRequired
         }).isRequired
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canTheatreRender
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+            console.warn('Wood rendered.')
+        }
     }
 
     render() {

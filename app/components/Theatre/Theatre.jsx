@@ -119,10 +119,12 @@ class Theatre extends Component {
 
             { isShown } = this.state,
 
-            { top: stageTop,
-              left: stageLeft,
-              width: stageWidth,
-              height: stageHeight } = stageCoordinates,
+            {
+                top: stageTop,
+                left: stageLeft,
+                width: stageWidth,
+                height: stageHeight
+            } = stageCoordinates,
 
             centreFieldHeight = getCentreFieldHeight({
                 deviceIndex,

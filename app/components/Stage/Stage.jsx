@@ -46,10 +46,12 @@ class Stage extends Component {
             ...other
         } = this.props,
 
-            { top,
-              left,
-              width,
-              height } = stageCoordinates
+        {
+            top: stageTop,
+            left: stageLeft,
+            width: stageWidth,
+            height: stageHeight
+        } = stageCoordinates
 
         return (
             <div className={cx(
@@ -68,10 +70,10 @@ class Stage extends Component {
                         'absoluteFullContainer'
                     )}
                     style={{
-                        top: `${top}px`,
-                        left: `${left}px`,
-                        width: `${width}px`,
-                        height: `${height}px`
+                        top: `${stageTop}px`,
+                        left: `${stageLeft}px`,
+                        width: `${stageWidth}px`,
+                        height: `${stageHeight}px`
                     }}
                 >
                     <Scene {...other} />
