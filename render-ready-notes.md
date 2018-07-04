@@ -37,3 +37,6 @@ TODO later:
 * Persist cube's base coordinates, as they will always be the same
 * Mounting different from updating
 * Reprioritise order of carousel and lyrics if not shown
+
+Today's notes:
+* Adjust proscenium

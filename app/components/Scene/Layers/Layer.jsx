@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import LayerCubes from './LayerCubes'
+import CubesLayer from '../Cubes/CubesLayer'
 import Presence from '../Presences/Presence'
 
 // TODO
@@ -37,7 +37,7 @@ class Layers extends Component {
 
         return (
             <Fragment>
-                <LayerCubes {...other}
+                <CubesLayer {...other}
                     {...{
                         ceilingZIndices,
                         ceilingBitmapKeys,

@@ -13,7 +13,7 @@ const mapStateToProps = ({
     canSceneRender
 })
 
-class Layers extends Component {
+class CubesLayer extends Component {
 
     static propTypes = {
         ceilingZIndices: PropTypes.array.isRequired,
@@ -50,4 +50,4 @@ class Layers extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Layers)
+export default connect(mapStateToProps)(CubesLayer)
