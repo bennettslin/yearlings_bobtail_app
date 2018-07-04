@@ -26,14 +26,23 @@ const zIndicesPropTypes =
     ).isRequired
 
 const mapStateToProps = ({
+    canSceneRender,
+    canTheatreRender,
     stageCoordinates
 }) => ({
+    canSceneRender,
+    canTheatreRender,
     stageCoordinates
 })
 
 class Cubes extends Component {
 
     static propTypes = {
+        // Through Redux.
+        canSceneRender: PropTypes.bool.isRequired,
+        canTheatreRender: PropTypes.bool.isRequired,
+
+        // From parent.
         yIndex: PropTypes.number.isRequired,
         isFloor: PropTypes.bool,
         zIndices: zIndicesPropTypes,
@@ -48,6 +57,43 @@ class Cubes extends Component {
             width: PropTypes.number.isRequired,
             height: PropTypes.number.isRequired
         }).isRequired
+    }
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            hasMounted: false
+        }
+    }
+
+    shouldComponentUpdate(nextProps) {
+        // TODO: Maybe this logic should live further up?
+        return this.state.hasMounted ?
+            nextProps.canSceneRender :
+            nextProps.canTheatreRender
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.state.hasMounted) {
+            if (this.props.canSceneRender && !prevProps.canSceneRender) {
+                console.warn('Cubes subsequently rendered.')
+            }
+
+        } else {
+            if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+                console.warn('Cubes initially rendered.')
+            }
+        }
+
+        if (!this.state.hasMounted) {
+            if (this.props.canSceneRender && !prevProps.canSceneRender) {
+                // Allow to subsequently render with Scene, not Theatre.
+                this.setState({
+                    hasMounted: true
+                })
+            }
+        }
     }
 
     render() {

@@ -21,6 +21,7 @@ import { FRONT,
 class Cube extends Component {
 
     static propTypes = {
+        // From parent.
         isFloor: PropTypes.bool,
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,

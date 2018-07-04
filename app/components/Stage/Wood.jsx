@@ -1,3 +1,8 @@
+/**
+ * The stage floor. Nested under Scene because it needs to show below Cubes.
+ * But renders with Theatre, not Scene.
+ */
+
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'

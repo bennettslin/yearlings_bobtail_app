@@ -16,6 +16,10 @@ const defaultProps = {
 }
 
 const propTypes = {
+    // Through Redux.
+    canSceneRender: PropTypes.bool.isRequired,
+
+    // From parent.
     yIndex: PropTypes.number.isRequired,
     presence: PropTypes.array.isRequired,
     zIndices: PropTypes.arrayOf(
@@ -31,12 +35,24 @@ const propTypes = {
 }
 
 const mapStateToProps = ({
+    canSceneRender,
     stageCoordinates
 }) => ({
+    canSceneRender,
     stageCoordinates
 })
 
 class Presence extends Component {
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canSceneRender
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.canSceneRender && !prevProps.canSceneRender) {
+            console.warn('Presence rendered.')
+        }
+    }
 
     render() {
 

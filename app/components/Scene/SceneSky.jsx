@@ -1,4 +1,7 @@
-// Section to show the stage illustrations.
+/**
+ * The stage sky. Renders with Theatre, not Scene, because it has no overhead,
+ * and the stage lookes weird without it.
+ */
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -11,8 +14,10 @@ import { SKY_ANYTIME,
         SKY_INDOOR } from '../../constants/scene'
 
 const mapStateToProps = ({
+    canTheatreRender,
     stageCoordinates
 }) => ({
+    canTheatreRender,
     stageCoordinates
 })
 
@@ -26,6 +31,10 @@ class SceneSky extends Component {
     }
 
     static propTypes = {
+        // Through Redux.
+        canTheatreRender: PropTypes.bool.isRequired,
+
+        // From parent.
         sky: PropTypes.shape({
             time: PropTypes.string.isRequired,
             season: PropTypes.string.isRequired
@@ -35,6 +44,16 @@ class SceneSky extends Component {
             width: PropTypes.number.isRequired,
             height: PropTypes.number.isRequired
         }).isRequired
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canTheatreRender
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
+            console.warn('Sky rendered.')
+        }
     }
 
     render() {

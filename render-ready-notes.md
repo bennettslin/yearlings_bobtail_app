@@ -38,5 +38,5 @@ TODO later:
 * Reprioritise order of carousel and lyrics if not shown
 
 Today's notes:
-* Adjust proscenium
 * Make slanted cubes take up width of stage
+* Bug where the first time around, live doesn't unrender?

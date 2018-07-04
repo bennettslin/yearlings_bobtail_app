@@ -34,14 +34,20 @@ const
         }).isRequired
 
 const mapStateToProps = ({
+    canSceneRender,
     stageCoordinates
 }) => ({
+    canSceneRender,
     stageCoordinates
 })
 
 class Face extends Component {
 
     static propTypes = {
+        // Through Redux.
+        canSceneRender: PropTypes.bool.isRequired,
+
+        // From parent.
         face: PropTypes.string.isRequired,
         bitmapKey: PropTypes.string.isRequired,
 
@@ -61,6 +67,16 @@ class Face extends Component {
             width: PropTypes.number.isRequired,
             height: PropTypes.number.isRequired
         }).isRequired
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canSceneRender
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.canSceneRender && !prevProps.canSceneRender) {
+            console.warn('Face rendered.')
+        }
     }
 
     render() {
