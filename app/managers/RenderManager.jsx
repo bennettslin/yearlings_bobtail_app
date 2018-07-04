@@ -55,9 +55,7 @@ class RenderManager extends Component {
     componentDidUpdate(prevProps) {
 
         if (this.props.appMounted && !prevProps.appMounted) {
-            this._prepareForSongChangeRender({
-                fromAppMounted: true
-            })
+            this._prepareForSongChangeRender()
         }
 
         if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
@@ -65,10 +63,7 @@ class RenderManager extends Component {
         }
     }
 
-    _prepareForSongChangeRender({
-        props = this.props,
-        fromAppMounted
-    } = {}) {
+    _prepareForSongChangeRender(props = this.props) {
 
         const {
             selectedSongIndex = this.props.selectedSongIndex,
@@ -76,9 +71,7 @@ class RenderManager extends Component {
             selectedVerseIndex = this.props.selectedVerseIndex
         } = props
 
-        if (!fromAppMounted) {
-            this.props.setIsSongChangeRenderable(true)
-        }
+        this.props.setIsSongChangeRenderable(true)
 
         this.props.setRenderableSongIndex(
             selectedSongIndex
@@ -120,7 +113,8 @@ class RenderManager extends Component {
 
         /**
          * Render is synchronous, so wait a bit after selecting new song before
-         * rendering the most performance intensive components.
+         * rendering the most performance intensive components. This allows
+         * songs between selections to skip rendering.
          */
         const songChangeTimeoutId = setTimeout(
             this._prepareForSongChangeRender, 200
