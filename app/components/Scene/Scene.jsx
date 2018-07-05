@@ -18,6 +18,8 @@ import Wood from '../Stage/Wood'
 
 import { getSceneObject } from '../../helpers/dataHelper'
 
+// import { CUBE_Y_AXIS_LENGTH } from '../../constants/stage'
+
 const mapStateToProps = ({
     canSceneRender,
     canPixelsRender,

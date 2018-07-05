@@ -160,7 +160,7 @@ class Face extends Component {
                 {/* Faces without pixels are white by default. */}
                 <Pixel
                     uniqueId="undercoat"
-                    fill="fff"
+                    customFill="rgba(255, 255, 255, 0.5)"
                     polygonPointsString={polygonPointsString}
                 />
 

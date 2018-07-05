@@ -8,7 +8,8 @@ import { getPolygonPointsString } from '../helpers/polygonHelper'
 
 const propTypes = {
     uniqueId: PropTypes.string.isRequired,
-    fill: PropTypes.string.isRequired,
+    fill: PropTypes.string,
+    customFill: PropTypes.string,
     polygonPoints: PropTypes.array,
     polygonPointsString: PropTypes.string
 }
@@ -17,6 +18,7 @@ const Pixel = ({
 
     uniqueId,
     fill,
+    customFill,
     polygonPoints,
     polygonPointsString
 
@@ -26,7 +28,7 @@ const Pixel = ({
             'Pixel',
             `Pixel__${uniqueId}`
         )}
-        fill={`#${fill}`}
+        fill={fill ? `#${fill}` : customFill}
         points={polygonPointsString || getPolygonPointsString(
             polygonPoints
         )}

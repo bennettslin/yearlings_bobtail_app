@@ -81,6 +81,8 @@ class Cubes extends Component {
 
         this._setRenderableCubesYIndex =
             this._setRenderableCubesYIndex.bind(this)
+        this._setCanRenderPresences =
+            this._setCanRenderPresences.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
@@ -89,13 +91,15 @@ class Cubes extends Component {
                 renderableCubesYIndex
             } = nextProps,
 
-            isRenderableYIndex = yIndex <= renderableCubesYIndex,
+            {
+                hasMounted
+            } = this.state,
 
-            canParentRender = this.state.hasMounted ?
-                nextProps.canSceneRender :
-                nextProps.canTheatreRender
+            isRenderableYIndex = yIndex <= renderableCubesYIndex
 
-        return isRenderableYIndex && canParentRender
+        return hasMounted ?
+            isRenderableYIndex && nextProps.canSceneRender :
+            nextProps.canTheatreRender
     }
 
     componentDidUpdate(prevProps) {
@@ -114,16 +118,19 @@ class Cubes extends Component {
 
             { hasMounted } = this.state
 
-        // Update if...
-        if (
+        /**
+         * If component is just getting mounted and we are rendering with
+         * Theatre, do nothing. This conditional is just for logging, for now.
+         */
+        if (!hasMounted && canTheatreRender && !couldTheatreRender) {
+            if (this.props.isFloor && yIndex === 0) {
+                console.warn('Cubes initially rendered with default tiles.')
+            }
+
+        // Otherwise, render next Cubes yIndex if...
+        } else if (
             // ... component has mounted and scene is just now renderable...
             (hasMounted && canSceneRender && !couldSceneRender) ||
-
-            /**
-             * ... or component has not yet mounted and theatre is just now
-             * renderable...
-             */
-            (!hasMounted && canTheatreRender && !couldTheatreRender) ||
 
             // ... or this is the most recent yIndex to be rendered.
             (
@@ -131,15 +138,15 @@ class Cubes extends Component {
                 yIndex > previousRenderableCubesYIndex
             )
         ) {
-            this.setNextYIndex()
+            this._setTimeoutForNextRender()
         }
 
         if (!hasMounted) {
-            if (canSceneRender && !couldSceneRender) {
+            if (canTheatreRender && !couldTheatreRender) {
 
                 /**
-                 * Once component has mounted, it will subsequently render with
-                 * Scene, not Theatre.
+                 * Once component has mounted, render it again, and ever
+                 * afterwards, with Scene rather than Theatre.
                  */
                 this.setState({
                     hasMounted: true
@@ -148,38 +155,55 @@ class Cubes extends Component {
         }
     }
 
-    setNextYIndex() {
+    _setTimeoutForNextRender() {
+
+        const {
+            isFloor,
+            yIndex,
+            renderableCubesYIndex
+        } = this.props
+
         /**
          * Only one component should make this call.
          */
         if (
-            this.props.isFloor &&
-            this.props.yIndex === this.props.renderableCubesYIndex
+            isFloor &&
+            yIndex === renderableCubesYIndex
         ) {
+
+            /**
+             * Render the next Cubes yIndex only if there is a yIndex left to
+             * render.
+             */
+            const shouldRenderNextCubes =
+                yIndex < CUBE_Y_AXIS_LENGTH - 1,
+
+                timeoutCallback = shouldRenderNextCubes ?
+                    this._setRenderableCubesYIndex :
+                    this._setCanRenderPresences
+
             setTimeout(
-                this._setRenderableCubesYIndex,
+                timeoutCallback,
                 0
             )
 
-            // The timeouts seem to add 0.5 seconds to the total render time.
-            // this._setRenderableCubesYIndex()
+            /**
+             * The timeouts seem to add 0.5 seconds to the total render time. I
+             * think this is acceptable, at least for now.
+             */
+            // timeoutCallback()
         }
     }
 
     _setRenderableCubesYIndex() {
-        const { yIndex } = this.props
+        this.props.setRenderableCubesYIndex(
+            this.props.yIndex + 1
+        )
+    }
 
-        // Render the next yIndex if possible...
-        if (yIndex < CUBE_Y_AXIS_LENGTH - 1) {
-            this.props.setRenderableCubesYIndex(
-                this.props.yIndex + 1
-            )
-
-        // ... Otherwise we're finished, so move on to rendering the presences.
-        } else {
-            console.warn('Cubes rendered.')
-            this.props.setCanRenderPresences(true)
-        }
+    _setCanRenderPresences() {
+        console.warn('Cubes rendered.')
+        this.props.setCanRenderPresences(true)
     }
 
     render() {
