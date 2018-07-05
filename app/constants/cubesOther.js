@@ -23,7 +23,7 @@ const
     DEFAULT_STAGE_TILES = {
         ceiling: {
             zIndices: [
-                [n]
+                [k]
             ],
             bitmapKeys: [
                 [TEST_PATTERN_BITMAP]

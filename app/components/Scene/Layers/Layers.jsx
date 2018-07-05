@@ -38,6 +38,14 @@ class Layers extends Component {
         }).isRequired
     }
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            hasMounted: false
+        }
+    }
+
     shouldComponentUpdate(nextProps) {
         return nextProps.canSceneRender
     }
@@ -45,6 +53,10 @@ class Layers extends Component {
     componentDidUpdate(prevProps) {
         if (this.props.canSceneRender && !prevProps.canSceneRender) {
             console.warn('Layers rendered.')
+
+            this.setState({
+                hasMounted: true
+            })
         }
     }
 
@@ -56,6 +68,15 @@ class Layers extends Component {
                 ...other
             } = this.props,
 
+            {
+                hasMounted
+            } = this.state,
+
+            // Until the component is mounted, use the default stage tiles.
+            renderedTiles = hasMounted ?
+                tiles :
+                DEFAULT_STAGE_TILES,
+
             /**
              * FIXME: These safety checks should no longer be needed once all
              * tiles and bitmapKeys for all scenes are established.
@@ -64,7 +85,7 @@ class Layers extends Component {
                 ceiling = DEFAULT_STAGE_TILES.ceiling,
                 floor = DEFAULT_STAGE_TILES.floor,
                 slantDirection = ''
-            } = tiles,
+            } = renderedTiles,
 
             ceilingZIndices = ceiling.zIndices ||
                 DEFAULT_STAGE_TILES.ceiling.zIndices,
