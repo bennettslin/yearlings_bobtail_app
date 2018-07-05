@@ -4,9 +4,33 @@ module.exports = [
      * Begin expected DTO tasks.
      */
     {
-        taskName: `Desktop menu animating to overlay is a little janky?`,
+        taskName: `Clean up scene optimisation work.`,
         workedHours: 0,
         neededHours: 1
+    },
+
+    {
+        taskName: `Revisit mounting versus updating in optimisation work.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Optimise when changing scene.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Read up on React asynchronous rendering.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Have system to animate actions based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
+        workedHours: 0,
+        neededHours: 8
     },
 
     {
@@ -28,15 +52,9 @@ module.exports = [
     },
 
     {
-        taskName: `Optimise rendering of scenes. Render cube outlines earlier, pixels later. Include persisting the cube base.`,
+        taskName: `Desktop menu animating to overlay is a little janky?`,
         workedHours: 0,
-        neededHours: 8
-    },
-
-    {
-        taskName: `Have system to animate actions based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
-        workedHours: 0,
-        neededHours: 8
+        neededHours: 1
     },
 
     /**

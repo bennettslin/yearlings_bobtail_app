@@ -3077,4 +3077,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Optimise rendering of scenes. Render cube outlines earlier, pixels later.`,
+        workedHours: 12,
+        neededHours: 12
+    },
 ]

@@ -22,11 +22,14 @@ const _getXPercentage = (
 
     xCornerIndex,
     yCornerIndex,
-    isSlanted
+    slantDirection,
 
 ) => {
 
     const
+
+        isSlanted = Boolean(slantDirection),
+
         // Use x-axis length value based on default or slanted arrangement.
         xAxisLength = isSlanted ?
             SLANTED_TILE_X_UNITS_LENGTH : CUBE_X_AXIS_LENGTH,
@@ -44,18 +47,42 @@ const _getXPercentage = (
             (100 - tilesWidthPercentage) / 2
             + xCornerIndex * tilesWidthPercentage / xAxisLength
 
-    return roundPercentage(100 - rawXPercentage)
+    /**
+     * Hard-coding some constants to optimally position the cubes. I no longer
+     * have the bandwidth to do any real math here, unfortunately. Also, not
+     * sure why the multiplier values between left and right would be
+     * different...
+     */
+    let addend = 0,
+        multiplier = 1
+
+    if (slantDirection === 'left') {
+        addend = -3.8
+        multiplier = 1.084
+    } else if (slantDirection === 'right') {
+        addend = -1.35
+        multiplier = 1.074
+    }
+
+    return (
+        roundPercentage(100 - rawXPercentage)
+        * multiplier
+        + addend
+    )
 }
 
 const _getYPercentage = (
 
     yCornerIndex,
     zIndex,
-    isSlanted
+    slantDirection
 
 ) => {
 
     const
+
+        isSlanted = Boolean(slantDirection),
+
         // Use array based on default or slanted arrangement.
         tileYPercentages = isSlanted ?
             SLANTED_TILE_Y_PERCENTAGES : TILE_Y_PERCENTAGES,
@@ -66,7 +93,18 @@ const _getYPercentage = (
             tileYPercentage + zIndex / 10
             * (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
 
-    return roundPercentage(100 - rawYPercentage)
+    /**
+     * Hard-coding some constants to optimally position the cubes. I no longer
+     * have the bandwidth to do any real math here, unfortunately.
+     */
+    const addend = isSlanted ? -1.25 : 0,
+        multiplier = isSlanted ? 1.025 : 1
+
+    return (
+        roundPercentage(100 - rawYPercentage)
+        * multiplier
+        + addend
+    )
 }
 
 const _getXYPercentages = (
@@ -89,7 +127,7 @@ const _getXYPercentages = (
      */
     zIndex = 0,
 
-    isSlanted
+    slantDirection
 
 ) => {
 
@@ -97,12 +135,12 @@ const _getXYPercentages = (
         x: _getXPercentage(
             xCornerIndex,
             yCornerIndex,
-            isSlanted
+            slantDirection
         ),
         y: _getYPercentage(
             yCornerIndex,
             zIndex,
-            isSlanted
+            slantDirection
         )
     }
 }
@@ -166,21 +204,22 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
      * When slanted, order is:
      * top, right, bottom, left.
      */
+
     return {
         left: {
             back: _getXYPercentages(
-                slantedLeftXIndex + 1, slantedLeftYIndex, zIndex, true
+                slantedLeftXIndex + 1, slantedLeftYIndex, zIndex, 'left'
             ),
             front: _getXYPercentages(
-                slantedLeftXIndex, slantedLeftYIndex + 2, zIndex, true
+                slantedLeftXIndex, slantedLeftYIndex + 2, zIndex, 'left'
             )
         },
         right: {
             back: _getXYPercentages(
-                slantedLeftXIndex + 3, slantedLeftYIndex + 1, zIndex, true
+                slantedLeftXIndex + 3, slantedLeftYIndex + 1, zIndex, 'left'
             ),
             front: _getXYPercentages(
-                slantedLeftXIndex + 2, slantedLeftYIndex + 3, zIndex, true
+                slantedLeftXIndex + 2, slantedLeftYIndex + 3, zIndex, 'left'
             )
         }
     }
@@ -225,18 +264,18 @@ const _getHorizontalPlaneFractionsForSlantedRight = (
     return {
         left: {
             back: _getXYPercentages(
-                slantedRightXIndex + 2, slantedRightYIndex, zIndex, true
+                slantedRightXIndex + 2, slantedRightYIndex, zIndex, 'right'
             ),
             front: _getXYPercentages(
-                slantedRightXIndex, slantedRightYIndex + 1, zIndex, true
+                slantedRightXIndex, slantedRightYIndex + 1, zIndex, 'right'
             )
         },
         right: {
             back: _getXYPercentages(
-                slantedRightXIndex + 3, slantedRightYIndex + 2, zIndex, true
+                slantedRightXIndex + 3, slantedRightYIndex + 2, zIndex, 'right'
             ),
             front: _getXYPercentages(
-                slantedRightXIndex + 1, slantedRightYIndex + 3, zIndex, true
+                slantedRightXIndex + 1, slantedRightYIndex + 3, zIndex, 'right'
             )
         }
     }

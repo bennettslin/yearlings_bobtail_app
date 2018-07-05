@@ -31,13 +31,11 @@ When selecting a song:
     * Child transitions
 
 TODO later:
-
 * Changing scenes
 * Rest of players
 * Persist cube's base coordinates, as they will always be the same
 * Reprioritise order of carousel and lyrics if not shown
 
 Today's notes:
-* Make slanted cubes take up width of stage
 * Clean up pixel optimisation stuff, including Redux value.
 * Mounting versus updating needs to be revisited.
