@@ -31,7 +31,7 @@ export const getFloorHeight = ({
     return (
         centreFieldHeight
         - stageTop
-        - stageHeight * 0.98 // Overlap part of stage scene.
+        - stageHeight * 0.9 // Overlap part of stage scene.
         + lyricColumnHeight
     )
 }

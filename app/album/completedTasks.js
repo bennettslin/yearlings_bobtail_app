@@ -3082,4 +3082,14 @@ module.exports = [
         workedHours: 12,
         neededHours: 12
     },
+    {
+        taskName: `Read up on React asynchronous rendering.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Make seats towards the ends of each row curve up further.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

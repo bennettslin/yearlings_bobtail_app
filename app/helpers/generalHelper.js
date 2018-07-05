@@ -178,6 +178,8 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
     firstLength,
     multiplyFactor = 1,
 
+    bunchFactor = 1,
+
     // The ratio of the *previous* length that gets overlapped.
     overlapRatio = 0,
 
@@ -223,7 +225,11 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
         }
 
         // Ensure that overlapped areas are included right up to the end.
-        totalLength += (currentLength * (1 - overlapRatio))
+        totalLength += (
+            currentLength
+            * (1 - overlapRatio)
+            * Math.pow(bunchFactor, arrayOfLengths.length - 1)
+        )
 
         if (reversePosition) {
             position = minLength - currentLength - position

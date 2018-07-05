@@ -22,9 +22,15 @@ module.exports = [
     },
 
     {
-        taskName: `Read up on React asynchronous rendering.`,
+        taskName: `Pixels/Cubes rendering is still somewhat janky when switching songs.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 3
+    },
+
+    {
+        taskName: `Allow easily switching between sequenced cubes rendering and not.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     {

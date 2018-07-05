@@ -57,15 +57,21 @@ class Floor extends Component {
                 height: `${floorHeight}px`
             },
 
-            // Arbitrary values for now.
-            firstRowSeatWidth = stageWidth / 12,
+            firstRowSeatWidth = stageWidth / 12, // Arbitrary value.
             firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
 
             seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
                 minLength: floorHeight,
                 firstLength: firstRowSeatHeight,
-                multiplyFactor: 1.25, // Gets wider faster with larger value.
-                overlapRatio: 0.9 // More bunched up when closer to 1.
+
+                // Gets wider faster with larger value.
+                multiplyFactor: 1.275,
+
+                // Beginning values are closer together with larger value.
+                bunchFactor: 1.55,
+
+                // Values are closer together in general when closer to 1.
+                overlapRatio: 0.9925
             })
 
         return (

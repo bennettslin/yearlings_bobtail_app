@@ -35,7 +35,19 @@ const FloorSeat = ({
 
     const
         ellipseCx = left + width / 2,
-        ellipseCy = top + height / 2,
+        ellipseCy = top + height / 2
+
+            /**
+             * Push down a little further so that there is some wiggle room for
+             * seats nearer to the ends to come up.
+             */
+            + height / 3
+
+            /**
+             * Seats nearer to the ends come up further exponentially.
+             */
+            - Math.pow(1.4125, Math.abs(chairIndex)),
+
         ellipseRx = width / 2,
         ellipseRy = height / 2,
 
@@ -56,15 +68,15 @@ const FloorSeat = ({
             />
             <ellipse
                 className="FloorSeat__base"
-                cx={ellipseCx + chairIndex * 0.3}
-                cy={ellipseCy + rowIndex * 0.2}
+                cx={ellipseCx + width * chairIndex * 0.0025}
+                cy={ellipseCy + height * 0.0075}
                 rx={ellipseRx}
                 ry={ellipseRy}
             />
             <ellipse
                 className="FloorSeat__shaded"
-                cx={ellipseCx + chairIndex}
-                cy={ellipseCy + rowIndex}
+                cx={ellipseCx + width * chairIndex * 0.01}
+                cy={ellipseCy + height * Math.pow(1.25, Math.abs(rowIndex)) * 0.0075}
                 rx={ellipseRx}
                 ry={ellipseRy}
             />
