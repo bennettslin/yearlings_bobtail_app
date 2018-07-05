@@ -11,8 +11,8 @@ import {
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
     CAN_SCENE_RENDER,
-    CAN_CUBES_RENDER,
-    CAN_PIXELS_RENDER,
+    RENDERABLE_CUBES_Y_INDEX,
+    RENDERABLE_PIXELS_Y_INDEX,
     SELECTED_ANNOTATION_INDEX,
     SELECTED_SONG_INDEX,
     SELECTED_VERSE_INDEX
@@ -151,23 +151,23 @@ export const CanSceneRenderReducer = (
             return state
     }
 }
-export const CanCubesRenderReducer = (
+export const RenderableCubesYIndexReducer = (
     state = 0,
     action
 ) => {
     switch (action.type) {
-        case CAN_CUBES_RENDER:
+        case RENDERABLE_CUBES_Y_INDEX:
             return action.payload
         default:
             return state
     }
 }
-export const CanPixelsRenderReducer = (
+export const RenderablePixelsYIndexReducer = (
     state = 0,
     action
 ) => {
     switch (action.type) {
-        case CAN_PIXELS_RENDER:
+        case RENDERABLE_PIXELS_Y_INDEX:
             return action.payload
         default:
             return state

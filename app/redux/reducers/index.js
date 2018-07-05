@@ -3,7 +3,7 @@ import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, A
 import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer, StageCoordinatesReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
-import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, RenderableSongIndexReducer, RenderableAnnotationIndexReducer, RenderableVerseIndexReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanSceneRenderReducer, CanCubesRenderReducer, CanPixelsRenderReducer } from './render'
+import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, RenderableSongIndexReducer, RenderableAnnotationIndexReducer, RenderableVerseIndexReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanSceneRenderReducer, RenderableCubesYIndexReducer, RenderablePixelsYIndexReducer } from './render'
 import { IsHeightlessLyricColumnReducer, IsHiddenCarouselNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, isTwoRowMenuReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, CurrentSceneIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
 import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseIndexReducer } from './slider'
@@ -48,8 +48,8 @@ const rootReducer = combineReducers({
     canLyricRender: CanLyricRenderReducer,
     canCarouselRender: CanCarouselRenderReducer,
     canSceneRender: CanSceneRenderReducer,
-    canCubesRender: CanCubesRenderReducer,
-    canPixelsRender: CanPixelsRenderReducer,
+    renderableCubesYIndex: RenderableCubesYIndexReducer,
+    renderablePixelsYIndex: RenderablePixelsYIndexReducer,
 
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
     interactivatedVerseIndex: InteractivatedVerseIndexReducer,

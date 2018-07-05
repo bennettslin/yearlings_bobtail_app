@@ -7,8 +7,8 @@ import { bindActionCreators } from 'redux'
 import cx from 'classnames'
 
 import {
-    setCanRenderCubes,
-    setCanRenderPixels
+    setRenderableCubesYIndex,
+    setRenderablePixelsYIndex
 } from '../../redux/actions/render'
 
 import Layers from './Layers/Layers'
@@ -34,8 +34,8 @@ class Scene extends Component {
         canSceneRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         currentSceneIndex: PropTypes.number.isRequired,
-        setCanRenderCubes: PropTypes.func.isRequired,
-        setCanRenderPixels: PropTypes.func.isRequired,
+        setRenderableCubesYIndex: PropTypes.func.isRequired,
+        setRenderablePixelsYIndex: PropTypes.func.isRequired,
 
         // From parent.
         sceneDidRender: PropTypes.func.isRequired
@@ -81,8 +81,8 @@ class Scene extends Component {
         } else if (couldRender && !canSceneRender) {
 
             // Reset cubes and pixels.
-            this.props.setCanRenderCubes()
-            this.props.setCanRenderPixels()
+            this.props.setRenderableCubesYIndex()
+            this.props.setRenderablePixelsYIndex()
 
             this.setState({
                 isShown: false
@@ -137,8 +137,8 @@ class Scene extends Component {
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setCanRenderCubes,
-        setCanRenderPixels
+        setRenderableCubesYIndex,
+        setRenderablePixelsYIndex
     }, dispatch)
 )
 

@@ -39,8 +39,8 @@ module.exports = {
     CAN_LYRIC_RENDER: 'canLyricRender',
     CAN_CAROUSEL_RENDER: 'canCarouselRender',
     CAN_SCENE_RENDER: 'canSceneRender',
-    CAN_CUBES_RENDER: 'canCubesRender',
-    CAN_PIXELS_RENDER: 'canPixelsRender',
+    RENDERABLE_CUBES_Y_INDEX: 'renderableCubesYIndex',
+    RENDERABLE_PIXELS_Y_INDEX: 'renderablePixelsYIndex',
 
     // Responsive.
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',

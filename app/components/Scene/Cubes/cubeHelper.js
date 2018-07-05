@@ -146,7 +146,3 @@ export const getSideCubeZIndex = ({
         )
     }
 }
-
-export const getNextYIndex = (yIndex) => {
-    return yIndex + 1
-}
