@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import omit from 'lodash.omit'
 // import debounce from 'debounce'
 
 import LyricStanza from './LyricStanza'
@@ -100,11 +99,16 @@ class Lyric extends Component {
     }
 
     render() {
-        const other = omit(this.props, [
-            'isTransitioningHeight',
-            'completeHeightTransition',
-            'handleLyricWheel'
-        ])
+        const {
+
+                /* eslint-disable no-unused-vars */
+                isTransitioningHeight,
+                completeHeightTransition,
+                handleLyricWheel,
+                /* eslint-enable no-unused-vars */
+
+                ...other
+            } = this.props
 
         return (
             <LyricView {...other}

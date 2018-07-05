@@ -83,7 +83,9 @@ class WikiSection extends Component {
 
     _onWikiUrlReceived(selectedWikiUrl) {
         if (selectedWikiUrl) {
-            this.setState({ iframeLoading: true })
+            this.setState({
+                iframeLoading: true
+            })
         }
     }
 

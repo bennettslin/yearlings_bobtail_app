@@ -33,13 +33,17 @@ import {
 const mapStateToProps = ({
     canTheatreRender,
     canMainRender,
+    canCarouselRender,
     isWindowResizeRenderable,
-    isSongChangeRenderable
+    isSongChangeRenderable,
+    selectedCarouselNavIndex
 }) => ({
     canTheatreRender,
     canMainRender,
+    canCarouselRender,
     isWindowResizeRenderable,
-    isSongChangeRenderable
+    isSongChangeRenderable,
+    selectedCarouselNavIndex
 })
 
 class Live extends Component {
@@ -129,7 +133,14 @@ class Live extends Component {
     }
 
     lyricDidRender() {
-        this.props.setCanRenderCarousel(true)
+        // If carousel is toggled on, then render it first.
+        if (this.props.selectedCarouselNavIndex) {
+            this.props.setCanRenderCarousel(true)
+
+        // Otherwise, skip to scene.
+        } else {
+            this.props.setCanRenderScene(true)
+        }
     }
 
     carouselDidRender() {
@@ -137,7 +148,10 @@ class Live extends Component {
     }
 
     sceneDidRender() {
-        console.warn('Sequenced rendering complete.')
+        // If carousel was skipped earlier, render it now.
+        if (!this.props.canCarouselRender) {
+            this.props.setCanRenderCarousel(true)
+        }
     }
 
     render() {
@@ -197,8 +211,10 @@ Live.propTypes = {
     // Through Redux.
     canMainRender: PropTypes.bool.isRequired,
     canTheatreRender: PropTypes.bool.isRequired,
+    canCarouselRender: PropTypes.bool.isRequired,
     isWindowResizeRenderable: PropTypes.bool.isRequired,
     isSongChangeRenderable: PropTypes.bool.isRequired,
+    selectedCarouselNavIndex: PropTypes.number.isRequired,
 
     setCanRenderTheatre: PropTypes.func.isRequired,
     setCanRenderMain: PropTypes.func.isRequired,

@@ -37,8 +37,9 @@ class LyricColumn extends Component {
         super(props)
 
         this.state = {
-            isTransitioningHeight: false,
+            hasMounted: false,
             isShown: false,
+            isTransitioningHeight: false,
             waitForShowTimeoutId: '',
             didRenderTimeoutId: ''
         }
@@ -66,11 +67,16 @@ class LyricColumn extends Component {
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
                     this.props.lyricDidRender, 100
-                )
+                ),
+
+                { hasMounted } = this.state
 
             this.setState({
                 waitForShowTimeoutId,
-                didRenderTimeoutId
+                didRenderTimeoutId,
+
+                // Register that component has mounted.
+                ...!hasMounted && { hasMounted: true }
             })
 
             this.props.handleScrollUponLyricRender()
@@ -116,11 +122,14 @@ class LyricColumn extends Component {
                 ...other
             } = this.props,
 
-            { isShown } = this.state,
+            {
+                hasMounted,
+                isShown
+            } = this.state,
 
             parentIsShown = canLyricRender && isShown
 
-        return (
+        return (hasMounted || canLyricRender) && (
             <LyricColumnView {...other}
                 parentIsShown={parentIsShown}
                 handleTransition={this._handleTransition}

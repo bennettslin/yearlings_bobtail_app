@@ -40,13 +40,13 @@ Menu = ({
     scoresTipsHandlers,
     sliderDidRender
 }) => {
-
     /**
      * This is necessary because transform animation in Safari is janky.
      */
     const menuMarginInOverlay = getMenuMarginInOverlay(windowWidth)
 
-    return (
+    // Prevent menu from rendering before windowWidth has been set.
+    return windowWidth && (
         <div
             className={cx(
                 'Menu',

@@ -80,7 +80,7 @@ export const getStageCoordinates = ({
         top = (centreFieldHeight - height) * 0.1
 
         // Scoot left a bit to give room to dots overview.
-        left = leftShelfOverflow + (centreFieldWidth - width) * 0.5
+        left = leftShelfOverflow + (centreFieldWidth - width) * 0.05
 
     } else {
         // If stage height is adjustable, put closer to bottom in mobile.
@@ -156,7 +156,7 @@ const _getLeftShelfOverflow = (deviceIndex) => {
     switch (DEVICE_OBJECTS[deviceIndex].className) {
         case MONITOR_CLASS:
         case LS_LAPTOP_CLASS:
-            toggleButtonWidth = LS_LENGTH_ICON_LARGE
+            toggleButtonWidth = LS_LENGTH_ICON_LARGE * 0.9
             break
         case TABLET_CLASS:
             toggleButtonWidth = LS_LENGTH_ICON_LARGE_TABLET

@@ -3,11 +3,6 @@ module.exports = [
     /**
      * Begin expected DTO tasks.
      */
-    {
-        taskName: `Revisit mounting versus updating in optimisation work.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     {
         taskName: `Optimise when changing scene.`,
@@ -16,13 +11,7 @@ module.exports = [
     },
 
     {
-        taskName: `Pixels/Cubes rendering is still somewhat janky when switching songs.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: `Allow easily switching between sequenced cubes rendering and not.`,
+        taskName: `Can svgs be done by percentages?`,
         workedHours: 0,
         neededHours: 3
     },

@@ -3102,4 +3102,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Revisit mounting versus updating in optimisation work.`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

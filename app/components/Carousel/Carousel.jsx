@@ -48,6 +48,7 @@ class Carousel extends Component {
         super(props)
 
         this.state = {
+            hasMounted: false,
             isShown: false,
             waitForShowTimeoutId: '',
             didRenderTimeoutId: ''
@@ -76,11 +77,18 @@ class Carousel extends Component {
                 // Wait for parent transition before continuing render sequence.
                 didRenderTimeoutId = setTimeout(
                     this.props.carouselDidRender, 100
-                )
+                ),
+
+                {
+                    hasMounted
+                } = this.state
 
             this.setState({
                 waitForShowTimeoutId,
-                didRenderTimeoutId
+                didRenderTimeoutId,
+
+                // Register that component has mounted.
+                ...!hasMounted && { hasMounted: true }
             })
 
             this.props.handleScrollUponCarouselRender()
@@ -107,15 +115,18 @@ class Carousel extends Component {
                 handleAnnotationPrevious,
                 handleAnnotationNext,
                 setCarouselParentRef,
+                canCarouselRender,
 
                 /* eslint-disable no-unused-vars */
-                canCarouselRender,
                 carouselDidRender,
                 /* eslint-enable no-unused-vars */
 
                 ...other } = this.props,
 
-            { isShown } = this.state
+            {
+                hasMounted,
+                isShown
+            } = this.state
 
         if (isHiddenCarouselNav) {
             return null
@@ -131,7 +142,7 @@ class Carousel extends Component {
                 length: annotationsCount
             })
 
-        return (
+        return (hasMounted || canCarouselRender) && (
             <div
                 className={cx(
                     'Carousel',
