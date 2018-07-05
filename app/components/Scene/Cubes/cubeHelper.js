@@ -4,8 +4,8 @@ import { CUBE_X_AXIS_LENGTH,
          CUBE_Y_AXIS_LENGTH,
          CUBE_Z_AXIS_LENGTH } from '../../../constants/stage'
 
-const midXIndex = CUBE_X_AXIS_LENGTH / 2,
-midZIndex = CUBE_Z_AXIS_LENGTH / 2
+const midXIndex = CUBE_X_AXIS_LENGTH / 2
+// midZIndex = CUBE_Z_AXIS_LENGTH / 2
 
 export const getRelativeZHeight = ({
     isFloor,
@@ -49,41 +49,41 @@ export const getSideDirection = ({
     }
 }
 
-export const doRenderFrontOrSideFace = ({
-    xIndex,
-    sideDirection,
-    relativeZHeight
-}) => {
+// export const doRenderFrontOrSideFace = ({
+//     xIndex,
+//     sideDirection,
+//     relativeZHeight
+// }) => {
 
-    // If it's a side face in a middle cube, don't render.
-    if (sideDirection) {
-        if (
-            (sideDirection === 'left' && xIndex === midXIndex - 1) ||
-            (sideDirection === 'right' && xIndex === midXIndex)
-        ) {
-            return false
-        }
-    }
+//     // If it's a side face in a middle cube, don't render.
+//     if (sideDirection) {
+//         if (
+//             (sideDirection === 'left' && xIndex === midXIndex - 1) ||
+//             (sideDirection === 'right' && xIndex === midXIndex)
+//         ) {
+//             return false
+//         }
+//     }
 
-    // Otherwise, if front or side, render if it has any height at all.
-    return Boolean(relativeZHeight)
-}
+//     // Otherwise, if front or side, render if it has any height at all.
+//     return Boolean(relativeZHeight)
+// }
 
-export const doRenderTileFace = ({
-    isFloor,
-    zIndex,
-    oppositeTilesMeet
-}) => {
-    // Render if ceiling and floor tiles do not meet and...
-    return !oppositeTilesMeet &&
+// export const doRenderTileFace = ({
+//     isFloor,
+//     zIndex,
+//     oppositeTilesMeet
+// }) => {
+//     // Render if ceiling and floor tiles do not meet and...
+//     return !oppositeTilesMeet &&
 
-        // ... if tile is beyond the halfway zIndex.
-        (
-            isFloor ?
-                zIndex < midZIndex :
-                zIndex >= midZIndex
-        )
-}
+//         // ... if tile is beyond the halfway zIndex.
+//         (
+//             isFloor ?
+//                 zIndex < midZIndex :
+//                 zIndex >= midZIndex
+//         )
+// }
 
 export const getFrontCubeZIndex = ({
     isFloor,

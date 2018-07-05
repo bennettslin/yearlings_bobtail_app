@@ -46,13 +46,16 @@ class Pixels extends Component {
     // }
 
     shouldComponentUpdate(nextProps) {
-        return (
-            this.getCanRender(nextProps) ||
-            (
-                this.getCanRender(this.props) &&
-                !this.getCanRender(nextProps)
-            )
-        )
+        // return (
+        //     // Update if it can render...
+        //     this.getCanRender(nextProps) ||
+        //     (
+        //         this.getCanRender(this.props) &&
+        //         !this.getCanRender(nextProps)
+        //     )
+        // )
+
+        return this.getCanRender(nextProps)
     }
 
     componentDidUpdate() {
@@ -143,7 +146,7 @@ class Pixels extends Component {
             polygonPointsString
         } = this.props
 
-        return this.getCanRender(this.props) && (
+        return (
             <g className={cx(
                 'Pixels'
             )}>

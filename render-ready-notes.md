@@ -39,4 +39,5 @@ TODO later:
 
 Today's notes:
 * Make slanted cubes take up width of stage
-* Bug where the first time around, live doesn't unrender?
+* Clean up pixel optimisation stuff, including Redux value.
+* Mounting versus updating needs to be revisited.

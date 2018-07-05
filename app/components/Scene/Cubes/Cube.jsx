@@ -1,8 +1,7 @@
-// A single stage tile, whether ceiling or floor.
+// A single cube, whether ceiling or floor.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import Face from './Face/Face'
@@ -12,9 +11,7 @@ import { getStageCubeCornerPercentages } from '../sceneHelper'
 
 import {
     getRelativeZHeight,
-    getSideDirection,
-    doRenderFrontOrSideFace,
-    doRenderTileFace
+    getSideDirection
 } from './cubeHelper'
 
 import {
@@ -23,16 +20,9 @@ import {
     TILE
 } from '../constants'
 
-// FIXME: Does this need to be hooked into Redux anymore?
-const mapStateToProps = () => ({
-    // canSceneRender
-})
-
 class Cube extends Component {
 
     static propTypes = {
-        // Through Redux.
-        // canSceneRender: PropTypes.bool.isRequired,
 
         // From parent.
         isFloor: PropTypes.bool,
@@ -42,21 +32,11 @@ class Cube extends Component {
 
         frontCubeZIndex: PropTypes.number.isRequired,
         sideCubeZIndex: PropTypes.number.isRequired,
-        oppositeTilesMeet: PropTypes.bool.isRequired,
+        // oppositeTilesMeet: PropTypes.bool.isRequired,
 
         bitmapKey: PropTypes.string.isRequired,
         slantDirection: PropTypes.string.isRequired
     }
-
-    // shouldComponentUpdate(nextProps) {
-    //     return nextProps.canSceneRender
-    // }
-
-    // componentDidUpdate(prevProps) {
-    //     if (this.props.canSceneRender && !prevProps.canSceneRender) {
-    //         console.warn('Cube rendered.')
-    //     }
-    // }
 
     render() {
         const {
@@ -64,7 +44,7 @@ class Cube extends Component {
                 yIndex,
                 frontCubeZIndex,
                 sideCubeZIndex,
-                oppositeTilesMeet,
+                // oppositeTilesMeet,
                 ...other
             } = this.props,
 
@@ -91,10 +71,6 @@ class Cube extends Component {
                 doLog: isFloor && xIndex === 0 && yIndex === 1
             }),
 
-            doRenderFront = doRenderFrontOrSideFace({
-                relativeZHeight: frontRelativeZHeight
-            }),
-
             sideRelativeZHeight = getRelativeZHeight({
                 isFloor,
                 zIndex,
@@ -102,29 +78,13 @@ class Cube extends Component {
                 doLog: isFloor && xIndex === 0 && yIndex === 1
             }),
 
-            doRenderSide = doRenderFrontOrSideFace({
+            cubeCorners = getStageCubeCornerPercentages({
                 xIndex,
-                sideDirection,
-                relativeZHeight: sideRelativeZHeight
-            }),
-
-            doRenderTile = doRenderTileFace({
-                isFloor,
+                yIndex,
                 zIndex,
-                oppositeTilesMeet
+                isFloor,
+                slantDirection
             })
-
-        // if (!doRenderTile && !doRenderFront && !doRenderSide) {
-        //     return null
-        // }
-
-        const cubeCorners = getStageCubeCornerPercentages({
-            xIndex,
-            yIndex,
-            zIndex,
-            isFloor,
-            slantDirection
-        })
 
         return (
             <g
@@ -135,48 +95,40 @@ class Cube extends Component {
                     `Cube__z${getCharStringForNumber(parseInt(zIndex))}`
                 )}
             >
-                {(true || doRenderTile) && (
-                    <Face {...other}
-                        {...{
-                            face: TILE,
-                            cubeCorners,
-                            yIndex
-                        }}
-                        /**
-                         * Only one Pixels component will render yIndex for all
-                         * of them.
-                         */
-                        {...isFloor && xIndex === 0 && {
-                            canUpdateRenderableYIndex: true
-                        }}
-                    />
-                )}
-
-                {(true || doRenderSide) && (
-                    <Face {...other}
-                        {...{
-                            face: SIDE,
-                            cubeCorners,
-                            sideDirection,
-                            yIndex,
-                            relativeZHeight: sideRelativeZHeight
-                        }}
-                    />
-                )}
-
-                {(true || doRenderFront) && (
-                    <Face {...other}
-                        {...{
-                            face: FRONT,
-                            cubeCorners,
-                            yIndex,
-                            relativeZHeight: frontRelativeZHeight
-                        }}
-                    />
-                )}
+                <Face {...other}
+                    {...{
+                        face: TILE,
+                        cubeCorners,
+                        yIndex
+                    }}
+                    /**
+                     * Only one Pixels component will render yIndex for all
+                     * of them.
+                     */
+                    {...isFloor && xIndex === 0 && {
+                        canUpdateRenderableYIndex: true
+                    }}
+                />
+                <Face {...other}
+                    {...{
+                        face: SIDE,
+                        cubeCorners,
+                        sideDirection,
+                        yIndex,
+                        relativeZHeight: sideRelativeZHeight
+                    }}
+                />
+                <Face {...other}
+                    {...{
+                        face: FRONT,
+                        cubeCorners,
+                        yIndex,
+                        relativeZHeight: frontRelativeZHeight
+                    }}
+                />
             </g>
         )
     }
 }
 
-export default connect(mapStateToProps)(Cube)
+export default Cube

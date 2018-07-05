@@ -17,12 +17,16 @@ import Wood from '../Stage/Wood'
 
 import { getSceneObject } from '../../helpers/dataHelper'
 
+import { CUBE_Y_AXIS_LENGTH } from '../../constants/stage'
+
 const mapStateToProps = ({
     canSceneRender,
+    renderableCubesYIndex,
     renderableSongIndex,
     currentSceneIndex
 }) => ({
     canSceneRender,
+    renderableCubesYIndex,
     renderableSongIndex,
     currentSceneIndex
 })
@@ -32,6 +36,7 @@ class Scene extends Component {
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
+        renderableCubesYIndex: PropTypes.number.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         currentSceneIndex: PropTypes.number.isRequired,
         setRenderableCubesYIndex: PropTypes.func.isRequired,
@@ -54,11 +59,21 @@ class Scene extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        const { canSceneRender } = this.props,
-            { canSceneRender: couldRender } = prevProps
+        const {
+                canSceneRender,
+                renderableCubesYIndex
+            } = this.props,
+            {
+                canSceneRender: couldRender,
+                renderableCubesYIndex: previousRenderableCubesYIndex
+            } = prevProps
 
-        if (canSceneRender && !couldRender) {
-            console.warn('Scene rendered.')
+        if (
+            // Cubes have just now finished rendering.
+            renderableCubesYIndex === CUBE_Y_AXIS_LENGTH &&
+            previousRenderableCubesYIndex < CUBE_Y_AXIS_LENGTH
+        ) {
+            console.warn('Scene and cubes rendered.')
 
             clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)

@@ -2,12 +2,9 @@
 
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 
 import Cubes from '../Cubes/Cubes'
 import Presence from '../Presences/Presence'
-
-const mapStateToProps = () => ({})
 
 class Layers extends Component {
 
@@ -54,4 +51,4 @@ class Layers extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Layers)
+export default Layers

@@ -90,16 +90,6 @@ class Face extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        // if (this.state.hasMounted) {
-        //     if (this.props.canSceneRender && !prevProps.canSceneRender) {
-        //         console.warn('Face subsequently rendered.')
-        //     }
-
-        // } else {
-        //     if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-        //         console.warn('Face initially rendered.')
-        //     }
-        // }
 
         if (!this.state.hasMounted) {
             if (this.props.canSceneRender && !prevProps.canSceneRender) {
