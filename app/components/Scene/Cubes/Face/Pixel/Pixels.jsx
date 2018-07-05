@@ -37,7 +37,7 @@ class Pixels extends Component {
             polygonPointsString
         } = this.props
 
-        return (
+        return null && (
             <g className={cx(
                 'Pixels'
             )}>

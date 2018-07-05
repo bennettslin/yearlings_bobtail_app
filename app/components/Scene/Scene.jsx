@@ -3,7 +3,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import cx from 'classnames'
+
+import {
+    setCanRenderCubes,
+    setCanRenderPixels
+} from '../../redux/actions/render'
 
 import Layers from './Layers/Layers'
 import SceneSky from './SceneSky'
@@ -28,6 +34,8 @@ class Scene extends Component {
         canSceneRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         currentSceneIndex: PropTypes.number.isRequired,
+        setCanRenderCubes: PropTypes.func.isRequired,
+        setCanRenderPixels: PropTypes.func.isRequired,
 
         // From parent.
         sceneDidRender: PropTypes.func.isRequired
@@ -71,6 +79,10 @@ class Scene extends Component {
             })
 
         } else if (couldRender && !canSceneRender) {
+
+            // Reset cubes and pixels.
+            this.props.setCanRenderCubes()
+            this.props.setCanRenderPixels()
 
             this.setState({
                 isShown: false
@@ -123,4 +135,11 @@ class Scene extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Scene)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        setCanRenderCubes,
+        setCanRenderPixels
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(Scene)

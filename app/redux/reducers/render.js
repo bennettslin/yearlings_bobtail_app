@@ -19,7 +19,7 @@ import {
 } from '../../constants/state'
 
 import StorageHelper from '../storageHelper'
-import { getSceneRenderObject } from '../renderHelper'
+import { getSceneRenderState } from '../renderHelper'
 
 const { getFromStorage } = StorageHelper,
     storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
@@ -153,7 +153,7 @@ export const CanSceneRenderReducer = (
     }
 }
 export const CanCubesRenderReducer = (
-    state = getSceneRenderObject(),
+    state = getSceneRenderState(),
     action
 ) => {
     switch (action.type) {
@@ -164,7 +164,7 @@ export const CanCubesRenderReducer = (
     }
 }
 export const CanPixelsRenderReducer = (
-    state = getSceneRenderObject(),
+    state = getSceneRenderState(),
     action
 ) => {
     switch (action.type) {

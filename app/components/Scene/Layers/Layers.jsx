@@ -20,8 +20,10 @@ const mapStateToProps = ({
 class Layers extends Component {
 
     static propTypes = {
+        // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
 
+        // From parent.
         presence: PropTypes.object,
         tiles: PropTypes.shape({
             ceiling: PropTypes.shape({

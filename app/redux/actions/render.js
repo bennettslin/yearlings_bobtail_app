@@ -1,6 +1,6 @@
 // Actions for state of this user session.
 
-import { setSceneRenderObject } from '../renderHelper'
+import { setSceneRenderState } from '../renderHelper'
 
 import {
     IS_SONG_CHANGE_RENDERABLE,
@@ -97,10 +97,10 @@ export const setCanRenderScene = (
 
 export const setCanRenderCubes = (payload) => ({
     type: CAN_CUBES_RENDER,
-    payload: setSceneRenderObject(payload)
+    payload: setSceneRenderState(payload)
 })
 
 export const setCanRenderPixels = (payload) => ({
     type: CAN_PIXELS_RENDER,
-    payload: setSceneRenderObject(payload)
+    payload: setSceneRenderState(payload)
 })

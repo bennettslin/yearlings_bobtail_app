@@ -146,3 +146,50 @@ export const getSideCubeZIndex = ({
         )
     }
 }
+
+// FIXME: Don't duplicate code.
+export const getNextEntityToRender = ({
+    xIndex,
+    yIndex,
+    renderState
+}) => {
+    let nextEntity
+
+    if (xIndex < CUBE_X_AXIS_LENGTH) {
+        // Next entity in same row.
+        nextEntity = renderState[yIndex][xIndex + 1]
+
+    } else if (yIndex < CUBE_Y_AXIS_LENGTH) {
+        // First entity in new row.
+        nextEntity = renderState[yIndex + 1][0]
+
+    } else {
+        // All are now rendered.
+        nextEntity = renderState.all
+    }
+
+    return nextEntity
+}
+
+
+export const getNextStateForRender = ({
+    xIndex,
+    yIndex,
+    renderState
+}) => {
+    if (xIndex < CUBE_X_AXIS_LENGTH) {
+        // Next entity in same row.
+        renderState[yIndex][xIndex + 1] = true
+
+    } else if (yIndex < CUBE_Y_AXIS_LENGTH) {
+        // First entity in new row.
+        renderState[yIndex + 1][0] = true
+
+    } else {
+        // All are now rendered.
+        renderState.all = true
+    }
+
+    // FIXME: This should spread the child object as well.
+    return { ...renderState }
+}
