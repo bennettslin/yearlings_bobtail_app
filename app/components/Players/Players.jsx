@@ -104,7 +104,7 @@ class Players extends Component {
                         isSelected = songIndex === selectedSongIndex,
                         totalTime = getSongTotalTime(songIndex)
 
-                    return this._playerShouldRender(songIndex) ? (
+                    return this._playerShouldRender(songIndex) && (
                         <Player {...other}
                             key={index}
                             songIndex={songIndex}
@@ -112,7 +112,7 @@ class Players extends Component {
                             isSelected={isSelected}
                             totalTime={totalTime}
                         />
-                    ) : null
+                    )
                 })}
             </div>
         )

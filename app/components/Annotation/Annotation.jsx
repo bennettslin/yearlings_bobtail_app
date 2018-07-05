@@ -80,11 +80,11 @@ class Annotation extends Component {
             )
 
         // If it's in popup, annotation object won't always exist.
-        return annotationObject ? (
+        return Boolean(annotationObject) && (
             <AnnotationSectionView {...other}
                 annotationObject={annotationObject}
             />
-        ) : null
+        )
     }
 }
 

@@ -60,7 +60,6 @@ class Cubes extends Component {
         yIndex: PropTypes.number.isRequired,
         isFloor: PropTypes.bool,
         zIndices: zIndicesPropTypes,
-        oppositeZIndices: zIndicesPropTypes,
         bitmapKeys: PropTypes.arrayOf(
             PropTypes.arrayOf(
                 PropTypes.string.isRequired
@@ -161,6 +160,9 @@ class Cubes extends Component {
                 this._setRenderableCubesYIndex,
                 0
             )
+
+            // The timeouts seem to add 0.5 seconds to the total render time.
+            // this._setRenderableCubesYIndex()
         }
     }
 
@@ -185,7 +187,6 @@ class Cubes extends Component {
         const {
                 yIndex,
                 zIndices,
-                oppositeZIndices,
                 bitmapKeys,
                 isFloor,
                 slantDirection,
@@ -229,12 +230,6 @@ class Cubes extends Component {
                             zIndices, xIndex, yIndex
                         ),
 
-                        // Determine if ceiling and floor tiles meet.
-                        oppositeCubeZIndex = getValueInAbridgedMatrix(
-                            oppositeZIndices, xIndex, yIndex
-                        ),
-                        oppositeTilesMeet = zIndex === oppositeCubeZIndex,
-
                         // Allow cube to determine max height of front face.
                         frontCubeZIndex = getFrontCubeZIndex({
                             isFloor,
@@ -265,7 +260,6 @@ class Cubes extends Component {
                             zIndex={zIndex}
                             frontCubeZIndex={frontCubeZIndex}
                             sideCubeZIndex={sideCubeZIndex}
-                            oppositeTilesMeet={oppositeTilesMeet}
                             bitmapKey={bitmapKey}
                             isFloor={isFloor}
                             slantDirection={slantDirection}

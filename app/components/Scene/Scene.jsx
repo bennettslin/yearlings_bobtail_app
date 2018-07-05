@@ -118,7 +118,9 @@ class Scene extends Component {
                 canSceneRender
             } = this.props,
 
-            { isShown } = this.state,
+            {
+                isShown
+            } = this.state,
 
             sceneObject = getSceneObject(
                 renderableSongIndex, currentSceneIndex

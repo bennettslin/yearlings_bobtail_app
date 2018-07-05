@@ -22,7 +22,7 @@ class Pixels extends Component {
         bitmapMatrix: PropTypes.array.isRequired,
         polygonPointsString: PropTypes.string.isRequired,
 
-        // This is purely for rendering purposes.
+        // This was purely for bookkeeping purposes, but is presently not used.
         yIndex: PropTypes.number.isRequired
     }
 

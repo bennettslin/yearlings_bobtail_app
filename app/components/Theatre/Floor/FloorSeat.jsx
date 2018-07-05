@@ -46,7 +46,7 @@ const FloorSeat = ({
             /**
              * Seats nearer to the ends come up further exponentially.
              */
-            - Math.pow(1.4125, Math.abs(chairIndex)),
+            - Math.pow(1.415, Math.abs(chairIndex)),
 
         ellipseRx = width / 2,
         ellipseRy = height / 2,

@@ -71,7 +71,7 @@ class VerseBar extends Component {
             verseObject = getVerseObject(renderableSongIndex, verseIndex)
 
         // Logue will not have verse object.
-        return verseObject ? (
+        return Boolean(verseObject) && (
             <div
                 className={cx(
                     'VerseBar',
@@ -99,7 +99,7 @@ class VerseBar extends Component {
                     />
                 </div>
             </div>
-        ) : null
+        )
     }
 }
 

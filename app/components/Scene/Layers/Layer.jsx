@@ -32,13 +32,11 @@ class Layers extends Component {
                 <Cubes {...other}
                     bitmapKeys={ceilingBitmapKeys}
                     zIndices={ceilingZIndices}
-                    oppositeZIndices={floorZIndices}
                 />
                 <Cubes {...other}
                     isFloor
                     bitmapKeys={floorBitmapKeys}
                     zIndices={floorZIndices}
-                    oppositeZIndices={ceilingZIndices}
                 />
                 <Presences {...other}
                     {...{

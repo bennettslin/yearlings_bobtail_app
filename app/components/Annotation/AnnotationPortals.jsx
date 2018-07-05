@@ -80,7 +80,7 @@ class AnnotationPortals extends Component {
                 cardIndex
             })
 
-        return portalLinksArray ? (
+        return Boolean(portalLinksArray) && (
             portalLinksArray.map((portalObject, portalLinkIndex) => {
 
                 /**
@@ -103,7 +103,7 @@ class AnnotationPortals extends Component {
                     />
                 )
             })
-        ) : null
+        )
     }
 }
 
