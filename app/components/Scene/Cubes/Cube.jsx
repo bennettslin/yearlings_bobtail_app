@@ -137,25 +137,41 @@ class Cube extends Component {
             >
                 {(true || doRenderTile) && (
                     <Face {...other}
-                        face={TILE}
-                        cubeCorners={cubeCorners}
+                        {...{
+                            face: TILE,
+                            cubeCorners,
+                            yIndex
+                        }}
+                        /**
+                         * Only one Pixels component will render yIndex for all
+                         * of them.
+                         */
+                        {...isFloor && xIndex === 0 && {
+                            canUpdateRenderableYIndex: true
+                        }}
                     />
                 )}
 
                 {(true || doRenderSide) && (
                     <Face {...other}
-                        face={SIDE}
-                        sideDirection={sideDirection}
-                        relativeZHeight={sideRelativeZHeight}
-                        cubeCorners={cubeCorners}
+                        {...{
+                            face: SIDE,
+                            cubeCorners,
+                            sideDirection,
+                            yIndex,
+                            relativeZHeight: sideRelativeZHeight
+                        }}
                     />
                 )}
 
                 {(true || doRenderFront) && (
                     <Face {...other}
-                        face={FRONT}
-                        relativeZHeight={frontRelativeZHeight}
-                        cubeCorners={cubeCorners}
+                        {...{
+                            face: FRONT,
+                            cubeCorners,
+                            yIndex,
+                            relativeZHeight: frontRelativeZHeight
+                        }}
                     />
                 )}
             </g>

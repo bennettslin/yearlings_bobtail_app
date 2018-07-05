@@ -59,6 +59,8 @@ class Face extends Component {
         slantDirection: PropTypes.string,
         sideDirection: PropTypes.string,
 
+        canUpdateRenderableYIndex: PropTypes.bool,
+        yIndex: PropTypes.number.isRequired,
         relativeZHeight: PropTypes.number,
         zIndex: PropTypes.number,
 
@@ -118,6 +120,8 @@ class Face extends Component {
                 slantDirection,
                 sideDirection,
                 relativeZHeight,
+                canUpdateRenderableYIndex,
+                yIndex,
                 zIndex,
                 cubeCorners,
                 stageCoordinates
@@ -174,7 +178,9 @@ class Face extends Component {
                     {...{
                         base,
                         bitmapMatrix,
-                        polygonPointsString
+                        polygonPointsString,
+                        canUpdateRenderableYIndex,
+                        yIndex
                     }}
                 />
 
