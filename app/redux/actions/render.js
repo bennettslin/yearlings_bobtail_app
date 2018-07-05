@@ -13,7 +13,8 @@ import {
     CAN_CAROUSEL_RENDER,
     CAN_SCENE_RENDER,
     RENDERABLE_CUBES_Y_INDEX,
-    RENDERABLE_PIXELS_Y_INDEX
+    CAN_PRESENCES_RENDER,
+    CAN_PIXELS_RENDER
 } from '../../constants/state'
 
 export const setIsSongChangeRenderable = (
@@ -100,9 +101,17 @@ export const setRenderableCubesYIndex = (
     payload: renderableCubesYIndex
 })
 
-export const setRenderablePixelsYIndex = (
-    renderablePixelsYIndex = 0
+export const setCanRenderPresences = (
+    canRenderScene = false
 ) => ({
-    type: RENDERABLE_PIXELS_Y_INDEX,
-    payload: renderablePixelsYIndex
+    type: CAN_PRESENCES_RENDER,
+    payload: canRenderScene
 })
+
+export const setCanRenderPixels = (
+    canRenderScene = false
+) => ({
+    type: CAN_PIXELS_RENDER,
+    payload: canRenderScene
+})
+

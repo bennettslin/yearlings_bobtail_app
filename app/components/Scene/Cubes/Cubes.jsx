@@ -7,7 +7,8 @@ import { bindActionCreators } from 'redux'
 import cx from 'classnames'
 
 import {
-    setRenderableCubesYIndex
+    setRenderableCubesYIndex,
+    setCanRenderPresences
 } from '../../../redux/actions/render'
 
 
@@ -53,6 +54,7 @@ class Cubes extends Component {
         canTheatreRender: PropTypes.bool.isRequired,
         renderableCubesYIndex: PropTypes.number.isRequired,
         setRenderableCubesYIndex: PropTypes.func.isRequired,
+        setCanRenderPresences: PropTypes.func.isRequired,
 
         // From parent.
         yIndex: PropTypes.number.isRequired,
@@ -130,8 +132,6 @@ class Cubes extends Component {
                 yIndex > previousRenderableCubesYIndex
             )
         ) {
-            console.warn('Cubes rendered for yIndex: ', yIndex)
-
             this.setNextYIndex()
         }
 
@@ -151,8 +151,7 @@ class Cubes extends Component {
 
     setNextYIndex() {
         /**
-         * If there is a next yIndex to be set, only do so from the most recent
-         * yIndex of one of the Cubes components. We'll choose the floor.
+         * Only one component should make this call.
          */
         if (
             this.props.isFloor &&
@@ -166,9 +165,19 @@ class Cubes extends Component {
     }
 
     _setRenderableCubesYIndex() {
-        this.props.setRenderableCubesYIndex(
-            this.props.yIndex + 1
-        )
+        const { yIndex } = this.props
+
+        // Render the next yIndex if possible...
+        if (yIndex < CUBE_Y_AXIS_LENGTH - 1) {
+            this.props.setRenderableCubesYIndex(
+                this.props.yIndex + 1
+            )
+
+        // ... Otherwise we're finished, so move on to rendering the presences.
+        } else {
+            console.warn('Cubes rendered.')
+            this.props.setCanRenderPresences(true)
+        }
     }
 
     render() {
@@ -270,7 +279,8 @@ class Cubes extends Component {
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setRenderableCubesYIndex
+        setRenderableCubesYIndex,
+        setCanRenderPresences
     }, dispatch)
 )
 

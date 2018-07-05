@@ -3,7 +3,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import cx from 'classnames'
+
+import {
+    setCanRenderPixels,
+} from '../../../redux/actions/render'
 
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 
@@ -11,47 +16,74 @@ import { getTileCentreForAction } from '../sceneHelper'
 
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
-const defaultProps = {
-    presence: []
-}
-
-const propTypes = {
-    // Through Redux.
-    canSceneRender: PropTypes.bool.isRequired,
-
-    // From parent.
-    yIndex: PropTypes.number.isRequired,
-    presence: PropTypes.array.isRequired,
-    zIndices: PropTypes.arrayOf(
-        PropTypes.arrayOf(
-            PropTypes.number
-        ).isRequired
-    ).isRequired,
-    slantDirection: PropTypes.string.isRequired,
-    stageCoordinates: PropTypes.shape({
-        width: PropTypes.number.isRequired,
-        height: PropTypes.number.isRequired
-    }).isRequired
-}
-
 const mapStateToProps = ({
-    canSceneRender,
+    canPresencesRender,
     stageCoordinates
 }) => ({
-    canSceneRender,
+    canPresencesRender,
     stageCoordinates
 })
 
-class Presence extends Component {
+class Presences extends Component {
+
+    static defaultProps = {
+        presence: []
+    }
+
+    static propTypes = {
+        // Through Redux.
+        canPresencesRender: PropTypes.bool.isRequired,
+        stageCoordinates: PropTypes.shape({
+            width: PropTypes.number.isRequired,
+            height: PropTypes.number.isRequired
+        }).isRequired,
+
+        // From parent.
+        yIndex: PropTypes.number.isRequired,
+        presence: PropTypes.array.isRequired,
+        zIndices: PropTypes.arrayOf(
+            PropTypes.arrayOf(
+                PropTypes.number
+            ).isRequired
+        ).isRequired,
+        slantDirection: PropTypes.string.isRequired
+    }
+
+    constructor(props) {
+        super(props)
+
+        this._setCanRenderPixels = this._setCanRenderPixels.bind(this)
+    }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canSceneRender
+        // All yIndices for Presences will render simultaneously.
+        return nextProps.canPresencesRender
     }
 
     componentDidUpdate(prevProps) {
-        if (this.props.canSceneRender && !prevProps.canSceneRender) {
-            console.warn('Presence rendered.')
+        const {
+                canPresencesRender,
+                yIndex
+            } = this.props,
+            {
+                canPresencesRender: couldPresencesRender
+            } = prevProps
+
+        if (canPresencesRender && !couldPresencesRender) {
+
+            // Only one component will make this call.
+            if (yIndex === CUBE_Y_AXIS_LENGTH - 1) {
+                setTimeout(
+                    this._setCanRenderPixels,
+                    0
+                )
+            }
         }
+    }
+
+    _setCanRenderPixels() {
+        console.warn('Presences rendered.')
+        this.props.setCanRenderPixels(true)
     }
 
     render() {
@@ -137,7 +169,10 @@ class Presence extends Component {
     }
 }
 
-Presence.defaultProps = defaultProps
-Presence.propTypes = propTypes
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        setCanRenderPixels
+    }, dispatch)
+)
 
-export default connect(mapStateToProps)(Presence)
+export default connect(mapStateToProps, bindDispatchToProps)(Presences)

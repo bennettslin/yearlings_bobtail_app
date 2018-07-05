@@ -34,8 +34,19 @@ class VerseManager extends Component {
         getVerseElement: PropTypes.func.isRequired
     }
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            verseBarsTimeoutId: ''
+        }
+    }
+
     componentDidMount() {
         this.props.setRef(this)
+
+        this._determineVerseBars =
+            this._determineVerseBars.bind(this)
     }
 
     componentDidUpdate(prevProps) {
@@ -100,6 +111,28 @@ class VerseManager extends Component {
     }
 
     determineVerseBars() {
+        /**
+         * It seems to help to both make the call immediately, and then set a
+         * timeout for it. For now, I don't think there's any performance hit.
+         */
+        this._determineVerseBars(false)
+
+        clearTimeout(this.state.verseBarsTimeoutId)
+
+        const verseBarsTimeoutId = setTimeout(
+            this._determineVerseBars,
+            10
+        )
+
+        this.setState({
+            verseBarsTimeoutId
+        })
+    }
+
+    _determineVerseBars(calledFromTimeout = true) {
+        if (calledFromTimeout) {
+            console.warn('Determining verse bars after timeout.')
+        }
 
         const
             verseIndex = this.props.sliderVerseIndex > 0 ?

@@ -4,12 +4,6 @@ module.exports = [
      * Begin expected DTO tasks.
      */
     {
-        taskName: `Clean up scene optimisation work.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Revisit mounting versus updating in optimisation work.`,
         workedHours: 0,
         neededHours: 3
@@ -208,4 +202,5 @@ module.exports = [
         workedHours: 0,
         neededHours: 5
     },
+
 ]

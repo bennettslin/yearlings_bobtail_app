@@ -40,7 +40,8 @@ module.exports = {
     CAN_CAROUSEL_RENDER: 'canCarouselRender',
     CAN_SCENE_RENDER: 'canSceneRender',
     RENDERABLE_CUBES_Y_INDEX: 'renderableCubesYIndex',
-    RENDERABLE_PIXELS_Y_INDEX: 'renderablePixelsYIndex',
+    CAN_PRESENCES_RENDER: 'canPresencesRender',
+    CAN_PIXELS_RENDER: 'canPixelsRender',
 
     // Responsive.
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',

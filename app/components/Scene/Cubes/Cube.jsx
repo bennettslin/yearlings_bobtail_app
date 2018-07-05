@@ -32,7 +32,6 @@ class Cube extends Component {
 
         frontCubeZIndex: PropTypes.number.isRequired,
         sideCubeZIndex: PropTypes.number.isRequired,
-        // oppositeTilesMeet: PropTypes.bool.isRequired,
 
         bitmapKey: PropTypes.string.isRequired,
         slantDirection: PropTypes.string.isRequired
@@ -44,7 +43,6 @@ class Cube extends Component {
                 yIndex,
                 frontCubeZIndex,
                 sideCubeZIndex,
-                // oppositeTilesMeet,
                 ...other
             } = this.props,
 
@@ -100,13 +98,6 @@ class Cube extends Component {
                         face: TILE,
                         cubeCorners,
                         yIndex
-                    }}
-                    /**
-                     * Only one Pixels component will render yIndex for all
-                     * of them.
-                     */
-                    {...isFloor && xIndex === 0 && {
-                        canUpdateRenderableYIndex: true
                     }}
                 />
                 <Face {...other}

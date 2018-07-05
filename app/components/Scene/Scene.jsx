@@ -8,7 +8,8 @@ import cx from 'classnames'
 
 import {
     setRenderableCubesYIndex,
-    setRenderablePixelsYIndex
+    setCanRenderPresences,
+    setCanRenderPixels
 } from '../../redux/actions/render'
 
 import Layers from './Layers/Layers'
@@ -17,16 +18,14 @@ import Wood from '../Stage/Wood'
 
 import { getSceneObject } from '../../helpers/dataHelper'
 
-import { CUBE_Y_AXIS_LENGTH } from '../../constants/stage'
-
 const mapStateToProps = ({
     canSceneRender,
-    renderableCubesYIndex,
+    canPixelsRender,
     renderableSongIndex,
     currentSceneIndex
 }) => ({
     canSceneRender,
-    renderableCubesYIndex,
+    canPixelsRender,
     renderableSongIndex,
     currentSceneIndex
 })
@@ -36,11 +35,12 @@ class Scene extends Component {
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
-        renderableCubesYIndex: PropTypes.number.isRequired,
+        canPixelsRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         currentSceneIndex: PropTypes.number.isRequired,
         setRenderableCubesYIndex: PropTypes.func.isRequired,
-        setRenderablePixelsYIndex: PropTypes.func.isRequired,
+        setCanRenderPresences: PropTypes.func.isRequired,
+        setCanRenderPixels: PropTypes.func.isRequired,
 
         // From parent.
         sceneDidRender: PropTypes.func.isRequired
@@ -61,19 +61,17 @@ class Scene extends Component {
     componentDidUpdate(prevProps) {
         const {
                 canSceneRender,
-                renderableCubesYIndex
+                canPixelsRender
             } = this.props,
             {
-                canSceneRender: couldRender,
-                renderableCubesYIndex: previousRenderableCubesYIndex
+                canSceneRender: couldSceneRender,
+                canPixelsRender: couldPixelsRender
             } = prevProps
 
         if (
-            // Cubes have just now finished rendering.
-            renderableCubesYIndex === CUBE_Y_AXIS_LENGTH &&
-            previousRenderableCubesYIndex < CUBE_Y_AXIS_LENGTH
+            canPixelsRender && !couldPixelsRender
         ) {
-            console.warn('Scene and cubes rendered.')
+            console.warn('Scene rendered.')
 
             clearTimeout(this.state.waitForShowTimeoutId)
             clearTimeout(this.state.didRenderTimeoutId)
@@ -93,11 +91,12 @@ class Scene extends Component {
                 didRenderTimeoutId
             })
 
-        } else if (couldRender && !canSceneRender) {
+        } else if (!canSceneRender && couldSceneRender) {
 
-            // Reset cubes and pixels.
+            // Reset cubes, presences, and pixels.
             this.props.setRenderableCubesYIndex()
-            this.props.setRenderablePixelsYIndex()
+            this.props.setCanRenderPresences(false)
+            this.props.setCanRenderPixels(false)
 
             this.setState({
                 isShown: false
@@ -153,7 +152,8 @@ class Scene extends Component {
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setRenderableCubesYIndex,
-        setRenderablePixelsYIndex
+        setCanRenderPresences,
+        setCanRenderPixels
     }, dispatch)
 )
 

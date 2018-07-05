@@ -3092,4 +3092,14 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Clean up scene optimisation work.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Fix issue with verse bars not going away when scrolling too fast.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

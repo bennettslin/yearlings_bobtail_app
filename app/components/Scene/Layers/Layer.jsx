@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 
 import Cubes from '../Cubes/Cubes'
-import Presence from '../Presences/Presence'
+import Presences from '../Presences/Presences'
 
 class Layers extends Component {
 
@@ -40,7 +40,7 @@ class Layers extends Component {
                     zIndices={floorZIndices}
                     oppositeZIndices={ceilingZIndices}
                 />
-                <Presence {...other}
+                <Presences {...other}
                     {...{
                         presence,
                         zIndices: floorZIndices
