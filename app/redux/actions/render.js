@@ -1,7 +1,5 @@
 // Actions for state of this user session.
 
-import { setSceneRenderState } from '../renderHelper'
-
 import {
     IS_SONG_CHANGE_RENDERABLE,
     IS_WINDOW_RESIZE_RENDERABLE,
@@ -95,12 +93,16 @@ export const setCanRenderScene = (
     payload: canRenderScene
 })
 
-export const setCanRenderCubes = (payload) => ({
+export const setCanRenderCubes = (
+    canRenderCubes = 0
+) => ({
     type: CAN_CUBES_RENDER,
-    payload: setSceneRenderState(payload)
+    payload: canRenderCubes
 })
 
-export const setCanRenderPixels = (payload) => ({
+export const setCanRenderPixels = (
+    canRenderPixels = 0
+) => ({
     type: CAN_PIXELS_RENDER,
-    payload: setSceneRenderState(payload)
+    payload: canRenderPixels
 })

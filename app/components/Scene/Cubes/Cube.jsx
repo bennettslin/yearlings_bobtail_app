@@ -3,12 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import cx from 'classnames'
-
-import {
-    setCanRenderCubes
-} from '../../../redux/actions/render'
 
 import Face from './Face/Face'
 
@@ -19,9 +14,7 @@ import {
     getRelativeZHeight,
     getSideDirection,
     doRenderFrontOrSideFace,
-    doRenderTileFace,
-    getNextStateForRender,
-    getNextEntityToRender
+    doRenderTileFace
 } from './cubeHelper'
 
 import {
@@ -30,21 +23,16 @@ import {
     TILE
 } from '../constants'
 
-const mapStateToProps = ({
-    canCubesRender,
-    canSceneRender
-}) => ({
-    canCubesRender,
-    canSceneRender
+// FIXME: Does this need to be hooked into Redux anymore?
+const mapStateToProps = () => ({
+    // canSceneRender
 })
 
 class Cube extends Component {
 
     static propTypes = {
         // Through Redux.
-        canCubesRender: PropTypes.object.isRequired,
-        canSceneRender: PropTypes.bool.isRequired,
-        setCanRenderCubes: PropTypes.func.isRequired,
+        // canSceneRender: PropTypes.bool.isRequired,
 
         // From parent.
         isFloor: PropTypes.bool,
@@ -60,67 +48,15 @@ class Cube extends Component {
         slantDirection: PropTypes.string.isRequired
     }
 
-    canUpdate(props) {
-        const {
-            canSceneRender,
-            canCubesRender,
-            xIndex,
-            yIndex
-        } = props
+    // shouldComponentUpdate(nextProps) {
+    //     return nextProps.canSceneRender
+    // }
 
-        return canSceneRender && canCubesRender[yIndex][xIndex]
-    }
-
-    shouldComponentUpdate(nextProps) {
-        // const {
-        //     canCubesRender,
-        //     xIndex,
-        //     yIndex,
-        //     isFloor
-        // } = nextProps
-
-        // if (isFloor && xIndex === 1 && yIndex === 0) {
-        //     console.error(this.canUpdate(nextProps), 'can update', xIndex, yIndex, this.canUpdate(nextProps), canCubesRender, canCubesRender[yIndex])
-        // }
-
-        return this.canUpdate(nextProps)
-    }
-
-    componentDidUpdate(prevProps) {
-        const {
-            canCubesRender,
-            xIndex,
-            yIndex
-        } = this.props
-
-        if (
-            (
-                this.props.canSceneRender &&
-                !prevProps.canSceneRender
-            ) || (
-                canCubesRender[yIndex][xIndex] &&
-                !getNextEntityToRender({
-                    xIndex,
-                    yIndex,
-                    renderState: canCubesRender
-                })
-            )
-        ) {
-            console.warn('Cube rendered.', xIndex, yIndex,                 getNextStateForRender({
-                xIndex,
-                yIndex,
-                renderState: canCubesRender
-            }))
-
-            this.props.setCanRenderCubes(
-                getNextStateForRender({
-                    xIndex,
-                    yIndex,
-                    renderState: canCubesRender
-                })
-            )
-        }
-    }
+    // componentDidUpdate(prevProps) {
+    //     if (this.props.canSceneRender && !prevProps.canSceneRender) {
+    //         console.warn('Cube rendered.')
+    //     }
+    // }
 
     render() {
         const {
@@ -227,10 +163,4 @@ class Cube extends Component {
     }
 }
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        setCanRenderCubes
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(Cube)
+export default connect(mapStateToProps)(Cube)

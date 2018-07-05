@@ -3,7 +3,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import cx from 'classnames'
+
+import {
+    setCanRenderCubes
+} from '../../../redux/actions/render'
+
 
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 import Cube from './Cube'
@@ -15,8 +21,11 @@ import { DEFAULT_X_AXIS_INDICES,
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
 import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
-import { getFrontCubeZIndex,
-         getSideCubeZIndex } from './cubeHelper'
+import {
+    getFrontCubeZIndex,
+    getSideCubeZIndex,
+    getNextYIndex
+} from './cubeHelper'
 
 const zIndicesPropTypes =
     PropTypes.arrayOf(
@@ -26,10 +35,12 @@ const zIndicesPropTypes =
     ).isRequired
 
 const mapStateToProps = ({
+    canCubesRender,
     canSceneRender,
     canTheatreRender,
     stageCoordinates
 }) => ({
+    canCubesRender,
     canSceneRender,
     canTheatreRender,
     stageCoordinates
@@ -39,8 +50,10 @@ class Cubes extends Component {
 
     static propTypes = {
         // Through Redux.
+        canCubesRender: PropTypes.number.isRequired,
         canSceneRender: PropTypes.bool.isRequired,
         canTheatreRender: PropTypes.bool.isRequired,
+        setCanRenderCubes: PropTypes.func.isRequired,
 
         // From parent.
         yIndex: PropTypes.number.isRequired,
@@ -65,32 +78,93 @@ class Cubes extends Component {
         this.state = {
             hasMounted: false
         }
+
+        this._setCanRenderCubes = this._setCanRenderCubes.bind(this)
     }
 
     shouldComponentUpdate(nextProps) {
-        return this.state.hasMounted ?
-            nextProps.canSceneRender :
-            nextProps.canTheatreRender
+        const {
+                yIndex,
+                canCubesRender
+            } = nextProps,
+
+            isRenderableYIndex = yIndex <= canCubesRender,
+
+            canParentRender = this.state.hasMounted ?
+                nextProps.canSceneRender :
+                nextProps.canTheatreRender
+
+        return isRenderableYIndex && canParentRender
     }
 
     componentDidUpdate(prevProps) {
-        if (this.state.hasMounted) {
-            if (this.props.canSceneRender && !prevProps.canSceneRender) {
-                console.warn('Cubes subsequently rendered.')
-            }
+        const {
+                yIndex,
+                canSceneRender,
+                canTheatreRender,
+                canCubesRender
+            } = this.props,
 
-        } else {
-            if (this.props.canTheatreRender && !prevProps.canTheatreRender) {
-                console.warn('Cubes initially rendered.')
-            }
+            {
+                canSceneRender: couldSceneRender,
+                canTheatreRender: couldTheatreRender,
+                canCubesRender: couldCubesRender
+            } = prevProps,
+
+            { hasMounted } = this.state
+
+        if (
+            (hasMounted && canSceneRender && !couldSceneRender) ||
+            (!hasMounted && canTheatreRender && !couldTheatreRender) ||
+            (
+                yIndex === canCubesRender &&
+                prevProps.yIndex > couldCubesRender
+            )
+        ) {
+            console.warn('Cubes rendered for yIndex: ', yIndex)
+            this.setNextYIndex()
         }
 
         if (!this.state.hasMounted) {
-            if (this.props.canSceneRender && !prevProps.canSceneRender) {
-                // Allow to subsequently render with Scene, not Theatre.
+            if (canSceneRender && !couldSceneRender) {
+
+                /**
+                 * Once component has mounted, it will subsequently render with
+                 * Scene, not Theatre.
+                 */
                 this.setState({
                     hasMounted: true
                 })
+            }
+        }
+    }
+
+    _setCanRenderCubes() {
+        this.props.setCanRenderCubes(
+            getNextYIndex(this.props.yIndex)
+        )
+    }
+
+    setNextYIndex() {
+        /**
+         * If there is a next yIndex to be set, only do so from one of the
+         * Cubes components.
+         */
+        if (this.props.isFloor) {
+            const
+                {
+                    yIndex,
+                    canCubesRender
+                } = this.props,
+
+                nextYIndex = getNextYIndex(yIndex)
+
+                if (yIndex === canCubesRender && yIndex < nextYIndex) {
+
+                    setTimeout(
+                    this._setCanRenderCubes,
+                    0
+                )
             }
         }
     }
@@ -192,4 +266,10 @@ class Cubes extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Cubes)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        setCanRenderCubes
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(Cubes)
