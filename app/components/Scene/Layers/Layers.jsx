@@ -70,6 +70,9 @@ class Layers extends Component {
     render() {
 
         const {
+                // eslint-disable-next-line no-unused-vars
+                canSceneRender,
+
                 presences,
                 cubes,
                 ...other

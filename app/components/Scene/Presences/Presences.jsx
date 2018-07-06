@@ -10,12 +10,11 @@ import { bindActionCreators } from 'redux'
 import cx from 'classnames'
 
 import {
-    setCanRenderPixels,
+    setCanRenderPixels
 } from '../../../redux/actions/render'
 
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
-
-import { getTileCentreForAction } from '../sceneHelper'
+import Presence from './Presence'
 
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
@@ -33,13 +32,7 @@ class Presences extends Component {
 
         // From parent.
         yIndex: PropTypes.number.isRequired,
-        presences: PropTypes.array.isRequired,
-        zIndices: PropTypes.arrayOf(
-            PropTypes.arrayOf(
-                PropTypes.number
-            ).isRequired
-        ).isRequired,
-        slantDirection: PropTypes.string.isRequired
+        presences: PropTypes.array.isRequired
     }
 
     constructor(props) {
@@ -85,10 +78,15 @@ class Presences extends Component {
     render() {
 
         const {
+                /* eslint-disable no-unused-vars */
+                canPresencesRender,
+                setCanRenderPixels,
+                dispatch,
+                /* eslint-disable no-unused-vars */
+
                 yIndex,
                 presences,
-                zIndices,
-                slantDirection
+                ...other
             } = this.props
 
         return (
@@ -100,63 +98,14 @@ class Presences extends Component {
                 viewBoxWidth={100}
                 viewBoxHeight={100}
             >
-                {presences.map((presence, index) => {
-
-                    const { name,
-                            type,
-                            xIndex,
-                            width,
-                            height } = presence,
-
-                        invertedYIndex = CUBE_Y_AXIS_LENGTH - yIndex - 1,
-
-                        /**
-                         * Either indices or raw coordinates are given. If it's
-                         * indices, then only the xIndex is provided, since
-                         * presence already knows its yIndex.
-                         */
-                        coordinates = isNaN(xIndex) ?
-                            presence : getTileCentreForAction({
-                                xIndex,
-                                yIndex: invertedYIndex,
-                                zIndices,
-                                slantDirection
-                            }),
-
-                        // These are percentages in both cases.
-                        { x, y } = coordinates,
-
-                        adjustedX = x - width / 2,
-                        adjustedY = y - height
-
-                    return (
-                        <g
-                            key={index}
-                            className={cx(
-                                name
-                            )}
-                        >
-                            <rect
-                                className={cx(
-                                    `PresenceEntry__${type}`
-                                )}
-                                x={adjustedX}
-                                y={adjustedY}
-                                width={width}
-                                height={height}
-                            />
-                            <text
-                                className="PresenceTemporaryText"
-                                x={adjustedX}
-                                y={adjustedY}
-                                width={width}
-                                height={height}
-                            >
-                                {name}
-                            </text>
-                        </g>
-                    )
-                })}
+                {presences.map((presence, index) => (
+                    <Presence
+                        key={index}
+                        {...presence}
+                        {...other}
+                        yIndex={yIndex}
+                    />
+                ))}
             </DynamicSvg>
         )
     }

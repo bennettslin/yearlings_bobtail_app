@@ -323,7 +323,7 @@ export const getStageCubeCornerPercentages = ({
     }
 }
 
-export const getTileCentreForAction = ({
+export const getTileCentreForPresence = ({
 
     xIndex,
     yIndex,

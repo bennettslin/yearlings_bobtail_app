@@ -11,15 +11,15 @@ module.exports = [
     },
 
     {
-        taskName: `Sky and Wood sometimes don't resize after window resize? Doesn't always repro.`,
+        taskName: `Presence yIndex calculator is wonky.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
 
     {
-        taskName: `Optimise Cubes based on whether key is the same.`,
+        taskName: `Sky and Wood sometimes don't resize after window resize? Doesn't always repro.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
 
     {
@@ -56,6 +56,12 @@ module.exports = [
         taskName: `Make Cubes sequence a little more smooth.`,
         workedHours: 0,
         neededHours: 3
+    },
+
+    {
+        taskName: `Optimise Cubes based on whether key is the same.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     /**
