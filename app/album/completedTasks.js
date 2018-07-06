@@ -3112,4 +3112,9 @@ module.exports = [
         workedHours: 6,
         neededHours: 6
     },
+    {
+        taskName: `Cubes are referenced by keys.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

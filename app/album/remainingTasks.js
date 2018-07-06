@@ -3,10 +3,17 @@ module.exports = [
     /**
      * Begin expected DTO tasks.
      */
+
     {
-        taskName: `Cubes and Presences are referenced by keys.`,
+        taskName: `Sky and Presences are referenced by keys.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 1
+    },
+
+    {
+        taskName: `Optimise Cubes based on whether key is the same.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     {
