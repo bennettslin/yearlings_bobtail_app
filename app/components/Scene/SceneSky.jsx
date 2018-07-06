@@ -14,11 +14,9 @@ import { SKY_ANYTIME,
         SKY_INDOOR } from '../../constants/scene'
 
 const mapStateToProps = ({
-    canTheatreRender,
-    stageCoordinates
+    canTheatreRender
 }) => ({
-    canTheatreRender,
-    stageCoordinates
+    canTheatreRender
 })
 
 class SceneSky extends Component {
@@ -38,11 +36,6 @@ class SceneSky extends Component {
         sky: PropTypes.shape({
             time: PropTypes.string.isRequired,
             season: PropTypes.string.isRequired
-        }).isRequired,
-
-        stageCoordinates: PropTypes.shape({
-            width: PropTypes.number.isRequired,
-            height: PropTypes.number.isRequired
         }).isRequired
     }
 
@@ -58,13 +51,8 @@ class SceneSky extends Component {
 
     render() {
         const {
-                sky,
-                stageCoordinates
+                sky
             } = this.props,
-            {
-                width: stageWidth,
-                height: stageHeight
-            } = stageCoordinates,
             {
                 time,
                 season
@@ -72,31 +60,26 @@ class SceneSky extends Component {
 
         return (
             <DynamicSvg
-                className="SceneSky"
-                viewBoxWidth={stageWidth}
-                viewBoxHeight={stageHeight}
+                className={cx(
+                    'SceneSky',
+                    'absoluteFullContainer'
+                )}
             >
                 <rect
                     className={cx(
                         'StageSkyFilter',
                         'StageSkyFilter__season',
-                        `StageSkyFilter__season__${season}`
+                        `StageSkyFilter__season__${season}`,
+                        'absoluteFullContainer'
                     )}
-                    x={0}
-                    y={0}
-                    width={stageWidth}
-                    height={stageHeight}
                 />
                 <rect
                     className={cx(
                         'StageSkyFilter',
                         'StageSkyFilter__time',
-                        `StageSkyFilter__time__${time}`
+                        `StageSkyFilter__time__${time}`,
+                        'absoluteFullContainer'
                     )}
-                    x={0}
-                    y={0}
-                    width={stageWidth}
-                    height={stageHeight}
                 />
                 {/* TODO: Make filter for weather, like clouds and rain. */}
             </DynamicSvg>

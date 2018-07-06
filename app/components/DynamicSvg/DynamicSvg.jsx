@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 
 const propTypes = {
     className: PropTypes.any,
-    viewBoxWidth: PropTypes.number.isRequired,
-    viewBoxHeight: PropTypes.number.isRequired,
+    viewBoxWidth: PropTypes.number,
+    viewBoxHeight: PropTypes.number,
     children: PropTypes.node.isRequired
 }
 
@@ -24,9 +24,13 @@ const DynamicSvg = ({
 
     return (
         <svg
-            className={className}
-            viewBox={`0 0 ${safeViewBoxWidth} ${safeViewBoxHeight}`}
-            xmlns="http://www.w3.org/2000/svg"
+            {...{
+                className,
+                ...safeViewBoxWidth && safeViewBoxHeight && {
+                    viewBox: `0 0 ${safeViewBoxWidth} ${safeViewBoxHeight}`
+                },
+                xmlns: 'http://www.w3.org/2000/svg'
+            }}
         >
             {children}
         </svg>

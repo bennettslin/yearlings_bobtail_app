@@ -5,7 +5,7 @@ module.exports = [
      */
 
     {
-        taskName: `Sky and Presences are referenced by keys.`,
+        taskName: `Presences are referenced by keys.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -53,7 +53,7 @@ module.exports = [
     },
 
     {
-        taskName: `Can svgs be done by percentages?`,
+        taskName: `Can svgs be done by percentages? And if not, can scene forego being rerendered after window resize?`,
         workedHours: 0,
         neededHours: 3
     },
