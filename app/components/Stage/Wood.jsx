@@ -9,24 +9,17 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import DynamicSvg from '../DynamicSvg/DynamicSvg'
-import { STAGE_Y_PERCENTAGE } from '../../constants/stage'
 
 const mapStateToProps = ({
-    canTheatreRender,
-    stageCoordinates
+    canTheatreRender
 }) => ({
-    canTheatreRender,
-    stageCoordinates
+    canTheatreRender
 })
 
-class SceneWood extends Component {
+class Wood extends Component {
 
     static propTypes = {
-        canTheatreRender: PropTypes.bool.isRequired,
-        stageCoordinates: PropTypes.shape({
-            width: PropTypes.number.isRequired,
-            height: PropTypes.number.isRequired
-        }).isRequired
+        canTheatreRender: PropTypes.bool.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -40,34 +33,19 @@ class SceneWood extends Component {
     }
 
     render() {
-
-        // Make wood stageHeight just slightly taller than tiles.
-        const {
-                stageCoordinates
-            } = this.props,
-            {
-                width: stageWidth,
-                height: stageHeight
-            } = stageCoordinates,
-
-            woodHeight = stageHeight * (STAGE_Y_PERCENTAGE + 2) * 0.009
-
         return (
             <DynamicSvg
                 className={cx(
-                    'SceneWood'
+                    'Wood'
                 )}
-                viewBoxWidth={stageWidth}
-                viewBoxHeight={woodHeight}
             >
                 <rect
-                    x={0}
-                    y={0}
-                    width={stageWidth}
-                    height={woodHeight}
+                    className={cx(
+                        'absoluteFullContainer'
+                    )}
                 />
             </DynamicSvg>
         )
     }
 }
-export default connect(mapStateToProps)(SceneWood)
+export default connect(mapStateToProps)(Wood)
