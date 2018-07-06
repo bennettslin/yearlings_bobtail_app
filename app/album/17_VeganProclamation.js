@@ -45,7 +45,7 @@ module.exports = {
                     description: 'side, protective, judgmental'
                 }
             },
-            tiles: BERKELEY_WALKWAY_CUBES,
+            cubes: BERKELEY_WALKWAY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -76,7 +76,7 @@ module.exports = {
                     description: 'side, eager'
                 }
             },
-            tiles: SHOW_STAGE_FRONT_FAR_CUBES,
+            cubes: SHOW_STAGE_FRONT_FAR_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -92,7 +92,7 @@ module.exports = {
                     description: 'walking through alley'
                 }
             },
-            tiles: ALLEY_CUBES,
+            cubes: ALLEY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -134,7 +134,7 @@ module.exports = {
                     }
                 },
             },
-            tiles: SITA_APARTMENT_BED_CUBES,
+            cubes: SITA_APARTMENT_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -171,7 +171,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SPROUL_PLAZA_CUBES,
+            cubes: SPROUL_PLAZA_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER

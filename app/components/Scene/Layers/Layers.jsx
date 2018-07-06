@@ -28,7 +28,7 @@ class Layers extends Component {
 
         // From parent.
         presence: PropTypes.object,
-        tiles: PropTypes.shape({
+        cubes: PropTypes.shape({
             ceiling: PropTypes.shape({
                 zIndices: PropTypes.array.isRequired,
                 bitmapKeys: PropTypes.array.isRequired
@@ -67,7 +67,7 @@ class Layers extends Component {
 
         const {
                 presences,
-                tiles,
+                cubes,
                 ...other
             } = this.props,
 
@@ -77,7 +77,7 @@ class Layers extends Component {
 
             // Until the component is mounted, use the default stage tiles.
             renderedTiles = hasMounted ?
-                tiles :
+                cubes :
                 CUBES[DEFAULT_STAGE_CUBES],
 
             /**

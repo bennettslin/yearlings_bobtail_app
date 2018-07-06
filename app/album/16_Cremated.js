@@ -34,7 +34,7 @@ module.exports = {
                     description: 'sitting in car, putting on perfume'
                 }
             },
-            tiles: CREMATED_CLIFF_CONVERTIBLE_CUBES,
+            cubes: CREMATED_CLIFF_CONVERTIBLE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -55,7 +55,7 @@ module.exports = {
                     description: 'back angle, eyes closed, trying to get off'
                 }
             },
-            tiles: CREMATED_CLIFF_CONVERTIBLE_CUBES,
+            cubes: CREMATED_CLIFF_CONVERTIBLE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -76,7 +76,7 @@ module.exports = {
                     description: 'back angle, giving blowjob'
                 }
             },
-            tiles: CREMATED_CLIFF_CONVERTIBLE_CUBES,
+            cubes: CREMATED_CLIFF_CONVERTIBLE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -92,7 +92,7 @@ module.exports = {
                     description: 'front angle, dying, infirm'
                 }
             },
-            tiles: CREMATED_DEATHBED_CUBES,
+            cubes: CREMATED_DEATHBED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -108,7 +108,7 @@ module.exports = {
                     description: 'serving in tennis'
                 }
             },
-            tiles: CREMATED_DEATHBED_TENNIS_CUBES,
+            cubes: CREMATED_DEATHBED_TENNIS_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -129,7 +129,7 @@ module.exports = {
                     description: 'side, looking back, reversing car'
                 }
             },
-            tiles: CREMATED_CLIFF_CONVERTIBLE_CUBES,
+            cubes: CREMATED_CLIFF_CONVERTIBLE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -138,7 +138,7 @@ module.exports = {
         {
             unitIndex: 11,
             description: `The car is in the background.`,
-            tiles: CREMATED_CLIFF_CUBES,
+            cubes: CREMATED_CLIFF_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

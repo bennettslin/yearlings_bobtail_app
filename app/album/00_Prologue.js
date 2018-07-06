@@ -15,7 +15,7 @@ module.exports = {
                     description: 'standing, facing forward, welcoming'
                 }
             },
-            tiles: LOGUE_CUBES,
+            cubes: LOGUE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_INDOOR

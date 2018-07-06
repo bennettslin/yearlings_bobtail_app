@@ -54,7 +54,7 @@ module.exports = {
                     description: 'side, walking'
                 }
             },
-            tiles: UCLA_CAMPUS_CUBES,
+            cubes: UCLA_CAMPUS_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -85,7 +85,7 @@ module.exports = {
                     description: 'side angle, feigning superiority'
                 }
             },
-            tiles: WALGREENS_CUBES,
+            cubes: WALGREENS_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -116,7 +116,7 @@ module.exports = {
                     description: 'side angle, play fighting'
                 }
             },
-            tiles: STEAM_TUNNEL_CUBES,
+            cubes: STEAM_TUNNEL_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -147,7 +147,7 @@ module.exports = {
                     description: 'side angle, squatting, pouring water on grave'
                 }
             },
-            tiles: CEMETERY_CUBES,
+            cubes: CEMETERY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -178,7 +178,7 @@ module.exports = {
                     description: 'back angle, sleeping in car'
                 }
             },
-            tiles: STATION_WAGON_CUBES,
+            cubes: STATION_WAGON_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -199,7 +199,7 @@ module.exports = {
                     description: 'downstairs, in agony'
                 }
             },
-            tiles: HOWIE_ATTIC_CUBES,
+            cubes: HOWIE_ATTIC_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

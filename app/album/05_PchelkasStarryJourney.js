@@ -33,7 +33,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Bennett's room, but seemingly no one is there.`,
-            tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -54,7 +54,7 @@ module.exports = {
                     description: 'w-sitting, blissful'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -70,7 +70,7 @@ module.exports = {
                     description: 'side, sitting up in bed, feigning sick'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -86,7 +86,7 @@ module.exports = {
                     description: 'in bed, asleep, turned away'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -102,7 +102,7 @@ module.exports = {
                     description: 'side, sitting, shaken, scared'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -128,7 +128,7 @@ module.exports = {
                     description: 'side angle, throwing rocks, angry'
                 }
             },
-            tiles: JUNIOR_HIGH_LOCKERS_CUBES,
+            cubes: JUNIOR_HIGH_LOCKERS_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -161,7 +161,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: JUNIOR_HIGH_QUAD_CUBES,
+            cubes: JUNIOR_HIGH_QUAD_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -194,7 +194,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: JUNIOR_HIGH_HALLWAY_CUBES,
+            cubes: JUNIOR_HIGH_HALLWAY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER

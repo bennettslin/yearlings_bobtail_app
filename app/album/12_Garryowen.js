@@ -39,7 +39,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -70,7 +70,7 @@ module.exports = {
                     description: 'front, clutching at fist, laughing through pain'
                 }
             },
-            tiles: VOLKSWAGEN_CUBES,
+            cubes: VOLKSWAGEN_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -93,7 +93,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_BASEMENT_CUBES,
+            cubes: BENNETT_BASEMENT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -124,7 +124,7 @@ module.exports = {
                     description: 'front, removing bass, rolling eyes'
                 }
             },
-            tiles: SHOW_STAGE_FRONT_CUBES,
+            cubes: SHOW_STAGE_FRONT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -147,7 +147,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

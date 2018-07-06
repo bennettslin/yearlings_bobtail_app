@@ -35,7 +35,7 @@ module.exports = {
                     description: 'walking away, in a bad mood'
                 }
             },
-            tiles: BENNETT_APARTMENT_COURTYARD_CUBES,
+            cubes: BENNETT_APARTMENT_COURTYARD_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -56,7 +56,7 @@ module.exports = {
                     description: 'sitting upright, droll smile'
                 }
             },
-            tiles: BENNETT_APARTMENT_COUCH_THOUGHT_CUBES,
+            cubes: BENNETT_APARTMENT_COUCH_THOUGHT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -72,7 +72,7 @@ module.exports = {
                     description: 'standing, back forward, hands in pocket'
                 }
             },
-            tiles: CATHOLIC_CHURCH_CUBES,
+            cubes: CATHOLIC_CHURCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -102,7 +102,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SPROUL_PLAZA_CUBES,
+            cubes: SPROUL_PLAZA_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -123,7 +123,7 @@ module.exports = {
                     description: 'walking forward, confused and curious at Bennett'
                 }
             },
-            tiles: BERKELEY_WALKWAY_CUBES,
+            cubes: BERKELEY_WALKWAY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

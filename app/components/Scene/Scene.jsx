@@ -130,7 +130,7 @@ class Scene extends Component {
             {
                 presences,
                 sky,
-                tiles
+                cubes
             } = sceneObject
 
         return (
@@ -149,7 +149,7 @@ class Scene extends Component {
 
                 <Layers
                     presences={presences}
-                    tiles={CUBES[tiles]}
+                    cubes={CUBES[cubes]}
                 />
             </div>
         )

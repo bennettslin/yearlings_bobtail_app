@@ -1,5 +1,30 @@
 // Separating other cubes purely for purpose of keeping file smaller.
 
+// TODO: In case I want to make cube and key constants different.
+// import {
+//     DEFAULT_STAGE_CUBES,
+//     LOGUE_CUBES,
+//     TAIWAN_PUPPET_SHOW_CUBES,
+//     SCHOOLBUS_CUBES,
+//     TETHERBALL_SCENE_CUBES,
+//     ODIN_SCENE_1_CUBES,
+//     ODIN_SCENE_2_CUBES,
+//     ODIN_SCENE_3_CUBES,
+//     ODIN_SCENE_4_CUBES,
+//     ODIN_SCENE_5_CUBES,
+//     ODIN_SCENE_6_CUBES,
+//     ODIN_SCENE_7_CUBES,
+//     ODIN_SCENE_8_CUBES,
+//     SNOW_GLOBES_1_CUBES,
+//     SNOW_GLOBES_2_CUBES,
+//     SNOW_GLOBES_3_CUBES,
+//     EL_TORITO_CUBES,
+//     PAMPAS_CUBES,
+//     OUTDOOR_WEDDING_CUBES,
+//     DREAM_CLIFF_CUBES,
+//     DREAM_DEATHBED_CUBES
+// } from './cubes'
+
 import {
     TEST_PATTERN_BITMAP
 } from '../bitmaps'

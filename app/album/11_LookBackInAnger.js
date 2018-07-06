@@ -59,7 +59,7 @@ module.exports = {
                     description: 'side, squeezing through, awkward'
                 }
             },
-            tiles: SHOW_STAGE_SIDE_1_CUBES,
+            cubes: SHOW_STAGE_SIDE_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -90,7 +90,7 @@ module.exports = {
                     description: 'side, walking, carrying cymbal, talking'
                 }
             },
-            tiles: SHOW_STAGE_SIDE_2_CUBES,
+            cubes: SHOW_STAGE_SIDE_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -131,7 +131,7 @@ module.exports = {
                     description: 'front, talking to Stephanie'
                 }
             },
-            tiles: SHOW_UNLOADING_CUBES,
+            cubes: SHOW_UNLOADING_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -168,7 +168,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_BED_CUBES,
+            cubes: SITA_APARTMENT_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER

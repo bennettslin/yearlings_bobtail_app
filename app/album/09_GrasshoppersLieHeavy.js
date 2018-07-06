@@ -39,7 +39,7 @@ module.exports = {
                     description: 'back, reading book, pulling tray from belt.'
                 }
             },
-            tiles: DISHROOM_CUBES,
+            cubes: DISHROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -62,7 +62,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: DISHROOM_CUBES,
+            cubes: DISHROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -71,7 +71,7 @@ module.exports = {
         {
             unitIndex: 6,
             description: 'Grasshoppers scene 1',
-            tiles: SITA_APARTMENT_GATE_1_CUBES,
+            cubes: SITA_APARTMENT_GATE_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -80,7 +80,7 @@ module.exports = {
         {
             unitIndex: 7,
             description: 'Grasshoppers scene 5',
-            tiles: SITA_APARTMENT_GATE_2_CUBES,
+            cubes: SITA_APARTMENT_GATE_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -103,7 +103,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_APARTMENT_GATE_CUBES,
+            cubes: BENNETT_APARTMENT_GATE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -126,7 +126,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_APARTMENT_GATE_CUBES,
+            cubes: BENNETT_APARTMENT_GATE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -149,7 +149,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_APARTMENT_BED_CUBES,
+            cubes: BENNETT_APARTMENT_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -172,7 +172,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_APARTMENT_BED_CUBES,
+            cubes: BENNETT_APARTMENT_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -188,7 +188,7 @@ module.exports = {
                     description: 'sitting, eyes closed, falling asleep'
                 }
             },
-            tiles: WAITING_ROOM_CUBES,
+            cubes: WAITING_ROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -211,7 +211,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: WAITING_ROOM_CUBES,
+            cubes: WAITING_ROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -248,7 +248,7 @@ module.exports = {
                     }
                 },
             },
-            tiles: SITA_APARTMENT_BED_CUBES,
+            cubes: SITA_APARTMENT_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -285,7 +285,7 @@ module.exports = {
                     }
                 },
             },
-            tiles: SITA_APARTMENT_BED_CUBES,
+            cubes: SITA_APARTMENT_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -322,7 +322,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_BED_CUBES,
+            cubes: SITA_APARTMENT_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER

@@ -30,7 +30,7 @@ module.exports = {
                     description: 'looking at Leonard Cohen poster'
                 }
             },
-            tiles: BENNETT_APARTMENT_COUCH_CUBES,
+            cubes: BENNETT_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -46,7 +46,7 @@ module.exports = {
                     description: 'sitting on couch, figuring out Rubiks Cube'
                 }
             },
-            tiles: BENNETT_APARTMENT_COUCH_CUBES,
+            cubes: BENNETT_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -69,7 +69,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_APARTMENT_COUCH_CUBES,
+            cubes: BENNETT_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -107,7 +107,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SHOW_STAGE_FRONT_CUBES,
+            cubes: SHOW_STAGE_FRONT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -138,7 +138,7 @@ module.exports = {
                     description: 'sitting, eating fries, laughing'
                 }
             },
-            tiles: REHEARSAL_SPACE_CUBES,
+            cubes: REHEARSAL_SPACE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -161,7 +161,7 @@ module.exports = {
                     },
                 }
             },
-            tiles: MOVIE_THEATRE_1_CUBES,
+            cubes: MOVIE_THEATRE_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -191,7 +191,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: MOVIE_THEATRE_1_CUBES,
+            cubes: MOVIE_THEATRE_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -214,7 +214,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: MOVIE_THEATRE_2_CUBES,
+            cubes: MOVIE_THEATRE_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER

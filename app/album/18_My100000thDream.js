@@ -38,7 +38,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: EL_TORITO_CUBES,
+            cubes: EL_TORITO_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -82,7 +82,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: PAMPAS_CUBES,
+            cubes: PAMPAS_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -105,7 +105,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: OUTDOOR_WEDDING_CUBES,
+            cubes: OUTDOOR_WEDDING_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -128,7 +128,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: DREAM_CLIFF_CUBES,
+            cubes: DREAM_CLIFF_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -158,7 +158,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: DREAM_DEATHBED_CUBES,
+            cubes: DREAM_DEATHBED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

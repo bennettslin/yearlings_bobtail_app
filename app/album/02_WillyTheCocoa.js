@@ -30,7 +30,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: ``,
-            tiles: FREEWAY_CUBES,
+            cubes: FREEWAY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -46,7 +46,7 @@ module.exports = {
                     description: 'side angle, holding up a bottle, squinting'
                 }
             },
-            tiles: FREEWAY_CUBES,
+            cubes: FREEWAY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -77,7 +77,7 @@ module.exports = {
                     description: 'stepping off porch, cautious, trying to calm Christopher'
                 }
             },
-            tiles: PORCH_CUBES,
+            cubes: PORCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -103,7 +103,7 @@ module.exports = {
                     description: 'side angle, aggressive stance, angry'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -133,7 +133,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: CHILDHOOD_NEIGHBOURHOOD_CUBES,
+            cubes: CHILDHOOD_NEIGHBOURHOOD_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -154,7 +154,7 @@ module.exports = {
                     description: 'lying in bed, worried, scared'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -180,7 +180,7 @@ module.exports = {
                     description: 'side angle, wide-eyed, needing reassurance'
                 }
             },
-            tiles: CHANGELING_CAVE_CUBES,
+            cubes: CHANGELING_CAVE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER

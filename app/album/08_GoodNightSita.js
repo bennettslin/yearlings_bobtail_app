@@ -36,7 +36,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_GATE_1_CUBES,
+            cubes: SITA_APARTMENT_GATE_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -59,7 +59,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: MUSEUM_CUBES,
+            cubes: MUSEUM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -94,7 +94,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BACKSTAGE_CUBES,
+            cubes: BACKSTAGE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -117,7 +117,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: GO_KART_CUBES,
+            cubes: GO_KART_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -140,7 +140,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_GATE_2_CUBES,
+            cubes: SITA_APARTMENT_GATE_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

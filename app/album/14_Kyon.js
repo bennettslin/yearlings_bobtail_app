@@ -28,7 +28,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -46,7 +46,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -64,7 +64,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -87,7 +87,7 @@ module.exports = {
                     description: 'side, cheery in a low-key way'
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -110,7 +110,7 @@ module.exports = {
                     description: 'side, seated, eating, judgmental'
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -133,7 +133,7 @@ module.exports = {
                     description: 'back angle, concerned'
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -151,7 +151,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -160,7 +160,7 @@ module.exports = {
         {
             unitIndex: 12,
             description: `Same scene. Peacocks.`,
-            tiles: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

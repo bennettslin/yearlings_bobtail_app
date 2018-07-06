@@ -33,7 +33,7 @@ module.exports = {
                     description: 'side angle, cradling bracelet, blank'
                 }
             },
-            tiles: OAKLAND_STREET_SIDE_CUBES,
+            cubes: OAKLAND_STREET_SIDE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -56,7 +56,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_THOUGHT_CUBES,
+            cubes: SITA_APARTMENT_COUCH_THOUGHT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -79,7 +79,7 @@ module.exports = {
                     }
                 },
             },
-            tiles: OAKLAND_STREET_FRONT_1_CUBES,
+            cubes: OAKLAND_STREET_FRONT_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -109,7 +109,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: OAKLAND_STREET_FRONT_2_CUBES,
+            cubes: OAKLAND_STREET_FRONT_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -160,7 +160,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: OAKLAND_STREET_FRONT_3_CUBES,
+            cubes: OAKLAND_STREET_FRONT_3_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

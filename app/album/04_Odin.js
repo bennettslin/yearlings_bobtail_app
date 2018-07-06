@@ -42,7 +42,7 @@ module.exports = {
                     description: 'side, lying on floor, propped up'
                 }
             },
-            tiles: ODIN_SCENE_1_CUBES,
+            cubes: ODIN_SCENE_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -58,7 +58,7 @@ module.exports = {
                     description: 'side angle, looking down stairs'
                 }
             },
-            tiles: ODIN_SCENE_2_CUBES,
+            cubes: ODIN_SCENE_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -74,7 +74,7 @@ module.exports = {
                     description: 'side angle, peeking out from gate'
                 }
             },
-            tiles: ODIN_SCENE_3_CUBES,
+            cubes: ODIN_SCENE_3_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -90,7 +90,7 @@ module.exports = {
                     description: 'getting off rickshaw bike'
                 }
             },
-            tiles: ODIN_SCENE_4_CUBES,
+            cubes: ODIN_SCENE_4_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -106,7 +106,7 @@ module.exports = {
                     description: 'side back, looking out to ocean'
                 }
             },
-            tiles: ODIN_SCENE_5_CUBES,
+            cubes: ODIN_SCENE_5_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -122,7 +122,7 @@ module.exports = {
                     description: 'peering down from buoy'
                 }
             },
-            tiles: ODIN_SCENE_6_CUBES,
+            cubes: ODIN_SCENE_6_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -143,7 +143,7 @@ module.exports = {
                     description: 'mermaid'
                 }
             },
-            tiles: ODIN_SCENE_7_CUBES,
+            cubes: ODIN_SCENE_7_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -159,7 +159,7 @@ module.exports = {
                     description: 'side angle, crouched in sand, looking back'
                 }
             },
-            tiles: ODIN_SCENE_8_CUBES,
+            cubes: ODIN_SCENE_8_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

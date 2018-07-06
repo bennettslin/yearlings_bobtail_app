@@ -56,7 +56,7 @@ module.exports = {
                     },
                 ]
             },
-            tiles: CHILDHOOD_NEIGHBOURHOOD_CUBES,
+            cubes: CHILDHOOD_NEIGHBOURHOOD_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -85,7 +85,7 @@ module.exports = {
                     description: 'side, running, panicked'
                 }
             },
-            tiles: CHILDHOOD_NEIGHBOURHOOD_CUBES,
+            cubes: CHILDHOOD_NEIGHBOURHOOD_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -114,7 +114,7 @@ module.exports = {
                     description: 'side, skipping, pointing back and laughing'
                 }
             },
-            tiles: PLAYGROUND_CUBES,
+            cubes: PLAYGROUND_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -133,7 +133,7 @@ module.exports = {
                     description: 'side, in bathtub, downcast'
                 }
             },
-            tiles: CHILDHOOD_BATHROOM_CUBES,
+            cubes: CHILDHOOD_BATHROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -157,7 +157,7 @@ module.exports = {
                     description: 'side, facing front, singing, smiling'
                 }
             },
-            tiles: CHILDHOOD_BATHROOM_CUBES,
+            cubes: CHILDHOOD_BATHROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

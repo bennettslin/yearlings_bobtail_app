@@ -192,7 +192,7 @@ module.exports = {
                     description: 'standing'
                 }
             },
-            tiles: LOGUE_CUBES,
+            cubes: LOGUE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_INDOOR
