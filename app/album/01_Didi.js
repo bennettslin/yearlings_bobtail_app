@@ -31,7 +31,7 @@ module.exports = {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
             presences: {
-                yIndex1: [
+                1: [
                     {
                         name: 'sample cutout 1',
                         type: CUTOUT,

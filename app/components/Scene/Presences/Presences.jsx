@@ -1,4 +1,7 @@
-// Section to show the stage illustrations.
+/**
+ * A single row of presences. A presences is any actor, fixture or prop on the
+ * stage for any given scene. I really couldn't think of a better word...
+ */
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -24,17 +27,13 @@ const mapStateToProps = ({
 
 class Presences extends Component {
 
-    static defaultProps = {
-        presence: []
-    }
-
     static propTypes = {
         // Through Redux.
         canPresencesRender: PropTypes.bool.isRequired,
 
         // From parent.
         yIndex: PropTypes.number.isRequired,
-        presence: PropTypes.array.isRequired,
+        presences: PropTypes.array.isRequired,
         zIndices: PropTypes.arrayOf(
             PropTypes.arrayOf(
                 PropTypes.number
@@ -50,7 +49,10 @@ class Presences extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        // All yIndices for Presences will render simultaneously.
+        /**
+         * Not anticipating presences to affect performance. So all yIndices
+         * will render simultaneously, at least for now.
+         */
         return nextProps.canPresencesRender
     }
 
@@ -84,7 +86,7 @@ class Presences extends Component {
 
         const {
                 yIndex,
-                presence,
+                presences,
                 zIndices,
                 slantDirection
             } = this.props
@@ -92,19 +94,19 @@ class Presences extends Component {
         return (
             <DynamicSvg
                 className={cx(
-                    `Presence__y${yIndex}`,
+                    `Presences__y${yIndex}`,
                     'absoluteFullContainer'
                 )}
                 viewBoxWidth={100}
                 viewBoxHeight={100}
             >
-                {presence.map((presenceEntry, index) => {
+                {presences.map((presence, index) => {
 
                     const { name,
                             type,
                             xIndex,
                             width,
-                            height } = presenceEntry,
+                            height } = presence,
 
                         invertedYIndex = CUBE_Y_AXIS_LENGTH - yIndex - 1,
 
@@ -114,7 +116,7 @@ class Presences extends Component {
                          * presence already knows its yIndex.
                          */
                         coordinates = isNaN(xIndex) ?
-                            presenceEntry : getTileCentreForAction({
+                            presence : getTileCentreForAction({
                                 xIndex,
                                 yIndex: invertedYIndex,
                                 zIndices,
@@ -138,17 +140,17 @@ class Presences extends Component {
                                 className={cx(
                                     `PresenceEntry__${type}`
                                 )}
-                                x={`${adjustedX}%`}
-                                y={`${adjustedY}%`}
-                                width={`${width}%`}
-                                height={`${height}%`}
+                                x={adjustedX}
+                                y={adjustedY}
+                                width={width}
+                                height={height}
                             />
                             <text
                                 className="PresenceTemporaryText"
-                                x={`${adjustedX}%`}
-                                y={`${adjustedY}%`}
-                                width={`${width}%`}
-                                height={`${height}%`}
+                                x={adjustedX}
+                                y={adjustedY}
+                                width={width}
+                                height={height}
                             >
                                 {name}
                             </text>

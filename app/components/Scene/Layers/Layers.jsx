@@ -22,12 +22,16 @@ const mapStateToProps = ({
 
 class Layers extends Component {
 
+    static defaultProps = {
+        presences: {}
+    }
+
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
 
         // From parent.
-        presence: PropTypes.object,
+        presences: PropTypes.object.isRequired,
         cubes: PropTypes.shape({
             ceiling: PropTypes.shape({
                 zIndices: PropTypes.array.isRequired,
@@ -75,32 +79,16 @@ class Layers extends Component {
                 hasMounted
             } = this.state,
 
-            // Until the component is mounted, use the default stage tiles.
-            renderedTiles = hasMounted ?
+            // Until the component is mounted, use the default stage cubes.
+            renderedCubes = hasMounted ?
                 cubes :
                 CUBES[DEFAULT_STAGE_CUBES],
 
-            /**
-             * FIXME: These safety checks should no longer be needed once all
-             * tiles and bitmapKeys for all scenes are established.
-             */
             {
-                ceiling = CUBES[DEFAULT_STAGE_CUBES].ceiling,
-                floor = CUBES[DEFAULT_STAGE_CUBES].floor,
+                ceiling = {},
+                floor = {},
                 slantDirection = ''
-            } = renderedTiles,
-
-            ceilingZIndices = ceiling.zIndices ||
-                CUBES[DEFAULT_STAGE_CUBES].ceiling.zIndices,
-
-            ceilingBitmapKeys = ceiling.bitmapKeys ||
-                CUBES[DEFAULT_STAGE_CUBES].ceiling.bitmapKeys,
-
-            floorZIndices = floor.zIndices ||
-                CUBES[DEFAULT_STAGE_CUBES].floor.zIndices,
-
-            floorBitmapKeys = floor.bitmapKeys ||
-                CUBES[DEFAULT_STAGE_CUBES].floor.bitmapKeys
+            } = renderedCubes
 
         return (
             <div
@@ -111,19 +99,25 @@ class Layers extends Component {
             >
                 {Y_INDICES_ARRAY.map(yIndex => {
 
-                    const presence = presences && presences[`yIndex${yIndex}`]
-
                     return (
                         <Layer {...other}
                             key={yIndex}
                             {...{
                                 yIndex,
                                 slantDirection,
-                                presence,
-                                ceilingZIndices,
-                                ceilingBitmapKeys,
-                                floorZIndices,
-                                floorBitmapKeys
+                                ceilingZIndices: ceiling.zIndices,
+                                ceilingBitmapKeys: ceiling.bitmapKeys,
+                                floorZIndices: floor.zIndices,
+                                floorBitmapKeys: floor.bitmapKeys,
+
+                                /**
+                                 * Not ideal, but for the Layers component,
+                                 * "presences" refers to the single object of
+                                 * arrays for each yIndex. Once passed to the
+                                 * Layer component, it refers to just the
+                                 * single array for the given yIndex.
+                                 */
+                                presences: presences[yIndex]
                             }}
                         />
                     )

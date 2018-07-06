@@ -6,10 +6,23 @@ import PropTypes from 'prop-types'
 import Cubes from '../Cubes/Cubes'
 import Presences from '../Presences/Presences'
 
+import {
+    DEFAULT_STAGE_CUBES,
+    CUBES
+} from '../../../constants/cubes/cubes'
+
 class Layers extends Component {
 
+    static defaultProps = {
+        presences: [],
+        ceilingZIndices: CUBES[DEFAULT_STAGE_CUBES].ceiling.zIndices,
+        ceilingBitmapKeys: CUBES[DEFAULT_STAGE_CUBES].ceiling.bitmapKeys,
+        floorZIndices: CUBES[DEFAULT_STAGE_CUBES].floor.zIndices,
+        floorBitmapKeys: CUBES[DEFAULT_STAGE_CUBES].floor.bitmapKeys
+    }
+
     static propTypes = {
-        presence: PropTypes.array,
+        presences: PropTypes.array,
         ceilingZIndices: PropTypes.array.isRequired,
         ceilingBitmapKeys: PropTypes.array.isRequired,
         floorZIndices: PropTypes.array.isRequired,
@@ -19,7 +32,7 @@ class Layers extends Component {
     render() {
 
         const {
-            presence,
+            presences,
             ceilingZIndices,
             ceilingBitmapKeys,
             floorZIndices,
@@ -40,7 +53,7 @@ class Layers extends Component {
                 />
                 <Presences {...other}
                     {...{
-                        presence,
+                        presences,
                         zIndices: floorZIndices
                     }}
                 />
