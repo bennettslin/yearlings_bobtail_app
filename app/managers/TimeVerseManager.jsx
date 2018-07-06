@@ -4,7 +4,10 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { setUpdatedTimePlayed } from '../redux/actions/audio'
-import { setRenderableVerseIndex } from '../redux/actions/render'
+import {
+    setCanRenderScene,
+    setRenderableVerseIndex
+} from '../redux/actions/render'
 import { setCurrentSceneIndex } from '../redux/actions/session'
 import {
     selectTimePlayed,
@@ -23,6 +26,7 @@ class TimeVerseManager extends Component {
 
     static propTypes = {
         // Through Redux.
+        canSceneRender: PropTypes.bool.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         windowWidth: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -32,6 +36,7 @@ class TimeVerseManager extends Component {
 
         setCurrentSceneIndex: PropTypes.func.isRequired,
         setRenderableVerseIndex: PropTypes.func.isRequired,
+        setCanRenderScene: PropTypes.func.isRequired,
         setUpdatedTimePlayed: PropTypes.func.isRequired,
         selectTimePlayed: PropTypes.func.isRequired,
         selectVerseIndex: PropTypes.func.isRequired,
@@ -40,6 +45,15 @@ class TimeVerseManager extends Component {
         setRef: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
+    }
+
+    constructor(props) {
+        super(props)
+
+        // this._setTimeoutForRenderScene =
+        //     this._setTimeoutForRenderScene.bind(this)
+        this._setCanRenderScene =
+            this._setCanRenderScene.bind(this)
     }
 
     componentDidMount() {
@@ -137,10 +151,7 @@ class TimeVerseManager extends Component {
                 deviceIndex: this.props.deviceIndex,
                 windowWidth: this.props.windowWidth,
                 isLyricExpanded: this.props.isLyricExpanded,
-
-                ...scrollLog && {
-                    doSetCanSceneRender: true
-                }
+                callback: this._setCanRenderScene
             })
         }
 
@@ -173,12 +184,26 @@ class TimeVerseManager extends Component {
         }
     }
 
+    // _setTimeoutForRenderScene() {
+    //     setTimeout(
+    //         this._setCanRenderScene,
+    //         0
+    //     )
+    // }
+
+    _setCanRenderScene() {
+        if (!this.props.canSceneRender) {
+            this.props.setCanRenderScene(true)
+        }
+    }
+
     render() {
         return null
     }
 }
 
 const mapStateToProps = ({
+    canSceneRender,
     deviceIndex,
     windowWidth,
     isLyricExpanded,
@@ -186,6 +211,7 @@ const mapStateToProps = ({
     selectedSongIndex,
     selectedVerseIndex
 }) => ({
+    canSceneRender,
     deviceIndex,
     windowWidth,
     isLyricExpanded,
@@ -197,6 +223,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setCurrentSceneIndex,
+        setCanRenderScene,
         setRenderableVerseIndex,
         setUpdatedTimePlayed,
         selectTimePlayed,

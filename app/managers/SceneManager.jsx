@@ -13,7 +13,8 @@ class SceneManager extends Component {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        selectVerse: PropTypes.func.isRequired
+        selectVerse: PropTypes.func.isRequired,
+        resetVerseBars: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -32,6 +33,13 @@ class SceneManager extends Component {
                 selectedVerseIndex: nextVerseIndex,
                 scrollLog: 'Manual scene changed.'
             })
+
+            /**
+             * Verse bars always get reset. This behaviour can be a little
+             * janky, but it doesn't matter since this won't get called in
+             * production.
+             */
+            this.props.resetVerseBars()
         }
     }
 

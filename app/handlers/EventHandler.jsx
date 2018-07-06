@@ -440,11 +440,11 @@ class EventHandler extends Component {
             scrollLog: 'Select interactivated verse.'
         })
 
+        // Verse bars always get reset.
+        this.props.resetVerseBars()
+
         // Deinteractivate after selecting.
         this.props.interactivateVerse()
-
-        // There won't be verse bars.
-        this.props.resetVerseBars()
 
         return true
     }
@@ -864,39 +864,6 @@ class EventHandler extends Component {
         }
     }
 
-    handleScrollUponLyricRender() {
-
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return
-        }
-
-        const { selectedAnnotationIndex } = this.props
-
-        // If a portal was selected, there will be an annotation index.
-        if (selectedAnnotationIndex) {
-
-            this.props.scrollElementIntoView({
-                log: 'Rerender selected lyric annotation.',
-                scrollClass: LYRIC_ANNOTATION_SCROLL,
-                index: selectedAnnotationIndex,
-                time: 0,
-                callback: this._determineVerseBarsCallback
-            })
-
-        // Otherwise, scroll to given verse index.
-        } else {
-            const { selectedVerseIndex } = this.props
-
-            this.props.scrollElementIntoView({
-                log: 'Rerender selected verse.',
-                scrollClass: VERSE_SCROLL,
-                index: selectedVerseIndex,
-                time: 0,
-                callback: this._determineVerseBarsCallback
-            })
-        }
-    }
-
     handleScrollUponCarouselRender() {
 
         if (getSongIsLogue(this.props.selectedSongIndex)) {
@@ -917,9 +884,37 @@ class EventHandler extends Component {
         }
     }
 
-    _determineVerseBarsCallback() {
-        // Allow this to be called without event as the argument.
-        this.props.determineVerseBars()
+    handleScrollUponLyricRender() {
+
+        if (getSongIsLogue(this.props.selectedSongIndex)) {
+            return
+        }
+
+        const { selectedAnnotationIndex } = this.props
+
+        // If a portal was selected, there will be an annotation index.
+        if (selectedAnnotationIndex) {
+
+            this.props.scrollElementIntoView({
+                log: 'Rerender selected lyric annotation.',
+                scrollClass: LYRIC_ANNOTATION_SCROLL,
+                index: selectedAnnotationIndex,
+                time: 0,
+                callback: this.props.determineVerseBars
+            })
+
+        // Otherwise, scroll to given verse index.
+        } else {
+            const { selectedVerseIndex } = this.props
+
+            this.props.scrollElementIntoView({
+                log: 'Rerender selected verse.',
+                scrollClass: VERSE_SCROLL,
+                index: selectedVerseIndex,
+                time: 0,
+                callback: this.props.determineVerseBars
+            })
+        }
     }
 
     _closeDotsIfOverviewWillShow() {

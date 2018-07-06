@@ -37,7 +37,6 @@ export const bindHandlers = (me) => {
     me.handleLyricPlay = me.handleLyricPlay.bind(me)
     me.handleLyricVerseSelect = me.handleLyricVerseSelect.bind(me)
     me.handleLyricWheel = me.handleLyricWheel.bind(me)
-    me._determineVerseBarsCallback = me._determineVerseBarsCallback.bind(me)
     me.handleNavSongSelect = me.handleNavSongSelect.bind(me)
     me.handleNavBookSelect = me.handleNavBookSelect.bind(me)
     me.handleOverviewToggle = me.handleOverviewToggle.bind(me)

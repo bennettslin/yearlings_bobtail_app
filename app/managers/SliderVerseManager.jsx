@@ -12,9 +12,6 @@ import {
     setSliderVerseIndex
 } from '../redux/actions/slider'
 
-import { VERSE_SCROLL } from '../constants/dom'
-import { getSongVerseTimes } from '../helpers/dataHelper'
-
 import {
     getSliderRatioForClientX,
     getVerseIndexforRatio
@@ -24,9 +21,6 @@ class SliderVerseManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
-        windowWidth: PropTypes.number.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
         sliderLeft: PropTypes.number.isRequired,
@@ -43,9 +37,8 @@ class SliderVerseManager extends Component {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        selectTime: PropTypes.func.isRequired,
-        resetVerseBars: PropTypes.func.isRequired,
-        scrollElementIntoView: PropTypes.func.isRequired
+        selectVerse: PropTypes.func.isRequired,
+        resetVerseBars: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -107,14 +100,13 @@ class SliderVerseManager extends Component {
         if (this.props.isSliderTouched) {
 
             // Selected verse is wherever touch ended on slider.
-            const selectedVerseIndex = this.props.sliderVerseIndex,
+            this.props.selectVerse({
+                selectedVerseIndex: this.props.sliderVerseIndex,
+                scrollLog: 'Slider touch body end.'
+            })
 
-                // We will start at the beginning of the selected verse.
-                songVerseTimes =
-                    getSongVerseTimes(this.props.selectedSongIndex),
-                selectedTimePlayed = songVerseTimes[selectedVerseIndex]
-
-            this.props.selectTime({ selectedTimePlayed })
+            // Verse bars always get reset.
+            this.props.resetVerseBars()
 
             // Reset slider state.
             this.props.setIsSliderMoving(false)
@@ -123,17 +115,6 @@ class SliderVerseManager extends Component {
             this.props.setSliderRatio(0)
             this.props.setSliderWidth(0)
             this.props.setSliderVerseIndex(-1)
-
-            // Scroll to verse index, then reset verse bars.
-            this.props.scrollElementIntoView({
-                log: 'Slider touch body end.',
-                scrollClass: VERSE_SCROLL,
-                index: selectedVerseIndex,
-                deviceIndex: this.props.deviceIndex,
-                windowWidth: this.props.windowWidth,
-                isLyricExpanded: this.props.isLyricExpanded
-            })
-            this.props.resetVerseBars()
         }
     }
 
@@ -143,9 +124,6 @@ class SliderVerseManager extends Component {
 }
 
 const mapStateToProps = ({
-    deviceIndex,
-    windowWidth,
-    isLyricExpanded,
     isSliderTouched,
     isSliderMoving,
     sliderLeft,
@@ -153,9 +131,6 @@ const mapStateToProps = ({
     selectedSongIndex,
     sliderVerseIndex
 }) => ({
-    deviceIndex,
-    windowWidth,
-    isLyricExpanded,
     isSliderTouched,
     isSliderMoving,
     sliderLeft,

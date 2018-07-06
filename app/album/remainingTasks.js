@@ -5,12 +5,6 @@ module.exports = [
      */
 
     {
-        taskName: `Optimise when changing scene.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: `Can svgs be done by percentages?`,
         workedHours: 0,
         neededHours: 3

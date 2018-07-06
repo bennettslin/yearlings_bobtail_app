@@ -424,6 +424,7 @@ class StateManager extends Component {
                 <SceneManager
                     setRef={node => (this.sceneManager = node)}
                     selectVerse={this.selectVerse}
+                    resetVerseBars={this.resetVerseBars}
                 />
                 <ScoreManager
                     setRef={node => (this.scoreManager = node)}
@@ -433,9 +434,8 @@ class StateManager extends Component {
                 />
                 <SliderVerseManager
                     setRef={node => (this.sliderVerseManager = node)}
-                    selectTime={this.selectTime}
+                    selectVerse={this.selectVerse}
                     resetVerseBars={this.resetVerseBars}
-                    scrollElementIntoView={this.scrollElementIntoView}
                 />
                 <SongManager
                     setRef={node => (this.songManager = node)}

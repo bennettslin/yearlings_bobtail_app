@@ -3107,4 +3107,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Optimise when changing scene.`,
+        workedHours: 6,
+        neededHours: 6
+    },
 ]

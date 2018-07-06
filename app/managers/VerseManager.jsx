@@ -70,7 +70,8 @@ class VerseManager extends Component {
             sliderVerseIndex !== prevProps.sliderVerseIndex
         ) {
             this._determineVerseBars({
-                verseIndex: sliderVerseIndex
+                verseIndex: sliderVerseIndex,
+                calledFromTimeout: false
             })
         }
     }
