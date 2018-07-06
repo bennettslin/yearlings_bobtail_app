@@ -436,11 +436,15 @@ class EventHandler extends Component {
 
         this.stopPropagation(e)
         this.props.selectVerse({
-            selectedVerseIndex
+            selectedVerseIndex,
+            scrollLog: 'Select interactivated verse.'
         })
 
         // Deinteractivate after selecting.
         this.props.interactivateVerse()
+
+        // There won't be verse bars.
+        this.props.resetVerseBars()
 
         return true
     }

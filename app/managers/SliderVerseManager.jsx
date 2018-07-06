@@ -97,6 +97,8 @@ class SliderVerseManager extends Component {
             this.props.setSliderRatio(sliderRatio)
             this.props.setSliderVerseIndex(sliderVerseIndex)
             this.props.setIsSliderMoving(true)
+
+            // Verse bars are determined by verse manager to avoid timeout.
         }
     }
 

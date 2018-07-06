@@ -36,20 +36,23 @@ const mapStateToProps = ({
     canCarouselRender,
     isWindowResizeRenderable,
     isSongChangeRenderable,
-    selectedCarouselNavIndex
+    selectedCarouselNavIndex,
+    selectedSongIndex,
+    currentSceneIndex
 }) => ({
     canTheatreRender,
     canMainRender,
     canCarouselRender,
     isWindowResizeRenderable,
     isSongChangeRenderable,
-    selectedCarouselNavIndex
+    selectedCarouselNavIndex,
+    selectedSongIndex,
+    currentSceneIndex
 })
 
 class Live extends Component {
 
     // Prop types are on the bottom because the list is too long.
-
     constructor(props) {
         super(props)
 
@@ -66,9 +69,22 @@ class Live extends Component {
     }
 
     componentDidUpdate(prevProps) {
+        const {
+                isSongChangeRenderable,
+                isWindowResizeRenderable,
+                selectedSongIndex,
+                currentSceneIndex
+            } = this.props,
+
+            {
+                isSongChangeRenderable: wasSongChangeRenderable,
+                isWindowResizeRenderable: wasWindowResizeRenderable,
+                selectedSongIndex: previousSongIndex,
+                currentSceneIndex: previousSceneIndex
+            } = prevProps
 
         // Is unrenderable after song change.
-        if (!this.props.isSongChangeRenderable && prevProps.isSongChangeRenderable) {
+        if (!isSongChangeRenderable && wasSongChangeRenderable) {
             this.unrenderedTime = Date.now()
 
             console.warn('Live unrenderable from song change.')
@@ -80,7 +96,7 @@ class Live extends Component {
         }
 
         // Is renderable after song change timeout.
-        if (this.props.isSongChangeRenderable && !prevProps.isSongChangeRenderable) {
+        if (isSongChangeRenderable && !wasSongChangeRenderable) {
 
             // Don't call this upon initial render.
             if (this.props.canTheatreRender) {
@@ -93,7 +109,7 @@ class Live extends Component {
         }
 
         // Is unrenderable after window resize.
-        if (!this.props.isWindowResizeRenderable && prevProps.isWindowResizeRenderable) {
+        if (!isWindowResizeRenderable && wasWindowResizeRenderable) {
             this.unrenderedTime = Date.now()
 
             console.warn('Live unrenderable from window resize.')
@@ -105,12 +121,26 @@ class Live extends Component {
          * Is renderable after window resize timeout. Also called upon initial
          * render.
          */
-        if (this.props.isWindowResizeRenderable && !prevProps.isWindowResizeRenderable) {
+        if (isWindowResizeRenderable && !wasWindowResizeRenderable) {
             console.warn(`Live renderable after window resize, took ${
                 ((Date.now() - this.unrenderedTime) / 1000).toFixed(2)
             } seconds.`)
 
             this.props.setCanRenderTheatre(true)
+        }
+
+        /**
+         * Is unrenderable after scene change within the same song. In
+         * production, this will only ever happen if a verse is selected
+         */
+        if (
+            currentSceneIndex !== previousSceneIndex &&
+            selectedSongIndex === previousSongIndex
+        ) {
+            this.unrenderedTime = Date.now()
+
+            console.warn('Live unrenderable from scene change.')
+            this.props.setCanRenderScene(false)
         }
     }
 
@@ -215,6 +245,8 @@ Live.propTypes = {
     isWindowResizeRenderable: PropTypes.bool.isRequired,
     isSongChangeRenderable: PropTypes.bool.isRequired,
     selectedCarouselNavIndex: PropTypes.number.isRequired,
+    selectedSongIndex: PropTypes.number.isRequired,
+    currentSceneIndex: PropTypes.number.isRequired,
 
     setCanRenderTheatre: PropTypes.func.isRequired,
     setCanRenderMain: PropTypes.func.isRequired,

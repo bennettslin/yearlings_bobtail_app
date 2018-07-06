@@ -68,7 +68,9 @@ class TimeVerseManager extends Component {
 
     selectVerse({
         selectedVerseIndex = 0,
-        selectedSongIndex = this.props.selectedSongIndex
+        selectedSongIndex = this.props.selectedSongIndex,
+
+        scrollLog
     }) {
         const songVerseTimes = getSongVerseTimes(selectedSongIndex),
             selectedTimePlayed = songVerseTimes[selectedVerseIndex],
@@ -84,7 +86,8 @@ class TimeVerseManager extends Component {
             selectedTimePlayed,
             selectedSongIndex,
             selectedVerseIndex,
-            renderVerseImmediately
+            renderVerseImmediately,
+            scrollLog
         })
     }
 
@@ -93,6 +96,7 @@ class TimeVerseManager extends Component {
         selectedSongIndex = this.props.selectedSongIndex,
         selectedVerseIndex,
         renderVerseImmediately,
+        scrollLog,
         isPlayerAdvancing
     }) {
 
@@ -116,19 +120,27 @@ class TimeVerseManager extends Component {
 
         /**
          * If called by player, and autoScroll is on, then scroll to selected
-         * verse if needed.
+         * verse if needed. If a scrollLog string is passed, scroll and then
+         * log the string.
          */
         if (
-            !this.props.isManualScroll &&
-            selectedVerseIndex !== props.selectedVerseIndex
+            scrollLog ||
+            (
+                !this.props.isManualScroll &&
+                selectedVerseIndex !== props.selectedVerseIndex
+            )
         ) {
             this.props.scrollElementIntoView({
-                log: 'Player autoscroll.',
+                log: scrollLog || 'Player autoscroll.',
                 scrollClass: VERSE_SCROLL,
                 index: selectedVerseIndex,
                 deviceIndex: this.props.deviceIndex,
                 windowWidth: this.props.windowWidth,
-                isLyricExpanded: this.props.isLyricExpanded
+                isLyricExpanded: this.props.isLyricExpanded,
+
+                ...scrollLog && {
+                    doSetCanSceneRender: true
+                }
             })
         }
 

@@ -52,7 +52,6 @@ class VerseManager extends Component {
     componentDidUpdate(prevProps) {
         const {
             selectedSongIndex,
-            selectedVerseIndex,
             sliderVerseIndex
         } = this.props
 
@@ -66,22 +65,18 @@ class VerseManager extends Component {
         }
 
         if (
-            (
-                // Determine verse bars here while we are sliding.
-                sliderVerseIndex > -1 &&
-                sliderVerseIndex !== prevProps.sliderVerseIndex
-            )
-            || (
-                // Determine verse bars if selecting interactivated verse.
-                sliderVerseIndex < 0 && prevProps.sliderVerseIndex < 0 &&
-                selectedVerseIndex !== prevProps.selectedVerseIndex
-            )
+            // Determine verse bars here while we are sliding.
+            sliderVerseIndex > -1 &&
+            sliderVerseIndex !== prevProps.sliderVerseIndex
         ) {
-            this.determineVerseBars()
+            this._determineVerseBars({
+                verseIndex: sliderVerseIndex
+            })
         }
     }
 
     interactivateVerse(interactivatedVerseIndex = -1) {
+
         this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)
     }
 
@@ -115,7 +110,9 @@ class VerseManager extends Component {
          * It seems to help to both make the call immediately, and then set a
          * timeout for it. For now, I don't think there's any performance hit.
          */
-        this._determineVerseBars(false)
+        this._determineVerseBars({
+            calledFromTimeout: false
+        })
 
         clearTimeout(this.state.verseBarsTimeoutId)
 
@@ -129,17 +126,16 @@ class VerseManager extends Component {
         })
     }
 
-    _determineVerseBars(calledFromTimeout = true) {
+    _determineVerseBars({
+        calledFromTimeout = true,
+        verseIndex = this.props.selectedVerseIndex
+    } = {}) {
+
         if (calledFromTimeout) {
             console.warn('Determining verse bars after timeout.')
         }
 
-        const
-            verseIndex = this.props.sliderVerseIndex > 0 ?
-                this.props.sliderVerseIndex :
-                this.props.selectedVerseIndex,
-
-            verseElement = this.props.getVerseElement(verseIndex)
+        const verseElement = this.props.getVerseElement(verseIndex)
 
         // Check for verse element in case we are loading from a logue.
         if (verseElement) {
@@ -182,7 +178,7 @@ const mapStateToProps = ({
     interactivatedVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
-    sliderVerseIndex
+    sliderVerseIndex,
 }) => ({
     deviceIndex,
     windowWidth,
@@ -192,7 +188,7 @@ const mapStateToProps = ({
     interactivatedVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
-    sliderVerseIndex
+    sliderVerseIndex,
 })
 
 const bindDispatchToProps = (dispatch) => (

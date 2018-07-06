@@ -434,7 +434,6 @@ class StateManager extends Component {
                 <SliderVerseManager
                     setRef={node => (this.sliderVerseManager = node)}
                     selectTime={this.selectTime}
-                    determineVerseBars={this.determineVerseBars}
                     resetVerseBars={this.resetVerseBars}
                     scrollElementIntoView={this.scrollElementIntoView}
                 />

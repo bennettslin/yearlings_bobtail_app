@@ -55,6 +55,7 @@ module.exports = {
 
     // Session.
     APP_MOUNTED: 'appMounted',
+    // For selecting a wiki anchor from an unselected carousel annotation.
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
     INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',
     CURRENT_SCENE_INDEX: 'currentSceneIndex',

@@ -29,7 +29,8 @@ class SceneManager extends Component {
 
         if (nextVerseIndex > -1) {
             this.props.selectVerse({
-                selectedVerseIndex: nextVerseIndex
+                selectedVerseIndex: nextVerseIndex,
+                scrollLog: 'Manual scene changed.'
             })
         }
     }
