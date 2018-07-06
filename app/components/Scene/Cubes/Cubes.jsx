@@ -37,13 +37,11 @@ const zIndicesPropTypes =
 const mapStateToProps = ({
     renderableCubesYIndex,
     canSceneRender,
-    canTheatreRender,
-    stageCoordinates
+    canTheatreRender
 }) => ({
     renderableCubesYIndex,
     canSceneRender,
-    canTheatreRender,
-    stageCoordinates
+    canTheatreRender
 })
 
 class Cubes extends Component {
@@ -65,11 +63,7 @@ class Cubes extends Component {
                 PropTypes.string.isRequired
             ).isRequired
         ).isRequired,
-        slantDirection: PropTypes.string.isRequired,
-        stageCoordinates: PropTypes.shape({
-            width: PropTypes.number.isRequired,
-            height: PropTypes.number.isRequired
-        }).isRequired
+        slantDirection: PropTypes.string.isRequired
     }
 
     constructor(props) {
@@ -213,14 +207,8 @@ class Cubes extends Component {
                 zIndices,
                 bitmapKeys,
                 isFloor,
-                slantDirection,
-                stageCoordinates
+                slantDirection
             } = this.props,
-
-            {
-                width: stageWidth,
-                height: stageHeight
-            } = stageCoordinates,
 
             /**
              * Invert the rows, since top row in array should be top row shown
@@ -244,8 +232,6 @@ class Cubes extends Component {
                     `Cubes__${isFloor ? 'floor' : 'ceiling'}`,
                     'absoluteFullContainer'
                 )}
-                viewBoxWidth={stageWidth}
-                viewBoxHeight={stageHeight}
             >
                 {columnIndicesArray.map(xIndex => {
 
