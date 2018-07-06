@@ -21,7 +21,7 @@ import {
     PORCH_CUBES,
     CHILDHOOD_NEIGHBOURHOOD_CUBES,
     CHANGELING_CAVE_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 

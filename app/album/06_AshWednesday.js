@@ -15,7 +15,7 @@ import {
     CATHOLIC_CHURCH_CUBES,
     SPROUL_PLAZA_CUBES,
     BERKELEY_WALKWAY_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {

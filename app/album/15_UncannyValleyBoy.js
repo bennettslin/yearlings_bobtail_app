@@ -20,7 +20,7 @@ import {
     SNOW_GLOBES_1_CUBES,
     SNOW_GLOBES_2_CUBES,
     SNOW_GLOBES_3_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {

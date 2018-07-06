@@ -18,7 +18,7 @@ import {
     CHILDHOOD_BATHROOM_CUBES,
     CHILDHOOD_NEIGHBOURHOOD_CUBES,
     PLAYGROUND_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { CUTOUT,
          FIXTURE,
          ACTOR,

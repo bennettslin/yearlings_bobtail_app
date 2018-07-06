@@ -14,7 +14,7 @@ import {
     TAIWAN_PUPPET_SHOW_CUBES,
     SCHOOLBUS_CUBES,
     TETHERBALL_SCENE_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {

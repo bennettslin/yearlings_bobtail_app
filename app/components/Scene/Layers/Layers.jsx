@@ -10,7 +10,7 @@ import Layer from './Layer'
 import {
     DEFAULT_STAGE_CUBES,
     CUBES
-} from '../../../constants/cubes'
+} from '../../../constants/cubes/cubes'
 
 import { Y_INDICES_ARRAY } from '../constants'
 

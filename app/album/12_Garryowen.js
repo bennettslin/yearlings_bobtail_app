@@ -17,7 +17,7 @@ import {
     BENNETT_BASEMENT_CUBES,
     SHOW_STAGE_FRONT_CUBES,
     VOLKSWAGEN_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {

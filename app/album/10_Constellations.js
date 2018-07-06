@@ -23,7 +23,7 @@ import {
     UCLA_CAMPUS_CUBES,
     CEMETERY_CUBES,
     STATION_WAGON_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 

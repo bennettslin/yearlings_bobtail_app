@@ -17,7 +17,7 @@ import SceneSky from './SceneSky'
 import Wood from '../Stage/Wood'
 
 import { getSceneObject } from '../../helpers/dataHelper'
-import { CUBES } from '../../constants/cubes'
+import { CUBES } from '../../constants/cubes/cubes'
 
 const mapStateToProps = ({
     canSceneRender,

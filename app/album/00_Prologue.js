@@ -1,4 +1,4 @@
-import { LOGUE_CUBES } from '../constants/cubes'
+import { LOGUE_CUBES } from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_INDOOR } from '../constants/scene'
 module.exports = {

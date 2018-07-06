@@ -18,7 +18,7 @@ import {
     ALLEY_CUBES,
     SPROUL_PLAZA_CUBES,
     BERKELEY_WALKWAY_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_WINTER } from '../constants/scene'
 module.exports = {

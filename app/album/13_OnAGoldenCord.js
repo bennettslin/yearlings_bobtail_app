@@ -18,7 +18,7 @@ import {
     OAKLAND_STREET_FRONT_1_CUBES,
     OAKLAND_STREET_FRONT_2_CUBES,
     OAKLAND_STREET_FRONT_3_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {

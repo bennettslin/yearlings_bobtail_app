@@ -26,7 +26,7 @@ import {
     ODIN_SCENE_6_CUBES,
     ODIN_SCENE_7_CUBES,
     ODIN_SCENE_8_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'

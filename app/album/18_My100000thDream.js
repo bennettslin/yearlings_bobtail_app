@@ -16,7 +16,7 @@ import {
     OUTDOOR_WEDDING_CUBES,
     DREAM_CLIFF_CUBES,
     DREAM_DEATHBED_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {

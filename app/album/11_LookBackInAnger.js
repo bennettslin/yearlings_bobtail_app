@@ -17,7 +17,7 @@ import {
     SHOW_STAGE_SIDE_2_CUBES,
     SITA_APARTMENT_BED_CUBES,
     SHOW_UNLOADING_CUBES
-} from '../constants/cubes'
+} from '../constants/cubes/cubes'
 import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {
