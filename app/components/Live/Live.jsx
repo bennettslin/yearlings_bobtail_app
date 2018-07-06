@@ -114,7 +114,6 @@ class Live extends Component {
 
             console.warn('Live unrenderable from window resize.')
             this.props.setCanRenderTheatre(false)
-            this.props.setCanRenderScene(false)
         }
 
         /**
@@ -149,9 +148,9 @@ class Live extends Component {
          * This isn't the most elegant way to tell whether we're rendering
          * after song change or after window resize. But it will do for now.
          */
-        this.props.canMainRender ?
-            this.props.setCanRenderScene(true) :
+        if (!this.props.canMainRender) {
             this.props.setCanRenderMain(true)
+        }
     }
 
     mainDidRender() {

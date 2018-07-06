@@ -232,6 +232,8 @@ class Cubes extends Component {
                     `Cubes__${isFloor ? 'floor' : 'ceiling'}`,
                     'absoluteFullContainer'
                 )}
+                viewBoxWidth={100}
+                viewBoxHeight={100}
             >
                 {columnIndicesArray.map(xIndex => {
 

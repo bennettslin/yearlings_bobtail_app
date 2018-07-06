@@ -3117,4 +3117,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Can svgs be done by percentages? And if not, can scene forego being rerendered after window resize?`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

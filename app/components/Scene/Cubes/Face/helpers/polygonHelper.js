@@ -8,9 +8,9 @@ export const getPolygonPointsString = (polygonPointsArray) => {
     }).join(' ')
 }
 
-const _getPolygonPoint = ({ x, y }, stageWidth, stageHeight) => {
-    const xPoint = x * stageWidth * 0.01,
-        yPoint = y * stageHeight * 0.01
+const _getPolygonPoint = ({ x, y }) => {
+    const xPoint = x,
+        yPoint = y
 
     return {
         x: xPoint,
@@ -22,8 +22,6 @@ export const getPolygonPointsForFrontFace = ({
 
     slantDirection,
     cubeCorners,
-    stageWidth,
-    stageHeight,
     isFloor
 
 }) => {
@@ -47,7 +45,7 @@ export const getPolygonPointsForFrontFace = ({
     }
 
     return cornerOrder.map(corner => (
-        _getPolygonPoint(corner, stageWidth, stageHeight)
+        _getPolygonPoint(corner)
     ))
 }
 
@@ -56,8 +54,6 @@ export const getPolygonPointsForSideFace = ({
     sideDirection,
     slantDirection,
     cubeCorners,
-    stageWidth,
-    stageHeight,
     isFloor
 
 }) => {
@@ -92,7 +88,7 @@ export const getPolygonPointsForSideFace = ({
     }
 
     return cornerOrder.map(corner => (
-        _getPolygonPoint(corner, stageWidth, stageHeight)
+        _getPolygonPoint(corner)
     ))
 }
 
@@ -100,8 +96,6 @@ export const getPolygonPointsForTileFace = ({
 
     slantDirection,
     cubeCorners,
-    stageWidth,
-    stageHeight,
     isFloor
 
 }) => {
@@ -126,7 +120,7 @@ export const getPolygonPointsForTileFace = ({
     }
 
     return cornerOrder.map(corner => (
-        _getPolygonPoint(corner, stageWidth, stageHeight)
+        _getPolygonPoint(corner)
     ))
 }
 
@@ -135,9 +129,7 @@ export const getPolygonPoints = ({
     isFloor,
     sideDirection,
     slantDirection,
-    cubeCorners,
-    stageWidth,
-    stageHeight
+    cubeCorners
 }) => {
 
     if (face === TILE) {
@@ -145,9 +137,7 @@ export const getPolygonPoints = ({
         return getPolygonPointsForTileFace({
             isFloor,
             slantDirection,
-            cubeCorners,
-            stageWidth,
-            stageHeight
+            cubeCorners
         })
 
     } else if (face === FRONT) {
@@ -155,9 +145,7 @@ export const getPolygonPoints = ({
         return getPolygonPointsForFrontFace({
             isFloor,
             slantDirection,
-            cubeCorners,
-            stageWidth,
-            stageHeight
+            cubeCorners
         })
 
     } else if (face === SIDE) {
@@ -166,9 +154,7 @@ export const getPolygonPoints = ({
             isFloor,
             sideDirection,
             slantDirection,
-            cubeCorners,
-            stageWidth,
-            stageHeight
+            cubeCorners
         })
     }
 }

@@ -11,6 +11,12 @@ module.exports = [
     },
 
     {
+        taskName: `Sky and Wood sometimes don't resize after window resize? Doesn't always repro.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Optimise Cubes based on whether key is the same.`,
         workedHours: 0,
         neededHours: 2
@@ -48,12 +54,6 @@ module.exports = [
 
     {
         taskName: `Make Cubes sequence a little more smooth.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: `Can svgs be done by percentages? And if not, can scene forego being rerendered after window resize?`,
         workedHours: 0,
         neededHours: 3
     },

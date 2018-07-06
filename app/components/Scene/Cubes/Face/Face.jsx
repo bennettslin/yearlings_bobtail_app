@@ -36,12 +36,10 @@ const
 
 const mapStateToProps = ({
     canSceneRender,
-    canTheatreRender,
-    stageCoordinates
+    canTheatreRender
 }) => ({
     canSceneRender,
-    canTheatreRender,
-    stageCoordinates
+    canTheatreRender
 })
 
 class Face extends Component {
@@ -67,11 +65,6 @@ class Face extends Component {
         cubeCorners: PropTypes.shape({
             tile: facePropType,
             base: facePropType
-        }).isRequired,
-
-        stageCoordinates: PropTypes.shape({
-            width: PropTypes.number.isRequired,
-            height: PropTypes.number.isRequired
         }).isRequired
     }
 
@@ -113,21 +106,14 @@ class Face extends Component {
                 canUpdateRenderableYIndex,
                 yIndex,
                 zIndex,
-                cubeCorners,
-                stageCoordinates
+                cubeCorners
             } = this.props,
-            {
-                width: stageWidth,
-                height: stageHeight
-            } = stageCoordinates,
             polygonPoints = getPolygonPoints({
                 face,
                 isFloor,
                 sideDirection,
                 slantDirection,
-                cubeCorners,
-                stageWidth,
-                stageHeight
+                cubeCorners
             }),
 
             // Get base colour and pixel map.

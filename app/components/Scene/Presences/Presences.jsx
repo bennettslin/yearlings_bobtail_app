@@ -17,11 +17,9 @@ import { getTileCentreForAction } from '../sceneHelper'
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
 const mapStateToProps = ({
-    canPresencesRender,
-    stageCoordinates
+    canPresencesRender
 }) => ({
-    canPresencesRender,
-    stageCoordinates
+    canPresencesRender
 })
 
 class Presences extends Component {
@@ -33,10 +31,6 @@ class Presences extends Component {
     static propTypes = {
         // Through Redux.
         canPresencesRender: PropTypes.bool.isRequired,
-        stageCoordinates: PropTypes.shape({
-            width: PropTypes.number.isRequired,
-            height: PropTypes.number.isRequired
-        }).isRequired,
 
         // From parent.
         yIndex: PropTypes.number.isRequired,
@@ -92,13 +86,8 @@ class Presences extends Component {
                 yIndex,
                 presence,
                 zIndices,
-                slantDirection,
-                stageCoordinates
-            } = this.props,
-            {
-                width: stageWidth,
-                height: stageHeight
-            } = stageCoordinates
+                slantDirection
+            } = this.props
 
         return (
             <DynamicSvg
@@ -106,8 +95,8 @@ class Presences extends Component {
                     `Presence__y${yIndex}`,
                     'absoluteFullContainer'
                 )}
-                viewBoxWidth={stageWidth}
-                viewBoxHeight={stageHeight}
+                viewBoxWidth={100}
+                viewBoxHeight={100}
             >
                 {presence.map((presenceEntry, index) => {
 
@@ -158,6 +147,8 @@ class Presences extends Component {
                                 className="PresenceTemporaryText"
                                 x={`${adjustedX}%`}
                                 y={`${adjustedY}%`}
+                                width={`${width}%`}
+                                height={`${height}%`}
                             >
                                 {name}
                             </text>
