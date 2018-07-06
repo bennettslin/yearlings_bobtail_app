@@ -33,17 +33,33 @@ module.exports = {
             presences: {
                 1: [
                     {
+                        name: 'sample fixture 1',
+                        type: FIXTURE,
+                        xIndex: 4,
+                        width: 5,
+                        height: 25
+                    },
+                    {
+                        name: 'sample cutout 1',
+                        type: CUTOUT,
+                        xIndex: 10,
+                        width: 15,
+                        height: 15
+                    }
+                ],
+                4: [
+                    {
                         name: 'sample cutout 1',
                         type: CUTOUT,
                         xIndex: 2,
                         width: 10,
-                        height: 10
+                        height: 20
                     },
                     {
                         name: 'sample fixture 1',
                         type: FIXTURE,
                         xIndex: 6,
-                        width: 10,
+                        width: 20,
                         height: 10
                     },
                     {

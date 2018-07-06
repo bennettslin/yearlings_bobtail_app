@@ -2,6 +2,7 @@ import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
     CUBE_X_AXIS_LENGTH,
+    CUBE_Y_AXIS_LENGTH,
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_X_UNITS_LENGTH
 } from '../../constants/stage'
@@ -326,15 +327,20 @@ export const getStageCubeCornerPercentages = ({
 export const getTileCentreForPresence = ({
 
     xIndex,
-    yIndex,
+    yIndex: invertedYIndex,
     zIndices,
     slantDirection
 
 }) => {
 
-    const getHorizontalPlaneFractions = _getHorizontalPlaneFractionsFunction(
-            slantDirection
-        ),
+    const
+
+        // TODO: I don't know why this should be the case...
+        yIndex = CUBE_Y_AXIS_LENGTH - invertedYIndex - 1,
+
+        getHorizontalPlaneFractions = _getHorizontalPlaneFractionsFunction(
+                slantDirection
+            ),
 
         zIndex = getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
 
