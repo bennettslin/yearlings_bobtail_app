@@ -7,7 +7,10 @@ import { connect } from 'react-redux'
 
 import Layer from './Layer'
 
-import { DEFAULT_STAGE_TILES } from '../../../constants/cubesOther'
+import {
+    DEFAULT_STAGE_CUBES,
+    CUBES
+} from '../../../constants/cubes'
 
 import { Y_INDICES_ARRAY } from '../constants'
 
@@ -75,29 +78,29 @@ class Layers extends Component {
             // Until the component is mounted, use the default stage tiles.
             renderedTiles = hasMounted ?
                 tiles :
-                DEFAULT_STAGE_TILES,
+                CUBES[DEFAULT_STAGE_CUBES],
 
             /**
              * FIXME: These safety checks should no longer be needed once all
              * tiles and bitmapKeys for all scenes are established.
              */
             {
-                ceiling = DEFAULT_STAGE_TILES.ceiling,
-                floor = DEFAULT_STAGE_TILES.floor,
+                ceiling = CUBES[DEFAULT_STAGE_CUBES].ceiling,
+                floor = CUBES[DEFAULT_STAGE_CUBES].floor,
                 slantDirection = ''
             } = renderedTiles,
 
             ceilingZIndices = ceiling.zIndices ||
-                DEFAULT_STAGE_TILES.ceiling.zIndices,
+                CUBES[DEFAULT_STAGE_CUBES].ceiling.zIndices,
 
             ceilingBitmapKeys = ceiling.bitmapKeys ||
-                DEFAULT_STAGE_TILES.ceiling.bitmapKeys,
+                CUBES[DEFAULT_STAGE_CUBES].ceiling.bitmapKeys,
 
             floorZIndices = floor.zIndices ||
-                DEFAULT_STAGE_TILES.floor.zIndices,
+                CUBES[DEFAULT_STAGE_CUBES].floor.zIndices,
 
             floorBitmapKeys = floor.bitmapKeys ||
-                DEFAULT_STAGE_TILES.floor.bitmapKeys
+                CUBES[DEFAULT_STAGE_CUBES].floor.bitmapKeys
 
         return (
             <div

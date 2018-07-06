@@ -12,11 +12,13 @@ import { VERSES,
          INTRO,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { SITA_APARTMENT_COUCH_THOUGHT_TILES } from '../constants/cubesIndoor'
-import { OAKLAND_STREET_SIDE_TILES,
-         OAKLAND_STREET_FRONT_1_TILES,
-         OAKLAND_STREET_FRONT_2_TILES,
-         OAKLAND_STREET_FRONT_3_TILES } from '../constants/cubesOutdoor'
+import {
+    SITA_APARTMENT_COUCH_THOUGHT_CUBES,
+    OAKLAND_STREET_SIDE_CUBES,
+    OAKLAND_STREET_FRONT_1_CUBES,
+    OAKLAND_STREET_FRONT_2_CUBES,
+    OAKLAND_STREET_FRONT_3_CUBES
+} from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
@@ -31,7 +33,7 @@ module.exports = {
                     description: 'side angle, cradling bracelet, blank'
                 }
             },
-            tiles: OAKLAND_STREET_SIDE_TILES,
+            tiles: OAKLAND_STREET_SIDE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -54,7 +56,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_COUCH_THOUGHT_TILES,
+            tiles: SITA_APARTMENT_COUCH_THOUGHT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -77,7 +79,7 @@ module.exports = {
                     }
                 },
             },
-            tiles: OAKLAND_STREET_FRONT_1_TILES,
+            tiles: OAKLAND_STREET_FRONT_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -107,7 +109,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: OAKLAND_STREET_FRONT_2_TILES,
+            tiles: OAKLAND_STREET_FRONT_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -158,7 +160,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: OAKLAND_STREET_FRONT_3_TILES,
+            tiles: OAKLAND_STREET_FRONT_3_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

@@ -47,6 +47,11 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Animate tiles.`,
+        workedHours: 0,
+        neededHours: 3
+    },
 
         // Low priority bugs.
     // {

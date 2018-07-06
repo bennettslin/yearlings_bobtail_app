@@ -1,4 +1,4 @@
-import { LOGUE_TILES } from '../constants/cubesOther'
+import { LOGUE_CUBES } from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_INDOOR } from '../constants/scene'
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
                     description: 'standing, facing forward, welcoming'
                 }
             },
-            tiles: LOGUE_TILES,
+            tiles: LOGUE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_INDOOR

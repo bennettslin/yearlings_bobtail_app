@@ -17,8 +17,7 @@ import SceneSky from './SceneSky'
 import Wood from '../Stage/Wood'
 
 import { getSceneObject } from '../../helpers/dataHelper'
-
-// import { CUBE_Y_AXIS_LENGTH } from '../../constants/stage'
+import { CUBES } from '../../constants/cubes'
 
 const mapStateToProps = ({
     canSceneRender,
@@ -128,7 +127,11 @@ class Scene extends Component {
                 renderableSongIndex, currentSceneIndex
             ),
 
-            { presences, sky, tiles } = sceneObject
+            {
+                presences,
+                sky,
+                tiles
+            } = sceneObject
 
         return (
             <div className={cx(
@@ -146,7 +149,7 @@ class Scene extends Component {
 
                 <Layers
                     presences={presences}
-                    tiles={tiles}
+                    tiles={CUBES[tiles]}
                 />
             </div>
         )

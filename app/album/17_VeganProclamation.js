@@ -12,11 +12,13 @@ import { VERSES,
          SOLO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { SHOW_STAGE_FRONT_FAR_TILES,
-         SITA_APARTMENT_BED_TILES } from '../constants/cubesIndoor'
-import { ALLEY_TILES,
-         SPROUL_PLAZA_TILES,
-         BERKELEY_WALKWAY_TILES } from '../constants/cubesOutdoor'
+import {
+    SHOW_STAGE_FRONT_FAR_CUBES,
+    SITA_APARTMENT_BED_CUBES,
+    ALLEY_CUBES,
+    SPROUL_PLAZA_CUBES,
+    BERKELEY_WALKWAY_CUBES
+} from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_WINTER } from '../constants/scene'
 module.exports = {
@@ -43,7 +45,7 @@ module.exports = {
                     description: 'side, protective, judgmental'
                 }
             },
-            tiles: BERKELEY_WALKWAY_TILES,
+            tiles: BERKELEY_WALKWAY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -74,7 +76,7 @@ module.exports = {
                     description: 'side, eager'
                 }
             },
-            tiles: SHOW_STAGE_FRONT_FAR_TILES,
+            tiles: SHOW_STAGE_FRONT_FAR_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -90,7 +92,7 @@ module.exports = {
                     description: 'walking through alley'
                 }
             },
-            tiles: ALLEY_TILES,
+            tiles: ALLEY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -132,7 +134,7 @@ module.exports = {
                     }
                 },
             },
-            tiles: SITA_APARTMENT_BED_TILES,
+            tiles: SITA_APARTMENT_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -169,7 +171,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SPROUL_PLAZA_TILES,
+            tiles: SPROUL_PLAZA_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER

@@ -20,7 +20,7 @@ const
     LEFT = 'left',
     // RIGHT = 'right',
 
-    CHILDHOOD_BATHROOM_TILES = {
+    CHILDHOOD_BATHROOM_CUBES = {
         // Indoor wall is 7.5'. Raised bathtub.
         ceiling: {
             zIndices: [
@@ -43,16 +43,6 @@ const
             ]
         }
     },
-    CHANGELING_CAVE_TILES = {
-        floor: {
-            zIndices: [
-                [0]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
-            ]
-        }
-    },
     PRETEEN_BENNETT_ROOM_CEILING = [
         [k, k, k, k, k, g, k, g, g, g, k],
         [k, k, k, g, g, g, g, g, g, g, k],
@@ -61,7 +51,7 @@ const
         [g, g, g, g, g, g, g, g, g, g, g, k],
         [g]
     ],
-    PRETEEN_BENNETT_ROOM_TILES = {
+    PRETEEN_BENNETT_ROOM_CUBES = {
         slantDirection: LEFT,
         // Captain bed height is 3.5'.
         ceiling: {
@@ -97,7 +87,7 @@ const
             ]
         }
     },
-    PRETEEN_BENNETT_ROOM_OPEN_BED_TILES = {
+    PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES = {
         slantDirection: LEFT,
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
@@ -119,7 +109,7 @@ const
             ]
         }
     },
-    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES = {
+    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES = {
         slantDirection: LEFT,
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
@@ -141,7 +131,7 @@ const
             ]
         }
     },
-    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES = {
+    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_CUBES = {
         slantDirection: LEFT,
         ceiling: {
             zIndices: PRETEEN_BENNETT_ROOM_CEILING,
@@ -162,7 +152,7 @@ const
             ]
         }
     },
-    JUNIOR_HIGH_HALLWAY_TILES = {
+    JUNIOR_HIGH_HALLWAY_CUBES = {
         // Indoor wall is 7.5'.
         ceiling: {
             zIndices: [
@@ -186,7 +176,7 @@ const
             ]
         }
     },
-    BENNETT_APARTMENT_BED_TILES = {
+    BENNETT_APARTMENT_BED_CUBES = {
         // Outdoor wall is 8'. Indoor wall is 7.5'. Bed is 7.5 long, 1' tall.
         floor: {
             zIndices: [
@@ -202,7 +192,7 @@ const
             ]
         }
     },
-    BENNETT_APARTMENT_COUCH_TILES = {
+    BENNETT_APARTMENT_COUCH_CUBES = {
         // Indoor wall is 7.5'. Couch seat cushions add extra 0.5'.
         ceiling: {
             zIndices: [
@@ -225,7 +215,7 @@ const
             ]
         }
     },
-    BENNETT_APARTMENT_COUCH_THOUGHT_TILES = {
+    BENNETT_APARTMENT_COUCH_THOUGHT_CUBES = {
         // Couch seat cushions add extra half foot.
         floor: {
             zIndices: [
@@ -240,7 +230,7 @@ const
             ]
         }
     },
-    BENNETT_BASEMENT_TILES = {
+    BENNETT_BASEMENT_CUBES = {
         // Basement wall is 6', depth is 2.5'. Bed is 1'.
         ceiling: {
             zIndices: [
@@ -264,7 +254,7 @@ const
             ]
         }
     },
-    REHEARSAL_SPACE_TILES = {
+    REHEARSAL_SPACE_CUBES = {
         ceiling: {
             zIndices: [
                 [g]
@@ -288,7 +278,7 @@ const
         }
     },
 
-    MUSEUM_TILES = {
+    MUSEUM_CUBES = {
         floor: {
             zIndices: [
                 [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
@@ -303,7 +293,7 @@ const
             ]
         }
     },
-    BACKSTAGE_TILES = {
+    BACKSTAGE_CUBES = {
         floor: {
             zIndices: [
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
@@ -313,7 +303,7 @@ const
             ]
         }
     },
-    DISHROOM_TILES = {
+    DISHROOM_CUBES = {
         // Indoor wall is 7.5'. Sink is 3'. Conveyor is 5.5'.
         floor: {
             zIndices: [
@@ -329,7 +319,7 @@ const
             ]
         }
     },
-    WAITING_ROOM_TILES = {
+    WAITING_ROOM_CUBES = {
         floor: {
             zIndices: [
                 [0, g, g, g, g, g, g, g, g, g, g, 0],
@@ -344,7 +334,7 @@ const
             ]
         }
     },
-    WALGREENS_TILES = {
+    WALGREENS_CUBES = {
         floor: {
             zIndices: [
                 [h],
@@ -356,7 +346,7 @@ const
             ]
         }
     },
-    STEAM_TUNNEL_TILES = {
+    STEAM_TUNNEL_CUBES = {
         floor: {
             zIndices: [
                 [h],
@@ -368,7 +358,7 @@ const
             ]
         }
     },
-    HOWIE_ATTIC_TILES = {
+    HOWIE_ATTIC_CUBES = {
         floor: {
             zIndices: [
                 [k],
@@ -384,7 +374,7 @@ const
         }
     },
 
-    SHOW_STAGE_FRONT_TILES = {
+    SHOW_STAGE_FRONT_CUBES = {
         // Indoor wall of club is 9'. Club stage is 2.5'.
         floor: {
             zIndices: [
@@ -400,7 +390,7 @@ const
             ]
         }
     },
-    SHOW_STAGE_FRONT_FAR_TILES = {
+    SHOW_STAGE_FRONT_FAR_CUBES = {
         // Indoor wall of club is 9'. Club stage is 2.5'.
         ceiling: {
             zIndices: [
@@ -422,7 +412,7 @@ const
         }
     },
 
-    SHOW_STAGE_SIDE_1_TILES = {
+    SHOW_STAGE_SIDE_1_CUBES = {
         ceiling: {
             zIndices: [
                 [j]
@@ -445,7 +435,7 @@ const
             ]
         }
     },
-    SHOW_STAGE_SIDE_2_TILES = {
+    SHOW_STAGE_SIDE_2_CUBES = {
         ceiling: {
             zIndices: [
                 [j]
@@ -469,7 +459,7 @@ const
         }
     },
 
-    SITA_APARTMENT_BED_TILES = {
+    SITA_APARTMENT_BED_CUBES = {
         floor: {
             zIndices: [
                 [1, 7, 7, 7, 9, 9, 9, 9, 7, 7, 7, 1],
@@ -484,7 +474,7 @@ const
             ]
         }
     },
-    SITA_APARTMENT_COUCH_TILES = {
+    SITA_APARTMENT_COUCH_CUBES = {
         // Indoor wall is 7.5'.
         ceiling: {
             zIndices: [
@@ -508,7 +498,7 @@ const
             ]
         }
     },
-    SITA_APARTMENT_COUCH_THOUGHT_TILES = {
+    SITA_APARTMENT_COUCH_THOUGHT_CUBES = {
         floor: {
             zIndices: [
                 [1],
@@ -519,33 +509,36 @@ const
                 [TEST_PATTERN_BITMAP]
             ]
         }
+    },
+
+    CUBES_INDOOR = {
+        CHILDHOOD_BATHROOM_CUBES,
+        PRETEEN_BENNETT_ROOM_CUBES,
+        PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
+        PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES,
+        PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_CUBES,
+        JUNIOR_HIGH_HALLWAY_CUBES,
+        BENNETT_APARTMENT_COUCH_CUBES,
+        BENNETT_APARTMENT_COUCH_THOUGHT_CUBES,
+        BENNETT_BASEMENT_CUBES,
+        SHOW_STAGE_FRONT_CUBES,
+        SHOW_STAGE_FRONT_FAR_CUBES,
+        REHEARSAL_SPACE_CUBES,
+        MUSEUM_CUBES,
+        BACKSTAGE_CUBES,
+        DISHROOM_CUBES,
+        BENNETT_APARTMENT_BED_CUBES,
+        WAITING_ROOM_CUBES,
+        SITA_APARTMENT_BED_CUBES,
+        WALGREENS_CUBES,
+        STEAM_TUNNEL_CUBES,
+        HOWIE_ATTIC_CUBES,
+        SHOW_STAGE_SIDE_1_CUBES,
+        SHOW_STAGE_SIDE_2_CUBES,
+        SITA_APARTMENT_COUCH_CUBES,
+        SITA_APARTMENT_COUCH_THOUGHT_CUBES
     }
 
-module.exports = {
-    CHILDHOOD_BATHROOM_TILES,
-    PRETEEN_BENNETT_ROOM_TILES,
-    PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
-    CHANGELING_CAVE_TILES,
-    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES,
-    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES,
-    JUNIOR_HIGH_HALLWAY_TILES,
-    BENNETT_APARTMENT_COUCH_TILES,
-    BENNETT_APARTMENT_COUCH_THOUGHT_TILES,
-    BENNETT_BASEMENT_TILES,
-    SHOW_STAGE_FRONT_TILES,
-    SHOW_STAGE_FRONT_FAR_TILES,
-    REHEARSAL_SPACE_TILES,
-    MUSEUM_TILES,
-    BACKSTAGE_TILES,
-    DISHROOM_TILES,
-    BENNETT_APARTMENT_BED_TILES,
-    WAITING_ROOM_TILES,
-    SITA_APARTMENT_BED_TILES,
-    WALGREENS_TILES,
-    STEAM_TUNNEL_TILES,
-    HOWIE_ATTIC_TILES,
-    SHOW_STAGE_SIDE_1_TILES,
-    SHOW_STAGE_SIDE_2_TILES,
-    SITA_APARTMENT_COUCH_TILES,
-    SITA_APARTMENT_COUCH_THOUGHT_TILES
+export {
+    CUBES_INDOOR
 }

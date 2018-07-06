@@ -9,11 +9,13 @@ import { VERSES,
          RESPONSE,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { BENNETT_APARTMENT_COUCH_TILES,
-         SHOW_STAGE_FRONT_TILES,
-         REHEARSAL_SPACE_TILES } from '../constants/cubesIndoor'
-import { MOVIE_THEATRE_1_TILES,
-         MOVIE_THEATRE_2_TILES } from '../constants/cubesOutdoor'
+import {
+    BENNETT_APARTMENT_COUCH_CUBES,
+    SHOW_STAGE_FRONT_CUBES,
+    REHEARSAL_SPACE_CUBES,
+    MOVIE_THEATRE_1_CUBES,
+    MOVIE_THEATRE_2_CUBES
+} from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {
@@ -28,7 +30,7 @@ module.exports = {
                     description: 'looking at Leonard Cohen poster'
                 }
             },
-            tiles: BENNETT_APARTMENT_COUCH_TILES,
+            tiles: BENNETT_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -44,7 +46,7 @@ module.exports = {
                     description: 'sitting on couch, figuring out Rubiks Cube'
                 }
             },
-            tiles: BENNETT_APARTMENT_COUCH_TILES,
+            tiles: BENNETT_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -67,7 +69,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_APARTMENT_COUCH_TILES,
+            tiles: BENNETT_APARTMENT_COUCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -105,7 +107,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SHOW_STAGE_FRONT_TILES,
+            tiles: SHOW_STAGE_FRONT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -136,7 +138,7 @@ module.exports = {
                     description: 'sitting, eating fries, laughing'
                 }
             },
-            tiles: REHEARSAL_SPACE_TILES,
+            tiles: REHEARSAL_SPACE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -159,7 +161,7 @@ module.exports = {
                     },
                 }
             },
-            tiles: MOVIE_THEATRE_1_TILES,
+            tiles: MOVIE_THEATRE_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -189,7 +191,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: MOVIE_THEATRE_1_TILES,
+            tiles: MOVIE_THEATRE_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -212,7 +214,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: MOVIE_THEATRE_2_TILES,
+            tiles: MOVIE_THEATRE_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER

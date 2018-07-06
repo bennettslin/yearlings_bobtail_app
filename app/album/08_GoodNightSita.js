@@ -8,11 +8,13 @@ import { VERSES,
          CHORUS,
          POSTCHORUS,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { MUSEUM_TILES,
-         BACKSTAGE_TILES } from '../constants/cubesIndoor'
-import { SITA_APARTMENT_GATE_1_TILES,
-         SITA_APARTMENT_GATE_2_TILES,
-         GO_KART_TILES } from '../constants/cubesOutdoor'
+import {
+    MUSEUM_CUBES,
+    BACKSTAGE_CUBES,
+    SITA_APARTMENT_GATE_1_CUBES,
+    SITA_APARTMENT_GATE_2_CUBES,
+    GO_KART_CUBES
+} from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
@@ -34,7 +36,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_GATE_1_TILES,
+            tiles: SITA_APARTMENT_GATE_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -57,7 +59,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: MUSEUM_TILES,
+            tiles: MUSEUM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -92,7 +94,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BACKSTAGE_TILES,
+            tiles: BACKSTAGE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -115,7 +117,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: GO_KART_TILES,
+            tiles: GO_KART_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -138,7 +140,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SITA_APARTMENT_GATE_2_TILES,
+            tiles: SITA_APARTMENT_GATE_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

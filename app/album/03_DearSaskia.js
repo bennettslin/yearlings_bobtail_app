@@ -10,9 +10,11 @@ import { VERSES,
          CHORUS,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { TAIWAN_PUPPET_SHOW_TILES,
-         SCHOOLBUS_TILES,
-         TETHERBALL_SCENE_TILES } from '../constants/cubesOther'
+import {
+    TAIWAN_PUPPET_SHOW_CUBES,
+    SCHOOLBUS_CUBES,
+    TETHERBALL_SCENE_CUBES
+} from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {
@@ -20,7 +22,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
-            tiles: TAIWAN_PUPPET_SHOW_TILES,
+            tiles: TAIWAN_PUPPET_SHOW_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -31,7 +33,7 @@ module.exports = {
             description: `Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
             actors: {
             },
-            tiles: TAIWAN_PUPPET_SHOW_TILES,
+            tiles: TAIWAN_PUPPET_SHOW_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -59,7 +61,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SCHOOLBUS_TILES,
+            tiles: SCHOOLBUS_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -90,7 +92,7 @@ module.exports = {
                     description: 'laughing, tying up Bennett'
                 }
             },
-            tiles: TETHERBALL_SCENE_TILES,
+            tiles: TETHERBALL_SCENE_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -100,7 +102,7 @@ module.exports = {
             unitIndex: 12,
             description: `In Bennett's sketch, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
             actors: {},
-            tiles: TAIWAN_PUPPET_SHOW_TILES,
+            tiles: TAIWAN_PUPPET_SHOW_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER

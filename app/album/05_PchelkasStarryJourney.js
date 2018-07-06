@@ -13,13 +13,15 @@ import { VERSES,
          INTRO,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { PRETEEN_BENNETT_ROOM_TILES,
-         PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
-         PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES,
-         PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES,
-         JUNIOR_HIGH_HALLWAY_TILES } from '../constants/cubesIndoor'
-import { JUNIOR_HIGH_LOCKERS_TILES,
-         JUNIOR_HIGH_QUAD_TILES } from '../constants/cubesOutdoor'
+import {
+    PRETEEN_BENNETT_ROOM_CUBES,
+    PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
+    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_CUBES,
+    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES,
+    JUNIOR_HIGH_HALLWAY_CUBES,
+    JUNIOR_HIGH_LOCKERS_CUBES,
+    JUNIOR_HIGH_QUAD_CUBES
+} from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_WINTER } from '../constants/scene'
 /**
@@ -31,7 +33,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Bennett's room, but seemingly no one is there.`,
-            tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
+            tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -52,7 +54,7 @@ module.exports = {
                     description: 'w-sitting, blissful'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_TILES,
+            tiles: PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -68,7 +70,7 @@ module.exports = {
                     description: 'side, sitting up in bed, feigning sick'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_TILES,
+            tiles: PRETEEN_BENNETT_ROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -84,7 +86,7 @@ module.exports = {
                     description: 'in bed, asleep, turned away'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_LEFT_REVEALED_TILES,
+            tiles: PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -100,7 +102,7 @@ module.exports = {
                     description: 'side, sitting, shaken, scared'
                 }
             },
-            tiles: PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_TILES,
+            tiles: PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -126,7 +128,7 @@ module.exports = {
                     description: 'side angle, throwing rocks, angry'
                 }
             },
-            tiles: JUNIOR_HIGH_LOCKERS_TILES,
+            tiles: JUNIOR_HIGH_LOCKERS_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -159,7 +161,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: JUNIOR_HIGH_QUAD_TILES,
+            tiles: JUNIOR_HIGH_QUAD_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -192,7 +194,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: JUNIOR_HIGH_HALLWAY_TILES,
+            tiles: JUNIOR_HIGH_HALLWAY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER

@@ -387,7 +387,7 @@ export const getSceneObject = (songIndex, sceneIndex = 0) => {
     const song = getSongObject(songIndex),
         sceneObject = song.scenes
 
-    return sceneObject[sceneIndex] || { tiles: {} }
+    return sceneObject[sceneIndex] || { tiles: '' }
 }
 
 export const getScenesArray = (songIndex) => {

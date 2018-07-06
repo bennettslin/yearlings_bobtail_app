@@ -20,7 +20,7 @@ const
     // LEFT = 'left',
     RIGHT = 'right',
 
-    CHILDHOOD_NEIGHBOURHOOD_TILES = {
+    CHILDHOOD_NEIGHBOURHOOD_CUBES = {
         floor: {
             zIndices: [
                 [1],
@@ -35,7 +35,7 @@ const
             ]
         }
     },
-    PLAYGROUND_TILES = {
+    PLAYGROUND_CUBES = {
         // Raised nurse's office bench is 1.5'.
         floor: {
             zIndices: [
@@ -51,7 +51,7 @@ const
             ]
         }
     },
-    FREEWAY_TILES = {
+    FREEWAY_CUBES = {
         // Solid overpass wall is 1.5'. Fence will extend higher.
         floor: {
             zIndices: [
@@ -67,7 +67,7 @@ const
             ]
         }
     },
-    PORCH_TILES = {
+    PORCH_CUBES = {
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
@@ -81,7 +81,7 @@ const
             ]
         }
     },
-    CHANGELING_CAVE_TILES = {
+    CHANGELING_CAVE_CUBES = {
         floor: {
             zIndices: [
                 [0]
@@ -91,7 +91,7 @@ const
             ]
         }
     },
-    JUNIOR_HIGH_LOCKERS_TILES = {
+    JUNIOR_HIGH_LOCKERS_CUBES = {
         // Overall height of lockers is 6.5'.
         ceiling: {
             zIndices: [
@@ -116,7 +116,7 @@ const
             ]
         }
     },
-    JUNIOR_HIGH_QUAD_TILES = {
+    JUNIOR_HIGH_QUAD_CUBES = {
         ceiling: {
             zIndices: [
                 [k, k, j, j, j, j, j, j, j, j, k],
@@ -142,7 +142,7 @@ const
             ]
         }
     },
-    BENNETT_APARTMENT_COURTYARD_TILES = {
+    BENNETT_APARTMENT_COURTYARD_CUBES = {
         // Outdoor wall is 8'. Windowsill height is 3'.
         floor: {
             zIndices: [
@@ -156,7 +156,7 @@ const
             ]
         }
     },
-    BENNETT_APARTMENT_GATE_TILES = {
+    BENNETT_APARTMENT_GATE_CUBES = {
         floor: {
             zIndices: [
                 [h],
@@ -171,7 +171,7 @@ const
             ]
         }
     },
-    CATHOLIC_CHURCH_TILES = {
+    CATHOLIC_CHURCH_CUBES = {
         floor: {
             zIndices: [
                 [0],
@@ -186,7 +186,7 @@ const
             ]
         }
     },
-    SPROUL_PLAZA_TILES = {
+    SPROUL_PLAZA_CUBES = {
         // Outdoor wall is 8'. Platform is 1'.
         floor: {
             zIndices: [
@@ -201,7 +201,7 @@ const
             ]
         }
     },
-    BERKELEY_WALKWAY_TILES = {
+    BERKELEY_WALKWAY_CUBES = {
         floor: {
             zIndices: [
                 [j, j, j, 3, 9, 1],
@@ -215,7 +215,7 @@ const
             ]
         }
     },
-    MOVIE_THEATRE_1_TILES = {
+    MOVIE_THEATRE_1_CUBES = {
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
@@ -231,7 +231,7 @@ const
             ]
         }
     },
-    MOVIE_THEATRE_2_TILES = {
+    MOVIE_THEATRE_2_CUBES = {
         floor: {
             zIndices: [
                 [h, h, h, 1, 1, 0],
@@ -246,7 +246,7 @@ const
             ]
         }
     },
-    GO_KART_TILES = {
+    GO_KART_CUBES = {
         floor: {
             zIndices: [
                 [0],
@@ -260,7 +260,7 @@ const
             ]
         }
     },
-    UCLA_CAMPUS_TILES = {
+    UCLA_CAMPUS_CUBES = {
         floor: {
             zIndices: [
                 [1]
@@ -270,7 +270,7 @@ const
             ]
         }
     },
-    CEMETERY_TILES = {
+    CEMETERY_CUBES = {
         // TODO: Make more natural.
         // Hill.
         floor: {
@@ -282,7 +282,7 @@ const
             ]
         }
     },
-    STATION_WAGON_TILES = {
+    STATION_WAGON_CUBES = {
         floor: {
             zIndices: [
                 [0],
@@ -298,7 +298,7 @@ const
         }
     },
 
-    SHOW_UNLOADING_TILES = {
+    SHOW_UNLOADING_CUBES = {
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
@@ -315,7 +315,7 @@ const
         }
     },
 
-    SITA_APARTMENT_GATE_1_TILES = {
+    SITA_APARTMENT_GATE_1_CUBES = {
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
@@ -331,7 +331,7 @@ const
             ]
         }
     },
-    SITA_APARTMENT_GATE_2_TILES = {
+    SITA_APARTMENT_GATE_2_CUBES = {
         floor: {
             zIndices: [
                 [h, h, h, h, h, 1, 7, 1, 1, 0],
@@ -347,7 +347,7 @@ const
         }
     },
 
-    VOLKSWAGEN_TILES = {
+    VOLKSWAGEN_CUBES = {
         // Same as Catholic church tiles.
         floor: {
             zIndices: [
@@ -363,7 +363,7 @@ const
             ]
         }
     },
-    OAKLAND_STREET_SIDE_TILES = {
+    OAKLAND_STREET_SIDE_CUBES = {
         floor: {
             zIndices: [
                 [1],
@@ -378,7 +378,7 @@ const
             ]
         }
     },
-    OAKLAND_STREET_FRONT_1_TILES = {
+    OAKLAND_STREET_FRONT_1_CUBES = {
         floor: {
             zIndices: [
                 [1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1],
@@ -390,7 +390,7 @@ const
             ]
         }
     },
-    OAKLAND_STREET_FRONT_2_TILES = {
+    OAKLAND_STREET_FRONT_2_CUBES = {
         floor: {
             zIndices: [
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
@@ -400,7 +400,7 @@ const
             ]
         }
     },
-    OAKLAND_STREET_FRONT_3_TILES = {
+    OAKLAND_STREET_FRONT_3_CUBES = {
         floor: {
             zIndices: [
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
@@ -410,7 +410,7 @@ const
             ]
         }
     },
-    CREMATED_CLIFF_TILES = {
+    CREMATED_CLIFF_CUBES = {
         slantDirection: RIGHT,
         /**
          * -----------.--
@@ -434,7 +434,7 @@ const
             ]
         }
     },
-    CREMATED_CLIFF_CONVERTIBLE_TILES = {
+    CREMATED_CLIFF_CONVERTIBLE_CUBES = {
         slantDirection: RIGHT,
         ceiling: {
             zIndices: [
@@ -458,7 +458,7 @@ const
             ]
         }
     },
-    CREMATED_DEATHBED_TILES = {
+    CREMATED_DEATHBED_CUBES = {
         slantDirection: RIGHT,
         floor: {
             zIndices: [
@@ -474,7 +474,7 @@ const
             ]
         }
     },
-    CREMATED_DEATHBED_TENNIS_TILES = {
+    CREMATED_DEATHBED_TENNIS_CUBES = {
         slantDirection: RIGHT,
         floor: {
             zIndices: [
@@ -490,7 +490,7 @@ const
             ]
         }
     },
-    ALLEY_TILES = {
+    ALLEY_CUBES = {
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
@@ -501,38 +501,42 @@ const
                 [TEST_PATTERN_BITMAP]
             ]
         }
+    },
+
+    CUBES_OUTDOOR = {
+        CHILDHOOD_NEIGHBOURHOOD_CUBES,
+        PLAYGROUND_CUBES,
+        FREEWAY_CUBES,
+        PORCH_CUBES,
+        CHANGELING_CAVE_CUBES,
+        JUNIOR_HIGH_LOCKERS_CUBES,
+        JUNIOR_HIGH_QUAD_CUBES,
+        BENNETT_APARTMENT_COURTYARD_CUBES,
+        CATHOLIC_CHURCH_CUBES,
+        SPROUL_PLAZA_CUBES,
+        BERKELEY_WALKWAY_CUBES,
+        MOVIE_THEATRE_1_CUBES,
+        MOVIE_THEATRE_2_CUBES,
+        SITA_APARTMENT_GATE_1_CUBES,
+        SITA_APARTMENT_GATE_2_CUBES,
+        GO_KART_CUBES,
+        BENNETT_APARTMENT_GATE_CUBES,
+        UCLA_CAMPUS_CUBES,
+        CEMETERY_CUBES,
+        STATION_WAGON_CUBES,
+        SHOW_UNLOADING_CUBES,
+        VOLKSWAGEN_CUBES,
+        OAKLAND_STREET_SIDE_CUBES,
+        OAKLAND_STREET_FRONT_1_CUBES,
+        OAKLAND_STREET_FRONT_2_CUBES,
+        OAKLAND_STREET_FRONT_3_CUBES,
+        CREMATED_CLIFF_CUBES,
+        CREMATED_CLIFF_CONVERTIBLE_CUBES,
+        CREMATED_DEATHBED_CUBES,
+        CREMATED_DEATHBED_TENNIS_CUBES,
+        ALLEY_CUBES
     }
 
-module.exports = {
-    CHILDHOOD_NEIGHBOURHOOD_TILES,
-    PLAYGROUND_TILES,
-    FREEWAY_TILES,
-    PORCH_TILES,
-    CHANGELING_CAVE_TILES,
-    JUNIOR_HIGH_LOCKERS_TILES,
-    JUNIOR_HIGH_QUAD_TILES,
-    BENNETT_APARTMENT_COURTYARD_TILES,
-    CATHOLIC_CHURCH_TILES,
-    SPROUL_PLAZA_TILES,
-    BERKELEY_WALKWAY_TILES,
-    MOVIE_THEATRE_1_TILES,
-    MOVIE_THEATRE_2_TILES,
-    SITA_APARTMENT_GATE_1_TILES,
-    SITA_APARTMENT_GATE_2_TILES,
-    GO_KART_TILES,
-    BENNETT_APARTMENT_GATE_TILES,
-    UCLA_CAMPUS_TILES,
-    CEMETERY_TILES,
-    STATION_WAGON_TILES,
-    SHOW_UNLOADING_TILES,
-    VOLKSWAGEN_TILES,
-    OAKLAND_STREET_SIDE_TILES,
-    OAKLAND_STREET_FRONT_1_TILES,
-    OAKLAND_STREET_FRONT_2_TILES,
-    OAKLAND_STREET_FRONT_3_TILES,
-    CREMATED_CLIFF_TILES,
-    CREMATED_CLIFF_CONVERTIBLE_TILES,
-    CREMATED_DEATHBED_TILES,
-    CREMATED_DEATHBED_TENNIS_TILES,
-    ALLEY_TILES
+export {
+    CUBES_OUTDOOR
 }

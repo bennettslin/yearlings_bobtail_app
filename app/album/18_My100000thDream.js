@@ -10,11 +10,13 @@ import { VERSES,
          OUTRO,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { EL_TORITO_TILES,
-         PAMPAS_TILES,
-         OUTDOOR_WEDDING_TILES,
-         DREAM_CLIFF_TILES,
-         DREAM_DEATHBED_TILES } from '../constants/cubesOther'
+import {
+    EL_TORITO_CUBES,
+    PAMPAS_CUBES,
+    OUTDOOR_WEDDING_CUBES,
+    DREAM_CLIFF_CUBES,
+    DREAM_DEATHBED_CUBES
+} from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {
@@ -36,7 +38,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: EL_TORITO_TILES,
+            tiles: EL_TORITO_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -80,7 +82,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: PAMPAS_TILES,
+            tiles: PAMPAS_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -103,7 +105,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: OUTDOOR_WEDDING_TILES,
+            tiles: OUTDOOR_WEDDING_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -126,7 +128,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: DREAM_CLIFF_TILES,
+            tiles: DREAM_CLIFF_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -156,7 +158,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: DREAM_DEATHBED_TILES,
+            tiles: DREAM_DEATHBED_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

@@ -20,7 +20,7 @@ const
     // LEFT = 'left',
     RIGHT = 'right',
 
-    DEFAULT_STAGE_TILES = {
+    DEFAULT_STAGE_CUBES = {
         ceiling: {
             zIndices: [
                 [k]
@@ -38,7 +38,7 @@ const
             ]
         }
     },
-    LOGUE_TILES = {
+    LOGUE_CUBES = {
         ceiling: {
             zIndices: [
                 [n]
@@ -61,7 +61,7 @@ const
             ]
         }
     },
-    TAIWAN_PUPPET_SHOW_TILES = {
+    TAIWAN_PUPPET_SHOW_CUBES = {
         // Just panels.
         floor: {
             zIndices: [
@@ -72,7 +72,7 @@ const
             ]
         }
     },
-    SCHOOLBUS_TILES = {
+    SCHOOLBUS_CUBES = {
         // Assume height of 9'.
         /** https://www.the-blueprints.com/blueprints/buses/international-buses/56427/view/international_school_bus_%281992%29/
          */
@@ -90,7 +90,7 @@ const
             ]
         }
     },
-    TETHERBALL_SCENE_TILES = {
+    TETHERBALL_SCENE_CUBES = {
         floor: {
             zIndices: [
                 [1]
@@ -100,7 +100,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_1_TILES = {
+    ODIN_SCENE_1_CUBES = {
         // Indoor wall is 7.5'. Floor of 2' to imply second story.
         floor: {
             zIndices: [
@@ -116,7 +116,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_2_TILES = {
+    ODIN_SCENE_2_CUBES = {
         // Windowsill height of 3'.
         floor: {
             zIndices: [
@@ -131,7 +131,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_3_TILES = {
+    ODIN_SCENE_3_CUBES = {
         // House wall is 6'.
         floor: {
             zIndices: [
@@ -147,7 +147,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_4_TILES = {
+    ODIN_SCENE_4_CUBES = {
         // TODO: Make more natural.
         // Sand.
         floor: {
@@ -159,7 +159,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_5_TILES = {
+    ODIN_SCENE_5_CUBES = {
         // TODO: Make more natural.
         // Sand.
         floor: {
@@ -171,7 +171,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_6_TILES = {
+    ODIN_SCENE_6_CUBES = {
         // TODO: Make more natural.
         // Ocean wave.
         floor: {
@@ -188,7 +188,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_7_TILES = {
+    ODIN_SCENE_7_CUBES = {
         // TODO: Make more natural.
         // Ocean floor.
         floor: {
@@ -200,7 +200,7 @@ const
             ]
         }
     },
-    ODIN_SCENE_8_TILES = {
+    ODIN_SCENE_8_CUBES = {
         // TODO: Make more natural.
         // Ocean floor.
         floor: {
@@ -212,7 +212,7 @@ const
             ]
         }
     },
-    SNOW_GLOBES_1_TILES = {
+    SNOW_GLOBES_1_CUBES = {
         floor: {
             zIndices: [
                 [k],
@@ -226,7 +226,7 @@ const
             ]
         }
     },
-    SNOW_GLOBES_2_TILES = {
+    SNOW_GLOBES_2_CUBES = {
         floor: {
             zIndices: [
                 [k],
@@ -241,7 +241,7 @@ const
             ]
         }
     },
-    SNOW_GLOBES_3_TILES = {
+    SNOW_GLOBES_3_CUBES = {
         floor: {
             zIndices: [
                 [k],
@@ -256,7 +256,7 @@ const
             ]
         }
     },
-    EL_TORITO_TILES = {
+    EL_TORITO_CUBES = {
         // Outdoor wall is 8'.
         floor: {
             zIndices: [
@@ -272,7 +272,7 @@ const
             ]
         }
     },
-    PAMPAS_TILES = {
+    PAMPAS_CUBES = {
         // TODO: Make more natural.
         // Grass.
         slantDirection: RIGHT,
@@ -285,7 +285,7 @@ const
             ]
         }
     },
-    OUTDOOR_WEDDING_TILES = {
+    OUTDOOR_WEDDING_CUBES = {
         // TODO: Make more natural.
         // Grass.
         slantDirection: RIGHT,
@@ -298,7 +298,7 @@ const
             ]
         }
     },
-    DREAM_CLIFF_TILES = {
+    DREAM_CLIFF_CUBES = {
         slantDirection: RIGHT,
         /**
          * -----------.--
@@ -327,7 +327,7 @@ const
             ]
         }
     },
-    DREAM_DEATHBED_TILES = {
+    DREAM_DEATHBED_CUBES = {
         slantDirection: RIGHT,
         /**
          * -----------.--
@@ -355,28 +355,32 @@ const
                 [TEST_PATTERN_BITMAP]
             ]
         }
+    },
+
+    CUBES_OTHER = {
+        DEFAULT_STAGE_CUBES,
+        LOGUE_CUBES,
+        TAIWAN_PUPPET_SHOW_CUBES,
+        SCHOOLBUS_CUBES,
+        TETHERBALL_SCENE_CUBES,
+        ODIN_SCENE_1_CUBES,
+        ODIN_SCENE_2_CUBES,
+        ODIN_SCENE_3_CUBES,
+        ODIN_SCENE_4_CUBES,
+        ODIN_SCENE_5_CUBES,
+        ODIN_SCENE_6_CUBES,
+        ODIN_SCENE_7_CUBES,
+        ODIN_SCENE_8_CUBES,
+        SNOW_GLOBES_1_CUBES,
+        SNOW_GLOBES_2_CUBES,
+        SNOW_GLOBES_3_CUBES,
+        EL_TORITO_CUBES,
+        PAMPAS_CUBES,
+        OUTDOOR_WEDDING_CUBES,
+        DREAM_CLIFF_CUBES,
+        DREAM_DEATHBED_CUBES
     }
 
-module.exports = {
-    DEFAULT_STAGE_TILES,
-    LOGUE_TILES,
-    TAIWAN_PUPPET_SHOW_TILES,
-    SCHOOLBUS_TILES,
-    TETHERBALL_SCENE_TILES,
-    ODIN_SCENE_1_TILES,
-    ODIN_SCENE_2_TILES,
-    ODIN_SCENE_3_TILES,
-    ODIN_SCENE_4_TILES,
-    ODIN_SCENE_5_TILES,
-    ODIN_SCENE_6_TILES,
-    ODIN_SCENE_7_TILES,
-    ODIN_SCENE_8_TILES,
-    SNOW_GLOBES_1_TILES,
-    SNOW_GLOBES_2_TILES,
-    SNOW_GLOBES_3_TILES,
-    EL_TORITO_TILES,
-    PAMPAS_TILES,
-    OUTDOOR_WEDDING_TILES,
-    DREAM_CLIFF_TILES,
-    DREAM_DEATHBED_TILES
+export {
+    CUBES_OTHER
 }

@@ -9,11 +9,13 @@ import { VERSES,
          CHORUS,
          BRIDGE,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { BENNETT_APARTMENT_COUCH_THOUGHT_TILES } from '../constants/cubesIndoor'
-import { BENNETT_APARTMENT_COURTYARD_TILES,
-         CATHOLIC_CHURCH_TILES,
-         SPROUL_PLAZA_TILES,
-         BERKELEY_WALKWAY_TILES } from '../constants/cubesOutdoor'
+import {
+    BENNETT_APARTMENT_COUCH_THOUGHT_CUBES,
+    BENNETT_APARTMENT_COURTYARD_CUBES,
+    CATHOLIC_CHURCH_CUBES,
+    SPROUL_PLAZA_CUBES,
+    BERKELEY_WALKWAY_CUBES
+} from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {
@@ -33,7 +35,7 @@ module.exports = {
                     description: 'walking away, in a bad mood'
                 }
             },
-            tiles: BENNETT_APARTMENT_COURTYARD_TILES,
+            tiles: BENNETT_APARTMENT_COURTYARD_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -54,7 +56,7 @@ module.exports = {
                     description: 'sitting upright, droll smile'
                 }
             },
-            tiles: BENNETT_APARTMENT_COUCH_THOUGHT_TILES,
+            tiles: BENNETT_APARTMENT_COUCH_THOUGHT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -70,7 +72,7 @@ module.exports = {
                     description: 'standing, back forward, hands in pocket'
                 }
             },
-            tiles: CATHOLIC_CHURCH_TILES,
+            tiles: CATHOLIC_CHURCH_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -100,7 +102,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SPROUL_PLAZA_TILES,
+            tiles: SPROUL_PLAZA_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -121,7 +123,7 @@ module.exports = {
                     description: 'walking forward, confused and curious at Bennett'
                 }
             },
-            tiles: BERKELEY_WALKWAY_TILES,
+            tiles: BERKELEY_WALKWAY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

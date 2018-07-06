@@ -16,14 +16,17 @@ import { OVERLAP,
          RESPONSE,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { WALGREENS_TILES,
-         STEAM_TUNNEL_TILES,
-         HOWIE_ATTIC_TILES } from '../constants/cubesIndoor'
-import { UCLA_CAMPUS_TILES,
-         CEMETERY_TILES,
-         STATION_WAGON_TILES } from '../constants/cubesOutdoor'
+import {
+    WALGREENS_CUBES,
+    STEAM_TUNNEL_CUBES,
+    HOWIE_ATTIC_CUBES,
+    UCLA_CAMPUS_CUBES,
+    CEMETERY_CUBES,
+    STATION_WAGON_CUBES
+} from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
+
 module.exports = {
     scenes: [
         {
@@ -51,7 +54,7 @@ module.exports = {
                     description: 'side, walking'
                 }
             },
-            tiles: UCLA_CAMPUS_TILES,
+            tiles: UCLA_CAMPUS_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -82,7 +85,7 @@ module.exports = {
                     description: 'side angle, feigning superiority'
                 }
             },
-            tiles: WALGREENS_TILES,
+            tiles: WALGREENS_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -113,7 +116,7 @@ module.exports = {
                     description: 'side angle, play fighting'
                 }
             },
-            tiles: STEAM_TUNNEL_TILES,
+            tiles: STEAM_TUNNEL_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -144,7 +147,7 @@ module.exports = {
                     description: 'side angle, squatting, pouring water on grave'
                 }
             },
-            tiles: CEMETERY_TILES,
+            tiles: CEMETERY_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -175,7 +178,7 @@ module.exports = {
                     description: 'back angle, sleeping in car'
                 }
             },
-            tiles: STATION_WAGON_TILES,
+            tiles: STATION_WAGON_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -196,7 +199,7 @@ module.exports = {
                     description: 'downstairs, in agony'
                 }
             },
-            tiles: HOWIE_ATTIC_TILES,
+            tiles: HOWIE_ATTIC_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

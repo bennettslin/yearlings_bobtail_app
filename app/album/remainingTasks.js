@@ -3,9 +3,8 @@ module.exports = [
     /**
      * Begin expected DTO tasks.
      */
-
     {
-        taskName: `Can svgs be done by percentages?`,
+        taskName: `Cubes and Presences are referenced by keys.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -40,6 +39,18 @@ module.exports = [
         neededHours: 1
     },
 
+    {
+        taskName: `Make Cubes sequence a little more smooth.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Can svgs be done by percentages?`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     /**
      * End expected DTO tasks.
      */
@@ -59,11 +70,6 @@ module.exports = [
     /**
      * Remaining scene work.
      */
-    {
-        taskName: `Animate tiles.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     {
         taskName: `Have system to show pixels of varying sizes.`,

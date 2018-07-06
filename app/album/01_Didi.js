@@ -14,9 +14,11 @@ import { VERSES,
          REFRAIN,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { CHILDHOOD_BATHROOM_TILES } from '../constants/cubesIndoor'
-import { CHILDHOOD_NEIGHBOURHOOD_TILES,
-         PLAYGROUND_TILES } from '../constants/cubesOutdoor'
+import {
+    CHILDHOOD_BATHROOM_CUBES,
+    CHILDHOOD_NEIGHBOURHOOD_CUBES,
+    PLAYGROUND_CUBES
+} from '../constants/cubes'
 import { CUTOUT,
          FIXTURE,
          ACTOR,
@@ -54,7 +56,7 @@ module.exports = {
                     },
                 ]
             },
-            tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
+            tiles: CHILDHOOD_NEIGHBOURHOOD_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -83,7 +85,7 @@ module.exports = {
                     description: 'side, running, panicked'
                 }
             },
-            tiles: CHILDHOOD_NEIGHBOURHOOD_TILES,
+            tiles: CHILDHOOD_NEIGHBOURHOOD_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -112,7 +114,7 @@ module.exports = {
                     description: 'side, skipping, pointing back and laughing'
                 }
             },
-            tiles: PLAYGROUND_TILES,
+            tiles: PLAYGROUND_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -131,7 +133,7 @@ module.exports = {
                     description: 'side, in bathtub, downcast'
                 }
             },
-            tiles: CHILDHOOD_BATHROOM_TILES,
+            tiles: CHILDHOOD_BATHROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -155,7 +157,7 @@ module.exports = {
                     description: 'side, facing front, singing, smiling'
                 }
             },
-            tiles: CHILDHOOD_BATHROOM_TILES,
+            tiles: CHILDHOOD_BATHROOM_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

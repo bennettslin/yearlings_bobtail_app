@@ -17,14 +17,16 @@ import { LEFT,
          OUTRO,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { ODIN_SCENE_1_TILES,
-         ODIN_SCENE_2_TILES,
-         ODIN_SCENE_3_TILES,
-         ODIN_SCENE_4_TILES,
-         ODIN_SCENE_5_TILES,
-         ODIN_SCENE_6_TILES,
-         ODIN_SCENE_7_TILES,
-         ODIN_SCENE_8_TILES } from '../constants/cubesOther'
+import {
+    ODIN_SCENE_1_CUBES,
+    ODIN_SCENE_2_CUBES,
+    ODIN_SCENE_3_CUBES,
+    ODIN_SCENE_4_CUBES,
+    ODIN_SCENE_5_CUBES,
+    ODIN_SCENE_6_CUBES,
+    ODIN_SCENE_7_CUBES,
+    ODIN_SCENE_8_CUBES
+} from '../constants/cubes'
 
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
@@ -40,7 +42,7 @@ module.exports = {
                     description: 'side, lying on floor, propped up'
                 }
             },
-            tiles: ODIN_SCENE_1_TILES,
+            tiles: ODIN_SCENE_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -56,7 +58,7 @@ module.exports = {
                     description: 'side angle, looking down stairs'
                 }
             },
-            tiles: ODIN_SCENE_2_TILES,
+            tiles: ODIN_SCENE_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -72,7 +74,7 @@ module.exports = {
                     description: 'side angle, peeking out from gate'
                 }
             },
-            tiles: ODIN_SCENE_3_TILES,
+            tiles: ODIN_SCENE_3_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -88,7 +90,7 @@ module.exports = {
                     description: 'getting off rickshaw bike'
                 }
             },
-            tiles: ODIN_SCENE_4_TILES,
+            tiles: ODIN_SCENE_4_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -104,7 +106,7 @@ module.exports = {
                     description: 'side back, looking out to ocean'
                 }
             },
-            tiles: ODIN_SCENE_5_TILES,
+            tiles: ODIN_SCENE_5_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -120,7 +122,7 @@ module.exports = {
                     description: 'peering down from buoy'
                 }
             },
-            tiles: ODIN_SCENE_6_TILES,
+            tiles: ODIN_SCENE_6_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -141,7 +143,7 @@ module.exports = {
                     description: 'mermaid'
                 }
             },
-            tiles: ODIN_SCENE_7_TILES,
+            tiles: ODIN_SCENE_7_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -157,7 +159,7 @@ module.exports = {
                     description: 'side angle, crouched in sand, looking back'
                 }
             },
-            tiles: ODIN_SCENE_8_TILES,
+            tiles: ODIN_SCENE_8_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

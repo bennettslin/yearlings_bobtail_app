@@ -15,10 +15,12 @@ import { VERSES,
          RESPONSE,
          BACKING,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { BENNETT_BASEMENT_TILES } from '../constants/cubesIndoor'
-import { SNOW_GLOBES_1_TILES,
-         SNOW_GLOBES_2_TILES,
-         SNOW_GLOBES_3_TILES } from '../constants/cubesOther'
+import {
+    BENNETT_BASEMENT_CUBES,
+    SNOW_GLOBES_1_CUBES,
+    SNOW_GLOBES_2_CUBES,
+    SNOW_GLOBES_3_CUBES
+} from '../constants/cubes'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
@@ -38,7 +40,7 @@ module.exports = {
                     description: 'side, asleep'
                 }
             },
-            tiles: BENNETT_BASEMENT_TILES,
+            tiles: BENNETT_BASEMENT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -66,7 +68,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_BASEMENT_TILES,
+            tiles: BENNETT_BASEMENT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -97,7 +99,7 @@ module.exports = {
                     description: 'side angle, consoling, cautious'
                 }
             },
-            tiles: SNOW_GLOBES_1_TILES,
+            tiles: SNOW_GLOBES_1_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -135,7 +137,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: SNOW_GLOBES_2_TILES,
+            tiles: SNOW_GLOBES_2_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -180,7 +182,7 @@ module.exports = {
                     description: 'side angle, cheerful, making a point'
                 }
             },
-            tiles: SNOW_GLOBES_3_TILES,
+            tiles: SNOW_GLOBES_3_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -218,7 +220,7 @@ module.exports = {
                     }
                 }
             },
-            tiles: BENNETT_BASEMENT_TILES,
+            tiles: BENNETT_BASEMENT_CUBES,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
