@@ -33,27 +33,30 @@ import {
     CREMATED_DEATHBED_KEY,
     CREMATED_DEATHBED_TENNIS_KEY,
     ALLEY_KEY
-} from './cubesConstants'
+} from './cubesKeys'
 
 import {
-    TEST_PATTERN_BITMAP
-} from '../bitmaps/bitmaps'
+    TEST_PATTERN_KEY
+} from '../bitmaps/bitmapsKeys'
+
+import {
+    a,
+    // b,
+    // c,
+    // d,
+    // e,
+    f,
+    g,
+    h,
+    i,
+    j,
+    k,
+    // n,
+    // LEFT,
+    RIGHT
+} from './cubesConstants'
 
 const
-    a = 10,
-    // b = 11,
-    // c = 12,
-    // d = 13,
-    // e = 14,
-    f = 15,
-    g = 16,
-    h = 17,
-    i = 18,
-    j = 19,
-    k = 20,
-    // n = 40,
-    // LEFT = 'left',
-    RIGHT = 'right',
 
     CHILDHOOD_NEIGHBOURHOOD_CUBES = {
         floor: {
@@ -66,7 +69,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -82,7 +85,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -98,7 +101,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -112,7 +115,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -122,7 +125,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -135,7 +138,7 @@ const
                 [k, k, j, j, j, j, j, j, j, j, k]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         },
         floor: {
@@ -147,7 +150,7 @@ const
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -161,7 +164,7 @@ const
                 [k]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         },
         floor: {
@@ -173,7 +176,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -187,7 +190,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -202,7 +205,7 @@ const
                 [0],
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -217,7 +220,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -232,7 +235,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -246,7 +249,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -262,7 +265,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -277,7 +280,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -291,7 +294,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -301,7 +304,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -313,7 +316,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -328,7 +331,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -345,7 +348,7 @@ const
                 [1, 1, 1, 1, 1, 1, 7, 1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -362,7 +365,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -377,7 +380,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -394,7 +397,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -409,7 +412,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -421,7 +424,7 @@ const
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -431,7 +434,7 @@ const
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -441,7 +444,7 @@ const
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -465,7 +468,7 @@ const
                 [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -476,7 +479,7 @@ const
                 [g, k, k, k, k, k, k, k, k, k, k, g]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         },
         floor: {
@@ -489,7 +492,7 @@ const
                 [4, 4, 4, 4, 4, 6, 6, 4, 4, 4, 0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -505,7 +508,7 @@ const
                 [g, 1, 1, 1, 1, 7, 1, 0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -521,7 +524,7 @@ const
                 [g, 1, 1, 1, 1, 7, 1, 0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },
@@ -533,7 +536,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_BITMAP]
+                [TEST_PATTERN_KEY]
             ]
         }
     },

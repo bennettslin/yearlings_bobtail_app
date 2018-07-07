@@ -20,7 +20,7 @@ import {
     SITA_APARTMENT_GATE_1_KEY,
     SITA_APARTMENT_GATE_2_KEY,
     BENNETT_APARTMENT_GATE_KEY
-} from '../constants/cubes/cubesConstants'
+} from '../constants/cubes/cubesKeys'
 import { SKY_ANYTIME,
          SKY_AUTUMN,
          SKY_WINTER } from '../constants/scene'

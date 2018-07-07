@@ -14,7 +14,7 @@ import {
     CREMATED_CLIFF_CONVERTIBLE_KEY,
     CREMATED_DEATHBED_KEY,
     CREMATED_DEATHBED_TENNIS_KEY
-} from '../constants/cubes/cubesConstants'
+} from '../constants/cubes/cubesKeys'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {

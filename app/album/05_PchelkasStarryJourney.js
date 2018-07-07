@@ -21,7 +21,7 @@ import {
     JUNIOR_HIGH_HALLWAY_KEY,
     JUNIOR_HIGH_LOCKERS_KEY,
     JUNIOR_HIGH_QUAD_KEY
-} from '../constants/cubes/cubesConstants'
+} from '../constants/cubes/cubesKeys'
 import { SKY_ANYTIME,
          SKY_WINTER } from '../constants/scene'
 /**

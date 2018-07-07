@@ -1,30 +1,13 @@
-const
-    _000 = '000',
-    _fff = 'fff',
-    _f00 = 'f00',
-    _0d0 = '0d0',
-    _44f = '44f',
-    _f0f = 'f0f',
+import {
+    TEST_PATTERN_KEY
+} from './bitmapsKeys'
 
-    TEST_PATTERN_BITMAP = 'TEST_PATTERN_BITMAP'
+import { BITMAPS_OTHER } from './bitmapsOther'
 
-module.exports = {
+const BITMAPS = {
+    [TEST_PATTERN_KEY]: BITMAPS_OTHER[TEST_PATTERN_KEY]
+}
 
-    TEST_PATTERN_BITMAP,
-
-    BITMAPS: {
-        [TEST_PATTERN_BITMAP]: {
-            base: _fff,
-            pixels: [
-                [_f00, _f00, null, _000, null, _000, _0d0, _0d0],
-                [_f00, _f00, _000, null, _000, null, _0d0, _0d0],
-                [null, _000, null, _000, null, _000, null, _000],
-                [_000, null, _000, null, _000, null, _000, null],
-                [null, _000, null, _000, null, _000, null, _000],
-                [_000, null, _000, null, _000, null, _000, null],
-                [_44f, _44f, null, _000, null, _000, _f0f, _f0f],
-                [_44f, _44f, _000, null, _000, null, _f0f, _f0f]
-            ]
-        }
-    }
+export {
+    BITMAPS
 }

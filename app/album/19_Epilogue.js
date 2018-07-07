@@ -1,4 +1,4 @@
-import { LOGUE_KEY } from '../constants/cubes/cubesConstants'
+import { LOGUE_KEY } from '../constants/cubes/cubesKeys'
 import { SKY_ANYTIME,
          SKY_INDOOR } from '../constants/scene'
 module.exports = {

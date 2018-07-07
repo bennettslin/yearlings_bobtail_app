@@ -18,7 +18,7 @@ import {
     CHILDHOOD_BATHROOM_KEY,
     CHILDHOOD_NEIGHBOURHOOD_KEY,
     PLAYGROUND_KEY
-} from '../constants/cubes/cubesConstants'
+} from '../constants/cubes/cubesKeys'
 import {
     SKY_ANYTIME,
     SKY_SPRING

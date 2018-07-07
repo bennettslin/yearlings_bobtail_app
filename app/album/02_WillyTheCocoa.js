@@ -21,7 +21,7 @@ import {
     PORCH_KEY,
     CHILDHOOD_NEIGHBOURHOOD_KEY,
     CHANGELING_CAVE_KEY
-} from '../constants/cubes/cubesConstants'
+} from '../constants/cubes/cubesKeys'
 import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 

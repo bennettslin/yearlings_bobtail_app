@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 import Layer from './Layer'
 
-import { DEFAULT_STAGE_KEY } from '../../../constants/cubes/cubesConstants'
+import { DEFAULT_STAGE_KEY } from '../../../constants/cubes/cubesKeys'
 
 import { Y_INDICES_ARRAY } from '../constants'
 

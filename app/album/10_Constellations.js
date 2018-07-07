@@ -23,7 +23,7 @@ import {
     UCLA_CAMPUS_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY
-} from '../constants/cubes/cubesConstants'
+} from '../constants/cubes/cubesKeys'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 

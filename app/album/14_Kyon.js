@@ -11,7 +11,7 @@ import { VERSES,
          REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
-import { SITA_APARTMENT_COUCH_KEY } from '../constants/cubes/cubesConstants'
+import { SITA_APARTMENT_COUCH_KEY } from '../constants/cubes/cubesKeys'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
