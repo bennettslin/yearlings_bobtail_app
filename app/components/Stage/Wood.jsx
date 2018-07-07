@@ -8,8 +8,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DynamicSvg from '../DynamicSvg/DynamicSvg'
-
 const mapStateToProps = ({
     canTheatreRender
 }) => ({
@@ -34,17 +32,12 @@ class Wood extends Component {
 
     render() {
         return (
-            <DynamicSvg
+            <div
                 className={cx(
-                    'Wood'
+                    'Wood',
+                    'absoluteFullContainer'
                 )}
-            >
-                <rect
-                    className={cx(
-                        'absoluteFullContainer'
-                    )}
-                />
-            </DynamicSvg>
+            />
         )
     }
 }

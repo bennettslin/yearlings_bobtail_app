@@ -3,12 +3,10 @@
  * and the stage lookes weird without it.
  */
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-
-import DynamicSvg from '../DynamicSvg/DynamicSvg'
 
 import {
     SKY_ANYTIME,
@@ -54,30 +52,25 @@ class SceneSky extends Component {
         } = this.props
 
         return (
-            <DynamicSvg
-                className={cx(
-                    'SceneSky',
-                    'absoluteFullContainer'
-                )}
-            >
-                <rect
+            <Fragment>
+                <div
                     className={cx(
-                        'StageSkyFilter',
-                        'StageSkyFilter__season',
-                        `StageSkyFilter__season__${seasonKey}`,
+                        'Sky',
+                        'Sky__season',
+                        `Sky__season__${seasonKey}`,
                         'absoluteFullContainer'
                     )}
                 />
-                <rect
+                <div
                     className={cx(
-                        'StageSkyFilter',
-                        'StageSkyFilter__time',
-                        `StageSkyFilter__time__${timeKey}`,
+                        'Sky',
+                        'Sky__time',
+                        `Sky__time__${timeKey}`,
                         'absoluteFullContainer'
                     )}
                 />
                 {/* TODO: Make filter for weather, like clouds and rain. */}
-            </DynamicSvg>
+            </Fragment>
         )
     }
 }

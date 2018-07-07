@@ -5,15 +5,9 @@ module.exports = [
      */
 
     {
-        taskName: `Presences are referenced by keys.`,
+        taskName: `Bitmaps and presences are referenced by keys.`,
         workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Sky and Wood sometimes don't resize after window resize? Happens when loading smaller and resizing larger.`,
-        workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
 
     {

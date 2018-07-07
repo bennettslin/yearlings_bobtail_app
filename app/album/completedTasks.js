@@ -3132,4 +3132,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Sky and Wood sometimes don't resize after window resize? Happens when loading smaller and resizing larger. Solved by just making them divs.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
