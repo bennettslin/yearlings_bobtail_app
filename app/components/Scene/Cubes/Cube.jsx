@@ -34,7 +34,8 @@ class Cube extends PureComponent {
         isFloor: PropTypes.bool,
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
-        cubesKey: PropTypes.string.isRequired
+        cubesKey: PropTypes.string.isRequired,
+        slantDirection: PropTypes.string.isRequired
     }
 
     render() {
@@ -46,13 +47,13 @@ class Cube extends PureComponent {
             } = this.props,
 
             {
-                isFloor
+                isFloor,
+                slantDirection
             } = other,
 
             {
                 ceiling = CUBES[DEFAULT_STAGE_KEY].ceiling,
                 floor = CUBES[DEFAULT_STAGE_KEY].floor,
-                slantDirection = ''
             } = CUBES[cubesKey],
 
             {

@@ -26,7 +26,7 @@ import {
 
 import {
     TEST_PATTERN_BITMAP
-} from './bitmaps'
+} from '../bitmaps/bitmaps'
 
 const
     // a = 10,

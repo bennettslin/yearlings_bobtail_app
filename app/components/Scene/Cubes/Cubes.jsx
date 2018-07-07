@@ -256,7 +256,8 @@ const CubesView = ({
                             isFloor,
                             xIndex,
                             yIndex,
-                            cubesKey
+                            cubesKey,
+                            slantDirection
                         }}
                     />
                 )

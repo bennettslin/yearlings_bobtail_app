@@ -15,7 +15,7 @@ import { getBitmapMatrix } from './helpers/bitmapHelper'
 
 import { TILE } from '../../constants'
 
-import { BITMAPS } from '../../../../constants/cubes/bitmaps'
+import { BITMAPS } from '../../../../constants/bitmaps/bitmaps'
 
 const
     pointPropType =
@@ -97,7 +97,6 @@ class Face extends Component {
     }
 
     render() {
-
         const {
                 face,
                 bitmapKey,
