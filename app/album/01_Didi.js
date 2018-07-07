@@ -19,59 +19,16 @@ import {
     CHILDHOOD_NEIGHBOURHOOD_CUBES,
     PLAYGROUND_CUBES
 } from '../constants/cubes/cubes'
-import { CUTOUT,
-         FIXTURE,
-         ACTOR,
-         SKY_ANYTIME,
-         SKY_SPRING } from '../constants/scene'
+import {
+    SKY_ANYTIME,
+    SKY_SPRING
+} from '../constants/scene'
 
 module.exports = {
     scenes: [
         {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
-            presences: {
-                1: [
-                    {
-                        name: 'sample fixture 1',
-                        type: FIXTURE,
-                        xIndex: 4,
-                        width: 5,
-                        height: 25
-                    },
-                    {
-                        name: 'sample cutout 1',
-                        type: CUTOUT,
-                        xIndex: 10,
-                        width: 15,
-                        height: 15
-                    }
-                ],
-                4: [
-                    {
-                        name: 'sample cutout 1',
-                        type: CUTOUT,
-                        xIndex: 2,
-                        width: 10,
-                        height: 20
-                    },
-                    {
-                        name: 'sample fixture 1',
-                        type: FIXTURE,
-                        xIndex: 6,
-                        width: 20,
-                        height: 10
-                    },
-                    {
-                        name: 'sample actor 1',
-                        type: ACTOR,
-                        x: 70,
-                        y: 20,
-                        width: 10,
-                        height: 10
-                    },
-                ]
-            },
             cubes: CHILDHOOD_NEIGHBOURHOOD_CUBES,
             sky: {
                 time: SKY_ANYTIME,

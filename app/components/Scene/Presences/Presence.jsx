@@ -13,9 +13,9 @@ const propTypes = {
     // From parent.
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
-    x: PropTypes.number,
-    y: PropTypes.number,
-    xIndex: PropTypes.number,
+    xOffset: PropTypes.number,
+    yOffset: PropTypes.number,
+    xIndex: PropTypes.number.isRequired,
     yIndex: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
@@ -31,8 +31,8 @@ const Presence = ({
 
     name,
     type,
-    x,
-    y,
+    xOffset = 0,
+    yOffset = 0,
     xIndex,
     yIndex,
     width,
@@ -42,25 +42,15 @@ const Presence = ({
 
 }) => {
 
-    /**
-     * Either indices or raw coordinates are given. If it's indices, then only
-     * the xIndex is provided, since parent always passes yIndex.
-     */
-    const coordinates = isNaN(xIndex) ?
-        { x, y } : getTileCentreForPresence({
+    const { xPercentage, yPercentage } = getTileCentreForPresence({
             xIndex,
             yIndex,
             zIndices,
             slantDirection
         }),
 
-    {
-        x: xPercentage,
-        y: yPercentage
-    } = coordinates,
-
-    adjustedX = xPercentage - width / 2,
-    adjustedY = yPercentage - height
+        adjustedX = xPercentage + xOffset - width / 2,
+        adjustedY = yPercentage + yOffset - height
 
     return (
         <g

@@ -1,6 +1,12 @@
 import { LOGUE_CUBES } from '../constants/cubes/cubes'
-import { SKY_ANYTIME,
-         SKY_INDOOR } from '../constants/scene'
+import {
+    CUTOUT,
+    FIXTURE,
+    ACTOR,
+    SKY_ANYTIME,
+    SKY_INDOOR
+} from '../constants/scene'
+
 module.exports = {
     logue: true,
     title: 'prologue',
@@ -19,6 +25,68 @@ module.exports = {
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_INDOOR
+            },
+            presences: {
+                1: {
+                    [ACTOR]: [
+                        {
+                            name: 'sample actor 1',
+                            xIndex: 4,
+                            width: 5,
+                            height: 25
+                        },
+                        {
+                            name: 'sample actor 2',
+                            xIndex: 10,
+                            width: 15,
+                            height: 15
+                        }
+                    ],
+                    [CUTOUT]: [
+                        {
+                            name: 'sample cutout 1',
+                            xIndex: 4,
+                            width: 5,
+                            height: 25
+                        },
+                        {
+                            name: 'sample cutout 2',
+                            xIndex: 10,
+                            width: 15,
+                            height: 15
+                        }
+                    ],
+                    [FIXTURE]: {
+                        name: 'sample fixture 1',
+                        xIndex: 4,
+                        width: 5,
+                        height: 25
+                    }
+                },
+                4: {
+                    [FIXTURE]: [
+                        {
+                            name: 'sample fixture 4',
+                            xIndex: 2,
+                            width: 10,
+                            height: 20
+                        },
+                        {
+                            name: 'sample fixture 4',
+                            xIndex: 6,
+                            width: 20,
+                            height: 10
+                        },
+                        {
+                            name: 'sample fixture 4',
+                            // xOffset: 10,
+                            // yOffset: -10,
+                            xIndex: 11,
+                            width: 10,
+                            height: 10
+                        },
+                    ]
+                }
             }
         }
     ],

@@ -11,10 +11,10 @@ import {
     CUBES
 } from '../../../constants/cubes/cubes'
 
-class Layers extends Component {
+class Layer extends Component {
 
     static defaultProps = {
-        presences: [],
+        presences: {},
         ceilingZIndices: CUBES[DEFAULT_STAGE_CUBES].ceiling.zIndices,
         ceilingBitmapKeys: CUBES[DEFAULT_STAGE_CUBES].ceiling.bitmapKeys,
         floorZIndices: CUBES[DEFAULT_STAGE_CUBES].floor.zIndices,
@@ -22,7 +22,7 @@ class Layers extends Component {
     }
 
     static propTypes = {
-        presences: PropTypes.array,
+        presences: PropTypes.object,
         ceilingZIndices: PropTypes.array.isRequired,
         ceilingBitmapKeys: PropTypes.array.isRequired,
         floorZIndices: PropTypes.array.isRequired,
@@ -62,4 +62,4 @@ class Layers extends Component {
     }
 }
 
-export default Layers
+export default Layer

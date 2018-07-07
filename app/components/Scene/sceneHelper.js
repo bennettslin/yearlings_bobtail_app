@@ -353,7 +353,7 @@ export const getTileCentreForPresence = ({
         centreYPercentage = left.back.y + (right.front.y - left.back.y) / 2
 
     return {
-        x: centreXPercentage,
-        y: centreYPercentage
+        xPercentage: centreXPercentage,
+        yPercentage: centreYPercentage
     }
 }

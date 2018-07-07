@@ -8,6 +8,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import cx from 'classnames'
+import keys from 'lodash.keys'
 
 import {
     setCanRenderPixels
@@ -26,13 +27,17 @@ const mapStateToProps = ({
 
 class Presences extends Component {
 
+    static defaultProps = {
+        presences: {}
+    }
+
     static propTypes = {
         // Through Redux.
         canPresencesRender: PropTypes.bool.isRequired,
 
         // From parent.
         yIndex: PropTypes.number.isRequired,
-        presences: PropTypes.array.isRequired
+        presences: PropTypes.object.isRequired
     }
 
     constructor(props) {
@@ -87,7 +92,9 @@ class Presences extends Component {
                 yIndex,
                 presences,
                 ...other
-            } = this.props
+            } = this.props,
+
+            presenceTypes = keys(presences)
 
         return (
             <DynamicSvg
@@ -98,14 +105,28 @@ class Presences extends Component {
                 viewBoxWidth={100}
                 viewBoxHeight={100}
             >
-                {presences.map((presence, index) => (
-                    <Presence
-                        key={index}
-                        {...presence}
-                        {...other}
-                        yIndex={yIndex}
-                    />
-                ))}
+                {presenceTypes.map(presenceType => {
+                    const presenceEntity = presences[presenceType],
+
+                        /**
+                         * This is either an array of presences, or a single
+                         * presence. If it's a single presence, make it an
+                         * array of one.
+                         */
+                        presenceArray = Array.isArray(presenceEntity) ?
+                            presenceEntity :
+                            [presenceEntity]
+
+                        return presenceArray.map((presence, index) => (
+                            <Presence
+                                key={index}
+                                type={presenceType}
+                                {...presence}
+                                {...other}
+                                yIndex={yIndex}
+                            />
+                        ))
+                })}
             </DynamicSvg>
         )
     }
