@@ -114,7 +114,6 @@ class Scene extends Component {
         const {
                 renderableSongIndex,
                 currentSceneIndex,
-
                 canSceneRender
             } = this.props,
 

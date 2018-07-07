@@ -32,17 +32,6 @@ class Layers extends Component {
 
         // From parent.
         presences: PropTypes.object.isRequired,
-        // cubes: PropTypes.shape({
-        //     ceiling: PropTypes.shape({
-        //         zIndices: PropTypes.array.isRequired,
-        //         bitmapKeys: PropTypes.array.isRequired
-        //     }),
-        //     floor: PropTypes.shape({
-        //         zIndices: PropTypes.array.isRequired,
-        //         bitmapKeys: PropTypes.array.isRequired
-        //     }),
-        //     slantDirection: PropTypes.string
-        // }).isRequired
         cubesKey: PropTypes.string.isRequired
     }
 

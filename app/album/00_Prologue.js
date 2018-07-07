@@ -37,7 +37,7 @@ module.exports = {
                         },
                         {
                             name: 'sample actor 2',
-                            xIndex: 10,
+                            xIndex: 8,
                             width: 15,
                             height: 15
                         }
@@ -45,7 +45,7 @@ module.exports = {
                     [CUTOUT]: [
                         {
                             name: 'sample cutout 1',
-                            xIndex: 4,
+                            xIndex: 2,
                             width: 5,
                             height: 25
                         },
@@ -58,7 +58,7 @@ module.exports = {
                     ],
                     [FIXTURE]: {
                         name: 'sample fixture 1',
-                        xIndex: 4,
+                        xIndex: 6,
                         width: 5,
                         height: 25
                     }
@@ -67,20 +67,20 @@ module.exports = {
                     [FIXTURE]: [
                         {
                             name: 'sample fixture 4',
-                            xIndex: 2,
+                            xIndex: 3,
                             width: 10,
                             height: 20
                         },
                         {
                             name: 'sample fixture 4',
-                            xIndex: 6,
+                            xIndex: 7,
                             width: 20,
                             height: 10
                         },
                         {
                             name: 'sample fixture 4',
-                            xOffset: 10,
-                            yOffset: -10,
+                            xOffset: -10,
+                            yOffset: -40,
                             xIndex: 11,
                             width: 10,
                             height: 10

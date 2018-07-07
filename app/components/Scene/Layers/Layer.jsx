@@ -20,23 +20,14 @@ class Layer extends Component {
 
         const {
             presences,
-            // ceilingZIndices,
-            // ceilingBitmapKeys,
-            // floorZIndices,
-            // floorBitmapKeys,
             ...other
         } = this.props
 
         return (
             <Fragment>
-                <Cubes {...other}
-                    // bitmapKeys={ceilingBitmapKeys}
-                    // zIndices={ceilingZIndices}
-                />
+                <Cubes {...other} />
                 <Cubes {...other}
                     isFloor
-                    // bitmapKeys={floorBitmapKeys}
-                    // zIndices={floorZIndices}
                 />
                 <Presences {...other}
                     {...{

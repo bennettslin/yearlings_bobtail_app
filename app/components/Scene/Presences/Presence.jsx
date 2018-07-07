@@ -9,6 +9,11 @@ import cx from 'classnames'
 
 import { getTileCentreForPresence } from '../sceneHelper'
 
+import {
+    CUBES,
+    DEFAULT_STAGE_CUBES
+} from '../../../constants/cubes/cubes'
+
 const propTypes = {
     // From parent.
     name: PropTypes.string.isRequired,
@@ -19,12 +24,7 @@ const propTypes = {
     yIndex: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
-    zIndices: PropTypes.arrayOf(
-        PropTypes.arrayOf(
-            PropTypes.number
-        ).isRequired
-    ).isRequired,
-    slantDirection: PropTypes.string.isRequired
+    cubesKey: PropTypes.string.isRequired
 }
 
 const Presence = ({
@@ -37,17 +37,29 @@ const Presence = ({
     yIndex,
     width,
     height,
-    zIndices,
-    slantDirection
+    cubesKey
 
 }) => {
 
-    const { xPercentage, yPercentage } = getTileCentreForPresence({
+    const {
+            floor = CUBES[DEFAULT_STAGE_CUBES].floor,
+            slantDirection = ''
+        } = CUBES[cubesKey],
+
+        {
+            zIndices
+        } = floor,
+
+        tileCentre = getTileCentreForPresence({
             xIndex,
             yIndex,
             zIndices,
             slantDirection
         }),
+        {
+            xPercentage,
+            yPercentage
+        } = tileCentre,
 
         adjustedX = xPercentage + xOffset - width / 2,
         adjustedY = yPercentage + yOffset - height
