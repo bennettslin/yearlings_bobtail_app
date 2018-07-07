@@ -9,12 +9,12 @@ import { VERSES,
          POSTCHORUS,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    MUSEUM_CUBES,
-    BACKSTAGE_CUBES,
-    SITA_APARTMENT_GATE_1_CUBES,
-    SITA_APARTMENT_GATE_2_CUBES,
-    GO_KART_CUBES
-} from '../constants/cubes/cubes'
+    MUSEUM_KEY,
+    BACKSTAGE_KEY,
+    SITA_APARTMENT_GATE_1_KEY,
+    SITA_APARTMENT_GATE_2_KEY,
+    GO_KART_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
@@ -36,7 +36,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SITA_APARTMENT_GATE_1_CUBES,
+            cubes: SITA_APARTMENT_GATE_1_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -59,7 +59,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: MUSEUM_CUBES,
+            cubes: MUSEUM_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -94,7 +94,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: BACKSTAGE_CUBES,
+            cubes: BACKSTAGE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -117,7 +117,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: GO_KART_CUBES,
+            cubes: GO_KART_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -140,7 +140,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SITA_APARTMENT_GATE_2_CUBES,
+            cubes: SITA_APARTMENT_GATE_2_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

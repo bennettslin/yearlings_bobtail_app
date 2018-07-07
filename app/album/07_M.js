@@ -10,12 +10,12 @@ import { VERSES,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    BENNETT_APARTMENT_COUCH_CUBES,
-    SHOW_STAGE_FRONT_CUBES,
-    REHEARSAL_SPACE_CUBES,
-    MOVIE_THEATRE_1_CUBES,
-    MOVIE_THEATRE_2_CUBES
-} from '../constants/cubes/cubes'
+    BENNETT_APARTMENT_COUCH_KEY,
+    SHOW_STAGE_FRONT_KEY,
+    REHEARSAL_SPACE_KEY,
+    MOVIE_THEATRE_1_KEY,
+    MOVIE_THEATRE_2_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {
@@ -30,7 +30,7 @@ module.exports = {
                     description: 'looking at Leonard Cohen poster'
                 }
             },
-            cubes: BENNETT_APARTMENT_COUCH_CUBES,
+            cubes: BENNETT_APARTMENT_COUCH_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -46,7 +46,7 @@ module.exports = {
                     description: 'sitting on couch, figuring out Rubiks Cube'
                 }
             },
-            cubes: BENNETT_APARTMENT_COUCH_CUBES,
+            cubes: BENNETT_APARTMENT_COUCH_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -69,7 +69,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: BENNETT_APARTMENT_COUCH_CUBES,
+            cubes: BENNETT_APARTMENT_COUCH_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -107,7 +107,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SHOW_STAGE_FRONT_CUBES,
+            cubes: SHOW_STAGE_FRONT_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -138,7 +138,7 @@ module.exports = {
                     description: 'sitting, eating fries, laughing'
                 }
             },
-            cubes: REHEARSAL_SPACE_CUBES,
+            cubes: REHEARSAL_SPACE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -161,7 +161,7 @@ module.exports = {
                     },
                 }
             },
-            cubes: MOVIE_THEATRE_1_CUBES,
+            cubes: MOVIE_THEATRE_1_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -191,7 +191,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: MOVIE_THEATRE_1_CUBES,
+            cubes: MOVIE_THEATRE_1_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -214,7 +214,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: MOVIE_THEATRE_2_CUBES,
+            cubes: MOVIE_THEATRE_2_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER

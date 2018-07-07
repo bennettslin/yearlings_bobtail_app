@@ -11,10 +11,10 @@ import { VERSES,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    TAIWAN_PUPPET_SHOW_CUBES,
-    SCHOOLBUS_CUBES,
-    TETHERBALL_SCENE_CUBES
-} from '../constants/cubes/cubes'
+    TAIWAN_PUPPET_SHOW_KEY,
+    SCHOOLBUS_KEY,
+    TETHERBALL_SCENE_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {
@@ -22,7 +22,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
-            cubes: TAIWAN_PUPPET_SHOW_CUBES,
+            cubes: TAIWAN_PUPPET_SHOW_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -33,7 +33,7 @@ module.exports = {
             description: `Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
             actors: {
             },
-            cubes: TAIWAN_PUPPET_SHOW_CUBES,
+            cubes: TAIWAN_PUPPET_SHOW_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -61,7 +61,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SCHOOLBUS_CUBES,
+            cubes: SCHOOLBUS_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -92,7 +92,7 @@ module.exports = {
                     description: 'laughing, tying up Bennett'
                 }
             },
-            cubes: TETHERBALL_SCENE_CUBES,
+            cubes: TETHERBALL_SCENE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -102,7 +102,7 @@ module.exports = {
             unitIndex: 12,
             description: `In Bennett's sketch, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
             actors: {},
-            cubes: TAIWAN_PUPPET_SHOW_CUBES,
+            cubes: TAIWAN_PUPPET_SHOW_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER

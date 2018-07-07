@@ -16,12 +16,12 @@ import { LEFT,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    PRETEEN_BENNETT_ROOM_CUBES,
-    FREEWAY_CUBES,
-    PORCH_CUBES,
-    CHILDHOOD_NEIGHBOURHOOD_CUBES,
-    CHANGELING_CAVE_CUBES
-} from '../constants/cubes/cubes'
+    PRETEEN_BENNETT_ROOM_KEY,
+    FREEWAY_KEY,
+    PORCH_KEY,
+    CHILDHOOD_NEIGHBOURHOOD_KEY,
+    CHANGELING_CAVE_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 
@@ -30,7 +30,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: ``,
-            cubes: FREEWAY_CUBES,
+            cubes: FREEWAY_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -46,7 +46,7 @@ module.exports = {
                     description: 'side angle, holding up a bottle, squinting'
                 }
             },
-            cubes: FREEWAY_CUBES,
+            cubes: FREEWAY_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -77,7 +77,7 @@ module.exports = {
                     description: 'stepping off porch, cautious, trying to calm Christopher'
                 }
             },
-            cubes: PORCH_CUBES,
+            cubes: PORCH_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -103,7 +103,7 @@ module.exports = {
                     description: 'side angle, aggressive stance, angry'
                 }
             },
-            cubes: PRETEEN_BENNETT_ROOM_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -133,7 +133,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: CHILDHOOD_NEIGHBOURHOOD_CUBES,
+            cubes: CHILDHOOD_NEIGHBOURHOOD_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -154,7 +154,7 @@ module.exports = {
                     description: 'lying in bed, worried, scared'
                 }
             },
-            cubes: PRETEEN_BENNETT_ROOM_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -180,7 +180,7 @@ module.exports = {
                     description: 'side angle, wide-eyed, needing reassurance'
                 }
             },
-            cubes: CHANGELING_CAVE_CUBES,
+            cubes: CHANGELING_CAVE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER

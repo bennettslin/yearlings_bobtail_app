@@ -13,12 +13,12 @@ import { VERSES,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    SHOW_STAGE_FRONT_FAR_CUBES,
-    SITA_APARTMENT_BED_CUBES,
-    ALLEY_CUBES,
-    SPROUL_PLAZA_CUBES,
-    BERKELEY_WALKWAY_CUBES
-} from '../constants/cubes/cubes'
+    SHOW_STAGE_FRONT_FAR_KEY,
+    SITA_APARTMENT_BED_KEY,
+    ALLEY_KEY,
+    SPROUL_PLAZA_KEY,
+    BERKELEY_WALKWAY_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_WINTER } from '../constants/scene'
 module.exports = {
@@ -45,7 +45,7 @@ module.exports = {
                     description: 'side, protective, judgmental'
                 }
             },
-            cubes: BERKELEY_WALKWAY_CUBES,
+            cubes: BERKELEY_WALKWAY_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -76,7 +76,7 @@ module.exports = {
                     description: 'side, eager'
                 }
             },
-            cubes: SHOW_STAGE_FRONT_FAR_CUBES,
+            cubes: SHOW_STAGE_FRONT_FAR_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -92,7 +92,7 @@ module.exports = {
                     description: 'walking through alley'
                 }
             },
-            cubes: ALLEY_CUBES,
+            cubes: ALLEY_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -134,7 +134,7 @@ module.exports = {
                     }
                 },
             },
-            cubes: SITA_APARTMENT_BED_CUBES,
+            cubes: SITA_APARTMENT_BED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -171,7 +171,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SPROUL_PLAZA_CUBES,
+            cubes: SPROUL_PLAZA_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER

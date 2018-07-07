@@ -1,4 +1,4 @@
-import { LOGUE_CUBES } from '../constants/cubes/cubes'
+import { LOGUE_KEY } from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_INDOOR } from '../constants/scene'
 module.exports = {
@@ -192,7 +192,7 @@ module.exports = {
                     description: 'standing'
                 }
             },
-            cubes: LOGUE_CUBES,
+            cubes: LOGUE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_INDOOR

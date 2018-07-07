@@ -7,9 +7,7 @@ import { connect } from 'react-redux'
 
 import Layer from './Layer'
 
-import {
-    DEFAULT_STAGE_CUBES
-} from '../../../constants/cubes/cubes'
+import { DEFAULT_STAGE_KEY } from '../../../constants/cubes/cubesConstants'
 
 import { Y_INDICES_ARRAY } from '../constants'
 
@@ -23,7 +21,7 @@ class Layers extends Component {
 
     static defaultProps = {
         presences: {},
-        cubesKey: DEFAULT_STAGE_CUBES
+        cubesKey: DEFAULT_STAGE_KEY
     }
 
     static propTypes = {
@@ -75,7 +73,7 @@ class Layers extends Component {
             // Until the component is mounted, use the default stage cubesKey.
             cubesKey = hasMounted ?
                 sceneCubesKey :
-                DEFAULT_STAGE_CUBES
+                DEFAULT_STAGE_KEY
 
         return (
             <div

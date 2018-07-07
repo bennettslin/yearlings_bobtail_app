@@ -15,10 +15,10 @@ import { VERSES,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    CHILDHOOD_BATHROOM_CUBES,
-    CHILDHOOD_NEIGHBOURHOOD_CUBES,
-    PLAYGROUND_CUBES
-} from '../constants/cubes/cubes'
+    CHILDHOOD_BATHROOM_KEY,
+    CHILDHOOD_NEIGHBOURHOOD_KEY,
+    PLAYGROUND_KEY
+} from '../constants/cubes/cubesConstants'
 import {
     SKY_ANYTIME,
     SKY_SPRING
@@ -29,7 +29,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Neighbourhood houses.`,
-            cubes: CHILDHOOD_NEIGHBOURHOOD_CUBES,
+            cubes: CHILDHOOD_NEIGHBOURHOOD_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -58,7 +58,7 @@ module.exports = {
                     description: 'side, running, panicked'
                 }
             },
-            cubes: CHILDHOOD_NEIGHBOURHOOD_CUBES,
+            cubes: CHILDHOOD_NEIGHBOURHOOD_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -87,7 +87,7 @@ module.exports = {
                     description: 'side, skipping, pointing back and laughing'
                 }
             },
-            cubes: PLAYGROUND_CUBES,
+            cubes: PLAYGROUND_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -106,7 +106,7 @@ module.exports = {
                     description: 'side, in bathtub, downcast'
                 }
             },
-            cubes: CHILDHOOD_BATHROOM_CUBES,
+            cubes: CHILDHOOD_BATHROOM_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -130,7 +130,7 @@ module.exports = {
                     description: 'side, facing front, singing, smiling'
                 }
             },
-            cubes: CHILDHOOD_BATHROOM_CUBES,
+            cubes: CHILDHOOD_BATHROOM_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

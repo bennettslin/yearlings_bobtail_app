@@ -13,12 +13,12 @@ import { VERSES,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    SITA_APARTMENT_COUCH_THOUGHT_CUBES,
-    OAKLAND_STREET_SIDE_CUBES,
-    OAKLAND_STREET_FRONT_1_CUBES,
-    OAKLAND_STREET_FRONT_2_CUBES,
-    OAKLAND_STREET_FRONT_3_CUBES
-} from '../constants/cubes/cubes'
+    SITA_APARTMENT_COUCH_THOUGHT_KEY,
+    OAKLAND_STREET_SIDE_KEY,
+    OAKLAND_STREET_FRONT_1_KEY,
+    OAKLAND_STREET_FRONT_2_KEY,
+    OAKLAND_STREET_FRONT_3_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
@@ -33,7 +33,7 @@ module.exports = {
                     description: 'side angle, cradling bracelet, blank'
                 }
             },
-            cubes: OAKLAND_STREET_SIDE_CUBES,
+            cubes: OAKLAND_STREET_SIDE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -56,7 +56,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SITA_APARTMENT_COUCH_THOUGHT_CUBES,
+            cubes: SITA_APARTMENT_COUCH_THOUGHT_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -79,7 +79,7 @@ module.exports = {
                     }
                 },
             },
-            cubes: OAKLAND_STREET_FRONT_1_CUBES,
+            cubes: OAKLAND_STREET_FRONT_1_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -109,7 +109,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: OAKLAND_STREET_FRONT_2_CUBES,
+            cubes: OAKLAND_STREET_FRONT_2_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -160,7 +160,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: OAKLAND_STREET_FRONT_3_CUBES,
+            cubes: OAKLAND_STREET_FRONT_3_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

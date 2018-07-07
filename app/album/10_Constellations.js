@@ -17,13 +17,13 @@ import { OVERLAP,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    WALGREENS_CUBES,
-    STEAM_TUNNEL_CUBES,
-    HOWIE_ATTIC_CUBES,
-    UCLA_CAMPUS_CUBES,
-    CEMETERY_CUBES,
-    STATION_WAGON_CUBES
-} from '../constants/cubes/cubes'
+    WALGREENS_KEY,
+    STEAM_TUNNEL_KEY,
+    HOWIE_ATTIC_KEY,
+    UCLA_CAMPUS_KEY,
+    CEMETERY_KEY,
+    STATION_WAGON_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 
@@ -54,7 +54,7 @@ module.exports = {
                     description: 'side, walking'
                 }
             },
-            cubes: UCLA_CAMPUS_CUBES,
+            cubes: UCLA_CAMPUS_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -85,7 +85,7 @@ module.exports = {
                     description: 'side angle, feigning superiority'
                 }
             },
-            cubes: WALGREENS_CUBES,
+            cubes: WALGREENS_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -116,7 +116,7 @@ module.exports = {
                     description: 'side angle, play fighting'
                 }
             },
-            cubes: STEAM_TUNNEL_CUBES,
+            cubes: STEAM_TUNNEL_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -147,7 +147,7 @@ module.exports = {
                     description: 'side angle, squatting, pouring water on grave'
                 }
             },
-            cubes: CEMETERY_CUBES,
+            cubes: CEMETERY_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -178,7 +178,7 @@ module.exports = {
                     description: 'back angle, sleeping in car'
                 }
             },
-            cubes: STATION_WAGON_CUBES,
+            cubes: STATION_WAGON_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -199,7 +199,7 @@ module.exports = {
                     description: 'downstairs, in agony'
                 }
             },
-            cubes: HOWIE_ATTIC_CUBES,
+            cubes: HOWIE_ATTIC_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

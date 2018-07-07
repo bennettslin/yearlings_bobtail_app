@@ -13,14 +13,14 @@ import { REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    DISHROOM_CUBES,
-    BENNETT_APARTMENT_BED_CUBES,
-    WAITING_ROOM_CUBES,
-    SITA_APARTMENT_BED_CUBES,
-    SITA_APARTMENT_GATE_1_CUBES,
-    SITA_APARTMENT_GATE_2_CUBES,
-    BENNETT_APARTMENT_GATE_CUBES
-} from '../constants/cubes/cubes'
+    DISHROOM_KEY,
+    BENNETT_APARTMENT_BED_KEY,
+    WAITING_ROOM_KEY,
+    SITA_APARTMENT_BED_KEY,
+    SITA_APARTMENT_GATE_1_KEY,
+    SITA_APARTMENT_GATE_2_KEY,
+    BENNETT_APARTMENT_GATE_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_AUTUMN,
          SKY_WINTER } from '../constants/scene'
@@ -39,7 +39,7 @@ module.exports = {
                     description: 'back, reading book, pulling tray from belt.'
                 }
             },
-            cubes: DISHROOM_CUBES,
+            cubes: DISHROOM_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -62,7 +62,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: DISHROOM_CUBES,
+            cubes: DISHROOM_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -71,7 +71,7 @@ module.exports = {
         {
             unitIndex: 6,
             description: 'Grasshoppers scene 1',
-            cubes: SITA_APARTMENT_GATE_1_CUBES,
+            cubes: SITA_APARTMENT_GATE_1_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -80,7 +80,7 @@ module.exports = {
         {
             unitIndex: 7,
             description: 'Grasshoppers scene 5',
-            cubes: SITA_APARTMENT_GATE_2_CUBES,
+            cubes: SITA_APARTMENT_GATE_2_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -103,7 +103,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: BENNETT_APARTMENT_GATE_CUBES,
+            cubes: BENNETT_APARTMENT_GATE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -126,7 +126,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: BENNETT_APARTMENT_GATE_CUBES,
+            cubes: BENNETT_APARTMENT_GATE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -149,7 +149,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: BENNETT_APARTMENT_BED_CUBES,
+            cubes: BENNETT_APARTMENT_BED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -172,7 +172,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: BENNETT_APARTMENT_BED_CUBES,
+            cubes: BENNETT_APARTMENT_BED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -188,7 +188,7 @@ module.exports = {
                     description: 'sitting, eyes closed, falling asleep'
                 }
             },
-            cubes: WAITING_ROOM_CUBES,
+            cubes: WAITING_ROOM_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -211,7 +211,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: WAITING_ROOM_CUBES,
+            cubes: WAITING_ROOM_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -248,7 +248,7 @@ module.exports = {
                     }
                 },
             },
-            cubes: SITA_APARTMENT_BED_CUBES,
+            cubes: SITA_APARTMENT_BED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -285,7 +285,7 @@ module.exports = {
                     }
                 },
             },
-            cubes: SITA_APARTMENT_BED_CUBES,
+            cubes: SITA_APARTMENT_BED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -322,7 +322,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SITA_APARTMENT_BED_CUBES,
+            cubes: SITA_APARTMENT_BED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER

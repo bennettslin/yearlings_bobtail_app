@@ -16,11 +16,11 @@ import { VERSES,
          BACKING,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    BENNETT_BASEMENT_CUBES,
-    SNOW_GLOBES_1_CUBES,
-    SNOW_GLOBES_2_CUBES,
-    SNOW_GLOBES_3_CUBES
-} from '../constants/cubes/cubes'
+    BENNETT_BASEMENT_KEY,
+    SNOW_GLOBES_1_KEY,
+    SNOW_GLOBES_2_KEY,
+    SNOW_GLOBES_3_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
@@ -40,7 +40,7 @@ module.exports = {
                     description: 'side, asleep'
                 }
             },
-            cubes: BENNETT_BASEMENT_CUBES,
+            cubes: BENNETT_BASEMENT_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -68,7 +68,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: BENNETT_BASEMENT_CUBES,
+            cubes: BENNETT_BASEMENT_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -99,7 +99,7 @@ module.exports = {
                     description: 'side angle, consoling, cautious'
                 }
             },
-            cubes: SNOW_GLOBES_1_CUBES,
+            cubes: SNOW_GLOBES_1_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -137,7 +137,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SNOW_GLOBES_2_CUBES,
+            cubes: SNOW_GLOBES_2_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -182,7 +182,7 @@ module.exports = {
                     description: 'side angle, cheerful, making a point'
                 }
             },
-            cubes: SNOW_GLOBES_3_CUBES,
+            cubes: SNOW_GLOBES_3_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -220,7 +220,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: BENNETT_BASEMENT_CUBES,
+            cubes: BENNETT_BASEMENT_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

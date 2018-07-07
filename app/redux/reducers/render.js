@@ -11,7 +11,7 @@ import {
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
     CAN_SCENE_RENDER,
-    RENDERABLE_CUBES_Y_INDEX,
+    RENDERABLE_KEY_Y_INDEX,
     CAN_PRESENCES_RENDER,
     CAN_PIXELS_RENDER,
     SELECTED_ANNOTATION_INDEX,
@@ -157,7 +157,7 @@ export const RenderableCubesYIndexReducer = (
     action
 ) => {
     switch (action.type) {
-        case RENDERABLE_CUBES_Y_INDEX:
+        case RENDERABLE_KEY_Y_INDEX:
             return action.payload
         default:
             return state

@@ -12,7 +12,7 @@ import {
     CAN_LYRIC_RENDER,
     CAN_CAROUSEL_RENDER,
     CAN_SCENE_RENDER,
-    RENDERABLE_CUBES_Y_INDEX,
+    RENDERABLE_KEY_Y_INDEX,
     CAN_PRESENCES_RENDER,
     CAN_PIXELS_RENDER
 } from '../../constants/state'
@@ -97,7 +97,7 @@ export const setCanRenderScene = (
 export const setRenderableCubesYIndex = (
     renderableCubesYIndex = 0
 ) => ({
-    type: RENDERABLE_CUBES_Y_INDEX,
+    type: RENDERABLE_KEY_Y_INDEX,
     payload: renderableCubesYIndex
 })
 

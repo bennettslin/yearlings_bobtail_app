@@ -17,10 +17,8 @@ import {
 } from './cubeHelper'
 import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
 
-import {
-    CUBES,
-    DEFAULT_STAGE_CUBES
-} from '../../../constants/cubes/cubes'
+import { CUBES } from '../../../constants/cubes/cubes'
+import { DEFAULT_STAGE_KEY } from '../../../constants/cubes/cubesConstants'
 
 import {
     FRONT,
@@ -52,8 +50,8 @@ class Cube extends PureComponent {
             } = other,
 
             {
-                ceiling = CUBES[DEFAULT_STAGE_CUBES].ceiling,
-                floor = CUBES[DEFAULT_STAGE_CUBES].floor,
+                ceiling = CUBES[DEFAULT_STAGE_KEY].ceiling,
+                floor = CUBES[DEFAULT_STAGE_KEY].floor,
                 slantDirection = ''
             } = CUBES[cubesKey],
 

@@ -13,11 +13,11 @@ import { REFRAIN,
          OUTRO,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    SITA_APARTMENT_COUCH_CUBES,
-    BENNETT_BASEMENT_CUBES,
-    SHOW_STAGE_FRONT_CUBES,
-    VOLKSWAGEN_CUBES
-} from '../constants/cubes/cubes'
+    SITA_APARTMENT_COUCH_KEY,
+    BENNETT_BASEMENT_KEY,
+    SHOW_STAGE_FRONT_KEY,
+    VOLKSWAGEN_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
@@ -39,7 +39,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -70,7 +70,7 @@ module.exports = {
                     description: 'front, clutching at fist, laughing through pain'
                 }
             },
-            cubes: VOLKSWAGEN_CUBES,
+            cubes: VOLKSWAGEN_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -93,7 +93,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: BENNETT_BASEMENT_CUBES,
+            cubes: BENNETT_BASEMENT_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -124,7 +124,7 @@ module.exports = {
                     description: 'front, removing bass, rolling eyes'
                 }
             },
-            cubes: SHOW_STAGE_FRONT_CUBES,
+            cubes: SHOW_STAGE_FRONT_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -147,7 +147,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SITA_APARTMENT_COUCH_CUBES,
+            cubes: SITA_APARTMENT_COUCH_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

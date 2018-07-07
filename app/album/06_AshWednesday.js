@@ -10,12 +10,12 @@ import { VERSES,
          BRIDGE,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    BENNETT_APARTMENT_COUCH_THOUGHT_CUBES,
-    BENNETT_APARTMENT_COURTYARD_CUBES,
-    CATHOLIC_CHURCH_CUBES,
-    SPROUL_PLAZA_CUBES,
-    BERKELEY_WALKWAY_CUBES
-} from '../constants/cubes/cubes'
+    BENNETT_APARTMENT_COUCH_THOUGHT_KEY,
+    BENNETT_APARTMENT_COURTYARD_KEY,
+    CATHOLIC_CHURCH_KEY,
+    SPROUL_PLAZA_KEY,
+    BERKELEY_WALKWAY_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {
@@ -35,7 +35,7 @@ module.exports = {
                     description: 'walking away, in a bad mood'
                 }
             },
-            cubes: BENNETT_APARTMENT_COURTYARD_CUBES,
+            cubes: BENNETT_APARTMENT_COURTYARD_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -56,7 +56,7 @@ module.exports = {
                     description: 'sitting upright, droll smile'
                 }
             },
-            cubes: BENNETT_APARTMENT_COUCH_THOUGHT_CUBES,
+            cubes: BENNETT_APARTMENT_COUCH_THOUGHT_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -72,7 +72,7 @@ module.exports = {
                     description: 'standing, back forward, hands in pocket'
                 }
             },
-            cubes: CATHOLIC_CHURCH_CUBES,
+            cubes: CATHOLIC_CHURCH_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -102,7 +102,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SPROUL_PLAZA_CUBES,
+            cubes: SPROUL_PLAZA_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -123,7 +123,7 @@ module.exports = {
                     description: 'walking forward, confused and curious at Bennett'
                 }
             },
-            cubes: BERKELEY_WALKWAY_CUBES,
+            cubes: BERKELEY_WALKWAY_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

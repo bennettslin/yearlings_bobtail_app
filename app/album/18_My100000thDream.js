@@ -11,12 +11,12 @@ import { VERSES,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    EL_TORITO_CUBES,
-    PAMPAS_CUBES,
-    OUTDOOR_WEDDING_CUBES,
-    DREAM_CLIFF_CUBES,
-    DREAM_DEATHBED_CUBES
-} from '../constants/cubes/cubes'
+    EL_TORITO_KEY,
+    PAMPAS_KEY,
+    OUTDOOR_WEDDING_KEY,
+    DREAM_CLIFF_KEY,
+    DREAM_DEATHBED_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_SPRING } from '../constants/scene'
 module.exports = {
@@ -38,7 +38,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: EL_TORITO_CUBES,
+            cubes: EL_TORITO_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -82,7 +82,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: PAMPAS_CUBES,
+            cubes: PAMPAS_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -105,7 +105,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: OUTDOOR_WEDDING_CUBES,
+            cubes: OUTDOOR_WEDDING_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -128,7 +128,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: DREAM_CLIFF_CUBES,
+            cubes: DREAM_CLIFF_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING
@@ -158,7 +158,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: DREAM_DEATHBED_CUBES,
+            cubes: DREAM_DEATHBED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SPRING

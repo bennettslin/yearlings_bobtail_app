@@ -1,4 +1,4 @@
-import { LOGUE_CUBES } from '../constants/cubes/cubes'
+import { LOGUE_KEY } from '../constants/cubes/cubesConstants'
 import {
     CUTOUT,
     FIXTURE,
@@ -21,7 +21,7 @@ module.exports = {
                     description: 'standing, facing forward, welcoming'
                 }
             },
-            cubes: LOGUE_CUBES,
+            cubes: LOGUE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_INDOOR

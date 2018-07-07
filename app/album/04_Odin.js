@@ -18,15 +18,15 @@ import { LEFT,
          FLASHBACK_TO_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    ODIN_SCENE_1_CUBES,
-    ODIN_SCENE_2_CUBES,
-    ODIN_SCENE_3_CUBES,
-    ODIN_SCENE_4_CUBES,
-    ODIN_SCENE_5_CUBES,
-    ODIN_SCENE_6_CUBES,
-    ODIN_SCENE_7_CUBES,
-    ODIN_SCENE_8_CUBES
-} from '../constants/cubes/cubes'
+    ODIN_SCENE_1_KEY,
+    ODIN_SCENE_2_KEY,
+    ODIN_SCENE_3_KEY,
+    ODIN_SCENE_4_KEY,
+    ODIN_SCENE_5_KEY,
+    ODIN_SCENE_6_KEY,
+    ODIN_SCENE_7_KEY,
+    ODIN_SCENE_8_KEY
+} from '../constants/cubes/cubesConstants'
 
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
@@ -42,7 +42,7 @@ module.exports = {
                     description: 'side, lying on floor, propped up'
                 }
             },
-            cubes: ODIN_SCENE_1_CUBES,
+            cubes: ODIN_SCENE_1_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -58,7 +58,7 @@ module.exports = {
                     description: 'side angle, looking down stairs'
                 }
             },
-            cubes: ODIN_SCENE_2_CUBES,
+            cubes: ODIN_SCENE_2_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -74,7 +74,7 @@ module.exports = {
                     description: 'side angle, peeking out from gate'
                 }
             },
-            cubes: ODIN_SCENE_3_CUBES,
+            cubes: ODIN_SCENE_3_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -90,7 +90,7 @@ module.exports = {
                     description: 'getting off rickshaw bike'
                 }
             },
-            cubes: ODIN_SCENE_4_CUBES,
+            cubes: ODIN_SCENE_4_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -106,7 +106,7 @@ module.exports = {
                     description: 'side back, looking out to ocean'
                 }
             },
-            cubes: ODIN_SCENE_5_CUBES,
+            cubes: ODIN_SCENE_5_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -122,7 +122,7 @@ module.exports = {
                     description: 'peering down from buoy'
                 }
             },
-            cubes: ODIN_SCENE_6_CUBES,
+            cubes: ODIN_SCENE_6_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -143,7 +143,7 @@ module.exports = {
                     description: 'mermaid'
                 }
             },
-            cubes: ODIN_SCENE_7_CUBES,
+            cubes: ODIN_SCENE_7_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -159,7 +159,7 @@ module.exports = {
                     description: 'side angle, crouched in sand, looking back'
                 }
             },
-            cubes: ODIN_SCENE_8_CUBES,
+            cubes: ODIN_SCENE_8_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

@@ -14,14 +14,14 @@ import { VERSES,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    PRETEEN_BENNETT_ROOM_CUBES,
-    PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
-    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_CUBES,
-    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES,
-    JUNIOR_HIGH_HALLWAY_CUBES,
-    JUNIOR_HIGH_LOCKERS_CUBES,
-    JUNIOR_HIGH_QUAD_CUBES
-} from '../constants/cubes/cubes'
+    PRETEEN_BENNETT_ROOM_KEY,
+    PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
+    PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_KEY,
+    PRETEEN_BENNETT_ROOM_LEFT_REVEALED_KEY,
+    JUNIOR_HIGH_HALLWAY_KEY,
+    JUNIOR_HIGH_LOCKERS_KEY,
+    JUNIOR_HIGH_QUAD_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_WINTER } from '../constants/scene'
 /**
@@ -33,7 +33,7 @@ module.exports = {
         {
             unitIndex: 1,
             description: `Bennett's room, but seemingly no one is there.`,
-            cubes: PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -54,7 +54,7 @@ module.exports = {
                     description: 'w-sitting, blissful'
                 }
             },
-            cubes: PRETEEN_BENNETT_ROOM_OPEN_BED_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -70,7 +70,7 @@ module.exports = {
                     description: 'side, sitting up in bed, feigning sick'
                 }
             },
-            cubes: PRETEEN_BENNETT_ROOM_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -86,7 +86,7 @@ module.exports = {
                     description: 'in bed, asleep, turned away'
                 }
             },
-            cubes: PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_LEFT_REVEALED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -102,7 +102,7 @@ module.exports = {
                     description: 'side, sitting, shaken, scared'
                 }
             },
-            cubes: PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_CUBES,
+            cubes: PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -128,7 +128,7 @@ module.exports = {
                     description: 'side angle, throwing rocks, angry'
                 }
             },
-            cubes: JUNIOR_HIGH_LOCKERS_CUBES,
+            cubes: JUNIOR_HIGH_LOCKERS_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -161,7 +161,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: JUNIOR_HIGH_QUAD_CUBES,
+            cubes: JUNIOR_HIGH_QUAD_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER
@@ -194,7 +194,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: JUNIOR_HIGH_HALLWAY_CUBES,
+            cubes: JUNIOR_HIGH_HALLWAY_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_WINTER

@@ -10,11 +10,11 @@ import { VERSES,
          REFRAIN,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    CREMATED_CLIFF_CUBES,
-    CREMATED_CLIFF_CONVERTIBLE_CUBES,
-    CREMATED_DEATHBED_CUBES,
-    CREMATED_DEATHBED_TENNIS_CUBES
-} from '../constants/cubes/cubes'
+    CREMATED_CLIFF_KEY,
+    CREMATED_CLIFF_CONVERTIBLE_KEY,
+    CREMATED_DEATHBED_KEY,
+    CREMATED_DEATHBED_TENNIS_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_AUTUMN } from '../constants/scene'
 module.exports = {
@@ -34,7 +34,7 @@ module.exports = {
                     description: 'sitting in car, putting on perfume'
                 }
             },
-            cubes: CREMATED_CLIFF_CONVERTIBLE_CUBES,
+            cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -55,7 +55,7 @@ module.exports = {
                     description: 'back angle, eyes closed, trying to get off'
                 }
             },
-            cubes: CREMATED_CLIFF_CONVERTIBLE_CUBES,
+            cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -76,7 +76,7 @@ module.exports = {
                     description: 'back angle, giving blowjob'
                 }
             },
-            cubes: CREMATED_CLIFF_CONVERTIBLE_CUBES,
+            cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -92,7 +92,7 @@ module.exports = {
                     description: 'front angle, dying, infirm'
                 }
             },
-            cubes: CREMATED_DEATHBED_CUBES,
+            cubes: CREMATED_DEATHBED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -108,7 +108,7 @@ module.exports = {
                     description: 'serving in tennis'
                 }
             },
-            cubes: CREMATED_DEATHBED_TENNIS_CUBES,
+            cubes: CREMATED_DEATHBED_TENNIS_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -129,7 +129,7 @@ module.exports = {
                     description: 'side, looking back, reversing car'
                 }
             },
-            cubes: CREMATED_CLIFF_CONVERTIBLE_CUBES,
+            cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN
@@ -138,7 +138,7 @@ module.exports = {
         {
             unitIndex: 11,
             description: `The car is in the background.`,
-            cubes: CREMATED_CLIFF_CUBES,
+            cubes: CREMATED_CLIFF_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_AUTUMN

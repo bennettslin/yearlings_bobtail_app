@@ -9,10 +9,8 @@ import cx from 'classnames'
 
 import { getTileCentreForPresence } from '../sceneHelper'
 
-import {
-    CUBES,
-    DEFAULT_STAGE_CUBES
-} from '../../../constants/cubes/cubes'
+import { CUBES } from '../../../constants/cubes/cubes'
+import { DEFAULT_STAGE_KEY } from '../../../constants/cubes/cubesConstants'
 
 const propTypes = {
     // From parent.
@@ -42,7 +40,7 @@ const Presence = ({
 }) => {
 
     const {
-            floor = CUBES[DEFAULT_STAGE_CUBES].floor,
+            floor = CUBES[DEFAULT_STAGE_KEY].floor,
             slantDirection = ''
         } = CUBES[cubesKey],
 

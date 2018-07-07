@@ -13,11 +13,11 @@ import { VERSES,
          FORESHADOW_OF_PORTAL_PREFIX,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
-    SHOW_STAGE_SIDE_1_CUBES,
-    SHOW_STAGE_SIDE_2_CUBES,
-    SITA_APARTMENT_BED_CUBES,
-    SHOW_UNLOADING_CUBES
-} from '../constants/cubes/cubes'
+    SHOW_STAGE_SIDE_1_KEY,
+    SHOW_STAGE_SIDE_2_KEY,
+    SITA_APARTMENT_BED_KEY,
+    SHOW_UNLOADING_KEY
+} from '../constants/cubes/cubesConstants'
 import { SKY_ANYTIME,
          SKY_SUMMER } from '../constants/scene'
 module.exports = {
@@ -59,7 +59,7 @@ module.exports = {
                     description: 'side, squeezing through, awkward'
                 }
             },
-            cubes: SHOW_STAGE_SIDE_1_CUBES,
+            cubes: SHOW_STAGE_SIDE_1_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -90,7 +90,7 @@ module.exports = {
                     description: 'side, walking, carrying cymbal, talking'
                 }
             },
-            cubes: SHOW_STAGE_SIDE_2_CUBES,
+            cubes: SHOW_STAGE_SIDE_2_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -131,7 +131,7 @@ module.exports = {
                     description: 'front, talking to Stephanie'
                 }
             },
-            cubes: SHOW_UNLOADING_CUBES,
+            cubes: SHOW_UNLOADING_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
@@ -168,7 +168,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: SITA_APARTMENT_BED_CUBES,
+            cubes: SITA_APARTMENT_BED_KEY,
             sky: {
                 time: SKY_ANYTIME,
                 season: SKY_SUMMER
