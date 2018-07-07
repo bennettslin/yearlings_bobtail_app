@@ -11,12 +11,6 @@ module.exports = [
     },
 
     {
-        taskName: `Presence yIndex calculator is wonky.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: `Sky and Wood sometimes don't resize after window resize? Doesn't always repro.`,
         workedHours: 0,
         neededHours: 1

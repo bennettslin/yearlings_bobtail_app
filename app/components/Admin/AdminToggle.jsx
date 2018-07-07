@@ -10,7 +10,7 @@ const AdminToggle = ({
     deviceIndex,
     windowWidth,
     windowHeight
-}) => (
+}) => null && (
     <div className="AdminToggle">
         <div>
             {DEVICE_OBJECTS[deviceIndex].className}

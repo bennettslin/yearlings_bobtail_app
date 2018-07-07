@@ -20,29 +20,33 @@ const _getPolygonPoint = ({ x, y }) => {
 
 export const getPolygonPointsForFrontFace = ({
 
-    slantDirection,
     cubeCorners,
     isFloor
 
 }) => {
-    const { tile: tl, base: bs } = cubeCorners
-    let cornerOrder
+    const { tile: tl, base: bs } = cubeCorners,
 
-    if (slantDirection === 'left') {
-        cornerOrder = isFloor ?
-            [tl.left.back, tl.right.back, bs.right.back, bs.left.back] :
-            [bs.left.back, bs.right.back, tl.right.back, tl.left.back]
-
-    } else if (slantDirection === 'right') {
-        cornerOrder = isFloor ?
-            [tl.left.front, tl.left.back, bs.left.back, bs.left.front] :
-            [bs.left.front, bs.left.back, tl.left.back, tl.left.front]
-
-    } else {
         cornerOrder = isFloor ?
             [tl.left.front, tl.right.front, bs.right.front, bs.left.front] :
             [bs.left.front, bs.right.front, tl.right.front, tl.left.front]
-    }
+
+    return cornerOrder.map(corner => (
+        _getPolygonPoint(corner)
+    ))
+}
+
+export const getPolygonPointsForTileFace = ({
+
+    cubeCorners,
+    isFloor
+
+}) => {
+
+    const { tile: tl } = cubeCorners,
+
+        cornerOrder = isFloor ?
+            [tl.left.back, tl.right.back, tl.right.front, tl.left.front] :
+            [tl.left.front, tl.right.front, tl.right.back, tl.left.back]
 
     return cornerOrder.map(corner => (
         _getPolygonPoint(corner)
@@ -58,65 +62,30 @@ export const getPolygonPointsForSideFace = ({
 
 }) => {
     const { tile: tl, base: bs } = cubeCorners
-    let cornerOrder
 
-    if (slantDirection === 'left') {
-        cornerOrder = isFloor ?
-            [tl.left.front, tl.left.back, bs.left.back, bs.left.front] :
-            [bs.left.front, bs.left.back, tl.left.back, tl.left.front]
+    // Direction is slant direction.
+    let direction = slantDirection,
+        cornerOrder
 
-    } else if (slantDirection === 'right') {
-        cornerOrder = isFloor ?
-            [tl.left.back, tl.right.back, bs.right.back, bs.left.back] :
-            [bs.left.back, bs.right.back, tl.right.back, tl.left.back]
+    // If default...
+    if (!direction) {
 
-    } else {
-        // Render right face if cube is on left side of stage, and vice versa.
-        const side = sideDirection === 'left' ?
-            'right' : 'left'
-
-        if (side === 'right') {
-            cornerOrder = isFloor ?
-                [tl[side].front, tl[side].back, bs[side].back, bs[side].front] :
-                [bs[side].front, bs[side].back, tl[side].back, tl[side].front]
-
-        } else {
-            cornerOrder = isFloor ?
-                [tl[side].back, tl[side].front, bs[side].front, bs[side].back] :
-                [bs[side].back, bs[side].front, tl[side].front, tl[side].back]
-        }
+        /**
+         * ... render right face if cube is on left side of stage, and vice
+         * versa.
+         */
+        direction = sideDirection === 'left' ? 'right' : 'left'
     }
 
-    return cornerOrder.map(corner => (
-        _getPolygonPoint(corner)
-    ))
-}
-
-export const getPolygonPointsForTileFace = ({
-
-    slantDirection,
-    cubeCorners,
-    isFloor
-
-}) => {
-
-    const { tile: tl } = cubeCorners
-    let cornerOrder
-
-    if (slantDirection === 'left') {
+    if (direction === 'left') {
         cornerOrder = isFloor ?
-            [tl.left.front, tl.right.front, tl.right.back, tl.left.back] :
-            [tl.left.back, tl.right.back, tl.right.front, tl.left.front]
+            [tl.left.back, tl.left.front, bs.left.front, bs.left.back] :
+            [bs.left.back, bs.left.front, tl.left.front, tl.left.back]
 
-    } else if (slantDirection === 'right') {
+    } else if (direction === 'right') {
         cornerOrder = isFloor ?
-            [tl.right.front, tl.right.back, tl.left.back, tl.left.front] :
-            [tl.left.front, tl.left.back, tl.right.back, tl.right.front]
-
-    } else {
-        cornerOrder = isFloor ?
-            [tl.left.back, tl.right.back, tl.right.front, tl.left.front] :
-            [tl.left.front, tl.right.front, tl.right.back, tl.left.back]
+            [tl.right.front, tl.right.back, bs.right.back, bs.right.front] :
+            [bs.right.front, bs.right.back, tl.right.back, tl.right.front]
     }
 
     return cornerOrder.map(corner => (
@@ -133,23 +102,18 @@ export const getPolygonPoints = ({
 }) => {
 
     if (face === TILE) {
-
         return getPolygonPointsForTileFace({
             isFloor,
-            slantDirection,
             cubeCorners
         })
 
     } else if (face === FRONT) {
-
         return getPolygonPointsForFrontFace({
             isFloor,
-            slantDirection,
             cubeCorners
         })
 
     } else if (face === SIDE) {
-
         return getPolygonPointsForSideFace({
             isFloor,
             sideDirection,

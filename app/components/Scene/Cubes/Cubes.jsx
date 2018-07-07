@@ -258,7 +258,7 @@ class Cubes extends Component {
                             bitmapKeys, xIndex, yIndex
                         )
 
-                    return xIndex === 5 && (
+                    return (
                         <Cube
                             key={`${xIndex}_${yIndex}`}
                             xIndex={xIndex}

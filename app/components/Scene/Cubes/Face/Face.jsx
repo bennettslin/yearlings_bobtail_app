@@ -152,7 +152,7 @@ class Face extends Component {
                     polygonPointsString={polygonPointsString}
                 />
 
-                {/* <Pixels
+                <Pixels
                     {...{
                         base,
                         bitmapMatrix,
@@ -160,7 +160,7 @@ class Face extends Component {
                         canUpdateRenderableYIndex,
                         yIndex
                     }}
-                /> */}
+                />
 
                 {/* Single polygon for the overlying shade. */}
                 <polygon

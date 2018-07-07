@@ -15,9 +15,6 @@ import {
     getValueInAbridgedMatrix
 } from '../../helpers/generalHelper'
 
-const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
-    SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
-
 /***************
  * COORDINATES *
  ***************/
@@ -175,6 +172,9 @@ const _getHorizontalPlaneFractionsForDefault = (
     }
 }
 
+const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
+    SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
+
 const _getHorizontalPlaneFractionsForSlantedLeft = (
     xIndex, yIndex, zIndex
 ) => {
@@ -215,18 +215,18 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
     return {
         left: {
             back: _getXYPercentages(
-                slantedLeftXIndex + 1, slantedLeftYIndex, zIndex, 'left'
+                slantedLeftXIndex, slantedLeftYIndex + 1, zIndex, 'left'
             ),
             front: _getXYPercentages(
-                slantedLeftXIndex, slantedLeftYIndex + 2, zIndex, 'left'
+                slantedLeftXIndex + 1, slantedLeftYIndex + 3, zIndex, 'left'
             )
         },
         right: {
             back: _getXYPercentages(
-                slantedLeftXIndex + 3, slantedLeftYIndex + 1, zIndex, 'left'
+                slantedLeftXIndex + 2, slantedLeftYIndex, zIndex, 'left'
             ),
             front: _getXYPercentages(
-                slantedLeftXIndex + 2, slantedLeftYIndex + 3, zIndex, 'left'
+                slantedLeftXIndex + 3, slantedLeftYIndex + 2, zIndex, 'left'
             )
         }
     }
@@ -271,18 +271,18 @@ const _getHorizontalPlaneFractionsForSlantedRight = (
     return {
         left: {
             back: _getXYPercentages(
-                slantedRightXIndex + 2, slantedRightYIndex, zIndex, 'right'
+                slantedRightXIndex + 1, slantedRightYIndex, zIndex, 'right'
             ),
             front: _getXYPercentages(
-                slantedRightXIndex, slantedRightYIndex + 1, zIndex, 'right'
+                slantedRightXIndex, slantedRightYIndex + 2, zIndex, 'right'
             )
         },
         right: {
             back: _getXYPercentages(
-                slantedRightXIndex + 3, slantedRightYIndex + 2, zIndex, 'right'
+                slantedRightXIndex + 3, slantedRightYIndex + 1, zIndex, 'right'
             ),
             front: _getXYPercentages(
-                slantedRightXIndex + 1, slantedRightYIndex + 3, zIndex, 'right'
+                slantedRightXIndex + 2, slantedRightYIndex + 3, zIndex, 'right'
             )
         }
     }
