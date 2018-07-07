@@ -114,7 +114,7 @@ class Cubes extends Component {
                 yIndex > previousRenderableCubesYIndex
             )
         ) {
-            this._setTimeoutForNextRender()
+            this._updateNextRender()
         }
 
         if (!hasMounted) {
@@ -131,7 +131,10 @@ class Cubes extends Component {
         }
     }
 
-    _setTimeoutForNextRender() {
+    _updateNextRender({
+        // TODO: Set timeout only when rendering from new cubesKey.
+        doSetTimeout = true
+    } = {}) {
 
         const {
             isFloor,
@@ -158,16 +161,19 @@ class Cubes extends Component {
                     this._setRenderableCubesYIndex :
                     this._setCanRenderPresences
 
-            setTimeout(
-                timeoutCallback,
-                0
-            )
+            if (doSetTimeout) {
+                setTimeout(
+                    timeoutCallback,
+                    0
+                )
+            } else {
+                timeoutCallback()
+            }
 
             /**
              * The timeouts seem to add 0.5 seconds to the total render time. I
              * think this is acceptable, at least for now.
              */
-            // timeoutCallback()
         }
     }
 
