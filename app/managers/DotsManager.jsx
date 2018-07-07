@@ -14,6 +14,7 @@ import {
 } from '../redux/actions/storage'
 
 import { getSongIsLogue } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getAnnotationIndexForVerseIndex } from '../helpers/logicHelper'
 
 import { ALL_DOT_KEYS } from '../constants/dots'
@@ -40,6 +41,13 @@ class DotsManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     toggleDot(selectedDotIndex) {

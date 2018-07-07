@@ -11,6 +11,7 @@ import {
 import { selectLyricColumnIndex } from '../redux/actions/storage'
 
 import { getSongIsLogue } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getAnnotationIndexForVerseIndex } from '../helpers/logicHelper'
 import {
     getShowOneOfTwoLyricColumns,
@@ -41,6 +42,13 @@ class LyricManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     selectLyricExpand(isLyricExpanded = !this.props.isLyricExpanded) {

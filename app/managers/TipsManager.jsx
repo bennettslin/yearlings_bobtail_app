@@ -7,6 +7,7 @@ import assign from 'lodash.assign'
 import { selectTipsIndex } from '../redux/actions/storage'
 
 import { getSongIsLogue } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getShouldSkipHidden } from '../helpers/logicHelper'
 
 import { SHOWN,
@@ -40,6 +41,13 @@ class TipsManager extends Component {
         this.props.setRef(this)
 
         this._showOrHideForNewSong()
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     componentDidUpdate(prevProps) {

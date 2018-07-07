@@ -10,6 +10,8 @@ import {
 import { setRenderableAnnotationIndex } from '../redux/actions/render'
 import { selectAnnotationIndex } from '../redux/actions/storage'
 
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+
 import {
     getAnnotationIndexForDirection,
     getAnnotationAnchorIndexForDirection,
@@ -55,6 +57,13 @@ class AnnotationManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     componentDidUpdate(prevProps) {

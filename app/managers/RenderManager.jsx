@@ -14,6 +14,7 @@ import {
 import { setCurrentSceneIndex } from '../redux/actions/session'
 
 import { getSceneIndexForVerseIndex } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'
 
 class RenderManager extends Component {
@@ -50,6 +51,13 @@ class RenderManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     componentDidUpdate(prevProps) {

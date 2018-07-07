@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 
 import { selectTitleIndex } from '../redux/actions/storage'
 
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+
 class TitleManager extends Component {
 
     static propTypes = {
@@ -18,6 +20,13 @@ class TitleManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     selectTitle(

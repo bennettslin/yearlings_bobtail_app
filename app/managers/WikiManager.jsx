@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 import { selectWikiIndex } from '../redux/actions/storage'
 import { setCarouselAnnotationIndex } from '../redux/actions/session'
 
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+
 class WikiManager extends Component {
 
     static propTypes = {
@@ -20,6 +22,13 @@ class WikiManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     componentDidUpdate(prevProps) {

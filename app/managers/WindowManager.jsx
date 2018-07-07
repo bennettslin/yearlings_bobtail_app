@@ -24,6 +24,11 @@ import {
     setShowSingleBookColumn
 } from '../redux/actions/responsive'
 
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import {
+    getAnnotationIndexForDirection,
+    getAnnotationIndexForVerseIndex
+} from '../helpers/logicHelper'
 import {
     resizeWindow,
     getShowOneOfTwoLyricColumns,
@@ -37,11 +42,6 @@ import {
     getIsScoresTipsInMain,
     getIsTwoRowMenu
 } from '../helpers/responsiveHelper'
-
-import {
-    getAnnotationIndexForDirection,
-    getAnnotationIndexForVerseIndex
-} from '../helpers/logicHelper'
 import { getStageCoordinates } from '../helpers/stageHelper'
 
 class WindowManager extends Component {
@@ -92,6 +92,13 @@ class WindowManager extends Component {
 
         // Then watch for any subsequent window resize.
         window.onresize = debounce(this._windowResize, 25)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     componentDidUpdate(prevProps) {

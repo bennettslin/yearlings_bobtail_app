@@ -12,6 +12,7 @@ import {
     setSliderVerseIndex
 } from '../redux/actions/slider'
 
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import {
     getSliderRatioForClientX,
     getVerseIndexforRatio
@@ -43,6 +44,13 @@ class SliderVerseManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     touchSliderBegin({ clientRect, clientX }) {

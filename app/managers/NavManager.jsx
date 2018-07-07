@@ -7,6 +7,7 @@ import { accessNavSongIndex } from '../redux/actions/access'
 
 import { setShownBookColumnIndex } from '../redux/actions/session'
 import { getBookColumnIndex } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 
 class NavManager extends Component {
 
@@ -26,6 +27,13 @@ class NavManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     componentDidUpdate(prevProps) {

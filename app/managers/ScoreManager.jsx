@@ -7,6 +7,7 @@ import { setIsScoreLoaded } from '../redux/actions/player'
 import { selectScoreIndex } from '../redux/actions/storage'
 
 import { getSongIsLogue } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getIsScoreExpandable } from '../helpers/responsiveHelper'
 
 class ScoreManager extends Component {
@@ -25,6 +26,13 @@ class ScoreManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     componentDidUpdate(prevProps) {

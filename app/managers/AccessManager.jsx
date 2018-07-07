@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 
 import { selectAccessIndex } from '../redux/actions/storage'
 
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+
 class AccessManager extends Component {
 
     static propTypes = {
@@ -17,6 +19,13 @@ class AccessManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     toggleAccess(

@@ -3,10 +3,17 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import StateManager from './StateManager'
 
-import { getSongVerseTimes } from '../helpers/dataHelper'
-import { getValidRoutingIndicesObject, getPathForIndices } from '../helpers/routingHelper'
+import {
+    selectSongIndex,
+    selectAnnotationIndex,
+    selectVerseIndex,
+    selectWikiIndex,
+    selectTimePlayed
+} from '../redux/actions/storage'
 
-import { selectSongIndex, selectAnnotationIndex, selectVerseIndex, selectWikiIndex, selectTimePlayed } from '../redux/actions/storage'
+import { getSongVerseTimes } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getValidRoutingIndicesObject, getPathForIndices } from '../helpers/routingHelper'
 
 class RoutingManager extends Component {
 
@@ -66,6 +73,13 @@ class RoutingManager extends Component {
             this.state.selectedVerseIndex,
             this.state.selectedAnnotationIndex
         )
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     replacePath(pathSongIndex, pathVerseIndex, pathAnnotationIndex) {

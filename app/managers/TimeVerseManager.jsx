@@ -21,6 +21,7 @@ import {
     getVerseIndexForTime,
     getSceneIndexForVerseIndex
 } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 
 class TimeVerseManager extends Component {
 
@@ -58,6 +59,13 @@ class TimeVerseManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     selectTime({

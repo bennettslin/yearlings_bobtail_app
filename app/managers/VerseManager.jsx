@@ -10,6 +10,7 @@ import {
 } from '../redux/actions/session'
 
 import { getSongVerseTimes } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getVerseBarStatus } from '../helpers/logicHelper'
 
 class VerseManager extends Component {
@@ -47,6 +48,13 @@ class VerseManager extends Component {
 
         this._determineVerseBars =
             this._determineVerseBars.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     componentDidUpdate(prevProps) {

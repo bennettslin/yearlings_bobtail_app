@@ -7,6 +7,7 @@ import { setCarouselAnnotationIndex } from '../redux/actions/session'
 import { selectCarouselNavIndex } from '../redux/actions/storage'
 
 import { getSongIsLogue } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getIsPhone } from '../helpers/responsiveHelper'
 
 class CarouselManager extends Component {
@@ -28,6 +29,13 @@ class CarouselManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     selectCarouselNav(

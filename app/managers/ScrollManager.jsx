@@ -3,14 +3,15 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
 
-import {
-    getLyricTopAlign,
-    getCarouselLeftAlign
-} from '../helpers/responsiveHelper'
 
 import {
     getSongIsLogue
 } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import {
+    getLyricTopAlign,
+    getCarouselLeftAlign
+} from '../helpers/responsiveHelper'
 
 import {
     CAROUSEL_SCROLL,
@@ -52,6 +53,13 @@ class ScrollManager extends Component {
                 this.myVerseElements
             )
         }
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     setCarouselAnnotationRef(payload) {

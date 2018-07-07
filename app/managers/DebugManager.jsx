@@ -5,9 +5,11 @@ import { connect } from 'react-redux'
 
 import { selectAdminIndex } from '../redux/actions/storage'
 
-import { CUBE_Y_AXIS_LENGTH } from '../constants/stage'
 import { getCharStringForNumber } from '../helpers/formatHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import LogHelper from '../helpers/logHelper'
+
+import { CUBE_Y_AXIS_LENGTH } from '../constants/stage'
 
 class DebugManager extends Component {
 
@@ -24,6 +26,13 @@ class DebugManager extends Component {
         this.props.setRef(this)
 
         this._assignDebugLogFunctions()
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     _assignDebugLogFunctions() {

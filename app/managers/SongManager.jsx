@@ -12,6 +12,7 @@ import { CONTINUE,
 import {
     getSongsAndLoguesCount
 } from '../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 
 class SongManager extends Component {
 
@@ -31,6 +32,13 @@ class SongManager extends Component {
 
     componentDidMount() {
         this.props.setRef(this)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     advanceToNextSong() {

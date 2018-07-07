@@ -30,6 +30,8 @@ import VerseManager from './VerseManager'
 import WikiManager from './WikiManager'
 import WindowManager from './WindowManager'
 
+import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+
 class StateManager extends Component {
 
     static propTypes = {
@@ -45,6 +47,13 @@ class StateManager extends Component {
     componentDidMount() {
         console.warn('State manager rendered.')
         this.props.setAppMounted(true)
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     /**********
