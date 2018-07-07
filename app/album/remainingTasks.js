@@ -35,7 +35,7 @@ module.exports = [
     },
 
     {
-        taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of.`,
+        taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of. Use Web Workers?`,
         workedHours: 0,
         neededHours: 8
     },

@@ -51,12 +51,14 @@ const base = 1.069913193933663,
 
     // Assume that floor height is this percent of stage height.
     STAGE_Y_PERCENTAGE = 12,
+    CUBE_Y_AXIS_LENGTH = 6,
+    SLANTED_TILE_Y_UNITS_LENGTH = 14,
 
     TILE_Y_PERCENTAGES = getTileYPercentages(
-        base, STAGE_Y_PERCENTAGE, 6
+        base, STAGE_Y_PERCENTAGE, CUBE_Y_AXIS_LENGTH
     ).reverse(),
     SLANTED_TILE_Y_PERCENTAGES = getTileYPercentages(
-        base, STAGE_Y_PERCENTAGE, 14
+        base, STAGE_Y_PERCENTAGE, SLANTED_TILE_Y_UNITS_LENGTH
     ).reverse()
 
 module.exports = {
@@ -68,7 +70,7 @@ module.exports = {
     STAGE_Y_PERCENTAGE,
     VANISHING_POINT_Y_PERCENTAGE: 50,
     TILE_Y_PERCENTAGES,
-    CUBE_Y_AXIS_LENGTH: 6,
+    CUBE_Y_AXIS_LENGTH,
     CUBE_X_AXIS_LENGTH: 12,
     CUBE_Z_AXIS_LENGTH: 20,
 

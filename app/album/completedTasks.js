@@ -3127,4 +3127,9 @@ module.exports = [
         workedHours: 10,
         neededHours: 10
     },
+    {
+        taskName: `Final adjustments to slanted cube calculations.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

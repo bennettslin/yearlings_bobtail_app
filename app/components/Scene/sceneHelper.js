@@ -1,11 +1,7 @@
-console.error('remove this')
-/* eslint-disable */
-
 import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
     CUBE_X_AXIS_LENGTH,
-    CUBE_Y_AXIS_LENGTH,
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_X_UNITS_LENGTH
 } from '../../constants/stage'
@@ -27,9 +23,7 @@ const _getXPercentage = (
 
 ) => {
 
-    const
-
-        isSlanted = Boolean(slantDirection),
+    const isSlanted = Boolean(slantDirection),
 
         // Use x-axis length value based on default or slanted arrangement.
         xAxisLength = isSlanted ?
@@ -58,11 +52,10 @@ const _getXPercentage = (
         multiplier = 1
 
     if (slantDirection === 'left') {
-        addend = -3.8
-        multiplier = 1.084
+        addend = -2.5
+        multiplier = 1.0575
     } else if (slantDirection === 'right') {
-        addend = -1.35
-        multiplier = 1.074
+        multiplier = 1.0475
     }
 
     return (
@@ -80,16 +73,11 @@ const _getYPercentage = (
 
 ) => {
 
-    const
-        isSlanted = Boolean(slantDirection),
+    const isSlanted = Boolean(slantDirection),
 
         // Use array based on default or slanted arrangement.
         tileYPercentages = isSlanted ?
             SLANTED_TILE_Y_PERCENTAGES : TILE_Y_PERCENTAGES,
-
-        // yAxisLength = isSlanted ? 14 : CUBE_Y_AXIS_LENGTH,
-
-        // invertedYCornerIndex = yAxisLength - yCornerIndex,
 
         tileYPercentage = tileYPercentages[yCornerIndex],
 
@@ -172,117 +160,132 @@ const _getHorizontalPlaneFractionsForDefault = (
     }
 }
 
-const SLANTED_LEFT_X_CONSTANTS = [0, 2, 1, 0, 1, 0],
-    SLANTED_RIGHT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
+const SLANTED_LEFT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
 
 const _getHorizontalPlaneFractionsForSlantedLeft = (
     xIndex, yIndex, zIndex
 ) => {
 
-    let xModulo,
-        yModulo
+    /**
+     * Origin is 0, 0. There are 32 x-axis units, 14 y-axis units.
+     */
 
-    // If yIndex is 1, 2, or 3...
-    if (yIndex >= 1 && yIndex <= 3) {
-        // xModulo for even xIndex is 3 above that for previous odd xIndex.
-        xModulo = xIndex % 2 ? -0.5 : 0
+    const
+        isXOdd = xIndex % 2,
 
-        // yModulo for even xIndex is 1 below that for previous odd xIndex.
-        yModulo = xIndex % 2 ? 1 : 0
+        xMultiplier = xIndex * 2.5,
+        yMultiplier = yIndex * 2,
 
-        // If yIndex is 0, 4, or 5...
+        // Begin along the x-axis at these units.
+        xConstant = SLANTED_LEFT_X_CONSTANTS[yIndex]
+
+    let xOffset,
+        yOffset
+
+    // If yIndex is 2, 3, or 4...
+    if (yIndex >= 2 && yIndex <= 4) {
+        /**
+         * Reference for odd xIndex is 2 above that for previous odd xIndex:
+         * 0, 2, 5, 8, 10...
+         */
+        xOffset = isXOdd ? -0.5 : 0
+
+       /**
+        * Reference for even xIndex is 1 above that for previous odd xIndex.
+        */
+        yOffset = isXOdd ? 0 : 1
+
+        // If yIndex is 0, 1, or 5...
     } else {
-        // xModulo for even xIndex is 2 above that for previous odd xIndex.
-        xModulo = xIndex % 2 ? 0.5 : 0
+        /**
+         * Reference for odd xIndex is 3 above that for previous odd xIndex:
+         * 0, 3, 5, 8, 10...
+         */
+        xOffset = isXOdd ? 0.5 : 0
 
-        // yModulo for even xIndex is 1 above that for previous odd xIndex.
-        yModulo = xIndex % 2 ? 0 : 1
+        /**
+         * Reference for even xIndex is 1 above that for previous odd xIndex.
+         */
+        yOffset = isXOdd ? 1 : 0
     }
 
     const
-        xConstant = SLANTED_LEFT_X_CONSTANTS[yIndex],
-        yConstant = yIndex * 2,
-
-        // These are the coordinates for the top left corner.
-        slantedLeftXIndex = xConstant + xIndex * 2.5 + xModulo,
-        slantedLeftYIndex = yConstant + yModulo
+        referenceXIndex = xConstant + xMultiplier + xOffset,
+        referenceYIndex = yMultiplier + yOffset
 
     /**
-     * When slanted, order is:
-     * top, right, bottom, left.
+     * The xIndex and yIndex for the four corners will vary between 0 to 3
+     * units away from the reference point.
      */
-
     return {
         left: {
             back: _getXYPercentages(
-                slantedLeftXIndex, slantedLeftYIndex + 1, zIndex, 'left'
+                referenceXIndex, referenceYIndex + 1, zIndex, 'left'
             ),
             front: _getXYPercentages(
-                slantedLeftXIndex + 1, slantedLeftYIndex + 3, zIndex, 'left'
+                referenceXIndex + 1, referenceYIndex + 3, zIndex, 'left'
             )
         },
         right: {
             back: _getXYPercentages(
-                slantedLeftXIndex + 2, slantedLeftYIndex, zIndex, 'left'
+                referenceXIndex + 2, referenceYIndex, zIndex, 'left'
             ),
             front: _getXYPercentages(
-                slantedLeftXIndex + 3, slantedLeftYIndex + 2, zIndex, 'left'
+                referenceXIndex + 3, referenceYIndex + 2, zIndex, 'left'
             )
         }
     }
 }
 
+const SLANTED_RIGHT_X_CONSTANTS = [0, 2, 1, 0, 1, 0]
+
 const _getHorizontalPlaneFractionsForSlantedRight = (
     xIndex, yIndex, zIndex
 ) => {
 
-    let xModulo,
-        yModulo
+    /**
+     * See slanted left function for more detailed explanation of this math.
+     */
 
-    // If yIndex is 2, 3, or 4...
-    if (yIndex >= 2 && yIndex <= 4) {
-        // xModulo for even xIndex is 3 above that for previous odd xIndex.
-        xModulo = xIndex % 2 ? -0.5 : 0
+    const
+        isXOdd = xIndex % 2,
+        xMultiplier = xIndex * 2.5,
+        yMultiplier = yIndex * 2,
+        xConstant = SLANTED_RIGHT_X_CONSTANTS[yIndex]
 
-        // yModulo for even xIndex is 1 above that for previous odd xIndex.
-        yModulo = xIndex % 2 ? 0 : 1
+    let xOffset,
+        yOffset
 
-        // If yIndex is 0, 1, or 5...
+    // If yIndex is 1, 2, or 3...
+    if (yIndex >= 1 && yIndex <= 3) {
+        xOffset = isXOdd ? -0.5 : 0
+        yOffset = isXOdd ? 1 : 0
+
+        // If yIndex is 0, 4, or 5...
     } else {
-        // xModulo for even xIndex is 2 above that for previous odd xIndex.
-        xModulo = xIndex % 2 ? 0.5 : 0
-
-        // yModulo for even xIndex is 1 below that for previous odd xIndex.
-        yModulo = xIndex % 2 ? 1 : 0
+        xOffset = isXOdd ? 0.5 : 0
+        yOffset = isXOdd ? 0 : 1
     }
 
     const
-        xConstant = SLANTED_RIGHT_X_CONSTANTS[yIndex],
-        yConstant = yIndex * 2,
+        referenceXIndex = xConstant + xMultiplier + xOffset,
+        referenceYIndex = yMultiplier + yOffset
 
-        // These are the coordinates for the top left corner.
-        slantedRightXIndex = xConstant + xIndex * 2.5 + xModulo,
-        slantedRightYIndex = yConstant + yModulo
-
-    /**
-     * When slanted, order is:
-     * top, right, bottom, left.
-     */
     return {
         left: {
             back: _getXYPercentages(
-                slantedRightXIndex + 1, slantedRightYIndex, zIndex, 'right'
+                referenceXIndex + 1, referenceYIndex, zIndex, 'right'
             ),
             front: _getXYPercentages(
-                slantedRightXIndex, slantedRightYIndex + 2, zIndex, 'right'
+                referenceXIndex, referenceYIndex + 2, zIndex, 'right'
             )
         },
         right: {
             back: _getXYPercentages(
-                slantedRightXIndex + 3, slantedRightYIndex + 1, zIndex, 'right'
+                referenceXIndex + 3, referenceYIndex + 1, zIndex, 'right'
             ),
             front: _getXYPercentages(
-                slantedRightXIndex + 2, slantedRightYIndex + 3, zIndex, 'right'
+                referenceXIndex + 2, referenceYIndex + 3, zIndex, 'right'
             )
         }
     }
