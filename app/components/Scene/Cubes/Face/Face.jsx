@@ -15,7 +15,7 @@ import { getBitmapMatrix } from './helpers/bitmapHelper'
 
 import { TILE } from '../../constants'
 
-import { BITMAPS } from '../../../../constants/bitmaps'
+import { BITMAPS } from '../../../../constants/cubes/bitmaps'
 
 const
     pointPropType =

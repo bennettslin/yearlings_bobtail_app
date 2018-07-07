@@ -79,8 +79,8 @@ module.exports = {
                         },
                         {
                             name: 'sample fixture 4',
-                            // xOffset: 10,
-                            // yOffset: -10,
+                            xOffset: 10,
+                            yOffset: -10,
                             xIndex: 11,
                             width: 10,
                             height: 10

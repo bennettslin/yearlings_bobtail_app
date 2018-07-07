@@ -11,7 +11,7 @@ module.exports = [
     },
 
     {
-        taskName: `Sky and Wood sometimes don't resize after window resize? Doesn't always repro.`,
+        taskName: `Sky and Wood sometimes don't resize after window resize? Happens when loading smaller and resizing larger.`,
         workedHours: 0,
         neededHours: 1
     },
