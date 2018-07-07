@@ -81,14 +81,17 @@ const _getYPercentage = (
 ) => {
 
     const
-
         isSlanted = Boolean(slantDirection),
 
         // Use array based on default or slanted arrangement.
         tileYPercentages = isSlanted ?
             SLANTED_TILE_Y_PERCENTAGES : TILE_Y_PERCENTAGES,
 
-        tileYPercentage = tileYPercentages[yCornerIndex],
+        yAxisLength = isSlanted ? 14 : CUBE_Y_AXIS_LENGTH,
+
+        invertedYCornerIndex = yAxisLength - yCornerIndex,
+
+        tileYPercentage = tileYPercentages[invertedYCornerIndex],
 
         rawYPercentage =
             tileYPercentage + zIndex / 10
@@ -159,12 +162,12 @@ const _getHorizontalPlaneFractionsForDefault = (
      */
     return {
         left: {
-            back: _getXYPercentages(xIndex, yIndex + 1, zIndex),
-            front: _getXYPercentages(xIndex, yIndex, zIndex)
+            back: _getXYPercentages(xIndex, yIndex, zIndex),
+            front: _getXYPercentages(xIndex, yIndex + 1, zIndex)
         },
         right: {
-            back: _getXYPercentages(xIndex + 1, yIndex + 1, zIndex),
-            front: _getXYPercentages(xIndex + 1, yIndex, zIndex)
+            back: _getXYPercentages(xIndex + 1, yIndex, zIndex),
+            front: _getXYPercentages(xIndex + 1, yIndex + 1, zIndex)
         }
     }
 }

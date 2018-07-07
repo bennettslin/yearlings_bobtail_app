@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+/* eslint-disable */
+
 import Pixels from './Pixel/Pixels'
 import Pixel from './Pixel/Pixel'
 
@@ -150,7 +152,7 @@ class Face extends Component {
                     polygonPointsString={polygonPointsString}
                 />
 
-                <Pixels
+                {/* <Pixels
                     {...{
                         base,
                         bitmapMatrix,
@@ -158,7 +160,7 @@ class Face extends Component {
                         canUpdateRenderableYIndex,
                         yIndex
                     }}
-                />
+                /> */}
 
                 {/* Single polygon for the overlying shade. */}
                 <polygon

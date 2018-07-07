@@ -208,13 +208,7 @@ class Cubes extends Component {
                 bitmapKeys,
                 isFloor,
                 slantDirection
-            } = this.props,
-
-            /**
-             * Invert the rows, since top row in array should be top row shown
-             * in floor field.
-             */
-            invertedYIndex = CUBE_Y_AXIS_LENGTH - yIndex - 1
+            } = this.props
 
         let columnIndicesArray = DEFAULT_X_AXIS_INDICES
 
@@ -264,11 +258,11 @@ class Cubes extends Component {
                             bitmapKeys, xIndex, yIndex
                         )
 
-                    return (
+                    return xIndex === 5 && (
                         <Cube
                             key={`${xIndex}_${yIndex}`}
                             xIndex={xIndex}
-                            yIndex={invertedYIndex}
+                            yIndex={yIndex}
                             zIndex={zIndex}
                             frontCubeZIndex={frontCubeZIndex}
                             sideCubeZIndex={sideCubeZIndex}
