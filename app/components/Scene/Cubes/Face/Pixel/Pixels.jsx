@@ -20,7 +20,7 @@ class Pixels extends Component {
         // From parent.
         base: PropTypes.string.isRequired,
         bitmapMatrix: PropTypes.array.isRequired,
-        polygonPointsString: PropTypes.string.isRequired,
+        facePolygonPointsString: PropTypes.string.isRequired,
 
         // This was purely for bookkeeping purposes, but is presently not used.
         yIndex: PropTypes.number.isRequired
@@ -41,7 +41,7 @@ class Pixels extends Component {
         const {
             base,
             bitmapMatrix,
-            polygonPointsString
+            facePolygonPointsString
         } = this.props
 
         return (
@@ -52,7 +52,7 @@ class Pixels extends Component {
                 <Pixel
                     uniqueId="base"
                     fill={base}
-                    polygonPointsString={polygonPointsString}
+                    polygonPointsString={facePolygonPointsString}
                 />
 
                 {bitmapMatrix.map((matrixRow, yIndex) => {

@@ -9,12 +9,7 @@ import Face from './Face/Face'
 import { getCharStringForNumber } from '../../../helpers/formatHelper'
 import { getStageCubeCornerPercentages } from '../sceneHelper'
 
-import {
-    getRelativeZHeight,
-    getSideDirection,
-    getFrontCubeZIndex,
-    getSideCubeZIndex
-} from './cubeHelper'
+import { getSideDirection } from './cubeHelper'
 import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
 
 import { CUBES } from '../../../constants/cubes/cubes'
@@ -70,34 +65,6 @@ class Cube extends PureComponent {
                 slantDirection
             }),
 
-            frontCubeZIndex = getFrontCubeZIndex({
-                isFloor,
-                zIndices,
-                slantDirection,
-                xIndex,
-                yIndex
-            }),
-            frontRelativeZHeight = getRelativeZHeight({
-                isFloor,
-                zIndex,
-                subtractedZIndex: frontCubeZIndex,
-                doLog: isFloor && xIndex === 0 && yIndex === 1
-            }),
-
-            sideCubeZIndex = getSideCubeZIndex({
-                isFloor,
-                zIndices,
-                slantDirection,
-                xIndex,
-                yIndex
-            }),
-            sideRelativeZHeight = getRelativeZHeight({
-                isFloor,
-                zIndex,
-                subtractedZIndex: sideCubeZIndex,
-                doLog: isFloor && xIndex === 0 && yIndex === 1
-            }),
-
             cubeCorners = getStageCubeCornerPercentages({
                 xIndex,
                 yIndex,
@@ -125,7 +92,7 @@ class Cube extends PureComponent {
                         bitmapKey,
                         cubeCorners,
                         yIndex,
-                        zIndex,
+                        zIndex
                     }}
                 />
                 <Face {...other}
@@ -134,9 +101,10 @@ class Cube extends PureComponent {
                         bitmapKey,
                         cubeCorners,
                         sideDirection,
+                        xIndex,
                         yIndex,
                         zIndex,
-                        relativeZHeight: sideRelativeZHeight
+                        zIndices
                     }}
                 />
                 <Face {...other}
@@ -144,9 +112,10 @@ class Cube extends PureComponent {
                         face: FRONT,
                         bitmapKey,
                         cubeCorners,
+                        xIndex,
                         yIndex,
                         zIndex,
-                        relativeZHeight: frontRelativeZHeight
+                        zIndices
                     }}
                 />
             </g>

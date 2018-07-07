@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-/* eslint-disable */
-
 import Pixels from './Pixel/Pixels'
 import Pixel from './Pixel/Pixel'
 
@@ -12,10 +10,18 @@ import { getPolygonPoints,
          getPolygonPointsString } from './helpers/polygonHelper'
 
 import { getBitmapMatrix } from './helpers/bitmapHelper'
-
-import { TILE } from '../../constants'
+import {
+    getRelativeZHeight,
+    getFrontCubeZIndex,
+    getSideCubeZIndex
+} from '../cubeHelper'
 
 import { BITMAPS } from '../../../../constants/bitmaps/bitmaps'
+import {
+    FRONT,
+    SIDE,
+    TILE
+} from '../../constants'
 
 const
     pointPropType =
@@ -61,13 +67,16 @@ class Face extends Component {
 
         canUpdateRenderableYIndex: PropTypes.bool,
         yIndex: PropTypes.number.isRequired,
-        relativeZHeight: PropTypes.number,
         zIndex: PropTypes.number.isRequired,
 
         cubeCorners: PropTypes.shape({
             tile: facePropType,
             base: facePropType
-        }).isRequired
+        }).isRequired,
+
+        // These are only needed by front and side.
+        xIndex: PropTypes.number,
+        zIndices: PropTypes.array
     }
 
     constructor(props) {
@@ -99,11 +108,9 @@ class Face extends Component {
     render() {
         const {
                 face,
-                bitmapKey,
                 isFloor,
                 slantDirection,
                 sideDirection,
-                relativeZHeight,
                 canUpdateRenderableYIndex,
                 yIndex,
                 zIndex,
@@ -117,7 +124,57 @@ class Face extends Component {
                 cubeCorners
             }),
 
-            // Get base colour and pixel map.
+            facePolygonPointsString = getPolygonPointsString(polygonPoints)
+
+        let faceString = face,
+            relativeZHeight
+
+        if (face === TILE) {
+            faceString = isFloor ? 'floorTile' : 'ceilingTile'
+
+        } else if (face === FRONT || face === SIDE) {
+            const {
+                xIndex,
+                zIndices
+            } = this.props
+
+            if (face === FRONT) {
+                const subtractedZIndex = getFrontCubeZIndex({
+                    isFloor,
+                    zIndices,
+                    slantDirection,
+                    xIndex,
+                    yIndex
+                })
+
+                relativeZHeight = getRelativeZHeight({
+                    isFloor,
+                    zIndex,
+                    subtractedZIndex,
+                    doLog: isFloor && xIndex === 0 && yIndex === 1
+                })
+
+            } else if (face === SIDE) {
+                const subtractedZIndex = getSideCubeZIndex({
+                    isFloor,
+                    zIndices,
+                    slantDirection,
+                    xIndex,
+                    yIndex
+                })
+
+                relativeZHeight = getRelativeZHeight({
+                    isFloor,
+                    zIndex,
+                    subtractedZIndex,
+                    doLog: isFloor && xIndex === 0 && yIndex === 1
+                })
+            }
+        }
+
+        // Get base colour and pixel map.
+        const
+            { bitmapKey } = this.props,
             { base, pixels } = BITMAPS[bitmapKey],
 
             bitmapMatrix = getBitmapMatrix({
@@ -126,15 +183,7 @@ class Face extends Component {
                 relativeZHeight,
                 zIndex,
                 isFloor
-            }),
-
-            polygonPointsString = getPolygonPointsString(polygonPoints)
-
-        let faceString = face
-
-        if (face === TILE) {
-            faceString = isFloor ? 'floorTile' : 'ceilingTile'
-        }
+            })
 
         return (
             <g className={cx(
@@ -148,14 +197,14 @@ class Face extends Component {
                 <Pixel
                     uniqueId="undercoat"
                     customFill="rgba(255, 255, 255, 0.5)"
-                    polygonPointsString={polygonPointsString}
+                    polygonPointsString={facePolygonPointsString}
                 />
 
                 <Pixels
                     {...{
                         base,
                         bitmapMatrix,
-                        polygonPointsString,
+                        facePolygonPointsString,
                         canUpdateRenderableYIndex,
                         yIndex
                     }}
@@ -167,7 +216,7 @@ class Face extends Component {
                         'Face__shade',
                         `Face__shade__${faceString}`
                     )}
-                    points={polygonPointsString}
+                    points={facePolygonPointsString}
                 />
             </g>
         )
