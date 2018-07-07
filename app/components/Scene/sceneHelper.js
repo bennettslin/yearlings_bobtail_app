@@ -1,3 +1,6 @@
+console.error('remove this')
+/* eslint-disable */
+
 import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
@@ -87,11 +90,11 @@ const _getYPercentage = (
         tileYPercentages = isSlanted ?
             SLANTED_TILE_Y_PERCENTAGES : TILE_Y_PERCENTAGES,
 
-        yAxisLength = isSlanted ? 14 : CUBE_Y_AXIS_LENGTH,
+        // yAxisLength = isSlanted ? 14 : CUBE_Y_AXIS_LENGTH,
 
-        invertedYCornerIndex = yAxisLength - yCornerIndex,
+        // invertedYCornerIndex = yAxisLength - yCornerIndex,
 
-        tileYPercentage = tileYPercentages[invertedYCornerIndex],
+        tileYPercentage = tileYPercentages[yCornerIndex],
 
         rawYPercentage =
             tileYPercentage + zIndex / 10
@@ -330,17 +333,13 @@ export const getStageCubeCornerPercentages = ({
 export const getTileCentreForPresence = ({
 
     xIndex,
-    yIndex: invertedYIndex,
+    yIndex,
     zIndices,
     slantDirection
 
 }) => {
 
     const
-
-        // TODO: I don't know why this should be the case...
-        yIndex = CUBE_Y_AXIS_LENGTH - invertedYIndex - 1,
-
         getHorizontalPlaneFractions = _getHorizontalPlaneFractionsFunction(
                 slantDirection
             ),

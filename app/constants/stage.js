@@ -54,10 +54,10 @@ const base = 1.069913193933663,
 
     TILE_Y_PERCENTAGES = getTileYPercentages(
         base, STAGE_Y_PERCENTAGE, 6
-    ),
+    ).reverse(),
     SLANTED_TILE_Y_PERCENTAGES = getTileYPercentages(
         base, STAGE_Y_PERCENTAGE, 14
-    )
+    ).reverse()
 
 module.exports = {
 
