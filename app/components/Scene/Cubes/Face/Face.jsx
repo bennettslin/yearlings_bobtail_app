@@ -62,7 +62,7 @@ class Face extends Component {
         canUpdateRenderableYIndex: PropTypes.bool,
         yIndex: PropTypes.number.isRequired,
         relativeZHeight: PropTypes.number,
-        zIndex: PropTypes.number,
+        zIndex: PropTypes.number.isRequired,
 
         cubeCorners: PropTypes.shape({
             tile: facePropType,

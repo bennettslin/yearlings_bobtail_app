@@ -18,18 +18,9 @@ import { DEFAULT_X_AXIS_INDICES,
          SLANTED_LEFT_X_AXIS_INDICES,
          SLANTED_RIGHT_X_AXIS_INDICES } from '../constants'
 
-import {
-    CUBES,
-    DEFAULT_STAGE_CUBES
-} from '../../../constants/cubes/cubes'
+import { CUBES } from '../../../constants/cubes/cubes'
 
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
-
-import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
-import {
-    getFrontCubeZIndex,
-    getSideCubeZIndex
-} from './cubeHelper'
 
 const mapStateToProps = ({
     renderableCubesYIndex,
@@ -199,24 +190,16 @@ class Cubes extends Component {
             } = this.props,
 
             {
-                ceiling = CUBES[DEFAULT_STAGE_CUBES].ceiling,
-                floor = CUBES[DEFAULT_STAGE_CUBES].floor,
                 slantDirection = ''
-            } = CUBES[cubesKey],
-
-            {
-                zIndices,
-                bitmapKeys
-            } = isFloor ? floor : ceiling
+            } = CUBES[cubesKey]
 
         return (
             <CubesView
                 {...{
                     yIndex,
                     isFloor,
-                    zIndices,
-                    bitmapKeys,
-                    slantDirection
+                    slantDirection,
+                    cubesKey
                 }}
             />
         )
@@ -226,13 +209,8 @@ class Cubes extends Component {
 const CubesViewPropTypes = {
     yIndex: PropTypes.number.isRequired,
     isFloor: PropTypes.bool,
-    slantDirection: PropTypes.string,
-    zIndices: PropTypes.arrayOf(
-        PropTypes.arrayOf(
-            PropTypes.number.isRequired
-        ).isRequired
-    ).isRequired,
-    bitmapKeys: PropTypes.array.isRequired
+    slantDirection: PropTypes.string.isRequired,
+    cubesKey: PropTypes.string.isRequired
 }
 
 const CubesView = ({
@@ -240,8 +218,7 @@ const CubesView = ({
     yIndex,
     isFloor,
     slantDirection,
-    zIndices,
-    bitmapKeys
+    cubesKey
 
 }) => {
 
@@ -266,47 +243,15 @@ const CubesView = ({
         >
             {columnIndicesArray.map(xIndex => {
 
-                /**
-                 * TODO: Maybe this logic should live with the individual Cube?
-                 */
-                const
-                    zIndex = getValueInAbridgedMatrix(
-                        zIndices, xIndex, yIndex
-                    ),
-
-                    // Allow cube to determine max height of front face.
-                    frontCubeZIndex = getFrontCubeZIndex({
-                        isFloor,
-                        zIndices,
-                        slantDirection,
-                        xIndex,
-                        yIndex
-                    }),
-
-                    // Allow cube to determine max height of side face.
-                    sideCubeZIndex = getSideCubeZIndex({
-                        isFloor,
-                        zIndices,
-                        slantDirection,
-                        xIndex,
-                        yIndex
-                    }),
-
-                    bitmapKey = getValueInAbridgedMatrix(
-                        bitmapKeys, xIndex, yIndex
-                    )
-
                 return (
                     <Cube
                         key={`${xIndex}_${yIndex}`}
-                        xIndex={xIndex}
-                        yIndex={yIndex}
-                        zIndex={zIndex}
-                        frontCubeZIndex={frontCubeZIndex}
-                        sideCubeZIndex={sideCubeZIndex}
-                        bitmapKey={bitmapKey}
-                        isFloor={isFloor}
-                        slantDirection={slantDirection}
+                        {...{
+                            isFloor,
+                            xIndex,
+                            yIndex,
+                            cubesKey
+                        }}
                     />
                 )
             })}

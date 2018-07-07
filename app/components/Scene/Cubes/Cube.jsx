@@ -1,6 +1,6 @@
 // A single cube, whether ceiling or floor.
 
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -11,8 +11,16 @@ import { getStageCubeCornerPercentages } from '../sceneHelper'
 
 import {
     getRelativeZHeight,
-    getSideDirection
+    getSideDirection,
+    getFrontCubeZIndex,
+    getSideCubeZIndex
 } from './cubeHelper'
+import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
+
+import {
+    CUBES,
+    DEFAULT_STAGE_CUBES
+} from '../../../constants/cubes/cubes'
 
 import {
     FRONT,
@@ -20,7 +28,7 @@ import {
     TILE
 } from '../constants'
 
-class Cube extends Component {
+class Cube extends PureComponent {
 
     static propTypes = {
 
@@ -28,40 +36,48 @@ class Cube extends Component {
         isFloor: PropTypes.bool,
         xIndex: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
-        zIndex: PropTypes.number.isRequired,
-
-        frontCubeZIndex: PropTypes.number.isRequired,
-        sideCubeZIndex: PropTypes.number.isRequired,
-
-        bitmapKey: PropTypes.string.isRequired,
-        slantDirection: PropTypes.string.isRequired
+        cubesKey: PropTypes.string.isRequired
     }
 
     render() {
         const {
                 xIndex,
                 yIndex,
-                frontCubeZIndex,
-                sideCubeZIndex,
+                cubesKey,
                 ...other
             } = this.props,
 
-            { isFloor,
-              zIndex,
-              slantDirection } = other,
+            {
+                isFloor
+            } = other,
+
+            {
+                ceiling = CUBES[DEFAULT_STAGE_CUBES].ceiling,
+                floor = CUBES[DEFAULT_STAGE_CUBES].floor,
+                slantDirection = ''
+            } = CUBES[cubesKey],
+
+            {
+                zIndices,
+                bitmapKeys
+            } = isFloor ? floor : ceiling,
+
+            zIndex = getValueInAbridgedMatrix(
+                zIndices, xIndex, yIndex
+            ),
 
             sideDirection = getSideDirection({
                 xIndex,
                 slantDirection
             }),
 
-            /**
-             * TODO: For now, we are putting logic to render face here, because,
-             * if none of the faces are rendered, then we won't render the cube
-             * at all. I may revisit this decision, as it might make the
-             * animation ugly.
-             */
-
+            frontCubeZIndex = getFrontCubeZIndex({
+                isFloor,
+                zIndices,
+                slantDirection,
+                xIndex,
+                yIndex
+            }),
             frontRelativeZHeight = getRelativeZHeight({
                 isFloor,
                 zIndex,
@@ -69,6 +85,13 @@ class Cube extends Component {
                 doLog: isFloor && xIndex === 0 && yIndex === 1
             }),
 
+            sideCubeZIndex = getSideCubeZIndex({
+                isFloor,
+                zIndices,
+                slantDirection,
+                xIndex,
+                yIndex
+            }),
             sideRelativeZHeight = getRelativeZHeight({
                 isFloor,
                 zIndex,
@@ -82,7 +105,11 @@ class Cube extends Component {
                 zIndex,
                 isFloor,
                 slantDirection
-            })
+            }),
+
+            bitmapKey = getValueInAbridgedMatrix(
+                bitmapKeys, xIndex, yIndex
+            )
 
         return (
             <g
@@ -96,24 +123,30 @@ class Cube extends Component {
                 <Face {...other}
                     {...{
                         face: TILE,
+                        bitmapKey,
                         cubeCorners,
-                        yIndex
+                        yIndex,
+                        zIndex,
                     }}
                 />
                 <Face {...other}
                     {...{
                         face: SIDE,
+                        bitmapKey,
                         cubeCorners,
                         sideDirection,
                         yIndex,
+                        zIndex,
                         relativeZHeight: sideRelativeZHeight
                     }}
                 />
                 <Face {...other}
                     {...{
                         face: FRONT,
+                        bitmapKey,
                         cubeCorners,
                         yIndex,
+                        zIndex,
                         relativeZHeight: frontRelativeZHeight
                     }}
                 />
