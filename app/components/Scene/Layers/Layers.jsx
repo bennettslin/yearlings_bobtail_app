@@ -8,8 +8,7 @@ import { connect } from 'react-redux'
 import Layer from './Layer'
 
 import {
-    DEFAULT_STAGE_CUBES,
-    CUBES
+    DEFAULT_STAGE_CUBES
 } from '../../../constants/cubes/cubes'
 
 import { Y_INDICES_ARRAY } from '../constants'
@@ -23,7 +22,8 @@ const mapStateToProps = ({
 class Layers extends Component {
 
     static defaultProps = {
-        presences: {}
+        presences: {},
+        cubesKey: DEFAULT_STAGE_CUBES
     }
 
     static propTypes = {
@@ -32,17 +32,18 @@ class Layers extends Component {
 
         // From parent.
         presences: PropTypes.object.isRequired,
-        cubes: PropTypes.shape({
-            ceiling: PropTypes.shape({
-                zIndices: PropTypes.array.isRequired,
-                bitmapKeys: PropTypes.array.isRequired
-            }),
-            floor: PropTypes.shape({
-                zIndices: PropTypes.array.isRequired,
-                bitmapKeys: PropTypes.array.isRequired
-            }),
-            slantDirection: PropTypes.string
-        }).isRequired
+        // cubes: PropTypes.shape({
+        //     ceiling: PropTypes.shape({
+        //         zIndices: PropTypes.array.isRequired,
+        //         bitmapKeys: PropTypes.array.isRequired
+        //     }),
+        //     floor: PropTypes.shape({
+        //         zIndices: PropTypes.array.isRequired,
+        //         bitmapKeys: PropTypes.array.isRequired
+        //     }),
+        //     slantDirection: PropTypes.string
+        // }).isRequired
+        cubesKey: PropTypes.string.isRequired
     }
 
     constructor(props) {
@@ -74,7 +75,7 @@ class Layers extends Component {
                 canSceneRender,
 
                 presences,
-                cubes,
+                cubesKey: sceneCubesKey,
                 ...other
             } = this.props,
 
@@ -82,16 +83,10 @@ class Layers extends Component {
                 hasMounted
             } = this.state,
 
-            // Until the component is mounted, use the default stage cubes.
-            renderedCubes = hasMounted ?
-                cubes :
-                CUBES[DEFAULT_STAGE_CUBES],
-
-            {
-                ceiling = {},
-                floor = {},
-                slantDirection = ''
-            } = renderedCubes
+            // Until the component is mounted, use the default stage cubesKey.
+            cubesKey = hasMounted ?
+                sceneCubesKey :
+                DEFAULT_STAGE_CUBES
 
         return (
             <div
@@ -107,11 +102,7 @@ class Layers extends Component {
                             key={yIndex}
                             {...{
                                 yIndex,
-                                slantDirection,
-                                ceilingZIndices: ceiling.zIndices,
-                                ceilingBitmapKeys: ceiling.bitmapKeys,
-                                floorZIndices: floor.zIndices,
-                                floorBitmapKeys: floor.bitmapKeys,
+                                cubesKey,
 
                                 /**
                                  * Not ideal, but for the Layers component,

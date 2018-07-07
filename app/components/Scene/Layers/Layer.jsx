@@ -6,55 +6,41 @@ import PropTypes from 'prop-types'
 import Cubes from '../Cubes/Cubes'
 import Presences from '../Presences/Presences'
 
-import {
-    DEFAULT_STAGE_CUBES,
-    CUBES
-} from '../../../constants/cubes/cubes'
-
 class Layer extends Component {
 
     static defaultProps = {
-        presences: {},
-        ceilingZIndices: CUBES[DEFAULT_STAGE_CUBES].ceiling.zIndices,
-        ceilingBitmapKeys: CUBES[DEFAULT_STAGE_CUBES].ceiling.bitmapKeys,
-        floorZIndices: CUBES[DEFAULT_STAGE_CUBES].floor.zIndices,
-        floorBitmapKeys: CUBES[DEFAULT_STAGE_CUBES].floor.bitmapKeys
+        presences: {}
     }
 
     static propTypes = {
-        presences: PropTypes.object,
-        ceilingZIndices: PropTypes.array.isRequired,
-        ceilingBitmapKeys: PropTypes.array.isRequired,
-        floorZIndices: PropTypes.array.isRequired,
-        floorBitmapKeys: PropTypes.array.isRequired
+        presences: PropTypes.object
     }
 
     render() {
 
         const {
             presences,
-            ceilingZIndices,
-            ceilingBitmapKeys,
-            floorZIndices,
-            floorBitmapKeys,
+            // ceilingZIndices,
+            // ceilingBitmapKeys,
+            // floorZIndices,
+            // floorBitmapKeys,
             ...other
         } = this.props
 
         return (
             <Fragment>
                 <Cubes {...other}
-                    bitmapKeys={ceilingBitmapKeys}
-                    zIndices={ceilingZIndices}
+                    // bitmapKeys={ceilingBitmapKeys}
+                    // zIndices={ceilingZIndices}
                 />
                 <Cubes {...other}
                     isFloor
-                    bitmapKeys={floorBitmapKeys}
-                    zIndices={floorZIndices}
+                    // bitmapKeys={floorBitmapKeys}
+                    // zIndices={floorZIndices}
                 />
                 <Presences {...other}
                     {...{
-                        presences,
-                        zIndices: floorZIndices
+                        presences
                     }}
                 />
             </Fragment>

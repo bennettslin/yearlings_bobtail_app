@@ -11,13 +11,17 @@ import {
     setCanRenderPresences
 } from '../../../redux/actions/render'
 
-
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 import Cube from './Cube'
 
 import { DEFAULT_X_AXIS_INDICES,
          SLANTED_LEFT_X_AXIS_INDICES,
          SLANTED_RIGHT_X_AXIS_INDICES } from '../constants'
+
+import {
+    CUBES,
+    DEFAULT_STAGE_CUBES
+} from '../../../constants/cubes/cubes'
 
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
@@ -26,13 +30,6 @@ import {
     getFrontCubeZIndex,
     getSideCubeZIndex
 } from './cubeHelper'
-
-const zIndicesPropTypes =
-    PropTypes.arrayOf(
-        PropTypes.arrayOf(
-            PropTypes.number.isRequired
-        ).isRequired
-    ).isRequired
 
 const mapStateToProps = ({
     renderableCubesYIndex,
@@ -57,13 +54,7 @@ class Cubes extends Component {
         // From parent.
         yIndex: PropTypes.number.isRequired,
         isFloor: PropTypes.bool,
-        zIndices: zIndicesPropTypes,
-        bitmapKeys: PropTypes.arrayOf(
-            PropTypes.arrayOf(
-                PropTypes.string.isRequired
-            ).isRequired
-        ).isRequired,
-        slantDirection: PropTypes.string.isRequired
+        cubesKey: PropTypes.string.isRequired
     }
 
     constructor(props) {
@@ -201,81 +192,129 @@ class Cubes extends Component {
     }
 
     render() {
-
         const {
                 yIndex,
-                zIndices,
-                bitmapKeys,
                 isFloor,
-                slantDirection
-            } = this.props
+                cubesKey
+            } = this.props,
 
-        let columnIndicesArray = DEFAULT_X_AXIS_INDICES
+            {
+                ceiling = CUBES[DEFAULT_STAGE_CUBES].ceiling,
+                floor = CUBES[DEFAULT_STAGE_CUBES].floor,
+                slantDirection = ''
+            } = CUBES[cubesKey],
 
-        if (slantDirection === 'left') {
-            columnIndicesArray = SLANTED_LEFT_X_AXIS_INDICES;
-
-        } else if (slantDirection === 'right') {
-            columnIndicesArray = SLANTED_RIGHT_X_AXIS_INDICES
-        }
+            {
+                zIndices,
+                bitmapKeys
+            } = isFloor ? floor : ceiling
 
         return (
-            <DynamicSvg
-                className={cx(
-                    `Cubes__y${yIndex}${yIndex === 0 ? '__back' : ''}${yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''}`,
-                    `Cubes__${isFloor ? 'floor' : 'ceiling'}`,
-                    'absoluteFullContainer'
-                )}
-                viewBoxWidth={100}
-                viewBoxHeight={100}
-            >
-                {columnIndicesArray.map(xIndex => {
-
-                    const
-                        zIndex = getValueInAbridgedMatrix(
-                            zIndices, xIndex, yIndex
-                        ),
-
-                        // Allow cube to determine max height of front face.
-                        frontCubeZIndex = getFrontCubeZIndex({
-                            isFloor,
-                            zIndices,
-                            slantDirection,
-                            xIndex,
-                            yIndex
-                        }),
-
-                        // Allow cube to determine max height of side face.
-                        sideCubeZIndex = getSideCubeZIndex({
-                            isFloor,
-                            zIndices,
-                            slantDirection,
-                            xIndex,
-                            yIndex
-                        }),
-
-                        bitmapKey = getValueInAbridgedMatrix(
-                            bitmapKeys, xIndex, yIndex
-                        )
-
-                    return (
-                        <Cube
-                            key={`${xIndex}_${yIndex}`}
-                            xIndex={xIndex}
-                            yIndex={yIndex}
-                            zIndex={zIndex}
-                            frontCubeZIndex={frontCubeZIndex}
-                            sideCubeZIndex={sideCubeZIndex}
-                            bitmapKey={bitmapKey}
-                            isFloor={isFloor}
-                            slantDirection={slantDirection}
-                        />
-                    )
-                })}
-            </DynamicSvg>
+            <CubesView
+                {...{
+                    yIndex,
+                    isFloor,
+                    zIndices,
+                    bitmapKeys,
+                    slantDirection
+                }}
+            />
         )
     }
 }
+
+const CubesViewPropTypes = {
+    yIndex: PropTypes.number.isRequired,
+    isFloor: PropTypes.bool,
+    slantDirection: PropTypes.string,
+    zIndices: PropTypes.arrayOf(
+        PropTypes.arrayOf(
+            PropTypes.number.isRequired
+        ).isRequired
+    ).isRequired,
+    bitmapKeys: PropTypes.array.isRequired
+}
+
+const CubesView = ({
+
+    yIndex,
+    isFloor,
+    slantDirection,
+    zIndices,
+    bitmapKeys
+
+}) => {
+
+    let columnIndicesArray = DEFAULT_X_AXIS_INDICES
+
+    if (slantDirection === 'left') {
+        columnIndicesArray = SLANTED_LEFT_X_AXIS_INDICES;
+
+    } else if (slantDirection === 'right') {
+        columnIndicesArray = SLANTED_RIGHT_X_AXIS_INDICES
+    }
+
+    return (
+        <DynamicSvg
+            className={cx(
+                `Cubes__y${yIndex}${yIndex === 0 ? '__back' : ''}${yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''}`,
+                `Cubes__${isFloor ? 'floor' : 'ceiling'}`,
+                'absoluteFullContainer'
+            )}
+            viewBoxWidth={100}
+            viewBoxHeight={100}
+        >
+            {columnIndicesArray.map(xIndex => {
+
+                /**
+                 * TODO: Maybe this logic should live with the individual Cube?
+                 */
+                const
+                    zIndex = getValueInAbridgedMatrix(
+                        zIndices, xIndex, yIndex
+                    ),
+
+                    // Allow cube to determine max height of front face.
+                    frontCubeZIndex = getFrontCubeZIndex({
+                        isFloor,
+                        zIndices,
+                        slantDirection,
+                        xIndex,
+                        yIndex
+                    }),
+
+                    // Allow cube to determine max height of side face.
+                    sideCubeZIndex = getSideCubeZIndex({
+                        isFloor,
+                        zIndices,
+                        slantDirection,
+                        xIndex,
+                        yIndex
+                    }),
+
+                    bitmapKey = getValueInAbridgedMatrix(
+                        bitmapKeys, xIndex, yIndex
+                    )
+
+                return (
+                    <Cube
+                        key={`${xIndex}_${yIndex}`}
+                        xIndex={xIndex}
+                        yIndex={yIndex}
+                        zIndex={zIndex}
+                        frontCubeZIndex={frontCubeZIndex}
+                        sideCubeZIndex={sideCubeZIndex}
+                        bitmapKey={bitmapKey}
+                        isFloor={isFloor}
+                        slantDirection={slantDirection}
+                    />
+                )
+            })}
+        </DynamicSvg>
+    )
+}
+
+CubesView.propTypes = CubesViewPropTypes
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({

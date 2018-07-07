@@ -17,7 +17,6 @@ import SceneSky from './SceneSky'
 import Wood from '../Stage/Wood'
 
 import { getSceneObject } from '../../helpers/dataHelper'
-import { CUBES } from '../../constants/cubes/cubes'
 
 const mapStateToProps = ({
     canSceneRender,
@@ -129,9 +128,14 @@ class Scene extends Component {
 
             {
                 presences,
-                sky,
-                cubes
-            } = sceneObject
+                sky: skyObject,
+                cubes: cubesKey
+            } = sceneObject,
+
+            {
+                time: timeKey,
+                season: seasonKey
+            } = skyObject
 
         return (
             <div className={cx(
@@ -141,7 +145,10 @@ class Scene extends Component {
                 { 'sceneIsShown': canSceneRender && isShown }
             )}>
                 <SceneSky
-                    sky={sky}
+                    {...{
+                        timeKey,
+                        seasonKey
+                    }}
                 />
 
                 {/* Wood is in front of sky, but behind presences and cubes. */}
@@ -149,7 +156,9 @@ class Scene extends Component {
 
                 <Layers
                     presences={presences}
-                    cubes={CUBES[cubes]}
+                    {...{
+                        cubesKey
+                    }}
                 />
             </div>
         )

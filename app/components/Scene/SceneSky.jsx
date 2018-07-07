@@ -10,8 +10,10 @@ import cx from 'classnames'
 
 import DynamicSvg from '../DynamicSvg/DynamicSvg'
 
-import { SKY_ANYTIME,
-        SKY_INDOOR } from '../../constants/scene'
+import {
+    SKY_ANYTIME,
+    SKY_INDOOR
+} from '../../constants/scene'
 
 const mapStateToProps = ({
     canTheatreRender
@@ -22,10 +24,8 @@ const mapStateToProps = ({
 class SceneSky extends Component {
 
     static defaultProps = {
-        sky: {
-            time: SKY_ANYTIME,
-            season: SKY_INDOOR
-        }
+        timeKey: SKY_ANYTIME,
+        seasonKey: SKY_INDOOR
     }
 
     static propTypes = {
@@ -33,10 +33,8 @@ class SceneSky extends Component {
         canTheatreRender: PropTypes.bool.isRequired,
 
         // From parent.
-        sky: PropTypes.shape({
-            time: PropTypes.string.isRequired,
-            season: PropTypes.string.isRequired
-        }).isRequired
+        timeKey: PropTypes.string.isRequired,
+        seasonKey: PropTypes.string.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -51,12 +49,9 @@ class SceneSky extends Component {
 
     render() {
         const {
-                sky
-            } = this.props,
-            {
-                time,
-                season
-            } = sky
+            timeKey,
+            seasonKey
+        } = this.props
 
         return (
             <DynamicSvg
@@ -69,7 +64,7 @@ class SceneSky extends Component {
                     className={cx(
                         'StageSkyFilter',
                         'StageSkyFilter__season',
-                        `StageSkyFilter__season__${season}`,
+                        `StageSkyFilter__season__${seasonKey}`,
                         'absoluteFullContainer'
                     )}
                 />
@@ -77,7 +72,7 @@ class SceneSky extends Component {
                     className={cx(
                         'StageSkyFilter',
                         'StageSkyFilter__time',
-                        `StageSkyFilter__time__${time}`,
+                        `StageSkyFilter__time__${timeKey}`,
                         'absoluteFullContainer'
                     )}
                 />
