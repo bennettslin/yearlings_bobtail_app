@@ -7,7 +7,7 @@ module.exports = [
     {
         taskName: `Bitmaps and presences are referenced by keys.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
     },
 
     {
@@ -44,12 +44,6 @@ module.exports = [
         taskName: `Make Cubes sequence a little more smooth.`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: `Optimise Cubes based on whether key is the same.`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     /**

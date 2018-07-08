@@ -3137,4 +3137,10 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+
+    {
+        taskName: `Optimise Cubes based on whether key is the same.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]
