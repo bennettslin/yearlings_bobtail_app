@@ -6,17 +6,17 @@ import cx from 'classnames'
 import Pixels from './Pixel/Pixels'
 import Pixel from './Pixel/Pixel'
 
-import { getPolygonPoints,
-         getPolygonPointsString } from './helpers/polygonHelper'
+import {
+    getPolygonPoints,
+    getPolygonPointsString
+} from './helpers/polygonHelper'
 
-import { getBitmapMatrix } from './helpers/bitmapHelper'
 import {
     getRelativeZHeight,
     getFrontCubeZIndex,
     getSideCubeZIndex
 } from '../cubeHelper'
 
-import { BITMAPS } from '../../../../constants/bitmaps/bitmaps'
 import {
     FRONT,
     SIDE,
@@ -111,10 +111,11 @@ class Face extends Component {
                 isFloor,
                 slantDirection,
                 sideDirection,
-                canUpdateRenderableYIndex,
+                xIndex,
                 yIndex,
                 zIndex,
-                cubeCorners
+                cubeCorners,
+                bitmapKey
             } = this.props,
             polygonPoints = getPolygonPoints({
                 face,
@@ -134,7 +135,6 @@ class Face extends Component {
 
         } else if (face === FRONT || face === SIDE) {
             const {
-                xIndex,
                 zIndices
             } = this.props
 
@@ -172,19 +172,6 @@ class Face extends Component {
             }
         }
 
-        // Get base colour and pixel map.
-        const
-            { bitmapKey } = this.props,
-            { base, pixels } = BITMAPS[bitmapKey],
-
-            bitmapMatrix = getBitmapMatrix({
-                pixels,
-                polygonPoints,
-                relativeZHeight,
-                zIndex,
-                isFloor
-            })
-
         return (
             <g className={cx(
                 'Face',
@@ -202,11 +189,15 @@ class Face extends Component {
 
                 <Pixels
                     {...{
-                        base,
-                        bitmapMatrix,
-                        facePolygonPointsString,
-                        canUpdateRenderableYIndex,
-                        yIndex
+                        isFloor,
+                        xIndex,
+                        yIndex,
+                        zIndex,
+                        slantDirection,
+                        bitmapKey,
+                        polygonPoints,
+                        relativeZHeight,
+                        facePolygonPointsString
                     }}
                 />
 

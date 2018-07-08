@@ -73,6 +73,7 @@ export const getPropsAreShallowEqual = ({
 
             type = typeof props[key]
 
+        // Exclude functions, objects, and arrays.
         if (doCheck && type !== 'function' && type !== 'object') {
 
             // If there is a single mismatch, return false.

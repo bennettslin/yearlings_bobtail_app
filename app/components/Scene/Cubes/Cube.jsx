@@ -1,6 +1,6 @@
 // A single cube, whether ceiling or floor.
 
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -10,7 +10,10 @@ import { getCharStringForNumber } from '../../../helpers/formatHelper'
 import { getStageCubeCornerPercentages } from '../sceneHelper'
 
 import { getSideDirection } from './cubeHelper'
-import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
+import {
+    getPropsAreShallowEqual,
+    getValueInAbridgedMatrix
+} from '../../../helpers/generalHelper'
 
 import { CUBES } from '../../../constants/cubes/cubes'
 import { DEFAULT_STAGE_KEY } from '../../../constants/cubes/cubesKeys'
@@ -21,7 +24,7 @@ import {
     TILE
 } from '../constants'
 
-class Cube extends PureComponent {
+class Cube extends Component {
 
     static propTypes = {
 
@@ -33,16 +36,23 @@ class Cube extends PureComponent {
         slantDirection: PropTypes.string.isRequired
     }
 
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
+
     render() {
         const {
-                xIndex,
-                yIndex,
                 cubesKey,
                 ...other
             } = this.props,
 
             {
                 isFloor,
+                xIndex,
+                yIndex,
                 slantDirection
             } = other,
 
@@ -91,7 +101,6 @@ class Cube extends PureComponent {
                         face: TILE,
                         bitmapKey,
                         cubeCorners,
-                        yIndex,
                         zIndex
                     }}
                 />
@@ -101,8 +110,6 @@ class Cube extends PureComponent {
                         bitmapKey,
                         cubeCorners,
                         sideDirection,
-                        xIndex,
-                        yIndex,
                         zIndex,
                         zIndices
                     }}
@@ -112,8 +119,6 @@ class Cube extends PureComponent {
                         face: FRONT,
                         bitmapKey,
                         cubeCorners,
-                        xIndex,
-                        yIndex,
                         zIndex,
                         zIndices
                     }}

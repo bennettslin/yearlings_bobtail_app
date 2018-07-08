@@ -61,6 +61,10 @@ class Cubes extends Component {
             this._setCanRenderPresences.bind(this)
     }
 
+    componentWillUnmount() {
+        console.error('Component will unmount!')
+    }
+
     shouldComponentUpdate(nextProps) {
         const {
                 yIndex,
@@ -178,6 +182,7 @@ class Cubes extends Component {
     }
 
     _setRenderableCubesYIndex() {
+        console.warn('Setting renderable cubes y index', this.props.yIndex)
         this.props.setRenderableCubesYIndex(
             this.props.yIndex + 1
         )
@@ -247,21 +252,18 @@ const CubesView = ({
             viewBoxWidth={100}
             viewBoxHeight={100}
         >
-            {columnIndicesArray.map(xIndex => {
-
-                return (
-                    <Cube
-                        key={`${xIndex}_${yIndex}`}
-                        {...{
-                            isFloor,
-                            xIndex,
-                            yIndex,
-                            cubesKey,
-                            slantDirection
-                        }}
-                    />
-                )
-            })}
+            {columnIndicesArray.map(xIndex => (
+                <Cube
+                    key={`${xIndex}_${yIndex}`}
+                    {...{
+                        isFloor,
+                        xIndex,
+                        yIndex,
+                        cubesKey,
+                        slantDirection
+                    }}
+                />
+            ))}
         </DynamicSvg>
     )
 }
