@@ -11,9 +11,6 @@ import {
     setRenderableVerseIndex
 } from '../redux/actions/render'
 
-import { setCurrentSceneIndex } from '../redux/actions/session'
-
-import { getSceneIndexForVerseIndex } from '../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'
 
@@ -28,7 +25,6 @@ class RenderManager extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
 
         setIsSongChangeRenderable: PropTypes.func.isRequired,
-        setCurrentSceneIndex: PropTypes.func.isRequired,
         setShowOneOfTwoLyricColumns: PropTypes.func.isRequired,
         setRenderableAnnotationIndex: PropTypes.func.isRequired,
         setRenderableSongIndex: PropTypes.func.isRequired,
@@ -78,13 +74,6 @@ class RenderManager extends Component {
             selectedAnnotationIndex = this.props.selectedAnnotationIndex,
             selectedVerseIndex = this.props.selectedVerseIndex
         } = props
-
-        this.props.setCurrentSceneIndex(
-            getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
-        )
 
         this.props.setIsSongChangeRenderable(true)
 
@@ -155,7 +144,6 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setIsSongChangeRenderable,
-        setCurrentSceneIndex,
         setShowOneOfTwoLyricColumns,
         setRenderableAnnotationIndex,
         setRenderableSongIndex,

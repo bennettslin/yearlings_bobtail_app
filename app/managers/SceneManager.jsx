@@ -1,8 +1,15 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
+import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { getVerseIndexForNextScene } from '../helpers/dataHelper'
+import { setCurrentSceneIndex } from '../redux/actions/session'
+
+import {
+    getSceneIndexForVerseIndex,
+    getVerseIndexForNextScene
+} from '../helpers/dataHelper'
+
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 
 class SceneManager extends Component {
@@ -11,6 +18,7 @@ class SceneManager extends Component {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
+        setCurrentSceneIndex: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -27,6 +35,25 @@ class SceneManager extends Component {
             props: this.props,
             nextProps
         })
+    }
+
+    componentDidUpdate(prevProps) {
+        const {
+            selectedSongIndex,
+            selectedVerseIndex
+        } = this.props
+
+        if (
+            selectedSongIndex !== prevProps.selectedSongIndex ||
+            selectedVerseIndex !== prevProps.selectedVerseIndex
+        ) {
+            this.props.setCurrentSceneIndex(
+                getSceneIndexForVerseIndex(
+                    selectedSongIndex,
+                    selectedVerseIndex
+                )
+            )
+        }
     }
 
     selectScene(direction) {
@@ -64,4 +91,10 @@ const mapStateToProps = ({
     selectedVerseIndex
 })
 
-export default connect(mapStateToProps)(SceneManager)
+const bindDispatchToProps = (dispatch) => (
+    bindActionCreators({
+        setCurrentSceneIndex
+    }, dispatch)
+)
+
+export default connect(mapStateToProps, bindDispatchToProps)(SceneManager)
