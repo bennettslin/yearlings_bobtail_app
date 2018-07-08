@@ -1,8 +1,6 @@
 // Separating other cubes purely for purpose of keeping file smaller.
 
 import {
-    DEFAULT_STAGE_KEY,
-    LOGUE_KEY,
     TAIWAN_PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_SCENE_KEY,
@@ -40,54 +38,13 @@ import {
     i,
     // j,
     k,
-    n,
+    // n,
     // LEFT,
     RIGHT
 } from './cubesConstants'
 
 const
 
-    DEFAULT_STAGE_CUBES = {
-        ceiling: {
-            zIndices: [
-                [k]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_KEY]
-            ]
-        },
-        floor: {
-            zIndices: [
-                [0]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_KEY]
-            ]
-        }
-    },
-    LOGUE_CUBES = {
-        ceiling: {
-            zIndices: [
-                [n]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_KEY]
-            ]
-        },
-        floor: {
-            zIndices: [
-                [0],
-                [0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 0],
-                [0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 0],
-                [0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0],
-                [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_KEY]
-            ]
-        }
-    },
     TAIWAN_PUPPET_SHOW_CUBES = {
         // Just panels.
         floor: {
@@ -385,8 +342,6 @@ const
     },
 
     CUBES_OTHER = {
-        [DEFAULT_STAGE_KEY]: DEFAULT_STAGE_CUBES,
-        [LOGUE_KEY]: LOGUE_CUBES,
         [TAIWAN_PUPPET_SHOW_KEY]: TAIWAN_PUPPET_SHOW_CUBES,
         [SCHOOLBUS_KEY]: SCHOOLBUS_CUBES,
         [TETHERBALL_SCENE_KEY]: TETHERBALL_SCENE_CUBES,

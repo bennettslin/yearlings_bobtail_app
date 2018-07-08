@@ -20,7 +20,6 @@ const mapStateToProps = ({
 class Layers extends Component {
 
     static defaultProps = {
-        presences: {},
         cubesKey: DEFAULT_STAGE_KEY
     }
 
@@ -29,7 +28,6 @@ class Layers extends Component {
         canSceneRender: PropTypes.bool.isRequired,
 
         // From parent.
-        presences: PropTypes.object.isRequired,
         cubesKey: PropTypes.string.isRequired
     }
 
@@ -61,7 +59,6 @@ class Layers extends Component {
                 // eslint-disable-next-line no-unused-vars
                 canSceneRender,
 
-                presences,
                 cubesKey: sceneCubesKey,
                 ...other
             } = this.props,
@@ -89,16 +86,7 @@ class Layers extends Component {
                             key={yIndex}
                             {...{
                                 yIndex,
-                                cubesKey,
-
-                                /**
-                                 * Not ideal, but for the Layers component,
-                                 * "presences" refers to the single object of
-                                 * arrays for each yIndex. Once passed to the
-                                 * Layer component, it refers to just the
-                                 * single array for the given yIndex.
-                                 */
-                                presences: presences[yIndex]
+                                cubesKey
                             }}
                         />
                     )

@@ -8,15 +8,12 @@ import Face from './Face/Face'
 
 import { getCharStringForNumber } from '../../../helpers/formatHelper'
 import { getStageCubeCornerPercentages } from '../sceneHelper'
-
+import { getCubesForKey } from '../sceneDataHelper'
 import { getSideDirection } from './cubeHelper'
 import {
     getPropsAreShallowEqual,
     getValueInAbridgedMatrix
 } from '../../../helpers/generalHelper'
-
-import { CUBES } from '../../../assets/scene/cubes/cubes'
-import { DEFAULT_STAGE_KEY } from '../../../assets/scene/cubes/cubesKeys'
 
 import {
     FRONT,
@@ -57,9 +54,9 @@ class Cube extends Component {
             } = other,
 
             {
-                ceiling = CUBES[DEFAULT_STAGE_KEY].ceiling,
-                floor = CUBES[DEFAULT_STAGE_KEY].floor,
-            } = CUBES[cubesKey],
+                ceiling,
+                floor
+            } = getCubesForKey(cubesKey),
 
             {
                 zIndices,

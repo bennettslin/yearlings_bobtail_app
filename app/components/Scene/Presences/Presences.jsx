@@ -20,24 +20,23 @@ import Presence from './Presence'
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
 const mapStateToProps = ({
-    canPresencesRender
+    canPresencesRender,
+    renderableSongIndex
 }) => ({
-    canPresencesRender
+    canPresencesRender,
+    renderableSongIndex
 })
 
 class Presences extends Component {
 
-    static defaultProps = {
-        presences: {}
-    }
-
     static propTypes = {
         // Through Redux.
         canPresencesRender: PropTypes.bool.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
         yIndex: PropTypes.number.isRequired,
-        presences: PropTypes.object.isRequired
+        cubesKey: PropTypes.string.isRequired
     }
 
     constructor(props) {
@@ -81,7 +80,6 @@ class Presences extends Component {
     }
 
     render() {
-
         const {
                 /* eslint-disable no-unused-vars */
                 canPresencesRender,

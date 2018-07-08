@@ -126,7 +126,6 @@ class Scene extends Component {
             ),
 
             {
-                presences,
                 sky: skyObject,
                 cubes: cubesKey
             } = sceneObject,
@@ -154,7 +153,6 @@ class Scene extends Component {
                 <Wood />
 
                 <Layers
-                    presences={presences}
                     {...{
                         cubesKey
                     }}

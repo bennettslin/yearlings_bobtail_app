@@ -9,8 +9,7 @@ import cx from 'classnames'
 
 import { getTileCentreForPresence } from '../sceneHelper'
 
-import { CUBES } from '../../../assets/scene/cubes/cubes'
-import { DEFAULT_STAGE_KEY } from '../../../assets/scene/cubes/cubesKeys'
+import { getCubesForKey } from '../sceneDataHelper'
 
 const propTypes = {
     // From parent.
@@ -40,11 +39,14 @@ const Presence = ({
 }) => {
 
     const {
-            floor = CUBES[DEFAULT_STAGE_KEY].floor,
+            floor,
             slantDirection = ''
-        } = CUBES[cubesKey],
+        } = getCubesForKey(cubesKey),
 
         {
+            /**
+             * Presence needs to know the floor zIndex for positioning.
+             */
             zIndices
         } = floor,
 

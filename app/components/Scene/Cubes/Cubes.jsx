@@ -18,7 +18,7 @@ import { DEFAULT_X_AXIS_INDICES,
          SLANTED_LEFT_X_AXIS_INDICES,
          SLANTED_RIGHT_X_AXIS_INDICES } from '../constants'
 
-import { CUBES } from '../../../assets/scene/cubes/cubes'
+import { getCubesForKey } from '../sceneDataHelper'
 
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
@@ -201,7 +201,7 @@ class Cubes extends Component {
 
             {
                 slantDirection = ''
-            } = CUBES[cubesKey]
+            } = getCubesForKey(cubesKey)
 
         return (
             <CubesView
