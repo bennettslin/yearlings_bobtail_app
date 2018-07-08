@@ -14,9 +14,9 @@ import {
     TAIWAN_PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_SCENE_KEY
-} from '../constants/cubes/cubesKeys'
+} from '../assets/scene/cubes/cubesKeys'
 import { SKY_ANYTIME,
-         SKY_SUMMER } from '../constants/scene'
+         SKY_SUMMER } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {

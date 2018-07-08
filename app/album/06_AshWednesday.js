@@ -15,9 +15,9 @@ import {
     CATHOLIC_CHURCH_KEY,
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
-} from '../constants/cubes/cubesKeys'
+} from '../assets/scene/cubes/cubesKeys'
 import { SKY_ANYTIME,
-         SKY_SPRING } from '../constants/scene'
+         SKY_SPRING } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {

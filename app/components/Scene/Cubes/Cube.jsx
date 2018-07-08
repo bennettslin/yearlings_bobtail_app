@@ -15,8 +15,8 @@ import {
     getValueInAbridgedMatrix
 } from '../../../helpers/generalHelper'
 
-import { CUBES } from '../../../constants/cubes/cubes'
-import { DEFAULT_STAGE_KEY } from '../../../constants/cubes/cubesKeys'
+import { CUBES } from '../../../assets/scene/cubes/cubes'
+import { DEFAULT_STAGE_KEY } from '../../../assets/scene/cubes/cubesKeys'
 
 import {
     FRONT,

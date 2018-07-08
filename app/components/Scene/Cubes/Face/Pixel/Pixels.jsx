@@ -6,7 +6,7 @@ import cx from 'classnames'
 import Pixel from './Pixel'
 
 import { getBitmapMatrix } from '../helpers/bitmapHelper'
-import { BITMAPS } from '../../../../../constants/bitmaps/bitmaps'
+import { BITMAPS } from '../../../../../assets/scene/bitmaps/bitmaps'
 import { getPropsAreShallowEqual } from '../../../../../helpers/generalHelper';
 
 const mapStateToProps = ({

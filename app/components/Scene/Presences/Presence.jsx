@@ -9,8 +9,8 @@ import cx from 'classnames'
 
 import { getTileCentreForPresence } from '../sceneHelper'
 
-import { CUBES } from '../../../constants/cubes/cubes'
-import { DEFAULT_STAGE_KEY } from '../../../constants/cubes/cubesKeys'
+import { CUBES } from '../../../assets/scene/cubes/cubes'
+import { DEFAULT_STAGE_KEY } from '../../../assets/scene/cubes/cubesKeys'
 
 const propTypes = {
     // From parent.

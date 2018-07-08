@@ -17,9 +17,9 @@ import {
     SHOW_STAGE_SIDE_2_KEY,
     SITA_APARTMENT_BED_KEY,
     SHOW_UNLOADING_KEY
-} from '../constants/cubes/cubesKeys'
+} from '../assets/scene/cubes/cubesKeys'
 import { SKY_ANYTIME,
-         SKY_SUMMER } from '../constants/scene'
+         SKY_SUMMER } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {

@@ -11,7 +11,7 @@ import cx from 'classnames'
 import {
     SKY_ANYTIME,
     SKY_INDOOR
-} from '../../constants/scene'
+} from '../../assets/scene/sky'
 
 const mapStateToProps = ({
     canTheatreRender

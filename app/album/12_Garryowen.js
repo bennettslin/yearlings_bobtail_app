@@ -17,9 +17,9 @@ import {
     BENNETT_BASEMENT_KEY,
     SHOW_STAGE_FRONT_KEY,
     VOLKSWAGEN_KEY
-} from '../constants/cubes/cubesKeys'
+} from '../assets/scene/cubes/cubesKeys'
 import { SKY_ANYTIME,
-         SKY_AUTUMN } from '../constants/scene'
+         SKY_AUTUMN } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {

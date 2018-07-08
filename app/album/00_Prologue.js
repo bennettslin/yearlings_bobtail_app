@@ -1,10 +1,12 @@
-import { LOGUE_KEY } from '../constants/cubes/cubesKeys'
+import { LOGUE_KEY } from '../assets/scene/cubes/cubesKeys'
+import {
+    SKY_ANYTIME,
+    SKY_INDOOR
+} from '../assets/scene/sky'
 import {
     CUTOUT,
     FIXTURE,
-    ACTOR,
-    SKY_ANYTIME,
-    SKY_INDOOR
+    ACTOR
 } from '../constants/scene'
 
 module.exports = {

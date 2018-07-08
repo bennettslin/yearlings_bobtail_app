@@ -23,9 +23,9 @@ import {
     UCLA_CAMPUS_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY
-} from '../constants/cubes/cubesKeys'
+} from '../assets/scene/cubes/cubesKeys'
 import { SKY_ANYTIME,
-         SKY_SPRING } from '../constants/scene'
+         SKY_SPRING } from '../assets/scene/sky'
 
 module.exports = {
     scenes: [

@@ -18,7 +18,7 @@ import { DEFAULT_X_AXIS_INDICES,
          SLANTED_LEFT_X_AXIS_INDICES,
          SLANTED_RIGHT_X_AXIS_INDICES } from '../constants'
 
-import { CUBES } from '../../../constants/cubes/cubes'
+import { CUBES } from '../../../assets/scene/cubes/cubes'
 
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
