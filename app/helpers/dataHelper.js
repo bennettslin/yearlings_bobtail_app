@@ -301,32 +301,6 @@ export const getSliderStanzasArray = (songIndex) => {
     return sliderStanzasArray || []
 }
 
-// export const getSliderStanzaData = (songIndex, stanzaTimeIndex) => {
-
-//     const songObject = getSongObject(songIndex),
-//         { sliderStanzasArray } = songObject
-
-//     // Logues do not have this array.
-//     if (
-//         sliderStanzasArray &&
-//         stanzaTimeIndex < sliderStanzasArray.length
-//     ) {
-
-//         // Return stanza time object.
-//         return sliderStanzasArray[stanzaTimeIndex]
-
-//     } else {
-
-//         // Return placeholder object.
-//         return { type: 'placeholder',
-//                  verseTimes: [
-//                     songObject.totalTime
-//                  ],
-//                  firstVerseIndex: 0,
-//                  endTime: songObject.totalTime }
-//     }
-// }
-
 /**********
  * SCENES *
  **********/
@@ -387,7 +361,7 @@ export const getSceneObject = (songIndex, sceneIndex = 0) => {
     const song = getSongObject(songIndex),
         sceneObject = song.scenes
 
-    return sceneObject[sceneIndex] || { cubes: '' }
+    return sceneObject[sceneIndex] || null
 }
 
 export const getScenesArray = (songIndex) => {

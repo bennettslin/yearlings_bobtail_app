@@ -98,6 +98,9 @@ class WindowManager extends Component {
         return !getPropsAreShallowEqual({
             props: this.props,
             nextProps
+        }) || !getPropsAreShallowEqual({
+            props: this.props.selectedDotKeys,
+            nextProps: nextProps.selectedDotKeys
         })
     }
 

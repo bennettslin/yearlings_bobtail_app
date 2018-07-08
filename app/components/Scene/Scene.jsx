@@ -123,9 +123,10 @@ class Scene extends Component {
 
             sceneObject = getSceneObject(
                 renderableSongIndex, currentSceneIndex
-            ),
+            )
 
-            {
+        if (sceneObject) {
+            const {
                 presences,
                 sky: skyObject,
                 cubes: cubesKey
@@ -136,31 +137,34 @@ class Scene extends Component {
                 season: seasonKey
             } = skyObject
 
-        return (
-            <div className={cx(
-                'Scene',
+            return (
+                <div className={cx(
+                    'Scene',
 
-                // More specific class, because Scene is a child of Theatre.
-                { 'sceneIsShown': canSceneRender && isShown }
-            )}>
-                <SceneSky
-                    {...{
-                        timeKey,
-                        seasonKey
-                    }}
-                />
+                    // More specific class, because Scene is a child of Theatre.
+                    { 'sceneIsShown': canSceneRender && isShown }
+                )}>
+                    <SceneSky
+                        {...{
+                            timeKey,
+                            seasonKey
+                        }}
+                    />
 
-                {/* Wood is in front of sky, but behind presences and cubes. */}
-                <Wood />
+                    {/* Wood is in front of sky, but behind presences and cubes. */}
+                    <Wood />
 
-                <Layers
-                    presences={presences}
-                    {...{
-                        cubesKey
-                    }}
-                />
-            </div>
-        )
+                    <Layers
+                        presences={presences}
+                        {...{
+                            cubesKey
+                        }}
+                    />
+                </div>
+            )
+        } else {
+            return null
+        }
     }
 }
 
