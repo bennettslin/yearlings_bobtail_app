@@ -3148,4 +3148,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Presences are referenced by keys. Live under Cubes? In that case, separate Cubes files into much smaller ones. Maybe no more than five or six per file. Begin this work with Prologue.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

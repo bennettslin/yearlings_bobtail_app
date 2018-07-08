@@ -5,13 +5,7 @@ module.exports = [
      */
 
     {
-        taskName: `Presences are referenced by keys. Live under Cubes? In that case, separate Cubes files into much smaller ones. Maybe no more than five or six per file. Begin this work with Prologue.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: `Have system to animate actions based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
+        taskName: `Have system to animate in and out presences based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing. Have a separate component for each presence type.`,
         workedHours: 0,
         neededHours: 8
     },

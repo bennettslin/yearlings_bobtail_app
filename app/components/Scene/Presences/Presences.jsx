@@ -17,14 +17,18 @@ import {
 import DynamicSvg from '../../DynamicSvg/DynamicSvg'
 import Presence from './Presence'
 
+import { getPresencesForCubes } from '../sceneDataHelper'
+
 import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
 const mapStateToProps = ({
     canPresencesRender,
-    renderableSongIndex
+    renderableSongIndex,
+    currentSceneIndex
 }) => ({
     canPresencesRender,
-    renderableSongIndex
+    renderableSongIndex,
+    currentSceneIndex
 })
 
 class Presences extends Component {
@@ -33,6 +37,7 @@ class Presences extends Component {
         // Through Redux.
         canPresencesRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
+        currentSceneIndex: PropTypes.number.isRequired,
 
         // From parent.
         yIndex: PropTypes.number.isRequired,
@@ -88,45 +93,62 @@ class Presences extends Component {
                 /* eslint-disable no-unused-vars */
 
                 yIndex,
-                presences,
+                renderableSongIndex,
+                currentSceneIndex,
                 ...other
             } = this.props,
 
-            presenceTypes = keys(presences)
+            {
+                cubesKey
+            } = other,
 
-        return (
-            <DynamicSvg
-                className={cx(
-                    `Presences__y${yIndex}`,
-                    'absoluteFullContainer'
-                )}
-                viewBoxWidth={100}
-                viewBoxHeight={100}
-            >
-                {presenceTypes.map(presenceType => {
-                    const presenceEntity = presences[presenceType],
+            presences = getPresencesForCubes({
+                cubesKey,
+                songIndex: renderableSongIndex,
+                sceneIndex: currentSceneIndex,
+                yIndex
+            })
 
-                        /**
-                         * This is either an array of presences, or a single
-                         * presence. If it's a single presence, make it an
-                         * array of one.
-                         */
-                        presenceArray = Array.isArray(presenceEntity) ?
-                            presenceEntity :
-                            [presenceEntity]
+        if (presences) {
+            // As of now, keys are actors, cutouts, fixtures.
+            const presenceTypes = keys(presences)
 
-                        return presenceArray.map((presence, index) => (
-                            <Presence
-                                key={index}
-                                type={presenceType}
-                                {...presence}
-                                {...other}
-                                yIndex={yIndex}
-                            />
-                        ))
-                })}
-            </DynamicSvg>
-        )
+            return (
+                <DynamicSvg
+                    className={cx(
+                        `Presences__y${yIndex}`,
+                        'absoluteFullContainer'
+                    )}
+                    viewBoxWidth={100}
+                    viewBoxHeight={100}
+                >
+                    {presenceTypes.map(presenceType => {
+                        const presenceEntity = presences[presenceType],
+
+                            /**
+                             * This is either an array of presences, or a single
+                             * presence. If it's a single presence, make it an
+                             * array of one.
+                             */
+                            presenceArray = Array.isArray(presenceEntity) ?
+                                presenceEntity :
+                                [presenceEntity]
+
+                            return presenceArray.map((presence, index) => (
+                                <Presence
+                                    key={index}
+                                    type={presenceType}
+                                    {...presence}
+                                    {...other}
+                                    yIndex={yIndex}
+                                />
+                            ))
+                    })}
+                </DynamicSvg>
+            )
+        } else {
+            return null
+        }
     }
 }
 

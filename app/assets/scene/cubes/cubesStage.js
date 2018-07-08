@@ -42,8 +42,10 @@ const
             bitmapKeys: [
                 [TEST_PATTERN_KEY]
             ]
-        }
+        },
+        presences: {}
     },
+
     LOGUE_CUBES = {
         ceiling: {
             zIndices: [
@@ -67,7 +69,7 @@ const
             ]
         },
         presences: {
-            song0: {
+            song0_scene0: {
                 cubes1: {
                     actors: [
                         {

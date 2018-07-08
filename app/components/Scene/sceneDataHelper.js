@@ -10,3 +10,20 @@ export const getCubesForKey = (cubesKey) => {
         ...CUBES[cubesKey]
     }
 }
+
+export const getPresencesForCubes = ({
+    cubesKey,
+    songIndex,
+    sceneIndex,
+    yIndex
+}) => {
+    const cubes = getCubesForKey(cubesKey),
+        scenePresences = cubes.presences[`song${songIndex}_scene${sceneIndex}`]
+
+    /**
+     * Once complete, there will always be a presences object for the song and
+     * scene that expects it. In the meantime, however, it may not exist, so
+     * do this safety check.
+     */
+    return scenePresences ? scenePresences[`cubes${yIndex}`] : null
+}
