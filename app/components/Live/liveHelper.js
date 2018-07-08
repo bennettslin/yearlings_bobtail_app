@@ -54,21 +54,22 @@ export const getOrganisedHandlersFromProps = (props) => {
         handleAnnotationWikiSelect
     },
 
-    audioBannerHandlers = {
-        handleSliderTouchBegin
-    },
     titleToggleHandlers = {
         handleTitleToggle
     },
-    audioHandlers = {
+    audioBannerHandlers = {
+        handleSliderTouchBegin
+    },
+    audioButtonsHandlers = {
         handleAudioPlay,
         handleAudioPreviousSong,
         handleAudioNextSong,
-        handleAudioOptionsToggle,
-        handlePopupContainerClick,
-
+        handleAudioOptionsToggle
+    },
+    audioHandlers = {
+        titleToggleHandlers,
         audioBannerHandlers,
-        titleToggleHandlers
+        audioButtonsHandlers
     },
 
     lyricColumnHandlers = {

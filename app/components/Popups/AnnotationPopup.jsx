@@ -102,6 +102,9 @@ class AnnotationPopup extends Component {
 
     render() {
         const {
+            /* eslint-disable no-unused-vars */
+            dispatch,
+            /* eslint-enable no-unused-vars */
 
             canCarouselRender,
             deviceIndex,
@@ -119,7 +122,8 @@ class AnnotationPopup extends Component {
             handleAnnotationNext,
             handlePopupContainerClick,
 
-        ...other } = this.props,
+            ...other
+        } = this.props,
 
             isOverlayingAnnotation = getIsOverlayingAnnotation({
                 deviceIndex,

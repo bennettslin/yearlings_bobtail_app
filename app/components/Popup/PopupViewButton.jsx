@@ -51,17 +51,17 @@ class PopupViewButton extends Component {
     render() {
 
         const {
+            // eslint-disable-next-line no-unused-vars
+            handlePopupButtonClick,
+
             isCloseButton,
             isPreviousButton,
             isNextButton,
             inFullSize,
             inCardSize,
-            displaysInOverlay,
+            displaysInOverlay
 
-            // eslint-disable-next-line no-unused-vars
-            handlePopupButtonClick,
-
-            ...other } = this.props
+        } = this.props
 
         let temporaryText,
             buttonName,
@@ -116,7 +116,7 @@ class PopupViewButton extends Component {
                         'boxShadow__popupView'
                     )}
                 />
-                <Button {...other}
+                <Button
                     isLargeSize
                     isPopupButton
                     buttonName={buttonName}

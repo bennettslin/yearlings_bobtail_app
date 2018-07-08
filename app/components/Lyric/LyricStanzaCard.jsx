@@ -51,7 +51,9 @@ class LyricStanzaCard extends Component {
 
             ...other } = this.props,
 
-            { inMain } = other
+            {
+                inMain
+            } = other
 
         if (stanzaArray) {
 

@@ -61,10 +61,6 @@ class Cubes extends Component {
             this._setCanRenderPresences.bind(this)
     }
 
-    componentWillUnmount() {
-        console.error('Component will unmount!')
-    }
-
     shouldComponentUpdate(nextProps) {
         const {
                 yIndex,

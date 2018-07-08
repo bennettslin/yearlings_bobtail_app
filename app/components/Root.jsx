@@ -159,12 +159,14 @@ class Root extends Component {
             isManualScroll
             } = this.props,
 
-            { handleBodyTouchMove,
-              handlePlayerTimeChange,
-              handlePlayerNextSong,
-              handlePlayerTimeReset,
-              getRootRef,
-              ...other } = this.props.eventHandlers,
+            {
+                handleBodyTouchMove,
+                handlePlayerTimeChange,
+                handlePlayerNextSong,
+                handlePlayerTimeReset,
+                getRootRef,
+                ...other
+            } = this.props.eventHandlers,
 
             deviceClassName = DEVICE_OBJECTS[deviceIndex].className,
             isDesktop = getIsDesktop(deviceIndex),

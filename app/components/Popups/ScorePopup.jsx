@@ -24,6 +24,10 @@ const scorePopupPropTypes = {
 },
 
 ScorePopup = ({
+    /* eslint-disable no-unused-vars */
+    dispatch,
+    /* eslint-enable no-unused-vars */
+
     selectedScoreIndex,
 
     /* eslint-disable no-unused-vars */

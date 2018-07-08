@@ -55,7 +55,6 @@ PopupView = ({
         )}>
             {showClose &&
                 <PopupViewButton
-                    accessKeysShown
                     isCloseButton
                     inFullSize={isFullSize}
                     inCardSize={isCardSize}
@@ -65,7 +64,6 @@ PopupView = ({
             }
             {showPrevious &&
                 <PopupViewButton
-                    accessKeysShown
                     isPreviousButton
                     inFullSize={isFullSize}
                     inCardSize={isCardSize}
@@ -75,7 +73,6 @@ PopupView = ({
             }
             {showNext &&
                 <PopupViewButton
-                    accessKeysShown
                     isNextButton
                     inFullSize={isFullSize}
                     inCardSize={isCardSize}

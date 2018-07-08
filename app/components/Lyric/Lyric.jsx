@@ -100,18 +100,27 @@ class Lyric extends Component {
 
     render() {
         const {
-
                 /* eslint-disable no-unused-vars */
+                canLyricRender,
                 isTransitioningHeight,
                 completeHeightTransition,
                 handleLyricWheel,
+                setLyricRef,
+                setLyricVerseParentRef,
+                dispatch,
                 /* eslint-enable no-unused-vars */
 
+                renderableSongIndex,
                 ...other
-            } = this.props
+            } = this.props,
+
+            lyricUnitsCount = getLyricUnitsCount(renderableSongIndex)
 
         return (
             <LyricView {...other}
+                {...{
+                    lyricUnitsCount
+                }}
                 handleWheel={this._handleWheel}
                 setRef={this.setLyricRef}
             />
@@ -124,24 +133,21 @@ class Lyric extends Component {
  ****************/
 
 const lyricViewPropTypes = {
-    // Through Redux.
-    renderableSongIndex: PropTypes.number.isRequired,
-
     // From parent.
+    lyricUnitsCount: PropTypes.number.isRequired,
     setRef: PropTypes.func.isRequired,
     handleWheel: PropTypes.func.isRequired
 },
 
 LyricView = ({
 
-    renderableSongIndex,
-
+    lyricUnitsCount,
     setRef,
     handleWheel,
 
 ...other }) => {
 
-    const lyricUnitsCount = getLyricUnitsCount(renderableSongIndex),
+    const
 
         /**
          * Dynamically create array of just indices. Lyric unit will fetch

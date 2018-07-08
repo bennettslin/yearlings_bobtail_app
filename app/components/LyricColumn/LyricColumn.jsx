@@ -115,6 +115,7 @@ class LyricColumn extends Component {
                 /* eslint-disable no-unused-vars */
                 handleScrollUponLyricRender,
                 lyricDidRender,
+                dispatch,
                 /* eslint-enable no-unused-vars */
 
                 canLyricRender,

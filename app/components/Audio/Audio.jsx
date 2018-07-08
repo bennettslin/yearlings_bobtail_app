@@ -20,19 +20,26 @@ const audioPropTypes = {
     isTwoRowMenu: PropTypes.bool.isRequired,
 
     // From parent.
+    sliderDidRender: PropTypes.func.isRequired,
     audioBannerHandlers: PropTypes.object.isRequired,
+    audioButtonsHandlers: PropTypes.object.isRequired,
     titleToggleHandlers: PropTypes.object.isRequired
 },
 
 Audio = ({
+
+    /* eslint-disable no-unused-vars */
+    dispatch,
+    /* eslint-disable no-unused-vars */
+
     isTwoRowMenu,
 
-    audioBannerHandlers,
-    titleToggleHandlers,
-
     sliderDidRender,
+    audioBannerHandlers,
+    audioButtonsHandlers,
+    titleToggleHandlers
 
-...other }) => {
+}) => {
 
     return (
         <div
@@ -50,7 +57,7 @@ Audio = ({
             <AudioBanner {...audioBannerHandlers}
                 sliderDidRender={sliderDidRender}
             />
-            <AudioButtons {...other} />
+            <AudioButtons {...audioButtonsHandlers} />
         </div>
     )
 }

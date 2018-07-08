@@ -54,6 +54,7 @@ class LyricStanza extends Component {
         const {
                 /* eslint-disable no-unused-vars */
                 canLyricRender,
+                dispatch,
                 /* eslint-enable no-unused-vars */
 
                 renderableSongIndex,
@@ -72,7 +73,6 @@ class LyricStanza extends Component {
              * special formatting for custom sub blocks.
              */
             { unitClassName,
-            //   sceneIndex,
 
               stanzaIndex,
               stanzaType,
@@ -114,7 +114,6 @@ class LyricStanza extends Component {
             <LyricStanzaView {...other}
                 isTitleUnit={isTitleUnit}
                 unitClassName={unitClassName}
-                // sceneIndex={sceneIndex}
                 unitIndex={unitIndex}
                 stanzaIndex={stanzaIndex}
                 unitArray={unitArray}
@@ -153,7 +152,6 @@ lyricStanzaViewPropTypes = {
     isTitleUnit: PropTypes.bool.isRequired,
     unitClassName: PropTypes.string,
     isLastStanza: PropTypes.bool.isRequired,
-    // sceneIndex: PropTypes.number,
 
     dotStanza: PropTypes.object,
     substanza: PropTypes.array,
@@ -201,8 +199,11 @@ LyricStanzaView = ({
 
 ...other }) => {
 
-    const { subsequent,
-            handleLyricAnnotationSelect } = other,
+    const {
+        subsequent,
+        handleLyricAnnotationSelect,
+        setLyricAnnotationRef
+    } = other,
 
         // Left, right, or overlap, or a combination.
         unitClassNames = getPrefixPrependedClassNames(
@@ -274,7 +275,7 @@ LyricStanzaView = ({
             }
             {dotStanza &&
                 <LyricStanzaDot
-                    setLyricAnnotationRef={other.setLyricAnnotationRef}
+                    setLyricAnnotationRef={setLyricAnnotationRef}
                     isLastStanza={isDotOnly && isLastStanza}
                     dotStanzaObject={dotStanza}
                     handleLyricAnnotationSelect={handleLyricAnnotationSelect}

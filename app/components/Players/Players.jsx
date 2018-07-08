@@ -92,8 +92,15 @@ class Players extends Component {
 
     render() {
 
-        const { selectedSongIndex,
-                ...other } =  this.props,
+        const {
+                /* eslint-disable no-unused-vars */
+                canPlayThroughs,
+                dispatch,
+                /* eslint-enable no-unused-vars */
+
+                selectedSongIndex,
+                ...other
+            } = this.props,
 
             mp3s = getMp3s()
 

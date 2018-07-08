@@ -24,6 +24,10 @@ const audioBannerPropTypes = {
 
 AudioBanner = ({
 
+    /* eslint-disable no-unused-vars */
+    dispatch,
+    /* eslint-disable no-unused-vars */
+
     isTwoRowMenu,
     selectedSongIndex,
 

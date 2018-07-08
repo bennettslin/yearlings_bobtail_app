@@ -40,6 +40,18 @@ module.exports = [
         neededHours: 3
     },
 
+    {
+        taskName: `Get rid of shouldComponentUpdate helper method.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Finish getting rid of needlessly passed props. Left to do is Scene, Text, Theatre, Verse.`,
+        workedHours: 1,
+        neededHours: 2
+    },
+
     /**
      * End expected DTO tasks.
      */

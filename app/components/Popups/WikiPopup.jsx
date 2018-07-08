@@ -3,7 +3,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import WikiSection from '../Wiki/Wiki'
+import Wiki from '../Wiki/Wiki'
 import Popup from '../Popup/Popup'
 
 const mapStateToProps = ({
@@ -21,6 +21,9 @@ const wikiPopupPropTypes = {
 },
 
 WikiPopup = ({
+    /* eslint-disable no-unused-vars */
+    dispatch,
+    /* eslint-enable no-unused-vars */
 
     selectedWikiIndex,
     handleWikiToggle,
@@ -38,7 +41,7 @@ WikiPopup = ({
             popupName="Wiki"
             handleCloseClick={handleWikiToggle}
         >
-            <WikiSection {...other} />
+            <Wiki {...other} />
         </Popup>
     )
 }

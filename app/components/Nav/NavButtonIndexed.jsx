@@ -9,12 +9,10 @@ const mapStateToProps = ({
     selectedSongIndex,
     selectedDotsIndex,
     accessedNavSongIndex,
-    showSingleBookColumn
 }) => ({
     selectedSongIndex,
     selectedDotsIndex,
     accessedNavSongIndex,
-    showSingleBookColumn
 })
 
 const navButtonIndexedPropTypes = {
@@ -22,13 +20,15 @@ const navButtonIndexedPropTypes = {
     accessedNavSongIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
     selectedDotsIndex: PropTypes.number.isRequired,
-    showSingleBookColumn: PropTypes.bool.isRequired,
 
     // From parent.
     songIndex: PropTypes.number.isRequired
 },
 
 NavButtonIndexed = ({
+    /* eslint-disable no-unused-vars */
+    dispatch,
+    /* eslint-enable no-unused-vars */
 
     songIndex,
     selectedSongIndex,

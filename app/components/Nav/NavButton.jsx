@@ -72,19 +72,20 @@ class NavButton extends Component {
     }
 
     render() {
-        /* eslint-disable no-unused-vars */
-        const { handleButtonClick,
-        /* eslint-enable no-unused-vars */
+        const {
+                /* eslint-disable no-unused-vars */
+                handleButtonClick,
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
-            isAccessed,
-            isSelected,
-            isToggle,
-            interactivatedVerseIndex,
-            selectedAnnotationIndex,
-
-            ...other } = this.props,
-
-            { bookIndex, songIndex } = other,
+                isAccessed,
+                isSelected,
+                isToggle,
+                interactivatedVerseIndex,
+                selectedAnnotationIndex,
+                bookIndex,
+                songIndex
+            } = this.props,
 
             isLogue = getSongIsLogue(songIndex),
 
@@ -117,7 +118,7 @@ class NavButton extends Component {
                     'NavButton'
                 )}
             >
-                <Button {...other}
+                <Button
                     buttonName="nav"
                     isIndexSelected={isSelected}
                     showAccessIconIfAccessOn={isAccessed && isNavigable}

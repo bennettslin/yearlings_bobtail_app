@@ -86,7 +86,12 @@ class Popup extends Component {
     }
 
     render() {
-        const { className,
+        const {
+                /* eslint-disable no-unused-vars */
+                handlePopupContainerClick,
+                /* eslint-enable no-unused-vars */
+
+                className,
                 popupName,
                 isVisible,
                 noFlexCentre,
@@ -96,11 +101,8 @@ class Popup extends Component {
                 handlePreviousClick,
                 handleNextClick,
 
-                /* eslint-disable no-unused-vars */
-                handlePopupContainerClick,
-                /* eslint-enable no-unused-vars */
-
-                ...other } = this.props,
+                ...other
+            } = this.props,
 
             { isFullSize } = other,
 
