@@ -5,9 +5,9 @@ module.exports = [
      */
 
     {
-        taskName: `Bitmaps and presences are referenced by keys.`,
+        taskName: `Presences are referenced by keys. Live under Cubes? In that case, separate Cubes files into much smaller ones. Maybe no more than five or six per file. Begin this work with Prologue.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 3
     },
 
     {

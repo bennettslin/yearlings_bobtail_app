@@ -3143,4 +3143,9 @@ module.exports = [
         workedHours: 5,
         neededHours: 5
     },
+    {
+        taskName: `Bitmaps are referenced by key.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]
