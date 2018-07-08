@@ -95,13 +95,19 @@ class CarouselAnnotation extends Component {
 
     render() {
 
-        const { renderableSongIndex,
-
+        const {
                 /* eslint-disable no-unused-vars */
+                canCarouselRender,
+                handleLyricAnnotationSelect,
                 handlePopupContainerClick,
+                setCarouselAnnotationRef,
+                dispatch,
                 /* eslint-enable no-unused-vars */
 
-                ...other } = this.props,
+                renderableSongIndex,
+                ...other
+
+            } = this.props,
 
             { annotationIndex } = other,
 

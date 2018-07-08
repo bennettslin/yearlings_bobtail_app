@@ -60,10 +60,16 @@ class AnnotationPortals extends Component {
 
     render() {
         const {
+                /* eslint-disable no-unused-vars */
+                canCarouselRender,
+                dispatch,
+                /* eslint-disable no-unused-vars */
+
                 renderableSongIndex,
                 renderableAnnotationIndex,
                 accessedAnnotationAnchorIndex,
-            ...other } = this.props,
+                ...other
+            } = this.props,
 
             {
                 carouselAnnotationIndex,

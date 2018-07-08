@@ -86,7 +86,7 @@ class Annotation extends Component {
 
         // If it's in popup, annotation object won't always exist.
         return Boolean(annotationObject) && (
-            <AnnotationSectionView {...other}
+            <AnnotationView {...other}
                 annotationObject={annotationObject}
             />
         )
@@ -97,7 +97,7 @@ class Annotation extends Component {
  * PRESENTATION *
  ****************/
 
-const annotationSectionViewPropTypes = {
+const propTypes = {
     // From parent.
     inCarousel: PropTypes.bool,
     isAccessed: PropTypes.bool,
@@ -109,7 +109,7 @@ const annotationSectionViewPropTypes = {
     handleContainerClick: PropTypes.func
 },
 
-AnnotationSectionView = ({
+AnnotationView = ({
 
     // From props.
     inCarousel,
@@ -159,6 +159,6 @@ AnnotationSectionView = ({
     )
 }
 
-AnnotationSectionView.propTypes = annotationSectionViewPropTypes
+AnnotationView.propTypes = propTypes
 
 export default connect(mapStateToProps)(Annotation)

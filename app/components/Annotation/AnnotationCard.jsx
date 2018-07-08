@@ -72,6 +72,11 @@ class AnnotationCard extends Component {
 
     render() {
         const {
+                /* eslint-disable no-unused-vars */
+                canCarouselRender,
+                dispatch,
+                /* eslint-enable no-unused-vars */
+
                 renderableSongIndex,
                 renderableAnnotationIndex,
                 cardIndex,
@@ -152,8 +157,7 @@ AnnotationCardView = ({
                 !inCarousel && 'AnnotationCard__inPopup',
                 isTextCard && 'AnnotationCard__isText',
                 isPortalCard && 'AnnotationCard__portal',
-                'fontSize__verse',
-                // 'textShadow__background'
+                'fontSize__verse'
             )}>
                 {!isPortalCard && (
                     <DotSequence

@@ -70,8 +70,15 @@ class DotsSlide extends Component {
     }
 
     render() {
-        const { selectedDotKeys,
-                ...other } = this.props,
+        const {
+                /* eslint-disable no-unused-vars */
+                handlePopupContainerClick,
+                dispatch,
+                /* eslint-enable no-unused-vars */
+
+                selectedDotKeys,
+                ...other
+            } = this.props,
             { hasInteractivatedDotText } = this.state
 
         return (
