@@ -107,13 +107,19 @@ class Verse extends Component {
 
     render() {
 
-        /* eslint-disable no-unused-vars */
-        const { renderableSongIndex,
-        /* eslint-enable no-unused-vars */
+        const {
+                /* eslint-disable no-unused-vars */
+                renderableSongIndex,
+                canLyricRender,
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
                 inMain,
                 handleLyricAnnotationSelect,
-                ...other } = this.props,
+
+                ...other
+
+            } = this.props,
 
             { inVerseBar,
               verseIndex,

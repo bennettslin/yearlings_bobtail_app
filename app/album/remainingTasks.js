@@ -47,7 +47,13 @@ module.exports = [
     },
 
     {
-        taskName: `Finish getting rid of needlessly passed props. Left to do is Scene, Text, Theatre, Verse.`,
+        taskName: `getShouldSkipHidden logic might be buggy.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Finish getting rid of needlessly passed props. Left to do is Text, Verse.`,
         workedHours: 1,
         neededHours: 2
     },

@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import omit from 'lodash.omit'
 
 import Button from '../Button/Button'
 import Dot from '../Dot/Dot'
@@ -89,14 +88,19 @@ class DotsSlideSelect extends Component {
 
     render() {
 
-        const other = omit(this.props, [
-            'dotIndex',
-            'selectedDotsIndex',
-            'handleDotSelect',
-            'hasInteractivatedDotText',
-            'setHasInteractivatedDotText',
-            'stopPropagation'
-        ])
+        const {
+            /* eslint-disable no-unused-vars */
+            dotIndex,
+            selectedDotsIndex,
+            handleDotSelect,
+            hasInteractivatedDotText,
+            setHasInteractivatedDotText,
+            stopPropagation,
+            dispatch,
+            /* eslint-enable no-unused-vars */
+
+            ...other
+        } = this.props
 
         return (
             <DotsSlideSelectView {...other}

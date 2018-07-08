@@ -108,12 +108,17 @@ class Theatre extends Component {
 
     render() {
         const {
+                /* eslint-disable no-unused-vars */
+                theatreDidRender,
+                dispatch,
+                /* eslint-enable no-unused-vars */
+
+                canTheatreRender,
                 isHeightlessLyricColumn,
                 deviceIndex,
-                stageCoordinates,
                 windowWidth,
                 windowHeight,
-                canTheatreRender,
+                stageCoordinates,
                 ...other
             } = this.props,
 

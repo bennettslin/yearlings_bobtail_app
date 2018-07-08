@@ -42,6 +42,11 @@ class Stage extends Component {
     render() {
 
         const {
+            /* eslint-disable no-unused-vars */
+            canTheatreRender,
+            dispatch,
+            /* eslint-enable no-unused-vars */
+
             stageCoordinates,
             ...other
         } = this.props,

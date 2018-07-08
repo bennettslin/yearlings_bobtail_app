@@ -9,17 +9,13 @@ class Layer extends Component {
 
     render() {
 
-        const {
-            ...other
-        } = this.props
-
         return (
             <Fragment>
-                <Cubes {...other} />
-                <Cubes {...other}
+                <Cubes {...this.props} />
+                <Cubes {...this.props}
                     isFloor
                 />
-                <Presences {...other} />
+                <Presences {...this.props} />
             </Fragment>
         )
     }
