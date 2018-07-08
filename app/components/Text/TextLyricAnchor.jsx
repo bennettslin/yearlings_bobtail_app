@@ -98,6 +98,13 @@ class TextLyricAnchor extends Component {
     render() {
 
         const {
+                /* eslint-disable no-unused-vars */
+                canLyricRender,
+                handleAnchorClick,
+                setLyricAnnotationRef,
+                dispatch,
+                /* eslint-enable no-unused-vars */
+
                 annotationIndex,
                 renderableAnnotationIndex,
                 accessedAnnotationIndex,

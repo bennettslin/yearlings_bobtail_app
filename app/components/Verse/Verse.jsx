@@ -111,6 +111,8 @@ class Verse extends Component {
                 /* eslint-disable no-unused-vars */
                 renderableSongIndex,
                 canLyricRender,
+                handleVerseInteractivate,
+                setVerseRef,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
@@ -118,7 +120,6 @@ class Verse extends Component {
                 handleLyricAnnotationSelect,
 
                 ...other
-
             } = this.props,
 
             { inVerseBar,
@@ -149,8 +150,12 @@ class Verse extends Component {
                 isInteractable={isInteractable}
                 verseClassName={verseClassName}
                 hasCursorStyling={hasCursorStyling}
-                handleAnchorClick={handleLyricAnnotationSelect}
                 handleInteractivatableClick={this._handleInteractivatableClick}
+                {
+                    ...!inVerseBar && {
+                        handleAnchorClick: handleLyricAnnotationSelect
+                    }
+                }
             />
         )
     }

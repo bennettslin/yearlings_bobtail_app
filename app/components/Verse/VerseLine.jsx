@@ -50,7 +50,6 @@ class VerseLine extends Component {
             alwaysBypassCheck: {
                 isTruncatable: true,
                 inVerseBar: true,
-                isTitle: true,
                 isVerseBeginningSpan: true,
                 isVerseEndingSpan: true,
                 columnKey: true,
@@ -70,8 +69,12 @@ class VerseLine extends Component {
 
     render() {
         const {
-            // eslint-disable-next-line no-unused-vars
+            /* eslint-disable no-unused-vars */
+            canLyricRender,
+            renderableSongIndex,
             verseIndex,
+            dispatch,
+            /* eslint-enable no-unused-vars */
 
             columnKey,
             isTruncatable,

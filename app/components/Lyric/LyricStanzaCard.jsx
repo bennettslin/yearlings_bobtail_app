@@ -134,8 +134,10 @@ LyricStanzaCardView = ({
                 `bgColour__stanza__${stanzaType}`
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
-                    const { stanzaMap,
-                            unitMap } = verseObject
+                    const {
+                        stanzaMap,
+                        unitMap
+                    } = verseObject
 
                     return !stanzaMap && !unitMap && (
                             <VerseController {...other}

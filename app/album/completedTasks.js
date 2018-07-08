@@ -3153,4 +3153,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Get rid of needlessly passed props.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

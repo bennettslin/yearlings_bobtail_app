@@ -52,6 +52,10 @@ class VerseController extends Component {
 
     render() {
         const {
+                /* eslint-disable no-unused-vars */
+                canLyricRender,
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
                 renderableVerseIndex,
                 sliderVerseIndex,

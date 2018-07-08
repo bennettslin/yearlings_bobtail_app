@@ -50,9 +50,12 @@ verseLinesChildPropTypes = {
 
 VerseLinesChild = (props) => {
 
-    const { verseObject,
+    const {
+            verseObject,
             doublespeakerKey,
-            isTitle } = props,
+            isTitle,
+            ...other
+        } = props,
 
         lyricsLineProps = {
             text:
@@ -79,7 +82,7 @@ VerseLinesChild = (props) => {
     lyricsLineProps.columnKey = columnKey
 
     return (
-        <VerseLine {...props} {...lyricsLineProps} />
+        <VerseLine {...other} {...lyricsLineProps} />
     )
 }
 

@@ -52,12 +52,6 @@ module.exports = [
         neededHours: 1
     },
 
-    {
-        taskName: `Finish getting rid of needlessly passed props. Left to do is Text, Verse.`,
-        workedHours: 1,
-        neededHours: 2
-    },
-
     /**
      * End expected DTO tasks.
      */
