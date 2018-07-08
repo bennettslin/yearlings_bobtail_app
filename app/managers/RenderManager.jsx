@@ -79,6 +79,13 @@ class RenderManager extends Component {
             selectedVerseIndex = this.props.selectedVerseIndex
         } = props
 
+        this.props.setCurrentSceneIndex(
+            getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
+        )
+
         this.props.setIsSongChangeRenderable(true)
 
         this.props.setRenderableSongIndex(
@@ -101,13 +108,6 @@ class RenderManager extends Component {
             getShowOneOfTwoLyricColumns(
                 selectedSongIndex,
                 this.props.deviceIndex
-            )
-        )
-
-        this.props.setCurrentSceneIndex(
-            getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
             )
         )
     }

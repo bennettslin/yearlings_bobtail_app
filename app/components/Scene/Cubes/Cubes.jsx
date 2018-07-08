@@ -182,7 +182,6 @@ class Cubes extends Component {
     }
 
     _setRenderableCubesYIndex() {
-        console.warn('Setting renderable cubes y index', this.props.yIndex)
         this.props.setRenderableCubesYIndex(
             this.props.yIndex + 1
         )
