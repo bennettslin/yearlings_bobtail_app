@@ -108,7 +108,14 @@ class Carousel extends Component {
     }
 
     render() {
-        const { isHiddenCarouselNav,
+        const {
+                /* eslint-disable no-unused-vars */
+                handleScrollUponCarouselRender,
+                carouselDidRender,
+                dispatch,
+                /* eslint-enable no-unused-vars */
+
+                isHiddenCarouselNav,
                 renderableSongIndex,
                 accessedAnnotationIndex,
                 renderableAnnotationIndex,
@@ -117,11 +124,8 @@ class Carousel extends Component {
                 setCarouselParentRef,
                 canCarouselRender,
 
-                /* eslint-disable no-unused-vars */
-                carouselDidRender,
-                /* eslint-enable no-unused-vars */
-
-                ...other } = this.props,
+            ...other
+            } = this.props,
 
             {
                 hasMounted,

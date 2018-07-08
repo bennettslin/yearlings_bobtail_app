@@ -9,9 +9,6 @@ import { getArrayOfLength } from '../../helpers/generalHelper'
 class AnnotationCards extends Component {
 
     static propTypes = {
-        // Through Redux.
-        canCarouselRender: PropTypes.bool.isRequired,
-
         // From parent.
         cardsLength: PropTypes.number.isRequired
     }

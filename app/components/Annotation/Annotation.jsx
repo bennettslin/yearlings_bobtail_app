@@ -58,6 +58,11 @@ class Annotation extends Component {
 
     render() {
         const {
+                /* eslint-disable no-unused-vars */
+                canCarouselRender,
+                dispatch,
+                /* eslint-disable no-unused-vars */
+
                 renderableSongIndex,
                 renderableAnnotationIndex,
                 ...other
