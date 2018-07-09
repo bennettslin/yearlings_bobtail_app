@@ -8,7 +8,7 @@ import Button from '../Button/Button'
 import NavPanel from './NavPanel'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { getSongIsLogue } from '../../helpers/dataHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     interactivatedVerseIndex,
@@ -25,13 +25,17 @@ const mapStateToProps = ({
 class NavButton extends Component {
 
     static propTypes = {
+        // Through Redux.
+        interactivatedVerseIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
+
+        // From parents.
         isToggle: PropTypes.bool,
         isAccessed: PropTypes.bool,
         isSelected: PropTypes.bool.isRequired,
 
         bookIndex: PropTypes.number,
         songIndex: PropTypes.number,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
         handleButtonClick: PropTypes.func.isRequired
     }
 
@@ -42,19 +46,10 @@ class NavButton extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'isAccessed',
-                    'isSelected',
-                    'interactivatedVerseIndex',
-                    'selectedAnnotationIndex'
-                ]
-            })
-
-        return componentShouldUpdate
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     _handleButtonClick(e) {

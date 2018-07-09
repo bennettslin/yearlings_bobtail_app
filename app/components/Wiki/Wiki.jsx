@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
 import { getWikiUrl } from '../../helpers/logicHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 // TODO: Show that active wiki anchor is disabled.
 // TODO: Browser's forward and back buttons should not affect iframe. http://www.webdeveasy.com/back-button-behavior-on-a-page-with-an-iframe/
@@ -51,26 +51,13 @@ class WikiSection extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        const { props, state } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'selectedSongIndex',
-                    'selectedWikiIndex',
-                    'selectedAnnotationIndex',
-                    'carouselAnnotationIndex',
-                    'isMobileWiki'
-                ]
-            }) || getComponentShouldUpdate({
-                props: state,
-                nextProps: nextState,
-                updatingPropsArray: [
-                    'iframeLoading'
-                ]
-            })
-
-        return componentShouldUpdate
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        }) || !getPropsAreShallowEqual({
+            props: this.state,
+            nextProps: nextState
+        })
     }
 
     componentDidUpdate(prevProps) {

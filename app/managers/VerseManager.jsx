@@ -50,10 +50,13 @@ class VerseManager extends Component {
             this._determineVerseBars.bind(this)
     }
 
-    shouldComponentUpdate(nextProps) {
+    shouldComponentUpdate(nextProps, nextState) {
         return !getPropsAreShallowEqual({
             props: this.props,
             nextProps
+        }) || !getPropsAreShallowEqual({
+            props: this.state,
+            nextProps: nextState
         })
     }
 

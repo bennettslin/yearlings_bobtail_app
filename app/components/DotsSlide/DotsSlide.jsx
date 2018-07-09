@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import DotsSlideSelects from './DotsSlideSelects'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     selectedDotKeys
@@ -35,22 +35,16 @@ class DotsSlide extends Component {
     }
 
     shouldComponentUpdate(nextProps, nextState) {
-        const { props, state } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'selectedDotKeys'
-                ]
-            }) || getComponentShouldUpdate({
-                props: state,
-                nextProps: nextState,
-                updatingPropsArray: [
-                    'hasInteractivatedDotText'
-                ]
-            })
-
-        return componentShouldUpdate
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        }) || !getPropsAreShallowEqual({
+            props: this.state,
+            nextProps: nextState
+        }) || !getPropsAreShallowEqual({
+            props: this.props.selectedDotKeys,
+            nextProps: nextProps.selectedDotKeys
+        })
     }
 
     _onContainerClick(e) {

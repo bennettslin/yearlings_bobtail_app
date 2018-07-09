@@ -14,7 +14,7 @@ import { AUDIO_PLAY_KEY,
 import { AUDIO_OPTIONS } from '../../constants/options'
 import { getSongsAndLoguesCount, getSongsNotLoguesCount } from '../../helpers/dataHelper'
 import { getValueInBitNumber } from '../../helpers/bitHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     isPlaying,
@@ -45,19 +45,10 @@ class AudioButtons extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    'isPlaying',
-                    'selectedSongIndex',
-                    'selectedAudioOptionIndex',
-                    'canPlayThroughs'
-                ]
-            })
-
-        return componentShouldUpdate
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {

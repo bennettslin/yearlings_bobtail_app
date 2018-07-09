@@ -49,10 +49,13 @@ class RenderManager extends Component {
         this.props.setRef(this)
     }
 
-    shouldComponentUpdate(nextProps) {
+    shouldComponentUpdate(nextProps, nextState) {
         return !getPropsAreShallowEqual({
             props: this.props,
             nextProps
+        }) || !getPropsAreShallowEqual({
+            props: this.state,
+            nextProps: nextState
         })
     }
 

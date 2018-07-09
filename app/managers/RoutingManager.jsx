@@ -75,10 +75,13 @@ class RoutingManager extends Component {
         )
     }
 
-    shouldComponentUpdate(nextProps) {
+    shouldComponentUpdate(nextProps, nextState) {
         return !getPropsAreShallowEqual({
             props: this.props,
             nextProps
+        }) || !getPropsAreShallowEqual({
+            props: this.state,
+            nextProps: nextState
         })
     }
 
@@ -120,15 +123,23 @@ class RoutingManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedSongIndex, selectedVerseIndex, selectedAnnotationIndex
+    selectedSongIndex,
+    selectedVerseIndex,
+    selectedAnnotationIndex
 }) => ({
-    selectedSongIndex, selectedVerseIndex, selectedAnnotationIndex
+    selectedSongIndex,
+    selectedVerseIndex,
+    selectedAnnotationIndex
 })
 
 // Bind Redux action creators to component props.
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        selectAnnotationIndex, selectSongIndex, selectVerseIndex, selectWikiIndex, selectTimePlayed
+        selectAnnotationIndex,
+        selectSongIndex,
+        selectVerseIndex,
+        selectWikiIndex,
+        selectTimePlayed
     }, dispatch)
 )
 

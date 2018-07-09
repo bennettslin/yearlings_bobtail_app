@@ -94,10 +94,13 @@ class WindowManager extends Component {
         window.onresize = debounce(this._windowResize, 25)
     }
 
-    shouldComponentUpdate(nextProps) {
+    shouldComponentUpdate(nextProps, nextState) {
         return !getPropsAreShallowEqual({
             props: this.props,
             nextProps
+        }) || !getPropsAreShallowEqual({
+            props: this.state,
+            nextProps: nextState
         }) || !getPropsAreShallowEqual({
             props: this.props.selectedDotKeys,
             nextProps: nextProps.selectedDotKeys

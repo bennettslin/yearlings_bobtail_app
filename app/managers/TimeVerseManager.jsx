@@ -51,8 +51,6 @@ class TimeVerseManager extends Component {
     constructor(props) {
         super(props)
 
-        // this._setTimeoutForRenderScene =
-        //     this._setTimeoutForRenderScene.bind(this)
         this._setCanRenderScene =
             this._setCanRenderScene.bind(this)
     }
