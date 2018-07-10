@@ -7,9 +7,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Actor from './Actor'
+import Cutout from './Cutout'
+import Fixture from './Fixture'
+
 import { getTileCentreForPresence } from '../sceneHelper'
 
 import { getCubesForKey } from '../sceneDataHelper'
+
+const PRESENCE_TYPE_COMPONENTS = {
+    actors: Actor,
+    cutouts: Cutout,
+    fixtures: Fixture
+}
 
 const propTypes = {
     // From parent.
@@ -61,35 +71,29 @@ const Presence = ({
             yPercentage
         } = tileCentre,
 
-        adjustedX = xPercentage + xOffset - width / 2,
-        adjustedY = yPercentage + yOffset - height
+        x = xPercentage + xOffset - width / 2,
+        y = yPercentage + yOffset - height,
+
+        PresenceComponent = PRESENCE_TYPE_COMPONENTS[type]
 
     return (
         <g
             className={cx(
+                'Presence',
+                `Presence__${type}`,
+                `Presence__y${yIndex}`,
                 name
             )}
         >
-            <rect
-                className={cx(
-                    'Presence',
-                    `Presence__${type}`,
-                    `Presence__y${yIndex}`
-                )}
-                x={adjustedX}
-                y={adjustedY}
-                width={width}
-                height={height}
+            <PresenceComponent
+                {...{
+                    x,
+                    y,
+                    width,
+                    height,
+                    name
+                }}
             />
-            <text
-                className="PresenceTemporaryText"
-                x={adjustedX}
-                y={adjustedY}
-                width={width}
-                height={height}
-            >
-                {name}
-            </text>
         </g>
     )
 }

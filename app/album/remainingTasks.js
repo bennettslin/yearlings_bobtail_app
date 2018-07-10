@@ -5,8 +5,8 @@ module.exports = [
      */
 
     {
-        taskName: `Have system to animate in and out presences based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing. Have a separate component for each presence type.`,
-        workedHours: 0,
+        taskName: `Have system to animate in and out presences based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
+        workedHours: 1,
         neededHours: 8
     },
 

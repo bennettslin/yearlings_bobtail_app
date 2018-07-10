@@ -185,19 +185,35 @@ class Cubes extends Component {
 
     _setCanRenderPresences() {
         console.warn('Cubes rendered.')
+
         this.props.setCanRenderPresences(true)
+
+        this.props.setRenderableCubesYIndex(
+            this.props.yIndex + 1
+        )
     }
 
     render() {
         const {
                 yIndex,
                 isFloor,
-                cubesKey
+                cubesKey,
+                canSceneRender,
+                renderableCubesYIndex
             } = this.props,
 
             {
                 slantDirection = ''
-            } = getCubesForKey(cubesKey)
+            } = getCubesForKey(cubesKey),
+
+            /**
+             * TODO: At present, this doesn't seem to do the transitions
+             * desired.
+             */
+
+            isCurrentlyRendering =
+                canSceneRender &&
+                yIndex === renderableCubesYIndex
 
         return (
             <CubesView
@@ -205,7 +221,8 @@ class Cubes extends Component {
                     yIndex,
                     isFloor,
                     slantDirection,
-                    cubesKey
+                    cubesKey,
+                    isCurrentlyRendering
                 }}
             />
         )
@@ -216,7 +233,8 @@ const CubesViewPropTypes = {
     yIndex: PropTypes.number.isRequired,
     isFloor: PropTypes.bool,
     slantDirection: PropTypes.string.isRequired,
-    cubesKey: PropTypes.string.isRequired
+    cubesKey: PropTypes.string.isRequired,
+    isCurrentlyRendering: PropTypes.bool.isRequired
 }
 
 const CubesView = ({
@@ -224,7 +242,8 @@ const CubesView = ({
     yIndex,
     isFloor,
     slantDirection,
-    cubesKey
+    cubesKey,
+    isCurrentlyRendering
 
 }) => {
 
@@ -242,6 +261,7 @@ const CubesView = ({
             className={cx(
                 `Cubes__y${yIndex}${yIndex === 0 ? '__back' : ''}${yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''}`,
                 `Cubes__${isFloor ? 'floor' : 'ceiling'}`,
+                isCurrentlyRendering && 'Cubes__currentlyRendering',
                 'absoluteFullContainer'
             )}
             viewBoxWidth={100}
