@@ -2,7 +2,6 @@ import { Component } from 'react'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import assign from 'lodash.assign'
 
 import { selectOverviewIndex } from '../redux/actions/storage'
 
@@ -105,10 +104,10 @@ class OverviewManager extends Component {
              * If called when something else is visible, skip hidden option and
              * show immediately.
              */
-            if (getShouldSkipHidden(assign(
-                this.props,
-                { calledByTips: true }
-            ))) {
+            if (getShouldSkipHidden({
+                ...this.props,
+                calledByOverview: true
+            })) {
                 selectedOverviewIndex = 0
 
             } else {

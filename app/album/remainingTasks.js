@@ -46,12 +46,6 @@ module.exports = [
         neededHours: 1
     },
 
-    {
-        taskName: `getShouldSkipHidden logic might be buggy.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     /**
      * End expected DTO tasks.
      */

@@ -25,7 +25,6 @@
     "classnames": "^2.2.5",
     "date-fns": "^1.29.0",
     "debounce": "^1.0.2",
-    "lodash.assign": "^4.2.0",
     "lodash.findindex": "^4.6.0",
     "lodash.keys": "^4.2.0",
     "lodash.pickby": "^4.6.0",

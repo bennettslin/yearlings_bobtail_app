@@ -3158,4 +3158,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `getShouldSkipHidden logic might be buggy.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
