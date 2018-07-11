@@ -3173,4 +3173,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Determine relative zIndices for slanted directions. (Do on plane?)`,
+        workedHours: 3,
+        neededHours: 3
+    },
 ]

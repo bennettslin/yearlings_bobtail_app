@@ -58,24 +58,27 @@ export const getFrontCubeZIndex = ({
 
     const defaultZIndex = isFloor ? 0 : CUBE_Z_AXIS_LENGTH
 
-    // TODO: It's different if there is a slantDirection.
+    let frontXIndex = xIndex
+
     if (slantDirection === 'left') {
-        return defaultZIndex
+        if (yIndex === 1 || yIndex === 4) {
+            frontXIndex++
+        }
 
     } else if (slantDirection === 'right') {
+        if (yIndex === 0 || yIndex === 3) {
+            frontXIndex--
+        }
+    }
+
+    // If there is no front cube, return null.
+    if (yIndex === CUBE_Y_AXIS_LENGTH - 1) {
         return defaultZIndex
 
     } else {
-
-        // If there is no front cube, return null.
-        if (yIndex === CUBE_Y_AXIS_LENGTH - 1) {
-            return defaultZIndex
-
-        } else {
-            return getValueInAbridgedMatrix(
-                zIndices, xIndex, yIndex + 1
-            )
-        }
+        return getValueInAbridgedMatrix(
+            zIndices, frontXIndex, yIndex + 1
+        )
     }
 }
 
@@ -137,7 +140,7 @@ export const getSideCubeZIndex = ({
             sideYIndex < 0 ||
             sideYIndex === CUBE_Y_AXIS_LENGTH
         ) {
-            // Return default if cube is out of bounds.
+            // Return default if side cube is out of bounds.
             return defaultZIndex
 
         } else {
@@ -154,6 +157,7 @@ export const getSideCubeZIndex = ({
          */
         const isLeft = xIndex < midXIndex
 
+        // Side cube is never out of bounds for default.
         return getValueInAbridgedMatrix(
             zIndices, xIndex + (isLeft ? 1 : -1), yIndex
         )

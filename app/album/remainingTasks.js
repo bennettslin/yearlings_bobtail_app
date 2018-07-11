@@ -17,12 +17,6 @@ module.exports = [
     },
 
     {
-        taskName: `Determine relative zIndices for slanted directions. (Do on plane?)`,
-        workedHours: 1,
-        neededHours: 5
-    },
-
-    {
         taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of. Use Web Workers?`,
         workedHours: 0,
         neededHours: 8
