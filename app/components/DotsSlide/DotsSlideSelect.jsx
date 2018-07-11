@@ -144,19 +144,27 @@ DotsSlideSelectView = ({
         <div className="DotsSlideSelect">
             <Button
                 buttonName="slideSelect"
+                className={cx({
+                    /**
+                     * This class is passed purely to let the Button know to
+                     * update the Dot when it is selected, without having to
+                     * inspect its children prop.
+                     */
+                    'isSelected': isSelected
+                })}
                 isCustomSize
                 showAccessIconIfAccessOn={isAccessed}
                 accessKey={NAVIGATION_ENTER_KEY}
                 handleButtonClick={handleDotSelectClick}
             >
-                <Dot className={cx(
-                    'SlideSelectDot',
-
-                    'bgColour__dot',
-                    isSelected && `bgColour__dot__${dotKey}`,
-
-                    'absoluteFullContainer'
-                )} />
+                <Dot
+                    className={cx(
+                        'SlideSelectDot',
+                        'bgColour__dot',
+                        isSelected && `bgColour__dot__${dotKey}`,
+                        'absoluteFullContainer'
+                    )}
+                />
 
                 <div className={cx(
                     'SlideSelectDescription',

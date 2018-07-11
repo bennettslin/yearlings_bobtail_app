@@ -9,7 +9,7 @@ import ReactAudioPlayer from 'react-audio-player'
 import { setCanPlayThroughs } from '../../redux/actions/player'
 import { getSongsNotLoguesCount } from '../../helpers/dataHelper'
 import { setNewValueInBitNumber } from '../../helpers/bitHelper'
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video
 
@@ -63,25 +63,17 @@ class Player extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
+        const shouldComponentUpdate = !getPropsAreShallowEqual({
+                props: this.props,
                 nextProps,
-                updatingPropsArray: [
-                    'isSelected',
-                    {
-                        staticProp: 'isSelected',
-                        subUpdatingKey: 'isPlaying'
-                    },
-                    {
-                        staticProp: 'isSelected',
-                        subUpdatingKey: 'updatedTimePlayed'
-                    }
-                    // Player itself does not update on canPlayThroughs.
-                ]
+                checkIsShallowEqual: {
+                    isPlaying: true,
+                    updatedTimePlayed: true
+                },
+                onlyOnCondition: nextProps.isSelected
             })
 
-        return componentShouldUpdate
+        return shouldComponentUpdate
     }
 
     componentDidMount() {

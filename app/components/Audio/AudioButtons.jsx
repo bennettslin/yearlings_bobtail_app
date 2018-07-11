@@ -99,9 +99,7 @@ class AudioButtons extends Component {
                     {/* Previous button. */}
                     <Button
                         buttonName="audioSelect"
-                        className={cx(
-                            'AudioButton'
-                        )}
+                        className="AudioButton"
                         temporaryText={
                             isPrologue || isFirstSong ? '\u2302' : '\u21E4'
                         }
@@ -113,9 +111,7 @@ class AudioButtons extends Component {
                     {/* Play button. */}
                     <Button
                         buttonName="audioPlay"
-                        className={cx(
-                            'AudioButton'
-                        )}
+                        className="AudioButton"
                         isLargeSize
                         temporaryText={playButtonText}
                         accessKey={AUDIO_PLAY_KEY}
@@ -126,9 +122,7 @@ class AudioButtons extends Component {
                     {/* Next button. */}
                     <Button
                         buttonName="audioSelect"
-                        className={cx(
-                            'AudioButton'
-                        )}
+                        className="AudioButton"
                         temporaryText={
                             isEpilogue || isLastSong ? '\u2302' : '\u21E5'
                         }
@@ -145,9 +139,7 @@ class AudioButtons extends Component {
                 )}>
                     <Button
                         buttonName="audioOptions"
-                        className={cx(
-                            'AudioButton'
-                        )}
+                        className="AudioButton"
                         temporaryText={AUDIO_OPTIONS[selectedAudioOptionIndex]}
                         accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
                         handleButtonClick={handleAudioOptionsToggle}

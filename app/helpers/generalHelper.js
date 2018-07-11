@@ -1,5 +1,4 @@
 // Basic helpers that only know math and pure JavaScript.
-import keys from 'lodash.keys'
 
 const getPower = (base, exponent) => {
     if (exponent === 0) {
@@ -83,88 +82,6 @@ export const getPropsAreShallowEqual = ({
         }
     }
     return true
-}
-
-export const getComponentShouldUpdate = ({
-
-    props,
-    nextProps,
-    updatingPropsArray
-
-}) => {
-    let counter = 0
-
-    // Loop only until a mismatch is found.
-    while (counter < updatingPropsArray.length) {
-        const updatingKeyEntity = updatingPropsArray[counter]
-
-        if (typeof updatingKeyEntity === 'string') {
-            const updatingValueEntity = props[updatingKeyEntity],
-                nextPropsValue = nextProps[updatingKeyEntity]
-
-            // If object, compare first level of values.
-            if (typeof updatingValueEntity === 'object') {
-                return !getSetsAreSame(updatingValueEntity, nextPropsValue)
-
-            } else {
-                // Mismatch, so update!
-                if (updatingValueEntity !== nextPropsValue) {
-                    return true
-                }
-            }
-
-        /**
-         * If object, then compare mismatch only if a prop is true.
-         */
-        } else {
-            const { staticProp,
-
-                    // Default condition is true.
-                    conditionalShouldBe = true,
-
-                    subUpdatingKey } = updatingKeyEntity,
-
-                // We care that a static prop happens to be a certain value.
-                staticConditionalMet = staticProp &&
-                    !!nextProps[staticProp] === conditionalShouldBe
-
-            if (staticConditionalMet) {
-
-                // Mismatch, so update!
-                if (props[subUpdatingKey] !== nextProps[subUpdatingKey]) {
-                    return true
-                }
-            }
-        }
-
-        counter++
-    }
-
-    // If loop ends with no mismatch, don't update.
-    return false
-}
-
-export const getSetsAreSame = (smallerSet, largerSet) => {
-    // Assume that larger set is superset of smaller set.
-
-    // If either set is null, just return whether they are both null.
-    if (smallerSet === null || largerSet === null) {
-        return smallerSet === largerSet
-    }
-
-    return keys(smallerSet).reduce((allSame, key) => {
-        const valueIsSame = smallerSet[key] === largerSet[key] ||
-
-            // Functions are exempt, as they constantly change through binding.
-            typeof smallerSet[key] === 'function'
-
-        // Keep for debugging purposes, for now.
-        // if (!valueIsSame) {
-        //     console.error('prop not same:', key, smallerSet[key], largerSet[key]);
-        // }
-
-        return allSame ? valueIsSame : allSame
-    }, true)
 }
 
 export const getArrayOfLength = ({ length, indexBase = 0 }) => {

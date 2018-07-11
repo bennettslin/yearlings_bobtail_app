@@ -40,12 +40,6 @@ module.exports = [
         neededHours: 3
     },
 
-    {
-        taskName: `Get rid of shouldComponentUpdate helper method.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     /**
      * End expected DTO tasks.
      */

@@ -8,7 +8,7 @@ import cx from 'classnames'
 import ButtonIcon from '../Button/ButtonIcon'
 import AccessIcon from '../AccessIcon/AccessIcon'
 
-import { getComponentShouldUpdate } from '../../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 class Button extends Component {
 
@@ -39,22 +39,17 @@ class Button extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const { props } = this,
-            componentShouldUpdate = getComponentShouldUpdate({
-                props,
-                nextProps,
-                updatingPropsArray: [
-                    // Verse audio buttons actively change button names.
-                    'buttonName',
-                    'isIndexSelected',
-                    'isDisabled',
-                    'temporaryText',
-                    'showAccessIconIfAccessOn',
-                    'children'
-                ]
-            })
-
-        return componentShouldUpdate
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps,
+            alwaysBypassCheck: {
+                isCustomSize: true,
+                isSmallSize: true,
+                isLargeSize: true,
+                isPopupButton: true,
+                accessKey: true
+            }
+        })
     }
 
     _handleClick(e) {
