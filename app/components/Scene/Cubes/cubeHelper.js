@@ -89,7 +89,6 @@ export const getSideCubeZIndex = ({
 
     const defaultZIndex = isFloor ? 0 : CUBE_Z_AXIS_LENGTH
 
-    // FIXME: I did this completely backwards. The side cube is to the left for slanted left!
     if (slantDirection) {
         const isXOdd = xIndex % 2
 
@@ -98,28 +97,38 @@ export const getSideCubeZIndex = ({
             sideYIndex = yIndex
 
         if (slantDirection === 'left') {
-
             const yIsBetween2And4 = yIndex >= 2 && yIndex <= 4
 
-            if (isXOdd) {
-                if (xIndex !== 2) {
-                    sideXIndex++
-                }
-            } else {
-                if (xIndex !== 5) {
-                    sideXIndex++
-                }
+            if (
+                (isXOdd && yIndex !== 1) ||
+                (!isXOdd && yIndex !== 4)
+            ) {
+                sideXIndex--
             }
 
             if (
-                (yIsBetween2And4 && isXOdd) ||
-                (!yIsBetween2And4 && !isXOdd)
+                (isXOdd && !yIsBetween2And4) ||
+                (!isXOdd && yIsBetween2And4)
             ) {
-                sideYIndex--
+                sideYIndex++
             }
 
         } else if (slantDirection === 'right') {
-            return defaultZIndex
+            const yIsBetween1And3 = yIndex >= 1 && yIndex <= 3
+
+            if (
+                (isXOdd && yIndex !== 3) ||
+                (!isXOdd && yIndex !== 0)
+            ) {
+                sideXIndex++
+            }
+
+            if (
+                (isXOdd && yIsBetween1And3) ||
+                (!isXOdd && !yIsBetween1And3)
+            ) {
+                sideYIndex++
+            }
         }
 
         if (
@@ -128,6 +137,7 @@ export const getSideCubeZIndex = ({
             sideYIndex < 0 ||
             sideYIndex === CUBE_Y_AXIS_LENGTH
         ) {
+            // Return default if cube is out of bounds.
             return defaultZIndex
 
         } else {

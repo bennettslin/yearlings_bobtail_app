@@ -45,12 +45,6 @@ module.exports = [
      */
 
     {
-        taskName: `Finalise how Liz's hair drapes over face.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
         workedHours: 0,
         neededHours: 2
