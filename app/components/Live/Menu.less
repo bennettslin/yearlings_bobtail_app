@@ -61,10 +61,6 @@
     height: 100%;
     z-index: @zIndex__menuField;
 
-    // background-color: #8dd;
-
-    transform: translateX(0);
-
     .RM__scoresTipsMain
     & {
         justify-content: space-between;
@@ -98,11 +94,6 @@
 
 .MenuChild {
     height: 100%;
-
-    transition:
-        opacity @animationDuration__fast,
-        min-width @animationDuration__fast,
-        max-width @animationDuration__fast;
 }
 
 .MenuChild__title {
@@ -133,8 +124,6 @@
     max-width: @js__maxWidth__childAudio;
 
     transition: margin @animationDuration__default;
-
-    // background-color: #8d8;
 
     // Applies to monitor and tablet.
     margin: 0 @margin__menuChild;
@@ -233,6 +222,11 @@
 }
 
 .widths__hiddenInOverlay {
+
+    transition:
+        opacity @animationDuration__slow,
+        min-width @animationDuration__slow,
+        max-width @animationDuration__slow;
 
     .RM__overlayShown
     & {
