@@ -89,12 +89,52 @@ export const getSideCubeZIndex = ({
 
     const defaultZIndex = isFloor ? 0 : CUBE_Z_AXIS_LENGTH
 
-    // TODO: It's different if there is a slantDirection.
-    if (slantDirection === 'left') {
-        return defaultZIndex
+    // FIXME: I did this completely backwards. The side cube is to the left for slanted left!
+    if (slantDirection) {
+        const isXOdd = xIndex % 2
 
-    } else if (slantDirection === 'right') {
-        return defaultZIndex
+        let
+            sideXIndex = xIndex,
+            sideYIndex = yIndex
+
+        if (slantDirection === 'left') {
+
+            const yIsBetween2And4 = yIndex >= 2 && yIndex <= 4
+
+            if (isXOdd) {
+                if (xIndex !== 2) {
+                    sideXIndex++
+                }
+            } else {
+                if (xIndex !== 5) {
+                    sideXIndex++
+                }
+            }
+
+            if (
+                (yIsBetween2And4 && isXOdd) ||
+                (!yIsBetween2And4 && !isXOdd)
+            ) {
+                sideYIndex--
+            }
+
+        } else if (slantDirection === 'right') {
+            return defaultZIndex
+        }
+
+        if (
+            sideXIndex < 0 ||
+            sideXIndex === CUBE_X_AXIS_LENGTH ||
+            sideYIndex < 0 ||
+            sideYIndex === CUBE_Y_AXIS_LENGTH
+        ) {
+            return defaultZIndex
+
+        } else {
+            return getValueInAbridgedMatrix(
+                zIndices, sideXIndex, sideYIndex
+            )
+        }
 
     } else {
 
