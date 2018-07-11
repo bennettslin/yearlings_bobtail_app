@@ -107,6 +107,8 @@ class Main extends Component {
                     inMain
                 />
 
+                <Nav {...navSectionHandlers} />
+
                 <Carousel {...carouselSectionHandlers}
                     carouselDidRender={carouselDidRender}
                 />
@@ -138,8 +140,6 @@ class Main extends Component {
                 />
 
                 <TipsPopup {...tipsPopupHandlers} />
-
-                <Nav {...navSectionHandlers} />
 
                 <CarouselToggle
                     handleCarouselNavToggle={handleCarouselNavToggle}

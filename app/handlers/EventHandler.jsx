@@ -560,19 +560,6 @@ class EventHandler extends Component {
         }
     }
 
-    // NOTE: This is now no longer used anywhere.
-    handlePopupFocus() {
-        const { selectedScoreIndex,
-                selectedWikiIndex } = this.props
-
-        if (selectedScoreIndex) {
-            this.myScoreElement && this.myScoreElement.focus()
-
-        } else if (selectedWikiIndex) {
-            this.myWikiElement && this.myWikiElement.focus()
-        }
-    }
-
     /*********
      * SCENE *
      *********/

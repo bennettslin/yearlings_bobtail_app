@@ -11,7 +11,6 @@ export const bindHandlers = (me) => {
     me.handleBodyTouchMove = me.handleBodyTouchMove.bind(me)
     me.handleBodyTouchEnd = me.handleBodyTouchEnd.bind(me)
     me.handlePopupContainerClick = me.handlePopupContainerClick.bind(me)
-    // me.handleSetVerseElement = me.handleSetVerseElement.bind(me)
     me.handleAccessToggle = me.handleAccessToggle.bind(me)
     me.handleAdminToggle = me.handleAdminToggle.bind(me)
     me.handleAnnotationPrevious = me.handleAnnotationPrevious.bind(me)
@@ -40,7 +39,6 @@ export const bindHandlers = (me) => {
     me.handleNavSongSelect = me.handleNavSongSelect.bind(me)
     me.handleNavBookSelect = me.handleNavBookSelect.bind(me)
     me.handleOverviewToggle = me.handleOverviewToggle.bind(me)
-    me.handlePopupFocus = me.handlePopupFocus.bind(me)
     me.handleCarouselNavToggle = me.handleCarouselNavToggle.bind(me)
     me.handleSceneDirection = me.handleSceneDirection.bind(me)
     me.handleScoreToggle = me.handleScoreToggle.bind(me)
@@ -79,12 +77,10 @@ export const getHandlers = (me) => {
         handleAnnotationAnchorAccess: me.handleAnnotationAnchorAccess,
         handleSongAccess: me.handleSongAccess,
         handleVerseDirectionAccess: me.handleVerseDirectionAccess,
-        handlePopupFocus: me.handlePopupFocus,
         handleBodyClick: me.handleBodyClick,
         handleBodyTouchMove: me.handleBodyTouchMove,
         handleBodyTouchEnd: me.handleBodyTouchEnd,
         handlePopupContainerClick: me.handlePopupContainerClick,
-        // handleSetVerseElement: me.handleSetVerseElement,
         handleAccessToggle: me.handleAccessToggle,
         handleAdminToggle: me.handleAdminToggle,
         handleAnnotationWikiSelect: me.handleAnnotationWikiSelect,

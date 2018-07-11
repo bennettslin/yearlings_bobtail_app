@@ -53,25 +53,12 @@ class Popup extends Component {
         }
     }
 
-    componentDidMount() {
-        // Focus if popup is already open when app mounts.
-        if (this.props.isVisible && this.props.handlePopupFocus) {
-            this.props.handlePopupFocus()
-        }
-    }
-
     _handleTransitionEnd(e) {
         // FIXME: This is a brittle way to handle it.
         if (e.propertyName === 'opacity') {
 
-            // Focus when popup opens.
-            if (this.props.isVisible) {
-                if (this.props.handlePopupFocus) {
-                    this.props.handlePopupFocus()
-                }
-
             // Set display to none when popup closes.
-            } else {
+            if (!this.props.isVisible) {
                 this.setState({
                     isDisplayed: false
                 })
@@ -80,6 +67,7 @@ class Popup extends Component {
     }
 
     _handlePopupContainerClick(e) {
+        console.error(e)
         if (this.state.isDisplayed) {
             this.props.handlePopupContainerClick(e)
         }

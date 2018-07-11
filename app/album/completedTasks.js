@@ -3163,4 +3163,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Fix bug where clicking on overview and tips dismisses them.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
