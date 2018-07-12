@@ -20,9 +20,12 @@ import { SHOWN,
 import { DEVICE_OBJECTS } from '../constants/responsive'
 import { getSongIsLogue } from '../helpers/dataHelper'
 import { getPrefixPrependedClassNames } from '../helpers/domHelper'
-import { getShowOverlay,
-         getSingleShownLyricColumnKey } from '../helpers/logicHelper'
 import { getIsDesktop, getIsTabletOrMini } from '../helpers/responsiveHelper'
+
+import {
+    getShowOverlay,
+    getSingleShownLyricColumnKey
+} from './rootHelper'
 
 class Root extends Component {
 

@@ -7,11 +7,11 @@ import {
     setInteractivatedVerseIndex,
     setIsVerseBarAbove,
     setIsVerseBarBelow
-} from '../redux/actions/session'
+} from '../../redux/actions/session'
 
-import { getSongVerseTimes } from '../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import { getVerseBarStatus } from '../helpers/logicHelper'
+import { getSongVerseTimes } from '../../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getVerseBarStatus } from './verseManagerHelper'
 
 class VerseManager extends Component {
 

@@ -6,17 +6,18 @@ import { connect } from 'react-redux'
 import {
     accessAnnotationIndex,
     accessAnnotationAnchorIndex
-} from '../redux/actions/access'
-import { setRenderableAnnotationIndex } from '../redux/actions/render'
-import { selectAnnotationIndex } from '../redux/actions/storage'
+} from '../../redux/actions/access'
 
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { setRenderableAnnotationIndex } from '../../redux/actions/render'
+import { selectAnnotationIndex } from '../../redux/actions/storage'
+
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 import {
     getAnnotationIndexForDirection,
     getAnnotationAnchorIndexForDirection,
     shouldShowAnnotationForColumn
-} from '../helpers/logicHelper'
+} from '../../helpers/logicHelper'
 
 class AnnotationManager extends Component {
 

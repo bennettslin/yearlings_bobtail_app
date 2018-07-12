@@ -1,69 +1,16 @@
 // General file for calculating stuff.
 // TODO: Break into smaller files.
 
-import findIndex from 'lodash.findindex'
-
 import { PORTAL,
          REFERENCE } from '../constants/dots'
-import { LYRIC_COLUMN_KEYS, COLUMN_INDEX } from '../constants/lyrics'
-import { LS_MARGIN_SLIDER_THIN } from '../constants/responsive'
+import { COLUMN_INDEX } from '../constants/lyrics'
 
 import { getAnnotationObject,
-         getSongIsLogue,
          getVerseObject,
-         getSongsNotLoguesCount,
-         getSongTotalTime,
-         getSliderStanzasArray,
          getAnnotationDotKeys,
          getAnnotationsCount } from './dataHelper'
 import { intersects } from './dotHelper'
-// import { getArrayOfLength } from './generalHelper'
-import { getIsOverlayingAnnotation, getLyricSectionRect, getShowOneOfTwoLyricColumns } from './responsiveHelper'
-
-export const getNextPlayerToRender = (
-    selectedSongIndex,
-    canPlayThroughsObject
-) => {
-    /**
-     * Given an array of players that have passed canPlayThrough, return
-     * the next player in the queue to be rendered, starting with the
-     * selected song.
-     */
-
-    const songsCount = getSongsNotLoguesCount(),
-        isLogue = getSongIsLogue(selectedSongIndex)
-
-    /**
-     * If logue, set to first song. Song indices are 1-based.
-     */
-    let currentSongIndex = isLogue ? 1 : selectedSongIndex,
-        nextPlayerToRender,
-        counter = 0
-
-    do {
-        // Counter song can play through, so increment.
-        if (canPlayThroughsObject[currentSongIndex]) {
-            currentSongIndex = (currentSongIndex % songsCount) + 1
-
-        /**
-         * This is the first song that hasn't passed canPlayThrough
-         * that is either the selected song or coming after it.
-         */
-        } else {
-            nextPlayerToRender = currentSongIndex
-        }
-
-        counter++
-
-    } while (!nextPlayerToRender && counter < songsCount)
-
-    /**
-     * Return next song in the queue, or else -1 if all are now rendered.
-     */
-    nextPlayerToRender = nextPlayerToRender || -1
-
-    return nextPlayerToRender
-}
+import { getShowOneOfTwoLyricColumns } from './responsiveHelper'
 
 export const shouldShowAnnotationForColumn = ({
 
@@ -315,167 +262,6 @@ export const getAnnotationIndexForVerseIndex = ({
     })
 }
 
-export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
-    const sliderX = clientX - sliderLeft,
-        ratio = sliderX / sliderWidth
-
-    if (ratio < 0) {
-        return 0
-    } else if (ratio > 1) {
-        return 1
-    } else {
-        return ratio
-    }
-}
-
-export const getVerseIndexforRatio = (
-
-    songIndex,
-    touchInSliderRatio,
-    sliderWidth
-
-) => {
-
-    const sliderStanzasArray = getSliderStanzasArray(songIndex),
-        totalTime = getSongTotalTime(songIndex),
-        lastStanzaIndex = sliderStanzasArray.length - 1,
-
-        // Figure out which stanza the touch is in.
-        stanzaIndex = findIndex(sliderStanzasArray, (stanzaObject, index) => {
-
-            // If it's the last stanza, just return true.
-            if (index === lastStanzaIndex) {
-                return true
-            }
-
-            const stanzaEndRatio = stanzaObject.endTime / totalTime,
-
-                // Stanza's end ratio should be greater than touch ratio.
-                isTouchInStanza = stanzaEndRatio > touchInSliderRatio
-
-            return isTouchInStanza
-        }),
-
-        // Get needed values for stanza.
-        { verseTimes,
-          endTime,
-          firstVerseIndex } = sliderStanzasArray[stanzaIndex]
-
-    // If verse times length is 1, just return the first verse.
-    if (verseTimes.length === 1) {
-        return firstVerseIndex
-    }
-
-    const stanzaStartRatio = verseTimes[0] / totalTime,
-        stanzaEndRatio = endTime / totalTime,
-
-        // Width of stanza relative to slider.
-        stanzaWidthRatio = stanzaEndRatio - stanzaStartRatio,
-
-        // Get ratio of touch in stanza.
-        touchInStanzaRatio =
-            (touchInSliderRatio - stanzaStartRatio) / stanzaWidthRatio,
-
-        /**
-         * Get touch in verses ratio. Verses width is stanza width minus its
-         * margins.
-         */
-        stanzaWidth = stanzaWidthRatio * sliderWidth,
-        touchInStanzaWidth = touchInStanzaRatio * stanzaWidth,
-
-        /**
-         * All stanzas have a left margin. Only the last stanza has a right
-         * margin.
-         */
-        startMarginWidth = LS_MARGIN_SLIDER_THIN,
-        endMarginWidth = stanzaIndex === lastStanzaIndex ?
-            LS_MARGIN_SLIDER_THIN : 0,
-
-        versesWidth = stanzaWidth - startMarginWidth - endMarginWidth,
-        touchInVersesWidth = touchInStanzaWidth - startMarginWidth,
-
-        /**
-         * This is the ratio that will accurately tell us the verse that the
-         * touch is in.
-         */
-        touchInVersesRatio = touchInVersesWidth / versesWidth,
-        totalStanzaTime = endTime - verseTimes[0],
-
-        // Now figure out which verse the touch is in.
-        verseTimesIndex = findIndex(verseTimes, (verseTime, index) => {
-
-                // If it's the last verse, just return true.
-                if (index === verseTimes.length - 1) {
-                    return true
-                }
-
-                const verseEndRatio =
-                    (verseTimes[index + 1] - verseTimes[0]) / totalStanzaTime,
-
-                    // Verse's end ratio should be greater than touch ratio.
-                    isTouchInVerse = verseEndRatio > touchInVersesRatio
-
-                return isTouchInVerse
-            }
-        ),
-
-        // Add stanza's first verse index with the returned verse times index.
-        verseIndex = firstVerseIndex + verseTimesIndex
-
-    return verseIndex
-}
-
-export const getVerseBarStatus = ({
-    deviceIndex,
-    windowWidth,
-    windowHeight,
-    isLyricExpanded,
-    isHeightlessLyricColumn,
-    verseElement
-}) => {
-
-    if (!verseElement) {
-        return null
-    }
-
-    // If lyric is collapsed and heightless, verse bars should never show.
-    if (isHeightlessLyricColumn && !isLyricExpanded) {
-        return {
-            isVerseBarAbove: false,
-            isVerseBarBelow: false
-        }
-    }
-
-    const lyricSectionRect = getLyricSectionRect({
-            deviceIndex,
-            windowWidth,
-            windowHeight,
-            isLyricExpanded
-        }),
-
-        selectedVerseRect = verseElement.getBoundingClientRect(),
-
-        isVerseBarAbove = selectedVerseRect.top < lyricSectionRect.top,
-        isVerseBarBelow = selectedVerseRect.bottom > lyricSectionRect.bottom
-
-        return {
-            isVerseBarAbove,
-            isVerseBarBelow
-        }
-}
-
-/**
- * This method is only used to get the closest verse index for an accessed
- * annotation index.
- */
-export const getVerseIndexForAccessedAnnotationIndex = (songIndex, annotationIndex) => {
-    const annotation = getAnnotationObject(songIndex, annotationIndex),
-        { verseIndex,
-          mostRecentVerseIndex } = annotation
-
-    return !isNaN(verseIndex) ? verseIndex : mostRecentVerseIndex
-}
-
 export const getAnnotationAnchorIndexForDirection = ({
     selectedSongIndex,
     selectedAnnotationIndex,
@@ -526,77 +312,7 @@ export const getAnnotationAnchorIndexForDirection = ({
     return -1
 }
 
-export const getWikiUrl = ({
-
-    selectedSongIndex,
-    selectedWikiIndex,
-    selectedAnnotationIndex,
-    carouselAnnotationIndex,
-    isMobileWiki
-
-}) => {
-    if (selectedWikiIndex) {
-        // Since annotation index is 1-based, it's invalid if 0.
-        const annotationIndex =
-                carouselAnnotationIndex || selectedAnnotationIndex,
-
-            annotation = getAnnotationObject(
-                selectedSongIndex, annotationIndex
-            ),
-
-            partialPath = annotation.annotationAnchors[selectedWikiIndex - 1]
-
-        let fullPath
-
-        // It's a Wikipedia page.
-        if (partialPath.indexOf('http') === -1) {
-            const domainPath = isMobileWiki ? 'https://en.m.wikipedia.org/wiki/' : 'https://www.wikipedia.org/wiki/'
-
-            fullPath = `${domainPath}${partialPath}`
-
-        // It's its own URL.
-        } else {
-            fullPath = partialPath
-        }
-
-        return fullPath
-
-    } else {
-        return null
-    }
-}
-
-export const getSingleShownLyricColumnKey = ({
-    showOneOfTwoLyricColumns,
-    selectedLyricColumnIndex
-}) => {
-    return showOneOfTwoLyricColumns
-        && selectedLyricColumnIndex >= 0 ?
-            LYRIC_COLUMN_KEYS[selectedLyricColumnIndex % 2] : ''
-}
-
-export const getShowOverlay = ({
-    deviceIndex,
-    isLyricExpanded,
-    isHeightlessLyricColumn,
-    selectedAnnotationIndex,
-    selectedScoreIndex,
-    selectedTitleIndex,
-    selectedWikiIndex
-}) => {
-    const isOverlayingAnnotation = getIsOverlayingAnnotation({
-        deviceIndex,
-        isLyricExpanded,
-        isHeightlessLyricColumn
-    })
-
-    return !!selectedTitleIndex ||
-           !!selectedScoreIndex ||
-           !!selectedWikiIndex ||
-           (!!selectedAnnotationIndex && isOverlayingAnnotation)
-}
-
-export const getShouldSkipHidden = ({
+export const getShouldSkipHiddenStatus = ({
 
     isLyricExpanded,
     selectedAnnotationIndex,

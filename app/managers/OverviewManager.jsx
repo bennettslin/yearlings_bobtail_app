@@ -7,7 +7,7 @@ import { selectOverviewIndex } from '../redux/actions/storage'
 
 import { getSongIsLogue } from '../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import { getShouldSkipHidden } from '../helpers/logicHelper'
+import { getShouldSkipHiddenStatus } from '../helpers/logicHelper'
 
 import { SHOWN,
          HIDDEN,
@@ -104,7 +104,7 @@ class OverviewManager extends Component {
              * If called when something else is visible, skip hidden option and
              * show immediately.
              */
-            if (getShouldSkipHidden({
+            if (getShouldSkipHiddenStatus({
                 ...this.props,
                 calledByOverview: true
             })) {

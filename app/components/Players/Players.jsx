@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import Player from './Player'
 import { getMp3s, getSongTotalTime, getSongsNotLoguesCount } from '../../helpers/dataHelper'
 import { convertBitNumberToTrueFalseKeys } from '../../helpers/bitHelper'
-import { getNextPlayerToRender } from '../../helpers/logicHelper'
+import { getNextPlayerToRender } from './playersHelper'
 
 const mapStateToProps = ({
     selectedSongIndex,

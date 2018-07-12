@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
-import { getWikiUrl } from '../../helpers/logicHelper'
+import { getWikiUrl } from './wikiHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 // TODO: Show that active wiki anchor is disabled.

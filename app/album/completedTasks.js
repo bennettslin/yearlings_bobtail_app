@@ -3159,7 +3159,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `getShouldSkipHidden logic might be buggy.`,
+        taskName: `getShouldSkipHiddenStatus logic might be buggy.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -3192,5 +3192,10 @@ module.exports = [
         taskName: `System for showing sun and moon for each scene. Not going to do this work for now.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Move methods out of logicHelper.`,
+        workedHours: 1,
+        neededHours: 1
     },
 ]

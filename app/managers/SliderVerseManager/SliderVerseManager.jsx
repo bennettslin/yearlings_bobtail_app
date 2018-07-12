@@ -10,13 +10,13 @@ import {
     setSliderRatio,
     setSliderWidth,
     setSliderVerseIndex
-} from '../redux/actions/slider'
+} from '../../redux/actions/slider'
 
-import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import {
     getSliderRatioForClientX,
     getVerseIndexforRatio
-} from '../helpers/logicHelper'
+} from './sliderVerseManagerHelper'
 
 class SliderVerseManager extends Component {
 
