@@ -9,6 +9,7 @@ import AccessIcon from './AccessIcon';
 const accessIconsPropTypes = {
     // From parent.
     accessIconsName: PropTypes.string,
+    inAnnotation: PropTypes.bool,
     inLyric: PropTypes.bool,
     inSlider: PropTypes.bool,
     accessKeys: PropTypes.arrayOf(
@@ -23,6 +24,7 @@ const accessIconsPropTypes = {
 AccessIcons = ({
 
     accessIconsName,
+    inAnnotation,
     inLyric,
     inSlider,
     accessKeys
@@ -30,6 +32,7 @@ AccessIcons = ({
 }) => (
     <div className={cx(
         'AccessIcons',
+        inAnnotation && 'AccessIcons__inAnnotation',
         inLyric && 'AccessIcons__inLyric',
         inSlider && 'AccessIcons__inSlider',
         accessIconsName && `AccessIcons__${accessIconsName}`

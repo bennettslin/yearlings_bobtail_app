@@ -1,12 +1,13 @@
 // Section to show title and all notes and portals for each annotation.
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import AnnotationTitle from './AnnotationTitle'
 import AnnotationCards from './AnnotationCards'
+import AnnotationAccess from './AnnotationAccess'
 
 import { getAnnotationObject } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
@@ -121,14 +122,23 @@ AnnotationView = ({
 
 ...other }) => {
 
-    const annotationTitleChild = (
-        <AnnotationTitle
-            isSelected={isSelected}
-            isAccessed={isAccessed}
-            annotationDotKeys={annotationObject.dotKeys}
-            annotationTitle={annotationObject.title}
-            handleTitleClick={handleTitleClick}
-        />
+    const annotationHeader = (
+        <Fragment>
+            <AnnotationTitle
+                {...{
+                    isSelected,
+                    isAccessed,
+                    annotationDotKeys: annotationObject.dotKeys,
+                    annotationTitle: annotationObject.title,
+                    handleTitleClick
+                }}
+            />
+            <AnnotationAccess
+                {...{
+                    isSelected
+                }}
+            />
+        </Fragment>
     )
 
     return (
@@ -143,12 +153,12 @@ AnnotationView = ({
 
             {/* In Carousel, annotation title needs to be hideable. */}
             {inCarousel ? (
-                <div className="AnnotationTitleAnimatable">
-                    {annotationTitleChild}
+                <div className="AnnotationHeaderAnimatable">
+                    {annotationHeader}
                 </div>
 
             ) : (
-                annotationTitleChild
+                annotationHeader
             )}
 
             <AnnotationCards
