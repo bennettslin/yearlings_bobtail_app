@@ -74,13 +74,13 @@ const
                     actors: [
                         {
                             name: 'sample actor 1',
-                            xIndex: 4,
+                            xFloat: 4,
                             width: 5,
                             height: 25
                         },
                         {
                             name: 'sample actor 2',
-                            xIndex: 8,
+                            xFloat: 8,
                             width: 15,
                             height: 15
                         }
@@ -88,20 +88,20 @@ const
                     cutouts: [
                         {
                             name: 'sample cutout 1',
-                            xIndex: 2,
+                            xFloat: 2,
                             width: 5,
                             height: 25
                         },
                         {
                             name: 'sample cutout 2',
-                            xIndex: 10,
+                            xFloat: 10,
                             width: 15,
                             height: 15
                         }
                     ],
                     fixtures: {
                         name: 'sample fixture 1',
-                        xIndex: 6,
+                        xFloat: 5.5,
                         width: 5,
                         height: 25
                     }
@@ -110,21 +110,20 @@ const
                     fixtures: [
                         {
                             name: 'sample fixture 4',
-                            xIndex: 3,
+                            xFloat: 3.5,
                             width: 10,
                             height: 20
                         },
                         {
                             name: 'sample fixture 4',
-                            xIndex: 7,
+                            xFloat: 7,
+                            zOffset: 0.5,
                             width: 20,
                             height: 10
                         },
                         {
                             name: 'sample fixture 4',
-                            xOffset: -10,
-                            yOffset: -40,
-                            xIndex: 11,
+                            xFloat: 11,
                             width: 10,
                             height: 10
                         },

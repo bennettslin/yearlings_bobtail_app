@@ -134,7 +134,7 @@ class Presences extends Component {
                                 presenceEntity :
                                 [presenceEntity]
 
-                            return presenceArray.map((presence, index) => (
+                                return presenceArray.map((presence, index) => (
                                 <Presence
                                     key={index}
                                     type={presenceType}

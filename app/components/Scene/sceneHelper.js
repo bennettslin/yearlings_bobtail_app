@@ -142,20 +142,26 @@ const _getXYPercentages = (
  **********/
 
 const _getHorizontalPlaneFractionsForDefault = (
-    xIndex, yIndex, zIndex
+    xIndex, yIndex, zIndex, xOffset, zOffset
 ) => {
+
     /**
      * Like CSS corners, order is:
      * top left, top right, bottom right, bottom left.
      */
+
+    const
+        refXIndex = xIndex + xOffset,
+        refZIndex = zIndex + zOffset
+
     return {
         left: {
-            back: _getXYPercentages(xIndex, yIndex, zIndex),
-            front: _getXYPercentages(xIndex, yIndex + 1, zIndex)
+            back: _getXYPercentages(refXIndex, yIndex, refZIndex),
+            front: _getXYPercentages(refXIndex, yIndex + 1, refZIndex)
         },
         right: {
-            back: _getXYPercentages(xIndex + 1, yIndex, zIndex),
-            front: _getXYPercentages(xIndex + 1, yIndex + 1, zIndex)
+            back: _getXYPercentages(refXIndex + 1, yIndex, refZIndex),
+            front: _getXYPercentages(refXIndex + 1, yIndex + 1, refZIndex)
         }
     }
 }
@@ -163,7 +169,7 @@ const _getHorizontalPlaneFractionsForDefault = (
 const SLANTED_LEFT_X_CONSTANTS = [0, 1, 0, 1, 2, 0]
 
 const _getHorizontalPlaneFractionsForSlantedLeft = (
-    xIndex, yIndex, zIndex
+    xIndex, yIndex, zIndex, xOffset, zOffset
 ) => {
 
     /**
@@ -179,8 +185,8 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
         // Begin along the x-axis at these units.
         xConstant = SLANTED_LEFT_X_CONSTANTS[yIndex]
 
-    let xOffset,
-        yOffset
+    let xModifier,
+        yModifier
 
     // If yIndex is 2, 3, or 4...
     if (yIndex >= 2 && yIndex <= 4) {
@@ -188,12 +194,12 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
          * Reference for odd xIndex is 2 above that for previous odd xIndex:
          * 0, 2, 5, 8, 10...
          */
-        xOffset = isXOdd ? -0.5 : 0
+        xModifier = isXOdd ? -0.5 : 0
 
        /**
         * Reference for even xIndex is 1 above that for previous odd xIndex.
         */
-        yOffset = isXOdd ? 0 : 1
+        yModifier = isXOdd ? 0 : 1
 
         // If yIndex is 0, 1, or 5...
     } else {
@@ -201,17 +207,18 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
          * Reference for odd xIndex is 3 above that for previous odd xIndex:
          * 0, 3, 5, 8, 10...
          */
-        xOffset = isXOdd ? 0.5 : 0
+        xModifier = isXOdd ? 0.5 : 0
 
         /**
          * Reference for even xIndex is 1 above that for previous odd xIndex.
          */
-        yOffset = isXOdd ? 1 : 0
+        yModifier = isXOdd ? 1 : 0
     }
 
     const
-        referenceXIndex = xConstant + xMultiplier + xOffset,
-        referenceYIndex = yMultiplier + yOffset
+        refXIndex = xConstant + xMultiplier + xModifier + xOffset,
+        refYIndex = yMultiplier + yModifier,
+        refZIndex = zIndex + zOffset
 
     /**
      * The xIndex and yIndex for the four corners will vary between 0 to 3
@@ -220,18 +227,18 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
     return {
         left: {
             back: _getXYPercentages(
-                referenceXIndex, referenceYIndex + 1, zIndex, 'left'
+                refXIndex, refYIndex + 1, refZIndex, 'left'
             ),
             front: _getXYPercentages(
-                referenceXIndex + 1, referenceYIndex + 3, zIndex, 'left'
+                refXIndex + 1, refYIndex + 3, refZIndex, 'left'
             )
         },
         right: {
             back: _getXYPercentages(
-                referenceXIndex + 2, referenceYIndex, zIndex, 'left'
+                refXIndex + 2, refYIndex, refZIndex, 'left'
             ),
             front: _getXYPercentages(
-                referenceXIndex + 3, referenceYIndex + 2, zIndex, 'left'
+                refXIndex + 3, refYIndex + 2, refZIndex, 'left'
             )
         }
     }
@@ -240,7 +247,7 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
 const SLANTED_RIGHT_X_CONSTANTS = [0, 2, 1, 0, 1, 0]
 
 const _getHorizontalPlaneFractionsForSlantedRight = (
-    xIndex, yIndex, zIndex
+    xIndex, yIndex, zIndex, xOffset, zOffset
 ) => {
 
     /**
@@ -253,54 +260,68 @@ const _getHorizontalPlaneFractionsForSlantedRight = (
         yMultiplier = yIndex * 2,
         xConstant = SLANTED_RIGHT_X_CONSTANTS[yIndex]
 
-    let xOffset,
-        yOffset
+    let xModifier,
+        yModifier
 
     // If yIndex is 1, 2, or 3...
     if (yIndex >= 1 && yIndex <= 3) {
-        xOffset = isXOdd ? -0.5 : 0
-        yOffset = isXOdd ? 1 : 0
+        xModifier = isXOdd ? -0.5 : 0
+        yModifier = isXOdd ? 1 : 0
 
         // If yIndex is 0, 4, or 5...
     } else {
-        xOffset = isXOdd ? 0.5 : 0
-        yOffset = isXOdd ? 0 : 1
+        xModifier = isXOdd ? 0.5 : 0
+        yModifier = isXOdd ? 0 : 1
     }
 
     const
-        referenceXIndex = xConstant + xMultiplier + xOffset,
-        referenceYIndex = yMultiplier + yOffset
+        refXIndex = xConstant + xMultiplier + xModifier + xOffset,
+        refYIndex = yMultiplier + yModifier,
+        refZIndex = zIndex + zOffset
 
     return {
         left: {
             back: _getXYPercentages(
-                referenceXIndex + 1, referenceYIndex, zIndex, 'right'
+                refXIndex + 1, refYIndex, refZIndex, 'right'
             ),
             front: _getXYPercentages(
-                referenceXIndex, referenceYIndex + 2, zIndex, 'right'
+                refXIndex, refYIndex + 2, refZIndex, 'right'
             )
         },
         right: {
             back: _getXYPercentages(
-                referenceXIndex + 3, referenceYIndex + 1, zIndex, 'right'
+                refXIndex + 3, refYIndex + 1, refZIndex, 'right'
             ),
             front: _getXYPercentages(
-                referenceXIndex + 2, referenceYIndex + 3, zIndex, 'right'
+                refXIndex + 2, refYIndex + 3, refZIndex, 'right'
             )
         }
     }
 }
 
-const _getHorizontalPlaneFractionsFunction = (slantDirection) => {
+const _getHorizontalPlaneFractionsForSlantDirection = ({
+    xIndex,
+    yIndex,
+    zIndex,
+    xOffset = 0,
+    zOffset = 0,
+    slantDirection
+}) => {
 
     if (slantDirection === 'left') {
-        return _getHorizontalPlaneFractionsForSlantedLeft
+        return _getHorizontalPlaneFractionsForSlantedLeft(
+            xIndex, yIndex, zIndex, xOffset, zOffset
+        )
 
     } else if (slantDirection === 'right') {
-        return _getHorizontalPlaneFractionsForSlantedRight
+        return _getHorizontalPlaneFractionsForSlantedRight(
+            xIndex, yIndex, zIndex, xOffset, zOffset
+        )
 
     } else {
-        return _getHorizontalPlaneFractionsForDefault
+        return _getHorizontalPlaneFractionsForDefault(
+            xIndex, yIndex, zIndex, xOffset, zOffset
+        )
     }
 }
 
@@ -320,36 +341,62 @@ export const getStageCubeCornerPercentages = ({
 
     const baseZIndex = isFloor ? 0 : 20
 
-    const getHorizontalPlaneFractions = _getHorizontalPlaneFractionsFunction(
-        slantDirection
-    )
-
     return {
         // This is the top face if floor, bottom face if ceiling.
-        tile: getHorizontalPlaneFractions(xIndex, yIndex, zIndex),
+        tile: _getHorizontalPlaneFractionsForSlantDirection({
+            xIndex,
+            yIndex,
+            zIndex,
+            slantDirection
+        }),
 
         // This is the face that is attached to the surface.
-        base: getHorizontalPlaneFractions(xIndex, yIndex, baseZIndex)
+        base: _getHorizontalPlaneFractionsForSlantDirection({
+            xIndex,
+            yIndex,
+            zIndex: baseZIndex,
+            slantDirection
+        })
     }
 }
 
 export const getTileCentreForPresence = ({
 
-    xIndex,
+    xFloat,
     yIndex,
+    zOffset = 0,
     zIndices,
     slantDirection
 
 }) => {
 
-    const
-        getHorizontalPlaneFractions = _getHorizontalPlaneFractionsFunction(
-                slantDirection
-            ),
+    let xIndex,
+        xOffset
 
-        zIndex = getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
+    /**
+     * Get the index and offset from the float.
+     */
+    if (xFloat < 0) {
+        xIndex = 0
 
-        tilePercentages = getHorizontalPlaneFractions(xIndex, yIndex, zIndex),
+    } else if (xFloat > CUBE_X_AXIS_LENGTH - 1) {
+        xIndex = CUBE_X_AXIS_LENGTH - 1
+
+    } else {
+        xIndex = Math.round(xFloat)
+    }
+    xOffset = xFloat - xIndex
+
+    const zIndex = getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
+
+        tilePercentages = _getHorizontalPlaneFractionsForSlantDirection({
+            xIndex,
+            yIndex,
+            zIndex,
+            xOffset,
+            zOffset,
+            slantDirection
+        }),
 
         { left, right } = tilePercentages,
 

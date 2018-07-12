@@ -25,10 +25,9 @@ const propTypes = {
     // From parent.
     name: PropTypes.string.isRequired,
     type: PropTypes.string.isRequired,
-    xOffset: PropTypes.number,
-    yOffset: PropTypes.number,
-    xIndex: PropTypes.number.isRequired,
+    xFloat: PropTypes.number.isRequired,
     yIndex: PropTypes.number.isRequired,
+    zOffset: PropTypes.number,
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
     cubesKey: PropTypes.string.isRequired
@@ -38,10 +37,9 @@ const Presence = ({
 
     name,
     type,
-    xOffset = 0,
-    yOffset = 0,
-    xIndex,
+    xFloat,
     yIndex,
+    zOffset,
     width,
     height,
     cubesKey
@@ -61,18 +59,23 @@ const Presence = ({
         } = floor,
 
         tileCentre = getTileCentreForPresence({
-            xIndex,
+            xFloat,
+
+            // Pass yFloat from presence. If there isn't one, use yIndex.
             yIndex,
+            zOffset,
+
             zIndices,
             slantDirection
         }),
+
         {
             xPercentage,
             yPercentage
         } = tileCentre,
 
-        x = xPercentage + xOffset - width / 2,
-        y = yPercentage + yOffset - height,
+        x = xPercentage - width / 2,
+        y = yPercentage - height,
 
         PresenceComponent = PRESENCE_TYPE_COMPONENTS[type]
 

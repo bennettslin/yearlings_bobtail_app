@@ -3178,4 +3178,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Presence offset positioning is still based on indices, not stage percentages.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

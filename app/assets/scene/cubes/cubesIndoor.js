@@ -138,6 +138,35 @@ const
             bitmapKeys: [
                 [TEST_PATTERN_KEY]
             ]
+        },
+        presences: {
+            song5_scene0: {
+
+                cubes5: {
+                    fixtures: [
+                        {
+                            name: 'sample fixture 4',
+                            xFloat: 5,
+                            width: 10,
+                            height: 20
+                        },
+                        {
+                            name: 'sample fixture 4',
+                            xFloat: 7.5,
+                            zOffset: 0.5,
+                            width: 20,
+                            height: 10
+                        },
+                        {
+                            name: 'sample fixture 4',
+                            xFloat: 11,
+                            zOffset: 0.5,
+                            width: 10,
+                            height: 10
+                        },
+                    ]
+                }
+            }
         }
     },
     PRETEEN_BENNETT_ROOM_LEFT_REVEALED_CUBES = {

@@ -1,6 +1,28 @@
 module.exports = [
 
     /**
+     * Hack Week work?
+     */
+
+    {
+        taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of. Use Web Workers?`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
+        taskName: `Desktop menu animating to overlay is a little janky? CSS Grids?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Deployment strategy.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    /**
      * Begin expected DTO tasks.
      */
 
@@ -14,18 +36,6 @@ module.exports = [
         taskName: `System for showing sun and moon for each scene.`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of. Use Web Workers?`,
-        workedHours: 0,
-        neededHours: 8
-    },
-
-    {
-        taskName: `Desktop menu animating to overlay is a little janky?`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     {
