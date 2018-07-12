@@ -28,8 +28,8 @@ import {
     ODIN_SCENE_8_KEY
 } from '../assets/scene/cubes/cubesKeys'
 
-import { SKY_ANYTIME,
-         SKY_AUTUMN } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_AUTUMN } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -44,8 +44,8 @@ module.exports = {
             },
             cubes: ODIN_SCENE_1_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -60,8 +60,8 @@ module.exports = {
             },
             cubes: ODIN_SCENE_2_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -76,8 +76,8 @@ module.exports = {
             },
             cubes: ODIN_SCENE_3_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -92,8 +92,8 @@ module.exports = {
             },
             cubes: ODIN_SCENE_4_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -108,8 +108,8 @@ module.exports = {
             },
             cubes: ODIN_SCENE_5_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -124,8 +124,8 @@ module.exports = {
             },
             cubes: ODIN_SCENE_6_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -145,8 +145,8 @@ module.exports = {
             },
             cubes: ODIN_SCENE_7_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -161,8 +161,8 @@ module.exports = {
             },
             cubes: ODIN_SCENE_8_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         }
     ],

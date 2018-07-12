@@ -15,8 +15,8 @@ import {
     SCHOOLBUS_KEY,
     TETHERBALL_SCENE_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_SUMMER } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_SUMMER } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -24,8 +24,8 @@ module.exports = {
             description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
             cubes: TAIWAN_PUPPET_SHOW_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -35,8 +35,8 @@ module.exports = {
             },
             cubes: TAIWAN_PUPPET_SHOW_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -63,8 +63,8 @@ module.exports = {
             },
             cubes: SCHOOLBUS_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -94,8 +94,8 @@ module.exports = {
             },
             cubes: TETHERBALL_SCENE_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -104,8 +104,8 @@ module.exports = {
             actors: {},
             cubes: TAIWAN_PUPPET_SHOW_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         }
     ],

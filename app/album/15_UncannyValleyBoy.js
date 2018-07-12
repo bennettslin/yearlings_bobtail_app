@@ -21,8 +21,8 @@ import {
     SNOW_GLOBES_2_KEY,
     SNOW_GLOBES_3_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_AUTUMN } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_AUTUMN } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -42,8 +42,8 @@ module.exports = {
             },
             cubes: BENNETT_BASEMENT_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -70,8 +70,8 @@ module.exports = {
             },
             cubes: BENNETT_BASEMENT_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -101,8 +101,8 @@ module.exports = {
             },
             cubes: SNOW_GLOBES_1_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -139,8 +139,8 @@ module.exports = {
             },
             cubes: SNOW_GLOBES_2_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -184,8 +184,8 @@ module.exports = {
             },
             cubes: SNOW_GLOBES_3_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -222,8 +222,8 @@ module.exports = {
             },
             cubes: BENNETT_BASEMENT_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         }
     ],

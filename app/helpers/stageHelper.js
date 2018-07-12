@@ -1,4 +1,4 @@
-import { STAGE_ASPECT_RATIO,
+import { LS_STAGE_ASPECT_RATIO,
          STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE } from '../constants/stage'
 
 import { PHONE_CLASS,
@@ -67,12 +67,12 @@ export const getStageCoordinates = ({
         height = centreFieldHeight
 
     // Maintain stage width, adjust stage height.
-    if (centreFieldRatio < STAGE_ASPECT_RATIO) {
-        height *= centreFieldRatio / STAGE_ASPECT_RATIO
+    if (centreFieldRatio < LS_STAGE_ASPECT_RATIO) {
+        height *= centreFieldRatio / LS_STAGE_ASPECT_RATIO
 
     // Maintain stage height, adjust stage width.
-    } else if (centreFieldRatio > STAGE_ASPECT_RATIO) {
-        width *= STAGE_ASPECT_RATIO / centreFieldRatio
+    } else if (centreFieldRatio > LS_STAGE_ASPECT_RATIO) {
+        width *= LS_STAGE_ASPECT_RATIO / centreFieldRatio
     }
 
     if (isDesktop) {

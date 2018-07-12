@@ -20,8 +20,11 @@ import {
     PLAYGROUND_KEY
 } from '../assets/scene/cubes/cubesKeys'
 import {
-    SKY_ANYTIME,
-    SKY_SPRING
+    TIME_MORNING,
+    TIME_NOON,
+    TIME_AFTERNOON,
+    TIME_EVENING,
+    SEASON_SPRING
 } from '../assets/scene/sky'
 
 module.exports = {
@@ -31,8 +34,8 @@ module.exports = {
             description: `Neighbourhood houses.`,
             cubes: CHILDHOOD_NEIGHBOURHOOD_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_MORNING,
+                season: SEASON_SPRING
             }
         },
         {
@@ -60,8 +63,8 @@ module.exports = {
             },
             cubes: CHILDHOOD_NEIGHBOURHOOD_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_MORNING,
+                season: SEASON_SPRING
             }
         },
         {
@@ -89,8 +92,8 @@ module.exports = {
             },
             cubes: PLAYGROUND_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_NOON,
+                season: SEASON_SPRING
             }
         },
         {
@@ -108,8 +111,8 @@ module.exports = {
             },
             cubes: CHILDHOOD_BATHROOM_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_AFTERNOON,
+                season: SEASON_SPRING
             }
         },
         {
@@ -132,8 +135,8 @@ module.exports = {
             },
             cubes: CHILDHOOD_BATHROOM_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_EVENING,
+                season: SEASON_SPRING
             }
         }
     ],

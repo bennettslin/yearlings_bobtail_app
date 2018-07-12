@@ -16,8 +16,8 @@ import {
     MOVIE_THEATRE_1_KEY,
     MOVIE_THEATRE_2_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_SUMMER } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_SUMMER } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -32,8 +32,8 @@ module.exports = {
             },
             cubes: BENNETT_APARTMENT_COUCH_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -48,8 +48,8 @@ module.exports = {
             },
             cubes: BENNETT_APARTMENT_COUCH_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -71,8 +71,8 @@ module.exports = {
             },
             cubes: BENNETT_APARTMENT_COUCH_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -109,8 +109,8 @@ module.exports = {
             },
             cubes: SHOW_STAGE_FRONT_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -140,8 +140,8 @@ module.exports = {
             },
             cubes: REHEARSAL_SPACE_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -163,8 +163,8 @@ module.exports = {
             },
             cubes: MOVIE_THEATRE_1_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -193,8 +193,8 @@ module.exports = {
             },
             cubes: MOVIE_THEATRE_1_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -216,8 +216,8 @@ module.exports = {
             },
             cubes: MOVIE_THEATRE_2_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         }
     ],

@@ -63,7 +63,7 @@ const base = 1.069913193933663,
 
 module.exports = {
 
-    STAGE_ASPECT_RATIO: 1.7, // Was 1.2. And then was 1.8.
+    LS_STAGE_ASPECT_RATIO: 1.7, // Was 1.2. And then was 1.8.
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE: 1.05,
 
     // Each stage floor increment is 0.5 feet.

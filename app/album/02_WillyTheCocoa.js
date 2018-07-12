@@ -22,8 +22,8 @@ import {
     CHILDHOOD_NEIGHBOURHOOD_KEY,
     CHANGELING_CAVE_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_SUMMER } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_SUMMER } from '../assets/scene/sky'
 
 module.exports = {
     scenes: [
@@ -32,8 +32,8 @@ module.exports = {
             description: ``,
             cubes: FREEWAY_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -48,8 +48,8 @@ module.exports = {
             },
             cubes: FREEWAY_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -79,8 +79,8 @@ module.exports = {
             },
             cubes: PORCH_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -105,8 +105,8 @@ module.exports = {
             },
             cubes: PRETEEN_BENNETT_ROOM_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -135,8 +135,8 @@ module.exports = {
             },
             cubes: CHILDHOOD_NEIGHBOURHOOD_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -156,8 +156,8 @@ module.exports = {
             },
             cubes: PRETEEN_BENNETT_ROOM_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -182,8 +182,8 @@ module.exports = {
             },
             cubes: CHANGELING_CAVE_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         }
     ],

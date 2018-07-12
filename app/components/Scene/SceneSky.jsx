@@ -3,14 +3,14 @@
  * and the stage lookes weird without it.
  */
 
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import {
-    SKY_ANYTIME,
-    SKY_INDOOR
+    TIME_ANYTIME,
+    SEASON_INDOOR
 } from '../../assets/scene/sky'
 
 const mapStateToProps = ({
@@ -22,8 +22,8 @@ const mapStateToProps = ({
 class SceneSky extends Component {
 
     static defaultProps = {
-        timeKey: SKY_ANYTIME,
-        seasonKey: SKY_INDOOR
+        timeKey: TIME_ANYTIME,
+        seasonKey: SEASON_INDOOR
     }
 
     static propTypes = {
@@ -47,30 +47,50 @@ class SceneSky extends Component {
 
     render() {
         const {
-            timeKey,
-            seasonKey
-        } = this.props
+                timeKey,
+                seasonKey
+            } = this.props
 
         return (
-            <Fragment>
+            <div className={cx(
+                'Sky',
+                'absoluteFullContainer'
+            )}>
                 <div
                     className={cx(
-                        'Sky',
-                        'Sky__season',
-                        `Sky__season__${seasonKey}`,
+                        'Season',
+                        `Season__${seasonKey}`,
+                        'Sky__filter',
                         'absoluteFullContainer'
                     )}
                 />
                 <div
                     className={cx(
-                        'Sky',
-                        'Sky__time',
-                        `Sky__time__${timeKey}`,
+                        'TimeOfDay',
+                        `TimeOfDay__${timeKey}`,
+                        'Sky__filter',
                         'absoluteFullContainer'
                     )}
                 />
+                {/* Not going to do this work for now. */}
+                {/* <div
+                    className={cx(
+                        'Sun',
+                        `Sun__${timeKey}`,
+                        `Sun__${seasonKey}`,
+                        'Sky__celestial'
+                    )}
+                />
+                <div
+                    className={cx(
+                        'Moon',
+                        `Moon__${timeKey}`,
+                        `Moon__${seasonKey}`,
+                        'Sky__celestial'
+                    )}
+                /> */}
                 {/* TODO: Make filter for weather, like clouds and rain. */}
-            </Fragment>
+            </div>
         )
     }
 }

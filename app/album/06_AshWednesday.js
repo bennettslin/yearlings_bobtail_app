@@ -16,8 +16,8 @@ import {
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_SPRING } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_SPRING } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -37,8 +37,8 @@ module.exports = {
             },
             cubes: BENNETT_APARTMENT_COURTYARD_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -58,8 +58,8 @@ module.exports = {
             },
             cubes: BENNETT_APARTMENT_COUCH_THOUGHT_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -74,8 +74,8 @@ module.exports = {
             },
             cubes: CATHOLIC_CHURCH_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -104,8 +104,8 @@ module.exports = {
             },
             cubes: SPROUL_PLAZA_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -125,8 +125,8 @@ module.exports = {
             },
             cubes: BERKELEY_WALKWAY_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         }
     ],

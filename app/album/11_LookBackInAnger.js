@@ -18,8 +18,8 @@ import {
     SITA_APARTMENT_BED_KEY,
     SHOW_UNLOADING_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_SUMMER } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_SUMMER } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -61,8 +61,8 @@ module.exports = {
             },
             cubes: SHOW_STAGE_SIDE_1_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -92,8 +92,8 @@ module.exports = {
             },
             cubes: SHOW_STAGE_SIDE_2_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -133,8 +133,8 @@ module.exports = {
             },
             cubes: SHOW_UNLOADING_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         },
         {
@@ -170,8 +170,8 @@ module.exports = {
             },
             cubes: SITA_APARTMENT_BED_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SUMMER
+                time: TIME_ANYTIME,
+                season: SEASON_SUMMER
             }
         }
     ],

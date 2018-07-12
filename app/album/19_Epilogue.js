@@ -1,6 +1,6 @@
 import { LOGUE_KEY } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_INDOOR } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_INDOOR } from '../assets/scene/sky'
 module.exports = {
     logue: true,
     title: 'epilogue',
@@ -194,8 +194,8 @@ module.exports = {
             },
             cubes: LOGUE_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_INDOOR
+                time: TIME_ANYTIME,
+                season: SEASON_INDOOR
             }
         }
     ],

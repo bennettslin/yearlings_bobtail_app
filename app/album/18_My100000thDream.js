@@ -17,8 +17,8 @@ import {
     DREAM_CLIFF_KEY,
     DREAM_DEATHBED_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_SPRING } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_SPRING } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -40,8 +40,8 @@ module.exports = {
             },
             cubes: EL_TORITO_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -84,8 +84,8 @@ module.exports = {
             },
             cubes: PAMPAS_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -107,8 +107,8 @@ module.exports = {
             },
             cubes: OUTDOOR_WEDDING_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -130,8 +130,8 @@ module.exports = {
             },
             cubes: DREAM_CLIFF_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -160,8 +160,8 @@ module.exports = {
             },
             cubes: DREAM_DEATHBED_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         }
     ],

@@ -19,8 +19,8 @@ import {
     SPROUL_PLAZA_KEY,
     BERKELEY_WALKWAY_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_WINTER } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_WINTER } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -47,8 +47,8 @@ module.exports = {
             },
             cubes: BERKELEY_WALKWAY_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -78,8 +78,8 @@ module.exports = {
             },
             cubes: SHOW_STAGE_FRONT_FAR_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -94,8 +94,8 @@ module.exports = {
             },
             cubes: ALLEY_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -136,8 +136,8 @@ module.exports = {
             },
             cubes: SITA_APARTMENT_BED_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -173,8 +173,8 @@ module.exports = {
             },
             cubes: SPROUL_PLAZA_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         }
     ],

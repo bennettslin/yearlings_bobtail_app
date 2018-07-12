@@ -24,8 +24,8 @@ import {
     CEMETERY_KEY,
     STATION_WAGON_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_SPRING } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_SPRING } from '../assets/scene/sky'
 
 module.exports = {
     scenes: [
@@ -56,8 +56,8 @@ module.exports = {
             },
             cubes: UCLA_CAMPUS_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -87,8 +87,8 @@ module.exports = {
             },
             cubes: WALGREENS_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -118,8 +118,8 @@ module.exports = {
             },
             cubes: STEAM_TUNNEL_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -149,8 +149,8 @@ module.exports = {
             },
             cubes: CEMETERY_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -180,8 +180,8 @@ module.exports = {
             },
             cubes: STATION_WAGON_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         },
         {
@@ -201,8 +201,8 @@ module.exports = {
             },
             cubes: HOWIE_ATTIC_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_SPRING
+                time: TIME_ANYTIME,
+                season: SEASON_SPRING
             }
         }
     ],

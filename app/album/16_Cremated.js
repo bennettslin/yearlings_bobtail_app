@@ -15,8 +15,8 @@ import {
     CREMATED_DEATHBED_KEY,
     CREMATED_DEATHBED_TENNIS_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_AUTUMN } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_AUTUMN } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -36,8 +36,8 @@ module.exports = {
             },
             cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -57,8 +57,8 @@ module.exports = {
             },
             cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -78,8 +78,8 @@ module.exports = {
             },
             cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -94,8 +94,8 @@ module.exports = {
             },
             cubes: CREMATED_DEATHBED_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -110,8 +110,8 @@ module.exports = {
             },
             cubes: CREMATED_DEATHBED_TENNIS_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -131,8 +131,8 @@ module.exports = {
             },
             cubes: CREMATED_CLIFF_CONVERTIBLE_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -140,8 +140,8 @@ module.exports = {
             description: `The car is in the background.`,
             cubes: CREMATED_CLIFF_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         }
     ],

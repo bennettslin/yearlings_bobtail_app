@@ -3183,4 +3183,14 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Have system to animate in and out presences based on whether they are people, panels, or props. Include hanging, pets, bubbles, and every other possible thing.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `System for showing sun and moon for each scene. Not going to do this work for now.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

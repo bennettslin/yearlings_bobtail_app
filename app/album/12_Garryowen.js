@@ -18,8 +18,8 @@ import {
     SHOW_STAGE_FRONT_KEY,
     VOLKSWAGEN_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_AUTUMN } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_AUTUMN } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -41,8 +41,8 @@ module.exports = {
             },
             cubes: SITA_APARTMENT_COUCH_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -72,8 +72,8 @@ module.exports = {
             },
             cubes: VOLKSWAGEN_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -95,8 +95,8 @@ module.exports = {
             },
             cubes: BENNETT_BASEMENT_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -126,8 +126,8 @@ module.exports = {
             },
             cubes: SHOW_STAGE_FRONT_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -149,8 +149,8 @@ module.exports = {
             },
             cubes: SITA_APARTMENT_COUCH_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         }
     ],

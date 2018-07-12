@@ -22,8 +22,8 @@ import {
     JUNIOR_HIGH_LOCKERS_KEY,
     JUNIOR_HIGH_QUAD_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_WINTER } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_WINTER } from '../assets/scene/sky'
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
  * song list order on the album.
@@ -35,8 +35,8 @@ module.exports = {
             description: `Bennett's room, but seemingly no one is there.`,
             cubes: PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -56,8 +56,8 @@ module.exports = {
             },
             cubes: PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -72,8 +72,8 @@ module.exports = {
             },
             cubes: PRETEEN_BENNETT_ROOM_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -88,8 +88,8 @@ module.exports = {
             },
             cubes: PRETEEN_BENNETT_ROOM_LEFT_REVEALED_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -104,8 +104,8 @@ module.exports = {
             },
             cubes: PRETEEN_BENNETT_ROOM_RIGHT_REVEALED_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -130,8 +130,8 @@ module.exports = {
             },
             cubes: JUNIOR_HIGH_LOCKERS_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -163,8 +163,8 @@ module.exports = {
             },
             cubes: JUNIOR_HIGH_QUAD_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         },
         {
@@ -196,8 +196,8 @@ module.exports = {
             },
             cubes: JUNIOR_HIGH_HALLWAY_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_WINTER
+                time: TIME_ANYTIME,
+                season: SEASON_WINTER
             }
         }
     ],

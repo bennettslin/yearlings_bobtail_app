@@ -19,8 +19,8 @@ import {
     OAKLAND_STREET_FRONT_2_KEY,
     OAKLAND_STREET_FRONT_3_KEY
 } from '../assets/scene/cubes/cubesKeys'
-import { SKY_ANYTIME,
-         SKY_AUTUMN } from '../assets/scene/sky'
+import { TIME_ANYTIME,
+         SEASON_AUTUMN } from '../assets/scene/sky'
 module.exports = {
     scenes: [
         {
@@ -35,8 +35,8 @@ module.exports = {
             },
             cubes: OAKLAND_STREET_SIDE_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -58,8 +58,8 @@ module.exports = {
             },
             cubes: SITA_APARTMENT_COUCH_THOUGHT_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -81,8 +81,8 @@ module.exports = {
             },
             cubes: OAKLAND_STREET_FRONT_1_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -111,8 +111,8 @@ module.exports = {
             },
             cubes: OAKLAND_STREET_FRONT_2_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         },
         {
@@ -162,8 +162,8 @@ module.exports = {
             },
             cubes: OAKLAND_STREET_FRONT_3_KEY,
             sky: {
-                time: SKY_ANYTIME,
-                season: SKY_AUTUMN
+                time: TIME_ANYTIME,
+                season: SEASON_AUTUMN
             }
         }
     ],
