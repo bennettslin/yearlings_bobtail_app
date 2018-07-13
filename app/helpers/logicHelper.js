@@ -281,6 +281,8 @@ export const getAnnotationAnchorIndexForDirection = ({
 
         // Consider each anchor index only once.
         while (counter < annotationAnchorsCount) {
+            const typeofAnnotationAnchor =
+                typeof annotationAnchors[returnIndex - 1]
 
             // If no direction given, start at first index...
             if (isNaN(direction)) {
@@ -298,8 +300,15 @@ export const getAnnotationAnchorIndexForDirection = ({
              * It's valid if it's a wiki anchor and reference dot is selected,
              * or it's a portal index and portal dot is selected.
              */
-            if ((typeof annotationAnchors[returnIndex - 1] === 'string' && selectedDotKeys[REFERENCE]) ||
-                (typeof annotationAnchors[returnIndex - 1] === 'number' && selectedDotKeys[PORTAL])) {
+            if (
+                (
+                    typeofAnnotationAnchor === 'string' &&
+                    selectedDotKeys[REFERENCE]
+                ) || (
+                    typeofAnnotationAnchor === 'number' &&
+                    selectedDotKeys[PORTAL]
+                )
+            ) {
 
                 return returnIndex
             }

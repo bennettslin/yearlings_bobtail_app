@@ -129,6 +129,7 @@ const annotationCardViewProptypes = {
     carouselAnnotationIndex: PropTypes.number,
     cardDotKeys: PropTypes.object.isRequired,
     cardIndex: PropTypes.number.isRequired,
+    isSelected: PropTypes.bool.isRequired,
     handleAnnotationWikiSelect: PropTypes.func.isRequired,
     handleAnnotationPortalSelect: PropTypes.func.isRequired
 },
@@ -136,6 +137,7 @@ const annotationCardViewProptypes = {
 AnnotationCardView = ({
 
     // From props.
+    isSelected,
     carouselAnnotationIndex,
     handleAnnotationWikiSelect,
     handleAnnotationPortalSelect,
@@ -179,9 +181,12 @@ AnnotationCardView = ({
                     />
                 ) : (
                     <AnnotationPortals
-                        cardIndex={cardIndex}
-                        carouselAnnotationIndex={carouselAnnotationIndex}
-                        handleAnnotationPortalSelect={handleAnnotationPortalSelect}
+                        {...{
+                            isSelected,
+                            cardIndex,
+                            carouselAnnotationIndex,
+                            handleAnnotationPortalSelect
+                        }}
                     />
                 )}
             </div>
@@ -191,7 +196,8 @@ AnnotationCardView = ({
             <div className={cx(
                 'AnnotationCardAnimatable',
                 getPrefixPrependedClassNames(
-                    cardDotKeys, 'AnnotationCardAnimatable'
+                    cardDotKeys,
+                    'AnnotationCardAnimatable'
                 )
             )}>
                 {annotationCardChild}

@@ -22,22 +22,32 @@ module.exports = [
         neededHours: 8
     },
 
-    /**
-     * Begin expected DTO tasks.
-     */
-
     {
         taskName: `Make Cubes sequence a little more smooth.`,
         workedHours: 0,
         neededHours: 3
     },
 
-    /**
-     * End expected DTO tasks.
-     */
+    {
+        taskName: `Accessed annotation index is wrong when loading song with selected verse.`,
+        workedHours: 0,
+        neededHours: 1
+    },
 
     {
-        taskName: `Show enter access key in annotation when selected and there is at least one wiki or portal, and up/down when there are multiple.`,
+        taskName: `Access icons in popup annotation look weird.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Flash access icon when key is pressed.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Show enter access key in accessed anchors.`,
         workedHours: 0,
         neededHours: 2
     },

@@ -3198,4 +3198,14 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Show up/down key in annotation when there is more than one wiki or portal.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `pgUp and pgDown should trigger verse bar.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

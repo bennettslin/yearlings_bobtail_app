@@ -39,6 +39,7 @@ class AnnotationPortal extends Component {
         cardIndex: PropTypes.number.isRequired,
         portalLinkIndex: PropTypes.number.isRequired,
         isAccessed: PropTypes.bool.isRequired,
+        isSelected: PropTypes.bool.isRequired,
         handleAnnotationPortalSelect: PropTypes.func.isRequired
     }
 
@@ -114,7 +115,10 @@ class AnnotationPortal extends Component {
 
     render() {
 
-        const { isAccessed } = this.props,
+        const {
+            isAccessed,
+            isSelected
+        } = this.props,
 
             portalObject = this._getPortalObject(),
 
@@ -146,7 +150,7 @@ class AnnotationPortal extends Component {
                 <div className="AnnotationPortal__button">
                     <Button
                         buttonName={PORTAL}
-                        showAccessIconIfAccessOn={isAccessed}
+                        showAccessIconIfAccessOn={isAccessed && isSelected}
                         accessKey={NAVIGATION_ENTER_KEY}
                         handleButtonClick={this._handlePortalClick}
                     />

@@ -61,6 +61,10 @@ class KeyHandler extends Component {
     constructor(props) {
         super(props)
 
+        this.state = {
+            lyricWheelTimeoutId: ''
+        }
+
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
         this._routeNavigation = this._routeNavigation.bind(this)
         this._accessAnnotationWithoutDirection = this._accessAnnotationWithoutDirection.bind(this)
@@ -105,6 +109,14 @@ class KeyHandler extends Component {
 
         // Do not allow the event to propagate if it's an exempt key.
         if (keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE || keyName === PAGE_UP || keyName === PAGE_DOWN) {
+
+            /**
+             * While these keys do not register, they do scroll the lyric.
+             */
+            if (keyName === SPACE || keyName === PAGE_UP || keyName === PAGE_DOWN) {
+                this._setHandleLyricWheelTimeout()
+            }
+
             return
         }
 
@@ -145,9 +157,24 @@ class KeyHandler extends Component {
              * turn off autoScroll and determine verse bars.
              */
             } else if (keyName === ARROW_DOWN || keyName === ARROW_UP) {
-                eventHandlers.handleLyricWheel()
+                this._setHandleLyricWheelTimeout()
             }
         }
+    }
+
+    _setHandleLyricWheelTimeout() {
+        clearTimeout(this.state.lyricWheelTimeoutId)
+
+        const lyricWheelTimeoutId = setTimeout(
+            this.props.eventHandlers.handleLyricWheel,
+
+            // This duration is long enough for Chrome, Firefox, and Safari.
+            150
+        )
+
+        this.setState({
+            lyricWheelTimeoutId
+        })
     }
 
     _routeNavigation(e, keyName) {

@@ -56,12 +56,6 @@ class CarouselAnnotation extends Component {
         })
     }
 
-    // componentDidUpdate() {
-    //     if (this.props.annotationIndex === 1) {
-    //         console.warn('CarouselAnnotation rendered.')
-    //     }
-    // }
-
     _handleAnnotationTitleClick(e) {
         if (!this.props.isSelected) {
             const { annotationIndex,

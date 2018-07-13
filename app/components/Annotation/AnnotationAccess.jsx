@@ -1,62 +1,36 @@
 import React, { Component, Fragment } from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-
-// import { ALL_DOT_KEYS } from '../../constants/dots'
-// import { convertTrueFalseKeysToBitNumber } from '../../helpers/bitHelper'
 
 import AccessIcons from '../AccessIcon/AccessIcons'
 
-import { NAVIGATION_ENTER_KEY,
-         NAVIGATION_UP_KEY,
-         NAVIGATION_DOWN_KEY } from '../../constants/access'
-
-const mapStateToProps = () => ({
-    // isLyricExpanded,
-    // canLyricRender,
-    // renderableAnnotationIndex,
-    // selectedCarouselNavIndex,
-    // selectedDotsIndex,
-    // selectedDotKeys,
-    // interactivatedVerseIndex
-})
+import {
+    // NAVIGATION_ENTER_KEY,
+    NAVIGATION_UP_KEY,
+    NAVIGATION_DOWN_KEY
+} from '../../constants/access'
 
 class LyricColumnAccess extends Component {
 
     static propTypes = {
 
-        // From Redux.
-        // canLyricRender: PropTypes.bool.isRequired,
-        // renderableAnnotationIndex: PropTypes.number.isRequired,
-        // selectedCarouselNavIndex: PropTypes.number.isRequired,
-        // selectedDotsIndex: PropTypes.number.isRequired,
-        // selectedDotKeys: PropTypes.object.isRequired,
-        // interactivatedVerseIndex: PropTypes.number.isRequired
-
         // From parent.
-        isSelected: PropTypes.bool.isRequired
+        isSelected: PropTypes.bool.isRequired,
+        accessibleAnnotationAnchorsLength: PropTypes.number
     }
-
-    // shouldComponentUpdate(nextProps) {
-    //     return nextProps.canLyricRender
-    // }
-
-    // componentDidUpdate() {
-    //     console.warn('LyricColumnAccess rendered.')
-    // }
 
     render() {
 
         const {
-                isSelected
+                isSelected,
+                accessibleAnnotationAnchorsLength
             } = this.props,
 
-            showEnter = isSelected,
-            showUpDown = isSelected
+            // showEnter = isSelected && accessibleAnnotationAnchorsLength,
+            showUpDown = isSelected && accessibleAnnotationAnchorsLength > 1
 
         return (
             <Fragment>
-                <AccessIcons
+                {/* <AccessIcons
                     accessIconsName="annotationEnter"
                     inAnnotation
                     accessKeys={[
@@ -66,7 +40,7 @@ class LyricColumnAccess extends Component {
                             beginsCluster: true
                         }
                     ]}
-                />
+                /> */}
                 <AccessIcons
                     accessIconsName="annotationUpDown"
                     inAnnotation
@@ -86,4 +60,4 @@ class LyricColumnAccess extends Component {
     }
 }
 
-export default connect(mapStateToProps)(LyricColumnAccess)
+export default LyricColumnAccess
