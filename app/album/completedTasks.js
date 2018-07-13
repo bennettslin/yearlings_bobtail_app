@@ -3208,4 +3208,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Have selectTimeAndVerse return an index so that scrolling can all be handled by EventHandler. (Just got rid of extraneous parameters, which I think is good enough.)`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

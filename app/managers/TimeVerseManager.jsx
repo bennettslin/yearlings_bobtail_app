@@ -28,9 +28,6 @@ class TimeVerseManager extends Component {
     static propTypes = {
         // Through Redux.
         canSceneRender: PropTypes.bool.isRequired,
-        deviceIndex: PropTypes.number.isRequired,
-        windowWidth: PropTypes.number.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
         isManualScroll: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -92,7 +89,8 @@ class TimeVerseManager extends Component {
 
         scrollLog
     }) {
-        const songVerseTimes = getSongVerseTimes(selectedSongIndex),
+        const
+            songVerseTimes = getSongVerseTimes(selectedSongIndex),
             selectedTimePlayed = songVerseTimes[selectedVerseIndex],
 
             /**
@@ -154,9 +152,6 @@ class TimeVerseManager extends Component {
                 log: scrollLog || 'Player autoscroll.',
                 scrollClass: VERSE_SCROLL,
                 index: selectedVerseIndex,
-                deviceIndex: this.props.deviceIndex,
-                windowWidth: this.props.windowWidth,
-                isLyricExpanded: this.props.isLyricExpanded,
                 callback: this._setCanRenderScene
             })
         }
@@ -210,17 +205,11 @@ class TimeVerseManager extends Component {
 
 const mapStateToProps = ({
     canSceneRender,
-    deviceIndex,
-    windowWidth,
-    isLyricExpanded,
     isManualScroll,
     selectedSongIndex,
     selectedVerseIndex
 }) => ({
     canSceneRender,
-    deviceIndex,
-    windowWidth,
-    isLyricExpanded,
     isManualScroll,
     selectedSongIndex,
     selectedVerseIndex
