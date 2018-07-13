@@ -8,11 +8,17 @@
         opacity @animationDuration__default;
 
     opacity: 0;
+    z-index: @zIndex__lyricChild__topMost;
 
     // TODO: Temporary styling for now.
     border: 2px solid green;
     border-radius: 3px;
     background-color: #bfb;
+
+    // TODO: These won't be necessary once we're no longer using fonts.
+    font-size: @length__iconAccess;
+    text-indent: 0; // Override font style propagation in Verse.
+
 }
 
 .AccessIcon__showIfAccessed {
@@ -22,7 +28,7 @@
     }
 }
 
-.AccessIcon__inButton {
+.AccessIcon__inButtonOrDot {
     position: absolute;
     bottom: 0;
     right: 0;

@@ -6,11 +6,14 @@ import { ALL_DOT_KEYS } from '../../constants/dots'
 import { convertTrueFalseKeysToBitNumber } from '../../helpers/bitHelper'
 
 import AccessIcons from '../AccessIcon/AccessIcons'
-import { NAVIGATION_ENTER_KEY,
-         NAVIGATION_LEFT_KEY,
-         NAVIGATION_RIGHT_KEY,
-         NAVIGATION_UP_KEY,
-         NAVIGATION_DOWN_KEY } from '../../constants/access'
+
+import {
+    NAVIGATION_ENTER_KEY,
+    NAVIGATION_LEFT_KEY,
+    NAVIGATION_RIGHT_KEY,
+    NAVIGATION_UP_KEY,
+    NAVIGATION_DOWN_KEY
+} from '../../constants/access'
 
 const mapStateToProps = ({
     isLyricExpanded,

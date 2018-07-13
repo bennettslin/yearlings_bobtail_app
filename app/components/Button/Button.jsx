@@ -114,7 +114,7 @@ class Button extends Component {
 
                     {accessKey && (
                         <AccessIcon
-                            inButton
+                            inButtonOrDot
                             showIfAccessed={showIfAccessed}
                             accessKey={accessKey}
                         />

@@ -3,8 +3,13 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DotSequence from '../Dot/DotSequence'
+import AccessIcon from '../AccessIcon/AccessIcon'
 
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
+
+import {
+    NAVIGATION_ENTER_KEY
+} from '../../constants/access'
 
 const anchorPropTypes = {
     // From parent.
@@ -92,6 +97,12 @@ Anchor = ({
             )}
 
             {children}
+
+            <AccessIcon
+                inButtonOrDot
+                showIfAccessed={isAccessed}
+                accessKey={NAVIGATION_ENTER_KEY}
+            />
         </a>
     )
 }
