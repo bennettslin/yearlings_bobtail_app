@@ -14,6 +14,7 @@ import { selectAnnotationIndex } from '../../redux/actions/storage'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 import {
+    getAnnotationIndexForVerseIndex,
     getAnnotationIndexForDirection,
     getAnnotationAnchorIndexForDirection,
     shouldShowAnnotationForColumn
@@ -26,6 +27,7 @@ class AnnotationManager extends Component {
         deviceIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
 
@@ -42,22 +44,28 @@ class AnnotationManager extends Component {
     constructor(props) {
         super(props)
 
-        const { selectedSongIndex,
-                selectedAnnotationIndex,
-                selectedDotKeys } = props
-
-        // Set initial access state.
-        props.accessAnnotationAnchorIndex(
-            getAnnotationAnchorIndexForDirection({
+        const {
                 selectedSongIndex,
                 selectedAnnotationIndex,
                 selectedDotKeys
-            })
+            } = props,
+
+            accessedAnnotationAnchorIndex =
+                getAnnotationAnchorIndexForDirection({
+                    selectedSongIndex,
+                    selectedAnnotationIndex,
+                    selectedDotKeys
+                })
+
+        // Set initial access state.
+        props.accessAnnotationAnchorIndex(
+            accessedAnnotationAnchorIndex
         )
     }
 
     componentDidMount() {
         this.props.setRef(this)
+        this.accessAnnotation()
     }
 
     shouldComponentUpdate(nextProps) {
@@ -71,33 +79,8 @@ class AnnotationManager extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        const {
-            deviceIndex,
-            selectedDotKeys,
-            selectedLyricColumnIndex,
-            selectedAnnotationIndex,
-            selectedSongIndex
-        } = this.props
-
-        if (selectedSongIndex !== prevProps.selectedSongIndex) {
-            /**
-             * Get new accessed annotation index by starting from first and
-             * going forward. If not called from portal, it should always be
-             * the title annotation unless deselected by dots.
-             */
-
-            const accessedAnnotationIndex = selectedAnnotationIndex ||
-                getAnnotationIndexForDirection({
-                    deviceIndex: deviceIndex,
-                    currentAnnotationIndex: 1,
-                    selectedSongIndex,
-                    selectedDotKeys: selectedDotKeys,
-                    lyricColumnIndex: selectedLyricColumnIndex
-                })
-
-            this.props.accessAnnotationIndex(
-                accessedAnnotationIndex
-            )
+        if (this.props.selectedSongIndex !== prevProps.selectedSongIndex) {
+            this.accessAnnotation()
         }
     }
 
@@ -182,9 +165,45 @@ class AnnotationManager extends Component {
         }
     }
 
-    accessAnnotation(accessedAnnotationIndex) {
+    accessAnnotation({
+
+        annotationIndex,
+        verseIndex = this.selectedVerseIndex,
+
+        deviceIndex = this.props.deviceIndex,
+        selectedSongIndex = this.props.selectedSongIndex,
+        selectedLyricColumnIndex = this.props.selectedLyricColumnIndex,
+        selectedDotKeys = this.props.selectedDotKeys,
+        direction
+
+    } = {}) {
+
+        let accessedAnnotationIndex = 0
+
+        if (annotationIndex) {
+            accessedAnnotationIndex = getAnnotationIndexForDirection({
+                deviceIndex,
+                currentAnnotationIndex: annotationIndex,
+                selectedSongIndex,
+                selectedDotKeys,
+                lyricColumnIndex: selectedLyricColumnIndex,
+                direction
+            })
+        } else {
+            accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
+                deviceIndex,
+                verseIndex,
+                selectedSongIndex,
+                selectedDotKeys,
+                lyricColumnIndex: selectedLyricColumnIndex,
+                direction
+            })
+        }
+
         this.props.accessAnnotationIndex(accessedAnnotationIndex)
-        return true
+
+        // If needed, scroll to this annotation index.
+        return accessedAnnotationIndex
     }
 
     accessAnnotationAnchor(accessedAnnotationAnchorIndex) {
@@ -200,6 +219,7 @@ const mapStateToProps = ({
     deviceIndex,
     selectedDotKeys,
     selectedAnnotationIndex,
+    selectedVerseIndex,
     selectedLyricColumnIndex,
     selectedSongIndex,
 
@@ -207,6 +227,7 @@ const mapStateToProps = ({
     deviceIndex,
     selectedDotKeys,
     selectedAnnotationIndex,
+    selectedVerseIndex,
     selectedLyricColumnIndex,
     selectedSongIndex,
 

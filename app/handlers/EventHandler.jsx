@@ -63,11 +63,14 @@ class EventHandler extends Component {
     }
 
     handleAnnotationAccess({
-        accessedAnnotationIndex,
-        doScroll
+        doScroll,
+        ...other
     }) {
-        const annotationAccessed = this.props.accessAnnotation(accessedAnnotationIndex)
-        if (annotationAccessed && doScroll) {
+        const accessedAnnotationIndex = this.props.accessAnnotation(
+            other
+        )
+
+        if (accessedAnnotationIndex && doScroll) {
             this.props.scrollElementIntoView({
                 log: 'Access lyric annotation.',
                 scrollClass: LYRIC_ANNOTATION_SCROLL,

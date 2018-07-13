@@ -9,9 +9,7 @@ import { getSongsAndLoguesCount,
          getBookColumnIndex,
          getPortalLink,
          getAnnotationObject } from '../helpers/dataHelper'
-import { getAnnotationIndexForDirection,
-         getAnnotationIndexForVerseIndex,
-         getAnnotationAnchorIndexForDirection } from '../helpers/logicHelper'
+import { getAnnotationAnchorIndexForDirection } from '../helpers/logicHelper'
 import { ARROW_LEFT,
          ARROW_RIGHT,
          ARROW_UP,
@@ -67,7 +65,6 @@ class KeyHandler extends Component {
 
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
         this._routeNavigation = this._routeNavigation.bind(this)
-        this._accessAnnotationWithoutDirection = this._accessAnnotationWithoutDirection.bind(this)
         this._handleAnnotationNavigation = this._handleAnnotationNavigation.bind(this)
         this._handleDotsNavigation = this._handleDotsNavigation.bind(this)
         this._handleNavNavigation = this._handleNavNavigation.bind(this)
@@ -143,6 +140,7 @@ class KeyHandler extends Component {
             if (!this.props.selectedAnnotationIndex &&
                 !this.props.selectedAccessIndex &&
                 !annotationIndexWasAccessed) {
+
                 this._accessAnnotationWithoutDirection(
                     this.props.selectedVerseIndex
                 )
@@ -177,6 +175,16 @@ class KeyHandler extends Component {
         })
     }
 
+    _accessAnnotationWithoutDirection(verseIndex) {
+        /**
+         * Helper method to be called when access is turned on, or when
+         * interactivated verse is selected.
+         */
+        this.props.eventHandlers.handleAnnotationAccess({
+            verseIndex
+        })
+    }
+
     _routeNavigation(e, keyName) {
         const { isHeightlessLyricColumn,
                 isLyricExpanded,
@@ -204,8 +212,14 @@ class KeyHandler extends Component {
 
                     // We're selecting the interactivated verse.
                 } else {
-                    keyWasRegistered = eventHandlers.handleLyricVerseSelect(e, interactivatedVerseIndex)
-                    this._accessAnnotationWithoutDirection(interactivatedVerseIndex)
+                    keyWasRegistered =
+                        eventHandlers.handleLyricVerseSelect(
+                            e, interactivatedVerseIndex
+                        )
+
+                    this._accessAnnotationWithoutDirection(
+                        interactivatedVerseIndex
+                    )
                     annotationIndexWasAccessed = true
                 }
 
@@ -431,12 +445,15 @@ class KeyHandler extends Component {
 
     _handleLyricNavigation(e, keyName) {
         const { props } = this,
-            { interactivatedVerseIndex,
-              eventHandlers } = props,
+            {
+                interactivatedVerseIndex,
+                accessedAnnotationIndex,
+                eventHandlers
+            } = props,
+
             isVerseInteractivated = interactivatedVerseIndex > -1
 
-        let { accessedAnnotationIndex } = props,
-            direction
+        let direction
 
         switch (keyName) {
             case ARROW_LEFT:
@@ -446,7 +463,9 @@ class KeyHandler extends Component {
                 direction = 1
                 break
             case ENTER:
-                return eventHandlers.handleLyricAnnotationSelect(e, accessedAnnotationIndex)
+                return eventHandlers.handleLyricAnnotationSelect(
+                    e, accessedAnnotationIndex
+                )
             default:
                 return false
         }
@@ -455,17 +474,19 @@ class KeyHandler extends Component {
          * If this key will turn on access, choose annotation based on selected
          * verse.
          */
-        if (!props.selectedAccessIndex || isVerseInteractivated) {
-            const verseIndex = isVerseInteractivated ?
-                interactivatedVerseIndex : props.selectedVerseIndex
+        if (
+            !props.selectedAccessIndex ||
+            isVerseInteractivated
+        ) {
+            const
+                verseIndex = isVerseInteractivated ?
+                    interactivatedVerseIndex :
+                    props.selectedVerseIndex
 
-            accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-                deviceIndex: props.deviceIndex,
+            eventHandlers.handleAnnotationAccess({
                 verseIndex,
-                selectedSongIndex: props.selectedSongIndex,
-                selectedDotKeys: props.selectedDotKeys,
-                lyricColumnIndex: props.selectedLyricColumnIndex,
-                direction
+                direction,
+                doScroll: true
             })
 
             if (isVerseInteractivated) {
@@ -473,20 +494,13 @@ class KeyHandler extends Component {
             }
 
         } else {
-            accessedAnnotationIndex = getAnnotationIndexForDirection({
-                deviceIndex: props.deviceIndex,
-                currentAnnotationIndex: accessedAnnotationIndex,
-                selectedSongIndex: props.selectedSongIndex,
-                selectedDotKeys: props.selectedDotKeys,
-                lyricColumnIndex: props.selectedLyricColumnIndex,
-                direction
+            eventHandlers.handleAnnotationAccess({
+                annotationIndex: accessedAnnotationIndex,
+                direction,
+                doScroll: true
             })
         }
 
-        eventHandlers.handleAnnotationAccess({
-            accessedAnnotationIndex,
-            doScroll: true
-        })
         return true
     }
 
@@ -602,34 +616,13 @@ class KeyHandler extends Component {
         }
     }
 
-    _accessAnnotationWithoutDirection(verseIndex) {
-        /**
-         * Helper method to be called when access is turned on, or when
-         * interactivated verse is selected.
-         */
-        const { props } = this,
-            { eventHandlers } = props,
-            accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-                deviceIndex: props.deviceIndex,
-                verseIndex,
-                selectedSongIndex: props.selectedSongIndex,
-                selectedDotKeys: props.selectedDotKeys,
-                lyricColumnIndex: props.selectedLyricColumnIndex
-            })
-
-        eventHandlers.handleAnnotationAccess({
-            accessedAnnotationIndex,
-            doScroll: false
-        })
-    }
-
     render() {
         return null
     }
 }
 
 export default connect(({
-    isHeightlessLyricColumn, isLyricExpanded, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    isHeightlessLyricColumn, isLyricExpanded, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotsIndex, selectedDotKeys, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }) => ({
-    isHeightlessLyricColumn, isLyricExpanded, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotsIndex, selectedDotKeys, selectedLyricColumnIndex, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
+    isHeightlessLyricColumn, isLyricExpanded, selectedAccessIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotsIndex, selectedDotKeys, selectedOverviewIndex, selectedTipsIndex, selectedScoreIndex, selectedSongIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, accessedAnnotationAnchorIndex, accessedDotIndex, accessedNavSongIndex, interactivatedVerseIndex, shownBookColumnIndex, deviceIndex
 }))(KeyHandler)

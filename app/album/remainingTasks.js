@@ -29,9 +29,9 @@ module.exports = [
     },
 
     {
-        taskName: `Accessed annotation index is wrong when loading song with selected verse.`,
-        workedHours: 0,
-        neededHours: 1
+        taskName: `Accessed annotation index is wrong when loading song with selected verse, and access is already on. Also, sliding dots shouldn't reset accessed annotation index. Fix by only having annotation manager access annotation index. Consolidate state and helpers afterwards.`,
+        workedHours: 2,
+        neededHours: 4
     },
 
     {
@@ -50,6 +50,18 @@ module.exports = [
         taskName: `Show enter access key in accessed anchors.`,
         workedHours: 0,
         neededHours: 2
+    },
+
+    {
+        taskName: `Show enter access key in accessed stanza dots.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Know when not to show up or down in lyric column, based on whether it's scrolled to the very top or bottom?`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     /**
