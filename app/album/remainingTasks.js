@@ -64,6 +64,12 @@ module.exports = [
         neededHours: 1
     },
 
+    {
+        taskName: `Have selectTimeAndVerse return an index so that scrolling can all be handled by EventHandler.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Remaining scene work.
      */
