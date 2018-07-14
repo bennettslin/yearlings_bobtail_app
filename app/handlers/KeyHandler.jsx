@@ -9,7 +9,7 @@ import { getSongsAndLoguesCount,
          getBookColumnIndex,
          getPortalLink,
          getAnnotationObject } from '../helpers/dataHelper'
-import { getAnnotationAnchorIndexForDirection } from '../helpers/logicHelper'
+
 import { ARROW_LEFT,
          ARROW_RIGHT,
          ARROW_UP,
@@ -304,14 +304,9 @@ class KeyHandler extends Component {
                 // If not accessed on, do nothing and just turn access on.
                 if (props.selectedAccessIndex) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    accessedAnnotationAnchorIndex = getAnnotationAnchorIndexForDirection({
-                        selectedSongIndex: props.selectedSongIndex,
-                        selectedAnnotationIndex: props.selectedAnnotationIndex,
-                        selectedDotKeys: props.selectedDotKeys,
-                        initialAnnotationAnchorIndex: accessedAnnotationAnchorIndex,
+                    eventHandlers.handleAnnotationAnchorAccess(
                         direction
-                    })
-                    eventHandlers.handleAnnotationAnchorAccess(accessedAnnotationAnchorIndex)
+                    )
                 }
                 break
             }

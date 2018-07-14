@@ -25,11 +25,13 @@ class AnnotationManager extends Component {
     static propTypes = {
         // Through Redux.
         deviceIndex: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
+        selectedDotKeys: PropTypes.object.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+
+        accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
         accessAnnotationIndex: PropTypes.func.isRequired,
         accessAnnotationAnchorIndex: PropTypes.func.isRequired,
@@ -206,8 +208,27 @@ class AnnotationManager extends Component {
         return accessedAnnotationIndex
     }
 
-    accessAnnotationAnchor(accessedAnnotationAnchorIndex) {
-        this.props.accessAnnotationAnchorIndex(accessedAnnotationAnchorIndex)
+    accessAnnotationAnchor(direction) {
+        const {
+                selectedSongIndex,
+                selectedAnnotationIndex,
+                selectedDotKeys,
+                accessedAnnotationAnchorIndex
+            } = this.props,
+
+            nextAccessedAnnotationAnchorIndex =
+                getAnnotationAnchorIndexForDirection({
+                    selectedSongIndex,
+                    selectedAnnotationIndex,
+                    selectedDotKeys,
+                    initialAnnotationAnchorIndex:
+                        accessedAnnotationAnchorIndex,
+                    direction
+                })
+
+        this.props.accessAnnotationAnchorIndex(
+            nextAccessedAnnotationAnchorIndex
+        )
     }
 
     render() {
@@ -217,19 +238,21 @@ class AnnotationManager extends Component {
 
 const mapStateToProps = ({
     deviceIndex,
-    selectedDotKeys,
+    selectedSongIndex,
     selectedAnnotationIndex,
     selectedVerseIndex,
+    accessedAnnotationAnchorIndex,
+    selectedDotKeys,
     selectedLyricColumnIndex,
-    selectedSongIndex,
 
 }) => ({
     deviceIndex,
-    selectedDotKeys,
+    selectedSongIndex,
     selectedAnnotationIndex,
     selectedVerseIndex,
+    accessedAnnotationAnchorIndex,
+    selectedDotKeys,
     selectedLyricColumnIndex,
-    selectedSongIndex,
 
 })
 

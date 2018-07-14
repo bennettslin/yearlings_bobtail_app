@@ -87,6 +87,10 @@ class EventHandler extends Component {
         }
     }
 
+    handleAnnotationAnchorAccess(payload) {
+        this.props.accessAnnotationAnchor(payload)
+    }
+
     handleDotAccess(accessedDotIndex) {
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
@@ -94,10 +98,6 @@ class EventHandler extends Component {
 
         this.props.accessDot(accessedDotIndex)
         return true
-    }
-
-    handleAnnotationAnchorAccess(accessedAnnotationAnchorIndex) {
-        this.props.accessAnnotationAnchor(accessedAnnotationAnchorIndex)
     }
 
     handleSongAccess(accessedNavSongIndex) {
