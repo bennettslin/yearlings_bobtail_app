@@ -48,10 +48,14 @@ class Annotation extends Component {
                 alwaysBypassCheck: {
                     inCarousel: true
                 }
-            }) || !getPropsAreShallowEqual({
-                props: this.props.selectedDotKeys,
-                nextProps: nextProps.selectedDotKeys
-            })
+
+            // Only selected annotation needs to care about dot keys.
+            }) || (
+                nextProps.isSelected && !getPropsAreShallowEqual({
+                    props: this.props.selectedDotKeys,
+                    nextProps: nextProps.selectedDotKeys
+                })
+            )
 
         return shouldComponentUpdate
     }
