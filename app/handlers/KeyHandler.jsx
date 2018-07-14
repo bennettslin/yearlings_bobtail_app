@@ -82,11 +82,12 @@ class KeyHandler extends Component {
     }
 
     handleKeyDownPress(e) {
-
         const { eventHandlers } = this.props
 
-        let { key: keyName,
-              keyCode } = e
+        let {
+            key: keyName,
+            keyCode
+        } = e
 
         // Workaround for Safari, which doesn't recognise key on event.
         if (keyName === 'Unidentified') {
@@ -94,7 +95,12 @@ class KeyHandler extends Component {
         }
 
         // Do not handle at all if any modifier keys are present.
-        if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) {
+        if (
+            e.altKey ||
+            e.ctrlKey ||
+            e.metaKey ||
+            e.shiftKey
+        ) {
             return
         }
 
@@ -105,12 +111,22 @@ class KeyHandler extends Component {
         eventHandlers.handleAccessToggle(true)
 
         // Do not allow the event to propagate if it's an exempt key.
-        if (keyName === TAB || keyName === CAPS_LOCK || keyName === SPACE || keyName === PAGE_UP || keyName === PAGE_DOWN) {
+        if (
+            keyName === TAB ||
+            keyName === CAPS_LOCK ||
+            keyName === SPACE ||
+            keyName === PAGE_UP ||
+            keyName === PAGE_DOWN
+        ) {
 
             /**
              * While these keys do not register, they do scroll the lyric.
              */
-            if (keyName === SPACE || keyName === PAGE_UP || keyName === PAGE_DOWN) {
+            if (
+                keyName === SPACE ||
+                keyName === PAGE_UP ||
+                keyName === PAGE_DOWN
+            ) {
                 this._setHandleLyricWheelTimeout()
             }
 
@@ -127,9 +143,14 @@ class KeyHandler extends Component {
             this._handleEscape(e)
 
         } else {
-            const isNavKey = keyName.indexOf('Arrow') > -1 || keyName === ENTER,
-                { annotationIndexWasAccessed,
-                  keyWasRegistered } = isNavKey ?
+            const isNavKey =
+                keyName.indexOf('Arrow') > -1 ||
+                keyName === ENTER,
+
+                {
+                    annotationIndexWasAccessed,
+                    keyWasRegistered
+                } = isNavKey ?
                     this._routeNavigation(e, keyName) :
                     this._handleLetterKey(e, keyName)
 
@@ -137,9 +158,11 @@ class KeyHandler extends Component {
              * If just now turning on access, also access annotation index,
              * unless we've already done so.
              */
-            if (!this.props.selectedAnnotationIndex &&
+            if (
+                !this.props.selectedAnnotationIndex &&
                 !this.props.selectedAccessIndex &&
-                !annotationIndexWasAccessed) {
+                !annotationIndexWasAccessed
+            ) {
 
                 this._accessAnnotationWithoutDirection(
                     this.props.selectedVerseIndex
@@ -154,7 +177,10 @@ class KeyHandler extends Component {
              * At this point, up and down arrows are used to scroll lyric, so
              * turn off autoScroll and determine verse bars.
              */
-            } else if (keyName === ARROW_DOWN || keyName === ARROW_UP) {
+            } else if (
+                keyName === ARROW_DOWN ||
+                keyName === ARROW_UP
+            ) {
                 this._setHandleLyricWheelTimeout()
             }
         }
@@ -166,8 +192,12 @@ class KeyHandler extends Component {
         const lyricWheelTimeoutId = setTimeout(
             this.props.eventHandlers.handleLyricWheel,
 
-            // This duration is long enough for Chrome, Firefox, and Safari.
-            150
+            /**
+             * Make duration long enough for Chrome, Firefox, and Safari. 150
+             * is fine for lyric page up and down. 300 seems to be needed for
+             * navigating between annotations.
+             */
+            300
         )
 
         this.setState({
@@ -338,6 +368,11 @@ class KeyHandler extends Component {
                 break
         }
 
+        // Accessing annotation might scroll lyric.
+        if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
+            this._setHandleLyricWheelTimeout()
+        }
+
         return { annotationIndexWasAccessed,
                  keyWasRegistered }
     }
@@ -499,6 +534,11 @@ class KeyHandler extends Component {
                 direction,
                 doScroll: true
             })
+        }
+
+        // Accessing annotation might scroll lyric.
+        if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
+            this._setHandleLyricWheelTimeout()
         }
 
         return true
