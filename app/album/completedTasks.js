@@ -3215,7 +3215,7 @@ module.exports = [
     },
     {
         taskName: `Show enter access key in accessed anchors and stanza dots. General refactor.`,
-        workedHours: 4,
-        neededHours: 4
+        workedHours: 5,
+        neededHours: 5
     },
 ]

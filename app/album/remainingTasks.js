@@ -35,7 +35,7 @@ module.exports = [
     },
 
     {
-        taskName: `Access icons in popup annotation look weird.`,
+        taskName: `Access icon blocks in popup annotation look weird.`,
         workedHours: 0,
         neededHours: 1
     },
