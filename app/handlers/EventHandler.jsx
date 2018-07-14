@@ -422,7 +422,7 @@ class EventHandler extends Component {
     }
 
     handleLyricColumnSelect(e) {
-        const columnSelected = this.props.selectLyricColumn({})
+        const columnSelected = this.props.selectLyricColumn()
         if (columnSelected) {
             this.stopPropagation(e)
         }
@@ -746,12 +746,6 @@ class EventHandler extends Component {
         }
     }
 
-    // handleSetVerseElement(verseElement) {
-        // this.props.setVerseElement({
-        //     verseElement
-        // })
-    // }
-
     /********
      * WIKI *
      ********/
@@ -795,7 +789,7 @@ class EventHandler extends Component {
 
             // If popup is open, close it and do nothing else.
             if (selectedWikiIndex) {
-                this.props.selectWiki({})
+                this.props.selectWiki()
                 if (!continuePastClosingPopups) {
                     return
                 }
@@ -819,7 +813,7 @@ class EventHandler extends Component {
         }
 
         if (!exemptAnnotation) {
-            this.props.selectAnnotation({})
+            this.props.selectAnnotation()
         }
 
         if (forceCarousel) {

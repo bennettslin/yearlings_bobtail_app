@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { accessAnnotationIndex } from '../redux/actions/access'
 import {
     setIsLyricExpanded,
     setIsManualScroll
@@ -12,7 +11,7 @@ import { selectLyricColumnIndex } from '../redux/actions/storage'
 
 import { getSongIsLogue } from '../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import { getAnnotationIndexForVerseIndex } from '../helpers/logicHelper'
+
 import {
     getShowOneOfTwoLyricColumns,
     getIsLyricExpandable
@@ -25,19 +24,17 @@ class LyricManager extends Component {
         deviceIndex: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
         selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
 
-        accessAnnotationIndex: PropTypes.func.isRequired,
         selectLyricColumnIndex: PropTypes.func.isRequired,
         setIsLyricExpanded: PropTypes.func.isRequired,
         setIsManualScroll: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        deselectAnnotation: PropTypes.func.isRequired
+        deselectAnnotation: PropTypes.func.isRequired,
+        accessAnnotationIfCurrentInvalid: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -48,9 +45,6 @@ class LyricManager extends Component {
         return !getPropsAreShallowEqual({
             props: this.props,
             nextProps
-        }) || !getPropsAreShallowEqual({
-            props: this.props.selectedDotKeys,
-            nextProps: nextProps.selectedDotKeys
         })
     }
 
@@ -83,7 +77,7 @@ class LyricManager extends Component {
         selectedLyricColumnIndex = (this.props.selectedLyricColumnIndex + 1) % 2,
         selectedSongIndex = this.props.selectedSongIndex,
         annotationIndex = this.props.selectedAnnotationIndex
-    }) {
+    } = {}) {
         const { props } = this
 
         /**
@@ -108,15 +102,11 @@ class LyricManager extends Component {
         props.selectLyricColumnIndex(selectedLyricColumnIndex)
 
         // Switching lyric column might change accessed annotation index.
-        this.props.accessAnnotationIndex(
-            getAnnotationIndexForVerseIndex({
-                deviceIndex: props.deviceIndex,
-                verseIndex: props.selectedVerseIndex,
-                selectedSongIndex,
-                selectedDotKeys: props.selectedDotKeys,
-                lyricColumnIndex: selectedLyricColumnIndex
-            })
-        )
+        this.props.accessAnnotationIfCurrentInvalid({
+            selectedSongIndex,
+            selectedLyricColumnIndex
+        })
+
         return true
     }
 
@@ -133,23 +123,18 @@ const mapStateToProps = ({
     deviceIndex,
     isLyricExpanded,
     selectedAnnotationIndex,
-    selectedDotKeys,
     selectedLyricColumnIndex,
     selectedSongIndex,
-    selectedVerseIndex
 }) => ({
     deviceIndex,
     isLyricExpanded,
     selectedAnnotationIndex,
-    selectedDotKeys,
     selectedLyricColumnIndex,
     selectedSongIndex,
-    selectedVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        accessAnnotationIndex,
         selectLyricColumnIndex,
         setIsLyricExpanded,
         setIsManualScroll

@@ -53,6 +53,18 @@ module.exports = [
         neededHours: 3
     },
 
+    {
+        taskName: `Have system to show pixels of varying sizes.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
+        taskName: `Make Cubes sequence a little more smooth.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
         // Low priority bugs.
     // {
     //     taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,

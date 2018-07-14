@@ -1,7 +1,7 @@
 module.exports = [
 
     /**
-     * Hack Week work?
+     * Begin Hack Week work.
      */
 
     {
@@ -23,13 +23,37 @@ module.exports = [
     },
 
     {
-        taskName: `Make Cubes sequence a little more smooth.`,
+        taskName: `Set up buttons to use svgs, including loading icons.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    /**
+     * Mobile bugs. (Might be able to quickly get through once deployment
+     * strategy is worked out.)
+     */
+    {
+        taskName: `Bug where audio banner in actual mobile phone has weird position.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `iOS scrolling isn't smooth.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `PDF in mobile doesn't scroll. Copy screening-js approach?`,
         workedHours: 0,
         neededHours: 3
     },
 
+    /**
+     * End Hack Week work.
+     */
+
     {
-        taskName: `Also, sliding dots shouldn't reset accessed annotation index. Fix by only having annotation manager access annotation index. Consolidate state and helpers afterwards.`,
+        taskName: `Work on method to access new annotation index only if current invalid.`,
         workedHours: 3,
         neededHours: 4
     },
@@ -70,53 +94,20 @@ module.exports = [
         neededHours: 3
     },
 
+    {
+        taskName: `Right seat is cut off in laptop width.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Remaining scene work.
      */
 
     {
-        taskName: `Have system to show pixels of varying sizes.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-
-    {
         taskName: `Rethink tasks for panels, doors, and windows.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Keep admin stuff in dev, not in production.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    /**
-     * Mobile bugs.
-     */
-    {
-        taskName: `Bug where audio banner in actual mobile phone has weird position.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `iOS scrolling isn't smooth.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `PDF in mobile doesn't scroll. Copy screening-js approach?`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    /**
-     * Text colours.
-     */
-    {
-        taskName: `Establish stanza, dot, and selected, interactivated, accessed, disabled, and before, after, and on cursor colours.`,
-        workedHours: 0,
-        neededHours: 5
     },
 
     /**
@@ -152,17 +143,19 @@ module.exports = [
         neededHours: 5
     },
 
-    // Full day tasks.
+    /**
+     * Final UI.
+     */
     {
-        taskName: `Set up buttons to use svgs, including loading icons.`,
+        taskName: `Finalise UI of carousel annotations. Make the navigation pictures a similar style.`,
         workedHours: 0,
         neededHours: 8
     },
 
     {
-        taskName: `Finalise UI of carousel annotations. Make the navigation pictures a similar style.`,
+        taskName: `Establish stanza, dot, and selected, interactivated, accessed, disabled, and before, after, and on cursor colours.`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 5
     },
 
     {
@@ -195,4 +188,12 @@ module.exports = [
         neededHours: 5
     },
 
+    /**
+     * Absolute final.
+     */
+    {
+        taskName: `Keep admin stuff in dev, not in production.`,
+        workedHours: 0,
+        neededHours: 3
+    },
 ]

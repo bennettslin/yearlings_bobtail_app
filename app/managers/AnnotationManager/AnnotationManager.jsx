@@ -18,7 +18,7 @@ import {
     getAnnotationIndexForDirection,
     getAnnotationAnchorIndexForDirection,
     shouldShowAnnotationForColumn
-} from '../../helpers/logicHelper'
+} from './annotationManagerHelper'
 
 class AnnotationManager extends Component {
 
@@ -91,7 +91,7 @@ class AnnotationManager extends Component {
         selectedSongIndex = this.props.selectedSongIndex,
         initialAnnotationAnchorIndex = 1,
         direction
-    }) {
+    } = {}) {
         const { props } = this
 
         // Called from arrow buttons in popup.
@@ -162,7 +162,7 @@ class AnnotationManager extends Component {
                 })
 
             if (!showAnnotationForColumn) {
-                this.selectAnnotation({})
+                this.selectAnnotation()
             }
         }
     }
@@ -208,6 +208,16 @@ class AnnotationManager extends Component {
 
         // If needed, scroll to this annotation index.
         return accessedAnnotationIndex
+    }
+
+    accessAnnotationIfCurrentInvalid({
+        selectedSongIndex,
+        selectedLyricColumnIndex
+    } = {}) {
+        this.accessAnnotation({
+            selectedSongIndex,
+            selectedLyricColumnIndex
+        })
     }
 
     accessAnnotationAnchor(direction) {

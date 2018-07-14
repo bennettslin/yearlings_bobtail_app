@@ -84,6 +84,10 @@ class StateManager extends Component {
         return this.annotationManager.accessAnnotationAnchor(payload)
     }
 
+    accessAnnotationIfCurrentInvalid(payload) {
+        return this.annotationManager.accessAnnotationIfCurrentInvalid(payload)
+    }
+
     /*********
      * AUDIO *
      *********/
@@ -302,8 +306,10 @@ class StateManager extends Component {
 
     _bindEventHandlers() {
         this.accessAnnotation = this.accessAnnotation.bind(this)
-        this.accessDot = this.accessDot.bind(this)
         this.accessAnnotationAnchor = this.accessAnnotationAnchor.bind(this)
+        this.accessAnnotationIfCurrentInvalid =
+            this.accessAnnotationIfCurrentInvalid.bind(this)
+        this.accessDot = this.accessDot.bind(this)
         this.accessNavSong = this.accessNavSong.bind(this)
         this.toggleAccess = this.toggleAccess.bind(this)
         this.toggleAdmin = this.toggleAdmin.bind(this)
@@ -414,10 +420,12 @@ class StateManager extends Component {
                 />
                 <DotsManager
                     setRef={node => (this.dotsManager = node)}
+                    accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
                 />
                 <LyricManager
                     setRef={node => (this.lyricManager = node)}
                     deselectAnnotation={this.deselectAnnotation}
+                    accessAnnotationIfCurrentInvalid={this.accessAnnotationIfCurrentInvalid}
                 />
                 <NavManager
                     setRef={node => (this.navManager = node)}

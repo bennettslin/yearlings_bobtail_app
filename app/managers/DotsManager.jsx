@@ -3,10 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import {
-    accessAnnotationIndex,
-    accessDotIndex
-} from '../redux/actions/access'
+import { accessDotIndex } from '../redux/actions/access'
 
 import {
     selectDotKey,
@@ -15,7 +12,6 @@ import {
 
 import { getSongIsLogue } from '../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import { getAnnotationIndexForVerseIndex } from '../helpers/logicHelper'
 
 import { ALL_DOT_KEYS } from '../constants/dots'
 
@@ -23,20 +19,17 @@ class DotsManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
-        selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
 
-        accessAnnotationIndex: PropTypes.func.isRequired,
         accessDotIndex: PropTypes.func.isRequired,
         selectDotKey: PropTypes.func.isRequired,
         selectDotsIndex: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired,
+        accessAnnotationIfCurrentInvalid: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -78,20 +71,11 @@ class DotsManager extends Component {
         }
 
         /**
-         * If closing dots section, get accessed annotation index because it
-         * might have changed.
+         * If closing dots section, check if accessed annotation index is now
+         * invalid, and change if so.
          */
-        // TODO: Move to AnnotationManager.
         if (!selectedDotsValue) {
-            this.props.accessAnnotationIndex(
-                getAnnotationIndexForVerseIndex({
-                    deviceIndex: this.props.deviceIndex,
-                    verseIndex: this.props.selectedVerseIndex,
-                    selectedSongIndex: this.props.selectedSongIndex,
-                    selectedDotKeys: this.props.selectedDotKeys,
-                    lyricColumnIndex: this.props.selectedLyricColumnIndex
-                })
-            )
+            this.props.accessAnnotationIfCurrentInvalid()
         }
 
         this.props.selectDotsIndex(selectedDotsValue)
@@ -108,24 +92,17 @@ class DotsManager extends Component {
 }
 
 const mapStateToProps = ({
-    deviceIndex,
     selectedDotsIndex,
     selectedDotKeys,
-    selectedLyricColumnIndex,
-    selectedSongIndex,
-    selectedVerseIndex
+    selectedSongIndex
 }) => ({
-    deviceIndex,
     selectedDotsIndex,
     selectedDotKeys,
-    selectedLyricColumnIndex,
-    selectedSongIndex,
-    selectedVerseIndex
+    selectedSongIndex
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        accessAnnotationIndex,
         accessDotIndex,
         selectDotKey,
         selectDotsIndex
