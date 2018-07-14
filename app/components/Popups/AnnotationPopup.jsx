@@ -186,7 +186,7 @@ class AnnotationPopup extends Component {
                     <Annotation {...other}
                         isAccessed
                         isSelected
-                        popupAnnotationIndex={popupAnnotationIndex}
+                        annotationIndex={popupAnnotationIndex}
                     />
                 </Popup>
             )

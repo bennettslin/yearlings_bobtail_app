@@ -17,12 +17,10 @@ import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
-    renderableSongIndex,
-    renderableAnnotationIndex
+    renderableSongIndex
 }) => ({
     canCarouselRender,
-    renderableSongIndex,
-    renderableAnnotationIndex
+    renderableSongIndex
 })
 
 class AnnotationPortal extends Component {
@@ -31,11 +29,9 @@ class AnnotationPortal extends Component {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
-        renderableAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
-        annotationIndex: PropTypes.number,
-        popupAnnotationIndex: PropTypes.number,
+        annotationIndex: PropTypes.number.isRequired,
         cardIndex: PropTypes.number.isRequired,
         portalLinkIndex: PropTypes.number.isRequired,
         isAccessed: PropTypes.bool.isRequired,
@@ -56,27 +52,11 @@ class AnnotationPortal extends Component {
                 nextProps,
                 alwaysBypassCheck: {
                     cardIndex: true,
-                    annotationIndex: true,
                     portalLinkIndex: true
-                },
-                checkIsShallowEqual: {
-                    renderableAnnotationIndex: true
-                },
-                onlyOnCondition: !nextProps.annotationIndex
+                }
             })
 
         return shouldComponentUpdate
-    }
-
-    componentDidUpdate() {
-        const {
-            annotationIndex,
-            renderableAnnotationIndex
-        } = this.props
-
-        if (annotationIndex === renderableAnnotationIndex) {
-            console.warn('AnnotationPortal rendered.')
-        }
     }
 
     _handlePortalClick(e) {
@@ -95,19 +75,14 @@ class AnnotationPortal extends Component {
     _getPortalObject() {
         const {
             renderableSongIndex,
-            renderableAnnotationIndex,
             annotationIndex,
-            popupAnnotationIndex,
             cardIndex,
             portalLinkIndex
         } = this.props
 
         return getAnnotationCardPortalObject({
             songIndex: renderableSongIndex,
-            annotationIndex:
-                annotationIndex ||
-                renderableAnnotationIndex ||
-                popupAnnotationIndex,
+            annotationIndex,
             cardIndex,
             portalLinkIndex
         })

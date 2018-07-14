@@ -13,12 +13,10 @@ import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 const mapStateToProps = ({
     canCarouselRender,
     renderableSongIndex,
-    renderableAnnotationIndex,
     accessedAnnotationAnchorIndex
 }) => ({
     canCarouselRender,
     renderableSongIndex,
-    renderableAnnotationIndex,
     accessedAnnotationAnchorIndex
 })
 
@@ -27,12 +25,10 @@ class AnnotationPortals extends Component {
     static propTypes = {
         // Through Redux.
         renderableSongIndex: PropTypes.number.isRequired,
-        renderableAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
         // From parent.
-        annotationIndex: PropTypes.number,
-        popupAnnotationIndex: PropTypes.number,
+        annotationIndex: PropTypes.number.isRequired,
         cardIndex: PropTypes.number.isRequired
     }
 
@@ -41,21 +37,9 @@ class AnnotationPortals extends Component {
             props: this.props,
             nextProps,
             alwaysBypassCheck: {
-                annotationIndex: true,
                 cardIndex: true
             }
         })
-    }
-
-    componentDidUpdate() {
-        const {
-            annotationIndex,
-            renderableAnnotationIndex
-        } = this.props
-
-        if (annotationIndex === renderableAnnotationIndex) {
-            console.warn('AnnotationPortals rendered.')
-        }
     }
 
     render() {
@@ -63,26 +47,21 @@ class AnnotationPortals extends Component {
                 /* eslint-disable no-unused-vars */
                 canCarouselRender,
                 dispatch,
-                /* eslint-disable no-unused-vars */
+                /* eslint-enable no-unused-vars */
 
                 renderableSongIndex,
-                renderableAnnotationIndex,
                 accessedAnnotationAnchorIndex,
                 ...other
             } = this.props,
 
             {
                 annotationIndex,
-                popupAnnotationIndex,
                 cardIndex
             } = other,
 
             portalLinksArray = getAnnotationCardPortalLinksArray({
                 songIndex: renderableSongIndex,
-                annotationIndex:
-                    annotationIndex ||
-                    renderableAnnotationIndex ||
-                    popupAnnotationIndex,
+                annotationIndex,
                 cardIndex
             })
 

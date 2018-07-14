@@ -26,7 +26,7 @@ AudioBanner = ({
 
     /* eslint-disable no-unused-vars */
     dispatch,
-    /* eslint-disable no-unused-vars */
+    /* eslint-enable no-unused-vars */
 
     isTwoRowMenu,
     selectedSongIndex,

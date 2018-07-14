@@ -16,12 +16,10 @@ import { getAccessibleAnnotationAnchorsLength } from './annotationHelper'
 const mapStateToProps = ({
     canCarouselRender,
     renderableSongIndex,
-    renderableAnnotationIndex,
     selectedDotKeys
 }) => ({
     canCarouselRender,
     renderableSongIndex,
-    renderableAnnotationIndex,
     selectedDotKeys
 })
 
@@ -35,12 +33,10 @@ class Annotation extends Component {
         // Through Redux.
         canCarouselRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
-        renderableAnnotationIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.
-        annotationIndex: PropTypes.number,
-        popupAnnotationIndex: PropTypes.number,
+        annotationIndex: PropTypes.number.isRequired,
         isSelected: PropTypes.bool
     }
 
@@ -50,14 +46,8 @@ class Annotation extends Component {
                 props: this.props,
                 nextProps,
                 alwaysBypassCheck: {
-                    annotationIndex: true,
                     inCarousel: true
-                },
-                checkIsShallowEqual: {
-                    renderableAnnotationIndex: true
-                },
-                onlyOnCondition: !nextProps.annotationIndex
-
+                }
             }) || !getPropsAreShallowEqual({
                 props: this.props.selectedDotKeys,
                 nextProps: nextProps.selectedDotKeys
@@ -71,17 +61,14 @@ class Annotation extends Component {
                 /* eslint-disable no-unused-vars */
                 canCarouselRender,
                 dispatch,
-                /* eslint-disable no-unused-vars */
+                /* eslint-enable no-unused-vars */
 
                 renderableSongIndex,
-                renderableAnnotationIndex,
-                accessedAnnotationAnchorIndex,
                 selectedDotKeys,
                 ...other
             } = this.props,
             {
                 annotationIndex,
-                popupAnnotationIndex,
                 isSelected,
             } = other,
 
@@ -92,9 +79,7 @@ class Annotation extends Component {
              */
             annotationObject = getAnnotationObject(
                 renderableSongIndex,
-                annotationIndex ||
-                renderableAnnotationIndex ||
-                popupAnnotationIndex
+                annotationIndex
             )
 
         // If it's in popup, annotation object won't always exist.
@@ -114,10 +99,7 @@ class Annotation extends Component {
                     accessibleAnnotationAnchorsLength:
                         getAccessibleAnnotationAnchorsLength({
                             selectedSongIndex: renderableSongIndex,
-                            selectedAnnotationIndex:
-                                annotationIndex ||
-                                renderableAnnotationIndex ||
-                                popupAnnotationIndex,
+                            selectedAnnotationIndex: annotationIndex,
                             selectedDotKeys
                         })
                 }}

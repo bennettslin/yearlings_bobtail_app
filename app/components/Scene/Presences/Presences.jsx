@@ -90,7 +90,7 @@ class Presences extends Component {
                 canPresencesRender,
                 setCanRenderPixels,
                 dispatch,
-                /* eslint-disable no-unused-vars */
+                /* eslint-enable no-unused-vars */
 
                 yIndex,
                 renderableSongIndex,
