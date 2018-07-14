@@ -41,6 +41,12 @@ module.exports = [
     },
 
     {
+        taskName: `Enter access icon in annotation anchors can be positioned weird.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Position lyric column access icons all on right.`,
         workedHours: 0,
         neededHours: 1

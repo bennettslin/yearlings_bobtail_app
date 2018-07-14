@@ -97,11 +97,12 @@ class AnnotationCard extends Component {
 
 const annotationCardViewProptypes = {
     // From parent.
+    inCarousel: PropTypes.bool,
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array
     ]),
-    annotationIndex: PropTypes.number,
+    annotationIndex: PropTypes.number.isRequired,
     cardDotKeys: PropTypes.object.isRequired,
     cardIndex: PropTypes.number.isRequired,
     isSelected: PropTypes.bool.isRequired,
@@ -112,6 +113,7 @@ const annotationCardViewProptypes = {
 AnnotationCardView = ({
 
     // From props.
+    inCarousel,
     isSelected,
     annotationIndex,
     handleAnnotationWikiSelect,
@@ -125,7 +127,6 @@ AnnotationCardView = ({
 }) => {
 
     const isTextCard = Boolean(text),
-        inCarousel = Boolean(annotationIndex),
         isPortalCard = cardDotKeys.portal,
 
         annotationCardChild = (
@@ -146,10 +147,10 @@ AnnotationCardView = ({
                 {isTextCard ? (
                     <Texts
                         text={text}
-
+                        showAccessInPopupAnnotation={!inCarousel}
                         /**
-                         * Allow for clicking on anchor in unselected annotation in
-                         * carousel.
+                         * Allow for clicking on anchor in unselected
+                         * annotation in carousel.
                          */
                         annotationIndex={annotationIndex}
                         handleAnchorClick={handleAnnotationWikiSelect}

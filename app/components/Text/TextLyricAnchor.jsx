@@ -46,6 +46,7 @@ class TextLyricAnchor extends Component {
         annotationIndex: PropTypes.number,
 
         // From parent.
+        showAccessInPopupAnnotation: PropTypes.bool,
         text: PropTypes.oneOfType([
             PropTypes.string,
 
@@ -130,6 +131,7 @@ class TextLyricAnchor extends Component {
                 wikiAnnotationIndex,
                 text,
                 dotKeys,
+                showAccessInPopupAnnotation,
 
             ...other } = this.props,
 
@@ -144,7 +146,10 @@ class TextLyricAnchor extends Component {
                  */
                 !selectedDotsIndex &&
                 interactivatedVerseIndex < 0 &&
-                Boolean(selectedCarouselNavIndex)
+
+                // Let popup annotation show anchors when carousel is hidden.
+                Boolean(selectedCarouselNavIndex) ===
+                    !showAccessInPopupAnnotation
 
         /**
          * If any of the previous conditions ruled out isAccessed, it is ruled

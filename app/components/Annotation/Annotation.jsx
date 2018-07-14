@@ -134,7 +134,6 @@ const propTypes = {
 AnnotationView = ({
 
     // From props.
-    inCarousel,
     isAccessed,
     annotationDotKeys,
     annotationTitle,
@@ -146,6 +145,7 @@ AnnotationView = ({
 ...other }) => {
 
     const {
+            inCarousel,
             isSelected
         } = other,
 
