@@ -170,12 +170,14 @@ class AnnotationManager extends Component {
     accessAnnotation({
 
         annotationIndex,
-        verseIndex = this.selectedVerseIndex,
+        verseIndex = this.props.selectedVerseIndex,
+
+        selectedSongIndex = this.props.selectedSongIndex,
+        selectedDotKeys = this.props.selectedDotKeys,
 
         deviceIndex = this.props.deviceIndex,
-        selectedSongIndex = this.props.selectedSongIndex,
         selectedLyricColumnIndex = this.props.selectedLyricColumnIndex,
-        selectedDotKeys = this.props.selectedDotKeys,
+
         direction
 
     } = {}) {
@@ -184,19 +186,19 @@ class AnnotationManager extends Component {
 
         if (annotationIndex) {
             accessedAnnotationIndex = getAnnotationIndexForDirection({
-                deviceIndex,
                 currentAnnotationIndex: annotationIndex,
                 selectedSongIndex,
                 selectedDotKeys,
+                deviceIndex,
                 lyricColumnIndex: selectedLyricColumnIndex,
                 direction
             })
         } else {
             accessedAnnotationIndex = getAnnotationIndexForVerseIndex({
-                deviceIndex,
                 verseIndex,
                 selectedSongIndex,
                 selectedDotKeys,
+                deviceIndex,
                 lyricColumnIndex: selectedLyricColumnIndex,
                 direction
             })

@@ -81,6 +81,7 @@ class DotsManager extends Component {
          * If closing dots section, get accessed annotation index because it
          * might have changed.
          */
+        // TODO: Move to AnnotationManager.
         if (!selectedDotsValue) {
             this.props.accessAnnotationIndex(
                 getAnnotationIndexForVerseIndex({

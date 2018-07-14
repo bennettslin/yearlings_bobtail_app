@@ -29,8 +29,8 @@ module.exports = [
     },
 
     {
-        taskName: `Accessed annotation index is wrong when loading song with selected verse, and access is already on. Also, sliding dots shouldn't reset accessed annotation index. Fix by only having annotation manager access annotation index. Consolidate state and helpers afterwards.`,
-        workedHours: 2,
+        taskName: `Also, sliding dots shouldn't reset accessed annotation index. Fix by only having annotation manager access annotation index. Consolidate state and helpers afterwards.`,
+        workedHours: 3,
         neededHours: 4
     },
 

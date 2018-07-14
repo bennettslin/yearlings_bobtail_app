@@ -318,6 +318,7 @@ class KeyHandler extends Component {
 
                     annotationObject = getAnnotationObject(selectedSongIndex, selectedAnnotationIndex)
 
+                // TODO: Move this logic to AnnotationManager.
                 if (accessedAnnotationAnchorIndex > 0 &&
                     annotationObject &&
                     annotationObject.annotationAnchors &&

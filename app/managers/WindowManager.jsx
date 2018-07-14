@@ -6,13 +6,13 @@ import debounce from 'debounce'
 
 import { setIsWindowResizeRenderable } from '../redux/actions/render'
 
-import { accessAnnotationIndex } from '../redux/actions/access'
 import {
     setDeviceIndex,
     setWindowHeight,
     setWindowWidth,
     setStageCoordinates
 } from '../redux/actions/device'
+
 import {
     setIsHeightlessLyricColumn,
     setIsHiddenCarouselNav,
@@ -25,10 +25,7 @@ import {
 } from '../redux/actions/responsive'
 
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
-import {
-    getAnnotationIndexForDirection,
-    getAnnotationIndexForVerseIndex
-} from '../helpers/logicHelper'
+
 import {
     resizeWindow,
     getShowOneOfTwoLyricColumns,
@@ -48,14 +45,9 @@ class WindowManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        selectedAnnotationIndex: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
-        selectedLyricColumnIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedVerseIndex: PropTypes.number.isRequired,
         showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
-        accessAnnotationIndex: PropTypes.func.isRequired,
         setDeviceIndex: PropTypes.func.isRequired,
         setWindowHeight: PropTypes.func.isRequired,
         setWindowWidth: PropTypes.func.isRequired,
@@ -101,14 +93,10 @@ class WindowManager extends Component {
         }) || !getPropsAreShallowEqual({
             props: this.state,
             nextProps: nextState
-        }) || !getPropsAreShallowEqual({
-            props: this.props.selectedDotKeys,
-            nextProps: nextProps.selectedDotKeys
         })
     }
 
     componentDidUpdate(prevProps) {
-
         if (this.props.appMounted && !prevProps.appMounted) {
             this._windowResize()
         }
@@ -116,38 +104,6 @@ class WindowManager extends Component {
 
     componentWillUnmount() {
         window.onresize = null
-    }
-
-    _updateStateAfterMount(deviceIndex) {
-        const {
-            selectedAnnotationIndex,
-            selectedDotKeys,
-            selectedLyricColumnIndex,
-            selectedSongIndex,
-            selectedVerseIndex
-
-        } = this.props
-
-        // This needs to wait upon getting the deviceIndex.
-        this.props.accessAnnotationIndex(
-
-            // Based on either selected annotation or selected verse.
-            selectedAnnotationIndex ?
-                getAnnotationIndexForDirection({
-                    deviceIndex,
-                    currentAnnotationIndex: selectedAnnotationIndex,
-                    selectedSongIndex,
-                    selectedDotKeys,
-                    lyricColumnIndex: selectedLyricColumnIndex
-                }) :
-                getAnnotationIndexForVerseIndex({
-                    deviceIndex,
-                    verseIndex: selectedVerseIndex,
-                    selectedSongIndex,
-                    selectedDotKeys,
-                    lyricColumnIndex: selectedLyricColumnIndex
-                })
-        )
     }
 
     _windowResize(e) {
@@ -272,26 +228,17 @@ class WindowManager extends Component {
 
 const mapStateToProps = ({
     appMounted,
-    selectedAnnotationIndex,
-    selectedDotKeys,
-    selectedLyricColumnIndex,
     selectedSongIndex,
-    selectedVerseIndex,
     showOneOfTwoLyricColumns
 }) => ({
     appMounted,
-    selectedAnnotationIndex,
-    selectedDotKeys,
-    selectedLyricColumnIndex,
     selectedSongIndex,
-    selectedVerseIndex,
     showOneOfTwoLyricColumns
 })
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setIsWindowResizeRenderable,
-        accessAnnotationIndex,
         setDeviceIndex,
         setWindowHeight,
         setWindowWidth,
