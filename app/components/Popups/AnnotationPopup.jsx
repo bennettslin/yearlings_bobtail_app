@@ -184,6 +184,7 @@ class AnnotationPopup extends Component {
                     handlePopupContainerClick={handlePopupContainerClick}
                 >
                     <Annotation {...other}
+                        isAccessed
                         isSelected
                         popupAnnotationIndex={popupAnnotationIndex}
                     />

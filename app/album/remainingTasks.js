@@ -41,19 +41,13 @@ module.exports = [
     },
 
     {
-        taskName: `Flash access icon when key is pressed.`,
+        taskName: `Position lyric column access icons all on right.`,
         workedHours: 0,
         neededHours: 1
     },
 
     {
-        taskName: `Show enter access key in accessed anchors.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Show enter access key in accessed stanza dots.`,
+        taskName: `Flash access icon when key is pressed.`,
         workedHours: 0,
         neededHours: 1
     },

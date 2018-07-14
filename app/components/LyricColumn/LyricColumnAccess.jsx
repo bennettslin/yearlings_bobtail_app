@@ -8,7 +8,6 @@ import { convertTrueFalseKeysToBitNumber } from '../../helpers/bitHelper'
 import AccessIcons from '../AccessIcon/AccessIcons'
 
 import {
-    NAVIGATION_ENTER_KEY,
     NAVIGATION_LEFT_KEY,
     NAVIGATION_RIGHT_KEY,
     NAVIGATION_UP_KEY,
@@ -21,16 +20,14 @@ const mapStateToProps = ({
     renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    selectedDotKeys,
-    interactivatedVerseIndex
+    selectedDotKeys
 }) => ({
     isLyricExpanded,
     canLyricRender,
     renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    selectedDotKeys,
-    interactivatedVerseIndex
+    selectedDotKeys
 })
 
 class LyricColumnAccess extends Component {
@@ -42,8 +39,7 @@ class LyricColumnAccess extends Component {
         renderableAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
-        selectedDotKeys: PropTypes.object.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired
+        selectedDotKeys: PropTypes.object.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -61,8 +57,7 @@ class LyricColumnAccess extends Component {
                 renderableAnnotationIndex,
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
-                selectedDotKeys,
-                interactivatedVerseIndex
+                selectedDotKeys
             } = this.props,
 
             hasSelectedDots = Boolean(convertTrueFalseKeysToBitNumber({
@@ -84,9 +79,6 @@ class LyricColumnAccess extends Component {
                 )
             ),
 
-            // Must not have interactivated verse.
-            showEnter = showLeftRight && interactivatedVerseIndex < 0,
-
             showUpDown = Boolean(
                 !selectedDotsIndex &&
                 !renderableAnnotationIndex
@@ -95,7 +87,7 @@ class LyricColumnAccess extends Component {
         return (
             <Fragment>
                 <AccessIcons
-                    accessIconsName="lyricLeftRightEnter"
+                    accessIconsName="lyricLeftRight"
                     inLyric
                     accessKeys={[
                         {
@@ -105,11 +97,6 @@ class LyricColumnAccess extends Component {
                         {
                             accessKey: NAVIGATION_RIGHT_KEY,
                             showIfAccessed: showLeftRight
-                        },
-                        {
-                            accessKey: NAVIGATION_ENTER_KEY,
-                            showIfAccessed: showEnter,
-                            beginsCluster: true
                         }
                     ]}
                 />

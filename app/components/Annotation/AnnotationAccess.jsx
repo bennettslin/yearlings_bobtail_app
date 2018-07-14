@@ -1,10 +1,9 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import AccessIcons from '../AccessIcon/AccessIcons'
 
 import {
-    // NAVIGATION_ENTER_KEY,
     NAVIGATION_UP_KEY,
     NAVIGATION_DOWN_KEY
 } from '../../constants/access'
@@ -25,37 +24,23 @@ class LyricColumnAccess extends Component {
                 accessibleAnnotationAnchorsLength
             } = this.props,
 
-            // showEnter = isSelected && accessibleAnnotationAnchorsLength,
             showUpDown = isSelected && accessibleAnnotationAnchorsLength > 1
 
         return (
-            <Fragment>
-                {/* <AccessIcons
-                    accessIconsName="annotationEnter"
-                    inAnnotation
-                    accessKeys={[
-                        {
-                            accessKey: NAVIGATION_ENTER_KEY,
-                            showIfAccessed: showEnter,
-                            beginsCluster: true
-                        }
-                    ]}
-                /> */}
-                <AccessIcons
-                    accessIconsName="annotationUpDown"
-                    inAnnotation
-                    accessKeys={[
-                        {
-                            accessKey: NAVIGATION_UP_KEY,
-                            showIfAccessed: showUpDown
-                        },
-                        {
-                            accessKey: NAVIGATION_DOWN_KEY,
-                            showIfAccessed: showUpDown
-                        }
-                    ]}
-                />
-            </Fragment>
+            <AccessIcons
+                accessIconsName="annotationUpDown"
+                inAnnotation
+                accessKeys={[
+                    {
+                        accessKey: NAVIGATION_UP_KEY,
+                        showIfAccessed: showUpDown
+                    },
+                    {
+                        accessKey: NAVIGATION_DOWN_KEY,
+                        showIfAccessed: showUpDown
+                    }
+                ]}
+            />
         )
     }
 }
