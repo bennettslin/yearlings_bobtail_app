@@ -41,7 +41,6 @@ import { ARROW_LEFT,
          TIPS_TOGGLE_KEY,
          TITLE_TOGGLE_KEY } from '../constants/access'
 import { ALL_DOT_KEYS } from '../constants/dots'
-import { DESTINATION_PORTAL_INDEX } from '../constants/lyrics'
 import { SHOWN,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
@@ -223,6 +222,9 @@ class KeyHandler extends Component {
                 selectedVerseIndex,
                 selectedWikiIndex,
                 selectedSongIndex,
+                selectedAnnotationIndex,
+                selectedDotsIndex,
+                selectedCarouselNavIndex,
 
                 eventHandlers } = this.props,
 
@@ -254,16 +256,16 @@ class KeyHandler extends Component {
                 }
 
                 // We're in annotation.
-            } else if (this.props.selectedAnnotationIndex) {
+            } else if (selectedAnnotationIndex) {
                 ({ annotationIndexWasAccessed,
                     keyWasRegistered } = this._handleAnnotationNavigation(e, keyName))
 
                 // We're in dots section.
-            } else if (this.props.selectedDotsIndex) {
+            } else if (selectedDotsIndex) {
                 keyWasRegistered = this._handleDotsNavigation(e, keyName)
 
                 // We're in nav section.
-            } else if (!this.props.selectedCarouselNavIndex &&
+            } else if (!selectedCarouselNavIndex &&
                        !isHeightlessLyricColumn && !isLyricExpanded && !isVerseInteractivated) {
 
                 ({ annotationIndexWasAccessed,
@@ -329,22 +331,17 @@ class KeyHandler extends Component {
 
                     // It's a portal index.
                     } else {
-                        const portalLink = getPortalLink(annotationObject, annotationAnchorEntity),
+                        const
+                            portalLink = getPortalLink(
+                                annotationObject,
+                                annotationAnchorEntity
+                            )
 
-                            { songIndex,
-                              annotationIndex,
-                              verseIndex,
-                              columnIndex,
-                              [DESTINATION_PORTAL_INDEX]: destinationPortalIndex } = portalLink,
-
-                        keyWasRegistered = eventHandlers.handleAnnotationPortalSelect(
-                            e,
-                            songIndex,
-                            annotationIndex,
-                            verseIndex,
-                            columnIndex,
-                            destinationPortalIndex
-                        )
+                        keyWasRegistered =
+                            eventHandlers.handleAnnotationPortalSelect(
+                                e,
+                                portalLink
+                            )
 
                         /**
                          * If song was selected, then annotation index was

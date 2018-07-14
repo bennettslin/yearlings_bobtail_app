@@ -11,8 +11,21 @@ import Button from '../Button/Button'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
 import { PORTAL } from '../../constants/dots'
 
-import { LYRIC_COLUMN_KEYS, LYRIC, CENTRE, DESTINATION_PORTAL_INDEX } from '../../constants/lyrics'
-import { getSongTitle, getVerseObject, getAnnotationCardPortalObject } from '../../helpers/dataHelper'
+import {
+    LYRIC_COLUMN_KEYS,
+    LYRIC,
+    CENTRE
+} from '../../constants/lyrics'
+
+import {
+    getSongTitle,
+    getVerseObject
+} from '../../helpers/dataHelper'
+
+import {
+    getAnnotationCardPortalObject
+} from './annotationHelper'
+
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -60,16 +73,9 @@ class AnnotationPortal extends Component {
     }
 
     _handlePortalClick(e) {
+        const portalObject = this._getPortalObject()
 
-        const portalObject = this._getPortalObject(),
-
-            { songIndex,
-              annotationIndex,
-              verseIndex,
-              columnIndex,
-              [DESTINATION_PORTAL_INDEX]: destinationPortalIndex } = portalObject
-
-        this.props.handleAnnotationPortalSelect(e, songIndex, annotationIndex, verseIndex, columnIndex, destinationPortalIndex)
+        this.props.handleAnnotationPortalSelect(e, portalObject)
     }
 
     _getPortalObject() {

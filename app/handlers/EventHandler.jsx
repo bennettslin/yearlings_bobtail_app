@@ -16,6 +16,8 @@ import {
 } from './eventHelper'
 
 import { REFERENCE } from '../constants/dots'
+import { DESTINATION_PORTAL_INDEX } from '../constants/lyrics'
+
 import { DISABLED,
          OVERVIEW_OPTIONS } from '../constants/options'
 
@@ -164,7 +166,15 @@ class EventHandler extends Component {
         return true
     }
 
-    handleAnnotationPortalSelect(e, selectedSongIndex, selectedAnnotationIndex, selectedVerseIndex, selectedLyricColumnIndex, destinationPortalIndex) {
+    handleAnnotationPortalSelect(e, portalObject) {
+
+        const {
+            songIndex: selectedSongIndex,
+            annotationIndex: selectedAnnotationIndex,
+            verseIndex: selectedVerseIndex,
+            columnIndex: selectedLyricColumnIndex,
+            [DESTINATION_PORTAL_INDEX]: destinationPortalIndex
+        } = portalObject
 
         const songSelected = this.props.selectSong({
             selectedSongIndex,

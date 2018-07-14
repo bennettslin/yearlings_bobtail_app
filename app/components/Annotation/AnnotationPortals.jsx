@@ -5,10 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationPortal from './AnnotationPortal'
 import { SOURCE_PORTAL_INDEX } from '../../constants/lyrics'
-import {
-    getAnnotationCardPortalLinksArray
-} from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getAnnotationCardPortalLinksArray } from './annotationHelper'
 
 const mapStateToProps = ({
     canCarouselRender,

@@ -220,49 +220,6 @@ export const getAnnotationCardObject = ({
     return annotationObject ? annotationObject.cards[cardIndex] : null
 }
 
-export const getAnnotationCardPortalLinksArray = ({
-    songIndex,
-    annotationIndex,
-    cardIndex
-}) => {
-    // Called by annotation portals block component.
-    const cardObject = getAnnotationCardObject({
-        songIndex,
-        annotationIndex,
-        cardIndex
-    })
-
-    return cardObject ? cardObject.portalLinks : null
-}
-
-export const getAnnotationCardPortalObject = ({
-    songIndex,
-    annotationIndex,
-    cardIndex,
-    portalLinkIndex
-}) => {
-    // Called by annotation portal component.
-    const portalLinksArray = getAnnotationCardPortalLinksArray({
-        songIndex,
-        annotationIndex,
-        cardIndex
-    })
-
-    return portalLinksArray ? portalLinksArray[portalLinkIndex] : null
-}
-
-export const getAnnotationDotKeys = (
-    songIndex,
-    annotationIndex
-) => {
-    const annotation = getAnnotationObject(
-        songIndex,
-        annotationIndex
-    )
-
-    return annotation ? annotation.dotKeys : null
-}
-
 export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
 
     const { cards } = annotationObject
@@ -284,6 +241,18 @@ export const getPortalLink = (annotationObject, annotationAnchorIndex) => {
 
         return foundCardObject
     }, null)
+}
+
+export const getAnnotationDotKeys = (
+    songIndex,
+    annotationIndex
+) => {
+    const annotation = getAnnotationObject(
+        songIndex,
+        annotationIndex
+    )
+
+    return annotation ? annotation.dotKeys : null
 }
 
 /**********
