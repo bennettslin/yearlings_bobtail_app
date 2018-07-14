@@ -183,8 +183,9 @@ DotsSlideSelectView = ({
 
             <TextAnchor
                 className="DotsSlideSelect__textAnchor"
-                isSelected={isInteractivated}
+                omitAccessIcon
                 isAccessed={isAccessed}
+                isSelected={isInteractivated}
                 text={dotKey}
                 handleAnchorClick={handleTextContainerClick}
             />

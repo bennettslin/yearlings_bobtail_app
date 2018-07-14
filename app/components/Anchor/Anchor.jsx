@@ -18,6 +18,7 @@ const anchorPropTypes = {
     isSelected: PropTypes.bool,
     isDotAnchor: PropTypes.bool,
     isWikiAnchor: PropTypes.bool,
+    omitAccessIcon: PropTypes.bool,
     sequenceDotKeys: PropTypes.object,
     handleAnchorClick: PropTypes.func,
     children: PropTypes.oneOfType([
@@ -33,6 +34,7 @@ Anchor = ({
     isSelected,
     isDotAnchor,
     isWikiAnchor,
+    omitAccessIcon,
     sequenceDotKeys,
 
     handleAnchorClick,
@@ -98,12 +100,14 @@ Anchor = ({
 
             {children}
 
-            <AccessIcon
-                inTextAnchor={!isDotAnchor}
-                inButtonOrDotAnchor={isDotAnchor}
-                showIfAccessed={isAccessed && !isSelected}
-                accessKey={NAVIGATION_ENTER_KEY}
-            />
+            {!omitAccessIcon && (
+                <AccessIcon
+                    inTextAnchor={!isDotAnchor}
+                    inButtonOrDotAnchor={isDotAnchor}
+                    showIfAccessed={isAccessed && !isSelected}
+                    accessKey={NAVIGATION_ENTER_KEY}
+                />
+            )}
         </a>
     )
 }
