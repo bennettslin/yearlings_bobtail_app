@@ -52,38 +52,36 @@ module.exports = [
      * End Hack Week work.
      */
 
-    {
-        taskName: `Work on method to access new annotation index only if current invalid.`,
-        workedHours: 3,
-        neededHours: 4
-    },
-
+    /**
+     * Access icons.
+     */
     {
         taskName: `Access icon blocks in popup annotation look weird.`,
         workedHours: 0,
         neededHours: 1
     },
-
+    {
+        taskName: `Work on method to access new annotation index only if current invalid.`,
+        workedHours: 3,
+        neededHours: 4
+    },
     {
         taskName: `Enter access icon in annotation anchors can be positioned weird.`,
         workedHours: 0,
         neededHours: 1
     },
-
     {
         taskName: `Position lyric column access icons all on right.`,
         workedHours: 0,
         neededHours: 1
     },
-
     {
         taskName: `Flash access icon when key is pressed.`,
         workedHours: 0,
         neededHours: 1
     },
-
     {
-        taskName: `Know when not to show up or down in lyric column, based on whether it's scrolled to the very top or bottom?`,
+        taskName: `Know when not to show up or down access icons in lyric column, based on whether it's scrolled to the very top or bottom?`,
         workedHours: 0,
         neededHours: 1
     },
