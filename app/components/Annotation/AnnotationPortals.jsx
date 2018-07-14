@@ -31,7 +31,7 @@ class AnnotationPortals extends Component {
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
 
         // From parent.
-        carouselAnnotationIndex: PropTypes.number,
+        annotationIndex: PropTypes.number,
         popupAnnotationIndex: PropTypes.number,
         cardIndex: PropTypes.number.isRequired
     }
@@ -41,7 +41,7 @@ class AnnotationPortals extends Component {
             props: this.props,
             nextProps,
             alwaysBypassCheck: {
-                carouselAnnotationIndex: true,
+                annotationIndex: true,
                 cardIndex: true
             }
         })
@@ -49,11 +49,11 @@ class AnnotationPortals extends Component {
 
     componentDidUpdate() {
         const {
-            carouselAnnotationIndex,
+            annotationIndex,
             renderableAnnotationIndex
         } = this.props
 
-        if (carouselAnnotationIndex === renderableAnnotationIndex) {
+        if (annotationIndex === renderableAnnotationIndex) {
             console.warn('AnnotationPortals rendered.')
         }
     }
@@ -72,7 +72,7 @@ class AnnotationPortals extends Component {
             } = this.props,
 
             {
-                carouselAnnotationIndex,
+                annotationIndex,
                 popupAnnotationIndex,
                 cardIndex
             } = other,
@@ -80,7 +80,7 @@ class AnnotationPortals extends Component {
             portalLinksArray = getAnnotationCardPortalLinksArray({
                 songIndex: renderableSongIndex,
                 annotationIndex:
-                    carouselAnnotationIndex ||
+                    annotationIndex ||
                     renderableAnnotationIndex ||
                     popupAnnotationIndex,
                 cardIndex

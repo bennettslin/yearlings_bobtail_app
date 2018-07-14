@@ -34,7 +34,7 @@ class AnnotationPortal extends Component {
         renderableAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
-        carouselAnnotationIndex: PropTypes.number,
+        annotationIndex: PropTypes.number,
         popupAnnotationIndex: PropTypes.number,
         cardIndex: PropTypes.number.isRequired,
         portalLinkIndex: PropTypes.number.isRequired,
@@ -56,13 +56,13 @@ class AnnotationPortal extends Component {
                 nextProps,
                 alwaysBypassCheck: {
                     cardIndex: true,
-                    carouselAnnotationIndex: true,
+                    annotationIndex: true,
                     portalLinkIndex: true
                 },
                 checkIsShallowEqual: {
                     renderableAnnotationIndex: true
                 },
-                onlyOnCondition: !nextProps.carouselAnnotationIndex
+                onlyOnCondition: !nextProps.annotationIndex
             })
 
         return shouldComponentUpdate
@@ -70,11 +70,11 @@ class AnnotationPortal extends Component {
 
     componentDidUpdate() {
         const {
-            carouselAnnotationIndex,
+            annotationIndex,
             renderableAnnotationIndex
         } = this.props
 
-        if (carouselAnnotationIndex === renderableAnnotationIndex) {
+        if (annotationIndex === renderableAnnotationIndex) {
             console.warn('AnnotationPortal rendered.')
         }
     }
@@ -96,7 +96,7 @@ class AnnotationPortal extends Component {
         const {
             renderableSongIndex,
             renderableAnnotationIndex,
-            carouselAnnotationIndex,
+            annotationIndex,
             popupAnnotationIndex,
             cardIndex,
             portalLinkIndex
@@ -105,7 +105,7 @@ class AnnotationPortal extends Component {
         return getAnnotationCardPortalObject({
             songIndex: renderableSongIndex,
             annotationIndex:
-                carouselAnnotationIndex ||
+                annotationIndex ||
                 renderableAnnotationIndex ||
                 popupAnnotationIndex,
             cardIndex,

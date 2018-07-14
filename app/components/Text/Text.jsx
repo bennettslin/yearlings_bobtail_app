@@ -103,11 +103,19 @@ Text = ({
 
                 return (
                     <TextLyricAnchor {...other}
-                        text={text}
-                        dotKeys={dotKeys}
-                        wikiIndex={wikiIndex}
-                        wikiAnnotationIndex={wikiAnnotationIndex}
-                        annotationIndex={annotationIndex}
+                        {...{
+                            text,
+                            dotKeys,
+                            wikiIndex,
+
+                            /**
+                             * There is only ever an annotation index passed
+                             * from the verse, or a wiki annotation index
+                             * passed from the annotation.
+                             */
+                            annotationIndex,
+                            wikiAnnotationIndex
+                        }}
                     />
                 )
             }

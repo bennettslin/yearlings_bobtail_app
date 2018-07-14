@@ -39,7 +39,7 @@ class Annotation extends Component {
         selectedDotKeys: PropTypes.object.isRequired,
 
         // From parent.
-        carouselAnnotationIndex: PropTypes.number,
+        annotationIndex: PropTypes.number,
         popupAnnotationIndex: PropTypes.number,
         isSelected: PropTypes.bool
     }
@@ -50,13 +50,13 @@ class Annotation extends Component {
                 props: this.props,
                 nextProps,
                 alwaysBypassCheck: {
-                    carouselAnnotationIndex: true,
+                    annotationIndex: true,
                     inCarousel: true
                 },
                 checkIsShallowEqual: {
                     renderableAnnotationIndex: true
                 },
-                onlyOnCondition: !nextProps.carouselAnnotationIndex
+                onlyOnCondition: !nextProps.annotationIndex
 
             }) || !getPropsAreShallowEqual({
                 props: this.props.selectedDotKeys,
@@ -80,15 +80,10 @@ class Annotation extends Component {
                 ...other
             } = this.props,
             {
-                carouselAnnotationIndex,
+                annotationIndex,
                 popupAnnotationIndex,
                 isSelected,
             } = other,
-
-            annotationIndex =
-                carouselAnnotationIndex ||
-                renderableAnnotationIndex ||
-                popupAnnotationIndex,
 
             /**
              * If in carousel, get annotation index from parent. Otherwise,
@@ -97,7 +92,9 @@ class Annotation extends Component {
              */
             annotationObject = getAnnotationObject(
                 renderableSongIndex,
-                annotationIndex
+                annotationIndex ||
+                renderableAnnotationIndex ||
+                popupAnnotationIndex
             )
 
         // If it's in popup, annotation object won't always exist.
@@ -117,7 +114,10 @@ class Annotation extends Component {
                     accessibleAnnotationAnchorsLength:
                         getAccessibleAnnotationAnchorsLength({
                             selectedSongIndex: renderableSongIndex,
-                            selectedAnnotationIndex: annotationIndex,
+                            selectedAnnotationIndex:
+                                annotationIndex ||
+                                renderableAnnotationIndex ||
+                                popupAnnotationIndex,
                             selectedDotKeys
                         })
                 }}

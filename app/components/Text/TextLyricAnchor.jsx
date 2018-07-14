@@ -73,10 +73,12 @@ class TextLyricAnchor extends Component {
 
     _handleAnchorClick(e) {
 
-        const { wikiIndex,
-                annotationIndex,
+        const {
                 renderableAnnotationIndex,
-                carouselAnnotationIndex } = this.props,
+                annotationIndex,
+                wikiIndex,
+                wikiAnnotationIndex
+            } = this.props,
 
             isSelected = annotationIndex === renderableAnnotationIndex,
 
@@ -89,7 +91,7 @@ class TextLyricAnchor extends Component {
 
         if (!isSelected) {
             this.props.handleAnchorClick(
-                e, anchorIndex, carouselAnnotationIndex
+                e, anchorIndex, wikiAnnotationIndex
             )
         }
     }

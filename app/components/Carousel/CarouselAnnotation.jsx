@@ -118,7 +118,6 @@ class CarouselAnnotation extends Component {
         return (
             <CarouselAnnotationView {...other}
                 setRef={this.setCarouselAnnotationRef}
-                carouselAnnotationIndex={annotationIndex}
                 annotationColumn={columnKey}
                 annotationDotKeys={dotKeys}
                 handleTitleClick={this._handleAnnotationTitleClick}
@@ -143,35 +142,38 @@ const carouselAnnotationViewPropTypes = {
 
 CarouselAnnotationView = ({
 
-    annotationIndex,
     annotationColumn,
     annotationDotKeys,
     handleContainerClick,
     setRef,
 
-...other }) => (
+...other }) => {
 
-    <div
-        key={annotationIndex}
-        ref={setRef}
-        className={cx(
-            'CarouselAnnotation',
+    const { annotationIndex } = other
 
-            `${CAROUSEL_SCROLL}__${annotationIndex}`,
+    return (
+        <div
+            key={annotationIndex}
+            ref={setRef}
+            className={cx(
+                'CarouselAnnotation',
 
-            annotationColumn &&
-                `CarouselAnnotation__inLyricColumn__${annotationColumn}`,
-            getPrefixPrependedClassNames(
-                annotationDotKeys, 'CarouselAnnotationAnimatable'
-            )
-        )}
-    >
-        <Annotation {...other}
-            inCarousel
-            handleContainerClick={handleContainerClick}
-        />
-    </div>
-)
+                `${CAROUSEL_SCROLL}__${annotationIndex}`,
+
+                annotationColumn &&
+                    `CarouselAnnotation__inLyricColumn__${annotationColumn}`,
+                getPrefixPrependedClassNames(
+                    annotationDotKeys, 'CarouselAnnotationAnimatable'
+                )
+            )}
+        >
+            <Annotation {...other}
+                inCarousel
+                handleContainerClick={handleContainerClick}
+            />
+        </div>
+    )
+}
 
 CarouselAnnotationView.propTypes = carouselAnnotationViewPropTypes
 

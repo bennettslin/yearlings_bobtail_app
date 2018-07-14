@@ -36,7 +36,7 @@ class AnnotationCard extends Component {
         renderableAnnotationIndex: PropTypes.number.isRequired,
 
         // From parent.
-        carouselAnnotationIndex: PropTypes.number,
+        annotationIndex: PropTypes.number,
         popupAnnotationIndex: PropTypes.number,
         cardIndex: PropTypes.number.isRequired
     }
@@ -47,13 +47,13 @@ class AnnotationCard extends Component {
                 props: this.props,
                 nextProps,
                 alwaysBypassCheck: {
-                    carouselAnnotationIndex: true,
+                    annotationIndex: true,
                     cardIndex: true
                 },
                 checkIsShallowEqual: {
                     renderableAnnotationIndex: true
                 },
-                onlyOnCondition: !nextProps.carouselAnnotationIndex
+                onlyOnCondition: !nextProps.annotationIndex
             })
 
         return shouldComponentUpdate
@@ -61,11 +61,11 @@ class AnnotationCard extends Component {
 
     componentDidUpdate() {
         const {
-            carouselAnnotationIndex,
+            annotationIndex,
             renderableAnnotationIndex
         } = this.props
 
-        if (carouselAnnotationIndex === renderableAnnotationIndex) {
+        if (annotationIndex === renderableAnnotationIndex) {
             console.warn('AnnotationCard rendered.')
         }
     }
@@ -84,14 +84,14 @@ class AnnotationCard extends Component {
             } = this.props,
 
             {
-                carouselAnnotationIndex,
+                annotationIndex,
                 popupAnnotationIndex,
             } = other,
 
             cardObject = getAnnotationCardObject({
                 songIndex: renderableSongIndex,
                 annotationIndex:
-                    carouselAnnotationIndex ||
+                    annotationIndex ||
                     renderableAnnotationIndex ||
                     popupAnnotationIndex,
                 cardIndex
@@ -126,7 +126,7 @@ const annotationCardViewProptypes = {
         PropTypes.string,
         PropTypes.array
     ]),
-    carouselAnnotationIndex: PropTypes.number,
+    annotationIndex: PropTypes.number,
     cardDotKeys: PropTypes.object.isRequired,
     cardIndex: PropTypes.number.isRequired,
     isSelected: PropTypes.bool.isRequired,
@@ -138,7 +138,7 @@ AnnotationCardView = ({
 
     // From props.
     isSelected,
-    carouselAnnotationIndex,
+    annotationIndex,
     handleAnnotationWikiSelect,
     handleAnnotationPortalSelect,
 
@@ -150,7 +150,7 @@ AnnotationCardView = ({
 }) => {
 
     const isTextCard = Boolean(text),
-        inCarousel = Boolean(carouselAnnotationIndex),
+        inCarousel = Boolean(annotationIndex),
         isPortalCard = cardDotKeys.portal,
 
         annotationCardChild = (
@@ -176,7 +176,7 @@ AnnotationCardView = ({
                          * Allow for clicking on anchor in unselected annotation in
                          * carousel.
                          */
-                        carouselAnnotationIndex={carouselAnnotationIndex}
+                        annotationIndex={annotationIndex}
                         handleAnchorClick={handleAnnotationWikiSelect}
                     />
                 ) : (
@@ -184,7 +184,7 @@ AnnotationCardView = ({
                         {...{
                             isSelected,
                             cardIndex,
-                            carouselAnnotationIndex,
+                            annotationIndex,
                             handleAnnotationPortalSelect
                         }}
                     />
