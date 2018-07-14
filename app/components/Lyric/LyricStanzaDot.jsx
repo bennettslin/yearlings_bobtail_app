@@ -117,31 +117,33 @@ LyricDotStanzaView = ({
     isLastStanza,
     setRef,
 
-...other }) => (
+...other }) => {
 
-    <div
-        key={annotationIndex}
-        ref={setRef}
-        className={cx(
-            'LyricStanzaDot',
-            'LyricStanza__column',
+    return (
+        <div
+            key={annotationIndex}
+            ref={setRef}
+            className={cx(
+                'LyricStanzaDot',
+                'LyricStanza__column',
 
-            isLastStanza && 'LyricStanzaDot__lastStanza',
+                isLastStanza && 'LyricStanzaDot__lastStanza',
 
-            // Scroll to dot stanza block upon annotation selection.
-            annotationIndex &&
-                `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
+                // Scroll to dot stanza block upon annotation selection.
+                annotationIndex &&
+                    `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
-            // Show and hide dot stanza block in and out based on dot keys.
-            getPrefixPrependedClassNames(dotKeys, 'LyricStanzaDot')
-        )}
-    >
-        <DotAnchor {...other}
-            inStanza
-            stanzaDotKeys={dotKeys}
-        />
-    </div>
-)
+                // Show and hide dot stanza block in and out based on dot keys.
+                getPrefixPrependedClassNames(dotKeys, 'LyricStanzaDot')
+            )}
+        >
+            <DotAnchor {...other}
+                inStanza
+                stanzaDotKeys={dotKeys}
+            />
+        </div>
+    )
+}
 
 LyricDotStanzaView.propTypes = lyricDotStanzaViewPropTypes
 

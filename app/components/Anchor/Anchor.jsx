@@ -100,7 +100,7 @@ Anchor = ({
 
             <AccessIcon
                 inButtonOrDot
-                showIfAccessed={isAccessed}
+                showIfAccessed={isAccessed && !isSelected}
                 accessKey={NAVIGATION_ENTER_KEY}
             />
         </a>
