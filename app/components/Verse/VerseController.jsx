@@ -130,14 +130,22 @@ class VerseController extends Component {
             }
 
         return (
-            <VerseComponent {...other} {...interactableProps}>
+            <VerseComponent
+                {...other}
+                {...interactableProps}
+            >
                 {doRenderCursor && (
                     <VerseCursor {...verseBarCursorProps}
-                        verseOnCursor={inVerseBar || interactableProps.isOnCursor}
-                        verseAfterCursor={interactableProps.isAfterCursor}
-                        startTime={startTime}
-                        endTime={endTime}
-                        fullCursorRatio={fullCursorRatio}
+                        {...{
+                            verseOnCursor:
+                                inVerseBar ||
+                                interactableProps.isOnCursor,
+                            verseAfterCursor:
+                                interactableProps.isAfterCursor,
+                            startTime,
+                            endTime,
+                            fullCursorRatio
+                        }}
                     />
                 )}
             </VerseComponent>

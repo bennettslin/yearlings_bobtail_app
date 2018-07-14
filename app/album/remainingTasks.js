@@ -64,6 +64,12 @@ module.exports = [
         neededHours: 1
     },
 
+    {
+        taskName: `Have separate verse element that only knows before or after cursor. Prevent update from propagating down.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
     /**
      * Remaining scene work.
      */
