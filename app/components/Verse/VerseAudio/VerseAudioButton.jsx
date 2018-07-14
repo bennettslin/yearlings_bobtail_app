@@ -15,6 +15,8 @@ import { getVerseAudioIconText } from '../../../helpers/formatHelper'
 import { getValueInBitNumber } from '../../../helpers/bitHelper'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
+import { NAVIGATION_ENTER_KEY } from '../../../constants/access'
+
 const mapStateToProps = ({
     isPlaying,
     canLyricRender,
@@ -118,6 +120,8 @@ class VerseAudioButton extends Component {
                 <Button
                     isSmallSize
                     buttonName={isSelected ? 'audioPlay' : 'audioSelect'}
+                    accessKey={NAVIGATION_ENTER_KEY}
+                    showAccessIconIfAccessOn={isEnabled}
                     isDisabled={!isEnabled}
                     temporaryText={iconText}
                     handleButtonClick={this._handleAudioButtonClick}
