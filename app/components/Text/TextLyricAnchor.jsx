@@ -14,12 +14,18 @@ const mapStateToProps = ({
     canLyricRender,
     renderableAnnotationIndex,
     accessedAnnotationIndex,
-    accessedAnnotationAnchorIndex
+    accessedAnnotationAnchorIndex,
+    selectedCarouselNavIndex,
+    selectedDotsIndex,
+    interactivatedVerseIndex
 }) => ({
     canLyricRender,
     renderableAnnotationIndex,
     accessedAnnotationIndex,
-    accessedAnnotationAnchorIndex
+    accessedAnnotationAnchorIndex,
+    selectedCarouselNavIndex,
+    selectedDotsIndex,
+    interactivatedVerseIndex
 })
 
 class TextLyricAnchor extends Component {
@@ -30,6 +36,10 @@ class TextLyricAnchor extends Component {
         renderableAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationAnchorIndex: PropTypes.number.isRequired,
+
+        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        selectedDotsIndex: PropTypes.number.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired,
 
         wikiIndex: PropTypes.number,
         wikiAnnotationIndex: PropTypes.number,
@@ -109,6 +119,11 @@ class TextLyricAnchor extends Component {
                 renderableAnnotationIndex,
                 accessedAnnotationIndex,
                 accessedAnnotationAnchorIndex,
+
+                selectedCarouselNavIndex,
+                selectedDotsIndex,
+                interactivatedVerseIndex,
+
                 wikiIndex,
                 wikiAnnotationIndex,
                 text,
@@ -118,18 +133,33 @@ class TextLyricAnchor extends Component {
 
             isSelected = annotationIndex === renderableAnnotationIndex
 
-        let isAccessed
-
-        if (renderableAnnotationIndex) {
+        let
             isAccessed =
-                // Check that we're in the annotation that's selected.
-                renderableAnnotationIndex === wikiAnnotationIndex &&
 
-                accessedAnnotationAnchorIndex === wikiIndex
+                /**
+                 * TODO: This conditional is repeated in Carousel,
+                 * LyricStanzaDot, and TextLyricAnchor.
+                 */
+                !selectedDotsIndex &&
+                interactivatedVerseIndex < 0 &&
+                Boolean(selectedCarouselNavIndex)
 
-        } else {
-            isAccessed =
-                accessedAnnotationIndex === annotationIndex
+        /**
+         * If any of the previous conditions ruled out isAccessed, it is ruled
+         * out for good.
+         */
+        if (isAccessed) {
+            if (renderableAnnotationIndex) {
+                isAccessed =
+                    // Check that we're in the annotation that's selected.
+                    renderableAnnotationIndex === wikiAnnotationIndex &&
+
+                    accessedAnnotationAnchorIndex === wikiIndex
+
+            } else {
+                isAccessed =
+                    accessedAnnotationIndex === annotationIndex
+            }
         }
 
         // This space will not display if it starts the verse line.

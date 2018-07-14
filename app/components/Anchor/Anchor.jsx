@@ -99,7 +99,8 @@ Anchor = ({
             {children}
 
             <AccessIcon
-                inButtonOrDot
+                inTextAnchor={!isDotAnchor}
+                inButtonOrDotAnchor={isDotAnchor}
                 showIfAccessed={isAccessed && !isSelected}
                 accessKey={NAVIGATION_ENTER_KEY}
             />

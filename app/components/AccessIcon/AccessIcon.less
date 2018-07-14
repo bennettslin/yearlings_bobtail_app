@@ -8,7 +8,7 @@
         opacity @animationDuration__default;
 
     opacity: 0;
-    z-index: @zIndex__lyricChild__topMost;
+    z-index: @zIndex__negative;
 
     // TODO: Temporary styling for now.
     border: 2px solid green;
@@ -25,12 +25,20 @@
     .RM__accessOn
     & {
         opacity: 1;
+        z-index: @zIndex__lyricChild__topMost;
     }
 }
 
-.AccessIcon__inButtonOrDot {
+.AccessIcon__inInteractable {
     position: absolute;
     bottom: 0;
+}
+
+.AccessIcon__inTextAnchor {
+    right: -@length__iconAccess - @js__margin__thin * 1.5;
+}
+
+.AccessIcon__inButtonOrDotAnchor {
     right: 0;
 }
 

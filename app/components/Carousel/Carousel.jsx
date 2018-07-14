@@ -16,13 +16,19 @@ const mapStateToProps = ({
     isHiddenCarouselNav,
     renderableSongIndex,
     renderableAnnotationIndex,
-    accessedAnnotationIndex
+    accessedAnnotationIndex,
+    selectedCarouselNavIndex,
+    selectedDotsIndex,
+    interactivatedVerseIndex
 }) => ({
     canCarouselRender,
     isHiddenCarouselNav,
     renderableSongIndex,
     renderableAnnotationIndex,
-    accessedAnnotationIndex
+    accessedAnnotationIndex,
+    selectedCarouselNavIndex,
+    selectedDotsIndex,
+    interactivatedVerseIndex
 })
 
 class Carousel extends Component {
@@ -32,8 +38,11 @@ class Carousel extends Component {
         canCarouselRender: PropTypes.bool.isRequired,
         isHiddenCarouselNav: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
-        accessedAnnotationIndex: PropTypes.number.isRequired,
         renderableAnnotationIndex: PropTypes.number.isRequired,
+        accessedAnnotationIndex: PropTypes.number.isRequired,
+        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        selectedDotsIndex: PropTypes.number.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
         handleScrollUponCarouselRender: PropTypes.func.isRequired,
@@ -117,8 +126,11 @@ class Carousel extends Component {
 
                 isHiddenCarouselNav,
                 renderableSongIndex,
-                accessedAnnotationIndex,
                 renderableAnnotationIndex,
+                accessedAnnotationIndex,
+                selectedCarouselNavIndex,
+                selectedDotsIndex,
+                interactivatedVerseIndex,
                 handleAnnotationPrevious,
                 handleAnnotationNext,
                 setCarouselParentRef,
@@ -162,8 +174,19 @@ class Carousel extends Component {
                     {annotationsIndices.map(index => {
 
                         const annotationIndex = index + 1,
+
                             isAccessed =
+                                /**
+                                 * TODO: This conditional is repeated in
+                                 * Carousel, LyricStanzaDot, and
+                                 * TextLyricAnchor.
+                                 */
+                                !selectedDotsIndex &&
+                                interactivatedVerseIndex < 0 &&
+                                Boolean(selectedCarouselNavIndex) &&
+
                                 annotationIndex === accessedAnnotationIndex,
+
                             isSelected =
                                 annotationIndex === renderableAnnotationIndex
 

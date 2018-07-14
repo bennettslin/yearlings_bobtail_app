@@ -14,11 +14,17 @@ import { LYRIC_ANNOTATION_SCROLL } from '../../constants/dom'
 const mapStateToProps = ({
     canLyricRender,
     accessedAnnotationIndex,
-    renderableAnnotationIndex
+    renderableAnnotationIndex,
+    selectedCarouselNavIndex,
+    selectedDotsIndex,
+    interactivatedVerseIndex
 }) => ({
     canLyricRender,
     accessedAnnotationIndex,
-    renderableAnnotationIndex
+    renderableAnnotationIndex,
+    selectedCarouselNavIndex,
+    selectedDotsIndex,
+    interactivatedVerseIndex
 })
 
 /*************
@@ -32,6 +38,9 @@ class LyricStanzaDot extends Component {
         canLyricRender: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         renderableAnnotationIndex: PropTypes.number.isRequired,
+        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        selectedDotsIndex: PropTypes.number.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
@@ -72,16 +81,32 @@ class LyricStanzaDot extends Component {
     render() {
 
         // FIXME: Ideal to get dotStanza object from indices.
-        const { isLastStanza,
+        const {
+                isLastStanza,
                 dotStanzaObject,
                 accessedAnnotationIndex,
-                renderableAnnotationIndex } = this.props,
+                renderableAnnotationIndex,
+                selectedCarouselNavIndex,
+                selectedDotsIndex,
+                interactivatedVerseIndex
+            } = this.props,
 
             { annotationIndex,
               dotKeys } = dotStanzaObject,
 
-            isSelected = annotationIndex === renderableAnnotationIndex,
-            isAccessed = annotationIndex === accessedAnnotationIndex
+            isAccessed =
+                /**
+                 * TODO: This conditional is repeated in Carousel,
+                 * LyricStanzaDot, and TextLyricAnchor.
+                 */
+                !selectedDotsIndex &&
+                interactivatedVerseIndex < 0 &&
+                Boolean(selectedCarouselNavIndex) &&
+
+                annotationIndex === accessedAnnotationIndex,
+
+            isSelected =
+                annotationIndex === renderableAnnotationIndex
 
         return (
             <LyricDotStanzaView

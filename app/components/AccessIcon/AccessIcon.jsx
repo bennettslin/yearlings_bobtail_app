@@ -6,7 +6,8 @@ import cx from 'classnames'
 
 const accessIconPropTypes = {
     // From parent.
-    inButtonOrDot: PropTypes.bool,
+    inTextAnchor: PropTypes.bool,
+    inButtonOrDotAnchor: PropTypes.bool,
     showIfAccessed: PropTypes.bool,
     beginsCluster: PropTypes.bool,
     accessKey: PropTypes.string
@@ -14,7 +15,8 @@ const accessIconPropTypes = {
 
 AccessIcon = ({
 
-    inButtonOrDot,
+    inTextAnchor,
+    inButtonOrDotAnchor,
     showIfAccessed,
     beginsCluster,
     accessKey
@@ -22,7 +24,9 @@ AccessIcon = ({
 }) => (
     <div className={cx(
         'AccessIcon',
-        inButtonOrDot && 'AccessIcon__inButtonOrDot',
+        inTextAnchor && 'AccessIcon__inTextAnchor',
+        inButtonOrDotAnchor && 'AccessIcon__inButtonOrDotAnchor',
+        (inTextAnchor || inButtonOrDotAnchor) && 'AccessIcon__inInteractable',
         showIfAccessed && 'AccessIcon__showIfAccessed',
         beginsCluster && 'AccessIcon__beginsCluster',
         'flexCentreContainer'
