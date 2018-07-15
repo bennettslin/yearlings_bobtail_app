@@ -104,12 +104,6 @@ module.exports = [
         neededHours: 1
     },
 
-    {
-        taskName: `Right seat is cut off in laptop width.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     /**
      * Remaining scene work.
      */

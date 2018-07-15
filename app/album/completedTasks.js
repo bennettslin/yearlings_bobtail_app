@@ -3223,4 +3223,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Right seat is cut off in laptop width.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

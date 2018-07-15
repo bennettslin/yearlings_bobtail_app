@@ -41,7 +41,7 @@ const FloorSeat = ({
              * Push down a little further so that there is some wiggle room for
              * seats nearer to the ends to come up.
              */
-            + height / 3
+            + height / 2.5
 
             /**
              * Seats nearer to the ends come up further exponentially.
