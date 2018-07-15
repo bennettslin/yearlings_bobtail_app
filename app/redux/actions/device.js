@@ -17,6 +17,7 @@ export const updateDeviceStore = ({
     stageCoordinates = STAGE_COORDINATES_DEFAULT
 
 } = {}) => ({
+
     type: DEVICE_STORE,
     payload: {
         [DEVICE_INDEX]: deviceIndex,

@@ -1,9 +1,9 @@
 // Component to manually change played time and verse.
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import cx from 'classnames'
+import React, { Component } from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/react'
+import PropTypes from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types'
+import { connect } from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/react-redux'
+import cx from '../../../../../Library/Caches/typescript/2.9/node_modules/@types/classnames'
 
 import SliderScenes from './SliderScenes'
 import SliderStanzas from './Stanzas/SliderStanzas'

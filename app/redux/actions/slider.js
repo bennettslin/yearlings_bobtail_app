@@ -1,37 +1,30 @@
 // Actions for slider state.
-import { IS_SLIDER_MOVING,
-         IS_SLIDER_TOUCHED,
-         SLIDER_LEFT,
-         SLIDER_RATIO,
-         SLIDER_WIDTH,
-         SLIDER_VERSE_INDEX } from '../../constants/state'
 
-export const setIsSliderMoving = (isSliderMoving = false) => (
-    { type: IS_SLIDER_MOVING,
-      payload: isSliderMoving }
-)
+import { is } from './actionsHelper'
 
-export const setIsSliderTouched = (isSliderTouched = false) => (
-    { type: IS_SLIDER_TOUCHED,
-      payload: isSliderTouched }
-)
+import { SLIDER_STORE } from '../../constants/state'
+import { SLIDER_DEFAULTS } from '../defaultConstants'
 
-export const setSliderLeft = (sliderLeft = 0) => (
-    { type: SLIDER_LEFT,
-      payload: sliderLeft }
-)
+export const updateSliderStore = ({
+    isSliderMoving,
+    isSliderTouched,
+    sliderLeft,
+    sliderRatio,
+    sliderWidth,
+    sliderVerseIndex
+} = SLIDER_DEFAULTS) => {
 
-export const setSliderRatio = (sliderRatio = 0) => (
-    { type: SLIDER_RATIO,
-      payload: sliderRatio }
-)
+    console.error('slider store', isSliderMoving, isSliderTouched, sliderLeft, sliderRatio, sliderWidth, sliderVerseIndex)
 
-export const setSliderWidth = (sliderWidth = 0) => (
-    { type: SLIDER_WIDTH,
-      payload: sliderWidth }
-)
-
-export const setSliderVerseIndex = (sliderVerseIndex = -1) => (
-    { type: SLIDER_VERSE_INDEX,
-      payload: sliderVerseIndex }
-)
+    return {
+        type: SLIDER_STORE,
+        payload: {
+            ...is(isSliderMoving) && { isSliderMoving },
+            ...is(isSliderTouched) && { isSliderTouched },
+            ...is(sliderLeft) && { sliderLeft },
+            ...is(sliderRatio) && { sliderRatio },
+            ...is(sliderWidth) && { sliderWidth },
+            ...is(sliderVerseIndex) && { sliderVerseIndex }
+        }
+    }
+}

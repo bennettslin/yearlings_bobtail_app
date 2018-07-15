@@ -14,14 +14,13 @@ const mapStateToProps = ({
     canSliderRender,
     renderableSongIndex,
     selectedTimePlayed,
-    isSliderTouched,
-    sliderRatio
+    sliderStore
 }) => ({
     canSliderRender,
     renderableSongIndex,
     selectedTimePlayed,
-    isSliderTouched,
-    sliderRatio
+    isSliderTouched: sliderStore.isSliderTouched,
+    sliderRatio: sliderStore.sliderRatio
 })
 
 class SliderTimes extends Component {

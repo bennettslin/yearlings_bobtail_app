@@ -30,6 +30,26 @@ import {
 class EventHandler extends Component {
 
     static propTypes = {
+        // Through Redux.
+        selectedAdminIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
+        selectedCarouselNavIndex: PropTypes.number.isRequired,
+        selectedDotKeys: PropTypes.object.isRequired,
+        selectedScoreIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedTipsIndex: PropTypes.number.isRequired,
+        selectedTitleIndex: PropTypes.number.isRequired,
+        selectedVerseIndex: PropTypes.number.isRequired,
+        selectedWikiIndex: PropTypes.number.isRequired,
+        accessedAnnotationIndex: PropTypes.number.isRequired,
+        isHeightlessLyricColumn: PropTypes.bool.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
+        isVerseBarAbove: PropTypes.bool.isRequired,
+        isVerseBarBelow: PropTypes.bool.isRequired,
+        isSliderMoving: PropTypes.bool.isRequired,
+        isSliderTouched: PropTypes.bool.isRequired,
+
+        // From parent.
         scrollElementIntoView: PropTypes.func.isRequired
     }
 
@@ -961,9 +981,40 @@ class EventHandler extends Component {
 }
 
 const mapStateToProps = ({
-    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow
+    selectedAdminIndex,
+    selectedAnnotationIndex,
+    selectedCarouselNavIndex,
+    selectedDotKeys,
+    selectedScoreIndex,
+    selectedSongIndex,
+    selectedTipsIndex,
+    selectedTitleIndex,
+    selectedVerseIndex,
+    selectedWikiIndex,
+    accessedAnnotationIndex,
+    isHeightlessLyricColumn,
+    isLyricExpanded,
+    isVerseBarAbove,
+    isVerseBarBelow,
+    sliderStore
 }) => ({
-    selectedAdminIndex, selectedAnnotationIndex, selectedCarouselNavIndex, selectedDotKeys, selectedScoreIndex, selectedSongIndex, selectedTipsIndex, selectedTitleIndex, selectedVerseIndex, selectedWikiIndex, accessedAnnotationIndex, isHeightlessLyricColumn, isLyricExpanded, isVerseBarAbove, isSliderMoving, isSliderTouched, isVerseBarBelow
+    selectedAdminIndex,
+    selectedAnnotationIndex,
+    selectedCarouselNavIndex,
+    selectedDotKeys,
+    selectedScoreIndex,
+    selectedSongIndex,
+    selectedTipsIndex,
+    selectedTitleIndex,
+    selectedVerseIndex,
+    selectedWikiIndex,
+    accessedAnnotationIndex,
+    isHeightlessLyricColumn,
+    isLyricExpanded,
+    isVerseBarAbove,
+    isVerseBarBelow,
+    isSliderMoving: sliderStore.isSliderMoving,
+    isSliderTouched: sliderStore.isSliderTouched,
 })
 
 export default connect(mapStateToProps)(EventHandler)

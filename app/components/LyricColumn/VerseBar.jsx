@@ -12,12 +12,12 @@ const mapStateToProps = ({
     canLyricRender,
     renderableSongIndex,
     renderableVerseIndex,
-    sliderVerseIndex
+    sliderStore
 }) => ({
     canLyricRender,
     renderableSongIndex,
     renderableVerseIndex,
-    sliderVerseIndex
+    sliderVerseIndex: sliderStore.sliderVerseIndex
 })
 
 class VerseBar extends Component {

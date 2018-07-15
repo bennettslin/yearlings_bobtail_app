@@ -67,6 +67,7 @@ module.exports = {
     SHOWN_BOOK_COLUMN_INDEX: 'shownBookColumnIndex',
 
     // Slider.
+    SLIDER_STORE: 'sliderStore',
     IS_SLIDER_MOVING: 'isSliderMoving',
     IS_SLIDER_TOUCHED: 'isSliderTouched',
     SLIDER_LEFT: 'sliderLeft',

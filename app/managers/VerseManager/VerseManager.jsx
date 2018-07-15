@@ -188,7 +188,7 @@ const mapStateToProps = ({
     interactivatedVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
-    sliderVerseIndex,
+    sliderStore
 }) => ({
     deviceIndex: deviceStore.deviceIndex,
     windowWidth: deviceStore.windowWidth,
@@ -198,7 +198,7 @@ const mapStateToProps = ({
     interactivatedVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
-    sliderVerseIndex,
+    sliderVerseIndex: sliderStore.sliderVerseIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

@@ -6,8 +6,13 @@ import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
 import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, RenderableSongIndexReducer, RenderableAnnotationIndexReducer, RenderableVerseIndexReducer, RenderableSceneIndexReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanSceneRenderReducer, RenderableCubesYIndexReducer, CanPresencesRenderReducer, CanPixelsRenderReducer } from './render'
 import { IsHeightlessLyricColumnReducer, IsHiddenCarouselNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, isTwoRowMenuReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
-import { IsSliderMovingReducer, IsSliderTouchedReducer, SliderLeftReducer, SliderRatioReducer, SliderWidthReducer, SliderVerseIndexReducer } from './slider'
+import { SliderStoreReducer } from './slider'
 import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOptionIndexReducer, CarouselNavIndexReducer, DotKeysReducer, DotsIndexReducer, LyricColumnIndexReducer, OverviewIndexReducer, ScoreIndexReducer, SongIndexReducer, TimeReducer, TipsIndexReducer, TitleIndexReducer, VerseIndexReducer, WikiIndexReducer } from './storage'
+
+import {
+    DEVICE_STORE,
+    SLIDER_STORE
+} from '../../constants/state'
 
 const rootReducer = combineReducers({
 
@@ -19,7 +24,7 @@ const rootReducer = combineReducers({
     isPlaying: IsPlayingReducer,
     updatedTimePlayed: UpdatedTimePlayedReducer,
 
-    deviceStore: DeviceStoreReducer,
+    [DEVICE_STORE]: DeviceStoreReducer,
 
     canPlayThroughs: CanPlayThroughsReducer,
     isScoreLoaded: IsScoreLoadedReducer,
@@ -58,12 +63,7 @@ const rootReducer = combineReducers({
     isManualScroll: IsManualScrollReducer,
     shownBookColumnIndex: ShownBookColumnIndexReducer,
 
-    isSliderMoving: IsSliderMovingReducer,
-    isSliderTouched: IsSliderTouchedReducer,
-    sliderLeft: SliderLeftReducer,
-    sliderRatio: SliderRatioReducer,
-    sliderWidth: SliderWidthReducer,
-    sliderVerseIndex: SliderVerseIndexReducer,
+    [SLIDER_STORE]: SliderStoreReducer,
 
     selectedAccessIndex: AccessIndexReducer,
     selectedAdminIndex: AdminIndexReducer,
