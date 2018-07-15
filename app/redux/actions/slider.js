@@ -12,9 +12,8 @@ export const updateSliderStore = ({
     sliderRatio,
     sliderWidth,
     sliderVerseIndex
-} = SLIDER_DEFAULTS) => {
 
-    console.error('slider store', isSliderMoving, isSliderTouched, sliderLeft, sliderRatio, sliderWidth, sliderVerseIndex)
+} = SLIDER_DEFAULTS) => {
 
     return {
         type: SLIDER_STORE,

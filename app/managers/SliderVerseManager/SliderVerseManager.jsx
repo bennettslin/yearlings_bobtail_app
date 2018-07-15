@@ -3,15 +3,7 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import {
-    // setIsSliderMoving,
-    // setIsSliderTouched,
-    // setSliderLeft,
-    // setSliderRatio,
-    // setSliderWidth,
-    // setSliderVerseIndex,
-    updateSliderStore
-} from '../../redux/actions/slider'
+import { updateSliderStore } from '../../redux/actions/slider'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import {
@@ -30,12 +22,6 @@ class SliderVerseManager extends Component {
         sliderVerseIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
 
-        // setIsSliderMoving: PropTypes.func.isRequired,
-        // setIsSliderTouched: PropTypes.func.isRequired,
-        // setSliderLeft: PropTypes.func.isRequired,
-        // setSliderRatio: PropTypes.func.isRequired,
-        // setSliderWidth: PropTypes.func.isRequired,
-        // setSliderVerseIndex: PropTypes.func.isRequired,
         updateSliderStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -74,11 +60,6 @@ class SliderVerseManager extends Component {
             sliderWidth,
             sliderVerseIndex
         })
-        // this.props.setIsSliderTouched(true)
-        // this.props.setSliderLeft(sliderLeft)
-        // this.props.setSliderRatio(sliderRatio)
-        // this.props.setSliderWidth(sliderWidth)
-        // this.props.setSliderVerseIndex(sliderVerseIndex)
 
         /**
          * If the move doesn't happen for a while, we recognise that it is
@@ -86,7 +67,6 @@ class SliderVerseManager extends Component {
          */
         setTimeout(() => {
             if (this.props.isSliderTouched && !this.props.isSliderMoving) {
-                // this.props.setIsSliderMoving(true)
                 this.props.updateSliderStore({
                     isSliderMoving: true
                 })
@@ -106,10 +86,6 @@ class SliderVerseManager extends Component {
                     sliderRatio,
                     sliderWidth
                 )
-
-            // this.props.setSliderRatio(sliderRatio)
-            // this.props.setSliderVerseIndex(sliderVerseIndex)
-            // this.props.setIsSliderMoving(true)
 
             this.props.updateSliderStore({
                 isSliderMoving: true,
@@ -135,12 +111,6 @@ class SliderVerseManager extends Component {
             this.props.resetVerseBars()
 
             // Reset slider state.
-            // this.props.setIsSliderMoving(false)
-            // this.props.setIsSliderTouched(false)
-            // this.props.setSliderLeft(0)
-            // this.props.setSliderRatio(0)
-            // this.props.setSliderWidth(0)
-            // this.props.setSliderVerseIndex(-1)
             this.props.updateSliderStore()
         }
     }
@@ -164,12 +134,6 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        // setIsSliderMoving,
-        // setIsSliderTouched,
-        // setSliderLeft,
-        // setSliderRatio,
-        // setSliderWidth,
-        // setSliderVerseIndex,
         updateSliderStore
     }, dispatch)
 )

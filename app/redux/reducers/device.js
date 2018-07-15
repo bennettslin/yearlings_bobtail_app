@@ -1,24 +1,11 @@
 // Reducers for window size.
 
-import {
-    DEVICE_STORE,
-    DEVICE_INDEX,
-    WINDOW_HEIGHT,
-    WINDOW_WIDTH,
-    STAGE_COORDINATES,
-    STAGE_COORDINATES_DEFAULT
-} from '../../constants/state'
+import { DEVICE_STORE } from '../../constants/state'
+import { DEVICE_DEFAULTS } from '../defaultConstants'
 
 export const DeviceStoreReducer = (
-
-    state = {
-        [DEVICE_INDEX]: 0,
-        [WINDOW_HEIGHT]: 0,
-        [WINDOW_WIDTH]: 0,
-        [STAGE_COORDINATES]: STAGE_COORDINATES_DEFAULT
-    },
+    state = DEVICE_DEFAULTS,
     action
-
 ) => {
     switch (action.type) {
         case DEVICE_STORE:

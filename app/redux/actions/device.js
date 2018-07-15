@@ -1,28 +1,23 @@
 // Actions for window size.
 
-import {
-    DEVICE_STORE,
-    DEVICE_INDEX,
-    WINDOW_HEIGHT,
-    WINDOW_WIDTH,
-    STAGE_COORDINATES,
-    STAGE_COORDINATES_DEFAULT
-} from '../../constants/state'
+import { is } from './actionsHelper'
+
+import { DEVICE_STORE } from '../../constants/state'
+import { DEVICE_DEFAULTS } from '../defaultConstants'
 
 export const updateDeviceStore = ({
+    deviceIndex,
+    windowHeight,
+    windowWidth,
+    stageCoordinates
 
-    deviceIndex = 0,
-    windowHeight = 0,
-    windowWidth = 0,
-    stageCoordinates = STAGE_COORDINATES_DEFAULT
-
-} = {}) => ({
+} = DEVICE_DEFAULTS) => ({
 
     type: DEVICE_STORE,
     payload: {
-        [DEVICE_INDEX]: deviceIndex,
-        [WINDOW_HEIGHT]: windowHeight,
-        [WINDOW_WIDTH]: windowWidth,
-        [STAGE_COORDINATES]: stageCoordinates
+        ...is(deviceIndex) && { deviceIndex },
+        ...is(windowHeight) && { windowHeight },
+        ...is(windowWidth) && { windowWidth },
+        ...is(stageCoordinates) && { stageCoordinates }
     }
 })
