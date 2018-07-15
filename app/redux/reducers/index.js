@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, AccessedDotIndexReducer, AccessedNavSongIndexReducer } from './access'
 import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
-import { DeviceIndexReducer, WindowWidthReducer, WindowHeightReducer, StageCoordinatesReducer } from './device'
+import { DeviceStoreReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
 import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, RenderableSongIndexReducer, RenderableAnnotationIndexReducer, RenderableVerseIndexReducer, RenderableSceneIndexReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanSceneRenderReducer, RenderableCubesYIndexReducer, CanPresencesRenderReducer, CanPixelsRenderReducer } from './render'
 import { IsHeightlessLyricColumnReducer, IsHiddenCarouselNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, isTwoRowMenuReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
@@ -19,10 +19,7 @@ const rootReducer = combineReducers({
     isPlaying: IsPlayingReducer,
     updatedTimePlayed: UpdatedTimePlayedReducer,
 
-    deviceIndex: DeviceIndexReducer,
-    windowHeight: WindowHeightReducer,
-    windowWidth: WindowWidthReducer,
-    stageCoordinates: StageCoordinatesReducer,
+    deviceStore: DeviceStoreReducer,
 
     canPlayThroughs: CanPlayThroughsReducer,
     isScoreLoaded: IsScoreLoadedReducer,

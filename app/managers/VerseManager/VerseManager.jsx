@@ -182,9 +182,7 @@ class VerseManager extends Component {
 }
 
 const mapStateToProps = ({
-    deviceIndex,
-    windowWidth,
-    windowHeight,
+    deviceStore,
     isLyricExpanded,
     isHeightlessLyricColumn,
     interactivatedVerseIndex,
@@ -192,9 +190,9 @@ const mapStateToProps = ({
     selectedVerseIndex,
     sliderVerseIndex,
 }) => ({
-    deviceIndex,
-    windowWidth,
-    windowHeight,
+    deviceIndex: deviceStore.deviceIndex,
+    windowWidth: deviceStore.windowWidth,
+    windowHeight: deviceStore.windowHeight,
     isLyricExpanded,
     isHeightlessLyricColumn,
     interactivatedVerseIndex,

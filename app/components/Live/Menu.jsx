@@ -11,14 +11,13 @@ import cx from 'classnames'
 import TitleToggle from '../Title/TitleToggle'
 import Audio from '../Audio/Audio'
 import ScoresTips from '../ScoresTips/ScoresTips'
-// import AudioBanner from '../Audio/AudioBanner'
 
 import { getMenuMarginInOverlay } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    windowWidth
+    deviceStore
 }) => ({
-    windowWidth
+    windowWidth: deviceStore.windowWidth
 })
 
 const menuPropTypes = {

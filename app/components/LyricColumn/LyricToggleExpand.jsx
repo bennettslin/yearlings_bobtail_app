@@ -10,11 +10,11 @@ import { LYRIC_SECTION_EXPAND_KEY } from '../../constants/access'
 import { getIsLyricExpandable } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    deviceIndex,
+    deviceStore,
     isHeightlessLyricColumn,
     isLyricExpanded
 }) => ({
-    deviceIndex,
+    deviceIndex: deviceStore.deviceIndex,
     isHeightlessLyricColumn,
     isLyricExpanded
 })

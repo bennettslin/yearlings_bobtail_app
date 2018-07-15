@@ -10,10 +10,10 @@ import Proscenium from './Proscenium/Proscenium';
 
 const mapStateToProps = ({
     canTheatreRender,
-    stageCoordinates
+    deviceStore
 }) => ({
     canTheatreRender,
-    stageCoordinates
+    stageCoordinates: deviceStore.stageCoordinates
 })
 
 class Stage extends Component {

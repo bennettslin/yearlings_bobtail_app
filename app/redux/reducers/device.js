@@ -1,41 +1,31 @@
 // Reducers for window size.
-import { DEVICE_INDEX,
-         WINDOW_HEIGHT,
-         WINDOW_WIDTH,
-         STAGE_COORDINATES,
-         STAGE_COORDINATES_DEFAULT } from '../../constants/state'
 
-export const DeviceIndexReducer = (state = 0, action) => {
-    switch (action.type) {
-        case DEVICE_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
+import {
+    DEVICE_STORE,
+    DEVICE_INDEX,
+    WINDOW_HEIGHT,
+    WINDOW_WIDTH,
+    STAGE_COORDINATES,
+    STAGE_COORDINATES_DEFAULT
+} from '../../constants/state'
 
-export const WindowHeightReducer = (state = 0, action) => {
-    switch (action.type) {
-        case WINDOW_HEIGHT:
-            return action.payload
-        default:
-            return state
-    }
-}
+export const DeviceStoreReducer = (
 
-export const WindowWidthReducer = (state = 0, action) => {
-    switch (action.type) {
-        case WINDOW_WIDTH:
-            return action.payload
-        default:
-            return state
-    }
-}
+    state = {
+        [DEVICE_INDEX]: 0,
+        [WINDOW_HEIGHT]: 0,
+        [WINDOW_WIDTH]: 0,
+        [STAGE_COORDINATES]: STAGE_COORDINATES_DEFAULT
+    },
+    action
 
-export const StageCoordinatesReducer = (state = STAGE_COORDINATES_DEFAULT, action) => {
+) => {
     switch (action.type) {
-        case STAGE_COORDINATES:
-            return action.payload
+        case DEVICE_STORE:
+            return {
+                ...state,
+                ...action.payload
+            }
         default:
             return state
     }

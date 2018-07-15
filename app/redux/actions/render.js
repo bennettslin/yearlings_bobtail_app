@@ -35,7 +35,7 @@ export const setIsWindowResizeRenderable = (
 export const setRenderableSongIndex = (
     renderableSongIndex = -1
 ) => {
-    console.error(RENDERABLE_SONG_INDEX, renderableSongIndex)
+    // console.error(RENDERABLE_SONG_INDEX, renderableSongIndex)
     return {
         type: RENDERABLE_SONG_INDEX,
         payload: renderableSongIndex
@@ -45,7 +45,7 @@ export const setRenderableSongIndex = (
 export const setRenderableAnnotationIndex = (
     renderableAnnotationIndex = 0
 ) => {
-    console.error(RENDERABLE_ANNOTATION_INDEX, renderableAnnotationIndex)
+    // console.error(RENDERABLE_ANNOTATION_INDEX, renderableAnnotationIndex)
     return {
         type: RENDERABLE_ANNOTATION_INDEX,
         payload: renderableAnnotationIndex
@@ -55,7 +55,7 @@ export const setRenderableAnnotationIndex = (
 export const setRenderableVerseIndex = (
     renderableVerseIndex = 0
 ) => {
-    console.error(RENDERABLE_VERSE_INDEX, renderableVerseIndex)
+    // console.error(RENDERABLE_VERSE_INDEX, renderableVerseIndex)
     return {
         type: RENDERABLE_VERSE_INDEX,
         payload: renderableVerseIndex
@@ -65,7 +65,7 @@ export const setRenderableVerseIndex = (
 export const setRenderableSceneIndex = (
     renderableSceneIndex = -1
 ) => {
-    console.error(RENDERABLE_SCENE_INDEX, renderableSceneIndex)
+    // console.error(RENDERABLE_SCENE_INDEX, renderableSceneIndex)
     return {
         type: RENDERABLE_SCENE_INDEX,
         payload: renderableSceneIndex

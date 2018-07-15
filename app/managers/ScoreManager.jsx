@@ -92,11 +92,11 @@ class ScoreManager extends Component {
 }
 
 const mapStateToProps = ({
-    deviceIndex,
+    deviceStore,
     selectedScoreIndex,
     selectedSongIndex
 }) => ({
-    deviceIndex,
+    deviceIndex: deviceStore.deviceIndex,
     selectedScoreIndex,
     selectedSongIndex
 })

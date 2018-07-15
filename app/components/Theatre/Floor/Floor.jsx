@@ -12,10 +12,10 @@ import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../../../constants/stage'
 
 const mapStateToProps = ({
     canTheatreRender,
-    windowWidth
+    deviceStore
 }) => ({
     canTheatreRender,
-    windowWidth
+    windowWidth: deviceStore.windowWidth
 })
 
 class Floor extends Component {

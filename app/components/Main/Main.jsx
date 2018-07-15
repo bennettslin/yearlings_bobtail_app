@@ -23,10 +23,10 @@ import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import { getIsPhone } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    deviceIndex,
+    deviceStore,
     canMainRender
 }) => ({
-    deviceIndex,
+    deviceIndex: deviceStore.deviceIndex,
     canMainRender
 })
 

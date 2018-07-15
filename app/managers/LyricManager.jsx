@@ -120,13 +120,13 @@ class LyricManager extends Component {
 }
 
 const mapStateToProps = ({
-    deviceIndex,
+    deviceStore,
     isLyricExpanded,
     selectedAnnotationIndex,
     selectedLyricColumnIndex,
     selectedSongIndex,
 }) => ({
-    deviceIndex,
+    deviceIndex: deviceStore.deviceIndex,
     isLyricExpanded,
     selectedAnnotationIndex,
     selectedLyricColumnIndex,

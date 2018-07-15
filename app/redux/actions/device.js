@@ -1,26 +1,27 @@
 // Actions for window size.
-import { DEVICE_INDEX,
-         WINDOW_HEIGHT,
-         WINDOW_WIDTH,
-         STAGE_COORDINATES,
-         STAGE_COORDINATES_DEFAULT } from '../../constants/state'
 
-export const setDeviceIndex = (deviceIndex = 0) => (
-    { type: DEVICE_INDEX,
-      payload: deviceIndex }
-)
+import {
+    DEVICE_STORE,
+    DEVICE_INDEX,
+    WINDOW_HEIGHT,
+    WINDOW_WIDTH,
+    STAGE_COORDINATES,
+    STAGE_COORDINATES_DEFAULT
+} from '../../constants/state'
 
-export const setWindowHeight = (windowHeight = 0) => (
-    { type: WINDOW_HEIGHT,
-      payload: windowHeight }
-)
+export const updateDeviceStore = ({
 
-export const setWindowWidth = (windowWidth = 0) => (
-    { type: WINDOW_WIDTH,
-      payload: windowWidth }
-)
+    deviceIndex = 0,
+    windowHeight = 0,
+    windowWidth = 0,
+    stageCoordinates = STAGE_COORDINATES_DEFAULT
 
-export const setStageCoordinates = (stageCoordinates = STAGE_COORDINATES_DEFAULT) => (
-    { type: STAGE_COORDINATES,
-      payload: stageCoordinates }
-)
+} = {}) => ({
+    type: DEVICE_STORE,
+    payload: {
+        [DEVICE_INDEX]: deviceIndex,
+        [WINDOW_HEIGHT]: windowHeight,
+        [WINDOW_WIDTH]: windowWidth,
+        [STAGE_COORDINATES]: stageCoordinates
+    }
+})

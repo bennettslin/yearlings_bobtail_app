@@ -137,7 +137,7 @@ class Scene extends Component {
                 isShown
             } = this.state
 
-            console.error('render', renderableSongIndex, renderableSceneIndex)
+            // console.error(renderableSongIndex, renderableSceneIndex)
 
             const sceneObject = getSceneObject(
                 renderableSongIndex, renderableSceneIndex

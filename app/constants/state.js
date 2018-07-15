@@ -12,10 +12,11 @@ module.exports = {
     UPDATED_TIME_PLAYED: 'updatedTimePlayed',
 
     // Device.
+    DEVICE_STORE: 'deviceStore',
     DEVICE_INDEX: 'deviceIndex',
     WINDOW_HEIGHT: 'windowHeight',
     WINDOW_WIDTH: 'windowWidth',
-    STAGE_COORDINATES: 'stageLayout',
+    STAGE_COORDINATES: 'stageCoordinates',
     STAGE_COORDINATES_DEFAULT: {
         top: 0,
         left: 0,

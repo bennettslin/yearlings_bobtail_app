@@ -15,12 +15,12 @@ import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({
     canMainRender,
-    deviceIndex,
+    deviceStore,
     selectedOverviewIndex,
     renderableSongIndex
 }) => ({
     canMainRender,
-    deviceIndex,
+    deviceIndex: deviceStore.deviceIndex,
     selectedOverviewIndex,
     renderableSongIndex
 })

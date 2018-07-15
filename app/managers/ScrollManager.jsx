@@ -23,9 +23,9 @@ class ScrollManager extends Component {
 
     static propTypes = {
         // Through Redux.
-        deviceIndex: PropTypes.number.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        deviceIndex: PropTypes.number.isRequired,
         windowWidth: PropTypes.number.isRequired,
 
         // From parent.
@@ -210,13 +210,12 @@ class ScrollManager extends Component {
 }
 
 const mapStateToProps = ({
-    deviceIndex,
-    windowWidth,
     isLyricExpanded,
-    selectedSongIndex
+    selectedSongIndex,
+    deviceStore
 }) => ({
-    deviceIndex,
-    windowWidth,
+    deviceIndex: deviceStore.deviceIndex,
+    windowWidth: deviceStore.windowWidth,
     isLyricExpanded,
     selectedSongIndex
 })

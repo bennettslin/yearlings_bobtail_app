@@ -13,13 +13,13 @@ import { TIPS_OPTIONS } from '../../constants/options'
 import { getIsDesktop, getIsPhone } from '../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
-    deviceIndex,
+    deviceStore,
     isScoreLoaded,
     isScoresTipsInMain,
     selectedScoreIndex,
     selectedTipsIndex
 }) => ({
-    deviceIndex,
+    deviceIndex: deviceStore.deviceIndex,
     isScoreLoaded,
     isScoresTipsInMain,
     selectedScoreIndex,

@@ -12,7 +12,7 @@ import { getIsOverlayingAnnotation,
 
 const mapStateToProps = ({
     canCarouselRender,
-    deviceIndex,
+    deviceStore,
     isLyricExpanded,
     isHeightlessLyricColumn,
     renderableAnnotationIndex,
@@ -22,7 +22,7 @@ const mapStateToProps = ({
     selectedWikiIndex
 }) => ({
     canCarouselRender,
-    deviceIndex,
+    deviceIndex: deviceStore.deviceIndex,
     isLyricExpanded,
     isHeightlessLyricColumn,
     renderableAnnotationIndex,

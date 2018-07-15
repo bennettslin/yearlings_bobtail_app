@@ -6,12 +6,7 @@ import debounce from 'debounce'
 
 import { setIsWindowResizeRenderable } from '../redux/actions/render'
 
-import {
-    setDeviceIndex,
-    setWindowHeight,
-    setWindowWidth,
-    setStageCoordinates
-} from '../redux/actions/device'
+import { updateDeviceStore } from '../redux/actions/device'
 
 import {
     setIsHeightlessLyricColumn,
@@ -48,10 +43,7 @@ class WindowManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         showOneOfTwoLyricColumns: PropTypes.bool.isRequired,
 
-        setDeviceIndex: PropTypes.func.isRequired,
-        setWindowHeight: PropTypes.func.isRequired,
-        setWindowWidth: PropTypes.func.isRequired,
-        setStageCoordinates: PropTypes.func.isRequired,
+        updateDeviceStore: PropTypes.func.isRequired,
         setIsTwoRowMenu: PropTypes.func.isRequired,
         setIsScoresTipsInMain: PropTypes.func.isRequired,
         setIsHeightlessLyricColumn: PropTypes.func.isRequired,
@@ -141,17 +133,17 @@ class WindowManager extends Component {
             })
         }
 
-        this.props.setDeviceIndex(deviceIndex)
-        this.props.setWindowHeight(windowHeight)
-        this.props.setWindowWidth(windowWidth)
-        this.props.setStageCoordinates(
-            getStageCoordinates({
+        this.props.updateDeviceStore({
+            deviceIndex,
+            windowWidth,
+            windowHeight,
+            stageCoordinates: getStageCoordinates({
                 deviceIndex,
                 windowWidth,
                 windowHeight,
                 isHeightlessLyricColumn
             })
-        )
+        })
 
         this.props.setIsHeightlessLyricColumn(isHeightlessLyricColumn)
         this.props.setShowOneOfTwoLyricColumns(showOneOfTwoLyricColumns)
@@ -238,11 +230,8 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
+        updateDeviceStore,
         setIsWindowResizeRenderable,
-        setDeviceIndex,
-        setWindowHeight,
-        setWindowWidth,
-        setStageCoordinates,
         setIsTwoRowMenu,
         setIsScoresTipsInMain,
         setIsHeightlessLyricColumn,
