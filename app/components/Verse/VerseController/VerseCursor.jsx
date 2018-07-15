@@ -1,6 +1,6 @@
 // Text displays to indicate time spent and remaining.
 
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -80,22 +80,14 @@ VerseCursor = ({
     }
 
     return (
-        <Fragment>
-            <div
-                className={cx(
-                    'VerseColour',
-                    'absoluteFullContainer'
-                )}
-            />
-            <div
-                className={cx(
-                    'VerseCursor',
-                    `VerseCursor__${cursorStatusClassName}`,
-                    'absoluteFullContainer'
-                )}
-                style={cursorStyle}
-            />
-        </Fragment>
+        <div
+            className={cx(
+                'VerseCursor',
+                `VerseCursor__${cursorStatusClassName}`,
+                'absoluteFullContainer'
+            )}
+            style={cursorStyle}
+        />
     )
 }
 

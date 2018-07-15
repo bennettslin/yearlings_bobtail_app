@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import Verse from '../Verse'
+import VerseColour from './VerseColour'
 import VerseCursor from './VerseCursor'
 import SliderVerse from '../../Slider/Stanzas/SliderVerse'
 
@@ -134,6 +135,9 @@ class VerseController extends Component {
                 {...other}
                 {...interactableProps}
             >
+                <VerseColour
+                />
+
                 {doRenderCursor && (
                     <VerseCursor {...verseBarCursorProps}
                         {...{
