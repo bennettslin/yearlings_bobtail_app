@@ -49,10 +49,6 @@ class VerseBar extends Component {
         })
     }
 
-    // componentDidUpdate() {
-    //     console.warn('VerseBar rendered.')
-    // }
-
     render() {
 
         const {
@@ -73,7 +69,8 @@ class VerseBar extends Component {
         } = this.props,
 
             verseIndex = sliderVerseIndex > -1 ?
-                sliderVerseIndex : renderableVerseIndex,
+                sliderVerseIndex :
+                renderableVerseIndex,
 
             verseObject = getVerseObject(renderableSongIndex, verseIndex)
 
@@ -102,7 +99,10 @@ class VerseBar extends Component {
                 >
                     <VerseController {...other}
                         inVerseBar
-                        verseObject={verseObject}
+                        {...{
+                            verseIndex,
+                            verseObject
+                        }}
                     />
                 </div>
             </div>

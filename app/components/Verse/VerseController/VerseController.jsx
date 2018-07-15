@@ -1,6 +1,6 @@
 /**
  * Controller to allow verse child not to have knowledge of various verse
- * indices.
+ * indices, just where it is relative to cursor.
  */
 
 import React, { Component } from 'react'
@@ -11,6 +11,8 @@ import Verse from '../Verse'
 import VerseColour from './VerseColour'
 import VerseCursor from './VerseCursor'
 import SliderVerse from '../../Slider/Stanzas/SliderVerse'
+
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
@@ -35,11 +37,11 @@ class VerseController extends Component {
 
         // From parent.
         inVerseBar: PropTypes.bool,
+        inSliderStanza: PropTypes.bool,
 
-        // Passed by SliderStanza.
-        verseIndex: PropTypes.number,
+        verseIndex: PropTypes.number.isRequired,
 
-        // Passed by LyricStanzaCard.
+        // Passed by LyricStanzaCard and VerseBar only.
         verseObject: PropTypes.object,
 
         /**
@@ -49,6 +51,13 @@ class VerseController extends Component {
         absoluteStartTime: PropTypes.number,
         absoluteEndTime: PropTypes.number,
         fullCursorRatio: PropTypes.number
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
     }
 
     render() {
@@ -61,6 +70,9 @@ class VerseController extends Component {
                 renderableVerseIndex,
                 sliderVerseIndex,
                 interactivatedVerseIndex,
+
+                inSliderStanza,
+
                 absoluteStartTime,
                 absoluteEndTime,
                 fullCursorRatio,
@@ -73,85 +85,64 @@ class VerseController extends Component {
                 verseObject
             } = other,
 
-            // Verse needs verseObject, SliderVerse needs verseIndex.
-            VerseComponent = verseObject ? Verse : SliderVerse,
-
-            /**
-             * If verse is in lyric, only show cursor if it has a time value. If
-             * it's in slider, always show cursor.
-             */
-            doRenderCursor = !isNaN(verseIndex) || !isNaN(verseObject.time),
+            VerseComponent = inSliderStanza ? SliderVerse : Verse,
 
             // Let verse cursor know the verse's start and end times.
             startTime = verseObject ?
-                verseObject.time : absoluteStartTime,
+                verseObject.time :
+                absoluteStartTime,
+
             endTime = verseObject ?
-                verseObject.endTime : absoluteEndTime,
-
-            interactableProps = {},
-            verseBarCursorProps = {},
-
-            // Lyric verse will have verse object, slider verse won't.
-            controllerVerseIndex =
-                verseObject ? verseObject.verseIndex : verseIndex
-
-            /**
-             * Having verseIndex as a top-level prop allows a verse in the verseBar
-             * to know when to update.
-             */
-            if (verseObject) {
-                other.verseIndex = verseObject.verseIndex
-            }
+                verseObject.endTime :
+                absoluteEndTime,
 
             /**
              * Tell verse where it is relative to cursor, and if it's
              * interactivated.
              */
-            if (!inVerseBar) {
-                const useSliderIndex = sliderVerseIndex > -1,
-                    cursorIndex = useSliderIndex ?
-                        sliderVerseIndex : renderableVerseIndex
+            cursorIndex = sliderVerseIndex > -1 ?
+                sliderVerseIndex :
+                renderableVerseIndex,
 
-                interactableProps.isOnCursor =
-                    controllerVerseIndex === cursorIndex
-                interactableProps.isAfterCursor =
-                    controllerVerseIndex > cursorIndex
-                interactableProps.isInteractivated =
-                    controllerVerseIndex === interactivatedVerseIndex
-
-            /**
-             * Give each verse in the verse bar a unique key to render a new
-             * verse each time. This ensures that the cursor  will not animate
-             * from the far right for the previous verse to the far left for
-             * the next verse.
-             */
-            } else {
-                interactableProps.isOnCursor = true
-                verseBarCursorProps.key = controllerVerseIndex
-            }
+            isOnCursor = inVerseBar || verseIndex === cursorIndex,
+            isAfterCursor = verseIndex > cursorIndex,
+            isInteractivated = verseIndex === interactivatedVerseIndex
 
         return (
             <VerseComponent
                 {...other}
-                {...interactableProps}
+
+                {...{
+                    isOnCursor
+                }}
+
+                {...!inVerseBar && {
+                    isAfterCursor,
+                    isInteractivated
+                }}
             >
                 <VerseColour
                 />
 
-                {doRenderCursor && (
-                    <VerseCursor {...verseBarCursorProps}
-                        {...{
-                            verseOnCursor:
-                                inVerseBar ||
-                                interactableProps.isOnCursor,
-                            verseAfterCursor:
-                                interactableProps.isAfterCursor,
-                            startTime,
-                            endTime,
-                            fullCursorRatio
-                        }}
-                    />
-                )}
+                <VerseCursor
+                    {...{
+                        isOnCursor,
+                        isAfterCursor,
+                        startTime,
+                        endTime,
+                        fullCursorRatio
+                    }}
+
+                    /**
+                     * Give each verse in the verse bar a unique key to render
+                     * a new verse each time. This ensures that the cursor will
+                     * not animate from the far right for the previous verse to
+                     * the far left for the next verse.
+                     */
+                    {...inVerseBar && {
+                        key: verseIndex
+                    }}
+                />
             </VerseComponent>
         )
     }

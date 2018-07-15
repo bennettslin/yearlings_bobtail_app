@@ -24,10 +24,10 @@ verseCursorPropTypes = {
     selectedTimePlayed: PropTypes.number.isRequired,
 
     // From parent.
-    verseOnCursor: PropTypes.bool.isRequired,
+    isOnCursor: PropTypes.bool.isRequired,
 
     // Not passed by verse bar.
-    verseAfterCursor: PropTypes.bool,
+    isAfterCursor: PropTypes.bool,
 
     startTime: PropTypes.number.isRequired,
     endTime: PropTypes.number.isRequired,
@@ -38,8 +38,8 @@ VerseCursor = ({
 
     selectedTimePlayed,
 
-    verseOnCursor,
-    verseAfterCursor,
+    isOnCursor,
+    isAfterCursor,
     startTime,
     endTime,
     fullCursorRatio
@@ -47,13 +47,13 @@ VerseCursor = ({
 }) => {
 
     const cursorStatusClassName = getCursorStatusClassName({
-            isOnCursor: verseOnCursor,
-            isAfterCursor: verseAfterCursor
+            isOnCursor: isOnCursor,
+            isAfterCursor: isAfterCursor
         }),
 
         cursorStyle = {}
 
-    if (verseOnCursor) {
+    if (isOnCursor) {
         const relativeTotalTime = endTime - startTime
 
         let relativeTimePlayed = selectedTimePlayed - startTime

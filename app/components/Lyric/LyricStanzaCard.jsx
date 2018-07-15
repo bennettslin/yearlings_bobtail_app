@@ -4,6 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Verse from '../Verse/Verse';
 import VerseController from '../Verse/VerseController/VerseController'
 
 /*************
@@ -135,14 +136,27 @@ LyricStanzaCardView = ({
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
                     const {
-                        stanzaMap,
-                        unitMap
-                    } = verseObject
+                            stanzaMap,
+                            unitMap,
+                            verseIndex
+                        } = verseObject,
+
+                        isInteractableVerse = !isNaN(verseIndex),
+
+                        // Only wrap interactable verses in verse controller.
+                        VerseComponent = isInteractableVerse ?
+                            VerseController :
+                            Verse
 
                     return !stanzaMap && !unitMap && (
-                            <VerseController {...other}
+                            <VerseComponent {...other}
                                 key={stanzaVerseIndex}
-                                verseObject={verseObject}
+                                {...{
+                                    verseObject
+                                }}
+                                {...isInteractableVerse && {
+                                    verseIndex
+                                }}
                             />
                         )
                     }

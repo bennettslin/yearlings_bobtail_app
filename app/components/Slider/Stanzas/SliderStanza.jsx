@@ -88,6 +88,7 @@ const SliderStanza = ({
                     return (
                         <VerseController
                             key={index}
+                            inSliderStanza
                             verseIndex={firstVerseIndex + index}
 
                             relativeStartTime={relativeStartTime}
