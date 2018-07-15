@@ -1,11 +1,9 @@
-import {
-    TEST_PATTERN_KEY
-} from './bitmapsKeys'
-
-import { BITMAPS_OTHER } from './bitmapsOther'
+import { BITMAPS_TEST } from './bitmapsTest'
+import { BITMAPS_LOGUE } from './bitmapsLogue'
 
 const BITMAPS = {
-    [TEST_PATTERN_KEY]: BITMAPS_OTHER[TEST_PATTERN_KEY]
+    ...BITMAPS_TEST,
+    ...BITMAPS_LOGUE
 }
 
 export {

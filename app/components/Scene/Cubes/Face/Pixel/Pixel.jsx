@@ -22,7 +22,7 @@ const Pixel = ({
     polygonPoints,
     polygonPointsString
 
-}) => (
+}) => Boolean(fill || customFill) && (
     <polygon
         className={cx(
             'Pixel',

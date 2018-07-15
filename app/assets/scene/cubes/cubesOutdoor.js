@@ -36,7 +36,7 @@ import {
 } from './cubesKeys'
 
 import {
-    TEST_PATTERN_KEY
+    TEST_KEY
 } from '../bitmaps/bitmapsKeys'
 
 import {
@@ -69,7 +69,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -85,7 +85,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -101,7 +101,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -115,7 +115,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -125,7 +125,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -138,7 +138,7 @@ const
                 [k, k, j, j, j, j, j, j, j, j, k]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         },
         floor: {
@@ -150,7 +150,7 @@ const
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -164,7 +164,7 @@ const
                 [k]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         },
         floor: {
@@ -176,7 +176,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -190,7 +190,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -205,7 +205,7 @@ const
                 [0],
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -220,7 +220,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -235,7 +235,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -249,7 +249,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -265,7 +265,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -280,7 +280,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -294,7 +294,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -304,7 +304,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -316,7 +316,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -331,7 +331,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -348,7 +348,7 @@ const
                 [1, 1, 1, 1, 1, 1, 7, 1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -365,7 +365,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -380,7 +380,7 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -397,7 +397,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -412,7 +412,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -424,7 +424,7 @@ const
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -434,7 +434,7 @@ const
                 [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -444,7 +444,7 @@ const
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -468,7 +468,7 @@ const
                 [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -479,7 +479,7 @@ const
                 [g, k, k, k, k, k, k, k, k, k, k, g]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         },
         floor: {
@@ -492,7 +492,7 @@ const
                 [4, 4, 4, 4, 4, 6, 6, 4, 4, 4, 0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -508,7 +508,7 @@ const
                 [g, 1, 1, 1, 1, 7, 1, 0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -524,7 +524,7 @@ const
                 [g, 1, 1, 1, 1, 7, 1, 0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },
@@ -536,7 +536,7 @@ const
                 [1]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [TEST_KEY]
             ]
         }
     },

@@ -1,7 +1,13 @@
 const
 
-TEST_PATTERN_KEY = 'testPattern'
+NULL_KEY = 'null',
+TEST_KEY = 'test',
+LOGUE_FLOOR_KEY = 'logueFloor',
+LOGUE_PLATFORM_KEY = 'loguePlatform'
 
 export {
-    TEST_PATTERN_KEY
+    NULL_KEY,
+    TEST_KEY,
+    LOGUE_FLOOR_KEY,
+    LOGUE_PLATFORM_KEY
 }

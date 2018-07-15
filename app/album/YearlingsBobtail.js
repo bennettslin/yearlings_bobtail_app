@@ -122,10 +122,12 @@ module.exports = {
         require(`./19_${HYPHENATED_SONG_PATHS[19]}`),
     ],
     remainingTasks: require('./remainingTasks')
+        .concat(require('./bitmapDrawingTasks'))
         .concat(require('./detailedDrawingTasks'))
         .concat(require('./illustratorDrawingTasks'))
         .concat(require('./remainingDrawingTasks'))
         .concat(require('./realisticDrawingTasks'))
+        .concat(require('./sceneTasks'))
         .concat(require('./svgDrawingTasks')),
 
     completedTasks: require('./completedTasks')

@@ -4,7 +4,9 @@ import {
 } from './cubesKeys'
 
 import {
-    TEST_PATTERN_KEY
+    NULL_KEY,
+    LOGUE_FLOOR_KEY,
+    LOGUE_PLATFORM_KEY
 } from '../bitmaps/bitmapsKeys'
 
 import {
@@ -18,7 +20,7 @@ import {
     // h,
     // i,
     // j,
-    k,
+    // k,
     n,
     // LEFT,
     // RIGHT
@@ -26,13 +28,17 @@ import {
 
 const
 
+    _NL = NULL_KEY,
+    _FL = LOGUE_FLOOR_KEY,
+    _PL = LOGUE_PLATFORM_KEY,
+
     DEFAULT_STAGE_CUBES = {
         ceiling: {
             zIndices: [
-                [k]
+                [n]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [_NL]
             ]
         },
         floor: {
@@ -40,94 +46,40 @@ const
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [_FL]
             ]
         },
         presences: {}
     },
 
     LOGUE_CUBES = {
-        ceiling: {
-            zIndices: [
-                [n]
-            ],
-            bitmapKeys: [
-                [TEST_PATTERN_KEY]
-            ]
-        },
         floor: {
             zIndices: [
                 [0],
-                [0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 0],
-                [0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 0],
-                [0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0],
-                [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 0],
+                [0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0],
+                [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0]
             ],
             bitmapKeys: [
-                [TEST_PATTERN_KEY]
+                [_FL],
+                [_FL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _FL],
+                [_FL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _FL],
+                [_FL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _FL],
+                [_FL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _PL, _FL],
+                [_FL]
             ]
         },
         presences: {
             song0_scene0: {
-                cubes1: {
-                    actors: [
-                        {
-                            name: 'sample actor 1',
-                            xFloat: 4,
-                            width: 5,
-                            height: 25
-                        },
-                        {
-                            name: 'sample actor 2',
-                            xFloat: 8,
-                            width: 15,
-                            height: 15
-                        }
-                    ],
-                    cutouts: [
-                        {
-                            name: 'sample cutout 1',
-                            xFloat: 2,
-                            width: 5,
-                            height: 25
-                        },
-                        {
-                            name: 'sample cutout 2',
-                            xFloat: 10,
-                            width: 15,
-                            height: 15
-                        }
-                    ],
-                    fixtures: {
-                        name: 'sample fixture 1',
+                cubes3: {
+                    actors: {
+                        name: 'oldBennett',
                         xFloat: 5.5,
-                        width: 5,
-                        height: 25
+                        width: 10,
+                        height: 50
                     }
-                },
-                cubes4: {
-                    fixtures: [
-                        {
-                            name: 'sample fixture 4',
-                            xFloat: 3.5,
-                            width: 10,
-                            height: 20
-                        },
-                        {
-                            name: 'sample fixture 4',
-                            xFloat: 7,
-                            zOffset: 0.5,
-                            width: 20,
-                            height: 10
-                        },
-                        {
-                            name: 'sample fixture 4',
-                            xFloat: 11,
-                            width: 10,
-                            height: 10
-                        },
-                    ]
                 }
             }
         }
