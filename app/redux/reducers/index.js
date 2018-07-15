@@ -3,7 +3,8 @@ import { AccessedAnnotationIndexReducer, AccessedAnnotationAnchorIndexReducer, A
 import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceStoreReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
-import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, RenderableSongIndexReducer, RenderableAnnotationIndexReducer, RenderableVerseIndexReducer, RenderableSceneIndexReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanSceneRenderReducer, RenderableCubesYIndexReducer, CanPresencesRenderReducer, CanPixelsRenderReducer } from './render'
+import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanSceneRenderReducer, RenderableCubesYIndexReducer, CanPresencesRenderReducer, CanPixelsRenderReducer } from './render'
+import { RenderableSongIndexReducer, RenderableAnnotationIndexReducer, RenderableVerseIndexReducer, RenderableSceneIndexReducer } from './renderable'
 import { IsHeightlessLyricColumnReducer, IsHiddenCarouselNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, isTwoRowMenuReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
 import { SliderStoreReducer } from './slider'
@@ -41,10 +42,6 @@ const rootReducer = combineReducers({
     appMounted: AppMountedReducer,
     isWindowResizeRenderable: isWindowResizeRenderableReducer,
     isSongChangeRenderable: isSongChangeRenderableReducer,
-    renderableSongIndex: RenderableSongIndexReducer,
-    renderableAnnotationIndex: RenderableAnnotationIndexReducer,
-    renderableVerseIndex: RenderableVerseIndexReducer,
-    renderableSceneIndex: RenderableSceneIndexReducer,
     canTheatreRender: CanTheatreRenderReducer,
     canMainRender: CanMainRenderReducer,
     canSliderRender: CanSliderRenderReducer,
@@ -54,6 +51,11 @@ const rootReducer = combineReducers({
     renderableCubesYIndex: RenderableCubesYIndexReducer,
     canPresencesRender: CanPresencesRenderReducer,
     canPixelsRender: CanPixelsRenderReducer,
+
+    renderableSongIndex: RenderableSongIndexReducer,
+    renderableAnnotationIndex: RenderableAnnotationIndexReducer,
+    renderableVerseIndex: RenderableVerseIndexReducer,
+    renderableSceneIndex: RenderableSceneIndexReducer,
 
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
     interactivatedVerseIndex: InteractivatedVerseIndexReducer,

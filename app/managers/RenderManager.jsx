@@ -4,12 +4,16 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { setShowOneOfTwoLyricColumns } from '../redux/actions/responsive'
+
 import {
-    setIsSongChangeRenderable,
+    setIsSongChangeRenderable
+} from '../redux/actions/render'
+
+import {
     setRenderableSongIndex,
     setRenderableAnnotationIndex,
     setRenderableVerseIndex
-} from '../redux/actions/render'
+} from '../redux/actions/renderable'
 
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'

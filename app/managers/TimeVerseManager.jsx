@@ -5,9 +5,11 @@ import { connect } from 'react-redux'
 
 import { setUpdatedTimePlayed } from '../redux/actions/audio'
 import {
-    setCanRenderScene,
-    setRenderableVerseIndex
+    setCanRenderScene
 } from '../redux/actions/render'
+import {
+    setRenderableVerseIndex
+} from '../redux/actions/renderable'
 import {
     selectTimePlayed,
     selectVerseIndex
