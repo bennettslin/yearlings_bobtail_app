@@ -3218,4 +3218,9 @@ module.exports = [
         workedHours: 5,
         neededHours: 5
     },
+    {
+        taskName: `Review eyes.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

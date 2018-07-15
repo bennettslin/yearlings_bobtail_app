@@ -7,9 +7,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import Verse from '../Verse/Verse'
+import Verse from '../Verse'
 import VerseCursor from './VerseCursor'
-import SliderVerse from '../Slider/Stanzas/SliderVerse'
+import SliderVerse from '../../Slider/Stanzas/SliderVerse'
 
 const mapStateToProps = ({
     canLyricRender,

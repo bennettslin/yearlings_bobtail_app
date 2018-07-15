@@ -1,8 +1,7 @@
 @paddingX__verse: 10px;
 
 @import "./VerseAudio/VerseAudio.less";
-@import "./VerseController.less";
-@import "./VerseCursor.less";
+@import "./VerseController/VerseController.less";
 @import "./VerseLine.less";
 @import "./VerseLines.less";
 
@@ -34,49 +33,3 @@
         }
     }
 }
-
-.verse__interactable {
-
-    .parentIsShown
-    & {
-        transition:
-        color @animationDuration__fast,
-        background-color @animationDuration__fast;
-    }
-}
-
-.verse__title {
-    background-color: @bgColour__beforeSelected__odd;
-    .mixin__textShadow(@bgColour__beforeSelected__odd);
-
-    @paddingX__title: 15px;
-    padding: 0 @paddingX__title;
-}
-
-.verse__inSide {
-
-    .RM__sliderNotMoving
-    & {
-        // Default side verse.
-        background-color: @bgColour__beforeSelected__odd;
-        .mixin__textShadow(@bgColour__beforeSelected__odd);
-
-        color: #644;
-    }
-
-    .RM__sliderMoving
-    & {
-        // Slider side verse.
-        background-color: @bgColour__sideSlider;
-        .mixin__textShadow(@bgColour__sideSlider);
-
-        color: @colour__sideSlider;
-    }
-}
-
-// TODO: This works, but messes with the max-width of the VerseBar.
-// .Verse__inBar .VerseLine {
-//     white-space: nowrap;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-// }

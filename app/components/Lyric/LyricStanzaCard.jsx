@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseController from '../Verse/VerseController'
+import VerseController from '../Verse/VerseController/VerseController'
 
 /*************
  * CONTAINER *

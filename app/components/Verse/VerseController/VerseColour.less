@@ -1,0 +1,40 @@
+.verse__inSide {
+
+    .RM__sliderNotMoving
+    & {
+        // Default side verse.
+        background-color: @bgColour__beforeSelected__odd;
+        .mixin__textShadow(@bgColour__beforeSelected__odd);
+
+        color: #644;
+    }
+
+    .RM__sliderMoving
+    & {
+        // Slider side verse.
+        background-color: @bgColour__sideSlider;
+        .mixin__textShadow(@bgColour__sideSlider);
+
+        color: @colour__sideSlider;
+    }
+}
+
+.VerseCursor {
+    background-color: rgba(200, 150, 250, 0.4);
+}
+
+.VerseCursor__onCursor {
+
+    .RM__sliderNotMoving
+    & {
+        transition: width @animationDuration__default;
+    }
+}
+
+.VerseCursor__beforeCursor {
+    width: 100%;
+}
+
+.VerseCursor__afterCursor {
+    width: 0;
+}

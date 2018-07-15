@@ -1,11 +1,11 @@
 // Text displays to indicate time spent and remaining.
 
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getCursorStatusClassName } from '../../helpers/formatHelper'
+import { getCursorStatusClassName } from '../../../helpers/formatHelper'
 
 const mapStateToProps = ({
     selectedTimePlayed
@@ -80,14 +80,22 @@ VerseCursor = ({
     }
 
     return (
-        <div
-            className={cx(
-                'VerseCursor',
-                `VerseCursor__${cursorStatusClassName}`,
-                'absoluteFullContainer'
-            )}
-            style={cursorStyle}
-        />
+        <Fragment>
+            <div
+                className={cx(
+                    'VerseColour',
+                    'absoluteFullContainer'
+                )}
+            />
+            <div
+                className={cx(
+                    'VerseCursor',
+                    `VerseCursor__${cursorStatusClassName}`,
+                    'absoluteFullContainer'
+                )}
+                style={cursorStyle}
+            />
+        </Fragment>
     )
 }
 

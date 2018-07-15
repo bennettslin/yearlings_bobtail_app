@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseController from '../../Verse/VerseController'
+import VerseController from '../../Verse/VerseController/VerseController'
 import { LS_MARGIN_SLIDER_THIN } from '../../../constants/responsive'
 
 const sliderStanzaPropTypes = {

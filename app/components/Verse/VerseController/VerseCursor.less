@@ -1,0 +1,17 @@
+.verse__interactable {
+
+    .parentIsShown
+    & {
+        transition:
+        color @animationDuration__fast,
+        background-color @animationDuration__fast;
+    }
+}
+
+.verse__title {
+    background-color: @bgColour__beforeSelected__odd;
+    .mixin__textShadow(@bgColour__beforeSelected__odd);
+
+    @paddingX__title: 15px;
+    padding: 0 @paddingX__title;
+}
