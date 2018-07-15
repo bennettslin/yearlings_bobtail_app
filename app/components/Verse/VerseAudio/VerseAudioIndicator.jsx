@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import PropTypes from 'prop-types'
-import { getVerseAudioIndicatorText } from '../../../helpers/formatHelper'
+import { getVerseAudioIndicatorText } from './verseAudioHelper'
 
 const mapStateToProps = ({
     isPlaying
@@ -18,20 +18,20 @@ const verseAudioIndicatorPropTypes = {
     isPlaying: PropTypes.bool.isRequired,
 
     // From parent.
-    isSelected: PropTypes.bool.isRequired,
+    isOnCursor: PropTypes.bool.isRequired,
     isInteractivated: PropTypes.bool
 },
 
 VerseAudioIndicator = ({
     isPlaying,
-    isSelected,
+    isOnCursor,
     isInteractivated
 }) => {
 
     // FIXME: Change this, of course.
     const indicatorText = getVerseAudioIndicatorText({
         isPlaying,
-        isSelected
+        isOnCursor
     })
 
     return (

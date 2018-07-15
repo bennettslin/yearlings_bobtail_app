@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import VerseLines from './VerseLines'
-import VerseAudio from './VerseAudio/VerseAudio'
 
 import {
     getVerseUnitClassName,
@@ -106,7 +105,6 @@ class Verse extends Component {
     }
 
     render() {
-
         const {
                 /* eslint-disable no-unused-vars */
                 renderableSongIndex,
@@ -182,8 +180,6 @@ verseViewPropTypes = {
     isInteractivated: PropTypes.bool,
 
     handleInteractivatableClick: PropTypes.func,
-    handleLyricPlay: PropTypes.func,
-    handleLyricVerseSelect: PropTypes.func,
     setRef: PropTypes.func,
 
     children: PropTypes.any
@@ -201,8 +197,6 @@ VerseView = ({
     isInteractivated,
 
     handleInteractivatableClick,
-    handleLyricPlay,
-    handleLyricVerseSelect,
     setRef,
 
     children,
@@ -244,16 +238,6 @@ VerseView = ({
             onTouchStart={handleInteractivatableClick}
         >
             {children}
-            {isInteractable && (
-                <VerseAudio
-                    verseIndex={verseIndex}
-                    isInteractivated={isInteractivated}
-                    isSelected={isOnCursor}
-                    isAfterSelected={isAfterCursor}
-                    handleLyricPlay={handleLyricPlay}
-                    handleLyricVerseSelect={handleLyricVerseSelect}
-                />
-            )}
 
             <VerseLines {...other} />
         </div>

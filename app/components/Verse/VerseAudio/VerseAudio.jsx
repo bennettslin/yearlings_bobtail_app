@@ -7,8 +7,8 @@ import VerseAudioIndicator from './VerseAudioIndicator'
 const verseAudioPropTypes = {
     verseIndex: PropTypes.number.isRequired,
     isInteractivated: PropTypes.bool.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    isAfterSelected: PropTypes.bool.isRequired,
+    isOnCursor: PropTypes.bool.isRequired,
+    isAfterCursor: PropTypes.bool.isRequired,
     handleLyricPlay: PropTypes.func.isRequired,
     handleLyricVerseSelect: PropTypes.func.isRequired
 }
@@ -17,8 +17,8 @@ const VerseAudio = ({
 
     verseIndex,
     isInteractivated,
-    isSelected,
-    isAfterSelected,
+    isOnCursor,
+    isAfterCursor,
     handleLyricPlay,
     handleLyricVerseSelect
 
@@ -28,8 +28,8 @@ const VerseAudio = ({
             {...{
                 verseIndex,
                 isInteractivated,
-                isSelected,
-                isAfterSelected,
+                isOnCursor,
+                isAfterCursor,
                 handleLyricPlay,
                 handleLyricVerseSelect
             }}
@@ -37,7 +37,7 @@ const VerseAudio = ({
         <VerseAudioIndicator
             {...{
                 isInteractivated,
-                isSelected
+                isOnCursor
             }}
         />
     </Fragment>

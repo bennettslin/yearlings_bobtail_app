@@ -11,9 +11,9 @@ import cx from 'classnames'
 import Button from '../../Button/Button'
 
 import { getSongsNotLoguesCount } from '../../../helpers/dataHelper'
-import { getVerseAudioIconText } from '../../../helpers/formatHelper'
 import { getValueInBitNumber } from '../../../helpers/bitHelper'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+import { getVerseAudioIconText } from './verseAudioHelper'
 
 import { NAVIGATION_ENTER_KEY } from '../../../constants/access'
 
@@ -41,8 +41,8 @@ class VerseAudioButton extends Component {
         // From parent.
         verseIndex: PropTypes.number.isRequired,
         isInteractivated: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        isAfterSelected: PropTypes.bool.isRequired,
+        isOnCursor: PropTypes.bool.isRequired,
+        isAfterCursor: PropTypes.bool.isRequired,
         handleLyricPlay: PropTypes.func.isRequired,
         handleLyricVerseSelect: PropTypes.func.isRequired
     }
@@ -64,7 +64,7 @@ class VerseAudioButton extends Component {
                 isPlaying: true,
                 canPlayThroughs: true
             },
-            onlyOnCondition: nextProps.isSelected
+            onlyOnCondition: nextProps.isOnCursor
         })
     }
 
@@ -72,13 +72,13 @@ class VerseAudioButton extends Component {
 
         if (this.props.isInteractivated) {
 
-            const { isSelected,
+            const { isOnCursor,
                     verseIndex,
                     handleLyricPlay,
                     handleLyricVerseSelect } = this.props
 
             // If verse is selected, audio button will toggle play.
-            if (isSelected) {
+            if (isOnCursor) {
                 handleLyricPlay(e)
 
             // Otherwise, audio button will select verse.
@@ -90,7 +90,7 @@ class VerseAudioButton extends Component {
 
     render() {
         const { isInteractivated,
-                isSelected,
+                isOnCursor,
                 renderableSongIndex,
                 canPlayThroughs } = this.props,
 
@@ -104,10 +104,10 @@ class VerseAudioButton extends Component {
              * If interactivated, disable only if it's selected and song can't
              * play through.
              */
-            isEnabled = isInteractivated && (songCanPlayThrough || !isSelected),
+            isEnabled = isInteractivated && (songCanPlayThrough || !isOnCursor),
 
             // TODO: Make this a real icon, of course.
-            iconText = !songCanPlayThrough && isSelected ?
+            iconText = !songCanPlayThrough && isOnCursor ?
                 'x' : getVerseAudioIconText(this.props)
 
         return (
@@ -119,7 +119,7 @@ class VerseAudioButton extends Component {
             )}>
                 <Button
                     isSmallSize
-                    buttonName={isSelected ? 'audioPlay' : 'audioSelect'}
+                    buttonName={isOnCursor ? 'audioPlay' : 'audioSelect'}
                     accessKey={NAVIGATION_ENTER_KEY}
                     showAccessIconIfAccessOn={isEnabled}
                     isDisabled={!isEnabled}

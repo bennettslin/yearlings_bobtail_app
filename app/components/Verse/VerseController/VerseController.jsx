@@ -8,6 +8,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import Verse from '../Verse'
+import VerseAudio from '../VerseAudio/VerseAudio'
 import VerseColour from './VerseColour'
 import VerseCursor from './VerseCursor'
 import SliderVerse from '../../Slider/Stanzas/SliderVerse'
@@ -37,6 +38,7 @@ class VerseController extends Component {
 
         // From parent.
         inVerseBar: PropTypes.bool,
+        inLyricStanza: PropTypes.bool,
         inSliderStanza: PropTypes.bool,
 
         verseIndex: PropTypes.number.isRequired,
@@ -50,7 +52,11 @@ class VerseController extends Component {
          */
         absoluteStartTime: PropTypes.number,
         absoluteEndTime: PropTypes.number,
-        fullCursorRatio: PropTypes.number
+        fullCursorRatio: PropTypes.number,
+
+        // For verse audio buttons.
+        handleLyricPlay: PropTypes.func,
+        handleLyricVerseSelect: PropTypes.func
     }
 
     shouldComponentUpdate(nextProps) {
@@ -71,11 +77,15 @@ class VerseController extends Component {
                 sliderVerseIndex,
                 interactivatedVerseIndex,
 
+                inLyricStanza,
                 inSliderStanza,
 
                 absoluteStartTime,
                 absoluteEndTime,
                 fullCursorRatio,
+
+                handleLyricPlay,
+                handleLyricVerseSelect,
 
             ...other } = this.props,
 
@@ -109,8 +119,7 @@ class VerseController extends Component {
             isInteractivated = verseIndex === interactivatedVerseIndex
 
         return (
-            <VerseComponent
-                {...other}
+            <VerseComponent {...other}
 
                 {...{
                     isOnCursor
@@ -121,6 +130,7 @@ class VerseController extends Component {
                     isInteractivated
                 }}
             >
+
                 <VerseColour
                 />
 
@@ -143,6 +153,20 @@ class VerseController extends Component {
                         key: verseIndex
                     }}
                 />
+
+                {inLyricStanza && (
+                    <VerseAudio
+                        {...{
+                            verseIndex,
+                            isOnCursor,
+                            isAfterCursor,
+                            isInteractivated,
+                            handleLyricPlay,
+                            handleLyricVerseSelect
+                        }}
+                    />
+                )}
+
             </VerseComponent>
         )
     }

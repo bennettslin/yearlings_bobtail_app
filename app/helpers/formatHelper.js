@@ -172,37 +172,6 @@ export const getFormattedLyricSpanText = (text) => {
     }
 }
 
-export const getVerseAudioIconText = ({
-    isPlaying,
-    isSelected,
-    isAfterSelected
-}) => {
-    let iconText
-
-    if (isSelected) {
-        iconText = isPlaying ? `\u23F8` : `\u25BA`
-    } else {
-        iconText = isAfterSelected ? `\u23E9` : `\u23EA`
-    }
-
-    return iconText
-}
-
-export const getVerseAudioIndicatorText = ({
-    isPlaying,
-    isSelected
-}) => {
-    let indicatorText
-
-    if (isSelected) {
-        indicatorText = isPlaying ? `\u23F8` : `\u25BA`
-    } else {
-        indicatorText = `\u25E6`
-    }
-
-    return indicatorText
-}
-
 export const getVerseUnitClassName = ({
     isEven,
     inVerseBar,

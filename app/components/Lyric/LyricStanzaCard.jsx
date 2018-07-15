@@ -151,6 +151,7 @@ LyricStanzaCardView = ({
                     return !stanzaMap && !unitMap && (
                             <VerseComponent {...other}
                                 key={stanzaVerseIndex}
+                                inLyricStanza
                                 {...{
                                     verseObject
                                 }}
