@@ -31,7 +31,8 @@ class RenderManager extends Component {
         setRenderableVerseIndex: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired,
+        setRenderableScene: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -91,6 +92,11 @@ class RenderManager extends Component {
         this.props.setRenderableVerseIndex(
             selectedVerseIndex
         )
+
+        props.setRenderableScene({
+            selectedSongIndex,
+            selectedVerseIndex
+        })
 
         /**
          * Determine doublespeaker columns only when lyrics are ready to

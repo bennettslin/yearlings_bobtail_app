@@ -1,26 +1,24 @@
 // Reducers for state of this user session.
-import { APP_MOUNTED,
-         CAROUSEL_ANNOTATION_INDEX,
-         INTERACTIVATED_VERSE_INDEX,
-         CURRENT_SCENE_INDEX,
-         IS_LYRIC_EXPANDED,
-         IS_VERSE_BAR_ABOVE,
-         IS_VERSE_BAR_BELOW,
-         IS_MANUAL_SCROLL,
-         SHOWN_BOOK_COLUMN_INDEX,
-         SELECTED_SONG_INDEX,
-         SELECTED_VERSE_INDEX } from '../../constants/state'
+import {
+    APP_MOUNTED,
+    CAROUSEL_ANNOTATION_INDEX,
+    INTERACTIVATED_VERSE_INDEX,
+    IS_LYRIC_EXPANDED,
+    IS_VERSE_BAR_ABOVE,
+    IS_VERSE_BAR_BELOW,
+    IS_MANUAL_SCROLL,
+    SHOWN_BOOK_COLUMN_INDEX,
+    SELECTED_SONG_INDEX
+} from '../../constants/state'
 
 import {
-    getBookColumnIndex,
-    getSceneIndexForVerseIndex
+    getBookColumnIndex
 } from '../../helpers/dataHelper'
 
 import StorageHelper from '../storageHelper'
 
 const { getFromStorage } = StorageHelper,
-    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX),
-    storedVerseIndex = getFromStorage(SELECTED_VERSE_INDEX)
+    storedSongIndex = getFromStorage(SELECTED_SONG_INDEX)
 
 export const AppMountedReducer = (state = false, action) => {
     switch (action.type) {
@@ -43,21 +41,6 @@ export const CarouselAnnotationIndexReducer = (state = 0, action) => {
 export const InteractivatedVerseIndexReducer = (state = -1, action) => {
     switch (action.type) {
         case INTERACTIVATED_VERSE_INDEX:
-            return action.payload
-        default:
-            return state
-    }
-}
-
-export const CurrentSceneIndexReducer = (
-    state = getSceneIndexForVerseIndex(
-        storedSongIndex,
-        storedVerseIndex
-    ),
-    action
-) => {
-    switch (action.type) {
-        case CURRENT_SCENE_INDEX:
             return action.payload
         default:
             return state

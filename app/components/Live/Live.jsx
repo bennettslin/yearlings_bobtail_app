@@ -38,7 +38,7 @@ const mapStateToProps = ({
     isSongChangeRenderable,
     selectedCarouselNavIndex,
     selectedSongIndex,
-    currentSceneIndex
+    renderableSceneIndex
 }) => ({
     canTheatreRender,
     canMainRender,
@@ -47,7 +47,7 @@ const mapStateToProps = ({
     isSongChangeRenderable,
     selectedCarouselNavIndex,
     selectedSongIndex,
-    currentSceneIndex
+    renderableSceneIndex
 })
 
 class Live extends Component {
@@ -73,14 +73,14 @@ class Live extends Component {
                 isSongChangeRenderable,
                 isWindowResizeRenderable,
                 selectedSongIndex,
-                currentSceneIndex
+                renderableSceneIndex
             } = this.props,
 
             {
                 isSongChangeRenderable: wasSongChangeRenderable,
                 isWindowResizeRenderable: wasWindowResizeRenderable,
                 selectedSongIndex: previousSongIndex,
-                currentSceneIndex: previousSceneIndex
+                renderableSceneIndex: previousSceneIndex
             } = prevProps
 
         // Is unrenderable after song change.
@@ -133,7 +133,7 @@ class Live extends Component {
          * production, this will only ever happen if a verse is selected
          */
         if (
-            currentSceneIndex !== previousSceneIndex &&
+            renderableSceneIndex !== previousSceneIndex &&
             selectedSongIndex === previousSongIndex
         ) {
             this.unrenderedTime = Date.now()
@@ -245,7 +245,7 @@ Live.propTypes = {
     isSongChangeRenderable: PropTypes.bool.isRequired,
     selectedCarouselNavIndex: PropTypes.number.isRequired,
     selectedSongIndex: PropTypes.number.isRequired,
-    currentSceneIndex: PropTypes.number.isRequired,
+    renderableSceneIndex: PropTypes.number.isRequired,
 
     setCanRenderTheatre: PropTypes.func.isRequired,
     setCanRenderMain: PropTypes.func.isRequired,

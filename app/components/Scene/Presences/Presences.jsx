@@ -24,11 +24,11 @@ import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 const mapStateToProps = ({
     canPresencesRender,
     renderableSongIndex,
-    currentSceneIndex
+    renderableSceneIndex
 }) => ({
     canPresencesRender,
     renderableSongIndex,
-    currentSceneIndex
+    renderableSceneIndex
 })
 
 class Presences extends Component {
@@ -37,7 +37,7 @@ class Presences extends Component {
         // Through Redux.
         canPresencesRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
-        currentSceneIndex: PropTypes.number.isRequired,
+        renderableSceneIndex: PropTypes.number.isRequired,
 
         // From parent.
         yIndex: PropTypes.number.isRequired,
@@ -94,7 +94,7 @@ class Presences extends Component {
 
                 yIndex,
                 renderableSongIndex,
-                currentSceneIndex,
+                renderableSceneIndex,
                 ...other
             } = this.props,
 
@@ -105,7 +105,7 @@ class Presences extends Component {
             presences = getPresencesForCubes({
                 cubesKey,
                 songIndex: renderableSongIndex,
-                sceneIndex: currentSceneIndex,
+                sceneIndex: renderableSceneIndex,
                 yIndex
             })
 

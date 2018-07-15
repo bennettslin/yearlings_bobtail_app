@@ -2,9 +2,10 @@
 import {
     IS_SONG_CHANGE_RENDERABLE,
     IS_WINDOW_RESIZE_RENDERABLE,
-    RENDER_READY_SONG_INDEX,
-    RENDER_READY_ANNOTATION_INDEX,
-    RENDER_READY_VERSE_INDEX,
+    RENDERABLE_SONG_INDEX,
+    RENDERABLE_ANNOTATION_INDEX,
+    RENDERABLE_VERSE_INDEX,
+    RENDERABLE_SCENE_INDEX,
     CAN_THEATRE_RENDER,
     CAN_MAIN_RENDER,
     CAN_SLIDER_RENDER,
@@ -20,6 +21,10 @@ import {
 } from '../../constants/state'
 
 import StorageHelper from '../storageHelper'
+
+import {
+    getSceneIndexForVerseIndex
+} from '../../helpers/dataHelper'
 
 const { getFromStorage } = StorageHelper,
     storedAnnotationIndex = getFromStorage(SELECTED_ANNOTATION_INDEX),
@@ -55,7 +60,7 @@ export const RenderableSongIndexReducer = (
     action
 ) => {
     switch (action.type) {
-        case RENDER_READY_SONG_INDEX:
+        case RENDERABLE_SONG_INDEX:
             return action.payload
         default:
             return state
@@ -67,7 +72,7 @@ export const RenderableAnnotationIndexReducer = (
     action
 ) => {
     switch (action.type) {
-        case RENDER_READY_ANNOTATION_INDEX:
+        case RENDERABLE_ANNOTATION_INDEX:
             return action.payload
         default:
             return state
@@ -79,7 +84,22 @@ export const RenderableVerseIndexReducer = (
     action
 ) => {
     switch (action.type) {
-        case RENDER_READY_VERSE_INDEX:
+        case RENDERABLE_VERSE_INDEX:
+            return action.payload
+        default:
+            return state
+    }
+}
+
+export const RenderableSceneIndexReducer = (
+    state = getSceneIndexForVerseIndex(
+        storedSongIndex,
+        storedVerseIndex
+    ),
+    action
+) => {
+    switch (action.type) {
+        case RENDERABLE_SCENE_INDEX:
             return action.payload
         default:
             return state

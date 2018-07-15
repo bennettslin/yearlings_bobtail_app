@@ -16,18 +16,24 @@ import Layers from './Layers/Layers'
 import SceneSky from './SceneSky'
 import Wood from '../Stage/Wood'
 
-import { getSceneObject } from '../../helpers/dataHelper'
+import {
+    getPropsAreShallowEqual
+} from '../../helpers/generalHelper'
+
+import {
+    getSceneObject
+} from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     canSceneRender,
     canPixelsRender,
     renderableSongIndex,
-    currentSceneIndex
+    renderableSceneIndex
 }) => ({
     canSceneRender,
     canPixelsRender,
     renderableSongIndex,
-    currentSceneIndex
+    renderableSceneIndex
 })
 
 class Scene extends Component {
@@ -37,7 +43,7 @@ class Scene extends Component {
         canSceneRender: PropTypes.bool.isRequired,
         canPixelsRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
-        currentSceneIndex: PropTypes.number.isRequired,
+        renderableSceneIndex: PropTypes.number.isRequired,
         setRenderableCubesYIndex: PropTypes.func.isRequired,
         setCanRenderPresences: PropTypes.func.isRequired,
         setCanRenderPixels: PropTypes.func.isRequired,
@@ -56,6 +62,16 @@ class Scene extends Component {
         }
 
         this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
+    }
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        }) || !getPropsAreShallowEqual({
+            props: this.state,
+            nextState
+        })
     }
 
     componentDidUpdate(prevProps) {
@@ -113,16 +129,18 @@ class Scene extends Component {
     render() {
         const {
                 renderableSongIndex,
-                currentSceneIndex,
+                renderableSceneIndex,
                 canSceneRender
             } = this.props,
 
             {
                 isShown
-            } = this.state,
+            } = this.state
 
-            sceneObject = getSceneObject(
-                renderableSongIndex, currentSceneIndex
+            console.error('render', renderableSongIndex, renderableSceneIndex)
+
+            const sceneObject = getSceneObject(
+                renderableSongIndex, renderableSceneIndex
             ),
 
             {

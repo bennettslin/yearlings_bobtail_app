@@ -2,7 +2,6 @@
 import { APP_MOUNTED,
          CAROUSEL_ANNOTATION_INDEX,
          INTERACTIVATED_VERSE_INDEX,
-         CURRENT_SCENE_INDEX,
          IS_LYRIC_EXPANDED,
          IS_VERSE_BAR_ABOVE,
          IS_VERSE_BAR_BELOW,
@@ -22,11 +21,6 @@ export const setCarouselAnnotationIndex = (carouselAnnotationIndex = 0) => (
 export const setInteractivatedVerseIndex = (interactivatedVerseIndex = -1) => (
     { type: INTERACTIVATED_VERSE_INDEX,
       payload: interactivatedVerseIndex }
-)
-
-export const setCurrentSceneIndex = (currentSceneIndex = -1) => (
-    { type: CURRENT_SCENE_INDEX,
-      payload: currentSceneIndex }
 )
 
 export const setIsLyricExpanded = (isLyricExpanded = false) => (

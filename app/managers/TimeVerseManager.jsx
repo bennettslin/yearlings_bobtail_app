@@ -8,7 +8,6 @@ import {
     setCanRenderScene,
     setRenderableVerseIndex
 } from '../redux/actions/render'
-import { setCurrentSceneIndex } from '../redux/actions/session'
 import {
     selectTimePlayed,
     selectVerseIndex
@@ -18,8 +17,7 @@ import { VERSE_SCROLL } from '../constants/dom'
 
 import {
     getSongVerseTimes,
-    getVerseIndexForTime,
-    getSceneIndexForVerseIndex
+    getVerseIndexForTime
 } from '../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 
@@ -32,7 +30,6 @@ class TimeVerseManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
 
-        setCurrentSceneIndex: PropTypes.func.isRequired,
         setRenderableVerseIndex: PropTypes.func.isRequired,
         setCanRenderScene: PropTypes.func.isRequired,
         setUpdatedTimePlayed: PropTypes.func.isRequired,
@@ -41,6 +38,7 @@ class TimeVerseManager extends Component {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
+        setRenderableScene: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
     }
@@ -134,6 +132,9 @@ class TimeVerseManager extends Component {
          */
         if (selectedSongIndex === props.selectedSongIndex) {
             props.setRenderableVerseIndex(selectedVerseIndex)
+            props.setRenderableScene({
+                selectedVerseIndex
+            })
         }
 
         /**
@@ -166,11 +167,12 @@ class TimeVerseManager extends Component {
 
         // Render verse and scene immediately.
         if (renderVerseImmediately) {
+            const { selectedSongIndex } = props
 
-            props.setCurrentSceneIndex(getSceneIndexForVerseIndex(
-                props.selectedSongIndex,
+            props.setRenderableScene({
+                selectedSongIndex,
                 selectedVerseIndex
-            ))
+            })
         }
 
         /**
@@ -217,7 +219,6 @@ const mapStateToProps = ({
 
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
-        setCurrentSceneIndex,
         setCanRenderScene,
         setRenderableVerseIndex,
         setUpdatedTimePlayed,

@@ -180,6 +180,10 @@ class StateManager extends Component {
         return this.sceneManager.selectScene(payload)
     }
 
+    setRenderableScene(payload) {
+        return this.sceneManager.setRenderableScene(payload)
+    }
+
     /*********
      * SCORE *
      *********/
@@ -315,6 +319,7 @@ class StateManager extends Component {
         this.toggleAdmin = this.toggleAdmin.bind(this)
         this.togglePlay = this.togglePlay.bind(this)
         this.selectScene = this.selectScene.bind(this)
+        this.setRenderableScene = this.setRenderableScene.bind(this)
         this.selectSong = this.selectSong.bind(this)
         this.selectOverview = this.selectOverview.bind(this)
         this.selectAudioOption = this.selectAudioOption.bind(this)
@@ -437,6 +442,7 @@ class StateManager extends Component {
                 />
                 <RenderManager
                     setRef={node => (this.renderManager = node)}
+                    setRenderableScene={this.setRenderableScene}
                 />
                 <SceneManager
                     setRef={node => (this.sceneManager = node)}
@@ -464,6 +470,7 @@ class StateManager extends Component {
                 <TimeVerseManager
                     setRef={node => (this.timeVerseManager = node)}
                     scrollElementIntoView={this.scrollElementIntoView}
+                    setRenderableScene={this.setRenderableScene}
                     updatePath={updatePath}
                 />
                 <TipsManager

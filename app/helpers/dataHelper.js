@@ -287,12 +287,12 @@ export const getVerseIndexForNextScene = (
 
     const scenesArray = getScenesArray(songIndex),
 
-        currentSceneIndex = getSceneIndexForVerseIndex(songIndex, verseIndex),
+        renderableSceneIndex = getSceneIndexForVerseIndex(songIndex, verseIndex),
 
         scenesCount = scenesArray.length,
 
         nextSceneIndex = (
-            currentSceneIndex
+            renderableSceneIndex
             + direction
             + scenesCount
         ) % scenesCount

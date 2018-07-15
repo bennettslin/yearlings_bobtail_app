@@ -30,9 +30,10 @@ module.exports = {
     // Render.
     IS_WINDOW_RESIZE_RENDERABLE: 'isWindowResizeRenderable',
     IS_SONG_CHANGE_RENDERABLE: 'isSongChangeRenderable',
-    RENDER_READY_SONG_INDEX: 'renderableSongIndex',
-    RENDER_READY_ANNOTATION_INDEX: 'renderableAnnotationIndex',
-    RENDER_READY_VERSE_INDEX: 'renderableVerseIndex',
+    RENDERABLE_SONG_INDEX: 'renderableSongIndex',
+    RENDERABLE_ANNOTATION_INDEX: 'renderableAnnotationIndex',
+    RENDERABLE_VERSE_INDEX: 'renderableVerseIndex',
+    RENDERABLE_SCENE_INDEX: 'renderableSceneIndex',
     CAN_THEATRE_RENDER: 'canTheatreRender',
     CAN_MAIN_RENDER: 'canMainRender',
     CAN_SLIDER_RENDER: 'canSliderRender',
@@ -58,7 +59,6 @@ module.exports = {
     // For selecting a wiki anchor from an unselected carousel annotation.
     CAROUSEL_ANNOTATION_INDEX: 'carouselAnnotationIndex',
     INTERACTIVATED_VERSE_INDEX: 'interactivatedVerseIndex',
-    CURRENT_SCENE_INDEX: 'currentSceneIndex',
     IS_LYRIC_EXPANDED: 'isLyricExpanded',
     IS_VERSE_BAR_ABOVE: 'isVerseBarAbove',
     IS_VERSE_BAR_BELOW: 'isVerseBarBelow',
