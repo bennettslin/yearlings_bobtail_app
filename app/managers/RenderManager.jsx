@@ -9,12 +9,9 @@ import {
     setIsSongChangeRenderable
 } from '../redux/actions/render'
 
-import {
-    setRenderableSongIndex,
-    setRenderableAnnotationIndex,
-    setRenderableVerseIndex
-} from '../redux/actions/renderable'
+import { updateRenderableStore } from '../redux/actions/renderable'
 
+import { getSceneIndexForVerseIndex } from '../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getShowOneOfTwoLyricColumns } from '../helpers/responsiveHelper'
 
@@ -30,13 +27,10 @@ class RenderManager extends Component {
 
         setIsSongChangeRenderable: PropTypes.func.isRequired,
         setShowOneOfTwoLyricColumns: PropTypes.func.isRequired,
-        setRenderableAnnotationIndex: PropTypes.func.isRequired,
-        setRenderableSongIndex: PropTypes.func.isRequired,
-        setRenderableVerseIndex: PropTypes.func.isRequired,
+        updateRenderableStore: PropTypes.func.isRequired,
 
         // From parent.
-        setRef: PropTypes.func.isRequired,
-        setRenderableScene: PropTypes.func.isRequired
+        setRef: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -85,21 +79,14 @@ class RenderManager extends Component {
 
         this.props.setIsSongChangeRenderable(true)
 
-        this.props.setRenderableSongIndex(
-            selectedSongIndex
-        )
-
-        this.props.setRenderableAnnotationIndex(
-            selectedAnnotationIndex
-        )
-
-        this.props.setRenderableVerseIndex(
-            selectedVerseIndex
-        )
-
-        props.setRenderableScene({
-            selectedSongIndex,
-            selectedVerseIndex
+        this.props.updateRenderableStore({
+            renderableSongIndex: selectedSongIndex,
+            renderableAnnotationIndex: selectedAnnotationIndex,
+            renderableVerseIndex: selectedVerseIndex,
+            renderableSceneIndex: getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
         })
 
         /**
@@ -158,9 +145,7 @@ const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setIsSongChangeRenderable,
         setShowOneOfTwoLyricColumns,
-        setRenderableAnnotationIndex,
-        setRenderableSongIndex,
-        setRenderableVerseIndex
+        updateRenderableStore
     }, dispatch)
 )
 

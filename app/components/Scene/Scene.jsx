@@ -27,13 +27,12 @@ import {
 const mapStateToProps = ({
     canSceneRender,
     canPixelsRender,
-    renderableSongIndex,
-    renderableSceneIndex
+    renderableStore
 }) => ({
     canSceneRender,
     canPixelsRender,
-    renderableSongIndex,
-    renderableSceneIndex
+    renderableSongIndex: renderableStore.renderableSongIndex,
+    renderableSceneIndex: renderableStore.renderableSceneIndex
 })
 
 class Scene extends Component {

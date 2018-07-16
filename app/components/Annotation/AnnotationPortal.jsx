@@ -30,10 +30,10 @@ import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canCarouselRender,
-    renderableSongIndex
+    renderableStore
 }) => ({
     canCarouselRender,
-    renderableSongIndex
+    renderableSongIndex: renderableStore.renderableSongIndex,
 })
 
 class AnnotationPortal extends Component {

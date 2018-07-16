@@ -38,7 +38,7 @@ const mapStateToProps = ({
     isSongChangeRenderable,
     selectedCarouselNavIndex,
     selectedSongIndex,
-    renderableSceneIndex
+    renderableStore
 }) => ({
     canTheatreRender,
     canMainRender,
@@ -47,7 +47,7 @@ const mapStateToProps = ({
     isSongChangeRenderable,
     selectedCarouselNavIndex,
     selectedSongIndex,
-    renderableSceneIndex
+    renderableSceneIndex: renderableStore.renderableSceneIndex
 })
 
 class Live extends Component {

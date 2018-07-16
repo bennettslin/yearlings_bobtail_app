@@ -15,14 +15,14 @@ import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({
     canMainRender,
-    deviceStore,
     selectedOverviewIndex,
-    renderableSongIndex
+    deviceStore,
+    renderableStore
 }) => ({
     canMainRender,
-    deviceIndex: deviceStore.deviceIndex,
     selectedOverviewIndex,
-    renderableSongIndex
+    deviceIndex: deviceStore.deviceIndex,
+    renderableSongIndex: renderableStore.renderableSongIndex
 })
 
 class Overview extends Component {

@@ -23,12 +23,11 @@ import { CUBE_Y_AXIS_LENGTH } from '../../../constants/stage'
 
 const mapStateToProps = ({
     canPresencesRender,
-    renderableSongIndex,
-    renderableSceneIndex
+    renderableStore
 }) => ({
     canPresencesRender,
-    renderableSongIndex,
-    renderableSceneIndex
+    renderableSongIndex: renderableStore.renderableSongIndex,
+    renderableSceneIndex: renderableStore.renderableSceneIndex
 })
 
 class Presences extends Component {

@@ -10,9 +10,9 @@ import { setIsScoreLoaded } from '../../redux/actions/player'
 import { getSongScore } from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
-    renderableSongIndex
+    renderableStore
 }) => ({
-    renderableSongIndex
+    renderableSongIndex: renderableStore.renderableSongIndex
 })
 
 class Score extends Component {

@@ -8,7 +8,7 @@ import {
     accessAnnotationAnchorIndex
 } from '../../redux/actions/access'
 
-import { setRenderableAnnotationIndex } from '../../redux/actions/renderable'
+import { updateRenderableStore } from '../../redux/actions/renderable'
 import { selectAnnotationIndex } from '../../redux/actions/storage'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
@@ -36,7 +36,7 @@ class AnnotationManager extends Component {
         accessAnnotationIndex: PropTypes.func.isRequired,
         accessAnnotationAnchorIndex: PropTypes.func.isRequired,
         selectAnnotationIndex: PropTypes.func.isRequired,
-        setRenderableAnnotationIndex: PropTypes.func.isRequired,
+        updateRenderableStore: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -130,7 +130,9 @@ class AnnotationManager extends Component {
          * be rendered right away.
          */
         if (selectedSongIndex === props.selectedSongIndex) {
-            props.setRenderableAnnotationIndex(selectedAnnotationIndex)
+            props.updateRenderableStore({
+                renderableAnnotationIndex: selectedAnnotationIndex
+            })
         }
 
         /**
@@ -273,7 +275,7 @@ const bindDispatchToProps = (dispatch) => (
         accessAnnotationIndex,
         accessAnnotationAnchorIndex,
         selectAnnotationIndex,
-        setRenderableAnnotationIndex
+        updateRenderableStore
     }, dispatch)
 )
 

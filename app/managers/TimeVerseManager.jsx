@@ -4,12 +4,8 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
 import { setUpdatedTimePlayed } from '../redux/actions/audio'
-import {
-    setCanRenderScene
-} from '../redux/actions/render'
-import {
-    setRenderableVerseIndex
-} from '../redux/actions/renderable'
+import { setCanRenderScene } from '../redux/actions/render'
+import { updateRenderableStore } from '../redux/actions/renderable'
 import {
     selectTimePlayed,
     selectVerseIndex
@@ -19,7 +15,8 @@ import { VERSE_SCROLL } from '../constants/dom'
 
 import {
     getSongVerseTimes,
-    getVerseIndexForTime
+    getVerseIndexForTime,
+    getSceneIndexForVerseIndex
 } from '../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 
@@ -32,7 +29,7 @@ class TimeVerseManager extends Component {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
 
-        setRenderableVerseIndex: PropTypes.func.isRequired,
+        updateRenderableStore: PropTypes.func.isRequired,
         setCanRenderScene: PropTypes.func.isRequired,
         setUpdatedTimePlayed: PropTypes.func.isRequired,
         selectTimePlayed: PropTypes.func.isRequired,
@@ -40,7 +37,6 @@ class TimeVerseManager extends Component {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        setRenderableScene: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
     }
@@ -133,9 +129,12 @@ class TimeVerseManager extends Component {
          * rendered right away.
          */
         if (selectedSongIndex === props.selectedSongIndex) {
-            props.setRenderableVerseIndex(selectedVerseIndex)
-            props.setRenderableScene({
-                selectedVerseIndex
+            this.props.updateRenderableStore({
+                renderableVerseIndex: selectedVerseIndex,
+                renderableSceneIndex: getSceneIndexForVerseIndex(
+                    selectedSongIndex,
+                    selectedVerseIndex
+                )
             })
         }
 
@@ -171,9 +170,13 @@ class TimeVerseManager extends Component {
         if (renderVerseImmediately) {
             const { selectedSongIndex } = props
 
-            props.setRenderableScene({
-                selectedSongIndex,
-                selectedVerseIndex
+            this.props.updateRenderableStore({
+                renderableSongIndex: selectedSongIndex,
+                renderableVerseIndex: selectedVerseIndex,
+                renderableSceneIndex: getSceneIndexForVerseIndex(
+                    selectedSongIndex,
+                    selectedVerseIndex
+                )
             })
         }
 
@@ -222,7 +225,7 @@ const mapStateToProps = ({
 const bindDispatchToProps = (dispatch) => (
     bindActionCreators({
         setCanRenderScene,
-        setRenderableVerseIndex,
+        updateRenderableStore,
         setUpdatedTimePlayed,
         selectTimePlayed,
         selectVerseIndex

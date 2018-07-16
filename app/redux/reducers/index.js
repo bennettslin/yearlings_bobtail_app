@@ -4,7 +4,7 @@ import { IsPlayingReducer, UpdatedTimePlayedReducer } from './audio'
 import { DeviceStoreReducer } from './device'
 import { CanPlayThroughsReducer, IsScoreLoadedReducer } from './player'
 import { isWindowResizeRenderableReducer, isSongChangeRenderableReducer, CanTheatreRenderReducer, CanMainRenderReducer, CanSliderRenderReducer, CanLyricRenderReducer, CanCarouselRenderReducer, CanSceneRenderReducer, RenderableCubesYIndexReducer, CanPresencesRenderReducer, CanPixelsRenderReducer } from './render'
-import { RenderableSongIndexReducer, RenderableAnnotationIndexReducer, RenderableVerseIndexReducer, RenderableSceneIndexReducer } from './renderable'
+import { RenderableStoreReducer } from './renderable'
 import { IsHeightlessLyricColumnReducer, IsHiddenCarouselNavReducer, IsMobileWikiReducer, IsScoresTipsInMainReducer, isTwoRowMenuReducer, ShowOneOfTwoLyricColumnsReducer, ShowShrunkNavIconReducer, ShowSingleBookColumnReducer } from './responsive'
 import { AppMountedReducer, CarouselAnnotationIndexReducer, InteractivatedVerseIndexReducer, IsLyricExpandedReducer, IsVerseBarAboveReducer, IsVerseBarBelowReducer, ShownBookColumnIndexReducer, IsManualScrollReducer } from './session'
 import { SliderStoreReducer } from './slider'
@@ -12,6 +12,7 @@ import { AccessIndexReducer, AdminIndexReducer, AnnotationIndexReducer, AudioOpt
 
 import {
     DEVICE_STORE,
+    RENDERABLE_STORE,
     SLIDER_STORE
 } from '../../constants/state'
 
@@ -52,10 +53,11 @@ const rootReducer = combineReducers({
     canPresencesRender: CanPresencesRenderReducer,
     canPixelsRender: CanPixelsRenderReducer,
 
-    renderableSongIndex: RenderableSongIndexReducer,
-    renderableAnnotationIndex: RenderableAnnotationIndexReducer,
-    renderableVerseIndex: RenderableVerseIndexReducer,
-    renderableSceneIndex: RenderableSceneIndexReducer,
+    // renderableSongIndex: RenderableSongIndexReducer,
+    // renderableAnnotationIndex: RenderableAnnotationIndexReducer,
+    // renderableVerseIndex: RenderableVerseIndexReducer,
+    // renderableSceneIndex: RenderableSceneIndexReducer,
+    [RENDERABLE_STORE]: RenderableStoreReducer,
 
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
     interactivatedVerseIndex: InteractivatedVerseIndexReducer,

@@ -17,13 +17,13 @@ import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableVerseIndex,
     interactivatedVerseIndex,
+    renderableStore,
     sliderStore
 }) => ({
     canLyricRender,
-    renderableVerseIndex,
     interactivatedVerseIndex,
+    renderableVerseIndex: renderableStore.renderableVerseIndex,
     sliderVerseIndex: sliderStore.sliderVerseIndex
 })
 

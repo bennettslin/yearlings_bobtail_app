@@ -14,14 +14,14 @@ import { LYRIC_ANNOTATION_SCROLL } from '../../constants/dom'
 const mapStateToProps = ({
     canLyricRender,
     accessedAnnotationIndex,
-    renderableAnnotationIndex,
+    renderableStore,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex
 }) => ({
     canLyricRender,
     accessedAnnotationIndex,
-    renderableAnnotationIndex,
+    renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
     interactivatedVerseIndex

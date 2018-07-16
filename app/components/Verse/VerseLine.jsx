@@ -10,10 +10,10 @@ import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableSongIndex
+    renderableStore
 }) => ({
     canLyricRender,
-    renderableSongIndex
+    renderableSongIndex: renderableStore.renderableSongIndex
 })
 
 class VerseLine extends Component {

@@ -20,12 +20,12 @@ import { NAVIGATION_ENTER_KEY } from '../../../constants/access'
 const mapStateToProps = ({
     isPlaying,
     canLyricRender,
-    renderableSongIndex,
+    renderableStore,
     canPlayThroughs
 }) => ({
     isPlaying,
     canLyricRender,
-    renderableSongIndex,
+    renderableSongIndex: renderableStore.renderableSongIndex,
     canPlayThroughs
 })
 

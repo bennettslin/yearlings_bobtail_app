@@ -1,6 +1,6 @@
-import React from '../../../../../../Library/Caches/typescript/2.9/node_modules/@types/react'
-import PropTypes from '../../../../../../Library/Caches/typescript/2.9/node_modules/@types/prop-types'
-import cx from '../../../../../../Library/Caches/typescript/2.9/node_modules/@types/classnames'
+import React from 'react'
+import PropTypes from 'prop-types'
+import cx from 'classnames'
 
 const sliderTimePropTypes = {
     isSpent: PropTypes.bool,

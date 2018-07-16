@@ -1,46 +1,25 @@
-import {
-    RENDERABLE_SONG_INDEX,
-    RENDERABLE_ANNOTATION_INDEX,
-    RENDERABLE_VERSE_INDEX,
-    RENDERABLE_SCENE_INDEX
-} from '../../constants/state'
+// Actions for renderable state.
 
-export const setRenderableSongIndex = (
-    renderableSongIndex = -1
-) => {
-    // console.error(RENDERABLE_SONG_INDEX, renderableSongIndex)
-    return {
-        type: RENDERABLE_SONG_INDEX,
-        payload: renderableSongIndex
-    }
-}
+import { is } from './actionsHelper'
 
-export const setRenderableAnnotationIndex = (
-    renderableAnnotationIndex = 0
-) => {
-    // console.error(RENDERABLE_ANNOTATION_INDEX, renderableAnnotationIndex)
-    return {
-        type: RENDERABLE_ANNOTATION_INDEX,
-        payload: renderableAnnotationIndex
-    }
-}
+import { RENDERABLE_STORE } from '../../constants/state'
+import { RENDERABLE_DEFAULTS } from '../defaultConstants'
 
-export const setRenderableVerseIndex = (
-    renderableVerseIndex = -1
-) => {
-    // console.error(RENDERABLE_VERSE_INDEX, renderableVerseIndex)
-    return {
-        type: RENDERABLE_VERSE_INDEX,
-        payload: renderableVerseIndex
-    }
-}
+export const updateRenderableStore = ({
+    renderableSongIndex,
+    renderableAnnotationIndex,
+    renderableVerseIndex,
+    renderableSceneIndex
 
-export const setRenderableSceneIndex = (
-    renderableSceneIndex = -1
-) => {
-    // console.error(RENDERABLE_SCENE_INDEX, renderableSceneIndex)
+} = RENDERABLE_DEFAULTS) => {
+
     return {
-        type: RENDERABLE_SCENE_INDEX,
-        payload: renderableSceneIndex
+        type: RENDERABLE_STORE,
+        payload: {
+            ...is(renderableSongIndex) && { renderableSongIndex },
+            ...is(renderableAnnotationIndex) && { renderableAnnotationIndex },
+            ...is(renderableVerseIndex) && { renderableVerseIndex },
+            ...is(renderableSceneIndex) && { renderableSceneIndex }
+        }
     }
 }

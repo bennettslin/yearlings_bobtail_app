@@ -15,10 +15,10 @@ import {
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableSongIndex
+    renderableStore
 }) => ({
     canLyricRender,
-    renderableSongIndex
+    renderableSongIndex: renderableStore.renderableSongIndex
 })
 
 /*************

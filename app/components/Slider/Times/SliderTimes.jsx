@@ -12,13 +12,13 @@ import { getFormattedTime } from '../../../helpers/formatHelper'
 
 const mapStateToProps = ({
     canSliderRender,
-    renderableSongIndex,
     selectedTimePlayed,
+    renderableStore,
     sliderStore
 }) => ({
     canSliderRender,
-    renderableSongIndex,
     selectedTimePlayed,
+    renderableSongIndex: renderableStore.renderableSongIndex,
     isSliderTouched: sliderStore.isSliderTouched,
     sliderRatio: sliderStore.sliderRatio
 })

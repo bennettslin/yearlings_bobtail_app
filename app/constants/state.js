@@ -31,10 +31,6 @@ module.exports = {
     // Render.
     IS_WINDOW_RESIZE_RENDERABLE: 'isWindowResizeRenderable',
     IS_SONG_CHANGE_RENDERABLE: 'isSongChangeRenderable',
-    RENDERABLE_SONG_INDEX: 'renderableSongIndex',
-    RENDERABLE_ANNOTATION_INDEX: 'renderableAnnotationIndex',
-    RENDERABLE_VERSE_INDEX: 'renderableVerseIndex',
-    RENDERABLE_SCENE_INDEX: 'renderableSceneIndex',
     CAN_THEATRE_RENDER: 'canTheatreRender',
     CAN_MAIN_RENDER: 'canMainRender',
     CAN_SLIDER_RENDER: 'canSliderRender',
@@ -44,6 +40,13 @@ module.exports = {
     RENDERABLE_KEY_Y_INDEX: 'renderableCubesYIndex',
     CAN_PRESENCES_RENDER: 'canPresencesRender',
     CAN_PIXELS_RENDER: 'canPixelsRender',
+
+    // Renderable.
+    RENDERABLE_STORE: 'renderableStore',
+    RENDERABLE_SONG_INDEX: 'renderableSongIndex',
+    RENDERABLE_ANNOTATION_INDEX: 'renderableAnnotationIndex',
+    RENDERABLE_VERSE_INDEX: 'renderableVerseIndex',
+    RENDERABLE_SCENE_INDEX: 'renderableSceneIndex',
 
     // Responsive.
     IS_HEIGHTLESS_LYRIC_COLUMN: 'isHeightlessLyricColumn',

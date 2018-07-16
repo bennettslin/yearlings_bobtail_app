@@ -14,8 +14,7 @@ import { getArrayOfLength } from '../../helpers/generalHelper'
 const mapStateToProps = ({
     canCarouselRender,
     isHiddenCarouselNav,
-    renderableSongIndex,
-    renderableAnnotationIndex,
+    renderableStore,
     accessedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
@@ -23,8 +22,8 @@ const mapStateToProps = ({
 }) => ({
     canCarouselRender,
     isHiddenCarouselNav,
-    renderableSongIndex,
-    renderableAnnotationIndex,
+    renderableSongIndex: renderableStore.renderableSongIndex,
+    renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
     accessedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,

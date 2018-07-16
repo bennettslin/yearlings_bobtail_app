@@ -1,14 +1,8 @@
 import { Component } from 'react'
 import PropTypes from 'prop-types'
-import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-import { setRenderableSceneIndex } from '../redux/actions/renderable'
-
-import {
-    getSceneIndexForVerseIndex,
-    getVerseIndexForNextScene
-} from '../helpers/dataHelper'
+import { getVerseIndexForNextScene } from '../helpers/dataHelper'
 
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 
@@ -18,7 +12,6 @@ class SceneManager extends Component {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        setRenderableSceneIndex: PropTypes.func.isRequired,
 
         // From parent.
         setRef: PropTypes.func.isRequired,
@@ -37,20 +30,11 @@ class SceneManager extends Component {
         })
     }
 
-    setRenderableScene({
-        selectedSongIndex = this.props.selectedSongIndex,
-        selectedVerseIndex = this.props.selectedVerseIndex
-    }) {
-        this.props.setRenderableSceneIndex(
-            getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
-        )
-    }
-
     selectScene(direction) {
-        const { selectedSongIndex, selectedVerseIndex } = this.props
+        const {
+            selectedSongIndex,
+            selectedVerseIndex
+        } = this.props
 
         const nextVerseIndex = getVerseIndexForNextScene(
             selectedSongIndex, selectedVerseIndex, direction
@@ -84,10 +68,4 @@ const mapStateToProps = ({
     selectedVerseIndex
 })
 
-const bindDispatchToProps = (dispatch) => (
-    bindActionCreators({
-        setRenderableSceneIndex
-    }, dispatch)
-)
-
-export default connect(mapStateToProps, bindDispatchToProps)(SceneManager)
+export default connect(mapStateToProps)(SceneManager)
