@@ -52,12 +52,6 @@ module.exports = [
      * End Hack Week work.
      */
 
-    {
-        taskName: `Scene should get scene object from song and verse. Current bug with clicking portal to lidless Vaseline.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     /**
      * Access icons.
      */

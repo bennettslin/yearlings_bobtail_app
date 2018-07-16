@@ -3228,4 +3228,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Scene should get scene object from song and verse. Current bug with clicking portal to lidless Vaseline. Allow values to be dispatched together.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]
