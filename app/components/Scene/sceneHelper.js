@@ -2,6 +2,7 @@ import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
     CUBE_X_AXIS_LENGTH,
+    CUBE_Z_AXIS_LENGTH,
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_X_UNITS_LENGTH
 } from '../../constants/stage'
@@ -82,7 +83,7 @@ const _getYPercentage = (
         tileYPercentage = tileYPercentages[yCornerIndex],
 
         rawYPercentage =
-            tileYPercentage + zIndex / 10
+            tileYPercentage + zIndex * 2 / CUBE_Z_AXIS_LENGTH
             * (VANISHING_POINT_Y_PERCENTAGE - tileYPercentage)
 
     /**
@@ -339,7 +340,7 @@ export const getStageCubeCornerPercentages = ({
 
 }) => {
 
-    const baseZIndex = isFloor ? 0 : 20
+    const baseZIndex = isFloor ? 0 : CUBE_Z_AXIS_LENGTH
 
     return {
         // This is the top face if floor, bottom face if ceiling.

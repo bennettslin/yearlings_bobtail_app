@@ -35,7 +35,7 @@ export const getBitmapMatrix = ({
         actualZHeightIndex = isFloor ?
             zIndex : CUBE_Z_AXIS_LENGTH - zIndex,
         actualZHeight = isTileFace ?
-            MATRIX_LENGTH : MATRIX_LENGTH * (actualZHeightIndex / 3),
+            MATRIX_LENGTH : MATRIX_LENGTH * (actualZHeightIndex / 2),
         leftmostXIncrement = (bottomLeft.x - topLeft.x) / actualZHeight,
         leftmostYIncrement = (bottomLeft.y - topLeft.y) / actualZHeight,
         rightmostXIncrement = (bottomRight.x - topRight.x) / actualZHeight,
@@ -50,10 +50,10 @@ export const getBitmapMatrix = ({
             MATRIX_LENGTH :
 
             /**
-             * When relative zIndex is 3, the face is close enough to a square.
+             * When relative zIndex is 2, the face is close enough to a square.
              * It's not exact, but this is fine for now.
              */
-            MATRIX_LENGTH * (relativeZHeight / 3),
+            MATRIX_LENGTH * (relativeZHeight / 2),
 
         coordinatesHeightArray = isTileFace ?
             COORDINATES_ARRAY :

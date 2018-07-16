@@ -10,7 +10,6 @@ const
     i = 18,
     j = 19,
     k = 20,
-    n = 21,
     LEFT = 'left',
     RIGHT = 'right'
 
@@ -26,7 +25,6 @@ export {
     i,
     j,
     k,
-    n,
     LEFT,
     RIGHT
 }

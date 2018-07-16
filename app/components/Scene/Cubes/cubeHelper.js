@@ -1,8 +1,10 @@
 import { getValueInAbridgedMatrix } from '../../../helpers/generalHelper'
 
-import { CUBE_X_AXIS_LENGTH,
-         CUBE_Y_AXIS_LENGTH,
-         CUBE_Z_AXIS_LENGTH } from '../../../constants/stage'
+import {
+    CUBE_X_AXIS_LENGTH,
+    CUBE_Y_AXIS_LENGTH,
+    CUBE_Z_AXIS_LENGTH
+} from '../../../constants/stage'
 
 const midXIndex = CUBE_X_AXIS_LENGTH / 2
 

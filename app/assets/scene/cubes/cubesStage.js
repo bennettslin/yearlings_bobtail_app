@@ -10,7 +10,7 @@ import {
 } from '../bitmaps/bitmapsKeys'
 
 import {
-    n
+    k
 } from './cubesConstants'
 
 const
@@ -22,7 +22,7 @@ const
     DEFAULT_STAGE_CUBES = {
         ceiling: {
             zIndices: [
-                [n]
+                [k]
             ],
             bitmapKeys: [
                 [_NL]

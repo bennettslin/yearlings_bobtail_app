@@ -51,7 +51,8 @@ import {
     k,
     // n,
     // LEFT,
-    RIGHT
+    RIGHT,
+    c
 } from './cubesConstants'
 
 const
@@ -76,12 +77,12 @@ const
         // Solid overpass wall is 1.5'. Fence will extend higher.
         floor: {
             zIndices: [
-                [0],
+                [c, g],
                 [8],
-                [5],
-                [5],
+                [4],
+                [4],
                 [0],
-                [0]
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, g]
             ],
             bitmapKeys: [
                 [TEST_KEY]

@@ -63,7 +63,8 @@ const base = 1.069913193933663,
 
 module.exports = {
 
-    LS_STAGE_ASPECT_RATIO: 1.7, // Was 1.2. And then was 1.8.
+    // Was 1.2. And then was 1.8. Now is 1.5 for simple 12 / 8 ratio.
+    LS_STAGE_ASPECT_RATIO: 1.5,
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE: 1.05,
 
     // Each stage floor increment is 0.5 feet.
@@ -72,7 +73,7 @@ module.exports = {
     TILE_Y_PERCENTAGES,
     CUBE_Y_AXIS_LENGTH,
     CUBE_X_AXIS_LENGTH: 12,
-    CUBE_Z_AXIS_LENGTH: 20,
+    CUBE_Z_AXIS_LENGTH: 16,
 
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_X_UNITS_LENGTH: 32,
