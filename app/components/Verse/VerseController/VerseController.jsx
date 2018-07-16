@@ -11,7 +11,7 @@ import Verse from '../Verse'
 import VerseAudio from '../VerseAudio/VerseAudio'
 import VerseColour from './VerseColour'
 import VerseCursor from './VerseCursor'
-import SliderVerse from '../../Slider/Stanzas/SliderVerse'
+import SliderVerse from '../../Slider2/Stanzas/SliderVerse'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
