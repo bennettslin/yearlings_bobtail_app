@@ -19,7 +19,7 @@ import {
     PRETEEN_BENNETT_ROOM_KEY,
     FREEWAY_KEY,
     PORCH_KEY,
-    CHILDHOOD_NEIGHBOURHOOD_KEY,
+    NORTH_HOLLYWOOD_HOUSES_KEY,
     CHANGELING_CAVE_KEY
 } from '../assets/scene/cubes/cubesKeys'
 import { TIME_ANYTIME,
@@ -133,7 +133,7 @@ module.exports = {
                     }
                 }
             },
-            cubes: CHILDHOOD_NEIGHBOURHOOD_KEY,
+            cubes: NORTH_HOLLYWOOD_HOUSES_KEY,
             sky: {
                 time: TIME_ANYTIME,
                 season: SEASON_SUMMER

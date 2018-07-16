@@ -1,10 +1,14 @@
 import { CUBES_STAGE } from './cubesStage'
+import { CUBES_NORTH_HOLLYWOOD } from './cubesNorthHollywood'
+
 import { CUBES_INDOOR } from './cubesIndoor'
 import { CUBES_OUTDOOR } from './cubesOutdoor'
 import { CUBES_OTHER } from './cubesOther'
 
 const CUBES = {
     ...CUBES_STAGE,
+    ...CUBES_NORTH_HOLLYWOOD,
+
     ...CUBES_INDOOR,
     ...CUBES_OUTDOOR,
     ...CUBES_OTHER

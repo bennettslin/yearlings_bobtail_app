@@ -41,6 +41,8 @@ VerseColour = ({
             className={cx(
                 'VerseColour',
                 inVerseBar && 'VerseColour__inVerseBar',
+
+                !inVerseBar && 'VerseColour__interactable',
                 inLyricVerse && 'VerseColour__inLyricVerse',
                 inSliderVerse && 'VerseColour__inSliderVerse',
 

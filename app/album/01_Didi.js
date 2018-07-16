@@ -16,10 +16,11 @@ import { VERSES,
          IS_DOT_STANZA } from '../constants/lyrics'
 import {
     CHILDHOOD_BATHROOM_KEY,
-    CHILDHOOD_NEIGHBOURHOOD_KEY,
+    NORTH_HOLLYWOOD_HOUSES_KEY,
     PLAYGROUND_KEY
 } from '../assets/scene/cubes/cubesKeys'
 import {
+    TIME_DAWN,
     TIME_MORNING,
     TIME_NOON,
     TIME_AFTERNOON,
@@ -31,10 +32,10 @@ module.exports = {
     scenes: [
         {
             unitIndex: 1,
-            description: `Neighbourhood houses.`,
-            cubes: CHILDHOOD_NEIGHBOURHOOD_KEY,
+            description: `North Hollywood houses.`,
+            cubes: NORTH_HOLLYWOOD_HOUSES_KEY,
             sky: {
-                time: TIME_MORNING,
+                time: TIME_DAWN,
                 season: SEASON_SPRING
             }
         },
@@ -61,7 +62,7 @@ module.exports = {
                     description: 'side, running, panicked'
                 }
             },
-            cubes: CHILDHOOD_NEIGHBOURHOOD_KEY,
+            cubes: NORTH_HOLLYWOOD_HOUSES_KEY,
             sky: {
                 time: TIME_MORNING,
                 season: SEASON_SPRING

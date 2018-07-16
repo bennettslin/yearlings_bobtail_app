@@ -9,4 +9,14 @@ module.exports = [
         workedHours: 0,
         neededHours: 0.5
     },
+    {
+        taskName: `North Hollywood lawn`,
+        workedHours: 0,
+        neededHours: 0.5
+    },
+    {
+        taskName: `sidewalk`,
+        workedHours: 0,
+        neededHours: 0.5
+    },
 ]

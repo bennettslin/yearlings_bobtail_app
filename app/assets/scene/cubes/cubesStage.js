@@ -10,20 +10,7 @@ import {
 } from '../bitmaps/bitmapsKeys'
 
 import {
-    // a,
-    // b,
-    // c,
-    // d,
-    // e,
-    // f,
-    // g,
-    // h,
-    // i,
-    // j,
-    // k,
-    n,
-    // LEFT,
-    // RIGHT
+    n
 } from './cubesConstants'
 
 const

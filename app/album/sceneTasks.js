@@ -9,6 +9,11 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `NORTH_HOLLYWOOD_HOUSES_KEY`,
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
 
     /**
      * Remaining.
@@ -231,11 +236,6 @@ module.exports = [
     },
     {
         taskName: `SITA_APARTMENT_COUCH_THOUGHT_KEY`,
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: `CHILDHOOD_NEIGHBOURHOOD_KEY`,
         workedHours: 0,
         neededHours: 0.5
     },

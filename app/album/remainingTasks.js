@@ -98,6 +98,24 @@ module.exports = [
         neededHours: 1
     },
 
+    {
+        taskName: `Box shadow and higher z-index on cursor stanza and cursor verse in stanza with multiple verses, for both lyric and slider verses. Need system to know whether stanza has a single verse. Also need to redo slider verse widths.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Make presence widths and heights based on x and z lengths.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Allow cutouts to persist across scenes. Make keys based on names?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     /**
      * Remaining scene work.
      */

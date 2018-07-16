@@ -1,8 +1,6 @@
 // Separating outdoor cubes purely for purpose of keeping file smaller.
 
-// TODO: In case I want to make cube and key constants different.
 import {
-    CHILDHOOD_NEIGHBOURHOOD_KEY,
     PLAYGROUND_KEY,
     FREEWAY_KEY,
     PORCH_KEY,
@@ -58,21 +56,6 @@ import {
 
 const
 
-    CHILDHOOD_NEIGHBOURHOOD_CUBES = {
-        floor: {
-            zIndices: [
-                [1],
-                [1],
-                [1],
-                [1],
-                [1],
-                [0]
-            ],
-            bitmapKeys: [
-                [TEST_KEY]
-            ]
-        }
-    },
     PLAYGROUND_CUBES = {
         // Raised nurse's office bench is 1.5'.
         floor: {
@@ -542,7 +525,6 @@ const
     },
 
     CUBES_OUTDOOR = {
-        [CHILDHOOD_NEIGHBOURHOOD_KEY]: CHILDHOOD_NEIGHBOURHOOD_CUBES,
         [PLAYGROUND_KEY]: PLAYGROUND_CUBES,
         [FREEWAY_KEY]: FREEWAY_CUBES,
         [PORCH_KEY]: PORCH_CUBES,

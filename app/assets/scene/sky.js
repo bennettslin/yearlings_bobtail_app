@@ -2,6 +2,7 @@ const
 
 // Sky times and seasons.
 TIME_ANYTIME = 'anytime',
+TIME_DAWN = 'dawn',
 TIME_MORNING = 'morning',
 TIME_NOON = 'noon',
 TIME_AFTERNOON = 'afternoon',
@@ -16,6 +17,7 @@ SEASON_WINTER = 'winter'
 
 export {
     TIME_ANYTIME,
+    TIME_DAWN,
     TIME_MORNING,
     TIME_NOON,
     TIME_AFTERNOON,
