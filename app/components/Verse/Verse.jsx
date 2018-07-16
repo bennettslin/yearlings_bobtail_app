@@ -197,7 +197,7 @@ VerseView = ({
 
                 // title, even, odd, inSide.
                 verseClassName && `verse__${verseClassName}`,
-                isInteractable && 'verse__interactable'
+                isInteractable && 'Verse__interactable'
             )}
             onClick={handleInteractivatableClick}
             onTouchStart={handleInteractivatableClick}

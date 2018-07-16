@@ -44,15 +44,15 @@ VerseColour = ({
                 inLyricStanza && 'VerseColour__inLyricStanza',
                 inSliderStanza && 'VerseColour__inSliderStanza',
 
-                'absoluteFullContainer',
-
                 isOdd ?
                     'VerseColour__odd' :
                     'VerseColour__even',
 
                 // onCursor, beforeCursor, or afterCursor.
                 `VerseColour__${cursorStatusClassName}`,
-                isInteractivated && 'VerseColour__interactivated'
+                isInteractivated && 'VerseColour__interactivated',
+
+                'absoluteFullContainer'
             )}
         />
     )

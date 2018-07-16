@@ -5,13 +5,6 @@
 @import "./VerseLine.less";
 @import "./VerseLines.less";
 
-.Verse {
-    &.verse__interactable {
-        position: relative;
-        padding-left: @paddingX__verse * 2;
-    }
-}
-
 .Verse__inLyric {
     padding: 0 @paddingX__verse;
 
@@ -27,6 +20,11 @@
             padding-bottom: @paddingX__verse;
         }
     }
+}
+
+.Verse__interactable {
+    position: relative;
+    padding-left: @paddingX__verse * 2;
 }
 
 .Verse__side {
