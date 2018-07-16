@@ -6,14 +6,9 @@
 @import "./VerseLines.less";
 
 .Verse {
-
     &.verse__interactable {
         position: relative;
         padding-left: @paddingX__verse * 2;
-    }
-
-    &.verse__interactivated {
-        box-shadow: @boxShadow__activeVerse;
     }
 }
 
@@ -32,4 +27,33 @@
             padding-bottom: @paddingX__verse;
         }
     }
+}
+
+.Verse__side {
+
+    .RM__sliderNotMoving
+    & {
+        // Default side verse.
+        background-color: @bgColour__beforeSelected__odd;
+        .mixin__textShadow(@bgColour__beforeSelected__odd);
+
+        color: #644;
+    }
+
+    .RM__sliderMoving
+    & {
+        // Slider side verse.
+        background-color: @bgColour__sideSlider;
+        .mixin__textShadow(@bgColour__sideSlider);
+
+        color: @colour__sideSlider;
+    }
+}
+
+.Verse__title {
+    background-color: @bgColour__beforeSelected__odd;
+    .mixin__textShadow(@bgColour__beforeSelected__odd);
+
+    @paddingX__title: 15px;
+    padding: 0 @paddingX__title;
 }

@@ -1,40 +1,157 @@
-.verse__inSide {
+.VerseColour {
+    .parentIsShown
+    & {
+        transition:
+        color @animationDuration__fast,
+        background-color @animationDuration__fast;
+    }
+
+    &.VerseColour__interactivated {
+        box-shadow: @boxShadow__activeVerse;
+    }
+}
+
+.VerseColour__odd {
+    /**
+     * Default odd verse colours.
+     */
 
     .RM__sliderNotMoving
-    & {
-        // Default side verse.
+    &.VerseColour__beforeCursor,
+    .RM__sliderNotMoving.RM__verseBarBelow
+    &.VerseColour__onCursor {
         background-color: @bgColour__beforeSelected__odd;
         .mixin__textShadow(@bgColour__beforeSelected__odd);
 
-        color: #644;
+        color: @colour__beforeSelected__odd;
     }
 
     .RM__sliderMoving
-    & {
-        // Slider side verse.
-        background-color: @bgColour__sideSlider;
-        .mixin__textShadow(@bgColour__sideSlider);
+    &.VerseColour__beforeCursor,
+    .RM__sliderMoving.RM__verseBarBelow
+    &.VerseColour__onCursor {
+        background-color: @bgColour__beforeSlider__odd;
+        .mixin__textShadow(@bgColour__beforeSlider__odd);
 
-        color: @colour__sideSlider;
+        color: @colour__beforeSlider__odd;
     }
-}
-
-.VerseCursor {
-    background-color: rgba(200, 150, 250, 0.4);
-}
-
-.VerseCursor__onCursor {
 
     .RM__sliderNotMoving
-    & {
-        transition: width @animationDuration__default;
+    &.VerseColour__afterCursor,
+    .RM__sliderNotMoving.RM__verseBarAbove
+    &.VerseColour__onCursor {
+        background-color: @bgColour__afterSelected__odd;
+        .mixin__textShadow(@bgColour__afterSelected__odd);
+
+        color: @colour__afterSelected__odd;
+    }
+
+    .RM__sliderMoving
+    &.VerseColour__afterCursor,
+    .RM__sliderMoving.RM__verseBarAbove
+    &.VerseColour__onCursor {
+        background-color: @bgColour__afterSlider__odd;
+        .mixin__textShadow(@bgColour__afterSlider__odd);
+
+        color: @colour__afterSlider__odd;
     }
 }
 
-.VerseCursor__beforeCursor {
-    width: 100%;
+.VerseColour__even {
+    /**
+     * Default even verse colours.
+     */
+
+    .RM__sliderNotMoving
+    &.VerseColour__beforeCursor,
+    .RM__sliderNotMoving.RM__verseBarBelow
+    &.VerseColour__onCursor {
+        background-color: @bgColour__beforeSelected__even;
+        .mixin__textShadow(@bgColour__beforeSelected__even);
+
+        color: @colour__beforeSelected__even;
+    }
+
+    .RM__sliderMoving
+    &.VerseColour__beforeCursor,
+    .RM__sliderMoving.RM__verseBarBelow
+    &.VerseColour__onCursor {
+        background-color: @bgColour__beforeSlider__even;
+        .mixin__textShadow(@bgColour__beforeSlider__even);
+
+        color: @colour__beforeSlider__even;
+    }
+
+    .RM__sliderNotMoving
+    &.VerseColour__afterCursor,
+    .RM__sliderNotMoving.RM__verseBarAbove
+    &.VerseColour__onCursor {
+        background-color: @bgColour__afterSelected__even;
+        .mixin__textShadow(@bgColour__afterSelected__even);
+
+        color: @colour__afterSelected__even;
+    }
+
+    .RM__sliderMoving
+    &.VerseColour__afterCursor,
+    .RM__sliderMoving.RM__verseBarAbove
+    &.VerseColour__onCursor {
+        background-color: @bgColour__afterSlider__even;
+        .mixin__textShadow(@bgColour__afterSlider__even);
+
+        color: @colour__afterSlider__even;
+    }
 }
 
-.VerseCursor__afterCursor {
-    width: 0;
+.VerseColour__onCursor {
+    /**
+     * Only apply these colours to verse in lyric when bar is hidden, and to
+     * verse in bar when bar is shown.
+     */
+
+    .RM__sliderNotMoving.RM__isPlaying
+    &.VerseColour__inSliderStanza,
+    .RM__sliderNotMoving.RM__isPlaying.RM__verseBarHidden
+    &.VerseColour__inLyricStanza,
+    .RM__sliderNotMoving.RM__isPlaying.RM__verseBarShown
+    &.VerseColour__inVerseBar {
+        background-color: @bgColour__audioPlay;
+        .mixin__textShadow(@bgColour__audioPlay);
+    }
+
+    .RM__sliderNotMoving.RM__isPaused
+    &.VerseColour__inSliderStanza,
+    .RM__sliderNotMoving.RM__isPaused.RM__verseBarHidden
+    &.VerseColour__inLyricStanza,
+    .RM__sliderNotMoving.RM__isPaused.RM__verseBarShown
+    &.VerseColour__inVerseBar {
+        background-color: @bgColour__audioPause;
+        .mixin__textShadow(@bgColour__audioPause);
+    }
+
+    .RM__sliderMoving
+    &.VerseColour__inSliderStanza,
+    .RM__sliderMoving.RM__verseBarHidden
+    &.VerseColour__inLyricStanza,
+    .RM__sliderMoving.RM__verseBarShown
+    &.VerseColour__inVerseBar {
+        background-color: @bgColour__audioNeutral;
+        .mixin__textShadow(@bgColour__audioNeutral);
+    }
+}
+
+.VerseColour {
+    /**
+     * Interactable verse has highlighted styling only when interactivated, or
+     * when hovered, not selected, and with no other verse interactivated.
+     */
+    .RM__sliderNotMoving.RM__verseInactive
+    .Verse:hover
+    &:not(.VerseColour__onCursor),
+    .RM__sliderNotMoving.RM__verseActive
+    &.VerseColour__interactivated {
+
+        background-color: @bgColour__audioHighlight;
+        .mixin__textShadow(@bgColour__audioHighlight);
+    }
 }

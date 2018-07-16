@@ -7,11 +7,6 @@ import cx from 'classnames'
 
 import VerseLines from './VerseLines'
 
-import {
-    getVerseUnitClassName,
-    getCursorStatusClassName
-} from '../../helpers/formatHelper'
-
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 import { VERSE_SCROLL } from '../../constants/dom'
@@ -43,10 +38,7 @@ class Verse extends Component {
         // From parent.
         verseObject: PropTypes.object.isRequired,
         verseIndex: PropTypes.number,
-
-        isOnCursor: PropTypes.bool,
-        isAfterCursor: PropTypes.bool,
-        isInteractivated: PropTypes.bool,
+        isInteractable: PropTypes.bool,
 
         inMain: PropTypes.bool.isRequired,
         inVerseBar: PropTypes.bool.isRequired,
@@ -77,11 +69,13 @@ class Verse extends Component {
 
     _handleInteractivatableClick(e) {
         // Allow clicks on interactable verses.
-        const { verseIndex,
-                inVerseBar,
-                handleVerseInteractivate } = this.props
+        const {
+            verseIndex,
+            isInteractable,
+            handleVerseInteractivate
+            } = this.props
 
-        if (!isNaN(verseIndex) && !inVerseBar) {
+        if (isInteractable) {
             handleVerseInteractivate(e, verseIndex)
         }
     }
@@ -114,31 +108,22 @@ class Verse extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                inMain,
                 handleLyricAnnotationSelect,
 
                 ...other
             } = this.props,
 
-            { inVerseBar,
-              verseIndex,
-              verseObject } = other,
-
-            { lyric,
-              centre,
-              isTitle } = verseObject,
-
-            isInteractable = this.getIsInteractable(),
-
-            // If not an interactable verse, we'll count it as odd.
-            isEven = isInteractable && verseIndex % 2 === 0,
-            verseClassName = getVerseUnitClassName({
-                isEven,
+            {
                 inVerseBar,
-                inMain,
+                isInteractable,
+                verseObject
+            } = other,
+
+            {
+                lyric,
+                centre,
                 isTitle
-            }),
-            hasCursorStyling = inMain && !isTitle
+            } = verseObject
 
         return (
             <VerseView {...other}
@@ -146,8 +131,6 @@ class Verse extends Component {
                 isTitle={isTitle}
                 isDoubleSpeaker={!lyric && !centre}
                 isInteractable={isInteractable}
-                verseClassName={verseClassName}
-                hasCursorStyling={hasCursorStyling}
                 handleInteractivatableClick={this._handleInteractivatableClick}
                 {
                     ...!inVerseBar && {
@@ -171,13 +154,7 @@ verseViewPropTypes = {
     // From parent.
     inVerseBar: PropTypes.bool.isRequired,
     verseIndex: PropTypes.number,
-    verseClassName: PropTypes.string.isRequired,
-    isInteractable: PropTypes.bool.isRequired,
-
-    hasCursorStyling: PropTypes.bool.isRequired,
-    isOnCursor: PropTypes.bool,
-    isAfterCursor: PropTypes.bool,
-    isInteractivated: PropTypes.bool,
+    isInteractable: PropTypes.bool,
 
     handleInteractivatableClick: PropTypes.func,
     setRef: PropTypes.func,
@@ -190,11 +167,7 @@ VerseView = ({
     // From controller.
     verseClassName,
     isInteractable,
-
-    hasCursorStyling,
-    isOnCursor,
-    isAfterCursor,
-    isInteractivated,
+    inMain,
 
     handleInteractivatableClick,
     setRef,
@@ -205,13 +178,9 @@ VerseView = ({
 
     const {
         inVerseBar,
-        verseIndex
-    } = other,
-
-        cursorStatusClassName = hasCursorStyling && getCursorStatusClassName({
-            isOnCursor,
-            isAfterCursor
-        })
+        verseIndex,
+        isTitle
+    } = other
 
     return (
         <div
@@ -219,6 +188,8 @@ VerseView = ({
             ref={setRef}
             className={cx(
                 'Verse',
+                isTitle && 'Verse__title',
+                !inMain && 'Verse__side',
                 inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
                 !isNaN(verseIndex) &&
@@ -226,13 +197,7 @@ VerseView = ({
 
                 // title, even, odd, inSide.
                 verseClassName && `verse__${verseClassName}`,
-
-                // onCursor, beforeCursor, or afterCursor.
-                hasCursorStyling && `verse__${cursorStatusClassName}`,
-
-                // Shared styling with SliderVerse.
-                { 'verse__interactable': isInteractable,
-                  'verse__interactivated': isInteractivated }
+                isInteractable && 'verse__interactable'
             )}
             onClick={handleInteractivatableClick}
             onTouchStart={handleInteractivatableClick}

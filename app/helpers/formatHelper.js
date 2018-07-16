@@ -172,42 +172,6 @@ export const getFormattedLyricSpanText = (text) => {
     }
 }
 
-export const getVerseUnitClassName = ({
-    isEven,
-    inVerseBar,
-    inMain,
-    isTitle
-}) => {
-
-    if (!inVerseBar) {
-        if (isTitle) {
-            return 'title'
-        } else if (inMain) {
-            return isEven ? 'even' : 'odd'
-        } else {
-            return 'inSide'
-        }
-    }
-
-    return ''
-}
-
-export const getCursorStatusClassName = ({
-    isOnCursor,
-    isAfterCursor
-}) => {
-
-    if (isOnCursor) {
-        return 'onCursor'
-
-    } else if (isAfterCursor) {
-        return 'afterCursor'
-
-    } else {
-        return 'beforeCursor'
-    }
-}
-
 export const getCharStringForNumber = (myNumber) => {
     // 10 is a, 11 is b, and so forth.
     return myNumber < 10 ? myNumber : String.fromCharCode(myNumber + 87)

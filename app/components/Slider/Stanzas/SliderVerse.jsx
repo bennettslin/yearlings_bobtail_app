@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getCursorStatusClassName } from '../../../helpers/formatHelper'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -19,11 +18,6 @@ class SliderVerse extends Component {
     static propTypes = {
         // From Redux.
         canSliderRender: PropTypes.bool.isRequired,
-
-        // From VerseController.
-        isOnCursor: PropTypes.bool.isRequired,
-        isAfterCursor: PropTypes.bool.isRequired,
-        isInteractivated: PropTypes.bool.isRequired,
 
         verseIndex: PropTypes.number.isRequired,
         relativeStartTime: PropTypes.number.isRequired,
@@ -41,50 +35,27 @@ class SliderVerse extends Component {
 
     render() {
 
-        const { isOnCursor,
-                isAfterCursor,
-                isInteractivated,
+        const {
                 verseIndex,
                 relativeStartTime,
                 relativeTotalTime,
-                children } = this.props
+                children
+            } = this.props,
 
-        const verseWidth =
-                (relativeTotalTime - relativeStartTime) / relativeTotalTime * 100,
+            verseWidth =
+                (relativeTotalTime - relativeStartTime)
+                / relativeTotalTime * 100,
 
             verseStyle = {
                 width: `${verseWidth}%`
-            },
-
-            isOdd = verseIndex % 2,
-
-            cursorStatusClassName =
-                getCursorStatusClassName({
-                    isOnCursor,
-                    isAfterCursor
-                })
+            }
 
         return (
             <div
                 key={verseIndex}
                 className={cx(
                     'SliderVerse',
-                    'Slider__dynamicBar',
-
-                    isOdd ?
-                        'verse__odd' :
-                        'verse__even',
-
-                    /**
-                     * Unlike Verse, SliderVerse is always interactable, so we
-                     * will manually add this class.
-                     */
-                    'verse__interactable',
-
-                    // onCursor, beforeCursor, or afterCursor.
-                    `verse__${cursorStatusClassName}`,
-
-                    { 'verse__interactivated': isInteractivated }
+                    'Slider__dynamicBar'
                 )}
                 style={verseStyle}
             >

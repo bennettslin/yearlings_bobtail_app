@@ -1,17 +1,19 @@
-.verse__interactable {
+.VerseCursor {
+    background-color: rgba(200, 150, 250, 0.4);
+}
 
-    .parentIsShown
+.VerseCursor__onCursor {
+
+    .RM__sliderNotMoving
     & {
-        transition:
-        color @animationDuration__fast,
-        background-color @animationDuration__fast;
+        transition: width @animationDuration__default;
     }
 }
 
-.verse__title {
-    background-color: @bgColour__beforeSelected__odd;
-    .mixin__textShadow(@bgColour__beforeSelected__odd);
+.VerseCursor__beforeCursor {
+    width: 100%;
+}
 
-    @paddingX__title: 15px;
-    padding: 0 @paddingX__title;
+.VerseCursor__afterCursor {
+    width: 0;
 }

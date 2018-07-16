@@ -129,9 +129,23 @@ class VerseController extends Component {
                     isAfterCursor,
                     isInteractivated
                 }}
+
+                {...inLyricStanza && {
+                    isInteractable: true
+                }}
             >
 
                 <VerseColour
+                    {...{
+                        isOdd: Boolean(verseIndex % 2),
+                        isOnCursor,
+                        isAfterCursor,
+                        isInteractivated,
+
+                        inVerseBar,
+                        inLyricStanza,
+                        inSliderStanza
+                    }}
                 />
 
                 <VerseCursor

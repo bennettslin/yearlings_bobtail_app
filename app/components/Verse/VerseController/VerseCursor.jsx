@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getCursorStatusClassName } from '../../../helpers/formatHelper'
+import { getCursorStatusClassName } from './verseControllerHelper'
 
 const mapStateToProps = ({
     selectedTimePlayed
