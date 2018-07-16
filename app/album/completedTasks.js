@@ -3233,4 +3233,9 @@ module.exports = [
         workedHours: 5,
         neededHours: 5
     },
+    {
+        taskName: `Fix weird issue where hot reloading wasn't happening in Slider. Hopefully.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -53,10 +53,6 @@ const rootReducer = combineReducers({
     canPresencesRender: CanPresencesRenderReducer,
     canPixelsRender: CanPixelsRenderReducer,
 
-    // renderableSongIndex: RenderableSongIndexReducer,
-    // renderableAnnotationIndex: RenderableAnnotationIndexReducer,
-    // renderableVerseIndex: RenderableVerseIndexReducer,
-    // renderableSceneIndex: RenderableSceneIndexReducer,
     [RENDERABLE_STORE]: RenderableStoreReducer,
 
     carouselAnnotationIndex: CarouselAnnotationIndexReducer,
