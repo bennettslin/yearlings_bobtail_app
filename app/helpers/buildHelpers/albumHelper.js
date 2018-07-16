@@ -190,7 +190,11 @@ const _initialRegisterAnnotation = ({
     }
 
     // Add formatted title to annotation.
-    annotationObject.title = getFormattedAnnotationTitle(lyricObject[ANCHOR], lyricObject[PROPER_NOUN], lyricObject.keepEndCharacter)
+    annotationObject.title = getFormattedAnnotationTitle(
+        lyricObject[ANCHOR],
+        lyricObject[PROPER_NOUN],
+        lyricObject.keepEndCharacter
+    )
 
     // Let annotation know if it's in a doublespeaker column.
     if (textKey === LEFT || textKey === LEFT_COLUMN) {

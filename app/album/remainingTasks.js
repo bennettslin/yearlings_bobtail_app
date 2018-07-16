@@ -93,15 +93,9 @@ module.exports = [
     },
 
     {
-        taskName: `Space in front of Bobtail's words (M) in annotation title.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Box shadow and higher z-index on cursor stanza and cursor verse in stanza with multiple verses, for both lyric and slider verses. Need system to know whether stanza has a single verse. Also need to redo slider verse widths.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 8
     },
 
     {
