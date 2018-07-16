@@ -73,7 +73,6 @@ class VerseController extends Component {
 
                 startTime,
                 endTime,
-
                 fullCursorRatio,
 
                 handleLyricPlay,

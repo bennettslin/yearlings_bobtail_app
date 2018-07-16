@@ -56,15 +56,18 @@ class Verse extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps,
-            alwaysBypassCheck: {
-                inMain: true,
-                isTruncatable: true,
-                inVerseBar: true
-            }
-        })
+        const shouldComponentUpdate = nextProps.canLyricRender &&
+            !getPropsAreShallowEqual({
+                props: this.props,
+                nextProps,
+                alwaysBypassCheck: {
+                    inMain: true,
+                    isTruncatable: true,
+                    inVerseBar: true
+                }
+            })
+
+        return shouldComponentUpdate
     }
 
     _handleInteractivatableClick(e) {

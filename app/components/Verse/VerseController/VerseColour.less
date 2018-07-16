@@ -103,7 +103,11 @@
     }
 }
 
-.VerseColour__onCursor {
+/**
+ * Making this selector specific because these styles definitely need to
+ * override any previous ones.
+ */
+.VerseColour.VerseColour__onCursor {
     /**
      * Only apply these colours to verse in lyric when bar is hidden, and to
      * verse in bar when bar is shown.
