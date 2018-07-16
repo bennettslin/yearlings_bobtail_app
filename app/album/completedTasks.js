@@ -3243,4 +3243,9 @@ module.exports = [
         workedHours: 6,
         neededHours: 6
     },
+    {
+        taskName: `Italic font size in mini is weird.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

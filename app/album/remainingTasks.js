@@ -92,6 +92,12 @@ module.exports = [
         neededHours: 2
     },
 
+    {
+        taskName: `Space in front of Bobtail's words (M) in annotation title.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Remaining scene work.
      */

@@ -123,15 +123,9 @@ h1, h2, h3 {
 }
 
 i, em {
-    font-size: @fontSize__verse * 0.9;
-
-    .RM__mini
-    & {
-        font-size: @fontSize__verse__mini * 0.9;
-    }
-
-    .RM__phone
-    & {
-        font-size: @fontSize__verse__phone * 0.9;
-    }
+    /**
+     * All device widths inherit this reduction. I'm not exactly sure how this
+     * works, but it does...
+     */
+    font-size: @fontSize__italic;
 }
