@@ -14,8 +14,8 @@ const propTypes = {
 
     isOdd: PropTypes.bool.isRequired,
     inVerseBar: PropTypes.bool,
-    inLyricStanza: PropTypes.bool,
-    inSliderStanza: PropTypes.bool
+    inLyricVerse: PropTypes.bool,
+    inSliderVerse: PropTypes.bool
 },
 
 VerseColour = ({
@@ -26,8 +26,8 @@ VerseColour = ({
 
     isOdd,
     inVerseBar,
-    inLyricStanza,
-    inSliderStanza
+    inLyricVerse,
+    inSliderVerse
 
 }) => {
 
@@ -41,8 +41,8 @@ VerseColour = ({
             className={cx(
                 'VerseColour',
                 inVerseBar && 'VerseColour__inVerseBar',
-                inLyricStanza && 'VerseColour__inLyricStanza',
-                inSliderStanza && 'VerseColour__inSliderStanza',
+                inLyricVerse && 'VerseColour__inLyricVerse',
+                inSliderVerse && 'VerseColour__inSliderVerse',
 
                 isOdd ?
                     'VerseColour__odd' :

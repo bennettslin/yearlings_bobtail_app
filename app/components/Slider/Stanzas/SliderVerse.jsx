@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import VerseController from '../../Verse/VerseController/VerseController'
+
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -20,10 +22,13 @@ class SliderVerse extends Component {
         canSliderRender: PropTypes.bool.isRequired,
 
         verseIndex: PropTypes.number.isRequired,
+
         relativeStartTime: PropTypes.number.isRequired,
         relativeTotalTime: PropTypes.number.isRequired,
+        startTime: PropTypes.number.isRequired,
+        endTime: PropTypes.number.isRequired,
 
-        children: PropTypes.any
+        fullCursorRatio: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -39,7 +44,9 @@ class SliderVerse extends Component {
                 verseIndex,
                 relativeStartTime,
                 relativeTotalTime,
-                children
+                startTime,
+                endTime,
+                fullCursorRatio
             } = this.props,
 
             verseWidth =
@@ -55,11 +62,23 @@ class SliderVerse extends Component {
                 key={verseIndex}
                 className={cx(
                     'SliderVerse',
-                    'Slider__dynamicBar'
+                    'Slider__dynamicBar',
+
+                    'verseColour__hoverParent'
                 )}
                 style={verseStyle}
             >
-                {children}
+
+                <VerseController
+                    inSliderVerse
+                    {...{
+                        verseIndex,
+                        startTime,
+                        endTime,
+                        fullCursorRatio
+                    }}
+                />
+
             </div>
         )
     }

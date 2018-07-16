@@ -4,7 +4,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import VerseController from '../Verse/VerseController/VerseController'
+
+import Verse from '../Verse/Verse'
+
 import { getVerseObject } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
@@ -96,7 +98,7 @@ class VerseBar extends Component {
                             'VerseBar__animatable__below'
                     )}
                 >
-                    <VerseController {...other}
+                    <Verse {...other}
                         inVerseBar
                         {...{
                             verseIndex,

@@ -110,9 +110,9 @@
      */
 
     .RM__sliderNotMoving.RM__isPlaying
-    &.VerseColour__inSliderStanza,
+    &.VerseColour__inSliderVerse,
     .RM__sliderNotMoving.RM__isPlaying.RM__verseBarHidden
-    &.VerseColour__inLyricStanza,
+    &.VerseColour__inLyricVerse,
     .RM__sliderNotMoving.RM__isPlaying.RM__verseBarShown
     &.VerseColour__inVerseBar {
         background-color: @bgColour__audioPlay;
@@ -120,9 +120,9 @@
     }
 
     .RM__sliderNotMoving.RM__isPaused
-    &.VerseColour__inSliderStanza,
+    &.VerseColour__inSliderVerse,
     .RM__sliderNotMoving.RM__isPaused.RM__verseBarHidden
-    &.VerseColour__inLyricStanza,
+    &.VerseColour__inLyricVerse,
     .RM__sliderNotMoving.RM__isPaused.RM__verseBarShown
     &.VerseColour__inVerseBar {
         background-color: @bgColour__audioPause;
@@ -130,9 +130,9 @@
     }
 
     .RM__sliderMoving
-    &.VerseColour__inSliderStanza,
+    &.VerseColour__inSliderVerse,
     .RM__sliderMoving.RM__verseBarHidden
-    &.VerseColour__inLyricStanza,
+    &.VerseColour__inLyricVerse,
     .RM__sliderMoving.RM__verseBarShown
     &.VerseColour__inVerseBar {
         background-color: @bgColour__audioNeutral;
@@ -146,7 +146,7 @@
      * when hovered, not selected, and with no other verse interactivated.
      */
     .RM__sliderNotMoving.RM__verseInactive
-    .Verse:hover
+    .verseColour__hoverParent:hover
     &:not(.VerseColour__onCursor),
     .RM__sliderNotMoving.RM__verseActive
     &.VerseColour__interactivated {

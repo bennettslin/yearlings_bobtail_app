@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Verse from '../Verse/Verse';
-import VerseController from '../Verse/VerseController/VerseController'
 
 /*************
  * CONTAINER *
@@ -139,23 +138,15 @@ LyricStanzaCardView = ({
                             stanzaMap,
                             unitMap,
                             verseIndex
-                        } = verseObject,
-
-                        isInteractableVerse = !isNaN(verseIndex),
-
-                        // Only wrap interactable verses in verse controller.
-                        VerseComponent = isInteractableVerse ?
-                            VerseController :
-                            Verse
+                        } = verseObject
 
                     return !stanzaMap && !unitMap && (
-                            <VerseComponent {...other}
+                            <Verse {...other}
                                 key={stanzaVerseIndex}
-                                inLyricStanza
                                 {...{
                                     verseObject
                                 }}
-                                {...isInteractableVerse && {
+                                {...!isNaN(verseIndex) && {
                                     verseIndex
                                 }}
                             />

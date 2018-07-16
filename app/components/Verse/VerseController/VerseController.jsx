@@ -3,15 +3,13 @@
  * indices, just where it is relative to cursor.
  */
 
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import Verse from '../Verse'
 import VerseAudio from '../VerseAudio/VerseAudio'
 import VerseColour from './VerseColour'
 import VerseCursor from './VerseCursor'
-import SliderVerse from '../../Slider/Stanzas/SliderVerse'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
@@ -38,20 +36,13 @@ class VerseController extends Component {
 
         // From parent.
         inVerseBar: PropTypes.bool,
-        inLyricStanza: PropTypes.bool,
-        inSliderStanza: PropTypes.bool,
+        inVerse: PropTypes.bool,
+        inSliderVerse: PropTypes.bool,
 
         verseIndex: PropTypes.number.isRequired,
 
-        // Passed by LyricStanzaCard and VerseBar only.
-        verseObject: PropTypes.object,
-
-        /**
-         * For verses in slider. Verses in lyric will get these values from
-         * verse object.
-         */
-        absoluteStartTime: PropTypes.number,
-        absoluteEndTime: PropTypes.number,
+        startTime: PropTypes.number.isRequired,
+        endTime: PropTypes.number.isRequired,
         fullCursorRatio: PropTypes.number,
 
         // For verse audio buttons.
@@ -77,11 +68,12 @@ class VerseController extends Component {
                 sliderVerseIndex,
                 interactivatedVerseIndex,
 
-                inLyricStanza,
-                inSliderStanza,
+                inVerse,
+                inSliderVerse,
 
-                absoluteStartTime,
-                absoluteEndTime,
+                startTime,
+                endTime,
+
                 fullCursorRatio,
 
                 handleLyricPlay,
@@ -92,19 +84,9 @@ class VerseController extends Component {
             {
                 inVerseBar,
                 verseIndex,
-                verseObject
             } = other,
 
-            VerseComponent = inSliderStanza ? SliderVerse : Verse,
-
-            // Let verse cursor know the verse's start and end times.
-            startTime = verseObject ?
-                verseObject.time :
-                absoluteStartTime,
-
-            endTime = verseObject ?
-                verseObject.endTime :
-                absoluteEndTime,
+            inLyricVerse = inVerse && !inVerseBar,
 
             /**
              * Tell verse where it is relative to cursor, and if it's
@@ -119,21 +101,7 @@ class VerseController extends Component {
             isInteractivated = verseIndex === interactivatedVerseIndex
 
         return (
-            <VerseComponent {...other}
-
-                {...{
-                    isOnCursor
-                }}
-
-                {...!inVerseBar && {
-                    isAfterCursor,
-                    isInteractivated
-                }}
-
-                {...inLyricStanza && {
-                    isInteractable: true
-                }}
-            >
+            <Fragment>
 
                 <VerseColour
                     {...{
@@ -143,8 +111,8 @@ class VerseController extends Component {
                         isInteractivated,
 
                         inVerseBar,
-                        inLyricStanza,
-                        inSliderStanza
+                        inLyricVerse,
+                        inSliderVerse
                     }}
                 />
 
@@ -168,7 +136,7 @@ class VerseController extends Component {
                     }}
                 />
 
-                {inLyricStanza && (
+                {inLyricVerse && (
                     <VerseAudio
                         {...{
                             verseIndex,
@@ -181,7 +149,7 @@ class VerseController extends Component {
                     />
                 )}
 
-            </VerseComponent>
+            </Fragment>
         )
     }
 }

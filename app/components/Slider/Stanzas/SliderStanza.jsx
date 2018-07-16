@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseController from '../../Verse/VerseController/VerseController'
+import SliderVerse from './SliderVerse'
 import { LS_MARGIN_SLIDER_THIN } from '../../../constants/responsive'
 
 const sliderStanzaPropTypes = {
@@ -86,17 +86,16 @@ const SliderStanza = ({
                             / (endTime - verseTime)
 
                     return (
-                        <VerseController
+                        <SliderVerse
                             key={index}
-                            inSliderStanza
-                            verseIndex={firstVerseIndex + index}
-
-                            relativeStartTime={relativeStartTime}
-                            relativeTotalTime={relativeTotalTime}
-
-                            absoluteStartTime={verseTime}
-                            absoluteEndTime={absoluteEndTime}
-                            fullCursorRatio={fullCursorRatio}
+                            {...{
+                                verseIndex: firstVerseIndex + index,
+                                relativeStartTime,
+                                relativeTotalTime,
+                                startTime: verseTime,
+                                endTime: absoluteEndTime,
+                                fullCursorRatio
+                            }}
                         />
                     )
                 })}

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import VerseController from './VerseController/VerseController'
 import VerseLines from './VerseLines'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
@@ -38,7 +39,6 @@ class Verse extends Component {
         // From parent.
         verseObject: PropTypes.object.isRequired,
         verseIndex: PropTypes.number,
-        isInteractable: PropTypes.bool,
 
         inMain: PropTypes.bool.isRequired,
         inVerseBar: PropTypes.bool.isRequired,
@@ -71,11 +71,10 @@ class Verse extends Component {
         // Allow clicks on interactable verses.
         const {
             verseIndex,
-            isInteractable,
             handleVerseInteractivate
             } = this.props
 
-        if (isInteractable) {
+        if (this.getIsInteractable()) {
             handleVerseInteractivate(e, verseIndex)
         }
     }
@@ -115,7 +114,6 @@ class Verse extends Component {
 
             {
                 inVerseBar,
-                isInteractable,
                 verseObject
             } = other,
 
@@ -130,7 +128,6 @@ class Verse extends Component {
                 setRef={this.setVerseRef}
                 isTitle={isTitle}
                 isDoubleSpeaker={!lyric && !centre}
-                isInteractable={isInteractable}
                 handleInteractivatableClick={this._handleInteractivatableClick}
                 {
                     ...!inVerseBar && {
@@ -154,8 +151,9 @@ verseViewPropTypes = {
     // From parent.
     inVerseBar: PropTypes.bool.isRequired,
     verseIndex: PropTypes.number,
-    isInteractable: PropTypes.bool,
 
+    handleLyricPlay: PropTypes.func,
+    handleLyricVerseSelect: PropTypes.func,
     handleInteractivatableClick: PropTypes.func,
     setRef: PropTypes.func,
 
@@ -166,21 +164,23 @@ VerseView = ({
 
     // From controller.
     verseClassName,
-    isInteractable,
     inMain,
 
+    handleLyricPlay,
+    handleLyricVerseSelect,
     handleInteractivatableClick,
     setRef,
-
-    children,
 
 ...other }) => {
 
     const {
-        inVerseBar,
-        verseIndex,
-        isTitle
-    } = other
+            inVerseBar,
+            verseIndex,
+            verseObject,
+            isTitle
+        } = other,
+
+        isInteractable = !isNaN(verseIndex)
 
     return (
         <div
@@ -197,12 +197,29 @@ VerseView = ({
 
                 // title, even, odd, inSide.
                 verseClassName && `verse__${verseClassName}`,
-                isInteractable && 'Verse__interactable'
+                isInteractable && 'Verse__interactable',
+
+                'verseColour__hoverParent'
             )}
             onClick={handleInteractivatableClick}
             onTouchStart={handleInteractivatableClick}
         >
-            {children}
+
+            {(inVerseBar || isInteractable) && (
+                <VerseController
+                    inVerse
+                    {...{
+                        inVerseBar,
+                        verseIndex,
+                        startTime: verseObject.time,
+                        endTime: verseObject.endTime
+                    }}
+                    {...!inVerseBar && {
+                        handleLyricPlay,
+                        handleLyricVerseSelect
+                    }}
+                />
+            )}
 
             <VerseLines {...other} />
         </div>
