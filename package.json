@@ -4,7 +4,7 @@
   "description": "An interface for the Bobtail Yearling's album Yearling's Bobtail.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --env production",
+    "build": "webpack --env production && aws s3 sync build/ s3://yearlingsbobtail",
     "start": "gh-pages -d build",
     "dev": "webpack-dev-server --env development",
     "test": "mocha --compilers js:babel-core/register --require ./test/helpers/testHelper.js --recursive ./test",

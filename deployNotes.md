@@ -1,0 +1,1 @@
+https://scotch.io/@blizzerand11/deploy-and-sync-a-react-app-to-amazon-s3

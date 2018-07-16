@@ -18,9 +18,10 @@ const mapStateToProps = ({
 class SliderVerse extends Component {
 
     static propTypes = {
-        // From Redux.
+        // Through Redux.
         canSliderRender: PropTypes.bool.isRequired,
 
+        // From parent.
         verseIndex: PropTypes.number.isRequired,
 
         relativeStartTime: PropTypes.number.isRequired,
