@@ -1,6 +1,6 @@
 /**
- * Controller to allow verse child not to have knowledge of various verse
- * indices, just where it is relative to cursor.
+ * Controller to allow verse not to update every time cursor or interactivated
+ * verse index is changed.
  */
 
 import React, { Component, Fragment } from 'react'
@@ -68,24 +68,12 @@ class VerseController extends Component {
                 sliderVerseIndex,
                 interactivatedVerseIndex,
 
-                inVerse,
-                inSliderVerse,
-
-                startTime,
-                endTime,
-                fullCursorRatio,
-
-                handleLyricPlay,
-                handleLyricVerseSelect,
-
             ...other } = this.props,
 
             {
                 inVerseBar,
                 verseIndex,
             } = other,
-
-            inLyricVerse = inVerse && !inVerseBar,
 
             /**
              * Tell verse where it is relative to cursor, and if it's
@@ -98,6 +86,70 @@ class VerseController extends Component {
             isOnCursor = inVerseBar || verseIndex === cursorIndex,
             isAfterCursor = verseIndex > cursorIndex,
             isInteractivated = verseIndex === interactivatedVerseIndex
+
+        return (
+            <VerseControllerView {...other}
+                {...{
+                    isOnCursor,
+                    isAfterCursor,
+                    isInteractivated
+                }}
+            />
+        )
+    }
+}
+
+class VerseControllerView extends Component {
+
+    static propTypes = {
+        // From parent.
+        isOnCursor: PropTypes.bool.isRequired,
+        isAfterCursor: PropTypes.bool.isRequired,
+        isInteractivated: PropTypes.bool.isRequired,
+
+        verseIndex: PropTypes.number.isRequired,
+        inVerse: PropTypes.bool,
+        inVerseBar: PropTypes.bool,
+        inSliderVerse: PropTypes.bool,
+
+        startTime: PropTypes.number.isRequired,
+        endTime: PropTypes.number.isRequired,
+        fullCursorRatio: PropTypes.number,
+
+        // For verse audio buttons.
+        handleLyricPlay: PropTypes.func,
+        handleLyricVerseSelect: PropTypes.func
+    }
+
+    shouldComponentUpdate(nextProps) {
+        const shouldComponentUpdate = !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+
+        return shouldComponentUpdate
+    }
+
+    render() {
+        const {
+            isOnCursor,
+            isAfterCursor,
+            isInteractivated,
+
+            verseIndex,
+            inVerse,
+            inVerseBar,
+            inSliderVerse,
+
+            startTime,
+            endTime,
+            fullCursorRatio,
+
+            handleLyricPlay,
+            handleLyricVerseSelect
+        } = this.props,
+
+        inLyricVerse = inVerse && !inVerseBar
 
         return (
             <Fragment>

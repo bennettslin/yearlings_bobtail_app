@@ -124,14 +124,19 @@ class Verse extends Component {
                 lyric,
                 centre,
                 isTitle
-            } = verseObject
+            } = verseObject,
+
+            isInteractable = this.getIsInteractable()
 
         return (
             <VerseView {...other}
                 setRef={this.setVerseRef}
-                isTitle={isTitle}
-                isDoubleSpeaker={!lyric && !centre}
                 handleInteractivatableClick={this._handleInteractivatableClick}
+                {...{
+                    isTitle,
+                    isInteractable,
+                    isDoubleSpeaker: !lyric && !centre
+                }}
                 {
                     ...!inVerseBar && {
                         handleAnchorClick: handleLyricAnnotationSelect
@@ -152,8 +157,9 @@ const verseViewDefaultProps = {
 
 verseViewPropTypes = {
     // From parent.
-    inVerseBar: PropTypes.bool.isRequired,
     verseIndex: PropTypes.number,
+    inVerseBar: PropTypes.bool.isRequired,
+    isInteractable: PropTypes.bool.isRequired,
 
     handleLyricPlay: PropTypes.func,
     handleLyricVerseSelect: PropTypes.func,
@@ -167,6 +173,7 @@ VerseView = ({
 
     // From controller.
     verseClassName,
+    isInteractable,
     inMain,
 
     handleLyricPlay,
@@ -181,9 +188,7 @@ VerseView = ({
             verseIndex,
             verseObject,
             isTitle
-        } = other,
-
-        isInteractable = !isNaN(verseIndex)
+        } = other
 
     return (
         <div

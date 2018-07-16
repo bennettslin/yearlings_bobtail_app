@@ -3238,4 +3238,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Have separate verse element that only knows before or after cursor. Prevent update from propagating down.`,
+        workedHours: 6,
+        neededHours: 6
+    },
 ]

@@ -87,15 +87,9 @@ module.exports = [
     },
 
     {
-        taskName: `Have separate verse element that only knows before or after cursor. Prevent update from propagating down.`,
-        workedHours: 2,
-        neededHours: 5
-    },
-
-    {
-        taskName: `Be smart about how verse audio button updates.`,
+        taskName: `Be smart about how verse bar, verse audio buttons, and verse cursor update.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
 
     /**
