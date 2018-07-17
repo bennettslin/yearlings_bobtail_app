@@ -1,7 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin'),
     BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
     CleanPlugin = require('clean-webpack-plugin'),
-    BabiliPlugin = require('babili-webpack-plugin'),
+    BabelMinifyPlugin = require('babel-minify-webpack-plugin'),
     OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
     cssnano = require('cssnano')
 
@@ -62,7 +62,17 @@ exports.loadJavaScript = ({ include }) => ({
 
 exports.minifyJavaScript = () => ({
     plugins: [
-        new BabiliPlugin()
+        new BabelMinifyPlugin()
+    ]
+})
+
+exports.minifyStyles = ({ options }) => ({
+    plugins: [
+        new OptimizeCSSAssetsPlugin({
+            cssProcessor: cssnano,
+            cssProcessorOptions: options,
+            canPrint: false
+        })
     ]
 })
 
@@ -120,16 +130,6 @@ exports.extractStyles = ({ include }) => {
         plugins: [plugin]
     }
 }
-
-exports.minifyStyles = ({ options }) => ({
-    plugins: [
-        new OptimizeCSSAssetsPlugin({
-            cssProcessor: cssnano,
-            cssProcessorOptions: options,
-            canPrint: false
-        })
-    ]
-})
 
 exports.generateSourceMaps = ({ type }) => ({
     devtool: type

@@ -3258,4 +3258,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Fix issue with font face assets.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

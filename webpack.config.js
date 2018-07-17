@@ -30,13 +30,6 @@ const webpack = require('webpack'),
 
             output: {
                 path: PATHS.build,
-
-                /**
-                 * To deploy to GitHub Pages. Also forces change to path name
-                 * for local development as well.
-                 */
-                // FIXME: Commenting out for now to get React Router to work.
-                // publicPath: '/yearlings_bobtail_app',
                 filename: '[name].js'
             },
 
@@ -126,6 +119,8 @@ const webpack = require('webpack'),
 module.exports = (env) => {
     return merge(
         commonConfig,
-        env === 'production' ? productionConfig : developmentConfig
+        env === 'production' ?
+            productionConfig :
+            developmentConfig
     )
 }
