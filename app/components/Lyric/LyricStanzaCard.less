@@ -1,3 +1,5 @@
+// @border__lyricStanzaCard__verseIn: 1px solid rgba(255, 255, 150, 0.8);
+
 .LyricStanzaCard {
     position: relative;
 }
@@ -5,7 +7,7 @@
 .LyricStanzaCard__tab {
     position: absolute;
     height: @height__stanzaTypeTab;
-    top: -@height__stanzaTypeTab;
+    top: -@height__stanzaTypeTab + 3px;
     left: 0;
     border-radius: 7.5px 7.5px 0 0;
 
@@ -15,10 +17,28 @@
     text-transform: uppercase;
     white-space: nowrap;
     font-size: 0.6em;
+
+    // .LyricStanza__verseIn
+    // & {
+    //     border: @border__lyricStanzaCard__verseIn;
+    //     border-bottom: none;
+    // }
 }
 
 .LyricStanzaCard__sheet {
-    padding: 2px;
+
+    padding: 4px 2px 2px 2px;
+    border-radius: 3px 3px 3px 3px;
+
+    // .LyricStanza__verseIn
+    // & {
+    //     border: @border__lyricStanzaCard__verseIn;
+    // }
+
+    .LyricStanza__subsequent
+    & {
+        border-top-left-radius: 3px;
+    }
 }
 
 .bgColour__stanza__title {

@@ -18,7 +18,7 @@ module.exports = [
 
     {
         taskName: `Deployment strategy.`,
-        workedHours: 0,
+        workedHours: 5,
         neededHours: 8
     },
 
@@ -93,8 +93,8 @@ module.exports = [
     },
 
     {
-        taskName: `Box shadow and higher z-index on cursor stanza and cursor verse in stanza with multiple verses, for both lyric and slider verses. Need system to know whether stanza has a single verse. Also need to redo slider verse widths.`,
-        workedHours: 0,
+        taskName: `Box shadow and higher z-index on cursor stanza and cursor verse in stanza with multiple verses, for both lyric and slider verses. Need system to know whether stanza has a single verse. Also need to redo slider verse widths. Border radius.`,
+        workedHours: 3,
         neededHours: 8
     },
 

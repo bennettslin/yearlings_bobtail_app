@@ -5,14 +5,36 @@
         color @animationDuration__fast,
         background-color @animationDuration__fast;
     }
+}
 
-    &.VerseColour__interactivated {
-        box-shadow: @boxShadow__activeVerse;
+.VerseColour__interactivated {
+    box-shadow: @boxShadow__activeVerse;
+}
+
+.VerseColour__onCursor {
+    .RM__verseInactive .Verse__interactable
+    & {
+        box-shadow: @boxShadow__cursorVerse;
     }
+}
 
+.Anchor {
     .RM__verseInactive
-    &.VerseColour__interactable.VerseColour__onCursor {
-        box-shadow: @boxShadow__activeVerse;
+    .Verse__interactable
+    .VerseColour__onCursor
+    ~ .sibling__verseCursor
+    & {
+        z-index: @zIndex__cursorVerse;
+    }
+}
+
+.VerseColour__onCursor,
+.VerseCursor__onCursor {
+    .RM__verseInactive
+    .Verse__interactable
+    & {
+        z-index: @zIndex__cursorVerse;
+        transform: scale(1, 1.1);
     }
 }
 

@@ -26,6 +26,10 @@ VerseLines = ({
         // Only wrap in this parent container if it's a doublespeaker line.
         <div className={cx(
             'VerseLines',
+
+            // Allow anchor in a verse line to know it's in a cursor verse.
+            'sibling__verseCursor',
+
             'fontSize__lyricMultipleColumns'
         )}>
             {LYRIC_COLUMN_KEYS.map((doublespeakerKey, index) => (
