@@ -80,7 +80,7 @@ $offset__popupButton: 0.5;
     // Using calc here because transform messes with z-indices.
     .RM__desktop
     &.PopupViewButton__inFullSize {
-        top: "calc(50% - #{$js__length__iconLarge} * 0.5)";
+        top: calc(50% - #{$js__length__iconLarge} * 0.5);
     }
 
     .RM__tablet
@@ -88,12 +88,12 @@ $offset__popupButton: 0.5;
 
     .RM__tablet
     &.PopupViewButton__displaysInOverlay.PopupViewButton__notInFullSize {
-        top: "calc(50% - #{$js__length__iconLarge__tablet} * 0.5)";
+        top: calc(50% - #{$js__length__iconLarge__tablet} * 0.5);
     }
 
     .RM__mini
     &.PopupViewButton__displaysInOverlay.PopupViewButton__notInFullSize {
-        top: "calc(50% - #{$js__length__iconLarge__mini} * 0.5)";
+        top: calc(50% - #{$js__length__iconLarge__mini} * 0.5);
     }
 }
 

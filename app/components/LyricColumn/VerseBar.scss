@@ -3,7 +3,7 @@
     transform: scale(0.5);
 
     $js__margin__thick__double: $js__margin__thick * 2;
-    max-width: "calc(100% - #{$js__margin__thick__double})";
+    max-width: calc(100% - #{$js__margin__thick__double});
 
     z-index: $zIndex__lyricChild__topMost;
     cursor: pointer;

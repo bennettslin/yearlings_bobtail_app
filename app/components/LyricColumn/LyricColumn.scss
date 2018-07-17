@@ -36,17 +36,17 @@
 
     .RM__mobile.RM__song.RM__lyricExpanded
     & {
-        height: "calc(100% - #{$js__height__menu})";
+        height: calc(100% - #{$js__height__menu});
     }
 
     .RM__twoRowMenu.RM__song.RM__lyricExpanded
     & {
-        height: "calc(100% - #{$js__topOffsetTruncated__twoRowMenu})";
+        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
     }
 
     .RM__phone.RM__song.RM__lyricExpanded
     & {
-        height: "calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone})";
+        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone});
     }
 
     .RM__mobile.RM__lyricHeightless

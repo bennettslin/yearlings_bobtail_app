@@ -5,7 +5,7 @@
 .topHeight__overlayPopups__desktop {
 
     top: $js__height__menu;
-    height: "calc(100% - #{$js__height__menu})";
+    height: calc(100% - #{$js__height__menu});
 }
 
 /**
@@ -16,13 +16,13 @@
     .RM__mobile
     & {
         top: $js__height__menu;
-        height: "calc(100% - #{$js__height__menu})";
+        height: calc(100% - #{$js__height__menu});
     }
 
     .RM__phone
     & {
         top: $js__topOffsetTruncated__twoRowMenu__phone;
-        height: "calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone})";
+        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone});
     }
 }
 
@@ -31,6 +31,6 @@
     .RM__twoRowMenu
     & {
         top: $js__topOffsetTruncated__twoRowMenu;
-        height: "calc(100% - #{$js__topOffsetTruncated__twoRowMenu})";
+        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
     }
 }
