@@ -1,5 +1,11 @@
 module.exports = [
 
+    {
+        taskName: `Deal with font face issue.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Begin Hack Week work.
      */

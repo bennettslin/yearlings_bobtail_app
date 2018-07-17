@@ -3253,4 +3253,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Convert less to sass files.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

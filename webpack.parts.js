@@ -117,7 +117,7 @@ exports.extractStyles = ({ include }) => {
                 }
             ]
         },
-        plugins: [ plugin ]
+        plugins: [plugin]
     }
 }
 
