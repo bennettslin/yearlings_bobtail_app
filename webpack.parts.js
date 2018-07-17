@@ -50,7 +50,7 @@ exports.loadJavaScript = ({ include }) => ({
                         loader: "babel-loader",
                         query: {
                             plugins: ['transform-class-properties'],
-                            presets: ['react', 'es2015', 'stage-2']
+                            presets: ['env', 'react', 'stage-2']
                         }
                     },
                     'eslint-loader'
