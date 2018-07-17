@@ -73,11 +73,11 @@ exports.loadStyles = ({ include }) => ({
                 include,
 
                 // http://survivejs.com/webpack/loading-assets/loading-styles/
-                test: /\.less$/,
+                test: /\.scss$/,
                 loaders: [
                     'style-loader',
                     'css-loader',
-                    'less-loader'
+                    'sass-loader'
                 ]
             }
         ]
@@ -96,7 +96,7 @@ exports.extractStyles = ({ include }) => {
                     include,
 
                     // http://survivejs.com/webpack/loading-assets/loading-styles/
-                    test: /\.less$/,
+                    test: /\.scss$/,
                     use: plugin.extract({
                         use: [
                             'css-loader',
@@ -110,7 +110,7 @@ exports.extractStyles = ({ include }) => {
                                     ])
                                 }
                             },
-                            'less-loader'
+                            'sass-loader'
                         ],
                         fallback: 'style-loader'
                     })

@@ -10,7 +10,7 @@ import { devToolsEnhancer } from 'redux-devtools-extension'
 import { Provider } from 'react-redux'
 import reducers from './redux/reducers'
 
-import './less/app.less'
+import './less/app.scss'
 import RoutingManager from './managers/RoutingManager'
 
 // Why did you update?
