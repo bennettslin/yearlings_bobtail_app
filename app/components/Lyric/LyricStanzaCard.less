@@ -1,5 +1,7 @@
 // @border__lyricStanzaCard__verseIn: 1px solid rgba(255, 255, 150, 0.8);
 
+@borderRadius__lyricStanza: 2px;
+
 .LyricStanzaCard {
     position: relative;
 }
@@ -7,12 +9,12 @@
 .LyricStanzaCard__tab {
     position: absolute;
     height: @height__stanzaTypeTab;
-    top: -@height__stanzaTypeTab + 3px;
+    top: -@height__stanzaTypeTab + @borderRadius__lyricStanza;
     left: 0;
     border-radius: 7.5px 7.5px 0 0;
 
     padding: 0 5px;
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
 
     text-transform: uppercase;
     white-space: nowrap;
@@ -25,20 +27,47 @@
     // }
 }
 
-.LyricStanzaCard__sheet {
+.LyricStanzaCard__substanza {
+    @paddingX__offsetStanza: 17%;
+    @marginY__offsetStanza__overlap: 6.5px;
 
-    padding: 4px 2px 2px 2px;
-    border-radius: 3px 3px 3px 3px;
+    margin-top: -@marginY__offsetStanza__overlap;
+    padding-left: @paddingX__offsetStanza;
+
+    // Fix the issue once and for all with substanzas wrapping onto next line.
+    white-space: nowrap;
+}
+
+.LyricStanzaCard__sheet {
+    padding: @js__margin__thin / 2;
+    border-radius: @borderRadius__lyricStanza;
 
     // .LyricStanza__verseIn
     // & {
     //     border: @border__lyricStanzaCard__verseIn;
     // }
 
+    .LyricStanza__column__main
+    & {
+        padding-left: @paddingX__verse;
+    }
+
+    .LyricStanza__notSubsequent
+    .LyricStanzaCard__tabbed
+    & {
+        padding-top: @js__margin__thin;
+    }
+
     .LyricStanza__subsequent
     & {
-        border-top-left-radius: 3px;
+        border-top-left-radius: @borderRadius__lyricStanza;
     }
+}
+
+.LyricStanzaCard__sheetInset {
+    // z-index: 10;
+    // position: relative;
+    box-shadow: @boxShadow__activeVerse;
 }
 
 .bgColour__stanza__title {

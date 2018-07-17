@@ -95,7 +95,8 @@ class VerseLine extends Component {
                     className={cx(
                         'VerseLine',
 
-                        /** Allow anchor in a verse line to know it's in a
+                        /**
+                         * Allow anchor in a verse line to know it's in a
                          * cursor verse.
                          */
                         'sibling__verseCursor',

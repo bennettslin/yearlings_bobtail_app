@@ -8,6 +8,17 @@
     position: relative;
 }
 
+.Anchor {
+    .RM__verseInactive
+    .Verse__interactable
+    .VerseColour__onCursor
+    ~ .sibling__verseCursor
+    & {
+        // Allow anchor in cursor verse to still show.
+        z-index: @zIndex__cursorVerse;
+    }
+}
+
 .Anchor__noWrap {
     white-space: nowrap;
 }

@@ -111,14 +111,16 @@ LyricStanzaCardView = ({
 
 ...other }) => {
 
+    const isTabbed = Boolean(stanzaIndex)
+
     return (
         <div className={cx(
             'LyricStanzaCard',
-            isSubstanza && 'offset__stanza__overlap',
-            isSubstanza && 'offset__stanza__right'
+            isSubstanza && 'LyricStanzaCard__substanza',
+            isTabbed && 'LyricStanzaCard__tabbed'
         )}>
 
-            {stanzaIndex &&
+            {isTabbed &&
                 <div className={cx(
                     'LyricStanzaCard__tab',
                     `bgColour__stanza__${stanzaType}`
@@ -133,26 +135,30 @@ LyricStanzaCardView = ({
                 'LyricStanzaCard__sheet',
                 `bgColour__stanza__${stanzaType}`
             )}>
-                {stanzaArray.map((verseObject, stanzaVerseIndex) => {
-                    const {
-                            stanzaMap,
-                            unitMap,
-                            verseIndex
-                        } = verseObject
+                <div className={cx(
+                    'LyricStanzaCard__sheetInset'
+                )}>
+                    {stanzaArray.map((verseObject, stanzaVerseIndex) => {
+                        const {
+                                stanzaMap,
+                                unitMap,
+                                verseIndex
+                            } = verseObject
 
-                    return !stanzaMap && !unitMap && (
-                            <Verse {...other}
-                                key={stanzaVerseIndex}
-                                {...{
-                                    verseObject
-                                }}
-                                {...!isNaN(verseIndex) && {
-                                    verseIndex
-                                }}
-                            />
-                        )
-                    }
-                )}
+                        return !stanzaMap && !unitMap && (
+                                <Verse {...other}
+                                    key={stanzaVerseIndex}
+                                    {...{
+                                        verseObject
+                                    }}
+                                    {...!isNaN(verseIndex) && {
+                                        verseIndex
+                                    }}
+                                />
+                            )
+                        }
+                    )}
+                </div>
             </div>
         </div>
     )

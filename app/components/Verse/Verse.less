@@ -1,9 +1,10 @@
-@paddingX__verse: 10px;
-
 @import "./VerseAudio/VerseAudio.less";
 @import "./VerseController/VerseController.less";
 @import "./VerseLine.less";
 @import "./VerseLines.less";
+
+@paddingX__verse: 10px;
+@paddingY__verse: 6px;
 
 .Verse__inLyric {
     padding: 0 @paddingX__verse;
@@ -11,20 +12,19 @@
     &:first-child {
         &,
         .padding__verseInLyric {
-            padding-top: @paddingX__verse;
+            padding-top: @paddingY__verse;
         }
     }
     &:last-child {
         &,
         .padding__verseInLyric {
-            padding-bottom: @paddingX__verse;
+            padding-bottom: @paddingY__verse;
         }
     }
 }
 
 .Verse__interactable {
     position: relative;
-    margin-left: @paddingX__verse;
 }
 
 .Verse__side {
