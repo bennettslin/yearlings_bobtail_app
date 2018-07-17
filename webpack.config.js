@@ -15,7 +15,7 @@ const webpack = require('webpack'),
     PATHS = {
         app: path.resolve(__dirname, 'app'),
         build: path.resolve(__dirname, 'build'),
-        less: path.resolve(__dirname, 'app/scss'),
+        scss: path.resolve(__dirname, 'app/scss'),
         template: path.resolve(__dirname, 'app/index.html')
     },
     commonConfig = merge([
@@ -57,7 +57,7 @@ const webpack = require('webpack'),
 
             resolve: {
                 // import from files without specifying extensions.
-                extensions: ['.js', '.jsx', '.less', '.mp3', '.pdf']
+                extensions: ['.js', '.jsx', '.scss', '.mp3', '.pdf']
             }
         },
         parts.loadJavaScript({
@@ -95,7 +95,7 @@ const webpack = require('webpack'),
         }),
         parts.generateSourceMaps({ type: 'source-map' }),
         parts.extractStyles({
-            include: PATHS.less
+            include: PATHS.scss
         })
     ]),
     developmentConfig = merge([
@@ -119,7 +119,7 @@ const webpack = require('webpack'),
             port: 1113 || process.env.PORT
         }),
         parts.loadStyles({
-            include: PATHS.less
+            include: PATHS.scss
         })
     ])
 

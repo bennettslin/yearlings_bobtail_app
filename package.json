@@ -5,11 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --env production && aws s3 sync build/ s3://yearlingsbobtail",
-    "start": "gh-pages -d build",
-    "dev": "webpack-dev-server --env development",
-    "test": "mocha --compilers js:babel-core/register --require ./test/helpers/testHelper.js --recursive ./test",
-    "test:lint": "eslint . --ext .js --ext .jsx --cache",
-    "test:watch": "npm run test -- --watch"
+    "dev": "webpack-dev-server --env development"
   },
   "repository": {
     "type": "git",
@@ -48,7 +44,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babili-webpack-plugin": "0.1.2",
-    "chai": "^4.1.2",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",
@@ -58,10 +53,8 @@
     "eslint-plugin-react": "^7.3.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.5",
-    "gh-pages": "^1.0.0",
     "html-webpack-plugin": "^2.29.0",
     "jsdom": "^11.2.0",
-    "mocha": "^4.0.1",
     "node-sass": "^4.9.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "postcss-loader": "^2.0.6",
