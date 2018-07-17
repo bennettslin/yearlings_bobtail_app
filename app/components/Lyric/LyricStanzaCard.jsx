@@ -37,23 +37,20 @@ class LyricStanzaCard extends Component {
     render() {
 
         const {
-                // From props.
-                stanzaIndex,
-                stanzaType,
-                substanzaType,
-                sideStanzaType,
-                sideSubstanzaType,
-                subsequent,
+            // From props.
+            stanzaIndex,
+            stanzaType,
+            substanzaType,
+            sideStanzaType,
+            sideSubstanzaType,
+            subsequent,
 
-                // From controller.
-                stanzaArray,
-                isSubstanza,
+            // From controller.
+            stanzaArray,
+            isSubstanza,
+            inMain,
 
-            ...other } = this.props,
-
-            {
-                inMain
-            } = other
+        ...other } = this.props
 
         if (stanzaArray) {
 
@@ -129,7 +126,6 @@ LyricStanzaCardView = ({
                 <div className={cx(
                     'LyricStanzaCard__tab',
                     'LyricStanzaCard__tabShadow',
-                    `bgColour__stanza__${stanzaType}`,
                     'boxShadow__lyricStanzaCard'
                 )}>
                     {tabText}
@@ -139,6 +135,7 @@ LyricStanzaCardView = ({
             <div className={cx(
                 'LyricStanzaCard__sheet',
                 'boxShadow__lyricStanzaCard',
+                'bgColour__stanza',
                 `bgColour__stanza__${stanzaType}`
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
@@ -167,6 +164,8 @@ LyricStanzaCardView = ({
             {isTabbed && (
                 <div className={cx(
                     'LyricStanzaCard__tab',
+                    'LyricStanzaCard__tabTop',
+                    'bgColour__stanza',
                     `bgColour__stanza__${stanzaType}`
                 )}>
                     {tabText}

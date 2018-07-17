@@ -163,6 +163,27 @@
     }
 }
 
+.VerseColour__placeholder {
+
+    .RM__sliderNotMoving
+    & {
+        // Default side verse.
+        background-color: @bgColour__beforeSelected__odd;
+        .mixin__textShadow(@bgColour__beforeSelected__odd);
+
+        color: #644;
+    }
+
+    .RM__sliderMoving
+    & {
+        // Slider side verse.
+        background-color: @bgColour__sideSlider;
+        .mixin__textShadow(@bgColour__sideSlider);
+
+        color: @colour__sideSlider;
+    }
+}
+
 .VerseColour {
     /**
      * Interactable verse has highlighted styling only when interactivated, or

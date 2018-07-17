@@ -28,6 +28,12 @@ module.exports = [
         neededHours: 8
     },
 
+    {
+        taskName: `Stanza styling.`,
+        workedHours: 4,
+        neededHours: 8
+    },
+
     /**
      * Mobile bugs. (Might be able to quickly get through once deployment
      * strategy is worked out.)
@@ -178,12 +184,6 @@ module.exports = [
         taskName: `Finalise menu UI.`,
         workedHours: 0,
         neededHours: 5
-    },
-
-    {
-        taskName: `Colour lyric stanza borders.`,
-        workedHours: 0,
-        neededHours: 8
     },
 
     {

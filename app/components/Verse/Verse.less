@@ -7,9 +7,18 @@
 @paddingY__verse: 6px;
 
 .Verse__inLyric {
+    @border: 1px solid rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+    position: relative;
+
     padding: 0 @paddingX__verse;
+    border-left: @border;
+    border-right: @border;
 
     &:first-child {
+        border-top: @border;
+
         &,
         .VerseColour {
             border-top-left-radius: @borderRadius;
@@ -22,6 +31,8 @@
         }
     }
     &:last-child {
+        border-bottom: @border;
+
         &,
         .VerseColour {
             border-bottom-left-radius: @borderRadius;
@@ -45,27 +56,6 @@
 .VerseBar__animatable,
 .VerseColour__inVerseBar {
     border-radius: @borderRadius;
-}
-
-.Verse__side {
-
-    .RM__sliderNotMoving
-    & {
-        // Default side verse.
-        background-color: @bgColour__beforeSelected__odd;
-        .mixin__textShadow(@bgColour__beforeSelected__odd);
-
-        color: #644;
-    }
-
-    .RM__sliderMoving
-    & {
-        // Slider side verse.
-        background-color: @bgColour__sideSlider;
-        .mixin__textShadow(@bgColour__sideSlider);
-
-        color: @colour__sideSlider;
-    }
 }
 
 .Verse__title {

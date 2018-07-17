@@ -174,7 +174,6 @@ VerseView = ({
     // From controller.
     verseClassName,
     isInteractable,
-    inMain,
 
     handleLyricPlay,
     handleLyricVerseSelect,
@@ -197,7 +196,6 @@ VerseView = ({
             className={cx(
                 'Verse',
                 isTitle && 'Verse__title',
-                !inMain && 'Verse__side',
                 inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
                 !isNaN(verseIndex) &&
@@ -213,7 +211,7 @@ VerseView = ({
             onTouchStart={handleInteractivatableClick}
         >
 
-            {(inVerseBar || isInteractable) && (
+            {(inVerseBar || isInteractable) ? (
                 <VerseController
                     inVerse
                     {...{
@@ -227,6 +225,11 @@ VerseView = ({
                         handleLyricVerseSelect
                     }}
                 />
+            ) : (
+                <div className={cx(
+                    'VerseColour__placeholder',
+                    'absoluteFullContainer'
+                )} />
             )}
 
             <VerseLines {...other} />
