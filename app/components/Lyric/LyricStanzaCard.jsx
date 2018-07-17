@@ -111,7 +111,11 @@ LyricStanzaCardView = ({
 
 ...other }) => {
 
-    const isTabbed = Boolean(stanzaIndex)
+    const isTabbed = Boolean(stanzaIndex),
+
+        tabText = `${stanzaType}${
+            stanzaIndex !== -1 ? ` ${stanzaIndex}` : ''
+        }`
 
     return (
         <div className={cx(
@@ -120,19 +124,21 @@ LyricStanzaCardView = ({
             isTabbed && 'LyricStanzaCard__tabbed'
         )}>
 
-            {isTabbed &&
+            {/* This is the tab's box shadow. */}
+            {isTabbed && (
                 <div className={cx(
                     'LyricStanzaCard__tab',
-                    `bgColour__stanza__${stanzaType}`
+                    'LyricStanzaCard__tabShadow',
+                    `bgColour__stanza__${stanzaType}`,
+                    'boxShadow__lyricStanzaCard'
                 )}>
-                    {`${stanzaType}${
-                        stanzaIndex !== -1 ? ` ${stanzaIndex}` : ''
-                    }`}
+                    {tabText}
                 </div>
-            }
+            )}
 
             <div className={cx(
                 'LyricStanzaCard__sheet',
+                'boxShadow__lyricStanzaCard',
                 `bgColour__stanza__${stanzaType}`
             )}>
                 <div className={cx(
@@ -160,6 +166,16 @@ LyricStanzaCardView = ({
                     )}
                 </div>
             </div>
+
+            {/* This tab covers the sheet's box shadow. */}
+            {isTabbed && (
+                <div className={cx(
+                    'LyricStanzaCard__tab',
+                    `bgColour__stanza__${stanzaType}`
+                )}>
+                    {tabText}
+                </div>
+            )}
         </div>
     )
 }

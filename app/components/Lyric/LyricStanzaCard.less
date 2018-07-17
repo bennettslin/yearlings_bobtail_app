@@ -9,21 +9,34 @@
 .LyricStanzaCard__tab {
     position: absolute;
     height: @height__stanzaTypeTab;
-    top: -@height__stanzaTypeTab + @borderRadius__lyricStanza;
+    top: -@height__stanzaTypeTab;
     left: 0;
     border-radius: 7.5px 7.5px 0 0;
 
     padding: 0 5px;
     color: rgba(255, 255, 255, 0.9);
 
+
     text-transform: uppercase;
     white-space: nowrap;
     font-size: 0.6em;
+}
+
+.LyricStanzaCard__tabShadow {
+
+    /**
+     * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
+     */
+    height: @height__stanzaTypeTab - @borderRadius__lyricStanza * 3;
+    top: -@height__stanzaTypeTab;
+}
+
+.boxShadow__lyricStanzaCard {
+    box-shadow: @boxShadow__lyricStanzaCard;
 
     // .LyricStanza__verseIn
     // & {
-    //     border: @border__lyricStanzaCard__verseIn;
-    //     border-bottom: none;
+    //     box-shadow: @boxShadow__lyricStanzaCard__verseIn;
     // }
 }
 
@@ -39,35 +52,29 @@
 }
 
 .LyricStanzaCard__sheet {
+    position: relative;
+
     padding: @js__margin__thin / 2;
     border-radius: @borderRadius__lyricStanza;
-
-    // .LyricStanza__verseIn
-    // & {
-    //     border: @border__lyricStanzaCard__verseIn;
-    // }
 
     .LyricStanza__column__main
     & {
         padding-left: @paddingX__verse;
     }
 
-    .LyricStanza__notSubsequent
     .LyricStanzaCard__tabbed
     & {
         padding-top: @js__margin__thin;
-    }
-
-    .LyricStanza__subsequent
-    & {
-        border-top-left-radius: @borderRadius__lyricStanza;
+        border-top-left-radius: 0;
     }
 }
 
 .LyricStanzaCard__sheetInset {
-    // z-index: 10;
+    // z-index: 50;
     // position: relative;
+    // box-sizing: border-box;
     box-shadow: @boxShadow__activeVerse;
+    border-radius: 3px;
 }
 
 .bgColour__stanza__title {

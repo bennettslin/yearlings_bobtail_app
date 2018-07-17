@@ -4,6 +4,5 @@
 * LyricStanza has diagonal stripes.
 * Before and after colours!
 * Slider stanza and verse styling.
-* LyricStanzaCard tabs have shadows for box shadowing.
 
 * Cursor inline styles its transitions, no opacity when not playing.
