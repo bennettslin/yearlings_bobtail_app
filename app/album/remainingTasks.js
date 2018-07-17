@@ -17,12 +17,6 @@ module.exports = [
     },
 
     {
-        taskName: `Deployment strategy.`,
-        workedHours: 5,
-        neededHours: 8
-    },
-
-    {
         taskName: `Set up buttons to use svgs, including loading icons.`,
         workedHours: 0,
         neededHours: 8

@@ -3263,4 +3263,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Deployment strategy.`,
+        workedHours: 9,
+        neededHours: 9
+    },
 ]
