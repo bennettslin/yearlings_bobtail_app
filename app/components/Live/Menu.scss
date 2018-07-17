@@ -1,0 +1,199 @@
+/**
+ * Needed by JavaScript to calculate scores tips in main breakpoints.
+ */
+ $js__maxWidth__childAudio: 720px; // Arbitrary.
+ $js__minWidth__childTitle: 80px; // Arbitrary.
+
+ $maxWidth__childTitle: 200px; // Arbitrary.
+
+.Menu {
+    height: $js__height__menu;
+
+    .RM__phone
+    & {
+        height: $js__height__menu__phone;
+    }
+}
+
+.Menu__responsive {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: $zIndex__menuField;
+
+    .RM__scoresTipsMain
+    & {
+        justify-content: space-between;
+    }
+
+    transition:
+        margin $animationDuration__slow,
+        max-width $animationDuration__slow;
+
+    .RM__overlayHidden
+    & {
+        /**
+         * When overlay is hidden, override the dynamic margins calculated by
+         * JavaScript. Not happy about doing this, but I wasn't able to keep
+         * the animation smooth in Safari any other way.
+         */
+        margin: 0 !important;
+    }
+
+    .RM__overlayShown
+    &.width__mainColumn {
+        max-width: $js__width__mini;
+    }
+}
+
+.Menu__responsive,
+.MenuChild__scoresTips {
+    display: flex;
+    align-items: center;
+}
+
+.MenuChild {
+    height: 100%;
+}
+
+.MenuChild__title {
+    position: relative;
+
+    flex-grow: 1;
+
+    min-width: $js__minWidth__childTitle;
+    max-width: $maxWidth__childTitle;
+
+    .RM__twoRowMenu
+    & {
+        /**
+         * Don't bother to show if title in audio. Child component also will
+         * not be rendered.
+         */
+        display: none;
+    }
+}
+
+.MenuChild__audio {
+    $margin__menuChild: 10px;
+
+    // Audio should shrink at a slower rate than title.
+    flex-grow: 10;
+
+    min-width: $js__maxWidth__childAudio;
+    max-width: $js__maxWidth__childAudio;
+
+    transition: margin $animationDuration__default;
+
+    // Applies to monitor and tablet.
+    margin: 0 $margin__menuChild;
+
+    .RM__laptop
+    &,
+    .RM__mini
+    & {
+        margin: 0 $js__margin__thin;
+    }
+
+    .RM__scoresTipsMain
+    & {
+        // If scores tips is hidden, remove audio subfield's right margin.
+        margin-right: 0;
+
+        /**
+         * Total padding is two thick margins at each end, and thick plus
+         * thin margin between children.
+         */
+        min-width:
+            $js__minWidth__audioBanner
+            + $js__minWidth__audioButtons__minusPlayer
+            + $js__length__iconLarge
+            + $js__margin__thick * 3
+            + $js__margin__thin;
+    }
+
+    .RM__mobile
+    & {
+        justify-content: flex-end;
+    }
+
+    .RM__tablet.RM__scoresTipsMain
+    & {
+        min-width:
+        $js__minWidth__audioBanner
+        + $js__minWidth__audioButtons__minusPlayer
+        + $js__length__iconLarge__tablet
+        + $js__margin__thick * 3
+        + $js__margin__thin;
+    }
+
+    .RM__mini
+    & {
+        min-width:
+        $js__minWidth__audioButtons__minusPlayer
+        + $js__length__iconLarge__mini
+        + $js__margin__thick * 3
+        + $js__margin__thin;
+    }
+
+    .RM__twoRowMenu
+    & {
+        // If title is hidden, remove audio subfield's left margin.
+        margin-left: 0;
+
+        // Once title is in audio, minWidth doesn't matter.
+        min-width: 0;
+    }
+
+    .RM__overlayShown
+    & {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .RM__overlayShown:not(.RM__phone)
+    & {
+        margin-left: 0;
+    }
+}
+
+.MenuChild__scoresTips {
+
+    .RM__scoresTipsMain
+    & {
+        /**
+         * Don't bother to show if scores tips in main. Child component also
+         * will not be rendered.
+         */
+        display: none;
+    }
+
+    min-width: $width__childScoresTips;
+
+    .RM__tablet
+    & {
+        min-width: $width__childScoresTips__tablet;
+    }
+
+    .RM__mini
+    & {
+        min-width: $width__childScoresTips__mini;
+    }
+}
+
+.widths__hiddenInOverlay {
+
+    transition:
+        opacity $animationDuration__slow,
+        min-width $animationDuration__slow,
+        max-width $animationDuration__slow;
+
+    .RM__overlayShown
+    & {
+        width: 0;
+        min-width: 0;
+        max-width: 0;
+        opacity: 0;
+    }
+}

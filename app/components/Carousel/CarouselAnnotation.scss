@@ -1,0 +1,94 @@
+$paddingX__carouselAnnotation: 8px;
+
+.CarouselAnnotation {
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column-reverse;
+
+    min-width: 0;
+
+    .RM__mobileNotPhone
+    & {
+        flex-direction: column;
+    }
+
+    .parentIsShown
+    & {
+        transition: min-width $animationDuration__default,
+        opacity $animationDuration__default;
+    }
+}
+
+.RM__narrative
+    .CarouselAnnotationAnimatable__narrative,
+.RM__backstory
+    .CarouselAnnotationAnimatable__backstory,
+.RM__observation
+    .CarouselAnnotationAnimatable__observation,
+.RM__pun
+    .CarouselAnnotationAnimatable__pun,
+.RM__reference
+    .CarouselAnnotationAnimatable__reference,
+.RM__songwriting
+    .CarouselAnnotationAnimatable__songwriting,
+.RM__portal
+    .CarouselAnnotationAnimatable__portal,
+.RM__afterword
+    .CarouselAnnotationAnimatable__afterword {
+
+    min-width: $width__annotationCard;
+
+    margin-left: $paddingX__carouselAnnotation;
+    margin-right: $paddingX__carouselAnnotation;
+
+    .AnnotationHeaderAnimatable {
+        height: 40px;
+        opacity: 1;
+    }
+}
+
+.RM__mini.RM__narrative
+    .CarouselAnnotationAnimatable__narrative,
+.RM__mini.RM__backstory
+    .CarouselAnnotationAnimatable__backstory,
+.RM__mini.RM__observation
+    .CarouselAnnotationAnimatable__observation,
+.RM__mini.RM__pun
+    .CarouselAnnotationAnimatable__pun,
+.RM__mini.RM__reference
+    .CarouselAnnotationAnimatable__reference,
+.RM__mini.RM__songwriting
+    .CarouselAnnotationAnimatable__songwriting,
+.RM__mini.RM__portal
+    .CarouselAnnotationAnimatable__portal,
+.RM__mini.RM__afterword
+    .CarouselAnnotationAnimatable__afterword {
+
+    min-width: $width__annotationCard__mini;
+}
+
+/**
+ * Override if hidden by single lyric column. Using specific selectors to
+ * override styles for mini width as well.
+ */
+.Root.RM__rightLyricColumnOnly
+.CarouselAnnotation__inLyricColumn__left,
+.Root.RM__leftLyricColumnOnly
+.CarouselAnnotation__inLyricColumn__right {
+
+    min-width: 0;
+    opacity: 0;
+
+    margin: 0;
+
+    .AnnotationCardAnimatable {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    .AnnotationHeaderAnimatable {
+        height: 0;
+        opacity: 0;
+    }
+}

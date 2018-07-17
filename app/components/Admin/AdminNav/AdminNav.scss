@@ -1,0 +1,39 @@
+// Progress bar colours.
+$task-total-colour: #fcc;
+$task-filled-colour: #daa;
+$song-total-colour: #fcf;
+$song-filled-colour: #dad;
+$played-total-colour: #cfc;
+$played-filled-colour: #ada;
+
+// Admin nav.
+$song-link-colour: #484;
+$song-hover-colour: #7b7;
+$song-active-colour: #aea;
+
+.AdminNav {
+
+    @include mixin__progressBar($song-total-colour, $song-filled-colour);
+
+    .selected {
+        @include mixin__progressBar($played-total-colour, $played-filled-colour);
+
+        a.text-cell {
+            color: $song-link-colour;
+
+            &:hover {
+                color: $song-hover-colour;
+            }
+
+            &:active {
+                color: $song-active-colour;
+            }
+        }
+    }
+
+    .primary-row {
+        line-height: 1em;
+    }
+
+    flex-direction: column;
+}

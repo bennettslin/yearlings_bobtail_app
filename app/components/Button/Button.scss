@@ -1,0 +1,67 @@
+@import "./ButtonIcon.scss";
+
+.Button {
+    position: relative;
+
+    transition:
+    background-color $animationDuration__default,
+    transform $animationDuration__instant;
+}
+
+.Button__popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Button__defaultSize {
+    width: $js__length__icon;
+    height: $js__length__icon;
+}
+
+.Button__smallSize {
+    width: $length__iconSmall;
+    height: $length__iconSmall;
+}
+
+.Button__largeSize {
+    width: $js__length__iconLarge;
+    height: $js__length__iconLarge;
+
+    .RM__tablet
+    & {
+        width: $js__length__iconLarge__tablet;
+        height: $js__length__iconLarge__tablet;
+    }
+
+    .RM__mini
+    & {
+        width: $js__length__iconLarge__mini;
+        height: $js__length__iconLarge__mini;
+    }
+
+    .RM__phone
+    & {
+        width: $js__length__icon;
+        height: $js__length__icon;
+    }
+}
+
+.Button__enabled {
+    cursor: pointer;
+}
+
+.ButtonAnimatable {
+
+    box-shadow: $boxShadow__button;
+
+    .Button__enabled:hover
+    & {
+        animation: bounceHover $animationDuration__default;
+    }
+
+    .Button__enabled:active
+    & {
+        transform: scale(0.9);
+    }
+}

@@ -1,0 +1,51 @@
+.NavButton {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .NavColumn__hidden
+    .NavBookSongs
+    & {
+        width: 0;
+    }
+
+    .Nav__showSingleBook
+    & {
+        transition:
+            width $animationDuration__default,
+            margin $animationDuration__default;
+    }
+
+    .RM__navIconStatic
+    & {
+        width: $js__length__icon;
+    }
+
+    .RM__navIconShrunk
+    .NavColumn__shown.NavColumn__left
+    & {
+        &:not(:last-child) {
+            margin-right: 1px;
+        }
+    }
+
+    .RM__navIconShrunk
+    .NavColumn__shown.NavColumn__right
+    & {
+        &:not(:last-child) {
+            margin-left: 1px;
+        }
+    }
+}
+
+// Prevent pointer cursor from showing when hovered over hidden buttons.
+.Button__enabled {
+    .NavColumn__hidden
+    .NavBookSongs
+    &,
+    .NavColumn__hidden
+    .NavBooksLogue
+    & {
+        cursor: default;
+    }
+}

@@ -1,0 +1,50 @@
+$height__audioBanner__display:
+    ($js__height__menu - $paddingY__audio * 2) / 2;
+
+.AudioBanner {
+    flex-grow: 10;
+
+    min-width: $js__minWidth__audioBanner;
+    line-height: 1em;
+
+    background-color: #8b8;
+
+    .RM__twoRowMenu
+    & {
+        min-width: 200px;
+    }
+}
+
+.AudioBannerDisplay {
+    box-sizing: border-box;
+    padding: 0 5px;
+
+    height: $height__audioBanner__display;
+    justify-content: space-between;
+
+    .RM__twoRowMenu
+    & {
+        font-size: 0.85em;
+    }
+}
+
+.AudioBanner__belowMenu {
+    position: absolute;
+    top: $js__height__menu;
+    height: $js__height__banner__twoRowMenu;
+
+    transition:
+        height $animationDuration__default;
+
+    .RM__phone
+    & {
+        top: $js__height__menu__phone;
+    }
+
+    .RM__overlayShown
+    &,
+    .RM__song.RM__lyricExpanded
+    & {
+        height: $js__height__banner__twoRowMenu__truncated;
+    }
+}

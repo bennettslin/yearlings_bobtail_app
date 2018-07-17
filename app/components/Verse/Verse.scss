@@ -1,0 +1,64 @@
+@import "./VerseAudio/VerseAudio.scss";
+@import "./VerseController/VerseController.scss";
+@import "./VerseLine.scss";
+@import "./VerseLines.scss";
+
+.Verse__inLyric {
+    $border: 1px solid rgba(0, 0, 0, 0.15);
+
+    box-sizing: border-box;
+    position: relative;
+
+    padding: 0 $paddingX__verse;
+    border-left: $border;
+    border-right: $border;
+
+    &:first-child {
+        border-top: $border;
+
+        &,
+        .VerseColour {
+            border-top-left-radius: $borderRadius;
+            border-top-right-radius: $borderRadius;
+        }
+
+        &,
+        .padding__verseInLyric {
+            padding-top: $paddingY__verse;
+        }
+    }
+    &:last-child {
+        border-bottom: $border;
+
+        &,
+        .VerseColour {
+            border-bottom-left-radius: $borderRadius;
+            border-bottom-right-radius: $borderRadius;
+        }
+
+        &,
+        .padding__verseInLyric {
+            padding-bottom: $paddingY__verse;
+        }
+    }
+}
+
+.Verse__interactable {
+    position: relative;
+}
+
+/**
+ * Not sure why style needs to be applied to both.
+ */
+.VerseBar__animatable,
+.VerseColour__inVerseBar {
+    border-radius: $borderRadius;
+}
+
+.Verse__title {
+    background-color: $bgColour__beforeSelected__odd;
+    @include mixin__textShadow($bgColour__beforeSelected__odd);
+
+    $paddingX__title: 15px;
+    padding: 0 $paddingX__title;
+}

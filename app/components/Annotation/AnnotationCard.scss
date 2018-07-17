@@ -1,0 +1,84 @@
+$padding__annotationCard: 5px;
+
+$width__annotationCard: 364px;
+
+$width__annotationCard__mini:
+    $width__annotationCard
+    * $multiplier__fontSize__mini;
+
+$width__annotationCard__phone:
+    $width__annotationCard
+    * $multiplier__fontSize__phone;
+
+.AnnotationCardAnimatable {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    .parentIsShown
+    & {
+        transition:
+            max-height $animationDuration__default,
+            opacity $animationDuration__default;
+    }
+}
+
+.RM__narrative
+    .AnnotationCardAnimatable__narrative,
+.RM__backstory
+    .AnnotationCardAnimatable__backstory,
+.RM__observation
+    .AnnotationCardAnimatable__observation,
+.RM__pun
+    .AnnotationCardAnimatable__pun,
+.RM__reference
+    .AnnotationCardAnimatable__reference,
+.RM__songwriting
+    .AnnotationCardAnimatable__songwriting,
+.RM__portal
+    .AnnotationCardAnimatable__portal,
+.RM__afterword
+    .AnnotationCardAnimatable__afterword,
+
+.AnnotationCard__inPopup {
+    max-height: 500px; // Arbitrary large number.
+
+    margin-top: $padding__annotationCard;
+
+    opacity: 1;
+    box-shadow: $boxShadow__annotationCard;
+}
+
+.AnnotationCard {
+    position: relative;
+    box-sizing: border-box;
+
+    padding: $padding__annotationCard;
+    min-height: $length__annotationDot;
+
+    width: $width__annotationCard;
+    max-width: $width__annotationCard;
+
+    .RM__mini
+    & {
+        // Multiplier is .9, just like for lyric text in mini.
+        width: $width__annotationCard__mini;
+        max-width: $width__annotationCard__mini;
+    }
+
+    .RM__phone
+    & {
+        // Multiplier is .98, just like for lyric text in phone.
+        width: $width__annotationCard__phone;
+        max-width: $width__annotationCard__phone;
+    }
+}
+
+.AnnotationCard__isText {
+    background-color: $bgColour__annotationCard;
+    @include mixin__textShadow($bgColour__annotationCard);
+}
+
+.AnnotationCard__portal {
+    background-color: $bgColour__annotationCard;
+}

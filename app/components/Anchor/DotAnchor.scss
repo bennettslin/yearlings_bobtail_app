@@ -1,0 +1,69 @@
+.DotAnchor {
+    background-color: $bgColour__dot__deselected;
+}
+
+.DotAnchor__selectable {
+    .Anchor__selectable:hover
+    & {
+        animation: bounceHover $animationDuration__slow;
+    }
+
+    .Anchor__selectable:active
+    & {
+        transform: scale(0.8);
+    }
+}
+
+.DotAnchor__inAnnotation {
+    width: $length__iconSmall;
+    height: $length__iconSmall;
+}
+
+.DotAnchor__inStanza {
+    width: $js__length__icon;
+    height: $js__length__icon;
+}
+
+/**
+ * This is the one source of truth for how dot anchors are ordered.
+ */
+.RM__sliderNotMoving.RM__portal
+    .DotAnchor__portal {
+    background-color: $bgColour__dot__portal;
+}
+.RM__sliderNotMoving.RM__observation
+    .DotAnchor__observation {
+    background-color: $bgColour__dot__observation;
+}
+.RM__sliderNotMoving.RM__backstory
+    .DotAnchor__backstory {
+    background-color: $bgColour__dot__backstory;
+}
+.RM__sliderNotMoving.RM__reference
+    .DotAnchor__reference {
+    background-color: $bgColour__dot__reference;
+}
+.RM__sliderNotMoving.RM__pun
+    .DotAnchor__pun {
+    background-color: $bgColour__dot__pun;
+}
+.RM__sliderNotMoving.RM__narrative
+    .DotAnchor__narrative {
+    background-color: $bgColour__dot__narrative;
+}
+.RM__sliderNotMoving.RM__songwriting
+    .DotAnchor__songwriting {
+    background-color: $bgColour__dot__songwriting;
+}
+.RM__sliderNotMoving.RM__afterword
+    .DotAnchor__afterword {
+    background-color: $bgColour__dot__afterword;
+}
+
+// TODO: Come up with better styling, obviously.
+.DotAnchor__accessed {
+    .RM__accessOn
+    & {
+        box-shadow: $boxShadow__access;
+    }
+}

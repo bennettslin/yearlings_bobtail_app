@@ -1,0 +1,78 @@
+.LyricStanza {
+    display: flex;
+    justify-content: center;
+}
+
+.LyricStanza__column {
+    display: flex;
+    align-items: center;
+
+    .LyricStanza__subsequent
+    & {
+        margin-top:
+            $margin__lyricUnit
+            - $height__stanzaTypeTab
+            - 2.5px;
+    }
+}
+
+.LyricStanza__column__text {
+    flex-direction: column;
+    justify-content: flex-end;
+
+    // Dots stanza will have this style only if not hidden.
+    &:not(:first-child) {
+        margin-left: $marginX__stanzaChildColumn;
+    }
+
+    /**
+     * Apply margin top to stanza block rather than lyrics unit, so that
+     * bottom dot stanza can override it when faded out.
+     */
+    .LyricStanza__notSubsequent:not(:first-child)
+    & {
+        margin-top: $margin__lyricUnit;
+    }
+
+    /**
+     * Limit width of stanzas when lyric column is full width of screen.
+     * This is necessary for Vegan Proclamation. This value doesn't affect
+     * the layout anywhere else. This is also wide enough for Golden Cord.
+     */
+    max-width: 700px;
+}
+
+.LyricStanza__column__main {
+    // Account for verse audio button and its box shadow.
+    padding-left: $paddingX__verse + 5px;
+}
+
+.LyricStanza__column__side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    // Rules to show or hide stanzas when only one lyric column is shown.
+    .RM__leftLyricColumnOnly
+    & {
+        // Hide side stanzas when only left lyric column is shown.
+        display: none;
+    }
+}
+
+.LyricStanza__column__sideBottomOnly {
+    justify-content: flex-end;
+}
+
+// These styles are just for dev purposes.
+// .LyricStanza__verseBefore {
+//     background-color: rgba(240, 200, 200, 0.5);
+// }
+
+// .LyricStanza__verseAfter {
+//     background-color: rgba(240, 240, 200, 0.5);
+// }
+
+// .LyricStanza__verseIn {
+//     background-color: rgba(200, 200, 240, 0.5);
+// }

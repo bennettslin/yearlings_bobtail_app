@@ -1,0 +1,57 @@
+@import "./constants.scss";
+@import "./OverviewLogue.scss";
+@import "./OverlayPopups.scss";
+@import "./Menu.scss";
+
+.Root {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    min-height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    font-family: PTSansNarrow, Arial;
+    font-size: 1.1em;
+
+    // Not sure why autoprefixer isn't working in this case.
+    -moz-user-select: none;
+    user-select: none;
+
+    background-color: #222;
+}
+
+.PopupOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: 0.75;
+    z-index: $zIndex__popupOverlay;
+
+    transition: opacity $animationDuration__default;
+
+    .RM__overlayHidden
+    & {
+        opacity: 0;
+
+        // TODO: pointer-events isn't supported in older browsers. Find other way to prevent overlay from blocking events.
+        pointer-events: none;
+
+        // TODO: Confirm that setting display to none will fix the above issue?
+        display: none;
+    }
+}
+
+.TouchOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+
+    // This prevents popup interaction when the slider is touched.
+    .RM__sliderTouched
+    & {
+        z-index: $zIndex__touchOverlay;
+    }
+}

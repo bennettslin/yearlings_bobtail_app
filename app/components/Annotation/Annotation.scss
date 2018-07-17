@@ -1,0 +1,16 @@
+@import "./AnnotationAccess.scss";
+@import "./AnnotationCard.scss";
+@import "./AnnotationPortal.scss";
+@import "./AnnotationTitle.scss";
+
+.Annotation {
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        background-color $animationDuration__default;
+}
+
+.Annotation__selectedInCarousel {
+    background-color: rgba(250, 250, 225, 0.5);
+}

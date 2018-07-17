@@ -1,0 +1,6 @@
+// This is needed by JavaScript to calculate stage coordinates.
+$js__height__nav:
+    $js__length__icon
+     + $js__margin__thin * 2;
+
+$borderRadius__nav: $js__height__nav / 3;

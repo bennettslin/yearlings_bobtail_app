@@ -1,0 +1,76 @@
+@import "./LeftShelf.scss";
+@import "./OverviewToggle.scss";
+@import "./DotsSlideToggle.scss";
+
+.Main {
+    flex-grow: 1;
+}
+
+.Main__flexContainer {
+    display: flex;
+
+    .RM__mobileNotPhone
+    & {
+        align-items: flex-end;
+    }
+}
+
+.position__mainColumn {
+    position: absolute;
+    top: $js__height__menu;
+    height: "calc(100% - #{$js__height__menu})";
+
+    left: 0;
+
+    .RM__twoRowMenu
+    & {
+        top: $js__topOffset__twoRowMenu;
+    }
+
+    .RM__mobile.RM__lyricHeighted
+    & {
+        height: "calc(100% - #{$js__height__lyricCollapsed} - #{$js__height__menu})";
+    }
+
+    .RM__mini.RM__twoRowMenu
+    & {
+        height: "calc(100% - #{$js__height__lyricCollapsed} - #{$js__topOffset__twoRowMenu})";
+    }
+
+    .RM__laptop.RM__twoRowMenu
+    &,
+    .RM__lyricHeightless.RM__twoRowMenu
+    & {
+        height: "calc(100% - #{$js__topOffset__twoRowMenu})";
+    }
+
+    .RM__phone
+    & {
+        top: $js__topOffset__twoRowMenu__phone;
+        height: "calc(100% - #{$js__height__lyricCollapsed} - #{$js__topOffset__twoRowMenu__phone})";
+    }
+
+    .RM__phone.RM__lyricHeightless
+    & {
+        height: "calc(100% - #{$js__topOffset__twoRowMenu__phone})";
+    }
+}
+
+.width__mainColumn {
+    width: 100%;
+
+    .RM__monitor
+    & {
+        max-width: "calc(100% - #{$js__width__goldenCord})";
+    }
+
+    .RM__laptop
+    & {
+        max-width: "calc(100% - #{$js__width__uncannyValley})";
+    }
+
+    .RM__mobile
+    & {
+        max-width: 100%;
+    }
+}

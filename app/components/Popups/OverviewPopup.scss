@@ -1,0 +1,40 @@
+/**
+ * Overview popup styling is somewhat different from the others, because it is
+ * not positioned absolute.
+ */
+
+.OverviewPopup__inMain {
+
+    margin-top: $js__margin__thin;
+    margin-left: $js__margin__thick;
+
+    .RM__mobileNotPhone
+    & {
+        margin-top: 0;
+        margin-right: $js__margin__thin;
+        margin-bottom: $margin__scrollbar;
+    }
+
+    .RM__phone
+    & {
+        margin: 0;
+    }
+}
+
+.OverviewPopupView {
+
+    // Needed to prevent closing upon popup click.
+    z-index: $zIndex__centreFieldChild;
+
+    max-width: 480px;
+
+    .RM__phone
+    & {
+        box-sizing: border-box;
+        padding: $js__margin__thin;
+    }
+}
+
+.OverviewPopupViewContent {
+    border-radius: 25px;
+}

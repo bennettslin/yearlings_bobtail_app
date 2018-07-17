@@ -15,7 +15,7 @@ const webpack = require('webpack'),
     PATHS = {
         app: path.resolve(__dirname, 'app'),
         build: path.resolve(__dirname, 'build'),
-        less: path.resolve(__dirname, 'app/less'),
+        less: path.resolve(__dirname, 'app/scss'),
         template: path.resolve(__dirname, 'app/index.html')
     },
     commonConfig = merge([

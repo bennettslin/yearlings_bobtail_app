@@ -1,0 +1,112 @@
+$width__overviewToggle: 75px;
+$height__overviewToggle:
+    $width__overviewToggle * 1.5;
+
+$width__overviewToggle__laptop:
+    $js__length__iconLarge
+    + $js__margin__thin * 2;
+$height__overviewToggle__laptop:
+    $width__overviewToggle__laptop * 1.5;
+
+$width__overviewToggle__tablet:
+    $js__length__iconLarge__tablet
+    + $js__margin__thin * 2;
+$height__overviewToggle__tablet:
+    $width__overviewToggle__tablet * 1.5;
+
+$width__overviewToggle__mini:
+    $js__length__iconLarge__mini
+    + $js__margin__thin * 2;
+$height__overviewToggle__mini:
+    $width__overviewToggle__mini * 1.5;
+
+$width___overviewToggle__phone:
+    $js__length__icon
+    + $js__margin__thin * 2;
+$height___overviewToggle__phone:
+    $width___overviewToggle__phone * 1.5;
+
+// Toggle container.
+.LeftShelf {
+    height: 100%;
+
+    transition: opacity $animationDuration__default,
+                margin-left $animationDuration__default;
+
+    margin-left: 0;
+    margin-bottom: $margin__scrollbar;
+
+    // Align with scores tips on other side.
+    padding: $js__margin__thin 0 $js__margin__thin $js__margin__thin;
+
+    // background-color: rgba(250, 200, 250, 0.5);
+
+    display: flex;
+    flex-direction: column;
+
+    .RM__mobileNotPhone
+    & {
+        flex-direction: column-reverse;
+    }
+
+    // Widths for all other devices are set by "width__leftShelf" class.
+    .RM__desktop
+    & {
+        width: $width__overviewToggle;
+    }
+
+    // Hidden to left in these scenarios.
+    .RM__logue
+    &,
+    .RM__dotsShown
+    &,
+    .RM__tipsShown
+    &,
+    .RM__overlayShown
+    &,
+    .RM__annotationShown.RM__navExpanded
+    &,
+    .RM__mobile.RM__lyricExpanded
+    &,
+    .RM__phone.RM__overviewShown
+    & {
+        opacity: 0;
+        margin-left: -$width__overviewToggle;
+    }
+}
+
+.LeftShelf__child {
+
+    &:not(:last-child) {
+        margin-bottom: $js__margin__thick;
+    }
+
+    .RM__mobileNotPhone
+    &:not(:last-child) {
+        margin-top: $js__margin__thick;
+        margin-bottom: 0;
+    }
+}
+
+.width__leftShelf {
+
+    .RM__laptop
+    & {
+        width: $width__overviewToggle__laptop;
+    }
+
+    .RM__tablet
+    & {
+        width: $width__overviewToggle__tablet;
+    }
+
+    .RM__mini
+    & {
+        width: $width__overviewToggle__mini;
+    }
+
+    .RM__phone
+    & {
+        width: $width___overviewToggle__phone;
+    }
+}

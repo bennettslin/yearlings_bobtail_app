@@ -1,0 +1,343 @@
+/******************
+ * MONITOR STYLES *
+ ******************/
+
+.CarouselNavToggle__placeholder {
+    min-width: $width__navToggle;
+}
+
+.RM__monitor {
+
+    &.RM__navIconStatic {
+        .Nav__showDoubleBook {
+            .CarouselNavToggle__placeholder {
+                margin-right: $monitor-multiplier__gap__large;
+            }
+
+            .NavColumn__left {
+                .NavBookSongs {
+                    left: $monitor-book-offset;
+                }
+
+                .NavButton:not(:last-child) {
+                    margin-right: $monitor-small-unit;
+                }
+            }
+
+            .NavColumn__right {
+                .NavBookSongs {
+                    right: $monitor-book-offset;
+                }
+
+                .NavButton:not(:last-child) {
+                    margin-left: $monitor-small-unit;
+                }
+            }
+        }
+
+        .Nav__showSingleBook {
+            .CarouselNavToggle__placeholder {
+                margin-right: $monitor-single-large;
+            }
+
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBookSongs {
+                        left: $monitor-single-book-offset;
+                    }
+
+                    .NavButton:not(:last-child) {
+                        margin-right: $monitor-single-small;
+                    }
+                }
+
+                &.NavColumn__right {
+                    .NavBookSongs {
+                        right: $monitor-single-book-offset;
+                    }
+
+                    .NavButton:not(:last-child) {
+                        margin-left: $monitor-single-small;
+                    }
+                }
+            }
+        }
+    }
+
+    &.RM__navIconShrunk {
+        .Nav__showDoubleBook {
+            .NavBook {
+                min-width: $monitor-shrink-icon;
+            }
+
+            .NavColumn__left {
+                .NavBookSongs {
+                    left: $monitor-shrink-book-offset;
+                }
+            }
+
+            .NavColumn__right {
+                .NavBookSongs {
+                    right: $monitor-shrink-book-offset;
+                }
+            }
+
+            .NavButton {
+                width: $monitor-shrink-icon;
+            }
+            .Button__nav {
+                width: $monitor-shrink-icon;
+                height: $monitor-shrink-icon;
+            }
+        }
+    }
+}
+
+/*****************
+ * LAPTOP STYLES *
+ *****************/
+
+.RM__laptop {
+
+    &.RM__navIconStatic {
+        .Nav__showSingleBook {
+            .CarouselNavToggle__placeholder {
+                margin-right: $laptop-large;
+            }
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBookSongs {
+                        left: $laptop-book-offset;
+                    }
+
+                    .NavButton:not(:last-child) {
+                        margin-right: $laptop-small;
+                    }
+                }
+
+                &.NavColumn__right {
+                    .NavBookSongs {
+                        right: $laptop-book-offset;
+                    }
+
+                    .NavButton:not(:last-child) {
+                        margin-left: $laptop-small;
+                    }
+                }
+            }
+        }
+    }
+
+    &.RM__navIconShrunk {
+        .Nav__showSingleBook {
+            .NavBook {
+                min-width: $laptop-shrink-icon;
+            }
+
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBookSongs {
+                        left: $laptop-shrink-book-offset;
+                    }
+                }
+
+                &.NavColumn__right {
+                    .NavBookSongs {
+                        right: $laptop-shrink-book-offset;
+                    }
+                }
+            }
+
+            /**
+             * Show song buttons in shown column, along with toggle button in
+             * hidden column.
+             */
+            .NavColumn__shown,
+            .NavColumn__hidden .NavBookToggle {
+                .NavButton {
+                    width: $laptop-shrink-icon;
+                }
+            }
+
+            .Button__nav {
+                width: $laptop-shrink-icon;
+                height: $laptop-shrink-icon;
+            }
+        }
+    }
+}
+
+/*****************
+ * TABLET STYLES *
+ *****************/
+
+.RM__tablet {
+
+    .CarouselNavToggle__placeholder {
+        min-width: $width__navToggle__tablet;
+    }
+
+    &.RM__navIconStatic {
+        .Nav__showDoubleBook {
+            .CarouselNavToggle__placeholder {
+                margin-left: $tablet-multiplier__gap__large;
+            }
+
+            .NavColumn__left {
+                .NavBookSongs {
+                    left: $tablet-book-offset;
+                }
+
+                .NavButton:not(:last-child) {
+                    margin-right: $tablet-small-unit;
+                }
+            }
+
+            .NavColumn__right {
+                .NavBookSongs {
+                    right: $tablet-book-offset;
+                }
+
+                .NavButton:not(:last-child) {
+                    margin-left: $tablet-small-unit;
+                }
+            }
+        }
+
+        .Nav__showSingleBook {
+            .CarouselNavToggle__placeholder {
+                margin-left: $tablet-single-large;
+            }
+
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBookSongs {
+                        left: $tablet-single-book-offset;
+                    }
+
+                    .NavButton:not(:last-child) {
+                        margin-right: $tablet-single-small;
+                    }
+                }
+
+                &.NavColumn__right {
+                    .NavBookSongs {
+                        right: $tablet-single-book-offset;
+                    }
+
+                    .NavButton:not(:last-child) {
+                        margin-left: $tablet-single-small;
+                    }
+                }
+            }
+        }
+    }
+
+    &.RM__navIconShrunk {
+        .Nav__showDoubleBook {
+            .NavBook {
+                min-width: $tablet-shrink-icon;
+            }
+
+            .NavColumn__left {
+                .NavBookSongs {
+                    left: $tablet-shrink-book-offset;
+                }
+            }
+
+            .NavColumn__right {
+                .NavBookSongs {
+                    right: $tablet-shrink-book-offset;
+                }
+            }
+
+            .NavButton {
+                width: $tablet-shrink-icon;
+            }
+
+            .Button__nav {
+                width: $tablet-shrink-icon;
+                height: $tablet-shrink-icon;
+            }
+        }
+    }
+}
+
+/***************
+ * MINI STYLES *
+ ***************/
+
+.RM__mini {
+
+    .CarouselNavToggle__placeholder {
+        min-width: $width__navToggle__mini;
+    }
+
+    &.RM__navIconStatic {
+        .Nav__showSingleBook {
+            .CarouselNavToggle__placeholder {
+                margin-left: $mini-large;
+            }
+
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBookSongs {
+                        left: $mini-book-offset;
+                    }
+
+                    .NavButton:not(:last-child) {
+                        margin-right: $mini-small;
+                    }
+                }
+
+                &.NavColumn__right {
+                    .NavBookSongs {
+                        right: $mini-book-offset;
+                    }
+
+                    .NavButton:not(:last-child) {
+                        margin-left: $mini-small;
+                    }
+                }
+            }
+        }
+    }
+
+    &.RM__navIconShrunk {
+        .Nav__showSingleBook {
+            .NavBook {
+                min-width: $mini-shrink-icon;
+            }
+
+            .NavColumn__shown {
+                &.NavColumn__left {
+                    .NavBookSongs {
+                        left: $mini-shrink-book-offset;
+                    }
+                }
+
+                &.NavColumn__right {
+                    .NavBookSongs {
+                        right: $mini-shrink-book-offset;
+                    }
+                }
+            }
+
+            /**
+             * Show song buttons in shown column, along with toggle button in
+             * hidden column.
+             */
+            .NavColumn__shown,
+            .NavColumn__hidden .NavBookToggle {
+                .NavButton {
+                    width: $mini-shrink-icon;
+                }
+            }
+
+            .Button__nav {
+                width: $mini-shrink-icon;
+                height: $mini-shrink-icon;
+            }
+        }
+    }
+}

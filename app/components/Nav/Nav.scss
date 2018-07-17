@@ -1,0 +1,52 @@
+@import "./constants.scss";
+@import "./NavBook/NavBookLogue.scss";
+@import "./NavBook/NavBookSongs.scss";
+@import "./NavBook/NavBookToggle.scss";
+@import "./NavColumn.scss";
+@import "./NavButton.scss";
+@import "./NavPanel.scss";
+@import "./NavResponsive.scss";
+
+.Nav {
+    z-index: $zIndex__navCustomSubfield;
+    display: flex;
+
+    .RM__mobileNotPhone
+    & {
+        bottom: auto;
+        top: 0;
+    }
+}
+
+.NavColumns {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .RM__desktop
+    & {
+        // Prevent lyric scrolling from pushing app offscreen.
+        overflow: hidden;
+    }
+
+    .RM__mobileNotPhone
+    & {
+        top: 0;
+    }
+}
+
+.CarouselNavToggle__placeholder {
+    position: relative;
+
+    .RM__navIconShrunk
+    & {
+        // Static margins after icons begin shrinking.
+        margin-right: 3px;
+    }
+
+    .RM__mobileNotPhone.RM__navIconShrunk
+    & {
+        margin-left: 3px;
+        margin-right: 0;
+    }
+}

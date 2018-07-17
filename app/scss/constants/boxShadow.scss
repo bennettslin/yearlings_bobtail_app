@@ -1,0 +1,30 @@
+@import './colours.scss';
+
+$boxShadow__admin: 0 2px 2px 2px $colour__boxShadow;
+
+$boxShadow__access: 0 0 3px 3px #8f8;
+
+$boxShadow__annotationCard: 0 1px 1px 1px $colour__boxShadow;
+$boxShadow__annotationPortal: inset 0 2px 2px $colour__boxShadow;
+
+$boxShadow__dotsContainer: -2px 2px 8px 8px $colour__boxShadow;
+
+$boxShadow__verseAudio: -1px 1px 4px 4px $colour__boxShadow;
+
+$boxShadow__activeVerse: inset 0 0 5px $colour__boxShadow__dark;
+$boxShadow__cursorVerse: 0 1px 5px 3px $colour__boxShadow__dark;
+
+$boxShadow__lyricStanzaCard: 0 3px 3px 3px $colour__boxShadow__dark;
+// $boxShadow__lyricStanzaCard__verseIn:
+//     0 3px 3px 3px $colour__boxShadow__highlighted;
+
+$boxShadow__verseBar__above: 0 3px 12px 5px $colour__boxShadow__dark;
+$boxShadow__verseBar__below: 0 0 12px 5px $colour__boxShadow__dark;
+
+// $boxShadow__menu: 0 0 1px 1px $colour__boxShadow;
+
+$boxShadow__popupView: -2px 2px 8px 8px $colour__boxShadow;
+$boxShadow__popupView__inOverlay: -2px 2px 8px 8px $colour__boxShadow__dark;
+
+$boxShadow__button: -1px 1px 2px 2px $colour__boxShadow;
+$boxShadow__button__inOverlay: -1px 1px 2px 2px $colour__boxShadow__dark;

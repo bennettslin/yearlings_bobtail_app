@@ -1,0 +1,30 @@
+// TipsPopup is positioned absolute full.
+
+.TipsPopupView {
+    position: absolute;
+
+    // Needed to prevent closing upon popup click.
+    z-index: $zIndex__centreFieldChild;
+
+    /**
+     * When tip button is in menu, show tip popup closer to menu. When it's in
+     * main in desktop, show it in centre.
+     */
+    .RM__scoresTipsMenu
+    & {
+        top: 5%;
+        right: 5%;
+    }
+
+    .RM__mobileNotPhone.RM__scoresTipsMain
+    & {
+
+        /**
+         * In tablet and mini, when tip button is in menu, show tip in centre.
+         * When it's in main, show it closer to tip button.
+         */
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+    }
+}

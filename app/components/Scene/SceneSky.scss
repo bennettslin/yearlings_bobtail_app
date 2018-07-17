@@ -1,0 +1,114 @@
+$js__aspectRatio: 1.7;
+
+$diameter__sun: 5%;
+$diameter__moon: 5%;
+
+.Sky__filter {
+    transition:
+        background-color $animationDuration__slow;
+}
+
+.Sky__celestial {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+
+    transition:
+        opacity $animationDuration__slow,
+        top $animationDuration__slow,
+        left $animationDuration__slow;
+}
+
+.Season__indoor {
+    background-color: #444;
+}
+
+.Season__spring {
+    background-color: #ddf;
+}
+
+.Season__summer {
+    background-color: #eef;
+}
+
+.Season__autumn {
+    background-color: #cce;
+}
+
+.Season__winter {
+    background-color: #bbd;
+}
+
+.TimeOfDay__anytime {
+    background-color: none;
+}
+
+.TimeOfDay__dawn {
+    background-color: rgba(100, 100, 50, 0.05);
+}
+
+.TimeOfDay__morning {
+    background-color: rgba(100, 100, 50, 0.05);
+}
+
+.TimeOfDay__noon {
+    background-color: rgba(100, 100, 50, 0.05);
+}
+
+.TimeOfDay__afternoon {
+    background-color: rgba(100, 100, 50, 0.05);
+}
+
+.TimeOfDay__evening {
+    background-color: rgba(100, 100, 50, 0.05);
+}
+
+.TimeOfDay__night {
+    background-color: rgba(100, 100, 50, 0.05);
+}
+
+// .Sun {
+//     background-color: #ff9;
+//     top: 25%;
+//     left: -$diameter__sun * 0.5;
+//     width: $diameter__sun;
+//     height: $diameter__sun * $js__aspectRatio;
+// }
+
+// .Moon {
+//     background-color: #ffd;
+//     top: 25%;
+//     left: 100% - $diameter__moon * 0.5;;
+//     width: $diameter__moon;
+//     height: $diameter__moon * $js__aspectRatio;
+// }
+
+// .Sun__morning {
+//     opacity: 1;
+//     left: 75% - $diameter__sun;
+// }
+
+// .Sun__noon {
+//     opacity: 1;
+//     left: 50% - $diameter__sun;
+// }
+
+// .Sun__afternoon {
+//     opacity: 1;
+//     left: 25% - $diameter__sun;
+// }
+
+// .Sun__evening {
+//     opacity: 1;
+//     left: 25% - $diameter__sun;
+// }
+
+// .Moon__evening {
+//     opacity: 1;
+//     left: 66% - $diameter__sun;
+// }
+
+// .Moon__night {
+//     opacity: 1;
+//     left: 33% - $diameter__sun;
+// }

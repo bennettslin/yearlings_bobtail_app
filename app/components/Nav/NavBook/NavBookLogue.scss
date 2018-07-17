@@ -1,0 +1,16 @@
+.NavBook {
+    padding: 0 $js__padding__navColumnChild;
+    display: flex;
+
+    height: 100%;
+    min-width: $js__length__icon;
+    background-color: #48d;
+}
+
+.NavBookLogue {
+
+    .NavColumn__right
+    & {
+        right: 0;
+    }
+}

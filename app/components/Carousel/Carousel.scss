@@ -1,0 +1,163 @@
+@import "./CarouselAnnotation.scss";
+@import "./CarouselSelect.scss";
+@import "./CarouselToggle.scss";
+
+.Carousel {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+
+    // Allows the lyric to scroll when carousel has higher z-index.
+    z-index: $zIndex__carousel;
+
+    opacity: 0;
+
+    .RM__desktop
+    & {
+        bottom: -100%;
+
+        /**
+         * FIXME: Not sure why this was needed, but there is no bottom margin
+         * when it is used.
+         */
+        // height: $height__chivalry;
+
+        transition:
+            bottom $animationDuration__default,
+            opacity $animationDuration__fast;
+    }
+
+    .RM__mobileNotPhone
+    & {
+        top: -100%;
+        height: 100%;
+
+        transition:
+            top $animationDuration__default,
+            opacity $animationDuration__fast;
+    }
+
+    .RM__desktop.RM__carouselNavShowable.RM__carouselExpanded
+    & {
+        bottom: 0;
+    }
+
+    .RM__mobileNotPhone.RM__carouselNavShowable.RM__carouselExpanded
+    & {
+        top: 0;
+    }
+
+    &.parentIsShown {
+        opacity: 1;
+    }
+}
+
+.Carousel__scroll {
+    display: flex;
+    overflow-x: scroll;
+    height: 100%;
+
+    .RM__desktop
+    & {
+        padding-bottom: $margin__scrollbar;
+        padding-left: $width__overviewToggle__laptop;
+    }
+
+    .RM__tablet
+    & {
+        padding-left: $width__overviewToggle__tablet;
+    }
+
+    .RM__mini
+    & {
+        padding-left: $width__overviewToggle__mini;
+    }
+
+    /**
+     * I'm baffled why padding-right can't just be applied to the scroll parent
+     * itself here, the way padding-left can. But whatever, this works.
+     */
+    &:after {
+        content: '';
+    }
+
+    .RM__monitor
+    &:after {
+        padding-right:
+            $js__width__goldenCord;
+    }
+
+    .RM__laptop
+    &:after {
+        padding-right:
+            $js__width__uncannyValley;
+    }
+
+    /**
+    * These constants are used only to determine carousel right side margin in
+    * mobile. The carousel select itself does not use them.
+    */
+    $width__carouselSelect__tablet:
+        $js__length__iconLarge__tablet * 2
+        + $js__margin__thin * 3;
+
+    $width__carouselSelect__mini:
+        $js__length__iconLarge__mini * 2
+        + $js__margin__thin * 3;
+
+    .RM__tablet
+    &:after {
+        padding-right: $width__carouselSelect__tablet;
+    }
+
+    .RM__mini
+    &:after {
+        padding-right: $width__carouselSelect__mini;
+    }
+}
+
+/** Gradient mask does not work in IE or Edge, though. */
+.gradientMask__carousel__desktop {
+
+    // Consider Golden Cord width.
+    $gradient__carousel__monitor:
+        linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.2) $js__width__goldenCord * 0.3,
+            rgba(0, 0, 0, 0.2) $js__width__goldenCord * 0.7,
+            rgba(0, 0, 0, 0.6) $js__width__goldenCord,
+            black $js__width__goldenCord * 1.1,
+            black
+        );
+    .RM__monitor.RM__annotationHidden
+    & {
+        // Not taken care of by autoprefixer, unfortunately.
+        -webkit-mask-image: $gradient__carousel__monitor;
+        mask-image: $gradient__carousel__monitor;
+    }
+
+    // Consider Uncanny Valley width.
+    $gradient__carousel__laptop:
+        linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.2) $js__width__uncannyValley * 0.3,
+            rgba(0, 0, 0, 0.2) $js__width__uncannyValley * 0.7,
+            rgba(0, 0, 0, 0.6) $js__width__uncannyValley,
+            black $js__width__uncannyValley * 1.1,
+            black
+        );
+    .RM__laptop.RM__annotationHidden
+    & {
+        // Not taken care of by autoprefixer, unfortunately.
+        -webkit-mask-image: $gradient__carousel__laptop;
+        mask-image: $gradient__carousel__laptop;
+    }
+
+    .RM__desktop.RM__carouselNavShowable.RM__carouselExpanded.RM__annotationShown
+    & {
+        // When carousel annotation is selected, switch z-index with lyric.
+        z-index: $zIndex__lyricColumn;
+    }
+}

@@ -1,0 +1,69 @@
+.VerseLine__lyric,
+.VerseLine__left {
+    text-indent:-$width__hangingIndent;
+    padding-left: $width__hangingIndent;
+}
+
+.VerseLine__centre {
+    width: 100%;
+    text-indent: 0;
+    padding-left: 0;
+    text-align: center;
+}
+
+.VerseLine__right {
+
+    /**
+     * Styling for hanging indent with right-aligned text. The hidden
+     * last letter is a stupid hack to prevent rtl from switching the
+     * order of the last letter.
+     */
+    text-indent:-$width__hangingIndent;
+    padding-right: $width__hangingIndent;
+    direction: rtl;
+
+    /**
+     * Not exactly sure why, but a hidden first letter is also needed to keep
+     * any text anchor that starts the line from taking up the entire space.
+     */
+    &:before,
+    &:after {
+        content: 'a';
+        opacity: 0;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    // If both columns show, have a single gutter between them.
+    .RM__bothLyricColumnsShown
+    &:not(:first-child) {
+        margin-left: $field-padding;
+    }
+}
+
+.RM__leftLyricColumnOnly
+.VerseLine__right,
+.RM__rightLyricColumnOnly
+.VerseLine__left {
+    width: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.VerseLine__truncated {
+    display: none;
+
+    .RM__rightLyricColumnOnly
+    & {
+        display: inline;
+    }
+}
+
+.VerseLine__truncatable {
+
+    .RM__rightLyricColumnOnly
+    & {
+        display: none;
+    }
+}

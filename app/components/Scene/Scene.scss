@@ -1,0 +1,10 @@
+@import "./SceneSky.scss";
+
+@import "./Presences/Presences.scss";
+@import "./Cubes/Cubes.scss";
+
+.Scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

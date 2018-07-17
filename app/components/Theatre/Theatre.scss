@@ -1,0 +1,29 @@
+@import "./Ceiling/Ceiling.scss";
+@import "./Floor/Floor.scss";
+@import "./Wall/Wall.scss";
+
+.Theatre {
+    opacity: 0;
+    transition: opacity $animationDuration__default;
+
+    // This prevents heightless lyric column from pushing theatre offscreen.
+    overflow: hidden;
+
+    &.parentIsShown {
+        opacity: 1;
+    }
+}
+
+.Theatre__field,
+.FloorPit {
+    position: absolute;
+}
+
+.Theatre__field {
+    width: 100%;
+    left: 0;
+}
+
+.Theatre__subfield {
+    position: relative;
+}

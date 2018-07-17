@@ -1,0 +1,36 @@
+@import "./LyricStanzaDot.scss";
+@import "./LyricStanzaCard.scss";
+@import "./LyricStanza.scss";
+
+$paddingY__lyrics: 20px;
+
+.Lyric {
+    width: 100%;
+    overflow-y: scroll;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.Lyric__lyrics {
+    padding: $paddingY__lyrics 0;
+    line-height: 150%;
+}
+
+.gradientMask__lyricColumn__mobileCollapsed {
+
+    /** Gradient mask does not work in IE or Edge. */
+    $gradient__lyric__mobileCollapsed: linear-gradient(
+        0deg,
+        black,
+        black 90%,
+        transparent
+    );
+    .RM__mobile.RM__lyricCollapsed
+    & {
+        // Not taken care of by autoprefixer, unfortunately.
+        -webkit-mask-image: $gradient__lyric__mobileCollapsed;
+        mask-image: $gradient__lyric__mobileCollapsed;
+    }
+}

@@ -1,0 +1,70 @@
+// Constants prefixed with js *must* be the same in JavaScript.
+$js__height__menu: 72px;
+
+// This works out to 52px;
+$js__height__menu__phone:
+    $js__length__icon
+    + $js__margin__thin * 2;
+
+// Arbitrary for now.
+$js__height__audio:
+    $js__height__menu
+    - $js__margin__thin * 2;
+
+// Arbitrary for now.
+$js__height__banner__twoRowMenu: $js__height__audio;
+
+// Arbitrary for now.
+$js__height__banner__twoRowMenu__truncated: $js__height__banner__twoRowMenu / 2;
+
+// Two row menu in mini. Includes menu, banner, and slider.
+$js__topOffset__twoRowMenu:
+    $js__height__menu
+    + $js__height__banner__twoRowMenu;
+
+// Two row menu in mini. Includes menu and slider.
+$js__topOffsetTruncated__twoRowMenu:
+    $js__height__menu
+    + $js__height__banner__twoRowMenu__truncated;
+
+// Phone always has two rows in menu. Includes menu, banner, and slider.
+$js__topOffset__twoRowMenu__phone:
+    $js__height__menu__phone
+    + $js__height__banner__twoRowMenu;
+
+// Phone always has two rows in menu. Includes menu and slider.
+$js__topOffsetTruncated__twoRowMenu__phone:
+    $js__height__menu__phone
+    + $js__height__banner__twoRowMenu__truncated;
+
+// Audio.
+$js__minWidth__audioBanner: 320px;
+
+$paddingX__twoRowMenu: 6px;
+$paddingY__audio:
+    ($js__height__menu - $js__height__audio) / 2;
+
+/**
+ * Three regular buttons, plus two thin margins between player buttons, plus
+ * one thick margin between player buttons and option button. Should be 232px.
+ */
+$js__minWidth__audioButtons__minusPlayer:
+    $js__length__icon * 3
+    + $js__margin__thin * 2
+    + $js__margin__thick;
+
+// These values are used to determine the min-width of the menu.
+$width__childScoresTips:
+    $js__length__iconLarge * 2
+    + $js__margin__thin * 2
+    + $js__margin__thick;
+
+$width__childScoresTips__tablet:
+    $js__length__iconLarge__tablet * 2
+    + $js__margin__thin * 2
+    + $js__margin__thick;
+
+$width__childScoresTips__mini:
+    $js__length__iconLarge__mini * 2
+    + $js__margin__thin * 2
+    + $js__margin__thick;

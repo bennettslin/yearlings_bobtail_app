@@ -1,0 +1,28 @@
+$margin__sliderTime: 5px;
+.SliderTime {
+    position: absolute;
+    bottom: 25%;
+
+    transform: translateY(50%);
+    transition:
+        opacity $animationDuration__default;
+
+    font-size: 0.8em;
+
+    opacity: 0;
+
+    .RM__sliderMoving
+    & {
+        opacity: 1;
+    }
+}
+
+.SliderTime__spent {
+    left: 0;
+    padding-left: $margin__sliderTime;
+}
+
+.SliderTime__remain {
+    right: 0;
+    padding-right: $margin__sliderTime;
+}

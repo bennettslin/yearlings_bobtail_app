@@ -1,0 +1,10 @@
+@import "./Cube.scss";
+@import "./Face/Face.scss";
+
+.Cubes {
+    transition: opacity $animationDuration__slow;
+}
+
+.Cubes__currentlyRendering {
+    opacity: 0;
+}

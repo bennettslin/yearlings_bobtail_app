@@ -1,0 +1,44 @@
+// Values prefixed with "js" *must* be the same on the JavaScript side.
+
+$length__iconAccess: 20px;
+$length__iconSmall: 32px;
+
+$js__length__icon: 44px;
+$js__length__iconLarge: 54px;
+$js__length__iconLarge__tablet: 50px;
+$js__length__iconLarge__mini: 47px;
+
+$js__margin__thin: 4px;
+$js__margin__thick: 12px;
+
+// Dot diameters.
+$length__annotationDot: 24px;
+$length__lyricAnchorDot: 0.9em;
+
+// Lyric values.
+$height__stanzaTypeTab: 20px;
+$margin__lyricUnit: $height__stanzaTypeTab + 5px;
+
+$width__hangingIndent: 1.5em;
+
+// Browser scrollbar.
+$margin__scrollbar: 17px;
+
+$borderRadius: 2px;
+
+// Font sizes.
+$fontSize__verse: 1em;
+$fontSize__title: 1.5em;
+$fontSize__italic: 0.925em;
+
+$multiplier__fontSize__mini: 0.85;
+$fontSize__verse__mini:
+    $fontSize__verse
+    * $multiplier__fontSize__mini;
+$fontSize__title__mini: 1.2em;
+
+$multiplier__fontSize__phone: 0.75;
+$fontSize__verse__phone:
+    $fontSize__verse
+    * $multiplier__fontSize__phone;
+$fontSize__title__phone: 1em;

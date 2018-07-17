@@ -1,0 +1,23 @@
+.OverviewLogue {
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    .RM__mobile
+    & {
+        padding: $js__margin__thick;
+    }
+
+    .RM__mobile.RM__lyricHeighted
+    & {
+        flex-direction: column-reverse;
+    }
+
+    .RM__mobile.RM__lyricHeightless
+    & {
+        flex-direction: column;
+    }
+}

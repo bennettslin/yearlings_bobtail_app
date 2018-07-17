@@ -1,0 +1,7 @@
+.TextAnchor__transition {
+
+    .parentIsShown
+    & {
+        transition: color $animationDuration__default;
+    }
+}

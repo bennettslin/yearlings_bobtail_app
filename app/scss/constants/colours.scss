@@ -1,0 +1,99 @@
+// Box shadow colours.
+$colour__boxShadow: rgba(75, 75, 100, 0.4);
+$colour__boxShadow__dark: rgba(25, 25, 50, 0.4);
+// $colour__boxShadow__highlighted: rgba(255, 255, 200, 0.2);
+
+// Audio related colours.
+$bgColour__audioPlay: #bfb;
+$bgColour__audioPause: #fdd;
+$bgColour__audioDisabled: lightGray;
+$bgColour__audioSelect: #fdb;
+$bgColour__audioNeutral: #ddf;
+$bgColour__audioHighlight: #ffd;
+
+// Lyric verse colours.
+$colour__beforeSelected__even: #543;
+$bgColour__beforeSelected__even: #fefcfa;
+
+$colour__beforeSelected__odd: #543;
+$bgColour__beforeSelected__odd: #f4f2f0;
+
+$colour__afterSelected__even: #345;
+$bgColour__afterSelected__even: #fafcfe;
+
+$colour__afterSelected__odd: #345;
+$bgColour__afterSelected__odd: #f0f2f4;
+
+// Slider verse colours.
+$colour__beforeSlider__even: #ffbb88;
+$bgColour__beforeSlider__even: #b59905;
+
+$colour__beforeSlider__odd: #ffbb88;
+$bgColour__beforeSlider__odd: #aa8f00;
+
+$colour__afterSlider__even: #88bbff;
+$bgColour__afterSlider__even: #0599b5;
+
+$colour__afterSlider__odd: #88bbff;
+$bgColour__afterSlider__odd: #008faa;
+
+$colour__sideSlider: #bbb;
+$bgColour__sideSlider: #888;
+
+$time-spent-bar-colour: $bgColour__beforeSlider__even;
+$time-remain-bar-colour: $bgColour__afterSlider__even;
+
+// Lyric text and anchor colours.
+$colour__annotation__selected: gold;
+$colour__textAnchor__selected: #b59905;
+$bgColour__underline__selected: mix(
+    $colour__annotation__selected, white, 25%
+);
+
+$colour__annotationPortal__title: #bbb;
+
+$colour__textAnchor__accessedLink: #484;
+$colour__textAnchor__accessedHover: #7b7;
+$colour__textAnchor__accessedActive: #aea;
+$bgColour__underline__accessed: mix(
+    $colour__textAnchor__accessedLink, white, 25%
+);
+
+$colour__text: #444;
+$colour__textAnchor__link: #844;
+$colour__textAnchor__hover: #b77;
+$colour__textAnchor__active: #eaa;
+$bgColour__underline__disabled: #aaa;
+$bgColour__underline__selectable: mix(
+    $colour__textAnchor__link, white, 25%
+);
+
+// Dot colours.
+$bgColour__dot__narrative: #fbb;
+$bgColour__dot__backstory: #fda;
+$bgColour__dot__observation: #eea;
+$bgColour__dot__pun: #cf9;
+$bgColour__dot__reference: #9fc;
+$bgColour__dot__songwriting: #aef;
+$bgColour__dot__portal: #bcf;
+$bgColour__dot__afterword: #fbe;
+
+$bgColour__dot__deselected: lightGray;
+
+// Annotation and Portal colours.
+$bgColour__annotationCard: rgba(250, 250, 255, 0.9);
+$bgColour__annotationPortal: #fff4f4;
+
+// Song stanza colours.
+$bgColour__stanza__title: brown;
+$bgColour__stanza__refrain: tomato;
+$bgColour__stanza__verse: orange;
+$bgColour__stanza__prechorus: green;
+$bgColour__stanza__chorus: blue;
+$bgColour__stanza__postchorus: violet;
+$bgColour__stanza__bridge: purple;
+$bgColour__stanza__coda: tan;
+$bgColour__stanza__instrumental: #f4f;
+$bgColour__stanza__rhyme: turquoise;
+$bgColour__stanza__backing: skyBlue;
+$bgColour__stanza__response: cadetBlue;
