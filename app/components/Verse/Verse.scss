@@ -17,7 +17,8 @@
         border-top: $border;
 
         &,
-        .VerseColour {
+        .VerseColour,
+        .VerseColour__placeholder {
             border-top-left-radius: $borderRadius;
             border-top-right-radius: $borderRadius;
         }
@@ -31,7 +32,8 @@
         border-bottom: $border;
 
         &,
-        .VerseColour {
+        .VerseColour,
+        .VerseColour__placeholder {
             border-bottom-left-radius: $borderRadius;
             border-bottom-right-radius: $borderRadius;
         }
@@ -56,9 +58,6 @@
 }
 
 .Verse__title {
-    background-color: $bgColour__beforeSelected__odd;
-    @include mixin__textShadow($bgColour__beforeSelected__odd);
-
     $paddingX__title: 15px;
     padding: 0 $paddingX__title;
 }
