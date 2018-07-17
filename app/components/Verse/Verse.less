@@ -11,11 +11,23 @@
 
     &:first-child {
         &,
+        .VerseColour {
+            border-top-left-radius: @borderRadius;
+            border-top-right-radius: @borderRadius;
+        }
+
+        &,
         .padding__verseInLyric {
             padding-top: @paddingY__verse;
         }
     }
     &:last-child {
+        &,
+        .VerseColour {
+            border-bottom-left-radius: @borderRadius;
+            border-bottom-right-radius: @borderRadius;
+        }
+
         &,
         .padding__verseInLyric {
             padding-bottom: @paddingY__verse;
@@ -25,6 +37,14 @@
 
 .Verse__interactable {
     position: relative;
+}
+
+/**
+ * Not sure why style needs to be applied to both.
+ */
+.VerseBar__animatable,
+.VerseColour__inVerseBar {
+    border-radius: @borderRadius;
 }
 
 .Verse__side {

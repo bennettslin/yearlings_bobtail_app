@@ -1,7 +1,3 @@
-// @border__lyricStanzaCard__verseIn: 1px solid rgba(255, 255, 150, 0.8);
-
-@borderRadius__lyricStanza: 2px;
-
 .LyricStanzaCard {
     position: relative;
 }
@@ -27,7 +23,7 @@
     /**
      * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
      */
-    height: @height__stanzaTypeTab - @borderRadius__lyricStanza * 3;
+    height: @height__stanzaTypeTab - @borderRadius * 3;
     top: -@height__stanzaTypeTab;
 }
 
@@ -55,7 +51,7 @@
     position: relative;
 
     padding: @js__margin__thin / 2;
-    border-radius: @borderRadius__lyricStanza;
+    border-radius: @borderRadius;
 
     .LyricStanza__column__main
     & {

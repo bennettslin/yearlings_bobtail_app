@@ -141,30 +141,26 @@ LyricStanzaCardView = ({
                 'boxShadow__lyricStanzaCard',
                 `bgColour__stanza__${stanzaType}`
             )}>
-                <div className={cx(
-                    'LyricStanzaCard__sheetInset'
-                )}>
-                    {stanzaArray.map((verseObject, stanzaVerseIndex) => {
-                        const {
-                                stanzaMap,
-                                unitMap,
-                                verseIndex
-                            } = verseObject
+                {stanzaArray.map((verseObject, stanzaVerseIndex) => {
+                    const {
+                            stanzaMap,
+                            unitMap,
+                            verseIndex
+                        } = verseObject
 
-                        return !stanzaMap && !unitMap && (
-                                <Verse {...other}
-                                    key={stanzaVerseIndex}
-                                    {...{
-                                        verseObject
-                                    }}
-                                    {...!isNaN(verseIndex) && {
-                                        verseIndex
-                                    }}
-                                />
-                            )
-                        }
-                    )}
-                </div>
+                    return !stanzaMap && !unitMap && (
+                            <Verse {...other}
+                                key={stanzaVerseIndex}
+                                {...{
+                                    verseObject
+                                }}
+                                {...!isNaN(verseIndex) && {
+                                    verseIndex
+                                }}
+                            />
+                        )
+                    }
+                )}
             </div>
 
             {/* This tab covers the sheet's box shadow. */}

@@ -12,7 +12,8 @@ import { LYRIC_COLUMN_KEYS, TITLE, CENTRE, LYRIC } from '../../constants/lyrics'
 
 const verseLinesPropTypes = {
     // From parent.
-    isDoubleSpeaker: PropTypes.bool
+    isDoubleSpeaker: PropTypes.bool,
+    inVerseBar: PropTypes.bool,
 },
 
 VerseLines = ({
@@ -21,6 +22,8 @@ VerseLines = ({
 
 ...other }) => {
 
+    const { inVerseBar } = other
+
     return isDoubleSpeaker ? (
 
         // Only wrap in this parent container if it's a doublespeaker line.
@@ -28,7 +31,7 @@ VerseLines = ({
             'VerseLines',
 
             // Allow anchor in a verse line to know it's in a cursor verse.
-            'sibling__verseCursor',
+            !inVerseBar && 'sibling__verseCursor',
 
             'fontSize__lyricMultipleColumns'
         )}>

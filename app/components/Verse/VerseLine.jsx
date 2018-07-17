@@ -69,17 +69,19 @@ class VerseLine extends Component {
 
     render() {
         const {
-            /* eslint-disable no-unused-vars */
-            canLyricRender,
-            renderableSongIndex,
-            verseIndex,
-            dispatch,
-            /* eslint-enable no-unused-vars */
+                /* eslint-disable no-unused-vars */
+                canLyricRender,
+                renderableSongIndex,
+                verseIndex,
+                dispatch,
+                /* eslint-enable no-unused-vars */
 
-            columnKey,
-            isTruncatable,
-            ...other
-        } = this.props
+                columnKey,
+                isTruncatable,
+                ...other
+            } = this.props,
+
+            { inVerseBar } = other
 
         /**
          * TODO: Can this truncatable functionality be done without having to
@@ -99,7 +101,7 @@ class VerseLine extends Component {
                          * Allow anchor in a verse line to know it's in a
                          * cursor verse.
                          */
-                        'sibling__verseCursor',
+                        !inVerseBar && 'sibling__verseCursor',
 
                         // Lyric, left, centre, right.
                         { [`VerseLine__${columnKey}`]: columnKey !== TITLE,
