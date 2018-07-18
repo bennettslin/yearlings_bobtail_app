@@ -241,6 +241,9 @@ export const recurseToFindAnchors = ({
 
         const sliderStanzaObject = sliderStanzaObjects[stanzaIndex]
 
+        // Just for administrative purposes, at least for now.
+        sliderStanzaObject.stanzaIndex = stanzaIndex
+
         if (isNaN(sliderStanzaObject.stanzaVerseObjects[0].verseIndex)) {
             /**
              * The array is initialised with a verse object that is missing
@@ -252,6 +255,13 @@ export const recurseToFindAnchors = ({
             sliderStanzaObject.stanzaVerseObjects.push(
                 {
                     verseIndex: lyricEntity.verseIndex,
+
+                    /**
+                     * Technically, we can just get the verse start time from
+                     * the song's verse start times. However, we'll do it this
+                     * way so that slider children can get the start time from
+                     * the stanza verse object directly. At least for now.
+                     */
                     verseStartTime: lyricEntity.time
                 }
             )

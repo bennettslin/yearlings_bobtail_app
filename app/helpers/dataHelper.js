@@ -83,36 +83,31 @@ export const getSongTotalTime = (songIndex) => {
     return selectedSong.totalTime || Number.MAX_SAFE_INTEGER
 }
 
-export const getSongVerseTimes = (songIndex) => {
+export const getSongVerseStartTimes = (songIndex) => {
     const selectedSong = getSongObject(songIndex)
     return selectedSong.verseStartTimes || []
 }
 
-// FIXME: Call this from build helper!
-export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
-
-    if (getSongIsLogue(songIndex)) {
-        return {
-            beginTime: 0,
-            endTime: 0
-        }
-    }
-
-    const
-        verseStartTimes = getSongVerseTimes(songIndex),
-        beginTime = verseStartTimes[verseIndex],
-        endTime = verseIndex < verseStartTimes.length - 1 ?
-            verseStartTimes[verseIndex + 1] : getSongTotalTime(songIndex)
-
-    return {
-        beginTime,
-        endTime
-    }
+export const getSongVersesCount = (songIndex) => {
+    const selectedSong = getSongObject(songIndex)
+    return selectedSong.verseStartTimes.length || 0
 }
+
+// export const getStartTimeForVerseIndex = (songIndex, verseIndex) => {
+//     const selectedSong = getSongObject(songIndex),
+//         verseStartTimes = selectedSong.verseStartTimes || []
+
+//     if (verseIndex < verseStartTimes.length - 1) {
+//         return verseStartTimes[verseIndex]
+
+//     } else {
+//         return null
+//     }
+// }
 
 export const getVerseIndexForTime = (songIndex, time) => {
 
-    const verseStartTimes = getSongVerseTimes(songIndex),
+    const verseStartTimes = getSongVerseStartTimes(songIndex),
         totalTime = getSongTotalTime(songIndex)
 
     if (time >= 0 && time <= totalTime) {

@@ -9,7 +9,7 @@ import {
     setIsVerseBarBelow
 } from '../../redux/actions/session'
 
-import { getSongVerseTimes } from '../../helpers/dataHelper'
+import { getSongVersesCount } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import { getVerseBarStatus } from './verseManagerHelper'
 
@@ -94,23 +94,22 @@ class VerseManager extends Component {
 
     interactivateVerseDirection(direction) {
         const { selectedSongIndex } = this.props,
-            songVerseTimes = getSongVerseTimes(selectedSongIndex),
-            songVerseTimesCount = songVerseTimes.length
+            songVersesCount = getSongVersesCount(selectedSongIndex)
 
         let { interactivatedVerseIndex } = this.props
 
         // Ensure modulo.
         if (direction === -1) {
-            direction = songVerseTimesCount - 1
+            direction = songVersesCount - 1
         }
 
         // We are turning on interactivation, so start from selected verse.
         if (interactivatedVerseIndex === -1) {
-            interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % songVerseTimesCount
+            interactivatedVerseIndex = (this.props.selectedVerseIndex + direction) % songVersesCount
 
         // We already have an interactivated verse.
         } else {
-            interactivatedVerseIndex = (interactivatedVerseIndex + direction) % songVerseTimesCount
+            interactivatedVerseIndex = (interactivatedVerseIndex + direction) % songVersesCount
         }
 
         this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)

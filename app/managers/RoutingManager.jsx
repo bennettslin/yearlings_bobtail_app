@@ -11,7 +11,7 @@ import {
     selectTimePlayed
 } from '../redux/actions/storage'
 
-import { getSongVerseTimes } from '../helpers/dataHelper'
+import { getSongVerseStartTimes } from '../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
 import { getValidRoutingIndicesObject, getPathForIndices } from '../helpers/routingHelper'
 
@@ -37,7 +37,7 @@ class RoutingManager extends Component {
         // If route gives us its own song index, set in store.
         if (!isNaN(routingSongIndex)) {
 
-            const songVerseTimes = getSongVerseTimes(routingSongIndex),
+            const songVerseTimes = getSongVerseStartTimes(routingSongIndex),
                 routingTimePlayed = songVerseTimes[routingVerseIndex]
 
             selectedSongIndex = routingSongIndex
