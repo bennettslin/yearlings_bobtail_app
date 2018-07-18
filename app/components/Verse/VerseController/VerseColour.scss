@@ -21,7 +21,7 @@
 }
 
 .VerseColour__onCursor {
-    .RM__verseInactive .Verse__interactable
+    .RM__verseInactive
     & {
         box-shadow: $boxShadow__cursorVerse;
     }
@@ -30,10 +30,9 @@
 .VerseColour__onCursor,
 .VerseCursor__onCursor {
     .RM__verseInactive
-    .Verse__interactable
     & {
         z-index: $zIndex__cursorVerse;
-        transform: scale(1, 1.1);
+        transform: scale(1, 1.2);
 
         border-radius: $borderRadius;
     }

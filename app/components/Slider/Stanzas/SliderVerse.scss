@@ -1,3 +1,22 @@
 .SliderVerse {
     height: 100%;
+
+    /**
+     * Since we want to allow cursor verse to overflow out of stanza, we don't
+     * want to set its overflow to hidden. As such, this border radius needs to
+     * to be applied to both parent and child.
+     */
+    &:first-child {
+        &,
+        .VerseColour {
+            border-top-left-radius: $borderRadius;
+        }
+    }
+
+    &:last-child {
+        &,
+        .VerseColour {
+            border-top-right-radius: $borderRadius;
+        }
+    }
 }

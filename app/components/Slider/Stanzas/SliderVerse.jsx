@@ -52,12 +52,18 @@ class SliderVerse extends Component {
 
             { verseIndex } = other,
 
-            verseLeft =
-                relativeStartTime / stanzaDuration * 100,
+            /**
+             * Round left down, and width up, to ensure that there are no gaps
+             * between slider verses.
+             */
+            verseLeft = Math.floor(
+                relativeStartTime / stanzaDuration * 100
+            ),
 
-            verseWidth =
+            verseWidth = Math.ceil(
                 (relativeEndTime - relativeStartTime)
-                / stanzaDuration * 100,
+                / stanzaDuration * 100
+            ),
 
             verseStyle = {
                 left: `${verseLeft}%`,

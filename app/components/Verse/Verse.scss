@@ -14,13 +14,6 @@
     border-right: $border;
 
     &:first-child {
-        /**
-         * Adding border and border radius to the individual verses, because
-         * there is no single Verses container that wraps all the verses, as
-         * there is for the slider verses. I may revisit this to make the
-         * styling between lyric and slider more consistent. But this works for
-         * now, so changing it isn't urgent.
-         */
         border-top: $border;
 
         /**

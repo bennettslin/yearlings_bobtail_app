@@ -62,11 +62,8 @@ $height__sliderStanzaTab: 5px;
 
 .SliderVerses {
     position: relative;
-    overflow: hidden;
-
     flex-grow: 1;
 
-    border-top-left-radius: $borderRadius;
     .SliderStanza:not(:last-child)
     & {
         border-top-right-radius: $borderRadius;
