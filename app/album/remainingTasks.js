@@ -5,9 +5,33 @@ module.exports = [
      */
 
     {
+        taskName: `Consolidate logic to determine stanza with cursor verse.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Cursor transitions. Style cursor verse to expand based on fixed constants, not percentages. Also ensure that slider cursor verse is different from lyric cursor verse, and don't expand cursor verse in verse bar at all.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
+        taskName: `Bug where selecting interactivated verse does not change verse when song is playing. Dismiss interactivated verse on cursor. Don't update when selecting, so that icon stays the same as it fades out. (Maybe wait on svg change for this one.) Also consider just not interactivating selected verse.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Bug where nav on with lyric expanded in mobile does not navigate annotations properly. Not sure to what degree heightless plays a role.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
         taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of. Use Web Workers?`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 3
     },
 
     {
@@ -19,18 +43,6 @@ module.exports = [
     {
         taskName: `Set up buttons to use svgs, including loading icons.`,
         workedHours: 0,
-        neededHours: 8
-    },
-
-    {
-        taskName: `Stanza styling. Remaining work includes making sure that stanza verse width calculations are correct! Dismiss interactivated verse on cursor. Don't update when selecting, so that icon stays the same as it fades out. (Maybe wait on svg change for this one.)`,
-        workedHours: 6,
-        neededHours: 8
-    },
-
-    {
-        taskName: `Box shadow and higher z-index on cursor stanza and cursor verse in stanza with multiple verses, for both lyric and slider verses. Need system to know whether stanza has a single verse. Also need to redo slider verse widths. Border radius.`,
-        workedHours: 3,
         neededHours: 8
     },
 
@@ -55,19 +67,7 @@ module.exports = [
     },
 
     {
-        taskName: `Bug where nav on with lyric expanded in mobile does not navigate annotations properly. Not sure to what degree heightless plays a role.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: `Allow to determine verse bars in between keys.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Bug where selecting interactivated verse does not change verse when song is playing. Also consider just not interactivating selected verse.`,
+        taskName: `Allow to determine verse bars in between key presses.`,
         workedHours: 0,
         neededHours: 2
     },

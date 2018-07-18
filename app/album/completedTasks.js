@@ -3268,4 +3268,14 @@ module.exports = [
         workedHours: 9,
         neededHours: 9
     },
+    {
+        taskName: `Box shadow and higher z-index on cursor stanza and cursor verse in stanza with multiple verses, for both lyric and slider verses. Border radius.`,
+        workedHours: 3,
+        neededHours: 3
+    },
+    {
+        taskName: `Stanza styling. Remaining work includes making sure that stanza verse width calculations are correct!`,
+        workedHours: 6,
+        neededHours: 6
+    },
 ]
