@@ -263,11 +263,11 @@ export const getMaxStanzasCount = () => {
     return AlbumData.maxStanzasCount
 }
 
-export const getSliderStanzasArray = (songIndex) => {
+export const getSliderStanzaObjects = (songIndex) => {
     const songObject = getSongObject(songIndex),
-        { sliderStanzasArray } = songObject
+        { sliderStanzaObjects } = songObject
 
-    return sliderStanzasArray || []
+    return sliderStanzaObjects || []
 }
 
 /**********

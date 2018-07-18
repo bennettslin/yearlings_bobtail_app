@@ -3,7 +3,7 @@ import { LS_MARGIN_X_SLIDER } from '../../constants/responsive'
 
 import {
     getSongTotalTime,
-    getSliderStanzasArray
+    getSliderStanzaObjects
 } from '../../helpers/dataHelper'
 
 export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
@@ -27,12 +27,12 @@ export const getVerseIndexforRatio = (
 
 ) => {
 
-    const sliderStanzasArray = getSliderStanzasArray(songIndex),
+    const sliderStanzaObjects = getSliderStanzaObjects(songIndex),
         totalTime = getSongTotalTime(songIndex),
-        lastStanzaIndex = sliderStanzasArray.length - 1,
+        lastStanzaIndex = sliderStanzaObjects.length - 1,
 
         // Figure out which stanza the touch is in.
-        stanzaIndex = findIndex(sliderStanzasArray, (stanzaObject, index) => {
+        stanzaIndex = findIndex(sliderStanzaObjects, (stanzaObject, index) => {
 
             // If it's the last stanza, just return true.
             if (index === lastStanzaIndex) {
@@ -50,7 +50,7 @@ export const getVerseIndexforRatio = (
         // Get needed values for stanza.
         { verseTimes,
           endTime,
-          firstVerseIndex } = sliderStanzasArray[stanzaIndex]
+          firstVerseIndex } = sliderStanzaObjects[stanzaIndex]
 
     // If verse times length is 1, just return the first verse.
     if (verseTimes.length === 1) {

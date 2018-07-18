@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import SliderStanza from './SliderStanza'
 
-import { getSliderStanzasArray,
+import { getSliderStanzaObjects,
          getSongTotalTime } from '../../../helpers/dataHelper'
 
 const mapStateToProps = ({
@@ -33,25 +33,40 @@ class SliderStanzas extends Component {
     render() {
         const { renderableSongIndex } = this.props,
             songTotalTime = getSongTotalTime(renderableSongIndex),
-            sliderStanzasArray = getSliderStanzasArray(renderableSongIndex)
+            sliderStanzaObjects = getSliderStanzaObjects(renderableSongIndex)
 
         return (
             <div className={cx(
                 'SliderStanzas',
                 'absoluteFullContainer'
             )}>
-                {sliderStanzasArray.map((stanzaDataObject, stanzaIndex) => {
-                    // console.error(stanzaDataObject)
+                {sliderStanzaObjects.map((sliderStanzaObject, stanzaIndex) => {
+
                     const
+                        {
+                            firstVerseIndex,
+
+                            // Renaming these for clarity.
+                            verseTimes: stanzaVerseTimes,
+                            endTime: stanzaEndTime,
+                            type: stanzaType
+
+                        } = sliderStanzaObject,
+
                         isLastStanza =
-                            stanzaIndex === sliderStanzasArray.length - 1
+                            stanzaIndex === sliderStanzaObjects.length - 1
 
                     return (
-                        <SliderStanza {...stanzaDataObject}
+                        <SliderStanza
                             key={stanzaIndex}
                             {...{
                                 isLastStanza,
-                                songTotalTime
+                                songTotalTime,
+
+                                firstVerseIndex,
+                                stanzaVerseTimes,
+                                stanzaEndTime,
+                                stanzaType
                             }}
                         />
                     )

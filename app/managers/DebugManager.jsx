@@ -16,6 +16,8 @@ class DebugManager extends Component {
     static propTypes = {
         // Through Redux.
         selectedAdminIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+
         selectAdminIndex: PropTypes.func.isRequired,
 
         // From parent.
@@ -67,9 +69,11 @@ class DebugManager extends Component {
 }
 
 const mapStateToProps = ({
-    selectedAdminIndex
+    selectedAdminIndex,
+    selectedSongIndex
 }) => ({
-    selectedAdminIndex
+    selectedAdminIndex,
+    selectedSongIndex
 })
 
 const bindDispatchToProps = (dispatch) => (

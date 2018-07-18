@@ -8,27 +8,26 @@ import { OVERLAP_MARGIN_SLIDER_STANZA } from '../../../constants/responsive'
 const sliderStanzaPropTypes = {
     isLastStanza: PropTypes.bool.isRequired,
     firstVerseIndex: PropTypes.number.isRequired,
-    verseTimes: PropTypes.array.isRequired,
-    endTime: PropTypes.number.isRequired,
+    stanzaVerseTimes: PropTypes.array.isRequired,
+    stanzaEndTime: PropTypes.number.isRequired,
     songTotalTime: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired
+    stanzaType: PropTypes.string.isRequired
 }
 
 const SliderStanza = ({
 
     isLastStanza,
     firstVerseIndex,
-    verseTimes,
-
-    // Renaming for clarity.
-    endTime: stanzaEndTime,
     songTotalTime,
-    type
+
+    stanzaVerseTimes,
+    stanzaEndTime,
+    stanzaType
 
 }) => {
 
     const
-        stanzaStartTime = verseTimes[0],
+        stanzaStartTime = stanzaVerseTimes[0],
 
         /**
          * Width of stanza is exactly proportionate to its duration within the
@@ -72,9 +71,9 @@ const SliderStanza = ({
         <div
             className={cx(
                 'SliderStanza',
-                `SliderStanza__${type}`,
+                `SliderStanza__${stanzaType}`,
                 'bgColour__sliderStanza__pattern',
-                `bgColour__stanza__${type}`
+                `bgColour__stanza__${stanzaType}`
             )}
             style={stanzaStyle}
         >
@@ -89,13 +88,13 @@ const SliderStanza = ({
                 'SliderStanza__sheet',
                 'boxShadow__sliderStanza',
                 'bgColour__sliderStanza__pattern',
-                `bgColour__stanza__${type}`,
+                `bgColour__stanza__${stanzaType}`,
                 'absoluteFullContainer'
             )}>
                 <SliderVerses
                     {...{
                         firstVerseIndex,
-                        verseTimes,
+                        stanzaVerseTimes,
                         stanzaStartTime,
                         stanzaEndTime,
                         stanzaDuration
@@ -108,7 +107,7 @@ const SliderStanza = ({
                 'SliderStanza__tab',
                 'SliderStanza__tabTop',
                 'bgColour__sliderStanza__pattern',
-                `bgColour__stanza__${type}`
+                `bgColour__stanza__${stanzaType}`
             )}/>
         </div>
     )

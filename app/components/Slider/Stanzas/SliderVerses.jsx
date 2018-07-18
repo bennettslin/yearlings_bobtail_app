@@ -6,7 +6,7 @@ import SliderVerse from './SliderVerse'
 
 const propTypes = {
     firstVerseIndex: PropTypes.number.isRequired,
-    verseTimes: PropTypes.array.isRequired,
+    stanzaVerseTimes: PropTypes.array.isRequired,
 
     stanzaStartTime: PropTypes.number.isRequired,
     stanzaEndTime: PropTypes.number.isRequired,
@@ -16,7 +16,7 @@ const propTypes = {
 const SliderVerses = ({
 
     firstVerseIndex,
-    verseTimes,
+    stanzaVerseTimes,
 
     stanzaStartTime,
     stanzaEndTime,
@@ -28,7 +28,7 @@ const SliderVerses = ({
         <div className={cx(
             'SliderVerses'
         )}>
-            {verseTimes.map((verseTime, index) => {
+            {stanzaVerseTimes.map((verseTime, index) => {
 
                 /**
                  * Slider verses are not concerned with their times
@@ -44,16 +44,16 @@ const SliderVerses = ({
                      * it's the next verse's start time.
                      */
                     relativeEndTime =
-                        index === verseTimes.length - 1 ?
+                        index === stanzaVerseTimes.length - 1 ?
                             stanzaDuration :
-                            verseTimes[index + 1] - stanzaStartTime,
+                            stanzaVerseTimes[index + 1] - stanzaStartTime,
 
                     // Pass absolute times for slider cursor.
                     // FIXME: This maybe shouldn't be needed eventually?
                     absoluteEndTime =
-                        index === verseTimes.length - 1 ?
+                        index === stanzaVerseTimes.length - 1 ?
                             stanzaEndTime :
-                            verseTimes[index + 1]
+                            stanzaVerseTimes[index + 1]
 
                 return (
                     <SliderVerse
