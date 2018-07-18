@@ -1,0 +1,9 @@
+.SliderVerses {
+    position: relative;
+    flex-grow: 1;
+
+    .SliderStanza:not(:last-child)
+    & {
+        border-top-right-radius: $borderRadius;
+    }
+}

@@ -60,16 +60,6 @@ $height__sliderStanzaTab: 5px;
     }
 }
 
-.SliderVerses {
-    position: relative;
-    flex-grow: 1;
-
-    .SliderStanza:not(:last-child)
-    & {
-        border-top-right-radius: $borderRadius;
-    }
-}
-
 // TODO: Make pattern between tab and sheet seamless.
 .bgColour__sliderStanza__pattern {
     $degrees: 60deg;
