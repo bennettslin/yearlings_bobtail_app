@@ -185,7 +185,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -242,7 +242,7 @@ module.exports = {
                 lyric: `I said never again we'll slave our whole lives away!`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -289,7 +289,7 @@ module.exports = {
                 lyric: `And were you mine?`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -367,7 +367,7 @@ module.exports = {
                 lyric: `We were young, so sure of life, never knowing time unkind!`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -402,7 +402,7 @@ module.exports = {
                 lyric: `When you were mine?`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -423,7 +423,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -444,7 +444,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: SOLO,
                 subsequent: true
             }
@@ -501,7 +501,7 @@ module.exports = {
                 lyric: `Now the light spills warm and bright… gently fills these eyes…`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -568,7 +568,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -589,7 +589,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -604,7 +604,7 @@ module.exports = {
         ],
         [
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {

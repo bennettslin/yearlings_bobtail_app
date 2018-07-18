@@ -241,7 +241,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: REFRAIN
             }
         ],
@@ -416,7 +416,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -634,7 +634,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -714,7 +714,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -884,7 +884,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -896,7 +896,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: REFRAIN
             }
         ],
@@ -1071,7 +1071,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -1249,7 +1249,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS
             }
         ],
@@ -1404,7 +1404,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -1456,7 +1456,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -1468,7 +1468,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: REFRAIN
             }
         ],
@@ -1513,7 +1513,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 subCard: [
                     {
                         time: 128,
@@ -1612,7 +1612,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 subCard: [
                     {
                         time: 135,
@@ -1758,7 +1758,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: BRIDGE,
                 subsequent: true
             }
@@ -1822,7 +1822,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -2009,7 +2009,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -2021,7 +2021,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: REFRAIN
             }
         ]

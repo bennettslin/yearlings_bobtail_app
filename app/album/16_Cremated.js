@@ -172,7 +172,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -202,7 +202,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -417,7 +417,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -512,7 +512,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -648,7 +648,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -694,7 +694,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -707,7 +707,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: REFRAIN
             }
         ],
@@ -902,7 +902,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -1043,7 +1043,7 @@ module.exports = {
                 right: `apology, bold and blunt.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -1101,7 +1101,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -1114,7 +1114,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: REFRAIN
             }
         ]

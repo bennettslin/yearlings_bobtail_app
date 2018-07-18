@@ -73,7 +73,7 @@ class Stanza extends Component {
                 stanzaTypeIndex,
                 stanzaType,
                 subCardType,
-                sideStanzaType,
+                sideCardType,
                 sideSubCardType,
 
                 firstVerseIndex,
@@ -118,7 +118,7 @@ class Stanza extends Component {
                     stanzaTypeIndex,
                     unitArray,
                     subCardType,
-                    sideStanzaType,
+                    sideCardType,
                     sideSubCardType,
                     subsequent,
                     dotStanza,

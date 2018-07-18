@@ -188,7 +188,7 @@ module.exports = {
                 centre: `Mr. Odin died today.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: INTRO
             }
         ],
@@ -292,7 +292,7 @@ module.exports = {
                 right: `sigh and pull the covers over you.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -356,7 +356,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS
             }
         ],
@@ -491,7 +491,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -668,7 +668,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -745,7 +745,7 @@ module.exports = {
                 right: `as a slave for the seasons?`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS
             }
         ],
@@ -787,7 +787,7 @@ module.exports = {
                 right: `weren't just myths between friends,`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -869,7 +869,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -900,7 +900,7 @@ module.exports = {
                 right: `till lives acquiesce,`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -991,7 +991,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -1136,7 +1136,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -1270,7 +1270,7 @@ module.exports = {
                 right: `You chase till dew sheds from your eyes`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -1287,7 +1287,7 @@ module.exports = {
                 right: `amidst dustbunnies frozen.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS
             }
         ],
@@ -1321,7 +1321,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: BRIDGE
             },
         ],
@@ -1360,7 +1360,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: BRIDGE,
                 subsequent: true
             }
@@ -1375,7 +1375,7 @@ module.exports = {
                 lyric: `life is simply much too long?`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: BRIDGE,
                 subsequent: true
             }
@@ -1425,7 +1425,7 @@ module.exports = {
                 right: `sworn feat aforesaid, doesn't come anon.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: BRIDGE,
                 subsequent: true
             }
@@ -1438,7 +1438,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: SOLO
             }
         ],
@@ -1490,7 +1490,7 @@ module.exports = {
                 right: `can reach urchins smashed from undertows…`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -1614,7 +1614,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -1627,13 +1627,13 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: OUTRO
             }
         ],
         [
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {

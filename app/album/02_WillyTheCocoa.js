@@ -205,7 +205,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -292,7 +292,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -355,7 +355,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subCardType: RHYME,
                 subsequent: true,
@@ -399,7 +399,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             },
@@ -457,7 +457,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -577,7 +577,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -705,7 +705,7 @@ module.exports = {
                 lyric: `So to baby— to your brother— you'll say sorry for the world!`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: POSTCHORUS
             }
         ],
@@ -717,7 +717,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: SOLO
             }
         ],
@@ -777,7 +777,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -813,7 +813,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subCardType: RHYME,
                 subsequent: true,
@@ -863,7 +863,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -948,7 +948,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -1043,7 +1043,7 @@ module.exports = {
                 lyric: `ever conscious of days past forever wrong?`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -1160,7 +1160,7 @@ module.exports = {
                 lyric: `Then to Willy, in the cover could say sorry for the world!`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: POSTCHORUS
             }
         ],
@@ -1207,7 +1207,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: POSTCHORUS,
                 subsequent: true
             }

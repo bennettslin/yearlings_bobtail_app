@@ -40,7 +40,7 @@ export const registerTitle = (songObject) => {
      * If first unit contains a lone dot stanza, append title to unit. (This is
      * now never the case.)
      */
-    if (lyrics[0][lyrics[0].length - 1].unitMap && lyrics[0].length === 1) {
+    if (lyrics[0][lyrics[0].length - 1].isUnitMap && lyrics[0].length === 1) {
         lyrics[0].unshift(titleObject)
 
     // Otherwise, create a new first unit that just contains the title.
@@ -106,7 +106,7 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
 
         const unitMapObject = unitArray[unitArray.length - 1]
 
-        if (unitMapObject.unitMap && unitMapObject.stanzaType) {
+        if (unitMapObject.isUnitMap && unitMapObject.stanzaType) {
 
             const { stanzaType } = unitMapObject
 
@@ -174,7 +174,7 @@ export const finalRegisterStanzaTypes = (songObject) => {
 
         const unitMapObject = unitArray[unitArray.length - 1]
 
-        if (unitMapObject.unitMap && unitMapObject.stanzaType) {
+        if (unitMapObject.isUnitMap && unitMapObject.stanzaType) {
 
             const { stanzaType } = unitMapObject
 

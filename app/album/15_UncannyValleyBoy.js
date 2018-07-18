@@ -255,7 +255,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -395,7 +395,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -459,7 +459,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -512,7 +512,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS
             }
         ],
@@ -551,7 +551,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS,
                 subsequent: true
             }
@@ -581,7 +581,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -615,7 +615,7 @@ module.exports = {
                 ],
                 stanzaType: CHORUS,
                 subCardType: RHYME,
-                sideStanzaType: BACKING
+                sideCardType: BACKING
             }
         ],
         [
@@ -679,7 +679,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 topSideCard: [
                     {
                         lyric: {
@@ -713,7 +713,7 @@ module.exports = {
                 ],
                 stanzaType: CHORUS,
                 subCardType: RHYME,
-                sideStanzaType: BACKING,
+                sideCardType: BACKING,
                 subsequent: true
             }
         ],
@@ -754,7 +754,7 @@ module.exports = {
                 lyric: `This scheming crackpot vowed to clean the jackpot out this time around…`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -872,7 +872,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS
             }
         ],
@@ -898,7 +898,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS,
                 subsequent: true
             }
@@ -1023,7 +1023,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: BRIDGE
             }
         ],
@@ -1083,7 +1083,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 subCard: [
                     {
                         time: 150,
@@ -1145,7 +1145,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 subCard: [
                     {
                         time: 157,
@@ -1213,7 +1213,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 topSideCard: [
                     {
                         lyric: `Through tatters of sky,`
@@ -1261,7 +1261,7 @@ module.exports = {
                 ],
                 stanzaType: CHORUS,
                 subCardType: RHYME,
-                sideStanzaType: BACKING
+                sideCardType: BACKING
             }
         ],
         [
@@ -1296,7 +1296,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 topSideCard: [
                     {
                         lyric: `cast on your peons,`
@@ -1332,7 +1332,7 @@ module.exports = {
                 ],
                 stanzaType: CHORUS,
                 subCardType: RHYME,
-                sideStanzaType: BACKING,
+                sideCardType: BACKING,
                 subsequent: true
             }
         ],
@@ -1402,7 +1402,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -1427,7 +1427,7 @@ module.exports = {
                         }
                     },
                     {
-                        stanzaMap: true,
+                        isSideUnitMap: true,
                         subCard: [
                             {
                                 lyric: {
@@ -1454,7 +1454,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: CODA,
-                sideStanzaType: BACKING,
+                sideCardType: BACKING,
                 sideSubCardType: RESPONSE
             }
         ],
@@ -1466,7 +1466,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: OUTRO
             }
         ]

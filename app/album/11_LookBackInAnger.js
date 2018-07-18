@@ -204,7 +204,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -318,7 +318,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -418,7 +418,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -487,7 +487,7 @@ module.exports = {
                 lyric: `and laid down on the public trough.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS
             }
         ],
@@ -564,7 +564,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS,
                 subsequent: true
             }
@@ -599,7 +599,7 @@ module.exports = {
                 lyric: `you look back in anger that it's done.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -651,7 +651,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -687,7 +687,7 @@ module.exports = {
                 lyric: `with his ignorance lessened of his plight before…`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -741,7 +741,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS
             }
         ],
@@ -804,7 +804,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: BRIDGE
             }
         ],
@@ -862,7 +862,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: BRIDGE,
                 subsequent: true
             }
@@ -907,7 +907,7 @@ module.exports = {
                 lyric: `Look back in anger to have won.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -919,7 +919,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: OUTRO
             }
         ]

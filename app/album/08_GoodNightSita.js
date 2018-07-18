@@ -165,7 +165,7 @@ module.exports = {
                 lyric: `"Good night," she says`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -227,7 +227,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -322,7 +322,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -434,7 +434,7 @@ module.exports = {
                 lyric: `heart of gold inside`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -510,7 +510,7 @@ module.exports = {
                 lyric: `swaggering down these barren exhibit halls`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: POSTCHORUS
             }
         ],
@@ -581,7 +581,7 @@ module.exports = {
                 lyric: `and slowly the story erodes`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -647,7 +647,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -710,7 +710,7 @@ module.exports = {
                 lyric: `strutting on the wall`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -756,7 +756,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -824,7 +824,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: POSTCHORUS,
                 subsequent: true
             }
@@ -870,7 +870,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -929,7 +929,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -988,7 +988,7 @@ module.exports = {
                 lyric: `and having only tires squeal`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -1047,7 +1047,7 @@ module.exports = {
                 lyric: `only risk invites denied`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -1074,7 +1074,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {

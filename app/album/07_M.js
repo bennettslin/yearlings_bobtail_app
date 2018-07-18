@@ -241,7 +241,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -344,7 +344,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -438,7 +438,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -484,7 +484,7 @@ module.exports = {
                 lyric: `these words unsaid.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -557,7 +557,7 @@ module.exports = {
                 lyric: `my life and letters end.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -644,7 +644,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -748,7 +748,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES,
                 subsequent: true
             }
@@ -812,7 +812,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -891,7 +891,7 @@ module.exports = {
                 lyric: `then turned to hug the void.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -934,7 +934,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -968,7 +968,7 @@ module.exports = {
                 lyric: `should first love the world.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -1029,7 +1029,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -1078,7 +1078,7 @@ module.exports = {
                 lyric: `I'm not sad!`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -1091,7 +1091,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: OUTRO
             }
         ]

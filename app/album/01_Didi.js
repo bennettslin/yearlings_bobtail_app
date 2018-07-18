@@ -172,7 +172,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -201,7 +201,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: REFRAIN
             }
         ],
@@ -242,7 +242,7 @@ module.exports = {
                 lyric: `had to finish up all his orange juice.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -284,7 +284,7 @@ module.exports = {
                 lyric: `Didi, couldn't you find another sister to be near?`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS
             }
         ],
@@ -315,7 +315,7 @@ module.exports = {
                 lyric: `And I tire of saying, "My Didi wants to come too."`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -387,7 +387,7 @@ module.exports = {
                 lyric: `decked in overalls from the lost and found.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -413,7 +413,7 @@ module.exports = {
                 lyric: `Didi, come out, you can't soak there all night.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS,
                 subCardType: RESPONSE,
                 subCard: [
@@ -459,7 +459,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: BRIDGE
             }
         ],
@@ -500,7 +500,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -522,7 +522,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: REFRAIN
             }
         ],
@@ -536,7 +536,7 @@ module.exports = {
                 lyric: `Didi dear, I know today just wasn't your day.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: PRECHORUS
             }
         ],
@@ -550,7 +550,7 @@ module.exports = {
                 lyric: `and there are things I hope my Didi will never know.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -564,7 +564,7 @@ module.exports = {
                 lyric: `and there are things I hope Didi will never have to know.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -593,13 +593,13 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: OUTRO
             }
         ],
         [
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {

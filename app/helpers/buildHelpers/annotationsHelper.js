@@ -313,7 +313,7 @@ export const addDestinationPortalFormats = (lyricEntity, verseHasPortal = false)
             })
         }
 
-        if (lyricEntity.unitMap) {
+        if (lyricEntity.isUnitMap) {
             // This applies to "unsalvaged soul," "tarpid lies," and "trophy blondes."
             addDestinationPortalFormats(lyricEntity.subCard, verseHasPortal)
         }

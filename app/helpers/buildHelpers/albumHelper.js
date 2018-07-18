@@ -137,7 +137,7 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
             }
 
             // If this is the unit map, add first and last verse indices.
-            if (verseObject.unitMap) {
+            if (verseObject.isUnitMap) {
                 verseObject.firstVerseIndex = firstVerseIndex;
                 verseObject.lastVerseIndex = lastVerseIndex;
             }

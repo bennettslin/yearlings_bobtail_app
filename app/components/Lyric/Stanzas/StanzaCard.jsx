@@ -23,7 +23,7 @@ class StanzaCard extends Component {
         stanzaTypeIndex: PropTypes.number,
         stanzaType: PropTypes.string,
         subCardType: PropTypes.string,
-        sideStanzaType: PropTypes.string,
+        sideCardType: PropTypes.string,
         sideSubCardType: PropTypes.string,
         subsequent: PropTypes.bool.isRequired,
 
@@ -41,7 +41,7 @@ class StanzaCard extends Component {
             stanzaTypeIndex,
             stanzaType,
             subCardType,
-            sideStanzaType,
+            sideCardType,
             sideSubCardType,
             subsequent,
 
@@ -64,10 +64,16 @@ class StanzaCard extends Component {
             let stanzaTypeLabel
 
             if (inMain) {
-                stanzaTypeLabel = isSubCard ? subCardType : stanzaType
+                stanzaTypeLabel =
+                    isSubCard ?
+                        subCardType :
+                        stanzaType
 
             } else {
-                stanzaTypeLabel = isSubCard ? sideSubCardType : sideStanzaType
+                stanzaTypeLabel =
+                    isSubCard ?
+                        sideSubCardType :
+                        sideCardType
             }
 
             return (
@@ -140,15 +146,15 @@ StanzaCardView = ({
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
                     const {
-                            stanzaMap,
-                            unitMap,
+                            isSideUnitMap,
+                            isUnitMap,
                             verseIndex
                         } = verseObject
 
                     /**
-                     * Only Uncanny Valley has a stanza map. (It's misnamed.)
+                     * Only Uncanny Valley has a side unit map.
                      */
-                    return !stanzaMap && !unitMap && (
+                    return !isSideUnitMap && !isUnitMap && (
                             <Verse {...other}
                                 key={stanzaVerseIndex}
                                 {...{

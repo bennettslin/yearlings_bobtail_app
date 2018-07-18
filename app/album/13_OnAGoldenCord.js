@@ -194,7 +194,7 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -263,7 +263,7 @@ module.exports = {
                 centre: `And so she said, "Now it's yours again…`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -337,7 +337,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -450,7 +450,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
@@ -576,7 +576,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -633,7 +633,7 @@ module.exports = {
                 centre: `But what do I know?`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -680,7 +680,7 @@ module.exports = {
                 centre: `just learned he's pecked to death his precious other.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 topSideCard: [
                     {
                         lyric: {
@@ -698,7 +698,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: BRIDGE,
-                sideStanzaType: BACKING
+                sideCardType: BACKING
             }
         ],
         [
@@ -736,7 +736,7 @@ module.exports = {
                 centre: `Now the jester teeters towards…`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 bottomSideCard: [
                     {
                         lyric: {
@@ -762,7 +762,7 @@ module.exports = {
                    }
                ],
                 stanzaType: BRIDGE,
-                sideStanzaType: BACKING,
+                sideCardType: BACKING,
                 subsequent: true
             }
         ],
@@ -850,7 +850,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: VERSES
             }
         ],
@@ -976,7 +976,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS
             }
         ],
@@ -1041,7 +1041,7 @@ module.exports = {
                 right: `when buried whole with the deceased.`
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -1143,7 +1143,7 @@ module.exports = {
                 ]
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: CHORUS,
                 subsequent: true
             }
@@ -1156,13 +1156,13 @@ module.exports = {
                 }
             },
             {
-                unitMap: true,
+                isUnitMap: true,
                 stanzaType: OUTRO
             }
         ],
         [
             {
-                unitMap: true,
+                isUnitMap: true,
                 dotStanza: {
                     anchor: IS_DOT_STANZA,
                     annotation: {
