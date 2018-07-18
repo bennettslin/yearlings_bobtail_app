@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import SliderStanza from './SliderStanza'
 
-import { getSongStanzaObjects,
+import { getSongStanzaConfigs,
          getSongTotalTime } from '../../../helpers/dataHelper'
 
 const mapStateToProps = ({
@@ -33,24 +33,24 @@ class SliderStanzas extends Component {
     render() {
         const { renderableSongIndex } = this.props,
             songTotalTime = getSongTotalTime(renderableSongIndex),
-            songStanzaObjects = getSongStanzaObjects(renderableSongIndex)
+            songStanzaConfigs = getSongStanzaConfigs(renderableSongIndex)
 
         return (
             <div className={cx(
                 'SliderStanzas',
                 'absoluteFullContainer'
             )}>
-                {songStanzaObjects.map((sliderStanzaObject, stanzaIndex) => {
+                {songStanzaConfigs.map((sliderStanzaConfig, stanzaIndex) => {
 
                     const
                         {
-                            stanzaVerseObjects,
+                            stanzaVerseConfigs,
                             stanzaEndTime,
                             stanzaType
-                        } = sliderStanzaObject,
+                        } = sliderStanzaConfig,
 
                         isLastStanza =
-                            stanzaIndex === songStanzaObjects.length - 1
+                            stanzaIndex === songStanzaConfigs.length - 1
 
                     return (
                         <SliderStanza
@@ -59,7 +59,7 @@ class SliderStanzas extends Component {
                                 isLastStanza,
                                 songTotalTime,
 
-                                stanzaVerseObjects,
+                                stanzaVerseConfigs,
                                 stanzaEndTime,
                                 stanzaType
                             }}

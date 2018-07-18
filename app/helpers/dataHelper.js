@@ -83,19 +83,19 @@ export const getSongTotalTime = (songIndex) => {
     return selectedSong.totalTime || Number.MAX_SAFE_INTEGER
 }
 
-export const getSongVerseObjects = (songIndex) => {
+export const getSongVerseConfigs = (songIndex) => {
     const selectedSong = getSongObject(songIndex)
-    return selectedSong.songVerseObjects || []
+    return selectedSong.songVerseConfigs || []
 }
 
 export const getSongVersesCount = (songIndex) => {
     const selectedSong = getSongObject(songIndex)
-    return selectedSong.songVerseObjects.length || 0
+    return selectedSong.songVerseConfigs.length || 0
 }
 
 export const getVerseIndexForTime = (songIndex, time) => {
 
-    const songVerseObjects = getSongVerseObjects(songIndex),
+    const songVerseConfigs = getSongVerseConfigs(songIndex),
         totalTime = getSongTotalTime(songIndex)
 
     if (time >= 0 && time <= totalTime) {
@@ -103,8 +103,8 @@ export const getVerseIndexForTime = (songIndex, time) => {
 
         // Select corresponding verse.
         while (
-            selectedVerseIndex < songVerseObjects.length - 1 &&
-            time >= songVerseObjects[selectedVerseIndex + 1].verseStartTime
+            selectedVerseIndex < songVerseConfigs.length - 1 &&
+            time >= songVerseConfigs[selectedVerseIndex + 1].verseStartTime
         ) {
 
             selectedVerseIndex++
@@ -244,11 +244,11 @@ export const getAnnotationDotKeys = (
  * SLIDER *
  **********/
 
-export const getSongStanzaObjects = (songIndex) => {
+export const getSongStanzaConfigs = (songIndex) => {
     const songObject = getSongObject(songIndex),
-        { songStanzaObjects } = songObject
+        { songStanzaConfigs } = songObject
 
-    return songStanzaObjects || []
+    return songStanzaConfigs || []
 }
 
 /**********

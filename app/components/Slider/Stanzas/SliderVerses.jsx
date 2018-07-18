@@ -5,28 +5,28 @@ import cx from 'classnames'
 import SliderVerse from './SliderVerse'
 
 const propTypes = {
-    stanzaVerseObjects: PropTypes.array.isRequired,
+    stanzaVerseConfigs: PropTypes.array.isRequired,
     stanzaEndTime: PropTypes.number.isRequired,
     stanzaDuration: PropTypes.number.isRequired
 }
 
 const SliderVerses = ({
 
-    stanzaVerseObjects,
+    stanzaVerseConfigs,
 
     stanzaEndTime,
     stanzaDuration
 
 }) => {
 
-    const stanzaFirstVerseIndex = stanzaVerseObjects[0].verseIndex,
-        stanzaStartTime = stanzaVerseObjects[0].verseStartTime
+    const stanzaFirstVerseIndex = stanzaVerseConfigs[0].verseIndex,
+        stanzaStartTime = stanzaVerseConfigs[0].verseStartTime
 
     return (
         <div className={cx(
             'SliderVerses'
         )}>
-            {stanzaVerseObjects.map((verseObject, index) => {
+            {stanzaVerseConfigs.map((verseObject, index) => {
 
                 /**
                  * Slider verses are not concerned with their times
@@ -44,9 +44,9 @@ const SliderVerses = ({
                      * it's the next verse's start time.
                      */
                     relativeEndTime =
-                        index === stanzaVerseObjects.length - 1 ?
+                        index === stanzaVerseConfigs.length - 1 ?
                             stanzaDuration :
-                            stanzaVerseObjects[index + 1].verseStartTime - stanzaStartTime
+                            stanzaVerseConfigs[index + 1].verseStartTime - stanzaStartTime
 
                 return (
                     <SliderVerse

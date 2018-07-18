@@ -7,7 +7,7 @@ import { OVERLAP_MARGIN_SLIDER_STANZA } from '../../../constants/responsive'
 
 const sliderStanzaPropTypes = {
     isLastStanza: PropTypes.bool.isRequired,
-    stanzaVerseObjects: PropTypes.array.isRequired,
+    stanzaVerseConfigs: PropTypes.array.isRequired,
     stanzaEndTime: PropTypes.number.isRequired,
     songTotalTime: PropTypes.number.isRequired,
     stanzaType: PropTypes.string.isRequired
@@ -18,14 +18,14 @@ const SliderStanza = ({
     isLastStanza,
     songTotalTime,
 
-    stanzaVerseObjects,
+    stanzaVerseConfigs,
     stanzaEndTime,
     stanzaType
 
 }) => {
 
     const
-        stanzaStartTime = stanzaVerseObjects[0].verseStartTime,
+        stanzaStartTime = stanzaVerseConfigs[0].verseStartTime,
 
         /**
          * Width of stanza is exactly proportionate to its duration within the
@@ -91,7 +91,7 @@ const SliderStanza = ({
             )}>
                 <SliderVerses
                     {...{
-                        stanzaVerseObjects,
+                        stanzaVerseConfigs,
                         stanzaEndTime,
                         stanzaDuration
                     }}

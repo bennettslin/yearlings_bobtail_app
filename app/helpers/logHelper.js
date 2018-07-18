@@ -21,8 +21,8 @@ export default {
         copiedSong.lyrics = `lyrics: ${copiedSong.lyrics.length}`
         copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
         copiedSong.scenes = `scenes: ${copiedSong.scenes.length}`
-        // copiedSong.songStanzaObjects = `songStanzaObjects: ${copiedSong.songStanzaObjects.length}`
-        // copiedSong.songVerseObjects = `songVerseObjects: ${copiedSong.songVerseObjects.length}`
+        // copiedSong.songStanzaConfigs = `songStanzaConfigs: ${copiedSong.songStanzaConfigs.length}`
+        // copiedSong.songVerseConfigs = `songVerseConfigs: ${copiedSong.songVerseConfigs.length}`
         copiedSong.tasks = `tasks: ${copiedSong.tasks.length}`
 
         return this._logObject('selected song', copiedSong)

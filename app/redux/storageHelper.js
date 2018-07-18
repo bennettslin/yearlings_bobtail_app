@@ -72,12 +72,12 @@ const _validateValueForKey = (key) => {
             }
         case SELECTED_VERSE_INDEX:
             {
-                const songVerseObjects =
-                    _getValidatedStoredSong().songVerseObjects
+                const songVerseConfigs =
+                    _getValidatedStoredSong().songVerseConfigs
 
-                // Logues do not have songVerseObjects.
-                isValid = isNumber && songVerseObjects ?
-                    parsedValue < songVerseObjects.length :
+                // Logues do not have songVerseConfigs.
+                isValid = isNumber && songVerseConfigs ?
+                    parsedValue < songVerseConfigs.length :
                     parsedValue === 0
                 break
             }
@@ -103,7 +103,7 @@ const _validateValueForKey = (key) => {
             {
                 const totalTime = _getValidatedStoredSong().totalTime
 
-                // Logues do not have total songVerseObjects.
+                // Logues do not have total songVerseConfigs.
                 isValid = isNumber && totalTime ?
                 parsedValue <= totalTime : parsedValue === 0
                 break
