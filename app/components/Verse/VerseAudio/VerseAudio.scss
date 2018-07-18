@@ -1,1 +1,20 @@
-@import "./VerseAudioButton.scss";
+.VerseAudio {
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    opacity: 0;
+    transform: translateY(-50%);
+
+    transition:
+        left $animationDuration__fast,
+        opacity $animationDuration__default;
+}
+
+.VerseAudio__interactivated {
+    left: -$length__iconSmall * 0.9;
+    opacity: 1;
+    animation: fontSnapback 0.16s;
+
+    z-index: $zIndex__verseChild__topMost;
+}
