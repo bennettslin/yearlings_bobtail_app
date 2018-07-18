@@ -103,7 +103,7 @@ class VerseLine extends Component {
                          */
                         !inVerseBar && 'sibling__verseCursor',
 
-                        // Lyric, left, centre, right.
+                        // Stanzas, left, centre, right.
                         { [`VerseLine__${columnKey}`]: columnKey !== TITLE,
 
                         'VerseLine__truncatable': isTruncatable }

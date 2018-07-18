@@ -24,7 +24,7 @@ import Menu from './Menu'
 import OverlayPopups from './OverlayPopups'
 
 import OverviewLogue from './OverviewLogue'
-import LyricColumn from '../LyricColumn/LyricColumn'
+import Lyric from '../Lyric/Lyric'
 
 import {
     getOrganisedHandlersFromProps
@@ -214,7 +214,7 @@ class Live extends Component {
                     overviewPopupHandlers={overviewPopupHandlers}
                 />
 
-                <LyricColumn {...lyricColumnHandlers}
+                <Lyric {...lyricColumnHandlers}
                     lyricDidRender={this.lyricDidRender}
                 />
 

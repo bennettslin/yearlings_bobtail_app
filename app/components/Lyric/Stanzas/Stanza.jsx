@@ -4,12 +4,12 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import LyricStanzaCard from './LyricStanzaCard'
-import LyricStanzaDot from './LyricStanzaDot'
-import { TITLE } from '../../constants/lyrics'
-import { getLyricUnitArray } from '../../helpers/dataHelper'
-import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import StanzaCard from './StanzaCard'
+import StanzaDot from './StanzaDot'
+import { TITLE } from '../../../constants/lyrics'
+import { getLyricUnitArray } from '../../../helpers/dataHelper'
+import { getPrefixPrependedClassNames } from '../../../helpers/domHelper'
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
@@ -26,7 +26,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class LyricStanza extends Component {
+class Stanza extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -114,7 +114,7 @@ class LyricStanza extends Component {
                 lastVerseIndex >= cursorVerseIndex
 
         return (
-            <LyricStanzaView {...other}
+            <StanzaView {...other}
                 {...{
                     isTitleUnit,
                     unitClassName,
@@ -149,7 +149,7 @@ class LyricStanza extends Component {
  * PRESENTATION *
  ****************/
 
-class LyricStanzaView extends Component {
+class StanzaView extends Component {
 
     static defaultProps = {
         subsequent: false
@@ -245,7 +245,7 @@ class LyricStanzaView extends Component {
         return (
             <div
                 className={cx(
-                    'LyricStanza',
+                    'Stanza',
 
                     !isNaN(stanzaIndex) && `stanza__${stanzaIndex}`,
                     `unit__${unitIndex}`,
@@ -274,12 +274,12 @@ class LyricStanzaView extends Component {
                         'LyricStanza__column',
                         'LyricStanza__column__main'
                     )}>
-                        <LyricStanzaCard {...other}
+                        <StanzaCard {...other}
                             inMain
                             stanzaArray={unitArray}
                             isTruncatable={hasSide}
                         />
-                        <LyricStanzaCard {...other}
+                        <StanzaCard {...other}
                             inMain
                             isSubstanza
                             stanzaArray={substanza}
@@ -294,20 +294,20 @@ class LyricStanzaView extends Component {
                         'LyricStanza__column__side',
                         { 'LyricStanza__column__sideBottomOnly': isSideBottomOnly }
                     )}>
-                        <LyricStanzaCard {...other}
+                        <StanzaCard {...other}
                             stanzaArray={topSideStanza}
                         />
-                        <LyricStanzaCard {...other}
+                        <StanzaCard {...other}
                             stanzaArray={bottomSideStanza}
                         />
-                        <LyricStanzaCard {...other}
+                        <StanzaCard {...other}
                             isSubstanza
                             stanzaArray={topSideSubstanza}
                         />
                     </div>
                 }
                 {dotStanza &&
-                    <LyricStanzaDot
+                    <StanzaDot
                         setLyricAnnotationRef={setLyricAnnotationRef}
                         isLastStanza={isDotOnly && isLastStanza}
                         dotStanzaObject={dotStanza}
@@ -319,4 +319,4 @@ class LyricStanzaView extends Component {
     }
 }
 
-export default connect(mapStateToProps)(LyricStanza)
+export default connect(mapStateToProps)(Stanza)

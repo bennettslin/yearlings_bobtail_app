@@ -4,13 +4,13 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Verse from '../Verse/Verse';
+import Verse from '../../Verse/Verse';
 
 /*************
  * CONTAINER *
  *************/
 
-class LyricStanzaCard extends Component {
+class StanzaCard extends Component {
 
     static defaultProps = {
         inMain: false,
@@ -71,7 +71,7 @@ class LyricStanzaCard extends Component {
             }
 
             return (
-                <LyricStanzaCardView {...other}
+                <StanzaCardView {...other}
                     stanzaArray={stanzaArray}
                     isSubstanza={isSubstanza}
                     stanzaTypeIndex={shownStanzaIndex}
@@ -88,7 +88,7 @@ class LyricStanzaCard extends Component {
  * PRESENTATION *
  ****************/
 
-const lyricStanzaCardViewPropTypes = {
+const propTypes = {
     // From parent.
     isSubstanza: PropTypes.bool.isRequired,
     stanzaTypeIndex: PropTypes.oneOfType([
@@ -99,7 +99,7 @@ const lyricStanzaCardViewPropTypes = {
     stanzaType: PropTypes.string.isRequired
 },
 
-LyricStanzaCardView = ({
+StanzaCardView = ({
 
     isSubstanza,
     stanzaArray,
@@ -116,7 +116,7 @@ LyricStanzaCardView = ({
 
     return (
         <div className={cx(
-            'LyricStanzaCard',
+            'StanzaCard',
             isSubstanza && 'LyricStanzaCard__substanza',
             isTabbed && 'LyricStanzaCard__tabbed'
         )}>
@@ -178,6 +178,6 @@ LyricStanzaCardView = ({
     )
 }
 
-LyricStanzaCardView.propTypes = lyricStanzaCardViewPropTypes
+StanzaCardView.propTypes = propTypes
 
-export default LyricStanzaCard
+export default StanzaCard

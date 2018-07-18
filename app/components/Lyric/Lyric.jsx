@@ -1,24 +1,21 @@
-// Container for lyrics that handles scrolling.
+// Container for lyric section.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-// import debounce from 'debounce'
 
-import LyricStanza from './LyricStanza'
-import { getLyricUnitsCount } from '../../helpers/dataHelper'
-import {
-    getArrayOfLength,
-    getPropsAreShallowEqual
-} from '../../helpers/generalHelper'
+import LyricAccess from './LyricAccess'
+import LyricToggleEar from './LyricToggleEar'
+import LyricToggleExpand from './LyricToggleExpand'
+import LyricToggleScroll from './LyricToggleScroll'
+import Stanzas from './Stanzas/Stanzas'
+import VerseBar from './VerseBar'
 
 const mapStateToProps = ({
-    canLyricRender,
-    renderableStore
+    canLyricRender
 }) => ({
-    canLyricRender,
-    renderableSongIndex: renderableStore.renderableSongIndex
+    canLyricRender
 })
 
 /*************
@@ -30,99 +27,115 @@ class Lyric extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        renderableSongIndex: PropTypes.number.isRequired,
 
         // From parent.
-        isTransitioningHeight: PropTypes.bool.isRequired,
-        completeHeightTransition: PropTypes.func.isRequired,
-        handleLyricWheel: PropTypes.func.isRequired,
-        setLyricRef: PropTypes.func.isRequired,
-        setLyricVerseParentRef: PropTypes.func.isRequired
+        handleScrollUponLyricRender: PropTypes.func.isRequired,
+        lyricDidRender: PropTypes.func.isRequired
     }
 
     constructor(props) {
         super(props)
 
-        this._handleWheel = this._handleWheel.bind(this)
-        this.setLyricRef = this.setLyricRef.bind(this)
+        this.state = {
+            hasMounted: false,
+            isShown: false,
+            isTransitioningHeight: false,
+            waitForShowTimeoutId: '',
+            didRenderTimeoutId: ''
+        }
 
-        // Handle only once every 10ms at most.
-        // this._handleDebouncedWheel = debounce(
-        //     this._handleDebouncedWheel, 10
-        // )
+        this._handleTransition = this._handleTransition.bind(this)
+        this.completeHeightTransition = this.completeHeightTransition.bind(this)
+        this._waitForShowBeforeRender = this._waitForShowBeforeRender.bind(this)
     }
-
-    shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
-    }
-
-    /**
-     * Not necessary to check shouldComponentUpdate, since the changed props
-     * upon which to update are a subset of those in lyric column.
-     */
 
     componentDidUpdate(prevProps) {
-        console.warn('Lyric rendered.')
+        const { canLyricRender } = this.props,
+            { canLyricRender: couldRender } = prevProps
 
-        if (
-            this.props.isTransitioningHeight &&
-            !prevProps.isTransitioningHeight
-        ) {
+        if (canLyricRender && !couldRender) {
+            console.warn('Lyric rendered.')
 
-            /**
-             * We are calling this because collapsing and expanding the lyric
-             * section may change the verse bar status.
-             */
-            this._handleWheel()
-            this.props.completeHeightTransition()
+            clearTimeout(this.state.waitForShowTimeoutId)
+            clearTimeout(this.state.didRenderTimeoutId)
+
+            const
+                // Set timeout to prevent children transitions before render.
+                waitForShowTimeoutId = setTimeout(
+                    this._waitForShowBeforeRender, 50
+                ),
+                // Wait for parent transition before continuing render sequence.
+                didRenderTimeoutId = setTimeout(
+                    this.props.lyricDidRender, 100
+                ),
+
+                { hasMounted } = this.state
+
+            this.setState({
+                waitForShowTimeoutId,
+                didRenderTimeoutId,
+
+                // Register that component has mounted.
+                ...!hasMounted && { hasMounted: true }
+            })
+
+            this.props.handleScrollUponLyricRender()
+
+        } else if (couldRender && !canLyricRender) {
+
+            this.setState({
+                isShown: false
+            })
         }
     }
 
-    _handleWheel(e) {
-        this._handleDebouncedWheel(e)
+    _waitForShowBeforeRender() {
+        this.setState({
+            isShown: true
+        })
     }
 
-    // NOTE: No longer using debounce. We'll keep as it is for now, though.
-    _handleDebouncedWheel(e) {
-        this.props.handleLyricWheel(e)
+    _handleTransition(e) {
+        if (e.propertyName === 'height') {
+            this.setState({
+                isTransitioningHeight: true
+            })
+        }
     }
 
-    setLyricRef(node) {
-        // For keyboard events.
-        this.props.setLyricRef(node)
-
-        // For scrolling.
-        this.props.setLyricVerseParentRef(node)
+    completeHeightTransition() {
+        this.setState({
+            isTransitioningHeight: false
+        })
     }
 
     render() {
+
         const {
                 /* eslint-disable no-unused-vars */
-                canLyricRender,
-                isTransitioningHeight,
-                completeHeightTransition,
-                handleLyricWheel,
-                setLyricRef,
-                setLyricVerseParentRef,
+                handleScrollUponLyricRender,
+                lyricDidRender,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                renderableSongIndex,
+                canLyricRender,
+
                 ...other
             } = this.props,
 
-            lyricUnitsCount = getLyricUnitsCount(renderableSongIndex)
+            {
+                hasMounted,
+                isShown
+            } = this.state,
 
-        return (
-            <LyricView {...other}
-                {...{
-                    lyricUnitsCount
-                }}
-                handleWheel={this._handleWheel}
-                setRef={this.setLyricRef}
+            parentIsShown = canLyricRender && isShown
+
+        return (hasMounted || canLyricRender) && (
+            <LyricColumnView {...other}
+                parentIsShown={parentIsShown}
+                handleTransition={this._handleTransition}
+                isTransitioningHeight={this.state.isTransitioningHeight}
+                completeHeightTransition={this.completeHeightTransition}
             />
         )
     }
@@ -132,60 +145,76 @@ class Lyric extends Component {
  * PRESENTATION *
  ****************/
 
-const lyricViewPropTypes = {
+const lyricColumnViewPropTypes = {
     // From parent.
-    lyricUnitsCount: PropTypes.number.isRequired,
-    setRef: PropTypes.func.isRequired,
-    handleWheel: PropTypes.func.isRequired
+    parentIsShown: PropTypes.bool.isRequired,
+    handleTransition: PropTypes.func.isRequired,
+
+    handleLyricColumnSelect: PropTypes.func.isRequired,
+    handleLyricSectionExpand: PropTypes.func.isRequired,
+    handleLyricAutoScroll: PropTypes.func.isRequired,
+    handleVerseBarSelect: PropTypes.func.isRequired,
+    handleVerseBarWheel: PropTypes.func.isRequired
 },
 
-LyricView = ({
+LyricColumnView = ({
 
-    lyricUnitsCount,
-    setRef,
-    handleWheel,
+    // From props.
+    handleLyricColumnSelect,
+    handleLyricSectionExpand,
+    handleLyricAutoScroll,
+    handleVerseBarSelect,
+    handleVerseBarWheel,
+
+    // From controller.
+    parentIsShown,
+    handleTransition,
 
 ...other }) => {
 
-    const
-
-        /**
-         * Dynamically create array of just indices. Lyric unit will fetch
-         * unit array directly from data helper.
-         */
-        lyricUnitsIndices = getArrayOfLength({
-            length: lyricUnitsCount
-        })
+    const verseBarProps = {
+        handleVerseBarSelect,
+        handleVerseBarWheel
+    }
 
     return (
         <div
-            ref={setRef}
             className={cx(
                 'Lyric',
-                'absoluteFullContainer',
+                'position__lyricColumn__desktop',
+                'position__lyricColumn__mobile',
+                'gradientMask__lyricColumn__desktop',
 
-                // This gradient does not obscure the lyric toggle buttons.
-                'gradientMask__lyricColumn__mobileCollapsed'
+                { 'parentIsShown': parentIsShown }
             )}
-            tabIndex="-1"
-            onWheel={handleWheel}
+            onTransitionEnd={handleTransition}
         >
-            <div className={cx(
-                'Lyric__lyrics'
-            )}>
-                {lyricUnitsIndices.map(unitIndex => (
-                        <LyricStanza {...other}
-                            key={unitIndex}
-                            unitIndex={unitIndex}
-                            isLastStanza={unitIndex === lyricUnitsCount - 1}
-                        />
-                    )
-                )}
-            </div>
+            <Stanzas {...other} />
+
+            <LyricToggleEar
+                handleLyricColumnSelect={handleLyricColumnSelect}
+            />
+
+            <LyricToggleExpand
+                handleLyricSectionExpand={handleLyricSectionExpand}
+            />
+
+            <LyricToggleScroll
+                handleLyricAutoScroll={handleLyricAutoScroll}
+            />
+
+            <LyricAccess />
+
+            {/* These are the only two flex children. */}
+
+            <VerseBar {...verseBarProps}
+                isAbove
+            />
+            <VerseBar {...verseBarProps} />
         </div>
     )
 }
 
-LyricView.propTypes = lyricViewPropTypes
+LyricColumnView.propTypes = lyricColumnViewPropTypes
 
 export default connect(mapStateToProps)(Lyric)

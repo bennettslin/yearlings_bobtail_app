@@ -30,7 +30,7 @@ const mapStateToProps = ({
     selectedDotKeys
 })
 
-class LyricColumnAccess extends Component {
+class LyricAccess extends Component {
 
     static propTypes = {
 
@@ -47,7 +47,7 @@ class LyricColumnAccess extends Component {
     }
 
     // componentDidUpdate() {
-    //     console.warn('LyricColumnAccess rendered.')
+    //     console.warn('LyricAccess rendered.')
     // }
 
     render() {
@@ -119,4 +119,4 @@ class LyricColumnAccess extends Component {
     }
 }
 
-export default connect(mapStateToProps)(LyricColumnAccess)
+export default connect(mapStateToProps)(LyricAccess)

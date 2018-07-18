@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import DotAnchor from '../Anchor/DotAnchor'
+import DotAnchor from '../../Anchor/DotAnchor'
 
-import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
+import { getPrefixPrependedClassNames } from '../../../helpers/domHelper'
 
-import { LYRIC_ANNOTATION_SCROLL } from '../../constants/dom'
+import { LYRIC_ANNOTATION_SCROLL } from '../../../constants/dom'
 
 const mapStateToProps = ({
     canLyricRender,
@@ -31,7 +31,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class LyricStanzaDot extends Component {
+class StanzaDot extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -97,7 +97,7 @@ class LyricStanzaDot extends Component {
             isAccessed =
                 /**
                  * TODO: This conditional is repeated in Carousel,
-                 * LyricStanzaDot, and TextLyricAnchor.
+                 * StanzaDot, and TextLyricAnchor.
                  */
                 !selectedDotsIndex &&
                 interactivatedVerseIndex < 0 &&
@@ -109,7 +109,7 @@ class LyricStanzaDot extends Component {
                 annotationIndex === renderableAnnotationIndex
 
         return (
-            <LyricDotStanzaView
+            <StanzaDotView
                 setRef={this.setLyricAnnotationRef}
                 dotKeys={dotKeys}
                 isSelected={isSelected}
@@ -126,7 +126,7 @@ class LyricStanzaDot extends Component {
  * PRESENTATION *
  ****************/
 
-const lyricDotStanzaViewPropTypes = {
+const propTypes = {
     // From parent.
     isLastStanza: PropTypes.bool.isRequired,
     dotKeys: PropTypes.object.isRequired,
@@ -134,7 +134,7 @@ const lyricDotStanzaViewPropTypes = {
     setRef: PropTypes.func.isRequired
 },
 
-LyricDotStanzaView = ({
+StanzaDotView = ({
 
     // From controller.
     dotKeys,
@@ -149,7 +149,7 @@ LyricDotStanzaView = ({
             key={annotationIndex}
             ref={setRef}
             className={cx(
-                'LyricStanzaDot',
+                'StanzaDot',
                 'LyricStanza__column',
 
                 isLastStanza && 'LyricStanzaDot__lastStanza',
@@ -159,7 +159,7 @@ LyricDotStanzaView = ({
                     `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
                 // Show and hide dot stanza block in and out based on dot keys.
-                getPrefixPrependedClassNames(dotKeys, 'LyricStanzaDot')
+                getPrefixPrependedClassNames(dotKeys, 'StanzaDot')
             )}
         >
             <DotAnchor {...other}
@@ -170,6 +170,6 @@ LyricDotStanzaView = ({
     )
 }
 
-LyricDotStanzaView.propTypes = lyricDotStanzaViewPropTypes
+StanzaDotView.propTypes = propTypes
 
-export default connect(mapStateToProps)(LyricStanzaDot)
+export default connect(mapStateToProps)(StanzaDot)

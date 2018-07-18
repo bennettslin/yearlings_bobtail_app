@@ -28,7 +28,7 @@ Dots (/)
 DynamicSvg
 Live (/)
 Lyric (/)
-LyricColumn (/)
+Lyric (/)
 Main (/)
 Nav (/)
 Overview (/)

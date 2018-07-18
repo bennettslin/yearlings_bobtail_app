@@ -8,7 +8,7 @@ import {
     NAVIGATION_DOWN_KEY
 } from '../../constants/access'
 
-class LyricColumnAccess extends Component {
+class LyricAccess extends Component {
 
     static propTypes = {
 
@@ -45,4 +45,4 @@ class LyricColumnAccess extends Component {
     }
 }
 
-export default LyricColumnAccess
+export default LyricAccess
