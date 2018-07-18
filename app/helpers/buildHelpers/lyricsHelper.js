@@ -129,7 +129,7 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
             }
 
             // Tell unit its stanza index.
-            unitMapObject.stanzaIndex = tempStanzaTypeCounters[stanzaType]
+            unitMapObject.stanzaTypeIndex = tempStanzaTypeCounters[stanzaType]
         }
     })
 
@@ -170,9 +170,9 @@ export const finalRegisterStanzaTypes = (songObject) => {
 
             const { stanzaType } = unitMapObject
 
-            // Don't show stanzaIndex if it's the only one of its kind.
+            // Don't show stanzaTypeIndex if it's the only one of its kind.
             if (tempStanzaTypeCounters[stanzaType] === 1) {
-                unitMapObject.stanzaIndex = -1
+                unitMapObject.stanzaTypeIndex = -1
             }
         }
     })

@@ -20,7 +20,7 @@ class LyricStanzaCard extends Component {
 
     static propTypes = {
         // From parent.
-        stanzaIndex: PropTypes.number,
+        stanzaTypeIndex: PropTypes.number,
         stanzaType: PropTypes.string,
         substanzaType: PropTypes.string,
         sideStanzaType: PropTypes.string,
@@ -38,7 +38,7 @@ class LyricStanzaCard extends Component {
 
         const {
             // From props.
-            stanzaIndex,
+            stanzaTypeIndex,
             stanzaType,
             substanzaType,
             sideStanzaType,
@@ -59,7 +59,7 @@ class LyricStanzaCard extends Component {
                 && !subsequent
                 && !isSubstanza
                 && !isSubstanza
-                && stanzaIndex
+                && stanzaTypeIndex
 
             let stanzaTypeLabel
 
@@ -74,7 +74,7 @@ class LyricStanzaCard extends Component {
                 <LyricStanzaCardView {...other}
                     stanzaArray={stanzaArray}
                     isSubstanza={isSubstanza}
-                    stanzaIndex={shownStanzaIndex}
+                    stanzaTypeIndex={shownStanzaIndex}
                     stanzaType={stanzaTypeLabel}
                 />
             )
@@ -91,7 +91,7 @@ class LyricStanzaCard extends Component {
 const lyricStanzaCardViewPropTypes = {
     // From parent.
     isSubstanza: PropTypes.bool.isRequired,
-    stanzaIndex: PropTypes.oneOfType([
+    stanzaTypeIndex: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.number
     ]),
@@ -103,15 +103,15 @@ LyricStanzaCardView = ({
 
     isSubstanza,
     stanzaArray,
-    stanzaIndex,
+    stanzaTypeIndex,
     stanzaType,
 
 ...other }) => {
 
-    const isTabbed = Boolean(stanzaIndex),
+    const isTabbed = Boolean(stanzaTypeIndex),
 
         tabText = `${stanzaType}${
-            stanzaIndex !== -1 ? ` ${stanzaIndex}` : ''
+            stanzaTypeIndex > 0 ? ` ${stanzaTypeIndex}` : ''
         }`
 
     return (
@@ -145,6 +145,9 @@ LyricStanzaCardView = ({
                             verseIndex
                         } = verseObject
 
+                    /**
+                     * Only Uncanny Valley has a stanza map. (It's misnamed.)
+                     */
                     return !stanzaMap && !unitMap && (
                             <Verse {...other}
                                 key={stanzaVerseIndex}

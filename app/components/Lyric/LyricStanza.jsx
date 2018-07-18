@@ -56,12 +56,14 @@ class LyricStanza extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                renderableSongIndex,
                 renderableVerseIndex,
                 sliderVerseIndex,
                 unitIndex,
                 ...other
             } = this.props,
+
+            // Pass to lyric stanza view so it knows to update.
+            { renderableSongIndex } = other,
 
             unitArray = getLyricUnitArray(renderableSongIndex, unitIndex),
 
@@ -73,7 +75,7 @@ class LyricStanza extends Component {
              */
             { unitClassName,
 
-              stanzaIndex,
+              stanzaTypeIndex,
               stanzaType,
               substanzaType,
               sideStanzaType,
@@ -102,36 +104,40 @@ class LyricStanza extends Component {
              * If slider touched, compare unit to slider verse. Otherwise,
              * compare to selected verse.
              */
-            unitVerseIndex = sliderVerseIndex > -1 ?
+            cursorVerseIndex = sliderVerseIndex > -1 ?
                 sliderVerseIndex : renderableVerseIndex,
-            verseAfterUnit = lastVerseIndex < unitVerseIndex,
-            verseBeforeUnit = firstVerseIndex > unitVerseIndex,
-            verseInUnit = firstVerseIndex <= unitVerseIndex &&
-                lastVerseIndex >= unitVerseIndex
+
+            cursorAfterStanza = lastVerseIndex < cursorVerseIndex,
+            cursorBeforeStanza = firstVerseIndex > cursorVerseIndex,
+            cursorInStanza = firstVerseIndex <= cursorVerseIndex &&
+                lastVerseIndex >= cursorVerseIndex
 
         return (
             <LyricStanzaView {...other}
-                isTitleUnit={isTitleUnit}
-                unitClassName={unitClassName}
-                unitIndex={unitIndex}
-                stanzaIndex={stanzaIndex}
-                unitArray={unitArray}
-                stanzaType={isTitleUnit ? TITLE : stanzaType}
-                substanzaType={substanzaType}
-                sideStanzaType={sideStanzaType}
-                sideSubstanzaType={sideSubstanzaType}
-                subsequent={subsequent}
-                dotStanza={dotStanza}
-                substanza={substanza}
-                topSideStanza={topSideStanza}
-                bottomSideStanza={bottomSideStanza}
-                topSideSubstanza={topSideSubstanza}
-                hasSide={hasSide}
-                isDotOnly={isDotOnly}
-                isSideBottomOnly={isSideBottomOnly}
-                verseAfterUnit={verseAfterUnit}
-                verseBeforeUnit={verseBeforeUnit}
-                verseInUnit={verseInUnit}
+                {...{
+                    isTitleUnit,
+                    unitClassName,
+                    unitIndex,
+
+                    stanzaTypeIndex,
+                    unitArray,
+                    substanzaType,
+                    sideStanzaType,
+                    sideSubstanzaType,
+                    subsequent,
+                    dotStanza,
+                    substanza,
+                    topSideStanza,
+                    bottomSideStanza,
+                    topSideSubstanza,
+                    hasSide,
+                    isDotOnly,
+                    isSideBottomOnly,
+                    cursorAfterStanza,
+                    cursorBeforeStanza,
+                    cursorInStanza,
+                    stanzaType: isTitleUnit ? TITLE : stanzaType
+                }}
             />
         )
     }
@@ -141,150 +147,171 @@ class LyricStanza extends Component {
  * PRESENTATION *
  ****************/
 
-const lyricStanzaViewDefaultProps = {
-    subsequent: false
-},
+class LyricStanzaView extends Component {
 
-lyricStanzaViewPropTypes = {
-    // From parent.
-    unitArray: PropTypes.array.isRequired,
-    isTitleUnit: PropTypes.bool.isRequired,
-    unitClassName: PropTypes.string,
-    isLastStanza: PropTypes.bool.isRequired,
+    static defaultProps = {
+        subsequent: false
+    }
 
-    dotStanza: PropTypes.object,
-    substanza: PropTypes.array,
-    topSideStanza: PropTypes.array,
-    bottomSideStanza: PropTypes.array,
-    topSideSubstanza: PropTypes.array,
-    subsequent: PropTypes.bool.isRequired,
+    static propTypes = {
+        // From parent.
 
-    hasSide: PropTypes.bool.isRequired,
-    isDotOnly: PropTypes.bool.isRequired,
-    isSideBottomOnly: PropTypes.bool.isRequired,
-    verseBeforeUnit: PropTypes.bool.isRequired,
-    verseAfterUnit: PropTypes.bool.isRequired,
-    verseInUnit: PropTypes.bool.isRequired,
+        // This is passed just for knowing when to update.
+        renderableSongIndex: PropTypes.number.isRequired,
 
-    handleLyricAnnotationSelect: PropTypes.func.isRequired,
-    setLyricAnnotationRef: PropTypes.func.isRequired
-},
+        unitIndex: PropTypes.number.isRequired,
+        unitClassName: PropTypes.string,
 
-LyricStanzaView = ({
+        isTitleUnit: PropTypes.bool.isRequired,
+        isLastStanza: PropTypes.bool.isRequired,
 
-    // From props.
-    unitArray,
+        unitArray: PropTypes.array.isRequired,
+        dotStanza: PropTypes.object,
+        substanza: PropTypes.array,
+        topSideStanza: PropTypes.array,
+        bottomSideStanza: PropTypes.array,
+        topSideSubstanza: PropTypes.array,
+        subsequent: PropTypes.bool.isRequired,
 
-    // From controller.
-    isTitleUnit,
-    unitClassName,
-    unitIndex,
-    isLastStanza,
-    // sceneIndex,
+        hasSide: PropTypes.bool.isRequired,
+        isDotOnly: PropTypes.bool.isRequired,
+        isSideBottomOnly: PropTypes.bool.isRequired,
+        cursorBeforeStanza: PropTypes.bool.isRequired,
+        cursorAfterStanza: PropTypes.bool.isRequired,
+        cursorInStanza: PropTypes.bool.isRequired,
 
-    dotStanza,
-    substanza,
-    topSideStanza,
-    bottomSideStanza,
-    topSideSubstanza,
+        handleLyricAnnotationSelect: PropTypes.func.isRequired,
+        setLyricAnnotationRef: PropTypes.func.isRequired
+    }
 
-    hasSide,
-    isDotOnly,
-    isSideBottomOnly,
+    shouldComponentUpdate(nextProps) {
+        return !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps,
+            alwaysBypassCheck: {
+                isLastStanza: true
+            }
+        })
+    }
 
-    verseBeforeUnit,
-    verseAfterUnit,
-    verseInUnit,
+    render() {
+        const {
+                /* eslint-disable no-unused-vars */
+                renderableSongIndex,
+                /* eslint-enable no-unused-vars */
 
-...other }) => {
+                // From props.
+                unitArray,
 
-    const {
-        subsequent,
-        handleLyricAnnotationSelect,
-        setLyricAnnotationRef
-    } = other,
+                // From controller.
+                unitIndex,
+                unitClassName,
 
-        // Left, right, or overlap, or a combination.
-        unitClassNames = getPrefixPrependedClassNames(
-            unitClassName, 'offset__stanza'
+                isTitleUnit,
+                isLastStanza,
+
+                dotStanza,
+                substanza,
+                topSideStanza,
+                bottomSideStanza,
+                topSideSubstanza,
+
+                hasSide,
+                isDotOnly,
+                isSideBottomOnly,
+
+                cursorBeforeStanza,
+                cursorAfterStanza,
+                cursorInStanza,
+
+                ...other
+            } = this.props,
+
+            {
+                subsequent,
+                handleLyricAnnotationSelect,
+                setLyricAnnotationRef
+            } = other,
+
+            // Left, right, or overlap, or a combination.
+            unitClassNames = getPrefixPrependedClassNames(
+                unitClassName, 'offset__stanza'
+            )
+
+        return (
+            <div
+                className={cx(
+                    'LyricStanza',
+
+                    `unit__${unitIndex}`,
+
+                    unitClassNames,
+
+                    isTitleUnit ? 'fontSize__title' : 'fontSize__verse',
+
+                    { 'LyricStanza__hasSide': hasSide,
+                      'LyricStanza__title': isTitleUnit,
+
+                      // It's only ever one of these three.
+                      'LyricStanza__verseBefore': cursorBeforeStanza,
+                      'LyricStanza__verseAfter': cursorAfterStanza,
+                      'LyricStanza__verseIn': cursorInStanza,
+                      'fontSize__lyricMultipleColumns': hasSide },
+
+                    subsequent ?
+                        'LyricStanza__subsequent' :
+                        'LyricStanza__notSubsequent'
+                )}
+            >
+                {!isDotOnly &&
+                    <div className={cx(
+                        'LyricStanza__column__text',
+                        'LyricStanza__column',
+                        'LyricStanza__column__main'
+                    )}>
+                        <LyricStanzaCard {...other}
+                            inMain
+                            stanzaArray={unitArray}
+                            isTruncatable={hasSide}
+                        />
+                        <LyricStanzaCard {...other}
+                            inMain
+                            isSubstanza
+                            stanzaArray={substanza}
+                            isTruncatable={hasSide}
+                        />
+                    </div>
+                }
+                {hasSide &&
+                    <div className={cx(
+                        'LyricStanza__column__text',
+                        'LyricStanza__column',
+                        'LyricStanza__column__side',
+                        { 'LyricStanza__column__sideBottomOnly': isSideBottomOnly }
+                    )}>
+                        <LyricStanzaCard {...other}
+                            stanzaArray={topSideStanza}
+                        />
+                        <LyricStanzaCard {...other}
+                            stanzaArray={bottomSideStanza}
+                        />
+                        <LyricStanzaCard {...other}
+                            isSubstanza
+                            stanzaArray={topSideSubstanza}
+                        />
+                    </div>
+                }
+                {dotStanza &&
+                    <LyricStanzaDot
+                        setLyricAnnotationRef={setLyricAnnotationRef}
+                        isLastStanza={isDotOnly && isLastStanza}
+                        dotStanzaObject={dotStanza}
+                        handleLyricAnnotationSelect={handleLyricAnnotationSelect}
+                    />
+                }
+            </div>
         )
-
-    return (
-        <div
-            className={cx(
-                'LyricStanza',
-                unitIndex && `stanza__${unitIndex}`,
-                // sceneIndex && `scene-${sceneIndex}`,
-
-                unitClassNames,
-
-                isTitleUnit ? 'fontSize__title' : 'fontSize__verse',
-
-                { 'LyricStanza__hasSide': hasSide,
-                  'LyricStanza__title': isTitleUnit,
-
-                  // It's only ever one of these three.
-                  'LyricStanza__verseBefore': verseBeforeUnit,
-                  'LyricStanza__verseAfter': verseAfterUnit,
-                  'LyricStanza__verseIn': verseInUnit,
-                  'fontSize__lyricMultipleColumns': hasSide },
-
-                subsequent ?
-                    'LyricStanza__subsequent' :
-                    'LyricStanza__notSubsequent'
-            )}
-        >
-            {!isDotOnly &&
-                <div className={cx(
-                    'LyricStanza__column__text',
-                    'LyricStanza__column',
-                    'LyricStanza__column__main'
-                )}>
-                    <LyricStanzaCard {...other}
-                        inMain
-                        stanzaArray={unitArray}
-                        isTruncatable={hasSide}
-                    />
-                    <LyricStanzaCard {...other}
-                        inMain
-                        isSubstanza
-                        stanzaArray={substanza}
-                        isTruncatable={hasSide}
-                    />
-                </div>
-            }
-            {hasSide &&
-                <div className={cx(
-                    'LyricStanza__column__text',
-                    'LyricStanza__column',
-                    'LyricStanza__column__side',
-                    { 'LyricStanza__column__sideBottomOnly': isSideBottomOnly }
-                )}>
-                    <LyricStanzaCard {...other}
-                        stanzaArray={topSideStanza}
-                    />
-                    <LyricStanzaCard {...other}
-                        stanzaArray={bottomSideStanza}
-                    />
-                    <LyricStanzaCard {...other}
-                        isSubstanza
-                        stanzaArray={topSideSubstanza}
-                    />
-                </div>
-            }
-            {dotStanza &&
-                <LyricStanzaDot
-                    setLyricAnnotationRef={setLyricAnnotationRef}
-                    isLastStanza={isDotOnly && isLastStanza}
-                    dotStanzaObject={dotStanza}
-                    handleLyricAnnotationSelect={handleLyricAnnotationSelect}
-                />
-            }
-        </div>
-    )
+    }
 }
-
-LyricStanzaView.defaultProps = lyricStanzaViewDefaultProps
-LyricStanzaView.propTypes = lyricStanzaViewPropTypes
 
 export default connect(mapStateToProps)(LyricStanza)
