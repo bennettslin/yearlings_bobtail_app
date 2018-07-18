@@ -5,10 +5,7 @@ import { AFTERWORD,
          PUN,
          REFERENCE,
          SONGWRITING } from '../constants/dots'
-import { LEFT,
-         RIGHT,
-         OVERLAP,
-         VERSES,
+import { VERSES,
          PRECHORUS,
          CHORUS,
          BRIDGE,
@@ -1325,7 +1322,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClassName: LEFT,
                 stanzaType: BRIDGE
             },
         ],
@@ -1365,7 +1361,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClassName: `${RIGHT} ${OVERLAP}`,
                 stanzaType: BRIDGE,
                 subsequent: true
             }
@@ -1381,7 +1376,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClassName: `${LEFT} ${OVERLAP}`,
                 stanzaType: BRIDGE,
                 subsequent: true
             }
@@ -1432,7 +1426,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClassName: OVERLAP,
                 stanzaType: BRIDGE,
                 subsequent: true
             }

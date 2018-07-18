@@ -403,7 +403,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                substanza: [
+                subCard: [
                     {
                         time: 34,
                         lyric: {
@@ -427,7 +427,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: PRECHORUS,
-                substanzaType: RESPONSE
+                subCardType: RESPONSE
             }
         ],
         [

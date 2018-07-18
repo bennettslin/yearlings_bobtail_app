@@ -7,9 +7,9 @@ const LYRIC = 'lyric',
       ANCHOR = 'anchor',
 
       DOT_STANZA = 'dotStanza',
-      TOP_SIDE_STANZA = 'topSideStanza',
-      BOTTOM_SIDE_STANZA = 'bottomSideStanza',
-      SUB_STANZA = 'substanza'
+      TOP_SIDE_STANZA = 'topSideCard',
+      BOTTOM_SIDE_STANZA = 'bottomSideCard',
+      SUB_STANZA = 'subCard'
 
 module.exports = {
 
@@ -42,8 +42,6 @@ module.exports = {
     IS_VERSE_ENDING_SPAN: 'isVerseEndingSpan',
     PROPER_NOUN: 'properNoun',
 
-    OVERLAP: 'overlap',
-
     TITLE: 'title',
     REFRAIN: 'refrain',
     VERSES: 'verse',
@@ -56,13 +54,13 @@ module.exports = {
     OUTRO: 'outro',
     SOLO: 'solo',
 
-    // substanza type only
+    // subCard type only
     RHYME: 'rhyme',
 
     // sideStanza type only
     BACKING: 'backing',
 
-    // substanza or sideSubstanza type
+    // subCard or sideSubCard type
     RESPONSE: 'response',
 
     // This is the order by which annotations will be assigned.

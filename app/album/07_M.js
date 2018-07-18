@@ -252,7 +252,7 @@ module.exports = {
                         }
                     }
                 },
-                substanza: [
+                subCard: [
                     {
                         time: 33,
                         centre: {
@@ -278,7 +278,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: INTRO,
-                substanzaType: RESPONSE
+                subCardType: RESPONSE
             }
         ],
         [

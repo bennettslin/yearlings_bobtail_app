@@ -39,7 +39,7 @@
     // }
 }
 
-.LyricStanzaCard__substanza {
+.LyricStanzaCard__subCard {
     $paddingX__offsetStanza: 17%;
     $marginY__offsetStanza__overlap: 6.5px;
 
@@ -50,7 +50,7 @@
         padding-left: $paddingX__offsetStanza;
     }
 
-    // Fix the issue once and for all with substanzas wrapping onto next line.
+    // Fix the issue once and for all with subCards wrapping onto next line.
     white-space: nowrap;
 }
 

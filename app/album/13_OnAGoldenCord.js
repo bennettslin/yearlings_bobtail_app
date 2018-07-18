@@ -681,7 +681,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                topSideStanza: [
+                topSideCard: [
                     {
                         lyric: {
                             italic: {
@@ -737,7 +737,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                bottomSideStanza: [
+                bottomSideCard: [
                     {
                         lyric: {
                             italic: {

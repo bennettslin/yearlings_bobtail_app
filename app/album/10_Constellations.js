@@ -8,8 +8,7 @@ import { BACKSTORY,
          PUN,
          REFERENCE,
          SONGWRITING } from '../constants/dots'
-import { OVERLAP,
-         VERSES,
+import { VERSES,
          PRECHORUS,
          CHORUS,
          BRIDGE,
@@ -1515,7 +1514,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                substanza: [
+                subCard: [
                     {
                         time: 128,
                         lyric: {
@@ -1547,7 +1546,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: BRIDGE,
-                substanzaType: RESPONSE
+                subCardType: RESPONSE
             }
         ],
         [
@@ -1614,8 +1613,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClassName: OVERLAP,
-                substanza: [
+                subCard: [
                     {
                         time: 135,
                         lyric: {
@@ -1648,7 +1646,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: BRIDGE,
-                substanzaType: RESPONSE,
+                subCardType: RESPONSE,
                 subsequent: true
             }
         ],
@@ -1761,7 +1759,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClassName: OVERLAP,
                 stanzaType: BRIDGE,
                 subsequent: true
             }

@@ -2803,7 +2803,7 @@ module.exports = [
         neededHours: 16
     },
     {
-        taskName: `Willy the Cocoa substanza is not right colour? This is because isSubstanza is no longer passed recursively.`,
+        taskName: `Willy the Cocoa subCard is not right colour? This is because isSubCard is no longer passed recursively.`,
         workedHours: 1,
         neededHours: 1
     },

@@ -4,9 +4,7 @@ import { BACKSTORY,
          PUN,
          REFERENCE,
          SONGWRITING } from '../constants/dots'
-import { LEFT,
-         OVERLAP,
-         VERSES,
+import { VERSES,
          PRECHORUS,
          CHORUS,
          RHYME,
@@ -359,9 +357,9 @@ module.exports = {
             {
                 unitMap: true,
                 stanzaType: VERSES,
-                substanzaType: RHYME,
+                subCardType: RHYME,
                 subsequent: true,
-                substanza: [
+                subCard: [
                     {
                         time: 30,
                         lyric: {
@@ -402,7 +400,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClassName: `${LEFT} ${OVERLAP}`,
                 stanzaType: VERSES,
                 subsequent: true
             },
@@ -818,9 +815,9 @@ module.exports = {
             {
                 unitMap: true,
                 stanzaType: VERSES,
-                substanzaType: RHYME,
+                subCardType: RHYME,
                 subsequent: true,
-                substanza: [
+                subCard: [
                     {
                         time: 126,
                         lyric: {
@@ -867,7 +864,6 @@ module.exports = {
             },
             {
                 unitMap: true,
-                unitClassName: `${LEFT} ${OVERLAP}`,
                 stanzaType: VERSES,
                 subsequent: true
             }

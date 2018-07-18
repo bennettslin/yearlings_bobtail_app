@@ -591,7 +591,7 @@ module.exports = {
                         }
                     }
                 },
-                topSideStanza: [
+                topSideCard: [
                     {
                         lyric: `Oh, bastard ingrate!`
                     },
@@ -605,7 +605,7 @@ module.exports = {
                         lyric: `the houses you've betrayed.`
                     }
                 ],
-                substanza: [
+                subCard: [
                     {
                         time: 70,
                         lyric: {
@@ -614,7 +614,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: CHORUS,
-                substanzaType: RHYME,
+                subCardType: RHYME,
                 sideStanzaType: BACKING
             }
         ],
@@ -680,7 +680,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                topSideStanza: [
+                topSideCard: [
                     {
                         lyric: {
                             anchor: `Scattered your beans`,
@@ -703,7 +703,7 @@ module.exports = {
                         lyric: `over suburbia…`
                     }
                 ],
-                substanza: [
+                subCard: [
                     {
                         time: 82,
                         lyric: {
@@ -712,7 +712,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: CHORUS,
-                substanzaType: RHYME,
+                subCardType: RHYME,
                 sideStanzaType: BACKING,
                 subsequent: true
             }
@@ -1084,7 +1084,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                substanza: [
+                subCard: [
                     {
                         time: 150,
                         lyric: {
@@ -1106,7 +1106,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: PRECHORUS,
-                substanzaType: RESPONSE
+                subCardType: RESPONSE
             }
         ],
         [
@@ -1146,7 +1146,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                substanza: [
+                subCard: [
                     {
                         time: 157,
                         lyric: {
@@ -1171,7 +1171,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: PRECHORUS,
-                substanzaType: RESPONSE,
+                subCardType: RESPONSE,
                 subsequent: true
             }
         ],
@@ -1214,7 +1214,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                topSideStanza: [
+                topSideCard: [
                     {
                         lyric: `Through tatters of sky,`
                     },
@@ -1251,7 +1251,7 @@ module.exports = {
                         ]
                     }
                 ],
-                substanza: [
+                subCard: [
                     {
                         time: 168,
                         lyric: {
@@ -1260,7 +1260,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: CHORUS,
-                substanzaType: RHYME,
+                subCardType: RHYME,
                 sideStanzaType: BACKING
             }
         ],
@@ -1297,7 +1297,7 @@ module.exports = {
             },
             {
                 unitMap: true,
-                topSideStanza: [
+                topSideCard: [
                     {
                         lyric: `cast on your peons,`
                     },
@@ -1322,7 +1322,7 @@ module.exports = {
                         }
                     }
                 ],
-                substanza: [
+                subCard: [
                     {
                         time: 181,
                         lyric: {
@@ -1331,7 +1331,7 @@ module.exports = {
                     }
                 ],
                 stanzaType: CHORUS,
-                substanzaType: RHYME,
+                subCardType: RHYME,
                 sideStanzaType: BACKING,
                 subsequent: true
             }
@@ -1412,7 +1412,7 @@ module.exports = {
                         }
                     }
                 },
-                topSideStanza: [
+                topSideCard: [
                     {
                         lyric: {
                             anchor: `Rama, Rama…`,
@@ -1428,7 +1428,7 @@ module.exports = {
                     },
                     {
                         stanzaMap: true,
-                        substanza: [
+                        subCard: [
                             {
                                 lyric: {
                                     anchor: `…Maranatha!`,
@@ -1455,7 +1455,7 @@ module.exports = {
                 ],
                 stanzaType: CODA,
                 sideStanzaType: BACKING,
-                sideSubstanzaType: RESPONSE
+                sideSubCardType: RESPONSE
             }
         ],
         [

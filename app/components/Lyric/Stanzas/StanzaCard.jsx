@@ -15,21 +15,21 @@ class StanzaCard extends Component {
     static defaultProps = {
         inMain: false,
         subsequent: false,
-        isSubstanza: false
+        isSubCard: false
     }
 
     static propTypes = {
         // From parent.
         stanzaTypeIndex: PropTypes.number,
         stanzaType: PropTypes.string,
-        substanzaType: PropTypes.string,
+        subCardType: PropTypes.string,
         sideStanzaType: PropTypes.string,
-        sideSubstanzaType: PropTypes.string,
+        sideSubCardType: PropTypes.string,
         subsequent: PropTypes.bool.isRequired,
 
         stanzaArray: PropTypes.array,
         inMain: PropTypes.bool.isRequired,
-        isSubstanza: PropTypes.bool.isRequired
+        isSubCard: PropTypes.bool.isRequired
     }
 
     // No shouldComponentUpdate necessary.
@@ -40,14 +40,14 @@ class StanzaCard extends Component {
             // From props.
             stanzaTypeIndex,
             stanzaType,
-            substanzaType,
+            subCardType,
             sideStanzaType,
-            sideSubstanzaType,
+            sideSubCardType,
             subsequent,
 
             // From controller.
             stanzaArray,
-            isSubstanza,
+            isSubCard,
             inMain,
 
         ...other } = this.props
@@ -57,23 +57,23 @@ class StanzaCard extends Component {
             const shownStanzaIndex =
                 inMain
                 && !subsequent
-                && !isSubstanza
-                && !isSubstanza
+                && !isSubCard
+                && !isSubCard
                 && stanzaTypeIndex
 
             let stanzaTypeLabel
 
             if (inMain) {
-                stanzaTypeLabel = isSubstanza ? substanzaType : stanzaType
+                stanzaTypeLabel = isSubCard ? subCardType : stanzaType
 
             } else {
-                stanzaTypeLabel = isSubstanza ? sideSubstanzaType : sideStanzaType
+                stanzaTypeLabel = isSubCard ? sideSubCardType : sideStanzaType
             }
 
             return (
                 <StanzaCardView {...other}
                     stanzaArray={stanzaArray}
-                    isSubstanza={isSubstanza}
+                    isSubCard={isSubCard}
                     stanzaTypeIndex={shownStanzaIndex}
                     stanzaType={stanzaTypeLabel}
                 />
@@ -90,7 +90,7 @@ class StanzaCard extends Component {
 
 const propTypes = {
     // From parent.
-    isSubstanza: PropTypes.bool.isRequired,
+    isSubCard: PropTypes.bool.isRequired,
     stanzaTypeIndex: PropTypes.oneOfType([
         PropTypes.bool,
         PropTypes.number
@@ -101,7 +101,7 @@ const propTypes = {
 
 StanzaCardView = ({
 
-    isSubstanza,
+    isSubCard,
     stanzaArray,
     stanzaTypeIndex,
     stanzaType,
@@ -117,7 +117,7 @@ StanzaCardView = ({
     return (
         <div className={cx(
             'StanzaCard',
-            isSubstanza && 'LyricStanzaCard__substanza',
+            isSubCard && 'LyricStanzaCard__subCard',
             isTabbed && 'LyricStanzaCard__tabbed'
         )}>
 

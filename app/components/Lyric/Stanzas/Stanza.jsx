@@ -8,7 +8,6 @@ import StanzaCard from './StanzaCard'
 import StanzaDot from './StanzaDot'
 import { TITLE } from '../../../constants/lyrics'
 import { getLyricUnitArray } from '../../../helpers/dataHelper'
-import { getPrefixPrependedClassNames } from '../../../helpers/domHelper'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -69,37 +68,33 @@ class Stanza extends Component {
 
             unitMapObject = unitArray[unitArray.length - 1],
 
-            /**
-             * Provided by Willy the Cocoa, Odin, and Constellations. Provide
-             * special formatting for custom sub blocks.
-             */
-            { unitClassName,
+            {
+                stanzaIndex,
+                stanzaTypeIndex,
+                stanzaType,
+                subCardType,
+                sideStanzaType,
+                sideSubCardType,
 
-              stanzaIndex,
-              stanzaTypeIndex,
-              stanzaType,
-              substanzaType,
-              sideStanzaType,
-              sideSubstanzaType,
+                firstVerseIndex,
+                lastVerseIndex,
 
-              firstVerseIndex,
-              lastVerseIndex,
-
-              subsequent,
-              dotStanza,
-              substanza,
-              topSideStanza,
-              bottomSideStanza } = unitMapObject,
+                subsequent,
+                dotStanza,
+                subCard,
+                topSideCard,
+                bottomSideCard
+            } = unitMapObject,
 
             // This exists solely for "Maranatha."
-            topSideSubstanza = topSideStanza ?
-                topSideStanza[topSideStanza.length - 1].substanza : null,
+            topSideSubCard = topSideCard ?
+                topSideCard[topSideCard.length - 1].subCard : null,
 
             isTitleUnit = unitIndex === 0,
 
-            hasSide = !!(topSideStanza || bottomSideStanza),
+            hasSide = !!(topSideCard || bottomSideCard),
             isDotOnly = !!dotStanza && unitArray.length === 1,
-            isSideBottomOnly = !topSideStanza && Boolean(bottomSideStanza),
+            isSideBottomOnly = !topSideCard && Boolean(bottomSideCard),
 
             /**
              * If slider touched, compare unit to slider verse. Otherwise,
@@ -117,21 +112,20 @@ class Stanza extends Component {
             <StanzaView {...other}
                 {...{
                     isTitleUnit,
-                    unitClassName,
                     unitIndex,
 
                     stanzaIndex,
                     stanzaTypeIndex,
                     unitArray,
-                    substanzaType,
+                    subCardType,
                     sideStanzaType,
-                    sideSubstanzaType,
+                    sideSubCardType,
                     subsequent,
                     dotStanza,
-                    substanza,
-                    topSideStanza,
-                    bottomSideStanza,
-                    topSideSubstanza,
+                    subCard,
+                    topSideCard,
+                    bottomSideCard,
+                    topSideSubCard,
                     hasSide,
                     isDotOnly,
                     isSideBottomOnly,
@@ -163,17 +157,16 @@ class StanzaView extends Component {
 
         stanzaIndex: PropTypes.number,
         unitIndex: PropTypes.number.isRequired,
-        unitClassName: PropTypes.string,
 
         isTitleUnit: PropTypes.bool.isRequired,
         isLastStanza: PropTypes.bool.isRequired,
 
         unitArray: PropTypes.array.isRequired,
         dotStanza: PropTypes.object,
-        substanza: PropTypes.array,
-        topSideStanza: PropTypes.array,
-        bottomSideStanza: PropTypes.array,
-        topSideSubstanza: PropTypes.array,
+        subCard: PropTypes.array,
+        topSideCard: PropTypes.array,
+        bottomSideCard: PropTypes.array,
+        topSideSubCard: PropTypes.array,
         subsequent: PropTypes.bool.isRequired,
 
         hasSide: PropTypes.bool.isRequired,
@@ -209,16 +202,15 @@ class StanzaView extends Component {
                 // From controller.
                 stanzaIndex,
                 unitIndex,
-                unitClassName,
 
                 isTitleUnit,
                 isLastStanza,
 
                 dotStanza,
-                substanza,
-                topSideStanza,
-                bottomSideStanza,
-                topSideSubstanza,
+                subCard,
+                topSideCard,
+                bottomSideCard,
+                topSideSubCard,
 
                 hasSide,
                 isDotOnly,
@@ -235,12 +227,7 @@ class StanzaView extends Component {
                 subsequent,
                 handleLyricAnnotationSelect,
                 setLyricAnnotationRef
-            } = other,
-
-            // Left, right, or overlap, or a combination.
-            unitClassNames = getPrefixPrependedClassNames(
-                unitClassName, 'offset__stanza'
-            )
+            } = other
 
         return (
             <div
@@ -249,8 +236,6 @@ class StanzaView extends Component {
 
                     !isNaN(stanzaIndex) && `stanza__${stanzaIndex}`,
                     `unit__${unitIndex}`,
-
-                    unitClassNames,
 
                     isTitleUnit ? 'fontSize__title' : 'fontSize__verse',
 
@@ -281,8 +266,8 @@ class StanzaView extends Component {
                         />
                         <StanzaCard {...other}
                             inMain
-                            isSubstanza
-                            stanzaArray={substanza}
+                            isSubCard
+                            stanzaArray={subCard}
                             isTruncatable={hasSide}
                         />
                     </div>
@@ -295,14 +280,14 @@ class StanzaView extends Component {
                         { 'LyricStanza__column__sideBottomOnly': isSideBottomOnly }
                     )}>
                         <StanzaCard {...other}
-                            stanzaArray={topSideStanza}
+                            stanzaArray={topSideCard}
                         />
                         <StanzaCard {...other}
-                            stanzaArray={bottomSideStanza}
+                            stanzaArray={bottomSideCard}
                         />
                         <StanzaCard {...other}
-                            isSubstanza
-                            stanzaArray={topSideSubstanza}
+                            isSubCard
+                            stanzaArray={topSideSubCard}
                         />
                     </div>
                 }
