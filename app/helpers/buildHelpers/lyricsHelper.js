@@ -279,7 +279,9 @@ export const recurseToFindAnchors = ({
 
         if (
             lyricEntity.time <=
-                songObject.verseTimes[songObject.verseTimes.length - 1]
+                songObject.verseStartTimes[
+                    songObject.verseStartTimes.length - 1
+                ]
         ) {
             /**
              * Throw an exception if next time is not later than previous time.
@@ -290,22 +292,22 @@ export const recurseToFindAnchors = ({
         }
 
         // An array of verse times is needed.
-        songObject.verseTimes.push(lyricEntity.time)
+        songObject.verseStartTimes.push(lyricEntity.time)
 
         songObject.tempVerseIndexCounter++
 
     /**
-     * Now that we have access to the entire verseTimes array, let each verse
+     * Now that we have access to the entire verseStartTimes array, let each verse
      * know its end time.
      */
     } else if (!isNaN(lyricEntity.time)) {
 
         const { verseIndex } = lyricEntity,
-            { verseTimes } = songObject
+            { verseStartTimes } = songObject
 
         // Its end time is the start time of the next verse.
-        if (verseIndex < verseTimes.length - 1) {
-            lyricEntity.endTime = verseTimes[verseIndex + 1]
+        if (verseIndex < verseStartTimes.length - 1) {
+            lyricEntity.endTime = verseStartTimes[verseIndex + 1]
 
         // Its end time is the song's end time.
         } else {

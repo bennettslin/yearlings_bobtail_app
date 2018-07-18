@@ -85,7 +85,7 @@ export const getSongTotalTime = (songIndex) => {
 
 export const getSongVerseTimes = (songIndex) => {
     const selectedSong = getSongObject(songIndex)
-    return selectedSong.verseTimes || []
+    return selectedSong.verseStartTimes || []
 }
 
 // FIXME: Call this from build helper!
@@ -99,10 +99,10 @@ export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
     }
 
     const
-        verseTimes = getSongVerseTimes(songIndex),
-        beginTime = verseTimes[verseIndex],
-        endTime = verseIndex < verseTimes.length - 1 ?
-            verseTimes[verseIndex + 1] : getSongTotalTime(songIndex)
+        verseStartTimes = getSongVerseTimes(songIndex),
+        beginTime = verseStartTimes[verseIndex],
+        endTime = verseIndex < verseStartTimes.length - 1 ?
+            verseStartTimes[verseIndex + 1] : getSongTotalTime(songIndex)
 
     return {
         beginTime,
@@ -112,15 +112,15 @@ export const getVerseBeginAndEndTimes = (songIndex, verseIndex) => {
 
 export const getVerseIndexForTime = (songIndex, time) => {
 
-    const verseTimes = getSongVerseTimes(songIndex),
+    const verseStartTimes = getSongVerseTimes(songIndex),
         totalTime = getSongTotalTime(songIndex)
 
     if (time >= 0 && time <= totalTime) {
         let selectedVerseIndex = 0
 
         // Select corresponding verse.
-        while (selectedVerseIndex < verseTimes.length - 1 &&
-               time >= verseTimes[selectedVerseIndex + 1]) {
+        while (selectedVerseIndex < verseStartTimes.length - 1 &&
+               time >= verseStartTimes[selectedVerseIndex + 1]) {
 
             selectedVerseIndex++
         }

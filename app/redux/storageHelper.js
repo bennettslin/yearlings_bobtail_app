@@ -72,11 +72,13 @@ const _validateValueForKey = (key) => {
             }
         case SELECTED_VERSE_INDEX:
             {
-                const verseTimes = _getValidatedStoredSong().verseTimes
+                const verseStartTimes =
+                    _getValidatedStoredSong().verseStartTimes
 
-                // Logues do not have verseTimes.
-                isValid = isNumber && verseTimes ?
-                parsedValue < verseTimes.length : parsedValue === 0
+                // Logues do not have verseStartTimes.
+                isValid = isNumber && verseStartTimes ?
+                    parsedValue < verseStartTimes.length :
+                    parsedValue === 0
                 break
             }
         case SELECTED_WIKI_INDEX:
@@ -101,7 +103,7 @@ const _validateValueForKey = (key) => {
             {
                 const totalTime = _getValidatedStoredSong().totalTime
 
-                // Logues do not have total verseTimes.
+                // Logues do not have total verseStartTimes.
                 isValid = isNumber && totalTime ?
                 parsedValue <= totalTime : parsedValue === 0
                 break
