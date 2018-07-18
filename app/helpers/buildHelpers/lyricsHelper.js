@@ -113,13 +113,13 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
                  * each unit, based on its time length.
                  */
                 sliderStanzaObjects.push({
-                    /**
-                     * This value won't be necessary once it's stored within
-                     * stanza verse objects itself.
-                     */
-                    tempStanzaStartTime: unitArray[0].time,
-
-                    stanzaVerseObjects: [],
+                    stanzaVerseObjects: [{
+                        /**
+                         * Initialise with just the start time, because at this
+                         * point we still don't know the verse index.
+                         */
+                        verseStartTime: unitArray[0].time
+                    }],
                     stanzaType
                 })
 
@@ -213,46 +213,60 @@ export const recurseToFindAnchors = ({
         // For future recursion.
         verseTimesCounter.counter++
 
-        // Add verse time.
-        const { sliderStanzaObjects } = songObject
+        const {
+            sliderStanzaObjects,
+            tempVerseIndexCounter,
+            annotations
+        } = songObject
 
         // All recursed lyrics will know they're nested in verse with time.
-        inVerseWithTimeIndex = songObject.tempVerseIndexCounter
+        inVerseWithTimeIndex = tempVerseIndexCounter
 
         // Add index to verse object.
-        lyricEntity.verseIndex = songObject.tempVerseIndexCounter
+        lyricEntity.verseIndex = tempVerseIndexCounter
 
         // Add most recent annotation index.
-        lyricEntity.lastAnnotationIndex = songObject.annotations.length
+        lyricEntity.lastAnnotationIndex = annotations.length
 
         // Get stanza for this verse.
         while (
             stanzaIndex < sliderStanzaObjects.length - 1 &&
             lyricEntity.time >=
-                sliderStanzaObjects[stanzaIndex + 1].tempStanzaStartTime
+                sliderStanzaObjects[stanzaIndex + 1]
+                    .stanzaVerseObjects[0]
+                    .verseStartTime
         ) {
             stanzaIndex++
         }
 
         const sliderStanzaObject = sliderStanzaObjects[stanzaIndex]
 
-        sliderStanzaObject.stanzaVerseObjects.push(
-            lyricEntity.time
-        )
-
-        // Tell stanza its first verse index.
-        if (sliderStanzaObject.stanzaVerseObjects.length === 1) {
-            sliderStanzaObject.firstVerseIndex =
-                lyricEntity.verseIndex
-
+        if (isNaN(sliderStanzaObject.stanzaVerseObjects[0].verseIndex)) {
             /**
-             * Since this is the first verse of the next stanza, tell the
-             * previous stanza its end time.
+             * The array is initialised with a verse object that is missing
+             * its verse index. So just add the verse index.
              */
-            if (stanzaIndex) {
-                sliderStanzaObjects[stanzaIndex - 1].stanzaEndTime =
+            sliderStanzaObject.stanzaVerseObjects[0].verseIndex = lyricEntity.verseIndex
+
+        } else {
+            sliderStanzaObject.stanzaVerseObjects.push(
+                {
+                    verseIndex: lyricEntity.verseIndex,
+                    verseStartTime: lyricEntity.time
+                }
+            )
+        }
+
+        /**
+         * If this is the first verse of the next stanza, tell the
+         * previous stanza its end time.
+         */
+        if (
+            stanzaIndex > 0 &&
+            sliderStanzaObject.stanzaVerseObjects.length === 1
+        ) {
+            sliderStanzaObjects[stanzaIndex - 1].stanzaEndTime =
                     lyricEntity.time
-            }
         }
 
         // Tell the last stanza its end time.

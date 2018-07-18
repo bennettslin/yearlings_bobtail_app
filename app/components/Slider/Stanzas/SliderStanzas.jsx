@@ -44,13 +44,9 @@ class SliderStanzas extends Component {
 
                     const
                         {
-                            firstVerseIndex,
-
-                            // Renaming these for clarity.
                             stanzaVerseObjects,
                             stanzaEndTime,
                             stanzaType
-
                         } = sliderStanzaObject,
 
                         isLastStanza =
@@ -63,7 +59,6 @@ class SliderStanzas extends Component {
                                 isLastStanza,
                                 songTotalTime,
 
-                                firstVerseIndex,
                                 stanzaVerseObjects,
                                 stanzaEndTime,
                                 stanzaType
