@@ -1,5 +1,5 @@
 import findIndex from 'lodash.findindex'
-import { LS_MARGIN_SLIDER_THIN } from '../../constants/responsive'
+import { LS_MARGIN_X_SLIDER } from '../../constants/responsive'
 
 import {
     getSongTotalTime,
@@ -78,9 +78,9 @@ export const getVerseIndexforRatio = (
          * All stanzas have a left margin. Only the last stanza has a right
          * margin.
          */
-        startMarginWidth = LS_MARGIN_SLIDER_THIN,
+        startMarginWidth = LS_MARGIN_X_SLIDER,
         endMarginWidth = stanzaIndex === lastStanzaIndex ?
-            LS_MARGIN_SLIDER_THIN : 0,
+            LS_MARGIN_X_SLIDER : 0,
 
         versesWidth = stanzaWidth - startMarginWidth - endMarginWidth,
         touchInVersesWidth = touchInStanzaWidth - startMarginWidth,

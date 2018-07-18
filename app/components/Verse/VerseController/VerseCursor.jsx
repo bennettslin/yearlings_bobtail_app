@@ -30,7 +30,7 @@ verseCursorPropTypes = {
     isAfterCursor: PropTypes.bool,
 
     startTime: PropTypes.number.isRequired,
-    endTime: PropTypes.number.isRequired,
+    stanzaEndTime: PropTypes.number.isRequired,
     fullCursorRatio: PropTypes.number.isRequired
 },
 
@@ -41,7 +41,7 @@ VerseCursor = ({
     isOnCursor,
     isAfterCursor,
     startTime,
-    endTime,
+    stanzaEndTime,
     fullCursorRatio
 
 }) => {
@@ -54,7 +54,7 @@ VerseCursor = ({
         cursorStyle = {}
 
     if (isOnCursor) {
-        const relativeTotalTime = endTime - startTime
+        const relativeTotalTime = stanzaEndTime - startTime
 
         let relativeTimePlayed = selectedTimePlayed - startTime
 

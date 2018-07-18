@@ -42,7 +42,7 @@ class VerseController extends Component {
         verseIndex: PropTypes.number.isRequired,
 
         startTime: PropTypes.number.isRequired,
-        endTime: PropTypes.number.isRequired,
+        stanzaEndTime: PropTypes.number.isRequired,
         fullCursorRatio: PropTypes.number,
 
         // For verse audio buttons.
@@ -113,7 +113,7 @@ class VerseControllerView extends Component {
         inSliderVerse: PropTypes.bool,
 
         startTime: PropTypes.number.isRequired,
-        endTime: PropTypes.number.isRequired,
+        stanzaEndTime: PropTypes.number.isRequired,
         fullCursorRatio: PropTypes.number,
 
         // For verse audio buttons.
@@ -142,7 +142,7 @@ class VerseControllerView extends Component {
             inSliderVerse,
 
             startTime,
-            endTime,
+            stanzaEndTime,
             fullCursorRatio,
 
             handleLyricPlay,
@@ -172,7 +172,7 @@ class VerseControllerView extends Component {
                         isOnCursor,
                         isAfterCursor,
                         startTime,
-                        endTime,
+                        stanzaEndTime,
                         fullCursorRatio
                     }}
 

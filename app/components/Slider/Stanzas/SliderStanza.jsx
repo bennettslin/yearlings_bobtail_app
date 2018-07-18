@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import SliderVerse from './SliderVerse'
-import { LS_MARGIN_SLIDER_THIN } from '../../../constants/responsive'
+import { OVERLAP_MARGIN_SLIDER_STANZA } from '../../../constants/responsive'
 
 const sliderStanzaPropTypes = {
     isLastStanza: PropTypes.bool.isRequired,
     firstVerseIndex: PropTypes.number.isRequired,
     verseTimes: PropTypes.array.isRequired,
     endTime: PropTypes.number.isRequired,
-    totalTime: PropTypes.number.isRequired,
+    songTotalTime: PropTypes.number.isRequired,
     type: PropTypes.string.isRequired
 }
 
@@ -19,43 +19,55 @@ const SliderStanza = ({
     isLastStanza,
     firstVerseIndex,
     verseTimes,
-    endTime,
-    totalTime,
+
+    // Renaming for clarity.
+    endTime: stanzaEndTime,
+
+    songTotalTime,
     type
 
 }) => {
 
-    /**
-     * Width of stanza is exactly proportionate to its duration within the
-     * song. However, each stanza then adds padding of fixed width. As such,
-     * its verse widths remain proportionate to their duration within the
-     * stanza, but *not* within the song.
-     */
     const
-        stanzaRightPercentage = (totalTime - endTime) / totalTime * 100,
-        formattedStanzaRight = isLastStanza ?
-            `${stanzaRightPercentage}%` :
-            `calc(${stanzaRightPercentage}% - ${LS_MARGIN_SLIDER_THIN}px)`,
+        stanzaStartTime = verseTimes[0],
 
         /**
-         * Stanza width ends where the next one begins. Its right padding that
-         * gets overlapped by the next stanza is not included in any slider
-         * touch calculations. Since the last stanza is not overlapped, its
-         * right padding is considered part of its overall width.
+         * Width of stanza is exactly proportionate to its duration within the
+         * song. However, each stanza then adds padding of fixed width. As
+         * such, its verse widths remain proportionate to their duration within
+         * the stanza, but *not* within the song.
          */
+        stanzaRightPercentage =
+            (songTotalTime - stanzaEndTime) / songTotalTime * 100,
 
-        stanzaWidthPercentage = (endTime - verseTimes[0]) / totalTime * 100,
-        formattedStanzaWidth = isLastStanza ?
-            `${stanzaWidthPercentage}%` :
-            `calc(${stanzaWidthPercentage}% + ${LS_MARGIN_SLIDER_THIN}px)`,
+        formattedStanzaRight =
+            isLastStanza ?
+                `${stanzaRightPercentage}%` :
+                `calc(${stanzaRightPercentage}% - ${
+                    OVERLAP_MARGIN_SLIDER_STANZA
+                }px)`,
+
+        /**
+         * Stanza width ends where the next one begins. Its right edge that
+         * gets overlapped by the next stanza is not included in any slider
+         * touch calculations. The last stanza has no overlapped right edge.
+         */
+        stanzaWidthPercentage =
+            (stanzaEndTime - stanzaStartTime) / songTotalTime * 100,
+
+        formattedStanzaWidth =
+            isLastStanza ?
+                `${stanzaWidthPercentage}%` :
+                `calc(${stanzaWidthPercentage}% + ${
+                    OVERLAP_MARGIN_SLIDER_STANZA
+                }px)`,
 
         stanzaStyle = {
             right: formattedStanzaRight,
             width: formattedStanzaWidth
         },
 
-        // Slider verses only know time relative to stanza.
-        relativeTotalTime = endTime - verseTimes[0]
+        stanzaDuration = stanzaEndTime - stanzaStartTime
 
     return (
         <div
@@ -63,8 +75,7 @@ const SliderStanza = ({
                 'SliderStanza',
                 `SliderStanza__${type}`,
                 'bgColour__sliderStanza__pattern',
-                `bgColour__stanza__${type}`,
-                // 'flexCentreContainer'
+                `bgColour__stanza__${type}`
             )}
             style={stanzaStyle}
         >
@@ -83,18 +94,33 @@ const SliderStanza = ({
                 'absoluteFullContainer'
             )}>
                 <div className={cx(
-                    'SliderVerses',
-                    // 'absoluteFullContainer'
+                    'SliderVerses'
                 )}>
                     {verseTimes.map((verseTime, index) => {
 
-                        // Pass relative times for slider verses.
-                        const relativeStartTime = verseTime - verseTimes[0],
+                        /**
+                         * Slider verses are not concerned with their times
+                         * respective to the song's total time. They only know
+                         * their times relative to the stanza.
+                         */
+                        const
+                            relativeStartTime = verseTime - stanzaStartTime,
+
+                            /**
+                             * If it's the last verse, its relative end time is
+                             * the stanza's relative total time. Otherwise,
+                             * it's the next verse's start time.
+                             */
+                            relativeEndTime =
+                                index === verseTimes.length - 1 ?
+                                    stanzaDuration :
+                                    verseTimes[index + 1] - stanzaStartTime,
 
                             // Pass absolute times for slider cursor.
+                            // FIXME: This maybe shouldn't be needed eventually?
                             absoluteEndTime =
                                 index === verseTimes.length - 1 ?
-                                    endTime :
+                                    stanzaEndTime :
                                     verseTimes[index + 1],
 
                             /**
@@ -103,7 +129,7 @@ const SliderStanza = ({
                              */
                             fullCursorRatio =
                                 (absoluteEndTime - verseTime)
-                                / (endTime - verseTime)
+                                / (stanzaEndTime - verseTime)
 
                         return (
                             <SliderVerse
@@ -111,9 +137,11 @@ const SliderStanza = ({
                                 {...{
                                     verseIndex: firstVerseIndex + index,
                                     relativeStartTime,
-                                    relativeTotalTime,
+                                    relativeEndTime,
+                                    stanzaDuration,
+
                                     startTime: verseTime,
-                                    endTime: absoluteEndTime,
+                                    stanzaEndTime: absoluteEndTime,
                                     fullCursorRatio
                                 }}
                             />

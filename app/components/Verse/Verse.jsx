@@ -218,7 +218,7 @@ VerseView = ({
                         inVerseBar,
                         verseIndex,
                         startTime: verseObject.time,
-                        endTime: verseObject.endTime
+                        stanzaEndTime: verseObject.endTime
                     }}
                     {...!inVerseBar && {
                         handleLyricPlay,

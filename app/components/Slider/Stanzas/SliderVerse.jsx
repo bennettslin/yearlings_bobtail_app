@@ -23,13 +23,9 @@ class SliderVerse extends Component {
 
         // From parent.
         verseIndex: PropTypes.number.isRequired,
-
         relativeStartTime: PropTypes.number.isRequired,
-        relativeTotalTime: PropTypes.number.isRequired,
-        startTime: PropTypes.number.isRequired,
-        endTime: PropTypes.number.isRequired,
-
-        fullCursorRatio: PropTypes.number.isRequired
+        relativeEndTime: PropTypes.number.isRequired,
+        stanzaDuration: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -42,19 +38,29 @@ class SliderVerse extends Component {
     render() {
 
         const {
-                verseIndex,
+                /* eslint-disable no-unused-vars */
+                canSliderRender,
+                dispatch,
+                /* eslint-enable no-unused-vars */
+
                 relativeStartTime,
-                relativeTotalTime,
-                startTime,
-                endTime,
-                fullCursorRatio
+                relativeEndTime,
+                stanzaDuration,
+
+                ...other
             } = this.props,
 
+            { verseIndex } = other,
+
+            verseLeft =
+                relativeStartTime / stanzaDuration * 100,
+
             verseWidth =
-                (relativeTotalTime - relativeStartTime)
-                / relativeTotalTime * 100,
+                (relativeEndTime - relativeStartTime)
+                / stanzaDuration * 100,
 
             verseStyle = {
+                left: `${verseLeft}%`,
                 width: `${verseWidth}%`
             }
 
@@ -63,20 +69,20 @@ class SliderVerse extends Component {
                 key={verseIndex}
                 className={cx(
                     'SliderVerse',
-                    'Slider__dynamicBar',
 
-                    'verseColour__hoverParent'
+                    // Just for debug purposes.
+                    `SliderVerse__${verseIndex}`,
+
+                    'verseColour__hoverParent',
+                    'absoluteFullContainer'
                 )}
                 style={verseStyle}
             >
 
-                <VerseController
+                <VerseController {...other}
                     inSliderVerse
                     {...{
-                        verseIndex,
-                        startTime,
-                        endTime,
-                        fullCursorRatio
+                        verseIndex
                     }}
                 />
 

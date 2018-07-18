@@ -32,7 +32,7 @@ class SliderStanzas extends Component {
 
     render() {
         const { renderableSongIndex } = this.props,
-            totalTime = getSongTotalTime(renderableSongIndex),
+            songTotalTime = getSongTotalTime(renderableSongIndex),
             sliderStanzasArray = getSliderStanzasArray(renderableSongIndex)
 
         return (
@@ -41,14 +41,18 @@ class SliderStanzas extends Component {
                 'absoluteFullContainer'
             )}>
                 {sliderStanzasArray.map((stanzaDataObject, stanzaIndex) => {
+                    // console.error(stanzaDataObject)
+                    const
+                        isLastStanza =
+                            stanzaIndex === sliderStanzasArray.length - 1
 
                     return (
                         <SliderStanza {...stanzaDataObject}
                             key={stanzaIndex}
-                            isLastStanza={
-                                stanzaIndex === sliderStanzasArray.length - 1
-                            }
-                            totalTime={totalTime}
+                            {...{
+                                isLastStanza,
+                                songTotalTime
+                            }}
                         />
                     )
                 })}

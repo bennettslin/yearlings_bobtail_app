@@ -4,7 +4,7 @@ $height__sliderStanzaTab: 5px;
 .SliderStanza {
     position: absolute;
     bottom: 0;
-    border-radius: 0 $borderRadius 0 0;
+    border-top-right-radius: $borderRadius;
 
     // Make slider stanzas all the same height when lyric is expanded.
     .RM__twoRowMenu.RM__overlayShown
@@ -50,18 +50,27 @@ $height__sliderStanzaTab: 5px;
 
 .SliderStanza__sheet {
     padding: $borderRadius 0 0 $js__marginX__slider;
-    border-radius: 0 $borderRadius 0 0;
 
     box-sizing: border-box;
     display: flex;
+
+    .SliderStanza:not(:last-child)
+    & {
+        border-top-right-radius: $borderRadius;
+    }
 }
 
 .SliderVerses {
     position: relative;
-    border-radius: $borderRadius $borderRadius 0 0;
     overflow: hidden;
 
     flex-grow: 1;
+
+    border-top-left-radius: $borderRadius;
+    .SliderStanza:not(:last-child)
+    & {
+        border-top-right-radius: $borderRadius;
+    }
 }
 
 // TODO: Make pattern between tab and sheet seamless.
