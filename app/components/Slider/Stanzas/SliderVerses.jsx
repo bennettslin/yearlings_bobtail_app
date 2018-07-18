@@ -53,15 +53,7 @@ const SliderVerses = ({
                     absoluteEndTime =
                         index === verseTimes.length - 1 ?
                             stanzaEndTime :
-                            verseTimes[index + 1],
-
-                    /**
-                     * Let cursor know what percentage of the width bar
-                     * it should take up when it's full.
-                     */
-                    fullCursorRatio =
-                        (absoluteEndTime - verseTime)
-                        / (stanzaEndTime - verseTime)
+                            verseTimes[index + 1]
 
                 return (
                     <SliderVerse
@@ -73,8 +65,7 @@ const SliderVerses = ({
                             stanzaDuration,
 
                             startTime: verseTime,
-                            stanzaEndTime: absoluteEndTime,
-                            fullCursorRatio
+                            stanzaEndTime: absoluteEndTime
                         }}
                     />
                 )

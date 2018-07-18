@@ -43,7 +43,6 @@ class VerseController extends Component {
 
         startTime: PropTypes.number.isRequired,
         stanzaEndTime: PropTypes.number.isRequired,
-        fullCursorRatio: PropTypes.number,
 
         // For verse audio buttons.
         handleLyricPlay: PropTypes.func,
@@ -114,7 +113,6 @@ class VerseControllerView extends Component {
 
         startTime: PropTypes.number.isRequired,
         stanzaEndTime: PropTypes.number.isRequired,
-        fullCursorRatio: PropTypes.number,
 
         // For verse audio buttons.
         handleLyricPlay: PropTypes.func,
@@ -143,7 +141,6 @@ class VerseControllerView extends Component {
 
             startTime,
             stanzaEndTime,
-            fullCursorRatio,
 
             handleLyricPlay,
             handleLyricVerseSelect
@@ -172,8 +169,7 @@ class VerseControllerView extends Component {
                         isOnCursor,
                         isAfterCursor,
                         startTime,
-                        stanzaEndTime,
-                        fullCursorRatio
+                        stanzaEndTime
                     }}
 
                     /**

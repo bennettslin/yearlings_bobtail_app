@@ -13,13 +13,7 @@ const mapStateToProps = ({
     selectedTimePlayed
 })
 
-const verseCursorDefaultProps = {
-
-    // Only slider verse needs to care about this value.
-    fullCursorRatio: 1
-},
-
-verseCursorPropTypes = {
+const verseCursorPropTypes = {
     // Through Redux.
     selectedTimePlayed: PropTypes.number.isRequired,
 
@@ -30,8 +24,7 @@ verseCursorPropTypes = {
     isAfterCursor: PropTypes.bool,
 
     startTime: PropTypes.number.isRequired,
-    stanzaEndTime: PropTypes.number.isRequired,
-    fullCursorRatio: PropTypes.number.isRequired
+    stanzaEndTime: PropTypes.number.isRequired
 },
 
 VerseCursor = ({
@@ -41,8 +34,7 @@ VerseCursor = ({
     isOnCursor,
     isAfterCursor,
     startTime,
-    stanzaEndTime,
-    fullCursorRatio
+    stanzaEndTime
 
 }) => {
 
@@ -68,7 +60,7 @@ VerseCursor = ({
         const cursorWidthPercentage =
                 (relativeTimePlayed / relativeTotalTime) * 100
 
-        cursorStyle.width = `${cursorWidthPercentage * fullCursorRatio}%`
+        cursorStyle.width = `${cursorWidthPercentage}%`
 
         /**
          * This ensures that when a verse before cursor is selected, the cursor
@@ -91,7 +83,6 @@ VerseCursor = ({
     )
 }
 
-VerseCursor.defaultProps = verseCursorDefaultProps
 VerseCursor.propTypes = verseCursorPropTypes
 
 export default connect(mapStateToProps)(VerseCursor)
