@@ -75,6 +75,7 @@ class LyricStanza extends Component {
              */
             { unitClassName,
 
+              stanzaIndex,
               stanzaTypeIndex,
               stanzaType,
               substanzaType,
@@ -119,6 +120,7 @@ class LyricStanza extends Component {
                     unitClassName,
                     unitIndex,
 
+                    stanzaIndex,
                     stanzaTypeIndex,
                     unitArray,
                     substanzaType,
@@ -159,6 +161,7 @@ class LyricStanzaView extends Component {
         // This is passed just for knowing when to update.
         renderableSongIndex: PropTypes.number.isRequired,
 
+        stanzaIndex: PropTypes.number,
         unitIndex: PropTypes.number.isRequired,
         unitClassName: PropTypes.string,
 
@@ -204,6 +207,7 @@ class LyricStanzaView extends Component {
                 unitArray,
 
                 // From controller.
+                stanzaIndex,
                 unitIndex,
                 unitClassName,
 
@@ -243,6 +247,7 @@ class LyricStanzaView extends Component {
                 className={cx(
                     'LyricStanza',
 
+                    !isNaN(stanzaIndex) && `stanza__${stanzaIndex}`,
                     `unit__${unitIndex}`,
 
                     unitClassNames,
