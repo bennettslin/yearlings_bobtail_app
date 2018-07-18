@@ -47,9 +47,9 @@ class SliderStanzas extends Component {
                             firstVerseIndex,
 
                             // Renaming these for clarity.
-                            verseTimes: stanzaVerseTimes,
-                            endTime: stanzaEndTime,
-                            type: stanzaType
+                            stanzaVerseObjects,
+                            stanzaEndTime,
+                            stanzaType
 
                         } = sliderStanzaObject,
 
@@ -64,7 +64,7 @@ class SliderStanzas extends Component {
                                 songTotalTime,
 
                                 firstVerseIndex,
-                                stanzaVerseTimes,
+                                stanzaVerseObjects,
                                 stanzaEndTime,
                                 stanzaType
                             }}
