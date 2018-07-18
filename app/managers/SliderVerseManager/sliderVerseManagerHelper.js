@@ -75,14 +75,11 @@ export const getVerseIndexforRatio = (
         touchInStanzaWidth = touchInStanzaRatio * stanzaWidth,
 
         /**
-         * All stanzas have a left margin. Only the last stanza has a right
-         * margin.
+         * All stanzas have a left margin.
          */
         startMarginWidth = LS_MARGIN_X_SLIDER,
-        endMarginWidth = stanzaIndex === lastStanzaIndex ?
-            LS_MARGIN_X_SLIDER : 0,
 
-        versesWidth = stanzaWidth - startMarginWidth - endMarginWidth,
+        versesWidth = stanzaWidth - startMarginWidth,
         touchInVersesWidth = touchInStanzaWidth - startMarginWidth,
 
         /**
