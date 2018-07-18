@@ -66,6 +66,12 @@ module.exports = [
         neededHours: 2
     },
 
+    {
+        taskName: `Bug where selecting interactivated verse does not change verse when song is playing. Also consider just not interactivating selected verse.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
     /**
      * End Hack Week work.
      */

@@ -459,6 +459,10 @@ class EventHandler extends Component {
         }
 
         this.props.togglePlay()
+
+        // Deinteractivate after selecting.
+        this.props.interactivateVerse()
+
         return true
     }
 
