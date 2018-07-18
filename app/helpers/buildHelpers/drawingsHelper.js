@@ -206,7 +206,7 @@ export const adminRegisterDrawingTasks = (song) => {
 
 export const finalRegisterScenes = (songObject) => {
     const {
-            lyrics,
+            lyricUnits,
             tempSceneRawIndices,
             scenes,
             songVerseConfigs
@@ -218,7 +218,7 @@ export const finalRegisterScenes = (songObject) => {
 
         // Either scene is identified by a unit index...
         if (isUnitIndex) {
-            const unitArray = lyrics[rawIndex],
+            const unitArray = lyricUnits[rawIndex],
                 unitMapObject = unitArray[unitArray.length - 1],
                 unitFirstVerseIndex = unitMapObject.firstVerseIndex,
                 unitFirstVerseTime = unitArray[0].time

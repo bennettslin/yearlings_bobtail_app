@@ -157,7 +157,7 @@ module.exports = {
             }
         }
     },
-    lyrics: [
+    lyricUnits: [
         [
             {
                 time: 0,

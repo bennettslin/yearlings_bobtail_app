@@ -21,7 +21,7 @@ const StatsSectionView = ({
 
     // From props.
     adminDotStanzasCount,
-    lyrics,
+    lyricUnits,
     annotations,
     adminPluralCardsCount
 
@@ -30,7 +30,7 @@ const StatsSectionView = ({
         <h2>stats</h2>
         <div className="row">
             <LyricDotStanzasRow adminDotStanzasCount={adminDotStanzasCount} />
-            <LyricsWordCountRow lyrics={lyrics} />
+            <LyricsWordCountRow lyricUnits={lyricUnits} />
             <AnnotationsCountRow annotations={annotations} />
             <WordsPerAnnotationRow annotations={annotations} />
             <StatRowView

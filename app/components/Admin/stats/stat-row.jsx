@@ -15,8 +15,8 @@ const LyricDotStanzasRow = ({ adminDotStanzasCount }) => {
      )
  }
 
-const LyricsWordCountRow = ({ lyrics }) => {
-    const lyricsWordCount = StatsHelper.getTotalWords(lyrics, LYRIC_TEXT_KEYS)
+const LyricsWordCountRow = ({ lyricUnits }) => {
+    const lyricsWordCount = StatsHelper.getTotalWords(lyricUnits, LYRIC_TEXT_KEYS)
 
     return (
         <StatRowView

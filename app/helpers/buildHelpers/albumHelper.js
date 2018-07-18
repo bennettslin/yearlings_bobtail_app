@@ -82,7 +82,7 @@ const _initialPrepareAlbum = (albumObject) => {
 
 const _initialPrepareLyrics = (albumObject, songObject) => {
 
-    const { lyrics } = songObject,
+    const { lyricUnits } = songObject,
         verseTimesCounter = { counter: 0 }
 
     // Initialise song.
@@ -99,7 +99,7 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
     // Allow easy access to verse metadata, without having to traverse lyrics.
     songObject.songVerseConfigs = []
 
-    lyrics.forEach(unitArray => {
+    lyricUnits.forEach(unitArray => {
 
         // Let unit know all the verse indices that it contains.
         let firstVerseIndex,
@@ -255,7 +255,7 @@ const _finalPrepareAlbum = (albumObject) => {
             finalRegisterScenes(songObject)
 
             // For each verse in a portal, tell portal how to format it.
-            addDestinationPortalFormats(songObject.lyrics)
+            addDestinationPortalFormats(songObject.lyricUnits)
 
             // Clean up.
             delete songObject.tempFinalAnnotationIndex
@@ -267,9 +267,9 @@ const _finalPrepareAlbum = (albumObject) => {
 }
 
 const _finalPrepareLyrics = (songObject) => {
-    const { lyrics } = songObject
+    const { lyricUnits } = songObject
 
-    lyrics.forEach(unitArray => {
+    lyricUnits.forEach(unitArray => {
 
         unitArray.forEach(verseObject => {
 

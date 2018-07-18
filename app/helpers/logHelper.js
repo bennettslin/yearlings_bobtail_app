@@ -18,7 +18,7 @@ export default {
         const selectedSong = getSongObject(props.selectedSongIndex),
             copiedSong = Object.assign({}, selectedSong)
 
-        copiedSong.lyrics = `lyrics: ${copiedSong.lyrics.length}`
+        copiedSong.lyricUnits = `lyricUnits: ${copiedSong.lyricUnits.length}`
         copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
         copiedSong.scenes = `scenes: ${copiedSong.scenes.length}`
         // copiedSong.songStanzaConfigs = `songStanzaConfigs: ${copiedSong.songStanzaConfigs.length}`

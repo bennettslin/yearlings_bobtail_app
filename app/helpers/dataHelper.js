@@ -148,12 +148,12 @@ export const getLyricUnitsCount = (songIndex) => {
     }
 
     const songs = getSongObject(songIndex)
-    return songs.lyrics ? songs.lyrics.length : 0
+    return songs.lyricUnits ? songs.lyricUnits.length : 0
 }
 
 export const getLyricUnitArray = (songIndex, unitIndex) => {
     const songs = getSongObject(songIndex)
-    return songs.lyrics ? songs.lyrics[unitIndex] : []
+    return songs.lyricUnits ? songs.lyricUnits[unitIndex] : []
 }
 
 export const getVerseObject = (songIndex, verseIndex, songs = AlbumData.songs) => {
@@ -162,8 +162,8 @@ export const getVerseObject = (songIndex, verseIndex, songs = AlbumData.songs) =
         return null
     }
 
-    const { lyrics } = getSongObject(songIndex, songs)
-    return _parseLyrics(lyrics, verseIndex)
+    const { lyricUnits } = getSongObject(songIndex, songs)
+    return _parseLyrics(lyricUnits, verseIndex)
 }
 
 /***************

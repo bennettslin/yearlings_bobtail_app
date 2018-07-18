@@ -24,7 +24,7 @@ const Shared = ({
         <SharedView {...other}
             tasks={tasks}
             adminDotStanzasCount={selectedSong.adminDotStanzasCount}
-            lyrics={selectedSong.lyrics}
+            lyricUnits={selectedSong.lyricUnits}
             annotations={selectedSong.annotations}
             adminPluralCardsCount={adminPluralCardsCount}
         />
@@ -42,7 +42,7 @@ const SharedView = ({
     // From controller.
     tasks,
     adminDotStanzasCount,
-    lyrics,
+    lyricUnits,
     annotations,
     adminPluralCardsCount,
 
@@ -51,7 +51,7 @@ const SharedView = ({
         <div className="Admin__field shared">
             <StatsSection
                 adminDotStanzasCount={adminDotStanzasCount}
-                lyrics={lyrics}
+                lyricUnits={lyricUnits}
                 annotations={annotations}
                 adminPluralCardsCount={adminPluralCardsCount}
             />

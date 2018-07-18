@@ -22,7 +22,7 @@ import { ALBUM_BUILD_KEYS,
 
 export const registerTitle = (songObject) => {
 
-    const { title, lyrics } = songObject,
+    const { title, lyricUnits } = songObject,
         { annotation } = title,
         titleObject = {
 
@@ -40,12 +40,12 @@ export const registerTitle = (songObject) => {
      * If first unit contains a lone dot stanza, append title to unit. (This is
      * now never the case.)
      */
-    if (lyrics[0][lyrics[0].length - 1].isUnitMap && lyrics[0].length === 1) {
-        lyrics[0].unshift(titleObject)
+    if (lyricUnits[0][lyricUnits[0].length - 1].isUnitMap && lyricUnits[0].length === 1) {
+        lyricUnits[0].unshift(titleObject)
 
     // Otherwise, create a new first unit that just contains the title.
     } else {
-        lyrics.unshift([titleObject])
+        lyricUnits.unshift([titleObject])
     }
 
     /**
@@ -60,10 +60,10 @@ export const registerTitle = (songObject) => {
 
 export const registerHasSideStanzas = (songObject) => {
 
-    const { lyrics } = songObject
+    const { lyricUnits } = songObject
     let songHasSideStanzas = false
 
-    lyrics.forEach(unit => {
+    lyricUnits.forEach(unit => {
 
         const unitHasSideStanzas = unit.reduce((hasSideStanzas, verse) => {
                 return hasSideStanzas ||
@@ -93,7 +93,7 @@ export const registerHasSideStanzas = (songObject) => {
 
 export const initialRegisterStanzaTypes = (albumObject, songObject) => {
 
-    const { lyrics } = songObject,
+    const { lyricUnits } = songObject,
         tempStanzaTypeCounters = {},
 
         /**
@@ -102,7 +102,7 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
          */
         songStanzaConfigs = []
 
-    lyrics.forEach(unitArray => {
+    lyricUnits.forEach(unitArray => {
 
         const unitMapObject = unitArray[unitArray.length - 1]
 
@@ -167,10 +167,10 @@ export const registerAdminDotStanzas = (songObject, verseObject) => {
 
 export const finalRegisterStanzaTypes = (songObject) => {
 
-    const { lyrics,
+    const { lyricUnits,
             tempStanzaTypeCounters } = songObject
 
-    lyrics.forEach((unitArray) => {
+    lyricUnits.forEach((unitArray) => {
 
         const unitMapObject = unitArray[unitArray.length - 1]
 
