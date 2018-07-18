@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import VerseAudioButton from './VerseAudioButton'
-// import VerseAudioIndicator from './VerseAudioIndicator'
 
 const verseAudioPropTypes = {
     verseIndex: PropTypes.number.isRequired,
@@ -23,24 +22,16 @@ const VerseAudio = ({
     handleLyricVerseSelect
 
 }) => (
-    <Fragment>
-        <VerseAudioButton
-            {...{
-                verseIndex,
-                isInteractivated,
-                isOnCursor,
-                isAfterCursor,
-                handleLyricPlay,
-                handleLyricVerseSelect
-            }}
-        />
-        {/* <VerseAudioIndicator
-            {...{
-                isInteractivated,
-                isOnCursor
-            }}
-        /> */}
-    </Fragment>
+    <VerseAudioButton
+        {...{
+            verseIndex,
+            isInteractivated,
+            isOnCursor,
+            isAfterCursor,
+            handleLyricPlay,
+            handleLyricVerseSelect
+        }}
+    />
 )
 
 VerseAudio.propTypes = verseAudioPropTypes

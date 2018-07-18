@@ -23,8 +23,14 @@ module.exports = [
     },
 
     {
-        taskName: `Stanza styling. Remaining work includes making sure that stanza verse width calculations are correct!`,
+        taskName: `Stanza styling. Remaining work includes making sure that stanza verse width calculations are correct! Dismiss interactivated verse on cursor. Don't update when selecting, so that icon stays the same as it fades out. (Maybe wait on svg change for this one.)`,
         workedHours: 6,
+        neededHours: 8
+    },
+
+    {
+        taskName: `Box shadow and higher z-index on cursor stanza and cursor verse in stanza with multiple verses, for both lyric and slider verses. Need system to know whether stanza has a single verse. Also need to redo slider verse widths. Border radius.`,
+        workedHours: 3,
         neededHours: 8
     },
 
@@ -33,7 +39,7 @@ module.exports = [
      * strategy is worked out.)
      */
     {
-        taskName: `Bug where audio banner in actual mobile phone has weird position.`,
+        taskName: `Bug where audio banner in actual mobile phone has weird position. (Is this still a bug?)`,
         workedHours: 0,
         neededHours: 2
     },
@@ -43,9 +49,21 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `PDF in mobile doesn't scroll. Copy screening-js approach?`,
+        taskName: `PDF in mobile doesn't scroll. Copy screening-js approach, then adjust button positions.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+
+    {
+        taskName: `Bug where nav on with lyric expanded in mobile does not navigate annotations properly. Not sure to what degree heightless plays a role.`,
         workedHours: 0,
         neededHours: 3
+    },
+
+    {
+        taskName: `Allow to determine verse bars in between keys.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     /**
@@ -90,12 +108,6 @@ module.exports = [
         taskName: `Be smart about how verse bar, verse audio buttons, and verse cursor update.`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    {
-        taskName: `Box shadow and higher z-index on cursor stanza and cursor verse in stanza with multiple verses, for both lyric and slider verses. Need system to know whether stanza has a single verse. Also need to redo slider verse widths. Border radius.`,
-        workedHours: 3,
-        neededHours: 8
     },
 
     {
