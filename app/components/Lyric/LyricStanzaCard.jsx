@@ -135,7 +135,7 @@ LyricStanzaCardView = ({
             <div className={cx(
                 'LyricStanzaCard__sheet',
                 'boxShadow__lyricStanzaCard',
-                'bgColour__stanza',
+                'bgColour__lyricStanza__pattern',
                 `bgColour__stanza__${stanzaType}`
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
@@ -165,7 +165,7 @@ LyricStanzaCardView = ({
                 <div className={cx(
                     'LyricStanzaCard__tab',
                     'LyricStanzaCard__tabTop',
-                    'bgColour__stanza',
+                    'bgColour__lyricStanza__pattern',
                     `bgColour__stanza__${stanzaType}`
                 )}>
                     {tabText}

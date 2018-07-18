@@ -23,8 +23,8 @@ module.exports = [
     },
 
     {
-        taskName: `Stanza styling.`,
-        workedHours: 4,
+        taskName: `Stanza styling. Remaining work includes making sure that stanza verse width calculations are correct!`,
+        workedHours: 6,
         neededHours: 8
     },
 

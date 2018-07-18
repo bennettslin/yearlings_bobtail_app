@@ -14,8 +14,20 @@
     border-right: $border;
 
     &:first-child {
+        /**
+         * Adding border and border radius to the individual verses, because
+         * there is no single Verses container that wraps all the verses, as
+         * there is for the slider verses. I may revisit this to make the
+         * styling between lyric and slider more consistent. But this works for
+         * now, so changing it isn't urgent.
+         */
         border-top: $border;
 
+        /**
+         * Since dot anchors need to overflow, we can't just apply overflow
+         * hidden to the verse itself, so we need to add border radius to both
+         * verse parent and verse colour child.
+         */
         &,
         .VerseColour,
         .VerseColour__placeholder {
@@ -29,6 +41,7 @@
         }
     }
     &:last-child {
+
         border-bottom: $border;
 
         &,
@@ -47,14 +60,6 @@
 
 .Verse__interactable {
     position: relative;
-}
-
-/**
- * Not sure why style needs to be applied to both.
- */
-.VerseBar__animatable,
-.VerseColour__inVerseBar {
-    border-radius: $borderRadius;
 }
 
 .Verse__title {

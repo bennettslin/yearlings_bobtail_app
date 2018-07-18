@@ -62,44 +62,73 @@ const SliderStanza = ({
             className={cx(
                 'SliderStanza',
                 `SliderStanza__${type}`,
+                'bgColour__sliderStanza__pattern',
                 `bgColour__stanza__${type}`,
-                'flexCentreContainer'
+                // 'flexCentreContainer'
             )}
             style={stanzaStyle}
         >
-            <div className="SliderStanzaVerses">
-                {verseTimes.map((verseTime, index) => {
+            {/* This is the tab's box shadow. */}
+            <div className={cx(
+                'SliderStanza__tab',
+                'SliderStanza__tabShadow',
+                'boxShadow__sliderStanza'
+            )}/>
 
-                    // Pass relative times for slider verses.
-                    const relativeStartTime = verseTime - verseTimes[0],
+            <div className={cx(
+                'SliderStanza__sheet',
+                'boxShadow__sliderStanza',
+                'bgColour__sliderStanza__pattern',
+                `bgColour__stanza__${type}`,
+                'absoluteFullContainer'
+            )}>
+                <div className={cx(
+                    'SliderVerses',
+                    // 'absoluteFullContainer'
+                )}>
+                    {verseTimes.map((verseTime, index) => {
 
-                        // Pass absolute times for slider cursor.
-                        absoluteEndTime = index === verseTimes.length - 1 ?
-                            endTime : verseTimes[index + 1],
+                        // Pass relative times for slider verses.
+                        const relativeStartTime = verseTime - verseTimes[0],
 
-                        /**
-                         * Let cursor know what percentage of the width bar it
-                         * should take up when it's full.
-                         */
-                        fullCursorRatio =
-                            (absoluteEndTime - verseTime)
-                            / (endTime - verseTime)
+                            // Pass absolute times for slider cursor.
+                            absoluteEndTime =
+                                index === verseTimes.length - 1 ?
+                                    endTime :
+                                    verseTimes[index + 1],
 
-                    return (
-                        <SliderVerse
-                            key={index}
-                            {...{
-                                verseIndex: firstVerseIndex + index,
-                                relativeStartTime,
-                                relativeTotalTime,
-                                startTime: verseTime,
-                                endTime: absoluteEndTime,
-                                fullCursorRatio
-                            }}
-                        />
-                    )
-                })}
+                            /**
+                             * Let cursor know what percentage of the width bar
+                             * it should take up when it's full.
+                             */
+                            fullCursorRatio =
+                                (absoluteEndTime - verseTime)
+                                / (endTime - verseTime)
+
+                        return (
+                            <SliderVerse
+                                key={index}
+                                {...{
+                                    verseIndex: firstVerseIndex + index,
+                                    relativeStartTime,
+                                    relativeTotalTime,
+                                    startTime: verseTime,
+                                    endTime: absoluteEndTime,
+                                    fullCursorRatio
+                                }}
+                            />
+                        )
+                    })}
+                </div>
             </div>
+
+            {/* This tab covers the sheet's box shadow. */}
+            <div className={cx(
+                'SliderStanza__tab',
+                'SliderStanza__tabTop',
+                'bgColour__sliderStanza__pattern',
+                `bgColour__stanza__${type}`
+            )}/>
         </div>
     )
 }

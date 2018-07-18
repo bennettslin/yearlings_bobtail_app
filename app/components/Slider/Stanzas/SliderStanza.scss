@@ -1,11 +1,10 @@
-$js__margin__slider__thin: 2px;
+$js__marginX__slider: 3px;
+$height__sliderStanzaTab: 5px;
 
 .SliderStanza {
     position: absolute;
     bottom: 0;
-
-    box-sizing: border-box;
-    padding: $js__margin__slider__thin;
+    border-radius: 0 $borderRadius 0 0;
 
     // Make slider stanzas all the same height when lyric is expanded.
     .RM__twoRowMenu.RM__overlayShown
@@ -19,6 +18,77 @@ $js__margin__slider__thin: 2px;
     & {
         transition: height $animationDuration__default;
     }
+}
+
+.SliderStanza__tab {
+    position: absolute;
+    top: -$height__sliderStanzaTab;
+    left: 0;
+    width: $js__margin__thick;
+    border-radius: $borderRadius $borderRadius 0 0;
+}
+
+.SliderStanza__tabShadow {
+    /**
+     * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
+     */
+    height:
+        $height__sliderStanzaTab
+        - $borderRadius;
+
+    top: -$height__sliderStanzaTab;
+}
+
+.SliderStanza__tabTop {
+    // Ensure that tab covers sheet.
+    height: $height__sliderStanzaTab;
+}
+
+.boxShadow__sliderStanza {
+    box-shadow: $boxShadow__sliderStanza;
+}
+
+.SliderStanza__sheet {
+    padding: $borderRadius 0 0 $js__marginX__slider;
+    border-radius: 0 $borderRadius 0 0;
+
+    box-sizing: border-box;
+    display: flex;
+}
+
+.SliderVerses {
+    position: relative;
+    border-radius: $borderRadius $borderRadius 0 0;
+    overflow: hidden;
+
+    flex-grow: 1;
+}
+
+// TODO: Make pattern between tab and sheet seamless.
+.bgColour__sliderStanza__pattern {
+    $degrees: 60deg;
+    $darkShade: rgba(0, 0, 0, 0.1);
+    $height: 15px;
+    $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
+
+    background-image:
+    linear-gradient(
+        $degrees,
+        $darkShade 25%,
+        transparent 25%,
+        transparent 75%,
+        $darkShade 75%,
+        $darkShade
+    ),
+    linear-gradient(
+        180 - $degrees,
+        $darkShade 25%,
+        transparent 25%,
+        transparent 75%,
+        $darkShade 75%,
+        $darkShade
+    );
+    background-size: $width $height;
 }
 
 .SliderStanza__refrain {
@@ -50,11 +120,4 @@ $js__margin__slider__thin: 2px;
 }
 .SliderStanza__outro {
     height: 40%;
-}
-
-.SliderStanzaVerses {
-    flex-grow: 1;
-
-    position: relative;
-    height: 100%;
 }

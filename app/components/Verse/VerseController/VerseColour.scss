@@ -11,6 +11,15 @@
     box-shadow: $boxShadow__activeVerse;
 }
 
+/**
+ * Border radius is needed on both parent and child because of box shadow, I
+ * think.
+ */
+.VerseBar__animatable,
+.VerseColour__inVerseBar {
+    border-radius: $borderRadius;
+}
+
 .VerseColour__onCursor {
     .RM__verseInactive .Verse__interactable
     & {
