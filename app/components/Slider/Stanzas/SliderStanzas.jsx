@@ -33,14 +33,14 @@ class SliderStanzas extends Component {
     render() {
         const { renderableSongIndex } = this.props,
             songTotalTime = getSongTotalTime(renderableSongIndex),
-            sliderStanzaObjects = getSliderStanzaObjects(renderableSongIndex)
+            songStanzaObjects = getSliderStanzaObjects(renderableSongIndex)
 
         return (
             <div className={cx(
                 'SliderStanzas',
                 'absoluteFullContainer'
             )}>
-                {sliderStanzaObjects.map((sliderStanzaObject, stanzaIndex) => {
+                {songStanzaObjects.map((sliderStanzaObject, stanzaIndex) => {
 
                     const
                         {
@@ -50,7 +50,7 @@ class SliderStanzas extends Component {
                         } = sliderStanzaObject,
 
                         isLastStanza =
-                            stanzaIndex === sliderStanzaObjects.length - 1
+                            stanzaIndex === songStanzaObjects.length - 1
 
                     return (
                         <SliderStanza

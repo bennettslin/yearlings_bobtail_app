@@ -27,15 +27,15 @@ export const getVerseIndexforRatio = (
 
 ) => {
 
-    const sliderStanzaObjects = getSliderStanzaObjects(songIndex),
+    const songStanzaObjects = getSliderStanzaObjects(songIndex),
 
         totalTime = getSongTotalTime(songIndex),
 
         // Figure out which stanza the touch is in.
-        stanzaIndex = findIndex(sliderStanzaObjects, (stanzaObject, index) => {
+        stanzaIndex = findIndex(songStanzaObjects, (stanzaObject, index) => {
 
             // If it's the last stanza, just return true.
-            if (index === sliderStanzaObjects.length - 1) {
+            if (index === songStanzaObjects.length - 1) {
                 return true
             }
 
@@ -51,7 +51,7 @@ export const getVerseIndexforRatio = (
         {
             stanzaVerseObjects,
             stanzaEndTime
-        } = sliderStanzaObjects[stanzaIndex],
+        } = songStanzaObjects[stanzaIndex],
 
         stanzaFirstVerseIndex = stanzaVerseObjects[0].verseIndex
 

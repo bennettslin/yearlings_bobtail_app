@@ -14,7 +14,7 @@ import {
 import { VERSE_SCROLL } from '../constants/dom'
 
 import {
-    getSongVerseStartTimes,
+    getSongVerseObjects,
     getVerseIndexForTime,
     getSceneIndexForVerseIndex
 } from '../helpers/dataHelper'
@@ -86,8 +86,10 @@ class TimeVerseManager extends Component {
         scrollLog
     }) {
         const
-            songVerseTimes = getSongVerseStartTimes(selectedSongIndex),
-            selectedTimePlayed = songVerseTimes[selectedVerseIndex],
+            songVerseTimes = getSongVerseObjects(selectedSongIndex),
+
+            selectedTimePlayed =
+                songVerseTimes[selectedVerseIndex].verseStartTime,
 
             /**
              * If selecting or changing verse in same song, change index to be

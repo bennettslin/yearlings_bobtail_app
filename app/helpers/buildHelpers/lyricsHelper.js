@@ -95,7 +95,7 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
 
     const { lyrics } = songObject,
         tempStanzaTypeCounters = {},
-        sliderStanzaObjects = []
+        songStanzaObjects = []
 
     lyrics.forEach(unitArray => {
 
@@ -112,7 +112,7 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
                  * This will let audio slider know the relative width of
                  * each unit, based on its time length.
                  */
-                sliderStanzaObjects.push({
+                songStanzaObjects.push({
                     stanzaVerseObjects: [{
                         /**
                          * Initialise with just the start time, because at this
@@ -134,11 +134,11 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
     })
 
     // Establish which song on the album has the most stanzas.
-    if (sliderStanzaObjects.length > albumObject.maxStanzasCount) {
-        albumObject.maxStanzasCount = sliderStanzaObjects.length
+    if (songStanzaObjects.length > albumObject.maxStanzasCount) {
+        albumObject.maxStanzasCount = songStanzaObjects.length
     }
 
-    songObject.sliderStanzaObjects = sliderStanzaObjects
+    songObject.songStanzaObjects = songStanzaObjects
     songObject.tempStanzaTypeCounters = tempStanzaTypeCounters
 }
 
@@ -214,7 +214,7 @@ export const recurseToFindAnchors = ({
         verseTimesCounter.counter++
 
         const {
-            sliderStanzaObjects,
+            songStanzaObjects,
             tempVerseIndexCounter,
             annotations
         } = songObject
@@ -230,16 +230,16 @@ export const recurseToFindAnchors = ({
 
         // Get stanza for this verse.
         while (
-            stanzaIndex < sliderStanzaObjects.length - 1 &&
+            stanzaIndex < songStanzaObjects.length - 1 &&
             lyricEntity.time >=
-                sliderStanzaObjects[stanzaIndex + 1]
+                songStanzaObjects[stanzaIndex + 1]
                     .stanzaVerseObjects[0]
                     .verseStartTime
         ) {
             stanzaIndex++
         }
 
-        const sliderStanzaObject = sliderStanzaObjects[stanzaIndex]
+        const sliderStanzaObject = songStanzaObjects[stanzaIndex]
 
         // Just for administrative purposes, at least for now.
         sliderStanzaObject.stanzaIndex = stanzaIndex
@@ -275,23 +275,25 @@ export const recurseToFindAnchors = ({
             stanzaIndex > 0 &&
             sliderStanzaObject.stanzaVerseObjects.length === 1
         ) {
-            sliderStanzaObjects[stanzaIndex - 1].stanzaEndTime =
+            songStanzaObjects[stanzaIndex - 1].stanzaEndTime =
                     lyricEntity.time
         }
 
         // Tell the last stanza its end time.
         if (
-            stanzaIndex === sliderStanzaObjects.length - 1
+            stanzaIndex === songStanzaObjects.length - 1
         ) {
             sliderStanzaObject.stanzaEndTime =
                 songObject.totalTime
         }
 
+        // FIXME: Eventually should not need this.
         if (
+            songObject.songVerseObjects.length > 0 &&
             lyricEntity.time <=
-                songObject.verseStartTimes[
-                    songObject.verseStartTimes.length - 1
-                ]
+                songObject.songVerseObjects[
+                    songObject.songVerseObjects.length - 1
+                ].verseStartTime
         ) {
             /**
              * Throw an exception if next time is not later than previous time.
@@ -302,22 +304,31 @@ export const recurseToFindAnchors = ({
         }
 
         // An array of verse times is needed.
-        songObject.verseStartTimes.push(lyricEntity.time)
+        songObject.songVerseObjects.push({
+
+            // Just for administrative purposes, at least for now.
+            verseIndex: lyricEntity.verseIndex,
+
+            verseStartTime: lyricEntity.time,
+            verseStanzaIndex: stanzaIndex
+        })
 
         songObject.tempVerseIndexCounter++
 
     /**
-     * Now that we have access to the entire verseStartTimes array, let each verse
-     * know its end time.
+     * Now that we have access to the entire songVerseObjects array, let each
+     * lyric entity know its end time. This is for a verse in a lyric stanza to
+     * pass to its verse cursor.
      */
     } else if (!isNaN(lyricEntity.time)) {
 
         const { verseIndex } = lyricEntity,
-            { verseStartTimes } = songObject
+            { songVerseObjects } = songObject
 
         // Its end time is the start time of the next verse.
-        if (verseIndex < verseStartTimes.length - 1) {
-            lyricEntity.endTime = verseStartTimes[verseIndex + 1]
+        if (verseIndex < songVerseObjects.length - 1) {
+            lyricEntity.endTime =
+                songVerseObjects[verseIndex + 1].verseStartTime
 
         // Its end time is the song's end time.
         } else {

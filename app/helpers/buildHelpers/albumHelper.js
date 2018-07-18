@@ -98,7 +98,7 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
 
     songObject.annotations = []
     songObject.tempVerseIndexCounter = 0
-    songObject.verseStartTimes = []
+    songObject.songVerseObjects = []
 
     lyrics.forEach(unitArray => {
 

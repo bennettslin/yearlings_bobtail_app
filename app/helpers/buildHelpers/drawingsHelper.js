@@ -209,7 +209,7 @@ export const finalRegisterScenes = (songObject) => {
             lyrics,
             tempSceneRawIndices,
             scenes,
-            verseStartTimes
+            songVerseObjects
         } = songObject
 
     tempSceneRawIndices.forEach((rawIndexObject, index) => {
@@ -229,7 +229,7 @@ export const finalRegisterScenes = (songObject) => {
         // ... or else scene is identified by a verse index.
         } else {
             scenes[index].firstVerseIndex = rawIndex
-            scenes[index].time = verseStartTimes[rawIndex]
+            scenes[index].time = songVerseObjects[rawIndex].verseStartTime
         }
     })
 
