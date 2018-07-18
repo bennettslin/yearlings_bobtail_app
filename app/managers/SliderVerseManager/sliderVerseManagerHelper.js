@@ -3,7 +3,7 @@ import { LS_MARGIN_X_SLIDER } from '../../constants/responsive'
 
 import {
     getSongTotalTime,
-    getSliderStanzaObjects
+    getSongStanzaObjects
 } from '../../helpers/dataHelper'
 
 export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
@@ -27,7 +27,7 @@ export const getVerseIndexforRatio = (
 
 ) => {
 
-    const songStanzaObjects = getSliderStanzaObjects(songIndex),
+    const songStanzaObjects = getSongStanzaObjects(songIndex),
 
         totalTime = getSongTotalTime(songIndex),
 

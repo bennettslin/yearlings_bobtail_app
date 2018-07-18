@@ -244,11 +244,7 @@ export const getAnnotationDotKeys = (
  * SLIDER *
  **********/
 
-export const getMaxStanzasCount = () => {
-    return AlbumData.maxStanzasCount
-}
-
-export const getSliderStanzaObjects = (songIndex) => {
+export const getSongStanzaObjects = (songIndex) => {
     const songObject = getSongObject(songIndex),
         { songStanzaObjects } = songObject
 

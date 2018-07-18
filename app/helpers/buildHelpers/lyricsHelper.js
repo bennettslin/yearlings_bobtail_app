@@ -133,11 +133,6 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
         }
     })
 
-    // Establish which song on the album has the most stanzas.
-    if (songStanzaObjects.length > albumObject.maxStanzasCount) {
-        albumObject.maxStanzasCount = songStanzaObjects.length
-    }
-
     songObject.songStanzaObjects = songStanzaObjects
     songObject.tempStanzaTypeCounters = tempStanzaTypeCounters
 }
@@ -239,22 +234,20 @@ export const recurseToFindAnchors = ({
             stanzaIndex++
         }
 
-        const sliderStanzaObject = songStanzaObjects[stanzaIndex]
+        const sliderStanzaObject = songStanzaObjects[stanzaIndex],
+            stanzaFirstVerseObject = sliderStanzaObject.stanzaVerseObjects[0]
 
-        // Just for administrative purposes, at least for now.
-        sliderStanzaObject.stanzaIndex = stanzaIndex
-
-        if (isNaN(sliderStanzaObject.stanzaVerseObjects[0].verseIndex)) {
+        if (isNaN(stanzaFirstVerseObject.verseIndex)) {
             /**
              * The array is initialised with a verse object that is missing
              * its verse index. So just add the verse index.
              */
-            sliderStanzaObject.stanzaVerseObjects[0].verseIndex = lyricEntity.verseIndex
+            stanzaFirstVerseObject.verseIndex = tempVerseIndexCounter
 
         } else {
             sliderStanzaObject.stanzaVerseObjects.push(
                 {
-                    verseIndex: lyricEntity.verseIndex,
+                    verseIndex: tempVerseIndexCounter,
 
                     /**
                      * Technically, we can just get the verse start time from
@@ -305,12 +298,8 @@ export const recurseToFindAnchors = ({
 
         // An array of verse times is needed.
         songObject.songVerseObjects.push({
-
-            // Just for administrative purposes, at least for now.
-            verseIndex: lyricEntity.verseIndex,
-
             verseStartTime: lyricEntity.time,
-            verseStanzaIndex: stanzaIndex
+            stanzaIndex
         })
 
         songObject.tempVerseIndexCounter++

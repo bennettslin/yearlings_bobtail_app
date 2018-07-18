@@ -49,9 +49,6 @@ const _mergeAlbumTasks = (albumObject) => {
 
 const _initialPrepareAlbum = (albumObject) => {
 
-    // Initialise.
-    albumObject.maxStanzasCount = 0
-
     albumObject.songs.forEach((songObject, songIndex) => {
 
         // This also collects the unit index for each scene.

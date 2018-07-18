@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import SliderStanza from './SliderStanza'
 
-import { getSliderStanzaObjects,
+import { getSongStanzaObjects,
          getSongTotalTime } from '../../../helpers/dataHelper'
 
 const mapStateToProps = ({
@@ -33,7 +33,7 @@ class SliderStanzas extends Component {
     render() {
         const { renderableSongIndex } = this.props,
             songTotalTime = getSongTotalTime(renderableSongIndex),
-            songStanzaObjects = getSliderStanzaObjects(renderableSongIndex)
+            songStanzaObjects = getSongStanzaObjects(renderableSongIndex)
 
         return (
             <div className={cx(
