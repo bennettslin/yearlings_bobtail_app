@@ -1,23 +1,26 @@
 .VerseCursor {
     background-color: rgba(200, 150, 250, 0.4);
+}
 
-    // Transitioning top feels smoother than height, I think.
+.VerseCursor__horizontalTransition {
+    left: -100%;
+
+    .RM__isPlaying
+    &.VerseCursor__onCursor {
+        left: 0;
+    }
+}
+
+.VerseCursor__verticalTransition {
     top: -100%;
 
-    // $gradient__lyric__desktop: linear-gradient(
-    //     rgba(200, 150, 250, 0.4) 999%,
-    //     transparent
-    // );
-
-    // background-image: $gradient__lyric__desktop;
+    .RM__isPlaying
+    &.VerseCursor__onCursor {
+        top: 0;
+    }
 }
 
 .VerseCursor__onCursor {
-
-    .RM__isPlaying
-    & {
-        top: 0;
-    }
 
     .RM__isPaused
     &,

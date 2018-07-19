@@ -9,13 +9,6 @@ module.exports = [
     /**
      * Begin Hack Week work.
      */
-
-    {
-        taskName: `Style cursor verse to expand based on fixed constants, not percentages. Also ensure that slider cursor verse is different from lyric cursor verse, and don't expand cursor verse in verse bar at all.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     {
         taskName: `Bug where selecting interactivated verse does not change verse when song is playing.`,
         workedHours: 0,
@@ -70,6 +63,24 @@ module.exports = [
         taskName: `Allow to determine verse bars in between key presses. Also, the keys r and f.`,
         workedHours: 0,
         neededHours: 2
+    },
+
+    {
+        taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Be smart about verse on cursor transitions. Don't transition when slider is moving.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `truncated verse needs ellipsis.`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     /**

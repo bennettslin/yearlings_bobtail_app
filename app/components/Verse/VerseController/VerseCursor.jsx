@@ -25,7 +25,10 @@ class VerseCursor extends Component {
 
         // From parent.
         isOnCursor: PropTypes.bool.isRequired,
-        verseIndex: PropTypes.number.isRequired
+        verseIndex: PropTypes.number.isRequired,
+        inVerseBar: PropTypes.bool,
+        inLyricVerse: PropTypes.bool,
+        inSliderVerse: PropTypes.bool
     }
 
     shouldComponentUpdate(nextProps) {
@@ -38,26 +41,46 @@ class VerseCursor extends Component {
     render() {
         const {
                 renderableSongIndex,
+                isOnCursor,
                 verseIndex,
-                isOnCursor
+                inVerseBar,
+                inLyricVerse,
+                inSliderVerse
             } = this.props,
 
             verseDuration = getVerseDurationForVerseIndex(
                 renderableSongIndex,
                 verseIndex
-            )
+            ),
+
+            isHorizontalTransition = inSliderVerse,
+            isVerticalTransition = inVerseBar || inLyricVerse,
+
+            transitionedStyle =
+            isHorizontalTransition ?
+                'left' :
+                'top'
 
         return (
             <div
                 className={cx(
                     'VerseCursor',
                     isOnCursor && `VerseCursor__onCursor`,
+
+                    inVerseBar && 'VerseCursor__inVerseBar',
+
+                    isHorizontalTransition &&
+                        'VerseCursor__horizontalTransition',
+                    isVerticalTransition &&
+                        'VerseCursor__verticalTransition',
+
                     'absoluteFullContainer'
                 )}
                 {
                     ...isOnCursor && {
                         style: {
-                            transition: `top ${verseDuration}s linear`
+                            transition:
+                                `${transitionedStyle} ${verseDuration}s linear`
                         }
                     }
                 }

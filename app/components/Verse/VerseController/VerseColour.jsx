@@ -58,7 +58,10 @@ VerseColour = ({
             <VerseCursor
                 {...{
                     isOnCursor,
-                    verseIndex
+                    verseIndex,
+                    inVerseBar,
+                    inLyricVerse,
+                    inSliderVerse
                 }}
 
                 /**
