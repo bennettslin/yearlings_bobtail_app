@@ -23,12 +23,6 @@ module.exports = [
     },
 
     {
-        taskName: `Bug where nav on with lyric expanded in mobile does not navigate annotations properly. Not sure to what degree heightless plays a role.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: `Have setIntervals on audio display timer rather than setting from state.`,
         workedHours: 0,
         neededHours: 2

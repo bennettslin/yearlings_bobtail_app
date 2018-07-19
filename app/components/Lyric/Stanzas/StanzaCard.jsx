@@ -123,15 +123,15 @@ StanzaCardView = ({
     return (
         <div className={cx(
             'StanzaCard',
-            isSubCard && 'LyricStanzaCard__subCard',
-            isTabbed && 'LyricStanzaCard__tabbed'
+            isSubCard && 'StanzaCard__subCard',
+            isTabbed && 'StanzaCard__tabbed'
         )}>
 
             {/* This is the tab's box shadow. */}
             {isTabbed && (
                 <div className={cx(
-                    'LyricStanzaCard__tab',
-                    'LyricStanzaCard__tabShadow',
+                    'StanzaCard__tab',
+                    'StanzaCard__tabShadow',
                     'boxShadow__lyricStanzaCard'
                 )}>
                     {tabText}
@@ -139,7 +139,7 @@ StanzaCardView = ({
             )}
 
             <div className={cx(
-                'LyricStanzaCard__sheet',
+                'StanzaCard__sheet',
                 'boxShadow__lyricStanzaCard',
                 'bgColour__lyricStanza__pattern',
                 `bgColour__stanza__${stanzaType}`
@@ -172,8 +172,8 @@ StanzaCardView = ({
             {/* This tab covers the sheet's box shadow. */}
             {isTabbed && (
                 <div className={cx(
-                    'LyricStanzaCard__tab',
-                    'LyricStanzaCard__tabTop',
+                    'StanzaCard__tab',
+                    'StanzaCard__tabTop',
                     'bgColour__lyricStanza__pattern',
                     `bgColour__stanza__${stanzaType}`
                 )}>

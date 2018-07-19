@@ -3,11 +3,11 @@
     justify-content: center;
 }
 
-.LyricStanza__column {
+.Stanza__column {
     display: flex;
     align-items: center;
 
-    .LyricStanza__subsequent
+    .Stanza__subsequent
     & {
         margin-top:
             $margin__lyricUnit
@@ -16,7 +16,7 @@
     }
 }
 
-.LyricStanza__column__text {
+.Stanza__column__text {
     flex-direction: column;
     justify-content: flex-end;
 
@@ -29,7 +29,7 @@
      * Apply margin top to stanza block rather than lyrics unit, so that
      * bottom dot stanza can override it when faded out.
      */
-    .LyricStanza__notSubsequent:not(:first-child)
+    .Stanza__notSubsequent:not(:first-child)
     & {
         margin-top: $margin__lyricUnit;
     }
@@ -42,12 +42,12 @@
     max-width: 700px;
 }
 
-.LyricStanza__column__main {
+.Stanza__column__main {
     // Account for verse audio button and its box shadow.
     padding-left: $paddingX__verse + 5px;
 }
 
-.LyricStanza__column__side {
+.Stanza__column__side {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -60,22 +60,22 @@
     }
 }
 
-.LyricStanza__column__sideBottomOnly {
+.Stanza__column__sideBottomOnly {
     justify-content: flex-end;
 }
 
 // These styles are just for dev purposes.
-.LyricStanza__afterCursor {
+.Stanza__afterCursor {
     background-color: rgba(240, 200, 200, 0.5);
     border: 2px solid #f88;
 }
 
-.LyricStanza__onCursor {
+.Stanza__onCursor {
     background-color: rgba(240, 240, 200, 0.5);
     border: 2px solid #8f8;
 }
 
-.LyricStanza__beforeCursor {
+.Stanza__beforeCursor {
     background-color: rgba(200, 200, 240, 0.5);
     border: 2px solid #88f;
 }

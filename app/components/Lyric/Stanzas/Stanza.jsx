@@ -98,8 +98,8 @@ class Stanza extends Component {
 
             isTitleUnit = unitIndex === 0,
 
-            hasSide = !!(topSideCard || bottomSideCard),
-            isDotOnly = !!dotStanza && unitArray.length === 1,
+            hasSide = Boolean(topSideCard || bottomSideCard),
+            isDotOnly = Boolean(dotStanza) && unitArray.length === 1,
             isSideBottomOnly = !topSideCard && Boolean(bottomSideCard),
 
             /**
@@ -249,26 +249,26 @@ class StanzaView extends Component {
 
                     isTitleUnit ? 'fontSize__title' : 'fontSize__verse',
 
-                    { 'LyricStanza__hasSide': hasSide,
-                      'LyricStanza__title': isTitleUnit,
+                    { 'Stanza__hasSide': hasSide,
+                      'Stanza__title': isTitleUnit,
 
                       // It's only ever one of these three.
-                      'LyricStanza__afterCursor': isAfterCursor,
-                      'LyricStanza__beforeCursor': isBeforeCursor,
-                      'LyricStanza__onCursor': isOnCursor,
+                      'Stanza__afterCursor': isAfterCursor,
+                      'Stanza__beforeCursor': isBeforeCursor,
+                      'Stanza__onCursor': isOnCursor,
 
                       'fontSize__lyricMultipleColumns': hasSide },
 
                     subsequent ?
-                        'LyricStanza__subsequent' :
-                        'LyricStanza__notSubsequent'
+                        'Stanza__subsequent' :
+                        'Stanza__notSubsequent'
                 )}
             >
                 {!isDotOnly &&
                     <div className={cx(
-                        'LyricStanza__column__text',
-                        'LyricStanza__column',
-                        'LyricStanza__column__main'
+                        'Stanza__column__text',
+                        'Stanza__column',
+                        'Stanza__column__main'
                     )}>
                         <StanzaCard {...other}
                             inMain
@@ -285,10 +285,10 @@ class StanzaView extends Component {
                 }
                 {hasSide &&
                     <div className={cx(
-                        'LyricStanza__column__text',
-                        'LyricStanza__column',
-                        'LyricStanza__column__side',
-                        { 'LyricStanza__column__sideBottomOnly': isSideBottomOnly }
+                        'Stanza__column__text',
+                        'Stanza__column',
+                        'Stanza__column__side',
+                        { 'Stanza__column__sideBottomOnly': isSideBottomOnly }
                     )}>
                         <StanzaCard {...other}
                             stanzaArray={topSideCard}

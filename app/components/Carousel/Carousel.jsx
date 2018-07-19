@@ -18,7 +18,8 @@ const mapStateToProps = ({
     accessedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex
+    interactivatedVerseIndex,
+    isLyricExpanded
 }) => ({
     canCarouselRender,
     isHiddenCarouselNav,
@@ -27,7 +28,8 @@ const mapStateToProps = ({
     accessedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex
+    interactivatedVerseIndex,
+    isLyricExpanded
 })
 
 class Carousel extends Component {
@@ -42,6 +44,7 @@ class Carousel extends Component {
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
 
         // From parent.
         handleScrollUponCarouselRender: PropTypes.func.isRequired,
@@ -130,6 +133,8 @@ class Carousel extends Component {
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
                 interactivatedVerseIndex,
+                isLyricExpanded,
+
                 handleAnnotationPrevious,
                 handleAnnotationNext,
                 setCarouselParentRef,
@@ -178,12 +183,14 @@ class Carousel extends Component {
                                 /**
                                  * TODO: This conditional is repeated in
                                  * Carousel, StanzaDot, and
-                                 * TextLyricAnchor.
+                                 * TextLyricAnchor. Consolidate?
                                  */
                                 !selectedDotsIndex &&
                                 interactivatedVerseIndex < 0 &&
-                                Boolean(selectedCarouselNavIndex) &&
-
+                                (
+                                    selectedCarouselNavIndex ||
+                                    isLyricExpanded
+                                ) &&
                                 annotationIndex === accessedAnnotationIndex,
 
                             isSelected =

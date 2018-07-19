@@ -2,7 +2,7 @@
     position: relative;
 }
 
-.LyricStanzaCard__tab {
+.StanzaCard__tab {
     position: absolute;
     top: -$height__stanzaTypeTab;
     left: 0;
@@ -15,7 +15,7 @@
     text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-.LyricStanzaCard__tabShadow {
+.StanzaCard__tabShadow {
 
     /**
      * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
@@ -24,7 +24,7 @@
     top: -$height__stanzaTypeTab;
 }
 
-.LyricStanzaCard__tabTop {
+.StanzaCard__tabTop {
     // Ensure that tab covers sheet.
     height: $height__stanzaTypeTab + 1px;
     color: rgba(255, 255, 255, 0.9);
@@ -33,19 +33,19 @@
 .boxShadow__lyricStanzaCard {
     box-shadow: $boxShadow__lyricStanzaCard;
 
-    // .LyricStanza__onCursor
+    // .Stanza__onCursor
     // & {
     //     box-shadow: $boxShadow__lyricStanzaCard__verseIn;
     // }
 }
 
-.LyricStanzaCard__subCard {
+.StanzaCard__subCard {
     $paddingX__offsetStanza: 17%;
     $marginY__offsetStanza__overlap: 6.5px;
 
     margin-top: -$marginY__offsetStanza__overlap;
 
-    .LyricStanza__column__main
+    .Stanza__column__main
     & {
         padding-left: $paddingX__offsetStanza;
     }
@@ -54,24 +54,24 @@
     white-space: nowrap;
 }
 
-.LyricStanzaCard__sheet {
+.StanzaCard__sheet {
     position: relative;
 
     padding: $js__margin__thin / 2;
     border-radius: $borderRadius;
 
-    .LyricStanza__column__main
+    .Stanza__column__main
     & {
         padding-left: $js__margin__thick;
     }
 
-    .LyricStanzaCard__tabbed
+    .StanzaCard__tabbed
     & {
         padding-top: $js__margin__thin;
         border-top-left-radius: 0;
     }
 
-    .LyricStanza__title
+    .Stanza__title
     & {
         padding-top: $js__margin__thick;
     }

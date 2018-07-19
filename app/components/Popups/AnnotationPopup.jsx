@@ -147,8 +147,8 @@ class AnnotationPopup extends Component {
                     Boolean(renderableAnnotationIndex) &&
 
                     /**
-                     * If an annotation is selected, always show in popup if it's a
-                     * phone or lyric is expanded.
+                     * If an annotation is selected, always show in popup if
+                     * it's a phone or lyric is expanded.
                      */
                     (
                         !selectedCarouselNavIndex ||
@@ -171,7 +171,7 @@ class AnnotationPopup extends Component {
                     showArrows
                     bounceAnimate
                     hasWidePadding
-                    staticZIndex
+                    staticZIndex={!isOverlayingAnnotation}
                     popupName="Annotation"
                     className={cx(
                         inMain && 'AnnotationPopup__inMain'

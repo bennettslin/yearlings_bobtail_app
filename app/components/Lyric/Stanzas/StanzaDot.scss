@@ -24,26 +24,26 @@
     }
 }
 
-.LyricStanzaDot__lastStanza {
+.StanzaDot__lastStanza {
     max-height: 0;
 }
 
 .RM__narrative
-    .LyricStanzaDot__narrative,
+    .StanzaDot__narrative,
 .RM__backstory
-    .LyricStanzaDot__backstory,
+    .StanzaDot__backstory,
 .RM__observation
-    .LyricStanzaDot__observation,
+    .StanzaDot__observation,
 .RM__pun
-    .LyricStanzaDot__pun,
+    .StanzaDot__pun,
 .RM__reference
-    .LyricStanzaDot__reference,
+    .StanzaDot__reference,
 .RM__songwriting
-    .LyricStanzaDot__songwriting,
+    .StanzaDot__songwriting,
 .RM__portal
-    .LyricStanzaDot__portal,
+    .StanzaDot__portal,
 .RM__afterword
-    .LyricStanzaDot__afterword {
+    .StanzaDot__afterword {
 
     max-width: inherit;
     margin-top: $margin__lyricUnit;
@@ -54,7 +54,7 @@
         margin-left: $marginX__stanzaChildColumn;
     }
 
-    &.LyricStanzaDot__lastStanza {
+    &.StanzaDot__lastStanza {
         max-height: inherit;
     }
 }

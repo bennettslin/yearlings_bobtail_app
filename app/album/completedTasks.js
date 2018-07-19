@@ -3293,4 +3293,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Bug where nav toggled on with lyric expanded in mobile does not access annotations properly. Not sure to what degree heightless plays a role.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

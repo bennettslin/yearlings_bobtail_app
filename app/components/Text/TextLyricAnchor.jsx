@@ -17,7 +17,8 @@ const mapStateToProps = ({
     accessedAnnotationAnchorIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex
+    interactivatedVerseIndex,
+    isLyricExpanded
 }) => ({
     canLyricRender,
     renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
@@ -25,7 +26,8 @@ const mapStateToProps = ({
     accessedAnnotationAnchorIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex
+    interactivatedVerseIndex,
+    isLyricExpanded
 })
 
 class TextLyricAnchor extends Component {
@@ -40,6 +42,7 @@ class TextLyricAnchor extends Component {
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
 
         wikiIndex: PropTypes.number,
         wikiAnnotationIndex: PropTypes.number,
@@ -126,6 +129,7 @@ class TextLyricAnchor extends Component {
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
                 interactivatedVerseIndex,
+                isLyricExpanded,
 
                 wikiIndex,
                 wikiAnnotationIndex,
@@ -142,14 +146,19 @@ class TextLyricAnchor extends Component {
 
                 /**
                  * TODO: This conditional is repeated in Carousel,
-                 * StanzaDot, and TextLyricAnchor.
+                 * StanzaDot, and TextLyricAnchor. TextLyricAnchor is a little
+                 * different.
                  */
                 !selectedDotsIndex &&
                 interactivatedVerseIndex < 0 &&
 
                 // Let popup annotation show anchors when carousel is hidden.
-                Boolean(selectedCarouselNavIndex) ===
-                    !showAccessInPopupAnnotation
+                (
+                    Boolean(selectedCarouselNavIndex) ===
+                        !showAccessInPopupAnnotation ||
+
+                    isLyricExpanded
+                )
 
         /**
          * If any of the previous conditions ruled out isAccessed, it is ruled

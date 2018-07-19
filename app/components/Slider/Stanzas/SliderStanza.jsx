@@ -93,9 +93,9 @@ class SliderStanza extends Component {
                     `bgColour__stanza__${stanzaType}`,
 
                     {
-                        'LyricStanza__afterCursor': isAfterCursor,
-                        'LyricStanza__beforeCursor': isBeforeCursor,
-                        'LyricStanza__onCursor': isOnCursor
+                        'Stanza__afterCursor': isAfterCursor,
+                        'Stanza__beforeCursor': isBeforeCursor,
+                        'Stanza__onCursor': isOnCursor
                     }
                 )}
                 style={stanzaStyle}

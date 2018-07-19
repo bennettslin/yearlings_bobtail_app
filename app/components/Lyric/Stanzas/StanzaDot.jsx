@@ -17,14 +17,16 @@ const mapStateToProps = ({
     renderableStore,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex
+    interactivatedVerseIndex,
+    isLyricExpanded
 }) => ({
     canLyricRender,
     accessedAnnotationIndex,
     renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotsIndex,
-    interactivatedVerseIndex
+    interactivatedVerseIndex,
+    isLyricExpanded
 })
 
 /*************
@@ -41,6 +43,7 @@ class StanzaDot extends Component {
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
+        isLyricExpanded: PropTypes.bool.isRequired,
 
         // From parent.
         dotStanzaObject: PropTypes.object.isRequired,
@@ -88,7 +91,8 @@ class StanzaDot extends Component {
                 renderableAnnotationIndex,
                 selectedCarouselNavIndex,
                 selectedDotsIndex,
-                interactivatedVerseIndex
+                interactivatedVerseIndex,
+                isLyricExpanded
             } = this.props,
 
             { annotationIndex,
@@ -97,12 +101,14 @@ class StanzaDot extends Component {
             isAccessed =
                 /**
                  * TODO: This conditional is repeated in Carousel,
-                 * StanzaDot, and TextLyricAnchor.
+                 * StanzaDot, and TextLyricAnchor. Consolidate?
                  */
                 !selectedDotsIndex &&
                 interactivatedVerseIndex < 0 &&
-                Boolean(selectedCarouselNavIndex) &&
-
+                (
+                    selectedCarouselNavIndex ||
+                    isLyricExpanded
+                ) &&
                 annotationIndex === accessedAnnotationIndex,
 
             isSelected =
@@ -150,9 +156,9 @@ StanzaDotView = ({
             ref={setRef}
             className={cx(
                 'StanzaDot',
-                'LyricStanza__column',
+                'Stanza__column',
 
-                isLastStanza && 'LyricStanzaDot__lastStanza',
+                isLastStanza && 'StanzaDot__lastStanza',
 
                 // Scroll to dot stanza block upon annotation selection.
                 annotationIndex &&
