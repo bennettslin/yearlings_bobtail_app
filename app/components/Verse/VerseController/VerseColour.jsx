@@ -2,13 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import VerseCursor from './VerseCursor'
+
 const propTypes = {
     // From parent.
     isOnCursor: PropTypes.bool.isRequired,
     isAfterCursor: PropTypes.bool.isRequired,
     isInteractivated: PropTypes.bool.isRequired,
 
-    isOdd: PropTypes.bool.isRequired,
+    verseIndex: PropTypes.number.isRequired,
     inVerseBar: PropTypes.bool,
     inLyricVerse: PropTypes.bool,
     inSliderVerse: PropTypes.bool
@@ -20,12 +22,14 @@ VerseColour = ({
     isAfterCursor,
     isInteractivated,
 
-    isOdd,
+    verseIndex,
     inVerseBar,
     inLyricVerse,
     inSliderVerse
 
 }) => {
+
+    const isOdd = Boolean(verseIndex % 2)
 
     return (
         <div
@@ -50,7 +54,24 @@ VerseColour = ({
 
                 'absoluteFullContainer'
             )}
-        />
+        >
+            <VerseCursor
+                {...{
+                    isOnCursor,
+                    verseIndex
+                }}
+
+                /**
+                 * Give each verse in the verse bar a unique key to render a
+                 * new verse each time. This ensures that the cursor will not
+                 * animate from the far right for the previous verse to the
+                 * far left for the next verse.
+                 */
+                {...inVerseBar && {
+                    key: verseIndex
+                }}
+            />
+        </div>
     )
 }
 

@@ -3303,4 +3303,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Make cursor transitions smooth.`,
+        workedHours: 0,
+        neededHours: 3
+    },
 ]

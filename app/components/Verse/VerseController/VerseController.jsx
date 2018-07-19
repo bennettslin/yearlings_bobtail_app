@@ -9,7 +9,6 @@ import PropTypes from 'prop-types'
 
 import VerseAudio from '../VerseAudio/VerseAudio'
 import VerseColour from './VerseColour'
-import VerseCursor from './VerseCursor'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
@@ -143,7 +142,7 @@ class VerseControllerView extends Component {
 
                 <VerseColour
                     {...{
-                        isOdd: Boolean(verseIndex % 2),
+                        verseIndex,
                         isOnCursor,
                         isAfterCursor,
                         isInteractivated,
@@ -151,23 +150,6 @@ class VerseControllerView extends Component {
                         inVerseBar,
                         inLyricVerse,
                         inSliderVerse
-                    }}
-                />
-
-                <VerseCursor
-                    {...{
-                        isOnCursor,
-                        verseIndex
-                    }}
-
-                    /**
-                     * Give each verse in the verse bar a unique key to render
-                     * a new verse each time. This ensures that the cursor will
-                     * not animate from the far right for the previous verse to
-                     * the far left for the next verse.
-                     */
-                    {...inVerseBar && {
-                        key: verseIndex
                     }}
                 />
 

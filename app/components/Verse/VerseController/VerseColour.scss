@@ -1,4 +1,6 @@
 .VerseColour {
+    overflow: hidden;
+
     .parentIsShown
     & {
         transition:
@@ -51,7 +53,7 @@
         background-color: $bgColour__beforeSelected__odd;
         @include mixin__textShadow($bgColour__beforeSelected__odd);
 
-        color: $colour__beforeSelected__odd;
+        // color: $colour__beforeSelected__odd;
     }
 
     .RM__sliderMoving
@@ -61,7 +63,7 @@
         background-color: $bgColour__beforeSlider__odd;
         @include mixin__textShadow($bgColour__beforeSlider__odd);
 
-        color: $colour__beforeSlider__odd;
+        // color: $colour__beforeSlider__odd;
     }
 
     .RM__sliderNotMoving
@@ -71,7 +73,7 @@
         background-color: $bgColour__afterSelected__odd;
         @include mixin__textShadow($bgColour__afterSelected__odd);
 
-        color: $colour__afterSelected__odd;
+        // color: $colour__afterSelected__odd;
     }
 
     .RM__sliderMoving
@@ -81,7 +83,7 @@
         background-color: $bgColour__afterSlider__odd;
         @include mixin__textShadow($bgColour__afterSlider__odd);
 
-        color: $colour__afterSlider__odd;
+        // color: $colour__afterSlider__odd;
     }
 }
 
@@ -97,7 +99,7 @@
         background-color: $bgColour__beforeSelected__even;
         @include mixin__textShadow($bgColour__beforeSelected__even);
 
-        color: $colour__beforeSelected__even;
+        // color: $colour__beforeSelected__even;
     }
 
     .RM__sliderMoving
@@ -107,7 +109,7 @@
         background-color: $bgColour__beforeSlider__even;
         @include mixin__textShadow($bgColour__beforeSlider__even);
 
-        color: $colour__beforeSlider__even;
+        // color: $colour__beforeSlider__even;
     }
 
     .RM__sliderNotMoving
@@ -117,7 +119,7 @@
         background-color: $bgColour__afterSelected__even;
         @include mixin__textShadow($bgColour__afterSelected__even);
 
-        color: $colour__afterSelected__even;
+        // color: $colour__afterSelected__even;
     }
 
     .RM__sliderMoving
@@ -127,7 +129,7 @@
         background-color: $bgColour__afterSlider__even;
         @include mixin__textShadow($bgColour__afterSlider__even);
 
-        color: $colour__afterSlider__even;
+        // color: $colour__afterSlider__even;
     }
 }
 
@@ -201,6 +203,7 @@
     .RM__sliderNotMoving.RM__verseInactive
     .verseColour__hoverParent:hover
     &:not(.VerseColour__onCursor),
+
     .RM__sliderNotMoving.RM__verseActive
     &.VerseColour__interactivated {
 
