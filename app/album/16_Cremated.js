@@ -8,7 +8,7 @@ import { VERSES,
          BRIDGE,
          INTRO,
          REFRAIN,
-         IS_DOT_STANZA } from '../constants/lyrics'
+         IS_DOT_CARD } from '../constants/lyrics'
 import {
     CREMATED_CLIFF_KEY,
     CREMATED_CLIFF_CONVERTIBLE_KEY,
@@ -173,8 +173,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
@@ -203,8 +203,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `A`,
@@ -418,8 +418,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realise that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
                         dotKeys: {
@@ -903,8 +903,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         // NOTE: Change in recording? Connect to Uncanny Valley?
                         description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,

@@ -241,7 +241,7 @@ export const getAnnotationDotKeys = (
 }
 
 /**********
- * SLIDER *
+ * STANZA *
  **********/
 
 export const getSongStanzaConfigs = (songIndex) => {
@@ -256,6 +256,13 @@ export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
     { songVerseConfigs } = songObject
 
     return songVerseConfigs[verseIndex].stanzaIndex
+}
+
+export const getVerseDurationForVerseIndex = (songIndex, verseIndex) => {
+    const songObject = getSongObject(songIndex),
+    { songVerseConfigs } = songObject
+
+    return songVerseConfigs[verseIndex].verseDuration
 }
 
 /**********

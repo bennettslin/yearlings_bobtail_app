@@ -165,6 +165,7 @@ class VerseControllerView extends Component {
                     {...{
                         isOnCursor,
                         isAfterCursor,
+                        verseIndex,
                         startTime,
                         stanzaEndTime
                     }}

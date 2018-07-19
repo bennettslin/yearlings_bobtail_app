@@ -6,10 +6,10 @@ const LYRIC = 'lyric',
       EMPHASIS = 'emphasis',
       ANCHOR = 'anchor',
 
-      DOT_STANZA = 'dotStanza',
-      TOP_SIDE_STANZA = 'topSideCard',
-      BOTTOM_SIDE_STANZA = 'bottomSideCard',
-      SUB_STANZA = 'subCard'
+      SUB_CARD = 'subCard',
+      DOT_CARD = 'dotCard',
+      TOP_SIDE_CARD = 'topSideCard',
+      BOTTOM_SIDE_CARD = 'bottomSideCard'
 
 module.exports = {
 
@@ -22,10 +22,10 @@ module.exports = {
 
     WIKI: 'wiki',
 
-    DOT_STANZA,
-    TOP_SIDE_STANZA,
-    BOTTOM_SIDE_STANZA,
-    SUB_STANZA,
+    SUB_CARD,
+    DOT_CARD,
+    TOP_SIDE_CARD,
+    BOTTOM_SIDE_CARD,
 
     COLUMN_INDEX: 'columnIndex',
     LEFT_COLUMN: 'leftColumn',
@@ -35,8 +35,8 @@ module.exports = {
     DESTINATION_PORTAL_INDEX: 'destinationPortalIndex',
     SOURCE_PORTAL_INDEX: 'sourcePortalIndex',
 
-    IS_DOT_STANZA: 'isDotStanza',
-    HAS_SIDE_STANZAS: 'hasSideStanzas',
+    IS_DOT_CARD: 'isDotCard',
+    HAS_SIDE_CARDS: 'hasSideCards',
     IS_DOUBLESPEAKER: 'isDoublespeaker',
     IS_VERSE_BEGINNING_SPAN: 'isVerseBeginningSpan',
     IS_VERSE_ENDING_SPAN: 'isVerseEndingSpan',
@@ -71,10 +71,10 @@ module.exports = {
         RIGHT,
         ITALIC,
         EMPHASIS,
-        SUB_STANZA,
-        TOP_SIDE_STANZA,
-        BOTTOM_SIDE_STANZA,
-        DOT_STANZA
+        SUB_CARD,
+        TOP_SIDE_CARD,
+        BOTTOM_SIDE_CARD,
+        DOT_CARD
     ],
 
     /**

@@ -86,7 +86,7 @@ class Stanza extends Component {
                 sideCardType,
                 sideSubCardType,
                 subsequent,
-                dotStanza,
+                dotCard,
                 subCard,
                 topSideCard,
                 bottomSideCard
@@ -99,7 +99,7 @@ class Stanza extends Component {
             isTitleUnit = unitIndex === 0,
 
             hasSide = Boolean(topSideCard || bottomSideCard),
-            isDotOnly = Boolean(dotStanza) && unitArray.length === 1,
+            isDotOnly = Boolean(dotCard) && unitArray.length === 1,
             isSideBottomOnly = !topSideCard && Boolean(bottomSideCard),
 
             /**
@@ -130,7 +130,7 @@ class Stanza extends Component {
                     sideCardType,
                     sideSubCardType,
                     subsequent,
-                    dotStanza,
+                    dotCard,
                     subCard,
                     topSideCard,
                     bottomSideCard,
@@ -171,7 +171,7 @@ class StanzaView extends Component {
         isLastStanza: PropTypes.bool.isRequired,
 
         unitArray: PropTypes.array.isRequired,
-        dotStanza: PropTypes.object,
+        dotCard: PropTypes.object,
         subCard: PropTypes.array,
         topSideCard: PropTypes.array,
         bottomSideCard: PropTypes.array,
@@ -216,7 +216,7 @@ class StanzaView extends Component {
                 isTitleUnit,
                 isLastStanza,
 
-                dotStanza,
+                dotCard,
                 subCard,
                 topSideCard,
                 bottomSideCard,
@@ -302,11 +302,11 @@ class StanzaView extends Component {
                         />
                     </div>
                 }
-                {dotStanza &&
+                {dotCard &&
                     <StanzaDot
                         setLyricAnnotationRef={setLyricAnnotationRef}
                         isLastStanza={isDotOnly && isLastStanza}
-                        dotStanzaObject={dotStanza}
+                        dotStanzaObject={dotCard}
                         handleLyricAnnotationSelect={handleLyricAnnotationSelect}
                     />
                 }

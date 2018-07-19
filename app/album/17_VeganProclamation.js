@@ -11,7 +11,7 @@ import { VERSES,
          REFRAIN,
          SOLO,
          FORESHADOW_OF_PORTAL_PREFIX,
-         IS_DOT_STANZA } from '../constants/lyrics'
+         IS_DOT_CARD } from '../constants/lyrics'
 import {
     SHOW_STAGE_FRONT_FAR_KEY,
     SITA_APARTMENT_BED_KEY,
@@ -223,8 +223,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `As the previous song ends with me fading away while listening to my favourite records, the crackle of a needle on vinyl introduces the third and final song of the medley.`,
                         dotKeys: {
@@ -324,8 +324,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `As a child, I sat with my mother as she watched a movie set in WWII. After the final battle, the camera panned across a motionless scene of dead bodies and devastated houses, as a lone gramophone, preserved amidst the wreckage, played a sappy Italian parlour song. The ironic contrast stuck with me, and I thought it would work well here.`,
                         dotKeys: {
@@ -467,8 +467,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `Sasha recited these quotes for me over the phone. We recorded multiple takes because she found it hard to portray them as snippets of actual conversation. I had to admit to her that I didn't think to write them with that concern in mind. I was so pretentious at the time, I forgot that normal people don't pepper their conversations with pseudo-intellectual drivel.`,
                         dotKeys: {
@@ -687,8 +687,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `When Sita and I first met, she asked to hear some of my music. I had just bought a new multi-effects processor and played around with it, so I gave her a few excerpts from those experiments. She particularly liked one in which I had pitch-shifted my vocals an octave up, so I made it the basis for the second half of this song.`,
                         dotKeys: {
@@ -925,8 +925,8 @@ module.exports = {
         [
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `I was a vegan for the five years that I spent working on`,

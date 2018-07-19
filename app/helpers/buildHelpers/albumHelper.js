@@ -31,7 +31,7 @@ import {
 import {
     recurseToFindAnchors,
     registerTitle,
-    registerHasSideStanzas,
+    registerHasSideCards,
     initialRegisterStanzaTypes,
     registerIsDoublespeaker,
     registerAdminDotStanzas,
@@ -100,7 +100,7 @@ const _initialPrepareAlbum = (albumObject) => {
              * Let app know that song has side stanzas. Only applies to "On a
              * Golden Cord" and "Uncanny Valley Boy."
              */
-            registerHasSideStanzas(songObject)
+            registerHasSideCards(songObject)
 
             /**
              * Associate a type and index for each stanza, like verse, chorus,

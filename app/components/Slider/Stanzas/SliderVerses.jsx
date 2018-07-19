@@ -34,19 +34,12 @@ const SliderVerses = ({
                  * their times relative to the stanza.
                  */
                 const
-                    { verseStartTime } = verseObject,
+                    {
+                        verseStartTime,
+                        verseDuration
+                    } = verseObject,
 
-                    relativeStartTime = verseStartTime - stanzaStartTime,
-
-                    /**
-                     * If it's the last verse, its relative end time is
-                     * the stanza's relative total time. Otherwise,
-                     * it's the next verse's start time.
-                     */
-                    relativeEndTime =
-                        index === stanzaVerseConfigs.length - 1 ?
-                            stanzaDuration :
-                            stanzaVerseConfigs[index + 1].verseStartTime - stanzaStartTime
+                    relativeStartTime = verseStartTime - stanzaStartTime
 
                 return (
                     <SliderVerse
@@ -54,7 +47,7 @@ const SliderVerses = ({
                         {...{
                             verseIndex: stanzaFirstVerseIndex + index,
                             relativeStartTime,
-                            relativeEndTime,
+                            verseDuration,
                             stanzaDuration,
 
                             // TODO: Still needed for cursor?

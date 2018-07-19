@@ -11,7 +11,7 @@ import { REFRAIN,
          BRIDGE,
          CODA,
          OUTRO,
-         IS_DOT_STANZA } from '../constants/lyrics'
+         IS_DOT_CARD } from '../constants/lyrics'
 import {
     DISHROOM_KEY,
     BENNETT_APARTMENT_BED_KEY,
@@ -388,8 +388,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `Just as`,
@@ -469,8 +469,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `I wanted the music to sound sentimental with a few rough edges, so channelling`,
@@ -1138,8 +1138,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `The highlight of Nirvana's`,
@@ -1428,8 +1428,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `The ascending chord progression here symbolises falling in love, and eventually, sexual climax. Simple enough.`,
                         dotKeys: {
@@ -1558,8 +1558,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `The French expression`,

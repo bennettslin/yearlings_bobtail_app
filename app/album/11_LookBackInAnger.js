@@ -11,7 +11,7 @@ import { VERSES,
          INTRO,
          OUTRO,
          FORESHADOW_OF_PORTAL_PREFIX,
-         IS_DOT_STANZA } from '../constants/lyrics'
+         IS_DOT_CARD } from '../constants/lyrics'
 import {
     SHOW_STAGE_SIDE_1_KEY,
     SHOW_STAGE_SIDE_2_KEY,
@@ -205,8 +205,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `A fellow dishroom worker named Owen had a four-track cassette recorder, and some nights we would go back to his place to twiddle on it. Owen would tap out these intricate yet totally impromptu rhythms on plateware he swiped from the cafeteria. I did my best to conjure his spirit here, minus the impromptu part, of course.`,
                         dotKeys: {
@@ -319,8 +319,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `So as not to wake his neighbours, Owen would sing in muffled tones and then double track his vocals. I didn't have a cassette player handy to play his demos, so I took notes from`,
@@ -419,8 +419,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `When I asked Owen to recommend some great lyricists, he named just one: Nas. I hadn't given serious thought to hip hop at the time, believing it too far removed from my own songwriting approach to offer much useful wisdom. I've since corrected this oversight, but even as my lone point of reference back then,`,
@@ -600,8 +600,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `I recorded the cymbals here at an extremely low tape speed, which turned them into pitched percussion upon normal playback.`,
                         dotKeys: {

@@ -11,7 +11,7 @@ import { VERSES,
          BACKING,
          INTRO,
          OUTRO,
-         IS_DOT_STANZA } from '../constants/lyrics'
+         IS_DOT_CARD } from '../constants/lyrics'
 import {
     SITA_APARTMENT_COUCH_THOUGHT_KEY,
     OAKLAND_STREET_SIDE_KEY,
@@ -195,8 +195,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `The song of the white-throated sparrow here harks back to my childhood, as the breakup causes me to regress in emotional age. This sample is courtesy of the`,
@@ -264,8 +264,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `This song evokes the country style of my childhood hero`,
@@ -338,8 +338,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `I tuned the lead guitar in a way that allowed each note to be plucked as a`,
@@ -451,8 +451,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `To make sense of the breakup, I had to reconcile contradictory thoughts in my head, much like the citizens of George Orwell's`,
@@ -1163,8 +1163,8 @@ module.exports = {
         [
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `What surprised me most upon the album's release was that no one who reviewed it was willing to venture an opinion on doublespeaker rhyme. The consensus seemed to be that all new inventions will prove their mettle within the existing paradigm of live performance. But it's not just that doublespeaker rhyme flailed under this constraint— by necessity, openness to invention means allowing it to operate within its own paradigm. And so I came to see that indie rock, despite its reputation, is really a conservative movement at heart.`,
                         dotKeys: {

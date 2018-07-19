@@ -9,7 +9,7 @@ import { VERSES,
          PRECHORUS,
          CHORUS,
          REFRAIN,
-         IS_DOT_STANZA } from '../constants/lyrics'
+         IS_DOT_CARD } from '../constants/lyrics'
 import {
     TAIWAN_PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
@@ -130,8 +130,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `As a teenager, I tried to figure out how`,
@@ -197,8 +197,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `I wanted the vocals to sound sickly here, which worked out well, since I was guaranteed to catch an awful cold at some point during the five years that I worked on this album.`,
                         dotKeys: {
@@ -389,8 +389,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `I matched the passive-aggressiveness of the lyrics with woodwind screeches and scratch tones on bowed guitars.`,
                         dotKeys: {
@@ -648,8 +648,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `When I first began to write songs, I noticed that every other aspiring songwriter would figure out their chords upfront, then fit any feasible melody to go on top. But my theory was that the Beatles wrote the melody and chords together, allowing their music to unfold organically. I was always trying to write the next "Martha My Dear," which may be evident here.`,
                         dotKeys: {
@@ -749,8 +749,8 @@ module.exports = {
         [
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `Confused by the lack of interest in the album's release, I distilled my approach to writing songs into a lesson plan called`,

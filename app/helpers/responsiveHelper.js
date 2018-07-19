@@ -1,4 +1,4 @@
-import { HAS_SIDE_STANZAS, IS_DOUBLESPEAKER } from '../constants/lyrics'
+import { HAS_SIDE_CARDS, IS_DOUBLESPEAKER } from '../constants/lyrics'
 import { PHONE_CLASS,
          LS_MINI_CLASS,
          TABLET_CLASS,
@@ -117,11 +117,11 @@ export const getIsToggleInOverview = (deviceIndex) => {
 
 export const getShowOneOfTwoLyricColumns = (songIndex, deviceIndex) => {
     const selectedSong = getSongObject(songIndex),
-        { [HAS_SIDE_STANZAS]: hasSideStanzas,
+        { [HAS_SIDE_CARDS]: hasSideCards,
           [IS_DOUBLESPEAKER]: isDoublespeaker } = selectedSong
 
     // Applies to Uncanny Valley Boy.
-    if (hasSideStanzas && !isDoublespeaker) {
+    if (hasSideCards && !isDoublespeaker) {
         return getIsPhone(deviceIndex)
 
     // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.

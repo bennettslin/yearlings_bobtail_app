@@ -5,7 +5,7 @@ import cx from 'classnames'
 import DotAnchor from '../Anchor/DotAnchor'
 import TextAnchor from '../Anchor/TextAnchor'
 
-import { IS_DOT_STANZA } from '../../constants/lyrics'
+import { IS_DOT_CARD } from '../../constants/lyrics'
 
 const annotationTitlePropTypes = {
     // From parent.
@@ -31,7 +31,7 @@ AnnotationTitle = ({
         'fontSize__title',
         'flexCentreContainer'
     )}>
-        {annotationTitle === IS_DOT_STANZA ? (
+        {annotationTitle === IS_DOT_CARD ? (
             <DotAnchor
                 inAnnotation
                 isSelected={isSelected}

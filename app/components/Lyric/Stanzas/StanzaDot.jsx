@@ -83,7 +83,7 @@ class StanzaDot extends Component {
 
     render() {
 
-        // FIXME: Ideal to get dotStanza object from indices.
+        // FIXME: Ideal to get dotCard object from indices.
         const {
                 isLastStanza,
                 dotStanzaObject,

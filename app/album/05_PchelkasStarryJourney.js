@@ -12,7 +12,7 @@ import { VERSES,
          RESPONSE,
          INTRO,
          REFRAIN,
-         IS_DOT_STANZA } from '../constants/lyrics'
+         IS_DOT_CARD } from '../constants/lyrics'
 import {
     PRETEEN_BENNETT_ROOM_KEY,
     PRETEEN_BENNETT_ROOM_OPEN_BED_KEY,
@@ -254,8 +254,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `I needed a kid's voice to recite this quote, but no one I knew was popping them out just yet. So I had my sister do it.`,
                         dotKeys: {
@@ -275,8 +275,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `In keeping with the Russian theme of space dogs, I tried to evoke the sound of the`,
@@ -803,8 +803,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `The sound of space transmissions in the background was made by bending the whammy bar of an electric guitar while banging it on the carpet floor. It took almost fifty tries, and I had to retune each time.`
@@ -881,8 +881,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `I learned about Tuvan throat singing after a woman I dated took me to see a documentary called`,
@@ -1286,8 +1286,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `Taking a cue from David Bowie's`,
@@ -1346,8 +1346,8 @@ module.exports = {
         [
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `My brother currently lives in his own place and receives round-the-clock care through supported living services. He's doing well.`,
                         dotKeys: {

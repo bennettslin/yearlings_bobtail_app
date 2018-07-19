@@ -7,7 +7,7 @@ import { BACKSTORY,
 import { VERSES,
          CHORUS,
          POSTCHORUS,
-         IS_DOT_STANZA } from '../constants/lyrics'
+         IS_DOT_CARD } from '../constants/lyrics'
 import {
     MUSEUM_KEY,
     BACKSTAGE_KEY,
@@ -166,8 +166,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `In the final chapter of James Joyce's`,
@@ -228,8 +228,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `The restless thumping of a Motown groove insistently prods me to pour forth everything that I long to express.`,
                         dotKeys: {
@@ -757,8 +757,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `The band Television are well known for the complex interplay between their two lead guitars, and since I was going for a 70s sound, I listened to`,
@@ -989,8 +989,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `Children's albums from the 70s are a treasure trove of musical wisdom, including the soundtrack for`,
@@ -1075,8 +1075,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `Ambrose Bierce also wrote the short story`,

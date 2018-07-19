@@ -13,7 +13,7 @@ import { VERSES,
          OUTRO,
          REFRAIN,
          FLASHBACK_TO_PORTAL_PREFIX,
-         IS_DOT_STANZA } from '../constants/lyrics'
+         IS_DOT_CARD } from '../constants/lyrics'
 import {
     CHILDHOOD_BATHROOM_KEY,
     NORTH_HOLLYWOOD_HOUSES_KEY,
@@ -173,8 +173,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `In this song sung from my sister's perspective when we were children, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
@@ -243,8 +243,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             {
@@ -316,8 +316,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `The nonstop modulations between the`,
@@ -501,8 +501,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `I dampened the lead guitar strings by wrapping tissue around them near the bridge.`,
                         dotKeys: {
@@ -565,8 +565,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `The song ends in G\u2011flat major, the remaining major triad belonging to the`,
@@ -600,8 +600,8 @@ module.exports = {
         [
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `As I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,

@@ -24,7 +24,7 @@ class SliderVerse extends Component {
         // From parent.
         verseIndex: PropTypes.number.isRequired,
         relativeStartTime: PropTypes.number.isRequired,
-        relativeEndTime: PropTypes.number.isRequired,
+        verseDuration: PropTypes.number.isRequired,
         stanzaDuration: PropTypes.number.isRequired
     }
 
@@ -44,7 +44,7 @@ class SliderVerse extends Component {
                 /* eslint-enable no-unused-vars */
 
                 relativeStartTime,
-                relativeEndTime,
+                verseDuration,
                 stanzaDuration,
 
                 ...other
@@ -61,8 +61,7 @@ class SliderVerse extends Component {
             ),
 
             verseWidth = Math.ceil(
-                (relativeEndTime - relativeStartTime)
-                / stanzaDuration * 100
+                verseDuration / stanzaDuration * 100
             ),
 
             verseStyle = {

@@ -8,7 +8,7 @@ import { VERSES,
          INTRO,
          RESPONSE,
          OUTRO,
-         IS_DOT_STANZA } from '../constants/lyrics'
+         IS_DOT_CARD } from '../constants/lyrics'
 import {
     BENNETT_APARTMENT_COUCH_KEY,
     SHOW_STAGE_FRONT_KEY,
@@ -242,8 +242,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `This song is a carryover from back when the band was still just The Yearlings. At the time, I kept its meaning a secret by disguising Mara's name in various puns. In this recording, of course, I exaggerated my enunciation to make the puns obvious.`,
                         dotKeys: {
@@ -439,8 +439,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this fashion would be.`
@@ -485,8 +485,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: [
                             `I learned to play banjo by reading`,
@@ -558,8 +558,8 @@ module.exports = {
             },
             {
                 isUnitMap: true,
-                dotStanza: {
-                    anchor: IS_DOT_STANZA,
+                dotCard: {
+                    anchor: IS_DOT_CARD,
                     annotation: {
                         description: `Obviously, Jacob was a far better drummer than I am. To match his tempo, I had to record at a lower tape speed.`,
                         dotKeys: {
