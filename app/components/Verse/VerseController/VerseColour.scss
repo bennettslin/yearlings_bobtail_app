@@ -26,18 +26,26 @@
     .RM__verseInactive
     & {
         box-shadow: $boxShadow__cursorVerse;
-    }
-}
 
-// TODO: This should only apply to lyric in verse.
-.VerseColour__onCursor,
-.VerseCursor__onCursor {
-    .RM__verseInactive
-    & {
-        z-index: $zIndex__cursorVerse;
-        transform: scale(1, 1.2);
+        &.VerseColour__interactable {
+            z-index: $zIndex__cursorVerse;
+        }
 
-        border-radius: $borderRadius;
+        &.VerseColour__inLyricVerse {
+            border-radius: $borderRadius;
+            top: -$js__margin__thin;
+            left: -$js__margin__thin;
+            height: calc(100% + #{$js__margin__thin * 2});
+            width: calc(100% + #{$js__margin__thin * 2});
+        }
+
+        &.VerseColour__inSliderVerse {
+            border-radius: $borderRadius $borderRadius 0 0;
+            top: -2px;
+            left: -0.5px;
+            height: calc(100% + 2px);
+            width: calc(100% + 1px);
+        }
     }
 }
 

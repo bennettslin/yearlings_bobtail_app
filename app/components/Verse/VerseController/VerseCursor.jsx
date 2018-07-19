@@ -57,7 +57,7 @@ class VerseCursor extends Component {
                 {
                     ...isOnCursor && {
                         style: {
-                            transition: `height ${verseDuration}s linear`
+                            transition: `top ${verseDuration}s linear`
                         }
                     }
                 }

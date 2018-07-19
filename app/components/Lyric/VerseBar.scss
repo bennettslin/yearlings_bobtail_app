@@ -10,6 +10,7 @@
 }
 
 .VerseBar__animatable {
+    padding: $js__margin__thin;
 
     .VerseBar:hover
     & {

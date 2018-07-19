@@ -1,13 +1,22 @@
 .VerseCursor {
     background-color: rgba(200, 150, 250, 0.4);
-    height: 0;
+
+    // Transitioning top feels smoother than height, I think.
+    top: -100%;
+
+    // $gradient__lyric__desktop: linear-gradient(
+    //     rgba(200, 150, 250, 0.4) 999%,
+    //     transparent
+    // );
+
+    // background-image: $gradient__lyric__desktop;
 }
 
 .VerseCursor__onCursor {
 
     .RM__isPlaying
     & {
-        height: 100%;
+        top: 0;
     }
 
     .RM__isPaused
