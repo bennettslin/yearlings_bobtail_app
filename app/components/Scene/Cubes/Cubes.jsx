@@ -215,7 +215,7 @@ class Cubes extends Component {
                 canSceneRender &&
                 yIndex === renderableCubesYIndex
 
-        return (
+        return null && (
             <CubesView
                 {...{
                     yIndex,
