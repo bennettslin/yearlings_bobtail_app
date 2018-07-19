@@ -262,6 +262,13 @@ export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
  * SCENES *
  **********/
 
+export const getSongSceneConfigs = (songIndex) => {
+    const songObject = getSongObject(songIndex),
+        { songSceneConfigs } = songObject
+
+    return songSceneConfigs || []
+}
+
 export const getVerseIndexForNextScene = (
     songIndex,
     verseIndex,
@@ -273,45 +280,28 @@ export const getVerseIndexForNextScene = (
         return -1
     }
 
-    const scenesArray = getScenesArray(songIndex),
+    const songSceneConfigs = getSongSceneConfigs(songIndex),
 
-        renderableSceneIndex = getSceneIndexForVerseIndex(songIndex, verseIndex),
+        currentSceneIndex = getSceneIndexForVerseIndex(
+            songIndex,
+            verseIndex
+        ),
 
-        scenesCount = scenesArray.length,
+        scenesCount = songSceneConfigs.length,
 
         nextSceneIndex = (
-            renderableSceneIndex
+            currentSceneIndex
             + direction
             + scenesCount
         ) % scenesCount
 
-    return scenesArray[nextSceneIndex].firstVerseIndex
+    return songSceneConfigs[nextSceneIndex].firstVerseIndex
 }
 
 export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
+    const songVerseConfigs = getSongVerseConfigs(songIndex)
 
-    const scenesArray = getScenesArray(songIndex)
-
-    if (scenesArray.length) {
-
-        let counter = 0,
-            sceneIndex = 0
-
-        while (counter < scenesArray.length) {
-            const currentVerseIndex = scenesArray[counter].firstVerseIndex
-
-            if (verseIndex < currentVerseIndex) {
-                break
-            }
-
-            sceneIndex = counter
-            counter++
-        }
-
-        return sceneIndex
-    }
-
-    return 0
+    return songVerseConfigs[verseIndex].sceneIndex
 }
 
 export const getSceneObject = (songIndex, sceneIndex = 0) => {
@@ -319,13 +309,6 @@ export const getSceneObject = (songIndex, sceneIndex = 0) => {
         sceneObject = song.scenes
 
     return sceneObject[sceneIndex] || null
-}
-
-export const getScenesArray = (songIndex) => {
-    const songObject = getSongObject(songIndex),
-        { scenes: scenesArray } = songObject
-
-    return scenesArray || []
 }
 
 /*********

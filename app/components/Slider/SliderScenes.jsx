@@ -5,8 +5,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getScenesArray,
-         getSongTotalTime } from '../../helpers/dataHelper'
+import {
+    getSongSceneConfigs,
+    getSongTotalTime
+} from '../../helpers/dataHelper'
 
 const mapStateToProps = ({
     canSliderRender,
@@ -31,13 +33,13 @@ class SliderScenes extends Component {
     render() {
         const { renderableSongIndex } = this.props,
             totalTime = getSongTotalTime(renderableSongIndex),
-            scenesArray = getScenesArray(renderableSongIndex)
+            songSceneConfigs = getSongSceneConfigs(renderableSongIndex)
 
         return (
             <div className="SliderScenes">
-                {scenesArray.map((scene, sceneIndex) => {
+                {songSceneConfigs.map((sceneConfig, sceneIndex) => {
 
-                    const { time: sceneTime } = scene,
+                    const { adminSceneStartTime: sceneTime } = sceneConfig,
 
                         sceneWidth =
                         (totalTime - sceneTime) / totalTime * 100,

@@ -6,12 +6,6 @@ module.exports = [
         neededHours: 1
     },
 
-    {
-        taskName: `Have method to get sceneIndex for verseIndex, and revisit firstVerseIndex and lastVerseIndex weirdness.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     /**
      * Begin Hack Week work.
      */

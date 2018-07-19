@@ -1,10 +1,43 @@
 // Parse album data for build.
 
-import { LEFT, RIGHT, ANCHOR, COLUMN_INDEX, LEFT_COLUMN, RIGHT_COLUMN, PROPER_NOUN } from '../../constants/lyrics'
-import { registerCards, addDestinationPortalLinks, finalPrepareCard, addDestinationPortalIndices, addDestinationPortalFormats } from './annotationsHelper'
+import {
+    LEFT,
+    RIGHT,
+    ANCHOR,
+    COLUMN_INDEX,
+    LEFT_COLUMN,
+    RIGHT_COLUMN,
+    PROPER_NOUN
+} from '../../constants/lyrics'
+
+import {
+    registerCards,
+    addDestinationPortalLinks,
+    finalPrepareCard,
+    addDestinationPortalIndices,
+    addDestinationPortalFormats
+} from './annotationsHelper'
+
 import { getSongIsLogue } from '../dataHelper'
-import { adminGatherDrawings, adminFinaliseDrawings, adminRegisterDrawingTasks, finalRegisterScenes } from './drawingsHelper'
-import { recurseToFindAnchors, registerTitle, registerHasSideStanzas, initialRegisterStanzaTypes, registerIsDoublespeaker, registerAdminDotStanzas, finalRegisterStanzaTypes } from './lyricsHelper'
+
+import {
+    adminGatherDrawings,
+    gatherDrawings,
+    adminFinaliseDrawings,
+    adminRegisterDrawingTasks,
+    finalRegisterScenes
+} from './drawingsHelper'
+
+import {
+    recurseToFindAnchors,
+    registerTitle,
+    registerHasSideStanzas,
+    initialRegisterStanzaTypes,
+    registerIsDoublespeaker,
+    registerAdminDotStanzas,
+    finalRegisterStanzaTypes
+} from './lyricsHelper'
+
 import { getFormattedAnnotationTitle } from '../formatHelper'
 
 export const parseAlbumData = (albumObject) => {
@@ -53,6 +86,7 @@ const _initialPrepareAlbum = (albumObject) => {
 
         // This also collects the unit index for each scene.
         adminGatherDrawings(albumObject, songObject, songIndex)
+        gatherDrawings(albumObject, songObject, songIndex)
 
         if (!getSongIsLogue(songIndex, albumObject.songs)) {
 
@@ -102,8 +136,7 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
     lyricUnits.forEach(unitArray => {
 
         // Let unit know all the verse indices that it contains.
-        let firstVerseIndex,
-            lastVerseIndex
+        let firstVerseIndex
 
         unitArray.forEach(verseObject => {
 
@@ -131,15 +164,14 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
                 if (isNaN(firstVerseIndex)) {
                     firstVerseIndex = verseObject.verseIndex
                 }
-
-                // Keep setting last verse index.
-                lastVerseIndex = verseObject.verseIndex
             }
 
-            // If this is the unit map, add first and last verse indices.
+            /**
+             * If this is the unit map, add temp first verse index. This is
+             * used to register the scene later.
+             */
             if (verseObject.isUnitMap) {
-                verseObject.firstVerseIndex = firstVerseIndex;
-                verseObject.lastVerseIndex = lastVerseIndex;
+                verseObject.tempFirstVerseIndex = firstVerseIndex;
             }
 
             // Tell song its dot stanza count, for admin purposes.

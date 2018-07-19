@@ -3288,4 +3288,9 @@ module.exports = [
         workedHours: 3,
         neededHours: 3
     },
+    {
+        taskName: `Have method to get sceneIndex for verseIndex, and revisit firstVerseIndex and lastVerseIndex weirdness.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]
