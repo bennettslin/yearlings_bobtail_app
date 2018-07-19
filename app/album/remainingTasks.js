@@ -39,6 +39,12 @@ module.exports = [
         neededHours: 8
     },
 
+    {
+        taskName: `Improve method to get verse index for slider ratio. Begin by assuming closeness to slider verse index.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Mobile bugs. (Might be able to quickly get through once deployment
      * strategy is worked out.)
@@ -69,18 +75,6 @@ module.exports = [
         taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick.`,
         workedHours: 0,
         neededHours: 2
-    },
-
-    {
-        taskName: `Be smart about verse on cursor transitions. Don't transition when slider is moving.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `When paused, reset to verse start time.`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     /**

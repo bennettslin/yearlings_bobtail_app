@@ -59,6 +59,15 @@ class TimeVerseManager extends Component {
         })
     }
 
+    resetTimeOfSelectedVerse() {
+        // Called by audio manager when audio is paused.
+        const { selectedVerseIndex } = this.props
+
+        this.selectVerse({
+            selectedVerseIndex
+        })
+    }
+
     selectTime({
         selectedTimePlayed = 0,
         isPlayerAdvancing
@@ -80,8 +89,8 @@ class TimeVerseManager extends Component {
     }
 
     selectVerse({
-        selectedVerseIndex = 0,
         selectedSongIndex = this.props.selectedSongIndex,
+        selectedVerseIndex = 0,
 
         scrollLog
     }) {

@@ -3318,4 +3318,14 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `When paused, reset to verse start time.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Be smart about verse on cursor transitions. Don't transition when slider is moving.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

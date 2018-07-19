@@ -1,10 +1,11 @@
 .VerseColour {
     overflow: hidden;
 
+    .RM__sliderNotMoving
     .parentIsShown
     & {
         transition:
-        color $animationDuration__fast,
+        // color $animationDuration__fast,
         background-color $animationDuration__fast;
     }
 }
@@ -25,26 +26,33 @@
 .VerseColour__onCursor {
     .RM__verseInactive
     & {
-        box-shadow: $boxShadow__cursorVerse;
 
         &.VerseColour__interactable {
             z-index: $zIndex__cursorVerse;
         }
 
-        &.VerseColour__inLyricVerse {
-            border-radius: $borderRadius;
-            top: -$js__margin__thin;
-            left: -$js__margin__thin;
-            height: calc(100% + #{$js__margin__thin * 2});
-            width: calc(100% + #{$js__margin__thin * 2});
-        }
-
         &.VerseColour__inSliderVerse {
+            box-shadow: $boxShadow__cursorVerse;
+
             border-radius: $borderRadius $borderRadius 0 0;
             top: -2px;
             left: -0.5px;
             height: calc(100% + 2px);
             width: calc(100% + 1px);
+        }
+    }
+
+    .RM__verseInactive.RM__verseBarHidden
+    & {
+
+        &.VerseColour__inLyricVerse {
+            box-shadow: $boxShadow__cursorVerse;
+
+            border-radius: $borderRadius;
+            top: -$js__margin__thin;
+            left: -$js__margin__thin;
+            height: calc(100% + #{$js__margin__thin * 2});
+            width: calc(100% + #{$js__margin__thin * 2});
         }
     }
 }

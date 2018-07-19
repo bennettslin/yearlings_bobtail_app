@@ -34,7 +34,8 @@ class AudioManager extends Component {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
-        selectSong: PropTypes.func.isRequired
+        selectSong: PropTypes.func.isRequired,
+        resetTimeOfSelectedVerse: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -93,6 +94,11 @@ class AudioManager extends Component {
             this.props.selectSong({
                 selectedSongIndex: 1
             })
+        }
+
+        // Reset time to start of verse if toggling off.
+        if (!isPlaying) {
+            this.props.resetTimeOfSelectedVerse()
         }
 
         this.props.setIsPlaying(isPlaying)

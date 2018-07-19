@@ -260,6 +260,10 @@ class StateManager extends Component {
         return this.timeVerseManager.selectVerse(payload)
     }
 
+    resetTimeOfSelectedVerse(payload) {
+        return this.timeVerseManager.resetTimeOfSelectedVerse(payload)
+    }
+
     /********
      * TIPS *
      ********/
@@ -323,6 +327,7 @@ class StateManager extends Component {
         this.selectVerse = this.selectVerse.bind(this)
         this.selectTime = this.selectTime.bind(this)
         this.resetUpdatedTimePlayed = this.resetUpdatedTimePlayed.bind(this)
+        this.resetTimeOfSelectedVerse = this.resetTimeOfSelectedVerse.bind(this)
         this.toggleDot = this.toggleDot.bind(this)
         this.selectWiki = this.selectWiki.bind(this)
         this.selectCarouselNav = this.selectCarouselNav.bind(this)
@@ -409,6 +414,7 @@ class StateManager extends Component {
                 <AudioManager
                     setRef={node => (this.audioManager = node)}
                     selectSong={this.selectSong}
+                    resetTimeOfSelectedVerse={this.resetTimeOfSelectedVerse}
                 />
                 <CarouselManager
                     setRef={node => (this.carouselManager = node)}
