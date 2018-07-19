@@ -11,6 +11,7 @@ import { OVERLAP_MARGIN_SLIDER_STANZA } from '../../../constants/responsive'
 class SliderStanza extends Component {
 
     static propTypes = {
+        stanzaIndex: PropTypes.number.isRequired,
         isLastStanza: PropTypes.bool.isRequired,
         stanzaVerseConfigs: PropTypes.array.isRequired,
         stanzaEndTime: PropTypes.number.isRequired,
@@ -31,6 +32,7 @@ class SliderStanza extends Component {
 
     render() {
         const {
+                stanzaIndex,
                 isLastStanza,
                 songTotalTime,
 
@@ -88,6 +90,9 @@ class SliderStanza extends Component {
             <div
                 className={cx(
                     'SliderStanza',
+
+                    `CM__stanza${stanzaIndex}`,
+
                     `SliderStanza__${stanzaType}`,
                     'bgColour__sliderStanza__pattern',
                     `bgColour__stanza__${stanzaType}`,

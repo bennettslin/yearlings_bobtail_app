@@ -64,18 +64,24 @@
     justify-content: flex-end;
 }
 
-// These styles are just for dev purposes.
-// .Stanza__afterCursor {
-//     background-color: rgba(240, 200, 200, 0.5);
-//     border: 2px solid #f88;
-// }
+.RM__stanza0 .CM__stanza0,
+.RM__stanza1 .CM__stanza1,
+.RM__stanza2 .CM__stanza2,
+.RM__stanza3 .CM__stanza3,
+.RM__stanza4 .CM__stanza4,
+.RM__stanza5 .CM__stanza5,
+.RM__stanza6 .CM__stanza6,
+.RM__stanza7 .CM__stanza7,
+.RM__stanza8 .CM__stanza8,
+.RM__stanza9 .CM__stanza9,
+.RM__stanza10 .CM__stanza10,
+.RM__stanza11 .CM__stanza011
+.RM__stanza12 .CM__stanza12,
+.RM__stanza13 .CM__stanza13,
+.RM__stanza14 .CM__stanza14 {
 
-// .Stanza__onCursor {
-//     background-color: rgba(240, 240, 200, 0.5);
-//     border: 2px solid #8f8;
-// }
-
-// .Stanza__beforeCursor {
-//     background-color: rgba(200, 200, 240, 0.5);
-//     border: 2px solid #88f;
-// }
+    // TODO: Improve these styles, obviously.
+    background-color: rgba(240, 240, 200, 0.5);
+    border: 2px solid #8f8;
+    z-index: 50;
+}

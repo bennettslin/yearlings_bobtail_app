@@ -239,12 +239,15 @@ class StanzaView extends Component {
                 setLyricAnnotationRef
             } = other
 
+        console.error('rerender stanza')
+
         return (
             <div
                 className={cx(
                     'Stanza',
 
-                    !isNaN(stanzaIndex) && `stanza__${stanzaIndex}`,
+                    !isNaN(stanzaIndex) && `CM__stanza${stanzaIndex}`,
+
                     `unit__${unitIndex}`,
 
                     isTitleUnit ? 'fontSize__title' : 'fontSize__verse',

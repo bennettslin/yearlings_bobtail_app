@@ -83,6 +83,7 @@ class SliderStanzas extends Component {
                         <SliderStanza
                             key={stanzaIndex}
                             {...{
+                                stanzaIndex,
                                 isLastStanza,
                                 songTotalTime,
 
