@@ -358,26 +358,6 @@ export const recurseToFindAnchors = ({
         })
 
         songObject.tempVerseIndexCounter++
-
-    /**
-     * Now that we have access to the entire songVerseConfigs array, let each
-     * lyric entity know its end time. This is for a verse in a lyric stanza to
-     * pass to its verse cursor.
-     */
-    } else if (!isNaN(time)) {
-
-        const { verseIndex } = lyricEntity,
-            { songVerseConfigs } = songObject
-
-        // Its end time is the start time of the next verse.
-        if (verseIndex < songVerseConfigs.length - 1) {
-            lyricEntity.endTime =
-                songVerseConfigs[verseIndex + 1].verseStartTime
-
-        // Its end time is the song's end time.
-        } else {
-            lyricEntity.endTime = songObject.totalTime
-        }
     }
 
     // Recurse until object with anchor key is found.

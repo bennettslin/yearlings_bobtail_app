@@ -1,10 +1,6 @@
-/* eslint-disable */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
-import { getCursorStatusClassName } from './verseControllerHelper'
 
 const propTypes = {
     // From parent.
@@ -31,11 +27,6 @@ VerseColour = ({
 
 }) => {
 
-    const cursorStatusClassName = getCursorStatusClassName({
-        isOnCursor,
-        isAfterCursor
-    })
-
     return (
         <div
             className={cx(
@@ -50,8 +41,11 @@ VerseColour = ({
                     'VerseColour__odd' :
                     'VerseColour__even',
 
-                // onCursor, beforeCursor, or afterCursor.
-                `VerseColour__${cursorStatusClassName}`,
+                isOnCursor && 'VerseColour__onCursor',
+                !isOnCursor && `VerseColour__${
+                    isAfterCursor ? 'afterCursor' : 'beforeCursor'
+                }`,
+
                 isInteractivated && 'VerseColour__interactivated',
 
                 'absoluteFullContainer'

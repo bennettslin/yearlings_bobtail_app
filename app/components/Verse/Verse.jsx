@@ -183,7 +183,6 @@ VerseView = ({
     const {
             inVerseBar,
             verseIndex,
-            verseObject,
             isTitle
         } = other
 
@@ -214,9 +213,7 @@ VerseView = ({
                     inVerse
                     {...{
                         inVerseBar,
-                        verseIndex,
-                        startTime: verseObject.time,
-                        stanzaEndTime: verseObject.endTime
+                        verseIndex
                     }}
                     {...!inVerseBar && {
                         handleLyricVerseSelect

@@ -1,19 +1,19 @@
 .VerseCursor {
     background-color: rgba(200, 150, 250, 0.4);
+    height: 0;
 }
 
 .VerseCursor__onCursor {
 
-    .RM__sliderNotMoving
+    .RM__isPlaying
     & {
-        transition: width $animationDuration__default;
+        height: 100%;
     }
-}
 
-.VerseCursor__beforeCursor {
-    width: 100%;
-}
-
-.VerseCursor__afterCursor {
-    width: 0;
+    .RM__isPaused
+    &,
+    .RM__sliderMoving
+    & {
+        transition: none !important;
+    }
 }

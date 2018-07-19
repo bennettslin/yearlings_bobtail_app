@@ -6,17 +6,12 @@ import SliderVerse from './SliderVerse'
 
 const propTypes = {
     stanzaVerseConfigs: PropTypes.array.isRequired,
-    stanzaEndTime: PropTypes.number.isRequired,
     stanzaDuration: PropTypes.number.isRequired
 }
 
 const SliderVerses = ({
-
     stanzaVerseConfigs,
-
-    stanzaEndTime,
     stanzaDuration
-
 }) => {
 
     const stanzaFirstVerseIndex = stanzaVerseConfigs[0].verseIndex,
@@ -48,11 +43,7 @@ const SliderVerses = ({
                             verseIndex: stanzaFirstVerseIndex + index,
                             relativeStartTime,
                             verseDuration,
-                            stanzaDuration,
-
-                            // TODO: Still needed for cursor?
-                            startTime: verseStartTime,
-                            stanzaEndTime
+                            stanzaDuration
                         }}
                     />
                 )

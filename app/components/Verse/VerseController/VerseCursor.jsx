@@ -1,88 +1,69 @@
 // Text displays to indicate time spent and remaining.
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getCursorStatusClassName } from './verseControllerHelper'
+import { getVerseDurationForVerseIndex } from '../../../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
-    selectedTimePlayed
+    canLyricRender,
+    renderableStore
 }) => ({
-    selectedTimePlayed
+    canLyricRender,
+    renderableSongIndex: renderableStore.renderableSongIndex
 })
 
-const verseCursorPropTypes = {
-    // Through Redux.
-    selectedTimePlayed: PropTypes.number.isRequired,
+class VerseCursor extends Component {
 
-    // From parent.
-    isOnCursor: PropTypes.bool.isRequired,
+    static propTypes = {
+        // Through Redux.
+        canLyricRender: PropTypes.bool.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
 
-    // Not passed by verse bar.
-    isAfterCursor: PropTypes.bool,
-
-    startTime: PropTypes.number.isRequired,
-    stanzaEndTime: PropTypes.number.isRequired
-},
-
-VerseCursor = ({
-
-    selectedTimePlayed,
-
-    isOnCursor,
-    isAfterCursor,
-    startTime,
-    stanzaEndTime
-
-}) => {
-
-    const cursorStatusClassName = getCursorStatusClassName({
-            isOnCursor: isOnCursor,
-            isAfterCursor: isAfterCursor
-        }),
-
-        cursorStyle = {}
-
-    if (isOnCursor) {
-        const relativeTotalTime = stanzaEndTime - startTime
-
-        let relativeTimePlayed = selectedTimePlayed - startTime
-
-        if (relativeTimePlayed < 0) {
-            relativeTimePlayed = 0
-
-        } else if (relativeTimePlayed > relativeTotalTime) {
-            relativeTimePlayed = relativeTotalTime
-        }
-
-        const cursorWidthPercentage =
-                (relativeTimePlayed / relativeTotalTime) * 100
-
-        cursorStyle.width = `${cursorWidthPercentage}%`
-
-        /**
-         * This ensures that when a verse before cursor is selected, the cursor
-         * does not animate from far right to far left.
-         */
-        if (!cursorWidthPercentage) {
-            cursorStyle.maxWidth = cursorStyle.width
-        }
+        // From parent.
+        isOnCursor: PropTypes.bool.isRequired,
+        verseIndex: PropTypes.number.isRequired
     }
 
-    return (
-        <div
-            className={cx(
-                'VerseCursor',
-                `VerseCursor__${cursorStatusClassName}`,
-                'absoluteFullContainer'
-            )}
-            style={cursorStyle}
-        />
-    )
-}
+    shouldComponentUpdate(nextProps) {
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+            props: this.props,
+            nextProps
+        })
+    }
 
-VerseCursor.propTypes = verseCursorPropTypes
+    render() {
+        const {
+                renderableSongIndex,
+                verseIndex,
+                isOnCursor
+            } = this.props,
+
+            verseDuration = getVerseDurationForVerseIndex(
+                renderableSongIndex,
+                verseIndex
+            )
+
+        return (
+            <div
+                className={cx(
+                    'VerseCursor',
+                    isOnCursor && `VerseCursor__onCursor`,
+                    'absoluteFullContainer'
+                )}
+                {
+                    ...isOnCursor && {
+                        style: {
+                            transition: `height ${verseDuration}s linear`
+                        }
+                    }
+                }
+            />
+        )
+    }
+}
 
 export default connect(mapStateToProps)(VerseCursor)
