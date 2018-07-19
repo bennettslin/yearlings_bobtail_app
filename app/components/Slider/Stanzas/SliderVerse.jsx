@@ -56,7 +56,7 @@ class SliderVerse extends Component {
              * Round left down, and width up, to ensure that there are no gaps
              * between slider verses.
              */
-            verseLeft = Math.floor(
+            verseLeft = (
                 relativeStartTime / stanzaDuration * 100
             ),
 
