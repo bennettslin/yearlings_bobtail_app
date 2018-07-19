@@ -18,7 +18,12 @@ import { SHOWN,
          OVERVIEW_OPTIONS,
          TIPS_OPTIONS } from '../constants/options'
 import { DEVICE_OBJECTS } from '../constants/responsive'
-import { getSongIsLogue } from '../helpers/dataHelper'
+
+import {
+    getSongIsLogue,
+    getStanzaIndexForVerseIndex
+} from '../helpers/dataHelper'
+
 import { getPrefixPrependedClassNames } from '../helpers/domHelper'
 import { getIsDesktop, getIsTabletOrMini } from '../helpers/responsiveHelper'
 
@@ -39,8 +44,11 @@ class Root extends Component {
         isSliderMoving: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
+        renderableSongIndex: PropTypes.number.isRequired,
+        renderableVerseIndex: PropTypes.number.isRequired,
+        renderableAnnotationIndex: PropTypes.number.isRequired,
+        sliderVerseIndex: PropTypes.number.isRequired,
         selectedAccessIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedCarouselNavIndex: PropTypes.number.isRequired,
         selectedDotKeys: PropTypes.object.isRequired,
         selectedDotsIndex: PropTypes.number.isRequired,
@@ -48,7 +56,6 @@ class Root extends Component {
         selectedOverviewIndex: PropTypes.number.isRequired,
         selectedTipsIndex: PropTypes.number.isRequired,
         selectedScoreIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
         selectedTitleIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
 
@@ -135,16 +142,14 @@ class Root extends Component {
             appMounted,
             selectedAdminIndex,
             deviceIndex,
-            interactivatedVerseIndex,
             selectedAccessIndex,
-            selectedAnnotationIndex,
+            renderableAnnotationIndex,
             selectedCarouselNavIndex,
             selectedDotKeys,
             selectedDotsIndex,
             selectedLyricColumnIndex,
             selectedOverviewIndex,
             selectedScoreIndex,
-            selectedSongIndex,
             selectedTipsIndex,
             selectedTitleIndex,
             selectedWikiIndex,
@@ -152,6 +157,10 @@ class Root extends Component {
             isSliderTouched,
             isSliderMoving,
             isLyricExpanded,
+            renderableSongIndex,
+            renderableVerseIndex,
+            sliderVerseIndex,
+            interactivatedVerseIndex,
             showOneOfTwoLyricColumns,
             isHeightlessLyricColumn,
             showShrunkNavIcon,
@@ -175,7 +184,7 @@ class Root extends Component {
             isDesktop = getIsDesktop(deviceIndex),
             isTabletOrMini = getIsTabletOrMini(deviceIndex),
 
-            isLogue = getSongIsLogue(selectedSongIndex),
+            isLogue = getSongIsLogue(renderableSongIndex),
 
             singleShownLyricColumnKey = getSingleShownLyricColumnKey({
                 showOneOfTwoLyricColumns,
@@ -186,7 +195,7 @@ class Root extends Component {
                 deviceIndex,
                 isLyricExpanded,
                 isHeightlessLyricColumn,
-                selectedAnnotationIndex,
+                renderableAnnotationIndex,
                 selectedScoreIndex,
                 selectedTitleIndex,
                 selectedWikiIndex
@@ -206,7 +215,19 @@ class Root extends Component {
                 && !showOverlay
                 && !isLyricExpanded
                 && !overviewShown
-                && !tipsShown
+                && !tipsShown,
+
+            /**
+             * If slider touched, compare stanza to slider verse. Otherwise,
+             * compare it to selected verse.
+             */
+            cursorVerseIndex = sliderVerseIndex > -1 ?
+                sliderVerseIndex :
+                renderableVerseIndex,
+
+            cursorStanzaIndex = getStanzaIndexForVerseIndex(
+                renderableSongIndex, cursorVerseIndex
+            )
 
         return appMounted && (
             <div
@@ -224,12 +245,8 @@ class Root extends Component {
 
                     isLogue ? 'RM__logue' : 'RM__song',
                     isPlaying ? 'RM__isPlaying' : 'RM__isPaused',
-                    isSliderMoving ? 'RM__sliderMoving' : 'RM__sliderNotMoving',
-                    { 'RM__sliderTouched': isSliderTouched },
-                    interactivatedVerseIndex < 0 ?
-                        'RM__verseInactive' : 'RM__verseActive',
 
-                    selectedAnnotationIndex ?
+                    renderableAnnotationIndex ?
                         'RM__annotationShown' : 'RM__annotationHidden',
                     { 'RM__carouselExpanded': selectedCarouselNavIndex },
                     selectedDotsIndex ? 'RM__dotsShown' : 'RM__dotsHidden',
@@ -261,10 +278,26 @@ class Root extends Component {
                         'RM__verseBarAbove': isVerseBarAbove,
                         'RM__verseBarBelow': isVerseBarBelow,
                         'RM__manualScroll': isManualScroll,
-                        'RM__bothLyricColumnsShown': !singleShownLyricColumnKey
+                        'RM__bothLyricColumnsShown': !singleShownLyricColumnKey,
+                        'RM__sliderTouched': isSliderTouched,
                     },
 
-                    getPrefixPrependedClassNames(selectedDotKeys, 'RM')
+                    getPrefixPrependedClassNames(selectedDotKeys, 'RM'),
+
+                    // Relevant to verse index classes.
+                    isSliderMoving ? 'RM__sliderMoving' : 'RM__sliderNotMoving',
+
+                    interactivatedVerseIndex < 0 ?
+                        'RM__verseInactive' : 'RM__verseActive',
+
+                    `RM__stanza${cursorStanzaIndex}`
+
+                    // !isSliderMoving && interactivatedVerseIndex < 0 &&
+                    //     `RM__rV${renderableVerseIndex}`,
+                    // isSliderMoving &&
+                    //     `RM__sV${sliderVerseIndex}`,
+                    // interactivatedVerseIndex >= 0 &&
+                    //     `RM__iV${interactivatedVerseIndex}`
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}
@@ -303,22 +336,21 @@ const mapStateToProps = ({
     selectedAdminIndex,
     interactivatedVerseIndex,
     selectedAccessIndex,
-    selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
     selectedDotsIndex,
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedScoreIndex,
-    selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
     selectedWikiIndex,
     isLyricExpanded,
     showOneOfTwoLyricColumns,
-    deviceStore,
     isPlaying,
+    deviceStore,
     sliderStore,
+    renderableStore,
     isHeightlessLyricColumn,
     showShrunkNavIcon,
     isScoresTipsInMain,
@@ -331,23 +363,25 @@ const mapStateToProps = ({
     selectedAdminIndex,
     interactivatedVerseIndex,
     selectedAccessIndex,
-    selectedAnnotationIndex,
     selectedCarouselNavIndex,
     selectedDotKeys,
     selectedDotsIndex,
     selectedLyricColumnIndex,
     selectedOverviewIndex,
     selectedScoreIndex,
-    selectedSongIndex,
     selectedTipsIndex,
     selectedTitleIndex,
     selectedWikiIndex,
     isLyricExpanded,
     showOneOfTwoLyricColumns,
-    deviceIndex: deviceStore.deviceIndex,
     isPlaying,
+    deviceIndex: deviceStore.deviceIndex,
     isSliderTouched: sliderStore.isSliderTouched,
     isSliderMoving: sliderStore.isSliderMoving,
+    sliderVerseIndex: sliderStore.sliderVerseIndex,
+    renderableSongIndex: renderableStore.renderableSongIndex,
+    renderableVerseIndex: renderableStore.renderableVerseIndex,
+    renderableAnnotationIndex: renderableStore.renderableAnnotationIndex,
     isHeightlessLyricColumn,
     showShrunkNavIcon,
     isScoresTipsInMain,
