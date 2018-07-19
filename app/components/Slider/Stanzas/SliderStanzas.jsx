@@ -50,14 +50,14 @@ class SliderStanzas extends Component {
                 'SliderStanzas',
                 'absoluteFullContainer'
             )}>
-                {songStanzaConfigs.map((sliderStanzaConfig, stanzaIndex) => {
+                {songStanzaConfigs.map((songStanzaConfig, stanzaIndex) => {
 
                     const
                         {
                             stanzaVerseConfigs,
                             stanzaEndTime,
                             stanzaType
-                        } = sliderStanzaConfig,
+                        } = songStanzaConfig,
 
                         isLastStanza =
                             stanzaIndex === songStanzaConfigs.length - 1,

@@ -243,8 +243,8 @@ export const recurseToFindAnchors = ({
             stanzaIndex++
         }
 
-        const sliderStanzaConfig = songStanzaConfigs[stanzaIndex],
-            stanzaFirstVerseConfig = sliderStanzaConfig.stanzaVerseConfigs[0]
+        const songStanzaConfig = songStanzaConfigs[stanzaIndex],
+            stanzaFirstVerseConfig = songStanzaConfig.stanzaVerseConfigs[0]
 
         if (isNaN(stanzaFirstVerseConfig.verseIndex)) {
             /**
@@ -254,7 +254,7 @@ export const recurseToFindAnchors = ({
             stanzaFirstVerseConfig.verseIndex = tempVerseIndexCounter
 
         } else {
-            sliderStanzaConfig.stanzaVerseConfigs.push(
+            songStanzaConfig.stanzaVerseConfigs.push(
                 {
                     verseIndex: tempVerseIndexCounter,
 
@@ -275,7 +275,7 @@ export const recurseToFindAnchors = ({
          */
         if (
             stanzaIndex > 0 &&
-            sliderStanzaConfig.stanzaVerseConfigs.length === 1
+            songStanzaConfig.stanzaVerseConfigs.length === 1
         ) {
             songStanzaConfigs[stanzaIndex - 1].stanzaEndTime =
                     lyricEntity.time
@@ -285,7 +285,7 @@ export const recurseToFindAnchors = ({
         if (
             stanzaIndex === songStanzaConfigs.length - 1
         ) {
-            sliderStanzaConfig.stanzaEndTime =
+            songStanzaConfig.stanzaEndTime =
                 songObject.totalTime
         }
 
