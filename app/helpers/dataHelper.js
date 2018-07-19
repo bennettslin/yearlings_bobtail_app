@@ -251,6 +251,13 @@ export const getSongStanzaConfigs = (songIndex) => {
     return songStanzaConfigs || []
 }
 
+export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
+    const songObject = getSongObject(songIndex),
+    { songVerseConfigs } = songObject
+
+    return songVerseConfigs[verseIndex].stanzaIndex
+}
+
 /**********
  * SCENES *
  **********/

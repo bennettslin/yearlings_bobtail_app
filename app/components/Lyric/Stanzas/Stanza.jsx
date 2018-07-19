@@ -1,4 +1,11 @@
-// Component to show main stanza, side stanza, and dot stanza for stanza.
+/**
+ * Component to show main stanza, side stanza, and dot stanza for stanza. It
+ * is somewhat misnamed, as it doesn't distinguish between stanza and unit. A
+ * stanza encompasses all the cards grouped under a single stanza type and
+ * optional index, such as Verse 1 or Bridge. A unit is the basic lyric unit by
+ * which I had originally organised the lyric data. A stanza consists of one or
+ * more units.
+ */
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -7,7 +14,10 @@ import cx from 'classnames'
 import StanzaCard from './StanzaCard'
 import StanzaDot from './StanzaDot'
 import { TITLE } from '../../../constants/lyrics'
-import { getLyricUnitArray } from '../../../helpers/dataHelper'
+import {
+    getLyricUnitArray,
+    getStanzaIndexForVerseIndex
+} from '../../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -75,10 +85,6 @@ class Stanza extends Component {
                 subCardType,
                 sideCardType,
                 sideSubCardType,
-
-                firstVerseIndex,
-                lastVerseIndex,
-
                 subsequent,
                 dotStanza,
                 subCard,
@@ -98,15 +104,18 @@ class Stanza extends Component {
 
             /**
              * If slider touched, compare unit to slider verse. Otherwise,
-             * compare to selected verse.
+             * compare to selected verse. Same as slider stanza.
              */
             cursorVerseIndex = sliderVerseIndex > -1 ?
                 sliderVerseIndex : renderableVerseIndex,
 
-            cursorAfterStanza = lastVerseIndex < cursorVerseIndex,
-            cursorBeforeStanza = firstVerseIndex > cursorVerseIndex,
-            cursorInStanza = firstVerseIndex <= cursorVerseIndex &&
-                lastVerseIndex >= cursorVerseIndex
+            cursorStanzaIndex = getStanzaIndexForVerseIndex(
+                renderableSongIndex, cursorVerseIndex
+            ),
+
+            isBeforeCursor = stanzaIndex > cursorStanzaIndex,
+            isAfterCursor = stanzaIndex < cursorStanzaIndex,
+            isOnCursor = stanzaIndex === cursorStanzaIndex
 
         return (
             <StanzaView {...other}
@@ -129,9 +138,9 @@ class Stanza extends Component {
                     hasSide,
                     isDotOnly,
                     isSideBottomOnly,
-                    cursorAfterStanza,
-                    cursorBeforeStanza,
-                    cursorInStanza,
+                    isBeforeCursor,
+                    isAfterCursor,
+                    isOnCursor,
                     stanzaType: isTitleUnit ? TITLE : stanzaType
                 }}
             />
@@ -172,9 +181,10 @@ class StanzaView extends Component {
         hasSide: PropTypes.bool.isRequired,
         isDotOnly: PropTypes.bool.isRequired,
         isSideBottomOnly: PropTypes.bool.isRequired,
-        cursorBeforeStanza: PropTypes.bool.isRequired,
-        cursorAfterStanza: PropTypes.bool.isRequired,
-        cursorInStanza: PropTypes.bool.isRequired,
+
+        isAfterCursor: PropTypes.bool.isRequired,
+        isBeforeCursor: PropTypes.bool.isRequired,
+        isOnCursor: PropTypes.bool.isRequired,
 
         handleLyricAnnotationSelect: PropTypes.func.isRequired,
         setLyricAnnotationRef: PropTypes.func.isRequired
@@ -216,9 +226,9 @@ class StanzaView extends Component {
                 isDotOnly,
                 isSideBottomOnly,
 
-                cursorBeforeStanza,
-                cursorAfterStanza,
-                cursorInStanza,
+                isAfterCursor,
+                isBeforeCursor,
+                isOnCursor,
 
                 ...other
             } = this.props,
@@ -243,9 +253,10 @@ class StanzaView extends Component {
                       'LyricStanza__title': isTitleUnit,
 
                       // It's only ever one of these three.
-                      'LyricStanza__verseBefore': cursorBeforeStanza,
-                      'LyricStanza__verseAfter': cursorAfterStanza,
-                      'LyricStanza__verseIn': cursorInStanza,
+                      'LyricStanza__afterCursor': isAfterCursor,
+                      'LyricStanza__beforeCursor': isBeforeCursor,
+                      'LyricStanza__onCursor': isOnCursor,
+
                       'fontSize__lyricMultipleColumns': hasSide },
 
                     subsequent ?

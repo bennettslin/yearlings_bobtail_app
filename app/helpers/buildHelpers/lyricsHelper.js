@@ -113,8 +113,6 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
             // If it's not a subsequent stanza, establish new index.
             if (!unitMapObject.subsequent) {
 
-                // Tell unit its stanza index.
-                unitMapObject.stanzaIndex = songStanzaConfigs.length
 
                 /**
                  * This will let audio slider know the relative width of
@@ -135,6 +133,9 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
                     tempStanzaTypeCounters[stanzaType] || 0
                 ) + 1
             }
+
+            // Tell unit and subsequent units their stanza index.
+            unitMapObject.stanzaIndex = songStanzaConfigs.length - 1
 
             // Tell unit its stanza type index.
             unitMapObject.stanzaTypeIndex = tempStanzaTypeCounters[stanzaType]

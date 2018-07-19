@@ -3278,4 +3278,9 @@ module.exports = [
         workedHours: 6,
         neededHours: 6
     },
+    {
+        taskName: `Consolidate logic to determine stanza with cursor verse.`,
+        workedHours: 10,
+        neededHours: 10
+    }
 ]

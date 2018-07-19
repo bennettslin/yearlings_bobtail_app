@@ -5,12 +5,6 @@ module.exports = [
      */
 
     {
-        taskName: `Consolidate logic to determine stanza with cursor verse.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Cursor transitions. Style cursor verse to expand based on fixed constants, not percentages. Also ensure that slider cursor verse is different from lyric cursor verse, and don't expand cursor verse in verse bar at all.`,
         workedHours: 0,
         neededHours: 5

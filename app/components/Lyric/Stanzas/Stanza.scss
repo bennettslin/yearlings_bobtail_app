@@ -65,14 +65,17 @@
 }
 
 // These styles are just for dev purposes.
-// .LyricStanza__verseBefore {
-//     background-color: rgba(240, 200, 200, 0.5);
-// }
+.LyricStanza__afterCursor {
+    background-color: rgba(240, 200, 200, 0.5);
+    border: 2px solid #f88;
+}
 
-// .LyricStanza__verseAfter {
-//     background-color: rgba(240, 240, 200, 0.5);
-// }
+.LyricStanza__onCursor {
+    background-color: rgba(240, 240, 200, 0.5);
+    border: 2px solid #8f8;
+}
 
-// .LyricStanza__verseIn {
-//     background-color: rgba(200, 200, 240, 0.5);
-// }
+.LyricStanza__beforeCursor {
+    background-color: rgba(200, 200, 240, 0.5);
+    border: 2px solid #88f;
+}
