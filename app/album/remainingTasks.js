@@ -1,5 +1,17 @@
 module.exports = [
 
+    {
+        taskName: `Revisit Willy, Odin, and Constellations overlap cards.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Have method to get sceneIndex for verseIndex, and revisit firstVerseIndex and lastVerseIndex weirdness.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Begin Hack Week work.
      */
@@ -23,9 +35,15 @@ module.exports = [
     },
 
     {
-        taskName: `Have intervals on displays and animated bars rather than setting from state. Make sure cursor weirdness is taken care of. Use Web Workers?`,
+        taskName: `Have setIntervals on audio display timer rather than setting from state.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 2
+    },
+
+    {
+        taskName: `Use Web Worker for parsing album. Mostly a proof of concept.`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     {
