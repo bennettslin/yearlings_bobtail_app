@@ -14,21 +14,15 @@ import cx from 'classnames'
 import StanzaCard from './StanzaCard'
 import StanzaDot from './StanzaDot'
 import { TITLE } from '../../../constants/lyrics'
-import {
-    getLyricUnitArray,
-    getStanzaIndexForVerseIndex
-} from '../../../helpers/dataHelper'
+import { getLyricUnitArray } from '../../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableStore,
-    sliderStore
+    renderableStore
 }) => ({
     canLyricRender,
     renderableSongIndex: renderableStore.renderableSongIndex,
-    renderableVerseIndex: renderableStore.renderableVerseIndex,
-    sliderVerseIndex: sliderStore.sliderVerseIndex
 })
 
 /*************
@@ -41,8 +35,6 @@ class Stanza extends Component {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
-        renderableVerseIndex: PropTypes.number.isRequired,
-        sliderVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
         unitIndex: PropTypes.number.isRequired
@@ -65,8 +57,6 @@ class Stanza extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                renderableVerseIndex,
-                sliderVerseIndex,
                 unitIndex,
                 ...other
             } = this.props,
@@ -100,22 +90,7 @@ class Stanza extends Component {
 
             hasSide = Boolean(topSideCard || bottomSideCard),
             isDotOnly = Boolean(dotCard) && unitArray.length === 1,
-            isSideBottomOnly = !topSideCard && Boolean(bottomSideCard),
-
-            /**
-             * If slider touched, compare unit to slider verse. Otherwise,
-             * compare to selected verse. Same as slider stanza.
-             */
-            cursorVerseIndex = sliderVerseIndex > -1 ?
-                sliderVerseIndex : renderableVerseIndex,
-
-            cursorStanzaIndex = getStanzaIndexForVerseIndex(
-                renderableSongIndex, cursorVerseIndex
-            ),
-
-            isBeforeCursor = stanzaIndex > cursorStanzaIndex,
-            isAfterCursor = stanzaIndex < cursorStanzaIndex,
-            isOnCursor = stanzaIndex === cursorStanzaIndex
+            isSideBottomOnly = !topSideCard && Boolean(bottomSideCard)
 
         return (
             <StanzaView {...other}
@@ -138,9 +113,6 @@ class Stanza extends Component {
                     hasSide,
                     isDotOnly,
                     isSideBottomOnly,
-                    isBeforeCursor,
-                    isAfterCursor,
-                    isOnCursor,
                     stanzaType: isTitleUnit ? TITLE : stanzaType
                 }}
             />
@@ -182,10 +154,6 @@ class StanzaView extends Component {
         isDotOnly: PropTypes.bool.isRequired,
         isSideBottomOnly: PropTypes.bool.isRequired,
 
-        isAfterCursor: PropTypes.bool.isRequired,
-        isBeforeCursor: PropTypes.bool.isRequired,
-        isOnCursor: PropTypes.bool.isRequired,
-
         handleLyricAnnotationSelect: PropTypes.func.isRequired,
         setLyricAnnotationRef: PropTypes.func.isRequired
     }
@@ -226,10 +194,6 @@ class StanzaView extends Component {
                 isDotOnly,
                 isSideBottomOnly,
 
-                isAfterCursor,
-                isBeforeCursor,
-                isOnCursor,
-
                 ...other
             } = this.props,
 
@@ -239,13 +203,17 @@ class StanzaView extends Component {
                 setLyricAnnotationRef
             } = other
 
-        console.error('rerender stanza')
-
         return (
             <div
                 className={cx(
                     'Stanza',
 
+                    /**
+                     * General selector when before cursor, general sibling
+                     * selector when after cursor.
+                     */
+                    !isNaN(stanzaIndex) && 'CM__stanza',
+                    // Aligned selector when on cursor.
                     !isNaN(stanzaIndex) && `CM__stanza${stanzaIndex}`,
 
                     `unit__${unitIndex}`,
@@ -254,11 +222,6 @@ class StanzaView extends Component {
 
                     { 'Stanza__hasSide': hasSide,
                       'Stanza__title': isTitleUnit,
-
-                      // It's only ever one of these three.
-                      'Stanza__afterCursor': isAfterCursor,
-                      'Stanza__beforeCursor': isBeforeCursor,
-                      'Stanza__onCursor': isOnCursor,
 
                       'fontSize__lyricMultipleColumns': hasSide },
 
@@ -307,10 +270,12 @@ class StanzaView extends Component {
                 }
                 {dotCard &&
                     <StanzaDot
-                        setLyricAnnotationRef={setLyricAnnotationRef}
                         isLastStanza={isDotOnly && isLastStanza}
                         dotStanzaObject={dotCard}
-                        handleLyricAnnotationSelect={handleLyricAnnotationSelect}
+                        {...{
+                            setLyricAnnotationRef,
+                            handleLyricAnnotationSelect
+                        }}
                     />
                 }
             </div>

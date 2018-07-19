@@ -9,19 +9,15 @@ import SliderStanza from './SliderStanza'
 
 import {
     getSongTotalTime,
-    getSongStanzaConfigs,
-    getStanzaIndexForVerseIndex
+    getSongStanzaConfigs
 } from '../../../helpers/dataHelper'
 
 const mapStateToProps = ({
     canSliderRender,
-    renderableStore,
-    sliderStore
+    renderableStore
 }) => ({
     canSliderRender,
-    renderableSongIndex: renderableStore.renderableSongIndex,
-    renderableVerseIndex: renderableStore.renderableVerseIndex,
-    sliderVerseIndex: sliderStore.sliderVerseIndex
+    renderableSongIndex: renderableStore.renderableSongIndex
 })
 
 class SliderStanzas extends Component {
@@ -38,9 +34,7 @@ class SliderStanzas extends Component {
 
     render() {
         const {
-            renderableSongIndex,
-            renderableVerseIndex,
-            sliderVerseIndex
+            renderableSongIndex
         } = this.props,
             songTotalTime = getSongTotalTime(renderableSongIndex),
             songStanzaConfigs = getSongStanzaConfigs(renderableSongIndex)
@@ -60,24 +54,7 @@ class SliderStanzas extends Component {
                         } = songStanzaConfig,
 
                         isLastStanza =
-                            stanzaIndex === songStanzaConfigs.length - 1,
-
-                        /**
-                         * If slider touched, compare unit to slider verse.
-                         * Otherwise, compare to selected verse. Same as lyric
-                         * stanza.
-                         */
-                        cursorVerseIndex = sliderVerseIndex > -1 ?
-                            sliderVerseIndex :
-                            renderableVerseIndex,
-
-                        cursorStanzaIndex = getStanzaIndexForVerseIndex(
-                            renderableSongIndex, cursorVerseIndex
-                        ),
-
-                        isBeforeCursor = stanzaIndex > cursorStanzaIndex,
-                        isAfterCursor = stanzaIndex < cursorStanzaIndex,
-                        isOnCursor = stanzaIndex === cursorStanzaIndex
+                            stanzaIndex === songStanzaConfigs.length - 1
 
                     return (
                         <SliderStanza
@@ -86,10 +63,6 @@ class SliderStanzas extends Component {
                                 stanzaIndex,
                                 isLastStanza,
                                 songTotalTime,
-
-                                isBeforeCursor,
-                                isAfterCursor,
-                                isOnCursor,
 
                                 stanzaVerseConfigs,
                                 stanzaEndTime,

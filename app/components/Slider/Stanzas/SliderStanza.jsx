@@ -16,11 +16,7 @@ class SliderStanza extends Component {
         stanzaVerseConfigs: PropTypes.array.isRequired,
         stanzaEndTime: PropTypes.number.isRequired,
         songTotalTime: PropTypes.number.isRequired,
-        stanzaType: PropTypes.string.isRequired,
-
-        isAfterCursor: PropTypes.bool.isRequired,
-        isBeforeCursor: PropTypes.bool.isRequired,
-        isOnCursor: PropTypes.bool.isRequired,
+        stanzaType: PropTypes.string.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -39,10 +35,6 @@ class SliderStanza extends Component {
                 stanzaVerseConfigs,
                 stanzaEndTime,
                 stanzaType,
-
-                isAfterCursor,
-                isBeforeCursor,
-                isOnCursor
 
             } = this.props,
 
@@ -91,17 +83,17 @@ class SliderStanza extends Component {
                 className={cx(
                     'SliderStanza',
 
+                    /**
+                     * General selector when before cursor, general sibling
+                     * selector when after cursor.
+                     */
+                    'CM__stanza',
+                    // Aligned selector when on cursor.
                     `CM__stanza${stanzaIndex}`,
 
                     `SliderStanza__${stanzaType}`,
                     'bgColour__sliderStanza__pattern',
-                    `bgColour__stanza__${stanzaType}`,
-
-                    {
-                        'Stanza__afterCursor': isAfterCursor,
-                        'Stanza__beforeCursor': isBeforeCursor,
-                        'Stanza__onCursor': isOnCursor
-                    }
+                    `bgColour__stanza__${stanzaType}`
                 )}
                 style={stanzaStyle}
             >
