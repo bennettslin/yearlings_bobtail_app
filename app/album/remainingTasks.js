@@ -78,7 +78,7 @@ module.exports = [
     },
 
     {
-        taskName: `truncated verse needs ellipsis.`,
+        taskName: `When paused, reset to verse start time.`,
         workedHours: 0,
         neededHours: 1
     },

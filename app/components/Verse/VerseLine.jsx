@@ -116,11 +116,11 @@ class VerseLine extends Component {
 
                 {/* Only render if this is a truncatable verse. */}
                 {isTruncatable && (
-                    <span
+                    <div
                         className="VerseLine__truncated"
                     >
                         {'\u2026'}
-                    </span>
+                    </div>
                 )}
             </Fragment>
         )

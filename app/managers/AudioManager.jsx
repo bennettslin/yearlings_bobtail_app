@@ -68,10 +68,11 @@ class AudioManager extends Component {
 
     togglePlay(isPlaying = !this.props.isPlaying) {
 
-        const { selectedSongIndex,
-                canPlayThroughs } = this.props
+        const {
+                selectedSongIndex,
+                canPlayThroughs
+            } = this.props,
 
-        const
             isLogue = getSongIsLogue(this.props.selectedSongIndex),
 
             songCanPlayThrough = getValueInBitNumber({

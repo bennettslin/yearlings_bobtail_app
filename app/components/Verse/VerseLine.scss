@@ -52,11 +52,13 @@
 }
 
 .VerseLine__truncated {
+    position: relative;
     display: none;
 
     .RM__rightLyricColumnOnly
     & {
-        display: inline;
+        display: block;
+        z-index: $zIndex__cursorVerse;
     }
 }
 

@@ -3305,11 +3305,16 @@ module.exports = [
     },
     {
         taskName: `Make cursor transitions smooth.`,
-        workedHours: 0,
+        workedHours: 3,
         neededHours: 3
     },
     {
         taskName: `Style cursor verse to expand based on fixed constants, not percentages. Also ensure that slider cursor verse is different from lyric cursor verse, and don't expand cursor verse in verse bar at all.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Truncated verse needs z-index.`,
         workedHours: 1,
         neededHours: 1
     },
