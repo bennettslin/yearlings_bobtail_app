@@ -66,9 +66,9 @@ module.exports = [
     },
 
     {
-        taskName: `Allow to determine verse bars in between key presses. Also, the keys r and f.`,
+        taskName: `Allow to determine verse bars in between key presses.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
 
     {

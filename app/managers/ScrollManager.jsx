@@ -162,7 +162,7 @@ class ScrollManager extends Component {
         }
 
         if (element) {
-            // console.info(log, '\nScroll by ref:', scrollClass, index)
+            console.info(log, '\nScroll by ref:', scrollClass, index)
 
             const {
                     deviceIndex,

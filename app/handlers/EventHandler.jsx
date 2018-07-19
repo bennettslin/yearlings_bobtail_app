@@ -163,7 +163,9 @@ class EventHandler extends Component {
             index:
                 interactivatedVerseIndex > 0 ?
                     interactivatedVerseIndex :
-                    selectedVerseIndex
+                    selectedVerseIndex,
+
+            callback: this.props.determineVerseBars
         })
 
         return true
