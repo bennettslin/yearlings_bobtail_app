@@ -258,6 +258,21 @@ export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
     return songVerseConfigs[verseIndex].stanzaIndex
 }
 
+export const getStanzaVerseIndexForVerseIndex = (songIndex, verseIndex) => {
+    const
+        songObject = getSongObject(songIndex),
+        {
+            songVerseConfigs,
+            songStanzaConfigs
+        } = songObject,
+
+        { stanzaIndex } = songVerseConfigs[verseIndex],
+        { stanzaVerseConfigs } = songStanzaConfigs[stanzaIndex],
+        { verseIndex: firstVerseIndex } = stanzaVerseConfigs[0]
+
+    return verseIndex - firstVerseIndex
+}
+
 export const getVerseDurationForVerseIndex = (songIndex, verseIndex) => {
     const songObject = getSongObject(songIndex),
     { songVerseConfigs } = songObject

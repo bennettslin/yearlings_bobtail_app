@@ -3333,4 +3333,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Determine stanza relative to cursor logic through CSS.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

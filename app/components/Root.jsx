@@ -21,7 +21,8 @@ import { DEVICE_OBJECTS } from '../constants/responsive'
 
 import {
     getSongIsLogue,
-    getStanzaIndexForVerseIndex
+    getStanzaIndexForVerseIndex,
+    getStanzaVerseIndexForVerseIndex
 } from '../helpers/dataHelper'
 
 import { getPrefixPrependedClassNames } from '../helpers/domHelper'
@@ -227,6 +228,10 @@ class Root extends Component {
 
             cursorStanzaIndex = getStanzaIndexForVerseIndex(
                 renderableSongIndex, cursorVerseIndex
+            ),
+
+            cursorStanzaVerseIndex = getStanzaVerseIndexForVerseIndex(
+                renderableSongIndex, cursorVerseIndex
             )
 
         return appMounted && (
@@ -290,7 +295,10 @@ class Root extends Component {
                     interactivatedVerseIndex < 0 ?
                         'RM__verseInactive' : 'RM__verseActive',
 
-                    `RM__stanza${cursorStanzaIndex}`
+                    `RM__stanza${cursorStanzaIndex}`,
+
+                    // TODO: Tentative. Not currently used.
+                    `RM__stanzaVerse${cursorStanzaVerseIndex}`
 
                     // !isSliderMoving && interactivatedVerseIndex < 0 &&
                     //     `RM__rV${renderableVerseIndex}`,
