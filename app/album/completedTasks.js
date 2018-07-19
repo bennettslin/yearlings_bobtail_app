@@ -3298,4 +3298,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Remove functionality for interactivating selected verse.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

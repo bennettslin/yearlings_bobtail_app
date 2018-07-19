@@ -88,15 +88,19 @@ class VerseManager extends Component {
     }
 
     interactivateVerse(interactivatedVerseIndex = -1) {
-
         this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)
     }
 
     interactivateVerseDirection(direction) {
-        const { selectedSongIndex } = this.props,
+        const {
+                selectedSongIndex,
+                selectedVerseIndex
+            } = this.props,
             songVersesCount = getSongVersesCount(selectedSongIndex)
 
-        let { interactivatedVerseIndex } = this.props
+        let {
+            interactivatedVerseIndex
+        } = this.props
 
         // Ensure modulo.
         if (direction === -1) {
@@ -112,7 +116,13 @@ class VerseManager extends Component {
             interactivatedVerseIndex = (interactivatedVerseIndex + direction) % songVersesCount
         }
 
+        // If we're returning to the selected verse, turn off interactivation.
+        if (interactivatedVerseIndex === selectedVerseIndex) {
+            interactivatedVerseIndex = -1
+        }
+
         this.props.setInteractivatedVerseIndex(interactivatedVerseIndex)
+
         return interactivatedVerseIndex
     }
 

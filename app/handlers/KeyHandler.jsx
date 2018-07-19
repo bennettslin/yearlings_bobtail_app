@@ -219,7 +219,6 @@ class KeyHandler extends Component {
                 isLyricExpanded,
                 interactivatedVerseIndex,
                 selectedScoreIndex,
-                selectedVerseIndex,
                 selectedWikiIndex,
                 selectedSongIndex,
                 selectedAnnotationIndex,
@@ -236,42 +235,37 @@ class KeyHandler extends Component {
             keyWasRegistered = false
 
         if (!isLogue && !selectedScoreIndex && !selectedWikiIndex) {
+
+            // We're selecting the interactivated verse.
             if (isVerseInteractivated && keyName === ENTER) {
 
-                // Interactivated verse is already selected, so toggle play.
-                if (interactivatedVerseIndex === selectedVerseIndex) {
-                    keyWasRegistered = eventHandlers.handleLyricPlay(e)
-
-                    // We're selecting the interactivated verse.
-                } else {
-                    keyWasRegistered =
-                        eventHandlers.handleLyricVerseSelect(
-                            e, interactivatedVerseIndex
-                        )
-
-                    this._accessAnnotationWithoutDirection(
-                        interactivatedVerseIndex
+                keyWasRegistered =
+                    eventHandlers.handleLyricVerseSelect(
+                        e, interactivatedVerseIndex
                     )
-                    annotationIndexWasAccessed = true
-                }
 
-                // We're in annotation.
+                this._accessAnnotationWithoutDirection(
+                    interactivatedVerseIndex
+                )
+                annotationIndexWasAccessed = true
+
+            // We're in annotation.
             } else if (selectedAnnotationIndex) {
                 ({ annotationIndexWasAccessed,
                     keyWasRegistered } = this._handleAnnotationNavigation(e, keyName))
 
-                // We're in dots section.
+            // We're in dots section.
             } else if (selectedDotsIndex) {
                 keyWasRegistered = this._handleDotsNavigation(e, keyName)
 
-                // We're in nav section.
+            // We're in nav section.
             } else if (!selectedCarouselNavIndex &&
                        !isHeightlessLyricColumn && !isLyricExpanded && !isVerseInteractivated) {
 
                 ({ annotationIndexWasAccessed,
                     keyWasRegistered } = this._handleNavNavigation(e, keyName))
 
-                // We're in lyrics section.
+            // We're in lyrics section.
             } else if (!isHeightlessLyricColumn || isLyricExpanded) {
                 keyWasRegistered = this._handleLyricNavigation(e, keyName)
 

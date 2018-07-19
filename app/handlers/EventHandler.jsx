@@ -44,8 +44,6 @@ class EventHandler extends Component {
         accessedAnnotationIndex: PropTypes.number.isRequired,
         isHeightlessLyricColumn: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        isVerseBarAbove: PropTypes.bool.isRequired,
-        isVerseBarBelow: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
 
@@ -131,28 +129,43 @@ class EventHandler extends Component {
             return false
         }
 
-        const interactivatedVerseIndex =
+        const {
+                selectedVerseIndex
+            } = this.props,
+            interactivatedVerseIndex =
             this.props.interactivateVerseDirection(direction)
 
-        this._closeSections({
-            /**
-             * Once verse has been interactivated through access, close nav and
-             * force carousel so that access navigation keys do not conflict.
-             */
-            forceCarousel: true,
+        if (interactivatedVerseIndex > 0) {
+            this._closeSections({
+                /**
+                 * Once verse has been interactivated through access, close nav
+                 * and force carousel so that access navigation keys do not
+                 * conflict.
+                 */
+                forceCarousel: true,
+                exemptDots: true,
+                exemptOverview: true,
+                exemptTips: true,
+                exemptInteractivatedVerse: true,
+                exemptLyric: true,
+                leaveOpenPopups: true
+            })
+        }
 
-            exemptDots: true,
-            exemptOverview: true,
-            exemptTips: true,
-            exemptInteractivatedVerse: true,
-            exemptLyric: true,
-            leaveOpenPopups: true
-        })
         this.props.scrollElementIntoView({
             log: 'Access verse direction.',
             scrollClass: VERSE_SCROLL,
-            index: interactivatedVerseIndex
+
+            /**
+             * If interactivation remains on, scroll to interactivated verse.
+             * Otherwise, scroll to selected verse.
+             */
+            index:
+                interactivatedVerseIndex > 0 ?
+                    interactivatedVerseIndex :
+                    selectedVerseIndex
         })
+
         return true
     }
 
@@ -453,19 +466,6 @@ class EventHandler extends Component {
      * LYRICS *
      **********/
 
-    handleLyricPlay() {
-        if (getSongIsLogue(this.props.selectedSongIndex)) {
-            return false
-        }
-
-        this.props.togglePlay()
-
-        // Deinteractivate after selecting.
-        this.props.interactivateVerse()
-
-        return true
-    }
-
     handleLyricVerseSelect(e, selectedVerseIndex) {
         if (getSongIsLogue(this.props.selectedSongIndex)) {
             return false
@@ -751,12 +751,14 @@ class EventHandler extends Component {
     }
 
     handleVerseInteractivate(e, verseIndex) {
-        const { selectedVerseIndex,
-                isVerseBarAbove,
-                isVerseBarBelow } = this.props
+        const {
+            selectedVerseIndex
+        } = this.props
 
-        // If verse bar is shown, do not allow click on selected verse.
-        if (!(isVerseBarAbove || isVerseBarBelow) || verseIndex !== selectedVerseIndex) {
+        // Do not allow click on selected verse.
+        if (
+            verseIndex !== selectedVerseIndex
+        ) {
 
             this.stopPropagation(e)
             this._closeSections({
@@ -998,8 +1000,6 @@ const mapStateToProps = ({
     accessedAnnotationIndex,
     isHeightlessLyricColumn,
     isLyricExpanded,
-    isVerseBarAbove,
-    isVerseBarBelow,
     sliderStore
 }) => ({
     selectedAdminIndex,
@@ -1015,8 +1015,6 @@ const mapStateToProps = ({
     accessedAnnotationIndex,
     isHeightlessLyricColumn,
     isLyricExpanded,
-    isVerseBarAbove,
-    isVerseBarBelow,
     isSliderMoving: sliderStore.isSliderMoving,
     isSliderTouched: sliderStore.isSliderTouched,
 })

@@ -45,7 +45,6 @@ class VerseController extends Component {
         stanzaEndTime: PropTypes.number.isRequired,
 
         // For verse audio buttons.
-        handleLyricPlay: PropTypes.func,
         handleLyricVerseSelect: PropTypes.func
     }
 
@@ -115,7 +114,6 @@ class VerseControllerView extends Component {
         stanzaEndTime: PropTypes.number.isRequired,
 
         // For verse audio buttons.
-        handleLyricPlay: PropTypes.func,
         handleLyricVerseSelect: PropTypes.func
     }
 
@@ -142,7 +140,6 @@ class VerseControllerView extends Component {
             startTime,
             stanzaEndTime,
 
-            handleLyricPlay,
             handleLyricVerseSelect
         } = this.props,
 
@@ -187,10 +184,8 @@ class VerseControllerView extends Component {
                     <VerseAudio
                         {...{
                             verseIndex,
-                            isOnCursor,
                             isAfterCursor,
                             isInteractivated,
-                            handleLyricPlay,
                             handleLyricVerseSelect
                         }}
                     />

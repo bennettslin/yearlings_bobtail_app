@@ -33,7 +33,6 @@ export const bindHandlers = (me) => {
     me.handleLyricAutoScroll = me.handleLyricAutoScroll.bind(me)
     me.handleLyricColumnSelect = me.handleLyricColumnSelect.bind(me)
     me.handleLyricAnnotationSelect = me.handleLyricAnnotationSelect.bind(me)
-    me.handleLyricPlay = me.handleLyricPlay.bind(me)
     me.handleLyricVerseSelect = me.handleLyricVerseSelect.bind(me)
     me.handleLyricWheel = me.handleLyricWheel.bind(me)
     me.handleNavSongSelect = me.handleNavSongSelect.bind(me)
@@ -99,7 +98,6 @@ export const getHandlers = (me) => {
         handleDotsSectionToggle: me.handleDotsSectionToggle,
         handleLyricSectionExpand: me.handleLyricSectionExpand,
         handleLyricColumnSelect: me.handleLyricColumnSelect,
-        handleLyricPlay: me.handleLyricPlay,
         handleLyricVerseSelect: me.handleLyricVerseSelect,
         handleLyricAnnotationSelect: me.handleLyricAnnotationSelect,
         handleLyricWheel: me.handleLyricWheel,

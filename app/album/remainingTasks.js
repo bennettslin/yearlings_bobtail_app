@@ -17,9 +17,9 @@ module.exports = [
     },
 
     {
-        taskName: `Bug where selecting interactivated verse does not change verse when song is playing. Dismiss interactivated verse on cursor. Don't update when selecting, so that icon stays the same as it fades out. (Maybe wait on svg change for this one.) Also consider just not interactivating selected verse.`,
+        taskName: `Bug where selecting interactivated verse does not change verse when song is playing.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
 
     {

@@ -285,7 +285,6 @@ Live.propTypes = {
     handleLyricAnnotationSelect: PropTypes.func.isRequired,
     handleLyricWheel: PropTypes.func.isRequired,
     handleLyricAutoScroll: PropTypes.func.isRequired,
-    handleLyricPlay: PropTypes.func.isRequired,
     handleLyricVerseSelect: PropTypes.func.isRequired,
     handleOverviewToggle: PropTypes.func.isRequired,
     handlePopupContainerClick: PropTypes.func.isRequired,

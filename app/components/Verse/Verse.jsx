@@ -161,7 +161,6 @@ verseViewPropTypes = {
     inVerseBar: PropTypes.bool.isRequired,
     isInteractable: PropTypes.bool.isRequired,
 
-    handleLyricPlay: PropTypes.func,
     handleLyricVerseSelect: PropTypes.func,
     handleInteractivatableClick: PropTypes.func,
     setRef: PropTypes.func,
@@ -175,7 +174,6 @@ VerseView = ({
     verseClassName,
     isInteractable,
 
-    handleLyricPlay,
     handleLyricVerseSelect,
     handleInteractivatableClick,
     setRef,
@@ -221,7 +219,6 @@ VerseView = ({
                         stanzaEndTime: verseObject.endTime
                     }}
                     {...!inVerseBar && {
-                        handleLyricPlay,
                         handleLyricVerseSelect
                     }}
                 />
