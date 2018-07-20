@@ -232,7 +232,11 @@ class Root extends Component {
 
             cursorStanzaVerseIndex = getStanzaVerseIndexForVerseIndex(
                 renderableSongIndex, cursorVerseIndex
-            )
+            ),
+
+            verseIndex = interactivatedVerseIndex > -1 ?
+                interactivatedVerseIndex :
+                cursorVerseIndex
 
         return appMounted && (
             <div
@@ -298,14 +302,9 @@ class Root extends Component {
                     `RM__stanza${cursorStanzaIndex}`,
 
                     // TODO: Tentative. Not currently used.
-                    `RM__stanzaVerse${cursorStanzaVerseIndex}`
+                    `RM__stanzaVerse${cursorStanzaVerseIndex}`,
 
-                    // !isSliderMoving && interactivatedVerseIndex < 0 &&
-                    //     `RM__rV${renderableVerseIndex}`,
-                    // isSliderMoving &&
-                    //     `RM__sV${sliderVerseIndex}`,
-                    // interactivatedVerseIndex >= 0 &&
-                    //     `RM__iV${interactivatedVerseIndex}`
+                    `RM__verse${verseIndex}`
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}

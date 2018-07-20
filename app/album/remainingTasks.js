@@ -1,6 +1,12 @@
 module.exports = [
 
     {
+        taskName: `Be smart about how verse bar, verse audio buttons, and verse cursor update.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Revisit Willy, Odin, and Constellations overlap cards.`,
         workedHours: 0,
         neededHours: 1
@@ -113,12 +119,6 @@ module.exports = [
         taskName: `Know when not to show up or down access icons in lyric column, based on whether it's scrolled to the very top or bottom?`,
         workedHours: 0,
         neededHours: 1
-    },
-
-    {
-        taskName: `Be smart about how verse bar, verse audio buttons, and verse cursor update.`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     {
