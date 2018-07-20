@@ -221,6 +221,8 @@ class Root extends Component {
                 && !overviewShown
                 && !tipsShown,
 
+            areVerseBarsHidden = !isVerseBarAbove && !isVerseBarBelow,
+
             /**
              * If slider touched, compare stanza to slider verse. Otherwise,
              * compare it to selected verse.
@@ -275,7 +277,7 @@ class Root extends Component {
                     isHeightlessLyricColumn ?
                         'RM__lyricHeightless' : 'RM__lyricHeighted',
 
-                    !isVerseBarAbove && !isVerseBarBelow ?
+                    areVerseBarsHidden ?
                         'RM__verseBarHidden' : 'RM__verseBarShown',
 
                     {
@@ -311,6 +313,12 @@ class Root extends Component {
                     isPlaying ?
                         `RM__playingVerse${renderableVerseIndex}` :
                         `RM__pausedVerse${renderableVerseIndex}`,
+
+                    interactivatedVerseIndex < 0 &&
+                        `RM__noInteractivatedVerse${cursorVerseIndex}`,
+
+                    areVerseBarsHidden && interactivatedVerseIndex < 0 &&
+                        `RM__cursoredLyricVerse${cursorVerseIndex}`,
 
                     /**
                      * TODO: Not currently used by verse cursor because it

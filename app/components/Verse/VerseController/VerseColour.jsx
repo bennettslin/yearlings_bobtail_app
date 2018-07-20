@@ -7,7 +7,7 @@ import VerseCursor from './VerseCursor'
 const propTypes = {
     // From parent.
     isOnCursor: PropTypes.bool.isRequired,
-    isAfterCursor: PropTypes.bool.isRequired,
+    // isAfterCursor: PropTypes.bool.isRequired,
     isInteractivated: PropTypes.bool.isRequired,
 
     verseIndex: PropTypes.number.isRequired,
@@ -19,7 +19,7 @@ const propTypes = {
 VerseColour = ({
 
     isOnCursor,
-    isAfterCursor,
+    // isAfterCursor,
     isInteractivated,
 
     verseIndex,
@@ -40,10 +40,10 @@ VerseColour = ({
                 inLyricVerse && 'VerseColour__inLyricVerse',
                 inSliderVerse && 'VerseColour__inSliderVerse',
 
-                isOnCursor && 'VerseColour__onCursor',
-                !isOnCursor && `VerseColour__${
-                    isAfterCursor ? 'afterCursor' : 'beforeCursor'
-                }`,
+                // isOnCursor && 'VerseColour__onCursor',
+                // !isOnCursor && `VerseColour__${
+                //     isAfterCursor ? 'afterCursor' : 'beforeCursor'
+                // }`,
 
                 isInteractivated && 'VerseColour__interactivated',
 
@@ -71,7 +71,7 @@ VerseColour = ({
             />
 
             {/* Even filters are just a little shadier. */}
-            {!(verseIndex % 2) && (
+            {!inVerseBar && !(verseIndex % 2) && (
                 <div className={cx(
                     'VerseColour__evenFilter',
                     'absoluteFullContainer'

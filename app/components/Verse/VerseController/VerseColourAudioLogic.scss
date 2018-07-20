@@ -64,6 +64,7 @@
 .RM__playingVerse62 .CM__verse62 {
 
     .VerseColour {
-        background-color: $bgColour__audioPlay;
+        // Use !important to override hover highlight for non-cursored verse.
+        background-color: $bgColour__audioPlay !important;
     }
 }

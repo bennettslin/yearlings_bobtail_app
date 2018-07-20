@@ -85,8 +85,8 @@ class SliderVerse extends Component {
 
                     'CM__verse',
                     `CM__verse${verseIndex}`,
-                    'CM__sliderVerse',
-                    `CM__sliderVerse${verseIndex}`
+                    // 'CM__sliderVerse',
+                    // `CM__sliderVerse${verseIndex}`
                 )}
                 style={verseStyle}
             >

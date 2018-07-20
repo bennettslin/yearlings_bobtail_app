@@ -196,8 +196,8 @@ VerseView = ({
 
                 'CM__verse',
                 `CM__verse${verseIndex}`,
-                'CM__lyricVerse',
-                `CM__lyricVerse${verseIndex}`,
+                // 'CM__lyricVerse',
+                // `CM__lyricVerse${verseIndex}`,
 
                 isTitle && 'Verse__title',
                 inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
