@@ -10,6 +10,16 @@
     }
 }
 
+.VerseColour__evenFilter {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    .RM__verseBarHidden
+    .VerseColour__onCursor
+    & {
+        display: none;
+    }
+}
+
 .VerseColour__interactivated {
     box-shadow: $boxShadow__activeVerse;
 }
@@ -57,7 +67,7 @@
     }
 }
 
-.VerseColour__odd {
+.VerseColour {
     /**
      * Default odd verse colours.
      */
@@ -66,86 +76,40 @@
     &.VerseColour__beforeCursor,
     .RM__sliderNotMoving.RM__verseBarBelow
     &.VerseColour__onCursor {
-        background-color: $bgColour__beforeSelected__odd;
-        @include mixin__textShadow($bgColour__beforeSelected__odd);
+        background-color: $bgColour__beforeSelected;
+        @include mixin__textShadow($bgColour__beforeSelected);
 
-        // color: $colour__beforeSelected__odd;
+        // color: $colour__beforeSelected;
     }
 
     .RM__sliderMoving
     &.VerseColour__beforeCursor,
     .RM__sliderMoving.RM__verseBarBelow
     &.VerseColour__onCursor {
-        background-color: $bgColour__beforeSlider__odd;
-        @include mixin__textShadow($bgColour__beforeSlider__odd);
+        background-color: $bgColour__beforeSlider;
+        @include mixin__textShadow($bgColour__beforeSlider);
 
-        // color: $colour__beforeSlider__odd;
+        // color: $colour__beforeSlider;
     }
 
     .RM__sliderNotMoving
     &.VerseColour__afterCursor,
     .RM__sliderNotMoving.RM__verseBarAbove
     &.VerseColour__onCursor {
-        background-color: $bgColour__afterSelected__odd;
-        @include mixin__textShadow($bgColour__afterSelected__odd);
+        background-color: $bgColour__afterSelected;
+        @include mixin__textShadow($bgColour__afterSelected);
 
-        // color: $colour__afterSelected__odd;
+        // color: $colour__afterSelected;
     }
 
     .RM__sliderMoving
     &.VerseColour__afterCursor,
     .RM__sliderMoving.RM__verseBarAbove
     &.VerseColour__onCursor {
-        background-color: $bgColour__afterSlider__odd;
-        @include mixin__textShadow($bgColour__afterSlider__odd);
+        background-color: $bgColour__afterSlider;
+        @include mixin__textShadow($bgColour__afterSlider);
 
-        // color: $colour__afterSlider__odd;
-    }
-}
-
-.VerseColour__even {
-    /**
-     * Default even verse colours.
-     */
-
-    .RM__sliderNotMoving
-    &.VerseColour__beforeCursor,
-    .RM__sliderNotMoving.RM__verseBarBelow
-    &.VerseColour__onCursor {
-        background-color: $bgColour__beforeSelected__even;
-        @include mixin__textShadow($bgColour__beforeSelected__even);
-
-        // color: $colour__beforeSelected__even;
-    }
-
-    .RM__sliderMoving
-    &.VerseColour__beforeCursor,
-    .RM__sliderMoving.RM__verseBarBelow
-    &.VerseColour__onCursor {
-        background-color: $bgColour__beforeSlider__even;
-        @include mixin__textShadow($bgColour__beforeSlider__even);
-
-        // color: $colour__beforeSlider__even;
-    }
-
-    .RM__sliderNotMoving
-    &.VerseColour__afterCursor,
-    .RM__sliderNotMoving.RM__verseBarAbove
-    &.VerseColour__onCursor {
-        background-color: $bgColour__afterSelected__even;
-        @include mixin__textShadow($bgColour__afterSelected__even);
-
-        // color: $colour__afterSelected__even;
-    }
-
-    .RM__sliderMoving
-    &.VerseColour__afterCursor,
-    .RM__sliderMoving.RM__verseBarAbove
-    &.VerseColour__onCursor {
-        background-color: $bgColour__afterSlider__even;
-        @include mixin__textShadow($bgColour__afterSlider__even);
-
-        // color: $colour__afterSlider__even;
+        // color: $colour__afterSlider;
     }
 }
 
@@ -195,8 +159,8 @@
     .RM__sliderNotMoving
     & {
         // Default side verse.
-        background-color: $bgColour__beforeSelected__odd;
-        @include mixin__textShadow($bgColour__beforeSelected__odd);
+        background-color: $bgColour__beforeSelected;
+        @include mixin__textShadow($bgColour__beforeSelected);
 
         color: #644;
     }

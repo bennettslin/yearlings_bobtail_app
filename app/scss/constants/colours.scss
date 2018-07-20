@@ -12,36 +12,23 @@ $bgColour__audioNeutral: #ddf;
 $bgColour__audioHighlight: #ffd;
 
 // Lyric verse colours.
-$colour__beforeSelected__even: #543;
-$bgColour__beforeSelected__even: #fefcfa;
 
-$colour__beforeSelected__odd: #543;
-$bgColour__beforeSelected__odd: #f4f2f0;
+$colour__beforeSelected: #543;
+$bgColour__beforeSelected: #fefcfa;
 
-$colour__afterSelected__even: #345;
-$bgColour__afterSelected__even: #fafcfe;
-
-$colour__afterSelected__odd: #345;
-$bgColour__afterSelected__odd: #f0f2f4;
+$colour__afterSelected: #345;
+$bgColour__afterSelected: #fafcfe;
 
 // Slider verse colours.
-$colour__beforeSlider__even: #ffbb88;
-$bgColour__beforeSlider__even: #b59905;
 
-$colour__beforeSlider__odd: #ffbb88;
-$bgColour__beforeSlider__odd: #aa8f00;
+$colour__beforeSlider: #ffbb88;
+$bgColour__beforeSlider: #b59905;
 
-$colour__afterSlider__even: #88bbff;
-$bgColour__afterSlider__even: #0599b5;
-
-$colour__afterSlider__odd: #88bbff;
-$bgColour__afterSlider__odd: #008faa;
+$colour__afterSlider: #88bbff;
+$bgColour__afterSlider: #0599b5;
 
 $colour__sideSlider: #bbb;
 $bgColour__sideSlider: #888;
-
-$time-spent-bar-colour: $bgColour__beforeSlider__even;
-$time-remain-bar-colour: $bgColour__afterSlider__even;
 
 // Lyric text and anchor colours.
 $colour__annotation__selected: gold;

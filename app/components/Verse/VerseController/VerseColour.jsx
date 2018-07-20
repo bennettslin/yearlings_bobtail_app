@@ -29,21 +29,15 @@ VerseColour = ({
 
 }) => {
 
-    const isOdd = Boolean(verseIndex % 2)
-
     return (
         <div
             className={cx(
                 'VerseColour',
-                inVerseBar && 'VerseColour__inVerseBar',
 
+                inVerseBar && 'VerseColour__inVerseBar',
                 !inVerseBar && 'VerseColour__interactable',
                 inLyricVerse && 'VerseColour__inLyricVerse',
                 inSliderVerse && 'VerseColour__inSliderVerse',
-
-                isOdd ?
-                    'VerseColour__odd' :
-                    'VerseColour__even',
 
                 isOnCursor && 'VerseColour__onCursor',
                 !isOnCursor && `VerseColour__${
@@ -74,6 +68,14 @@ VerseColour = ({
                     key: verseIndex
                 }}
             />
+
+            {/* Even filters are just a little shadier. */}
+            {!(verseIndex % 2) && (
+                <div className={cx(
+                    'VerseColour__evenFilter',
+                    'absoluteFullContainer'
+                )} />
+            )}
         </div>
     )
 }
