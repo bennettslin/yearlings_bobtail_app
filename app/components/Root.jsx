@@ -302,6 +302,9 @@ class Root extends Component {
 
                     `RM__stanza${cursorStanzaIndex}`,
 
+                    // isSliderMoving &&
+                    //     `RM__sliderVerseColour${sliderVerseIndex}`,
+
                     // TODO: Tentative. Not currently used.
                     `RM__stanzaVerse${cursorStanzaVerseIndex}`,
 

@@ -8,32 +8,6 @@
         // color $animationDuration__fast,
         background-color $animationDuration__fast;
     }
-}
-
-.VerseColour__evenFilter {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    .RM__verseBarHidden
-    .VerseColour__onCursor
-    & {
-        display: none;
-    }
-}
-
-.VerseColour__interactivated {
-    box-shadow: $boxShadow__activeVerse;
-}
-
-/**
- * Border radius is needed on both parent and child because of box shadow, I
- * think.
- */
-.VerseBar__animatable,
-.VerseColour__inVerseBar {
-    border-radius: $borderRadius;
-}
-
-.VerseColour {
 
     /**
      * Interactable verse has highlighted styling only when interactivated, or
@@ -162,3 +136,25 @@
     }
 }
 
+.VerseColour__evenFilter {
+    background-color: rgba(0, 0, 0, 0.05);
+
+    .RM__verseBarHidden
+    .VerseColour__onCursor
+    & {
+        display: none;
+    }
+}
+
+.VerseColour__interactivated {
+    box-shadow: $boxShadow__activeVerse;
+}
+
+/**
+ * Border radius is needed on both parent and child because of box shadow, I
+ * think.
+ */
+.VerseBar__animatable,
+.VerseColour__inVerseBar {
+    border-radius: $borderRadius;
+}

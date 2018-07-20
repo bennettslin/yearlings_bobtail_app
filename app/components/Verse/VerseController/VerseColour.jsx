@@ -46,6 +46,9 @@ VerseColour = ({
 
                 isInteractivated && 'VerseColour__interactivated',
 
+                // 'CM__verseColour',
+                // `CM__verseColour${verseIndex}`,
+
                 'absoluteFullContainer'
             )}
         >
@@ -70,7 +73,7 @@ VerseColour = ({
             />
 
             {/* Even filters are just a little shadier. */}
-            {!inVerseBar && !(verseIndex % 2) && (
+            {!(verseIndex % 2) && (
                 <div className={cx(
                     'VerseColour__evenFilter',
                     'absoluteFullContainer'
