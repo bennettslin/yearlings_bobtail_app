@@ -10,10 +10,13 @@ import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableStore
+    renderableStore,
+    sliderStore,
 }) => ({
     canLyricRender,
-    renderableSongIndex: renderableStore.renderableSongIndex
+    renderableSongIndex: renderableStore.renderableSongIndex,
+    renderableVerseIndex: renderableStore.renderableVerseIndex,
+    sliderVerseIndex: sliderStore.sliderVerseIndex
 })
 
 class VerseCursor extends Component {
@@ -22,9 +25,10 @@ class VerseCursor extends Component {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
+        renderableVerseIndex: PropTypes.number.isRequired,
+        sliderVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
-        isOnCursor: PropTypes.bool.isRequired,
         verseIndex: PropTypes.number.isRequired,
         inVerseBar: PropTypes.bool,
         inLyricVerse: PropTypes.bool,
@@ -41,7 +45,8 @@ class VerseCursor extends Component {
     render() {
         const {
                 renderableSongIndex,
-                isOnCursor,
+                sliderVerseIndex,
+                renderableVerseIndex,
                 verseIndex,
                 inVerseBar,
                 inLyricVerse,
@@ -59,7 +64,13 @@ class VerseCursor extends Component {
             transitionedStyle =
             isHorizontalTransition ?
                 'left' :
-                'top'
+                'top',
+
+            cursorIndex = sliderVerseIndex > -1 ?
+                sliderVerseIndex :
+                renderableVerseIndex,
+
+            isOnCursor = inVerseBar || verseIndex === cursorIndex
 
         return (
             <div

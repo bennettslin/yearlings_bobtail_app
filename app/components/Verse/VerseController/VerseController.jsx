@@ -14,14 +14,10 @@ import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
-    interactivatedVerseIndex,
-    renderableStore,
-    sliderStore
+    interactivatedVerseIndex
 }) => ({
     canLyricRender,
-    interactivatedVerseIndex,
-    renderableVerseIndex: renderableStore.renderableVerseIndex,
-    sliderVerseIndex: sliderStore.sliderVerseIndex
+    interactivatedVerseIndex
 })
 
 class VerseController extends Component {
@@ -29,8 +25,6 @@ class VerseController extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
-        renderableVerseIndex: PropTypes.number.isRequired,
-        sliderVerseIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
@@ -58,34 +52,19 @@ class VerseController extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                renderableVerseIndex,
-                sliderVerseIndex,
                 interactivatedVerseIndex,
 
             ...other } = this.props,
 
             {
-                inVerseBar,
                 verseIndex,
             } = other,
 
-            /**
-             * Tell verse where it is relative to cursor, and if it's
-             * interactivated.
-             */
-            cursorIndex = sliderVerseIndex > -1 ?
-                sliderVerseIndex :
-                renderableVerseIndex,
-
-            isOnCursor = inVerseBar || verseIndex === cursorIndex,
-            isAfterCursor = verseIndex > cursorIndex,
             isInteractivated = verseIndex === interactivatedVerseIndex
 
         return (
             <VerseControllerView {...other}
                 {...{
-                    isOnCursor,
-                    isAfterCursor,
                     isInteractivated
                 }}
             />
@@ -93,12 +72,11 @@ class VerseController extends Component {
     }
 }
 
+// TODO: Don't need a separate view component.
 class VerseControllerView extends Component {
 
     static propTypes = {
         // From parent.
-        isOnCursor: PropTypes.bool.isRequired,
-        isAfterCursor: PropTypes.bool.isRequired,
         isInteractivated: PropTypes.bool.isRequired,
 
         verseIndex: PropTypes.number.isRequired,
@@ -122,8 +100,6 @@ class VerseControllerView extends Component {
 
     render() {
         const {
-            isOnCursor,
-            isAfterCursor,
             isInteractivated,
 
             verseIndex,
@@ -143,8 +119,6 @@ class VerseControllerView extends Component {
                 <VerseColour
                     {...{
                         verseIndex,
-                        isOnCursor,
-                        isAfterCursor,
                         isInteractivated,
 
                         inVerseBar,
@@ -157,7 +131,6 @@ class VerseControllerView extends Component {
                     <VerseAudio
                         {...{
                             verseIndex,
-                            isAfterCursor,
                             isInteractivated,
                             handleLyricVerseSelect
                         }}

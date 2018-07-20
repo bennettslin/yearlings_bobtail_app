@@ -42,6 +42,7 @@ class EventHandler extends Component {
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
+        interactivatedVerseIndex: PropTypes.number.isRequired,
         isHeightlessLyricColumn: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
@@ -470,6 +471,11 @@ class EventHandler extends Component {
 
     handleLyricVerseSelect(e, selectedVerseIndex) {
         if (getSongIsLogue(this.props.selectedSongIndex)) {
+            return false
+        }
+
+        // The UI should prevent this, but just in case.
+        if (selectedVerseIndex !== this.props.interactivatedVerseIndex) {
             return false
         }
 
@@ -999,6 +1005,7 @@ const mapStateToProps = ({
     selectedTitleIndex,
     selectedVerseIndex,
     selectedWikiIndex,
+    interactivatedVerseIndex,
     accessedAnnotationIndex,
     isHeightlessLyricColumn,
     isLyricExpanded,
@@ -1014,6 +1021,7 @@ const mapStateToProps = ({
     selectedTitleIndex,
     selectedVerseIndex,
     selectedWikiIndex,
+    interactivatedVerseIndex,
     accessedAnnotationIndex,
     isHeightlessLyricColumn,
     isLyricExpanded,

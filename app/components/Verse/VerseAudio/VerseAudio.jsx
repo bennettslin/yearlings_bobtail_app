@@ -10,18 +10,15 @@ import cx from 'classnames'
 import Button from '../../Button/Button'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
-import { getVerseAudioIconText } from './verseAudioHelper'
 
 import { NAVIGATION_ENTER_KEY } from '../../../constants/access'
 
-// TODO: This can probably be a stateless component now.
 class VerseAudio extends Component {
 
     static propTypes = {
         // From parent.
         verseIndex: PropTypes.number.isRequired,
         isInteractivated: PropTypes.bool.isRequired,
-        isAfterCursor: PropTypes.bool.isRequired,
         handleLyricVerseSelect: PropTypes.func.isRequired
     }
 
@@ -39,21 +36,18 @@ class VerseAudio extends Component {
     }
 
     _handleAudioButtonClick(e) {
-        if (this.props.isInteractivated) {
+        const {
+            verseIndex,
+            handleLyricVerseSelect
+        } = this.props
 
-            const {
-                verseIndex,
-                handleLyricVerseSelect
-            } = this.props
-
-            handleLyricVerseSelect(e, verseIndex)
-        }
+        handleLyricVerseSelect(e, verseIndex)
     }
 
     render() {
         const {
                 isInteractivated,
-                isAfterCursor
+
             } = this.props,
 
             /**
@@ -62,8 +56,12 @@ class VerseAudio extends Component {
              */
             isEnabled = isInteractivated,
 
+            // TODO: Remove this once this logic is in CSS.
+            isAfterCursor = true,
+
             // TODO: Make this a real icon, of course.
-            iconText = getVerseAudioIconText(isAfterCursor)
+            iconText = isAfterCursor ? `\u23E9` : `\u23EA`
+
 
         return (
             <div className={cx(

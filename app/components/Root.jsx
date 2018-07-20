@@ -318,13 +318,7 @@ class Root extends Component {
                         `RM__noInteractivatedVerse${cursorVerseIndex}`,
 
                     areVerseBarsHidden && interactivatedVerseIndex < 0 &&
-                        `RM__cursoredLyricVerse${cursorVerseIndex}`,
-
-                    /**
-                     * TODO: Not currently used by verse cursor because it
-                     * needs to selectively apply transition in JS.
-                     */
-                    // isPlaying && `RM__verseCursor${cursorVerseIndex}`
+                        `RM__cursoredLyricVerse${cursorVerseIndex}`
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}

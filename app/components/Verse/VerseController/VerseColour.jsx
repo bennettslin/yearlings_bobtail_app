@@ -6,10 +6,7 @@ import VerseCursor from './VerseCursor'
 
 const propTypes = {
     // From parent.
-    isOnCursor: PropTypes.bool.isRequired,
-    // isAfterCursor: PropTypes.bool.isRequired,
     isInteractivated: PropTypes.bool.isRequired,
-
     verseIndex: PropTypes.number.isRequired,
     inVerseBar: PropTypes.bool,
     inLyricVerse: PropTypes.bool,
@@ -18,8 +15,6 @@ const propTypes = {
 
 VerseColour = ({
 
-    isOnCursor,
-    // isAfterCursor,
     isInteractivated,
 
     verseIndex,
@@ -39,12 +34,6 @@ VerseColour = ({
                 !inVerseBar && 'VerseColour__interactable',
                 inLyricVerse && 'VerseColour__inLyricVerse',
                 inSliderVerse && 'VerseColour__inSliderVerse',
-
-                // isOnCursor && 'VerseColour__onCursor',
-                // !isOnCursor && `VerseColour__${
-                //     isAfterCursor ? 'afterCursor' : 'beforeCursor'
-                // }`,
-
                 isInteractivated && 'VerseColour__interactivated',
 
                 'absoluteFullContainer'
@@ -52,7 +41,6 @@ VerseColour = ({
         >
             <VerseCursor
                 {...{
-                    isOnCursor,
                     verseIndex,
                     inVerseBar,
                     inLyricVerse,
