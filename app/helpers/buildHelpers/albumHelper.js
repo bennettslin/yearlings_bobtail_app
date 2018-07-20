@@ -133,7 +133,7 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
     // Allow easy access to verse metadata, without having to traverse lyrics.
     songObject.songVerseConfigs = []
 
-    lyricUnits.forEach(unitArray => {
+    lyricUnits.forEach((unitArray, unitIndex) => {
 
         // Let unit know all the verse indices that it contains.
         let firstVerseIndex
@@ -148,6 +148,8 @@ const _initialPrepareLyrics = (albumObject, songObject) => {
              * register each verse with time.
              */
             recurseToFindAnchors({
+                // Tell each stanza the units that it owns.
+                unitIndex,
 
                 // Pass this to register each verse time.
                 verseTimesCounter,

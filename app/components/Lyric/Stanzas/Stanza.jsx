@@ -45,7 +45,7 @@ class Stanza extends Component {
             props: this.props,
             nextProps,
             alwaysBypassCheck: {
-                isLastStanza: true
+                isLastUnit: true
             }
         })
     }
@@ -140,7 +140,7 @@ class StanzaView extends Component {
         unitIndex: PropTypes.number.isRequired,
 
         isTitleUnit: PropTypes.bool.isRequired,
-        isLastStanza: PropTypes.bool.isRequired,
+        isLastUnit: PropTypes.bool.isRequired,
 
         unitArray: PropTypes.array.isRequired,
         dotCard: PropTypes.object,
@@ -163,7 +163,7 @@ class StanzaView extends Component {
             props: this.props,
             nextProps,
             alwaysBypassCheck: {
-                isLastStanza: true
+                isLastUnit: true
             }
         })
     }
@@ -182,7 +182,7 @@ class StanzaView extends Component {
                 unitIndex,
 
                 isTitleUnit,
-                isLastStanza,
+                isLastUnit,
 
                 dotCard,
                 subCard,
@@ -270,7 +270,7 @@ class StanzaView extends Component {
                 }
                 {dotCard &&
                     <StanzaDot
-                        isLastStanza={isDotOnly && isLastStanza}
+                        isLastUnit={isDotOnly && isLastUnit}
                         dotStanzaObject={dotCard}
                         {...{
                             setLyricAnnotationRef,

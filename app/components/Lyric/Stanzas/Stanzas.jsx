@@ -177,7 +177,7 @@ StanzasView = ({
                         <Stanza {...other}
                             key={unitIndex}
                             unitIndex={unitIndex}
-                            isLastStanza={unitIndex === lyricUnitsCount - 1}
+                            isLastUnit={unitIndex === lyricUnitsCount - 1}
                         />
                     )
                 )}

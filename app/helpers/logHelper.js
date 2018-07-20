@@ -21,8 +21,8 @@ export default {
         copiedSong.lyricUnits = `lyricUnits: ${copiedSong.lyricUnits.length}`
         copiedSong.annotations = `annotations: ${copiedSong.annotations.length}`
         copiedSong.scenes = `scenes: ${copiedSong.scenes.length}`
-        copiedSong.songStanzaConfigs = `songStanzaConfigs: ${copiedSong.songStanzaConfigs.length}`
-        // copiedSong.songVerseConfigs = `songVerseConfigs: ${copiedSong.songVerseConfigs.length}`
+        // copiedSong.songStanzaConfigs = `songStanzaConfigs: ${copiedSong.songStanzaConfigs.length}`
+        copiedSong.songVerseConfigs = `songVerseConfigs: ${copiedSong.songVerseConfigs.length}`
         copiedSong.songSceneConfigs = `songSceneConfigs: ${copiedSong.songSceneConfigs.length}`
         copiedSong.tasks = `tasks: ${copiedSong.tasks.length}`
 

@@ -85,7 +85,7 @@ class StanzaDot extends Component {
 
         // FIXME: Ideal to get dotCard object from indices.
         const {
-                isLastStanza,
+                isLastUnit,
                 dotStanzaObject,
                 accessedAnnotationIndex,
                 renderableAnnotationIndex,
@@ -120,7 +120,7 @@ class StanzaDot extends Component {
                 dotKeys={dotKeys}
                 isSelected={isSelected}
                 isAccessed={isAccessed}
-                isLastStanza={isLastStanza}
+                isLastUnit={isLastUnit}
                 annotationIndex={annotationIndex}
                 handleAnchorClick={this._handleDotButtonClick}
             />
@@ -134,7 +134,7 @@ class StanzaDot extends Component {
 
 const propTypes = {
     // From parent.
-    isLastStanza: PropTypes.bool.isRequired,
+    isLastUnit: PropTypes.bool.isRequired,
     dotKeys: PropTypes.object.isRequired,
     annotationIndex: PropTypes.number.isRequired,
     setRef: PropTypes.func.isRequired
@@ -145,7 +145,7 @@ StanzaDotView = ({
     // From controller.
     dotKeys,
     annotationIndex,
-    isLastStanza,
+    isLastUnit,
     setRef,
 
 ...other }) => {
@@ -158,7 +158,7 @@ StanzaDotView = ({
                 'StanzaDot',
                 'Stanza__column',
 
-                isLastStanza && 'StanzaDot__lastStanza',
+                isLastUnit && 'StanzaDot__lastStanza',
 
                 // Scroll to dot stanza block upon annotation selection.
                 annotationIndex &&

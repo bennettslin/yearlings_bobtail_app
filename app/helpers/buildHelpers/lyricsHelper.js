@@ -125,7 +125,8 @@ export const initialRegisterStanzaTypes = (albumObject, songObject) => {
                          */
                         verseStartTime: unitArray[0].time
                     }],
-                    stanzaType
+                    stanzaType,
+                    stanzaUnitIndices: []
                 })
 
                 tempStanzaTypeCounters[stanzaType] = (
@@ -198,6 +199,7 @@ export const finalRegisterStanzaTypes = (songObject) => {
  */
 export const recurseToFindAnchors = ({
 
+    unitIndex = -1,
     inVerseWithTimeIndex = -1,
     albumObject,
     songObject,
@@ -248,8 +250,19 @@ export const recurseToFindAnchors = ({
         }
 
         const songStanzaConfig = songStanzaConfigs[stanzaIndex],
-            { stanzaVerseConfigs } = songStanzaConfig,
+            {
+                stanzaVerseConfigs,
+                stanzaUnitIndices
+            } = songStanzaConfig,
             stanzaFirstVerseConfig = stanzaVerseConfigs[0]
+
+        // Tell stanza that it owns this unit.
+        if (
+            stanzaUnitIndices.length === 0 ||
+            stanzaUnitIndices[stanzaUnitIndices.length - 1] < unitIndex
+        ) {
+            stanzaUnitIndices.push(unitIndex)
+        }
 
         if (isNaN(stanzaFirstVerseConfig.verseIndex)) {
             /**
