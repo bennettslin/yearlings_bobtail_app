@@ -71,7 +71,7 @@
     & {
         // Default side verse.
         background-color: #ddd;
-        @include mixin__textShadow($bgColour__beforeSelected);
+        @include mixin__textShadow($bgColour__afterSelected);
 
         color: #644;
     }

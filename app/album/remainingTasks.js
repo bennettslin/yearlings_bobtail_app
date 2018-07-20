@@ -1,6 +1,18 @@
 module.exports = [
 
     {
+        taskName: `Remove unneeded view components. View controller, slider, lyric stanzas?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Rename verse controller and lyric stanza components.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
         taskName: `Remove VerseColour.`,
         workedHours: 0,
         neededHours: 2
@@ -16,12 +28,6 @@ module.exports = [
         taskName: `Set up buttons to use svgs, including loading icons.`,
         workedHours: 0,
         neededHours: 8
-    },
-
-    {
-        taskName: `Be smart about how verse bar, verse audio buttons, and verse cursor update.`,
-        workedHours: 0,
-        neededHours: 2
     },
 
     {
@@ -102,7 +108,7 @@ module.exports = [
     },
 
     {
-        taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick.`,
+        taskName: `Verse bar cursor needs to reset properly. Looks like just setting a unique key no longer does the trick. Verse bar also doesn't need to update if slider is moving and it's not shown.`,
         workedHours: 0,
         neededHours: 2
     },
