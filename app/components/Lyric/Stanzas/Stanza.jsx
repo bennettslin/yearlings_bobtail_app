@@ -127,7 +127,8 @@ class Stanza extends Component {
 class StanzaView extends Component {
 
     static defaultProps = {
-        subsequent: false
+        subsequent: false,
+        isLastUnit: false
     }
 
     static propTypes = {
@@ -178,7 +179,6 @@ class StanzaView extends Component {
                 unitArray,
 
                 // From controller.
-                stanzaIndex,
                 unitIndex,
 
                 isTitleUnit,
@@ -207,14 +207,6 @@ class StanzaView extends Component {
             <div
                 className={cx(
                     'Stanza',
-
-                    /**
-                     * General selector when before cursor, general sibling
-                     * selector when after cursor.
-                     */
-                    !isNaN(stanzaIndex) && 'CM__stanza',
-                    // Aligned selector when on cursor.
-                    !isNaN(stanzaIndex) && `CM__stanza${stanzaIndex}`,
 
                     `unit__${unitIndex}`,
 

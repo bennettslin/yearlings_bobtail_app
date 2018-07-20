@@ -7,9 +7,10 @@ import cx from 'classnames'
 // import debounce from 'debounce'
 
 import Stanza from './Stanza'
-import { getLyricUnitsCount } from '../../../helpers/dataHelper'
 import {
-    getArrayOfLength,
+    getSongStanzaConfigs
+} from '../../../helpers/dataHelper'
+import {
     getPropsAreShallowEqual
 } from '../../../helpers/generalHelper'
 
@@ -114,12 +115,14 @@ class Stanzas extends Component {
                 ...other
             } = this.props,
 
-            lyricUnitsCount = getLyricUnitsCount(renderableSongIndex)
+            songStanzaConfigs = getSongStanzaConfigs(
+                renderableSongIndex
+            )
 
         return (
             <StanzasView {...other}
                 {...{
-                    lyricUnitsCount
+                    songStanzaConfigs
                 }}
                 handleWheel={this._handleWheel}
                 setRef={this.setLyricRef}
@@ -134,28 +137,18 @@ class Stanzas extends Component {
 
 const propTypes = {
     // From parent.
-    lyricUnitsCount: PropTypes.number.isRequired,
+    songStanzaConfigs: PropTypes.array.isRequired,
     setRef: PropTypes.func.isRequired,
     handleWheel: PropTypes.func.isRequired
 },
 
 StanzasView = ({
 
-    lyricUnitsCount,
+    songStanzaConfigs,
     setRef,
     handleWheel,
 
 ...other }) => {
-
-    const
-
-        /**
-         * Dynamically create array of just indices. Stanzas unit will fetch
-         * unit array directly from data helper.
-         */
-        lyricUnitsIndices = getArrayOfLength({
-            length: lyricUnitsCount
-        })
 
     return (
         <div
@@ -173,14 +166,60 @@ StanzasView = ({
             <div className={cx(
                 'Lyric__lyrics'
             )}>
-                {lyricUnitsIndices.map(unitIndex => (
-                        <Stanza {...other}
-                            key={unitIndex}
-                            unitIndex={unitIndex}
-                            isLastUnit={unitIndex === lyricUnitsCount - 1}
-                        />
+
+                {/* This is the title. */}
+                <Stanza {...other}
+                    {...{
+                        unitIndex: 0
+                    }}
+                />
+
+                {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
+                    const { stanzaUnitIndices } = stanzaConfig
+
+                    /**
+                     * Unfortunately, the component logic conflates stanzas
+                     * with units. The album data was created with units in
+                     * mind, but the UI is now organised by stanzas. A stanza
+                     * is made up of one or more units, with the exception of
+                     * the title unit.
+                     */
+                    return (
+                        <div
+                            key={stanzaIndex}
+                            className={cx(
+                                /**
+                                 * General selector when before cursor, general
+                                 * sibling selector when after cursor.
+                                 */
+                                !isNaN(stanzaIndex) &&
+                                    'CM__stanza',
+
+                                // Aligned selector when on cursor.
+                                !isNaN(stanzaIndex) &&
+                                    `CM__stanza${stanzaIndex}`
+                            )}
+                        >
+                            {stanzaUnitIndices.map(unitIndex => {
+                                const isLastUnit =
+                                    stanzaIndex ===
+                                        songStanzaConfigs.length - 1 &&
+                                    unitIndex ===
+                                        stanzaUnitIndices.length - 1
+
+                                return (
+                                    <Stanza {...other}
+                                        key={unitIndex}
+                                        {...{
+                                            unitIndex,
+                                            isLastUnit
+                                        }}
+                                    />
+                                )
+                            })}
+                        </div>
                     )
-                )}
+                })}
             </div>
         </div>
     )

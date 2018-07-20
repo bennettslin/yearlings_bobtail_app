@@ -141,16 +141,6 @@ export const getSongTip = (songIndex) => {
  * LYRICS *
  **********/
 
-export const getLyricUnitsCount = (songIndex) => {
-
-    if (songIndex < 0) {
-        return 0
-    }
-
-    const songs = getSongObject(songIndex)
-    return songs.lyricUnits ? songs.lyricUnits.length : 0
-}
-
 export const getLyricUnitArray = (songIndex, unitIndex) => {
     const songs = getSongObject(songIndex)
     return songs.lyricUnits ? songs.lyricUnits[unitIndex] : []
@@ -257,21 +247,6 @@ export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
 
     return songVerseConfigs[verseIndex].stanzaIndex
 }
-
-// export const getStanzaVerseIndexForVerseIndex = (songIndex, verseIndex) => {
-//     const
-//         songObject = getSongObject(songIndex),
-//         {
-//             songVerseConfigs,
-//             songStanzaConfigs
-//         } = songObject,
-
-//         { stanzaIndex } = songVerseConfigs[verseIndex],
-//         { stanzaVerseConfigs } = songStanzaConfigs[stanzaIndex],
-//         { verseIndex: firstVerseIndex } = stanzaVerseConfigs[0]
-
-//     return verseIndex - firstVerseIndex
-// }
 
 export const getVerseDurationForVerseIndex = (songIndex, verseIndex) => {
     const songObject = getSongObject(songIndex),

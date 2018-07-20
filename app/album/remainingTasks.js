@@ -1,6 +1,18 @@
 module.exports = [
 
     {
+        taskName: `Remove VerseColour.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Verse audio knows it's after cursor through CSS logic.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Set up buttons to use svgs, including loading icons.`,
         workedHours: 0,
         neededHours: 8
