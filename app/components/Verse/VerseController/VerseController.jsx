@@ -52,64 +52,16 @@ class VerseController extends Component {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                interactivatedVerseIndex,
-
-            ...other } = this.props,
-
-            {
                 verseIndex,
-            } = other,
+                interactivatedVerseIndex,
+                inVerse,
+                inVerseBar,
+                inSliderVerse,
 
-            isInteractivated = verseIndex === interactivatedVerseIndex
+                ...other
+            } = this.props,
 
-        return (
-            <VerseControllerView {...other}
-                {...{
-                    isInteractivated
-                }}
-            />
-        )
-    }
-}
-
-// TODO: Don't need a separate view component.
-class VerseControllerView extends Component {
-
-    static propTypes = {
-        // From parent.
-        isInteractivated: PropTypes.bool.isRequired,
-
-        verseIndex: PropTypes.number.isRequired,
-
-        inVerse: PropTypes.bool,
-        inVerseBar: PropTypes.bool,
-        inSliderVerse: PropTypes.bool,
-
-        // For verse audio buttons.
-        handleLyricVerseSelect: PropTypes.func
-    }
-
-    shouldComponentUpdate(nextProps) {
-        const shouldComponentUpdate = !getPropsAreShallowEqual({
-            props: this.props,
-            nextProps
-        })
-
-        return shouldComponentUpdate
-    }
-
-    render() {
-        const {
-            isInteractivated,
-
-            verseIndex,
-
-            inVerse,
-            inVerseBar,
-            inSliderVerse,
-
-            handleLyricVerseSelect
-        } = this.props,
+            isInteractivated = verseIndex === interactivatedVerseIndex,
 
         inLyricVerse = inVerse && !inVerseBar
 
@@ -129,10 +81,10 @@ class VerseControllerView extends Component {
 
                 {inLyricVerse && (
                     <VerseAudio
+                        {...other}
                         {...{
                             verseIndex,
-                            isInteractivated,
-                            handleLyricVerseSelect
+                            isInteractivated
                         }}
                     />
                 )}
