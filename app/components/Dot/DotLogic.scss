@@ -1,0 +1,27 @@
+// Nesting under parent for clarity.
+.RM__sliderNotMoving {
+    .bgColour__dot__portal {
+        background-color: $bgColour__dot__portal;
+    }
+    .bgColour__dot__observation {
+        background-color: $bgColour__dot__observation;
+    }
+    .bgColour__dot__backstory {
+        background-color: $bgColour__dot__backstory;
+    }
+    .bgColour__dot__reference {
+        background-color: $bgColour__dot__reference;
+    }
+    .bgColour__dot__pun {
+        background-color: $bgColour__dot__pun;
+    }
+    .bgColour__dot__narrative {
+        background-color: $bgColour__dot__narrative;
+    }
+    .bgColour__dot__songwriting {
+        background-color: $bgColour__dot__songwriting;
+    }
+    .bgColour__dot__afterword {
+        background-color: $bgColour__dot__afterword;
+    }
+}

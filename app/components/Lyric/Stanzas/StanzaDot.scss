@@ -27,34 +27,3 @@
 .StanzaDot__lastStanza {
     max-height: 0;
 }
-
-.RM__narrative
-    .StanzaDot__narrative,
-.RM__backstory
-    .StanzaDot__backstory,
-.RM__observation
-    .StanzaDot__observation,
-.RM__pun
-    .StanzaDot__pun,
-.RM__reference
-    .StanzaDot__reference,
-.RM__songwriting
-    .StanzaDot__songwriting,
-.RM__portal
-    .StanzaDot__portal,
-.RM__afterword
-    .StanzaDot__afterword {
-
-    max-width: inherit;
-    margin-top: $margin__lyricUnit;
-
-    opacity: 1;
-
-    &:not(:first-child) {
-        margin-left: $marginX__stanzaChildColumn;
-    }
-
-    &.StanzaDot__lastStanza {
-        max-height: inherit;
-    }
-}

@@ -1,0 +1,25 @@
+.RM__narrative
+.AnnotationCardAnimatable__narrative,
+.RM__backstory
+.AnnotationCardAnimatable__backstory,
+.RM__observation
+.AnnotationCardAnimatable__observation,
+.RM__pun
+.AnnotationCardAnimatable__pun,
+.RM__reference
+.AnnotationCardAnimatable__reference,
+.RM__songwriting
+.AnnotationCardAnimatable__songwriting,
+.RM__portal
+.AnnotationCardAnimatable__portal,
+.RM__afterword
+.AnnotationCardAnimatable__afterword,
+
+.AnnotationCard__inPopup {
+    max-height: 500px; // Arbitrary large number.
+
+    margin-top: $padding__annotationCard;
+
+    opacity: 1;
+    box-shadow: $boxShadow__annotationCard;
+}
