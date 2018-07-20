@@ -221,7 +221,7 @@ VerseView = ({
                 />
             ) : (
                 <div className={cx(
-                    'VerseColour__placeholder',
+                    'Verse__noIndexColour',
                     'absoluteFullContainer'
                 )} />
             )}

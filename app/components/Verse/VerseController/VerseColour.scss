@@ -33,45 +33,26 @@
     border-radius: $borderRadius;
 }
 
-.VerseColour__onCursor {
-    .RM__verseInactive
-    & {
-
-        &.VerseColour__interactable {
-            z-index: $zIndex__cursorVerse;
-        }
-
-        &.VerseColour__inSliderVerse {
-            box-shadow: $boxShadow__cursorVerse;
-
-            border-radius: $borderRadius $borderRadius 0 0;
-            top: -2px;
-            left: -0.5px;
-            height: calc(100% + 2px);
-            width: calc(100% + 1px);
-        }
-    }
-
-    .RM__verseInactive.RM__verseBarHidden
-    & {
-
-        &.VerseColour__inLyricVerse {
-            box-shadow: $boxShadow__cursorVerse;
-
-            border-radius: $borderRadius;
-            top: -$js__margin__thin;
-            left: -$js__margin__thin;
-            height: calc(100% + #{$js__margin__thin * 2});
-            width: calc(100% + #{$js__margin__thin * 2});
-        }
-    }
-}
-
 .VerseColour {
-    /**
-     * Default odd verse colours.
-     */
 
+    /**
+     * Interactable verse has highlighted styling only when interactivated, or
+     * when hovered, not selected, and with no other verse interactivated.
+     */
+    .RM__sliderNotMoving.RM__verseInactive
+    .verseColour__hoverParent:hover
+    &:not(.VerseColour__onCursor),
+
+    .RM__sliderNotMoving.RM__verseActive
+    &.VerseColour__interactivated {
+
+        background-color: $bgColour__audioHighlight;
+        @include mixin__textShadow($bgColour__audioHighlight);
+    }
+
+    /**
+     * Default verse colours.
+     */
     .RM__sliderNotMoving
     &.VerseColour__beforeCursor,
     .RM__sliderNotMoving.RM__verseBarBelow
@@ -113,16 +94,43 @@
     }
 }
 
-/**
- * Making this selector specific because these styles definitely need to
- * override any previous ones.
- */
-.VerseColour.VerseColour__onCursor {
+.VerseColour__onCursor {
+    .RM__verseInactive
+    & {
+
+        &.VerseColour__interactable {
+            z-index: $zIndex__cursorVerse;
+        }
+
+        &.VerseColour__inSliderVerse {
+            box-shadow: $boxShadow__cursorVerse;
+
+            border-radius: $borderRadius $borderRadius 0 0;
+            top: -2px;
+            left: -0.5px;
+            height: calc(100% + 2px);
+            width: calc(100% + 1px);
+        }
+    }
+
+    .RM__verseInactive.RM__verseBarHidden
+    & {
+
+        &.VerseColour__inLyricVerse {
+            box-shadow: $boxShadow__cursorVerse;
+
+            border-radius: $borderRadius;
+            top: -$js__margin__thin;
+            left: -$js__margin__thin;
+            height: calc(100% + #{$js__margin__thin * 2});
+            width: calc(100% + #{$js__margin__thin * 2});
+        }
+    }
+
     /**
      * Only apply these colours to verse in lyric when bar is hidden, and to
      * verse in bar when bar is shown.
      */
-
     .RM__sliderNotMoving.RM__isPlaying
     &.VerseColour__inSliderVerse,
     .RM__sliderNotMoving.RM__isPlaying.RM__verseBarHidden
@@ -154,40 +162,3 @@
     }
 }
 
-.VerseColour__placeholder {
-
-    .RM__sliderNotMoving
-    & {
-        // Default side verse.
-        background-color: $bgColour__beforeSelected;
-        @include mixin__textShadow($bgColour__beforeSelected);
-
-        color: #644;
-    }
-
-    .RM__sliderMoving
-    & {
-        // Slider side verse.
-        background-color: $bgColour__sideSlider;
-        @include mixin__textShadow($bgColour__sideSlider);
-
-        color: $colour__sideSlider;
-    }
-}
-
-.VerseColour {
-    /**
-     * Interactable verse has highlighted styling only when interactivated, or
-     * when hovered, not selected, and with no other verse interactivated.
-     */
-    .RM__sliderNotMoving.RM__verseInactive
-    .verseColour__hoverParent:hover
-    &:not(.VerseColour__onCursor),
-
-    .RM__sliderNotMoving.RM__verseActive
-    &.VerseColour__interactivated {
-
-        background-color: $bgColour__audioHighlight;
-        @include mixin__textShadow($bgColour__audioHighlight);
-    }
-}

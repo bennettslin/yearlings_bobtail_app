@@ -23,7 +23,7 @@
          */
         &,
         .VerseColour,
-        .VerseColour__placeholder {
+        .Verse__noIndexColour {
             border-top-left-radius: $borderRadius;
             border-top-right-radius: $borderRadius;
         }
@@ -39,7 +39,7 @@
 
         &,
         .VerseColour,
-        .VerseColour__placeholder {
+        .Verse__noIndexColour {
             border-bottom-left-radius: $borderRadius;
             border-bottom-right-radius: $borderRadius;
         }
@@ -58,4 +58,30 @@
 .Verse__title {
     $paddingX__title: 15px;
     padding: 0 $paddingX__title;
+}
+
+.Verse__noIndexColour {
+    /**
+     * These styles are for verses without a verse index, that don't need the
+     * added complexity of a VerseColour component, but still need to be styled
+     * similarly for consistency.
+     */
+
+    .RM__sliderNotMoving
+    & {
+        // Default side verse.
+        background-color: $bgColour__beforeSelected;
+        @include mixin__textShadow($bgColour__beforeSelected);
+
+        color: #644;
+    }
+
+    .RM__sliderMoving
+    & {
+        // Slider side verse.
+        background-color: $bgColour__sideSlider;
+        @include mixin__textShadow($bgColour__sideSlider);
+
+        color: $colour__sideSlider;
+    }
 }
