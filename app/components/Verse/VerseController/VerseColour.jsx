@@ -11,7 +11,6 @@ const propTypes = {
     isInteractivated: PropTypes.bool.isRequired,
 
     verseIndex: PropTypes.number.isRequired,
-    stanzaVerseIndex: PropTypes.number.isRequired,
     inVerseBar: PropTypes.bool,
     inLyricVerse: PropTypes.bool,
     inSliderVerse: PropTypes.bool
@@ -24,7 +23,6 @@ VerseColour = ({
     isInteractivated,
 
     verseIndex,
-    stanzaVerseIndex,
 
     inVerseBar,
     inLyricVerse,
@@ -48,9 +46,6 @@ VerseColour = ({
                 }`,
 
                 isInteractivated && 'VerseColour__interactivated',
-
-                'CM__stanzaVerseColour',
-                `CM__stanzaVerseColour${stanzaVerseIndex}`,
 
                 'absoluteFullContainer'
             )}

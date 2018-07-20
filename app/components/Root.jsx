@@ -21,8 +21,7 @@ import { DEVICE_OBJECTS } from '../constants/responsive'
 
 import {
     getSongIsLogue,
-    getStanzaIndexForVerseIndex,
-    // getStanzaVerseIndexForVerseIndex
+    getStanzaIndexForVerseIndex
 } from '../helpers/dataHelper'
 
 import { getPrefixPrependedClassNames } from '../helpers/domHelper'
@@ -230,26 +229,9 @@ class Root extends Component {
                 sliderVerseIndex :
                 renderableVerseIndex,
 
-            // renderableStanzaIndex = getStanzaIndexForVerseIndex(
-            //     renderableSongIndex, sliderVerseIndex
-            // ),
-
-            // sliderStanzaIndex = getStanzaIndexForVerseIndex(
-            //     renderableSongIndex, sliderVerseIndex
-            // ),
-
             cursorStanzaIndex = getStanzaIndexForVerseIndex(
                 renderableSongIndex, cursorVerseIndex
             )
-
-            // TODO: This is the only instance of this method being used.
-            // cursorStanzaVerseIndex = getStanzaVerseIndexForVerseIndex(
-            //     renderableSongIndex, cursorVerseIndex
-            // )
-
-            // verseIndex = interactivatedVerseIndex > -1 ?
-            //     interactivatedVerseIndex :
-            //     cursorVerseIndex
 
         return appMounted && (
             <div
@@ -329,11 +311,6 @@ class Root extends Component {
                     isPlaying ?
                         `RM__playingVerse${renderableVerseIndex}` :
                         `RM__pausedVerse${renderableVerseIndex}`,
-
-                    // `RM__stanzaVerse${cursorStanzaVerseIndex}`,
-
-                    // isSliderMoving &&
-                    //     `RM__sliderStanzaVerseColour${cursorStanzaVerseIndex}`,
 
                     /**
                      * TODO: Not currently used by verse cursor because it

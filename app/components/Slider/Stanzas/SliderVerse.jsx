@@ -23,7 +23,6 @@ class SliderVerse extends Component {
 
         // From parent.
         verseIndex: PropTypes.number.isRequired,
-        stanzaVerseIndex: PropTypes.number.isRequired,
         relativeStartTime: PropTypes.number.isRequired,
         verseDuration: PropTypes.number.isRequired,
         stanzaDuration: PropTypes.number.isRequired
@@ -52,8 +51,7 @@ class SliderVerse extends Component {
             } = this.props,
 
             {
-                verseIndex,
-                // stanzaVerseIndex
+                verseIndex
             } = other,
 
             /**
@@ -87,8 +85,8 @@ class SliderVerse extends Component {
 
                     'CM__verse',
                     `CM__verse${verseIndex}`,
-                    // 'CM__stanzaVerse',
-                    // `CM__stanzaVerse${stanzaVerseIndex}`,
+                    'CM__sliderVerse',
+                    `CM__sliderVerse${verseIndex}`
                 )}
                 style={verseStyle}
             >

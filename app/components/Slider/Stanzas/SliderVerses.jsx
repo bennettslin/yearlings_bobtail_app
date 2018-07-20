@@ -41,7 +41,6 @@ const SliderVerses = ({
                         key={index}
                         {...{
                             verseIndex: stanzaFirstVerseIndex + index,
-                            stanzaVerseIndex: index,
                             relativeStartTime,
                             verseDuration,
                             stanzaDuration
