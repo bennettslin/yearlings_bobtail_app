@@ -1,5 +1,12 @@
 .VerseCursor {
     background-color: rgba(200, 150, 250, 0.4);
+
+    .RM__isPaused
+    &,
+    .RM__sliderMoving
+    & {
+        transition: none !important;
+    }
 }
 
 .VerseCursor__horizontalTransition {
@@ -17,15 +24,5 @@
     .RM__isPlaying
     &.VerseCursor__onCursor {
         top: 0;
-    }
-}
-
-.VerseCursor__onCursor {
-
-    .RM__isPaused
-    &,
-    .RM__sliderMoving
-    & {
-        transition: none !important;
     }
 }

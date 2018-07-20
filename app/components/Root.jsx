@@ -232,11 +232,11 @@ class Root extends Component {
 
             cursorStanzaVerseIndex = getStanzaVerseIndexForVerseIndex(
                 renderableSongIndex, cursorVerseIndex
-            ),
+            )
 
-            verseIndex = interactivatedVerseIndex > -1 ?
-                interactivatedVerseIndex :
-                cursorVerseIndex
+            // verseIndex = interactivatedVerseIndex > -1 ?
+            //     interactivatedVerseIndex :
+            //     cursorVerseIndex
 
         return appMounted && (
             <div
@@ -304,7 +304,7 @@ class Root extends Component {
                     // TODO: Tentative. Not currently used.
                     `RM__stanzaVerse${cursorStanzaVerseIndex}`,
 
-                    `RM__verse${verseIndex}`
+                    isPlaying && `RM__verseCursor${cursorVerseIndex}`
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}
