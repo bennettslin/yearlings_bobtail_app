@@ -22,11 +22,15 @@ import { DEVICE_OBJECTS } from '../constants/responsive'
 import {
     getSongIsLogue,
     getStanzaIndexForVerseIndex,
-    getStanzaVerseIndexForVerseIndex
+    // getStanzaVerseIndexForVerseIndex
 } from '../helpers/dataHelper'
 
 import { getPrefixPrependedClassNames } from '../helpers/domHelper'
-import { getIsDesktop, getIsTabletOrMini } from '../helpers/responsiveHelper'
+
+import {
+    getIsDesktop,
+    getIsTabletOrMini
+} from '../helpers/responsiveHelper'
 
 import {
     getShowOverlay,
@@ -226,14 +230,22 @@ class Root extends Component {
                 sliderVerseIndex :
                 renderableVerseIndex,
 
+            // renderableStanzaIndex = getStanzaIndexForVerseIndex(
+            //     renderableSongIndex, sliderVerseIndex
+            // ),
+
+            // sliderStanzaIndex = getStanzaIndexForVerseIndex(
+            //     renderableSongIndex, sliderVerseIndex
+            // ),
+
             cursorStanzaIndex = getStanzaIndexForVerseIndex(
                 renderableSongIndex, cursorVerseIndex
-            ),
+            )
 
             // TODO: This is the only instance of this method being used.
-            cursorStanzaVerseIndex = getStanzaVerseIndexForVerseIndex(
-                renderableSongIndex, cursorVerseIndex
-            )
+            // cursorStanzaVerseIndex = getStanzaVerseIndexForVerseIndex(
+            //     renderableSongIndex, cursorVerseIndex
+            // )
 
             // verseIndex = interactivatedVerseIndex > -1 ?
             //     interactivatedVerseIndex :
@@ -300,19 +312,34 @@ class Root extends Component {
                     interactivatedVerseIndex < 0 ?
                         'RM__verseInactive' : 'RM__verseActive',
 
+                    // Make it easier to override this selector.
+                    !isSliderMoving && interactivatedVerseIndex < 0 &&
+                        'RM__verseCanHover',
+
                     `RM__stanza${cursorStanzaIndex}`,
 
-                    // isSliderMoving &&
-                    //     `RM__sliderVerseColour${sliderVerseIndex}`,
+                    isSliderMoving ?
+                        `RM__sliderStanza${cursorStanzaIndex}` :
+                        `RM__noSliderStanza${cursorStanzaIndex}`,
 
-                    // TODO: Tentative. Not currently used.
-                    `RM__stanzaVerse${cursorStanzaVerseIndex}`,
+                    isSliderMoving ?
+                        `RM__sliderVerse${sliderVerseIndex}` :
+                        `RM__noSliderVerse${renderableVerseIndex}`,
+
+                    isPlaying ?
+                        `RM__playingVerse${renderableVerseIndex}` :
+                        `RM__pausedVerse${renderableVerseIndex}`,
+
+                    // `RM__stanzaVerse${cursorStanzaVerseIndex}`,
+
+                    // isSliderMoving &&
+                    //     `RM__sliderStanzaVerseColour${cursorStanzaVerseIndex}`,
 
                     /**
                      * TODO: Not currently used by verse cursor because it
                      * needs to selectively apply transition in JS.
                      */
-                    isPlaying && `RM__verseCursor${cursorVerseIndex}`
+                    // isPlaying && `RM__verseCursor${cursorVerseIndex}`
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}

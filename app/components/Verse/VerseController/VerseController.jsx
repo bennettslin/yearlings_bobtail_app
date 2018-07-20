@@ -39,6 +39,7 @@ class VerseController extends Component {
         inSliderVerse: PropTypes.bool,
 
         verseIndex: PropTypes.number.isRequired,
+        stanzaVerseIndex: PropTypes.number.isRequired,
 
         // For verse audio buttons.
         handleLyricVerseSelect: PropTypes.func
@@ -127,6 +128,7 @@ class VerseControllerView extends Component {
             isInteractivated,
 
             verseIndex,
+            stanzaVerseIndex,
 
             inVerse,
             inVerseBar,
@@ -143,6 +145,7 @@ class VerseControllerView extends Component {
                 <VerseColour
                     {...{
                         verseIndex,
+                        stanzaVerseIndex,
                         isOnCursor,
                         isAfterCursor,
                         isInteractivated,

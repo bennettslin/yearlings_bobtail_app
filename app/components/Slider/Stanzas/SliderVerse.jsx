@@ -23,6 +23,7 @@ class SliderVerse extends Component {
 
         // From parent.
         verseIndex: PropTypes.number.isRequired,
+        stanzaVerseIndex: PropTypes.number.isRequired,
         relativeStartTime: PropTypes.number.isRequired,
         verseDuration: PropTypes.number.isRequired,
         stanzaDuration: PropTypes.number.isRequired
@@ -50,7 +51,10 @@ class SliderVerse extends Component {
                 ...other
             } = this.props,
 
-            { verseIndex } = other,
+            {
+                verseIndex,
+                // stanzaVerseIndex
+            } = other,
 
             /**
              * Round left down, and width up, to ensure that there are no gaps
@@ -79,7 +83,12 @@ class SliderVerse extends Component {
                     `SliderVerse__${verseIndex}`,
 
                     'verseColour__hoverParent',
-                    'absoluteFullContainer'
+                    'absoluteFullContainer',
+
+                    'CM__verse',
+                    `CM__verse${verseIndex}`,
+                    // 'CM__stanzaVerse',
+                    // `CM__stanzaVerse${stanzaVerseIndex}`,
                 )}
                 style={verseStyle}
             >

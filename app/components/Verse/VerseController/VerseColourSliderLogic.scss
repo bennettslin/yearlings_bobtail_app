@@ -1,0 +1,108 @@
+// Default. Verse colour before cursored stanza and before cursored verse.
+.RM__sliderMoving {
+    .VerseColour {
+        background-color: $bgColour__beforeSlider;
+    }
+}
+
+// Verse colour in cursored stanza, on cursored verse.
+.RM__sliderVerse0 .CM__verse0,
+.RM__sliderVerse1 .CM__verse1,
+.RM__sliderVerse2 .CM__verse2,
+.RM__sliderVerse3 .CM__verse3,
+.RM__sliderVerse4 .CM__verse4,
+.RM__sliderVerse5 .CM__verse5,
+.RM__sliderVerse6 .CM__verse6,
+.RM__sliderVerse7 .CM__verse7,
+.RM__sliderVerse8 .CM__verse8,
+.RM__sliderVerse9 .CM__verse9,
+.RM__sliderVerse10 .CM__verse10,
+.RM__sliderVerse11 .CM__verse11,
+.RM__sliderVerse12 .CM__verse12,
+.RM__sliderVerse13 .CM__verse13,
+.RM__sliderVerse14 .CM__verse14,
+.RM__sliderVerse15 .CM__verse15,
+.RM__sliderVerse16 .CM__verse16,
+.RM__sliderVerse17 .CM__verse17,
+.RM__sliderVerse18 .CM__verse18,
+.RM__sliderVerse19 .CM__verse19,
+.RM__sliderVerse20 .CM__verse20,
+.RM__sliderVerse21 .CM__verse21,
+.RM__sliderVerse22 .CM__verse22,
+.RM__sliderVerse23 .CM__verse23,
+.RM__sliderVerse24 .CM__verse24,
+.RM__sliderVerse25 .CM__verse25,
+.RM__sliderVerse26 .CM__verse26,
+.RM__sliderVerse27 .CM__verse27,
+.RM__sliderVerse28 .CM__verse28,
+.RM__sliderVerse29 .CM__verse29,
+.RM__sliderVerse30 .CM__verse30,
+.RM__sliderVerse31 .CM__verse31,
+.RM__sliderVerse32 .CM__verse32,
+.RM__sliderVerse33 .CM__verse33,
+.RM__sliderVerse34 .CM__verse34,
+.RM__sliderVerse35 .CM__verse35,
+.RM__sliderVerse36 .CM__verse36,
+.RM__sliderVerse37 .CM__verse37,
+.RM__sliderVerse38 .CM__verse38,
+.RM__sliderVerse39 .CM__verse39,
+.RM__sliderVerse40 .CM__verse40,
+.RM__sliderVerse41 .CM__verse41,
+.RM__sliderVerse42 .CM__verse42,
+.RM__sliderVerse43 .CM__verse43,
+.RM__sliderVerse44 .CM__verse44,
+.RM__sliderVerse45 .CM__verse45,
+.RM__sliderVerse46 .CM__verse46,
+.RM__sliderVerse47 .CM__verse47,
+.RM__sliderVerse48 .CM__verse48,
+.RM__sliderVerse49 .CM__verse49,
+.RM__sliderVerse50 .CM__verse50,
+.RM__sliderVerse51 .CM__verse51,
+.RM__sliderVerse52 .CM__verse52,
+.RM__sliderVerse53 .CM__verse53,
+.RM__sliderVerse54 .CM__verse54,
+.RM__sliderVerse55 .CM__verse55,
+.RM__sliderVerse56 .CM__verse56,
+.RM__sliderVerse57 .CM__verse57,
+.RM__sliderVerse58 .CM__verse58,
+.RM__sliderVerse59 .CM__verse59,
+.RM__sliderVerse60 .CM__verse60,
+.RM__sliderVerse61 .CM__verse61,
+.RM__sliderVerse62 .CM__verse62 {
+
+    .VerseColour {
+        background-color: $bgColour__audioNeutral;
+    }
+
+    // Verse colour in cursored stanza, after cursored verse.
+    ~ .CM__verse {
+
+        .VerseColour {
+            background-color: $bgColour__afterSlider;
+        }
+    }
+}
+
+// Verse colour after cursored stanza.
+.RM__sliderStanza0 .CM__stanza0,
+.RM__sliderStanza1 .CM__stanza1,
+.RM__sliderStanza2 .CM__stanza2,
+.RM__sliderStanza3 .CM__stanza3,
+.RM__sliderStanza4 .CM__stanza4,
+.RM__sliderStanza5 .CM__stanza5,
+.RM__sliderStanza6 .CM__stanza6,
+.RM__sliderStanza7 .CM__stanza7,
+.RM__sliderStanza8 .CM__stanza8,
+.RM__sliderStanza9 .CM__stanza9,
+.RM__sliderStanza10 .CM__stanza10,
+.RM__sliderStanza11 .CM__stanza11,
+.RM__sliderStanza12 .CM__stanza12,
+.RM__sliderStanza13 .CM__stanza13 {
+
+    ~ .CM__stanza {
+
+        .VerseColour {
+            background-color: $bgColour__afterSlider;
+        }
+    }
+}

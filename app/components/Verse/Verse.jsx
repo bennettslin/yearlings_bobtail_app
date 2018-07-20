@@ -8,6 +8,10 @@ import cx from 'classnames'
 import VerseController from './VerseController/VerseController'
 import VerseLines from './VerseLines'
 
+import {
+    getStanzaVerseIndexForVerseIndex
+} from '../../helpers/dataHelper'
+
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 import { VERSE_SCROLL } from '../../constants/dom'
@@ -117,6 +121,7 @@ class Verse extends Component {
 
             {
                 inVerseBar,
+                verseIndex,
                 verseObject
             } = other,
 
@@ -142,6 +147,14 @@ class Verse extends Component {
                         handleAnchorClick: handleLyricAnnotationSelect
                     }
                 }
+                {
+                    ...!isNaN(verseIndex) && {
+                        stanzaVerseIndex: getStanzaVerseIndexForVerseIndex(
+                            renderableSongIndex,
+                            verseIndex
+                        )
+                    }
+                }
             />
         )
     }
@@ -158,6 +171,8 @@ const verseViewDefaultProps = {
 verseViewPropTypes = {
     // From parent.
     verseIndex: PropTypes.number,
+    stanzaVerseIndex: PropTypes.number,
+
     inVerseBar: PropTypes.bool.isRequired,
     isInteractable: PropTypes.bool.isRequired,
 
@@ -173,6 +188,7 @@ VerseView = ({
     // From controller.
     verseClassName,
     isInteractable,
+    stanzaVerseIndex,
 
     handleLyricVerseSelect,
     handleInteractivatableClick,
@@ -192,6 +208,12 @@ VerseView = ({
             ref={setRef}
             className={cx(
                 'Verse',
+
+                'CM__verse',
+                `CM__verse${verseIndex}`,
+                // 'CM__stanzaVerse',
+                // `CM__stanzaVerse${stanzaVerseIndex}`,
+
                 isTitle && 'Verse__title',
                 inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
@@ -213,7 +235,8 @@ VerseView = ({
                     inVerse
                     {...{
                         inVerseBar,
-                        verseIndex
+                        verseIndex,
+                        stanzaVerseIndex
                     }}
                     {...!inVerseBar && {
                         handleLyricVerseSelect

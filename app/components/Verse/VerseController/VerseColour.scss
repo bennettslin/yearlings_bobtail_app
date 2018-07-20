@@ -13,7 +13,7 @@
      * Interactable verse has highlighted styling only when interactivated, or
      * when hovered, not selected, and with no other verse interactivated.
      */
-    .RM__sliderNotMoving.RM__verseInactive
+    .RM__verseCanHover
     .verseColour__hoverParent:hover
     &:not(.VerseColour__onCursor),
 
@@ -23,50 +23,34 @@
         background-color: $bgColour__audioHighlight;
         @include mixin__textShadow($bgColour__audioHighlight);
     }
+}
 
-    /**
-     * Default verse colours.
-     */
-    .RM__sliderNotMoving
-    &.VerseColour__beforeCursor,
-    .RM__sliderNotMoving.RM__verseBarBelow
-    &.VerseColour__onCursor {
-        background-color: $bgColour__beforeSelected;
-        @include mixin__textShadow($bgColour__beforeSelected);
 
-        // color: $colour__beforeSelected;
-    }
+.VerseColour__evenFilter {
+    background-color: rgba(0, 0, 0, 0.05);
 
-    .RM__sliderMoving
-    &.VerseColour__beforeCursor,
-    .RM__sliderMoving.RM__verseBarBelow
-    &.VerseColour__onCursor {
-        background-color: $bgColour__beforeSlider;
-        @include mixin__textShadow($bgColour__beforeSlider);
-
-        // color: $colour__beforeSlider;
-    }
-
-    .RM__sliderNotMoving
-    &.VerseColour__afterCursor,
-    .RM__sliderNotMoving.RM__verseBarAbove
-    &.VerseColour__onCursor {
-        background-color: $bgColour__afterSelected;
-        @include mixin__textShadow($bgColour__afterSelected);
-
-        // color: $colour__afterSelected;
-    }
-
-    .RM__sliderMoving
-    &.VerseColour__afterCursor,
-    .RM__sliderMoving.RM__verseBarAbove
-    &.VerseColour__onCursor {
-        background-color: $bgColour__afterSlider;
-        @include mixin__textShadow($bgColour__afterSlider);
-
-        // color: $colour__afterSlider;
+    .RM__verseBarHidden
+    .VerseColour__onCursor
+    & {
+        display: none;
     }
 }
+
+.VerseColour__interactivated {
+    box-shadow: $boxShadow__activeVerse;
+}
+
+/**
+ * Border radius is needed on both parent and child because of box shadow, I
+ * think.
+ */
+.VerseBar__animatable,
+.VerseColour__inVerseBar {
+    border-radius: $borderRadius;
+}
+
+
+// Left todo.
 
 .VerseColour__onCursor {
     .RM__verseInactive
@@ -100,61 +84,92 @@
             width: calc(100% + #{$js__margin__thin * 2});
         }
     }
+}
+
+
+/**
+ * DONE. TODO: Delete once confident that logic in CSS works.
+ */
+
+// .VerseColour {
+
+    // /**
+    //  * Default verse colours.
+    //  */
+    // .RM__sliderNotMoving
+    // &.VerseColour__beforeCursor,
+    // .RM__sliderNotMoving.RM__verseBarBelow
+    // &.VerseColour__onCursor {
+    //     background-color: $bgColour__beforeSelected;
+    //     @include mixin__textShadow($bgColour__beforeSelected);
+
+    //     // color: $colour__beforeSelected;
+    // }
+
+    // .RM__sliderMoving
+    // &.VerseColour__beforeCursor,
+    // .RM__sliderMoving.RM__verseBarBelow
+    // &.VerseColour__onCursor {
+    //     background-color: $bgColour__beforeSlider;
+    //     @include mixin__textShadow($bgColour__beforeSlider);
+
+    //     // color: $colour__beforeSlider;
+    // }
+
+    // .RM__sliderNotMoving
+    // &.VerseColour__afterCursor,
+    // .RM__sliderNotMoving.RM__verseBarAbove
+    // &.VerseColour__onCursor {
+    //     background-color: $bgColour__afterSelected;
+    //     @include mixin__textShadow($bgColour__afterSelected);
+
+    //     // color: $colour__afterSelected;
+    // }
+
+    // .RM__sliderMoving
+    // &.VerseColour__afterCursor,
+    // .RM__sliderMoving.RM__verseBarAbove
+    // &.VerseColour__onCursor {
+    //     background-color: $bgColour__afterSlider;
+    //     @include mixin__textShadow($bgColour__afterSlider);
+
+    //     // color: $colour__afterSlider;
+    // }
+// }
+
+// .VerseColour__onCursor {
 
     /**
      * Only apply these colours to verse in lyric when bar is hidden, and to
      * verse in bar when bar is shown.
      */
-    .RM__sliderNotMoving.RM__isPlaying
-    &.VerseColour__inSliderVerse,
-    .RM__sliderNotMoving.RM__isPlaying.RM__verseBarHidden
-    &.VerseColour__inLyricVerse,
-    .RM__sliderNotMoving.RM__isPlaying.RM__verseBarShown
-    &.VerseColour__inVerseBar {
-        background-color: $bgColour__audioPlay;
-        @include mixin__textShadow($bgColour__audioPlay);
-    }
+    // .RM__sliderNotMoving.RM__isPlaying
+    // &.VerseColour__inSliderVerse,
+    // .RM__sliderNotMoving.RM__isPlaying.RM__verseBarHidden
+    // &.VerseColour__inLyricVerse,
+    // .RM__sliderNotMoving.RM__isPlaying.RM__verseBarShown
+    // &.VerseColour__inVerseBar {
+    //     background-color: $bgColour__audioPlay;
+    //     @include mixin__textShadow($bgColour__audioPlay);
+    // }
 
-    .RM__sliderNotMoving.RM__isPaused
-    &.VerseColour__inSliderVerse,
-    .RM__sliderNotMoving.RM__isPaused.RM__verseBarHidden
-    &.VerseColour__inLyricVerse,
-    .RM__sliderNotMoving.RM__isPaused.RM__verseBarShown
-    &.VerseColour__inVerseBar {
-        background-color: $bgColour__audioPause;
-        @include mixin__textShadow($bgColour__audioPause);
-    }
+    // .RM__sliderNotMoving.RM__isPaused
+    // &.VerseColour__inSliderVerse,
+    // .RM__sliderNotMoving.RM__isPaused.RM__verseBarHidden
+    // &.VerseColour__inLyricVerse,
+    // .RM__sliderNotMoving.RM__isPaused.RM__verseBarShown
+    // &.VerseColour__inVerseBar {
+    //     background-color: $bgColour__audioPause;
+    //     @include mixin__textShadow($bgColour__audioPause);
+    // }
 
-    .RM__sliderMoving
-    &.VerseColour__inSliderVerse,
-    .RM__sliderMoving.RM__verseBarHidden
-    &.VerseColour__inLyricVerse,
-    .RM__sliderMoving.RM__verseBarShown
-    &.VerseColour__inVerseBar {
-        background-color: $bgColour__audioNeutral;
-        @include mixin__textShadow($bgColour__audioNeutral);
-    }
-}
-
-.VerseColour__evenFilter {
-    background-color: rgba(0, 0, 0, 0.05);
-
-    .RM__verseBarHidden
-    .VerseColour__onCursor
-    & {
-        display: none;
-    }
-}
-
-.VerseColour__interactivated {
-    box-shadow: $boxShadow__activeVerse;
-}
-
-/**
- * Border radius is needed on both parent and child because of box shadow, I
- * think.
- */
-.VerseBar__animatable,
-.VerseColour__inVerseBar {
-    border-radius: $borderRadius;
-}
+    // .RM__sliderMoving
+    // &.VerseColour__inSliderVerse,
+    // .RM__sliderMoving.RM__verseBarHidden
+    // &.VerseColour__inLyricVerse,
+    // .RM__sliderMoving.RM__verseBarShown
+    // &.VerseColour__inVerseBar {
+    //     background-color: $bgColour__audioNeutral;
+    //     @include mixin__textShadow($bgColour__audioNeutral);
+    // }
+// }

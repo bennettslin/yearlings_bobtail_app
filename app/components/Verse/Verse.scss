@@ -70,7 +70,7 @@
     .RM__sliderNotMoving
     & {
         // Default side verse.
-        background-color: $bgColour__beforeSelected;
+        background-color: #ddd;
         @include mixin__textShadow($bgColour__beforeSelected);
 
         color: #644;
