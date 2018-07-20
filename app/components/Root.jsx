@@ -230,6 +230,7 @@ class Root extends Component {
                 renderableSongIndex, cursorVerseIndex
             ),
 
+            // TODO: This is the only instance of this method being used.
             cursorStanzaVerseIndex = getStanzaVerseIndexForVerseIndex(
                 renderableSongIndex, cursorVerseIndex
             )
@@ -304,6 +305,10 @@ class Root extends Component {
                     // TODO: Tentative. Not currently used.
                     `RM__stanzaVerse${cursorStanzaVerseIndex}`,
 
+                    /**
+                     * TODO: Not currently used by verse cursor because it
+                     * needs to selectively apply transition in JS.
+                     */
                     isPlaying && `RM__verseCursor${cursorVerseIndex}`
                 )}
                 onClick={this._handleClick}

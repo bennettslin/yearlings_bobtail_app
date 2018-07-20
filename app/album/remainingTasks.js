@@ -1,9 +1,27 @@
 module.exports = [
 
     {
+        taskName: `Set up buttons to use svgs, including loading icons.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
+    {
         taskName: `Be smart about how verse bar, verse audio buttons, and verse cursor update.`,
         workedHours: 0,
         neededHours: 2
+    },
+
+    {
+        taskName: `Sometimes slider locks up?`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Don't attempt to scroll carousel in phone.`,
+        workedHours: 0,
+        neededHours: 1
     },
 
     {
@@ -37,12 +55,6 @@ module.exports = [
         taskName: `Desktop menu animating to overlay is a little janky? CSS Grids?`,
         workedHours: 0,
         neededHours: 1
-    },
-
-    {
-        taskName: `Set up buttons to use svgs, including loading icons.`,
-        workedHours: 0,
-        neededHours: 8
     },
 
     {

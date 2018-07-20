@@ -1,6 +1,9 @@
 /**
  * This is the one source of truth for how dot anchors are ordered.
  */
+
+// TODO: Move default logic here.
+
 .RM__sliderNotMoving.RM__portal
     .DotAnchor__portal {
     background-color: $bgColour__dot__portal;
