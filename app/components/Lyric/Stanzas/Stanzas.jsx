@@ -9,7 +9,8 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 // import debounce from 'debounce'
 
-import Stanza from '../Unit/Unit'
+import Stanza from './Stanza'
+import Unit from '../Unit/Unit'
 import {
     getSongStanzaConfigs,
     getLastUnitDotCardIndex
@@ -177,61 +178,36 @@ StanzasView = ({
             onWheel={handleWheel}
         >
             <div className={cx(
-                'Lyric__lyrics'
+                'Stanzas__child'
             )}>
 
                 {/* This is the title. */}
-                <Stanza {...other}
+                <Unit {...other}
                     {...{
                         unitIndex: 0
                     }}
                 />
 
                 {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
-                    const { stanzaUnitIndices } = stanzaConfig
+
+                    const isLastStanza =
+                        stanzaIndex === songStanzaConfigs.length - 1
 
                     return (
-                        <div
+                        <Stanza {...other}
                             key={stanzaIndex}
-                            className={cx(
-                                // Aligned selector when on cursor.
-                                !isNaN(stanzaIndex) &&
-                                    `CM__stanza${stanzaIndex}`,
-
-                                /**
-                                 * General selector when before cursor, general
-                                 * sibling selector when after cursor.
-                                 */
-                                !isNaN(stanzaIndex) &&
-                                    'CM__stanza',
-
-                                'Stanza'
-                            )}
-                        >
-                            {stanzaUnitIndices.map(unitIndex => {
-                                const isLastUnit =
-                                    stanzaIndex ===
-                                        songStanzaConfigs.length - 1 &&
-                                    unitIndex ===
-                                        stanzaUnitIndices.length - 1
-
-                                return (
-                                    <Stanza {...other}
-                                        key={unitIndex}
-                                        {...{
-                                            unitIndex,
-                                            isLastUnit
-                                        }}
-                                    />
-                                )
-                            })}
-                        </div>
+                            {...{
+                                stanzaConfig,
+                                stanzaIndex,
+                                isLastStanza
+                            }}
+                        />
                     )
                 })}
 
                 {/* This is the last unit dot card, if there is one. */}
                 {lastUnitDotCardIndex > -1 && (
-                    <Stanza {...other}
+                    <Unit {...other}
                         {...{
                             unitIndex: lastUnitDotCardIndex
                         }}

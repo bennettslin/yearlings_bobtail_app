@@ -6,14 +6,20 @@ $paddingY__lyrics: 20px;
     width: 100%;
     overflow-y: scroll;
 
+    line-height: 150%;
+
     &:focus {
         outline: none;
     }
 }
 
-.Lyric__lyrics {
+.Stanzas__child {
+    /**
+     * I don't understand why having this nested element is necessary. But
+     * adding the padding to the parent instead doesn't achieve the desired
+     * effect, it turns out.
+     */
     padding: $paddingY__lyrics 0;
-    line-height: 150%;
 }
 
 .gradientMask__lyricColumn__mobileCollapsed {
