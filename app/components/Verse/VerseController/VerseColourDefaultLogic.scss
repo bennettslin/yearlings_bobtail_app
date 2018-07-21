@@ -1,0 +1,34 @@
+// Default. Verse colour before cursored stanza and before cursored verse.
+.RM__sliderNotMoving {
+    .GcV {
+        background-color: $bgColour__beforeSelected;
+    }
+}
+
+// Verse colour in cursored stanza, on cursored verse.
+.RdV0 .CcV0, .RdV1 .CcV1, .RdV2 .CcV2, .RdV3 .CcV3, .RdV4 .CcV4, .RdV5 .CcV5, .RdV6 .CcV6, .RdV7 .CcV7, .RdV8 .CcV8, .RdV9 .CcV9, .RdV10 .CcV10, .RdV11 .CcV11, .RdV12 .CcV12, .RdV13 .CcV13, .RdV14 .CcV14, .RdV15 .CcV15, .RdV16 .CcV16, .RdV17 .CcV17, .RdV18 .CcV18, .RdV19 .CcV19, .RdV20 .CcV20, .RdV21 .CcV21, .RdV22 .CcV22, .RdV23 .CcV23, .RdV24 .CcV24, .RdV25 .CcV25, .RdV26 .CcV26, .RdV27 .CcV27, .RdV28 .CcV28, .RdV29 .CcV29, .RdV30 .CcV30, .RdV31 .CcV31, .RdV32 .CcV32, .RdV33 .CcV33, .RdV34 .CcV34, .RdV35 .CcV35, .RdV36 .CcV36, .RdV37 .CcV37, .RdV38 .CcV38, .RdV39 .CcV39, .RdV40 .CcV40, .RdV41 .CcV41, .RdV42 .CcV42, .RdV43 .CcV43, .RdV44 .CcV44, .RdV45 .CcV45, .RdV46 .CcV46, .RdV47 .CcV47, .RdV48 .CcV48, .RdV49 .CcV49, .RdV50 .CcV50, .RdV51 .CcV51, .RdV52 .CcV52, .RdV53 .CcV53, .RdV54 .CcV54, .RdV55 .CcV55, .RdV56 .CcV56, .RdV57 .CcV57, .RdV58 .CcV58, .RdV59 .CcV59, .RdV60 .CcV60, .RdV61 .CcV61, .RdV62 .CcV62 {
+
+    .GcV {
+        // Use !important to override hover highlight for non-cursored verse.
+        background-color: $bgColour__audioPause !important;
+    }
+
+    // Verse colour in cursored stanza, after cursored verse.
+    ~ .CcV {
+
+        .GcV {
+            background-color: $bgColour__afterSelected;
+        }
+    }
+}
+
+// Verse colour after cursored stanza.
+.RdS0 .CcS0, .RdS1 .CcS1, .RdS2 .CcS2, .RdS3 .CcS3, .RdS4 .CcS4, .RdS5 .CcS5, .RdS6 .CcS6, .RdS7 .CcS7, .RdS8 .CcS8, .RdS9 .CcS9, .RdS10 .CcS10, .RdS11 .CcS11, .RdS12 .CcS12, .RdS13 .CcS13 {
+
+    ~ .CcS {
+
+        .GcV {
+            background-color: $bgColour__afterSelected;
+        }
+    }
+}

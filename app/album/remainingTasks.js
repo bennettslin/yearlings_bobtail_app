@@ -19,12 +19,6 @@ module.exports = [
     },
 
     {
-        taskName: `Make CSS-logic classNames more efficient.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
         taskName: `Verse audio knows it's after cursor through CSS logic.`,
         workedHours: 0,
         neededHours: 1

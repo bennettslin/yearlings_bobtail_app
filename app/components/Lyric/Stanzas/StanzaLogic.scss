@@ -1,25 +1,12 @@
 // Stanza before cursor.
-.CM__stanza {
+.CcS {
     // TODO: Improve these styles, obviously.
     background-color: rgba(240, 200, 200, 0.5);
     border: 2px solid #f88;
 }
 
 // Stanza on cursor.
-.RM__stanza0 .CM__stanza0,
-.RM__stanza1 .CM__stanza1,
-.RM__stanza2 .CM__stanza2,
-.RM__stanza3 .CM__stanza3,
-.RM__stanza4 .CM__stanza4,
-.RM__stanza5 .CM__stanza5,
-.RM__stanza6 .CM__stanza6,
-.RM__stanza7 .CM__stanza7,
-.RM__stanza8 .CM__stanza8,
-.RM__stanza9 .CM__stanza9,
-.RM__stanza10 .CM__stanza10,
-.RM__stanza11 .CM__stanza11,
-.RM__stanza12 .CM__stanza12,
-.RM__stanza13 .CM__stanza13 {
+.RcS0 .CcS0, .RcS1 .CcS1, .RcS2 .CcS2, .RcS3 .CcS3, .RcS4 .CcS4, .RcS5 .CcS5, .RcS6 .CcS6, .RcS7 .CcS7, .RcS8 .CcS8, .RcS9 .CcS9, .RcS10 .CcS10, .RcS11 .CcS11, .RcS12 .CcS12, .RcS13 .CcS13 {
 
     /**
      * Make higher than all other stanzas. But slider stanzas still need to be
@@ -32,7 +19,7 @@
     border: 2px solid #8f8;
 
     // Stanza after cursor.
-    ~ .CM__stanza {
+    ~ .CcS {
 
         // TODO: Improve these styles, obviously.
         background-color: rgba(200, 200, 240, 0.5);

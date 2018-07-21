@@ -300,25 +300,34 @@ class Root extends Component {
                     !isSliderMoving && interactivatedVerseIndex < 0 &&
                         'RM__verseCanHover',
 
-                    `RM__stanza${cursorStanzaIndex}`,
+                    // "Root cursored stanza index."
+                    `RcS${cursorStanzaIndex}`,
 
                     isSliderMoving ?
-                        `RM__sliderStanza${cursorStanzaIndex}` :
-                        `RM__noSliderStanza${cursorStanzaIndex}`,
+                        // "Root slider stanza index."
+                        `RsS${cursorStanzaIndex}` :
+                        // "Root default stanza index."
+                        `RdS${cursorStanzaIndex}`,
 
                     isSliderMoving ?
-                        `RM__sliderVerse${sliderVerseIndex}` :
-                        `RM__noSliderVerse${renderableVerseIndex}`,
+                        // "Root slider verse index."
+                        `RsV${sliderVerseIndex}` :
+                        // "Root default verse index."
+                        `RdV${renderableVerseIndex}`,
 
                     isPlaying ?
-                        `RM__playingVerse${renderableVerseIndex}` :
-                        `RM__pausedVerse${renderableVerseIndex}`,
+                        // "Root playing verse index."
+                        `RpV${renderableVerseIndex}` :
+                        // "Root pauZZZed verse index."
+                        `RzV${renderableVerseIndex}`,
 
                     interactivatedVerseIndex < 0 &&
-                        `RM__noInteractivatedVerse${cursorVerseIndex}`,
+                        // "Root non-interactivated verse index."
+                        `RnV${cursorVerseIndex}`,
 
                     areVerseBarsHidden && interactivatedVerseIndex < 0 &&
-                        `RM__cursoredLyricVerse${cursorVerseIndex}`
+                        // "Root cursored lyric verse."
+                        `RlV${cursorVerseIndex}`
                 )}
                 onClick={this._handleClick}
                 onTouchStart={this._handleClick}

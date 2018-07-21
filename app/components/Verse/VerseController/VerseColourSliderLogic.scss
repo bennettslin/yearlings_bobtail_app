@@ -1,108 +1,33 @@
 // Default. Verse colour before cursored stanza and before cursored verse.
 .RM__sliderMoving {
-    .VerseColour {
+    .GcV {
         background-color: $bgColour__beforeSlider;
     }
 }
 
 // Verse colour in cursored stanza, on cursored verse.
-.RM__sliderVerse0 .CM__verse0,
-.RM__sliderVerse1 .CM__verse1,
-.RM__sliderVerse2 .CM__verse2,
-.RM__sliderVerse3 .CM__verse3,
-.RM__sliderVerse4 .CM__verse4,
-.RM__sliderVerse5 .CM__verse5,
-.RM__sliderVerse6 .CM__verse6,
-.RM__sliderVerse7 .CM__verse7,
-.RM__sliderVerse8 .CM__verse8,
-.RM__sliderVerse9 .CM__verse9,
-.RM__sliderVerse10 .CM__verse10,
-.RM__sliderVerse11 .CM__verse11,
-.RM__sliderVerse12 .CM__verse12,
-.RM__sliderVerse13 .CM__verse13,
-.RM__sliderVerse14 .CM__verse14,
-.RM__sliderVerse15 .CM__verse15,
-.RM__sliderVerse16 .CM__verse16,
-.RM__sliderVerse17 .CM__verse17,
-.RM__sliderVerse18 .CM__verse18,
-.RM__sliderVerse19 .CM__verse19,
-.RM__sliderVerse20 .CM__verse20,
-.RM__sliderVerse21 .CM__verse21,
-.RM__sliderVerse22 .CM__verse22,
-.RM__sliderVerse23 .CM__verse23,
-.RM__sliderVerse24 .CM__verse24,
-.RM__sliderVerse25 .CM__verse25,
-.RM__sliderVerse26 .CM__verse26,
-.RM__sliderVerse27 .CM__verse27,
-.RM__sliderVerse28 .CM__verse28,
-.RM__sliderVerse29 .CM__verse29,
-.RM__sliderVerse30 .CM__verse30,
-.RM__sliderVerse31 .CM__verse31,
-.RM__sliderVerse32 .CM__verse32,
-.RM__sliderVerse33 .CM__verse33,
-.RM__sliderVerse34 .CM__verse34,
-.RM__sliderVerse35 .CM__verse35,
-.RM__sliderVerse36 .CM__verse36,
-.RM__sliderVerse37 .CM__verse37,
-.RM__sliderVerse38 .CM__verse38,
-.RM__sliderVerse39 .CM__verse39,
-.RM__sliderVerse40 .CM__verse40,
-.RM__sliderVerse41 .CM__verse41,
-.RM__sliderVerse42 .CM__verse42,
-.RM__sliderVerse43 .CM__verse43,
-.RM__sliderVerse44 .CM__verse44,
-.RM__sliderVerse45 .CM__verse45,
-.RM__sliderVerse46 .CM__verse46,
-.RM__sliderVerse47 .CM__verse47,
-.RM__sliderVerse48 .CM__verse48,
-.RM__sliderVerse49 .CM__verse49,
-.RM__sliderVerse50 .CM__verse50,
-.RM__sliderVerse51 .CM__verse51,
-.RM__sliderVerse52 .CM__verse52,
-.RM__sliderVerse53 .CM__verse53,
-.RM__sliderVerse54 .CM__verse54,
-.RM__sliderVerse55 .CM__verse55,
-.RM__sliderVerse56 .CM__verse56,
-.RM__sliderVerse57 .CM__verse57,
-.RM__sliderVerse58 .CM__verse58,
-.RM__sliderVerse59 .CM__verse59,
-.RM__sliderVerse60 .CM__verse60,
-.RM__sliderVerse61 .CM__verse61,
-.RM__sliderVerse62 .CM__verse62 {
+.RsV0 .CcV0, .RsV1 .CcV1, .RsV2 .CcV2, .RsV3 .CcV3, .RsV4 .CcV4, .RsV5 .CcV5, .RsV6 .CcV6, .RsV7 .CcV7, .RsV8 .CcV8, .RsV9 .CcV9, .RsV10 .CcV10, .RsV11 .CcV11, .RsV12 .CcV12, .RsV13 .CcV13, .RsV14 .CcV14, .RsV15 .CcV15, .RsV16 .CcV16, .RsV17 .CcV17, .RsV18 .CcV18, .RsV19 .CcV19, .RsV20 .CcV20, .RsV21 .CcV21, .RsV22 .CcV22, .RsV23 .CcV23, .RsV24 .CcV24, .RsV25 .CcV25, .RsV26 .CcV26, .RsV27 .CcV27, .RsV28 .CcV28, .RsV29 .CcV29, .RsV30 .CcV30, .RsV31 .CcV31, .RsV32 .CcV32, .RsV33 .CcV33, .RsV34 .CcV34, .RsV35 .CcV35, .RsV36 .CcV36, .RsV37 .CcV37, .RsV38 .CcV38, .RsV39 .CcV39, .RsV40 .CcV40, .RsV41 .CcV41, .RsV42 .CcV42, .RsV43 .CcV43, .RsV44 .CcV44, .RsV45 .CcV45, .RsV46 .CcV46, .RsV47 .CcV47, .RsV48 .CcV48, .RsV49 .CcV49, .RsV50 .CcV50, .RsV51 .CcV51, .RsV52 .CcV52, .RsV53 .CcV53, .RsV54 .CcV54, .RsV55 .CcV55, .RsV56 .CcV56, .RsV57 .CcV57, .RsV58 .CcV58, .RsV59 .CcV59, .RsV60 .CcV60, .RsV61 .CcV61, .RsV62 .CcV62 {
 
-    .VerseColour {
+    .GcV {
         // Use !important to override hover highlight for non-cursored verse.
         background-color: $bgColour__audioNeutral !important;
     }
 
     // Verse colour in cursored stanza, after cursored verse.
-    ~ .CM__verse {
+    ~ .CcV {
 
-        .VerseColour {
+        .GcV {
             background-color: $bgColour__afterSlider;
         }
     }
 }
 
 // Verse colour after cursored stanza.
-.RM__sliderStanza0 .CM__stanza0,
-.RM__sliderStanza1 .CM__stanza1,
-.RM__sliderStanza2 .CM__stanza2,
-.RM__sliderStanza3 .CM__stanza3,
-.RM__sliderStanza4 .CM__stanza4,
-.RM__sliderStanza5 .CM__stanza5,
-.RM__sliderStanza6 .CM__stanza6,
-.RM__sliderStanza7 .CM__stanza7,
-.RM__sliderStanza8 .CM__stanza8,
-.RM__sliderStanza9 .CM__stanza9,
-.RM__sliderStanza10 .CM__stanza10,
-.RM__sliderStanza11 .CM__stanza11,
-.RM__sliderStanza12 .CM__stanza12,
-.RM__sliderStanza13 .CM__stanza13 {
+.RsS0 .CcS0, .RsS1 .CcS1, .RsS2 .CcS2, .RsS3 .CcS3, .RsS4 .CcS4, .RsS5 .CcS5, .RsS6 .CcS6, .RsS7 .CcS7, .RsS8 .CcS8, .RsS9 .CcS9, .RsS10 .CcS10, .RsS11 .CcS11, .RsS12 .CcS12, .RsS13 .CcS13 {
 
-    ~ .CM__stanza {
+    ~ .CcS {
 
-        .VerseColour {
+        .GcV {
             background-color: $bgColour__afterSlider;
         }
     }

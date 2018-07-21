@@ -28,12 +28,22 @@ VerseColour = ({
     return (
         <div
             className={cx(
+
+                // "Grandchild in lyric."
+                inLyricVerse && 'GcL',
+
+                // "Grandchild in slider."
+                inSliderVerse && 'GcS',
+
+                // "Grandchild interactable."
+                !inVerseBar && 'GcN',
+
+                // "Grandchild verse colour."
+                'GcV',
+
                 'VerseColour',
 
                 inVerseBar && 'VerseColour__inVerseBar',
-                !inVerseBar && 'VerseColour__interactable',
-                inLyricVerse && 'VerseColour__inLyricVerse',
-                inSliderVerse && 'VerseColour__inSliderVerse',
                 isInteractivated && 'VerseColour__interactivated',
 
                 'absoluteFullContainer'

@@ -29,16 +29,18 @@ Stanza = ({
     return (
         <div
             className={cx(
+                // "Child component stanza index."
+
                 // Aligned selector when on cursor.
                 !isNaN(stanzaIndex) &&
-                    `CM__stanza${stanzaIndex}`,
+                    `CcS${stanzaIndex}`,
 
                 /**
                  * General selector when before cursor, general
                  * sibling selector when after cursor.
                  */
                 !isNaN(stanzaIndex) &&
-                    'CM__stanza',
+                    'CcS',
 
                 'Stanza'
             )}

@@ -3353,4 +3353,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Make CSS-logic classNames more efficient.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

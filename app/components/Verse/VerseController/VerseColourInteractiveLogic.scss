@@ -18,71 +18,9 @@
 }
 
 // Verse colour in cursored stanza, on cursored verse.
-.RM__noInteractivatedVerse0 .CM__verse0,
-.RM__noInteractivatedVerse1 .CM__verse1,
-.RM__noInteractivatedVerse2 .CM__verse2,
-.RM__noInteractivatedVerse3 .CM__verse3,
-.RM__noInteractivatedVerse4 .CM__verse4,
-.RM__noInteractivatedVerse5 .CM__verse5,
-.RM__noInteractivatedVerse6 .CM__verse6,
-.RM__noInteractivatedVerse7 .CM__verse7,
-.RM__noInteractivatedVerse8 .CM__verse8,
-.RM__noInteractivatedVerse9 .CM__verse9,
-.RM__noInteractivatedVerse10 .CM__verse10,
-.RM__noInteractivatedVerse11 .CM__verse11,
-.RM__noInteractivatedVerse12 .CM__verse12,
-.RM__noInteractivatedVerse13 .CM__verse13,
-.RM__noInteractivatedVerse14 .CM__verse14,
-.RM__noInteractivatedVerse15 .CM__verse15,
-.RM__noInteractivatedVerse16 .CM__verse16,
-.RM__noInteractivatedVerse17 .CM__verse17,
-.RM__noInteractivatedVerse18 .CM__verse18,
-.RM__noInteractivatedVerse19 .CM__verse19,
-.RM__noInteractivatedVerse20 .CM__verse20,
-.RM__noInteractivatedVerse21 .CM__verse21,
-.RM__noInteractivatedVerse22 .CM__verse22,
-.RM__noInteractivatedVerse23 .CM__verse23,
-.RM__noInteractivatedVerse24 .CM__verse24,
-.RM__noInteractivatedVerse25 .CM__verse25,
-.RM__noInteractivatedVerse26 .CM__verse26,
-.RM__noInteractivatedVerse27 .CM__verse27,
-.RM__noInteractivatedVerse28 .CM__verse28,
-.RM__noInteractivatedVerse29 .CM__verse29,
-.RM__noInteractivatedVerse30 .CM__verse30,
-.RM__noInteractivatedVerse31 .CM__verse31,
-.RM__noInteractivatedVerse32 .CM__verse32,
-.RM__noInteractivatedVerse33 .CM__verse33,
-.RM__noInteractivatedVerse34 .CM__verse34,
-.RM__noInteractivatedVerse35 .CM__verse35,
-.RM__noInteractivatedVerse36 .CM__verse36,
-.RM__noInteractivatedVerse37 .CM__verse37,
-.RM__noInteractivatedVerse38 .CM__verse38,
-.RM__noInteractivatedVerse39 .CM__verse39,
-.RM__noInteractivatedVerse40 .CM__verse40,
-.RM__noInteractivatedVerse41 .CM__verse41,
-.RM__noInteractivatedVerse42 .CM__verse42,
-.RM__noInteractivatedVerse43 .CM__verse43,
-.RM__noInteractivatedVerse44 .CM__verse44,
-.RM__noInteractivatedVerse45 .CM__verse45,
-.RM__noInteractivatedVerse46 .CM__verse46,
-.RM__noInteractivatedVerse47 .CM__verse47,
-.RM__noInteractivatedVerse48 .CM__verse48,
-.RM__noInteractivatedVerse49 .CM__verse49,
-.RM__noInteractivatedVerse50 .CM__verse50,
-.RM__noInteractivatedVerse51 .CM__verse51,
-.RM__noInteractivatedVerse52 .CM__verse52,
-.RM__noInteractivatedVerse53 .CM__verse53,
-.RM__noInteractivatedVerse54 .CM__verse54,
-.RM__noInteractivatedVerse55 .CM__verse55,
-.RM__noInteractivatedVerse56 .CM__verse56,
-.RM__noInteractivatedVerse57 .CM__verse57,
-.RM__noInteractivatedVerse58 .CM__verse58,
-.RM__noInteractivatedVerse59 .CM__verse59,
-.RM__noInteractivatedVerse60 .CM__verse60,
-.RM__noInteractivatedVerse61 .CM__verse61,
-.RM__noInteractivatedVerse62 .CM__verse62 {
+.RnV0 .CcV0, .RnV1 .CcV1, .RnV2 .CcV2, .RnV3 .CcV3, .RnV4 .CcV4, .RnV5 .CcV5, .RnV6 .CcV6, .RnV7 .CcV7, .RnV8 .CcV8, .RnV9 .CcV9, .RnV10 .CcV10, .RnV11 .CcV11, .RnV12 .CcV12, .RnV13 .CcV13, .RnV14 .CcV14, .RnV15 .CcV15, .RnV16 .CcV16, .RnV17 .CcV17, .RnV18 .CcV18, .RnV19 .CcV19, .RnV20 .CcV20, .RnV21 .CcV21, .RnV22 .CcV22, .RnV23 .CcV23, .RnV24 .CcV24, .RnV25 .CcV25, .RnV26 .CcV26, .RnV27 .CcV27, .RnV28 .CcV28, .RnV29 .CcV29, .RnV30 .CcV30, .RnV31 .CcV31, .RnV32 .CcV32, .RnV33 .CcV33, .RnV34 .CcV34, .RnV35 .CcV35, .RnV36 .CcV36, .RnV37 .CcV37, .RnV38 .CcV38, .RnV39 .CcV39, .RnV40 .CcV40, .RnV41 .CcV41, .RnV42 .CcV42, .RnV43 .CcV43, .RnV44 .CcV44, .RnV45 .CcV45, .RnV46 .CcV46, .RnV47 .CcV47, .RnV48 .CcV48, .RnV49 .CcV49, .RnV50 .CcV50, .RnV51 .CcV51, .RnV52 .CcV52, .RnV53 .CcV53, .RnV54 .CcV54, .RnV55 .CcV55, .RnV56 .CcV56, .RnV57 .CcV57, .RnV58 .CcV58, .RnV59 .CcV59, .RnV60 .CcV60, .RnV61 .CcV61, .RnV62 .CcV62 {
 
-    .VerseColour__interactable {
+    .GcN {
         z-index: $zIndex__cursorVerse;
 
         // TODO: This is some ugly nesting...
@@ -93,7 +31,7 @@
         }
     }
 
-    .VerseColour__inSliderVerse {
+    .GcS {
         box-shadow: $boxShadow__cursorVerse;
 
         border-radius: $borderRadius $borderRadius 0 0;
@@ -105,71 +43,9 @@
 }
 
 // Verse colour in cursored stanza, on cursored verse.
-.RM__cursoredLyricVerse0 .CM__verse0,
-.RM__cursoredLyricVerse1 .CM__verse1,
-.RM__cursoredLyricVerse2 .CM__verse2,
-.RM__cursoredLyricVerse3 .CM__verse3,
-.RM__cursoredLyricVerse4 .CM__verse4,
-.RM__cursoredLyricVerse5 .CM__verse5,
-.RM__cursoredLyricVerse6 .CM__verse6,
-.RM__cursoredLyricVerse7 .CM__verse7,
-.RM__cursoredLyricVerse8 .CM__verse8,
-.RM__cursoredLyricVerse9 .CM__verse9,
-.RM__cursoredLyricVerse10 .CM__verse10,
-.RM__cursoredLyricVerse11 .CM__verse11,
-.RM__cursoredLyricVerse12 .CM__verse12,
-.RM__cursoredLyricVerse13 .CM__verse13,
-.RM__cursoredLyricVerse14 .CM__verse14,
-.RM__cursoredLyricVerse15 .CM__verse15,
-.RM__cursoredLyricVerse16 .CM__verse16,
-.RM__cursoredLyricVerse17 .CM__verse17,
-.RM__cursoredLyricVerse18 .CM__verse18,
-.RM__cursoredLyricVerse19 .CM__verse19,
-.RM__cursoredLyricVerse20 .CM__verse20,
-.RM__cursoredLyricVerse21 .CM__verse21,
-.RM__cursoredLyricVerse22 .CM__verse22,
-.RM__cursoredLyricVerse23 .CM__verse23,
-.RM__cursoredLyricVerse24 .CM__verse24,
-.RM__cursoredLyricVerse25 .CM__verse25,
-.RM__cursoredLyricVerse26 .CM__verse26,
-.RM__cursoredLyricVerse27 .CM__verse27,
-.RM__cursoredLyricVerse28 .CM__verse28,
-.RM__cursoredLyricVerse29 .CM__verse29,
-.RM__cursoredLyricVerse30 .CM__verse30,
-.RM__cursoredLyricVerse31 .CM__verse31,
-.RM__cursoredLyricVerse32 .CM__verse32,
-.RM__cursoredLyricVerse33 .CM__verse33,
-.RM__cursoredLyricVerse34 .CM__verse34,
-.RM__cursoredLyricVerse35 .CM__verse35,
-.RM__cursoredLyricVerse36 .CM__verse36,
-.RM__cursoredLyricVerse37 .CM__verse37,
-.RM__cursoredLyricVerse38 .CM__verse38,
-.RM__cursoredLyricVerse39 .CM__verse39,
-.RM__cursoredLyricVerse40 .CM__verse40,
-.RM__cursoredLyricVerse41 .CM__verse41,
-.RM__cursoredLyricVerse42 .CM__verse42,
-.RM__cursoredLyricVerse43 .CM__verse43,
-.RM__cursoredLyricVerse44 .CM__verse44,
-.RM__cursoredLyricVerse45 .CM__verse45,
-.RM__cursoredLyricVerse46 .CM__verse46,
-.RM__cursoredLyricVerse47 .CM__verse47,
-.RM__cursoredLyricVerse48 .CM__verse48,
-.RM__cursoredLyricVerse49 .CM__verse49,
-.RM__cursoredLyricVerse50 .CM__verse50,
-.RM__cursoredLyricVerse51 .CM__verse51,
-.RM__cursoredLyricVerse52 .CM__verse52,
-.RM__cursoredLyricVerse53 .CM__verse53,
-.RM__cursoredLyricVerse54 .CM__verse54,
-.RM__cursoredLyricVerse55 .CM__verse55,
-.RM__cursoredLyricVerse56 .CM__verse56,
-.RM__cursoredLyricVerse57 .CM__verse57,
-.RM__cursoredLyricVerse58 .CM__verse58,
-.RM__cursoredLyricVerse59 .CM__verse59,
-.RM__cursoredLyricVerse60 .CM__verse60,
-.RM__cursoredLyricVerse61 .CM__verse61,
-.RM__cursoredLyricVerse62 .CM__verse62 {
+.RlV0 .CcV0, .RlV1 .CcV1, .RlV2 .CcV2, .RlV3 .CcV3, .RlV4 .CcV4, .RlV5 .CcV5, .RlV6 .CcV6, .RlV7 .CcV7, .RlV8 .CcV8, .RlV9 .CcV9, .RlV10 .CcV10, .RlV11 .CcV11, .RlV12 .CcV12, .RlV13 .CcV13, .RlV14 .CcV14, .RlV15 .CcV15, .RlV16 .CcV16, .RlV17 .CcV17, .RlV18 .CcV18, .RlV19 .CcV19, .RlV20 .CcV20, .RlV21 .CcV21, .RlV22 .CcV22, .RlV23 .CcV23, .RlV24 .CcV24, .RlV25 .CcV25, .RlV26 .CcV26, .RlV27 .CcV27, .RlV28 .CcV28, .RlV29 .CcV29, .RlV30 .CcV30, .RlV31 .CcV31, .RlV32 .CcV32, .RlV33 .CcV33, .RlV34 .CcV34, .RlV35 .CcV35, .RlV36 .CcV36, .RlV37 .CcV37, .RlV38 .CcV38, .RlV39 .CcV39, .RlV40 .CcV40, .RlV41 .CcV41, .RlV42 .CcV42, .RlV43 .CcV43, .RlV44 .CcV44, .RlV45 .CcV45, .RlV46 .CcV46, .RlV47 .CcV47, .RlV48 .CcV48, .RlV49 .CcV49, .RlV50 .CcV50, .RlV51 .CcV51, .RlV52 .CcV52, .RlV53 .CcV53, .RlV54 .CcV54, .RlV55 .CcV55, .RlV56 .CcV56, .RlV57 .CcV57, .RlV58 .CcV58, .RlV59 .CcV59, .RlV60 .CcV60, .RlV61 .CcV61, .RlV62 .CcV62 {
 
-    .VerseColour__inLyricVerse {
+    .GcL {
         box-shadow: $boxShadow__cursorVerse;
 
         border-radius: $borderRadius;

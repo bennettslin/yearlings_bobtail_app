@@ -81,14 +81,16 @@ class SliderStanza extends Component {
         return (
             <div
                 className={cx(
+                    // "Child component stanza index."
+
                     // Aligned selector when on cursor.
-                    `CM__stanza${stanzaIndex}`,
+                    `CcS${stanzaIndex}`,
 
                     /**
                      * General selector when before cursor, general sibling
                      * selector when after cursor.
                      */
-                    'CM__stanza',
+                    'CcS',
 
                     'SliderStanza',
 

@@ -75,8 +75,10 @@ class SliderVerse extends Component {
             <div
                 key={verseIndex}
                 className={cx(
-                    `CM__verse${verseIndex}`,
-                    'CM__verse',
+
+                    // "Child component verse index."
+                    `CcV${verseIndex}`,
+                    'CcV',
 
                     'SliderVerse',
 
