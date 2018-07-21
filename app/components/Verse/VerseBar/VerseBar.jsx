@@ -13,12 +13,16 @@ import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 const mapStateToProps = ({
     canLyricRender,
     renderableStore,
-    sliderStore
+    sliderStore,
+    isVerseBarAbove,
+    isVerseBarBelow
 }) => ({
     canLyricRender,
     renderableSongIndex: renderableStore.renderableSongIndex,
     renderableVerseIndex: renderableStore.renderableVerseIndex,
-    sliderVerseIndex: sliderStore.sliderVerseIndex
+    sliderVerseIndex: sliderStore.sliderVerseIndex,
+    isVerseBarAbove,
+    isVerseBarBelow
 })
 
 class VerseBar extends Component {
@@ -33,6 +37,8 @@ class VerseBar extends Component {
         renderableSongIndex: PropTypes.number.isRequired,
         renderableVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
+        isVerseBarAbove: PropTypes.bool.isRequired,
+        isVerseBarBelow: PropTypes.bool.isRequired,
 
         // From parent.
         isAbove: PropTypes.bool.isRequired,
@@ -40,8 +46,40 @@ class VerseBar extends Component {
         handleVerseBarWheel: PropTypes.func.isRequired
     }
 
+    constructor(props) {
+        super(props)
+
+        this._handleVerseBarSelect = this._handleVerseBarSelect.bind(this)
+    }
+
     shouldComponentUpdate(nextProps) {
-        return nextProps.canLyricRender && !getPropsAreShallowEqual({
+        const {
+                isVerseBarAbove,
+                isVerseBarBelow
+            } = this.props,
+            {
+                // There is no future tense of "can." Huh.
+                canLyricRender: willCanLyricRender,
+                isVerseBarAbove: willBeVerseBarAbove,
+                isVerseBarBelow: willBeVerseBarBelow
+            } = nextProps
+
+        if (
+            !willCanLyricRender ||
+
+            (
+                // No point in updating if it remains unshown.
+                !willBeVerseBarAbove &&
+                !willBeVerseBarBelow &&
+                !isVerseBarAbove &&
+                !isVerseBarBelow
+            )
+
+        ) {
+            return false
+        }
+
+        return !getPropsAreShallowEqual({
             props: this.props,
             nextProps,
             alwaysBypassCheck: {
@@ -50,11 +88,29 @@ class VerseBar extends Component {
         })
     }
 
+    _handleVerseBarSelect() {
+        const {
+            isVerseBarAbove,
+            isVerseBarBelow
+        } = this.props
+
+        /**
+         * Prevent verse bar from being clicked if it's not shown, just as a
+         * precaution. Shouldn't be interactive anyway, now that it has a
+         * negative z-index.
+         */
+        if (isVerseBarAbove || isVerseBarBelow) {
+            this.props.handleVerseBarSelect()
+        }
+    }
+
     render() {
 
         const {
             /* eslint-disable no-unused-vars */
             canLyricRender,
+            handleVerseBarSelect,
+
             dispatch,
             /* eslint-enable no-unused-vars */
 
@@ -64,7 +120,6 @@ class VerseBar extends Component {
             renderableVerseIndex,
             sliderVerseIndex,
 
-            handleVerseBarSelect,
             handleVerseBarWheel,
             ...other
         } = this.props,
@@ -87,8 +142,8 @@ class VerseBar extends Component {
                         'VerseBar__below'
                 )}
                 onWheel={handleVerseBarWheel}
-                onClick={handleVerseBarSelect}
-                onTouchStart={handleVerseBarSelect}
+                onClick={this._handleVerseBarSelect}
+                onTouchStart={this._handleVerseBarSelect}
             >
                 <div
                     className={cx(

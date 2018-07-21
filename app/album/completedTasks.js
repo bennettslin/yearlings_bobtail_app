@@ -3368,4 +3368,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Verse bar should not be clickable when hidden.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

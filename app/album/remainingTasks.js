@@ -1,12 +1,5 @@
 module.exports = [
 
-    // Urgent bugs.
-    {
-        taskName: `Verse bar should not be clickable when hidden.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     // Tasks to do first.
     {
         taskName: `Better comments on styles so I'll get it right away when I revisit them later.`,

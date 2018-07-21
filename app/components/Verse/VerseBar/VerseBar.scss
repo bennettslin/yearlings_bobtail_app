@@ -1,12 +1,17 @@
 .VerseBar {
+
     opacity: 0;
     transform: scale(0.5);
+    z-index: $zIndex__negative;
 
     $js__margin__thick__double: $js__margin__thick * 2;
     max-width: calc(100% - #{$js__margin__thick__double});
 
-    z-index: $zIndex__lyricChild__topMost;
-    cursor: pointer;
+    .RM__verseBarShown
+    & {
+        z-index: $zIndex__lyricChild__topMost;
+        cursor: pointer;
+    }
 }
 
 .VerseBar__animatable {
