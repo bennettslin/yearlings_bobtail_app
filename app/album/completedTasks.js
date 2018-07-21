@@ -3378,4 +3378,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Slider verse and verse bar bypass verse controller, rename to verse interactive.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

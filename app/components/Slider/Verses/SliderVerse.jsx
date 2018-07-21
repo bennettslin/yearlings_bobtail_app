@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import VerseController from '../../Verse/VerseController/VerseController'
+import VerseColour from '../../Verse/VerseColour/VerseColour'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
@@ -38,21 +38,13 @@ class SliderVerse extends Component {
     render() {
 
         const {
-                /* eslint-disable no-unused-vars */
-                canSliderRender,
-                dispatch,
-                /* eslint-enable no-unused-vars */
 
                 relativeStartTime,
                 verseDuration,
                 stanzaDuration,
-
-                ...other
-            } = this.props,
-
-            {
                 verseIndex
-            } = other,
+
+            } = this.props,
 
             /**
              * Round left down, and width up, to ensure that there are no gaps
@@ -91,7 +83,7 @@ class SliderVerse extends Component {
                 style={verseStyle}
             >
 
-                <VerseController {...other}
+                <VerseColour
                     inSliderVerse
                     {...{
                         verseIndex

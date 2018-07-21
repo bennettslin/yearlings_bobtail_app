@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import VerseController from './VerseController/VerseController'
+import VerseInteractive from './VerseInteractive/VerseInteractive'
+import VerseColour from './VerseColour/VerseColour'
 import VerseLines from './VerseLines'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
@@ -214,19 +215,25 @@ VerseView = ({
             onClick={handleInteractivatableClick}
             onTouchStart={handleInteractivatableClick}
         >
-
-            {(inVerseBar || isInteractable) ? (
-                <VerseController
-                    inVerse
+            {inVerseBar && (
+                <VerseColour
+                    inVerseBar
                     {...{
-                        inVerseBar,
                         verseIndex
                     }}
-                    {...!inVerseBar && {
+                />
+            )}
+
+            {isInteractable && (
+                <VerseInteractive
+                    {...{
+                        verseIndex,
                         handleLyricVerseSelect
                     }}
                 />
-            ) : (
+            )}
+
+            {!inVerseBar && !isInteractable && (
                 <div className={cx(
                     'Verse__noIndexColour',
                     'absoluteFullContainer'

@@ -1,13 +1,21 @@
+// Order matters!
+@import "./VerseColourDefaultLogic";
+@import "./VerseColourSliderLogic";
+@import "./VerseColourNavLogic";
+@import "./VerseColourInteractiveLogic";
+
+@import "./VerseCursor";
+
 .VerseColour {
     overflow: hidden;
 
-    .RM__sliderNotMoving
-    .parentIsShown
-    & {
-        transition:
+    // .RM__sliderNotMoving
+    // .parentIsShown
+    // & {
+        // transition:
         // color $animationDuration__fast,
-        background-color $animationDuration__fast;
-    }
+        // background-color $animationDuration__fast;
+    // }
 }
 
 .VerseColour__interactivated {

@@ -6,10 +6,10 @@ import VerseCursor from './VerseCursor'
 
 const propTypes = {
     // From parent.
-    isInteractivated: PropTypes.bool.isRequired,
+    isInteractivated: PropTypes.bool,
     verseIndex: PropTypes.number.isRequired,
+    inVerse: PropTypes.bool,
     inVerseBar: PropTypes.bool,
-    inLyricVerse: PropTypes.bool,
     inSliderVerse: PropTypes.bool
 },
 
@@ -19,11 +19,13 @@ VerseColour = ({
 
     verseIndex,
 
+    inVerse,
     inVerseBar,
-    inLyricVerse,
     inSliderVerse
 
 }) => {
+
+    const inLyricVerse = inVerse || inVerseBar
 
     return (
         <div

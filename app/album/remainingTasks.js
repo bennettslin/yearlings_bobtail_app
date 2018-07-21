@@ -21,9 +21,9 @@ module.exports = [
     },
 
     {
-        taskName: `Simplify verse controller. Should only update when interactivation turned on or off, and shouldn't care when slider is moving. Slider verse and verse bar can bypass?`,
+        taskName: `Simplify verse controller. Should only update when interactivation turned on or off, and shouldn't care when slider is moving.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
 
     {

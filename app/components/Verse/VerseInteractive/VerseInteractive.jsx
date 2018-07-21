@@ -1,6 +1,6 @@
 /**
- * Controller to allow verse not to update every time cursor or interactivated
- * verse index is changed.
+ * Component to allow verse not to update every time interactivated verse index
+ * is changed.
  */
 
 import React, { Component, Fragment } from 'react'
@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
 import VerseNav from '../VerseNav/VerseNav'
-import VerseColour from './VerseColour'
+import VerseColour from '../VerseColour/VerseColour'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
@@ -20,7 +20,7 @@ const mapStateToProps = ({
     interactivatedVerseIndex
 })
 
-class VerseController extends Component {
+class VerseInteractive extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -28,10 +28,6 @@ class VerseController extends Component {
         interactivatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
-        inVerseBar: PropTypes.bool,
-        inVerse: PropTypes.bool,
-        inSliderVerse: PropTypes.bool,
-
         verseIndex: PropTypes.number.isRequired,
 
         // For verse audio buttons.
@@ -54,44 +50,31 @@ class VerseController extends Component {
 
                 verseIndex,
                 interactivatedVerseIndex,
-                inVerse,
-                inVerseBar,
-                inSliderVerse,
 
                 ...other
             } = this.props,
 
-            isInteractivated = verseIndex === interactivatedVerseIndex,
-
-        inLyricVerse = inVerse && !inVerseBar
+            isInteractivated = verseIndex === interactivatedVerseIndex
 
         return (
             <Fragment>
-
                 <VerseColour
+                    inVerse
                     {...{
                         verseIndex,
-                        isInteractivated,
-
-                        inVerseBar,
-                        inLyricVerse,
-                        inSliderVerse
+                        isInteractivated
                     }}
                 />
-
-                {inLyricVerse && (
-                    <VerseNav
-                        {...other}
-                        {...{
-                            verseIndex,
-                            isInteractivated
-                        }}
-                    />
-                )}
-
+                <VerseNav
+                    {...other}
+                    {...{
+                        verseIndex,
+                        isInteractivated
+                    }}
+                />
             </Fragment>
         )
     }
 }
 
-export default connect(mapStateToProps)(VerseController)
+export default connect(mapStateToProps)(VerseInteractive)
