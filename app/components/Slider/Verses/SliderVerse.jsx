@@ -77,8 +77,8 @@ class SliderVerse extends Component {
                 className={cx(
 
                     // "Child component verse index."
-                    `CcV${verseIndex}`,
-                    'CcV',
+                    `ChV${verseIndex}`,
+                    'ChV',
 
                     'SliderVerse',
 

@@ -1,52 +1,49 @@
-// Default. Verse colour before cursored stanza and before cursored verse.
-.RM__sliderMoving {
+// Default styling. Kept in this stylesheet for consistency.
 
-    // "Grandchild verse colour."
+.VerseColour {
+    // Styling for verse colours before cursored verse.
 
-    .GcV {
+    .RM__sliderMoving
+    & {
         background-color: $bgColour__beforeSlider;
     }
 }
 
-// "Root slider verse index, child component verse index."
+// "Root slider verse index, child verse index."
+.RsV0 .ChV0, .RsV1 .ChV1, .RsV2 .ChV2, .RsV3 .ChV3, .RsV4 .ChV4, .RsV5 .ChV5, .RsV6 .ChV6, .RsV7 .ChV7, .RsV8 .ChV8, .RsV9 .ChV9, .RsV10 .ChV10, .RsV11 .ChV11, .RsV12 .ChV12, .RsV13 .ChV13, .RsV14 .ChV14, .RsV15 .ChV15, .RsV16 .ChV16, .RsV17 .ChV17, .RsV18 .ChV18, .RsV19 .ChV19, .RsV20 .ChV20, .RsV21 .ChV21, .RsV22 .ChV22, .RsV23 .ChV23, .RsV24 .ChV24, .RsV25 .ChV25, .RsV26 .ChV26, .RsV27 .ChV27, .RsV28 .ChV28, .RsV29 .ChV29, .RsV30 .ChV30, .RsV31 .ChV31, .RsV32 .ChV32, .RsV33 .ChV33, .RsV34 .ChV34, .RsV35 .ChV35, .RsV36 .ChV36, .RsV37 .ChV37, .RsV38 .ChV38, .RsV39 .ChV39, .RsV40 .ChV40, .RsV41 .ChV41, .RsV42 .ChV42, .RsV43 .ChV43, .RsV44 .ChV44, .RsV45 .ChV45, .RsV46 .ChV46, .RsV47 .ChV47, .RsV48 .ChV48, .RsV49 .ChV49, .RsV50 .ChV50, .RsV51 .ChV51, .RsV52 .ChV52, .RsV53 .ChV53, .RsV54 .ChV54, .RsV55 .ChV55, .RsV56 .ChV56, .RsV57 .ChV57, .RsV58 .ChV58, .RsV59 .ChV59, .RsV60 .ChV60, .RsV61 .ChV61, .RsV62 .ChV62 {
+    // Styling for cursored verse.
 
-// Verse colour in cursored stanza, on cursored verse.
-.RsV0 .CcV0, .RsV1 .CcV1, .RsV2 .CcV2, .RsV3 .CcV3, .RsV4 .CcV4, .RsV5 .CcV5, .RsV6 .CcV6, .RsV7 .CcV7, .RsV8 .CcV8, .RsV9 .CcV9, .RsV10 .CcV10, .RsV11 .CcV11, .RsV12 .CcV12, .RsV13 .CcV13, .RsV14 .CcV14, .RsV15 .CcV15, .RsV16 .CcV16, .RsV17 .CcV17, .RsV18 .CcV18, .RsV19 .CcV19, .RsV20 .CcV20, .RsV21 .CcV21, .RsV22 .CcV22, .RsV23 .CcV23, .RsV24 .CcV24, .RsV25 .CcV25, .RsV26 .CcV26, .RsV27 .CcV27, .RsV28 .CcV28, .RsV29 .CcV29, .RsV30 .CcV30, .RsV31 .CcV31, .RsV32 .CcV32, .RsV33 .CcV33, .RsV34 .CcV34, .RsV35 .CcV35, .RsV36 .CcV36, .RsV37 .CcV37, .RsV38 .CcV38, .RsV39 .CcV39, .RsV40 .CcV40, .RsV41 .CcV41, .RsV42 .CcV42, .RsV43 .CcV43, .RsV44 .CcV44, .RsV45 .CcV45, .RsV46 .CcV46, .RsV47 .CcV47, .RsV48 .CcV48, .RsV49 .CcV49, .RsV50 .CcV50, .RsV51 .CcV51, .RsV52 .CcV52, .RsV53 .CcV53, .RsV54 .CcV54, .RsV55 .CcV55, .RsV56 .CcV56, .RsV57 .CcV57, .RsV58 .CcV58, .RsV59 .CcV59, .RsV60 .CcV60, .RsV61 .CcV61, .RsV62 .CcV62 {
-
+    // "Grandchild verse colour."
     .GcV {
-        // Use !important to override hover highlight for non-cursored verse.
+        // Use !important to override hover highlight.
         background-color: $bgColour__audioNeutral !important;
     }
 
-    // Verse colour in cursored stanza, after cursored verse.
-    ~ .CcV {
-
-        .GcV {
-            background-color: $bgColour__afterSlider;
-        }
+    // Grandchildren of all subsequent "child verse" siblings.
+    ~ .ChV .GcV {
+        background-color: $bgColour__afterSlider;
     }
 }
 
-// Verse colour after cursored stanza.
-.RsS0 .CcS0, .RsS1 .CcS1, .RsS2 .CcS2, .RsS3 .CcS3, .RsS4 .CcS4, .RsS5 .CcS5, .RsS6 .CcS6, .RsS7 .CcS7, .RsS8 .CcS8, .RsS9 .CcS9, .RsS10 .CcS10, .RsS11 .CcS11, .RsS12 .CcS12, .RsS13 .CcS13 {
+// "Root slider stanza index, child stanza index."
+.RsS0 .ChS0, .RsS1 .ChS1, .RsS2 .ChS2, .RsS3 .ChS3, .RsS4 .ChS4, .RsS5 .ChS5, .RsS6 .ChS6, .RsS7 .ChS7, .RsS8 .ChS8, .RsS9 .ChS9, .RsS10 .ChS10, .RsS11 .ChS11, .RsS12 .ChS12, .RsS13 .ChS13 {
+    // Styling for verse colours after cursored stanza.
 
-    ~ .CcS {
-
-        .GcV {
-            background-color: $bgColour__afterSlider;
-        }
+    // Grandchildren of all subsequent "child stanza" siblings.
+    ~ .ChS .GcV {
+        background-color: $bgColour__afterSlider;
     }
 }
 
-// "Root slider verse index, sibling component of verse index."
+// "Root slider verse index, parent of verse index."
+.RsV0 .PoV0, .RsV1 .PoV1, .RsV2 .PoV2, .RsV3 .PoV3, .RsV4 .PoV4, .RsV5 .PoV5, .RsV6 .PoV6, .RsV7 .PoV7, .RsV8 .PoV8, .RsV9 .PoV9, .RsV10 .PoV10, .RsV11 .PoV11, .RsV12 .PoV12, .RsV13 .PoV13, .RsV14 .PoV14, .RsV15 .PoV15, .RsV16 .PoV16, .RsV17 .PoV17, .RsV18 .PoV18, .RsV19 .PoV19, .RsV20 .PoV20, .RsV21 .PoV21, .RsV22 .PoV22, .RsV23 .PoV23, .RsV24 .PoV24, .RsV25 .PoV25, .RsV26 .PoV26, .RsV27 .PoV27, .RsV28 .PoV28, .RsV29 .PoV29, .RsV30 .PoV30, .RsV31 .PoV31, .RsV32 .PoV32, .RsV33 .PoV33, .RsV34 .PoV34, .RsV35 .PoV35, .RsV36 .PoV36, .RsV37 .PoV37, .RsV38 .PoV38, .RsV39 .PoV39, .RsV40 .PoV40, .RsV41 .PoV41, .RsV42 .PoV42, .RsV43 .PoV43, .RsV44 .PoV44, .RsV45 .PoV45, .RsV46 .PoV46, .RsV47 .PoV47, .RsV48 .PoV48, .RsV49 .PoV49, .RsV50 .PoV50, .RsV51 .PoV51, .RsV52 .PoV52, .RsV53 .PoV53, .RsV54 .PoV54, .RsV55 .PoV55, .RsV56 .PoV56, .RsV57 .PoV57, .RsV58 .PoV58, .RsV59 .PoV59, .RsV60 .PoV60, .RsV61 .PoV61, .RsV62 .PoV62 {
+    /**
+     * Styling for verse colours in some parent of verse. In this case, the
+     * parent is a unit or unit card, as are its siblings.
+     */
 
-// Verse colour in cursored stanza, sibling after cursored verse.
-.RsV0 .ScV0, .RsV1 .ScV1, .RsV2 .ScV2, .RsV3 .ScV3, .RsV4 .ScV4, .RsV5 .ScV5, .RsV6 .ScV6, .RsV7 .ScV7, .RsV8 .ScV8, .RsV9 .ScV9, .RsV10 .ScV10, .RsV11 .ScV11, .RsV12 .ScV12, .RsV13 .ScV13, .RsV14 .ScV14, .RsV15 .ScV15, .RsV16 .ScV16, .RsV17 .ScV17, .RsV18 .ScV18, .RsV19 .ScV19, .RsV20 .ScV20, .RsV21 .ScV21, .RsV22 .ScV22, .RsV23 .ScV23, .RsV24 .ScV24, .RsV25 .ScV25, .RsV26 .ScV26, .RsV27 .ScV27, .RsV28 .ScV28, .RsV29 .ScV29, .RsV30 .ScV30, .RsV31 .ScV31, .RsV32 .ScV32, .RsV33 .ScV33, .RsV34 .ScV34, .RsV35 .ScV35, .RsV36 .ScV36, .RsV37 .ScV37, .RsV38 .ScV38, .RsV39 .ScV39, .RsV40 .ScV40, .RsV41 .ScV41, .RsV42 .ScV42, .RsV43 .ScV43, .RsV44 .ScV44, .RsV45 .ScV45, .RsV46 .ScV46, .RsV47 .ScV47, .RsV48 .ScV48, .RsV49 .ScV49, .RsV50 .ScV50, .RsV51 .ScV51, .RsV52 .ScV52, .RsV53 .ScV53, .RsV54 .ScV54, .RsV55 .ScV55, .RsV56 .ScV56, .RsV57 .ScV57, .RsV58 .ScV58, .RsV59 .ScV59, .RsV60 .ScV60, .RsV61 .ScV61, .RsV62 .ScV62 {
-
-    ~ .ScV {
-
-        .GcV {
-            background-color: $bgColour__afterSlider;
-        }
+    // Grandchildren of all subsequent "parent of verse" siblings.
+    ~ .PoV .GcV {
+        background-color: $bgColour__afterSlider;
     }
 }

@@ -84,13 +84,13 @@ class SliderStanza extends Component {
                     // "Child component stanza index."
 
                     // Aligned selector when on cursor.
-                    `CcS${stanzaIndex}`,
+                    `ChS${stanzaIndex}`,
 
                     /**
                      * General selector when before cursor, general sibling
                      * selector when after cursor.
                      */
-                    'CcS',
+                    'ChS',
 
                     'SliderStanza',
 

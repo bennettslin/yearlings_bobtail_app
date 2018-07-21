@@ -127,11 +127,11 @@ UnitCardView = ({
     return (
         <div className={cx(
 
-            // Sibling component of verse index.
+            // Sibling component of parent of verse index.
             getPrefixPrependedClassNamesForIndices({
                 configs: stanzaArray,
                 configKey: 'verseIndex',
-                prefix: 'ScV'
+                prefix: 'PoV'
             }),
 
             'UnitCard',

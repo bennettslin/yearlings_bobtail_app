@@ -3373,4 +3373,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Better comments on styles so that I'll understand right away when I revisit them later.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

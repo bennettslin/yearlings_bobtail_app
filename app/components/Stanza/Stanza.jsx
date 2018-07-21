@@ -33,14 +33,14 @@ Stanza = ({
 
                 // Aligned selector when on cursor.
                 !isNaN(stanzaIndex) &&
-                    `CcS${stanzaIndex}`,
+                    `ChS${stanzaIndex}`,
 
                 /**
                  * General selector when before cursor, general
                  * sibling selector when after cursor.
                  */
                 !isNaN(stanzaIndex) &&
-                    'CcS',
+                    'ChS',
 
                 'Stanza'
             )}

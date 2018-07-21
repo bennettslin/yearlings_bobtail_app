@@ -1,4 +1,5 @@
-// Default interactivated colour.
+// Default styling. Kept in this stylesheet for consistency.
+
 .VerseColour {
     .RM__verseCanHover
     .verseColour__hoverParent:hover
@@ -17,13 +18,11 @@
     }
 }
 
-// "Root non-interactivated verse index, child component verse index."
-
-// Verse colour in cursored stanza, on cursored verse.
-.RnV0 .CcV0, .RnV1 .CcV1, .RnV2 .CcV2, .RnV3 .CcV3, .RnV4 .CcV4, .RnV5 .CcV5, .RnV6 .CcV6, .RnV7 .CcV7, .RnV8 .CcV8, .RnV9 .CcV9, .RnV10 .CcV10, .RnV11 .CcV11, .RnV12 .CcV12, .RnV13 .CcV13, .RnV14 .CcV14, .RnV15 .CcV15, .RnV16 .CcV16, .RnV17 .CcV17, .RnV18 .CcV18, .RnV19 .CcV19, .RnV20 .CcV20, .RnV21 .CcV21, .RnV22 .CcV22, .RnV23 .CcV23, .RnV24 .CcV24, .RnV25 .CcV25, .RnV26 .CcV26, .RnV27 .CcV27, .RnV28 .CcV28, .RnV29 .CcV29, .RnV30 .CcV30, .RnV31 .CcV31, .RnV32 .CcV32, .RnV33 .CcV33, .RnV34 .CcV34, .RnV35 .CcV35, .RnV36 .CcV36, .RnV37 .CcV37, .RnV38 .CcV38, .RnV39 .CcV39, .RnV40 .CcV40, .RnV41 .CcV41, .RnV42 .CcV42, .RnV43 .CcV43, .RnV44 .CcV44, .RnV45 .CcV45, .RnV46 .CcV46, .RnV47 .CcV47, .RnV48 .CcV48, .RnV49 .CcV49, .RnV50 .CcV50, .RnV51 .CcV51, .RnV52 .CcV52, .RnV53 .CcV53, .RnV54 .CcV54, .RnV55 .CcV55, .RnV56 .CcV56, .RnV57 .CcV57, .RnV58 .CcV58, .RnV59 .CcV59, .RnV60 .CcV60, .RnV61 .CcV61, .RnV62 .CcV62 {
+// "Root non-interactivated verse index, child verse index."
+.RnV0 .ChV0, .RnV1 .ChV1, .RnV2 .ChV2, .RnV3 .ChV3, .RnV4 .ChV4, .RnV5 .ChV5, .RnV6 .ChV6, .RnV7 .ChV7, .RnV8 .ChV8, .RnV9 .ChV9, .RnV10 .ChV10, .RnV11 .ChV11, .RnV12 .ChV12, .RnV13 .ChV13, .RnV14 .ChV14, .RnV15 .ChV15, .RnV16 .ChV16, .RnV17 .ChV17, .RnV18 .ChV18, .RnV19 .ChV19, .RnV20 .ChV20, .RnV21 .ChV21, .RnV22 .ChV22, .RnV23 .ChV23, .RnV24 .ChV24, .RnV25 .ChV25, .RnV26 .ChV26, .RnV27 .ChV27, .RnV28 .ChV28, .RnV29 .ChV29, .RnV30 .ChV30, .RnV31 .ChV31, .RnV32 .ChV32, .RnV33 .ChV33, .RnV34 .ChV34, .RnV35 .ChV35, .RnV36 .ChV36, .RnV37 .ChV37, .RnV38 .ChV38, .RnV39 .ChV39, .RnV40 .ChV40, .RnV41 .ChV41, .RnV42 .ChV42, .RnV43 .ChV43, .RnV44 .ChV44, .RnV45 .ChV45, .RnV46 .ChV46, .RnV47 .ChV47, .RnV48 .ChV48, .RnV49 .ChV49, .RnV50 .ChV50, .RnV51 .ChV51, .RnV52 .ChV52, .RnV53 .ChV53, .RnV54 .ChV54, .RnV55 .ChV55, .RnV56 .ChV56, .RnV57 .ChV57, .RnV58 .ChV58, .RnV59 .ChV59, .RnV60 .ChV60, .RnV61 .ChV61, .RnV62 .ChV62 {
+    // Styling for cursored verse.
 
     // "Grandchild interactable."
-
     .GcN {
         z-index: $zIndex__cursorVerse;
 
@@ -36,7 +35,6 @@
     }
 
     // "Grandchild in slider."
-
     .GcS {
         box-shadow: $boxShadow__cursorVerse;
 
@@ -48,11 +46,11 @@
     }
 }
 
-// Verse colour in cursored stanza, on cursored verse.
-.RlV0 .CcV0, .RlV1 .CcV1, .RlV2 .CcV2, .RlV3 .CcV3, .RlV4 .CcV4, .RlV5 .CcV5, .RlV6 .CcV6, .RlV7 .CcV7, .RlV8 .CcV8, .RlV9 .CcV9, .RlV10 .CcV10, .RlV11 .CcV11, .RlV12 .CcV12, .RlV13 .CcV13, .RlV14 .CcV14, .RlV15 .CcV15, .RlV16 .CcV16, .RlV17 .CcV17, .RlV18 .CcV18, .RlV19 .CcV19, .RlV20 .CcV20, .RlV21 .CcV21, .RlV22 .CcV22, .RlV23 .CcV23, .RlV24 .CcV24, .RlV25 .CcV25, .RlV26 .CcV26, .RlV27 .CcV27, .RlV28 .CcV28, .RlV29 .CcV29, .RlV30 .CcV30, .RlV31 .CcV31, .RlV32 .CcV32, .RlV33 .CcV33, .RlV34 .CcV34, .RlV35 .CcV35, .RlV36 .CcV36, .RlV37 .CcV37, .RlV38 .CcV38, .RlV39 .CcV39, .RlV40 .CcV40, .RlV41 .CcV41, .RlV42 .CcV42, .RlV43 .CcV43, .RlV44 .CcV44, .RlV45 .CcV45, .RlV46 .CcV46, .RlV47 .CcV47, .RlV48 .CcV48, .RlV49 .CcV49, .RlV50 .CcV50, .RlV51 .CcV51, .RlV52 .CcV52, .RlV53 .CcV53, .RlV54 .CcV54, .RlV55 .CcV55, .RlV56 .CcV56, .RlV57 .CcV57, .RlV58 .CcV58, .RlV59 .CcV59, .RlV60 .CcV60, .RlV61 .CcV61, .RlV62 .CcV62 {
+// "Root cursored lyric verse index, child verse index."
+.RlV0 .ChV0, .RlV1 .ChV1, .RlV2 .ChV2, .RlV3 .ChV3, .RlV4 .ChV4, .RlV5 .ChV5, .RlV6 .ChV6, .RlV7 .ChV7, .RlV8 .ChV8, .RlV9 .ChV9, .RlV10 .ChV10, .RlV11 .ChV11, .RlV12 .ChV12, .RlV13 .ChV13, .RlV14 .ChV14, .RlV15 .ChV15, .RlV16 .ChV16, .RlV17 .ChV17, .RlV18 .ChV18, .RlV19 .ChV19, .RlV20 .ChV20, .RlV21 .ChV21, .RlV22 .ChV22, .RlV23 .ChV23, .RlV24 .ChV24, .RlV25 .ChV25, .RlV26 .ChV26, .RlV27 .ChV27, .RlV28 .ChV28, .RlV29 .ChV29, .RlV30 .ChV30, .RlV31 .ChV31, .RlV32 .ChV32, .RlV33 .ChV33, .RlV34 .ChV34, .RlV35 .ChV35, .RlV36 .ChV36, .RlV37 .ChV37, .RlV38 .ChV38, .RlV39 .ChV39, .RlV40 .ChV40, .RlV41 .ChV41, .RlV42 .ChV42, .RlV43 .ChV43, .RlV44 .ChV44, .RlV45 .ChV45, .RlV46 .ChV46, .RlV47 .ChV47, .RlV48 .ChV48, .RlV49 .ChV49, .RlV50 .ChV50, .RlV51 .ChV51, .RlV52 .ChV52, .RlV53 .ChV53, .RlV54 .ChV54, .RlV55 .ChV55, .RlV56 .ChV56, .RlV57 .ChV57, .RlV58 .ChV58, .RlV59 .ChV59, .RlV60 .ChV60, .RlV61 .ChV61, .RlV62 .ChV62 {
+    // Styling for cursored verse.
 
     // "Grandchild in lyric."
-
     .GcL {
         box-shadow: $boxShadow__cursorVerse;
 

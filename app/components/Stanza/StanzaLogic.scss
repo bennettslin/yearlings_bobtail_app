@@ -1,14 +1,15 @@
-// "Child component stanza."
-.CcS {
-    // Default styling for stanzas before cursored stanza.
+// Default styling. Kept in this stylesheet for consistency.
+
+.Stanza {
+    // Styling for stanzas before cursored stanza.
 
     // TODO: Improve these styles, obviously.
     background-color: rgba(240, 200, 200, 0.5);
     border: 2px solid #f88;
 }
 
-// "Root cursored stanza index, child component stanza index."
-.RcS0 .CcS0, .RcS1 .CcS1, .RcS2 .CcS2, .RcS3 .CcS3, .RcS4 .CcS4, .RcS5 .CcS5, .RcS6 .CcS6, .RcS7 .CcS7, .RcS8 .CcS8, .RcS9 .CcS9, .RcS10 .CcS10, .RcS11 .CcS11, .RcS12 .CcS12, .RcS13 .CcS13 {
+// "Root cursored stanza index, child stanza index."
+.RcS0 .ChS0, .RcS1 .ChS1, .RcS2 .ChS2, .RcS3 .ChS3, .RcS4 .ChS4, .RcS5 .ChS5, .RcS6 .ChS6, .RcS7 .ChS7, .RcS8 .ChS8, .RcS9 .ChS9, .RcS10 .ChS10, .RcS11 .ChS11, .RcS12 .ChS12, .RcS13 .ChS13 {
     // Styling for cursored stanza.
 
     /**
@@ -21,8 +22,8 @@
     background-color: rgba(240, 240, 200, 0.5);
     border: 2px solid #8f8;
 
-    // All subsequent "child component stanza" siblings.
-    ~ .CcS {
+    // All subsequent "child stanza" siblings.
+    ~ .ChS {
         // Styling for stanzas after cursored stanza.
 
         // TODO: Improve these styles, obviously.

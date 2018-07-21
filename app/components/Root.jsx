@@ -315,11 +315,9 @@ class Root extends Component {
                         // "Root default verse index."
                         `RdV${renderableVerseIndex}`,
 
-                    isPlaying ?
+                    isPlaying &&
                         // "Root playing verse index."
-                        `RpV${renderableVerseIndex}` :
-                        // "Root pauZZZed verse index."
-                        `RzV${renderableVerseIndex}`,
+                        `RpV${renderableVerseIndex}`,
 
                     interactivatedVerseIndex < 0 &&
                         // "Root non-interactivated verse index."

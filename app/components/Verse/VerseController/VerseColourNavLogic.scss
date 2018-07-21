@@ -1,10 +1,10 @@
-// "Root playing verse index, child component verse index."
+// "Root playing verse index, child verse index."
+.RpV0 .ChV0, .RpV1 .ChV1, .RpV2 .ChV2, .RpV3 .ChV3, .RpV4 .ChV4, .RpV5 .ChV5, .RpV6 .ChV6, .RpV7 .ChV7, .RpV8 .ChV8, .RpV9 .ChV9, .RpV10 .ChV10, .RpV11 .ChV11, .RpV12 .ChV12, .RpV13 .ChV13, .RpV14 .ChV14, .RpV15 .ChV15, .RpV16 .ChV16, .RpV17 .ChV17, .RpV18 .ChV18, .RpV19 .ChV19, .RpV20 .ChV20, .RpV21 .ChV21, .RpV22 .ChV22, .RpV23 .ChV23, .RpV24 .ChV24, .RpV25 .ChV25, .RpV26 .ChV26, .RpV27 .ChV27, .RpV28 .ChV28, .RpV29 .ChV29, .RpV30 .ChV30, .RpV31 .ChV31, .RpV32 .ChV32, .RpV33 .ChV33, .RpV34 .ChV34, .RpV35 .ChV35, .RpV36 .ChV36, .RpV37 .ChV37, .RpV38 .ChV38, .RpV39 .ChV39, .RpV40 .ChV40, .RpV41 .ChV41, .RpV42 .ChV42, .RpV43 .ChV43, .RpV44 .ChV44, .RpV45 .ChV45, .RpV46 .ChV46, .RpV47 .ChV47, .RpV48 .ChV48, .RpV49 .ChV49, .RpV50 .ChV50, .RpV51 .ChV51, .RpV52 .ChV52, .RpV53 .ChV53, .RpV54 .ChV54, .RpV55 .ChV55, .RpV56 .ChV56, .RpV57 .ChV57, .RpV58 .ChV58, .RpV59 .ChV59, .RpV60 .ChV60, .RpV61 .ChV61, .RpV62 .ChV62 {
+    // Styling for cursored verse.
 
-// Verse colour in cursored stanza, on cursored verse.
-.RpV0 .CcV0, .RpV1 .CcV1, .RpV2 .CcV2, .RpV3 .CcV3, .RpV4 .CcV4, .RpV5 .CcV5, .RpV6 .CcV6, .RpV7 .CcV7, .RpV8 .CcV8, .RpV9 .CcV9, .RpV10 .CcV10, .RpV11 .CcV11, .RpV12 .CcV12, .RpV13 .CcV13, .RpV14 .CcV14, .RpV15 .CcV15, .RpV16 .CcV16, .RpV17 .CcV17, .RpV18 .CcV18, .RpV19 .CcV19, .RpV20 .CcV20, .RpV21 .CcV21, .RpV22 .CcV22, .RpV23 .CcV23, .RpV24 .CcV24, .RpV25 .CcV25, .RpV26 .CcV26, .RpV27 .CcV27, .RpV28 .CcV28, .RpV29 .CcV29, .RpV30 .CcV30, .RpV31 .CcV31, .RpV32 .CcV32, .RpV33 .CcV33, .RpV34 .CcV34, .RpV35 .CcV35, .RpV36 .CcV36, .RpV37 .CcV37, .RpV38 .CcV38, .RpV39 .CcV39, .RpV40 .CcV40, .RpV41 .CcV41, .RpV42 .CcV42, .RpV43 .CcV43, .RpV44 .CcV44, .RpV45 .CcV45, .RpV46 .CcV46, .RpV47 .CcV47, .RpV48 .CcV48, .RpV49 .CcV49, .RpV50 .CcV50, .RpV51 .CcV51, .RpV52 .CcV52, .RpV53 .CcV53, .RpV54 .CcV54, .RpV55 .CcV55, .RpV56 .CcV56, .RpV57 .CcV57, .RpV58 .CcV58, .RpV59 .CcV59, .RpV60 .CcV60, .RpV61 .CcV61, .RpV62 .CcV62 {
-
+    // "Grandchild verse colour."
     .GcV {
-        // Use !important to override hover highlight for non-cursored verse.
+        // Use !important to override hover highlight.
         background-color: $bgColour__audioPlay !important;
     }
 }

@@ -2,11 +2,6 @@ module.exports = [
 
     // Tasks to do first.
     {
-        taskName: `Better comments on styles so I'll get it right away when I revisit them later.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Method to get all verse indices from units array, including subCard verse indices.`,
         workedHours: 0,
         neededHours: 2
