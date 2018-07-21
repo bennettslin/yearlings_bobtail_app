@@ -140,7 +140,7 @@ UnitCardView = ({
                 <div className={cx(
                     'UnitCard__tab',
                     'UnitCard__tabShadow',
-                    'boxShadow__lyricUnitCard'
+                    'boxShadow__unitCard'
                 )}>
                     {tabText}
                 </div>
@@ -148,9 +148,9 @@ UnitCardView = ({
 
             <div className={cx(
                 'UnitCard__sheet',
-                'boxShadow__lyricUnitCard',
-                'bgColour__lyricUnit__pattern',
-                `bgColour__stanza__${stanzaType}`
+                'boxShadow__unitCard',
+                'bgColour__unit__pattern',
+                `bgColour__stanzaType__${stanzaType}`
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
                     const {
@@ -182,8 +182,8 @@ UnitCardView = ({
                 <div className={cx(
                     'UnitCard__tab',
                     'UnitCard__tabTop',
-                    'bgColour__lyricUnit__pattern',
-                    `bgColour__stanza__${stanzaType}`
+                    'bgColour__unit__pattern',
+                    `bgColour__stanzaType__${stanzaType}`
                 )}>
                     {tabText}
                 </div>

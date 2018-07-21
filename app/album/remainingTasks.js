@@ -32,9 +32,9 @@ module.exports = [
     },
 
     {
-        taskName: `Simplify verse controller. Should only update when interactivation turned on or off, and shouldn't care when slider is moving.`,
+        taskName: `Simplify verse interactive. Should only update when interactivation turned on or off, and shouldn't care when slider is moving. Also, slider verses *do* need to be wrapped in them.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
 
     {

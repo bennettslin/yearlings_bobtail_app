@@ -1,8 +1,8 @@
 // Box shadow colours.
 $colour__boxShadow: rgba(75, 75, 100, 0.4);
 $colour__boxShadow__dark: rgba(25, 25, 50, 0.4);
-// $colour__boxShadow__highlighted: rgba(255, 255, 200, 0.2);
-
+$colour__boxShadow__cursored: rgba(255, 225, 155, 0.4);
+$colour__boxShadow__cursoredBright: rgba(255, 225, 100, 0.8);
 // Audio related colours.
 $bgColour__audioPlay: #bfb;
 $bgColour__audioPause: #fdd;
@@ -72,15 +72,15 @@ $bgColour__annotationCard: rgba(250, 250, 255, 0.9);
 $bgColour__annotationPortal: #fff4f4;
 
 // Song stanza colours.
-$bgColour__stanza__title: brown;
-$bgColour__stanza__refrain: tomato;
-$bgColour__stanza__verse: orange;
-$bgColour__stanza__prechorus: green;
-$bgColour__stanza__chorus: blue;
-$bgColour__stanza__postchorus: violet;
-$bgColour__stanza__bridge: purple;
-$bgColour__stanza__coda: tan;
-$bgColour__stanza__instrumental: #f4f;
-$bgColour__stanza__rhyme: turquoise;
-$bgColour__stanza__backing: skyBlue;
-$bgColour__stanza__response: cadetBlue;
+$bgColour__stanzaType__title: brown;
+$bgColour__stanzaType__refrain: tomato;
+$bgColour__stanzaType__verse: orange;
+$bgColour__stanzaType__prechorus: green;
+$bgColour__stanzaType__chorus: blue;
+$bgColour__stanzaType__postchorus: violet;
+$bgColour__stanzaType__bridge: purple;
+$bgColour__stanzaType__coda: tan;
+$bgColour__stanzaType__instrumental: #f4f;
+$bgColour__stanzaType__rhyme: turquoise;
+$bgColour__stanzaType__backing: skyBlue;
+$bgColour__stanzaType__response: cadetBlue;

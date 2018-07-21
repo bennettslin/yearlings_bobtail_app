@@ -96,7 +96,7 @@ class SliderStanza extends Component {
 
                     `SliderStanza__${stanzaType}`,
                     'bgColour__sliderStanza__pattern',
-                    `bgColour__stanza__${stanzaType}`
+                    `bgColour__stanzaType__${stanzaType}`
                 )}
                 style={stanzaStyle}
             >
@@ -111,7 +111,7 @@ class SliderStanza extends Component {
                     'SliderStanza__sheet',
                     'boxShadow__sliderStanza',
                     'bgColour__sliderStanza__pattern',
-                    `bgColour__stanza__${stanzaType}`,
+                    `bgColour__stanzaType__${stanzaType}`,
                     'absoluteFullContainer'
                 )}>
                     <SliderVerses
@@ -128,7 +128,7 @@ class SliderStanza extends Component {
                     'SliderStanza__tab',
                     'SliderStanza__tabTop',
                     'bgColour__sliderStanza__pattern',
-                    `bgColour__stanza__${stanzaType}`
+                    `bgColour__stanzaType__${stanzaType}`
                 )}/>
             </div>
         )
