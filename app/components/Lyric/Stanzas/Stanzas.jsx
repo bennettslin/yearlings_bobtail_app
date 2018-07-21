@@ -8,7 +8,8 @@ import cx from 'classnames'
 
 import Stanza from './Stanza'
 import {
-    getSongStanzaConfigs
+    getSongStanzaConfigs,
+    getLastUnitDotCardIndex
 } from '../../../helpers/dataHelper'
 import {
     getPropsAreShallowEqual
@@ -117,12 +118,17 @@ class Stanzas extends Component {
 
             songStanzaConfigs = getSongStanzaConfigs(
                 renderableSongIndex
+            ),
+
+            lastUnitDotCardIndex = getLastUnitDotCardIndex(
+                renderableSongIndex
             )
 
         return (
             <StanzasView {...other}
                 {...{
-                    songStanzaConfigs
+                    songStanzaConfigs,
+                    lastUnitDotCardIndex
                 }}
                 handleWheel={this._handleWheel}
                 setRef={this.setLyricRef}
@@ -138,6 +144,8 @@ class Stanzas extends Component {
 const propTypes = {
     // From parent.
     songStanzaConfigs: PropTypes.array.isRequired,
+    lastUnitDotCardIndex: PropTypes.number.isRequired,
+
     setRef: PropTypes.func.isRequired,
     handleWheel: PropTypes.func.isRequired
 },
@@ -145,6 +153,8 @@ const propTypes = {
 StanzasView = ({
 
     songStanzaConfigs,
+    lastUnitDotCardIndex,
+
     setRef,
     handleWheel,
 
@@ -224,6 +234,15 @@ StanzasView = ({
                         </div>
                     )
                 })}
+
+                {/* This is the last unit dot card, if there is one. */}
+                {lastUnitDotCardIndex > -1 && (
+                    <Stanza {...other}
+                        {...{
+                            unitIndex: lastUnitDotCardIndex
+                        }}
+                    />
+                )}
             </div>
         </div>
     )
