@@ -3338,4 +3338,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Remove unneeded view components. Just verse controller, 1t turns out.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

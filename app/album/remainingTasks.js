@@ -1,9 +1,9 @@
 module.exports = [
 
     {
-        taskName: `Remove unneeded view components. View controller, slider, lyric stanzas?`,
-        workedHours: 0,
-        neededHours: 1
+        taskName: `Work to do logic for verse styling purely through css. Need classes on units and stanza cards.`,
+        workedHours: 8,
+        neededHours: 15
     },
 
     {
@@ -13,7 +13,7 @@ module.exports = [
     },
 
     {
-        taskName: `Remove VerseColour.`,
+        taskName: `Make CSS-logic classNames more efficient.`,
         workedHours: 0,
         neededHours: 2
     },

@@ -188,6 +188,10 @@ StanzasView = ({
                         <div
                             key={stanzaIndex}
                             className={cx(
+
+                                // TODO: Rename this.
+                                'StanzaParent',
+
                                 /**
                                  * General selector when before cursor, general
                                  * sibling selector when after cursor.

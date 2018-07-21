@@ -29,7 +29,8 @@
      * Apply margin top to stanza block rather than lyrics unit, so that
      * bottom dot stanza can override it when faded out.
      */
-    .Stanza__notSubsequent:not(:first-child)
+    .StanzaParent:not(:first-child)
+    .Stanza__notSubsequent
     & {
         margin-top: $margin__lyricUnit;
     }
