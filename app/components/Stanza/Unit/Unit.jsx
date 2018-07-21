@@ -13,9 +13,7 @@ import UnitCard from './UnitCard'
 import UnitDot from './UnitDot'
 import { TITLE } from '../../../constants/lyrics'
 import { getLyricUnitArray } from '../../../helpers/dataHelper'
-import {
-    getPrefixPrependedClassNamesForIndices
-} from '../../../helpers/domHelper'
+import { getParentOfVerseClassNamesForIndices } from './unitHelper'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -207,11 +205,9 @@ class UnitView extends Component {
         return (
             <div
                 className={cx(
-                    // Sibling component of parent of verse index.
-                    getPrefixPrependedClassNamesForIndices({
-                        configs: unitArray,
-                        configKey: 'verseIndex',
-                        prefix: 'PoV'
+                    // "Parent of verse index."
+                    getParentOfVerseClassNamesForIndices({
+                        entities: unitArray
                     }),
 
                     'Unit',

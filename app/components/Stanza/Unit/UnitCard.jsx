@@ -4,9 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import {
-    getPrefixPrependedClassNamesForIndices
-} from '../../../helpers/domHelper'
+import { getParentOfVerseClassNamesForIndices } from './unitHelper'
 
 import Verse from '../../Verse/Verse';
 
@@ -127,11 +125,9 @@ UnitCardView = ({
     return (
         <div className={cx(
 
-            // Sibling component of parent of verse index.
-            getPrefixPrependedClassNamesForIndices({
-                configs: stanzaArray,
-                configKey: 'verseIndex',
-                prefix: 'PoV'
+            // "Parent of verse index."
+            getParentOfVerseClassNamesForIndices({
+                entities: stanzaArray
             }),
 
             'UnitCard',

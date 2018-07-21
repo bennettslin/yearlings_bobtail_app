@@ -1,12 +1,5 @@
 module.exports = [
 
-    // Tasks to do first.
-    {
-        taskName: `Method to get all verse indices from units array, including subCard verse indices.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     // Weekend task.
     {
         taskName: `Cubes rendering through CSS logic!`,

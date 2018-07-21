@@ -3383,4 +3383,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Method to get all verse indices from units array, including subCard verse indices.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
