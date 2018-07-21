@@ -6,7 +6,7 @@ import SliderVerses from '../Verses/SliderVerses'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
-import { OVERLAP_MARGIN_SLIDER_STANZA } from '../../../constants/responsive'
+import { LS_OVERLAP_MARGIN_X_SLIDER } from '../../../constants/responsive'
 
 class SliderStanza extends Component {
 
@@ -53,7 +53,7 @@ class SliderStanza extends Component {
                 isLastStanza ?
                     `${stanzaRightPercentage}%` :
                     `calc(${stanzaRightPercentage}% - ${
-                        OVERLAP_MARGIN_SLIDER_STANZA
+                        LS_OVERLAP_MARGIN_X_SLIDER
                     }px)`,
 
             /**
@@ -68,7 +68,7 @@ class SliderStanza extends Component {
                 isLastStanza ?
                     `${stanzaWidthPercentage}%` :
                     `calc(${stanzaWidthPercentage}% + ${
-                        OVERLAP_MARGIN_SLIDER_STANZA
+                        LS_OVERLAP_MARGIN_X_SLIDER
                     }px)`,
 
             stanzaStyle = {

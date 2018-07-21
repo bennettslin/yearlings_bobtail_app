@@ -1,6 +1,11 @@
 module.exports = [
 
     {
+        taskName: `Underscore in annotation title is missing second double quote.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Selecting a new verse through playing should determine verse bars.`,
         workedHours: 0,
         neededHours: 1
@@ -9,6 +14,12 @@ module.exports = [
         taskName: `Sibling verses briefly highlight the wrong colour in slider?`,
         workedHours: 0,
         neededHours: 1
+    },
+
+    {
+        taskName: `Get rid of VerseColour component, so that text and background colour can live together again.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     // Weekend task.

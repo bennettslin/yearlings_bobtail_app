@@ -1,8 +1,12 @@
 $js__marginX__slider: 3px;
-$height__sliderStanzaTab: 5px;
+$js__overlap__marginX__slider: 2px;
+$height__sliderStanzaTab: 4px;
+$width__sliderStanzaTab: 10px;
 
 .SliderStanza {
     position: absolute;
+    height: 50%;
+
     bottom: 0;
     border-top-right-radius: $borderRadius;
 
@@ -24,7 +28,7 @@ $height__sliderStanzaTab: 5px;
     position: absolute;
     top: -$height__sliderStanzaTab;
     left: 0;
-    width: $js__margin__thick;
+    width: $width__sliderStanzaTab;
     border-radius: $borderRadius $borderRadius 0 0;
 }
 
@@ -57,6 +61,7 @@ $height__sliderStanzaTab: 5px;
     .SliderStanza:not(:last-child)
     & {
         border-top-right-radius: $borderRadius;
+        padding-right: $js__overlap__marginX__slider;
     }
 }
 
@@ -87,33 +92,33 @@ $height__sliderStanzaTab: 5px;
     background-size: $width $height;
 }
 
-.SliderStanza__refrain {
-    height: 50%;
-}
-.SliderStanza__verse {
-    height: 55%;
-}
-.SliderStanza__prechorus {
-    height: 58%;
-}
-.SliderStanza__chorus {
-    height: 60%;
-}
-.SliderStanza__postchorus {
-    height: 50%;
-}
-.SliderStanza__bridge {
-    height: 52%;
-}
-.SliderStanza__coda {
-    height: 45%;
-}
-.SliderStanza__intro {
-    height: 48%;
-}
-.SliderStanza__solo {
-    height: 65%;
-}
-.SliderStanza__outro {
-    height: 40%;
-}
+// .SliderStanza__refrain {
+//     height: 50%;
+// }
+// .SliderStanza__verse {
+//     height: 55%;
+// }
+// .SliderStanza__prechorus {
+//     height: 58%;
+// }
+// .SliderStanza__chorus {
+//     height: 60%;
+// }
+// .SliderStanza__postchorus {
+//     height: 50%;
+// }
+// .SliderStanza__bridge {
+//     height: 52%;
+// }
+// .SliderStanza__coda {
+//     height: 45%;
+// }
+// .SliderStanza__intro {
+//     height: 48%;
+// }
+// .SliderStanza__solo {
+//     height: 65%;
+// }
+// .SliderStanza__outro {
+//     height: 40%;
+// }

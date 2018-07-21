@@ -23,13 +23,17 @@
     // background-color: rgba(240, 240, 200, 0.5);
     // border: 2px solid #8f8;
 
+    &.SliderStanza {
+        height: 65%;
+    }
+
     .boxShadow__unitCard {
         box-shadow: $boxShadow__unitCard__cursored;
     }
 
-    .boxShadow__sliderStanza {
-        box-shadow: $boxShadow__sliderStanza__cursored;
-    }
+    // .boxShadow__sliderStanza {
+    //     box-shadow: $boxShadow__sliderStanza__cursored;
+    // }
 
     // All subsequent "child stanza" siblings.
     ~ .ChS {
