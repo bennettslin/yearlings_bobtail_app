@@ -31,12 +31,6 @@ module.exports = [
     },
 
     {
-        taskName: `Sometimes slider locks up?`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
         taskName: `Don't attempt to scroll carousel in phone.`,
         workedHours: 0,
         neededHours: 1

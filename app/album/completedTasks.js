@@ -3343,4 +3343,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Sometimes slider locks up? Hoping that having a touch element does the trick.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

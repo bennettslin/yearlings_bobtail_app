@@ -95,14 +95,20 @@ class Slider extends Component {
                         'parentIsShown': canSliderRender && isShown
                     }
                 )}
-                ref={(node) => (this.mySlider = node)}
-                onMouseDown={this._handleTouchDown}
-                onTouchStart={this._handleTouchDown}
             >
                 <SliderTimes />
                 <SliderStanzas />
                 <SliderScenes />
                 <SliderAccess />
+                <div
+                    className={cx(
+                        'Slider__touch',
+                        'absoluteFullContainer'
+                    )}
+                    onMouseDown={this._handleTouchDown}
+                    onTouchStart={this._handleTouchDown}
+                    ref={(node) => (this.mySlider = node)}
+                />
             </div>
         )
     }
