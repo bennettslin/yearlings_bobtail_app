@@ -17,6 +17,16 @@ export const getPrefixPrependedClassNames = (classNames, prefix) => {
     ))
 }
 
+// export const getPrefixPrependedClassNamesForIndices = (
+//     classNamesArray = [],
+//     prefix
+// ) => {
+
+//     return classNamesArray.map(index => (
+//         `${prefix}__${index}`
+//     ))
+// }
+
 export const getClientX = (e) => {
     const { nativeEvent } = e,
         { touches,

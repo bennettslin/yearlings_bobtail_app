@@ -1,13 +1,19 @@
 module.exports = [
 
     {
-        taskName: `Work to do logic for verse styling purely through css. Need classes on units and stanza cards.`,
+        taskName: `Verse bar should not be clickable when hidden.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Work to do logic for verse styling purely through CSS. Need classes on units and stanza cards.`,
         workedHours: 8,
         neededHours: 15
     },
 
     {
-        taskName: `Rename verse controller and lyric stanza components.`,
+        taskName: `Simplify or remove verse controller.`,
         workedHours: 0,
         neededHours: 2
     },

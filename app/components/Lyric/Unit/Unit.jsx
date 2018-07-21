@@ -13,6 +13,9 @@ import UnitCard from './UnitCard'
 import UnitDot from './UnitDot'
 import { TITLE } from '../../../constants/lyrics'
 import { getLyricUnitArray } from '../../../helpers/dataHelper'
+// import {
+//     getPrefixPrependedClassNamesForIndices
+// } from '../../../helpers/domHelper'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
