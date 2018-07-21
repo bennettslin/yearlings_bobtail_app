@@ -1,25 +1,56 @@
 module.exports = [
 
+    // Urgent bugs.
+    {
+        taskName: `Logue is broken.`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Verse bar should not be clickable when hidden.`,
         workedHours: 0,
         neededHours: 2
     },
 
+    // Tasks to do first.
     {
-        taskName: `Work to do logic for verse styling purely through CSS. Need classes on units and stanza cards.`,
-        workedHours: 8,
-        neededHours: 15
+        taskName: `Better comments on styles so I'll get it right away when I revisit them later.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Method to get all verse indices from units array, including subCard verse indices.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    // Weekend task.
+    {
+        taskName: `Cubes rendering through CSS logic!`,
+        workedHours: 0,
+        neededHours: 20
     },
 
     {
-        taskName: `Simplify or remove verse controller.`,
+        taskName: `Slider verses no longer hover. Not only that, the touch component *doesn't* do the trick!`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Simplify verse controller. Should only update when interactivation turned on or off, and shouldn't care when slider is moving. Slider verse and verse bar can bypass?`,
         workedHours: 0,
         neededHours: 2
     },
 
     {
         taskName: `Verse audio knows it's after cursor through CSS logic.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Cursor should only update when on cursor, and shouldn't care at all if it's not playing.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -40,6 +71,12 @@ module.exports = [
         taskName: `Revisit Willy, Odin, and Constellations overlap cards.`,
         workedHours: 0,
         neededHours: 1
+    },
+
+    {
+        taskName: `Can skip to stanza by clicking stanza tab?`,
+        workedHours: 0,
+        neededHours: 2
     },
 
     /**

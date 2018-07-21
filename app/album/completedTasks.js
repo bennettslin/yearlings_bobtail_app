@@ -3358,4 +3358,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Work to do logic for verse styling purely through CSS. Classes on units and unit cards..`,
+        workedHours: 10,
+        neededHours: 10
+    },
 ]

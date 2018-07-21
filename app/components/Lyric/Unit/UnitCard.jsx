@@ -4,6 +4,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import {
+    getPrefixPrependedClassNamesForIndices
+} from '../../../helpers/domHelper'
+
 import Verse from '../../Verse/Verse';
 
 /*************
@@ -122,6 +126,14 @@ UnitCardView = ({
 
     return (
         <div className={cx(
+
+            // Sibling component of verse index.
+            getPrefixPrependedClassNamesForIndices({
+                configs: stanzaArray,
+                configKey: 'verseIndex',
+                prefix: 'ScV'
+            }),
+
             'UnitCard',
             isSubCard && 'UnitCard__subCard',
             isTabbed && 'UnitCard__tabbed'
