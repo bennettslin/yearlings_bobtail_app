@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import Button from '../Button/Button'
-import { LYRIC_SECTION_EXPAND_KEY } from '../../constants/access'
-import { getIsLyricExpandable } from '../../helpers/responsiveHelper'
+import Button from '../../Button/Button'
+import { LYRIC_SECTION_EXPAND_KEY } from '../../../constants/access'
+import { getIsLyricExpandable } from '../../../helpers/responsiveHelper'
 
 const mapStateToProps = ({
     deviceStore,

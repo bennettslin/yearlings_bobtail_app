@@ -5,10 +5,10 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Verse from '../Verse/Verse'
+import Verse from '../Verse'
 
-import { getVerseObject } from '../../helpers/dataHelper'
-import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
+import { getVerseObject } from '../../../helpers/dataHelper'
+import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,

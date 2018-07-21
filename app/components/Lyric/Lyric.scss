@@ -1,7 +1,6 @@
-@import "./Stanzas/Stanzas.scss";
-@import "./LyricAccess.scss";
-@import "./LyricToggle.scss";
-@import "./VerseBar.scss";
+@import "./Units/Stanzas.scss";
+@import "./LyricAccess/LyricAccess.scss";
+@import "./LyricToggle/LyricToggle.scss";
 
 .Lyric {
     position: absolute;

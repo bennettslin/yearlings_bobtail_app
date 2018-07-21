@@ -4,8 +4,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Button from '../Button/Button'
-import { LYRIC_SCROLL_TOGGLE_KEY } from '../../constants/access'
+import Button from '../../Button/Button'
+import { LYRIC_SCROLL_TOGGLE_KEY } from '../../../constants/access'
 
 const lyricScrollTogglePropTypes = {
     // From parent.

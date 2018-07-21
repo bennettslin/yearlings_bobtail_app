@@ -2,17 +2,17 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import { ALL_DOT_KEYS } from '../../constants/dots'
-import { convertTrueFalseKeysToBitNumber } from '../../helpers/bitHelper'
+import { ALL_DOT_KEYS } from '../../../constants/dots'
+import { convertTrueFalseKeysToBitNumber } from '../../../helpers/bitHelper'
 
-import AccessIcons from '../AccessIcon/AccessIcons'
+import AccessIcons from '../../AccessIcon/AccessIcons'
 
 import {
     NAVIGATION_LEFT_KEY,
     NAVIGATION_RIGHT_KEY,
     NAVIGATION_UP_KEY,
     NAVIGATION_DOWN_KEY
-} from '../../constants/access'
+} from '../../../constants/access'
 
 const mapStateToProps = ({
     isLyricExpanded,

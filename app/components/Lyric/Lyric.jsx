@@ -5,12 +5,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import LyricAccess from './LyricAccess'
-import LyricToggleEar from './LyricToggleEar'
-import LyricToggleExpand from './LyricToggleExpand'
-import LyricToggleScroll from './LyricToggleScroll'
-import Stanzas from './Stanzas/Stanzas'
-import VerseBar from './VerseBar'
+import LyricAccess from './LyricAccess/LyricAccess'
+import LyricToggleEar from './LyricToggle/LyricToggleEar'
+import LyricToggleExpand from './LyricToggle/LyricToggleExpand'
+import LyricToggleScroll from './LyricToggle/LyricToggleScroll'
+import Stanzas from './Units/Stanzas'
+import VerseBar from '../Verse/VerseBar/VerseBar'
 
 const mapStateToProps = ({
     canLyricRender
