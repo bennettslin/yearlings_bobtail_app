@@ -93,6 +93,19 @@ export const getSongVersesCount = (songIndex) => {
     return selectedSong.songVerseConfigs.length || 0
 }
 
+export const getTimeForVerseIndex = (songIndex, verseIndex) => {
+
+    // Return 0 if logue.
+    if (getSongIsLogue(songIndex)) {
+        return 0
+    }
+
+    const selectedSong = getSongObject(songIndex),
+        { songVerseConfigs } = selectedSong
+
+    return songVerseConfigs[verseIndex].verseStartTime
+}
+
 export const getVerseIndexForTime = (songIndex, time) => {
 
     const songVerseConfigs = getSongVerseConfigs(songIndex),
@@ -252,6 +265,12 @@ export const getSongStanzaConfigs = (songIndex) => {
 }
 
 export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
+
+    // Return -1 if logue.
+    if (getSongIsLogue(songIndex)) {
+        return 0
+    }
+
     const songObject = getSongObject(songIndex),
     { songVerseConfigs } = songObject
 
@@ -342,6 +361,12 @@ export const getVerseIndexForNextScene = (
 }
 
 export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
+
+    // Return 0 if logue.
+    if (getSongIsLogue(songIndex)) {
+        return 0
+    }
+
     const songVerseConfigs = getSongVerseConfigs(songIndex)
 
     return songVerseConfigs[verseIndex].sceneIndex

@@ -2,11 +2,6 @@ module.exports = [
 
     // Urgent bugs.
     {
-        taskName: `Logue is broken.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Verse bar should not be clickable when hidden.`,
         workedHours: 0,
         neededHours: 2

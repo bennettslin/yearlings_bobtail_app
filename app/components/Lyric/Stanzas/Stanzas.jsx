@@ -164,7 +164,7 @@ StanzasView = ({
 
 ...other }) => {
 
-    return (
+    return songStanzaConfigs.length && (
         <div
             ref={setRef}
             className={cx(

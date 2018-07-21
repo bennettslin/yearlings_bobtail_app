@@ -3363,4 +3363,9 @@ module.exports = [
         workedHours: 10,
         neededHours: 10
     },
+    {
+        taskName: `Logue is broken.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
