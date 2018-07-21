@@ -5,13 +5,6 @@ module.exports = [
         workedHours: 0,
         neededHours: 1
     },
-
-    {
-        taskName: `getVerseDuration breaks when selecting songs fast?`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
     {
         taskName: `Sibling verses briefly highlight the wrong colour in slider?`,
         workedHours: 0,

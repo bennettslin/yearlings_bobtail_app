@@ -3388,4 +3388,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `getVerseDuration breaks when selecting songs fast? Hopefully this is fixed.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
