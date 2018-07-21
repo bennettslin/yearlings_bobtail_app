@@ -19,16 +19,6 @@
     }
 }
 
-// TODO: Maybe get rid of this class, since the only permanent component that uses it is the slider verse.
-.Slider__dynamicBar {
-    position: absolute;
-    height: 100%;
-
-    // Anchor to bottom and right!
-    bottom: 0;
-    right: 0;
-}
-
 .Slider__touch {
     z-index: $zIndex__touchOverlay;
 }

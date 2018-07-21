@@ -5,6 +5,15 @@
     height: 5%;
 }
 
+.SliderSceneBar {
+    position: absolute;
+    height: 100%;
+
+    // Anchor to bottom and right!
+    bottom: 0;
+    right: 0;
+}
+
 .SliderSceneBar__odd {
     background-color: #f88;
 }
