@@ -1,4 +1,4 @@
-.VerseAudio {
+.VerseNav {
     position: absolute;
     top: 50%;
     left: 0;
@@ -11,7 +11,7 @@
         opacity $animationDuration__default;
 }
 
-.VerseAudio__interactivated {
+.VerseNav__interactivated {
     left: -$length__iconSmall * 0.9;
     opacity: 1;
     animation: fontSnapback 0.16s;

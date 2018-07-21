@@ -7,7 +7,7 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import VerseAudio from '../VerseAudio/VerseAudio'
+import VerseNav from '../VerseNav/VerseNav'
 import VerseColour from './VerseColour'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
@@ -80,7 +80,7 @@ class VerseController extends Component {
                 />
 
                 {inLyricVerse && (
-                    <VerseAudio
+                    <VerseNav
                         {...other}
                         {...{
                             verseIndex,

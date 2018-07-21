@@ -1,6 +1,5 @@
 /**
- * Button that navigates to interactivated verse. Misnamed, now that it no
- * longer toggles play.
+ * Button that navigates to interactivated verse.
  */
 
 import React, { Component } from 'react'
@@ -13,7 +12,7 @@ import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 import { NAVIGATION_ENTER_KEY } from '../../../constants/access'
 
-class VerseAudio extends Component {
+class VerseNav extends Component {
 
     static propTypes = {
         // From parent.
@@ -65,8 +64,8 @@ class VerseAudio extends Component {
 
         return (
             <div className={cx(
-                'VerseAudio',
-                isInteractivated && 'VerseAudio__interactivated',
+                'VerseNav',
+                isInteractivated && 'VerseNav__interactivated',
                 'padding__verseInLyric',
                 'flexCentreContainer'
             )}>
@@ -84,4 +83,4 @@ class VerseAudio extends Component {
     }
 }
 
-export default VerseAudio
+export default VerseNav
