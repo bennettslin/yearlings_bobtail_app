@@ -1,6 +1,6 @@
-@import "./Actor.scss";
-@import "./Cutout.scss";
-@import "./Fixture.scss";
+@import "./Actor";
+@import "./Cutout";
+@import "./Fixture";
 
 .Presence {
     transition: opacity $animationDuration__default;

@@ -1,9 +1,9 @@
-@import "./PopupViewButton.scss";
-@import "./PopupView.scss";
+@import "./PopupViewButton";
+@import "./PopupView";
 
-@import "../Popups/AnnotationPopup.scss";
-@import "../Popups/OverviewPopup.scss";
-@import "../Popups/TipsPopup.scss";
+@import "../Popups/AnnotationPopup";
+@import "../Popups/OverviewPopup";
+@import "../Popups/TipsPopup";
 
 // Styles for showing popup or not.
 .Popup {

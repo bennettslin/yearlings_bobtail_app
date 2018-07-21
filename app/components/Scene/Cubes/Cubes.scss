@@ -1,5 +1,5 @@
-@import "./Cube.scss";
-@import "./Face/Face.scss";
+@import "./Cube";
+@import "./Face/Face";
 
 .Cubes {
     transition: opacity $animationDuration__slow;

@@ -1,9 +1,9 @@
-@import "./VerseColour.scss";
+@import "./VerseColour";
 
 // Order matters!
-@import "./VerseColourDefaultLogic.scss";
-@import "./VerseColourSliderLogic.scss";
-@import "./VerseColourAudioLogic.scss";
-@import "./VerseColourInteractiveLogic.scss";
+@import "./VerseColourDefaultLogic";
+@import "./VerseColourSliderLogic";
+@import "./VerseColourAudioLogic";
+@import "./VerseColourInteractiveLogic";
 
-@import "./VerseCursor.scss";
+@import "./VerseCursor";

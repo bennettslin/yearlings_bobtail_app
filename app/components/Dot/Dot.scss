@@ -1,7 +1,7 @@
-@import "./DotLogic.scss";
-@import "./DotSequence.scss";
-@import "./DotSequenceDot.scss";
-@import "./DotSequenceDotLogic.scss";
+@import "./DotLogic";
+@import "./DotSequence";
+@import "./DotSequenceDot";
+@import "./DotSequenceDotLogic";
 
 .bgColour__dot {
     background-color: $bgColour__dot__deselected;

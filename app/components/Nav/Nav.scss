@@ -1,11 +1,11 @@
-@import "./constants.scss";
-@import "./NavBook/NavBookLogue.scss";
-@import "./NavBook/NavBookSongs.scss";
-@import "./NavBook/NavBookToggle.scss";
-@import "./NavColumn.scss";
-@import "./NavButton.scss";
-@import "./NavPanel.scss";
-@import "./NavResponsive.scss";
+@import "./constants";
+@import "./NavBook/NavBookLogue";
+@import "./NavBook/NavBookSongs";
+@import "./NavBook/NavBookToggle";
+@import "./NavColumn";
+@import "./NavButton";
+@import "./NavPanel";
+@import "./NavResponsive";
 
 .Nav {
     z-index: $zIndex__navCustomSubfield;
