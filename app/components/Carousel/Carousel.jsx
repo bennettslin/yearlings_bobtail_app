@@ -182,7 +182,7 @@ class Carousel extends Component {
                             isAccessed =
                                 /**
                                  * TODO: This conditional is repeated in
-                                 * Carousel, StanzaDot, and
+                                 * Carousel, UnitDot, and
                                  * TextLyricAnchor. Consolidate?
                                  */
                                 !selectedDotsIndex &&

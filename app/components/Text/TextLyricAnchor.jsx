@@ -146,7 +146,7 @@ class TextLyricAnchor extends Component {
 
                 /**
                  * TODO: This conditional is repeated in Carousel,
-                 * StanzaDot, and TextLyricAnchor. TextLyricAnchor is a little
+                 * UnitDot, and TextLyricAnchor. TextLyricAnchor is a little
                  * different.
                  */
                 !selectedDotsIndex &&

@@ -9,7 +9,7 @@ import LyricAccess from './LyricAccess/LyricAccess'
 import LyricToggleEar from './LyricToggle/LyricToggleEar'
 import LyricToggleExpand from './LyricToggle/LyricToggleExpand'
 import LyricToggleScroll from './LyricToggle/LyricToggleScroll'
-import Stanzas from './Units/Stanzas'
+import Stanzas from './Stanzas/Stanzas'
 import VerseBar from '../Verse/VerseBar/VerseBar'
 
 const mapStateToProps = ({

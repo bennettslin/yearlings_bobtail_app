@@ -10,7 +10,7 @@ import Verse from '../../Verse/Verse';
  * CONTAINER *
  *************/
 
-class StanzaCard extends Component {
+class UnitCard extends Component {
 
     static defaultProps = {
         inMain: false,
@@ -77,7 +77,7 @@ class StanzaCard extends Component {
             }
 
             return (
-                <StanzaCardView {...other}
+                <UnitCardView {...other}
                     stanzaArray={stanzaArray}
                     isSubCard={isSubCard}
                     stanzaTypeIndex={shownStanzaIndex}
@@ -105,7 +105,7 @@ const propTypes = {
     stanzaType: PropTypes.string.isRequired
 },
 
-StanzaCardView = ({
+UnitCardView = ({
 
     isSubCard,
     stanzaArray,
@@ -122,26 +122,26 @@ StanzaCardView = ({
 
     return (
         <div className={cx(
-            'StanzaCard',
-            isSubCard && 'StanzaCard__subCard',
-            isTabbed && 'StanzaCard__tabbed'
+            'UnitCard',
+            isSubCard && 'UnitCard__subCard',
+            isTabbed && 'UnitCard__tabbed'
         )}>
 
             {/* This is the tab's box shadow. */}
             {isTabbed && (
                 <div className={cx(
-                    'StanzaCard__tab',
-                    'StanzaCard__tabShadow',
-                    'boxShadow__lyricStanzaCard'
+                    'UnitCard__tab',
+                    'UnitCard__tabShadow',
+                    'boxShadow__lyricUnitCard'
                 )}>
                     {tabText}
                 </div>
             )}
 
             <div className={cx(
-                'StanzaCard__sheet',
-                'boxShadow__lyricStanzaCard',
-                'bgColour__lyricStanza__pattern',
+                'UnitCard__sheet',
+                'boxShadow__lyricUnitCard',
+                'bgColour__lyricUnit__pattern',
                 `bgColour__stanza__${stanzaType}`
             )}>
                 {stanzaArray.map((verseObject, stanzaVerseIndex) => {
@@ -172,9 +172,9 @@ StanzaCardView = ({
             {/* This tab covers the sheet's box shadow. */}
             {isTabbed && (
                 <div className={cx(
-                    'StanzaCard__tab',
-                    'StanzaCard__tabTop',
-                    'bgColour__lyricStanza__pattern',
+                    'UnitCard__tab',
+                    'UnitCard__tabTop',
+                    'bgColour__lyricUnit__pattern',
                     `bgColour__stanza__${stanzaType}`
                 )}>
                     {tabText}
@@ -184,6 +184,6 @@ StanzaCardView = ({
     )
 }
 
-StanzaCardView.propTypes = propTypes
+UnitCardView.propTypes = propTypes
 
-export default StanzaCard
+export default UnitCard

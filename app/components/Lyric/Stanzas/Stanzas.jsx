@@ -1,4 +1,7 @@
-// Container for lyrics that handles scrolling.
+/**
+ * A stanza encompasses all the units grouped under a single stanza type and
+ * optional index, such as Verse 1 or Bridge.
+ */
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -6,7 +9,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 // import debounce from 'debounce'
 
-import Stanza from './Stanza'
+import Stanza from '../Unit/Unit'
 import {
     getSongStanzaConfigs,
     getLastUnitDotCardIndex
@@ -187,13 +190,6 @@ StanzasView = ({
                 {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
                     const { stanzaUnitIndices } = stanzaConfig
 
-                    /**
-                     * Unfortunately, the component logic conflates stanzas
-                     * with units. The album data was created with units in
-                     * mind, but the UI is now organised by stanzas. A stanza
-                     * is made up of one or more units, with the exception of
-                     * the title unit.
-                     */
                     return (
                         <div
                             key={stanzaIndex}
@@ -209,8 +205,7 @@ StanzasView = ({
                                 !isNaN(stanzaIndex) &&
                                     'CM__stanza',
 
-                                // TODO: Rename this.
-                                'StanzaParent'
+                                'Stanza'
                             )}
                         >
                             {stanzaUnitIndices.map(unitIndex => {

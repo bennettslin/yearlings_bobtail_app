@@ -1,21 +1,21 @@
 // TODO: Move default logic here as well.
 
 .RM__narrative
-    .StanzaDot__narrative,
+    .UnitDot__narrative,
 .RM__backstory
-    .StanzaDot__backstory,
+    .UnitDot__backstory,
 .RM__observation
-    .StanzaDot__observation,
+    .UnitDot__observation,
 .RM__pun
-    .StanzaDot__pun,
+    .UnitDot__pun,
 .RM__reference
-    .StanzaDot__reference,
+    .UnitDot__reference,
 .RM__songwriting
-    .StanzaDot__songwriting,
+    .UnitDot__songwriting,
 .RM__portal
-    .StanzaDot__portal,
+    .UnitDot__portal,
 .RM__afterword
-    .StanzaDot__afterword {
+    .UnitDot__afterword {
 
     max-width: inherit;
     margin-top: $margin__lyricUnit;
@@ -26,7 +26,7 @@
         margin-left: $marginX__stanzaChildColumn;
     }
 
-    &.StanzaDot__lastStanza {
+    &.UnitDot__lastStanza {
         max-height: inherit;
     }
 }

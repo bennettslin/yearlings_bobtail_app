@@ -1,18 +1,16 @@
 /**
- * Component to show main stanza, side stanza, and dot stanza for stanza. It
- * is somewhat misnamed, as it doesn't distinguish between stanza and unit. A
- * stanza encompasses all the cards grouped under a single stanza type and
- * optional index, such as Verse 1 or Bridge. A unit is the basic lyric unit by
- * which I had originally organised the lyric data. A stanza consists of one or
- * more units.
+ * Component to show main card, side card, and dot card for a unit. A unit is
+ * the basic unit by which the lyric data is organised. A stanza is made up of
+ * one or more units. But a unit can also stand alone, such as the title unit,
+ * or the last dot card.
  */
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import StanzaCard from './StanzaCard'
-import StanzaDot from './StanzaDot'
+import UnitCard from './UnitCard'
+import UnitDot from './UnitDot'
 import { TITLE } from '../../../constants/lyrics'
 import { getLyricUnitArray } from '../../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
@@ -29,7 +27,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class Stanza extends Component {
+class Unit extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -93,7 +91,7 @@ class Stanza extends Component {
             isSideBottomOnly = !topSideCard && Boolean(bottomSideCard)
 
         return (
-            <StanzaView {...other}
+            <UnitView {...other}
                 {...{
                     isTitleUnit,
                     unitIndex,
@@ -124,7 +122,7 @@ class Stanza extends Component {
  * PRESENTATION *
  ****************/
 
-class StanzaView extends Component {
+class UnitView extends Component {
 
     static defaultProps = {
         subsequent: false,
@@ -206,34 +204,34 @@ class StanzaView extends Component {
         return (
             <div
                 className={cx(
-                    'Stanza',
+                    'Unit',
 
                     `unit__${unitIndex}`,
 
                     isTitleUnit ? 'fontSize__title' : 'fontSize__verse',
 
-                    { 'Stanza__hasSide': hasSide,
-                      'Stanza__title': isTitleUnit,
+                    { 'Unit__hasSide': hasSide,
+                      'Unit__title': isTitleUnit,
 
                       'fontSize__lyricMultipleColumns': hasSide },
 
                     subsequent ?
-                        'Stanza__subsequent' :
-                        'Stanza__notSubsequent'
+                        'Unit__subsequent' :
+                        'Unit__notSubsequent'
                 )}
             >
                 {!isDotOnly &&
                     <div className={cx(
-                        'Stanza__column__text',
-                        'Stanza__column',
-                        'Stanza__column__main'
+                        'Unit__column__text',
+                        'Unit__column',
+                        'Unit__column__main'
                     )}>
-                        <StanzaCard {...other}
+                        <UnitCard {...other}
                             inMain
                             stanzaArray={unitArray}
                             isTruncatable={hasSide}
                         />
-                        <StanzaCard {...other}
+                        <UnitCard {...other}
                             inMain
                             isSubCard
                             stanzaArray={subCard}
@@ -243,25 +241,25 @@ class StanzaView extends Component {
                 }
                 {hasSide &&
                     <div className={cx(
-                        'Stanza__column__text',
-                        'Stanza__column',
-                        'Stanza__column__side',
-                        { 'Stanza__column__sideBottomOnly': isSideBottomOnly }
+                        'Unit__column__text',
+                        'Unit__column',
+                        'Unit__column__side',
+                        { 'Unit__column__sideBottomOnly': isSideBottomOnly }
                     )}>
-                        <StanzaCard {...other}
+                        <UnitCard {...other}
                             stanzaArray={topSideCard}
                         />
-                        <StanzaCard {...other}
+                        <UnitCard {...other}
                             stanzaArray={bottomSideCard}
                         />
-                        <StanzaCard {...other}
+                        <UnitCard {...other}
                             isSubCard
                             stanzaArray={topSideSubCard}
                         />
                     </div>
                 }
                 {dotCard &&
-                    <StanzaDot
+                    <UnitDot
                         isLastUnit={isDotOnly && isLastUnit}
                         dotStanzaObject={dotCard}
                         {...{
@@ -275,4 +273,4 @@ class StanzaView extends Component {
     }
 }
 
-export default connect(mapStateToProps)(Stanza)
+export default connect(mapStateToProps)(Unit)

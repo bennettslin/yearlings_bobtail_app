@@ -33,7 +33,7 @@ const mapStateToProps = ({
  * CONTAINER *
  *************/
 
-class StanzaDot extends Component {
+class UnitDot extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -101,7 +101,7 @@ class StanzaDot extends Component {
             isAccessed =
                 /**
                  * TODO: This conditional is repeated in Carousel,
-                 * StanzaDot, and TextLyricAnchor. Consolidate?
+                 * UnitDot, and TextLyricAnchor. Consolidate?
                  */
                 !selectedDotsIndex &&
                 interactivatedVerseIndex < 0 &&
@@ -115,7 +115,7 @@ class StanzaDot extends Component {
                 annotationIndex === renderableAnnotationIndex
 
         return (
-            <StanzaDotView
+            <UnitDotView
                 setRef={this.setLyricAnnotationRef}
                 dotKeys={dotKeys}
                 isSelected={isSelected}
@@ -140,7 +140,7 @@ const propTypes = {
     setRef: PropTypes.func.isRequired
 },
 
-StanzaDotView = ({
+UnitDotView = ({
 
     // From controller.
     dotKeys,
@@ -155,17 +155,17 @@ StanzaDotView = ({
             key={annotationIndex}
             ref={setRef}
             className={cx(
-                'StanzaDot',
-                'Stanza__column',
+                'UnitDot',
+                'Unit__column',
 
-                isLastUnit && 'StanzaDot__lastStanza',
+                isLastUnit && 'UnitDot__lastStanza',
 
                 // Scroll to dot stanza block upon annotation selection.
                 annotationIndex &&
                     `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
                 // Show and hide dot stanza block in and out based on dot keys.
-                getPrefixPrependedClassNames(dotKeys, 'StanzaDot')
+                getPrefixPrependedClassNames(dotKeys, 'UnitDot')
             )}
         >
             <DotAnchor {...other}
@@ -176,6 +176,6 @@ StanzaDotView = ({
     )
 }
 
-StanzaDotView.propTypes = propTypes
+UnitDotView.propTypes = propTypes
 
-export default connect(mapStateToProps)(StanzaDot)
+export default connect(mapStateToProps)(UnitDot)

@@ -1,8 +1,8 @@
-.StanzaCard {
+.UnitCard {
     position: relative;
 }
 
-.StanzaCard__tab {
+.UnitCard__tab {
     position: absolute;
     top: -$height__stanzaTypeTab;
     left: 0;
@@ -15,7 +15,7 @@
     text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
 }
 
-.StanzaCard__tabShadow {
+.UnitCard__tabShadow {
 
     /**
      * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
@@ -24,23 +24,23 @@
     top: -$height__stanzaTypeTab;
 }
 
-.StanzaCard__tabTop {
+.UnitCard__tabTop {
     // Ensure that tab covers sheet.
     height: $height__stanzaTypeTab + 1px;
     color: rgba(255, 255, 255, 0.9);
 }
 
-.boxShadow__lyricStanzaCard {
-    box-shadow: $boxShadow__lyricStanzaCard;
+.boxShadow__lyricUnitCard {
+    box-shadow: $boxShadow__lyricUnitCard;
 }
 
-.StanzaCard__subCard {
+.UnitCard__subCard {
     $paddingX__offsetStanza: 17%;
-    $marginY__offsetStanza__overlap: 6.5px;
+    $marginY__offsetUnit__overlap: 6.5px;
 
-    margin-top: -$marginY__offsetStanza__overlap;
+    margin-top: -$marginY__offsetUnit__overlap;
 
-    .Stanza__column__main
+    .Unit__column__main
     & {
         padding-left: $paddingX__offsetStanza;
     }
@@ -49,30 +49,30 @@
     white-space: nowrap;
 }
 
-.StanzaCard__sheet {
+.UnitCard__sheet {
     position: relative;
 
     padding: $js__margin__thin / 2;
     border-radius: $borderRadius;
 
-    .Stanza__column__main
+    .Unit__column__main
     & {
         padding-left: $js__margin__thick;
     }
 
-    .StanzaCard__tabbed
+    .UnitCard__tabbed
     & {
         padding-top: $js__margin__thin * 1.5;
         border-top-left-radius: 0;
     }
 
-    .Stanza__title
+    .Unit__title
     & {
         padding-top: $js__margin__thick;
     }
 }
 
-.bgColour__lyricStanza__pattern {
+.bgColour__lyricUnit__pattern {
     $degrees: 60deg;
     $lightShade: rgba(255, 255, 255, 0.125);
     $darkShade: rgba(0, 0, 0, 0.1);
