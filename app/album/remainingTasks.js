@@ -1,5 +1,23 @@
 module.exports = [
 
+    {
+        taskName: `Selecting a new verse through playing should determine verse bars.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `getVerseDuration breaks when selecting songs fast?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+
+    {
+        taskName: `Sibling verses briefly highlight the wrong colour in slider?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     // Weekend task.
     {
         taskName: `Cubes rendering through CSS logic!`,
