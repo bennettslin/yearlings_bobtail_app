@@ -1,12 +1,16 @@
-// Stanza before cursor.
+// "Child component stanza."
 .CcS {
+    // Default styling for stanzas before cursored stanza.
+
     // TODO: Improve these styles, obviously.
     background-color: rgba(240, 200, 200, 0.5);
     border: 2px solid #f88;
 }
 
-// Stanza on cursor.
+
+// "Root cursored stanza index, child component stanza index."
 .RcS0 .CcS0, .RcS1 .CcS1, .RcS2 .CcS2, .RcS3 .CcS3, .RcS4 .CcS4, .RcS5 .CcS5, .RcS6 .CcS6, .RcS7 .CcS7, .RcS8 .CcS8, .RcS9 .CcS9, .RcS10 .CcS10, .RcS11 .CcS11, .RcS12 .CcS12, .RcS13 .CcS13 {
+    // Styling for cursored stanza.
 
     /**
      * Make higher than all other stanzas. But slider stanzas still need to be
@@ -18,8 +22,9 @@
     background-color: rgba(240, 240, 200, 0.5);
     border: 2px solid #8f8;
 
-    // Stanza after cursor.
+    // All subsequent "child component stanza" siblings.
     ~ .CcS {
+        // Styling for stanzas after cursored stanza.
 
         // TODO: Improve these styles, obviously.
         background-color: rgba(200, 200, 240, 0.5);

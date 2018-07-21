@@ -1,9 +1,14 @@
 // Default. Verse colour before cursored stanza and before cursored verse.
 .RM__sliderNotMoving {
+
+    // "Grandchild verse colour."
+
     .GcV {
         background-color: $bgColour__beforeSelected;
     }
 }
+
+// "Root default verse index, child component verse index."
 
 // Verse colour in cursored stanza, on cursored verse.
 .RdV0 .CcV0, .RdV1 .CcV1, .RdV2 .CcV2, .RdV3 .CcV3, .RdV4 .CcV4, .RdV5 .CcV5, .RdV6 .CcV6, .RdV7 .CcV7, .RdV8 .CcV8, .RdV9 .CcV9, .RdV10 .CcV10, .RdV11 .CcV11, .RdV12 .CcV12, .RdV13 .CcV13, .RdV14 .CcV14, .RdV15 .CcV15, .RdV16 .CcV16, .RdV17 .CcV17, .RdV18 .CcV18, .RdV19 .CcV19, .RdV20 .CcV20, .RdV21 .CcV21, .RdV22 .CcV22, .RdV23 .CcV23, .RdV24 .CcV24, .RdV25 .CcV25, .RdV26 .CcV26, .RdV27 .CcV27, .RdV28 .CcV28, .RdV29 .CcV29, .RdV30 .CcV30, .RdV31 .CcV31, .RdV32 .CcV32, .RdV33 .CcV33, .RdV34 .CcV34, .RdV35 .CcV35, .RdV36 .CcV36, .RdV37 .CcV37, .RdV38 .CcV38, .RdV39 .CcV39, .RdV40 .CcV40, .RdV41 .CcV41, .RdV42 .CcV42, .RdV43 .CcV43, .RdV44 .CcV44, .RdV45 .CcV45, .RdV46 .CcV46, .RdV47 .CcV47, .RdV48 .CcV48, .RdV49 .CcV49, .RdV50 .CcV50, .RdV51 .CcV51, .RdV52 .CcV52, .RdV53 .CcV53, .RdV54 .CcV54, .RdV55 .CcV55, .RdV56 .CcV56, .RdV57 .CcV57, .RdV58 .CcV58, .RdV59 .CcV59, .RdV60 .CcV60, .RdV61 .CcV61, .RdV62 .CcV62 {
@@ -22,10 +27,10 @@
     }
 }
 
-// Verse colour in cursored stanza, sibling after cursored verse.
-.RdV0 .ScV0, .RdV1 .ScV1, .RdV2 .ScV2, .RdV3 .ScV3, .RdV4 .ScV4, .RdV5 .ScV5, .RdV6 .ScV6, .RdV7 .ScV7, .RdV8 .ScV8, .RdV9 .ScV9, .RdV10 .ScV10, .RdV11 .ScV11, .RdV12 .ScV12, .RdV13 .ScV13, .RdV14 .ScV14, .RdV15 .ScV15, .RdV16 .ScV16, .RdV17 .ScV17, .RdV18 .ScV18, .RdV19 .ScV19, .RdV20 .ScV20, .RdV21 .ScV21, .RdV22 .ScV22, .RdV23 .ScV23, .RdV24 .ScV24, .RdV25 .ScV25, .RdV26 .ScV26, .RdV27 .ScV27, .RdV28 .ScV28, .RdV29 .ScV29, .RdV30 .ScV30, .RdV31 .ScV31, .RdV32 .ScV32, .RdV33 .ScV33, .RdV34 .ScV34, .RdV35 .ScV35, .RdV36 .ScV36, .RdV37 .ScV37, .RdV38 .ScV38, .RdV39 .ScV39, .RdV40 .ScV40, .RdV41 .ScV41, .RdV42 .ScV42, .RdV43 .ScV43, .RdV44 .ScV44, .RdV45 .ScV45, .RdV46 .ScV46, .RdV47 .ScV47, .RdV48 .ScV48, .RdV49 .ScV49, .RdV50 .ScV50, .RdV51 .ScV51, .RdV52 .ScV52, .RdV53 .ScV53, .RdV54 .ScV54, .RdV55 .ScV55, .RdV56 .ScV56, .RdV57 .ScV57, .RdV58 .ScV58, .RdV59 .ScV59, .RdV60 .ScV60, .RdV61 .ScV61, .RdV62 .ScV62 {
+// Verse colour after cursored stanza.
+.RdS0 .CcS0, .RdS1 .CcS1, .RdS2 .CcS2, .RdS3 .CcS3, .RdS4 .CcS4, .RdS5 .CcS5, .RdS6 .CcS6, .RdS7 .CcS7, .RdS8 .CcS8, .RdS9 .CcS9, .RdS10 .CcS10, .RdS11 .CcS11, .RdS12 .CcS12, .RdS13 .CcS13 {
 
-    ~ .ScV {
+    ~ .CcS {
 
         .GcV {
             background-color: $bgColour__afterSelected;
@@ -33,10 +38,12 @@
     }
 }
 
-// Verse colour after cursored stanza.
-.RdS0 .CcS0, .RdS1 .CcS1, .RdS2 .CcS2, .RdS3 .CcS3, .RdS4 .CcS4, .RdS5 .CcS5, .RdS6 .CcS6, .RdS7 .CcS7, .RdS8 .CcS8, .RdS9 .CcS9, .RdS10 .CcS10, .RdS11 .CcS11, .RdS12 .CcS12, .RdS13 .CcS13 {
+// "Root default verse index, sibling component of verse index."
 
-    ~ .CcS {
+// Verse colour in cursored stanza, sibling after cursored verse.
+.RdV0 .ScV0, .RdV1 .ScV1, .RdV2 .ScV2, .RdV3 .ScV3, .RdV4 .ScV4, .RdV5 .ScV5, .RdV6 .ScV6, .RdV7 .ScV7, .RdV8 .ScV8, .RdV9 .ScV9, .RdV10 .ScV10, .RdV11 .ScV11, .RdV12 .ScV12, .RdV13 .ScV13, .RdV14 .ScV14, .RdV15 .ScV15, .RdV16 .ScV16, .RdV17 .ScV17, .RdV18 .ScV18, .RdV19 .ScV19, .RdV20 .ScV20, .RdV21 .ScV21, .RdV22 .ScV22, .RdV23 .ScV23, .RdV24 .ScV24, .RdV25 .ScV25, .RdV26 .ScV26, .RdV27 .ScV27, .RdV28 .ScV28, .RdV29 .ScV29, .RdV30 .ScV30, .RdV31 .ScV31, .RdV32 .ScV32, .RdV33 .ScV33, .RdV34 .ScV34, .RdV35 .ScV35, .RdV36 .ScV36, .RdV37 .ScV37, .RdV38 .ScV38, .RdV39 .ScV39, .RdV40 .ScV40, .RdV41 .ScV41, .RdV42 .ScV42, .RdV43 .ScV43, .RdV44 .ScV44, .RdV45 .ScV45, .RdV46 .ScV46, .RdV47 .ScV47, .RdV48 .ScV48, .RdV49 .ScV49, .RdV50 .ScV50, .RdV51 .ScV51, .RdV52 .ScV52, .RdV53 .ScV53, .RdV54 .ScV54, .RdV55 .ScV55, .RdV56 .ScV56, .RdV57 .ScV57, .RdV58 .ScV58, .RdV59 .ScV59, .RdV60 .ScV60, .RdV61 .ScV61, .RdV62 .ScV62 {
+
+    ~ .ScV {
 
         .GcV {
             background-color: $bgColour__afterSelected;
