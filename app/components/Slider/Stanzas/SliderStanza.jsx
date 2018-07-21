@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import SliderVerses from './SliderVerses'
+import SliderVerses from '../Verses/SliderVerses'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
