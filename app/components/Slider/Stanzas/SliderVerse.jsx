@@ -75,18 +75,16 @@ class SliderVerse extends Component {
             <div
                 key={verseIndex}
                 className={cx(
+                    `CM__verse${verseIndex}`,
+                    'CM__verse',
+
                     'SliderVerse',
 
                     // Just for debug purposes.
                     `SliderVerse__${verseIndex}`,
 
                     'verseColour__hoverParent',
-                    'absoluteFullContainer',
-
-                    'CM__verse',
-                    `CM__verse${verseIndex}`,
-                    // 'CM__sliderVerse',
-                    // `CM__sliderVerse${verseIndex}`
+                    'absoluteFullContainer'
                 )}
                 style={verseStyle}
             >

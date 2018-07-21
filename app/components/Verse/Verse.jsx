@@ -192,12 +192,10 @@ VerseView = ({
             key={isInteractable ? verseIndex : undefined}
             ref={setRef}
             className={cx(
-                'Verse',
-
-                'CM__verse',
                 `CM__verse${verseIndex}`,
-                // 'CM__lyricVerse',
-                // `CM__lyricVerse${verseIndex}`,
+                'CM__verse',
+
+                'Verse',
 
                 isTitle && 'Verse__title',
                 inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',

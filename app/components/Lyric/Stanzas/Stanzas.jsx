@@ -198,9 +198,9 @@ StanzasView = ({
                         <div
                             key={stanzaIndex}
                             className={cx(
-
-                                // TODO: Rename this.
-                                'StanzaParent',
+                                // Aligned selector when on cursor.
+                                !isNaN(stanzaIndex) &&
+                                    `CM__stanza${stanzaIndex}`,
 
                                 /**
                                  * General selector when before cursor, general
@@ -209,9 +209,8 @@ StanzasView = ({
                                 !isNaN(stanzaIndex) &&
                                     'CM__stanza',
 
-                                // Aligned selector when on cursor.
-                                !isNaN(stanzaIndex) &&
-                                    `CM__stanza${stanzaIndex}`
+                                // TODO: Rename this.
+                                'StanzaParent'
                             )}
                         >
                             {stanzaUnitIndices.map(unitIndex => {

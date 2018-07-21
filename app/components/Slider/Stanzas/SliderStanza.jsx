@@ -81,15 +81,16 @@ class SliderStanza extends Component {
         return (
             <div
                 className={cx(
-                    'SliderStanza',
+                    // Aligned selector when on cursor.
+                    `CM__stanza${stanzaIndex}`,
 
                     /**
                      * General selector when before cursor, general sibling
                      * selector when after cursor.
                      */
                     'CM__stanza',
-                    // Aligned selector when on cursor.
-                    `CM__stanza${stanzaIndex}`,
+
+                    'SliderStanza',
 
                     `SliderStanza__${stanzaType}`,
                     'bgColour__sliderStanza__pattern',
