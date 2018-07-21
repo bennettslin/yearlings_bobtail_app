@@ -168,7 +168,7 @@ StanzasView = ({
         <div
             ref={setRef}
             className={cx(
-                'Stanzas',
+                'Lyric__scroll',
                 'absoluteFullContainer',
 
                 // This gradient does not obscure the lyric toggle buttons.
@@ -178,7 +178,7 @@ StanzasView = ({
             onWheel={handleWheel}
         >
             <div className={cx(
-                'Stanzas__child'
+                'Stanzas'
             )}>
 
                 {/* This is the title. */}

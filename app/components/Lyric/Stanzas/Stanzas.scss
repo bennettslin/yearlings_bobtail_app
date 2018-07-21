@@ -1,25 +1,9 @@
 @import "./StanzaLogic.scss";
 
-$paddingY__lyrics: 20px;
+$paddingY__stanzas: 20px;
 
 .Stanzas {
-    width: 100%;
-    overflow-y: scroll;
-
-    line-height: 150%;
-
-    &:focus {
-        outline: none;
-    }
-}
-
-.Stanzas__child {
-    /**
-     * I don't understand why having this nested element is necessary. But
-     * adding the padding to the parent instead doesn't achieve the desired
-     * effect, it turns out.
-     */
-    padding: $paddingY__lyrics 0;
+    padding: $paddingY__stanzas 0;
 }
 
 .gradientMask__lyricColumn__mobileCollapsed {
