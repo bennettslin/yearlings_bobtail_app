@@ -64,10 +64,10 @@ class VerseBar extends Component {
 
         if (
             // No point in updating if it remains unshown.
-            !willBeVerseBarAbove &&
-            !willBeVerseBarBelow &&
             !isVerseBarAbove &&
-            !isVerseBarBelow
+            !isVerseBarBelow &&
+            !willBeVerseBarAbove &&
+            !willBeVerseBarBelow
         ) {
             return false
         }

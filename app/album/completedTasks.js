@@ -3408,4 +3408,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Cursor should only update when on cursor, and shouldn't care at all if it's not playing.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

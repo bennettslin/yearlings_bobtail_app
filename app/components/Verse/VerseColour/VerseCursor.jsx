@@ -10,13 +10,15 @@ import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
     canLyricRender,
-    renderableStore,
+    isPlaying,
     sliderStore,
+    renderableStore
 }) => ({
     canLyricRender,
+    isPlaying,
+    sliderVerseIndex: sliderStore.sliderVerseIndex,
     renderableSongIndex: renderableStore.renderableSongIndex,
-    renderableVerseIndex: renderableStore.renderableVerseIndex,
-    sliderVerseIndex: sliderStore.sliderVerseIndex
+    renderableVerseIndex: renderableStore.renderableVerseIndex
 })
 
 class VerseCursor extends Component {
@@ -24,6 +26,7 @@ class VerseCursor extends Component {
     static propTypes = {
         // Through Redux.
         canLyricRender: PropTypes.bool.isRequired,
+        isPlaying: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         renderableVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
@@ -36,17 +39,59 @@ class VerseCursor extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
+        const {
+                isPlaying
+            } = this.props,
+            {
+                isPlaying: willBePlaying
+            } = nextProps
+
+        if (
+            // No point in updating if it remains paused.
+            !isPlaying &&
+            !willBePlaying
+        ) {
+            return false
+        }
+
+        const
+            isOnCursor = this.getIsOnCursor(this.props),
+            willBeOnCursor = this.getIsOnCursor(nextProps)
+
+        if (
+            // No point in updating if it's not the cursored verse.
+            !isOnCursor &&
+            !willBeOnCursor
+        ) {
+            return false
+        }
+
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
             nextProps
         })
     }
 
+    getIsOnCursor(props) {
+        const {
+                inVerseBar,
+                verseIndex,
+                renderableVerseIndex,
+                sliderVerseIndex
+            } = props,
+
+            cursorIndex = sliderVerseIndex > -1 ?
+            sliderVerseIndex :
+            renderableVerseIndex,
+
+            isOnCursor = inVerseBar || verseIndex === cursorIndex
+
+        return isOnCursor
+    }
+
     render() {
         const {
                 renderableSongIndex,
-                sliderVerseIndex,
-                renderableVerseIndex,
                 verseIndex,
                 inVerseBar,
                 inLyric,
@@ -66,11 +111,7 @@ class VerseCursor extends Component {
                 'left' :
                 'top',
 
-            cursorIndex = sliderVerseIndex > -1 ?
-                sliderVerseIndex :
-                renderableVerseIndex,
-
-            isOnCursor = inVerseBar || verseIndex === cursorIndex
+            isOnCursor = this.getIsOnCursor(this.props)
 
         return (
             <div

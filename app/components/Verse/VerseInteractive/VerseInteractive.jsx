@@ -36,13 +36,13 @@ class VerseInteractive extends Component {
     }
 
     shouldComponentUpdate(nextProps) {
-        const isInteractivatedVerse = this.getIsInteractivated(
+        const
+            isInteractivatedVerse = this.getIsInteractivated(
                 this.props
             ),
-
-        willBeInteractivatedVerse = this.getIsInteractivated(
-            nextProps
-        )
+            willBeInteractivatedVerse = this.getIsInteractivated(
+                nextProps
+            )
 
         if (
             // Don't update if it remains not interactivated.
@@ -54,10 +54,7 @@ class VerseInteractive extends Component {
 
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
-            nextProps,
-            alwaysBypassCheck: {
-                isAbove: true
-            }
+            nextProps
         })
     }
 

@@ -1,11 +1,6 @@
 module.exports = [
 
     {
-        taskName: `Underscore in annotation title is missing second double quote.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Selecting a new verse through playing should determine verse bars.`,
         workedHours: 0,
         neededHours: 1
@@ -31,12 +26,6 @@ module.exports = [
 
     {
         taskName: `Verse audio knows it's after cursor through CSS logic.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Cursor should only update when on cursor, and shouldn't care at all if it's not playing.`,
         workedHours: 0,
         neededHours: 1
     },
