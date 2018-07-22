@@ -3433,4 +3433,9 @@ module.exports = [
         workedHours: 5,
         neededHours: 5
     },
+    {
+        taskName: `Don't attempt to scroll carousel if it doesn't exist.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

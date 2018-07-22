@@ -14,12 +14,6 @@ module.exports = [
     },
 
     {
-        taskName: `Don't attempt to scroll carousel in phone.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Revisit Willy, Odin, and Constellations overlap cards.`,
         workedHours: 0,
         neededHours: 1

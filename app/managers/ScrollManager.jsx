@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import scrollIntoView from 'scroll-into-view'
 
-
 import {
     getSongIsLogue
 } from '../helpers/dataHelper'
+
 import { getPropsAreShallowEqual } from '../helpers/generalHelper'
+
 import {
     getLyricTopAlign,
     getCarouselLeftAlign
@@ -24,6 +25,7 @@ class ScrollManager extends Component {
     static propTypes = {
         // Through Redux.
         isLyricExpanded: PropTypes.bool.isRequired,
+        isHiddenCarouselNav: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         deviceIndex: PropTypes.number.isRequired,
         windowWidth: PropTypes.number.isRequired,
@@ -141,10 +143,15 @@ class ScrollManager extends Component {
             return
         }
 
-        const scrollElement =
-            this._getScrollElementsArray(scrollClass)[index],
+        const isCarousel = scrollClass === CAROUSEL_SCROLL
 
-            isCarousel = scrollClass === CAROUSEL_SCROLL
+        // Don't scroll carousel if it doesn't exist!
+        if (isCarousel && this.props.isHiddenCarouselNav) {
+            return false
+        }
+
+        const scrollElement =
+            this._getScrollElementsArray(scrollClass)[index]
 
         let element = scrollElement
 
@@ -211,12 +218,14 @@ class ScrollManager extends Component {
 
 const mapStateToProps = ({
     isLyricExpanded,
-    selectedSongIndex,
-    deviceStore
+    isHiddenCarouselNav,
+    deviceStore,
+    selectedSongIndex
 }) => ({
+    isLyricExpanded,
+    isHiddenCarouselNav,
     deviceIndex: deviceStore.deviceIndex,
     windowWidth: deviceStore.windowWidth,
-    isLyricExpanded,
     selectedSongIndex
 })
 
