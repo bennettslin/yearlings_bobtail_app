@@ -1,12 +1,9 @@
 // Container for lyric audio button and all lines of a single verse.
-
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import VerseInteractive from './VerseInteractive/VerseInteractive'
-import VerseColour from './VerseColour/VerseColour'
 import VerseLines from './VerseLines'
 
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
@@ -164,7 +161,6 @@ verseViewPropTypes = {
     inVerseBar: PropTypes.bool.isRequired,
     isInteractable: PropTypes.bool.isRequired,
 
-    handleLyricVerseSelect: PropTypes.func,
     handleInteractivatableClick: PropTypes.func,
     setRef: PropTypes.func,
 
@@ -178,9 +174,9 @@ VerseView = ({
     verseClassName,
     isInteractable,
 
-    handleLyricVerseSelect,
     handleInteractivatableClick,
     setRef,
+    children,
 
 ...other }) => {
 
@@ -213,32 +209,7 @@ VerseView = ({
             onClick={handleInteractivatableClick}
             onTouchStart={handleInteractivatableClick}
         >
-            {inVerseBar && (
-                <VerseColour
-                    inVerseBar
-                    {...{
-                        verseIndex
-                    }}
-                />
-            )}
-
-            {isInteractable && (
-                <VerseInteractive
-                    inUnit
-                    {...{
-                        verseIndex,
-                        handleLyricVerseSelect
-                    }}
-                />
-            )}
-
-            {!inVerseBar && !isInteractable && (
-                <div className={cx(
-                    'Verse__noIndexColour',
-                    'absoluteFullContainer'
-                )} />
-            )}
-
+            {children}
             <VerseLines {...other} />
         </div>
     )

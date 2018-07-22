@@ -65,6 +65,24 @@ module.exports = [
         neededHours: 3
     },
 
+    {
+        taskName: `Verse audio knows it's after cursor through CSS logic.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Know when not to show up or down access icons in lyric column, based on whether it's scrolled to the very top or bottom?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
+        taskName: `Enter access icon in annotation anchors can be positioned weird.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
         // Low priority bugs.
     // {
     //     taskName: `Scrolling over verse bar is broken in Safari. Browser issue: https://bugs.webkit.org/show_bug.cgi?id=149526`,

@@ -95,8 +95,8 @@ class VerseTracker extends Component {
 
             transitionedStyle =
                 inSlider ?
-                    'left' :
-                    'top',
+                    'width' :
+                    'height',
 
             isSelected = this.getIsSelectedVerse(this.props)
 
@@ -107,10 +107,10 @@ class VerseTracker extends Component {
                     isSelected && `VerseTracker__selected`,
 
                     inSlider &&
-                        'VerseTracker__horizontalTransition',
+                        'VerseTracker__inSlider',
 
                     inLyric &&
-                        'VerseTracker__verticalTransition',
+                        'VerseTracker__inLyric',
 
                     'absoluteFullContainer'
                 )}

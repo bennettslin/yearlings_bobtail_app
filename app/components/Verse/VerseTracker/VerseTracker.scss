@@ -8,22 +8,22 @@
     }
 }
 
-.VerseTracker__horizontalTransition {
-    left: -100%;
+.VerseTracker__inSlider {
+    width: 0;
 
     .RM__isPlaying
     &.VerseTracker__selected {
         border-right: 1px solid rgba(200, 150, 250, 0.7);
-        left: 0;
+        width: 100%;
     }
 }
 
-.VerseTracker__verticalTransition {
-    top: -100%;
+.VerseTracker__inLyric {
+    height: 0;
 
     .RM__isPlaying
     &.VerseTracker__selected {
         border-bottom: 1px solid rgba(200, 150, 250, 0.7);
-        top: 0;
+        height: 100%;
     }
 }

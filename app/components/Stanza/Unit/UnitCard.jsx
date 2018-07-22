@@ -166,6 +166,7 @@ UnitCardView = ({
                     return !isSideUnitMap && !isUnitMap && (
                             <VerseHoc {...other}
                                 key={stanzaVerseIndex}
+                                inUnit
                                 {...{
                                     verseIndex,
                                     verseObject,

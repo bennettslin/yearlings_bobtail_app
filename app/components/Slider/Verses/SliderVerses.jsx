@@ -40,6 +40,7 @@ const SliderVerses = ({
                 return (
                     <VerseHoc
                         key={index}
+                        inSlider
                         {...{
                             verseIndex: stanzaFirstVerseIndex + index,
                             relativeStartTime,

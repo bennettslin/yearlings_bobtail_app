@@ -1,14 +1,27 @@
 module.exports = [
 
+    // TODO: First tomorrow.
+    {
+        taskName: `Slider locks up, preventing touch moving, for some reason. Might have to do with Root Component being active?`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Figure out Anchor text colour and text shadow, clean up mixin code.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+
+    {
+        taskName: `Set up buttons to use svgs, including loading icons.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+
     {
         taskName: `Selecting a new verse through playing should determine verse bars.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Get rid of VerseColour component, so that text and background colour can live together again.`,
-        workedHours: 0,
-        neededHours: 3
     },
 
     // Weekend task.
@@ -16,24 +29,6 @@ module.exports = [
         taskName: `Cubes rendering through CSS logic!`,
         workedHours: 0,
         neededHours: 20
-    },
-
-    {
-        taskName: `Slider locks up, preventing touch moving, for some reason.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Verse audio knows it's after cursor through CSS logic.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Set up buttons to use svgs, including loading icons.`,
-        workedHours: 0,
-        neededHours: 8
     },
 
     {
@@ -132,14 +127,14 @@ module.exports = [
         neededHours: 1
     },
     {
+        taskName: `Rather than having Enter access icon, just make access selectable things more obvious.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Work on method to access new annotation index only if current invalid.`,
         workedHours: 3,
         neededHours: 4
-    },
-    {
-        taskName: `Enter access icon in annotation anchors can be positioned weird.`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Position lyric column access icons all on right.`,
@@ -148,11 +143,6 @@ module.exports = [
     },
     {
         taskName: `Flash access icon when key is pressed.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Know when not to show up or down access icons in lyric column, based on whether it's scrolled to the very top or bottom?`,
         workedHours: 0,
         neededHours: 1
     },

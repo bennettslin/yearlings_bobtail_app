@@ -8,21 +8,23 @@
     }
 }
 
-// Text shadow.
-$textShadow__offset: 1px;
-$textShadow__blur: 0.75px;
-
-@mixin mixin__textShadow($bgColour) {
-
-    // &.textShadow__background {
-        // background-color: $bgColour;
-    // }
+@mixin mixin__textShadow($bgColour, $important: false) {
+    $textShadow__offset: 1px;
+    $textShadow__blur: 0.75px;
 
     .textShadow__text {
-        text-shadow:
-        -$textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
-        $textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
-        -$textShadow__offset $textShadow__offset $textShadow__blur $bgColour,
-        $textShadow__offset $textShadow__offset $textShadow__blur $bgColour;
+        @if $important {
+            text-shadow:
+            -$textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
+            $textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
+            -$textShadow__offset $textShadow__offset $textShadow__blur $bgColour,
+            $textShadow__offset $textShadow__offset $textShadow__blur $bgColour !important;
+        } @else {
+            text-shadow:
+            -$textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
+            $textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
+            -$textShadow__offset $textShadow__offset $textShadow__blur $bgColour,
+            $textShadow__offset $textShadow__offset $textShadow__blur $bgColour;
+        }
     }
 }

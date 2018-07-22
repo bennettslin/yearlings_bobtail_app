@@ -3413,4 +3413,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Stanza and verse Hocs.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]

@@ -9,7 +9,9 @@
     &.VerseColour__interactivated {
 
         background-color: $bgColour__audioHighlight;
-        @include mixin__textShadow($bgColour__audioHighlight);
+
+        // TODO: This doesn't work.
+        // @include mixin__textShadow($bgColour__audioHighlight);
 
         // Nesting here for simplicity.
         .VerseColour__evenFilter {

@@ -8,8 +8,9 @@
 
     .parentIsShown
     & {
-        transition: color $animationDuration__default,
-        text-shadow $animationDuration__default;
+        transition:
+            // color $animationDuration__default,
+            text-shadow $animationDuration__default;
     }
 }
 

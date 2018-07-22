@@ -16,6 +16,9 @@
     border-left: $border;
     border-right: $border;
 
+    // transition:
+    //     color $animationDuration__fast;
+
     &:first-child {
         border-top: $border;
 
@@ -73,18 +76,18 @@
     .RM__sliderNotMoving
     & {
         // Default side verse.
+        color: $colour__dark;
         background-color: #ddd;
-        @include mixin__textShadow($bgColour__afterSelected);
+        // @include mixin__textShadow(#ddd);
 
-        color: #644;
     }
 
     .RM__sliderMoving
     & {
         // Slider side verse.
+        color: $colour__light;
         background-color: $bgColour__sideSlider;
-        @include mixin__textShadow($bgColour__sideSlider);
+        // @include mixin__textShadow($bgColour__sideSlider);
 
-        color: $colour__sideSlider;
     }
 }

@@ -1,5 +1,15 @@
 // Default styling. Kept in this stylesheet for consistency.
 
+// "Child in unit."
+.ChL {
+
+    .RM__sliderMoving
+    & {
+        color: $colour__light;
+        // @include mixin__textShadow($bgColour__beforeSlider);
+    }
+}
+
 .VerseColour {
     // Styling for verse colours before cursored verse.
 
@@ -13,15 +23,29 @@
 .RsV0 .ChV0, .RsV1 .ChV1, .RsV2 .ChV2, .RsV3 .ChV3, .RsV4 .ChV4, .RsV5 .ChV5, .RsV6 .ChV6, .RsV7 .ChV7, .RsV8 .ChV8, .RsV9 .ChV9, .RsV10 .ChV10, .RsV11 .ChV11, .RsV12 .ChV12, .RsV13 .ChV13, .RsV14 .ChV14, .RsV15 .ChV15, .RsV16 .ChV16, .RsV17 .ChV17, .RsV18 .ChV18, .RsV19 .ChV19, .RsV20 .ChV20, .RsV21 .ChV21, .RsV22 .ChV22, .RsV23 .ChV23, .RsV24 .ChV24, .RsV25 .ChV25, .RsV26 .ChV26, .RsV27 .ChV27, .RsV28 .ChV28, .RsV29 .ChV29, .RsV30 .ChV30, .RsV31 .ChV31, .RsV32 .ChV32, .RsV33 .ChV33, .RsV34 .ChV34, .RsV35 .ChV35, .RsV36 .ChV36, .RsV37 .ChV37, .RsV38 .ChV38, .RsV39 .ChV39, .RsV40 .ChV40, .RsV41 .ChV41, .RsV42 .ChV42, .RsV43 .ChV43, .RsV44 .ChV44, .RsV45 .ChV45, .RsV46 .ChV46, .RsV47 .ChV47, .RsV48 .ChV48, .RsV49 .ChV49, .RsV50 .ChV50, .RsV51 .ChV51, .RsV52 .ChV52, .RsV53 .ChV53, .RsV54 .ChV54, .RsV55 .ChV55, .RsV56 .ChV56, .RsV57 .ChV57, .RsV58 .ChV58, .RsV59 .ChV59, .RsV60 .ChV60, .RsV61 .ChV61, .RsV62 .ChV62 {
     // Styling for cursored verse.
 
+    // "Child in unit."
+    &.ChL {
+        color: $colour__dark !important;
+        // @include mixin__textShadow($bgColour__audioNeutral, $important: true);
+    }
+
     // "Grandchild verse colour."
     .GcV {
         // Use !important to override hover highlight.
         background-color: $bgColour__audioNeutral !important;
     }
 
-    // Grandchildren of all subsequent "child verse" siblings.
-    ~ .ChV .GcV {
-        background-color: $bgColour__afterSlider;
+    ~ .ChV {
+        // All subsequent "child in unit" siblings.
+        &.ChL {
+            color: $colour__light;
+            // @include mixin__textShadow($bgColour__afterSlider);
+        }
+
+        // Grandchildren of all subsequent "child verse" siblings.
+        .GcV {
+            background-color: $bgColour__afterSlider;
+        }
     }
 }
 
@@ -31,6 +55,12 @@
      * Styling for verse colours in some parent of verse. In this case, the
      * parent is a unit or unit card, as are its siblings.
      */
+
+    // Unit children of all subsequent "parent of verse" siblings.
+    ~ .PoV .ChL {
+        color: $colour__light;
+        // @include mixin__textShadow($bgColour__afterSlider);
+    }
 
     // Grandchildren of all subsequent "parent of verse" siblings.
     ~ .PoV .GcV {

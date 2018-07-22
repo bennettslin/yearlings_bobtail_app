@@ -5,8 +5,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import VerseInteractive from '../../Verse/VerseInteractive/VerseInteractive'
-
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -26,7 +24,8 @@ class SliderVerse extends Component {
         verseIndex: PropTypes.number.isRequired,
         relativeStartTime: PropTypes.number.isRequired,
         verseDuration: PropTypes.number.isRequired,
-        stanzaDuration: PropTypes.number.isRequired
+        stanzaDuration: PropTypes.number.isRequired,
+        children: PropTypes.any.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -43,8 +42,8 @@ class SliderVerse extends Component {
                 relativeStartTime,
                 verseDuration,
                 stanzaDuration,
-                verseIndex
-
+                verseIndex,
+                children
             } = this.props,
 
             /**
@@ -79,14 +78,7 @@ class SliderVerse extends Component {
                 )}
                 style={verseStyle}
             >
-
-                <VerseInteractive
-                    inSlider
-                    {...{
-                        verseIndex
-                    }}
-                />
-
+                {children}
             </div>
         )
     }
