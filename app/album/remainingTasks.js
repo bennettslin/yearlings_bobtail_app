@@ -11,12 +11,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Sibling verses briefly highlight the wrong colour in slider?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Get rid of VerseColour component, so that text and background colour can live together again.`,
         workedHours: 0,
         neededHours: 3

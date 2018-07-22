@@ -3403,4 +3403,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Sibling verses briefly highlight the wrong colour in slider? Fixed by adding "parent of verse" classes to stanzas.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

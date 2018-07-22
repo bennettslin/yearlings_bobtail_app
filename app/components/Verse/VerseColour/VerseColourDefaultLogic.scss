@@ -25,16 +25,6 @@
     }
 }
 
-// "Root default stanza index, child stanza index."
-.RdS0 .ChS0, .RdS1 .ChS1, .RdS2 .ChS2, .RdS3 .ChS3, .RdS4 .ChS4, .RdS5 .ChS5, .RdS6 .ChS6, .RdS7 .ChS7, .RdS8 .ChS8, .RdS9 .ChS9, .RdS10 .ChS10, .RdS11 .ChS11, .RdS12 .ChS12, .RdS13 .ChS13 {
-    // Styling for verse colours after cursored stanza.
-
-    // Grandchildren of all subsequent "child stanza" siblings.
-    ~ .ChS .GcV {
-        background-color: $bgColour__afterSelected;
-    }
-}
-
 // "Root default verse index, parent of verse index."
 .RdV0 .PoV0, .RdV1 .PoV1, .RdV2 .PoV2, .RdV3 .PoV3, .RdV4 .PoV4, .RdV5 .PoV5, .RdV6 .PoV6, .RdV7 .PoV7, .RdV8 .PoV8, .RdV9 .PoV9, .RdV10 .PoV10, .RdV11 .PoV11, .RdV12 .PoV12, .RdV13 .PoV13, .RdV14 .PoV14, .RdV15 .PoV15, .RdV16 .PoV16, .RdV17 .PoV17, .RdV18 .PoV18, .RdV19 .PoV19, .RdV20 .PoV20, .RdV21 .PoV21, .RdV22 .PoV22, .RdV23 .PoV23, .RdV24 .PoV24, .RdV25 .PoV25, .RdV26 .PoV26, .RdV27 .PoV27, .RdV28 .PoV28, .RdV29 .PoV29, .RdV30 .PoV30, .RdV31 .PoV31, .RdV32 .PoV32, .RdV33 .PoV33, .RdV34 .PoV34, .RdV35 .PoV35, .RdV36 .PoV36, .RdV37 .PoV37, .RdV38 .PoV38, .RdV39 .PoV39, .RdV40 .PoV40, .RdV41 .PoV41, .RdV42 .PoV42, .RdV43 .PoV43, .RdV44 .PoV44, .RdV45 .PoV45, .RdV46 .PoV46, .RdV47 .PoV47, .RdV48 .PoV48, .RdV49 .PoV49, .RdV50 .PoV50, .RdV51 .PoV51, .RdV52 .PoV52, .RdV53 .PoV53, .RdV54 .PoV54, .RdV55 .PoV55, .RdV56 .PoV56, .RdV57 .PoV57, .RdV58 .PoV58, .RdV59 .PoV59, .RdV60 .PoV60, .RdV61 .PoV61, .RdV62 .PoV62 {
     /**

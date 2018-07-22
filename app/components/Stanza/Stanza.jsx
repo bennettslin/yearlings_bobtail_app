@@ -9,6 +9,8 @@ import cx from 'classnames'
 
 import Unit from './Unit/Unit'
 
+import { getParentOfVerseClassNamesForIndices } from './stanzaHelper'
+
 const propTypes = {
     // From parent.
     isLastStanza: PropTypes.bool.isRequired,
@@ -24,7 +26,10 @@ Stanza = ({
 
 ...other }) => {
 
-    const { stanzaUnitIndices } = stanzaConfig
+    const {
+        stanzaUnitIndices,
+        stanzaVerseConfigs,
+    } = stanzaConfig
 
     return (
         <div
@@ -41,6 +46,11 @@ Stanza = ({
                  */
                 !isNaN(stanzaIndex) &&
                     'ChS',
+
+                // "Parent of verse index."
+                getParentOfVerseClassNamesForIndices({
+                    entities: stanzaVerseConfigs
+                }),
 
                 'Stanza'
             )}

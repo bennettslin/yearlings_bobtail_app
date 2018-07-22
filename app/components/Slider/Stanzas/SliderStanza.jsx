@@ -5,6 +5,9 @@ import cx from 'classnames'
 import SliderVerses from '../Verses/SliderVerses'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
+import {
+    getParentOfVerseClassNamesForIndices
+} from '../../Stanza/stanzaHelper'
 
 import { LS_OVERLAP_MARGIN_X_SLIDER } from '../../../constants/responsive'
 
@@ -91,6 +94,11 @@ class SliderStanza extends Component {
                      * selector when after cursor.
                      */
                     'ChS',
+
+                    // "Parent of verse index."
+                    getParentOfVerseClassNamesForIndices({
+                        entities: stanzaVerseConfigs
+                    }),
 
                     'SliderStanza',
 

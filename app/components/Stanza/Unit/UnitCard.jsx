@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getParentOfVerseClassNamesForIndices } from './unitHelper'
+import { getParentOfVerseClassNamesForIndices } from '../stanzaHelper'
 
 import Verse from '../../Verse/Verse';
 
