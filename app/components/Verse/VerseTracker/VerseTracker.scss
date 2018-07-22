@@ -1,4 +1,4 @@
-.VerseCursor {
+.VerseTracker {
     background-color: rgba(200, 150, 250, 0.4);
 
     .RM__isPaused
@@ -9,20 +9,20 @@
     }
 }
 
-.VerseCursor__horizontalTransition {
+.VerseTracker__horizontalTransition {
     left: -100%;
 
     .RM__isPlaying
-    &.VerseCursor__onCursor {
+    &.VerseTracker__selected {
         left: 0;
     }
 }
 
-.VerseCursor__verticalTransition {
+.VerseTracker__verticalTransition {
     top: -100%;
 
     .RM__isPlaying
-    &.VerseCursor__onCursor {
+    &.VerseTracker__selected {
         top: 0;
     }
 }

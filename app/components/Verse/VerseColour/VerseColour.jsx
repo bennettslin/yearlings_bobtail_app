@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import VerseCursor from './VerseCursor'
+import VerseTracker from '../VerseTracker/VerseTracker'
 
 const propTypes = {
     // From parent.
     isInteractivated: PropTypes.bool,
     verseIndex: PropTypes.number.isRequired,
-    inVerse: PropTypes.bool,
+    inUnit: PropTypes.bool,
     inVerseBar: PropTypes.bool,
     inSlider: PropTypes.bool
 },
@@ -19,13 +19,13 @@ VerseColour = ({
 
     verseIndex,
 
-    inVerse,
+    inUnit,
     inVerseBar,
     inSlider
 
 }) => {
 
-    const inLyric = inVerse || inVerseBar
+    const inLyric = inUnit || inVerseBar
 
     return (
         <div
@@ -51,7 +51,7 @@ VerseColour = ({
                 'absoluteFullContainer'
             )}
         >
-            <VerseCursor
+            <VerseTracker
                 {...{
                     verseIndex,
                     inVerseBar,

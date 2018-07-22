@@ -91,7 +91,7 @@ class VerseInteractive extends Component {
                 <VerseColour
                     {...{
                         inSlider,
-                        inVerse: !inSlider,
+                        inUnit: !inSlider,
                         verseIndex,
                         isInteractivated
                     }}

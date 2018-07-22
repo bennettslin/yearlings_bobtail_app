@@ -11,17 +11,15 @@ import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 const mapStateToProps = ({
     canLyricRender,
     isPlaying,
-    sliderStore,
     renderableStore
 }) => ({
     canLyricRender,
     isPlaying,
-    sliderVerseIndex: sliderStore.sliderVerseIndex,
     renderableSongIndex: renderableStore.renderableSongIndex,
     renderableVerseIndex: renderableStore.renderableVerseIndex
 })
 
-class VerseCursor extends Component {
+class VerseTracker extends Component {
 
     static propTypes = {
         // Through Redux.
@@ -29,7 +27,6 @@ class VerseCursor extends Component {
         isPlaying: PropTypes.bool.isRequired,
         renderableSongIndex: PropTypes.number.isRequired,
         renderableVerseIndex: PropTypes.number.isRequired,
-        sliderVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
         verseIndex: PropTypes.number.isRequired,
@@ -55,13 +52,13 @@ class VerseCursor extends Component {
         }
 
         const
-            isOnCursor = this.getIsOnCursor(this.props),
-            willBeOnCursor = this.getIsOnCursor(nextProps)
+            isSelected = this.getIsSelectedVerse(this.props),
+            willBeSelected = this.getIsSelectedVerse(nextProps)
 
         if (
             // No point in updating if it's not the cursored verse.
-            !isOnCursor &&
-            !willBeOnCursor
+            !isSelected &&
+            !willBeSelected
         ) {
             return false
         }
@@ -72,21 +69,18 @@ class VerseCursor extends Component {
         })
     }
 
-    getIsOnCursor(props) {
+    getIsSelectedVerse(props) {
         const {
                 inVerseBar,
                 verseIndex,
-                renderableVerseIndex,
-                sliderVerseIndex
+                renderableVerseIndex
             } = props,
 
-            cursorIndex = sliderVerseIndex > -1 ?
-            sliderVerseIndex :
-            renderableVerseIndex,
+            isSelected =
+                inVerseBar ||
+                verseIndex === renderableVerseIndex
 
-            isOnCursor = inVerseBar || verseIndex === cursorIndex
-
-        return isOnCursor
+        return isSelected
     }
 
     render() {
@@ -103,33 +97,31 @@ class VerseCursor extends Component {
                 verseIndex
             ),
 
-            isHorizontalTransition = inSlider,
-            isVerticalTransition = inVerseBar || inLyric,
-
             transitionedStyle =
-            isHorizontalTransition ?
-                'left' :
-                'top',
+                inSlider ?
+                    'left' :
+                    'top',
 
-            isOnCursor = this.getIsOnCursor(this.props)
+            isSelected = this.getIsSelectedVerse(this.props)
 
         return (
             <div
                 className={cx(
-                    'VerseCursor',
-                    isOnCursor && `VerseCursor__onCursor`,
+                    'VerseTracker',
+                    isSelected && `VerseTracker__selected`,
 
-                    inVerseBar && 'VerseCursor__inVerseBar',
+                    inVerseBar && 'VerseTracker__inVerseBar',
 
-                    isHorizontalTransition &&
-                        'VerseCursor__horizontalTransition',
-                    isVerticalTransition &&
-                        'VerseCursor__verticalTransition',
+                    inSlider &&
+                        'VerseTracker__horizontalTransition',
+
+                    inLyric &&
+                        'VerseTracker__verticalTransition',
 
                     'absoluteFullContainer'
                 )}
                 {
-                    ...isOnCursor && {
+                    ...isSelected && {
                         style: {
                             transition:
                                 `${transitionedStyle} ${verseDuration}s linear`
@@ -141,4 +133,4 @@ class VerseCursor extends Component {
     }
 }
 
-export default connect(mapStateToProps)(VerseCursor)
+export default connect(mapStateToProps)(VerseTracker)
