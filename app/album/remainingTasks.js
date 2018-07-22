@@ -38,6 +38,12 @@ module.exports = [
         neededHours: 2
     },
 
+    {
+        taskName: `Slider locks up, preventing touch moving, for some reason. Might have to do with Root Component being active? Nope...`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     /**
      * Begin Hack Week work.
      */

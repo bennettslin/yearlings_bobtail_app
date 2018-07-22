@@ -76,7 +76,7 @@
     .RM__sliderNotMoving
     & {
         // Default side verse.
-        color: $colour__dark;
+        color: $colour__text__dark;
         background-color: #ddd;
         // @include mixin__textShadow(#ddd);
 
@@ -85,7 +85,7 @@
     .RM__sliderMoving
     & {
         // Slider side verse.
-        color: $colour__light;
+        color: $colour__text__light;
         background-color: $bgColour__sideSlider;
         // @include mixin__textShadow($bgColour__sideSlider);
 

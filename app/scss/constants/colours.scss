@@ -4,7 +4,7 @@ $colour__boxShadow__dark: rgba(25, 25, 50, 0.4);
 $colour__boxShadow__cursored: rgba(255, 225, 155, 0.4);
 $colour__boxShadow__cursoredBright: rgba(255, 225, 100, 0.8);
 // Audio related colours.
-$bgColour__audioPlay: #bfd;
+$bgColour__audioPlay: #9db;
 $bgColour__audioPause: #bd9;
 $bgColour__audioDisabled: lightGray;
 $bgColour__audioSelect: #fdb;
@@ -12,8 +12,11 @@ $bgColour__audioNeutral: #ddf;
 $bgColour__audioHighlight: #ffd;
 
 // Lyric verse colours.
-$colour__light: #fff;
-$colour__dark: #444;
+$colour__text__light: #fff;
+$colour__text__dark: #444;
+
+$colour__anchor__light: #bfd;
+$colour__anchor__dark: #486;
 
 // $colour__beforeSelected: #543;
 $bgColour__beforeSelected: #fffaef;

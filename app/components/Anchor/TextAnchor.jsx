@@ -20,8 +20,10 @@ TextAnchor = ({
 
 ...other }) => {
 
-    const { isAccessed,
-            isSelected } = other,
+    const {
+            isAccessed,
+            isSelected
+        } = other,
 
         isStringText = typeof text === 'string'
 
@@ -31,14 +33,40 @@ TextAnchor = ({
                 'TextAnchor',
 
                 isAccessed && !isSelected && 'TextAnchor__accessed',
-
-                isStringText && 'TextAnchor__transition',
-
-                isSelected ?
-                    'TextAnchor__selected' :
-                    'TextAnchor__selectable'
+                isStringText && 'TextAnchor__transition'
             )}>
-                {text}
+                {/* Shown when no dot in dot sequence is selected. */}
+                <span className={cx(
+                    'TextAnchor__plainText'
+                )}>
+                    {text}
+                </span>
+
+                {/* Shown once some dot in dot sequence is selected. */}
+                <div className={cx(
+                    'TextAnchor__linkText',
+                    'TextAnchor__linkText__default',
+
+                    isSelected &&
+                        'TextAnchor__linkText__selected',
+
+                    'absoluteFullContainer'
+                )}>
+                    {text}
+                </div>
+
+                {/* Shown instead when access is on. */}
+                <div className={cx(
+                    'TextAnchor__linkText',
+                    'TextAnchor__linkText__accessed',
+
+                    isSelected &&
+                        'TextAnchor__linkText__selected',
+
+                    'absoluteFullContainer'
+                )}>
+                    {text}
+                </div>
             </span>
         </Anchor>
     )

@@ -27,8 +27,16 @@
         width: $length__lyricAnchorDot;
     }
 
+    .AnchorUnderline {
+        opacity: 1;
+    }
+
     // Anchors show as more than text.
-    .TextAnchor__selectable {
+    .TextAnchor__plainText {
+        visibility: hidden;
+    }
+    .TextAnchor__linkText__default {
+        visibility: visible;
         color: $colour__textAnchor__link;
     }
 
@@ -36,22 +44,19 @@
         cursor: pointer;
 
         &:hover {
-            .TextAnchor__selectable {
+            .TextAnchor__linkText {
                 color: $colour__textAnchor__hover;
             }
         }
 
         &:active {
-            .TextAnchor__selectable {
+            .TextAnchor__linkText {
                 color: $colour__textAnchor__active;
             }
         }
     }
-    .AnchorUnderline {
-        opacity: 1;
-    }
 
-    .TextAnchor__selected {
+    .TextAnchor__linkText__selected {
         color: $colour__textAnchor__selected;
     }
 }
@@ -67,19 +72,24 @@
 .RM__accessOn .styleIf__always {
 
     .TextAnchor__accessed {
-        color: $colour__textAnchor__accessedLink;
+        .TextAnchor__linkText__default {
+            visibility: hidden;
+        }
+        .TextAnchor__linkText__accessed {
+            visibility: visible;
+            color: $colour__textAnchor__accessedLink;
+        }
     }
 
     &.Anchor__selectable {
-
         &:hover {
-            .TextAnchor__accessed {
+            .TextAnchor__linkText__accessed {
                 color: $colour__textAnchor__accessedHover;
             }
         }
 
         &:active {
-            .TextAnchor__accessed {
+            .TextAnchor__linkText__accessed {
                 color: $colour__textAnchor__accessedActive;
             }
         }

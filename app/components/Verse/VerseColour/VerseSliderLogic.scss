@@ -5,7 +5,7 @@
 
     .RM__sliderMoving
     & {
-        color: $colour__light;
+        color: $colour__text__light;
         // @include mixin__textShadow($bgColour__beforeSlider);
     }
 }
@@ -25,7 +25,7 @@
 
     // "Child in unit."
     &.ChL {
-        color: $colour__dark !important;
+        color: $colour__text__dark !important;
         // @include mixin__textShadow($bgColour__audioNeutral, $important: true);
     }
 
@@ -38,7 +38,7 @@
     ~ .ChV {
         // All subsequent "child in unit" siblings.
         &.ChL {
-            color: $colour__light;
+            color: $colour__text__light;
             // @include mixin__textShadow($bgColour__afterSlider);
         }
 
@@ -58,7 +58,7 @@
 
     // Unit children of all subsequent "parent of verse" siblings.
     ~ .PoV .ChL {
-        color: $colour__light;
+        color: $colour__text__light;
         // @include mixin__textShadow($bgColour__afterSlider);
     }
 

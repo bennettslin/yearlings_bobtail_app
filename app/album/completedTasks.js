@@ -3419,11 +3419,6 @@ module.exports = [
         neededHours: 5
     },
     {
-        taskName: `Slider locks up, preventing touch moving, for some reason. Might have to do with Root Component being active?`,
-        workedHours: 1,
-        neededHours: 1
-    },
-    {
         taskName: `Allow to determine verse bars in between key presses.`,
         workedHours: 1,
         neededHours: 1
