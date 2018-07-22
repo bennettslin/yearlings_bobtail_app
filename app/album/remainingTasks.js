@@ -1,12 +1,5 @@
 module.exports = [
 
-    // TODO: First tomorrow.
-    {
-        taskName: `Figure out Anchor text colour and text shadow, clean up mixin code.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-
     {
         taskName: `Set up buttons to use svgs, including loading icons.`,
         workedHours: 0,
@@ -36,6 +29,12 @@ module.exports = [
         taskName: `Can skip to stanza by clicking stanza tab?`,
         workedHours: 0,
         neededHours: 2
+    },
+
+    {
+        taskName: `Anchor text shadow, underline, and dot sequence outline logic in CSS.`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     {

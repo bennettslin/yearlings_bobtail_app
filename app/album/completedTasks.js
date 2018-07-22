@@ -3428,4 +3428,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Figure out Anchor text colour and text shadow, clean up mixin code.`,
+        workedHours: 5,
+        neededHours: 5
+    },
 ]

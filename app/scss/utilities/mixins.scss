@@ -9,15 +9,16 @@
 }
 
 @mixin mixin__textShadow($bgColour) {
-    $textShadow__offset: 1px;
-    $textShadow__blur: 0.75px;
+    $offset: 1px;
+    $offset__negative: -$offset;
+    $blur: 0.75px;
 
     .textShadow__text {
         text-shadow:
-        -$textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
-        $textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
-        -$textShadow__offset $textShadow__offset $textShadow__blur $bgColour,
-        $textShadow__offset $textShadow__offset $textShadow__blur $bgColour;
+        $offset__negative $offset__negative $blur $bgColour,
+        $offset $offset__negative $blur $bgColour,
+        $offset__negative $offset $blur $bgColour,
+        $offset $offset $blur $bgColour;
     }
 }
 
