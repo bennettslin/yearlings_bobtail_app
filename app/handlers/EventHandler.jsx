@@ -402,10 +402,16 @@ class EventHandler extends Component {
         return lyricsToggled
     }
 
-    handleLyricWheel(e) {
+    handleLyricWheel(
+        e,
+        {
+            timeoutDuration,
+            setToManualScroll = false
+        } = {}
+    ) {
         let hasRoomToScroll = false
 
-        if (!e) {
+        if (setToManualScroll) {
             // If triggered manually by keyboard, set to true.
             this.props.selectManualScroll(true)
         }
@@ -444,7 +450,7 @@ class EventHandler extends Component {
 
         // Determine verse bars if scrolled, or if triggered manually.
         if (hasRoomToScroll || !e) {
-            this.props.determineVerseBars()
+            this.props.determineVerseBars(timeoutDuration)
         }
     }
 
@@ -716,6 +722,12 @@ class EventHandler extends Component {
         e.preventDefault()
         this.stopPropagation(e)
         this.props.touchBodyEnd()
+
+        /**
+         * Prevent slider from locking up and not registering a touch move. Not
+         * sure just yet if this really does the trick.
+         */
+        this.focusElementForAccess()
     }
 
     handleBodyClick(e) {
@@ -968,7 +980,10 @@ class EventHandler extends Component {
 
             doFocusLyricElement =
                 this.myLyricElement &&
-                (!isHeightlessLyricColumn || isLyricExpanded)
+                    (
+                        !isHeightlessLyricColumn ||
+                        isLyricExpanded
+                    )
 
         let focusedElement = doFocusLyricElement ?
             this.myLyricElement :

@@ -126,7 +126,7 @@ class KeyHandler extends Component {
                 keyName === PAGE_UP ||
                 keyName === PAGE_DOWN
             ) {
-                this._setHandleLyricWheelTimeout()
+                this._determineVerseBarsWithParameters()
             }
 
             return
@@ -180,28 +180,26 @@ class KeyHandler extends Component {
                 keyName === ARROW_DOWN ||
                 keyName === ARROW_UP
             ) {
-                this._setHandleLyricWheelTimeout()
+                this._determineVerseBarsWithParameters(true)
             }
         }
     }
 
-    _setHandleLyricWheelTimeout() {
-        clearTimeout(this.state.lyricWheelTimeoutId)
-
-        const lyricWheelTimeoutId = setTimeout(
-            this.props.eventHandlers.handleLyricWheel,
-
-            /**
-             * Make duration long enough for Chrome, Firefox, and Safari. 150
-             * is fine for lyric page up and down. 300 seems to be needed for
-             * navigating between annotations.
-             */
-            300
+    _determineVerseBarsWithParameters(isManualScroll) {
+        /**
+         * Make duration long enough for Chrome, Firefox, and Safari. 150 is
+         * fine for lyric page up and down, but 300 seems to be needed for
+         * navigating between annotations.
+         */
+        this.props.eventHandlers.handleLyricWheel(
+            null,
+            {
+                ...isManualScroll && {
+                    timeoutDuration: 300,
+                    setToManualScroll: true
+                }
+            }
         )
-
-        this.setState({
-            lyricWheelTimeoutId
-        })
     }
 
     _accessAnnotationWithoutDirection(verseIndex) {
@@ -357,7 +355,7 @@ class KeyHandler extends Component {
 
         // Accessing annotation might scroll lyric.
         if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-            this._setHandleLyricWheelTimeout()
+            this._determineVerseBarsWithParameters()
         }
 
         return { annotationIndexWasAccessed,
@@ -525,7 +523,7 @@ class KeyHandler extends Component {
 
         // Accessing annotation might scroll lyric.
         if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-            this._setHandleLyricWheelTimeout()
+            this._determineVerseBarsWithParameters()
         }
 
         return true

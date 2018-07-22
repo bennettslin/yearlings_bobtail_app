@@ -2,11 +2,6 @@ module.exports = [
 
     // TODO: First tomorrow.
     {
-        taskName: `Slider locks up, preventing touch moving, for some reason. Might have to do with Root Component being active?`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Figure out Anchor text colour and text shadow, clean up mixin code.`,
         workedHours: 0,
         neededHours: 3
@@ -100,12 +95,6 @@ module.exports = [
         taskName: `PDF in mobile doesn't scroll. Copy screening-js approach, then adjust button positions.`,
         workedHours: 0,
         neededHours: 5
-    },
-
-    {
-        taskName: `Allow to determine verse bars in between key presses.`,
-        workedHours: 0,
-        neededHours: 1
     },
 
     {

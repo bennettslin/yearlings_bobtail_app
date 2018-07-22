@@ -126,7 +126,7 @@ class VerseManager extends Component {
         return interactivatedVerseIndex
     }
 
-    determineVerseBars() {
+    determineVerseBars(timeoutDuration = 10) {
         /**
          * It seems to help to both make the call immediately, and then set a
          * timeout for it. For now, I don't think there's any performance hit.
@@ -139,7 +139,7 @@ class VerseManager extends Component {
 
         const verseBarsTimeoutId = setTimeout(
             this._determineVerseBars,
-            10
+            timeoutDuration
         )
 
         this.setState({
