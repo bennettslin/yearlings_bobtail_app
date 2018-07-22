@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import VerseColour from '../../Verse/VerseColour/VerseColour'
+import VerseInteractive from '../../Verse/VerseInteractive/VerseInteractive'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
@@ -83,8 +83,8 @@ class SliderVerse extends Component {
                 style={verseStyle}
             >
 
-                <VerseColour
-                    inSliderVerse
+                <VerseInteractive
+                    inSlider
                     {...{
                         verseIndex
                     }}

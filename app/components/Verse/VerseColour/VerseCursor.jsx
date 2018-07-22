@@ -31,8 +31,8 @@ class VerseCursor extends Component {
         // From parent.
         verseIndex: PropTypes.number.isRequired,
         inVerseBar: PropTypes.bool,
-        inLyricVerse: PropTypes.bool,
-        inSliderVerse: PropTypes.bool
+        inLyric: PropTypes.bool,
+        inSlider: PropTypes.bool
     }
 
     shouldComponentUpdate(nextProps) {
@@ -49,8 +49,8 @@ class VerseCursor extends Component {
                 renderableVerseIndex,
                 verseIndex,
                 inVerseBar,
-                inLyricVerse,
-                inSliderVerse
+                inLyric,
+                inSlider
             } = this.props,
 
             verseDuration = getVerseDurationForVerseIndex(
@@ -58,8 +58,8 @@ class VerseCursor extends Component {
                 verseIndex
             ),
 
-            isHorizontalTransition = inSliderVerse,
-            isVerticalTransition = inVerseBar || inLyricVerse,
+            isHorizontalTransition = inSlider,
+            isVerticalTransition = inVerseBar || inLyric,
 
             transitionedStyle =
             isHorizontalTransition ?

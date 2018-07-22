@@ -58,28 +58,21 @@ class VerseBar extends Component {
                 isVerseBarBelow
             } = this.props,
             {
-                // There is no future tense of "can." Huh.
-                canLyricRender: willCanLyricRender,
                 isVerseBarAbove: willBeVerseBarAbove,
                 isVerseBarBelow: willBeVerseBarBelow
             } = nextProps
 
         if (
-            !willCanLyricRender ||
-
-            (
-                // No point in updating if it remains unshown.
-                !willBeVerseBarAbove &&
-                !willBeVerseBarBelow &&
-                !isVerseBarAbove &&
-                !isVerseBarBelow
-            )
-
+            // No point in updating if it remains unshown.
+            !willBeVerseBarAbove &&
+            !willBeVerseBarBelow &&
+            !isVerseBarAbove &&
+            !isVerseBarBelow
         ) {
             return false
         }
 
-        return !getPropsAreShallowEqual({
+        return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
             nextProps,
             alwaysBypassCheck: {

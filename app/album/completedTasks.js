@@ -3393,4 +3393,14 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Slider verse *does* need to be wrapped in verse interactive.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Simplify verse interactive. Should only update when interactivation turned on or off.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

@@ -29,49 +29,85 @@ class VerseInteractive extends Component {
 
         // From parent.
         verseIndex: PropTypes.number.isRequired,
+        inSlider: PropTypes.bool,
 
         // For verse audio buttons.
         handleLyricVerseSelect: PropTypes.func
     }
 
     shouldComponentUpdate(nextProps) {
+        const isInteractivatedVerse = this.getIsInteractivated(
+                this.props
+            ),
+
+        willBeInteractivatedVerse = this.getIsInteractivated(
+            nextProps
+        )
+
+        if (
+            // Don't update if it remains not interactivated.
+            !isInteractivatedVerse &&
+            !willBeInteractivatedVerse
+        ) {
+            return false
+        }
+
         return nextProps.canLyricRender && !getPropsAreShallowEqual({
             props: this.props,
-            nextProps
+            nextProps,
+            alwaysBypassCheck: {
+                isAbove: true
+            }
         })
+    }
+
+    getIsInteractivated(props) {
+        const {
+                verseIndex,
+                interactivatedVerseIndex,
+                inSlider
+            } = props,
+
+            isInteractivatedVerse = verseIndex === interactivatedVerseIndex
+
+        return !inSlider && isInteractivatedVerse
     }
 
     render() {
         const {
                 /* eslint-disable no-unused-vars */
                 canLyricRender,
+                interactivatedVerseIndex,
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
                 verseIndex,
-                interactivatedVerseIndex,
+                inSlider,
 
                 ...other
             } = this.props,
 
-            isInteractivated = verseIndex === interactivatedVerseIndex
+            isInteractivated = this.getIsInteractivated(this.props)
 
-        return (
+            return (
             <Fragment>
                 <VerseColour
-                    inVerse
                     {...{
+                        inSlider,
+                        inVerse: !inSlider,
                         verseIndex,
                         isInteractivated
                     }}
                 />
-                <VerseNav
-                    {...other}
-                    {...{
-                        verseIndex,
-                        isInteractivated
-                    }}
-                />
+                {!inSlider && (
+                    <VerseNav
+                        {...other}
+                        {...{
+                            verseIndex,
+                            isInteractivated
+                        }}
+                    />
+                )}
             </Fragment>
         )
     }

@@ -10,7 +10,7 @@ const propTypes = {
     verseIndex: PropTypes.number.isRequired,
     inVerse: PropTypes.bool,
     inVerseBar: PropTypes.bool,
-    inSliderVerse: PropTypes.bool
+    inSlider: PropTypes.bool
 },
 
 VerseColour = ({
@@ -21,21 +21,21 @@ VerseColour = ({
 
     inVerse,
     inVerseBar,
-    inSliderVerse
+    inSlider
 
 }) => {
 
-    const inLyricVerse = inVerse || inVerseBar
+    const inLyric = inVerse || inVerseBar
 
     return (
         <div
             className={cx(
 
                 // "Grandchild in lyric."
-                inLyricVerse && 'GcL',
+                inLyric && 'GcL',
 
                 // "Grandchild in slider."
-                inSliderVerse && 'GcS',
+                inSlider && 'GcS',
 
                 // "Grandchild interactable."
                 !inVerseBar && 'GcN',
@@ -55,8 +55,8 @@ VerseColour = ({
                 {...{
                     verseIndex,
                     inVerseBar,
-                    inLyricVerse,
-                    inSliderVerse
+                    inLyric,
+                    inSlider
                 }}
 
                 /**

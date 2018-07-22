@@ -30,13 +30,7 @@ module.exports = [
     },
 
     {
-        taskName: `Slider verses no longer hover. Not only that, the touch component *doesn't* do the trick!`,
-        workedHours: 0,
-        neededHours: 2
-    },
-
-    {
-        taskName: `Simplify verse interactive. Should only update when interactivation turned on or off, and shouldn't care when slider is moving. Also, slider verses *do* need to be wrapped in them.`,
+        taskName: `Slider locks up, preventing touch moving, for some reason.`,
         workedHours: 0,
         neededHours: 2
     },
