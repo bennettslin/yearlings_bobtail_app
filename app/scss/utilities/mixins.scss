@@ -8,23 +8,149 @@
     }
 }
 
-@mixin mixin__textShadow($bgColour, $important: false) {
+@mixin mixin__textShadow($bgColour) {
     $textShadow__offset: 1px;
     $textShadow__blur: 0.75px;
 
     .textShadow__text {
+        text-shadow:
+        -$textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
+        $textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
+        -$textShadow__offset $textShadow__offset $textShadow__blur $bgColour,
+        $textShadow__offset $textShadow__offset $textShadow__blur $bgColour;
+    }
+}
+
+@mixin mixin__textAndLinkColours($light: false, $important: false) {
+
+    @if $light {
         @if $important {
-            text-shadow:
-            -$textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
-            $textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
-            -$textShadow__offset $textShadow__offset $textShadow__blur $bgColour,
-            $textShadow__offset $textShadow__offset $textShadow__blur $bgColour !important;
+            color: $colour__text__light !important;
         } @else {
-            text-shadow:
-            -$textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
-            $textShadow__offset -$textShadow__offset $textShadow__blur $bgColour,
-            -$textShadow__offset $textShadow__offset $textShadow__blur $bgColour,
-            $textShadow__offset $textShadow__offset $textShadow__blur $bgColour;
+            color: $colour__text__light;
+        }
+    } @else {
+        @if $important {
+            color: $colour__text__dark !important;
+        } @else {
+            color: $colour__text__dark;
+        }
+    }
+
+    .TextAnchor__linkText__default {
+        @if $light {
+            @if $important {
+                color: $colour__link__light !important;
+            } @else {
+                color: $colour__link__light;
+            }
+        } @else {
+            @if $important {
+                color: $colour__link__dark !important;
+            } @else {
+                color: $colour__link__dark;
+            }
+        }
+    }
+
+    .TextAnchor__linkText__accessed {
+        @if $light {
+            @if $important {
+                color: $colour__accessedLink__light !important;
+            } @else {
+                color: $colour__accessedLink__light;
+            }
+        } @else {
+            @if $important {
+                color: $colour__accessedLink__dark !important;
+            } @else {
+                color: $colour__accessedLink__dark;
+            }
+        }
+    }
+
+    .TextAnchor__linkText__selected {
+        @if $light {
+            @if $important {
+                color: $colour__selected__light !important;
+            } @else {
+                color: $colour__selected__light;
+            }
+        } @else {
+            @if $important {
+                color: $colour__selected__dark !important;
+            } @else {
+                color: $colour__selected__dark;
+            }
+        }
+    }
+
+    .Anchor__selectable {
+
+        &:hover {
+            .TextAnchor__linkText {
+                @if $light {
+                    @if $important {
+                        color: $colour__linkHover__light !important;
+                    } @else {
+                        color: $colour__linkHover__light;
+                    }
+                } @else {
+                    @if $important {
+                        color: $colour__linkHover__dark !important;
+                    } @else {
+                        color: $colour__linkHover__dark;
+                    }
+                }
+            }
+            .TextAnchor__linkText__accessed {
+                @if $light {
+                    @if $important {
+                        color: $colour__accessedLinkHover__light !important;
+                    } @else {
+                        color: $colour__accessedLinkHover__light;
+                    }
+                } @else {
+                    @if $important {
+                        color: $colour__accessedLinkHover__dark !important;
+                    } @else {
+                        color: $colour__accessedLinkHover__dark;
+                    }
+                }
+            }
+        }
+
+        &:active {
+            .TextAnchor__linkText {
+                @if $light {
+                    @if $important {
+                        color: $colour__linkActive__light !important;
+                    } @else {
+                        color: $colour__linkActive__light;
+                    }
+                } @else {
+                    @if $important {
+                        color: $colour__linkActive__dark !important;
+                    } @else {
+                        color: $colour__linkActive__dark;
+                    }
+                }
+            }
+            .TextAnchor__linkText__accessed {
+                @if $light {
+                    @if $important {
+                        color: $colour__accessedLinkActive__light !important;
+                    } @else {
+                        color: $colour__accessedLinkActive__light;
+                    }
+                } @else {
+                    @if $important {
+                        color: $colour__accessedLinkActive__dark !important;
+                    } @else {
+                        color: $colour__accessedLinkActive__dark;
+                    }
+                }
+            }
         }
     }
 }

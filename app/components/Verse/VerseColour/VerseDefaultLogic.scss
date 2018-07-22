@@ -22,9 +22,9 @@
 .RdV0 .ChV0, .RdV1 .ChV1, .RdV2 .ChV2, .RdV3 .ChV3, .RdV4 .ChV4, .RdV5 .ChV5, .RdV6 .ChV6, .RdV7 .ChV7, .RdV8 .ChV8, .RdV9 .ChV9, .RdV10 .ChV10, .RdV11 .ChV11, .RdV12 .ChV12, .RdV13 .ChV13, .RdV14 .ChV14, .RdV15 .ChV15, .RdV16 .ChV16, .RdV17 .ChV17, .RdV18 .ChV18, .RdV19 .ChV19, .RdV20 .ChV20, .RdV21 .ChV21, .RdV22 .ChV22, .RdV23 .ChV23, .RdV24 .ChV24, .RdV25 .ChV25, .RdV26 .ChV26, .RdV27 .ChV27, .RdV28 .ChV28, .RdV29 .ChV29, .RdV30 .ChV30, .RdV31 .ChV31, .RdV32 .ChV32, .RdV33 .ChV33, .RdV34 .ChV34, .RdV35 .ChV35, .RdV36 .ChV36, .RdV37 .ChV37, .RdV38 .ChV38, .RdV39 .ChV39, .RdV40 .ChV40, .RdV41 .ChV41, .RdV42 .ChV42, .RdV43 .ChV43, .RdV44 .ChV44, .RdV45 .ChV45, .RdV46 .ChV46, .RdV47 .ChV47, .RdV48 .ChV48, .RdV49 .ChV49, .RdV50 .ChV50, .RdV51 .ChV51, .RdV52 .ChV52, .RdV53 .ChV53, .RdV54 .ChV54, .RdV55 .ChV55, .RdV56 .ChV56, .RdV57 .ChV57, .RdV58 .ChV58, .RdV59 .ChV59, .RdV60 .ChV60, .RdV61 .ChV61, .RdV62 .ChV62 {
     // Styling for cursored verse.
 
-    // "Child in unit."
+    // "Child in lyric."
     &.ChL {
-        color: $colour__text__light !important;
+        @include mixin__textAndLinkColours($light: true, $important: true);
     }
 
     // "Grandchild verse colour."

@@ -3,10 +3,6 @@
 // "Child stanza."
 .ChS {
     // Styling for stanzas before cursored stanza.
-
-    // TODO: Improve these styles, obviously.
-    // background-color: rgba(240, 200, 200, 0.5);
-    // border: 2px solid #f88;
 }
 
 // "Root cursored stanza index, child stanza index."
@@ -18,10 +14,6 @@
      * below slider times.
      */
     z-index: $zIndex__menuField;
-
-    // TODO: Improve these styles, obviously.
-    // background-color: rgba(240, 240, 200, 0.5);
-    // border: 2px solid #8f8;
 
     &.SliderStanza {
         height: 65%;
@@ -38,9 +30,5 @@
     // All subsequent "child stanza" siblings.
     ~ .ChS {
         // Styling for stanzas after cursored stanza.
-
-        // TODO: Improve these styles, obviously.
-        // background-color: rgba(200, 200, 240, 0.5);
-        // border: 2px solid #88f;
     }
 }

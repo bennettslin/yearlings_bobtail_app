@@ -55,6 +55,11 @@
             padding-bottom: $paddingY__verse;
         }
     }
+
+    .RM__sliderMoving
+    & {
+        @include mixin__textAndLinkColours($light: true);
+    }
 }
 
 .Verse__interactable {
@@ -76,14 +81,12 @@
     .RM__sliderNotMoving
     & {
         // Default side verse.
-        color: $colour__text__dark;
         background-color: #ddd;
     }
 
     .RM__sliderMoving
     & {
         // Slider side verse.
-        color: $colour__text__light;
         background-color: $bgColour__sideSlider;
     }
 }

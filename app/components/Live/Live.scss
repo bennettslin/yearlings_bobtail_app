@@ -20,6 +20,8 @@
     user-select: none;
 
     background-color: #222;
+
+    @include mixin__textAndLinkColours();
 }
 
 .PopupOverlay {

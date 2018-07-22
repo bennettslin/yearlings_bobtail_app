@@ -27,6 +27,10 @@
         width: $length__lyricAnchorDot;
     }
 
+    &.Anchor__selectable {
+        cursor: pointer;
+    }
+
     .AnchorUnderline {
         opacity: 1;
     }
@@ -37,27 +41,6 @@
     }
     .TextAnchor__linkText__default {
         visibility: visible;
-        color: $colour__link__dark;
-    }
-
-    &.Anchor__selectable {
-        cursor: pointer;
-
-        &:hover {
-            .TextAnchor__linkText {
-                color: $colour__linkHover__dark;
-            }
-        }
-
-        &:active {
-            .TextAnchor__linkText {
-                color: $colour__linkActive__dark;
-            }
-        }
-    }
-
-    .TextAnchor__linkText__selected {
-        color: $colour__selected__dark;
     }
 }
 
@@ -77,21 +60,6 @@
         }
         .TextAnchor__linkText__accessed {
             visibility: visible;
-            color: $colour__accessedLink__dark;
-        }
-    }
-
-    &.Anchor__selectable {
-        &:hover {
-            .TextAnchor__linkText__accessed {
-                color: $colour__accessedLinkHover__dark;
-            }
-        }
-
-        &:active {
-            .TextAnchor__linkText__accessed {
-                color: $colour__accessedLinkActive__dark;
-            }
         }
     }
 }
