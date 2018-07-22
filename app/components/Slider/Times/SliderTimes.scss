@@ -1,9 +1,9 @@
 @import "./SliderTime";
 
 .SliderTimes {
-    // TODO: Rework these colours, obviously.
-    color: #ffd;
-    @include mixin__textShadow(#444);
+    // White text with black outline.
+    color: $colour__text__light;
+    @include mixin__textShadow($colour__text__dark);
 
     .RM__sliderMoving
     & {

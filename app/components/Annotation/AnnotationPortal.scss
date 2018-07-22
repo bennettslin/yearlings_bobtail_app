@@ -26,5 +26,9 @@
     padding-left: $width__hangingIndent;
     font-size: 0.9em;
 
-    color: orange;
+    color: $colour__annotationPortal__title;
+}
+
+.textSpan__portalInPortal {
+    color: $colour__selected__dark;
 }
