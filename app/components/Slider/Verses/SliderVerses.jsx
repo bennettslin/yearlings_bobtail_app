@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import VerseHoc from '../../Verse/Hoc/VerseHoc'
 import SliderVerse from './SliderVerse'
 
 const propTypes = {
@@ -37,13 +38,14 @@ const SliderVerses = ({
                     relativeStartTime = verseStartTime - stanzaStartTime
 
                 return (
-                    <SliderVerse
+                    <VerseHoc
                         key={index}
                         {...{
                             verseIndex: stanzaFirstVerseIndex + index,
                             relativeStartTime,
                             verseDuration,
-                            stanzaDuration
+                            stanzaDuration,
+                            VerseComponent: SliderVerse
                         }}
                     />
                 )

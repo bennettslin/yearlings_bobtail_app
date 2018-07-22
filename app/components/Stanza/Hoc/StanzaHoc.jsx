@@ -1,8 +1,3 @@
-/**
- * A stanza encompasses all the units grouped under a single stanza type and
- * optional index, such as Verse 1 or Bridge.
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'

@@ -22,6 +22,7 @@ class SliderVerse extends Component {
         canSliderRender: PropTypes.bool.isRequired,
 
         // From parent.
+        logicSelectors: PropTypes.string.isRequired,
         verseIndex: PropTypes.number.isRequired,
         relativeStartTime: PropTypes.number.isRequired,
         verseDuration: PropTypes.number.isRequired,
@@ -38,7 +39,7 @@ class SliderVerse extends Component {
     render() {
 
         const {
-
+                logicSelectors,
                 relativeStartTime,
                 verseDuration,
                 stanzaDuration,
@@ -67,11 +68,7 @@ class SliderVerse extends Component {
             <div
                 key={verseIndex}
                 className={cx(
-
-                    // "Child component verse index."
-                    `ChV${verseIndex}`,
-                    'ChV',
-
+                    logicSelectors,
                     'SliderVerse',
 
                     // Just for debug purposes.

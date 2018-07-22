@@ -158,6 +158,7 @@ const verseViewDefaultProps = {
 
 verseViewPropTypes = {
     // From parent.
+    logicSelectors: PropTypes.string,
     verseIndex: PropTypes.number,
 
     inVerseBar: PropTypes.bool.isRequired,
@@ -173,6 +174,7 @@ verseViewPropTypes = {
 VerseView = ({
 
     // From controller.
+    logicSelectors,
     verseClassName,
     isInteractable,
 
@@ -193,11 +195,7 @@ VerseView = ({
             key={isInteractable ? verseIndex : undefined}
             ref={setRef}
             className={cx(
-
-                // "Child component verse index."
-                `ChV${verseIndex}`,
-                'ChV',
-
+                logicSelectors,
                 'Verse',
 
                 isTitle && 'Verse__title',

@@ -6,6 +6,7 @@ import cx from 'classnames'
 
 import { getParentOfVerseClassNamesForIndices } from '../stanzaHelper'
 
+import VerseHoc from '../../Verse/Hoc/VerseHoc';
 import Verse from '../../Verse/Verse';
 
 /*************
@@ -163,13 +164,12 @@ UnitCardView = ({
                      * Only Uncanny Valley has a side unit map.
                      */
                     return !isSideUnitMap && !isUnitMap && (
-                            <Verse {...other}
+                            <VerseHoc {...other}
                                 key={stanzaVerseIndex}
                                 {...{
-                                    verseObject
-                                }}
-                                {...!isNaN(verseIndex) && {
-                                    verseIndex
+                                    verseIndex,
+                                    verseObject,
+                                    VerseComponent: Verse
                                 }}
                             />
                         )

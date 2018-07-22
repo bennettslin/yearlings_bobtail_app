@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import VerseHoc from '../Hoc/VerseHoc'
 import Verse from '../Verse'
 
 import { getVerseObject } from '../../../helpers/dataHelper'
@@ -146,11 +147,12 @@ class VerseBar extends Component {
                             'VerseBar__animatable__below'
                     )}
                 >
-                    <Verse {...other}
+                    <VerseHoc {...other}
                         inVerseBar
                         {...{
                             verseIndex,
-                            verseObject
+                            verseObject,
+                            VerseComponent: Verse
                         }}
                     />
                 </div>

@@ -13,6 +13,7 @@
 
     .RM__isPlaying
     &.VerseTracker__selected {
+        border-right: 1px solid rgba(200, 150, 250, 0.7);
         left: 0;
     }
 }
@@ -22,6 +23,7 @@
 
     .RM__isPlaying
     &.VerseTracker__selected {
+        border-bottom: 1px solid rgba(200, 150, 250, 0.7);
         top: 0;
     }
 }
