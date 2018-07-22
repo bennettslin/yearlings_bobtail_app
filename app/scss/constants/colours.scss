@@ -3,62 +3,67 @@ $colour__boxShadow: rgba(75, 75, 100, 0.4);
 $colour__boxShadow__dark: rgba(25, 25, 50, 0.4);
 $colour__boxShadow__cursored: rgba(255, 225, 155, 0.4);
 $colour__boxShadow__cursoredBright: rgba(255, 225, 100, 0.8);
+
 // Audio related colours.
-$bgColour__audioPlay: #9db;
-$bgColour__audioPause: #bd9;
+$bgColour__audioPlay: #8ca;
+$bgColour__audioPause: #ac8;
 $bgColour__audioDisabled: lightGray;
 $bgColour__audioSelect: #fdb;
 $bgColour__audioNeutral: #ddf;
 $bgColour__audioHighlight: #ffd;
 
-// Lyric verse colours.
-$colour__text__light: #fff;
+/********
+ * TEXT *
+ ********/
+
+// Default text colours.
 $colour__text__dark: #444;
+$colour__text__light: #fff;
 
-$colour__anchor__light: #bfd;
-$colour__anchor__dark: #486;
+// Text anchor colours.
+$colour__link__dark: #844;
+$colour__linkHover__dark: #b77;
+$colour__linkActive__dark: #eaa;
 
-// $colour__beforeSelected: #543;
+$colour__link__light: #bfd;
+$colour__linkHover__light: #7d9;
+$colour__linkActive__light: #aec;
+
+// Accessed anchor colours.
+$colour__accessedLink__dark: #486;
+$colour__accessedLinkHover__dark: #6a8;
+$colour__accessedLinkActive__dark: #aec;
+
+$colour__accessedLink__light: #bfd;
+$colour__accessedLinkHover__light: #7d9;
+$colour__accessedLinkActive__light: #aec;
+
+// Selected anchor colours.
+$colour__selected__dark: #b59905;
+$colour__selected__light: #b59905;
+
+$bgColour__underline__selected: mix(
+    gold, white, 25%
+);
+
+$bgColour__accessedUnderline__dark: mix(
+    $colour__accessedLink__dark, white, 25%
+);
+
+$bgColour__underline__disabled: #aaa;
+$bgColour__underline__selectable: mix(
+    $colour__link__dark, white, 25%
+);
+
 $bgColour__beforeSelected: #fffaef;
-
-// $colour__afterSelected: #435;
 $bgColour__afterSelected: #faefff;
 
 // Slider verse colours.
-
-// $colour__beforeSlider: #ffbb88;
 $bgColour__beforeSlider: #b59905;
-
-// $colour__afterSlider: #88bbff;
 $bgColour__afterSlider: #0599b5;
-
-// $colour__sideSlider: #bbb;
 $bgColour__sideSlider: #888;
 
-// Lyric text and anchor colours.
-$colour__annotation__selected: gold;
-$colour__textAnchor__selected: #b59905;
-$bgColour__underline__selected: mix(
-    $colour__annotation__selected, white, 25%
-);
-
 $colour__annotationPortal__title: #bbb;
-
-$colour__textAnchor__accessedLink: #484;
-$colour__textAnchor__accessedHover: #7b7;
-$colour__textAnchor__accessedActive: #aea;
-$bgColour__underline__accessed: mix(
-    $colour__textAnchor__accessedLink, white, 25%
-);
-
-$colour__text: #444;
-$colour__textAnchor__link: #844;
-$colour__textAnchor__hover: #b77;
-$colour__textAnchor__active: #eaa;
-$bgColour__underline__disabled: #aaa;
-$bgColour__underline__selectable: mix(
-    $colour__textAnchor__link, white, 25%
-);
 
 // Dot colours.
 $bgColour__dot__narrative: #fbb;

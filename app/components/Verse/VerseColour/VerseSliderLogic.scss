@@ -6,7 +6,6 @@
     .RM__sliderMoving
     & {
         color: $colour__text__light;
-        // @include mixin__textShadow($bgColour__beforeSlider);
     }
 }
 
@@ -26,7 +25,6 @@
     // "Child in unit."
     &.ChL {
         color: $colour__text__dark !important;
-        // @include mixin__textShadow($bgColour__audioNeutral, $important: true);
     }
 
     // "Grandchild verse colour."
@@ -39,7 +37,6 @@
         // All subsequent "child in unit" siblings.
         &.ChL {
             color: $colour__text__light;
-            // @include mixin__textShadow($bgColour__afterSlider);
         }
 
         // Grandchildren of all subsequent "child verse" siblings.
@@ -59,7 +56,6 @@
     // Unit children of all subsequent "parent of verse" siblings.
     ~ .PoV .ChL {
         color: $colour__text__light;
-        // @include mixin__textShadow($bgColour__afterSlider);
     }
 
     // Grandchildren of all subsequent "parent of verse" siblings.

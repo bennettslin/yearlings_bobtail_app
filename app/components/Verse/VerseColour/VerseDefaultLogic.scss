@@ -3,10 +3,10 @@
 // "Child in unit."
 .ChL {
 
-    // .RM__sliderNotMoving
-    // & {
-    //     @include mixin__textShadow($bgColour__beforeSelected);
-    // }
+    .RM__sliderNotMoving
+    & {
+
+    }
 }
 
 .VerseColour {
@@ -25,7 +25,6 @@
     // "Child in unit."
     &.ChL {
         color: $colour__text__light !important;
-        // @include mixin__textShadow($bgColour__audioPause, $important: true);
     }
 
     // "Grandchild verse colour."
@@ -36,9 +35,9 @@
 
     ~ .ChV {
         // All subsequent "child in unit" siblings.
-        // &.ChL {
-        //     @include mixin__textShadow($bgColour__afterSelected);
-        // }
+        &.ChL {
+
+        }
 
         // Grandchildren of all subsequent "child verse" siblings.
         .GcV {
@@ -55,9 +54,9 @@
      */
 
     // Unit children of all subsequent "parent of verse" siblings.
-    // ~ .PoV .ChL {
-    //     @include mixin__textShadow($bgColour__afterSelected);
-    // }
+    ~ .PoV .ChL {
+
+    }
 
     // Grandchildren of all subsequent "parent of verse" siblings.
     ~ .PoV .GcV {

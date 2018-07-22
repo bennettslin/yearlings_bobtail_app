@@ -10,9 +10,6 @@
 
         background-color: $bgColour__audioHighlight;
 
-        // TODO: This doesn't work.
-        // @include mixin__textShadow($bgColour__audioHighlight);
-
         // Nesting here for simplicity.
         .colourFilter__verse__even {
             display: none;
@@ -76,7 +73,6 @@
     // "Child in unit."
     &.ChL {
         color: $colour__text__light !important;
-        // @include mixin__textShadow($bgColour__audioPlay, $important: true);
     }
 
     // "Grandchild verse colour."
