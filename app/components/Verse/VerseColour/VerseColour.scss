@@ -7,13 +7,13 @@
 .VerseColour {
     overflow: hidden;
 
-    // .RM__sliderNotMoving
-    // .parentIsShown
-    // & {
-        // transition:
-        // color $animationDuration__fast,
-        // background-color $animationDuration__fast;
-    // }
+    .RM__sliderNotMoving
+    .parentIsShown
+    & {
+        transition:
+        color $animationDuration__fast,
+        background-color $animationDuration__fast;
+    }
 }
 
 .VerseColour__interactivated {

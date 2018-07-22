@@ -30,6 +30,7 @@ class VerseInteractive extends Component {
         // From parent.
         verseIndex: PropTypes.number.isRequired,
         inSlider: PropTypes.bool,
+        inUnit: PropTypes.bool,
 
         // For verse audio buttons.
         handleLyricVerseSelect: PropTypes.func
@@ -61,13 +62,12 @@ class VerseInteractive extends Component {
     getIsInteractivated(props) {
         const {
                 verseIndex,
-                interactivatedVerseIndex,
-                inSlider
+                interactivatedVerseIndex
             } = props,
 
             isInteractivatedVerse = verseIndex === interactivatedVerseIndex
 
-        return !inSlider && isInteractivatedVerse
+        return isInteractivatedVerse
     }
 
     render() {
@@ -80,6 +80,7 @@ class VerseInteractive extends Component {
 
                 verseIndex,
                 inSlider,
+                inUnit,
 
                 ...other
             } = this.props,
@@ -91,7 +92,7 @@ class VerseInteractive extends Component {
                 <VerseColour
                     {...{
                         inSlider,
-                        inUnit: !inSlider,
+                        inUnit,
                         verseIndex,
                         isInteractivated
                     }}

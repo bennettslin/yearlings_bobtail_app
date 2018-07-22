@@ -5,21 +5,20 @@ import cx from 'classnames'
 import SliderVerses from '../Verses/SliderVerses'
 
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
-import {
-    getParentOfVerseClassNamesForIndices
-} from '../../Stanza/stanzaHelper'
 
 import { LS_OVERLAP_MARGIN_X_SLIDER } from '../../../constants/responsive'
 
 class SliderStanza extends Component {
 
     static propTypes = {
-        stanzaIndex: PropTypes.number.isRequired,
+        logicSelectors: PropTypes.string.isRequired,
         isLastStanza: PropTypes.bool.isRequired,
-        stanzaVerseConfigs: PropTypes.array.isRequired,
-        stanzaEndTime: PropTypes.number.isRequired,
-        songTotalTime: PropTypes.number.isRequired,
-        stanzaType: PropTypes.string.isRequired
+        stanzaConfig: PropTypes.shape({
+            stanzaVerseConfigs: PropTypes.array.isRequired,
+            stanzaEndTime: PropTypes.number.isRequired,
+            stanzaType: PropTypes.string.isRequired
+        }).isRequired,
+        songTotalTime: PropTypes.number.isRequired
     }
 
     shouldComponentUpdate(nextProps) {
@@ -31,15 +30,17 @@ class SliderStanza extends Component {
 
     render() {
         const {
-                stanzaIndex,
+                logicSelectors,
                 isLastStanza,
                 songTotalTime,
+                stanzaConfig
+            } = this.props,
 
+            {
                 stanzaVerseConfigs,
                 stanzaEndTime,
-                stanzaType,
-
-            } = this.props,
+                stanzaType
+            } = stanzaConfig,
 
             stanzaStartTime = stanzaVerseConfigs[0].verseStartTime,
 
@@ -84,22 +85,7 @@ class SliderStanza extends Component {
         return (
             <div
                 className={cx(
-                    // "Child component stanza index."
-
-                    // Aligned selector when on cursor.
-                    `ChS${stanzaIndex}`,
-
-                    /**
-                     * General selector when before cursor, general sibling
-                     * selector when after cursor.
-                     */
-                    'ChS',
-
-                    // "Parent of verse index."
-                    getParentOfVerseClassNamesForIndices({
-                        entities: stanzaVerseConfigs
-                    }),
-
+                    logicSelectors,
                     'SliderStanza',
 
                     `SliderStanza__${stanzaType}`,

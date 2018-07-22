@@ -9,49 +9,31 @@ import cx from 'classnames'
 
 import Unit from './Unit/Unit'
 
-import { getParentOfVerseClassNamesForIndices } from './stanzaHelper'
-
 const propTypes = {
     // From parent.
+    logicSelectors: PropTypes.string.isRequired,
     isLastStanza: PropTypes.bool.isRequired,
-    stanzaIndex: PropTypes.number.isRequired,
-    stanzaConfig: PropTypes.object.isRequired
+    stanzaConfig: PropTypes.shape({
+        stanzaUnitIndices: PropTypes.array.isRequired
+    }).isRequired
 },
 
 Stanza = ({
 
+    logicSelectors,
     stanzaConfig,
-    stanzaIndex,
     isLastStanza,
 
 ...other }) => {
 
     const {
-        stanzaUnitIndices,
-        stanzaVerseConfigs,
+        stanzaUnitIndices
     } = stanzaConfig
 
     return (
         <div
             className={cx(
-                // "Child component stanza index."
-
-                // Aligned selector when on cursor.
-                !isNaN(stanzaIndex) &&
-                    `ChS${stanzaIndex}`,
-
-                /**
-                 * General selector when before cursor, general
-                 * sibling selector when after cursor.
-                 */
-                !isNaN(stanzaIndex) &&
-                    'ChS',
-
-                // "Parent of verse index."
-                getParentOfVerseClassNamesForIndices({
-                    entities: stanzaVerseConfigs
-                }),
-
+                logicSelectors,
                 'Stanza'
             )}
         >

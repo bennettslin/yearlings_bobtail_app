@@ -226,6 +226,7 @@ VerseView = ({
 
             {isInteractable && (
                 <VerseInteractive
+                    inUnit
                     {...{
                         verseIndex,
                         handleLyricVerseSelect

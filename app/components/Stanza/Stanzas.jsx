@@ -10,6 +10,7 @@ import cx from 'classnames'
 // import debounce from 'debounce'
 
 import Stanza from './Stanza'
+import StanzaHoc from './Hoc/StanzaHoc'
 import Unit from './Unit/Unit'
 import {
     getSongStanzaConfigs,
@@ -194,12 +195,13 @@ StanzasView = ({
                         stanzaIndex === songStanzaConfigs.length - 1
 
                     return (
-                        <Stanza {...other}
+                        <StanzaHoc {...other}
                             key={stanzaIndex}
                             {...{
                                 stanzaConfig,
                                 stanzaIndex,
-                                isLastStanza
+                                isLastStanza,
+                                StanzaComponent: Stanza
                             }}
                         />
                     )

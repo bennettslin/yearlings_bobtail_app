@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import SliderStanza from './SliderStanza'
+import StanzaHoc from '../../Stanza/Hoc/StanzaHoc'
 
 import {
     getSongTotalTime,
@@ -44,29 +45,20 @@ class SliderStanzas extends Component {
                 'SliderStanzas',
                 'absoluteFullContainer'
             )}>
-                {songStanzaConfigs.map((songStanzaConfig, stanzaIndex) => {
+                {songStanzaConfigs.map((stanzaConfig, stanzaIndex) => {
 
-                    const
-                        {
-                            stanzaVerseConfigs,
-                            stanzaEndTime,
-                            stanzaType
-                        } = songStanzaConfig,
-
-                        isLastStanza =
-                            stanzaIndex === songStanzaConfigs.length - 1
+                    const isLastStanza =
+                        stanzaIndex === songStanzaConfigs.length - 1
 
                     return (
-                        <SliderStanza
+                        <StanzaHoc
                             key={stanzaIndex}
                             {...{
                                 stanzaIndex,
                                 isLastStanza,
                                 songTotalTime,
-
-                                stanzaVerseConfigs,
-                                stanzaEndTime,
-                                stanzaType
+                                stanzaConfig,
+                                StanzaComponent: SliderStanza
                             }}
                         />
                     )
