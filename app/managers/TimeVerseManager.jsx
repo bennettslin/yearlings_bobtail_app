@@ -37,6 +37,7 @@ class TimeVerseManager extends Component {
 
         // From parent.
         setRef: PropTypes.func.isRequired,
+        determineVerseBars: PropTypes.func.isRequired,
         scrollElementIntoView: PropTypes.func.isRequired,
         updatePath: PropTypes.func.isRequired
     }
@@ -77,6 +78,18 @@ class TimeVerseManager extends Component {
         )
 
         if (selectedVerseIndex !== null) {
+
+            /**
+             * If manual scroll is off, selected verse may go from above window
+             * view, to in it, to below it. So determine verse bars.
+             */
+            if (
+                this.props.isManualScroll &&
+                selectedVerseIndex !== this.props.selectedVerseIndex
+            ) {
+                this.props.determineVerseBars()
+            }
+
             this._selectTimeAndVerse({
                 selectedTimePlayed,
                 selectedVerseIndex,
@@ -203,13 +216,6 @@ class TimeVerseManager extends Component {
             })
         }
     }
-
-    // _setTimeoutForRenderScene() {
-    //     setTimeout(
-    //         this._setCanRenderScene,
-    //         0
-    //     )
-    // }
 
     _setCanRenderScene() {
         if (!this.props.canSceneRender) {

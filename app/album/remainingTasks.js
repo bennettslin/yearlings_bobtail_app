@@ -13,12 +13,6 @@ module.exports = [
         neededHours: 8
     },
 
-    {
-        taskName: `Selecting a new verse through playing should determine verse bars.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Weekend task.
     {
         taskName: `Cubes rendering through CSS logic!`,

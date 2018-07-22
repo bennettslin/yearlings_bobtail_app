@@ -469,6 +469,7 @@ class StateManager extends Component {
                 />
                 <TimeVerseManager
                     setRef={node => (this.timeVerseManager = node)}
+                    determineVerseBars={this.determineVerseBars}
                     scrollElementIntoView={this.scrollElementIntoView}
                     updatePath={updatePath}
                 />

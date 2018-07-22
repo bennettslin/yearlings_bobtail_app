@@ -3428,4 +3428,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Selecting a new verse through playing should determine verse bars.`,
+        workedHours: 1,
+        neededHours: 1
+    },
 ]

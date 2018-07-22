@@ -58,10 +58,6 @@ class KeyHandler extends Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            lyricWheelTimeoutId: ''
-        }
-
         this.handleKeyDownPress = this.handleKeyDownPress.bind(this)
         this._routeNavigation = this._routeNavigation.bind(this)
         this._handleAnnotationNavigation = this._handleAnnotationNavigation.bind(this)
