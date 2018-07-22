@@ -2,9 +2,8 @@
     background-color: rgba(200, 150, 250, 0.4);
 
     .RM__isPaused
-    &,
-    .RM__sliderMoving
     & {
+        // Override transition in inline style.
         transition: none !important;
     }
 }

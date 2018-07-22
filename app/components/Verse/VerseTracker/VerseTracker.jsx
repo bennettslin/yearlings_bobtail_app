@@ -1,4 +1,4 @@
-// Text displays to indicate time spent and remaining.
+// Component to show audio progress in verse.
 
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
@@ -30,7 +30,6 @@ class VerseTracker extends Component {
 
         // From parent.
         verseIndex: PropTypes.number.isRequired,
-        inVerseBar: PropTypes.bool,
         inLyric: PropTypes.bool,
         inSlider: PropTypes.bool
     }
@@ -71,13 +70,11 @@ class VerseTracker extends Component {
 
     getIsSelectedVerse(props) {
         const {
-                inVerseBar,
                 verseIndex,
                 renderableVerseIndex
             } = props,
 
             isSelected =
-                inVerseBar ||
                 verseIndex === renderableVerseIndex
 
         return isSelected
@@ -87,7 +84,6 @@ class VerseTracker extends Component {
         const {
                 renderableSongIndex,
                 verseIndex,
-                inVerseBar,
                 inLyric,
                 inSlider
             } = this.props,
@@ -109,8 +105,6 @@ class VerseTracker extends Component {
                 className={cx(
                     'VerseTracker',
                     isSelected && `VerseTracker__selected`,
-
-                    inVerseBar && 'VerseTracker__inVerseBar',
 
                     inSlider &&
                         'VerseTracker__horizontalTransition',
