@@ -14,7 +14,7 @@
         // @include mixin__textShadow($bgColour__audioHighlight);
 
         // Nesting here for simplicity.
-        .VerseColour__evenFilter {
+        .colourFilter__verse__even {
             display: none;
         }
     }
@@ -63,7 +63,25 @@
         width: calc(100% + #{$js__margin__thin * 2});
     }
 
-    .VerseColour__evenFilter {
+    // "Grandchild even filter."
+    .GcE {
         display: none;
+    }
+}
+
+// "Root playing verse index, child verse index."
+.RpV0 .ChV0, .RpV1 .ChV1, .RpV2 .ChV2, .RpV3 .ChV3, .RpV4 .ChV4, .RpV5 .ChV5, .RpV6 .ChV6, .RpV7 .ChV7, .RpV8 .ChV8, .RpV9 .ChV9, .RpV10 .ChV10, .RpV11 .ChV11, .RpV12 .ChV12, .RpV13 .ChV13, .RpV14 .ChV14, .RpV15 .ChV15, .RpV16 .ChV16, .RpV17 .ChV17, .RpV18 .ChV18, .RpV19 .ChV19, .RpV20 .ChV20, .RpV21 .ChV21, .RpV22 .ChV22, .RpV23 .ChV23, .RpV24 .ChV24, .RpV25 .ChV25, .RpV26 .ChV26, .RpV27 .ChV27, .RpV28 .ChV28, .RpV29 .ChV29, .RpV30 .ChV30, .RpV31 .ChV31, .RpV32 .ChV32, .RpV33 .ChV33, .RpV34 .ChV34, .RpV35 .ChV35, .RpV36 .ChV36, .RpV37 .ChV37, .RpV38 .ChV38, .RpV39 .ChV39, .RpV40 .ChV40, .RpV41 .ChV41, .RpV42 .ChV42, .RpV43 .ChV43, .RpV44 .ChV44, .RpV45 .ChV45, .RpV46 .ChV46, .RpV47 .ChV47, .RpV48 .ChV48, .RpV49 .ChV49, .RpV50 .ChV50, .RpV51 .ChV51, .RpV52 .ChV52, .RpV53 .ChV53, .RpV54 .ChV54, .RpV55 .ChV55, .RpV56 .ChV56, .RpV57 .ChV57, .RpV58 .ChV58, .RpV59 .ChV59, .RpV60 .ChV60, .RpV61 .ChV61, .RpV62 .ChV62 {
+    // Styling for cursored verse.
+
+    // "Child in unit."
+    &.ChL {
+        color: $colour__light !important;
+        // @include mixin__textShadow($bgColour__audioPlay, $important: true);
+    }
+
+    // "Grandchild verse colour."
+    .GcV {
+        // Use !important to override hover highlight.
+        background-color: $bgColour__audioPlay !important;
     }
 }

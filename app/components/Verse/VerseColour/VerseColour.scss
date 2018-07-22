@@ -1,8 +1,6 @@
-// Order matters!
-@import "./VerseColourDefaultLogic";
-@import "./VerseColourSliderLogic";
-@import "./VerseColourNavLogic";
-@import "./VerseColourInteractiveLogic";
+@import "./VerseDefaultLogic";
+@import "./VerseSliderLogic";
+@import "./VerseCursorLogic";
 
 .VerseColour {
     overflow: hidden;
