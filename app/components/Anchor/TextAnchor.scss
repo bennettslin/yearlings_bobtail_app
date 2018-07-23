@@ -1,8 +1,8 @@
-.TextAnchor__transition {
+.TextAnchor__linkText {
 
     .parentIsShown
     & {
-        transition: color $animationDuration__default;
+        transition: color $animationDuration__fast;
     }
 }
 

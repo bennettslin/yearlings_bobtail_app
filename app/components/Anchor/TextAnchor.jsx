@@ -31,6 +31,7 @@ TextAnchor = ({
         <Anchor {...other}>
             <span className={cx(
                 'TextAnchor',
+                'textShadow__text',
 
                 isAccessed && !isSelected && 'TextAnchor__accessed',
                 isStringText && 'TextAnchor__transition'

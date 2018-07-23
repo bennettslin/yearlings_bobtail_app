@@ -5,9 +5,6 @@
 
     padding: $js__margin__thick;
 
-    // TODO: Maybe consolidate all the text shadows that use this colour.
-    @include mixin__textShadow($bgColour__afterSelected);
-
     .RM__mobile:not(.RM__tablet)
     & {
         padding: $js__margin__thin;

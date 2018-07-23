@@ -8,17 +8,25 @@
     }
 }
 
-@mixin mixin__textShadow($bgColour) {
+@mixin mixin__textShadow($bgColour, $important: false) {
     $offset: 1px;
     $offset__negative: -$offset;
     $blur: 0.75px;
 
     .textShadow__text {
-        text-shadow:
-        $offset__negative $offset__negative $blur $bgColour,
-        $offset $offset__negative $blur $bgColour,
-        $offset__negative $offset $blur $bgColour,
-        $offset $offset $blur $bgColour;
+        @if $important {
+            text-shadow:
+                $offset__negative $offset__negative $blur $bgColour,
+                $offset $offset__negative $blur $bgColour,
+                $offset__negative $offset $blur $bgColour,
+                $offset $offset $blur $bgColour !important;
+        } @else {
+            text-shadow:
+                $offset__negative $offset__negative $blur $bgColour,
+                $offset $offset__negative $blur $bgColour,
+                $offset__negative $offset $blur $bgColour,
+                $offset $offset $blur $bgColour;
+        }
     }
 }
 
@@ -30,12 +38,27 @@
         } @else {
             color: $colour__text__light;
         }
+
     } @else {
         @if $important {
             color: $colour__text__dark !important;
         } @else {
             color: $colour__text__dark;
         }
+    }
+
+    // TODO: Play around with these values more.
+    @if $light {
+        @include mixin__textShadow(
+            rgba(0, 0, 0, 0.1),
+            $important: $important
+        );
+
+    } @else {
+        @include mixin__textShadow(
+            rgba(255, 255, 255, 0.4),
+            $important: $important
+        );
     }
 
     .TextAnchor__linkText__default {

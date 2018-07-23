@@ -22,7 +22,7 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Be smart about button custom widths..`,
+        taskName: `Be smart about button custom widths.`,
         workedHours: 0,
         neededHours: 1
     },

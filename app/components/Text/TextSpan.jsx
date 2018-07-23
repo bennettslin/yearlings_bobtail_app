@@ -66,7 +66,6 @@ TextSpan = ({
     return (
         <Tag className={cx(
             'TextSpan',
-            'textShadow__text',
             isPortalAnchorInPortal && 'textSpan__portalInPortal'
         )}>
             {formattedText}

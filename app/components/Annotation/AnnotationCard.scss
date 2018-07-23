@@ -50,7 +50,6 @@ $width__annotationCard__phone:
 
 .AnnotationCard__isText {
     background-color: $bgColour__annotationCard;
-    @include mixin__textShadow($bgColour__annotationCard);
 }
 
 .AnnotationCard__portal {
