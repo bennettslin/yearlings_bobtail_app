@@ -1,0 +1,35 @@
+import AfterwordIcon from './Icons/AfterwordIcon'
+import BackstoryIcon from './Icons/BackstoryIcon'
+import NarrativeIcon from './Icons/NarrativeIcon'
+import ObservationIcon from './Icons/ObservationIcon'
+import PortalIcon from './Icons/PortalIcon'
+import PunIcon from './Icons/PunIcon'
+import ReferenceIcon from './Icons/ReferenceIcon'
+import SongwritingIcon from './Icons/SongwritingIcon'
+
+import {
+    AFTERWORD,
+    BACKSTORY,
+    NARRATIVE,
+    OBSERVATION,
+    PORTAL,
+    PUN,
+    REFERENCE,
+    SONGWRITING
+} from '../../constants/dots'
+
+const DOTS_MAP = {
+        [AFTERWORD]: AfterwordIcon,
+        [BACKSTORY]: BackstoryIcon,
+        [NARRATIVE]: NarrativeIcon,
+        [OBSERVATION]: ObservationIcon,
+        [PORTAL]: PortalIcon,
+        [PUN]: PunIcon,
+        [REFERENCE]: ReferenceIcon,
+        [SONGWRITING]: SongwritingIcon
+    },
+    DEFAULT_COMPONENT = () => (null)
+
+export const getIcon = (iconName) => {
+    return DOTS_MAP[iconName] || DEFAULT_COMPONENT
+}

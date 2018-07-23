@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import DynamicSvg from '../DynamicSvg/DynamicSvg'
 
-import { getIcon } from './buttonHelper'
+import { getButtonIcon } from './buttonHelper'
 
 const propTypes = {
     // From parent.
@@ -22,7 +22,7 @@ const ButtonIcon = ({
     temporaryText
 
 }) => {
-    const IconComponent = getIcon(buttonName)
+    const IconComponent = getButtonIcon(buttonName)
 
     return (
         <div

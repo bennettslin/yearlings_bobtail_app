@@ -31,22 +31,27 @@ TextAnchor = ({
         <Anchor {...other}
             isDotAnchor
         >
-            <Dot className={cx(
-                'DotAnchor',
+            <Dot
+                className={cx(
+                    'DotAnchor',
 
-                isAccessed && !isSelected && 'DotAnchor__accessed',
+                    isAccessed && !isSelected && 'DotAnchor__accessed',
 
-                isSelected ?
-                    'DotAnchor__selected' :
-                    'DotAnchor__selectable',
+                    isSelected ?
+                        'DotAnchor__selected' :
+                        'DotAnchor__selectable',
 
-                inAnnotation && 'DotAnchor__inAnnotation',
-                inStanza && 'DotAnchor__inStanza',
+                    inAnnotation && 'DotAnchor__inAnnotation',
+                    inStanza && 'DotAnchor__inStanza',
 
-                // Only colour dot anchor by its key when selectable.
-                !other.isSelected &&
-                    getPrefixPrependedClassNames(stanzaDotKeys, 'DotAnchor')
-            )} />
+                    // Only colour dot anchor by its key when selectable.
+                    !other.isSelected &&
+                        getPrefixPrependedClassNames(
+                            stanzaDotKeys,
+                            'DotAnchor'
+                        )
+                )}
+            />
         </Anchor>
     )
 }

@@ -24,14 +24,16 @@ DotSequenceDot = ({
     inTextAnchor
 
 }) => (
-    <Dot className={cx(
-        'SequenceDot',
-        'bgColour__dot',
-        `bgColour__dot__${dotKey}`,
-        `styleIf__${dotKey}`,
-        inTextAnchor && 'SequenceDot__textAnchor',
-        inAnnotationCard && 'SequenceDot__annotationCard'
-    )} />
+    <Dot
+        className={cx(
+            'SequenceDot',
+            'bgColour__dot',
+            `bgColour__dot__${dotKey}`,
+            `styleIf__${dotKey}`,
+            inTextAnchor && 'SequenceDot__textAnchor',
+            inAnnotationCard && 'SequenceDot__annotationCard'
+        )}
+    />
 )
 
 DotSequenceDot.propTypes = dotPropTypes

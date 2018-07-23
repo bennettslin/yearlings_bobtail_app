@@ -60,6 +60,6 @@ const BUTTONS_MAP = {
     },
     DEFAULT_COMPONENT = () => (null)
 
-export const getIcon = (iconName) => {
+export const getButtonIcon = (iconName) => {
     return BUTTONS_MAP[iconName] || DEFAULT_COMPONENT
 }

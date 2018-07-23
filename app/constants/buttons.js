@@ -36,5 +36,5 @@ module.exports = {
     PORTAL_BUTTON_KEY,
     SCORES_BUTTON_KEY,
     TIPS_BUTTON_KEY,
-    TITLE_BUTTON_KEY,
+    TITLE_BUTTON_KEY
 }
