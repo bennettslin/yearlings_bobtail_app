@@ -2,9 +2,9 @@ module.exports = [
 
     // Buttons and dots.
     {
-        taskName: `Set up dots to use svgs.`,
+        taskName: `Set up dots to use svgs. Include fields. Dot sequence gradient.`,
         workedHours: 1,
-        neededHours: 2
+        neededHours: 4
     },
     {
         taskName: `Set up loading icons to use svgs.`,
