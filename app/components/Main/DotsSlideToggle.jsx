@@ -7,6 +7,7 @@ import cx from 'classnames'
 
 import Button from '../Button/Button'
 import { DOTS_SECTION_EXPAND_KEY } from '../../constants/access'
+import { DOTS_SLIDE_BUTTON_KEY } from '../../constants/buttons'
 
 const mapStateToProps = ({
     selectedDotsIndex
@@ -34,7 +35,7 @@ DotsSlideToggle = ({
     )}>
         <Button
             isLargeSize
-            buttonName="dotsSlide"
+            buttonName={DOTS_SLIDE_BUTTON_KEY}
             temporaryText={selectedDotsIndex}
             accessKey={DOTS_SECTION_EXPAND_KEY}
             handleButtonClick={handleDotsSectionToggle}

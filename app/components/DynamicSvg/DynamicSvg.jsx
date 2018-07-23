@@ -3,6 +3,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+const defaultProps = {
+    viewBoxWidth: 100,
+    viewBoxHeight: 100
+}
+
 const propTypes = {
     className: PropTypes.any,
     viewBoxWidth: PropTypes.number,
@@ -19,8 +24,15 @@ const DynamicSvg = ({
 
 }) => {
 
-    const safeViewBoxWidth = viewBoxWidth > 0 ? viewBoxWidth : 0,
-        safeViewBoxHeight = viewBoxHeight > 0 ? viewBoxHeight : 0
+    const
+        safeViewBoxWidth =
+            viewBoxWidth > 0 ?
+                viewBoxWidth :
+                0,
+        safeViewBoxHeight =
+            viewBoxHeight > 0 ?
+                viewBoxHeight :
+                0
 
     return (
         <svg
@@ -38,6 +50,7 @@ const DynamicSvg = ({
     )
 }
 
+DynamicSvg.defaultProps = defaultProps
 DynamicSvg.propTypes = propTypes
 
 export default DynamicSvg

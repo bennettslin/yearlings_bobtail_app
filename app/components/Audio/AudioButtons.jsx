@@ -7,10 +7,20 @@ import cx from 'classnames'
 
 import Button from '../Button/Button'
 
-import { AUDIO_PLAY_KEY,
-         AUDIO_OPTIONS_TOGGLE_KEY,
-         AUDIO_PREVIOUS_SONG_KEY,
-         AUDIO_NEXT_SONG_KEY } from '../../constants/access'
+import {
+    AUDIO_PLAY_KEY,
+    AUDIO_OPTIONS_TOGGLE_KEY,
+    AUDIO_PREVIOUS_SONG_KEY,
+    AUDIO_NEXT_SONG_KEY
+} from '../../constants/access'
+
+import {
+    AUDIO_OPTIONS_BUTTON_KEY,
+    AUDIO_PLAY_BUTTON_KEY,
+    AUDIO_SELECT_BUTTON_KEY
+} from '../../constants/buttons'
+
+
 import { AUDIO_OPTIONS } from '../../constants/options'
 import { getSongsAndLoguesCount, getSongsNotLoguesCount } from '../../helpers/dataHelper'
 import { getValueInBitNumber } from '../../helpers/bitHelper'
@@ -98,7 +108,7 @@ class AudioButtons extends Component {
                 )}>
                     {/* Previous button. */}
                     <Button
-                        buttonName="audioSelect"
+                        buttonName={AUDIO_SELECT_BUTTON_KEY}
                         className="AudioButton"
                         temporaryText={
                             isPrologue || isFirstSong ? '\u2302' : '\u21E4'
@@ -110,7 +120,7 @@ class AudioButtons extends Component {
 
                     {/* Play button. */}
                     <Button
-                        buttonName="audioPlay"
+                        buttonName={AUDIO_PLAY_BUTTON_KEY}
                         className="AudioButton"
                         isLargeSize
                         temporaryText={playButtonText}
@@ -121,7 +131,7 @@ class AudioButtons extends Component {
 
                     {/* Next button. */}
                     <Button
-                        buttonName="audioSelect"
+                        buttonName={AUDIO_SELECT_BUTTON_KEY}
                         className="AudioButton"
                         temporaryText={
                             isEpilogue || isLastSong ? '\u2302' : '\u21E5'
@@ -138,7 +148,7 @@ class AudioButtons extends Component {
                     'flexAlignContainer'
                 )}>
                     <Button
-                        buttonName="audioOptions"
+                        buttonName={AUDIO_OPTIONS_BUTTON_KEY}
                         className="AudioButton"
                         temporaryText={AUDIO_OPTIONS[selectedAudioOptionIndex]}
                         accessKey={AUDIO_OPTIONS_TOGGLE_KEY}

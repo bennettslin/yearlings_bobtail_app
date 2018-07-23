@@ -11,6 +11,7 @@ import Button from '../../Button/Button'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 import { NAVIGATION_ENTER_KEY } from '../../../constants/access'
+import { AUDIO_SELECT_BUTTON_KEY } from '../../../constants/buttons'
 
 class VerseNav extends Component {
 
@@ -71,7 +72,7 @@ class VerseNav extends Component {
             )}>
                 <Button
                     isSmallSize
-                    buttonName="audioSelect"
+                    buttonName={AUDIO_SELECT_BUTTON_KEY}
                     accessKey={NAVIGATION_ENTER_KEY}
                     showAccessIconIfAccessOn={isEnabled}
                     isDisabled={!isEnabled}

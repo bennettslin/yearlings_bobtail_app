@@ -1,93 +1,109 @@
-.ButtonIcon {
-    width: 100%;
-    height: 100%;
+.ButtonIcon__temporaryField {
+
+    // TODO: Temporary styles, obviously.
+    cx: 50;
+    cy: 50;
+    r: 50;
 }
 
-.ButtonIcon__disabled {
-    background-color: $bgColour__audioDisabled;
+.ButtonIcon__temporaryImage {
+
+    // TODO: Temporary styles, obviously.
+    cx: 50;
+    cy: 50;
+    r: 25;
+    fill: #ddd;
 }
 
-.ButtonIcon__temporaryEnabledName__audioSelect {
-    background-color: $bgColour__audioSelect;
+.ButtonIcon__temporaryText {
+    position: relative;
 }
 
-.ButtonIcon__temporaryEnabledName__audioPlay {
+.ButtonIcon__temporaryField__disabled {
+    fill: $bgColour__audioDisabled;
+}
+
+.ButtonIcon__temporaryField__audioSelect {
+    fill: $bgColour__audioSelect;
+}
+
+.ButtonIcon__temporaryField__audioPlay {
     .RM__isPlaying
     & {
-        background-color: $bgColour__audioPause;
+        fill: $bgColour__audioPause;
     }
 
     .RM__isPaused
     & {
-        background-color: $bgColour__audioPlay;
+        fill: $bgColour__audioPlay;
     }
 }
 
-.ButtonIcon__temporaryEnabledName__audioOptions {
-    background-color: $bgColour__audioNeutral;
+.ButtonIcon__temporaryField__audioOptions {
+    fill: $bgColour__audioNeutral;
 }
 
-.ButtonIcon__temporaryEnabledName__carouselNav {
-    background-color: #aed;
+.ButtonIcon__temporaryField__carouselNav {
+    fill: #aed;
 }
 
-.ButtonIcon__temporaryEnabledName__carouselSelect {
-    background-color: #db8;
+.ButtonIcon__temporaryField__carouselSelect {
+    fill: #db8;
 }
 
-.ButtonIcon__temporaryEnabledName__dotsSlide {
-    background-color: #d9d;
+.ButtonIcon__temporaryField__dotsSlide {
+    fill: #d9d;
 }
 
-.ButtonIcon__temporaryEnabledName__lyricEar {
-    background-color: #8db;
+.ButtonIcon__temporaryField__lyricEar {
+    fill: #8db;
 }
 
-.ButtonIcon__temporaryEnabledName__lyricExpand {
-    background-color: #bd8;
+.ButtonIcon__temporaryField__lyricExpand {
+    fill: #bd8;
 }
 
-.ButtonIcon__temporaryEnabledName__lyricScroll {
-    background-color: #d8b;
+.ButtonIcon__temporaryField__lyricScroll {
+    fill: #d8b;
 }
 
-.ButtonIcon__temporaryEnabledName__nav {
-    background-color: #dd8;
+.ButtonIcon__temporaryField__nav {
+    fill: #dd8;
 
     .Button__indexSelected
     & {
-        background-color: orange;
+        fill: orange;
     }
 }
 
-.ButtonIcon__temporaryEnabledName__overview {
-    background-color: #dbb;
+.ButtonIcon__temporaryField__overview {
+    fill: #dbb;
 }
 
-.ButtonIcon__temporaryEnabledName__popupClose {
-    background-color: #dac;
+.ButtonIcon__temporaryField__popupClose {
+    fill: #dac;
 }
 
-.ButtonIcon__temporaryEnabledName__popupPrevious {
-    background-color: #adc;
+.ButtonIcon__temporaryField__popupNext {
+    fill: #cda;
 }
 
-.ButtonIcon__temporaryEnabledName__popupNext {
-    background-color: #cda;
+.ButtonIcon__temporaryField__popupPrevious {
+    fill: #adc;
 }
 
-.ButtonIcon__temporaryEnabledName__portal {
-    background-color: #bbd;
+.ButtonIcon__temporaryField__portal {
+    fill: #bbd;
 }
 
-.ButtonIcon__temporaryEnabledName__scores {
-    background-color: #9bd;
+.ButtonIcon__temporaryField__scores {
+    fill: #9bd;
 }
 
-.ButtonIcon__temporaryEnabledName__title {
-    background-color: #d88;
+.ButtonIcon__temporaryField__tips {
+    fill: #dbb;
 }
 
-.ButtonIcon__temporaryEnabledName__tips {
-    background-color: #dbb;
+.ButtonIcon__temporaryField__title {
+    fill: #d88;
 }

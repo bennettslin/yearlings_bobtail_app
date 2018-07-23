@@ -45,16 +45,16 @@ class ScrollManager extends Component {
     componentDidMount() {
         this.props.setRef(this)
 
-        window.elements = () => {
-            console.error(
-                'Carousel annotation elements:',
-                this.myCarouselAnnotationElements,
-                '\nLyric annotation elements:',
-                this.myLyricAnnotationElements,
-                '\nVerse elements',
-                this.myVerseElements
-            )
-        }
+        // window.elements = () => {
+        //     console.error(
+        //         'Carousel annotation elements:',
+        //         this.myCarouselAnnotationElements,
+        //         '\nLyric annotation elements:',
+        //         this.myLyricAnnotationElements,
+        //         '\nVerse elements',
+        //         this.myVerseElements
+        //     )
+        // }
     }
 
     shouldComponentUpdate(nextProps) {

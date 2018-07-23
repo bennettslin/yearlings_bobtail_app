@@ -53,8 +53,6 @@
 
 .ButtonAnimatable {
 
-    box-shadow: $boxShadow__button;
-
     .Button__enabled:hover
     & {
         animation: bounceHover $animationDuration__default;

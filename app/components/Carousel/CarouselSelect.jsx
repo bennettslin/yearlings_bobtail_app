@@ -3,8 +3,12 @@ import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
 import Button from '../Button/Button'
-import { NAVIGATION_LEFT_KEY,
-         NAVIGATION_RIGHT_KEY } from '../../constants/access'
+import {
+    NAVIGATION_LEFT_KEY,
+    NAVIGATION_RIGHT_KEY
+} from '../../constants/access'
+
+import { CAROUSEL_SELECT_BUTTON_KEY } from '../../constants/buttons'
 
 const carouselSelectPropTypes = {
     handleAnnotationPrevious: PropTypes.func.isRequired,
@@ -19,14 +23,14 @@ const CarouselSelect = ({
 }) => (
     <div className="CarouselSelect">
         <Button
-            buttonName="carouselSelect"
+            buttonName={CAROUSEL_SELECT_BUTTON_KEY}
             isLargeSize
             temporaryText={'\u276e'}
             accessKey={NAVIGATION_LEFT_KEY}
             handleButtonClick={handleAnnotationPrevious}
         />
         <Button
-            buttonName="carouselSelect"
+            buttonName={CAROUSEL_SELECT_BUTTON_KEY}
             isLargeSize
             temporaryText={'\u276f'}
             accessKey={NAVIGATION_RIGHT_KEY}

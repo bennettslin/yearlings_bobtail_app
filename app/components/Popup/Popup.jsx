@@ -67,7 +67,6 @@ class Popup extends Component {
     }
 
     _handlePopupContainerClick(e) {
-        console.error(e)
         if (this.state.isDisplayed) {
             this.props.handlePopupContainerClick(e)
         }

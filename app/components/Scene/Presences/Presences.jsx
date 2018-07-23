@@ -118,8 +118,6 @@ class Presences extends Component {
                         `Presences__y${yIndex}`,
                         'absoluteFullContainer'
                     )}
-                    viewBoxWidth={100}
-                    viewBoxHeight={100}
                 >
                     {presenceTypes.map(presenceType => {
                         const presenceEntity = presences[presenceType],

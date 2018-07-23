@@ -7,8 +7,16 @@ import cx from 'classnames'
 
 import Button from '../Button/Button'
 
-import { SCORE_TOGGLE_KEY,
-         TIPS_TOGGLE_KEY } from '../../constants/access'
+import {
+    SCORE_TOGGLE_KEY,
+    TIPS_TOGGLE_KEY
+} from '../../constants/access'
+
+import {
+    SCORES_BUTTON_KEY,
+    TIPS_BUTTON_KEY
+} from '../../constants/buttons'
+
 import { TIPS_OPTIONS } from '../../constants/options'
 import { getIsDesktop, getIsPhone } from '../../helpers/responsiveHelper'
 
@@ -92,7 +100,7 @@ ScoresTips = ({
             {showScoreToggleButton &&
                 <Button
                     isLargeSize
-                    buttonName="scores"
+                    buttonName={SCORES_BUTTON_KEY}
                     className="ScoresTipsButton"
                     temporaryText={selectedScoreIndex}
                     accessKey={SCORE_TOGGLE_KEY}
@@ -103,7 +111,7 @@ ScoresTips = ({
             {/* TODO: Shouldn't this use the tips toggle button? */}
             <Button
                 isLargeSize
-                buttonName="tips"
+                buttonName={TIPS_BUTTON_KEY}
                 className="ScoresTipsButton"
                 temporaryText={TIPS_OPTIONS[selectedTipsIndex]}
                 accessKey={TIPS_TOGGLE_KEY}

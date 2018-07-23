@@ -3,9 +3,17 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Button from '../Button/Button'
 
-import { NAVIGATION_LEFT_KEY,
-         NAVIGATION_RIGHT_KEY,
-         NAVIGATION_ESCAPE_KEY } from '../../constants/access'
+import {
+    NAVIGATION_LEFT_KEY,
+    NAVIGATION_RIGHT_KEY,
+    NAVIGATION_ESCAPE_KEY
+} from '../../constants/access'
+
+import {
+    POPUP_CLOSE_BUTTON_KEY,
+    POPUP_NEXT_BUTTON_KEY,
+    POPUP_PREVIOUS_BUTTON_KEY
+} from '../../constants/buttons'
 
 class PopupViewButton extends Component {
 
@@ -68,17 +76,17 @@ class PopupViewButton extends Component {
             accessKey
 
         if (isCloseButton) {
-            buttonName = 'popupClose'
+            buttonName = POPUP_CLOSE_BUTTON_KEY
             temporaryText = '\u274C'
             accessKey = NAVIGATION_ESCAPE_KEY
 
         } else if (isPreviousButton) {
-            buttonName = 'popupPrevious'
+            buttonName = POPUP_PREVIOUS_BUTTON_KEY
             temporaryText = '\u276e'
             accessKey = NAVIGATION_LEFT_KEY
 
         } else if (isNextButton) {
-            buttonName = 'popupNext'
+            buttonName = POPUP_NEXT_BUTTON_KEY
             temporaryText = '\u276f'
             accessKey = NAVIGATION_RIGHT_KEY
         }

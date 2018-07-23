@@ -3438,4 +3438,9 @@ module.exports = [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: `Set up buttons to use svgs.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

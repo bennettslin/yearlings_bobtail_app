@@ -1,9 +1,30 @@
 module.exports = [
 
+    // Buttons and dots.
     {
-        taskName: `Set up buttons to use svgs, including loading icons.`,
+        taskName: `Set up dots to use svgs.`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 1
+    },
+    {
+        taskName: `Set up loading icons to use svgs.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Button icons take in an index, instead of temporary text.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Button and dot styling, including for enabled and disabled.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Be smart about button custom widths. And title toggle should not have such a variable width.`,
+        workedHours: 0,
+        neededHours: 5
     },
 
     // Weekend task.

@@ -9,7 +9,7 @@ import Texts from '../Text/Texts'
 import Button from '../Button/Button'
 
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
-import { PORTAL } from '../../constants/dots'
+import { PORTAL_BUTTON_KEY } from '../../constants/buttons'
 
 import {
     LYRIC_COLUMN_KEYS,
@@ -130,7 +130,7 @@ class AnnotationPortal extends Component {
                 {/* Wrap button so it won't get squished if text wraps. */}
                 <div className="AnnotationPortal__button">
                     <Button
-                        buttonName={PORTAL}
+                        buttonName={PORTAL_BUTTON_KEY}
                         showAccessIconIfAccessOn={isAccessed && isSelected}
                         accessKey={NAVIGATION_ENTER_KEY}
                         handleButtonClick={this._handlePortalClick}

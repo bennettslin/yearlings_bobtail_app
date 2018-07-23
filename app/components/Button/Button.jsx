@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-// TODO: Inherit from this class.
 import ButtonIcon from '../Button/ButtonIcon'
 import AccessIcon from '../AccessIcon/AccessIcon'
 
@@ -62,7 +61,8 @@ class Button extends Component {
 
     render() {
 
-        const { buttonName,
+        const {
+                buttonName,
                 className,
                 isIndexSelected,
                 isCustomSize,
@@ -73,7 +73,8 @@ class Button extends Component {
                 showAccessIconIfAccessOn,
                 temporaryText,
                 accessKey,
-                children } = this.props,
+                children
+            } = this.props,
 
             isDefaultSize = !isLargeSize && !isSmallSize && !isCustomSize,
 
@@ -105,9 +106,11 @@ class Button extends Component {
                     'absoluteFullContainer'
                 )}>
                     <ButtonIcon
-                        temporaryName={buttonName}
-                        temporaryText={temporaryText}
-                        showDisabled={isDisabled}
+                        {...{
+                            buttonName,
+                            temporaryText,
+                            showDisabled: isDisabled
+                        }}
                     />
 
                     {children}

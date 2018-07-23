@@ -7,6 +7,7 @@ import cx from 'classnames'
 
 import Button from '../Button/Button'
 import { OVERVIEW_TOGGLE_KEY } from '../../constants/access'
+import { OVERVIEW_BUTTON_KEY } from '../../constants/buttons'
 import { OVERVIEW_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({
@@ -43,7 +44,7 @@ OverviewToggle = ({
     )}>
         <Button
             isCustomSize
-            buttonName="overview"
+            buttonName={OVERVIEW_BUTTON_KEY}
             isDisabled={!isEnabled}
             accessKey={OVERVIEW_TOGGLE_KEY}
             temporaryText={OVERVIEW_OPTIONS[selectedOverviewIndex]}

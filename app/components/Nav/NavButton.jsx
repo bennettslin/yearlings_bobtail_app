@@ -7,6 +7,7 @@ import cx from 'classnames'
 import Button from '../Button/Button'
 import NavPanel from './NavPanel'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
+import { NAV_BUTTON_KEY } from '../../constants/buttons'
 import { getSongIsLogue } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
@@ -114,7 +115,7 @@ class NavButton extends Component {
                 )}
             >
                 <Button
-                    buttonName="nav"
+                    buttonName={NAV_BUTTON_KEY}
                     isIndexSelected={isSelected}
                     showAccessIconIfAccessOn={isAccessed && isNavigable}
                     accessKey={isToggle ? '' : NAVIGATION_ENTER_KEY}

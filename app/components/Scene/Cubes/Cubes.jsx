@@ -264,8 +264,6 @@ const CubesView = ({
                 isCurrentlyRendering && 'Cubes__currentlyRendering',
                 'absoluteFullContainer'
             )}
-            viewBoxWidth={100}
-            viewBoxHeight={100}
         >
             {columnIndicesArray.map(xIndex => (
                 <Cube

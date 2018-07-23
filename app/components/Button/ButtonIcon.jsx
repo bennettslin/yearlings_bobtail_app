@@ -1,40 +1,69 @@
-/**
- * TODO: Placeholder for icon that will eventually be an actual svg. For now,
- * only styling is background colour.
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import DynamicSvg from '../DynamicSvg/DynamicSvg'
+
+import { getIcon } from './buttonHelper'
+
 const propTypes = {
     // From parent.
     showDisabled: PropTypes.bool,
-    temporaryName: PropTypes.string,
+    buttonName: PropTypes.string.isRequired,
+
+    // TODO: Turn temporaryText into index option passed to icon component.
     temporaryText: PropTypes.any
 }
 
 const ButtonIcon = ({
 
     showDisabled,
-    temporaryName,
+    buttonName,
     temporaryText
 
-}) => (
-    <div className={cx(
-        'ButtonIcon',
+}) => {
+    const IconComponent = getIcon(buttonName)
 
-        !showDisabled &&
-            `ButtonIcon__temporaryEnabledName__${temporaryName}`,
+    return (
+        <div
+            className={cx(
+                'ButtonIcon',
+                'absoluteFullContainer',
+                'flexCentreContainer'
+            )}
+        >
+            <DynamicSvg
+                className={cx(
+                    'absoluteFullContainer'
+                )}
+            >
 
-        { 'ButtonIcon__disabled': showDisabled },
+                <circle
+                    className={cx(
+                        'ButtonIcon__temporaryField',
 
-        // Maybe temporary.
-        'flexCentreContainer'
-    )}>
-        {temporaryText}
-    </div>
-)
+                        showDisabled ?
+                            'ButtonIcon__temporaryField__disabled' :
+                            `ButtonIcon__temporaryField__${buttonName}`
+                    )}
+                />
+
+                <IconComponent
+                    index={0}
+                />
+
+            </DynamicSvg>
+
+            <div
+                className={cx(
+                    'ButtonIcon__temporaryText'
+                )}
+            >
+                {temporaryText}
+            </div>
+        </div>
+    )
+}
 
 ButtonIcon.propTypes = propTypes
 

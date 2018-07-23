@@ -6,6 +6,7 @@ import cx from 'classnames'
 
 import Button from '../../Button/Button'
 import { LYRIC_SCROLL_TOGGLE_KEY } from '../../../constants/access'
+import { LYRIC_SCROLL_BUTTON_KEY } from '../../../constants/buttons'
 
 const lyricScrollTogglePropTypes = {
     // From parent.
@@ -25,7 +26,7 @@ LyricToggleScroll = ({
     )}>
         <Button
             isLargeSize
-            buttonName="lyricScroll"
+            buttonName={LYRIC_SCROLL_BUTTON_KEY}
             temporaryText="auto"
             accessKey={LYRIC_SCROLL_TOGGLE_KEY}
             handleButtonClick={handleLyricAutoScroll}
