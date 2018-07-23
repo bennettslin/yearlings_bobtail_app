@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import DynamicSvg from '../../DynamicSvg/DynamicSvg'
+import Svg from '../../Svg/Svg'
 import FloorSeat from './FloorSeat'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
@@ -82,7 +82,7 @@ class Floor extends Component {
                 )}
                 style={floorFieldStyle}
             >
-                <DynamicSvg
+                <Svg
                     className={cx(
                         'Theatre__subfield'
                     )}
@@ -157,7 +157,7 @@ class Floor extends Component {
                             </g>
                         )
                     })}
-                </DynamicSvg>
+                </Svg>
             </div>
         )
     }

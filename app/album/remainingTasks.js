@@ -3,8 +3,8 @@ module.exports = [
     // Buttons and dots.
     {
         taskName: `Set up dots to use svgs.`,
-        workedHours: 0,
-        neededHours: 1
+        workedHours: 1,
+        neededHours: 2
     },
     {
         taskName: `Set up loading icons to use svgs.`,
@@ -22,9 +22,14 @@ module.exports = [
         neededHours: 2
     },
     {
-        taskName: `Be smart about button custom widths. And title toggle should not have such a variable width.`,
+        taskName: `Be smart about button custom widths..`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 1
+    },
+    {
+        taskName: `Title toggle should not have such a variable width.`,
+        workedHours: 0,
+        neededHours: 3
     },
 
     // Weekend task.

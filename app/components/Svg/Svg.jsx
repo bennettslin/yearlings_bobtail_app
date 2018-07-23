@@ -15,7 +15,7 @@ const propTypes = {
     children: PropTypes.node.isRequired
 }
 
-const DynamicSvg = ({
+const Svg = ({
 
     className,
     viewBoxWidth,
@@ -50,7 +50,7 @@ const DynamicSvg = ({
     )
 }
 
-DynamicSvg.defaultProps = defaultProps
-DynamicSvg.propTypes = propTypes
+Svg.defaultProps = defaultProps
+Svg.propTypes = propTypes
 
-export default DynamicSvg
+export default Svg

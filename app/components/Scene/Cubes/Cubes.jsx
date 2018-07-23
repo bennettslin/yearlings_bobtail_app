@@ -11,7 +11,7 @@ import {
     setCanRenderPresences
 } from '../../../redux/actions/render'
 
-import DynamicSvg from '../../DynamicSvg/DynamicSvg'
+import Svg from '../../Svg/Svg'
 import Cube from './Cube'
 
 import { DEFAULT_X_AXIS_INDICES,
@@ -257,7 +257,7 @@ const CubesView = ({
     }
 
     return (
-        <DynamicSvg
+        <Svg
             className={cx(
                 `Cubes__y${yIndex}${yIndex === 0 ? '__back' : ''}${yIndex === CUBE_Y_AXIS_LENGTH - 1 ? '__front' : ''}`,
                 `Cubes__${isFloor ? 'floor' : 'ceiling'}`,
@@ -277,7 +277,7 @@ const CubesView = ({
                     }}
                 />
             ))}
-        </DynamicSvg>
+        </Svg>
     )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DynamicSvg from '../DynamicSvg/DynamicSvg'
+import Svg from '../Svg/Svg'
 
 import { getDotIcon } from './buttonHelper'
 
@@ -26,7 +26,7 @@ const DotIcon = ({
                 'flexCentreContainer'
             )}
         >
-            <DynamicSvg
+            <Svg
                 className={cx(
                     'absoluteFullContainer'
                 )}
@@ -41,7 +41,7 @@ const DotIcon = ({
 
                 <IconComponent />
 
-            </DynamicSvg>
+            </Svg>
         </div>
     )
 }

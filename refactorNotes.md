@@ -25,7 +25,7 @@ Button (/)
 Carousel (/)
 Dot (/)
 Dots (/)
-DynamicSvg
+Svg
 Live (/)
 Lyric (/)
 Lyric (/)

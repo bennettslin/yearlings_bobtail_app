@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DynamicSvg from '../DynamicSvg/DynamicSvg'
+import Svg from '../Svg/Svg'
 
 import { getButtonIcon } from './buttonHelper'
 
@@ -32,7 +32,7 @@ const ButtonIcon = ({
                 'flexCentreContainer'
             )}
         >
-            <DynamicSvg
+            <Svg
                 className={cx(
                     'absoluteFullContainer'
                 )}
@@ -52,7 +52,7 @@ const ButtonIcon = ({
                     index={0}
                 />
 
-            </DynamicSvg>
+            </Svg>
 
             <div
                 className={cx(

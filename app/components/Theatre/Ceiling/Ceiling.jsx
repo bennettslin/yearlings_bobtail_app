@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import DynamicSvg from '../../DynamicSvg/DynamicSvg'
+import Svg from '../../Svg/Svg'
 import CeilingRafter from './CeilingRafter'
 
 import { getArrayOfCoordinatesForFactoredLengths } from '../../../helpers/generalHelper'
@@ -78,7 +78,7 @@ class Ceiling extends Component {
                 )}
                 style={ceilingFieldStyle}
             >
-                <DynamicSvg
+                <Svg
                     className={cx(
                         'Theatre__subfield'
                     )}
@@ -105,7 +105,7 @@ class Ceiling extends Component {
                             />
                         )
                     })}
-                </DynamicSvg>
+                </Svg>
             </div>
         )
     }

@@ -14,7 +14,7 @@ import {
     setCanRenderPixels
 } from '../../../redux/actions/render'
 
-import DynamicSvg from '../../DynamicSvg/DynamicSvg'
+import Svg from '../../Svg/Svg'
 import Presence from './Presence'
 
 import { getPresencesForCubes } from '../sceneDataHelper'
@@ -113,7 +113,7 @@ class Presences extends Component {
             const presenceTypes = keys(presences)
 
             return (
-                <DynamicSvg
+                <Svg
                     className={cx(
                         `Presences__y${yIndex}`,
                         'absoluteFullContainer'
@@ -141,7 +141,7 @@ class Presences extends Component {
                                 />
                             ))
                     })}
-                </DynamicSvg>
+                </Svg>
             )
         } else {
             return null
