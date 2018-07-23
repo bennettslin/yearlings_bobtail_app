@@ -4,6 +4,15 @@
 .DotSequence {
     position: absolute;
     display: flex;
+
+    $gradient__dotSequence: linear-gradient(
+        rgba(0, 0, 0, 1.0),
+        rgba(0, 0, 0, 0)
+    );
+
+    // Not taken care of by autoprefixer, unfortunately.
+    -webkit-mask-image: $gradient__dotSequence;
+    mask-image: $gradient__dotSequence;
 }
 
 .DotSequence__inTextAnchor {
