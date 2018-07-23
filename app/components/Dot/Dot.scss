@@ -1,7 +1,9 @@
 @import "./DotLogic";
-@import "./DotSequence";
-@import "./DotSequenceDot";
-@import "./DotSequenceDotLogic";
+@import "./Sequence/DotSequence";
+
+.Dot {
+    position: relative;
+}
 
 .bgColour__dot {
     background-color: $bgColour__dot__deselected;

@@ -7,7 +7,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Dot from '../Dot/Dot'
+import Dot from '../../Dot/Dot'
 
 const dotPropTypes = {
 

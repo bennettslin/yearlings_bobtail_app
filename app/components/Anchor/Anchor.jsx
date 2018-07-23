@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotSequence from '../Dot/DotSequence'
+import DotSequence from '../Dot/Sequence/DotSequence'
 import AccessIcon from '../AccessIcon/AccessIcon'
 
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
