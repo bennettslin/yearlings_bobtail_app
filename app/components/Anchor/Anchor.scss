@@ -1,3 +1,4 @@
+@import "./AnchorUnderline";
 @import "./DotAnchor";
 @import "./DotAnchorLogic";
 @import "./TextAnchor";
@@ -11,60 +12,4 @@
 
 .Anchor__noWrap {
     white-space: nowrap;
-}
-
-.AnchorUnderline {
-    position: absolute;
-    width: 100%;
-    height: 35%;
-    bottom: 0;
-    left: 0;
-
-    opacity: 0;
-
-    .RM__sliderMoving
-    & {
-        background-color: $bgColour__underline__disabled;
-    }
-
-    .parentIsShown
-    & {
-        transition:
-        opacity $animationDuration__default,
-        background-color $animationDuration__default,
-        transform $animationDuration__fast;
-    }
-}
-
-.AnchorUnderline__underDot {
-    height: 25%;
-    bottom: -10%;
-}
-
-.AnchorUnderline__selectable {
-    background-color: $bgColour__underline__selectable;
-
-    .Anchor__selectable:hover
-    & {
-        animation: bounceHover $animationDuration__default;
-    }
-
-    .Anchor__selectable:active
-    & {
-        transform: scale(0.9);
-    }
-}
-
-.AnchorUnderline__selected {
-    .RM__sliderNotMoving
-    & {
-        background-color: $bgColour__underline__selected;
-    }
-}
-
-.AnchorUnderline__accessed {
-    .RM__sliderNotMoving.RM__accessOn
-    & {
-        background-color: $bgColour__accessedUnderline__dark;
-    }
 }

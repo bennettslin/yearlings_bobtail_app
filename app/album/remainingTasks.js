@@ -2,7 +2,7 @@ module.exports = [
 
     // Buttons and dots.
     {
-        taskName: `Set up dots to use svgs. Include fields. Dot sequence gradient.`,
+        taskName: `Set up dots to use svgs. Include fields.`,
         workedHours: 1,
         neededHours: 4
     },

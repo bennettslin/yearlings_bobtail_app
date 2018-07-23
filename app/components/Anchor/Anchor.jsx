@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DotSequence from '../Dot/Sequence/DotSequence'
+import AnchorUnderline from './AnchorUnderline'
 import AccessIcon from '../AccessIcon/AccessIcon'
 
 import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
@@ -78,18 +79,12 @@ Anchor = ({
             onTouchStart={handleAnchorClick}
         >
             {!isWikiAnchor && (
-                <div
-                    className={cx(
-                        'AnchorUnderline',
-
-                        { 'AnchorUnderline__underDot': isDotAnchor },
-
-                        isAccessed && !isSelected && 'AnchorUnderline__accessed',
-
-                        isSelected ?
-                            'AnchorUnderline__selected' :
-                            'AnchorUnderline__selectable'
-                    )}
+                <AnchorUnderline
+                    {...{
+                        isAccessed,
+                        isSelected,
+                        isDotAnchor
+                    }}
                 />
             )}
 
