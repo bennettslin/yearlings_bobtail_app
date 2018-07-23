@@ -35,7 +35,7 @@ TipsToggle = ({
             isLargeSize
             buttonName={TIPS_BUTTON_KEY}
             isDisabled={!isEnabled}
-            temporaryText={TIPS_OPTIONS[selectedTipsIndex]}
+            buttonIdentifier={TIPS_OPTIONS[selectedTipsIndex]}
             accessKey={TIPS_TOGGLE_KEY}
             handleButtonClick={handleTipsToggle}
         />

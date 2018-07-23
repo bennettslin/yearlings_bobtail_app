@@ -12,7 +12,7 @@ const propTypes = {
     className: PropTypes.any,
     viewBoxWidth: PropTypes.number,
     viewBoxHeight: PropTypes.number,
-    children: PropTypes.node.isRequired
+    children: PropTypes.node
 }
 
 const Svg = ({

@@ -71,23 +71,23 @@ class PopupViewButton extends Component {
 
         } = this.props
 
-        let temporaryText,
+        let buttonIdentifier,
             buttonName,
             accessKey
 
         if (isCloseButton) {
             buttonName = POPUP_CLOSE_BUTTON_KEY
-            temporaryText = '\u274C'
+            buttonIdentifier = '\u274C'
             accessKey = NAVIGATION_ESCAPE_KEY
 
         } else if (isPreviousButton) {
             buttonName = POPUP_PREVIOUS_BUTTON_KEY
-            temporaryText = '\u276e'
+            buttonIdentifier = '\u276e'
             accessKey = NAVIGATION_LEFT_KEY
 
         } else if (isNextButton) {
             buttonName = POPUP_NEXT_BUTTON_KEY
-            temporaryText = '\u276f'
+            buttonIdentifier = '\u276f'
             accessKey = NAVIGATION_RIGHT_KEY
         }
 
@@ -132,7 +132,7 @@ class PopupViewButton extends Component {
                         'Button__popup',
                         'Button__popupNotShadow'
                     )}
-                    temporaryText={temporaryText}
+                    buttonIdentifier={buttonIdentifier}
                     accessKey={accessKey}
                     handleButtonClick={this._handleClick}
                 />

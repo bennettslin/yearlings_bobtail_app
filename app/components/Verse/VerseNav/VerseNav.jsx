@@ -76,7 +76,7 @@ class VerseNav extends Component {
                     accessKey={NAVIGATION_ENTER_KEY}
                     showAccessIconIfAccessOn={isEnabled}
                     isDisabled={!isEnabled}
-                    temporaryText={iconText}
+                    buttonIdentifier={iconText}
                     handleButtonClick={this._handleAudioButtonClick}
                 />
             </div>

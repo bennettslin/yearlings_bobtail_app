@@ -12,9 +12,9 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Button icons take in an index, instead of temporary text.`,
+        taskName: `Placeholder indexed icons, including for nav song icon.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `Button and dot styling, including for enabled and disabled.`,

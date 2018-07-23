@@ -47,7 +47,7 @@ OverviewToggle = ({
             buttonName={OVERVIEW_BUTTON_KEY}
             isDisabled={!isEnabled}
             accessKey={OVERVIEW_TOGGLE_KEY}
-            temporaryText={OVERVIEW_OPTIONS[selectedOverviewIndex]}
+            buttonIdentifier={OVERVIEW_OPTIONS[selectedOverviewIndex]}
             handleButtonClick={handleOverviewToggle}
         />
     </div>

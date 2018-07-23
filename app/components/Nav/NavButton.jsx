@@ -7,8 +7,11 @@ import cx from 'classnames'
 import Button from '../Button/Button'
 import NavPanel from './NavPanel'
 import { NAVIGATION_ENTER_KEY } from '../../constants/access'
-import { NAV_BUTTON_KEY } from '../../constants/buttons'
-import { getSongIsLogue } from '../../helpers/dataHelper'
+import {
+    NAV_BOOK_BUTTON_KEY,
+    NAV_SONG_BUTTON_KEY
+} from '../../constants/buttons'
+
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -83,7 +86,7 @@ class NavButton extends Component {
                 songIndex
             } = this.props,
 
-            isLogue = getSongIsLogue(songIndex),
+            isBook = !isNaN(bookIndex),
 
             isLeftmost = bookIndex === 0 || songIndex === 0,
             isRightmost = bookIndex === 1 || songIndex === 19,
@@ -93,19 +96,13 @@ class NavButton extends Component {
                 && interactivatedVerseIndex < 0
                 && !selectedAnnotationIndex
 
-        let temporaryText
+        let buttonIdentifier
 
-        if (isNaN(bookIndex)) {
-
-            if (isLogue) {
-                temporaryText = songIndex === 0 ? 'p' : 'e'
-
-            } else {
-                temporaryText = `${songIndex}`
-            }
+        if (isBook) {
+            buttonIdentifier = bookIndex
 
         } else {
-            temporaryText = bookIndex === 0 ? 'I' : 'II'
+            buttonIdentifier = songIndex
         }
 
         return (
@@ -115,11 +112,15 @@ class NavButton extends Component {
                 )}
             >
                 <Button
-                    buttonName={NAV_BUTTON_KEY}
+                    {...{
+                        buttonName: isBook ?
+                            NAV_BOOK_BUTTON_KEY :
+                            NAV_SONG_BUTTON_KEY
+                    }}
                     isIndexSelected={isSelected}
                     showAccessIconIfAccessOn={isAccessed && isNavigable}
                     accessKey={isToggle ? '' : NAVIGATION_ENTER_KEY}
-                    temporaryText={temporaryText}
+                    buttonIdentifier={buttonIdentifier}
                     handleButtonClick={this._handleButtonClick}
                 >
                     <NavPanel

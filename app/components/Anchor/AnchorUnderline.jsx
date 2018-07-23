@@ -8,7 +8,7 @@ const propTypes = {
     // From parent.
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool.isRequired,
-    isDotAnchor: PropTypes.bool.isRequired
+    isDotAnchor: PropTypes.bool
 },
 
 AnchorUnderline = ({

@@ -45,7 +45,7 @@ LyricToggleEar = ({
             <Button
                 isLargeSize
                 buttonName={LYRIC_EAR_BUTTON_KEY}
-                temporaryText={LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]}
+                buttonIdentifier={LYRIC_COLUMN_KEYS[selectedLyricColumnIndex]}
                 accessKey={LYRIC_COLUMN_TOGGLE_KEY}
                 handleButtonClick={handleLyricColumnSelect}
             />

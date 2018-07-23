@@ -63,7 +63,7 @@ LyricToggleExpand = ({
             <Button
                 isLargeSize
                 buttonName={LYRIC_EXPAND_BUTTON_KEY}
-                temporaryText={isLyricExpanded ? '-' : '+'}
+                buttonIdentifier={isLyricExpanded}
                 accessKey={LYRIC_SECTION_EXPAND_KEY}
                 handleButtonClick={handleLyricSectionExpand}
             />

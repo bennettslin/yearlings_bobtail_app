@@ -25,14 +25,14 @@ const CarouselSelect = ({
         <Button
             buttonName={CAROUSEL_SELECT_BUTTON_KEY}
             isLargeSize
-            temporaryText={'\u276e'}
+            buttonIdentifier={'\u276e'}
             accessKey={NAVIGATION_LEFT_KEY}
             handleButtonClick={handleAnnotationPrevious}
         />
         <Button
             buttonName={CAROUSEL_SELECT_BUTTON_KEY}
             isLargeSize
-            temporaryText={'\u276f'}
+            buttonIdentifier={'\u276f'}
             accessKey={NAVIGATION_RIGHT_KEY}
             handleButtonClick={handleAnnotationNext}
         />

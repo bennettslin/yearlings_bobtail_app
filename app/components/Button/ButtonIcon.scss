@@ -67,7 +67,16 @@
     fill: #d8b;
 }
 
-.ButtonIcon__temporaryField__nav {
+.ButtonIcon__temporaryField__navBook {
+    fill: #dd8;
+
+    .Button__indexSelected
+    & {
+        fill: orange;
+    }
+}
+
+.ButtonIcon__temporaryField__navSong {
     fill: #dd8;
 
     .Button__indexSelected

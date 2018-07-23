@@ -27,7 +27,7 @@ LyricToggleScroll = ({
         <Button
             isLargeSize
             buttonName={LYRIC_SCROLL_BUTTON_KEY}
-            temporaryText="auto"
+            buttonIdentifier="auto"
             accessKey={LYRIC_SCROLL_TOGGLE_KEY}
             handleButtonClick={handleLyricAutoScroll}
         />

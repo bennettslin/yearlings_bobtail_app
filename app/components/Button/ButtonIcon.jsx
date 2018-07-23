@@ -10,16 +10,14 @@ const propTypes = {
     // From parent.
     showDisabled: PropTypes.bool,
     buttonName: PropTypes.string.isRequired,
-
-    // TODO: Turn temporaryText into index option passed to icon component.
-    temporaryText: PropTypes.any
+    buttonIdentifier: PropTypes.any
 }
 
 const ButtonIcon = ({
 
     showDisabled,
     buttonName,
-    temporaryText
+    buttonIdentifier
 
 }) => {
     const IconComponent = getButtonIcon(buttonName)
@@ -37,7 +35,6 @@ const ButtonIcon = ({
                     'absoluteFullContainer'
                 )}
             >
-
                 <circle
                     className={cx(
                         'ButtonIcon__temporaryField',
@@ -49,18 +46,9 @@ const ButtonIcon = ({
                 />
 
                 <IconComponent
-                    index={0}
+                    buttonIdentifier={buttonIdentifier}
                 />
-
             </Svg>
-
-            <div
-                className={cx(
-                    'ButtonIcon__temporaryText'
-                )}
-            >
-                {temporaryText}
-            </div>
         </div>
     )
 }

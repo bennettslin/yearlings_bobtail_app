@@ -11,7 +11,11 @@ import OverviewToggle from '../Main/OverviewToggle'
 import { getSongOverview, getSongIsLogue } from '../../helpers/dataHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 import { getIsToggleInOverview } from '../../helpers/responsiveHelper'
-import { SHOWN, OVERVIEW_OPTIONS } from '../../constants/options'
+
+import {
+    SHOWN,
+    OVERVIEW_OPTIONS
+} from '../../constants/options'
 
 const mapStateToProps = ({
     canMainRender,

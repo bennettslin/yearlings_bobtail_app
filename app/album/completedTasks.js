@@ -3443,4 +3443,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Button icons take in an index, instead of temporary text.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

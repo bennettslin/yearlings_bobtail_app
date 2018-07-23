@@ -41,7 +41,7 @@ CarouselToggle = ({
             <Button
                 isLargeSize
                 buttonName={CAROUSEL_NAV_BUTTON_KEY}
-                temporaryText={selectedCarouselNavIndex}
+                buttonIdentifier={selectedCarouselNavIndex}
                 accessKey={CAROUSEL_TOGGLE_KEY}
                 handleButtonClick={handleCarouselNavToggle}
             />

@@ -36,7 +36,7 @@ DotsSlideToggle = ({
         <Button
             isLargeSize
             buttonName={DOTS_SLIDE_BUTTON_KEY}
-            temporaryText={selectedDotsIndex}
+            buttonIdentifier={selectedDotsIndex}
             accessKey={DOTS_SECTION_EXPAND_KEY}
             handleButtonClick={handleDotsSectionToggle}
         />

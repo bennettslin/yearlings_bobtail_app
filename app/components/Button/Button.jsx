@@ -24,7 +24,7 @@ class Button extends Component {
         isIndexSelected: PropTypes.bool, // Passed by nav button.
         isDisabled: PropTypes.bool,
         isPopupButton: PropTypes.bool,
-        temporaryText: PropTypes.any,
+        buttonIdentifier: PropTypes.any,
         accessKey: PropTypes.string,
         showAccessIconIfAccessOn: PropTypes.bool.isRequired,
         handleButtonClick: PropTypes.func.isRequired,
@@ -71,7 +71,7 @@ class Button extends Component {
                 isDisabled,
                 isPopupButton,
                 showAccessIconIfAccessOn,
-                temporaryText,
+                buttonIdentifier,
                 accessKey,
                 children
             } = this.props,
@@ -105,10 +105,11 @@ class Button extends Component {
                     isPopupButton && 'ButtonAnimatable__popup',
                     'absoluteFullContainer'
                 )}>
+
                     <ButtonIcon
                         {...{
                             buttonName,
-                            temporaryText,
+                            buttonIdentifier,
                             showDisabled: isDisabled
                         }}
                     />

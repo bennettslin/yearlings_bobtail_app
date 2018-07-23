@@ -22,7 +22,12 @@ import {
 
 
 import { AUDIO_OPTIONS } from '../../constants/options'
-import { getSongsAndLoguesCount, getSongsNotLoguesCount } from '../../helpers/dataHelper'
+
+import {
+    getSongsAndLoguesCount,
+    getSongsNotLoguesCount
+} from '../../helpers/dataHelper'
+
 import { getValueInBitNumber } from '../../helpers/bitHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
@@ -110,7 +115,7 @@ class AudioButtons extends Component {
                     <Button
                         buttonName={AUDIO_SELECT_BUTTON_KEY}
                         className="AudioButton"
-                        temporaryText={
+                        buttonIdentifier={
                             isPrologue || isFirstSong ? '\u2302' : '\u21E4'
                         }
                         accessKey={AUDIO_PREVIOUS_SONG_KEY}
@@ -123,7 +128,7 @@ class AudioButtons extends Component {
                         buttonName={AUDIO_PLAY_BUTTON_KEY}
                         className="AudioButton"
                         isLargeSize
-                        temporaryText={playButtonText}
+                        buttonIdentifier={playButtonText}
                         accessKey={AUDIO_PLAY_KEY}
                         isDisabled={!songCanPlayThrough}
                         handleButtonClick={handleAudioPlay}
@@ -133,7 +138,7 @@ class AudioButtons extends Component {
                     <Button
                         buttonName={AUDIO_SELECT_BUTTON_KEY}
                         className="AudioButton"
-                        temporaryText={
+                        buttonIdentifier={
                             isEpilogue || isLastSong ? '\u2302' : '\u21E5'
                         }
                         accessKey={AUDIO_NEXT_SONG_KEY}
@@ -150,7 +155,7 @@ class AudioButtons extends Component {
                     <Button
                         buttonName={AUDIO_OPTIONS_BUTTON_KEY}
                         className="AudioButton"
-                        temporaryText={AUDIO_OPTIONS[selectedAudioOptionIndex]}
+                        buttonIdentifier={AUDIO_OPTIONS[selectedAudioOptionIndex]}
                         accessKey={AUDIO_OPTIONS_TOGGLE_KEY}
                         handleButtonClick={handleAudioOptionsToggle}
                     />

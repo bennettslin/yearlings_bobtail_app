@@ -51,7 +51,7 @@ TitleToggle = ({
                 )}
                 isCustomSize
                 accessKey={TITLE_TOGGLE_KEY}
-                temporaryText={selectedTitleIndex}
+                buttonIdentifier={selectedTitleIndex}
                 handleButtonClick={handleTitleToggle}
             />
         )
