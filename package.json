@@ -24,6 +24,7 @@
     "lodash.findindex": "^4.6.0",
     "lodash.keys": "^4.2.0",
     "lodash.pickby": "^4.6.0",
+    "pino": "^4.17.5",
     "prop-types": "^15.6.1",
     "react": "^16.3.0",
     "react-audio-player": "^0.10.0",
