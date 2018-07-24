@@ -7,11 +7,6 @@ module.exports = [
         neededHours: 4
     },
     {
-        taskName: `Set up loading icons to use svgs.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Button and dot styling, including for enabled and disabled.`,
         workedHours: 0,
         neededHours: 2

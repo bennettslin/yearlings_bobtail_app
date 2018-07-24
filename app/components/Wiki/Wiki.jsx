@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import spinnerSvg from '../../../app/assets/images/default_spinner.svg'
+import Spinner from '../Spinner/Spinner'
 import { getWikiUrl } from './wikiHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
@@ -99,9 +99,7 @@ class WikiSection extends Component {
                         'absoluteFullContainer',
                         'flexCentreContainer'
                     )}>
-                        <img
-                            src={spinnerSvg}
-                        />
+                        <Spinner />
                     </div>
                 }
                 <iframe

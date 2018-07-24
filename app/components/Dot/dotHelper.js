@@ -30,6 +30,6 @@ const DOTS_MAP = {
     },
     DEFAULT_COMPONENT = () => (null)
 
-export const getIcon = (iconName) => {
+export const getDotIcon = (iconName) => {
     return DOTS_MAP[iconName] || DEFAULT_COMPONENT
 }

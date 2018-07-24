@@ -2,25 +2,37 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-const dotPropTypes = {
+import Svg from '../Svg/Svg'
+
+import { getDotIcon } from './dotHelper'
+
+const propTypes = {
     // From parent.
-    className: PropTypes.any
+    className: PropTypes.any,
+    // dotName: PropTypes.string.isRequired
 },
 
 Dot = ({
 
     className,
+    dotName,
 
-...other }) => (
+...other }) => {
 
-    <div {...other}
-        className={cx(
-            'Dot',
-            className
-        )}
-    />
-)
+    const IconComponent = getDotIcon(dotName)
 
-Dot.propTypes = dotPropTypes
+    return (
+        <Svg {...other}
+            className={cx(
+                'Dot',
+                className
+            )}
+        >
+            <IconComponent />
+        </Svg>
+    )
+}
+
+Dot.propTypes = propTypes
 
 export default Dot

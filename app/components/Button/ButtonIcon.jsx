@@ -20,6 +20,7 @@ const ButtonIcon = ({
     buttonIdentifier
 
 }) => {
+
     const IconComponent = getButtonIcon(buttonName)
 
     return (
@@ -35,6 +36,7 @@ const ButtonIcon = ({
                     'absoluteFullContainer'
                 )}
             >
+                {/* TODO: Not sure if this will still be used. */}
                 <circle
                     className={cx(
                         'ButtonIcon__temporaryField',
