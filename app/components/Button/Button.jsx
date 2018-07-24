@@ -110,7 +110,7 @@ class Button extends Component {
                         {...{
                             buttonName,
                             buttonIdentifier,
-                            showDisabled: isDisabled
+                            showAsDisabled: isDisabled
                         }}
                     />
 

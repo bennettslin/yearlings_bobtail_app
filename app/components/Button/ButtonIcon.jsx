@@ -8,14 +8,14 @@ import { getButtonIcon } from './buttonHelper'
 
 const propTypes = {
     // From parent.
-    showDisabled: PropTypes.bool,
+    showAsDisabled: PropTypes.bool,
     buttonName: PropTypes.string.isRequired,
     buttonIdentifier: PropTypes.any
 }
 
 const ButtonIcon = ({
 
-    showDisabled,
+    showAsDisabled,
     buttonName,
     buttonIdentifier
 
@@ -41,7 +41,7 @@ const ButtonIcon = ({
                     className={cx(
                         'ButtonIcon__temporaryField',
 
-                        showDisabled ?
+                        showAsDisabled ?
                             'ButtonIcon__temporaryField__disabled' :
                             `ButtonIcon__temporaryField__${buttonName}`
                     )}
