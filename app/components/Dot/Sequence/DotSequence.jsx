@@ -20,9 +20,9 @@ DotSequence = ({
 
     inAnnotationCard,
     inTextAnchor,
-    dotKeys
+    dotKeys,
 
-}) => (
+...other }) => (
 
     <div className={cx(
         'DotSequence',
@@ -33,7 +33,8 @@ DotSequence = ({
 
             // Go through all dot keys in array to ensure correct order.
             return dotKeys[dotKey] && (
-                <DotSequenceDot
+
+                <DotSequenceDot {...other}
                     key={dotKey}
                     {...{
                         dotKey,

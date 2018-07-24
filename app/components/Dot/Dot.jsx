@@ -9,15 +9,26 @@ import { getDotIcon } from './dotHelper'
 const propTypes = {
     // From parent.
     showFieldOnly: PropTypes.bool,
+    isAccessed: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    isDeselected: PropTypes.bool,
     className: PropTypes.any,
     dotKey: PropTypes.string.isRequired
 },
 
 Dot = ({
 
+    isAccessed,
+
+    // Applies to selectable dots.
+    isSelected,
+
+    // Applies to slide dots.
+    isDeselected,
+
+    showFieldOnly,
     className,
     dotKey,
-    showFieldOnly,
 
 ...other }) => {
 
@@ -36,7 +47,12 @@ Dot = ({
                     // TODO: Eventually do this better.
                     'Dot__temporaryField',
                     'bgColour__dot',
-                    `bgColour__dot__${dotKey}`
+                    `bgColour__dot__${dotKey}`,
+
+                    // These will override the default colour.
+                    isAccessed && `bgColour__dot__accessed`,
+                    isSelected && `bgColour__dot__selected`,
+                    isDeselected && `bgColour__dot__deselected`
                 )}
                 {...{
                     cx: 50,

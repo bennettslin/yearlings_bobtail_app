@@ -87,7 +87,11 @@ Anchor = ({
             {sequenceDotKeys && (
                 <DotSequence
                     inTextAnchor
-                    dotKeys={sequenceDotKeys}
+                    {...{
+                        isAccessed,
+                        isSelected,
+                        dotKeys: sequenceDotKeys
+                    }}
                 />
             )}
 

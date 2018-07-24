@@ -52,6 +52,7 @@ TextAnchor = ({
                     )}
                     {...{
                         dotKey,
+                        isAccessed,
                         isSelected
                     }}
                 />

@@ -42,9 +42,7 @@ $colour__accessedLinkActive__light: #7d9;
 $colour__selected__dark: #b59905;
 $colour__selected__light: #b59905;
 
-$bgColour__underline__selected: mix(
-    gold, white, 25%
-);
+$bgColour__underline__selected: #eec;
 
 $bgColour__accessedUnderline__dark: mix(
     $colour__accessedLink__dark, white, 25%
@@ -75,7 +73,9 @@ $bgColour__dot__songwriting: #aef;
 $bgColour__dot__wormhole: #bcf;
 $bgColour__dot__afterword: #fbe;
 
-$bgColour__dot__deselected: lightGray;
+$bgColour__dot__accessed: #dfd;
+$bgColour__dot__selected: #ffd;
+$bgColour__dot__deselected: #ddd;
 
 // Annotation and Wormhole colours.
 $bgColour__annotationCard: rgba(250, 250, 255, 0.9);

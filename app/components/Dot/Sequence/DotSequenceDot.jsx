@@ -21,10 +21,10 @@ DotSequenceDot = ({
 
     dotKey,
     inAnnotationCard,
-    inTextAnchor
+    inTextAnchor,
 
-}) => (
-    <Dot
+...other }) => (
+    <Dot {...other}
         showFieldOnly
         className={cx(
             'SequenceDot',

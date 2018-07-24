@@ -158,16 +158,10 @@ DotsSlideSelectView = ({
                 handleButtonClick={handleDotSelectClick}
             >
                 <Dot
-                    className={cx(
-                        // 'SlideSelectDot',
-                        // 'bgColour__dot',
-
-                        // TODO: Handle selection!
-                        // isSelected && `bgColour__dot__${dotKey}`,
-                        // 'absoluteFullContainer'
-                    )}
                     {...{
-                        dotKey
+                        dotKey,
+                        isAccessed,
+                        isDeselected: !isSelected
                     }}
                 />
 
