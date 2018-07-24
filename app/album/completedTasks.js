@@ -3448,4 +3448,9 @@ module.exports = [
         workedHours: 2,
         neededHours: 2
     },
+    {
+        taskName: `Placeholder indexed icons, including for nav song icon.`,
+        workedHours: 2,
+        neededHours: 2
+    },
 ]

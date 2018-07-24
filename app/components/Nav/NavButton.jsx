@@ -88,6 +88,9 @@ class NavButton extends Component {
 
             isBook = !isNaN(bookIndex),
 
+            buttonIdentifier = isBook ? bookIndex : songIndex,
+
+            // Hard-coding indices because I'm lazy.
             isLeftmost = bookIndex === 0 || songIndex === 0,
             isRightmost = bookIndex === 1 || songIndex === 19,
 
@@ -95,15 +98,6 @@ class NavButton extends Component {
                 !isToggle
                 && interactivatedVerseIndex < 0
                 && !selectedAnnotationIndex
-
-        let buttonIdentifier
-
-        if (isBook) {
-            buttonIdentifier = bookIndex
-
-        } else {
-            buttonIdentifier = songIndex
-        }
 
         return (
             <div
@@ -115,12 +109,12 @@ class NavButton extends Component {
                     {...{
                         buttonName: isBook ?
                             NAV_BOOK_BUTTON_KEY :
-                            NAV_SONG_BUTTON_KEY
+                            NAV_SONG_BUTTON_KEY,
+                        buttonIdentifier
                     }}
                     isIndexSelected={isSelected}
                     showAccessIconIfAccessOn={isAccessed && isNavigable}
                     accessKey={isToggle ? '' : NAVIGATION_ENTER_KEY}
-                    buttonIdentifier={buttonIdentifier}
                     handleButtonClick={this._handleButtonClick}
                 >
                     <NavPanel

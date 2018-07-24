@@ -12,11 +12,6 @@ module.exports = [
         neededHours: 1
     },
     {
-        taskName: `Placeholder indexed icons, including for nav song icon.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Button and dot styling, including for enabled and disabled.`,
         workedHours: 0,
         neededHours: 2
