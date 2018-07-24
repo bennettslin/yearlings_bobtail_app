@@ -57,9 +57,9 @@ Anchor = ({
 
                 sequenceDotKeys &&
                     getPrefixedDotLetterClassNames(
-
+                        sequenceDotKeys,
                         // "Child anchor letter."
-                        sequenceDotKeys, 'ChA'
+                        'ChA'
                     ),
 
                 /**

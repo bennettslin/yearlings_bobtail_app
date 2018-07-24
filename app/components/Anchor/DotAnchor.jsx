@@ -52,7 +52,8 @@ TextAnchor = ({
                             !other.isSelected &&
                                 getPrefixedDotLetterClassNames(
                                     stanzaDotKeys,
-                                    'DotAnchor'
+                                    // "Child dot anchor letter."
+                                    'CdA'
                                 )
                         )}
                         {...{

@@ -173,7 +173,8 @@ AnnotationCardView = ({
                 'AnnotationCardAnimatable',
                 getPrefixedDotLetterClassNames(
                     cardDotKeys,
-                    'AnnotationCardAnimatable'
+                    // "Child annotation card letter."
+                    'CaC'
                 )
             )}>
                 {annotationCardChild}

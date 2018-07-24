@@ -162,8 +162,11 @@ CarouselAnnotationView = ({
 
                 annotationColumn &&
                     `CarouselAnnotation__inLyricColumn__${annotationColumn}`,
+
                 getPrefixedDotLetterClassNames(
-                    annotationDotKeys, 'CarouselAnnotationAnimatable'
+                    annotationDotKeys,
+                    // "Child carousel annotation letter."
+                    'CcA'
                 )
             )}
         >

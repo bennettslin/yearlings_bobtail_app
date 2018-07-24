@@ -288,8 +288,11 @@ class Root extends Component {
                         'RM__sliderTouched': isSliderTouched,
                     },
 
-                    // "Root selected dot letter."
-                    getPrefixedDotLetterClassNames(selectedDotKeys, 'RsD'),
+                    getPrefixedDotLetterClassNames(
+                        selectedDotKeys,
+                        // "Root selected dot letter."
+                        'RsD'
+                    ),
 
                     // Relevant to verse index classes.
                     isSliderMoving ? 'RM__sliderMoving' : 'RM__sliderNotMoving',

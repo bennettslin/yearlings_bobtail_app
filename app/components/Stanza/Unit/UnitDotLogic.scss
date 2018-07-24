@@ -1,21 +1,13 @@
 // TODO: Move default logic here as well.
 
-.RM__narrative
-    .UnitDot__narrative,
-.RM__backstory
-    .UnitDot__backstory,
-.RM__observation
-    .UnitDot__observation,
-.RM__pun
-    .UnitDot__pun,
-.RM__reference
-    .UnitDot__reference,
-.RM__songwriting
-    .UnitDot__songwriting,
-.RM__portal
-    .UnitDot__portal,
-.RM__afterword
-    .UnitDot__afterword {
+.RsDn .CuDn,
+.RsDb .CuDb,
+.RsDo .CuDo,
+.RsDp .CuDp,
+.RsDr .CuDr,
+.RsDs .CuDs,
+.RsDp .CuDp,
+.RsDa .CuDa {
 
     max-width: inherit;
     margin-top: $margin__lyricUnit;

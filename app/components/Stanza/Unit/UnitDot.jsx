@@ -165,7 +165,11 @@ UnitDotView = ({
                     `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
                 // Show and hide dot stanza block in and out based on dot keys.
-                getPrefixedDotLetterClassNames(dotKeys, 'UnitDot')
+                getPrefixedDotLetterClassNames(
+                    dotKeys,
+                    // "Child unit dot letter."
+                    'CuD'
+                )
             )}
         >
             <DotAnchor {...other}
