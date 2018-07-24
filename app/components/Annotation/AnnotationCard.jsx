@@ -10,7 +10,7 @@ import AnnotationPortals from './AnnotationPortals'
 import { PORTAL } from '../../constants/dots'
 
 import { getAnnotationCardObject } from '../../helpers/dataHelper'
-import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
+import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -171,7 +171,7 @@ AnnotationCardView = ({
         return inCarousel ? (
             <div className={cx(
                 'AnnotationCardAnimatable',
-                getPrefixPrependedClassNames(
+                getPrefixedDotLetterClassNames(
                     cardDotKeys,
                     'AnnotationCardAnimatable'
                 )

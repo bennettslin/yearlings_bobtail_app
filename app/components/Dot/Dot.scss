@@ -2,23 +2,39 @@
 @import "./Sequence/DotSequence";
 
 .Dot {
+    visibility: hidden;
+
     position: relative;
+    // transition: background-color $animationDuration__default;
+
+    // TODO: This doesn't handle dots slide.
+    .RM__sliderNotMoving
+    & {
+        visibility: visible;
+    }
 }
 
-.bgColour__dot {
-    background-color: $bgColour__dot__deselected;
-
-    transition: background-color $animationDuration__default;
-
-    .RM__sliderNotMoving
-    .Anchor__selected
-    & {
-        background-color: $bgColour__underline__selected;
-    }
-
-    .RM__sliderNotMoving.RM__accessOn
-    .Anchor__accessed
-    & {
-        background-color: $bgColour__accessedUnderline__dark;
-    }
+.bgColour__dot__portal {
+    background-color: $bgColour__dot__portal;
+}
+.bgColour__dot__observation {
+    background-color: $bgColour__dot__observation;
+}
+.bgColour__dot__backstory {
+    background-color: $bgColour__dot__backstory;
+}
+.bgColour__dot__reference {
+    background-color: $bgColour__dot__reference;
+}
+.bgColour__dot__pun {
+    background-color: $bgColour__dot__pun;
+}
+.bgColour__dot__narrative {
+    background-color: $bgColour__dot__narrative;
+}
+.bgColour__dot__songwriting {
+    background-color: $bgColour__dot__songwriting;
+}
+.bgColour__dot__afterword {
+    background-color: $bgColour__dot__afterword;
 }

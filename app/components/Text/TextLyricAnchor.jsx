@@ -203,7 +203,7 @@ class TextLyricAnchor extends Component {
                             />
                         )}
                         sequenceDotKeys={dotKeys}
-                        isWikiAnchor={Boolean(wikiIndex)}
+                        isWikiTextAnchor={Boolean(wikiIndex)}
                         isAccessed={isAccessed}
                         isSelected={isSelected}
                         handleAnchorClick={this._handleAnchorClick}

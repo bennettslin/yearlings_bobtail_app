@@ -8,7 +8,7 @@ import Annotation from '../Annotation/Annotation'
 import { CAROUSEL_SCROLL } from '../../constants/dom'
 import { LYRIC_COLUMN_KEYS } from '../../constants/lyrics'
 import { getAnnotationObject } from '../../helpers/dataHelper'
-import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
+import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
 import { getPropsAreShallowEqual } from '../../helpers/generalHelper'
 
 const mapStateToProps = ({
@@ -162,7 +162,7 @@ CarouselAnnotationView = ({
 
                 annotationColumn &&
                     `CarouselAnnotation__inLyricColumn__${annotationColumn}`,
-                getPrefixPrependedClassNames(
+                getPrefixedDotLetterClassNames(
                     annotationDotKeys, 'CarouselAnnotationAnimatable'
                 )
             )}

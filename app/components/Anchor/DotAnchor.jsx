@@ -5,7 +5,8 @@ import cx from 'classnames'
 import Anchor from './Anchor';
 import Dot from '../Dot/Dot';
 
-import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
+import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
+import { ALL_DOT_KEYS } from '../../constants/dots'
 
 const textAnchorPropTypes = {
     // From parent.
@@ -31,27 +32,35 @@ TextAnchor = ({
         <Anchor {...other}
             isDotAnchor
         >
-            <Dot
-                className={cx(
-                    'DotAnchor',
+            {ALL_DOT_KEYS.map(dotKey => {
+                return stanzaDotKeys[dotKey] && (
+                    <Dot
+                        key={dotKey}
+                        className={cx(
+                            'DotAnchor',
 
-                    isAccessed && !isSelected && 'DotAnchor__accessed',
+                            isAccessed && !isSelected && 'DotAnchor__accessed',
 
-                    isSelected ?
-                        'DotAnchor__selected' :
-                        'DotAnchor__selectable',
+                            isSelected ?
+                                'DotAnchor__selected' :
+                                'DotAnchor__selectable',
 
-                    inAnnotation && 'DotAnchor__inAnnotation',
-                    inStanza && 'DotAnchor__inStanza',
+                            inAnnotation && 'DotAnchor__inAnnotation',
+                            inStanza && 'DotAnchor__inStanza',
 
-                    // Only colour dot anchor by its key when selectable.
-                    !other.isSelected &&
-                        getPrefixPrependedClassNames(
-                            stanzaDotKeys,
-                            'DotAnchor'
-                        )
-                )}
-            />
+                            // Only colour dot anchor by its key when selectable.
+                            !other.isSelected &&
+                                getPrefixedDotLetterClassNames(
+                                    stanzaDotKeys,
+                                    'DotAnchor'
+                                )
+                        )}
+                        {...{
+                            dotKey
+                        }}
+                    />
+                )
+            })}
         </Anchor>
     )
 }

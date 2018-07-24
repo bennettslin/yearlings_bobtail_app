@@ -159,11 +159,16 @@ DotsSlideSelectView = ({
             >
                 <Dot
                     className={cx(
-                        'SlideSelectDot',
-                        'bgColour__dot',
-                        isSelected && `bgColour__dot__${dotKey}`,
-                        'absoluteFullContainer'
+                        // 'SlideSelectDot',
+                        // 'bgColour__dot',
+
+                        // TODO: Handle selection!
+                        // isSelected && `bgColour__dot__${dotKey}`,
+                        // 'absoluteFullContainer'
                     )}
+                    {...{
+                        dotKey
+                    }}
                 />
 
                 <div className={cx(

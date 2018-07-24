@@ -6,7 +6,7 @@ import DotSequence from '../Dot/Sequence/DotSequence'
 import AnchorUnderline from './AnchorUnderline'
 import AccessIcon from '../AccessIcon/AccessIcon'
 
-import { getPrefixPrependedClassNames } from '../../helpers/domHelper'
+import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
 
 import {
     NAVIGATION_ENTER_KEY
@@ -18,7 +18,7 @@ const anchorPropTypes = {
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isDotAnchor: PropTypes.bool,
-    isWikiAnchor: PropTypes.bool,
+    isWikiTextAnchor: PropTypes.bool,
     omitAccessIcon: PropTypes.bool,
     sequenceDotKeys: PropTypes.object,
     handleAnchorClick: PropTypes.func,
@@ -34,7 +34,7 @@ Anchor = ({
     isAccessed,
     isSelected,
     isDotAnchor,
-    isWikiAnchor,
+    isWikiTextAnchor,
     omitAccessIcon,
     sequenceDotKeys,
 
@@ -43,12 +43,6 @@ Anchor = ({
 
 }) => {
 
-    /**
-     * If sequence dot keys are provided, or if it's a wiki anchor, only apply
-     * certain styling if at least one dot in the dot sequence is selected.
-     */
-    const styleWithDot = sequenceDotKeys || isWikiAnchor
-
     return (
         <a className={cx(
                 'Anchor',
@@ -56,29 +50,31 @@ Anchor = ({
                 isAccessed && !isSelected && 'Anchor__accessed',
                 isSelected ? 'Anchor__selected' : 'Anchor__selectable',
 
-                !isWikiAnchor && 'Anchor__noWrap',
-                isWikiAnchor && 'styleIf__reference',
+                !isWikiTextAnchor && 'Anchor__noWrap',
+
+                // "Child anchor reference letter."
+                isWikiTextAnchor && 'ChAr',
 
                 sequenceDotKeys &&
-                    getPrefixPrependedClassNames(
-                        sequenceDotKeys, 'styleIf'
+                    getPrefixedDotLetterClassNames(
+
+                        // "Child anchor letter."
+                        sequenceDotKeys, 'ChA'
                     ),
 
                 /**
-                 * Always apply dot sequence styling for dot anchors, which
-                 * are completely hidden if none of its dots are selected. This
-                 * styling is taken care of by its parent, not the dot anchor
-                 * itself.
+                 * If sequence dot keys are provided, or if it's a wiki anchor,
+                 * anchor is not always visible.
                  */
-                { 'styleIf__always':
-                    (!styleWithDot) || isDotAnchor },
+                !sequenceDotKeys && !isWikiTextAnchor &&
+                    'Anchor__alwaysVisible',
 
                 className
             )}
             onClick={handleAnchorClick}
             onTouchStart={handleAnchorClick}
         >
-            {!isWikiAnchor && (
+            {!isWikiTextAnchor && (
                 <AnchorUnderline
                     {...{
                         isAccessed,

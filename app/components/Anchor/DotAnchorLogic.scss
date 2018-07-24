@@ -36,3 +36,19 @@
     .DotAnchor__afterword {
     background-color: $bgColour__dot__afterword;
 }
+
+.RM__sliderNotMoving.RM__portal .DotAnchor__portal,
+.RM__sliderNotMoving.RM__observation .DotAnchor__observation,
+.RM__sliderNotMoving.RM__backstory .DotAnchor__backstory,
+.RM__sliderNotMoving.RM__reference .DotAnchor__reference,
+.RM__sliderNotMoving.RM__pun .DotAnchor__pun,
+.RM__sliderNotMoving.RM__narrative .DotAnchor__narrative,
+.RM__sliderNotMoving.RM__songwriting .DotAnchor__songwriting,
+.RM__sliderNotMoving.RM__afterword .DotAnchor__afterword {
+
+    display: inline-block;
+
+    ~ .DotAnchor {
+        display: none;
+    }
+}

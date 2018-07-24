@@ -27,12 +27,16 @@ DotSequenceDot = ({
     <Dot
         className={cx(
             'SequenceDot',
-            'bgColour__dot',
-            `bgColour__dot__${dotKey}`,
-            `styleIf__${dotKey}`,
+
+            // "Child dot sequence letter."
+            `ChQ${dotKey[0]}`,
+
             inTextAnchor && 'SequenceDot__textAnchor',
             inAnnotationCard && 'SequenceDot__annotationCard'
         )}
+        {...{
+            dotKey
+        }}
     />
 )
 

@@ -9,22 +9,24 @@ import { getDotIcon } from './dotHelper'
 const propTypes = {
     // From parent.
     className: PropTypes.any,
-    // dotName: PropTypes.string.isRequired
+    dotKey: PropTypes.string.isRequired
 },
 
 Dot = ({
 
     className,
-    dotName,
+    dotKey,
 
 ...other }) => {
 
-    const IconComponent = getDotIcon(dotName)
+    const IconComponent = getDotIcon(dotKey)
 
     return (
         <Svg {...other}
             className={cx(
                 'Dot',
+                'bgColour__dot',
+                `bgColour__dot__${dotKey}`,
                 className
             )}
         >

@@ -1,65 +1,21 @@
 /**
- * Styling if at least one sequence dot is selected. Nesting under parent for
- * clarity.
+ * Styling if at least one sequence dot is selected.
  */
 
-// TODO: Move default logic here as well.
+.RsDn .ChQn,
+.RsDb .ChQb,
+.RsDo .ChQo,
+.RsDp .ChQp,
+.RsDr .ChQr,
+.RsDp .ChQp,
+.RsDs .ChQs,
+.RsDa .ChQa {
+    opacity: 1;
 
-.RM__narrative .styleIf__narrative,
-.RM__backstory .styleIf__backstory,
-.RM__observation .styleIf__observation,
-.RM__pun .styleIf__pun,
-.RM__reference .styleIf__reference,
-.RM__portal .styleIf__portal,
-.RM__songwriting .styleIf__songwriting,
-.RM__afterword .styleIf__afterword,
-
-.styleIf__always {
-
-    // Sequence dots show at all.
-    &.SequenceDot {
-        opacity: 1;
-    }
     &.SequenceDot__annotationCard {
         width: $length__annotationDot;
     }
     &.SequenceDot__textAnchor {
         width: $length__lyricAnchorDot;
-    }
-
-    &.Anchor__selectable {
-        cursor: pointer;
-    }
-
-    .AnchorUnderline {
-        opacity: 1;
-    }
-
-    // Anchors show as more than text.
-    .TextAnchor__plainText {
-        visibility: hidden;
-    }
-    .TextAnchor__linkText__default {
-        visibility: visible;
-    }
-}
-
-.RM__accessOn.RM__narrative .styleIf__narrative,
-.RM__accessOn.RM__backstory .styleIf__backstory,
-.RM__accessOn.RM__observation .styleIf__observation,
-.RM__accessOn.RM__pun .styleIf__pun,
-.RM__accessOn.RM__reference .styleIf__reference,
-.RM__accessOn.RM__portal .styleIf__portal,
-.RM__accessOn.RM__songwriting .styleIf__songwriting,
-.RM__accessOn.RM__afterword .styleIf__afterword,
-.RM__accessOn .styleIf__always {
-
-    .TextAnchor__accessed {
-        .TextAnchor__linkText__default {
-            visibility: hidden;
-        }
-        .TextAnchor__linkText__accessed {
-            visibility: visible;
-        }
     }
 }

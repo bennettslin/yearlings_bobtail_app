@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import DotAnchor from '../../Anchor/DotAnchor'
 
-import { getPrefixPrependedClassNames } from '../../../helpers/domHelper'
+import { getPrefixedDotLetterClassNames } from '../../../helpers/dotHelper'
 
 import { LYRIC_ANNOTATION_SCROLL } from '../../../constants/dom'
 
@@ -165,7 +165,7 @@ UnitDotView = ({
                     `${LYRIC_ANNOTATION_SCROLL}__${annotationIndex}`,
 
                 // Show and hide dot stanza block in and out based on dot keys.
-                getPrefixPrependedClassNames(dotKeys, 'UnitDot')
+                getPrefixedDotLetterClassNames(dotKeys, 'UnitDot')
             )}
         >
             <DotAnchor {...other}

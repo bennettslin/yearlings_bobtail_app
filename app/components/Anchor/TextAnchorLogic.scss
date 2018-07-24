@@ -1,0 +1,45 @@
+.RsDn .ChAn,
+.RsDb .ChAb,
+.RsDo .ChAo,
+.RsDp .ChAp,
+.RsDr .ChAr,
+.RsDp .ChAp,
+.RsDs .ChAs,
+.RsDa .ChAa,
+.Anchor__alwaysVisible {
+
+    &.Anchor__selectable {
+        cursor: pointer;
+    }
+    .AnchorUnderline {
+        opacity: 1;
+    }
+
+    // Anchors show as more than text.
+    .TextAnchor__plainText {
+        visibility: hidden;
+    }
+    .TextAnchor__linkText__default {
+        visibility: visible;
+    }
+}
+
+.RM__accessOn.RsDn .ChAn,
+.RM__accessOn.RsDb .ChAb,
+.RM__accessOn.RsDo .ChAo,
+.RM__accessOn.RsDp .ChAp,
+.RM__accessOn.RsDr .ChAr,
+.RM__accessOn.RsDp .ChAp,
+.RM__accessOn.RsDs .ChAs,
+.RM__accessOn.RsDa .ChAa,
+.Anchor__alwaysVisible {
+
+    .TextAnchor__accessed {
+        .TextAnchor__linkText__default {
+            visibility: hidden;
+        }
+        .TextAnchor__linkText__accessed {
+            visibility: visible;
+        }
+    }
+}

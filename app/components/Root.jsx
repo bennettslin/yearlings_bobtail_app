@@ -24,7 +24,7 @@ import {
     getStanzaIndexForVerseIndex
 } from '../helpers/dataHelper'
 
-import { getPrefixPrependedClassNames } from '../helpers/domHelper'
+import { getPrefixedDotLetterClassNames } from '../helpers/dotHelper'
 
 import {
     getIsDesktop,
@@ -288,7 +288,8 @@ class Root extends Component {
                         'RM__sliderTouched': isSliderTouched,
                     },
 
-                    getPrefixPrependedClassNames(selectedDotKeys, 'RM'),
+                    // "Root selected dot letter."
+                    getPrefixedDotLetterClassNames(selectedDotKeys, 'RsD'),
 
                     // Relevant to verse index classes.
                     isSliderMoving ? 'RM__sliderMoving' : 'RM__sliderNotMoving',
