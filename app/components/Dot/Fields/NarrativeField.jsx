@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const SongwritingIcon = ({
+const NarrativeField = ({
 
     className
 
@@ -11,7 +11,7 @@ const SongwritingIcon = ({
             className,
             cx: 50,
             cy: 50,
-            r: 25
+            r: 50
         }}
     />
 )
@@ -20,6 +20,6 @@ const propTypes = {
     className: PropTypes.string
 }
 
-SongwritingIcon.propTypes = propTypes
+NarrativeField.propTypes = propTypes
 
-export default SongwritingIcon
+export default NarrativeField

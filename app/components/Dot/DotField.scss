@@ -1,0 +1,43 @@
+.DotField {
+    stroke: #444;
+}
+
+.DotField__wormhole {
+    fill: $bgColour__dot__wormhole;
+}
+.DotField__observation {
+    fill: $bgColour__dot__observation;
+}
+.DotField__backstory {
+    fill: $bgColour__dot__backstory;
+}
+.DotField__reference {
+    fill: $bgColour__dot__reference;
+}
+.DotField__pun {
+    fill: $bgColour__dot__pun;
+}
+.DotField__narrative {
+    fill: $bgColour__dot__narrative;
+}
+.DotField__songwriting {
+    fill: $bgColour__dot__songwriting;
+}
+.DotField__afterword {
+    fill: $bgColour__dot__afterword;
+}
+
+.DotField__accessed {
+
+    .RM__accessOn
+    & {
+        fill: $bgColour__dot__accessed;
+    }
+}
+
+.DotField__selected {
+    fill: $bgColour__dot__selected;
+}
+.DotField__deselected {
+    fill: $bgColour__dot__deselected;
+}

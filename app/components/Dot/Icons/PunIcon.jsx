@@ -1,15 +1,25 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const PunIcon = () => (
+const PunIcon = ({
+
+    className
+
+}) => (
     <circle
         {...{
+            className,
             cx: 50,
             cy: 50,
-            r: 25,
-            fill: 'purple',
-            stroke: 'blue'
+            r: 25
         }}
     />
 )
+
+const propTypes = {
+    className: PropTypes.string
+}
+
+PunIcon.propTypes = propTypes
 
 export default PunIcon

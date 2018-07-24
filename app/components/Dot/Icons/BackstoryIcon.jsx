@@ -1,15 +1,25 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const BackstoryIcon = () => (
+const BackstoryIcon = ({
+
+    className
+
+}) => (
     <circle
         {...{
+            className,
             cx: 50,
             cy: 50,
-            r: 25,
-            fill: 'orange',
-            stroke: 'red'
+            r: 25
         }}
     />
 )
+
+const propTypes = {
+    className: PropTypes.string
+}
+
+BackstoryIcon.propTypes = propTypes
 
 export default BackstoryIcon

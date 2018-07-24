@@ -1,0 +1,43 @@
+.DotIcon {
+    stroke: #ddd;
+}
+
+.DotIcon__wormhole {
+    fill: $bgColour__dot__wormhole;
+}
+.DotIcon__observation {
+    fill: $bgColour__dot__observation;
+}
+.DotIcon__backstory {
+    fill: $bgColour__dot__backstory;
+}
+.DotIcon__reference {
+    fill: $bgColour__dot__reference;
+}
+.DotIcon__pun {
+    fill: $bgColour__dot__pun;
+}
+.DotIcon__narrative {
+    fill: $bgColour__dot__narrative;
+}
+.DotIcon__songwriting {
+    fill: $bgColour__dot__songwriting;
+}
+.DotIcon__afterword {
+    fill: $bgColour__dot__afterword;
+}
+
+.DotIcon__accessed {
+
+    .RM__accessOn
+    & {
+        fill: $bgColour__dot__accessed;
+    }
+}
+
+.DotIcon__selected {
+    fill: $bgColour__dot__selected;
+}
+.DotIcon__deselected {
+    fill: $bgColour__dot__deselected;
+}

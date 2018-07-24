@@ -1,45 +1,7 @@
 @import "./Sequence/DotSequence";
+@import "./DotField";
+@import "./DotIcon";
 
 .Dot {
     position: relative;
-}
-
-.bgColour__dot__wormhole {
-    fill: $bgColour__dot__wormhole;
-}
-.bgColour__dot__observation {
-    fill: $bgColour__dot__observation;
-}
-.bgColour__dot__backstory {
-    fill: $bgColour__dot__backstory;
-}
-.bgColour__dot__reference {
-    fill: $bgColour__dot__reference;
-}
-.bgColour__dot__pun {
-    fill: $bgColour__dot__pun;
-}
-.bgColour__dot__narrative {
-    fill: $bgColour__dot__narrative;
-}
-.bgColour__dot__songwriting {
-    fill: $bgColour__dot__songwriting;
-}
-.bgColour__dot__afterword {
-    fill: $bgColour__dot__afterword;
-}
-
-.bgColour__dot__accessed {
-
-    .RM__accessOn
-    & {
-        fill: $bgColour__dot__accessed;
-    }
-}
-
-.bgColour__dot__selected {
-    fill: $bgColour__dot__selected;
-}
-.bgColour__dot__deselected {
-    fill: $bgColour__dot__deselected;
 }
