@@ -5,7 +5,6 @@ import cx from 'classnames'
 import Anchor from './Anchor';
 import Dot from '../Dot/Dot';
 
-import { getPrefixedDotLetterClassNames } from '../../helpers/dotHelper'
 import { ALL_DOT_KEYS } from '../../constants/dots'
 
 const textAnchorPropTypes = {
@@ -44,11 +43,8 @@ TextAnchor = ({
                         inAnnotation && 'DotAnchor__inAnnotation',
                         inStanza && 'DotAnchor__inStanza',
 
-                        getPrefixedDotLetterClassNames(
-                            stanzaDotKeys,
-                            // "Child dot anchor letter."
-                            'CdA'
-                        )
+                        // "Child dot anchor letter."
+                        `CdA${dotKey[0]}`
                     )}
                     {...{
                         dotKey,
