@@ -15,9 +15,10 @@ import {
 } from '../../constants/access'
 
 import {
+    AUDIO_NEXT_BUTTON_KEY,
     AUDIO_OPTIONS_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
-    AUDIO_SELECT_BUTTON_KEY
+    AUDIO_PREVIOUS_BUTTON_KEY
 } from '../../constants/buttons'
 
 import {
@@ -76,9 +77,7 @@ class AudioButtons extends Component {
                 handleAudioNextSong } = this.props,
 
             isPrologue = selectedSongIndex === 0,
-            isFirstSong = selectedSongIndex === 1,
             songsCount = getSongsAndLoguesCount(),
-            isLastSong = selectedSongIndex === songsCount - 2,
             isEpilogue = selectedSongIndex === songsCount - 1,
 
             songCanPlayThrough = getValueInBitNumber({
@@ -86,16 +85,6 @@ class AudioButtons extends Component {
                 bitNumber: canPlayThroughs,
                 key: (isPrologue || isEpilogue) ? 1 : selectedSongIndex
             })
-
-        let playButtonText
-
-        if (songCanPlayThrough) {
-            playButtonText = isPlaying ? '\u23F8' : '\u25BA'
-
-        } else {
-            // TODO: Make this a real icon, of course.
-            playButtonText = 'x'
-        }
 
         return (
             <div className={cx(
@@ -110,11 +99,9 @@ class AudioButtons extends Component {
                 )}>
                     {/* Previous button. */}
                     <Button
-                        buttonName={AUDIO_SELECT_BUTTON_KEY}
+                        buttonName={AUDIO_NEXT_BUTTON_KEY}
                         className="AudioButton"
-                        buttonIdentifier={
-                            isPrologue || isFirstSong ? '\u2302' : '\u21E4'
-                        }
+                        buttonIdentifier={isPrologue}
                         accessKey={AUDIO_PREVIOUS_SONG_KEY}
                         isDisabled={isPrologue}
                         handleButtonClick={handleAudioPreviousSong}
@@ -122,10 +109,10 @@ class AudioButtons extends Component {
 
                     {/* Play button. */}
                     <Button
+                        isLargeSize
                         buttonName={AUDIO_PLAY_BUTTON_KEY}
                         className="AudioButton"
-                        isLargeSize
-                        buttonIdentifier={playButtonText}
+                        buttonIdentifier={isPlaying}
                         accessKey={AUDIO_PLAY_KEY}
                         isDisabled={!songCanPlayThrough}
                         handleButtonClick={handleAudioPlay}
@@ -133,11 +120,9 @@ class AudioButtons extends Component {
 
                     {/* Next button. */}
                     <Button
-                        buttonName={AUDIO_SELECT_BUTTON_KEY}
+                        buttonName={AUDIO_PREVIOUS_BUTTON_KEY}
                         className="AudioButton"
-                        buttonIdentifier={
-                            isEpilogue || isLastSong ? '\u2302' : '\u21E5'
-                        }
+                        buttonIdentifier={isEpilogue}
                         accessKey={AUDIO_NEXT_SONG_KEY}
                         isDisabled={isEpilogue}
                         handleButtonClick={handleAudioNextSong}

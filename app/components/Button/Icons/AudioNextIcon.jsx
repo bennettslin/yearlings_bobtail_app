@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const AUDIO_PLAY_ICON = {
+const AUDIO_NEXT_ICON = {
     [true]: (
         <circle
             {...{
@@ -31,15 +31,15 @@ const propTypes = {
     buttonIdentifier: PropTypes.bool.isRequired
 }
 
-const AudioPlayIcon = ({
+const AudioNextIcon = ({
 
-    buttonIdentifier: isPlaying
+    buttonIdentifier: isLogue
 
 }) => (
 
-    AUDIO_PLAY_ICON[isPlaying]
+    AUDIO_NEXT_ICON[isLogue]
 )
 
-AudioPlayIcon.propTypes = propTypes
+AudioNextIcon.propTypes = propTypes
 
-export default AudioPlayIcon
+export default AudioNextIcon

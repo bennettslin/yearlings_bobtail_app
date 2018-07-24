@@ -1,6 +1,7 @@
+import AudioNextIcon from './Icons/AudioNextIcon'
 import AudioOptionsIcon from './Icons/AudioOptionsIcon'
 import AudioPlayIcon from './Icons/AudioPlayIcon'
-import AudioSelectIcon from './Icons/AudioSelectIcon'
+import AudioPreviousIcon from './Icons/AudioPreviousIcon'
 import CarouselNavIcon from './Icons/CarouselNavIcon'
 import CarouselSelectIcon from './Icons/CarouselSelectIcon'
 import DotsSlideIcon from './Icons/DotsSlideIcon'
@@ -19,9 +20,10 @@ import TitleIcon from './Icons/TitleIcon'
 import TipsIcon from './Icons/TipsIcon'
 
 import {
+    AUDIO_NEXT_BUTTON_KEY,
     AUDIO_OPTIONS_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
-    AUDIO_SELECT_BUTTON_KEY,
+    AUDIO_PREVIOUS_BUTTON_KEY,
     CAROUSEL_NAV_BUTTON_KEY,
     CAROUSEL_SELECT_BUTTON_KEY,
     DOTS_SLIDE_BUTTON_KEY,
@@ -41,9 +43,10 @@ import {
 } from '../../constants/buttons'
 
 const BUTTONS_MAP = {
+        [AUDIO_NEXT_BUTTON_KEY]: AudioNextIcon,
         [AUDIO_OPTIONS_BUTTON_KEY]: AudioOptionsIcon,
         [AUDIO_PLAY_BUTTON_KEY]: AudioPlayIcon,
-        [AUDIO_SELECT_BUTTON_KEY]: AudioSelectIcon,
+        [AUDIO_PREVIOUS_BUTTON_KEY]: AudioPreviousIcon,
         [CAROUSEL_NAV_BUTTON_KEY]: CarouselNavIcon,
         [CAROUSEL_SELECT_BUTTON_KEY]: CarouselSelectIcon,
         [DOTS_SLIDE_BUTTON_KEY]: DotsSlideIcon,

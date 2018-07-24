@@ -1,7 +1,8 @@
 const
+    AUDIO_NEXT_BUTTON_KEY = 'audioNext',
     AUDIO_OPTIONS_BUTTON_KEY = 'audioOptions',
     AUDIO_PLAY_BUTTON_KEY = 'audioPlay',
-    AUDIO_SELECT_BUTTON_KEY = 'audioSelect',
+    AUDIO_PREVIOUS_BUTTON_KEY = 'audioPrevious',
     CAROUSEL_NAV_BUTTON_KEY = 'carouselNav',
     CAROUSEL_SELECT_BUTTON_KEY = 'carouselSelect',
     DOTS_SLIDE_BUTTON_KEY = 'dotsSlide',
@@ -20,9 +21,10 @@ const
     TITLE_BUTTON_KEY = 'title'
 
 module.exports = {
+    AUDIO_NEXT_BUTTON_KEY,
     AUDIO_OPTIONS_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
-    AUDIO_SELECT_BUTTON_KEY,
+    AUDIO_PREVIOUS_BUTTON_KEY,
     CAROUSEL_NAV_BUTTON_KEY,
     CAROUSEL_SELECT_BUTTON_KEY,
     DOTS_SLIDE_BUTTON_KEY,

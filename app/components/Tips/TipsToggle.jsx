@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 import Button from '../Button/Button'
 import { TIPS_TOGGLE_KEY } from '../../constants/access'
 import { TIPS_BUTTON_KEY } from '../../constants/buttons'
-import { TIPS_OPTIONS } from '../../constants/options'
 
 const mapStateToProps = ({
     selectedTipsIndex
@@ -35,7 +34,7 @@ TipsToggle = ({
             isLargeSize
             buttonName={TIPS_BUTTON_KEY}
             isDisabled={!isEnabled}
-            buttonIdentifier={TIPS_OPTIONS[selectedTipsIndex]}
+            buttonIdentifier={selectedTipsIndex}
             accessKey={TIPS_TOGGLE_KEY}
             handleButtonClick={handleTipsToggle}
         />

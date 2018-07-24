@@ -11,7 +11,7 @@ import Button from '../../Button/Button'
 import { getPropsAreShallowEqual } from '../../../helpers/generalHelper'
 
 import { NAVIGATION_ENTER_KEY } from '../../../constants/access'
-import { AUDIO_SELECT_BUTTON_KEY } from '../../../constants/buttons'
+import { AUDIO_NEXT_BUTTON_KEY } from '../../../constants/buttons'
 
 class VerseNav extends Component {
 
@@ -54,13 +54,13 @@ class VerseNav extends Component {
              * If interactivated, disable only if it's selected and song can't
              * play through.
              */
-            isEnabled = isInteractivated,
+            isEnabled = isInteractivated
 
             // TODO: Remove this once this logic is in CSS.
-            isAfterCursor = true,
+            // isAfterCursor = true,
 
             // TODO: Make this a real icon, of course.
-            iconText = isAfterCursor ? `\u23E9` : `\u23EA`
+            // iconText = isAfterCursor ? `\u23E9` : `\u23EA`
 
 
         return (
@@ -72,11 +72,11 @@ class VerseNav extends Component {
             )}>
                 <Button
                     isSmallSize
-                    buttonName={AUDIO_SELECT_BUTTON_KEY}
+                    buttonName={AUDIO_NEXT_BUTTON_KEY}
                     accessKey={NAVIGATION_ENTER_KEY}
                     showAccessIconIfAccessOn={isEnabled}
                     isDisabled={!isEnabled}
-                    buttonIdentifier={iconText}
+                    buttonIdentifier={false}
                     handleButtonClick={this._handleAudioButtonClick}
                 />
             </div>
